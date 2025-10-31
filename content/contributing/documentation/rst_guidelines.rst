@@ -8,6 +8,9 @@ RST guidelines and cheat sheet
    We strongly recommend reading the :doc:`content_guidelines` and main :doc:`../documentation`
    pages before contributing.
 
+General guidelines
+==================
+
 Follow the RST guidelines below when contributing to the documentation to help maintain consistency
 with the rest of the documentation and facilitate the review process for the team:
 
@@ -15,16 +18,10 @@ with the rest of the documentation and facilitate the review process for the tea
 - :ref:`Be consistent with indentation. <contributing/rst/indentation>`
 - :ref:`Start a new line before the 100th character. <contributing/rst/character-limit>`
 
-For hyperlinks:
-
-- :ref:`Use relative links for internal URLs. <contributing/rst/relative-links>`
-- :ref:`Do not break hyperlink targets when refactoring. <contributing/rst/update-targets>`
-- :ref:`Do not use non-descriptive hyperlink labels. <contributing/rst/descriptive-labels>`
-
 .. _contributing/rst/formatting:
 
 Formatting
-==========
+----------
 
 Use specific formatting to improve clarity and readability. For example, apply
 :ref:`contributing/rst/menuselection` for menu paths, :ref:`contributing/rst/guilabel`
@@ -35,87 +32,10 @@ for notes, :ref:`contributing/rst/example` for examples, etc.
    Add a blank line between different block elements, such as paragraphs, lists, and directives to
    ensure proper rendering and formatting.
 
-.. _contributing/rst/hyperlinks-guidelines:
-
-Hyperlinks
-==========
-
-.. _contributing/rst/relative-links:
-
-Internal URLs: relative links
------------------------------
-
-If you need to reference an :ref:`internal documentation page <contributing/rst/doc-hyperlinks>`
-or a :ref:`file <contributing/rst/file>` that is not located in the same directory as the current
-page, always use *relative file paths* instead of *absolute file paths*. This ensures that links
-remain valid even with version updates, folder name changes, and directory structure
-reorganizations.
-
-An absolute file path indicates the target's location from the root directory. A relative file path
-uses smart notations (such as `../` that redirects to the parent folder) to indicate the target's
-location *relative* to that of the source document.
-
-.. example::
-
-   .. note::
-      The purpose of the following example is to illustrate the difference between absolute and
-      relative links. Always use :ref:`contributing/rst/doc-hyperlinks` when referencing
-      documentation pages.
-
-   Given the following source file tree:
-   ::
-
-     documentation
-     ├── content
-     │   └── applications
-     │   │   └── sales
-     │   │   │   └── sales
-     │   │   │   │   └── products_prices
-     │   │   │   │   │   └── products
-     │   │   │   │   │   │   └── import.rst
-     │   │   │   │   │   │   └── variants.rst
-     │   │   │   │   │   └── prices.rst
-
-   A reference to :file:`prices.rst` and :file:`variants.rst` could be made from :file:`import.rst`
-   as follows:
-
-   #. Absolute:
-
-         - `documentation/content/applications/sales/sales/products_prices/prices.rst`
-         - `documentation/content/applications/sales/sales/products_prices/products/variants.rst`
-
-   #. Relative:
-
-         - `../prices.rst`
-         - `variants.rst`
-
-.. _contributing/rst/update-targets:
-
-Refactoring: hyperlink targets
-------------------------------
-
-When refactoring (improving without adding new content) section headings or hyperlink targets, take
-care not to break any hyperlink reference to these targets or update them accordingly.
-
-.. _contributing/rst/descriptive-labels:
-
-Hyperlink labels
-----------------
-
-Do not use non-descriptive labels for :ref:`hyperlinks <contributing/rst/hyperlinks>`.
-
-.. example::
-
-  | **Good example (descriptive label):**
-  | Please refer to the :doc:`Accounting documentation <../../../applications/finance/accounting>`.
-
-  | **Bad example (non-descriptive label):**
-  | Please refer to :doc:`this page <../../../applications/finance/accounting>`.
-
 .. _contributing/rst/indentation:
 
 Indentation
-===========
+-----------
 
 Use only spaces (never tabs).
 
@@ -152,7 +72,7 @@ for bulleted lists, for example.
 .. _contributing/rst/character-limit:
 
 100th-character limit
-=====================
+---------------------
 
 In RST, it is possible to break a line without forcing a line break on the rendered HTML. Make use
 of this feature to write **lines of maximum 100 characters**. It is not necessary to leave a
@@ -178,12 +98,7 @@ Headings
 ========
 
 For each formatting line (e.g., `===`), write as many symbols (`=`) as there are characters in the
-header.
-
-The symbols used for the formatting are, in fact, not important. Only the order in which they are
-written matters, as it determines the size of the decorated heading. This means that you may
-encounter different heading formatting and in a different order, in which case you should follow the
-formatting in place in the document. In any other case, use the formatting shown below.
+header. Use the symbols below to format headings:
 
 +--------------+----------------------+
 | Heading size | Formatting           |
@@ -524,6 +439,18 @@ Nested lists
 Hyperlinks
 ==========
 
+.. note::
+   When using labels for hyperlinks, make sure they are clear and descriptive to indicate the
+   destination or purpose of the link.
+
+   .. example::
+
+     | **Good example (descriptive label):**
+     | Please refer to the :doc:`Accounting documentation <../../../applications/finance/accounting>`.
+
+     | **Bad example (non-descriptive label):**
+     | Please refer to :doc:`this page <../../../applications/finance/accounting>`.
+
 .. _contributing/rst/external-hyperlinks:
 
 External hyperlinks
@@ -532,10 +459,9 @@ External hyperlinks
 External hyperlinks are links to a URL with a custom label. They follow the syntax:
 ```label <URL>`_``.
 
-.. note::
-   - Use :ref:`documentation page hyperlinks <contributing/rst/doc-hyperlinks>` when targeting
-     another documentation page.
-   - Do not use :ref:`non-descriptive hyperlink labels <contributing/rst/descriptive-labels>`.
+.. important::
+   Use :ref:`documentation page hyperlinks <contributing/rst/doc-hyperlinks>` when targeting
+   another documentation page.
 
 .. list-table::
    :class: o-showcase-table
@@ -548,8 +474,8 @@ External hyperlinks are links to a URL with a custom label. They follow the synt
 
 .. _contributing/rst/external-hyperlink-aliases:
 
-External hyperlink aliases
---------------------------
+Aliases
+~~~~~~~
 
 External hyperlink aliases allow creating shortcuts for external hyperlinks. The definition syntax
 is as follows: `.. _target: URL`. There are two ways to reference them, depending on the use case:
@@ -573,61 +499,69 @@ is as follows: `.. _target: URL`. There are two ways to reference them, dependin
              A proof-of-concept_ is a simplified version, a prototype of what is expected to agree on
              the main lines of expected changes. `PoC <proof-of-concept_>`_ is a common abbreviation.
 
-.. _contributing/rst/custom-anchors:
-
-Custom anchors
---------------
-
-Custom anchors follow the same syntax as external hyperlink aliases but without any URL. They allow
-referencing a specific part of a RST file by using the target as an anchor. When users click the
-reference, they are taken to the part of the documentation page where the target is defined.
-
-The definition syntax is: `.. _target:`. There are two ways to reference them, both using the `ref`
-markup:
-
-#. ``:ref:`target``` creates a hyperlink to the anchor with the heading defined below as label.
-#. ``:ref:`label <target>``` creates a hyperlink to the anchor with the given label.
+Internal documentation links
+----------------------------
 
 .. important::
-   As targets are visible from the entire documentation when referenced with the `ref` markup,
-   prefix the target name with the **app/section name** and the **file name**, separated by slashes,
-   e.g., `accounting/taxes/configuration`.
+   When refactoring (improving without adding new content) section headings or hyperlink targets,
+   make sure not to break any hyperlink reference to these targets, or update them accordingly.
 
-.. note::
-   - Add custom anchors for all headings so they can be referenced from any documentation file or
-     within Odoo using documentation links.
-   - Notice that there is no `_` at the end, contrary to what is done with :ref:`external hyperlinks
-     <contributing/rst/external-hyperlinks>`.
+.. _contributing/rst/relative-links:
 
-.. list-table::
-   :class: o-showcase-table
+Relative links
+~~~~~~~~~~~~~~
 
-   * - Please refer to the :ref:`contributing/rst/hyperlinks-guidelines` section to learn more
-       about :ref:`relative links <contributing/rst/relative-links>`.
+If you need to reference an :ref:`internal documentation page <contributing/rst/doc-hyperlinks>`
+or a :ref:`file <contributing/rst/file>` that is not located in the same directory as the current
+page, always use *relative file paths* instead of *absolute file paths*. This ensures that links
+remain valid even with version updates, folder name changes, and directory structure
+reorganizations.
 
-   * - .. code-block:: text
+An absolute file path indicates the target's location from the root directory. A relative file path
+uses smart notations (such as `../` that redirects to the parent folder) to indicate the target's
+location *relative* to that of the source document.
 
-          .. _contributing/rst/hyperlinks-guidelines:
+.. example::
 
-          Hyperlinks
-          ==========
+   .. note::
+      The purpose of the following example is to illustrate the difference between absolute and
+      relative links. Always use :ref:`contributing/rst/doc-hyperlinks` when referencing
+      documentation pages.
 
-         .. _contributing/rst/relative-links:
+   Given the following source file tree:
+   ::
 
-         Use relative links for internal URLs
-         ------------------------------------
+     documentation
+     ├── content
+     │   └── applications
+     │   │   └── sales
+     │   │   │   └── sales
+     │   │   │   │   └── products_prices
+     │   │   │   │   │   └── products
+     │   │   │   │   │   │   └── import.rst
+     │   │   │   │   │   │   └── variants.rst
+     │   │   │   │   │   └── prices.rst
 
-         Please refer to the :ref:`contributing/rst/hyperlinks-guidelines` section to learn more
-         about :ref:`relative links <contributing/rst/relative-links>`.
+   A reference to :file:`prices.rst` and :file:`variants.rst` could be made from :file:`import.rst`
+   as follows:
+
+   #. Absolute:
+
+         - `documentation/content/applications/sales/sales/products_prices/prices.rst`
+         - `documentation/content/applications/sales/sales/products_prices/products/variants.rst`
+
+   #. Relative:
+
+         - `../prices.rst`
+         - `variants.rst`
 
 .. _contributing/rst/doc-hyperlinks:
 
 Documentation page hyperlinks
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The `doc` markup allows referencing a documentation page wherever it is in the file tree through a
-relative file path. There are two ways to use the markup, both using the `doc` markup:
-
+relative file path. There are two ways to use the `doc` markup:
 
 #. ``:doc:`path_to_doc_page``` creates a hyperlink to the documentation page with the title of the
    page as label.
@@ -649,10 +583,58 @@ relative file path. There are two ways to use the markup, both using the `doc` m
 .. important::
    :ref:`Use relative links <contributing/rst/relative-links>` for documentation page hyperlinks.
 
+.. _contributing/rst/custom-anchors:
+
+Custom anchors
+~~~~~~~~~~~~~~
+
+Custom anchors follow the same syntax as :ref:`external hyperlink aliases
+<contributing/rst/external-hyperlink-aliases>` but without any URL. They allow referencing a
+specific part of a RST file by using the target as an anchor. When users click the reference, they
+are taken to the part of the documentation page where the target is defined.
+
+The definition syntax is: `.. _target:`. There are two ways to reference them, both using the `ref`
+markup:
+
+#. ``:ref:`target``` creates a hyperlink to the anchor with the heading defined below as the label.
+#. ``:ref:`label <target>``` creates a hyperlink to the anchor with the given label.
+
+.. important::
+   As targets are visible from the entire documentation when referenced with the `ref` markup,
+   prefix the target name with the **app/section name** and the **file name**, separated by slashes,
+   e.g., `accounting/taxes/configuration`.
+
+.. note::
+   - Add custom anchors for all headings so they can be referenced from any documentation file or
+     within Odoo using documentation links.
+   - Notice that there is no `_` at the end, contrary to :ref:`external hyperlinks
+     <contributing/rst/external-hyperlinks>`.
+
+.. list-table::
+   :class: o-showcase-table
+
+   * - Please refer to the :ref:`contributing/rst/external-hyperlinks` section to learn more
+       about :ref:`aliases <contributing/rst/external-hyperlink-aliases>`.
+
+   * - .. code-block:: text
+
+          .. _contributing/rst/external-hyperlinks:
+
+          External hyperlinks
+          -------------------
+
+         .. _contributing/rst/external-hyperlink-aliases:
+
+         Aliases
+         ~~~~~~~
+
+         Please refer to the :ref:`contributing/rst/external-hyperlinks` section to learn more
+         about :ref:`aliases <contributing/rst/external-hyperlink-aliases>`.
+
 .. _contributing/rst/download:
 
-File download hyperlinks
-------------------------
+File download
+~~~~~~~~~~~~~
 
 The `download` markup allows referencing files (that are not necessarily :abbr:`RST
 (reStructuredText)` documents) within the source tree to be downloaded.
@@ -1297,6 +1279,41 @@ Cards
 
                 List of technical guidelines to observe when writing with reStructuredText.
 
+.. _contributing/rst/toctree:
+
+Sub-pages
+=========
+
+The `toctree` directive is used to organize documentation into sections with sub-pages.
+It adds a table of contents at the current location (i.e., the parent page), built from the files
+listed in the directive. All RST files must be included in a TOC tree, unless the `orphan`
+:ref:`metadata markup <contributing/rst/document-metadata>` is used.
+
+.. tip::
+   - Use :ref:`relative links <contributing/rst/relative-links>` to list the files to be displayed
+     as sub-pages.
+   - Use the `titlesonly` parameter to only show the sub-pages' main headings when a parent page's
+     :ref:`content and TOC tree are displayed <contributing/rst/document-metadata>`.
+
+.. example::
+   - TOC tree in the documentation's main TOC:
+
+     .. image:: rst_guidelines/website-toctree.png
+        :alt: Website section of the documentation
+
+   - `toctree` directive in `website.rst` (i.e., the parent page):
+
+     .. code-block:: text
+
+        .. toctree::
+           :titlesonly:
+
+           website/web_design
+           website/pages
+           website/configuration
+           website/reporting
+           website/mail_groups
+
 .. _contributing/rst/document-metadata:
 
 Document metadata
@@ -1309,16 +1326,20 @@ metadata markups that specify a behavior for the entire page. They must be place
 +-----------------+--------------------------------------------------------------------------------+
 | **Metadata**    | **Purpose**                                                                    |
 +-----------------+--------------------------------------------------------------------------------+
-| `show-content`  |  Make a toctree page accessible from the navigation menu.                      |
+| `show-content`  | Make the content of a RST file that contains a                                 |
+|                 | :ref:`toc tree <contributing/rst/toctree>` visible and accessible from the     |
+|                 | documentation's main table of contents.                                        |
 +-----------------+--------------------------------------------------------------------------------+
-| `show-toc`      |  Show the table of content on a page that has the `show-content` metadata      |
-|                 |  markup.                                                                       |
+| `show-toc`      | Display the page's :ref:`table of contents <contributing/rst/toctree>`         |
+|                 | when using the `show-content` metadata markup. Use the `titlesonly` parameter  |
+|                 | for the `toctree` directive to only show the sub-pages' main headings.         |
 +-----------------+--------------------------------------------------------------------------------+
 | `hide-page-toc` | Hide the "On this page" sidebar and use full page width for the content.       |
 +-----------------+--------------------------------------------------------------------------------+
 | `nosearch`      | Exclude the document from search results.                                      |
 +-----------------+--------------------------------------------------------------------------------+
-| `orphan`        | Suppress the need to include the document in a toctree.                        |
+| `orphan`        | Suppress the need to include the document in a                                 |
+|                 | :ref:`TOC tree <contributing/rst/toctree>`.                                    |
 +-----------------+--------------------------------------------------------------------------------+
 | `code-column`   |  | Show a dynamic side column that can be used to display interactive          |
 |                 |    tutorials or code excerpts.                                                 |
