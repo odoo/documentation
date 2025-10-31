@@ -81,7 +81,7 @@ price. The following options are available:
   tax-excluded sales price
 - :ref:`Percentage of Price Tax Included <taxes/computation/percentage-of-price-tax-included>`: a
   percentage of the tax-included total
-- :ref:`Python Code <taxes/computation/python-code>`: a custom user-defined formula
+- :ref:`Custom Formula <taxes/computation/python-code>`: a custom, user-defined formula
 
 .. _taxes/computation/group-of-taxes:
 
@@ -129,12 +129,12 @@ which determines whether the sales price should be treated as tax-excluded or ta
 .. tabs::
    .. tab:: Tax-excluded
 
-      If :guilabel:`Included in Price` is disabled, the computation is :math:`\text{tax amount}
-      = \text{sales price} \times \text{tax rate}`.
+      If :guilabel:`Included in Price` is :guilabel:`Tax Excluded`, the computation is
+      :math:`\text{tax amount} = \text{sales price} \times \text{tax rate}`.
 
       .. example::
          A product has a sales price of $1000, and we apply a 10% :guilabel:`Percentage of Price`
-         tax that is not :guilabel:`Included in Price`. We then have:
+         tax that is :guilabel:`Tax Excluded`. We then have:
 
          +-------------+-------------+----------+----------+
          | Product     | Price       | Tax      | Total    |
@@ -145,12 +145,13 @@ which determines whether the sales price should be treated as tax-excluded or ta
 
    .. tab:: Tax-included
 
-      If :guilabel:`Included in Price` is enabled, the computation is :math:`\text{tax amount} =
-      \text{sales price} \times \frac{\text{tax rate}}{1 + \text{tax rate}}`.
+      If :guilabel:`Included in Price` is :guilabel:`Tax Included`, the computation is
+      :math:`\text{tax amount} = \text{sales price} \times \frac{\text{tax rate}}{1 +
+      \text{tax rate}}`.
 
       .. example::
          A product has a sales price of $1000, and we apply a 10% :guilabel:`Percentage of Price`
-         tax that is :guilabel:`Included in Price`. We then have:
+         tax that is :guilabel:`Tax Included`. We then have:
 
          +-------------+-------------+----------+----------+
          | Product     | Price       | Tax      | Total    |
@@ -168,8 +169,8 @@ Percentage of price tax included
    This tax computation is rarely used and only useful in countries (e.g., Brazil, Bolivia) that
    quote tax rates as a percentage of the tax-included total.
    For the more common need to compute tax amounts from a tax-included price, use the
-   :ref:`Percentage of Price <taxes/computation/percentage-of-price>` tax computation with the
-   :ref:`Included in Price <taxes/included-in-price>` option.
+   :ref:`Percentage of Price <taxes/computation/percentage-of-price>` tax computation with
+   :ref:`Included in Price <taxes/included-in-price>` set to :guilabel:`Tax Included`.
 
 The tax rate is a percentage of the **tax-included** total.
 
@@ -178,12 +179,13 @@ which determines whether the sales price should be treated as tax-excluded or ta
 
 .. tabs::
    .. tab:: Tax-excluded
-      If :guilabel:`Included in Price` is disabled, the computation is :math:`\text{tax amount}
-      = \text{sales price} \times \frac{\text{tax rate}}{1 - \text{tax rate}}`.
+      If :guilabel:`Included in Price` is set to :guilabel:`Tax Excluded`, the computation is
+      :math:`\text{tax amount} = \text{sales price} \times \frac{\text{tax rate}}{1 -
+      \text{tax rate}}`.
 
       .. example::
          A product has a sales price of $1000, and we apply a 10% :guilabel:`Percentage of Price
-         Tax Included` tax that is not :guilabel:`Included in Price`. We then have:
+         Tax Included` tax that is :guilabel:`Tax Excluded`. We then have:
 
          +-------------+-------------+----------+----------+
          | Product     | Price       | Tax      | Total    |
@@ -197,12 +199,12 @@ which determines whether the sales price should be treated as tax-excluded or ta
 
    .. tab:: Tax-included
 
-      If :guilabel:`Included in Price` is enabled, the computation is :math:`\text{tax amount} =
-      \text{sales price} \times \text{tax rate}`.
+      If :guilabel:`Included in Price` is set to :guilabel:`Tax Included`, the computation is
+      :math:`\text{tax amount} = \text{sales price} \times \text{tax rate}`.
 
       .. example::
          A product has a sales price of $1000, and we apply a 10%
-         :guilabel:`Percentage of Price Tax Included` tax that is :guilabel:`Included in Price`.
+         :guilabel:`Percentage of Price Tax Included` tax that is :guilabel:`Tax Included`.
          We then have:
 
          +-------------+-------------+----------+----------+
@@ -217,26 +219,37 @@ which determines whether the sales price should be treated as tax-excluded or ta
 
 .. _taxes/computation/python-code:
 
-Python code
-***********
+Custom formula
+**************
 
 .. important::
    If a tax can be expressed as a multiple of the quantity of the product to which it applies, it
    can be defined as a :ref:`Fixed <taxes/computation/fixed>` tax. Doing so is strongly recommended
-   over defining a :guilabel:`Python Code` tax.
+   over defining a :guilabel:`Custom Formula` tax.
 
-A tax defined as :guilabel:`Python Code` consists of two snippets of Python code that are executed
-in a local environment that can access the unit price, quantity, product, and partner.
-:guilabel:`Python Code` defines the amount of the tax, and :guilabel:`Applicable Code` defines
-whether the tax is applied. Enter a formula for each field at the bottom of the
-:guilabel:`Definition` tab.
+.. note::
+   To use :guilabel:`Custom Formula` taxes, :ref:`install <general/install>` the :guilabel:`Define
+   Taxes as Python Code` (`account_python_tax`) module.
+
+For a :guilabel:`Custom Formula` tax, the tax amount is computed according to a Python expression
+defined in the :guilabel:`Formula` field. The Python expression may contain the following tokens:
+
+- any of the following variables:
+
+  - `price_unit`: the unit price of the product
+  - `base`: the taxable basis on which the tax is applied - may differ from the `price_unit` if
+    other taxes are applied first
+  - `quantity`: the quantity of the product
+  - `product`: the product record - product fields can also be accessed
+
+- integers and floating-point numbers
+
+- the following permitted tokens: `(`, `)`, `+`, `-`, `*`, `/`, `,`, `<`, `>`, `<=`, `>=`, `and`,
+  `or`, `None`, `min`, and `max`
 
 .. example::
-   A product has a sales price of $1000, and we apply a :guilabel:`Python Code` tax with the
-   following configuration:
-
-   - :guilabel:`Python Code`: `result = price_unit * 0.10` and
-   - :guilabel:`Applicable Code`: `result = True`.
+   A product has a sales price of $1000, and we apply a :guilabel:`Custom Formula` tax with a
+   :guilabel:`Formula` of `min(base, 500) * 0.10 + max(base - 500, 0) * 0.20`
 
    We then have:
 
@@ -244,7 +257,7 @@ whether the tax is applied. Enter a formula for each field at the bottom of the
    | Product     | Price       | Tax      | Total    |
    | sales price | without tax |          |          |
    +=============+=============+==========+==========+
-   | 1,000       | 1,000       | 100      | 1,100.00 |
+   | 1,000       | 1,000       | 150      | 1,150.00 |
    +-------------+-------------+----------+----------+
 
 .. _taxes/active:
@@ -405,16 +418,25 @@ invoice line.
 Included in price
 ~~~~~~~~~~~~~~~~~
 
-With this option activated, the tax will treat the sales price on which it is applied as a total
-including the tax amount. The tax computation will split the sales price into a base amount and a
-tax amount. This makes it suitable for B2C sales in most countries where prices are quoted
-tax-inclusive.
+.. tip::
+   To set a company-wide default for this setting, go to :menuselection:`Accounting -->
+   Configuration --> Settings`, find the :guilabel:`Taxes` section, and set the :guilabel:`Prices`
+   setting to :guilabel:`Tax Excluded` or :guilabel:`Tax Included`. This setting cannot be changed
+   once invoices have been created.
 
-`Total = Sales Price = Computed Tax-Excluded price + Tax`
+When set to :guilabel:`Default`, the company-wide default will be used.
+
+When set to :guilabel:`Tax Excluded`, the tax will always treat the sales price on which it is
+applied as a price excluding the tax amount.
+
+When set to :guilabel:`Tax Included`, the tax will always treat the sales price on which it is
+applied as a total including the tax amount. The tax computation will split the sales price into a
+base amount and a tax amount. This makes it suitable for B2C sales in most countries, where prices
+are quoted tax-inclusive.
 
 .. example::
    A product has a sales price of $1000, and we apply a 10% :guilabel:`Percentage of Price` tax
-   with :guilabel:`Included in Price`. We then have:
+   with :guilabel:`Included in Price` set to :guilabel:`Tax Included`. We then have:
 
    +-------------+-------------+----------+----------+
    | Product     | Price       | Tax      | Total    |
@@ -427,57 +449,68 @@ tax-inclusive.
    For a guide on configuring tax-excluded and tax-included prices for B2B and B2C customers,
    see :doc:`taxes/B2B_B2C`.
 
-   .. image:: taxes/toggle-button.png
-
 .. _taxes/base-subsequent:
 
 Affect base of subsequent taxes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If this setting is enabled, any subsequent tax applied on the same product line that has
+If this setting is enabled, any subsequent tax applied on the same product line that has its
 :ref:`taxes/base-affected` will be based on a modified sales price. The exact behavior depends on
-whether the tax with :guilabel:`Affect base of subsequent taxes` is :ref:`taxes/included-in-price`
-or not.
+the :ref:`Included in Price <taxes/included-in-price>` setting.
 
 .. tabs::
    .. tab:: Tax-excluded
-      If :guilabel:`Included in Price` is disabled, subsequent taxes with :guilabel:`Base affected
-      by preceding taxes` will be based on a modified sales price equal to the original sales price
-      plus the tax amount.
+      If :guilabel:`Included in Price` is set to :guilabel:`Tax Excluded`, subsequent taxes with
+      :guilabel:`Base affected by preceding taxes` will be based on a modified sales price equal to
+      the original sales price plus the tax amount.
 
       .. example::
          A product has a sales price of $1000, and we apply a 10% :guilabel:`Percentage of Price`
-         tax with :guilabel:`Affect base of subsequent taxes`. Any subsequent tax with
-         :guilabel:`Base affected by preceding taxes` will be based on a modified sales price of
+         tax where the :guilabel:`Included in Price` setting is set to :guilabel:`Tax Excluded` and
+         the :guilabel:`Affect base of subsequent taxes` setting is enabled. Any subsequent tax with
+         its :guilabel:`Base affected by preceding taxes` will be based on a modified sales price of
          $1100.
 
    .. tab:: Tax-included
-      If :guilabel:`Included in Price` is enabled, subsequent taxes with :guilabel:`Base affected
-      by preceding taxes` will be based on a modified sales price equal to the original sales price
-      minus the tax amount.
+      If :guilabel:`Included in Price` is set to :guilabel:`Tax Included`, subsequent taxes with
+      :guilabel:`Base affected by preceding taxes` will be based on a modified sales price equal to
+      the original sales price minus the tax amount.
 
       .. example::
          A product has a sales price of $1100, and we apply a 10% :guilabel:`Percentage of Price`
-         tax with :guilabel:`Included in Price` and :guilabel:`Affect base of subsequent taxes`.
-         Any subsequent tax with :guilabel:`Base affected by preceding taxes` will be based on a
-         modified sales price of $1000.
+         tax where the :guilabel:`Included in Price` setting is set to :guilabel:`Tax Included` and
+         the :guilabel:`Affect base of subsequent taxes` setting is enabled. Any subsequent tax with
+         its :guilabel:`Base affected by preceding taxes` will be based on a modified sales price of
+         $1000.
 
 This setting is considered any time multiple taxes are applied to the same product line, whether
 via a :ref:`group of taxes <taxes/computation>` or multiple taxes added directly to a product line.
 
-.. image:: taxes/subsequent-line.png
-   :alt: The eco-tax is taken into the basis of the 21% VAT tax
-
 .. warning::
-   The order in which you add the taxes on a product line has no effect on how amounts are computed.
-   If you add taxes directly on a product line, only the tax sequence determines the order in which
-   they are applied.
+   The order in which taxes are applied depends only on the order in which they appear in the
+   :guilabel:`Taxes` list, not on the order in which they are added to a product line.
 
-   To reorder the sequence, go to :menuselection:`Accounting --> Configuration --> Taxes`, and drag
-   and drop the lines with the handles next to the tax names.
+   To modify the order, go to :menuselection:`Accounting --> Configuration --> Taxes`, and drag and
+   drop taxes using the handles to the left of the tax names.
 
    .. image:: taxes/list-sequence.png
-      :alt: The taxes' sequence in Odoo determines which tax is applied first
+      :alt: The order of appearance of taxes in the Taxes list determines which tax is applied first
+
+.. example::
+   In the following example:
+
+   - the Ecotax is a :guilabel:`Fixed` tax of €0.90 per unit, with the :guilabel:`Affect base of
+     subsequent taxes` setting enabled.
+   - The 21% VAT tax is a 21% :guilabel:`Percentage of Price` tax with the :guilabel:`Base affected
+     by preceding taxes` setting enabled.
+   - In the :guilabel:`Taxes` list, the 21% VAT tax comes after the Ecotax, as shown in the
+     configuration above.
+
+   When applying both taxes to a product line, the Ecotax amount is added to the basis of the 21%
+   VAT tax.
+
+   .. image:: taxes/subsequent-line.png
+      :alt: The Ecotax is added to the basis of the 21% VAT tax
 
 .. _taxes/base-affected:
 
