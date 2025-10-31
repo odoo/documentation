@@ -34,8 +34,8 @@ Installation
 
 To install the Windows virtual IoT on a Windows computer:
 
-#. Download the `IoT installation package for Windows
-   <https://nightly.odoo.com/master/nightly/iot/odoo_iot_setup_19.1a1.latest.exe>`_.
+#. Access `Odoo's download page <https://odoo.com/download>`_, scroll down to the :guilabel:`Virtual
+   IOT` section, and click :guilabel:`Download`.
 #. Open the downloaded :file:`.exe` file, allow the app to make changes to your device, select
    a language, and click :guilabel:`OK`.
 #. Click :guilabel:`Next`, then :guilabel:`I Agree` to accept the terms and conditions and continue.
