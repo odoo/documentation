@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-20 14:56+0200\n"
-"PO-Revision-Date: 2025-10-30 03:12+0000\n"
+"PO-Revision-Date: 2025-10-31 03:11+0000\n"
 "Last-Translator: \"Chloe Wang (chwa)\" <chwa@odoo.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
 "projects/odoo-19-doc/studio/zh_Hans/>\n"
@@ -1954,26 +1954,33 @@ msgid ""
 "Open the **Sales** app, then :ref:`open Studio <studio/access>` and "
 "click :guilabel:`Webhooks`. The *Sales Order* model is selected by default."
 msgstr ""
+"打开 **销售** 应用程序，然后 :ref:`打开定制 <studio/access>` 并点击 "
+":guilabel:`网络钩子`。默认选择*销售订单*模型。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:165
 #: ../../content/applications/studio/automated_actions/webhooks.rst:227
 msgid ""
 "Click :guilabel:`New`. The :guilabel:`Trigger` is set to :guilabel:`On "
 "webhook` by default."
-msgstr ""
+msgstr "点击 "
+":guilabel:`新建`。默认情况下，:guilabel:`触发器`设置为:guilabel:`通过网络钩子"
+"`。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:166
 msgid ""
 "Set the :guilabel:`Target Record` to "
 "`model.env[payload.get('_model')].browse(int(payload.get('_id')))`, where:"
 msgstr ""
+"将 :guilabel:`目标记录` 设置为 `model.env[payload.get('_model')]"
+".browse(int(payload.get('_id')))`，其中："
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:169
 msgid ""
 "`payload.get('_model')` retrieves the value associated with the `model` key "
 "in the payload, i.e., `sale.order`, which is the technical name of the "
 "*Sales Order* model."
-msgstr ""
+msgstr "payload.get('_model') 用于获取数据负载中 model 键对应的值，即 销售订单 "
+"模型的技术名称 sale.order。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:171
 msgid ""
@@ -1981,32 +1988,37 @@ msgid ""
 "payload, i.e., the number of the target sales order in your Odoo database "
 "with the `S` and leading zeros removed."
 msgstr ""
+"payload.get('_id') 用于获取数据负载中 id 键对应的值，即您 Odoo "
+"数据库中目标销售订单的编号（需移除字母 S 及前导零）。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:174
 msgid ""
 "`int` converts the retrieved id to an integer (i.e., a whole number) because "
 "the method `browse()` can only be used with an integer."
-msgstr ""
+msgstr "int 将获取的 id 转换为整型数据（即整数），因为 browse() "
+"方法仅能接收整型参数。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:177
 #: ../../content/applications/studio/automated_actions/webhooks.rst:231
 msgid "Click :guilabel:`Add an action`."
-msgstr ""
+msgstr "点击 :guilabel:`添加操作`"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:178
 msgid "In the :guilabel:`Type` section, click :guilabel:`Update Record`."
-msgstr ""
+msgstr "在 :guilabel:`类型` 部分，点击 :guilabel:`更新记录`。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:179
 msgid ""
 "In the :guilabel:`Action details` section, select :guilabel:`Update`, choose "
 "the field :guilabel:`Currency`, and select :guilabel:`USD`."
 msgstr ""
+"在 :guilabel:`操作详情` 部分，选择 :guilabel:`更新`，选取字段 "
+":guilabel:`货币`，并选择 :guilabel:`美元`。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:181
 #: ../../content/applications/studio/automated_actions/webhooks.rst:256
 msgid "Click :guilabel:`Save & Close`."
-msgstr ""
+msgstr "点击 :guilabel:`保存并关闭`。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:184
 #: ../../content/applications/studio/automated_actions/webhooks.rst:259
@@ -2016,13 +2028,15 @@ msgstr "测试网络钩子"
 #: ../../content/applications/studio/automated_actions/webhooks.rst:186
 #: ../../content/applications/studio/automated_actions/webhooks.rst:261
 msgid "To test this webhook, proceed as follows:"
-msgstr ""
+msgstr "测试网络钩子的步骤如下："
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:188
 msgid ""
 "With `Postman <https://www.postman.com/>`_ open, create a new HTTP request "
 "and set its method to :guilabel:`POST`."
 msgstr ""
+"打开 `Postman <https://www.postman.com/>`，创建一个新的 HTTP "
+"请求并将其方法设置为 :guilabel:`POST`。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:190
 #: ../../content/applications/studio/automated_actions/webhooks.rst:265
@@ -2030,13 +2044,16 @@ msgid ""
 "Copy the URL of the Odoo webhook using the :icon:`fa-"
 "link` :guilabel:`(link)` icon and paste it into the URL field in Postman."
 msgstr ""
+"使用 :icon:`fa-link`:guilabel:`(链接)`图标复制 Odoo 网络钩子的 URL，"
+"并将其粘贴到 Postman 的 URL 字段中。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:193
 #: ../../content/applications/studio/automated_actions/webhooks.rst:268
 msgid ""
 "Set the file type to :guilabel:`JSON`, then copy this code, i.e., the "
 "payload, and paste it into the code editor:"
-msgstr ""
+msgstr "将文件类型设置为 "
+":guilabel:`JSON`，然后复制以下代码（即数据负载）并粘贴到代码编辑器中："
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:203
 msgid ""
@@ -2045,6 +2062,9 @@ msgid ""
 "without the `S` or any zeros before the number. For example, a sales order "
 "with the number `S00007` should be entered as `7` in Postman."
 msgstr ""
+"在您的 Odoo 数据库中选择一个销售订单来测试网络钩子。在粘贴的代码中，将`SALES "
+"ORDER NUMBER`替换为销售订单的编号（需移除字母 S "
+"及数字前的所有零）。例如，编号为`S00007`的销售订单在 Postman 中应输入为`7`。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:207
 #: ../../content/applications/studio/automated_actions/webhooks.rst:282
@@ -2054,6 +2074,9 @@ msgid ""
 "If a message other than `200 OK` or `status: ok` is returned, the number "
 "associated with the message helps to identify the problem."
 msgstr ""
+"查看 Postman 中的 :ref:`回复查看器 <studio/webhooks/test-webhook-response>` "
+"以确定 webhook 是否正常运行。如果返回的信息不是`200 OK`或`status: "
+"ok`，则与信息相关的编号有助于确定问题所在。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:214
 msgid "Create a new contact"
@@ -2066,12 +2089,17 @@ msgid ""
 "that includes the contact's information. This could be helpful for "
 "automatically creating new vendors or customers."
 msgstr ""
+"当外部系统向网络钩子 URL 发送包含联系人信息的`POST`API 请求时，"
+"此网络钩子使用自定义代码在 Odoo "
+"数据库中创建一个新联系人。这有助于自动创建新的供应商或客户。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:225
 msgid ""
 "Open the **Contacts** app, then :ref:`open Studio <studio/access>` and "
 "click :guilabel:`Webhooks`. The *Contact* model is selected by default."
 msgstr ""
+"打开**联系人**应用，然后 :ref:`打开定制 <studio/"
+"access>`并点击:guilabel:`Webhooks`。系统默认已选择*联系人*模型。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:228
 msgid ""
