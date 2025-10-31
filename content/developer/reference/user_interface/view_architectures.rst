@@ -1555,8 +1555,8 @@ The `groupby` element can have the following attributes:
 
    The name of the a :attr:`~odoo.fields.Many2one` field to use as header.
 
-   A special :ref:`button <reference/view_architectures/list/button>` element with `type="edit"` can
-   be defined to open the Many2one field's form view.
+   A special button element with `type="edit"` can be defined to open the Many2one field's form
+   view.
 
    :requirement: Mandatory
    :type: str
@@ -1578,7 +1578,7 @@ The `groupby` element can have the following attributes:
                  <field name="tax_id"/>
 
                  <groupby name="partner_id">
-                     <button type="edit" name="edit" icon="fa-edit" title="Edit"/>
+                     <button type="edit" name="edit"/>
                      <field name="email"/>
                      <button type="object" name="my_method" string="Button1" invisible="email == 'jhon@conor.com'"/>
                  </groupby>
