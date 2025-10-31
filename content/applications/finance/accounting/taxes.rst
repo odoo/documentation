@@ -4,269 +4,83 @@
 Taxes
 =====
 
-There are numerous types of **taxes**, and their application varies greatly, depending mostly on
-your company's localization. To make sure they are recorded with accuracy, Odoo's tax engine
-supports all kinds of uses and computations.
+Odoo makes it easy to keep up with tax obligations - computing tax amounts on sales, keeping track
+of tax debit and credit, and completing tax declarations.
+
+Using Odoo to handle taxes involves:
+
+1. :ref:`Initial configuration <taxes/configuration>`: setting company-wide options, adjusting the
+   taxes' configuration if need be, and assigning taxes to products.
+2. :ref:`Daily operations <taxes/operations>`: using taxes in documents created in the Sales,
+   Purchase, Accounting, and Point of Sale apps.
+3. :ref:`Tax reporting <taxes/returns>`: visualizing tax figures for a tax period, completing tax
+   returns and performing tax closing operations.
+
+.. _taxes/configuration:
+
+Initial configuration
+=====================
+
+.. _taxes/configuration/company:
+
+Company-wide options
+--------------------
+
+To access these configuration options, go to :menuselection:`Accounting --> Configuration
+--> Settings` and scroll down to :guilabel:`Taxes`.
 
 .. _taxes/default:
 
 Default taxes
-=============
+~~~~~~~~~~~~~
 
 **Default taxes** define which taxes are automatically selected when creating a new product. They
 are also used to prefill the :guilabel:`Taxes` field when adding a new line on an invoice in
 :ref:`Accounting Firms <accounting/fiduciaries>` mode.
 
-.. image:: taxes/default-configuration.png
-   :alt: Odoo fills out the Tax field automatically according to the Default Taxes
-
-To change your **default taxes**, go to :menuselection:`Accounting --> Configuration --> Settings
---> Taxes --> Default Taxes`, select the appropriate taxes for your default sales tax and purchase
-tax, and click on :guilabel:`Save`.
-
-.. image:: taxes/default-taxes.png
-   :alt: Define which taxes to use by default on Odoo
-
-.. note::
-   **Default taxes** are automatically set up according to the country selected at the creation of
-   your database, or when you set up a :ref:`fiscal localization package
-   <fiscal_localizations/packages>` for your company.
-
 .. _taxes/list_activation:
 
-Activate taxes from the list view
-=================================
+View and activate taxes
+-----------------------
 
-As part of your :ref:`fiscal localization package <fiscal_localizations/packages>`, most of your
-country's sales taxes are already preconfigured on your database. However, only a few taxes are
-activated by default. To activate taxes relevant to your business, go to :menuselection:`Accounting
---> Configuration --> Taxes` and enable the toggle button under the :guilabel:`Active` column.
+To view the list of taxes, go to :menuselection:`Accounting --> Configuration --> Taxes`.
+
+Odoo's :ref:`fiscal localization packages <fiscal_localizations/packages>` create pre-configured
+versions for most sales taxes, but only the most common are activated by default. Use the toggle
+button under the :guilabel:`Active` column to activate any needed taxes.
 
 .. image:: taxes/list.png
    :alt: Activate pre-configured taxes in Odoo Accounting
 
-.. _taxes/configuration:
+.. _taxes/configuration/modify:
 
-Configuration
-=============
+Modify a tax
+------------
 
-To edit or create a **tax**, go to :menuselection:`Accounting --> Configuration --> Taxes` and open
-a tax or click on :guilabel:`New`.
+To modify a tax, open the taxes list by going to :menuselection:`Accounting --> Configuration -->
+Taxes`, then click the tax name.
 
-.. image:: taxes/edit.png
-   :alt: Edition of a tax in Odoo Accounting
+.. _taxes/configuration/back-end:
 
-Basic options
--------------
+Configure back-end appearance and availability
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following options control how a tax appears to users in the Odoo back-end.
 
 .. _taxes/name:
 
 Tax name
-~~~~~~~~
+********
 
-The **tax name** is displayed for backend users in the :guilabel:`Taxes` field in
-:doc:`sales orders <../../sales/sales>`, :doc:`invoices <customer_invoices>`, product forms, etc.
-
-.. _taxes/computation:
-
-Tax computation
-~~~~~~~~~~~~~~~
-
-The :guilabel:`Tax Computation` field determines how the tax amount is computed from the sales
-price. The following options are available:
-
-- :ref:`Group of Taxes <taxes/computation/group-of-taxes>`: a combination of several other taxes
-- :ref:`Fixed <taxes/computation/fixed>`: a fixed amount
-- :ref:`Percentage of Price <taxes/computation/percentage-of-price>`: a percentage of the
-  tax-excluded sales price
-- :ref:`Percentage of Price Tax Included <taxes/computation/percentage-of-price-tax-included>`: a
-  percentage of the tax-included total
-- :ref:`Python Code <taxes/computation/python-code>`: a custom user-defined formula
-
-.. _taxes/computation/group-of-taxes:
-
-Group of taxes
-**************
-
-  The tax is a combination of multiple sub-taxes. You can add as many taxes as you want, in the
-  order you want them to be applied.
-
-.. important::
-   Make sure the tax sequence is correct, as the display order determines the application order and
-   may affect tax computation, particularly if a tax :ref:`affects the base of subsequent taxes
-   <taxes/base-subsequent>`.
-
-.. _taxes/computation/fixed:
-
-Fixed
-*****
-
-The tax has a fixed amount in the default currency. The amount remains the same per unit,
-regardless of the sales price.
-
-The computation is :math:`\text{tax amount} = \text{fixed tax amount} \times \text{quantity}`.
-
-.. example::
-   A product has a sales price of $1000, and we apply a $10 :guilabel:`Fixed` tax. We then have:
-
-   +-------------+-------------+----------+----------+
-   | Product     | Price       | Tax      | Total    |
-   | sales price | without tax |          |          |
-   +=============+=============+==========+==========+
-   | 1,000       | 1,000       | 10       | 1,010.00 |
-   +-------------+-------------+----------+----------+
-
-.. _taxes/computation/percentage-of-price:
-
-Percentage of price
-*******************
-
-The tax rate is a percentage of the **tax-excluded** subtotal.
-
-The exact tax computation depends on the :ref:`Included in Price <taxes/included-in-price>` field,
-which determines whether the sales price should be treated as tax-excluded or tax-included:
-
-.. tabs::
-   .. tab:: Tax-excluded
-
-      If :guilabel:`Included in Price` is disabled, the computation is :math:`\text{tax amount}
-      = \text{sales price} \times \text{tax rate}`.
-
-      .. example::
-         A product has a sales price of $1000, and we apply a 10% :guilabel:`Percentage of Price`
-         tax that is not :guilabel:`Included in Price`. We then have:
-
-         +-------------+-------------+----------+----------+
-         | Product     | Price       | Tax      | Total    |
-         | sales price | without tax |          |          |
-         +=============+=============+==========+==========+
-         | 1,000       | 1,000       | 100      | 1,100.00 |
-         +-------------+-------------+----------+----------+
-
-   .. tab:: Tax-included
-
-      If :guilabel:`Included in Price` is enabled, the computation is :math:`\text{tax amount} =
-      \text{sales price} \times \frac{\text{tax rate}}{1 + \text{tax rate}}`.
-
-      .. example::
-         A product has a sales price of $1000, and we apply a 10% :guilabel:`Percentage of Price`
-         tax that is :guilabel:`Included in Price`. We then have:
-
-         +-------------+-------------+----------+----------+
-         | Product     | Price       | Tax      | Total    |
-         | sales price | without tax |          |          |
-         +=============+=============+==========+==========+
-         | 1,000       | 909.09      | 90.91    | 1,000.00 |
-         +-------------+-------------+----------+----------+
-
-.. _taxes/computation/percentage-of-price-tax-included:
-
-Percentage of price tax included
-********************************
-
-.. important::
-   This tax computation is rarely used and only useful in countries (e.g., Brazil, Bolivia) that
-   quote tax rates as a percentage of the tax-included total.
-   For the more common need to compute tax amounts from a tax-included price, use the
-   :ref:`Percentage of Price <taxes/computation/percentage-of-price>` tax computation with the
-   :ref:`Included in Price <taxes/included-in-price>` option.
-
-The tax rate is a percentage of the **tax-included** total.
-
-The exact tax computation depends on the :ref:`Included in Price <taxes/included-in-price>` field,
-which determines whether the sales price should be treated as tax-excluded or tax-included:
-
-.. tabs::
-   .. tab:: Tax-excluded
-      If :guilabel:`Included in Price` is disabled, the computation is :math:`\text{tax amount}
-      = \text{sales price} \times \frac{\text{tax rate}}{1 - \text{tax rate}}`.
-
-      .. example::
-         A product has a sales price of $1000, and we apply a 10% :guilabel:`Percentage of Price
-         Tax Included` tax that is not :guilabel:`Included in Price`. We then have:
-
-         +-------------+-------------+----------+----------+
-         | Product     | Price       | Tax      | Total    |
-         | sales price | without tax |          |          |
-         +=============+=============+==========+==========+
-         | 1,000       | 1,000       | 111.11   | 1,111.11 |
-         +-------------+-------------+----------+----------+
-
-         Note that the real tax rate in terms of the tax-excluded price is
-         :math:`\frac{111.11}{1000} = 11.111\%`.
-
-   .. tab:: Tax-included
-
-      If :guilabel:`Included in Price` is enabled, the computation is :math:`\text{tax amount} =
-      \text{sales price} \times \text{tax rate}`.
-
-      .. example::
-         A product has a sales price of $1000, and we apply a 10%
-         :guilabel:`Percentage of Price Tax Included` tax that is :guilabel:`Included in Price`.
-         We then have:
-
-         +-------------+-------------+----------+----------+
-         | Product     | Price       | Tax      | Total    |
-         | sales price | without tax |          |          |
-         +=============+=============+==========+==========+
-         | 1,000       | 900         | 100      | 1,000.00 |
-         +-------------+-------------+----------+----------+
-
-         Note that the real tax rate in terms of the tax-excluded price is
-         :math:`\frac{100}{900} = 11.111\%`.
-
-.. _taxes/computation/python-code:
-
-Python code
-***********
-
-.. important::
-   If a tax can be expressed as a multiple of the quantity of the product to which it applies, it
-   can be defined as a :ref:`Fixed <taxes/computation/fixed>` tax. Doing so is strongly recommended
-   over defining a :guilabel:`Python Code` tax.
-
-A tax defined as :guilabel:`Python Code` consists of two snippets of Python code that are executed
-in a local environment that can access the unit price, quantity, product, and partner.
-:guilabel:`Python Code` defines the amount of the tax, and :guilabel:`Applicable Code` defines
-whether the tax is applied. Enter a formula for each field at the bottom of the
-:guilabel:`Definition` tab.
-
-.. example::
-   A product has a sales price of $1000, and we apply a :guilabel:`Python Code` tax with the
-   following configuration:
-
-   - :guilabel:`Python Code`: `result = price_unit * 0.10` and
-   - :guilabel:`Applicable Code`: `result = True`.
-
-   We then have:
-
-   +-------------+-------------+----------+----------+
-   | Product     | Price       | Tax      | Total    |
-   | sales price | without tax |          |          |
-   +=============+=============+==========+==========+
-   | 1,000       | 1,000       | 100      | 1,100.00 |
-   +-------------+-------------+----------+----------+
-
-.. _taxes/active:
-
-Active
-~~~~~~
-
-Only **active** taxes can be added to new documents.
-
-.. important::
-   It is not possible to delete taxes that have already been used. Instead, you can deactivate them
-   to prevent future use.
-
-.. note::
-   This field can be modified from the :ref:`list view <taxes/list_activation>`.
+The :guilabel:`Tax Name` appears for backend users in the :guilabel:`Taxes` field in :doc:`sales
+orders <../../sales/sales>`, :doc:`invoices <customer_invoices>`, product forms, etc.
 
 .. _taxes/scope:
 
 Tax type
-~~~~~~~~
+********
 
-The :guilabel:`Tax Type` determines the tax application, which also restricts where it is displayed.
+The :guilabel:`Tax Type` determines where the tax is available to be selected.
 
 - **Sales**: Customer invoices, product customer taxes, etc.
 - **Purchase**: Vendor bills, product vendor taxes, etc.
@@ -277,40 +91,20 @@ The :guilabel:`Tax Type` determines the tax application, which also restricts wh
    <taxes/computation>` but that you do not want to list along with other sales or purchase taxes.
 
 Tax scope
-~~~~~~~~~
+*********
 
 The :guilabel:`Tax Scope` restricts the use of taxes to a type of product, either **goods** or
 **services**.
 
-.. _taxes/definition-tab:
+.. _taxes/configuration/customer:
 
-Definition tab
---------------
-
-Allocate with precision the amount of the taxable basis or percentages of the computed tax to
-multiple accounts and tax grids.
-
-.. image:: taxes/definition.png
-   :alt: Allocate tax amounts to the right accounts and tax grids
-
-- **Based On**:
-
-  - :guilabel:`Base`: the price on the invoice line
-  - :guilabel:`% of tax`: a percentage of the computed tax.
-
-- **Account**: if defined, an additional journal item is recorded.
-- **Tax Grids**:  used to generate :doc:`tax reports <reporting/tax_returns>`
-  automatically, according to your country's regulations.
-
-.. _taxes/advanced-tab:
-
-Advanced options tab
---------------------
+Configure how the tax appears to your customers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. _taxes/label-invoices:
 
 Label on invoices
-~~~~~~~~~~~~~~~~~
+*****************
 
 The tax label is displayed on each invoice line in the :guilabel:`Taxes` column. This is visible to
 *front-end* users on exported invoices, in customer portals, etc.
@@ -321,9 +115,9 @@ The tax label is displayed on each invoice line in the :guilabel:`Taxes` column.
 .. _taxes/tax-group:
 
 Tax group
-~~~~~~~~~
+*********
 
-Select which **tax group** the tax belongs to. The tax group name is the displayed above the
+Select which **tax group** the tax belongs to. The tax group name is displayed above the
 **total** line on exported invoices and in customer portals.
 
 Tax groups include different iterations of the same tax. This can be useful when you must record
@@ -339,118 +133,57 @@ the same tax differently according to :doc:`fiscal positions <taxes/fiscal_posit
    is why the label indicates :guilabel:`0% EU S`, and the tax group name above the
    :guilabel:`Total` line indicates :guilabel:`VAT 0%`.
 
-.. important::
-   Taxes have three different labels, each one having a specific use. Refer to the following table
-   to see where they are displayed.
+.. _taxes/configuration/computation:
 
-   +------------------+-------------------------+-------------------------+
-   | :ref:`Tax Name   | :ref:`Label on Invoice  | :ref:`Tax Group         |
-   | <taxes/name>`    | <taxes/label-invoices>` | <taxes/tax-group>`      |
-   +==================+=========================+=========================+
-   | Backend          | :guilabel:`Taxes` column| Above the               |
-   |                  | on exported invoices    | :guilabel:`Total` line  |
-   |                  |                         | on exported invoices    |
-   +------------------+-------------------------+-------------------------+
+Configure the tax computation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. _taxes/analytic-cost:
+.. _taxes/configuration/tax-repartition:
 
-Include in analytic cost
-~~~~~~~~~~~~~~~~~~~~~~~~
+Configure how tax journal items are created
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-With this option activated, the tax amount is assigned to the same **analytic account** as the
-invoice line.
+.. _taxes/configuration/create:
 
-.. _taxes/included-in-price:
+Create a new tax
+----------------
 
-Included in price
-~~~~~~~~~~~~~~~~~
+Depending on your business' needs, you may need to create some taxes yourself.
 
-With this option activated, the tax will treat the sales price on which it is applied as a total
-including the tax amount. The tax computation will split the sales price into a base amount and a
-tax amount. This makes it suitable for B2C sales in most countries where prices are quoted
-tax-inclusive.
+.. tip::
+   It's often easier to duplicate an existing tax than to create a new tax from scratch. To
+   duplicate a tax, click :icon:`fa-cog`, then click :guilabel:`Duplicate`.
 
-`Total = Sales Price = Computed Tax-Excluded price + Tax`
+Fiscal positions
+----------------
 
-.. example::
-   A product has a sales price of $1000, and we apply a 10% :guilabel:`Percentage of Price` tax
-   with :guilabel:`Included in Price`. We then have:
+See the fiscal positions page.
 
-   +-------------+-------------+----------+----------+
-   | Product     | Price       | Tax      | Total    |
-   | sales price | without tax |          |          |
-   +=============+=============+==========+==========+
-   | 1,000       | 909.09      | 90.91    | 1,000.00 |
-   +-------------+-------------+----------+----------+
+Set taxes on products
+---------------------
 
-.. note::
-   For a guide on configuring tax-excluded and tax-included prices for B2B and B2C customers,
-   see :doc:`taxes/B2B_B2C`.
+In order for Odoo to know which taxes to use when adding a product to an sales or purchase order,
+invoice, or PoS order, the :guilabel:`Sales Taxes` and :guilabel:`Purchase Taxes` fields need to be
+filled on the product.
 
-   .. image:: taxes/toggle-button.png
+To configure these taxes, go to :menuselection:`Accounting --> Customers --> Products`, select the
+product to configure, and fill the :guilabel:`Sales Taxes` and :guilabel:`Purchase Taxes` fields.
 
-.. _taxes/base-subsequent:
+.. image:: taxes/default-configuration.png
+   :alt: Fill the Sales Taxes and Purchase Taxes fields on a product.
 
-Affect base of subsequent taxes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. tip::
+   Use the Default Taxes company-wide setting to automatically fill these fields on new products.
 
-If this setting is enabled, any subsequent tax applied on the same product line that has
-:ref:`taxes/base-affected` will be based on a modified sales price. The exact behavior depends on
-whether the tax with :guilabel:`Affect base of subsequent taxes` is :ref:`taxes/included-in-price`
-or not.
+.. _taxes/operations:
 
-.. tabs::
-   .. tab:: Tax-excluded
-      If :guilabel:`Included in Price` is disabled, subsequent taxes with :guilabel:`Base affected
-      by preceding taxes` will be based on a modified sales price equal to the original sales price
-      plus the tax amount.
+Applying taxes in daily operations
+==================================
 
-      .. example::
-         A product has a sales price of $1000, and we apply a 10% :guilabel:`Percentage of Price`
-         tax with :guilabel:`Affect base of subsequent taxes`. Any subsequent tax with
-         :guilabel:`Base affected by preceding taxes` will be based on a modified sales price of
-         $1100.
+.. _taxes/returns:
 
-   .. tab:: Tax-included
-      If :guilabel:`Included in Price` is enabled, subsequent taxes with :guilabel:`Base affected
-      by preceding taxes` will be based on a modified sales price equal to the original sales price
-      minus the tax amount.
-
-      .. example::
-         A product has a sales price of $1100, and we apply a 10% :guilabel:`Percentage of Price`
-         tax with :guilabel:`Included in Price` and :guilabel:`Affect base of subsequent taxes`.
-         Any subsequent tax with :guilabel:`Base affected by preceding taxes` will be based on a
-         modified sales price of $1000.
-
-This setting is considered any time multiple taxes are applied to the same product line, whether
-via a :ref:`group of taxes <taxes/computation>` or multiple taxes added directly to a product line.
-
-.. image:: taxes/subsequent-line.png
-   :alt: The eco-tax is taken into the basis of the 21% VAT tax
-
-.. warning::
-   The order in which you add the taxes on a product line has no effect on how amounts are computed.
-   If you add taxes directly on a product line, only the tax sequence determines the order in which
-   they are applied.
-
-   To reorder the sequence, go to :menuselection:`Accounting --> Configuration --> Taxes`, and drag
-   and drop the lines with the handles next to the tax names.
-
-   .. image:: taxes/list-sequence.png
-      :alt: The taxes' sequence in Odoo determines which tax is applied first
-
-.. _taxes/base-affected:
-
-Base affected by preceding taxes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This setting, which is only visible in :doc:`developer mode <../../general/developer_mode>`,
-determines whether any previous tax that :ref:`affects the base of subsequent taxes
-<taxes/base-subsequent>` will modify the sales price that this tax is based on.
-
-.. note::
-   Taxes with :ref:`Included in Price <taxes/included-in-price>` always behave as if this setting is
-   enabled.
+Completing tax returns
+======================
 
 Extra taxes
 ===========
@@ -493,3 +226,4 @@ drop the taxes in the :ref:`order they should be computed <taxes/base-subsequent
    taxes/avatax
    taxes/eu_distance_selling
    taxes/B2B_B2C
+   taxes/tax_computation
