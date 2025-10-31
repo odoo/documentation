@@ -91,7 +91,8 @@ static: $(HTML_BUILD_DIR)/_static/style.css
 test:
 	@python tests/main.py $(SOURCE_DIR)/administration $(SOURCE_DIR)/applications $(SOURCE_DIR)/contributing $(SOURCE_DIR)/developer redirects
 
-# Similar as `test`, but called only manually by content reviewers to trigger extra checks.
+# Similar to `test`, but called only manually by content reviewers to specify a path and a max line
+# length.
 review:
 	@read -p "Enter relative content path: " path; read -p "Enter max line length (default: 100): " line_length; \
 	if [ -z "$$path" ]; then echo "Error: Path cannot be empty"; exit 1; fi; \
