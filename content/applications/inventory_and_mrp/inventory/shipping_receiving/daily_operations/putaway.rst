@@ -27,7 +27,6 @@ so, the :guilabel:`Storage Locations` feature is also automatically activated.
 Finally, click :guilabel:`Save`.
 
 .. image:: putaway/activate-multi-step-routes.png
-   :align: center
    :alt: Activate Multi-Step Routes in Inventory configuration settings.
 
 .. _inventory/routes/putaway-rule:
@@ -36,13 +35,14 @@ Define putaway rule
 -------------------
 
 To manage where specific products are routed for storage, navigate to :menuselection:`Inventory app
---> Configuration --> Putaway Rules`. Use the :guilabel:`Create` button to configure a new putaway
+--> Configuration --> Putaway Rules`. Use the :guilabel:`New` button to configure a new putaway
 rule on a :guilabel:`Product` or :guilabel:`Product Category` that the rule affects.
 
 .. important::
    Putaway rules can be defined either per product/product category, and/or package type (the
    *Packages* setting must be enabled in :menuselection:`Inventory app --> Configuration -->
-   Settings` for that).
+   Settings` for that). Additionally, a :doc:`storage category <storage_category>`
+   can be defined to limit capacities of a storage location and route products accordingly.
 
 In the same line, the :guilabel:`When product arrives in` location is where the putaway rule is
 triggered to create an operation to move the product to the :guilabel:`Store to` location.
@@ -63,8 +63,27 @@ easier to find).
    Repeat this for all products and hit :guilabel:`Save`.
 
    .. image:: putaway/create-putaway-rules.png
-      :align: center
       :alt: Create putaway rules for apples and carrots.
+
+Use the :guilabel:`Sublocation` field to specify whether to use a sublocation or specify a
+storage category:
+
+- :guilabel:`No`: no sublocation is used. Products are directed to whatever is specified in the
+  :guilabel:`Store to` field.
+- :guilabel:`Last Used`: the last location that had a move associated with it for that product or
+  product category is used. If there is no last location used, the destination is whatever is
+  specified in the :guilabel:`Store to` field.
+- :guilabel:`Closest Location`: the locations specified as part of a storage category are used. A
+  storage category is mandatory in the :guilabel:`Having Category` field.
+
+To apply a putaway rule to *all* products, create an empty putaway rule with no specified
+:guilabel:`Product` or :guilabel:`Product Category`. All products are stored in the location
+specified in the :guilabel:`Store to` field.
+
+.. note::
+   A best practice for an empty putaway rule is to specify the :guilabel:`Last used`
+   :guilabel:`Sublocation`. Specifying :guilabel:`Last used` ensures that Odoo suggests the last
+   location used to store a product.
 
 Putaway rule priority
 ---------------------
@@ -90,6 +109,5 @@ match is found:
    #. Items in the `All/drinks` product category are redirected to `WH/Stock/Small Refrigerator`.
 
   .. image:: putaway/putaway-example.png
-     :align: center
      :alt: Some examples of putaway rules.
 
