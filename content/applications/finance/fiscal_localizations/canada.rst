@@ -294,18 +294,3 @@ Once all check configurations are complete, :guilabel:`Save` the settings.
 
 .. seealso::
    :doc:`../accounting/payments/pay_checks`
-
-Receive pre-authorized debits
-=============================
-
-Pre-authorized debits are a method for receiving payments from customers, where the customer
-authorizes the business to withdraw funds from their bank account on a recurring basis. This
-functionality is commonly used for subscriptions, recurring invoices, and other regular payments.
-
-In the Odoo Canadian localization, pre-authorized debits are facilitated through an
-:doc:`integration with Stripe <../payment_providers/stripe>`.
-
-.. seealso::
-   - :doc:`Setting up payment providers <../payment_providers>`
-   - `Stripe's pre-authorized debit payments documentation
-     <https://docs.stripe.com/payments/acss-debit>`_
