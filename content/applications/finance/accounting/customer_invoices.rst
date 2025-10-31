@@ -108,7 +108,7 @@ method in the :guilabel:`Customer Invoices` section.
 
 To send the invoice to the customer, navigate back to the invoice record and follow these steps:
 
-#. Click :guilabel:`Print & Send`.
+#. Click :guilabel:`Send`.
 #. If the :ref:`default invoice layout <studio/pdf-reports/default-layout>` has not been customized
    yet, a :guilabel:`Configure your document layout` pop-up window appears. Configure the layout and
    click :guilabel:`Continue`.
@@ -120,15 +120,15 @@ To send the invoice to the customer, navigate back to the invoice record and fol
         to :menuselection:`Accounting --> Configuration --> Settings`, scroll down to the
         :guilabel:`Customer Payments` section, and enable/disable the :guilabel:`QR Codes` option.
 
-#. In the :guilabel:`Print & Send` window:
+#. In the :guilabel:`Send` window:
 
    - If a preferred :guilabel:`Invoice sending` method was set in the contact form, it is selected
      by default. Select another one if needed.
    - If no preferred :guilabel:`Invoice sending` method was set in the contact form, select the
      method to use for sending the invoice to the customer.
 
-#. Click :guilabel:`Print & Send` if the :guilabel:`by Email` option is selected, or click
-   :guilabel:`Print`.
+#. Click :guilabel:`Send` if the :guilabel:`by Email` option is selected, or click
+   :guilabel:`Download`.
 
 .. _accounting/invoice/sending-multiple-invoices:
 
@@ -136,8 +136,8 @@ Sending multiple invoices
 -------------------------
 
 To send and print multiple invoices, go to :menuselection:`Accounting --> Customers --> Invoices`,
-select them in the :guilabel:`Invoices` list view and click :guilabel:`Print & Send`. The
-:guilabel:`Print & Send` window displays the selected invoice sending methods based on the preferred
+select them in the :guilabel:`Invoices` list view and click :guilabel:`Send`. The
+:guilabel:`Send` window displays the selected invoice sending methods based on the preferred
 method set.
 
 A banner is added to the selected invoices to indicate they are part of an ongoing send and print
