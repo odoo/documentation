@@ -27,13 +27,10 @@ Configuration
 
 To enable storage categories, go to :menuselection:`Inventory app --> Configuration --> Settings`.
 Then, in the :guilabel:`Warehouse` section, ensure the :guilabel:`Storage Locations` and
-:guilabel:`Multi-Step Routes` features are enabled.
-
-Next, activate the :guilabel:`Storage Categories` feature. Finally, click :guilabel:`Save`.
+:guilabel:`Multi-Step Routes` features are enabled. Click :guilabel:`Save`.
 
 .. image:: storage_category/enable-categories.png
-   :align: center
-   :alt: Show the Storage Categories feature.
+   :alt: Enable "Storage Locations" and "Multi-Step Routes" to enable storage categories.
 
 .. _inventory/routes/define-storage:
 
@@ -44,7 +41,7 @@ A storage category with specific limitations **must** be created first, before i
 locations, in order to decide the optimal storage location.
 
 To create a storage category, go to :menuselection:`Inventory app --> Configuration --> Storage
-Categories`, and click :guilabel:`Create`.
+Categories`, and click :guilabel:`New`.
 
 On the storage category form, type a name for the category in the :guilabel:`Storage Category`
 field.
@@ -69,7 +66,7 @@ product:
   the same time.
 
 .. tip::
-   When clicked, the :guilabel:`Location` smart button shows which storage locations the category
+   When clicked, the :guilabel:`Locations` smart button shows which storage locations the category
    has been assigned to.
 
 Capacity by weight
@@ -91,7 +88,6 @@ their capacities in the :guilabel:`Quantity` field.
    of a storage category form.
 
    .. image:: storage_category/capacity-by-product.png
-      :align: center
       :alt: Show storage category limiting by product count.
 
 .. _inventory/routes/set-capacity-package:
@@ -102,6 +98,11 @@ Capacity by package
 For companies using :doc:`packages <../../product_management/configure/package>`, it becomes
 possible to ensure real-time storage capacity checks, based on package types (e.g., crates, bins,
 boxes, etc.).
+
+Create the package type before you can assign it to a storage category. Create it on the
+:guilabel:`Inventory` tab of the product form (in the :guilabel:`Packaging` section), or create it
+from the :guilabel:`Product Packagings` page. Be sure to set the :guilabel:`Package Type`.
+
 
 .. important::
    Enable the :guilabel:`Packages` feature in :menuselection:`Inventory app --> Configuration -->
@@ -115,8 +116,20 @@ boxes, etc.).
    :guilabel:`Package Type`, and set a maximum of `2.00` `Pallets` for a specific location.
 
    .. image:: storage_category/storage-category.png
-      :align: center
       :alt: Create a storage category on the page.
+
+.. important::
+   To ensure that the storage category works as intended, click the :guilabel:`Put in Pack` button
+   on the receipt form when receiving products into inventory. However, Odoo will treat multiple
+   received packages as a single package if you do this, so you must manually separate the packages
+   into separate storage locations. Click the :guilabel:`Open Move` button to the right of the
+   :guilabel:`Units` field, then click :guilabel:`Add a line`. Finally, split the package into
+   separate locations, then click :guilabel:`Save`. Finally, click :guilabel:`Put in Pack` on the
+   receipt.
+
+   .. image:: storage_category/package-stock-move.png
+      :alt: Complete the "Stock move" box to route packages.
+
 
 .. _inventory/routes/assign-location:
 
@@ -129,10 +142,9 @@ Then, select the created category in the :guilabel:`Storage Category` field.
 
 .. example::
    Assign the `High Frequency pallets` storage category (which limits pallets stored at any location
-   to two pallets) to the `WH/Stock/pallets/PAL 1` sub-location.
+   to two pallets) to the `WH/Stock/pallets/PAL1` sub-location.
 
    .. image:: storage_category/location-storage-category.png
-      :align: center
       :alt: When a Storage Category is created, it can be linked to a warehouse location.
 
 .. _inventory/routes/set-putaway-attribute:
@@ -144,17 +156,31 @@ With the :ref:`storage category <inventory/routes/define-storage>` and :ref:`loc
 <inventory/routes/assign-location>` set up, create the :doc:`putaway rule <putaway>` by navigating
 to :menuselection:`Inventory app --> Configuration --> Putaway Rules`.
 
-Click the :guilabel:`Create` button to create the putaway rule. In the :guilabel:`Having Category`
-field of the new putaway rule form, select the storage category.
+Click the :guilabel:`New` button to create the putaway rule. In the :guilabel:`Sublocation` field,
+choose :guilabel:`Closest Location` or :guilabel:`Last Used`, then select a category in the
+:guilabel:`Having Category` field.
+
+Use the :guilabel:`Sublocation` field to specify whether a sublocation should be used and how to
+find that sublocation:
+
+- :guilabel:`No`: No sublocation is used. The destination is whatever is listed in the
+  :guilabel:`Store to` field.
+- :guilabel:`Last Used`: The last location that had a move associated with it for that product or
+  product category is used. If there is no last location used, the destination is whatever is
+  specified in the :guilabel:`Store to` field.
+- :guilabel:`Closest Location`: The locations specified as part of the storage category are used. A
+  storage category is mandatory in the :guilabel:`Having Category` field.
 
 .. example::
-   Continuing the example from above, the `High Frequency Pallets` storage category is assigned to
-   the putaway rule directing pallets of lemonade to locations with the `High Frequency Pallets`
+   Continuing the example from above, the `High frequency pallets` storage category is assigned to
+   the putaway rule directing pallets of lemonade to locations with the `High frequency pallets`
    storage category :ref:`assigned to them <inventory/routes/assign-location>`.
 
    .. image:: storage_category/smart-putaways.png
-      :align: center
       :alt: Storage Categories used in a variety of putaway rules.
+
+If using multiple storage locations for a single category, create putaway rules for each location to
+ensure that if one storage location is in use, the secondary locations must be used.
 
 Use case: limit capacity by package
 ===================================
@@ -166,7 +192,8 @@ Continuing the example from above, the `High Frequency Pallets` storage category
 `PAL1` and `PAL2` locations.
 
 Then, :ref:`putaway rules <inventory/routes/putaway-rule>` are set, so that any pallets received in
-the warehouse are directed to be stored in `PAL1` and `PAL2` locations.
+the warehouse are directed to be stored in `PAL1` and `PAL2` locations. When products are received,
+they are put into a pack before validating the receipt.
 
 Depending on the number of pallets on-hand at each of the storage locations, when one pallet of
 lemonade cans is received, the following scenarios happen:
