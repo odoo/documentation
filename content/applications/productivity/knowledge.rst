@@ -22,8 +22,9 @@ is created under another, the original one is the **parent article**, while the 
 **child** or **nested article**, indicating its subordinate position. This structure helps organize
 content by establishing clear relationships between related articles.
 
-To create a nested article, hover over an article in the sidebar tree and click the :icon:`fa-plus`
-:guilabel:`(plus)` icon.
+.. tip::
+   To create a nested article, hover over an article in the sidebar tree and click the
+   :icon:`fa-plus` :guilabel:`(plus)` icon.
 
 From scratch
 ------------
@@ -63,6 +64,10 @@ To edit an article, select it in the sidebar tree, then edit its content and for
 :ref:`text editor toolbar <knowledge/articles_editing/text-editor>`, typing :ref:`powerbox
 commands <knowledge/articles_editing/commands>`, and adding a :ref:`cover picture
 <knowledge/articles_editing/cover>` with a :ref:`title emoji <knowledge/articles_editing/emoji>`.
+
+.. tip::
+   To enlarge or reduce the article's width, click the :icon:`fa-ellipsis-v` (:guilabel:`More
+   actions`) icon, then toggle the :icon:`oi-arrows-h` :guilabel:`Full Width` on or off.
 
 .. _knowledge/articles_editing/text-editor:
 
@@ -105,6 +110,12 @@ following commands are exclusive to the Knowledge app:
          * - :guilabel:`Item Calendar`
            - Insert a Calendar view and create :ref:`article items
              <knowledge/articles_editing/items>`.
+         * - :guilabel:`Clipboard`
+           - Add a clipboard section to store content and reuse it in other apps.
+         * - :guilabel:`Foldable Section`
+           - Hide the text inside a foldable section.
+         * - :guilabel:`Article`
+           - Insert a shortcut to an article.
 
 .. _knowledge/articles_editing/items:
 
@@ -123,23 +134,24 @@ consistent information across related items and articles.
 Cover pictures
 --------------
 
-To add a cover picture, click the :icon:`fa-ellipsis-v` :guilabel:`(ellipsis)` icon, then
-:guilabel:`Add Cover`. The following options enable selecting and inserting pictures from different
-sources:
-
-- Search the :doc:`Unsplash </applications/general/integrations/unsplash>` database to find a
-  suitable picture. If the database and **Unsplash** account are associated, the cover
-  picture is automatically selected based on the article's name.
-- :guilabel:`Add URL`: Copy-paste the **image address**.
-- :guilabel:`Upload an image`: Upload the file into the image library.
+To add a cover picture, click the :icon:`fa-ellipsis-v` (:guilabel:`More actions`) icon, then
+:guilabel:`Add Cover`.
 
 To manage the cover picture, hover the mouse over it and select the preferred option:
 
-- :guilabel:`Replace Cover` and search from the database or library, or add a different URL.
-
-- :guilabel:`Reposition` and adjust the picture before clicking :guilabel:`Save Position`.
-
+- :guilabel:`Replace Cover`: Search from the :doc:`Unsplash
+  </applications/general/integrations/unsplash>` database library, click :guilabel:`Add URL` and
+  paste the **image address**, or click :guilabel:`Upload an image` to upload a file into the image
+  library.
+- :guilabel:`Reposition`: Adjust the picture, then click :guilabel:`Save Position` or
+  :guilabel:`Cancel`.
 - :guilabel:`Remove`.
+
+.. note::
+   - After clicking :guilabel:`Add Cover`, a cover picture is automatically attributed to the
+     article based on the title.
+   - A removed cover picture can be retrieved in the database library. To delete it, hover the
+     mouse over it and click the :icon:`fa-trash` (:guilabel:`trash`) icon.
 
 .. _knowledge/articles_editing/emoji:
 
@@ -148,9 +160,8 @@ Title emoji
 
 To add a title emoji to the article's name and header:
 
-- Click the :icon:`fa-ellipsis-v` :guilabel:`(ellipsis)` icon, then :guilabel:`Add Icon` to
+- Click the :icon:`fa-ellipsis-v` (:guilabel:`More actions`) icon, then :guilabel:`Add Icon` to
   generate a random emoji. Click the emoji to select a different one.
-
 - Alternatively, click the :icon:`fa-file-text-o` :guilabel:`(page)` icon next to the article's
   name in the sidebar or the top bar and select the preferred emoji.
 
@@ -187,15 +198,15 @@ Knowledge allows for managing articles, which consists of :ref:`structuring
 Basic management
 ----------------
 
-Click the :icon:`fa-ellipsis-v` (:guilabel:`ellipsis`) icon and select one of the following actions
-for basic article management:
+Click the :icon:`fa-ellipsis-v` (:guilabel:`More actions`) icon and select one of the following
+actions for basic article management:
 
 - :guilabel:`Move To`: Select the article to move under a category or another article, then click
   :guilabel:`Move Article`.
 - :guilabel:`Lock Content`: Lock the article to stop edits. Click :guilabel:`Unlock` to edit again.
 - :guilabel:`Create a Copy`: Copy the article under the :guilabel:`Private` section.
 - :guilabel:`Open Version History`: Restore a previous version of the article.
-- :guilabel:`Export`: Open the browser's print function.
+- :guilabel:`Download PDF`: Open the browser's print function.
 - :guilabel:`Add to Templates`: Add the article to the list of templates.
 - :guilabel:`Send to Trash`: Move the article to the trash.
 
@@ -212,7 +223,7 @@ for basic article management:
 .. tip::
    - Move an article directly from the sidebar tree by dragging and dropping it under another
      article or category.
-   - Click the :icon:`fa-search` (:guilabel:`serch`) icon in the top-left corner or press `CTRL` /
+   - Click the :icon:`fa-search` (:guilabel:`search`) icon in the top-left corner or press `CTRL` /
      `CMD` + `K` to open the command palette, then type `?` to search for visible articles or `$`
      for :ref:`hidden articles <knowledge/articles_editing/visibility>`. Alternatively, hover over
      the :guilabel:`Workspace` category and click the :icon:`fa-eye` (:guilabel:`eye`) icon to find
@@ -258,6 +269,11 @@ inviting :ref:`users <knowledge/articles_editing/invite>`, providing :ref:`onlin
 Articles listed under a category in the sidebar tree are **visible**. Articles that certain users
 must search for through the command palette due to restricted access rights are **hidden**.
 
+.. tip::
+   To copy a specific section of an article, hover over the header (`H1`, `H2`, and `H3`), and click
+   the :icon:`fa-link` (:guilabel:`link`) icon. Clicking the shared link leads to the selected
+   section of the article.
+
 .. _knowledge/articles_editing/rights:
 
 Configure access rights
@@ -265,8 +281,8 @@ Configure access rights
 
 Click :guilabel:`Share` in the top-right menu to configure access rights.
 
-Default access rights
-*********************
+General access
+**************
 
 .. tabs::
 
@@ -277,18 +293,18 @@ Default access rights
 
       * - Setting
         - Use
-      * - :guilabel:`Can edit`
+      * - :guilabel:`Can Edit`
         - Allow all internal users to edit the article.
-      * - :guilabel:`Can read`
+      * - :guilabel:`Can Read`
         - Allow all internal users to read the article only.
-      * - :guilabel:`No access`
-        - Prevent all users from accessing the article in the sidebar tree or searching in the
-          command palette.
+      * - :guilabel:`Members only`
+        - Allow only members to access the article from the sidebar tree or by searching for it in
+          the command palette.
 
 .. _knowledge/articles_editing/visibility:
 
-Visibility
-**********
+Show in workspace
+*****************
 
 .. tabs::
 
@@ -301,8 +317,8 @@ Visibility
         - Use
       * - :guilabel:`Everyone`
         - The article is visible in the sidebar tree to all internal users.
-      * - :guilabel:`Members`
-        - The article is only visible in the sidebar tree to :ref:`invited users
+      * - :guilabel:`Members only`
+        - The article is only visible in the sidebar tree to :ref:`members
           <knowledge/articles_editing/invite>`, while other users can find it using the hidden
           article search by pressing `CTRL` / `CMD` + `K` and typing `$`.
 
@@ -319,7 +335,7 @@ Visibility
 Invite specific users
 ~~~~~~~~~~~~~~~~~~~~~
 
-To grant specific internal or portal users access to a private article or to share a
+To grant specific internal or portal users access to a private nested article or to share a
 :guilabel:`Workspace` article with a portal user, follow these steps:
 
 #. Click :guilabel:`Share` in the top-right menu.
@@ -332,8 +348,8 @@ To grant specific internal or portal users access to a private article or to sha
 Generate article URL
 ~~~~~~~~~~~~~~~~~~~~
 
-Click :guilabel:`Share` and activate the :guilabel:`Share to web` toggle to generate a URL. Click
-:guilabel:`Copy Link` to copy the article's URL.
+To generate a URL and share an article, click :guilabel:`Share` and activate the :guilabel:`Share to
+web` toggle. Click :guilabel:`Copy Link` to copy the article's URL.
 
 .. note::
    - If an article contains :ref:`inserted views <knowledge/articles_editing/views>`, users with
@@ -350,8 +366,8 @@ Removing an article involves deleting or archiving it.
 Delete an article
 ~~~~~~~~~~~~~~~~~
 
-Select an article in the sidebar tree and click the :icon:`fa-ellipsis-v` (:guilabel:`ellipsis`)
-icon, then :guilabel:`Send to Trash`. Alternatively, hold click the article and drag it to the
+Select an article in the sidebar tree and click the :icon:`fa-ellipsis-v` (:guilabel:`More actions`)
+icon, then :guilabel:`Send to Trash`. Alternatively, drag and drop the article under
 :guilabel:`Drop here to delete this article` at the bottom left corner. The article is moved to the
 trash for 30 days before being permanently deleted.
 
@@ -380,11 +396,11 @@ Archive`.
 Retrieval
 ---------
 
-Retrieving Knowledge articles consists of accessing them from various Odoo apps or restoring
-previous versions.
+Retrieving Knowledge articles consists of accessing them from Odoo apps or restoring previous
+versions.
 
-Access articles from various apps
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Access articles from Odoo apps
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Knowledge articles are accessible from the :ref:`form view <studio/views/general/form>` of various
 apps. Click the :icon:`fa-bookmark` :guilabel:`(Knowledge)` icon in the top right corner to open
@@ -399,8 +415,8 @@ Version history
 ~~~~~~~~~~~~~~~
 
 To retrieve a previous version of an article, select it in the sidebar tree and click the
-:icon:`fa-ellipsis-v` (:guilabel:`ellipsis`) icon, then the :icon:`fa-history` (:guilabel:`history`)
-icon to open the version history. Select a version and click :guilabel:`Restore history`.
+:icon:`fa-ellipsis-v` (:guilabel:`More actions`) icon, then :guilabel:`Open Version History`.
+Select a version and click :guilabel:`Restore history`.
 
 .. note::
    In the version history, the :guilabel:`Content` tab shows the selected version, while the
@@ -412,17 +428,16 @@ icon to open the version history. Select a version and click :guilabel:`Restore 
 Properties
 ==========
 
-Properties are custom fields for storing and managing information that users with `Can edit`
-:ref:`access rights <knowledge/articles_editing/rights>` can add to :ref:`nested articles
-<knowledge/articles_editing/create-article>` or :ref:`article items
+Properties are custom fields for storing and managing information that members can add to
+:ref:`nested articles <knowledge/articles_editing/create-article>` or :ref:`article items
 <knowledge/articles_editing/items>`.
 
-To add a property, click the :icon:`fa-ellipsis-v` (:guilabel:`ellipsis`) icon, then
+To add a property, click the :icon:`fa-ellipsis-v` (:guilabel:`More actions`) icon, then
 :menuselection:`Add Properties --> Add a Property`, enter a :guilabel:`Label`, and select a
 :guilabel:`Field Type`.
 
-To learn more about properties and field types, go to :doc:`Property fields
-</applications/essentials/property_fields>`.
+.. seealso::
+   :doc:`/applications/essentials/property_fields`
 
 .. note::
   - Click outside the property field window to save a property.
