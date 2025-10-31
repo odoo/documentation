@@ -7,10 +7,8 @@ Devices
 =======
 
 .. seealso::
-   - :doc:`Connect a Worldline payment terminal
-     <../../sales/point_of_sale/payment_methods/terminals/worldline>`
-   - :doc:`Connect an Ingenico payment terminal
-     <../../sales/point_of_sale/payment_methods/terminals/ingenico>`
+   - :doc:`Connect a Worldline/Axepta BNP Paribas payment terminal
+     <../../sales/point_of_sale/payment_methods/terminals/worldline_axepta>`
 
 .. toctree::
    :titlesonly:
