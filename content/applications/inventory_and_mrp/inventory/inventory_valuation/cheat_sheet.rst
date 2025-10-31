@@ -192,7 +192,8 @@ Inventory vs Accounting
 Accounting Methods
 ==================
 
-There are two accounting practices on how to maintain your accounts:
+There are two accounting practices on how to maintain your accounts, defined in the Settings
+of the Accounting app, section Inventory Valuation:
 
 **Periodic:** Post vendor bills as expenses by nature, and update stock valuation in the closing
 entry by reducing expenses (stock variation). This is the best practice in Europe.
