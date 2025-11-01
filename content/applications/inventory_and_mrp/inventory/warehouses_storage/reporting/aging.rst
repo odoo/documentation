@@ -1,5 +1,5 @@
 =========================
-Stock valuation dashboard
+Stock valuation reporting
 =========================
 
 .. |SVLs| replace:: :abbr:`SVLs (stock valuation layers)`
@@ -26,19 +26,19 @@ methods used in Odoo: *standard price*, *average cost* (AVCO), and *first in, fi
 accounting. It is important to know that the valuation method chosen for a product impacts the
 calculation of several fields in the stock valuation reports.
 
-Open the dashboard
-==================
+Open the reporting screen
+=========================
 
-Odoo's *Stock Valuation* dashboard displays the financial value of all tracked inventory, according
-to each product's stock valuation method. This report can provide insights into potential issues in
-the supply chain, such as sunken purchase costs or delays in profitability. To access the dashboard,
-go to :menuselection:`Inventory app --> Reporting --> Valuation`.
+Odoo's *Stock Valuation* reporting screen displays the financial value of all tracked inventory,
+according to each product's stock valuation method. This can provide insights into potential issues
+in the supply chain, such as sunken purchase costs or delays in profitability. To access stock
+valuation reporting, go to :menuselection:`Inventory app --> Reporting --> Valuation`.
 
 .. important::
    The :menuselection:`Reporting` menu in **Inventory** is only accessible to users with
    :doc:`admin access <../../../../general/users/access_rights>`.
 
-This dashboard has three different views, or inventory reports — :ref:`list view
+This reporting screen has three different views, or inventory reports — :ref:`list view
 <inventory/warehouses_storage/valuation-report>` (i.e. the default stock valuation report),
 :ref:`pivot view <inventory/warehouses_storage/aging-report>` (i.e. the stock aging report), and
 :ref:`graph view <inventory/warehouses_storage/graph-view>`. Each view can be customized with
@@ -53,9 +53,9 @@ the top of the report, or click the drop-down arrow next to it. For example, sel
 List view: stock valuation
 ==========================
 
-By default, the :guilabel:`Stock Valuation` dashboard displays in *list view*, represented by the
-:icon:`oi-view-list` :guilabel:`(list)` icon. This report shows a detailed record of stock movements
-and their valuations.
+By default, the :guilabel:`Stock Valuation` reporting screen displays in *list view*, represented by
+the :icon:`oi-view-list` :guilabel:`(list)` icon. This report shows a detailed record of stock
+movements and their valuations.
 
 Configure
 ---------
@@ -128,17 +128,17 @@ automatically posted to reflect the change in pricing for goods that remain in s
 be negative to "remove" the old pricing, and the second entry will be positive to record the new
 pricing. These entries are connected to journal entries in Odoo's **Accounting** app.
 
-Below is an example of what the :guilabel:`Stock Valuation` table shows when a few stock moves have
+Below is an example of what the :guilabel:`Stock Valuation` report shows when a few stock moves have
 occurred for a product using standard price accounting.
 
 .. image:: aging/before-val-method-change.png
-   :alt: Stock valuation table in standard price accounting.
+   :alt: Stock valuation report in standard price accounting.
 
-Conversely, the following image depicts what the *Stock Valuation* Report table might look like
+Conversely, the following image depicts what the *Stock Valuation* report might look like
 after a product has switched from standard price to :abbr:`FIFO (First In, First Out)` accounting.
 
 .. image:: aging/after-val-method-change.png
-   :alt: Stock valuation table after switching from standard price to FIFO accounting.
+   :alt: Stock valuation report after switching from standard price to FIFO accounting.
 
 .. example::
    The :guilabel:`Remaining Value` and :guilabel:`Remaining Quantity` fields are derived from what
@@ -188,7 +188,7 @@ will show the :guilabel:`Quantity` and :guilabel:`Total Value` of each stock mov
 Pivot view: stock aging
 =======================
 
-From the :guilabel:`Stock Valuation` dashboard, access pivot view by clicking the
+From the :guilabel:`Stock Valuation` reporting screen, access pivot view by clicking the
 :icon:`oi-view-pivot` :guilabel:`(pivot)` icon. This view is essentially a *stock aging report*, and
 it shows the on-hand quantity and value of inventory by purchase date, which can help monitor
 products with expiration dates.

@@ -15,8 +15,8 @@ To access the stock report, go to :menuselection:`Inventory app --> Reporting --
    :align: center
    :alt: Show the stock report, accessible by going to Inventory > Reporting > Stock.
 
-Navigate the stock report
-=========================
+Navigate the report
+===================
 
 On the stock report, the left sidebar includes several groupings to narrow down what is being shown.
 The default groupings are :guilabel:`Warehouses`,  which filters products by specific warehouses,

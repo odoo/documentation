@@ -18,8 +18,8 @@ making, ensuring stock availability for upcoming sales, manufacturing, and reple
    The forecast report is **only** available on products where inventory is being tracked, commonly
    referred to as a *storable product*.
 
-Navigating the forecast report
-==============================
+Navigating the report
+=====================
 
 The forecast report can be accessed via the **Inventory**, **Purchase**,  **Manufacturing**, and
 **Sales** apps.
