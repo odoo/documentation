@@ -4,7 +4,7 @@
 Products
 ========
 
-**Odoo eCommerce** allows you to :ref:`add products <ecommerce/products/add-products>` and manage
+**Odoo test** allows you to :ref:`add products <ecommerce/products/add-products>` and manage
 your :ref:`product pages <ecommerce/products/product-page>` directly from the Website app. It also
 allows you to add :ref:`product variants <ecommerce/products/product-variants>` and
 :ref:`digital files <ecommerce/products/digital-files>`, :ref:`translating
