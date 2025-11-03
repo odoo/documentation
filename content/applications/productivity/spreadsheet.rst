@@ -13,6 +13,7 @@ Spreadsheet
    spreadsheet/insert
    spreadsheet/work_with_data
    spreadsheet/visualize_data
+   spreadsheet/share_collaborate
 
 **Odoo Spreadsheet** allows you to organize, manipulate, analyze, and visualize data. It offers
 similar functionality to other spreadsheet solutions with the added benefit of integrating directly
@@ -28,19 +29,20 @@ With Odoo Spreadsheet, you can:
 - :doc:`create and use dynamic pivot tables <spreadsheet/work_with_data/dynamic_pivot_tables>`
 - filter data across multiple Odoo data sources using :doc:`global filters
   <spreadsheet/work_with_data/global_filters>`
-- visualize data using :doc:`charts <spreadsheet/visualize_data/charts>` and formatting
-- share files internally and externally
+- visualize data using :doc:`charts <spreadsheet/visualize_data/charts>` and :doc:`formatting
+  <spreadsheet/visualize_data/conditional_formatting>`
+- :doc:`share files internally and externally <spreadsheet/share_collaborate>`
 
 The Spreadsheet module is part of **Odoo Documents**.
 
 .. tip::
    Within a spreadsheet, opening the command palette, using the :doc:`keyboard shortcut
-   <../../applications/essentials/keyboard_shortcuts>` `Ctrl` + `K` or `Command` + `K`, allows you
+   <../essentials/keyboard_shortcuts>` `Ctrl` + `K` or `Command` + `K`, allows you
    to browse and execute spreadsheet commands via the keyboard, without having to navigate menus.
 
 .. note::
    Odoo spreadsheets serve as the foundation for the :doc:`dashboards available in Odoo Dashboards
-   <../../applications/productivity/dashboards>`. On a dashboard, charts and data tables are used to
+   <dashboards>`. On a dashboard, charts and data tables are used to
    display dynamic Odoo data and provide an overview of key business metrics.
 
    :ref:`Standard, pre-configured dashboards
