@@ -2,7 +2,7 @@
 Ordering and checkout
 =====================
 
-Odoo eCommerce provides several options to organize the ordering and checkout process. It offers
+Odoo Test provides several options to organize the ordering and checkout process. It offers
 different :ref:`order button <ecommerce/checkout/order-buttons>` options and sequential
 :ref:`checkout steps <ecommerce/checkout/steps>`, some of which support additional features. The
 related buttons and checkout pages can be customized using the :doc:`website editor
