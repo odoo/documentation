@@ -16,7 +16,7 @@ The control policy is selected on the *Product* record.
 Configuration
 =============
 
-To configure the control policy for a product, navigate to :menuselection:`Purchse app --> Prodcuts
+To configure the control policy for a product, navigate to :menuselection:`Purchase app --> Products
 --> Products`, then click on a product record to open it. Click to the :guilabel:`Purchase` tab.
 Scroll to the :guilabel:`Vendor Bills` section. Under :guilabel:`Control Policy`, tick the radio
 button for either :guilabel:`On ordered quantities` or :guilabel:`On recieved quantities`.
