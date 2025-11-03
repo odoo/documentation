@@ -42,7 +42,6 @@ the :guilabel:`Operations` heading, activate the :guilabel:`Packages` feature. T
 :guilabel:`Save`.
 
 .. image:: package/enable-pack.png
-   :align: center
    :alt: Activate the *Packages* setting in Inventory > Configuration > Settings.
 
 .. _inventory/product_management/move-entire-pack:
@@ -53,8 +52,10 @@ type to update a package's contained item's location upon updating the package's
 To do that, go to :menuselection:`Inventory app --> Configuration --> Operations Types` and select
 the desired operation this feature will apply to (may have to set it for multiple).
 
-On the operation type page, in the :guilabel:`Packages` section, tick the :guilabel:`Move Entire
-Packages` checkbox.
+Open the :guilabel:`Barcode App` tab, then select the :guilabel:`Move Entire Packages` checkbox.
+
+.. image:: package/move-entire-packages.png
+   :alt: Enable "Move Entire Packages" on the Operation Type.
 
 .. _inventory/warehouses_storage/pack:
 
@@ -77,7 +78,6 @@ On any warehouse transfer (e.g. receipt, delivery order), add a product to a pac
 :guilabel:`⦙≣ (bulleted list)` icon in the :guilabel:`Operations` tab.
 
 .. image:: package/detailed-operations.png
-   :align: center
    :alt: Show "Detailed Operations" icon in the product line.
 
 Doing so opens the :guilabel:`Detailed Operations` pop-up window for the :guilabel:`Product`.
@@ -87,7 +87,6 @@ a :guilabel:`Destination Package`. Select an existing package, or create a new o
 name of the new package, then select :guilabel:`Create...`.
 
 .. figure:: package/destination-package.png
-   :align: center
    :alt: Assign a package to "Destination Package" field.
 
    Twelve units of `Acoustic Bloc Screen` are placed in `PACK0000001`.
@@ -114,7 +113,6 @@ new package, and place all the items in the transfer in that newly-created packa
    Settings`.
 
 .. figure:: package/put-in-pack.png
-   :align: center
    :alt: Image of the "Put in Pack" button being clicked.
 
    In batch transfer `BATCH/00003`, the :guilabel:`Put in Pack` button was clicked to create a new
@@ -154,7 +152,6 @@ fields of the form are as follows:
 - :guilabel:`Carrier Code`: define a code that is linked to the package type.
 
 .. image:: package/package-type.png
-   :align: center
    :alt: Package type for FedEx's 25 kilogram box.
 
 .. _inventory/warehouses_storage/cluster-pack:
@@ -168,7 +165,6 @@ Settings`, and activate the :guilabel:`Batch Transfers` feature, located in the
 form.
 
 .. image:: package/enable-batch.png
-   :align: center
    :alt: Activate the *Batch Transfers* feature in Inventory > Configuration > Settings.
 
 Add new packages by going to :menuselection:`Inventory app --> Products --> Packages`. Then, click
@@ -192,7 +188,6 @@ following fields:
   the warehouse; :guilabel:`Disposable` for packages used to ship products to customers.
 
 .. image:: package/package.png
-   :align: center
    :alt: Display package form to create a cluster pack.
 
 .. seealso::
@@ -208,6 +203,5 @@ packages are shown in Kanban view, in their current storage location.
    Drag-and-drop packages to move them between internal locations.
 
 .. image:: package/packages-kanban.png
-   :align: center
    :alt: Packages dashboard.
 
