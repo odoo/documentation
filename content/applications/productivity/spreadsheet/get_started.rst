@@ -135,9 +135,16 @@ spreadsheet via the :guilabel:`File` menu:
 - :icon:`os-copy-file` :guilabel:`Make a copy`: creates a duplicate of the current spreadsheet with
   the same :ref:`regional settings <spreadsheet/get-started/manage-spreadsheets-locale>` (or
   locale).
-- :icon:`os-save` :guilabel:`Save as template`: allows the current spreadsheet to be used as a
-  :ref:`template <spreadsheet/get-started/templates>` for future spreadsheets.
-- :icon:`os-download` :guilabel:`Download`: downloads the spreadsheet in `.xlsx` format.
+- :icon:`fa-share-alt` :guilabel:`Share`: allows you to configure access rights to the spreadsheet
+  and :guilabel:`Share` it with specific users or copy a shareable link. For a spreadsheet
+  containing dynamic Odoo data that needs to be shared with a user who does not have the
+  appropriate access rights to the data, it is possible to :guilabel:`Freeze and share` the
+  spreadsheet.
+
+  .. seealso::
+     :ref:`Access and sharing <spreadsheet/collaboration/access-sharing>`
+
+- :icon:`fa-download` :guilabel:`Download`: downloads the spreadsheet in `.xlsx` format.
 
   .. important::
      When you download a spreadsheet in `.xlsx` format, any spreadsheet formulas that retrieve Odoo
@@ -148,14 +155,23 @@ spreadsheet via the :guilabel:`File` menu:
   .. tip::
      Users with :guilabel:`Viewer` rights can also download a spreadsheet in `.xlsx` format.
 
+- :icon:`fa-print` :guilabel:`Print`: prints a copy of the spreadsheet on a connected printer.
+- :icon:`os-save` :guilabel:`Save as template`: allows the current spreadsheet to be used as a
+  :ref:`template <spreadsheet/get-started/templates>` for future spreadsheets.
+- :icon:`fa-trash` :guilabel:`Move to trash`: moves the spreadsheet to the trash folder of the
+  Documents app
+
+  .. tip::
+     Items in the trash folder are permanently deleted after 30 days.
+
+- :icon:`os-add-to-dashboard` :guilabel:`Add to dashboard`: :ref:`converts
+  <spreadsheet/get-started/convert-to-dashboard>` the current spreadsheet into an
+  :doc:`Odoo dashboard <../dashboards>`.
 - :icon:`os-version-history` :guilabel:`See version history`: provides read-only :ref:`access to
   previous versions <spreadsheet/get-started/manage-spreadsheets-versioning>` of the current
   spreadsheet, which can be named and restored if needed.
-- :icon:`fa-print` :guilabel:`Print`: prints a copy of the spreadsheet on a connected printer.
 - :icon:`os-cog` :guilabel:`Settings`: allows you to view and change the :ref:`locale
   <spreadsheet/get-started/manage-spreadsheets-locale>` of the current spreadsheet.
-- :icon:`os-add-to-dashboard` :guilabel:`Add to dashboard`: :ref:`converts
-  <spreadsheet/get-started/convert-to-dashboard>` the current spreadsheet into an Odoo dashboard.
 
 .. _spreadsheet/get-started/manage-spreadsheets-versioning:
 
