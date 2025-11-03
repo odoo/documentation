@@ -13,6 +13,7 @@ Spreadsheet
    spreadsheet/insert
    spreadsheet/work_with_data
    spreadsheet/visualize_data
+   spreadsheet/share_collaborate
 
 **Odoo Spreadsheet** allows you to organize, manipulate, analyze, and visualize data. It offers
 similar functionality to other spreadsheet solutions with the added benefit of integrating directly
