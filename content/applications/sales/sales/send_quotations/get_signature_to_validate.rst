@@ -2,7 +2,7 @@
 Online signatures for order confirmations
 =========================================
 
-The Odoo *Sales* application provides customers with the ability to confirm orders, via an online
+The Odoo **Sales** application provides customers with the ability to confirm orders, via an online
 signature, directly on the sales order. Once the sales order is electronically signed by the
 customer, the salesperson attached to the sales order is instantly notified that the order is
 confirmed.
@@ -18,7 +18,6 @@ Settings`, scroll to the :guilabel:`Quotations \& Orders` heading, and activate 
 :guilabel:`Online Signature` feature by checking the box beside it.
 
 .. image:: get_signature_to_validate/signature-setting.png
-   :align: center
    :alt: The Online Signature feature option in the Settings of the Odoo Sales application.
 
 Then, click the :guilabel:`Save` button in the top-left corner.
@@ -28,14 +27,12 @@ Then, click the :guilabel:`Save` button in the top-left corner.
    option, located in the :guilabel:`Online confirmation` field of the quotation template form.
 
    .. image:: get_signature_to_validate/signature-feature-quotation-template.png
-      :align: center
       :alt: The Online confirmation signature option found on every quotation template in Odoo.
 
    On standard quotations, the online signature feature is the :guilabel:`Signature` option, located
    under the :guilabel:`Other Info` tab of the quotation form.
 
    .. image:: get_signature_to_validate/signature-other-info-tab.png
-      :align: center
       :alt: The online signature feature option in the Other Info tab of a quotation form in Odoo.
 
 Order confirmations with online signatures
@@ -45,14 +42,12 @@ When clients access quotations online through their customer portal, there's a :
 Pay` button directly on the quotation.
 
 .. image:: get_signature_to_validate/sign-and-pay-button.png
-   :align: center
    :alt: The Sign and Pay button present on online quotations in Odoo Sales.
 
 When clicked, a :guilabel:`Validate Order` pop-up window appears. In this pop-up window, the
 :guilabel:`Full Name` field is auto-populated, based on the contact information in the database.
 
 .. image:: get_signature_to_validate/validate-order-popup.png
-   :align: center
    :alt: The Validate Order pop-up window for online signatures in Odoo Sales.
 
 Then, customers have the option to enter an online signature with any of the following options:
@@ -71,8 +66,22 @@ When :guilabel:`Accept \& Sign` is clicked, the various payment method options b
 them to choose from (if the *online payment* option applies to this quotation).
 
 Then, when the quotation is paid and confirmed, a delivery order is automatically created (if the
-Odoo *Inventory* app is installed).
+Odoo **Inventory** app is installed).
+
+View online signatures in Developer Mode
+----------------------------------------
+
+Clients can view the online signature in :ref:`developer mode <developer-mode>`.
+
+To view a online signature from a paid invoice, go to :menuselection:`Sales app --> Orders -->
+Orders` and select the desired sales order. A new tab, :guilabel:`Customer Signature`, is available.
+Click the tab to view the electronic signature as well as the :guilabel:`Signed By` and
+:guilabel:`Signed On` information.
+
+.. image:: get_signature_to_validate/customer-signature-tab.png
+   :alt: The Customer Signature tab on a sales order when in Developer Mode.
 
 .. seealso::
    - :doc:`quote_template`
    - :doc:`get_paid_to_validate`
+
