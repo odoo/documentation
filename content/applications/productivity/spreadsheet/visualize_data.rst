@@ -8,3 +8,4 @@ Present and visualize data
    :titlesonly:
 
    visualize_data/charts
+   visualize_data/conditional_formatting
