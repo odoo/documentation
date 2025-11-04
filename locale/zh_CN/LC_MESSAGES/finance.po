@@ -56,7 +56,7 @@ msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-20 14:56+0200\n"
-"PO-Revision-Date: 2025-11-03 23:01+0000\n"
+"PO-Revision-Date: 2025-11-04 23:00+0000\n"
 "Last-Translator: \"Chloe Wang (chwa)\" <chwa@odoo.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
 "projects/odoo-19-doc/finance/zh_Hans/>\n"
@@ -2293,12 +2293,17 @@ msgid ""
 "<reconciliation_models>`, Odoo selects the matching items automatically when "
 "possible."
 msgstr ""
+"得益于 :ref:`默认匹配规则 <accounting/reconciliation/reconcile>` "
+"和可定制的银行 :doc:`对账模型 <reconciliation_models>`，Odoo "
+"可以在可能的情况下自动选择匹配项目。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:19
 msgid ""
 "`Odoo Tutorials: Bank reconciliation <https://www.odoo.com/slides/slide/bank-"
 "reconciliation-6562>`_"
 msgstr ""
+"`Odoo 教程：银行对账<https://www.odoo.com/slides/slide/bank-"
+"reconciliation-6562>`_"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:21
 msgid ":doc:`bank_synchronization`"
@@ -2368,10 +2373,14 @@ msgid ""
 "the account of the counterpart item or, in the case of :ref:`manual matching "
 "<accounting/reconciliation/set-account>`, the selected account."
 msgstr ""
+"每笔 :doc:`交易 "
+"<transactions>`都会关联到一个日记账分录，该分录将借记/贷记日记账的主科目及其"
+"暂记科目，直到完全核销为止。此时，暂记科目将被对应科目项替代，或者在 :ref:`"
+"手动匹配 <accounting/reconciliation/set-account>`的情况下，被选定的科目替代。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:66
 msgid "Possible action buttons"
-msgstr ""
+msgstr "可能的操作按钮"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:68
 msgid ""
@@ -2379,13 +2388,14 @@ msgid ""
 "available action buttons are displayed when the transaction is expanded. The "
 "following action buttons are available depending on the details of the "
 "transaction:"
-msgstr ""
+msgstr "最多有两个建议的操作按钮作为主要按钮显示，但所有可用的操作按钮会在交易行展开"
+"时显示。根据交易的具体情况，可能提供以下操作按钮："
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:72
 msgid ""
 ":guilabel:`Set Partner`: Open a search view to add a partner to the "
 "transaction."
-msgstr ""
+msgstr ":guilabel:`设置合作伙伴`：打开一个搜索视图，为交易添加合作伙伴。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:73
 msgid ""
@@ -2394,12 +2404,15 @@ msgid ""
 "necessary, :ref:`edit the line <accounting/reconciliation/edit>` to change "
 "the amount."
 msgstr ""
+":guilabel:`设置科目`：打开一个搜索视图，手动选择一个科目，以使用该科目核销交"
+"易的全部金额。如有需要，可以 :ref:`编辑分录行 <accounting/reconciliation/"
+"edit>`以更改金额。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:76
 msgid ""
 ":guilabel:`Receivable`: Write off the transaction to the receivable account "
 "of the partner."
-msgstr ""
+msgstr ":guilabel:`应收款`：将交易核销至该往来单位的应收科目。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:77
 msgid ""
@@ -2410,12 +2423,16 @@ msgid ""
 "Matching` view and match the invoice(s) using the :guilabel:`Reconcile` "
 "action button."
 msgstr ""
+":guilabel:`销售`：打开属于交易 :guilabel:`合作伙伴` "
+"的销售订单列表视图（如果只有一个相关销售订单，则直接进入表单视图）。"
+"选择相关的销售订单并点击 :guilabel:`创建发票`，然后返回 "
+":guilabel:`银行匹配`视图，使用 :guilabel:`核销`操作按钮匹配发票。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:82
 msgid ""
 ":guilabel:`Payable`: Write off the transaction to the payable account of the "
 "partner."
-msgstr ""
+msgstr ":guilabel:`应付款`：将交易核销至该往来单位的应付科目。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:83
 msgid ""
@@ -2424,6 +2441,8 @@ msgid ""
 "multiple items to add counterpart items with the corresponding accounts of "
 "those items."
 msgstr ""
+":guilabel:`核销`：打开一个搜索视图，查找来自客户发票、供应商账单和付款等记录"
+"的现有项目。选择一个或多个项目，以添加带有这些项目相应科目的对应科目项。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:86
 msgid ""
@@ -2432,6 +2451,10 @@ msgid ""
 "Select a batch payment to add a counterpart item for each payment of the "
 "batch with the corresponding account of each payment."
 msgstr ""
+":guilabel:`批量`：打开 :doc:`批量付款 <../payments/batch>` "
+"的简短列表。要查看所有批量付款，请点击 "
+":guilabel:`搜索更多...`。选择一个批量付款，以便为该批量中的每笔付款添加一个带"
+"有相应付款科目的对应科目项。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:89
 msgid ""
@@ -2439,13 +2462,15 @@ msgid ""
 "apply to the transaction is displayed. Click the reconciliation model's "
 "action button to generate the counterpart items defined on the "
 "reconciliation model."
-msgstr ""
+msgstr ":doc:`核销模型`：每个可应用于交易的手动核销模型都会显示。点击核销模型的操作按"
+"钮，以生成在该核销模型上定义的对应科目项。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:94
 msgid ""
 "To remove the partner from a transaction, click the :icon:`fa-"
 "times` :guilabel:`(close)` icon next to the partner's name."
-msgstr ""
+msgstr "要移除交易中的往来单位，请点击往来单位名称旁边的:icon:`fa-"
+"times`:guilabel:`(关闭)`图标。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:97
 msgid ""
@@ -2454,6 +2479,9 @@ msgid ""
 "action buttons that are hidden due to space limitations, as well as the "
 "following:"
 msgstr ""
+"点击已展开交易行的可能操作按钮旁边的 :icon:`fa-chevron-"
+"down`:guilabel:`(向下箭头)`按钮，可显示由于空间限制而隐藏的任何上述操作按钮，"
+"以及以下按钮："
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:101
 msgid ""
@@ -2461,31 +2489,34 @@ msgid ""
 "vendor_bills/invoice_digitization>`. After digitization, the bills are "
 "available for matching via the :guilabel:`Reconcile` action button."
 msgstr ""
+":guilabel:`上传单据`：上传一张或多张单据以进行 :doc:`数字化处理 <../"
+"vendor_bills/invoice_digitization>`。数字化处理后，这些单据可通过 "
+":guilabel:`核销`操作按钮进行匹配。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:104
 msgid ""
 ":guilabel:`Manage Models`: Open the list view "
 "of :doc:`reconciliation_models`."
-msgstr ""
+msgstr ":guilabel:`管理模型`：打开 :doc:`核销模型 `的列表视图。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:105
 msgid ""
 ":guilabel:`Open Journal Entry`: Open the journal entry of this transaction."
-msgstr ""
+msgstr ":guilabel:`打开日记账分录`：打开此交易的日记账分录。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:106
 msgid ":guilabel:`Delete Transaction`: Delete this transaction."
-msgstr ""
+msgstr ":guilabel:`删除交易`：删除此交易。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:109
 msgid ""
 "Uploading bills from the :guilabel:`Bank Matching` view does not "
 "automatically reconcile them with the active transaction."
-msgstr ""
+msgstr "从 :guilabel:`银好匹配` 视图上传账单不会自动与活动交易对账。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:113
 msgid ":doc:`../../../essentials/in_app_purchase`"
-msgstr ""
+msgstr ":doc:`../../../essentials/in_app_purchase`"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:118
 msgid "Reconcile transactions"
@@ -2495,7 +2526,7 @@ msgstr "对账交易"
 msgid ""
 "When possible, Odoo automatically reconciles transactions based on their "
 "fields."
-msgstr ""
+msgstr "在可能的情况下，Odoo 会根据交易字段自动进行核销。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:122
 msgid ""
@@ -2504,6 +2535,10 @@ msgid ""
 "Reference`, :guilabel:`Bill Reference`, and :guilabel:`Payment Reference` of "
 "existing invoices, bills, and payments."
 msgstr ""
+"如果交易中未设置合作伙伴，系统会将交易的 :guilabel:`标签`与现有发票、"
+"账单和付款的 "
+":guilabel:`编号`、:guilabel:`客户参考`、:guilabel:`账单参考`和:guilabel:`付款"
+"参考`进行比较。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:126
 msgid ""
@@ -2512,32 +2547,35 @@ msgid ""
 "the :guilabel:`Amount`. The following rules are used in a sequential order "
 "to identify and apply a match:"
 msgstr ""
+"如果在交易中设置了合作伙伴，系统将根据 "
+":guilabel:`金额`将该交易与该往来单位的发票、账单和付款进行匹配。系统按以下规"
+"则的先后顺序来识别并应用匹配："
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:130
 msgid "Exact match"
-msgstr ""
+msgstr "精确匹配"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:131
 msgid "Discounted match: for payment terms with discounts for early payments"
-msgstr ""
+msgstr "折扣匹配：针对享有提前付款折扣的付款条款"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:132
 msgid ""
 "Tolerance match: within 3% to account for merchant fees, rounding "
 "differences, and user errors"
-msgstr ""
+msgstr "容差匹配：允许3%的容差，以考虑商户手续费、四舍五入差异和用户错误"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:133
 msgid ""
 "Currency match: when the transaction is in a different currency than the "
 "invoice, bill, or payment (with a 3% tolerance for exchange rate differences)"
-msgstr ""
+msgstr "货币匹配：当交易与发票、账单或付款的币种不同时（允许3%的汇率差异容差）"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:135
 msgid ""
 "Amount in label: if the invoice :guilabel:`Amount` is found in the "
 "transaction's :guilabel:`Label`"
-msgstr ""
+msgstr "标签中的金额：如果在交易的 :guilabel:`标签`中找到了发票的:guilabel:`金额`"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:138
 msgid ""
@@ -2546,12 +2584,14 @@ msgid ""
 "<reconciliation_models>`. Otherwise, reconcile transactions manually by "
 "following these steps:"
 msgstr ""
+"除了使用这些固定的匹配规则外，还可以通过使用 :doc:`核销模型 "
+"<reconciliation_models>` 来自动匹配交易。否则，请按照以下步骤手动核销交易："
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:142
 msgid ""
 "Expand the desired line among unmatched bank transactions to display all "
 "available action buttons."
-msgstr ""
+msgstr "在未匹配的银行交易中，展开所需的分录行以显示所有可用的操作按钮。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:144
 msgid ""
@@ -2562,6 +2602,10 @@ msgid ""
 "<../payments/batch>`, and using :ref:`reconciliation model buttons "
 "<accounting/reconciliation/model>`."
 msgstr ""
+"定义对应项。有多种定义对应项的方法，包括：:ref:`匹配现有项目 <accounting/"
+"reconciliation/existing-items>`、:ref:`手动设置科目 <accounting/"
+"reconciliation/set-account>`、与 :doc:`批量付款 <../payments/batch>`匹配，"
+"以及使用 :ref:`核销模型按钮 <accounting/reconciliation/model>`。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:149
 msgid ""
@@ -2569,10 +2613,12 @@ msgid ""
 "counterpart item or write it off by :ref:`setting the account <accounting/"
 "reconciliation/set-account>` of the remaining amount."
 msgstr ""
+"如果最终的分录未完全平衡，请添加另一个现有的对应项，或者通过 :ref:`"
+"设置剩余金额的科目 <accounting/reconciliation/set-account>`来将其核销。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:156
 msgid "Existing items"
-msgstr ""
+msgstr "现有项目"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:158
 msgid ""
@@ -2581,18 +2627,23 @@ msgid ""
 "the :guilabel:`Reconcile` action button, select the matching journal item(s) "
 "in the list, and click :guilabel:`Select`."
 msgstr ""
+"要将交易与客户发票、供应商账单和付款等相关记录中的现有项目进行核销，请点击 "
+":guilabel:`核销` 操作按钮，在列表中选择匹配的日记账项目，然后点击 "
+":guilabel:`选择`。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:163
 msgid ""
 "If the :guilabel:`Partner` is set, this list is automatically filtered to "
 "only include items related to that partner."
-msgstr ""
+msgstr "如果设置了:guilabel:`合作伙伴`，此列表会自动过滤，仅包含与该往来单位相关的项"
+"目。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:167
 msgid ""
 "Use the search bar within the :guilabel:`Search: Journal Items to Match` "
 "window to search for specific journal items."
-msgstr ""
+msgstr "在 :guilabel:`搜索：要匹配的日记账项目` "
+"窗口中使用搜索栏来搜索特定的日记账项目。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:170
 msgid ""
@@ -2605,13 +2656,20 @@ msgid ""
 "reverse this, :ref:`edit <accounting/reconciliation/edit>` the line again, "
 "click :guilabel:`partial payment`, and :guilabel:`Save`."
 msgstr ""
+"如果交易金额小于与之核销的发票或账单金额，该交易将完全核销，但差额会保留在对"
+"应项目上，处于未核销状态。剩余金额可以保持未核销状态留待后续处理，也可以将发"
+"票或账单标记为已全额支付。若要将发票或账单标记为已全额支付，请:ref:`编辑 <"
+"accounting/reconciliation/edit>`该分录行，点击:guilabel:`全额付款`，然后 "
+":guilabel:`保存`。若要撤销此操作，再次 :ref:`编辑 <accounting/reconciliation/"
+"edit>`该分录行，点击:guilabel:`部分付款`，然后 :guilabel:`保存`。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:178
 msgid ""
 "If a transaction amount is greater than the invoice or bill it is reconciled "
 "with, the transaction is only partially reconciled. The remaining balance "
 "can be reconciled as any other transaction amount."
-msgstr ""
+msgstr "如果交易金额大于与之核销的发票或账单金额，则该交易仅被部分核销。剩余余额可以"
+"像处理任何其他交易金额一样进行核销。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:183
 msgid ""
@@ -2620,10 +2678,12 @@ msgid ""
 "simultaneously with the reconciliation. Posting the original entry also "
 "posts the automatic move."
 msgstr ""
+"可以匹配草稿分录中的现有项目。最终的系统自动分录（如货币兑换或现金制分录）将"
+"在核销的同时以草稿状态创建。对原始分录进行过账时，该自动分录也会一并被过账。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:190
 msgid "Set account"
-msgstr ""
+msgstr "设置科目"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:192
 msgid ""
@@ -2633,6 +2693,10 @@ msgid ""
 "the line <accounting/reconciliation/edit>` to reflect the correct value and "
 "reconcile the remaining amount as desired."
 msgstr ""
+"如果没有任何现有项目与所选交易匹配，您仍可以手动冲销该交易：点击 "
+":guilabel:`设置科目`，然后选择相应的科目。如果只想冲销交易的一部分金额，请 "
+":ref:`编辑该分录行 <accounting/reconciliation/"
+"edit>`以反映正确的金额，并按照您的需求核销剩余金额。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:198
 msgid ""
@@ -2641,6 +2705,9 @@ msgid ""
 "or :guilabel:`Payable` :ref:`action button <accounting/reconciliation/action-"
 "buttons>`."
 msgstr ""
+"如果已设置合作伙伴，您可以通过点击 :guilabel:`应收款` 或 :guilabel:`应付款` "
+"这两个 :ref:`操作按钮 <accounting/reconciliation/action-"
+"buttons>`，直接将金额冲销至该合作伙伴的应收或应付科目。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:205
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:3
