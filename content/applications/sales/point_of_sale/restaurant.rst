@@ -123,7 +123,7 @@ plan`:
 From the POS frontend
 ~~~~~~~~~~~~~~~~~~~~~
 
-To create floors and tables from the frontend, :ref:`open the POS register <pos/session-start>`,
+To create floors and tables from the frontend, :ref:`open the POS register <pos/open-register>`,
 click the :icon:`fa-bars` (:guilabel:`hamburger menu`) icon in the top right corner of the
 :guilabel:`Floor plan` view, then :guilabel:`Edit Plan`. To configure the :guilabel:`Floor plan`,
 follow the next steps:
