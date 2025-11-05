@@ -18,6 +18,8 @@ Agents are formed of two main components, *Topics* and *Sources*.
    While many AI features can be used in Odoo without the **AI** application, creating and
    customizing agents requires that the **AI** application is installed.
 
+.. _ai/agents/prompts-in-odoo:
+
 AI prompts in Odoo
 ==================
 
