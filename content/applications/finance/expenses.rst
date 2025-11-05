@@ -13,3 +13,4 @@ Expenses
    expenses/post_expenses
    expenses/reimburse
    expenses/reinvoice_expenses
+   expenses/expenses_analysis
