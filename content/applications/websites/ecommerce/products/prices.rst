@@ -11,8 +11,8 @@ Odoo offers multiple options to configure prices on the ecommerce. For example, 
 Taxes
 =====
 
-To add a tax on a product, you can either set a tax in the :guilabel:`Customer Taxes` field of the
-**product template** or use :doc:`fiscal positions
+To add a tax on a product, you can either set a tax in the :guilabel:`Sales Taxes` field of the
+product form or use :doc:`fiscal positions
 </applications/finance/accounting/taxes/fiscal_positions>`.
 
 .. seealso::
@@ -24,10 +24,10 @@ To add a tax on a product, you can either set a tax in the :guilabel:`Customer T
 Choosing the displayed price tax usually depends on a country's regulations or the type of customers
 (B2B vs. B2C). To select the type of price displayed, go to :menuselection:`Website -->
 Configuration --> Settings`, select the website, scroll down to the
-:guilabel:`Shop - Products` section, and under :guilabel:`Display Product Prices` select between:
+:guilabel:`eCommerce` section, and under :guilabel:`Display Product Prices` select between:
 
 - :guilabel:`Tax Excluded`: the price displayed on the website is tax-excluded, and the tax is
-  computed at the :ref:`order review <ecommerce/checkout/review_order>` step;
+  computed at the :ref:`order summary <ecommerce/checkout/review_order>` step;
 - :guilabel:`Tax Included`: the price displayed on the website is tax-included.
 
 .. note::
@@ -49,9 +49,9 @@ To display a :doc:`price per unit
 price on the product page, follow these steps:
 
 #. Go to :menuselection:`Website --> Configuration --> Settings`, scroll to the
-   :guilabel:`Shop - Products` section, and enable :guilabel:`Product Reference Price`.
+   :guilabel:`eCommerce` section, and enable :guilabel:`Product Reference Price`.
 #. :ref:`Navigate to the product form <ecommerce/products/create-products>`.
-#. Set the product's :guilabel:`Sales price` and select the unit (e.g., :guilabel:`Units`).
+#. Set the product's :guilabel:`Sales Price` and select the unit (e.g., :guilabel:`Units`).
 #. In the :guilabel:`Base Unit Count` field, enter the number of units in the product, then
    select the relevant unit from the dropdown list.
 
@@ -82,7 +82,7 @@ Pricelists in Odoo allow to manage flexible pricing rules and to offer different
 discounts based on currencies, time periods, purchase volumes, :ref:`customers' location
 <ecommerce/prices/geoip>`, and/or customer type.
 To enable pricelists for eCommerce, go to :menuselection:`Website --> Configuration --> Settings`,
-scroll down to the :guilabel:`Shop - Products` section, enable :guilabel:`Pricelists`, and
+scroll down to the :guilabel:`eCommerce` section, enable :guilabel:`Pricelists`, and
 :guilabel:`Save`. Then, click :guilabel:`Pricelists` or go to :menuselection:`Website --> eCommerce
 --> Pricelists` and :ref:`configure <sales/products/pricelist-configuration>` the relevant
 pricelists.
@@ -166,9 +166,9 @@ Use :ref:`Custom filters <search/custom-filters>` if needed.
 .. example::
    Use the following filter if you want to add all non-EU countries to the country group.
 
-   `Country Group` + `is not in` + `European Union`
+   `Country Groups` + `is not equal to` + `European Union`
 
-   .. image:: prices/pricelist-country-groups.png
+   .. image:: prices/create-country-group.png
       :alt: Filter for country group creation.
 
 .. important::
@@ -199,7 +199,8 @@ Pricelist application
 
 On the ecommerce, the *default* pricelist is automatically selected for public, non-logged in users
 when no country group is assigned. If :ref:`GeoIP and country groups <ecommerce/prices/geoip>` are
-used, public users see the pricelist of their country group by default. Logged-in users with
+used, public users see the pricelist of their country group by default. :ref:`Logged-in users
+<ecommerce/customer_accounts/shop-access>` with
 :ref:`assigned pricelists <sales/products/customer-pricelist-application>` see the assigned
 pricelist by default **if it is assigned to the website** they are visiting. If not, the website's
 default pricelist is applied (i.e., the first available pricelist assigned to the website and
@@ -230,7 +231,7 @@ Discounts programs
 
 To enable :doc:`discount programs </applications/sales/sales/products_prices/loyalty_discount>`
 for your ecommerce, go to :menuselection:`Website --> Configuration --> Settings`, scroll
-down to the :guilabel:`Shop - Products` section, and enable the :guilabel:`Discounts, Loyalty & Gift
+down to the :guilabel:`eCommerce` section, and enable the :guilabel:`Discounts, Loyalty & Gift
 Card` feature.
 
 :ref:`Configure <sales/products/loyalty-programs>` the discount program, make sure the
@@ -250,7 +251,7 @@ alongside it.
    :alt: Price strikethrough.
 
 To display a permanently discounted price, navigate to :menuselection:`Website --> Configuration
---> Settings`, scroll down to the :guilabel:`Shop - Products`, enable the :guilabel:`Comparison
+--> Settings`, scroll down to the :guilabel:`eCommerce`, enable the :guilabel:`Comparison
 Price` option, and :guilabel:`Save`. Then, :ref:`go to the product form
 <ecommerce/products/create-products>`, enter the new (discounted) price in the
 :guilabel:`Sales Price` field and the original one (strikethrough) in the
@@ -288,11 +289,11 @@ E-commerce promotional code
 
 To offer a discounted pricelist for customers with a specific discount code, access the relevant
 :ref:`pricelist form <ecommerce/prices/pricelists>`, go to the :guilabel:`Ecommerce` tab, and add
-an :guilabel:`E-commerce Promotional Code`, e.g., `SUMMERSALE10%`. Then, go to the :guilabel:`Price
-Rules` tab, click :guilabel:`Add a line`, and :ref:`configure the discount
+an :guilabel:`E-commerce Promotional Code`, e.g., `SUMMERSALE10%`. Then, go to the :guilabel:`Sales
+Price` tab, click :guilabel:`Add a line`, and :ref:`configure the discount
 <sales/products/price-rules>`. When a customer inserts the code during the :ref:`checkout process
-<ecommerce/checkout/review_order>`, this discount is granted according to the :guilabel:`Price
-Rules` configuration.
+<ecommerce/checkout/review_order>`, this discount is granted according to the :guilabel:`Sales
+Price` configuration.
 
 .. note::
    Make sure that the :ref:`Promo Code <ecommerce/checkout/review_order>` option
@@ -309,8 +310,8 @@ Some businesses, such as B2B shops or companies that sell luxury or custom items
 showcase their products online without displaying their prices.
 
 To hide product prices on the ecommerce, go to :menuselection:`Website --> Configuration -->
-Settings`, enable :guilabel:`Prevent Sale of Zero Priced Product` in the :guilabel:`Shop -
-Products` section, and enter a redirect URL in the :guilabel:`Button URL` field. The
+Settings`, enable :guilabel:`Prevent Sale of Zero Priced Product` in the :guilabel:`eCommerce`
+section, and enter a redirect URL in the :guilabel:`Button URL` field. The
 :guilabel:`Add to Cart` button on the product page is then replaced by a :guilabel:`Contact us`
 button, which can be :ref:`customized <ecommerce/checkout/prevent-sale>` if needed.
 
