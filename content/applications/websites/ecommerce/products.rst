@@ -5,8 +5,8 @@ Products
 ========
 
 **Odoo eCommerce** allows you to :ref:`add products <ecommerce/products/add-products>` and manage
-your :ref:`product pages <ecommerce/products/product-page>` directly from the Website app. It also
-allows you to add :ref:`digital files <ecommerce/products/digital-files>`, :ref:`translate
+your :doc:`product pages <../ecommerce/ecommerce_design/product_page>` directly from the Website app.
+It also allows you to add :ref:`digital files <ecommerce/products/digital-files>`, :ref:`translate
 <ecommerce/products/translation>` the product page content, and :ref:`manage the stock
 <ecommerce/products/stock-management>`.
 
@@ -23,8 +23,8 @@ Create products
 To create a product from the frontend, click :guilabel:`+ New` in the top-right corner, then
 :guilabel:`Product`. Enter the :guilabel:`Product Name`, :guilabel:`Sales Price`, the default
 :guilabel:`Customer Taxes` for local transactions, and :guilabel:`Save`. You can then update the
-product's details, add an image, and :ref:`customize <ecommerce/products/customization>` the product
-page. When you :guilabel:`Save`, the product page is automatically published.
+product's details, add an image, and :ref:`customize <ecommerce_design/product_page/customization>`
+the product page. When you :guilabel:`Save`, the product page is automatically published.
 
 .. tip::
    - You can also create a product from the backend by going to
@@ -62,15 +62,9 @@ go to :menuselection:`Website --> eCommerce --> Products`, click the :icon:`fa-c
    #. In the :guilabel:`Is Published` column, tick the box for any of the selected products, then
       :guilabel:`Confirm` to publish them.
 
-.. _ecommerce/products/product-page:
-
-Product page customization
-==========================
-
-.. _ecommerce/products/customization:
-
 Product information
 -------------------
+
 .. _ecommerce/products/product-form:
 
 To add general information about a product, navigate to :menuselection:`Website -->
@@ -88,76 +82,7 @@ tab, scroll down to the :guilabel:`Ecommerce description` section, and add a des
 .. tip::
    Click the :guilabel:`Go to Website` smart button to return to the frontend product's page.
 
-.. _ecommerce/products/product-presentation:
-
-Product presentation
---------------------
-
-To customize the product presentation on the website, go to the :guilabel:`Shop` and click on the
-product. Click :guilabel:`Edit` to :ref:`customize <ecommerce/products/customization>` the page,
-:ref:`edit its images <ecommerce/products/image-customization>` or add
-:doc:`building blocks <../../websites/website/web_design/building_blocks>`.
-
-.. tip::
-   - When dragging and dropping a building block on the product page, placing it above or below
-     the top or bottom blue lines makes it visible on all product pages.
-   - You can edit any text on your website by clicking on it while in :guilabel:`Edit` mode.
-
-Use the :guilabel:`Customize` tab to modify the page layout or add features:
-
-- :guilabel:`Terms and Conditions`: Toggle the switch to display a link to your
-  :doc:`terms and conditions <../../finance/accounting/customer_invoices/terms_conditions>` on the
-  product page.
-
-- :guilabel:`Customers`:
-
-   - :guilabel:`Rating`: Allow logged-in portal users to submit product reviews by clicking the
-     stars below the product's name and sharing their experience in the :guilabel:`Customer Reviews`
-     section at the bottom. Reviews are visible from the product page using the :icon:`fa-plus`
-     (:guilabel:`plus`) icon next to the :guilabel:`Customer Reviews` heading or from the product
-     form's chatter. To restrict visibility to internal employees, toggle the :guilabel:`Public`
-     switch next to the review comment.
-   - :guilabel:`Share`: Add social media and email icon buttons allowing customers to share the
-     product through those channels.
-
-- :guilabel:`Quantity`: Toggle the switch to allow customers to select the product quantity
-  they want to purchase.
-
-- :guilabel:`Tax Indication`: Toggle the switch to indicate if the price is
-  :ref:`VAT included or excluded <ecommerce/prices/taxes>`.
-
-- :guilabel:`Variants`: Show all possible product :ref:`variants
-  <ecommerce/categories_variants/product-variants>` vertically as a :guilabel:`Products List`
-  or horizontally as selectable :guilabel:`Options` to compose the variant yourself.
-
-- :guilabel:`Product Tags`: Toggle the switch to display the :guilabel:`Product Template Tags` on
-  the product page and allow customers to filter products using those tags.
-
-- :guilabel:`Cart`:
-
-   - :guilabel:`Buy Now`: Add a :icon:`fa-bolt` :guilabel:`Buy Now` option to take the customer to
-     the checkout page.
-   - :guilabel:`Wishlist`: Add an :icon:`fa-heart-o` :guilabel:`Add to wishlist` option allowing
-     logged-in customers to save products in a :ref:`wishlist
-     <ecommerce/products/additional_features/wishlists>`.
-   - :guilabel:`Compare`: Add a :icon:`fa-exchange` :guilabel:`Compare` option, allowing customers
-     to :ref:`compare products <ecommerce/products/additional_features/product-comparison>`
-     based on their attributes.
-
-- :guilabel:`Specification`: Select :guilabel:`Bottom of Page` to display a detailed list of the
-  attributes and their values available for the product. This option only works for products with
-  :ref:`variants <ecommerce/categories_variants/product-variants>` if the
-  :ref:`Product comparison tool <ecommerce/products/additional_features/product-comparison>` is
-  enabled in the Website :guilabel:`Settings`.
-
-.. note::
-   - :guilabel:`Product Variants` must be enabled by going to :menuselection:`Website -->
-     Configuration --> Settings`, in the :guilabel:`eCommerce` section.
-   - Enabled functions apply to all product pages.
-   - Products with single values for their attributes do not generate variants but are still
-     displayed in the :guilabel:`Product Specifications`.
-
-.. _ecommerce/products/image-customization:
+.. _ecommerce/products/images:
 
 Product images and videos
 -------------------------
@@ -169,21 +94,10 @@ and click :guilabel:`Add Media` under the :guilabel:`Ecommerce Media` section. I
 click :guilabel:`Upload an image` or :guilabel:`Add URL`. Or navigate to the :guilabel:`Videos` tab,
 paste a video URL or embed code. Once done, click :guilabel:`Add`.
 
-To customize the images or videos, go to the e-commerce product page, click :guilabel:`Edit`
-and select the relevant media. In the :guilabel:`Customize` tab, use the following features:
-
-- :guilabel:`Images Width`: Changes the width of the product images displayed on the page.
-- :guilabel:`Layout`: The :guilabel:`Carousel` layout allows customers to navigate from one image to
-  the next using the :icon:`fa-angle-left` (:guilabel:`left arrow`) or :icon:`fa-angle-right`
-  (:guilabel:`right arrow`); whereas the :guilabel:`Grid` displays four images in a square layout.
-- :guilabel:`Image Zoom`: Select the zoom effect for product images: :guilabel:`Magnifier on hover`
-  :guilabel:`Pop-up on Click`, :guilabel:`Both`, or :guilabel:`None`.
-- :guilabel:`Thumbnails`: Align thumbnails on the :icon:`fa-long-arrow-left` (:guilabel:`Left`)
-  or at
-  the :icon:`fa-long-arrow-down` (:guilabel:`Bottom`).
-- :guilabel:`Main Image`: Click :guilabel:`Replace` to change the product's main image.
-- :guilabel:`Extra Images`: :guilabel:`Add` more extra images or videos (including via URL) or
-  :guilabel:`Remove all`.
+.. tip::
+   Click the :icon:`fa-globe` :guilabel:`Go to Website` smart button to access the product's page
+   on the website and :ref:`customize <ecommerce/product_page/image-customization>` product images
+   and videos using the website editor.
 
 .. _ecommerce/products/digital-files:
 
@@ -286,6 +200,8 @@ Configuration --> Settings`, scroll down to the :guilabel:`Shop - Products` sect
    ensures that any item sold on the website is converted into the corresponding stocked item in
    the delivery order.
 
+.. _ecommerce/products/stock-management/inventory:
+
 Inventory
 ---------
 
@@ -293,16 +209,53 @@ In the :guilabel:`Inventory Defaults` sub-section, fill in those fields:
 
 - :doc:`Warehouse <../../inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses>`.
 - :guilabel:`Out-of-Stock`: Enable :guilabel:`Continue Selling` to allow customers to place orders
-  even when the product is **out of stock**. Leave the box unchecked to **prevent orders**.
+  even when the product is **out of stock**. Leave the box unchecked to prevent orders.
 - :guilabel:`Show Available Qty`: Displays the available quantity left under a specified threshold
   on the product page. The available quantity is calculated based on the :guilabel:`On hand`
   quantity minus the quantity already reserved for outgoing transfers.
 
+To inform customers that a product is out of stock, configure an :guilabel:`Out-of-Stock
+Message`. To do so, go to the product form and navigate to the :guilabel:`Sales` tab. Under the
+:guilabel:`Ecommerce shop` section, compose an :guilabel:`Out-of-Stock Message`.
+
+.. image:: products/out-of-stock-message.png
+   :alt: Out-of-stock message on the product page.
+
+.. note::
+   - A :icon:`fa-envelope-o` (:guilabel:`envelope`) :guilabel:`Get notified when back in stock`
+     button appears on the product page when an item is out of stock. Customers can click
+     the link to enter their email address and receive a notification once the item is back
+     in stock.
+   - To create an :guilabel:`Out-of-Stock Message` and have the notification option available,
+     the :ref:`Track inventory setting <inventory/product_management/tracking-inventory>` must be
+     enabled on the product form.
+
+.. _ecommerce/products/stock-management/packagings:
+
+Packagings
+----------
+
+To offer different product pack sizes to customers on the e-commerce, configure product
+:doc:`packagings
+</applications/inventory_and_mrp/inventory/product_management/configure/packaging>`. Then, go to
+:menuselection:`Website --> eCommerce --> Products`, select a product, and navigate to the
+:guilabel:`Sales` tab of the product form. Under :guilabel:`Upsell & cross-sell`, add as many
+package types as needed in the :guilabel:`Packagings` field. The available package types are
+displayed on the e-commerce :doc:`product page <../ecommerce/ecommerce_design/product_page>`.
+
+.. image:: products/product-packagings.png
+   :alt: Product packages on the e-commerce page.
+
+.. tip::
+   It is also possible to add packagings to a specific :ref:`product variant
+   <ecommerce/categories_variants/product-variants>`. To do so, go to the product form, click the
+   :icon:`fa-sitemap` :guilabel:`Variants` :ref:`smart button
+   <products/variants/variants-smart-button>`, and select the relevant product variant. Under
+   :guilabel:`Sales`, add as many package types as needed in the :guilabel:`Packagings` field.
+
 .. toctree::
    :titlesonly:
 
-   products/catalog
    products/prices
    products/cross_upselling
-   products/additional_features
    products/categories_variants

@@ -35,9 +35,9 @@ Choosing the displayed price tax usually depends on a country's regulations or t
    website in the database.
 
 .. tip::
-   - Switch the :ref:`Tax indication <ecommerce/products/product-presentation>` toggle on in the
-     website editor to explicitly indicate if the price is `Tax excluded` or `Tax included` on the
-     product page.
+   - Switch the :ref:`Tax indication <ecommerce_design/product_page/customization>`
+     toggle on in the website editor to explicitly indicate if the price is `Tax excluded` or `Tax
+     included` on the :doc:`product page <../../ecommerce/ecommerce_design/product_page>`.
    - Enable specific :ref:`B2B fields <ecommerce/b2b_b2c/b2b-fields>` in the :ref:`delivery step
      <ecommerce/checkout/delivery>` during the checkout using the :doc:`website editor
      </applications/websites/website/web_design>`.
