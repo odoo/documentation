@@ -165,12 +165,19 @@ records, and edit simple records.
     be executed from the dropdown list;
   - :guilabel:`Call a method`: specify an existing Python method already defined in Odoo.
 
-.. tip::
-   To add a :icon:`oi-draggable` (:guilabel:`drag handle`) icon to reorder records manually, add an
-   :ref:`Integer field <studio/fields/simple-fields-integer>` with the :guilabel:`Handle` widget.
+The widths of columns in a :guilabel:`List` :icon:`oi-view-list` view are computed automatically to
+provide the optimal user experience. However, it is also possible to set a fixed column width per
+field. To do so, click on the relevant column to open the field's :icon:`fa-server`
+:guilabel:`Properties` tab, then enter the desired number of pixels in the :guilabel:`Column Width
+(px)` field.
 
-   .. image:: views/list-drag-handle.png
-      :alt: Drag handle icon enabling to sort records manually in List view
+.. tip::
+   To add a :icon:`oi-draggable` (:guilabel:`drag handle`) icon to reorder records manually, add
+   an :ref:`Integer field <studio/fields/simple-fields-integer>` with the :guilabel:`Handle`
+   widget.
+
+     .. image:: views/list-drag-handle.png
+        :alt: Drag handle icon enabling to sort records manually in List view
 
 .. example::
 
