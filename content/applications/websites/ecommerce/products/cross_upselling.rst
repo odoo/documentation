@@ -4,7 +4,8 @@ Cross-selling and upselling
 
 :ref:`Cross-selling <ecommerce/cross_selling>` and
 :ref:`upselling <ecommerce/cross_upselling/alternative>` are sales techniques designed to encourage
-customers to purchase additional or higher-priced products and services from your :doc:`catalog`.
+customers to purchase additional or higher-priced products and services from your
+:doc:`product catalog <../../ecommerce/ecommerce_design/catalog>`.
 
 .. _ecommerce/cross_selling:
 

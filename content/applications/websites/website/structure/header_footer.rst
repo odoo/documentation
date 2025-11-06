@@ -118,8 +118,8 @@ Mega menus
 Mega menus are similar to drop-down menus, but instead of a simple list of sub-menus, they display a
 panel divided into groups of navigation options. This makes them suitable for websites with large
 amounts of content or :doc:`e-commerce websites <../../ecommerce>`, as they can help include all of
-your web pages or :doc:`e-commerce categories <../../ecommerce/products/catalog>` in the menu while
-still making all menu items visible at once.
+your web pages or :ref:`e-commerce categories <ecommerce/categories_variants/categories>` in the
+menu while still making all menu items visible at once.
 
 .. image:: header_footer/mega-menu.png
    :alt: Mega menu in the navigation bar.
