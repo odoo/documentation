@@ -206,4 +206,4 @@ vendors or manufacturing can begin, the top-level product can be included in an 
 
 .. seealso::
    - :doc:`../../../sales/sales/sales_quotations/create_quotations`
-   - :doc:`../../../websites/ecommerce/products/catalog`
+   - :doc:`../../../websites/ecommerce/ecommerce_design/catalog`
