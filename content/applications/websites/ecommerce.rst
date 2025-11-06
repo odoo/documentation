@@ -19,6 +19,13 @@ customer accounts, and monitor your performance.
       Configure your product pages, adjust the shop page layout, set up the pricing, and define
       suggestions for optional and accessory products.
 
+   .. card:: eCommerce design
+      :target: ecommerce/ecommerce_design
+      :large:
+
+      Design the product catalog and product pages using a wide range of design features,
+      building blocks, and additional e-commerce-specific features and buttons.
+
    .. card:: Ordering and checkout
       :target: ecommerce/checkout
       :large:
@@ -48,11 +55,13 @@ customer accounts, and monitor your performance.
 
    .. card:: Performance management
       :target: ecommerce/performance
+      :large:
 
       Analyze sales data to evaluate your e-commerce performance.
 
    .. card:: Google Merchant Center
       :target: ecommerce/google_merchant_center
+      :large:
 
       Manage and submit your product data to Google with Google Merchant Center.
 
@@ -70,6 +79,7 @@ customer accounts, and monitor your performance.
    :titlesonly:
 
    ecommerce/products
+   ecommerce/ecommerce_design
    ecommerce/checkout
    ecommerce/shipping
    ecommerce/order_handling

@@ -2,9 +2,9 @@
 Categories and variants
 =======================
 
-Odoo eCommerce provides multiple ways to configure, :doc:`present <catalog>`, and sell different
-product options to customers while organizing products by category for a better overview and
-smoother navigation.
+Odoo eCommerce provides multiple ways to configure, :doc:`present
+<../../ecommerce/ecommerce_design/catalog>`, and sell different product options to customers while
+organizing products by category for a better overview and smoother navigation.
 
 .. _ecommerce/categories_variants/product-variants:
 
@@ -90,7 +90,7 @@ E-commerce categories
 E-commerce categories are used to organize products into groups, making it easier for customers
 to browse the online store.
 
-.. image:: catalog/category-quick-access-top.png
+.. image:: ../ecommerce_design/catalog/category-quick-access-top.png
    :alt: Category quick access in the toolbar.
 
 To create e-commerce categories, go to :menuselection:`Website --> eCommerce -->
