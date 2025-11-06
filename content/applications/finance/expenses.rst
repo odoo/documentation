@@ -7,6 +7,7 @@ Expenses
 .. toctree::
 
    expenses/expense_categories
+   expenses/expense_cards
    expenses/log_expenses
    expenses/expense_reports
    expenses/approve_expenses
