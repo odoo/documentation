@@ -19,6 +19,9 @@ speed.
    `Magic Sheet - Optimize your website [PDF]
    <https://drive.google.com/drive/folders/1Ywip4tWF2DPkcBaEbeXJxIZg2CjkwKgb>`_
 
+
+.. _seo/content-optimization:
+
 Content optimization
 ====================
 
@@ -47,6 +50,8 @@ real impact on ranking. They cannot be edited in the :guilabel:`optimize SEO` po
 
 .. important::
    It is strongly recommended to only use one H1 title per page for SEO.
+
+.. _seo/meta-tags:
 
 Meta tags and meta keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -95,6 +100,8 @@ efficiently.
 
 **To modify an image** from your website, select the image, click :guilabel:`Edit`, then go to the
 :guilabel:`Customize` tab, and adapt the :guilabel:`Format` in the :guilabel:`Image` section.
+
+.. _seo/alt-tag:
 
 .. important::
    Alt tags are used to provide context to what an image is displaying, informing search engine
