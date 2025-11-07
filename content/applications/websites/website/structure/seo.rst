@@ -33,7 +33,7 @@ Optimize SEO`.
    is automatically updated. The old link still functions as Odoo creates a
    :ref:`301 redirect <website/pages/URL-redirection>`, maintaining the SEO.
 
-Keywords and Meta tags
+Keywords and meta tags
 ----------------------
 
 There are two types of keywords in SEO, which serve different purposes.
@@ -47,6 +47,8 @@ real impact on ranking. They cannot be edited in the :guilabel:`optimize SEO` po
 
 .. important::
    It is strongly recommended to only use one H1 title per page for SEO.
+
+.. _seo/meta-tags:
 
 Meta tags and meta keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -76,6 +78,8 @@ To edit :guilabel:`Keywords`, enter the keywords you consider essential in this 
 :guilabel:`Add` to see how they are used at different levels in your content (H1, H2, page title,
 page description, page content) and the related searches in Google. The tool also suggests relevant
 keywords.
+
+.. _seo/images:
 
 Images
 ------
