@@ -399,10 +399,15 @@ thanks to the incoming moves with a remaining quantity, go to :menuselection:`Ac
 
 To generate a new accounting entry to review and post, click :guilabel:`Generate Entry`.
 
+.. h:div:: doc-aside
+
+  .. image:: cheat_sheet/valuation-accounting.png
+
 To view a list of sales and purchase orders for which accrual entries should be encoded, go to
-:menuselection:`Accounting --> Review` and select the relevant menu item (:guilabel:`Invoices not
-received`, :guilabel:`Invoices to be issued`, :guilabel:`Prepaid expenses`, or :guilabel:`Deferred
-Revenues`).
+:menuselection:`Accounting --> Review` and select the relevant menu item (:guilabel:`Bill To
+Receive`, :guilabel:`Invoices To Be Issued`, :guilabel:`Billed Not Received` and :guilabel:`Invoiced
+Not Delivered`). Select the desired lines and click :guilabel:`Create Accrual
+Entries`.
 
 With Anglo-Saxon perpetual accounting, this will also help to distribute recorded inventory
 variations to accounts such as Bills to Receive/:abbr:`GRNI (goods received not invoiced)` or
@@ -411,7 +416,10 @@ and :ref:`Journal Entries Configuration <journal-entries>` sections.
 
 .. h:div:: doc-aside
 
-  .. image:: cheat_sheet/valuation-accounting.png
+  .. image:: cheat_sheet/accrual.png
+  .. image:: cheat_sheet/accrual1.png
+  .. image:: cheat_sheet/accrual2.png
+  .. image:: cheat_sheet/accrual3.png
 
 
 .. _changes-in-19:
