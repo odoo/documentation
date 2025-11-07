@@ -93,6 +93,9 @@ settings <configuration/settings>`. Then,
       - Access the Odoo backend interface.
       - :ref:`Close the current POS session <pos/session-close>`.
 
+      .. note::
+         An employee with advanced POS rights who is not a database user cannot access the backend.
+
 .. _pos/employee_login/use:
 
 Usage guidelines
