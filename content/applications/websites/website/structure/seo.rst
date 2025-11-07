@@ -48,6 +48,8 @@ real impact on ranking. They cannot be edited in the :guilabel:`optimize SEO` po
 .. important::
    It is strongly recommended to only use one H1 title per page for SEO.
 
+.. _seo/meta-tags:
+
 Meta tags and meta keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
