@@ -7,8 +7,8 @@ carriers with Odoo. Once integrated, users can select shipping carriers on inven
 their Odoo database.
 
 .. seealso::
-   `Sendcloud integration documentation <https://support.sendcloud.com/hc/en-us/articles
-   /360059470491-Odoo-integration>`_
+   `Sendcloud integration documentation <https://support.sendcloud.com/hc/en-us/articles/
+   360059470491-Odoo-Native-integration>`_
 
 Setup in Sendcloud
 ==================
@@ -16,15 +16,16 @@ Setup in Sendcloud
 Create an account and activate carriers
 ---------------------------------------
 
-To get started, go to `Sendcloud's platform <https://www.sendcloud.com>`_ to configure the account
-and generate the connector credentials. Log in with the Sendcloud account, or create a new one if
-needed.
+To get started, go to `Sendcloud's platform <https://sendcloud.com/
+?utm_source=odoo&utm_medium=partnerships&utm_campaign=partner_integrations_page>`_ to configure the
+account and generate the connector credentials. Log in with the Sendcloud account, or create a new
+one if needed.
 
 .. note::
    For new account creation, Sendcloud will ask for a :abbr:`VAT (Value-Added Tax Identification)`
    number or :abbr:`EORI (Economic Operators' Registration and Identification)` number. After
-   completing the account setup, activate (or deactivate) the shipping carriers that will be used
-   in the Odoo database.
+   completing the account setup, activate (or deactivate) the shipping carriers that will be used in
+   the Odoo database.
 
 .. important::
    Odoo integration of Sendcloud works on free Sendcloud plans *only* if a bank account is linked,
@@ -241,8 +242,7 @@ chatter, which include the following:
 Additionally, the tracking number is now available.
 
 .. important::
-   When return labels are created, Sendcloud automatically charges the configured Sendcloud
-   account.
+   When return labels are created, Sendcloud automatically charges the configured Sendcloud account.
 
 Shipping rules
 --------------
@@ -277,8 +277,8 @@ In the :guilabel:`Actions` section, set a :guilabel:`Condition` to determine whe
 Then, configure what to do when packages meet the condition.
 
 .. seealso::
-   `Create shipping rules on Sendcloud
-   <https://support.sendcloud.com/hc/en-us/articles/10274470454292-How-to-create-shipping-rules#examples-smart-shipping-rules>`_
+   `Create shipping rules on Sendcloud <https://support.sendcloud.com/hc/en-us/articles/
+   10274470454292-How-to-create-shipping-rules#examples-smart-shipping-rules>`_
 
 FAQ
 ===
