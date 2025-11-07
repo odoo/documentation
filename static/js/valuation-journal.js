@@ -158,16 +158,10 @@
             if (!this.props.items || this.props.items.isEmpty()) {
                 return React.DOM.div();
             }
-            const items = this.props.items;
-            const idx = items.indexOf(null);
-            if (idx !== -1) {
-                // console.log(items.slice(idx + 1).deref());
-                items = items.take(idx);
-            }
             return React.DOM.div(
                 { className: 'entries-listing' },
                 React.DOM.h4(null, this.props.heading, ':'),
-                items.map(function (item, index) {
+                this.props.items.map(function (item, index) {
                     return React.DOM.p({ key: index }, item);
                 })
             );
