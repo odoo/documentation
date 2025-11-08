@@ -56,7 +56,7 @@ msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-20 14:56+0200\n"
-"PO-Revision-Date: 2025-11-04 23:00+0000\n"
+"PO-Revision-Date: 2025-11-08 20:20+0000\n"
 "Last-Translator: \"Chloe Wang (chwa)\" <chwa@odoo.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
 "projects/odoo-19-doc/finance/zh_Hans/>\n"
@@ -2712,7 +2712,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:205
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:3
 msgid "Reconciliation models"
-msgstr "对账模型"
+msgstr "核销模型"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:207
 msgid ""
@@ -2723,6 +2723,10 @@ msgid ""
 "other reconciliation models and with counterpart items when reconciling "
 "transactions."
 msgstr ""
+"使用 :doc:`核销模型 <reconciliation_models>` "
+"创建自定义规则，这些规则可以通过自定义按钮自动或手动应用，用于处理频繁重复的"
+"操作。这些自定义按钮使您能够快速手动核销银行交易，并且在核销交易时，还可以与"
+"其他核销模型以及对应科目项结合使用。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:213
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:140
@@ -2732,10 +2736,13 @@ msgid ""
 "the :guilabel:`Bank Fees` reconciliation model to create a new counterpart "
 "item for $3 and reconcile it with the remaining $3 of the bank transaction."
 msgstr ""
+"例如，一笔103美元的支出银行交易与一张100美元的供应商账单进行了部分匹配，导致"
+"该交易仍有3美元未核销。此时，可以使用:guilabel:`银行手续费`核销模型创建一个3"
+"美元的新对应科目项，并将其与银行交易中剩余的3美元进行核销。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:221
 msgid "Edit lines and unreconcile transactions"
-msgstr ""
+msgstr "编辑分录和冲销交易"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:223
 msgid ""
@@ -2743,12 +2750,15 @@ msgid ""
 "pencil` :guilabel:`(pencil)` icon, and edit the necessary fields "
 "in :guilabel:`Edit Line` window."
 msgstr ""
+"要编辑一个对应科目项，请展开该分录行，点击:icon:`fa-"
+"pencil`:guilabel:`(铅笔)`图标，然后在 :guilabel:`编辑分录行` "
+"窗口中修改必要的字段。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:227
 msgid ""
 "When the counterpart item is an existing journal item, some fields are read-"
 "only."
-msgstr ""
+msgstr "当对应科目项是现有的日记账项目时，部分字段为只读。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:229
 msgid ""
@@ -2756,16 +2766,19 @@ msgid ""
 "to mark the invoice as :guilabel:`fully paid` or to switch back to "
 "a :guilabel:`partial payment`."
 msgstr ""
+"如果一笔交易与对应科目项是部分匹配的，可以使用链接将发票标记为 "
+":guilabel:`全额付款`，或切换回 :guilabel:`部分付款 ` 状态。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:232
 msgid ""
 "To unreconcile a transaction, delete all counterpart items associated with "
 "the transaction by clicking on the :icon:`fa-trash` :guilabel:`(trash)` icon."
-msgstr ""
+msgstr "要冲销一笔交易的核销，请通过点击 :icon:`fa-"
+"trash`:guilabel:`(垃圾桶)`图标，删除与该交易关联的所有对应科目项。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:238
 msgid "Netting"
-msgstr ""
+msgstr "净额结算"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:240
 msgid ""
@@ -2774,12 +2787,17 @@ msgid ""
 "incoming and outgoing debts creates a new journal entry that balances the "
 "debts. Two main scenarios exist:"
 msgstr ""
+"净额结算（也称为应收应付抵消）是指平衡与同一往来单位之间的应收债务和应付债务"
+"的过程。核销应收和应付债务会创建一个新的日记账分录来平衡这些债务。主要存在两"
+"种情景："
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:244
 msgid ""
 ":ref:`A bank transaction balances <accounting/reconciliation/net-"
 "transaction>` (either fully or partially) the incoming and outgoing debts."
 msgstr ""
+":ref:`存在一笔银行交易平衡 <accounting/reconciliation/net-"
+"transaction>`（全部或部分）了应收和应付债务。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:246
 msgid ""
@@ -2788,10 +2806,13 @@ msgid ""
 "either when the debts balance each other completely or when the debts remain "
 "unbalanced."
 msgstr ""
+":ref:`没有银行交易平衡 <accounting/reconciliation/net-no-"
+"transaction>`应收和应付债务。这种情况可能发生在债务完全相互抵消时，也可能发生"
+"在债务仍未平衡时。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:253
 msgid "Netting with bank transactions"
-msgstr ""
+msgstr "涉及银行交易的净额结算"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:255
 msgid ""
@@ -2800,26 +2821,29 @@ msgid ""
 "Matching` view like any other :ref:`existing items <accounting/"
 "reconciliation/existing-items>`:"
 msgstr ""
+"当一笔银行交易（全部或部分）平衡了应收和应付债务时，可以像处理任何其他 :ref:`"
+"现有项目 <accounting/reconciliation/existing-items>` 一样，在 "
+":guilabel:`银行匹配`视图中核销该银行交易："
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:259
 msgid "Click :guilabel:`Reconcile` on the transaction."
-msgstr ""
+msgstr "点击交易上的 :guilabel:`核销`。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:260
 msgid ""
 "Select all the relevant counterpart items on both the payable and receivable "
 "side."
-msgstr ""
+msgstr "同时选择应付方和应收方所有相关的对应科目项。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:261
 msgid "Click :guilabel:`Select`."
-msgstr ""
+msgstr "点击 :guilabel:`选择`。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:262
 msgid ""
 "If a balance remains, depending on the details, the following situations are "
 "possible:"
-msgstr ""
+msgstr "若有余额剩余，根据具体情况，可能出现以下情形："
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:264
 msgid ""
@@ -2827,6 +2851,8 @@ msgid ""
 "balance can be :ref:`reconciled <accounting/reconciliation/reconcile>` with "
 "other bank transactions."
 msgstr ""
+"某张发票、账单或其他项目未被完全核销，剩余金额可与其他银行交易进行 :ref:`"
+"核销 <accounting/reconciliation/reconcile>`。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:266
 msgid ""
@@ -2834,10 +2860,12 @@ msgid ""
 "balance can be :ref:`reconciled <accounting/reconciliation/reconcile>` as in "
 "any other situation."
 msgstr ""
+"该银行交易本身未被完全核销，其剩余金额可如同处理其他情况一样进行 :ref:`核销 <"
+"accounting/reconciliation/reconcile>`。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:272
 msgid "Netting without bank transactions"
-msgstr ""
+msgstr "无银行交易的净额结算"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:274
 msgid ""
@@ -2847,40 +2875,45 @@ msgid ""
 "payable. To balance these debts so that they no longer appear on the partner "
 "ledger, follow these steps:"
 msgstr ""
+"当没有银行交易来平衡应收与应付债务时，则无法在 :guilabel:`银行匹配` "
+"视图中进行核销操作。然而，该债务金额会同时显示在应收账款和应付账款中。若要平"
+"衡这些债务，使其不再显示在往来单位分类账中，请遵循以下步骤："
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:279
 msgid "Go to :menuselection:`Accounting --> Accounting --> Reconcile`."
-msgstr ""
+msgstr "前往 :menuselection:`会计 --> 会计 --> 核销`。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:280
 msgid ""
 "Select the journal items that debit or credit the account receivable and "
 "account payable and represent the debts to be netted."
-msgstr ""
+msgstr "选择那些借记或贷记应收账款和应付账款、且代表待抵消债务的日记账项目。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:282
 #: ../../content/applications/finance/accounting/payments.rst:279
 msgid "Click :guilabel:`Reconcile`."
-msgstr "点击 :guilabel:`对账`。"
+msgstr "点击 :guilabel:`核销`。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:283
 msgid ""
 "If the debts don't balance each other perfectly, a :guilabel:`Write-Off "
 "Entry` popup window appears, allowing you to decide how to resolve the "
 "remaining balance:"
-msgstr ""
+msgstr "如果债务未能完全相互抵消，系统将弹出 :guilabel:`冲销分录` "
+"窗口，允许您决定如何处理剩余余额："
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:286
 msgid ""
 "Select :guilabel:`Allow partials` to only partially reconcile the account "
 "receivable and account payable and leave the remaining balance open."
-msgstr ""
+msgstr "选择:guilabel:`允许部分核销`，仅部分核销应收账款和应付账款，并使剩余余额保持"
+"未核销状态。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:288
 msgid ""
 "Use a :doc:`reconciliation model button <reconciliation_models>` to write "
 "off the balance."
-msgstr ""
+msgstr "使用 :doc:`核销模型按钮 <reconciliation_models>`来冲销该余额。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:289
 msgid ""
@@ -2888,18 +2921,23 @@ msgid ""
 "the :guilabel:`Tax`, :guilabel:`Journal`, :guilabel:`Label`, :guilabel:`Date`, "
 "and :guilabel:`To Check` fields."
 msgstr ""
+"手动选择一个 :guilabel:`科目`，并可选择性地调整 "
+":guilabel:`税费`、:guilabel:`日记账`、:guilabel:`标签`、:guilabel:`日期`和 "
+":guilabel:`待核对` 字段。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:292
 msgid ""
 "The items are then matched, and their balance is removed from the partner "
 "ledger, representing that no payment is due for these debts."
-msgstr ""
+msgstr "随后，这些项目将被匹配，它们的余额将从往来单位分类账中移除，表明这些债务已无"
+"需支付。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:296
 msgid ""
 "The workflow is the same whether there are only two equal debts in the "
 "receivable and payable accounts or multiple debts in each account."
-msgstr ""
+msgstr "无论应收账款和应付账户中仅存在两笔金额相等的债务，还是每个账户中存在多笔债务"
+"，其工作流程都是相同的。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:5
 msgid ""
@@ -2910,13 +2948,17 @@ msgid ""
 "flows like writing off bank fees or :doc:`cash discounts <../"
 "customer_invoices/cash_discounts>`."
 msgstr ""
+"核销模型是自定义规则，它们对 :ref:`默认的匹配规则集 <accounting/"
+"reconciliation/reconcile>`进行补充，并能够实现更高级的 :doc:`银行对账 "
+"<reconciliation>` 流程自动化。这些模型在处理诸如冲销银行手续费或 :doc:`"
+"现金折扣 <../customer_invoices/cash_discounts>` 等周期性流水时特别有用。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:12
 msgid ""
 "`Odoo Tutorials: Reconciliation models <https://www.odoo.com/slides/slide/"
 "reconciliation-models-6858>`_"
 msgstr ""
-"`Odoo 教程：对账模型 <https://www.odoo.com/slides/slide/reconciliation-"
+"`Odoo 教程：核销模型 <https://www.odoo.com/slides/slide/reconciliation-"
 "models-6858>`_"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:19
@@ -2926,10 +2968,13 @@ msgid ""
 "journal, and select :guilabel:`Models` under the :guilabel:`Reconciliation` "
 "section."
 msgstr ""
+"要访问核销模型，请进入 :guilabel:`会计仪表板`，点击银行日记账上的 :icon:`fa-"
+"ellipsis-v`:guilabel:`(下拉菜单)`，然后在 :guilabel:`核销`部分下选择 "
+":guilabel:`模型`。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:23
 msgid "To create a new reconciliation model, click :guilabel:`New`."
-msgstr ""
+msgstr "要创建新的核销模型，请点击 :guilabel:`新建`。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:25
 msgid ""
@@ -2940,6 +2985,10 @@ msgid ""
 "apply automatically to transactions that meet the reconciliation "
 "model's :ref:`matching conditions <accounting/rec-models/conditions>`."
 msgstr ""
+"核销模型可以是 :guilabel:`手动` 或 :guilabel:`自动`的。手动核销模型在进行 "
+":doc:`核销 <reconciliation>` 时会显示为 :ref:`可能的操作按钮 <accounting/"
+"reconciliation/action-buttons>`。自动核销模型会自动应用于满足核销模型 :ref:`"
+"匹配条件 <accounting/rec-models/conditions>`的交易。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:31
 msgid ""
@@ -2948,19 +2997,23 @@ msgid ""
 "transactions and :ref:`Counterpart Items <accounting/rec-models/"
 "counterpart>` to be generated during reconciliation."
 msgstr ""
+"每个核销模型都配置有 :ref:`匹配条件 <accounting/rec-models/conditions>` "
+"以识别相关的银行交易，以及配置有在核销期间要生成的 :ref:`对应科目项 <"
+"accounting/rec-models/counterpart>`。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:36
 msgid ""
 "To create an activity on the transaction, select which type of activity to "
 "create in the :guilabel:`Next Activity` field."
-msgstr ""
+msgstr "要在交易上创建活动，请在 :guilabel:`下一个活动` 字段中选择要创建的活动类型。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:40
 msgid ""
 "If a record matches with several reconciliation models, the first one in the "
 "*sequence* of models is applied. Rearrange the order by dragging and "
 "dropping the handle next to the name."
-msgstr ""
+msgstr "如果一条记录与多个核销模型匹配，将应用模型排序中最靠前的一个。通过拖放名称旁"
+"边的把手来重新排序。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:0
 msgid "Rearrange the sequence of models in the list view."
@@ -2968,27 +3021,27 @@ msgstr "在列表视图中重新排列模型的顺序。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:49
 msgid "Matching conditions"
-msgstr ""
+msgstr "匹配条件"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:51
 msgid ""
 "A reconciliation model's matching conditions determine to which transactions "
 "it applies."
-msgstr ""
+msgstr "核销模型的匹配条件决定了它适用于哪些交易。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:53
 msgid ""
 "The following fields can be used to restrict the reconciliation model's "
 "availability to transactions that meet the conditions:"
-msgstr ""
+msgstr "以下字段可用于将核销模型的可用性限制在满足条件的交易："
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:56
 msgid ":guilabel:`Journals`"
-msgstr ""
+msgstr ":guilabel:`日记账`"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:57
 msgid ":guilabel:`Partners`"
-msgstr ""
+msgstr ":guilabel:`合作伙伴`"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:58
 msgid ""
@@ -2996,6 +3049,8 @@ msgid ""
 "to`, :guilabel:`Is greater than or equal to`, or :guilabel:`Is between` and "
 "enter the amount(s)."
 msgstr ""
+":guilabel:`金额`：选择 :guilabel:`小于或等于`、 :guilabel:`大于或等于`或 "
+":guilabel:`介于之间`并输入金额。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:60
 msgid ""
@@ -3003,6 +3058,8 @@ msgid ""
 "or :guilabel:`Match Regex` and enter the transaction label's matching "
 "condition."
 msgstr ""
+":guilabel:`标签`：选择 :guilabel:`包含`、:guilabel:`不包含` 或 "
+":guilabel:`匹配正则表达式`并输入交易标签的匹配条件。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:64
 msgid ""
@@ -3011,6 +3068,9 @@ msgid ""
 "manipulate data. Regex can be powerful but also complex, so it's essential "
 "to use it judiciously."
 msgstr ""
+"`正则表达式 <https://regexone.com/>`_，通常缩写为 regex，可以在 Odoo "
+"中以多种方式用于搜索、验证和操作数据。正则表达式功能强大但也复杂，因此务必审"
+"慎使用。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:68
 msgid ""
@@ -3019,61 +3079,66 @@ msgid ""
 "automatically retrieves the transactions that match the regex expression and "
 "the conditions specified in the reconciliation model."
 msgstr ""
+"要在核销模型中使用正则表达式，请将 :guilabel:`标签`条件设置为 "
+":guilabel:`匹配正则表达式`并添加表达式。Odoo "
+"会自动检索与正则表达式以及核销模型中指定的条件相匹配的交易。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:73
 msgid ""
 "A transaction must meet all conditions for the reconciliation model to be "
 "available for it. If no condition is defined (i.e., if all fields are left "
 "blank), the reconciliation model will be available for all transactions."
-msgstr ""
+msgstr "一笔交易必须满足所有条件，相应的核销模型才会对其可用。如果未定义任何条件（即"
+"所有字段均为空），则该核销模型将对所有交易可用。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:80
 msgid "Counterpart items"
-msgstr ""
+msgstr "对应科目项"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:82
 msgid ""
 "Each line in the :guilabel:`Counterpart items` tab creates a journal item "
 "with the specified details:"
-msgstr ""
+msgstr "在 :guilabel:`对应科目项` "
+"选项卡中，每一行都会创建一个具有指定明细的日记账项目："
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:85
 msgid ""
 ":guilabel:`Partner`: Select the partner, if any, to set on the journal item."
-msgstr ""
+msgstr ":guilabel:`合作伙伴`：选择要在此日记账项目上设置的合作伙伴（如有）。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:86
 msgid ""
 ":guilabel:`Account`: Select the account, if any, to set on the journal item."
-msgstr ""
+msgstr ":guilabel:`科目`：选择要在此日记账项目上设置的科目（如有）。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:87
 msgid ""
 ":guilabel:`Amount Type`: Select how the amount of the journal item should be "
 "calculated:"
-msgstr ""
+msgstr ":guilabel:`金额类型`：选择应如何计算此日记账项目的金额："
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:89
 msgid ":guilabel:`Fixed`: Use a fixed amount."
-msgstr ""
+msgstr ":guilabel:`固定`：使用固定金额。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:90
 msgid ""
 ":guilabel:`Percentage of balance`: Use a percentage of the remaining balance "
 "of the transaction, regardless of the transaction total."
-msgstr ""
+msgstr ":guilabel:`余额百分比`：使用交易剩余余额的某个百分比（不考虑交易总额）。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:92
 msgid ""
 ":guilabel:`Percentage of statement line`: Use a percentage of the "
 "transaction total, regardless of the remaining balance of the transaction."
-msgstr ""
+msgstr ":guilabel:`账单行百分比`：使用交易总额的某个百分比（不考虑交易剩余余额）。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:94
 msgid ""
 ":guilabel:`From label`: Use a percentage from the transaction's label using "
 "regex."
-msgstr ""
+msgstr ":guilabel:`来自标签`：使用正则表达式从交易标签中提取百分比。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:96
 msgid ""
@@ -3081,6 +3146,8 @@ msgid ""
 "field will be either a fixed amount, percentage amount, or regex depending "
 "on the :guilabel:`Account Type`."
 msgstr ""
+":guilabel:`金额`：输入用于此日记账项目的金额。根据:guilabel:`金额类型`的选择"
+"，此字段可以是固定金额、百分比金额或正则表达式。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:98
 msgid ""
@@ -3088,23 +3155,26 @@ msgid ""
 "field is hidden behind the :icon:`oi-settings-adjust` :guilabel:`(settings "
 "adjust)` icon by default."
 msgstr ""
+":guilabel:`税`：选择要在此日记账项目上设置的税（如有）。此字段默认隐藏:icon"
+":`oi-settings-adjust` :guilabel:`(设置调整)`图标后面。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:100
 msgid ""
 ":guilabel:`Analytic`: Select an analytic distribution, if any, to set on the "
 "journal item."
-msgstr ""
+msgstr ":guilabel:`分析`：选择要在此日记账项目上设置的分析分配（如有）。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:101
 msgid ":guilabel:`Label`: Enter a label, if any, to set on the journal item."
-msgstr ""
+msgstr ":guilabel:`标签`：输入要在此日记账项目上设置的标签（如有）。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:104
 msgid ""
 "While neither the :guilabel:`Partner` nor :guilabel:`Account` fields are "
 "mandatory, at least one of the two must be set for the reconciliation model "
 "to work correctly."
-msgstr ""
+msgstr ":guilabel:`合作伙伴`和 :guilabel:`科目` "
+"字段均非必填，但必须至少设置其中一个，核销模型才能正常工作。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:106
 msgid ""
@@ -3112,10 +3182,13 @@ msgid ""
 "rec-models/partner>` if the :guilabel:`Counterpart Items` include "
 "a :guilabel:`Partner` but no :guilabel:`Account`."
 msgstr ""
+"如果 :guilabel:`对应科目项` 中包含了 :guilabel:`合作伙伴`但未指定 "
+":guilabel:`科目`，则该核销模型可用于 :ref:`合作伙伴映射 <accounting/"
+"rec-models/partner>`。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:112
 msgid "Default reconciliation models"
-msgstr "默认对账模式"
+msgstr "默认核销模式"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:114
 msgid ""
@@ -3124,10 +3197,13 @@ msgid ""
 "be updated if needed. The following reconciliation models exist across most "
 "fiscal localizations."
 msgstr ""
+"在Odoo中，根据公司的 :doc:`财务本地化 <../../"
+"fiscal_localizations>`设置，系统默认提供了不同的模型。这些模型可以根据需要进"
+"行更新。以下核销模型在大多数财务本地化设置中都存在。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:119
 msgid "Internal Transfers"
-msgstr ""
+msgstr "内部转账"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:121
 msgid ""
@@ -3138,14 +3214,19 @@ msgid ""
 "to another, this reconciliation model must be used on both the incoming "
 "journal's transaction and the outgoing journal's transaction."
 msgstr ""
+":guilabel:`内部转账`核销模型用于通过将整笔交易的余额转入一个流动性科目或内部"
+"转账科目，来实现从一个银行或现金账户到另一个的 :doc:`内部转账 "
+"<internal_transfers>`。要将金额从一个账户完全转移到另一个账户，必须在转入日记"
+"账的交易和转出日记账的交易上都使用此核销模型。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:128
+#, fuzzy
 msgid ":doc:`internal_transfers`"
-msgstr ""
+msgstr ":doc:`internal_transfers`"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:131
 msgid "Bank Fees"
-msgstr ""
+msgstr "银行手续费"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:133
 msgid ""
@@ -3157,10 +3238,15 @@ msgid ""
 "label contains \"Bank Fees\" due to its :ref:`matching conditions "
 "<accounting/rec-models/conditions>`."
 msgstr ""
+":guilabel:`银行手续费`核销模型会生成一个对应科目项，将交易的剩余余额转入一个"
+"银行手续费科目（该科目因 :doc:`财务本地化 <../../"
+"fiscal_localizations>`而异），并在其创建的新科目的 :guilabel:`标签` "
+"中包含“银行手续费”。由于其 :ref:`匹配条件 <accounting/rec-models/"
+"conditions>`，此核销模型仅适用于标签中包含“银行手续费”的交易。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:146
 msgid "Cash Discount"
-msgstr ""
+msgstr "现金折扣"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:148
 msgid ""
@@ -3170,6 +3256,10 @@ msgid ""
 "fiscal_localizations>`) and includes \"Cash Discount\" in "
 "the :guilabel:`Label` of the new item that it creates."
 msgstr ""
+":guilabel:`现金折扣` "
+"核销模型会生成一个对应科目项，将交易的剩余余额转入现金折扣科目（该科目因 "
+":doc:`财务本地化 <../../fiscal_localizations>`设置而异），"
+"并在其创建的新科目项的 :guilabel:`标签`中包含“现金折扣”。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:154
 msgid ":doc:`../customer_invoices/cash_discounts`"
@@ -3202,13 +3292,19 @@ msgid ""
 "the :ref:`Counterpart Items <accounting/rec-models/counterpart>` tab. "
 "Setting an :guilabel:`Account` is not mandatory for partner mapping."
 msgstr ""
+"要创建合作伙伴映射规则，请配置任何 :ref:`匹配条件 <accounting/rec-models/"
+"conditions>`（例如特定的交易标签），然后在:ref:`对应科目项 <accounting/"
+"rec-models/counterpart>` 选项卡中配置 "
+":guilabel:`合作伙伴`和任何其他相关字段。对于往来单位映射，设置 "
+":guilabel:`科目`不是强制要求。"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:5
 msgid ""
 "Importing transactions from your bank statements allows keeping track of "
 "bank account transactions and reconciling them with the ones recorded in "
 "your accounting."
-msgstr "从银行对账单中导入交易，可以追踪银行账户交易，并与会计记录进行核对。"
+msgstr "从您的银行对账单导入交易，可以持续追踪银行账户交易流水，并将其与您的会计记录"
+"进行核销。"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:8
 msgid ""
@@ -3216,30 +3312,31 @@ msgid ""
 "However, if you do not want to use it or if your bank is not yet supported, "
 "other options exist:"
 msgstr ""
-":doc:`银行同步<bank_synchronization>` 自动执行该过程。但是，如果您不想使用"
-"它，或者您的银行还不支持它，还有其他选择："
+":doc:`银行同步<bank_synchronization>` "
+"自动执行该过程。但是，如果您不想使用该功能，或者您的银行尚未支持该功能，还存"
+"在其他选择："
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:11
 msgid ""
 ":ref:`Import bank transactions <accounting/transactions/import>` delivered "
 "by your bank;"
-msgstr ""
+msgstr ":ref:`导入由您的银行提供的交易文件 <accounting/transactions/import>`；"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:12
 msgid ""
 ":ref:`Register bank transactions <accounting/transactions/register>` "
 "manually."
-msgstr ""
+msgstr ":ref:`手动登记银行交易 <accounting/transactions/register>`。"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:15
 msgid ""
 ":ref:`Grouping transactions by statement <accounting/transactions/"
 "statements>` is optional."
-msgstr ""
+msgstr ":ref:`按对账单分组交易 <accounting/transactions/statements>`是可选项。"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:20
 msgid "Transaction view"
-msgstr ""
+msgstr "交易视图"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:22
 msgid ""
@@ -3247,62 +3344,67 @@ msgid ""
 "the :guilabel:`Bank Matching` view. To access it, go to "
 "the :guilabel:`Accounting Dashboard`, then either:"
 msgstr ""
+"银行日记账的交易列表显示在 :guilabel:`银行匹配` 视图中。要访问此视图，请进入 "
+":guilabel:`会计仪表板`，然后执行以下任一操作："
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:30
 msgid ""
 "Unreconciled transactions display the following information while collapsed:"
-msgstr ""
+msgstr "未核销的交易在折叠状态下显示以下信息："
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:32
 msgid "The date of the transaction"
-msgstr ""
+msgstr "交易日期"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:33
 msgid "A button linked to the chatter. The icon of this button can vary:"
-msgstr ""
+msgstr "一个链接到聊天框的按钮。此按钮的图标可能有所不同："
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:35
 msgid ""
 "The :icon:`fa-comments-o` :guilabel:`(comments)` icon displays only on hover "
 "and indicates that there are no attachments or activities for the "
 "transaction."
-msgstr ""
+msgstr ":icon:`fa-comments-o` "
+":guilabel:`(评论)`图标仅在悬停时显示，表示该交易没有附件或活动。"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:37
 msgid ""
 "The :icon:`fa-paperclip` :guilabel:`(attachments)` icon indicates that there "
 "is an attachment on the journal entry."
-msgstr ""
+msgstr ":icon:`fa-paperclip` :guilabel:`(附件)` 图标表示该日记账分录上存在附件。"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:39
 msgid ""
 "The :icon:`fa-clock-o` :guilabel:`(activities)` icon indicates that there is "
 "an activity scheduled on the journal entry."
-msgstr ""
+msgstr ":icon:`fa-clock-o` :guilabel:`(活动)` 图标表示该日记账分录上安排了活动。"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:42
 msgid "The label of the transaction"
-msgstr ""
+msgstr "交易标签"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:43
 msgid "The partner of the transaction (if one is set)"
-msgstr ""
+msgstr "交易合作伙伴（如已设置）"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:44
 msgid ""
 "Up to two :ref:`action buttons <accounting/reconciliation/action-buttons>`, "
 "depending on the details of the transaction"
 msgstr ""
+"最多两个 :ref:`操作按钮 <accounting/reconciliation/action-"
+"buttons>`（具体取决于交易的详细信息）"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:46
 msgid "The balance of the transaction"
-msgstr ""
+msgstr "交易余额"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:49
 msgid ""
 "When the chatter of a transaction is open, a blue tag highlights the related "
 "transaction."
-msgstr ""
+msgstr "当交易的沟通栏打开时，会有一个蓝色标签高亮显示相关的交易。"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:50
 msgid ""
@@ -3310,6 +3412,8 @@ msgid ""
 "o` :guilabel:`(comments)` icon and the :icon:`fa-times` :guilabel:`(close)` "
 "icon in the top right of the view."
 msgstr ""
+"可以通过点击视图右上角的 :icon:`fa-comments-o` :guilabel:`(评论)`图标和 :icon"
+":`fa-times` :guilabel:`(关闭)` 图标来打开和关闭聊天框。"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:53
 msgid ""
@@ -3317,10 +3421,13 @@ msgid ""
 "are replaced with the labels of the item(s) it was reconciled with or the "
 "account if it was reconciled with the :guilabel:`Set Account` action button."
 msgstr ""
+"一旦交易被 :doc:`核销 "
+"<reconciliation>`，其操作按钮将替换为与之核销的项目的标签，或者如果它是通过 "
+":guilabel:`设置科目` 操作按钮核销的，则替换为科目名称。"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:60
 msgid "Duplicate transactions"
-msgstr ""
+msgstr "重复交易"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:62
 msgid ""
@@ -3333,6 +3440,11 @@ msgid ""
 "name, then open the :icon:`fa-cog` :guilabel:`Actions` menu and "
 "click :guilabel:`Find Duplicate Transactions`."
 msgstr ""
+"当由于人为错误或 :doc:`银行同步 <bank_synchronization>` "
+"错误导致同一笔交易被重复创建时，就会发生重复交易。重复交易视图会识别出可能的"
+"重复交易，以便用户选择并删除它们。要访问重复交易视图，首先需进入:guilabel:`银"
+"行匹配`视图（通过前往 :guilabel:`会计仪表板`并点击银行日记账的名称），"
+"然后打开 :icon:`fa-cog` :guilabel:`操作`菜单并点击 :guilabel:`查找重复交易`。"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:69
 msgid ""
@@ -3340,6 +3452,8 @@ msgid ""
 "and account number, or (if the transaction is created via :doc:`bank sync "
 "<bank_synchronization>`) the transaction ID."
 msgstr ""
+"系统会根据交易的金额、日期和账号（或者，如果交易是通过 :doc:`银行同步 "
+"<bank_synchronization>`创建的，则根据交易ID）来识别可能的重复交易。"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:72
 msgid ""
@@ -3347,6 +3461,9 @@ msgid ""
 "duplicate transactions, then select the transactions to delete and "
 "click :icon:`fa-trash` :guilabel:`Delete Selected`."
 msgstr ""
+"选择一个 :guilabel:`起始日期` "
+"以查看相应时间段内可能的重复交易，然后选择要删除的交易并点击:icon:`fa-trash` "
+":guilabel:`删除所选交易`。"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:76
 msgid ""
@@ -3355,6 +3472,10 @@ msgid ""
 "the :guilabel:`Provider Duplicates` tab. This tab is only visible if there "
 "are any potential duplicates according to the provider."
 msgstr ""
+"任何由:doc:`银行同步 "
+"<bank_synchronization>`创建、且被银行同步服务商判定为可能重复的交易，"
+"将显示在 :guilabel:`服务商标记的重复项 "
+"`标签页中。仅当服务商报告存在可能的重复项时，此标签页才会显示。"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:83
 msgid "Import transactions"
@@ -3395,26 +3516,29 @@ msgid ""
 "the :guilabel:`Bank` journal, and select :guilabel:`Import file`. Next, "
 "select the file and upload it."
 msgstr ""
+"要导入文件，请前往 :guilabel:`会计仪表板`，点击 :guilabel:`银行`日记账旁的 "
+":icon:`fa-ellipsis-v` :guilabel:`(省略号)` 图标，然后选择 "
+":guilabel:`导入文件`。接着，选择文件并上传。"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:101
 msgid "Alternatively, access the transaction list by:"
-msgstr ""
+msgstr "或者，也可以通过以下任一方式访问交易列表并导入："
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:100
 msgid ""
 "clicking on the :guilabel:`Bank` journal's name, then "
 "clicking :guilabel:`Upload`"
-msgstr ""
+msgstr "点击 :guilabel:`银行`日记账的名称，然后点击 :guilabel:`上传`"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:101
 msgid ""
 "dragging and dropping a file on the bank journal on "
 "the :guilabel:`Accounting Dashboard`"
-msgstr ""
+msgstr "在 :guilabel:`会计仪表板`上，将文件直接拖放到银行日记账上"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:102
 msgid "dragging and dropping a file on the :guilabel:`Bank Matching` view"
-msgstr ""
+msgstr "在 :guilabel:`银行匹配` 视图中，将文件直接拖放到该视图上"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:104
 msgid ""
@@ -3423,6 +3547,10 @@ msgid ""
 "fields, after which you can run a :guilabel:`Test` and :guilabel:`Import` "
 "your bank transactions. Other file types are mapped automatically."
 msgstr ""
+"对于某些文件类型（如 CSV 和 XLSX），"
+"随后需要设置必要的格式选项并将文件列与其相关的 Odoo 字段进行映射，之后您可以 "
+":guilabel:`测试` 并 :guilabel:`导入` 您的银行交易。其他文件类型（例如 OFX、"
+"QIF 文件）则会自动完成映射。"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:109
 msgid ":doc:`/applications/essentials/export_import_data`"
@@ -3440,6 +3568,10 @@ msgid ""
 "to ease the reconciliation process, but the :guilabel:`Label` "
 "and :guilabel:`Date` fields are mandatory."
 msgstr ""
+"您也可以手动记录银行交易。操作方法是：前往 :guilabel:`会计仪表板`，点击 "
+":guilabel:`银行`日记账的名称，然后点击 "
+":guilabel:`新建`。:guilabel:`合作伙伴`字段为可选，但有助于简化核销流程；而 "
+":guilabel:`标签`和 :guilabel:`日期`字段则为必填项。"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:124
 msgid "Statements"
@@ -3459,7 +3591,9 @@ msgid ""
 "In Odoo Accounting, it is optional to group transactions by their related "
 "statement, but depending on your business flow, you may want to record them "
 "for record-keeping and organizational purposes."
-msgstr ""
+msgstr "在 Odoo "
+"会计中，按相关对账单对交易进行分组是可选项，但根据您的业务流程，您可能出于记"
+"账和管理目的需要记录这些对账单。"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:132
 msgid ""
@@ -3468,6 +3602,9 @@ msgid ""
 "next to the bank or cash journal you want to check, then "
 "click :guilabel:`Statements`."
 msgstr ""
+"要访问现有对账单列表，请进入 :guilabel:`会计仪表板`，"
+"点击您要查看的银行或现金日记账旁的 :icon:`fa-ellipsis-v` "
+":guilabel:`(下拉菜单)`图标，然后选择 :guilabel:`对账单`。"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:137
 msgid ""
@@ -3477,6 +3614,9 @@ msgid ""
 "begin synchronizing or importing transactions. This is necessary to ensure "
 "the accuracy of your accounting."
 msgstr ""
+"为确保Odoo中的银行对账单期末余额与银行提供的对账单期末余额一致，请创建一笔期"
+"初交易，记录开始同步或导入交易当日的银行账户余额。这对确保会计准确性十分必要"
+"。"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:143
 msgid ""
@@ -3484,10 +3624,13 @@ msgid ""
 "directly from the :guilabel:`Bank Statements` list view or open a statement "
 "and click the :guilabel:`Statement lines` smart button."
 msgstr ""
+"要访问某个对账单的交易记录，您可以直接从 :guilabel:`银行对账单`"
+"列表视图中点击 :guilabel:`交易`，或者打开对账单后点击 "
+":guilabel:`对账单明细`智能按钮。"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:150
 msgid "Statement creation"
-msgstr ""
+msgstr "对账单创建"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:152
 msgid ""
@@ -3499,10 +3642,15 @@ msgid ""
 "upper separator line. Doing so creates a statement from that transaction "
 "down to the oldest transaction that is not yet part of a statement."
 msgstr ""
+":guilabel:`银行匹配`视图按从最新到最旧的顺序显示交易，并按对账单分组，顶部显"
+"示所有尚未归属于任何对账单的最新交易。若要将交易添加至对账单，请将鼠标悬停在"
+"该对账单应包含的最新的交易上，然后点击上方分隔线处出现的 "
+":guilabel:`对账单`按钮。此操作将创建一个对账单，范围从该交易开始向下延伸至所"
+"有尚未归属于任何对账单的最旧交易。"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:-1
 msgid "A \"Statement\" button is visible when hovering on a transaction."
-msgstr ""
+msgstr "将鼠标悬停在交易上时，“对账单”按钮可见。"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:162
 msgid ""
@@ -3511,6 +3659,10 @@ msgid ""
 "and :guilabel:`Ending Balance`, add an attachment such as a PDF of the "
 "statement if desired, and click :guilabel:`Save`."
 msgstr ""
+"在 :guilabel:`创建对账单`窗口中，填写对账单的 :guilabel:`参考`，核对 "
+":guilabel:`期初余额 ` 和 "
+":guilabel:`期末余额`，可按需添加附件（例如对账单的PDF文件），然后点击 "
+":guilabel:`保存`。"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:167
 msgid ""
@@ -3520,6 +3672,9 @@ msgid ""
 "new one by typing its reference, clicking on :guilabel:`Create and edit...`, "
 "filling out the statement's details, and saving."
 msgstr ""
+"也可从列表视图将交易添加至对账单。选择与银行对账单对应的所有交易，然后在 "
+":guilabel:`对账单` 列中，选择一个现有对账单，或通过输入参考编号、点击 "
+":guilabel:`创建并编辑...`、填写对账单详细信息并保存来创建新对账单。"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:175
 msgid "Statement viewing, editing, and printing"
@@ -3534,6 +3689,11 @@ msgid ""
 "the :guilabel:`Reference`, :guilabel:`Starting Balance`, :guilabel:`Ending "
 "Balance`, and :guilabel:`Attachments`."
 msgstr ""
+"要查看现有对账单，请点击 :guilabel:`银行匹配`视图中的对账单金额，或在 "
+":guilabel:`银行匹配`列表视图中点击对账单名称，然后点击 :icon:`fa-arrow-right`"
+" :guilabel:`(内部链接)`图标。在此界面，您可以编辑 "
+":guilabel:`参考`、:guilabel:`期初余额`、:guilabel:`期末余额`和 "
+":guilabel:`附件`。"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:183
 msgid ""
@@ -3565,13 +3725,16 @@ msgid ""
 "cog` :guilabel:`(gear)` icon and click :icon:`fa-"
 "print` :guilabel:`Statement`."
 msgstr ""
+"要生成并打印 PDF 格式的银行对账单，请点击 :icon:`fa-cog`:guilabel:`（齿轮）` "
+"图标，然后点击 :icon:`fa-print` :guilabel:`对账单`。"
 
 #: ../../content/applications/finance/accounting/bank/transactions.rst:196
 msgid ""
 "When a bank statement is generated to be printed, it is automatically added "
 "to the :guilabel:`Attachments` if no file was attached when creating the "
 "statement."
-msgstr ""
+msgstr "当生成要打印的银行对账单时，如果创建对账单时没有附加文件，对账单会自动添加到 "
+":guilabel:`附件` 中。"
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:5
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:494
@@ -5253,6 +5416,10 @@ msgid ""
 "system receiving the message can interpret the information correctly. "
 "Various EDI file formats are available depending on your company's country."
 msgstr ""
+"EDI，即电子数据交换，是指企业间以标准格式传输采购订单和发票等商业文件。按照 "
+"EDI "
+"标准发送文件可确保接收方系统能够正确解读信息。根据企业所在国家/地区的不同，"
+"有多种 EDI 文件格式可供选择。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:10
 msgid ""
@@ -5261,12 +5428,18 @@ msgid ""
 "administrative procedures. Electronic sending of documents such as customer "
 "invoices, credit notes, or vendor bills is one application of EDI."
 msgstr ""
+"EDI "
+"功能帮助企业实现行政管理流程自动化。部分国家政府出于财税管控或行政程序支持的"
+"目的，也可能要求使用 EDI。电子化发送客户发票、贷记单或供应商账单等文件就是 "
+"EDI 的一种应用场景。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:14
 msgid ""
 "Odoo supports e-invoicing in many countries. Refer to the :ref:`country's "
 "page <accounting/e-invoicing/peppol-country-specific>` for more details."
 msgstr ""
+"Odoo 支持多个国家/地区的电子发票功能。具体详情请参考 :ref:`各国/地区页面说明 "
+"<accounting/e-invoicing/peppol-country-specific>`。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:18
 msgid ":doc:`Fiscal localizations documentation <../../fiscal_localizations>`"
@@ -5277,6 +5450,8 @@ msgid ""
 "By default, the format available in the :ref:`send window <accounting/e-"
 "invoicing/generation>` depends on the customer's country."
 msgstr ""
+"默认情况下，:ref:`发送窗口 <accounting/e-invoicing/"
+"generation>`中可用的格式取决于客户所在国家/地区。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:28
 msgid ""
@@ -5285,10 +5460,13 @@ msgid ""
 "customer form, go to the :guilabel:`Accounting` tab, and select the "
 "appropriate :guilabel:`Format` in the :guilabel:`Customer invoices` section."
 msgstr ""
+"若要为某个客户指定特定的电子发票格式，请前往 :menuselection:`会计 --> 客户 --"
+"> 客户`，进入客户表单，切换到 :guilabel:`会计`选项卡，在 :guilabel:`客户发票`"
+"部分选择合适的 :guilabel:`格式`。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:35
 msgid "E-invoice generation"
-msgstr ""
+msgstr "电子发票生成"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:37
 msgid ""
@@ -5297,6 +5475,10 @@ msgid ""
 "(e.g., :guilabel:`by Peppol`), then click :guilabel:`Send` to generate and "
 "attach the corresponding e-invoicing XML file."
 msgstr ""
+"在已确认的发票上，点击 :guilabel:`发送`。在 "
+":guilabel:`打印和发送`窗口中，启用相关的电子发票格式选项（例如 :guilabel:`"
+"通过 Peppol`），然后点击 :guilabel:`发送` 以生成并附加相应的电子发票 XML "
+"文件。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:44
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:373
@@ -5312,6 +5494,11 @@ msgid ""
 "documents such as customer invoices and credit notes and receive documents "
 "like vendor bills and refunds."
 msgstr ""
+"`Peppol <https://peppol.org/about/>`_ "
+"网络确保了企业与政府机构之间的单据和信息交换。它主要用于电子发票，其接入点（"
+"连接至 Peppol "
+"网络的连接器）使企业能够发送客户发票和贷记单等电子单据，并接收供应商账单和退"
+"款等单据。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:51
 msgid ""
@@ -5319,16 +5506,19 @@ msgid ""
 "(Service Metadata Publisher)` and enables electronic invoicing transactions "
 "without the need to send invoices or bills by email or post."
 msgstr ""
+"在此场景下，Odoo 同时充当接入点和 "
+":abbr:`SMP（服务元数据发布者）`，实现电子发票交易，无需再通过电子邮件或邮寄方"
+"式发送发票或账单。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:56
 msgid "Peppol registration is **free** and available in Odoo Community."
-msgstr ""
+msgstr "Peppol 注册在 Odoo 社区版中**免费**提供。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:57
 msgid ""
 "Supported formats for sending documents include **BIS Billing 3.0, XRechnung "
 "CIUS, and NLCIUS**."
-msgstr ""
+msgstr "支持发送单据的格式包括 **BIS Billing 3.0、XRechnung CIUS 和 NLCIUS**。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:0
 msgid ""
@@ -5345,6 +5535,11 @@ msgid ""
 "Serbia, Sweden, Slovenia, Slovakia, San Marino, Turkey, Holy See (Vatican "
 "City State)."
 msgstr ""
+"安道尔、阿尔巴尼亚、奥地利、波斯尼亚和黑塞哥维那、比利时、保加利亚、瑞士、塞"
+"浦路斯、捷克共和国、德国、丹麦、爱沙尼亚、西班牙、芬兰、法国、英国、希腊、克"
+"罗地亚、匈牙利、爱尔兰、冰岛、意大利、列支敦士登、立陶宛、卢森堡、拉脱维亚、"
+"摩纳哥、黑山、北马其顿、马耳他、荷兰、挪威、波兰、葡萄牙、罗马尼亚、塞尔维亚"
+"、瑞典、斯洛文尼亚、斯洛伐克、圣马力诺、土耳其、圣座（梵蒂冈城）。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:69
 msgid "Registration"
@@ -5356,12 +5551,14 @@ msgid ""
 "> Settings` and scroll to the :guilabel:`PEPPOL Electronic Invoicing` "
 "section. Then, follow these steps:"
 msgstr ""
+"要在 Peppol 上注册，请前往 :menuselection:`会计 --> 配置 --> 设置`并滚动至 "
+":guilabel:`PEPPOL 电子发票` 部分。然后，按照以下步骤操作："
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:74
 msgid ""
 "Click :guilabel:`Activate Electronic Invoicing` and fill in the following "
 "fields:"
-msgstr ""
+msgstr "点击 :guilabel:`激活电子发票`并填写以下字段："
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:76
 msgid ""
@@ -5370,6 +5567,9 @@ msgid ""
 "dropdown list, then enter your Peppol endpoint (usually a Company Registry "
 "or VAT number)."
 msgstr ""
+"使用 :icon:`fa-caret-down` :guilabel:`(向下箭头)`图标，"
+"确保在下拉列表中选择了相关的国家特定 Peppol 端点标识符，然后输入您的 Peppol "
+"端点（通常是公司注册号或增值税号）。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:79
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:89
@@ -5381,13 +5581,14 @@ msgstr ":guilabel:`电子邮件`"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:80
 msgid ":guilabel:`Phone`, including the country code (e.g., `+32` in Belgium)"
-msgstr ""
+msgstr ":guilabel:`电话`：需包含国家/地区代码（例如，比利时为 +32）"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:82
 msgid ""
 "Click :guilabel:`Activate Peppol`. The registration is then pending "
 "activation and should be automatically activated within a day."
-msgstr ""
+msgstr "点击 :guilabel:`激活 "
+"Peppol`。随后注册状态将显示为“待激活”，并应能在一天内自动激活。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:86
 msgid ""
@@ -5395,16 +5596,19 @@ msgid ""
 "edelivery/codelists/>`_ (open the \"Participant Identifier Schemes\" as HTML "
 "page)"
 msgstr ""
+"`Peppol 端点 - OpenPeppol eDEC 代码列表 <https://docs.peppol.eu/edelivery/"
+"codelists/>`_ （以 HTML 页面形式打开“参与者标识符方案”）"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:89
 msgid "Define where documents should be received:"
-msgstr ""
+msgstr "定义接收单据的位置："
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:91
 msgid ""
 ":guilabel:`Receive in Journal`: If necessary, select another purchase "
 "journal in the :guilabel:`Incoming Invoices Journal` field."
-msgstr ""
+msgstr ":guilabel:`在日记账中接收`：如有必要，在 "
+":guilabel:`进货发票日记账`字段中选择另一个采购日记账。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:93
 msgid ""
@@ -5412,6 +5616,9 @@ msgid ""
 "folder in the :guilabel:`Document Workspace` field if multiple purchase "
 "journals are used."
 msgstr ""
+":doc:`在文档中接收 <../../../productivity/"
+"documents>`：如果使用了多个采购日记账，请在 "
+":guilabel:`文档工作区`字段中选择一个文件夹。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:96
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:210
@@ -5424,7 +5631,7 @@ msgstr "点击:guilabel:`保存`。"
 msgid ""
 "All invoices and vendor bills can then be sent/received directly using "
 "Peppol."
-msgstr ""
+msgstr "所有发票和供应商账单都可以直接通过 Peppol 发送/接收。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:101
 msgid ""
@@ -5432,6 +5639,8 @@ msgid ""
 "right` :guilabel:`Advanced Configuration`, modify it, and "
 "click :guilabel:`Save`."
 msgstr ""
+"要更新 :guilabel:`主联系邮箱`，请点击:icon:`oi-arrow-"
+"right`:guilabel:`高级配置`，修改后点击 :guilabel:`保存`。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:103
 msgid ""
@@ -5440,6 +5649,9 @@ msgid ""
 "it's Hermes (BOSA). If using Hermes (BOSA), no action is needed; the "
 "migration is handled automatically."
 msgstr ""
+"如果您正在使用之前服务提供商的接入点，请务必先从其处注销，然后再向您的新接入"
+"点注册（ Hermes BOSA 除外）。若使用 "
+"Hermes（BOSA），则无需任何操作，迁移将自动处理。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:108
 msgid ""
@@ -5449,6 +5661,10 @@ msgid ""
 "actions`, and search for :guilabel:`Peppol: update participant status`. Open "
 "the scheduled action, then click :guilabel:`Run Manually`."
 msgstr ""
+"要手动触发用于检查 Peppol 注册状态的计划操作，请启用 :ref:`开发者模式 "
+"<developer-mode>`，打开设置应用，前往 :menuselection:`设置 --> 技术 --> "
+"计划动作`，搜索 :guilabel:`Peppol：更新参与者状态`。打开该计划动作，然后点击 "
+":guilabel:`手动执行`。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:112
 msgid ""
@@ -5458,6 +5674,10 @@ msgid ""
 "<accounting/e-invoicing/peppol-deregister>` and :ref:`register <accounting/e-"
 "invoicing/peppol-registration>` in production."
 msgstr ""
+"若希望在不发送真实数据的情况下试用 Peppol，可通过选择 :guilabel:`Odoo 演示 "
+"ID`作为 Peppol 端点标识符来启用演示模式。要切换回生产模式，需 :ref:`"
+"从演示模式注销 <accounting/e-invoicing/peppol-deregister>` 并在生产环境中 "
+":ref:`注册 <accounting/e-invoicing/peppol-registration>`。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:120
 msgid "Contact verification"
@@ -5467,23 +5687,24 @@ msgstr "联系验证"
 msgid ""
 "Before sending an invoice to a contact using Peppol, make sure the contact "
 "is registered as a Peppol participant. To do so, follow these steps:"
-msgstr ""
+msgstr "在使用 Peppol 向联系人发送发票前，请确保该联系人已注册为 Peppol "
+"参与者。具体步骤如下："
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:125
 msgid ""
 "Go to :menuselection:`Accounting --> Customers --> Customers` and access the "
 "customer's form."
-msgstr ""
+msgstr "前往 :menuselection:`会计 --> 客户 --> 客户` 并进入客户表单。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:126
 msgid ""
 "In the :guilabel:`Accounting tab`, check the following information in "
 "the :guilabel:`Customer invoices` section:"
-msgstr ""
+msgstr "在 :guilabel:`会计标签页`的 :guilabel:`客户发票`区域，检查以下信息："
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:129
 msgid ":guilabel:`eInvoice format`: Select the relevant format."
-msgstr ""
+msgstr ":guilabel:`电子发票格式`：选择相关格式。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:130
 msgid ""
@@ -5492,6 +5713,9 @@ msgid ""
 "dropdown list, then enter the customer's endpoint identifier, usually a "
 "Company Registry or VAT number."
 msgstr ""
+"使用 :icon:`fa-caret-down` :guilabel:`(向下箭头)` 图标，"
+"确保在下拉列表中选择了相关的国家特定 Peppol "
+"端点标识符，然后输入客户的端点标识符（通常为公司注册号或增值税号）。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:134
 msgid ""
@@ -5499,6 +5723,9 @@ msgid ""
 "click :guilabel:`Verify`. Its :guilabel:`Peppol endpoint verification` is "
 "marked as :guilabel:`Valid` if the contact is found on the Peppol network."
 msgstr ""
+"要验证联系人，请启用 :ref:`开发者模式 <developer-mode>`并点击 "
+":guilabel:`验证`。如果该联系人在 Peppol 网络中被找到，其 :guilabel:`Peppol "
+"端点验证`状态将标记为 :guilabel:`有效`。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:-1
 msgid "verify contact registration"
@@ -5508,7 +5735,8 @@ msgstr "验证联系人注册"
 msgid ""
 "While Odoo prefills the endpoint number based on the information available "
 "for a contact, verifying these details with the contact is recommended."
-msgstr ""
+msgstr "尽管 Odoo "
+"会根据联系人的可用信息预填端点编号，但仍建议与联系人核实这些详细信息。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:148
 msgid "Send invoices"
@@ -5518,13 +5746,16 @@ msgstr "发送发票"
 msgid ""
 "All posted invoices that are ready to be sent via Peppol can be viewed in "
 "the :guilabel:`Invoices` list view in the following ways:"
-msgstr ""
+msgstr "所有已过账且准备通过 Peppol 发送的发票，可以通过以下方式在 :guilabel:`发票` "
+"列表视图中查看："
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:153
 msgid ""
 "Use the :icon:`oi-settings-adjust` (:guilabel:`adjust settings`) button to "
 "add the :guilabel:`Peppol status` column."
 msgstr ""
+"使用:icon:`oi-settings-adjust`（:guilabel:`调整设置`）按钮添加 :guilabel:`"
+"Peppol 状态`列。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:155
 msgid "Apply the :guilabel:`Peppol Ready` filter in the search bar."
