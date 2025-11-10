@@ -259,8 +259,8 @@ refunded.
 
      - :guilabel:`Reverse Entry`
      - :guilabel:`Reset to Draft`: The :guilabel:`Lock Tax Return` date must be manually removed
-       using a :ref:`lock date exception <year-end/lock-date-exception>` to reset a tax return entry
-       to draft.
+       using a :ref:`lock date exception <accounting/year-end/lock-date-exception>` to reset a tax
+       return entry to draft.
 
 .. note::
    If the :guilabel:`Lock Tax Return` date is not locked before submitting the tax return, the
