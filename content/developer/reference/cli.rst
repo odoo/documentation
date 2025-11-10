@@ -34,16 +34,20 @@ environment <reference/cmdline/shell>`, :ref:`scaffold an Odoo module <reference
          Please refer to the `documentation of the official Docker image of Odoo
          <https://hub.docker.com/_/odoo/>`_.
 
-.. _reference/cmdline/help:
+.. _reference/cmdline/extra:
 
-Help & version
-==============
+Version
+=======
 
 .. program:: odoo-bin
 
 .. option:: -h, --help
 
-    shows help text with all available options
+   it can be used in combination with any command available, and it displays
+   the options of the current command.
+
+   If no command is used, it will act as per the `help` command
+   :ref:`below <reference/cmdline/help>`.
 
 .. option:: --version
 
@@ -53,16 +57,28 @@ Help & version
 
   .. code-block:: bash
 
-    echo "complete -W '`./odoo-bin --help | \
-      sed -e 's/[^a-z_-]\(-\+[a-z0-9_-]\+\)/\n\1\n/' | \
-      grep -- '^-' | sort | uniq | tr '\n' ' '`' odoo-bin" >> ~/.bash_completion
+    COMMANDS=$(odoo-bin --help | sed -e "s/^    \([^ ]\+\).*$/ \1/gp;d" | xargs)
+    echo "complete -W '$COMMANDS' odoo-bin" >> ~/.bash_completion
+
+.. _reference/cmdline/help:
+
+`help` - Show available commands
+================================
+
+.. program:: odoo-bin help
+
+This command shows all the available commands for Odoo.
+
+It has no options.
 
 .. _reference/cmdline/server:
 
-Running the server
-==================
+`server` - Run the Server
+=========================
 
 .. program:: odoo-bin
+
+This command is the default one: you can omit it, and it will be chosen anyway.
 
 .. option:: -d <database>, --database <database>
 
@@ -74,8 +90,7 @@ Running the server
 
 .. option:: -i <modules>, --init <modules>
 
-    comma-separated list of modules to install before running the server
-    (requires :option:`-d`).
+    comma-separated list of modules to install before running the server (requires :option:`-d`).
 
 .. option:: -u <modules>, --update <modules>
 
@@ -157,8 +172,8 @@ Running the server
 
 .. _reference/cmdline/testing:
 
-Testing Configuration
-=====================
+Testing
+-------
 
 .. option:: --test-enable
 
@@ -698,13 +713,15 @@ Here is a sample file:
     https://werkzeug.palletsprojects.com/en/0.16.x/middleware/proxy_fix/#module-werkzeug.middleware.proxy_fix
 .. _pyinotify: https://github.com/seb-m/pyinotify/wiki
 
+
 .. _reference/cmdline/shell:
 
-Shell
-=====
+`shell` - Open a Shell
+======================
 
 The Odoo command line also allows launching Odoo as a Python console environment, enabling direct
-interaction with the :ref:`orm <reference/orm>` and its functionalities.
+interaction with the :ref:`orm <reference/orm>` and its functionalities. Since running a shell
+involves starting the server, the configuration file options do apply.
 
 .. code-block:: console
 
@@ -742,13 +759,173 @@ interaction with the :ref:`orm <reference/orm>` and its functionalities.
    Specify a preferred `REPL` to use in shell mode. This shell is started with the `env` variable
    already initialized to be able to access the `ORM` and other Odoo modules.
 
+
 .. seealso::
    :ref:`reference/orm/environment`
 
-.. _reference/cmdline/scaffold:
 
-Neutralize
-==========
+.. _reference/cmdline/db:
+
+`db` - Manage a Database
+========================
+
+.. program:: odoo-bin db
+
+This command lets you manage databases through a command-line interface. The operations are
+specified using subcommands.
+
+For all subcommands, these options to configure your environment are available:
+
+- :option:`--addons-path <odoo-bin --addons-path>`
+- :option:`--config <odoo-bin -c>`
+- :option:`--data-dir <odoo-bin -d>`
+- :option:`--db_user <odoo-bin --db_user>`
+- :option:`--db_password <odoo-bin --db_password>`
+- :option:`--db_host <odoo-bin --db_host>`
+- :option:`--db_port <odoo-bin --db_port>`
+- :option:`--db_sslmode <odoo-bin --db_sslmode>`
+- :option:`--pg_path <odoo-bin --pg_path>`
+
+
+.. _reference/cmdline/db/dump:
+
+`db dump` - Save a Database Dump
+--------------------------------
+
+.. program:: odoo-bin db dump
+
+Creates a dump file.
+
+.. code-block:: console
+
+   $ odoo-bin db dump <database> <dump_path>
+
+.. option:: database
+
+   Name of the database to dump.
+
+.. option:: dump_path
+
+   (Optional) Database is dumped to specified path. By default it is dumped
+   to `stdout`.
+
+.. option:: --format <zip | dump>
+
+   If provided, database is dumped used the specified format.
+   Supported formats are `zip` (default), `dump` (pg_dump format).
+
+.. option:: --no-filestore
+
+   If provided, zip database is dumped without filestore
+
+
+.. _reference/cmdline/db/load:
+
+`db load` - Load a Database Dump
+--------------------------------
+
+.. program:: odoo-bin db load
+
+Loads a dump file into an Odoo database, the dump file can be a URL.
+
+.. code-block:: console
+
+   $ odoo-bin db load <database> <dump_file>
+
+.. option:: database
+
+   (Optional) Name of the database to create from the dump.
+   If not provided, the dump filename without extension is used.
+
+.. option:: dump_file
+
+   `.zip` or `pg_dump` file to be loaded.
+
+.. option:: -f,--force
+
+   Delete the database if it already exists, before loading the new one.
+
+.. option:: -n,--neutralize
+
+   Neutralize the database after restoring it.
+
+
+.. _reference/cmdline/db/duplicate:
+
+`db duplicate` - Duplicate a Database
+-------------------------------------
+
+.. program:: odoo-bin db duplicate
+
+Duplicate a database including filestore.
+
+.. code-block:: console
+
+   $ odoo-bin db duplicate <source> <target>
+
+.. option:: source
+
+   Name of the source database.
+
+.. option:: target
+
+   Name of the target database.
+
+.. option:: -n,--neutralize
+
+   Neutralize the database, after restoring it.
+
+.. option:: -f,--force
+
+   Delete the target database if it already exists, before initializing the new one.
+
+
+.. _reference/cmdline/db/rename:
+
+`db rename` - Rename a Database
+-------------------------------
+
+.. program:: odoo-bin db rename
+
+Rename a database from an old name to a new one.
+
+.. code-block:: console
+
+   $ odoo-bin db rename <source> <target>
+
+.. option:: source
+
+   Current name of the database.
+
+.. option:: target
+
+   New name for the database.
+
+.. option:: -f,--force
+
+   Delete the target database if it already exists, before renaming the source one.
+
+
+.. _reference/cmdline/db/drop:
+
+`db drop` - Delete a Database
+-----------------------------
+
+.. code-block:: console
+
+   $ odoo-bin db drop <database>
+
+.. program:: odoo-bin db drop
+
+.. option:: database
+
+   Name of the database to drop.
+
+
+.. _reference/cmdline/neutralize:
+
+`neutralize` - Neutralize a Database
+====================================
 
 .. program:: odoo-bin neutralize
 
@@ -757,9 +934,9 @@ database option.
 
 .. code-block:: console
 
-   $ odoo-bin --addons-path <PATH,...>  neutralize -d <database>
+   $ odoo-bin --addons-path <PATH,...> neutralize -d <database>
 
-.. option:: -d <database, --database <database>
+.. option:: -d <database>, --database <database>
 
    Specify the database name that you would like to neutralize.
 
@@ -771,8 +948,10 @@ database option.
 .. seealso::
    :doc:`../../administration/neutralized_database`
 
-Scaffolding
-===========
+.. _reference/cmdline/scaffold:
+
+`scaffold` - Scaffold a Module
+==============================
 
 .. program:: odoo-bin scaffold
 
@@ -807,8 +986,8 @@ This will create module *my_module* in directory */addons/*.
 
 .. _reference/cmdline/populate:
 
-Database population
-===================
+`populate` - Populate a Database
+================================
 
 .. program:: odoo-bin populate
 
@@ -825,14 +1004,15 @@ It also follows x2Many relationships.
 
     name of the database to populate
 
-.. option:: --models
+.. option:: --models <models>
 
     list of models to populate. Models appearing twice will only be populated once.
 
 .. option:: --factors
 
-    list of populate factors. In case a factor is missing for a model, the last factor in
-    the list will be used.
+   Comma separated list of factors for each model, or just a single factor.(Ex: a factor of 3 means
+   the given model will be copied 3 times, reaching 4x it's original size) The last factor is
+   propagated to the remaining models without a factor.
 
 .. option:: --sep
 
@@ -840,17 +1020,20 @@ It also follows x2Many relationships.
 
 .. _reference/cmdline/cloc:
 
-Cloc
-====
+`cloc` - Count Lines of Code
+============================
 
 .. program:: odoo-bin cloc
 
-Odoo Cloc is a tool to count the number of relevant lines written in
+Odoo Cloc is a tool to count the number of relevant lines of code written in
 Python, Javascript, CSS, SCSS, or XML. This can be used as a rough metric for pricing
 maintenance of extra modules.
 
-Command-line options
---------------------
+.. code-block:: console
+
+    $ odoo-bin cloc -c config.conf -d my_database
+
+
 .. option:: -d <database>, --database <database>
 
 | Process the code of all extra modules installed on the provided database,
@@ -902,10 +1085,6 @@ Multiple paths can be provided by repeating the option.
 .. option:: -c <directories>
 
 Specify a configuration file to use in place of the :option:`--addons-path` option.
-
-.. code-block:: console
-
-    $ odoo-bin cloc -c config.conf -d my_database
 
 
 .. option:: -v, --verbose
@@ -995,20 +1174,129 @@ load. If the module works despite the presence of those files, they are probably
 not loaded and should therefore be removed from the module, or at least excluded
 in the manifest via ``cloc_exclude``.
 
-TSConfig Generator
-==================
 
-.. program:: odoo-bin tsconfig
+.. _reference/cmdline/obfuscate:
 
-When working on javascript, there are ways to help your editor providing you with
-powerful auto-completion. One of those ways is the use of a tsconfig.json file.
-Originally meant for typescript, editors can use its information with plain javascript also.
-With this config file, you will now have full auto-completion across modules.
+`obfuscate` - Obfuscate database
+================================
 
-The command to generate this files takes as many unnamed arguments as you need. Those are relative paths
-to your addon directories. In the example below, we move up one folder to save the tsconfig file in the folder
-containing community and enterprise.
+.. program:: odoo-bin obfuscate
+
+This command provides a quick and easy way to obfuscate some of the data in the
+Odoo instance, mainly used for instructional purposes or to make quick videos for
+the support team helping technicians avoid leaking sensitive information.
+
+.. warning::
+
+   This command must be used carefully, as it is **not** considered a safe method
+   for full anonymizing data before transfer to a third party. Images, PDF
+   attachments, amounts, many other informations may not be obfuscated and cause
+   sensitive information leaks. A thorough review is required before sharing data
+   to ensure that no sensitive information is exposed.
+
+Obfuscation is symmetric, so content can be unobfuscated using the same password.
+
+All the configurations available for the :ref:`server <reference/cmdline/server>`
+command are available here too.
 
 .. code-block:: console
 
-   $ community/odoo-bin tsconfig --addons-path community/addons,community/odoo/addons,enterprise > tsconfig.json
+    $ odoo-bin obfuscate --pwd=<password>
+
+.. option:: --pwd <password>
+
+   (Required) the password that will be used to symmetrically obfuscate content.
+
+.. option:: --unobfuscate
+
+   if you want to unobfuscate instead of obfuscate.
+
+.. option:: --fields <fields>
+
+   comma-separated list of `table.column` entries to obfuscate/unobfuscate.
+
+.. option:: --file <file>
+
+   file containing the list of `table.column` entries to obfuscate/unobfuscate.
+
+.. option:: --exclude
+
+   comma-separated list of `table.column` entries not to obfuscate/unobfuscate.
+
+.. option:: --allfields
+
+   used only when :option:`--unobfuscate` is selected.
+
+   Try to unobfuscate all fields. It's slower than specifying the fields manually.
+
+.. option:: --vacuum
+
+   used only when :option:`--unobfuscate` is selected.
+
+   After unobfuscation, completely clear the obfuscated tables and reclaim unused disk space.
+
+.. option:: --pertablecommit
+
+   commit once per table, after obfuscation.
+
+   It avoids big transactions that might get a timeout or face rollback after an error.
+
+.. option:: -y,--yes
+
+   don't ask for manual confirmation.
+
+   Only use if you're sure that you're not going to leak sensible information by sharing
+   the database to third party without a review.
+
+
+.. _reference/cmdline/deploy:
+
+`deploy` - Deploy module remotely
+=================================
+
+.. program:: odoo-bin deploy
+
+This command uploads a module to a remote Odoo server and installs it.
+It's simpler than manually connecting to the remote server, and it does not require full access
+to the machine that hosts the Odoo instance, only the Odoo administrative credentials.
+
+.. code-block:: console
+
+   $ odoo-bin deploy <path> <url> --db <dbname> --login <login> --password <password>
+
+.. note::
+
+   Prerequisites:
+
+   - The server must have the module `base_import_module` installed.
+   - The user selected with the `--login` option must have administrative rights.
+
+.. option:: path
+
+   path of the module to be deployed
+
+.. option:: url
+
+   (Optional) url of the server where the module must be deployed
+   (default `http://localhost:8069`)
+
+.. option:: db <dbname>
+
+   database name (if the server does not use the `--db-filter` option)
+
+.. option:: --login <username>
+
+   name of the user with admin rights (default `admin`)
+
+.. option:: --password <password>
+
+   password of the user with admin rights (default `admin`)
+
+.. option:: --verify-ssl
+
+   verify the server's SSL certificate, to ensure the target instance is legit.
+
+.. option:: --force
+
+   re-initialize the module in case it's already installed. It will update
+   `noupdate="1"` records.
