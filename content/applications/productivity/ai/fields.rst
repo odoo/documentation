@@ -93,8 +93,8 @@ Computing AI fields
 To compute, or refresh, an |AI| field, click on the |AI| icon next to the field. Clicking the button
 updates the field based on the prompt.
 
-Additionally, a scheduled action runs once a day to compute all |AI| fields. This action is active
-by default.
+Additionally, a scheduled action runs once a day to fill all |AI| fields that are currently empty.
+This action is active by default.
 
 .. tip::
    To run the scheduled action manually, navigate to :menuselection:`Settings app --> Technical -->
