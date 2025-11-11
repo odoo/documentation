@@ -101,6 +101,11 @@ Lastly, enter the desired :guilabel:`Price` for that specific :guilabel:`Period`
    No limit exists on how many pricing lines can be added. Multiple pricing options for rental
    products are typically used to give discounts for customers who agree to longer rental durations.
 
+.. note::
+    Remember when considering pricing that renting for a day is usually limited to operating hours,
+    not 24 hours. When determining pricing, keep in mind that a rental day typically refers to
+    operating hours, not a full 24-hour period.
+
 Reservations
 ------------
 
@@ -132,148 +137,7 @@ Odoo always uses two rules to compute the price of a product when a rental order
    After an order is created, Odoo selects the second line as this is the cheapest option. The
    customer has to pay three times '3 days' to cover the rental's eight days, for a total of $750.
 
-.. _rental/order:
-
-Rental orders
-=============
-
-To create a rental order in the *Rental* app, navigate to :menuselection:`Rental app --> Orders -->
-Orders`, and click :guilabel:`New`. Doing so reveals a blank rental order form to be filled in
-accordingly.
-
-.. image:: rental/rental-order.png
-   :alt: Sample of a filled out rental order available in the Odoo Rental application.
-
-Start by adding a :guilabel:`Customer`, then configure the desired duration of the rental in the
-:guilabel:`Rental period` field.
-
-To adjust the rental duration, click the first date in the :guilabel:`Rental period` field, and
-select the range of dates to represent the rental duration from the pop-up calendar form that
-appears.
-
-.. image:: rental/rental-period-field-popup.png
-   :alt: Sample of a rental period calendar pop-up window in the Odoo Rental application.
-
-Once complete, click :guilabel:`Apply` in the calendar pop-up form. Following that, the pop-up form
-disappears, and the designated time period of the rental is represented in the :guilabel:`Duration`
-field.
-
-Next, add a rental product in the :guilabel:`Order Lines` tab, by clicking :guilabel:`Add a
-product`, and selecting the desired rental product to add to the form.
-
-.. note::
-   If a rental product is added *before* the :guilabel:`Rental period` field has been properly
-   configured, the user can *still* adjust the :guilabel:`Rental period` field accordingly.
-
-   Select the desired range of dates to represent the duration of the rental, then click
-   :guilabel:`Update Rental Prices` in the :guilabel:`Duration` field.
-
-   .. image:: rental/rental-update-rental-prices.png
-      :alt: The update rental prices option that appears in the Odoo Rental application.
-
-   Doing so reveals a :guilabel:`Confirmation` pop-up window. If everything is correct, click
-   :guilabel:`Ok`, and Odoo recalculates the rental price accordingly.
-
-Once all the information has been entered correctly on the rental order form, click the
-:guilabel:`Send` button to send the quotation to the customer, or click the :guilabel:`Confirm`
-button to confirm the order.
-
-.. _rental/customer-signature:
-
-Customer signature
-==================
-
-.. note::
-   Requesting a signature can be done during any stage of the order. Consult the industry best
-   practices for when signatures are required. This feature also requires the :doc:`Sign
-   <../productivity/sign>` app.
-
-If signatures are required, go to the **Rental** app and from the default :guilabel:`Rental Orders`
-view, select the desired rental order. To go the :icon:`fa-cog` :guilabel:`(Actions)` icon, and
-click :guilabel:`Request Signature`. This gives the ability to request the customer sign a rental
-agreement, outlining the arrangement between the company and customer, *before* they pick up the
-rental products. Such documents can ensure everything is returned on-time and in its original
-condition.
-
-.. image:: rental/request-signature.png
-   :alt: The Request Signature option in the Odoo Rental application.
-
-A :guilabel:`Sign Documents` pop-up window displays.
-
-.. image:: rental/sign-documents-popup.png
-   :alt: The Sign Documents pop-up window that appears in the Odoo Rental application.
-
-Select the desired document from the :guilabel:`Template` field. Doing so reveals a :guilabel:`New
-Signature Request` pop-up window.
-
-.. image:: rental/new-signature-request-form.png
-   :alt: The New Signature Request pop-up window that appears in the Odoo Rental application.
-
-Upon confirming the information in the :guilabel:`New Signature Request` pop-up form, click
-:guilabel:`Send` to initiate the signing process.
-
-A link to the signature request will appear in the record's chatter. The document is accessible
-to the customer via the customer portal or email.
-
-The customer clicks the :guilabel:`Sign document` button, a separate page is then revealed,
-showcasing the document to be signed. The customer is prompted to begin the process by clicking the
-:guilabel:`Click to start` button. The app guides the signee to the required signature locations and
-allows them to create electronic signatures to complete the form.
-
-.. image:: rental/adopt-signature-popup.png
-   :alt: The adopt your signature pop-up window that appears in the Odoo Rental application.
-
-Once the document has been signed and completed, click the :guilabel:`Validate & Send Completed
-Document` button at the bottom of the document.
-
-.. image:: rental/validate-send-doc-button.png
-   :alt: The validate and send completed document button in the Odoo Rental application.
-
-Upon clicking the :guilabel:`Validate & Send Completed Document` button, Odoo presents the option to
-download the signed document for record-keeping purposes, if necessary.
-
-.. seealso::
-   `Odoo Tutorials: Sign <https://www.odoo.com/slides/sign-61>`_
-
-.. _rental/pickup-return:
-
-Pickup products
-===============
-
-When a customer picks up the product, navigate to the appropriate rental order, click the
-:guilabel:`Pickup` button, and then click :guilabel:`Validate` in the :guilabel:`Validate a pickup`
-pop-up form that appears.
-
-Doing so places a :guilabel:`Picked-up` status banner on the rental order.
-
-.. _rental/return:
-
-Return products
-===============
-
-When a customer returns the products, navigate to the appropriate rental order, click the
-:guilabel:`Return` button, and validate the return by clicking :guilabel:`Validate` in the
-:guilabel:`Validate a return` pop-up form that appears.
-
-Doing so places a :guilabel:`Returned` status banner on the rental order.
-
-Print pickup and return receipts
-================================
-
-Pickup and return receipts can be printed for customers when they pick up and/or return rental
-products.
-
-To print pickup and/or return receipts, navigate to the appropriate rental order, click the
-:icon:`fa-cog` :guilabel:`(Actions)` icon to reveal a drop-down menu.
-
-.. image:: rental/print-pickup-return-receipt.png
-   :alt: The pickup and return receipt print option in the Odoo Rental application.
-
-From this drop-down menu, hover over the :guilabel:`Print` option to reveal a sub-menu. Then select
-:guilabel:`Pickup and Return Receipt`.
-
-Odoo generates and downloads a PDF, detailing all information about the current status of the rented
-items.
-
 .. toctree::
+   rental/products
    rental/manage_deposits
+
