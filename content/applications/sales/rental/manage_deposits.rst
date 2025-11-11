@@ -67,6 +67,6 @@ With the above configuration, a :ref:`rental order <rental/order>` can be create
 Refund deposits upon return
 ---------------------------
 
-Once a customer :ref:`returns the rented product <rental/return>`, reimburse their deposit with a
+Once a customer :ref:`returns the rented product <rental/return-products>`, reimburse their deposit with a
 :doc:`credit note <../../finance/accounting/customer_invoices/credit_notes>` from the invoice, and
 change the *delivered quantity* to `0` on the linked sales order.
