@@ -11,3 +11,4 @@ Optimize your Day-to-Day work
    optimize/gamification
    optimize/utilize_activities
    optimize/lead_enrichment
+   optimize/member_partner_module
