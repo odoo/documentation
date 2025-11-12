@@ -85,6 +85,7 @@ Below are some common requests that the *Ask AI* agent can assist with:
 .. toctree::
    :titlesonly:
 
+   ai/apikeys
    ai/agents
    ai/fields
    ai/webpage
