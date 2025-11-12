@@ -13,8 +13,8 @@ United States
 .. |ACH| replace:: :abbr:`ACH (Automated Clearing House)`
 
 The Odoo fiscal localization package for the United States follows the Generally Acceptable
-Accounting Principles (GAAP) accounting standards and rules used to prepare financial statements,
-as outlined by the Financial Accounting Standards Board (FASB) and adopted by the Securities and
+Accounting Principles (GAAP) accounting standards and rules used to prepare financial statements, as
+outlined by the Financial Accounting Standards Board (FASB) and adopted by the Securities and
 Exchange Commission (SEC).
 
 .. seealso::
@@ -43,11 +43,10 @@ Below are the available modules in Odoo for accounting use in the United States.
    Verify the default package is in use by navigating to :menuselection:`Accounting App -->
    Settings` and under the :guilabel:`Fiscal Localization` section at the top, look for the `Generic
    Chart Template` selection to be listed next to the :guilabel:`Package` field label. This chart
-   template includes the necessary settings for the US localization for the Odoo *Accounting* app.
+   template includes the necessary settings for the US localization for the Odoo **Accounting** app.
 
    .. image:: united_states/us-l10n-generic-chart-template.png
-      :align: center
-      :alt: The Generic Chart Template comes pre-configured for the US localization.
+      :alt: The Generic Chart Template comes preconfigured for the US localization.
 
 Modules installation
 --------------------
@@ -86,7 +85,7 @@ localization:
      - Export payments as NACHA files for use in the United States.
    * - :ref:`1099 Reporting <l10n_us/1099-report>`
      - `l10n_us_1099`
-     - Export 1099 data for e-filing with a 3rd party.
+     - Export 1099 data for e-filing with a third party.
    * - :ref:`Avatax <l10n_us/taxes-avatax>`
      - `account_avatax`
      - Module for the :doc:`AvaTax integration <../accounting/taxes/avatax>` with Odoo.
@@ -124,10 +123,9 @@ seven main categories, with corresponding numeric values that prefix individual 
 - **Payable**: the business's short-term obligations owed to its creditors or suppliers, which have
   not yet been paid. |AP| is indicated by the journal code labeled (or beginning) with
   :guilabel:`2`.
-- **Equity**: the amount of money that would be returned to a company's shareholders if all of the
-  assets were liquidated and all of the company's debt was paid off in the case of liquidation.
-  Equity is indicated by the journal code labeled (or beginning) with :guilabel:`3` or
-  :guilabel:`9`.
+- **Equity**: the amount of money that is returned to a company's shareholders if all of the assets
+  were liquidated and all of the company's debt was paid off in the case of liquidation. Equity is
+  indicated by the journal code labeled (or beginning) with :guilabel:`3` or :guilabel:`9`.
 - **Assets**: items listed on the balance sheet that contains economic value or have the ability to
   generate cash flows in the future, such as a piece of machinery, a financial security, or a
   patent. Assets are indicated by the journal code labeled (or beginning) with :guilabel:`1`.
@@ -141,7 +139,7 @@ seven main categories, with corresponding numeric values that prefix individual 
   indicated by the journal code labeled (or beginning) with a :guilabel:`6`.
 
 .. tip::
-   Predefined accounts are included in Odoo, as part of the |CoA| that's installed with the US
+   Predefined accounts are included in Odoo, as part of the |CoA| that is installed with the US
    localization package. The accounts listed below are preconfigured to perform certain operations
    within Odoo. It is recommended to **not** delete these accounts; however, if changes are needed,
    rename the accounts instead.
@@ -183,8 +181,8 @@ seven main categories, with corresponding numeric values that prefix individual 
 View, edit, and sort accounts
 -----------------------------
 
-Access the *Chart of Accounts* dashboard in Odoo by navigating to :menuselection:`Accounting app
---> Configuration --> Accounting: Chart of Accounts`.
+Access the *Chart of Accounts* dashboard in Odoo by navigating to :menuselection:`Accounting app -->
+Configuration --> Accounting: Chart of Accounts`.
 
 From the :guilabel:`Chart of Accounts` dashboard, create new accounts by clicking the
 :guilabel:`New` button in the top-left corner of the dashboard and :ref:`filling in the
@@ -192,17 +190,16 @@ corresponding form <chart-of-account/create>`. Search and sort through existing 
 specific :guilabel:`Filters` and :guilabel:`Group By` criteria, which are available in the search
 drop-down menu.
 
-To filter accounts by category, click the :icon:`fa-caret-down` :guilabel:`(caret down)` icon to
+To filter accounts by category, click the :icon:`fa-caret-down` :guilabel:`(dropdown)` icon to
 access the drop-down menu and look under the :guilabel:`Filters` column for individual selections.
 Clicking on a specific category will only show accounts that match that particular filter.
 
 To view all the available account types, remove all of the filters in the search bar, and then click
-the :icon:`fa-caret-down` :guilabel:`(caret down)` icon to access the drop-down menu. From there,
+the :icon:`fa-caret-down` :guilabel:`(dropdown)` icon to access the drop-down menu. From there,
 select :guilabel:`Account Type` under the :guilabel:`Group By` column heading to list all of the
 account types in the table.
 
 .. image:: united_states/us-l10n-coa-account-types.png
-   :align: center
    :alt: Chart of Accounts grouped by Account Type.
 
 Besides structure, there are other key differences in the chart of accounts in the United States,
@@ -233,9 +230,9 @@ of new accounts, as needed, in order to meet the demands of US accounting report
 Taxes
 =====
 
-In the United States, tax rates and what is considered taxable vary by jurisdiction. Default *Sales*
-and *Purchase* taxes are created automatically when the Odoo *Accounting* application is installed.
-To manage existing or configure additional taxes, navigate to :menuselection:`Accounting -->
+In the United States, tax rates and what is considered taxable vary by jurisdiction. Default *sales*
+and *purchase* taxes are created automatically when the Odoo **Accounting** app is installed. To
+manage existing or configure additional taxes, navigate to :menuselection:`Accounting -->
 Configuration --> Taxes`.
 
 .. _l10n_us/taxes-avatax:
@@ -316,7 +313,6 @@ Depending on the type of report, certain filters are available at the top of the
     above the screen's fold, removing the need to scroll.
 
     .. image:: united_states/us-l1on-accounting-method-reporting-menu.png
-       :align: center
        :alt: Accounting method filter menu for reports, covering accrual vs. cash basis methods.
 
 - a *decimal* filter, that by default, includes figures with cents, as indicated by the
@@ -370,12 +366,11 @@ inflows and outflows from the company's operations, such as when cash is receive
 when cash payments are made to suppliers.
 
 By default, an account labeled with any of the three default :guilabel:`Tags` on the
-:guilabel:`Chart of Accounts` dashboard will be included in the report, which includes:
+:guilabel:`Chart of Accounts` dashboard is included in the report, which includes:
 :guilabel:`Operating Activities`, :guilabel:`Financing Activities`, and :guilabel:`Investing &
 Extraordinary Activities`.
 
 .. image:: united_states/us-l10n-cash-flow-statement-tags.png
-   :align: center
    :alt: Examples of tagged accounts that are included in the Cash Flow Statement in Odoo.
 
 Additionally, the cash flow statement in Odoo:
@@ -386,12 +381,11 @@ Additionally, the cash flow statement in Odoo:
 
 .. example::
    Create a vendor bill for $100, as an operating expense (not |AP|). Doing so will **not** reflect
-   a transaction on the cash flow statement. However, register a corresponding payment for $100,
-   and the transaction **will** reflect on the cash flow statement as :guilabel:`Cash paid for
-   operating activities`.
+   a transaction on the cash flow statement. However, register a corresponding payment for $100, and
+   the transaction **will** reflect on the cash flow statement as :guilabel:`Cash paid for operating
+   activities`.
 
    .. image:: united_states/us-l10n-operating-expenses-example.png
-      :align: center
       :alt: Example of a bill registered as an operating expense as part of a cash flow statement.
 
 .. _l10n_us/cash-discount:
@@ -453,10 +447,10 @@ Once all check configurations are complete, :guilabel:`Save` the settings.
 Payroll
 =======
 
-The *Payroll* application is responsible for calculating an employee's pay, taking into account all
-work, vacation, and sick time, benefits, and deductions. The *Payroll* app pulls information from
-the *Attendances*, *Timesheets*, *Time Off*, *Employees* and *Expenses* applications, to calculate
-the worked hours and compensation for each employee.
+The **Payroll** app is responsible for calculating an employee's pay, taking into account all work,
+vacation, and sick time, benefits, and deductions. The **Payroll** app pulls information from the
+**Attendances**, **Timesheets**, **Time Off**, **Employees** and **Expenses** apps, to calculate the
+worked hours and compensation for each employee.
 
 When using an external payroll provider, such as *ADP*, it is necessary to export the various
 payroll-related data, such as work entries, repayment of expenses, taxes, commissions, and any other
@@ -464,8 +458,8 @@ relevant data, so the data can be uploaded into the payroll provider, who then i
 paychecks or directly deposits the funds into an employee's bank account.
 
 In order to export the payroll data, the work entries must first be validated and correct. Refer to
-the :doc:`work entries <../../hr/payroll/work_entries>` documentation for more information
-regarding validating work entries.
+the :doc:`work entries <../../hr/payroll/work_entries>` documentation for more information regarding
+validating work entries.
 
 Once work entries are validated, the information can be :ref:`exported to ADP <l10n_us/adp>`.
 
@@ -475,18 +469,17 @@ posted to the corresponding accounting journals to keep all financial records in
 Required information
 --------------------
 
-It is important to have the *Employees* application installed, and all employee information
-populated. Several fields in both the :ref:`employee records <l10n_us/payroll-employee-records>`, as
-well as in an :ref:`employee contracts <l10n_us/payroll-employee-contracts>`, are necessary to
-properly process the employee's pay. Ensure the following fields are filled out in their respective
-places.
+It is important to have the **Employees** app installed, and all employee information populated.
+Several fields in both the :ref:`employee records <l10n_us/payroll-employee-records>`, as well as in
+an :ref:`employee contracts <l10n_us/payroll-employee-contracts>`, are necessary to properly process
+the employee's pay. Ensure the following fields are filled out in their respective places.
 
 .. _l10n_us/payroll-employee-records:
 
 Employee records
 ~~~~~~~~~~~~~~~~
 
-In each employee record, there is various information the *Payroll* application requires to properly
+In each employee record, there is various information the **Payroll** app requires to properly
 process payslips, including various banking, tax, and work information.
 
 Navigate to the :menuselection:`Employees app` and select an employee record to view the sections of
@@ -522,7 +515,7 @@ Employee contracts
 ~~~~~~~~~~~~~~~~~~
 
 Additionally, there is information that is found in an employee contract that also affects the
-*Payroll* application.
+**Payroll** app.
 
 Navigate to the :menuselection:`Employees app --> Employees --> Contracts` and select a contract
 record to view the sections of a contract that directly affect *Payroll*:
@@ -569,9 +562,9 @@ that must be completed first.
 First, ensure the *United States - Payroll - Export to ADP* (`l10n_us_hr_payroll_adp`) module is
 :ref:`installed <general/install>`.
 
-Then, the company **must** have an *ADP Code* entered in the company settings. To do so, navigate
-to :menuselection:`Payroll app --> Configuration --> Settings`. Enter the :guilabel:`ADP Code` in
-the :guilabel:`US Localization` section.
+Then, the company **must** have an *ADP Code* entered in the company settings. To do so, navigate to
+:menuselection:`Payroll app --> Configuration --> Settings`. Enter the :guilabel:`ADP Code` in the
+:guilabel:`US Localization` section.
 
 Next, work entry types **must** have the correct ADP code listed in the *External Code* field for
 each work entry type that is being referenced.
@@ -609,7 +602,7 @@ the drop-down menu, if needed.
 
 Lastly, add the employee's work entry information to the list. Click :guilabel:`Add a line` and an
 :guilabel:`Add: Employee` pop-up window loads. The list can be :doc:`filtered
-<../../essentials/search>` to more easily find the employees to add to the list.
+<../../essentials/search>` to find the employees to add to the list.
 
 .. tip::
    Process the data export in multiple groups instead of in one large group that contains all
@@ -656,11 +649,10 @@ with, a |NACHA| configuration section needs to be filled out on the Odoo databas
 Configuration
 ~~~~~~~~~~~~~
 
-First, navigate to the :menuselection:`Accounting app --> Configuration --> Journals`. Open the
-bank journal and click into the :guilabel:`Outgoing Payments` tab.
+First, navigate to the :menuselection:`Accounting app --> Configuration --> Journals`. Open the bank
+journal and click into the :guilabel:`Outgoing Payments` tab.
 
 .. image:: united_states/us-l10n-nacha-settings.png
-   :align: center
    :alt: NACHA (National Automated Clearing House Association) configuration settings on Odoo.
 
 .. note::
@@ -674,7 +666,7 @@ widely available on the Internet and generally varies by bank location. This num
 provided during the initial account setup.
 
 Next, enter the registered name of the financial institution in the field called,
-:guilabel:`Destination`. This information will be provided by the bank or credit union.
+:guilabel:`Destination`. This information is provided by the bank or credit union.
 
 Following the :guilabel:`Destination` field is the :guilabel:`Immediate Origin` field. Enter the
 9-digit company ID or Employer Identification Number (EIN) into this field. This information is
@@ -690,22 +682,21 @@ Enter the :guilabel:`Originating DFI Identification` number next, which should c
 8-digit number from the financial institution.
 
 .. important::
-   Enter the numerical values in this section *exactly* as the company's financial institution
-   (e.g. bank or credit union) has provided them, otherwise risk failing a successful |NACHA|
+   Enter the numerical values in this section *exactly* as the company's financial institution (e.g.
+   bank or credit union) has provided them, otherwise risk failing a successful |NACHA|
    configuration in Odoo.
 
 .. image:: united_states/us-l10n-nacha-dropdown.png
-   :align: center
    :alt: NACHA settings with the standard entry class code drop-down menu highlighted.
 
-There are two options for the next field: :guilabel:`Standard Entry Class Code`. Select the
+Two options are available for the next field: :guilabel:`Standard Entry Class Code`. Select the
 drop-down menu to the right of the field and pick either :guilabel:`Corporate Credit or Debit (CCD)`
-or :guilabel:`Prearranged Payment and Deposit (PPD)`. Again, this information will be provided by
-the financial institution. By default :guilabel:`Corporate Credit or Debit (CCD)` is selected.
+or :guilabel:`Prearranged Payment and Deposit (PPD)`. Again, this information is provided by the
+financial institution. By default :guilabel:`Corporate Credit or Debit (CCD)` is selected.
 
 Finally, the last option is for :guilabel:`Generated Balanced Files`. Tick the checkbox to the right
 of the field to enable :guilabel:`Generated Balanced Files`. Consult the company's accountant or
-financial advisor to make an informed decision for this field.
+financial adviser to make an informed decision for this field.
 
 Manually save the configuration by clicking the :icon:`fa-cloud-upload` :guilabel:`(cloud upload)`
 icon, or navigate away from this screen to auto-save. The configuration is now complete.
@@ -734,7 +725,6 @@ To create the batch payments, access the payments page, by navigating to :menuse
 file, by ticking the checkboxes to the far-left of the rows.
 
 .. image:: united_states/us-l10n-create-batch-payments.png
-   :align: center
    :alt: On the payments screen, the action menu is highlighted with create a batch payment
          selected.
 
@@ -742,12 +732,11 @@ file, by ticking the checkboxes to the far-left of the rows.
    All payments in the batch **must** share the same |NACHA| payment method.
 
 Next, navigate to the batched payment (:menuselection:`Accounting --> Vendors --> Batch Payments`).
-Click into the payment just created and then click into the :guilabel:`Exported File` tab. The
+Click into the payment recently created and then click into the :guilabel:`Exported File` tab. The
 generated file is listed with the :guilabel:`Generation Date`. Click the :icon:`fa-download`
 :guilabel:`(download)` button to download the file.
 
 .. image:: united_states/us-l10n-batch-file.png
-   :align: center
    :alt: The exported file tab highlighted in the batch payment with the download circled.
 
 If any adjustments need to be made, click the :guilabel:`Re-generate Export File` button to recreate
@@ -756,3 +745,184 @@ a new |NACHA| |ACH| file.
 .. seealso::
    - :doc:`../accounting/payments/batch`
    - :doc:`Europe's direct debiting <../accounting/payments/batch_sdd>`
+
+ISO 20022
+=========
+
+ISO 20022 is a global standard for sending financial information between banks and payment systems
+using XML files. It can be thought of as a universal language for money messages.
+
+This standard helps banks all over the world talk to each other in the same way, or *language*, so
+information is transferred correctly, making sending and receiving money faster, clearer, and safer.
+
+In Odoo, ISO 20022 files are generated from :ref:`batch payments <l10n_us/batch-payment>`.
+
+Configurations
+--------------
+
+Before creating ISO 20022 records, several configurations must be made, including :ref:`general
+settings <l10n_us/settings>`, contact information for the :ref:`company
+<l10n_us/contact-info-company>`, and contact and banking information for all :ref:`recipients
+<l10n_us/contact-info-recipient>`.
+
+.. _l10n_us/settings:
+
+Settings
+~~~~~~~~
+
+First, navigate to :menuselection:`Acounting app --> Configuration --> Settings`, scroll to the
+:guilabel:`Customer Payment` section, and enable the :guilabel:`Batch Payments` option.
+
+Then scroll to the :guilabel:`Vendor Payments` section and enable the :guilabel:`SEPA Credit
+Transfer / ISO20022` option. Once Enabled, three fields appear: :guilabel:`Your Company`,
+:guilabel:`Name Identification`, and :guilabel:`Issuer`. Enter the information for these fields. The
+information entered is required by the bank to identify the account, and is added to the XML file.
+
+Click :guilabel:`Save` after making changes.
+
+.. image:: united_states/us-l10n-sepa-settings.png
+   :alt: The settings configured for the ISO 20022 in the Accounting app settings page.
+
+.. note::
+   The :guilabel:`Name Identification` and :guilabel:`Issuer` information are typically provided by
+   the bank.
+
+.. _l10n_us/contact-info-company:
+
+Company information
+~~~~~~~~~~~~~~~~~~~
+
+Ensure the company's address information is correct, as the XML files generated include the company
+address. Navigate to the :menuselection:`Settings app --> Users & Companies --> Companies`, and
+click on the desired company to open the company form. Ensure the :guilabel:`Address` fields are
+fully configured in the :guilabel:`General Information` tab.
+
+.. image:: united_states/us-l10n-company-address.png
+   :alt: The company record with address information completed.
+
+.. _l10n_us/contact-info-recipient:
+
+Recipient information
+~~~~~~~~~~~~~~~~~~~~~
+
+The XML file generated contains the address and banking information for *all* recipients. Open the
+**Contacts** app and ensure every contact record that receives payments, both persons and companies,
+includes complete :guilabel:`Address` information in the top-half of the contact form.
+
+.. image:: united_states/us-l10n-company-contact.png
+   :alt: The contact record for a company with address information completed.
+
+Next, click into the :guilabel:`Accounting` tab, and ensure at least one trusted bank account
+populates the :guilabel:`Banks` field. If no bank is listed, add a :ref:`new bank account
+<l10n_us/add-bank>`.
+
+.. _l10n_us/add-bank:
+
+Add a bank account
+******************
+
+To add a bank account on a contact record, open the **Contacts** app and click on the contact
+record, and click into the :guilabel:`Accounting` tab. Click into the blank field next to
+:guilabel:`Banks`, click :guilabel:`Create...`, and a :guilabel:`Create Banks` pop-up window loads.
+Fill out the following fields on the form, then click :guilabel:`Save`:
+
+- :guilabel:`Account Number`: Enter the bank account number.
+- :guilabel:`ABA/Routing Number`: Enter the ABA or routing number for the account.
+- :guilabel:`Account Holder`: Using the drop-down menu, select the owner of the bank account. The
+  contact name (person or company) populates this field by default.
+- :guilabel:`Bank`: Using the drop-down menu, select the bank for the account. If the bank does not
+  appear in the list, add a new bank by clicking :guilabel:`Search more...` then click
+  :guilabel:`New`, and fill out the :guilabel:`Create Bank` form.
+- :guilabel:`Send Money`: Ensure this slider is set to :guilabel:`Trusted`. The slider and text
+  appears green if the bank account is trusted. If this is **not** set to trusted, an error appears
+  when attempting to make a payment to the contact.
+
+.. image:: united_states/us-l10n-add-bank.png
+   :alt: Bank information on the Create Banks form.
+
+.. note::
+   Trusted bank accounts appear in green in the :guilabel:`Accounting` tab.
+
+   .. image:: united_states/us-l10n-trusted.png
+      :alt: A trusted bank account on a contact form.
+
+Bank journal settings
+~~~~~~~~~~~~~~~~~~~~~
+
+Ensure the ISO payment methods appear in the bank journal, and are configured correctly. Navigate to
+:menuselection:`Accounting app --> Configurations --> Journals` and click on the journal
+:guilabel:`Bank`. Click into the :guilabel:`Outgoing Payments` tab, and ensure that in the
+:guilabel:`Payment Method` column, both `ISO20022` and `U.S. ISO20022` appear.
+
+Next, ensure all entries listed have the :guilabel:`101404 Outstanding Payments` account selected in
+the :guilabel:`Outstanding Payments accounts` column. This allows Odoo to create journal entries for
+payments.
+
+ISO20022 vs U.S. ISO20022
+-------------------------
+
+The U.S. ISO20022 is similar to the ISO standard, with some U.S.-specific rules and formatting.
+
+.. example::
+   The U.S. ISO20022 uses ABA routing numbers, which are specific to the U.S., while the generic
+   ISO20022 uses IBAN numbers.
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 0
+
+   * - Feature
+     - Global ISO 20022
+     - U.S. ISO 20022
+   * - Developed by
+     - ISO (global organization)
+     - U.S. payment system operators (Fed, TCH, NACHA)
+   * - Used for
+     - Global & cross-border payments
+     - Domestic U.S. payments
+   * - Format
+     - XML-based standard
+     - XML (same base) with U.S. data rules
+   * - Examples
+     - SEPA Credit Transfer (Europe), SWIFT MX messages
+     - Fedwire ISO 20022, CHIPS ISO 20022
+   * - Differences
+     - Global fields and formats
+     - Trimmed or modified to fit U.S. needs (e.g., ABA routing numbers instead of IBANs)
+
+.. tip::
+   It is recommended to use the generic ISO20022 for *international* transfers, and use the U.S.
+   ISO20022 for *domestic* transfers.
+
+Workflow
+--------
+
+First, :ref:`create <accounting/vendor_bills/creation>` and :ref:`confirm
+<accounting/vendor_bills/bill-confirmation>` a vendor bill. Then, click the :guilabel:`Pay` button,
+and a :guilabel:`Pay` pop-up window loads. Using the drop-down menu, select :guilabel:`ISO20022` in
+the :guilabel:`Payment Method` field, then click :guilabel:`Create Payment`.
+
+.. image:: united_states/us-l10n-pay.png
+   :alt: The Pay pop-up window configured for ISO20022.
+
+A green :guilabel:`In Payment` banner now appears on the vendor bill. Next, navigate to
+:menuselection:`Accounting --> Vendors --> Payments`, and tick the checkbox next to the payment that
+was paid using ISO20022 file to select it. Click :guilabel:`Create Batch`, then click
+:guilabel:`Validate` on the batch form. Once validated, the batch payment moves to the
+:guilabel:`Sent` stage, and the U.S. ISO20022 XML file is created and added to the chatter. The XML
+file can be downloaded and used to initiate a bank payment.
+
+.. image:: united_states/us-l10n-batch.png
+   :alt: A batch payment with the XML file in the chatter.
+
+Once the XML file is created, the following steps occur **outside** of the Odoo database.
+
+Log into the bank's online portal or payment system. Most banks that support ISO 20022 have a
+special section for `file uploads` or `import payments`. Upload the XML ISO 20022 file created by
+Odoo (ending in `.xml`) and upload it to the bank system.
+
+The bank checks the XML file by reading the file and making sure all details (accounts, amounts,
+etc.) are valid. The list of payments appears inside the file. Review and confirm the information,
+then click `Approve` or `Submit`.
+
+The bank processes each payment in the file and transfers the funds to the recipients.
