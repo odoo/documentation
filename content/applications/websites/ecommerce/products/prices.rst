@@ -122,7 +122,7 @@ Selectable pricelists
 Selectable pricelists are useful, for example, when selling products in :doc:`multiple currencies
 </applications/sales/sales/products_prices/prices/currencies>` and allow customers to
 choose a pricelist using the catalog's pricelist selector located next to the :ref:`search bar
-<ecommerce/catalog/top-bar>`.
+<ecommerce/catalog/toolbar-and-filters>`.
 
 .. image:: prices/pricelist-selector.png
    :alt: Pricelist selector on the ecommerce.

@@ -70,7 +70,7 @@ Linking Odoo to GMC
 #. Click :guilabel:`Manage feeds`.
 #. In the :guilabel:`Product Feeds` pop-up window, select a :ref:`pricelist
    <ecommerce/prices/pricelists>`, a :ref:`language <language/add>` and :ref:`categories
-   <ecommerce/catalog/categories>`, and :guilabel:`Save`.
+   <ecommerce/categories_variants/categories>`, and :guilabel:`Save`.
 
    .. note::
       You must first enable the corresponding :doc:`language </applications/general/users/language>`
