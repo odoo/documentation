@@ -6,9 +6,8 @@ Products
 
 **Odoo eCommerce** allows you to :ref:`add products <ecommerce/products/add-products>` and manage
 your :ref:`product pages <ecommerce/products/product-page>` directly from the Website app. It also
-allows you to add :ref:`product variants <ecommerce/products/product-variants>` and
-:ref:`digital files <ecommerce/products/digital-files>`, :ref:`translating
-<ecommerce/products/translation>` the product page content, and :ref:`managing stock
+allows you to add :ref:`digital files <ecommerce/products/digital-files>`, :ref:`translate
+<ecommerce/products/translation>` the product page content, and :ref:`manage the stock
 <ecommerce/products/stock-management>`.
 
 .. _ecommerce/products/add-products:
@@ -36,8 +35,10 @@ page. When you :guilabel:`Save`, the product page is automatically published.
      :guilabel:`Unpublished` to :guilabel:`Published`.
 
 .. seealso::
-   :doc:`Create new products using the Barcode Lookup database
-   </applications/inventory_and_mrp/barcode/setup/barcodelookup>`.
+   - :doc:`Create new products using the Barcode Lookup database
+     </applications/inventory_and_mrp/barcode/setup/barcodelookup>`.
+   - :doc:`Configure the Gelato connector in Odoo to synchronize the product catalog and automate
+     order fulfilment with Gelato </applications/sales/sales/gelato>`.
 
 .. _ecommerce/products/import-products:
 
@@ -74,10 +75,12 @@ Product information
 
 To add general information about a product, navigate to :menuselection:`Website -->
 eCommerce --> Products` and select the product. You can configure the product page from the form
-by adding :ref:`variants <ecommerce/products/product-variants>`, :ref:`digital documents
+by adding :ref:`variants <ecommerce/categories_variants/product-variants>`, :ref:`digital documents
 <ecommerce/products/digital-files>`, or :ref:`translating <ecommerce/products/translation>` content.
 
-You can also add an ecommerce-specific product description to be displayed below
+.. _ecommerce/products/description:
+
+You can also add an e-commerce-specific product description to be displayed below
 the product name on the product's page. To do so, go to the :guilabel:`Sales`
 tab, scroll down to the :guilabel:`Ecommerce description` section, and add a description. Use Odoo's
 :doc:`rich-text editor <../../essentials/html_editor>` features to personalize the content.
@@ -124,7 +127,7 @@ Use the :guilabel:`Customize` tab to modify the page layout or add features:
   :ref:`VAT included or excluded <ecommerce/prices/taxes>`.
 
 - :guilabel:`Variants`: Show all possible product :ref:`variants
-  <ecommerce/products/product-variants>` vertically as a :guilabel:`Products List`
+  <ecommerce/categories_variants/product-variants>` vertically as a :guilabel:`Products List`
   or horizontally as selectable :guilabel:`Options` to compose the variant yourself.
 
 - :guilabel:`Product Tags`: Toggle the switch to display the :guilabel:`Product Template Tags` on
@@ -143,7 +146,7 @@ Use the :guilabel:`Customize` tab to modify the page layout or add features:
 
 - :guilabel:`Specification`: Select :guilabel:`Bottom of Page` to display a detailed list of the
   attributes and their values available for the product. This option only works for products with
-  :ref:`variants <ecommerce/products/product-variants>` if the
+  :ref:`variants <ecommerce/categories_variants/product-variants>` if the
   :ref:`Product comparison tool <ecommerce/products/additional_features/product-comparison>` is
   enabled in the Website :guilabel:`Settings`.
 
@@ -166,7 +169,7 @@ and click :guilabel:`Add Media` under the :guilabel:`Ecommerce Media` section. I
 click :guilabel:`Upload an image` or :guilabel:`Add URL`. Or navigate to the :guilabel:`Videos` tab,
 paste a video URL or embed code. Once done, click :guilabel:`Add`.
 
-To customize the images or videos, go to the ecommerce product page, click :guilabel:`Edit`
+To customize the images or videos, go to the e-commerce product page, click :guilabel:`Edit`
 and select the relevant media. In the :guilabel:`Customize` tab, use the following features:
 
 - :guilabel:`Images Width`: Changes the width of the product images displayed on the page.
@@ -181,64 +184,6 @@ and select the relevant media. In the :guilabel:`Customize` tab, use the followi
 - :guilabel:`Main Image`: Click :guilabel:`Replace` to change the product's main image.
 - :guilabel:`Extra Images`: :guilabel:`Add` more extra images or videos (including via URL) or
   :guilabel:`Remove all`.
-
-.. _ecommerce/products/products-block:
-
-Products block
-==============
-
-The :guilabel:`Products` :doc:`building block <../website/web_design/building_blocks>` is used to
-display a selection of products sold on your website.
-
-.. image:: products/products-block.png
-   :alt: Example of a products block
-
-By default, the block displays the :guilabel:`Newest Products`. To change which products are shown,
-go to the :guilabel:`Customize` tab's :guilabel:`Products` section and set the :guilabel:`Filter`
-field to :guilabel:`Recently Sold Products` or :guilabel:`Recently Viewed Products`.
-
-In addition, it is possible to display products from a specific category only using the
-:guilabel:`Category` field.
-
-You can also filter products by :guilabel:`Tags`, include :guilabel:`Variants`, and adjust the
-display by selecting a different :guilabel:`Template`.
-
-.. _ecommerce/products/product-variants:
-
-Product variants
-================
-
-:doc:`Product variants <../../sales/sales/products_prices/products/variants>` are different versions
-of the same product, such as various colors or materials, with potential differences in price and
-availability.
-
-To configure product variants for a product:
-
-#. Go to :menuselection:`Website --> Configuration --> Settings`.
-#. Scroll down to the :guilabel:`Shop - Products` section and enable the
-   :guilabel:`Product Variants` feature.
-#. Access the :ref:`product forms <ecommerce/products/product-form>` and go to the
-   :guilabel:`Attributes & Variants` tab, where you can add attributes and values, allowing
-   customers to configure and select product variants on the product page. For multiple attributes,
-   you can combine them to create specific variants.
-
-To display or hide an attribute on the :guilabel:`Shop` page and allow visitors to filter them,
-go to :menuselection:`Website --> eCommerce --> Attributes`, click on the attribute, and select
-:guilabel:`Visible` or :guilabel:`Hidden` in the :guilabel:`eCommerce Filter Visibility` field.
-
-.. tip::
-   - To display the product attributes in the :doc:`product catalog <products/catalog>`,
-     set the :guilabel:`Attributes` feature to :guilabel:`Left` using the website editor.
-   - To group attributes under the same section when
-     :ref:`comparing products <ecommerce/products/additional_features/product-comparison>`, go to
-     the :guilabel:`eCommerce Category` field and either select an :doc:`existing category or create
-     a new one <../../websites/ecommerce/products>`.
-
-.. note::
-   Two attribute values are needed to make the filter visible.
-
-.. seealso::
-   :doc:`Product variants <../../sales/sales/products_prices/products/variants>`
 
 .. _ecommerce/products/digital-files:
 
@@ -288,7 +233,7 @@ If multiple languages are available on your website, you can translate a product
 directly on the :ref:`product form <ecommerce/products/product-form>`. Fields that support multiple
 languages are identifiable by their abbreviation language (e.g., EN) next to their field.
 
-The eCommerce-related fields to translate are:
+The e-commerce-related fields to translate are:
 
 - :guilabel:`Product name`.
 - :guilabel:`Out-of-Stock Message` (under the :guilabel:`Sales` tab).
@@ -312,8 +257,12 @@ To set the product's website availability, navigate to the :ref:`product form
 available on. Leave the field blank to make the product available on *all* websites.
 
 .. note::
-   You can make a product available on either *one* website or *all* websites, but selecting only
-   *some* websites is not possible.
+   - You can make a product available on either *one* website or *all* websites, but selecting only
+     *some* websites is not possible. To sell the product on multiple specific websites without
+     making it available on all, **duplicate** the product for each website and assign the
+     corresponding website to each duplicate.
+   - Enable the :guilabel:`Is Published` toggle to make sure the product is available for website
+     visitors.
 
 .. _ecommerce/products/stock-management:
 
@@ -328,6 +277,14 @@ Configuration --> Settings`, scroll down to the :guilabel:`Shop - Products` sect
    - The **Inventory** app must be installed to see the inventory management options.
    - To display the stock level on the product page, the :guilabel:`Product Type` field must be set
      to :guilabel:`Storable` in the :ref:`product form <ecommerce/products/product-form>`.
+
+.. tip::
+   If a unique reference is needed for inventory management, install the :doc:`Manufacturing app
+   </applications/inventory_and_mrp/manufacturing>`, and create :doc:`Kit bills of materials
+   </applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping>`. Each
+   kit links its published "virtual" products to the main reference tracked in Inventory. This
+   ensures that any item sold on the website is converted into the corresponding stocked item in
+   the delivery order.
 
 Inventory
 ---------
@@ -348,3 +305,4 @@ In the :guilabel:`Inventory Defaults` sub-section, fill in those fields:
    products/prices
    products/cross_upselling
    products/additional_features
+   products/categories_variants

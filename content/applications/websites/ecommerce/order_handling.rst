@@ -2,7 +2,7 @@
 Order handling
 ==============
 
-When a customer orders on your eCommerce, there are **three** record types required to be handle in
+When a customer orders on your e-commerce, there are **three** record types required to be handle in
 Odoo:
 
 - :ref:`Sales orders <handling/sales>`;
@@ -18,10 +18,10 @@ Order and payment status
 ------------------------
 
 The first step when a customer adds a product to his cart is the creation of a quotation. Orders can
-be managed either from the **Website** or :doc:`Sales </applications/sales/sales>` app. eCommerce
+be managed either from the **Website** or :doc:`Sales </applications/sales/sales>` app. E-commerce
 orders can automatically be assigned to a specific sales team by going to :menuselection:`Website
 --> Configuration --> Settings`. In the **Shop - Checkout Process** section, select a
-:guilabel:`Sales Team` or :guilabel:`Salesperson` to handle eCommerce orders.
+:guilabel:`Sales Team` or :guilabel:`Salesperson` to handle e-commerce orders.
 
 .. image:: order_handling/handling-salesteam.png
    :align: center
@@ -39,7 +39,7 @@ order goes through a different status:
 
 .. image:: order_handling/handling-status.png
    :align: center
-   :alt: Statuses of eCommerce orders
+   :alt: Statuses of e-commerce orders
 
 Abandoned cart
 --------------
@@ -66,7 +66,7 @@ Delivery flow
 Once a quotation has been confirmed, a delivery order is automatically created. The next step is to
 process this delivery.
 
-Packing eCommerce orders usually requires picking the product, preparing the packaging, printing the
+Packing e-commerce orders usually requires picking the product, preparing the packaging, printing the
 shipping label(s) and shipping to the customer. Depending on the number of orders, strategy, or
 resources, those steps can be considered as one or multiple actions in Odoo.
 
@@ -103,7 +103,7 @@ payment provider needs to be enabled first.
 Invoice and legal requirements
 ==============================
 
-The final step of an ecommerce order is to generate the invoice and send it to the customer.
+The final step of an e-commerce order is to generate the invoice and send it to the customer.
 Depending on your needs, an invoice can either be generated automatically or on demand of the
 customer. This process can be automated if (and when) the online payment is :ref:`confirmed
 <handling/sales>`.

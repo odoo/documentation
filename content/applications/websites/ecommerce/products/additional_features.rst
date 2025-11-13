@@ -13,7 +13,7 @@ Product comparison
 ==================
 
 The :icon:`fa-exchange` (:guilabel:`Add to compare`) button allows website visitors to compare
-products based on their :ref:`attributes <ecommerce/products/product-variants>`. Customers can
+products based on their :ref:`attributes <ecommerce/categories_variants/attributes>`. Customers can
 click this button to select the products they wish to compare, then click :guilabel:`Compare` in
 the pop-up window at the bottom of the page to see the comparison summary.
 
@@ -42,6 +42,10 @@ This button can be enabled independently in different sections of the website:
 
 .. note::
    You can only compare a maximum of four products at a time.
+
+.. tip::
+   Define :ref:`attribute categories <ecommerce/categories_variants/attribute-categories>` to group
+   similar attributes under the same section when comparing products.
 
 .. _ecommerce/products/additional_features/wishlists:
 
@@ -118,7 +122,7 @@ preconfigured ribbons (:guilabel:`Sold out`, :guilabel:`Sale`, :guilabel:`Out of
 Choose its :guilabel:`Position`, either :guilabel:`Left` or :guilabel:`Right`, and a
 :guilabel:`Style`, either :guilabel:`Ribbon` or :guilabel:`Badge`. Define the :guilabel:`Text Color`
 and the :guilabel:`Background Color`. Then :guilabel:`Save`. The ribbon is now available for all
-the ecommerce products.
+the e-commerce products.
 
 .. image:: additional_features/badge-applied.png
    :alt: Product with badge
@@ -139,7 +143,7 @@ the ecommerce products.
           :alt: Create a new ribbon in the website editor
 
    - It is also possible to add ribbons for specific :ref:`product variants
-     <ecommerce/products/product-variants>`. To do so, go to :menuselection:`Website -->
+     <ecommerce/categories_variants/product-variants>`. To do so, go to :menuselection:`Website -->
      eCommerce --> Products` and select a product. Click the :guilabel:`Variants` smart button,
      choose a variant, and add a ribbon in the :guilabel:`Variant Ribbon` field of the
      :guilabel:`Sales` section.
