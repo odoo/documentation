@@ -712,6 +712,7 @@ Useful environment methods
 .. automethod:: Environment.is_admin
 .. automethod:: Environment.is_system
 .. automethod:: Environment.execute_query
+    :noindex:
 
 Altering the environment
 ------------------------
@@ -749,8 +750,31 @@ The recommended way to build SQL queries is to use the wrapper object
 
 .. autoclass:: odoo.tools.SQL
 
-    .. automethod:: SQL.join
     .. automethod:: SQL.identifier
+
+:func:`~odoo.api.Environment.execute_query` environment method allows to flush
+(see later), execute and fetch results at once.  To translate model fields into
+SQL, and build queries, a useful abstraction is provided in
+
+.. autoclass:: odoo.models.Query
+
+    .. automethod:: Query.select
+    .. automethod:: Query.subselect
+    .. automethod:: Query.is_empty
+    .. automethod:: Query.get_result_ids
+    .. autoproperty:: Query.table
+
+.. example::
+
+    .. code-block:: python
+
+        query = Query(self.env['model'])
+        query.add_where(SQL("%s > %s", query.table.some_field, 'test'))
+        query.select()
+        # SELECT model.id
+        # FROM model
+        # WHERE model.some_field > 'test'
+
 
 One important thing to know about models is that they don't necessarily perform
 database updates right away. Indeed, for performance reasons, the framework
@@ -781,6 +805,11 @@ when flushing.
 
 .. automethod:: Model.flush_recordset
 
+.. automethod:: odoo.api.Environment.execute_query
+
+When using the Query builder and ``execute_query``, model flushes are done based
+on the metadata in the ``SQL``.
+
 Because models use the same cursor and the :class:`~odoo.api.Environment`
 holds various caches, these caches must be invalidated when *altering* the
 database in raw SQL, or further uses of models may become incoherent. It is
@@ -798,6 +827,13 @@ SQL, but not ``SELECT`` (which simply reads the database).
 
         # invalidate 'state' from the cache
         self.env['model'].invalidate_model(['state'])
+
+    .. code-block:: python
+
+        # get name and country name for all records, flushing and joins are
+        # done automatically
+        query = Query(self.env['model'])
+        self.env.execute_query(query.select(SQL(query.table.name, query.table.country_id.name)))
 
 Just like flushing, one can invalidate either the whole cache, the cache of all
 the records of a model, or the cache of specific records. One can even
