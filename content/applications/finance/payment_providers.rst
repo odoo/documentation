@@ -7,8 +7,6 @@ Online payments
 .. toctree::
    :titlesonly:
 
-   payment_providers/wire_transfer
-   payment_providers/sdd
    payment_providers/adyen
    payment_providers/amazon_payment_services
    payment_providers/asiapay
@@ -27,6 +25,8 @@ Online payments
    payment_providers/stripe
    payment_providers/worldline
    payment_providers/xendit
+   payment_providers/bank_payments
+   payment_providers/inperson_payments
 
 Odoo embeds several **payment providers** that allow your customers to pay online, on their
 *customer portals*, or on your *eCommerce website*. They can pay sales orders, invoices, or
@@ -52,7 +52,8 @@ Supported payment providers
 
 To access the supported payment providers, go to :menuselection:`Accounting --> Configuration -->
 Payment Providers`, :menuselection:`Website --> Configuration --> Payment Providers`, or
-:menuselection:`Sales --> Configuration --> Payment Providers`.
+:menuselection:`Sales --> Configuration --> Payment Providers`. Click the relevant payment provider
+card to access and configure the related provider.
 
 .. _payment_providers/online_providers:
 
@@ -196,12 +197,20 @@ Online payment providers
 Bank payments
 -------------
 
-- | :doc:`Wire Transfer <payment_providers/wire_transfer>`
-  | When selected, Odoo displays your payment information with a payment reference. You have to
-    approve the payment manually once you have received it in your bank account.
-- | :doc:`SEPA Direct Debit <payment_providers/sdd>`
-  | Your customers can make a bank transfer to register a SEPA Direct Debit mandate and get their
-    bank account charged directly.
+- | :ref:`Wire Transfer <payment_providers/bank_payments/wire_transfer>`
+  | Odoo displays your payment information with a payment reference. You have to approve the payment
+    manually once it has been received in your bank account.
+- | :ref:`SEPA Direct Debit <payment_providers/bank_payments/sdd>`
+  | Customers can make a bank transfer to register a SEPA Direct Debit mandate and allow their
+    account to be charged directly for future payments.
+
+In-person payments
+------------------
+
+- | :ref:`Pay on Site <payment_providers/inperson_payments/pay_on_site>`
+  | Customers can reserve products online and pay when collecting their orders in store.
+- | :ref:`Cash on Delivery <payment_providers/inperson_payments/cash_on_delivery>`
+  | Customers can pay for their orders upon delivery.
 
 .. _payment_providers/add_new:
 
@@ -258,36 +267,39 @@ are the ones that have been activated. To activate or deactivate a payment metho
 click :guilabel:`Enable Payment Methods`, then click the toggle button of the related method.
 
 .. tip::
-   Payment methods are displayed on your website based on their sequence order. To reorder them,
-   click :guilabel:`Enable Payment Methods` in the payment provider form, then, in the
-   :guilabel:`Payment Methods` list, drag and drop the payment methods in the desired order.
+   - To view the complete list of supported payment methods, go to :menuselection:`Accounting -->
+     Configuration --> Payment Methods`, :menuselection:`Website --> Configuration -->
+     Payment Methods`, or :menuselection:`Sales --> Configuration --> Payment Methods`.
+   - Payment methods are displayed on the ecommerce website based on their sequence order. To
+     reorder them, drag and drop the payment methods into the desired order in the
+     :guilabel:`Payment Methods` list.
 
 Icons and brands
 ----------------
 
 The icons displayed next to the payment method on your website are either the icons of the brands
 activated for the payment method or, if there aren't any, the icons of the payment methods
-themselves. To modify them, go to :menuselection:`Accounting --> Configuration --> Payment Methods`,
-:menuselection:`Website --> Configuration --> Payment Methods` or :menuselection:`Sales -->
-Configuration --> Payment Methods`, then click on the payment method.
+themselves. To modify them, :ref:`access the list of payment methods
+<payment_providers/payment_methods>`, then click the relevant one.
 
 To modify a payment method's icon, hover your mouse over the image in the upper-right corner of the
 payment method's form and click the :icon:`fa-pencil` (:guilabel:`pencil`) icon.
 
 Select the :guilabel:`Brands` tab to view the brands that have been activated for the payment
 method. The brands and their related icons are displayed based on their sequence order; to reorder
-them, drag and drop them in the desired order. To modify a brand's icon, select the brand, then,
+them, drag and drop them into the desired order. To modify a brand's icon, select the brand, then,
 in the popup window that opens, hover the mouse over the image in the upper-right corner and click
 the :icon:`fa-pencil` (:guilabel:`pencil`) icon.
 
 Advanced configuration
 ----------------------
 
-To configure payment methods further, go to :menuselection:`Accounting --> Configuration --> Payment
-Methods`, :menuselection:`Website --> Configuration --> Payment Methods` or :menuselection:`Sales
---> Configuration --> Payment Methods`. Click on the payment method, then activate the
-:ref:`developer mode <developer-mode>`. Click the :guilabel:`Configuration` tab to adapt the
-features.
+To further configure payment methods, follow these steps:
+
+#. Activate the :ref:`developer mode <developer-mode>`.
+#. :ref:`Access the list of payment methods <payment_providers/payment_methods>` and click the
+   relevant one.
+#. Go to the :guilabel:`Configuration` tab and adjust the features as needed.
 
 .. danger::
    - Each payment method is preconfigured in a way that aligns with the payment providers'
@@ -483,8 +495,6 @@ payments from other payments.
    :alt: Define an outstanding account for a payment provider.
 
 .. seealso::
-   - :doc:`payment_providers/wire_transfer`
-   - :doc:`payment_providers/sdd`
    - :doc:`payment_providers/adyen`
    - :doc:`payment_providers/authorize`
    - :doc:`payment_providers/asiapay`
@@ -500,4 +510,6 @@ payments from other payments.
    - :doc:`payment_providers/stripe`
    - :doc:`payment_providers/worldline`
    - :doc:`payment_providers/xendit`
+   - :doc:`payment_providers/bank_payments`
+   - :doc:`payment_providers/inperson_payments`
    - :doc:`accounting/bank`
