@@ -99,14 +99,14 @@ In the :guilabel:`Provider` field, select :ref:`Based on Rules <inventory/shippi
 Click & Collect
 ===============
 
-To allow customers to reserve products online and pay for/collect them in-store, follow these steps:
+To allow customers to reserve products online and collect them in-store, follow these steps:
 
 #. Go to :menuselection:`Website --> Configuration --> Settings`.
-#. Scroll to the :guilabel:`Delivery` section, enable :guilabel:`Click & Collect`, and
+#. Scroll to the :guilabel:`eCommerce` section, enable :guilabel:`Click & Collect`, and
    :guilabel:`Save`.
 #. Click :icon:`fa-arrow-right` :guilabel:`Configure Pickup Locations` to :ref:`configure
-   <inventory/shipping_receiving/configure-delivery-method>` the delivery method and ensure the
-   :guilabel:`Provider` field is set to :guilabel:`Pick up in store`.
+   <inventory/shipping_receiving/configure-delivery-method>` the delivery method if needed and
+   ensure the :guilabel:`Provider` field is set to :guilabel:`Pick up in store`.
 #. In the :guilabel:`Stores` tab, click :guilabel:`Add a line` and select the warehouse(s) where
    customers can collect their orders.
 #. Once your setup is complete, click the :guilabel:`Unpublish` button to change the status to
@@ -122,4 +122,7 @@ To allow customers to reserve products online and pay for/collect them in-store,
      selector on the product page.
    - Each warehouse must have a **complete address** to ensure its location is accurately displayed
      to customers. Incomplete addresses prevent the warehouse from being shown.
-   - The Click & Collect option is not available for services.
+   - The :guilabel:`Click & Collect` option is not available for services.
+   - By default, the :ref:`Pay on Site <payment_providers/inperson_payments/pay_on_site>` payment
+     method is :ref:`enabled and published <payment_providers/add_new>` when the :guilabel:`Click &
+     Collect` feature is activated.
