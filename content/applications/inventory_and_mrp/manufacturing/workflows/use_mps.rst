@@ -148,7 +148,7 @@ column, the :guilabel:`+ Suggested Replenishment` field appears in one of five c
   Stock Target`.
 - :guilabel:`Gray`: a replenishment order has already been generated to keep stock at the
   :guilabel:`Safety Stock Target`.
-- :guilabel:`Yellow`: a replenishment order has already been generated, but the quantity it was
+- :guilabel:`Orange`: a replenishment order has already been generated, but the quantity it was
   created for is not enough to keep stock at the :guilabel:`Safety Stock Target`.
 - :guilabel:`Red`: a replenishment order has already been generated, but the quantity it was created
   for puts the amount of stock above the :guilabel:`Safety Stock Target`.
