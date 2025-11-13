@@ -37,7 +37,7 @@ using `XPath`. Following the Airproof design, let's begin by modifying the shop 
    - To enable attribute/variant filtering, activate the
      :doc:`/applications/sales/sales/products_prices/products/variants` option in the
      website backend settings and :ref:`configure attributes and variants
-     <ecommerce/products/product-variants>` for the products.
+     <ecommerce/categories_variants/product-variants>` for the products.
 
 .. spoiler:: Solutions
 

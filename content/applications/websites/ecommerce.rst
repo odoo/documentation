@@ -36,8 +36,8 @@ customer accounts, and monitor your performance.
       :target: ecommerce/order_handling
       :large:
 
-      Handle all business documents related to your eCommerce orders: sales orders, delivery orders,
-      invoices, and legal requirements.
+      Handle all business documents related to your e-commerce orders: sales orders, delivery
+      orders, invoices, and legal requirements.
 
    .. card:: Customer accounts
       :target: ecommerce/customer_accounts
@@ -49,7 +49,7 @@ customer accounts, and monitor your performance.
    .. card:: Performance management
       :target: ecommerce/performance
 
-      Analyze sales data to evaluate your eCommerce performance.
+      Analyze sales data to evaluate your e-commerce performance.
 
    .. card:: Google Merchant Center
       :target: ecommerce/google_merchant_center

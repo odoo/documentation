@@ -28,24 +28,16 @@ within the Odoo *Sales* application.
    other similar records in Odoo.
 
 .. seealso::
-   :ref:`ecommerce/products/product-variants`
+   :ref:`Product variants in the eCommerce <ecommerce/categories_variants/product-variants>`
 
 Configuration
 =============
 
-To use product variants, the *Variants* setting **must** be activated in the Odoo *Sales*
-application.
+To use product variants, go to :menuselection:`Sales --> Configuration --> Settings`, then enable
+the :guilabel:`Variants` feature in the :guilabel:`Product Catalog` section, and click
+:guilabel:`Save` at the top of the :guilabel:`Settings` page.
 
-To do that, go to :menuselection:`Sales app --> Configuration --> Settings`, and locate the
-:guilabel:`Product Catalog` section at the top of the page.
-
-In that section, check the box to enable the :guilabel:`Variants` feature.
-
-.. image:: variants/activating-variants-setting.png
-   :align: center
-   :alt: Activating product variants on the Settings page of the Odoo Sales application.
-
-Then, click :guilabel:`Save` at the top of the :guilabel:`Settings` page.
+.. _products/variants/attributes:
 
 Attributes
 ==========
@@ -61,7 +53,6 @@ To create a new attribute from the :guilabel:`Attributes` page, click :guilabel:
 reveals a blank attributes form that can be customized and configured in a number of ways.
 
 .. image:: variants/attribute-creation.png
-   :align: center
    :alt: A blank attribute creation form in the Odoo Sales application.
 
 First, create an :guilabel:`Attribute Name`, such as `Color` or `Size`.
@@ -70,71 +61,71 @@ Next, select one of the options from the :guilabel:`Display Type` field. The :gu
 Type` determines how this product is shown on the online store, *Point of Sale* dashboard, and
 *Product Configurator*.
 
-The :guilabel:`Display Type` options are:
+The following :guilabel:`Display Type` options are available:
 
-- :guilabel:`Pills`: options appear as selectable buttons on the product page of the online store.
-- :guilabel:`Color`: options appear as small, colored squares, which reflect any HTML color codes
-- :guilabel:`Radio`: options appear in a bullet-style list on the product page of the online store.
-- :guilabel:`Select`: options appear in a drop-down menu on the product page of the online store.
-  set, on the product page of the online store.
-- :guilabel:`Multi-checkbox (option)`: options appear as selectable checkboxes on the product page
-  of the online store. This allows customers to choose options for themselves and is good choice for
-  highly customizable products.
+.. tabs::
 
-.. image:: variants/display-types.png
-   :align: center
-   :alt: Display Types on Product Configurator on the online store in Odoo.
+   .. tab:: :guilabel:`Pills`
 
-The :guilabel:`Variant Creation Mode` field informs Odoo when to automatically create a new variant
+      Options appear as selectable buttons.
+
+      .. image:: variants/pills-display-type.png
+         :alt: Pills display type
+
+   .. tab:: :guilabel:`Color`
+
+      Options appear as small, colored circles; the colors can be defined using any HTML color code.
+
+      .. image:: variants/color-display-type.png
+         :alt: Pills display type
+
+   .. tab:: :guilabel:`Radio`
+
+      Options appear as radio buttons.
+
+      .. image:: variants/radio-display-type.png
+         :alt: Pills display type
+
+   .. tab:: :guilabel:`Select`
+
+      Options appear in a drop-down menu.
+
+      .. image:: variants/select-display-type.png
+         :alt: Pills display type
+
+   .. tab:: :guilabel:`Image`
+
+      Options appear as images.
+
+      .. image:: variants/image-display-type.png
+         :alt: Pills display type
+
+   .. tab:: :guilabel:`Multi-checkbox`
+
+      Options appear as selectable checkboxes. This allows customers to choose multiple options,
+      e.g., to add extras to food orders or highly customizable products.
+
+      .. image:: variants/multi-checkbox-display-type.png
+         :alt: Pills display type
+
+The :guilabel:`Variant Creation` field determines if/when a new variant is automatically created
 once an attribute is added to a product.
 
-.. note::
-   The :guilabel:`Variant Creation Mode` field **must** be set to :guilabel:`Never (option)` in
-   order for the :guilabel:`Multi-checkbox (option)` to work properly as the :guilabel:`Display
-   Type`.
+.. important::
+   If the attribute's :guilabel:`Display Type` is :guilabel:`Multi-checkbox`, you **must** set the
+   :guilabel:`Variant Creation` field to :guilabel:`Never`.
 
 - :guilabel:`Instantly`: creates all possible variants as soon as attributes and values are added to
   a product template.
 - :guilabel:`Dynamically`: creates variants **only** when corresponding attributes and values are
   added to a sales order.
-- :guilabel:`Never (option)`: never automatically creates variants.
+- :guilabel:`Never`: prevents automatic creation of variants.
 
 .. warning::
-   Once added to a product, an attribute's :guilabel:`Variants Creation Mode` cannot be edited.
+   Once added to a product, an attribute's :guilabel:`Variants Creation` mode cannot be edited.
 
-The :guilabel:`eCommerce Filter Visibility` field determines whether or not these attribute options
-are visible to the customer on the front-end, as they shop on the online store.
-
-- :guilabel:`Visible`: the attribute values are visible to customers on the front-end.
-- :guilabel:`Hidden`: the attribute values are hidden from customers on the front-end.
-
-Lastly, in the optional :guilabel:`eCommerce Category` field, select a category from a drop-down
-menu to group similar attributes under the same section for added specificity and organization.
-
-.. note::
-   To view the details related to the attribute category selected, click the internal link
-   :icon:`fa-arrow-right` :guilabel:`(right arrow)` icon to the far-right of the
-   :guilabel:`eCommerce Category` field, once an option has been selected. Doing so reveals that
-   attribute category's detail form.
-
-   .. image:: variants/attribute-category-internal-link.png
-      :align: center
-      :alt: A standard attribute category detail page accessible via its internal link arrow icon.
-
-   Here, the :guilabel:`Category Name` and :guilabel:`Sequence` is displayed at the top. Followed by
-   :guilabel:`Related Attributes` associated with the category. These attributes can be
-   dragged-and-dropped into a desirable order of priority.
-
-   Attributes can be directly added to the category, as well, by clicking :guilabel:`Add a line`.
-
-.. tip::
-   To create an attribute category directly from this field, start typing the name of the new
-   category, then select either :guilabel:`Create` or :guilabel:`Create and edit...` from the
-   drop-down menu that appears.
-
-   Clicking :guilabel:`Create` creates the category, which can be modified later. Clicking
-   :guilabel:`Create and edit...` creates the category and reveals a :guilabel:`Create Category`
-   pop-up window, in which the new attribute category can be configured and customized.
+.. seealso::
+   :ref:`Ecommerce-specific settings for attributes <ecommerce/categories_variants/attributes>`
 
 Attribute values
 ----------------
@@ -170,12 +161,12 @@ Or, choose a specific color by clicking the *dropper* icon, and selecting a desi
 currently clickable on the screen.
 
 Businesses can attach images to product variant attribute values for customers to view on an
-eCommerce webite. To do so, click the :icon:`fa-camera` :guilabel:`(camera)` icon, then click the
+eCommerce website. To do so, click the :icon:`fa-camera` :guilabel:`(camera)` icon, then click the
 :icon:`fa-pencil` :guilabel:`(pencil)` icon and select an image from your local drive. This image
-will appear as a color option on the ecommerce product page.
+will appear as a color option for the relevant product.
 
-.. image:: variants/ecommerce-pattern-option.png
-   :alt: Pattern as color option on the ecommerce page.
+.. image:: variants/pattern-display.png
+   :alt: Pattern as color option.
 
 .. tip::
    Attributes can also be created directly from the product template by adding a new line and typing
@@ -257,6 +248,8 @@ fields can be found, along with an :guilabel:`Exclude for` field.
 In the :guilabel:`Exclude for` field, different :guilabel:`Product Templates` and specific
 :guilabel:`Attribute Values` can be added. When added, this specific attribute value will be
 excluded from those specific products.
+
+.. _products/variants/variants-smart-button:
 
 Variants smart button
 ---------------------

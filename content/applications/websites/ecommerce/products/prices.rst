@@ -2,7 +2,7 @@
 Prices
 ======
 
-Odoo offers multiple options to configure prices on the ecommerce. For example, you can apply
+Odoo offers multiple options to configure prices on the e-commerce. For example, you can apply
 :ref:`prices per unit <ecommerce/prices/price-per-unit>`, offer :ref:`discounts
 <ecommerce/prices/discounts>`, and set up :ref:`pricelists <ecommerce/prices/pricelists>`.
 
@@ -122,10 +122,10 @@ Selectable pricelists
 Selectable pricelists are useful, for example, when selling products in :doc:`multiple currencies
 </applications/sales/sales/products_prices/prices/currencies>` and allow customers to
 choose a pricelist using the catalog's pricelist selector located next to the :ref:`search bar
-<ecommerce/catalog/top-bar>`.
+<ecommerce/catalog/toolbar-and-filters>`.
 
 .. image:: prices/pricelist-selector.png
-   :alt: Pricelist selector on the ecommerce.
+   :alt: Pricelist selector on the e-commerce.
 
 To make a pricelist selectable, enable :guilabel:`Selectable`.
 
@@ -139,7 +139,7 @@ To make a pricelist selectable, enable :guilabel:`Selectable`.
       - Multiple selectable pricelists exist, but only those matching the customer's :ref:`country
         group <ecommerce/prices/country-groups>` are shown. It is strongly recommended to disable
         the :guilabel:`Selectable` option when using pricelists with country groups on the
-        ecommerce.
+        e-commerce.
 
 .. seealso::
    :ref:`sales/products/currencies/currency-specific-pricelists`
@@ -176,7 +176,7 @@ Use :ref:`Custom filters <search/custom-filters>` if needed.
 
 .. important::
    - When using GeoIP to determine the appropriate pricelist, **all** pricelists used on the
-     ecommerce must have a country group assigned.
+     e-commerce must have a country group assigned.
    - It is strongly recommended to disable the :guilabel:`Selectable` option when using pricelists
      with country groups. Indeed, all pricelists with the relevant country group are automatically
      applied to the catalog but if one of them is marked as :ref:`Selectable
@@ -200,7 +200,7 @@ Use :ref:`Custom filters <search/custom-filters>` if needed.
 Pricelist application
 ---------------------
 
-On the ecommerce, the *default* pricelist is automatically selected for public, non-logged in users
+On the e-commerce, the *default* pricelist is automatically selected for public, non-logged in users
 when no country group is assigned. If :ref:`GeoIP and country groups <ecommerce/prices/geoip>` are
 used, public users see the pricelist of their country group by default. :ref:`Logged-in users
 <ecommerce/customer_accounts/shop-access>` with
@@ -233,7 +233,7 @@ Discounts programs
 ------------------
 
 To enable :doc:`discount programs </applications/sales/sales/products_prices/loyalty_discount>`
-for your ecommerce, go to :menuselection:`Website --> Configuration --> Settings`, scroll
+for your e-commerce, go to :menuselection:`Website --> Configuration --> Settings`, scroll
 down to the :guilabel:`eCommerce` section, and enable the :guilabel:`Discounts, Loyalty & Gift
 Card` feature.
 
@@ -312,7 +312,7 @@ Hide prices
 Some businesses, such as :ref:`B2B shops <ecommerce/b2b_b2c/prices>` or companies that sell luxury
 or custom items, often prefer to showcase their products online without displaying their prices.
 
-To hide product prices on the ecommerce, go to :menuselection:`Website --> Configuration -->
+To hide product prices on the e-commerce, go to :menuselection:`Website --> Configuration -->
 Settings`, enable :guilabel:`Prevent Sale of Zero Priced Product` in the :guilabel:`eCommerce`
 section, and enter a redirect URL in the :guilabel:`Button URL` field. The
 :guilabel:`Add to Cart` button on the product page is then replaced by a :guilabel:`Contact us`
@@ -323,7 +323,7 @@ After enabling this feature, either set the price to `0` for all desired product
 pricelist is assigned to the correct website and is listed first among the website's pricelists.
 
 .. tip::
-   - Ensure no pricelist used on the ecommerce has been marked as :guilabel:`Selectable` to prevent
+   - Ensure no pricelist used on the e-commerce has been marked as :guilabel:`Selectable` to prevent
      accidentally displaying the zero-priced pricelist.
    - To hide prices from public visitors while keeping them visible to logged-in customers, create a
      zero-priced pricelist to be used for non-logged-in customers and :ref:`assign

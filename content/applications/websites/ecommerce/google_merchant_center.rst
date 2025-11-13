@@ -2,7 +2,7 @@
 Google Merchant Center
 ======================
 
-Google Merchant Center is a tool that allows ecommerce retailers to manage and submit product
+Google Merchant Center is a tool that allows e-commerce retailers to manage and submit product
 data to Google. It serves as a central hub to upload and maintain product details, such as images,
 prices, and descriptions so that products can appear across Google's platforms.
 
@@ -19,7 +19,7 @@ prices, and descriptions so that products can appear across Google's platforms.
 Google Merchant Center setup
 ============================
 
-To connect your ecommerce with the :abbr:`GMC (Google Merchant Center)` platform, proceed as
+To connect your e-commerce with the :abbr:`GMC (Google Merchant Center)` platform, proceed as
 follows:
 
 #. Create or sign in to a Google account using the following link:
@@ -70,7 +70,7 @@ Linking Odoo to GMC
 #. Click :guilabel:`Manage feeds`.
 #. In the :guilabel:`Product Feeds` pop-up window, select a :ref:`pricelist
    <ecommerce/prices/pricelists>`, a :ref:`language <language/add>` and :ref:`categories
-   <ecommerce/catalog/categories>`, and :guilabel:`Save`.
+   <ecommerce/categories_variants/categories>`, and :guilabel:`Save`.
 
    .. note::
       You must first enable the corresponding :doc:`language </applications/general/users/language>`
