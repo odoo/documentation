@@ -2,7 +2,7 @@
 Customer accounts
 =================
 
-Using customer accounts for an ecommerce shop enables you to :ref:`manage customers
+Using customer accounts for an e-commerce enables you to :ref:`manage customers
 <ecommerce/customer_accounts/account-creation>`, control access to the :ref:`shop
 <ecommerce/customer_accounts/shop-access>`, the :ref:`checkout
 <ecommerce/customer_accounts/checkout-access>`, or the :ref:`customer portal <portal/access>`,
