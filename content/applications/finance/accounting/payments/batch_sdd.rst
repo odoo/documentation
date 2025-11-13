@@ -81,13 +81,13 @@ To create an |sdd| mandate:
      (:guilabel:`gear`) icon, then select :guilabel:`Mandate form`.
    - The :guilabel:`SDD Scheme` depends on the type of customer: Select :guilabel:`CORE` for B2C
      customers and :guilabel:`B2B` for B2B customers.
-   - |sdd| mandates are created automatically for :doc:`online payments made with SDD
-     <../../payment_providers/sdd>`.
+   - |sdd| mandates are created automatically for :ref:`online payments made with SDD
+     <payment_providers/bank_payments/sdd>`.
 
 Once an |sdd| mandate is active, subsequent |sdd| payments can be generated via Odoo and
 :ref:`uploaded to your online banking interface <accounting/batch_sdd/XML>`. Customers with an
-active |sdd| mandate can also use this payment method for :doc:`online purchases
-<../../payment_providers/sdd>`.
+active |sdd| mandate can also use this payment method for :ref:`online purchases
+<payment_providers/bank_payments/sdd>`.
 
 .. _accounting/batch_sdd/close-revoke-mandate:
 
@@ -139,7 +139,7 @@ of all posted |sdd| payments to your online banking interface. To do so, follow 
 
 .. seealso::
    - :doc:`batch`
-   - :doc:`SEPA Direct Debit for online payments <../../payment_providers/sdd>`
+   - :ref:`SEPA Direct Debit for online payments <payment_providers/bank_payments/sdd>`
    - `SEPA guidelines
      <https://www.europeanpaymentscouncil.eu/document-library/implementation-guidelines/sepa-credit-transfer-inter-psp-implementation-guidelines>`_
 
