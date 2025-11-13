@@ -19,7 +19,7 @@ Configuration
 Make sure your :doc:`payment providers are correctly configured <../../payment_providers>`.
 
 .. note::
-   By default, ":doc:`Wire Transfer </applications/finance/payment_providers/wire_transfer>`" is the
+   By default, :ref:`Wire Transfer <payment_providers/bank_payments/wire_transfer>` is the
    only payment provider activated, but you still have to fill out the payment details.
 
 To activate the Invoice Online Payment, go to :menuselection:`Accounting --> Configuration -->
