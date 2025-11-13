@@ -26,15 +26,16 @@ Modules
        selected.
    * - :guilabel:`Australia - Payroll`
      - `l10n_au_hr_payroll`
-     - The base :ref:`payroll <payroll/l10n_au/payroll>` module for the Australian localization.
+     - The base :doc:`payroll <../../hr/payroll/payroll_localizations/australia>` module for the
+       Australian localization.
    * - :guilabel:`Australia - Payroll with Accounting`
      - `l10n_au_hr_payroll_account`
      - Contains the necessary accounting data for the Australian payroll rules. It is installed
        automatically when the :ref:`Payroll Entries option <payroll-accounting>` is enabled.
    * - :guilabel:`Employment Hero Payroll`
      - `l10n_employment_hero`
-     - Synchronizes all pay runs from :ref:`Employment Hero <payroll/l10n_au/employment-hero>`
-       with Odoo's journal entries.
+     - Synchronizes all pay runs from :ref:`Employment Hero <employment_hero/configuration>` with
+       Odoo's journal entries.
 
 .. note::
    It is not possible for users of the Australian fiscal localization to deactivate :doc:`two-factor
@@ -177,7 +178,8 @@ default.
 Deferred GST
 ~~~~~~~~~~~~
 
-Odoo allows companies under the `Deferred Goods and Services Tax (DGST) scheme <https://www.ato.gov.au/businesses-and-organisations/gst-excise-and-indirect-taxes/gst/in-detail/rules-for-specific-transactions/international-transactions/deferred-gst?=redirected_deferredGSTscheme>`_
+Odoo allows companies under the `Deferred Goods and Services Tax (DGST) scheme
+<https://www.ato.gov.au/businesses-and-organisations/gst-excise-and-indirect-taxes/gst/in-detail/rules-for-specific-transactions/international-transactions/deferred-gst?=redirected_deferredGSTscheme>`_
 to automate their deferred GST flows.
 
 Configuration
@@ -187,8 +189,8 @@ It is recommended to:
 
 - go to :menuselection:`Accounting --> Configuration --> Settings` and set the :guilabel:`Tax Return
   Periodicity` to :guilabel:`monthly` (= monthly BAS); and
-- create a new journal to store all deferred GST entries by going to :menuselection:`Accounting
-  --> Configuration --> Journals --> New`, and selecting :guilabel:`Miscellaneous` as its
+- create a new journal to store all deferred GST entries by going to :menuselection:`Accounting -->
+  Configuration --> Journals --> New`, and selecting :guilabel:`Miscellaneous` as its
   :guilabel:`Type` when configuring it.
 
 By default, a tax (*100% DGST*, inactive by default) and an account (*21340 Deferred GST Liability*)
@@ -226,13 +228,13 @@ the :guilabel:`Account` `21340 Deferred GST Liability` and the deferred GST bala
 :guilabel:`Credit`. To resume the example shown above, we credit $2,000 and save.
 
 .. image:: australia/dgst-balance-credit.png
-   :alt: Creating a journal entry with the DGST account
+   :alt: Creating a journal entry with the DGST account.
 
 An auto-balancing line is created, along with journal items correctly assigning the right values in
 the BAS :guilabel:`Tax Grids`. Sections *G11*, *G18*, *7A*, and *ONLY* are updated correctly.
 
 .. image:: australia/dgst-tax-grids.png
-   :alt: The journal entry with the auto-balancing line and BAS tax grids
+   :alt: The journal entry with the auto-balancing line and BAS tax grids.
 
 After posting the journal entry, the BAS report displays the correct values for each section, along
 with the DGST offset.
@@ -257,7 +259,7 @@ Access the report from the Accounting dashboard by clicking :guilabel:`BAS Repor
 :guilabel:`Miscellaneous Operations` section.
 
 .. image:: australia/bas-report.png
-   :alt: BAS report example
+   :alt: BAS report example.
 
 The base and tax amounts are collected from the **tax grid**, which is pre-configured in the system.
 The tax grid can also be manually set up for any additional special use-case of GST (e.g., wine
@@ -266,18 +268,18 @@ items into the correct tax category. This ensures the BAS report is accurate and
 business's financial activities.
 
 .. image:: australia/gst-grids.png
-   :alt: GST grids example
+   :alt: GST grids example.
 
 Besides the GST sections, the BAS report also includes the **PAYG** tax withheld components (*W1* to
 *W5*, then *summary, section 4*). This integration ensures that all payroll-related withholding
 taxes are accurately captured and reflected within the report.
 
 .. image:: australia/payg.png
-   :alt: PAYG tax withheld and summary of BAS report example
+   :alt: PAYG tax withheld and summary of BAS report example.
 
 The module incorporates built-in rules that facilitate the automatic calculation of taxes for types
 W1 to W5. For a detailed walkthrough and more information on the calculation process for these
-taxes, refer to the :ref:`Payroll section <payroll/l10n_au/payroll>`.
+taxes, refer to the :ref:`Payroll section <payroll/payroll_localizations/au_config>`.
 
 Closing
 *******
@@ -299,7 +301,7 @@ receivable account** need to be set. A notification pops up and redirects the us
 configuration.
 
 .. image:: australia/bas-accounts.png
-   :alt: BAS report tax groups
+   :alt: BAS report tax groups.
 
 Once the GST payable and GST receivable accounts are set up, the BAS report generates an accurate
 journal closing entry automatically, which balances out the GST balance with the GST clearing
@@ -310,7 +312,7 @@ the tax group. The amount to be paid to or received from the ATO can be reconcil
 statement.
 
 .. image:: australia/bas-taxes.png
-   :alt: BAS report tax payment
+   :alt: BAS report tax payment.
 
 .. important::
    The BAS report is not directly submitted to the ATO. Odoo helps you automatically compute the
@@ -325,7 +327,8 @@ Taxable Payments Annual Report (TPAR)
 
 Odoo allows businesses to report payments made to contractors or subcontractors during the financial
 year. This is done by generating a **TPAR**. If you are unsure your business needs this report,
-refer to the `ATO's TPAR web page <https://www.ato.gov.au/businesses-and-organisations/preparing-lodging-and-paying/reports-and-returns/taxable-payments-annual-report>`_.
+refer to the `ATO's TPAR web page
+<https://www.ato.gov.au/businesses-and-organisations/preparing-lodging-and-paying/reports-and-returns/taxable-payments-annual-report>`_.
 
 Access the TPAR in Odoo by going to :menuselection:`Accounting --> Reporting --> Taxable Payments
 Annual Reports (TPAR)`.
@@ -338,13 +341,13 @@ the TPAR. To do so, go to :menuselection:`Accounting --> Vendors --> Vendors`, s
 and set a :guilabel:`Fiscal Position` under the :guilabel:`Sales & Purchase` tab.
 
 .. image:: australia/tpar-fiscal-positions.png
-   :alt: TPAR fiscal position on a vendor
+   :alt: TPAR fiscal position on a vendor.
 
 Based on the chosen fiscal position, the correct tax mapping will apply to the contractor's vendor
 bills.
 
 .. image:: australia/tpar-vendor-bill-tax.png
-   :alt: TPAR vendor bill tax mapping
+   :alt: TPAR vendor bill tax mapping.
 
 The TPAR includes the following information from contractors:
 
@@ -366,7 +369,7 @@ accessed by going to :menuselection:`Accounting --> Vendors --> Payments`, selec
 and clicking :menuselection:`Print --> Payment Receipt`.
 
 .. image:: australia/remittance.png
-   :alt: Remittance advice example
+   :alt: Remittance advice example.
 
 .. _australia/peppol:
 
@@ -377,13 +380,13 @@ Peppol
 ~~~~~~
 
 Odoo is compliant with Australia's `Peppol requirements
-<https://peppol.org/learn-more/country-profiles/australia/>`_. Set up your customers and vendors
-by going to :menuselection:`Accounting --> Customers --> Customers` or :menuselection:`Vendors -->
+<https://peppol.org/learn-more/country-profiles/australia/>`_. Set up your customers and vendors by
+going to :menuselection:`Accounting --> Customers --> Customers` or :menuselection:`Vendors -->
 Vendors`, selecting one, clicking the :guilabel:`Accounting` tab, and configuring the
 :guilabel:`Electronic Invoicing` section as needed.
 
 .. image:: australia/partner-einvoicing.png
-   :alt: Electronic invoicing settings for a partner
+   :alt: Electronic invoicing settings for a partner.
 
 .. important::
    Validating an invoice or credit note for a partner on the Peppol network will download a
@@ -439,7 +442,7 @@ section:
 - :guilabel:`APCA Identification Number`: 6-digit number provided by the bank. Contact your bank or
   check its website if you do not know it.
 - :guilabel:`Include Self Balancing Transaction`: selecting this option adds an additional
-   "self-balancing" transaction to the end of the ABA file, which is required by some banks.
+  "self-balancing" transaction to the end of the ABA file, which is required by some banks.
 
 Customers' and vendors' bank accounts
 *************************************
