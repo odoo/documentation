@@ -261,3 +261,4 @@ When they click the link, they are redirected to a new chat window.
    livechat/chatbots
    livechat/reports
    livechat/participate
+   livechat/information
