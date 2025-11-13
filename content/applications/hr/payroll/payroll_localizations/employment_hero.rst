@@ -34,10 +34,8 @@ Configuration
      to the documentation specific to the localization.
 
      .. note::
-        Employment hero is available for :ref:`Australia <payroll/l10n_au/employment-hero>`,
-        :ref:`Malaysia <malaysia/employment-hero>`,
-        :ref:`New Zealand <new-zealand/employment-hero>`,
-        :ref:`Singapore <singapore/employment-hero>`,
+        Employment hero is available for :ref:`Malaysia <malaysia/employment-hero>`, :ref:`New
+        Zealand <new-zealand/employment-hero>`, :ref:`Singapore <singapore/employment-hero>`,
         and the :ref:`United Kingdom <localization/united-kingdom/employment-hero>`.
 
    - The **Business ID** can be found in the Employment Hero URL. (i.e., `189241`)
