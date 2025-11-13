@@ -8,6 +8,7 @@ Odoo Online version 19.1
 ========================
 
 - New API for ir.config_parameter. See `#223180 <https://github.com/odoo/odoo/pull/223180>`_.
+- New API to build SQL. See `#234156 <https://github.com/odoo/odoo/pull/234156>`_.
 
 Odoo version 19.0
 =================
