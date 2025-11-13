@@ -2,19 +2,20 @@
 Performance management
 ======================
 
-Odoo integrates a variety of tools to analyze and improve the performance of your eCommerce
+Odoo integrates a variety of tools to analyze and improve the performance of your e-commerce
 website.
 
 Data monitoring
 ===============
 
-**Website** allows monitoring and analysis of the sales performance of your eCommerce. To access the
-**reporting view**, go to :menuselection:`Website --> Reporting --> eCommerce`. This dashboard helps
-you monitor everything related to sales, such as sales performance per product, category, day, etc.
+**Website** allows monitoring and analysis of the sales performance of your e-commerce. To access
+the **reporting view**, go to :menuselection:`Website --> Reporting --> eCommerce`. This dashboard
+helps you monitor everything related to sales, such as sales performance per product, category, day,
+etc.
 
 .. image:: performance/reporting.png
    :align: center
-   :alt: Performance reporting of eCommerce
+   :alt: Performance reporting of e-commerce
 
 By clicking :guilabel:`Measures`, you can select the type of measurement used, such as:
 

@@ -16,7 +16,7 @@ While B2C businesses sell directly to the end consumer with a :ref:`tax-included
 <ecommerce-price-management-tax-display>` price, B2B businesses usually :ref:`exclude taxes
 <ecommerce-price-management-tax-display>` and may even prefer to hide prices altogether, showcasing
 only their products instead.
-To configure a B2B-specific ecommerce shop, make sure the :ref:`Tax-Excluded
+To configure a B2B-specific online shop, make sure the :ref:`Tax-Excluded
 <ecommerce/prices/taxes>` option is enabled, and complete the configuration to :ref:`hide the
 pricing <ecommerce/prices/hide-prices>`.
 
