@@ -13,7 +13,7 @@ Product comparison
 ==================
 
 The :icon:`fa-exchange` (:guilabel:`Add to compare`) button allows website visitors to compare
-products based on their :ref:`attributes <ecommerce/products/product-variants>`. Customers can
+products based on their :ref:`attributes <ecommerce/categories_variants/attributes>`. Customers can
 click this button to select the products they wish to compare, then click :guilabel:`Compare` in
 the pop-up window at the bottom of the page to see the comparison summary.
 
@@ -139,7 +139,7 @@ the ecommerce products.
           :alt: Create a new ribbon in the website editor
 
    - It is also possible to add ribbons for specific :ref:`product variants
-     <ecommerce/products/product-variants>`. To do so, go to :menuselection:`Website -->
+     <ecommerce/categories_variants/product-variants>`. To do so, go to :menuselection:`Website -->
      eCommerce --> Products` and select a product. Click the :guilabel:`Variants` smart button,
      choose a variant, and add a ribbon in the :guilabel:`Variant Ribbon` field of the
      :guilabel:`Sales` section.
