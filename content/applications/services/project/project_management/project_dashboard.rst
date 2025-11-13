@@ -67,8 +67,8 @@ The following smart buttons are displayed on the top right of the project dashbo
 Milestones
 ----------
 
-This section is only visible if :doc:`milestones </applications/sales/sales/invoicing/milestone>`
-have been enabled in the project you're browsing: go to :guilabel:`Project`, click the
+This section is only visible if :doc:`milestones <../project_management/project_milestones>` have
+been enabled in the project you're browsing: go to :guilabel:`Project`, click the
 :icon:`fa-ellipsis-v` (:guilabel:`vertical ellipsis`) icon on one of your projects, and click on
 :guilabel:`Settings`. Click on the :guilabel:`Settings` tab, look for :guilabel:`Tasks Management`
 and make sure :guilabel:`Milestones` is enabled.
