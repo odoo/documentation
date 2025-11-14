@@ -625,6 +625,13 @@ Float (`float`)
 
             <field name="int_value" options="{'format': false}" />
 
+    - `hide_trailing_zeros`: hide zeros to the right of the last non-zero digit,
+      e.g. `1.20` becomes `1.2` (`false` by default).
+
+        .. code-block:: xml
+
+            <field name="int_value" options="{'hide_trailing_zeros': true}" />
+
 Time (`float_time`)
     The goal of this widget is to display properly a float value that represents
     a time interval (in hours).  So, for example, `0.5` should be formatted as `0:30`,
@@ -786,6 +793,13 @@ Monetary (`monetary`)
         .. code-block:: xml
 
             <field name="value" widget="monetary" options="{'currency_field': 'currency_id'}" />
+
+    - `hide_trailing_zeros`: hide zeros to the right of the last non-zero digit,
+      e.g. `1.20` becomes `1.2` (`false` by default).
+
+        .. code-block:: xml
+
+            <field name="int_value" options="{'hide_trailing_zeros': true}" />
 
 Text (`text`)
     This is the default field type for fields of type `text`.
