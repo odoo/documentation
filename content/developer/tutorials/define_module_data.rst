@@ -25,6 +25,9 @@ On top of technical data, business data can be defined, e.g. countries, currenci
 as well as complete country localization (legal reports, tax definitions, chart of account), and much
 more...
 
+
+.. _tutorials/define_module_data/demo_data:
+
 Demo Data
 ---------
 
