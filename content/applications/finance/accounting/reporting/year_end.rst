@@ -2,13 +2,13 @@
 Year-end closing
 ================
 
-Year-end closing is vital for maintaining financial accuracy, complying with regulations, making
+Year-end closing is essential for maintaining financial accuracy, complying with regulations, making
 informed decisions, and ensuring transparency in reporting.
 
 .. seealso::
    :doc:`Tax return <tax_returns>`
 
-.. _year-end/fiscal-years:
+.. _accounting/year-end/fiscal-years:
 
 Fiscal years
 ============
@@ -28,30 +28,34 @@ If the period lasts *more* than or *less* than 12 months, enable :guilabel:`Fisc
    Once the set fiscal period is over, Odoo automatically reverts to the default periodicity,
    considering the value specified in the :guilabel:`Last Day` field.
 
-.. _year-end/checklist:
+.. _accounting/year-end/checklist:
 
 Year-end checklist
 ==================
 
-.. _year-end/before-closure:
+.. _accounting/year-end/before-closure:
 
 Before closure
 --------------
 
 Before closing a fiscal year, ensure that everything is accurate and up-to-date:
 
-- Make sure all bank accounts are fully :doc:`reconciled <../bank/reconciliation>` up to year-end,
+- Make sure all bank accounts are fully :doc:`reconciled <../bank/reconciliation>` up to year-end
   and confirm that the ending book balances match the bank statement balances.
-- Verify that all :doc:`customer invoices <../customer_invoices>` have been created and
-  confirmed and that there are no draft invoices.
-- Confirm that all :doc:`vendor bills  <../vendor_bills>` have been created and confirmed.
+- Confirm that all :doc:`customer invoices <../customer_invoices>` and :doc:`vendor bills
+  <../vendor_bills>` have been created and all draft entries have been either confirmed or
+  cancelled, as needed.
 - Ensure the accuracy of all :doc:`expenses <../../expenses>` and validate them.
 - Check that all :doc:`received payments <../payments>` have been encoded and confirmed.
 - Close all :ref:`suspense accounts <accounting/journals/bank-cash-cc>`.
+- Ensure :doc:`loans <../bank/loans>` are properly registered for automatic amortization
+  calculations.
+- Review overdue payables and receivables aged over 60 days, and assess whether a provision for
+  uncertain liabilities or an allowance for doubtful accounts is required.
 - Book all :doc:`depreciation <../vendor_bills/assets>` and :doc:`deferred revenue
   <../customer_invoices/deferred_revenues>` entries.
 
-.. _year-end/closing-a-fiscal-year:
+.. _accounting/year-end/closing-a-fiscal-year:
 
 Closing a fiscal year
 ---------------------
@@ -62,7 +66,7 @@ Then, to close the fiscal year:
   correct.
 - Reconcile all accounts on the :ref:`balance sheet <accounting/reporting/balance-sheet>`:
 
-  - Update the bank balances in Odoo according to the actual balances found on the bank statements.
+  - Update the bank balances in Odoo to reflect the actual balances as per the bank statements.
   - Reconcile all transactions in the cash and bank accounts by running the :ref:`aged receivables
     <accounting/reporting/aged-receivable>` and :ref:`aged payables
     <accounting/reporting/aged-payable>` reports.
@@ -87,13 +91,14 @@ loans, bank accounts, prepayments, sales tax statements) to compare them against
 recorded in Odoo.
 
 .. tip::
-   As part of this process, setting a :ref:`Lock Everything <year-end/lock-everything-date>` date to
-   the last day (inclusive) of the preceding fiscal year is good practice. This ensures that journal
-   entries with an accounting date on or before the lock date cannot be created or modified during
-   the audit. Users with *administrator* access rights can still create and edit entries if an
-   exception is configured.
+   As part of this process, setting a :ref:`Lock Everything
+   <accounting/year-end/lock-everything-date>` date to the last day (inclusive) of the preceding
+   fiscal year is good practice. This ensures that journal entries with an accounting date on or
+   before the lock date cannot be created or modified during the audit. Users with *administrator*
+   access rights can still create and edit entries if an :ref:`exception is configured
+   <accounting/year-end/lock-date-exception>`.
 
-.. _year-end/lock-everything-date:
+.. _accounting/year-end/lock-everything-date:
 
 Lock everything date
 ~~~~~~~~~~~~~~~~~~~~
@@ -108,9 +113,9 @@ Dates`. In the :guilabel:`Lock Journal Entries` window, set the :guilabel:`Lock 
 :guilabel:`Save`.
 
 After setting the :guilabel:`Lock Everything` date, an :ref:`exception
-<year-end/lock-date-exception>` can be made if a modification is necessary.
+<accounting/year-end/lock-date-exception>` can be made if a modification is necessary.
 
-.. _year-end/lock-date-exception:
+.. _accounting/year-end/lock-date-exception:
 
 Lock date exception
 *******************
@@ -133,7 +138,7 @@ Accounting app can create exceptions. To do so:
    :guilabel:`Hard Lock` date, which is irreversible to ensure inalterability and to meet accounting
    requirements in certain countries.
 
-.. _year-end/current-year-earnings:
+.. _accounting/year-end/current-year-earnings:
 
 Current year's earnings
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -158,3 +163,103 @@ balance. If so, a :guilabel:`Hard Lock date` can be set to the last day of the f
    compliance is not applicable, setting this field may not be necessary. However, if required, the
    date should only be set once it is confirmed to be correct, as it **cannot be changed or
    overridden**, regardless of access rights.
+
+.. _accounting/year-end/annual-closing:
+
+Annual closing
+==============
+
+To complete the fiscal year-end process and finalize the annual closing, go to the Accounting
+dashboard and click :guilabel:`Tax Returns` on the :guilabel:`Tax Returns` journal from the
+Accounting dashboard. Alternatively, go to :menuselection:`Accounting --> Accounting --> Tax
+Returns`.
+
+This view displays a chronological list of all pending returns including :ref:`tax returns
+<accounting/tax-returns/vat-report>`, :ref:`advance payments
+<accounting/tax-returns/advance-payments>` (based on the :doc:`fiscal localization
+<../../fiscal_localizations>`), and annual closings. A pending :guilabel:`Annual Closing` follows
+two steps: :ref:`review <accounting/year-end/annual-closing/review>` and :ref:`submit
+<accounting/year-end/annual-closing/submit>`. The :guilabel:`Annual Closing` item includes:
+
+- A period (year).
+- A deadline date.
+- The related company and :ref:`branch(es) <general/branches>`, if applicable.
+- Action steps, such as :ref:`Review <accounting/year-end/annual-closing/review>` and :ref:`Submit
+  <accounting/year-end/annual-closing/submit>`, which turn green when completed.
+- Action buttons for key tasks.
+- A :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` menu for additional options.
+
+.. note::
+   - Before the annual closing is reviewed, the number of :guilabel:`Pending` or :guilabel:`Passed`
+     closing validation checks is displayed in red or green, respectively.
+   - If the :guilabel:`Deadline` date has passed, it appears in red.
+
+.. _accounting/year-end/annual-closing/review:
+
+Review
+------
+
+To start reviewing an annual closing, click the annual closing line. The annual closing checks view
+displays the following, depending on the :doc:`fiscal localization <../../fiscal_localizations>`:
+
+  - :guilabel:`Aged payables per partner`: Review payables without a partner.
+  - :guilabel:`Aged receivables per partner`: Review receivables without a partner.
+  - :guilabel:`Bank Reconciliation`: Reconcile all bank account transactions up to year-end.
+  - :guilabel:`Deferred Entries`: Ensure start and end dates are correctly set on bills and
+    invoices.
+  - :guilabel:`Earnings Allocation`: After adjustments, transfer the undistributed profits/losses to
+    an equity account.
+  - :guilabel:`Fixed Assets`: Ensure assets are properly registered for automatic depreciation
+    calculation.
+  - :guilabel:`Loans`: Ensure loans are properly registered for automatic amortization calculations.
+  - :guilabel:`Manual Adjustments`: Complete any necessary manual adjustments and internal checks.
+  - :guilabel:`No draft entries`: Review and post draft invoices, bills, and entries in the period,
+    or change their accounting date.
+  - :guilabel:`Overdue payables`: Review overdue payables aged over 60 days and assess the need for
+    an allowance for uncertain liabilities.
+  - :guilabel:`Overdue receivables`: Review overdue receivables aged over 60 days and assess the
+    need for an allowance for doubtful accounts or expected credit loss provision, as per IFRS 9
+    guidelines.
+  - :guilabel:`Total Receivables`: Verify that the total aged receivables equals the customer
+    account balance.
+  - :guilabel:`Total payables`: Verify that the total aged payables equals the vendor account
+    balance.
+
+Some of the checks are performed automatically, while others serve as reminders to review essential
+tasks. Each check card is either labeled as:
+
+- :guilabel:`Reviewed` (highlighted in green): The check has passed.
+- :guilabel:`To review` (highlighted in grey): Action is required before the check can be manually
+  marked as :guilabel:`Reviewed` or :guilabel:`Supervised`.
+- :guilabel:`Anomaly` (highlighted in red): The automatic check detects an issue. There are two
+  options:
+
+  - Click the failed check's card to fix the issue.
+  - Click :guilabel:`Anomaly` and select :guilabel:`Reviewed` or :guilabel:`Supervised` to pass the
+    check without fixing the issue.
+
+Once all closing validation checks have passed, either labeled as :guilabel:`Reviewed` or
+:guilabel:`Supervised`, click :guilabel:`Validate` to complete the :guilabel:`Review` step. The
+annual closing can then be :ref:`submitted <accounting/year-end/annual-closing/submit>`.
+
+.. tip::
+   - To add customized checks, activate :ref:`developer mode <developer-mode>`, and go to
+     :menuselection:`Accounting --> Configuration --> Check`. Then, click :guilabel:`New` and
+     complete the necessary fields.
+   - All check status changes are logged in the chatter.
+
+.. _accounting/year-end/annual-closing/submit:
+
+Submit
+------
+
+Once a tax return has completed the :ref:`Review <accounting/tax-returns/vat-return-review>` step,
+click :guilabel:`Submit`.
+
+If a :guilabel:`Submission Instructions` pop-up window appears, depending on the :doc:`fiscal
+localization <../../fiscal_localizations>`, follow the local :guilabel:`Instructions`, and click
+:guilabel:`Mark as Submitted`.
+
+.. tip::
+   To review checks before submitting the annual closing, click the :icon:`fa-ellipsis-v`
+   :guilabel:`(vertical ellipsis)` icon on the annual closing line and select :guilabel:`Reset`.

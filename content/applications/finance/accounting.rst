@@ -121,9 +121,9 @@ accounting and reporting rules, including the following:
   :doc:`main currency <accounting/get_started/multi_currency>`, and :doc:`taxes <accounting/taxes>`
   apply to all branches.
 - Branches can manage their own dedicated journals and related records.
-- The parent company manages a common :ref:`fiscal period <year-end/fiscal-years>`, so its
-  :ref:`lock and closing dates <year-end/lock-everything-date>` apply across all branches. However,
-  branches may set earlier lock dates if needed.
+- The parent company manages a common :ref:`fiscal period <accounting/year-end/fiscal-years>`, so
+  its :ref:`lock and closing dates <accounting/year-end/lock-everything-date>` apply across all
+  branches. However, branches may set earlier lock dates if needed.
 - The parent company can access all :doc:`reports <accounting/reporting>`, :doc:`invoices
   <accounting/customer_invoices>`, :doc:`bills <accounting/vendor_bills>`, etc., from its branches,
   while each branch can only view its own data.
