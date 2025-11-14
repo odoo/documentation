@@ -73,6 +73,8 @@ After the field is added, click the |AI| icon to refresh the field value.
    .. image:: fields/warning.png
       :alt: A warning message indicating the AI was unable to complete the request.
 
+.. _ai/add-a-new-field/properties:
+
 Add via edit properties
 -----------------------
 
