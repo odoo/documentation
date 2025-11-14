@@ -100,6 +100,33 @@ To replace the original text with the translation, click the block, edit its con
   product's name in the product form). To do so, click the language code (e.g., :guilabel:`EN`) next
   to the text you want to translate and add the translation.
 
+Translate Alt tags on images
+============================
+
+To translate Alt tags on any image, start by defining an Alt tag on the image while in the website's
+default language.
+
+Click on :guilabel:`Edit` and then click on the image.
+On the :guilabel:`Edit` bar, go to the :guilabel:`Image` section and fill in the fields
+:guilabel:`Description` and :guilabel:`tooltip`
+
+To translate the Alt tag, switch to another language (other language than the default one).
+Then Click on :menuselection:`Edit --> Translate` and then click on the image for which you want to
+translate the Alt tag. Click on it again to translate the Alt.
+
+How to translate metadata
+=========================
+
+To translate your metadata in Odoo, navigate to the website in the desired language, then click on
+:menuselection:`Site --> Optimize SEO` to adjust the page's metadata by editing different fields
+(Title, Description, and Keywords) to match the language of the page.
+
+.. note::
+  When viewing the website in its default language, you will see all the added keywords,
+  regardless of their language. However, if you switch the website to a different language, such as
+  French, you will only see the keywords relevant to that language. Filtering all keywords by each
+  language is not possible.
+
 Content visibility by language
 ------------------------------
 
