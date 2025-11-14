@@ -91,7 +91,7 @@ const VALUATION_JOURNALS = Immutable.fromJSButOrdered({
             COST: { code: 500000, title: "Cost of Goods Sold" },
             PRICE_DIFFERENCE: { code: 530000, title: "Price Difference" },
             INVENTORY_LOSS: { code: 609100, title: "Inventory Loss Expense" },
-            MISC: { code: 609000, title: "Miscellanous Expenses" },
+            MISC: { code: 609000, title: "Miscellaneous Expenses" },
         },
         INITIAL_BALANCE: { code: 0, title: "General Balance for Inventory Initial Value" },
     },
@@ -176,7 +176,7 @@ const VALUATION_ENTRIES = Immutable.fromJSButOrdered({
                 operations: [],
                 explanation: [
                     "In a periodic inventory valuation, goods' receipts are not directly posted in the accounting.",
-                    "The inventory value is updated when entries are generated from stock valuation report at closing.",
+                    "The inventory value is updated when entries are generated from Inventory Valuation report at closing.",
                 ],
                 configuration: [],
             },
@@ -186,7 +186,7 @@ const VALUATION_ENTRIES = Immutable.fromJSButOrdered({
                     "In a perpetual inventory valuation, goods receipts are not directly posted in the accounting.",
                     "The inventory value is updated:",
                     "- when the invoice/bill is posted",
-                    "- when entries are generated from stock valuation report at closing",
+                    "- when entries are generated from Inventory Valuation report at closing",
                 ],
                 configuration: [],
             },
@@ -196,7 +196,7 @@ const VALUATION_ENTRIES = Immutable.fromJSButOrdered({
                 operations: [],
                 explanation: [
                     "In a periodic inventory valuation, goods' receipts are not directly posted in the accounting.",
-                    "The inventory value is updated when entries are generated from stock valuation report at closing.",
+                    "The inventory value is updated when entries are generated from Inventory Valuation report at closing.",
                 ],
                 configuration: [],
             },
@@ -206,7 +206,7 @@ const VALUATION_ENTRIES = Immutable.fromJSButOrdered({
                     "In a perpetual inventory valuation, goods receipts are not directly posted in the accounting.",
                     "The inventory value is updated:",
                     "- when the invoice/bill is posted",
-                    "- when entries are generated from stock valuation report at closing",
+                    "- when entries are generated from Inventory Valuation report at closing",
                 ],
                 configuration: [],
             },
@@ -278,7 +278,7 @@ const VALUATION_ENTRIES = Immutable.fromJSButOrdered({
                 operations: [],
                 explanation: [
                     "In a periodic inventory valuation, goods' receipts are not directly posted in the accounting.",
-                    "The inventory value is updated when entries are generated from stock valuation report at closing.",
+                    "The inventory value is updated when entries are generated from Inventory Valuation report at closing.",
                 ],
                 configuration: [],
             },
@@ -288,7 +288,7 @@ const VALUATION_ENTRIES = Immutable.fromJSButOrdered({
                     "In a perpetual inventory valuation, goods receipts are not directly posted in the accounting.",
                     "The inventory value is updated:",
                     "- when the invoice/bill is posted",
-                    "- when entries are generated from stock valuation report at closing",
+                    "- when entries are generated from Inventory Valuation report at closing",
                 ],
                 configuration: [],
             },
@@ -298,7 +298,7 @@ const VALUATION_ENTRIES = Immutable.fromJSButOrdered({
                 operations: [],
                 explanation: [
                     "In a periodic inventory valuation, goods' receipts are not directly posted in the accounting.",
-                    "The inventory value is updated when entries are generated from stock valuation report at closing.",
+                    "The inventory value is updated when entries are generated from Inventory Valuation report at closing.",
                 ],
                 configuration: [],
             },
@@ -308,7 +308,7 @@ const VALUATION_ENTRIES = Immutable.fromJSButOrdered({
                     "In a perpetual inventory valuation, goods receipts are not directly posted in the accounting.",
                     "The inventory value is updated:",
                     "- when the invoice/bill is posted",
-                    "- when entries are generated from stock valuation report at closing",
+                    "- when entries are generated from Inventory Valuation report at closing",
                 ],
                 configuration: [],
             },
@@ -380,7 +380,7 @@ const VALUATION_ENTRIES = Immutable.fromJSButOrdered({
                 operations: [],
                 explanation: [
                     "In a periodic inventory valuation, goods shipments are not directly posted in the accounting.",
-                    "The inventory value is updated when entries are generated from stock valuation report at closing.",
+                    "The inventory value is updated when entries are generated from Inventory Valuation report at closing.",
                 ],
                 configuration: [],
             },
@@ -390,7 +390,7 @@ const VALUATION_ENTRIES = Immutable.fromJSButOrdered({
                     "In a perpetual inventory valuation, goods shipments are not directly posted in the accounting.",
                     "The inventory value is updated:",
                     "- when the invoice/bill is posted",
-                    "- when entries are generated from stock valuation report at closing",
+                    "- when entries are generated from Inventory Valuation report at closing",
                 ],
                 configuration: [],
             },
@@ -400,7 +400,7 @@ const VALUATION_ENTRIES = Immutable.fromJSButOrdered({
                 operations: [],
                 explanation: [
                     "In a periodic inventory valuation, goods shipments are not directly posted in the accounting.",
-                    "The inventory value is updated when entries are generated from stock valuation report at closing.",
+                    "The inventory value is updated when entries are generated from Inventory Valuation report at closing.",
                 ],
                 configuration: [],
             },
@@ -410,7 +410,7 @@ const VALUATION_ENTRIES = Immutable.fromJSButOrdered({
                     "In a perpetual inventory valuation, goods shipments are not directly posted in the accounting.",
                     "The inventory value is updated:",
                     "- when the invoice/bill is posted",
-                    "- when entries are generated from stock valuation report at closing",
+                    "- when entries are generated from Inventory Valuation report at closing",
                 ],
                 configuration: [],
             },
@@ -490,7 +490,7 @@ const VALUATION_ENTRIES = Immutable.fromJSButOrdered({
                 operations: [],
                 explanation: [
                     "In a periodic inventory valuation manufacturing orders are not directly posted in the accounting.",
-                    "The inventory value is updated when entries are genarted from stock valuation report at closing.",
+                    "The inventory value is updated when entries are generated from Inventory Valuation report at closing.",
                 ],
                 configuration: [],
             },
@@ -508,7 +508,7 @@ const VALUATION_ENTRIES = Immutable.fromJSButOrdered({
                 operations: [],
                 explanation: [
                     "In a periodic inventory valuation manufacturing orders are not directly posted in the accounting.",
-                    "The inventory value is updated when entries are genarted from stock valuation report at closing.",
+                    "The inventory value is updated when entries are generated from Inventory Valuation report at closing.",
                 ],
                 configuration: [],
             },
@@ -535,7 +535,7 @@ const VALUATION_ENTRIES = Immutable.fromJSButOrdered({
                 operations: [],
                 explanation: [
                     "In a periodic inventory valuation, inventory adjustments are not directly posted in the accounting.",
-                    "The inventory value is updated when entries are generated from stock valuation report at closing.",
+                    "The inventory value is updated when entries are generated from Inventory Valuation report at closing.",
                 ],
                 configuration: [],
             },
@@ -553,7 +553,7 @@ const VALUATION_ENTRIES = Immutable.fromJSButOrdered({
                 operations: [],
                 explanation: [
                     "In a periodic inventory valuation, inventory adjustments are not directly posted in the accounting.",
-                    "The inventory value is updated when entries are generated from stock valuation report at closing.",
+                    "The inventory value is updated when entries are generated from Inventory Valuation report at closing.",
                 ],
                 configuration: [],
             },
@@ -592,7 +592,7 @@ const VALUATION_ENTRIES = Immutable.fromJSButOrdered({
  */
 const VALUATION_REVIEWS = Immutable.fromJSButOrdered({
     unreceived: {
-        title: "Invoices not received",
+        title: "Bill To Receive",
         continental: {
             periodic: {
                 operations: [
@@ -618,7 +618,7 @@ const VALUATION_REVIEWS = Immutable.fromJSButOrdered({
                 ],
                 configuration: [
                     "Expense Account: defined on the product/product category",
-                    "GRNI Account: defined when generating accrual entries from 'Invoices not received'",
+                    "GRNI Account: defined when generating accrual entries from 'Bill To Receive'",
                 ],
             },
             perpetual: {
@@ -646,7 +646,7 @@ const VALUATION_REVIEWS = Immutable.fromJSButOrdered({
                 ],
                 configuration: [
                     "Expense Account: defined on the product/product category",
-                    "GRNI Account: defined when generating accrual entries from 'Invoices not received'",
+                    "GRNI Account: defined when generating accrual entries from 'Bill To Receive'",
                 ],
             },
         },
@@ -675,7 +675,7 @@ const VALUATION_REVIEWS = Immutable.fromJSButOrdered({
                 ],
                 configuration: [
                     "Expense Account: defined on the product/product category",
-                    "GRNI Account: defined when generating accrual entries from 'Invoices not received'",
+                    "GRNI Account: defined when generating accrual entries from 'Bill To Receive'",
                 ],
             },
             perpetual: {
@@ -699,20 +699,20 @@ const VALUATION_REVIEWS = Immutable.fromJSButOrdered({
                         " when cash is received / paid.",
                     "They are reverted after the period we are closing.",
                     "From a stock point of view, it also enables us to specify a part of the origin of stock variations (between" +
-                        " Accounting Stock and Inventory Stock) recorded from the stock valuation report.",
+                        " Accounting Stock and Inventory Stock) recorded from the Inventory Valuation report.",
                     "Related operations:",
                     "1) Supplier Goods Reception (PO $50, Bill $50) is done but no bill is received yet",
                     "2) Supplier Goods Reception (PO $48, Bill $50) is done but no bill is received yet",
                 ],
                 configuration: [
                     "Inventory Variation Account: defined on the used Stock Account for the product category",
-                    "GRNI Account: defined when generating accrual entries from 'Invoices not received'",
+                    "GRNI Account: defined when generating accrual entries from 'Bill To Receive'",
                 ],
             },
         },
     },
     uninvoiced: {
-        title: "Invoices to be issued",
+        title: "Invoices To Be Issued",
         continental: {
             periodic: {
                 operations: [
@@ -731,7 +731,7 @@ const VALUATION_REVIEWS = Immutable.fromJSButOrdered({
                 ],
                 configuration: [
                     "Revenue Account: defined on the product/product category",
-                    "Uninvoiced Receivable Account: defined when generating accrual entries from 'Invoices to be issued'",
+                    "Uninvoiced Receivable Account: defined when generating accrual entries from 'Invoices To Be Issued'",
                 ],
             },
             perpetual: {
@@ -752,7 +752,7 @@ const VALUATION_REVIEWS = Immutable.fromJSButOrdered({
                 ],
                 configuration: [
                     "Revenue Account: defined on the product/product category",
-                    "Uninvoiced Receivable Account: defined when generating accrual entries from 'Invoices to be issued'",
+                    "Uninvoiced Receivable Account: defined when generating accrual entries from 'Invoices To Be Issued'",
                 ],
             },
         },
@@ -775,7 +775,7 @@ const VALUATION_REVIEWS = Immutable.fromJSButOrdered({
                 ],
                 configuration: [
                     "Revenue Account: defined on the product/product category",
-                    "Uninvoiced Receivable Account: defined when generating accrual entries from 'Invoices to be issued'",
+                    "Uninvoiced Receivable Account: defined when generating accrual entries from 'Invoices To Be Issued'",
                 ],
             },
             perpetual: {
@@ -798,14 +798,14 @@ const VALUATION_REVIEWS = Immutable.fromJSButOrdered({
                         " that revenues/expenses are recognized in the period in which they are earned/incurred, regardless of" +
                         " when cash is received/paid.",
                     "From a stock point of view, it also enables us to specify a part of the origin of stock variations (between" +
-                        " Accounting Stock and Inventory Stock) recorded from the stock valuation report.",
+                        " Accounting Stock and Inventory Stock) recorded from the Inventory Valuation report.",
                     "They are reverted after the period we are closing.",
                     "Related operation:",
                     "Customer Shipping (SO $100, Invoice $100, Good Value $50) is done but no invoice is sent yet",
                 ],
                 configuration: [
                     "Inventory Variation Account: defined on the used Stock Account for the product category",
-                    "Uninvoiced Receivable Account: defined when generating accrual entries from 'Invoices to be issued'",
+                    "Uninvoiced Receivable Account: defined when generating accrual entries from 'Invoices To Be Issued'",
                     "Revenue Account: defined on the product/product category",
                     "Expense/COGS Account: defined on the product/product category",
                 ],
@@ -813,7 +813,7 @@ const VALUATION_REVIEWS = Immutable.fromJSButOrdered({
         },
     },
     prepaid: {
-        title: "Prepaid Expenses",
+        title: "Billed Not Received",
         continental: {
             periodic: {
                 operations: [
@@ -831,7 +831,7 @@ const VALUATION_REVIEWS = Immutable.fromJSButOrdered({
                       except:  ['supplier_reception_extra'] },
                 ],
                 explanation: [
-                    "Prepaid expenses are journal entries made during closing when a supplier bill is received before goods" +
+                    "Billed Not Received are journal entries made during closing when a supplier bill is received before goods" +
                         " or services are received, so the amount is recorded as an asset until the expense is recognized.",
                     "Related operations:",
                     "1) Supplier Goods Reception (PO $50, Bill $50) is not done but the bill is received",
@@ -839,7 +839,7 @@ const VALUATION_REVIEWS = Immutable.fromJSButOrdered({
                 ],
                 configuration: [
                     "Expense Account: defined on the product/product category",
-                    "Prepaid Expense Account: defined when generating entries from 'Prepaid Expenses'",
+                    "Prepaid Expense Account: defined when generating entries from 'Billed Not Received'",
                 ],
             },
             perpetual: {
@@ -858,7 +858,7 @@ const VALUATION_REVIEWS = Immutable.fromJSButOrdered({
                       except:  ['supplier_reception_extra'] },
                 ],
                 explanation: [
-                    "Prepaid expenses are journal entries made during closing when a supplier bill is received before goods" +
+                    "Billed Not Received are journal entries made during closing when a supplier bill is received before goods" +
                         " or services are received, so the amount is recorded as an asset until the expense is recognized.",
                     "Related operations:",
                     "1) Supplier Goods Reception (PO $50, Bill $50) is not done but the bill is received",
@@ -866,7 +866,7 @@ const VALUATION_REVIEWS = Immutable.fromJSButOrdered({
                 ],
                 configuration: [
                     "Expense Account: defined on the product/product category",
-                    "Prepaid Expense Account: defined when generating entries from 'Prepaid Expenses'",
+                    "Prepaid Expense Account: defined when generating entries from 'Billed Not Received'",
                 ],
             },
         },
@@ -887,7 +887,7 @@ const VALUATION_REVIEWS = Immutable.fromJSButOrdered({
                       except:  ['supplier_reception_extra'] },
                 ],
                 explanation: [
-                    "Prepaid expenses are journal entries made during closing when a supplier bill is received before goods" +
+                    "Billed Not Received are journal entries made during closing when a supplier bill is received before goods" +
                         " or services are received, so the amount is recorded as an asset until the expense is recognized.",
                     "Related operations:",
                     "1) Supplier Goods Reception (PO $50, Bill $50) is not done but the bill is received",
@@ -895,7 +895,7 @@ const VALUATION_REVIEWS = Immutable.fromJSButOrdered({
                 ],
                 configuration: [
                     "Expense Account: defined on the product/product category",
-                    "Prepaid Expense Account: defined when generating entries from 'Prepaid Expenses'",
+                    "Prepaid Expense Account: defined when generating entries from 'Billed Not Received'",
                 ],
             },
             perpetual: {
@@ -914,23 +914,23 @@ const VALUATION_REVIEWS = Immutable.fromJSButOrdered({
                       except:  ['supplier_reception_extra'] },
                 ],
                 explanation: [
-                    "Prepaid expenses are journal entries made during closing when a supplier bill is received before goods" +
+                    "Billed Not Received are journal entries made during closing when a supplier bill is received before goods" +
                         " or services are received, so the amount is recorded as an asset until the expense is recognized.",
                     "From a stock point of view, it also enables us to specify a part of the origin of stock variations (between" +
-                        " Accounting Stock and Inventory Stock) recorded from the stock valuation report.",
+                        " Accounting Stock and Inventory Stock) recorded from the Inventory Valuation report.",
                     "Related operations:",
                     "1) Supplier Goods Reception (PO $50, Bill $50) is not done but the bill is received",
                     "2) Supplier Goods Reception (PO $48, Bill $50) is not done but the bill is received",
                 ],
                 configuration: [
                     "Inventory Variation Account: defined on the used Stock Account for the product category",
-                    "Prepaid Expense Account: defined when generating entries from 'Prepaid Expenses'",
+                    "Prepaid Expense Account: defined when generating entries from 'Billed Not Received'",
                 ],
             },
         },
     },
     deferred: {
-        title: "Deferred Revenues",
+        title: "Invoiced Not Delivered",
         continental: {
             periodic: {
                 operations: [
@@ -942,7 +942,7 @@ const VALUATION_REVIEWS = Immutable.fromJSButOrdered({
                       except:  ['customer_shipping'] },
                 ],
                 explanation: [
-                    "Deferred revenues are journal entries made during closing when an invoice has been issued but goods or" +
+                    "Invoiced Not Delivered are journal entries made during closing when an invoice has been issued but goods or" +
                         " services are not delivered yet, so the amount has to be recorded as a liability until the revenue is earned.",
                     "They are reverted after the period we are closing.",
                     "Related operation:",
@@ -950,7 +950,7 @@ const VALUATION_REVIEWS = Immutable.fromJSButOrdered({
                 ],
                 configuration: [
                     "Revenue Account: defined on the product/product category",
-                    "Deferred Revenue Account: defined when generating accrual entries from 'Deferred Revenues'",
+                    "Deferred Revenue Account: defined when generating accrual entries from 'Invoiced Not Delivered'",
                 ],
             },
             perpetual: {
@@ -963,7 +963,7 @@ const VALUATION_REVIEWS = Immutable.fromJSButOrdered({
                       except:  ['customer_shipping'] },
                 ],
                 explanation: [
-                    "Deferred revenues are journal entries made during closing when an invoice has been issued but goods or" +
+                    "Invoiced Not Delivered are journal entries made during closing when an invoice has been issued but goods or" +
                         " services are not delivered yet, so the amount has to be recorded as a liability until the revenue is earned.",
                     "They are reverted after the period we are closing.",
                     "Related operation:",
@@ -971,7 +971,7 @@ const VALUATION_REVIEWS = Immutable.fromJSButOrdered({
                 ],
                 configuration: [
                     "Revenue Account: defined on the product/product category",
-                    "Deferred Revenue Account: defined when generating accrual entries from 'Deferred Revenues'",
+                    "Deferred Revenue Account: defined when generating accrual entries from 'Invoiced Not Delivered'",
                 ],
             },
         },
@@ -986,7 +986,7 @@ const VALUATION_REVIEWS = Immutable.fromJSButOrdered({
                       except:  ['customer_shipping'] },
                 ],
                 explanation: [
-                    "Deferred revenues are journal entries made during closing when an invoice has been issued but goods or" +
+                    "Invoiced Not Delivered are journal entries made during closing when an invoice has been issued but goods or" +
                         " services are not delivered yet, so the amount has to be recorded as a liability until the revenue is earned.",
                     "They are reverted after the period we are closing.",
                     "Related operation:",
@@ -994,7 +994,7 @@ const VALUATION_REVIEWS = Immutable.fromJSButOrdered({
                 ],
                 configuration: [
                     "Revenue Account: defined on the product/product category",
-                    "Deferred Revenue Account: defined when generating accrual entries from 'Deferred Revenues'",
+                    "Deferred Revenue Account: defined when generating accrual entries from 'Invoiced Not Delivered'",
                 ],
             },
             perpetual: {
@@ -1013,17 +1013,17 @@ const VALUATION_REVIEWS = Immutable.fromJSButOrdered({
                       except:  ['customer_shipping'] },
                 ],
                 explanation: [
-                    "Deferred revenues are journal entries made during closing when an invoice has been issued but goods or" +
+                    "Invoiced Not Delivered are journal entries made during closing when an invoice has been issued but goods or" +
                         " services are not delivered yet, so the amount has to be recorded as a liability until the revenue is earned.",
                     "From a stock point of view, it also enables us to specify a part of the origin of stock variations (between" +
-                        " Accounting Stock and Inventory Stock) recorded from the stock valuation report.",
+                        " Accounting Stock and Inventory Stock) recorded from the Inventory Valuation report.",
                     "They are reverted after the period we are closing.",
                     "Related operation:",
                     "Customer Shipping (SO $100, Invoice $100, Good Value $50) is not done but the invoice is sent",
                 ],
                 configuration: [
                     "Inventory Variation Account: defined on the used Stock Account for the product category",
-                    "Deferred Revenue Account: defined when generating accrual entries from 'Deferred Revenues'",
+                    "Deferred Revenue Account: defined when generating accrual entries from 'Invoiced Not Delivered'",
                     "Revenue Account: defined on the product/product category",
                     "Expense/COGS Account : defined on the product/product category",
                 ],
@@ -1031,7 +1031,7 @@ const VALUATION_REVIEWS = Immutable.fromJSButOrdered({
         },
     },
     closing: {
-        title: "Stock Valuation",
+        title: "Inventory Valuation",
         continental: {
             periodic: {
                 journal_operations: [
@@ -1075,8 +1075,8 @@ const VALUATION_REVIEWS = Immutable.fromJSButOrdered({
                       entries: ['manufacturing_order'] },
                 ],
                 explanation: [
-                    "At closing, Stock Valuation must be updated to reflect reality. This will be done by generating entries from" +
-                        " the Stock Valuation Report. This will recognize value coming from operations such as the following ones:",
+                    "At closing, Inventory Valuation must be updated to reflect reality. This will be done by generating entries from" +
+                        " the Inventory Valuation report. This will recognize value coming from operations such as the following ones:",
                     "1) Supplier Goods Reception (PO $50, Bill $50)",
                     "2) Supplier Goods Reception (PO $48, Bill $50)",
                     "3) Customer Shipping (SO $100, Invoice $100, Good Value $50)",
@@ -1191,7 +1191,7 @@ const VALUATION_REVIEWS = Immutable.fromJSButOrdered({
                 explanation: [
                     "At closing Accounting Stock and Inventory Stock must have the same value.",
                     "A difference could come from cases such as the ones listed below and this will be corrected thanks to" +
-                        " the Stock Valuation Report closing entry.",
+                        " the Inventory Valuation report closing entry.",
                     "1) Supplier Goods Reception (PO $50, Bill $50) is done but no bill is received yet",
                     "2) Supplier Goods Reception (PO $48, Bill $50) is done but no bill is received yet",
                     "3) Customer Shipping (SO $100, Invoice $100, Good Value $50) is done but no invoice is sent yet",
@@ -1263,8 +1263,8 @@ const VALUATION_REVIEWS = Immutable.fromJSButOrdered({
                       entries: ['manufacturing_order'] },
                 ],
                 explanation: [
-                    "At closing, Stock Valuation must be updated to reflect reality. This will be done by generating entries from" +
-                        " the Stock Valuation Report. This will recognize value coming from operations such as the following ones:",
+                    "At closing, Inventory Valuation must be updated to reflect reality. This will be done by generating entries from" +
+                        " the Inventory Valuation report. This will recognize value coming from operations such as the following ones:",
                     "1) Supplier Goods Reception (PO $50, Bill $50)",
                     "2) Supplier Goods Reception (PO $48, Bill $50)",
                     "3) Customer Shipping (SO $100, Invoice $100, Good Value $50)",
@@ -1324,7 +1324,7 @@ const VALUATION_REVIEWS = Immutable.fromJSButOrdered({
                 explanation: [
                     "At closing, Accounting Stock and Inventory Stock must have the same value.",
                     "A difference could come from cases such as the ones listed below and this will be corrected thanks to" +
-                        " the Stock Valuation Report closing entry.",
+                        " the Inventory Valuation report closing entry.",
                     "Related operations:",
                     "1) Supplier Goods Reception (PO $50, Bill $50) is done but no bill is received yet",
                     "2) Supplier Goods Reception (PO $48, Bill $50) is done but no bill is received yet",
