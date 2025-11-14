@@ -53,59 +53,57 @@ page, only internal locations are displayed.
 To view the seven location types in Odoo, select any location, and in the :guilabel:`Location Type`
 field, there are:
 
-- :guilabel:`Vendor Location`: defines an area where products purchased from vendors originate.
-  Items here are **not** in stock.
+- :guilabel:`Vendor`: defines an area where products purchased from vendors originate. Items here
+  are **not** in stock.
 
-- :guilabel:`View`: used to organize and structure the warehouse hierarchy. For example, the view
-  location `WH` (short for warehouse) groups all internal locations, such as `Stock`, receiving
-  docks, quality checkpoints, and packing areas to show they all belong to the same warehouse.
+- :guilabel:`Virtual`: used to organize and structure the warehouse hierarchy. For example, the
+  virtual location `WH` (short for warehouse) groups all internal locations, such as `Stock`,
+  receiving docks, quality checkpoints, and packing areas to show they all belong to the same
+  warehouse.
 
   .. important::
-     View locations should **not** contain products, but it is possible to move them there.
+     Virtual locations should **not** contain products, but it is possible to move them there.
 
-- :guilabel:`Internal Location`: storage locations within the warehouse. Items stored in these
-  locations are accounted for in :doc:`inventory valuation <../inventory_valuation/cheat_sheet>`.
+- :guilabel:`Internal`: storage locations within the warehouse. Items stored in these locations are
+  accounted for in :doc:`inventory valuation <../inventory_valuation/cheat_sheet>`.
 
-- :guilabel:`Customer Location`: where sold products are tracked; items here are no longer in stock.
+- :guilabel:`Customer`: where sold products are tracked; items here are no longer in stock.
 
 - :guilabel:`Inventory Loss`: counterpart location to consume missing items or create stock,
   accounting for discrepancies.
 
-  In Odoo, examples of inventory loss locations are *Inventory Adjustment*, used to account for
+  In Odoo, examples of inventory loss locations are *Inventory adjustment*, used to account for
   discrepancies during an inventory count, and *Scrap*, which is where damaged goods are sent to
   account for inventory losses.
 
    .. example::
-      `Virtual Locations/Inventory Adjustment` is a location with the :guilabel:`Inventory Loss`
-      type. The database shows `65` units in `WH/Stock`, but an inventory check reveals `60`. To
-      correct the quantity, five units are moved from `WH/Stock` to `Virtual Locations/Inventory
-      Adjustment`.
+      `Inventory adjustment` is a location with the :guilabel:`Inventory Loss` type. The database
+      shows `8` units in `WH/Stock`, but an inventory check reveals `4`. To correct the quantity,
+      four units are moved from `WH/Stock` to `Inventory adjustment`.
 
       .. image:: inventory_management/inventory-loss.png
-         :align: center
-         :alt: Product ends up in Virtual Locations/Inventory Adjustment.
+         :alt: Product ends up in Inventory adjustment.
 
 - :guilabel:`Production`: where raw materials are consumed, and :doc:`manufactured products
   <../../manufacturing>` are created.
 
-- :guilabel:`Transit Location`: used for inter-company or inter-warehouse operations to track
-  products shipped between different addresses, such as :ref:`Physical Locations/Inter-warehouse
+- :guilabel:`Transit`: used for inter-company or inter-warehouse operations to track products
+  shipped between different addresses, such as :ref:`Physical Locations/Inter-warehouse
   transit <inventory/warehouses_storage/interwarehouse-transit>`.
 
 .. image:: inventory_management/locations.png
-   :align: center
    :alt: List of locations in Odoo.
 
 .. note::
    In Odoo, location types are color-coded:
-     - **Red**: internal locations
-     - **Blue**: view locations
-     - **Black**: external locations (including inventory loss, vendor, and customer locations).
+     - **Blue**: virtual locations
+     - **Black**: internal and external locations (including inventory loss, vendor, and customer
+       locations).
 
 View locations in Odoo
 ----------------------
 
-Odoo databases include preconfigured view locations to organize the hierarchy of locations. These
+Odoo databases include preconfigured virtual locations to organize the hierarchy of locations. These
 provide helpful context, and distinguish between internal and external locations.
 
 - *Physical locations* group internal locations—such as secondary warehouses and subcontractor
@@ -118,7 +116,7 @@ provide helpful context, and distinguish between internal and external locations
   .. example::
      When moving products in warehouses `WH` and `WH2`, the items are not in either warehouse, but
      still belong to the company. While in transit, they are placed in the `Inter-warehouse transit`
-     location, a :guilabel:`Transit Location` type.
+     location, a :guilabel:`Transit` type.
 
      This location is under the view location, `Physical Locations`, indicating that
      `Inter-warehouse transit` is outside of a warehouse, but still part of the company. Doing so
