@@ -1,26 +1,29 @@
-=========
-Worldline
-=========
+==============================
+Worldline & Axepta BNP Paribas
+==============================
 
-`Worldline <https://worldline.com/>`_ offers payment solutions through :doc:`payment terminals
-<../terminals>` to handle customer transactions.
+`Worldline <https://worldline.com/>`_ and `Axepta BNP Paribas <https://www.axeptabnpparibas.be/>`_
+offer payment solutions through :doc:`payment terminals<../terminals>` to handle customer transactions.
 
 .. important::
-   - Connecting a Worldline payment terminal to Odoo requires an :doc:`IoT system
-     </applications/general/iot/connect>`.
-   - Worldline is only available in **Belgium**, **the Netherlands**, and **Luxembourg** with Odoo.
+   - Connecting a Worldline or an Axepta BNP Paribas payment terminal to Odoo requires an
+     :doc:`IoT system </applications/general/iot/connect>`.
+   - Both Worldline and Axepta BNP Paribas are only available in **Belgium**, **the Netherlands**,
+     and **Luxembourg** with Odoo.
    - Odoo is compatible with Worldline terminals that use the CTEP protocol (e.g., the **Yomani XR**
      and **Yoximo** terminals). Contact the payment provider to confirm the terminal's
      compatibility if necessary.
+   - The configuration of Axepta BNP Paribas payment terminals is identical to that of Worldline terminals.
 
 .. _pos/worldline/configuration:
 
-Worldline configuration
-=======================
+Worldline/Axepta BNP Paribas configuration
+==========================================
 
-First, enable the Worldline payment terminal in the :ref:`POS settings <configuration/settings>`
-under :guilabel:`Payment Terminals`. Then :doc:`connect the IoT system to Odoo
-</applications/general/iot/connect>` and follow these steps on the terminal:
+First, enable the Worldline or the Axepta BNP Paribas payment terminal in the
+:ref:`POS settings <configuration/settings>` under :guilabel:`Payment Terminals`.
+Then :doc:`connect the IoT system to Odoo </applications/general/iot/connect>`
+and follow these steps on the terminal:
 
 #. **Configure the ECR protocol**:
 
