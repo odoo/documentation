@@ -4,6 +4,12 @@
 Changelog
 =========
 
+Odoo Online version 19.1
+========================
+
+- New API to build SQL.
+  See `#234156 <https://github.com/odoo/odoo/pull/234156>`_.
+
 Odoo version 19.0
 =================
 
