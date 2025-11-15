@@ -2,9 +2,10 @@
 Pricelists
 ==========
 
-A *pricelist* is a method of dynamic pricing that applies a list of prices (or price rules) to
-adjust sales prices. This adjustment can apply to specific customers, customer groups, sales orders,
-time periods, etc., and is useful for creating pricing strategies and optimizing sales margins.
+A *pricelist* is a method of dynamic pricing that applies a list of prices (or price rules) that
+overrides the sales price on a product's product form. This adjustment can set to apply to all
+products sold or tailored to only apply to specific customers, customer groups, sales orders, time
+periods, etc., and is useful for creating pricing strategies and optimizing sales margins.
 
 Odoo **Sales** has a useful pricelist feature that can be tailored to fit any unique pricing
 strategy. Pricelists suggest certain prices, but they can always be overridden on the sales order.
@@ -76,9 +77,11 @@ Price Rules tab
 ---------------
 
 In the :guilabel:`Price Rules` tab, each line creates a new record that will implement customized
-pricing to the sales order where the pricelist is applied. To create a new price rule, click on
-:guilabel:`Add a line`, which opens a new pricelist rules form.
+pricing to the sales order where the pricelist is applied. This can be used to create complex
+pricing structures, such as progressive discounts when greater quantities of a product are
+purchased.
 
+To create a new price rule, click on :guilabel:`Add a line`, which opens a new pricelist rules form.
 Then, select whether to apply this set of rules to a :guilabel:`Product` or :guilabel:`Category`.
 
 From here, there are several configuration options:

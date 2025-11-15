@@ -148,7 +148,8 @@ newly-selected catalog items can be found in the :guilabel:`Order Lines` tab.
 
 If multiple items should be presented in a more organized way on the quotation, click :guilabel:`Add
 a section`, enter a name for the section, and drag-and-drop that section heading in the desired
-location amongst the items in the :guilabel:`Order Lines` tab. The section heading appears in bold.
+location amongst the items in the :guilabel:`Order Lines` tab. The section heading appears in bold
+and a sub-total for all products in a section is displayed.
 
 If needed, click :guilabel:`Add a note` beneath a certain product line to add a custom note about
 that specific product. The note appears in italics. Then, if needed, proceed to drag-and-drop the
