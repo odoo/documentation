@@ -7,8 +7,6 @@ Online payments
 .. toctree::
    :titlesonly:
 
-   payment_providers/wire_transfer
-   payment_providers/sdd
    payment_providers/adyen
    payment_providers/amazon_payment_services
    payment_providers/asiapay
@@ -27,6 +25,8 @@ Online payments
    payment_providers/stripe
    payment_providers/worldline
    payment_providers/xendit
+   payment_providers/bank_payments
+   payment_providers/inperson_payments
 
 Odoo embeds several **payment providers** that allow your customers to pay online, on their
 *customer portals*, or on your *eCommerce website*. They can pay sales orders, invoices, or
@@ -196,12 +196,20 @@ Online payment providers
 Bank payments
 -------------
 
-- | :doc:`Wire Transfer <payment_providers/wire_transfer>`
-  | When selected, Odoo displays your payment information with a payment reference. You have to
-    approve the payment manually once you have received it in your bank account.
-- | :doc:`SEPA Direct Debit <payment_providers/sdd>`
-  | Your customers can make a bank transfer to register a SEPA Direct Debit mandate and get their
-    bank account charged directly.
+- | :ref:`Wire Transfer <payment_providers/bank_payments/wire_transfer>`
+  | Odoo displays your payment information with a payment reference. You have to approve the payment
+    manually once you have received it in your bank account.
+- | :ref:`SEPA Direct Debit <payment_providers/bank_payments/sdd>`
+  | Customers can make a bank transfer to register a SEPA Direct Debit mandate and allow their
+    account to be charged directly for future payments.
+
+In-person payments
+------------------
+
+- | :ref:`Pay on Site <payment_providers/inperson_payments/pay_on_site>`
+  | Customers can reserve products online and pay when collecting their orders in store.
+- | :ref:`Cash on Delivery <payment_providers/inperson_payments/cash_on_delivery>`
+  | Customers can pay for their orders upon delivery.
 
 .. _payment_providers/add_new:
 
@@ -483,8 +491,6 @@ payments from other payments.
    :alt: Define an outstanding account for a payment provider.
 
 .. seealso::
-   - :doc:`payment_providers/wire_transfer`
-   - :doc:`payment_providers/sdd`
    - :doc:`payment_providers/adyen`
    - :doc:`payment_providers/authorize`
    - :doc:`payment_providers/asiapay`
@@ -500,4 +506,6 @@ payments from other payments.
    - :doc:`payment_providers/stripe`
    - :doc:`payment_providers/worldline`
    - :doc:`payment_providers/xendit`
+   - :doc:`payment_providers/bank_payments`
+   - :doc:`payment_providers/inperson_payments`
    - :doc:`accounting/bank`
