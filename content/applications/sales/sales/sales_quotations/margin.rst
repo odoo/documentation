@@ -79,8 +79,7 @@ product. Follow these steps:
 
 #. Go to :menuselection:`Sales app --> Products --> Pricelists` and click the :guilabel:`New`
    button.
-#. Enter the name of the pricelist and click :guilabel:`Add a line` to create a new pricelist
-   rule.
+#. Enter the name of the pricelist and click :guilabel:`Add a line` to create a new pricelist rule.
 #. Configure the pricelist and click :guilabel:`Save & Close` button.
 #. Go to :menuselection:`Sales app --> Orders --> Quotations` and create a quotation.
 #. In the :guilabel:`Pricelist` field, select the newly made pricelist.
@@ -110,6 +109,6 @@ product. Follow these steps:
 .. tip::
    Another way to visualize the impact of margins on sales orders is to go to :menuselection:`Sales
    app --> Orders --> Quotations`, select the :icon:`fa-area-chart` :guilabel:`(area chart)` icon or
-   :icon:`oi-view-pivot` :guilabel:`(pivot)` icon, click :guilabel:`Measures` button and change it
-   to :guilabel:`Margin` to see margin contributions across the customer base.
+   :icon:`oi-view-pivot` :guilabel:`(pivot)` icon, click :guilabel:`Measures` drop-down button and
+   change it to :guilabel:`Margin` to see margin contributions across the customer base.
 

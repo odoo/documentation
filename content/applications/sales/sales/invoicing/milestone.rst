@@ -2,9 +2,9 @@
 Invoice project milestones
 ==========================
 
-Invoicing based on project milestones can be used for expensive or large-scale projects. The series
-of milestones in a project represent a clear sequence of work that will inevitably result in the
-completion of a project and/or contract.
+Invoicing based on project milestones can be used for expensive or large-scale projects with
+discrete, measurable deliverables. The series of milestones in a project represent a clear sequence
+of work that will inevitably result in the completion of a project and/or contract.
 
 This method of invoicing ensures the company gets a consistent flow of money throughout the lifetime
 of the project. Customers can closely monitor every phase of the project's development as it
