@@ -97,9 +97,9 @@ Achievement-based commission plans
 ----------------------------------
 
 In a *Achievement* based commission plan, salespeople earn a percentage of their invoice value as
-commission. Target based plans are ideal for rewarding sales activity consistently, regardless of
-specific goals. For example, offering a `5%` commission on all invoiced amounts, regardless of how
-much is sold.
+commission. Achievement-based plans are ideal for rewarding sales activity consistently, regardless
+of specific goals. For example, offering a `5%` commission on all invoiced amounts, regardless of
+how much is sold.
 
 .. tip::
    Achievement based plans differ from *Target* based plans because they are calculated based on
@@ -126,7 +126,8 @@ Achievements
 ------------
 
 Performance can be measured in several ways in performance plans. These are configured in the
-:guilabel:`Achievements` tab of each plan.
+:guilabel:`Achievements` tab of each plan. It is possible to track achievements by all products
+sold, by specific products sold, by all products sold in a specific category, and more.
 
 - :guilabel:`Amount Sold`: the total value of sales orders (SOs).
 - :guilabel:`Amount Invoiced`: the total value of confirmed invoices.

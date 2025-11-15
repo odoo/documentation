@@ -78,7 +78,8 @@ The :guilabel:`Display Type` options are:
 - :guilabel:`Select`: options appear in a drop-down menu on the product page of the online store.
   set, on the product page of the online store.
 - :guilabel:`Multi-checkbox (option)`: options appear as selectable checkboxes on the product page
-  of the online store.
+  of the online store. This allows customers to choose options for themselves and is good choice for
+  highly customizable products.
 
 .. image:: variants/display-types.png
    :align: center
@@ -92,8 +93,8 @@ once an attribute is added to a product.
    order for the :guilabel:`Multi-checkbox (option)` to work properly as the :guilabel:`Display
    Type`.
 
-- :guilabel:`Instantly`: creates all possible variants as soon as attributes and values are added
-  to a product template.
+- :guilabel:`Instantly`: creates all possible variants as soon as attributes and values are added to
+  a product template.
 - :guilabel:`Dynamically`: creates variants **only** when corresponding attributes and values are
   added to a sales order.
 - :guilabel:`Never (option)`: never automatically creates variants.
@@ -162,23 +163,23 @@ color selector pop-up window.
 .. image:: variants/picking-a-color.png
    :alt: Selecting a color from the HTML color pop-up window that appears on attribute form.
 
-In this pop-up window, select a specific color by dragging the color slider to a particular hue,
-and clicking on the color portion directly on the color gradient window.
+In this pop-up window, select a specific color by dragging the color slider to a particular hue, and
+clicking on the color portion directly on the color gradient window.
 
 Or, choose a specific color by clicking the *dropper* icon, and selecting a desired color that's
 currently clickable on the screen.
 
-If you sell products with specific patterns, you can also add an image to display the
-pattern of the product. To do so, click the :icon:`fa-camera` :guilabel:`(camera)` icon,
-then click the :icon:`fa-pencil` :guilabel:`(pencil)` icon and select an image from your local
-drive. This pattern will appear as a color option on the ecommerce product page.
+Businesses can attach images to product variant attribute values for customers to view on an
+eCommerce webite. To do so, click the :icon:`fa-camera` :guilabel:`(camera)` icon, then click the
+:icon:`fa-pencil` :guilabel:`(pencil)` icon and select an image from your local drive. This image
+will appear as a color option on the ecommerce product page.
 
 .. image:: variants/ecommerce-pattern-option.png
    :alt: Pattern as color option on the ecommerce page.
 
 .. tip::
-   Attributes can also be created directly from the product template by adding a new line and
-   typing the name into the :guilabel:`Variants` tab.
+   Attributes can also be created directly from the product template by adding a new line and typing
+   the name into the :guilabel:`Variants` tab.
 
 Once an attribute is added to a product, that product is listed and accessible, via the attribute's
 :guilabel:`Related Products` smart button. That button lists every product in the database currently
@@ -283,8 +284,8 @@ impacts that can be taken advantage of throughout the Odoo database.
 
 - :guilabel:`Barcode`: barcodes are associated with each variant, instead of the product template.
   Each individual variant can have its own unique barcode/SKU.
-- :guilabel:`Price`: every product variant has its own public price, which is the sum of the
-  product template price *and* any extra charges for particular attributes.
+- :guilabel:`Price`: every product variant has its own public price, which is the sum of the product
+  template price *and* any extra charges for particular attributes.
 
   .. example::
    A red shirt's sales price is $23 -- because the shirt's template price is $20, plus an additional
