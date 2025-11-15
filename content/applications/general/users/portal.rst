@@ -7,8 +7,8 @@ Portal access
 Portal access is given to users who need the ability to view certain documents or information within
 an Odoo database.
 
-Some common use cases for providing portal access include allowing customers to read/view any or all
-of the following in Odoo:
+Some common use cases for providing portal access include allowing customers to make partial payment
+on an invoice, to add funds to their eWallet, and to read/view any or all of the following in Odoo:
 
 - leads/opportunities
 - quotations/sales orders
