@@ -4,12 +4,13 @@ Invoice based on delivered or ordered quantities
 
 Different business policies might require different options for invoicing:
 
-- The *Invoice what is ordered* rule is used as the default mode in Odoo *Sales*, which means
+- The *Invoice what is ordered* rule is used as the default mode in Odoo **Sales**, which means
   customers are invoiced once the sales order is confirmed.
 - The *Invoice what is delivered* rule invoices customers once the delivery is done. This rule is
   often used for businesses that sell materials, liquids, or food in large quantities. In these
   cases, the ordered quantity may differ slightly from the delivered quantity, making it preferable
-  to invoice the quantity actually delivered.
+  to invoice the quantity actually delivered. When the delivery order is validated, Odoo will
+  automatically decrease the on-hand quantity in the inventory.
 
 Being able to have different invoicing options provides more flexibility.
 
@@ -63,8 +64,8 @@ The following is a breakdown of how invoicing policy rules impact the aforementi
 
    .. image:: invoicing_policy/invoicing-policy-error-message.png
       :align: center
-      :alt: If Delivered Quantities invoicing policy is chosen, ensure a quantity has been delivered.
-
+      :alt: If Delivered Quantities invoicing policy is chosen, ensure a quantity has been
+            delivered.
 .. note::
    Once a quotation is confirmed, and the status changes from :guilabel:`Quotation sent` to
    :guilabel:`Sales order`, the delivered and invoiced quantities are available to view, directly

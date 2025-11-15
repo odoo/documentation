@@ -29,11 +29,11 @@ Default add to cart behavior
 
 When clicking the :guilabel:`Add to cart` button, different actions can be triggered. To configure
 them, go to :menuselection:`Website --> Configuration --> Settings`, scroll down to the
-:guilabel:`eCommerce` section, and select one of the following options for the
-:guilabel:`Add to cart` feature:
+:guilabel:`eCommerce` section, and select one of the following options for the :guilabel:`Add to
+cart` feature:
 
-- :guilabel:`Stay on Product Page`: The customer can choose if they want to :guilabel:`Add
-  to cart` and continue shopping or :guilabel:`Go to the Checkout`.
+- :guilabel:`Stay on Product Page`: The customer can choose if they want to :guilabel:`Add to cart`
+  and continue shopping or :guilabel:`Go to the Checkout`.
 - :guilabel:`Go to cart`: The customer is immediately redirected to the cart.
 
 .. _ecommerce/checkout/prevent-sale:
@@ -66,8 +66,8 @@ You can add additional :guilabel:`Add to Cart` buttons and link them to specific
 website page.
 
 To add them, open the website editor and place the :guilabel:`Add to Cart Button` inner content
-building block. Once placed, click the button, scroll to the :guilabel:`Add to Cart Button`
-section, and configure the following:
+building block. Once placed, click the button, scroll to the :guilabel:`Add to Cart Button` section,
+and configure the following:
 
 - :guilabel:`Product`: Select the product to link the button with.
 - :guilabel:`Action`: Choose if it should be an :guilabel:`Add to Cart` or :ref:`Buy Now
@@ -154,9 +154,9 @@ Order summary
 
 The :guilabel:`Order summary` step allows customers to see the items they added to their cart,
 adjust quantities, :guilabel:`Remove` products, and :ref:`reorder products from a previous order
-<ecommerce/checkout/reorder>`. Information related to the product prices and
-taxes applied are also displayed. Customers can then click the :guilabel:`Checkout` button to
-continue to the :ref:`Address and delivery <ecommerce/checkout/delivery>` step.
+<ecommerce/checkout/reorder>`. Information related to the product prices and taxes applied are also
+displayed. Customers can then click the :guilabel:`Checkout` button to continue to the :ref:`Address
+and delivery <ecommerce/checkout/delivery>` step.
 
 Open the website editor to :ref:`enable <ecommerce/checkout/customize_steps>` checkout options such
 as:
@@ -225,15 +225,14 @@ Configuration --> Payment Providers`, :guilabel:`Activate` the relevant payment 
 :ref:`configure <payment_providers/add_new>` it.
 
 .. tip::
-   The options displayed at checkout depend on the active payment providers, the
-   enabled :ref:`payment methods <payment_providers/payment_methods>`, the :ref:`customer’s country
-   and currency <payment_providers/currencies_countries>`, and, optionally, the :ref:`maximum
-   amount <payment_providers/maximum_amount>` set for the provider.
+   The options displayed at checkout depend on the active payment providers, the enabled
+   :ref:`payment methods <payment_providers/payment_methods>`, the :ref:`customer’s country and
+   currency <payment_providers/currencies_countries>`, and, optionally, the :ref:`maximum amount
+   <payment_providers/maximum_amount>` set for the provider.
 
-   To display an :ref:`availability <payment_providers/availability>` report for payment
-   providers and payment methods and help diagnose potential availability issues on the payment
-   form, enable the :ref:`developer mode <developer-mode>` and click the :icon:`fa-bug`
-   (:guilabel:`bug`) icon.
+   To display an :ref:`availability <payment_providers/availability>` report for payment providers
+   and payment methods and help diagnose potential availability issues on the payment form, enable
+   the :ref:`developer mode <developer-mode>` and click the :icon:`fa-bug` (:guilabel:`bug`) icon.
 
 Terms and conditions
 ~~~~~~~~~~~~~~~~~~~~
@@ -260,7 +259,9 @@ Order confirmation
 ------------------
 
 The final step of the checkout process is the :guilabel:`Order confirmation`, which provides a
-summary of the customer's purchase details.
+summary of the customer's purchase details. If the **Automatic Invoice** setting has been activated
+in the **Sales** app's configuration settings, a sales order and invoice will automatically be
+created by Odoo.
 
 .. seealso::
    :doc:`Order handling documentation <order_handling>`
