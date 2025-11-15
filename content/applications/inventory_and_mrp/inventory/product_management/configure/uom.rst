@@ -46,9 +46,9 @@ Price` or :guilabel:`Cost` fields.
    :alt: Edit the inventory unit of measure in the "Sales Price" or "Cost" fields.
 
 .. important::
-   The :guilabel:`Sales Price` and :guilabel:`Cost` units of measure cannot be updated
-   independently of each other. When one unit of measure is updated, the other unit of measure
-   automatically updates to use the same unit of measure.
+   The :guilabel:`Sales Price` and :guilabel:`Cost` units of measure cannot be updated independently
+   of each other. When one unit of measure is updated, the other unit of measure automatically
+   updates to use the same unit of measure.
 
 Sales unit of measure (packagings)
 ----------------------------------
@@ -69,7 +69,8 @@ Purchase unit of measure
 
 Units of measure that the product is purchased in are defined in the :guilabel:`Purchase` tab of the
 product. Purchase orders can be created in these units of measure after they are defined in the
-vendor price list.
+vendor price list. Purchase units of measure must be in the same category as the default unit of
+measure.
 
 .. image:: uom/purchase-uom.png
    :alt: Specify a purchase unit of measure in the "Purchase" tab.
@@ -101,8 +102,7 @@ Buy products in the purchase UoM
 When creating a new request for quotation (RFQ) in the *Purchase* app, Odoo pulls the unit that the
 vendor prefers to use, defined in the :guilabel:`Unit` field of the vendor line in the
 :guilabel:`Purchase` tab of the product. The unit the vendor prefers **can** be different from the
-unit your company prefers to use. If needed, manually edit the :guilabel:`Unit` value on
-the |RFQ|.
+unit your company prefers to use. If needed, manually edit the :guilabel:`Unit` value on the |RFQ|.
 
 After the |RFQ| is confirmed into a |PO|, click the :guilabel:`Receipt` smart button at the top of
 the |PO|.
@@ -111,9 +111,9 @@ Odoo automatically converts the purchase unit of measure into the product's sale
 measure, so the :guilabel:`Demand` column of the delivery receipt shows the converted quantity.
 
 .. example::
-   When the product's purchase :guilabel:`Unit` is `m` (meters), and its inventory unit of
-   measure is `yard`, the |PO| shows the quantity in meters, and the receipt (and other
-   internal warehouse documents) shows the quantity in yards.
+   When the product's purchase :guilabel:`Unit` is `m` (meters), and its inventory unit of measure
+   is `yard`, the |PO| shows the quantity in meters, and the receipt (and other internal warehouse
+   documents) shows the quantity in yards.
 
    .. figure:: uom/on-po.png
       :alt: Image of a purchase order that is using the purchase unit of measure.
@@ -163,9 +163,9 @@ measure into the product's inventory unit of measure, so the :guilabel:`Demand` 
 delivery shows the converted quantity.
 
 .. example::
-   When the product's sales :guilabel:`Unit` is `m` (meters), and its inventory unit of
-   measure is `yard`, the |SO| shows the quantity in meters, and the delivery (and other
-   internal warehouse documents) shows the quantity in yards.
+   When the product's sales :guilabel:`Unit` is `m` (meters), and its inventory unit of measure is
+   `yard`, the |SO| shows the quantity in meters, and the delivery (and other internal warehouse
+   documents) shows the quantity in yards.
 
    .. figure:: uom/on-so.png
       :alt: Sales order that is using the sales unit of measure.
@@ -175,8 +175,7 @@ delivery shows the converted quantity.
    .. figure:: uom/on-delivery.png
       :alt: Delivery displaying the inventory unit of measure.
 
-      Upon warehouse delivery, the recorded quantities are in the internal "Unit":
-      `yards`.
+      Upon warehouse delivery, the recorded quantities are in the internal "Unit": `yards`.
 
 Create custom units of measure
 ==============================
@@ -187,8 +186,8 @@ of measure.
 
 To create a new unit, click the :guilabel:`New` button. Specify a unit name. If you want to convert
 between units, specify a quantity and a reference unit of measure to convert between. If applicable,
-enter a :guilabel:`UNSPSC Category`, which is a globally recognized `code managed by
-GS1 <https://www.unspsc.org/>`_, that **must** be purchased in order to use.
+enter a :guilabel:`UNSPSC Category`, which is a globally recognized `code managed by GS1
+<https://www.unspsc.org/>`_, that **must** be purchased in order to use.
 
 .. example::
    You will be purchasing fabric in terms of yards or meters. Specify that one yard is equal to
