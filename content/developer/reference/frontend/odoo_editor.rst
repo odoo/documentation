@@ -6,6 +6,8 @@ Odoo Editor is Odoo's own rich text editor. Its sources can be found in the
 `odoo-editor directory
 <{GITHUB_PATH}/addons/web_editor/static/src/js/editor/odoo-editor>`_.
 
+.. _Powerbox:
+
 Powerbox
 ========
 
