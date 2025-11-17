@@ -97,42 +97,24 @@ be downloaded from the `Odoo download page <https://www.odoo.com/page/download>`
 
 .. tabs::
 
-   .. group-tab:: Debian/Ubuntu
+   .. group-tab:: Ubuntu
 
       .. note::
-         Odoo {CURRENT_MAJOR_VERSION} 'deb' package currently supports `Debian Bookworm (12)
-         <https://www.debian.org/releases/bookworm/>`_ and `Ubuntu Jammy (22.04LTS)
-         <https://releases.ubuntu.com/jammy>`_ or above.
+         Odoo {CURRENT_MAJOR_VERSION} 'deb' package currently supports `Ubuntu Noble (24.04LTS)
+         <https://releases.ubuntu.com/noble>`_.
 
       Once downloaded, execute the following commands **as root** to install Odoo as a service,
       create the necessary PostgreSQL user, and automatically start the server:
 
       .. code-block:: console
 
-         # dpkg -i <path_to_installation_package> # this probably fails with missing dependencies
-         # apt-get install -f # should install the missing dependencies
-         # dpkg -i <path_to_installation_package>
-
-      .. warning::
-         - The `python3-xlwt` Debian package, needed to export into the XLS format, does not exist
-           in Debian Buster nor Ubuntu 18.04. If needed, install it manually with the following:
-
-           .. code-block:: console
-
-              $ sudo pip3 install xlwt
-
-         - The `num2words` Python package - needed to render textual amounts - does not exist in
-           Debian Buster nor Ubuntu 18.04, which could cause problems with the `l10n_mx_edi` module.
-           If needed, install it manually with the following:
-
-           .. code-block:: console
-
-              $ sudo pip3 install num2words
+         # apt update
+         # apt install <path_to_installation_package>
 
    .. group-tab:: Fedora
 
       .. note::
-         Odoo {CURRENT_MAJOR_VERSION} 'rpm' package supports Fedora 38.
+         Odoo {CURRENT_MAJOR_VERSION} 'rpm' package supports Fedora 42.
 
       Once downloaded, the package can be installed using the 'dnf' package manager:
 
