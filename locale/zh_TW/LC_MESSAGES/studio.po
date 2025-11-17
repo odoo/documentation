@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-16 14:19+0000\n"
-"PO-Revision-Date: 2025-11-16 20:00+0000\n"
+"PO-Revision-Date: 2025-11-17 20:00+0000\n"
 "Last-Translator: \"Tony Ng (ngto)\" <ngto@odoo.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://translate.odoo.com/"
 "projects/odoo-17-doc/studio/zh_Hant/>\n"
@@ -264,10 +264,12 @@ msgid ""
 "events, time conditions (e.g., archive a record 7 days after its last "
 "update), or external events."
 msgstr ""
+"自動化規則用於根據使用者操作（例如：當欄位設定為特定值時套用修改）、電子郵件"
+"事件、時間條件（例如：上次更新後 7 天封存記錄）或外部事件，觸發自動變更。"
 
 #: ../../content/applications/studio/automated_actions.rst:9
 msgid "To create an automation rule with Studio, proceed as follows:"
-msgstr ""
+msgstr "若要使用 Studio 建立自動化規則，請依照以下步驟操作："
 
 #: ../../content/applications/studio/automated_actions.rst:11
 msgid ""
@@ -291,6 +293,9 @@ msgid ""
 "of :ref:`action <studio/automated-actions/action>` and fill in the fields "
 "that appear on the screen based on your selected action."
 msgstr ""
+"按一下 :guilabel:`加入操作`，然後選擇 :ref:`操作 <studio/automated-actions/"
+"action>` 的 "
+":guilabel:`類型`，畫面會因應你所選的操作而顯示一些欄位，請填寫相關資訊。"
 
 #: ../../content/applications/studio/automated_actions.rst:17
 msgid "Click :guilabel:`Save & Close` or :guilabel:`Save & New`."
@@ -308,6 +313,10 @@ msgid ""
 "automation rule, and select the :guilabel:`Model` in "
 "the :guilabel:`Automation Rules` form."
 msgstr ""
+"若要修改自動化規則的 :doc:`模型 <models_modules_apps>`，請先切換模型，然後在 "
+"Studio 中按一下 :guilabel:`自動化`。或者， :ref:`啟動開發人員模式 <developer-"
+"mode>`，建立或編輯自動化規則，然後在 :guilabel:`自動化規則` 表單中，選擇 "
+":guilabel:`模型`。"
 
 #: ../../content/applications/studio/automated_actions.rst:29
 msgid ""
@@ -317,6 +326,9 @@ msgid ""
 "set to :guilabel:`Stage is set to` by default, but you can change it if "
 "necessary."
 msgstr ""
+"你亦可按一下看板階段名稱旁邊的齒輪圖示（:guilabel:`⚙`），然後選擇 "
+":guilabel:`自動化`，從任何看板階段建立自動化規則。在這種情況下， "
+":guilabel:`觸發` 事件預設設為 :guilabel:`階段設定為`，但你可按需要修改。"
 
 #: ../../content/applications/studio/automated_actions.rst:0
 msgid "Create automations from a kanban stage"
@@ -332,6 +344,8 @@ msgid ""
 "applied. The available triggers depend on the :doc:`model "
 "<models_modules_apps>`. Five trigger categories are available overall:"
 msgstr ""
+":guilabel:`觸發` 是用於定義何時套用自動化規則。可用的觸發會取決於 :doc:`模型 "
+"<models_modules_apps>`。系統共有五種觸發器類別："
 
 #: ../../content/applications/studio/automated_actions.rst:46
 msgid ":ref:`studio/automated-actions/trigger/values-updated`"
@@ -362,6 +376,10 @@ msgid ""
 "<studio/automated-actions/trigger/custom>` filters are checked *during* the "
 "execution of the automation rule."
 msgstr ""
+"你亦可定義一個 :guilabel:`更新前範圍`，以指定自動化規則觸發 **之前** "
+"必須滿足的條件。相反，使用 :ref:`額外條件 <studio/automated-actions/trigger/"
+"values-timing-conditions>` 及 :ref:`套用至 <studio/automated-actions/trigger/"
+"custom>` 篩選器定義的條件，會在自動化規則執行 **期間** 進行檢查。"
 
 #: ../../content/applications/studio/automated_actions.rst:59
 msgid ""
@@ -369,6 +387,9 @@ msgid ""
 "mode <developer-mode>`, create or edit an automation rule, "
 "click :guilabel:`Edit Domain`, then click :guilabel:`New Rule`."
 msgstr ""
+"若要定義 :guilabel:`更新前範圍`，請 :ref:`啟動開發人員模式 <developer-"
+"mode>`，建立或編輯自動化規則，然後按一下 :guilabel:`編輯範圍`，再按一下 "
+":guilabel:`新增規則`。"
 
 #: ../../content/applications/studio/automated_actions.rst:63
 msgid ""
@@ -378,6 +399,10 @@ msgid ""
 "Domain` to :guilabel:`Email is not set`, and the :guilabel:`Apply on` domain "
 "to :guilabel:`Email is set`."
 msgstr ""
+"例如，若想在為先前沒有電郵地址的聯絡人設定電郵地址時（而不是修改其現有電郵地"
+"址），執行自動化操作，請將 :guilabel:`更新前範圍` 定義為 "
+":guilabel:`電郵未設定`，並將 :guilabel:`套用至` 範圍定義為 "
+":guilabel:`電郵已設定`。"
 
 #: ../../content/applications/studio/automated_actions.rst:0
 msgid "Example of a trigger with a Before Update Domain"
@@ -394,10 +419,13 @@ msgid ""
 "setting the :guilabel:`User` field. Select the trigger, then select a value "
 "if required."
 msgstr ""
+"此類別中可用的觸發器取決於模型，並基於常見的欄位更改，例如新增特定標籤（例如"
+"，為任務加入標籤）或設定 :guilabel:`使用者` "
+"欄位。選擇觸發事件，然後根據需要，選擇資料值。"
 
 #: ../../content/applications/studio/automated_actions.rst:-1
 msgid "Example of a Values Updated trigger"
-msgstr ""
+msgstr "資料值更新觸發器範例"
 
 #: ../../content/applications/studio/automated_actions.rst:86
 msgid "Email Events"
@@ -415,25 +443,25 @@ msgstr "時間條件"
 msgid ""
 "Trigger automated actions based on a date field. The following triggers are "
 "available:"
-msgstr ""
+msgstr "根據日期欄位觸發自動化操作。有以下觸發器可用："
 
 #: ../../content/applications/studio/automated_actions.rst:97
 msgid ""
 ":guilabel:`Based on date field`: Select the field to be used next to "
 "the :guilabel:`Delay` field."
-msgstr ""
+msgstr ":guilabel:`基於日期欄位`：選擇 :guilabel:`延遲` 欄位旁邊的欄位。"
 
 #: ../../content/applications/studio/automated_actions.rst:98
 msgid ""
 ":guilabel:`After creation`: The action is triggered when a record is created "
 "and saved."
-msgstr ""
+msgstr ":guilabel:`建立後`：建立並儲存記錄時，觸發此操作。"
 
 #: ../../content/applications/studio/automated_actions.rst:99
 msgid ""
 ":guilabel:`After last update`: The action is triggered when an existing "
 "record is edited and saved."
-msgstr ""
+msgstr ":guilabel:`上次更新後`：編輯現有記錄並儲存時，觸發此操作。"
 
 #: ../../content/applications/studio/automated_actions.rst:102
 msgid "You can then define:"
@@ -446,6 +474,9 @@ msgid ""
 "you selected the :guilabel:`Based on date field` trigger, you must also "
 "select the date field to be used to determine the delay."
 msgstr ""
+":guilabel:`延遲`：設定分鐘、小時、天數或月份數目。若要在觸發日期之前觸發操作"
+"，請輸入負數數值。若選擇 :guilabel:`基於日期欄位` "
+"觸發器，須同時選擇用於計算延遲時間的日期欄位。"
 
 #: ../../content/applications/studio/automated_actions.rst:107
 msgid ""
@@ -453,11 +484,14 @@ msgid ""
 "the conditions to be met to trigger the automation rule. "
 "Click :guilabel:`New Rule` to add another condition."
 msgstr ""
+":guilabel:`額外條件`：按一下 "
+":guilabel:`加入條件`，然後指定觸發自動化規則的條件。按一下 "
+":guilabel:`新增規則` 以加入另一項條件。"
 
 #: ../../content/applications/studio/automated_actions.rst:110
 msgid ""
 "The action is triggered when the delay is reached and the conditions are met."
-msgstr ""
+msgstr "到達延遲時間而且符合條件時，此操作便會觸發。"
 
 #: ../../content/applications/studio/automated_actions.rst:113
 msgid ""
@@ -466,6 +500,9 @@ msgid ""
 "under :guilabel:`Trigger Date` and set the :guilabel:`Delay` to "
 "**-30** :guilabel:`Minutes`."
 msgstr ""
+"若要在日曆事件開始之前 30 分鐘傳送提醒電郵，可在 :guilabel:`觸發日期` "
+"下方選擇 :guilabel:`開始（日曆事件）`，並將 :guilabel:`延遲` 設為 **-30** "
+":guilabel:`分鐘`。"
 
 #: ../../content/applications/studio/automated_actions.rst:0
 msgid "Example of a Based on date field trigger"
@@ -475,7 +512,8 @@ msgstr "基於日期欄位觸發範例"
 msgid ""
 "By default, the scheduler checks for trigger dates every 4 hours, meaning "
 "lower granularity in time-based automations may not always be honored."
-msgstr ""
+msgstr "預設情況下，排程工具每 4 "
+"小時檢查一次觸發日期，意味未必能滿足更精細的自動化操作時間條件。"
 
 #: ../../content/applications/studio/automated_actions.rst:127
 msgid "Custom"
@@ -487,17 +525,19 @@ msgstr "觸發自動化操作："
 
 #: ../../content/applications/studio/automated_actions.rst:131
 msgid ":guilabel:`On save`: When the record is saved;"
-msgstr ""
+msgstr ":guilabel:`儲存時`：儲存記錄時；"
 
 #: ../../content/applications/studio/automated_actions.rst:132
 msgid ":guilabel:`On deletion`: When a record is deleted;"
-msgstr ""
+msgstr ":guilabel:`刪除時`：記錄被刪除時；"
 
 #: ../../content/applications/studio/automated_actions.rst:133
 msgid ""
 ":guilabel:`On UI change`: When a field's value is changed on the :ref:`Form "
 "view <studio/views/general/form>`, even before saving the record."
 msgstr ""
+":guilabel:`操作介面變更時`：當 :ref:`表單檢視畫面 <studio/views/general/"
+"form>` 中的欄位值發生變化時，即使在儲存記錄之前也可觸發操作。"
 
 #: ../../content/applications/studio/automated_actions.rst:136
 msgid ""
@@ -505,6 +545,9 @@ msgid ""
 "**must** then select the field(s) to be used to trigger the automation rule "
 "in the :guilabel:`When updating` field."
 msgstr ""
+"若選擇 :guilabel:`儲存時` 及 :guilabel:`操作介面變更時` 兩種觸發事件，你 "
+"**必須** 隨後在 :guilabel:`更新此項時` "
+"欄位中，選擇用於觸發自動化規則的對應欄位。"
 
 #: ../../content/applications/studio/automated_actions.rst:140
 msgid ""
@@ -527,6 +570,10 @@ msgid ""
 "modification is made manually. The action is not executed if the field is "
 "changed through another automation rule."
 msgstr ""
+":guilabel:`操作介面變更時` 觸發器只可與 :ref:`studio/automated-actions/"
+"action/python-code` "
+"操作一起使用，並只在手動修改時起作用。若欄位透過其他自動化規則變更，便不會執"
+"行此操作。"
 
 #: ../../content/applications/studio/automated_actions.rst:155
 msgid "External"
@@ -540,6 +587,9 @@ msgid ""
 "event. It usually includes a data payload containing information about the "
 "event that occurred."
 msgstr ""
+"使用網絡鈎子（webhook）根據外部事件觸發自動化操作。網絡鈎子是一種在兩個系統之"
+"間進行通訊的方法，其中來源系統會根據特定事件，向目標系統發送 HTTP 或 HTTPS "
+"請求。請求通常包含一個資料負載，其中包含有關所發生事件的資訊。"
 
 #: ../../content/applications/studio/automated_actions.rst:162
 msgid ""
@@ -548,6 +598,9 @@ msgid ""
 "the request). Then, in the :guilabel:`Target Record` field, enter the code "
 "to run to define the record(s) to be updated using the automation rule."
 msgstr ""
+"若要設定 :guilabel:`網絡鈎子` 觸發事件，請將 Odoo 產生的 :guilabel:`網址` "
+"複製至目標系統（即：接收請求的系統）。然後，在 :guilabel:`目標記錄` "
+"欄位中，輸入要執行的程式碼，定義需要使用自動化規則更新的記錄。"
 
 #: ../../content/applications/studio/automated_actions.rst:167
 msgid ""
@@ -555,6 +608,9 @@ msgid ""
 "caution could potentially expose your system to malicious parties. Click "
 "the :guilabel:`Rotate Secret` button to change the URL's secret if necessary."
 msgstr ""
+"網址必須視為 **機密資料** "
+"，若在網上或不謹慎地分享該網址，可能會令你的系統面臨惡意攻擊的風險。如有需要"
+"，請按一下 :guilabel:`輪換秘密密鑰` 按鈕，更改網址的密鑰。"
 
 #: ../../content/applications/studio/automated_actions.rst:172
 msgid ""
@@ -562,6 +618,8 @@ msgid ""
 "webhooks coming from another Odoo database. It is used to determine the "
 "record(s) to be updated using the information in the payload."
 msgstr ""
+":guilabel:`目標記錄` 欄位中預設定義的程式碼，適用於來自其他 Odoo "
+"資料庫的網絡鈎子。它用於根據負載所載的資訊，決定要更新哪些記錄。"
 
 #: ../../content/applications/studio/automated_actions.rst:175
 msgid ""
@@ -571,6 +629,10 @@ msgid ""
 "the :guilabel:`Target record` field must contain any valid code, but its "
 "result doesn't have any effect on the automated action itself."
 msgstr ""
+"若想將網絡鈎子的內容，用於尋找記錄以外的其他目的（例如 **建立** 新的記錄），"
+"只能使用 :ref:`studio/automated-actions/action/python-code` "
+"操作。在這種情況下， :guilabel:`目標記錄` "
+"欄位必須包含任何有效的程式碼，但其結果不會對自動化操作本身產生任何影響。"
 
 #: ../../content/applications/studio/automated_actions.rst:179
 msgid ""
