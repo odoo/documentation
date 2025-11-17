@@ -29,6 +29,8 @@ the top of the panel. Clicking this button opens the :doc:`contact record
 <../../essentials/contacts>` for the customer, without closing the conversation. The contact record
 links to the customers' sales, invoices, meetings, and previous live chat sessions.
 
+.. _information/status:
+
 Status
 ======
 
