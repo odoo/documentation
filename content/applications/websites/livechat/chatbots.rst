@@ -14,6 +14,8 @@ including the webpage where it is located, and the information it captures.
 .. image:: chatbots/chatbot-visitor-view.png
    :alt: View of the chat window with a helpdesk ticket created in Odoo Live Chat.
 
+.. _chatbot/build-a-chatbot:
+
 Build a chatbot
 ===============
 
@@ -115,6 +117,8 @@ to follow up with additional information, schedule demos, and more.
 .. warning::
    Due to the vast number of formats used for phone numbers worldwide, responses to this step type
    are not validated for formatting, and can include both numbers and special characters.
+
+.. _chatbot/forward-to-operator:
 
 Forward to Operator
 ~~~~~~~~~~~~~~~~~~~
