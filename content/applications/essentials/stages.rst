@@ -40,6 +40,33 @@ Choose a :guilabel:`Name` for the new stage.
 .. image:: stages/new-stage-details.png
    :alt: View of a stage's settings page in Odoo Helpdesk.
 
+Rotting lead detection
+----------------------
+
+.. note::
+   The *Days to rot* feature is only available to apps that use stages, for instance,
+   **CRM** and **Heldesk** apps. This feature is automatically disabled by setting it to zero.
+
+The *Days to rot* feature provides proactive notification when a specific card within
+that stage requires attention. When a card passes the defined rotting threshold, it becomes
+highlighted in red and the stage displays the total number of cards currently rotting.
+
+.. image:: stages/rotting-card.png
+   :alt: Sample of a rotting card and stage in CRM app.
+
+To enable this feature, the Kanban view must be active. Navigate to the desired app and click on the
+:icon:`oi-view-kanban` :guilabel:`(Kanban)` icon.
+
+To set the threshold for a stage, click on the :icon:`fa-gear` :guilabel:`(Settings)` icon for the
+relevant stage and select :guilabel:`Edit` from the drop-down menu. A configuration window will
+appear.
+
+In the :guilabel:`Days to rot` field, enter the number of days that marks the threshold before
+action is needed. Click :guilabel:`Save` to apply the configuration.
+
+.. image:: stages/days-to-rot-field.png
+   :alt: Sample of a configuration window with a rotting threshold in the CRM app.
+
 Progress bar
 ============
 
