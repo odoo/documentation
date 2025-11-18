@@ -2,156 +2,160 @@
 Commissions
 ===========
 
-.. |SOs| replace:: :abbr:`SOs (Sales Orders)`
+.. |SOs| remplacer par : :abbr:`SOs (Commandes Client)`
 
-Commissions are a powerful tool to motivate sales team members. They incentivize performance, boost
-productivity, and encourage healthy competition. The *Commissions* feature in Odoo's **Sales**
-application provides a way to reward salespeople or sales teams based on their performance. This
-feature supports the creation of flexible, measurable commission structures that align with business
-goals, whether that means driving revenue, volume, profit, or recurring contracts.
+Les commissions sont un outil puissant pour motiver les membres de l'équipe commerciale. Elles stimulent les performances, augmentent la
+productivité et encouragent une concurrence saine. La fonctionnalité *Commissions* de l'application **Ventes** d'Odoo
+permet de récompenser les commerciaux ou les équipes commerciales en fonction de leurs performances. Cette
+fonctionnalité prend en charge la création de structures de commissions flexibles et mesurables qui s'alignent sur les objectifs commerciaux,
+qu'il s'agisse d'augmenter le chiffre d'affaires, le volume, les bénéfices ou les contrats récurrents.
 
 Configuration
 =============
 
-To enable the *Commissions* feature, navigate to :menuselection:`Sales app --> Configuration -->
-Settings`. Scroll to the :guilabel:`Invoicing` section, and tick the :guilabel:`Commissions`
-checkbox. Then, click :guilabel:`Save`. Doing so causes a new :guilabel:`Commissions` menu to appear
-in the menu bar. To create a new commission plan, navigate to :menuselection:`Commissions -->
-Comission Plans` and click :guilabel:`New`.
+Pour activer la fonctionnalité *Commissions*, accédez à :menuselection:`Application de vente --> Configuration -->
+Paramètres`. Faites défiler jusqu'à la section :guilabel:`Facturation` et cochez la case :guilabel:`Commissions`.
+Cliquez ensuite sur :guilabel:`Enregistrer`. Un nouveau menu :guilabel:`Commissions` apparaît alors
+dans la barre de menu. Pour créer un nouveau plan de commission, accédez à :menuselection:`Commissions -->
+Plans de commission` et cliquez sur :guilabel:`Nouveau`.
 
-Commission plan structure
-=========================
+Structure du plan de commission
+===============================
 
-Each commission plan is comprised of several components:
+Chaque plan de commission comprend plusieurs éléments :
 
-- :guilabel:`Based on`: Determines whether commissions are awarded based on progress toward
-  :guilabel:`Targets` or :guilabel:`Achievements`
-- :guilabel:`per`: Indicates whether the plan applies to individual salespeople or an entire sales
-  team
-- :guilabel:`Target Frequency`: Sets how often targets reset: **Monthly**, **Quarterly**, or
-  **Yearly**.
-- :guilabel:`Achievements`: Determines what is being measured toward commissions.
+- :guilabel:`Basé sur` : détermine si les commissions sont attribuées en fonction des progrès réalisés par rapport aux
+:guilabel:`objectifs` ou aux :guilabel:`réalisations`
+- :guilabel:`par` : indique si le plan s'applique à des commerciaux individuels ou à l'ensemble d'une équipe commerciale.
+- :guilabel:`Fréquence des objectifs` : définit la fréquence de réinitialisation des objectifs : **Mensuelle**, **Trimestrielle** ou
+**Annuelle**.
+- :guilabel:`Réalisations` : détermine ce qui est pris en compte pour le calcul des commissions.
+
 
 .. image:: commissions/new-commission-plan.png
-   :alt: A new commission plan detail form.
+:alt: Formulaire détaillé du nouveau plan de commission.
 
-Target-based commission plans
------------------------------
+Plans de commission basés sur des Objectifs
+-------------------------------------------
 
-In a *Target* based commission plan, commissions are awarded based on the percentage of sales
-targets reached. Target based plans are ideal for setting clear, measurable goals, such as invoicing
-a specific amount in sales per quarter, then rewarding sales people progressively based on how close
-they come to reaching or exceeding that goal.
+Dans un plan de commission basé sur des *Objectifs*, les commissions sont attribuées en fonction du pourcentage des objectifs de vente atteints.
+Les plans basés sur des objectifs sont idéaux pour fixer des objectifs clairs et mesurables, tels que la facturation 
+d'un montant spécifique de ventes par trimestre, puis récompenser progressivement les commerciaux en fonction 
+de leur proximité avec l'atteinte ou le dépassement de cet objectif.
+
+
+.. remarqu :
+Les plans basés sur des objectifs diffèrent des plans basés sur les *résultats* car ils reposent sur la réalisation d'un
+objectif fixe et prédéfini. Ils se concentrent sur des incitations basées sur les objectifs et les étapes de performance.
+
+
+Pour configurer un nouveau plan de commission basé sur les objectifs, accédez à :menuselection:`Application Ventes -->
+Commissions --> Plans de commission`, puis cliquez sur :guilabel:`Nouveau`. Cliquez dans le menu déroulant :guilabel:`Basé sur`
+et sélectionnez :guilabel:`Objectifs`. Ensuite, sélectionnez une option dans le champ :guilabel:`par`.
+
+Dans le champ :guilabel:`Commission sur objectif`, définissez le montant du paiement pour atteindre `100 %` de l'
+objectif. Mettez à jour les champs :guilabel:`Période de validité` pour confirmer les dates de ce plan. Ensuite,
+mettez à jour le champ :guilabel:`Fréquence des objectifs` en fonction de la fréquence à laquelle les objectifs doivent être fixés et
+évalués.
+
+- *Mensuel* : objectifs à court terme avec des paiements fréquents.
+- *Trimestriel* : s'aligne sur les cycles économiques et fournit des objectifs à moyen terme.
+- *Annuel* : objectifs de vente à long terme pour la planification stratégique.
+
+Une fois le champ :guilabel:`Fréquence cible` mis à jour, l'onglet :guilabel:`Cibles` s'actualise avec une
+liste des délais appropriés. Pour chaque :guilabel:`Période`, saisissez un objectif :guilabel:`Cible`.
+
+Dans l'onglet :guilabel:`Accomplissements`, ajoutez une ou plusieurs :ref:`mesures d'Accomplissements
+<ventes/commissions/accomplissements>` pour ce plan en cliquant sur :guilabel:`Ajouter une nouvelle Accomplissement`.
+
+Cliquez sur l'onglet :guilabel:`Vendeurs` pour attribuer ce plan au personnel approprié. Cliquez soit sur
+:guilabel:`Ajouter un nouveau vendeur` pour les ajouter individuellement, soit sur :guilabel:`Ajouter plusieurs
+vendeurs` pour en ajouter plusieurs à la fois.
+
+.. remarque :
+Le bouton :guilabel:`Ajouter plusieurs commerciaux` n'est disponible que si
+:doc:`../../general/developer_mode` est actif.
+
+Niveaux
+-------
+
+Pour offrir une incitation supplémentaire, des *niveaux de commission* peuvent être ajoutés aux plans basés sur des *objectifs*. Ces
+niveaux permettent aux commerciaux de gagner des montants de commission variables en fonction de leurs performances. Les niveaux
+peuvent commencer à `0 %` et augmenter progressivement. Cela permet aux commerciaux de gagner une commission même s'ils
+n'atteignent pas `100 %` de l'objectif, ainsi que la possibilité d'atteindre plus de `100 %` de l'
+objectif. Les niveaux de commission peuvent être définis à partir de l'onglet :guilabel:`Commissions` lors de la création d'un plan de commission.
+
+Si aucun niveau n'est ajouté au-dessus de 100 %, les commerciaux ne peuvent **pas** gagner plus que la commission indiquée.
+
+.. exemple::
+Dans le plan ci-dessous, les niveaux commencent à `0 %` et vont jusqu'à `300 %`. Si un commercial dépasse
+`100 %` de l'objectif prévu, sa rémunération prévue continue d'augmenter jusqu'à `300 %`.
+
+  .. image:: commissions/commission-levels.png
+      :alt: Exemple de niveaux de commission, avec des niveaux supérieurs à 100 %.
+
+Plans de commission basés sur les accomplissements
+--------------------------------------------------
+
+Dans un plan de commission basé sur les *accomplissements*, les commerciaux gagnent un pourcentage de la valeur de leur facture sous forme de
+commission. Les plans basés sur des objectifs sont idéaux pour récompenser les activités commerciales de manière cohérente, indépendamment des
+objectifs spécifiques. Par exemple, offrir une commission de « 5 % » sur tous les montants facturés, quel que soit le
+montant des ventes.
 
 .. tip::
-   Target based plans differ from *Achievement* based plans because they are based on reaching a
-   fixed, predefined goal. They focus on goal-based incentives and performance milestones.
+Les plans basés sur les résultats diffèrent des plans basés sur les *objectifs* car ils sont calculés sur la base des
+résultats réels à l'aide d'un taux fixe et constant. Ils sont avantageux pour les plans de rémunération continus et non basés sur des objectifs.
 
-To configure a new target based commission plan, navigate to the :menuselection:`Sales app -->
-Commissions --> Commission Plans`, then click :guilabel:`New`. Click in the :guilabel:`Based on`
-drop-down menu and select :guilabel:`Targets`. Then, select an option in the :guilabel:`per` field.
+Pour configurer un nouveau plan de commission basé sur des objectifs, accédez à :menuselection:`Application Ventes -->
+Commissions --> Plans de commission`, puis cliquez sur :guilabel:`Nouveau`. Cliquez dans le menu déroulant :guilabel:`Basé sur`
+et sélectionnez :guilabel:`Réalisations`. Ensuite, sélectionnez une option dans le champ :guilabel:`par`.
 
-In the :guilabel:`On Target Commission` field, set the payout amount for reaching `100%` of the
-target. Update the :guilabel:`Effective Period` fields to confirm the dates for this plan. Then,
-update the :guilabel:`Target Frequency` field based on how often the targets should be set and
-evaluated.
+Mettez à jour les champs :guilabel:`Période de validité` pour confirmer les dates de ce plan. Ensuite, mettez à jour le champ
+:guilabel:`Fréquence des objectifs` en fonction de la fréquence à laquelle les objectifs doivent être fixés et évalués.
 
-- *Monthly*: short term goals with frequent payouts.
-- *Quarterly*: aligns with business cycles and provides mid-range objectives.
-- *Yearly*: long term sales goals for strategic planning.
+Dans l'onglet :guilabel:« Réalisations », ajoutez une ou plusieurs :ref:« Mesures de réalisation
+<ventes/commissions/accomplissement> » pour ce plan en cliquant sur :guilabel:« Ajouter une nouvelle réalisation ».
 
-After the :guilabel:`Target Frequency` field is updated, the :guilabel:`Targets` tab updates with a
-list of the appropriate time frame. For each :guilabel:`Period`, enter a :guilabel:`Target` goal.
+Cliquez sur l'onglet :guilabel:`Vendeurs` pour attribuer ce plan au personnel approprié. Cliquez sur
+:guilabel:`Ajouter un nouveau vendeur` pour les ajouter individuellement, ou sur :guilabel:`Ajouter plusieurs
+vendeurs` pour en ajouter plusieurs à la fois.
 
-On the :guilabel:`Achievements` tab, add one or more :ref:`Achievement metric
-<sales/commissions/achievement-metric>` for this plan by clicking :guilabel:`Add a new achievement`.
+.. _ventes/commissions/accomplissement:
 
-Click the :guilabel:`Sales People` tab to assign this plan to the appropriate staff. Click either
-:guilabel:`Add a new Sales Person` to add them individually, or :guilabel:`Add Multiple
-Salespersons` to bulk add several at once.
+Accomplissement
+---------------
 
-.. note::
-   The :guilabel:`Add Multiple Salespersons` button is only available if
-   :doc:`../../general/developer_mode` is active.
+La performance peut être mesurée de plusieurs façons dans les plans de performance. Ceux-ci sont configurés dans l'onglet
+:guilabel:`Accomplissements` de chaque plan.
 
-Levels
-------
-
-To provide additional incentive, *commission levels* can be added to *Target* based plans. These
-tiers allow salespeople to earn varying commission amounts based on their performance levels. Levels
-can start at `0%` and increase incrementally. This allows for salespeople to earn commission even if
-they do not achieve `100%` of the target, as well as the ability to achieve over `100%` of the
-target. Commission levels can be set from the :guilabel:`Commissions` tab when creating a commission
-plan.
-
-If no levels are added above 100%, salespeople are **not** able to earn above the stated commission.
-
-.. example::
-   In the plan below, the levels start at `0%`, and continue until `300%`. If a salesperson exceeds
-   `100%` of the expected target, their expected payout continues to increase up to `300%`.
-
-   .. image:: commissions/commission-levels.png
-      :alt: An example of commission levels, with levels above 100 percent.
-
-Achievement-based commission plans
-----------------------------------
-
-In a *Achievement* based commission plan, salespeople earn a percentage of their invoice value as
-commission. Target based plans are ideal for rewarding sales activity consistently, regardless of
-specific goals. For example, offering a `5%` commission on all invoiced amounts, regardless of how
-much is sold.
-
-.. tip::
-   Achievement based plans differ from *Target* based plans because they are calculated based on
-   actual achievements using a flat, consistent rate. They are beneficial for ongoing, non-goal
-   based compensation plans.
-
-To configure a new target based commission plan, navigate to the :menuselection:`Sales app -->
-Commissions --> Commission Plans`, then click :guilabel:`New`. Click in the :guilabel:`Based on`
-drop-down and select :guilabel:`Achievements`. Then, select an option in the :guilabel:`per` field.
-
-Update the :guilabel:`Effective Period` fields to confirm the dates for this plan. Then, update the
-:guilabel:`Target Frequency` field based on how often the targets should be set and evaluated.
-
-On the :guilabel:`Achievements` tab, add one or more :ref:`Achievement metric
-<sales/commissions/achievement-metric>` for this plan by clicking :guilabel:`Add a new achievement`.
-
-Click the :guilabel:`Sales People` tab to assign this plan to the appropriate staff. Click either
-:guilabel:`Add a new Sales Person` to add them individually, or :guilabel:`Add Multiple
-Salespersons` to bulk add several at once.
-
-.. _sales/commissions/achievement-metric:
-
-Achievements
-------------
-
-Performance can be measured in several ways in performance plans. These are configured in the
-:guilabel:`Achievements` tab of each plan.
-
-- :guilabel:`Amount Sold`: the total value of sales orders (SOs).
-- :guilabel:`Amount Invoiced`: the total value of confirmed invoices.
-- :guilabel:`Quantity Sold`: the total number of units sold via |SOs|.
-- :guilabel:`Quantity Invoiced`: the total number of units invoiced.
-- :guilabel:`Margin`: the profit margin (selling price minus cost price).
-- :guilabel:`MRR`: the new *Monthly Recurring Revenue* from subscription sales. this option is
-  **only** available if the :doc:`Subscriptions <../../sales/subscriptions>` app is installed.
+- :guilabel:`Montant vendu` : la valeur totale des commandes client (SO).
+- :guilabel:`Montant facturé` : la valeur totale des factures confirmées.
+- :guilabel:`Quantité vendue` : le nombre total d'unités vendues via les |SOs|.
+- :guilabel:`Quantité facturée` : le nombre total d'unités facturées.
+- :guilabel:`Marge` : la marge bénéficiaire (prix de vente moins prix de revient).
+- :guilabel:`MRR` : le nouveau *revenu mensuel récurrent* provenant des ventes d'abonnements. Cette option n'est
+**disponible que** si l'application :doc:`Subscriptions <../../sales/subscriptions>` est installée.
 
 .. note::
    Regardless of what the plan is :guilabel:`Based on`, each plan needs both *Achievements* and
    *Targets* configured.
 
-Plan approval
-=============
+.. remarque :
+Quel que soit le plan :guilabel:`Basé sur`, chaque plan doit comporter à la fois des *Accomplissements* et des
+*Objectifs* configurés.
 
-After confirming the details of the new plan, click :guilabel:`Approve`. This moves the plan from
-the :guilabel:`Draft` stage into the :guilabel:`Approved` stage.
+Approbation du plan
+===================
+
+Après avoir confirmé les détails du nouveau plan, cliquez sur :guilabel:`Approuver`. Cela fait passer le plan de l'
+étape :guilabel:`Brouillon` à l'étape :guilabel:`Approuvé`.
 
 .. important::
-   Commissions plans in the :guilabel:`Approved` stage **cannot** be edited. To edit an approved
-   plan, it must first be :guilabel:`Reset to Draft`.
+Les plans de commissions au stade :guilabel:`Approuvé` **ne peuvent pas** être modifiés. Pour modifier un plan approuvé
+, il doit d'abord être :guilabel:`Réinitialisé en brouillon`.
 
-After a plan is approved, Odoo automatically tracks performance and calculates commissions based on
-the established parameters.
+Une fois le plan approuvé, Odoo suit automatiquement les performances et calcule les commissions en fonction des
+paramètres établis.
 
-.. seealso::
-   :doc:`Commissions <../../hr/payroll/commissions>`
+.. voir aussi ::
+:doc:`Commissions <../../hr/payroll/commissions>`
