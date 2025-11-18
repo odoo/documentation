@@ -123,7 +123,7 @@ plan`:
 From the POS frontend
 ~~~~~~~~~~~~~~~~~~~~~
 
-To create floors and tables from the frontend, :ref:`open the POS register <pos/session-start>`,
+To create floors and tables from the frontend, :ref:`open the POS register <pos/open-register>`,
 click the :icon:`fa-bars` (:guilabel:`hamburger menu`) icon in the top right corner of the
 :guilabel:`Floor plan` view, then :guilabel:`Edit Plan`. To configure the :guilabel:`Floor plan`,
 follow the next steps:
@@ -424,7 +424,7 @@ After a successful :ref:`order payment <pos/restaurant/bills/payment>`, click :i
    the receipt is automatically printed upon payment confirmation.
 
 .. seealso::
-   :doc:`/applications/sales/point_of_sale/receipts_invoices`
+   :doc:`/applications/sales/point_of_sale/pos_invoices`
 
 .. _pos/restaurant/tips:
 
