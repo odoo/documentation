@@ -28,7 +28,8 @@ delivered`.
 .. important::
    If the :guilabel:`Invoice what is delivered` rule is chosen, it is **not** possible to activate
    the :guilabel:`Automatic Invoice` feature, which automatically generates invoices when an online
-   payment is confirmed.
+   payment is confirmed. Regular draft invoices can only be created once the delivery order has been
+   processed and validated.
 
 Invoicing policy on product form
 ================================
@@ -63,7 +64,8 @@ The following is a breakdown of how invoicing policy rules impact the aforementi
 
    .. image:: invoicing_policy/invoicing-policy-error-message.png
       :align: center
-      :alt: If Delivered Quantities invoicing policy is chosen, ensure a quantity has been delivered.
+      :alt: If Delivered Quantities invoicing policy is chosen, ensure a quantity has been
+            delivered.
 
 .. note::
    Once a quotation is confirmed, and the status changes from :guilabel:`Quotation sent` to
