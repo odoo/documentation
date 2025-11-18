@@ -37,8 +37,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-16 14:19+0000\n"
-"PO-Revision-Date: 2025-11-16 20:00+0000\n"
+"POT-Creation-Date: 2025-11-18 10:55+0000\n"
+"PO-Revision-Date: 2025-11-18 20:01+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Finnish <https://translate.odoo.com/projects/odoo-17-doc/"
 "finance/fi/>\n"
@@ -7620,7 +7620,9 @@ msgstr ""
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:238
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:252
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:254
-#: ../../content/applications/finance/accounting/taxes.rst:112
+#: ../../content/applications/finance/accounting/taxes.rst:143
+#: ../../content/applications/finance/accounting/taxes.rst:212
+#: ../../content/applications/finance/accounting/taxes.rst:247
 msgid "100"
 msgstr "100"
 
@@ -12431,210 +12433,387 @@ msgid "Tax computation"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes.rst:75
-msgid "**Group of Taxes**"
+msgid ""
+"The :guilabel:`Tax Computation` field determines how the tax amount is "
+"computed from the sales price. The following options are available:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:77
+#: ../../content/applications/finance/accounting/taxes.rst:78
+msgid ""
+":ref:`Group of Taxes <taxes/computation/group-of-taxes>`: a combination of "
+"several other taxes"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:79
+msgid ":ref:`Fixed <taxes/computation/fixed>`: a fixed amount"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:80
+msgid ""
+":ref:`Percentage of Price <taxes/computation/percentage-of-price>`: a "
+"percentage of the tax-excluded sales price"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:82
+msgid ""
+":ref:`Percentage of Price Tax Included <taxes/computation/percentage-of-"
+"price-tax-included>`: a percentage of the tax-included total"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:84
+msgid ""
+":ref:`Python Code <taxes/computation/python-code>`: a custom user-defined "
+"formula"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:89
+msgid "Group of taxes"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:91
 msgid ""
 "The tax is a combination of multiple sub-taxes. You can add as many taxes as "
 "you want, in the order you want them to be applied."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:81
+#: ../../content/applications/finance/accounting/taxes.rst:95
 msgid ""
-"Make sure that the tax sequence is correct, as the order in which they are "
-"may impact the taxes' amounts computation, especially if one of the "
-"taxes :ref:`affects the base of the subsequent ones <taxes/base-subsequent>`."
+"Make sure the tax sequence is correct, as the display order determines the "
+"application order and may affect tax computation, particularly if a "
+"tax :ref:`affects the base of subsequent taxes <taxes/base-subsequent>`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:85
-msgid "**Fixed**"
-msgstr ""
+#: ../../content/applications/finance/accounting/taxes.rst:102
+msgid "Fixed"
+msgstr "Kiinteä"
 
-#: ../../content/applications/finance/accounting/taxes.rst:87
+#: ../../content/applications/finance/accounting/taxes.rst:104
 msgid ""
 "The tax has a fixed amount in the default currency. The amount remains the "
-"same, regardless of the sales price."
+"same per unit, regardless of the sales price."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:91
+#: ../../content/applications/finance/accounting/taxes.rst:107
 msgid ""
-"A product has a sales price of $1000, and we apply a $10 *fixed* tax. We "
-"then have:"
+"The computation is :math:`\\text{tax amount} = \\text{fixed tax amount} "
+"\\times \\text{quantity}`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:94
-#: ../../content/applications/finance/accounting/taxes.rst:109
-#: ../../content/applications/finance/accounting/taxes.rst:124
-#: ../../content/applications/finance/accounting/taxes.rst:268
+#: ../../content/applications/finance/accounting/taxes.rst:110
+msgid ""
+"A product has a sales price of $1000, and we apply a $10 :guilabel:`Fixed` "
+"tax. We then have:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:113
+#: ../../content/applications/finance/accounting/taxes.rst:140
+#: ../../content/applications/finance/accounting/taxes.rst:156
+#: ../../content/applications/finance/accounting/taxes.rst:189
+#: ../../content/applications/finance/accounting/taxes.rst:209
+#: ../../content/applications/finance/accounting/taxes.rst:244
+#: ../../content/applications/finance/accounting/taxes.rst:380
 msgid "Product sales price"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:94
-#: ../../content/applications/finance/accounting/taxes.rst:109
-#: ../../content/applications/finance/accounting/taxes.rst:124
-#: ../../content/applications/finance/accounting/taxes.rst:268
+#: ../../content/applications/finance/accounting/taxes.rst:113
+#: ../../content/applications/finance/accounting/taxes.rst:140
+#: ../../content/applications/finance/accounting/taxes.rst:156
+#: ../../content/applications/finance/accounting/taxes.rst:189
+#: ../../content/applications/finance/accounting/taxes.rst:209
+#: ../../content/applications/finance/accounting/taxes.rst:244
+#: ../../content/applications/finance/accounting/taxes.rst:380
 msgid "Price without tax"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:94
-#: ../../content/applications/finance/accounting/taxes.rst:109
-#: ../../content/applications/finance/accounting/taxes.rst:124
-#: ../../content/applications/finance/accounting/taxes.rst:268
+#: ../../content/applications/finance/accounting/taxes.rst:113
+#: ../../content/applications/finance/accounting/taxes.rst:140
+#: ../../content/applications/finance/accounting/taxes.rst:156
+#: ../../content/applications/finance/accounting/taxes.rst:189
+#: ../../content/applications/finance/accounting/taxes.rst:209
+#: ../../content/applications/finance/accounting/taxes.rst:244
+#: ../../content/applications/finance/accounting/taxes.rst:380
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:92
 msgid "Tax"
 msgstr "Vero"
 
-#: ../../content/applications/finance/accounting/taxes.rst:94
-#: ../../content/applications/finance/accounting/taxes.rst:109
-#: ../../content/applications/finance/accounting/taxes.rst:124
-#: ../../content/applications/finance/accounting/taxes.rst:268
+#: ../../content/applications/finance/accounting/taxes.rst:113
+#: ../../content/applications/finance/accounting/taxes.rst:140
+#: ../../content/applications/finance/accounting/taxes.rst:156
+#: ../../content/applications/finance/accounting/taxes.rst:189
+#: ../../content/applications/finance/accounting/taxes.rst:209
+#: ../../content/applications/finance/accounting/taxes.rst:244
+#: ../../content/applications/finance/accounting/taxes.rst:380
 #: ../../content/applications/finance/fiscal_localizations/hong_kong.rst:400
 msgid "Total"
 msgstr "Yhteensä"
 
-#: ../../content/applications/finance/accounting/taxes.rst:97
-#: ../../content/applications/finance/accounting/taxes.rst:112
-#: ../../content/applications/finance/accounting/taxes.rst:127
-#: ../../content/applications/finance/accounting/taxes.rst:271
+#: ../../content/applications/finance/accounting/taxes.rst:116
+#: ../../content/applications/finance/accounting/taxes.rst:143
+#: ../../content/applications/finance/accounting/taxes.rst:159
+#: ../../content/applications/finance/accounting/taxes.rst:192
+#: ../../content/applications/finance/accounting/taxes.rst:212
+#: ../../content/applications/finance/accounting/taxes.rst:247
+#: ../../content/applications/finance/accounting/taxes.rst:383
 msgid "1,000"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:97
+#: ../../content/applications/finance/accounting/taxes.rst:116
 #: ../../content/applications/finance/fiscal_localizations/france.rst:240
 msgid "10"
 msgstr "10"
 
-#: ../../content/applications/finance/accounting/taxes.rst:97
+#: ../../content/applications/finance/accounting/taxes.rst:116
 msgid "1,010.00"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:100
-msgid "**Percentage of price**"
+#: ../../content/applications/finance/accounting/taxes.rst:122
+msgid "Percentage of price"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:102
+#: ../../content/applications/finance/accounting/taxes.rst:124
+msgid "The tax rate is a percentage of the **tax-excluded** subtotal."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:126
+#: ../../content/applications/finance/accounting/taxes.rst:176
 msgid ""
-"The *sales price* is the taxable basis: the tax amount is computed by "
-"multiplying the sales price by the tax percentage."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/taxes.rst:106
-msgid ""
-"A product has a sales price of $1000, and we apply a *10% of Price* tax. We "
-"then have:"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/taxes.rst:112
-msgid "1,100.00"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/taxes.rst:115
-msgid "**Percentage of Price Tax Included**"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/taxes.rst:117
-msgid ""
-"The **total** is the taxable basis: the tax amount is a percentage of the "
-"total."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/taxes.rst:120
-msgid ""
-"A product has a Sales Price of $1000, and we apply a *10% of Price Tax "
-"Included* tax. We then have:"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/taxes.rst:127
-msgid "111.11"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/taxes.rst:127
-msgid "1,111.11"
+"The exact tax computation depends on the :ref:`Included in Price <taxes/"
+"included-in-price>` field, which determines whether the sales price should "
+"be treated as tax-excluded or tax-included:"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes.rst:130
-msgid "**Python code**"
+#: ../../content/applications/finance/accounting/taxes.rst:180
+#: ../../content/applications/finance/accounting/taxes.rst:403
+msgid "Tax-excluded"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes.rst:132
 msgid ""
-"A tax defined as **Python code** consists of two snippets of Python code "
-"that are executed in a local environment containing data such as the unit "
-"price, product or partner. :guilabel:`Python Code` defines the amount of the "
-"tax, and :guilabel:`Applicable Code` defines if the tax is to be applied. "
-"The formula is found at the bottom of the :guilabel:`Definition` tab."
+"If :guilabel:`Included in Price` is disabled, the computation "
+"is :math:`\\text{tax amount} = \\text{sales price} \\times \\text{tax rate}`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:138
+#: ../../content/applications/finance/accounting/taxes.rst:136
 msgid ""
-":guilabel:`Python Code`: `result = price_unit * 0.10` :guilabel:`Applicable "
-"Code`: `result = true`"
+"A product has a sales price of $1000, and we apply a "
+"10% :guilabel:`Percentage of Price` tax that is not :guilabel:`Included in "
+"Price`. We then have:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:144
+#: ../../content/applications/finance/accounting/taxes.rst:143
+#: ../../content/applications/finance/accounting/taxes.rst:247
+msgid "1,100.00"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:146
+#: ../../content/applications/finance/accounting/taxes.rst:198
+#: ../../content/applications/finance/accounting/taxes.rst:414
+msgid "Tax-included"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:148
+msgid ""
+"If :guilabel:`Included in Price` is enabled, the computation "
+"is :math:`\\text{tax amount} = \\text{sales price} \\times \\frac{\\text{tax "
+"rate}}{1 + \\text{tax rate}}`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:152
+msgid ""
+"A product has a sales price of $1000, and we apply a "
+"10% :guilabel:`Percentage of Price` tax that is :guilabel:`Included in "
+"Price`. We then have:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:159
+#: ../../content/applications/finance/accounting/taxes.rst:383
+msgid "909.09"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:159
+#: ../../content/applications/finance/accounting/taxes.rst:383
+msgid "90.91"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:159
+#: ../../content/applications/finance/accounting/taxes.rst:212
+#: ../../content/applications/finance/accounting/taxes.rst:383
+msgid "1,000.00"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:165
+msgid "Percentage of price tax included"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:168
+msgid ""
+"This tax computation is rarely used and only useful in countries (e.g., "
+"Brazil, Bolivia) that quote tax rates as a percentage of the tax-included "
+"total. For the more common need to compute tax amounts from a tax-included "
+"price, use the :ref:`Percentage of Price <taxes/computation/percentage-of-"
+"price>` tax computation with the :ref:`Included in Price <taxes/included-in-"
+"price>` option."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:174
+msgid "The tax rate is a percentage of the **tax-included** total."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:181
+msgid ""
+"If :guilabel:`Included in Price` is disabled, the computation "
+"is :math:`\\text{tax amount} = \\text{sales price} \\times \\frac{\\text{tax "
+"rate}}{1 - \\text{tax rate}}`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:185
+msgid ""
+"A product has a sales price of $1000, and we apply a "
+"10% :guilabel:`Percentage of Price Tax Included` tax that is "
+"not :guilabel:`Included in Price`. We then have:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:192
+msgid "111.11"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:192
+msgid "1,111.11"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:195
+msgid ""
+"Note that the real tax rate in terms of the tax-excluded price "
+"is :math:`\\frac{111.11}{1000} = 11.111\\%`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:200
+msgid ""
+"If :guilabel:`Included in Price` is enabled, the computation "
+"is :math:`\\text{tax amount} = \\text{sales price} \\times \\text{tax rate}`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:204
+msgid ""
+"A product has a sales price of $1000, and we apply a "
+"10% :guilabel:`Percentage of Price Tax Included` tax that "
+"is :guilabel:`Included in Price`. We then have:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:212
+msgid "900"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:215
+msgid ""
+"Note that the real tax rate in terms of the tax-excluded price "
+"is :math:`\\frac{100}{900} = 11.111\\%`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:221
+msgid "Python code"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:224
+msgid ""
+"If a tax can be expressed as a multiple of the quantity of the product to "
+"which it applies, it can be defined as a :ref:`Fixed <taxes/computation/"
+"fixed>` tax. Doing so is strongly recommended over defining "
+"a :guilabel:`Python Code` tax."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:228
+msgid ""
+"A tax defined as :guilabel:`Python Code` consists of two snippets of Python "
+"code that are executed in a local environment that can access the unit "
+"price, quantity, product, and partner. :guilabel:`Python Code` defines the "
+"amount of the tax, and :guilabel:`Applicable Code` defines whether the tax "
+"is applied. Enter a formula for each field at the bottom of "
+"the :guilabel:`Definition` tab."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:235
+msgid ""
+"A product has a sales price of $1000, and we apply a :guilabel:`Python Code` "
+"tax with the following configuration:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:238
+msgid ":guilabel:`Python Code`: `result = price_unit * 0.10` and"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:239
+msgid ":guilabel:`Applicable Code`: `result = True`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:241
+msgid "We then have:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:253
 msgid "Active"
 msgstr "Aktiivinen"
 
-#: ../../content/applications/finance/accounting/taxes.rst:146
+#: ../../content/applications/finance/accounting/taxes.rst:255
 msgid "Only **active** taxes can be added to new documents."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:149
+#: ../../content/applications/finance/accounting/taxes.rst:258
 msgid ""
 "It is not possible to delete taxes that have already been used. Instead, you "
 "can deactivate them to prevent future use."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:153
+#: ../../content/applications/finance/accounting/taxes.rst:262
 msgid ""
 "This field can be modified from the :ref:`list view <taxes/list_activation>`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:158
+#: ../../content/applications/finance/accounting/taxes.rst:267
 msgid "Tax type"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:160
+#: ../../content/applications/finance/accounting/taxes.rst:269
 msgid ""
 "The :guilabel:`Tax Type` determines the tax application, which also "
 "restricts where it is displayed."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:162
+#: ../../content/applications/finance/accounting/taxes.rst:271
 msgid "**Sales**: Customer invoices, product customer taxes, etc."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:163
+#: ../../content/applications/finance/accounting/taxes.rst:272
 msgid "**Purchase**: Vendor bills, product vendor taxes, etc."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:164
+#: ../../content/applications/finance/accounting/taxes.rst:273
 msgid "**None**"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:167
+#: ../../content/applications/finance/accounting/taxes.rst:276
 msgid ""
 "You can use :guilabel:`None` for taxes that you want to include in "
 "a :ref:`Group of Taxes <taxes/computation>` but that you do not want to list "
 "along with other sales or purchase taxes."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:171
+#: ../../content/applications/finance/accounting/taxes.rst:280
 msgid "Tax scope"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:173
+#: ../../content/applications/finance/accounting/taxes.rst:282
 msgid ""
 "The :guilabel:`Tax Scope` restricts the use of taxes to a type of product, "
 "either **goods** or **services**."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:179
+#: ../../content/applications/finance/accounting/taxes.rst:288
 msgid "Definition tab"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:181
+#: ../../content/applications/finance/accounting/taxes.rst:290
 msgid ""
 "Allocate with precision the amount of the taxable basis or percentages of "
 "the computed tax to multiple accounts and tax grids."
@@ -12644,37 +12823,37 @@ msgstr ""
 msgid "Allocate tax amounts to the right accounts and tax grids"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:187
+#: ../../content/applications/finance/accounting/taxes.rst:296
 msgid "**Based On**:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:189
+#: ../../content/applications/finance/accounting/taxes.rst:298
 msgid ":guilabel:`Base`: the price on the invoice line"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:190
+#: ../../content/applications/finance/accounting/taxes.rst:299
 msgid ":guilabel:`% of tax`: a percentage of the computed tax."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:192
+#: ../../content/applications/finance/accounting/taxes.rst:301
 msgid "**Account**: if defined, an additional journal item is recorded."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:193
+#: ../../content/applications/finance/accounting/taxes.rst:302
 msgid ""
 "**Tax Grids**:  used to generate :doc:`tax reports <reporting/tax_returns>` "
 "automatically, according to your country's regulations."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:199
+#: ../../content/applications/finance/accounting/taxes.rst:308
 msgid "Advanced options tab"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:204
+#: ../../content/applications/finance/accounting/taxes.rst:313
 msgid "Label on invoices"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:206
+#: ../../content/applications/finance/accounting/taxes.rst:315
 msgid ""
 "The tax label is displayed on each invoice line in the :guilabel:`Taxes` "
 "column. This is visible to *front-end* users on exported invoices, in "
@@ -12685,18 +12864,18 @@ msgstr ""
 msgid "The label on invoices is displayed on each invoice line"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:215
+#: ../../content/applications/finance/accounting/taxes.rst:324
 msgid "Tax group"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:217
+#: ../../content/applications/finance/accounting/taxes.rst:326
 msgid ""
 "Select which **tax group** the tax belongs to. The tax group name is the "
 "displayed above the **total** line on exported invoices and in customer "
 "portals."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:220
+#: ../../content/applications/finance/accounting/taxes.rst:329
 msgid ""
 "Tax groups include different iterations of the same tax. This can be useful "
 "when you must record the same tax differently according to :doc:`fiscal "
@@ -12707,7 +12886,7 @@ msgstr ""
 msgid "The Tax Group name is different from the Label on Invoices"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:228
+#: ../../content/applications/finance/accounting/taxes.rst:337
 msgid ""
 "In the example above, the :guilabel:`0% EU S` tax for intra-community "
 "customers in Europe records the amount on specific accounts and tax grids. "
@@ -12716,119 +12895,138 @@ msgid ""
 "the :guilabel:`Total` line indicates :guilabel:`VAT 0%`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:234
+#: ../../content/applications/finance/accounting/taxes.rst:343
 msgid ""
 "Taxes have three different labels, each one having a specific use. Refer to "
 "the following table to see where they are displayed."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:238
+#: ../../content/applications/finance/accounting/taxes.rst:347
 msgid ":ref:`Tax Name <taxes/name>`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:238
+#: ../../content/applications/finance/accounting/taxes.rst:347
 msgid ":ref:`Label on Invoice <taxes/label-invoices>`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:238
+#: ../../content/applications/finance/accounting/taxes.rst:347
 msgid ":ref:`Tax Group <taxes/tax-group>`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:241
+#: ../../content/applications/finance/accounting/taxes.rst:350
 msgid "Backend"
 msgstr "Taustajärjestelmä"
 
-#: ../../content/applications/finance/accounting/taxes.rst:241
+#: ../../content/applications/finance/accounting/taxes.rst:350
 msgid ":guilabel:`Taxes` column on exported invoices"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:241
+#: ../../content/applications/finance/accounting/taxes.rst:350
 msgid "Above the :guilabel:`Total` line on exported invoices"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:249
+#: ../../content/applications/finance/accounting/taxes.rst:358
 msgid "Include in analytic cost"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:251
+#: ../../content/applications/finance/accounting/taxes.rst:360
 msgid ""
 "With this option activated, the tax amount is assigned to the same "
 "**analytic account** as the invoice line."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:257
+#: ../../content/applications/finance/accounting/taxes.rst:366
 msgid "Included in price"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:259
+#: ../../content/applications/finance/accounting/taxes.rst:368
 msgid ""
-"With this option activated, the total (including the tax) equals the **sales "
-"price**."
+"With this option activated, the tax will treat the sales price on which it "
+"is applied as a total including the tax amount. The tax computation will "
+"split the sales price into a base amount and a tax amount. This makes it "
+"suitable for B2C sales in most countries where prices are quoted tax-"
+"inclusive."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:261
+#: ../../content/applications/finance/accounting/taxes.rst:373
 msgid "`Total = Sales Price = Computed Tax-Excluded price + Tax`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:264
+#: ../../content/applications/finance/accounting/taxes.rst:376
 msgid ""
-"A product has a sales price of $1000, and we apply a *10% of Price* tax, "
-"which is *included in the price*. We then have:"
+"A product has a sales price of $1000, and we apply a "
+"10% :guilabel:`Percentage of Price` tax with :guilabel:`Included in Price`. "
+"We then have:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:271
-msgid "900.10"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/taxes.rst:271
-msgid "90.9"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/taxes.rst:271
-msgid "1,000.00"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/taxes.rst:275
+#: ../../content/applications/finance/accounting/taxes.rst:387
 msgid ""
-"If you need to define prices accurately, both tax-included and tax-excluded, "
-"please refer to the following documentation: :doc:`taxes/B2B_B2C`."
+"For a guide on configuring tax-excluded and tax-included prices for B2B and "
+"B2C customers, see :doc:`taxes/B2B_B2C`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:279
-msgid ""
-"By default, only the :guilabel:`Tax excluded` column is displayed on "
-"invoices. To display the :guilabel:`Tax included` column, click the "
-"**dropdown toggle** button and check :guilabel:`Tax incl.`."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/taxes.rst:288
+#: ../../content/applications/finance/accounting/taxes.rst:395
 msgid "Affect base of subsequent taxes"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:290
+#: ../../content/applications/finance/accounting/taxes.rst:397
 msgid ""
-"With this option, the total tax-included becomes the taxable basis for the "
-"other taxes applied to the same product."
+"If this setting is enabled, any subsequent tax applied on the same product "
+"line that has :ref:`taxes/base-affected` will be based on a modified sales "
+"price. The exact behavior depends on whether the tax with :guilabel:`Affect "
+"base of subsequent taxes` is :ref:`taxes/included-in-price` or not."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:293
+#: ../../content/applications/finance/accounting/taxes.rst:404
 msgid ""
-"You can configure a new :ref:`group of taxes <taxes/computation>` to include "
-"this tax or add it directly to a product line."
+"If :guilabel:`Included in Price` is disabled, subsequent taxes "
+"with :guilabel:`Base affected by preceding taxes` will be based on a "
+"modified sales price equal to the original sales price plus the tax amount."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:409
+msgid ""
+"A product has a sales price of $1000, and we apply a "
+"10% :guilabel:`Percentage of Price` tax with :guilabel:`Affect base of "
+"subsequent taxes`. Any subsequent tax with :guilabel:`Base affected by "
+"preceding taxes` will be based on a modified sales price of $1100."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:415
+msgid ""
+"If :guilabel:`Included in Price` is enabled, subsequent taxes "
+"with :guilabel:`Base affected by preceding taxes` will be based on a "
+"modified sales price equal to the original sales price minus the tax amount."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:420
+msgid ""
+"A product has a sales price of $1100, and we apply a "
+"10% :guilabel:`Percentage of Price` tax with :guilabel:`Included in Price` "
+"and :guilabel:`Affect base of subsequent taxes`. Any subsequent tax "
+"with :guilabel:`Base affected by preceding taxes` will be based on a "
+"modified sales price of $1000."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:425
+msgid ""
+"This setting is considered any time multiple taxes are applied to the same "
+"product line, whether via a :ref:`group of taxes <taxes/computation>` or "
+"multiple taxes added directly to a product line."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes.rst:-1
 msgid "The eco-tax is taken into the basis of the 21% VAT tax"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:300
+#: ../../content/applications/finance/accounting/taxes.rst:432
 msgid ""
 "The order in which you add the taxes on a product line has no effect on how "
 "amounts are computed. If you add taxes directly on a product line, only the "
 "tax sequence determines the order in which they are applied."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:304
+#: ../../content/applications/finance/accounting/taxes.rst:436
 msgid ""
 "To reorder the sequence, go to :menuselection:`Accounting --> Configuration "
 "--> Taxes`, and drag and drop the lines with the handles next to the tax "
@@ -12839,11 +13037,29 @@ msgstr ""
 msgid "The taxes' sequence in Odoo determines which tax is applied first"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:311
+#: ../../content/applications/finance/accounting/taxes.rst:445
+msgid "Base affected by preceding taxes"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:447
+msgid ""
+"This setting, which is only visible in :doc:`developer mode <../../general/"
+"developer_mode>`, determines whether any previous tax that :ref:`affects the "
+"base of subsequent taxes <taxes/base-subsequent>` will modify the sales "
+"price that this tax is based on."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:452
+msgid ""
+"Taxes with :ref:`Included in Price <taxes/included-in-price>` always behave "
+"as if this setting is enabled."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:456
 msgid "Extra taxes"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:313
+#: ../../content/applications/finance/accounting/taxes.rst:458
 msgid ""
 "\"Extra taxes\" is a broad term referring to additional taxes beyond the "
 "standard or basic taxes imposed by governments. These extra taxes can be "
@@ -12851,30 +13067,30 @@ msgid ""
 "taxes, etc."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:318
+#: ../../content/applications/finance/accounting/taxes.rst:463
 msgid ""
 "The method to compute these taxes varies across different countries. We "
 "recommend consulting your country's regulations to understand how to "
 "calculate them for your business."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:321
+#: ../../content/applications/finance/accounting/taxes.rst:466
 msgid ""
 "To compute an extra tax in Odoo, :ref:`create a tax <taxes/configuration>`, "
 "enter a tax name, select a :ref:`Tax Computation <taxes/configuration>`, set "
 "an :guilabel:`Amount`, and in the :guilabel:`Advanced Options` tab, "
-"check :guilabel:`Affect Base of Subsequent Taxes`. Then, drag and drop the "
+"enable :guilabel:`Affect Base of Subsequent Taxes`. Then, drag and drop the "
 "taxes in the :ref:`order they should be computed <taxes/base-subsequent>`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:327
+#: ../../content/applications/finance/accounting/taxes.rst:472
 msgid ""
 "In Belgium, the formula to compute an environmental tax is: `(product price "
 "+ environmental tax) x sales tax`. Therefore, our environmental tax has to "
 "come *before* the sales tax in the computation sequence."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:330
+#: ../../content/applications/finance/accounting/taxes.rst:475
 msgid ""
 "In our case, we created a 5% environmental tax (Ecotax) and put it *before* "
 "the Belgian base tax of 21%."
@@ -12884,19 +13100,19 @@ msgstr ""
 msgid "Environmental tax sequence in Belgium."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:337
+#: ../../content/applications/finance/accounting/taxes.rst:482
 msgid ":doc:`taxes/fiscal_positions`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:338
+#: ../../content/applications/finance/accounting/taxes.rst:483
 msgid ":doc:`taxes/B2B_B2C`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:339
+#: ../../content/applications/finance/accounting/taxes.rst:484
 msgid ":doc:`taxes/taxcloud`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:340
+#: ../../content/applications/finance/accounting/taxes.rst:485
 msgid ":doc:`reporting/tax_returns`"
 msgstr ""
 
@@ -25457,34 +25673,6 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:296
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:436
 msgid ":doc:`../accounting/payments/pay_checks`"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/canada.rst:299
-msgid "Receive pre-authorized debits"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/canada.rst:301
-msgid ""
-"Pre-authorized debits are a method for receiving payments from customers, "
-"where the customer authorizes the business to withdraw funds from their bank "
-"account on a recurring basis. This functionality is commonly used for "
-"subscriptions, recurring invoices, and other regular payments."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/canada.rst:305
-msgid ""
-"In the Odoo Canadian localization, pre-authorized debits are facilitated "
-"through an :doc:`integration with Stripe <../payment_providers/stripe>`."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/canada.rst:309
-msgid ":doc:`Setting up payment providers <../payment_providers>`"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/canada.rst:310
-msgid ""
-"`Stripe's pre-authorized debit payments documentation <https://"
-"docs.stripe.com/payments/acss-debit>`_"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:3

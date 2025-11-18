@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-16 14:19+0000\n"
-"PO-Revision-Date: 2025-11-17 20:00+0000\n"
+"PO-Revision-Date: 2025-11-18 16:00+0000\n"
 "Last-Translator: \"Tony Ng (ngto)\" <ngto@odoo.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://translate.odoo.com/"
 "projects/odoo-17-doc/studio/zh_Hant/>\n"
@@ -610,7 +610,7 @@ msgid ""
 msgstr ""
 "網址必須視為 **機密資料** "
 "，若在網上或不謹慎地分享該網址，可能會令你的系統面臨惡意攻擊的風險。如有需要"
-"，請按一下 :guilabel:`輪換秘密密鑰` 按鈕，更改網址的密鑰。"
+"，請按一下 :guilabel:`重設秘密密鑰` 按鈕，更改網址的密鑰。"
 
 #: ../../content/applications/studio/automated_actions.rst:172
 msgid ""
@@ -640,6 +640,8 @@ msgid ""
 "variable (i.e., a dictionary that contains the GET parameters or POST JSON "
 "body of the incoming request)."
 msgstr ""
+"網絡鈎子的內容，會在伺服器操作上下文中，以 `payload` "
+"（負載）變數的形式提供，即：包含傳入請求的 GET 參數或 POST JSON 正文的字典。"
 
 #: ../../content/applications/studio/automated_actions.rst:182
 msgid ""
@@ -649,6 +651,10 @@ msgid ""
 "issues that may arise. To access the logs, click the :guilabel:`Logs` smart "
 "button at the top of the :guilabel:`Automation rules` form."
 msgstr ""
+"你亦可選擇 :guilabel:`記錄呼叫` "
+"去記錄接收到的負載，舉例，用以確保來源系統傳送的資料，格式及內容符合要求。這"
+"也有助識別及診斷可能出現的任何問題。若要存取日誌，請按一下 "
+":guilabel:`自動化規則` 表單頂部的 :guilabel:`系統日誌` 智慧按鈕。"
 
 #: ../../content/applications/studio/automated_actions.rst:190
 msgid "Actions To Do"
@@ -660,6 +666,8 @@ msgid ""
 "actions/trigger>`, click :guilabel:`Add an action` to define the action to "
 "be executed."
 msgstr ""
+"為自動化規則定義好 :ref:`觸發事件 <studio/automated-actions/trigger>` 後，"
+"按一下 :guilabel:`加入操作` ，以定義要執行的操作。"
 
 #: ../../content/applications/studio/automated_actions.rst:196
 msgid ""
@@ -671,6 +679,11 @@ msgid ""
 "record` action, the email uses the values set *before* the update action is "
 "run."
 msgstr ""
+"你可為同一個觸發事件/自動化規則，定義多個操作，這些操作會依照定義的順序執行。"
+"例如：若先定義了一個 :guilabel:`更新記錄` 操作，然後再定義一個 "
+":guilabel:`傳送電郵` 操作，電子郵件會使用更新後的值。但是，如果 "
+":guilabel:`傳送電郵` 操作是放在 :guilabel:`更新記錄` "
+"操作之前，電子郵件會使用執行更新操作前已有的值。"
 
 #: ../../content/applications/studio/automated_actions.rst:206
 msgid "Update Record"
@@ -683,6 +696,9 @@ msgid ""
 "for the field to be updated; click the right arrow next to the field name to "
 "access the list of related fields if needed."
 msgstr ""
+"此操作可更新記錄的其中一個（相關）欄位。按一下 :guilabel:`更新` "
+"欄位，然後在開啟的清單中，選擇或搜尋需要更新的欄位。如有需要，可按一下欄位名"
+"稱旁邊的右箭嘴圖示，存取相關欄位清單。"
 
 #: ../../content/applications/studio/automated_actions.rst:212
 msgid ""
@@ -691,6 +707,10 @@ msgid ""
 "by :guilabel:`Adding`, :guilabel:`Removing`, or :guilabel:`Setting it to` "
 "the selected value or by :guilabel:`Clearing it`."
 msgstr ""
+"若選擇 :ref:`多對多欄位 <studio/fields/relational-fields-"
+"many2many>`，請選擇該欄位應該如何更新：可以是 :guilabel:`加入` 、 "
+":guilabel:`移除` 或 :guilabel:`設定為` 所選值，或完全 :guilabel:`清除` "
+"現有值。"
 
 #: ../../content/applications/studio/automated_actions.rst:217
 msgid ""
@@ -698,6 +718,8 @@ msgid ""
 "set the :guilabel:`Update` field to :guilabel:`Customer > Tags`, "
 "select :guilabel:`By Removing`, then select the tag."
 msgstr ""
+"若想自動化操作從客戶記錄中移除一個標籤，請將 :guilabel:`更新` 欄位設定為 "
+":guilabel:`客戶 > 標籤`，選擇 :guilabel:`透過移除`，然後選擇適用的標籤。"
 
 #: ../../content/applications/studio/automated_actions.rst:0
 msgid "Example of an Update Record action"
@@ -714,6 +736,13 @@ msgid ""
 "trigger :guilabel:`Priority is set to` to `High` and define "
 "the :guilabel:`Update Record` action as follows:"
 msgstr ""
+"或者，你也可使用 Python 程式碼，動態設定記錄的欄位。要執行此操作，請選擇 "
+":guilabel:`計算` 而非 "
+":guilabel:`更新`，然後輸入用於計算欄位值的程式碼。例如，"
+"若想自動化規則在任務優先級別設為 `高` 時（透過為任務加上星號），計算自訂的 "
+":ref:`日期時間欄位 <studio/fields/simple-fields-date-time>`，可將觸發器的 "
+":guilabel:`優先級別設為` 定義為 `高`，並按以下步驟定義 :guilabel:`更新記錄` "
+"操作："
 
 #: ../../content/applications/studio/automated_actions.rst:0
 msgid "Compute a custom datetime field using a Python expression"
@@ -730,18 +759,24 @@ msgid ""
 "then specify when you want the activity to be scheduled in "
 "the :guilabel:`Due Date In` field, and select a :guilabel:`User type`:"
 msgstr ""
+"此操作用於將關聯至記錄的新增活動排程。選擇 :guilabel:`活動類型`，輸入 "
+":guilabel:`標題` 及描述，然後在 :guilabel:`期限尚餘` 欄位設定活動預排時間，"
+"然後選擇 :guilabel:`使用者類型`："
 
 #: ../../content/applications/studio/automated_actions.rst:242
 msgid ""
 "To always assign the activity to the same user, select :guilabel:`Specific "
 "User` and add the user in the :guilabel:`Responsible` field;"
-msgstr ""
+msgstr "若要永遠將活動指派給相同的使用者，請選擇 :guilabel:`特定使用者`，然後在 "
+":guilabel:`負責人` 欄位中，新增相關使用者；"
 
 #: ../../content/applications/studio/automated_actions.rst:244
 msgid ""
 "To target a user linked to the record dynamically, select :guilabel:`Dynamic "
 "User (based on record)` and change the :guilabel:`User Field` if necessary."
 msgstr ""
+"若想動態指定與記錄相關聯的使用者，可選擇 "
+":guilabel:`動態使用者（基於記錄）`。如有需要，可修改 :guilabel:`使用者欄位`。"
 
 #: ../../content/applications/studio/automated_actions.rst:248
 msgid ""
@@ -750,6 +785,9 @@ msgid ""
 "the :guilabel:`Activity Type` to :guilabel:`Call` and the :guilabel:`User "
 "Type` to :guilabel:`Dynamic User (based on record)`."
 msgstr ""
+"當潛在客戶轉換為銷售機會後，自動化操作可以為負責該潛在客戶的使用者，自動安排"
+"通話。要執行此操作，請將 :guilabel:`活動類型` 設為 :guilabel:`通話`，並將 "
+":guilabel:`使用者類型` 設為 :guilabel:`動態使用者（基於記錄）`。"
 
 #: ../../content/applications/studio/automated_actions.rst:0
 msgid "Example of a Create Activity action"
@@ -767,6 +805,10 @@ msgid ""
 "As` or :guilabel:`Send SMS As` field, choose how you want to send the email "
 "or text message:"
 msgstr ""
+"這些操作用於向連結至特定記錄的聯絡人，傳送電子郵件或 SMS "
+"文字訊息。要執行此操作，選取或建立 :guilabel:`電郵範本` 或 "
+":guilabel:`短訊範本`，然後在 :guilabel:`傳送電郵為` 或 :guilabel:`傳送短訊為`"
+" 欄位中，選擇你想發送電子郵件或短訊的方式："
 
 #: ../../content/applications/studio/automated_actions.rst:263
 msgid ""
@@ -816,7 +858,7 @@ msgstr "加入及移除關注者"
 #: ../../content/applications/studio/automated_actions.rst:279
 msgid ""
 "Use these actions to (un)subscribe existing contacts to/from the record."
-msgstr ""
+msgstr "這類操作可將現有聯絡人，訂閱為記錄的關注者，或取消訂閱（取消關注）。"
 
 #: ../../content/applications/studio/automated_actions.rst:282
 msgid "Create Record"
@@ -824,7 +866,7 @@ msgstr "建立記錄"
 
 #: ../../content/applications/studio/automated_actions.rst:284
 msgid "This action is used to create a new record on any model."
-msgstr ""
+msgstr "此操作用於在任何模型上建立新的記錄。"
 
 #: ../../content/applications/studio/automated_actions.rst:286
 msgid ""
@@ -834,6 +876,10 @@ msgid ""
 "a field in the :guilabel:`Link Field` field to link the record that "
 "triggered the creation of the new record."
 msgstr ""
+"在 :guilabel:`要建立的記錄` "
+"欄位中，選擇所需的模型。預設情況下，該欄位會是目前的模型。為記錄命名一個 "
+":guilabel:`名稱`，之後，如果要在另一個模型上建立記錄，請在 "
+":guilabel:`連結欄位` 選擇一個欄位，以連結至觸發建立新記錄的原本記錄。"
 
 #: ../../content/applications/studio/automated_actions.rst:292
 msgid ""
@@ -842,6 +888,9 @@ msgid ""
 "existing on the current model that are linked to a :ref:`many2one field "
 "<studio/fields/relational-fields-many2one>` on the target model."
 msgstr ""
+"與 :guilabel:`連結欄位` 相關聯的下拉式選單，只包含目前模型中已存在、"
+"並連結至目標模型的 :ref:`多對一欄位 <studio/fields/relational-fields-"
+"many2one>` 的 :ref:`一對多欄位 <studio/fields/relational-fields-one2many>`。"
 
 #: ../../content/applications/studio/automated_actions.rst:297
 msgid ""
@@ -851,6 +900,10 @@ msgid ""
 "create a new project task and then assign it to a specific user using "
 "an :guilabel:`Update Record` action."
 msgstr ""
+"你可建立另一個包含 :ref:`studio/automated-actions/action/update-record` "
+"操作的自動化規則，以便在必要時為新增記錄更新欄位。例如，可使用 "
+":guilabel:`建立記錄` 操作，建立新的專案任務，然後使用 :guilabel:`更新記錄` "
+"操作，將其指派給指定使用者。"
 
 #: ../../content/applications/studio/automated_actions.rst:305
 msgid "Execute Code"
@@ -932,14 +985,17 @@ msgstr "傳送網絡鈎子（webhook）通知"
 msgid ""
 "This action allows to send a POST request with the values of "
 "the :guilabel:`Fields` to the URL specified in the :guilabel:`URL` field."
-msgstr ""
+msgstr "此操作可向 :guilabel:`網址` 欄位中指定的網址，傳送包含 :guilabel:`欄位` 值的 "
+"POST 請求。"
 
 #: ../../content/applications/studio/automated_actions.rst:333
 msgid ""
 "The :guilabel:`Sample Payload` provides a preview of the data included in "
 "the request using a random record's data or dummy data if no record is "
 "available."
-msgstr ""
+msgstr ":guilabel:`範例負載` "
+"可預覽請求所包括的數據樣本。預覽的數據會抽取自隨機記錄。若無可用記錄，會使用"
+"虛擬數據。"
 
 #: ../../content/applications/studio/automated_actions.rst:339
 msgid "Execute Existing Actions"
@@ -952,6 +1008,9 @@ msgid ""
 "the :guilabel:`Add: Child Actions` pop-up, select an existing action or "
 "click :guilabel:`New` to create a new one."
 msgstr ""
+"此操作用於同時觸發多個（與目前模型關聯的）操作。要執行此操作，請按一下 "
+":guilabel:`加入資料行`，然後在 :guilabel:`加入：子操作` "
+"彈出視窗中，選擇一個現有操作，或按 :guilabel:`新增` 建立新操作。"
 
 #: ../../content/applications/studio/fields.rst:3
 msgid "Fields and widgets"

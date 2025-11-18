@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-16 14:19+0000\n"
-"PO-Revision-Date: 2025-11-16 20:00+0000\n"
+"POT-Creation-Date: 2025-11-18 10:55+0000\n"
+"PO-Revision-Date: 2025-11-18 20:02+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-17-doc/"
 "finance/ja/>\n"
@@ -4513,9 +4513,9 @@ msgid ""
 "in a single entry."
 msgstr ""
 "前受収益が多く、作成する仕訳の数を減らしたい場合は、手動で繰延仕訳を生成する"
-"ことができます。そのためには、**管理設定** の :guilabel:`仕訳生成` "
-"フィールドを :guilabel:`手動でグループ化` "
-"に設定します。するとOdooは前受金額を1つの仕訳に集約します。"
+"ことができます。そのためには、**管理設定** の :guilabel:`仕訳生成` フィールド"
+"を :guilabel:`手動でグループ化` に設定します。するとOdooは前受金額を1つの仕訳"
+"に集約します。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:115
 msgid ""
@@ -4523,9 +4523,9 @@ msgid ""
 "Deferred Revenue` and click the :guilabel:`Generate Entries` button. This "
 "generates two deferral entries:"
 msgstr ""
-"各月末に :menuselection:`会計 --> レポーティング --> 前受収益` に行き、 "
-":guilabel:`仕訳を生成` "
-"ボタンをクリックします。これで2つの繰延仕訳が生成されます:"
+"各月末に :menuselection:`会計 --> レポーティング --> 前受収益` に行"
+"き、 :guilabel:`仕訳を生成` ボタンをクリックします。これで2つの繰延仕訳が生成"
+"されます:"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:118
 msgid ""
@@ -9099,7 +9099,9 @@ msgstr "請求書 1"
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:238
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:252
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:254
-#: ../../content/applications/finance/accounting/taxes.rst:112
+#: ../../content/applications/finance/accounting/taxes.rst:143
+#: ../../content/applications/finance/accounting/taxes.rst:212
+#: ../../content/applications/finance/accounting/taxes.rst:247
 msgid "100"
 msgstr "100"
 
@@ -14896,10 +14898,44 @@ msgid "Tax computation"
 msgstr "税計算"
 
 #: ../../content/applications/finance/accounting/taxes.rst:75
-msgid "**Group of Taxes**"
-msgstr "**税グループ**"
+msgid ""
+"The :guilabel:`Tax Computation` field determines how the tax amount is "
+"computed from the sales price. The following options are available:"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:77
+#: ../../content/applications/finance/accounting/taxes.rst:78
+msgid ""
+":ref:`Group of Taxes <taxes/computation/group-of-taxes>`: a combination of "
+"several other taxes"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:79
+msgid ":ref:`Fixed <taxes/computation/fixed>`: a fixed amount"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:80
+msgid ""
+":ref:`Percentage of Price <taxes/computation/percentage-of-price>`: a "
+"percentage of the tax-excluded sales price"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:82
+msgid ""
+":ref:`Percentage of Price Tax Included <taxes/computation/percentage-of-"
+"price-tax-included>`: a percentage of the tax-included total"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:84
+msgid ""
+":ref:`Python Code <taxes/computation/python-code>`: a custom user-defined "
+"formula"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:89
+msgid "Group of taxes"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:91
 msgid ""
 "The tax is a combination of multiple sub-taxes. You can add as many taxes as "
 "you want, in the order you want them to be applied."
@@ -14907,164 +14943,290 @@ msgstr ""
 "税は複数のサブ税の組合わせです。適用させたい順番で、いくつでも税を追加するこ"
 "とができます。"
 
-#: ../../content/applications/finance/accounting/taxes.rst:81
+#: ../../content/applications/finance/accounting/taxes.rst:95
 msgid ""
-"Make sure that the tax sequence is correct, as the order in which they are "
-"may impact the taxes' amounts computation, especially if one of the "
-"taxes :ref:`affects the base of the subsequent ones <taxes/base-subsequent>`."
+"Make sure the tax sequence is correct, as the display order determines the "
+"application order and may affect tax computation, particularly if a "
+"tax :ref:`affects the base of subsequent taxes <taxes/base-subsequent>`."
 msgstr ""
-"税の順番が正しいことを確認して下さい。特に、ある税が :ref:` <taxes/base-"
-"subsequent> のベースとなる税に影響を与える` 場合、その順番が税の金額計算に影"
-"響を与える可能性があります。"
 
-#: ../../content/applications/finance/accounting/taxes.rst:85
-msgid "**Fixed**"
-msgstr "**固定**"
+#: ../../content/applications/finance/accounting/taxes.rst:102
+msgid "Fixed"
+msgstr "固定"
 
-#: ../../content/applications/finance/accounting/taxes.rst:87
+#: ../../content/applications/finance/accounting/taxes.rst:104
 msgid ""
 "The tax has a fixed amount in the default currency. The amount remains the "
-"same, regardless of the sales price."
+"same per unit, regardless of the sales price."
 msgstr ""
-"税額はデフォルト通貨で固定されています。販売価格に関係なく、金額は変わりませ"
-"ん。"
 
-#: ../../content/applications/finance/accounting/taxes.rst:91
+#: ../../content/applications/finance/accounting/taxes.rst:107
 msgid ""
-"A product has a sales price of $1000, and we apply a $10 *fixed* tax. We "
-"then have:"
+"The computation is :math:`\\text{tax amount} = \\text{fixed tax amount} "
+"\\times \\text{quantity}`."
 msgstr ""
-"あるプロダクトの販売価格が$1000で、$10の *固定* 税がかかる場合。次のようにな"
-"ります:"
 
-#: ../../content/applications/finance/accounting/taxes.rst:94
-#: ../../content/applications/finance/accounting/taxes.rst:109
-#: ../../content/applications/finance/accounting/taxes.rst:124
-#: ../../content/applications/finance/accounting/taxes.rst:268
+#: ../../content/applications/finance/accounting/taxes.rst:110
+msgid ""
+"A product has a sales price of $1000, and we apply a $10 :guilabel:`Fixed` "
+"tax. We then have:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:113
+#: ../../content/applications/finance/accounting/taxes.rst:140
+#: ../../content/applications/finance/accounting/taxes.rst:156
+#: ../../content/applications/finance/accounting/taxes.rst:189
+#: ../../content/applications/finance/accounting/taxes.rst:209
+#: ../../content/applications/finance/accounting/taxes.rst:244
+#: ../../content/applications/finance/accounting/taxes.rst:380
 msgid "Product sales price"
 msgstr "プロダクト販売価格"
 
-#: ../../content/applications/finance/accounting/taxes.rst:94
-#: ../../content/applications/finance/accounting/taxes.rst:109
-#: ../../content/applications/finance/accounting/taxes.rst:124
-#: ../../content/applications/finance/accounting/taxes.rst:268
+#: ../../content/applications/finance/accounting/taxes.rst:113
+#: ../../content/applications/finance/accounting/taxes.rst:140
+#: ../../content/applications/finance/accounting/taxes.rst:156
+#: ../../content/applications/finance/accounting/taxes.rst:189
+#: ../../content/applications/finance/accounting/taxes.rst:209
+#: ../../content/applications/finance/accounting/taxes.rst:244
+#: ../../content/applications/finance/accounting/taxes.rst:380
 msgid "Price without tax"
 msgstr "税抜価格"
 
-#: ../../content/applications/finance/accounting/taxes.rst:94
-#: ../../content/applications/finance/accounting/taxes.rst:109
-#: ../../content/applications/finance/accounting/taxes.rst:124
-#: ../../content/applications/finance/accounting/taxes.rst:268
+#: ../../content/applications/finance/accounting/taxes.rst:113
+#: ../../content/applications/finance/accounting/taxes.rst:140
+#: ../../content/applications/finance/accounting/taxes.rst:156
+#: ../../content/applications/finance/accounting/taxes.rst:189
+#: ../../content/applications/finance/accounting/taxes.rst:209
+#: ../../content/applications/finance/accounting/taxes.rst:244
+#: ../../content/applications/finance/accounting/taxes.rst:380
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:92
 msgid "Tax"
 msgstr "税"
 
-#: ../../content/applications/finance/accounting/taxes.rst:94
-#: ../../content/applications/finance/accounting/taxes.rst:109
-#: ../../content/applications/finance/accounting/taxes.rst:124
-#: ../../content/applications/finance/accounting/taxes.rst:268
+#: ../../content/applications/finance/accounting/taxes.rst:113
+#: ../../content/applications/finance/accounting/taxes.rst:140
+#: ../../content/applications/finance/accounting/taxes.rst:156
+#: ../../content/applications/finance/accounting/taxes.rst:189
+#: ../../content/applications/finance/accounting/taxes.rst:209
+#: ../../content/applications/finance/accounting/taxes.rst:244
+#: ../../content/applications/finance/accounting/taxes.rst:380
 #: ../../content/applications/finance/fiscal_localizations/hong_kong.rst:400
 msgid "Total"
 msgstr "合計"
 
-#: ../../content/applications/finance/accounting/taxes.rst:97
-#: ../../content/applications/finance/accounting/taxes.rst:112
-#: ../../content/applications/finance/accounting/taxes.rst:127
-#: ../../content/applications/finance/accounting/taxes.rst:271
+#: ../../content/applications/finance/accounting/taxes.rst:116
+#: ../../content/applications/finance/accounting/taxes.rst:143
+#: ../../content/applications/finance/accounting/taxes.rst:159
+#: ../../content/applications/finance/accounting/taxes.rst:192
+#: ../../content/applications/finance/accounting/taxes.rst:212
+#: ../../content/applications/finance/accounting/taxes.rst:247
+#: ../../content/applications/finance/accounting/taxes.rst:383
 msgid "1,000"
 msgstr "1,000"
 
-#: ../../content/applications/finance/accounting/taxes.rst:97
+#: ../../content/applications/finance/accounting/taxes.rst:116
 #: ../../content/applications/finance/fiscal_localizations/france.rst:240
 msgid "10"
 msgstr "10"
 
-#: ../../content/applications/finance/accounting/taxes.rst:97
+#: ../../content/applications/finance/accounting/taxes.rst:116
 msgid "1,010.00"
 msgstr "1,010.00"
 
-#: ../../content/applications/finance/accounting/taxes.rst:100
-msgid "**Percentage of price**"
-msgstr "**価格に対する割合**"
-
-#: ../../content/applications/finance/accounting/taxes.rst:102
-msgid ""
-"The *sales price* is the taxable basis: the tax amount is computed by "
-"multiplying the sales price by the tax percentage."
-msgstr "税額は、*販売価格* に税率を乗じて計算されます。"
-
-#: ../../content/applications/finance/accounting/taxes.rst:106
-msgid ""
-"A product has a sales price of $1000, and we apply a *10% of Price* tax. We "
-"then have:"
+#: ../../content/applications/finance/accounting/taxes.rst:122
+msgid "Percentage of price"
 msgstr ""
-"あるプロダクトの販売価格が$1000で、$10の *価格* 税がかかる場合。次のようにな"
-"ります:"
 
-#: ../../content/applications/finance/accounting/taxes.rst:112
-msgid "1,100.00"
-msgstr "1,100.00"
-
-#: ../../content/applications/finance/accounting/taxes.rst:115
-msgid "**Percentage of Price Tax Included**"
-msgstr "**税込価格に対する割合**"
-
-#: ../../content/applications/finance/accounting/taxes.rst:117
-msgid ""
-"The **total** is the taxable basis: the tax amount is a percentage of the "
-"total."
-msgstr "**合計** は課税ベースであり、税額は合計に対する割合です。"
-
-#: ../../content/applications/finance/accounting/taxes.rst:120
-msgid ""
-"A product has a Sales Price of $1000, and we apply a *10% of Price Tax "
-"Included* tax. We then have:"
+#: ../../content/applications/finance/accounting/taxes.rst:124
+msgid "The tax rate is a percentage of the **tax-excluded** subtotal."
 msgstr ""
-"あるプロダクトの販売価格が $1000で、 *10%の税込価格* が適用される場合。この場"
-"合、次のようになります:"
 
-#: ../../content/applications/finance/accounting/taxes.rst:127
-msgid "111.11"
-msgstr "111.11"
-
-#: ../../content/applications/finance/accounting/taxes.rst:127
-msgid "1,111.11"
-msgstr "1,111.11"
+#: ../../content/applications/finance/accounting/taxes.rst:126
+#: ../../content/applications/finance/accounting/taxes.rst:176
+msgid ""
+"The exact tax computation depends on the :ref:`Included in Price <taxes/"
+"included-in-price>` field, which determines whether the sales price should "
+"be treated as tax-excluded or tax-included:"
+msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes.rst:130
-msgid "**Python code**"
-msgstr "Pythonコード"
+#: ../../content/applications/finance/accounting/taxes.rst:180
+#: ../../content/applications/finance/accounting/taxes.rst:403
+msgid "Tax-excluded"
+msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes.rst:132
 msgid ""
-"A tax defined as **Python code** consists of two snippets of Python code "
-"that are executed in a local environment containing data such as the unit "
-"price, product or partner. :guilabel:`Python Code` defines the amount of the "
-"tax, and :guilabel:`Applicable Code` defines if the tax is to be applied. "
-"The formula is found at the bottom of the :guilabel:`Definition` tab."
+"If :guilabel:`Included in Price` is disabled, the computation "
+"is :math:`\\text{tax amount} = \\text{sales price} \\times \\text{tax rate}`."
 msgstr ""
-"**Pythonコード** として定義された税は、単価、プロダクト、パートナーなどのデー"
-"タを含むローカル環境で実行されるPythonコードの2つのスニペットで構成されま"
-"す。 :guilabel:`Pythonコード` は税額を定義し、 :guilabel:`適用コード` は税が"
-"適用されるかを定義します。式は :guilabel:`定義` タブの下に表示されます。"
 
-#: ../../content/applications/finance/accounting/taxes.rst:138
+#: ../../content/applications/finance/accounting/taxes.rst:136
 msgid ""
-":guilabel:`Python Code`: `result = price_unit * 0.10` :guilabel:`Applicable "
-"Code`: `result = true`"
+"A product has a sales price of $1000, and we apply a "
+"10% :guilabel:`Percentage of Price` tax that is not :guilabel:`Included in "
+"Price`. We then have:"
 msgstr ""
-":guilabel:`Pythonコード`: ` = price_unit * 0.10` :guilabel:`適用コード`: "
-"`result = true`"
 
-#: ../../content/applications/finance/accounting/taxes.rst:144
+#: ../../content/applications/finance/accounting/taxes.rst:143
+#: ../../content/applications/finance/accounting/taxes.rst:247
+msgid "1,100.00"
+msgstr "1,100.00"
+
+#: ../../content/applications/finance/accounting/taxes.rst:146
+#: ../../content/applications/finance/accounting/taxes.rst:198
+#: ../../content/applications/finance/accounting/taxes.rst:414
+msgid "Tax-included"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:148
+msgid ""
+"If :guilabel:`Included in Price` is enabled, the computation "
+"is :math:`\\text{tax amount} = \\text{sales price} \\times \\frac{\\text{tax "
+"rate}}{1 + \\text{tax rate}}`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:152
+msgid ""
+"A product has a sales price of $1000, and we apply a "
+"10% :guilabel:`Percentage of Price` tax that is :guilabel:`Included in "
+"Price`. We then have:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:159
+#: ../../content/applications/finance/accounting/taxes.rst:383
+msgid "909.09"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:159
+#: ../../content/applications/finance/accounting/taxes.rst:383
+msgid "90.91"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:159
+#: ../../content/applications/finance/accounting/taxes.rst:212
+#: ../../content/applications/finance/accounting/taxes.rst:383
+msgid "1,000.00"
+msgstr "1,000.00"
+
+#: ../../content/applications/finance/accounting/taxes.rst:165
+msgid "Percentage of price tax included"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:168
+msgid ""
+"This tax computation is rarely used and only useful in countries (e.g., "
+"Brazil, Bolivia) that quote tax rates as a percentage of the tax-included "
+"total. For the more common need to compute tax amounts from a tax-included "
+"price, use the :ref:`Percentage of Price <taxes/computation/percentage-of-"
+"price>` tax computation with the :ref:`Included in Price <taxes/included-in-"
+"price>` option."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:174
+msgid "The tax rate is a percentage of the **tax-included** total."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:181
+msgid ""
+"If :guilabel:`Included in Price` is disabled, the computation "
+"is :math:`\\text{tax amount} = \\text{sales price} \\times \\frac{\\text{tax "
+"rate}}{1 - \\text{tax rate}}`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:185
+msgid ""
+"A product has a sales price of $1000, and we apply a "
+"10% :guilabel:`Percentage of Price Tax Included` tax that is "
+"not :guilabel:`Included in Price`. We then have:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:192
+msgid "111.11"
+msgstr "111.11"
+
+#: ../../content/applications/finance/accounting/taxes.rst:192
+msgid "1,111.11"
+msgstr "1,111.11"
+
+#: ../../content/applications/finance/accounting/taxes.rst:195
+msgid ""
+"Note that the real tax rate in terms of the tax-excluded price "
+"is :math:`\\frac{111.11}{1000} = 11.111\\%`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:200
+msgid ""
+"If :guilabel:`Included in Price` is enabled, the computation "
+"is :math:`\\text{tax amount} = \\text{sales price} \\times \\text{tax rate}`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:204
+msgid ""
+"A product has a sales price of $1000, and we apply a "
+"10% :guilabel:`Percentage of Price Tax Included` tax that "
+"is :guilabel:`Included in Price`. We then have:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:212
+msgid "900"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:215
+msgid ""
+"Note that the real tax rate in terms of the tax-excluded price "
+"is :math:`\\frac{100}{900} = 11.111\\%`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:221
+msgid "Python code"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:224
+msgid ""
+"If a tax can be expressed as a multiple of the quantity of the product to "
+"which it applies, it can be defined as a :ref:`Fixed <taxes/computation/"
+"fixed>` tax. Doing so is strongly recommended over defining "
+"a :guilabel:`Python Code` tax."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:228
+msgid ""
+"A tax defined as :guilabel:`Python Code` consists of two snippets of Python "
+"code that are executed in a local environment that can access the unit "
+"price, quantity, product, and partner. :guilabel:`Python Code` defines the "
+"amount of the tax, and :guilabel:`Applicable Code` defines whether the tax "
+"is applied. Enter a formula for each field at the bottom of "
+"the :guilabel:`Definition` tab."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:235
+msgid ""
+"A product has a sales price of $1000, and we apply a :guilabel:`Python Code` "
+"tax with the following configuration:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:238
+msgid ":guilabel:`Python Code`: `result = price_unit * 0.10` and"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:239
+msgid ":guilabel:`Applicable Code`: `result = True`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:241
+msgid "We then have:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:253
 msgid "Active"
 msgstr "有効化"
 
-#: ../../content/applications/finance/accounting/taxes.rst:146
+#: ../../content/applications/finance/accounting/taxes.rst:255
 msgid "Only **active** taxes can be added to new documents."
 msgstr "新しいドキュメントに追加できるのは、**有効な** 税だけです。"
 
-#: ../../content/applications/finance/accounting/taxes.rst:149
+#: ../../content/applications/finance/accounting/taxes.rst:258
 msgid ""
 "It is not possible to delete taxes that have already been used. Instead, you "
 "can deactivate them to prevent future use."
@@ -15072,36 +15234,36 @@ msgstr ""
 "すでに使用された税を削除することはできません。その代わり、今後使用されないよ"
 "うに無効化することができます。"
 
-#: ../../content/applications/finance/accounting/taxes.rst:153
+#: ../../content/applications/finance/accounting/taxes.rst:262
 msgid ""
 "This field can be modified from the :ref:`list view <taxes/list_activation>`."
 msgstr ""
 "このフィールドは :ref:`リストビュー <taxes/list_activation>` から変更すること"
 "ができます。"
 
-#: ../../content/applications/finance/accounting/taxes.rst:158
+#: ../../content/applications/finance/accounting/taxes.rst:267
 msgid "Tax type"
 msgstr "税タイプ"
 
-#: ../../content/applications/finance/accounting/taxes.rst:160
+#: ../../content/applications/finance/accounting/taxes.rst:269
 msgid ""
 "The :guilabel:`Tax Type` determines the tax application, which also "
 "restricts where it is displayed."
 msgstr ":guilabel:`税タイプ` は税の適用を決定し、表示される場所も制限します。"
 
-#: ../../content/applications/finance/accounting/taxes.rst:162
+#: ../../content/applications/finance/accounting/taxes.rst:271
 msgid "**Sales**: Customer invoices, product customer taxes, etc."
 msgstr "**販売**: 顧客請求書、プロダクトの顧客税など"
 
-#: ../../content/applications/finance/accounting/taxes.rst:163
+#: ../../content/applications/finance/accounting/taxes.rst:272
 msgid "**Purchase**: Vendor bills, product vendor taxes, etc."
 msgstr "**購買**: 仕入先請求書、プロダクト仕入先税など"
 
-#: ../../content/applications/finance/accounting/taxes.rst:164
+#: ../../content/applications/finance/accounting/taxes.rst:273
 msgid "**None**"
 msgstr "**なし**"
 
-#: ../../content/applications/finance/accounting/taxes.rst:167
+#: ../../content/applications/finance/accounting/taxes.rst:276
 msgid ""
 "You can use :guilabel:`None` for taxes that you want to include in "
 "a :ref:`Group of Taxes <taxes/computation>` but that you do not want to list "
@@ -15110,11 +15272,11 @@ msgstr ""
 ":ref:`税グループ<taxes/computation>` に含めたいが、他の売上税や仕入税と一緒に"
 "表示したくない税には :guilabel:`なし` を使うことができます。"
 
-#: ../../content/applications/finance/accounting/taxes.rst:171
+#: ../../content/applications/finance/accounting/taxes.rst:280
 msgid "Tax scope"
 msgstr "税スコープ"
 
-#: ../../content/applications/finance/accounting/taxes.rst:173
+#: ../../content/applications/finance/accounting/taxes.rst:282
 msgid ""
 "The :guilabel:`Tax Scope` restricts the use of taxes to a type of product, "
 "either **goods** or **services**."
@@ -15122,11 +15284,11 @@ msgstr ""
 ":guilabel:`税スコープ` は、税の使用をプロダクトの種類、 **商品** または **"
 "サービス** に制限します。"
 
-#: ../../content/applications/finance/accounting/taxes.rst:179
+#: ../../content/applications/finance/accounting/taxes.rst:288
 msgid "Definition tab"
 msgstr "定義タブ"
 
-#: ../../content/applications/finance/accounting/taxes.rst:181
+#: ../../content/applications/finance/accounting/taxes.rst:290
 msgid ""
 "Allocate with precision the amount of the taxable basis or percentages of "
 "the computed tax to multiple accounts and tax grids."
@@ -15138,23 +15300,23 @@ msgstr ""
 msgid "Allocate tax amounts to the right accounts and tax grids"
 msgstr "税額を適切な勘定科目と税額グリッドに割当てます"
 
-#: ../../content/applications/finance/accounting/taxes.rst:187
+#: ../../content/applications/finance/accounting/taxes.rst:296
 msgid "**Based On**:"
 msgstr "**以下をベースにした**:"
 
-#: ../../content/applications/finance/accounting/taxes.rst:189
+#: ../../content/applications/finance/accounting/taxes.rst:298
 msgid ":guilabel:`Base`: the price on the invoice line"
 msgstr ":guilabel:`ベース`: 請求書明細の価格"
 
-#: ../../content/applications/finance/accounting/taxes.rst:190
+#: ../../content/applications/finance/accounting/taxes.rst:299
 msgid ":guilabel:`% of tax`: a percentage of the computed tax."
 msgstr ":guilabel:`税%`: 計算された税の割合"
 
-#: ../../content/applications/finance/accounting/taxes.rst:192
+#: ../../content/applications/finance/accounting/taxes.rst:301
 msgid "**Account**: if defined, an additional journal item is recorded."
 msgstr "**勘定科目**:もし定義されていれば、追加の仕訳項目が記録されます。"
 
-#: ../../content/applications/finance/accounting/taxes.rst:193
+#: ../../content/applications/finance/accounting/taxes.rst:302
 msgid ""
 "**Tax Grids**:  used to generate :doc:`tax reports <reporting/tax_returns>` "
 "automatically, according to your country's regulations."
@@ -15162,15 +15324,15 @@ msgstr ""
 "**税グリット**: :doc:`税レポート<reporting/tax_returns>` をあなたの国の規則に"
 "従って自動的に生成するために使用されます。"
 
-#: ../../content/applications/finance/accounting/taxes.rst:199
+#: ../../content/applications/finance/accounting/taxes.rst:308
 msgid "Advanced options tab"
 msgstr "高度なオプションタブ"
 
-#: ../../content/applications/finance/accounting/taxes.rst:204
+#: ../../content/applications/finance/accounting/taxes.rst:313
 msgid "Label on invoices"
 msgstr "請求書上ラベル"
 
-#: ../../content/applications/finance/accounting/taxes.rst:206
+#: ../../content/applications/finance/accounting/taxes.rst:315
 msgid ""
 "The tax label is displayed on each invoice line in the :guilabel:`Taxes` "
 "column. This is visible to *front-end* users on exported invoices, in "
@@ -15183,11 +15345,11 @@ msgstr ""
 msgid "The label on invoices is displayed on each invoice line"
 msgstr "請求書のラベルは各請求行に表示されます"
 
-#: ../../content/applications/finance/accounting/taxes.rst:215
+#: ../../content/applications/finance/accounting/taxes.rst:324
 msgid "Tax group"
 msgstr "税グループ"
 
-#: ../../content/applications/finance/accounting/taxes.rst:217
+#: ../../content/applications/finance/accounting/taxes.rst:326
 msgid ""
 "Select which **tax group** the tax belongs to. The tax group name is the "
 "displayed above the **total** line on exported invoices and in customer "
@@ -15196,7 +15358,7 @@ msgstr ""
 "税がどの **税グループ** に属するかを選択します。税グループ名は、エクスポート"
 "された請求書や顧客ポータルの **合計** 明細の上に表示されます。"
 
-#: ../../content/applications/finance/accounting/taxes.rst:220
+#: ../../content/applications/finance/accounting/taxes.rst:329
 msgid ""
 "Tax groups include different iterations of the same tax. This can be useful "
 "when you must record the same tax differently according to :doc:`fiscal "
@@ -15210,7 +15372,7 @@ msgstr ""
 msgid "The Tax Group name is different from the Label on Invoices"
 msgstr "税グループ名が請求書のラベルと異なる"
 
-#: ../../content/applications/finance/accounting/taxes.rst:228
+#: ../../content/applications/finance/accounting/taxes.rst:337
 msgid ""
 "In the example above, the :guilabel:`0% EU S` tax for intra-community "
 "customers in Europe records the amount on specific accounts and tax grids. "
@@ -15223,7 +15385,7 @@ msgstr ""
 "のため、ラベルには :guilabel:`0% EU S` と表示され、 :guilabel:`合計` 明細の上"
 "の税グループ名には :guilabel:`VAT 0%` と表示されています。"
 
-#: ../../content/applications/finance/accounting/taxes.rst:234
+#: ../../content/applications/finance/accounting/taxes.rst:343
 msgid ""
 "Taxes have three different labels, each one having a specific use. Refer to "
 "the following table to see where they are displayed."
@@ -15231,35 +15393,35 @@ msgstr ""
 "税には3種類のラベルがあり、それぞれ特定の用途があります。以下の表を参照して、"
 "表示される場所を確認して下さい。"
 
-#: ../../content/applications/finance/accounting/taxes.rst:238
+#: ../../content/applications/finance/accounting/taxes.rst:347
 msgid ":ref:`Tax Name <taxes/name>`"
 msgstr ":ref:`税名 <taxes/name>`"
 
-#: ../../content/applications/finance/accounting/taxes.rst:238
+#: ../../content/applications/finance/accounting/taxes.rst:347
 msgid ":ref:`Label on Invoice <taxes/label-invoices>`"
 msgstr ":ref:`請求書上ラベル <taxes/label-invoices>`"
 
-#: ../../content/applications/finance/accounting/taxes.rst:238
+#: ../../content/applications/finance/accounting/taxes.rst:347
 msgid ":ref:`Tax Group <taxes/tax-group>`"
 msgstr ":ref:`税グループ <taxes/tax-group>`"
 
-#: ../../content/applications/finance/accounting/taxes.rst:241
+#: ../../content/applications/finance/accounting/taxes.rst:350
 msgid "Backend"
 msgstr "バックエンド"
 
-#: ../../content/applications/finance/accounting/taxes.rst:241
+#: ../../content/applications/finance/accounting/taxes.rst:350
 msgid ":guilabel:`Taxes` column on exported invoices"
 msgstr "エクスポート済請求書上の :guilabel:`税` 列"
 
-#: ../../content/applications/finance/accounting/taxes.rst:241
+#: ../../content/applications/finance/accounting/taxes.rst:350
 msgid "Above the :guilabel:`Total` line on exported invoices"
 msgstr "エクスポート済請求書の :guilabel:`合計` 明細上"
 
-#: ../../content/applications/finance/accounting/taxes.rst:249
+#: ../../content/applications/finance/accounting/taxes.rst:358
 msgid "Include in analytic cost"
 msgstr "分析コストに含める"
 
-#: ../../content/applications/finance/accounting/taxes.rst:251
+#: ../../content/applications/finance/accounting/taxes.rst:360
 msgid ""
 "With this option activated, the tax amount is assigned to the same "
 "**analytic account** as the invoice line."
@@ -15267,83 +15429,91 @@ msgstr ""
 "このオプションを有効にすると、税額は請求書行と同じ **分析勘定** に割当てられ"
 "ます。"
 
-#: ../../content/applications/finance/accounting/taxes.rst:257
+#: ../../content/applications/finance/accounting/taxes.rst:366
 msgid "Included in price"
 msgstr "価格に含める"
 
-#: ../../content/applications/finance/accounting/taxes.rst:259
+#: ../../content/applications/finance/accounting/taxes.rst:368
 msgid ""
-"With this option activated, the total (including the tax) equals the **sales "
-"price**."
-msgstr "このオプションを有効にすると、合計(税込)が **販売価格** になります。"
+"With this option activated, the tax will treat the sales price on which it "
+"is applied as a total including the tax amount. The tax computation will "
+"split the sales price into a base amount and a tax amount. This makes it "
+"suitable for B2C sales in most countries where prices are quoted tax-"
+"inclusive."
+msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes.rst:261
+#: ../../content/applications/finance/accounting/taxes.rst:373
 msgid "`Total = Sales Price = Computed Tax-Excluded price + Tax`"
 msgstr "`合計 = 販売価格 = 税抜計算価格 + 税`"
 
-#: ../../content/applications/finance/accounting/taxes.rst:264
+#: ../../content/applications/finance/accounting/taxes.rst:376
 msgid ""
-"A product has a sales price of $1000, and we apply a *10% of Price* tax, "
-"which is *included in the price*. We then have:"
+"A product has a sales price of $1000, and we apply a "
+"10% :guilabel:`Percentage of Price` tax with :guilabel:`Included in Price`. "
+"We then have:"
 msgstr ""
-"あるプロダクトの販売価格は$1000で、 *価格に含まれる** *10%の税*を適用します。"
-"この場合、次のようになります:"
 
-#: ../../content/applications/finance/accounting/taxes.rst:271
-msgid "900.10"
-msgstr "900.10"
-
-#: ../../content/applications/finance/accounting/taxes.rst:271
-msgid "90.9"
-msgstr "90.9"
-
-#: ../../content/applications/finance/accounting/taxes.rst:271
-msgid "1,000.00"
-msgstr "1,000.00"
-
-#: ../../content/applications/finance/accounting/taxes.rst:275
+#: ../../content/applications/finance/accounting/taxes.rst:387
 msgid ""
-"If you need to define prices accurately, both tax-included and tax-excluded, "
-"please refer to the following documentation: :doc:`taxes/B2B_B2C`."
+"For a guide on configuring tax-excluded and tax-included prices for B2B and "
+"B2C customers, see :doc:`taxes/B2B_B2C`."
 msgstr ""
-"税込価格と税抜価格を正確に定義する必要がある場合は、以下のドキュメントを参照"
-"して下さい: :doc:`taxes/B2B_B2C`"
 
-#: ../../content/applications/finance/accounting/taxes.rst:279
-msgid ""
-"By default, only the :guilabel:`Tax excluded` column is displayed on "
-"invoices. To display the :guilabel:`Tax included` column, click the "
-"**dropdown toggle** button and check :guilabel:`Tax incl.`."
-msgstr ""
-"デフォルトでは、請求書には :guilabel:`税抜` 列のみが表示されます。:guilabel:`"
-"税込` 列を表示するには、**ドロップダウントグル** ボタンをクリック"
-"し、:guilabel:`税込` をチェックします。"
-
-#: ../../content/applications/finance/accounting/taxes.rst:288
+#: ../../content/applications/finance/accounting/taxes.rst:395
 msgid "Affect base of subsequent taxes"
 msgstr "その後の課税標準に影響"
 
-#: ../../content/applications/finance/accounting/taxes.rst:290
+#: ../../content/applications/finance/accounting/taxes.rst:397
 msgid ""
-"With this option, the total tax-included becomes the taxable basis for the "
-"other taxes applied to the same product."
+"If this setting is enabled, any subsequent tax applied on the same product "
+"line that has :ref:`taxes/base-affected` will be based on a modified sales "
+"price. The exact behavior depends on whether the tax with :guilabel:`Affect "
+"base of subsequent taxes` is :ref:`taxes/included-in-price` or not."
 msgstr ""
-"このオプションでは、税込総額が、同じプロダクトに適用される他の税の課税標準と"
-"なります。"
 
-#: ../../content/applications/finance/accounting/taxes.rst:293
+#: ../../content/applications/finance/accounting/taxes.rst:404
 msgid ""
-"You can configure a new :ref:`group of taxes <taxes/computation>` to include "
-"this tax or add it directly to a product line."
+"If :guilabel:`Included in Price` is disabled, subsequent taxes "
+"with :guilabel:`Base affected by preceding taxes` will be based on a "
+"modified sales price equal to the original sales price plus the tax amount."
 msgstr ""
-"この税を含むように新しい :ref:`税グループ <taxes/computation>` を設定したり、"
-"プロダクト明細に直接追加することができます。"
+
+#: ../../content/applications/finance/accounting/taxes.rst:409
+msgid ""
+"A product has a sales price of $1000, and we apply a "
+"10% :guilabel:`Percentage of Price` tax with :guilabel:`Affect base of "
+"subsequent taxes`. Any subsequent tax with :guilabel:`Base affected by "
+"preceding taxes` will be based on a modified sales price of $1100."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:415
+msgid ""
+"If :guilabel:`Included in Price` is enabled, subsequent taxes "
+"with :guilabel:`Base affected by preceding taxes` will be based on a "
+"modified sales price equal to the original sales price minus the tax amount."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:420
+msgid ""
+"A product has a sales price of $1100, and we apply a "
+"10% :guilabel:`Percentage of Price` tax with :guilabel:`Included in Price` "
+"and :guilabel:`Affect base of subsequent taxes`. Any subsequent tax "
+"with :guilabel:`Base affected by preceding taxes` will be based on a "
+"modified sales price of $1000."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:425
+msgid ""
+"This setting is considered any time multiple taxes are applied to the same "
+"product line, whether via a :ref:`group of taxes <taxes/computation>` or "
+"multiple taxes added directly to a product line."
+msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes.rst:-1
 msgid "The eco-tax is taken into the basis of the 21% VAT tax"
 msgstr "エコ税は21％の付加価値税の基礎に組み込まれています。"
 
-#: ../../content/applications/finance/accounting/taxes.rst:300
+#: ../../content/applications/finance/accounting/taxes.rst:432
 msgid ""
 "The order in which you add the taxes on a product line has no effect on how "
 "amounts are computed. If you add taxes directly on a product line, only the "
@@ -15352,7 +15522,7 @@ msgstr ""
 "プロダクト明細に税を追加する順序は、金額の計算方法には影響しません。プロダク"
 "ト明細に直接、税を追加した場合、税の順序のみが適用順序を決定します。"
 
-#: ../../content/applications/finance/accounting/taxes.rst:304
+#: ../../content/applications/finance/accounting/taxes.rst:436
 msgid ""
 "To reorder the sequence, go to :menuselection:`Accounting --> Configuration "
 "--> Taxes`, and drag and drop the lines with the handles next to the tax "
@@ -15365,11 +15535,29 @@ msgstr ""
 msgid "The taxes' sequence in Odoo determines which tax is applied first"
 msgstr "Odooの税の順序は、どの税が最初に適用されるかを決定します。"
 
-#: ../../content/applications/finance/accounting/taxes.rst:311
+#: ../../content/applications/finance/accounting/taxes.rst:445
+msgid "Base affected by preceding taxes"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:447
+msgid ""
+"This setting, which is only visible in :doc:`developer mode <../../general/"
+"developer_mode>`, determines whether any previous tax that :ref:`affects the "
+"base of subsequent taxes <taxes/base-subsequent>` will modify the sales "
+"price that this tax is based on."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:452
+msgid ""
+"Taxes with :ref:`Included in Price <taxes/included-in-price>` always behave "
+"as if this setting is enabled."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes.rst:456
 msgid "Extra taxes"
 msgstr "追加税"
 
-#: ../../content/applications/finance/accounting/taxes.rst:313
+#: ../../content/applications/finance/accounting/taxes.rst:458
 msgid ""
 "\"Extra taxes\" is a broad term referring to additional taxes beyond the "
 "standard or basic taxes imposed by governments. These extra taxes can be "
@@ -15380,7 +15568,7 @@ msgstr ""
 "を指す広い用語です。これらの追加の税は、**奢侈品**、**環境税**、**輸入税** ま"
 "たは **輸出税** などです。"
 
-#: ../../content/applications/finance/accounting/taxes.rst:318
+#: ../../content/applications/finance/accounting/taxes.rst:463
 msgid ""
 "The method to compute these taxes varies across different countries. We "
 "recommend consulting your country's regulations to understand how to "
@@ -15389,21 +15577,16 @@ msgstr ""
 "これらの税金の計算方法は国によって異なります。ご自身のビジネスにおける計算方"
 "法を理解するために、各国の規定を参照することをお勧めします。"
 
-#: ../../content/applications/finance/accounting/taxes.rst:321
+#: ../../content/applications/finance/accounting/taxes.rst:466
 msgid ""
 "To compute an extra tax in Odoo, :ref:`create a tax <taxes/configuration>`, "
 "enter a tax name, select a :ref:`Tax Computation <taxes/configuration>`, set "
 "an :guilabel:`Amount`, and in the :guilabel:`Advanced Options` tab, "
-"check :guilabel:`Affect Base of Subsequent Taxes`. Then, drag and drop the "
+"enable :guilabel:`Affect Base of Subsequent Taxes`. Then, drag and drop the "
 "taxes in the :ref:`order they should be computed <taxes/base-subsequent>`."
 msgstr ""
-"Odooで追加税を計算するには、 :ref:`税を作成 <taxes/configuration>` で、税名を"
-"入力し、:ref:`税計算 <taxes/configuration>` を選択し、:guilabel:`金額` を設定"
-"し、:guilabel:`高度なオプション` タブで、:guilabel:`追徴課税の基準に影響する"
-"` をチェックします。 次に、 :ref:`計算が必要なオーダ<taxes/base-subsequent>` "
-"に税金をドラッグ＆ドロップします。"
 
-#: ../../content/applications/finance/accounting/taxes.rst:327
+#: ../../content/applications/finance/accounting/taxes.rst:472
 msgid ""
 "In Belgium, the formula to compute an environmental tax is: `(product price "
 "+ environmental tax) x sales tax`. Therefore, our environmental tax has to "
@@ -15412,7 +15595,7 @@ msgstr ""
 "ベルギーでは、環境税の計算式は以下の通りです: `(プロダクト価格＋環境税)×販売"
 "税`。したがって、環境税は販売税の前に計算される必要があります。"
 
-#: ../../content/applications/finance/accounting/taxes.rst:330
+#: ../../content/applications/finance/accounting/taxes.rst:475
 msgid ""
 "In our case, we created a 5% environmental tax (Ecotax) and put it *before* "
 "the Belgian base tax of 21%."
@@ -15424,19 +15607,19 @@ msgstr ""
 msgid "Environmental tax sequence in Belgium."
 msgstr "ベルギーでの環境税シーケンス。"
 
-#: ../../content/applications/finance/accounting/taxes.rst:337
+#: ../../content/applications/finance/accounting/taxes.rst:482
 msgid ":doc:`taxes/fiscal_positions`"
 msgstr ":doc:`taxes/fiscal_positions`"
 
-#: ../../content/applications/finance/accounting/taxes.rst:338
+#: ../../content/applications/finance/accounting/taxes.rst:483
 msgid ":doc:`taxes/B2B_B2C`"
 msgstr ":doc:`taxes/B2B_B2C`"
 
-#: ../../content/applications/finance/accounting/taxes.rst:339
+#: ../../content/applications/finance/accounting/taxes.rst:484
 msgid ":doc:`taxes/taxcloud`"
 msgstr ":doc:`taxes/taxcloud`"
 
-#: ../../content/applications/finance/accounting/taxes.rst:340
+#: ../../content/applications/finance/accounting/taxes.rst:485
 msgid ":doc:`reporting/tax_returns`"
 msgstr ":doc:`reporting/tax_returns`"
 
@@ -30815,34 +30998,6 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:436
 msgid ":doc:`../accounting/payments/pay_checks`"
 msgstr ":doc:`../accounting/payments/pay_checks`"
-
-#: ../../content/applications/finance/fiscal_localizations/canada.rst:299
-msgid "Receive pre-authorized debits"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/canada.rst:301
-msgid ""
-"Pre-authorized debits are a method for receiving payments from customers, "
-"where the customer authorizes the business to withdraw funds from their bank "
-"account on a recurring basis. This functionality is commonly used for "
-"subscriptions, recurring invoices, and other regular payments."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/canada.rst:305
-msgid ""
-"In the Odoo Canadian localization, pre-authorized debits are facilitated "
-"through an :doc:`integration with Stripe <../payment_providers/stripe>`."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/canada.rst:309
-msgid ":doc:`Setting up payment providers <../payment_providers>`"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/canada.rst:310
-msgid ""
-"`Stripe's pre-authorized debit payments documentation <https://"
-"docs.stripe.com/payments/acss-debit>`_"
-msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:3
 msgid "Chile"
@@ -60207,6 +60362,154 @@ msgstr ""
 ":guilabel:`シークレットキー` と :guilabel:`Webhookトークン` フィールド"
 "に :ref:`payment_providers/xendit/configure_dashboard` ステップで保存した情報"
 "を入力します。"
+
+#~ msgid "**Group of Taxes**"
+#~ msgstr "**税グループ**"
+
+#~ msgid ""
+#~ "Make sure that the tax sequence is correct, as the order in which they "
+#~ "are may impact the taxes' amounts computation, especially if one of the "
+#~ "taxes :ref:`affects the base of the subsequent ones <taxes/base-"
+#~ "subsequent>`."
+#~ msgstr ""
+#~ "税の順番が正しいことを確認して下さい。特に、ある税が :ref:` <taxes/base-"
+#~ "subsequent> のベースとなる税に影響を与える` 場合、その順番が税の金額計算に"
+#~ "影響を与える可能性があります。"
+
+#~ msgid "**Fixed**"
+#~ msgstr "**固定**"
+
+#~ msgid ""
+#~ "The tax has a fixed amount in the default currency. The amount remains "
+#~ "the same, regardless of the sales price."
+#~ msgstr ""
+#~ "税額はデフォルト通貨で固定されています。販売価格に関係なく、金額は変わりま"
+#~ "せん。"
+
+#~ msgid ""
+#~ "A product has a sales price of $1000, and we apply a $10 *fixed* tax. We "
+#~ "then have:"
+#~ msgstr ""
+#~ "あるプロダクトの販売価格が$1000で、$10の *固定* 税がかかる場合。次のように"
+#~ "なります:"
+
+#~ msgid "**Percentage of price**"
+#~ msgstr "**価格に対する割合**"
+
+#~ msgid ""
+#~ "The *sales price* is the taxable basis: the tax amount is computed by "
+#~ "multiplying the sales price by the tax percentage."
+#~ msgstr "税額は、*販売価格* に税率を乗じて計算されます。"
+
+#~ msgid ""
+#~ "A product has a sales price of $1000, and we apply a *10% of Price* tax. "
+#~ "We then have:"
+#~ msgstr ""
+#~ "あるプロダクトの販売価格が$1000で、$10の *価格* 税がかかる場合。次のように"
+#~ "なります:"
+
+#~ msgid "**Percentage of Price Tax Included**"
+#~ msgstr "**税込価格に対する割合**"
+
+#~ msgid ""
+#~ "The **total** is the taxable basis: the tax amount is a percentage of the "
+#~ "total."
+#~ msgstr "**合計** は課税ベースであり、税額は合計に対する割合です。"
+
+#~ msgid ""
+#~ "A product has a Sales Price of $1000, and we apply a *10% of Price Tax "
+#~ "Included* tax. We then have:"
+#~ msgstr ""
+#~ "あるプロダクトの販売価格が $1000で、 *10%の税込価格* が適用される場合。こ"
+#~ "の場合、次のようになります:"
+
+#~ msgid "**Python code**"
+#~ msgstr "Pythonコード"
+
+#~ msgid ""
+#~ "A tax defined as **Python code** consists of two snippets of Python code "
+#~ "that are executed in a local environment containing data such as the unit "
+#~ "price, product or partner. :guilabel:`Python Code` defines the amount of "
+#~ "the tax, and :guilabel:`Applicable Code` defines if the tax is to be "
+#~ "applied. The formula is found at the bottom of the :guilabel:`Definition` "
+#~ "tab."
+#~ msgstr ""
+#~ "**Pythonコード** として定義された税は、単価、プロダクト、パートナーなどの"
+#~ "データを含むローカル環境で実行されるPythonコードの2つのスニペットで構成さ"
+#~ "れます。 :guilabel:`Pythonコード` は税額を定義し、 :guilabel:`適用コード` "
+#~ "は税が適用されるかを定義します。式は :guilabel:`定義` タブの下に表示されま"
+#~ "す。"
+
+#~ msgid ""
+#~ ":guilabel:`Python Code`: `result = price_unit * "
+#~ "0.10` :guilabel:`Applicable Code`: `result = true`"
+#~ msgstr ""
+#~ ":guilabel:`Pythonコード`: ` = price_unit * 0.10` :guilabel:`適用コード`: "
+#~ "`result = true`"
+
+#~ msgid ""
+#~ "With this option activated, the total (including the tax) equals the "
+#~ "**sales price**."
+#~ msgstr ""
+#~ "このオプションを有効にすると、合計(税込)が **販売価格** になります。"
+
+#~ msgid ""
+#~ "A product has a sales price of $1000, and we apply a *10% of Price* tax, "
+#~ "which is *included in the price*. We then have:"
+#~ msgstr ""
+#~ "あるプロダクトの販売価格は$1000で、 *価格に含まれる** *10%の税*を適用しま"
+#~ "す。この場合、次のようになります:"
+
+#~ msgid "900.10"
+#~ msgstr "900.10"
+
+#~ msgid "90.9"
+#~ msgstr "90.9"
+
+#~ msgid ""
+#~ "If you need to define prices accurately, both tax-included and tax-"
+#~ "excluded, please refer to the following documentation: :doc:`taxes/"
+#~ "B2B_B2C`."
+#~ msgstr ""
+#~ "税込価格と税抜価格を正確に定義する必要がある場合は、以下のドキュメントを参"
+#~ "照して下さい: :doc:`taxes/B2B_B2C`"
+
+#~ msgid ""
+#~ "By default, only the :guilabel:`Tax excluded` column is displayed on "
+#~ "invoices. To display the :guilabel:`Tax included` column, click the "
+#~ "**dropdown toggle** button and check :guilabel:`Tax incl.`."
+#~ msgstr ""
+#~ "デフォルトでは、請求書には :guilabel:`税抜` 列のみが表示されま"
+#~ "す。:guilabel:`税込` 列を表示するには、**ドロップダウントグル** ボタンをク"
+#~ "リックし、:guilabel:`税込` をチェックします。"
+
+#~ msgid ""
+#~ "With this option, the total tax-included becomes the taxable basis for "
+#~ "the other taxes applied to the same product."
+#~ msgstr ""
+#~ "このオプションでは、税込総額が、同じプロダクトに適用される他の税の課税標準"
+#~ "となります。"
+
+#~ msgid ""
+#~ "You can configure a new :ref:`group of taxes <taxes/computation>` to "
+#~ "include this tax or add it directly to a product line."
+#~ msgstr ""
+#~ "この税を含むように新しい :ref:`税グループ <taxes/computation>` を設定した"
+#~ "り、プロダクト明細に直接追加することができます。"
+
+#~ msgid ""
+#~ "To compute an extra tax in Odoo, :ref:`create a tax <taxes/"
+#~ "configuration>`, enter a tax name, select a :ref:`Tax Computation <taxes/"
+#~ "configuration>`, set an :guilabel:`Amount`, and in "
+#~ "the :guilabel:`Advanced Options` tab, check :guilabel:`Affect Base of "
+#~ "Subsequent Taxes`. Then, drag and drop the taxes in the :ref:`order they "
+#~ "should be computed <taxes/base-subsequent>`."
+#~ msgstr ""
+#~ "Odooで追加税を計算するには、 :ref:`税を作成 <taxes/configuration>` で、税"
+#~ "名を入力し、:ref:`税計算 <taxes/configuration>` を選択し、:guilabel:`金額"
+#~ "` を設定し、:guilabel:`高度なオプション` タブで、:guilabel:`追徴課税の基準"
+#~ "に影響する` をチェックします。 次に、 :ref:`計算が必要なオーダ<taxes/base-"
+#~ "subsequent>` に税金をドラッグ＆ドロップします。"
 
 #~ msgid ""
 #~ "If you wish to try the payment provider as a test, set "
