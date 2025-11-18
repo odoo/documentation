@@ -128,9 +128,10 @@ The rule-based assignment feature can be set to run :guilabel:`Manually`, meanin
 manually trigger the assignment, or :guilabel:`Repeatedly`, meaning Odoo will automatically trigger
 the assignment according to the chosen time period.
 
-To set up automatic lead assignment, select :guilabel:`Repeatedly` for the :guilabel:`Running`
-section. Then, customize how often Odoo will trigger the automatic assignment in the
-:guilabel:`Repeat every` section.
+To configure automatic lead assignment, select :guilabel:`Repeatedly` for the :guilabel:`Running`
+section. The frequency of this automatic assignment is customized within the :guilabel:`Repeat
+every` section. Enter a specific number and select a corresponding time period to establish the
+desired interval. Time periods range from :guilabel:`Minutes` to :guilabel:`Weeks`.
 
 .. image:: lead_scoring/rule-based-assignment.png
    :align: center
