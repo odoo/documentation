@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-20 14:56+0200\n"
-"PO-Revision-Date: 2025-11-17 20:20+0000\n"
+"PO-Revision-Date: 2025-11-18 20:20+0000\n"
 "Last-Translator: \"Tony Ng (ngto)\" <ngto@odoo.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://translate.odoo.com/"
 "projects/odoo-19-doc/studio/zh_Hant/>\n"
@@ -1572,7 +1572,8 @@ msgid ""
 "Webhooks, which can be created in **Odoo Studio**, allow you to automate an "
 "action in your Odoo database when a specific event occurs in another, "
 "external system."
-msgstr ""
+msgstr "網絡鈎子（webhook）可在 **Odoo Studio** "
+"建立，讓你可在外部系統發生特定事件時，自動在 Odoo 資料庫中觸發操作。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:13
 msgid ""
@@ -1581,6 +1582,9 @@ msgid ""
 "a `POST` API request, and a predefined action is performed in your Odoo "
 "database."
 msgstr ""
+"實際運作流程如下：當外部系統發生事件時，會透過 `POST` API "
+"請求，將一個數據檔案（亦稱為「負載」）發送至 Odoo 網絡鈎子的網址，然後在你的 "
+"Odoo 資料庫中執行預先設定的操作。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:17
 msgid ""
@@ -1590,6 +1594,9 @@ msgid ""
 "webhook to have your Odoo inventory data updated automatically when a sales "
 "order is confirmed in an external point-of-sale system."
 msgstr ""
+"與根據預設時間間隔排程運行的「預定操作」或需要明確提出呼叫的手動 API "
+"請求不同，網絡鈎子可支援實時、由事件驅動的通訊及自動化運作。例如，你可設定一"
+"個網絡鈎子，在外部銷售點系統確認銷售單時，自動更新 Odoo 的庫存資料。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:22
 msgid ""
@@ -1598,6 +1605,10 @@ msgid ""
 "requires an external tool. :ref:`Custom target records or actions <studio/"
 "webhooks/webhook-example>` may require programming skills."
 msgstr ""
+"在 Odoo 系統中設置網絡鈎子時，若連接的是兩個 Odoo "
+"資料庫，是無需編寫任何程式碼，而 :ref:`測試網絡鈎子 <studio/webhooks/test-"
+"webhook>` 是需要使用外部工具。若需要建立 :ref:`自訂目標記錄或操作 <studio/"
+"webhooks/webhook-example>`，則可能需要編寫程式技能。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:28
 msgid ""
@@ -1606,10 +1617,14 @@ msgid ""
 "that :ref:`sends data to an external webhook <studio/automated-actions/"
 "action-webhook>` when a change occurs in your Odoo database."
 msgstr ""
+"本文介紹如何建立用於 **接收** "
+"外部來源數據的網絡鈎子。不過，你同樣可建立自動化操作，在 Odoo "
+"資料庫發生變更時， :ref:`將數據發送至外部網絡鈎子 <studio/automated-actions/"
+"action-webhook>`。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:35
 msgid "Create a webhook in Odoo"
-msgstr ""
+msgstr "在 Odoo 系統中建立網絡鈎子"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:38
 msgid ""
@@ -1617,6 +1632,8 @@ msgid ""
 "using a :ref:`duplicate database <odoo_online/database-management>` to "
 "ensure the webhook performs as intended."
 msgstr ""
+"為正式運行的資料庫部署網絡鈎子前，建議先使用 :ref:`資料庫的複製副本 <"
+"odoo_online/database-management>` 進行配置及測試，確保網絡鈎子按照預期運作。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:42
 msgid ""
@@ -1626,6 +1643,10 @@ msgid ""
 "find the technical name of the model and fields, which may be needed to "
 "configure the payload."
 msgstr ""
+"建立網絡鈎子前，可先 :ref:`啟動開發人員模式 <developer-mode>`，"
+"讓你在選擇自動化規則的目標 :doc:`模型 <../models_modules_apps>` "
+"時，可更加靈活。同時，此模式也可查看模型及欄位的技術名稱，你在配置負載時可能"
+"需要用到這些資料。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:47
 msgid ""
@@ -1635,20 +1656,26 @@ msgid ""
 "example, a sales order webhook uses the *Sales Order* model, but the "
 "technical name `sale.order` is used in the payload."
 msgstr ""
+"要查找模型的技術名稱，請先啟動開發人員模式，然後將滑鼠停留在模型名稱上，"
+"再按一下 :icon:`fa-arrow-right` :guilabel:`(內部連結)`。技術名稱可在 "
+":guilabel:`模型` 欄位中找到。例如，銷售單網絡鈎子使用的是 **銷售單** "
+"模型，但在請求負載中使用的，則是其技術名稱 `sale.order` 。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:52
 msgid "To create a webhook in **Studio**, proceed as follows:"
-msgstr ""
+msgstr "若要在 **Studio** 中建立網絡鈎子，請按以下步驟操作："
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:54
 msgid ""
 ":ref:`Open Studio <studio/access>` and click :guilabel:`Webhooks`, "
 "then :guilabel:`New`."
 msgstr ""
+":ref:`開啟 Studio <studio/access>`，按一下 :guilabel:`網絡鈎子`，然後選擇 "
+":guilabel:`新增`。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:55
 msgid "Give the webhook a clear, meaningful name that identifies its purpose."
-msgstr ""
+msgstr "為網絡鈎子命名，設定一個清晰、有意義的名稱，以明確識別其用途。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:56
 msgid ""
@@ -1656,6 +1683,8 @@ msgid ""
 "appropriate :guilabel:`Model` from the dropdown. If developer mode is not "
 "activated, the automation rule targets the current model by default."
 msgstr ""
+"如有需要，可在已啟動開發人員模式的情況下，從下拉式選單中選擇所需 "
+":guilabel:`模型`。若未啟動開發人員模式，自動化規則會預設以目前模型為目標。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:60
 msgid ""
@@ -1664,6 +1693,8 @@ msgid ""
 "when implementing the webhook in the external system that will send updates "
 "to the database."
 msgstr ""
+"網絡鈎子的網址會由系統自動產生，但有需要時，可按一下 :guilabel:`重設秘密密鑰`"
+" 去修改。你在向 Odoo 資料庫發送更新的外部系統配置網絡鈎子時，應使用此網址。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:65
 msgid ""
@@ -1672,12 +1703,16 @@ msgid ""
 "database. If the URL is updated after the initial implementation, make sure "
 "to update it in the external system."
 msgstr ""
+"此網址應視為 **機密** ，請務必妥善處理。若在網上或不謹慎地分享此網址，"
+"可能會讓外界未經授權便可存取 Odoo "
+"資料庫。若在最初部署後，此網址有更新，請確保也在外部系統更新此網址。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:69
 msgid ""
 "If desired, enable :guilabel:`Log Calls` to track the history of API "
 "requests made to the webhook's URL, e.g., for troubleshooting purposes."
-msgstr ""
+msgstr "如有需要，可啟用 :guilabel:`記錄召用` 功能，追蹤向網絡鈎子網址發出 API "
+"請求的歷程記錄，例如用於故障排解及除錯用途。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:72
 msgid ""
@@ -1686,6 +1721,9 @@ msgid ""
 "API request is made to the webhook's URL. If the system sending the webhook "
 "is an Odoo database, ensure that the `id` and `model` appear in the payload."
 msgstr ""
+"若網絡鈎子並非由 Odoo 發送，請調整 :guilabel:`目標記錄` 的程式碼，"
+"以查找向網絡鈎子網址發出 API 請求時，負載中包含的 JSON 記錄。若網絡鈎子由 "
+"Odoo 資料庫發送，請確保負載中包含 `id` （識別碼）及 `model` （模型）資料。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:77
 msgid ""
@@ -1693,24 +1731,31 @@ msgid ""
 "`model.browse(i)` or `model.search(i)` instead of the "
 "default :guilabel:`Target Record` format."
 msgstr ""
+"若網絡鈎子用於在 Odoo 資料庫中建立記錄，請使用 `model.browse(i)` 或 "
+"`model.search(i)` 代替預設的 :guilabel:`目標記錄` 格式。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:80
 msgid ""
 "Click :guilabel:`Add an action` in the :guilabel:`Actions To Do` tab to "
 "define the :ref:`actions <studio/automated-actions/action>` to be executed."
 msgstr ""
+"在 :guilabel:`執行操作` 分頁中，按一下 :guilabel:`加入操作`，"
+"以定義需要執行的 :ref:`操作 <studio/automated-actions/action>`。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:82
 msgid ""
 "Before implementing the webhook in the external system, :ref:`test <studio/"
 "webhooks/test-webhook>` it to ensure it works as intended."
-msgstr ""
+msgstr "在外部系統部署網絡鈎子前，請先 :ref:`測試 <studio/webhooks/test-webhook>` "
+"該系統，確保它能按預期工作。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:86
 msgid ""
 "Webhooks can also be created via the :guilabel:`Automations` menu in "
 "**Studio** by selecting the trigger :guilabel:`On webhook`."
 msgstr ""
+"網絡鈎子也可使用 **Studio** 的 :guilabel:`自動化` 選單建立，只需選擇 "
+":guilabel:`網絡鈎子` 作為觸發事件。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:88
 msgid ""
@@ -1718,17 +1763,20 @@ msgid ""
 "enabled, click the :guilabel:`Logs` smart button at the top of "
 "the :guilabel:`Automation rules` form."
 msgstr ""
+"若要查看已啟用 :guilabel:`記錄召用` 功能的 API 請求歷程，請在 "
+":guilabel:`自動化規則` 表單頂部，按一下 :guilabel:`系統日誌` 智能按鈕。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:90
 msgid ""
 "If the purpose of the webhook is anything other than to update an existing "
 "record, e.g., to create a new record, the :guilabel:`Execute Code` action "
 "must be chosen."
-msgstr ""
+msgstr "若網絡鈎子不是用作更新現有記錄（例如，用以建立新的記錄），必須選擇 "
+":guilabel:`執行程式碼` 操作。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:96
 msgid "Test a webhook"
-msgstr ""
+msgstr "測試網絡鈎子"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:98
 msgid ""
@@ -1736,54 +1784,63 @@ msgid ""
 "like `Postman <https://www.postman.com/>`_, to send the payload via a `POST` "
 "API request. This section presents the steps to test a webhook in Postman."
 msgstr ""
+"測試網絡鈎子需要有測試負載，並使用外部工具或系統，例如 `Postman <https://"
+"www.postman.com/>`_ ，以透過 `POST` API 請求發送負載。本節介紹使用 Postman "
+"測試網絡鈎子的步驟。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:103
 msgid ""
 "See the :ref:`webhook use cases section <studio/webhooks/webhook-examples>` "
 "for step-by-step explanations of how to test webhooks using test payloads."
 msgstr ""
+"你可參閱 :ref:`網絡鈎子使用案例 <studio/webhooks/webhook-examples>` "
+"章節，查看有關使用測試負載去測試網絡鈎子的詳細步驟。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:105
 msgid ""
 "To get specific help with testing a webhook with Postman, contact their "
 "support team."
-msgstr ""
+msgstr "若在使用 Postman 測試網絡鈎子上需要具體幫助，請聯絡其支援團隊。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:107
 msgid ""
 "In Postman, create a new HTTP request and set its method to :guilabel:`POST`."
-msgstr ""
+msgstr "在 Postman 中，建立新的 HTTP 請求，並將其方法設為 :guilabel:`POST`。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:108
 msgid ""
 "Copy the webhook's URL from your Odoo database using the :icon:`fa-"
 "link` :guilabel:`(link)` icon and paste it into the URL field in Postman."
 msgstr ""
+"使用 :icon:`fa-link` :guilabel:`(連結)` 圖示，從你的 Odoo "
+"資料庫複製網絡鈎子網址，然後貼上至 Postman 的網址欄位。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:110
 #: ../../content/applications/studio/automated_actions/webhooks.rst:192
 #: ../../content/applications/studio/automated_actions/webhooks.rst:267
 msgid "Click the :guilabel:`Body` tab and select :guilabel:`raw`."
-msgstr ""
+msgstr "按一下 :guilabel:`內文` 分頁，選擇 :guilabel:`raw` （原始）。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:111
 msgid ""
 "Set the file type to :guilabel:`JSON`, then copy the code from the test "
 "payload and paste it into the code editor."
-msgstr ""
+msgstr "將檔案類型設為 "
+":guilabel:`JSON`，然後從測試負載中複製程式碼，再貼上至程式碼編輯器中。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:113
 #: ../../content/applications/studio/automated_actions/webhooks.rst:206
 #: ../../content/applications/studio/automated_actions/webhooks.rst:281
 msgid "Click :guilabel:`Send`."
-msgstr ""
+msgstr "按一下 :guilabel:`傳送`。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:117
 msgid ""
 "In the :guilabel:`Response` viewer at the bottom of the screen in Postman, "
 "details, including a HTTP response code, indicate whether or not the webhook "
 "is functioning correctly."
-msgstr ""
+msgstr "Postman 畫面底部的 :guilabel:`回應` 檢視工具中的詳細資訊，包括 HTTP "
+"回應代碼等，能夠反映網絡鈎子是否正常運行。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:120
 msgid ""
@@ -1791,6 +1848,9 @@ msgid ""
 "properly on Odoo's side. From here, implementation can begin with the other "
 "system to automatically send the API requests to the Odoo webhook's URL."
 msgstr ""
+"若收到 `200 OK` 或 `status: ok` 訊息，表示網絡鈎子在 Odoo "
+"一方正常運行。在此情況下，你可開始另一系統的實施工作，讓對方自動向 Odoo "
+"網絡鈎子網址發送 API 請求。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:124
 msgid ""
@@ -1800,16 +1860,22 @@ msgid ""
 "the fields found in the JSON file are properly mapped in the webhook's "
 "configuration and in the system sending the test call."
 msgstr ""
+"若系統傳回任何其他回應，相關的狀態代碼能幫助你識別問題。例如，若收到 `500 "
+"Internal Server Error` （內部伺服器錯誤）訊息，表示 Odoo "
+"未能正確解析收到的召用請求。在此情況下，請確保 JSON "
+"檔案中的欄位，在網絡鈎子配置及發送測試召用的系統中，都已正確配對。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:130
 msgid ""
 "Turning on call logging in the webhook's configuration in Odoo provides "
 "error logs if the webhook is not functioning as intended."
-msgstr ""
+msgstr "若在 Odoo "
+"的網絡鈎子配置中，啟用召用日誌記錄功能，當網絡鈎子未能按預期運行時，系統可提"
+"供錯誤日誌。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:134
 msgid "Implement a webhook in an external system"
-msgstr ""
+msgstr "在外部系統實施網絡鈎子"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:136
 msgid ""
@@ -1817,10 +1883,13 @@ msgid ""
 "it in the system that sends data to the Odoo database, making sure the "
 "`POST` API requests are sent to the webhook's URL."
 msgstr ""
+"在 Odoo 系統中成功建立及測試網絡鈎子後，你便可在向 Odoo "
+"資料庫發送數據的系統中，實施網絡鈎子。請確保該系統將 `POST` API "
+"請求，發送至網絡鈎子的網址。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:142
 msgid "Webhook use cases"
-msgstr ""
+msgstr "網絡鈎子使用案例"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:144
 msgid ""
@@ -1829,10 +1898,13 @@ msgid ""
 "webhook. `Postman <https://www.postman.com/>`_ is used to send the test "
 "payload."
 msgstr ""
+"下文講解兩個在 Odoo "
+"使用網絡鈎子的範例。每個範例都有提供測試負載，可在測試網絡鈎子的相關章節找到"
+"。本文範例使用 `Postman <https://www.postman.com/>`_ 發送測試負載。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:149
 msgid "Update a sales order's currency"
-msgstr ""
+msgstr "更新銷售單貨幣"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:151
 msgid ""
@@ -1841,42 +1913,51 @@ msgid ""
 "includes that sales order number (which is identified by the payload's `id` "
 "record)."
 msgstr ""
+"外部系統向網絡鈎子網址發送 `POST` API 請求時，若請求包含銷售單編號（"
+"在負載中以 `id` 記錄標示），此網絡鈎子會在 **銷售** "
+"應用程式中，將對應銷售單的貨幣，更新為 `USD` （美元）。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:155
 msgid ""
 "This could be useful for subsidiaries outside the United States with a "
 "mother company located inside the United States or during mergers when "
 "consolidating data into one Odoo database."
-msgstr ""
+msgstr "此功能對於位處美國境外但母公司在美國境內的子公司，"
+"或在合併過程中將所有數據整合至同一個 Odoo 資料庫時，都很有用。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:159
 #: ../../content/applications/studio/automated_actions/webhooks.rst:221
 msgid "Create the webhook"
-msgstr ""
+msgstr "建立網絡鈎子"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:161
 #: ../../content/applications/studio/automated_actions/webhooks.rst:223
 msgid "To create this webhook, proceed as follows:"
-msgstr ""
+msgstr "要建立此網絡鈎子，請按照以下步驟操作："
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:163
 msgid ""
 "Open the **Sales** app, then :ref:`open Studio <studio/access>` and "
 "click :guilabel:`Webhooks`. The *Sales Order* model is selected by default."
 msgstr ""
+"開啟 **銷售** 應用程式，然後 :ref:`開啟 Studio <studio/access>`，再按一下 "
+":guilabel:`網絡鈎子`。系統預設會選擇 **銷售單** 模型。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:165
 #: ../../content/applications/studio/automated_actions/webhooks.rst:227
 msgid ""
 "Click :guilabel:`New`. The :guilabel:`Trigger` is set to :guilabel:`On "
 "webhook` by default."
-msgstr ""
+msgstr "按一下 :guilabel:`新增`。預設情況下， :guilabel:`觸發` 事件會設為 "
+":guilabel:`網絡鈎子`。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:166
 msgid ""
 "Set the :guilabel:`Target Record` to "
 "`model.env[payload.get('_model')].browse(int(payload.get('_id')))`, where:"
 msgstr ""
+"將 :guilabel:`目標記錄` 設定為 `model.env[payload.get('_model')]"
+".browse(int(payload.get('_id')))`，當中："
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:169
 msgid ""
@@ -1884,6 +1965,8 @@ msgid ""
 "in the payload, i.e., `sale.order`, which is the technical name of the "
 "*Sales Order* model."
 msgstr ""
+"`payload.get('_model')` 用於獲取負載中 `model` 鍵對應的值，即 `sale.order`，"
+"亦即 **銷售單** 模型的技術名稱。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:171
 msgid ""
@@ -1891,48 +1974,54 @@ msgid ""
 "payload, i.e., the number of the target sales order in your Odoo database "
 "with the `S` and leading zeros removed."
 msgstr ""
+"`payload.get('_id')` 用於獲取負載中 `id` 鍵對應的值，即在你的 Odoo "
+"資料庫中，目標銷售單的編號，再移除起首的字母「S」及所有起首的數字 0（零）。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:174
 msgid ""
 "`int` converts the retrieved id to an integer (i.e., a whole number) because "
 "the method `browse()` can only be used with an integer."
-msgstr ""
+msgstr "`int` 將取得的 id 轉換為整數，因為 `browse()` 方法只接受使用整數。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:177
 #: ../../content/applications/studio/automated_actions/webhooks.rst:231
 msgid "Click :guilabel:`Add an action`."
-msgstr ""
+msgstr "按一下 :guilabel:`加入操作`。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:178
 msgid "In the :guilabel:`Type` section, click :guilabel:`Update Record`."
-msgstr ""
+msgstr "在 :guilabel:`類型` 部份，按一下 :guilabel:`更新記錄`。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:179
 msgid ""
 "In the :guilabel:`Action details` section, select :guilabel:`Update`, choose "
 "the field :guilabel:`Currency`, and select :guilabel:`USD`."
 msgstr ""
+"在 :guilabel:`操作詳情` 部份，選擇 :guilabel:`更新`，選取 :guilabel:`貨幣` "
+"欄位，然後選擇 :guilabel:`USD` （美元）。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:181
 #: ../../content/applications/studio/automated_actions/webhooks.rst:256
 msgid "Click :guilabel:`Save & Close`."
-msgstr ""
+msgstr "按一下 :guilabel:`儲存並關閉`。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:184
 #: ../../content/applications/studio/automated_actions/webhooks.rst:259
 msgid "Test the webhook"
-msgstr ""
+msgstr "測試網絡鈎子"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:186
 #: ../../content/applications/studio/automated_actions/webhooks.rst:261
 msgid "To test this webhook, proceed as follows:"
-msgstr ""
+msgstr "要測試此網絡鈎子，請按照以下步驟操作："
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:188
 msgid ""
 "With `Postman <https://www.postman.com/>`_ open, create a new HTTP request "
 "and set its method to :guilabel:`POST`."
 msgstr ""
+"開啟 `Postman <https://www.postman.com/>`_ 後，建立一個新的 HTTP 請求，"
+"並將其方法設為 :guilabel:`POST`。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:190
 #: ../../content/applications/studio/automated_actions/webhooks.rst:265
@@ -1940,13 +2029,17 @@ msgid ""
 "Copy the URL of the Odoo webhook using the :icon:`fa-"
 "link` :guilabel:`(link)` icon and paste it into the URL field in Postman."
 msgstr ""
+"使用 :icon:`fa-link` :guilabel:`(連結)` 圖示，複製 Odoo 網絡鈎子的網址，"
+"並貼上至 Postman 的網址欄位。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:193
 #: ../../content/applications/studio/automated_actions/webhooks.rst:268
 msgid ""
 "Set the file type to :guilabel:`JSON`, then copy this code, i.e., the "
 "payload, and paste it into the code editor:"
-msgstr ""
+msgstr "將檔案類型設為 "
+":guilabel:`JSON`，然後複製以下程式碼（即請求的負載），然後貼上至程式碼編輯器"
+"："
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:203
 msgid ""
@@ -1955,6 +2048,9 @@ msgid ""
 "without the `S` or any zeros before the number. For example, a sales order "
 "with the number `S00007` should be entered as `7` in Postman."
 msgstr ""
+"在你的 Odoo 資料庫中，選擇一張銷售單，用作測試網絡鈎子。在貼上的程式碼中，將 "
+"`SALES ORDER NUMBER` 改為銷售單的編號，並移除起首的字母「S」及所有起首的數字 "
+"0（零）。例如，編號為 `S00007` 的銷售單，在 Postman 中應輸入 `7` 。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:207
 #: ../../content/applications/studio/automated_actions/webhooks.rst:282
@@ -1964,6 +2060,9 @@ msgid ""
 "If a message other than `200 OK` or `status: ok` is returned, the number "
 "associated with the message helps to identify the problem."
 msgstr ""
+"查看 Postman 的 :ref:`回應檢視工具 <studio/webhooks/test-webhook-"
+"response>`，以確定網絡鈎子是否正常運行。若系統傳回的訊息不是 `200 OK` 或 "
+"`status: ok` ，訊息的相關代碼能幫助你找出問題。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:214
 msgid "Create a new contact"
@@ -1976,12 +2075,17 @@ msgid ""
 "that includes the contact's information. This could be helpful for "
 "automatically creating new vendors or customers."
 msgstr ""
+"外部系統向網絡鈎子網址，發送包含聯絡人資料的 `POST` API "
+"請求時，此網絡鈎子會使用自訂程式碼，在 Odoo "
+"資料庫中建立一個新的聯絡人。此功能可用作自動建立新的供應商或客戶記錄。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:225
 msgid ""
 "Open the **Contacts** app, then :ref:`open Studio <studio/access>` and "
 "click :guilabel:`Webhooks`. The *Contact* model is selected by default."
 msgstr ""
+"開啟 **聯絡人** 應用程式，然後 :ref:`開啟 Studio <studio/access>`，並按一下 "
+":guilabel:`網絡鈎子`。系統預設會選擇 **聯絡人** 模型。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:228
 msgid ""
@@ -1990,28 +2094,37 @@ msgid ""
 "webhook what needs to be retrieved from the payload and in which model the "
 "record needs to be created."
 msgstr ""
+"將 :guilabel:`目標記錄` 設為 `model.browse([2])` "
+"。這實際上是一個佔位符，因為自動化操作的程式碼，會告訴網絡鈎子需要從負載中讀"
+"取甚麼資料，以及需要在哪個模型中建立記錄。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:232
 msgid "In the :guilabel:`Type` section, click :guilabel:`Execute Code`."
-msgstr ""
+msgstr "在 :guilabel:`類型` 部份，按一下 :guilabel:`執行程式碼`。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:233
 msgid ""
 "Copy this code and paste it into the code editor in the :guilabel:`Code` tab "
 "of the :guilabel:`Action details` section:"
-msgstr ""
+msgstr "複製此程式碼，並貼上至 :guilabel:`操作詳情` 部份 :guilabel:`程式碼` "
+"分頁的程式碼編輯器："
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:263
 msgid ""
 "In `Postman <https://www.postman.com/>`_, create a new HTTP request and set "
 "its method to :guilabel:`POST`."
 msgstr ""
+"在 `Postman <https://www.postman.com/>`_ 中，建立一個新的 HTTP 請求，"
+"並將其方法設為 :guilabel:`POST`。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:279
 msgid ""
 "In the pasted code, replace the `CONTACT NAME`, `CONTACTEMAIL@EMAIL.COM`, "
 "and `CONTACT PHONE NUMBER` with a new contact's information."
 msgstr ""
+"在貼上的程式碼中，填入新聯絡人的資料，取代 `CONTACT NAME` （聯絡人名稱）、 "
+"`CONTACTEMAIL@EMAIL.COM` （聯絡人電郵）及 `CONTACT PHONE NUMBER` "
+"（聯絡人電話號碼）。"
 
 #: ../../content/applications/studio/fields.rst:3
 msgid "Fields and widgets"
