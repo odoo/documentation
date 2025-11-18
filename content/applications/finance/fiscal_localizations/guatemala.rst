@@ -27,7 +27,8 @@ The supported documents are:
 - :guilabel:`FACT-Factura with Export Complement`.
 
 The localization requires an `Infile <https://infile.com.gt/>`_ account, which enables users to
-generate electronic documents within Odoo.
+generate electronic documents within Odoo. To request an Infile account, fill out the `Infile
+Registration Form <https://share.hsforms.com/1HksZ6i1VRRWHRhXPvYZORQrwu2r>`_.
 
 .. seealso::
    :doc:`Documentation on e-invoicing's legality and compliance in Guatemala
@@ -131,6 +132,11 @@ Infile
 
 Sign a service agreement directly with `Infile <https://infile.com.gt/>`_. Infile will then provide
 the necessary credentials to input in Odoo.
+
+.. note::
+   To create an Infile account and benefit from the **8% discount** available for Odoo customers,
+   fill out the: `Infile Registration Form <https://share.hsforms.com/1HksZ6i1VRRWHRhXPvYZORQrwu2r>`_.
+   An Infile agent will contact you to help you complete the onboarding process and sign the service agreement.
 
 Odoo
 ~~~~
