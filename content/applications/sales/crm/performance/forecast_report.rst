@@ -49,8 +49,10 @@ is updated to the *last* date of the new month.
 Prorated revenue
 ----------------
 
-At the top of the column for each month on the :guilabel:`Forecast` reporting page, to the right of
-the progress bar, is a sum of the prorated revenue for that time frame.
+The prorated revenue is the :guilabel:`Expected Revenue` amount that is displayed at the top of the
+column for each month on the :guilabel:`Forecast` reporting page. This value is situated to the
+right of the progress bar. The calculation for :guilabel:`Expected Revenue` is the total of the
+prorated revenue specific to that particular time frame.
 
 The prorated revenue is calculated using the formula below:
 
