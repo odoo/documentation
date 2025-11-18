@@ -180,6 +180,8 @@ navigating the recurring revenue sources attached to the plan:
   active, in an itemized fashion. :guilabel:`Subscription` and :guilabel:`Customer` values will
   repeat if the customer ordered multiple subscriptions on the same sales order.
 
+.. _subscriptions/form-configuration:
+
 Product form configuration
 ==========================
 
@@ -303,3 +305,4 @@ tab, under the :guilabel:`SALES` section.
    subscriptions/scheduled_actions
    subscriptions/reports
    subscriptions/automatic_payments
+   subscriptions/subscriptions_deliveries
