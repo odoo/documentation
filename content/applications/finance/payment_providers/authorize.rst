@@ -34,6 +34,29 @@ Key**.
    If you use the :guilabel:`Test Mode` with a regular account, it results in the following error:
    *The merchant login ID or password is invalid or the account is inactive*.
 
+Webhook Configuration
+---------------------
+
+Webhooks allow Odoo to receive real-time notifications about payment status changes from
+Authorize.Net, ensuring payment statuses are always up to date even if customers don't return
+to your site after payment.
+
+To configure webhooks:
+
+#. :ref:`Navigate to the payment provider Authorize.Net <payment_providers/add_new>` and ensure
+   the :guilabel:`State` is set to :guilabel:`Enabled` (or :guilabel:`Test Mode` for testing).
+#. In the :guilabel:`Credentials` tab, click on :guilabel:`Generate your webhook`.
+#. Odoo will automatically create and configure the webhook in your Authorize.Net account.
+
+.. note::
+   The webhook is automatically configured with the correct URL and event types. You can verify
+   the webhook was created by logging into your Authorize.Net account and going to
+   :menuselection:`Account --> Webhooks`.
+
+.. tip::
+   If you need to update the webhook (for example, after changing your domain), simply click
+   :guilabel:`Generate your webhook` again. Odoo will update the existing webhook configuration.
+
 Configuration tab
 -----------------
 
