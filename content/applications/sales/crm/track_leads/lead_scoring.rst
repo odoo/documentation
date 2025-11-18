@@ -2,10 +2,10 @@
 Assign leads with predictive lead scoring
 =========================================
 
-The Odoo *CRM* app can automatically assign leads/opportunities to sales teams and salespeople. A
+The Odoo **CRM** app can automatically assign leads/opportunities to sales teams and salespeople. A
 standard practice is to assign leads based on the probability of winning each lead. Companies can
-prioritize the leads that are more likely to result in successful deals by quickly assigning them
-to the appropriate salespeople.
+prioritize the leads that are more likely to result in successful deals by assigning them to the
+appropriate salespeople.
 
 Odoo automatically calculates the probability of winning each lead using a method called *predictive
 lead scoring*.
@@ -13,7 +13,7 @@ lead scoring*.
 Predictive lead scoring
 =======================
 
-Predictive lead scoring is a machine-learning model that uses historical data from Odoo *CRM* to
+Predictive lead scoring is a machine-learning model that uses historical data from Odoo **CRM** to
 score open leads/opportunities.
 
 As a company processes opportunities through the CRM pipeline, Odoo collects data on which
