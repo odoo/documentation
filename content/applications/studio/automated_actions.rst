@@ -18,14 +18,10 @@ To create an automation rule with **Odoo Studio**:
 #. Give the automation rule a clear, meaningful name that identifies its purpose.
 #. Select the :ref:`Trigger <studio/automated-actions/trigger>` and, if necessary, fill in the
    fields that appear on the screen based on the chosen trigger.
-#. Click :guilabel:`Add an action` in the :guilabel:`Actions To Do` tab.
-
-   .. tip::
-      If no explicit name is entered, the name of the action will be automatically generated based
-      on the action you define; the name can be updated at any time.
-
-#. Select the :guilabel:`Type` of :ref:`action <studio/automated-actions/action>` and complete the
-   relevant fields based on the chosen action.
+#. Click :ref:`Add an action <studio/automated-actions/action>` in the :guilabel:`Actions To Do`
+   tab.
+#. Select the :guilabel:`Type` of action and complete the relevant fields based on the chosen
+   action.
 #. Click :guilabel:`Save & Close` or, to define additional actions, :guilabel:`Save & New`.
 
 .. example::
@@ -142,44 +138,88 @@ Timing Conditions
 Trigger automated actions at a point in time relative to a date field or to the creation or update
 of a record. The following triggers are available:
 
-- :guilabel:`Based on date field`: The action is triggered a defined period of time before or after
-  the date of the selected date field.
+- :guilabel:`Based on date field`: The action is triggered a defined period of time *before or
+  after* the date of the selected date field, e.g., 30 days before the contract end date.
 - :guilabel:`After creation`: The action is triggered a defined period of time after a record is
   created and saved.
 - :guilabel:`After last update`: The action is triggered a defined period of time after an existing
   record is edited and saved.
 
-You can then define:
+To configure a :guilabel:`Timing Conditions` trigger, with :ref:`developer mode activated
+<developer-mode>`:
 
-- a :guilabel:`Delay`: Specify the number of :guilabel:`Minutes`, :guilabel:`Hours`,
-  :guilabel:`Days`, or :guilabel:`Months` after which the action should be triggered. If you
-  selected the :guilabel:`Based on date field` trigger, the action can be triggered
-  :guilabel:`After` or :guilabel:`Before` the selected date field.
+#. Select the appropriate :guilabel:`Trigger` from the :guilabel:`Timing Conditions` category.
+   If you select the :guilabel:`Based on date field` trigger, select the relevant date field.
+#. Configure the :guilabel:`Delay` to determine the *execution date time* of the action(s). To
+   do so, enter the number of :guilabel:`Minutes`, :guilabel:`Hours`, :guilabel:`Days`, or
+   :guilabel:`Months` after which the action should be triggered. If you selected the
+   :guilabel:`Based on date field` trigger, the action can be triggered :guilabel:`After` or
+   :guilabel:`Before` the selected date field.
+#. Optionally, :ref:`add conditions <studio/automated-actions/conditions>` that the record must meet
+   before and/or after the rule is triggered.
+#. Click :icon:`fa-cloud-upload` :guilabel:`Save manually`.
+#. Click :icon:`fa-arrow-right` :guilabel:`Scheduled action` to open the :guilabel:`Automation
+   Rules: check and execute` scheduled action.
 
-  .. note::
-     By default, the scheduler checks for time-triggered automation rules every 240 minutes, or 4
-     hours. This frequency is generally sufficient for delays such as 3 months after the order date
-     or 7 days after the last update.
+   .. note::
+      This scheduled action checks for execution date times that have been reached since its
+      previous run, and executes the related action(s), if relevant. By default, the scheduled
+      action is set to :guilabel:`Execute Every` 4 hours, which is generally sufficient for delays
+      such as 3 months after the order date or 7 days after the last update.
 
-     For delays of less than the equivalent of 2400 minutes, or 40 hours, the system recalculates
-     the frequency of this check to ensure that more granular delays, e.g., 1 hour before the event
-     start date and time, or 30 minutes after creation, can be respected as closely as possible.
+      If any automation rule has a time-based trigger with a delay of less than the equivalent of 40
+      hours, e.g., 3 hours before the event start date time, the frequency of the scheduled action
+      is automatically increased, e.g., to :guilabel:`Execute Every` 18 minutes. This allows the
+      action to be executed closer to its scheduled execution date time.
 
-     To view or manually edit the frequency of the scheduler for a time-triggered automation rule,
-     with :ref:`developer mode activated <developer-mode>`, click :guilabel:`Scheduled action`.
+#. Click :guilabel:`Run manually` at the top left.
 
-     .. image:: automated_actions/trigger-delay-scheduled-action.png
-        :alt: Direct link to scheduled action for automations
+   .. warning::
+      This step is critical to prevent the rule from running retroactively on historical records.
+      Running the scheduled action manually initializes the timestamp of its *last run* in the
+      automation rule, which is a key element of the rule's :ref:`execution logic
+      <studio/automated-actions/trigger-timing-conditions-logic>`.
 
-     In the :guilabel:`Automation Rules: check and execute` scheduled action that opens, update the
-     value of the :guilabel:`Execute Every` field, if desired. Clicking :guilabel:`Run Manually`
-     triggers the scheduled action to run immediately. To return to the automation rule setup, click
-     the automation rule name in the breadcrumbs.
+#. Click the automation rule name in the breadcrumbs to return to the automation rule setup.
+#. Add the :ref:`action(s) to be executed <studio/automated-actions/action>` then, when all actions
+   have been defined, click :icon:`fa-cloud-upload` :guilabel:`Save manually`.
 
-- :guilabel:`Extra Conditions`: Click :guilabel:`Add condition`, then specify the conditions to be
-  met for the automation rule to run. Click :guilabel:`New Rule` to add another condition.
+The action is executed the first time the :guilabel:`Automation Rules: check and execute` scheduled
+action runs after the execution date time is reached, and when the conditions are met.
 
-The action is executed when the delay is reached and the conditions are met.
+.. _studio/automated-actions/trigger-timing-conditions-logic:
+
+Execution logic
+~~~~~~~~~~~~~~~
+
+When using a time-based trigger, an action is only executed when the execution date time falls
+*between* the last run of the scheduled action and the current run (whether scheduled or run
+manually), i.e.:
+
+**last run --> execution date and time --> current run**
+
+.. note::
+   Running the :guilabel:`Automation Rules: check and execute` scheduled action manually does not
+   necessarily result in a rule's action being executed. When testing an automation rule with a
+   time-based trigger, ensure that this sequence is true, then check if the action has been
+   executed.
+
+.. example::
+   On the morning of October 15, you create an automation rule that triggers the sending of an email
+   30 days before the :guilabel:`Contract end date`; contracts end at 11:59 pm on their contract end
+   date. During the creating of the rule, the :guilabel:`Automation Rules: check and execute`
+   scheduled action was run manually at 11:00 am and is set to run every four hours thereafter.
+
+   This new automation rule will apply for contracts whose end date is at least 30 days *after* the
+   creation of the rule, i.e., an end date of November 14 or later.
+
+   For a contract with an end date of November 14, the execution date time of the action is 11:59 pm
+   on October 15. The action will therefore be executed the first time the :guilabel:`Automation
+   Rules: check and execute` scheduled action runs after that date and time has passed, i.e.,:
+
+   - last run of the scheduled action: 11:00 pm on October 15
+   - execution date time: 11:59 pm on October 15
+   - current run of the scheduled action: 3:00 am on October 16
 
 .. _studio/automated-actions/trigger-custom:
 
@@ -247,16 +287,18 @@ click :guilabel:`Add an action` in the :guilabel:`Actions To Do` tab to define t
 executed.
 
 .. tip::
-   You can define multiple actions for the same automation rule. By default, actions are executed in
-   the order in which they were defined.
+   - If no explicit name is entered, the name of the action will be automatically generated based
+     on the action you define; the name can be updated at any time.
+   - You can define multiple actions for the same automation rule. By default, actions are executed
+     in the order in which they were defined.
 
-   This means, for example, that if you define an :guilabel:`Update record` action and then a
-   :guilabel:`Send email` action where the email references the field that was updated, the email
-   uses the updated values. However, if the :guilabel:`Send email` action is defined before the
-   :guilabel:`Update record` action, the email uses the values set *before* the record is updated.
+     This means, for example, that if you define an :guilabel:`Update record` action and then a
+     :guilabel:`Send email` action where the email references the field that was updated, the email
+     uses the updated values. However, if the :guilabel:`Send email` action is defined before the
+     :guilabel:`Update record` action, the email uses the values set *before* the record is updated.
 
-   To change the order of defined actions, click the :icon:`oi-draggable` :guilabel:`(drag handle)`
-   icon beside an action and drag it to the desired position.
+     To change the order of defined actions, click the :icon:`oi-draggable` :guilabel:`(drag handle)`
+     icon beside an action and drag it to the desired position.
 
 .. _studio/automated-actions/action-update-record:
 
