@@ -169,8 +169,10 @@ by a period `.` and the expression's **label** (ex. **code.label**).
 `CUR` is the currency code in capital letters, and `amount` is the amount of the bound expressed in
 that currency.
 
-`cross_report(xml_id | report_id)`
-   Used to match an expression from another report targeted by the xml_id or the report ID itself.
+`cross_report(xml_id | report_id[, force_date_scope])`
+   Match an expression from another report targeted by the xml_id or the report ID itself.
+   If `force_date_scope` is added, the :guilabel:`Date Scope` defined on the expression will be
+   used to compute all the expressions used by the formula.
 
 Prefix of Account Codes computation engine
 ------------------------------------------
@@ -294,6 +296,13 @@ custom computation of expressions on a case-by-case basis. The :guilabel:`Formul
 **python function** to call, and the :guilabel:`Subformula` is a **key** to fetch in the
 **dictionary** returned by this function. Use this computation engine only if making a custom
 module.
+
+Date filtering
+==============
+
+By default, the values computed for each expression will restrict the move lines they consider
+to the ones strictly within the interval selected on the report. To change that behavior,
+modify the :guilabel:`Date Scope` field of the expression.
 
 Columns
 =======
