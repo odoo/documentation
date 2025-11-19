@@ -1036,6 +1036,13 @@ Stat Info (`statinfo`)
                 />
             </button>
 
+    - `hide_trailing_zeros`: hide zeros to the right of the last non-zero digit,
+      e.g. `1.20` becomes `1.2` (`false` by default).
+
+        .. code-block:: xml
+
+            <field name="int_value" widget="statinfo" options="{'hide_trailing_zeros': true}" />
+
 Percent Pie (`percentpie`)
     This widget is meant to represent statistical information in a `stat button`.
     This is similar to a statinfo widget, but the information is represented in
