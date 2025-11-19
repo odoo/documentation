@@ -33,6 +33,11 @@ Optimize SEO`.
    is automatically updated. The old link still functions as Odoo creates a
    :ref:`301 redirect <website/pages/URL-redirection>`, maintaining the SEO.
 
+.. tip::
+   You can fill the title, description and keywords by using the Fill with AI option. With one click,
+   this smart tool auto fills meta titles, descriptions and suggests keywords.
+     .. image:: seo/auto-fill.png
+
 Keywords and Meta tags
 ----------------------
 
@@ -155,6 +160,12 @@ results.
 
 .. note::
    It is normal to experience a traffic decrease in the first days.
+
+.. tip::
+   The broken link section allows you to check when a URL is not correct because it doesn't exist.
+   It allows you to remove it and to select an existing URL to avoid errors.
+     .. image:: seo/broken-link.png
+
 
 Prevent a page from being indexed
 ---------------------------------
@@ -297,3 +308,22 @@ page's language and geographical targeting.
 
 .. seealso::
    :doc:`../configuration/translate`
+
+Page translation
+----------------
+
+You can translate an entire page in one click by going to the Website page, switching to the language
+that requires a translation, and on the top-right corner, click on :menuselection:`Edit --> Translate`.
+The text that is not translated appears in yellow. Click on the green button at the right to translate
+the text.
+
+Google merchant Center
+----------------------
+
+The Google Merchant Center is useful to publish your listings on other platforms (Instagram, facebook
+Tiktok) by generating an XML feed and automatically synchronizes all the changes made in Odoo
+directly in the new platform.
+
+Go to :menuselection:`Website --> Configuration --> Settings` tick the Google Merchant Center box,
+click on the :guilabel:`Copy URL` button. Then go to the Google Merchant website, paste the copied
+link and click on Save.
