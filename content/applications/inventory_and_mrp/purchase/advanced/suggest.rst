@@ -20,33 +20,41 @@ Key parameters
 Demand calculation
 ==================
 
-To find the *average daily demand*, Odoo sums all :ref:`validated deliveries
+To estimate demand, Odoo sums all :ref:`validated deliveries
 <inventory/delivery/one-step>`, :ref:`components consumed in manufacturing orders
 <manufacturing/basic_setup/setup-components>` (MOs), or used to :doc:`resupply subcontractors
-<../../manufacturing/subcontracting/subcontracting_resupply>` in the *Based on* period and divides
-that total by the number of days in the *Based on* period. Lastly, that value is multiplied by the
-*Factor* to determine volume.
-
-.. tip::
-   In a :ref:`multi-warehouse <purchase/advanced/example-wh-suggestion>` setup, an *In* field
-   appears. Choose a specific warehouse or leave blank to use all warehouses to calculate demand
-   accordingly.
+<../../manufacturing/subcontracting/subcontracting_resupply>` coming from the warehouse specified
+on the RFQ in the *Based on* period. The *average daily demand* is this sum of outgoing moves
+divided by the number of days in the *Based on* period, multiplied by *Factor*. The
+*estimated demand* is the *average daily demand* multiplied by *Replenish For* days.
 
 .. math::
    :class: overflow-scroll
 
    Average~Daily~Demand = \frac{Delivered~or~Consumed~Items}{Based~on~Days} \times Factor
+   \\ \\ Estimated~Demand = Average~Daily~Demand \times Replenish~for~Days
+
+.. note::
+   Only :guilabel:`Assigned` or :guilabel:`Confirmed` moves are taken into account in
+   the *average daily demand* calculations, sales quotations or manufacturing orders
+   in :guilabel:`Draft` are not taken into account until validated.
+
+.. tip::
+   In a multi-warehouse setup, internal deliveries are also counted in demand estimation.
+   In the case of a central warehouse dispatching products to individual stores,
+   the *average daily demand* of the central warehouse will include internal transfers to
+   individual stores.
 
 Recommended quantity
 ====================
 
-To find the suggested quantity, Odoo multiplies the average by *Replenish for* days to get the
-recommended quantity.
+To find the suggested quantity, Odoo deducts the *estimated demand* from the current stock
+available quantity and all incoming shipments.
 
 .. math::
    :class: overflow-scroll
 
-   Recommended~Quantity = Average~Daily~Demand \times Replenish~for~Days
+   Recommended~Quantity = Estimated~Demand - (Available~Stock + Incoming~Stock)
 
 .. example::
    In :ref:`example 1 <purchase/advanced/example-suggestion>`, Odoo recommends `19` units to
@@ -83,7 +91,8 @@ In the |RFQ|, set the :guilabel:`Vendor` field to the chosen supplier.
 In the :guilabel:`Products` tab, click the :guilabel:`Catalog` button to view that vendor's items.
 
 .. important::
-   Verify that each product in the catalog is configured with the chosen vendor.
+   Verify that each product in the catalog is configured with the chosen vendor
+   and that the Purchase Order is in the |RFQ| stage
 
 .. tip::
    By default, products listed in the product catalog are filtered by vendor.
@@ -91,9 +100,8 @@ In the :guilabel:`Products` tab, click the :guilabel:`Catalog` button to view th
    Remove the filter in the search bar to view all items or use the built-in :icon:`oi-group`
    :guilabel:`Group By` for :guilabel:`Product Category`.
 
-Inside the :guilabel:`Catalog`, click :guilabel:`Suggest` in the upper-left corner to open the
-:guilabel:`Suggest Quantities based on Sales & Demands` pop-up window. Complete its fields as
-follows:
+Inside the :guilabel:`Catalog`, toggle :guilabel:`Suggest` in the left sidebar to activate
+the feature. Complete its fields as follows:
 
 - :guilabel:`Replenish for`: Number of days intended to stock products.
 - :guilabel:`Based on`: There are two inputs:
@@ -103,23 +111,23 @@ follows:
 
    #. Growth factor %: scale the demand up or down (e.g., 120% for 20% growth, 30% for 70% drop).
 
-- The total in the lower-right corner shows the order value. Odoo multiplies the vendor's *Unit
+- The total in the bottom shows the order value. Odoo multiplies the vendor's *Unit
   Price* by the suggested quantity.
 
-Once the parameters are confirmed, click :guilabel:`Compute` to calculate recommended quantities,
-which are auto-filled in each product's quantities in the catalog. Adjust amounts if needed, then
-click :guilabel:`Back to Quotation` to confirm the final numbers on the |RFQ|.
+Once the parameters are confirmed, click :guilabel:`Add All` to add all suggestions to the
+order. Adjust amounts if needed, then click :guilabel:`Back to Quotation` to confirm the final
+numbers on the |RFQ|.
 
 .. _purchase/advanced/example-suggestion:
+
+Example Workflow
+================
 
 Recommend at 100% growth
 ------------------------
 
 A company needs to replenish orchids for 14 days, referencing the last 30 days of historical data,
 assuming the revenue growth is the same this month, at 100%.
-
-.. image:: suggest/suggest-14.png
-   :alt: Compute suggestion for example 1.
 
 Delivered/consumed within the period:
 
@@ -152,68 +160,43 @@ Suggested quantity
    :alt: Suggestion to purchase 19 units.
 
    Suggestion to purchase 19 orchids. Since the *Unit Price* is $3, :math:`$3 \times 19 = $57`,
-   which is the total amount displayed in the :guilabel:`Suggest Quantities based on Sales &
-   Demands` pop-up window.
+   which is the total amount displayed.
 
-Recommend at 120% growth
-------------------------
+Planning for Mother's Day
+-------------------------
 
-To plan for ordering roses this month, the company reviews the previous week's sales. Since a local
-event is coming up, the company expects 120% growth.
-
-.. image:: suggest/suggest-30.png
-   :alt: Compute suggestion for example 2.
+To better plan for the upcoming Mother's day week, the company changes *Based on* to the
+same month last year (May 2024). As the business has grown since then, they also decide to add
+a 120% growth factor.
 
 Variables
 ~~~~~~~~~
 
-- Replenish for 30 days
-- Based on: 7 days
+- Replenish for 7 days
+- Based on: May 2024,
 
-  - total delivered/consumed in the past week: 166 units
+  - total delivered/consumed in the entire May 2024 month: 361 units
 
 - Factor: 120%
 
 .. math::
 
-   Average~Daily~Demand = \frac{166}{7} \times 1.20 \approx 28.46 \text{ units/day}
+   Average~Daily~Demand = \frac{361}{30} \times 1.20 \approx 14.44 \text{ units/day}
 
 Suggested quantity
 ~~~~~~~~~~~~~~~~~~
 
 .. math::
 
-   Suggested~Quantity = 28.46 \times 30 \approx 853.8 \text{ (rounded to 854 units)}
+   Suggested~Quantity = 14.44 \times 7 \approx 101.08 \text{ (rounded up to 102 units)}
 
 .. figure:: suggest/result-30.png
-   :alt: Suggestion to purchase 854 roses.
+   :alt: Suggestion to purchase 102 orchids.
 
-   Suggestion to purchase 854 roses. Each rose costs $4.58 with the chosen vendor, so :math:`$4.58
-   \times 854 = $3911.32`.
+   Suggestion to purchase 102 orchids. Each orchid costs $3 with the chosen vendor, so
+   :math:`$3 \times 102 = $306`.
 
 .. _purchase/advanced/example-wh-suggestion:
-
-Recommend from specific warehouse
----------------------------------
-
-When there are multiple warehouses in a company, analyze delivered or consumed quantities in a
-specific warehouse to narrow the results. This is particularly helpful when multiple warehouses
-serve different communities, franchises, or branch stores.
-
-To do that, ensure :doc:`multiple warehouses are set up
-<../../inventory/warehouses_storage/inventory_management/warehouses>` and deliveries or :abbr:`MOs
-(manufacturing orders)` are validated in each warehouse.
-
-Navigate to the suggestion window by going to the :menuselection:`Purchase` app, clicking the
-desired |RFQ|, clicking the :guilabel:`Catalog` button in the product line, and then clicking
-:guilabel:`Suggest` in the upper-left corner.
-
-With multiple warehouses set up, the :guilabel:`In` field becomes available, where the specific
-warehouse can be selected to analyze quantities consumed only in the specific warehouse, or leave
-the field blank to observe quantities across all warehouses.
-
-.. image:: suggest/in-field.png
-   :alt: Show In field in the popup, displaying different warehouses to choose from.
 
 Best practices
 ==============
