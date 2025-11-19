@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-17 08:58+0000\n"
+"POT-Creation-Date: 2025-11-18 11:05+0000\n"
 "PO-Revision-Date: 2025-11-13 20:11+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -179,7 +179,7 @@ msgstr "カウント作業が割当てられたバーコードダッシュボー
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:20
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:34
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_three_steps.rst:14
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:27
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:96
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:21
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:48
@@ -1884,7 +1884,7 @@ msgstr "(91) ([!\"%-/0-9:-?A-Z_a-z]{0,90})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:225
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:126
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:77
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:96
 msgid "Package type"
 msgstr "梱包タイプ"
 
@@ -1968,7 +1968,7 @@ msgstr "A.I."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:40
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:168
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:78
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:97
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:20
 msgid "Product"
 msgstr "プロダクト"
@@ -13929,31 +13929,26 @@ msgstr "最後に、:guilabel:`保存` をクリックします。"
 msgid "Activate Multi-Step Routes in Inventory configuration settings."
 msgstr "在庫設定で複数ステップルートを有効化します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:36
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:35
 msgid "Define putaway rule"
 msgstr "入庫規則を定義する"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:38
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:37
 msgid ""
 "To manage where specific products are routed for storage, navigate "
 "to :menuselection:`Inventory app --> Configuration --> Putaway Rules`. Use "
-"the :guilabel:`Create` button to configure a new putaway rule on "
+"the :guilabel:`New` button to configure a new putaway rule on "
 "a :guilabel:`Product` or :guilabel:`Product Category` that the rule affects."
 msgstr ""
-"特定のプロダクトの保管場所を管理するには、 :menuselection:`在庫アプリ --> 設"
-"定 --> 入庫規則` に移動します。:guilabel:`プロダクト` または :guilabel:`プロ"
-"ダクトカテゴリ` に新しい入庫規則を設定するには :guilabel:`作成` ボタンを使用"
-"します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:43
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:42
 msgid ""
 "Putaway rules can be defined either per product/product category, and/or "
 "package type (the *Packages* setting must be enabled "
-"in :menuselection:`Inventory app --> Configuration --> Settings` for that)."
+"in :menuselection:`Inventory app --> Configuration --> Settings` for that). "
+"Additionally, a :doc:`storage category <storage_category>` can be defined to "
+"limit capacities of a storage location and route products accordingly."
 msgstr ""
-"入庫規則は、プロダクト/プロダクトカテゴリ、梱包タイプごとに定義することができ"
-"ます（:menuselection:`在庫アプリ --> 設定 --> 管理設定`で *梱包* 設定を有効に"
-"する必要があります）。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:47
 msgid ""
@@ -14009,11 +14004,53 @@ msgstr ""
 msgid "Create putaway rules for apples and carrots."
 msgstr "リンゴとニンジンの入庫規則を作成します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:70
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:68
+msgid ""
+"Use the :guilabel:`Sublocation` field to specify whether to use a "
+"sublocation or specify a storage category:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:71
+msgid ""
+":guilabel:`No`: no sublocation is used. Products are directed to whatever is "
+"specified in the :guilabel:`Store to` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:73
+msgid ""
+":guilabel:`Last Used`: the last location that had a move associated with it "
+"for that product or product category is used. If there is no last location "
+"used, the destination is whatever is specified in the :guilabel:`Store to` "
+"field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:76
+msgid ""
+":guilabel:`Closest Location`: the locations specified as part of a storage "
+"category are used. A storage category is mandatory in the :guilabel:`Having "
+"Category` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:79
+msgid ""
+"To apply a putaway rule to *all* products, create an empty putaway rule with "
+"no specified :guilabel:`Product` or :guilabel:`Product Category`. All "
+"products are stored in the location specified in the :guilabel:`Store to` "
+"field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:84
+msgid ""
+"A best practice for an empty putaway rule is to specify the :guilabel:`Last "
+"used` :guilabel:`Sublocation`. Specifying :guilabel:`Last used` ensures that "
+"Odoo suggests the last location used to store a product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:89
 msgid "Putaway rule priority"
 msgstr "入庫規則優先"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:72
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:91
 msgid ""
 "Odoo selects a putaway rule based on the following priority list (from "
 "highest to lowest) until a match is found:"
@@ -14021,23 +14058,23 @@ msgstr ""
 "Odooは一致する規則が見つかるまで、以下の優先順位リスト(高いものから低いもの)"
 "にもとづいて入庫規則を選択します: "
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:94
 msgid "Package type and product"
 msgstr "梱包タイプとプロダクト"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:76
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:95
 msgid "Package type and product category"
 msgstr "梱包タイプとプロダクトカテゴリ"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:79
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:98
 msgid "Product category"
 msgstr "プロダクトカテゴリ"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:82
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:101
 msgid "The product `Lemonade can` has the following putaway rules configured:"
 msgstr "プロダクト `レモネード缶` には以下の入庫規則が設定されています:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:84
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:103
 msgid ""
 "When receiving a `Pallet` (:guilabel:`Package Type`) of `Lemonade cans`, it "
 "is redirected to `WH/Stock/Pallets/PAL1`."
@@ -14045,7 +14082,7 @@ msgstr ""
 "レモネード缶 `パレット` (:guilabel:`梱包タイプ`) が入荷すると、`WH/在庫/パ"
 "レット/PAL1` にリダイレクトされます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:86
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:105
 msgid ""
 "`Lemonade can`'s :guilabel:`Product Category` is `All/drinks`, and when "
 "receiving a `Box` of any item in this product category, items are redirected "
@@ -14055,15 +14092,15 @@ msgstr ""
 "クトカテゴリのアイテムの `箱` を受け取ると、アイテムは `WH/在庫/棚1` にリダイ"
 "レクトされます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:88
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:107
 msgid "Any product on a `Pallet` is redirected to `WH/Stock/Pallets`"
 msgstr "パレット上のプロダクトは `WH/在庫/パレット` にリダイレクトされます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:108
 msgid "The product `Lemonade can` is redirected to `WH/Stock/Shelf 2`"
 msgstr "プロダクト `レモネード缶` は `WH/在庫/棚2` にリダイレクトされます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:90
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:109
 msgid ""
 "Items in the `All/drinks` product category are redirected to `WH/Stock/Small "
 "Refrigerator`."
@@ -15529,12 +15566,10 @@ msgstr "保管カテゴリ"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:5
 msgid ""
-"A *storage category* is used with :doc:`putaway rules <putaway>`, as an "
-"extra location attribute to automatically propose optimal storage locations "
-"for products."
+"A *storage category* is used with :doc:`putaway rules <putaway>` to assign a "
+"storage location to incoming products while accounting for the capacity of "
+"that location."
 msgstr ""
-"*保管カテゴリ* は :doc:`入庫規則 <putaway>` と併せて使用されます。 追加のロ"
-"ケーション属性として、プロダクトに最適な保管場所を自動的に提案します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:8
 msgid "Follow these steps to complete the setup:"
@@ -15542,18 +15577,13 @@ msgstr "以下のステップに従い、設定を完了させて下さい:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:10
 msgid ""
-":ref:`Enable the Storage Category feature <inventory/routes/enable-storage-"
+":ref:`Enable features in the settings <inventory/routes/enable-storage-"
 "categories>`"
 msgstr ""
-":ref:`保管カテゴリ機能を有効化する <inventory/routes/enable-storage-"
-"categories>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:11
-msgid ""
-":ref:`Define a storage category <inventory/routes/define-storage>` with "
-"specific limitations"
+msgid ":ref:`Define capacity limitations <inventory/routes/define-storage>`"
 msgstr ""
-"特定の制限で :ref:`保管カテゴリを定義する <inventory/routes/define-storage>` "
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:12
 msgid ""
@@ -15585,7 +15615,7 @@ msgstr ""
 "定の要件を満たしていることを伝えます。Odooは、定義された容量に基づいてこれら"
 "の場所を評価し、倉庫転送フォーム上で最適な場所を推奨します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:28
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:29
 msgid ""
 "To enable storage categories, go to :menuselection:`Inventory app --> "
 "Configuration --> Settings`. Then, in the :guilabel:`Warehouse` section, "
@@ -15596,23 +15626,23 @@ msgstr ""
 "定` に移動します。次に、:guilabel:`倉庫` セクションで、:guilabel:`保管場所` "
 "と:guilabel:`複数ステップルート` 機能が有効になっていることを確認します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:32
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:33
 msgid ""
-"Next, activate the :guilabel:`Storage Categories` feature. Finally, "
-"click :guilabel:`Save`."
+"If intending to set capacities by :ref:`package type <inventory/routes/set-"
+"capacity-package>`, also make sure :guilabel:`Packages` is enabled. "
+"Click :guilabel:`Save`."
 msgstr ""
-"次に、:guilabel:`保管カテゴリ` 機能を有効にしたら、 :guilabel:`保管` をクリッ"
-"クします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:-1
-msgid "Show the Storage Categories feature."
-msgstr "保管カテゴリ機能を表示します。"
+msgid ""
+"Enable Storage Locations and Multi-Step Routes to enable storage categories."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:41
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:42
 msgid "Define storage category"
 msgstr "保管カテゴリの定義"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:43
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:44
 msgid ""
 "A storage category with specific limitations **must** be created first, "
 "before it is applied to locations, in order to decide the optimal storage "
@@ -15621,15 +15651,13 @@ msgstr ""
 "最適な保管場所を決定するために、ロケーションに適用する前に、特定の制限のある"
 "保管カテゴリをまず作成する **必要があります**。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:46
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:47
 msgid ""
 "To create a storage category, go to :menuselection:`Inventory app --> "
-"Configuration --> Storage Categories`, and click :guilabel:`Create`."
+"Configuration --> Storage Categories`, and click :guilabel:`New`."
 msgstr ""
-"保管カテゴリを作成するには :menuselection:`在庫アプリ --> 設定 --> 保管カテゴ"
-"リ` に 行き、:guilabel:`作成` をクリックします。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:49
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:50
 msgid ""
 "On the storage category form, type a name for the category in "
 "the :guilabel:`Storage Category` field."
@@ -15637,13 +15665,13 @@ msgstr ""
 "保管カテゴリフォームから、カテゴリの名前を :guilabel:`保管カテゴリ` フィール"
 "ドに入力します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:52
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:53
 msgid ""
 "Options are available to limit capacity by weight, product, and package type."
 msgstr ""
 "重量、プロダクト、梱包タイプ別に容量を制限するオプションも利用できます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:55
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:56
 msgid ""
 "Weight limits can be combined with capacity by package or product (e.g. a "
 "maximum of one hundred products with a total weight of two hundred "
@@ -15652,7 +15680,7 @@ msgstr ""
 "重量制限は、梱包またはプロダクトごとに容量と組み合わせることができます (例:合"
 "計重量200キログラムのプロダクトを最大100個)。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:58
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:59
 msgid ""
 "While it is possible to limit capacity by product and package type at the "
 "same location, it may be more practical to store items in different amounts "
@@ -15663,7 +15691,7 @@ msgstr ""
 "例 :ref:`梱包ごとの容量 <inventory/routes/set-capacity-package>`のように、"
 "様々なロケーションに異なる量の商品を保管する方が実用的かもしれません。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:62
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:63
 msgid ""
 "The :guilabel:`Allow New Product` field defines when the location is "
 "considered available to store a product:"
@@ -15671,7 +15699,7 @@ msgstr ""
 ":guilabel:`新規プロダクトを許可` フィールドは、プロダクトを保存するのにそのロ"
 "ケーションが利用可能であるとみなされる条件を定義します:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:65
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:66
 msgid ""
 ":guilabel:`If location is empty`: a product can be added there only if the "
 "location is empty."
@@ -15679,7 +15707,7 @@ msgstr ""
 ":guilabel:`ロケーションが空の場合`: ロケーションが空の場合のみプロダクトを追"
 "加できます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:67
 msgid ""
 ":guilabel:`If products are the same`: a product can be added there only if "
 "the same product is already there."
@@ -15687,7 +15715,7 @@ msgstr ""
 ":guilabel:`プロダクトが同じ場合`: 同じプロダクトが既にある場合のみ、そこにプ"
 "ロダクトを追加することができます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:69
 msgid ""
 ":guilabel:`Allow mixed products`: several different products can be stored "
 "in this location at the same time."
@@ -15695,19 +15723,33 @@ msgstr ""
 ":guilabel:`プロダクトの混在を許可`: 複数の異なるプロダクトを同時にこの場所に"
 "保管することができます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:72
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:73
 msgid ""
-"When clicked, the :guilabel:`Location` smart button shows which storage "
-"locations the category has been assigned to."
+"When clicked, the :icon:`oi-arrows-v` :guilabel:`Locations` smart button "
+"shows which storage locations the category has been assigned to."
 msgstr ""
-"クリックすると、:guilabel:`ロケーション` スマートボタンは、カテゴリがどの保管"
-"場所に割当てられているかを表示します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:76
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:77
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:131
+msgid ""
+"Odoo does **not** automatically split quantities across multiple storage "
+"locations. If an incoming receipt contains several units or packages and the "
+"first recommended location exceeds its capacity, Odoo still routes all items "
+"to that same location instead of selecting another one with available space."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:82
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:136
+msgid ""
+"*(Example: If a location can hold 10 units and 12 units arrive, all 12 are "
+"still assigned to that location.)*"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:86
 msgid "Capacity by weight"
 msgstr "重量ごとの容量"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:78
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:88
 msgid ""
 "On a storage category form (:menuselection:`Inventory app --> Configuration "
 "--> Storage Categories`), set a maximum product weight in the :guilabel:`Max "
@@ -15718,11 +15760,11 @@ msgstr ""
 "で、:guilabel:`最大重量` フィールドにプロダクトの最大重量を設定します。この制"
 "限は、この保管カテゴリが割当てられた各ロケーションに適用されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:83
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:93
 msgid "Capacity by product"
 msgstr "プロダクトごとの容量"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:85
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:95
 msgid ""
 "In the :guilabel:`Capacity by Product` tab, click :guilabel:`Add a Line` to "
 "input items, and enter their capacities in the :guilabel:`Quantity` field."
@@ -15730,7 +15772,7 @@ msgstr ""
 ":guilabel:`プロダクトごとの容量` タブで、:guilabel:`明細追加` をクリックして"
 "項目を入力し、:guilabel:`容量` フィールドにそれぞれの容量を入力します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:99
 msgid ""
 "Ensure only a maximum of five `Large Cabinets` and two `Corner Desk Right "
 "Sit` are stored at a single storage location, by specifying those amounts in "
@@ -15744,11 +15786,11 @@ msgstr ""
 msgid "Show storage category limiting by product count."
 msgstr "プロダクト数による保管カテゴリの制限を表示します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:100
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:109
 msgid "Capacity by package"
 msgstr "梱包ごとの容量"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:102
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:111
 msgid ""
 "For companies using :doc:`packages <../../product_management/configure/"
 "package>`, it becomes possible to ensure real-time storage capacity checks, "
@@ -15758,23 +15800,22 @@ msgstr ""
 "では、梱包の種類 (例:クレート、大型箱、箱など) に基づくリアルタイムの保管容量"
 "チェックを確実に実行することが可能になります。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:107
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:115
 msgid ""
-"Enable the :guilabel:`Packages` feature in :menuselection:`Inventory app --> "
-"Configuration --> Settings` to show the :guilabel:`Capacity by Package` tab."
+"Create the :ref:`package type <inventory/warehouses_storage/package-type>` "
+"before assigning it to a storage category. Create it on "
+"the :guilabel:`Inventory` tab of the product form (in "
+"the :guilabel:`Packaging` section), or create it from the :guilabel:`Product "
+"Packagings` page. Be sure to set the :guilabel:`Package Type`."
 msgstr ""
-":guilabel:`梱包` 機能を有効にするには、:menuselection:`在庫アプリ --> 設定 --"
-"> 管理設定` で :guilabel:`梱包別容量` タブを表示します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:121
 msgid ""
 "Create putaway rules for pallet-stored items, by creating the `High "
-"Frequency pallets` storage category."
+"frequency pallets` storage category."
 msgstr ""
-"`高頻度パレット` の保管カテゴリを作成することで、パレット保管の物品の入庫規則"
-"を作成します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:124
 msgid ""
 "In the :guilabel:`Capacity by Package` tab, specify the number of packages "
 "for the designated :guilabel:`Package Type`, and set a maximum of `2.00` "
@@ -15784,14 +15825,14 @@ msgstr ""
 "指定し、特定の場所の最大数を `2.00` `パレット` に設定します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
-msgid "Create a storage category on the page."
-msgstr "ページに収納カテゴリを作成します。"
+msgid "Create a storage category."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:124
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:142
 msgid "Assign to location"
 msgstr "ロケーションに割り当てる"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:144
 msgid ""
 "Once the storage category is created, assign it to a location. Navigate to "
 "the location by going to :menuselection:`Inventory app --> Configuration --> "
@@ -15803,14 +15844,12 @@ msgstr ""
 "ションを選択します。次に、:guilabel:`保管カテゴリ` フィールドで作成したカテゴ"
 "リを選択します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:131
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:149
 msgid ""
-"Assign the `High Frequency pallets` storage category (which limits pallets "
-"stored at any location to two pallets) to the `WH/Stock/pallets/PAL 1` sub-"
+"Assign the `High frequency pallets` storage category (which limits pallets "
+"stored at any location to two pallets) to the `WH/Stock/Pallets/PAL1` sub-"
 "location."
 msgstr ""
-"`高頻度パレット` 保管カテゴリ (いずれのロケーションでも保管されるパレットを制"
-"限する) を `WH/Stock/pallets/PAL 1` サブロケーションに割り当てます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
 msgid ""
@@ -15818,11 +15857,11 @@ msgid ""
 msgstr ""
 "保管カテゴリが作成されると、倉庫ロケーションにリンクすることができます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:141
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:158
 msgid "Putaway rule"
 msgstr "入庫規則"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:143
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:160
 msgid ""
 "With the :ref:`storage category <inventory/routes/define-storage>` "
 "and :ref:`location <inventory/routes/assign-location>` set up, create "
@@ -15833,36 +15872,57 @@ msgstr ""
 "<inventory/routes/assign-location>` 設定で、:menuselection:`在庫アプリ --> 設"
 "定 --> 入庫規則` に移動し、:doc:`置場規則 <putaway>` を作成して下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:147
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:164
 msgid ""
-"Click the :guilabel:`Create` button to create the putaway rule. In "
-"the :guilabel:`Having Category` field of the new putaway rule form, select "
-"the storage category."
+"Click the :guilabel:`New` button to create the putaway rule. Specify a "
+"location to store to in the :guilabel:`Store to` field."
 msgstr ""
-":guilabel:`作成` ボタンをクリックして入庫規則を作成します。新しい入庫規則"
-"フォームで、:guilabel:`カテゴリあり` フィールドを選択して下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:151
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:167
 msgid ""
-"Continuing the example from above, the `High Frequency Pallets` storage "
+"Use the :guilabel:`Sublocation` field to specify that you want to use a "
+"sublocation with the storage category:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:170
+msgid ""
+":guilabel:`Last Used`: The last location that had a move associated with it "
+"for that product or product category is used. If there is no last location "
+"used, the destination is whatever is specified in the :guilabel:`Store to` "
+"field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:173
+msgid ""
+":guilabel:`Closest Location`: The locations specified as part of the storage "
+"category are used. A storage category is mandatory in the :guilabel:`Having "
+"Category` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:176
+msgid ""
+"If using multiple storage locations for a single storage category, create "
+"putaway rules for each location to ensure that if one storage location is in "
+"use, the secondary locations must be used."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:180
+msgid ""
+"Continuing the example from above, the `High frequency pallets` storage "
 "category is assigned to the putaway rule directing pallets of lemonade to "
-"locations with the `High Frequency Pallets` storage category :ref:`assigned "
+"locations with the `High frequency pallets` storage category :ref:`assigned "
 "to them <inventory/routes/assign-location>`."
 msgstr ""
-"前の例の続きで、レモネードを積んだパレットを、:ref:`ロケーションに割当られた "
-"<inventory/routes/assign-location>` `高頻度パレット` の保管カテゴリを持つロ"
-"ケーションに誘導する入庫規則に対して `高頻度パレット` の保管カテゴリが割当て"
-"られています。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
 msgid "Storage Categories used in a variety of putaway rules."
 msgstr "様々な入庫規則で使用される保管カテゴリ。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:160
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:188
 msgid "Use case: limit capacity by package"
 msgstr "使用例: 梱包ごとに容量を制限します"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:162
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:190
 msgid ""
 "To limit the capacity of a storage location by a specific number of "
 "packages, :ref:`create a storage category with a Capacity By Package "
@@ -15871,15 +15931,13 @@ msgstr ""
 "保管場所の容量を特定の梱包数に制限するには、:ref:`梱包ごとの容量で保管カテゴ"
 "リを作成  <inventory/routes/set-capacity-package>` します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:165
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:193
 msgid ""
-"Continuing the example from above, the `High Frequency Pallets` storage "
+"Continuing the example from above, the `High frequency pallets` storage "
 "category is assigned to the `PAL1` and `PAL2` locations."
 msgstr ""
-"上の例の続きで、`高頻度パレット` 保管カテゴリは`PAL1` と `PAL2` ロケーション"
-"に割当られます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:168
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:196
 msgid ""
 "Then, :ref:`putaway rules <inventory/routes/putaway-rule>` are set, so that "
 "any pallets received in the warehouse are directed to be stored in `PAL1` "
@@ -15889,15 +15947,14 @@ msgstr ""
 "入荷したパレットは全て`PAL1` および `PAL2` ロケーションに保管されるよう誘導さ"
 "れます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:171
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:199
 msgid ""
 "Depending on the number of pallets on-hand at each of the storage locations, "
-"when one pallet of lemonade cans is received, the following scenarios happen:"
+"when two pallets of lemonade cans is received, the following scenarios "
+"happen:"
 msgstr ""
-"各保管場所に保管されているパレットの数に応じて、レモネードのパレットが1つ届く"
-"と、次のような状況が発生します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:174
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:202
 msgid ""
 "If `PAL1` and `PAL2` are empty, the pallet is redirected to `WH/Stock/"
 "Pallets/PAL1`."
@@ -15905,19 +15962,36 @@ msgstr ""
 "`PAL1` および `PAL2` が空の場合、パレットは `WH/在庫/パレット/PAL1` に再配置"
 "されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:175
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:203
 msgid "If `PAL1` is full, the pallet is redirected to `WH/Stock/Pallets/PAL2`."
 msgstr ""
 "`PAL1` が満杯の場合、パレットは `WH/在庫/パレット/PAL2` にリダイレクトされま"
 "す。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:176
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:204
 msgid ""
 "If `PAL1` and `PAL2` are full, the pallet is redirected to `WH/Stock/"
 "Pallets`."
 msgstr ""
 "`PAL1` および `PAL2` が満杯の場合パレットは`WH/在庫/パレット` に再配置されま"
 "す。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:205
+msgid ""
+"If `PAL1` is partially full (for example, with one pallet), Odoo treats more "
+"than one received pallet as a single pallet on the receipt. You must "
+"manually separate the two pallets into separate storage locations. Click "
+"the :guilabel:`Open Move` icon to the right of the :guilabel:`Units` field, "
+"and then in the :guilabel:`Open: Stock move` box, click :guilabel:`Add a "
+"line`. Finally, split the receipt by quantity into separate locations, then "
+"click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
+msgid ""
+"Update the Stock move box to route pallets to the correct locations before "
+"validating."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:3
 msgid "Routes and push/pull rules"
@@ -21762,7 +21836,7 @@ msgid "API Keys in Envia.com."
 msgstr "Envia.comでのAPIキー"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:62
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:85
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:86
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:90
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:165
 msgid "Setup in Odoo"
@@ -21914,7 +21988,7 @@ msgstr ""
 "サービスなどのパラメータを変更します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:119
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:208
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:209
 msgid "Shipping information"
 msgstr "配送情報"
 
@@ -21936,7 +22010,7 @@ msgstr ""
 "番号、Eメールアドレス、および配送先住所が入力されていることを確認して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:127
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:216
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:217
 msgid ""
 "To verify, select the :guilabel:`Customer` field to open their contact page. "
 "Here, add their shipping address in the :guilabel:`Contact` field, along "
@@ -22163,7 +22237,7 @@ msgstr ""
 "チャターに自動的に生成され、以下を含みます:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:217
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:237
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:238
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:205
 msgid ":guilabel:`Shipping label(s)` depending on the number of packages."
 msgstr "梱包の数量に応じた :guilabel:`配送ラベル`。"
@@ -22189,7 +22263,7 @@ msgstr ""
 "る場合があります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:225
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:241
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:242
 msgid "Additionally, the tracking number is now available."
 msgstr "さらに、追跡番号も利用できるようになりました。"
 
@@ -24844,10 +24918,8 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:10
 msgid ""
 "`Sendcloud integration documentation <https://support.sendcloud.com/hc/en-us/"
-"articles /360059470491-Odoo-integration>`_"
+"articles/ 360059470491-Odoo-Native-integration>`_"
 msgstr ""
-"`Sendcloud統合ドキュメント <https://support.sendcloud.com/hc/en-us/articles /"
-"360059470491-Odoo-integration>`_"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:14
 msgid "Setup in Sendcloud"
@@ -24855,15 +24927,13 @@ msgstr "Sendcloudでの設定"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:19
 msgid ""
-"To get started, go to `Sendcloud's platform <https://www.sendcloud.com>`_ to "
-"configure the account and generate the connector credentials. Log in with "
+"To get started, go to `Sendcloud's platform <https://sendcloud.com/ ?"
+"utm_source=odoo&utm_medium=partnerships&utm_campaign=partner_integrations_page>`_ "
+"to configure the account and generate the connector credentials. Log in with "
 "the Sendcloud account, or create a new one if needed."
 msgstr ""
-"開始するには、`Sendcloudのプラットフォーム<https://www.sendcloud.com>`_にアク"
-"セスしてアカウントを設定し、コネクタ認証情報を生成します。Sendcloudアカウント"
-"でログインするか、必要に応じて新規アカウントを作成して下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:24
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:25
 msgid ""
 "For new account creation, Sendcloud will ask for a :abbr:`VAT (Value-Added "
 "Tax Identification)` number or :abbr:`EORI (Economic Operators' Registration "
@@ -24875,7 +24945,7 @@ msgstr ""
 "Identification)`番号の入力を要求します。アカウント設定が完了したら、Odooデー"
 "タベースで使用する配送業者を有効化(または無効化)します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:30
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:31
 msgid ""
 "Odoo integration of Sendcloud works on free Sendcloud plans *only* if a bank "
 "account is linked, since Sendcloud won't ship for free. To use shipping "
@@ -24886,12 +24956,12 @@ msgstr ""
 "ランで銀行口座がリンクされている場合のみ機能します。配送規則や個別の配送業者"
 "連絡先を使用するには、Sendcloudの有料プランが**必要です**。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:37
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:38
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:185
 msgid "Warehouse configuration"
 msgstr "倉庫設定"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:39
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:40
 msgid ""
 "Once logged into the Sendcloud account, navigate to :menuselection:`Settings "
 "--> Shipping --> Addresses`, and fill in the field for :guilabel:`Warehouse "
@@ -24904,7 +24974,7 @@ msgstr ""
 msgid "Adding addresses in the Sendcloud settings."
 msgstr "Sendcloud設定で住所を追加します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:46
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:47
 msgid ""
 "To allow Sendcloud to process returns as well, a :guilabel:`Return Address` "
 "is required. Under the :guilabel:`Miscellaneous section`, there is a field "
@@ -24951,7 +25021,7 @@ msgstr ":guilabel:`会社`: `自社 (San Francisco)`"
 msgid ":guilabel:`Address`: `My Company (San Francisco)`"
 msgstr ":guilabel:`住所`: `自社 (San Francisco)`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:63
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:64
 msgid ""
 "Notice how the inputs for the :guilabel:`Warehouse` field, for both the Odoo "
 "configuration and the Sendcloud configuration, are the exact same."
@@ -24959,11 +25029,11 @@ msgstr ""
 ":guilabel:`倉庫`フィールドの入力が、Odoo設定とSendcloud設定の両方で全く同じで"
 "あることに注目して下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:67
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:68
 msgid "Generate Sendcloud credentials"
 msgstr "Sendcloud認証情報を生成する"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:69
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:70
 msgid ""
 "In the Sendcloud account, navigate to :menuselection:`Settings --> "
 "Integrations` in the menu on the right. Next, search for :guilabel:`Odoo "
@@ -24973,7 +25043,7 @@ msgstr ""
 "動します。次に :guilabel:`Odoo Native` を検索します。次に :guilabel:`接続` を"
 "クリックします。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:72
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:73
 msgid ""
 "After clicking on :guilabel:`Connect`, the page redirects to "
 "the :guilabel:`Sendcloud API` settings page, where the :guilabel:`Public and "
@@ -24988,7 +25058,7 @@ msgstr ""
 "規則は以下の通りです:ユーザの会社名を `CompanyName` に置き換えて下さい(例："
 "`Odoo StealthyWood`)。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:77
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:78
 msgid ""
 "Then, check the box next to :guilabel:`Service Points` and select the "
 "shipping services for this integration. After saving, the :guilabel:`Public "
@@ -25002,7 +25072,7 @@ msgstr ""
 msgid "Configuring the Sendcloud integration and receiving the credentials."
 msgstr "Sendcloud統合の設定と認証情報の受信。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:87
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:88
 msgid ""
 "To ensure seamless Sendcloud integration with Odoo, :ref:`install <inventory/"
 "shipping_receiving/sendcloud-module>` and :ref:`link <inventory/"
@@ -25018,7 +25088,7 @@ msgstr ""
 "<inventory/shipping_receiving/sendcloud-shipping-info>`すると、Sendcloudは、"
 "配送データを正確に取込み、ラベルを生成することができます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:95
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:96
 msgid ""
 ":ref:`Enable pickup points on websites <inventory/shipping_receiving/"
 "sendcloud-pickups>`"
@@ -25026,11 +25096,11 @@ msgstr ""
 ":ref:`ウェブサイトでのピックアップポイントの有効化 <inventory/"
 "shipping_receiving/sendcloud-pickups>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:100
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:101
 msgid "Install Sendcloud shipping module"
 msgstr "Sendcloud配送モジュールをインストールする"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:102
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:103
 msgid ""
 "After the Sendcloud account is set up and configured, it's time to configure "
 "the Odoo database. To get started, go to Odoo's :guilabel:`Apps` module, "
@@ -25044,11 +25114,11 @@ msgstr ""
 msgid "Sendcloud Shipping module in the Odoo Apps module."
 msgstr "Odoo アプリモジュールのSendcloud配送モジュール。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:113
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:114
 msgid "Sendcloud shipping connector configuration"
 msgstr "Sendcloud配送コネクタ設定"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:115
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:116
 msgid ""
 "Once installed, activate the :guilabel:`Sendcloud Shipping` module "
 "in :menuselection:`Inventory --> Configuration --> Settings`. "
@@ -25059,7 +25129,7 @@ msgstr ""
 "で :guilabel:`Sendcloud 配送` モジュールを有効化します。guilabel:`Sendcloudコ"
 "ネクタ` の設定は :guilabel:`配送コネクタ` セクションにあります。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:119
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:120
 msgid ""
 "After activating the :guilabel:`Sendcloud Connector`, click on "
 "the :guilabel:`Sendcloud Shipping Methods` link below the listed connector. "
@@ -25069,7 +25139,7 @@ msgstr ""
 "る `Sendcloud 配送方法` リンクをクリックします。:guilabel:`配送方法`ページが"
 "表示されたら、:guilabel:`新規` をクリックします。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:124
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:125
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:115
 msgid ""
 ":guilabel:`Shipping Methods` can also be accessed by going "
@@ -25079,23 +25149,23 @@ msgstr ""
 ":guilabel:`配送方法`は :menuselection:`在庫 --> 設定 --> 配送 --> 配送方法`か"
 "らもアクセスできます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:127
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:128
 msgid ""
 "Fill out the following fields in the :guilabel:`New Shipping Method` form:"
 msgstr "guilabel:`新規配送方法`フォームに以下の項目を入力して下さい:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:130
 msgid ":guilabel:`Shipping Method`: type `Sendcloud DPD`."
 msgstr ":guilabel:`配送方法`: type `Sendcloud DPD`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:130
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:131
 msgid ""
 ":guilabel:`Provider`: select :guilabel:`Sendcloud` from the drop-down menu."
 msgstr ""
 ":guilabel:`プロバイダー`: ドロップダウンメニューから :guilabel:`Sendcloud` を"
 "選択します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:131
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:132
 msgid ""
 ":guilabel:`Delivery Product`: set the product that was configured for this "
 "shipping method or create a new product."
@@ -25103,25 +25173,25 @@ msgstr ""
 ":guilabel:`配送プロダクト`: この配送方法に設定されたプロダクトを設定するか、"
 "新しいプロダクトを作成します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:133
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:134
 msgid ""
 "In the :guilabel:`SendCloud Configuration` tab, enter "
 "the :guilabel:`Sendcloud Public Key`."
 msgstr ""
 "guilabel:`SendCloud設定`タブで、:guilabel:`Sendcloud公開キー`を入力します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:134
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:135
 msgid ""
 "In the :guilabel:`SendCloud Configuration` tab, enter "
 "the :guilabel:`Sendcloud Secret Key`."
 msgstr ""
 "guilabel:`SendCloud設定`タブで、:guilabel:`Sendcloud秘密キー`を入力します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:139
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:140
 msgid "Pickup points"
 msgstr "ピックアップ場所"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:141
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:142
 msgid ""
 "Sendcloud's `service point delivery <https://support.sendcloud.com/hc/en-us/"
 "articles/360026097951-FAQ-Service-Points>`_ lets customers choose a pickup "
@@ -25133,7 +25203,7 @@ msgstr ""
 "住所を入力する代わりに、受取場所(近くの店舗やロッカーなど)を選択することがで"
 "きます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:146
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:147
 msgid ""
 "To enable the feature, go to the shipping method form, and in "
 "the :guilabel:`SendCloud Configuration` tab, under the :guilabel:`Options` "
@@ -25143,7 +25213,7 @@ msgstr ""
 "` タブ、:guilabel:`オプション` セクションで、:guilabel:`Sendcloudロケーション"
 "を使用` 機能を有効にしてください。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:151
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:152
 msgid ""
 "Pickup point selection is only available through the **Website** app (the "
 "online checkout view). It is not currently possible to select a pickup point "
@@ -25153,7 +25223,7 @@ msgstr ""
 "のみ可能です。**販売**アプリ(内部データベース画面)から手動で受取を選択するこ"
 "とは、現在できません。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:155
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:156
 msgid ""
 "For example, if the customer selects a shipping method like *Sendcloud "
 "Mondial Relay*, they must choose a pickup point during the checkout process "
@@ -25164,11 +25234,11 @@ msgstr ""
 "はウェブサイトのチェックアウトプロセスで受取場所を選択する必要があります。受"
 "取場所を選択が選択されていない場合、Odooで配送オーダを検証できません。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:160
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:161
 msgid "Load shipping products"
 msgstr "配送プロダクトを読み込む"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:162
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:163
 msgid ""
 "After configuring and saving the form, follow these steps to load the "
 "shipping products:"
@@ -25176,7 +25246,7 @@ msgstr ""
 "フォームを設定し保存した後、以下の手順に従って配送プロダクトをロードして下さ"
 "い:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:164
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:165
 msgid ""
 "In the :guilabel:`SendCloud Configuration` tab of the :guilabel:`New "
 "Shipping Method` form, click on the :guilabel:`Load your SendCloud shipping "
@@ -25185,17 +25255,17 @@ msgstr ""
 "guilabel:`新規配送方法` フォームの :guilabel:`SendCloud設定` タブ"
 "で、 :guilabel:`SendCloud配送プロダクトをロードする` リンクをクリックします。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:166
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:167
 msgid ""
 "Select the shipping products the company would like to use for deliveries "
 "and returns."
 msgstr "配送と返品に使用する配送プロダクトを選択します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:167
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:168
 msgid "Click :guilabel:`Select`."
 msgstr "Click :guilabel:`選択`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:170
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:171
 msgid "Sample Sendcloud shipping products configured in Odoo:"
 msgstr "Odooで設定されたSendcloud配送プロダクトのサンプル:"
 
@@ -25219,7 +25289,7 @@ msgstr ":guilabel:`最小重量`: `0.00`"
 msgid ":guilabel:`Maximum Weight`: `31.50`"
 msgstr ":guilabel:`最大重量`: `31.50`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:178
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:179
 msgid ""
 ":guilabel:`Countries`: `Austria` `Belgium` `Bosnia` `Herzegovina` `Bulgaria` "
 "`Croatia` `Czech` `Republic` `Denmark` `Estonia` `Finland` `France` "
@@ -25264,7 +25334,7 @@ msgstr ":guilabel:`返品国`: `Belgium` `Netherlands`"
 msgid "Example of shipping products configured in Odoo."
 msgstr "Odooで設定された配送プロダクトの例。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:196
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:197
 msgid ""
 "Sendcloud does not provide test keys when a company tests the sending of a "
 "package in Odoo. This means if a package is created, the configured "
@@ -25275,7 +25345,7 @@ msgstr ""
 "ん。つまり、荷物が作成された場合、作成から24時間以内に関連する荷物が取消され"
 "ない限り、設定したSendcloudアカウントに料金が請求されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:200
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:201
 msgid ""
 "Odoo has a built-in layer of protection against unwanted charges when using "
 "test environments. Within a test environment, if a shipping method is used "
@@ -25288,7 +25358,7 @@ msgstr ""
 "す。これは、自動で行われます。テスト環境と本番環境の設定は、それぞれのスマー"
 "トボタンから切替えることができます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:210
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:211
 msgid ""
 "To use Sendcloud to generate shipping labels, the following information "
 "**must** be filled out accurately and completely in Odoo:"
@@ -25296,7 +25366,7 @@ msgstr ""
 "Sendcloudを使用して配送ラベルを作成するには、Odooで以下の情報を正確かつ完全に"
 "入力する**必要があります**:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:213
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:214
 msgid ""
 "**Customer information**: when creating a quotation, ensure the "
 "selected :guilabel:`Customer` has a valid phone number, email address, and "
@@ -25305,7 +25375,7 @@ msgstr ""
 " **顧客情報**：見積を作成する際、選択した :guilabel:`顧客` が検証済の電話番"
 "号、Eメールアドレス、配送先住所を持っていることを確認して下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:220
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:221
 msgid ""
 "**Product weight**: ensure all products in an order have a "
 "specified :guilabel:`Weight` in the :guilabel:`Inventory` tab of their "
@@ -25318,7 +25388,7 @@ msgstr ""
 "します。詳細な手順については、この記事の :ref:`プロダクト重量セクション "
 "<inventory/shipping_receiving/configure-weight>`を参照して下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:224
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:225
 msgid ""
 "**Warehouse address**: ensure the warehouse name and address in Odoo match "
 "the :ref:`previously defined warehouse <inventory/shipping_receiving/"
@@ -25333,11 +25403,11 @@ msgstr ""
 "の :ref:`倉庫設定セクション <inventory/shipping_receiving/configure-source-"
 "address>` を参照して下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:231
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:232
 msgid "Generate labels with Sendcloud"
 msgstr "Sendcloudでラベルを生成する"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:233
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:234
 msgid ""
 "When creating a quotation in Odoo, add shipping and a :guilabel:`Sendcloud "
 "shipping product`. Then, :guilabel:`Validate` the delivery. Shipping label "
@@ -25348,18 +25418,18 @@ msgstr ""
 "す。そして :guilabel:`配送を検証` して下さい。配送ラベルのドキュメントはチャ"
 "ターで自動生成されます:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:238
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:239
 msgid ""
 ":guilabel:`Return label(s)` if the Sendcloud connector is configured for "
 "returns."
 msgstr ":guilabel: `返品ラベル` Sendcloudコネクタが返品用に設定された場合。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:239
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:240
 msgid ""
 ":guilabel:`Customs document(s)` should the destination country require them."
 msgstr ":guilabel:`通関書類' 配送先国が通関書類を必要とする場合。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:244
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:245
 msgid ""
 "When return labels are created, Sendcloud automatically charges the "
 "configured Sendcloud account."
@@ -25444,11 +25514,9 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:280
 msgid ""
 "`Create shipping rules on Sendcloud <https://support.sendcloud.com/hc/en-us/"
-"articles/10274470454292-How-to-create-shipping-rules#examples-smart-shipping-"
-"rules>`_"
+"articles/ 10274470454292-How-to-create-shipping-rules#examples-smart-"
+"shipping-rules>`_"
 msgstr ""
-"`Sendcloudでの配送規則作成 <https://support.sendcloud.com/hc/en-us/articles/"
-"10274470454292-How-to-create-shipping-rules#examples-smart-shipping-rules>`_"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:287
 msgid "Shipment is too heavy"
@@ -59102,6 +59170,159 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "To manage where specific products are routed for storage, navigate "
+#~ "to :menuselection:`Inventory app --> Configuration --> Putaway Rules`. "
+#~ "Use the :guilabel:`Create` button to configure a new putaway rule on "
+#~ "a :guilabel:`Product` or :guilabel:`Product Category` that the rule "
+#~ "affects."
+#~ msgstr ""
+#~ "特定のプロダクトの保管場所を管理するには、 :menuselection:`在庫アプリ --> "
+#~ "設定 --> 入庫規則` に移動します。:guilabel:`プロダクト` または :guilabel:`"
+#~ "プロダクトカテゴリ` に新しい入庫規則を設定するには :guilabel:`作成` ボタン"
+#~ "を使用します。"
+
+#~ msgid ""
+#~ "Putaway rules can be defined either per product/product category, and/or "
+#~ "package type (the *Packages* setting must be enabled "
+#~ "in :menuselection:`Inventory app --> Configuration --> Settings` for "
+#~ "that)."
+#~ msgstr ""
+#~ "入庫規則は、プロダクト/プロダクトカテゴリ、梱包タイプごとに定義することが"
+#~ "できます（:menuselection:`在庫アプリ --> 設定 --> 管理設定`で *梱包* 設定"
+#~ "を有効にする必要があります）。"
+
+#~ msgid ""
+#~ "A *storage category* is used with :doc:`putaway rules <putaway>`, as an "
+#~ "extra location attribute to automatically propose optimal storage "
+#~ "locations for products."
+#~ msgstr ""
+#~ "*保管カテゴリ* は :doc:`入庫規則 <putaway>` と併せて使用されます。 追加の"
+#~ "ロケーション属性として、プロダクトに最適な保管場所を自動的に提案します。"
+
+#~ msgid ""
+#~ ":ref:`Enable the Storage Category feature <inventory/routes/enable-"
+#~ "storage-categories>`"
+#~ msgstr ""
+#~ ":ref:`保管カテゴリ機能を有効化する <inventory/routes/enable-storage-"
+#~ "categories>`"
+
+#~ msgid ""
+#~ ":ref:`Define a storage category <inventory/routes/define-storage>` with "
+#~ "specific limitations"
+#~ msgstr ""
+#~ "特定の制限で :ref:`保管カテゴリを定義する <inventory/routes/define-"
+#~ "storage>` "
+
+#~ msgid ""
+#~ "Next, activate the :guilabel:`Storage Categories` feature. Finally, "
+#~ "click :guilabel:`Save`."
+#~ msgstr ""
+#~ "次に、:guilabel:`保管カテゴリ` 機能を有効にしたら、 :guilabel:`保管` をク"
+#~ "リックします。"
+
+#~ msgid "Show the Storage Categories feature."
+#~ msgstr "保管カテゴリ機能を表示します。"
+
+#~ msgid ""
+#~ "To create a storage category, go to :menuselection:`Inventory app --> "
+#~ "Configuration --> Storage Categories`, and click :guilabel:`Create`."
+#~ msgstr ""
+#~ "保管カテゴリを作成するには :menuselection:`在庫アプリ --> 設定 --> 保管カ"
+#~ "テゴリ` に 行き、:guilabel:`作成` をクリックします。"
+
+#~ msgid ""
+#~ "When clicked, the :guilabel:`Location` smart button shows which storage "
+#~ "locations the category has been assigned to."
+#~ msgstr ""
+#~ "クリックすると、:guilabel:`ロケーション` スマートボタンは、カテゴリがどの"
+#~ "保管場所に割当てられているかを表示します。"
+
+#~ msgid ""
+#~ "Enable the :guilabel:`Packages` feature in :menuselection:`Inventory app "
+#~ "--> Configuration --> Settings` to show the :guilabel:`Capacity by "
+#~ "Package` tab."
+#~ msgstr ""
+#~ ":guilabel:`梱包` 機能を有効にするには、:menuselection:`在庫アプリ --> 設"
+#~ "定 --> 管理設定` で :guilabel:`梱包別容量` タブを表示します。"
+
+#~ msgid ""
+#~ "Create putaway rules for pallet-stored items, by creating the `High "
+#~ "Frequency pallets` storage category."
+#~ msgstr ""
+#~ "`高頻度パレット` の保管カテゴリを作成することで、パレット保管の物品の入庫"
+#~ "規則を作成します。"
+
+#~ msgid "Create a storage category on the page."
+#~ msgstr "ページに収納カテゴリを作成します。"
+
+#~ msgid ""
+#~ "Assign the `High Frequency pallets` storage category (which limits "
+#~ "pallets stored at any location to two pallets) to the `WH/Stock/pallets/"
+#~ "PAL 1` sub-location."
+#~ msgstr ""
+#~ "`高頻度パレット` 保管カテゴリ (いずれのロケーションでも保管されるパレット"
+#~ "を制限する) を `WH/Stock/pallets/PAL 1` サブロケーションに割り当てます。"
+
+#~ msgid ""
+#~ "Click the :guilabel:`Create` button to create the putaway rule. In "
+#~ "the :guilabel:`Having Category` field of the new putaway rule form, "
+#~ "select the storage category."
+#~ msgstr ""
+#~ ":guilabel:`作成` ボタンをクリックして入庫規則を作成します。新しい入庫規則"
+#~ "フォームで、:guilabel:`カテゴリあり` フィールドを選択して下さい。"
+
+#~ msgid ""
+#~ "Continuing the example from above, the `High Frequency Pallets` storage "
+#~ "category is assigned to the putaway rule directing pallets of lemonade to "
+#~ "locations with the `High Frequency Pallets` storage "
+#~ "category :ref:`assigned to them <inventory/routes/assign-location>`."
+#~ msgstr ""
+#~ "前の例の続きで、レモネードを積んだパレットを、:ref:`ロケーションに割当られ"
+#~ "た <inventory/routes/assign-location>` `高頻度パレット` の保管カテゴリを持"
+#~ "つロケーションに誘導する入庫規則に対して `高頻度パレット` の保管カテゴリが"
+#~ "割当てられています。"
+
+#~ msgid ""
+#~ "Continuing the example from above, the `High Frequency Pallets` storage "
+#~ "category is assigned to the `PAL1` and `PAL2` locations."
+#~ msgstr ""
+#~ "上の例の続きで、`高頻度パレット` 保管カテゴリは`PAL1` と `PAL2` ロケーショ"
+#~ "ンに割当られます。"
+
+#~ msgid ""
+#~ "Depending on the number of pallets on-hand at each of the storage "
+#~ "locations, when one pallet of lemonade cans is received, the following "
+#~ "scenarios happen:"
+#~ msgstr ""
+#~ "各保管場所に保管されているパレットの数に応じて、レモネードのパレットが1つ"
+#~ "届くと、次のような状況が発生します。"
+
+#~ msgid ""
+#~ "`Sendcloud integration documentation <https://support.sendcloud.com/hc/en-"
+#~ "us/articles /360059470491-Odoo-integration>`_"
+#~ msgstr ""
+#~ "`Sendcloud統合ドキュメント <https://support.sendcloud.com/hc/en-us/"
+#~ "articles /360059470491-Odoo-integration>`_"
+
+#~ msgid ""
+#~ "To get started, go to `Sendcloud's platform <https://www.sendcloud.com>`_ "
+#~ "to configure the account and generate the connector credentials. Log in "
+#~ "with the Sendcloud account, or create a new one if needed."
+#~ msgstr ""
+#~ "開始するには、`Sendcloudのプラットフォーム<https://www.sendcloud.com>`_に"
+#~ "アクセスしてアカウントを設定し、コネクタ認証情報を生成します。Sendcloudア"
+#~ "カウントでログインするか、必要に応じて新規アカウントを作成して下さい。"
+
+#~ msgid ""
+#~ "`Create shipping rules on Sendcloud <https://support.sendcloud.com/hc/en-"
+#~ "us/articles/10274470454292-How-to-create-shipping-rules#examples-smart-"
+#~ "shipping-rules>`_"
+#~ msgstr ""
+#~ "`Sendcloudでの配送規則作成 <https://support.sendcloud.com/hc/en-us/"
+#~ "articles/10274470454292-How-to-create-shipping-rules#examples-smart-"
+#~ "shipping-rules>`_"
 
 #~ msgid ""
 #~ "On the product form, go to the :guilabel:`Inventory` tab. In "

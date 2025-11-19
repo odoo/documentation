@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-17 08:58+0000\n"
+"POT-Creation-Date: 2025-11-18 11:05+0000\n"
 "PO-Revision-Date: 2025-11-13 20:11+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Romanian <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -190,7 +190,7 @@ msgstr "Tabloul de bord Barcode cu o numărătoare atribuită."
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:20
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:34
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_three_steps.rst:14
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:27
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:96
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:21
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:48
@@ -1944,7 +1944,7 @@ msgstr "(91) ([!\"%-/0-9:-?A-Z_a-z]{0,90})"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:225
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:126
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:77
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:96
 msgid "Package type"
 msgstr "Tip pachet"
 
@@ -2032,7 +2032,7 @@ msgstr "A.I."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:40
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:168
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:78
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:97
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:20
 msgid "Product"
 msgstr "Produs"
@@ -14646,33 +14646,26 @@ msgid "Activate Multi-Step Routes in Inventory configuration settings."
 msgstr ""
 "Activați Rute cu mai multe etape în setările de configurare a inventarului."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:36
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:35
 msgid "Define putaway rule"
 msgstr "Definiți regula de depozitare"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:38
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:37
 msgid ""
 "To manage where specific products are routed for storage, navigate "
 "to :menuselection:`Inventory app --> Configuration --> Putaway Rules`. Use "
-"the :guilabel:`Create` button to configure a new putaway rule on "
+"the :guilabel:`New` button to configure a new putaway rule on "
 "a :guilabel:`Product` or :guilabel:`Product Category` that the rule affects."
 msgstr ""
-"Pentru a gestiona unde sunt direcționate anumite produse pentru stocare, "
-"navigați la :menuselection:`Aplicația inventar --> Configurare --> Reguli de "
-"depozitare`. Utilizați butonul :guilabel:`Creați` pentru a configura o nouă "
-"regulă de depozitare pentru un :guilabel:`Produs` sau :guilabel:`Categorie "
-"de produs` pe care regula îl afectează."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:43
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:42
 msgid ""
 "Putaway rules can be defined either per product/product category, and/or "
 "package type (the *Packages* setting must be enabled "
-"in :menuselection:`Inventory app --> Configuration --> Settings` for that)."
+"in :menuselection:`Inventory app --> Configuration --> Settings` for that). "
+"Additionally, a :doc:`storage category <storage_category>` can be defined to "
+"limit capacities of a storage location and route products accordingly."
 msgstr ""
-"Regulile de depozitare pot fi definite fie în funcție de produs/categorie de "
-"produs și/sau de tip de pachet (setarea *Pachete* trebuie să fie activată "
-"în :menuselection:`Aplicația Inventory --> Configurare --> Setări` pentru "
-"asta)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:47
 msgid ""
@@ -14728,11 +14721,53 @@ msgstr ""
 msgid "Create putaway rules for apples and carrots."
 msgstr "Creați reguli de depozitare pentru mere și morcovi."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:70
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:68
+msgid ""
+"Use the :guilabel:`Sublocation` field to specify whether to use a "
+"sublocation or specify a storage category:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:71
+msgid ""
+":guilabel:`No`: no sublocation is used. Products are directed to whatever is "
+"specified in the :guilabel:`Store to` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:73
+msgid ""
+":guilabel:`Last Used`: the last location that had a move associated with it "
+"for that product or product category is used. If there is no last location "
+"used, the destination is whatever is specified in the :guilabel:`Store to` "
+"field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:76
+msgid ""
+":guilabel:`Closest Location`: the locations specified as part of a storage "
+"category are used. A storage category is mandatory in the :guilabel:`Having "
+"Category` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:79
+msgid ""
+"To apply a putaway rule to *all* products, create an empty putaway rule with "
+"no specified :guilabel:`Product` or :guilabel:`Product Category`. All "
+"products are stored in the location specified in the :guilabel:`Store to` "
+"field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:84
+msgid ""
+"A best practice for an empty putaway rule is to specify the :guilabel:`Last "
+"used` :guilabel:`Sublocation`. Specifying :guilabel:`Last used` ensures that "
+"Odoo suggests the last location used to store a product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:89
 msgid "Putaway rule priority"
 msgstr "Prioritatea regulii de păstrare"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:72
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:91
 msgid ""
 "Odoo selects a putaway rule based on the following priority list (from "
 "highest to lowest) until a match is found:"
@@ -14741,25 +14776,25 @@ msgstr ""
 "priorități (de la cea mai mare la cea mai mică) până când este găsită o "
 "potrivire:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:94
 msgid "Package type and product"
 msgstr "Tipul pachetului și produsul"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:76
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:95
 msgid "Package type and product category"
 msgstr "Tipul pachetului și categoria de produs"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:79
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:98
 msgid "Product category"
 msgstr "Categorie produs"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:82
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:101
 msgid "The product `Lemonade can` has the following putaway rules configured:"
 msgstr ""
 "Produsul „Cutie de limonadă” are următoarele reguli de depozitare "
 "configurate:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:84
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:103
 msgid ""
 "When receiving a `Pallet` (:guilabel:`Package Type`) of `Lemonade cans`, it "
 "is redirected to `WH/Stock/Pallets/PAL1`."
@@ -14767,7 +14802,7 @@ msgstr ""
 "Când primiți un „Palet” (:guilabel: „Tipul de pachet”) de „Conserve de "
 "limonadă”, acesta este redirecționat către „WH/Stock/Pallets/PAL1”."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:86
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:105
 msgid ""
 "`Lemonade can`'s :guilabel:`Product Category` is `All/drinks`, and when "
 "receiving a `Box` of any item in this product category, items are redirected "
@@ -14777,17 +14812,17 @@ msgstr ""
 "băuturile`, iar atunci când primiți o `Cutie` cu orice articol din această "
 "categorie de produse, articolele sunt redirecționate către `WH/Stoc/Raft 1`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:88
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:107
 msgid "Any product on a `Pallet` is redirected to `WH/Stock/Pallets`"
 msgstr ""
 "Orice produs de pe un „Palet” este redirecționat către „WH/Stock/Palets`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:108
 msgid "The product `Lemonade can` is redirected to `WH/Stock/Shelf 2`"
 msgstr ""
 "Produsul „Cutie de limonadă” este redirecționat către „WH/Stock/Shelf 2”"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:90
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:109
 msgid ""
 "Items in the `All/drinks` product category are redirected to `WH/Stock/Small "
 "Refrigerator`."
@@ -16348,13 +16383,10 @@ msgstr "Categoriile de depozitare"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:5
 msgid ""
-"A *storage category* is used with :doc:`putaway rules <putaway>`, as an "
-"extra location attribute to automatically propose optimal storage locations "
-"for products."
+"A *storage category* is used with :doc:`putaway rules <putaway>` to assign a "
+"storage location to incoming products while accounting for the capacity of "
+"that location."
 msgstr ""
-"O *categorie de depozitare* este folosită împreună cu :doc:`regulile de "
-"depozitare <putaway>`, ca atribut suplimentar de locație pentru a propune "
-"automat locații optime de depozitare pentru produse."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:8
 msgid "Follow these steps to complete the setup:"
@@ -16362,19 +16394,13 @@ msgstr "Urmează acești pași pentru a finaliza configurarea:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:10
 msgid ""
-":ref:`Enable the Storage Category feature <inventory/routes/enable-storage-"
+":ref:`Enable features in the settings <inventory/routes/enable-storage-"
 "categories>`"
 msgstr ""
-":ref:`Activează funcționalitatea Categorie de depozitare <inventory/routes/"
-"enable-storage-categories>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:11
-msgid ""
-":ref:`Define a storage category <inventory/routes/define-storage>` with "
-"specific limitations"
+msgid ":ref:`Define capacity limitations <inventory/routes/define-storage>`"
 msgstr ""
-":ref:`Definește o categorie de depozitare <inventory/routes/define-storage>` "
-"cu limitări specifice"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:12
 msgid ""
@@ -16409,7 +16435,7 @@ msgstr ""
 "definite, și recomandă cea mai bună locație pe formularul de transfer din "
 "depozit."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:28
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:29
 msgid ""
 "To enable storage categories, go to :menuselection:`Inventory app --> "
 "Configuration --> Settings`. Then, in the :guilabel:`Warehouse` section, "
@@ -16422,23 +16448,23 @@ msgstr ""
 "funcționalitățile :guilabel:`Locații de depozitare` și :guilabel:`Rute în "
 "mai mulți pași` sunt activate."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:32
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:33
 msgid ""
-"Next, activate the :guilabel:`Storage Categories` feature. Finally, "
-"click :guilabel:`Save`."
+"If intending to set capacities by :ref:`package type <inventory/routes/set-"
+"capacity-package>`, also make sure :guilabel:`Packages` is enabled. "
+"Click :guilabel:`Save`."
 msgstr ""
-"Apoi, activează funcționalitatea :guilabel:`Categorii de depozitare`. La "
-"final, apasă :guilabel:`Salvează`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:-1
-msgid "Show the Storage Categories feature."
-msgstr "Afișează funcționalitatea Categorii de depozitare."
+msgid ""
+"Enable Storage Locations and Multi-Step Routes to enable storage categories."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:41
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:42
 msgid "Define storage category"
 msgstr "Definiți categoria de stocare"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:43
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:44
 msgid ""
 "A storage category with specific limitations **must** be created first, "
 "before it is applied to locations, in order to decide the optimal storage "
@@ -16448,16 +16474,13 @@ msgstr ""
 "întâi, înainte de a fi aplicată locațiilor, pentru a decide locația optimă "
 "de depozitare."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:46
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:47
 msgid ""
 "To create a storage category, go to :menuselection:`Inventory app --> "
-"Configuration --> Storage Categories`, and click :guilabel:`Create`."
+"Configuration --> Storage Categories`, and click :guilabel:`New`."
 msgstr ""
-"Pentru a crea o categorie de depozitare, mergi la :menuselection:`Aplicația "
-"Inventar --> Configurare --> Categorii de depozitare` și "
-"apasă :guilabel:`Creează`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:49
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:50
 msgid ""
 "On the storage category form, type a name for the category in "
 "the :guilabel:`Storage Category` field."
@@ -16465,14 +16488,14 @@ msgstr ""
 "Pe formularul categoriei de depozitare, introdu un nume pentru categorie în "
 "câmpul :guilabel:`Categorie de depozitare`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:52
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:53
 msgid ""
 "Options are available to limit capacity by weight, product, and package type."
 msgstr ""
 "Sunt disponibile opțiuni pentru a limita capacitatea după greutate, produs "
 "și tip de ambalaj."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:55
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:56
 msgid ""
 "Weight limits can be combined with capacity by package or product (e.g. a "
 "maximum of one hundred products with a total weight of two hundred "
@@ -16482,7 +16505,7 @@ msgstr ""
 "(de exemplu, maximum o sută de produse cu o greutate totală de două sute de "
 "kilograme)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:58
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:59
 msgid ""
 "While it is possible to limit capacity by product and package type at the "
 "same location, it may be more practical to store items in different amounts "
@@ -16494,7 +16517,7 @@ msgstr ""
 "diferite în diverse locații, așa cum se arată în acest exemplu "
 "de :ref:`capacitate pe ambalaj <inventory/routes/set-capacity-package>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:62
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:63
 msgid ""
 "The :guilabel:`Allow New Product` field defines when the location is "
 "considered available to store a product:"
@@ -16502,7 +16525,7 @@ msgstr ""
 "Câmpul :guilabel:`Permite produs nou` definește când locația este "
 "considerată disponibilă pentru a depozita un produs:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:65
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:66
 msgid ""
 ":guilabel:`If location is empty`: a product can be added there only if the "
 "location is empty."
@@ -16510,7 +16533,7 @@ msgstr ""
 ":guilabel:`Dacă locația este goală`: un produs poate fi adăugat acolo numai "
 "dacă."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:67
 msgid ""
 ":guilabel:`If products are the same`: a product can be added there only if "
 "the same product is already there."
@@ -16518,7 +16541,7 @@ msgstr ""
 ":guilabel:`Dacă produsele sunt aceleași`: un produs poate fi adăugat acolo "
 "numai dacă același produs este deja acolo."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:69
 msgid ""
 ":guilabel:`Allow mixed products`: several different products can be stored "
 "in this location at the same time."
@@ -16526,19 +16549,33 @@ msgstr ""
 ":guilabel:`Permite produse amestecate`: mai multe produse diferite pot fi "
 "stocate în această locație în același timp."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:72
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:73
 msgid ""
-"When clicked, the :guilabel:`Location` smart button shows which storage "
-"locations the category has been assigned to."
+"When clicked, the :icon:`oi-arrows-v` :guilabel:`Locations` smart button "
+"shows which storage locations the category has been assigned to."
 msgstr ""
-"Când este apăsat, butonul inteligent :guilabel:`Locație` arată la ce locații "
-"de depozitare a fost atribuită categoria."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:76
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:77
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:131
+msgid ""
+"Odoo does **not** automatically split quantities across multiple storage "
+"locations. If an incoming receipt contains several units or packages and the "
+"first recommended location exceeds its capacity, Odoo still routes all items "
+"to that same location instead of selecting another one with available space."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:82
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:136
+msgid ""
+"*(Example: If a location can hold 10 units and 12 units arrive, all 12 are "
+"still assigned to that location.)*"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:86
 msgid "Capacity by weight"
 msgstr "Capacitate după greutate"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:78
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:88
 msgid ""
 "On a storage category form (:menuselection:`Inventory app --> Configuration "
 "--> Storage Categories`), set a maximum product weight in the :guilabel:`Max "
@@ -16550,11 +16587,11 @@ msgstr ""
 "produsului în câmpul :guilabel:`Greutate maximă`. Această limită se aplică "
 "fiecărei locații căreia i-a fost atribuită această categorie de depozitare."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:83
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:93
 msgid "Capacity by product"
 msgstr "Capacitate după produs"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:85
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:95
 msgid ""
 "In the :guilabel:`Capacity by Product` tab, click :guilabel:`Add a Line` to "
 "input items, and enter their capacities in the :guilabel:`Quantity` field."
@@ -16563,7 +16600,7 @@ msgstr ""
 "pentru a introduce articolele și completează capacitățile lor în "
 "câmpul :guilabel:`Cantitate`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:99
 msgid ""
 "Ensure only a maximum of five `Large Cabinets` and two `Corner Desk Right "
 "Sit` are stored at a single storage location, by specifying those amounts in "
@@ -16578,11 +16615,11 @@ msgstr ""
 msgid "Show storage category limiting by product count."
 msgstr "Afișează limitarea categoriei de depozitare după numărul de produse."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:100
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:109
 msgid "Capacity by package"
 msgstr "Capacitate după ambalaj"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:102
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:111
 msgid ""
 "For companies using :doc:`packages <../../product_management/configure/"
 "package>`, it becomes possible to ensure real-time storage capacity checks, "
@@ -16592,24 +16629,22 @@ msgstr ""
 "configure/package>`, devine posibilă verificarea în timp real a capacității "
 "de depozitare, pe baza tipurilor de ambalaje (ex: lăzi, cutii, bidoane etc.)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:107
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:115
 msgid ""
-"Enable the :guilabel:`Packages` feature in :menuselection:`Inventory app --> "
-"Configuration --> Settings` to show the :guilabel:`Capacity by Package` tab."
+"Create the :ref:`package type <inventory/warehouses_storage/package-type>` "
+"before assigning it to a storage category. Create it on "
+"the :guilabel:`Inventory` tab of the product form (in "
+"the :guilabel:`Packaging` section), or create it from the :guilabel:`Product "
+"Packagings` page. Be sure to set the :guilabel:`Package Type`."
 msgstr ""
-"Activează funcționalitatea :guilabel:`Ambalaje` în :menuselection:`Aplicația "
-"Inventar --> Configurare --> Setări` pentru a afișa "
-"fila :guilabel:`Capacitate după ambalaj`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:121
 msgid ""
 "Create putaway rules for pallet-stored items, by creating the `High "
-"Frequency pallets` storage category."
+"frequency pallets` storage category."
 msgstr ""
-"Creează reguli de depozitare pentru articolele stocate pe paleți, creând "
-"categoria de depozitare `Paleți cu frecvență ridicată`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:124
 msgid ""
 "In the :guilabel:`Capacity by Package` tab, specify the number of packages "
 "for the designated :guilabel:`Package Type`, and set a maximum of `2.00` "
@@ -16620,14 +16655,14 @@ msgstr ""
 "`Paleți` pentru o anumită locație."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
-msgid "Create a storage category on the page."
-msgstr "Creați o categorie de stocare pe pagină."
+msgid "Create a storage category."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:124
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:142
 msgid "Assign to location"
 msgstr "Atribuie la locație"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:144
 msgid ""
 "Once the storage category is created, assign it to a location. Navigate to "
 "the location by going to :menuselection:`Inventory app --> Configuration --> "
@@ -16639,15 +16674,12 @@ msgstr ""
 "Configurare --> Locații` și selectează locația dorită. Apoi selectează "
 "categoria creată în câmpul :guilabel:`Categorie de depozitare`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:131
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:149
 msgid ""
-"Assign the `High Frequency pallets` storage category (which limits pallets "
-"stored at any location to two pallets) to the `WH/Stock/pallets/PAL 1` sub-"
+"Assign the `High frequency pallets` storage category (which limits pallets "
+"stored at any location to two pallets) to the `WH/Stock/Pallets/PAL1` sub-"
 "location."
 msgstr ""
-"Atribuie categoria de depozitare `Paleți cu frecvență ridicată` (care "
-"limitează paleții depozitați într-o locație la doi paleți) sub-locației `WH/"
-"Stoc/paleți/PAL 1`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
 msgid ""
@@ -16656,11 +16688,11 @@ msgstr ""
 "Când o categorie de stocare este creată, poate fi legată de o locație de "
 "depozit."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:141
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:158
 msgid "Putaway rule"
 msgstr "Regulă de depozitare"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:143
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:160
 msgid ""
 "With the :ref:`storage category <inventory/routes/define-storage>` "
 "and :ref:`location <inventory/routes/assign-location>` set up, create "
@@ -16673,38 +16705,58 @@ msgstr ""
 "la :menuselection:`Aplicația Inventar --> Configurare --> Reguli de "
 "depozitare`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:147
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:164
 msgid ""
-"Click the :guilabel:`Create` button to create the putaway rule. In "
-"the :guilabel:`Having Category` field of the new putaway rule form, select "
-"the storage category."
+"Click the :guilabel:`New` button to create the putaway rule. Specify a "
+"location to store to in the :guilabel:`Store to` field."
 msgstr ""
-"Apasă butonul :guilabel:`Creează` pentru a crea regula de depozitare. În "
-"câmpul :guilabel:`Categorie atribuită` din formularul noii reguli de "
-"depozitare, selectează categoria de depozitare."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:151
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:167
 msgid ""
-"Continuing the example from above, the `High Frequency Pallets` storage "
+"Use the :guilabel:`Sublocation` field to specify that you want to use a "
+"sublocation with the storage category:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:170
+msgid ""
+":guilabel:`Last Used`: The last location that had a move associated with it "
+"for that product or product category is used. If there is no last location "
+"used, the destination is whatever is specified in the :guilabel:`Store to` "
+"field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:173
+msgid ""
+":guilabel:`Closest Location`: The locations specified as part of the storage "
+"category are used. A storage category is mandatory in the :guilabel:`Having "
+"Category` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:176
+msgid ""
+"If using multiple storage locations for a single storage category, create "
+"putaway rules for each location to ensure that if one storage location is in "
+"use, the secondary locations must be used."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:180
+msgid ""
+"Continuing the example from above, the `High frequency pallets` storage "
 "category is assigned to the putaway rule directing pallets of lemonade to "
-"locations with the `High Frequency Pallets` storage category :ref:`assigned "
+"locations with the `High frequency pallets` storage category :ref:`assigned "
 "to them <inventory/routes/assign-location>`."
 msgstr ""
-"Continuând exemplul de mai sus, categoria de depozitare `Paleți cu frecvență "
-"ridicată` este atribuită regulii de depozitare care direcționează paleții de "
-"limonadă către locațiile cu categoria de depozitare `Paleți cu frecvență "
-"ridicată` :ref:`atribuită acestora <inventory/routes/assign-location>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
 msgid "Storage Categories used in a variety of putaway rules."
 msgstr ""
 "Categoriile de stocare utilizate într-o varietate de reguli de depozitare."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:160
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:188
 msgid "Use case: limit capacity by package"
 msgstr "Caz de utilizare: limitează capacitatea după ambalaj"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:162
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:190
 msgid ""
 "To limit the capacity of a storage location by a specific number of "
 "packages, :ref:`create a storage category with a Capacity By Package "
@@ -16714,15 +16766,13 @@ msgstr ""
 "ambalaje, :ref:`creează o categorie de depozitare cu Capacitate după ambalaj "
 "<inventory/routes/set-capacity-package>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:165
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:193
 msgid ""
-"Continuing the example from above, the `High Frequency Pallets` storage "
+"Continuing the example from above, the `High frequency pallets` storage "
 "category is assigned to the `PAL1` and `PAL2` locations."
 msgstr ""
-"Continuând exemplul de mai sus, categoria de depozitare `Paleți cu frecvență "
-"ridicată` este atribuită locațiilor `PAL1` și `PAL2`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:168
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:196
 msgid ""
 "Then, :ref:`putaway rules <inventory/routes/putaway-rule>` are set, so that "
 "any pallets received in the warehouse are directed to be stored in `PAL1` "
@@ -16732,16 +16782,14 @@ msgstr ""
 "rule>`, astfel încât orice paleți primiți în depozit să fie direcționați "
 "spre a fi depozitați în locațiile `PAL1` și `PAL2`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:171
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:199
 msgid ""
 "Depending on the number of pallets on-hand at each of the storage locations, "
-"when one pallet of lemonade cans is received, the following scenarios happen:"
+"when two pallets of lemonade cans is received, the following scenarios "
+"happen:"
 msgstr ""
-"În funcție de numărul de paleți disponibili în fiecare locație de "
-"depozitare, când se primește un palet de doze de limonadă, apar următoarele "
-"scenarii:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:174
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:202
 msgid ""
 "If `PAL1` and `PAL2` are empty, the pallet is redirected to `WH/Stock/"
 "Pallets/PAL1`."
@@ -16749,19 +16797,36 @@ msgstr ""
 "Dacă `PAL1` și `PAL2` sunt goale, paletul este redirecționat către `WH/Stoc/"
 "Paleți/PAL1`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:175
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:203
 msgid "If `PAL1` is full, the pallet is redirected to `WH/Stock/Pallets/PAL2`."
 msgstr ""
 "Dacă `PAL1` este plin, paletul este redirecționat către `WH/Stoc/Paleți/"
 "PAL2`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:176
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:204
 msgid ""
 "If `PAL1` and `PAL2` are full, the pallet is redirected to `WH/Stock/"
 "Pallets`."
 msgstr ""
 "Dacă `PAL1` și `PAL2` sunt pline, paletul este redirecționat către `WH/Stoc/"
 "Paleți`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:205
+msgid ""
+"If `PAL1` is partially full (for example, with one pallet), Odoo treats more "
+"than one received pallet as a single pallet on the receipt. You must "
+"manually separate the two pallets into separate storage locations. Click "
+"the :guilabel:`Open Move` icon to the right of the :guilabel:`Units` field, "
+"and then in the :guilabel:`Open: Stock move` box, click :guilabel:`Add a "
+"line`. Finally, split the receipt by quantity into separate locations, then "
+"click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
+msgid ""
+"Update the Stock move box to route pallets to the correct locations before "
+"validating."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:3
 msgid "Routes and push/pull rules"
@@ -22930,7 +22995,7 @@ msgid "API Keys in Envia.com."
 msgstr "Chei API în Envia.com."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:62
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:85
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:86
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:90
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:165
 msgid "Setup in Odoo"
@@ -23088,7 +23153,7 @@ msgstr ""
 "sau serviciul."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:119
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:208
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:209
 msgid "Shipping information"
 msgstr "Informații despre livrare"
 
@@ -23111,7 +23176,7 @@ msgstr ""
 "email validă și o adresă de livrare completă."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:127
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:216
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:217
 msgid ""
 "To verify, select the :guilabel:`Customer` field to open their contact page. "
 "Here, add their shipping address in the :guilabel:`Contact` field, along "
@@ -23342,7 +23407,7 @@ msgstr ""
 "etichetele de livrare sunt generate automat în chatter și includ următoarele:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:217
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:237
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:238
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:205
 msgid ":guilabel:`Shipping label(s)` depending on the number of packages."
 msgstr ":guilabel:`Etichetă(e) de expediere` în funcție de numărul de pachete."
@@ -23368,7 +23433,7 @@ msgstr ""
 "pot varia."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:225
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:241
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:242
 msgid "Additionally, the tracking number is now available."
 msgstr "În plus, numărul de urmărire este acum disponibil."
 
@@ -26162,10 +26227,8 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:10
 msgid ""
 "`Sendcloud integration documentation <https://support.sendcloud.com/hc/en-us/"
-"articles /360059470491-Odoo-integration>`_"
+"articles/ 360059470491-Odoo-Native-integration>`_"
 msgstr ""
-"`Documentația de integrare Sendcloud <https://support.sendcloud.com/hc/en-us/"
-"articles /360059470491-Odoo-integration>`_"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:14
 msgid "Setup in Sendcloud"
@@ -26173,16 +26236,13 @@ msgstr "Configurați în Sendcloud"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:19
 msgid ""
-"To get started, go to `Sendcloud's platform <https://www.sendcloud.com>`_ to "
-"configure the account and generate the connector credentials. Log in with "
+"To get started, go to `Sendcloud's platform <https://sendcloud.com/ ?"
+"utm_source=odoo&utm_medium=partnerships&utm_campaign=partner_integrations_page>`_ "
+"to configure the account and generate the connector credentials. Log in with "
 "the Sendcloud account, or create a new one if needed."
 msgstr ""
-"Pentru a începe, accesați „platforma lui Sendcloud <https://"
-"www.sendcloud.com>`_ pentru a configura contul și a genera acreditările "
-"conectorului. Conectați-vă cu contul Sendcloud sau creați unul nou dacă este "
-"necesar."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:24
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:25
 msgid ""
 "For new account creation, Sendcloud will ask for a :abbr:`VAT (Value-Added "
 "Tax Identification)` number or :abbr:`EORI (Economic Operators' Registration "
@@ -26195,7 +26255,7 @@ msgstr ""
 "configurării contului, activați (sau dezactivați) transportatorii care vor "
 "fi utilizați în baza de date Odoo."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:30
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:31
 msgid ""
 "Odoo integration of Sendcloud works on free Sendcloud plans *only* if a bank "
 "account is linked, since Sendcloud won't ship for free. To use shipping "
@@ -26208,12 +26268,12 @@ msgstr ""
 "personalizate ale transportatorului, este **necesar** un plan plătit de "
 "Sendcloud."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:37
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:38
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:185
 msgid "Warehouse configuration"
 msgstr "Configurarea depozitului"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:39
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:40
 msgid ""
 "Once logged into the Sendcloud account, navigate to :menuselection:`Settings "
 "--> Shipping --> Addresses`, and fill in the field for :guilabel:`Warehouse "
@@ -26227,7 +26287,7 @@ msgstr ""
 msgid "Adding addresses in the Sendcloud settings."
 msgstr "Adăugarea de adrese în setările Sendcloud."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:46
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:47
 msgid ""
 "To allow Sendcloud to process returns as well, a :guilabel:`Return Address` "
 "is required. Under the :guilabel:`Miscellaneous section`, there is a field "
@@ -26275,7 +26335,7 @@ msgstr ":guilabel:`Companie`: `Compania mea (San Francisco)`"
 msgid ":guilabel:`Address`: `My Company (San Francisco)`"
 msgstr ":guilabel:`Adresă`: `Compania mea (San Francisco)`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:63
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:64
 msgid ""
 "Notice how the inputs for the :guilabel:`Warehouse` field, for both the Odoo "
 "configuration and the Sendcloud configuration, are the exact same."
@@ -26283,11 +26343,11 @@ msgstr ""
 "Observați cum intrările pentru câmpul :guilabel:`Warehouse`, atât pentru "
 "configurația Odoo, cât și pentru configurația Sendcloud, sunt exact aceleași."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:67
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:68
 msgid "Generate Sendcloud credentials"
 msgstr "Generați acreditările Sendcloud"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:69
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:70
 msgid ""
 "In the Sendcloud account, navigate to :menuselection:`Settings --> "
 "Integrations` in the menu on the right. Next, search for :guilabel:`Odoo "
@@ -26297,7 +26357,7 @@ msgstr ""
 "în meniul din dreapta. Apoi, căutați :guilabel:`Odoo Native`. Apoi, faceți "
 "clic pe :guilabel:`Conectați`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:72
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:73
 msgid ""
 "After clicking on :guilabel:`Connect`, the page redirects to "
 "the :guilabel:`Sendcloud API` settings page, where the :guilabel:`Public and "
@@ -26313,7 +26373,7 @@ msgstr ""
 "CompanyName`, cu numele companiei utilizatorului înlocuind `CompanyName` (de "
 "exemplu, `Odoo StealthyWood`)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:77
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:78
 msgid ""
 "Then, check the box next to :guilabel:`Service Points` and select the "
 "shipping services for this integration. After saving, the :guilabel:`Public "
@@ -26327,7 +26387,7 @@ msgstr ""
 msgid "Configuring the Sendcloud integration and receiving the credentials."
 msgstr "Configurarea integrării Sendcloud și primirea acreditărilor."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:87
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:88
 msgid ""
 "To ensure seamless Sendcloud integration with Odoo, :ref:`install <inventory/"
 "shipping_receiving/sendcloud-module>` and :ref:`link <inventory/"
@@ -26343,7 +26403,7 @@ msgstr ""
 "shipping_receiving/sendcloud-shipping-info>`, astfel încât Sendcloud să "
 "poată extrage cu precizie datele de expediere pentru a genera etichete."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:95
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:96
 msgid ""
 ":ref:`Enable pickup points on websites <inventory/shipping_receiving/"
 "sendcloud-pickups>`"
@@ -26351,11 +26411,11 @@ msgstr ""
 ":ref:`Activează puncte de ridicare pe site-uri <inventory/shipping_receiving/"
 "sendcloud-pickups>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:100
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:101
 msgid "Install Sendcloud shipping module"
 msgstr "Instalați modulul de expediere Sendcloud"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:102
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:103
 msgid ""
 "After the Sendcloud account is set up and configured, it's time to configure "
 "the Odoo database. To get started, go to Odoo's :guilabel:`Apps` module, "
@@ -26370,11 +26430,11 @@ msgstr ""
 msgid "Sendcloud Shipping module in the Odoo Apps module."
 msgstr "Modulul Sendcloud Shipping în modulul Odoo Apps."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:113
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:114
 msgid "Sendcloud shipping connector configuration"
 msgstr "Configurarea conectorului de expediere Sendcloud"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:115
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:116
 msgid ""
 "Once installed, activate the :guilabel:`Sendcloud Shipping` module "
 "in :menuselection:`Inventory --> Configuration --> Settings`. "
@@ -26386,7 +26446,7 @@ msgstr ""
 "Setarea :guilabel:`Sendcloud Connector` se găsește în "
 "secțiunea :guilabel:`Shipping Connectors`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:119
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:120
 msgid ""
 "After activating the :guilabel:`Sendcloud Connector`, click on "
 "the :guilabel:`Sendcloud Shipping Methods` link below the listed connector. "
@@ -26397,7 +26457,7 @@ msgstr ""
 "Odată ajunși pe pagina :guilabel:`Shipping Methods`, faceți clic "
 "pe :guilabel:`New`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:124
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:125
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:115
 msgid ""
 ":guilabel:`Shipping Methods` can also be accessed by going "
@@ -26408,23 +26468,23 @@ msgstr ""
 "accesând :menuselection:`Inventar --> Configurare --> Livrare --> Metode de "
 "expediere`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:127
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:128
 msgid ""
 "Fill out the following fields in the :guilabel:`New Shipping Method` form:"
 msgstr ""
 "Completați următoarele câmpuri în formularul :guilabel:`New Shipping Method`:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:130
 msgid ":guilabel:`Shipping Method`: type `Sendcloud DPD`."
 msgstr ":guilabel:`Metoda de expediere`: tastați `Sendcloud DPD`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:130
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:131
 msgid ""
 ":guilabel:`Provider`: select :guilabel:`Sendcloud` from the drop-down menu."
 msgstr ""
 ":guilabel:`Furnizor`: selectați :guilabel:`Sendcloud` din meniul drop-down."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:131
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:132
 msgid ""
 ":guilabel:`Delivery Product`: set the product that was configured for this "
 "shipping method or create a new product."
@@ -26432,7 +26492,7 @@ msgstr ""
 ":guilabel:`Produs de livrare`: setați produsul care a fost configurat pentru "
 "această metodă de livrare sau creați un produs nou."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:133
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:134
 msgid ""
 "In the :guilabel:`SendCloud Configuration` tab, enter "
 "the :guilabel:`Sendcloud Public Key`."
@@ -26440,7 +26500,7 @@ msgstr ""
 "În fila :guilabel:`SendCloud Configuration`, "
 "introduceți :guilabel:`Sendcloud Public Key`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:134
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:135
 msgid ""
 "In the :guilabel:`SendCloud Configuration` tab, enter "
 "the :guilabel:`Sendcloud Secret Key`."
@@ -26448,11 +26508,11 @@ msgstr ""
 "În fila :guilabel:`SendCloud Configuration`, "
 "introduceți :guilabel:`Sendcloud Secret Key`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:139
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:140
 msgid "Pickup points"
 msgstr "Puncte de ridicare"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:141
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:142
 msgid ""
 "Sendcloud's `service point delivery <https://support.sendcloud.com/hc/en-us/"
 "articles/360026097951-FAQ-Service-Points>`_ lets customers choose a pickup "
@@ -26464,7 +26524,7 @@ msgstr ""
 "clienților să aleagă o locație de ridicare (cum ar fi un magazin din "
 "apropiere sau un dulap) în loc să introducă o adresă privată de livrare."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:146
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:147
 msgid ""
 "To enable the feature, go to the shipping method form, and in "
 "the :guilabel:`SendCloud Configuration` tab, under the :guilabel:`Options` "
@@ -26475,7 +26535,7 @@ msgstr ""
 "secțiunea :guilabel:`Options`, activați opțiunea :guilabel:`Use Sendcloud "
 "Locations`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:151
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:152
 msgid ""
 "Pickup point selection is only available through the **Website** app (the "
 "online checkout view). It is not currently possible to select a pickup point "
@@ -26486,7 +26546,7 @@ msgstr ""
 "selectarea manuală a unui punct de ridicare prin aplicația **Sales** "
 "(vizualizarea internă a bazei de date)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:155
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:156
 msgid ""
 "For example, if the customer selects a shipping method like *Sendcloud "
 "Mondial Relay*, they must choose a pickup point during the checkout process "
@@ -26498,11 +26558,11 @@ msgstr ""
 "procesului de checkout pe site. Dacă nu este selectat niciun punct de "
 "ridicare, comanda de livrare nu poate fi validată în Odoo."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:160
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:161
 msgid "Load shipping products"
 msgstr "Încarcă produse de livrare"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:162
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:163
 msgid ""
 "After configuring and saving the form, follow these steps to load the "
 "shipping products:"
@@ -26510,7 +26570,7 @@ msgstr ""
 "După configurarea și salvarea formularului, urmați acești pași pentru a "
 "încărca produsele de expediere:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:164
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:165
 msgid ""
 "In the :guilabel:`SendCloud Configuration` tab of the :guilabel:`New "
 "Shipping Method` form, click on the :guilabel:`Load your SendCloud shipping "
@@ -26520,7 +26580,7 @@ msgstr ""
 "metodă de expediere`, faceți clic pe linkul :guilabel:`Încărcați produsele "
 "de expediere SendCloud`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:166
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:167
 msgid ""
 "Select the shipping products the company would like to use for deliveries "
 "and returns."
@@ -26528,11 +26588,11 @@ msgstr ""
 "Selectați produsele de transport pe care compania ar dori să le folosească "
 "pentru livrări și retururi."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:167
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:168
 msgid "Click :guilabel:`Select`."
 msgstr "Faceți clic pe :guilabel:`Selectați`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:170
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:171
 msgid "Sample Sendcloud shipping products configured in Odoo:"
 msgstr "Exemplu de produse de expediere Sendcloud configurate în Odoo:"
 
@@ -26556,7 +26616,7 @@ msgstr ":guilabel:`Greutate minimă`: `0,00`"
 msgid ":guilabel:`Maximum Weight`: `31.50`"
 msgstr ":guilabel:`Greutate maximă`: `31.50`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:178
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:179
 msgid ""
 ":guilabel:`Countries`: `Austria` `Belgium` `Bosnia` `Herzegovina` `Bulgaria` "
 "`Croatia` `Czech` `Republic` `Denmark` `Estonia` `Finland` `France` "
@@ -26601,7 +26661,7 @@ msgstr ":guilabel:`Țări de retur`: `Belgia` `Țările de Jos`"
 msgid "Example of shipping products configured in Odoo."
 msgstr "Exemplu de produse de expediere configurate în Odoo."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:196
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:197
 msgid ""
 "Sendcloud does not provide test keys when a company tests the sending of a "
 "package in Odoo. This means if a package is created, the configured "
@@ -26613,7 +26673,7 @@ msgstr ""
 "colet, contul Sendcloud configurat va fi taxat, cu excepția cazului în care "
 "coletul asociat este anulat în termen de 24 de ore de la creare."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:200
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:201
 msgid ""
 "Odoo has a built-in layer of protection against unwanted charges when using "
 "test environments. Within a test environment, if a shipping method is used "
@@ -26628,7 +26688,7 @@ msgstr ""
 "mediul de testare și cel de producție pot fi comutate între ele folosind "
 "butoanele inteligente corespunzătoare."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:210
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:211
 msgid ""
 "To use Sendcloud to generate shipping labels, the following information "
 "**must** be filled out accurately and completely in Odoo:"
@@ -26637,7 +26697,7 @@ msgstr ""
 "următoarele informații **trebuie** să fie completate cu acuratețe și complet "
 "în Odoo:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:213
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:214
 msgid ""
 "**Customer information**: when creating a quotation, ensure the "
 "selected :guilabel:`Customer` has a valid phone number, email address, and "
@@ -26647,7 +26707,7 @@ msgstr ""
 "că :guilabel:`Clientul` selectat are un număr de telefon, o adresă de e-mail "
 "și o adresă de expediere valide."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:220
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:221
 msgid ""
 "**Product weight**: ensure all products in an order have a "
 "specified :guilabel:`Weight` in the :guilabel:`Inventory` tab of their "
@@ -26661,7 +26721,7 @@ msgstr ""
 "<inventory/shipping_receiving/configure-weight>` din acest articol pentru "
 "instrucțiuni detaliate."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:224
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:225
 msgid ""
 "**Warehouse address**: ensure the warehouse name and address in Odoo match "
 "the :ref:`previously defined warehouse <inventory/shipping_receiving/"
@@ -26678,11 +26738,11 @@ msgstr ""
 "shipping_receiving/configure-source-address>` din documentația de expediere "
 "a terților."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:231
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:232
 msgid "Generate labels with Sendcloud"
 msgstr "Generați etichete cu Sendcloud"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:233
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:234
 msgid ""
 "When creating a quotation in Odoo, add shipping and a :guilabel:`Sendcloud "
 "shipping product`. Then, :guilabel:`Validate` the delivery. Shipping label "
@@ -26694,7 +26754,7 @@ msgstr ""
 "etichetelor de expediere sunt generate automat în chatter, care includ "
 "următoarele:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:238
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:239
 msgid ""
 ":guilabel:`Return label(s)` if the Sendcloud connector is configured for "
 "returns."
@@ -26702,14 +26762,14 @@ msgstr ""
 ":guilabel:`Etichetă(e) de returnare` dacă conectorul Sendcloud este "
 "configurat pentru returnări."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:239
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:240
 msgid ""
 ":guilabel:`Customs document(s)` should the destination country require them."
 msgstr ""
 ":guilabel:`Document(e) vamal(e)` în cazul în care țara de destinație le "
 "solicită."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:244
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:245
 msgid ""
 "When return labels are created, Sendcloud automatically charges the "
 "configured Sendcloud account."
@@ -26798,12 +26858,9 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:280
 msgid ""
 "`Create shipping rules on Sendcloud <https://support.sendcloud.com/hc/en-us/"
-"articles/10274470454292-How-to-create-shipping-rules#examples-smart-shipping-"
-"rules>`_"
-msgstr ""
-"`Creați reguli de livrare pe Sendcloud <https://support.sendcloud.com/hc/en-"
-"us/articles/10274470454292-How-to-create-shipping-rules#examples-smart-"
+"articles/ 10274470454292-How-to-create-shipping-rules#examples-smart-"
 "shipping-rules>`_"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:287
 msgid "Shipment is too heavy"
@@ -62427,6 +62484,169 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "To manage where specific products are routed for storage, navigate "
+#~ "to :menuselection:`Inventory app --> Configuration --> Putaway Rules`. "
+#~ "Use the :guilabel:`Create` button to configure a new putaway rule on "
+#~ "a :guilabel:`Product` or :guilabel:`Product Category` that the rule "
+#~ "affects."
+#~ msgstr ""
+#~ "Pentru a gestiona unde sunt direcționate anumite produse pentru stocare, "
+#~ "navigați la :menuselection:`Aplicația inventar --> Configurare --> Reguli "
+#~ "de depozitare`. Utilizați butonul :guilabel:`Creați` pentru a configura o "
+#~ "nouă regulă de depozitare pentru un :guilabel:`Produs` "
+#~ "sau :guilabel:`Categorie de produs` pe care regula îl afectează."
+
+#~ msgid ""
+#~ "Putaway rules can be defined either per product/product category, and/or "
+#~ "package type (the *Packages* setting must be enabled "
+#~ "in :menuselection:`Inventory app --> Configuration --> Settings` for "
+#~ "that)."
+#~ msgstr ""
+#~ "Regulile de depozitare pot fi definite fie în funcție de produs/categorie "
+#~ "de produs și/sau de tip de pachet (setarea *Pachete* trebuie să fie "
+#~ "activată în :menuselection:`Aplicația Inventory --> Configurare --> "
+#~ "Setări` pentru asta)."
+
+#~ msgid ""
+#~ "A *storage category* is used with :doc:`putaway rules <putaway>`, as an "
+#~ "extra location attribute to automatically propose optimal storage "
+#~ "locations for products."
+#~ msgstr ""
+#~ "O *categorie de depozitare* este folosită împreună cu :doc:`regulile de "
+#~ "depozitare <putaway>`, ca atribut suplimentar de locație pentru a propune "
+#~ "automat locații optime de depozitare pentru produse."
+
+#~ msgid ""
+#~ ":ref:`Enable the Storage Category feature <inventory/routes/enable-"
+#~ "storage-categories>`"
+#~ msgstr ""
+#~ ":ref:`Activează funcționalitatea Categorie de depozitare <inventory/"
+#~ "routes/enable-storage-categories>`"
+
+#~ msgid ""
+#~ ":ref:`Define a storage category <inventory/routes/define-storage>` with "
+#~ "specific limitations"
+#~ msgstr ""
+#~ ":ref:`Definește o categorie de depozitare <inventory/routes/define-"
+#~ "storage>` cu limitări specifice"
+
+#~ msgid ""
+#~ "Next, activate the :guilabel:`Storage Categories` feature. Finally, "
+#~ "click :guilabel:`Save`."
+#~ msgstr ""
+#~ "Apoi, activează funcționalitatea :guilabel:`Categorii de depozitare`. La "
+#~ "final, apasă :guilabel:`Salvează`."
+
+#~ msgid "Show the Storage Categories feature."
+#~ msgstr "Afișează funcționalitatea Categorii de depozitare."
+
+#~ msgid ""
+#~ "To create a storage category, go to :menuselection:`Inventory app --> "
+#~ "Configuration --> Storage Categories`, and click :guilabel:`Create`."
+#~ msgstr ""
+#~ "Pentru a crea o categorie de depozitare, mergi "
+#~ "la :menuselection:`Aplicația Inventar --> Configurare --> Categorii de "
+#~ "depozitare` și apasă :guilabel:`Creează`."
+
+#~ msgid ""
+#~ "When clicked, the :guilabel:`Location` smart button shows which storage "
+#~ "locations the category has been assigned to."
+#~ msgstr ""
+#~ "Când este apăsat, butonul inteligent :guilabel:`Locație` arată la ce "
+#~ "locații de depozitare a fost atribuită categoria."
+
+#~ msgid ""
+#~ "Enable the :guilabel:`Packages` feature in :menuselection:`Inventory app "
+#~ "--> Configuration --> Settings` to show the :guilabel:`Capacity by "
+#~ "Package` tab."
+#~ msgstr ""
+#~ "Activează funcționalitatea :guilabel:`Ambalaje` "
+#~ "în :menuselection:`Aplicația Inventar --> Configurare --> Setări` pentru "
+#~ "a afișa fila :guilabel:`Capacitate după ambalaj`."
+
+#~ msgid ""
+#~ "Create putaway rules for pallet-stored items, by creating the `High "
+#~ "Frequency pallets` storage category."
+#~ msgstr ""
+#~ "Creează reguli de depozitare pentru articolele stocate pe paleți, creând "
+#~ "categoria de depozitare `Paleți cu frecvență ridicată`."
+
+#~ msgid "Create a storage category on the page."
+#~ msgstr "Creați o categorie de stocare pe pagină."
+
+#~ msgid ""
+#~ "Assign the `High Frequency pallets` storage category (which limits "
+#~ "pallets stored at any location to two pallets) to the `WH/Stock/pallets/"
+#~ "PAL 1` sub-location."
+#~ msgstr ""
+#~ "Atribuie categoria de depozitare `Paleți cu frecvență ridicată` (care "
+#~ "limitează paleții depozitați într-o locație la doi paleți) sub-locației "
+#~ "`WH/Stoc/paleți/PAL 1`."
+
+#~ msgid ""
+#~ "Click the :guilabel:`Create` button to create the putaway rule. In "
+#~ "the :guilabel:`Having Category` field of the new putaway rule form, "
+#~ "select the storage category."
+#~ msgstr ""
+#~ "Apasă butonul :guilabel:`Creează` pentru a crea regula de depozitare. În "
+#~ "câmpul :guilabel:`Categorie atribuită` din formularul noii reguli de "
+#~ "depozitare, selectează categoria de depozitare."
+
+#~ msgid ""
+#~ "Continuing the example from above, the `High Frequency Pallets` storage "
+#~ "category is assigned to the putaway rule directing pallets of lemonade to "
+#~ "locations with the `High Frequency Pallets` storage "
+#~ "category :ref:`assigned to them <inventory/routes/assign-location>`."
+#~ msgstr ""
+#~ "Continuând exemplul de mai sus, categoria de depozitare `Paleți cu "
+#~ "frecvență ridicată` este atribuită regulii de depozitare care "
+#~ "direcționează paleții de limonadă către locațiile cu categoria de "
+#~ "depozitare `Paleți cu frecvență ridicată` :ref:`atribuită acestora "
+#~ "<inventory/routes/assign-location>`."
+
+#~ msgid ""
+#~ "Continuing the example from above, the `High Frequency Pallets` storage "
+#~ "category is assigned to the `PAL1` and `PAL2` locations."
+#~ msgstr ""
+#~ "Continuând exemplul de mai sus, categoria de depozitare `Paleți cu "
+#~ "frecvență ridicată` este atribuită locațiilor `PAL1` și `PAL2`."
+
+#~ msgid ""
+#~ "Depending on the number of pallets on-hand at each of the storage "
+#~ "locations, when one pallet of lemonade cans is received, the following "
+#~ "scenarios happen:"
+#~ msgstr ""
+#~ "În funcție de numărul de paleți disponibili în fiecare locație de "
+#~ "depozitare, când se primește un palet de doze de limonadă, apar "
+#~ "următoarele scenarii:"
+
+#~ msgid ""
+#~ "`Sendcloud integration documentation <https://support.sendcloud.com/hc/en-"
+#~ "us/articles /360059470491-Odoo-integration>`_"
+#~ msgstr ""
+#~ "`Documentația de integrare Sendcloud <https://support.sendcloud.com/hc/en-"
+#~ "us/articles /360059470491-Odoo-integration>`_"
+
+#~ msgid ""
+#~ "To get started, go to `Sendcloud's platform <https://www.sendcloud.com>`_ "
+#~ "to configure the account and generate the connector credentials. Log in "
+#~ "with the Sendcloud account, or create a new one if needed."
+#~ msgstr ""
+#~ "Pentru a începe, accesați „platforma lui Sendcloud <https://"
+#~ "www.sendcloud.com>`_ pentru a configura contul și a genera acreditările "
+#~ "conectorului. Conectați-vă cu contul Sendcloud sau creați unul nou dacă "
+#~ "este necesar."
+
+#~ msgid ""
+#~ "`Create shipping rules on Sendcloud <https://support.sendcloud.com/hc/en-"
+#~ "us/articles/10274470454292-How-to-create-shipping-rules#examples-smart-"
+#~ "shipping-rules>`_"
+#~ msgstr ""
+#~ "`Creați reguli de livrare pe Sendcloud <https://support.sendcloud.com/hc/"
+#~ "en-us/articles/10274470454292-How-to-create-shipping-rules#examples-smart-"
+#~ "shipping-rules>`_"
 
 #~ msgid ""
 #~ "On the product form, go to the :guilabel:`Inventory` tab. In "
