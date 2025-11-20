@@ -240,7 +240,7 @@ Database
 
 .. option:: --db-filter <filter>
 
-    hides databases that do not match ``<filter>``. The filter is a
+    hides databases that do not match ``<filter>`` for the Web UI. The filter is a
     `regular expression`_, with the additions that:
 
     - ``%h`` is replaced by the whole hostname the request is made on.
@@ -289,6 +289,8 @@ Database
     and update base module on one database: 11firstdatabase.
     If database 11seconddatabase doesn't exist, the database is created and base modules
     is installed
+
+    .. warning:: This option does not affect cron workers, if no --database is given, cron workers will run on every available database
 
 .. option:: --db-template <template>
 
