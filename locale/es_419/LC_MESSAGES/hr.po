@@ -22,8 +22,8 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-11-19 09:34+0100\n"
-"PO-Revision-Date: 2025-11-19 20:20+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2025-11-20 20:22+0000\n"
+"Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-19-doc/hr/es_419/>\n"
 "Language: es_419\n"
@@ -36587,6 +36587,12 @@ msgid ""
 "input types <payroll/other-input>`. Together, these determine how each "
 "employee's pay is calculated."
 msgstr ""
+"En Odoo puedes calcular y determinar los sueldos mediante cinco factores: "
+":ref:`tipos de estructura salarial <payroll/structure-types>`, :ref:`"
+"estructuras <payroll/structures>` salariales, :ref:`reglas <payroll/rules>`, "
+":ref:`parámetros de regla <payroll/rule-parameters>` y :ref:`otros tipos de "
+"entradas <payroll/other-input>`. Estos factores determinan cómo calcular el "
+"sueldo de cada empleado."
 
 #: ../../content/applications/hr/payroll/salaries.rst:10
 msgid ""
@@ -36603,6 +36609,10 @@ msgid ""
 "structure, rules, and parameters from the employee's assigned structure type "
 "to determine their total pay."
 msgstr ""
+"Al calcular los recibos de nómina, Odoo calcula el tiempo trabajado del "
+"empleado desde sus :doc:`entradas de trabajo <work_entries>` y luego aplica "
+"el tipo de estructura, las reglas y los parámetros que el empleado tiene "
+"asignados para calcular su sueldo total."
 
 #: ../../content/applications/hr/payroll/salaries.rst:21
 msgid "Structure types"
@@ -36632,18 +36642,27 @@ msgid ""
 "the rules **only** for the end of year bonus. Both belong to the same "
 "`Employee` structure type."
 msgstr ""
+"Un tipo de estructura llamado `Empleado` incluye dos estructuras distintas: "
+"una estructura de `pago regular`, que tiene todas las reglas para procesar "
+"el pago regular, y una estructura de `bono de fin de año`, que solo tiene "
+"las reglas de este bono. Ambas pertenecen al mismo tipo de estructura, que "
+"es `Empleado`."
 
 #: ../../content/applications/hr/payroll/salaries.rst:38
 msgid ""
 "View existing *structure types* by navigating to :menuselection:`Payroll app "
 "--> Configuration --> Structure Types`."
 msgstr ""
+"Para ver los *tipos de estructura* existentes, ve a :menuselection:`Nómina --"
+"> Configuración --> Tipos de estructura`."
 
 #: ../../content/applications/hr/payroll/salaries.rst:41
 msgid ""
 "Two default structure types are preconfigured in Odoo: :guilabel:`Employee` "
 "and :guilabel:`Worker`."
 msgstr ""
+"Odoo cuenta con dos tipos de estructura preconfigurados: :guilabel:`Empleado`"
+" y :guilabel:`Trabajador`."
 
 #: ../../content/applications/hr/payroll/salaries.rst:43
 msgid ""
@@ -36652,6 +36671,11 @@ msgid ""
 "and :guilabel:`Worker` is typically used for employees paid by the hour, so "
 "the wage type is :guilabel:`Hourly Wage`."
 msgstr ""
+"Por lo general, :guilabel:`Empleado` se usa para los empleados que tienen un "
+"sueldo fijo, por eso el :guilabel:`tipo de salario predeterminado` es "
+":guilabel:`Salario fijo`, y :guilabel:`Trabajador` se usa para los empleados "
+"que cobran por hora, así que el tipo de salario es :guilabel:`Salario por "
+"hora`."
 
 #: ../../content/applications/hr/payroll/salaries.rst:48
 msgid ""
@@ -36659,6 +36683,9 @@ msgid ""
 "<payroll_localizations>`, it is recommended to use the structure in the "
 "corresponding country localization document."
 msgstr ""
+"Si usas una :doc:`localización de nómina <payroll_localizations>` específica "
+"del país, te recomendamos usar la estructura indicada en el documento de "
+"localización correspondiente."
 
 #: ../../content/applications/hr/payroll/salaries.rst:-1
 msgid "List of all currently configured structure types available to use."
@@ -36675,6 +36702,10 @@ msgid ""
 "to :menuselection:`Payroll app --> Configuration --> Structure Types` and "
 "click :guilabel:`New` to create a custom structure type."
 msgstr ""
+"Si los tipos de estructura predeterminados no cumplen con las necesidades de "
+"la empresa, ve a :menuselection:`Nómina --> Configuración --> Tipos de "
+"estructura` y haz clic en :guilabel:`Nuevo` para crear un tipo de estructura "
+"personalizado."
 
 #: ../../content/applications/hr/payroll/salaries.rst:63
 msgid ""
@@ -36682,38 +36713,49 @@ msgid ""
 "laws are accounted for. Confirm with the accounting department when "
 "configuring payroll structures, to ensure all requirements are met."
 msgstr ""
+"Al crear un tipo de estructura salarial, revisa que cumpla con todas las "
+"leyes locales y nacionales. Comunícate con tu departamento de contabilidad "
+"para que puedas configurar las estructuras de nómina de forma correcta."
 
 #: ../../content/applications/hr/payroll/salaries.rst:67
 msgid "Proceed to enter the following information in the fields:"
-msgstr ""
+msgstr "Ingresa la siguiente información en los campos:"
 
 #: ../../content/applications/hr/payroll/salaries.rst:69
 msgid ""
 ":guilabel:`Structure Type`: Enter the name for the new structure type, such "
 "as `Employee` or `Worker`."
 msgstr ""
+":guilabel:`Tipo de estructura`: Escribe el nombre del nuevo tipo de "
+"estructura, por ejemplo, `Empleado` o `Trabajador`."
 
 #: ../../content/applications/hr/payroll/salaries.rst:71
 msgid ""
 ":guilabel:`Country`: Select the country that the new structure type applies "
 "to from the drop-down menu."
 msgstr ""
+":guilabel:`País`: Usa el menú desplegable para elegir el país al que aplica "
+"el nuevo tipo de estructura."
 
 #: ../../content/applications/hr/payroll/salaries.rst:73
 msgid ":guilabel:`Wage Type`: Select the wage type for the structure:"
-msgstr ""
+msgstr ":guilabel:`Tipo de salario`: Elige el tipo de salario de la estructura:"
 
 #: ../../content/applications/hr/payroll/salaries.rst:75
 msgid ""
 ":guilabel:`Fixed Wage`: For salaried employees who receive the same wage "
 "every pay period."
 msgstr ""
+":guilabel:`Salario fijo`: Para los empleados con un sueldo fijo que reciben "
+"el mismo pago en cada periodo de nómina."
 
 #: ../../content/applications/hr/payroll/salaries.rst:76
 msgid ""
 ":guilabel:`Hourly Wage`: For employees paid based on hours worked during a "
 "pay period."
 msgstr ""
+":guilabel:`Salario por hora`: Para los empleados que reciben un pago por las "
+"horas trabajadas durante un periodo de nómina."
 
 #: ../../content/applications/hr/payroll/salaries.rst:78
 msgid ""
@@ -36721,6 +36763,9 @@ msgid ""
 "new structure type from the drop-down menu. This indicates how often this "
 "specific type of structure is paid out."
 msgstr ""
+":guilabel:`Pago programado predeterminado`: Elige la frecuencia de pago "
+"típica del nuevo tipo de estructura en el menú desplegable. Este campo "
+"indica cada cuánto se paga este tipo de estructura."
 
 #: ../../content/applications/hr/payroll/salaries.rst:80
 msgid ""
@@ -36731,18 +36776,31 @@ msgid ""
 "needed working hours do not appear in the list, a :ref:`new set of default "
 "working hours can be created <payroll/new-default-working-hours>`."
 msgstr ""
+":guilabel:`Horas laborables predeterminadas`: Elige las horas laborales "
+"predeterminadas del tipo de estructura nuevo en el menú desplegable. Todas "
+"las horas laborales disponibles para la empresa seleccionada aparecerán en "
+"el menú. La opción predeterminada es :guilabel:`Estándar de 40 horas a la "
+"semana`. Puedes crear un :ref:`nuevo conjunto de horas laborales "
+"predeterminadas <payroll/new-default-working-hours>` si las horas necesarias "
+"no aparecen en la lista."
 
 #: ../../content/applications/hr/payroll/salaries.rst:85
 msgid ""
 ":guilabel:`Regular Pay Structure`: Type in the name for the regular pay "
 "structure. It is used as the default option when generating payslips."
 msgstr ""
+":guilabel:`Estructura de pago regular`: Escribe el nombre de la estructura "
+"de pago regular. Esta se usa como la opción predeterminada al generar los "
+"recibos de nómina."
 
 #: ../../content/applications/hr/payroll/salaries.rst:87
 msgid ""
 ":guilabel:`Default Work Entry Type`: Select the default work entry type "
 "which is used to create all work entries for the employee."
 msgstr ""
+":guilabel:`Tipo de entrada de trabajo predeterminado`: Elige el tipo de "
+"entrada de trabajo predeterminado utilizado para crear todas las entradas de "
+"trabajo del empleado."
 
 #: ../../content/applications/hr/payroll/salaries.rst:-1
 msgid "New structure type form to fill out when creating a new structure type."
@@ -36770,12 +36828,18 @@ msgid ""
 "should be descriptive and clear to understand, such as `Standard 20 Hours/"
 "Week`."
 msgstr ""
+":guilabel:`Nombre`: Escribe el nombre de las nuevas horas laborables "
+"predeterminadas. Este debe ser descriptivo y fácil de entender, como `"
+"Estándar de 20 horas a la semana`."
 
 #: ../../content/applications/hr/payroll/salaries.rst:106
 msgid ""
 ":guilabel:`Flexible Hours`: Tick the checkbox to let employees adjust their "
 "start and end times while maintaining the same total daily hours."
 msgstr ""
+":guilabel:`Horas flexibles`: Selecciona la casilla para dejar que los "
+"empleados ajusten sus horas de entrada y salida sin cambiar el total de "
+"horas diarias."
 
 #: ../../content/applications/hr/payroll/salaries.rst:108
 msgid ""
@@ -36841,6 +36905,8 @@ msgstr ""
 msgid ""
 "Working hours are company-specific, and cannot be shared between companies."
 msgstr ""
+"Las horas laborales son específicas para cada empresa, no es posible "
+"compartirlas entre empresas."
 
 #: ../../content/applications/hr/payroll/salaries.rst:137
 #: ../../content/applications/hr/payroll/working_schedules.rst:85
@@ -36867,6 +36933,9 @@ msgid ""
 "be paid within a specific *structure*, and are specifically defined by "
 "various rules."
 msgstr ""
+"Las *estructuras salariales* representan las distintas situaciones en las "
+"que un empleado puede recibir un pago dentro de una *estructura* y cada una "
+"está definida con reglas específicas."
 
 #: ../../content/applications/hr/payroll/salaries.rst:150
 msgid ""
@@ -36874,12 +36943,18 @@ msgid ""
 "how many different ways employees are paid, and how their pay is calculated. "
 "A common example of an additional structure is a `Bonus`."
 msgstr ""
+"El número de estructuras que una empresa necesita para cada tipo de "
+"estructura depende de la cantidad de formas distintas que usa para pagarle a "
+"sus empleados y cómo calcula ese pago. Un ejemplo común de una estructura "
+"adicional es un `bono`."
 
 #: ../../content/applications/hr/payroll/salaries.rst:154
 msgid ""
 "To view all the various structures for each structure type, go "
 "to :menuselection:`Payroll app --> Configuration --> Structures`."
 msgstr ""
+"Para ver todas las estructuras de cada tipo, ve a :menuselection:`Nómina --> "
+"Configuración --> Estructuras`."
 
 #: ../../content/applications/hr/payroll/salaries.rst:157
 msgid ""
@@ -36909,6 +36984,8 @@ msgid ""
 "After installing a :doc:`payroll localization <payroll_localizations>`, "
 "relevant structures are installed and appear in this list."
 msgstr ""
+"Después de instalar una :doc:`localización de nómina <payroll_localizations>`"
+", el sistema instalará las estructuras correctas y aparecerán en esta lista."
 
 #: ../../content/applications/hr/payroll/salaries.rst:-1
 msgid ""
@@ -36924,11 +37001,14 @@ msgid ""
 "amounts considered in the pay. These rules are configured by the "
 "localization and affect the computation of the salaries."
 msgstr ""
+"Cada *estructura* tiene un conjunto de *reglas* salariales que calculan los "
+"distintos importes incluidos en el pago. Estas reglas vienen configuradas "
+"por la localización e influyen en el cálculo de los sueldos."
 
 #: ../../content/applications/hr/payroll/salaries.rst:182
 msgid ""
 "Modification or creation of rules should **only** be done when necessary."
-msgstr ""
+msgstr "Modifica o crea reglas **solo** cuando sea necesario."
 
 #: ../../content/applications/hr/payroll/salaries.rst:184
 msgid ""
@@ -36936,6 +37016,9 @@ msgid ""
 "> Rules`. Click on a structure (such as :guilabel:`Regular Pay`) to view all "
 "the rules."
 msgstr ""
+"Para ver todas las reglas, ve a :menuselection:`Nómina --> Configuración --> "
+"Reglas`. Haz clic en una estructura (como :guilabel:`pago regular`) para ver "
+"todas las reglas."
 
 #: ../../content/applications/hr/payroll/salaries.rst:187
 msgid ""
@@ -36954,30 +37037,40 @@ msgstr "Sección superior"
 msgid ""
 ":guilabel:`Rule Name`: Enter a name for the rule. This field is required."
 msgstr ""
+":guilabel:`Nombre de la regla`: Escribe un nombre para la regla. Este campo "
+"es obligatorio."
 
 #: ../../content/applications/hr/payroll/salaries.rst:194
 msgid ""
 ":guilabel:`Category`: Select a category the rule applies to from the drop-"
 "down menu, or enter a new one. This field is required."
 msgstr ""
+":guilabel:`Categoría`: Elige una categoría para la regla en el menú "
+"desplegable o escribe una nueva. Este campo es obligatorio."
 
 #: ../../content/applications/hr/payroll/salaries.rst:196
 msgid ""
 ":guilabel:`Code`: Enter a code to be used for this new rule. This field is "
 "required."
 msgstr ""
+":guilabel:`Código`: Escribe un código para esta regla nueva. Este campo es "
+"obligatorio."
 
 #: ../../content/applications/hr/payroll/salaries.rst:197
 msgid ""
 ":guilabel:`Sequence`: Enter a number indicating when this rule is calculated "
 "in the sequence of all other rules."
 msgstr ""
+":guilabel:`Secuencia`: Escribe un número que indique el momento en que esta "
+"regla se calcula dentro de la secuencia del resto de las reglas."
 
 #: ../../content/applications/hr/payroll/salaries.rst:199
 msgid ""
 ":guilabel:`Salary Structure`: Select a salary structure the rule applies to "
 "from the drop-down menu, or enter a new one. This field is required."
 msgstr ""
+":guilabel:`Estructura salarial`: Selecciona una estructura salarial para la "
+"regla en el menú desplegable o escribe una nueva. Este campo es obligatorio."
 
 #: ../../content/applications/hr/payroll/salaries.rst:201
 msgid ""
@@ -36985,12 +37078,17 @@ msgid ""
 "Disable the toggle to continue to show it on the payslip, but skip the "
 "computation."
 msgstr ""
+":guilabel:`Activa`: Presiona este botón para que cambie a verde y puedas "
+"usar la regla. Vuelve a presionarlo para que cambie a gris si quieres "
+"mostrarla en el recibo de nómina y omitir su cálculo."
 
 #: ../../content/applications/hr/payroll/salaries.rst:203
 msgid ""
 ":guilabel:`Appears on payslip`: Disabling the toggle will still show the "
 "rule on the payslip, it will just not be computed."
 msgstr ""
+":guilabel:`Aparece en el recibo de nómina`: Si desmarcas la casilla, la "
+"regla aparecerá en el recibo de nómina sin calcularse."
 
 #: ../../content/applications/hr/payroll/salaries.rst:205
 msgid ""
@@ -36998,12 +37096,17 @@ msgid ""
 "rule appear on the *Employer Cost* report, located on the *Payroll* app "
 "dashboard."
 msgstr ""
+":guilabel:`Ver en el tablero de costos del empleador`: Selecciona esta "
+"casilla para que la regla aparezca en el reporte de *costo del empleador* "
+"ubicado en el tablero de la aplicación *Nómina*."
 
 #: ../../content/applications/hr/payroll/salaries.rst:207
 msgid ""
 ":guilabel:`View on Payroll Reporting`: Tick the checkbox to have the rule "
 "appear on payroll reports."
 msgstr ""
+":guilabel:`Ver en el reporte de nómina`: Selecciona esta casilla para "
+"mostrar la regla en los reportes de nómina."
 
 #: ../../content/applications/hr/payroll/salaries.rst:-1
 msgid "Enter the information for the new rule on the new rule form."
@@ -37028,6 +37131,12 @@ msgid ""
 "field), or a :guilabel:`Python Expression` (the code is entered beneath the "
 "selection). This field is required."
 msgstr ""
+":guilabel:`Condición basada en`: Usa el menú desplegable para elegir si la "
+"regla es :guilabel:`siempre verdadera` (aplica siempre), un "
+":guilabel:`intervalo` (aplica a un rango específico que debes seleccionar "
+"abajo), :guilabel:`otra entrada` (agregas la condición abajo) o una "
+":guilabel:`expresión de Python` (insertas el código abajo). Este campo es "
+"obligatorio."
 
 #: ../../content/applications/hr/payroll/salaries.rst:226
 msgid "Computation"
@@ -38869,6 +38978,11 @@ msgid ""
 "information section and a :guilabel:`Working Hours` tab listing out all the "
 "individual working hours by day and time."
 msgstr ""
+"Para crear un nuevo horario laboral, ve a :menuselection:`Nómina --> "
+"Configuración --> Horarios de trabajo` y haz clic en :guilabel:`Nuevo`. El "
+"formulario de :guilabel:`horarios de trabajo` tiene dos secciones: una "
+"sección de información general y una pestaña :guilabel:`Horas laborables` "
+"que enumera todas las horas laborales por día y horario."
 
 #: ../../content/applications/hr/payroll/working_schedules.rst:41
 msgid "Fill out the following information on the top-half of the form:"
@@ -38880,12 +38994,17 @@ msgid ""
 "This should be descriptive and clear to understand, such as `Standard 20 "
 "Hours/Week`."
 msgstr ""
+":guilabel:`Nombre`: Escribe el nombre del nuevo horario de trabajo "
+"predeterminado. Usa un nombre claro y descriptivo, como `Estándar de 20 "
+"horas a la semana`."
 
 #: ../../content/applications/hr/payroll/working_schedules.rst:45
 msgid ""
 ":guilabel:`Flexible Hours`: Tick this checkbox if employees can work "
 "different hours from the working schedule."
 msgstr ""
+":guilabel:`Horas flexibles`: Selecciona esta casilla si los empleados pueden "
+"trabajar horas distintas a las del horario laboral."
 
 #: ../../content/applications/hr/payroll/working_schedules.rst:47
 msgid ""
@@ -38895,6 +39014,11 @@ msgid ""
 "types of benefits an employee can receive, based on their employment status "
 "(full-time vs part-time)."
 msgstr ""
+":guilabel:`Tiempo completo de la empresa`: Ingresa el número de horas por "
+"semana que un empleado debe trabajar para considerarlo como un trabajador de "
+"tiempo completo. Por lo general son alrededor de 40 horas y este número "
+"también influye en las prestaciones y beneficios que recibe el empleado "
+"según su tipo de contrato (tiempo completo o medio tiempo)."
 
 #: ../../content/applications/hr/payroll/working_schedules.rst:51
 msgid ""
@@ -38903,6 +39027,10 @@ msgid ""
 "Hours` tab. This entry affects resource planning, since the average daily "
 "hours affect what resources can be used, and in what quantity, per workday."
 msgstr ""
+":guilabel:`Promedio de horas al día`: El sistema completa este campo de "
+"forma automática según las horas configuradas en la pestaña :guilabel:`Horas "
+"laborables`. Esta entrada influye en la planificación de recursos, ya que "
+"determina qué recursos puedes usar por día y en qué cantidad."
 
 #: ../../content/applications/hr/payroll/working_schedules.rst:59
 msgid ""
@@ -38910,24 +39038,32 @@ msgid ""
 "working hours from the drop-down menu. A blank field indicates it is "
 "available for all companies."
 msgstr ""
+":guilabel:`Empresa`: Selecciona la empresa que puede usar este nuevo horario "
+"laboral. Un campo vacío indica que todas las empresas pueden usarlo."
 
 #: ../../content/applications/hr/payroll/working_schedules.rst:64
 msgid ""
 "Next, configure the individual hours in the :guilabel:`Working Hours` tab. "
 "This tab lists the specific working hours for each day."
 msgstr ""
+"Después, configura las horas individuales en la pestaña :guilabel:`Horas "
+"laborables`. Ahí aparecen las horas específicas de trabajo para cada día."
 
 #: ../../content/applications/hr/payroll/working_schedules.rst:67
 msgid ""
 "The :guilabel:`Working Hours` are auto-populated for a default 40-hour work "
 "week, with each day divided into three timed sections."
 msgstr ""
+"Las :guilabel:`horas de trabajo` se completan de forma automática con una "
+"semana estándar de 40 horas, con cada día dividido en tres secciones."
 
 #: ../../content/applications/hr/payroll/working_schedules.rst:70
 msgid ""
 "Every day has morning (8:00-12:00), lunch (12:00-13:00), and evening "
 "(13:00-17:00) hours configured."
 msgstr ""
+"Cada día incluye el horario matutino (8:00 – 12:00), la comida (12:00 – "
+"13:00) y el horario vespertino (13:00 – 17:00)."
 
 #: ../../content/applications/hr/payroll/working_schedules.rst:73
 msgid ""
