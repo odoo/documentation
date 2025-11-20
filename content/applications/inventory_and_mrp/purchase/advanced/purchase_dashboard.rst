@@ -12,8 +12,8 @@ products and the percentage of quantities received on time. This makes it possib
 and optimize procurement strategy accordingly.
 
 To access the :guilabel:`Purchase & Vendor analysis` dashboard, go to the Dashboards app, then, in
-the left panel, navigate to the :guilabel:`Logistics` section and click the name of the
-dashboard. The dashboard opens in the main view.
+the left panel, navigate to the :guilabel:`Logistics` section and click the name of the dashboard.
+The dashboard opens in the main view.
 
 .. image:: purchase_dashboard/purchase-vendor-analysis.png
    :alt: Purchase & Vendor analysis dashboard
@@ -23,7 +23,7 @@ dashboard. The dashboard opens in the main view.
    - :ref:`Customizing Odoo dashboards <build_and_customize_dashboards/customize>`
 
 .. note::
-   - The :ref:`rights to access <dashboards/access-and-sharing>` Odoo dashboards are based on user
+   - The :ref:`access rights <dashboards/access-and-sharing>` for Odoo dashboards are based on user
      groups, and are managed within the Dashboards app. By default, the :guilabel:`Purchase & Vendor
      analysis` dashboard is only visible to, and can only be accessed by, users with admin access to
      the **Inventory** app.
@@ -44,18 +44,18 @@ Eight cards at the top of the dashboard show the following information:
 - :guilabel:`Purchased value`: indicates the total value of purchases during the selected period.
 - :guilabel:`Average order value`: indicates the average purchase amount per order during the
   selected period.
-- :guilabel:`Number or orders`: indicates the number of purchase orders during the selected period.
+- :guilabel:`Number of orders`: indicates the number of purchase orders during the selected period.
 - :guilabel:`Quantity ordered`: indicates the quantity of products ordered during the selected
   period.
 - :guilabel:`Days to receive`: indicates the average number of days between the order and receipt of
-  purchased products (i.e., between the order deadline of purchase order and the expected arrival of
-  the purchase order line).
+  purchased products (i.e., between the order deadline of the purchase order and the expected
+  arrival of the purchase order line).
 
   .. note::
      The expected arrival date is not impacted by a change to the scheduled date on the receipt.
 
 - :guilabel:`Days to Confirm`: indicates the average number of days before a purchase order is
-  confirmed (i.e., between the creation date of the RFQ and the confirmation data of the purchase
+  confirmed (i.e., between the creation date of the RFQ and the confirmation date of the purchase
   order).
 - :guilabel:`Supplier service level`: indicates the quantity received versus the quantity purchased,
   as a percentage.
