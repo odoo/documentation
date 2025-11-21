@@ -3,12 +3,10 @@ Landed costs
 ============
 
 .. |RfQ| replace:: :abbr:`RfQ (Request for Quotation)`
+.. |RfQs| replace:: :abbr:`RfQs (Requests for Quotation)`
 .. |PO| replace:: :abbr:`PO (Purchase Order)`
 .. |FIFO| replace:: :abbr:`FIFO (First In First Out)`
 .. |AVCO| replace:: :abbr:`AVCO (Average Costing)`
-
-When shipping products to customers, the landed cost is the total price of a product or shipment,
-including all expenses associated with shipping the product.
 
 In Odoo, the *Landed Costs* feature is used to take additional costs into account when calculating
 the valuation of a product. This includes the cost of shipment, insurance, customs duties, taxes,
@@ -37,15 +35,16 @@ Create landed cost product
 ==========================
 
 For charges that are consistently added as landed costs, a landed cost product can be created in
-Odoo. This way, a landed cost product can be quickly added to a vendor bill as an invoice line,
-instead of having to be manually entered every time a new vendor bill is created.
+Odoo. This way, a landed cost product can be quickly added to a request for quotation (|RfQ|) or a
+vendor bill as an invoice line, instead of having to be manually entered every time a new vendor
+bill is created.
 
 To do this, create a new product by going to :menuselection:`Inventory app --> Products -->
 Products`, and clicking :guilabel:`New`.
 
 Assign a name to the landed cost product in the :guilabel:`Product Name` field (i.e. `International
-Shipping`). In the :guilabel:`Product Type` field, click the drop-down menu, and select
-:guilabel:`Service` as the :guilabel:`Product Type`.
+Shipping`). In the :guilabel:`Product Type` field, select :guilabel:`Service` as the
+:guilabel:`Product Type`.
 
 .. important::
    Landed cost products **must** have their :guilabel:`Product Type` set to :guilabel:`Service`.
@@ -65,7 +64,8 @@ appears below it, prompting a selection. Clicking that drop-down menu reveals th
 .. image:: landed_costs/integrating-landed-costs-landed-cost-product.png
    :alt: Is a Landed Cost checkbox and Default Split Method on service type product form.
 
-When creating new vendor bills, this product can be added as an invoice line as a landed cost.
+When creating new |RfQs|, this product can be added as an invoice line as a landed cost. This
+product can also be added to vendor bills that are in the draft state.
 
 .. important::
    To apply a landed cost on a vendor bill, products in the original |PO| **must** belong to a
@@ -74,12 +74,12 @@ When creating new vendor bills, this product can be added as an invoice line as 
 Create purchase order
 =====================
 
-Navigate to :menuselection:`Purchase app --> New` to create a new request for quotation (RfQ). In
-the :guilabel:`Vendor` field, add a vendor to order products from. Then, click :guilabel:`Add a
-product`, under the :guilabel:`Products` tab, to add products to the |RfQ|.
+Navigate to :menuselection:`Purchase app --> New` to create a new |RfQ|. In the :guilabel:`Vendor`
+field, add a vendor to order products from. Then, click :guilabel:`Add a product`, under the
+:guilabel:`Products` tab, to add products to the |RfQ|.
 
-Once ready, click :guilabel:`Confirm Order` to confirm the order. Then, click :guilabel:`Receive
-Products` once the products have been received, followed by :guilabel:`Validate`.
+Once ready, click :guilabel:`Confirm Order` to confirm the order. Then, click :guilabel:`Receive`
+once the products have been received, followed by :guilabel:`Validate`.
 
 Create vendor bill
 ------------------
@@ -88,15 +88,16 @@ Once the vendor fulfills the |PO| and sends a bill, a vendor bill can be created
 Odoo.
 
 Navigate to the :menuselection:`Purchase app`, and click into the |PO| for which a vendor bill
-should be created. Then, click :guilabel:`Create Bill`. This opens a new :guilabel:`Vendor Bill` in
-the :guilabel:`Draft` stage.
+should be created. Then, upload the bill or click the :guilabel:`Bill Matching` smart button to
+match with an existing bill. This opens a new :guilabel:`Vendor Bill` in the :guilabel:`Draft`
+stage.
 
 In the :guilabel:`Bill Date` field, click the line to open a calendar popover menu, and select the
 date on which this draft bill should be billed.
 
-Then, under the :guilabel:`Invoice Lines` tab, click :guilabel:`Add a line`, and click the drop-down
-menu in the :guilabel:`Product` column to select the previously-created landed cost product. Click
-the :icon:`fa-cloud-upload` :guilabel:`(cloud with arrow)` icon to manually save and update the
+Click :guilabel:`Add a line`. Add the landed cost product to the vendor bill.
+
+Click the :icon:`fa-cloud-upload` :guilabel:`(Save)` icon to manually save and update the
 draft bill.
 
 .. image:: landed_costs/integrating-landed-costs-checkboxes.png
@@ -114,14 +115,13 @@ Additionally, at the top of the form, a :guilabel:`Create Landed Costs` button a
 Add landed cost
 ===============
 
-Once a landed cost is added to the vendor bill, click :guilabel:`Create Landed Costs` at the top of
-the vendor bill.
+Click :guilabel:`Create Landed Costs` at the top of the vendor bill.
 
 Doing so automatically creates a landed cost record, with a set landed cost pre-filled in the
 product line in the :guilabel:`Additional Costs` tab.
 
 From the :guilabel:`Landed Cost` form, click the :guilabel:`Transfers` drop-down menu, and select
-which transfer the landed cost belongs to.
+which transfer the landed cost belongs to. Only validated transfers can be selected.
 
 .. image:: landed_costs/integrating-landed-costs-transfers-menu.png
    :alt: Landed cost form with selected receipt transfer.
@@ -136,28 +136,17 @@ After setting the picking from the :guilabel:`Transfers` drop-down menu, click :
 
 Click the :guilabel:`Valuation Adjustments` tab to see the impact of the landed costs. The
 :guilabel:`Original Value` column lists the original price of the |PO|, the :guilabel:`Additional
-Landed Cost` column displays the landed cost, and the :guilabel:`New Value` displays the sum of the
-two, for the total cost of the |PO|.
+Landed Cost` column displays the landed cost, and the :guilabel:`New Value` column displays the sum
+of the two, for the total cost of the |PO|.
 
 Once ready, click :guilabel:`Validate` to post the landed cost entry to the accounting journal.
 
-This causes a :guilabel:`Valuation` smart button to appear at the top of the form. Click the
-:guilabel:`Valuation` smart button to open a :guilabel:`Stock Valuation` page, with the product's
-updated valuation listed.
-
 .. note::
-   For a :guilabel:`Valuation` smart button to appear upon validation, the product's
-   :guilabel:`Product Type` **must** be set to :guilabel:`Storable`.
-
-To view the valuation of *every* product, including landed costs, navigate to
-:menuselection:`Inventory app --> Reporting --> Valuation`.
-
-.. note::
-   Each journal entry created for a landed cost on a vendor bill can be viewed in the *Accounting*
-   app.
+   Each journal entry created for a landed cost on a vendor bill can be viewed in the
+   :menuselection:`Accounting` app.
 
    To locate these journal entries, navigate to :menuselection:`Accounting app --> Accounting -->
-   Journal Entries`, and locate the correct entry, by number (i.e. `PBNK1/2024/XXXXX`).
+   Journal Entries`, and locate the correct entry, by number (e.g. `STJ/2025/XXXXX`).
 
    Click into the journal entry to view the :guilabel:`Journal Items`, and other information about
    the entry.
