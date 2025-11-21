@@ -9,7 +9,7 @@ To connect the IoT system to an Odoo database, the following prerequisites must 
 
 - The Internet of Things (IoT) app must be :ref:`installed <general/install>`.
 - The IoT system must be connected to the network.
-- The computer connecting to Odoo must be on the same network as the IoT system.
+- The device connecting to Odoo must be on the same network as the IoT system.
 
 .. note::
    It is recommended to connect the IoT system to a **production** instance, as other types of
@@ -23,8 +23,16 @@ To connect the IoT system to an Odoo database, the following prerequisites must 
 Connection
 ==========
 
-The IoT system can be connected to the Odoo database using a :ref:`pairing code
-<iot/connect/pairing-code>` or a :ref:`connection token <iot/connect/token>`.
+To connect the IoT system to the Odoo database, open the IoT app and click :guilabel:`Connect`.
+If an IoT system is detected, it is connected automatically. If multiple IoT
+systems are found, select the appropriate one in the popup that opens, then click
+:guilabel:`Connect`. If no IoT system is detected automatically, try connecting it to the database
+using a :ref:`pairing code <iot/connect/pairing-code>` or a :ref:`connection token
+<iot/connect/token>`.
+
+.. tip::
+   The :doc:`IoT box <iot_box>`'s name is composed of the IoT box's serial number and
+   :ref:`pairing code <iot/connect/pairing-code>`.
 
 .. _iot/connect/pairing-code:
 
@@ -32,7 +40,7 @@ Connection using a pairing code
 -------------------------------
 
 .. note::
-   - The pairing code is displayed for up to 5 minutes after the IoT system starts. If the code is
+   - The pairing code is displayed for up to 2 hours after the IoT system starts. If the code is
      no longer visible, reboot the IoT box or :ref:`restart the Windows virtual IoT service
      <iot/windows_iot/restart>` to display the pairing code again. Alternatively, connect the IoT
      system to the database using a :ref:`connection token <iot/connect/token>`.
@@ -64,8 +72,8 @@ Connection using a pairing code
          :guilabel:`Pairing Code` section.
 
 #. In Odoo, open the IoT app and click :guilabel:`Connect`.
-#. In the :guilabel:`Connect an IoT Box` popup that opens, enter the :guilabel:`Pairing code`.
-#. Click :guilabel:`Pair`.
+#. In the :guilabel:`Searching for an IoT Box` popup that opens, click :guilabel:`Use Pairing Code`.
+#. Enter the :guilabel:`Pairing code` and click :guilabel:`Connect`.
 
 .. _iot/connect/token:
 
@@ -73,7 +81,8 @@ Connection using a connection token
 -----------------------------------
 
 #. In Odoo, open the IoT app and click :guilabel:`Connect`.
-#. In the :guilabel:`Connect an IoT Box` popup that opens, copy the :guilabel:`Token`.
+#. In the :guilabel:`Searching for an IoT Box` popup that opens, click :guilabel:`Offline pairing`.
+#. In the :guilabel:`Pair an IoT Box offline` popup that opens, copy the :guilabel:`Token`.
 #. Access the :ref:`IoT box's <iot/iot-box/homepage>` or :ref:`Windows virtual IoT's
    <iot/windows-iot/homepage>` homepage.
 #. In the :guilabel:`Odoo database connected` section, click :guilabel:`Configure`.
@@ -88,14 +97,14 @@ IoT system form
 ===============
 
 Once the IoT system is connected to the Odoo database, it is displayed as a card in the IoT app.
-Click the IP address on the card to access the :ref:`IoT box's <iot/windows-iot/homepage>` or
-:ref:`Windows virtual IoT's <iot/iot-box/homepage>` homepage. Click the card to access the
-list of :doc:`devices <devices>` connected to the IoT system.
+Click the card to access the IoT system's form, which allows to:
 
-.. tip::
-   :ref:`Enable the developer mode <developer-mode>` to access the IoT system's
-   :guilabel:`Technical Information`, such as its :guilabel:`Identifier`, :guilabel:`Domain
-   address`, and :guilabel:`Image version`.
+- access the :ref:`IoT box's <iot/windows-iot/homepage>` or :ref:`Windows virtual IoT's
+  <iot/iot-box/homepage>` homepage.
+- view the list of :doc:`devices <devices>` connected to the IoT system;
+- access the IoT system's :guilabel:`Technical Information`, such as its :guilabel:`Domain address`,
+  :guilabel:`Image version`, and :doc:`SSL certificate <iot_advanced/https_certificate_iot>`
+  :guilabel:`End Date`.
 
 .. note::
    By default, drivers are automatically :ref:`updated <iot_updating_iot/handlers>` every time the
@@ -147,5 +156,4 @@ The IoT system is disconnected from the database after an Odoo upgrade
 
 :ref:`Update the IoT system's image <iot/updating_iot/image-code>` by flashing the IoT box's card or
 :ref:`uninstalling the Windows virtual IoT program <iot/windows_iot/uninstall>` and
-:ref:`reinstalling <iot/windows-iot/installation>` the latest package for Windows **matching your
-database's version**.
+:ref:`reinstalling the virtual IoT package <iot/windows-iot/installation>`.

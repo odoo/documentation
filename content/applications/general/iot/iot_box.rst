@@ -4,8 +4,7 @@ IoT box
 
 To start using an IoT box:
 
-#. Make sure you have a :ref:`valid IoT box subscription <iot/iot/iot-subscription>` in addition to
-   your Odoo subscription.
+#. Make sure your database meets the :ref:`elegibility criteria <iot/https_certificate_iot/iot-eligibility>`.
 #. Connect your :doc:`devices <devices>` to the IoT box.
 #. :ref:`Connect the IoT box to the network <iot/iot_box/network>`.
 #. :doc:`Connect the IoT box to your Odoo database <connect>`.
@@ -53,7 +52,7 @@ Make sure no Ethernet cable is connected to the IoT box and follow these steps:
      .. note::
         Depending on your operating system, the browser might not open and redirect to the IoT box's
         homepage. In this case, open your browser manually and navigate to `http://10.11.12.1`
-        or any url starting with **http** (e.g., `http://odoo.com`).
+        or any URL starting with **http** (e.g., `http://odoo.com`).
 
   #. On the IoT box's homepage, click :guilabel:`Configure` next to the :guilabel:`Internet Status`
      section.
@@ -64,6 +63,13 @@ Make sure no Ethernet cable is connected to the IoT box and follow these steps:
    Once connected to the Wi-Fi network, the IoT box stops emitting its Wi-Fi signal, and the
    computer should automatically reconnect to its original network. If it does not, reconnect to it
    manually.
+
+.. tip::
+   If the IoT box is connected to an :doc:`external monitor <devices/screen>`, you can also scan the
+   first QR code displayed on the screen to connect to the network, then scan the second QR code to
+   access the IoT box's :ref:`homepage <iot/iot-box/homepage>`. On the homepage, click
+   :guilabel:`Configure` in the :guilabel:`Internet Status` section, select the relevant Wi-Fi
+   network, enter the password, and click :guilabel:`Connect`.
 
 .. _iot/iot-box/homepage:
 
@@ -79,11 +85,16 @@ navigate to the IoT box's IP address.
 
 The IoT box's IP address can be retrieved by:
 
-- connecting the IoT box to an external monitor: the IP address is displayed on the screen.
+- connecting the IoT box to an :doc:`external monitor <devices/screen>`: the IP address is displayed
+  on the screen.
 
-  .. image:: iot_box/iot-pos-display.png
+  .. image:: iot_box/iot-status-display.png
      :scale: 75%
-     :alt: POS display with IoT box's IP address
+     :alt: Status display with IoT box's IP address
+
+  .. tip::
+     You can also scan the QR code displayed on the external monitor using a device connected to the
+     same network as the IoT box to access the IoT box's homepage.
 
 - connecting the IoT box to a `supported receipt or label printer <https://www.odoo.com/app/iot-hardware>`_
   with a USB cable: the IP address is automatically printed.
@@ -91,7 +102,8 @@ The IoT box's IP address can be retrieved by:
   third-party software to scan the network.
 
 Once the IoT box is :doc:`connected to the Odoo database <connect>`, its homepage can be accessed
-from Odoo by opening the IoT app and clicking the URL displayed on the IoT box's card.
+from Odoo by opening the IoT app, clicking the relevant IoT box's card, and clicking
+:guilabel:`Homepage`.
 
 .. _iot/iot-box/led-status:
 

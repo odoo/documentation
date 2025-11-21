@@ -18,7 +18,7 @@ The following IoT systems are supported:
 
 .. note::
    - :abbr:`MRP (Material Requirement Planning)` devices, including cameras and measurement tools,
-     are not compatible with Windows virtual IoT.
+     are not compatible with the Windows virtual IoT.
    - Multiple IoT systems can be used at the same time.
    - It is also possible to create a Windows Virtual Machine on a MacOS/Linux computer. However,
      this option is not supported by Odoo, and no troubleshooting assistance will be provided.
@@ -28,12 +28,10 @@ The following IoT systems are supported:
 IoT box subscription
 ====================
 
-An IoT box subscription is required for production use of IoT systems. If you have issues related
-to your subscription, contact the database's account manager or Odoo partner for assistance.
-
-.. tip::
-   If the subscription is linked to an `Odoo.com <https://www.odoo.com>`_ portal user, check the
-   information on the portal's subscription page.
+An IoT box subscription is required for production use of IoT systems and generating the
+:doc:`HTTPS certificate <iot/iot_advanced/https_certificate_iot>`. It is created automatically
+when an IoT system is :doc:`connected to the database <iot/connect>`. If you have issues related to
+your subscription, contact the database's account manager or Odoo partner for assistance.
 
 .. seealso::
    - `Odoo's compatible IoT devices <https://www.odoo.com/app/iot-hardware>`_
@@ -55,7 +53,7 @@ to your subscription, contact the database's account manager or Odoo partner for
       :target: iot/windows_iot
       :large:
 
-      Set up Windows virtual IoT.
+      Set up a Windows virtual IoT.
 
    .. card:: IoT system connection to Odoo
       :target: iot/connect
@@ -70,8 +68,8 @@ to your subscription, contact the database's account manager or Odoo partner for
    .. card:: HTTPS certificate
       :target: iot/iot_advanced/https_certificate_iot
 
-      Verify your IoT system and database meet the eligibility requirements for HTTPS certificate
-      generation and address any related issues.
+      Verify your database meet the eligibility requirements for HTTPS certificate generation and
+      address any related issues.
 
    .. card:: IoT system updates
       :target: iot/iot_advanced/updating_iot

@@ -122,8 +122,8 @@ the IoT system** and navigate to the URL `http://xxx:8069` (where `xxx` is the I
 address).
 
 Once the Windows virtual IoT is :doc:`connected to the Odoo database <connect>`, its homepage can
-be accessed from Odoo by opening the IoT app and clicking the URL displayed on the IoT system's
-card.
+be accessed from Odoo by opening the IoT app, clicking the relevant IoT box's card, and
+clicking :guilabel:`Homepage`.
 
 .. image:: windows_iot/iot-windows-homepage.png
    :scale: 75%
