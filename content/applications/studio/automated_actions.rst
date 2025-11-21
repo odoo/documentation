@@ -153,33 +153,69 @@ You can then define:
 
 - a :guilabel:`Delay`: Specify the number of :guilabel:`Minutes`, :guilabel:`Hours`,
   :guilabel:`Days`, or :guilabel:`Months` after which the action should be triggered. If you
-  selected the :guilabel:`Based on date field` trigger, the action can be triggered
-  :guilabel:`After` or :guilabel:`Before` the selected date field.
+  selected the :guilabel:`Based on date field` trigger, the action can be executed :guilabel:`After`
+  or :guilabel:`Before` the selected date field.
+
+  The delay is used to determine the scheduled trigger date and time of the action.
 
   .. note::
      By default, the scheduler checks for time-triggered automation rules every 240 minutes, or 4
-     hours. This frequency is generally sufficient for delays such as 3 months after the order date
+     hours. If, since the previous check, the scheduled trigger date and time of an action has been
+     reached, the action is executed.
+
+     The default frequency is generally sufficient for delays such as 3 months after the order date
      or 7 days after the last update.
 
-     For delays of less than the equivalent of 2400 minutes, or 40 hours, the system recalculates
-     the frequency of this check to ensure that more granular delays, e.g., 1 hour before the event
-     start date and time, or 30 minutes after creation, can be respected as closely as possible.
+     However, for delays of less than the equivalent of 2400 minutes, or 40 hours, the system
+     recalculates the frequency of this check to ensure that more granular delays, e.g., 1 hour
+     before the event start date and time, or 30 minutes after creation, can be respected as closely
+     as possible.
 
-     To view or manually edit the frequency of the scheduler for a time-triggered automation rule,
-     with :ref:`developer mode activated <developer-mode>`, click :guilabel:`Scheduled action`.
+     To view or manually edit the frequency of the check, with :ref:`developer mode activated
+     <developer-mode>`, click :icon:`fa-arrow-right` :guilabel:`Scheduled action`.
 
      .. image:: automated_actions/trigger-delay-scheduled-action.png
         :alt: Direct link to scheduled action for automations
 
      In the :guilabel:`Automation Rules: check and execute` scheduled action that opens, update the
      value of the :guilabel:`Execute Every` field, if desired. Clicking :guilabel:`Run Manually`
-     triggers the scheduled action to run immediately. To return to the automation rule setup, click
-     the automation rule name in the breadcrumbs.
+     runs *the scheduled action* immediately. To return to the automation rule setup, click the
+     automation rule name in the breadcrumbs.
 
 - :guilabel:`Extra Conditions`: Click :guilabel:`Add condition`, then specify the conditions to be
   met for the automation rule to run. Click :guilabel:`New Rule` to add another condition.
 
-The action is executed when the delay is reached and the conditions are met.
+The action is executed the first time the :guilabel:`Automation Rules: check and execute` scheduled
+action runs after the scheduled trigger date and time is reached and the conditions are met.
+
+.. important::
+   Manually running the :guilabel:`Automation Rules: check and execute` *scheduled action* does not
+   necessarily result in an *automation rule's action* being executed. An action is only executed
+   when its scheduled trigger date and time falls *between* the last run of the scheduled action and
+   the current run (whether scheduled or run manually):
+
+   **last run --> scheduled trigger date and time --> current run**
+
+   .. example::
+      At 11:00 am on October 15 you create an automation rule that triggers the sending of an
+      email 30 days before the :guilabel:`Contract end date`; contracts end at 11:59 pm on their
+      contract end date. The :guilabel:`Automation Rules: check and execute` scheduled action is
+      set to run every four hours.
+
+      This new rule will apply for contracts whose end date is at least 30 days *after* the
+      creation of the rule, i.e., an end date of November 14 or later. This is because until that
+      moment, the scheduled trigger date of `contract end date` - `30 days` will always be
+      *earlier than* the last run of the scheduled action.
+
+      For a contract with an end date of November 14, the scheduled trigger date and time is
+      11:59 pm on October 15. The action will therefore be executed the first time the
+      :guilabel:`Automation Rules: check and execute` scheduled action runs after that date and
+      time has passed, i.e.,:
+
+      - last run of the scheduled action: evening of October 15 (the scheduler runs minimum every 4
+        hours)
+      - scheduled trigger date and time: 11:59 pm on October 15
+      - current run of the scheduled action: 3:59 am on October 16 at the latest
 
 .. _studio/automated-actions/trigger-custom:
 
