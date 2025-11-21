@@ -16,14 +16,18 @@ Connection
 ==========
 
 IoT systems support printers connected through USB, network connection, or Bluetooth.
-`Supported printers <https://www.odoo.com/page/iot-hardware>`__ are detected automatically, and
+`Supported printers <https://www.odoo.com/page/iot-hardware>`_ are detected automatically, and
 appear in the :guilabel:`Devices` list of the IoT app.
 
 .. image:: printer/printer-detected.png
    :alt: The printer as it would appear in the IoT app devices list.
 
+.. important::
+   Printers connecting to the IoT system via the network must be on the **same network** as the IoT
+   system.
+
 .. note::
-   Printers can take up to two minutes to appear in the IoT app :guilabel:`Devices` list.
+   Printers can take up to two minutes to appear in the IoT app's :guilabel:`Devices` list.
 
 Link a printer
 ==============
