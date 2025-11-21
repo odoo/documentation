@@ -4,28 +4,21 @@ Windows virtual IoT
 
 To start using the Windows virtual IoT:
 
-#. Make sure all :ref:`prerequisites <iot/windows-iot/prerequisites>` are met.
-#. :ref:`Install the Windows virtual IoT <iot/windows-iot/installation>` on a Windows computer.
-#. :ref:`Configure the Windows Firewall <iot/windows-iot/firewall>`.
+#. Make sure the computer runs an updated version of Windows (Windows 10 or Windows 11), whether
+   it's a laptop, desktop, or server.
+#. :ref:`Install the Windows virtual IoT <iot/windows-iot/installation>` on the Windows computer.
 #. Connect your :doc:`devices <devices>` to the Windows virtual IoT.
+#. :ref:`Configure the Windows Firewall <iot/windows-iot/firewall>`.
 #. :doc:`Connect the Windows virtual IoT to your Odoo database <connect>`.
-
-.. _iot/windows-iot/prerequisites:
-
-Prerequisites
-=============
-
-The following prerequisites must be met before setting up and using the Windows virtual IoT:
-
-- A valid :ref:`IoT box subscription <iot/iot/iot-subscription>`.
-- An updated and recent version of Windows (i.e., Windows 10 or Windows 11) installed on a Windows
-  computer (laptop, desktop, or server).
 
 .. note::
    - :abbr:`MRP (Material Requirement Planning)` devices, including cameras and measurement tools,
      are not compatible with Windows virtual IoT.
-   - It is also possible to create a Windows Virtual Machine on a MacOS/Linux computer. However,
+   - It is also possible to create a Windows Virtual Machine on a macOS/Linux computer. However,
      this option is not supported by Odoo, and no troubleshooting assistance will be provided.
+
+.. seealso::
+   :doc:`iot_advanced/troubleshooting`
 
 .. important::
    Never make the Windows virtual IoT accessible from the public Internet.
@@ -49,7 +42,7 @@ To install the Windows virtual IoT on a Windows computer:
 
    .. warning::
       Do not install Odoo's Windows virtual IoT in any Windows user directory, as this can cause
-      issues with :ref:`iot/https_certificate_iot/generation`.
+      issues with :ref:`HTTPS certificate generation <iot/connect/https_certificate>`.
 
 #. Set up GPL Ghostscript: Click :guilabel:`Next`, agree to the terms and conditions, click
    :guilabel:`Install`, then :guilabel:`Finish`.
@@ -57,7 +50,6 @@ To install the Windows virtual IoT on a Windows computer:
    :ref:`IoT system's homepage <iot/windows-iot/homepage>` automatically opens in a web browser with
    the URL `http://localhost:8069`.
 #. :ref:`Restart <iot/windows_iot/restart>` the Windows virtual IoT service.
-
 #. Check that you can access the :ref:`IoT system's homepage <iot/windows-iot/homepage>` in a web
    browser:
 
@@ -65,13 +57,28 @@ To install the Windows virtual IoT on a Windows computer:
    - on another device **on the same network as the IoT system** by navigating to the URL
      `http://xxx:8069` (where `xxx` is the IoT system's IP address).
    - on another device **on the same network as the IoT system** by navigating to the URL
-     `https://xxx` (where `xxx` is the IoT system's IP address) to test for :doc:`HTTPS
-     <iot_advanced/https_certificate_iot>` connection.
+     `https://xxx` (where `xxx` is the IoT system's IP address) to test for :ref:`HTTPS
+     <iot/connect/https_certificate>` connection.
 
      .. tip::
         If you cannot access the :ref:`IoT system's homepage <iot/windows-iot/homepage>` from
         another device, create a :ref:`Windows Firewall <iot/windows-iot/firewall>` rule to allow
         communication through port `8069`.
+
+Device connection
+=================
+
+Most :doc:`devices <devices>` automatically connect to the Windows computer used for the Windows
+Virtual IoT through `Windows Plug and Play (PnP)
+<https://learn.microsoft.com/en-us/windows-hardware/drivers/kernel/introduction-to-plug-and-play>`_.
+However, if Windows does not recognize the device automatically upon connection, the administrator
+may need to manually install the appropriate drivers.
+
+.. tip::
+   After connecting the devices to the computer, refresh the :ref:`IoT system's homepage
+   <iot/windows-iot/homepage>` to verify that the device is listed. If the device does not appear,
+   :ref:`reload the handlers <iot_updating_iot/handlers>` from the :ref:`IoT system's homepage
+   <iot/windows-iot/homepage>`.
 
 .. _iot/windows-iot/firewall:
 
@@ -79,7 +86,7 @@ Windows Firewall configuration
 ==============================
 
 Firewalls help keep devices secure but can sometimes block legitimate connections. If the Windows
-virtual IoT isn't accessible on the :abbr:`LAN (Local Area Network)`, for example from another
+virtual IoT isn't accessible on the :abbr:`LAN (Local Area Network)`, for example, from another
 device, it could be due to a firewall blocking the connection. To prevent this issue, configure
 exceptions for network discovery in the :abbr:`OS (Operating System)` or firewall settings.
 
@@ -87,8 +94,8 @@ exceptions for network discovery in the :abbr:`OS (Operating System)` or firewal
    If third-party firewall software is installed on the Windows computer, refer to the software's
    documentation to configure firewall exceptions.
 
-To create a rule on Windows Defender and allow communication through port `8069`, follow these
-steps:
+To create a rule on Windows Defender and allow communication through the required ports, follow
+these steps:
 
 #. Search the Windows start menu for `firewall` and select the :guilabel:`Windows Defender Firewall
    with Advanced Security` app.
@@ -101,9 +108,9 @@ steps:
    :guilabel:`Next`.
 
    .. note::
-      Other ports may be necessary depending on your IoT devices. For example, for the
-      :doc:`/applications/sales/point_of_sale/payment_methods/terminals/worldline_axepta` payment terminal,
-      add the `9050` port.
+      Other ports may be required depending on your IoT devices. For example, add port `9050` for
+      the :doc:`/applications/sales/point_of_sale/payment_methods/terminals/worldline_axepta`
+      payment terminals.
 
 #. On the :guilabel:`Action` page, select :guilabel:`Allow the connection` and click
    :guilabel:`Next`.
@@ -127,8 +134,8 @@ the IoT system** and navigate to the URL `http://xxx:8069` (where `xxx` is the I
 address).
 
 Once the Windows virtual IoT is :doc:`connected to the Odoo database <connect>`, its homepage can
-be accessed from Odoo by opening the IoT app and clicking the URL displayed on the IoT system's
-card.
+be accessed from Odoo by opening the IoT app, clicking the relevant IoT box's card, and
+clicking :guilabel:`Homepage`.
 
 .. image:: windows_iot/iot-windows-homepage.png
    :scale: 75%
@@ -137,29 +144,14 @@ card.
 .. note::
    Make sure the :ref:`Windows Firewall is configured <iot/windows-iot/firewall>` to allow access.
 
-Device connection
-=================
-
-Most :doc:`devices <devices>` automatically connect to the Windows computer used for the Windows
-Virtual IoT through `Windows Plug and Play (PnP)
-<https://learn.microsoft.com/en-us/windows-hardware/drivers/kernel/introduction-to-plug-and-play>`_.
-However, if Windows does not recognize the device automatically upon connection, the administrator
-may need to manually install the appropriate drivers.
-
-.. tip::
-   After connecting the devices to the computer, refresh the :ref:`IoT system's homepage
-   <iot/windows-iot/homepage>` to verify that the device is listed. If the device does not appear,
-   :ref:`reload the handlers <iot_updating_iot/handlers>` from the :ref:`IoT system's homepage
-   <iot/windows-iot/homepage>`.
-
 .. _iot/windows_iot/restart:
 
 Windows virtual IoT restart
 ===========================
 
 To manually restart the Windows IoT server, search the Windows start menu for `services` and
-select the :guilabel:`Services` app. Scroll down to the :guilabel:`odoo-server-xxx` service (where
-`xxx` is the odoo version), right-click it, and select :guilabel:`Start` or :guilabel:`Restart`.
+select the Services app. Scroll down to the :guilabel:`odoo-server-xxx` service, right-click it, and
+select :guilabel:`Start` or :guilabel:`Restart`.
 
 .. _iot/windows_iot/uninstall:
 
