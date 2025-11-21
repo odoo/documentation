@@ -8,11 +8,18 @@ businesses to accept **credit cards** and other payment methods.
 .. seealso::
    - `List of countries supported by Stripe <https://stripe.com/global>`_
    - `List of payment methods supported by Stripe <https://stripe.com/payments/payment-methods>`_
+   - :doc:`../payment_providers`
+   - :doc:`Use Stripe as a payment terminal in Point of Sale
+     <../../sales/point_of_sale/payment_methods/terminals/stripe>`
+
+.. _payment_providers/stripe/create_account:
 
 Create your Stripe account with Odoo
 ====================================
 
-The method to acquire your credentials depends on your hosting type:
+To create a new Stripe account and link it to your Odoo database, make sure the company's
+:guilabel:`Email` is configured in the :ref:`company's settings <general/companies/company>`, then
+follow the steps below according to your hosting type:
 
 .. tabs::
    .. group-tab:: Odoo Online
@@ -32,88 +39,73 @@ The method to acquire your credentials depends on your hosting type:
          confirmation email.
       #. At the end of the process, click :guilabel:`Agree and submit`; you are then redirected to
          the payment provider **Stripe** in Odoo.
-      #. :ref:`Fill in your credentials <stripe/api_keys>`.
-      #. :ref:`Generate a webhook <stripe/webhook>`.
+      #. :ref:`Fill in your credentials <payment_providers/stripe/manual_input>`.
       #. Set the :guilabel:`State` field to :guilabel:`Enabled`.
 
 .. tip::
-   - To use an existing Stripe account, :ref:`activate the Developer mode <developer-mode>` and
-     :ref:`enable Stripe manually <payment_providers/add_new>`. You can then :ref:`Fill in your
-     credentials <stripe/api_keys>`, :ref:`generate a webhook <stripe/webhook>`, and enable the
-     payment provider.
-   - You can also test Stripe using the :ref:`payment_providers/test-mode`. To do so, first,
-     `log into your Stripe dashboard <https://dashboard.stripe.com/dashboard>`_ and switch to the
-     **Test mode**. Then, in Odoo, :ref:`activate the Developer mode <developer-mode>`,
-     :ref:`navigate to the payment provider Stripe <payment_providers/supported_providers>`,
-     :ref:`fill in your API credentials <stripe/api_keys>` with the test keys, and set the
-     :guilabel:`State` field to :guilabel:`Test Mode`.
+   If you have created an account instead of :ref:`linking an existing one
+   <payment_providers/stripe/manual_input>`, :ref:`enable the developer mode <developer-mode>`, then
+   click :guilabel:`Reset your Stripe Account` on the Stripe payment provider form, then
+   :ref:`fill in your Stripe account's credentials <payment_providers/stripe/manual_input>`.
 
-.. _stripe/api_keys:
+.. _payment_providers/stripe/manual_input:
 
-Fill in your credentials
-------------------------
+Manual credential input
+=======================
 
-If your **API credentials** are required to connect with your Stripe account, proceed as follows:
+Manual credential input is needed, for example, when linking an existing Stripe account to your
+Odoo database, when using an account :ref:`created on Odoo.sh or On-premise
+<payment_providers/stripe/create_account>`, or when :ref:`testing Stripe without affecting live
+transactions <payment_providers/test-mode>`.
+
+.. _payment_providers/stripe/stripe-configuration:
+
+Stripe configuration
+--------------------
 
 #. Go to `the API keys page on Stripe <https://dashboard.stripe.com/account/apikeys>`_, or log into
    your Stripe dashboard and go to :menuselection:`Developers --> API Keys`.
 #. In the :guilabel:`Standard keys` section, copy the :guilabel:`Publishable key` and the
    :guilabel:`Secret key` and save them for later.
-#. In Odoo, :ref:`navigate to the payment provider Stripe <payment_providers/supported_providers>`.
-#. In the :guilabel:`Credentials` tab, fill in the :guilabel:`Publishable Key` and
-   :guilabel:`Secret Key` fields with the values you previously saved.
 
-.. _stripe/webhook:
-
-Generate a webhook
+Odoo configuration
 ------------------
 
-If your **Webhook Signing Secret** is required to connect with your Stripe account, you can create a
-webhook automatically or manually.
+#. :ref:`Enable the developer mode <developer-mode>`.
+#. :ref:`Navigate to the Stripe payment provider <payment_providers/supported_providers>`.
+#. In the :guilabel:`Credentials` tab, fill in the :guilabel:`Publishable Key` and
+   :guilabel:`Secret Key` fields with the values you :ref:`previously saved
+   <payment_providers/stripe/stripe-configuration>`.
+#. Click :guilabel:`Generate your webhook`.
+#. Configure the remaining options as needed.
+#. Set the :guilabel:`State` field to :guilabel:`Enabled`.
 
-.. tabs::
-   .. tab:: Create the webhook automatically
-
-      Make sure your :ref:`Publishable and Secret keys <stripe/api_keys>` are filled in, then click
-      :guilabel:`Generate your webhook`.
-
-   .. tab:: Create the webhook manually
-
-      #. Go to the `Webhooks page on Stripe <https://dashboard.stripe.com/webhooks>`_, or log into
-         your Stripe dashboard and go to :menuselection:`Developers --> Webhooks`.
-      #. In the :guilabel:`Hosted endpoints` section, click :guilabel:`Add endpoint`. Then, in the
-         :guilabel:`Endpoint URL` field, enter your Odoo database's URL, followed by
-         `/payment/stripe/webhook`, e.g., `https://yourcompany.odoo.com/payment/stripe/webhook`.
-      #.  Click :guilabel:`Select events` at the bottom of the form, then select the following
-          events:
-
-          - in the :guilabel:`Charge` section: :guilabel:`charge.refunded` and
-            :guilabel:`charge.refund.updated`;
-          - in the :guilabel:`Payment intent` section:
-            :guilabel:`payment_intent.amount_capturable_updated`,
-            :guilabel:`payment_intent.payment_failed`, :guilabel:`payment_intent.processing`, and
-            :guilabel:`payment_intent.succeeded`;
-          - in the :guilabel:`Setup intent` section: :guilabel:`setup_intent.succeeded`.
-
-      #. Click :guilabel:`Add events`.
-      #. Click :guilabel:`Add endpoint`, then click :guilabel:`Reveal` and save your
-         :guilabel:`Signing secret` for later.
-      #. In Odoo, :ref:`navigate to the payment provider Stripe
-         <payment_providers/supported_providers>`.
-      #. In the :guilabel:`Credentials` tab, fill the :guilabel:`Webhook Signing Secret` field with
-         the value you previously saved.
-
-      .. note::
-         You can select other events, but they are currently not processed by Odoo.
+.. tip::
+   - You can also test Stripe without affecting live transactions using the :ref:`test mode
+     <payment_providers/test-mode>` and the :ref:`API keys
+     <payment_providers/stripe/stripe-configuration>` of your `Stripe account's Test Mode or
+     a sandbox environment <https://docs.stripe.com/testing-use-cases>`_.
+   - To link the same Stripe account to :doc:`multiple companies
+     </applications/general/companies/multi_company>` in a database, :ref:`create an account
+     <payment_providers/stripe/create_account>` and :ref:`fill in the credentials
+     <payment_providers/stripe/manual_input>` for one company, then reuse the same credentials and
+     webhook for the others. To view the webhook, go to the `Webhooks page on Stripe
+     <https://dashboard.stripe.com/webhooks>`_, or log into your Stripe dashboard and go to
+     :menuselection:`Developers --> Webhooks`. Click the destination in the list, then click the
+     :icon:`fa-eye` (:guilabel:`Reveal secret`) icon next to the :guilabel:`Signing secret`
+     field and copy the value.
 
 Enable Apple Pay
 ================
 
-To allow customers to use the Apple Pay button to pay their eCommerce orders, go to the
+To allow customers to use the Apple Pay button to pay for their eCommerce orders, :ref:`navigate to
+the Stripe payment provider <payment_providers/supported_providers>`, then go to the
 :guilabel:`Configuration` tab, enable :guilabel:`Allow Express Checkout`, and click
 :guilabel:`Enable Apple Pay`.
 
 .. seealso::
-   - :ref:`Express checkout and Google Pay <payment_providers/express_checkout>`
-   - :doc:`../payment_providers`
-   - :doc:`Use Stripe as a payment terminal in Point of Sale <../../sales/point_of_sale/payment_methods/terminals/stripe>`
+   :ref:`Express checkout and Google Pay <payment_providers/express_checkout>`
+
+.. tip::
+   Stripe allows to :ref:`manually capture <payment_providers/manual_capture>` and :ref:`refund
+   <payment_providers/refunds>` payments either from Odoo or directly from the Stripe dashboard.
