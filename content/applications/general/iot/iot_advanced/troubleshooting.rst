@@ -1,76 +1,59 @@
-.. _iot/https_certificate_iot:
+:hide-page-toc:
 
-=======================
-HTTPS certificate (IoT)
-=======================
+===============
+Troubleshooting
+===============
 
-*Hypertext Transfer Protocol Secure* (HTTPS) is the secure and encrypted version of *Hypertext
-Transfer Protocol* (HTTP), which is the primary protocol used for data communication between a web
-browser and a website. It secures communications by using an encryption protocol known as *Transport
-Layer Security* (TLS), previously called *Secure Sockets Layer* (SSL). The security of
-:abbr:`HTTPS (Hypertext Transfer Protocol Secure)` relies on :abbr:`TLS (Transport Layer Security)`
-/:abbr:`SSL (Secure Sockets Layer)` certificates, which authenticate the provider and verify their
-identity.
+The pairing code does not appear or does not work
+=================================================
 
-The use of HTTPS is required to communicate with certain network devices, particularly payment
-terminals. If the HTTPS certificate is not valid, some devices cannot interact with the IoT
-system.
+The :ref:`pairing code <iot/connect/pairing-code>` might not be displayed or printed under the
+following circumstances:
 
-.. note::
-   In this documentation and throughout Odoo, the term *HTTPS certificate*  refers to a valid
-   SSL certificate that allows an HTTPS connection.
+- The IoT system is not connected to the network.
+- The IoT system is already connected to an Odoo database. :ref:`Disconnect it from the database
+  <iot/connect/disconnect>`.
+- The :ref:`pairing code <iot/connect/pairing-code>` display time has expired. Restart the :ref:`IoT
+  box <iot/iot-box/restart>` or the :ref:`Windows virtual IoT service <iot/windows_iot/restart>` to
+  generate and display the pairing code.
 
-.. _iot/https_certificate_iot/generation:
+The IoT system does not connect to the database
+===============================================
 
-HTTPS certificate generation
-============================
+The IoT system might take a few minutes to restart when it connects to a database. If it still does
+not appear after a few minutes:
 
-The HTTPS certificate is generated automatically. When the IoT system is (re-)started (e.g., after
-it is connected to the Odoo database), a request is sent to `<https://www.odoo.com>`_, which returns
-the HTTPS certificate if the IoT system and database meet the eligibility criteria:
+- Verify that the IoT system can reach the database and the server does not use a multi-database
+  environment.
+- Restart the :ref:`IoT box <iot/iot-box/restart>` or the :ref:`Windows virtual IoT service
+  <iot/windows_iot/restart>`.
 
-.. _iot/https_certificate_iot/iot-eligibility:
+The IoT system is connected to the Odoo database but cannot be reached
+======================================================================
 
-- The database must be a **production** instance. The database instance should not be a copy, a
-  duplicate, a staging, or a development environment.
-- The Odoo subscription must be ongoing (:guilabel:`In Progress` status) and have an :ref:`IoT
-  box subscription <iot/iot/iot-subscription>` line.
+Verify that the IoT system and the computer running the Odoo database are connected to the same
+network and :ref:`update the DNS settings <iot/troubleshooting/dns>` if necessary.
 
-When the certificate has been received:
+The Windows virtual IoT's homepage cannot be accessed from another device
+=========================================================================
 
-- The IoT system's homepage address is updated to a new HTTPS URL ending with `.odoo-iot.com`. Click
-  the URL to establish a secure HTTPS connection.
+- Ensure the device is connected to the same network as the Windows virtual IoT.
+- Check the :ref:`iot/windows-iot/firewall`.
 
-  .. image:: https_certificate_iot/iot-new-domain.png
-     :alt: Odoo IoT app IoT box with .odoo-iot.com domain.
+The IoT system does not work after an Odoo upgrade
+==================================================
 
-- The :guilabel:`HTTPS certificate` banner displays the certificate's validity period. To view this
-  information, click the :icon:`fa-cogs` (:guilabel:`cogs`) button on the IoT system's homepage.
+Restart the :ref:`IoT box <iot/iot-box/restart>` or the :ref:`Windows virtual IoT service
+<iot/windows_iot/restart>`.
 
-  .. image:: https_certificate_iot/https-valid.png
-     :alt: IoT box homepage with HTTPS certificate validity date.
+If the issue persists, :ref:`update its image <iot/updating_iot/image-code>` by flashing the IoT
+box's card or :ref:`uninstalling the Windows virtual IoT program <iot/windows_iot/uninstall>` and
+:ref:`reinstalling the virtual IoT package <iot/windows-iot/installation>`.
 
-HTTPS certificate generation issues and errors
-==============================================
-
-The HTTPS certificate does not generate
----------------------------------------
-
-Potential causes include the following:
-
-- No :ref:`IoT box subscription <iot/iot/iot-subscription>` is linked to your account.
-- The :ref:`IoT box subscription <iot/iot/iot-subscription>` was added *after* connecting the IoT
-  system to the database. In this case, refresh the IoT system's homepage or reboot/:ref:`restart
-  <iot/windows_iot/restart>` the IoT system to regenerate the HTTPS certificate.
-- The firewall is preventing the HTTPS certificate from generating correctly. In this case,
-  deactivate the firewall until the certificate is successfully generated.
-
-  .. note::
-     Some devices, such as routers with a built-in firewall, can prevent the HTTPS certificate from
-     generating.
+.. _iot/troubleshooting/dns:
 
 The IoT system's homepage can be accessed using its IP address but not the `xxx.odoo-iot.com` URL
--------------------------------------------------------------------------------------------------
+=================================================================================================
 
 Contact your system or network administrator to address the issue. Network-related problems are
 beyond the scope of Odoo support services.
@@ -88,11 +71,31 @@ beyond the scope of Odoo support services.
    - On some browsers, an error code mentioning the DNS (such as `DNS_PROBE_FINISHED_NXDOMAIN`) is
      displayed.
 
+.. _iot/troubleshooting/https_certificate:
+
+HTTPS certificate generation issues and errors
+==============================================
+
+The HTTPS certificate does not generate
+---------------------------------------
+
+Potential causes include the following:
+
+- The database doesn't meet the :ref:`eligibility requirements
+  <iot/https_certificate_iot/iot-eligibility>` for generating an :ref:`HTTPS certificate
+  <iot/connect/https_certificate>`.
+- The firewall is preventing the HTTPS certificate from generating correctly. In this case,
+  deactivate the firewall until the certificate is successfully generated.
+
+  .. note::
+     Some devices, such as routers with a built-in firewall, can prevent the HTTPS certificate from
+     generating.
+
 Errors
 ------
 
 A specific error code is displayed on the IoT system's homepage if any issues occur during the
-generation or reception of the HTTPS certificate.
+generation or reception of the ref:`HTTPS certificate <iot/connect/https_certificate>`.
 
 .. tip::
    When you access the IoT system's homepage, it automatically checks for an HTTPS certificate and
@@ -102,23 +105,24 @@ generation or reception of the HTTPS certificate.
 `ERR_IOT_HTTPS_CHECK_NO_SERVER`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The server configuration is missing, i.e., the Odoo instance is not :doc:`connected <../connect>` to
+The server configuration is missing, i.e., the database is not :doc:`connected <../connect>` to
 the IoT system.
 
 `ERR_IOT_HTTPS_CHECK_CERT_READ_EXCEPTION`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-An error occurred while attempting to read the existing HTTPS certificate.
+An error occurred while attempting to read the existing ref:`HTTPS certificate
+<iot/connect/https_certificate>`.
 Verify that the HTTPS certificate file is readable.
 
 `ERR_IOT_HTTPS_LOAD_NO_CREDENTIAL`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The contract and/or database :abbr:`UUID (Universal Unique Identifier)` is missing form the IoT.
+The contract and/or database :abbr:`UUID (Universal Unique Identifier)` is missing from the IoT.
 
 Verify that both values are correctly configured. To update them, :ref:`access the IoT box's
 <iot/iot-box/homepage>` or :ref:`Windows virtual IoT's homepage <iot/windows-iot/homepage>`,
-click the :icon:`fa-cogs` (:guilabel:`cogs`) button, then click :guilabel:`Credential`.
+click the :icon:`fa-cogs` (:guilabel:`cogs`) button, then click :guilabel:`Credentials`.
 
 `ERR_IOT_HTTPS_LOAD_REQUEST_EXCEPTION`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -162,7 +166,7 @@ To solve this issue:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The IoT system successfully connected to `<https://www.odoo.com>`_, but the server refused to
-provide the HTTPS certificate.
+provide the ref:`HTTPS certificate <iot/connect/https_certificate>`.
 
 Check that the IoT system and database meet the :ref:`eligibility requirements
 <iot/https_certificate_iot/iot-eligibility>` for an HTTPS certificate.
