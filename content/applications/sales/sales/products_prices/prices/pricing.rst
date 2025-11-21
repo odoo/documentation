@@ -35,7 +35,10 @@ modified at any time.
 
 .. important::
    If there is no specific pricelist configured on a sales quotation, the :guilabel:`Default`
-   pricelist is applied.
+   pricelist is applied. The :guilabel:`Default` pricelist is the first pricelist found in
+   :menuselection:`Sales app --> Products --> Pricelists` without an assigned :guilabel:`Country
+   Group`. Odoo will read the :guilabel:`Pricelist Name` column from top to bottom to determine the
+   :guilabel:`Default` pricelist.
 
 .. note::
    The :guilabel:`Selectable` column is only applicable to Odoo **eCommerce**. This option allows
