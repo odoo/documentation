@@ -39,8 +39,8 @@ Image and core code update
 
       #. `Download balenaEtcher. <https://etcher.balena.io/#download-etcher>`_
       #. Insert the IoT box's micro SD card into the computer or adapter.
-      #. Open balenaEtcher, click :guilabel:`Flash from URL`, and enter the following URL:
-         `http://nightly.odoo.com/master/iotbox/iotbox-latest.zip`.
+      #. | Open balenaEtcher, click :guilabel:`Flash from URL`, and enter the following URL:
+         | `http://nightly.odoo.com/master/iotbox/iotbox-latest.zip`.
       #. Click :guilabel:`Select target` and select the SD card.
       #. Click :guilabel:`Flash` and wait for the process to finish.
 
@@ -52,10 +52,9 @@ Image and core code update
       To update the IoT box's core code, click :guilabel:`Update` under :guilabel:`IoT Box Update`
       in the :guilabel:`Update` popup.
 
-      .. danger::
-         This process may take over 30 minutes. **Do not turn off or unplug the IoT box** during
-         this time, as doing so could leave the device in an inconsistent state, requiring the IoT
-         box to be reflashed with a new image.
+      .. warning::
+         **Do not turn off or unplug the IoT box** during the update process, as doing so could leave
+         the device in an inconsistent state, requiring the IoT box to be reflashed with a new image.
 
    .. group-tab:: Windows virtual IoT
 
