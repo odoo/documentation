@@ -299,5 +299,39 @@ impacts that can be taken advantage of throughout the Odoo database.
 .. note::
    Changes to the product template automatically apply to every variant of that product.
 
+Adding and deleting attributes from product variants
+====================================================
+
+When attributes are added or deleted from products, variants that have already been created are
+affected. Depending on whether or not these variants have been used in orders, they are archived or
+deleted and recreated.
+
+- Variants that have not been used in an order are deleted and recreated with the new attributes.
+  This may result in the deletion of additional customizations, depending on how the variants were
+  configured.
+- Variants that have been previously used in one or more orders are archived and removed from the
+  product catalog instead of being deleted.
+
+.. example::
+   A business offers leather motorcycle jackets with the following attributes and values for a total
+   of 27 product variants:
+
+    - Size: Small, Medium, Large
+    - Color: Black, Brown, Natural
+    - Material: Leather, Vegan Leather, Premium Leather
+
+   Due to rising costs, the business makes the decision to stop offering different leathers and
+   removes the "Material" attribute from the product form. This has the following effects:
+
+    - Any leather jacket variants that have been sold will be archived
+    - Any leather jacket variants that have not been sold will be deleted
+    - A new set of variants using just Size and Color attributes will be created, for a total of 9
+      product variants
+
+   The business owner can find archived product variants by navigating to :menuselection:`Sales app
+   --> Products --> Product Variants`, clicking the drop-down in the search bar, and finally
+   clicking the :guilabel:`Archived filter`. Any deleted variants and their customizations will be
+   lost.
+
 .. seealso::
    :doc:`import`
