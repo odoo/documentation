@@ -4,8 +4,8 @@ Assign leads with predictive lead scoring
 
 The Odoo *CRM* app can automatically assign leads/opportunities to sales teams and salespeople. A
 standard practice is to assign leads based on the probability of winning each lead. Companies can
-prioritize the leads that are more likely to result in successful deals by quickly assigning them
-to the appropriate salespeople.
+prioritize the leads that are more likely to result in successful deals by quickly assigning them to
+the appropriate salespeople.
 
 Odoo automatically calculates the probability of winning each lead using a method called *predictive
 lead scoring*.
@@ -17,8 +17,8 @@ Predictive lead scoring is a machine-learning model that uses historical data fr
 score open leads/opportunities.
 
 As a company processes opportunities through the CRM pipeline, Odoo collects data on which
-opportunities are won and lost. Predictive lead scoring uses this data to predict the probability
-of winning each new lead or opportunity.
+opportunities are won and lost. Predictive lead scoring uses this data to predict the probability of
+winning each new lead or opportunity.
 
 The more opportunities that are sent through the CRM pipeline, the more data Odoo collects,
 resulting in more accurate probabilities.
@@ -66,8 +66,8 @@ To customize the variables used by predictive lead scoring, go to :menuselection
 Configuration --> Settings`. Under :guilabel:`Predictive Lead Scoring`, click on the
 :guilabel:`Update Probabilities` button.
 
-Then, click on the drop-down menu to choose which variables the predictive lead scoring feature
-will take into account.
+Then, click on the drop-down menu to choose which variables the predictive lead scoring feature will
+take into account.
 
 .. image:: lead_scoring/update-probabilities.png
    :align: center
@@ -101,9 +101,9 @@ An opportunity's probability of success can be changed manually on the opportuni
 the probability number to edit it.
 
 .. important::
-   Manually changing the probability removes the automatic probability updates for that
-   opportunity. The probability will no longer update automatically as the opportunity moves
-   through each stage of the pipeline.
+   Manually changing the probability removes the automatic probability updates for that opportunity.
+   The probability will no longer update automatically as the opportunity moves through each stage
+   of the pipeline.
 
 To reactivate automatic probability, click on the gear icon next to the probability percentage.
 
@@ -115,8 +115,8 @@ Assign leads based on probability
 =================================
 
 Odoo *CRM* can assign leads/opportunities to sales teams and salespeople based on specified rules.
-Create assignment rules based on the leads' probability of success to prioritize those that are
-more likely to result in deals.
+Create assignment rules based on the leads' probability of success to prioritize those that are more
+likely to result in deals.
 
 Configure rule-based assignment
 -------------------------------
@@ -137,16 +137,18 @@ desired interval. Time periods range from :guilabel:`Minutes` to :guilabel:`Week
    :align: center
    :alt: The Rule-Based Assignment setting in CRM settings.
 
-If rule-based assignment is set to run :guilabel:`Repeatedly`, the assignment can still be
-triggered manually using the circular arrow icon in the :guilabel:`Rule-Based Assignment` settings
-(or using the :guilabel:`Assign Leads` button on the sales team configuration page).
+If rule-based assignment is set to run :guilabel:`Repeatedly`, the assignment can still be triggered
+manually using the circular arrow icon in the :guilabel:`Rule-Based Assignment` settings (or using
+the :guilabel:`Assign Leads` button on the sales team configuration page). Once a lead has been
+assigned to a salesperson via this rule, the lead will automatically be converted into an
+opportunity by the system.
 
 Configure assignment rules
 --------------------------
 
-Next, configure the *assignment rules* for each sales team and/or salesperson. These rules
-determine which leads Odoo assigns to which people. To get started, navigate to :menuselection:`CRM
---> Configuration --> Sales Teams`, and select a sales team.
+Next, configure the *assignment rules* for each sales team and/or salesperson. These rules determine
+which leads Odoo assigns to which people. To get started, navigate to :menuselection:`CRM -->
+Configuration --> Sales Teams`, and select a sales team.
 
 On the sales team configuration form, under :guilabel:`Assignment Rules`, click on :guilabel:`Edit
 Domain` to configure the rules that Odoo uses to determine lead assignment for this sales team. The
@@ -157,8 +159,8 @@ Click :guilabel:`Add Filter` to start creating assignment rules. Click on the :g
 the right of the assignment rule to add another line. Click on the :guilabel:`x` symbol to remove
 the line.
 
-To create an assignment rule based on an opportunity's probability of success, click on the far
-left drop-down menu of an assignment rule line, and select :guilabel:`Probability`.
+To create an assignment rule based on an opportunity's probability of success, click on the far left
+drop-down menu of an assignment rule line, and select :guilabel:`Probability`.
 
 From the middle drop-down menu, select the desired equation symbol—most likely the symbol for
 *greater than*, *less than*, *greater than or equal to*, or *less than or equal to*.
@@ -184,6 +186,6 @@ sales team or salesperson from being assigned leads automatically by Odoo's rule
 feature. If :guilabel:`Skip auto assignment` is activated, the sales team or salesperson can still
 be assigned leads manually.
 
-To manually assign leads to this sales team, click on the :guilabel:`Assign Leads` button at the
-top of the sales team configuration page. This will assign any leads that are currently unassigned
-and match this team's specified domain.
+To manually assign leads to this sales team, click on the :guilabel:`Assign Leads` button at the top
+of the sales team configuration page. This will assign any leads that are currently unassigned and
+match this team's specified domain.
