@@ -10,7 +10,7 @@ Database management
 These guides provide instructions on how to install, maintain and upgrade Odoo databases.
 
 .. seealso::
-    :doc:`History of Versions <administration/supported_versions>`
+    :doc:`History of Versions <administration/standard_extended_support>`
 
 Installation
 ============
@@ -60,6 +60,6 @@ functionalities, including functional support, upgrades, and hosting. `Pricing
     administration/on_premise
     administration/upgrade
     administration/neutralized_database
-    administration/supported_versions
+    administration/standard_extended_support
     administration/mobile
     administration/odoo_accounts
