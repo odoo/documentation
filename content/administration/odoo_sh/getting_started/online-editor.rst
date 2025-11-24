@@ -17,7 +17,7 @@ It also gives you the possibility to open terminals, Python consoles, Odoo Shell
 
 You can access the editor of a build through
 :ref:`the branches tabs <odoo-sh/branches/tabs>`,
-:ref:`the builds dropdown menu <odoosh-gettingstarted-builds-dropdown-menu>`
+:ref:`the builds dropdown menu <odoo-sh/builds/stages/features>`
 or by adding */odoo-sh/editor* to your build domain name
 (e.g. *https://odoo-addons-master-1.dev.odoo.com/odoo-sh/editor*).
 
