@@ -2,9 +2,9 @@
 Discount and loyalty programs
 =============================
 
-The Odoo *Sales*, *eCommerce*, and *Point of Sale* applications allow users to create discount and
-loyalty programs that customers can use for online and in-store shopping. These programs offer more
-varied, public, and time-sensitive pricing options than :doc:`pricelists
+The Odoo **Sales**, **eCommerce**, and **Point of Sale** applications allow users to create discount
+and loyalty programs that customers can use for online and in-store shopping. These programs offer
+more varied, public, and time-sensitive pricing options than :doc:`pricelists
 </applications/sales/sales/products_prices/prices/pricing>`.
 
 Configure the settings
@@ -30,7 +30,6 @@ a new program from scratch.
 Or, if there are already existing programs, select an existing program to edit it.
 
 .. image:: loyalty_discount/price-discount-loyalty.png
-   :align: center
    :alt: Discount and loyalty program template cards.
 
 .. note::
@@ -40,7 +39,6 @@ Or, if there are already existing programs, select an existing program to edit i
 Creating or editing a program opens the program form.
 
 .. image:: loyalty_discount/price-programs.png
-   :align: center
    :alt: Program options on the loyalty program form.
 
 The program form contains the following fields:
@@ -81,7 +79,6 @@ All of the existing cards, codes, coupons, etc. that have been generated for the
 accessible through the smart button located at the top of the form.
 
 .. image:: loyalty_discount/price-programs-items.png
-   :align: center
    :alt: Program items smart button on the loyalty program form.
 
 .. note::
@@ -89,7 +86,6 @@ accessible through the smart button located at the top of the form.
    database, a :guilabel:`Loyalty Cards` smart button conditionally appears on the contact form.
 
    .. image:: loyalty_discount/loyalty-cards-smart-button.png
-      :align: center
       :alt: The Loyalty Card smart button as it appears on a contact form in Odoo 17.
 
    This smart button **only** appears if a loyalty card or coupon is associated with the contact.
@@ -125,7 +121,6 @@ to add *conditions* to the program. This reveals a :guilabel:`Create Conditional
 window.
 
 .. image:: loyalty_discount/price-conditional-rewards.png
-   :align: center
    :alt: Rules & Rewards tab of the loyalty program form.
 
 .. note::
@@ -154,7 +149,6 @@ The following options are available for configuring conditional rules:
   and :guilabel:`Buy X Get Y` programs).
 
 .. image:: loyalty_discount/price-conditions.png
-   :align: center
    :alt: Conditional rules configuration window for a discount or loyalty program.
 
 Click :guilabel:`Save & Close` to save the rule and close the pop-up window, or click
@@ -190,7 +184,10 @@ The following options are available for configuring rewards:
     - :guilabel:`Discount`: Enter the discounted amount in either :guilabel:`percentage`,
       :guilabel:`currency per point`, or :guilabel:`currency per order`. Then, select whether the
       discount applies to the entire :guilabel:`Order`, only the :guilabel:`Cheapest Product` on the
-      order, or only :guilabel:`Specific Products`.
+      order, or only :guilabel:`Specific Products`. If :doc:`developer mode
+      </applications/general/developer_mode>` is active, the reward can be set to apply to the
+      :guilabel:`Cheapest Product` in a specific domain (for example, the cheapest t-shirt when
+      there are multiple types of clothing in a sales order).
     - :guilabel:`Max Discount`: Enter the maximum amount (in currency) that this reward may grant as
       a discount. Leave this field at `0` for no limit.
 
@@ -205,5 +202,4 @@ The following options are available for configuring rewards:
   customer upon checkout.
 
 .. image:: loyalty_discount/price-rewards.png
-   :align: center
    :alt: Rewards configuration window for a discount or loyalty program.
