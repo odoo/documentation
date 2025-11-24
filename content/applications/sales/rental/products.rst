@@ -31,23 +31,6 @@ designate :guilabel:`Unavailability` days.
 
 Click **Save** to apply the changes.
 
-Multi-location management and transfers
-=======================================
-
-Tracking the location of high-value physical products is essential. The **Rental** app helps by
-facilitating rental transfers and creating stock deliveries and receipts for all rental orders.
-
-For multi-location management and rental item transfer tracking, go to the :menuselection:`Inventory
-app --> Configuration --> Settings` and in the :guilabel:`Warehouse` section, enable
-:guilabel:`Storage Locations`. Click **Save** to apply the changes.
-
-Next, navigate to :menuselection:`Inventory app --> Configuration --> Locations`. Click
-:guilabel:`New` to configure a new internal location.
-
-In the new location page, enter the :guilabel:`Location Name` and ensure that the :guilabel:`Parent
-Location` field is :guilabel:`WH`. Click the :icon:`fa-cloud-upload` :guilabel:`(Save manually)`
-icon near the top to save.
-
 Rental products
 ===============
 
@@ -238,6 +221,53 @@ for record-keeping purposes, if necessary.
 
 .. seealso::
    `Odoo Tutorials: Sign <https://www.odoo.com/slides/sign-61>`_
+
+Multi-location management and transfers
+=======================================
+
+Tracking the location of high-value physical products between locations is essential. The **Rental**
+app helps with the *Rental Transfers* feature. Activating rental transfers means the system treats
+rental movements similarly to sales, requiring a receipt and a delivery order every time a physical
+product is rented or returned.
+
+For multi-location management and rental item transfer tracking, navigate to the
+:menuselection:`Rental app > Configuration > Settings` and in the :guilabel:`Rental` section, tick
+the :guilabel:`Rental Transfers` checkbox.
+
+.. image:: products/rental-transfers-checkbox.png
+   :alt: Sample of the Rental settings with the Rental Transfers enabled.
+
+.. note::
+   The **Inventory** app automatically creates an internal default location once the *Rental
+   Transfers* feature is enabled. Odoo uses the new default location, :guilabel:`Customer/Rental`,
+   to track products during the rental period (moving them from :guilabel:`Stock` to
+   :guilabel:`Customer/Rental` upon rental, and back upon return). Do not modify to avoid corrupting
+   inventory tracking.
+
+Next, go to the :menuselection:`Inventory app --> Configuration --> Settings` and in the
+:guilabel:`Warehouse` section, tick the :guilabel:`Storage Locations` checkbox. Click
+:guilabel:`Save` to apply the changes.
+
+To configure new locations, navigate to :menuselection:`Inventory app --> Configuration -->
+Locations`. Click :guilabel:`New` to configure a new internal location.
+
+On the new location page, enter the :guilabel:`Location Name` and ensure the :guilabel:`Parent
+Location` field is set to :guilabel:`WH`. Click the :icon:`fa-cloud-upload` :guilabel:`Save
+manually` icon near the top to save.
+
+.. example::
+   A bike rental business has two store locations within the same city. Both locations allow for
+   pick-up and drop-off of their bikes. The company wants to track its bikes accurately at each
+   location.
+
+   Ensure the **Rental** and **Inventory** apps are configured by enabling :guilabel:`Rental
+   Transfers` in the **Rental app** and :guilabel:`Storage Locations` in the **Inventory** app.
+
+   Next, go to the :menuselection:`Inventory app > Configuration > Locations`. Create a new location
+   for each storefront.
+
+   .. image:: products/configured-locations.png
+      :alt: Sample of internal inventory locations that represent different rental store locations.
 
 Pickup products
 ===============
