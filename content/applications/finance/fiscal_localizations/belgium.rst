@@ -560,7 +560,7 @@ The Odoo POS system is certified for databases hosted on **Odoo Online**, **Odoo
 **On-Premise**.
 
 .. seealso::
-   :doc:`/administration/supported_versions`
+   :doc:`/administration/standard_extended_support`
 
 A `certified POS system <https://www.systemedecaisseenregistreuse.be/systemes-certifies>`_ must
 adhere to rigorous government regulations, which means it operates differently from a non-certified
