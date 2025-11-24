@@ -9,8 +9,7 @@ Track :doc:`inventory valuation <cheat_sheet>` by :doc:`lots or serial numbers
    based on lot or serial numbers.
 #. Track the actual cost of manufactured products, based on the real cost of each tracked component
    used.
-#. Depreciate specific lot or serial numbers when they :doc:`sit in stock for too long
-   <../warehouses_storage/reporting/aging>`.
+#. Depreciate specific lot or serial numbers when they sit in stock for too long.
 
 .. important::
    Please read this :doc:`introduction to inventory valuation <cheat_sheet>` before setting up
