@@ -11,8 +11,8 @@ movement based on specific conditions.
    - :doc:`Standard routes in Odoo <../daily_operations>`
 
 .. note::
-   Routes are applicable on products, product categories, shipping methods, :ref:`packagings
-   <inventory/product_management/route-on-packaging>`, and on the sales order line.
+   Routes are applicable on products, product categories, shipping methods, and on the sales order
+   line.
 
 About routes and terminology
 ============================
@@ -145,9 +145,6 @@ user can view which places the route is :guilabel:`Applicable On`. The user can 
 to only apply on a specific :guilabel:`Company`. This is useful for multi-company environments; for
 example, a user can have a company and warehouse in Country A and a second company and warehouse in
 Country B.
-
-.. seealso::
-   :ref:`Applicable on packagings <inventory/product_management/packaging-route>`
 
 .. image:: use_routes/routes-example.png
    :align: center
