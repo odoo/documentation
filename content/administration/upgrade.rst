@@ -4,8 +4,8 @@ Upgrade
 
 An upgrade involves moving a database from an older version to a newer supported version (e.g., from
 Odoo 16.0 to Odoo 18.0). Regular upgrades are crucial as each version offers new features, bug
-fixes, and security patches. Using a :doc:`supported version <supported_versions>` is strongly
-recommended. Each major version is supported for three years.
+fixes, and security patches. Using a :doc:`supported version <standard_extended_support>` is
+strongly recommended. Each major version is supported for three years.
 
 Depending on the hosting type and Odoo version used, a database upgrade can be **mandatory**.
 
@@ -436,4 +436,4 @@ The following upgrade-related services are **not** included:
 
 .. seealso::
    - :doc:`Odoo.sh documentation <odoo_sh>`
-   - :doc:`Supported Odoo versions <supported_versions>`
+   - :doc:`Supported Odoo versions <standard_extended_support>`
