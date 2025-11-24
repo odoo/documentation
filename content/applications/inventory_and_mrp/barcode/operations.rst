@@ -16,3 +16,4 @@ Daily operations
    operations/gs1_nomenclature
    operations/gs1_usage
    operations/scan_rfid
+   operations/retrieve_epcs
