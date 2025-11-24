@@ -67,7 +67,7 @@ Import a database
 =================
 
 Once your platform is deployed, you can import a database into your Odoo.sh project, provided it
-uses a :doc:`supported version <../../supported_versions>` of Odoo.
+uses a :doc:`supported version <../../standard_extended_support>` of Odoo.
 
 .. note::
    Due to `Odoo's backup policy <https://www.odoo.com/cloud-sla>`_, the import process requires
