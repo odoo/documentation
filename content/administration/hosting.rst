@@ -18,7 +18,7 @@ To Odoo Online
 
 .. important::
    - Odoo Online is *not* compatible with **non-standard apps**.
-   - The database's current version must be :doc:`supported <supported_versions>`.
+   - The database's current version must be :doc:`supported <standard_extended_support>`.
 
 #. Create a :ref:`duplicate of the database <on-premise/duplicate>`.
 #. In this duplicate, uninstall all **non-standard apps**.
@@ -46,10 +46,10 @@ Transferring an Odoo Online database
 ====================================
 
 .. important::
-   Odoo Online's :ref:`intermediary versions <supported_versions>` are not supported by Odoo.sh or
-   on-premise. Therefore, if the database to transfer is running an intermediary version, it must be
-   upgraded first to the next :ref:`major version <supported_versions>`, waiting for its release if
-   necessary.
+   Odoo Online's :doc:`intermediary versions <standard_extended_support>` are not supported by
+   Odoo.sh or on-premise. Therefore, if the database to transfer is running an intermediary version,
+   it must be upgraded first to the next :doc:`major version <standard_extended_support>`, waiting
+   for its release if necessary.
 
    .. example::
       Transferring an online database running on Odoo 16.3 would require first upgrading it to Odoo
