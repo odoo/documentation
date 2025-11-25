@@ -10,19 +10,15 @@ an Odoo database.
 Some common use cases for providing portal access include allowing customers to read/view any or all
 of the following in Odoo:
 
-- leads/opportunities
-- quotations/sales orders
-- purchase orders
-- invoices & bills
-- projects
-- tasks
-- timesheets
-- tickets
-- signatures
-- subscriptions
+- Following, viewing and paying orders
+- Following, downloading or paying invoices
+- Managing payment methods
+- Managing subscriptions
+- Adding, removing or modifying addresses
+- Configuring connection parameters
 
 .. note::
-   Portal users only have read/view access, and will not be able to edit any documents in the
+   Portal users only have read/view access, and will **not** be able to edit any documents in the
    database.
 
 .. _portal/access:
@@ -36,37 +32,29 @@ and then click :guilabel:`Save`. Otherwise, choose an existing contact, and then
 :guilabel:`Action` drop-down menu located at the top-center of the interface.
 
 .. image:: portal/grant-portal-access.png
-   :align: center
    :alt: Use the Contacts application to give portal access to users.
 
 Then select :guilabel:`Grant portal access`. A pop-up window appears, listing three fields:
 
 - :guilabel:`Contact`: the recorded name of the contact in the Odoo database
-- :guilabel:`Email`: the contact's email address that they will use to log into the portal
-- :guilabel:`In Portal`: whether or not the user has portal access
+- :guilabel:`Email`: the contact's email address used to log into the portal
+- :guilabel:`Latest Authentication`: the last time the user accessed the portal
 
-To grant portal access, first enter the contact's :guilabel:`Email` they will use to log into the
-portal. Then, check the box under the :guilabel:`In Portal` column. Optionally, add text to the
-invitation message the contact will receive. Then click :guilabel:`Apply` to finish.
+To grant portal access, first enter the contact's :guilabel:`Email` used to log into the portal if
+it has not been automatically entered by the system. Then click :guilabel:`Grant Access` to finish.
 
-.. image:: portal/add-contact-to-portal.png
-   :align: center
-   :alt: An email address and corresponding checkbox for the contact need to be filled in before
-         sending a portal invitation.
+To grant portal access to multiple users for a company at once, navigate to the company contact,
+then click :menuselection:`Action --> Grant portal access` to view a list of the company's related
+contacts. Click :guilabel:`Grant Access` for each contact to grant portal access to.
 
-An email will be sent to the specified email address, indicating that the contact is now a portal
-user for that Odoo database.
+An email is sent to the specified email address, indicating that the contact is now a portal user
+for that Odoo database.
 
-.. tip::
-   To grant portal access to multiple users at once, navigate to a company contact, then click
-   :menuselection:`Action --> Grant portal access` to view a list of all of the company's related
-   contacts. Check the box under the :guilabel:`In Portal` column for all the contacts that need
-   portal access, then click :guilabel:`Apply`.
+Revoking portal access
+======================
 
-.. note::
-   At any time, portal access can be revoked by navigating to the contact, clicking
-   :menuselection:`Action --> Grant portal access`, and then unselecting the checkbox under the
-   :guilabel:`In Portal` column and clicking :guilabel:`Apply`.
+At any time, portal access can be revoked by navigating to a contact, clicking
+:menuselection:`Action --> Grant portal access`, and then clicking :guilabel:`Revoke Access`.
 
 .. _portal/login:
 
@@ -78,8 +66,7 @@ in the database with administrator access rights. The following process outlines
 to change the portal user login.
 
 .. seealso::
-   :doc:`See the documentation on setting access rights
-   </applications/general/users/access_rights>`.
+   :doc:`Access rights </applications/general/users/access_rights>`.
 
 First, navigate to :menuselection:`Settings app --> Users`. Then, under :guilabel:`Filters`, select
 :guilabel:`Portal Users`, or select :guilabel:`Add Custom Filter` and set the following
@@ -101,10 +88,9 @@ log into the Odoo portal.
 Customer portal changes
 =======================
 
-There may be times when the customer would like to make changes to their contact information,
-password/security, or payment information attached to the portal account. This can be performed by
-the customer from their portal. The following process is how a customer can change their contact
-information.
+There may be times when the customer would like to make changes to their contact, security, or
+payment information attached to the portal account. This can be performed by the customer from their
+portal. The following process is how a customer can change their contact information.
 
 .. _portal/custinfo:
 
@@ -163,9 +149,12 @@ Finally, click :guilabel:`Enable two-factor authentication` to complete the setu
 Change payment info
 -------------------
 
-First enter the username and password (login) into the database login page to access the portal user
-account. A portal dashboard will appear upon successfully logging in.
+If the customer needs to manage payment options, they click the :guilabel:`Payment methods` button.
 
-If the customer would like to manage payment options, navigate to the :guilabel:`Manage payment
-methods` in the menu on the right. Then, add the new payment information, and select :guilabel:`Add
-new card`.
+* To add a new payment option, choose from the available payment methods, enter the new payment
+  information, and click :guilabel:`Save` to save the details.
+* To erase a payment option, click the :icon:`fa-trash` :guilabel:`(Trash)` icon, then click the
+  :guilabel:`Confirm Deletion` button.
+
+Payment details **cannot** be edited. Customers must delete and re-enter information to update their
+details.
