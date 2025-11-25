@@ -108,33 +108,26 @@ database. However, depending on the hosting type, you can upgrade from the comma
 
    .. group-tab:: Odoo Online
 
-      Odoo Online databases can be manually upgraded via the `database manager
-      <https://www.odoo.com/my/databases>`_.
+      To upgrade an Odoo Online database:
 
-      The database manager displays all databases associated with the user's account. Databases
-      not on the most recent version of Odoo display an arrow in a circle icon next to their name,
-      indicating that they can be upgraded.
+      #. Open the `database manager <https://www.odoo.com/my/databases>`_.
+      #. Select the database and click :icon:`fa-gears` :guilabel:`Manage`.
+      #. Click :guilabel:`Upgrade` in the :guilabel:`Database` section.
+      #. In the popup:
 
-      .. image:: upgrade/databases-page.png
-         :alt: The database manager with an upgrade button next to the name of a database.
+         - Select the **version** of Odoo you want to upgrade to, usually the latest version.
+         - Enter the :guilabel:`Email to notify`, which will receive a link to the upgraded
+           database.
+         - Select the :guilabel:`Purpose` of the upgrade, which is automatically set to
+           :guilabel:`Test` for your first upgrade request.
+         - Click :guilabel:`Upgrade`.
 
-      Click the **arrow in a circle** icon to start the upgrade process. In the popup, fill in:
-
-      - The **version** of Odoo you want to upgrade to, usually the latest version
-      - The **email** address that should receive the link to the upgraded database
-      - The :guilabel:`Purpose` of the upgrade, which is automatically set to :guilabel:`Test` for
-        your first upgrade request
-
-      .. image:: upgrade/upgrade-popup.png
-         :alt: The "Upgrade your database" popup.
-
-      The :guilabel:`Upgrade in progress` tag is displayed next to the database name until
-      completion. Once the process succeeds, an email containing a link to the upgraded test
-      database is sent to the address provided. The database can also be accessed from the database
-      manager by clicking the dropdown arrow before the database name.
-
-      .. image:: upgrade/access-upgraded-db.png
-         :alt: Clicking the menu arrow displays the upgraded test database.
+      In the database manager, the :guilabel:`Connect` button will be replaced by an unclickable
+      :guilabel:`Upgrading...` button until completion. Once the process is successful, an email
+      containing a link to the upgraded test database is sent to the address provided. The test
+      database can also be accessed from the database manager by clicking the :icon:`fa-caret-down`
+      (:guilabel:`caret down`) button before the database name to display the test database, then
+      clicking :guilabel:`Connect`.
 
    .. group-tab:: Odoo.sh
 
