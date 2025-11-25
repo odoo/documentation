@@ -2,9 +2,6 @@
 Export and import data
 ======================
 
-.. |list| replace:: :icon:`oi-view-list` :guilabel:`(list)` icon
-.. |actions| replace:: :icon:`fa-cog` :guilabel:`Actions`
-
 In Odoo, it is sometimes necessary to export or import data for running reports, or for data
 modification. This document covers the export and import of data into and out of Odoo.
 
@@ -19,49 +16,48 @@ Export data from Odoo
 =====================
 
 When working with a database, it is sometimes necessary to export data in a distinct file. Doing so
-can aid in reporting on activities, although, Odoo provides a precise and easy reporting tool with
-each available application.
+can aid in reporting on activities, although, Odoo provides a precise reporting tool with each
+available application.
 
 With Odoo, the values can be exported from any field in any record. To do so, activate the list view
-(|list|), on the items that need to be exported, then select the records that should be exported. To
-select a record, tick the checkbox next to the corresponding record. Finally, click on |actions|,
-then :guilabel:`Export`.
+:icon:`fa-list` :guilabel:`(List)` icon, on the items that need to be exported, and then select the
+records that should be exported. To select a record, tick the checkbox next to the corresponding
+record. Finally, click the :guilabel:`Action` button, and select :icon:`fa-upload`
+:guilabel:`(Export)`.
 
 .. image:: export_import_data/list-view-export.png
-   :align: center
    :alt: View of the different things to enable/click to export data.
 
-When clicking on :guilabel:`Export`, an :guilabel:`Export Data` pop-over window appears, with
-several options for the data to export:
+When clicking on :icon:`fa-upload` :guilabel:`Export`, a :guilabel:`Export Data` pop-over window
+appears, with several options for the data to export:
 
 .. image:: export_import_data/export-data-overview.png
-   :align: center
    :alt: Overview of options to consider when exporting data in Odoo..
 
 #. With the :guilabel:`I want to update data (import-compatable export)` option ticked, the system
    only shows the fields that can be imported. This is helpful in the case where the :ref:`existing
    records need to be updated <essentials/update-data>`. This works like a filter. Leaving the box
-   unticked, gives many more field options because it shows all the fields, not just the ones that
+   unticked, gives many more field options because it shows all the fields, not only the ones that
    can be imported.
 #. When exporting, there is the option to export in two formats: `.csv` and `.xls`. With `.csv`,
    items are separated by a comma, while `.xls` holds information about all the worksheets in a
    file, including both content and formatting.
-#. These are the items that can be exported. Use the :guilabel:`> (right arrow)` icon to display
-   more sub-field options. Use the :guilabel:`Search` bar to find specific fields. To use the
-   :guilabel:`Search` option more efficiently, click on all the :guilabel:`> (right arrows)` to
-   display all fields.
-#. The :guilabel:`+ (plus sign)` icon button is present to add fields to the :guilabel:`Fields to
-   export` list.
-#. The :guilabel:`↕️ (up-down arrow)` to the left of the selected fields can be used to move the
-   fields up and down, to change the order in which they are displayed in the exported file.
-   Drag-and-drop using the :guilabel:`↕️ (up-down arrow)` icon.
-#. The :guilabel:`🗑️ (trash can)` icon is used to remove fields. Click on the :guilabel:`🗑️ (trash
-   can)` icon to remove the field.
+#. These are the items that can be exported. Use the :icon:`fa-chevron-right` :guilabel:`(Show
+   sub-fields)` icon to display more sub-field options. Use the :guilabel:`Search` bar to find
+   specific fields. To use the :guilabel:`Search` option more efficiently, click on all the
+   :icon:`fa-chevron-right` :guilabel:`(Show sub-fields)` icon to display all fields.
+#. The :icon:`fa-plus` :guilabel:`(Select field)` icon button is present to add fields to the
+   :guilabel:`Fields to export` list.
+#. The :icon:`fa-sort` :guilabel:`(Sort)` icon to the left of the selected fields can be used to
+   move the fields up and down, to change the order in which they are displayed in the exported
+   file. Drag-and-drop using the :icon:`fa-sort` :guilabel:`(Sort)` icon.
+#. The :icon:`fa-trash` :guilabel:`(Remove field)` icon is used to remove fields. Click the
+   :icon:`fa-trash` :guilabel:`(Remove field)` icon to remove the field.
 #. For recurring reports, it is helpful to save export presets. Select all the needed fields, and
    click on the template drop-down menu. Once there, click on :guilabel:`New template`, and give a
-   unique name to the export just created. Click the :guilabel:`💾 (floppy drive)` icon to save the
-   configuration. The next time the same list needs to be exported, select the related template that
-   was previously saved from the drop-down menu.
+   unique name to the export template. Click the :icon:`fa-floppy-o` :guilabel:`(floppy drive)` icon
+   to save the configuration. The next time the same list needs to be exported, select the related
+   template that was previously saved from the drop-down menu.
 
 .. tip::
    It is helpful to know the field's external identifier. For example, :guilabel:`Related Company`
@@ -87,7 +83,6 @@ data into an Odoo database.
    options: :guilabel:`Track history during import` and :guilabel:`Allow matching with subfields`.
 
    .. image:: export_import_data/advanced-import.png
-      :align: center
       :alt: Advanced import options when developer mode is activated.
 
    If the model uses openchatter, the :guilabel:`Track history during import` option sets up
@@ -103,11 +98,11 @@ Data can be imported on any Odoo business object using either Excel (`.xlsx`) or
 (Comma-separated Values)` (`.csv`) formats. This includes: contacts, products, bank statements,
 journal entries, and orders.
 
-Open the view of the object to which the data should be imported/populated, and click on
-:menuselection:`⚙️ (Action) --> Import records`.
+Open the view of the object to which the data should be imported/populated, click on :icon:`fa-cog`
+:guilabel:`(Action)` icon, and in the drop-down menu select :icon:`fa-upload` :guilabel:`(Import
+records)`.
 
 .. image:: export_import_data/import-button.png
-   :align: center
    :alt:  Action menu revealed with the import records option highlighted.
 
 After clicking :guilabel:`Import records`, Odoo reveals a separate page with templates that can be
@@ -121,7 +116,6 @@ Customers` at the center of the page.
    `.xlsx`).
 
    .. image:: export_import_data/formatting.png
-      :align: center
       :alt: Formatting options presented when a CVS file is imported in Odoo.
 
 Make necessary adjustments to the *Formatting* options, and ensure all columns in the
@@ -144,7 +138,6 @@ Once the template is downloaded, proceed to follow these steps:
   (ID) column.
 
 .. image:: export_import_data/dragdown.gif
-   :align: center
    :alt: An animation of the mouse dragging down the ID column, so each record has a unique ID.
 
 .. note::
@@ -152,16 +145,15 @@ Once the template is downloaded, proceed to follow these steps:
    fit any field within Odoo. However, new columns can be mapped manually when the import is tested.
    Search the drop-down menu for the corresponding field.
 
-   .. image:: export_import_data/field_list.png
-      :align: center
+   .. image:: export_import_data/field-list.png
       :alt: Drop-down menu expanded in the initial import screen on Odoo.
 
    Then, use this field's label in the import file to ensure future imports are successful.
 
 .. tip::
-   Another useful way to find out the proper column names to import is to export a sample file
-   using the fields that should be imported. This way, if there is not a sample import template,
-   the names are accurate.
+   Another useful way to find out the proper column names to import is to export a sample file using
+   the fields to be imported. This way, if there is not a sample import template, the names are
+   accurate.
 
 
 .. _essentials/external-id:
@@ -169,8 +161,8 @@ Once the template is downloaded, proceed to follow these steps:
 Import from another application
 -------------------------------
 
-The :guilabel:`External ID` (ID) is a unique identifier for the line item. Feel free to use one
-from previous software to facilitate the transition to Odoo.
+The :guilabel:`External ID` (ID) is a unique identifier for a line item. It is possible to use an
+:guilabel:`External ID` (ID) from previous software to facilitate the transition to Odoo.
 
 Setting an ID is not mandatory when importing, but it helps in many cases:
 
@@ -202,8 +194,7 @@ the column may be mapped to a field that is not proposed by default.
 If this happens, check the :guilabel:`Show fields of relation fields (advanced) option`, then a
 complete list of fields becomes available for each column.
 
-.. image:: export_import_data/field_list.png
-   :align: center
+.. image:: export_import_data/field-list.png
    :alt: Searching for the field to match the tax column.
 
 Change data import format
@@ -226,7 +217,7 @@ the preferred format using *ISO 8601* to define the format.
 .. important::
    *ISO 8601* is an international standard, covering the worldwide exchange, along with the
    communication of date and time-related data. For example, the date format should be `YYYY-MM-DD`.
-   So, in the case of July 24th 1981, it should be written as `1981-07-24`.
+   In the case of July 24th 1981, it should be written as `1981-07-24`.
 
 .. tip::
    When importing Excel files (`.xls`, `.xlsx`), consider using *date cells* to store dates. This
@@ -373,7 +364,7 @@ The tags should be separated by a comma, without any spacing. For example, if a 
 linked to both tags: `Manufacturer` and `Retailer` then 'Manufacturer,Retailer' needs to be encoded
 in the same column of the :abbr:`CSV (Comma-separated Values)` file.
 
-- :download:`CSV file for Manufacturer, Retailer <export_import_data/m2m_customers_tags.csv>`
+- :download:`CSV file for Manufacturer, Retailer <export_import_data/m2m-customers-tags.csv>`
 
 Import one2many relationships
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -383,23 +374,24 @@ reserved in the :abbr:`CSV (Comma-separated Values)` file for each order line. T
 is imported on the same row as the information relative to order. Any additional lines need an
 additional row that does not have any information in the fields relative to the order.
 
-As an example, here is a :abbr:`CSV (Comma-separated Values)` file of some quotations that can be
-imported, based on demo data:
+.. example::
+   A company imports quotations using a :abbr:`CSV (Comma-separated Values)` file, based on demo
+   data:
 
-- :download:`File for some Quotations
-  <export_import_data/purchase.order_functional_error_line_cant_adpat.csv>`
+   - :download:`File for some quotations <export_import_data/o2m-quotations-order-lines.csv>`
 
-The following :abbr:`CSV (Comma-separated Values)` file shows how to import purchase orders with
-their respective purchase order lines:
+   A company imports purchase orders with their respective purchase order lines using a :abbr:`CSV
+   (Comma-separated Values)` file:
 
-- :download:`Purchase orders with their respective purchase order lines
-  <export_import_data/o2m_purchase_order_lines.csv>`
+   - :download:`Purchase orders with their respective purchase order lines
+     <export_import_data/o2m-purchase-order-lines.csv>`
 
-The following :abbr:`CSV (Comma-separated Values)` file shows how to import customers and their
-respective contacts:
+   A company imports customers and their respective contacts using a :abbr:`CSV (Comma-separated
+   Values)` file:
 
-- :download:`Customers and their respective contacts
-  <export_import_data/o2m_customers_contacts.csv>`
+   - :download:`Customers and their respective contacts
+     <export_import_data/o2m-customers-contacts.csv>`
+
 
 Import records several times
 ----------------------------
@@ -418,8 +410,8 @@ Value not provided for a specific field
 ---------------------------------------
 
 If all fields are not set in the CSV file, Odoo assigns the default value for every non-defined
-field. But, if fields are set with empty values in the :abbr:`CSV (Comma-separated Values)` file,
-Odoo sets the empty value in the field, instead of assigning the default value.
+field. However, if fields are set with empty values in the :abbr:`CSV (Comma-separated Values)`
+file, Odoo sets the empty value in the field, instead of assigning the default value.
 
 Export/import different tables from an SQL application to Odoo
 --------------------------------------------------------------
@@ -480,8 +472,8 @@ the original database).
 
 The two files produced are ready to be imported in Odoo without any modifications. After having
 imported these two :abbr:`CSV (Comma-separated Values)` files, there are four contacts and three
-companies (the first two contacts are linked to the first company). Keep in mind to first import
-the companies, and then the people.
+companies (the first two contacts are linked to the first company). Keep in mind to first import the
+companies, and then the people.
 
 .. _essentials/update-data:
 
@@ -494,10 +486,10 @@ Existing data can be updated in bulk through a data import, as long as the :ref:
 Prepare data export
 -------------------
 
-To update data through an import, first navigate to the data to be updated, and select the |list| to
-activate list view. On the far-left side of the list, tick the checkbox for any record to be
-updated. Then, click |actions|, and select :icon:`fa-upload` :guilabel:`Export` from the drop-down
-menu.
+To update data through an import, first navigate to the data to be updated, and select the
+:icon:`oi-view-list` :guilabel:`(List)` icon to activate list view. On the far-left side of the
+list, tick the checkbox for any record to be updated. Then, click :guilabel:`Actions` button, and
+select :icon:`fa-upload` :guilabel:`(Export)` from the drop-down menu.
 
 On the resulting :guilabel:`Export Data` pop-up window, tick the checkbox labeled, :guilabel:`I want
 to update data (import-compatible export)`. This automatically includes the *External ID* in the
