@@ -3222,15 +3222,7 @@ Their root element is ``<calendar>``. Available attributes on the root node are:
 
    :requirement: Optional
    :type: str
-
-.. attribute:: date_delay
-   :noindex:
-
-   Alternative to ``date_stop``. Provides the duration of the event instead of
-   its end date (unit: hour).
-
-   :requirement: Optional
-   :type: str
+   :default: ``date_start``
 
 .. attribute:: scales
    :noindex:
