@@ -94,11 +94,10 @@ Conformance)` settings on the domain of the sender.
    - `Mailjet's DMARC documentation
      <https://documentation.mailjet.com/hc/en-us/articles/20531905163419-Understanding-DMARC>`_
 
-.. important::
-   If the database is not using a custom domain, then in order to verify the sender's address, a
-   temporary alias (of the three email addresses mentioned above) should be set up in Odoo CRM to
-   create a lead. Then, the database is able to receive the verification email and verify the
-   accounts.
+.. warning::
+   It is recommended to set up a custom domain. Due to increased security on provider side, emails
+   sent with an outgoing mail server other than the Odoo's provided one using subdomain
+   (dbname.odoo.com) will fail due to DMARC policy, and/or be marked as spam.
 
 .. _maintain/mailjet-api/add-domain:
 
