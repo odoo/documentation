@@ -51,7 +51,7 @@ the :guilabel:`Action` field, select :guilabel:`Create a customer`.
    You can assign tags created on a contact form under :menuselection:`Website --> Configuration
    --> Customers` to identify what kind of customers have submitted the form. To do so, select
    a field in the form while in :guilabel:`Edit` mode, click the :guilabel:`+ Field` button under
-   the :guilabel:`Customize` tab, and set the field's :guilabel:`Type` to :guilabel:`Tags`.
+   the :guilabel:`Style` tab, and set the field's :guilabel:`Type` to :guilabel:`Tags`.
    Toggle the tags that should be automatically assigned when a customer fills in the form and set
    the field's :guilabel:`Visibility` to :guilabel:`Hidden`.
 
@@ -110,9 +110,9 @@ Invoice
 
 Depending on the type of business (B2B or B2C), you might want to issue an invoice. An invoice can
 either be generated automatically (for B2B) or on demand of the customer (for B2C). This process
-can be automated if (and when) the online payment is :ref:`confirmed <handling/sales>`.
-To automate invoicing, enable the :ref:`Automatic Invoice <handling/legal>` setting. If this
-feature has not been enabled, the customer only receives an order confirmation.
+can be automated if (and when) the online payment is :ref:`confirmed <ecommerce/handling/sales>`.
+To automate invoicing, enable the :ref:`Automatic Invoice <ecommerce/handling/invoices>` setting. If
+this feature has not been enabled, the customer only receives an order confirmation.
 
 .. _ecommerce/b2b_b2c/b2b-fields:
 
