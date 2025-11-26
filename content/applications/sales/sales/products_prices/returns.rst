@@ -5,6 +5,8 @@ Returns and refunds
 The Odoo *Sales* app provides two different ways to process returns. The method used depends on
 whether or not an invoice has been sent.
 
+.. _sales/returns/before-invoicing:
+
 Before invoicing
 ================
 
@@ -55,6 +57,8 @@ to reflect the difference between the initial validated quantities and the retur
 
 When an invoice is created, the customer receives an invoice **only** for the products they are
 keeping, if any.
+
+.. _sales/returns/after-invoicing:
 
 After invoicing
 ===============
