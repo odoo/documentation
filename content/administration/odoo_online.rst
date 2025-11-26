@@ -2,209 +2,179 @@
 Odoo Online
 ===========
 
-`Odoo Online <https://www.odoo.com/trial>`_ provides private databases which are fully managed and
-hosted by Odoo. It can be used for long-term production or to test Odoo thoroughly, including
-customizations that don't require code.
+`Odoo Online <https://www.odoo.com/trial>`_ offers private databases hosted and managed by Odoo.
+Odoo Online databases can be accessed using any web browser and do not require a local installation.
+They can be used for long-term production or to thoroughly test Odoo, including customizations that
+do not require custom code.
+
+.. tip::
+   To quickly try out Odoo, shared `demo databases <https://demo.odoo.com>`_ are available for
+   testing. No registration is required; however, each database is only available for a few hours.
 
 .. note::
-   Odoo Online is incompatible with custom modules or the Odoo App Store.
+   Odoo Online is incompatible with custom modules or modules from the `Odoo Apps Store
+   <https://apps.odoo.com/apps>`_.
 
-Odoo Online databases are accessed using any web browser and do not require a local installation.
+.. _odoo-online/database-manager:
 
-To quickly try out Odoo, shared `demo <https://demo.odoo.com>`_ instances are available. No
-registration is required, but each instance only lives for a few hours.
+Database manager
+================
 
-.. _odoo_online/database-management:
+To manage an Odoo Online database, open to the `database manager
+<https://www.odoo.com/my/databases>`_ and sign in as the database administrator.
 
-Database management
-===================
+.. _odoo-online/domain-names:
 
-To manage a database, go to the `database manager <https://www.odoo.com/my/databases>`_ and sign in
-as the database administrator.
+Domain names
+------------
 
-All the main database management options are available by clicking the database name, except the
-upgrade option, which can be accessed by clicking the **arrow in a circle** icon next to the
-database name. It is only displayed if an upgrade is available.
+:doc:`Configure a custom domain name <../applications/websites/website/configuration/domain_names>`
+by selecting a database and clicking :icon:`fa-globe` :guilabel:`Domain Names`.
 
-.. image:: odoo_online/database-manager.png
-   :alt: Accessing the database management options
+.. tip::
+   :ref:`Register a domain name for free <domain-name/register>`.
 
-- :ref:`odoo_online/upgrade`
-- :ref:`odoo_online/duplicate`
-- :ref:`odoo_online/rename`
-- :ref:`odoo_online/download`
-- :ref:`odoo_online/domains`
-- :ref:`odoo_online/tags`
-- :ref:`odoo_online/delete`
-- :ref:`odoo_online/contact-support`
-- :ref:`odoo_online/users`
-- :ref:`odoo_online/web-services`
+.. _odoo-online/tags:
 
-.. _odoo_online/upgrade:
+Tags
+----
+
+Add tags to identify and sort databases by selecting a database and clicking :icon:`fa-tags`
+:guilabel:`Tags`. In the dialog box, enter a tag, click the :icon:`fa-plus-circle`
+(:guilabel:`plus`) button, and click :guilabel:`Save`.
+
+.. tip::
+   Search for tags in the :icon:`fa-search` search bar at the top right.
+
+.. _odoo-online/hide:
+
+Hide
+----
+
+Permanently hide the database from the database manager by selecting it and clicking
+:icon:`fa-eye-slash` :guilabel:`Hide`. In the dialog box, click :guilabel:`Yes, I don't need it
+anymore`.
+
+.. Note::
+   It is possible to access a hidden database through its URL.
+
+.. _odoo-online/manage:
+
+Manage
+------
+
+Access all other database management options by selecting it and clicking :icon:`fa-gears`
+:guilabel:`Manage`.
+
+Switch plans
+~~~~~~~~~~~~
+
+Switch `pricing plans <https://www.odoo.com/pricing>`_ by clicking :guilabel:`Switch` under the
+desired plan.
+
+.. _odoo-online/upgrade:
 
 Upgrade
-=======
+~~~~~~~
 
-Trigger a database upgrade.
+Launch a :ref:`database upgrade <upgrade-request-test>` by clicking :guilabel:`Upgrade`.
 
-.. seealso::
-   For more information about the upgrade process, check out the :ref:`Odoo Online upgrade
-   documentation <upgrade-request-test>`.
+.. note::
+   This option is only displayed when an upgrade is available.
 
-.. _odoo_online/duplicate:
-
-Duplicate
-=========
-
-Create an exact copy of the database, which can be used to perform testing without compromising
-daily operations.
-
-.. important::
-   - By checking :guilabel:`For testing purposes`, all external actions (emails, payments, delivery
-     orders, etc.) are disabled by default on the duplicated database.
-   - Duplicated databases expire automatically after 15 days.
-   - A maximum of five duplicates can be made per database. Under extraordinary circumstances,
-     contact `support <https://www.odoo.com/help>`_ to raise the limit.
-
-.. _odoo_online/rename:
+.. _odoo-online/rename:
 
 Rename
-======
+~~~~~~
 
-Rename the database and its URL.
+Rename and change the URL of a database by clicking :guilabel:`Rename`. In the dialog box, enter a
+:guilabel:`New name` and click :guilabel:`Rename`.
 
-.. _odoo_online/download:
+.. _odoo-online/duplicate:
 
-Download
-========
+Duplicate
+~~~~~~~~~
 
-Download a ZIP file containing a backup of the database.
+Create a copy of the database by clicking :guilabel:`Duplicate`. In the dialog box, enter a
+:guilabel:`New name` and click :guilabel:`Duplicate`.
+
+.. important::
+   - By default, the :guilabel:`For testing purposes` option is enabled. It disables all external
+     actions (emails, payments, delivery orders, etc.) on the duplicated database.
+   - Duplicates expire after 15 days.
+   - A maximum of five duplicates can be created per database. Under extraordinary circumstances,
+     contact `Odoo Support <https://www.odoo.com/help>`_ to extend the limit.
+
+.. _odoo-online/download:
+
+Download a backup
+~~~~~~~~~~~~~~~~~
+
+Download a ZIP file containing a database backup by clicking :guilabel:`Download Backup`.
 
 .. note::
    - Databases are backed up daily as per the `Odoo Cloud Hosting SLA
      <https://www.odoo.com/cloud-sla>`_.
-   - If the :guilabel:`Download` option is disabled, it means your database is too large to be
-     downloaded through this method. In this case, please contact `Odoo Support
-     <https://www.odoo.com/help>`_ to request an alternative download solution.
+   - If the :guilabel:`Download Backup` option is disabled, it means the database is too large to be
+     downloaded using the database manager. Contact `Odoo Support <https://www.odoo.com/help>`_ to
+     request an alternative download solution.
 
-.. _odoo_online/domains:
+.. _odoo-online/activity-logs:
 
-Domain names
-============
+View admin activity logs
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use a custom :doc:`domain name </applications/websites/website/configuration/domain_names>` to
-access the database via another URL.
-
-.. tip::
-   You can :ref:`register a domain name for free <domain-name/register>`.
-
-.. _odoo_online/tags:
-
-Tags
-====
-
-Add tags to easily identify and sort your databases.
-
-.. tip::
-   You can search for tags in the search bar.
-
-.. _odoo_online/delete:
-
-Delete
-======
-
-Delete a database instantly.
-
-.. danger::
-   Deleting a database means that all data is permanently lost. The deletion is instant and applies
-   to all users. It is recommended to create a backup of the database before deleting it.
-
-Carefully read the warning message and only proceed if the implications of deleting a database are
-fully understood.
-
-.. image:: odoo_online/delete.png
-   :alt: The warning message displayed before deleting a database
+View the logs of all actions taken by Odoo employees or the database administrator on the database
+by clicking :guilabel:`View Admin Activity Logs`.
 
 .. note::
-   - Only an administrator can delete a database.
-   - The database name is immediately made available to anyone.
-   - Deleting a database if it has expired or is linked to a subscription is impossible. In that
-     case, contact `Odoo Support <https://www.odoo.com/help>`_.
+   Actions taken by Odoo employees are typically the result of requests submitted to Odoo support,
+   done within the context of a quick start project, or necessary to maintain the database.
 
-.. _odoo_online/contact-support:
+.. _odoo-online/transfer-ownership:
 
-Contact us
-==========
+Transfer ownership
+~~~~~~~~~~~~~~~~~~
 
-Access the `Odoo.com support page <https://www.odoo.com/help>`_ with the database's details already
-pre-filled.
+Create a support ticket to request a database ownership transfer by clicking :guilabel:`Transfer
+Ownership`.
 
-.. _odoo_online/users:
+.. _odoo-online/delete:
 
-Invite / remove users
-=====================
+Delete
+~~~~~~
 
-To invite users, fill out the new user's email address and click :guilabel:`Invite`. To add multiple
-users, click :guilabel:`Add more users`.
+Delete the database and close its related subscription by clicking :guilabel:`Delete`. In the dialog
+box, click :guilabel:`Delete`.
 
-.. image:: odoo_online/invite-users.png
-   :alt: Inviting a user on a database
+.. danger::
+   All the database's data will be deleted instaneously for all users and **cannot be restored**. It
+   is recommended to :ref:`download a backup <odoo-online/download>` before deleting a database.
 
-To remove users, select them and click :guilabel:`Remove`.
+.. note::
+   After deletion, the database's name becomes available to anyone.
 
-.. seealso::
-   - :doc:`/applications/general/users`
-   - :doc:`odoo_accounts`
+.. _odoo-online/web-services:
 
-.. _odoo_online/web-services:
-
-Web Services
+Web services
 ============
 
-In order to programmatically retrieve the list of the databases displayed in the
-`database manager <https://www.odoo.com/my/databases>`_, call the method `list` of the model
-`odoo.database` via a :doc:`Web Service </developer/howtos/web_services>` call.
+To retrieve a list of all databases displayed under the `database manager
+<https://www.odoo.com/my/databases>`_ programmatically, call the `list` method of the
+`odoo.database` model via an :doc:`external JSON-2 API <../developer/reference/external_api>` call.
 
-Inspired from the examples provided in the :doc:`Web Services </developer/howtos/web_services>`
-section, this is how to retrieve this list with the library ``xmlrpc.client``::
+.. example::
+   .. code:: python
 
-   import xmlrpc.client
+      import requests
 
-   USER = 'user@domain.tld'
-   APIKEY = 'your_apikey'
+      APIKEY = "your_apikey"
 
-   root = 'https://www.odoo.com/xmlrpc/'
-   uid = xmlrpc.client.ServerProxy(root + 'common').login('openerp', USER, APIKEY)
-   sock = xmlrpc.client.ServerProxy(root + 'object')
-   databases_list = sock.execute('openerp', uid, APIKEY, 'odoo.database', 'list')
-
-And here is the equivalent example with JSON-RPC::
-
-   import json
-   import random
-   import urllib.request
-
-   USER = 'user@domain.tld'
-   APIKEY = 'your_apikey'
-
-   def json_rpc(url, method, params):
-       data = {
-           'jsonrpc': '2.0',
-           'method': method,
-           'params': params,
-           'id': random.randint(0, 1000000000),
-       }
-       req = urllib.request.Request(url=url, data=json.dumps(data).encode(), headers={
-           "Content-Type": "application/json",
-       })
-       reply = json.loads(urllib.request.urlopen(req).read().decode('UTF-8'))
-       if reply.get('error'):
-           raise Exception(reply['error'])
-       return reply['result']
-
-   def call(url, service, method, *args):
-       return json_rpc(url, 'call', {'service': service, 'method': method, 'args': args})
-
-   url = 'https://www.odoo.com/jsonrpc'
-   uid = call(url, 'common', 'login', 'openerp', USER, APIKEY)
-   databases_list = call(url, 'object', 'execute', 'openerp', uid, APIKEY, 'odoo.database', 'list')
+      requests.post(
+          "https://www.odoo.com/json/2/odoo.database/list",
+          headers={
+              "Authorization": f"bearer {APIKEY}",
+              "X-Odoo-Database": "openerp",
+          }
+          json={},
+      )
