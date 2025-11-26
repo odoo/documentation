@@ -207,9 +207,9 @@ Extra info
 
 You can add an :guilabel:`Extra Info` step in the checkout process to collect additional customer
 information through an online form, which is then included in the :ref:`sales order
-<handling/sales>`. To do so, :ref:`enable <ecommerce/checkout/customize_steps>` the :guilabel:`Extra
-Step` option in the website editor. The form can be :ref:`customized <website/building_blocks/form>`
-as needed.
+<ecommerce/handling/sales>`. To do so, :ref:`enable <ecommerce/checkout/customize_steps>` the
+:guilabel:`Extra Step` option in the website editor. The form can be :ref:`customized
+<website/building_blocks/form>` as needed.
 
 .. _ecommerce/checkout/payment:
 
@@ -259,9 +259,9 @@ Order confirmation
 ------------------
 
 The final step of the checkout process is the :guilabel:`Order confirmation`, which provides a
-summary of the customer's purchase details. If the :guilabel:`Automatic Invoice` setting has been
-activated in the **Sales** app's configuration settings, a sales order and invoice will
-automatically be created by Odoo.
+summary of the customer's purchase details. A sales order is automatically created in the backend.
+Enable the :ref:`Automatic Invoice <ecommerce/handling/invoices>` setting to automatically send
+an invoice to the customer.
 
 .. seealso::
-   :doc:`Order handling documentation <order_handling>`
+   :doc:`Order handling <order_handling>`

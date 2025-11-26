@@ -809,7 +809,7 @@ to set the :guilabel:`SRI Payment Method` for each method.
 Automatic invoice
 -----------------
 
-:ref:`Invoices <handling/legal>` can be generated after the checkout process.
+:ref:`Invoices <ecommerce/handling/invoices>` can be generated after the checkout process.
 
 .. tip::
    The invoice's email template can be modified from the :guilabel:`Invoice Email Template` field
