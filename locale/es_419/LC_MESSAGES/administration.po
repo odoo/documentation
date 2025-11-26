@@ -27,7 +27,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-11-19 09:34+0100\n"
-"PO-Revision-Date: 2025-11-25 20:21+0000\n"
+"PO-Revision-Date: 2025-11-26 20:20+0000\n"
 "Last-Translator: \"Patricia Gutiérrez (pagc)\" <pagc@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-19-doc/administration/es_419/>\n"
@@ -3184,6 +3184,10 @@ msgid ""
 "change this list of modules to install in the :doc:`project settings "
 "<settings>`."
 msgstr ""
+"Las ramas de desarrollo crean bases de datos nueva con datos de demostración "
+"para realizar las pruebas unitarias. Los módulos instalados son aquellos "
+"incluidos en la rama. Puedes cambiar la lista de módulos por instalar en los "
+":doc:`ajustes del proyecto <settings>`."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:124
 msgid ""
@@ -3194,6 +3198,13 @@ msgid ""
 "tests or allow specific tests to be run with custom tags by going to "
 "the :ref:`branch's settings <odoo-sh/branches/tabs/settings>`."
 msgstr ""
+"Al subir una confirmación a una rama de desarrollo se iniciará un nuevo "
+"servicio, con una base de datos creada desde cero, y se actualizará la rama. "
+"Se cargan los datos de demostración y las pruebas unitarias se realizan de "
+"forma predeterminada para verificar que los cambios no rompan ninguna de las "
+"funciones que se están probando. Puedes desactivar las pruebas o permitir "
+"que pruebas específicas se ejecuten con etiquetas personalizadas en los "
+":ref:`ajustes de la rama <odoo-sh/branches/tabs/settings>`."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:130
 msgid ""
@@ -3201,12 +3212,17 @@ msgid ""
 "mail catcher, and scheduled actions are not triggered as long as the "
 "database is not in use."
 msgstr ""
+"Igual que en las ramas de prueba, los correos no se envían, sino que los "
+"intercepta un mail catcher, además, las acciones programadas no se activarán "
+"si la base de datos no se está usando."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:133
 msgid ""
 "Development databases are not automatically backed up, and manual backups "
 "are not possible."
 msgstr ""
+"No se guardan copias de seguridad de las bases de datos en desarrollo de "
+"forma automática y no es posible realizar copias de seguridad manuales."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:136
 msgid ""
@@ -3214,51 +3230,64 @@ msgid ""
 "approximately three days. After that, they can be automatically garbage-"
 "collected to make room for new databases without prior notice."
 msgstr ""
+"Se espera que las bases de datos creadas para ramas de desarrollo duren "
+"alrededor de tres días. Después de esto, las puede recolectar el recolector "
+"de basura (garnage-collector) sin previo aviso para que haya espacio para "
+"bases de datos nuevas."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:143
 msgid "Merging branches"
-msgstr ""
+msgstr "Fusión de ramas"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:145
 msgid ""
 "You can merge your branches by dragging and dropping them into each other."
 msgstr ""
+"Para fusionar tus ramas puedes arrastrarlas y soltarlas unas sobre otras."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:-1
 msgid "Merging branches into each other"
-msgstr ""
+msgstr "Fusión de ramas"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:150
 msgid ""
 "To test the changes of development branches with the production data, you "
 "can either:"
 msgstr ""
+"Para probar los cambios en ramas de desarrollo con los datos en producción, "
+"puedes:"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:152
 msgid ""
 "Merge the development branch into a staging branch by dragging and dropping "
 "it onto the desired branch; or"
 msgstr ""
+"Para fusionar una rama en desarrollo con una rama de prueba, debes "
+"arrastrarla y soltarla en la rama que quieras."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:0
 msgid "Merging a development branch into a staging branch"
-msgstr ""
+msgstr "Fusión de una rama de desarrollo con una rama de prueba"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:158
 msgid ""
 "Drag and drop the development branch under the :guilabel:`Staging` section "
 "to make it a staging branch."
 msgstr ""
+"Arrastra la rama de desarrollo y suéltala en la sección :guilabel:`Prueba` "
+"para que se convierta en una rama de prueba."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:0
 msgid "Moving a development branch under staging"
-msgstr ""
+msgstr "Mover una rama de desarrollo a prueba"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:164
 msgid ""
 "When the changes are ready for production, drag and drop the staging branch "
 "into the production branch to merge and deploy them."
 msgstr ""
+"Cuando los cambios estén listos para pasar a producción, arrastra y suelta "
+"la rama de prueba a la rama de producción para fusionarla y desplegarla."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:168
 msgid ""
@@ -3267,18 +3296,26 @@ msgid ""
 "staging branch, so there is a higher risk of encountering issues in the "
 "production database."
 msgstr ""
+"Puedes fusionar las ramas de desarrollo directamente con las ramas de "
+"producción. Sin embargo, los cambios no se validarán con los datos de "
+"producción en una rama de prueba, así que hay un riesgo mayor de que ocurran "
+"problemas en la base de datos en producción."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:171
 msgid ""
 "You can merge development branches into each other, and staging branches "
 "into each other."
 msgstr ""
+"Puedes fusionar dos ramas de desarrollo juntas y dos ramas de prueba juntas."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:172
 msgid ""
 "You can also use `git merge` directly on your workstation to merge your "
 "branches. Odoo.sh is notified when new revisions are pushed to your branches."
 msgstr ""
+"También puedes usar `fusión de git` en tu estación de trabajo para fusionar "
+"tus ramas. Odoo.sh recibe una notificación cuando se suben versiones nuevas "
+"a las ramas."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:175
 msgid ""
@@ -3287,12 +3324,19 @@ msgid ""
 "production database. However, if you modify the code in the repository, it "
 "will be passed to the production branch when merging."
 msgstr ""
+"Fusionar una rama de prueba con una etapa de producción solo fusionará el "
+"código fuente. Los cambios que se hagan a la base de datos de prueba no se "
+"pasarán a la base de datos de producción. Sin embargo, si modificas el "
+"código en el repositorio, se pasará a la rama en producción al momento de la "
+"fusión."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:179
 msgid ""
 "If you test configuration changes in staging branches, and want them to be "
 "applied to the production branch, you have to, either:"
 msgstr ""
+"Si pruebas cambios en la configuración en ramas de prueba y quieres "
+"aplicarlos a la rama en producción, debes:"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:182
 msgid ""
@@ -3301,6 +3345,11 @@ msgid ""
 "module in its manifest (:file:`__manifest__.py`) to trigger the module "
 "update when merging the staging branch in the production branch."
 msgstr ""
+"Escribir los cambios de la configuración en archivos XML para sobrescribir "
+"la configuración o las vistas predeterminadas en la rama y después aumentar "
+"la versión del módulo en el manifiesto (:file:`__manifest__.py`) para "
+"activar la actualización del módulo al fusionar la rama de prueba con la "
+"rama de producción."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:187
 msgid ""
@@ -3308,12 +3357,18 @@ msgid ""
 "you will use the Git versioning features for all configuration changes, "
 "thereby ensuring traceability of your changes."
 msgstr ""
+"Este método es recomendado para tener una mejor escalabilidad de los "
+"desarrollos, ya que usarás la funciones de control de versiones de Git para "
+"todos los cambios en la configuración, lo cual asegura una mejor "
+"trazabilidad de los cambios."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:191
 msgid ""
 "Pass them manually from the staging database to the production one by "
 "copying and pasting them."
 msgstr ""
+"Copiar y pegar de forma manual los cambios a la configuración de la base de "
+"datos de prueba a la base de datos de producción."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:196
 msgid "Tabs"
@@ -3329,20 +3384,24 @@ msgstr "Historial"
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:203
 msgid "The :guilabel:`History` tab gives an overview of the branch history:"
 msgstr ""
+"La pestaña :guilabel:`Historial` es un resumen del historial de la rama "
+"donde podrás ver:"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:205
 msgid "The commit messages and their authors"
-msgstr ""
+msgstr "Los mensajes de revisiones y sus autores."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:206
 msgid ""
 "The various events linked to the platform, such as stage changes, database "
 "imports, and backup restores"
 msgstr ""
+"Todos los eventos vinculados a la plataforma, como cambios de etapa, "
+"importaciones a la base de datos o restauración de copias de seguridad."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:-1
 msgid "The branches' history tab"
-msgstr ""
+msgstr "La pestaña de historial de la rama"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:212
 msgid ""
@@ -3352,6 +3411,12 @@ msgid ""
 "successful, a :guilabel:`Connect` button appears, allowing you to access the "
 "database."
 msgstr ""
+"Un estado en la esquina superior derecha de cada evento indica la operación "
+"actual en la base de datos (por ejemplo, instalación, actualización, "
+"importación de copia de seguridad) o cuál fue el resultado (por ejemplo, "
+"retroalimentación de prueba, importación exitosa de copia de seguridad). Si "
+"la operación fue exitosa, aparecerá el botón :guilabel:`Conectar` que te "
+"permitirá conectarte a la base de datos."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:220
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:396
@@ -3366,6 +3431,8 @@ msgid ""
 "The :guilabel:`Mails` tab contains the mail catcher, which provides an "
 "overview of emails sent by the database."
 msgstr ""
+"La pestaña :guilabel:`Correos` contiene el mail catcher, donde podrás ver de "
+"forma general todos los correos que se han enviado con la base de datos."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:226
 msgid ""
@@ -3373,10 +3440,13 @@ msgid ""
 "from the production database are actually sent and are not intercepted by "
 "the mail catcher."
 msgstr ""
+"El mail catcher está disponible para ramas de desarrollo y prueba. Los "
+"correos de la base de datos en producción sí se envían y no los intercepta "
+"el mail catcher."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:-1
 msgid "The branches' mails tab"
-msgstr ""
+msgstr "Captura de pantalla de la pestaña de correos de la rama"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:235
 msgid "Shell"
@@ -3384,7 +3454,7 @@ msgstr "Shell"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:237
 msgid "The :guilabel:`Shell` tab provides shell access to the container."
-msgstr ""
+msgstr "La pestaña :guilabel:`Shell` da acceso shell al contenedor."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:239
 msgid ""
@@ -3392,16 +3462,21 @@ msgid ""
 "Linux commands (`ls`, `top`). You can open a shell on the database by "
 "running `psql`."
 msgstr ""
+"Al hacer clic en :guilabel:`Shell` se abrirá una nueva pestaña del navegador "
+"donde podrás ejecutar comandos básicos de Linux (`ls`, `top`). Si quieres "
+"abrir el shell en la base de datos debes ejecutar `psql`."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:-1
 msgid "The branches' shell tab"
-msgstr ""
+msgstr "La pestaña shell de la rama"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:246
 msgid ""
 "You can open multiple shell tabs at once and arrange their layout by "
 "dragging and dropping them."
 msgstr ""
+"Puedes abrir varias pestañas shell al mismo tiempo y arrastrarlas y "
+"soltarlas para cambiar su orden."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:249
 msgid ""
@@ -3409,63 +3484,82 @@ msgid ""
 "manipulating production instances directly, while staging/development "
 "instance shells are highlighted in yellow."
 msgstr ""
+"Los shells de instancias en producción aparecen en rojo para enfatizar el "
+"peligro de manipular instancias de producción de forma directa. Los shells "
+"de instancias de prueba o desarrollo aparecen en amarillo."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:252
 msgid ""
 "Long-running shell instances/idle shell sessions can be terminated at any "
 "time to free up resources."
 msgstr ""
+"Las instancias del shell que se hayan ejecutado por mucho tiempo, o las "
+"sesiones del shell inactivas se pueden finalizar en cualquier momento para "
+"liberar recursos."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:258
 msgid "Commands"
-msgstr ""
+msgstr "Comandos"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:260
 msgid ""
 "Here is an overview of useful commands that you can run an Odoo.sh database "
 "terminal:"
 msgstr ""
+"A continuación encontrarás una lista de comandos útiles que puedes usar en "
+"una terminal de una base de datos de Odoo.sh:"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:262
 msgid "`odoo-bin shell`: to open an Odoo shell"
-msgstr ""
+msgstr "`odoo-bin shell`: Para abrir un shell de Odoo."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:263
 msgid "`odoo-update`: to update modules in the database"
-msgstr ""
+msgstr "`odoo-update`: Para actualizar los módulos en la base de datos."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:264
 msgid "`odoosh-restart`: to restart Odoo.sh services (http or cron)"
 msgstr ""
+"`odoosh-restart`: Para reiniciar los servicios de Odoo.sh (http o cron)."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:265
 msgid ""
 "`odoosh-storage`: to check the storage usage of your instance's container "
 "filesystem"
 msgstr ""
+"`odoosh-storage`: Para revisar el uso del almacenamiento del contenedor del "
+"filesystem de tu instancia."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:266
 msgid "`psql`: to open a database shell"
-msgstr ""
+msgstr "`psql`: Para abrir un shell de la base de datos"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:267
 msgid ""
 "`mutt`: to check how emails appear on text clients (staging and development "
 "instances)"
 msgstr ""
+"`mutt`: Para revisar cómo se ven los correos en la plataforma "
+"(en instancias de prueba o desarrollo)."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:268
 msgid ""
 "`lnav ~/logs/odoo.log`: to navigate in your instance's :file:`odoo.log` file"
 msgstr ""
+"`lnav ~/logs/odoo.log`: Para navegar por el archivo :file:`odoo.log` de tu "
+"instancia."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:269
 msgid "`ncdu`: to launch the disk usage analyzer with an interactive interface"
 msgstr ""
+"`ncdu`: Para ejecutar el analizador de uso del disco con una interfaz "
+"interactiva."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:270
 msgid "`grep`: to filter and find information in log or configuration files"
 msgstr ""
+"`grep`: Para filtrar y encontrar información en los archivos de registro "
+"(log) o configuración."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:275
 msgid "Editor"
@@ -3477,36 +3571,47 @@ msgid ""
 "integrated development environment (IDE) to edit the source code. You can "
 "also open terminals, Python consoles, and Odoo shell consoles."
 msgstr ""
+"Al hacer clic en :guilabel:`Editor` se abre una nueva pestaña de navegador "
+"para acceder a un entorno de desarrollo integrado en línea (IDE) para editar "
+"el código fuente. También puedes abrir terminales, consolas de Python y "
+"consolas del shell de Odoo."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:-1
 msgid "The branches' editor tab"
-msgstr ""
+msgstr "La pestaña de editor de las ramas."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:284
 msgid ""
 "You can open multiple tabs and drag and drop them to arrange the layout as "
 "you wish."
 msgstr ""
+"Puedes abrir varias pestañas y arrastrarlas y soltarlas para moverlas y "
+"ordenarlas como prefieras."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:287
 msgid ":doc:`Online editor documentation <online-editor>`."
-msgstr ""
+msgstr ":doc:`Documentación del editor en línea <online-editor>`."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:292
 msgid "Monitor"
-msgstr ""
+msgstr "Monitor"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:294
 msgid ""
 "The :guilabel:`Monitor` tab displays various performance monitoring metrics "
 "of the current build."
 msgstr ""
+"La pestaña :guilabel:`Monitor` muestra diferentes métricas de rendimiento "
+"del build actual."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:296
 msgid ""
 "Zoom in with your cursor to adjust the time range or select it manually from "
 "the time range selector. It is also possible to change the time zone."
 msgstr ""
+"Usa tu cursor para acercarte y ajustar el rango de tiempo o selecciónalo de "
+"forma manual con el selector de rango de tiempo. También puedes cambiar la "
+"zona horaria."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:-1
 msgid "The time range selector in the branches monitor tab"
