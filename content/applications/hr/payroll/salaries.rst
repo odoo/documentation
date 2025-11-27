@@ -190,25 +190,23 @@ in the fields.
 Top section
 -----------
 
-- :guilabel:`Rule Name`: Enter a name for the rule. This field is required.
-- :guilabel:`Category`: Select a category the rule applies to from the drop-down menu, or enter a
-  new one. This field is required.
-- :guilabel:`Code`: Enter a code to be used for this new rule. This field is required.
-- :guilabel:`Sequence`: Enter a number indicating when this rule is calculated in the sequence of
-  all other rules.
-- :guilabel:`Salary Structure`: Select a salary structure the rule applies to from the drop-down
-  menu, or enter a new one. This field is required.
-- :guilabel:`Active`: Enable this toggle so the rule is available for use. Disable the toggle to
-  continue to show it on the payslip, but skip the computation.
-- :guilabel:`Appears on payslip`: Disabling the toggle will still show the rule on the payslip, it
-  will just not be computed.
-- :guilabel:`View on Employer Cost Dashboard`: Tick the checkbox to have the rule appear on the
-  *Employer Cost* report, located on the *Payroll* app dashboard.
-- :guilabel:`View on Payroll Reporting`: Tick the checkbox to have the rule appear on payroll
-  reports.
+*: means this is required
 
-.. image:: salaries/new-rule.png
-   :alt: Enter the information for the new rule on the new rule form.
+- :guilabel:`Rule Name`: Enter a name for the rule. This is the name displayed in the payslip.
+- :guilabel:`Code`: Enter a code to be used for the new rule. This is case sensitive and is used as
+  the rule ID.
+- :guilabel:`Category`: Using the drop-down menu, select the category the rule applies to, or enter
+  a new category. The category is used to group rules, and access their total sum.
+- :guilabel:`Salary Structure`: Using the drop-down menu, select the salary structure the rule
+  applies to, or enter a new one.
+- :guilabel:`Sequence`: Enter a number indicating *when* the rule is calculated, in the sequence of
+  all other rules. Rules are processed one after another based on their sequence number. Rules with
+  a lower sequence number are calculated first, and their results can be used by rules with a higher
+  sequence number.
+- :guilabel:`Appears on Payslip`: Tick the checkbox to have the rule visible on the payslip PDF,
+  which is available to employees.
+- :guilabel:`Contributes to Employer Cost`: Tick the checkbox to have the rule used to compute the
+  *employer cost* of a payslip.
 
 General tab
 -----------
@@ -216,41 +214,164 @@ General tab
 Conditions
 ~~~~~~~~~~
 
-- :guilabel:`Condition Based on`: Select from the drop-down menu whether the rule is
-  :guilabel:`Always True` (always applies), a :guilabel:`Range` (applies to a specific range, which
-  is entered beneath the selection), :guilabel:`Other Input` (the condition is entered beneath the
-  field), or a :guilabel:`Python Expression` (the code is entered beneath the selection). This field
-  is required.
+- :guilabel:`Condition Based on`: Using the drop-down menu, select if the rule is calculated and
+  displayed as a line in the payslip form view. Choose from one of the following options:
+
+  - :guilabel:`Always True`: The rule is always calculated.
+  - :guilabel:`Salary Input`: This introduces a dynamic benefit to the structure. This appears as a
+    field in the Payroll tab of the Employee form, the Inputs tab of the payslip, or both. The value
+    of this field is added to the amount of the rule. If selected, tje following additional fields
+    appear and must be configured:
+
+    - :guilabel:`Input on`: Specify where this field should appear and which object it should belong
+      to, the :guilabel:`Employee`, the :guilabel:`Payslip`, or both. If both are selected, the
+      value on the payslip automatically defaults to the value from the employee record, but it can
+      be overwritten directly on the payslip for that specific payroll run.
+    - :guilabel:`Section`: This groups several inputs into one expandable section on the form view.
+      Only one option is available, by default.
+    - :guilabel:`Unit`: Click the corresponding radio button to determine how the benefit is
+      displayed. The available options are:
+
+      - :guilabel:`Monetary`: A number with currency
+      - :guilabel:`Quantity`: A number
+      - :guilabel:`Percentage`: A number with % sign
+      - :guilabel:`Checkbox`: Indicates boolean values
+
+    - :guilabel:`Input Description`: Enter a short explanation of when the input is applicable.
+    - :guilabel:`Default Value`: Enter the default value, either a monetary amount, quantity, or
+      percentage. This is determined by what is selected for the :guilabel:`Unit`.
+
+      .. note::
+         If :guilabel:`Checkbox` is selected for the :guilabel:`Unit`, this field changes to
+         :guilabel:`Selected by Default`. Tick the checkbox to ......?
+
+     - :guilabel:`Depends On`: Select another rule that has a salary input, and use its value to
+       determine whether this rule should be hidden.
+- :guilabel:`Other Input`: Select this to check if a payslip line exists with the same *type*. When
+  selected, a :guilabel:`Condition Other Input` field appears. Using the drop-down menu, select the
+  type of input this rule is based on, such as :guilabel:`Deduction`, :guilabel:`Reimbursement`,
+  etc.
+- :guilabel:`Python Expression`: When selected, enter a python script on the left side to calculate
+  more complex conditions. This script is evaluated using the local dictionary. The right side lists
+  the :guilabel:`Available variables` and the :guilabel:`Output:`.
+
+  - :guilabel:`Available variables`:
+
+    - :guilabel:`payslip`: hr.payslip object
+    - :guilabel:`employee`: hr.employee object
+    - :guilabel:`version`: hr.version object
+    - :guilabel:`result_rules`: dictionary containing the rules amounts, quantities, rates and totals
+      (previously computed).
+    - :guilabel:`categories`: dictionary containing the computed salary rule categories (sum of amount
+      of all rules belonging to that category):
+
+      - :guilabel:`total`: rule total
+      - :guilabel:`amount`: rule amount
+      - :guilabel:`quantity`: rule quantity
+      - :guilabel:`rate`: rule rate
+      - :guilabel:`ytd`: rule year to date value
+
+    - :guilabel:`worked_days`: dictionary containing the computed worked days, where each key is a
+      work entry type code and each value is a `worked_days`` object. This object contains many
+      variables, with the most important ones being:
+
+      - :guilabel:`number_of_days`: number of days registered in the payslip duration with this work
+        entry type
+      - :guilabel:`number_of_hours`: number of hours registered in the payslip duration with this work
+        entry type
+      - :guilabel:`is_paid`: whether or not this work entry type added as unpaid work entry on this
+        payslip structure
+
+    - :guilabel:`inputs`: dictionary containing the computed inputs Where key is the other input type
+      code and value is the sum of the payslip input lines with the same code.
+
+  - :guilabel:`Output`:
+
+    - :guilabel:`result`: boolean True if the rule should be calculated, False otherwise
+
+- :guilabel:`Domain`: Domain for the payslip object. If the payslip matches the domain filter (the
+  :guilabel:`Applicability Domain`), the rule is applied.
 
 Computation
 ~~~~~~~~~~~
 
-- :guilabel:`Amount Type`: Select from the drop-down menu whether the amount is a :guilabel:`Fixed
-  Amount`, a :guilabel:`Percentage (%)`, :guilabel:`Other Input`, or a :guilabel:`Python Code`.
-  Depending on what is selected, the fixed amount, percentage, other input, or Python code needs to
-  be entered next. This field is required.
+This section determines the final value of the rule, which consist of the base amount, the quantity,
+and the rate. The total of the rule is `total = amount * quantity * (rate/100)`.
 
-Company contribution
-~~~~~~~~~~~~~~~~~~~~
+Select from the following choices:
 
-- :guilabel:`Partner`: If another company financially contributes to this rule, select the company
-  from the drop-down menu.
+- :guilabel:`Percentage (%)`: you define the values for the total calculation
+- :guilabel:`Percentage based on`: python expression evaluated using the localdict and its value is assigned to the rule amount
+- :guilabel:`Quantity`: python expression evaluated using the localdict and its value is assigned to the rule quantity
+Percentage (%): Decimal number which is assigned to the rule rate
+Fixed Amount: you define only  amount and quantity with 100% rate
+Quantity: python expression evaluated using the localdict and its value is assigned to the rule quantity
+Fixed Amount: Decimal number which is assigned to the rule amount
+Other Input: Select other input type to fetch the rule amount from the payslip input lines that has the same other input type with rate of 100% and quantity of 1.0
+:guilabel:`Python Code`: This is the more complex version of Percentage Where you can write a whole python script which will be evaluated using the local dict
+ Available variables:
+payslip: hr.payslip object
+employee: hr.employee object
+version: hr.version object
+result_rules: dict containing the rules amounts, quantities, rates and totals (previously computed) where the key is the rule code and the value is dict with the following keys
+total: rule total
+amount: rule amount
+quantity: rule quantity
+rate: rule rate
+ytd: rule year to date value
+categories: dict containing the computed salary rule categories (sum of amount of all rules belonging to that category) where key is the category code and value is the sum of the rules total values
+worked_days: dict containing the computed worked days where key is the work entry type code and value is the worked_days object contain many variables but most important ones are
+number_of_days: number of days registered in the payslip duration with this work entry type
+number_of_hours: number of hours registered in the payslip duration with this work entry type
+is_paid: whether or not this work entry type added as unpaid work entry on this payslip structure
+inputs: dict containing the computed inputs Where key is the other input type code and value is the sum of the payslip inputlines with the same code.
+Output:
+result: float, base amount of the rule
+result_rate: float, which defaults to 100.0 (%).
+result_qty: float, quantity, which defaults to 1.
+result_name: string, name of the line, which defaults to the name field of the salary rule (useful if the name depends or should depend on something computed in the rule).
+Company Contribution
+Eventual third party involved in the salary payment of the employees.
 
-Description tab
----------------
+Display tab:
+This determines the appearance of the rule on the payslip pdf available to the employee
+Visual properties: this define the rule astatics
+Color
+Title
+Indented
+Space Above
+Bold
+Underline
+Italic
+Description: this is showed below the rule name
 
-Provide any additional information in this tab to help clarify the rule. This tab only appears in
-the rule form.
+Accounting tab:
+Only available if accounting module is installed
 
-Accounting tab
---------------
+Debit Account: Select the debit account from the drop-down menu the rule affects.
 
-- :guilabel:`Debit Account`: Select the debit account from the drop-down menu the rule affects.
-- :guilabel:`Credit Account`: Select the credit account from the drop-down menu the rule affects.
-- :guilabel:`Split account line based on name`: Tick the checkbox to split the accounting entry
-  according to the payslip line name.
-- :guilabel:`Not computed in net accountability`: If checked, the amount of the rule is shown
-  independently from the net salary, to allow for better reporting in the **Accounting** app.
+Credit Account: Select the credit account from the drop-down menu the rule affects.
+
+Split on names: Enable this option to split the accounting entries for this rule according to the payslip line name. It could be useful for deduction/reimbursement or salary adjustments for instance.
+
+Excluded from Net: If checked, the result of this rule will not be taken into account in the Net salary rule in the journal entries. A specific debit/credit account should be set to consider it independently.
+
+Set employee on account line: Enable this option to set the employee on the journal items of the payslips.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .. _payroll/rule-parameters:
 
