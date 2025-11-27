@@ -1143,10 +1143,12 @@ This command upgrades all selected modules straight away.
 .. option:: modules
 
    List of modules you want to upgrade.
+   Use ``base`` or ``all`` for all installed modules.
 
 .. option:: --outdated
 
    Only update modules that have a newer version on disk.
+   If ``all`` is used as ``modules`` argument, this applies to all installed modules.
 
 
 .. _reference/cmdline/module`u/forcedemo:
