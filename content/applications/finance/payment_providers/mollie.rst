@@ -4,28 +4,30 @@ Mollie
 
 `Mollie <https://www.mollie.com/>`_ is an online payments platform established in the Netherlands.
 
-Configuration
-=============
+.. _payment_providers/mollie/configure_dashboard:
+
+Mollie configuration
+====================
+
+#. `Create a Mollie account
+   <https://my.mollie.com/dashboard/signup>`_ if necessary
+   and log in to the `Mollie Dashboard <https://my.mollie.com/dashboard/login>`_.
+#. Go to :menuselection:`Payments` in the top menu, then click :guilabel:`API keys`.
+#. :guilabel:`Copy` the :guilabel:`Live API Key` (or the :guilabel:`Test API Key` if you
+   wish to test the integration without affecting live transactions) and save it for the
+   :ref:`payment_providers/mollie/configure_odoo` step.
+
+.. _payment_providers/mollie/configure_odoo:
+
+Odoo configuration
+==================
+
+#. :ref:`Navigate to the payment provider Mollie <payment_providers/add_new>`
+#. Fill in the :guilabel:`API Key` with the value :ref:`previously saved
+   <payment_providers/mollie/configure_dashboard>`.
+#. Configure the remaining options as needed.
+#. Set the :guilabel:`State` field to :guilabel:`Enabled` (or :guilabel:`Test Mode` if you
+   want to :ref:`test the integration without affecting live transactions <payment_providers/test-mode>`).
 
 .. seealso::
-   - :ref:`payment_providers/add_new`
-
-Credentials tab
----------------
-
-Odoo needs your **API Credentials** to connect with your Mollie account, which comprise:
-
-- **API Key**: The test or live API Key depending on the configuration of the provider.
-
-You can copy your credentials from your Mollie account, and paste them in the related fields under
-the **Credentials** tab.
-
-To retrieve your API key, log into your Mollie account, go to
-:menuselection:`Developers --> API keys`, and copy your Test or Live **API Key**.
-
-.. important::
-   If you are trying Mollie as a test, with the Test API key, change the **State** to *Test Mode*.
-   We recommend doing this on a test Odoo database, rather than on your main database.
-
-.. seealso::
-   - :doc:`../payment_providers`
+   :doc:`../payment_providers`
