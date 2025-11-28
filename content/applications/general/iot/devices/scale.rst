@@ -7,7 +7,7 @@ Connect a scale
    <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2014.096.01.0107.01.ENG>`_
    to use a scale as an integrated device.
 
-To connect a scale to the IoT system, use a USB cable. In some cases, you may need a serial-to-US
+To connect a scale to the IoT system, use a USB cable. In some cases, you may need a serial-to-USB
 adapter to complete the connection. If the scale is `compatible with an IoT system
 <https://www.odoo.com/page/iot-hardware>`_, no additional setup is required; the scale is
 automatically detected as soon as it is connected. If the scale is not detected, reboot the IoT box
