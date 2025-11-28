@@ -46,7 +46,7 @@ Version
    it can be used in combination with any command available, and it displays
    the options of the current command.
 
-   If no command is used, it will act as per the `help` command 
+   If no command is used, it will act as per the `help` command
    :ref:`below <reference/cmdline/help>`.
 
 .. option:: --version
@@ -757,7 +757,7 @@ involves starting the server, the configuration file options do apply.
 .. program:: odoo-bin db
 
 This command lets you manage databases through a command-line interface. The operations are
-specified using subcommands. 
+specified using subcommands.
 
 For all subcommands, these options to configure your environment are available:
 
@@ -1005,7 +1005,7 @@ existing terms. All the files must refer to the specified language.
 
 .. option:: files
 
-   | List of files to be imported. 
+   | List of files to be imported.
    | Allowed extensions: `.po`, `.csv`.
 
 .. option:: -l,--language
