@@ -66,7 +66,10 @@ Stripe configuration
 #. Go to `the API keys page on Stripe <https://dashboard.stripe.com/account/apikeys>`_, or log into
    your Stripe dashboard and go to :menuselection:`Developers --> API Keys`.
 #. In the :guilabel:`Standard keys` section, copy the :guilabel:`Publishable key` and the
-   :guilabel:`Secret key` and save them for later.
+   :guilabel:`Secret key` and save them for the :ref:`payment_providers/stripe/odoo-configuration`
+   step.
+
+.. _payment_providers/stripe/odoo-configuration:
 
 Odoo configuration
 ------------------
