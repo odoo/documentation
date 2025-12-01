@@ -45,7 +45,7 @@ Instructions often include:
 
 - A purpose, or what the topic covers
 - Rules or constraints for the agent to follow when assigned this topic
-- Step-by-step workflows for how to complete a specfic action
+- Step-by-step workflows for how to complete a specific action
 - Technical details needed to complete any actions
 
 Agent structure
@@ -58,15 +58,18 @@ Topics
 
 *Topics* are a collection of instructions and :ref:`tools <ai/tools>` that define how an agent
 behaves within a specific context. Essentially, the topics define what an agent can do within the
-database.
+database. Topics guide conversations, telling the agent what it can do, how it can do it, and when
+it should do it.
 
 .. important::
    If an agent is not assigned any Topics, it is only able to provide information, not complete
    tasks or make changes to the database.
 
-Topics guide conversations, telling the agent what it can do, how it can do it, and when it should
-do it. Within each topic includes a detailed prompt, which provides the agent with more in-depth
-instructions on how to perform the
+Within each topic includes a detailed prompt, which provides the agent with more in-depth
+instructions on how to perform the tasks associated with that topic, define the boundaries of its
+behavior, and determine how it should interpret user intent. These prompts ensure that the agent
+follows a consistent reasoning pattern and uses the appropriate tools to generate accurate,
+context-aware responses.
 
 The following topics are preconfigured in the **AI** app:
 
