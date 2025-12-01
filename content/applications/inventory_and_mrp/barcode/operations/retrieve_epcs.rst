@@ -18,9 +18,6 @@ and used throughout the inventory process.
 .. seealso::
     Set up :doc:`../setup/rfid`
 
-.. important::
-    If using Odoo 18, |GS1|'s Encoder/Decoder tool **must** be used to retrieve EPCs.
-
 .. _barcode/operations/retrieve_epcs_gs1:
 
 Retrieving EPCs from GS1
@@ -36,6 +33,30 @@ To retrieve an EPC to encode on a tag, use `GS1's EPC Encoder/Decoder tool
 
 .. image:: retrieve_epcs/retrieve-from-gs1.png
    :alt: Complete the fields of the EPC Encoder/Decoder tool.
+
+.. _barcode/operations/retrieve_epcs_odoo:
+
+Generating EPCs in Odoo
+=======================
+
+Generate EPCs for tracked products directly in Odoo. Products should be tracked by serial number,
+but this is not a requirement. A GTIN-14-compatible
+
+To retrieve the EPCs for a receipt of products:
+
+#. On the receipt, click the :icon:`fa-list` :guilabel:`Detailed Operations` button next to the
+   :guilabel:`Quantity` field. The :guilabel:`Detailed Operations` box opens.
+#. From here, specify or generate serial numbers for the products. Be sure to save the serial
+   numbers.
+#. :guilabel:`Validate` the receipt.
+#. Click the :guilabel:`Moves` smart button. Select all received items, then click the
+   :icon:`fa-cog` :guilabel:`Actions` button, then select :guilabel:`Export`.
+#. On the :guilabel:`Export Data` screen, select :guilabel:`Electronic Product Code` from the list
+   of available fields, then click :guilabel:`Export`. The file downloads to the device. All of the
+   EPCs for the receipt are included in that file.
+
+.. note::
+    EPCs can be exported from any :guilabel:`Moves` list, not just receipts.
 
 .. _barcode/operations/write_epcs:
 
