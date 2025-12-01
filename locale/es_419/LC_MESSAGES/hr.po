@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-11-18 11:05+0000\n"
-"PO-Revision-Date: 2025-11-25 20:10+0000\n"
+"PO-Revision-Date: 2025-12-01 20:10+0000\n"
 "Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-18-doc/hr/es_419/>\n"
@@ -15627,7 +15627,7 @@ msgstr ":doc:`payroll/contracts`"
 
 #: ../../content/applications/hr/payroll.rst:142
 msgid ":doc:`payroll/salaries`"
-msgstr ""
+msgstr ":doc:`payroll/salaries`"
 
 #: ../../content/applications/hr/payroll.rst:143
 msgid ":doc:`payroll/work_entries`"
@@ -15635,7 +15635,7 @@ msgstr ":doc:`payroll/work_entries`"
 
 #: ../../content/applications/hr/payroll.rst:144
 msgid ":doc:`payroll/working_schedules`"
-msgstr ""
+msgstr ":doc:`payroll/working_schedules`"
 
 #: ../../content/applications/hr/payroll.rst:145
 msgid ":doc:`payroll/time_off_to_report`"
@@ -15659,7 +15659,7 @@ msgstr ":doc:`payroll/commissions`"
 
 #: ../../content/applications/hr/payroll.rst:150
 msgid ":doc:`payroll/payroll_analysis`"
-msgstr ""
+msgstr ":doc:`payroll/payroll_analysis`"
 
 #: ../../content/applications/hr/payroll.rst:151
 msgid ":doc:`payroll/headcount`"
@@ -17622,7 +17622,7 @@ msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_analysis.rst:76
 msgid ":doc:`../../essentials/reporting`"
-msgstr ""
+msgstr ":doc:`../../essentials/reporting`"
 
 #: ../../content/applications/hr/payroll/payroll_localizations.rst:5
 msgid "Payroll localizations"
@@ -32665,6 +32665,12 @@ msgid ""
 "input types <payroll/other-input>`. Together, these determine how each "
 "employee's pay is calculated."
 msgstr ""
+"En Odoo puedes calcular y determinar los sueldos mediante cinco factores: "
+":ref:`tipos de estructura salarial <payroll/structure-types>`, :ref:`"
+"estructuras <payroll/structures>` salariales, :ref:`reglas <payroll/rules>`, "
+":ref:`parámetros de regla <payroll/rule-parameters>` y :ref:`otros tipos de "
+"entradas <payroll/other-input>`. Estos factores determinan cómo calcular el "
+"sueldo de cada empleado."
 
 #: ../../content/applications/hr/payroll/salaries.rst:10
 msgid ""
@@ -32673,6 +32679,11 @@ msgid ""
 "define how specific amounts are calculated. Additional inputs, (such as "
 "bonuses or deductions) can also be included to adjust the final salary."
 msgstr ""
+"Cada *tipo de estructura* contiene una o más *estructuras* dentro de él. "
+"Cada *estructura* contiene un conjunto de *reglas*,y cada *regla* usa "
+"*parámetros* para definir el cálculo de cada monto específico. También "
+"puedes incluir entradas adicionales, como bonos o deducciones, para ajustar "
+"el salario final."
 
 #: ../../content/applications/hr/payroll/salaries.rst:14
 msgid ""
@@ -32681,6 +32692,10 @@ msgid ""
 "structure, rules, and parameters from the employee's assigned structure type "
 "to determine their total pay."
 msgstr ""
+"Al calcular los recibos de nómina, Odoo calcula el tiempo trabajado del "
+"empleado con sus :doc:`entradas de trabajo <work_entries>` y luego aplica el "
+"tipo de estructura, las reglas y los parámetros que tiene asignados para "
+"calcular su salario total."
 
 #: ../../content/applications/hr/payroll/salaries.rst:21
 msgid "Structure types"
@@ -32694,6 +32709,12 @@ msgid ""
 "individual structures within them, each containing a set of rules for "
 "processing a timesheet entry."
 msgstr ""
+"En Odoo, un *tipo de estructura* se encarga de agrupar las estructuras "
+"salariales relacionadas. Cuando un contrato especifica un tipo de "
+"estructura, **solo** las estructuras dentro de ese tipo son las que se "
+"utilizarán para calcular el pago del empleado. Cada tipo de estructura "
+"incluye estructuras individuales y cada una contiene un conjunto de reglas "
+"para procesar una entrada en el registro de horas."
 
 #: ../../content/applications/hr/payroll/salaries.rst:28
 msgid ""
@@ -32701,6 +32722,10 @@ msgid ""
 "often employees are paid, their working hours, the default salary structure, "
 "and whether wages are fixed (salary-based) or variable (hourly-based)."
 msgstr ""
+"Los tipos de estructura definen los aspectos clave de la configuración de "
+"nómina, como la frecuencia de pago, las horas de trabajo, la estructura "
+"salarial predeterminada y si los sueldos son fijos (basados en salario) o "
+"variables (basados en horas)."
 
 #: ../../content/applications/hr/payroll/salaries.rst:33
 msgid ""
@@ -32710,18 +32735,27 @@ msgid ""
 "the rules **only** for the end of year bonus. Both belong to the same "
 "`Employee` structure type."
 msgstr ""
+"Un tipo de estructura llamado `Empleado` incluye dos estructuras distintas: "
+"una estructura de `pago regular`, que tiene todas las reglas para procesar "
+"el pago regular, y una estructura de `bono de fin de año`, que solo tiene "
+"las reglas de este bono. Ambas pertenecen al mismo tipo de estructura, que "
+"es `Empleado`."
 
 #: ../../content/applications/hr/payroll/salaries.rst:38
 msgid ""
 "View existing *structure types* by navigating to :menuselection:`Payroll app "
 "--> Configuration --> Structure Types`."
 msgstr ""
+"Para ver los *tipos de estructura* existentes, ve a :menuselection:`Nómina --"
+"> Configuración --> Tipos de estructura`."
 
 #: ../../content/applications/hr/payroll/salaries.rst:41
 msgid ""
 "Two default structure types are preconfigured in Odoo: :guilabel:`Employee` "
 "and :guilabel:`Worker`."
 msgstr ""
+"Odoo cuenta con dos tipos de estructura preconfigurados: :guilabel:`Empleado`"
+" y :guilabel:`Trabajador`."
 
 #: ../../content/applications/hr/payroll/salaries.rst:43
 msgid ""
@@ -32730,6 +32764,11 @@ msgid ""
 "and :guilabel:`Worker` is typically used for employees paid by the hour, so "
 "the wage type is :guilabel:`Hourly Wage`."
 msgstr ""
+"Por lo general, :guilabel:`Empleado` se usa para los empleados que tienen un "
+"sueldo fijo, por eso el :guilabel:`tipo de salario predeterminado` es "
+":guilabel:`Salario fijo`, y :guilabel:`Trabajador` se usa para los empleados "
+"que cobran por hora, así que el tipo de salario es :guilabel:`Salario por "
+"hora`."
 
 #: ../../content/applications/hr/payroll/salaries.rst:48
 msgid ""
@@ -32737,6 +32776,9 @@ msgid ""
 "<payroll_localizations>`, it is recommended to use the structure in the "
 "corresponding country localization document."
 msgstr ""
+"Si usas una :doc:`localización de nómina <payroll_localizations>` específica "
+"del país, te recomendamos usar la estructura indicada en el documento de "
+"localización correspondiente."
 
 #: ../../content/applications/hr/payroll/salaries.rst:-1
 msgid "List of all currently configured structure types available to use."
@@ -32753,6 +32795,10 @@ msgid ""
 "to :menuselection:`Payroll app --> Configuration --> Structure Types` and "
 "click :guilabel:`New` to create a custom structure type."
 msgstr ""
+"Si los tipos de estructura predeterminados no cumplen con las necesidades de "
+"la empresa, ve a :menuselection:`Nómina --> Configuración --> Tipos de "
+"estructura` y haz clic en :guilabel:`Nuevo` para crear un tipo de estructura "
+"personalizado."
 
 #: ../../content/applications/hr/payroll/salaries.rst:63
 msgid ""
@@ -32760,6 +32806,9 @@ msgid ""
 "laws are accounted for. Confirm with the accounting department when "
 "configuring payroll structures, to ensure all requirements are met."
 msgstr ""
+"Al crear un tipo de estructura salarial, revisa que cumpla con todas las "
+"leyes locales y nacionales. Comunícate con tu departamento de contabilidad "
+"para que puedas configurar las estructuras de nómina de forma correcta."
 
 #: ../../content/applications/hr/payroll/salaries.rst:67
 msgid "Proceed to enter the following information in the fields:"
@@ -33374,13 +33423,13 @@ msgstr ""
 "Haz clic en el botón :guilabel:`Nuevo` para crear un nuevo tipo de deducción "
 "salarial. Esta acción abrirá un formulario vacío de :guilabel:`Otros tipos "
 "de entrada`. Escribe la :guilabel:`descripción` del nuevo tipo de deducción "
-"salarial en el campo correspondiente y luego selecciona la "
-"casilla :guilabel:`Disponible en retenciones` para indicar que se puede usar "
-"como embargo salarial. Ingresa el :guilabel:`código` que se usará en las "
-"reglas salariales para calcular los recibos de nómina. Por último, si el "
-"tipo de embargo **solo** debe aplicarse en una estructura de nómina "
-"específica, usa el menú desplegable del campo :guilabel:`Disponible en "
-"estructura` y selecciona la estructura deseada."
+"salarial en el campo correspondiente y luego selecciona la casilla "
+":guilabel:`Disponible en deducciones` para indicar que se puede usar como un "
+"embargo salarial. Ingresa el :guilabel:`código` que se usará en las reglas "
+"salariales para calcular los recibos de nómina. Por último, si el tipo de "
+"embargo **solo** debe aplicarse en una estructura de nómina específica, usa "
+"el menú desplegable del campo :guilabel:`Disponible en estructura` y "
+"selecciona la estructura deseada."
 
 #: ../../content/applications/hr/payroll/salary_attachments.rst:60
 msgid "Create a salary attachment"
