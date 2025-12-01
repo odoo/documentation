@@ -57,10 +57,10 @@ to make changes from the GitHub interface.
    source code of its products, and this is where you will submit your changes.
 #. `Generate a new SSH key and register it on your GitHub account
    <https://docs.github.com/en/authentication/connecting-to-github-with-ssh>`_.
-#. Go to `github.com/odoo/documentation <https://github.com/odoo/documentation>`_ and click on the
+#. **Skip this step if you work at Odoo.** Go to `github.com/odoo/documentation <https://github.com/odoo/documentation>`_ and click on the
    :guilabel:`Fork` button in the top right corner to create a fork (:dfn:`your own copy`) of the
    repository on your account. This creates a copy of the codebase to which you can make changes
-   without affecting the main codebase. Skip this step if you work at Odoo.
+   without affecting the main codebase.
 #. .. include:: install_git.rst
 #. Configure Git to identify yourself as the author of your future contributions. Enter the same
    email address you used to register on GitHub.
@@ -77,9 +77,9 @@ to make changes from the GitHub interface.
       $ git clone git@github.com:odoo/documentation.git
       $ cd documentation
 
-#. Configure Git to push changes to your fork rather than to the main codebase. In the commands
+#. **Skip this step if you work at Odoo.** Configure Git to push changes to your fork rather than to the main codebase. In the commands
    below, replace `<your_github_account>` with the name of the GitHub account on which you created
-   the fork. Skip this step if you work at Odoo.
+   the fork.
 
    .. code-block:: console
 
