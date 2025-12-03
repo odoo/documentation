@@ -11,6 +11,8 @@ processed, and disbursed back to the employee for reimbursement.
 .. seealso::
    `Odoo Expenses: product page <https://www.odoo.com/app/expenses>`_
 
+.. _expenses/expense-categories:
+
 Set expense categories
 ======================
 
