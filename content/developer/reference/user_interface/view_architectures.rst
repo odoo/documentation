@@ -3334,6 +3334,17 @@ Their root element is ``<calendar>``. Available attributes on the root node are:
    :type: bool
    :default: `True`
 
+.. attribute:: schedule
+   :noindex:
+
+   If set to `True`, non-scheduled events (events which have their start date and
+   stop date unset) will appear in the side-panel so that the user can drag and drop
+   these events into the calendar in order to schedule them instantaneously.
+
+   :requirement: Optional
+   :type: bool
+   :default: `False`
+
 .. attribute:: event_open_popup
    :noindex:
 
