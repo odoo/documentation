@@ -16,10 +16,9 @@ IoT box SSH connection
 To provide an :abbr:`SSH (secure shell protocol)` connection to an IoT box, you must generate a
 password:
 
-#. Access the IoT box's homepage by opening the IoT app and clicking the IP address displayed
-   on the IoT box's card.
-#. Click the :icon:`fa-cogs` (:guilabel:`cogs`) button at the top-right, then :guilabel:`Remote
-   Debug`.
+#. Open the IoT app, click the relevant IoT box's card, and click :guilabel:`Homepage`.
+#. On the IoT system's homepage, click the :icon:`fa-cogs` (:guilabel:`cogs`) button at the
+   top-right, then :guilabel:`Remote Debug`.
 #. In the :guilabel:`Remote Debugging` popup that opens, click :guilabel:`Generate` and save the
    password securely. Once you close the popup, the password will no longer be available.
 
