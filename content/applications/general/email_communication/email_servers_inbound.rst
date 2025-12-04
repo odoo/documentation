@@ -201,6 +201,15 @@ Redirections
 If the database is hosted on **Odoo Online** or **Odoo.sh**, using redirections is recommended. They
 allow messages to be received without delay in the database.
 
+.. warning::
+   When configuring email redirections with Microsoft 365 (Exchange Online), be aware that certain
+   technical limitations may affect your setup. Some users have reported that Microsoft 365 does not
+   support true redirection and only allows forwarding, which may not behave as needed for Odoo's
+   email routing.
+
+   For more information on Microsoft Exchange configuration, visit `Microsoft Learn
+   <https://learn.microsoft.com/en-us/exchange/exchange-online>`_.
+
 It is mandatory to redirect the catchall and bounce address to the Odoo subdomain of the database.
 Every other alias used must be redirected as well.
 
