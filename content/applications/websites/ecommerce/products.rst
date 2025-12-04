@@ -182,9 +182,6 @@ and select the relevant media. In the :guilabel:`Customize` tab, use the followi
 - :guilabel:`Extra Images`: :guilabel:`Add` more extra images or videos (including via URL) or
   :guilabel:`Remove all`.
 
-.. note::
-   Images must be in PNG or JPG format and with a minimum size of 1024x1024 to trigger the zoom.
-
 .. _ecommerce/products/products-block:
 
 Products block
