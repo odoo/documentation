@@ -533,6 +533,8 @@ X-Sendfile and X-Accel).
          location /web/filestore {
              internal;
              alias /path/to/odoo/data-dir/filestore;
+             add_header Content-Security-Policy $upstream_http_content_security_policy;
+             add_header X-Content-Type-Options nosniff;
          }
 
      In case you don't know what is the path to your filestore, start Odoo with the
