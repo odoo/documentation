@@ -81,7 +81,7 @@ price. The following options are available:
   tax-excluded sales price
 - :ref:`Percentage of Price Tax Included <taxes/computation/percentage-of-price-tax-included>`: a
   percentage of the tax-included total
-- :ref:`Python Code <taxes/computation/python-code>`: a custom user-defined formula
+- :ref:`Python Code <taxes/computation/python-code>`: a custom, user-defined formula
 
 .. _taxes/computation/group-of-taxes:
 
@@ -225,6 +225,10 @@ Python code
    can be defined as a :ref:`Fixed <taxes/computation/fixed>` tax. Doing so is strongly recommended
    over defining a :guilabel:`Python Code` tax.
 
+.. note::
+   To use :guilabel:`Custom Formula` taxes, :ref:`install <general/install>` the :guilabel:`Define
+   Taxes as Python Code` (`account_python_tax`) module.
+
 A tax defined as :guilabel:`Python Code` consists of two snippets of Python code that are executed
 in a local environment that can access the unit price, quantity, product, and partner.
 :guilabel:`Python Code` defines the amount of the tax, and :guilabel:`Applicable Code` defines
@@ -367,7 +371,7 @@ Included in price
 
 With this option activated, the tax will treat the sales price on which it is applied as a total
 including the tax amount. The tax computation will split the sales price into a base amount and a
-tax amount. This makes it suitable for B2C sales in most countries where prices are quoted
+tax amount. This makes it suitable for B2C sales in most countries, where prices are quoted
 tax-inclusive.
 
 `Total = Sales Price = Computed Tax-Excluded price + Tax`
@@ -387,57 +391,96 @@ tax-inclusive.
    For a guide on configuring tax-excluded and tax-included prices for B2B and B2C customers,
    see :doc:`taxes/B2B_B2C`.
 
-   .. image:: taxes/toggle-button.png
-
 .. _taxes/base-subsequent:
 
 Affect base of subsequent taxes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If this setting is enabled, any subsequent tax applied on the same product line that has
-:ref:`taxes/base-affected` will be based on a modified sales price. The exact behavior depends on
-whether the tax with :guilabel:`Affect base of subsequent taxes` is :ref:`taxes/included-in-price`
-or not.
+If this setting is enabled, the tax amount will be included in the base of any subsequent tax
+applied on the same product line that has its :ref:`taxes/base-affected`.
 
 .. tabs::
    .. tab:: Tax-excluded
-      If :guilabel:`Included in Price` is disabled, subsequent taxes with :guilabel:`Base affected
-      by preceding taxes` will be based on a modified sales price equal to the original sales price
-      plus the tax amount.
+      If :guilabel:`Affect base of subsequent taxes` is enabled and :guilabel:`Included in Price` is
+      disabled, subsequent taxes with :guilabel:`Base affected by preceding taxes` will be based on
+      a modified sales price equal to the original sales price plus the tax amount.
 
       .. example::
          A product has a sales price of $1000, and we apply a 10% :guilabel:`Percentage of Price`
-         tax with :guilabel:`Affect base of subsequent taxes`. Any subsequent tax with
+         tax where the :guilabel:`Affect base of subsequent taxes` setting is enabled and the
+         :guilabel:`Included in Price` setting is disabled. Any subsequent tax with its
          :guilabel:`Base affected by preceding taxes` will be based on a modified sales price of
          $1100.
 
    .. tab:: Tax-included
-      If :guilabel:`Included in Price` is enabled, subsequent taxes with :guilabel:`Base affected
-      by preceding taxes` will be based on a modified sales price equal to the original sales price
-      minus the tax amount.
+      If both :guilabel:`Affect base of subsequent taxes` and :guilabel:`Included in Price` are
+      enabled, subsequent taxes with :guilabel:`Base affected by preceding taxes` will be based on
+      the original sales price.
 
       .. example::
-         A product has a sales price of $1100, and we apply a 10% :guilabel:`Percentage of Price`
-         tax with :guilabel:`Included in Price` and :guilabel:`Affect base of subsequent taxes`.
-         Any subsequent tax with :guilabel:`Base affected by preceding taxes` will be based on a
-         modified sales price of $1000.
+         A product has a sales price of $1000, and we apply a 10% :guilabel:`Percentage of Price`
+         tax where the :guilabel:`Included in Price` and :guilabel:`Affect base of subsequent taxes`
+         settings are enabled. Any subsequent tax with its :guilabel:`Base affected by preceding
+         taxes` will be based on the original sales price of $1000.
+
+If this setting is disabled, the tax amount will not be included in the base of any subsequent tax
+applied on the same product line.
+
+.. tabs::
+   .. tab:: Tax-excluded
+      If both :guilabel:`Affect base of subsequent taxes` and :guilabel:`Included in Price` are
+      disabled, subsequent taxes with :guilabel:`Base affected by preceding taxes` will be based on
+      the original sales price.
+
+      .. example::
+         A product has a sales price of $1000, and we apply a 10% :guilabel:`Percentage of Price`
+         tax where both :guilabel:`Affect base of subsequent taxes` and :guilabel:`Included in
+         Price` settings are disabled. Any subsequent tax with its :guilabel:`Base affected by
+         preceding taxes` will be based on the original sales price of $1000.
+
+   .. tab:: Tax-included
+      If :guilabel:`Affect base of subsequent taxes` is disabled and :guilabel:`Included in Price`
+      if enabled, subsequent taxes with :guilabel:`Base affected by preceding taxes` will be based
+      on a modified sales price equal to the original sales price minus the tax amount.
+
+      .. example::
+         A product has a sales price of $1000, and we apply a 10% :guilabel:`Percentage of Price`
+         tax where :guilabel:`Affect base of subsequent taxes` is enabled and :guilabel:`Included in
+         Price` is disabled. Any subsequent tax with its :guilabel:`Base affected by preceding
+         taxes` will be based on a modified sales price of $909.09.
 
 This setting is considered any time multiple taxes are applied to the same product line, whether
 via a :ref:`group of taxes <taxes/computation>` or multiple taxes added directly to a product line.
 
-.. image:: taxes/subsequent-line.png
-   :alt: The eco-tax is taken into the basis of the 21% VAT tax
-
 .. warning::
-   The order in which you add the taxes on a product line has no effect on how amounts are computed.
-   If you add taxes directly on a product line, only the tax sequence determines the order in which
-   they are applied.
+   The order in which taxes are applied depends only on the order in which they appear in the
+   :guilabel:`Taxes` list, not on the order in which they are added to a product line.
 
-   To reorder the sequence, go to :menuselection:`Accounting --> Configuration --> Taxes`, and drag
-   and drop the lines with the handles next to the tax names.
+   To modify the order, go to :menuselection:`Accounting --> Configuration --> Taxes`, and drag and
+   drop taxes using the handles to the left of the tax names.
 
    .. image:: taxes/list-sequence.png
-      :alt: The taxes' sequence in Odoo determines which tax is applied first
+      :alt: The order of appearance of taxes in the Taxes list determines which tax is applied first
+
+   Regardless of the order in the :guilabel:`Taxes` list, :guilabel:`Tax Excluded` taxes do not
+   affect the base of subsequent :guilabel:`Tax Included` taxes (see the note in
+   :ref:`taxes/base-affected`).
+
+.. example::
+   In the following example:
+
+   - the Ecotax is a :guilabel:`Fixed` tax of €0.90 per unit, with the :guilabel:`Affect base of
+     subsequent taxes` setting enabled.
+   - The 21% VAT tax is a 21% :guilabel:`Percentage of Price` tax with the :guilabel:`Base affected
+     by preceding taxes` setting enabled.
+   - In the :guilabel:`Taxes` list, the 21% VAT tax comes after the Ecotax, as shown in the
+     configuration above.
+
+   When applying both taxes to a product line, the Ecotax amount is added to the basis of the 21%
+   VAT tax.
+
+   .. image:: taxes/subsequent-line.png
+      :alt: The Ecotax is added to the basis of the 21% VAT tax
 
 .. _taxes/base-affected:
 
@@ -449,8 +492,9 @@ determines whether any previous tax that :ref:`affects the base of subsequent ta
 <taxes/base-subsequent>` will modify the sales price that this tax is based on.
 
 .. note::
-   Taxes with :ref:`Included in Price <taxes/included-in-price>` always behave as if this setting is
-   enabled.
+   Taxes with :ref:`Included in Price <taxes/included-in-price>` set to :guilabel:`Tax Included` do
+   not have this setting. Such taxes are never affected by previous :guilabel:`Tax Excluded` taxes,
+   except if they have the :guilabel:`Fixed` :ref:`Tax Computation <taxes/computation>` type.
 
 Extra taxes
 ===========
