@@ -500,9 +500,26 @@ via Codaclean are checked every twelve hours.
 Electronic invoicing
 ====================
 
-Odoo supports the **Peppol BIS Billing 3.0 (UBL)** electronic invoicing format. To enable it for a
+As of 1 January 2026, all Belgian companies must be registered on the :ref:`Peppol
+<accounting/e-invoicing/peppol>` network to send and receive electronic invoices.
+
+The electronic invoicing format on Peppol is **Peppol BIS Billing 3.0 (UBL)**. To enable it for a
 customer, go to :menuselection:`Accounting --> Customers --> Customers`, open their contact form,
 and under the :guilabel:`Accounting` tab, select the :guilabel:`Peppol BIS Billing 3.0` format.
+
+.. important::
+   Belgian regulations require companies to be registered on Peppol using their Belgian **company
+   registry number**. To comply, ensure that:
+
+   - the :guilabel:`Peppol EAS` setting is set to :guilabel:`0208 - Numero d'entreprise /
+     ondernemingsnummber / Unternehmensnummer`
+   - the :guilabel:`Peppol Endpoint` setting is set to the company registry number
+
+   These settings can be found in :menuselection:`Accounting --> Configuration --> Settings`, in the
+   :guilabel:`Peppol Electronic Document Invoicing` section.
+
+   .. image:: belgium/peppol-settings.png
+      :alt: Setting the Peppol EAS in the Accounting settings.
 
 .. seealso::
    :doc:`../accounting/customer_invoices/electronic_invoicing`
