@@ -2,98 +2,55 @@
 Optional products
 =================
 
-The use of optional products is a marketing strategy that involves the cross-selling of products
-along with a core product. The aim is to offer useful and related products to customers, which may
-result in an increased sale.
+The use of optional products is a marketing strategy that involves the cross-selling of useful and
+related products alongside a desired core product. For instance, by configuring optional products, a
+customer could be suggested a mouse and keyboard or an extended warranty when they add a laptop to
+their shopping cart.
 
-For instance, if a customer wants to buy a car, they have the choice to order massaging seats, as
-well, or ignore the offer and simply buy the car. Presenting the choice to purchase optional
-products enhances the customer experience.
+Optional products are automatically suggested during the quotation process whenever an associated
+core product is added to a quote. They are also suggested in eCommerce interactions when a customer
+adds an associated core product to their shopping cart.
 
-Optional products on quotations
-===============================
+.. image:: optional_products/optional-products-quotation.png
+   :alt: Optional products as they appear in quotations
 
-With the Odoo *Sales* application, it is possible to add or modify optional products directly on
-quotations by navigating to the :guilabel:`Optional Products` tab on a quotation form.
-
-.. image:: optional_products/optional-products-tab.png
-   :align: center
-   :alt: How to add optional products to your quotations on Odoo Sales.
-
-To add an optional product(s) to a quotation, click :guilabel:`Add a product` in the
-:guilabel:`Optional Products` tab of a quotation. Doing so reveals a blank field in the
-:guilabel:`Product` column.
-
-When clicked, a drop-down menu with products from the database appear. Select the desired product
-from the drop-down menu to add it as an optional product to the quotation template.
-
-.. tip::
-   If the desired product isn't readily visible, type the name of the desired product in the field,
-   and the option appears in the drop-down menu. Then, select that desired product to add it to the
-   quotation.
+.. image:: optional_products/optional-products-ecommerce.png
+   :alt: Optional products as they appear in eCommerce websites
 
 .. note::
-   When a product is added, the default :guilabel:`Quantity` is `1`, but that can be edited at any
-   time.
+   Optional products are differentiated from accessory products and alternative products by where
+   they appear in the customer's shopping experience.
 
-To delete any line item from the :guilabel:`Optional Products` tab, click the :guilabel:`🗑️ (trash
-can)` icon.
+   - Optional products are suggested when a core product has been added to a cart or a quotation.
+   - Accessory products appear as suggestions when viewing an eCommerce cart.
+   - Alternative products are suggested at the bottom of an eCommerce product page whenever the
+     product page is viewed.
 
-Click the :guilabel:`Preview` button, located in the upper-left corner of the quotation, to reveal a
-preview of the quotation customers would receive, via email, along with the optional products they
-can potentially add to their order, located in the :guilabel:`Options` section.
+Configuring optional products
+=============================
 
-.. image:: optional_products/optional-products-checkout.png
-   :align: center
-   :alt: Preview your quotations on Odoo Sales.
+With the Odoo **Sales** app, it is possible to add optional products directly to product forms. To
+add an optional product to a product form, navigate to :menuselection:`Sales --> Products -->
+Products` and choose a product. Ensure that the product's :guilabel:`Sales` checkbox is checked and
+click the :guilabel:`Sales` tab. Under :guilabel:`UPSELL & CROSS-SELL` section, the
+:guilabel:`Optional Products` drop-down menu allows for optional products to be set. Products will
+be displayed in alphabetical order. If the desired product isn't readily visible, type its name in
+the field to bring it up, then select it to add it as an optional product.
 
-Customers are able to add different optional products to an order by clicking the :guilabel:`🛒
-(shopping cart)` icon, located to the right of the optional product line.
+To delete an optional product from the product form, simply click the :icon:`fa-times`
+:guilabel:`(Delete)` icon.
 
-If a customer selects optional products, these are automatically added to the quotation managed by
-the salesperson.
+.. image:: optional_products/optional-products-product-form.png
+   :alt: The optional products section of product forms in Odoo Sales
 
-When the customer adds an optional product(s) to an order, the salesperson is instantly notified
-about the change, along with any other change the customer makes to an order. This allows
-salespeople to stay up-to-date with everything related to an order in the backend of the *Sales*
-application.
+Additional products can also be added to a core product by clicking :guilabel:`Search more...`. This
+opens the :guilabel:`Search: Optional Products` form, which displays all products in the catalog and
+includes the :guilabel:`New` button to create a new product. Multiple products may be selected as
+optional prodcuts at once when using this form by clicking their checkboxes and then clicking
+:guilabel:`Select`.
 
-Optional products on quotation templates
-========================================
-
-.. note::
-   Be sure to review the :doc:`quote_template` documentation to better understand how quotation
-   templates work before reading the following information.
-
-For quotation templates, just like a typical quotation form, there is also an :guilabel:`Optional
-Products` tab, wherein related products or services can be added to a quotation template.
-
-To add optional products to a quotation template, navigate to :menuselection:`Sales app -->
-Configuration --> Quotation Templates`. Then, either select an existing quotation template to edit,
-or create a new one by clicking :guilabel:`New`.
-
-On the quotation template form, click the :guilabel:`Optional Products` tab. Under the
-:guilabel:`Optional Products` tab, click :guilabel:`Add a line`, and select the desired product to
-add as an optional product to the quotation template.
-
-.. image:: optional_products/optional-products-tab-quotation-template.png
-   :align: center
-   :alt: Preview your quotations on Odoo Sales.
-
-The products added in the :guilabel:`Optional Products` tab are present in the quotation, by
-default, whenever that particular quotation template is used. These products can be removed, and
-additional products can be added, before the quotation is sent to a customer.
-
-.. tip::
-   It's best to offer optional products that would encourage a customer to add additional items to
-   their order, or entice them to purchase a more expensive version of their initially selected
-   product.
-
-   For example, if a customer purchases a wooden chair, some optional products could be: a warranty
-   on that chair and/or a wooden chair with leather seats.
-
-.. note::
-   There is no limit to how many optional products can be added to a quotation template.
+.. image:: optional_products/search-optional-products-form.png
+   :alt: The Search: Optional Products form accessed by clicking Search more...
 
 .. seealso::
    :doc:`quote_template`
