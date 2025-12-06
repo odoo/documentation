@@ -6,20 +6,18 @@ Sendcloud is a shipping service aggregator that facilitates the integration of E
 carriers with Odoo. Once integrated, users can select shipping carriers on inventory operations in
 their Odoo database.
 
-.. seealso::
-   `Sendcloud integration documentation <https://support.sendcloud.com/hc/en-us/articles/
-   360059470491-Odoo-Native-integration>`_
-
 Setup in Sendcloud
 ==================
 
 Create an account and activate carriers
 ---------------------------------------
 
-To get started, go to `Sendcloud's platform <https://sendcloud.com/
-?utm_source=odoo&utm_medium=partnerships&utm_campaign=partner_integrations_page>`_ to configure the
-account and generate the connector credentials. Log in with the Sendcloud account, or create a new
-one if needed.
+To get started, `create or log in to a Sendcloud account <https://account.sendcloud.com/signup/
+?utm_source=odoo&utm_medium=partnerships&utm_campaign=partner_integrations_page>`_.
+
+On the Sendcloud platform, follow the `Sendcloud integration documentation
+<https://support.sendcloud.com/hc/en-us/articles/360059470491-Odoo-Native-integration>`_ to
+configure the account and generate the connector credentials.
 
 .. note::
    For new account creation, Sendcloud will ask for a :abbr:`VAT (Value-Added Tax Identification)`
