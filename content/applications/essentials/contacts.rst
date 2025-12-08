@@ -11,55 +11,55 @@ and business transactions.
 Contact form
 ============
 
-To create a new contact, navigate to the :menuselection:`Contacts app`, and click
-:guilabel:`Create`. A new form appears where various contact information can be added.
+To create a new contact, navigate to the :menuselection:`Contacts app`, and click :guilabel:`New`. A
+new form appears where various contact information can be added.
+
+.. note::
+   Some fields may be slightly different depending on the :ref:`fiscal localization
+   <fiscal_localizations/packages>` that is installed on the databse.
 
 Contact type
 ------------
 
-Odoo allows for both :guilabel:`Individual` and :guilabel:`Company` contacts. Select either
-:guilabel:`Individual` or :guilabel:`Company`, depending on the type of contact that is being added.
+Odoo allows for both *Individual* and *Company* contacts. Select either :guilabel:`Individual` or
+:guilabel:`Company`, depending on the type of contact that is being added.
 
 Name
 ----
 
-First, fill in the name of the :guilabel:`Individual` or :guilabel:`Company`. This is how the name
-appears throughout the database. This field is **mandatory**.
+First, fill in the name of the contact. This is how the name appears throughout the database. This
+field is **mandatory**.
 
 .. tip::
    :guilabel:`Individual` contacts can have a :guilabel:`Company` contact linked to it. After
-   selecting :guilabel:`Individual`, a new :guilabel:`Company Name...` field appears below the
-   first name field.
+   selecting :guilabel:`Individual`, a new :guilabel:`Company Name...` field appears below the first
+   name field.
 
 Address
 -------
 
-Next, enter the :guilabel:`Address` of the :guilabel:`Company` or :guilabel:`Individual`.
+Next, enter the :guilabel:`Address` of the contact. If the :guilabel:`Individual` option is chosen,
+then the *type of address* can be chosen from a drop-down menu. Options for this drop-down menu
+include: :guilabel:`Contact`, :guilabel:`Invoice Address`, :guilabel:`Delivery Address`,
+:guilabel:`Follow-up Address`, and :guilabel:`Other Address`.
 
-.. tip::
-   If the :guilabel:`Individual` option is chosen, then the *type of address* can be chosen from a
-   drop-down menu. Options for this drop-down menu include: :guilabel:`Contact`, :guilabel:`Invoice
-   Address`, :guilabel:`Delivery Address`, :guilabel:`Other Address`, and :guilabel:`Private
-   Address`.
+.. image:: contacts/address-type.png
+   :alt: The contact type drop-down on a new contact creation form.
 
 Additional fields
 -----------------
 
 Additional details are included on the initial form. The following fields are available:
 
-- :guilabel:`VAT`: Value Added Tax number.
-- :guilabel:`Citizen Identification`: citizen or government identification number (only available
-  on :guilabel:`Individual`).
-- :guilabel:`Job Position`: list the job position of the :guilabel:`Individual` (only available on
+- :guilabel:`Job Position`: list the contact's job position (only available on
   :guilabel:`Individual`).
-- :guilabel:`Phone`: list phone number (with country code). Make a call, send an SMS, or WhatsApp
-  message by hovering over the field on the saved form, and clicking the desired option.
-- :guilabel:`Mobile`: list mobile phone number (with country code). Make a call, send an SMS, or
-  WhatsApp message by hovering over the field on the saved form, and clicking on the desired option.
-- :guilabel:`Email`: enter the email address with the domain.
+- :guilabel:`Tax ID`: the identification number used for tax and accounting purposes. This may
+  appear as :guilabel:`Identification Number` or :guilabel:`Citizen ID` depending on the country.
+- :guilabel:`Partner Level`: select the designated :ref:`partner <contacts/partner-assignment>`
+  level for this contact from the drop-down menu.
 - :guilabel:`Website`: enter the full website address, starting with `http` or `https`.
-- :guilabel:`Title`: select :guilabel:`Doctor`, :guilabel:`Madam`, :guilabel:`Miss`,
-  :guilabel:`Mister`, :guilabel:`Professor`, or create a new one directly from this field.
+- :guilabel:`Language`: enter the language used by the contact. All of the emails and documents sent
+  to this contact are then translated to the selected language.
 - :guilabel:`Tags`: enter preconfigured tags by typing them in the field, or clicking the drop-down
   menu, and selecting one. To create a new one, type the new tag in the field, and click
   :guilabel:`Create` from the resulting drop-down menu.
@@ -71,34 +71,28 @@ At the bottom of the contact form are several tabs. On the :guilabel:`Contacts &
 contacts can be added that are associated with a :guilabel:`Company` and related addresses. For
 example, a specific contact person for the company can be listed here.
 
-Multiple addresses can be added on both :guilabel:`Individual` and :guilabel:`Company` contacts. To
-do so, click :guilabel:`Add` in the :guilabel:`Contacts & Addresses` tab. Doing so reveals a
-:guilabel:`Create Contact` pop-up form, in which additional addresses can be configured.
+Multiple addresses can be added to contacts. To do so, click :guilabel:`Add` in the
+:guilabel:`Contacts & Addresses` tab. Doing so reveals a :guilabel:`Create Contact` pop-up form, in
+which additional addresses can be configured.
 
-.. image:: contacts/contact-form-add-address.png
-   :align: center
-   :alt: Add a contact/address to the contact form.
-
-On the :guilabel:`Create Contact` pop-up form, start by clicking the default :guilabel:`Other
-Address` field at the top to reveal a drop-down menu of address-related options.
-
-Select any of the following options:
+On the :guilabel:`Create Contact` pop-up form, select one of the following options for the address
+type:
 
 - :guilabel:`Contact`: adds another contact to the existing contact form.
 - :guilabel:`Invoice Address`: adds a specific invoice address to the existing contact form.
 - :guilabel:`Delivery Address`: adds a specific delivery address to the existing contact form.
-- :guilabel:`Other Address`: adds an alternate address to the existing contact form.
-- :guilabel:`Private Address`: adds a private address to the existing contact form.
+- :guilabel:`Follow-up Address`: adds a preferred address for follow-up reports and reminders about
+  overdue invoices.
+- :guilabel:`Other Address`: adds an alternate address for the company, such as a subsidiary.
 
-.. image:: contacts/create-contact-window.png
-   :align: center
-   :alt: Create a new contact/address on a contact form.
+.. image:: contacts/contact-form-add-address.png
+   :alt: Add a contact/address to the contact form.
 
 Once an option is selected, enter the corresponding contact information that should be used for the
 specified address type.
 
 Add the :guilabel:`Contact Name`, :guilabel:`Address`, :guilabel:`Email`, along with the
-:guilabel:`Phone` and/or :guilabel:`Mobile` numbers below.
+:guilabel:`Phone` and :guilabel:`Mobile` numbers below.
 
 Set the :guilabel:`Job Position`, which appears if the :guilabel:`Contact` address type has been
 selected. This is similar to the :guilabel:`Individual` contact.
@@ -112,8 +106,8 @@ window. Or, click :guilabel:`Save & New` to save the address, and immediately in
 Sales & Purchase tab
 --------------------
 
-Next, is the :guilabel:`Sales & Purchases` tab, which only appears when the *Sales*, *Purchase*,
-**or** *Point of Sale* applications are installed.
+Next, is the :guilabel:`Sales & Purchases` tab, which only appears when the **Sales**, **Purchase**,
+or **Point of Sale** applications are installed.
 
 The :guilabel:`Fiscal Position` can be set on the :guilabel:`Sales & Purchases` tab. Select a
 :guilabel:`Fiscal Position` from the drop-down menu.
@@ -127,10 +121,11 @@ Under the :guilabel:`Sales` heading, a specific :guilabel:`Salesperson` can be a
 contact. To do that, click the :guilabel:`Salesperson` drop-down field, and select one. Create a new
 :guilabel:`Salesperson` by typing the user's name, and making the appropriate selection.
 
-Certain :guilabel:`Payment Terms`, or a certain :guilabel:`Pricelist`, can also be set, if needed.
-Click the drop-down menu next to :guilabel:`Payment Terms`, and change it to one of the preselected
-:guilabel:`Payment Terms`, or :guilabel:`Create` a new one. Select the :guilabel:`Pricelist`
-drop-down menu to choose the appropriate :guilabel:`Pricelist`.
+Certain :guilabel:`Payment Terms`,  a :guilabel:`Payment Method`, or a specific
+:guilabel:`Pricelist`, can also be set, if needed. Click the drop-down menu next to
+:guilabel:`Payment Terms`, and change it to one of the preselected :guilabel:`Payment Terms`, or
+:guilabel:`Create` a new one. Select the :guilabel:`Pricelist` drop-down menu to choose the
+appropriate :guilabel:`Pricelist`.
 
 Click into the :guilabel:`Delivery Method` field to select an option from the drop-down menu.
 
@@ -138,8 +133,7 @@ Point Of Sale section
 ~~~~~~~~~~~~~~~~~~~~~
 
 Under the :guilabel:`Point Of Sale` heading, enter a :guilabel:`Barcode` that can be used to
-identify the contact. Use the :guilabel:`Loyalty Points` field to track points the user won as part
-of a *Loyalty Program*.
+identify the contact.
 
 Purchase section
 ~~~~~~~~~~~~~~~~
@@ -150,20 +144,24 @@ Specify :guilabel:`Payment Terms`, :guilabel:`1099 Box` information, and a prefe
 Misc section
 ~~~~~~~~~~~~
 
-Under the :guilabel:`Misc.` heading, use :guilabel:`Reference` field to add any additional
-information for this contact. If this contact should only be accessible for one company in a
-multi-company database, select it from the :guilabel:`Company` field drop-down list. Use the
-:guilabel:`Website` drop-down menu to restrict the publishing of this contact to one website (if
-working on a database with multiple websites). Select one or more :guilabel:`Website Tags` to assist
-in filtering published customers on the `/customers` website page. Select an :guilabel:`Industry`
-for this contact from the drop-down menu. Use the :guilabel:`SLA Policies` field to assign a
-*Helpdesk* SLA policy to this contact.
+Under the :guilabel:`Misc.` heading, enter a :guilabel:`Citizen Identification` number, if necessary
+for tax purposes. Use the :guilabel:`Reference` field to add any additional information for this
+contact.
+
+If this contact should **only** be accessible for one company in a multi-company database, select it
+from the :guilabel:`Company` field drop-down list. Use the :guilabel:`Website` drop-down menu to
+restrict the publishing of this contact to one website (if working on a database with multiple
+websites). Select one or more :guilabel:`Website Tags` to assist in filtering published customers on
+the `/customers` website page.
+
+Select an :guilabel:`Industry` for this contact from the drop-down menu. Use the :guilabel:`SLA
+Policies` field to assign a **Helpdesk** SLA policy to this contact.
 
 Accounting tab
 --------------
 
-The :guilabel:`Accounting` tab appears when the *Accounting* application is installed. Here, a user
-can add any related :guilabel:`Bank Accounts`, or set default :guilabel:`Accounting entries`.
+The :guilabel:`Accounting` tab appears when the **Accounting** application is installed. Here, a
+user can add any related :guilabel:`Bank Accounts`, or set default :guilabel:`Accounting entries`.
 
 Under the :guilabel:`Miscellaneous` heading, use the :guilabel:`LEI` field to enter a Legal Entity
 Identifier, if necessary.
@@ -174,12 +172,14 @@ Internal Notes tab
 Following the :guilabel:`Accounting` tab is the :guilabel:`Internal Notes` tab, where notes can be
 left on this contact form, just like on the contact form noted above.
 
+.. _contacts/partner-assignment:
+
 Partner Assignment tab
 ----------------------
 
-Next is the :guilabel:`Partner Assignment` tab, which by default, includes a :guilabel:`Geolocation`
+Next is the :guilabel:`Partner Assignment` tab, which by default includes a :guilabel:`Geolocation`
 section, and other partner options, including :guilabel:`Partner Activation` and :guilabel:`Partner
-Review` configurations. These are **only** present when the *Resellers* module is installed.
+Review` configurations. These are **only** present when the **Resellers** module is installed.
 
 .. seealso::
    Follow the :doc:`Resellers documentation <../sales/crm/track_leads/resellers>` for more
@@ -218,11 +218,11 @@ Odoo integrates information from every single app, so there are many smart butto
 
 .. example::
    For example, there is an :guilabel:`Opportunities` smart button, where all the opportunities
-   related to this customer from the *CRM* app are accessible.
+   related to this customer from the **CRM** app are accessible.
 
 .. tip::
-   If the corresponding applications are installed, their related smart buttons appear
-   automatically on a contact form.
+   If the corresponding applications are installed, their related smart buttons appear automatically
+   on a contact form.
 
 A user can see any :guilabel:`Meetings`, :guilabel:`Sales`, :guilabel:`POS Orders`,
 :guilabel:`Subscriptions`, project :guilabel:`Tasks`, and the :guilabel:`More` smart button reveals
@@ -230,8 +230,8 @@ additional options, via a drop-down menu. A user can even quickly access :guilab
 :guilabel:`Helpdesk` tasks, :guilabel:`On-time Rate` for deliveries, :guilabel:`Invoiced`
 information, :guilabel:`Vendor Bills`, and the :guilabel:`Partner Ledger` connected to this contact.
 
-Deliveries, documents, loyalty cards, and direct debits are *also* linked to smart buttons, like
-this, should there be any outstanding/on-file for this contact.
+Deliveries, documents, loyalty cards, and direct debits are also linked to smart buttons, like this,
+should there be any related to this contact.
 
 If the contact is a partner, the user can visit their partner page on the Odoo-built website by
 clicking the :guilabel:`Go to Website` smart button.
@@ -243,10 +243,10 @@ If a user decides they no longer want to have this contact active, the record ca
 that, go to the :icon:`fa-cog` :guilabel:`Action` menu at the top of the contact form, and click
 :guilabel:`Archive`.
 
-Then, click :guilabel:`OK` from the resulting :guilabel:`Confirmation` pop-up window.
+Then, click :guilabel:`Archive` from the resulting :guilabel:`Confirmation` pop-up window.
 
-With this contact successfully archived, as indicated by a banner at the top, they do not show up
-in the main contacts page, but they can still be searched for with the :guilabel:`Archived` filter.
+With this contact successfully archived, as indicated by a banner at the top, they do not show up in
+the main contacts page, but they can still be searched for with the :guilabel:`Archived` filter.
 
 .. tip::
    A contact can be *unarchived*, if the user decides to work with them again. To do that, just
