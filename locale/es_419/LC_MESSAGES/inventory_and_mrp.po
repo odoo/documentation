@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-11-18 11:05+0000\n"
-"PO-Revision-Date: 2025-12-04 23:11+0000\n"
-"Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
+"PO-Revision-Date: 2025-12-08 23:11+0000\n"
+"Last-Translator: \"Patricia Gutiérrez (pagc)\" <pagc@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-18-doc/inventory_and_mrp/es_419/>\n"
 "Language: es_419\n"
@@ -14860,6 +14860,11 @@ msgid ""
 "the :guilabel:`New` button to configure a new putaway rule on "
 "a :guilabel:`Product` or :guilabel:`Product Category` that the rule affects."
 msgstr ""
+"Para gestionar a dónde se llevan productos específicos para su "
+"almacenamiento, ve a :menuselection:`la aplicación Inventario --> "
+"Configuración --> Reglas de almacenamiento`. Usa el botón :guilabel:`Nuevo` "
+"para configurar una regla de almacenamiento nueva en un :guilabel:`Producto` "
+"o :guilabel:`Categoría de producto` que quieras que esa regla afecte."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:42
 msgid ""
@@ -14869,6 +14874,12 @@ msgid ""
 "Additionally, a :doc:`storage category <storage_category>` can be defined to "
 "limit capacities of a storage location and route products accordingly."
 msgstr ""
+"Las reglas de almacenamiento también se pueden definir ya sea por producto o "
+"categoría de producto, o por tipo de paquete (se debe activar la opción "
+"*Paquetes* en :menuselection:`la aplicación Inventario --> Configuración --> "
+"Ajustes` para poder hacerlo). Además, la :doc:`categoría de almacenamiento "
+"<storage_category>` se puede definir para limitar las capacidades de una "
+"ubicación de almacenamiento y dirigir a los productos como se debe."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:47
 msgid ""
@@ -14930,12 +14941,16 @@ msgid ""
 "Use the :guilabel:`Sublocation` field to specify whether to use a "
 "sublocation or specify a storage category:"
 msgstr ""
+"Usa el campo :guilabel:`Sububicación` para especificar si usar una "
+"sububicación o especificar una categoría de almacenamiento:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:71
 msgid ""
 ":guilabel:`No`: no sublocation is used. Products are directed to whatever is "
 "specified in the :guilabel:`Store to` field."
 msgstr ""
+":guilabel:`No`: No se usa una sububicación. Los productos se dirigen a la "
+"ubicación especificada en el campo :guilabel:`Almacenar en`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:73
 msgid ""
@@ -14944,6 +14959,10 @@ msgid ""
 "used, the destination is whatever is specified in the :guilabel:`Store to` "
 "field."
 msgstr ""
+":guilabel:`Última usada`: Se usa la última ubicación usada que tuvo un "
+"movimiento asociado para ese producto o categoría del producto. Si no hay "
+"una última ubicación usada, el destino es el que se especifique en el campo "
+":guilabel:`Almacenar en`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:76
 msgid ""
@@ -14951,6 +14970,9 @@ msgid ""
 "category are used. A storage category is mandatory in the :guilabel:`Having "
 "Category` field."
 msgstr ""
+":guilabel:`Ubicación más cercana`: Se usan las ubicaciones especificadas "
+"como parte de una categoría de almacenamiento. Es obligatorio agregar una "
+"categoría de almacenamiento en el campo :guilabel:`Tiene categoría`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:79
 msgid ""
@@ -14959,6 +14981,10 @@ msgid ""
 "products are stored in the location specified in the :guilabel:`Store to` "
 "field."
 msgstr ""
+"Para aplicar una regla de almacenamiento a *todos* los productos, crea una "
+"regla de almacenamiento vacía sin un :guilabel:`producto` o :guilabel:`"
+"categoría de producto` específica. Todos los productos se almacenan en la "
+"ubicación especificada en el campo :guilabel:`Almacenar en`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:84
 msgid ""
@@ -14966,6 +14992,10 @@ msgid ""
 "used` :guilabel:`Sublocation`. Specifying :guilabel:`Last used` ensures that "
 "Odoo suggests the last location used to store a product."
 msgstr ""
+"La mejor práctica para una regla de almacenamiento es especificar la última "
+":guilabel:`sububicación` :guilabel:`que se usó`. Al seleccionar :guilabel:`"
+"Última usada`, Odoo sugerirá la última ubicación que se utilizó para "
+"almacenar un producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:89
 msgid "Putaway rule priority"
@@ -16634,7 +16664,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:11
 msgid ":ref:`Define capacity limitations <inventory/routes/define-storage>`"
-msgstr ""
+msgstr ":ref:`Define el límite de capacidad <inventory/routes/define-storage>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:12
 msgid ""
@@ -16686,11 +16716,16 @@ msgid ""
 "capacity-package>`, also make sure :guilabel:`Packages` is enabled. "
 "Click :guilabel:`Save`."
 msgstr ""
+"Si quieres establecer las capacidades por :ref:`tipo de paquete <inventory/"
+"routes/set-capacity-package>`, también asegúrate de que los "
+":guilabel:`paquetes` estén activados. Haz clic en :guilabel:`Guardar`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:-1
 msgid ""
 "Enable Storage Locations and Multi-Step Routes to enable storage categories."
 msgstr ""
+"Activa las ubicaciones de almacenamiento y las rutas multietapa para activar "
+"las categorías de almacenamiento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:42
 msgid "Define storage category"
@@ -16711,6 +16746,9 @@ msgid ""
 "To create a storage category, go to :menuselection:`Inventory app --> "
 "Configuration --> Storage Categories`, and click :guilabel:`New`."
 msgstr ""
+"Para crear una categoría de almacenamiento ve a :menuselection:`la "
+"aplicación Inventario --> Configuración --> Categorías de almacenamiento` y "
+"haz clic en :guilabel:`Nuevo`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:50
 msgid ""
