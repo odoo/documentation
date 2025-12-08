@@ -37,11 +37,26 @@ designates one or more resources that can be used in combination to handled a bi
    *Linked resources* are only used when using the :ref:`auto-assign <appointments/configure>`
    :guilabel:`Assignment Method`.
 
-Lastly, add a :guilabel:`Description` for this resource.
+Lastly, add a :guilabel:`Description` for this resource. The contents of the :guilabel:`Description`
+tab are visible to customers when booking an appointment online.
 
-.. note::
-   The contents of the :guilabel:`Description` tab are visible to customers when booking an
-   appointment online.
+Resource capacity
+~~~~~~~~~~~~~~~~~
+
+When booking an appointment based on resource availability, the website only displays capacity up to
+`12`. This occurs even if the resource has a higher capacity. To avoid this, a new *System
+Parameter* needs to be added to the database.
+
+First, ensure that :ref:`developer mode <developer-mode>` is enabled. Then, navigate to the
+:menuselection:`Settings app --> Technical --> Parameters --> System Parameters`. Click
+:guilabel:`New` to add a new parameter.
+
+In the :guilabel:`Key` field, enter `appointment.resource_max_capacity_allowed`. In the
+:guilabel:`Value` field, enter the maximum capacity that should be allowed. Click
+:icon:`fa-cloud-upload` :guilabel:`(Save manually)` when finished.
+
+.. image:: appointments/system-parameter.png
+   :alt: The new system parameter for capacity limits.
 
 .. _appointments/configure:
 
