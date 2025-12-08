@@ -92,6 +92,5 @@ settings <configuration/settings>` and choose the specific categories to display
 
    configuration/pos_iot
    configuration/epos_printers
-   configuration/epson_server_direct_print
    configuration/https
    configuration/epos_ssc
