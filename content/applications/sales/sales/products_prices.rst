@@ -12,3 +12,4 @@ Products & Prices
    products_prices/returns
    products_prices/ewallets_giftcards
    products_prices/loyalty_discount
+   products_prices/alternative_products
