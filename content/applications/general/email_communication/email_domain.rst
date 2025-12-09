@@ -1,3 +1,6 @@
+.. |nbsp| unicode:: 0xA0
+   :trim:
+
 ============================================
 Configure DNS records to send emails in Odoo
 ============================================
@@ -64,24 +67,101 @@ DKIM (DomainKeys Identified Mail)
 
 The DomainKeys Identified Mail (DKIM) allows a user to authenticate emails with a digital signature.
 
-When sending an email, the Odoo email server includes a unique :abbr:`DKIM (DomainKeys Identified
-Mail)` signature in the headers. The recipient's server decrypts this signature using the DKIM
-record in the database's domain name. If the signature and the key contained in the record match, it
-proves the message is authentic and has not been altered during transport.
+When sending an email, the Odoo email server includes a unique DKIM signature in the headers. The
+recipient's server decrypts this signature using the DKIM record in the database's domain name. If
+the signature and the key contained in the record match, it proves the message is authentic and has
+not been altered during transport.
 
 Enabling DKIM is **required** when sending emails **from a custom domain** using the Odoo email
 server.
 
-To enable DKIM, add a :abbr:`CNAME (Canonical Name)` record to the :abbr:`DNS (Domain Name System)`
-zone of the domain name:
+Add a CNAME record for domain
+-----------------------------
+
+To enable DKIM, add a canonical name (CNAME) record to the domain name system (DNS) zone of the
+domain name:
 
 .. code-block:: bash
 
    odoo._domainkey IN CNAME odoo._domainkey.odoo.com.
 
-.. tip::
-   If the domain name is `company-name.com`, make sure to create a subdomain
-   `odoo._domainkey.company-name.com` whose canonical name is `odoo._domainkey.odoo.com.`.
+
+If the domain name is *company-name.com*, make sure to create a CNAME record where the CNAME record
+(key/name) is `odoo._domainkey.company-name.com`, and the canonical name (value/content) is
+`odoo._domainkey.odoo.com.`. For example, note the differences between each key/value in italics\:
+
+.. list-table:: Example CNAME record
+   :widths: 6 5 20 20
+   :header-rows: 0
+   :stub-columns: 1
+
+   * - Key
+     -
+     - odoo.\_domainkey
+     -
+   * - Value
+     -
+     - odoo.\_domainkey.\ *odoo.com.* |nbsp|
+     -
+   * -
+     - OR
+     - odoo.\_domainkey.\ *dbname*\ .odoo.com.
+     - ... where *dbname* is the name of the Odoo database.
+
+On most DNS platforms, the DNS provider adds the custom domain (e.g., *company-name.com*) by
+default. In this case, the key looks different while the value remains the same:
+
+.. list-table:: Example CNAME record with custom domain
+   :widths: 6 5 20 20
+   :header-rows: 0
+   :stub-columns: 1
+
+   * - Key
+     -
+     - odoo.\_domainkey.\ *company-name.com* |nbsp|
+     - ... where *company-name.com* is the custom domain.
+   * - Value
+     -
+     - odoo.\_domainkey.\ *odoo.com.* |nbsp|
+     -
+   * -
+     - OR
+     - odoo.\_domainkey.\ *dbname*\ .odoo.com.
+     - ... where *dbname* is the name of the Odoo database.
+
+.. note::
+   If the DNS provider does not add the custom domain by default, make sure to include it.
+
+Add a CNAME record for subdomain
+--------------------------------
+
+If there's a \ *subdomain* (e.g., *marketing* in *marketing*\ .company-name.com), add a CNAME record to include it
+for compliance as well:
+
+.. list-table:: Example CNAME record with subdomain
+   :widths: 6 5 20 20
+   :header-rows: 0
+   :stub-columns: 1
+
+   * - Key
+     -
+     - odoo.\_domainkey.\ *marketing* |nbsp|
+     - ... where *marketing* is the subdomain.
+   * -
+     - OR
+     - odoo.\_domainkey.marketing.\ *company-name.com*\ |nbsp|
+     - ... where *company-name.com* is the custom domain.
+   * - Value
+     -
+     - odoo.\_domainkey.\ *odoo.com.* |nbsp|
+     -
+   * -
+     - OR
+     - odoo.\_domainkey.\ *dbname*\ .odoo.com.
+     - ... where *dbname* is the name of the Odoo database.
+
+See DNS provider documentation
+------------------------------
 
 The way to create or modify a CNAME record depends on the provider hosting the DNS zone of the
 domain name. The :ref:`most common providers <email-domain-providers-documentation>` and their
@@ -89,7 +169,7 @@ documentation are listed below.
 
 Check if the DKIM record is valid using a tool like `MXToolbox DKIM Record Lookup
 <https://mxtoolbox.com/dkim.aspx>`_. Enter `example.com:odoo` in the DKIM lookup tool, specifying
-that the selector being tested is `odoo` for the custom domain `example.com`.
+that the selector being tested is *odoo* for the custom domain *example.com*.
 
 .. _email-domain-dmarc:
 
@@ -138,10 +218,13 @@ SPF, DKIM and DMARC documentation of common providers
 
 - `OVH DNS <https://docs.ovh.com/us/en/domains/web_hosting_how_to_edit_my_dns_zone/>`_
 - `GoDaddy TXT record <https://www.godaddy.com/help/add-a-txt-record-19232>`_
-- `GoDaddy SPF, DKIM, or DMARC records <https://www.godaddy.com/help/set-up-spf-dkim-or-dmarc-records-for-my-hosting-email-40810>`_
-- `NameCheap <https://www.namecheap.com/support/knowledgebase/article.aspx/317/2237/how-do-i-add-txtspfdkimdmarc-records-for-my-domain/>`_
+- `GoDaddy SPF, DKIM, or DMARC records
+  <https://www.godaddy.com/help/set-up-spf-dkim-or-dmarc-records-for-my-hosting-email-40810>`_
+- `NameCheap
+  <https://www.namecheap.com/support/knowledgebase/article.aspx/317/2237/how-do-i-add-txtspfdkimdmarc-records-for-my-domain/>`_
 - `CloudFlare DNS <https://support.cloudflare.com/hc/en-us/articles/360019093151>`_
-- `Squarespace DNS records <https://support.squarespace.com/hc/en-us/articles/360002101888-Adding-custom-DNS-records-to-your-Squarespace-managed-domain>`_
+- `Squarespace DNS records
+  <https://support.squarespace.com/hc/en-us/articles/360002101888-Adding-custom-DNS-records-to-your-Squarespace-managed-domain>`_
 - `Azure DNS <https://docs.microsoft.com/en-us/azure/dns/dns-getstarted-portal>`_
 
 To fully test the configuration, use the `Mail-Tester <https://www.mail-tester.com/>`_ tool, which
