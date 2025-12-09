@@ -16,7 +16,7 @@ Overview
 .. image:: builds/builds-overview.png
    :alt: Overiew of the builds
 
-In the :guilabel:`Builds` overview, a row represents a branch, and a cell within that row represents
+In the :guilabel:`Builds` view, a row represents a branch, and a cell within that row represents
 a build of that branch.
 
 Most builds are created after pushes to your GitHub repository branches. They can also be created
