@@ -328,7 +328,7 @@ pricelist is assigned to the correct website and is listed first among the websi
    - To hide prices from public visitors while keeping them visible to logged-in customers, create a
      zero-priced pricelist to be used for non-logged-in customers and :ref:`assign
      <sales/products/customer-pricelist-application>` a regular pricelist (with actual prices) to
-     customers with :ref:`portal access <portal/access>`.
+     customers with :doc:`portal access <../../../general/users/user_portals/portal_access>`.
 
 .. seealso::
    :doc:`../customer_accounts`

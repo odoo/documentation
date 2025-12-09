@@ -37,8 +37,8 @@ How customers can set up automatic payments
 
 Once these steps are complete, payment providers will be able to create tokens with customers' saved
 payment details during the checkout process. Saved payment details can then be used for future
-online or recurring subscription charges. Customers will also be able to log into their
-:doc:`customer portal <../../general/users/portal>` and enter their payment information there.
+online or recurring subscription charges. Customers can also log into their :doc:`customer portal
+<../../general/users/user_portals>` and enter their payment information there.
 
 Some payment providers will automatically save customers' payment information as part of the
 checkout process. Others will give them the option to save their information for future payments. If
@@ -87,4 +87,4 @@ ignored by Odoo until the sales order is closed.
 
 .. seealso::
   - :doc:`../../finance/payment_providers`
-  - :doc:`../../general/users/portal`
+  - :doc:`../../general/users/user_portals`

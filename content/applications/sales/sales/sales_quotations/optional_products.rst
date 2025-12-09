@@ -77,8 +77,9 @@ quotations and sales orders can update these quantities. Once a quantity is set 
 product is added to the quote total.
 
 Once an optional product section has been created in a quotation, users who have been :doc:`granted
-portal access <../../../general/users/portal>` can interact with the quotation there. They can view
-the quotation and decide whether or not to add the optional products to their final sales order.
+portal access <../../../general/users/user_portals/portal_access>` can interact with the quotation
+there. They can view the quotation and decide whether or not to add the optional products to their
+final sales order.
 
 .. image:: optional_products/optional-products-section.png
    :alt: An optional products section with the quanitty and corresponding amount set to 0.
