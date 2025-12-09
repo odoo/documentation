@@ -2,338 +2,375 @@
 Settings
 ========
 
-Overview
-========
+The :guilabel:`Settings` view allow you to manage the configuration of your project.
 
-The settings allow you to manage the configuration of your project.
-
-.. image:: settings/interface-settings.png
-   :align: center
+.. _odoo-sh/settings/name:
 
 Project name
 ============
 
-The name of your project.
+The name of your project defines the address used to access your production database. The addresses
+of your staging and development builds are automatically derived from this name. If you change the
+project name, only future builds will use the new name.
 
-.. image:: settings/interface-settings-projectname.png
-   :align: center
+.. image:: settings/project-name.png
+   :alt: The project name setting
 
-This defines the address that will be used to access your production database.
-
-Addresses of your staging and development builds are derived from this name and assigned
-automatically. However, when you change your project name, only future builds will use the new name.
-
-.. _odoosh-gettingstarted-settings-collaborators:
+.. _odoo-sh/settings/collaborators:
 
 Collaborators
 =============
 
-Manage the Github users who can access your project.
+To grant access to a GitHub user, enter their username and click :guilabel:`Add`. By default, the
+user is is granted the :guilabel:`Developer` role. Click the dropdown menu to select another one:
 
-.. image:: settings/interface-settings-collaborators.png
-   :align: center
+- :guilabel:`Admin`: full access to all Odoo.sh features and tools. This role is dedicated to
+  project management and has exclusive access to the project's settings.
+- :guilabel:`Tester`: access to staging and development databases and their tools. This role is
+  intended for users performing user acceptance testing (UAT). Testers can work with copies of
+  production data, but they cannot access the production database through Odoo.sh's tools.
+- :guilabel:`Developer`: no access to the production and staging databases. This role is intended
+  for users who modify the code but should not access production data. Developers cannot connect to
+  the production or staging databases and do not have access to the web shell or server logs.
 
-There are three levels of users:
+.. image:: settings/collaborators.png
+   :alt: The collaborators setting
 
-- :guilabel:`Admin`: has access to all features of an Odoo.sh project.
+.. _odoo-sh/settings/collaborators/table:
 
-- :guilabel:`Tester`: has access to the *Staging* and *Development* databases and their tooling.
-  This role is for users conducting User Acceptance Tests. Testers can work with copies of
-  production data but cannot access the production database through the Odoo.sh tooling.
-
-- :guilabel:`Developer`: has access only to the *Development* databases and their tooling. This
-  role is for developers who propose code modifications but are not allowed to access production
-  and staging databases through the Odoo.sh tooling.
+Feature access by stage and role
+--------------------------------
 
 .. list-table::
    :header-rows: 1
+   :stub-columns: 1
    :widths: auto
 
-   * -
-     -
+   * - Stage
+     - Feature
      - Developer
      - Tester
      - Admin
    * - Development
-     - History
+     - Connect + / Connect as
      - |green|
      - |green|
      - |green|
    * -
-     - 1-click connect
+     - :ref:`History <odoo-sh/branches/tabs/history>`
      - |green|
      - |green|
      - |green|
    * -
-     - Logs
+     - :ref:`Mails <odoo-sh/branches/tabs/mails>`
      - |green|
      - |green|
      - |green|
    * -
-     - Shell/SSH
+     - :ref:`Editor <odoo-sh/branches/tabs/editor>`
      - |green|
      - |green|
      - |green|
    * -
-     - Mails
+     - :ref:`Monitor <odoo-sh/branches/tabs/monitor>`
      - |green|
      - |green|
      - |green|
    * -
-     - Settings
+     - :ref:`Logs <odoo-sh/branches/tabs/logs>`
+     - |green|
+     - |green|
+     - |green|
+   * -
+     - :ref:`Upgrade <odoo-sh/branches/tabs/upgrade>`
+     - |green|
+     - |green|
+     - |green|
+   * -
+     - :ref:`Settings <odoo-sh/branches/tabs/settings>`
+     - |green|
+     - |green|
+     - |green|
+   * -
+     - Status
      - |green|
      - |green|
      - |green|
    * - Staging
-     - History
+     - Connect + / Connect as
      - |green|
      - |green|
      - |green|
    * -
-     - 1-click connect
-     -
+     - :ref:`History <odoo-sh/branches/tabs/history>`
      - |green|
-     - |green|
-   * -
-     - Logs
-     -
      - |green|
      - |green|
    * -
-     - Shell/SSH
-     -
+     - :ref:`Mails <odoo-sh/branches/tabs/mails>`
+     - |red|
      - |green|
      - |green|
    * -
-     - Mails
-     -
+     - :ref:`Shell <odoo-sh/branches/tabs/shell>`
+     - |red|
      - |green|
      - |green|
    * -
-     - Monitoring
-     -
+     - :ref:`Editor <odoo-sh/branches/tabs/editor>`
+     - |red|
      - |green|
      - |green|
    * -
-     - Backups
-     -
-     -
-     - |green|
-   * -
-     - Upgrade
-     -
+     - :ref:`Monitor <odoo-sh/branches/tabs/monitor>`
+     - |red|
      - |green|
      - |green|
    * -
-     - Settings
-     -
+     - :ref:`Logs <odoo-sh/branches/tabs/logs>`
+     - |red|
+     - |green|
+     - |green|
+   * -
+     - :ref:`Upgrade <odoo-sh/branches/tabs/upgrade>`
+     - |red|
+     - |green|
+     - |green|
+   * -
+     - :ref:`Settings <odoo-sh/branches/tabs/settings>`
+     - |red|
+     - |green|
+     - |green|
+   * -
+     - Status
+     - |green|
      - |green|
      - |green|
    * - Production
-     - History
+     - Connect + / Connect as
      - |green|
      - |green|
      - |green|
    * -
-     - 1-click connect
-     -
-     -
+     - :ref:`History <odoo-sh/branches/tabs/history>`
+     - |green|
+     - |green|
      - |green|
    * -
-     - Logs
-     -
-     -
+     - :ref:`Shell <odoo-sh/branches/tabs/shell>`
+     - |red|
+     - |red|
      - |green|
    * -
-     - Shell/SSH
-     -
-     -
+     - :ref:`Editor <odoo-sh/branches/tabs/editor>`
+     - |red|
+     - |red|
      - |green|
    * -
-     - Mails
-     -
-     -
+     - :ref:`Monitor <odoo-sh/branches/tabs/monitor>`
+     - |red|
+     - |red|
      - |green|
    * -
-     - Monitoring
-     -
-     -
+     - :ref:`Logs <odoo-sh/branches/tabs/logs>`
+     - |red|
+     - |red|
      - |green|
    * -
-     - Backups
-     -
-     -
+     - :ref:`Backups <odoo-sh/branches/tabs/backups>`
+     - |red|
+     - |red|
      - |green|
    * -
-     - Upgrade
-     -
-     -
+     - :ref:`Upgrade <odoo-sh/branches/tabs/upgrade>`
+     - |red|
+     - |red|
      - |green|
    * -
-     - Settings
-     -
-     -
+     - :ref:`Settings <odoo-sh/branches/tabs/settings>`
+     - |red|
+     - |red|
      - |green|
-   * - Status
-     -
+   * -
+     - Status
      - |green|
      - |green|
-     - |green|
-   * - Settings
-     -
-     -
-     -
      - |green|
 
-.. warning::
-   Those roles only apply to the usage of Odoo.sh. It is important to reflect the user roles
-   attribution within the repository on GitHub.  Please refer to the GitHub documentation section on
-   `Managing a branch protection rule <https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule>`_
-   for detailed guidance.
+.. admonition:: Legend
+
+   |green| : Available
+
+   |red| : Not available
 
 .. |green| raw:: html
 
-   <span class="text-success" style="font-size: 32px; line-height: 0.5">●</span>
-
-.. |orange| raw:: html
-
-   <span class="text-warning" style="font-size: 32px; line-height: 0.5">●</span>
+   <span class="text-success" style="font-size: 32px; line-height: 32px; display: inline-block; vertical-align: middle;">●</span>
 
 .. |red| raw:: html
 
-   <span class="text-danger" style="font-size: 32px; line-height: 0.5">●</span>
+   <span class="text-danger" style="font-size: 32px; line-height: 32px; display: inline-block; vertical-align: middle;">●</span>
 
-Public Access
+.. note::
+   - Only admins can access the audit logs and the project settings.
+   - All roles can access the :doc:`builds page <builds>`, but the features available are specific
+     to each role.
+
+.. _odoo-sh/settings/public:
+
+Public access
 =============
 
-Allow public access to your development builds.
+When enabling :guilabel:`Allow public access`, the :doc:`builds page <builds>` becomes publicly
+accessible, allowing visitors to connect to development builds. Visitors can also access :ref:`logs
+<odoo-sh/branches/tabs/logs>`, the :ref:`shell <odoo-sh/branches/tabs/shell>`, and :ref:`mails
+<odoo-sh/branches/tabs/mails>` for development builds. Production and staging builds remain private;
+visitors can only view their status.
 
-.. image:: settings/interface-settings-public.png
-   :align: center
+.. image:: settings/public-access.png
+   :alt: The public access setting
 
-If activated, this option exposes the Builds page publicly, allowing visitors to view logs of development builds.
-
-Production and staging builds are excluded, visitors can only see their status.
-
-.. _odoosh-gettingstarted-settings-modules-installation:
+.. _odoo-sh/settings/commit:
 
 GitHub commit statuses
 ======================
 
-This option enables Odoo.sh to push commit statuses to your GitHub repository when a build is
-created or updated. It requires a GitHub token with permissions to push commit statuses to the
-repository. Refer to `GitHub's documentation on personal access tokens <https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens>`_
-for instructions to create yours.
+You can add a GitHub token to allow Odoo.sh to push commit statuses back to GitHub. The token must
+have the *commit statuses (write)* repository permission.
+
+.. image:: settings/commit-statuses.png
+   :alt: The GitHub commit statuses setting
+
+.. seealso::
+   For more information, refer to `GitHub’s documentation on managing access tokens <https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens>`_.
+
+.. _odoo-sh/settings/key-webhook:
+
+GitHub key and webhook
+======================
+
+A deploy key and a webhook are automatically created on your GitHub repository to allow Odoo.sh to
+fetch code and receive commit notifications. As they can be unintentionally modified or deleted,
+you can use the :guilabel:`Verify Deploy Key` and :guilabel:`Verify Webhook` buttons below to verify
+their configuration.
+
+.. image:: settings/key-webhook.png
+   :alt: The GitHub key and webhook setting
 
 .. note::
-    GitHub's **fine-grained personal tokens** have an expiration date and will be disabled if they
-    fail to update the commit status. You can replace the token at any time on Odoo.sh.
+   Administrative rights on the GitHub repository are necessary.
 
-The commit statuses pushed to GitHub can have the following contexts:
-
-- :guilabel:`ci/odoo.sh (dev)`: status of a development build
-- :guilabel:`ci/odoo.sh (staging)`: status of a staging build
-- :guilabel:`ci/odoo.sh (production)`: status of a production build
-- :guilabel:`ci/odoo.sh (test_ci)`: testing the token from the Settings page will push a test
-  status on the last commit of your repository
-
-Custom domains
-==============
-
-To configure additional domains please refer to the corresponding branch's :ref:`settings tab
-<odoo-sh/branches/tabs/settings>`.
-
-.. _odoosh-gettingstarted-settings-submodules:
+.. _odoo-sh/settings/submodules:
 
 Submodules
 ==========
 
-Configure the deploy keys for the private repositories you use
-as submodules in your branches to allow Odoo.sh to download them.
+The `git submodule` command allows you to `integrate other Git projects
+<https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ into your codebase without copying the code
+directly.
 
-.. warning::
-   These settings are required for **private repositories** only. If you are looking on how to set
-   up your submodules, instructions are available in the chapter :ref:`Submodules
-   <odoosh-advanced-submodules>` of this documentation.
+.. image:: settings/submodules.png
+   :alt: The submodules setting
+   :scale: 50%
 
-.. image:: settings/interface-settings-submodules.png
-   :align: center
+.. note::
+   A Git repository containing Odoo modules, for example from the `Odoo Apps Store
+   <https://apps.odoo.com/apps>`_ or `community modules <https://github.com/OCA>`_, is necessary.
 
-When a repository is private, it is not possible to publicly download its branches and revisions.
-For that reason, you need to configure a deploy key for Odoo.sh,
-so the remote Git server allows our platform to download the revisions
-of this private repository.
+.. admonition:: Private repositories
 
-To configure the deploy key for a private repository, proceed as follows:
+   Before adding `private GitHub repository
+   <https://help.github.com/articles/making-a-public-repository-private/>`_ as a submodule, it is
+   necessary to add a deploy key:
 
-* in the input, paste the SSH URL of your private sub-repository and click on *Add*,
+   #. Paste the SSH URL of the sub-repository (e.g., `git@github.com:USERNAME/REPOSITORY.git`) and
+      click :guilabel:`Add`.
+   #. Copy the generated :guilabel:`Public Key`.
+   #. On the sub-repository's GitHub, go to :menuselection:`Settings --> Deploy keys`.
+   #. Click :menuselection:`Add deploy key`, enter a :guilabel:`Title`, paste the public key into
+      the :guilabel:`Key` field, and click :guilabel:`Add key`.
 
-  * e.g. *git@github.com:USERNAME/REPOSITORY.git*
-  * it can be another Git server than Github, such as Bitbucket, Gitlab or even your own self-hosted
-    server
+To add a public repository or private repository with a deploy key as a submodule:
 
-* copy the public key,
+#. Add the submodule to your project.
 
-  * it should look like *ssh-rsa some...random...characters...here...==*
+   .. code-block:: shell
 
-* in the settings of the private sub-repository, add the public key amongst the deploy keys.
+      git submodule add -b BRANCH git@github.com:USERNAME/REPOSITORY.git PATH
 
-  * Github.com: :menuselection:`Settings --> Deploy keys --> Add deploy key`
-  * Bitbucket.com: :menuselection:`Settings --> Access keys --> Add key`
-  * Gitlab.com: :menuselection:`Settings --> Repository --> Deploy Keys`
-  * Self-hosted: append the key to the git user’s authorized_keys file in its .ssh directory
+#. Commit and push the change.
 
-Storage Size
-============
+   .. code-block:: shell
 
-This section shows the storage size used by your project.
+      git commit -a && git push -u origin master
 
-.. image:: settings/interface-settings-storage.png
-   :align: center
+#. Wait for Odoo.sh to rebuild the project.
 
-Storage size is computed as follows:
+.. _odoo-sh/settings/storage:
 
-* the size of the PostgreSQL database
+Production database size
+========================
 
-* the size of the disk files available in your container: database filestore, sessions storage directory...
+This section displays the total storage used by the project. It includes the PostgreSQL database
+size and disk files in your container (database filestore, session storage, etc.). If the production
+database exceeds the storage included in your subscription, the plan will be automatically adjusted.
 
-.. warning::
-   In case you want to analyze disk usage, you can run the tool `ncdu
-   <https://dev.yorhel.nl/ncdu/man>`_ in your Web Shell.
+.. image:: settings/database-size.png
+   :alt: The production database size setting
 
-Should your production database size grow to exceed what's provisioned in your subscription, it
-will automatically be synchronized with it.
+.. tip::
+   To analyze disk usage, run the `Ncdu tool <https://dev.yorhel.nl/ncdu/man>`_ in the :ref:`web
+   shell <odoo-sh/branches/tabs/shell>`.
 
-Database Workers
+.. _odoo-sh/settings/workers:
+
+Database workers
 ================
 
-Additional database workers can be configured here. More workers help increase the load your
-production database is able to handle. If you add more, it will automatically be synchronized
-with your subscription.
+Additional database workers can be configured to allow your production database to handle higher
+concurrent loads.
 
-.. image:: settings/interface-settings-workers.png
-   :align: center
+.. image:: settings/database-workers.png
+   :alt: The database workers setting
 
-.. Warning::
-  Adding more workers will not magically solve all performance issues. It only allows the server
-  to handle more connections at the same time. If some operations are unusually slow, it's most
-  likely a problem with the code, if it's not due to your own customizations you can open a ticket
-  `here <https://www.odoo.com/help>`_.
+To add more workers, contact your account manager. After payment, the new worker(s) will be added to
+your project.
 
-Staging Branches
+.. note::
+   Adding more workers does not automatically fix performance issues. It only increases the number
+   of concurrent connections the server can handle. If some operations remain slow, the issue is
+   likely code-related. If it is not due to your customizations, contact `Odoo Support
+   <https://www.odoo.com/help>`_.
+
+.. _odoo-sh/settings/staging:
+
+Staging branches
 ================
 
-Additional staging branches allow you to develop and test more features at the same time. If you
-add more, it will automatically be synchronized with your subscription.
+Additional staging branches allow you to develop and test multiple features simultaneously. To add
+more staging branches, request a product increase directly from your Odoo.sh project. A widget will
+guide you to the subscription portal to complete the purchase. After payment, synchronization with
+Odoo.sh will occur automatically, and the number of available staging branches will be updated.
 
-.. image:: settings/interface-settings-staging-branches.png
-   :align: center
+.. image:: settings/staging-branches.png
+   :alt: The staging branches setting
+
+.. _odoo-sh/settings/activation:
 
 Activation
 ==========
 
-Shows the status of the project's activation. You can change the project's activation code if
-needed.
+This section shows the activation status of the project. You can change the activation code if
+necessary, provided the new code is not already assigned to another project.
 
-.. image:: settings/interface-settings-activation.png
-   :align: center
+.. image:: settings/activation.png
+   :alt: The staging branches setting
+
+.. warning::
+   You cannot change the activation code to:
+
+   - A code already used in another project
+   - A trial code (downgrading from paid to trial is not allowed)
+   - An invalid code (not linked to an Odoo.sh custom plan)
+
+   For any other issue, contact `Odoo Support <https://www.odoo.com/help>`_.
