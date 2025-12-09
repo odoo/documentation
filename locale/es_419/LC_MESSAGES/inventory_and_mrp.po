@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-11-18 11:05+0000\n"
-"PO-Revision-Date: 2025-12-08 23:11+0000\n"
+"PO-Revision-Date: 2025-12-09 23:11+0000\n"
 "Last-Translator: \"Patricia Gutiérrez (pagc)\" <pagc@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-18-doc/inventory_and_mrp/es_419/>\n"
@@ -16824,6 +16824,9 @@ msgid ""
 "When clicked, the :icon:`oi-arrows-v` :guilabel:`Locations` smart button "
 "shows which storage locations the category has been assigned to."
 msgstr ""
+"Al hacer clic en el botón inteligente :icon:`oi-arrows-v` "
+":guilabel:`Ubicaciones` se mostrará a qué ubicaciones de almacenamiento se "
+"asignó la categoría."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:77
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:131
@@ -16833,6 +16836,11 @@ msgid ""
 "first recommended location exceeds its capacity, Odoo still routes all items "
 "to that same location instead of selecting another one with available space."
 msgstr ""
+"Odoo **no** divide las cantidades en varias ubicaciones de almacenamiento de "
+"forma automática . Si un recibo entrante contiene varias unidades o paquetes "
+"y la primera ubicación recomendada sobrepasa su capacidad, Odoo enviará "
+"todos los artículos a la misma ubicación en lugar de seleccionar otra con "
+"espacio disponible."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:82
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:136
@@ -16840,6 +16848,8 @@ msgid ""
 "*(Example: If a location can hold 10 units and 12 units arrive, all 12 are "
 "still assigned to that location.)*"
 msgstr ""
+"*(Por ejemplo, si una ubicación tiene una capacidad de 10 unidades pero "
+"llegan 12 unidades, las 12 unidades se asignarán a esa ubicación.)*"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:86
 msgid "Capacity by weight"
@@ -16912,12 +16922,19 @@ msgid ""
 "the :guilabel:`Packaging` section), or create it from the :guilabel:`Product "
 "Packagings` page. Be sure to set the :guilabel:`Package Type`."
 msgstr ""
+"Crea un :ref:`tipo de paquete <inventory/warehouses_storage/package-type>` "
+"antes de asignarle una categoría de almacenamiento. Puedes hacerlo en la "
+"pestaña :guilabel:`Inventario` del formulario del producto "
+"(en la sección :guilabel:`Embalaje`), o en la página :guilabel:`Embalajes de "
+"producto`. Asegúrate de indicar un :guilabel:`Tipo de paquete`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:121
 msgid ""
 "Create putaway rules for pallet-stored items, by creating the `High "
 "frequency pallets` storage category."
 msgstr ""
+"Para crear reglas de almacenamiento para artículos que se almacenan en "
+"pallet, crea la categoría de almacenamiento `Pallets de alta frecuencia`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:124
 msgid ""
@@ -16931,7 +16948,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
 msgid "Create a storage category."
-msgstr ""
+msgstr "Crear categoría de almacenamiento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:142
 msgid "Assign to location"
@@ -16955,6 +16972,9 @@ msgid ""
 "stored at any location to two pallets) to the `WH/Stock/Pallets/PAL1` sub-"
 "location."
 msgstr ""
+"Asigna la categoría de almacenamiento `Pallets de alta frecuencia` (que "
+"limita los pallets almacenados en cualquier ubicación a solo dos a la vez) a "
+"la sububicación `WH/Stock/Pallets/PAL1`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
 msgid ""
@@ -16985,12 +17005,17 @@ msgid ""
 "Click the :guilabel:`New` button to create the putaway rule. Specify a "
 "location to store to in the :guilabel:`Store to` field."
 msgstr ""
+"Haz clic en el botón :guilabel:`Nuevo` para crear una regla de "
+"almacenamiento. Especifica la ubicación en la que se almacenará en el campo "
+":guilabel:`Almacenar en`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:167
 msgid ""
 "Use the :guilabel:`Sublocation` field to specify that you want to use a "
 "sublocation with the storage category:"
 msgstr ""
+"Usa el campo :guilabel:`Sububicación` para especificar que quieres usar una "
+"sububicación con la categoría de almacenamiento:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:170
 msgid ""
@@ -16999,6 +17024,10 @@ msgid ""
 "used, the destination is whatever is specified in the :guilabel:`Store to` "
 "field."
 msgstr ""
+":guilabel:`Última usada`: Se usa la última ubicación usada que tuvo un "
+"movimiento asociado para ese producto o categoría del producto. Si no hay "
+"una última ubicación usada, el destino es el que se especifique en el campo "
+":guilabel:`Almacenar en`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:173
 msgid ""
@@ -17006,6 +17035,9 @@ msgid ""
 "category are used. A storage category is mandatory in the :guilabel:`Having "
 "Category` field."
 msgstr ""
+":guilabel:`Ubicación más cercana`: Se usan las ubicaciones especificadas "
+"como parte de una categoría de almacenamiento. Es obligatorio agregar una "
+"categoría de almacenamiento en el campo :guilabel:`Tiene categoría`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:176
 msgid ""
@@ -17013,6 +17045,10 @@ msgid ""
 "putaway rules for each location to ensure that if one storage location is in "
 "use, the secondary locations must be used."
 msgstr ""
+"Si usas varias ubicaciones de almacenamiento para una única categoría de "
+"almacenamiento, crea reglas de almacenamiento para cada ubicación y "
+"asegúrate que si una ubicación de almacenamiento se está usando, se pueda "
+"usar también la ubicación secundaria."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:180
 msgid ""
@@ -17021,6 +17057,11 @@ msgid ""
 "locations with the `High frequency pallets` storage category :ref:`assigned "
 "to them <inventory/routes/assign-location>`."
 msgstr ""
+"Continuando con el ejemplo anterior, la categoría de almacenamiento `Palles "
+"de alta frecuencia` está asignada a la regla que dirige los pallets con las "
+"latas de limonada a las ubicaciones que tienen la categoría de "
+"almacenamiento `Pallets de alta frecuencia` :ref:`asignada <inventory/routes/"
+"assign-location>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
 msgid "Storage Categories used in a variety of putaway rules."
@@ -17046,6 +17087,8 @@ msgid ""
 "Continuing the example from above, the `High frequency pallets` storage "
 "category is assigned to the `PAL1` and `PAL2` locations."
 msgstr ""
+"Continuando con el ejemplo anterior, la categoría de almacenamiento `Pallets "
+"de alta frecuencia` se asigna a las ubicaciones `PAL1` y `PAL2`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:196
 msgid ""
@@ -17063,6 +17106,9 @@ msgid ""
 "when two pallets of lemonade cans is received, the following scenarios "
 "happen:"
 msgstr ""
+"Según el número de pallets a la mano en cada ubicación de almacenamiento, "
+"cuando se reciben dos pallets de latas de limonada, sucede uno de los "
+"siguientes escenarios:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:202
 msgid ""
@@ -17095,12 +17141,22 @@ msgid ""
 "line`. Finally, split the receipt by quantity into separate locations, then "
 "click :guilabel:`Save`."
 msgstr ""
+"Si `PAL1` está parcialmente llena (por ejemplo, con otro pallet), Odoo "
+"administra más de un pallet recibido como un único pallet en la recepción. "
+"Debes separar los dos pallets de forma manual en ubicaciones de "
+"almacenamiento. Haz clic en el icono :guilabel:`Abrir movimiento` a la "
+"derecha del campo :guilabel:`Unidades` y después, en la caja "
+":guilabel:`Abrir: movimiento de inventario`, haz clic en :guilabel:`Agregar "
+"una línea`. Finalmente, divide el recibo por cantidad en ubicaciones "
+"separadas y después haz clic en :guilabel:`Guardar`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
 msgid ""
 "Update the Stock move box to route pallets to the correct locations before "
 "validating."
 msgstr ""
+"Actualiza el cuadro de movimiento de existencias para enviar los pallets a "
+"las ubicaciones correctas antes de validar."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:3
 msgid "Routes and push/pull rules"
@@ -26706,6 +26762,8 @@ msgid ""
 "`Sendcloud integration documentation <https://support.sendcloud.com/hc/en-us/"
 "articles/ 360059470491-Odoo-Native-integration>`_"
 msgstr ""
+"`Documentación de la integración de Sendcloud <https://support.sendcloud.com/"
+"hc/en-us/articles/ 360059470491-Odoo-Native-integration>`_"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:14
 msgid "Setup in Sendcloud"
@@ -26718,6 +26776,10 @@ msgid ""
 "to configure the account and generate the connector credentials. Log in with "
 "the Sendcloud account, or create a new one if needed."
 msgstr ""
+"Para comenzar, ve a `la plataforma de Sendcloud <https://sendcloud.com/ "
+"?utm_source=odoo&utm_medium=partnerships&utm_campaign=partner_integrations_page>`"
+"_ para configurar la cuenta y generar las credenciales del conector. Inicia "
+"sesión con la cuenta de Sendcloud o crea una si lo necesitas."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:25
 msgid ""
@@ -27337,6 +27399,9 @@ msgid ""
 "articles/ 10274470454292-How-to-create-shipping-rules#examples-smart-"
 "shipping-rules>`_"
 msgstr ""
+"`Crear reglas de envío en Sendcloud <https://support.sendcloud.com/hc/en-us/"
+"articles/ 10274470454292-How-to-create-shipping-rules#examples-smart-"
+"shipping-rules>`_"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:287
 msgid "Shipment is too heavy"
