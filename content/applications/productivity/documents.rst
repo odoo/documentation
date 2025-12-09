@@ -408,9 +408,9 @@ to apply the changes, then :guilabel:`Copy Links` to copy the sharing link to th
    - Each folder and file URL includes the access rights assigned to it. When you share a link to a
      folder, recipients are directed to a dedicated portal where they can view the files in that
      folder, excluding any with restricted access.
-   - :doc:`Portal users </applications/general/users/portal>` can access folders and files they have
-     permission to view or edit through the customer portal by clicking the :guilabel:`Documents`
-     card.
+   - :doc:`Portal users </applications/general/users/user_portals>` can access folders and files
+     they have permission to view or edit through the customer portal by clicking the
+     :guilabel:`Documents` card.
 
 Managing files across apps
 ==========================

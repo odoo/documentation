@@ -42,7 +42,7 @@ include:
 
 #. (required) :ref:`installing <general/install>` the **Purchase** app
 #. (optional) adding vendors (the sellers in this workflow) as :doc:`portal users
-   <../../../general/users/portal>`.
+   <../../../general/users/user_portals>`.
 
 Seller database
 ---------------
