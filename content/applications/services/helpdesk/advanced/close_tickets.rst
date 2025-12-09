@@ -106,5 +106,5 @@ customers when they view their ticket through the customer portal.
    is added to the first stage of a team by default. This link does not require a customer to have
    access to the portal to view or respond to their ticket.
 
-   Customers with access to the :doc:`portal <../../../general/users/portal>` are able to view their
-   tickets under :menuselection:`My Account --> Tickets`.
+   Customers with access to the :doc:`portal <../../../general/users/user_portals>` are able to
+   view their tickets under :menuselection:`My Account --> Tickets`.

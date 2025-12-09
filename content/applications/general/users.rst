@@ -58,7 +58,7 @@ User` or :guilabel:`Portal User`.
 Odoo databases have three types of users: :guilabel:`Internal User`, :guilabel:`Portal`, and
 :guilabel:`Public`. Users are considered *internal database* users. Portal users are *external
 users*, who only have access to the database portal to view records. Public users are those visiting
-websites, via the website's frontend. See the documentation on :doc:`users/portal`.
+websites, via the website's frontend. See the documentation on :doc:`users/user_portals`.
 
 The :guilabel:`Portal` user option does **not** allow the administrator to choose access rights.
 These users have specific access rights pre-set (such as, record rules and restricted menus), and
@@ -278,7 +278,7 @@ company.
    users/language
    users/2fa
    users/access_rights
-   users/portal
+   users/user_portals
    users/facebook
    users/google
    users/azure
