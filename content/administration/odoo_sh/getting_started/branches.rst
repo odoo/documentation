@@ -2,7 +2,7 @@
 Branches
 ========
 
-The branches view provides an overview of the different branches in your repository.
+The :guilabel:`Branches` view provides an overview of the different branches in your repository.
 
 .. _odoo-sh/branches/stages:
 
@@ -109,8 +109,13 @@ documentation <odoo-sh/module/add>` to view examples.
 
 Staging databases are not automatically backed up. Nevertheless, you can restore a backup of the
 production database in a staging branch for testing purposes or to manually recover data that has
-been accidently deleted from the production database. It is possible to create manual backups of
+been accidentally deleted from the production database. It is possible to create manual backups of
 staging databases.
+
+.. warning::
+   Databases created for staging branches are intended to last up to three months. After that, they
+   can be automatically blocked without prior notice. Only rebuilding the branch will allow you to
+   use that specific branch again.
 
 .. _odoo-sh/branches/stages/development:
 
@@ -704,7 +709,9 @@ Clone
 The clone command is used to create a local copy of your Git repository.
 
 .. example::
-   :command:`git clone --recurse-submodules --branch development git@github.com:my-organization/my-repository.git`
+   .. code-block:: shell
+
+      git clone --recurse-submodules --branch development git@github.com:my-organization/my-repository.git
 
    - `--recurse-submodules` to download the submodules of your repository
    - `--branch main` to check out to a specific branch of the repository (e.g., `development`)
@@ -720,11 +727,13 @@ Fork
 The fork command is used to create a new branch based on the current one.
 
 .. example::
-   :command:`git checkout -b main-1 development && git push -u origin development-1`
+   .. code-block:: shell
 
-   - :command:`git checkout -b main-1 main` a command to create a new branch (e.g., `development-1`)
+      git checkout -b main-1 development && git push -u origin development-1
+
+   - `git checkout -b main-1 main` a command to create a new branch (e.g., `development-1`)
      based on the current branch (e.g., `development`)
-   - :command:`git push -u origin development-1` a command to upload the new branch (e.g.,
+   - `git push -u origin development-1` a command to upload the new branch (e.g.,
      `development-1`) to the remote repository
 
 .. _odoo-sh/branches/shell-commands/merge:
@@ -735,11 +744,13 @@ Merge
 The merge command is used to combine changes on one branch into another branch.
 
 .. example::
-   :command:`git merge staging-1 && git push -u origin staging`
+   .. code-block:: shell
 
-   - :command:`git merge staging-1` a command to merge the changes of the current branch into
+      git merge staging-1 && git push -u origin staging
+
+   - `git merge staging-1` a command to merge the changes of the current branch into
      another branch (e.g., `staging-1`)
-   - :command:`git push -u origin staging` a command to upload the merged changes to the remote
+   - `git push -u origin staging` a command to upload the merged changes to the remote
      repository branch (e.g., `staging`)
 
 .. _odoo-sh/branches/shell-commands/ssh:
@@ -764,13 +775,15 @@ To use the SSH command, it is necessary to set up an SSH key first. To do so:
      :alt: Adding an SSH key manually
 
 .. example::
-   :command:`ssh 25004381@my-user-my-repository-staging-25004381.dev.odoo.com`
+   .. code-block:: shell
+
+      ssh 25004381@my-user-my-repository-staging-25004381.dev.odoo.com
 
    - `25004381` the build ID
    - `my-user-my-repository-staging-25004381.dev.odoo.com` the domain used to connect to the build
 
-Provided you have the necessary :ref:`access rights <odoosh-gettingstarted-settings-collaborators>`
-on the project, you will be granted SSH access to the build.
+Provided you have the necessary :ref:`access rights <odoo-sh/settings/collaborators>` on the
+project, you will be granted SSH access to the build.
 
 .. note::
    Long-running SSH connections are not guaranteed. Idle connections can be disconnected to free up
@@ -788,13 +801,15 @@ submodule.
    :doc:`Submodules documentation <../advanced/submodules>`
 
 .. example::
-   :command:`git submodule add -b master <URL> <PATH> && git commit -a && git push -u origin staging`
+   .. code-block:: shell
 
-   - :command:`git submodule add -b master <URL> <PATH>` a command to add a specific branch (e.g.,
+      git submodule add -b master <URL> <PATH> && git commit -a && git push -u origin staging
+
+   - `git submodule add -b master <URL> <PATH>` a command to add a specific branch (e.g.,
      `master`) of a repository (`<URL>`) as a submodule under the specified path (`<PATH>`) in
      your current branch.
-   - :command:`git commit -a` a command to commit all current changes
-   - :command:`git push -u origin staging` a command to upload the changes of the current branch
+   - `git commit -a` a command to commit all current changes
+   - `git push -u origin staging` a command to upload the changes of the current branch
      (e.g., `staging`) to the remote repository.
 
 .. _odoo-sh/branches/shell-commands/delete:
@@ -809,11 +824,13 @@ The delete command is used to delete a branch from your repository.
    are not automatically backed up, but can be manually. Development branches cannot be backed up.
 
 .. example::
-   :command:`git push origin :staging && git branch -D staging`
+   .. code-block:: shell
 
-   - :command:`git push origin :staging` a command to delete a specific branch (e.g., `staging`) on
+      git push origin :staging && git branch -D staging
+
+   - `git push origin :staging` a command to delete a specific branch (e.g., `staging`) on
      the remote repository
-   - :command:`git branch -D staging` a command to delete the specific branch on your local copy of
+   - `git branch -D staging` a command to delete the specific branch on your local copy of
      the repository
 
 .. warning::
