@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-18 11:05+0000\n"
+"POT-Creation-Date: 2025-12-10 08:58+0000\n"
 "PO-Revision-Date: 2025-11-13 20:11+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate.odoo.com/projects/"
@@ -147,6 +147,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:38
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:52
 #: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:41
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:33
 #: ../../content/applications/inventory_and_mrp/barcode/setup/serial_numbers_lots.rst:11
 #: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:14
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:38
@@ -171,7 +172,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:16
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:17
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:19
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:19
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:24
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:15
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:17
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/label_type.rst:13
@@ -1108,6 +1109,7 @@ msgstr ""
 "que pode conter qualquer número ou tipo de caracteres."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:240
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:50
 msgid ":doc:`gs1_nomenclature`"
 msgstr ":doc:`gs1_nomenclature`"
 
@@ -2970,6 +2972,166 @@ msgstr ""
 msgid "Overview of deliveries in transfer to validate."
 msgstr "Visão geral das entregas em transferência para validação."
 
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:3
+msgid "Retrieve EPC codes"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:9
+msgid ""
+"Electronic product codes (|EPC|) are globally unique identifiers assigned to "
+"specific products, allowing items to be distinguished at the individual "
+"level. These identifiers support accurate inventory management by enabling "
+"faster cycle counts, streamlined adjustments, and more precise stock control."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:14
+msgid ""
+"After EPCs are :ref:`obtained <barcode/operations/retrieve_epcs_gs1>` from |"
+"GS1|, they are :ref:`encoded <barcode/operations/write_epcs>` onto |RFID| "
+"tags, which are then applied to products and used throughout the inventory "
+"process."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:19
+msgid "Set up :doc:`../setup/rfid`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:22
+msgid ""
+"If using Odoo 18, |GS1|'s Encoder/Decoder tool **must** be used to retrieve "
+"EPCs."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:27
+msgid "Retrieving EPCs from GS1"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:29
+msgid ""
+"To retrieve an EPC to encode on a tag, use `GS1's EPC Encoder/Decoder tool "
+"<https://www.gs1.org/services/epc-encoderdecoder>`__."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:32
+msgid ""
+"Enter the GTIN-14 barcode of the product in the application "
+"identifier :guilabel:`(01)` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:33
+msgid "Enter the product's serial number in the :guilabel:`(21)` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:34
+msgid "Specify a company prefix length."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:35
+msgid "Specify the size of the tag and its filter value."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:-1
+msgid "Complete the fields of the EPC Encoder/Decoder tool."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:43
+msgid "Writing EPCs to RFID tags"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:45
+msgid ""
+"After retrieving the EPCs, you can use an RFID writer to write the EPCs onto "
+"RFID tags. The process to write EPCs varies by RFID writer manufacturer. "
+"Refer to the RFID writer's documentation for more information."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:51
+msgid ":doc:`gs1_usage`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:52
+msgid ":doc:`adjustments`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:3
+msgid "Manage inventory with RFID"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:5
+msgid ""
+"Managing inventory with an RFID barcode scanner is possible with the "
+"**Barcodes** app and a physical RFID scanner."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:8
+msgid ""
+"Make sure the RFD40 scanner is paired and connected to the mobile computer "
+"or smartphone. Open an operation (like a receipt, transfer, delivery order, "
+"or manufacturing order), or count inventory using the RFID scanner. Scanning "
+"an existing operation barcode pulls up the relevant inventory or "
+"manufacturing documents in Odoo on the mobile device."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:14
+msgid "Overview of the workflow"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:16
+msgid ""
+"With the RFD40 scanner in hand, open the **Barcode** app on the computer or "
+"phone. Open the operation record (via the **Barcode** interface or scanning "
+"the operation barcode), or open the :guilabel:`Inventory count` operation. "
+"Scan the RFID barcodes for the product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:21
+msgid ":doc:`../setup/operation_types`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:23
+msgid ""
+"To begin managing inventory using RFID tags, open the **Barcode** app on the "
+"smart device."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:28
+msgid "Manage inventory"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:30
+msgid ""
+"From the **Barcode** app, scan the operation barcode or tap "
+"the :guilabel:`Operations` button to open operations for receipts, internal "
+"transfers, delivery orders, or manufacturing orders. If the reading device "
+"is not connected, Odoo will automatically connect to the device. When the "
+"device is connected, a toast notification appears on the screen that "
+"verifies the connection. Scan the products, then validate the scan on the "
+"mobile computer or smartphone."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:-1
+msgid "Validate the operation on the mobile device."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:42
+msgid "Counting inventory"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:44
+msgid ""
+"It is required by many factories and warehouses to keep track of inventory, "
+"including regular counts of products to ensure all records are correct. To "
+"change the amount of a product in stock, or adjust inventory, open "
+"the :guilabel:`Inventory count` operation. Scan the products to count. If "
+"necessary, verify the count manually. You can update the count by clicking "
+"the :icon:`fa-pencil` :guilabel:`(edit)` icon. Click :guilabel:`Apply` to "
+"apply the count on the smart device."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:-1
+msgid "Apply the count on the Inventory Adjustment page."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:3
 msgid "Create and process transfers with barcodes"
 msgstr "Criar e processar transferências com códigos de barras"
@@ -4696,6 +4858,152 @@ msgstr ""
 msgid ""
 "`Odoo Tutorials: Consuming Components Using Barcodes <https://"
 "www.youtube.com/watch?v=2ojxIbTq41Q>`_"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:3
+msgid "RFID"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:7
+msgid ""
+"RFID stands for Radio Frequency Identification. RFID enables the tracking of "
+"items using radio waves: RFID tags are attached to products in inventory, "
+"and RFID readers can read those tags to transmit information to a computer. "
+"RFID helps automate processes by keeping inventory accurate and tracking "
+"internal and external moves."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:12
+msgid ""
+"RFID tags transmit electronic product codes (|EPC|), which are unique "
+"identifiers to distinguish individual items. The |EPC| in Odoo is based on "
+"GS1 standards to consistently identify products worldwide. GS1 nomenclature "
+"establishes common rules for encoding information within a barcode to "
+"facilitate the global exchange of goods."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:18
+msgid ":doc:`../operations/gs1_nomenclature`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:21
+msgid "Hardware"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:23
+msgid "The following are required to begin working with RFID in Odoo:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:25
+msgid "Zebra TCX Series mobile computer, or"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:26
+msgid "Android Smartphone"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:28
+msgid "Paired with:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:30
+msgid "Zebra RFD40 (can read and write RFID tags)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:35
+msgid ""
+"Before using RFID tags to manage inventory, the Android Package Kit (APK) "
+"with RFID support must be installed on the mobile computer or smartphone."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:39
+msgid ""
+"Before installing the APK on an individual device, first enable the ability "
+"to install unknown apps in the device settings. Find this setting in the "
+"device's :guilabel:`App` or :guilabel:`App & Notification` settings, under "
+"the :guilabel:`Special access` or :guilabel:`Special app access` section."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:44
+msgid ""
+"Then, download the APK. On the :guilabel:`Downloads` page, under "
+"the :guilabel:`Mobile Application` section, click :guilabel:`Download` next "
+"to the :guilabel:`Android` option, then select :guilabel:`Download APK (with "
+"Zebra RFID support)` from the drop-down menu. Download this file via a "
+"computer and transfer the APK via USB or Bluetooth, or use the device's web "
+"browser to download the APK."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:-1
+msgid "Download the APK from the Download page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:53
+msgid ""
+"Install the APK. If :guilabel:`Install unknown apps` is enabled for the "
+"device's web browser, install the APK directly from the browser download "
+"notification. If :guilabel:`Install unknown apps` is enabled for the "
+"device's file manager, open it and navigate to the location where the file "
+"is stored, then tap it to install the APK."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:58
+msgid ""
+"Then, when reading or writing RFID tags, ensure that the Zebra device and "
+"the smart device are paired and connected."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:62
+msgid "Set a compatible barcode"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:64
+msgid ""
+"Before you can manage inventory using RFID tags, a compatible barcode must "
+"be assigned to the products. Set the product barcode in the product form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:68
+msgid ":ref:`Set product barcodes <inventory/barcode/set-barcodes>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:70
+msgid ""
+"To work with RFID, the product barcode must be GTIN-14-compatible, and "
+"inventory tracking must be enabled for the product. Product barcodes that "
+"are not GTIN-14-compatible must be upgraded to work with RFID."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:75
+msgid ""
+"Tracking by serial number or lots does not need to be enabled for this "
+"feature to work properly."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:78
+msgid "Limitations"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:80
+msgid ""
+"The serial number that is part of the |EPC| must only be numeric, as "
+"SGTIN-96 is the only supported encoding scheme for RFID tags in Odoo. "
+"Alphanumeric serial numbers are **not** supported."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:83
+msgid ""
+"For products tracked by lot, the lot can be scanned in, but it will be "
+"considered as one lot with a quantity of `1`. It does not count individual "
+"products in a receipt."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:85
+msgid "Only ultra-high frequency (UHF) RFID tags are supported."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:86
+msgid "Products need to be GS1-registered because barcodes must be unique."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/serial_numbers_lots.rst:3
@@ -7086,7 +7394,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:227
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:133
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:6
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:169
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:117
 msgid "Replenishment"
 msgstr "Reposição"
 
@@ -20659,6 +20967,15 @@ msgstr "Métodos de entrega"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:7
 msgid ""
+"In Odoo, *delivery methods* make it possible to calculate shipping costs "
+"directly on sales orders and e-commerce carts, providing customers and sales "
+"teams with accurate shipping fee information. This transparency helps close "
+"sales by showing customers the exact cost for each shipping carrier or "
+"delivery timeframe."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:12
+msgid ""
 "When activated in Odoo, the *Delivery Methods* setting adds the option of "
 "calculating the cost of shipping on sales orders and e-commerce shopping "
 "carts."
@@ -20667,21 +20984,21 @@ msgstr ""
 "de calcular o custo de frete em pedidos de vendas e carrinhos de compras do "
 "e-Commerce."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:10
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:15
 msgid ""
 "When integrated with a :ref:`third-party carrier <inventory/shipping/"
 "third_party>`, shipping prices are calculated based on the carrier's pricing "
 "information."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:14
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:19
 msgid ""
 ":ref:`Third-party shipping carrier setup <inventory/shipping/third_party>`"
 msgstr ""
 ":ref:`Configuração de transportadora terceirizada <inventory/shipping/"
 "third_party>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:15
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:20
 msgid ""
 "`Odoo Tutorials: Delivery Prices <https://www.odoo.com/slides/slide/delivery-"
 "prices-613?fullscreen=1>`_"
@@ -20689,70 +21006,51 @@ msgstr ""
 "`Tutoriais do Odoo: Preços de entrega <https://www.odoo.com/slides/slide/"
 "delivery-prices-613?fullscreen=1>`_"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:21
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:26
 msgid ""
-"To calculate shipping on sales orders and e-commerce, the *Delivery Costs* "
+"To calculate shipping on sales orders and e-commerce, the **Delivery Costs** "
 "module must be installed. To do so, navigate to the :menuselection:`Apps` "
 "application from the main Odoo dashboard."
 msgstr ""
-"Para calcular o frete em pedidos de vendas e e-Commerce, o módulo *Custos de "
-"entrega* deve ser instalado. Para fazer isso, navegue até o "
-"aplicativo :menuselection:`Aplicativos` no painel principal do Odoo."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:24
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:29
 msgid ""
 "Then, remove the :guilabel:`Apps` filter, and type in `Delivery Costs` in "
-"the :guilabel:`Search...` bar. After finding the :guilabel:`Delivery Costs` "
-"module, click :guilabel:`Activate` to install it."
+"the search bar. After finding the :guilabel:`Delivery Costs` module, "
+"click :guilabel:`Install` to install it."
 msgstr ""
-"Em seguida, remova o filtro :guilabel:`Aplicativos` e digite `Custos de "
-"entrega` na barra :guilabel:`Pesquisar…`. Depois de localizar o "
-"módulo :guilabel:`Custos de entrega`, clique em :guilabel:`Ativar` para "
-"instalá-lo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:-1
 msgid "Install the Delivery Costs module."
 msgstr "Instale o módulo Custos de entrega."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:33
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:38
 msgid "Add shipping"
 msgstr "Adicionar envio"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:35
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:40
 msgid ""
-"Shipping methods can be added to sales orders in the form of delivery "
-"products, which appear as individual line items. First, navigate to the "
-"desired sales order by going to :menuselection:`Sales app --> Orders --> "
-"Orders`."
+"Shipping methods are added to sales orders in the form of delivery products, "
+"which appear as individual line items. First, navigate to the desired sales "
+"order by going to :menuselection:`Sales app --> Orders --> Orders`."
 msgstr ""
-"Os métodos de envio podem ser adicionados aos pedidos de vendas na forma de "
-"produtos de entrega, que aparecem como itens de linha individuais. Primeiro, "
-"navegue até o pedido de vendas desejado acessando :menuselection:`app Vendas "
-"--> Pedidos --> Pedidos`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:39
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:44
 msgid ""
-"On the sales order, click the :guilabel:`Add shipping` button, which opens "
-"the :guilabel:`Add a shipping method` pop-up window. Then, choose "
-"a :guilabel:`Shipping Method` from the list."
+"Open the desired sales order, then click the :guilabel:`Add shipping` "
+"button. The :guilabel:`Add a shipping method` pop-up window opens. Then, "
+"using the drop-down menu, select an available shipping method."
 msgstr ""
-"No pedido de venda, clique no botão :guilabel:`Adicionar envio`, que abre a "
-"janela pop-up :guilabel:`Adicionar um método de envio`. Em seguida, escolha "
-"um :guilabel:`Método de envio` na lista."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:42
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:48
 msgid ""
 "The :guilabel:`Total Order Weight` is pre-filled based on product weights "
-"(that are defined in the :guilabel:`Inventory` tab for each product form). "
-"Edit the field to specify the exact weight, and then click :guilabel:`Add` "
-"to add the shipping method."
+"(that are defined in the :ref:`Inventory <inventory/product_management/"
+"manufacture>` tab for each product form). Edit the field to specify the "
+"exact weight, and then click :guilabel:`Add` to add the shipping method."
 msgstr ""
-"O :guilabel:`Peso total do pedido` é pré-preenchido com base nos pesos dos "
-"produtos (que são definidos na guia :guilabel:`Inventário` para cada "
-"formulário de produto). Edite o campo para especificar o peso exato e, em "
-"seguida, clique em :guilabel:`Adicionar` para adicionar o método de envio."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:47
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:53
 msgid ""
 "The amount defined in :guilabel:`Total Order Weight` overwrites the total "
 "product weights defined on the product form."
@@ -20760,42 +21058,47 @@ msgstr ""
 "O valor definido em :guilabel:`Peso total da ordem` substitui os pesos "
 "totais do produto definidos no formulário do produto."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:57
 msgid ""
-"The shipping cost is added to the *sales order line* as "
-"the :guilabel:`Delivery Product` detailed on the shipping method form."
+"Some connected shipping methods require obtaining rates from the carrier. In "
+"this situation, click the :icon:`oi-arrow-right` :guilabel:`Get rate` "
+"button, and the shipping costs are automatically updated from the carrier. "
+"These rates cannot be modified."
 msgstr ""
-"O custo de envio é adicionado à linha do *pedido de venda* como "
-"o :guilabel:`Produto de entrega` detalhado no formulário do método de envio."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:54
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:61
 msgid ""
-"`Furniture Delivery`, a delivery product with a fixed rate of `$200`, is "
-"added to sales order `S00088`."
+"The shipping cost is added as a line item in the :guilabel:`Order Lines` tab "
+"as the :guilabel:`Delivery Product` detailed on the shipping method form."
 msgstr ""
-"`Entrega de móveis`, um produto de entrega com uma taxa fixa de `US$ 200`, é "
-"adicionado ao pedido de vendas `S00088`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:65
+msgid ""
+"A customer purchased a left-sided desk with storage and requested the item "
+"be delivered by hand. This delivery method is defined as `Furniture Delivery "
+"(Manual)` and has a cost of `$200`. The sales order contains two line items: "
+"one for the desk, and another for the delivery method."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:0
 msgid "Show delivery order on the sales order line."
 msgstr "Pedido de entrega na linha do pedido de vendas."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:61
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:73
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:267
 msgid "Delivery order"
 msgstr "Pedido de entrega"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:63
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:75
 msgid ""
 "The shipping method added to the sales order is linked to the shipping "
-"carrier details on the delivery order. To add or change the delivery method "
-"on the delivery itself, go to the :guilabel:`Additional Info` tab and modify "
+"carrier details on the delivery order. After confirming the order, "
+"a :icon:`fa-truck` :guilabel:`Delivery` smart button appears at the top of "
+"the page. Click the :icon:`fa-truck` :guilabel:`Delivery` smart button to "
+"open the warehouse delivery form. To add or change the delivery method on "
+"the delivery itself, open the :guilabel:`Additional Info` tab and modify "
 "the :guilabel:`Carrier` field."
 msgstr ""
-"O método de envio adicionado ao pedido de vendas está vinculado aos detalhes "
-"da transportadora no pedido de entrega. Para adicionar ou alterar o método "
-"de entrega na própria entrega, vá para a aba :guilabel:`Informações "
-"adicionais` e modifique o campo :guilabel:`Transportadora`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:-1
 msgid "Shipping carrier information on the delivery form."
@@ -22215,7 +22518,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:21
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:17
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:13
 msgid "Create an account and activate carriers"
 msgstr "Crie uma conta e ative as operadoras"
 
@@ -22286,7 +22589,7 @@ msgid "API Keys in Envia.com."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:62
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:86
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:84
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:90
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:165
 msgid "Setup in Odoo"
@@ -22402,7 +22705,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:119
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:209
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:207
 msgid "Shipping information"
 msgstr "Informações de envio"
 
@@ -22420,7 +22723,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:127
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:217
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:215
 msgid ""
 "To verify, select the :guilabel:`Customer` field to open their contact page. "
 "Here, add their shipping address in the :guilabel:`Contact` field, along "
@@ -22621,7 +22924,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:217
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:238
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:236
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:205
 msgid ":guilabel:`Shipping label(s)` depending on the number of packages."
 msgstr ":guilabel:`Etiqueta(s) de remessa`, dependendo do número de pacotes."
@@ -22641,7 +22944,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:225
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:242
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:240
 msgid "Additionally, the tracking number is now available."
 msgstr "Além disso, o número de rastreamento fica disponível."
 
@@ -22706,12 +23009,12 @@ msgid "Customer portal tracking."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:266
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:284
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:282
 msgid "FAQ"
 msgstr "FAQ"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:269
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:325
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:323
 msgid "Measuring volumetric weight"
 msgstr "Medição de peso volumétrico"
 
@@ -23309,7 +23612,7 @@ msgstr ""
 "taxa de entrega."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:51
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:51
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:54
 msgid ""
 ":guilabel:`Free if order amount is above`: checking this box enables free "
 "shipping if the customer spends above the specified amount."
@@ -24209,10 +24512,11 @@ msgstr ""
 msgid ""
 ":guilabel:`Website`: configure shipping methods for an **eCommerce** page. "
 "Select the applicable website from the drop-down menu, or leave it blank to "
-"apply the method to all web pages."
+"apply the method to all web pages. This field only appears when the "
+"**eCommerce** app is enabled."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:38
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:39
 msgid ""
 ":guilabel:`Provider` (*Required field*): choose the delivery service, like "
 "FedEx, if using a :ref:`third-party carrier <inventory/shipping/"
@@ -24223,25 +24527,25 @@ msgid ""
 "options, refer to their respective sections below."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:44
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:45
 msgid ""
 ":guilabel:`Company`: If the shipping method should apply to a specific "
 "company, select it from the drop-down menu. Leave the field blank to apply "
-"the method to all companies."
+"the method to all companies. This field only appears in multi-company "
+"databases."
 msgstr ""
-":guilabel:`Empresa`: Se o método de envio for aplicável a uma empresa "
-"específica, selecione-a no menu suspenso. Deixe o campo em branco para "
-"aplicar o método a todas as empresas."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:46
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:48
 msgid ""
 ":guilabel:`Routes`: select the applicable routes to define different "
 "delivery methods, such as standard or express shipping, based on varying "
-"lead times. For more information, jump to the :ref:`Set routes on shipping "
-"method <inventory/shipping_receiving/shipping-route>` section."
+"lead times. This field only appears when you have enabled multi-step routes "
+"in your inventory configuration settings. For more information, refer to "
+"the :ref:`Set routes on shipping method <inventory/shipping_receiving/"
+"shipping-route>` section."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:49
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:52
 msgid ""
 ":guilabel:`Delivery Product` (*Required field*): the product listed on "
 "the :ref:`sales order line <inventory/shipping/sales-order>` as the delivery "
@@ -24251,7 +24555,7 @@ msgstr ""
 "na :ref:`linha do pedido de venda <inventory/shipping/sales-order>` como a "
 "taxa de entrega."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:53
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:56
 msgid ""
 ":guilabel:`Tracking Link`: This option adds a link to the portal so the "
 "customer can track their delivery. When a custom carrier is added in a "
@@ -24259,13 +24563,38 @@ msgid ""
 "tracking portal with that URL."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:59
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:61
+msgid "To set up `$200` flate-rate shipping, fill in the following fields:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:63
+msgid ":guilabel:`Delivery Method`: `Furniture Delivery (Manual)`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:64
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:107
+msgid ":guilabel:`Provider`: :guilabel:`Fixed Price`"
+msgstr ":guilabel:`Provedor`: :guilabel:`Preço fixo`"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:65
+msgid ":guilabel:`Fixed Price`: `200`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:66
+msgid ":guilabel:`Delivery Product`: :guilabel:`Furniture Delivery (manual)`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:0
+msgid "Set up a delivery method with a fixed price of 200."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:73
 msgid ""
 "Use the :guilabel:`Availability` tab to define conditions for the delivery "
 "method based on the order's content or destination:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:62
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:76
 msgid ""
 ":guilabel:`Countries`: Specify one or more countries where the method is "
 "available."
@@ -24273,7 +24602,7 @@ msgstr ""
 ":guilabel:`Países`: Especifique um ou mais países onde o método está "
 "disponível."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:63
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:77
 msgid ""
 ":guilabel:`Max Weight`: Set a maximum weight; the method is only available "
 "for orders below this limit."
@@ -24281,7 +24610,7 @@ msgstr ""
 ":guilabel:`Peso máx`: Define um peso máximo; o método só está disponível "
 "para pedidos abaixo desse limite."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:65
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:79
 msgid ""
 ":guilabel:`Max Volume`: Set a maximum volume; the method is only available "
 "for orders below this limit."
@@ -24289,7 +24618,7 @@ msgstr ""
 ":guilabel:`Volume máx.`: Define um volume máximo; o método só está "
 "disponível para pedidos abaixo desse limite."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:67
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:81
 msgid ""
 ":guilabel:`Must Have Tags`: The method is available only if at least one "
 "product in the order has one of these tags."
@@ -24297,7 +24626,7 @@ msgstr ""
 ":guilabel:`Marcadores obrigatórios`: O método está disponível somente se "
 "pelo menos um produto no pedido tiver um desses marcadores."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:69
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:83
 msgid ""
 ":guilabel:`Excluded Tags`: The method is unavailable if at least one product "
 "in the order has one of these tags."
@@ -24305,7 +24634,7 @@ msgstr ""
 ":guilabel:`Marcadores excluídos`: O método não estará disponível se pelo "
 "menos um produto no pedido tiver um desses marcadores."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:72
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:86
 msgid ""
 "For examples on how to configure specific shipping methods, refer to the "
 "sections below."
@@ -24313,11 +24642,11 @@ msgstr ""
 "Para obter exemplos sobre como configurar métodos de envio específicos, "
 "consulte as seções abaixo."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:77
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:91
 msgid "Fixed price"
 msgstr "Preço fixo"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:79
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:93
 msgid ""
 "To configure a shipping price that is the same for all orders, go "
 "to :menuselection:`Inventory app --> Configuration --> Delivery Methods`. "
@@ -24327,7 +24656,7 @@ msgid ""
 "is where the fixed rate shipping amount is defined."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:85
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:99
 msgid ""
 "To enable free shipping if the amount of the order exceeds a specified "
 "amount, check the box :guilabel:`Free if order amount is above` and fill in "
@@ -24337,7 +24666,7 @@ msgstr ""
 "especificado, marque a caixa :guilabel:`Grátis se o valor do pedido estiver "
 "acima` e preencha o valor."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:103
 msgid ""
 "To set up `$20` flat-rate shipping that becomes free if the customer spends "
 "over `$100`, fill in the following fields:"
@@ -24345,23 +24674,19 @@ msgstr ""
 "Para configurar o frete de taxa fixa de `US$ 20` que se torna gratuito se o "
 "cliente gastar mais de `US$ 100`, preencha os seguintes campos:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:106
 msgid ":guilabel:`Delivery Method`: `Flat-rate shipping`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:93
-msgid ":guilabel:`Provider`: :guilabel:`Fixed Price`"
-msgstr ":guilabel:`Provedor`: :guilabel:`Preço fixo`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:94
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:108
 msgid ":guilabel:`Fixed Price`: `$20.00`"
 msgstr ":guilabel:`Preço fixo`: `US$ 20.00`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:95
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:109
 msgid ":guilabel:`Free if order amount is above`: `$100.00`"
 msgstr ":guilabel:`Grátis se o valor do pedido estiver acima de`: `US$ 100.00`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:96
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:110
 msgid ":guilabel:`Delivery Product`: `[SHIP] Flat`"
 msgstr ":guilabel:`Produto de entrega`: `[FRETE] Fixo`"
 
@@ -24369,11 +24694,11 @@ msgstr ":guilabel:`Produto de entrega`: `[FRETE] Fixo`"
 msgid "Example of filling out a shipping method."
 msgstr "Exemplo de preenchimento de um método de envio."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:104
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:118
 msgid "Based on rules"
 msgstr "Baseado em regras"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:120
 msgid ""
 "To calculate the price of shipping based on pricing rules, set "
 "the :guilabel:`Provider` field to the :guilabel:`Based on Rules` option. "
@@ -24385,11 +24710,11 @@ msgstr ""
 "Opcionalmente, ajuste :guilabel:`Margem na taxa` e :guilabel:`Margem "
 "adicional` para incluir custos adicionais de frete."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:125
 msgid "Create pricing rules"
 msgstr "Criar regras de preços"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:113
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:127
 msgid ""
 "Navigate to the :guilabel:`Pricing` tab and click :guilabel:`Add a line`. "
 "Doing so opens the :guilabel:`Create Pricing Rules` window, where "
@@ -24403,7 +24728,7 @@ msgstr ""
 "produto é comparada a um valor definido para calcular o :guilabel:`Custo de "
 "entrega`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:118
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:132
 msgid ""
 "Once finished, click either :guilabel:`Save & New` to add another rule, "
 "or :guilabel:`Save & Close`."
@@ -24411,7 +24736,7 @@ msgstr ""
 "Quando terminar, clique em :guilabel:`Salvar e Novo` para adicionar outra "
 "regra ou em :guilabel:`Salvar e Fechar`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:121
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:135
 msgid ""
 "To charge customers $20 in shipping for orders with five or fewer products, "
 "set the :guilabel:`Condition` to `Quantity <= 5.00`, and "
@@ -24428,7 +24753,7 @@ msgstr ""
 "Janela de exibição para adicionar uma regra de preços. Defina uma condição e "
 "um custo de entrega."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:127
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:141
 msgid ""
 "To restrict shipping to specific destinations on the **eCommerce** website, "
 "in the shipping method form, navigate to the :guilabel:`Destination "
@@ -24437,11 +24762,11 @@ msgid ""
 "apply."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:132
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:146
 msgid "Calculate delivery cost"
 msgstr "Calcular o custo de entrega"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:134
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:148
 msgid ""
 "Shipping cost is the :guilabel:`Delivery cost` specified in the rule that "
 "satisfies the :guilabel:`Condition`, plus any extra charges from "
@@ -24451,7 +24776,7 @@ msgstr ""
 "satisfaz a :guilabel:`condição`, mais os encargos extras "
 "da :guilabel:`Margem na taxa` e :guilabel:`Margem adicional`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:138
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:152
 msgid ""
 "Total = Rule's~Delivery~Cost + (Margin~on~rate \\times Rule's~Delivery~Cost) "
 "+ Additional~margin\n"
@@ -24461,19 +24786,19 @@ msgstr ""
 "entrega da regra) + Margem adicional\n"
 "\n"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:142
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:156
 msgid "With the two following rules set up:"
 msgstr "Com as duas regras a seguir configuradas:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:144
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:158
 msgid "If the order contains five or fewer products, shipping is $20"
 msgstr "Se o pedido contiver cinco ou menos produtos, o frete será de US$ 20"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:145
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:159
 msgid "If the order contains more than five products, shipping is $50."
 msgstr "Se o pedido contiver mais de cinco produtos, o frete será de US$ 50."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:147
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:161
 msgid ""
 ":guilabel:`Margin on Rate` is `10%` and :guilabel:`Additional margin` is "
 "`$9.00`."
@@ -24488,7 +24813,7 @@ msgstr ""
 "Exibir exemplo de método de envio \"Baseado em regras\" com margens "
 "configuradas."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:152
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:166
 msgid ""
 "When the first rule is applied, the delivery cost is $31 (20 + (0.1 * 20) + "
 "9). When the second rule is applied, the delivery cost is $64 (50 + (0.1 * "
@@ -24498,18 +24823,18 @@ msgstr ""
 "(0,1 * 20) + 9). Quando a segunda regra é aplicada, o custo de entrega é de "
 "US$ 64 (50 + (0,1 * 50) + 9)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:158
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:172
 msgid "Route on shipping method"
 msgstr "Rota no método de envio"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:160
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:174
 msgid ""
 "Optionally, set different warehouse delivery processes for a shipping method "
 "by configuring different :doc:`routes <../daily_operations/use_routes>` for "
 "it."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:164
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:178
 msgid ""
 "Configuring multiple routes per shipping method is helpful for adjusting "
 "warehouse delivery processes based on:"
@@ -24517,20 +24842,20 @@ msgstr ""
 "A configuração de várias rotas por método de remessa é útil para ajustar os "
 "processos de entrega do armazém com base em:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:167
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:181
 msgid ""
 "speed (e.g., use :doc:`one-step delivery <../daily_operations/"
 "receipts_delivery_one_step>` for express shipping, or :doc:`two-step <../"
 "daily_operations/receipts_delivery_two_steps>` for standard shipping)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:170
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:184
 msgid ""
 "international shipping (e.g. use :doc:`three-step delivery <../"
 "daily_operations/delivery_three_steps>` to prepare documents for customs)"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:172
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:186
 msgid ""
 "in-store pickup or home delivery: ship from the central warehouse, or pick "
 "from the store's stock, depending on customer selection."
@@ -24538,7 +24863,7 @@ msgstr ""
 "retirada na loja ou entrega a domicílio: envio do armazém central ou "
 "retirada do estoque da loja, dependendo da seleção do cliente."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:175
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:189
 msgid ""
 "To set up routes, go to :menuselection:`Inventory app --> Configuration --> "
 "Routes`. Click :guilabel:`New`, or select the desired route."
@@ -24547,7 +24872,7 @@ msgstr ""
 "Configuração --> Rotas`. Clique em :guilabel:`Novo` ou selecione a rota "
 "desejada."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:178
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:192
 msgid ""
 "On the route form, in the :guilabel:`Applicable On` section, tick "
 "the :guilabel:`Shipping Methods` checkbox."
@@ -24555,21 +24880,21 @@ msgstr ""
 "No formulário de rota, na seção :guilabel:`Aplicável em`, marque a caixa de "
 "seleção :guilabel:`Métodos de envio`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:184
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:198
 msgid "Routes form with the Shipping Methods checkbox selected."
 msgstr "Formulário Rotas com a caixa de seleção Métodos de envio selecionada."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:184
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:198
 msgid "Routes form with the :guilabel:`Shipping Method` checkbox ticked."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:186
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:200
 msgid ""
 "Then, go to :menuselection:`Inventory app --> Configuration --> Delivery "
 "Methods`, and select the desired shipping method."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:189
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:203
 msgid ""
 "On the shipping method form, in the :guilabel:`Routes` field, select the "
 "available fulfillment routes from the drop-down menu."
@@ -24577,7 +24902,7 @@ msgstr ""
 "No formulário de método de envio, no campo :guilabel:`Rotas`, selecione as "
 "rotas de logística disponíveis no menu suspenso."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:193
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:207
 msgid ""
 "If the desired route is not selectable, check that the *Shipping Methods* "
 "option is enabled in the route's *Applicable On* section."
@@ -25329,24 +25654,25 @@ msgstr ""
 "de dados Odoo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:10
-msgid ""
-"`Sendcloud integration documentation <https://support.sendcloud.com/hc/en-us/"
-"articles/ 360059470491-Odoo-Native-integration>`_"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:14
 msgid "Setup in Sendcloud"
 msgstr "Configuração no Sendcloud"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:19
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:15
 msgid ""
-"To get started, go to `Sendcloud's platform <https://sendcloud.com/ ?"
-"utm_source=odoo&utm_medium=partnerships&utm_campaign=partner_integrations_page>`_ "
-"to configure the account and generate the connector credentials. Log in with "
-"the Sendcloud account, or create a new one if needed."
+"To get started, `create or log in to a Sendcloud account <https://"
+"account.sendcloud.com/signup/ ?"
+"utm_source=odoo&utm_medium=partnerships&utm_campaign=partner_integrations_page>`_."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:25
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:18
+msgid ""
+"On the Sendcloud platform, follow the `Sendcloud integration documentation "
+"<https://support.sendcloud.com/hc/en-us/articles/360059470491-Odoo-Native-"
+"integration>`_ to configure the account and generate the connector "
+"credentials."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:23
 msgid ""
 "For new account creation, Sendcloud will ask for a :abbr:`VAT (Value-Added "
 "Tax Identification)` number or :abbr:`EORI (Economic Operators' Registration "
@@ -25358,7 +25684,7 @@ msgstr ""
 "concluir a configuração da conta, ative (ou desative) as transportadoras que "
 "serão usadas na base de dados do Odoo."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:31
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:29
 msgid ""
 "Odoo integration of Sendcloud works on free Sendcloud plans *only* if a bank "
 "account is linked, since Sendcloud won't ship for free. To use shipping "
@@ -25371,12 +25697,12 @@ msgstr ""
 "transportadoras individuais, é **obrigatório** ter um plano pago do "
 "Sendcloud."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:38
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:36
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:185
 msgid "Warehouse configuration"
 msgstr "Configuração do armazém"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:40
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:38
 msgid ""
 "Once logged into the Sendcloud account, navigate to :menuselection:`Settings "
 "--> Shipping --> Addresses`, and fill in the field for :guilabel:`Warehouse "
@@ -25390,7 +25716,7 @@ msgstr ""
 msgid "Adding addresses in the Sendcloud settings."
 msgstr "Adicionar endereços nas configurações do Sendcloud."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:47
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:45
 msgid ""
 "To allow Sendcloud to process returns as well, a :guilabel:`Return Address` "
 "is required. Under the :guilabel:`Miscellaneous section`, there is a field "
@@ -25438,7 +25764,7 @@ msgstr ":guilabel:`Empresa`: `Minha empresa (San Francisco)`"
 msgid ":guilabel:`Address`: `My Company (San Francisco)`"
 msgstr ":guilabel:`Endereço`: `Minha empresa (San Francisco)`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:64
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:62
 msgid ""
 "Notice how the inputs for the :guilabel:`Warehouse` field, for both the Odoo "
 "configuration and the Sendcloud configuration, are the exact same."
@@ -25447,11 +25773,11 @@ msgstr ""
 "configuração do Odoo quanto para a configuração da Sendcloud, são exatamente "
 "as mesmas."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:66
 msgid "Generate Sendcloud credentials"
 msgstr "Gerar credenciais do Sendcloud"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:70
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:68
 msgid ""
 "In the Sendcloud account, navigate to :menuselection:`Settings --> "
 "Integrations` in the menu on the right. Next, search for :guilabel:`Odoo "
@@ -25461,7 +25787,7 @@ msgstr ""
 "no menu à direita. Em seguida, procure por :guilabel:`Odoo Native`. Em "
 "seguida, clique em :guilabel:`Conectar`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:73
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:71
 msgid ""
 "After clicking on :guilabel:`Connect`, the page redirects to "
 "the :guilabel:`Sendcloud API` settings page, where the :guilabel:`Public and "
@@ -25477,7 +25803,7 @@ msgstr ""
 "NomeDaEmpresa`, com o nome da empresa do usuário substituindo "
 "`NomedaEmpresa` (por exemplo, `Odoo StealthyWood`)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:78
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:76
 msgid ""
 "Then, check the box next to :guilabel:`Service Points` and select the "
 "shipping services for this integration. After saving, the :guilabel:`Public "
@@ -25491,7 +25817,7 @@ msgstr ""
 msgid "Configuring the Sendcloud integration and receiving the credentials."
 msgstr "Configuração da integração do Sendcloud e recebimento das credenciais."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:88
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:86
 msgid ""
 "To ensure seamless Sendcloud integration with Odoo, :ref:`install <inventory/"
 "shipping_receiving/sendcloud-module>` and :ref:`link <inventory/"
@@ -25507,17 +25833,17 @@ msgstr ""
 "<inventory/shipping_receiving/sendcloud-shipping-info>`, para que o "
 "Sendcloud possa extrair com precisão os dados de envio para gerar etiquetas."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:96
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:94
 msgid ""
 ":ref:`Enable pickup points on websites <inventory/shipping_receiving/"
 "sendcloud-pickups>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:99
 msgid "Install Sendcloud shipping module"
 msgstr "Instalar o módulo de envio do Sendcloud"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:103
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:101
 msgid ""
 "After the Sendcloud account is set up and configured, it's time to configure "
 "the Odoo database. To get started, go to Odoo's :guilabel:`Apps` module, "
@@ -25532,11 +25858,11 @@ msgstr ""
 msgid "Sendcloud Shipping module in the Odoo Apps module."
 msgstr "Módulo de envio Sendcloud no módulo Odoo Aplicativos."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:112
 msgid "Sendcloud shipping connector configuration"
 msgstr "Configuração do conector de envio Sendcloud"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:116
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:114
 msgid ""
 "Once installed, activate the :guilabel:`Sendcloud Shipping` module "
 "in :menuselection:`Inventory --> Configuration --> Settings`. "
@@ -25548,14 +25874,14 @@ msgstr ""
 "configuração do :guilabel:`Conector Sendcloud` é encontrada na "
 "seção :guilabel:`Conectores de envio`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:120
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:118
 msgid ""
 "After activating the :guilabel:`Sendcloud Connector`, click on "
 "the :guilabel:`Sendcloud Shipping Methods` link below the listed connector. "
 "Once on the :guilabel:`Shipping Methods` page, click :guilabel:`New`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:125
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:123
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:115
 msgid ""
 ":guilabel:`Shipping Methods` can also be accessed by going "
@@ -25566,23 +25892,23 @@ msgstr ""
 "em :menuselection:`Inventário --> Configuração --> Entrega --> Métodos de "
 "envio`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:128
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:126
 msgid ""
 "Fill out the following fields in the :guilabel:`New Shipping Method` form:"
 msgstr ""
 "Preencha os seguintes campos no formulário :guilabel:`Novo método de envio`:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:130
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:128
 msgid ":guilabel:`Shipping Method`: type `Sendcloud DPD`."
 msgstr ":guilabel:`Método de envio`: tipo `Sendcloud DPD`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:131
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:129
 msgid ""
 ":guilabel:`Provider`: select :guilabel:`Sendcloud` from the drop-down menu."
 msgstr ""
 ":guilabel:`Provedor`: selecione :guilabel:`Sendcloud` no menu suspenso."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:132
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:130
 msgid ""
 ":guilabel:`Delivery Product`: set the product that was configured for this "
 "shipping method or create a new product."
@@ -25590,7 +25916,7 @@ msgstr ""
 ":guilabel:`Produto de entrega`: define o produto que foi configurado para "
 "esse método de envio ou cria um novo produto."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:134
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:132
 msgid ""
 "In the :guilabel:`SendCloud Configuration` tab, enter "
 "the :guilabel:`Sendcloud Public Key`."
@@ -25598,7 +25924,7 @@ msgstr ""
 "Na aba :guilabel:`Configuração do SendCloud`, digite a :guilabel:`Chave "
 "pública do Sendcloud`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:135
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:133
 msgid ""
 "In the :guilabel:`SendCloud Configuration` tab, enter "
 "the :guilabel:`Sendcloud Secret Key`."
@@ -25606,11 +25932,11 @@ msgstr ""
 "Na aba :guilabel:`Configuração do SendCloud`, digite a :guilabel:`Chave "
 "secreta do Sendcloud`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:140
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:138
 msgid "Pickup points"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:142
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:140
 msgid ""
 "Sendcloud's `service point delivery <https://support.sendcloud.com/hc/en-us/"
 "articles/360026097951-FAQ-Service-Points>`_ lets customers choose a pickup "
@@ -25618,21 +25944,21 @@ msgid ""
 "delivery address."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:147
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:145
 msgid ""
 "To enable the feature, go to the shipping method form, and in "
 "the :guilabel:`SendCloud Configuration` tab, under the :guilabel:`Options` "
 "section, enable :guilabel:`Use Sendcloud Locations` feature."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:152
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:150
 msgid ""
 "Pickup point selection is only available through the **Website** app (the "
 "online checkout view). It is not currently possible to select a pickup point "
 "manually through the **Sales** app (the internal database view)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:156
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:154
 msgid ""
 "For example, if the customer selects a shipping method like *Sendcloud "
 "Mondial Relay*, they must choose a pickup point during the checkout process "
@@ -25640,11 +25966,11 @@ msgid ""
 "validated in Odoo."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:161
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:159
 msgid "Load shipping products"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:163
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:161
 msgid ""
 "After configuring and saving the form, follow these steps to load the "
 "shipping products:"
@@ -25652,7 +25978,7 @@ msgstr ""
 "Depois de configurar e salvar o formulário, siga estas etapas para carregar "
 "os produtos de remessa:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:165
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:163
 msgid ""
 "In the :guilabel:`SendCloud Configuration` tab of the :guilabel:`New "
 "Shipping Method` form, click on the :guilabel:`Load your SendCloud shipping "
@@ -25662,7 +25988,7 @@ msgstr ""
 "método de envio`, clique no link :guilabel:`Carregar seus produtos de "
 "remessa do SendCloud`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:167
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:165
 msgid ""
 "Select the shipping products the company would like to use for deliveries "
 "and returns."
@@ -25670,11 +25996,11 @@ msgstr ""
 "Selecione os produtos de remessa que a empresa gostaria de usar para "
 "entregas e devoluções."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:168
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:166
 msgid "Click :guilabel:`Select`."
 msgstr "Clique em :guilabel:`Selecionar`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:171
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:169
 msgid "Sample Sendcloud shipping products configured in Odoo:"
 msgstr "Exemplo de produtos de remessa da Sendcloud configurados no Odoo:"
 
@@ -25698,7 +26024,7 @@ msgstr ":guilabel:`Peso mínimo`: `0,00`"
 msgid ":guilabel:`Maximum Weight`: `31.50`"
 msgstr ":guilabel:`Peso máximo`: `31,50`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:179
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:177
 msgid ""
 ":guilabel:`Countries`: `Austria` `Belgium` `Bosnia` `Herzegovina` `Bulgaria` "
 "`Croatia` `Czech` `Republic` `Denmark` `Estonia` `Finland` `France` "
@@ -25743,7 +26069,7 @@ msgstr ":guilabel:`Países de devolução`: `Bélgica` `Países Baixos`"
 msgid "Example of shipping products configured in Odoo."
 msgstr "Exemplo de produtos de remessa configurados no Odoo."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:197
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:195
 msgid ""
 "Sendcloud does not provide test keys when a company tests the sending of a "
 "package in Odoo. This means if a package is created, the configured "
@@ -25755,7 +26081,7 @@ msgstr ""
 "configurada do Sendcloud será cobrada, a menos que o pacote associado seja "
 "cancelado dentro de 24 horas após a criação."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:201
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:199
 msgid ""
 "Odoo has a built-in layer of protection against unwanted charges when using "
 "test environments. Within a test environment, if a shipping method is used "
@@ -25769,7 +26095,7 @@ msgstr ""
 "após a criação - isso ocorre automaticamente. As configurações de ambiente "
 "de teste e de produção podem ser alternadas no botões inteligentes."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:211
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:209
 msgid ""
 "To use Sendcloud to generate shipping labels, the following information "
 "**must** be filled out accurately and completely in Odoo:"
@@ -25777,7 +26103,7 @@ msgstr ""
 "Para usar a Sendcloud para gerar etiquetas de envio, as seguintes "
 "informações **devem** ser preenchidas de forma precisa e completa no Odoo:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:214
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:212
 msgid ""
 "**Customer information**: when creating a quotation, ensure the "
 "selected :guilabel:`Customer` has a valid phone number, email address, and "
@@ -25787,7 +26113,7 @@ msgstr ""
 "o :guilabel:`Cliente` selecionado tenha um número de telefone, endereço de e-"
 "mail e endereço de entrega válidos."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:221
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:219
 msgid ""
 "**Product weight**: ensure all products in an order have a "
 "specified :guilabel:`Weight` in the :guilabel:`Inventory` tab of their "
@@ -25801,7 +26127,7 @@ msgstr ""
 "shipping_receiving/configure-weight>` deste artigo para obter instruções "
 "detalhadas."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:225
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:223
 msgid ""
 "**Warehouse address**: ensure the warehouse name and address in Odoo match "
 "the :ref:`previously defined warehouse <inventory/shipping_receiving/"
@@ -25817,11 +26143,11 @@ msgstr ""
 "consulte a seção :ref:`configuração do armazém <inventory/shipping_receiving/"
 "configure-source-address>` da documentação de envio de terceiros."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:232
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:230
 msgid "Generate labels with Sendcloud"
 msgstr "Gerar etiquetas com a Sendcloud"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:234
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:232
 msgid ""
 "When creating a quotation in Odoo, add shipping and a :guilabel:`Sendcloud "
 "shipping product`. Then, :guilabel:`Validate` the delivery. Shipping label "
@@ -25833,7 +26159,7 @@ msgstr ""
 "documentos da etiqueta de envio são gerados automaticamente no chatter, que "
 "incluem o seguinte:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:239
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:237
 msgid ""
 ":guilabel:`Return label(s)` if the Sendcloud connector is configured for "
 "returns."
@@ -25841,13 +26167,13 @@ msgstr ""
 ":guilabel:`Etiqueta(s) de devolução `, se o conector Sendcloud estiver "
 "configurado para devoluçĩes."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:240
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:238
 msgid ""
 ":guilabel:`Customs document(s)` should the destination country require them."
 msgstr ""
 ":guilabel:`Documento(s) alfandegário(s)`, caso o país de destino exija."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:245
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:243
 msgid ""
 "When return labels are created, Sendcloud automatically charges the "
 "configured Sendcloud account."
@@ -25855,11 +26181,11 @@ msgstr ""
 "Quando as etiquetas de devolução forem criadas, a Sendcloud cobrará "
 "automaticamente a conta Sendcloud configurada."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:248
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:246
 msgid "Shipping rules"
 msgstr "Regras de envio"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:250
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:248
 msgid ""
 "Optionally, create shipping rules to automatically generate shipping labels "
 "tailored to different product needs. For example, a shipping rule can be "
@@ -25870,7 +26196,7 @@ msgstr ""
 "possível criar uma regra de envio para que os clientes que enviarem itens "
 "valiosos de joalharia adquiram seguro."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:255
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:253
 msgid ""
 "Shipping rules do **not** affect :ref:`shipping rate calculations <inventory/"
 "shipping_receiving/third-party-rate>`, and are only used to improve the "
@@ -25880,7 +26206,7 @@ msgstr ""
 "<inventory/shipping_receiving/third-party-rate>` e são usadas apenas para "
 "melhorar o processo de :doc:`geração de etiquetas de remessa <labels>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:259
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:257
 msgid ""
 "To use shipping rules, navigate to :menuselection:`Inventory app --> "
 "Configuration --> Delivery: Shipping Methods`, and select the intended "
@@ -25890,7 +26216,7 @@ msgstr ""
 "--> Configuração --> Entrega: Métodos de envio`, e selecione o método de "
 "envio do `Sendcloud` desejado."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:262
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:260
 msgid ""
 "Under the :guilabel:`Sendcloud Configuration` tab, in "
 "the :guilabel:`OPTIONS` section, choose the kind of shipments the shipping "
@@ -25900,7 +26226,7 @@ msgstr ""
 "escolha o tipo de envio para aplicar as regras de envio no "
 "campo :guilabel:`Usar as regras de envio do Sendcloud`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:266
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:264
 msgid ""
 "From here, choose either: :guilabel:`Shipping` to "
 "customers, :guilabel:`Returns` from customers, or :guilabel:`Both`."
@@ -25912,7 +26238,7 @@ msgstr ""
 msgid "Use Shipping Rules field."
 msgstr "Usar o campo Regras de envio."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:273
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:271
 msgid ""
 "Then, in the Sendcloud website, navigate to :menuselection:`Settings --> "
 "Shipping rules`. Create a new shipping rule by clicking :guilabel:`Create "
@@ -25922,7 +26248,7 @@ msgstr ""
 "> Regras de envio`. Crie uma nova regra de envio clicando "
 "em :guilabel:`Criar novo`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:276
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:274
 msgid ""
 "In the :guilabel:`Actions` section, set a :guilabel:`Condition` to determine "
 "when the rule applies. Then, configure what to do when packages meet the "
@@ -25932,18 +26258,18 @@ msgstr ""
 "quando a regra se aplica. Em seguida, configure o que fazer quando os "
 "pacotes atendem à condição."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:280
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:278
 msgid ""
 "`Create shipping rules on Sendcloud <https://support.sendcloud.com/hc/en-us/"
 "articles/ 10274470454292-How-to-create-shipping-rules#examples-smart-"
 "shipping-rules>`_"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:287
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:285
 msgid "Shipment is too heavy"
 msgstr "Remessas muito pesadas"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:289
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:287
 msgid ""
 "If the shipment is too heavy for the Sendcloud service that is configured, "
 "then the weight is split to simulate multiple packages. Products will need "
@@ -25955,7 +26281,7 @@ msgstr ""
 "colocados em diferentes :guilabel:`pacotes` para :guilabel:`validar` a "
 "transferência e gerar etiquetas."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:293
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:291
 msgid ""
 ":guilabel:`Rules` can also be set up in Sendcloud to use other shipping "
 "methods when the weight is too heavy. However, note that these rules will "
@@ -25967,11 +26293,11 @@ msgstr ""
 "que essas regras não se aplicarão ao cálculo do preço de envio no cálculo do "
 "pedido de venda."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:298
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:296
 msgid "Personal carrier contract"
 msgstr "Contrato de transportadora pessoal"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:300
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:298
 msgid ""
 "Use custom prices from a direct carrier contract, via CSV upload, by first "
 "logging into Sendcloud, navigating to :menuselection:`Settings --> Carriers "
@@ -25986,7 +26312,7 @@ msgstr ""
 msgid "Navigate to the contracts section in Sendcloud."
 msgstr "Navegue até a seção de contratos na Sendcloud."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:308
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:306
 msgid ""
 "Under the :guilabel:`Contract prices` section, click :guilabel:`Download "
 "CSV` and fill out the contract prices in the :guilabel:`price` column of the "
@@ -25996,7 +26322,7 @@ msgstr ""
 "e preencha os preços do contrato na coluna :guilabel:`preços` do modelo de "
 "arquivo CSV."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:312
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:310
 msgid ""
 "Ensure the CSV file includes the correct prices to avoid any inaccuracies."
 msgstr ""
@@ -26008,7 +26334,7 @@ msgid "Show sample contract CSV from Sendcloud, highlighting the price column."
 msgstr ""
 "Amostra de contrato da Sendcloud em CSV com a coluna de preço destacada."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:318
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:316
 msgid ""
 ":guilabel:`Upload` the completed CSV file to Sendcloud, then "
 "click :guilabel:`Save these prices`."
@@ -26016,7 +26342,7 @@ msgstr ""
 ":guilabel:`Faça upload` do arquivo CSV completo para a Sendcloud e, em "
 "seguida, clique em :guilabel:`Salvar esses preços`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:321
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:319
 msgid ""
 "`Sendcloud: How to upload contract prices with carriers <https://"
 "support.sendcloud.com/hc/en-us/articles/5163547066004>`_"
@@ -26024,7 +26350,7 @@ msgstr ""
 "`Sendcloud: Como fazer upload de preços de contratos com transportadoras "
 "<https://support.sendcloud.com/hc/en-us/articles/5163547066004>`_"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:327
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:325
 msgid ""
 "Many carriers have several measures for weight. There is the actual weight "
 "of the products in the parcel, and there is the *volumetric weight* "
@@ -26036,7 +26362,7 @@ msgstr ""
 "volume que um pacote ocupa quando está em trânsito. Em outras palavras, é o "
 "tamanho físico de um pacote`)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:332
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:330
 msgid ""
 "Check to see if selected carrier(s) already have defined formulas to compute "
 "the volumetric weight."
@@ -26044,7 +26370,7 @@ msgstr ""
 "Verifique se as transportadoras selecionadas já têm fórmulas definidas para "
 "calcular o peso volumétrico."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:336
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:334
 msgid ""
 "`Sendcloud: How to calculate & automate parcel volumetric weight <https://"
 "support.sendcloud.com/ hc/en-us/articles/360059644051-How-to-calculate-"
@@ -26054,11 +26380,11 @@ msgstr ""
 "<https://support.sendcloud.com/ hc/en-us/articles/360059644051-How-to-"
 "calculate-automate-parcel-volumetric-weight>`_"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:340
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:338
 msgid "Unable to calculate shipping rate"
 msgstr "Não foi possível calcular a taxa de frete"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:342
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:340
 msgid ""
 "First, verify that the product being shipped has a weight that is supported "
 "by the selected shipping method. If this is set, then verify that the "
@@ -52954,45 +53280,20 @@ msgstr ""
 msgid "Purchase Agreements enabled in the Purchase app settings."
 msgstr "Acordos de compra ativados nas definições do aplicativo Compras."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:38
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:37
 msgid ""
 "To create a blanket order, go to :menuselection:`Purchase app --> Orders --> "
-"Blanket Orders`, and click :guilabel:`New`. This opens a new blanket order "
-"form."
+"Purchase Agreements`, and click :guilabel:`New`. This opens a new purchase "
+"agreement form."
 msgstr ""
-"Para criar um pedido genérico, vá para :menuselection:`app Compras --> "
-"Pedidos --> Pedido genérico` e clique em :guilabel:`Novo`. Isso abre um novo "
-"formulário de pedido genérico."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:41
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:40
 msgid ""
-"Configure the following fields in the new blanket order form to establish "
-"predetermined rules for the recurring long-term agreement:"
+"Configure the following fields in the new purchase agreement form to "
+"establish predetermined rules for the recurring long-term agreement:"
 msgstr ""
-"Configure os seguintes campos no novo formulário de pedido genérico para "
-"estabelecer regras predeterminadas para o contrato de longo prazo recorrente:"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:44
-msgid ""
-":guilabel:`Purchase Representative`: the user assigned to this specific "
-"blanket order. By default, this is the user who created the agreement; the "
-"user can be changed directly from the drop-down menu next to this field."
-msgstr ""
-":guilabel:`Representante de compras`: o usuário atribuído a esse pedido "
-"genérico específico. Por padrão, esse é o usuário que criou o contrato; o "
-"usuário pode ser alterado diretamente no menu suspenso ao lado desse campo."
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:47
-msgid ""
-":guilabel:`Agreement Type`: the type of purchase agreement this blanket "
-"order is classified as. In Odoo, blanket orders are the only official "
-"purchase agreement."
-msgstr ""
-":guilabel:`Tipo de acordo`: o tipo de acordo de compra como o qual esse "
-"pedido genérico é classificado. No Odoo, os pedidos genérico são o único "
-"acordo de compra oficial."
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:49
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:43
 msgid ""
 ":guilabel:`Vendor`: the supplier to whom this agreement is tied, either once "
 "or on a recurring basis. The vendor can be selected directly from the drop-"
@@ -53002,7 +53303,21 @@ msgstr ""
 "seja uma vez ou em uma base recorrente. O fornecedor pode ser selecionado "
 "diretamente no menu suspenso ao lado desse campo."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:51
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:45
+msgid ""
+":guilabel:`Buyer`: the user assigned to this specific blanket order. By "
+"default, this is the user who created the agreement; the user can be changed "
+"directly from the drop-down menu next to this field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:48
+msgid ""
+":guilabel:`Agreement Type`: the type of purchase agreement this blanket "
+"order is classified as. Use the drop-down menu to choose :guilabel:`Blanket "
+"Order` if not already selected."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:50
 msgid ""
 ":guilabel:`Currency`: the agreed-upon currency to be used for this exchange. "
 "If multiple currencies have been activated in the database, the currency can "
@@ -53012,51 +53327,26 @@ msgstr ""
 "moedas tiverem sido ativadas na base de dados, a moeda poderá ser alterada "
 "no menu suspenso ao lado desse campo."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:54
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:53
 msgid ""
-":guilabel:`Agreement Deadline`: the date that this purchase agreement will "
-"be set to expire on. If this blanket order should not expire, leave this "
-"field blank."
+":guilabel:`Agreement Validity`: the date range this agreement should be "
+"valid for. If this blanket order should not expire, leave this field blank."
 msgstr ""
-":guilabel:`Prazo do acordo`: a data em que esse acordo de compra será "
-"definido para expirar. Se esse pedido genérico não deve expirar, deixe esse "
-"campo em branco."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:56
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:55
 msgid ""
-":guilabel:`Ordering Date`: the date that this blanket order should be placed "
-"on if a new quotation is created directly from the blanket order form. If a "
-"new quotation is created, this value automatically populates the *Order "
-"Deadline* field on the |RfQ|."
+":guilabel:`Reference`: the source purchase order (PO) that this blanket "
+"order is tied to. If this blanket order should not be tied to any existing |"
+"PO|, leave this field blank."
 msgstr ""
-":guilabel:`Data do pedido`: a data em que esse pedido genérico deve ser "
-"colocado se uma nova cotação for criada diretamente no formulário de pedido "
-"genérico. Se uma nova cotação for criada, esse valor preencherá "
-"automaticamente o campo *Prazo de pedido* na |SDC|."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:57
+msgid ""
+":guilabel:`Operation Type`: the operation type that should be applied to "
+"this order once it is delivered."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:59
-msgid ""
-":guilabel:`Delivery Date`: the expected delivery date that the products "
-"included in an |RfQ| are expected, if created directly from a blanket order "
-"form. If a new quotation is created, this value automatically populates the "
-"*Expected Arrival* field on the |RfQ|."
-msgstr ""
-":guilabel:`Data de entrega`: a data de entrega esperada para os produtos "
-"incluídos em uma |SDC|, se criada diretamente de um formulário de pedido "
-"genérico. Se uma nova cotação for criada, esse valor preencherá "
-"automaticamente o campo *Chegada prevista* na |SDC|."
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:62
-msgid ""
-":guilabel:`Source Document`: the source purchase order (PO) that this "
-"blanket order is tied to. If this blanket order should not be tied to any "
-"existing |PO|, leave this field blank."
-msgstr ""
-":guilabel:`Documento de origem`: o pedido de compra de origem (PO) ao qual "
-"esse pedido global está vinculado. Se esse pedido genérico não deve ser "
-"vinculado a nenhum PO existente, deixe esse campo em branco."
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:64
 msgid ""
 ":guilabel:`Company`: the company assigned to this specific blanket order. By "
 "default, this is the company that the user creating the blanket order is "
@@ -53074,7 +53364,7 @@ msgstr ""
 msgid "New blanket order purchase agreement with added products."
 msgstr "Novo acordo de compra de pedido genérico com produtos adicionados."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:73
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:67
 msgid ""
 "Once all relevant fields have been filled out, click :guilabel:`Add a line` "
 "to add products under the :guilabel:`Product` column. Then, in "
@@ -53087,7 +53377,7 @@ msgstr ""
 "altere a quantidade de cada produto e defina um preço na "
 "coluna :guilabel:`Preço unitário`."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:78
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:72
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/purchase_templates.rst:48
 msgid ""
 "When adding products to a new blanket order, the pre-existing prices of "
@@ -53102,148 +53392,18 @@ msgstr ""
 "na coluna :guilabel:`Preço unitário` para um preço acordado com o fornecedor "
 "listado. Caso contrário, o preço permanecerá \"0\"."
 
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:77
+msgid "Click :guilabel:`Confirm` to save this new purchase agreement."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:79
+msgid ""
+"Once confirmed, the blanket order's stage changes from :guilabel:`Draft` "
+"to :guilabel:`Confirmed`, meaning this agreement can be selected and used "
+"when creating new |RfQs|."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:83
-msgid ""
-"To view and change the default purchase agreement settings for blanket "
-"orders directly from the blanket order form, click the :guilabel:`➡️ (right "
-"arrow)` icon that becomes visible when hovering over "
-"the :guilabel:`Agreement Type` field, where :guilabel:`Blanket Order` is "
-"listed. This navigates to the blanket order settings."
-msgstr ""
-"Para visualizar e alterar as configurações padrão do contrato de compra para "
-"pedidos genéricos diretamente do formulário de pedido genérico, clique no "
-"ícone :guilabel:`➡️ (seta para a direita) ` que fica visível ao passar o "
-"mouse sobre o campo :guilabel:`Tipo de acordo`, onde :guilabel:`Pedido "
-"genérico` está listado. Isso navega para as configurações do pedido de "
-"cobertura."
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:-1
-msgid "Internal link arrow next to Agreement Type field on blanket order form."
-msgstr ""
-"Seta de link interno ao lado do campo Tipo de acordo no formulário de pedido "
-"genérico."
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:92
-msgid ""
-"From here, the settings for blanket orders can be edited. Under "
-"the :guilabel:`Agreement Type` section, the name of the :guilabel:`Agreement "
-"Type` can be changed, and the :guilabel:`Agreement Selection Type` can be "
-"changed, as well. There are two options that can be activated for the type "
-"of selection:"
-msgstr ""
-"Aqui, as configurações dos pedidos globais podem ser editadas. Na "
-"seção :guilabel:`Tipo de acordo`, o nome do :guilabel:`Tipo de acordo` pode "
-"ser alterado, e o :guilabel:`Tipo de seleção de acordo` também pode ser "
-"alterado. Há duas opções que podem ser ativadas para o tipo de seleção:"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:97
-msgid ""
-":guilabel:`Select only one RfQ (exclusive)`: when a purchase order is "
-"confirmed, the remaining purchase orders are cancelled."
-msgstr ""
-":guilabel:`Selecionar apenas uma SDC (exclusivo)`: quando um pedido de "
-"compra é confirmado, os pedidos de compra restantes são cancelados."
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:99
-msgid ""
-":guilabel:`Select multiple RfQ (non-exclusive)`: when a purchase order is "
-"confirmed, remaining purchase orders are **not** cancelled. Instead, "
-"multiple purchase orders are allowed."
-msgstr ""
-":guilabel:`Selecionar múltiplas SDC (não exclusivo)`: quando um pedido de "
-"compra é confirmado, os pedidos de compra restantes **não** são cancelados. "
-"Em vez disso, são permitidos vários pedidos de compra."
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:102
-msgid ""
-"Under the :guilabel:`Data For New Quotations` section, the :guilabel:`Lines` "
-"and :guilabel:`Quantities` fields can be edited. Doing so sets how new "
-"quotations should be populated when using this purchase agreement."
-msgstr ""
-"Na seção :guilabel:`Dados para novas cotações`, os campos :guilabel:`Linhas` "
-"e :guilabel:`Quantidades` podem ser editados. Isso define como as novas "
-"cotações devem ser preenchidas ao usar esse contrato de compra."
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:-1
-msgid "Purchase Agreement type edit screen for blanket orders."
-msgstr "Tela de edição do tipo de acordo de compra para pedidos genéricos."
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:110
-msgid "There are two options that can be activated for :guilabel:`Lines`:"
-msgstr "Há duas opções que podem ser ativadas para :guilabel:`Linhas`:"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:112
-msgid ""
-":guilabel:`Use lines of agreement`: when creating a new quotation, the "
-"product lines pre-populate with the same products listed on the blanket "
-"order, if said blanket order is chosen for the new quotation."
-msgstr ""
-":guilabel:`Usar linhas do acordo`: ao criar uma nova cotação, as linhas de "
-"produtos são preenchidas previamente com os mesmos produtos listados no "
-"pedido geral, se esse pedido genérico for escolhido para a nova cotação."
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:115
-msgid ""
-":guilabel:`Do not create RfQ lines automatically`: when creating a new "
-"quotation, **and** selecting an existing blanket order, the settings carry "
-"over to the new quotation, but the product lines do **not** populate."
-msgstr ""
-":guilabel:`Não criar linhas de SDC automaticamente`: ao criar uma nova "
-"cotação, **e** selecionar um pedido genérico existente, as configurações são "
-"transferidas para a nova cotação, mas as linhas de produtos **não** são "
-"preenchidas."
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:119
-msgid ""
-"And, there are two options that can be activated for :guilabel:`Quantities`:"
-msgstr "E há duas opções que podem ser ativadas para :guilabel:`Quantidades`:"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:121
-msgid ""
-":guilabel:`Use quantities of agreement`: when creating a new quotation, the "
-"product quantities listed on the blanket order pre-populate on the product "
-"lines, if said blanket order is chosen for the new quotation."
-msgstr ""
-":guilabel:`Usar quantidades do acordo`: ao criar uma nova cotação, as "
-"quantidades de produtos listadas no pedido genérico são preenchidas "
-"previamente nas linhas de produtos, se esse pedido genérico for escolhido "
-"para a nova cotação."
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:124
-msgid ""
-":guilabel:`Set quantities manually`: when creating a new quotation, **and** "
-"selecting an existing blanket order, the product lines pre-populate, but all "
-"quantities are set to `0`. The quantities **must** be manually set by the "
-"user."
-msgstr ""
-":guilabel:`Definir quantidades manualmente`: ao criar uma nova cotação **e** "
-"selecionar um pedido genérico existente, as linhas de produtos são pré-"
-"preenchidas, mas todas as quantidades são definidas como \"0\". As "
-"quantidades **devem** ser definidas manualmente pelo usuário."
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:128
-msgid ""
-"Once any desired changes have been made, click :guilabel:`New` (via the "
-"breadcrumbs, at the top of the page) to navigate back to the blanket order "
-"form. Then, click :guilabel:`Confirm` to save this new purchase agreement."
-msgstr ""
-"Depois de fazer as alterações desejadas, clique em :guilabel:`Novo` (nas "
-"trilhas de navegação, na parte superior da página) para voltar ao formulário "
-"de pedido de cobertor. Em seguida, clique em :guilabel:`Confirmar` para "
-"salvar esse novo acordo de compra."
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:132
-msgid ""
-"Once confirmed, the blanket order's stage (in the upper-right corner) "
-"changes from :guilabel:`Draft` to :guilabel:`Ongoing`, meaning this "
-"agreement can be selected and used when creating new |RfQs|."
-msgstr ""
-"Depois de confirmado, o estágio do pedido genérico (no canto superior "
-"direito) muda de :guilabel:`Rascunho` para :guilabel:`Em andamento`, o que "
-"significa que esse contrato pode ser selecionado e usado na criação de novas "
-"|SDCs|."
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:136
 msgid ""
 "After creating and confirming a blanket order, products, quantities, and "
 "prices can still be edited, added, and removed from the purchase agreement."
@@ -53252,26 +53412,27 @@ msgstr ""
 "preços ainda podem ser editados, adicionados e removidos do contrato de "
 "compra."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:140
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:87
 msgid "Create a new |RfQ| from the blanket order"
 msgstr "Crie um novo |SDC| a partir do pedido genérico"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:142
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:89
 msgid ""
 "After confirming a blanket order, new quotations can be created directly "
 "from the blanket order form. |RfQs| using this form are pre-populated with "
-"information based on the rules set in the form. Additionally, new quotations "
-"are automatically linked to this blanket order form, via the :guilabel:`RFQs/"
-"Orders` smart button at the top-right of the form."
+"information based on the rules set in the form. The total quantities of "
+"products ordered through linked |RfQs| are automatically updated in "
+"the :guilabel:`Ordered` field on the agreement."
 msgstr ""
-"Após a confirmação de um pedido genérico, novas cotações podem ser criadas "
-"diretamente no formulário de pedido genérico. As |SDCs| que usam esse "
-"formulário são preenchidos previamente com informações baseadas nas regras "
-"definidas no formulário. Além disso, as novas cotações são automaticamente "
-"vinculadas a esse formulário de pedido genérico, pelo botão "
-"inteligente :guilabel:`SDCs/Pedidos` no canto superior direito do formulário."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:147
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:94
+msgid ""
+"Additionally, new quotations are automatically linked to this blanket order "
+"form, via the :guilabel:`RFQs/Orders` smart button at the top-right of the "
+"form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:97
 msgid ""
 "To create a new quotation from the blanket order form, click "
 "the :guilabel:`New Quotation` button. This opens a new |RfQ|, that is pre-"
@@ -53283,7 +53444,7 @@ msgstr ""
 "preenchida com as informações corretas, dependendo das configurações "
 "definidas no formulário de pedido genérico."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:151
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:101
 msgid ""
 "From the new |RfQ| form, click :guilabel:`Send by Email` to compose and send "
 "an email to the listed vendor. Click :guilabel:`Print RFQ` to generate a "
@@ -53300,7 +53461,7 @@ msgstr ""
 msgid "New quotation with copied products and rules from blanket order."
 msgstr "Nova cotação com produtos e regras copiados do pedido genérico."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:159
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:108
 msgid ""
 "Once the |PO| has been confirmed, click back to the blanket order form (via "
 "the breadcrumbs, at the top of the page). From the blanket order form, there "
@@ -53321,7 +53482,7 @@ msgstr ""
 "Botão inteligente de pedidos e solicitações de cotação do formulário de "
 "pedido genérico."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:171
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:119
 msgid ""
 "Once a blanket order is confirmed, a new vendor line is added under "
 "the :guilabel:`Purchase` tab of the products included in the order."
@@ -53329,7 +53490,7 @@ msgstr ""
 "Quando um pedido genérico é confirmado, uma nova linha de fornecedor é "
 "adicionada na aba :guilabel:`Compras` dos produtos incluídos no pedido."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:174
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:122
 msgid ""
 "This makes blanket orders useful with :doc:`automated replenishment <../../"
 "purchase/products/reordering>`, because information about "
@@ -53348,7 +53509,7 @@ msgid "Product form with replenishment agreement linked to blanket order."
 msgstr ""
 "Formulário de produto com acordo de reposição vinculado a um pedido genérico."
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:184
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:131
 msgid ":doc:`calls_for_tenders`"
 msgstr ":doc:`calls_for_tenders`"
 
@@ -60049,6 +60210,319 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "To calculate shipping on sales orders and e-commerce, the *Delivery "
+#~ "Costs* module must be installed. To do so, navigate to "
+#~ "the :menuselection:`Apps` application from the main Odoo dashboard."
+#~ msgstr ""
+#~ "Para calcular o frete em pedidos de vendas e e-Commerce, o módulo *Custos "
+#~ "de entrega* deve ser instalado. Para fazer isso, navegue até o "
+#~ "aplicativo :menuselection:`Aplicativos` no painel principal do Odoo."
+
+#~ msgid ""
+#~ "Then, remove the :guilabel:`Apps` filter, and type in `Delivery Costs` in "
+#~ "the :guilabel:`Search...` bar. After finding the :guilabel:`Delivery "
+#~ "Costs` module, click :guilabel:`Activate` to install it."
+#~ msgstr ""
+#~ "Em seguida, remova o filtro :guilabel:`Aplicativos` e digite `Custos de "
+#~ "entrega` na barra :guilabel:`Pesquisar…`. Depois de localizar o "
+#~ "módulo :guilabel:`Custos de entrega`, clique em :guilabel:`Ativar` para "
+#~ "instalá-lo."
+
+#~ msgid ""
+#~ "Shipping methods can be added to sales orders in the form of delivery "
+#~ "products, which appear as individual line items. First, navigate to the "
+#~ "desired sales order by going to :menuselection:`Sales app --> Orders --> "
+#~ "Orders`."
+#~ msgstr ""
+#~ "Os métodos de envio podem ser adicionados aos pedidos de vendas na forma "
+#~ "de produtos de entrega, que aparecem como itens de linha individuais. "
+#~ "Primeiro, navegue até o pedido de vendas desejado "
+#~ "acessando :menuselection:`app Vendas --> Pedidos --> Pedidos`."
+
+#~ msgid ""
+#~ "On the sales order, click the :guilabel:`Add shipping` button, which "
+#~ "opens the :guilabel:`Add a shipping method` pop-up window. Then, choose "
+#~ "a :guilabel:`Shipping Method` from the list."
+#~ msgstr ""
+#~ "No pedido de venda, clique no botão :guilabel:`Adicionar envio`, que abre "
+#~ "a janela pop-up :guilabel:`Adicionar um método de envio`. Em seguida, "
+#~ "escolha um :guilabel:`Método de envio` na lista."
+
+#~ msgid ""
+#~ "The :guilabel:`Total Order Weight` is pre-filled based on product weights "
+#~ "(that are defined in the :guilabel:`Inventory` tab for each product "
+#~ "form). Edit the field to specify the exact weight, and then "
+#~ "click :guilabel:`Add` to add the shipping method."
+#~ msgstr ""
+#~ "O :guilabel:`Peso total do pedido` é pré-preenchido com base nos pesos "
+#~ "dos produtos (que são definidos na guia :guilabel:`Inventário` para cada "
+#~ "formulário de produto). Edite o campo para especificar o peso exato e, em "
+#~ "seguida, clique em :guilabel:`Adicionar` para adicionar o método de envio."
+
+#~ msgid ""
+#~ "The shipping cost is added to the *sales order line* as "
+#~ "the :guilabel:`Delivery Product` detailed on the shipping method form."
+#~ msgstr ""
+#~ "O custo de envio é adicionado à linha do *pedido de venda* como "
+#~ "o :guilabel:`Produto de entrega` detalhado no formulário do método de "
+#~ "envio."
+
+#~ msgid ""
+#~ "`Furniture Delivery`, a delivery product with a fixed rate of `$200`, is "
+#~ "added to sales order `S00088`."
+#~ msgstr ""
+#~ "`Entrega de móveis`, um produto de entrega com uma taxa fixa de `US$ "
+#~ "200`, é adicionado ao pedido de vendas `S00088`."
+
+#~ msgid ""
+#~ "The shipping method added to the sales order is linked to the shipping "
+#~ "carrier details on the delivery order. To add or change the delivery "
+#~ "method on the delivery itself, go to the :guilabel:`Additional Info` tab "
+#~ "and modify the :guilabel:`Carrier` field."
+#~ msgstr ""
+#~ "O método de envio adicionado ao pedido de vendas está vinculado aos "
+#~ "detalhes da transportadora no pedido de entrega. Para adicionar ou "
+#~ "alterar o método de entrega na própria entrega, vá para a "
+#~ "aba :guilabel:`Informações adicionais` e modifique o "
+#~ "campo :guilabel:`Transportadora`."
+
+#~ msgid ""
+#~ ":guilabel:`Company`: If the shipping method should apply to a specific "
+#~ "company, select it from the drop-down menu. Leave the field blank to "
+#~ "apply the method to all companies."
+#~ msgstr ""
+#~ ":guilabel:`Empresa`: Se o método de envio for aplicável a uma empresa "
+#~ "específica, selecione-a no menu suspenso. Deixe o campo em branco para "
+#~ "aplicar o método a todas as empresas."
+
+#~ msgid ""
+#~ "To create a blanket order, go to :menuselection:`Purchase app --> Orders "
+#~ "--> Blanket Orders`, and click :guilabel:`New`. This opens a new blanket "
+#~ "order form."
+#~ msgstr ""
+#~ "Para criar um pedido genérico, vá para :menuselection:`app Compras --> "
+#~ "Pedidos --> Pedido genérico` e clique em :guilabel:`Novo`. Isso abre um "
+#~ "novo formulário de pedido genérico."
+
+#~ msgid ""
+#~ "Configure the following fields in the new blanket order form to establish "
+#~ "predetermined rules for the recurring long-term agreement:"
+#~ msgstr ""
+#~ "Configure os seguintes campos no novo formulário de pedido genérico para "
+#~ "estabelecer regras predeterminadas para o contrato de longo prazo "
+#~ "recorrente:"
+
+#~ msgid ""
+#~ ":guilabel:`Purchase Representative`: the user assigned to this specific "
+#~ "blanket order. By default, this is the user who created the agreement; "
+#~ "the user can be changed directly from the drop-down menu next to this "
+#~ "field."
+#~ msgstr ""
+#~ ":guilabel:`Representante de compras`: o usuário atribuído a esse pedido "
+#~ "genérico específico. Por padrão, esse é o usuário que criou o contrato; o "
+#~ "usuário pode ser alterado diretamente no menu suspenso ao lado desse "
+#~ "campo."
+
+#~ msgid ""
+#~ ":guilabel:`Agreement Type`: the type of purchase agreement this blanket "
+#~ "order is classified as. In Odoo, blanket orders are the only official "
+#~ "purchase agreement."
+#~ msgstr ""
+#~ ":guilabel:`Tipo de acordo`: o tipo de acordo de compra como o qual esse "
+#~ "pedido genérico é classificado. No Odoo, os pedidos genérico são o único "
+#~ "acordo de compra oficial."
+
+#~ msgid ""
+#~ ":guilabel:`Agreement Deadline`: the date that this purchase agreement "
+#~ "will be set to expire on. If this blanket order should not expire, leave "
+#~ "this field blank."
+#~ msgstr ""
+#~ ":guilabel:`Prazo do acordo`: a data em que esse acordo de compra será "
+#~ "definido para expirar. Se esse pedido genérico não deve expirar, deixe "
+#~ "esse campo em branco."
+
+#~ msgid ""
+#~ ":guilabel:`Ordering Date`: the date that this blanket order should be "
+#~ "placed on if a new quotation is created directly from the blanket order "
+#~ "form. If a new quotation is created, this value automatically populates "
+#~ "the *Order Deadline* field on the |RfQ|."
+#~ msgstr ""
+#~ ":guilabel:`Data do pedido`: a data em que esse pedido genérico deve ser "
+#~ "colocado se uma nova cotação for criada diretamente no formulário de "
+#~ "pedido genérico. Se uma nova cotação for criada, esse valor preencherá "
+#~ "automaticamente o campo *Prazo de pedido* na |SDC|."
+
+#~ msgid ""
+#~ ":guilabel:`Delivery Date`: the expected delivery date that the products "
+#~ "included in an |RfQ| are expected, if created directly from a blanket "
+#~ "order form. If a new quotation is created, this value automatically "
+#~ "populates the *Expected Arrival* field on the |RfQ|."
+#~ msgstr ""
+#~ ":guilabel:`Data de entrega`: a data de entrega esperada para os produtos "
+#~ "incluídos em uma |SDC|, se criada diretamente de um formulário de pedido "
+#~ "genérico. Se uma nova cotação for criada, esse valor preencherá "
+#~ "automaticamente o campo *Chegada prevista* na |SDC|."
+
+#~ msgid ""
+#~ ":guilabel:`Source Document`: the source purchase order (PO) that this "
+#~ "blanket order is tied to. If this blanket order should not be tied to any "
+#~ "existing |PO|, leave this field blank."
+#~ msgstr ""
+#~ ":guilabel:`Documento de origem`: o pedido de compra de origem (PO) ao "
+#~ "qual esse pedido global está vinculado. Se esse pedido genérico não deve "
+#~ "ser vinculado a nenhum PO existente, deixe esse campo em branco."
+
+#~ msgid ""
+#~ "To view and change the default purchase agreement settings for blanket "
+#~ "orders directly from the blanket order form, click the :guilabel:`➡️ "
+#~ "(right arrow)` icon that becomes visible when hovering over "
+#~ "the :guilabel:`Agreement Type` field, where :guilabel:`Blanket Order` is "
+#~ "listed. This navigates to the blanket order settings."
+#~ msgstr ""
+#~ "Para visualizar e alterar as configurações padrão do contrato de compra "
+#~ "para pedidos genéricos diretamente do formulário de pedido genérico, "
+#~ "clique no ícone :guilabel:`➡️ (seta para a direita) ` que fica visível ao "
+#~ "passar o mouse sobre o campo :guilabel:`Tipo de acordo`, "
+#~ "onde :guilabel:`Pedido genérico` está listado. Isso navega para as "
+#~ "configurações do pedido de cobertura."
+
+#~ msgid ""
+#~ "Internal link arrow next to Agreement Type field on blanket order form."
+#~ msgstr ""
+#~ "Seta de link interno ao lado do campo Tipo de acordo no formulário de "
+#~ "pedido genérico."
+
+#~ msgid ""
+#~ "From here, the settings for blanket orders can be edited. Under "
+#~ "the :guilabel:`Agreement Type` section, the name of "
+#~ "the :guilabel:`Agreement Type` can be changed, and "
+#~ "the :guilabel:`Agreement Selection Type` can be changed, as well. There "
+#~ "are two options that can be activated for the type of selection:"
+#~ msgstr ""
+#~ "Aqui, as configurações dos pedidos globais podem ser editadas. Na "
+#~ "seção :guilabel:`Tipo de acordo`, o nome do :guilabel:`Tipo de acordo` "
+#~ "pode ser alterado, e o :guilabel:`Tipo de seleção de acordo` também pode "
+#~ "ser alterado. Há duas opções que podem ser ativadas para o tipo de "
+#~ "seleção:"
+
+#~ msgid ""
+#~ ":guilabel:`Select only one RfQ (exclusive)`: when a purchase order is "
+#~ "confirmed, the remaining purchase orders are cancelled."
+#~ msgstr ""
+#~ ":guilabel:`Selecionar apenas uma SDC (exclusivo)`: quando um pedido de "
+#~ "compra é confirmado, os pedidos de compra restantes são cancelados."
+
+#~ msgid ""
+#~ ":guilabel:`Select multiple RfQ (non-exclusive)`: when a purchase order is "
+#~ "confirmed, remaining purchase orders are **not** cancelled. Instead, "
+#~ "multiple purchase orders are allowed."
+#~ msgstr ""
+#~ ":guilabel:`Selecionar múltiplas SDC (não exclusivo)`: quando um pedido de "
+#~ "compra é confirmado, os pedidos de compra restantes **não** são "
+#~ "cancelados. Em vez disso, são permitidos vários pedidos de compra."
+
+#~ msgid ""
+#~ "Under the :guilabel:`Data For New Quotations` section, "
+#~ "the :guilabel:`Lines` and :guilabel:`Quantities` fields can be edited. "
+#~ "Doing so sets how new quotations should be populated when using this "
+#~ "purchase agreement."
+#~ msgstr ""
+#~ "Na seção :guilabel:`Dados para novas cotações`, os "
+#~ "campos :guilabel:`Linhas` e :guilabel:`Quantidades` podem ser editados. "
+#~ "Isso define como as novas cotações devem ser preenchidas ao usar esse "
+#~ "contrato de compra."
+
+#~ msgid "Purchase Agreement type edit screen for blanket orders."
+#~ msgstr "Tela de edição do tipo de acordo de compra para pedidos genéricos."
+
+#~ msgid "There are two options that can be activated for :guilabel:`Lines`:"
+#~ msgstr "Há duas opções que podem ser ativadas para :guilabel:`Linhas`:"
+
+#~ msgid ""
+#~ ":guilabel:`Use lines of agreement`: when creating a new quotation, the "
+#~ "product lines pre-populate with the same products listed on the blanket "
+#~ "order, if said blanket order is chosen for the new quotation."
+#~ msgstr ""
+#~ ":guilabel:`Usar linhas do acordo`: ao criar uma nova cotação, as linhas "
+#~ "de produtos são preenchidas previamente com os mesmos produtos listados "
+#~ "no pedido geral, se esse pedido genérico for escolhido para a nova "
+#~ "cotação."
+
+#~ msgid ""
+#~ ":guilabel:`Do not create RfQ lines automatically`: when creating a new "
+#~ "quotation, **and** selecting an existing blanket order, the settings "
+#~ "carry over to the new quotation, but the product lines do **not** "
+#~ "populate."
+#~ msgstr ""
+#~ ":guilabel:`Não criar linhas de SDC automaticamente`: ao criar uma nova "
+#~ "cotação, **e** selecionar um pedido genérico existente, as configurações "
+#~ "são transferidas para a nova cotação, mas as linhas de produtos **não** "
+#~ "são preenchidas."
+
+#~ msgid ""
+#~ "And, there are two options that can be activated "
+#~ "for :guilabel:`Quantities`:"
+#~ msgstr ""
+#~ "E há duas opções que podem ser ativadas para :guilabel:`Quantidades`:"
+
+#~ msgid ""
+#~ ":guilabel:`Use quantities of agreement`: when creating a new quotation, "
+#~ "the product quantities listed on the blanket order pre-populate on the "
+#~ "product lines, if said blanket order is chosen for the new quotation."
+#~ msgstr ""
+#~ ":guilabel:`Usar quantidades do acordo`: ao criar uma nova cotação, as "
+#~ "quantidades de produtos listadas no pedido genérico são preenchidas "
+#~ "previamente nas linhas de produtos, se esse pedido genérico for escolhido "
+#~ "para a nova cotação."
+
+#~ msgid ""
+#~ ":guilabel:`Set quantities manually`: when creating a new quotation, "
+#~ "**and** selecting an existing blanket order, the product lines pre-"
+#~ "populate, but all quantities are set to `0`. The quantities **must** be "
+#~ "manually set by the user."
+#~ msgstr ""
+#~ ":guilabel:`Definir quantidades manualmente`: ao criar uma nova cotação "
+#~ "**e** selecionar um pedido genérico existente, as linhas de produtos são "
+#~ "pré-preenchidas, mas todas as quantidades são definidas como \"0\". As "
+#~ "quantidades **devem** ser definidas manualmente pelo usuário."
+
+#~ msgid ""
+#~ "Once any desired changes have been made, click :guilabel:`New` (via the "
+#~ "breadcrumbs, at the top of the page) to navigate back to the blanket "
+#~ "order form. Then, click :guilabel:`Confirm` to save this new purchase "
+#~ "agreement."
+#~ msgstr ""
+#~ "Depois de fazer as alterações desejadas, clique em :guilabel:`Novo` (nas "
+#~ "trilhas de navegação, na parte superior da página) para voltar ao "
+#~ "formulário de pedido de cobertor. Em seguida, clique "
+#~ "em :guilabel:`Confirmar` para salvar esse novo acordo de compra."
+
+#~ msgid ""
+#~ "Once confirmed, the blanket order's stage (in the upper-right corner) "
+#~ "changes from :guilabel:`Draft` to :guilabel:`Ongoing`, meaning this "
+#~ "agreement can be selected and used when creating new |RfQs|."
+#~ msgstr ""
+#~ "Depois de confirmado, o estágio do pedido genérico (no canto superior "
+#~ "direito) muda de :guilabel:`Rascunho` para :guilabel:`Em andamento`, o "
+#~ "que significa que esse contrato pode ser selecionado e usado na criação "
+#~ "de novas |SDCs|."
+
+#~ msgid ""
+#~ "After confirming a blanket order, new quotations can be created directly "
+#~ "from the blanket order form. |RfQs| using this form are pre-populated "
+#~ "with information based on the rules set in the form. Additionally, new "
+#~ "quotations are automatically linked to this blanket order form, via "
+#~ "the :guilabel:`RFQs/Orders` smart button at the top-right of the form."
+#~ msgstr ""
+#~ "Após a confirmação de um pedido genérico, novas cotações podem ser "
+#~ "criadas diretamente no formulário de pedido genérico. As |SDCs| que usam "
+#~ "esse formulário são preenchidos previamente com informações baseadas nas "
+#~ "regras definidas no formulário. Além disso, as novas cotações são "
+#~ "automaticamente vinculadas a esse formulário de pedido genérico, pelo "
+#~ "botão inteligente :guilabel:`SDCs/Pedidos` no canto superior direito do "
+#~ "formulário."
 
 #~ msgid ""
 #~ "To manage where specific products are routed for storage, navigate "

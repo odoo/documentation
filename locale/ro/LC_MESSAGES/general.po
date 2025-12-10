@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-18 11:05+0000\n"
+"POT-Creation-Date: 2025-12-10 08:58+0000\n"
 "PO-Revision-Date: 2025-09-10 20:07+0000\n"
 "Last-Translator: Fekete Mihai <feketemihai@nexterp.ro>\n"
 "Language-Team: Romanian <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -4468,7 +4468,21 @@ msgstr ""
 "recomandă folosirea redirecționărilor. Acestea permit ca mesajele să fie "
 "primite fără întârziere în baza de date."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:204
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:205
+msgid ""
+"When configuring email redirections with Microsoft 365 (Exchange Online), be "
+"aware that certain technical limitations may affect your setup. Some users "
+"have reported that Microsoft 365 does not support true redirection and only "
+"allows forwarding, which may not behave as needed for Odoo's email routing."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:210
+msgid ""
+"For more information on Microsoft Exchange configuration, visit `Microsoft "
+"Learn <https://learn.microsoft.com/en-us/exchange/exchange-online>`_."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:213
 msgid ""
 "It is mandatory to redirect the catchall and bounce address to the Odoo "
 "subdomain of the database. Every other alias used must be redirected as well."
@@ -4477,23 +4491,23 @@ msgstr ""
 "subdomeniul Odoo al bazei de date. Orice alt alias folosit trebuie de "
 "asemenea redirecționat."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:208
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:217
 msgid "With one sales team, the following redirections are required:"
 msgstr "Cu o echipă de vânzări, sunt necesare următoarele redirecționări:"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:210
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:219
 msgid "`catchall@company-name.com` → `catchall@company-name.odoo.com`"
 msgstr "`catchall@company-name.com` → `catchall@company-name.odoo.com`"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:211
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:220
 msgid "`bounce@company-name.com` → `bounce@company-name.odoo.com`"
 msgstr "`bounce@company-name.com` → `bounce@company-name.odoo.com`"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:212
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:221
 msgid "`info@company-name.com` → `info@company-name.odoo.com`"
 msgstr "`info@company-name.com` → `info@company-name.odoo.com`"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:215
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:224
 msgid ""
 "Some providers ask to validate the redirection by sending a link to the "
 "target email address. This procedure is an issue for catchall and bounce "
@@ -4503,7 +4517,7 @@ msgstr ""
 "adresa de email țintă. Această procedură este o problemă pentru catchall și "
 "bounce deoarece acestea nu sunt folosite pentru a crea înregistrări."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:218
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:227
 msgid ""
 "Modify the catchall value on the mail alias domain. :ref:`developer-mode` "
 "must be enabled to access this menu. For example, it can be changed from "
@@ -4515,7 +4529,7 @@ msgstr ""
 "De exemplu, poate fi schimbată de la `catchall` la `temp-catchall`. Acest "
 "lucru va permite folosirea `catchall` ca partea locală a unui alt alias."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:221
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:230
 msgid ""
 "Open an app that uses an alias. For example, CRM contains aliases for each "
 "sales team. Set `catchall` as the local-part of the alias of a sales team."
@@ -4524,7 +4538,7 @@ msgstr ""
 "aliasuri pentru fiecare echipă de vânzări. Setați `catchall` ca partea "
 "locală a aliasului unei echipe de vânzări."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:223
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:232
 msgid ""
 "The validation email will create a record in the CRM app. The email sent "
 "will be visible in the chatter, allowing you to validate the redirection."
@@ -4532,7 +4546,7 @@ msgstr ""
 "Email-ul de validare va crea o înregistrare în aplicația CRM. Email-ul "
 "trimis va fi vizibil în chatter, permițându-vă să validați redirecționarea."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:225
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:234
 msgid ""
 "Do not forget to change back the alias of the sales team and the catchall "
 "value on the mail alias domain, just as they were before this procedure."
@@ -4541,7 +4555,7 @@ msgstr ""
 "catchall pe domeniul de alias de poștă, exact cum erau înainte de această "
 "procedură."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:229
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:238
 msgid ""
 "An alternative to redirections is **forwarding**. With forwarding, **the "
 "address forwarding the email will be identified as the sender**, while with "
@@ -4551,11 +4565,11 @@ msgstr ""
 "care transferă email-ul va fi identificată ca expeditor**, în timp ce cu "
 "redirecționările, expeditorul original va rămâne întotdeauna."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:236
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:245
 msgid "Incoming mail servers"
 msgstr "Servere de poștă de intrare"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:238
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:247
 msgid ""
 "As mentioned earlier, using redirections is the recommended method to "
 "receive emails in Odoo. However, it is also possible to set up incoming mail "
@@ -4564,14 +4578,14 @@ msgid ""
 "in order to fetch all incoming emails."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:244
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:253
 msgid ""
 "Odoo's *Incoming Mail Servers* feature is designed for shared inboxes (e.g., "
 "`sales@yourcompany.com` or `support@yourcompany.com`) to route messages to "
 "team pipelines, tickets, or documents."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:248
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:257
 msgid ""
 "Using personal email addresses (e.g., `mitchell.admin@yourcompany.com`) as "
 "incoming mail servers is **not** recommended. Doing so can lead to increased "
@@ -4579,13 +4593,13 @@ msgid ""
 "syncing replies correctly."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:252
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:261
 msgid ""
 "Incoming mail servers are created by going to :menuselection:`Settings --> "
 "Technical --> Emails: Incoming Mail Servers`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:256
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:265
 msgid ""
 "We recommend using the IMAP protocol over the POP protocol, as IMAP fetches "
 "all unread emails, while POP fetches all the emails' history and then tags "
@@ -4595,7 +4609,7 @@ msgstr ""
 "IMAP preia toate email-urile necitite, în timp ce POP preia tot istoricul "
 "email-urilor și apoi le marchează ca șterse în căsuța dumneavoastră poștală."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:260
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:269
 msgid ""
 "It is also possible to connect a mailbox through :doc:`Gmail with Google "
 "OAuth <google_oauth>` or :doc:`Outlook with Microsoft Azure OAuth "
@@ -4605,7 +4619,7 @@ msgstr ""
 "Google OAuth <google_oauth>` sau :doc:`Outlook cu Microsoft Azure OAuth "
 "<azure_oauth>`."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:263
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:272
 msgid ""
 "Regardless of the protocol chosen, emails are fetched using the *Mail: "
 "Fetchmail Service* scheduled action."
@@ -4613,7 +4627,7 @@ msgstr ""
 "Indiferent de protocolul ales, email-urile sunt preluate folosind acțiunea "
 "programată *Mail: Fetchmail Service*."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:266
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:275
 msgid ""
 "Additionally, using an incoming mail server in Odoo gives the opportunity to "
 "create new records in a specified model. Each incoming mail server can "
@@ -4623,7 +4637,7 @@ msgstr ""
 "oportunitatea de a crea înregistrări noi într-un model specificat. Fiecare "
 "server de poștă de intrare poate crea înregistrări într-un model diferit."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:270
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:279
 msgid ""
 "Emails received on `task@company-name.com` are fetched by the Odoo database. "
 "All fetched emails will create a new project task in the database."
@@ -4632,11 +4646,11 @@ msgstr ""
 "Odoo. Toate email-urile preluate vor crea o nouă sarcină de proiect în baza "
 "de date."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:279
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:288
 msgid "MX record"
 msgstr "Înregistrare MX"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:281
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:290
 msgid ""
 "A third option is to create a MX record in your DNS zone which specifies the "
 "mail server managing emails sent to your domain. **Advanced technical "
@@ -4646,7 +4660,7 @@ msgstr ""
 "care specifică serverul de poștă care gestionează email-urile trimise către "
 "domeniul dumneavoastră. **Sunt necesare cunoștințe tehnice avansate.**"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:285
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:294
 msgid ""
 "This configuration only works with a subdomain on the Odoo Online or Odoo.sh "
 "infrastructure (e.g., `@mail.mydomain.com`)"
@@ -4654,17 +4668,17 @@ msgstr ""
 "Această configurație funcționează doar cu un subdomeniu pe infrastructura "
 "Odoo Online sau Odoo.sh (de ex., `@mail.mydomain.com`)"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:288
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:297
 msgid "Below are presented some specifications depending on the hosting type:"
 msgstr ""
 "Mai jos sunt prezentate unele specificații în funcție de tipul de găzduire:"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:292
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:301
 #: ../../content/applications/general/email_communication/faq.rst:296
 msgid "Odoo Online"
 msgstr "Odoo Online"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:294
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:303
 msgid ""
 "The custom subdomain must be added to your :doc:`Odoo Portal <../../websites/"
 "website/configuration/domain_names>`."
@@ -4672,12 +4686,12 @@ msgstr ""
 "Subdomeniul personalizat trebuie adăugat la :doc:`Portalul Odoo <../../"
 "websites/website/configuration/domain_names>`."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:297
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:306
 #: ../../content/applications/general/email_communication/faq.rst:301
 msgid "Odoo.sh"
 msgstr "Odoo.sh"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:299
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:308
 msgid ""
 "The custom subdomain must be added to the :doc:`settings of the project "
 "<../../../administration/odoo_sh/getting_started/settings>`:"
@@ -4691,11 +4705,11 @@ msgstr ""
 "Adăugarea unui subdomeniu personalizat pentru poștă la setările proiectului "
 "Odoo.sh."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:308
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:317
 msgid "Infinite email loops"
 msgstr "Bucle infinite de email"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:310
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:319
 msgid ""
 "In some cases, infinite mailing loops can be created. Odoo provides some "
 "protection against such loops, ensuring the same sender cannot send too many "
@@ -4706,7 +4720,7 @@ msgstr ""
 "nu poate trimite prea multe email-uri **care ar crea înregistrări** către un "
 "alias într-un interval de timp specific."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:314
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:323
 msgid ""
 "By default, an email address can send up to 20 emails in 120 minutes. If "
 "more emails are sent, they are blocked and the sender receives the following "
@@ -4721,7 +4735,7 @@ msgid "Bounce email received after attempting contact too many times an alias."
 msgstr ""
 "Email de respingere primit după încercarea de a contacta prea des un alias."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:320
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:329
 msgid ""
 "To change the default behavior, enable :ref:`developer-mode`, then go "
 "to :menuselection:`Settings --> Technical --> Parameters: System Parameters` "
@@ -4731,7 +4745,7 @@ msgstr ""
 "<developer-mode>`, apoi mergeți la :menuselection:`Settings --> Technical --"
 "> Parameters: System Parameters` pentru a adăuga doi parametri."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:323
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:332
 msgid ""
 "For the first parameter, enter `mail.gateway.loop.minutes` as "
 "the :guilabel:`Key` and choose a number of minutes as the :guilabel:`Value` "
@@ -4741,7 +4755,7 @@ msgstr ""
 "ca :guilabel:`Cheie` și alegeți un număr de minute ca :guilabel:`Valoare` "
 "(`120` este comportamentul implicit)."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:325
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:334
 msgid ""
 "For the second parameter, enter `mail.gateway.loop.threshold` as "
 "the :guilabel:`Key` and choose a number of emails as the :guilabel:`Value` "
@@ -4751,11 +4765,11 @@ msgstr ""
 "ca :guilabel:`Cheie` și alegeți un număr de email-uri ca :guilabel:`Valoare` "
 "(`20` este comportamentul implicit)."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:329
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:338
 msgid "Allow alias domain system parameter"
 msgstr "Permite parametrul de sistem al domeniului alias"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:331
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:340
 msgid ""
 "Incoming aliases are set in the Odoo database to create records by receiving "
 "incoming emails. To view aliases set in the Odoo database, first activate "
@@ -4768,7 +4782,7 @@ msgstr ""
 "dezvoltator <developer-mode>`. Apoi, mergeți la :menuselection:`Settings app "
 "--> Technical --> Aliases`."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:335
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:344
 msgid ""
 "The following system parameter, `mail.catchall.domain.allowed`, set with "
 "allowed alias domain values, separated by commas, filters out correctly "
@@ -4783,7 +4797,7 @@ msgstr ""
 "pozitive unde sunt prezente adrese de email cu doar prefixul de alias, nu și "
 "domeniul."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:340
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:349
 msgid ""
 "In some instances, matches have been made in the Odoo database when an email "
 "is received with the same alias prefix and a different domain on the "
@@ -4796,7 +4810,7 @@ msgstr ""
 "expeditorului, destinatarului și :abbr:`CC (Carbon Copy)` ale unui e-mail "
 "primit."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:345
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:354
 msgid ""
 "When Odoo receives emails with the `commercial` prefix alias in the sender, "
 "recipient, or :abbr:`CC (Carbon Copy)` email addresses (e.g. "
@@ -4810,7 +4824,7 @@ msgstr ""
 "aliasul complet `commercial`, cu un domeniu diferit, și prin urmare, creează "
 "un tichet/lead/oportunitate/etc."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:350
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:359
 msgid ""
 "To add the `mail.catchall.domain.allowed` system parameter, first, activate "
 "the :ref:`developer mode <developer-mode>`. Then, go "
@@ -4824,7 +4838,7 @@ msgstr ""
 "clic pe :guilabel:`New`. Apoi, tastați `mail.catchall.domain.allowed` în "
 "câmpul :guilabel:`Key`."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:354
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:363
 msgid ""
 "Next, for the :guilabel:`Value` field, add the domains separated by commas. "
 "Manually :icon:`fa-cloud-upload` :guilabel:`(Save)`, and the system "
@@ -4838,11 +4852,11 @@ msgstr ""
 msgid "mail.catchall.domain.allowed system parameter set."
 msgstr "Parametrul de sistem mail.catchall.domain.allowed setat."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:361
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:370
 msgid "Local-part based incoming detection"
 msgstr "Detectare bazată pe partea locală a destinatarului"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:363
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:372
 msgid ""
 "When creating a new alias, there is an option to enable :guilabel:`Local-"
 "part based incoming detection`. If enabled, Odoo only requires the local-"
@@ -11666,21 +11680,13 @@ msgstr ""
 #: ../../content/applications/general/iot/devices/scale.rst:10
 msgid ""
 "To connect a scale to the IoT system, use a USB cable. In some cases, you "
-"may need a serial-to-US adapter to complete the connection. If the scale is "
+"may need a serial-to-USB adapter to complete the connection. If the scale is "
 "`compatible with an IoT system <https://www.odoo.com/page/iot-hardware>`_, "
 "no additional setup is required; the scale is automatically detected as soon "
 "as it is connected. If the scale is not detected, reboot the IoT box "
 "or :ref:`restart the Windows virtual IoT service <iot/windows_iot/restart>` "
 "and :ref:`update the scale's drivers <iot_updating_iot/handlers>`."
 msgstr ""
-"Pentru a conecta un cântar la sistemul IoT, folosiți un cablu USB. În unele "
-"cazuri, este posibil să aveți nevoie de un adaptor serial-la-USB pentru a "
-"finaliza conexiunea. Dacă cântarul este `compatibil cu un sistem IoT "
-"<https://www.odoo.com/page/iot-hardware>`_, nu este necesară nicio "
-"configurare suplimentară; cântarul este detectat automat imediat ce este "
-"conectat. Dacă cântarul nu este detectat, reporniți IoT box "
-"sau :ref:`reporniți serviciul Windows virtual IoT <iot/windows_iot/restart>` "
-"și :ref:`actualizați driverele cântarului <iot_updating_iot/handlers>`."
 
 #: ../../content/applications/general/iot/devices/scale.rst:18
 msgid ""
@@ -16343,6 +16349,26 @@ msgstr ""
 "la :guilabel:`Gestionați metodele de plată` din meniul din dreapta. Apoi, "
 "adăugați noile informații de plată și selectați :guilabel:`Adăugați un card "
 "nou`."
+
+#~ msgid ""
+#~ "To connect a scale to the IoT system, use a USB cable. In some cases, you "
+#~ "may need a serial-to-US adapter to complete the connection. If the scale "
+#~ "is `compatible with an IoT system <https://www.odoo.com/page/iot-"
+#~ "hardware>`_, no additional setup is required; the scale is automatically "
+#~ "detected as soon as it is connected. If the scale is not detected, reboot "
+#~ "the IoT box or :ref:`restart the Windows virtual IoT service <iot/"
+#~ "windows_iot/restart>` and :ref:`update the scale's drivers "
+#~ "<iot_updating_iot/handlers>`."
+#~ msgstr ""
+#~ "Pentru a conecta un cântar la sistemul IoT, folosiți un cablu USB. În "
+#~ "unele cazuri, este posibil să aveți nevoie de un adaptor serial-la-USB "
+#~ "pentru a finaliza conexiunea. Dacă cântarul este `compatibil cu un sistem "
+#~ "IoT <https://www.odoo.com/page/iot-hardware>`_, nu este necesară nicio "
+#~ "configurare suplimentară; cântarul este detectat automat imediat ce este "
+#~ "conectat. Dacă cântarul nu este detectat, reporniți IoT box "
+#~ "sau :ref:`reporniți serviciul Windows virtual IoT <iot/windows_iot/"
+#~ "restart>` și :ref:`actualizați driverele cântarului <iot_updating_iot/"
+#~ "handlers>`."
 
 #~ msgid ""
 #~ "For more information on logs and how to access them via the Odoo.sh "

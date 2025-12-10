@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-18 11:05+0000\n"
+"POT-Creation-Date: 2025-12-10 08:58+0000\n"
 "PO-Revision-Date: 2025-11-21 07:48+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -4111,7 +4111,21 @@ msgstr ""
 "は、リダイレクト機能を使用することをお勧めします。これにより、データベースで"
 "メッセージを遅延なく受信することができます。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:204
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:205
+msgid ""
+"When configuring email redirections with Microsoft 365 (Exchange Online), be "
+"aware that certain technical limitations may affect your setup. Some users "
+"have reported that Microsoft 365 does not support true redirection and only "
+"allows forwarding, which may not behave as needed for Odoo's email routing."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:210
+msgid ""
+"For more information on Microsoft Exchange configuration, visit `Microsoft "
+"Learn <https://learn.microsoft.com/en-us/exchange/exchange-online>`_."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:213
 msgid ""
 "It is mandatory to redirect the catchall and bounce address to the Odoo "
 "subdomain of the database. Every other alias used must be redirected as well."
@@ -4120,23 +4134,23 @@ msgstr ""
 "トすることは必須です。使用されている他の全てのエイリアスも同様にリダイレクト"
 "する必要があります。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:208
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:217
 msgid "With one sales team, the following redirections are required:"
 msgstr "1つの販売チームで、以下のリダイレクトが必要です:"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:210
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:219
 msgid "`catchall@company-name.com` → `catchall@company-name.odoo.com`"
 msgstr "`catchall@company-name.com` → `catchall@company-name.odoo.com`"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:211
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:220
 msgid "`bounce@company-name.com` → `bounce@company-name.odoo.com`"
 msgstr "`bounce@company-name.com` → `bounce@company-name.odoo.com`"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:212
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:221
 msgid "`info@company-name.com` → `info@company-name.odoo.com`"
 msgstr "`info@company-name.com` → `info@company-name.odoo.com`"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:215
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:224
 msgid ""
 "Some providers ask to validate the redirection by sending a link to the "
 "target email address. This procedure is an issue for catchall and bounce "
@@ -4146,7 +4160,7 @@ msgstr ""
 "証を要求します。この手順は、レコードの作成に使用されないため、キャッチオール"
 "とバウンスの問題となります。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:218
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:227
 msgid ""
 "Modify the catchall value on the mail alias domain. :ref:`developer-mode` "
 "must be enabled to access this menu. For example, it can be changed from "
@@ -4158,7 +4172,7 @@ msgstr ""
 "`catchall` を `temp-catchall` に変更することができます。これにより、"
 "`catchall` を別のエイリアスのローカルパートとして使用できるようになります。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:221
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:230
 msgid ""
 "Open an app that uses an alias. For example, CRM contains aliases for each "
 "sales team. Set `catchall` as the local-part of the alias of a sales team."
@@ -4167,7 +4181,7 @@ msgstr ""
 "が含まれています。販売チームのエイリアスのローカルパートとして `catchall` を"
 "設定します。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:223
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:232
 msgid ""
 "The validation email will create a record in the CRM app. The email sent "
 "will be visible in the chatter, allowing you to validate the redirection."
@@ -4175,7 +4189,7 @@ msgstr ""
 "検証メールはCRMアプリにレコードを作成します。送信されたEメールはチャターに表"
 "示され、リダイレクトの検証が可能になります。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:225
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:234
 msgid ""
 "Do not forget to change back the alias of the sales team and the catchall "
 "value on the mail alias domain, just as they were before this procedure."
@@ -4183,7 +4197,7 @@ msgstr ""
 "販売チームのエイリアスとメールエイリアスドメインのキャッチオール値を忘れずに"
 "この手順の前の状態に戻して下さい。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:229
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:238
 msgid ""
 "An alternative to redirections is **forwarding**. With forwarding, **the "
 "address forwarding the email will be identified as the sender**, while with "
@@ -4193,11 +4207,11 @@ msgstr ""
 "元アドレスが送信者として識別されます** が、リダイレクトでは、常に元の送信者が"
 "残ります。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:236
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:245
 msgid "Incoming mail servers"
 msgstr "受信メールサーバ"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:238
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:247
 msgid ""
 "As mentioned earlier, using redirections is the recommended method to "
 "receive emails in Odoo. However, it is also possible to set up incoming mail "
@@ -4206,14 +4220,14 @@ msgid ""
 "in order to fetch all incoming emails."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:244
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:253
 msgid ""
 "Odoo's *Incoming Mail Servers* feature is designed for shared inboxes (e.g., "
 "`sales@yourcompany.com` or `support@yourcompany.com`) to route messages to "
 "team pipelines, tickets, or documents."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:248
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:257
 msgid ""
 "Using personal email addresses (e.g., `mitchell.admin@yourcompany.com`) as "
 "incoming mail servers is **not** recommended. Doing so can lead to increased "
@@ -4221,13 +4235,13 @@ msgid ""
 "syncing replies correctly."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:252
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:261
 msgid ""
 "Incoming mail servers are created by going to :menuselection:`Settings --> "
 "Technical --> Emails: Incoming Mail Servers`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:256
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:265
 msgid ""
 "We recommend using the IMAP protocol over the POP protocol, as IMAP fetches "
 "all unread emails, while POP fetches all the emails' history and then tags "
@@ -4237,7 +4251,7 @@ msgstr ""
 "後、メールボックス内で削除済みとしてタグ付けします。そのため、POPプロトコルよ"
 "りもIMAPプロトコルを使用することをお勧めします。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:260
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:269
 msgid ""
 "It is also possible to connect a mailbox through :doc:`Gmail with Google "
 "OAuth <google_oauth>` or :doc:`Outlook with Microsoft Azure OAuth "
@@ -4247,7 +4261,7 @@ msgstr ""
 "で Microsoft Azure OAuthを使用 <azure_oauth>` して、メールボックスに接続する"
 "ことも可能です。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:263
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:272
 msgid ""
 "Regardless of the protocol chosen, emails are fetched using the *Mail: "
 "Fetchmail Service* scheduled action."
@@ -4255,7 +4269,7 @@ msgstr ""
 "選択したプロトコルに関わらず、Eメールは *メール: Fetchmailサービス* というス"
 "ケジュールアクションを使用して取得されます。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:266
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:275
 msgid ""
 "Additionally, using an incoming mail server in Odoo gives the opportunity to "
 "create new records in a specified model. Each incoming mail server can "
@@ -4265,7 +4279,7 @@ msgstr ""
 "作成する案件が発生します。各受信メールサーバは、異なるモデルにレコードを作成"
 "できます。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:270
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:279
 msgid ""
 "Emails received on `task@company-name.com` are fetched by the Odoo database. "
 "All fetched emails will create a new project task in the database."
@@ -4274,11 +4288,11 @@ msgstr ""
 "す。取得されたEメールは全て、データベースに新しいプロジェクトタスクを作成しま"
 "す。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:279
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:288
 msgid "MX record"
 msgstr "MXレコード"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:281
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:290
 msgid ""
 "A third option is to create a MX record in your DNS zone which specifies the "
 "mail server managing emails sent to your domain. **Advanced technical "
@@ -4287,7 +4301,7 @@ msgstr ""
 "3つ目のオプションは、ドメインに送信されるEメールを管理するメールサーバを指定"
 "するMXレコードをDNSゾーンに作成することです。**高度な技術設定が必要です。**"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:285
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:294
 msgid ""
 "This configuration only works with a subdomain on the Odoo Online or Odoo.sh "
 "infrastructure (e.g., `@mail.mydomain.com`)"
@@ -4295,16 +4309,16 @@ msgstr ""
 "この設定は、OdooオンラインまたはOdoo.shインフラストラクチャ上のサブドメイン "
 "(例:`@mail.mydomain.com`)でのみ有効です。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:288
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:297
 msgid "Below are presented some specifications depending on the hosting type:"
 msgstr "以下では、ホスティングタイプ別の仕様をいくつか紹介します: "
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:292
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:301
 #: ../../content/applications/general/email_communication/faq.rst:296
 msgid "Odoo Online"
 msgstr "Odooオンライン"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:294
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:303
 msgid ""
 "The custom subdomain must be added to your :doc:`Odoo Portal <../../websites/"
 "website/configuration/domain_names>`."
@@ -4312,12 +4326,12 @@ msgstr ""
 "カスタムドメインは :doc:`Odooポータル <../../websites/website/configuration/"
 "domain_names>` に追加する必要があります。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:297
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:306
 #: ../../content/applications/general/email_communication/faq.rst:301
 msgid "Odoo.sh"
 msgstr "Odoo.sh"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:299
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:308
 msgid ""
 "The custom subdomain must be added to the :doc:`settings of the project "
 "<../../../administration/odoo_sh/getting_started/settings>`:"
@@ -4329,11 +4343,11 @@ msgstr ""
 msgid "Adding a custom subdomain for mail to Odoo.sh project settings."
 msgstr "Odoo.shプロジェクト設定にメール用のカスタムサブドメインを追加します。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:308
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:317
 msgid "Infinite email loops"
 msgstr "無限Eメールループ"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:310
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:319
 msgid ""
 "In some cases, infinite mailing loops can be created. Odoo provides some "
 "protection against such loops, ensuring the same sender cannot send too many "
@@ -4344,7 +4358,7 @@ msgstr ""
 "一の送信者からエイリアスに大量のEメールが送信されて **レコードが作成される** "
 "ことを防ぎます。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:314
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:323
 msgid ""
 "By default, an email address can send up to 20 emails in 120 minutes. If "
 "more emails are sent, they are blocked and the sender receives the following "
@@ -4358,7 +4372,7 @@ msgstr ""
 msgid "Bounce email received after attempting contact too many times an alias."
 msgstr "エイリアスに何度も連絡を試みるとバウンスメールが届きます。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:320
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:329
 msgid ""
 "To change the default behavior, enable :ref:`developer-mode`, then go "
 "to :menuselection:`Settings --> Technical --> Parameters: System Parameters` "
@@ -4368,7 +4382,7 @@ msgstr ""
 "ら、:menuselection:`設定 --> 技術設定 --> パラメータ: システムパラメータ`  に"
 "進み、2つのパラメータを追加します。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:323
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:332
 msgid ""
 "For the first parameter, enter `mail.gateway.loop.minutes` as "
 "the :guilabel:`Key` and choose a number of minutes as the :guilabel:`Value` "
@@ -4377,7 +4391,7 @@ msgstr ""
 "第1パラメータについては `mail.gateway.loop.minutes` を :guilabel:`キー` とし"
 "て入力し、分数を :guilabel:`値` (`120` がデフォルト) として設定して下さい。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:325
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:334
 msgid ""
 "For the second parameter, enter `mail.gateway.loop.threshold` as "
 "the :guilabel:`Key` and choose a number of emails as the :guilabel:`Value` "
@@ -4386,11 +4400,11 @@ msgstr ""
 "第2パラメータには `mail.gateway.loop.threshold` を :guilabel:`キー` として設"
 "定し、Eメールの数を :guilabel:`値` (`20` がデフォルト) として設定して下さい。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:329
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:338
 msgid "Allow alias domain system parameter"
 msgstr "エイリアスドメインのシステムパラメータを許可"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:331
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:340
 msgid ""
 "Incoming aliases are set in the Odoo database to create records by receiving "
 "incoming emails. To view aliases set in the Odoo database, first activate "
@@ -4402,7 +4416,7 @@ msgstr ""
 "は、まず :ref:`開発者モード <developer-mode>` を有効化します。 次"
 "に、:menuselection:`設定アプリ --> 技術設定 --> エイリアス` に移動します。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:335
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:344
 msgid ""
 "The following system parameter, `mail.catchall.domain.allowed`, set with "
 "allowed alias domain values, separated by commas, filters out correctly "
@@ -4416,7 +4430,7 @@ msgstr ""
 "インを設定することで、ドメインではなくプレフィックスエイリアスのみを持つEメー"
 "ルアドレスが存在する場合の誤検出を排除します。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:340
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:349
 msgid ""
 "In some instances, matches have been made in the Odoo database when an email "
 "is received with the same alias prefix and a different domain on the "
@@ -4427,7 +4441,7 @@ msgstr ""
 "で受信メールアドレスのドメインが一致しない場合があります。これは受信メールの"
 "送信者、受信者、:abbr:`CC (カーボンコピー)`メールアドレスに当てはまります。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:345
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:354
 msgid ""
 "When Odoo receives emails with the `commercial` prefix alias in the sender, "
 "recipient, or :abbr:`CC (Carbon Copy)` email addresses (e.g. "
@@ -4441,7 +4455,7 @@ msgstr ""
 "イリアスとして、異なるドメインで誤って処理し、その結果、チケット/リード/案件/"
 "その他を作成します。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:350
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:359
 msgid ""
 "To add the `mail.catchall.domain.allowed` system parameter, first, activate "
 "the :ref:`developer mode <developer-mode>`. Then, go "
@@ -4455,7 +4469,7 @@ msgstr ""
 "リックします。次に :guilabel:`キー` フィールドに "
 "`mail.catchall.domain.allowed`  と入力します。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:354
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:363
 msgid ""
 "Next, for the :guilabel:`Value` field, add the domains separated by commas. "
 "Manually :icon:`fa-cloud-upload` :guilabel:`(Save)`, and the system "
@@ -4469,11 +4483,11 @@ msgstr ""
 msgid "mail.catchall.domain.allowed system parameter set."
 msgstr "mail.catchall.domain.allowed システムパラメータセット。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:361
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:370
 msgid "Local-part based incoming detection"
 msgstr "ローカルパートに基づく着信検知"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:363
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:372
 msgid ""
 "When creating a new alias, there is an option to enable :guilabel:`Local-"
 "part based incoming detection`. If enabled, Odoo only requires the local-"
@@ -11063,20 +11077,13 @@ msgstr ""
 #: ../../content/applications/general/iot/devices/scale.rst:10
 msgid ""
 "To connect a scale to the IoT system, use a USB cable. In some cases, you "
-"may need a serial-to-US adapter to complete the connection. If the scale is "
+"may need a serial-to-USB adapter to complete the connection. If the scale is "
 "`compatible with an IoT system <https://www.odoo.com/page/iot-hardware>`_, "
 "no additional setup is required; the scale is automatically detected as soon "
 "as it is connected. If the scale is not detected, reboot the IoT box "
 "or :ref:`restart the Windows virtual IoT service <iot/windows_iot/restart>` "
 "and :ref:`update the scale's drivers <iot_updating_iot/handlers>`."
 msgstr ""
-"スケールを IoTシステムに接続するには、USB ケーブルを使用します。\n"
-"場合によっては、接続を完了するためにシリアル-USB アダプターが必要になることが"
-"あります。スケールが IoTシステムと互換性がある場合 <https://www.odoo.com/"
-"page/iot-hardware>_、追加の設定は不要で、接続されると自動的に検出されます。ス"
-"ケールが検出されない場合は、IoT Boxを再起動するか、:ref:Windows仮想IoTサービ"
-"スを再起動 <iot/windows_iot/restart> し、:ref:スケールのドライバーを更新 "
-"<iot_updating_iot/handlers> してください。"
 
 #: ../../content/applications/general/iot/devices/scale.rst:18
 msgid ""
@@ -15595,6 +15602,25 @@ msgstr ""
 "顧客が支払オプションを管理したい場合は、右側のメニューにある :guilabel:`支払"
 "方法を管理` に進みます。次に、新しい支払情報を追加し、:guilabel:`新しいカード"
 "を追加` をクリックします。"
+
+#~ msgid ""
+#~ "To connect a scale to the IoT system, use a USB cable. In some cases, you "
+#~ "may need a serial-to-US adapter to complete the connection. If the scale "
+#~ "is `compatible with an IoT system <https://www.odoo.com/page/iot-"
+#~ "hardware>`_, no additional setup is required; the scale is automatically "
+#~ "detected as soon as it is connected. If the scale is not detected, reboot "
+#~ "the IoT box or :ref:`restart the Windows virtual IoT service <iot/"
+#~ "windows_iot/restart>` and :ref:`update the scale's drivers "
+#~ "<iot_updating_iot/handlers>`."
+#~ msgstr ""
+#~ "スケールを IoTシステムに接続するには、USB ケーブルを使用します。\n"
+#~ "場合によっては、接続を完了するためにシリアル-USB アダプターが必要になるこ"
+#~ "とがあります。スケールが IoTシステムと互換性がある場合 <https://"
+#~ "www.odoo.com/page/iot-hardware>_、追加の設定は不要で、接続されると自動的に"
+#~ "検出されます。スケールが検出されない場合は、IoT Boxを再起動する"
+#~ "か、:ref:Windows仮想IoTサービスを再起動 <iot/windows_iot/restart> "
+#~ "し、:ref:スケールのドライバーを更新 <iot_updating_iot/handlers> してくださ"
+#~ "い。"
 
 #~ msgid ""
 #~ "For more information on logs and how to access them via the Odoo.sh "

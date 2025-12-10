@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-18 11:05+0000\n"
+"POT-Creation-Date: 2025-12-10 08:58+0000\n"
 "PO-Revision-Date: 2025-11-27 20:10+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -165,6 +165,7 @@ msgstr "カウント作業が割当てられたバーコードダッシュボー
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:38
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:52
 #: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:41
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:33
 #: ../../content/applications/inventory_and_mrp/barcode/setup/serial_numbers_lots.rst:11
 #: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:14
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:38
@@ -189,7 +190,7 @@ msgstr "カウント作業が割当てられたバーコードダッシュボー
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:16
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:17
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:19
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:19
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:24
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:15
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:17
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/label_type.rst:13
@@ -1174,6 +1175,7 @@ msgstr ""
 "種類の文字が含まれていることを意味します。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:240
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:50
 msgid ":doc:`gs1_nomenclature`"
 msgstr ":doc:`gs1_nomenclature`"
 
@@ -2966,6 +2968,166 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:-1
 msgid "Overview of deliveries in transfer to validate."
 msgstr "未検証の移動における配送の概要。"
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:3
+msgid "Retrieve EPC codes"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:9
+msgid ""
+"Electronic product codes (|EPC|) are globally unique identifiers assigned to "
+"specific products, allowing items to be distinguished at the individual "
+"level. These identifiers support accurate inventory management by enabling "
+"faster cycle counts, streamlined adjustments, and more precise stock control."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:14
+msgid ""
+"After EPCs are :ref:`obtained <barcode/operations/retrieve_epcs_gs1>` from |"
+"GS1|, they are :ref:`encoded <barcode/operations/write_epcs>` onto |RFID| "
+"tags, which are then applied to products and used throughout the inventory "
+"process."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:19
+msgid "Set up :doc:`../setup/rfid`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:22
+msgid ""
+"If using Odoo 18, |GS1|'s Encoder/Decoder tool **must** be used to retrieve "
+"EPCs."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:27
+msgid "Retrieving EPCs from GS1"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:29
+msgid ""
+"To retrieve an EPC to encode on a tag, use `GS1's EPC Encoder/Decoder tool "
+"<https://www.gs1.org/services/epc-encoderdecoder>`__."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:32
+msgid ""
+"Enter the GTIN-14 barcode of the product in the application "
+"identifier :guilabel:`(01)` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:33
+msgid "Enter the product's serial number in the :guilabel:`(21)` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:34
+msgid "Specify a company prefix length."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:35
+msgid "Specify the size of the tag and its filter value."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:-1
+msgid "Complete the fields of the EPC Encoder/Decoder tool."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:43
+msgid "Writing EPCs to RFID tags"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:45
+msgid ""
+"After retrieving the EPCs, you can use an RFID writer to write the EPCs onto "
+"RFID tags. The process to write EPCs varies by RFID writer manufacturer. "
+"Refer to the RFID writer's documentation for more information."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:51
+msgid ":doc:`gs1_usage`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:52
+msgid ":doc:`adjustments`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:3
+msgid "Manage inventory with RFID"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:5
+msgid ""
+"Managing inventory with an RFID barcode scanner is possible with the "
+"**Barcodes** app and a physical RFID scanner."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:8
+msgid ""
+"Make sure the RFD40 scanner is paired and connected to the mobile computer "
+"or smartphone. Open an operation (like a receipt, transfer, delivery order, "
+"or manufacturing order), or count inventory using the RFID scanner. Scanning "
+"an existing operation barcode pulls up the relevant inventory or "
+"manufacturing documents in Odoo on the mobile device."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:14
+msgid "Overview of the workflow"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:16
+msgid ""
+"With the RFD40 scanner in hand, open the **Barcode** app on the computer or "
+"phone. Open the operation record (via the **Barcode** interface or scanning "
+"the operation barcode), or open the :guilabel:`Inventory count` operation. "
+"Scan the RFID barcodes for the product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:21
+msgid ":doc:`../setup/operation_types`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:23
+msgid ""
+"To begin managing inventory using RFID tags, open the **Barcode** app on the "
+"smart device."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:28
+msgid "Manage inventory"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:30
+msgid ""
+"From the **Barcode** app, scan the operation barcode or tap "
+"the :guilabel:`Operations` button to open operations for receipts, internal "
+"transfers, delivery orders, or manufacturing orders. If the reading device "
+"is not connected, Odoo will automatically connect to the device. When the "
+"device is connected, a toast notification appears on the screen that "
+"verifies the connection. Scan the products, then validate the scan on the "
+"mobile computer or smartphone."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:-1
+msgid "Validate the operation on the mobile device."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:42
+msgid "Counting inventory"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:44
+msgid ""
+"It is required by many factories and warehouses to keep track of inventory, "
+"including regular counts of products to ensure all records are correct. To "
+"change the amount of a product in stock, or adjust inventory, open "
+"the :guilabel:`Inventory count` operation. Scan the products to count. If "
+"necessary, verify the count manually. You can update the count by clicking "
+"the :icon:`fa-pencil` :guilabel:`(edit)` icon. Click :guilabel:`Apply` to "
+"apply the count on the smart device."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:-1
+msgid "Apply the count on the Inventory Adjustment page."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:3
 msgid "Create and process transfers with barcodes"
@@ -4776,6 +4938,152 @@ msgid ""
 msgstr ""
 "`Odooチュートリアル: バーコードを使用して構成品を消費する <https://"
 "www.youtube.com/watch?v=2ojxIbTq41Q>`_"
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:3
+msgid "RFID"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:7
+msgid ""
+"RFID stands for Radio Frequency Identification. RFID enables the tracking of "
+"items using radio waves: RFID tags are attached to products in inventory, "
+"and RFID readers can read those tags to transmit information to a computer. "
+"RFID helps automate processes by keeping inventory accurate and tracking "
+"internal and external moves."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:12
+msgid ""
+"RFID tags transmit electronic product codes (|EPC|), which are unique "
+"identifiers to distinguish individual items. The |EPC| in Odoo is based on "
+"GS1 standards to consistently identify products worldwide. GS1 nomenclature "
+"establishes common rules for encoding information within a barcode to "
+"facilitate the global exchange of goods."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:18
+msgid ":doc:`../operations/gs1_nomenclature`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:21
+msgid "Hardware"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:23
+msgid "The following are required to begin working with RFID in Odoo:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:25
+msgid "Zebra TCX Series mobile computer, or"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:26
+msgid "Android Smartphone"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:28
+msgid "Paired with:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:30
+msgid "Zebra RFD40 (can read and write RFID tags)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:35
+msgid ""
+"Before using RFID tags to manage inventory, the Android Package Kit (APK) "
+"with RFID support must be installed on the mobile computer or smartphone."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:39
+msgid ""
+"Before installing the APK on an individual device, first enable the ability "
+"to install unknown apps in the device settings. Find this setting in the "
+"device's :guilabel:`App` or :guilabel:`App & Notification` settings, under "
+"the :guilabel:`Special access` or :guilabel:`Special app access` section."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:44
+msgid ""
+"Then, download the APK. On the :guilabel:`Downloads` page, under "
+"the :guilabel:`Mobile Application` section, click :guilabel:`Download` next "
+"to the :guilabel:`Android` option, then select :guilabel:`Download APK (with "
+"Zebra RFID support)` from the drop-down menu. Download this file via a "
+"computer and transfer the APK via USB or Bluetooth, or use the device's web "
+"browser to download the APK."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:-1
+msgid "Download the APK from the Download page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:53
+msgid ""
+"Install the APK. If :guilabel:`Install unknown apps` is enabled for the "
+"device's web browser, install the APK directly from the browser download "
+"notification. If :guilabel:`Install unknown apps` is enabled for the "
+"device's file manager, open it and navigate to the location where the file "
+"is stored, then tap it to install the APK."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:58
+msgid ""
+"Then, when reading or writing RFID tags, ensure that the Zebra device and "
+"the smart device are paired and connected."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:62
+msgid "Set a compatible barcode"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:64
+msgid ""
+"Before you can manage inventory using RFID tags, a compatible barcode must "
+"be assigned to the products. Set the product barcode in the product form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:68
+msgid ":ref:`Set product barcodes <inventory/barcode/set-barcodes>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:70
+msgid ""
+"To work with RFID, the product barcode must be GTIN-14-compatible, and "
+"inventory tracking must be enabled for the product. Product barcodes that "
+"are not GTIN-14-compatible must be upgraded to work with RFID."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:75
+msgid ""
+"Tracking by serial number or lots does not need to be enabled for this "
+"feature to work properly."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:78
+msgid "Limitations"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:80
+msgid ""
+"The serial number that is part of the |EPC| must only be numeric, as "
+"SGTIN-96 is the only supported encoding scheme for RFID tags in Odoo. "
+"Alphanumeric serial numbers are **not** supported."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:83
+msgid ""
+"For products tracked by lot, the lot can be scanned in, but it will be "
+"considered as one lot with a quantity of `1`. It does not count individual "
+"products in a receipt."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:85
+msgid "Only ultra-high frequency (UHF) RFID tags are supported."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:86
+msgid "Products need to be GS1-registered because barcodes must be unique."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/serial_numbers_lots.rst:3
 msgid "Barcodes for lot and serial numbers"
@@ -7235,7 +7543,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:227
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:133
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:6
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:169
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:117
 msgid "Replenishment"
 msgstr "補充"
 
@@ -20195,6 +20503,15 @@ msgstr "配送方法"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:7
 msgid ""
+"In Odoo, *delivery methods* make it possible to calculate shipping costs "
+"directly on sales orders and e-commerce carts, providing customers and sales "
+"teams with accurate shipping fee information. This transparency helps close "
+"sales by showing customers the exact cost for each shipping carrier or "
+"delivery timeframe."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:12
+msgid ""
 "When activated in Odoo, the *Delivery Methods* setting adds the option of "
 "calculating the cost of shipping on sales orders and e-commerce shopping "
 "carts."
@@ -20202,7 +20519,7 @@ msgstr ""
 "Odooを有効化すると、*配送方法* 設定で販売オーダとeコマースショッピングカート"
 "の配送費用を計算するオプションが追加されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:10
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:15
 msgid ""
 "When integrated with a :ref:`third-party carrier <inventory/shipping/"
 "third_party>`, shipping prices are calculated based on the carrier's pricing "
@@ -20211,12 +20528,12 @@ msgstr ""
 ":ref:`外部配送業者 <inventory/shipping/third_party>` と統合されている場合、送"
 "料は配送業者の価格設定情報に基づいて計算されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:14
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:19
 msgid ""
 ":ref:`Third-party shipping carrier setup <inventory/shipping/third_party>`"
 msgstr ":ref:`外部配送業者設定 <inventory/shipping/third_party>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:15
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:20
 msgid ""
 "`Odoo Tutorials: Delivery Prices <https://www.odoo.com/slides/slide/delivery-"
 "prices-613?fullscreen=1>`_"
@@ -20224,68 +20541,51 @@ msgstr ""
 "`Odooチュートリアル: 配送価格 <https://www.odoo.com/slides/slide/delivery-"
 "prices-613?fullscreen=1>`_"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:21
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:26
 msgid ""
-"To calculate shipping on sales orders and e-commerce, the *Delivery Costs* "
+"To calculate shipping on sales orders and e-commerce, the **Delivery Costs** "
 "module must be installed. To do so, navigate to the :menuselection:`Apps` "
 "application from the main Odoo dashboard."
 msgstr ""
-"販売オーダとEコマースの送料を計算するには、*配送費用* モジュールをインストー"
-"ルする必要があります。インストールするには、Odooのメインダッシュボードか"
-"ら :menuselection:`アプリ` アプリケーションに移動します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:24
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:29
 msgid ""
 "Then, remove the :guilabel:`Apps` filter, and type in `Delivery Costs` in "
-"the :guilabel:`Search...` bar. After finding the :guilabel:`Delivery Costs` "
-"module, click :guilabel:`Activate` to install it."
+"the search bar. After finding the :guilabel:`Delivery Costs` module, "
+"click :guilabel:`Install` to install it."
 msgstr ""
-"次に、 :guilabel:`アプリ` フィルタを削除し、 :guilabel:`検索...` バーに `配送"
-"費用` と入力します。:guilabel:`配送費用` モジュールを見つけたら、 :guilabel:`"
-"有効化` をクリックしてインストールします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:-1
 msgid "Install the Delivery Costs module."
 msgstr "配送費用モジュールをインストールします。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:33
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:38
 msgid "Add shipping"
 msgstr "配送方法を追加"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:35
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:40
 msgid ""
-"Shipping methods can be added to sales orders in the form of delivery "
-"products, which appear as individual line items. First, navigate to the "
-"desired sales order by going to :menuselection:`Sales app --> Orders --> "
-"Orders`."
+"Shipping methods are added to sales orders in the form of delivery products, "
+"which appear as individual line items. First, navigate to the desired sales "
+"order by going to :menuselection:`Sales app --> Orders --> Orders`."
 msgstr ""
-"配送方法は、個々の明細項目として表示される配送プロダクトの形で販売オーダに追"
-"加することができます。まず、 :menuselection:`販売アプリ --> オーダ --> オーダ"
-"` で目的の販売オーダに移動します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:39
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:44
 msgid ""
-"On the sales order, click the :guilabel:`Add shipping` button, which opens "
-"the :guilabel:`Add a shipping method` pop-up window. Then, choose "
-"a :guilabel:`Shipping Method` from the list."
+"Open the desired sales order, then click the :guilabel:`Add shipping` "
+"button. The :guilabel:`Add a shipping method` pop-up window opens. Then, "
+"using the drop-down menu, select an available shipping method."
 msgstr ""
-"販売オーダで :guilabel:`配送方法の追加` ボタンをクリックすると、 :guilabel:`"
-"配送方法の追加` ポップアップウィンドウが開きます。そして、リストか"
-"ら :guilabel:`配送方法` を選択します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:42
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:48
 msgid ""
 "The :guilabel:`Total Order Weight` is pre-filled based on product weights "
-"(that are defined in the :guilabel:`Inventory` tab for each product form). "
-"Edit the field to specify the exact weight, and then click :guilabel:`Add` "
-"to add the shipping method."
+"(that are defined in the :ref:`Inventory <inventory/product_management/"
+"manufacture>` tab for each product form). Edit the field to specify the "
+"exact weight, and then click :guilabel:`Add` to add the shipping method."
 msgstr ""
-":guilabel:`オーダ重量合計` は、プロダクトの重量(各プロダクトフォーム"
-"の :guilabel:`在庫` タブで定義されています)に基づいてあらかじめ入力されていま"
-"す。フィールドを編集して正確な重量を指定し、 :guilabel:`追加` をクリックして"
-"配送方法を追加します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:47
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:53
 msgid ""
 "The amount defined in :guilabel:`Total Order Weight` overwrites the total "
 "product weights defined on the product form."
@@ -20293,41 +20593,47 @@ msgstr ""
 ":guilabel:`オーダ重量合計` で定義された量は、プロダクトフォームで定義されたプ"
 "ロダクト重量合計を上書きします。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:57
 msgid ""
-"The shipping cost is added to the *sales order line* as "
-"the :guilabel:`Delivery Product` detailed on the shipping method form."
+"Some connected shipping methods require obtaining rates from the carrier. In "
+"this situation, click the :icon:`oi-arrow-right` :guilabel:`Get rate` "
+"button, and the shipping costs are automatically updated from the carrier. "
+"These rates cannot be modified."
 msgstr ""
-"配送費用は、配送方法フォームに記載された :guilabel:`配送プロダクト` として、*"
-"販売オーダ明細* に追加されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:54
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:61
 msgid ""
-"`Furniture Delivery`, a delivery product with a fixed rate of `$200`, is "
-"added to sales order `S00088`."
+"The shipping cost is added as a line item in the :guilabel:`Order Lines` tab "
+"as the :guilabel:`Delivery Product` detailed on the shipping method form."
 msgstr ""
-"販売オーダ `S00088` に定額料金 `$200` の配送プロダクト `家具配送` が追加され"
-"ました。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:65
+msgid ""
+"A customer purchased a left-sided desk with storage and requested the item "
+"be delivered by hand. This delivery method is defined as `Furniture Delivery "
+"(Manual)` and has a cost of `$200`. The sales order contains two line items: "
+"one for the desk, and another for the delivery method."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:0
 msgid "Show delivery order on the sales order line."
 msgstr "販売オーダ明細に配送オーダを表示します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:61
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:73
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:267
 msgid "Delivery order"
 msgstr "配送オーダ"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:63
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:75
 msgid ""
 "The shipping method added to the sales order is linked to the shipping "
-"carrier details on the delivery order. To add or change the delivery method "
-"on the delivery itself, go to the :guilabel:`Additional Info` tab and modify "
+"carrier details on the delivery order. After confirming the order, "
+"a :icon:`fa-truck` :guilabel:`Delivery` smart button appears at the top of "
+"the page. Click the :icon:`fa-truck` :guilabel:`Delivery` smart button to "
+"open the warehouse delivery form. To add or change the delivery method on "
+"the delivery itself, open the :guilabel:`Additional Info` tab and modify "
 "the :guilabel:`Carrier` field."
 msgstr ""
-"販売オーダに追加された配送方法は、配送オーダの配送配送業者の詳細とリンクして"
-"います。配送時に配送方法を追加または変更するには、:guilabel:`追加情報` タブに"
-"移動し、:guilabel:`配送業者` フィールドを変更します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:-1
 msgid "Shipping carrier information on the delivery form."
@@ -21747,7 +22053,7 @@ msgstr ""
 "スに接続するために使用する API 認証情報を取得します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:21
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:17
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:13
 msgid "Create an account and activate carriers"
 msgstr "アカウントを作成し配送業者を有効化する"
 
@@ -21836,7 +22142,7 @@ msgid "API Keys in Envia.com."
 msgstr "Envia.comでのAPIキー"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:62
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:86
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:84
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:90
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:165
 msgid "Setup in Odoo"
@@ -21988,7 +22294,7 @@ msgstr ""
 "サービスなどのパラメータを変更します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:119
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:209
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:207
 msgid "Shipping information"
 msgstr "配送情報"
 
@@ -22010,7 +22316,7 @@ msgstr ""
 "番号、Eメールアドレス、および配送先住所が入力されていることを確認して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:127
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:217
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:215
 msgid ""
 "To verify, select the :guilabel:`Customer` field to open their contact page. "
 "Here, add their shipping address in the :guilabel:`Contact` field, along "
@@ -22237,7 +22543,7 @@ msgstr ""
 "チャターに自動的に生成され、以下を含みます:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:217
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:238
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:236
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:205
 msgid ":guilabel:`Shipping label(s)` depending on the number of packages."
 msgstr "梱包の数量に応じた :guilabel:`配送ラベル`。"
@@ -22263,7 +22569,7 @@ msgstr ""
 "る場合があります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:225
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:242
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:240
 msgid "Additionally, the tracking number is now available."
 msgstr "さらに、追跡番号も利用できるようになりました。"
 
@@ -22344,12 +22650,12 @@ msgid "Customer portal tracking."
 msgstr "顧客ポータル追跡"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:266
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:284
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:282
 msgid "FAQ"
 msgstr "FAQ"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:269
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:325
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:323
 msgid "Measuring volumetric weight"
 msgstr "体積重量の測定"
 
@@ -22946,7 +23252,7 @@ msgstr ""
 "shipping/invoice-on-so>` に配送費用として記載されているプロダクトです。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:51
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:51
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:54
 msgid ""
 ":guilabel:`Free if order amount is above`: checking this box enables free "
 "shipping if the customer spends above the specified amount."
@@ -23810,13 +24116,11 @@ msgstr ""
 msgid ""
 ":guilabel:`Website`: configure shipping methods for an **eCommerce** page. "
 "Select the applicable website from the drop-down menu, or leave it blank to "
-"apply the method to all web pages."
+"apply the method to all web pages. This field only appears when the "
+"**eCommerce** app is enabled."
 msgstr ""
-":guilabel:`ウェブサイト`: **eコマース** ページの配送方法を設定します。ドロッ"
-"プダウンメニューから該当するウェブサイトを選択するか、空白のままにすると、そ"
-"の方法を全てのウェブページに適用します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:38
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:39
 msgid ""
 ":guilabel:`Provider` (*Required field*): choose the delivery service, like "
 "FedEx, if using a :ref:`third-party carrier <inventory/shipping/"
@@ -23833,29 +24137,25 @@ msgstr ""
 "や :ref:`規則に基づく <inventory/shipping/rules>` オプションなどのカスタム配"
 "送方法の設定に関する詳細は、以下の該当するセクションを参照して下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:44
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:45
 msgid ""
 ":guilabel:`Company`: If the shipping method should apply to a specific "
 "company, select it from the drop-down menu. Leave the field blank to apply "
-"the method to all companies."
+"the method to all companies. This field only appears in multi-company "
+"databases."
 msgstr ""
-":guilabel:`会社`: 特定の会社に配送方法を適用する場合は、ドロップダウンメ"
-"ニューから選択して下さい。 全てに適用する場合は、このフィールドを空白のままに"
-"して下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:46
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:48
 msgid ""
 ":guilabel:`Routes`: select the applicable routes to define different "
 "delivery methods, such as standard or express shipping, based on varying "
-"lead times. For more information, jump to the :ref:`Set routes on shipping "
-"method <inventory/shipping_receiving/shipping-route>` section."
+"lead times. This field only appears when you have enabled multi-step routes "
+"in your inventory configuration settings. For more information, refer to "
+"the :ref:`Set routes on shipping method <inventory/shipping_receiving/"
+"shipping-route>` section."
 msgstr ""
-":guilabel:`ルート`: 該当するルートを選択して、異なるリードタイムに基づく、標"
-"準またはエクスプレス配送など、異なる配送方法を定義します。 詳細について"
-"は、:ref:`配送方法でルートを設定する <inventory/shipping_receiving/shipping-"
-"route>` セクションを参照して下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:49
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:52
 msgid ""
 ":guilabel:`Delivery Product` (*Required field*): the product listed on "
 "the :ref:`sales order line <inventory/shipping/sales-order>` as the delivery "
@@ -23864,7 +24164,7 @@ msgstr ""
 ":guilabel:`配送プロダクト` (*必須フィールド*): :ref:`販売オーダ行 <inventory/"
 "shipping/sales-order>` に配送料として記載されているプロダクト。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:53
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:56
 msgid ""
 ":guilabel:`Tracking Link`: This option adds a link to the portal so the "
 "customer can track their delivery. When a custom carrier is added in a "
@@ -23875,7 +24175,32 @@ msgstr ""
 "クがポータルに追加されます。 配送オーダにカスタム配送業者が追加されると、追跡"
 "ボタンが有効になり、リンクがそのURLの追跡ポータルに移動します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:59
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:61
+msgid "To set up `$200` flate-rate shipping, fill in the following fields:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:63
+msgid ":guilabel:`Delivery Method`: `Furniture Delivery (Manual)`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:64
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:107
+msgid ":guilabel:`Provider`: :guilabel:`Fixed Price`"
+msgstr ":guilabel:`プロバイダー`: :guilabel:`固定価格`"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:65
+msgid ":guilabel:`Fixed Price`: `200`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:66
+msgid ":guilabel:`Delivery Product`: :guilabel:`Furniture Delivery (manual)`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:0
+msgid "Set up a delivery method with a fixed price of 200."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:73
 msgid ""
 "Use the :guilabel:`Availability` tab to define conditions for the delivery "
 "method based on the order's content or destination:"
@@ -23883,13 +24208,13 @@ msgstr ""
 ":guilabel:`利用可能` タブを使用して、オーダの内容や配送先に基づく配送方法の条"
 "件を定義します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:62
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:76
 msgid ""
 ":guilabel:`Countries`: Specify one or more countries where the method is "
 "available."
 msgstr ":guilabel:`国`: その方法が利用可能な国を1つ以上指定して下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:63
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:77
 msgid ""
 ":guilabel:`Max Weight`: Set a maximum weight; the method is only available "
 "for orders below this limit."
@@ -23897,7 +24222,7 @@ msgstr ""
 ":guilabel:`最大重量`: 最大重量を設定します。この方法は、この制限値以下のオー"
 "ダに対してのみ利用可能です。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:65
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:79
 msgid ""
 ":guilabel:`Max Volume`: Set a maximum volume; the method is only available "
 "for orders below this limit."
@@ -23905,7 +24230,7 @@ msgstr ""
 ":guilabel:`最大容量`: 最大容量の設定。この方法はこの制限値以下のオーダにのみ"
 "適用できます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:67
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:81
 msgid ""
 ":guilabel:`Must Have Tags`: The method is available only if at least one "
 "product in the order has one of these tags."
@@ -23913,7 +24238,7 @@ msgstr ""
 ":guilabel:`必須タグ`: この方法は、オーダ内のプロダクトにこれらのタグが少なく"
 "とも1つ付いている場合にのみ利用可能です。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:69
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:83
 msgid ""
 ":guilabel:`Excluded Tags`: The method is unavailable if at least one product "
 "in the order has one of these tags."
@@ -23921,17 +24246,17 @@ msgstr ""
 ":guilabel:`除外タグ`: オーダ内のプロダクトにこれらのタグが1つでも含まれている"
 "場合、この方法は利用できません。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:72
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:86
 msgid ""
 "For examples on how to configure specific shipping methods, refer to the "
 "sections below."
 msgstr "特定の配送方法の設定方法については、以下のセクションを参照して下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:77
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:91
 msgid "Fixed price"
 msgstr "固定金額"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:79
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:93
 msgid ""
 "To configure a shipping price that is the same for all orders, go "
 "to :menuselection:`Inventory app --> Configuration --> Delivery Methods`. "
@@ -23946,7 +24271,7 @@ msgstr ""
 "設定します。このオプションを選択すると、:guilabel:`固定価格` フィールドが利用"
 "可能になり、固定料金の送料が定義されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:85
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:99
 msgid ""
 "To enable free shipping if the amount of the order exceeds a specified "
 "amount, check the box :guilabel:`Free if order amount is above` and fill in "
@@ -23955,7 +24280,7 @@ msgstr ""
 "オーダ金額が指定金額を超えた場合に送料無料にするには、 :guilabel:`オーダ金額"
 "が次以上で無料` にチェックを入れ、金額を入力して下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:103
 msgid ""
 "To set up `$20` flat-rate shipping that becomes free if the customer spends "
 "over `$100`, fill in the following fields:"
@@ -23963,23 +24288,19 @@ msgstr ""
 " `$100`以上購入すると送料が無料になる `$20` 定額送料を設定するには、以下の"
 "フィールドに入力して下さい:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:106
 msgid ":guilabel:`Delivery Method`: `Flat-rate shipping`"
 msgstr ":guilabel:`配送方法`: `定額配送`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:93
-msgid ":guilabel:`Provider`: :guilabel:`Fixed Price`"
-msgstr ":guilabel:`プロバイダー`: :guilabel:`固定価格`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:94
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:108
 msgid ":guilabel:`Fixed Price`: `$20.00`"
 msgstr ":guilabel:`固定金額`: `$20.00`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:95
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:109
 msgid ":guilabel:`Free if order amount is above`: `$100.00`"
 msgstr ":guilabel:`オーダ金額が次以上で無料`: `$100.00`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:96
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:110
 msgid ":guilabel:`Delivery Product`: `[SHIP] Flat`"
 msgstr ":guilabel:`配送プロダクト`: `[配送] 固定`"
 
@@ -23987,11 +24308,11 @@ msgstr ":guilabel:`配送プロダクト`: `[配送] 固定`"
 msgid "Example of filling out a shipping method."
 msgstr "配送方法の記入例"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:104
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:118
 msgid "Based on rules"
 msgstr "計算規則に基づく"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:120
 msgid ""
 "To calculate the price of shipping based on pricing rules, set "
 "the :guilabel:`Provider` field to the :guilabel:`Based on Rules` option. "
@@ -24003,11 +24324,11 @@ msgstr ""
 "で、 :guilabel:`レートへのマージン` と :guilabel:`追加マージン` を調整して、"
 "追加の送料を含めます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:125
 msgid "Create pricing rules"
 msgstr "価格設定規則作成"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:113
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:127
 msgid ""
 "Navigate to the :guilabel:`Pricing` tab and click :guilabel:`Add a line`. "
 "Doing so opens the :guilabel:`Create Pricing Rules` window, where "
@@ -24020,7 +24341,7 @@ msgstr ""
 "または数量に関連する :guilabel:`条件` を定義された金額と比較して :guilabel:`"
 "配送費用` を計算します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:118
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:132
 msgid ""
 "Once finished, click either :guilabel:`Save & New` to add another rule, "
 "or :guilabel:`Save & Close`."
@@ -24028,7 +24349,7 @@ msgstr ""
 "終了したら、 :guilabel:`保存して新規` をクリックして別の規則を追加する"
 "か、 :guilabel:`保存して閉じる` をクリックして下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:121
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:135
 msgid ""
 "To charge customers $20 in shipping for orders with five or fewer products, "
 "set the :guilabel:`Condition` to `Quantity <= 5.00`, and "
@@ -24044,7 +24365,7 @@ msgid ""
 msgstr ""
 "価格設定規則を追加するウィンドウを表示します。条件と配送費用を設定します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:127
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:141
 msgid ""
 "To restrict shipping to specific destinations on the **eCommerce** website, "
 "in the shipping method form, navigate to the :guilabel:`Destination "
@@ -24057,11 +24378,11 @@ msgstr ""
 "県` :guilabel:`郵便番号プレフィクス` を選択します。全てのロケーションに適用す"
 "る場合は、これらのフィールドを空欄のままにしておきます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:132
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:146
 msgid "Calculate delivery cost"
 msgstr "配送費用を計算する"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:134
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:148
 msgid ""
 "Shipping cost is the :guilabel:`Delivery cost` specified in the rule that "
 "satisfies the :guilabel:`Condition`, plus any extra charges from "
@@ -24071,7 +24392,7 @@ msgstr ""
 "に、 :guilabel:`レートへのマージン` と :guilabel:`追加マージン` による追加料"
 "金を加えたものです。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:138
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:152
 msgid ""
 "Total = Rule's~Delivery~Cost + (Margin~on~rate \\times Rule's~Delivery~Cost) "
 "+ Additional~margin\n"
@@ -24081,19 +24402,19 @@ msgstr ""
 "+ Additional~margin\n"
 "\n"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:142
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:156
 msgid "With the two following rules set up:"
 msgstr "以下の2つの規則が設定されています:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:144
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:158
 msgid "If the order contains five or fewer products, shipping is $20"
 msgstr "オーダが5プロダクト以下の場合、送料は$20"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:145
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:159
 msgid "If the order contains more than five products, shipping is $50."
 msgstr "オーダに5つ以上のプロダクトが含まれる場合、送料は$50。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:147
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:161
 msgid ""
 ":guilabel:`Margin on Rate` is `10%` and :guilabel:`Additional margin` is "
 "`$9.00`."
@@ -24106,7 +24427,7 @@ msgid ""
 "Show example of \"Based on rules\" shipping method with margins configured."
 msgstr "マージンを設定した \"規則に基づく\"配送方法の例を表示します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:152
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:166
 msgid ""
 "When the first rule is applied, the delivery cost is $31 (20 + (0.1 * 20) + "
 "9). When the second rule is applied, the delivery cost is $64 (50 + (0.1 * "
@@ -24115,11 +24436,11 @@ msgstr ""
 "最初の規則を適用した場合、配送費用は31ドル(20 + (0.1 * 20) + 9)。2番目の規則"
 "が適用された場合、配送費用は64ドル(50 + (0.1 * 50) + 9)です。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:158
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:172
 msgid "Route on shipping method"
 msgstr "配送方法のルート"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:160
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:174
 msgid ""
 "Optionally, set different warehouse delivery processes for a shipping method "
 "by configuring different :doc:`routes <../daily_operations/use_routes>` for "
@@ -24129,7 +24450,7 @@ msgstr ""
 "送方法に対して異なる :doc:`ルート <../daily_operations/use_routes>` を設定し"
 "ます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:164
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:178
 msgid ""
 "Configuring multiple routes per shipping method is helpful for adjusting "
 "warehouse delivery processes based on:"
@@ -24137,7 +24458,7 @@ msgstr ""
 "配送方法ごとに複数のルートを設定すると、倉庫への配送プロセスを調整するのに役"
 "立ちます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:167
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:181
 msgid ""
 "speed (e.g., use :doc:`one-step delivery <../daily_operations/"
 "receipts_delivery_one_step>` for express shipping, or :doc:`two-step <../"
@@ -24148,7 +24469,7 @@ msgstr ""
 "は :doc:`two-step <../daily_operations/receipts_delivery_two_steps>` を使用し"
 "て下さい)"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:170
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:184
 msgid ""
 "international shipping (e.g. use :doc:`three-step delivery <../"
 "daily_operations/delivery_three_steps>` to prepare documents for customs)"
@@ -24156,7 +24477,7 @@ msgstr ""
 "国際配送 (例: :doc:`three-step delivery <../daily_operations/"
 "delivery_three_steps>` を使用し税関用書類を用意して下さい)"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:172
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:186
 msgid ""
 "in-store pickup or home delivery: ship from the central warehouse, or pick "
 "from the store's stock, depending on customer selection."
@@ -24164,7 +24485,7 @@ msgstr ""
 "店頭受取または配送: 顧客の選択に応じて、中央倉庫から発送するか、店舗の在庫か"
 "らピックアップします。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:175
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:189
 msgid ""
 "To set up routes, go to :menuselection:`Inventory app --> Configuration --> "
 "Routes`. Click :guilabel:`New`, or select the desired route."
@@ -24172,7 +24493,7 @@ msgstr ""
 "ルートを設定するには、:menuselection:`在庫アプリ --> 設定 --> ルート` に移動"
 "します。:guilabel:`新規作成` をクリックするか、希望のルートを選択します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:178
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:192
 msgid ""
 "On the route form, in the :guilabel:`Applicable On` section, tick "
 "the :guilabel:`Shipping Methods` checkbox."
@@ -24180,15 +24501,15 @@ msgstr ""
 "ルートフォームの :guilabel:`適用対象` セクションで、:guilabel:`配送方法` "
 "チェックボックスにチェックを入れます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:184
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:198
 msgid "Routes form with the Shipping Methods checkbox selected."
 msgstr "配送方法のチェックボックスを選択すると、ルートが形成されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:184
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:198
 msgid "Routes form with the :guilabel:`Shipping Method` checkbox ticked."
 msgstr ":guilabel:`配送方法` チェックボックスにチェックを入れたルートフォーム"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:186
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:200
 msgid ""
 "Then, go to :menuselection:`Inventory app --> Configuration --> Delivery "
 "Methods`, and select the desired shipping method."
@@ -24196,7 +24517,7 @@ msgstr ""
 "次に、:menuselection:`在庫アプリ --> 設定 --> 配送方法` に移動し、ご希望の配"
 "送方法を選択して下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:189
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:203
 msgid ""
 "On the shipping method form, in the :guilabel:`Routes` field, select the "
 "available fulfillment routes from the drop-down menu."
@@ -24204,7 +24525,7 @@ msgstr ""
 "配送方法フォームの :guilabel:`ルート` フィールドで、ドロップダウンメニューか"
 "ら利用可能なフルフィルメントルートを選択します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:193
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:207
 msgid ""
 "If the desired route is not selectable, check that the *Shipping Methods* "
 "option is enabled in the route's *Applicable On* section."
@@ -24916,24 +25237,25 @@ msgstr ""
 "ができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:10
-msgid ""
-"`Sendcloud integration documentation <https://support.sendcloud.com/hc/en-us/"
-"articles/ 360059470491-Odoo-Native-integration>`_"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:14
 msgid "Setup in Sendcloud"
 msgstr "Sendcloudでの設定"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:19
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:15
 msgid ""
-"To get started, go to `Sendcloud's platform <https://sendcloud.com/ ?"
-"utm_source=odoo&utm_medium=partnerships&utm_campaign=partner_integrations_page>`_ "
-"to configure the account and generate the connector credentials. Log in with "
-"the Sendcloud account, or create a new one if needed."
+"To get started, `create or log in to a Sendcloud account <https://"
+"account.sendcloud.com/signup/ ?"
+"utm_source=odoo&utm_medium=partnerships&utm_campaign=partner_integrations_page>`_."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:25
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:18
+msgid ""
+"On the Sendcloud platform, follow the `Sendcloud integration documentation "
+"<https://support.sendcloud.com/hc/en-us/articles/360059470491-Odoo-Native-"
+"integration>`_ to configure the account and generate the connector "
+"credentials."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:23
 msgid ""
 "For new account creation, Sendcloud will ask for a :abbr:`VAT (Value-Added "
 "Tax Identification)` number or :abbr:`EORI (Economic Operators' Registration "
@@ -24945,7 +25267,7 @@ msgstr ""
 "Identification)`番号の入力を要求します。アカウント設定が完了したら、Odooデー"
 "タベースで使用する配送業者を有効化(または無効化)します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:31
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:29
 msgid ""
 "Odoo integration of Sendcloud works on free Sendcloud plans *only* if a bank "
 "account is linked, since Sendcloud won't ship for free. To use shipping "
@@ -24956,12 +25278,12 @@ msgstr ""
 "ランで銀行口座がリンクされている場合のみ機能します。配送規則や個別の配送業者"
 "連絡先を使用するには、Sendcloudの有料プランが**必要です**。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:38
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:36
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:185
 msgid "Warehouse configuration"
 msgstr "倉庫設定"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:40
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:38
 msgid ""
 "Once logged into the Sendcloud account, navigate to :menuselection:`Settings "
 "--> Shipping --> Addresses`, and fill in the field for :guilabel:`Warehouse "
@@ -24974,7 +25296,7 @@ msgstr ""
 msgid "Adding addresses in the Sendcloud settings."
 msgstr "Sendcloud設定で住所を追加します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:47
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:45
 msgid ""
 "To allow Sendcloud to process returns as well, a :guilabel:`Return Address` "
 "is required. Under the :guilabel:`Miscellaneous section`, there is a field "
@@ -25021,7 +25343,7 @@ msgstr ":guilabel:`会社`: `自社 (San Francisco)`"
 msgid ":guilabel:`Address`: `My Company (San Francisco)`"
 msgstr ":guilabel:`住所`: `自社 (San Francisco)`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:64
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:62
 msgid ""
 "Notice how the inputs for the :guilabel:`Warehouse` field, for both the Odoo "
 "configuration and the Sendcloud configuration, are the exact same."
@@ -25029,11 +25351,11 @@ msgstr ""
 ":guilabel:`倉庫`フィールドの入力が、Odoo設定とSendcloud設定の両方で全く同じで"
 "あることに注目して下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:66
 msgid "Generate Sendcloud credentials"
 msgstr "Sendcloud認証情報を生成する"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:70
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:68
 msgid ""
 "In the Sendcloud account, navigate to :menuselection:`Settings --> "
 "Integrations` in the menu on the right. Next, search for :guilabel:`Odoo "
@@ -25043,7 +25365,7 @@ msgstr ""
 "動します。次に :guilabel:`Odoo Native` を検索します。次に :guilabel:`接続` を"
 "クリックします。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:73
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:71
 msgid ""
 "After clicking on :guilabel:`Connect`, the page redirects to "
 "the :guilabel:`Sendcloud API` settings page, where the :guilabel:`Public and "
@@ -25058,7 +25380,7 @@ msgstr ""
 "規則は以下の通りです:ユーザの会社名を `CompanyName` に置き換えて下さい(例："
 "`Odoo StealthyWood`)。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:78
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:76
 msgid ""
 "Then, check the box next to :guilabel:`Service Points` and select the "
 "shipping services for this integration. After saving, the :guilabel:`Public "
@@ -25072,7 +25394,7 @@ msgstr ""
 msgid "Configuring the Sendcloud integration and receiving the credentials."
 msgstr "Sendcloud統合の設定と認証情報の受信。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:88
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:86
 msgid ""
 "To ensure seamless Sendcloud integration with Odoo, :ref:`install <inventory/"
 "shipping_receiving/sendcloud-module>` and :ref:`link <inventory/"
@@ -25088,7 +25410,7 @@ msgstr ""
 "<inventory/shipping_receiving/sendcloud-shipping-info>`すると、Sendcloudは、"
 "配送データを正確に取込み、ラベルを生成することができます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:96
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:94
 msgid ""
 ":ref:`Enable pickup points on websites <inventory/shipping_receiving/"
 "sendcloud-pickups>`"
@@ -25096,11 +25418,11 @@ msgstr ""
 ":ref:`ウェブサイトでのピックアップポイントの有効化 <inventory/"
 "shipping_receiving/sendcloud-pickups>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:99
 msgid "Install Sendcloud shipping module"
 msgstr "Sendcloud配送モジュールをインストールする"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:103
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:101
 msgid ""
 "After the Sendcloud account is set up and configured, it's time to configure "
 "the Odoo database. To get started, go to Odoo's :guilabel:`Apps` module, "
@@ -25114,11 +25436,11 @@ msgstr ""
 msgid "Sendcloud Shipping module in the Odoo Apps module."
 msgstr "Odoo アプリモジュールのSendcloud配送モジュール。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:112
 msgid "Sendcloud shipping connector configuration"
 msgstr "Sendcloud配送コネクタ設定"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:116
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:114
 msgid ""
 "Once installed, activate the :guilabel:`Sendcloud Shipping` module "
 "in :menuselection:`Inventory --> Configuration --> Settings`. "
@@ -25129,7 +25451,7 @@ msgstr ""
 "で :guilabel:`Sendcloud 配送` モジュールを有効化します。guilabel:`Sendcloudコ"
 "ネクタ` の設定は :guilabel:`配送コネクタ` セクションにあります。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:120
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:118
 msgid ""
 "After activating the :guilabel:`Sendcloud Connector`, click on "
 "the :guilabel:`Sendcloud Shipping Methods` link below the listed connector. "
@@ -25139,7 +25461,7 @@ msgstr ""
 "る `Sendcloud 配送方法` リンクをクリックします。:guilabel:`配送方法`ページが"
 "表示されたら、:guilabel:`新規` をクリックします。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:125
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:123
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:115
 msgid ""
 ":guilabel:`Shipping Methods` can also be accessed by going "
@@ -25149,23 +25471,23 @@ msgstr ""
 ":guilabel:`配送方法`は :menuselection:`在庫 --> 設定 --> 配送 --> 配送方法`か"
 "らもアクセスできます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:128
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:126
 msgid ""
 "Fill out the following fields in the :guilabel:`New Shipping Method` form:"
 msgstr "guilabel:`新規配送方法`フォームに以下の項目を入力して下さい:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:130
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:128
 msgid ":guilabel:`Shipping Method`: type `Sendcloud DPD`."
 msgstr ":guilabel:`配送方法`: type `Sendcloud DPD`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:131
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:129
 msgid ""
 ":guilabel:`Provider`: select :guilabel:`Sendcloud` from the drop-down menu."
 msgstr ""
 ":guilabel:`プロバイダー`: ドロップダウンメニューから :guilabel:`Sendcloud` を"
 "選択します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:132
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:130
 msgid ""
 ":guilabel:`Delivery Product`: set the product that was configured for this "
 "shipping method or create a new product."
@@ -25173,25 +25495,25 @@ msgstr ""
 ":guilabel:`配送プロダクト`: この配送方法に設定されたプロダクトを設定するか、"
 "新しいプロダクトを作成します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:134
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:132
 msgid ""
 "In the :guilabel:`SendCloud Configuration` tab, enter "
 "the :guilabel:`Sendcloud Public Key`."
 msgstr ""
 "guilabel:`SendCloud設定`タブで、:guilabel:`Sendcloud公開キー`を入力します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:135
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:133
 msgid ""
 "In the :guilabel:`SendCloud Configuration` tab, enter "
 "the :guilabel:`Sendcloud Secret Key`."
 msgstr ""
 "guilabel:`SendCloud設定`タブで、:guilabel:`Sendcloud秘密キー`を入力します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:140
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:138
 msgid "Pickup points"
 msgstr "ピックアップ場所"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:142
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:140
 msgid ""
 "Sendcloud's `service point delivery <https://support.sendcloud.com/hc/en-us/"
 "articles/360026097951-FAQ-Service-Points>`_ lets customers choose a pickup "
@@ -25203,7 +25525,7 @@ msgstr ""
 "住所を入力する代わりに、受取場所(近くの店舗やロッカーなど)を選択することがで"
 "きます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:147
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:145
 msgid ""
 "To enable the feature, go to the shipping method form, and in "
 "the :guilabel:`SendCloud Configuration` tab, under the :guilabel:`Options` "
@@ -25213,7 +25535,7 @@ msgstr ""
 "` タブ、:guilabel:`オプション` セクションで、:guilabel:`Sendcloudロケーション"
 "を使用` 機能を有効にしてください。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:152
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:150
 msgid ""
 "Pickup point selection is only available through the **Website** app (the "
 "online checkout view). It is not currently possible to select a pickup point "
@@ -25223,7 +25545,7 @@ msgstr ""
 "のみ可能です。**販売**アプリ(内部データベース画面)から手動で受取を選択するこ"
 "とは、現在できません。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:156
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:154
 msgid ""
 "For example, if the customer selects a shipping method like *Sendcloud "
 "Mondial Relay*, they must choose a pickup point during the checkout process "
@@ -25234,11 +25556,11 @@ msgstr ""
 "はウェブサイトのチェックアウトプロセスで受取場所を選択する必要があります。受"
 "取場所を選択が選択されていない場合、Odooで配送オーダを検証できません。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:161
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:159
 msgid "Load shipping products"
 msgstr "配送プロダクトを読み込む"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:163
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:161
 msgid ""
 "After configuring and saving the form, follow these steps to load the "
 "shipping products:"
@@ -25246,7 +25568,7 @@ msgstr ""
 "フォームを設定し保存した後、以下の手順に従って配送プロダクトをロードして下さ"
 "い:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:165
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:163
 msgid ""
 "In the :guilabel:`SendCloud Configuration` tab of the :guilabel:`New "
 "Shipping Method` form, click on the :guilabel:`Load your SendCloud shipping "
@@ -25255,17 +25577,17 @@ msgstr ""
 "guilabel:`新規配送方法` フォームの :guilabel:`SendCloud設定` タブ"
 "で、 :guilabel:`SendCloud配送プロダクトをロードする` リンクをクリックします。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:167
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:165
 msgid ""
 "Select the shipping products the company would like to use for deliveries "
 "and returns."
 msgstr "配送と返品に使用する配送プロダクトを選択します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:168
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:166
 msgid "Click :guilabel:`Select`."
 msgstr "Click :guilabel:`選択`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:171
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:169
 msgid "Sample Sendcloud shipping products configured in Odoo:"
 msgstr "Odooで設定されたSendcloud配送プロダクトのサンプル:"
 
@@ -25289,7 +25611,7 @@ msgstr ":guilabel:`最小重量`: `0.00`"
 msgid ":guilabel:`Maximum Weight`: `31.50`"
 msgstr ":guilabel:`最大重量`: `31.50`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:179
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:177
 msgid ""
 ":guilabel:`Countries`: `Austria` `Belgium` `Bosnia` `Herzegovina` `Bulgaria` "
 "`Croatia` `Czech` `Republic` `Denmark` `Estonia` `Finland` `France` "
@@ -25334,7 +25656,7 @@ msgstr ":guilabel:`返品国`: `Belgium` `Netherlands`"
 msgid "Example of shipping products configured in Odoo."
 msgstr "Odooで設定された配送プロダクトの例。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:197
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:195
 msgid ""
 "Sendcloud does not provide test keys when a company tests the sending of a "
 "package in Odoo. This means if a package is created, the configured "
@@ -25345,7 +25667,7 @@ msgstr ""
 "ん。つまり、荷物が作成された場合、作成から24時間以内に関連する荷物が取消され"
 "ない限り、設定したSendcloudアカウントに料金が請求されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:201
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:199
 msgid ""
 "Odoo has a built-in layer of protection against unwanted charges when using "
 "test environments. Within a test environment, if a shipping method is used "
@@ -25358,7 +25680,7 @@ msgstr ""
 "す。これは、自動で行われます。テスト環境と本番環境の設定は、それぞれのスマー"
 "トボタンから切替えることができます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:211
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:209
 msgid ""
 "To use Sendcloud to generate shipping labels, the following information "
 "**must** be filled out accurately and completely in Odoo:"
@@ -25366,7 +25688,7 @@ msgstr ""
 "Sendcloudを使用して配送ラベルを作成するには、Odooで以下の情報を正確かつ完全に"
 "入力する**必要があります**:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:214
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:212
 msgid ""
 "**Customer information**: when creating a quotation, ensure the "
 "selected :guilabel:`Customer` has a valid phone number, email address, and "
@@ -25375,7 +25697,7 @@ msgstr ""
 " **顧客情報**：見積を作成する際、選択した :guilabel:`顧客` が検証済の電話番"
 "号、Eメールアドレス、配送先住所を持っていることを確認して下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:221
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:219
 msgid ""
 "**Product weight**: ensure all products in an order have a "
 "specified :guilabel:`Weight` in the :guilabel:`Inventory` tab of their "
@@ -25388,7 +25710,7 @@ msgstr ""
 "します。詳細な手順については、この記事の :ref:`プロダクト重量セクション "
 "<inventory/shipping_receiving/configure-weight>`を参照して下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:225
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:223
 msgid ""
 "**Warehouse address**: ensure the warehouse name and address in Odoo match "
 "the :ref:`previously defined warehouse <inventory/shipping_receiving/"
@@ -25403,11 +25725,11 @@ msgstr ""
 "の :ref:`倉庫設定セクション <inventory/shipping_receiving/configure-source-"
 "address>` を参照して下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:232
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:230
 msgid "Generate labels with Sendcloud"
 msgstr "Sendcloudでラベルを生成する"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:234
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:232
 msgid ""
 "When creating a quotation in Odoo, add shipping and a :guilabel:`Sendcloud "
 "shipping product`. Then, :guilabel:`Validate` the delivery. Shipping label "
@@ -25418,18 +25740,18 @@ msgstr ""
 "す。そして :guilabel:`配送を検証` して下さい。配送ラベルのドキュメントはチャ"
 "ターで自動生成されます:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:239
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:237
 msgid ""
 ":guilabel:`Return label(s)` if the Sendcloud connector is configured for "
 "returns."
 msgstr ":guilabel: `返品ラベル` Sendcloudコネクタが返品用に設定された場合。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:240
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:238
 msgid ""
 ":guilabel:`Customs document(s)` should the destination country require them."
 msgstr ":guilabel:`通関書類' 配送先国が通関書類を必要とする場合。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:245
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:243
 msgid ""
 "When return labels are created, Sendcloud automatically charges the "
 "configured Sendcloud account."
@@ -25437,11 +25759,11 @@ msgstr ""
 "返送用ラベルが作成されると、Sendcloudは設定されたSendcloudアカウントに自動的"
 "に課金します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:248
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:246
 msgid "Shipping rules"
 msgstr "配送規則"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:250
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:248
 msgid ""
 "Optionally, create shipping rules to automatically generate shipping labels "
 "tailored to different product needs. For example, a shipping rule can be "
@@ -25451,7 +25773,7 @@ msgstr ""
 "するための配送規則を作成します。例えば、高価な宝飾品を発送する顧客が保険を購"
 "買するための規則を作成することができます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:255
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:253
 msgid ""
 "Shipping rules do **not** affect :ref:`shipping rate calculations <inventory/"
 "shipping_receiving/third-party-rate>`, and are only used to improve the "
@@ -25461,7 +25783,7 @@ msgstr ""
 "は影響しません。配送ラベルの生成プロセスを改善するためにのみ使用されます "
 "<labels>`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:259
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:257
 msgid ""
 "To use shipping rules, navigate to :menuselection:`Inventory app --> "
 "Configuration --> Delivery: Shipping Methods`, and select the intended "
@@ -25470,7 +25792,7 @@ msgstr ""
 "配送規則を使用するには、 :menuselection:`在庫アプリ --> 設定 --> 配送: 配送方"
 "法`に移動し、目的の`Sendcloud`配送方法を選択します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:262
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:260
 msgid ""
 "Under the :guilabel:`Sendcloud Configuration` tab, in "
 "the :guilabel:`OPTIONS` section, choose the kind of shipments the shipping "
@@ -25480,7 +25802,7 @@ msgstr ""
 "で、 :guilabel:`Sendcloud配送規則を使用する`フィールドから配送規則を適用する"
 "出荷の種類を選択します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:266
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:264
 msgid ""
 "From here, choose either: :guilabel:`Shipping` to "
 "customers, :guilabel:`Returns` from customers, or :guilabel:`Both`."
@@ -25492,7 +25814,7 @@ msgstr ""
 msgid "Use Shipping Rules field."
 msgstr "配送規則フィールドを使用します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:273
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:271
 msgid ""
 "Then, in the Sendcloud website, navigate to :menuselection:`Settings --> "
 "Shipping rules`. Create a new shipping rule by clicking :guilabel:`Create "
@@ -25501,7 +25823,7 @@ msgstr ""
 "次に、Sendcloudウェブサイトで :menuselection:`設定 --> 配送規則` に移動しま"
 "す。新規作成`をクリックして、新しい配送規則を作成します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:276
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:274
 msgid ""
 "In the :guilabel:`Actions` section, set a :guilabel:`Condition` to determine "
 "when the rule applies. Then, configure what to do when packages meet the "
@@ -25511,18 +25833,18 @@ msgstr ""
 "る :guilabel:`条件` を設定します。次に、梱包が条件を満たしたときに何をするか"
 "を設定します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:280
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:278
 msgid ""
 "`Create shipping rules on Sendcloud <https://support.sendcloud.com/hc/en-us/"
 "articles/ 10274470454292-How-to-create-shipping-rules#examples-smart-"
 "shipping-rules>`_"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:287
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:285
 msgid "Shipment is too heavy"
 msgstr "出荷重量が重すぎる"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:289
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:287
 msgid ""
 "If the shipment is too heavy for the Sendcloud service that is configured, "
 "then the weight is split to simulate multiple packages. Products will need "
@@ -25533,7 +25855,7 @@ msgstr ""
 "レートするために重量が分割されます。転送を検証してラベルを生成するには、プロ"
 "ダクトを別々の :guilabel:`梱包` に入れる必要があります。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:293
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:291
 msgid ""
 ":guilabel:`Rules` can also be set up in Sendcloud to use other shipping "
 "methods when the weight is too heavy. However, note that these rules will "
@@ -25544,11 +25866,11 @@ msgstr ""
 "することもできます。ただし、これらの規則は販売オーダでの送料計算には適用され"
 "ないことに注意して下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:298
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:296
 msgid "Personal carrier contract"
 msgstr "個人配送業者契約"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:300
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:298
 msgid ""
 "Use custom prices from a direct carrier contract, via CSV upload, by first "
 "logging into Sendcloud, navigating to :menuselection:`Settings --> Carriers "
@@ -25562,7 +25884,7 @@ msgstr ""
 msgid "Navigate to the contracts section in Sendcloud."
 msgstr "Sendcloudの契約セクションに移動します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:308
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:306
 msgid ""
 "Under the :guilabel:`Contract prices` section, click :guilabel:`Download "
 "CSV` and fill out the contract prices in the :guilabel:`price` column of the "
@@ -25571,7 +25893,7 @@ msgstr ""
 ":guilabel:`契約価格`セクションで、:guilabel:`CSVダウンロード`をクリックし、"
 "CSVファイルテンプレートの:guilabel:`価格`列に契約価格を記入します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:312
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:310
 msgid ""
 "Ensure the CSV file includes the correct prices to avoid any inaccuracies."
 msgstr "CSVファイルに正しい価格が含まれていることを確認して下さい。"
@@ -25580,7 +25902,7 @@ msgstr "CSVファイルに正しい価格が含まれていることを確認し
 msgid "Show sample contract CSV from Sendcloud, highlighting the price column."
 msgstr "Sendcloudからの契約書CSVのサンプルを表示し、価格列を強調表示します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:318
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:316
 msgid ""
 ":guilabel:`Upload` the completed CSV file to Sendcloud, then "
 "click :guilabel:`Save these prices`."
@@ -25588,7 +25910,7 @@ msgstr ""
 "guilabel:`完成したCSVファイルをSendcloudにアップロードし、 :guilabel:`これら"
 "の価格を保存` をクリックします。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:321
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:319
 msgid ""
 "`Sendcloud: How to upload contract prices with carriers <https://"
 "support.sendcloud.com/hc/en-us/articles/5163547066004>`_"
@@ -25596,7 +25918,7 @@ msgstr ""
 "`Sendcloud: 配送業者との契約価格をアップロードする方法 <https://"
 "support.sendcloud.com/hc/en-us/articles/5163547066004>`_"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:327
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:325
 msgid ""
 "Many carriers have several measures for weight. There is the actual weight "
 "of the products in the parcel, and there is the *volumetric weight* "
@@ -25608,7 +25930,7 @@ msgstr ""
 "輸送中に荷物が占める体積のことです。言い換えれば、荷物の物理的な大きさを意味"
 "します`) です。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:332
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:330
 msgid ""
 "Check to see if selected carrier(s) already have defined formulas to compute "
 "the volumetric weight."
@@ -25616,7 +25938,7 @@ msgstr ""
 "選択した配送業者に、容積重量の計算式がすでに定義されているかどうかを確認して"
 "下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:336
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:334
 msgid ""
 "`Sendcloud: How to calculate & automate parcel volumetric weight <https://"
 "support.sendcloud.com/ hc/en-us/articles/360059644051-How-to-calculate-"
@@ -25626,11 +25948,11 @@ msgstr ""
 "support.sendcloud.com/ hc/en-us/articles/360059644051-How-to-calculate-"
 "automate-parcel-volumetric-weight>`_"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:340
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:338
 msgid "Unable to calculate shipping rate"
 msgstr "送料が計算できません"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:342
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:340
 msgid ""
 "First, verify that the product being shipped has a weight that is supported "
 "by the selected shipping method. If this is set, then verify that the "
@@ -27890,7 +28212,8 @@ msgstr ""
 msgid ""
 ":guilabel:`Inventory Loss`: counterpart location to consume missing items or "
 "create stock, accounting for discrepancies."
-msgstr ":guilabel:`在庫損失`: 不足項目を消費したり、在庫を作成したり、不一致の会計処"
+msgstr ""
+":guilabel:`在庫損失`: 不足項目を消費したり、在庫を作成したり、不一致の会計処"
 "理をするための相手先ロケーション。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:75
@@ -27912,8 +28235,8 @@ msgid ""
 msgstr ""
 "`仮想ロケーション/在庫調整`は :guilabel:`在庫損失` タイプのロケーションです。"
 "データベースでは`WH/Stock`に`65`個ありますが、在庫を確認すると`60`個であるこ"
-"とが分かりました。数量を修正するために、5単位を `WH/在庫` から `仮想ロケーシ"
-"ョン/在庫調整`に移動します。"
+"とが分かりました。数量を修正するために、5単位を `WH/在庫` から `仮想ロケー"
+"ション/在庫調整`に移動します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:0
 msgid "Product ends up in Virtual Locations/Inventory Adjustment."
@@ -41754,10 +42077,9 @@ msgid ""
 "specify the quantity to be produced in the :guilabel:`Quantity` field. "
 "Finally, click :guilabel:`Confirm` to confirm the |MO|."
 msgstr ""
-"製造オーダフォーム で、:guilabel:`プロダクト` "
-"フィールドからプロダクトを選択し、:guilabel:`数量` "
-"フィールドで製造予定数量を指定します。最後に、:guilabel:`確認` "
-"をクリックして製造オーダ を確定します。"
+"製造オーダフォーム で、:guilabel:`プロダクト` フィールドからプロダクトを選択"
+"し、:guilabel:`数量` フィールドで製造予定数量を指定します。最後"
+"に、:guilabel:`確認` をクリックして製造オーダ を確定します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:43
 msgid ""
@@ -46521,10 +46843,10 @@ msgid ""
 "chair's |BoM|, Odoo tracks the on-hand count of scrap wood, as well as the "
 "quantity of rocking chairs produced."
 msgstr ""
-"*ロッキングチェア* を製造するには、10本の木材が必要です。製造時には、"
-"ロッキングチェアに加えて5本の *端材* "
-"が生成されます。Odooは、ロッキングチェアの部品表で端材を副産品として指定する"
-"ことで、端材の手持在庫数とロッキングチェアの製造済数量を追跡します。"
+"*ロッキングチェア* を製造するには、10本の木材が必要です。製造時には、ロッキン"
+"グチェアに加えて5本の *端材* が生成されます。Odooは、ロッキングチェアの部品表"
+"で端材を副産品として指定することで、端材の手持在庫数とロッキングチェアの製造"
+"済数量を追跡します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/byproducts.rst:23
 msgid ""
@@ -46626,10 +46948,9 @@ msgid ""
 "the top of the |MO|. After doing so, inventory counts update to reflect the "
 "quantity of by-product(s) produced, as well as the quantity of the product."
 msgstr ""
-"製造が完了したら、製造オーダの一番上にある :guilabel:`すべて製造` "
-"ボタンをクリックします。 "
-"そうすると、副産品の製造済数量とプロダクト数量が反映され、在庫数が更新されま"
-"す。"
+"製造が完了したら、製造オーダの一番上にある :guilabel:`すべて製造` ボタンをク"
+"リックします。 そうすると、副産品の製造済数量とプロダクト数量が反映され、在庫"
+"数が更新されます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/byproducts.rst:69
 msgid ""
@@ -47649,19 +47970,19 @@ msgid ""
 "into two separate orders, with the reference tags *WH/MO/XXXXX-001* and *WH/"
 "MO/XXXXX-002*."
 msgstr ""
-"次に、:guilabel:`検証` "
-"をクリックすると、::guilabel:`製造済数量が初期需要を下回っています` "
-"というポップアップウィンドウが表示されます。ここからバックオーダーを作成する"
-"ことができます。:guilabel:`バックオーダを作成` "
-"をクリックすると、製造オーダーが2つの別々のオーダに分割され、それぞれ *WH/MO/"
-"XXXXX-001* と *WH/MO/XXXXX-002* という参照タグが付きます。"
+"次に、:guilabel:`検証` をクリックすると、::guilabel:`製造済数量が初期需要を下"
+"回っています` というポップアップウィンドウが表示されます。ここからバックオー"
+"ダーを作成することができます。:guilabel:`バックオーダを作成` をクリックする"
+"と、製造オーダーが2つの別々のオーダに分割され、それぞれ *WH/MO/XXXXX-001* と "
+"*WH/MO/XXXXX-002* という参照タグが付きます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/manufacturing_backorders.rst:-1
 msgid ""
 "The Create Backorder button on the \"You produced less than initial demand\" "
 "pop-up window."
-msgstr "\"製造済数量が初期需要を下回っています\" "
-"というポップアップウィンドウの「バックオーダを作成」ボタン。"
+msgstr ""
+"\"製造済数量が初期需要を下回っています\" というポップアップウィンドウの「バッ"
+"クオーダを作成」ボタン。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/manufacturing_backorders.rst:56
 msgid ""
@@ -52281,44 +52602,20 @@ msgstr ""
 msgid "Purchase Agreements enabled in the Purchase app settings."
 msgstr "「購買契約」は、購買アプリの設定で有効化されています。"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:38
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:37
 msgid ""
 "To create a blanket order, go to :menuselection:`Purchase app --> Orders --> "
-"Blanket Orders`, and click :guilabel:`New`. This opens a new blanket order "
-"form."
+"Purchase Agreements`, and click :guilabel:`New`. This opens a new purchase "
+"agreement form."
 msgstr ""
-"包括オーダを作成するには、 :menuselection:`購買アプリ --> オーダ --> 包括オー"
-"ダ` に移動し、 :guilabel:`新規` をクリックします。新しい包括オーダフォームが"
-"開きます。"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:41
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:40
 msgid ""
-"Configure the following fields in the new blanket order form to establish "
-"predetermined rules for the recurring long-term agreement:"
+"Configure the following fields in the new purchase agreement form to "
+"establish predetermined rules for the recurring long-term agreement:"
 msgstr ""
-"繰り返し購買するための長期購買契約のルールをあらかじめ設定するために、新しい"
-"包括オーダフォームで以下の項目を構成して下さい:"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:44
-msgid ""
-":guilabel:`Purchase Representative`: the user assigned to this specific "
-"blanket order. By default, this is the user who created the agreement; the "
-"user can be changed directly from the drop-down menu next to this field."
-msgstr ""
-":guilabel:`購買担当者`: この特定の包括オーダに割当てられたユーザです。デフォ"
-"ルトでは、契約を作成したユーザが指定されます。このフィールドの横にあるドロッ"
-"プダウンメニューから、ユーザを直接変更することができます。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:47
-msgid ""
-":guilabel:`Agreement Type`: the type of purchase agreement this blanket "
-"order is classified as. In Odoo, blanket orders are the only official "
-"purchase agreement."
-msgstr ""
-":guilabel:`契約タイプ`: この包括オーダが分類される購買契約の種類を指定しま"
-"す。Odooでは、包括オーダが唯一の正式な購買契約タイプとなります。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:49
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:43
 msgid ""
 ":guilabel:`Vendor`: the supplier to whom this agreement is tied, either once "
 "or on a recurring basis. The vendor can be selected directly from the drop-"
@@ -52328,7 +52625,21 @@ msgstr ""
 "設定される場合があります)。仕入先は、このフィールドの横にあるドロップダウンメ"
 "ニューから直接選択できます。"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:51
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:45
+msgid ""
+":guilabel:`Buyer`: the user assigned to this specific blanket order. By "
+"default, this is the user who created the agreement; the user can be changed "
+"directly from the drop-down menu next to this field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:48
+msgid ""
+":guilabel:`Agreement Type`: the type of purchase agreement this blanket "
+"order is classified as. Use the drop-down menu to choose :guilabel:`Blanket "
+"Order` if not already selected."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:50
 msgid ""
 ":guilabel:`Currency`: the agreed-upon currency to be used for this exchange. "
 "If multiple currencies have been activated in the database, the currency can "
@@ -52338,48 +52649,26 @@ msgstr ""
 "通貨が有効化されている場合、このフィールドの横にあるドロップダウンメニューか"
 "ら通貨を変更することができます。"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:54
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:53
 msgid ""
-":guilabel:`Agreement Deadline`: the date that this purchase agreement will "
-"be set to expire on. If this blanket order should not expire, leave this "
-"field blank."
+":guilabel:`Agreement Validity`: the date range this agreement should be "
+"valid for. If this blanket order should not expire, leave this field blank."
 msgstr ""
-":guilabel:`契約期限`: この購買契約の有効期限を設定する日付です。この包括オー"
-"ダに有効期限を設定しない場合は、このフィールドを空白のままにして下さい。"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:56
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:55
 msgid ""
-":guilabel:`Ordering Date`: the date that this blanket order should be placed "
-"on if a new quotation is created directly from the blanket order form. If a "
-"new quotation is created, this value automatically populates the *Order "
-"Deadline* field on the |RfQ|."
+":guilabel:`Reference`: the source purchase order (PO) that this blanket "
+"order is tied to. If this blanket order should not be tied to any existing |"
+"PO|, leave this field blank."
 msgstr ""
-":guilabel:`オーダ日`: この包括オーダフォームから直接新しい見積を作成する場"
-"合、この包括オーダを登録する日付です。新しい見積を作成すると、この値が見積依"
-"頼の *オーダ期日* フィールドに自動的に入力されます。"
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:57
+msgid ""
+":guilabel:`Operation Type`: the operation type that should be applied to "
+"this order once it is delivered."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:59
-msgid ""
-":guilabel:`Delivery Date`: the expected delivery date that the products "
-"included in an |RfQ| are expected, if created directly from a blanket order "
-"form. If a new quotation is created, this value automatically populates the "
-"*Expected Arrival* field on the |RfQ|."
-msgstr ""
-":guilabel:`配送日`: 包括オーダフォームから直接作成された場合、見積依頼に含ま"
-"れるプロダクトの配送予定日です。新しい見積が作成された場合、この値は見積依頼"
-"の *入荷予定日* フィールドに自動的に入力されます。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:62
-msgid ""
-":guilabel:`Source Document`: the source purchase order (PO) that this "
-"blanket order is tied to. If this blanket order should not be tied to any "
-"existing |PO|, leave this field blank."
-msgstr ""
-":guilabel:`元ドキュメント`:この包括オーダが関連付けられている元の購買オーダ "
-"(PO)。この包括オーダを既存の購買オーダに関連付けない場合は、このフィールドを"
-"空白のままにして下さい。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:64
 msgid ""
 ":guilabel:`Company`: the company assigned to this specific blanket order. By "
 "default, this is the company that the user creating the blanket order is "
@@ -52396,7 +52685,7 @@ msgstr ""
 msgid "New blanket order purchase agreement with added products."
 msgstr "プロダクトを追加した新しい包括オーダ購買契約"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:73
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:67
 msgid ""
 "Once all relevant fields have been filled out, click :guilabel:`Add a line` "
 "to add products under the :guilabel:`Product` column. Then, in "
@@ -52407,7 +52696,7 @@ msgstr ""
 "て、:guilabel: `プロダクト` 列にプロダクトを追加します。次に、:guilabel: `数"
 "量` 列で各プロダクトの数量を変更し、:guilabel: `単価` 列に価格を設定します。"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:78
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:72
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/purchase_templates.rst:48
 msgid ""
 "When adding products to a new blanket order, the pre-existing prices of "
@@ -52421,135 +52710,18 @@ msgstr ""
 "載された仕入先と合意した価格に変更して、手動で価格を割当てなければなりませ"
 "ん。そうしないと、価格は `0` のままになります。"
 
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:77
+msgid "Click :guilabel:`Confirm` to save this new purchase agreement."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:79
+msgid ""
+"Once confirmed, the blanket order's stage changes from :guilabel:`Draft` "
+"to :guilabel:`Confirmed`, meaning this agreement can be selected and used "
+"when creating new |RfQs|."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:83
-msgid ""
-"To view and change the default purchase agreement settings for blanket "
-"orders directly from the blanket order form, click the :guilabel:`➡️ (right "
-"arrow)` icon that becomes visible when hovering over "
-"the :guilabel:`Agreement Type` field, where :guilabel:`Blanket Order` is "
-"listed. This navigates to the blanket order settings."
-msgstr ""
-"包括オーダフォームから直接、包括オーダのデフォルトの購買契約設定を表示および"
-"変更するには、:guilabel:`契約タイプ` フィールドにカーソルを置くと表示され"
-"る :guilabel:`➡️ (右矢印)` アイコンをクリックします。:guilabel:`包括オーダ` が"
-"表示されている場合、包括オーダの管理設定に移動します。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:-1
-msgid "Internal link arrow next to Agreement Type field on blanket order form."
-msgstr "包括オーダフォームの「契約タイプ」フィールドの横にある内部リンク矢印"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:92
-msgid ""
-"From here, the settings for blanket orders can be edited. Under "
-"the :guilabel:`Agreement Type` section, the name of the :guilabel:`Agreement "
-"Type` can be changed, and the :guilabel:`Agreement Selection Type` can be "
-"changed, as well. There are two options that can be activated for the type "
-"of selection:"
-msgstr ""
-"ここから、包括オーダの管理設定を編集できます。 :guilabel:`契約タイプ` セク"
-"ションでは、 :guilabel:`契約タイプ` の名前を変更でき、 :guilabel:`契約選択タ"
-"イプ` も変更できます。選択のタイプには、2 つのオプションを有効化できます。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:97
-msgid ""
-":guilabel:`Select only one RfQ (exclusive)`: when a purchase order is "
-"confirmed, the remaining purchase orders are cancelled."
-msgstr ""
-":guilabel:`見積依頼を1件のみ採用`：1つの購買オーダが確定すると、残りの購買"
-"オーダは取消されます。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:99
-msgid ""
-":guilabel:`Select multiple RfQ (non-exclusive)`: when a purchase order is "
-"confirmed, remaining purchase orders are **not** cancelled. Instead, "
-"multiple purchase orders are allowed."
-msgstr ""
-":guilabel:`複数の見積依頼を採用可`: 購買オーダが確定しても、残りの購買オーダ"
-"は取消されません。代わりに、複数の購買オーダが許可されます。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:102
-msgid ""
-"Under the :guilabel:`Data For New Quotations` section, the :guilabel:`Lines` "
-"and :guilabel:`Quantities` fields can be edited. Doing so sets how new "
-"quotations should be populated when using this purchase agreement."
-msgstr ""
-":guilabel:`新規見積のデータ` セクションでは、:guilabel:`明細` およ"
-"び :guilabel:`数量` フィールドを編集できます。これにより、この購買契約を使用"
-"する際に、新規見積にどのようにデータを入力するかを設定できます。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:-1
-msgid "Purchase Agreement type edit screen for blanket orders."
-msgstr "包括オーダの購買契約タイプ編集画面"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:110
-msgid "There are two options that can be activated for :guilabel:`Lines`:"
-msgstr ":guilabel:`明細` には、2 つのオプションを有効化することができます:"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:112
-msgid ""
-":guilabel:`Use lines of agreement`: when creating a new quotation, the "
-"product lines pre-populate with the same products listed on the blanket "
-"order, if said blanket order is chosen for the new quotation."
-msgstr ""
-":guilabel:`契約の明細行を使用` :新しい見積依頼を作成する際に、包括オーダを選"
-"択すると、その契約に含まれるプロダクトが見積明細に自動で入力されます。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:115
-msgid ""
-":guilabel:`Do not create RfQ lines automatically`: when creating a new "
-"quotation, **and** selecting an existing blanket order, the settings carry "
-"over to the new quotation, but the product lines do **not** populate."
-msgstr ""
-":guilabel:`見積明細を自動作成しない` :新しい見積依頼を作成し、既存の包括オー"
-"ダを選択した場合、その設定は見積依頼に引き継がれますが、プロダクト明細は自動"
-"で入力され **ません**。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:119
-msgid ""
-"And, there are two options that can be activated for :guilabel:`Quantities`:"
-msgstr "また、:guilabel:`数量` に対して有効にできるオプションが 2 つあります: "
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:121
-msgid ""
-":guilabel:`Use quantities of agreement`: when creating a new quotation, the "
-"product quantities listed on the blanket order pre-populate on the product "
-"lines, if said blanket order is chosen for the new quotation."
-msgstr ""
-":guilabel:`契約の数量を使用`: 新しい見積依頼を作成し、包括オーダを選択した場"
-"合、その契約に記載されたプロダクトの数量が見積明細に自動で入力されます。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:124
-msgid ""
-":guilabel:`Set quantities manually`: when creating a new quotation, **and** "
-"selecting an existing blanket order, the product lines pre-populate, but all "
-"quantities are set to `0`. The quantities **must** be manually set by the "
-"user."
-msgstr ""
-":guilabel:`数量を手動で設定する`: 新しい見積を作成し、既存の包括オーダを選択"
-"すると、プロダクトの明細は事前に入力されますが、数量は全て `0` に設定されま"
-"す。数量は、ユーザが手動で設定する必要があります。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:128
-msgid ""
-"Once any desired changes have been made, click :guilabel:`New` (via the "
-"breadcrumbs, at the top of the page) to navigate back to the blanket order "
-"form. Then, click :guilabel:`Confirm` to save this new purchase agreement."
-msgstr ""
-"必要な変更が完了したら、ページ上部のパンくずリストにある :guilabel:`新規` を"
-"クリックして、包括オーダフォームに戻ります。次に、:guilabel:`確認` をクリック"
-"して、この新しい購買契約を保存します。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:132
-msgid ""
-"Once confirmed, the blanket order's stage (in the upper-right corner) "
-"changes from :guilabel:`Draft` to :guilabel:`Ongoing`, meaning this "
-"agreement can be selected and used when creating new |RfQs|."
-msgstr ""
-"一度確定されると、包括オーダのステージ(右上隅) が :guilabel:`ドラフト` か"
-"ら :guilabel:`進行中` に変更され、この契約は新しい見積依頼を作成する際に選択"
-"して使用できるようになります。"
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:136
 msgid ""
 "After creating and confirming a blanket order, products, quantities, and "
 "prices can still be edited, added, and removed from the purchase agreement."
@@ -52557,25 +52729,27 @@ msgstr ""
 "包括オーダを作成して確定した後も、購買契約からプロダクト、数量、価格を編集、"
 "追加、削除することができます。"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:140
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:87
 msgid "Create a new |RfQ| from the blanket order"
 msgstr "包括オーダから新しい見積依頼を作成する"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:142
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:89
 msgid ""
 "After confirming a blanket order, new quotations can be created directly "
 "from the blanket order form. |RfQs| using this form are pre-populated with "
-"information based on the rules set in the form. Additionally, new quotations "
-"are automatically linked to this blanket order form, via the :guilabel:`RFQs/"
-"Orders` smart button at the top-right of the form."
+"information based on the rules set in the form. The total quantities of "
+"products ordered through linked |RfQs| are automatically updated in "
+"the :guilabel:`Ordered` field on the agreement."
 msgstr ""
-"包括オーダを確定すると、そのフォームから直接新しい見積依頼を作成できます。こ"
-"のフォームから作成された RFQ には、フォーム上で設定されたルールに基づいた情報"
-"があらかじめ入力されます。また、新しい見積りは、フォーム右上の :guilabel:`見"
-"積依頼/オーダ`  スマートボタンを通じて、この包括オーダに自動的にリンクされま"
-"す。"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:147
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:94
+msgid ""
+"Additionally, new quotations are automatically linked to this blanket order "
+"form, via the :guilabel:`RFQs/Orders` smart button at the top-right of the "
+"form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:97
 msgid ""
 "To create a new quotation from the blanket order form, click "
 "the :guilabel:`New Quotation` button. This opens a new |RfQ|, that is pre-"
@@ -52586,7 +52760,7 @@ msgstr ""
 "をクリックします。これにより、包括オーダフォームで設定された情報に基づいて、"
 "正しい情報が事前入力された新しい見積依頼書が開きます。"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:151
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:101
 msgid ""
 "From the new |RfQ| form, click :guilabel:`Send by Email` to compose and send "
 "an email to the listed vendor. Click :guilabel:`Print RFQ` to generate a "
@@ -52602,7 +52776,7 @@ msgstr ""
 msgid "New quotation with copied products and rules from blanket order."
 msgstr "包括オーダからプロダクトおよび規則をコピーした新しい見積"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:159
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:108
 msgid ""
 "Once the |PO| has been confirmed, click back to the blanket order form (via "
 "the breadcrumbs, at the top of the page). From the blanket order form, there "
@@ -52620,7 +52794,7 @@ msgstr ""
 msgid "RFQs and Orders smart button from blanket order form."
 msgstr "包括オーダフォームの見積依頼/オーダスマートボタン"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:171
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:119
 msgid ""
 "Once a blanket order is confirmed, a new vendor line is added under "
 "the :guilabel:`Purchase` tab of the products included in the order."
@@ -52628,7 +52802,7 @@ msgstr ""
 "包括オーダが確定すると、オーダに含まれるプロダクトの :guilabel:`購買`  タブに"
 "新しい仕入先明細が追加されます。"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:174
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:122
 msgid ""
 "This makes blanket orders useful with :doc:`automated replenishment <../../"
 "purchase/products/reordering>`, because information about "
@@ -52646,7 +52820,7 @@ msgstr ""
 msgid "Product form with replenishment agreement linked to blanket order."
 msgstr "包括オーダに補充契約がリンクされたプロダクトフォーム"
 
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:184
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:131
 msgid ":doc:`calls_for_tenders`"
 msgstr ":doc:`calls_for_tenders`"
 
@@ -59171,6 +59345,313 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "To calculate shipping on sales orders and e-commerce, the *Delivery "
+#~ "Costs* module must be installed. To do so, navigate to "
+#~ "the :menuselection:`Apps` application from the main Odoo dashboard."
+#~ msgstr ""
+#~ "販売オーダとEコマースの送料を計算するには、*配送費用* モジュールをインス"
+#~ "トールする必要があります。インストールするには、Odooのメインダッシュボード"
+#~ "から :menuselection:`アプリ` アプリケーションに移動します。"
+
+#~ msgid ""
+#~ "Then, remove the :guilabel:`Apps` filter, and type in `Delivery Costs` in "
+#~ "the :guilabel:`Search...` bar. After finding the :guilabel:`Delivery "
+#~ "Costs` module, click :guilabel:`Activate` to install it."
+#~ msgstr ""
+#~ "次に、 :guilabel:`アプリ` フィルタを削除し、 :guilabel:`検索...` バーに `"
+#~ "配送費用` と入力します。:guilabel:`配送費用` モジュールを見つけた"
+#~ "ら、 :guilabel:`有効化` をクリックしてインストールします。"
+
+#~ msgid ""
+#~ "Shipping methods can be added to sales orders in the form of delivery "
+#~ "products, which appear as individual line items. First, navigate to the "
+#~ "desired sales order by going to :menuselection:`Sales app --> Orders --> "
+#~ "Orders`."
+#~ msgstr ""
+#~ "配送方法は、個々の明細項目として表示される配送プロダクトの形で販売オーダに"
+#~ "追加することができます。まず、 :menuselection:`販売アプリ --> オーダ --> "
+#~ "オーダ` で目的の販売オーダに移動します。"
+
+#~ msgid ""
+#~ "On the sales order, click the :guilabel:`Add shipping` button, which "
+#~ "opens the :guilabel:`Add a shipping method` pop-up window. Then, choose "
+#~ "a :guilabel:`Shipping Method` from the list."
+#~ msgstr ""
+#~ "販売オーダで :guilabel:`配送方法の追加` ボタンをクリックする"
+#~ "と、 :guilabel:`配送方法の追加` ポップアップウィンドウが開きます。そして、"
+#~ "リストから :guilabel:`配送方法` を選択します。"
+
+#~ msgid ""
+#~ "The :guilabel:`Total Order Weight` is pre-filled based on product weights "
+#~ "(that are defined in the :guilabel:`Inventory` tab for each product "
+#~ "form). Edit the field to specify the exact weight, and then "
+#~ "click :guilabel:`Add` to add the shipping method."
+#~ msgstr ""
+#~ ":guilabel:`オーダ重量合計` は、プロダクトの重量(各プロダクトフォーム"
+#~ "の :guilabel:`在庫` タブで定義されています)に基づいてあらかじめ入力されて"
+#~ "います。フィールドを編集して正確な重量を指定し、 :guilabel:`追加` をクリッ"
+#~ "クして配送方法を追加します。"
+
+#~ msgid ""
+#~ "The shipping cost is added to the *sales order line* as "
+#~ "the :guilabel:`Delivery Product` detailed on the shipping method form."
+#~ msgstr ""
+#~ "配送費用は、配送方法フォームに記載された :guilabel:`配送プロダクト` とし"
+#~ "て、*販売オーダ明細* に追加されます。"
+
+#~ msgid ""
+#~ "`Furniture Delivery`, a delivery product with a fixed rate of `$200`, is "
+#~ "added to sales order `S00088`."
+#~ msgstr ""
+#~ "販売オーダ `S00088` に定額料金 `$200` の配送プロダクト `家具配送` が追加さ"
+#~ "れました。"
+
+#~ msgid ""
+#~ "The shipping method added to the sales order is linked to the shipping "
+#~ "carrier details on the delivery order. To add or change the delivery "
+#~ "method on the delivery itself, go to the :guilabel:`Additional Info` tab "
+#~ "and modify the :guilabel:`Carrier` field."
+#~ msgstr ""
+#~ "販売オーダに追加された配送方法は、配送オーダの配送配送業者の詳細とリンクし"
+#~ "ています。配送時に配送方法を追加または変更するには、:guilabel:`追加情報` "
+#~ "タブに移動し、:guilabel:`配送業者` フィールドを変更します。"
+
+#~ msgid ""
+#~ ":guilabel:`Website`: configure shipping methods for an **eCommerce** "
+#~ "page. Select the applicable website from the drop-down menu, or leave it "
+#~ "blank to apply the method to all web pages."
+#~ msgstr ""
+#~ ":guilabel:`ウェブサイト`: **eコマース** ページの配送方法を設定します。ド"
+#~ "ロップダウンメニューから該当するウェブサイトを選択するか、空白のままにする"
+#~ "と、その方法を全てのウェブページに適用します。"
+
+#~ msgid ""
+#~ ":guilabel:`Company`: If the shipping method should apply to a specific "
+#~ "company, select it from the drop-down menu. Leave the field blank to "
+#~ "apply the method to all companies."
+#~ msgstr ""
+#~ ":guilabel:`会社`: 特定の会社に配送方法を適用する場合は、ドロップダウンメ"
+#~ "ニューから選択して下さい。 全てに適用する場合は、このフィールドを空白のま"
+#~ "まにして下さい。"
+
+#~ msgid ""
+#~ ":guilabel:`Routes`: select the applicable routes to define different "
+#~ "delivery methods, such as standard or express shipping, based on varying "
+#~ "lead times. For more information, jump to the :ref:`Set routes on "
+#~ "shipping method <inventory/shipping_receiving/shipping-route>` section."
+#~ msgstr ""
+#~ ":guilabel:`ルート`: 該当するルートを選択して、異なるリードタイムに基づく、"
+#~ "標準またはエクスプレス配送など、異なる配送方法を定義します。 詳細について"
+#~ "は、:ref:`配送方法でルートを設定する <inventory/shipping_receiving/"
+#~ "shipping-route>` セクションを参照して下さい。"
+
+#~ msgid ""
+#~ "To create a blanket order, go to :menuselection:`Purchase app --> Orders "
+#~ "--> Blanket Orders`, and click :guilabel:`New`. This opens a new blanket "
+#~ "order form."
+#~ msgstr ""
+#~ "包括オーダを作成するには、 :menuselection:`購買アプリ --> オーダ --> 包括"
+#~ "オーダ` に移動し、 :guilabel:`新規` をクリックします。新しい包括オーダ"
+#~ "フォームが開きます。"
+
+#~ msgid ""
+#~ "Configure the following fields in the new blanket order form to establish "
+#~ "predetermined rules for the recurring long-term agreement:"
+#~ msgstr ""
+#~ "繰り返し購買するための長期購買契約のルールをあらかじめ設定するために、新し"
+#~ "い包括オーダフォームで以下の項目を構成して下さい:"
+
+#~ msgid ""
+#~ ":guilabel:`Purchase Representative`: the user assigned to this specific "
+#~ "blanket order. By default, this is the user who created the agreement; "
+#~ "the user can be changed directly from the drop-down menu next to this "
+#~ "field."
+#~ msgstr ""
+#~ ":guilabel:`購買担当者`: この特定の包括オーダに割当てられたユーザです。デ"
+#~ "フォルトでは、契約を作成したユーザが指定されます。このフィールドの横にある"
+#~ "ドロップダウンメニューから、ユーザを直接変更することができます。"
+
+#~ msgid ""
+#~ ":guilabel:`Agreement Type`: the type of purchase agreement this blanket "
+#~ "order is classified as. In Odoo, blanket orders are the only official "
+#~ "purchase agreement."
+#~ msgstr ""
+#~ ":guilabel:`契約タイプ`: この包括オーダが分類される購買契約の種類を指定しま"
+#~ "す。Odooでは、包括オーダが唯一の正式な購買契約タイプとなります。"
+
+#~ msgid ""
+#~ ":guilabel:`Agreement Deadline`: the date that this purchase agreement "
+#~ "will be set to expire on. If this blanket order should not expire, leave "
+#~ "this field blank."
+#~ msgstr ""
+#~ ":guilabel:`契約期限`: この購買契約の有効期限を設定する日付です。この包括"
+#~ "オーダに有効期限を設定しない場合は、このフィールドを空白のままにして下さ"
+#~ "い。"
+
+#~ msgid ""
+#~ ":guilabel:`Ordering Date`: the date that this blanket order should be "
+#~ "placed on if a new quotation is created directly from the blanket order "
+#~ "form. If a new quotation is created, this value automatically populates "
+#~ "the *Order Deadline* field on the |RfQ|."
+#~ msgstr ""
+#~ ":guilabel:`オーダ日`: この包括オーダフォームから直接新しい見積を作成する場"
+#~ "合、この包括オーダを登録する日付です。新しい見積を作成すると、この値が見積"
+#~ "依頼の *オーダ期日* フィールドに自動的に入力されます。"
+
+#~ msgid ""
+#~ ":guilabel:`Delivery Date`: the expected delivery date that the products "
+#~ "included in an |RfQ| are expected, if created directly from a blanket "
+#~ "order form. If a new quotation is created, this value automatically "
+#~ "populates the *Expected Arrival* field on the |RfQ|."
+#~ msgstr ""
+#~ ":guilabel:`配送日`: 包括オーダフォームから直接作成された場合、見積依頼に含"
+#~ "まれるプロダクトの配送予定日です。新しい見積が作成された場合、この値は見積"
+#~ "依頼の *入荷予定日* フィールドに自動的に入力されます。"
+
+#~ msgid ""
+#~ ":guilabel:`Source Document`: the source purchase order (PO) that this "
+#~ "blanket order is tied to. If this blanket order should not be tied to any "
+#~ "existing |PO|, leave this field blank."
+#~ msgstr ""
+#~ ":guilabel:`元ドキュメント`:この包括オーダが関連付けられている元の購買オー"
+#~ "ダ (PO)。この包括オーダを既存の購買オーダに関連付けない場合は、このフィー"
+#~ "ルドを空白のままにして下さい。"
+
+#~ msgid ""
+#~ "To view and change the default purchase agreement settings for blanket "
+#~ "orders directly from the blanket order form, click the :guilabel:`➡️ "
+#~ "(right arrow)` icon that becomes visible when hovering over "
+#~ "the :guilabel:`Agreement Type` field, where :guilabel:`Blanket Order` is "
+#~ "listed. This navigates to the blanket order settings."
+#~ msgstr ""
+#~ "包括オーダフォームから直接、包括オーダのデフォルトの購買契約設定を表示およ"
+#~ "び変更するには、:guilabel:`契約タイプ` フィールドにカーソルを置くと表示さ"
+#~ "れる :guilabel:`➡️ (右矢印)` アイコンをクリックします。:guilabel:`包括オー"
+#~ "ダ` が表示されている場合、包括オーダの管理設定に移動します。"
+
+#~ msgid ""
+#~ "Internal link arrow next to Agreement Type field on blanket order form."
+#~ msgstr ""
+#~ "包括オーダフォームの「契約タイプ」フィールドの横にある内部リンク矢印"
+
+#~ msgid ""
+#~ "From here, the settings for blanket orders can be edited. Under "
+#~ "the :guilabel:`Agreement Type` section, the name of "
+#~ "the :guilabel:`Agreement Type` can be changed, and "
+#~ "the :guilabel:`Agreement Selection Type` can be changed, as well. There "
+#~ "are two options that can be activated for the type of selection:"
+#~ msgstr ""
+#~ "ここから、包括オーダの管理設定を編集できます。 :guilabel:`契約タイプ` セク"
+#~ "ションでは、 :guilabel:`契約タイプ` の名前を変更でき、 :guilabel:`契約選択"
+#~ "タイプ` も変更できます。選択のタイプには、2 つのオプションを有効化できま"
+#~ "す。"
+
+#~ msgid ""
+#~ ":guilabel:`Select only one RfQ (exclusive)`: when a purchase order is "
+#~ "confirmed, the remaining purchase orders are cancelled."
+#~ msgstr ""
+#~ ":guilabel:`見積依頼を1件のみ採用`：1つの購買オーダが確定すると、残りの購買"
+#~ "オーダは取消されます。"
+
+#~ msgid ""
+#~ ":guilabel:`Select multiple RfQ (non-exclusive)`: when a purchase order is "
+#~ "confirmed, remaining purchase orders are **not** cancelled. Instead, "
+#~ "multiple purchase orders are allowed."
+#~ msgstr ""
+#~ ":guilabel:`複数の見積依頼を採用可`: 購買オーダが確定しても、残りの購買オー"
+#~ "ダは取消されません。代わりに、複数の購買オーダが許可されます。"
+
+#~ msgid ""
+#~ "Under the :guilabel:`Data For New Quotations` section, "
+#~ "the :guilabel:`Lines` and :guilabel:`Quantities` fields can be edited. "
+#~ "Doing so sets how new quotations should be populated when using this "
+#~ "purchase agreement."
+#~ msgstr ""
+#~ ":guilabel:`新規見積のデータ` セクションでは、:guilabel:`明細` およ"
+#~ "び :guilabel:`数量` フィールドを編集できます。これにより、この購買契約を使"
+#~ "用する際に、新規見積にどのようにデータを入力するかを設定できます。"
+
+#~ msgid "Purchase Agreement type edit screen for blanket orders."
+#~ msgstr "包括オーダの購買契約タイプ編集画面"
+
+#~ msgid "There are two options that can be activated for :guilabel:`Lines`:"
+#~ msgstr ":guilabel:`明細` には、2 つのオプションを有効化することができます:"
+
+#~ msgid ""
+#~ ":guilabel:`Use lines of agreement`: when creating a new quotation, the "
+#~ "product lines pre-populate with the same products listed on the blanket "
+#~ "order, if said blanket order is chosen for the new quotation."
+#~ msgstr ""
+#~ ":guilabel:`契約の明細行を使用` :新しい見積依頼を作成する際に、包括オーダを"
+#~ "選択すると、その契約に含まれるプロダクトが見積明細に自動で入力されます。"
+
+#~ msgid ""
+#~ ":guilabel:`Do not create RfQ lines automatically`: when creating a new "
+#~ "quotation, **and** selecting an existing blanket order, the settings "
+#~ "carry over to the new quotation, but the product lines do **not** "
+#~ "populate."
+#~ msgstr ""
+#~ ":guilabel:`見積明細を自動作成しない` :新しい見積依頼を作成し、既存の包括"
+#~ "オーダを選択した場合、その設定は見積依頼に引き継がれますが、プロダクト明細"
+#~ "は自動で入力され **ません**。"
+
+#~ msgid ""
+#~ "And, there are two options that can be activated "
+#~ "for :guilabel:`Quantities`:"
+#~ msgstr ""
+#~ "また、:guilabel:`数量` に対して有効にできるオプションが 2 つあります: "
+
+#~ msgid ""
+#~ ":guilabel:`Use quantities of agreement`: when creating a new quotation, "
+#~ "the product quantities listed on the blanket order pre-populate on the "
+#~ "product lines, if said blanket order is chosen for the new quotation."
+#~ msgstr ""
+#~ ":guilabel:`契約の数量を使用`: 新しい見積依頼を作成し、包括オーダを選択した"
+#~ "場合、その契約に記載されたプロダクトの数量が見積明細に自動で入力されます。"
+
+#~ msgid ""
+#~ ":guilabel:`Set quantities manually`: when creating a new quotation, "
+#~ "**and** selecting an existing blanket order, the product lines pre-"
+#~ "populate, but all quantities are set to `0`. The quantities **must** be "
+#~ "manually set by the user."
+#~ msgstr ""
+#~ ":guilabel:`数量を手動で設定する`: 新しい見積を作成し、既存の包括オーダを選"
+#~ "択すると、プロダクトの明細は事前に入力されますが、数量は全て `0` に設定さ"
+#~ "れます。数量は、ユーザが手動で設定する必要があります。"
+
+#~ msgid ""
+#~ "Once any desired changes have been made, click :guilabel:`New` (via the "
+#~ "breadcrumbs, at the top of the page) to navigate back to the blanket "
+#~ "order form. Then, click :guilabel:`Confirm` to save this new purchase "
+#~ "agreement."
+#~ msgstr ""
+#~ "必要な変更が完了したら、ページ上部のパンくずリストにある :guilabel:`新規` "
+#~ "をクリックして、包括オーダフォームに戻ります。次に、:guilabel:`確認` をク"
+#~ "リックして、この新しい購買契約を保存します。"
+
+#~ msgid ""
+#~ "Once confirmed, the blanket order's stage (in the upper-right corner) "
+#~ "changes from :guilabel:`Draft` to :guilabel:`Ongoing`, meaning this "
+#~ "agreement can be selected and used when creating new |RfQs|."
+#~ msgstr ""
+#~ "一度確定されると、包括オーダのステージ(右上隅) が :guilabel:`ドラフト` か"
+#~ "ら :guilabel:`進行中` に変更され、この契約は新しい見積依頼を作成する際に選"
+#~ "択して使用できるようになります。"
+
+#~ msgid ""
+#~ "After confirming a blanket order, new quotations can be created directly "
+#~ "from the blanket order form. |RfQs| using this form are pre-populated "
+#~ "with information based on the rules set in the form. Additionally, new "
+#~ "quotations are automatically linked to this blanket order form, via "
+#~ "the :guilabel:`RFQs/Orders` smart button at the top-right of the form."
+#~ msgstr ""
+#~ "包括オーダを確定すると、そのフォームから直接新しい見積依頼を作成できます。"
+#~ "このフォームから作成された RFQ には、フォーム上で設定されたルールに基づい"
+#~ "た情報があらかじめ入力されます。また、新しい見積りは、フォーム右上"
+#~ "の :guilabel:`見積依頼/オーダ`  スマートボタンを通じて、この包括オーダに自"
+#~ "動的にリンクされます。"
 
 #~ msgid ""
 #~ "To manage where specific products are routed for storage, navigate "

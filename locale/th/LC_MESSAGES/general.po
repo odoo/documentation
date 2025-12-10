@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-18 11:05+0000\n"
+"POT-Creation-Date: 2025-12-10 08:58+0000\n"
 "PO-Revision-Date: 2024-10-08 06:34+0000\n"
 "Last-Translator: Rasareeyar Lappiam, 2025\n"
 "Language-Team: Thai (https://app.transifex.com/odoo/teams/41243/th/)\n"
@@ -3925,7 +3925,21 @@ msgstr ""
 "หากฐานข้อมูลโฮสต์อยู่บน **Odoo Online** หรือ **Odoo.sh** แนะนำให้ใช้การเปลี่ยนเส้นทาง "
 "วิธีนี้ช่วยให้รับข้อความในฐานข้อมูลได้โดยไม่เกิดความล่าช้า"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:204
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:205
+msgid ""
+"When configuring email redirections with Microsoft 365 (Exchange Online), be "
+"aware that certain technical limitations may affect your setup. Some users "
+"have reported that Microsoft 365 does not support true redirection and only "
+"allows forwarding, which may not behave as needed for Odoo's email routing."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:210
+msgid ""
+"For more information on Microsoft Exchange configuration, visit `Microsoft "
+"Learn <https://learn.microsoft.com/en-us/exchange/exchange-online>`_."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:213
 msgid ""
 "It is mandatory to redirect the catchall and bounce address to the Odoo "
 "subdomain of the database. Every other alias used must be redirected as well."
@@ -3933,23 +3947,23 @@ msgstr ""
 "จำเป็นต้องเปลี่ยนเส้นทางของ catchall และที่อยู่การตีกลับไปยังโดเมนย่อย Odoo ของฐานข้อมูล "
 "ชื่ออื่นๆ ที่ใช้จะต้องถูกเปลี่ยนเส้นทางด้วยเช่นกัน"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:208
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:217
 msgid "With one sales team, the following redirections are required:"
 msgstr "ด้วยทีมขายเพียงทีมเดียว จำเป็นต้องมีการเปลี่ยนเส้นทางดังต่อไปนี้:"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:210
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:219
 msgid "`catchall@company-name.com` → `catchall@company-name.odoo.com`"
 msgstr "`catchall@company-name.com` → `catchall@company-name.odoo.com`"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:211
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:220
 msgid "`bounce@company-name.com` → `bounce@company-name.odoo.com`"
 msgstr "`bounce@company-name.com` → `bounce@company-name.odoo.com`"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:212
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:221
 msgid "`info@company-name.com` → `info@company-name.odoo.com`"
 msgstr "`info@company-name.com` → `info@company-name.odoo.com`"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:215
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:224
 msgid ""
 "Some providers ask to validate the redirection by sending a link to the "
 "target email address. This procedure is an issue for catchall and bounce "
@@ -3958,7 +3972,7 @@ msgstr ""
 "ผู้ให้บริการบางรายขอให้ตรวจสอบการเปลี่ยนเส้นทางโดยส่งลิงก์ไปยังที่อยู่อีเมลเป้าหมาย "
 "ขั้นตอนนี้เป็นปัญหาสำหรับ catchall และการตีกลับเนื่องจากไม่ได้ใช้เพื่อสร้างบันทึก"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:218
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:227
 msgid ""
 "Modify the catchall value on the mail alias domain. :ref:`developer-mode` "
 "must be enabled to access this menu. For example, it can be changed from "
@@ -3969,7 +3983,7 @@ msgstr ""
 "ตัวอย่างเช่น สามารถเปลี่ยนจาก `catchall` เป็น `temp-catchall` ได้ ซึ่งจะทำให้สามารถใช้ "
 "`catchall` เป็น local-part ของชื่ออื่นได้"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:221
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:230
 msgid ""
 "Open an app that uses an alias. For example, CRM contains aliases for each "
 "sales team. Set `catchall` as the local-part of the alias of a sales team."
@@ -3977,7 +3991,7 @@ msgstr ""
 "เปิดแอปที่ใช้ชื่อแทน ตัวอย่างเช่น CRM มีชื่อสำหรับทีมขายแต่ละทีม ตั้งค่า `catchall` ให้เป็น local-"
 "part ของชื่อของทีมขาย"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:223
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:232
 msgid ""
 "The validation email will create a record in the CRM app. The email sent "
 "will be visible in the chatter, allowing you to validate the redirection."
@@ -3985,14 +3999,14 @@ msgstr ""
 "อีเมลตรวจสอบจะสร้างบันทึกในแอป CRM อีเมลที่ส่งจะปรากฏในช่องแชท "
 "ทำให้คุณสามารถตรวจสอบการเปลี่ยนเส้นทางได้"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:225
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:234
 msgid ""
 "Do not forget to change back the alias of the sales team and the catchall "
 "value on the mail alias domain, just as they were before this procedure."
 msgstr ""
 "อย่าลืมเปลี่ยนชื่อเล่นของทีมขายและค่า catchall บนโดเมนชื่ออีเมลกลับเหมือนกับก่อนดำเนินการนี้"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:229
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:238
 msgid ""
 "An alternative to redirections is **forwarding**. With forwarding, **the "
 "address forwarding the email will be identified as the sender**, while with "
@@ -4001,11 +4015,11 @@ msgstr ""
 "ทางเลือกอื่นสำหรับการเปลี่ยนเส้นทางคือ **การส่งต่อ** สำหรับการส่งต่อ "
 "**ที่อยู่อีเมลที่ส่งต่อจะถูกระบุว่าเป็นผู้ส่ง** ในขณะที่การเปลี่ยนเส้นทาง ผู้ส่งเดิมจะยังคงอยู่เสมอ"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:236
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:245
 msgid "Incoming mail servers"
 msgstr "เซิร์ฟเวอร์เมลขาเข้า"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:238
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:247
 msgid ""
 "As mentioned earlier, using redirections is the recommended method to "
 "receive emails in Odoo. However, it is also possible to set up incoming mail "
@@ -4014,14 +4028,14 @@ msgid ""
 "in order to fetch all incoming emails."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:244
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:253
 msgid ""
 "Odoo's *Incoming Mail Servers* feature is designed for shared inboxes (e.g., "
 "`sales@yourcompany.com` or `support@yourcompany.com`) to route messages to "
 "team pipelines, tickets, or documents."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:248
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:257
 msgid ""
 "Using personal email addresses (e.g., `mitchell.admin@yourcompany.com`) as "
 "incoming mail servers is **not** recommended. Doing so can lead to increased "
@@ -4029,13 +4043,13 @@ msgid ""
 "syncing replies correctly."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:252
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:261
 msgid ""
 "Incoming mail servers are created by going to :menuselection:`Settings --> "
 "Technical --> Emails: Incoming Mail Servers`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:256
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:265
 msgid ""
 "We recommend using the IMAP protocol over the POP protocol, as IMAP fetches "
 "all unread emails, while POP fetches all the emails' history and then tags "
@@ -4045,7 +4059,7 @@ msgstr ""
 "จะดึงอีเมลทั้งหมดที่ไม่ได้อ่าน ในขณะที่ POP "
 "จะดึงประวัติอีเมลทั้งหมดแล้วแท็กอีเมลเหล่านั้นว่าถูกลบแล้วในกล่องจดหมายของคุณ"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:260
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:269
 msgid ""
 "It is also possible to connect a mailbox through :doc:`Gmail with Google "
 "OAuth <google_oauth>` or :doc:`Outlook with Microsoft Azure OAuth "
@@ -4055,7 +4069,7 @@ msgstr ""
 "<google_oauth>` หรือ :doc:`Outlook กับ Microsoft Azure OAuth <azure_oauth>` "
 "ได้อีกด้วย"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:263
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:272
 msgid ""
 "Regardless of the protocol chosen, emails are fetched using the *Mail: "
 "Fetchmail Service* scheduled action."
@@ -4063,7 +4077,7 @@ msgstr ""
 "ไม่ว่าจะเลือกโปรโตคอลใดก็ตาม อีเมลจะถูกดึงข้อมูลโดยใช้การดำเนินการตามกำหนดเวลาของ *เมล: "
 "บริการ Fetchmail*"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:266
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:275
 msgid ""
 "Additionally, using an incoming mail server in Odoo gives the opportunity to "
 "create new records in a specified model. Each incoming mail server can "
@@ -4072,7 +4086,7 @@ msgstr ""
 "นอกจากนี้ การใช้เซิร์ฟเวอร์เมลขาเข้าใน Odoo ยังช่วยให้สามารถสร้างบันทึกใหม่ในรูปแบบที่กำหนดได้ "
 "เซิร์ฟเวอร์เมลขาเข้าแต่ละเครื่องสามารถสร้างบันทึกในรูปแบบที่แตกต่างกันได้"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:270
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:279
 msgid ""
 "Emails received on `task@company-name.com` are fetched by the Odoo database. "
 "All fetched emails will create a new project task in the database."
@@ -4080,11 +4094,11 @@ msgstr ""
 "อีเมลที่ได้รับจาก `task@company-name.com` จะถูกดึงข้อมูลโดยฐานข้อมูล Odoo "
 "อีเมลที่ดึงข้อมูลทั้งหมดจะสร้างงานโครงการใหม่ในฐานข้อมูล"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:279
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:288
 msgid "MX record"
 msgstr "บันทึก MX"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:281
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:290
 msgid ""
 "A third option is to create a MX record in your DNS zone which specifies the "
 "mail server managing emails sent to your domain. **Advanced technical "
@@ -4093,7 +4107,7 @@ msgstr ""
 "ตัวเลือกที่สามคือการสร้างระเบียน MX ในโซน DNS ของคุณ "
 "ซึ่งจะระบุเซิร์ฟเวอร์อีเมลที่จัดการอีเมลที่ส่งไปยังโดเมนของคุณ **จำเป็นต้องมีความรู้ด้านเทคนิคขั้นสูง**"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:285
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:294
 msgid ""
 "This configuration only works with a subdomain on the Odoo Online or Odoo.sh "
 "infrastructure (e.g., `@mail.mydomain.com`)"
@@ -4101,16 +4115,16 @@ msgstr ""
 "การกำหนดค่านี้ทำงานได้เฉพาะกับโดเมนย่อยบนโครงสร้างพื้นฐาน Odoo Online หรือ Odoo.sh "
 "เท่านั้น (เช่น `@mail.mydomain.com`)"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:288
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:297
 msgid "Below are presented some specifications depending on the hosting type:"
 msgstr "ด้านล่างนี้เป็นข้อมูลเฉพาะบางส่วนที่ขึ้นอยู่กับประเภทของโฮสติ้ง:"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:292
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:301
 #: ../../content/applications/general/email_communication/faq.rst:296
 msgid "Odoo Online"
 msgstr "Odoo Online"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:294
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:303
 msgid ""
 "The custom subdomain must be added to your :doc:`Odoo Portal <../../websites/"
 "website/configuration/domain_names>`."
@@ -4118,12 +4132,12 @@ msgstr ""
 "ต้องเพิ่มโดเมนย่อยที่กำหนดเองลงใน :doc:`พอร์ทัล Odoo ของคุณ <../../websites/website/"
 "configuration/domain_names>`"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:297
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:306
 #: ../../content/applications/general/email_communication/faq.rst:301
 msgid "Odoo.sh"
 msgstr "Odoo.sh"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:299
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:308
 msgid ""
 "The custom subdomain must be added to the :doc:`settings of the project "
 "<../../../administration/odoo_sh/getting_started/settings>`:"
@@ -4135,11 +4149,11 @@ msgstr ""
 msgid "Adding a custom subdomain for mail to Odoo.sh project settings."
 msgstr "การเพิ่มโดเมนย่อยแบบกำหนดเองสำหรับเมลไปยังการตั้งค่าโปรเจ็กต์ Odoo.sh"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:308
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:317
 msgid "Infinite email loops"
 msgstr "ลูปการส่งเมลได้ไม่จำกัดจำนวน"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:310
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:319
 msgid ""
 "In some cases, infinite mailing loops can be created. Odoo provides some "
 "protection against such loops, ensuring the same sender cannot send too many "
@@ -4149,7 +4163,7 @@ msgstr ""
 "โดยรับประกันว่าผู้ส่งรายเดียวกันจะไม่สามารถส่งอีเมลจำนวนมากเกินไป **ซึ่งอาจสร้างบันทึก** "
 "ไปยังชื่อในช่วงเวลาที่กำหนดได้"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:314
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:323
 msgid ""
 "By default, an email address can send up to 20 emails in 120 minutes. If "
 "more emails are sent, they are blocked and the sender receives the following "
@@ -4162,7 +4176,7 @@ msgstr ""
 msgid "Bounce email received after attempting contact too many times an alias."
 msgstr "ได้รับอีเมลตีกลับหลังจากพยายามติดต่อด้วยชื่อหลายครั้งเกินไป"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:320
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:329
 msgid ""
 "To change the default behavior, enable :ref:`developer-mode`, then go "
 "to :menuselection:`Settings --> Technical --> Parameters: System Parameters` "
@@ -4172,7 +4186,7 @@ msgstr ""
 "จากนั้นไปที่ :menuselection:`การตั้งค่า --> ทางเทคนิค --> พารามิเตอร์: พารามิเตอร์ระบบ` "
 "เพื่อเพิ่มพารามิเตอร์สองตัว"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:323
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:332
 msgid ""
 "For the first parameter, enter `mail.gateway.loop.minutes` as "
 "the :guilabel:`Key` and choose a number of minutes as the :guilabel:`Value` "
@@ -4181,7 +4195,7 @@ msgstr ""
 "สำหรับพารามิเตอร์แรก ให้ป้อน `mail.gateway.loop.minutes` เป็น :guilabel:`คีย์` "
 "และเลือกจำนวนนาทีเป็น :guilabel:`ค่า` (`120` เป็นพฤติกรรมเริ่มต้น)"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:325
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:334
 msgid ""
 "For the second parameter, enter `mail.gateway.loop.threshold` as "
 "the :guilabel:`Key` and choose a number of emails as the :guilabel:`Value` "
@@ -4190,11 +4204,11 @@ msgstr ""
 "สำหรับพารามิเตอร์ที่สอง ให้ป้อน `mail.gateway.loop.threshold` เป็น :guilabel:`คีย์` "
 "และเลือกจำนวนอีเมลเป็น :guilabel:`ค่า` (`20` เป็นพฤติกรรมเริ่มต้น)"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:329
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:338
 msgid "Allow alias domain system parameter"
 msgstr "อนุญาติพารามิเตอร์ระบบโดเมนนามแฝง"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:331
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:340
 msgid ""
 "Incoming aliases are set in the Odoo database to create records by receiving "
 "incoming emails. To view aliases set in the Odoo database, first activate "
@@ -4202,7 +4216,7 @@ msgid ""
 "to :menuselection:`Settings app --> Technical --> Aliases`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:335
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:344
 msgid ""
 "The following system parameter, `mail.catchall.domain.allowed`, set with "
 "allowed alias domain values, separated by commas, filters out correctly "
@@ -4211,7 +4225,7 @@ msgid ""
 "email addresses with only the prefix alias, not the domain, are present."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:340
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:349
 msgid ""
 "In some instances, matches have been made in the Odoo database when an email "
 "is received with the same alias prefix and a different domain on the "
@@ -4222,7 +4236,7 @@ msgstr ""
 "เมื่อได้รับอีเมลที่มีคำนำหน้านามแฝงเดียวกันและโดเมนที่แตกต่างกันในที่อยู่อีเมลขาเข้า "
 "สิ่งนี้เป็นจริงในที่อยู่อีเมลผู้ส่ง ผู้รับ และ :abbr:`CC (สำเนาคาร์บอน)` ของอีเมลขาเข้า"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:345
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:354
 msgid ""
 "When Odoo receives emails with the `commercial` prefix alias in the sender, "
 "recipient, or :abbr:`CC (Carbon Copy)` email addresses (e.g. "
@@ -4231,7 +4245,7 @@ msgid ""
 "lead/opportunity/etc."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:350
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:359
 msgid ""
 "To add the `mail.catchall.domain.allowed` system parameter, first, activate "
 "the :ref:`developer mode <developer-mode>`. Then, go "
@@ -4240,7 +4254,7 @@ msgid ""
 "the :guilabel:`Key` field."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:354
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:363
 msgid ""
 "Next, for the :guilabel:`Value` field, add the domains separated by commas. "
 "Manually :icon:`fa-cloud-upload` :guilabel:`(Save)`, and the system "
@@ -4251,11 +4265,11 @@ msgstr ""
 msgid "mail.catchall.domain.allowed system parameter set."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:361
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:370
 msgid "Local-part based incoming detection"
 msgstr "การตรวจจับขาเข้าตามชิ้นส่วนในพื้นที่"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:363
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:372
 msgid ""
 "When creating a new alias, there is an option to enable :guilabel:`Local-"
 "part based incoming detection`. If enabled, Odoo only requires the local-"
@@ -10183,7 +10197,7 @@ msgstr ""
 #: ../../content/applications/general/iot/devices/scale.rst:10
 msgid ""
 "To connect a scale to the IoT system, use a USB cable. In some cases, you "
-"may need a serial-to-US adapter to complete the connection. If the scale is "
+"may need a serial-to-USB adapter to complete the connection. If the scale is "
 "`compatible with an IoT system <https://www.odoo.com/page/iot-hardware>`_, "
 "no additional setup is required; the scale is automatically detected as soon "
 "as it is connected. If the scale is not detected, reboot the IoT box "
