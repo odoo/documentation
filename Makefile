@@ -13,6 +13,10 @@ ifndef CURRENT_LANG
   CURRENT_LANG = en
 endif
 
+ifndef EXPORT_PATH
+  EXPORT_PATH = locale/sources
+endif
+
 SPHINX_BUILD   = sphinx-build
 CONFIG_DIR     = .
 SPHINXOPTS     = -D project_root=$(ROOT) -D canonical_version=$(CANONICAL_VERSION) \
@@ -69,7 +73,7 @@ latexpdf:
 
 gettext:
 	@echo "Generating translatable files..."
-	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b gettext $(SOURCE_DIR) locale/sources
+	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b gettext $(SOURCE_DIR) $(EXPORT_PATH)
 	@echo "Generation finished."
 
 $(HTML_BUILD_DIR)/_static/style.css: extensions/odoo_theme/static/style.scss extensions/odoo_theme/static/scss/*.scss
