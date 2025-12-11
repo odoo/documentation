@@ -10,6 +10,10 @@ customer transactions through several `physical terminals
    - The Odoo Pine Labs module is only available for Indian companies.
    - Pine Labs terminals accept credit/debit cards (Visa, MasterCard, and RuPay) and UPI QR codes
      by swiping, scanning, or tapping.
+   - When an Odoo database is hosted outside India, Pine Labs requires a proxy to operate, as its
+     services only accept traffic from Indian IP addresses. A proxy ensures the connection is
+     routed through India for better integration. To activate a proxy on an Odoo Online or Odoo.sh
+     database, `reach out to Odoo support <https://www.odoo.com/help>`_.
 
 .. _pos/pine-labs/credentials:
 
