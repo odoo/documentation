@@ -30,7 +30,7 @@ it into your browser.
 
 .. tabs::
 
-   .. tab:: Windows 10 & Linux OS
+   .. tab:: Windows 10/11 & Linux OS
 
       .. tabs::
 
@@ -126,14 +126,15 @@ it into your browser.
                   #. click :guilabel:`Finish`, accept the pop-up security window;
                   #. restart the computer to make sure that the changes are applied.
 
-               .. tab:: Linux
+               .. tab:: Windows 11 & Linux
 
                   If you are using **Google Chrome**,
 
                   #. open Chrome;
                   #. go to :menuselection:`Settings --> Privacy and security --> Security -->
                      Manage certificates`;
-                  #. go to the :guilabel:`Authorities` tab, click :guilabel:`Import`, and select
+                  #. go to the :guilabel:`Local certificates` tab and then :guilabel:`Installed by you`;
+                  #. under :guilabel:`Trusted Certificates` click :guilabel:`Import`, and select
                      the exported certification file;
                   #. accept all warnings;
                   #. click :guilabel:`ok`;
@@ -145,8 +146,11 @@ it into your browser.
                   #. open Firefox;
                   #. go to :menuselection:`Settings --> Privacy & Security --> Security --> View
                      Certificates... --> Import`;
-                  #. select the exported certification file;
-                  #. tick the checkboxes and validate;
+                  #. in the pop-up window, open the :guilabel:`Servers` tab;
+                  #. click :guilabel:`Add Exception...`;
+                  #. enter the printer's IP address in the :guilabel:`Location` field and
+                     click :guilabel:`Get Certificate`;
+                  #. tick the :guilabel:`Permanently store this exception` checkbox and confirm;
                   #. restart your browser.
 
    .. tab:: Mac OS
