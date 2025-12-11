@@ -5,11 +5,10 @@ Digest emails
 *Digest Emails* are periodic snapshots sent via email to users in an organization that include
 high-level information about how the business is performing.
 
-To start sending digest emails, begin by navigating to :menuselection:`Settings app --> Statistics
+To start sending digest emails, begin by navigating to :menuselection:`Settings app --> Emails
 section`, activate the :guilabel:`Digest Emails` feature, and click :guilabel:`Save`.
 
-.. image:: digest_emails/digest-email-settings.png
-   :align: center
+.. image:: digest_emails/digest-email-settings-screenshot.png
    :alt: Digest Emails section inside General Settings.
 
 A variety of settings can be configured for digest emails, such as:
@@ -29,8 +28,8 @@ A variety of settings can be configured for digest emails, such as:
    When creating duplicates of databases that have sending capabilities (not testing-mode), the
    digest emails continue to send from the duplicate database, unless deactivated.
 
-   To deactivate the digest email, navigate to :menuselection:`Settings --> Statistics section`.
-   Then, deactivate the :guilabel:`Digest Emails` feature, by un-ticking the checkbox, and clicking
+   To deactivate the digest email, navigate to :menuselection:`Settings --> Emails section`. Then,
+   deactivate the :guilabel:`Digest Emails` feature, by un-ticking the checkbox, and clicking
    :guilabel:`Save`. See the section on :ref:`digest-emails/deactivate`.
 
 .. _digest-emails/customize-digest:
@@ -39,8 +38,8 @@ Customize default digest email
 ==============================
 
 To customize the default digest email (*Your Odoo Periodic Digest*), go to :menuselection:`Settings
-app --> Statistics section --> Digest Email field`. Then, select :guilabel:`Your Odoo Periodic
-Digest`, and click on the :guilabel:`↗️ (External link)` icon, next to the drop-down menu selection.
+app --> Emails section --> Digest Email field`. Then, select :guilabel:`Your Odoo Periodic Digest`,
+and click on the :guilabel:`↗️ (External link)` icon, next to the drop-down menu selection.
 
 A pop-up window appears, and presents a variety of editable settings, which include:
 
@@ -59,8 +58,7 @@ A pop-up window appears, and presents a variety of editable settings, which incl
    costs to the database subscription are incurred should *Studio* need to be installed. See this
    section on :ref:`digest-emails/custom-kpi`.
 
-.. image:: digest_emails/periodic-digest.png
-   :align: center
+.. image:: digest_emails/periodic-digest-screenshot.png
    :alt: Customize default Digest Email settings and custom KPIs.
 
 .. _digest-emails/deactivate:
@@ -69,19 +67,16 @@ Deactivate digest email
 =======================
 
 To manually deactivate an individual digest email, first navigate to :menuselection:`Settings app
---> Statistics section`, and click :guilabel:`Configure Digest Emails`. Then, select the desired
-digest email from the list that should be deactivated.
+--> Emails section`, and click :guilabel:`Configure Digest Emails`. Then, select the desired digest
+email from the list that should be deactivated. Then, click :guilabel:`Deactivate`.
 
-Next, click :guilabel:`DEACTIVATE FOR EVERYONE` to deactivate the digest email for everyone, or
-:guilabel:`UNSUBSCRIBE ME` to remove the logged in user from the mailing list. These buttons are
-located in the top menu, just above the :guilabel:`Digest Name`.
 
 Manually send digest email
 ==========================
 
-To manually send a digest email, first navigate to :menuselection:`Settings app --> Statistics
-section`, and click :guilabel:`Configure Digest Emails`. Then, select the desired digest email, and
-click :guilabel:`SEND NOW`. This button is located in the top menu, just above the :guilabel:`Digest
+To manually send a digest email, first navigate to :menuselection:`Settings app --> Emails section`,
+and click :guilabel:`Configure Digest Emails`. Then, select the desired digest email, and click
+:guilabel:`SEND NOW`. This button is located in the top menu, just above the :guilabel:`Digest
 Name`.
 
 .. _digest-emails/kpis:
@@ -92,8 +87,8 @@ KPIs
 Pre-configured :abbr:`KPIs (key performance indicators)` can be added to the digest email from the
 :guilabel:`KPIs` tab of the digest email template form.
 
-First, navigate to :menuselection:`Settings app --> Statistics section`, and click
-:guilabel:`Configure Digest Emails`.
+First, navigate to :menuselection:`Settings app --> Emails section`, and click :guilabel:`Configure
+Digest Emails`.
 
 Then, select the desired digest email, and open the :guilabel:`KPIs` tab.
 
@@ -104,42 +99,45 @@ are added (or deselected), click :guilabel:`Save`.
 The following :abbr:`KPIs (key performance indicators)` are available in the :guilabel:`KPIs` tab on
 a digest email template form out-of-box in Odoo:
 
-.. image:: digest_emails/oob-kpis.png
-   :align: right
-   :alt: KPIs listed in the out-of-box digest email.
-
 :guilabel:`General`
    - :guilabel:`Connected Users`
    - :guilabel:`Messages`
 
+:guilabel:`CRM`
+   - :guilabel:`New Leads`
+   - :guilabel:`Opportunities Won`
+
 :guilabel:`Project`
    - :guilabel:`Open Tasks`
 
-:guilabel:`Recruitment`
-   - :guilabel:`Employees`
-
-:guilabel:`CRM`
-   - :guilabel:`New Leads/Opportunities`
-   - :guilabel:`Opportunities Won`
-
-:guilabel:`Sales`
-   - :guilabel:`All Sales`
-   - :guilabel:`eCommerce Sales`
-
-:guilabel:`Point of Sale`
-   - :guilabel:`POS Sales`
+:guilabel:`Helpdesk`
+   - :guilabel:`Tickets Closed`
 
 :guilabel:`Live Chat`
    - :guilabel:`% of Happiness`
    - :guilabel:`Conversations handled`
    - :guilabel:`Time to answer (sec)`
 
-:guilabel:`Helpdesk`
-   - :guilabel:`Tickets Closed`
+:guilabel:`Sales`
+   - :guilabel:`All Sales`
+   - :guilabel:`eCommerce Sales`
+
+:guilabel:`Sales`
+   - :guilabel:`All Sales`
+   - :guilabel:`eCommerce Sales`
 
 :guilabel:`Invoicing`
    - :guilabel:`Revenue`
    - :guilabel:`Banks and Cash Moves`
+
+
+:guilabel:`Point of Sale`
+   - :guilabel:`POS Sales`
+
+:guilabel:`Recruitment`
+   - :guilabel:`Employees`
+
+:guilabel:`Custom`
 
 .. _digest-emails/recipients:
 
@@ -149,18 +147,18 @@ Recipients
 Digest email recipients are added from the :guilabel:`Recipients` tab of the digest email template
 form.
 
-To add a recipient, navigate to :menuselection:`Settings app --> Statistics section`, and click
+To add a recipient, navigate to :menuselection:`Settings app --> Emails section`, and click
 :guilabel:`Configure Digest Emails`. Then, select the desired digest email, and open the
 :guilabel:`Recipients` tab.
 
-To add a recipient, click :guilabel:`Add a line`, and an :guilabel:`Add Recipients` pop-up window
+To add a recipient, click :guilabel:`Add a line`, and an :guilabel:`Add: Recipients` pop-up window
 appears, with all available users to add as recipients.
 
 From the pop-up window, tick the checkbox next to the :guilabel:`Name` of the user(s), and click the
 :guilabel:`Select` button.
 
-To remove a user as a recipient, click the :guilabel:`❌ (remove)` icon to the far-right of the user
-listed in the :guilabel:`Recipients` tab.
+To remove a user as a recipient, click the :icon:`fa-times` :guilabel:`(cancel)` icon to the
+far-right of the user listed in the :guilabel:`Recipients` tab.
 
 Click :guilabel:`Save` to implement the changes.
 
@@ -169,9 +167,8 @@ Click :guilabel:`Save` to implement the changes.
 Create digest emails
 ====================
 
-To create a new digest email, navigate to :menuselection:`Settings app --> Statistics section`, and
-click :guilabel:`Configure Digest Emails`. Then, click :guilabel:`Create` to create a new digest
-email.
+To create a new digest email, navigate to :menuselection:`Settings app --> Emails section`, and
+click :guilabel:`Configure Digest Emails`. Then, click :guilabel:`New` to create a new digest email.
 
 A separate page, with a blank digest email template appears, and presents a variety of editable
 settings, including:
@@ -186,12 +183,11 @@ settings, including:
 - :guilabel:`Recipients` tab: add/remove users who receive the digest emails. See the section on
   :ref:`digest-emails/recipients`.
 
-From there, give the digest email a :guilabel:`Digest Name`, specify :guilabel:`Periodicity`,
-choose the desired :abbr:`KPIs (key performance indicators)`, and add :guilabel:`Recipients`, as
-needed.
+From there, give the digest email a :guilabel:`Digest Name`, specify :guilabel:`Periodicity`, choose
+the desired :abbr:`KPIs (key performance indicators)`, and add :guilabel:`Recipients`, as needed.
 
 After clicking :guilabel:`Save`, the new custom digest email is available as a selection in the
-:guilabel:`Digest Email` field, located in the :menuselection:`Settings app --> Statistics section`.
+:guilabel:`Digest Email` field, located in the :menuselection:`Settings app --> Emails section`.
 
 .. _digest-emails/custom-kpi:
 
@@ -219,11 +215,6 @@ In order to create additional fields, create two fields on the digest object:
    Here is the `source code
    <https://github.com/odoo/odoo/blob/15.0/addons/digest/models/digest.py>`_ for the `digest.py`
    file, which guides the programmer in the coding of the computed field.
-
-.. seealso::
-   Users can also click the :guilabel:`Recipients` tab, and then the vertical three-dot
-   :guilabel:`(kebab)` menu to edit this view. Either click :guilabel:`EDIT LIST VIEW` or
-   :guilabel:`EDIT FORM VIEW` to modify this tab.
 
 Computed values reference table
 -------------------------------
