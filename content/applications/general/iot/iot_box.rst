@@ -14,6 +14,11 @@ To start using an IoT box:
    Devices can also be connected after the IoT box is added to the network and/or connected to the
    database; however, a reboot of the IoT box might be required.
 
+.. important::
+   Never make the IoT box accessible from the public Internet.
+   IoT systems are designed to provide your database with access to devices on your local network.
+   Exposing them to the public Internet would create a **security risk**.
+
 .. _iot/iot_box/network:
 
 Network connection
