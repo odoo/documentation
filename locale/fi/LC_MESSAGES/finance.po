@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-19 09:34+0100\n"
+"POT-Creation-Date: 2025-12-11 10:43+0100\n"
 "PO-Revision-Date: 2025-11-19 20:21+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Finnish <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -707,7 +707,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:8
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:252
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:443
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:601
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:613
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:212
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:473
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:666
@@ -725,7 +725,6 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:719
 #: ../../content/applications/finance/fiscal_localizations/jordan.rst:104
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:8
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:6
 #: ../../content/applications/finance/fiscal_localizations/malaysia.rst:10
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:856
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1267
@@ -749,13 +748,10 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:46
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:61
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:240
-#: ../../content/applications/finance/payment_providers/adyen.rst:17
 #: ../../content/applications/finance/payment_providers/authorize.rst:9
 #: ../../content/applications/finance/payment_providers/authorize.rst:62
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:79
 #: ../../content/applications/finance/payment_providers/demo.rst:9
-#: ../../content/applications/finance/payment_providers/mollie.rst:8
-#: ../../content/applications/finance/payment_providers/sdd.rst:27
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:27
 msgid "Configuration"
 msgstr "Asetukset"
 
@@ -3114,6 +3110,7 @@ msgid ":ref:`accounting/invoice/confirmation`"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:20
+#: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:52
 msgid ":ref:`accounting/invoice/sending`"
 msgstr ""
 
@@ -3293,7 +3290,9 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:111
-msgid "Click :guilabel:`Print & Send`."
+#: ../../content/applications/finance/fiscal_localizations/france.rst:148
+#: ../../content/applications/finance/fiscal_localizations/jordan.rst:180
+msgid "Click :guilabel:`Send`."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:112
@@ -3317,7 +3316,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:123
-msgid "In the :guilabel:`Print & Send` window:"
+msgid "In the :guilabel:`Send` window:"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:125
@@ -3334,8 +3333,8 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:130
 msgid ""
-"Click :guilabel:`Print & Send` if the :guilabel:`by Email` option is "
-"selected, or click :guilabel:`Print`."
+"Click :guilabel:`Send` if the :guilabel:`by Email` option is selected, or "
+"click :guilabel:`Download`."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:136
@@ -3346,9 +3345,8 @@ msgstr ""
 msgid ""
 "To send and print multiple invoices, go to :menuselection:`Accounting --> "
 "Customers --> Invoices`, select them in the :guilabel:`Invoices` list view "
-"and click :guilabel:`Print & Send`. The :guilabel:`Print & Send` window "
-"displays the selected invoice sending methods based on the preferred method "
-"set."
+"and click :guilabel:`Send`. The :guilabel:`Send` window displays the "
+"selected invoice sending methods based on the preferred method set."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:143
@@ -4682,7 +4680,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing.rst:210
 #: ../../content/applications/finance/fiscal_localizations/jordan.rst:135
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:130
-#: ../../content/applications/finance/payment_providers/iyzico.rst:19
+#: ../../content/applications/finance/payment_providers/iyzico.rst:20
 msgid "Click :guilabel:`Save`."
 msgstr ""
 
@@ -8199,6 +8197,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting/customer_invoices/sequence.rst:51
 #: ../../content/applications/finance/accounting/get_started/consolidation.rst:104
 #: ../../content/applications/finance/accounting/vendor_bills/sequence.rst:52
+#: ../../content/applications/finance/payment_providers.rst:306
 msgid "Activate the :ref:`developer mode <developer-mode>`."
 msgstr ""
 
@@ -8311,87 +8310,94 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:14
 msgid ""
-"Go to :menuselection:`Accounting --> Configuration --> Settings --> Customer "
-"invoices` section to activate :guilabel:`Snailmail`."
+"Go to :menuselection:`Accounting --> Configuration --> Settings` and scroll "
+"down to the :guilabel:`Customer Invoices` section to "
+"activate :guilabel:`Snailmail`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:17
+#: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:18
 msgid ""
-"To make it a by-default feature, select :guilabel:`Send by Post` in "
-"the :guilabel:`Default Sending Options` section."
+"Set a preferred :ref:`invoice sending <accounting/invoice/sending>` method "
+"in the :guilabel:`Accounting` tab of a contact to use it by default."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:-1
-msgid "Under settings enable the snailmail feature in Odoo Accounting"
+#: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:22
+msgid "Sending invoices by post"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:25
-msgid "Send invoices by post"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:27
+#: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:24
 msgid ""
-"Open your invoice, click on :guilabel:`Send & Print` and "
-"select :guilabel:`Send by Post`. Make sure your customer’s address is set "
-"correctly, including the country, before sending the letter."
+"In the invoice form view, ensure the :guilabel:`Customer` address is correct "
+"and has the country set. Click :guilabel:`Send`, select :guilabel:`by Post`, "
+"then :guilabel:`Send` the letter."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:28
+msgid "Documents sent via snailmail must respect the following rules:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:30
+msgid "The paper format must be **A4**."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:31
 msgid ""
-"Your document must respect the following rules to pass the validation before "
-"being sent:"
+"Margins must be at least **5 mm** on all sides. To configure margins, "
+"activate the :ref:`developer mode <developer-mode>` and go "
+"to :menuselection:`Settings --> Technical --> Paper Format`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:33
+#: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:34
 msgid ""
-"Margins must be **5 mm** on all sides. As Odoo forces the outer margins by "
-"filling them with white before sending the snailmail, it can results in the "
-"user's custom being cut off if it protrudes into the margins. To check the "
-"margins, activate the :ref:`developer mode <developer-mode>`, go "
-"to :menuselection:`General Settings --> Technical --> Reporting section: "
-"Paper Format`."
+"A square of **15mm by 15mm** on the bottom left corner must remain clear."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:38
+#: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:35
 msgid ""
-"A square of **15mm by 15mm** on the bottom left corner has to stay clear."
+"Odoo fills these areas with white before sending the letter; any overflowing "
+"content will be cut."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:37
+msgid ""
+"The **postage area** must remain clear (download the :download:`snailmail "
+"PDF template <snailmail/snailmail-template.pdf>` for details)."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:39
 msgid ""
-"The postage area has to stay clear (:download:`download the snailmail PDF "
-"template <snailmail/snailmail-template.pdf>` for more details)."
+"Pingen (Odoo's snailmail service provider) scans the **address area** to "
+"obtain the address. Any text outside the address area is not considered part "
+"of the address."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:41
-msgid ""
-"Pingen (Odoo Snailmail service provider) scans the area to process the "
-"address, so if something gets written outside the area, it is not counted as "
-"part of the address."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:45
+#: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:43
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:199
 msgid "Pricing"
 msgstr "Hinnoittelu"
 
-#: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:47
+#: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:45
 msgid ""
 "Snailmail is an :doc:`/applications/essentials/in_app_purchase` service that "
-"requires prepaid stamps (=credits) to work. Sending one document consumes "
-"one stamp."
+"requires prepaid stamps (credits) to work. Sending one document consumes one "
+"stamp."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:50
+#: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:48
 msgid ""
 "To buy stamps, go to :menuselection:`Accounting --> Configuration --> "
-"Settings --> Customer invoices: Snailmail`, click on :guilabel:`Buy "
-"credits`, or go to :menuselection:`Settings --> In-App Purchases: Odoo IAP`, "
-"and click on :guilabel:`View my Services`."
+"Settings`, scroll down to the :guilabel:`Snailmail` section, and "
+"click :guilabel:`Buy credits`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:55
+#: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:53
 msgid "`Odoo's IAP Privacy Policy <https://iap.odoo.com/privacy#header_4>`_"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:54
+msgid ""
+"`Pingen's layout requirements <https://help.pingen.com/en/templates-and-"
+"postal-requirements/ letter-standards>`_"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices/terms_conditions.rst:3
@@ -8616,6 +8622,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:131
 #: ../../content/applications/finance/fiscal_localizations/guatemala.rst:206
 #: ../../content/applications/finance/fiscal_localizations/jordan.rst:60
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:57
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:208
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:128
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:300
@@ -9871,7 +9878,7 @@ msgstr "Tilityypit"
 #: ../../content/applications/finance/fiscal_localizations/indonesia.rst:18
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:19
 #: ../../content/applications/finance/fiscal_localizations/jordan.rst:18
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:16
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:17
 #: ../../content/applications/finance/fiscal_localizations/malaysia.rst:25
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:29
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:62
@@ -10123,22 +10130,22 @@ msgid ""
 "applied when this account is chosen for a product sale or purchase."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:119
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:121
 msgid "Tags"
 msgstr "Tunnisteet"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:121
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:123
 msgid ""
 "Some accounting reports require **tags** to be set on the relevant accounts. "
 "To add a tag, under :guilabel:`View`, click the :guilabel:`Tags` field and "
 "select an existing tag or :guilabel:`Create` a new one."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:126
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:128
 msgid "Account groups"
 msgstr "Tiliryhmät"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:128
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:130
 msgid ""
 "**Account groups** are useful to list multiple accounts as *sub-accounts* of "
 "a bigger account and thus consolidate reports such as the **Trial Balance**. "
@@ -10148,17 +10155,17 @@ msgid ""
 "the :guilabel:`Group` field under :guilabel:`View`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:135
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:137
 msgid "Create account groups manually"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:138
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:140
 msgid ""
 "Regular users should not need to create account groups manually. The "
 "following section is only intended for rare and advanced use cases."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:141
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:143
 msgid ""
 "To create a new account group, activate :ref:`developer mode <developer-"
 "mode>` and head to :menuselection:`Accounting --> Configuration --> Account "
@@ -10172,7 +10179,7 @@ msgstr ""
 msgid "Account groups creation."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:149
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:151
 msgid ""
 "To display your **Trial Balance** report with your account groups, go "
 "to :menuselection:`Accounting --> Reporting --> Trial Balance`, then open "
@@ -10183,11 +10190,11 @@ msgstr ""
 msgid "Account Groups in the Trial Balance in Odoo Accounting"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:157
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:159
 msgid "Allow reconciliation"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:159
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:161
 msgid ""
 "To keep the reconciliation process simple, when reconciling a bank, cash, or "
 "credit card transaction with an existing journal item, only journal items "
@@ -10195,18 +10202,18 @@ msgid ""
 "option enabled are displayed as possible matches."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:163
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:165
 msgid ""
 "To enable this option on an account, tick the :guilabel:`Allow "
 "Reconciliation` checkbox in the account's settings, and :guilabel:`Save`; or "
 "enable the button from the chart of accounts view."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:169
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:171
 msgid "Shared Accounts"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:171
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:173
 msgid ""
 "The **Shared Accounts** feature allows the creation of a single account for "
 "a specific purpose and sharing it between multiple companies. It is "
@@ -10214,11 +10221,11 @@ msgid ""
 "might be used across different companies."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:176
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:178
 msgid "Deprecated"
 msgstr "Vanhentunut"
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:178
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:180
 msgid ""
 "It is not possible to delete an account once a transaction has been recorded "
 "on it. You can make them unusable by using the **Deprecated** feature: check "
@@ -10226,36 +10233,36 @@ msgid ""
 "and :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:183
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:185
 msgid ":doc:`cheat_sheet`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:184
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:186
 msgid ":doc:`../vendor_bills/assets`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:185
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:187
 msgid ":doc:`../vendor_bills/deferred_expenses`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:186
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:188
 msgid ":doc:`../customer_invoices/deferred_revenues`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:187
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:189
 #: ../../content/applications/finance/accounting/reporting/tax_returns.rst:17
 #: ../../content/applications/finance/accounting/taxes/avatax.rst:126
 #: ../../content/applications/finance/accounting/taxes/eu_distance_selling.rst:38
 msgid ":doc:`../../fiscal_localizations`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:188
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:190
 msgid ""
 "`Odoo Tutorials: Chart of accounts <https://www.odoo.com/slides/slide/chart-"
 "of-accounts-6834>`_"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:189
+#: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:191
 msgid ""
 "`Odoo Tutorials: Update your chart of accounts <https://www.odoo.com/slides/"
 "slide/update-your-chart-of-accounts-6391>`_"
@@ -11893,7 +11900,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments.rst:26
-#: ../../content/applications/finance/payment_providers.rst:253
+#: ../../content/applications/finance/payment_providers.rst:269
 #: ../../content/applications/finance/payment_providers/nuvei.rst:51
 msgid "Payment methods"
 msgstr "Maksutavat"
@@ -12707,8 +12714,8 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:84
 msgid ""
-"|sdd| mandates are created automatically for :doc:`online payments made with "
-"SDD <../../payment_providers/sdd>`."
+"|sdd| mandates are created automatically for :ref:`online payments made with "
+"SDD <payment_providers/bank_payments/sdd>`."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:87
@@ -12716,7 +12723,8 @@ msgid ""
 "Once an |sdd| mandate is active, subsequent |sdd| payments can be generated "
 "via Odoo and :ref:`uploaded to your online banking interface <accounting/"
 "batch_sdd/XML>`. Customers with an active |sdd| mandate can also use this "
-"payment method for :doc:`online purchases <../../payment_providers/sdd>`."
+"payment method for :ref:`online purchases <payment_providers/bank_payments/"
+"sdd>`."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:95
@@ -12811,7 +12819,8 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:142
 msgid ""
-":doc:`SEPA Direct Debit for online payments <../../payment_providers/sdd>`"
+":ref:`SEPA Direct Debit for online payments <payment_providers/bank_payments/"
+"sdd>`"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:143
@@ -13345,8 +13354,8 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/online.rst:22
 msgid ""
-"By default, \":doc:`Wire Transfer </applications/finance/payment_providers/"
-"wire_transfer>`\" is the only payment provider activated, but you still have "
+"By default, :ref:`Wire Transfer <payment_providers/bank_payments/"
+"wire_transfer>` is the only payment provider activated, but you still have "
 "to fill out the payment details."
 msgstr ""
 
@@ -18251,7 +18260,11 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes/avatax.rst:109
+#: ../../content/applications/finance/payment_providers/adyen.rst:53
+#: ../../content/applications/finance/payment_providers/iyzico.rst:25
+#: ../../content/applications/finance/payment_providers/mollie.rst:23
 #: ../../content/applications/finance/payment_providers/razorpay.rst:68
+#: ../../content/applications/finance/payment_providers/stripe.rst:75
 msgid "Odoo configuration"
 msgstr ""
 
@@ -18352,7 +18365,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/indonesia.rst:16
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:17
 #: ../../content/applications/finance/fiscal_localizations/jordan.rst:16
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:14
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:15
 #: ../../content/applications/finance/fiscal_localizations/malaysia.rst:23
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:27
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:60
@@ -18386,7 +18399,7 @@ msgstr "Nimi"
 #: ../../content/applications/finance/fiscal_localizations/indonesia.rst:17
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:18
 #: ../../content/applications/finance/fiscal_localizations/jordan.rst:17
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:15
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:16
 #: ../../content/applications/finance/fiscal_localizations/malaysia.rst:24
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:28
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:61
@@ -22479,7 +22492,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/expenses/expense_cards.rst:29
-#: ../../content/applications/finance/payment_providers.rst:404
+#: ../../content/applications/finance/payment_providers.rst:423
 msgid "Availability"
 msgstr "Saatavuus"
 
@@ -25338,9 +25351,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:10
-msgid ""
-"`Webinar - Localización de Argentina <https://www.youtube.com/watch?v=_H1HbU-"
-"wKVg>`_."
+msgid "`Webinar - Localización de Argentina <https://youtu.be/S5xlANeXja0>`_."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:11
@@ -27460,6 +27471,7 @@ msgstr "Australia"
 #: ../../content/applications/finance/fiscal_localizations/france.rst:8
 #: ../../content/applications/finance/fiscal_localizations/indonesia.rst:8
 #: ../../content/applications/finance/fiscal_localizations/jordan.rst:8
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:8
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:19
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:8
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:13
@@ -28154,6 +28166,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:370
 #: ../../content/applications/finance/fiscal_localizations/indonesia.rst:99
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:154
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:72
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:186
 msgid "E-invoicing"
 msgstr ""
@@ -29097,7 +29110,7 @@ msgid ":doc:`Taxes <../accounting/taxes>`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:84
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:54
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:249
 msgid ":doc:`../accounting/reporting/tax_returns`"
 msgstr ""
 
@@ -29758,57 +29771,75 @@ msgid ""
 "<belgium/codaclean-configuration-journal>` ."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:502
-#: ../../content/applications/finance/fiscal_localizations/malaysia.rst:148
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:362
-#: ../../content/applications/finance/fiscal_localizations/mexico.rst:425
-msgid "Electronic invoicing"
-msgstr "Sähköinen laskutus"
-
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:504
+msgid "Electronic invoicing with Peppol"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:506
 msgid ""
-"Odoo supports the **Peppol BIS Billing 3.0 (UBL)** electronic invoicing "
-"format. To enable it for a customer, go to :menuselection:`Accounting --> "
-"Customers --> Customers`, open their contact form, and under "
-"the :guilabel:`Accounting` tab, select the :guilabel:`Peppol BIS Billing "
-"3.0` format."
+"As of 1 January 2026, all Belgian companies must be registered on the Peppol "
+"network to send and receive electronic invoices."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:509
-#: ../../content/applications/finance/fiscal_localizations/ecuador.rst:302
-msgid ":doc:`../accounting/customer_invoices/electronic_invoicing`"
+msgid ""
+"To activate Peppol, refer to the :ref:`Peppol documentation <accounting/e-"
+"invoicing/peppol>`, ensuring during :ref:`registration <accounting/e-"
+"invoicing/peppol-registration>` that:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:512
+msgid ""
+"The :guilabel:`Peppol EAS` field is set to :guilabel:`0208 - Numero "
+"d'entreprise / ondernemingsnummer / Unternehmensnummer`."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:514
+msgid ""
+"the :guilabel:`Peppol Endpoint` field is set to the company registry number."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:516
+msgid ""
+"In addition, when veryfing that a customer is :ref:`registered as a Peppol "
+"participant <accounting/e-invoicing/contact-verification>`, ensure "
+"the :guilabel:`Format` field is set to :guilabel:`BIS Billing 3.0`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:521
+msgid ":ref:`Peppol documentation <accounting/e-invoicing/peppol>`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:526
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:257
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:394
 msgid "Cash discount"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:516
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:528
 msgid ""
 "In Belgium, if an early payment discount is offered on an invoice, the tax "
 "is calculated based on the discounted total amount, whether the customer "
 "benefits from the discount or not."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:519
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:531
 msgid ""
 "To apply the right tax amount and report it correctly in your VAT return, "
 "set the tax reduction as :guilabel:`Always (upon invoice)`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:523
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:535
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:263
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:400
 msgid ":doc:`../accounting/customer_invoices/cash_discounts`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:528
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:540
 msgid "Fiscal certification: POS restaurant"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:530
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:542
 msgid ""
 "In Belgium, the owner of a cooking business such as a restaurant or food "
 "truck is required by law to use a government-certified **Cash Register "
@@ -29816,7 +29847,7 @@ msgid ""
 "(excluding VAT, drinks, and take-away food) exceed 25,000 euros."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:534
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:546
 msgid ""
 "This government-certified system entails the use of a :ref:`certified POS "
 "system <belgium/certified-pos>`, along with a device called a :ref:`Fiscal "
@@ -29824,80 +29855,80 @@ msgid ""
 "<belgium/vat>`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:539
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:551
 msgid ""
 "Do not forget to register as *foodservice industry manager* on the `Federal "
 "Public Service Finance registration form <https://"
 "www.systemedecaisseenregistreuse.be/fr/enregistrement>`_."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:545
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:557
 msgid "Certified POS system"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:547
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:559
 msgid ""
 "The Odoo POS system is certified for databases hosted on **Odoo Online**, "
 "**Odoo.sh**, and **On-Premise**."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:551
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:563
 msgid ":doc:`/administration/supported_versions`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:553
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:565
 msgid ""
 "A `certified POS system <https://www.systemedecaisseenregistreuse.be/"
 "systemes-certifies>`_ must adhere to rigorous government regulations, which "
 "means it operates differently from a non-certified POS."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:557
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:569
 msgid "On a certified POS, you cannot:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:559
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:571
 msgid ""
 "Set up and use the **global discounts** feature (the `pos_discount` module "
 "is blacklisted and cannot be activated)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:561
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:573
 msgid ""
 "Set up and use the **loyalty programs** feature (the `pos_loyalty` module is "
 "blacklisted and cannot be activated)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:563
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:575
 msgid ""
 "Reprint receipts (the `pos_reprint` module is blacklisted and cannot be "
 "activated)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:564
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:576
 msgid "Modify prices in order lines."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:565
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:577
 msgid "Modify or delete order lines in POS orders."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:566
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:578
 msgid "Sell products without a valid VAT number."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:567
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:579
 msgid "Use a POS that is not connected to an IoT box."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:569
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:581
 msgid ""
 "The :doc:`cash rounding <../../sales/point_of_sale/pricing/cash_rounding>` "
 "feature must be activated and set to a :guilabel:`Rounding Precision` of "
 "`0,05` and a :guilabel:`Rounding Method` set as :guilabel:`Half-Up`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:572
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:584
 msgid ""
 "Taxes must be set as included in the price. To set it up, go "
 "to :menuselection:`Point of Sale --> Configuration --> Settings`, and from "
@@ -29906,7 +29937,7 @@ msgid ""
 "click :guilabel:`Advanced Options` and enable :guilabel:`Included in Price`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:576
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:588
 msgid ""
 "At the start of a POS session, users must click :guilabel:`Work in` to clock "
 "in. Doing so allows the registration of POS orders. If users are not clocked "
@@ -29914,17 +29945,17 @@ msgid ""
 "Out` to clock out at the end of the session."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:581
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:593
 msgid ""
 "If you configure a POS to work with a :abbr:`FDM (Fiscal Data Module)`, you "
 "cannot use it again without it."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:587
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:599
 msgid "Fiscal Data Module (FDM)"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:589
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:601
 msgid ""
 "An FDM, or **black box**, is a government-certified device that works "
 "together with the Point of Sale application and saves your POS orders "
@@ -29933,7 +29964,7 @@ msgid ""
 "verify that all revenue is declared."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:595
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:607
 msgid ""
 "Only the FDM from **Boîtenoire.be** with the `FDM certificate number BMC04 "
 "<https://www.systemedecaisseenregistreuse.be/fr/systemes-"
@@ -29941,37 +29972,37 @@ msgid ""
 "(GCV BMC) <https://www.boîtenoire.be/contact>`_ to order one."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:603
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:615
 msgid ""
 "Before setting up your database to work with an FDM, ensure you have the "
 "following hardware:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:605
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:617
 msgid "a **Boîtenoire.be** (certificate number BMC04) FDM;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:606
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:618
 msgid "an RS-232 serial null modem cable per FDM;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:607
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:619
 msgid "an RS-232 serial-to-USB adapter per FDM;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:608
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:620
 msgid "an :ref:`IoT Box <belgium/iotbox>` (one IoT box per FDM); and"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:609
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:621
 msgid "a receipt printer."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:614
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:626
 msgid "Black box module"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:616
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:628
 msgid ""
 "As a pre-requisite, :ref:`activate <general/install>` the `Belgian "
 "Registered Cash Register` module (technical name: `pos_blackbox_be`)."
@@ -29981,7 +30012,7 @@ msgstr ""
 msgid "black box modules for belgian fiscal certification"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:622
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:634
 msgid ""
 "Once the module is activated, add your VAT number to your company "
 "information. To set it up, go to :menuselection:`Settings --> Companies --> "
@@ -29996,25 +30027,25 @@ msgstr ""
 msgid "ISNZ or BIS number field on employee form"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:632
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:644
 msgid ""
 "To input your information, click on your avatar, go to :menuselection:`My "
 "Profile --> Preference tab`, and enter your INSZ or BIS number in the "
 "designated field."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:636
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:648
 msgid ""
 "You must configure the :abbr:`FDM (Fiscal Data Module)` directly in the "
 "production database. Utilizing it in a testing environment may result in "
 "incorrect data being stored within the FDM."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:642
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:654
 msgid "IoT Box"
 msgstr "IoT Box"
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:644
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:656
 msgid ""
 "In order to use an :abbr:`FDM (Fiscal Data Module)`, you need a registered "
 "IoT Box. To register your IoT box, you must contact us through our `support "
@@ -30022,19 +30053,19 @@ msgid ""
 "information:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:648
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:660
 msgid "your VAT number;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:649
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:661
 msgid "your company's name, address, and legal structure;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:650
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:662
 msgid "the identifier of your IoT Box."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:652
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:664
 msgid ""
 "Once your IoT box is certified, :doc:`connect <../../general/iot/connect>` "
 "it to your database. To verify that the IoT Box recognizes the FDM, go to "
@@ -30046,7 +30077,7 @@ msgstr ""
 msgid "Hardware status page on a registered IoT Box"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:659
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:671
 msgid ""
 "Then, add the IoT to your POS. To do so, go to :menuselection:`Point of Sale "
 "--> Configuration --> Point of Sale`, select your POS, scroll down to "
@@ -30054,17 +30085,17 @@ msgid ""
 "Lastly, add the FMD in the :guilabel:`Fiscal Data Module` field."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:664
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:676
 msgid ""
 "To be able to use an FDM, you must at least connect one :guilabel:`Receipt "
 "Printer`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:669
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:681
 msgid "VAT signing card"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:671
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:683
 msgid ""
 "When you open a POS session and make your initial transaction, you are "
 "prompted to enter the PIN provided with your :abbr:`VSC (VAT signing card)`. "
@@ -30259,6 +30290,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:91
 #: ../../content/applications/finance/fiscal_localizations/france.rst:48
 #: ../../content/applications/finance/fiscal_localizations/jordan.rst:38
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:37
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:108
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:38
 msgid "Localization overview"
@@ -36213,6 +36245,10 @@ msgid ""
 "invoices."
 msgstr ""
 
+#: ../../content/applications/finance/fiscal_localizations/ecuador.rst:302
+msgid ":doc:`../accounting/customer_invoices/electronic_invoicing`"
+msgstr ""
+
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:307
 msgid "Withholding"
 msgstr ""
@@ -37224,7 +37260,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/egypt.rst:21
 #: ../../content/applications/finance/fiscal_localizations/india.rst:21
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:22
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:19
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:20
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:20
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst:19
 msgid ""
@@ -37337,7 +37373,6 @@ msgstr ""
 #: ../../content/applications/finance/payment_providers/asiapay.rst:34
 #: ../../content/applications/finance/payment_providers/buckaroo.rst:27
 #: ../../content/applications/finance/payment_providers/flutterwave.rst:29
-#: ../../content/applications/finance/payment_providers/iyzico.rst:22
 #: ../../content/applications/finance/payment_providers/mercado_pago.rst:30
 #: ../../content/applications/finance/payment_providers/nuvei.rst:36
 #: ../../content/applications/finance/payment_providers/paymob.rst:38
@@ -37929,11 +37964,6 @@ msgstr ""
 msgid ""
 "Click :guilabel:`Send` and, in the :guilabel:`Send` window, "
 "enable :guilabel:`By Peppol`."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/france.rst:148
-#: ../../content/applications/finance/fiscal_localizations/jordan.rst:180
-msgid "Click :guilabel:`Send`."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/france.rst:150
@@ -40154,11 +40184,11 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/guatemala.rst:142
-#: ../../content/applications/finance/payment_providers.rst:74
-#: ../../content/applications/finance/payment_providers.rst:92
-#: ../../content/applications/finance/payment_providers.rst:140
-#: ../../content/applications/finance/payment_providers.rst:146
-#: ../../content/applications/finance/payment_providers.rst:158
+#: ../../content/applications/finance/payment_providers.rst:76
+#: ../../content/applications/finance/payment_providers.rst:94
+#: ../../content/applications/finance/payment_providers.rst:148
+#: ../../content/applications/finance/payment_providers.rst:154
+#: ../../content/applications/finance/payment_providers.rst:166
 msgid "Odoo"
 msgstr "Odoo"
 
@@ -40836,6 +40866,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/india.rst:124
 #: ../../content/applications/finance/fiscal_localizations/india.rst:279
 #: ../../content/applications/finance/fiscal_localizations/malaysia.rst:131
+#: ../../content/applications/finance/payment_providers/dpo.rst:28
 #: ../../content/applications/finance/payment_providers/paypal.rst:42
 #: ../../content/applications/finance/payment_providers/redsys.rst:35
 msgid "Configuration in Odoo"
@@ -42204,8 +42235,7 @@ msgid "`l10n_it_reports`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:31
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:22
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:25
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:23
 msgid "Country-specific reports"
 msgstr ""
 
@@ -43618,6 +43648,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/jordan.rst:28
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:26
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:30
 msgid ""
 "In some cases, such as when upgrading to a version with additional modules, "
@@ -43693,6 +43724,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/jordan.rst:73
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:84
 msgid "Tax reporting"
 msgstr ""
 
@@ -44757,170 +44789,614 @@ msgid ""
 "number in the :guilabel:`Reversal of` field."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:8
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:10
 msgid ""
-":ref:`Install <general/install>` the following modules to get all the "
-"features of the Luxembourgish localization:"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:17
-msgid ":guilabel:`Luxembourg - Accounting`"
+"The following modules are installed automatically with the Luxembourgish "
+"localization:"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:18
+msgid ":guilabel:`Luxembourg - Accounting`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:19
 msgid "`l10n_lu`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:20
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:21
 msgid ":guilabel:`Luxembourg - Accounting Reports`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:21
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:22
 msgid "`l10n_lu_reports`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:23
-msgid ":guilabel:`Luxembourg - Annual VAT Report`"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:24
-msgid "`l10n_lu_reports_annual_vat`"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:-1
-msgid ""
-"The three modules for the Luxembourgish Fiscal Localization Package on Odoo"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:32
-msgid ""
-"Installing the module :guilabel:`Luxembourg - Accounting Reports` installs "
-"all three modules at once."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:36
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:31
 msgid ""
 ":doc:`Documentation on e-invoicing’s legality and compliance in Luxembourg "
 "<../accounting/customer_invoices/electronic_invoicing/luxembourg>`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:40
-msgid "Standard Chart of Accounts - PCN 2020"
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:39
+msgid "The Luxembourgish localization includes the following features:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:42
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:41
 msgid ""
-"Odoo's :ref:`fiscal localization package <fiscal_localizations/packages>` "
-"for Luxembourg includes the current **Standard Chart of Accounts (PCN "
-"2020)**, effective since January 2020."
+":doc:`../accounting/get_started/chart_of_accounts`: a predefined set of "
+"accounts that follows the current official accounting standards (PCN 2020)"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:46
-msgid "eCDF tax return"
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:43
+msgid ""
+":ref:`localizations/luxembourg/taxes`: pre-configured tax rates, including "
+"standard (17%), reduced (14%, 8%, and 3%) and zero-rated VAT, intra-"
+"community, and zero-rated export taxes"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:45
+msgid ""
+":doc:`../accounting/taxes/fiscal_positions`: automated account and tax "
+"adjustments based on customer or supplier"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:47
+msgid ":ref:`localizations/luxembourg/e-invoicing`: E-invoicing with Peppol"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:48
 msgid ""
-"Tax returns in Luxembourg require a specific XML file to upload on the eCDF."
+":ref:`localizations/luxembourg/tax-reporting`: detailed overview of your VAT "
+"liability, and generation of monthly and annual VAT declarations in XML "
+"format to upload to the :abbr:`eCDF platform (plateforme électronique de "
+"Collecte des Données Financières)`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:50
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:51
 msgid ""
-"To download it, go to :menuselection:`Accounting --> Report --> Audit "
-"Reports --> Tax Report`, and click on :guilabel:`Export eCDF declaration`."
+":ref:`localizations/luxembourg/faia`: generation of audit files in "
+"the :abbr:`FAIA (Fichier d’Audit Informatisé AED)` (Luxembourgish SAF-T) "
+"format"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:55
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:59
+msgid ""
+"The following :doc:`taxes <../accounting/taxes>` are available by default "
+"with the Luxembourgish localization package:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:62
+msgid ""
+"standard VAT (17%): applied to most goods and services within Luxembourg"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:63
+msgid ""
+"reduced VAT (14%, 8%, and 3%): applied to some goods and services within "
+"Luxembourg"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:64
+msgid "zero-rated VAT: applied to goods and services not subject to VAT"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:65
+msgid ""
+"intra-community VAT: applied to goods and services sold to or purchased from "
+"VAT-registered persons located in other EU countries"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:67
+msgid ""
+"export tax (0%): zero-rated tax applied to goods and services exported "
+"outside Luxembourg"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:74
+msgid ""
+"Odoo users in Luxembourg can register on the :ref:`accounting/e-invoicing/"
+"peppol` network, which allows exchanging e-invoices and credit notes with "
+"other participants on the network."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:77
+msgid "The e-invoice format in Luxembourg is **BIS Billing 3.0**."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:79
+msgid ""
+"E-invoicing via Peppol is mandatory for all B2G transactions in Luxembourg."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:86
+msgid ""
+"In Luxembourg, companies must submit a VAT declaration on a monthly, "
+"quarterly, or annual basis to the tax office, depending on their turnover. "
+"Companies that submit a monthly or quarterly declaration are also required "
+"to submit the annual declaration."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:90
+msgid ""
+"Both monthly/quarterly and annual VAT declarations can be exported as XML "
+"files to upload on the :abbr:`eCDF platform (plateforme électronique de "
+"Collecte des Données Financières)`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:94
+msgid "Monthly / quarterly declaration"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:96
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:211
+msgid "Go to :menuselection:`Accounting --> Reporting --> Tax Report`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:98
+msgid ""
+"In the :icon:`fa-book` :guilabel:`Report` selector, select :guilabel:`Tax "
+"Report (LU)`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:100
+msgid ""
+"In the :icon:`fa-calendar` (:guilabel:`Period`) selector, choose the month "
+"or quarter for which to generate the declaration."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:103
+msgid "Check the amounts generated for all four sections of the report."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:105
+msgid ""
+"If you sold to customers under a VAT exemption for SMEs during the period, "
+"you need to manually enter the value of such sales in the editable fields at "
+"section I, items 481 and 482. To find the amounts for these items, you can "
+"use the :guilabel:`Partner Ledger` report:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:109
+msgid "Go to :menuselection:`Accounting --> Reporting --> Partner Ledger`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:110
+msgid ""
+"In the :icon:`fa-calendar` (:guilabel:`Period`) selector, choose the "
+"appropriate month or quarter."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:112
+msgid ""
+"In the :icon:`fa-user` (:guilabel:`Account`) selector, "
+"choose :guilabel:`Receivable`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:113
+msgid ""
+"In the :icon:`fa-folder-open` (:guilabel:`Partners`) selector, choose the "
+"partners that fall under the exemption."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:115
+msgid ""
+"Copy the total :guilabel:`Balance` for those partners for the given period."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:117
+msgid ""
+"Once the declaration is correct, click the :icon:`fa-cog` (:guilabel:`action "
+"menu`) icon, then click :guilabel:`XML` to export and download it in XML "
+"format. You can then submit the XML file on the eCDF platform."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:122
+msgid "Annual declaration"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:127
+msgid "Account tag configuration"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:129
+msgid ""
+"The following configuration allows values to be generated automatically for "
+"sections I and III, and Appendix A of the report, based on journal entries "
+"that impact accounts associated with each report line."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:133
+msgid ""
+"This requires using a different :doc:`account <../accounting/get_started/"
+"chart_of_accounts>` for each type of operation subject to VAT, output and "
+"input VAT, and expense listed in those sections."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:136
+msgid ""
+"Assign the following account :ref:`tags <chart-of-account/tags>` to accounts "
+"you use for each type of operation subject to VAT listed in the declaration, "
+"if applicable:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:139
+msgid "`001 - Supply of inhouse manufactured goods`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:140
+msgid "`002 - Supply of goods not manufactured inhouse`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:141
+msgid "`003 - Net profit margin`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:142
+msgid "`004 - Supply of services`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:143
+msgid "`005 - Disposal of tangible and intangible capital assets`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:144
+msgid "`008 - Application of goods for private use or for that of the staff`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:145
+msgid "`009 - Application for the purpose of business of goods`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:146
+msgid "`010 - Use of goods considered business assets`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:147
+msgid "`011 - Supply of services carried out free of charge`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:148
+msgid "`013 - IC supply of goods`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:149
+msgid "`202 - IC supply of new means of transport`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:150
+msgid "`203 - Supply of goods carried out abroad`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:152
+msgid ""
+"Assign the following account tags to the accounts you use for each type of "
+"output and input VAT, if applicable:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:155
+msgid "`077 - VAT on stock entries invoiced by other taxable persons`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:156
+msgid "`081 - VAT on capital expenditures invoiced by other taxable persons`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:157
+msgid ""
+"`085 - VAT on operational expenditures invoiced by other taxable persons`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:158
+msgid "`078 - VAT on stock entries due in respect of IC acquisitions`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:159
+msgid "`082 - VAT on capital expenditures due in respect of IC acquisitions`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:160
+msgid ""
+"`086 - VAT on operational expenditures due in respect of IC acquisitions`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:161
+msgid "`079 - VAT on stock entries of importations of goods`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:162
+msgid "`083 - VAT on capital expenditures of importations of goods`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:163
+msgid "`087 - VAT on operational expenditures of importations of goods`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:164
+msgid "`404 - VAT on stock entries due under the reverse charge`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:165
+msgid "`405 - VAT on capital expenditures due under the reverse charge`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:166
+msgid "`406 - VAT on operational expenditures due under the reverse charge`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:168
+msgid ""
+"Assign the following account tags to the expense accounts you use for each "
+"type of expense, if applicable:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:171
+msgid ""
+"`188 - Appendix A - Expenses for other work carried out by third parties`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:172
+msgid "`190 - Appendix A - Car expenses`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:173
+msgid "`239 - Appendix A - Gross salaries`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:174
+msgid "`244 - Appendix A - Gross wages`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:175
+msgid "`247 - Appendix A - Occasional salaries`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:176
+msgid ""
+"`250 - Appendix A - Compulsory social security contributions (employer's "
+"share)`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:177
+msgid "`253 - Appendix A - Accident insurance`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:178
+msgid "`260 - Appendix A - Staff travel and representation expenses`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:179
+msgid "`269 - Appendix A - Accounting and bookkeeping fees`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:180
+msgid "`283 - Appendix A - Employer's travel and representation expenses`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:181
+msgid "`285 - Appendix A - Electricity`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:182
+msgid "`289 - Appendix A - Gas`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:183
+msgid "`293 - Appendix A - Employer's travel and representation expenses`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:184
+msgid "`301 - Appendix A - Telecommunications`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:185
+msgid ""
+"`305 - Appendix A - Renting/leasing of immovable property with application "
+"of VAT`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:186
+msgid ""
+"`307 - Appendix A - Renting/leasing of immovable property with no "
+"application of VAT`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:187
+msgid ""
+"`310 - Appendix A - Renting/leasing of permanently installed equipment and "
+"machinery`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:188
+msgid "`316 - Appendix A - Property tax`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:189
+msgid "`324 - Appendix A - Business tax`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:190
+msgid "`326 - Appendix A - Interest paid for long-term debts`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:191
+msgid "`327 - Appendix A - Interest paid for short-term debts`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:192
+msgid "`328 - Appendix A - Other financial costs`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:193
+msgid "`330 - Appendix A - Stock and business equipment insurance`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:194
+msgid ""
+"`331 - Appendix A - Public and professional third party liability insurance`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:195
+msgid "`332 - Appendix A - Office expenses`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:196
+msgid ""
+"`336 - Appendix A - Fees and subscriptions paid to professional associations "
+"and learned societies`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:197
+msgid "`337 - Appendix A - Papers and periodicals for business purposes`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:198
+msgid "`343 - Appendix A - Shipping and transport expenses`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:199
+msgid "`345 - Appendix A - Work clothes`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:200
+msgid "`347 - Appendix A - Advertising and publicity`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:201
+msgid "`349 - Appendix A - Packaging`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:202
+msgid "`351 - Appendix A - Repair and maintenance of equipment and machinery`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:203
+msgid "`353 - Appendix A - Other repairs`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:204
+msgid ""
+"`355 - Appendix A - New acquisitions (tools and equipment) if their cost can "
+"be fully allocated to the year of acquisition or creation`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:205
+msgid "`358 - Appendix A - Custom (value)`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:206
+msgid "`361 - Appendix A - Total 'Appendix to Operational expenditures'`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:209
+msgid "Opening the declaration"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:213
+msgid ""
+"In the :icon:`fa-book` :guilabel:`Report` selector, select :guilabel:`Annual "
+"VAT Declaration (LU)`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:215
+msgid ""
+"In the :icon:`fa-calendar` (:guilabel:`Period`) selector, choose the fiscal "
+"year dates for which to generate the declaration."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:219
+msgid "Completing the declaration"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:221
+msgid ""
+"The annual declaration contains five sections labelled I to V, seven "
+"appendices labelled A to G, and an additional Appendix to Operational "
+"Expenditures."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:224
+msgid ""
+"Sections I, III, and Appendix A can be pre-populated automatically based on "
+"the :ref:`account tag configuration <luxembourg/account-tag-configuration>`. "
+"After configuring the account tags, :ref:`set the tax lock date <accounting/"
+"tax-returns/lock-date>` to the end of the fiscal year. This will trigger the "
+"pre-computation of those values."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:-1
+msgid ""
+"Odoo Accounting populates a Luxembourgish annual VAT declaration based on "
+"account tags."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:232
+msgid ""
+"Alternatively, the year's total VAT debit and credit can be manually "
+"distributed among the various report lines in sections I and III. You can "
+"use the :icon:`fa-pencil` (:guilabel:`Edit`) icon to manually enter the "
+"value for each report line."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:236
+msgid "Sections II and IV are automatically computed."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:238
+msgid ""
+"You then need to manually complete appendices B through G, as well as the "
+"Appendix to Operational Expenditures, with any additional information to be "
+"reported."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:242
+msgid "Exporting the declaration"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:244
+msgid ""
+"Once the declaration is complete and correct, click the :icon:`fa-cog` "
+"(:guilabel:`action menu`) icon, then click :guilabel:`XML` to export and "
+"download it in XML format. You can then submit the XML file on the eCDF "
+"platform."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:250
+msgid ""
+"`Tax office website - VAT declaration <https://guichet.public.lu/en/"
+"entreprises/fiscalite/impots-benefices/tva/declarations/declaration-"
+"tva.html>`_"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:251
 msgid ""
 "`Platform for electronic gathering of financial data (eCDF) <http://"
 "www.ecdf.lu>`_"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:58
-msgid "Annual tax report"
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:256
+msgid "FAIA audit file export"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:60
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:258
 msgid ""
-"You can generate an XML file to electronically file your annual tax report "
-"with the tax office."
+":abbr:`FAIA (Fichier d’Audit Informatisé AED)` is the Luxembourgish version "
+"of the SAF-T format for accounting data interchange. It allows exporting "
+"complete accounting data for a period from a taxpayer's accounting system to "
+"the tax office."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:62
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:262
 msgid ""
-"To do so, go to :menuselection:`Accounting --> Report --> Luxembourg --> "
-"Annual Tax Report`, click on :guilabel:`Create`, then define the annual "
-"period in the :guilabel:`Year` field."
+"Odoo can generate an XML file in the FAIA format that contains the entire "
+"accounting data for a period."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:65
+#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:265
 msgid ""
-"The **simplified annual declaration** is automatically generated. You can "
-"manually add values in all the fields to get a **complete annual "
-"declaration**."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:-1
-msgid ""
-"Odoo Accounting (Luxembourg localization) generates an annual tax "
-"declaration."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:72
-msgid ""
-"To help you complete it, you can use the information provided on "
-"the :guilabel:`Tax Report`. To do so, go to :menuselection:`Accounting --> "
-"Report --> Audit Reports --> Tax Report`, then click on the :guilabel:`Tax "
-"Report` dropdown menu and select the type of report you want to display."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:-1
-msgid "Dropdown menu to select the type of Tax Report"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:80
-msgid "Finally, click on :guilabel:`Export XML` to download the XML file."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:83
-msgid ""
-"This feature requires the module :guilabel:`Luxembourg - Annual VAT Report` "
-"to be installed."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:86
-msgid "FAIA (SAF-T)"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:88
-msgid ""
-"**FAIA (Fichier d’Audit Informatisé AED)** is a standardized and structured "
-"file that facilitates the exchange of information between the taxpayers' "
-"accounting system and the tax office. It is the Luxembourgish version of the "
-"OECD-recommended SAF-T (Standard Audit File for Tax)."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:92
-msgid ""
-"Odoo can generate an XML file that contains all the content of an accounting "
-"period according to the rules imposed by the Luxembourg tax authorities on "
-"digital audit files."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:96
-msgid ""
-"This feature requires the module :guilabel:`Luxembourg - Accounting Reports` "
-"to be installed."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:99
-msgid "Export FAIA file"
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:101
-msgid ""
-"Go to :menuselection:`Accounting --> Reporting --> Audit Reports -->  "
-"General Ledger`, then click on :guilabel:`FAIA`."
+"To generate and download the FAIA file, open :menuselection:`Accounting --> "
+"Reporting --> General Ledger`, choose the desired period, click "
+"the :icon:`fa-cog` (:guilabel:`action menu`) icon, and "
+"click :guilabel:`Export FAIA`."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/malaysia.rst:3
@@ -45164,6 +45640,12 @@ msgid ""
 ":guilabel:`Ind. Classification`: Input the 5-digit numeric code that "
 "represents the nature and activity of the business."
 msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/malaysia.rst:148
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:362
+#: ../../content/applications/finance/fiscal_localizations/mexico.rst:425
+msgid "Electronic invoicing"
+msgstr "Sähköinen laskutus"
 
 #: ../../content/applications/finance/fiscal_localizations/malaysia.rst:150
 msgid ""
@@ -56787,7 +57269,7 @@ msgid ""
 "to generate QR codes."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:31
+#: ../../content/applications/finance/payment_providers.rst:32
 msgid ""
 "Odoo embeds several **payment providers** that allow your customers to pay "
 "online, on their *customer portals*, or on your *eCommerce website*. They "
@@ -56795,7 +57277,7 @@ msgid ""
 "using their favorite payment methods, such as **credit cards**."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:36
+#: ../../content/applications/finance/payment_providers.rst:37
 msgid ""
 "Each payment provider is linked to a list of supported :ref:`payment methods "
 "<payment_providers/payment_methods>` that can be (de)activated based on your "
@@ -56806,7 +57288,7 @@ msgstr ""
 msgid "Online payment form"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:43
+#: ../../content/applications/finance/payment_providers.rst:44
 msgid ""
 "Odoo apps delegate the handling of sensitive information to the certified "
 "payment provider so that you don't ever have to worry about PCI compliance. "
@@ -56816,170 +57298,176 @@ msgid ""
 "systems."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:51
+#: ../../content/applications/finance/payment_providers.rst:52
 msgid "Supported payment providers"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:53
+#: ../../content/applications/finance/payment_providers.rst:54
 msgid ""
 "To access the supported payment providers, go to :menuselection:`Accounting "
 "--> Configuration --> Payment Providers`, :menuselection:`Website --> "
 "Configuration --> Payment Providers`, or :menuselection:`Sales --> "
-"Configuration --> Payment Providers`."
+"Configuration --> Payment Providers`. Click the relevant payment provider "
+"card to access and configure the related provider."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:60
+#: ../../content/applications/finance/payment_providers.rst:62
 msgid "Online payment providers"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:68
+#: ../../content/applications/finance/payment_providers.rst:70
 msgid "Payment flow from"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:69
+#: ../../content/applications/finance/payment_providers.rst:71
 msgid ":ref:`Tokenization <payment_providers/tokenization>`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:70
+#: ../../content/applications/finance/payment_providers.rst:72
 msgid ":ref:`Manual capture <payment_providers/manual_capture>`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:71
+#: ../../content/applications/finance/payment_providers.rst:73
 msgid ":ref:`Refunds <payment_providers/refunds>`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:72
+#: ../../content/applications/finance/payment_providers.rst:74
 msgid ":ref:`Express checkout <payment_providers/express_checkout>`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:73
+#: ../../content/applications/finance/payment_providers.rst:75
 msgid ":doc:`Adyen <payment_providers/adyen>`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:75
-#: ../../content/applications/finance/payment_providers.rst:93
-#: ../../content/applications/finance/payment_providers.rst:105
-#: ../../content/applications/finance/payment_providers.rst:147
-#: ../../content/applications/finance/payment_providers.rst:159
-#: ../../content/applications/finance/payment_providers.rst:162
-#: ../../content/applications/finance/payment_providers.rst:165
+#: ../../content/applications/finance/payment_providers.rst:77
+#: ../../content/applications/finance/payment_providers.rst:95
+#: ../../content/applications/finance/payment_providers.rst:113
+#: ../../content/applications/finance/payment_providers.rst:155
+#: ../../content/applications/finance/payment_providers.rst:167
+#: ../../content/applications/finance/payment_providers.rst:170
+#: ../../content/applications/finance/payment_providers.rst:173
 msgid "|V|"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:76
-#: ../../content/applications/finance/payment_providers.rst:77
-#: ../../content/applications/finance/payment_providers.rst:149
-#: ../../content/applications/finance/payment_providers.rst:161
+#: ../../content/applications/finance/payment_providers.rst:78
+#: ../../content/applications/finance/payment_providers.rst:79
+#: ../../content/applications/finance/payment_providers.rst:157
+#: ../../content/applications/finance/payment_providers.rst:169
 msgid "Full and partial"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:79
+#: ../../content/applications/finance/payment_providers.rst:81
 msgid ""
 ":doc:`Amazon Payment Services <payment_providers/amazon_payment_services>`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:80
-#: ../../content/applications/finance/payment_providers.rst:86
-#: ../../content/applications/finance/payment_providers.rst:98
-#: ../../content/applications/finance/payment_providers.rst:104
-#: ../../content/applications/finance/payment_providers.rst:110
-#: ../../content/applications/finance/payment_providers.rst:116
-#: ../../content/applications/finance/payment_providers.rst:122
-#: ../../content/applications/finance/payment_providers.rst:128
-#: ../../content/applications/finance/payment_providers.rst:134
-#: ../../content/applications/finance/payment_providers.rst:152
-#: ../../content/applications/finance/payment_providers.rst:164
+#: ../../content/applications/finance/payment_providers.rst:82
+#: ../../content/applications/finance/payment_providers.rst:88
+#: ../../content/applications/finance/payment_providers.rst:100
+#: ../../content/applications/finance/payment_providers.rst:106
+#: ../../content/applications/finance/payment_providers.rst:112
+#: ../../content/applications/finance/payment_providers.rst:118
+#: ../../content/applications/finance/payment_providers.rst:124
+#: ../../content/applications/finance/payment_providers.rst:130
+#: ../../content/applications/finance/payment_providers.rst:136
+#: ../../content/applications/finance/payment_providers.rst:142
+#: ../../content/applications/finance/payment_providers.rst:160
+#: ../../content/applications/finance/payment_providers.rst:172
 msgid "The provider's website"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:85
+#: ../../content/applications/finance/payment_providers.rst:87
 msgid ":doc:`AsiaPay <payment_providers/asiapay>`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:91
+#: ../../content/applications/finance/payment_providers.rst:93
 msgid ":doc:`Authorize.Net <payment_providers/authorize>`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:94
-#: ../../content/applications/finance/payment_providers.rst:95
-#: ../../content/applications/finance/payment_providers.rst:148
-#: ../../content/applications/finance/payment_providers.rst:160
+#: ../../content/applications/finance/payment_providers.rst:96
+#: ../../content/applications/finance/payment_providers.rst:97
+#: ../../content/applications/finance/payment_providers.rst:156
+#: ../../content/applications/finance/payment_providers.rst:168
 msgid "Full only"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:97
+#: ../../content/applications/finance/payment_providers.rst:99
 msgid ":doc:`Buckaroo <payment_providers/buckaroo>`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:103
+#: ../../content/applications/finance/payment_providers.rst:105
+msgid ":doc:`DPO Pay <payment_providers/dpo>`"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers.rst:111
 msgid ":doc:`Flutterwave <payment_providers/flutterwave>`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:109
+#: ../../content/applications/finance/payment_providers.rst:117
 msgid ":doc:`Iyzico <payment_providers/iyzico>`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:115
+#: ../../content/applications/finance/payment_providers.rst:123
 msgid ":doc:`Mercado Pago <payment_providers/mercado_pago>`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:121
+#: ../../content/applications/finance/payment_providers.rst:129
 msgid ":doc:`Mollie <payment_providers/mollie>`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:127
+#: ../../content/applications/finance/payment_providers.rst:135
 msgid ":doc:`Nuvei <payment_providers/nuvei>`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:133
+#: ../../content/applications/finance/payment_providers.rst:141
 msgid ":doc:`Paymob <payment_providers/paymob>`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:139
+#: ../../content/applications/finance/payment_providers.rst:147
 msgid ":doc:`PayPal <payment_providers/paypal>`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:145
+#: ../../content/applications/finance/payment_providers.rst:153
 msgid ":doc:`Razorpay <payment_providers/razorpay>`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:151
+#: ../../content/applications/finance/payment_providers.rst:159
 msgid ":doc:`Redsys <payment_providers/redsys>`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:157
+#: ../../content/applications/finance/payment_providers.rst:165
 msgid ":doc:`Stripe <payment_providers/stripe>`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:163
+#: ../../content/applications/finance/payment_providers.rst:171
 msgid ":doc:`Worldline <payment_providers/worldline>`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:169
+#: ../../content/applications/finance/payment_providers.rst:177
 msgid ":doc:`Xendit <payment_providers/xendit>`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:170
+#: ../../content/applications/finance/payment_providers.rst:178
 msgid "Odoo or the provider's website"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:171
+#: ../../content/applications/finance/payment_providers.rst:179
 msgid "|V| *"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:177
+#: ../../content/applications/finance/payment_providers.rst:185
 msgid ""
 "Refer to the :doc:`Xendit documentation <payment_providers/xendit>` for more "
 "information."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:180
+#: ../../content/applications/finance/payment_providers.rst:188
 msgid ""
 "Each provider has its own specific configuration flow, depending on which "
 "feature is available."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:182
+#: ../../content/applications/finance/payment_providers.rst:190
 msgid ""
 "Some of these online payment providers can also be added as :doc:`bank "
 "accounts <../finance/accounting/bank>`, but this is **not** the same process "
@@ -56988,7 +57476,7 @@ msgid ""
 "to do a :doc:`bank reconciliation <accounting/bank/reconciliation>`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:189
+#: ../../content/applications/finance/payment_providers.rst:197
 msgid ""
 "In addition to the regular payment providers that integrate with an API, "
 "such as Stripe, PayPal, or Adyen, Odoo bundles the :doc:`Demo payment "
@@ -56997,49 +57485,74 @@ msgid ""
 "demo payments are dummy payments."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:197
+#: ../../content/applications/finance/payment_providers.rst:205
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:3
 msgid "Bank payments"
 msgstr ""
 
 #: ../../content/applications/finance/payment_providers.rst:0
-msgid ":doc:`Wire Transfer <payment_providers/wire_transfer>`"
+msgid ":ref:`Wire Transfer <payment_providers/bank_payments/wire_transfer>`"
 msgstr ""
 
 #: ../../content/applications/finance/payment_providers.rst:0
 msgid ""
-"When selected, Odoo displays your payment information with a payment "
-"reference. You have to approve the payment manually once you have received "
-"it in your bank account."
+"Odoo displays your payment information with a payment reference. You have to "
+"approve the payment manually once it has been received in your bank account."
 msgstr ""
 
 #: ../../content/applications/finance/payment_providers.rst:0
-msgid ":doc:`SEPA Direct Debit <payment_providers/sdd>`"
+msgid ":ref:`SEPA Direct Debit <payment_providers/bank_payments/sdd>`"
 msgstr ""
 
 #: ../../content/applications/finance/payment_providers.rst:0
 msgid ""
-"Your customers can make a bank transfer to register a SEPA Direct Debit "
-"mandate and get their bank account charged directly."
+"Customers can make a bank transfer to register a SEPA Direct Debit mandate "
+"and allow their account to be charged directly for future payments."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:209
+#: ../../content/applications/finance/payment_providers.rst:215
+#: ../../content/applications/finance/payment_providers/inperson_payments.rst:3
+msgid "In-person payments"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers.rst:0
+msgid ":ref:`Pay on Site <payment_providers/inperson_payments/pay_on_site>`"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers.rst:0
+msgid ""
+"Customers can reserve products online and pay when collecting their orders "
+"in store."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers.rst:0
+msgid ""
+":ref:`Cash on Delivery <payment_providers/inperson_payments/"
+"cash_on_delivery>`"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers.rst:0
+msgid "Customers can pay for their orders upon delivery."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers.rst:225
 msgid "Enabling a payment provider"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:211
+#: ../../content/applications/finance/payment_providers.rst:227
 msgid ""
 "To add a new payment provider and make its related payment methods available "
 "to your customers, proceed as follows:"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:214
+#: ../../content/applications/finance/payment_providers.rst:230
 msgid ""
 "Go to the payment provider's website, create an account, and make sure you "
 "have the API credentials requested for third-party use. These are necessary "
 "for Odoo to communicate with the payment provider."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:217
+#: ../../content/applications/finance/payment_providers.rst:233
 msgid ""
 "In Odoo, navigate to the :guilabel:`Payment providers` by going "
 "to :menuselection:`Accounting --> Configuration --> Payment "
@@ -57048,25 +57561,28 @@ msgid ""
 "Providers`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:220
+#: ../../content/applications/finance/payment_providers.rst:236
 msgid "Select the provider and configure the :guilabel:`Credentials` tab."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:221
-#: ../../content/applications/finance/payment_providers/sdd.rst:47
-#: ../../content/applications/finance/payment_providers/stripe.rst:37
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:52
+#: ../../content/applications/finance/payment_providers.rst:237
+#: ../../content/applications/finance/payment_providers/adyen.rst:60
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:45
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:99
+#: ../../content/applications/finance/payment_providers/iyzico.rst:31
+#: ../../content/applications/finance/payment_providers/stripe.rst:43
+#: ../../content/applications/finance/payment_providers/stripe.rst:84
 msgid "Set the :guilabel:`State` field to :guilabel:`Enabled`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:224
+#: ../../content/applications/finance/payment_providers.rst:240
 msgid ""
 "The fields available in the :guilabel:`Credentials` tab depend on the "
 "payment provider. Refer to the :ref:`related documentation "
 "<payment_providers/supported_providers>` for more information."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:227
+#: ../../content/applications/finance/payment_providers.rst:243
 msgid ""
 "Once you have enabled the payment provider, it is automatically published on "
 "your website. If you wish to unpublish it, click the :guilabel:`Published` "
@@ -57075,17 +57591,17 @@ msgid ""
 "existing tokens linked to such a provider."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:235
+#: ../../content/applications/finance/payment_providers.rst:251
 msgid "Test mode"
 msgstr "Testitila"
 
-#: ../../content/applications/finance/payment_providers.rst:238
+#: ../../content/applications/finance/payment_providers.rst:254
 msgid ""
 "We recommend using the test mode on a **duplicate** or a **test** database "
 "to avoid potential issues with invoice numbering."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:241
+#: ../../content/applications/finance/payment_providers.rst:257
 msgid ""
 "To try a payment provider without affecting live transactions, set "
 "the :guilabel:`State` field in the payment provider form to :guilabel:`Test "
@@ -57094,13 +57610,13 @@ msgid ""
 "separate test account or environment for this purpose."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:247
+#: ../../content/applications/finance/payment_providers.rst:263
 msgid ""
 "By default, the payment provider remains **unpublished** in test mode so "
 "that it's not visible to visitors."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:255
+#: ../../content/applications/finance/payment_providers.rst:271
 msgid ""
 "Each payment provider is related to a list of supported payment methods; the "
 "methods listed in the :guilabel:`Payment methods` field in "
@@ -57110,61 +57626,71 @@ msgid ""
 "button of the related method."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:261
+#: ../../content/applications/finance/payment_providers.rst:277
 msgid ""
-"Payment methods are displayed on your website based on their sequence order. "
-"To reorder them, click :guilabel:`Enable Payment Methods` in the payment "
-"provider form, then, in the :guilabel:`Payment Methods` list, drag and drop "
-"the payment methods in the desired order."
+"To view the complete list of supported payment methods, go "
+"to :menuselection:`Accounting --> Configuration --> Payment "
+"Methods`, :menuselection:`Website --> Configuration --> Payment Methods`, "
+"or :menuselection:`Sales --> Configuration --> Payment Methods`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:266
+#: ../../content/applications/finance/payment_providers.rst:280
+msgid ""
+"Payment methods are displayed on the ecommerce website based on their "
+"sequence order. To reorder them, drag and drop the payment methods into the "
+"desired order in the :guilabel:`Payment Methods` list."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers.rst:285
 msgid "Icons and brands"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:268
+#: ../../content/applications/finance/payment_providers.rst:287
 msgid ""
 "The icons displayed next to the payment method on your website are either "
 "the icons of the brands activated for the payment method or, if there aren't "
-"any, the icons of the payment methods themselves. To modify them, go "
-"to :menuselection:`Accounting --> Configuration --> Payment "
-"Methods`, :menuselection:`Website --> Configuration --> Payment Methods` "
-"or :menuselection:`Sales --> Configuration --> Payment Methods`, then click "
-"on the payment method."
+"any, the icons of the payment methods themselves. To modify "
+"them, :ref:`access the list of payment methods <payment_providers/"
+"payment_methods>`, then click the relevant one."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:274
+#: ../../content/applications/finance/payment_providers.rst:292
 msgid ""
 "To modify a payment method's icon, hover your mouse over the image in the "
 "upper-right corner of the payment method's form and click the :icon:`fa-"
 "pencil` (:guilabel:`pencil`) icon."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:277
+#: ../../content/applications/finance/payment_providers.rst:295
 msgid ""
 "Select the :guilabel:`Brands` tab to view the brands that have been "
 "activated for the payment method. The brands and their related icons are "
 "displayed based on their sequence order; to reorder them, drag and drop them "
-"in the desired order. To modify a brand's icon, select the brand, then, in "
+"into the desired order. To modify a brand's icon, select the brand, then, in "
 "the popup window that opens, hover the mouse over the image in the upper-"
 "right corner and click the :icon:`fa-pencil` (:guilabel:`pencil`) icon."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:284
+#: ../../content/applications/finance/payment_providers.rst:302
 msgid "Advanced configuration"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:286
-msgid ""
-"To configure payment methods further, go to :menuselection:`Accounting --> "
-"Configuration --> Payment Methods`, :menuselection:`Website --> "
-"Configuration --> Payment Methods` or :menuselection:`Sales --> "
-"Configuration --> Payment Methods`. Click on the payment method, then "
-"activate the :ref:`developer mode <developer-mode>`. Click "
-"the :guilabel:`Configuration` tab to adapt the features."
+#: ../../content/applications/finance/payment_providers.rst:304
+msgid "To further configure payment methods, follow these steps:"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:293
+#: ../../content/applications/finance/payment_providers.rst:307
+msgid ""
+":ref:`Access the list of payment methods <payment_providers/"
+"payment_methods>` and click the relevant one."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers.rst:309
+msgid ""
+"Go to the :guilabel:`Configuration` tab and adjust the features as needed."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers.rst:312
 msgid ""
 "Each payment method is preconfigured in a way that aligns with the payment "
 "providers' behavior and their integration with Odoo. Any change to this "
@@ -57172,7 +57698,7 @@ msgid ""
 "test database first."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:296
+#: ../../content/applications/finance/payment_providers.rst:315
 msgid ""
 "Modifications to the payment method's configuration only work to the extent "
 "of the method's and provider's capabilities. For example, "
@@ -57182,11 +57708,11 @@ msgid ""
 "does not support it will not produce the intended results."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:305
+#: ../../content/applications/finance/payment_providers.rst:324
 msgid "Tokenization"
 msgstr "Pääsytunnisteiden muodostaminen"
 
-#: ../../content/applications/finance/payment_providers.rst:307
+#: ../../content/applications/finance/payment_providers.rst:326
 msgid ""
 ":ref:`If the payment provider supports this feature <payment_providers/"
 "online_providers>`, customers can save their payment method details for "
@@ -57195,7 +57721,7 @@ msgid ""
 "Methods`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:312
+#: ../../content/applications/finance/payment_providers.rst:331
 msgid ""
 "In this case, a **payment token** is created in Odoo to be used as a payment "
 "method for subsequent payments without the customer having to enter their "
@@ -57203,18 +57729,18 @@ msgid ""
 "conversion rate and subscriptions that use recurring payments."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:317
+#: ../../content/applications/finance/payment_providers.rst:336
 msgid ""
 "To add or delete their saved payment method details, customers can "
 "click :guilabel:`Manage payment methods` in the :ref:`customer portal <users-"
 "portal-payment-methods>`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:320
+#: ../../content/applications/finance/payment_providers.rst:339
 msgid "PCI DSS and Attestation of Compliance"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:322
+#: ../../content/applications/finance/payment_providers.rst:341
 msgid ""
 "Odoo is not `PCI <https://www.pcisecuritystandards.org>`_ DSS-certified "
 "because it does not store cardholder data or process payments. Instead, it "
@@ -57227,11 +57753,12 @@ msgid ""
 "Questionnaire)`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:333
+#: ../../content/applications/finance/payment_providers.rst:352
+#: ../../content/applications/finance/payment_providers/adyen.rst:69
 msgid "Manual capture"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:335
+#: ../../content/applications/finance/payment_providers.rst:354
 msgid ""
 ":ref:`If the payment provider supports this feature <payment_providers/"
 "online_providers>`, you can authorize and capture payments in two steps "
@@ -57240,7 +57767,7 @@ msgid ""
 "Manually`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:340
+#: ../../content/applications/finance/payment_providers.rst:359
 msgid ""
 "When you authorize a payment, the funds are reserved on the customer's "
 "payment method but not immediately charged. They are charged when you "
@@ -57249,38 +57776,38 @@ msgid ""
 "helpful in many situations:"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:345
+#: ../../content/applications/finance/payment_providers.rst:364
 msgid ""
 "Receive the payment confirmation and wait until the order is shipped to "
 "capture the payment."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:346
+#: ../../content/applications/finance/payment_providers.rst:365
 msgid ""
 "Review and verify that orders are legitimate before the payment is completed "
 "and the fulfillment process starts."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:348
+#: ../../content/applications/finance/payment_providers.rst:367
 msgid ""
 "Avoid potentially high refund fees for refunded payments: payment providers "
 "will not charge you for voiding an authorization."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:350
+#: ../../content/applications/finance/payment_providers.rst:369
 msgid ""
 "Hold a security deposit to return later, minus any deductions (e.g., in case "
 "of damages)."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:352
+#: ../../content/applications/finance/payment_providers.rst:371
 msgid ""
 "To capture the payment after it was authorized, go to the related sales "
 "order or invoice and click the :guilabel:`Capture Transaction` button. To "
 "release the funds, click the :guilabel:`Void Transaction` button."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:357
+#: ../../content/applications/finance/payment_providers.rst:376
 msgid ""
 "Some payment providers support capturing only part of the authorized amount. "
 "The remaining amount can then be either captured or voided. These providers "
@@ -57289,31 +57816,31 @@ msgid ""
 "capturing or voiding the total amount have the value **Full only**."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:361
+#: ../../content/applications/finance/payment_providers.rst:380
 msgid ""
 "The funds are likely not reserved forever. After a certain time, they may be "
 "automatically released back to the customer's payment method. Refer to your "
 "payment provider's documentation for the exact reservation duration."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:364
+#: ../../content/applications/finance/payment_providers.rst:383
 msgid ""
 ":doc:`payment_providers/adyen` and :doc:`payment_providers/stripe` allow to "
 "capture payments manually directly from their website interface."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:370
+#: ../../content/applications/finance/payment_providers.rst:389
 msgid "Refunds"
 msgstr "Hyvitykset"
 
-#: ../../content/applications/finance/payment_providers.rst:372
+#: ../../content/applications/finance/payment_providers.rst:391
 msgid ""
 "If your payment provider supports this feature, you can refund payments "
 "directly from Odoo. It does not need to be enabled first. To refund a "
 "customer payment, navigate to it and click the :guilabel:`Refund` button."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:377
+#: ../../content/applications/finance/payment_providers.rst:396
 msgid ""
 "Some payment providers support refunding only part of the amount. The "
 "remaining amount can then optionally be refunded, too. These providers have "
@@ -57322,17 +57849,17 @@ msgid ""
 "amount have the value **Full only**."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:381
+#: ../../content/applications/finance/payment_providers.rst:400
 msgid ""
 ":doc:`payment_providers/adyen` and :doc:`payment_providers/stripe` allow to "
 "refund payments directly from their website interface."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:387
+#: ../../content/applications/finance/payment_providers.rst:406
 msgid "Express checkout"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:389
+#: ../../content/applications/finance/payment_providers.rst:408
 msgid ""
 ":ref:`If the payment provider supports this feature <payment_providers/"
 "online_providers>`, you can allow customers to use the :guilabel:`Google "
@@ -57342,18 +57869,18 @@ msgid ""
 "just have to validate the payment on Google's or Apple's payment form."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:395
+#: ../../content/applications/finance/payment_providers.rst:414
 msgid ""
 "To enable this feature, go to the :guilabel:`Configuration` tab of the "
 "selected payment provider and enable :guilabel:`Allow Express Checkout`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:399
+#: ../../content/applications/finance/payment_providers.rst:418
 msgid ""
 "All prices shown on the express checkout payment form always include taxes."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:406
+#: ../../content/applications/finance/payment_providers.rst:425
 msgid ""
 "You can adapt the payment provider's availability by specifying "
 "the :guilabel:`Maximum amount` allowed and modifying "
@@ -57361,7 +57888,7 @@ msgid ""
 "the :guilabel:`Configuration` tab."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:411
+#: ../../content/applications/finance/payment_providers.rst:430
 msgid ""
 "To display an availability report for payment providers and payment methods, "
 "and to help diagnose potential availability issues on the payment form, "
@@ -57373,11 +57900,11 @@ msgid ""
 "each payment method."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:421
+#: ../../content/applications/finance/payment_providers.rst:440
 msgid "Currencies and countries"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:423
+#: ../../content/applications/finance/payment_providers.rst:442
 msgid ""
 "All payment providers have a different list of available currencies and "
 "countries. They serve as a first filter during payment operations, i.e., the "
@@ -57388,14 +57915,14 @@ msgid ""
 "supported currencies or countries is possible."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:431
+#: ../../content/applications/finance/payment_providers.rst:450
 msgid ""
 ":ref:`Payment methods <payment_providers/payment_methods>` also have their "
 "own list of available currencies and countries that serves as another filter "
 "during payment operations."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:433
+#: ../../content/applications/finance/payment_providers.rst:452
 msgid ""
 "If the list of supported currencies or countries is empty, it means the list "
 "is too long to be displayed, or Odoo does not have information on that "
@@ -57404,18 +57931,18 @@ msgid ""
 "currency not be supported."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:441
+#: ../../content/applications/finance/payment_providers.rst:460
 msgid "Maximum amount"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:443
+#: ../../content/applications/finance/payment_providers.rst:462
 msgid ""
 "You can restrict the :guilabel:`Maximum Amount` that can be paid with the "
 "selected provider. Leave the field to `0.00` to make the payment provider "
 "available regardless of the payment amount."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:447
+#: ../../content/applications/finance/payment_providers.rst:466
 msgid ""
 "This feature is not intended to work on pages that allow the customer to "
 "update the payment amount, e.g., the **Donation** snippet and the "
@@ -57423,11 +57950,11 @@ msgid ""
 "shipping>` are enabled."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:454
+#: ../../content/applications/finance/payment_providers.rst:473
 msgid "Payment journal"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:456
+#: ../../content/applications/finance/payment_providers.rst:475
 msgid ""
 "A :doc:`payment journal <accounting/bank>` must be defined for the payment "
 "provider to record the payments on an **outstanding account**. By default, "
@@ -57436,25 +57963,25 @@ msgid ""
 "selected payment provider and select another :guilabel:`Payment journal`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:462
+#: ../../content/applications/finance/payment_providers.rst:481
 msgid "The payment journal must be a :guilabel:`Bank` journal."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:463
+#: ../../content/applications/finance/payment_providers.rst:482
 msgid "The same journal can be used for several payment providers."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:464
+#: ../../content/applications/finance/payment_providers.rst:483
 msgid ""
 "Payment journals must only be configured if the :doc:`Invoicing or "
 "Accounting app <accounting>` is installed."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:468
+#: ../../content/applications/finance/payment_providers.rst:487
 msgid "Accounting perspective"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:470
+#: ../../content/applications/finance/payment_providers.rst:489
 msgid ""
 "From an accounting perspective, there are two types of online payment "
 "workflows: the payments that are directly deposited into your bank account "
@@ -57466,7 +57993,7 @@ msgid ""
 "accountant for advice."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:477
+#: ../../content/applications/finance/payment_providers.rst:496
 msgid ""
 "By default, the :guilabel:`Bank Account` defined for the :ref:`payment "
 "journal <payment_providers/journal>` is used, but you can also specify "
@@ -57479,75 +58006,79 @@ msgstr ""
 msgid "Define an outstanding account for a payment provider."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:486
-msgid ":doc:`payment_providers/wire_transfer`"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers.rst:487
-msgid ":doc:`payment_providers/sdd`"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers.rst:488
+#: ../../content/applications/finance/payment_providers.rst:505
 msgid ":doc:`payment_providers/adyen`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:489
+#: ../../content/applications/finance/payment_providers.rst:506
 msgid ":doc:`payment_providers/authorize`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:490
+#: ../../content/applications/finance/payment_providers.rst:507
 msgid ":doc:`payment_providers/asiapay`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:491
+#: ../../content/applications/finance/payment_providers.rst:508
 msgid ":doc:`payment_providers/buckaroo`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:492
+#: ../../content/applications/finance/payment_providers.rst:509
 msgid ":doc:`payment_providers/demo`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:493
+#: ../../content/applications/finance/payment_providers.rst:510
+msgid ":doc:`payment_providers/dpo`"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers.rst:511
 msgid ":doc:`payment_providers/mercado_pago`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:494
+#: ../../content/applications/finance/payment_providers.rst:512
 msgid ":doc:`payment_providers/mollie`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:495
+#: ../../content/applications/finance/payment_providers.rst:513
 msgid ":doc:`payment_providers/nuvei`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:496
+#: ../../content/applications/finance/payment_providers.rst:514
 msgid ":doc:`payment_providers/paymob`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:497
+#: ../../content/applications/finance/payment_providers.rst:515
 msgid ":doc:`payment_providers/paypal`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:498
+#: ../../content/applications/finance/payment_providers.rst:516
 msgid ":doc:`payment_providers/razorpay`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:499
+#: ../../content/applications/finance/payment_providers.rst:517
 msgid ":doc:`payment_providers/redsys`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:500
+#: ../../content/applications/finance/payment_providers.rst:518
 msgid ":doc:`payment_providers/stripe`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:501
+#: ../../content/applications/finance/payment_providers.rst:519
 msgid ":doc:`payment_providers/worldline`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:502
+#: ../../content/applications/finance/payment_providers.rst:520
 msgid ":doc:`payment_providers/xendit`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:503
+#: ../../content/applications/finance/payment_providers.rst:521
+msgid ":doc:`payment_providers/bank_payments`"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers.rst:522
+msgid ":doc:`payment_providers/inperson_payments`"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers.rst:523
 msgid ":doc:`accounting/bank`"
 msgstr ""
 
@@ -57562,301 +58093,201 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/payment_providers/adyen.rst:9
-#: ../../content/applications/finance/payment_providers/adyen.rst:20
-#: ../../content/applications/finance/payment_providers/authorize.rst:12
-#: ../../content/applications/finance/payment_providers/demo.rst:12
-#: ../../content/applications/finance/payment_providers/mollie.rst:11
-msgid ":ref:`payment_providers/add_new`"
+msgid ""
+"Adyen only works with customers processing **more than 10 million annually** "
+"or invoicing a **minimum of 1000 transactions per month**."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/adyen.rst:10
-#: ../../content/applications/finance/payment_providers/adyen.rst:163
+#: ../../content/applications/finance/payment_providers/adyen.rst:15
+msgid "Adyen configuration"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/adyen.rst:17
+msgid ""
+"Create an Adyen account if necessary and log into your Adyen Customer Area."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/adyen.rst:20
+msgid ""
+"Log into your **Test account** to try the integration without charging "
+"customers. Switch to your **Live account** once you are ready to accept "
+"payments."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/adyen.rst:23
+msgid ""
+"`Contact the Adyen support team <https://docs.adyen.com/platforms/quickstart-"
+"guide/support#contact-adyen-support>`_ to enable the **Multiple partial "
+"capture** feature."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/adyen.rst:25
+msgid ""
+"In the Adyen Customer Area, go to :menuselection:`Developers --> API "
+"credentials` and click the relevant API credential user name in the list or "
+"click :guilabel:`Create new credential` to create a new one."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/adyen.rst:28
+msgid ""
+"In the :guilabel:`Server settings` section, click :guilabel:`Generate API "
+"key`, then click the :icon:`fa-copy` (:guilabel:`Copy API key`) icon and "
+"save the value for the :ref:`payment_providers/adyen/configure_odoo` step."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/adyen.rst:31
+msgid ""
+"In the :guilabel:`Client settings` section, click :guilabel:`Generate client "
+"key`, then click the :icon:`fa-copy` (:guilabel:`Copy API key`) icon and "
+"save the value for the :ref:`payment_providers/adyen/configure_odoo` step."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/adyen.rst:34
+msgid ""
+"Enter your Odoo website URL in the :guilabel:`Add allowed origins` field, "
+"then click :guilabel:`Add`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/adyen.rst:36
+msgid "Click :guilabel:`Save changes` at the bottom of the page."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/adyen.rst:37
+msgid ""
+"Go to :menuselection:`Developers --> Webhooks` in the left menu and "
+"click :guilabel:`Create new webhook`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/adyen.rst:39
+msgid ""
+"In the :guilabel:`Create new webhook` popup, click :guilabel:`Add` on to "
+"the :guilabel:`Standard webhook` line."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/adyen.rst:41
+msgid ""
+"On the :guilabel:`Webhook generation` form, in the :guilabel:`Server "
+"configuration` section, enter your Odoo database :guilabel:`URL` followed by "
+"`/payment/adyen/notification`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/adyen.rst:43
+msgid ""
+"In the :guilabel:`Security` section, click :guilabel:`Generate` "
+"under :guilabel:`HMAC`, then click the :icon:`fa-copy` (:guilabel:`Copy HMAC "
+"to the clipboard`) icon and save the value for the :ref:`payment_providers/"
+"adyen/configure_odoo` step."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/adyen.rst:46
+msgid "Click :guilabel:`Save configuration` at the bottom of the page."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/adyen.rst:47
+msgid ""
+"Go to :menuselection:`Developers --> API URLs`, then copy "
+"the :guilabel:`Prefix` and save it for the :ref:`payment_providers/adyen/"
+"configure_odoo` step."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/adyen.rst:55
+msgid ""
+":ref:`Navigate to the Adyen payment provider<payment_providers/add_new>`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/adyen.rst:56
+msgid ""
+"Fill in the :guilabel:`Merchant account`, :guilabel:`API "
+"Key`, :guilabel:`Client Key`, :guilabel:`HMAC Key`, and :guilabel:`API URL "
+"Prefix` fields with the values saved at the :ref:`Adyen configuration step "
+"<payment_providers/adyen/configure_dashboard>`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/adyen.rst:59
+#: ../../content/applications/finance/payment_providers/iyzico.rst:30
+#: ../../content/applications/finance/payment_providers/mollie.rst:28
+#: ../../content/applications/finance/payment_providers/paymob.rst:59
+#: ../../content/applications/finance/payment_providers/razorpay.rst:75
+#: ../../content/applications/finance/payment_providers/stripe.rst:83
+msgid "Configure the remaining options as needed."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/adyen.rst:63
+msgid ""
+"If you want to :ref:`test Adyen without affecting live transactions "
+"<payment_providers/test-mode>`, use your **Test account** credentials, enter "
+"`https://checkout-test.adyen.com` in the :guilabel:`API URL Prefix` field, "
+"and set the :guilabel:`State` field to :guilabel:`Test Mode`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/adyen.rst:71
+msgid ""
+"To enable :ref:`manual capture <payment_providers/manual_capture>` for Adyen "
+"payments, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/adyen.rst:74
+msgid ""
+":ref:`Navigate to the Adyen payment provider <payment_providers/add_new>`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/adyen.rst:75
+msgid ""
+"Go to the :guilabel:`Configuration` tab and enable :guilabel:`Capture Amount "
+"Manually`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/adyen.rst:76
+msgid ""
+"Log in to your Adyen Customer Area, then go to :menuselection:`Settings` and "
+"click :guilabel:`Company` in the :guilabel:`Account management` section."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/adyen.rst:78
+msgid ""
+"In the :guilabel:`General` section, click the :icon:`fa-pencil` "
+"(:guilabel:`Edit property`) icon next to the :guilabel:`Capture Delay` field."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/adyen.rst:80
+msgid ""
+"In the popup, set the :guilabel:`Capture delay` field to :guilabel:`Manual` "
+"and click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/adyen.rst:84
+msgid ""
+"If the transaction is not captured within 7 days, the customer is entitled "
+"to revoke it."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/adyen.rst:85
+msgid ""
+"You can :ref:`manually capture <payment_providers/manual_capture>` "
+"and :ref:`refund <payment_providers/refunds>` payments directly from your "
+"Adyen Customer Area."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/adyen.rst:89
 #: ../../content/applications/finance/payment_providers/asiapay.rst:50
 #: ../../content/applications/finance/payment_providers/authorize.rst:51
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:6
 #: ../../content/applications/finance/payment_providers/buckaroo.rst:37
+#: ../../content/applications/finance/payment_providers/dpo.rst:45
 #: ../../content/applications/finance/payment_providers/flutterwave.rst:44
-#: ../../content/applications/finance/payment_providers/iyzico.rst:31
+#: ../../content/applications/finance/payment_providers/inperson_payments.rst:40
+#: ../../content/applications/finance/payment_providers/iyzico.rst:34
 #: ../../content/applications/finance/payment_providers/mercado_pago.rst:39
-#: ../../content/applications/finance/payment_providers/mollie.rst:31
+#: ../../content/applications/finance/payment_providers/mollie.rst:33
 #: ../../content/applications/finance/payment_providers/nuvei.rst:87
 #: ../../content/applications/finance/payment_providers/paymob.rst:62
 #: ../../content/applications/finance/payment_providers/paypal.rst:80
 #: ../../content/applications/finance/payment_providers/razorpay.rst:86
 #: ../../content/applications/finance/payment_providers/redsys.rst:45
-#: ../../content/applications/finance/payment_providers/sdd.rst:58
-#: ../../content/applications/finance/payment_providers/stripe.rst:118
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:58
+#: ../../content/applications/finance/payment_providers/stripe.rst:11
 #: ../../content/applications/finance/payment_providers/worldline.rst:71
 #: ../../content/applications/finance/payment_providers/xendit.rst:58
 msgid ":doc:`../payment_providers`"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:13
-msgid ""
-"Adyen works only with customers processing **more** than **10 million "
-"annually** or invoicing a **minimum** of **1.000** transactions **per "
-"month**."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:22
-msgid ""
-"First, reach Adyen support to enable :guilabel:`multiple partial capture` "
-"for you."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:25
-#: ../../content/applications/finance/payment_providers/authorize.rst:15
-#: ../../content/applications/finance/payment_providers/mollie.rst:14
-msgid "Credentials tab"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:27
-msgid ""
-"Odoo needs your **API Credentials** to connect with your Adyen account, "
-"which comprise:"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:29
-msgid ""
-"**Merchant Account**: The code of the merchant account to use with Adyen."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:30
-msgid ""
-":ref:`API Key <adyen/api_and_client_keys>`: The API key of the webservice "
-"user."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:31
-msgid ""
-":ref:`Client Key <adyen/api_and_client_keys>`: The client key of the "
-"webservice user."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:32
-msgid ":ref:`HMAC Key <adyen/hmac_key>`: The HMAC key of the webhook."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:33
-msgid ""
-":ref:`Checkout API URL <adyen/urls>`: The base URL for the Checkout API "
-"endpoints."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:34
-msgid ""
-":ref:`Recurring API URL <adyen/urls>`: The base URL for the Recurring API "
-"endpoints."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:36
-msgid ""
-"You can copy your credentials from your Adyen account, and paste them in the "
-"related fields under the **Credentials** tab."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:40
-msgid ""
-"If you are trying Adyen as a test, with an Adyen *test account*, head "
-"to :menuselection:`Accounting --> Configuration --> Payment Providers`. "
-"There, click on :guilabel:`Adyen`, enable :guilabel:`Test Mode` and enter "
-"your credentials in the :guilabel:`Credentials` tab."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:48
-msgid "API Key and Client Key"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:50
-msgid ""
-"In order to retrieve the API Key and the Client Key, log into your Adyen "
-"account, go to :menuselection:`Developers --> API Credentials`."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:53
-msgid "If you already have an API user, open it."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:54
-msgid "If you don't have an API user yet, click on **Create new credential**."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:56
-msgid ""
-"Go to :menuselection:`Server settings --> Authentification` and copy or "
-"generate your **API Key**. Be careful to copy your API key as you'll not be "
-"allowed to get it later without generating a new one."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:60
-msgid ""
-"Now, head to :menuselection:`Client settings --> Authentification` and cody "
-"or generate your **Client Key**. This is also the place where you "
-"can :ref:`allow payments to be made from your website <adyen/"
-"allowed_origins>`."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:67
-msgid "HMAC key"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:69
-msgid ""
-"In order to retrieve the HMAC Key, you'll need to configure a `Standard "
-"Notification` webhook. For this, log into your Adyen account then go "
-"to :menuselection:`Developers --> Webhooks --> Add webhook --> Add Standard "
-"notification`."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:-1
-msgid "Configure a webhook."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:77
-msgid ""
-"There, in :menuselection:`General --> Server configuration --> URL`, enter "
-"your server address followed by `/payment/adyen/notification`."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:-1
-msgid "Enter the notification URL."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:84
-msgid ""
-"Then enter :menuselection:`Security --> HMAC Key --> Generate`. Be careful "
-"to copy the key as you will not be allowed to do it later without generating "
-"a new one."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:-1
-msgid "Generate a HMAC key and save it."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:91
-msgid "You have to save the webhook to finalize its creation."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:96
-msgid "API URLs"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:98
-msgid ""
-"All Adyen API URLs include a customer area-specific prefix generated by "
-"Adyen. To configure the URLs, proceed as follows:"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:101
-msgid ""
-"Log into your Adyen account, then go to :menuselection:`Developers --> API "
-"URLs`."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:102
-msgid ""
-"Copy the :guilabel:`Prefix` for your live Customer area (i.e., **data "
-"center**) and save it for later."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:0
-msgid "Copy the prefix for the Adyen APIs"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:108
-msgid ""
-"In Odoo, :ref:`navigate to the payment provider Adyen <payment_providers/"
-"add_new>`."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:109
-msgid ""
-"In the :guilabel:`Checkout API URL` field, enter the following URL and "
-"replace `yourprefix` with the prefix you previously saved: `https://"
-"yourprefix-checkout-live.adyenpayments.com/checkout`"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:112
-msgid ""
-"In the :guilabel:`Recurring API URL` field, enter the following URL and "
-"replace `yourprefix` with the prefix you previously saved: `https://"
-"yourprefix-pal-live.adyenpayments.com/pal/servlet/Recurring`."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:117
-msgid ""
-"If you are trying Adyen as a test, you can use the following URLs instead:"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:119
-msgid ":guilabel:`Checkout API URL`: `https://checkout-test.adyen.com`"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:120
-msgid ""
-":guilabel:`Recurring API URL`: `https://pal-test.adyen.com/pal/servlet/"
-"Recurring`"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:123
-msgid "Adyen Account"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:128
-msgid "Allow payments from a specific origin"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:130
-msgid ""
-"To allow payment originated from your website, follow the steps "
-"in :ref:`adyen/api_and_client_keys` to navigate to your API user and go "
-"to :menuselection:`Add allowed origins`, then add the URLs from where "
-"payments will be made (the URLs of the servers hosting your Odoo instances)."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:-1
-msgid "Allows payments originated from a specific domain."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:139
-#: ../../content/applications/finance/payment_providers/authorize.rst:41
-msgid "Place a hold on a card"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:141
-msgid ""
-"Adyen allows you to capture an amount manually instead of having an "
-"immediate capture."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:143
-msgid ""
-"To set it up, enable the **Capture Amount Manually** option on Odoo, as "
-"explained in the :ref:`payment providers documentation <payment_providers/"
-"manual_capture>`."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:146
-msgid ""
-"Then, open your Adyen Merchant Account, go to :menuselection:`Account --> "
-"Settings`, and set the **Capture Delay** to **manual**."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:-1
-msgid "Capture Delay settings in Adyen"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:154
-msgid ""
-"If you configure Odoo to capture amounts manually, make sure to set the "
-"**Capture Delay** to **manual** on Adyen. Otherwise, the transaction will be "
-"blocked in the authorized state in Odoo."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/adyen.rst:159
-msgid ""
-"After **7 days**, if the transaction has not been captured yet, the customer "
-"has the right to **revoke** it."
 msgstr ""
 
 #: ../../content/applications/finance/payment_providers/amazon_payment_services.rst:3
@@ -57949,7 +58380,6 @@ msgstr ""
 #: ../../content/applications/finance/payment_providers/amazon_payment_services.rst:44
 #: ../../content/applications/finance/payment_providers/asiapay.rst:47
 #: ../../content/applications/finance/payment_providers/flutterwave.rst:36
-#: ../../content/applications/finance/payment_providers/iyzico.rst:28
 #: ../../content/applications/finance/payment_providers/mercado_pago.rst:36
 #: ../../content/applications/finance/payment_providers/nuvei.rst:42
 #: ../../content/applications/finance/payment_providers/redsys.rst:40
@@ -58064,6 +58494,15 @@ msgid ""
 "payment solution provider, allowing businesses to accept **credit cards**."
 msgstr ""
 
+#: ../../content/applications/finance/payment_providers/authorize.rst:12
+#: ../../content/applications/finance/payment_providers/demo.rst:12
+msgid ":ref:`payment_providers/add_new`"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/authorize.rst:15
+msgid "Credentials tab"
+msgstr ""
+
 #: ../../content/applications/finance/payment_providers/authorize.rst:17
 msgid ""
 "Odoo needs your **API Credentials & Keys** to connect with your "
@@ -58113,6 +58552,10 @@ msgstr ""
 
 #: ../../content/applications/finance/payment_providers/authorize.rst:38
 msgid "Configuration tab"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/authorize.rst:41
+msgid "Place a hold on a card"
 msgstr ""
 
 #: ../../content/applications/finance/payment_providers/authorize.rst:43
@@ -58360,6 +58803,214 @@ msgid ""
 "knowledgebase/Knowledgearticle/?code=000001293>`_"
 msgstr ""
 
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:11
+msgid "Wire transfer"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:13
+msgid ""
+"The **Wire Transfer** payment method allows you to provide payment "
+"instructions to customers, such as your bank details and a reference to "
+"include with the payment. These instructions are displayed after the "
+"customer selects :guilabel:`Wire Transfer` as the payment method and clicks "
+"the :guilabel:`Pay now` button at the end of the checkout process on your "
+"ecommerce website or on the customer portal."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:20
+msgid ""
+"While this method is widely accessible and requires minimal setup, it is not "
+"efficient process-wise. It is recommended to set up a :doc:`payment provider "
+"<../payment_providers>` instead."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:23
+msgid ""
+"Online orders remain in the :guilabel:`Quotation sent` (i.e., unpaid order) "
+"stage until you receive the payment and manually :guilabel:`Confirm` the "
+"order."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:26
+msgid "To configure **Wire Transfer**, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:28
+msgid ""
+":ref:`Navigate to the Wire Transfer payment provider <payment_providers/"
+"supported_providers>`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:29
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:84
+msgid ""
+"In the :guilabel:`Configuration` tab, select whether the memo "
+"or :guilabel:`Communication` to be displayed alongside the payment "
+"instructions should be:"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:32
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:87
+msgid ""
+":guilabel:`Based on Document Reference`: the sales order or invoice number"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:33
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:88
+msgid ":guilabel:`Based on Customer ID`: the customer identifier"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:35
+msgid "Enable :guilabel:`Enable QR codes` to activate QR code payments."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:38
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:93
+msgid ""
+":doc:`Additional accounting setup <../accounting/customer_invoices/"
+"epc_qr_code>` is required to use QR codes."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:41
+msgid ""
+"Define the payment instructions in the :guilabel:`Messages` tab. If :doc:`a "
+"bank account <../accounting/bank>` has already been defined, the account "
+"number is automatically added to the default message generated by Odoo. You "
+"can also add it afterward and update the message by "
+"clicking :guilabel:`Reload pending message`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:48
+msgid ""
+"The **Wire transfer** payment method can serve as a template for other "
+"payment methods that are processed manually, such as checks. :ref:`Access "
+"the Wire Transfer payment method <payment_providers/payment_methods>`, then "
+"duplicate it if needed and rename it accordingly."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:55
+msgid "SEPA Direct Debit"
+msgstr "SEPA-suoraveloitus"
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:59
+msgid ""
+"SEPA (Single Euro Payments Area) is a payment-integration initiative of the "
+"European Union that facilitates standardized and simplified electronic "
+"payments in euros across participating countries."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:62
+msgid ""
+"SEPA Direct Debit (SDD) is a payment provider that allows future payments to "
+"be collected from customers' bank accounts based on a signed :ref:`SEPA "
+"Direct Debit mandate <accounting/batch_sdd/sdd_mandates>`. This is "
+"particularly useful for recurring payments based on a :doc:`subscription </"
+"applications/sales/subscriptions>`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:68
+msgid ""
+"To use the SEPA Direct Debit (SDD) payment provider and create :ref:`SEPA "
+"Direct Debit mandates <accounting/batch_sdd/sdd_mandates>`:"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:71
+msgid "The invoice being paid must be for an amount in euros."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:72
+msgid ""
+"The :guilabel:`SEPA Direct Deposit (SDD)` feature must be enabled, and the "
+"company's :guilabel:`Creditor Identifier` must be defined in "
+"the :ref:`Accounting or Invoicing settings <accounting/batch_sdd/sepa-"
+"configuration>`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:81
+msgid "To configure **SEPA Direct Debit**, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:83
+msgid ""
+":ref:`Navigate to the SEPA Direct Debit payment provider <payment_providers/"
+"supported_providers>`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:90
+msgid ""
+"Select the :guilabel:`Enable QR codes` check box to activate QR code "
+"payments."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:96
+msgid ""
+"Edit the default payment instructions in the :guilabel:`Messages` tab to "
+"include your **bank account number**. These instructions are displayed at "
+"the end of the checkout process on your ecommerce website or on the customer "
+"portal."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:102
+msgid ""
+"Leave the :guilabel:`Currencies` field set to the default :guilabel:`EUR` "
+"tag to ensure |sdd| is only available for payments in euros."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:104
+msgid ""
+"The :guilabel:`Bank Account` defined for the :guilabel:`Payment Journal` "
+"must be a valid IBAN."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:107
+msgid ""
+"You can also test SEPA direct debit payments using "
+"the :ref:`payment_providers/test-mode`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:110
+msgid "Online payments with |sdd|"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:112
+msgid ""
+"Customers selecting |sdd| as a payment method are prompted to enter their "
+"IBAN to complete the :ref:`SEPA Direct Debit mandate <accounting/batch_sdd/"
+"sdd_mandates>`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:115
+msgid ""
+"The |sdd| mandate is then automatically created in :guilabel:`Draft` based "
+"on the provided IBAN. To validate the information, customers must confirm "
+"each new mandate with a successful bank transfer of the expected amount "
+"**using the specified payment reference (communication)** defined in "
+"the :ref:`SEPA Direct Debit payment provider's form <sdd/configuration>`. "
+"Once this initial payment is received and :doc:`reconciled <../accounting/"
+"bank/reconciliation>`, the mandate is automatically validated and updated to "
+"the :guilabel:`Active` status. Once a mandate is active, it is reused for "
+"all subsequent payments made with the |sdd| payment method. You can then "
+"collect them by :ref:`uploading them to your online banking interface "
+"<accounting/batch_sdd/XML>`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:125
+msgid ":doc:`../accounting/payments/batch_sdd`"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:128
+msgid ""
+"Mandates are automatically :ref:`closed <accounting/batch_sdd/close-revoke-"
+"mandate>` 36 months after the date of the last collection."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/bank_payments.rst:130
+msgid ""
+"|sdd| is also available as a payment method through other providers, such "
+"as :doc:`adyen`, :doc:`buckaroo`, and :doc:`stripe`. In these cases, |sdd| "
+"mandates are handled externally by the payment provider."
+msgstr ""
+
 #: ../../content/applications/finance/payment_providers/buckaroo.rst:3
 msgid "Buckaroo"
 msgstr "Buckaroo"
@@ -58478,6 +59129,81 @@ msgstr ""
 msgid "Transaction's status bar."
 msgstr ""
 
+#: ../../content/applications/finance/payment_providers/dpo.rst:3
+msgid "DPO Pay"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/dpo.rst:5
+msgid ""
+"`DPO Pay <https://dpogroup.com/>`_ is a payment provider based in Africa "
+"that operates across multiple countries on the continent."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/dpo.rst:11
+msgid "DPO Pay account creation"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/dpo.rst:13
+msgid ""
+"`Fill in the DPO Pay onboarding form <https://dpo-pay-network.odoo.com/"
+"form>`_ and upload the required documents."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/dpo.rst:15
+msgid ""
+"Agree to the :guilabel:`Terms and Conditions` and click :guilabel:`Submit`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/dpo.rst:16
+msgid ""
+"DPO Pay creates a test account based on the submitted information and sends "
+"you an email containing your login credentials for the `DPO portal <https://"
+"portal.dpopay.com>`_ and the :ref:`test credentials <payment_providers/test-"
+"mode>` to enter in :ref:`Odoo <payment_providers/dpo/configure_odoo>` if you "
+"want to try DPO Pay without affecting live transactions."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/dpo.rst:21
+msgid ""
+"Once DPO has verified the information and documents, they will transition "
+"your test account to a live account and send another email containing your "
+"live credentials to configure in :ref:`Odoo <payment_providers/dpo/"
+"configure_odoo>`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/dpo.rst:30
+msgid ""
+":ref:`Navigate to the payment provider DPO Pay <payment_providers/add_new>`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/dpo.rst:31
+msgid ""
+"Fill in the :guilabel:`Service ID` and :guilabel:`Company Token` fields with "
+"the :ref:`information received from DPO Pay <payment_providers/dpo/"
+"configure_dashboard>`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/dpo.rst:33
+msgid "Configure the remaining options to your liking."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/dpo.rst:34
+msgid ""
+"Set the :guilabel:`State` field to :guilabel:`Enabled` (or :guilabel:`Test "
+"Mode` if you are trying DPO Pay as a :ref:`test <payment_providers/test-"
+"mode>`)."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/dpo.rst:38
+msgid ""
+"All `payment methods supported by DPO Pay <https://dpogroup.com/Payment-"
+"methods>`_ are grouped under the :guilabel:`Card / Mobile` payment method. "
+"When they select this payment method, customers are redirected to a DPO Pay "
+"page where they can select their preferred payment method. To enable or "
+"disable specific payment options, contact `DPO Pay support <https://"
+"dpogroup.com/contact-us/>`_."
+msgstr ""
+
 #: ../../content/applications/finance/payment_providers/flutterwave.rst:3
 msgid "Flutterwave"
 msgstr "Flutterwave"
@@ -58553,6 +59279,55 @@ msgid ""
 "to :menuselection:`Settings --> Account Settings`."
 msgstr ""
 
+#: ../../content/applications/finance/payment_providers/inperson_payments.rst:6
+msgid ""
+"Sales orders are automatically confirmed when paid using an in-person "
+"payment method."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/inperson_payments.rst:11
+msgid "Pay on site"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/inperson_payments.rst:13
+msgid ""
+"To allow customers to reserve products online and pay when collecting them "
+"in-store, enable and configure the :ref:`Click & Collect feature <ecommerce/"
+"shipping/instore-pickup>`. The **Pay on Site** payment provider is "
+"automatically enabled and published. To edit the default instructions shown "
+"to customers, :ref:`access the payment provider form <payment_providers/"
+"supported_providers>` and go to the :guilabel:`Messages` tab."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/inperson_payments.rst:20
+msgid ""
+"The method is only available at checkout for customers who select the **Pick "
+"up in store** delivery method."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/inperson_payments.rst:26
+msgid "Cash on delivery"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/inperson_payments.rst:28
+msgid ""
+"The **Cash on Delivery** payment method allows customers to pay for their "
+"order at the time of delivery. To make it available to "
+"customers, :doc:`navigate to the relevant delivery method form </"
+"applications/inventory_and_mrp/inventory/shipping_receiving/"
+"setup_configuration/new_delivery_method>` and enable :guilabel:`Cash on "
+"Delivery`. The **Cash on Delivery** payment provider is automatically "
+"enabled and published. To edit the default instructions shown to "
+"customers, :ref:`access the payment provider form <payment_providers/"
+"supported_providers>` and go to the :guilabel:`Messages` tab."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/inperson_payments.rst:36
+msgid ""
+"This method is only available at checkout for customers who select a "
+"delivery method with the :guilabel:`Cash on Delivery` feature enabled."
+msgstr ""
+
 #: ../../content/applications/finance/payment_providers/iyzico.rst:3
 msgid "Iyzico"
 msgstr "Iyzico"
@@ -58572,16 +59347,19 @@ msgid "Log into the `Iyzico Dashboard <https://merchant.iyzipay.com>`_."
 msgstr ""
 
 #: ../../content/applications/finance/payment_providers/iyzico.rst:13
-msgid ""
-"Navigate to :menuselection:`Settings --> Merchant Settings` and copy the "
-"values of the :guilabel:`API Key` and :guilabel:`Secret Key` fields and save "
-"them for later."
+msgid "Navigate to :menuselection:`Settings --> Merchant Settings`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/iyzico.rst:15
+#: ../../content/applications/finance/payment_providers/iyzico.rst:14
 msgid ""
-"In the same Merchant Settings page, Find and enable :guilabel:`Merchant "
-"Notifications` section."
+"Copy the values of the :guilabel:`API Key` and :guilabel:`Secret Key` fields "
+"and save them for the :ref:`payment_providers/iyzico/configure-odoo` step."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/iyzico.rst:16
+msgid ""
+"On the same :guilabel:`Merchant Settings` page, enable :guilabel:`Merchant "
+"Notifications`."
 msgstr ""
 
 #: ../../content/applications/finance/payment_providers/iyzico.rst:0
@@ -58594,17 +59372,16 @@ msgstr ""
 msgid "For example: `https://example.odoo.com/payment/iyzico/webhook`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/iyzico.rst:24
+#: ../../content/applications/finance/payment_providers/iyzico.rst:27
 msgid ""
-":ref:`Navigate to the payment provider Iyzico <payment_providers/add_new>` "
-"and change its state to :guilabel:`Enabled`."
+":ref:`Navigate to the payment provider Iyzico <payment_providers/add_new>`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/iyzico.rst:26
+#: ../../content/applications/finance/payment_providers/iyzico.rst:28
 msgid ""
-"In the :guilabel:`Credentials` tab, fill the :guilabel:`API Key`, "
-"and :guilabel:`Secret Key`, with the values you saved at the "
-"step :ref:`payment_providers/iyzico/configure_dashboard`."
+"In the :guilabel:`Credentials` tab, fill the :guilabel:`API Key` "
+"and :guilabel:`Secret Key` fields with the values you saved at the "
+"step :ref:`payment_providers/iyzico/configure-dashboard`."
 msgstr ""
 
 #: ../../content/applications/finance/payment_providers/mercado_pago.rst:3
@@ -58677,36 +59454,48 @@ msgid ""
 "established in the Netherlands."
 msgstr ""
 
+#: ../../content/applications/finance/payment_providers/mollie.rst:10
+msgid "Mollie configuration"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/mollie.rst:12
+msgid ""
+"`Create a Mollie account <https://my.mollie.com/dashboard/signup>`_ if "
+"necessary and log in to the `Mollie Dashboard <https://my.mollie.com/"
+"dashboard/login>`_."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/mollie.rst:15
+msgid ""
+"Go to :menuselection:`Payments` in the top menu, then click :guilabel:`API "
+"keys`."
+msgstr ""
+
 #: ../../content/applications/finance/payment_providers/mollie.rst:16
 msgid ""
-"Odoo needs your **API Credentials** to connect with your Mollie account, "
-"which comprise:"
+":guilabel:`Copy` the :guilabel:`Live API Key` (or the :guilabel:`Test API "
+"Key` if you wish to test the integration without affecting live "
+"transactions) and save it for the :ref:`payment_providers/mollie/"
+"configure_odoo` step."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/mollie.rst:18
+#: ../../content/applications/finance/payment_providers/mollie.rst:25
 msgid ""
-"**API Key**: The test or live API Key depending on the configuration of the "
-"provider."
+":ref:`Navigate to the payment provider Mollie <payment_providers/add_new>`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/mollie.rst:20
+#: ../../content/applications/finance/payment_providers/mollie.rst:26
 msgid ""
-"You can copy your credentials from your Mollie account, and paste them in "
-"the related fields under the **Credentials** tab."
+"Fill in the :guilabel:`API Key` with the value :ref:`previously saved "
+"<payment_providers/mollie/configure_dashboard>`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/mollie.rst:23
+#: ../../content/applications/finance/payment_providers/mollie.rst:29
+#: ../../content/applications/finance/payment_providers/redsys.rst:41
 msgid ""
-"To retrieve your API key, log into your Mollie account, go "
-"to :menuselection:`Developers --> API keys`, and copy your Test or Live "
-"**API Key**."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/mollie.rst:27
-msgid ""
-"If you are trying Mollie as a test, with the Test API key, change the "
-"**State** to *Test Mode*. We recommend doing this on a test Odoo database, "
-"rather than on your main database."
+"Set the :guilabel:`State` field to :guilabel:`Enabled` (or :guilabel:`Test "
+"Mode` if you want to :ref:`test the integration without affecting live "
+"transactions <payment_providers/test-mode>`)."
 msgstr ""
 
 #: ../../content/applications/finance/payment_providers/nuvei.rst:3
@@ -59007,11 +59796,6 @@ msgid ""
 "If a payment method is added to the Paymob dashboard **after** "
 "synchronization, click :guilabel:`Synchronize with Paymob` again to make it "
 "available in Odoo."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/paymob.rst:59
-#: ../../content/applications/finance/payment_providers/razorpay.rst:75
-msgid "Configure the remaining options as needed."
 msgstr ""
 
 #: ../../content/applications/finance/payment_providers/paypal.rst:3
@@ -59421,162 +60205,6 @@ msgid ""
 "step :ref:`payment_providers/redsys/configure_redsys`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/redsys.rst:41
-msgid ""
-"Set the :guilabel:`State` field to :guilabel:`Enabled` (or :guilabel:`Test "
-"Mode` if you want to :ref:`test the integration without affecting live "
-"transactions <payment_providers/test-mode>`)."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/sdd.rst:3
-msgid "SEPA Direct Debit"
-msgstr "SEPA-suoraveloitus"
-
-#: ../../content/applications/finance/payment_providers/sdd.rst:7
-msgid ""
-"SEPA (Single Euro Payments Area) is a payment-integration initiative of the "
-"European Union that facilitates standardized and simplified electronic "
-"payments in euros across participating countries."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/sdd.rst:10
-msgid ""
-"SEPA Direct Debit (SDD) is a payment provider that allows future payments to "
-"be collected from customers' bank accounts based on a signed :ref:`SEPA "
-"Direct Debit mandate <accounting/batch_sdd/sdd_mandates>`. This is "
-"particularly useful for recurring payments based on a :doc:`subscription </"
-"applications/sales/subscriptions>`."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/sdd.rst:16
-msgid ""
-"To use the SEPA Direct Debit (SDD) payment provider and create :ref:`SEPA "
-"Direct Debit mandates <accounting/batch_sdd/sdd_mandates>`:"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/sdd.rst:19
-msgid "The invoice being paid must be for an amount in euros."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/sdd.rst:20
-msgid ""
-"The :guilabel:`SEPA Direct Deposit (SDD)` feature must be enabled, and the "
-"company's :guilabel:`Creditor Identifier` must be defined in "
-"the :ref:`Accounting or Invoicing settings <accounting/batch_sdd/sepa-"
-"configuration>`."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/sdd.rst:29
-msgid "To configure **SEPA Direct Debit**, follow these steps:"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/sdd.rst:31
-msgid ""
-":ref:`Navigate to the SEPA Direct Debit payment provider <payment_providers/"
-"supported_providers>`."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/sdd.rst:32
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:32
-msgid ""
-"In the :guilabel:`Configuration` tab, select whether the memo "
-"or :guilabel:`Communication` to be displayed alongside the payment "
-"instructions should be:"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/sdd.rst:35
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:35
-msgid ""
-":guilabel:`Based on Document Reference`: the sales order or invoice number"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/sdd.rst:36
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:36
-msgid ":guilabel:`Based on Customer ID`: the customer identifier"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/sdd.rst:38
-msgid ""
-"Select the :guilabel:`Enable QR codes` check box to activate QR code "
-"payments."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/sdd.rst:41
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:41
-msgid ""
-":doc:`Additional accounting setup <../accounting/customer_invoices/"
-"epc_qr_code>` is required to use QR codes."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/sdd.rst:44
-msgid ""
-"Edit the default payment instructions in the :guilabel:`Messages` tab to "
-"include your **bank account number**. These instructions are displayed at "
-"the end of the checkout process on your ecommerce website or on the customer "
-"portal."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/sdd.rst:50
-msgid ""
-"Leave the :guilabel:`Currencies` field set to the default :guilabel:`EUR` "
-"tag to ensure |sdd| is only available for payments in euros."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/sdd.rst:52
-msgid ""
-"The :guilabel:`Bank Account` defined for the :guilabel:`Payment Journal` "
-"must be a valid IBAN."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/sdd.rst:55
-msgid ""
-"You can also test SEPA direct debit payments using "
-"the :ref:`payment_providers/test-mode`."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/sdd.rst:61
-msgid "Online payments with |sdd|"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/sdd.rst:63
-msgid ""
-"Customers selecting |sdd| as a payment method are prompted to enter their "
-"IBAN to complete the :ref:`SEPA Direct Debit mandate <accounting/batch_sdd/"
-"sdd_mandates>`."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/sdd.rst:66
-msgid ""
-"The |sdd| mandate is then automatically created in :guilabel:`Draft` based "
-"on the provided IBAN. To validate the information, customers must confirm "
-"each new mandate with a successful bank transfer of the expected amount "
-"**using the specified payment reference (communication)** defined in "
-"the :ref:`SEPA Direct Debit payment provider's form <sdd/configuration>`. "
-"Once this initial payment is received and :doc:`reconciled <../accounting/"
-"bank/reconciliation>`, the mandate is automatically validated and updated to "
-"the :guilabel:`Active` status. Once a mandate is active, it is reused for "
-"all subsequent payments made with the |sdd| payment method. You can then "
-"collect them by :ref:`uploading them to your online banking interface "
-"<accounting/batch_sdd/XML>`."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/sdd.rst:76
-msgid ":doc:`../accounting/payments/batch_sdd`"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/sdd.rst:79
-msgid ""
-"Mandates are automatically :ref:`closed <accounting/batch_sdd/close-revoke-"
-"mandate>` 36 months after the date of the last collection."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/sdd.rst:81
-msgid ""
-"|sdd| is also available as a payment method through other providers, such "
-"as :doc:`adyen`, :doc:`buckaroo`, and :doc:`stripe`. In these cases, |sdd| "
-"mandates are handled externally by the payment provider."
-msgstr ""
-
 #: ../../content/applications/finance/payment_providers/stripe.rst:3
 msgid "Stripe"
 msgstr "Stripe"
@@ -59598,288 +60226,171 @@ msgid ""
 "payment-methods>`_"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/stripe.rst:13
-msgid "Create your Stripe account with Odoo"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/stripe.rst:15
-msgid "The method to acquire your credentials depends on your hosting type:"
+#: ../../content/applications/finance/payment_providers/stripe.rst:12
+msgid ""
+":doc:`Use Stripe as a payment terminal in Point of Sale <../../sales/"
+"point_of_sale/payment_methods/terminals/stripe>`"
 msgstr ""
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:18
+msgid "Create your Stripe account with Odoo"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/stripe.rst:20
+msgid ""
+"To create a new Stripe account and link it to your Odoo database, make sure "
+"the company's :guilabel:`Email` is configured in the :ref:`company's "
+"settings <general/companies/company>`, then follow the steps below according "
+"to your hosting type:"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/stripe.rst:25
 msgid "Odoo Online"
 msgstr "Odoo Online"
 
-#: ../../content/applications/finance/payment_providers/stripe.rst:20
-#: ../../content/applications/finance/payment_providers/stripe.rst:29
+#: ../../content/applications/finance/payment_providers/stripe.rst:27
+#: ../../content/applications/finance/payment_providers/stripe.rst:36
 msgid ""
 ":ref:`Navigate to the payment provider Stripe <payment_providers/"
 "supported_providers>` and click :guilabel:`Connect Stripe`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/stripe.rst:22
-#: ../../content/applications/finance/payment_providers/stripe.rst:31
+#: ../../content/applications/finance/payment_providers/stripe.rst:29
+#: ../../content/applications/finance/payment_providers/stripe.rst:38
 msgid ""
 "Go through the setup process and confirm your email address when Stripe "
 "sends you a confirmation email."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/stripe.rst:24
+#: ../../content/applications/finance/payment_providers/stripe.rst:31
 msgid ""
 "At the end of the process, click :guilabel:`Agree and submit`. If all "
 "requested information has been submitted, you are then redirected to Odoo, "
 "and your payment provider is enabled."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/stripe.rst:27
+#: ../../content/applications/finance/payment_providers/stripe.rst:34
 msgid "Odoo.sh or On-premise"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/stripe.rst:33
+#: ../../content/applications/finance/payment_providers/stripe.rst:40
 msgid ""
 "At the end of the process, click :guilabel:`Agree and submit`; you are then "
 "redirected to the payment provider **Stripe** in Odoo."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/stripe.rst:35
-msgid ":ref:`Fill in your credentials <stripe/api_keys>`."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/stripe.rst:36
-msgid ":ref:`Generate a webhook <stripe/webhook>`."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/stripe.rst:40
+#: ../../content/applications/finance/payment_providers/stripe.rst:42
 msgid ""
-"To use an existing Stripe account, :ref:`activate the Developer mode "
-"<developer-mode>` and :ref:`enable Stripe manually <payment_providers/"
-"add_new>`. You can then :ref:`Fill in your credentials <stripe/"
-"api_keys>`, :ref:`generate a webhook <stripe/webhook>`, and enable the "
-"payment provider."
+":ref:`Fill in your credentials <payment_providers/stripe/manual_input>`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/stripe.rst:44
+#: ../../content/applications/finance/payment_providers/stripe.rst:46
 msgid ""
-"You can also test Stripe using the :ref:`payment_providers/test-mode`. To do "
-"so, first, `log into your Stripe dashboard <https://dashboard.stripe.com/"
-"dashboard>`_ and switch to the **Test mode**. Then, in Odoo, :ref:`activate "
-"the Developer mode <developer-mode>`, :ref:`navigate to the payment provider "
-"Stripe <payment_providers/supported_providers>`, :ref:`fill in your API "
-"credentials <stripe/api_keys>` with the test keys, and set "
-"the :guilabel:`State` field to :guilabel:`Test Mode`."
+"If you have created an account instead of :ref:`linking an existing one "
+"<payment_providers/stripe/manual_input>`, :ref:`enable the developer mode "
+"<developer-mode>`, then click :guilabel:`Reset your Stripe Account` on the "
+"Stripe payment provider form, then :ref:`fill in your Stripe account's "
+"credentials <payment_providers/stripe/manual_input>`."
 msgstr ""
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:54
-msgid "Fill in your credentials"
+msgid "Manual credential input"
 msgstr ""
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:56
 msgid ""
-"If your **API credentials** are required to connect with your Stripe "
-"account, proceed as follows:"
+"Manual credential input is needed, for example, when linking an existing "
+"Stripe account to your Odoo database, when using an account :ref:`created on "
+"Odoo.sh or On-premise <payment_providers/stripe/create_account>`, or "
+"when :ref:`testing Stripe without affecting live transactions "
+"<payment_providers/test-mode>`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/stripe.rst:58
+#: ../../content/applications/finance/payment_providers/stripe.rst:64
+msgid "Stripe configuration"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/stripe.rst:66
 msgid ""
 "Go to `the API keys page on Stripe <https://dashboard.stripe.com/account/"
 "apikeys>`_, or log into your Stripe dashboard and go "
 "to :menuselection:`Developers --> API Keys`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/stripe.rst:60
+#: ../../content/applications/finance/payment_providers/stripe.rst:68
 msgid ""
 "In the :guilabel:`Standard keys` section, copy the :guilabel:`Publishable "
-"key` and the :guilabel:`Secret key` and save them for later."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/stripe.rst:62
-#: ../../content/applications/finance/payment_providers/stripe.rst:101
-msgid ""
-"In Odoo, :ref:`navigate to the payment provider Stripe <payment_providers/"
-"supported_providers>`."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/stripe.rst:63
-msgid ""
-"In the :guilabel:`Credentials` tab, fill in the :guilabel:`Publishable Key` "
-"and :guilabel:`Secret Key` fields with the values you previously saved."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/stripe.rst:69
-msgid "Generate a webhook"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/stripe.rst:71
-msgid ""
-"If your **Webhook Signing Secret** is required to connect with your Stripe "
-"account, you can create a webhook automatically or manually."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/stripe.rst:75
-msgid "Create the webhook automatically"
+"key` and the :guilabel:`Secret key` and save them for "
+"the :ref:`payment_providers/stripe/odoo-configuration` step."
 msgstr ""
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:77
-msgid ""
-"Make sure your :ref:`Publishable and Secret keys <stripe/api_keys>` are "
-"filled in, then click :guilabel:`Generate your webhook`."
+msgid ":ref:`Enable the developer mode <developer-mode>`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/stripe.rst:80
-msgid "Create the webhook manually"
+#: ../../content/applications/finance/payment_providers/stripe.rst:78
+msgid ""
+":ref:`Navigate to the Stripe payment provider <payment_providers/"
+"supported_providers>`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/stripe.rst:79
+msgid ""
+"In the :guilabel:`Credentials` tab, fill in the :guilabel:`Publishable Key` "
+"and :guilabel:`Secret Key` fields with the values you :ref:`previously saved "
+"<payment_providers/stripe/stripe-configuration>`."
 msgstr ""
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:82
-msgid ""
-"Go to the `Webhooks page on Stripe <https://dashboard.stripe.com/"
-"webhooks>`_, or log into your Stripe dashboard and go "
-"to :menuselection:`Developers --> Webhooks`."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/stripe.rst:84
-msgid ""
-"In the :guilabel:`Hosted endpoints` section, click :guilabel:`Add endpoint`. "
-"Then, in the :guilabel:`Endpoint URL` field, enter your Odoo database's URL, "
-"followed by `/payment/stripe/webhook`, e.g., `https://yourcompany.odoo.com/"
-"payment/stripe/webhook`."
+msgid "Click :guilabel:`Generate your webhook`."
 msgstr ""
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:87
 msgid ""
-"Click :guilabel:`Select events` at the bottom of the form, then select the "
-"following events:"
+"You can also test Stripe without affecting live transactions using "
+"the :ref:`test mode <payment_providers/test-mode>` and the :ref:`API keys "
+"<payment_providers/stripe/stripe-configuration>` of your `Stripe account's "
+"Test Mode or a sandbox environment <https://docs.stripe.com/testing-use-"
+"cases>`_."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/stripe.rst:90
+#: ../../content/applications/finance/payment_providers/stripe.rst:91
 msgid ""
-"in the :guilabel:`Charge` section: :guilabel:`charge.refunded` "
-"and :guilabel:`charge.refund.updated`;"
+"To link the same Stripe account to :doc:`multiple companies </applications/"
+"general/companies/multi_company>` in a database, :ref:`create an account "
+"<payment_providers/stripe/create_account>` and :ref:`fill in the credentials "
+"<payment_providers/stripe/manual_input>` for one company, then reuse the "
+"same credentials and webhook for the others. To view the webhook, go to the "
+"`Webhooks page on Stripe <https://dashboard.stripe.com/webhooks>`_, or log "
+"into your Stripe dashboard and go to :menuselection:`Developers --> "
+"Webhooks`. Click the destination in the list, then click the :icon:`fa-eye` "
+"(:guilabel:`Reveal secret`) icon next to the :guilabel:`Signing secret` "
+"field and copy the value."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/stripe.rst:92
-msgid ""
-"in the :guilabel:`Payment intent` "
-"section: :guilabel:`payment_intent.amount_capturable_updated`, :guilabel:`payment_intent.payment_failed`, :guilabel:`payment_intent.processing`, "
-"and :guilabel:`payment_intent.succeeded`;"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/stripe.rst:96
-msgid ""
-"in the :guilabel:`Setup intent` section: :guilabel:`setup_intent.succeeded`."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/stripe.rst:98
-msgid "Click :guilabel:`Add events`."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/stripe.rst:99
-msgid ""
-"Click :guilabel:`Add endpoint`, then click :guilabel:`Reveal` and save "
-"your :guilabel:`Signing secret` for later."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/stripe.rst:103
-msgid ""
-"In the :guilabel:`Credentials` tab, fill the :guilabel:`Webhook Signing "
-"Secret` field with the value you previously saved."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/stripe.rst:107
-msgid ""
-"You can select other events, but they are currently not processed by Odoo."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/stripe.rst:110
+#: ../../content/applications/finance/payment_providers/stripe.rst:102
 msgid "Enable Apple Pay"
 msgstr "Ota Apple Pay käyttöön"
 
-#: ../../content/applications/finance/payment_providers/stripe.rst:112
+#: ../../content/applications/finance/payment_providers/stripe.rst:104
 msgid ""
-"To allow customers to use the Apple Pay button to pay their eCommerce "
-"orders, go to the :guilabel:`Configuration` tab, enable :guilabel:`Allow "
-"Express Checkout`, and click :guilabel:`Enable Apple Pay`."
+"To allow customers to use the Apple Pay button to pay for their eCommerce "
+"orders, :ref:`navigate to the Stripe payment provider <payment_providers/"
+"supported_providers>`, then go to the :guilabel:`Configuration` tab, "
+"enable :guilabel:`Allow Express Checkout`, and click :guilabel:`Enable Apple "
+"Pay`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/stripe.rst:117
+#: ../../content/applications/finance/payment_providers/stripe.rst:110
 msgid ""
 ":ref:`Express checkout and Google Pay <payment_providers/express_checkout>`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/stripe.rst:119
+#: ../../content/applications/finance/payment_providers/stripe.rst:113
 msgid ""
-":doc:`Use Stripe as a payment terminal in Point of Sale <../../sales/"
-"point_of_sale/payment_methods/terminals/stripe>`"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:3
-msgid "Wire transfers"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:5
-msgid ""
-"The **Wire Transfer** payment method allows you to provide payment "
-"instructions to your customers, such as your bank details and a reference to "
-"include with the payment. These instructions are displayed after the "
-"customer selects :guilabel:`Wire Transfer` as the payment method and clicks "
-"the :guilabel:`Pay now` button at the end of the checkout process on your "
-"ecommerce website or on the customer portal."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:-1
-msgid "Payment instructions on the customer portal"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:16
-msgid ""
-"While this method is widely accessible and requires minimal setup, it is not "
-"efficient process-wise. It is recommended to set up a :doc:`payment provider "
-"<../payment_providers>` instead."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:19
-msgid ""
-"Online orders remain in the :guilabel:`Quotation sent` (i.e., unpaid order) "
-"stage until you receive the payment and manually :guilabel:`Confirm` the "
-"order."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:23
-msgid ""
-"**Wire transfer** can be used as a template for other payment methods that "
-"are processed manually, such as checks, by renaming or duplicating it."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:29
-msgid "To configure **Wire Transfer**:"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:31
-msgid ""
-":ref:`Navigate to the Wire Transfer payment provider <payment_providers/"
-"supported_providers>`."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:38
-msgid "Enable :guilabel:`Enable QR codes` to activate QR code payments."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:44
-msgid ""
-"Define the payment instructions in the :guilabel:`Messages` tab. If :doc:`a "
-"bank account <../accounting/bank>` has already been defined, the account "
-"number is automatically added to the default message generated by Odoo. You "
-"can also add it afterward and update the message by "
-"clicking :guilabel:`Reload pending message`."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:0
-msgid "Define payment instructions"
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers/wire_transfer.rst:55
-msgid ""
-"You can also test wire transfers using the :ref:`payment_providers/test-"
-"mode`."
+"Stripe allows to :ref:`manually capture <payment_providers/manual_capture>` "
+"and :ref:`refund <payment_providers/refunds>` payments either from Odoo or "
+"directly from the Stripe dashboard."
 msgstr ""
 
 #: ../../content/applications/finance/payment_providers/worldline.rst:3

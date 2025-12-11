@@ -20,6 +20,8 @@
 # Cécile Collart <cco@odoo.com>, 2021
 # "Tiffany Chang (tic)" <tic@odoo.com>, 2025.
 # Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Louis Travaux <lotr@odoo.com>, 2025.
+# "Manon Rondou (ronm)" <ronm@odoo.com>, 2025.
 #
 # Translators:
 #
@@ -27,9 +29,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-19 09:34+0100\n"
-"PO-Revision-Date: 2025-11-19 20:20+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"POT-Creation-Date: 2025-12-11 10:43+0100\n"
+"PO-Revision-Date: 2025-12-11 15:56+0000\n"
+"Last-Translator: \"Manon Rondou (ronm)\" <ronm@odoo.com>\n"
 "Language-Team: French <https://translate.odoo.com/projects/odoo-19-doc/"
 "general/fr/>\n"
 "Language: fr\n"
@@ -37,7 +39,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 5.14.3\n"
 
 #: ../../content/applications/general.rst:3
 msgid "General settings"
@@ -3763,36 +3765,50 @@ msgid ""
 "delay in the database."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:204
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:205
+msgid ""
+"When configuring email redirections with Microsoft 365 (Exchange Online), be "
+"aware that certain technical limitations may affect your setup. Some users "
+"have reported that Microsoft 365 does not support true redirection and only "
+"allows forwarding, which may not behave as needed for Odoo's email routing."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:210
+msgid ""
+"For more information on Microsoft Exchange configuration, visit `Microsoft "
+"Learn <https://learn.microsoft.com/en-us/exchange/exchange-online>`_."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:213
 msgid ""
 "It is mandatory to redirect the catchall and bounce address to the Odoo "
 "subdomain of the database. Every other alias used must be redirected as well."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:208
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:217
 msgid "With one sales team, the following redirections are required:"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:210
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:219
 msgid "`catchall@company-name.com` → `catchall@company-name.odoo.com`"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:211
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:220
 msgid "`bounce@company-name.com` → `bounce@company-name.odoo.com`"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:212
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:221
 msgid "`info@company-name.com` → `info@company-name.odoo.com`"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:215
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:224
 msgid ""
 "Some providers ask to validate the redirection by sending a link to the "
 "target email address. This procedure is an issue for catchall and bounce "
 "since they are not used to create records."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:218
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:227
 msgid ""
 "Modify the catchall value on the mail alias domain. :ref:`developer-mode` "
 "must be enabled to access this menu. For example, it can be changed from "
@@ -3800,36 +3816,36 @@ msgid ""
 "local-part of another alias."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:221
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:230
 msgid ""
 "Open an app that uses an alias. For example, CRM contains aliases for each "
 "sales team. Set `catchall` as the local-part of the alias of a sales team."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:223
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:232
 msgid ""
 "The validation email will create a record in the CRM app. The email sent "
 "will be visible in the chatter, allowing you to validate the redirection."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:225
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:234
 msgid ""
 "Do not forget to change back the alias of the sales team and the catchall "
 "value on the mail alias domain, just as they were before this procedure."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:229
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:238
 msgid ""
 "An alternative to redirections is **forwarding**. With forwarding, **the "
 "address forwarding the email will be identified as the sender**, while with "
 "redirections, the original sender will always remain."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:236
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:245
 msgid "Incoming mail servers"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:238
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:247
 msgid ""
 "As mentioned earlier, using redirections is the recommended method to "
 "receive emails in Odoo. However, it is also possible to set up incoming mail "
@@ -3838,14 +3854,14 @@ msgid ""
 "in order to fetch all incoming emails."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:244
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:253
 msgid ""
 "Odoo's *Incoming Mail Servers* feature is designed for shared inboxes (e.g., "
 "`sales@yourcompany.com` or `support@yourcompany.com`) to route messages to "
 "team pipelines, tickets, or documents."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:248
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:257
 msgid ""
 "Using personal email addresses (e.g., `mitchell.admin@yourcompany.com`) as "
 "incoming mail servers is **not** recommended. Doing so can lead to increased "
@@ -3853,83 +3869,83 @@ msgid ""
 "syncing replies correctly."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:252
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:261
 msgid ""
 "Incoming mail servers are created by going to :menuselection:`Settings --> "
 "Technical --> Emails: Incoming Mail Servers`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:256
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:265
 msgid ""
 "We recommend using the IMAP protocol over the POP protocol, as IMAP fetches "
 "all unread emails, while POP fetches all the emails' history and then tags "
 "them as deleted in your mailbox."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:260
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:269
 msgid ""
 "It is also possible to connect a mailbox through :doc:`Gmail with Google "
 "OAuth <google_oauth>` or :doc:`Outlook with Microsoft Azure OAuth "
 "<azure_oauth>`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:263
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:272
 msgid ""
 "Regardless of the protocol chosen, emails are fetched using the *Mail: "
 "Fetchmail Service* scheduled action."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:266
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:275
 msgid ""
 "Additionally, using an incoming mail server in Odoo gives the opportunity to "
 "create new records in a specified model. Each incoming mail server can "
 "create records in a different model."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:270
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:279
 msgid ""
 "Emails received on `task@company-name.com` are fetched by the Odoo database. "
 "All fetched emails will create a new project task in the database."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:279
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:288
 msgid "MX record"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:281
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:290
 msgid ""
 "A third option is to create a MX record in your DNS zone which specifies the "
 "mail server managing emails sent to your domain. **Advanced technical "
 "knowledge is required.**"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:285
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:294
 msgid ""
 "This configuration only works with a subdomain on the Odoo Online or Odoo.sh "
 "infrastructure (e.g., `@mail.mydomain.com`)"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:288
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:297
 msgid "Below are presented some specifications depending on the hosting type:"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:292
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:301
 #: ../../content/applications/general/email_communication/faq.rst:296
 msgid "Odoo Online"
 msgstr "Odoo Online"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:294
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:303
 msgid ""
 "The custom subdomain must be added to your :doc:`Odoo Portal <../../websites/"
 "website/configuration/domain_names>`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:297
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:306
 #: ../../content/applications/general/email_communication/faq.rst:301
 msgid "Odoo.sh"
 msgstr "Odoo.sh"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:299
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:308
 msgid ""
 "The custom subdomain must be added to the :doc:`settings of the project "
 "<../../../administration/odoo_sh/getting_started/settings>`:"
@@ -3939,18 +3955,18 @@ msgstr ""
 msgid "Adding a custom subdomain for mail to Odoo.sh project settings."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:308
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:317
 msgid "Infinite email loops"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:310
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:319
 msgid ""
 "In some cases, infinite mailing loops can be created. Odoo provides some "
 "protection against such loops, ensuring the same sender cannot send too many "
 "emails **that would create records** to an alias in a specific time span."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:314
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:323
 msgid ""
 "By default, an email address can send up to 20 emails in 120 minutes. If "
 "more emails are sent, they are blocked and the sender receives the following "
@@ -3961,32 +3977,32 @@ msgstr ""
 msgid "Bounce email received after attempting contact too many times an alias."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:320
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:329
 msgid ""
 "To change the default behavior, enable :ref:`developer-mode`, then go "
 "to :menuselection:`Settings --> Technical --> Parameters: System Parameters` "
 "to add two parameters."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:323
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:332
 msgid ""
 "For the first parameter, enter `mail.gateway.loop.minutes` as "
 "the :guilabel:`Key` and choose a number of minutes as the :guilabel:`Value` "
 "(`120` is the default behavior)."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:325
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:334
 msgid ""
 "For the second parameter, enter `mail.gateway.loop.threshold` as "
 "the :guilabel:`Key` and choose a number of emails as the :guilabel:`Value` "
 "(`20` is the default behavior)."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:329
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:338
 msgid "Allow alias domain system parameter"
 msgstr "Autoriser les paramètres système de l'alias de domaine"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:331
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:340
 msgid ""
 "Incoming aliases are set in the Odoo database to create records by receiving "
 "incoming emails. To view aliases set in the Odoo database, first activate "
@@ -3994,7 +4010,7 @@ msgid ""
 "to :menuselection:`Settings app --> Technical --> Aliases`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:335
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:344
 msgid ""
 "The following system parameter, `mail.catchall.domain.allowed`, set with "
 "allowed alias domain values, separated by commas, filters out correctly "
@@ -4003,7 +4019,7 @@ msgid ""
 "email addresses with only the prefix alias, not the domain, are present."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:340
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:349
 msgid ""
 "In some instances, matches have been made in the Odoo database when an email "
 "is received with the same alias prefix and a different domain on the "
@@ -4016,7 +4032,7 @@ msgstr ""
 "d'expéditeurs, de destinataires et :abbr:`CC (\"Copie carbone\") d'e-mails "
 "entrants."
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:345
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:354
 msgid ""
 "When Odoo receives emails with the `commercial` prefix alias in the sender, "
 "recipient, or :abbr:`CC (Carbon Copy)` email addresses (e.g. "
@@ -4025,7 +4041,7 @@ msgid ""
 "lead/opportunity/etc."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:350
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:359
 msgid ""
 "To add the `mail.catchall.domain.allowed` system parameter, first, activate "
 "the :ref:`developer mode <developer-mode>`. Then, go "
@@ -4034,7 +4050,7 @@ msgid ""
 "the :guilabel:`Key` field."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:354
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:363
 msgid ""
 "Next, for the :guilabel:`Value` field, add the domains separated by commas. "
 "Manually :icon:`fa-cloud-upload` :guilabel:`(Save)`, and the system "
@@ -4045,11 +4061,11 @@ msgstr ""
 msgid "mail.catchall.domain.allowed system parameter set."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:361
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:370
 msgid "Local-part based incoming detection"
 msgstr "Détection de l'arrivée d'une partie locale"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:363
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:372
 msgid ""
 "When creating a new alias, there is an option to enable :guilabel:`Local-"
 "part based incoming detection`. If enabled, Odoo only requires the local-"
@@ -7789,14 +7805,10 @@ msgstr "Activer le plugin de messagerie"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:19
 msgid ""
-"First, enable the *Mail Plugin* feature in the database. Go "
+"First, enable the *Mail Plugin* module in the database. Go "
 "to :menuselection:`Settings --> General Settings --> Integrations`, "
 "enable :guilabel:`Mail Plugin`, and :guilabel:`Save` the configuration."
 msgstr ""
-"Activez d'abord la fonctionnalité *Plugin de messagerie* dans la base de "
-"données. Allez aux :menuselection:`Paramètres --> Paramètres généraux --> "
-"Intégrations`, activez le :guilabel:`Plugin de messagerie`, "
-"et :guilabel:`enregistrez` la configuration."
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:25
 msgid "Install the Outlook Plugin"
@@ -7816,27 +7828,15 @@ msgstr ""
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:31
 msgid ""
 "Next, open the Outlook mailbox, and select any email. After completing this, "
-"click on the :guilabel:`More actions` button in the upper right-side and "
-"select :guilabel:`Get Add-ins`."
+"click on the :guilabel:`Apps` button in the upper right-side, then "
+"click :guilabel:`Get add-ins`."
 msgstr ""
-"Ensuite, ouvrez la boîte de messagerie Outlook et sélectionnez n'importe "
-"quel e-mail. Cliquez ensuite sur le bouton :guilabel:`Autres actions` en "
-"haut à droite et sélectionnez :guilabel:`Obtenir des compléments`."
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:-1
-msgid "More actions button in Outlook"
-msgstr "Le bouton Autres actions dans Outlook"
-
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:39
-msgid ""
-"For locally installed versions of Microsoft Outlook, access "
-"the :guilabel:`Get Add-ins` menu item while in preview mode (**not** with a "
-"message open). First, click on the :guilabel:`... (ellipsis)` icon in the "
-"upper right of the previewed message, then scroll down, and click "
-"on :guilabel:`Get Add-ins`."
+msgid "Apps button in Outlook"
 msgstr ""
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:44
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:37
 msgid ""
 "Following this step, select the :guilabel:`My add-ins` tab on the left-side."
 msgstr "Allez ensuite à l'onglet :guilabel:`Mes compléments` sur la gauche."
@@ -7845,20 +7845,17 @@ msgstr "Allez ensuite à l'onglet :guilabel:`Mes compléments` sur la gauche."
 msgid "My add-ins in Outlook"
 msgstr "Mes compléments dans Outlook"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:50
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:42
 msgid ""
-"Under :guilabel:`Custom add-ins` towards the bottom, click on :guilabel:`+ "
-"Add a custom add-in`, and then on :guilabel:`Add from file...`"
+"Under :guilabel:`Custom Addins` towards the bottom, click on :guilabel:`+ "
+"Add a custom add-in`, then select :guilabel:`Add from file...`"
 msgstr ""
-"Sous :guilabel:`Compléments personnalisés` vers le bas, cliquez "
-"sur :guilabel:`+ Ajouter un complément personnalisé`, et puis "
-"sur :guilabel:`Ajouter à partir d'un fichier...`"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:-1
 msgid "Custom add-ins in Outlook"
 msgstr "Compléments personnalisés dans Outlook"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:57
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:48
 msgid ""
 "For the next step, attach the `manifest.xml` file downloaded above, and "
 "press :guilabel:`OK`. Next, read the warning and click "
@@ -7872,26 +7869,22 @@ msgstr ""
 msgid "Custom add-in installation warning in Outlook"
 msgstr "Avertissement d'installation d'un complément personnalisé dans Outlook"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:67
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:57
 msgid "Connect the database"
 msgstr "Connecter la base de données"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:69
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:59
 msgid ""
 "Now, Outlook will be connected to the Odoo database. First, open any email "
-"in the Outlook mailbox, click on the :guilabel:`More actions` button in the "
-"upper right-side, and select :guilabel:`Odoo for Outlook`."
+"in the Outlook mailbox, click on the :guilabel:`Apps` button in the upper "
+"right-side, and select :guilabel:`Odoo Inbox Addin`."
 msgstr ""
-"Outlook sera maintenant connecté à la base de données Odoo. Ouvrez d'abord "
-"un e-mail dans la boîte de messagerie Outlook, cliquez sur le "
-"bouton :guilabel:`Autres actions` en haut à droite et "
-"sélectionnez :guilabel:`Odoo for Outlook`."
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:-1
 msgid "Odoo for Outlook add-in button"
 msgstr "Bouton de complément Odoo for Outlook"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:77
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:66
 msgid ""
 "The right-side panel can now display **Company Insights**. At the bottom, "
 "click on :guilabel:`Login`."
@@ -7903,7 +7896,7 @@ msgstr ""
 msgid "Logging in the Odoo database"
 msgstr "Se connecter à la base de données Odoo"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:85
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:73
 msgid ""
 "Only a limited amount of **Company Insights** (*Lead Enrichment*) requests "
 "are available as a trial database. This feature requires :ref:`prepaid "
@@ -7913,18 +7906,14 @@ msgstr ""
 "(*Enrichissement de pistes*) est disponible à titre d'essai. Cette "
 "fonctionnalité nécessite des :ref:`crédits prépayés <mail_plugins/pricing>`."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:89
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:77
 msgid ""
 "If, after a short while, the panel is still empty, it is possible that the "
 "browser cookie settings prevented it from loading. Note that these settings "
-"also change if the browser is in \"Incognito\" mode."
+"also change if the browser is in *Incognito* mode."
 msgstr ""
-"Si, après un court instant, le panneau est toujours vide, il est possible "
-"que les paramètres des cookies de votre navigateur l'aient empêché de se "
-"charger. Notez que ces paramètres changent également si votre navigateur est "
-"en mode \"Incognito\"."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:93
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:81
 msgid ""
 "To fix this issue, configure the browser to always allow cookies on Odoo's "
 "plugin page."
@@ -7932,7 +7921,7 @@ msgstr ""
 "Pour résoudre ce problème, configurez le navigateur pour qu'il autorise "
 "toujours les cookies sur la page du plugin Odoo."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:95
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:83
 msgid ""
 "For Google Chrome, change the browser cookie settings by following the guide "
 "at: `https://support.google.com/chrome/answer/95647 <https://"
@@ -7945,11 +7934,11 @@ msgstr ""
 "`download.odoo.com` à la liste des :guilabel:`Sites qui peuvent toujours "
 "utiliser des cookies`."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:100
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:88
 msgid "Once this is complete, the Outlook panel needs to be opened again."
 msgstr "Une fois cela fait, vous devez rouvrir le panneau Outlook."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:102
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:90
 msgid "Now, enter the Odoo database URL and click on :guilabel:`Login`."
 msgstr ""
 "Saisissez à présent l'URL de la base de données Odoo et cliquez "
@@ -7959,7 +7948,7 @@ msgstr ""
 msgid "Entering the Odoo database URL"
 msgstr "Saisir l'URL de la base de données Odoo"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:108
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:95
 msgid "Next, click on :guilabel:`Allow` to open the pop-up window."
 msgstr ""
 "Cliquez ensuite sur :guilabel:`Autoriser` pour ouvrir la fenêtre "
@@ -7969,7 +7958,7 @@ msgstr ""
 msgid "New window pop-up warning"
 msgstr "Avertissement de la nouvelle fenêtre contextuelle"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:114
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:100
 msgid ""
 "If the user isn't logged into the database, enter the credentials. Click "
 "on :guilabel:`Allow` to let the Outlook Plugin connect to the database."
@@ -7982,70 +7971,78 @@ msgstr ""
 msgid "Allowing the Outlook Plugin to connect to a database"
 msgstr "Permettre au plugin Outlook de se connecter à une base de données"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:124
-msgid "Add a shortcut to the plugin"
-msgstr "Ajouter un raccourci au plugin"
-
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:126
-msgid ""
-"By default, the Outlook Plugin can be opened from the *More actions* menu. "
-"However, to save time, it's possible to add it next to the other default "
-"actions."
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:109
+msgid "Using the inbox plugin"
 msgstr ""
-"Par défaut, le plugin Outlook peut être ouvert à partir du menu *Autres "
-"actions*. Toutefois, pour gagner du temps, il est possible de l'ajouter à "
-"côté des autres actions par défaut."
+
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:111
+msgid ""
+"To use the plugin, open any email in the Outlook mailbox, click on "
+"the :guilabel:`Apps` button in the upper right-side, and "
+"select :guilabel:`Odoo Inbox Addin` to open the panel."
+msgstr ""
+
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:115
+msgid ""
+"The options available in the panel will vary based on the applications "
+"installed in the database."
+msgstr ""
+
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:118
+msgid "Create a contact"
+msgstr ""
+
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:120
+msgid ""
+"To create a contact record in Odoo from an email, click the :icon:`fa-plus-"
+"circle` :guilabel:`(circle plus)` icon."
+msgstr ""
+
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:124
+msgid ""
+"A contact record **must** be created before a lead/opportunity can be "
+"created."
+msgstr ""
+
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:127
+msgid "Create an opportunity"
+msgstr ""
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:129
 msgid ""
-"In the Outlook mailbox, click on :guilabel:`Settings`, then "
-"on :guilabel:`View all Outlook settings`."
+"To create an opportunity from an email, click the :icon:`fa-"
+"plus` :guilabel:`(plus)` icon next to :guilabel:`Opportunities`. Doing so "
+"opens a new opportunity record in Odoo in a new tab. The subject of the "
+"email is used as the opportunity title, and the content of the email is "
+"added to the :guilabel:`Notes` tab of the opportunity."
 msgstr ""
-"Dans la boîte de messagerie Outlook, cliquez sur :guilabel:`Paramètres`, "
-"puis sur :guilabel:`Afficher tous les paramètres d'Outlook`."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:-1
-msgid "Viewing all Outlook settings"
-msgstr "Afficher tous les paramètres d'Outlook"
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:135
+msgid "Create a task"
+msgstr ""
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:136
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:137
 msgid ""
-"Now, select :guilabel:`Customize actions` under :guilabel:`Mail`, click "
-"on :guilabel:`Odoo for Outlook`, and then :guilabel:`Save`."
+"To create a task from an email, click the :icon:`fa-plus` :guilabel:`(plus)` "
+"icon next to :guilabel:`Tasks`. Then, enter the title of the project where "
+"the task should be created in the resulting field, and select the "
+"appropriate project from the resulting list. This opens a new task record in "
+"Odoo in a new tab. The subject of the email is used as the task title, and "
+"the content of the email is added to the :guilabel:`Description` tab."
 msgstr ""
-"Sélectionnez maintenant :guilabel:`Personnaliser les actions` "
-"sous :guilabel:`Mail`, cliquez sur :guilabel:`Odoo for Outlook`, et puis "
-"sur :guilabel:`Enregistrer`."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:-1
-msgid "Odoo for Outlook customized action"
-msgstr "Action personnalisée Odoo for Outlook"
-
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:143
-msgid "Following this step, open any email; the shortcut should be displayed."
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:144
+msgid "Create a ticket"
 msgstr ""
-"Après cette étape, ouvrez n'importe quel e-mail ; le raccourci devrait "
-"s'afficher."
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:150
-msgid "Using the plugin"
-msgstr "Utiliser le plugin"
-
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:152
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:146
 msgid ""
-"Now that the plug-in is installed and operational, all that needs to be done "
-"to create a lead is to click on the `O` [Odoo icon] or navigate "
-"to :guilabel:`More actions` and click on :guilabel:`Odoo for Outlook`. The "
-"side panel will appear on the right-side, and "
-"under :guilabel:`Opportunities` click on :guilabel:`New`. A new window with "
-"the created opportunity in the Odoo database will populate."
+"To create a task from an email, click the :icon:`fa-plus` :guilabel:`(plus)` "
+"icon next to :guilabel:`Tickets`. Doing so opens a new ticket record in Odoo "
+"in a new tab. The subject of the email is used as the ticket title, and the "
+"content of the email is added to the :guilabel:`Description` tab of the "
+"ticket."
 msgstr ""
-"Maintenant que le plugin est installé et opérationnel, il suffit de cliquer "
-"sur le `O` [icône Odoo] ou allez aux :guilabel:`Autres actions` et cliquez "
-"sur :guilabel:`Odoo for Outlook` pour créer une piste. Le panneau latéral "
-"apparaît sur le côté droit et sous :guilabel:`Opportunités`, cliquez "
-"sur :guilabel:`Nouveau`. Une nouvelle fenêtre avec l'opportunité créée dans "
-"la base de données Odoo s'affichera."
 
 #: ../../content/applications/general/integrations/unsplash.rst:3
 msgid "Unsplash"
@@ -8141,22 +8138,30 @@ msgid ""
 "barcode scanners, receipt printers, payment terminals, measurement tools, "
 "etc. to an Odoo database using an IoT system."
 msgstr ""
+"Odoo Internet of Things (IoT) permet de connecter des appareils physiques, "
+"tels que des lecteurs de codes-barres, des imprimantes de reçus, des "
+"terminaux de paiement, des outils de mesure, etc., à une base de données "
+"Odoo à l’aide d’un système IoT."
 
 #: ../../content/applications/general/iot.rst:12
 msgid "The following IoT systems are supported:"
-msgstr ""
+msgstr "Les systèmes IoT suivants sont pris en charge :"
 
 #: ../../content/applications/general/iot.rst:14
 msgid ""
 ":doc:`IoT box <iot/iot_box>`: micro-computer, plug-and-play device (i.e., "
 "the Odoo IoT program is pre-installed);"
 msgstr ""
+":doc:`IoT box <iot/iot_box>` : micro-ordinateur prêt à l’emploi (le "
+"programme Odoo IoT est préinstallé) ;"
 
 #: ../../content/applications/general/iot.rst:16
 msgid ""
 ":doc:`Windows virtual IoT <iot/windows_iot>`: Odoo IoT program for Windows "
 "that can be installed on a Windows computer."
 msgstr ""
+":doc:`Windows virtual IoT <iot/windows_iot>`: programme Odoo IoT pour "
+"Windows, qui peut être installé sur un ordinateur Windows."
 
 #: ../../content/applications/general/iot.rst:20
 #: ../../content/applications/general/iot/windows_iot.rst:25
@@ -8164,10 +8169,13 @@ msgid ""
 ":abbr:`MRP (Material Requirement Planning)` devices, including cameras and "
 "measurement tools, are not compatible with Windows virtual IoT."
 msgstr ""
+"Les appareils :abbr:`MRP (Material Requirement Planning)`, y compris les "
+"caméras et les outils de mesure, ne sont pas compatibles avec l’IoT Box "
+"virtuelle sous Windows."
 
 #: ../../content/applications/general/iot.rst:22
 msgid "Multiple IoT systems can be used at the same time."
-msgstr ""
+msgstr "Plusieurs systèmes IoT peuvent être utilisés en même temps."
 
 #: ../../content/applications/general/iot.rst:23
 #: ../../content/applications/general/iot/windows_iot.rst:27
@@ -8179,7 +8187,7 @@ msgstr ""
 
 #: ../../content/applications/general/iot.rst:29
 msgid "IoT box subscription"
-msgstr ""
+msgstr "Abonnement IoT Box"
 
 #: ../../content/applications/general/iot.rst:31
 msgid ""
@@ -8187,6 +8195,10 @@ msgid ""
 "you have issues related to your subscription, contact the database's account "
 "manager or Odoo partner for assistance."
 msgstr ""
+"Un abonnement IoT Box est requis pour l'utilisation de systèmes IoT en "
+"production. Si vous rencontrez des problèmes liés à votre abonnement, "
+"contactez l'administrateur de votre base de données ou votre partenaire Odoo "
+"pour obtenir de l'aide."
 
 #: ../../content/applications/general/iot.rst:35
 msgid ""
@@ -8198,12 +8210,16 @@ msgstr ""
 msgid ""
 "`Odoo's compatible IoT devices <https://www.odoo.com/app/iot-hardware>`_"
 msgstr ""
+"`Appareils IoT compatibles avec Odoo <https://www.odoo.com/app/iot-"
+"hardware>`_"
 
 #: ../../content/applications/general/iot.rst:40
 msgid ""
 "`Odoo Tutorials: Internet of Things (IoT) Tutorials <https://www.odoo.com/"
 "slides/internet-of-things-iot-175>`_"
 msgstr ""
+"`Tutoriels Odoo : Internet of Things (IoT) <https://www.odoo.com/slides/"
+"internet-of-things-iot-175>`_"
 
 #: ../../content/applications/general/iot.rst:42
 msgid "`IoT system FAQ <https://www.odoo.com/app/iot-faq>`_"
@@ -8332,7 +8348,7 @@ msgstr ""
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:60
 #: ../../content/applications/general/iot/windows_iot.rst:3
 msgid "Windows virtual IoT"
-msgstr "IoT virtuel Windows"
+msgstr "IoT virtuelle Windows"
 
 #: ../../content/applications/general/iot/connect.rst:62
 msgid ""
@@ -9994,7 +10010,7 @@ msgstr ""
 #: ../../content/applications/general/iot/devices/scale.rst:10
 msgid ""
 "To connect a scale to the IoT system, use a USB cable. In some cases, you "
-"may need a serial-to-US adapter to complete the connection. If the scale is "
+"may need a serial-to-USB adapter to complete the connection. If the scale is "
 "`compatible with an IoT system <https://www.odoo.com/page/iot-hardware>`_, "
 "no additional setup is required; the scale is automatically detected as soon "
 "as it is connected. If the scale is not detected, reboot the IoT box "
@@ -13633,65 +13649,45 @@ msgstr ""
 #: ../../content/applications/general/users/portal.rst:10
 msgid ""
 "Some common use cases for providing portal access include allowing customers "
-"to read/view any or all of the following in Odoo:"
+"to make partial payment on an invoice, to add funds to their eWallet, and to "
+"read/view any or all of the following in Odoo:"
 msgstr ""
-"Parmi les cas d'utilisation courants de l'accès au portail, on peut citer le "
-"fait de permettre aux clients de lire/visualiser l'un ou l'autre ou "
-"l'ensemble des éléments suivants dans Odoo :"
 
 #: ../../content/applications/general/users/portal.rst:13
-msgid "leads/opportunities"
-msgstr "pistes/opportunités"
+msgid "Following, viewing and paying orders"
+msgstr ""
 
 #: ../../content/applications/general/users/portal.rst:14
-msgid "quotations/sales orders"
-msgstr "devis/commandes clients"
+msgid "Following, downloading or paying invoices"
+msgstr ""
 
 #: ../../content/applications/general/users/portal.rst:15
-msgid "purchase orders"
-msgstr "bons de commande"
+msgid "Managing payment methods"
+msgstr ""
 
 #: ../../content/applications/general/users/portal.rst:16
-msgid "invoices & bills"
-msgstr "factures clients & factures fournisseurs"
+msgid "Managing subscriptions"
+msgstr ""
 
 #: ../../content/applications/general/users/portal.rst:17
-msgid "projects"
-msgstr "projets"
+msgid "Adding, removing or modifying addresses"
+msgstr ""
 
 #: ../../content/applications/general/users/portal.rst:18
-msgid "tasks"
-msgstr "tâches"
-
-#: ../../content/applications/general/users/portal.rst:19
-msgid "timesheets"
-msgstr "feuilles de temps"
-
-#: ../../content/applications/general/users/portal.rst:20
-msgid "tickets"
-msgstr "tickets"
+msgid "Configuring connection parameters"
+msgstr ""
 
 #: ../../content/applications/general/users/portal.rst:21
-msgid "signatures"
-msgstr "signatures"
-
-#: ../../content/applications/general/users/portal.rst:22
-msgid "subscriptions"
-msgstr "abonnements"
-
-#: ../../content/applications/general/users/portal.rst:25
 msgid ""
-"Portal users only have read/view access, and will not be able to edit any "
-"documents in the database."
+"Portal users only have read/view access, and will **not** be able to edit "
+"any documents in the database."
 msgstr ""
-"Les utilisateurs du portail disposent d'un accès en lecture/visualisation et "
-"ne peuvent pas modifier les documents de la base de données."
 
-#: ../../content/applications/general/users/portal.rst:31
+#: ../../content/applications/general/users/portal.rst:27
 msgid "Provide portal access to customers"
 msgstr "Donner un accès au portail aux clients"
 
-#: ../../content/applications/general/users/portal.rst:33
+#: ../../content/applications/general/users/portal.rst:29
 msgid ""
 "From the main Odoo dashboard, select the :guilabel:`Contacts` application. "
 "If the contact is not yet created in the database, click on "
@@ -13713,7 +13709,7 @@ msgstr ""
 "Utiliser l'application Contacts pour donner accès au portail aux "
 "utilisateurs."
 
-#: ../../content/applications/general/users/portal.rst:42
+#: ../../content/applications/general/users/portal.rst:37
 msgid ""
 "Then select :guilabel:`Grant portal access`. A pop-up window appears, "
 "listing three fields:"
@@ -13721,88 +13717,60 @@ msgstr ""
 "Sélectionnez ensuite :guilabel:`Donner accès au portail`. Une fenêtre "
 "contextuelle apparaît et affiche trois champs :"
 
-#: ../../content/applications/general/users/portal.rst:44
+#: ../../content/applications/general/users/portal.rst:39
 msgid ""
 ":guilabel:`Contact`: the recorded name of the contact in the Odoo database"
 msgstr ""
 ":guilabel:`Contact` : le nom du contact enregistré dans la base de données "
 "d'Odoo"
 
-#: ../../content/applications/general/users/portal.rst:45
+#: ../../content/applications/general/users/portal.rst:40
 msgid ""
-":guilabel:`Email`: the contact's email address that they will use to log "
-"into the portal"
+":guilabel:`Email`: the contact's email address used to log into the portal"
 msgstr ""
-":guilabel:`E-mail` : l'adresse e-mail du contact utilisée pour se connecter "
-"au portail"
+
+#: ../../content/applications/general/users/portal.rst:41
+msgid ""
+":guilabel:`Latest Authentication`: the last time the user accessed the portal"
+msgstr ""
+
+#: ../../content/applications/general/users/portal.rst:43
+msgid ""
+"To grant portal access, first enter the contact's :guilabel:`Email` used to "
+"log into the portal if it has not been automatically entered by the system. "
+"Then click :guilabel:`Grant Access` to finish."
+msgstr ""
 
 #: ../../content/applications/general/users/portal.rst:46
-msgid ":guilabel:`In Portal`: whether or not the user has portal access"
-msgstr ":guilabel:`Au portail` : si l'utilisateur a accès au portail ou pas"
-
-#: ../../content/applications/general/users/portal.rst:48
 msgid ""
-"To grant portal access, first enter the contact's :guilabel:`Email` they "
-"will use to log into the portal. Then, check the box under the :guilabel:`In "
-"Portal` column. Optionally, add text to the invitation message the contact "
-"will receive. Then click :guilabel:`Apply` to finish."
+"To grant portal access to multiple users for a company at once, navigate to "
+"the company contact, then click :menuselection:`Action --> Grant portal "
+"access` to view a list of the company's related contacts. "
+"Click :guilabel:`Grant Access` for each contact to grant portal access to."
 msgstr ""
-"Pour accorder accès au portail, saisissez d'abord l':guilabel:`E-mail` que "
-"le contact utilisera pour se connecter au portail. Cochez ensuite la cause "
-"dans la colonne :guilabel:`Au portail`. Vous pouvez optionnellement ajouter "
-"le texte du message d'invitation que le contact recevra. Cliquez ensuite "
-"sur :guilabel:`Appliquer` pour terminer."
 
-#: ../../content/applications/general/users/portal.rst:-1
+#: ../../content/applications/general/users/portal.rst:50
 msgid ""
-"An email address and corresponding checkbox for the contact need to be "
-"filled in before\n"
-"sending a portal invitation."
+"An email is sent to the specified email address, indicating that the contact "
+"is now a portal user for that Odoo database."
 msgstr ""
-"Une adresse e-mail et la case à cocher correspondante pour le contact "
-"doivent être complétées avant\n"
-"d'envoyer une invitation au portail."
 
-#: ../../content/applications/general/users/portal.rst:57
-msgid ""
-"An email will be sent to the specified email address, indicating that the "
-"contact is now a portal user for that Odoo database."
+#: ../../content/applications/general/users/portal.rst:54
+msgid "Revoking portal access"
 msgstr ""
-"Un e-mail sera envoyé à l'adresse e-mail précisé, indiquant que le contact "
-"est à présent un utilisateur du portail pour cette base de données Odoo."
 
-#: ../../content/applications/general/users/portal.rst:61
+#: ../../content/applications/general/users/portal.rst:56
 msgid ""
-"To grant portal access to multiple users at once, navigate to a company "
-"contact, then click :menuselection:`Action --> Grant portal access` to view "
-"a list of all of the company's related contacts. Check the box under "
-"the :guilabel:`In Portal` column for all the contacts that need portal "
-"access, then click :guilabel:`Apply`."
-msgstr ""
-"Pour accorder l'accès au portail à plusieurs utilisateurs en une fois, allez "
-"à la fiche contact d'une entreprise, cliquez ensuite "
-"sur:menuselection:`Action --> Donner accès au portail` pour afficher la "
-"liste de tous les contacts liés à cette entreprise. Cochez la case dans la "
-"colonne :guilabel:`Au portail` pour tous les contacts qui doivent accéder au "
-"portail et cliquez sur :guilabel:`Appliquer`."
-
-#: ../../content/applications/general/users/portal.rst:67
-msgid ""
-"At any time, portal access can be revoked by navigating to the contact, "
+"At any time, portal access can be revoked by navigating to a contact, "
 "clicking :menuselection:`Action --> Grant portal access`, and then "
-"unselecting the checkbox under the :guilabel:`In Portal` column and "
-"clicking :guilabel:`Apply`."
+"clicking :guilabel:`Revoke Access`."
 msgstr ""
-"L'accès au portail peut être révoqué à tout moment en allant au contact, en "
-"cliquant sur :menuselection:`Action --> Donner accès au portail`, et en "
-"décochant ensuite la case à cocher dans la colonne :guilabel:`Au portail` et "
-"en cliquant sur :guilabel:`Appliquer`."
 
-#: ../../content/applications/general/users/portal.rst:74
+#: ../../content/applications/general/users/portal.rst:62
 msgid "Change portal username"
 msgstr "Changer le nom d'utilisateur du portail"
 
-#: ../../content/applications/general/users/portal.rst:76
+#: ../../content/applications/general/users/portal.rst:64
 msgid ""
 "There may be times when a portal user wants to change their user login. This "
 "can be done by any user in the database with administrator access rights. "
@@ -13815,15 +13783,11 @@ msgstr ""
 "La procédure suivante décrit les étapes nécessaires pour modifier le nom "
 "d'utilisateur du portail."
 
-#: ../../content/applications/general/users/portal.rst:81
-msgid ""
-":doc:`See the documentation on setting access rights </applications/general/"
-"users/access_rights>`."
+#: ../../content/applications/general/users/portal.rst:69
+msgid ":doc:`Access rights </applications/general/users/access_rights>`."
 msgstr ""
-":doc:`Consultez la documentation relative à la configuration des droits "
-"d'accès </applications/general/users/access_rights>`."
 
-#: ../../content/applications/general/users/portal.rst:84
+#: ../../content/applications/general/users/portal.rst:71
 msgid ""
 "First, navigate to :menuselection:`Settings app --> Users`. Then, "
 "under :guilabel:`Filters`, select :guilabel:`Portal Users`, or "
@@ -13840,7 +13804,7 @@ msgstr ""
 "`portail`. Après avoir effectué cette sélection, recherchez (et ouvrez) "
 "l'utilisateur du portail qui doit être modifié."
 
-#: ../../content/applications/general/users/portal.rst:89
+#: ../../content/applications/general/users/portal.rst:76
 msgid ""
 "Next, click :guilabel:`Edit` (if necessary), click into the :guilabel:`Email "
 "Address` field, and proceed to make any necessary changes to this field. "
@@ -13851,7 +13815,7 @@ msgstr ""
 "à ce champ. Le champ :guilabel:`Adresse e-mail` est utilisé pour se "
 "connecter au portail Odoo."
 
-#: ../../content/applications/general/users/portal.rst:94
+#: ../../content/applications/general/users/portal.rst:81
 msgid ""
 "Changing the :guilabel:`Email Address` (or login) only changes the "
 "*username* on the customer's portal login."
@@ -13859,7 +13823,7 @@ msgstr ""
 "Changer l':guilabel:`Adresse e-mail` (ou login) modifie uniquement le *nom "
 "d'utilisateur* sur le login du portail du client."
 
-#: ../../content/applications/general/users/portal.rst:97
+#: ../../content/applications/general/users/portal.rst:84
 msgid ""
 "In order to change the contact email, this change needs to take place on the "
 "contact template in the *Contacts* app. Alternatively, the customer can "
@@ -13872,27 +13836,23 @@ msgstr ""
 "ne peut **pas** être modifié. :ref:`Consultez Modifier les données du client "
 "<portal/custinfo>`."
 
-#: ../../content/applications/general/users/portal.rst:102
+#: ../../content/applications/general/users/portal.rst:89
 msgid "Customer portal changes"
 msgstr "Changements du portail client"
 
-#: ../../content/applications/general/users/portal.rst:104
+#: ../../content/applications/general/users/portal.rst:91
 msgid ""
 "There may be times when the customer would like to make changes to their "
-"contact information, password/security, or payment information attached to "
-"the portal account. This can be performed by the customer from their portal. "
-"The following process is how a customer can change their contact information."
+"contact, security, or payment information attached to the portal account. "
+"This can be performed by the customer from their portal. The following "
+"process is how a customer can change their contact information."
 msgstr ""
-"Il se peut que le client souhaite modifier ses coordonnées, son mot de passe/"
-"sécurité ou les informations de paiement liées à son compte de portail. Le "
-"client peut effectuer ses modifications à partir de son portail. La "
-"procédure suivante montre comment un client peut modifier ses coordonnées."
 
-#: ../../content/applications/general/users/portal.rst:112
+#: ../../content/applications/general/users/portal.rst:98
 msgid "Change customer info"
 msgstr "Changer les coordonnées du client"
 
-#: ../../content/applications/general/users/portal.rst:114
+#: ../../content/applications/general/users/portal.rst:100
 msgid ""
 "First enter the username and password (login) into the database login page "
 "to access the portal user account. A portal dashboard will appear upon "
@@ -13906,11 +13866,11 @@ msgstr ""
 "Odoo installées apparaîtront avec le nombre de documents pour chacune "
 "d'entre elles."
 
-#: ../../content/applications/general/users/portal.rst:119
+#: ../../content/applications/general/users/portal.rst:105
 msgid ":ref:`Portal access documentation <portal/main>`."
 msgstr ":ref:`Documentation relative à l'accès au portail <portal/main>`."
 
-#: ../../content/applications/general/users/portal.rst:121
+#: ../../content/applications/general/users/portal.rst:107
 msgid ""
 "Next, navigate to the upper-right corner of the portal, and click "
 "the :guilabel:`Edit` button, next to the :guilabel:`Details` section. Then, "
@@ -13921,13 +13881,12 @@ msgstr ""
 "Modifiez ensuite les informations pertinentes et cliquez "
 "sur :guilabel:`Confirmer`."
 
-#: ../../content/applications/general/users/portal.rst:126
+#: ../../content/applications/general/users/portal.rst:112
 msgid "Change password"
 msgstr "Modifier le mot de passe"
 
-#: ../../content/applications/general/users/portal.rst:128
-#: ../../content/applications/general/users/portal.rst:147
-#: ../../content/applications/general/users/portal.rst:166
+#: ../../content/applications/general/users/portal.rst:114
+#: ../../content/applications/general/users/portal.rst:133
 msgid ""
 "First enter the username and password (login) into the database login page "
 "to access the portal user account. A portal dashboard will appear upon "
@@ -13938,7 +13897,7 @@ msgstr ""
 "portail. Un tableau de bord du portail s'ouvre après avoir réussi à se "
 "connecter."
 
-#: ../../content/applications/general/users/portal.rst:131
+#: ../../content/applications/general/users/portal.rst:117
 msgid ""
 "If the customer would like to change their password for portal access, click "
 "on the :guilabel:`Edit Security Settings` link, below the :guilabel:`Account "
@@ -13955,7 +13914,7 @@ msgstr ""
 "Cliquez enfin sur :guilabel:`Modifier le mot de passe` pour terminer la "
 "modification du mot de passe."
 
-#: ../../content/applications/general/users/portal.rst:137
+#: ../../content/applications/general/users/portal.rst:123
 msgid ""
 "If a customer would like to change the login, as documented above, contact "
 "the Odoo database point-of-contact. :ref:`See above documentation on "
@@ -13966,7 +13925,7 @@ msgstr ""
 "la documentation susmentionnée relative au changement du nom d'utilisateur "
 "du portail <portal/login>`."
 
-#: ../../content/applications/general/users/portal.rst:141
+#: ../../content/applications/general/users/portal.rst:127
 msgid ""
 "Passwords for portal users and Odoo.com users remain separate, even if the "
 "same email address is used."
@@ -13974,11 +13933,11 @@ msgstr ""
 "Les mots de passe des utilisateurs du portail et des utilisateurs Odoo.com "
 "restent distincts, même si la même adresse e-mail est utilisée."
 
-#: ../../content/applications/general/users/portal.rst:145
+#: ../../content/applications/general/users/portal.rst:131
 msgid "Add two-factor authentication"
 msgstr "Ajouter l'authentification à deux facteurs"
 
-#: ../../content/applications/general/users/portal.rst:150
+#: ../../content/applications/general/users/portal.rst:136
 msgid ""
 "If the customer would like to turn on two-factor authentication (2FA) for "
 "portal access, click on the :guilabel:`Edit Security Settings` link, below "
@@ -13988,7 +13947,7 @@ msgstr ""
 "accéder au portail, cliquez sur le lien :guilabel:`Modifier les paramètres "
 "de sécurité` dans la section :menuselection:`Sécurité du compte`."
 
-#: ../../content/applications/general/users/portal.rst:153
+#: ../../content/applications/general/users/portal.rst:139
 msgid ""
 "Click on :guilabel:`Enable two-factor authentication` to turn on :abbr:`2FA "
 "(two-factor authentication)`. Confirm the current portal password in "
@@ -14006,7 +13965,7 @@ msgstr ""
 "Authenticator, Authy, etc.), en scannant le :guilabel:`code QR` ou en "
 "saisissant un :guilabel:`Code de vérification`."
 
-#: ../../content/applications/general/users/portal.rst:159
+#: ../../content/applications/general/users/portal.rst:145
 msgid ""
 "Finally, click :guilabel:`Enable two-factor authentication` to complete the "
 "setup."
@@ -14014,20 +13973,282 @@ msgstr ""
 "Enfin, cliquez sur :guilabel:`Activer l'authentification à deux facteurs` "
 "pour finaliser la configuration."
 
-#: ../../content/applications/general/users/portal.rst:164
+#: ../../content/applications/general/users/portal.rst:150
 msgid "Change payment info"
 msgstr "Changer les informations de paiement"
 
-#: ../../content/applications/general/users/portal.rst:169
+#: ../../content/applications/general/users/portal.rst:152
 msgid ""
-"If the customer would like to manage payment options, navigate to "
-"the :guilabel:`Manage payment methods` in the menu on the right. Then, add "
-"the new payment information, and select :guilabel:`Add new card`."
+"If the customer needs to manage payment options, they click "
+"the :guilabel:`Payment methods` button."
 msgstr ""
-"Si le client souhaite gérer les options de paiement, allez "
-"à :guilabel:`Gérer les modes de paiement` dans le menu sur la droite. "
-"Ajoutez ensuite les nouvelles informations de paiement et "
-"sélectionnez :guilabel:`Ajouter une nouvelle carte`."
+
+#: ../../content/applications/general/users/portal.rst:154
+msgid ""
+"To add a new payment option, choose from the available payment methods, "
+"enter the new payment information, and click :guilabel:`Save` to save the "
+"details."
+msgstr ""
+
+#: ../../content/applications/general/users/portal.rst:156
+msgid ""
+"To erase a payment option, click the :icon:`fa-trash` :guilabel:`(Trash)` "
+"icon, then click the :guilabel:`Confirm Deletion` button."
+msgstr ""
+
+#: ../../content/applications/general/users/portal.rst:159
+msgid ""
+"Payment details **cannot** be edited. Customers must delete and re-enter "
+"information to update their details."
+msgstr ""
+
+#~ msgid ""
+#~ "First, enable the *Mail Plugin* feature in the database. Go "
+#~ "to :menuselection:`Settings --> General Settings --> Integrations`, "
+#~ "enable :guilabel:`Mail Plugin`, and :guilabel:`Save` the configuration."
+#~ msgstr ""
+#~ "Activez d'abord la fonctionnalité *Plugin de messagerie* dans la base de "
+#~ "données. Allez aux :menuselection:`Paramètres --> Paramètres généraux --> "
+#~ "Intégrations`, activez le :guilabel:`Plugin de messagerie`, "
+#~ "et :guilabel:`enregistrez` la configuration."
+
+#~ msgid ""
+#~ "Next, open the Outlook mailbox, and select any email. After completing "
+#~ "this, click on the :guilabel:`More actions` button in the upper right-"
+#~ "side and select :guilabel:`Get Add-ins`."
+#~ msgstr ""
+#~ "Ensuite, ouvrez la boîte de messagerie Outlook et sélectionnez n'importe "
+#~ "quel e-mail. Cliquez ensuite sur le bouton :guilabel:`Autres actions` en "
+#~ "haut à droite et sélectionnez :guilabel:`Obtenir des compléments`."
+
+#~ msgid "More actions button in Outlook"
+#~ msgstr "Le bouton Autres actions dans Outlook"
+
+#~ msgid ""
+#~ "Under :guilabel:`Custom add-ins` towards the bottom, click "
+#~ "on :guilabel:`+ Add a custom add-in`, and then on :guilabel:`Add from "
+#~ "file...`"
+#~ msgstr ""
+#~ "Sous :guilabel:`Compléments personnalisés` vers le bas, cliquez "
+#~ "sur :guilabel:`+ Ajouter un complément personnalisé`, et puis "
+#~ "sur :guilabel:`Ajouter à partir d'un fichier...`"
+
+#~ msgid ""
+#~ "Now, Outlook will be connected to the Odoo database. First, open any "
+#~ "email in the Outlook mailbox, click on the :guilabel:`More actions` "
+#~ "button in the upper right-side, and select :guilabel:`Odoo for Outlook`."
+#~ msgstr ""
+#~ "Outlook sera maintenant connecté à la base de données Odoo. Ouvrez "
+#~ "d'abord un e-mail dans la boîte de messagerie Outlook, cliquez sur le "
+#~ "bouton :guilabel:`Autres actions` en haut à droite et "
+#~ "sélectionnez :guilabel:`Odoo for Outlook`."
+
+#~ msgid ""
+#~ "If, after a short while, the panel is still empty, it is possible that "
+#~ "the browser cookie settings prevented it from loading. Note that these "
+#~ "settings also change if the browser is in \"Incognito\" mode."
+#~ msgstr ""
+#~ "Si, après un court instant, le panneau est toujours vide, il est possible "
+#~ "que les paramètres des cookies de votre navigateur l'aient empêché de se "
+#~ "charger. Notez que ces paramètres changent également si votre navigateur "
+#~ "est en mode \"Incognito\"."
+
+#~ msgid "Add a shortcut to the plugin"
+#~ msgstr "Ajouter un raccourci au plugin"
+
+#~ msgid ""
+#~ "By default, the Outlook Plugin can be opened from the *More actions* "
+#~ "menu. However, to save time, it's possible to add it next to the other "
+#~ "default actions."
+#~ msgstr ""
+#~ "Par défaut, le plugin Outlook peut être ouvert à partir du menu *Autres "
+#~ "actions*. Toutefois, pour gagner du temps, il est possible de l'ajouter à "
+#~ "côté des autres actions par défaut."
+
+#~ msgid ""
+#~ "In the Outlook mailbox, click on :guilabel:`Settings`, then "
+#~ "on :guilabel:`View all Outlook settings`."
+#~ msgstr ""
+#~ "Dans la boîte de messagerie Outlook, cliquez sur :guilabel:`Paramètres`, "
+#~ "puis sur :guilabel:`Afficher tous les paramètres d'Outlook`."
+
+#~ msgid "Viewing all Outlook settings"
+#~ msgstr "Afficher tous les paramètres d'Outlook"
+
+#~ msgid ""
+#~ "Now, select :guilabel:`Customize actions` under :guilabel:`Mail`, click "
+#~ "on :guilabel:`Odoo for Outlook`, and then :guilabel:`Save`."
+#~ msgstr ""
+#~ "Sélectionnez maintenant :guilabel:`Personnaliser les actions` "
+#~ "sous :guilabel:`Mail`, cliquez sur :guilabel:`Odoo for Outlook`, et puis "
+#~ "sur :guilabel:`Enregistrer`."
+
+#~ msgid "Odoo for Outlook customized action"
+#~ msgstr "Action personnalisée Odoo for Outlook"
+
+#~ msgid ""
+#~ "Following this step, open any email; the shortcut should be displayed."
+#~ msgstr ""
+#~ "Après cette étape, ouvrez n'importe quel e-mail ; le raccourci devrait "
+#~ "s'afficher."
+
+#~ msgid "Using the plugin"
+#~ msgstr "Utiliser le plugin"
+
+#~ msgid ""
+#~ "Now that the plug-in is installed and operational, all that needs to be "
+#~ "done to create a lead is to click on the `O` [Odoo icon] or navigate "
+#~ "to :guilabel:`More actions` and click on :guilabel:`Odoo for Outlook`. "
+#~ "The side panel will appear on the right-side, and "
+#~ "under :guilabel:`Opportunities` click on :guilabel:`New`. A new window "
+#~ "with the created opportunity in the Odoo database will populate."
+#~ msgstr ""
+#~ "Maintenant que le plugin est installé et opérationnel, il suffit de "
+#~ "cliquer sur le `O` [icône Odoo] ou allez aux :guilabel:`Autres actions` "
+#~ "et cliquez sur :guilabel:`Odoo for Outlook` pour créer une piste. Le "
+#~ "panneau latéral apparaît sur le côté droit et "
+#~ "sous :guilabel:`Opportunités`, cliquez sur :guilabel:`Nouveau`. Une "
+#~ "nouvelle fenêtre avec l'opportunité créée dans la base de données Odoo "
+#~ "s'affichera."
+
+#~ msgid ""
+#~ "Some common use cases for providing portal access include allowing "
+#~ "customers to read/view any or all of the following in Odoo:"
+#~ msgstr ""
+#~ "Parmi les cas d'utilisation courants de l'accès au portail, on peut citer "
+#~ "le fait de permettre aux clients de lire/visualiser l'un ou l'autre ou "
+#~ "l'ensemble des éléments suivants dans Odoo :"
+
+#~ msgid "leads/opportunities"
+#~ msgstr "pistes/opportunités"
+
+#~ msgid "quotations/sales orders"
+#~ msgstr "devis/commandes clients"
+
+#~ msgid "purchase orders"
+#~ msgstr "bons de commande"
+
+#~ msgid "invoices & bills"
+#~ msgstr "factures clients & factures fournisseurs"
+
+#~ msgid "projects"
+#~ msgstr "projets"
+
+#~ msgid "tasks"
+#~ msgstr "tâches"
+
+#~ msgid "timesheets"
+#~ msgstr "feuilles de temps"
+
+#~ msgid "tickets"
+#~ msgstr "tickets"
+
+#~ msgid "signatures"
+#~ msgstr "signatures"
+
+#~ msgid "subscriptions"
+#~ msgstr "abonnements"
+
+#~ msgid ""
+#~ "Portal users only have read/view access, and will not be able to edit any "
+#~ "documents in the database."
+#~ msgstr ""
+#~ "Les utilisateurs du portail disposent d'un accès en lecture/visualisation "
+#~ "et ne peuvent pas modifier les documents de la base de données."
+
+#~ msgid ""
+#~ ":guilabel:`Email`: the contact's email address that they will use to log "
+#~ "into the portal"
+#~ msgstr ""
+#~ ":guilabel:`E-mail` : l'adresse e-mail du contact utilisée pour se "
+#~ "connecter au portail"
+
+#~ msgid ":guilabel:`In Portal`: whether or not the user has portal access"
+#~ msgstr ":guilabel:`Au portail` : si l'utilisateur a accès au portail ou pas"
+
+#~ msgid ""
+#~ "To grant portal access, first enter the contact's :guilabel:`Email` they "
+#~ "will use to log into the portal. Then, check the box under "
+#~ "the :guilabel:`In Portal` column. Optionally, add text to the invitation "
+#~ "message the contact will receive. Then click :guilabel:`Apply` to finish."
+#~ msgstr ""
+#~ "Pour accorder accès au portail, saisissez d'abord l':guilabel:`E-mail` "
+#~ "que le contact utilisera pour se connecter au portail. Cochez ensuite la "
+#~ "cause dans la colonne :guilabel:`Au portail`. Vous pouvez optionnellement "
+#~ "ajouter le texte du message d'invitation que le contact recevra. Cliquez "
+#~ "ensuite sur :guilabel:`Appliquer` pour terminer."
+
+#~ msgid ""
+#~ "An email address and corresponding checkbox for the contact need to be "
+#~ "filled in before\n"
+#~ "sending a portal invitation."
+#~ msgstr ""
+#~ "Une adresse e-mail et la case à cocher correspondante pour le contact "
+#~ "doivent être complétées avant\n"
+#~ "d'envoyer une invitation au portail."
+
+#~ msgid ""
+#~ "An email will be sent to the specified email address, indicating that the "
+#~ "contact is now a portal user for that Odoo database."
+#~ msgstr ""
+#~ "Un e-mail sera envoyé à l'adresse e-mail précisé, indiquant que le "
+#~ "contact est à présent un utilisateur du portail pour cette base de "
+#~ "données Odoo."
+
+#~ msgid ""
+#~ "To grant portal access to multiple users at once, navigate to a company "
+#~ "contact, then click :menuselection:`Action --> Grant portal access` to "
+#~ "view a list of all of the company's related contacts. Check the box under "
+#~ "the :guilabel:`In Portal` column for all the contacts that need portal "
+#~ "access, then click :guilabel:`Apply`."
+#~ msgstr ""
+#~ "Pour accorder l'accès au portail à plusieurs utilisateurs en une fois, "
+#~ "allez à la fiche contact d'une entreprise, cliquez ensuite "
+#~ "sur:menuselection:`Action --> Donner accès au portail` pour afficher la "
+#~ "liste de tous les contacts liés à cette entreprise. Cochez la case dans "
+#~ "la colonne :guilabel:`Au portail` pour tous les contacts qui doivent "
+#~ "accéder au portail et cliquez sur :guilabel:`Appliquer`."
+
+#~ msgid ""
+#~ "At any time, portal access can be revoked by navigating to the contact, "
+#~ "clicking :menuselection:`Action --> Grant portal access`, and then "
+#~ "unselecting the checkbox under the :guilabel:`In Portal` column and "
+#~ "clicking :guilabel:`Apply`."
+#~ msgstr ""
+#~ "L'accès au portail peut être révoqué à tout moment en allant au contact, "
+#~ "en cliquant sur :menuselection:`Action --> Donner accès au portail`, et "
+#~ "en décochant ensuite la case à cocher dans la colonne :guilabel:`Au "
+#~ "portail` et en cliquant sur :guilabel:`Appliquer`."
+
+#~ msgid ""
+#~ ":doc:`See the documentation on setting access rights </applications/"
+#~ "general/users/access_rights>`."
+#~ msgstr ""
+#~ ":doc:`Consultez la documentation relative à la configuration des droits "
+#~ "d'accès </applications/general/users/access_rights>`."
+
+#~ msgid ""
+#~ "There may be times when the customer would like to make changes to their "
+#~ "contact information, password/security, or payment information attached "
+#~ "to the portal account. This can be performed by the customer from their "
+#~ "portal. The following process is how a customer can change their contact "
+#~ "information."
+#~ msgstr ""
+#~ "Il se peut que le client souhaite modifier ses coordonnées, son mot de "
+#~ "passe/sécurité ou les informations de paiement liées à son compte de "
+#~ "portail. Le client peut effectuer ses modifications à partir de son "
+#~ "portail. La procédure suivante montre comment un client peut modifier ses "
+#~ "coordonnées."
+
+#~ msgid ""
+#~ "If the customer would like to manage payment options, navigate to "
+#~ "the :guilabel:`Manage payment methods` in the menu on the right. Then, "
+#~ "add the new payment information, and select :guilabel:`Add new card`."
+#~ msgstr ""
+#~ "Si le client souhaite gérer les options de paiement, allez "
+#~ "à :guilabel:`Gérer les modes de paiement` dans le menu sur la droite. "
+#~ "Ajoutez ensuite les nouvelles informations de paiement et "
+#~ "sélectionnez :guilabel:`Ajouter une nouvelle carte`."
 
 #~ msgid ""
 #~ "For more information on logs and how to access them via the Odoo.sh "

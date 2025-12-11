@@ -25,7 +25,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-19 09:34+0100\n"
+"POT-Creation-Date: 2025-12-11 10:43+0100\n"
 "PO-Revision-Date: 2025-10-03 12:52+0000\n"
 "Last-Translator: \"Tiffany Chang (tic)\" <tic@odoo.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
@@ -4007,7 +4007,21 @@ msgstr ""
 "如果数据库托管在 **Odoo Online** 或 **Odoo.sh**，建议使用重定向。重定向可使数"
 "据库在接收信息时不会出现延迟。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:204
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:205
+msgid ""
+"When configuring email redirections with Microsoft 365 (Exchange Online), be "
+"aware that certain technical limitations may affect your setup. Some users "
+"have reported that Microsoft 365 does not support true redirection and only "
+"allows forwarding, which may not behave as needed for Odoo's email routing."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:210
+msgid ""
+"For more information on Microsoft Exchange configuration, visit `Microsoft "
+"Learn <https://learn.microsoft.com/en-us/exchange/exchange-online>`_."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:213
 msgid ""
 "It is mandatory to redirect the catchall and bounce address to the Odoo "
 "subdomain of the database. Every other alias used must be redirected as well."
@@ -4015,23 +4029,23 @@ msgstr ""
 "必须将接收地址和跳转地址重定向到数据库的 Odoo 子域。使用的其他别名也必须重定"
 "向。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:208
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:217
 msgid "With one sales team, the following redirections are required:"
 msgstr "如果只有一个销售团队，则需要进行以下重定向："
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:210
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:219
 msgid "`catchall@company-name.com` → `catchall@company-name.odoo.com`"
 msgstr "`catchall@company-name.com` → `catchall@company-name.odoo.com`"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:211
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:220
 msgid "`bounce@company-name.com` → `bounce@company-name.odoo.com`"
 msgstr "`bounce@company-name.com` → `bounce@company-name.odoo.com`"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:212
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:221
 msgid "`info@company-name.com` → `info@company-name.odoo.com`"
 msgstr "`info@company-name.com` → `info@company-name.odoo.com`"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:215
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:224
 msgid ""
 "Some providers ask to validate the redirection by sending a link to the "
 "target email address. This procedure is an issue for catchall and bounce "
@@ -4040,7 +4054,7 @@ msgstr ""
 "有些提供商要求通过向目标电子邮件地址发送链接来验证重定向。由于 catchall 和 "
 "bounce 不用于创建记录，因此该程序对它们来说是个问题。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:218
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:227
 msgid ""
 "Modify the catchall value on the mail alias domain. :ref:`developer-mode` "
 "must be enabled to access this menu. For example, it can be changed from "
@@ -4051,7 +4065,7 @@ msgstr ""
 "例如，可以将 `catchall` 改为 `temp-catchall`。这将允许使用 `catchall` 作为另"
 "一个别名的本地部分。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:221
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:230
 msgid ""
 "Open an app that uses an alias. For example, CRM contains aliases for each "
 "sales team. Set `catchall` as the local-part of the alias of a sales team."
@@ -4059,7 +4073,7 @@ msgstr ""
 "打开使用别名的应用程序。例如，CRM 包含每个销售团队的别名。将 `catchall` 设置"
 "为销售团队别名的本地部分。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:223
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:232
 msgid ""
 "The validation email will create a record in the CRM app. The email sent "
 "will be visible in the chatter, allowing you to validate the redirection."
@@ -4067,7 +4081,7 @@ msgstr ""
 "验证电子邮件将在 CRM 应用程序中创建一条记录。发送的电子邮件将在聊天记录中显"
 "示，以便您验证重定向。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:225
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:234
 msgid ""
 "Do not forget to change back the alias of the sales team and the catchall "
 "value on the mail alias domain, just as they were before this procedure."
@@ -4075,7 +4089,7 @@ msgstr ""
 "不要忘记更改回销售团队的别名和邮件别名域上的 catchall 值，就像在此过程之前一"
 "样。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:229
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:238
 msgid ""
 "An alternative to redirections is **forwarding**. With forwarding, **the "
 "address forwarding the email will be identified as the sender**, while with "
@@ -4084,11 +4098,11 @@ msgstr ""
 "**转发**是重定向的另一种选择。使用转发时，**转发电子邮件的地址将被识别为发件"
 "人**，而使用重定向时，原始发件人将始终保持不变。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:236
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:245
 msgid "Incoming mail servers"
 msgstr "收件服务器"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:238
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:247
 msgid ""
 "As mentioned earlier, using redirections is the recommended method to "
 "receive emails in Odoo. However, it is also possible to set up incoming mail "
@@ -4097,14 +4111,14 @@ msgid ""
 "in order to fetch all incoming emails."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:244
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:253
 msgid ""
 "Odoo's *Incoming Mail Servers* feature is designed for shared inboxes (e.g., "
 "`sales@yourcompany.com` or `support@yourcompany.com`) to route messages to "
 "team pipelines, tickets, or documents."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:248
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:257
 msgid ""
 "Using personal email addresses (e.g., `mitchell.admin@yourcompany.com`) as "
 "incoming mail servers is **not** recommended. Doing so can lead to increased "
@@ -4112,13 +4126,13 @@ msgid ""
 "syncing replies correctly."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:252
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:261
 msgid ""
 "Incoming mail servers are created by going to :menuselection:`Settings --> "
 "Technical --> Emails: Incoming Mail Servers`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:256
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:265
 msgid ""
 "We recommend using the IMAP protocol over the POP protocol, as IMAP fetches "
 "all unread emails, while POP fetches all the emails' history and then tags "
@@ -4127,7 +4141,7 @@ msgstr ""
 "我们建议使用 IMAP 协议而不是 POP 协议，因为 IMAP 会获取所有未读邮件，而 POP "
 "会获取所有邮件历史记录，然后在邮箱中将其标记为已删除。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:260
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:269
 msgid ""
 "It is also possible to connect a mailbox through :doc:`Gmail with Google "
 "OAuth <google_oauth>` or :doc:`Outlook with Microsoft Azure OAuth "
@@ -4136,14 +4150,14 @@ msgstr ""
 "也可以通过 :doc:`Gmail 与 Google OAuth<google_oauth>` 或 :doc:`Outlook 与 "
 "Microsoft Azure OAuth<azure_oauth>` 连接邮箱。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:263
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:272
 msgid ""
 "Regardless of the protocol chosen, emails are fetched using the *Mail: "
 "Fetchmail Service* scheduled action."
 msgstr ""
 "无论选择哪种协议，都会使用 *邮件：Fetchmail 服务* 计划的操作来获取邮件。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:266
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:275
 msgid ""
 "Additionally, using an incoming mail server in Odoo gives the opportunity to "
 "create new records in a specified model. Each incoming mail server can "
@@ -4152,7 +4166,7 @@ msgstr ""
 "此外，在 Odoo 中使用接收邮件服务器还可在指定模型中创建新记录。每个邮件服务器"
 "都可以在不同的模型中创建记录。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:270
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:279
 msgid ""
 "Emails received on `task@company-name.com` are fetched by the Odoo database. "
 "All fetched emails will create a new project task in the database."
@@ -4160,11 +4174,11 @@ msgstr ""
 "通过 `task@company-name.com` 收到的电子邮件由 Odoo 数据库获取。所有获取的电子"
 "邮件都将在数据库中创建一个新的项目任务。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:279
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:288
 msgid "MX record"
 msgstr "MX 记录"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:281
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:290
 msgid ""
 "A third option is to create a MX record in your DNS zone which specifies the "
 "mail server managing emails sent to your domain. **Advanced technical "
@@ -4173,7 +4187,7 @@ msgstr ""
 "第三种方法是在 DNS 区域创建 MX 记录，指定管理发送到您域名的电子邮件的邮件服务"
 "器。**需要高级技术知识。**"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:285
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:294
 msgid ""
 "This configuration only works with a subdomain on the Odoo Online or Odoo.sh "
 "infrastructure (e.g., `@mail.mydomain.com`)"
@@ -4181,16 +4195,16 @@ msgstr ""
 "此配置仅适用于 Odoo 云端版或 Odoo.sh 基础设施上的子域（例如，"
 "`@mail.mydomain.com`）。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:288
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:297
 msgid "Below are presented some specifications depending on the hosting type:"
 msgstr "以下是根据托管类型提供的一些规格："
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:292
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:301
 #: ../../content/applications/general/email_communication/faq.rst:296
 msgid "Odoo Online"
 msgstr "Odoo云端版本"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:294
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:303
 msgid ""
 "The custom subdomain must be added to your :doc:`Odoo Portal <../../websites/"
 "website/configuration/domain_names>`."
@@ -4198,12 +4212,12 @@ msgstr ""
 "自定义子域必须添加到您的 :doc:`Odoo 门户网站<.../../websites/website/"
 "configuration/domain_names>` 中。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:297
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:306
 #: ../../content/applications/general/email_communication/faq.rst:301
 msgid "Odoo.sh"
 msgstr "Odoo.sh"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:299
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:308
 msgid ""
 "The custom subdomain must be added to the :doc:`settings of the project "
 "<../../../administration/odoo_sh/getting_started/settings>`:"
@@ -4215,11 +4229,11 @@ msgstr ""
 msgid "Adding a custom subdomain for mail to Odoo.sh project settings."
 msgstr "在 Odoo.sh 项目设置中为邮件添加自定义子域。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:308
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:317
 msgid "Infinite email loops"
 msgstr "无限循环的电子邮件"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:310
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:319
 msgid ""
 "In some cases, infinite mailing loops can be created. Odoo provides some "
 "protection against such loops, ensuring the same sender cannot send too many "
@@ -4228,7 +4242,7 @@ msgstr ""
 "在某些情况下，可能会产生无限的邮件循环。Odoo 提供了一些防止此类循环的保护措"
 "施，确保同一发件人无法在特定时间跨度内向别名发送过多 **会创建记录** 的邮件。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:314
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:323
 msgid ""
 "By default, an email address can send up to 20 emails in 120 minutes. If "
 "more emails are sent, they are blocked and the sender receives the following "
@@ -4241,7 +4255,7 @@ msgstr ""
 msgid "Bounce email received after attempting contact too many times an alias."
 msgstr "尝试联系太多次后，收到一封别名邮件被退回。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:320
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:329
 msgid ""
 "To change the default behavior, enable :ref:`developer-mode`, then go "
 "to :menuselection:`Settings --> Technical --> Parameters: System Parameters` "
@@ -4250,7 +4264,7 @@ msgstr ""
 "要更改默认行为，请启用 :ref:`developer-mode`，然后转到 :menuselection:`设置 "
 "--> 技术 --> 系统参数：系统参数` 添加两个参数。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:323
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:332
 msgid ""
 "For the first parameter, enter `mail.gateway.loop.minutes` as "
 "the :guilabel:`Key` and choose a number of minutes as the :guilabel:`Value` "
@@ -4259,7 +4273,7 @@ msgstr ""
 "对于第一个参数，输入 `mail.gateway.loop.minutes` 作为 :guilabel:`密钥`，并选"
 "择一个分钟数作为 :guilabel:`值`（`120` 是默认行为）。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:325
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:334
 msgid ""
 "For the second parameter, enter `mail.gateway.loop.threshold` as "
 "the :guilabel:`Key` and choose a number of emails as the :guilabel:`Value` "
@@ -4268,11 +4282,11 @@ msgstr ""
 "对于第二个参数，输入 `mail.gateway.loop.threshold` 作为 :guilabel:`密钥`，并"
 "选择一个邮件数作为 :guilabel:`值`（`20` 是默认行为）。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:329
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:338
 msgid "Allow alias domain system parameter"
 msgstr "允许别名域系统参数"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:331
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:340
 msgid ""
 "Incoming aliases are set in the Odoo database to create records by receiving "
 "incoming emails. To view aliases set in the Odoo database, first activate "
@@ -4283,7 +4297,7 @@ msgstr ""
 "数据库中设置的别名，首先激活 :ref:`开发者模式`。然后，进入 :menuselection:`设"
 "置应用程序 --> 技术 --> 别名`。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:335
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:344
 msgid ""
 "The following system parameter, `mail.catchall.domain.allowed`, set with "
 "allowed alias domain values, separated by commas, filters out correctly "
@@ -4295,7 +4309,7 @@ msgstr ""
 "隔），可筛选掉正确发送给别名的电子邮件。设置别名可创建工单、销售线索、商机等"
 "的域，可消除电子邮件地址中只有前缀别名而没有域的误报。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:340
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:349
 msgid ""
 "In some instances, matches have been made in the Odoo database when an email "
 "is received with the same alias prefix and a different domain on the "
@@ -4306,7 +4320,7 @@ msgstr ""
 "不同的域，则会在 Odoo 数据库中进行匹配。在收到的电子邮件的发件人、收件人"
 "和 :abbr:`抄送` 电子邮件地址中都存在这种情况。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:345
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:354
 msgid ""
 "When Odoo receives emails with the `commercial` prefix alias in the sender, "
 "recipient, or :abbr:`CC (Carbon Copy)` email addresses (e.g. "
@@ -4318,7 +4332,7 @@ msgstr ""
 "commercial/@example.com）中带有 “商务” 前缀别名的电子邮件时，数据库会错误地将"
 "该电子邮件视为具有不同域的完整 “商务” 别名，并因此创建工单/销售线索/商机等。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:350
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:359
 msgid ""
 "To add the `mail.catchall.domain.allowed` system parameter, first, activate "
 "the :ref:`developer mode <developer-mode>`. Then, go "
@@ -4331,7 +4345,7 @@ msgstr ""
 "参数`。点击:guilabel:`新建`。然后，在 Key 字段中输入 "
 "mail.catchall.domain.allowed 。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:354
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:363
 msgid ""
 "Next, for the :guilabel:`Value` field, add the domains separated by commas. "
 "Manually :icon:`fa-cloud-upload` :guilabel:`(Save)`, and the system "
@@ -4344,11 +4358,11 @@ msgstr ""
 msgid "mail.catchall.domain.allowed system parameter set."
 msgstr "mail.catchall.domain.allowed 系统参数集。"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:361
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:370
 msgid "Local-part based incoming detection"
 msgstr "收件时检测本地的别名域"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:363
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:372
 msgid ""
 "When creating a new alias, there is an option to enable :guilabel:`Local-"
 "part based incoming detection`. If enabled, Odoo only requires the local-"
@@ -8119,12 +8133,10 @@ msgstr "启用邮件插件"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:19
 msgid ""
-"First, enable the *Mail Plugin* feature in the database. Go "
+"First, enable the *Mail Plugin* module in the database. Go "
 "to :menuselection:`Settings --> General Settings --> Integrations`, "
 "enable :guilabel:`Mail Plugin`, and :guilabel:`Save` the configuration."
 msgstr ""
-"首先，在数据库中启用*邮件插件*功能。进入 :menuselection:`设置-->常规设置-->集"
-"成`，启用 :guilabel:`邮件插件`，然后 :guilabel:`保存`配置。"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:25
 msgid "Install the Outlook Plugin"
@@ -8143,29 +8155,15 @@ msgstr ""
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:31
 msgid ""
 "Next, open the Outlook mailbox, and select any email. After completing this, "
-"click on the :guilabel:`More actions` button in the upper right-side and "
-"select :guilabel:`Get Add-ins`."
+"click on the :guilabel:`Apps` button in the upper right-side, then "
+"click :guilabel:`Get add-ins`."
 msgstr ""
-"接下来，打开 Outlook 邮箱，选择任何电子邮件。完成此操作后，点击右上角"
-"的 :guilabel:`更多操作` 按钮，选择 :guilabel:`获取插件`。"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:-1
-msgid "More actions button in Outlook"
-msgstr "Outlook的“更多操作”按钮"
-
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:39
-msgid ""
-"For locally installed versions of Microsoft Outlook, access "
-"the :guilabel:`Get Add-ins` menu item while in preview mode (**not** with a "
-"message open). First, click on the :guilabel:`... (ellipsis)` icon in the "
-"upper right of the previewed message, then scroll down, and click "
-"on :guilabel:`Get Add-ins`."
+msgid "Apps button in Outlook"
 msgstr ""
-"对于本地安装的 Microsoft Outlook 版本，请在预览模式（**不是**打开邮件）下访"
-"问 :guilabel:`获取插件`菜单项。首先，点击预览邮件右上方的 :guilabel:`...（省"
-"略号）`图标，然后向下滚动，点击 :guilabel:`获取插件`。"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:44
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:37
 msgid ""
 "Following this step, select the :guilabel:`My add-ins` tab on the left-side."
 msgstr "完成此步骤后，选择左侧的 :guilabel:`我的插件` 选项卡。"
@@ -8174,19 +8172,17 @@ msgstr "完成此步骤后，选择左侧的 :guilabel:`我的插件` 选项卡�
 msgid "My add-ins in Outlook"
 msgstr "Outlook中的我的附加程序"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:50
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:42
 msgid ""
-"Under :guilabel:`Custom add-ins` towards the bottom, click on :guilabel:`+ "
-"Add a custom add-in`, and then on :guilabel:`Add from file...`"
+"Under :guilabel:`Custom Addins` towards the bottom, click on :guilabel:`+ "
+"Add a custom add-in`, then select :guilabel:`Add from file...`"
 msgstr ""
-"在底部的 :guilabel:`自定义插件`下，点击 :guilabel:`+ 添加自定义插件`，然后点"
-"击 :guilabel:`从文件中添加...`"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:-1
 msgid "Custom add-ins in Outlook"
 msgstr "在Outlook中定制附加程序"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:57
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:48
 msgid ""
 "For the next step, attach the `manifest.xml` file downloaded above, and "
 "press :guilabel:`OK`. Next, read the warning and click "
@@ -8199,24 +8195,22 @@ msgstr ""
 msgid "Custom add-in installation warning in Outlook"
 msgstr "在Outlook中定制附加程序安装警告"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:67
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:57
 msgid "Connect the database"
 msgstr "连接数据库"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:69
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:59
 msgid ""
 "Now, Outlook will be connected to the Odoo database. First, open any email "
-"in the Outlook mailbox, click on the :guilabel:`More actions` button in the "
-"upper right-side, and select :guilabel:`Odoo for Outlook`."
+"in the Outlook mailbox, click on the :guilabel:`Apps` button in the upper "
+"right-side, and select :guilabel:`Odoo Inbox Addin`."
 msgstr ""
-"现在，Outlook 将连接到 Odoo 数据库。首先，打开 Outlook 邮箱中的任何邮件，点击"
-"右上角的 :guilabel:`更多操作` 按钮，然后选择 :guilabel:`Odoo for Outlook`。"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:-1
 msgid "Odoo for Outlook add-in button"
 msgstr "Odoo中的Outlook附加程序按钮"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:77
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:66
 msgid ""
 "The right-side panel can now display **Company Insights**. At the bottom, "
 "click on :guilabel:`Login`."
@@ -8226,7 +8220,7 @@ msgstr "右侧面板现在可以显示**公司洞察**。在底部，点击 :gui
 msgid "Logging in the Odoo database"
 msgstr "登录 Odoo 数据库"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:85
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:73
 msgid ""
 "Only a limited amount of **Company Insights** (*Lead Enrichment*) requests "
 "are available as a trial database. This feature requires :ref:`prepaid "
@@ -8235,23 +8229,21 @@ msgstr ""
 "只有数量有限的 **公司洞察**（*潜在客户丰富*）请求可作为试用数据库使用。此功能"
 "需要 :ref:`预付点数 <mail_plugins/pricing>`。"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:89
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:77
 msgid ""
 "If, after a short while, the panel is still empty, it is possible that the "
 "browser cookie settings prevented it from loading. Note that these settings "
-"also change if the browser is in \"Incognito\" mode."
+"also change if the browser is in *Incognito* mode."
 msgstr ""
-"如果过了一段时间，面板仍然为空，则可能是浏览器 cookie 设置阻止了面板的加载。"
-"请注意，如果浏览器处于 \"隐身\" 模式，这些设置也会发生变化。"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:93
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:81
 msgid ""
 "To fix this issue, configure the browser to always allow cookies on Odoo's "
 "plugin page."
 msgstr ""
 "要解决这个问题，请将浏览器配置为始终允许在 Odoo 的插件页面上使用 cookies。"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:95
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:83
 msgid ""
 "For Google Chrome, change the browser cookie settings by following the guide "
 "at: `https://support.google.com/chrome/answer/95647 <https://"
@@ -8263,11 +8255,11 @@ msgstr ""
 "answer/95647>`_，并将 `download.odoo.com` 添加到 :guilabel:`Sites that can "
 "always use cookies` 的列表中。"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:100
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:88
 msgid "Once this is complete, the Outlook panel needs to be opened again."
 msgstr "完成后，需要再次打开 Outlook 面板。"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:102
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:90
 msgid "Now, enter the Odoo database URL and click on :guilabel:`Login`."
 msgstr "现在，输入 Odoo 数据库 URL 并点击 :guilabel:`登录`。"
 
@@ -8275,7 +8267,7 @@ msgstr "现在，输入 Odoo 数据库 URL 并点击 :guilabel:`登录`。"
 msgid "Entering the Odoo database URL"
 msgstr "输入 Odoo 数据库 URL"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:108
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:95
 msgid "Next, click on :guilabel:`Allow` to open the pop-up window."
 msgstr "然后，点击 :guilabel:`允许` 打开弹出窗口。"
 
@@ -8283,7 +8275,7 @@ msgstr "然后，点击 :guilabel:`允许` 打开弹出窗口。"
 msgid "New window pop-up warning"
 msgstr "新的警告弹窗"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:114
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:100
 msgid ""
 "If the user isn't logged into the database, enter the credentials. Click "
 "on :guilabel:`Allow` to let the Outlook Plugin connect to the database."
@@ -8295,64 +8287,78 @@ msgstr ""
 msgid "Allowing the Outlook Plugin to connect to a database"
 msgstr "允许Outlook插件连接至数据库"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:124
-msgid "Add a shortcut to the plugin"
-msgstr "为插件添加快捷方式"
-
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:126
-msgid ""
-"By default, the Outlook Plugin can be opened from the *More actions* menu. "
-"However, to save time, it's possible to add it next to the other default "
-"actions."
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:109
+msgid "Using the inbox plugin"
 msgstr ""
-"默认情况下，可以从 *更多操作* 菜单打开 Outlook 插件。 但是，为了节省时间，可"
-"以将其添加到其他默认操作旁边。"
+
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:111
+msgid ""
+"To use the plugin, open any email in the Outlook mailbox, click on "
+"the :guilabel:`Apps` button in the upper right-side, and "
+"select :guilabel:`Odoo Inbox Addin` to open the panel."
+msgstr ""
+
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:115
+msgid ""
+"The options available in the panel will vary based on the applications "
+"installed in the database."
+msgstr ""
+
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:118
+msgid "Create a contact"
+msgstr ""
+
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:120
+msgid ""
+"To create a contact record in Odoo from an email, click the :icon:`fa-plus-"
+"circle` :guilabel:`(circle plus)` icon."
+msgstr ""
+
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:124
+msgid ""
+"A contact record **must** be created before a lead/opportunity can be "
+"created."
+msgstr ""
+
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:127
+msgid "Create an opportunity"
+msgstr ""
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:129
 msgid ""
-"In the Outlook mailbox, click on :guilabel:`Settings`, then "
-"on :guilabel:`View all Outlook settings`."
+"To create an opportunity from an email, click the :icon:`fa-"
+"plus` :guilabel:`(plus)` icon next to :guilabel:`Opportunities`. Doing so "
+"opens a new opportunity record in Odoo in a new tab. The subject of the "
+"email is used as the opportunity title, and the content of the email is "
+"added to the :guilabel:`Notes` tab of the opportunity."
 msgstr ""
-"在 Outlook 邮箱中，点击 :guilabel:`设置`，然后点击 :guilabel:`查看所有 "
-"Outlook 设置`。"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:-1
-msgid "Viewing all Outlook settings"
-msgstr "查看所有Outlook设置"
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:135
+msgid "Create a task"
+msgstr ""
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:136
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:137
 msgid ""
-"Now, select :guilabel:`Customize actions` under :guilabel:`Mail`, click "
-"on :guilabel:`Odoo for Outlook`, and then :guilabel:`Save`."
+"To create a task from an email, click the :icon:`fa-plus` :guilabel:`(plus)` "
+"icon next to :guilabel:`Tasks`. Then, enter the title of the project where "
+"the task should be created in the resulting field, and select the "
+"appropriate project from the resulting list. This opens a new task record in "
+"Odoo in a new tab. The subject of the email is used as the task title, and "
+"the content of the email is added to the :guilabel:`Description` tab."
 msgstr ""
-"现在，选择 :guilabel:`邮件` 下的 :guilabel:`自定义操作`，点"
-"击 :guilabel:`Odoo for Outlook`，然后点击 :guilabel:`保存`。"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:-1
-msgid "Odoo for Outlook customized action"
-msgstr "Odoo中的Outlook定制操作"
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:144
+msgid "Create a ticket"
+msgstr ""
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:143
-msgid "Following this step, open any email; the shortcut should be displayed."
-msgstr "完成此步骤后，打开任何电子邮件，都会显示快捷方式。"
-
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:150
-msgid "Using the plugin"
-msgstr "使用插件"
-
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:152
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:146
 msgid ""
-"Now that the plug-in is installed and operational, all that needs to be done "
-"to create a lead is to click on the `O` [Odoo icon] or navigate "
-"to :guilabel:`More actions` and click on :guilabel:`Odoo for Outlook`. The "
-"side panel will appear on the right-side, and "
-"under :guilabel:`Opportunities` click on :guilabel:`New`. A new window with "
-"the created opportunity in the Odoo database will populate."
+"To create a task from an email, click the :icon:`fa-plus` :guilabel:`(plus)` "
+"icon next to :guilabel:`Tickets`. Doing so opens a new ticket record in Odoo "
+"in a new tab. The subject of the email is used as the ticket title, and the "
+"content of the email is added to the :guilabel:`Description` tab of the "
+"ticket."
 msgstr ""
-"现在插件已安装并运行，要创建一个线索，只需点击 `O` [Odoo 图标] 或导航"
-"至 :guilabel:`更多操作` 并点击 :guilabel:`Odoo for Outlook`。侧面板将出现在右"
-"侧，在 :guilabel:`商机` 下点击 :guilabel:`新建`。新窗口将显示 Odoo 数据库中创"
-"建的机会。"
 
 #: ../../content/applications/general/integrations/unsplash.rst:3
 msgid "Unsplash"
@@ -10428,19 +10434,13 @@ msgstr ""
 #: ../../content/applications/general/iot/devices/scale.rst:10
 msgid ""
 "To connect a scale to the IoT system, use a USB cable. In some cases, you "
-"may need a serial-to-US adapter to complete the connection. If the scale is "
+"may need a serial-to-USB adapter to complete the connection. If the scale is "
 "`compatible with an IoT system <https://www.odoo.com/page/iot-hardware>`_, "
 "no additional setup is required; the scale is automatically detected as soon "
 "as it is connected. If the scale is not detected, reboot the IoT box "
 "or :ref:`restart the Windows virtual IoT service <iot/windows_iot/restart>` "
 "and :ref:`update the scale's drivers <iot_updating_iot/handlers>`."
 msgstr ""
-"要将电子秤连接到物联网系统，请使用 USB 电缆。在某些情况下，您可能需要使用串口"
-"转 USB 适配器来完成连接。如果电子秤 `与物联网系统兼容 <https://www.odoo.com/"
-"page/iot-hardware>_`，则无需额外设置；电子秤一经连接就会自动检测到。如果未检"
-"测到电子秤，请重新启动物联网盒或 :ref:`重启 Windows 虚拟物联网服务 <iot/"
-"windows_iot/restart>` 和 :ref:`更新电子秤驱动程序 <iot_updating_iot/"
-"handlers>`。"
 
 #: ../../content/applications/general/iot/devices/scale.rst:18
 msgid ""
@@ -14372,61 +14372,45 @@ msgstr "门户访问权限提供给需要查看 Odoo 数据库中某些文档或
 #: ../../content/applications/general/users/portal.rst:10
 msgid ""
 "Some common use cases for providing portal access include allowing customers "
-"to read/view any or all of the following in Odoo:"
+"to make partial payment on an invoice, to add funds to their eWallet, and to "
+"read/view any or all of the following in Odoo:"
 msgstr ""
-"提供门户访问的一些常见用例包括允许客户在 Odoo 中读取/查看以下任何或所有内容："
 
 #: ../../content/applications/general/users/portal.rst:13
-msgid "leads/opportunities"
-msgstr "潜在客户/商机"
+msgid "Following, viewing and paying orders"
+msgstr ""
 
 #: ../../content/applications/general/users/portal.rst:14
-msgid "quotations/sales orders"
-msgstr "报价/销售订单"
+msgid "Following, downloading or paying invoices"
+msgstr ""
 
 #: ../../content/applications/general/users/portal.rst:15
-msgid "purchase orders"
-msgstr "采购订单"
+msgid "Managing payment methods"
+msgstr ""
 
 #: ../../content/applications/general/users/portal.rst:16
-msgid "invoices & bills"
-msgstr "发票和账单"
+msgid "Managing subscriptions"
+msgstr ""
 
 #: ../../content/applications/general/users/portal.rst:17
-msgid "projects"
-msgstr "项目"
+msgid "Adding, removing or modifying addresses"
+msgstr ""
 
 #: ../../content/applications/general/users/portal.rst:18
-msgid "tasks"
-msgstr "任务"
-
-#: ../../content/applications/general/users/portal.rst:19
-msgid "timesheets"
-msgstr "工时单"
-
-#: ../../content/applications/general/users/portal.rst:20
-msgid "tickets"
-msgstr "支持请求"
+msgid "Configuring connection parameters"
+msgstr ""
 
 #: ../../content/applications/general/users/portal.rst:21
-msgid "signatures"
-msgstr "签名"
-
-#: ../../content/applications/general/users/portal.rst:22
-msgid "subscriptions"
-msgstr "网站订阅"
-
-#: ../../content/applications/general/users/portal.rst:25
 msgid ""
-"Portal users only have read/view access, and will not be able to edit any "
-"documents in the database."
-msgstr "门户用户只有读取/查看权限，不能编辑数据库中的任何文件。"
+"Portal users only have read/view access, and will **not** be able to edit "
+"any documents in the database."
+msgstr ""
 
-#: ../../content/applications/general/users/portal.rst:31
+#: ../../content/applications/general/users/portal.rst:27
 msgid "Provide portal access to customers"
 msgstr "为客户提供门户访问"
 
-#: ../../content/applications/general/users/portal.rst:33
+#: ../../content/applications/general/users/portal.rst:29
 msgid ""
 "From the main Odoo dashboard, select the :guilabel:`Contacts` application. "
 "If the contact is not yet created in the database, click on "
@@ -14444,82 +14428,64 @@ msgstr ""
 msgid "Use the Contacts application to give portal access to users."
 msgstr "使用联系人应用程序为用户提供门户访问权限。"
 
-#: ../../content/applications/general/users/portal.rst:42
+#: ../../content/applications/general/users/portal.rst:37
 msgid ""
 "Then select :guilabel:`Grant portal access`. A pop-up window appears, "
 "listing three fields:"
 msgstr "然后选择:guilabel:`授予门户访问权限`。弹出一个窗口，列出三个字段："
 
-#: ../../content/applications/general/users/portal.rst:44
+#: ../../content/applications/general/users/portal.rst:39
 msgid ""
 ":guilabel:`Contact`: the recorded name of the contact in the Odoo database"
 msgstr "guilabel:`联系人`：Odoo 数据库中记录的联系人名称"
 
-#: ../../content/applications/general/users/portal.rst:45
+#: ../../content/applications/general/users/portal.rst:40
 msgid ""
-":guilabel:`Email`: the contact's email address that they will use to log "
-"into the portal"
-msgstr "guilabel:`电子邮件`：联系人用于登录门户网站的电子邮件地址"
+":guilabel:`Email`: the contact's email address used to log into the portal"
+msgstr ""
+
+#: ../../content/applications/general/users/portal.rst:41
+msgid ""
+":guilabel:`Latest Authentication`: the last time the user accessed the portal"
+msgstr ""
+
+#: ../../content/applications/general/users/portal.rst:43
+msgid ""
+"To grant portal access, first enter the contact's :guilabel:`Email` used to "
+"log into the portal if it has not been automatically entered by the system. "
+"Then click :guilabel:`Grant Access` to finish."
+msgstr ""
 
 #: ../../content/applications/general/users/portal.rst:46
-msgid ":guilabel:`In Portal`: whether or not the user has portal access"
-msgstr "guilabel:`门户网站中`：用户是否拥有门户网站访问权限"
-
-#: ../../content/applications/general/users/portal.rst:48
 msgid ""
-"To grant portal access, first enter the contact's :guilabel:`Email` they "
-"will use to log into the portal. Then, check the box under the :guilabel:`In "
-"Portal` column. Optionally, add text to the invitation message the contact "
-"will receive. Then click :guilabel:`Apply` to finish."
+"To grant portal access to multiple users for a company at once, navigate to "
+"the company contact, then click :menuselection:`Action --> Grant portal "
+"access` to view a list of the company's related contacts. "
+"Click :guilabel:`Grant Access` for each contact to grant portal access to."
 msgstr ""
-"要授予门户访问权，首先输入联系人用于登录门户的 :guilabel:` 电子邮件地址`。然"
-"后，选中 :guilabel:`在门户网站` 栏下的复选框。可选择为联系人将收到的邀请信息"
-"添加文本。然后点击 :guilabel:`应用` 完成。"
 
-#: ../../content/applications/general/users/portal.rst:-1
+#: ../../content/applications/general/users/portal.rst:50
 msgid ""
-"An email address and corresponding checkbox for the contact need to be "
-"filled in before\n"
-"sending a portal invitation."
-msgstr "在发送门户网站邀请函之前，需要填写联系人的电子邮件地址和相应的复选框。"
-
-#: ../../content/applications/general/users/portal.rst:57
-msgid ""
-"An email will be sent to the specified email address, indicating that the "
-"contact is now a portal user for that Odoo database."
+"An email is sent to the specified email address, indicating that the contact "
+"is now a portal user for that Odoo database."
 msgstr ""
-"将向指定的电子邮件地址发送一封电子邮件，说明该联系人现已成为该 Odoo 数据库的"
-"门户用户。"
 
-#: ../../content/applications/general/users/portal.rst:61
-msgid ""
-"To grant portal access to multiple users at once, navigate to a company "
-"contact, then click :menuselection:`Action --> Grant portal access` to view "
-"a list of all of the company's related contacts. Check the box under "
-"the :guilabel:`In Portal` column for all the contacts that need portal "
-"access, then click :guilabel:`Apply`."
+#: ../../content/applications/general/users/portal.rst:54
+msgid "Revoking portal access"
 msgstr ""
-"要同时向多个用户授予门户访问权限，请导航到公司联系人，然后单"
-"击 :menuselection:`操作-->授予门户访问权限`，查看该公司所有相关联系人的列表。"
-"选中需要门户访问权限的所有联系人的:guilabel:`在门户网站`下的复选框，然后点"
-"击 :guilabel:`应用`。"
 
-#: ../../content/applications/general/users/portal.rst:67
+#: ../../content/applications/general/users/portal.rst:56
 msgid ""
-"At any time, portal access can be revoked by navigating to the contact, "
+"At any time, portal access can be revoked by navigating to a contact, "
 "clicking :menuselection:`Action --> Grant portal access`, and then "
-"unselecting the checkbox under the :guilabel:`In Portal` column and "
-"clicking :guilabel:`Apply`."
+"clicking :guilabel:`Revoke Access`."
 msgstr ""
-"在任何时候，只要导航到联系人，点击:menuselection:`操作--> 授予门户访问权`，然"
-"后取消:guilabel:`在门户网站`栏下的复选框并点击:guilabel:`应用`，就可以取消门"
-"户访问权限。"
 
-#: ../../content/applications/general/users/portal.rst:74
+#: ../../content/applications/general/users/portal.rst:62
 msgid "Change portal username"
 msgstr "更改门户用户名"
 
-#: ../../content/applications/general/users/portal.rst:76
+#: ../../content/applications/general/users/portal.rst:64
 msgid ""
 "There may be times when a portal user wants to change their user login. This "
 "can be done by any user in the database with administrator access rights. "
@@ -14529,15 +14495,11 @@ msgstr ""
 "有时，门户用户可能希望更改其用户登录名。这可以由数据库中任何具有管理员访问权"
 "限的用户完成。以下流程概述了更改门户用户登录的必要步骤。"
 
-#: ../../content/applications/general/users/portal.rst:81
-msgid ""
-":doc:`See the documentation on setting access rights </applications/general/"
-"users/access_rights>`."
+#: ../../content/applications/general/users/portal.rst:69
+msgid ":doc:`Access rights </applications/general/users/access_rights>`."
 msgstr ""
-":doc:`请参阅有关设置访问权限的文档 </applications/general/users/"
-"access_rights>`。"
 
-#: ../../content/applications/general/users/portal.rst:84
+#: ../../content/applications/general/users/portal.rst:71
 msgid ""
 "First, navigate to :menuselection:`Settings app --> Users`. Then, "
 "under :guilabel:`Filters`, select :guilabel:`Portal Users`, or "
@@ -14551,7 +14513,7 @@ msgstr ""
 "置 :guilabel:`组` > :guilabel:`包含` > `门户`。选择后，搜索（并打开）需要编辑"
 "的门户用户。"
 
-#: ../../content/applications/general/users/portal.rst:89
+#: ../../content/applications/general/users/portal.rst:76
 msgid ""
 "Next, click :guilabel:`Edit` (if necessary), click into the :guilabel:`Email "
 "Address` field, and proceed to make any necessary changes to this field. "
@@ -14561,14 +14523,14 @@ msgstr ""
 "段，并对该字段进行任何必要的更改。:guilabel:`电子邮件地址` 字段用于登录 Odoo "
 "门户。"
 
-#: ../../content/applications/general/users/portal.rst:94
+#: ../../content/applications/general/users/portal.rst:81
 msgid ""
 "Changing the :guilabel:`Email Address` (or login) only changes the "
 "*username* on the customer's portal login."
 msgstr ""
 "更改:guilabel:`电子邮件地址`（或登录名）只能更改客户门户登录的*用户名*。"
 
-#: ../../content/applications/general/users/portal.rst:97
+#: ../../content/applications/general/users/portal.rst:84
 msgid ""
 "In order to change the contact email, this change needs to take place on the "
 "contact template in the *Contacts* app. Alternatively, the customer can "
@@ -14578,25 +14540,23 @@ msgstr ""
 "要更改联系人的电子邮件，需要在*联系人*应用程序的联系人模板上进行更改。或者，"
 "客户可以直接从门户网站更改电子邮件，但登录名**不能**更改。"
 
-#: ../../content/applications/general/users/portal.rst:102
+#: ../../content/applications/general/users/portal.rst:89
 msgid "Customer portal changes"
 msgstr "客户门户网站变更"
 
-#: ../../content/applications/general/users/portal.rst:104
+#: ../../content/applications/general/users/portal.rst:91
 msgid ""
 "There may be times when the customer would like to make changes to their "
-"contact information, password/security, or payment information attached to "
-"the portal account. This can be performed by the customer from their portal. "
-"The following process is how a customer can change their contact information."
+"contact, security, or payment information attached to the portal account. "
+"This can be performed by the customer from their portal. The following "
+"process is how a customer can change their contact information."
 msgstr ""
-"有时，客户可能希望更改其门户账户的联系信息、密码/安全性或付款信息。这可以由客"
-"户在其门户网站上进行。以下是客户更改联系信息的流程。"
 
-#: ../../content/applications/general/users/portal.rst:112
+#: ../../content/applications/general/users/portal.rst:98
 msgid "Change customer info"
 msgstr "更改客户信息"
 
-#: ../../content/applications/general/users/portal.rst:114
+#: ../../content/applications/general/users/portal.rst:100
 msgid ""
 "First enter the username and password (login) into the database login page "
 "to access the portal user account. A portal dashboard will appear upon "
@@ -14607,11 +14567,11 @@ msgstr ""
 "后，门户仪表板将出现。各种已安装的 Odoo 应用程序的门户文件将显示出来，并标明"
 "每个文件的数量。"
 
-#: ../../content/applications/general/users/portal.rst:119
+#: ../../content/applications/general/users/portal.rst:105
 msgid ":ref:`Portal access documentation <portal/main>`."
 msgstr ":ref:`门户访问文档 <portal/main>`。"
 
-#: ../../content/applications/general/users/portal.rst:121
+#: ../../content/applications/general/users/portal.rst:107
 msgid ""
 "Next, navigate to the upper-right corner of the portal, and click "
 "the :guilabel:`Edit` button, next to the :guilabel:`Details` section. Then, "
@@ -14620,13 +14580,12 @@ msgstr ""
 "然后，导航到门户网站的右上角，点击:guilabel:`详情`部分旁边的 :guilabel:`编辑`"
 "按钮。然后更改相关信息，点击 :guilabel:`确认`。"
 
-#: ../../content/applications/general/users/portal.rst:126
+#: ../../content/applications/general/users/portal.rst:112
 msgid "Change password"
 msgstr "修改密码"
 
-#: ../../content/applications/general/users/portal.rst:128
-#: ../../content/applications/general/users/portal.rst:147
-#: ../../content/applications/general/users/portal.rst:166
+#: ../../content/applications/general/users/portal.rst:114
+#: ../../content/applications/general/users/portal.rst:133
 msgid ""
 "First enter the username and password (login) into the database login page "
 "to access the portal user account. A portal dashboard will appear upon "
@@ -14635,7 +14594,7 @@ msgstr ""
 "首先在数据库登录页面输入用户名和密码（登录），以访问门户用户账户。登录成功后"
 "会出现一个门户仪表板。"
 
-#: ../../content/applications/general/users/portal.rst:131
+#: ../../content/applications/general/users/portal.rst:117
 msgid ""
 "If the customer would like to change their password for portal access, click "
 "on the :guilabel:`Edit Security Settings` link, below the :guilabel:`Account "
@@ -14649,7 +14608,7 @@ msgstr ""
 "和 :guilabel:`新秘密` 进行必要的更改，并验证新密码。最后，点击 :guilabel:`更"
 "改密码` 完成密码更改。"
 
-#: ../../content/applications/general/users/portal.rst:137
+#: ../../content/applications/general/users/portal.rst:123
 msgid ""
 "If a customer would like to change the login, as documented above, contact "
 "the Odoo database point-of-contact. :ref:`See above documentation on "
@@ -14658,18 +14617,18 @@ msgstr ""
 "如果客户想更改登录名，请联系 Odoo 数据库的联系人。 :ref:`请参阅上面关于更改门"
 "户用户名 <portal/login>` 的文档。"
 
-#: ../../content/applications/general/users/portal.rst:141
+#: ../../content/applications/general/users/portal.rst:127
 msgid ""
 "Passwords for portal users and Odoo.com users remain separate, even if the "
 "same email address is used."
 msgstr ""
 "即使使用相同的电子邮件地址，门户网站用户和 Odoo.com 用户的密码也要分开。"
 
-#: ../../content/applications/general/users/portal.rst:145
+#: ../../content/applications/general/users/portal.rst:131
 msgid "Add two-factor authentication"
 msgstr "添加双因素身份验证"
 
-#: ../../content/applications/general/users/portal.rst:150
+#: ../../content/applications/general/users/portal.rst:136
 msgid ""
 "If the customer would like to turn on two-factor authentication (2FA) for "
 "portal access, click on the :guilabel:`Edit Security Settings` link, below "
@@ -14678,7 +14637,7 @@ msgstr ""
 "如果客户希望为门户访问打开双因素身份验证（2FA），请单击:guilabel:`账户安全`部"
 "分下方的:guilabel:`编辑安全设置`链接。"
 
-#: ../../content/applications/general/users/portal.rst:153
+#: ../../content/applications/general/users/portal.rst:139
 msgid ""
 "Click on :guilabel:`Enable two-factor authentication` to turn on :abbr:`2FA "
 "(two-factor authentication)`. Confirm the current portal password in "
@@ -14693,24 +14652,284 @@ msgstr ""
 "份验证）`应用程序（Google Authenticator、Authy等）中激活:abbr:`2FA（双因素身"
 "份验证）`。"
 
-#: ../../content/applications/general/users/portal.rst:159
+#: ../../content/applications/general/users/portal.rst:145
 msgid ""
 "Finally, click :guilabel:`Enable two-factor authentication` to complete the "
 "setup."
 msgstr "最后，单击:guilabel:`启用双因素身份验证` 完成设置。"
 
-#: ../../content/applications/general/users/portal.rst:164
+#: ../../content/applications/general/users/portal.rst:150
 msgid "Change payment info"
 msgstr "更改支付信息"
 
-#: ../../content/applications/general/users/portal.rst:169
+#: ../../content/applications/general/users/portal.rst:152
 msgid ""
-"If the customer would like to manage payment options, navigate to "
-"the :guilabel:`Manage payment methods` in the menu on the right. Then, add "
-"the new payment information, and select :guilabel:`Add new card`."
+"If the customer needs to manage payment options, they click "
+"the :guilabel:`Payment methods` button."
 msgstr ""
-"如果客户希望管理付款选项，请导航至右侧菜单中的 :guilabel:`管理付款方式`。然"
-"后，添加新的付款信息，并选择 :guilabel:`添加新卡`。"
+
+#: ../../content/applications/general/users/portal.rst:154
+msgid ""
+"To add a new payment option, choose from the available payment methods, "
+"enter the new payment information, and click :guilabel:`Save` to save the "
+"details."
+msgstr ""
+
+#: ../../content/applications/general/users/portal.rst:156
+msgid ""
+"To erase a payment option, click the :icon:`fa-trash` :guilabel:`(Trash)` "
+"icon, then click the :guilabel:`Confirm Deletion` button."
+msgstr ""
+
+#: ../../content/applications/general/users/portal.rst:159
+msgid ""
+"Payment details **cannot** be edited. Customers must delete and re-enter "
+"information to update their details."
+msgstr ""
+
+#~ msgid ""
+#~ "First, enable the *Mail Plugin* feature in the database. Go "
+#~ "to :menuselection:`Settings --> General Settings --> Integrations`, "
+#~ "enable :guilabel:`Mail Plugin`, and :guilabel:`Save` the configuration."
+#~ msgstr ""
+#~ "首先，在数据库中启用*邮件插件*功能。进入 :menuselection:`设置-->常规设置--"
+#~ ">集成`，启用 :guilabel:`邮件插件`，然后 :guilabel:`保存`配置。"
+
+#~ msgid ""
+#~ "Next, open the Outlook mailbox, and select any email. After completing "
+#~ "this, click on the :guilabel:`More actions` button in the upper right-"
+#~ "side and select :guilabel:`Get Add-ins`."
+#~ msgstr ""
+#~ "接下来，打开 Outlook 邮箱，选择任何电子邮件。完成此操作后，点击右上角"
+#~ "的 :guilabel:`更多操作` 按钮，选择 :guilabel:`获取插件`。"
+
+#~ msgid "More actions button in Outlook"
+#~ msgstr "Outlook的“更多操作”按钮"
+
+#~ msgid ""
+#~ "For locally installed versions of Microsoft Outlook, access "
+#~ "the :guilabel:`Get Add-ins` menu item while in preview mode (**not** with "
+#~ "a message open). First, click on the :guilabel:`... (ellipsis)` icon in "
+#~ "the upper right of the previewed message, then scroll down, and click "
+#~ "on :guilabel:`Get Add-ins`."
+#~ msgstr ""
+#~ "对于本地安装的 Microsoft Outlook 版本，请在预览模式（**不是**打开邮件）下"
+#~ "访问 :guilabel:`获取插件`菜单项。首先，点击预览邮件右上方的 :guilabel:`..."
+#~ "（省略号）`图标，然后向下滚动，点击 :guilabel:`获取插件`。"
+
+#~ msgid ""
+#~ "Under :guilabel:`Custom add-ins` towards the bottom, click "
+#~ "on :guilabel:`+ Add a custom add-in`, and then on :guilabel:`Add from "
+#~ "file...`"
+#~ msgstr ""
+#~ "在底部的 :guilabel:`自定义插件`下，点击 :guilabel:`+ 添加自定义插件`，然后"
+#~ "点击 :guilabel:`从文件中添加...`"
+
+#~ msgid ""
+#~ "Now, Outlook will be connected to the Odoo database. First, open any "
+#~ "email in the Outlook mailbox, click on the :guilabel:`More actions` "
+#~ "button in the upper right-side, and select :guilabel:`Odoo for Outlook`."
+#~ msgstr ""
+#~ "现在，Outlook 将连接到 Odoo 数据库。首先，打开 Outlook 邮箱中的任何邮件，"
+#~ "点击右上角的 :guilabel:`更多操作` 按钮，然后选择 :guilabel:`Odoo for "
+#~ "Outlook`。"
+
+#~ msgid ""
+#~ "If, after a short while, the panel is still empty, it is possible that "
+#~ "the browser cookie settings prevented it from loading. Note that these "
+#~ "settings also change if the browser is in \"Incognito\" mode."
+#~ msgstr ""
+#~ "如果过了一段时间，面板仍然为空，则可能是浏览器 cookie 设置阻止了面板的加"
+#~ "载。请注意，如果浏览器处于 \"隐身\" 模式，这些设置也会发生变化。"
+
+#~ msgid "Add a shortcut to the plugin"
+#~ msgstr "为插件添加快捷方式"
+
+#~ msgid ""
+#~ "By default, the Outlook Plugin can be opened from the *More actions* "
+#~ "menu. However, to save time, it's possible to add it next to the other "
+#~ "default actions."
+#~ msgstr ""
+#~ "默认情况下，可以从 *更多操作* 菜单打开 Outlook 插件。 但是，为了节省时间，"
+#~ "可以将其添加到其他默认操作旁边。"
+
+#~ msgid ""
+#~ "In the Outlook mailbox, click on :guilabel:`Settings`, then "
+#~ "on :guilabel:`View all Outlook settings`."
+#~ msgstr ""
+#~ "在 Outlook 邮箱中，点击 :guilabel:`设置`，然后点击 :guilabel:`查看所有 "
+#~ "Outlook 设置`。"
+
+#~ msgid "Viewing all Outlook settings"
+#~ msgstr "查看所有Outlook设置"
+
+#~ msgid ""
+#~ "Now, select :guilabel:`Customize actions` under :guilabel:`Mail`, click "
+#~ "on :guilabel:`Odoo for Outlook`, and then :guilabel:`Save`."
+#~ msgstr ""
+#~ "现在，选择 :guilabel:`邮件` 下的 :guilabel:`自定义操作`，点"
+#~ "击 :guilabel:`Odoo for Outlook`，然后点击 :guilabel:`保存`。"
+
+#~ msgid "Odoo for Outlook customized action"
+#~ msgstr "Odoo中的Outlook定制操作"
+
+#~ msgid ""
+#~ "Following this step, open any email; the shortcut should be displayed."
+#~ msgstr "完成此步骤后，打开任何电子邮件，都会显示快捷方式。"
+
+#~ msgid "Using the plugin"
+#~ msgstr "使用插件"
+
+#~ msgid ""
+#~ "Now that the plug-in is installed and operational, all that needs to be "
+#~ "done to create a lead is to click on the `O` [Odoo icon] or navigate "
+#~ "to :guilabel:`More actions` and click on :guilabel:`Odoo for Outlook`. "
+#~ "The side panel will appear on the right-side, and "
+#~ "under :guilabel:`Opportunities` click on :guilabel:`New`. A new window "
+#~ "with the created opportunity in the Odoo database will populate."
+#~ msgstr ""
+#~ "现在插件已安装并运行，要创建一个线索，只需点击 `O` [Odoo 图标] 或导航"
+#~ "至 :guilabel:`更多操作` 并点击 :guilabel:`Odoo for Outlook`。侧面板将出现"
+#~ "在右侧，在 :guilabel:`商机` 下点击 :guilabel:`新建`。新窗口将显示 Odoo 数"
+#~ "据库中创建的机会。"
+
+#~ msgid ""
+#~ "To connect a scale to the IoT system, use a USB cable. In some cases, you "
+#~ "may need a serial-to-US adapter to complete the connection. If the scale "
+#~ "is `compatible with an IoT system <https://www.odoo.com/page/iot-"
+#~ "hardware>`_, no additional setup is required; the scale is automatically "
+#~ "detected as soon as it is connected. If the scale is not detected, reboot "
+#~ "the IoT box or :ref:`restart the Windows virtual IoT service <iot/"
+#~ "windows_iot/restart>` and :ref:`update the scale's drivers "
+#~ "<iot_updating_iot/handlers>`."
+#~ msgstr ""
+#~ "要将电子秤连接到物联网系统，请使用 USB 电缆。在某些情况下，您可能需要使用"
+#~ "串口转 USB 适配器来完成连接。如果电子秤 `与物联网系统兼容 <https://"
+#~ "www.odoo.com/page/iot-hardware>_`，则无需额外设置；电子秤一经连接就会自动"
+#~ "检测到。如果未检测到电子秤，请重新启动物联网盒或 :ref:`重启 Windows 虚拟物"
+#~ "联网服务 <iot/windows_iot/restart>` 和 :ref:`更新电子秤驱动程序 "
+#~ "<iot_updating_iot/handlers>`。"
+
+#~ msgid ""
+#~ "Some common use cases for providing portal access include allowing "
+#~ "customers to read/view any or all of the following in Odoo:"
+#~ msgstr ""
+#~ "提供门户访问的一些常见用例包括允许客户在 Odoo 中读取/查看以下任何或所有内"
+#~ "容："
+
+#~ msgid "leads/opportunities"
+#~ msgstr "潜在客户/商机"
+
+#~ msgid "quotations/sales orders"
+#~ msgstr "报价/销售订单"
+
+#~ msgid "purchase orders"
+#~ msgstr "采购订单"
+
+#~ msgid "invoices & bills"
+#~ msgstr "发票和账单"
+
+#~ msgid "projects"
+#~ msgstr "项目"
+
+#~ msgid "tasks"
+#~ msgstr "任务"
+
+#~ msgid "timesheets"
+#~ msgstr "工时单"
+
+#~ msgid "tickets"
+#~ msgstr "支持请求"
+
+#~ msgid "signatures"
+#~ msgstr "签名"
+
+#~ msgid "subscriptions"
+#~ msgstr "网站订阅"
+
+#~ msgid ""
+#~ "Portal users only have read/view access, and will not be able to edit any "
+#~ "documents in the database."
+#~ msgstr "门户用户只有读取/查看权限，不能编辑数据库中的任何文件。"
+
+#~ msgid ""
+#~ ":guilabel:`Email`: the contact's email address that they will use to log "
+#~ "into the portal"
+#~ msgstr "guilabel:`电子邮件`：联系人用于登录门户网站的电子邮件地址"
+
+#~ msgid ":guilabel:`In Portal`: whether or not the user has portal access"
+#~ msgstr "guilabel:`门户网站中`：用户是否拥有门户网站访问权限"
+
+#~ msgid ""
+#~ "To grant portal access, first enter the contact's :guilabel:`Email` they "
+#~ "will use to log into the portal. Then, check the box under "
+#~ "the :guilabel:`In Portal` column. Optionally, add text to the invitation "
+#~ "message the contact will receive. Then click :guilabel:`Apply` to finish."
+#~ msgstr ""
+#~ "要授予门户访问权，首先输入联系人用于登录门户的 :guilabel:` 电子邮件地址`。"
+#~ "然后，选中 :guilabel:`在门户网站` 栏下的复选框。可选择为联系人将收到的邀请"
+#~ "信息添加文本。然后点击 :guilabel:`应用` 完成。"
+
+#~ msgid ""
+#~ "An email address and corresponding checkbox for the contact need to be "
+#~ "filled in before\n"
+#~ "sending a portal invitation."
+#~ msgstr ""
+#~ "在发送门户网站邀请函之前，需要填写联系人的电子邮件地址和相应的复选框。"
+
+#~ msgid ""
+#~ "An email will be sent to the specified email address, indicating that the "
+#~ "contact is now a portal user for that Odoo database."
+#~ msgstr ""
+#~ "将向指定的电子邮件地址发送一封电子邮件，说明该联系人现已成为该 Odoo 数据库"
+#~ "的门户用户。"
+
+#~ msgid ""
+#~ "To grant portal access to multiple users at once, navigate to a company "
+#~ "contact, then click :menuselection:`Action --> Grant portal access` to "
+#~ "view a list of all of the company's related contacts. Check the box under "
+#~ "the :guilabel:`In Portal` column for all the contacts that need portal "
+#~ "access, then click :guilabel:`Apply`."
+#~ msgstr ""
+#~ "要同时向多个用户授予门户访问权限，请导航到公司联系人，然后单"
+#~ "击 :menuselection:`操作-->授予门户访问权限`，查看该公司所有相关联系人的列"
+#~ "表。选中需要门户访问权限的所有联系人的:guilabel:`在门户网站`下的复选框，然"
+#~ "后点击 :guilabel:`应用`。"
+
+#~ msgid ""
+#~ "At any time, portal access can be revoked by navigating to the contact, "
+#~ "clicking :menuselection:`Action --> Grant portal access`, and then "
+#~ "unselecting the checkbox under the :guilabel:`In Portal` column and "
+#~ "clicking :guilabel:`Apply`."
+#~ msgstr ""
+#~ "在任何时候，只要导航到联系人，点击:menuselection:`操作--> 授予门户访问权"
+#~ "`，然后取消:guilabel:`在门户网站`栏下的复选框并点击:guilabel:`应用`，就可"
+#~ "以取消门户访问权限。"
+
+#~ msgid ""
+#~ ":doc:`See the documentation on setting access rights </applications/"
+#~ "general/users/access_rights>`."
+#~ msgstr ""
+#~ ":doc:`请参阅有关设置访问权限的文档 </applications/general/users/"
+#~ "access_rights>`。"
+
+#~ msgid ""
+#~ "There may be times when the customer would like to make changes to their "
+#~ "contact information, password/security, or payment information attached "
+#~ "to the portal account. This can be performed by the customer from their "
+#~ "portal. The following process is how a customer can change their contact "
+#~ "information."
+#~ msgstr ""
+#~ "有时，客户可能希望更改其门户账户的联系信息、密码/安全性或付款信息。这可以"
+#~ "由客户在其门户网站上进行。以下是客户更改联系信息的流程。"
+
+#~ msgid ""
+#~ "If the customer would like to manage payment options, navigate to "
+#~ "the :guilabel:`Manage payment methods` in the menu on the right. Then, "
+#~ "add the new payment information, and select :guilabel:`Add new card`."
+#~ msgstr ""
+#~ "如果客户希望管理付款选项，请导航至右侧菜单中的 :guilabel:`管理付款方式`。"
+#~ "然后，添加新的付款信息，并选择 :guilabel:`添加新卡`。"
 
 #~ msgid ""
 #~ "For more information on logs and how to access them via the Odoo.sh "

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-19 09:34+0100\n"
+"POT-Creation-Date: 2025-12-11 10:43+0100\n"
 "PO-Revision-Date: 2025-10-03 15:48+0000\n"
 "Last-Translator: \"Tiffany Chang (tic)\" <tic@odoo.com>\n"
 "Language-Team: Thai <https://translate.odoo.com/projects/odoo-19-doc/general/"
@@ -3919,7 +3919,21 @@ msgstr ""
 "หากฐานข้อมูลโฮสต์อยู่บน **Odoo Online** หรือ **Odoo.sh** แนะนำให้ใช้การเปลี่ยนเส้นทาง "
 "วิธีนี้ช่วยให้รับข้อความในฐานข้อมูลได้โดยไม่เกิดความล่าช้า"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:204
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:205
+msgid ""
+"When configuring email redirections with Microsoft 365 (Exchange Online), be "
+"aware that certain technical limitations may affect your setup. Some users "
+"have reported that Microsoft 365 does not support true redirection and only "
+"allows forwarding, which may not behave as needed for Odoo's email routing."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:210
+msgid ""
+"For more information on Microsoft Exchange configuration, visit `Microsoft "
+"Learn <https://learn.microsoft.com/en-us/exchange/exchange-online>`_."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:213
 msgid ""
 "It is mandatory to redirect the catchall and bounce address to the Odoo "
 "subdomain of the database. Every other alias used must be redirected as well."
@@ -3927,23 +3941,23 @@ msgstr ""
 "จำเป็นต้องเปลี่ยนเส้นทางของ catchall และที่อยู่การตีกลับไปยังโดเมนย่อย Odoo ของฐานข้อมูล "
 "ชื่ออื่นๆ ที่ใช้จะต้องถูกเปลี่ยนเส้นทางด้วยเช่นกัน"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:208
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:217
 msgid "With one sales team, the following redirections are required:"
 msgstr "ด้วยทีมขายเพียงทีมเดียว จำเป็นต้องมีการเปลี่ยนเส้นทางดังต่อไปนี้:"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:210
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:219
 msgid "`catchall@company-name.com` → `catchall@company-name.odoo.com`"
 msgstr "`catchall@company-name.com` → `catchall@company-name.odoo.com`"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:211
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:220
 msgid "`bounce@company-name.com` → `bounce@company-name.odoo.com`"
 msgstr "`bounce@company-name.com` → `bounce@company-name.odoo.com`"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:212
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:221
 msgid "`info@company-name.com` → `info@company-name.odoo.com`"
 msgstr "`info@company-name.com` → `info@company-name.odoo.com`"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:215
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:224
 msgid ""
 "Some providers ask to validate the redirection by sending a link to the "
 "target email address. This procedure is an issue for catchall and bounce "
@@ -3952,7 +3966,7 @@ msgstr ""
 "ผู้ให้บริการบางรายขอให้ตรวจสอบการเปลี่ยนเส้นทางโดยส่งลิงก์ไปยังที่อยู่อีเมลเป้าหมาย "
 "ขั้นตอนนี้เป็นปัญหาสำหรับ catchall และการตีกลับเนื่องจากไม่ได้ใช้เพื่อสร้างบันทึก"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:218
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:227
 msgid ""
 "Modify the catchall value on the mail alias domain. :ref:`developer-mode` "
 "must be enabled to access this menu. For example, it can be changed from "
@@ -3963,7 +3977,7 @@ msgstr ""
 "ตัวอย่างเช่น สามารถเปลี่ยนจาก `catchall` เป็น `temp-catchall` ได้ ซึ่งจะทำให้สามารถใช้ "
 "`catchall` เป็น local-part ของชื่ออื่นได้"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:221
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:230
 msgid ""
 "Open an app that uses an alias. For example, CRM contains aliases for each "
 "sales team. Set `catchall` as the local-part of the alias of a sales team."
@@ -3971,7 +3985,7 @@ msgstr ""
 "เปิดแอปที่ใช้ชื่อแทน ตัวอย่างเช่น CRM มีชื่อสำหรับทีมขายแต่ละทีม ตั้งค่า `catchall` ให้เป็น local-"
 "part ของชื่อของทีมขาย"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:223
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:232
 msgid ""
 "The validation email will create a record in the CRM app. The email sent "
 "will be visible in the chatter, allowing you to validate the redirection."
@@ -3979,14 +3993,14 @@ msgstr ""
 "อีเมลตรวจสอบจะสร้างบันทึกในแอป CRM อีเมลที่ส่งจะปรากฏในช่องแชท "
 "ทำให้คุณสามารถตรวจสอบการเปลี่ยนเส้นทางได้"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:225
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:234
 msgid ""
 "Do not forget to change back the alias of the sales team and the catchall "
 "value on the mail alias domain, just as they were before this procedure."
 msgstr ""
 "อย่าลืมเปลี่ยนชื่อเล่นของทีมขายและค่า catchall บนโดเมนชื่ออีเมลกลับเหมือนกับก่อนดำเนินการนี้"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:229
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:238
 msgid ""
 "An alternative to redirections is **forwarding**. With forwarding, **the "
 "address forwarding the email will be identified as the sender**, while with "
@@ -3995,11 +4009,11 @@ msgstr ""
 "ทางเลือกอื่นสำหรับการเปลี่ยนเส้นทางคือ **การส่งต่อ** สำหรับการส่งต่อ "
 "**ที่อยู่อีเมลที่ส่งต่อจะถูกระบุว่าเป็นผู้ส่ง** ในขณะที่การเปลี่ยนเส้นทาง ผู้ส่งเดิมจะยังคงอยู่เสมอ"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:236
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:245
 msgid "Incoming mail servers"
 msgstr "เซิร์ฟเวอร์เมลขาเข้า"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:238
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:247
 msgid ""
 "As mentioned earlier, using redirections is the recommended method to "
 "receive emails in Odoo. However, it is also possible to set up incoming mail "
@@ -4008,14 +4022,14 @@ msgid ""
 "in order to fetch all incoming emails."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:244
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:253
 msgid ""
 "Odoo's *Incoming Mail Servers* feature is designed for shared inboxes (e.g., "
 "`sales@yourcompany.com` or `support@yourcompany.com`) to route messages to "
 "team pipelines, tickets, or documents."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:248
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:257
 msgid ""
 "Using personal email addresses (e.g., `mitchell.admin@yourcompany.com`) as "
 "incoming mail servers is **not** recommended. Doing so can lead to increased "
@@ -4023,13 +4037,13 @@ msgid ""
 "syncing replies correctly."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:252
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:261
 msgid ""
 "Incoming mail servers are created by going to :menuselection:`Settings --> "
 "Technical --> Emails: Incoming Mail Servers`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:256
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:265
 msgid ""
 "We recommend using the IMAP protocol over the POP protocol, as IMAP fetches "
 "all unread emails, while POP fetches all the emails' history and then tags "
@@ -4039,7 +4053,7 @@ msgstr ""
 "จะดึงอีเมลทั้งหมดที่ไม่ได้อ่าน ในขณะที่ POP "
 "จะดึงประวัติอีเมลทั้งหมดแล้วแท็กอีเมลเหล่านั้นว่าถูกลบแล้วในกล่องจดหมายของคุณ"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:260
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:269
 msgid ""
 "It is also possible to connect a mailbox through :doc:`Gmail with Google "
 "OAuth <google_oauth>` or :doc:`Outlook with Microsoft Azure OAuth "
@@ -4049,7 +4063,7 @@ msgstr ""
 "<google_oauth>` หรือ :doc:`Outlook กับ Microsoft Azure OAuth <azure_oauth>` "
 "ได้อีกด้วย"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:263
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:272
 msgid ""
 "Regardless of the protocol chosen, emails are fetched using the *Mail: "
 "Fetchmail Service* scheduled action."
@@ -4057,7 +4071,7 @@ msgstr ""
 "ไม่ว่าจะเลือกโปรโตคอลใดก็ตาม อีเมลจะถูกดึงข้อมูลโดยใช้การดำเนินการตามกำหนดเวลาของ *เมล: "
 "บริการ Fetchmail*"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:266
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:275
 msgid ""
 "Additionally, using an incoming mail server in Odoo gives the opportunity to "
 "create new records in a specified model. Each incoming mail server can "
@@ -4066,7 +4080,7 @@ msgstr ""
 "นอกจากนี้ การใช้เซิร์ฟเวอร์เมลขาเข้าใน Odoo ยังช่วยให้สามารถสร้างบันทึกใหม่ในรูปแบบที่กำหนดได้ "
 "เซิร์ฟเวอร์เมลขาเข้าแต่ละเครื่องสามารถสร้างบันทึกในรูปแบบที่แตกต่างกันได้"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:270
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:279
 msgid ""
 "Emails received on `task@company-name.com` are fetched by the Odoo database. "
 "All fetched emails will create a new project task in the database."
@@ -4074,11 +4088,11 @@ msgstr ""
 "อีเมลที่ได้รับจาก `task@company-name.com` จะถูกดึงข้อมูลโดยฐานข้อมูล Odoo "
 "อีเมลที่ดึงข้อมูลทั้งหมดจะสร้างงานโครงการใหม่ในฐานข้อมูล"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:279
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:288
 msgid "MX record"
 msgstr "บันทึก MX"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:281
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:290
 msgid ""
 "A third option is to create a MX record in your DNS zone which specifies the "
 "mail server managing emails sent to your domain. **Advanced technical "
@@ -4087,7 +4101,7 @@ msgstr ""
 "ตัวเลือกที่สามคือการสร้างระเบียน MX ในโซน DNS ของคุณ "
 "ซึ่งจะระบุเซิร์ฟเวอร์อีเมลที่จัดการอีเมลที่ส่งไปยังโดเมนของคุณ **จำเป็นต้องมีความรู้ด้านเทคนิคขั้นสูง**"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:285
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:294
 msgid ""
 "This configuration only works with a subdomain on the Odoo Online or Odoo.sh "
 "infrastructure (e.g., `@mail.mydomain.com`)"
@@ -4095,16 +4109,16 @@ msgstr ""
 "การกำหนดค่านี้ทำงานได้เฉพาะกับโดเมนย่อยบนโครงสร้างพื้นฐาน Odoo Online หรือ Odoo.sh "
 "เท่านั้น (เช่น `@mail.mydomain.com`)"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:288
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:297
 msgid "Below are presented some specifications depending on the hosting type:"
 msgstr "ด้านล่างนี้เป็นข้อมูลเฉพาะบางส่วนที่ขึ้นอยู่กับประเภทของโฮสติ้ง:"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:292
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:301
 #: ../../content/applications/general/email_communication/faq.rst:296
 msgid "Odoo Online"
 msgstr "Odoo Online"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:294
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:303
 msgid ""
 "The custom subdomain must be added to your :doc:`Odoo Portal <../../websites/"
 "website/configuration/domain_names>`."
@@ -4112,12 +4126,12 @@ msgstr ""
 "ต้องเพิ่มโดเมนย่อยที่กำหนดเองลงใน :doc:`พอร์ทัล Odoo ของคุณ <../../websites/website/"
 "configuration/domain_names>`"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:297
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:306
 #: ../../content/applications/general/email_communication/faq.rst:301
 msgid "Odoo.sh"
 msgstr "Odoo.sh"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:299
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:308
 msgid ""
 "The custom subdomain must be added to the :doc:`settings of the project "
 "<../../../administration/odoo_sh/getting_started/settings>`:"
@@ -4129,11 +4143,11 @@ msgstr ""
 msgid "Adding a custom subdomain for mail to Odoo.sh project settings."
 msgstr "การเพิ่มโดเมนย่อยแบบกำหนดเองสำหรับเมลไปยังการตั้งค่าโปรเจ็กต์ Odoo.sh"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:308
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:317
 msgid "Infinite email loops"
 msgstr "ลูปการส่งเมลได้ไม่จำกัดจำนวน"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:310
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:319
 msgid ""
 "In some cases, infinite mailing loops can be created. Odoo provides some "
 "protection against such loops, ensuring the same sender cannot send too many "
@@ -4143,7 +4157,7 @@ msgstr ""
 "โดยรับประกันว่าผู้ส่งรายเดียวกันจะไม่สามารถส่งอีเมลจำนวนมากเกินไป **ซึ่งอาจสร้างบันทึก** "
 "ไปยังชื่อในช่วงเวลาที่กำหนดได้"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:314
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:323
 msgid ""
 "By default, an email address can send up to 20 emails in 120 minutes. If "
 "more emails are sent, they are blocked and the sender receives the following "
@@ -4156,7 +4170,7 @@ msgstr ""
 msgid "Bounce email received after attempting contact too many times an alias."
 msgstr "ได้รับอีเมลตีกลับหลังจากพยายามติดต่อด้วยชื่อหลายครั้งเกินไป"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:320
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:329
 msgid ""
 "To change the default behavior, enable :ref:`developer-mode`, then go "
 "to :menuselection:`Settings --> Technical --> Parameters: System Parameters` "
@@ -4166,7 +4180,7 @@ msgstr ""
 "จากนั้นไปที่ :menuselection:`การตั้งค่า --> ทางเทคนิค --> พารามิเตอร์: พารามิเตอร์ระบบ` "
 "เพื่อเพิ่มพารามิเตอร์สองตัว"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:323
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:332
 msgid ""
 "For the first parameter, enter `mail.gateway.loop.minutes` as "
 "the :guilabel:`Key` and choose a number of minutes as the :guilabel:`Value` "
@@ -4175,7 +4189,7 @@ msgstr ""
 "สำหรับพารามิเตอร์แรก ให้ป้อน `mail.gateway.loop.minutes` เป็น :guilabel:`คีย์` "
 "และเลือกจำนวนนาทีเป็น :guilabel:`ค่า` (`120` เป็นพฤติกรรมเริ่มต้น)"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:325
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:334
 msgid ""
 "For the second parameter, enter `mail.gateway.loop.threshold` as "
 "the :guilabel:`Key` and choose a number of emails as the :guilabel:`Value` "
@@ -4184,11 +4198,11 @@ msgstr ""
 "สำหรับพารามิเตอร์ที่สอง ให้ป้อน `mail.gateway.loop.threshold` เป็น :guilabel:`คีย์` "
 "และเลือกจำนวนอีเมลเป็น :guilabel:`ค่า` (`20` เป็นพฤติกรรมเริ่มต้น)"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:329
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:338
 msgid "Allow alias domain system parameter"
 msgstr "อนุญาติพารามิเตอร์ระบบโดเมนนามแฝง"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:331
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:340
 msgid ""
 "Incoming aliases are set in the Odoo database to create records by receiving "
 "incoming emails. To view aliases set in the Odoo database, first activate "
@@ -4196,7 +4210,7 @@ msgid ""
 "to :menuselection:`Settings app --> Technical --> Aliases`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:335
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:344
 msgid ""
 "The following system parameter, `mail.catchall.domain.allowed`, set with "
 "allowed alias domain values, separated by commas, filters out correctly "
@@ -4205,7 +4219,7 @@ msgid ""
 "email addresses with only the prefix alias, not the domain, are present."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:340
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:349
 msgid ""
 "In some instances, matches have been made in the Odoo database when an email "
 "is received with the same alias prefix and a different domain on the "
@@ -4216,7 +4230,7 @@ msgstr ""
 "เมื่อได้รับอีเมลที่มีคำนำหน้านามแฝงเดียวกันและโดเมนที่แตกต่างกันในที่อยู่อีเมลขาเข้า "
 "สิ่งนี้เป็นจริงในที่อยู่อีเมลผู้ส่ง ผู้รับ และ :abbr:`CC (สำเนาคาร์บอน)` ของอีเมลขาเข้า"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:345
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:354
 msgid ""
 "When Odoo receives emails with the `commercial` prefix alias in the sender, "
 "recipient, or :abbr:`CC (Carbon Copy)` email addresses (e.g. "
@@ -4225,7 +4239,7 @@ msgid ""
 "lead/opportunity/etc."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:350
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:359
 msgid ""
 "To add the `mail.catchall.domain.allowed` system parameter, first, activate "
 "the :ref:`developer mode <developer-mode>`. Then, go "
@@ -4234,7 +4248,7 @@ msgid ""
 "the :guilabel:`Key` field."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:354
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:363
 msgid ""
 "Next, for the :guilabel:`Value` field, add the domains separated by commas. "
 "Manually :icon:`fa-cloud-upload` :guilabel:`(Save)`, and the system "
@@ -4245,11 +4259,11 @@ msgstr ""
 msgid "mail.catchall.domain.allowed system parameter set."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:361
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:370
 msgid "Local-part based incoming detection"
 msgstr "การตรวจจับขาเข้าตามชิ้นส่วนในพื้นที่"
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:363
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:372
 msgid ""
 "When creating a new alias, there is an option to enable :guilabel:`Local-"
 "part based incoming detection`. If enabled, Odoo only requires the local-"
@@ -8016,13 +8030,10 @@ msgstr "เปิดใช้งานปลั๊กอินเมล"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:19
 msgid ""
-"First, enable the *Mail Plugin* feature in the database. Go "
+"First, enable the *Mail Plugin* module in the database. Go "
 "to :menuselection:`Settings --> General Settings --> Integrations`, "
 "enable :guilabel:`Mail Plugin`, and :guilabel:`Save` the configuration."
 msgstr ""
-"ขั้นแรก ให้เปิดใช้งานฟีเจอร์ *ปลั๊กอินเมล* ในฐานข้อมูล ไปที่ :menuselection:`การตั้งค่า --> "
-"การตั้งค่าทั่วไป --> การรวมระบบ` เปิดใช้งาน :guilabel:`ปลั๊กอินเมล` "
-"และ :guilabel:`บันทึก` การกำหนดค่า"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:25
 msgid "Install the Outlook Plugin"
@@ -8041,31 +8052,15 @@ msgstr ""
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:31
 msgid ""
 "Next, open the Outlook mailbox, and select any email. After completing this, "
-"click on the :guilabel:`More actions` button in the upper right-side and "
-"select :guilabel:`Get Add-ins`."
+"click on the :guilabel:`Apps` button in the upper right-side, then "
+"click :guilabel:`Get add-ins`."
 msgstr ""
-"ขั้นตอนต่อไป เปิดกล่องจดหมาย Outlook และเลือกอีเมลใดๆ หลังจากดำเนินการเสร็จแล้ว "
-"ให้คลิกที่ปุ่ม :guilabel:`การดำเนินการเพิ่มเติม` ที่ด้านขวาบน และเลือก :guilabel:`รับ Add-"
-"ins`"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:-1
-msgid "More actions button in Outlook"
-msgstr "ปุ่มการดำเนินการเพิ่มเติมใน Outlook"
-
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:39
-msgid ""
-"For locally installed versions of Microsoft Outlook, access "
-"the :guilabel:`Get Add-ins` menu item while in preview mode (**not** with a "
-"message open). First, click on the :guilabel:`... (ellipsis)` icon in the "
-"upper right of the previewed message, then scroll down, and click "
-"on :guilabel:`Get Add-ins`."
+msgid "Apps button in Outlook"
 msgstr ""
-"สำหรับ Microsoft Outlook เวอร์ชันที่ติดตั้งในเครื่อง ให้เข้าถึงรายการเมนู :guilabel:`รับ "
-"Add-ins` ขณะอยู่ในโหมดดูตัวอย่าง (**ไม่ใช่** เมื่อเปิดข้อความอยู่) ก่อนอื่น "
-"ให้คลิกที่ไอคอน :guilabel:`... (จุดไข่ปลา)` ที่มุมขวาบนของข้อความที่ดูตัวอย่าง "
-"จากนั้นเลื่อนลงมาแล้วคลิกที่ :guilabel:`รับ Add-ins`"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:44
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:37
 msgid ""
 "Following this step, select the :guilabel:`My add-ins` tab on the left-side."
 msgstr "หลังจากทำตามขั้นตอนนี้แล้ว เลือกแท็บ :guilabel:`Add-ins ของฉัน` ที่ด้านซ้าย"
@@ -8074,19 +8069,17 @@ msgstr "หลังจากทำตามขั้นตอนนี้แล
 msgid "My add-ins in Outlook"
 msgstr "Add-ins ของฉันใน Outlook"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:50
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:42
 msgid ""
-"Under :guilabel:`Custom add-ins` towards the bottom, click on :guilabel:`+ "
-"Add a custom add-in`, and then on :guilabel:`Add from file...`"
+"Under :guilabel:`Custom Addins` towards the bottom, click on :guilabel:`+ "
+"Add a custom add-in`, then select :guilabel:`Add from file...`"
 msgstr ""
-"ภายใต้ :guilabel:`Add-ins แบบกำหนดเอง` ทางด้านล่าง ให้คลิกที่ :guilabel:`+ เพิ่ม add-"
-"in แบบกำหนดเอง` จากนั้นคลิกที่ :guilabel:`เพิ่มจากไฟล์...`"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:-1
 msgid "Custom add-ins in Outlook"
 msgstr "Add-ins ที่กำหนดเองใน Outlook"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:57
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:48
 msgid ""
 "For the next step, attach the `manifest.xml` file downloaded above, and "
 "press :guilabel:`OK`. Next, read the warning and click "
@@ -8099,25 +8092,22 @@ msgstr ""
 msgid "Custom add-in installation warning in Outlook"
 msgstr "คำเตือนการติดตั้ง Add-in แบบกำหนดเองใน Outlook"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:67
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:57
 msgid "Connect the database"
 msgstr "เชื่อมต่อฐานข้อมูล"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:69
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:59
 msgid ""
 "Now, Outlook will be connected to the Odoo database. First, open any email "
-"in the Outlook mailbox, click on the :guilabel:`More actions` button in the "
-"upper right-side, and select :guilabel:`Odoo for Outlook`."
+"in the Outlook mailbox, click on the :guilabel:`Apps` button in the upper "
+"right-side, and select :guilabel:`Odoo Inbox Addin`."
 msgstr ""
-"ตอนนี้ Outlook จะเชื่อมต่อกับฐานข้อมูล Odoo ขั้นแรก ให้เปิดอีเมลในกล่องจดหมาย Outlook "
-"คลิกที่ปุ่ม :guilabel:`การดำเนินการเพิ่มเติม` ที่ด้านขวาบน และเลือก :guilabel:`Odoo สำหรับ "
-"Outlook`"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:-1
 msgid "Odoo for Outlook add-in button"
 msgstr "ปุ่ม Add-in ของ Odoo สำหรับ Outlook"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:77
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:66
 msgid ""
 "The right-side panel can now display **Company Insights**. At the bottom, "
 "click on :guilabel:`Login`."
@@ -8129,7 +8119,7 @@ msgstr ""
 msgid "Logging in the Odoo database"
 msgstr "การเข้าสู่ระบบฐานข้อมูล Odoo"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:85
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:73
 msgid ""
 "Only a limited amount of **Company Insights** (*Lead Enrichment*) requests "
 "are available as a trial database. This feature requires :ref:`prepaid "
@@ -8139,23 +8129,20 @@ msgstr ""
 "จำนวนจำกัดเท่านั้นที่พร้อมใช้งานเป็นฐานข้อมูลทดลองใช้ ฟีเจอร์นี้ต้องใช้ :ref:`เครดิตเติมเงิน "
 "<mail_plugins/pricing>`"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:89
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:77
 msgid ""
 "If, after a short while, the panel is still empty, it is possible that the "
 "browser cookie settings prevented it from loading. Note that these settings "
-"also change if the browser is in \"Incognito\" mode."
+"also change if the browser is in *Incognito* mode."
 msgstr ""
-"หากหลังจากผ่านไประยะหนึ่ง แผงข้อมูลยังคงว่างเปล่า "
-"อาจเป็นไปได้ว่าการตั้งค่าคุกกี้ของเบราว์เซอร์ป้องกันไม่ให้แผงข้อมูลโหลดขึ้นมา "
-"โปรดทราบว่าการตั้งค่าเหล่านี้จะเปลี่ยนแปลงไปหากเบราว์เซอร์อยู่ในโหมด \"ไม่ระบุตัวตน\""
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:93
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:81
 msgid ""
 "To fix this issue, configure the browser to always allow cookies on Odoo's "
 "plugin page."
 msgstr "เพื่อแก้ไขปัญหานี้ ให้กำหนดค่าเบราว์เซอร์ให้อนุญาตให้มีคุกกี้บนหน้าปลั๊กอินของ Odoo เสมอ"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:95
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:83
 msgid ""
 "For Google Chrome, change the browser cookie settings by following the guide "
 "at: `https://support.google.com/chrome/answer/95647 <https://"
@@ -8167,11 +8154,11 @@ msgstr ""
 "answer/95647>`_ และเพิ่ม `download.odoo.com` "
 "ลงในรายชื่อ :guilabel:`ไซต์ที่สามารถใช้คุกกี้ได้ตลอดเวลา`"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:100
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:88
 msgid "Once this is complete, the Outlook panel needs to be opened again."
 msgstr "เมื่อดำเนินการเสร็จสิ้นแล้ว จะต้องเปิดแผง Outlook อีกครั้ง"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:102
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:90
 msgid "Now, enter the Odoo database URL and click on :guilabel:`Login`."
 msgstr "ตอนนี้ให้ป้อน URL ของฐานข้อมูล Odoo และคลิกที่ :guilabel:`เข้าสู่ระบบ`"
 
@@ -8179,7 +8166,7 @@ msgstr "ตอนนี้ให้ป้อน URL ของฐานข้อ�
 msgid "Entering the Odoo database URL"
 msgstr "การเข้าสู่ URL ของฐานข้อมูล Odoo"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:108
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:95
 msgid "Next, click on :guilabel:`Allow` to open the pop-up window."
 msgstr "ขั้นตอนถัดไป คลิกที่ :guilabel:`อนุญาต` เพื่อเปิดหน้าต่างป๊อปอัป"
 
@@ -8187,7 +8174,7 @@ msgstr "ขั้นตอนถัดไป คลิกที่ :guilabel:`�
 msgid "New window pop-up warning"
 msgstr "คำเตือนป๊อปอัปหน้าต่างใหม่"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:114
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:100
 msgid ""
 "If the user isn't logged into the database, enter the credentials. Click "
 "on :guilabel:`Allow` to let the Outlook Plugin connect to the database."
@@ -8199,64 +8186,78 @@ msgstr ""
 msgid "Allowing the Outlook Plugin to connect to a database"
 msgstr "การอนุญาตให้ปลั๊กอิน Outlook เชื่อมต่อกับฐานข้อมูล"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:124
-msgid "Add a shortcut to the plugin"
-msgstr "เพิ่มทางลัดให้กับปลั๊กอิน"
-
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:126
-msgid ""
-"By default, the Outlook Plugin can be opened from the *More actions* menu. "
-"However, to save time, it's possible to add it next to the other default "
-"actions."
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:109
+msgid "Using the inbox plugin"
 msgstr ""
-"โดยค่าเริ่มต้น ปลั๊กอิน Outlook สามารถเปิดได้จากเมนู *การดำเนินการเพิ่มเติม* อย่างไรก็ตาม "
-"เพื่อประหยัดเวลา คุณสามารถเพิ่มปลั๊กอินนี้ไว้ถัดจากการดำเนินการเริ่มต้นอื่นๆ ได้"
+
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:111
+msgid ""
+"To use the plugin, open any email in the Outlook mailbox, click on "
+"the :guilabel:`Apps` button in the upper right-side, and "
+"select :guilabel:`Odoo Inbox Addin` to open the panel."
+msgstr ""
+
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:115
+msgid ""
+"The options available in the panel will vary based on the applications "
+"installed in the database."
+msgstr ""
+
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:118
+msgid "Create a contact"
+msgstr ""
+
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:120
+msgid ""
+"To create a contact record in Odoo from an email, click the :icon:`fa-plus-"
+"circle` :guilabel:`(circle plus)` icon."
+msgstr ""
+
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:124
+msgid ""
+"A contact record **must** be created before a lead/opportunity can be "
+"created."
+msgstr ""
+
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:127
+msgid "Create an opportunity"
+msgstr ""
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:129
 msgid ""
-"In the Outlook mailbox, click on :guilabel:`Settings`, then "
-"on :guilabel:`View all Outlook settings`."
+"To create an opportunity from an email, click the :icon:`fa-"
+"plus` :guilabel:`(plus)` icon next to :guilabel:`Opportunities`. Doing so "
+"opens a new opportunity record in Odoo in a new tab. The subject of the "
+"email is used as the opportunity title, and the content of the email is "
+"added to the :guilabel:`Notes` tab of the opportunity."
 msgstr ""
-"ในกล่องจดหมาย Outlook คลิกที่ :guilabel:`การตั้งค่า` จากนั้นคลิกที่ :guilabel:`ดูการตั้งค่า "
-"Outlook ทั้งหมด`"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:-1
-msgid "Viewing all Outlook settings"
-msgstr "การดูการตั้งค่า Outlook ทั้งหมด"
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:135
+msgid "Create a task"
+msgstr ""
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:136
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:137
 msgid ""
-"Now, select :guilabel:`Customize actions` under :guilabel:`Mail`, click "
-"on :guilabel:`Odoo for Outlook`, and then :guilabel:`Save`."
+"To create a task from an email, click the :icon:`fa-plus` :guilabel:`(plus)` "
+"icon next to :guilabel:`Tasks`. Then, enter the title of the project where "
+"the task should be created in the resulting field, and select the "
+"appropriate project from the resulting list. This opens a new task record in "
+"Odoo in a new tab. The subject of the email is used as the task title, and "
+"the content of the email is added to the :guilabel:`Description` tab."
 msgstr ""
-"ตอนนี้เลือก :guilabel:`ปรับแต่งการดำเนินการ` ภายใต้ :guilabel:`เมล` "
-"คลิกที่ :guilabel:`Odoo สำหรับ Outlook` จากนั้นเลือก :guilabel:`บันทึก`"
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:-1
-msgid "Odoo for Outlook customized action"
-msgstr "Odoo สำหรับการดำเนินการที่กำหนดเองของ Outlook"
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:144
+msgid "Create a ticket"
+msgstr ""
 
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:143
-msgid "Following this step, open any email; the shortcut should be displayed."
-msgstr "เมื่อทำตามขั้นตอนนี้แล้ว ให้เปิดอีเมลใดๆ ก็ได้ และทางลัดควรจะปรากฏขึ้น"
-
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:150
-msgid "Using the plugin"
-msgstr "การใช้ปลั๊กอิน"
-
-#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:152
+#: ../../content/applications/general/integrations/mail_plugins/outlook.rst:146
 msgid ""
-"Now that the plug-in is installed and operational, all that needs to be done "
-"to create a lead is to click on the `O` [Odoo icon] or navigate "
-"to :guilabel:`More actions` and click on :guilabel:`Odoo for Outlook`. The "
-"side panel will appear on the right-side, and "
-"under :guilabel:`Opportunities` click on :guilabel:`New`. A new window with "
-"the created opportunity in the Odoo database will populate."
+"To create a task from an email, click the :icon:`fa-plus` :guilabel:`(plus)` "
+"icon next to :guilabel:`Tickets`. Doing so opens a new ticket record in Odoo "
+"in a new tab. The subject of the email is used as the ticket title, and the "
+"content of the email is added to the :guilabel:`Description` tab of the "
+"ticket."
 msgstr ""
-"เมื่อติดตั้งปลั๊กอินและใช้งานได้แล้ว สิ่งที่ต้องทำเพื่อสร้างลูกค้าเป้าหมาย คือการคลิกที่ `O` [ไอคอน "
-"Odoo] หรือไปที่ :guilabel:`การดำเนินการเพิ่มเติม` และคลิกที่ :guilabel:`Odoo สำหรับ "
-"Outlook` แผงด้านข้างจะปรากฏขึ้นทางด้านขวา และภายใต้ :guilabel:`ผู้มีโอกาสจะซื้อ` "
-"ให้คลิกที่ :guilabel:`สร้าง` หน้าต่างใหม่พร้อมผู้มีโอกาสจะซื้อที่สร้างในฐานข้อมูล Odoo จะปรากฏขึ้น"
 
 #: ../../content/applications/general/integrations/unsplash.rst:3
 msgid "Unsplash"
@@ -10149,7 +10150,7 @@ msgstr ""
 #: ../../content/applications/general/iot/devices/scale.rst:10
 msgid ""
 "To connect a scale to the IoT system, use a USB cable. In some cases, you "
-"may need a serial-to-US adapter to complete the connection. If the scale is "
+"may need a serial-to-USB adapter to complete the connection. If the scale is "
 "`compatible with an IoT system <https://www.odoo.com/page/iot-hardware>`_, "
 "no additional setup is required; the scale is automatically detected as soon "
 "as it is connected. If the scale is not detected, reboot the IoT box "
@@ -13882,62 +13883,45 @@ msgstr "ผู้ใช้ที่ต้องการดูเอกสาร
 #: ../../content/applications/general/users/portal.rst:10
 msgid ""
 "Some common use cases for providing portal access include allowing customers "
-"to read/view any or all of the following in Odoo:"
+"to make partial payment on an invoice, to add funds to their eWallet, and to "
+"read/view any or all of the following in Odoo:"
 msgstr ""
-"กรณีการใช้งานทั่วไปบางกรณีในการให้การเข้าถึงพอร์ทัล ได้แก่ การอนุญาตให้ลูกค้าอ่าน/"
-"ดูบางส่วนหรือทั้งหมดต่อไปนี้ใน Odoo:"
 
 #: ../../content/applications/general/users/portal.rst:13
-msgid "leads/opportunities"
-msgstr "ลูกค้าเป้าหมาย/ผู้มีโอกาสจะซื้อ"
+msgid "Following, viewing and paying orders"
+msgstr ""
 
 #: ../../content/applications/general/users/portal.rst:14
-msgid "quotations/sales orders"
-msgstr "ใบเสนอราคา/ใบสั่งขาย"
+msgid "Following, downloading or paying invoices"
+msgstr ""
 
 #: ../../content/applications/general/users/portal.rst:15
-msgid "purchase orders"
-msgstr "ใบสั่งซื้อ"
+msgid "Managing payment methods"
+msgstr ""
 
 #: ../../content/applications/general/users/portal.rst:16
-msgid "invoices & bills"
-msgstr "ใบแจ้งหนี้และใบเรียกเก็บเงิน"
+msgid "Managing subscriptions"
+msgstr ""
 
 #: ../../content/applications/general/users/portal.rst:17
-msgid "projects"
-msgstr "โปรเจ็กต์"
+msgid "Adding, removing or modifying addresses"
+msgstr ""
 
 #: ../../content/applications/general/users/portal.rst:18
-msgid "tasks"
-msgstr "งาน"
-
-#: ../../content/applications/general/users/portal.rst:19
-msgid "timesheets"
-msgstr "ระบบบันทึกเวลา"
-
-#: ../../content/applications/general/users/portal.rst:20
-msgid "tickets"
-msgstr "ทิกเก็ต"
+msgid "Configuring connection parameters"
+msgstr ""
 
 #: ../../content/applications/general/users/portal.rst:21
-msgid "signatures"
-msgstr "ลายเซ็น"
-
-#: ../../content/applications/general/users/portal.rst:22
-msgid "subscriptions"
-msgstr "การสมัครสมาชิก"
-
-#: ../../content/applications/general/users/portal.rst:25
 msgid ""
-"Portal users only have read/view access, and will not be able to edit any "
-"documents in the database."
-msgstr "ผู้ใช้พอร์ทัลจะมีสิทธิ์อ่าน/ดูเท่านั้น และจะไม่สามารถแก้ไขเอกสารใดๆ ในฐานข้อมูลได้"
+"Portal users only have read/view access, and will **not** be able to edit "
+"any documents in the database."
+msgstr ""
 
-#: ../../content/applications/general/users/portal.rst:31
+#: ../../content/applications/general/users/portal.rst:27
 msgid "Provide portal access to customers"
 msgstr "ให้การเข้าถึงพอร์ทัลแก่ลูกค้า"
 
-#: ../../content/applications/general/users/portal.rst:33
+#: ../../content/applications/general/users/portal.rst:29
 msgid ""
 "From the main Odoo dashboard, select the :guilabel:`Contacts` application. "
 "If the contact is not yet created in the database, click on "
@@ -13956,7 +13940,7 @@ msgstr ""
 msgid "Use the Contacts application to give portal access to users."
 msgstr "ใช้แอปพลิเคชันรายชื่อผู้ติดต่อเพื่อให้ผู้ใช้สามารถเข้าถึงพอร์ทัลได้"
 
-#: ../../content/applications/general/users/portal.rst:42
+#: ../../content/applications/general/users/portal.rst:37
 msgid ""
 "Then select :guilabel:`Grant portal access`. A pop-up window appears, "
 "listing three fields:"
@@ -13964,79 +13948,58 @@ msgstr ""
 "จากนั้นเลือก :guilabel:`อนุญาตการเข้าถึงพอร์ทัล` หน้าต่างป๊อปอัปจะปรากฏขึ้น "
 "โดยแสดงรายการฟิลด์สามรายการ:"
 
-#: ../../content/applications/general/users/portal.rst:44
+#: ../../content/applications/general/users/portal.rst:39
 msgid ""
 ":guilabel:`Contact`: the recorded name of the contact in the Odoo database"
 msgstr ":guilabel:`รายชื่อผู้ติดต่อ`: ชื่อที่บันทึกของผู้ติดต่อในฐานข้อมูล Odoo"
 
-#: ../../content/applications/general/users/portal.rst:45
+#: ../../content/applications/general/users/portal.rst:40
 msgid ""
-":guilabel:`Email`: the contact's email address that they will use to log "
-"into the portal"
-msgstr ":guilabel:`อีเมล`: ที่อยู่อีเมลของผู้ติดต่อที่จะใช้ในการเข้าสู่ระบบพอร์ทัล"
+":guilabel:`Email`: the contact's email address used to log into the portal"
+msgstr ""
+
+#: ../../content/applications/general/users/portal.rst:41
+msgid ""
+":guilabel:`Latest Authentication`: the last time the user accessed the portal"
+msgstr ""
+
+#: ../../content/applications/general/users/portal.rst:43
+msgid ""
+"To grant portal access, first enter the contact's :guilabel:`Email` used to "
+"log into the portal if it has not been automatically entered by the system. "
+"Then click :guilabel:`Grant Access` to finish."
+msgstr ""
 
 #: ../../content/applications/general/users/portal.rst:46
-msgid ":guilabel:`In Portal`: whether or not the user has portal access"
-msgstr ":guilabel:`ในพอร์ทัล`: ผู้ใช้มีสิทธิ์เข้าถึงพอร์ทัลหรือไม่"
-
-#: ../../content/applications/general/users/portal.rst:48
 msgid ""
-"To grant portal access, first enter the contact's :guilabel:`Email` they "
-"will use to log into the portal. Then, check the box under the :guilabel:`In "
-"Portal` column. Optionally, add text to the invitation message the contact "
-"will receive. Then click :guilabel:`Apply` to finish."
+"To grant portal access to multiple users for a company at once, navigate to "
+"the company contact, then click :menuselection:`Action --> Grant portal "
+"access` to view a list of the company's related contacts. "
+"Click :guilabel:`Grant Access` for each contact to grant portal access to."
 msgstr ""
-"หากต้องการให้สิทธิ์เข้าถึงพอร์ทัล ให้ป้อน :guilabel:`อีเมล` "
-"ของผู้ติดต่อที่จะใช้ในการเข้าสู่ระบบพอร์ทัลก่อน "
-"จากนั้นทำเครื่องหมายในช่องใต้คอลัมน์ :guilabel:`ในพอร์ทัล` "
-"หรือจะเพิ่มข้อความลงในข้อความคำเชิญที่ผู้ติดต่อจะได้รับก็ได้ จากนั้นคลิก :guilabel:`ใช้` "
-"เพื่อเสร็จสิ้น"
 
-#: ../../content/applications/general/users/portal.rst:-1
+#: ../../content/applications/general/users/portal.rst:50
 msgid ""
-"An email address and corresponding checkbox for the contact need to be "
-"filled in before\n"
-"sending a portal invitation."
-msgstr "ต้องกรอกที่อยู่อีเมลและช่องทำเครื่องหมายสำหรับรายชื่อผู้ติดต่อก่อนจึงจะส่งคำเชิญพอร์ทัลได้"
-
-#: ../../content/applications/general/users/portal.rst:57
-msgid ""
-"An email will be sent to the specified email address, indicating that the "
-"contact is now a portal user for that Odoo database."
+"An email is sent to the specified email address, indicating that the contact "
+"is now a portal user for that Odoo database."
 msgstr ""
-"อีเมลจะถูกส่งไปยังที่อยู่อีเมลที่ระบุ ซึ่งระบุว่าผู้ติดต่อเป็นผู้ใช้พอร์ทัลสำหรับฐานข้อมูล Odoo นั้นแล้ว"
 
-#: ../../content/applications/general/users/portal.rst:61
-msgid ""
-"To grant portal access to multiple users at once, navigate to a company "
-"contact, then click :menuselection:`Action --> Grant portal access` to view "
-"a list of all of the company's related contacts. Check the box under "
-"the :guilabel:`In Portal` column for all the contacts that need portal "
-"access, then click :guilabel:`Apply`."
+#: ../../content/applications/general/users/portal.rst:54
+msgid "Revoking portal access"
 msgstr ""
-"หากต้องการให้ผู้ใช้หลายรายเข้าถึงพอร์ทัลพร้อมกัน ให้ไปที่ผู้ติดต่อของบริษัท "
-"จากนั้นคลิก :menuselection:`การดำเนินการ --> อนุญาตการเข้าถึงพอร์ทัล` "
-"เพื่อดูรายชื่อผู้ติดต่อที่เกี่ยวข้องทั้งหมดของบริษัท "
-"ทำเครื่องหมายที่ช่องใต้คอลัมน์ :guilabel:`ในพอร์ทัล` สำหรับผู้ติดต่อทั้งหมดที่ต้องการเข้าถึงพอร์ทัล "
-"จากนั้นคลิก :guilabel:`ใช้`"
 
-#: ../../content/applications/general/users/portal.rst:67
+#: ../../content/applications/general/users/portal.rst:56
 msgid ""
-"At any time, portal access can be revoked by navigating to the contact, "
+"At any time, portal access can be revoked by navigating to a contact, "
 "clicking :menuselection:`Action --> Grant portal access`, and then "
-"unselecting the checkbox under the :guilabel:`In Portal` column and "
-"clicking :guilabel:`Apply`."
+"clicking :guilabel:`Revoke Access`."
 msgstr ""
-"คุณสามารถเพิกถอนการเข้าถึงพอร์ทัลได้ตลอดเวลาโดยไปที่ผู้ติดต่อ "
-"คลิก :menuselection:`การดำเนินการ --> อนุญาตการเข้าถึงพอร์ทัล` "
-"จากนั้นยกเลิกการเลือกช่องทำเครื่องหมายภายใต้คอลัมน์ :guilabel:`ในพอร์ทัล` "
-"แล้วคลิก :guilabel:`ใช้`"
 
-#: ../../content/applications/general/users/portal.rst:74
+#: ../../content/applications/general/users/portal.rst:62
 msgid "Change portal username"
 msgstr "เปลี่ยนชื่อผู้ใช้พอร์ทัล"
 
-#: ../../content/applications/general/users/portal.rst:76
+#: ../../content/applications/general/users/portal.rst:64
 msgid ""
 "There may be times when a portal user wants to change their user login. This "
 "can be done by any user in the database with administrator access rights. "
@@ -14047,15 +14010,11 @@ msgstr ""
 "ซึ่งผู้ใช้ในฐานข้อมูลที่มีสิทธิ์การเข้าถึงระดับผู้ดูแลระบบสามารถทำได้ "
 "ขั้นตอนต่อไปนี้จะอธิบายขั้นตอนที่จำเป็นในการเปลี่ยนการเข้าสู่ระบบของผู้ใช้พอร์ทัล"
 
-#: ../../content/applications/general/users/portal.rst:81
-msgid ""
-":doc:`See the documentation on setting access rights </applications/general/"
-"users/access_rights>`."
+#: ../../content/applications/general/users/portal.rst:69
+msgid ":doc:`Access rights </applications/general/users/access_rights>`."
 msgstr ""
-":doc:`ดูเอกสารเกี่ยวกับการตั้งค่าสิทธิ์การเข้าถึง </applications/general/users/"
-"access_rights>`"
 
-#: ../../content/applications/general/users/portal.rst:84
+#: ../../content/applications/general/users/portal.rst:71
 msgid ""
 "First, navigate to :menuselection:`Settings app --> Users`. Then, "
 "under :guilabel:`Filters`, select :guilabel:`Portal Users`, or "
@@ -14070,7 +14029,7 @@ msgstr ""
 "> :guilabel:`ประกอบด้วย` > `พอร์ทัล` หลังจากเลือกแล้ว ให้ค้นหา (และเปิด) "
 "ผู้ใช้พอร์ทัลที่ต้องการแก้ไข"
 
-#: ../../content/applications/general/users/portal.rst:89
+#: ../../content/applications/general/users/portal.rst:76
 msgid ""
 "Next, click :guilabel:`Edit` (if necessary), click into the :guilabel:`Email "
 "Address` field, and proceed to make any necessary changes to this field. "
@@ -14080,7 +14039,7 @@ msgstr ""
 "แล้วดำเนินการเปลี่ยนแปลงช่องนี้ตามความจำเป็น ช่อง :guilabel:`ที่อยู่อีเมล` "
 "ใช้เพื่อเข้าสู่ระบบพอร์ทัล Odoo"
 
-#: ../../content/applications/general/users/portal.rst:94
+#: ../../content/applications/general/users/portal.rst:81
 msgid ""
 "Changing the :guilabel:`Email Address` (or login) only changes the "
 "*username* on the customer's portal login."
@@ -14088,7 +14047,7 @@ msgstr ""
 "การเปลี่ยนแปลง :guilabel:`ที่อยู่อีเมล` (หรือเข้าสู่ระบบ) จะเปลี่ยนเฉพาะ *ชื่อผู้ใช้* "
 "บนหน้าเข้าสู่ระบบพอร์ทัลของลูกค้าเท่านั้น"
 
-#: ../../content/applications/general/users/portal.rst:97
+#: ../../content/applications/general/users/portal.rst:84
 msgid ""
 "In order to change the contact email, this change needs to take place on the "
 "contact template in the *Contacts* app. Alternatively, the customer can "
@@ -14100,26 +14059,23 @@ msgstr ""
 "แต่**ไม่สามารถ**เปลี่ยนข้อมูลการเข้าสู่ระบบได้ :ref:`ดูการเปลี่ยนแปลงข้อมูลลูกค้า <portal/"
 "custinfo>`"
 
-#: ../../content/applications/general/users/portal.rst:102
+#: ../../content/applications/general/users/portal.rst:89
 msgid "Customer portal changes"
 msgstr "การเปลี่ยนแปลงพอร์ทัลลูกค้า"
 
-#: ../../content/applications/general/users/portal.rst:104
+#: ../../content/applications/general/users/portal.rst:91
 msgid ""
 "There may be times when the customer would like to make changes to their "
-"contact information, password/security, or payment information attached to "
-"the portal account. This can be performed by the customer from their portal. "
-"The following process is how a customer can change their contact information."
+"contact, security, or payment information attached to the portal account. "
+"This can be performed by the customer from their portal. The following "
+"process is how a customer can change their contact information."
 msgstr ""
-"อาจมีบางครั้งที่ลูกค้าต้องการเปลี่ยนแปลงข้อมูลติดต่อ รหัสผ่าน/ความปลอดภัย "
-"หรือข้อมูลการชำระเงินที่แนบไปกับบัญชีพอร์ทัล ซึ่งลูกค้าสามารถดำเนินการได้จากพอร์ทัลของตนเอง "
-"ขั้นตอนต่อไปนี้เป็นวิธีที่ลูกค้าสามารถเปลี่ยนข้อมูลติดต่อได้"
 
-#: ../../content/applications/general/users/portal.rst:112
+#: ../../content/applications/general/users/portal.rst:98
 msgid "Change customer info"
 msgstr "เปลี่ยนแปลงข้อมูลลูกค้า"
 
-#: ../../content/applications/general/users/portal.rst:114
+#: ../../content/applications/general/users/portal.rst:100
 msgid ""
 "First enter the username and password (login) into the database login page "
 "to access the portal user account. A portal dashboard will appear upon "
@@ -14131,11 +14087,11 @@ msgstr ""
 "แผงควบคุมพอร์ทัลจะปรากฏขึ้น เอกสารพอร์ทัลจากแอปพลิเคชัน Odoo ที่ติดตั้งต่างๆ "
 "จะปรากฏขึ้นพร้อมจำนวนของแต่ละแอปพลิเคชัน"
 
-#: ../../content/applications/general/users/portal.rst:119
+#: ../../content/applications/general/users/portal.rst:105
 msgid ":ref:`Portal access documentation <portal/main>`."
 msgstr ":ref:`เอกสารประกอบการเข้าถึงพอร์ทัล <portal/main>`"
 
-#: ../../content/applications/general/users/portal.rst:121
+#: ../../content/applications/general/users/portal.rst:107
 msgid ""
 "Next, navigate to the upper-right corner of the portal, and click "
 "the :guilabel:`Edit` button, next to the :guilabel:`Details` section. Then, "
@@ -14144,13 +14100,12 @@ msgstr ""
 "ขั้นตอนต่อไป ให้ไปที่มุมขวาบนของพอร์ทัล แล้วคลิกปุ่ม :guilabel:`แก้ไข` "
 "ถัดจากส่วน :guilabel:`รายละเอียด` จากนั้นเปลี่ยนข้อมูลที่เกี่ยวข้อง แล้วคลิก :guilabel:`ยืนยัน`"
 
-#: ../../content/applications/general/users/portal.rst:126
+#: ../../content/applications/general/users/portal.rst:112
 msgid "Change password"
 msgstr "เปลี่ยนรหัสผ่าน"
 
-#: ../../content/applications/general/users/portal.rst:128
-#: ../../content/applications/general/users/portal.rst:147
-#: ../../content/applications/general/users/portal.rst:166
+#: ../../content/applications/general/users/portal.rst:114
+#: ../../content/applications/general/users/portal.rst:133
 msgid ""
 "First enter the username and password (login) into the database login page "
 "to access the portal user account. A portal dashboard will appear upon "
@@ -14160,7 +14115,7 @@ msgstr ""
 "ลงในหน้าเข้าสู่ระบบฐานข้อมูลเพื่อเข้าถึงบัญชีผู้ใช้พอร์ทัล "
 "แผงควบคุมพอร์ทัลจะปรากฏขึ้นเมื่อเข้าสู่ระบบสำเร็จ"
 
-#: ../../content/applications/general/users/portal.rst:131
+#: ../../content/applications/general/users/portal.rst:117
 msgid ""
 "If the customer would like to change their password for portal access, click "
 "on the :guilabel:`Edit Security Settings` link, below the :guilabel:`Account "
@@ -14176,7 +14131,7 @@ msgstr ""
 "ในปัจจุบัน :guilabel:`รหัสผ่านใหม่` และตรวจสอบรหัสผ่านใหม่ สุดท้าย "
 "ให้คลิกที่ :guilabel:`เปลี่ยนรหัสผ่าน` เพื่อเปลี่ยนรหัสผ่านให้เสร็จสมบูรณ์"
 
-#: ../../content/applications/general/users/portal.rst:137
+#: ../../content/applications/general/users/portal.rst:123
 msgid ""
 "If a customer would like to change the login, as documented above, contact "
 "the Odoo database point-of-contact. :ref:`See above documentation on "
@@ -14185,18 +14140,18 @@ msgstr ""
 "หากลูกค้าต้องการเปลี่ยนการเข้าสู่ระบบตามเอกสารด้านบน โปรดติดต่อจุดติดต่อฐานข้อมูล "
 "Odoo :ref:`ดูเอกสารด้านบนเกี่ยวกับการเปลี่ยนชื่อผู้ใช้พอร์ทัล <portal/login>`"
 
-#: ../../content/applications/general/users/portal.rst:141
+#: ../../content/applications/general/users/portal.rst:127
 msgid ""
 "Passwords for portal users and Odoo.com users remain separate, even if the "
 "same email address is used."
 msgstr ""
 "รหัสผ่านสำหรับผู้ใช้พอร์ทัลและผู้ใช้ Odoo.com จะยังคงแยกจากกัน แม้ว่าจะใช้ที่อยู่อีเมลเดียวกันก็ตาม"
 
-#: ../../content/applications/general/users/portal.rst:145
+#: ../../content/applications/general/users/portal.rst:131
 msgid "Add two-factor authentication"
 msgstr "เพิ่มการยืนยันแบบสองขั้นตอน"
 
-#: ../../content/applications/general/users/portal.rst:150
+#: ../../content/applications/general/users/portal.rst:136
 msgid ""
 "If the customer would like to turn on two-factor authentication (2FA) for "
 "portal access, click on the :guilabel:`Edit Security Settings` link, below "
@@ -14206,7 +14161,7 @@ msgstr ""
 "ให้คลิกที่ลิงก์ :guilabel:`แก้ไขการตั้งค่าความปลอดภัย` "
 "ใต้ส่วน :guilabel:`การรักษาความปลอดภัยบัญชี`"
 
-#: ../../content/applications/general/users/portal.rst:153
+#: ../../content/applications/general/users/portal.rst:139
 msgid ""
 "Click on :guilabel:`Enable two-factor authentication` to turn on :abbr:`2FA "
 "(two-factor authentication)`. Confirm the current portal password in "
@@ -14222,25 +14177,276 @@ msgstr ""
 "Authenticator, Authy ฯลฯ) โดยสแกน :guilabel:`รหัส QR` "
 "หรือป้อน :guilabel:`รหัสยืนยัน`"
 
-#: ../../content/applications/general/users/portal.rst:159
+#: ../../content/applications/general/users/portal.rst:145
 msgid ""
 "Finally, click :guilabel:`Enable two-factor authentication` to complete the "
 "setup."
 msgstr ""
 "สุดท้าย ให้คลิก :guilabel:`เปิดใช้การยืนยันแบบสองขั้นตอน` เพื่อทำให้การตั้งค่าเสร็จสมบูรณ์"
 
-#: ../../content/applications/general/users/portal.rst:164
+#: ../../content/applications/general/users/portal.rst:150
 msgid "Change payment info"
 msgstr "เปลี่ยนแปลงข้อมูลการชำระเงิน"
 
-#: ../../content/applications/general/users/portal.rst:169
+#: ../../content/applications/general/users/portal.rst:152
 msgid ""
-"If the customer would like to manage payment options, navigate to "
-"the :guilabel:`Manage payment methods` in the menu on the right. Then, add "
-"the new payment information, and select :guilabel:`Add new card`."
+"If the customer needs to manage payment options, they click "
+"the :guilabel:`Payment methods` button."
 msgstr ""
-"หากลูกค้าต้องการจัดการตัวเลือกการชำระเงิน ให้ไปที่ :guilabel:`จัดการวิธีการชำระเงิน` "
-"ในเมนูทางด้านขวา จากนั้นเพิ่มข้อมูลการชำระเงินใหม่ และเลือก :guilabel:`เพิ่มบัตรใหม่`"
+
+#: ../../content/applications/general/users/portal.rst:154
+msgid ""
+"To add a new payment option, choose from the available payment methods, "
+"enter the new payment information, and click :guilabel:`Save` to save the "
+"details."
+msgstr ""
+
+#: ../../content/applications/general/users/portal.rst:156
+msgid ""
+"To erase a payment option, click the :icon:`fa-trash` :guilabel:`(Trash)` "
+"icon, then click the :guilabel:`Confirm Deletion` button."
+msgstr ""
+
+#: ../../content/applications/general/users/portal.rst:159
+msgid ""
+"Payment details **cannot** be edited. Customers must delete and re-enter "
+"information to update their details."
+msgstr ""
+
+#~ msgid ""
+#~ "First, enable the *Mail Plugin* feature in the database. Go "
+#~ "to :menuselection:`Settings --> General Settings --> Integrations`, "
+#~ "enable :guilabel:`Mail Plugin`, and :guilabel:`Save` the configuration."
+#~ msgstr ""
+#~ "ขั้นแรก ให้เปิดใช้งานฟีเจอร์ *ปลั๊กอินเมล* ในฐานข้อมูล ไปที่ :menuselection:`การตั้งค่า --"
+#~ "> การตั้งค่าทั่วไป --> การรวมระบบ` เปิดใช้งาน :guilabel:`ปลั๊กอินเมล` "
+#~ "และ :guilabel:`บันทึก` การกำหนดค่า"
+
+#~ msgid ""
+#~ "Next, open the Outlook mailbox, and select any email. After completing "
+#~ "this, click on the :guilabel:`More actions` button in the upper right-"
+#~ "side and select :guilabel:`Get Add-ins`."
+#~ msgstr ""
+#~ "ขั้นตอนต่อไป เปิดกล่องจดหมาย Outlook และเลือกอีเมลใดๆ หลังจากดำเนินการเสร็จแล้ว "
+#~ "ให้คลิกที่ปุ่ม :guilabel:`การดำเนินการเพิ่มเติม` ที่ด้านขวาบน และเลือก :guilabel:`รับ "
+#~ "Add-ins`"
+
+#~ msgid "More actions button in Outlook"
+#~ msgstr "ปุ่มการดำเนินการเพิ่มเติมใน Outlook"
+
+#~ msgid ""
+#~ "For locally installed versions of Microsoft Outlook, access "
+#~ "the :guilabel:`Get Add-ins` menu item while in preview mode (**not** with "
+#~ "a message open). First, click on the :guilabel:`... (ellipsis)` icon in "
+#~ "the upper right of the previewed message, then scroll down, and click "
+#~ "on :guilabel:`Get Add-ins`."
+#~ msgstr ""
+#~ "สำหรับ Microsoft Outlook เวอร์ชันที่ติดตั้งในเครื่อง ให้เข้าถึงรายการเมนู :guilabel:`รับ "
+#~ "Add-ins` ขณะอยู่ในโหมดดูตัวอย่าง (**ไม่ใช่** เมื่อเปิดข้อความอยู่) ก่อนอื่น "
+#~ "ให้คลิกที่ไอคอน :guilabel:`... (จุดไข่ปลา)` ที่มุมขวาบนของข้อความที่ดูตัวอย่าง "
+#~ "จากนั้นเลื่อนลงมาแล้วคลิกที่ :guilabel:`รับ Add-ins`"
+
+#~ msgid ""
+#~ "Under :guilabel:`Custom add-ins` towards the bottom, click "
+#~ "on :guilabel:`+ Add a custom add-in`, and then on :guilabel:`Add from "
+#~ "file...`"
+#~ msgstr ""
+#~ "ภายใต้ :guilabel:`Add-ins แบบกำหนดเอง` ทางด้านล่าง ให้คลิกที่ :guilabel:`+ เพิ่ม "
+#~ "add-in แบบกำหนดเอง` จากนั้นคลิกที่ :guilabel:`เพิ่มจากไฟล์...`"
+
+#~ msgid ""
+#~ "Now, Outlook will be connected to the Odoo database. First, open any "
+#~ "email in the Outlook mailbox, click on the :guilabel:`More actions` "
+#~ "button in the upper right-side, and select :guilabel:`Odoo for Outlook`."
+#~ msgstr ""
+#~ "ตอนนี้ Outlook จะเชื่อมต่อกับฐานข้อมูล Odoo ขั้นแรก ให้เปิดอีเมลในกล่องจดหมาย Outlook "
+#~ "คลิกที่ปุ่ม :guilabel:`การดำเนินการเพิ่มเติม` ที่ด้านขวาบน และเลือก :guilabel:`Odoo "
+#~ "สำหรับ Outlook`"
+
+#~ msgid ""
+#~ "If, after a short while, the panel is still empty, it is possible that "
+#~ "the browser cookie settings prevented it from loading. Note that these "
+#~ "settings also change if the browser is in \"Incognito\" mode."
+#~ msgstr ""
+#~ "หากหลังจากผ่านไประยะหนึ่ง แผงข้อมูลยังคงว่างเปล่า "
+#~ "อาจเป็นไปได้ว่าการตั้งค่าคุกกี้ของเบราว์เซอร์ป้องกันไม่ให้แผงข้อมูลโหลดขึ้นมา "
+#~ "โปรดทราบว่าการตั้งค่าเหล่านี้จะเปลี่ยนแปลงไปหากเบราว์เซอร์อยู่ในโหมด \"ไม่ระบุตัวตน\""
+
+#~ msgid "Add a shortcut to the plugin"
+#~ msgstr "เพิ่มทางลัดให้กับปลั๊กอิน"
+
+#~ msgid ""
+#~ "By default, the Outlook Plugin can be opened from the *More actions* "
+#~ "menu. However, to save time, it's possible to add it next to the other "
+#~ "default actions."
+#~ msgstr ""
+#~ "โดยค่าเริ่มต้น ปลั๊กอิน Outlook สามารถเปิดได้จากเมนู *การดำเนินการเพิ่มเติม* อย่างไรก็ตาม "
+#~ "เพื่อประหยัดเวลา คุณสามารถเพิ่มปลั๊กอินนี้ไว้ถัดจากการดำเนินการเริ่มต้นอื่นๆ ได้"
+
+#~ msgid ""
+#~ "In the Outlook mailbox, click on :guilabel:`Settings`, then "
+#~ "on :guilabel:`View all Outlook settings`."
+#~ msgstr ""
+#~ "ในกล่องจดหมาย Outlook คลิกที่ :guilabel:`การตั้งค่า` "
+#~ "จากนั้นคลิกที่ :guilabel:`ดูการตั้งค่า Outlook ทั้งหมด`"
+
+#~ msgid "Viewing all Outlook settings"
+#~ msgstr "การดูการตั้งค่า Outlook ทั้งหมด"
+
+#~ msgid ""
+#~ "Now, select :guilabel:`Customize actions` under :guilabel:`Mail`, click "
+#~ "on :guilabel:`Odoo for Outlook`, and then :guilabel:`Save`."
+#~ msgstr ""
+#~ "ตอนนี้เลือก :guilabel:`ปรับแต่งการดำเนินการ` ภายใต้ :guilabel:`เมล` "
+#~ "คลิกที่ :guilabel:`Odoo สำหรับ Outlook` จากนั้นเลือก :guilabel:`บันทึก`"
+
+#~ msgid "Odoo for Outlook customized action"
+#~ msgstr "Odoo สำหรับการดำเนินการที่กำหนดเองของ Outlook"
+
+#~ msgid ""
+#~ "Following this step, open any email; the shortcut should be displayed."
+#~ msgstr "เมื่อทำตามขั้นตอนนี้แล้ว ให้เปิดอีเมลใดๆ ก็ได้ และทางลัดควรจะปรากฏขึ้น"
+
+#~ msgid "Using the plugin"
+#~ msgstr "การใช้ปลั๊กอิน"
+
+#~ msgid ""
+#~ "Now that the plug-in is installed and operational, all that needs to be "
+#~ "done to create a lead is to click on the `O` [Odoo icon] or navigate "
+#~ "to :guilabel:`More actions` and click on :guilabel:`Odoo for Outlook`. "
+#~ "The side panel will appear on the right-side, and "
+#~ "under :guilabel:`Opportunities` click on :guilabel:`New`. A new window "
+#~ "with the created opportunity in the Odoo database will populate."
+#~ msgstr ""
+#~ "เมื่อติดตั้งปลั๊กอินและใช้งานได้แล้ว สิ่งที่ต้องทำเพื่อสร้างลูกค้าเป้าหมาย คือการคลิกที่ `O` [ไอคอน "
+#~ "Odoo] หรือไปที่ :guilabel:`การดำเนินการเพิ่มเติม` และคลิกที่ :guilabel:`Odoo สำหรับ "
+#~ "Outlook` แผงด้านข้างจะปรากฏขึ้นทางด้านขวา และภายใต้ :guilabel:`ผู้มีโอกาสจะซื้อ` "
+#~ "ให้คลิกที่ :guilabel:`สร้าง` หน้าต่างใหม่พร้อมผู้มีโอกาสจะซื้อที่สร้างในฐานข้อมูล Odoo "
+#~ "จะปรากฏขึ้น"
+
+#~ msgid ""
+#~ "Some common use cases for providing portal access include allowing "
+#~ "customers to read/view any or all of the following in Odoo:"
+#~ msgstr ""
+#~ "กรณีการใช้งานทั่วไปบางกรณีในการให้การเข้าถึงพอร์ทัล ได้แก่ การอนุญาตให้ลูกค้าอ่าน/"
+#~ "ดูบางส่วนหรือทั้งหมดต่อไปนี้ใน Odoo:"
+
+#~ msgid "leads/opportunities"
+#~ msgstr "ลูกค้าเป้าหมาย/ผู้มีโอกาสจะซื้อ"
+
+#~ msgid "quotations/sales orders"
+#~ msgstr "ใบเสนอราคา/ใบสั่งขาย"
+
+#~ msgid "purchase orders"
+#~ msgstr "ใบสั่งซื้อ"
+
+#~ msgid "invoices & bills"
+#~ msgstr "ใบแจ้งหนี้และใบเรียกเก็บเงิน"
+
+#~ msgid "projects"
+#~ msgstr "โปรเจ็กต์"
+
+#~ msgid "tasks"
+#~ msgstr "งาน"
+
+#~ msgid "timesheets"
+#~ msgstr "ระบบบันทึกเวลา"
+
+#~ msgid "tickets"
+#~ msgstr "ทิกเก็ต"
+
+#~ msgid "signatures"
+#~ msgstr "ลายเซ็น"
+
+#~ msgid "subscriptions"
+#~ msgstr "การสมัครสมาชิก"
+
+#~ msgid ""
+#~ "Portal users only have read/view access, and will not be able to edit any "
+#~ "documents in the database."
+#~ msgstr "ผู้ใช้พอร์ทัลจะมีสิทธิ์อ่าน/ดูเท่านั้น และจะไม่สามารถแก้ไขเอกสารใดๆ ในฐานข้อมูลได้"
+
+#~ msgid ""
+#~ ":guilabel:`Email`: the contact's email address that they will use to log "
+#~ "into the portal"
+#~ msgstr ":guilabel:`อีเมล`: ที่อยู่อีเมลของผู้ติดต่อที่จะใช้ในการเข้าสู่ระบบพอร์ทัล"
+
+#~ msgid ":guilabel:`In Portal`: whether or not the user has portal access"
+#~ msgstr ":guilabel:`ในพอร์ทัล`: ผู้ใช้มีสิทธิ์เข้าถึงพอร์ทัลหรือไม่"
+
+#~ msgid ""
+#~ "To grant portal access, first enter the contact's :guilabel:`Email` they "
+#~ "will use to log into the portal. Then, check the box under "
+#~ "the :guilabel:`In Portal` column. Optionally, add text to the invitation "
+#~ "message the contact will receive. Then click :guilabel:`Apply` to finish."
+#~ msgstr ""
+#~ "หากต้องการให้สิทธิ์เข้าถึงพอร์ทัล ให้ป้อน :guilabel:`อีเมล` "
+#~ "ของผู้ติดต่อที่จะใช้ในการเข้าสู่ระบบพอร์ทัลก่อน "
+#~ "จากนั้นทำเครื่องหมายในช่องใต้คอลัมน์ :guilabel:`ในพอร์ทัล` "
+#~ "หรือจะเพิ่มข้อความลงในข้อความคำเชิญที่ผู้ติดต่อจะได้รับก็ได้ จากนั้นคลิก :guilabel:`ใช้` "
+#~ "เพื่อเสร็จสิ้น"
+
+#~ msgid ""
+#~ "An email address and corresponding checkbox for the contact need to be "
+#~ "filled in before\n"
+#~ "sending a portal invitation."
+#~ msgstr "ต้องกรอกที่อยู่อีเมลและช่องทำเครื่องหมายสำหรับรายชื่อผู้ติดต่อก่อนจึงจะส่งคำเชิญพอร์ทัลได้"
+
+#~ msgid ""
+#~ "An email will be sent to the specified email address, indicating that the "
+#~ "contact is now a portal user for that Odoo database."
+#~ msgstr ""
+#~ "อีเมลจะถูกส่งไปยังที่อยู่อีเมลที่ระบุ ซึ่งระบุว่าผู้ติดต่อเป็นผู้ใช้พอร์ทัลสำหรับฐานข้อมูล Odoo นั้นแล้ว"
+
+#~ msgid ""
+#~ "To grant portal access to multiple users at once, navigate to a company "
+#~ "contact, then click :menuselection:`Action --> Grant portal access` to "
+#~ "view a list of all of the company's related contacts. Check the box under "
+#~ "the :guilabel:`In Portal` column for all the contacts that need portal "
+#~ "access, then click :guilabel:`Apply`."
+#~ msgstr ""
+#~ "หากต้องการให้ผู้ใช้หลายรายเข้าถึงพอร์ทัลพร้อมกัน ให้ไปที่ผู้ติดต่อของบริษัท "
+#~ "จากนั้นคลิก :menuselection:`การดำเนินการ --> อนุญาตการเข้าถึงพอร์ทัล` "
+#~ "เพื่อดูรายชื่อผู้ติดต่อที่เกี่ยวข้องทั้งหมดของบริษัท "
+#~ "ทำเครื่องหมายที่ช่องใต้คอลัมน์ :guilabel:`ในพอร์ทัล` "
+#~ "สำหรับผู้ติดต่อทั้งหมดที่ต้องการเข้าถึงพอร์ทัล จากนั้นคลิก :guilabel:`ใช้`"
+
+#~ msgid ""
+#~ "At any time, portal access can be revoked by navigating to the contact, "
+#~ "clicking :menuselection:`Action --> Grant portal access`, and then "
+#~ "unselecting the checkbox under the :guilabel:`In Portal` column and "
+#~ "clicking :guilabel:`Apply`."
+#~ msgstr ""
+#~ "คุณสามารถเพิกถอนการเข้าถึงพอร์ทัลได้ตลอดเวลาโดยไปที่ผู้ติดต่อ "
+#~ "คลิก :menuselection:`การดำเนินการ --> อนุญาตการเข้าถึงพอร์ทัล` "
+#~ "จากนั้นยกเลิกการเลือกช่องทำเครื่องหมายภายใต้คอลัมน์ :guilabel:`ในพอร์ทัล` "
+#~ "แล้วคลิก :guilabel:`ใช้`"
+
+#~ msgid ""
+#~ ":doc:`See the documentation on setting access rights </applications/"
+#~ "general/users/access_rights>`."
+#~ msgstr ""
+#~ ":doc:`ดูเอกสารเกี่ยวกับการตั้งค่าสิทธิ์การเข้าถึง </applications/general/users/"
+#~ "access_rights>`"
+
+#~ msgid ""
+#~ "There may be times when the customer would like to make changes to their "
+#~ "contact information, password/security, or payment information attached "
+#~ "to the portal account. This can be performed by the customer from their "
+#~ "portal. The following process is how a customer can change their contact "
+#~ "information."
+#~ msgstr ""
+#~ "อาจมีบางครั้งที่ลูกค้าต้องการเปลี่ยนแปลงข้อมูลติดต่อ รหัสผ่าน/ความปลอดภัย "
+#~ "หรือข้อมูลการชำระเงินที่แนบไปกับบัญชีพอร์ทัล ซึ่งลูกค้าสามารถดำเนินการได้จากพอร์ทัลของตนเอง "
+#~ "ขั้นตอนต่อไปนี้เป็นวิธีที่ลูกค้าสามารถเปลี่ยนข้อมูลติดต่อได้"
+
+#~ msgid ""
+#~ "If the customer would like to manage payment options, navigate to "
+#~ "the :guilabel:`Manage payment methods` in the menu on the right. Then, "
+#~ "add the new payment information, and select :guilabel:`Add new card`."
+#~ msgstr ""
+#~ "หากลูกค้าต้องการจัดการตัวเลือกการชำระเงิน ให้ไปที่ :guilabel:`จัดการวิธีการชำระเงิน` "
+#~ "ในเมนูทางด้านขวา จากนั้นเพิ่มข้อมูลการชำระเงินใหม่ และเลือก :guilabel:`เพิ่มบัตรใหม่`"
 
 #~ msgid ""
 #~ "For more information on logs and how to access them via the Odoo.sh "
