@@ -133,8 +133,9 @@ it into your browser.
                   #. open Chrome;
                   #. go to :menuselection:`Settings --> Privacy and security --> Security -->
                      Manage certificates`;
-                  #. go to the :guilabel:`Authorities` tab, click :guilabel:`Import`, and select
-                     the exported certification file;
+                  #. on the :guilabel:`Local certificates` tab, click :guilabel:`Installed by you` under the :guilabel:`Custom` section;
+                  #. click :guilabel:`Import` next to :guilabel:`Trusted Certificates`, and select
+                     the exported certification file from your local drive;
                   #. accept all warnings;
                   #. click :guilabel:`ok`;
                   #. restart your browser.
@@ -145,8 +146,11 @@ it into your browser.
                   #. open Firefox;
                   #. go to :menuselection:`Settings --> Privacy & Security --> Security --> View
                      Certificates... --> Import`;
-                  #. select the exported certification file;
-                  #. tick the checkboxes and validate;
+                  #. in the pop-up window, open the :guilabel:`Servers` tab;
+                  #. click :guilabel:`Add Exception...`;
+                  #. enter the printer's IP address in the :guilabel:`Location` field, then
+                     click :guilabel:`Get Certificate`;
+                  #. tick the :guilabel:`Permanently store this exception` checkbox and confirm;
                   #. restart your browser.
 
    .. tab:: Mac OS
