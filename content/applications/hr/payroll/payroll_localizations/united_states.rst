@@ -15,6 +15,14 @@ The states included in this localization are:
 - Alabama (AL)
 - Washington (WA)
 - Nevada (NV)
+- Vermont (VT)
+- Illinois (IL)
+- Virginia (VA)
+- Washington, D.C (DC)
+- Arizona (AZ)
+- Idaho (ID)
+- Oregon (OR)
+- North Carolina (NC)
 
 .. note::
    Federal taxes (Income, :abbr:`FICA (Federal Insurance Contributions Act)`, and Unemployment) for
