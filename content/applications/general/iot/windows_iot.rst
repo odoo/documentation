@@ -27,6 +27,11 @@ The following prerequisites must be met before setting up and using the Windows 
    - It is also possible to create a Windows Virtual Machine on a MacOS/Linux computer. However,
      this option is not supported by Odoo, and no troubleshooting assistance will be provided.
 
+.. important::
+   Never make the Windows virtual IoT accessible from the public Internet.
+   IoT systems are designed to provide your database with access to devices on your local network.
+   Exposing them to the public Internet would create a **security risk**.
+
 .. _iot/windows-iot/installation:
 
 Installation
