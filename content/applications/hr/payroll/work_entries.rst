@@ -330,4 +330,4 @@ Reporting section
 .. seealso::
    :doc:`payslips`
 
-   :doc:`batches`
+   :doc:`pay_runs`
