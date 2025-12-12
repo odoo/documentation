@@ -45,8 +45,16 @@ app's card.
 Upgrade apps and modules
 ========================
 
+<<<<<<< 81aec5c2284d14cc6e91d6d097b0cdf62093b8a3
 With each :doc:`new Odoo release </administration/supported_versions>`, new improvements or app
 features are added. Upgrade the app to use these new improvements and features.
+||||||| cfa058587d9b70a32d9685e6521503dd5dd33577
+On some occasions, new improvements or app features are added to :doc:`supported versions of Odoo
+</administration/supported_versions>`. To be able to use them, you must **upgrade** your app.
+=======
+On some occasions, new improvements or app features are added to :doc:`supported versions of Odoo
+</administration/standard_extended_support>`. To be able to use them, you must **upgrade** your app.
+>>>>>>> 84985b3b555c3cf7a146fd3f7cad031723651be1
 
 Go to :menuselection:`Apps` and then on the app to upgrade, click the :icon:`fa-ellipsis-v`
 :guilabel:`(vertical ellipsis)` icon and select :guilabel:`Upgrade`.
