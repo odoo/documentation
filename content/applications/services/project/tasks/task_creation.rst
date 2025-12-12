@@ -39,8 +39,11 @@ Click the task to open it. The task form includes the following fields that you 
    linked to billable projects.
  - :guilabel:`Allocated Time`: the amount of time that the work on this task is expected to last,
    tracked by timesheets.
- - :guilabel:`Deadline`: the expected end date of the task. Once this field is filled in, you can
-   also add a start date to designate the entire time frame of the tasks' duration.
+ - :guilabel:`Deadline`: the expected end date of the task. Click the :guilabel:`Deadline` field to
+   select the task's end date in the dropdown calendar. To define the task's duration, including its
+   start and end dates (and optionally specific times), click the :icon:`fa-calendar-plus-o`
+   (:guilabel:`fa-calendar-plus-o`) icon in the dropdown calendar, select the dates and times, then
+   click  :guilabel:`Apply` to save.
 
 .. tip::
 
