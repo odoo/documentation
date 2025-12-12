@@ -22,7 +22,7 @@ must be configured before running payroll.
 
 When it is time to run payroll according to the business's schedule (monthly, weekly, bi-weekly,
 etc.), :doc:`payslips <payroll/payslips>` can be created individually or in :doc:`groups
-<payroll/batches>`. Odoo calculates when the employees worked based on their :doc:`work entries
+<payroll/pay_runs>`. Odoo calculates when the employees worked based on their :doc:`work entries
 <payroll/work_entries>`. Work entries are created according to their :doc:`contracts
 <payroll/contracts>`, based on information from the **Attendances**, **Planning**, or **Timesheets**
 apps. Any errors with work entries **must** be resolved *before* continuing to process payroll.
@@ -145,7 +145,7 @@ Once a localization has been installed, configure the following fields:
    - :doc:`payroll/time_off_to_report`
    - :doc:`payroll/salary_attachments`
    - :doc:`payroll/payslips`
-   - :doc:`payroll/batches`
+   - :doc:`payroll/pay_runs`
    - :doc:`payroll/commissions`
    - :doc:`payroll/payroll_analysis`
    - :doc:`payroll/headcount`
@@ -162,7 +162,7 @@ Once a localization has been installed, configure the following fields:
    payroll/time_off_to_report
    payroll/salary_attachments
    payroll/payslips
-   payroll/batches
+   payroll/pay_runs
    payroll/commissions
    payroll/payroll_analysis
    payroll/headcount
