@@ -37,7 +37,7 @@ page. When you :guilabel:`Save`, the product page is automatically published.
 
 .. seealso::
    :doc:`Create new products using the Barcode Lookup database
-   </applications/general/integrations/barcodelookup>`.
+   </applications/inventory_and_mrp/barcode/setup/barcodelookup>`.
 
 .. _ecommerce/products/import-products:
 
