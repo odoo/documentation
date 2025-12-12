@@ -103,6 +103,16 @@ Point of Sale
 .. image:: online_food_delivery/create-store.png
    :alt: Food delivery connector settings
 
+Store timings
+-------------
+
+Configure the store timings to define when the delivery services are available:
+
+#. Navigate to :menuselection:`Point of Sale --> Configuration --> Store Timings`.
+#. Add a new timing record by clicking :guilabel:`New` to add a line, or edit an existing line.
+#. Fill in the :guilabel:`Week Day`, :guilabel:`Starting Hour`, :guilabel:`Ending Hour`,
+   and :guilabel:`Point of Sale associated with this timing` columns.
+
 Products
 --------
 
