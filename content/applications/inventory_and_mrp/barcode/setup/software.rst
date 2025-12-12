@@ -44,9 +44,8 @@ To enable automatic barcode look up, go to :menuselection:`Inventory app --> Con
 Settings` and scroll down to the :guilabel:`Barcode` section to tick the box for :guilabel:`Stock
 Barcode Database`.
 
-.. note::
-   Databases hosted on **Odoo.sh** or **on-premise**, require :ref:`configuring an API key
-   <barcodelookup/configuration>`.
+.. seealso::
+   :doc:`Barcode Lookup <barcodelookup>`
 
 .. _inventory/barcode/set-barcodes:
 
