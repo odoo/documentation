@@ -150,6 +150,12 @@ This command is the default one: you can omit it, and it will be chosen anyway.
     comma-separated, use ``all`` for all modules.
     Requires :option:`-d` and :option:`-i`.
 
+.. option:: --skip-auto-install
+
+   skips auto-installing modules when a new module installation is requested.
+   This option is useful for development. It serves to check if the installed
+   modules do not indirectly depend on auto-installed modules.
+
 .. option:: --pidfile=<pidfile>
 
     path to a file where the server pid will be stored
