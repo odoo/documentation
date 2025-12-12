@@ -6,19 +6,21 @@
 Devices
 =======
 
+.. toctree::
+   :titlesonly:
+   :glob:
+
+   devices/printer
+   devices/scale
+   devices/screen
+   devices/measurement_tool
+   devices/camera
+   devices/footswitch
+
 .. seealso::
    - :doc:`Connect a Worldline payment terminal
      <../../sales/point_of_sale/payment_methods/terminals/worldline>`
    - :doc:`Connect an Ingenico payment terminal
      <../../sales/point_of_sale/payment_methods/terminals/ingenico>`
-
-.. toctree::
-   :titlesonly:
-   :glob:
-
-   devices/screen
-   devices/measurement_tool
-   devices/camera
-   devices/footswitch
-   devices/printer
-   devices/scale
+   - :doc:`Connect a SIX payment terminal
+     <../../sales/point_of_sale/payment_methods/terminals/six>`

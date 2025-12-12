@@ -4,11 +4,11 @@ Hardware
 
 Odoo Point of Sale supports integration with a variety of hardware, including :doc:`payment
 terminals <payment_methods/terminals>` and cash drawers, as well as :ref:`customer displays
-<pos/display>`, :ref:`scales <pos/scale>`, :doc:`barcode scanners <shop/barcode>`,
+<pos/hardware/display>`, :ref:`scales <pos/hardware/scale>`, :doc:`barcode scanners <shop/barcode>`,
 :doc:`ePOS printers <configuration/epos_printers>`, and in-store :doc:`electronic shelf labels
 <pricing/electronic_labels>`.
 
-.. _pos/display:
+.. _pos/hardware/display:
 
 Customer display
 ================
@@ -25,6 +25,8 @@ the selected :doc:`payment method <payment_methods>`, and any change to be retur
 .. note::
    Both the customer and POS displays must have a minimum diagonal size of 6 inches. For optimal
    readability, larger screens are recommended.
+
+.. _pos/hardware/display-configuration:
 
 Configuration
 -------------
@@ -76,7 +78,7 @@ support, follow these steps:
 #. Click the :icon:`fa-desktop` (:guilabel:`Customer Display`) icon, which opens the customer
    display on the terminal's secondary screen.
 
-.. _pos/scale:
+.. _pos/hardware/scale:
 
 Scale
 =====
@@ -156,7 +158,7 @@ turns green.
 
 .. admonition:: Additional guidelines
 
-   Both the :ref:`customer <pos/display>` and POS displays must have a minimum diagonal
+   Both the :ref:`customer <pos/hardware/display>` and POS displays must have a minimum diagonal
    size of 6 inches. For optimal readability, larger screens are recommended.
 
 Using a scale in PoS
