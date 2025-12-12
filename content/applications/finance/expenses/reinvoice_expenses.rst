@@ -1,154 +1,248 @@
-==================
-Reinvoice expenses
-==================
+===================
+Re-invoice expenses
+===================
 
 If expenses are tracked on customer projects, they can be automatically charged back to the
-customer. This is done by :ref:`logging an expense <expenses/reinvoice-create>`, referencing the
-corresponding sales order, and then :ref:`creating an expense report
-<expenses/reinvoice-expense-report>`.
+customer. This is done by :ref:`creating an expense <expenses/reinvoice-create>`, referencing the
+sales order to which it is added, then :ref:`creating an expense report
+<expenses/reinvoice-report>`.
 
-Next, managers :ref:`approve the expense report <expenses/reinvoice-approve>`, then the accounting
-department :ref:`post the journal entries <expenses/reinvoice-approve>`.
+Next, managers :ref:`approve the expense report <expenses/reinvoice-approve>`, before the accounting
+department :ref:`posts the journal entries <expenses/reinvoice-approve>`.
 
 Finally, once the expense report is posted to a journal, the expenses appear on the specified
-:abbr:`SO (Sales Order)`. When the :abbr:`SO (Sales Order)` is :ref:`invoiced <expenses/reinvoice>`,
-the customer is charged for the expenses.
+:abbr:`SO (Sales Order)`. The :abbr:`SO (Sales Order)` is then :ref:`invoiced <expenses/reinvoice>`,
+thus charging the customer for the expenses.
 
 .. important::
-   Approving expenses, posting expenses to accounting, and reinvoicing expenses on :abbr:`SOs (Sales
-   Orders)` is **only** possible for users with the appropriate :doc:`access rights
+   The **Sales** and **Accounting** apps must be installed for this configuration.
+
+   Approving expenses, posting expenses to accounting, and re-invoicing expenses on :abbr:`SOs
+   (Sales Orders)` are **only** possible for users with the appropriate :doc:`access rights
    <../../general/users/access_rights>`.
 
 .. seealso::
-   This document provides lower-level instructions for the creation, submission, approval, and
-   posting of expenses. For fully-detailed instructions for any of these steps, refer to the
-   following documentation:
+   This document provides lower-level instructions to create, submit, approve, and post expenses.
+   For fully-detailed instructions for any of these steps, refer to the following documentation:
 
-   - :doc:`Log expenses <../expenses/log_expenses>`
-   - :doc:`Expense reports <../expenses/expense_reports>`
-   - :doc:`Approve expenses <../expenses/approve_expenses>`
-   - :doc:`Post expenses <../expenses/post_expenses>`
+   - :doc:`Log expenses <log_expenses>`
+   - :doc:`Expense reports <expense_reports>`
+   - :doc:`Approving expenses <approve_expenses>`
+   - :doc:`Posting expenses in accounting <post_expenses>`
 
 Setup
 =====
 
-First, specify the invoicing policy for each expense category. Navigate to :menuselection:`Expenses
-app --> Configuration --> Expense Categories`. Click on an expense category to view the expense
-category form. Under the :guilabel:`INVOICING` section, click the radio button next to the desired
-selection for :guilabel:`Re-Invoice costs`:
+In the **Expense** app, specify the invoicing policy for each expense category. Navigate to
+:menuselection:`Expenses app --> Configuration --> Expense Categories`. Click on the desired expense
+category or :doc:`create a new one <expense_categories>`.
 
-- :guilabel:`No`: The expense category **cannot** be reinvoiced.
-- :guilabel:`At cost`: The expense category invoices expenses at the :guilabel:`Cost` set on the
+Under the :guilabel:`Invoicing` section, click the radio button next to the desired selection for
+:guilabel:`Re-Invoice Costs`:
+
+- :guilabel:`No`\: The expense category **cannot** be re-invoiced.
+- :guilabel:`At cost`\: The expense category invoices expenses at the :guilabel:`Cost` set on the
   expense category form.
-- :guilabel:`Sales price`: The expense category invoices at the :guilabel:`Sales Price` set on the
+- :guilabel:`Sales price`\: The expense category invoices at the :guilabel:`Sales Price` set on the
   expense form.
+
+The default expense categories have the following re-invoicing policies:
+
++------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------+---------------------------------------------------+
+|                                              **At cost**                                             |                               **Sales price**                               |                  **Not enabled**                  |
++======================================================================================================+=============================================================================+===================================================+
+| :guilabel:`COMM`\: Communication expenses such as phone bills, postage, etc.                         | :guilabel:`FOOD`\: Meal expenses such as restaurants, business lunches, etc | :guilabel:`EXP_GEN`\: Others.                     |
++------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------+---------------------------------------------------+
+| :guilabel:`TRANS & ACCT`\: Travel and accommodation expenses such as hotel, plane ticket, taxi, etc. | :guilabel:`MIL`\: Mileage.                                                  | :guilabel:`GIFT`\: Gifts to customers or vendors. |
++------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------+---------------------------------------------------+
+
+.. image:: reinvoice_expenses/expense-category-form.png
+   :alt: Sample of the Expense Category form in the Expense app.
 
 .. _expenses/reinvoice-create:
 
-Log an expense
-==============
+Create an expense
+=================
 
-First, when :doc:`creating a new expense <../expenses/log_expenses>`, the correct information needs
-to be entered to reinvoice the expense to a customer. Using the drop-down menu, select the :abbr:`SO
-(Sales Order)` to add the expense to in the :guilabel:`Customer to Reinvoice` field.
-
-Next, select the :guilabel:`Analytic Distribution` the expense is posted to. The options available
-are pulled from the **Projects** app.
-
-Multiple projects can be selected, if desired. To add another :guilabel:`Analytic Distribution`,
-click on the line to reveal the :guilabel:`Analytic` pop-over window. Click :guilabel:`Add a line`,
-then select the desired :guilabel:`Analytic Distribution` from the drop-down menu.
-
-.. image:: reinvoice_expenses/reinvoice-expense-form.png
-   :alt: An expense entry to reinvoice a project to the customer, for the gallery seating project.
-
-.. important::
-   If selecting more than one :guilabel:`Analytic Distribution`, the :guilabel:`Percentage` fields
-   **must** be modified. Both fields are populated with `100%`, by default. Adjust the percentages
-   for all the fields, so the total of all selected accounts equals `100%`.
-
-.. example::
-   A furniture company is building seating for two different locations for one client. The client
-   agrees to pay for all travel expenses for site visits related to these two projects. The
-   furniture company plans one trip to visit *both* locations.
-
-   When creating the expenses for travel expenses, **both projects** are listed in the
-   :guilabel:`Analytic Distribution` line, for 50% each.
-
-.. _expenses/reinvoice-expense-report:
-
-Create an expense report
-========================
-
-After the expenses are created, the expense report must be :ref:`created <expenses/create_report>`
-and :ref:`submitted <expenses/submit>`, in the same manner as all other expenses.
-
-Once the expense report is submitted, a :icon:`fa-money` :guilabel:`Sales Orders` smart button
-appears at the top-center of both the expense report, and each individual expense record being
-reinvoiced.
+To re-invoice an expense, first :doc:`create an expense record <log_expenses>`. In the
+:guilabel:`Customer to Reinvoice` field, use the drop-down menu to select the :abbr:`SO (Sales
+Order)` to add the expense to.
 
 .. important::
    Selecting the proper :abbr:`SO (Sales Order)` in the :guilabel:`Customer to Reinvoice` field is
    **critical**, since this is how expenses are automatically invoiced after an expense report is
    approved.
 
+.. seealso::
+   :doc:`Detailed instructions on completing an expense <log_expenses>`
+
+Analytic Distribution
+---------------------
+
+.. important::
+   For the :guilabel:`Analytic Distribution` field to be visible the **Accounting** app must be
+   installed, :guilabel:`Analytic Accounting`, and :guilabel:`Analytic Plans` must be configured.
+   Refer to :doc:`../accounting/reporting/analytic_accounting` for more information.
+
+As an optional step, select the :guilabel:`Analytic Distribution` the expense is posted to. Multiple
+accounts can be selected, if desired.
+
+.. image:: reinvoice_expenses/sample-expense-form-gas.png
+   :alt: Sample of a complete expense form in the Expense app.
+
+To add another :guilabel:`Analytic Distribution`, click on the line to reveal the
+:guilabel:`Analytic` pop-over window. Click :guilabel:`Add a line`, then select the desired
+:guilabel:`Analytic Distribution` from the drop-down field.
+
+If selecting more than one :guilabel:`Analytic Distribution`, the :guilabel:`Percentage` fields
+**must** be modified. By default, both fields are populated with `100%`. Adjust the percentages for
+all the fields, so the total of all selected accounts equals `100%`.
+
+.. example::
+   A painting company agrees to paint an office building that houses two different companies. During
+   the estimate, a meeting is held at the office location to discuss the project.
+
+   Both companies agree to pay for the travel expenses for the painting company employees. When
+   creating the expenses for the mileage and hotels, **both companies** are listed in the
+   :guilabel:`Analytic Distribution` line, for 50% each.
+
+.. _expenses/reinvoice-report:
+
+Create an expense report
+========================
+
+After the expenses are created, click :guilabel:`Create report`. Once the expense report is
+submitted, the :icon:`fa-money` :guilabel:`Sales Orders` and :icon:`fa-file-text-o`
+:guilabel:`Expenses` smart buttons appear at the top of the expense report. The smart buttons will
+display the number of :abbr:`SOs (Sales Orders)` and expenses linked to the expense report.
+
+Next, click :guilabel:`Submit to Manager` to request approval from the assigned Manager.
+
+.. important::
    The :guilabel:`Customer to Reinvoice` field can be modified *only* until an expense report is
    **approved**. After an expense report is approved, the :guilabel:`Customer to Reinvoice` field is
    no longer able to be modified.
 
-.. image:: reinvoice_expenses/reinvoice-approved.png
-   :alt: An expense report with a sales order smart button for reinvoicing.
+.. image:: reinvoice_expenses/reinvoice-expense-report.png
+   :alt: Sample of an expense report in the Expense app.
+
+.. seealso::
+   :doc:`Detailed instructions to create and submit an expense report <expense_reports>`
 
 .. _expenses/reinvoice-approve:
 
 Approve and post expenses
 =========================
 
-Before :doc:`approving an expense report <../expenses/approve_expenses>`, ensure the
-:guilabel:`Analytic Distribution` section is populated for every relevant expense line.
+Before approving an expense report, ensure all the information for every expense line is correct,
+then click :guilabel:`Approve`.
 
-If an :guilabel:`Analytic Distribution` entry is missing, assign the correct accounts from the
-drop-down menu, then click :guilabel:`Approve`.
+.. image:: reinvoice_expenses/analytic-dist.png
+   :alt: The expense report with all the Analytic Distribution lines populated.
 
 .. note::
    The :guilabel:`Approve` button **only** appears after an expense report has been :ref:`submitted
    <expenses/submit>`.
 
 The accounting department is typically responsible for :doc:`posting journal entries
-<../expenses/post_expenses>`. To post expenses to an accounting journal, click :guilabel:`Post
-Journal Entries`. Once an expense report is approved, it can then be posted.
+<post_expenses>`. To post expenses to an accounting journal, click :guilabel:`Post Journal Entries`.
+Once an expense report is approved, it can then be posted.
 
 The :abbr:`SO (Sales Order)` is **only** updated *after* the journal entries are posted. Once the
 journal entries are posted, the expenses now appear on the referenced :abbr:`SO (Sales Order)`.
 
+.. seealso::
+   :doc:`Detailed instructions to approve an expense report <approve_expenses>`
+
 .. _expenses/reinvoice:
 
-Invoice expenses
-================
+Invoice expenses to the customer
+================================
 
-After the expense report has been approved, and the journal entries have been posted, the :abbr:`SO
-(Sales Order)` is updated, and the customer can be invoiced.
+Once the expense report is approved and the corresponding journal entries are posted, the :abbr:`SO
+(Sales Order)` is automatically updated, allowing the customer to be invoiced. The accounting
+department is typically responsible for generating the final invoice.
 
-Navigate to the expense report, and click the :icon:`fa-money` :guilabel:`Sales Orders` smart button
-to open the :abbr:`SO (Sales Order)`. The expenses to be reinvoiced now appear on the :abbr:`SO
-(Sales Order)`.
+Select the desired expense report, and click the :icon:`fa-money` :guilabel:`Sales Orders` smart
+button to open the :abbr:`SO (Sales Order)`. The expenses to be re-invoiced now appear on the
+:abbr:`SO (Sales Order)`.
 
 .. note::
    More than one :abbr:`SO (Sales Order)` can be referenced on an expense report. If more than one
-   :abbr:`SO (Sales Order)` is referenced, clicking the :guilabel:`Sales Orders` smart button opens
-   a list displaying all the :abbr:`SOs (Sales Order)` associated with that expense report. Click on
-   a :abbr:`SO (Sales Order)` to open the individual :abbr:`SO (Sales Order)` details.
+   :abbr:`SO (Sales Order)` is referenced, clicking the :icon:`fa-money` :guilabel:`Sales Orders`
+   smart button opens a list displaying all the :abbr:`SOs (Sales Order)` associated with that
+   expense report. Click on a :abbr:`SO (Sales Order)` to open the individual :abbr:`SO (Sales
+   Order)` details.
 
-The expenses are listed in the :abbr:`SO (Sales Order)` :guilabel:`Order Lines` tab.
+.. example::
+   A electronics repair company has a large customer base. Their service charges vary depending on
+   the product they service. A technician uses different components depending on the product they
+   service and services five customers per day on average.
 
-Next, click :guilabel:`Create Invoice`, and a :guilabel:`Create invoices` pop-up window appears.
-Select if the invoice is a :guilabel:`Regular invoice`, a :guilabel:`Down payment (percentage)`, or
-a :guilabel:`Down payment (fixed amount)`. Then, click :guilabel:`Create Draft`. Doing so creates a
-draft invoice for the customer. Click :guilabel:`Confirm` to confirm the invoice, and the customer
-is invoiced for the expenses.
+   After each job the technician submits an expense and associates the appropriate :abbr:`SO (Sales
+   Order)` for each. At the end of the day, the technician selects all of the expenses and creates
+   an expense report for the manager to review and approve.
 
-.. image:: reinvoice_expenses/reinvoiced.png
+   When the expense report gets created, several :abbr:`SOs (Sales Order)` are linked to it. The
+   :icon:`fa-file-text-o` :guilabel:`Expenses` and :icon:`fa-money` :guilabel:`Sales Orders` smart
+   buttons display the number of linked records on the top of the expense report.
+
+   .. image:: reinvoice_expenses/expense-report-multi-so.png
+      :alt: See the expenses listed on the sales order after clicking into it.
+
+On the :abbr:`SO (Sales Order)` form, the expenses are now line items in the :guilabel:`Order Lines`
+tab, with their :guilabel:`Delivered` column filled in, and ready to be invoiced.
+
+.. image:: reinvoice_expenses/so-details.png
    :alt: See the expenses listed on the sales order after clicking into it.
 
-.. seealso::
-   :doc:`../../sales/sales/invoicing`
+Click :guilabel:`Create Invoice`, and a :guilabel:`Create invoices` pop-up window appears.
+
+Select if the invoice is a :guilabel:`Regular invoice`, a :guilabel:`Down payment (percentage)`, or
+a :guilabel:`Down payment (fixed amount)`, and click :guilabel:`Create Draft Invoice`. A customer
+invoice draft window displays the products and expenses in the :guilabel:`Invoice Lines` tab.
+
+.. note::
+   For an :abbr:`SO (Sales Order)` with a product and a expense, if the product has not been
+   delivered to the customer, only the expense is listed in the :guilabel:`Invoice Lines` tab of the
+   invoice. Creating two invoices for one :abbr:`SO (Sales Order)` is possible.
+
+Click :guilabel:`Confirm` to change the invoice status from :guilabel:`Draft` to :guilabel:`Posted`.
+
+To email the invoice to the customer, click :guilabel:`Send`. A :guilabel:`Print & Send` pop-up
+window with a pre-configured email message and a PDF invoice in its body is displayed. The message
+can be reviewed and modified, if needed.
+
+Click :guilabel:`Send` to email the invoice to the customer. The pop-up window disappears, and a PDF
+of the invoice is automatically downloaded for record-keeping and printing purposes.
+
+Invoice payment
+===============
+
+Depending on the payment configuration in the **Accounting** app, there are several ways to process
+payment for an invoice. This workflow incorporates the customer portal and manual verification. The
+customer is responsible for submitting the invoice payment and the accounting department is
+responsible for verification.
+
+.. note::
+   For online payments through the customer portal, the :doc:`Invoice Online Payment
+   <../../finance/payment_providers>` feature must be enabled on the **Accounting** app. Also a
+   payment method must be set up.
+
+Navigate to the invoice by clicking :menuselection:`Expenses app --> Expense Reports` and select the
+desired expense report.
+
+Click the :icon:`fa-money` :guilabel:`Sales Orders` smart button, then select the desired :abbr:`SO
+(Sales Order)`. Click the :icon:`fa-pencil-square-o` :guilabel:`Invoices` smart button.
+
+After clicking :guilabel:`Send`, the invoice is emailed to the customer and published online on the
+customer portal. Click :guilabel:`Preview` to see the customer's view of the invoice and payment
+methods.
+
+Once the customer pays online, the invoice gets an :guilabel:`In Payment` banner. The
+:icon:`fa-bars` :guilabel:`Payments` and :icon:`fa-money` :guilabel:`Payment Transaction` smart
+buttons display at the top of the invoice form.
+
+Click the :icon:`fa-bars` :guilabel:`Payments` smart button to go to the :guilabel:`Pay` form. Click
+:guilabel:`Validate` to confirm that the invoice payment has been received. The Pay form is
+automatically updated to :guilabel:`Paid`.
