@@ -287,6 +287,7 @@ Translation
 If multiple languages are available on your website, you can translate a product's information
 directly on the :ref:`product form <ecommerce/products/product-form>`. Fields that support multiple
 languages are identifiable by their abbreviation language (e.g., EN) next to their field.
+The abbreviation language appears when the mouse is hovered over the field.
 
 The eCommerce-related fields to translate are:
 
