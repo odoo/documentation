@@ -4,7 +4,7 @@
 Cash machines
 =============
 
-Connecting and integrating a cash machine with a :ref:`POS system <pos/session-start>` enables
+Connecting and integrating a cash machine with a :ref:`POS system <pos/open-register>` enables
 automation of cash transactions, cash counting, and change return.
 
 .. _pos/cash_machines/configuration:
