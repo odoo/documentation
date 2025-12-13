@@ -38,36 +38,22 @@ Next, enable :guilabel:`Rental Transfers`. In the :guilabel:`Rent Online` sectio
 App integration configuration
 =============================
 
-The following Odoo apps and configurations are required. The listed apps allow for workflow
-efficiency and automation when creating a service product and rental order.
+The following apps are essential for workflow efficiency and automation when creating a service
+product and rental order:
 
-Sales app settings
-------------------
+ - **Sales** app: Enables the use of online payments and utilizes quotation templates within the
+   **Rental** app.
+ - **Sign** app: Allows for the upload and customization of different rental and service agreements.
+   These documents are used to facilitate the :guilabel:`Request Signature` feature.
+ - **Project** and **Planning** apps: Integrate with the Rental app to automatically match purchased
+   products and services with employees based on availability.
 
-Install the **Sales** app. Navigate to :menuselection:`Sales app  --> Configuration --> Settings`.
-In the :guilabel:`Quotations & Orders` section, tick the :guilabel:`Online Signature`,
-:guilabel:`Online Payment`, and :guilabel:`Quotation Templates` checkboxes.
-
-In the :guilabel:`Default Template` field, click the :guilabel:`Quotation templates` to customize
-the quotation templates to use.
-
-Project app settings
---------------------
-
-Install the **Project** app and enable :guilabel:`Project stages` and :guilabel:`Timesheets`. Refer
-to the :doc:`Planning <../../services/planning>` page for more information.
-
-Planning app settings
----------------------
-
-Install the **Planning** app and configure employee shifts and roles. Refer to the :doc:`Project
-management <../../services/planning>` for instructions on setting up your employees and shifts.
-
-Sign app settings
------------------
-
-Install the **Sign** app. Refer to the :doc:`Sign <../../productivity/sign>` page for instructions
-on uploading a rental agreement for the business to use.
+.. seealso::
+   - :doc:`../sales/sales_quotations/quote_template`
+   - :doc:`../sales/sales_quotations/get_paid_to_validate`
+   - :doc:`../../services/project/project_management`
+   - :doc:`../../services/planning`
+   - :doc:`../../productivity/sign`
 
 Rental services
 ===============
@@ -210,10 +196,6 @@ that require signatures. Service agreements detail the business relationship and
 These agreements protect both the provider and the customer by creating clear, enforceable
 guidelines.
 
-.. note::
-   Requesting an electronic signature can be done at any stage of the order. This feature also
-   requires the **Sign** app.
-
 If signatures are required, go to the **Rental** app and from the default :guilabel:`Rental Orders`
 dashboard, select the desired rental order. Click the :icon:`fa-cog` :guilabel:`(Actions)` icon, and
 click :guilabel:`Request Signature`.
@@ -236,6 +218,16 @@ process.
 
 A link to the signature request will appear in the chatter of the rental order. The document is
 accessible to the customer via the customer portal or email.
+
+.. note::
+   Requesting an electronic signature can be done at any stage of the order. This feature requires
+   the **Sign** app. Typically, rental or service agreements are signed **after the rental order is
+   confirmed** to establish the responsibilities and terms for the parties involved.
+
+.. important::
+   The :guilabel:`Request Signature` feature only allows the customer to sign the document through
+   their email or customer portal. The customer cannot sign the document through the user's **Sign**
+   app.
 
 Signing a document from an email link
 -------------------------------------
