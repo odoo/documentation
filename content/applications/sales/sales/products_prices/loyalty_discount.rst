@@ -57,6 +57,7 @@ The program form contains the following fields:
 - :guilabel:`Points Unit`: Enter the name of the points used for the :guilabel:`Loyalty Cards`
   program (e.g. `Loyalty Points`). The points unit name *is* visible to the customer. This field is
   **only** available when the :guilabel:`Program Type` is set to :guilabel:`Loyalty Cards`.
+- :guilabel:`Rewards expire after`: Select how many days the points remain valid before expiring.
 - :guilabel:`Start Date`: Select the date on which the program becomes valid. Leave this field blank
   if the program should always be valid and not expire.
 - :guilabel:`End Date`: Select the date on which the program stops being valid. Leave this field
