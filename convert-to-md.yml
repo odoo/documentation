@@ -1,0 +1,74 @@
+name: Convert files to Markdown
+
+# give the job write permission so the workflow can push changes
+permissions:
+  contents: write
+
+on:
+  workflow_dispatch:
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+
+      - name: Install pandoc
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc
+
+      - name: Add conversion script
+        run: |
+          cat > convert.sh <<'EOF'
+          #!/usr/bin/env bash
+          set -euo pipefail
+          ROOT="."
+          EXTS=("docx" "odt" "rst" "adoc" "asciidoc" "html" "htm" "txt")
+          OUT_FMT="gfm"
+          find "$ROOT" -type f \( $(printf -- '-iname "*.%s" -o ' "${EXTS[@]}" | sed 's/ -o $//') \) -print0 |
+          while IFS= read -r -d '' file; do
+            # skip existing markdown and files in .github (optional)
+            case "${file,,}" in
+              *.md) continue;;
+            esac
+            ext="${file##*.}"; ext="${ext,,}"
+            out="${file%.*}.md"; outdir="$(dirname "$out")"
+            mkdir -p "$outdir"
+            case "$ext" in
+              docx) infmt="docx";;
+              odt) infmt="odt";;
+              rst) infmt="rst";;
+              adoc|asciidoc) infmt="asciidoc";;
+              html|htm) infmt="html";;
+              txt) infmt="plain";;
+              *) infmt="auto";;
+            esac
+            media_dir="${outdir}/media/$(basename "${file%.*}")"
+            mkdir -p "$media_dir"
+            echo "Converting: $file -> $out (from=$infmt)"
+            pandoc --from="$infmt" --to="$OUT_FMT" --standalone --wrap=preserve \
+              --extract-media="$media_dir" -o "$out" "$file" || echo "pandoc failed for $file"
+          done
+          EOF
+          chmod +x convert.sh
+
+      - name: Run conversion
+        run: ./convert.sh
+
+      - name: Commit & push converted files to branch
+        env:
+          GIT_AUTHOR_NAME: "github-actions[bot]"
+          GIT_AUTHOR_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
+        run: |
+          git config user.name "$GIT_AUTHOR_NAME"
+          git config user.email "$GIT_AUTHOR_EMAIL"
+          # create or switch to branch
+          git checkout -B convert-to-md
+          git add -A
+          git commit -m "Convert files to Markdown via GitHub Actions" || echo "No changes to commit"
+          git push -u origin convert-to-md --force
