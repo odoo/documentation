@@ -61,7 +61,7 @@ From the :guilabel:`Operations Types` page, select the desired operation type (e
 configuration page.
 
 .. image:: serial_numbers/create-new-setting.png
-   :alt: Show "Create New" option is selected on the Receipts operation type.
+   :alt: Create New option is selected on the Receipts operation type.
 
 .. _inventory/product_management/detailed-operations:
 
@@ -78,7 +78,7 @@ In the :guilabel:`General Information` tab on the product form, make sure the bo
 assigned to newly-received or manufactured batches of this product.
 
 .. image:: serial_numbers/product-tracking.png
-   :alt: Enabled serial number tracking on product form.
+   :alt: Enabled serial number tracking on the product form.
 
 .. _inventory/product_management/assign-sn:
 
@@ -178,21 +178,21 @@ delivery order.
 
 .. _inventory/product_management/stock-move:
 
-Stock move pop-up window
-~~~~~~~~~~~~~~~~~~~~~~~~
+Detailed Operations pop-up window
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For various methods of assigning serial numbers individually or in bulk, click the :icon:`fa-list`
-:guilabel:`(list)` icon in the product line of a receipt.
+For various methods of assigning serial numbers individually or in bulk, click the
+:guilabel:`Details` link in the product line of a receipt.
 
 Add a line
 **********
 
-In the :guilabel:`Open: Stock move` pop-up window, manually enter serial numbers in the
+In the :guilabel:`Detailed Operations` pop-up window, manually enter serial numbers in the
 :guilabel:`Lot/Serial Number` column. This method is best reserved for adding only one or a few
 serial numbers.
 
 .. image:: serial_numbers/stock-move-add-line.png
-   :alt: Add a line on the stock move pop-up.
+   :alt: Add a line on the Detailed Operations pop-up.
 
 .. _inventory/product_management/generate-serials:
 
@@ -200,15 +200,16 @@ Generate Serials/Lots
 *********************
 
 Assign multiple serial numbers at once by clicking the :guilabel:`Generate Serials/Lots` button in
-the :guilabel:`Open: Stock move` pop-up window.
+the :guilabel:`Detailed Operations` pop-up window.
 
 .. image:: serial_numbers/stock-move-generate-serials.png
    :alt: Show generate serials pop-up.
 
 Doing so opens a new popup, :guilabel:`Generate Serial numbers`, which contains a few fields:
 
-- :guilabel:`First SN`: Input the first serial number that should start the sequence. From there,
-  Odoo automatically detects what pattern should be followed to generate more serial numbers.
+- :guilabel:`First Serial Number`: Input the first serial number that should start the sequence.
+  From there, Odoo automatically detects what pattern should be followed to generate more serial
+  numbers.
 - :guilabel:`Number of SN`: Specify the desired number of serial numbers to generate.
 
   .. note::
@@ -225,15 +226,15 @@ Doing so opens a new popup, :guilabel:`Generate Serial numbers`, which contains 
   unchecked.
 
 After filling out these fields, click the :guilabel:`Generate` button. The newly generated serials
-now appear in the :guilabel:`Open: Stock move` window. By clicking :icon:`fa-cloud-upload`
-:guilabel:`(Save)`, the :guilabel:`Quantity` and the :guilabel:`Serial Numbers` fields on the
-delivery order or receipt update automatically.
+now appear in the :guilabel:`Detailed Operations` window. By clicking :guilabel:`Save`, the
+:guilabel:`Quantity` and the :guilabel:`Serial Numbers` fields on the delivery order or receipt
+update automatically.
 
 Import Serials/Lots
 *******************
 
 Another option for assigning multiple serial numbers at once is to click the :guilabel:`Import
-Serials/Lots` button in the :guilabel:`Open: Stock move` pop-up window.
+Serials/Lots` button in the :guilabel:`Detailed Operations` pop-up window.
 
 .. important::
    If the import button is not visible, ensure the :guilabel:`Create New` box is checked in the
@@ -256,20 +257,27 @@ Finally, click :guilabel:`Generate`.
    :alt: Show import serials pop-up.
 
 .. example::
-   For a receipt with a :guilabel:`Demand` of `3.00` products, one product has already been assigned
-   a serial number in the :guilabel:`Open: Stock move` pop-up window.
+   For a receipt with a :guilabel:`Demand` of `10.00` products, one product has already been
+   assigned a serial number in the :guilabel:`Detailed Operations` pop-up window.
 
-   So, in the :guilabel:`Import Lots` pop-up window, two serial numbers, `124` and `125` are
+   So, in the :guilabel:`Import Lots` pop-up window, two serial numbers, `SN-2` through `SN-10` are
    assigned to the remaining products by entering the following in the :guilabel:`Lots/Serial
    numbers` input field:
 
    .. code-block::
 
-      124
-      125
+      SN-2
+      SN-3
+      SN-4
+      SN-5
+      SN-6
+      SN-7
+      SN-8
+      SN-9
+      SN-10
 
    The :guilabel:`Keep current lines` option is selected to add these two serial numbers **in
-   addition** to the serial number, `123`, that has already been assigned.
+   addition** to the serial number, `SN-1`, that has already been assigned.
 
    .. image:: serial_numbers/import-serial.png
       :alt: Show example of correctly inputting serial numbers in the text field.
