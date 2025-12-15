@@ -5,6 +5,9 @@ Manage inventory with RFID
 Managing inventory with an RFID barcode scanner is possible with the **Barcodes** app and a physical
 RFID scanner.
 
+.. seealso::
+   :doc:`../setup/rfid`
+
 Make sure the RFD40 scanner is paired and connected to the mobile computer or smartphone. Open an
 operation (like a receipt, transfer, delivery order, or manufacturing order), or count inventory
 using the RFID scanner. Scanning an existing operation barcode pulls up the relevant inventory or
@@ -49,3 +52,6 @@ verify the count manually. You can update the count by clicking the :icon:`fa-pe
 
 .. image:: scan_rfid/apply-count.png
    :alt: Apply the count on the Inventory Adjustment page.
+
+.. seealso::
+   :doc:`retrieve_epcs`
