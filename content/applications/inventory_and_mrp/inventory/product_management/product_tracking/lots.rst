@@ -60,8 +60,8 @@ product.
 .. image:: lots/tracking-product-form.png
    :alt: Enabled tracking by lots feature on product form.
 
-Assign lots for shipping and receiving
-======================================
+Assigning lots for shipping and receiving
+=========================================
 
 Assign new lot numbers to :ref:`incoming goods <inventory/product_management/assign-lots>` on the
 receipt form. When shipping :ref:`outgoing goods
@@ -70,8 +70,8 @@ the delivery order form.
 
 .. _inventory/product_management/assign-lots:
 
-On receipts
------------
+Assigning on receipts
+---------------------
 
 Assigning new or existing lot numbers to incoming goods can be done directly on receipts.
 
@@ -91,23 +91,22 @@ warehouse receipt form.
    .. image:: lots/user-error.png
       :alt: Add lot/serial number user error popup.
 
-On the receipt form, on the product line in the :guilabel:`Operations` tab, select the |list| icon
-to the right of the product that is tracked by lot numbers.
+On the product line in the :guilabel:`Operations` tab, select the :guilabel:`Details` link to the
+right of the product that is tracked by lot numbers.
 
-.. image:: lots/list-icon.png
-   :alt: Show the bulleted list icon on the product line.
+.. image:: lots/details-link.png
+   :alt: The Details link on the product line.
 
-Doing so opens the :guilabel:`Open: Stock move` pop-up window, where the :guilabel:`Lot/Serial
+Doing so opens the :guilabel:`Detailed Operations` pop-up window, where the :guilabel:`Lot/Serial
 Number` and :guilabel:`Quantity` are assigned.
 
-The two ways to assign lot numbers: **manually** and **importing**.
+There are two ways to assign lot numbers: **manually** and **importing**.
 
 Manual assignment
 ~~~~~~~~~~~~~~~~~
 
 To manually assign lot numbers, click :guilabel:`Add a line`. Input the :guilabel:`Lot/Serial
-Number`, :guilabel:`Store To` location for the lot, :guilabel:`Quantity`, and :guilabel:`Destination
-Package`, if any.
+Number` and :guilabel:`Quantity`.
 
 .. note::
    To assign multiple lot numbers, or store to multiple locations, click :guilabel:`Add a line`, and
@@ -117,11 +116,11 @@ Package`, if any.
 .. image:: lots/assign-lots-popup.png
    :alt: Assign lot number detailed operations popup.
 
-Import lots
-~~~~~~~~~~~
+Assignment by import
+~~~~~~~~~~~~~~~~~~~~
 
-In the :guilabel:`Open: Stock move` pop-up window, click :guilabel:`Import Serials/Lots`, then paste
-the bulk lot numbers, in the :guilabel:`Lots/Serial numbers` field.
+In the :guilabel:`Detailed Operations` pop-up window, click :guilabel:`Import Serials/Lots`, then
+paste the bulk lot numbers in the :guilabel:`Lots/Serial numbers` field.
 
 .. figure:: lots/bulk-sn.png
    :alt: Lot numbers copied to the lot number line.
@@ -129,10 +128,14 @@ the bulk lot numbers, in the :guilabel:`Lots/Serial numbers` field.
    Lot numbers pasted to the "Lots/Serial numbers" field, in the **Import Lots** pop-up window.
 
 Tick the :guilabel:`Keep current lines` checkbox to generate *additional* lot numbers in the
-:guilabel:`Open: Stock move` pop-up window. To replace the lot numbers in the list, leave the
+:guilabel:`Detailed Operations` pop-up window. To replace the lot numbers in the list, leave the
 :guilabel:`Keep current lines` option unticked.
 
 Finally, click :guilabel:`Generate`.
+
+For products tracked by lots, be sure to update the :guilabel:`Quantity` field in the
+:guilabel:`Detailed Operations` window until the total in the column matches the :guilabel:`Demand`
+at the top.
 
 Once all product quantities have been assigned a lot number, click :guilabel:`Save` to close the
 pop-up window. Then, click :guilabel:`Validate` on the receipt form.
@@ -142,8 +145,8 @@ pop-up window. Then, click :guilabel:`Validate` on the receipt form.
 
 .. _inventory/product_management/assign-lots-delivery:
 
-On delivery orders
-------------------
+Assigning on delivery orders
+----------------------------
 
 Odoo makes it possible to specify which lot numbers for a product are chosen for outgoing shipment
 on a delivery order form.
@@ -157,9 +160,9 @@ confirming the |SO|, the :guilabel:`Delivery` smart button becomes available. Cl
    clicking the :guilabel:`Delivery Orders` kanban card.
 
 Clicking the :guilabel:`Delivery` smart button opens the the delivery order form, where lot numbers
-are picked for delivery. In the :guilabel:`Operations` tab, click the |list| icon to the right of
-the product that is tracked by lot numbers. Clicking that icon reveals a :guilabel:`Open: Stock
-move` pop-up window.
+are picked for delivery. In the :guilabel:`Operations` tab, click the :guilabel:`Details` link to
+the right of the product that is tracked by lot numbers. Clicking that icon reveals a
+:guilabel:`Detailed Operations` pop-up window.
 
 In the pop-up window, the chosen lot number and its storage location is displayed in the
 :guilabel:`Pick From` column, with the with the full :guilabel:`Quantity` taken from that specific
@@ -193,8 +196,9 @@ Lot management
 Manage and view existing lot numbers for products in the :guilabel:`Lot/Serial Numbers` dashboard by
 going to :menuselection:`Inventory app --> Products --> Lots/Serial Numbers`.
 
-By default, lot numbers are grouped by product, and selecting the drop-down menu for each product
-displays the existing lot numbers. Select a lot number to :ref:`modify or add details
+Sort this list by product by clicking in the :guilabel:`Search` field, then selecting
+:menuselection:`Group By --> Product`. Selecting the drop-down menu for each product displays the
+existing lot numbers. Select a lot number to :ref:`modify or add details
 <inventory/product_management/edit-lot>` linked to the lot. Lot numbers can also be :ref:`created
 <inventory/product_management/create-new-lot>` from this page, by clicking the :guilabel:`New`
 button.
