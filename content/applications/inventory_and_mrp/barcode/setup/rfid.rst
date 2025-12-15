@@ -84,3 +84,7 @@ Limitations
   a quantity of `1`. It does not count individual products in a receipt.
 - Only ultra-high frequency (UHF) RFID tags are supported.
 - Products need to be GS1-registered because barcodes must be unique.
+
+.. seealso::
+   - :doc:`../operations/scan_rfid`
+   - :doc:`../operations/retrieve_epcs`
