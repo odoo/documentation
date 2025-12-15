@@ -26,13 +26,13 @@ Choosing the displayed price tax usually depends on a country's regulations or t
 :menuselection:`Website --> Configuration --> Settings`, select the website, scroll down to the
 :guilabel:`eCommerce` section, and under :guilabel:`Display Product Prices` select between:
 
-- :guilabel:`Tax Excluded`: the price displayed on the website is tax-excluded, and the tax is
-  computed at the :ref:`order summary <ecommerce/checkout/review_order>` step;
-- :guilabel:`Tax Included`: the price displayed on the website is tax-included.
+- :guilabel:`Tax Excluded`: The price displayed on the website is tax-excluded, and the tax is
+  computed at the :ref:`order summary <ecommerce/checkout/review_order>` step.
+- :guilabel:`Tax Included`: The price displayed on the website is tax-included.
 
 .. note::
-   This setting is website-specific and can therefore be configured independently for every
-   website in the database.
+   This setting is website-specific and can therefore be configured independently for every website
+   in the database.
 
 .. tip::
    - Switch the :ref:`Tax indication <ecommerce/products/product-presentation>` toggle on in the
@@ -51,12 +51,13 @@ To display a :doc:`price per unit
 </applications/inventory_and_mrp/inventory/product_management/configure/uom>` alongside the sales
 price on the product page, follow these steps:
 
-#. Go to :menuselection:`Website --> Configuration --> Settings`, scroll to the
-   :guilabel:`eCommerce` section, and enable :guilabel:`Product Reference Price`.
-#. :ref:`Navigate to the product form <ecommerce/products/create-products>`.
-#. Set the product's :guilabel:`Sales Price` and select the unit (e.g., :guilabel:`Units`).
-#. In the :guilabel:`Base Unit Count` field, enter the number of units in the product, then
-   select the relevant unit from the dropdown list.
+Go to :menuselection:`Website --> Configuration --> Settings`, scroll to the :guilabel:`eCommerce`
+section, and enable :guilabel:`Product Reference Price`. :ref:`Navigate to the product form
+<ecommerce/products/create-products>`.
+
+Set the product's :guilabel:`Sales Price` and select the unit (e.g., :guilabel:`Units`). In the
+:guilabel:`Base Unit Count` field, enter the number of units in the product, then select the
+relevant unit from the dropdown list.
 
 .. example::
    Imagine you want to sell a 2-liter bucket of paint for $60, i.e., $30 per liter.
@@ -64,8 +65,8 @@ price on the product page, follow these steps:
    .. image:: prices/prices-per-unit.png
       :alt: Cost per unit pricing on the product form.
 
-   The price per units, in this case per liter, is shown next to the sales price on the
-   product page.
+   The price per units, in this case per liter, is shown next to the sales price on the product
+   page.
 
    .. image:: prices/price-cost-per-unit-page.png
       :alt: Unit pricing on the product page.
@@ -84,6 +85,7 @@ Pricelists
 Pricelists in Odoo allow to manage flexible pricing rules and to offer different prices and
 discounts based on currencies, time periods, purchase volumes, :ref:`customers' location
 <ecommerce/prices/geoip>`, and/or customer type.
+
 To enable pricelists for eCommerce, go to :menuselection:`Website --> Configuration --> Settings`,
 scroll down to the :guilabel:`eCommerce` section, enable :guilabel:`Pricelists`, and
 :guilabel:`Save`. Then, click :guilabel:`Pricelists` or go to :menuselection:`Website --> eCommerce
@@ -97,8 +99,8 @@ In the :guilabel:`Ecommerce` tab, configure options specific to online sales, su
 
 .. tip::
    - If you are using several websites and you want to use the same pricelist on several of them,
-     you need to duplicate the pricelist for each website. If you do not assign any
-     website, the pricelist will not be used, unless it is :ref:`selectable
+     you need to duplicate the pricelist for each website. If you do not assign any website, the
+     pricelist will not be used, unless it is :ref:`selectable
      <ecommerce/prices/selectable-pricelists>`.
    - Pricelists can also be :ref:`assigned to a specific customer
      <sales/products/customer-pricelist-application>`.
@@ -106,8 +108,8 @@ In the :guilabel:`Ecommerce` tab, configure options specific to online sales, su
 .. note::
    - When pricelists are enabled in the Sales app, they are automatically enabled in the eCommerce
      app, and vice versa.
-   - In the list of pricelists, order the pricelists by priority: the first takes
-     precedence over the second, the second over the third, and so on.
+   - In the list of pricelists, order the pricelists by priority: the first takes precedence over
+     the second, the second over the third, and so on.
    - It is also possible to create specific pricelists for :ref:`variants
      <products/variants/configure-variants>`.
 
@@ -120,8 +122,8 @@ Selectable pricelists
 ---------------------
 
 Selectable pricelists are useful, for example, when selling products in :doc:`multiple currencies
-</applications/sales/sales/products_prices/prices/currencies>` and allow customers to
-choose a pricelist using the catalog's pricelist selector located next to the :ref:`search bar
+</applications/sales/sales/products_prices/prices/currencies>` and allow customers to choose a
+pricelist using the catalog's pricelist selector located next to the :ref:`search bar
 <ecommerce/catalog/top-bar>`.
 
 .. image:: prices/pricelist-selector.png
@@ -160,8 +162,8 @@ as needed. For instance, select :guilabel:`European Union` to apply the pricelis
 states.
 
 To create a new country group, click :guilabel:`Search more` in the dropdown list, then
-:guilabel:`New`. Add a :guilabel:`Group Name` and select the relevant :guilabel:`Countries`.
-Use :ref:`Custom filters <search/custom-filters>` if needed.
+:guilabel:`New`. Add a :guilabel:`Group Name` and select the relevant :guilabel:`Countries`. Use
+:ref:`Custom filters <search/custom-filters>` if needed.
 
 .. note::
    Each country group must contain at least one country.
@@ -190,24 +192,24 @@ Use :ref:`Custom filters <search/custom-filters>` if needed.
           - `EU prices with discounts` with the `EU` country group assigned
           - `US prices` with the `US` country group assigned
 
-        If the :guilabel:`Selectable` option is enabled for `EU regular prices` and
-        `US prices`, and the customer is from the European Union, only the pricelists
-        `EU regular prices` and `EU prices with discounts` will be available. However, since the
-        `EU prices with discount` list is not selectable, it will disappear once the customer selects
-        the `EU regular prices` list and prices will be displayed based on the `EU regular prices`
-        pricelist on the catalog.
+        If the :guilabel:`Selectable` option is enabled for `EU regular prices` and `US prices`, and
+        the customer is from the European Union, only the pricelists `EU regular prices` and `EU
+        prices with discounts` will be available. However, since the `EU prices with discount` list
+        is not selectable, it will disappear once the customer selects the `EU regular prices` list
+        and prices will be displayed based on the `EU regular prices` pricelist on the catalog.
 
 Pricelist application
 ---------------------
 
 On the ecommerce, the *default* pricelist is automatically selected for public, non-logged in users
 when no country group is assigned. If :ref:`GeoIP and country groups <ecommerce/prices/geoip>` are
-used, public users see the pricelist of their country group by default. :ref:`Logged-in users
-<ecommerce/customer_accounts/shop-access>` with
-:ref:`assigned pricelists <sales/products/customer-pricelist-application>` see the assigned
-pricelist by default **if it is assigned to the website** they are visiting. If not, the website's
-default pricelist is applied (i.e., the first available pricelist assigned to the website and
-without a country group, following the sequence order).
+used, public users see the pricelist of their country group by default.
+
+:ref:`Logged-in users <ecommerce/customer_accounts/shop-access>` with :ref:`assigned pricelists
+<sales/products/customer-pricelist-application>` see the assigned pricelist by default **if it is
+assigned to the website** they are visiting. If not, the website's default pricelist is applied
+(i.e., the first available pricelist assigned to the website and without a country group, following
+the sequence order).
 
 Assigned pricelists take precedence over country-based pricelists, when applicable, unless the
 assigned pricelist is linked to a different country group.
@@ -217,8 +219,8 @@ assigned pricelist is linked to a different country group.
    :guilabel:`United States` pricelist is applied.
 
    A different visitor, also from the United States, has the :guilabel:`Loyal Customer Discount`
-   pricelist assigned in their contact form. This assignment takes precedence over the country
-   group assignation, so the :guilabel:`Loyal Customer Discount` is applied.
+   pricelist assigned in their contact form. This assignment takes precedence over the country group
+   assignation, so the :guilabel:`Loyal Customer Discount` is applied.
 
    .. image:: prices/pricelists-example.png
       :alt: An example of various pricelists assigned to a website.
@@ -232,10 +234,9 @@ Discounts
 Discounts programs
 ------------------
 
-To enable :doc:`discount programs </applications/sales/sales/products_prices/loyalty_discount>`
-for your ecommerce, go to :menuselection:`Website --> Configuration --> Settings`, scroll
-down to the :guilabel:`eCommerce` section, and enable the :guilabel:`Discounts, Loyalty & Gift
-Card` feature.
+To enable :doc:`discount programs </applications/sales/sales/products_prices/loyalty_discount>` for
+your ecommerce, go to :menuselection:`Website --> Configuration --> Settings`, scroll down to the
+:guilabel:`eCommerce` section, and enable the :guilabel:`Discounts, Loyalty & Gift Card` feature.
 
 :ref:`Configure <sales/products/loyalty-programs>` the discount program, make sure the
 :guilabel:`Website` option is enabled, and add the relevant :ref:`Pricelist
@@ -253,12 +254,11 @@ alongside it.
 .. image:: prices/price-strikethrough.png
    :alt: Price strikethrough.
 
-To display a permanently discounted price, navigate to :menuselection:`Website --> Configuration
---> Settings`, scroll down to the :guilabel:`eCommerce`, enable the :guilabel:`Comparison
-Price` option, and :guilabel:`Save`. Then, :ref:`go to the product form
-<ecommerce/products/create-products>`, enter the new (discounted) price in the
-:guilabel:`Sales Price` field and the original one (strikethrough) in the
-:guilabel:`Compare to Price` field.
+To display a permanently discounted price, navigate to :menuselection:`Website --> Configuration -->
+Settings`, scroll down to the :guilabel:`eCommerce`, enable the :guilabel:`Comparison Price` option,
+and :guilabel:`Save`. Then, :ref:`go to the product form <ecommerce/products/create-products>`,
+enter the new (discounted) price in the :guilabel:`Sales Price` field and the original one
+(strikethrough) in the :guilabel:`Compare to Price` field.
 
 .. note::
    The :guilabel:`Compare to Price` field must contain a price that is higher than the
@@ -272,9 +272,9 @@ Price` option, and :guilabel:`Save`. Then, :ref:`go to the product form
 Discounted pricelists
 ---------------------
 
-It is also possible to create :ref:`pricelists with discounts <sales/products/price-rules>`.
-To do so, :ref:`create a pricelist <sales/products/pricelist-configuration>` and
-:ref:`configure the discount <sales/products/price-rules>`.
+It is also possible to create :ref:`pricelists with discounts <sales/products/price-rules>`. To do
+so, :ref:`create a pricelist <sales/products/pricelist-configuration>` and :ref:`configure the
+discount <sales/products/price-rules>`.
 
 If a :ref:`pricelist <ecommerce/prices/pricelists>` contains a :ref:`Discount
 <sales/products/price-rules>` price type, the price is striked through for applicable customers,
@@ -291,36 +291,57 @@ E-commerce promotional code
 ---------------------------
 
 To offer a discounted pricelist for customers with a specific discount code, access the relevant
-:ref:`pricelist form <ecommerce/prices/pricelists>`, go to the :guilabel:`Ecommerce` tab, and add
-an :guilabel:`E-commerce Promotional Code`, e.g., `SUMMERSALE10%`. Then, go to the :guilabel:`Sales
-Price` tab, click :guilabel:`Add a line`, and :ref:`configure the discount
-<sales/products/price-rules>`. When a customer inserts the code during the :ref:`checkout process
-<ecommerce/checkout/review_order>`, this discount is granted according to the :guilabel:`Sales
-Price` configuration.
+:ref:`pricelist form <ecommerce/prices/pricelists>`, go to the :guilabel:`Ecommerce` tab, and add an
+:guilabel:`E-commerce Promotional Code`, e.g., `SUMMERSALE10%`.
+
+Then, go to the :guilabel:`Sales Price` tab, click :guilabel:`Add a line`, and :ref:`configure the
+discount <sales/products/price-rules>`. When a customer inserts the code during the :ref:`checkout
+process <ecommerce/checkout/review_order>`, this discount is granted according to the
+:guilabel:`Sales Price` configuration.
 
 .. note::
-   Make sure that the :ref:`Promo Code <ecommerce/checkout/review_order>` option
-   in the website editor is enabled and, if using :ref:`country groups
-   <ecommerce/prices/country-groups>`, that the discounted pricelist has the same country group
-   assigned as the non-discounted pricelist.
+   Make sure that the :ref:`Promo Code <ecommerce/checkout/review_order>` option in the website
+   editor is enabled and, if using :ref:`country groups <ecommerce/prices/country-groups>`, that the
+   discounted pricelist has the same country group assigned as the non-discounted pricelist.
 
 .. _ecommerce/prices/hide-prices:
 
-Hide prices
-===========
+Prevent sales
+=============
 
-Some businesses, such as :ref:`B2B shops <ecommerce/b2b_b2c/prices>` or companies that sell luxury
-or custom items, often prefer to showcase their products online without displaying their prices.
+Many :ref:`B2B <ecommerce/b2b_b2c/prices>`, luxury, and custom companies that sell luxury or custom
+items, often prefer to showcase their products online without allowing direct purchases or showing
+their prices.
 
-To hide product prices on the ecommerce, go to :menuselection:`Website --> Configuration -->
-Settings`, enable :guilabel:`Prevent Sale of Zero Priced Product` in the :guilabel:`eCommerce`
-section, and enter a redirect URL in the :guilabel:`Button URL` field. The
-:guilabel:`Add to Cart` button on the product page is then replaced by a :guilabel:`Contact us`
-button, which can be :ref:`customized <ecommerce/checkout/prevent-sale>` if needed.
+The **eCommerce** app offers two configurations to control price visibility and online sales using
+the :guilabel:`Hide Add To Cart` dropdown option. Navigate to :menuselection:`Website -->
+Configuration --> Settings`, check the :guilabel:`Hide Add To Cart` checkbox in the
+:guilabel:`eCommerce` section.
 
-After enabling this feature, either set the price to `0` for all desired products or create a
-:ref:`pricelist <ecommerce/prices/pricelists>` with all product prices set to `0`. Ensure the
-pricelist is assigned to the correct website and is listed first among the website's pricelists.
+Select one of the dropdown options:
+
+- :guilabel:`0 price products`: Products with a price of `0` have their prices hidden and **cannot**
+  be purchased from the wesite.
+- :guilabel:`Specific categories`: Products belonging to selected categories cannot be purchased
+  directly from the website, and the prices are displayed only if the product price is greater than
+  `0`.
+
+If choosing the :guilabel:`Specific categories` option, the :guilabel:`Categories` submenu appears.
+Select **at least one** product category from the dropdown menu.
+
+Enter a redirect URL in the :guilabel:`Link URL` field. The :guilabel:`Add to Cart` button on the
+product page is then replaced by a :guilabel:`Contact us` button, which can be :ref:`customized
+<ecommerce/checkout/prevent-sale>` if needed.
+
+.. image:: prices/zero-price-setting.png
+   :alt: Sample of the Specific categories option configuration for the Hide Add To Cart setting.
+
+0 price products option
+-----------------------
+
+After choosing :guilabel:`0 price products`, either set the price to `0` for all desired products or
+create a :ref:`pricelist <ecommerce/prices/pricelists>` with all product prices set to `0`. Ensure
+the pricelist is assigned to the correct website and is listed first among the website's pricelists.
 
 .. tip::
    - Ensure no pricelist used on the ecommerce has been marked as :guilabel:`Selectable` to prevent
@@ -329,6 +350,13 @@ pricelist is assigned to the correct website and is listed first among the websi
      zero-priced pricelist to be used for non-logged-in customers and :ref:`assign
      <sales/products/customer-pricelist-application>` a regular pricelist (with actual prices) to
      customers with :ref:`portal access <portal/access>`.
+
+Specific categories option
+--------------------------
+
+After enabling this option, navigate to :menuselection:`Website app --> eCommerce --> Products` and
+modify all the desired products to the chosen :ref:`product category
+<ecommerce/catalog/categories>`.
 
 .. seealso::
    :doc:`../customer_accounts`
