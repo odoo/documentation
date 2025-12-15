@@ -2,7 +2,7 @@
 Moves history report
 ====================
 
-The *Moves History* report in Odoo *Inventory* provides a detailed record of product movements
+The *Moves History* report in Odoo **Inventory** provides a detailed record of product movements
 (containing past and current locations), lot numbers, and reasons for movement. Reports can be
 generated for any time frame, making this report essential for analyzing stock levels, monitoring
 inventory turnover, and identifying any discrepancies in inventory.
@@ -61,6 +61,7 @@ relevant information
       - :guilabel:`Internal`: displays move records from one internal location to another.
       - :guilabel:`Manufacturing`: shows records where products were produced from the virtual,
         production :doc:`location <../inventory_management/use_locations>`.
+      - :guilabel:`Scrapped`: shows records where products have been scrapped.
       - :guilabel:`Date`: select this drop-down menu to access various date filter options and view
         stock moves from a specific month, quarter, or year.
       - :guilabel:`Last 30 Days`: show records that occurred in the last thirty days.
