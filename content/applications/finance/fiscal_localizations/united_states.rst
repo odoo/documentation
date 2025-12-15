@@ -432,6 +432,7 @@ Once all check configurations are complete, :guilabel:`Save` the settings.
    recommended.
 
 .. important::
+
    Use one of the blank check formats to print the information of the check ad-hoc when needed. This
    requires the use of both :abbr:`MICR (Magnetic Ink Character Recognition)` ink or toner complying
    with the standards for check printing, as well as `check quality paper
@@ -745,6 +746,162 @@ a new |NACHA| |ACH| file.
 .. seealso::
    - :doc:`../accounting/payments/batch`
    - :doc:`Europe's direct debiting <../accounting/payments/batch_sdd>`
+
+.. |API| replace:: :abbr:`API (Application Programming Interface)`
+
+Pay by direct deposit
+=====================
+
+Direct deposit is an electronic fund transfer primarily used in the United States, in which money is
+sent directly to a bank account without the use of a physical check or manual deposit. Odoo offers
+direct deposit through an international money transfer service called `Wise.com
+<https://wise.com/>`_.
+
+Wise provides an |API|, invoicing tools, and business accounts. Businesses can send and receive
+payments using Wise's cross-border payment technology without building everything from scratch.
+
+This feature can be used to pay vendor bills.
+
+Configuration
+-------------
+
+Wise configuration
+~~~~~~~~~~~~~~~~~~
+
+Wise configuration involves three main steps: creating a Wise account, linking a bank account to the
+Wise account, and generating |API| tokens from the Wise account. These steps are detailed below:
+
+1. Navigate to `Wise.com <https://wise.com/>`_ and click :guilabel:`Sign-Up` to create an account.
+#. Select :guilabel:`Business Account` and finish providing company and personal user details to
+   complete the sign-up process.
+
+   i. Wise may require additional verification documents depending on the business type and country.
+      This process can take 1–3 business days.
+
+#. Navigate to the account settings by clicking the :guilabel:`Company Name` in the top-right corner
+   of the dashboard.
+#. Select :menuselection:`Payment Methods --> Connected bank accounts` and click :guilabel:`Connect
+   Your Bank Account`.
+#. Search for the bank and add the bank account information. This bank account will be configured in
+   Odoo as well.
+
+#. Go to the account settings by clicking the :guilabel:`Company Name` in the top-right corner of
+   the dashboard.
+#. Select :menuselection:`Integration and Tools --> API Tokens` and click :guilabel:`Add new token`.
+#. Add a description and select :guilabel:`Full Access`, then click :guilabel:`Create Token`.
+#. Find the token under :guilabel:`API tokens` and click :guilabel:`Reveal key`.
+#. Copy the token to the clipboard.
+
+Odoo configuration
+~~~~~~~~~~~~~~~~~~
+
+Odoo configuration involves four main steps: installing the Wise module, adding Wise |API|
+credentials, adding the company bank account, and adding the vendor bank account. These steps are
+detailed below:
+
+1. In the Odoo database, :ref:`install <general/install>` the :guilabel:`United States - Direct
+   Deposit` module.
+
+   .. tip::
+      To see the module in search results, remove the :doc:`Apps filter
+      <../../general/apps_modules>` from the search bar.
+
+#. Go to :menuselection:`Accounting app --> Configuration --> Settings` and scroll down to the
+   :guilabel:`Vendor Payments` section.
+#. In the setting for :guilabel:`U.S. Direct Deposit (via Wise)`, enter the :guilabel:`Wise API
+   token` generated in Wise.
+
+#. Click :icon:`fa-plug` :guilabel:`Connect to Wise` to ensure the connection is established between
+   the Odoo database and the Wise account.
+
+   .. image:: united_states/connect-to-wise.png
+      :alt: Click the Connect to Wise button to ensure the connection is established between the
+            Odoo database and the Wise account.
+
+#. Create the company and vendor bank accounts:
+
+   a. Go to the :guilabel:`Contacts` app and select the company/vendor's contact card.
+   #. Switch to the :guilabel:`Accounting` tab and click on the :guilabel:`Bank accounts` field,
+      then click :guilabel:`Create`.
+
+      .. image:: united_states/create-bank-account.png
+         :alt: Click the Bank accounts field, then click Create to enter the bank account details.
+
+   #. Click  on the :guilabel:`Bank` field, then select the bank from the list, or click
+      :guilabel:`Search more` if it's not visible. If the bank isn't listed, click :guilabel:`Create
+      new` to fill out the bank details, then click :guilabel:`Save`.
+
+      .. image:: united_states/bank-information.png
+         :alt: Click the Bank accounts field, then select or create the bank.
+
+   #. Finally, enter the company bank account information (linked in Wise) or vendor bank account
+      information, and click :guilabel:`Save`.
+
+      i. The :guilabel:`Bank accounts` field in the :guilabel:`Accounting` tab should now display
+         the newly added bank account.
+
+         .. image:: united_states/bank-account-information.png
+            :alt: Enter the company/vendor bank account information, then click Save.
+
+   #. Repeat these steps for the **vendor** bank account.
+
+      .. important::
+         To avoid errors when initiating payments to the vendor, ensure the following:
+
+         - Verify the destination bank account with the vendor, then mark it as :doc:`Trusted
+           <../accounting/payments/trusted_accounts>`.
+         - Select the correct :guilabel:`Bank Account Type` (checking or savings).
+         - Select the preferred :guilabel:`Direct Deposit Transfer Type` for the vendor/destination
+           account. Pricing can be verified directly in Wise.
+         - See `Wise US pricing <https://wise.com/us/pricing/business>`__ to calculate price by
+           feature & transaction amount; for pricing in other countries, select the country at the
+           top of the page.
+
+.. note::
+   Wise offers a `Sandbox environment <https://sandbox.transferwise.tech/login>`_ for testing
+   features and integrations.
+
+   Select the appropriate environment to ensure accurate results (*sandbox* for testing,
+   *production* for real transactions).
+
+Pay vendor bills with direct deposit
+------------------------------------
+
+After configuring direct deposit in both Wise and Odoo, vendor payments can be created individually
+in the Odoo database, batched for transfer, and then paid in Wise.
+
+1. :ref:`Create vendor bills <accounting/vendor_bills/creation>`.
+#. :doc:`Pay the vendor bills <../accounting/payments>` using :guilabel:`U.S. Direct Deposit` as the
+   :guilabel:`Payment Method` for the transaction.
+#. :doc:`Create a batch payment <../accounting/payments/batch>`. Batch payments can include payments
+   from multiple vendors.
+#. Confirm the :guilabel:`Batch Type` is :guilabel:`Outbound`, and click :guilabel:`Initiate
+   payment`. Odoo will redirect to Wise.
+
+   i. Sign into the Wise account if needed, and see all the pending transactions.
+
+#. Review the details and confirm the batch number is the same in Odoo and Wise.
+#. Click :guilabel:`Pay for this batch` or :guilabel:`I've now paid` to pay for the entire batch.
+
+.. note::
+   If pop-ups are blocked in the browser settings, Odoo can't redirect to Wise. Instead, Odoo
+   displays a message stating:
+
+   `"A popup window has been blocked. You may need to change your browser settings to allow popup
+   windows for this page."`
+
+   The payment record is still created in Wise, and can be accessed by clicking :guilabel:`View
+   Batch` on the batch payment.
+
+Cancel a batch payment
+----------------------
+
+To cancel a batch payment, follow these steps:
+
+1. Navigate to :menuselection:`Accounting --> Vendors --> Batch Payments`.
+#. Select the batch payment to cancel, then click :guilabel:`View Batch`. Odoo will redirect to the
+   batch in Wise. Sign into the Wise account if needed.
+#. Click :guilabel:`Cancel batch` in Wise.
 
 ISO 20022
 =========
