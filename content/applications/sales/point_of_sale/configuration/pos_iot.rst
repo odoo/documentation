@@ -36,10 +36,10 @@ To connect the POS with an :doc:`IoT system </applications/general/iot>`:
           documentation </applications/sales/point_of_sale/payment_methods>`.
 
 #. :doc:`Connect the IoT system to your Odoo database </applications/general/iot/connect>`.
-#. :ref:`Access the POS settings <configuration/settings>` and select your POS, or click the
-   vertical ellipsis button (:guilabel:`⋮`) on a POS card and click :guilabel:`Edit`. Scroll down
-   to the :guilabel:`Connected Devices` section, enable :guilabel:`IoT Box`, then select the devices
-   to be used for the POS. Click :guilabel:`Save`.
+#. :ref:`Access the POS settings <pos/settings>` and select your POS, or click the vertical ellipsis
+   button (:guilabel:`⋮`) on a POS card and click :guilabel:`Edit`. Scroll down to the
+   :guilabel:`Connected Devices` section, enable :guilabel:`IoT Box`, then select the devices to be
+   used for the POS. Click :guilabel:`Save`.
 
 .. tip::
    Click :guilabel:`IoT Devices` to access the list of :doc:`/applications/general/iot/devices` for

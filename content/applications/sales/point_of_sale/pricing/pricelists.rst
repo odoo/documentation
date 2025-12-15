@@ -11,8 +11,8 @@ customers, or offer discounts when set quantities are ordered.
 Configuration
 =============
 
-Navigate to the :ref:`general POS app settings <configuration/settings>` and ensure
-:guilabel:`Flexible Pricelists` are enabled under the :guilabel:`Pricing` section.
+Navigate to the :ref:`general POS app settings <pos/settings>` and ensure :guilabel:`Flexible
+Pricelists` are enabled under the :guilabel:`Pricing` section.
 
 :ref:`Multiple prices per product <pricelists/simple>` is the default pricelist option for setting
 simple fixed price rules per product. Select :ref:`Advanced price rules (discounts, formulas)
@@ -106,12 +106,11 @@ prices. To add a new price rule to a pricelist, click :guilabel:`Add a line`. In
 Select pricelists
 -----------------
 
-Go to the :ref:`specific POS settings <configuration/settings>` and add all the available
-pricelists in the :guilabel:`Available` field. Then, set its **default pricelist** in the
-:guilabel:`Default` field.
+Go to the :ref:`specific POS settings <pos/settings>` and add all the available pricelists in the
+:guilabel:`Available` field. Then, set its **default pricelist** in the :guilabel:`Default` field.
 
-When you :ref:`open a POS session <pos/session-start>`, click the **pricelists** button, and select
-the desired pricelist from the list.
+When you :ref:`open the POS register <pos/open-register>`, click the **pricelists** button, and
+select the desired pricelist from the list.
 
 .. image:: pricelists/pricelist-button.png
    :alt: Button to select a pricelist on the POS frontend
