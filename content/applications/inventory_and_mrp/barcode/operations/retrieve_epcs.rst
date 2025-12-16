@@ -40,7 +40,7 @@ Generating EPCs in Odoo
 =======================
 
 Generate EPCs for tracked products directly in Odoo. Products should be tracked by serial number,
-but this is not a requirement. A GTIN-14-compatible
+but this is not a requirement. A GTIN-14-compatible barcode must be set on the product.
 
 To retrieve the EPCs for a receipt of products:
 
