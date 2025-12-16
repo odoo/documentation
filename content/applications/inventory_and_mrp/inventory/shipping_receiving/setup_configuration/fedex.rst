@@ -9,7 +9,7 @@ This is accomplished by enabling the FedEx *shipping connector*, then configurin
 
 .. warning::
    As of October 21, 2025, the FedEx integration using the latest API is temporarily unavailable
-   while FedEx reviews Odoo's certification as a solution provider. Any *existing* integrations
+   while Odoo finalizes its solution-provider validation for FedEx. Any *existing* integrations
    using the *FedEx Legacy* provider currently work, but *new* setups are currently **blocked**.
 
    While this issue is being resolved, `submit a support ticket <https://www.odoo.com/help>`_ for
