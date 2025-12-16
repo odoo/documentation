@@ -30,7 +30,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-11 10:43+0100\n"
-"PO-Revision-Date: 2025-12-12 23:20+0000\n"
+"PO-Revision-Date: 2025-12-16 22:23+0000\n"
 "Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-19-doc/inventory_and_mrp/es_419/>\n"
@@ -3142,7 +3142,7 @@ msgstr "Resumen de los envíos en transferencia por validar."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:3
 msgid "Retrieve EPC codes"
-msgstr ""
+msgstr "Obtener códigos EPC"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:9
 msgid ""
@@ -3151,6 +3151,12 @@ msgid ""
 "level. These identifiers support accurate inventory management by enabling "
 "faster cycle counts, streamlined adjustments, and more precise stock control."
 msgstr ""
+"Los códigos electrónicos de producto (EPC) son identificadores únicos a "
+"nivel mundial que se asignan a productos específicos y permiten distinguir "
+"artículos a nivel individual. Estos identificadores hacen que la gestión de "
+"inventario se precisa, ya que permiten realizar conteos cíclicos más "
+"rápidos, aplicar ajustes optimizados y tener un control de existencias más "
+"preciso."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:14
 msgid ""
@@ -3159,46 +3165,57 @@ msgid ""
 "tags, which are then applied to products and used throughout the inventory "
 "process."
 msgstr ""
+"Después de :ref:`obtener <barcode/operations/retrieve_epcs_gs1>` los EPC "
+"desde GS1, estos se :ref:`codifican <barcode/operations/write_epcs>` en "
+"etiquetas RFID que luego se aplican a los productos y se usan durante todo "
+"el proceso de inventario."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:19
 msgid "Set up :doc:`../setup/rfid`"
-msgstr ""
+msgstr "Configurar :doc:`../setup/rfid`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:24
 msgid "Retrieving EPCs from GS1"
-msgstr ""
+msgstr "Obtener EPC desde GS1"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:26
 msgid ""
 "To retrieve an EPC to encode on a tag, use `GS1's EPC Encoder/Decoder tool "
 "<https://www.gs1.org/services/epc-encoderdecoder>`__."
 msgstr ""
+"Para obtener un EPC y codificarlo en una etiqueta, usa la `herramienta de "
+"codificación y decodificación de EPC de GS1 <https://www.gs1.org/services/"
+"epc-encoderdecoder>`__."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:29
 msgid ""
 "Enter the GTIN-14 barcode of the product in the application "
 "identifier :guilabel:`(01)` field."
 msgstr ""
+"Ingresa el código de barras GTIN-14 del producto en el campo del "
+"identificador de aplicación :guilabel:`(01)`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:30
 msgid "Enter the product's serial number in the :guilabel:`(21)` field."
-msgstr ""
+msgstr "Ingresa el número de serie del producto en el campo :guilabel:`(21)`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:31
 msgid "Specify a company prefix length."
-msgstr ""
+msgstr "Especifica la longitud del prefijo de la empresa."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:32
 msgid "Specify the size of the tag and its filter value."
-msgstr ""
+msgstr "Especifica el tamaño de la etiqueta y el valor de su filtro."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:-1
 msgid "Complete the fields of the EPC Encoder/Decoder tool."
 msgstr ""
+"Completa los campos de la herramienta de codificación y decodificación de "
+"EPC."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:40
 msgid "Generating EPCs in Odoo"
-msgstr ""
+msgstr "Generar EPC en Odoo"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:42
 msgid ""
@@ -3208,7 +3225,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:45
 msgid "To retrieve the EPCs for a receipt of products:"
-msgstr ""
+msgstr "Para obtener los EPC de una recepción de productos:"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:47
 msgid ""
@@ -3216,16 +3233,21 @@ msgid ""
 "button next to the :guilabel:`Quantity` field. The :guilabel:`Detailed "
 "Operations` box opens."
 msgstr ""
+"En la recepción, haz clic en el botón :icon:`fa-list` :guilabel:`Operaciones "
+"detalladas` junto al campo :guilabel:`Cantidad`. El sistema abrirá la "
+"ventana :guilabel:`Operaciones detalladas`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:49
 msgid ""
 "From here, specify or generate serial numbers for the products. Be sure to "
 "save the serial numbers."
 msgstr ""
+"Una vez aquí, define o genera números de serie para los productos y no "
+"olvides guardarlos."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:51
 msgid ":guilabel:`Validate` the receipt."
-msgstr ""
+msgstr ":guilabel:`Valida` la recepción."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:52
 msgid ""
@@ -3233,6 +3255,9 @@ msgid ""
 "click the :icon:`fa-cog` :guilabel:`Actions` button, then "
 "select :guilabel:`Export`."
 msgstr ""
+"Haz clic en el botón inteligente :guilabel:`Movimientos`. Selecciona todos "
+"los artículos recibidos, luego haz clic en el botón :icon:`fa-cog` "
+":guilabel:`Acciones` y selecciona :guilabel:`Exportar`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:54
 msgid ""
@@ -3241,15 +3266,21 @@ msgid ""
 "file downloads to the device. All of the EPCs for the receipt are included "
 "in that file."
 msgstr ""
+"En la pantalla :guilabel:`Exportar datos`, selecciona :guilabel:`Código "
+"electrónico de producto` en la lista de campos disponibles y haz clic en "
+":guilabel:`Exportar`. El archivo se descargará en el dispositivo e incluirá "
+"todos los EPC de la recepción."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:59
 msgid ""
 "EPCs can be exported from any :guilabel:`Moves` list, not just receipts."
 msgstr ""
+"Puedes exportar EPC desde cualquier lista de :guilabel:`movimientos`, no "
+"solo desde las recepciones."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:64
 msgid "Writing EPCs to RFID tags"
-msgstr ""
+msgstr "Escritura de EPC en etiquetas RFID"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:66
 msgid ""
@@ -3257,24 +3288,30 @@ msgid ""
 "RFID tags. The process to write EPCs varies by RFID writer manufacturer. "
 "Refer to the RFID writer's documentation for more information."
 msgstr ""
+"Después de obtener los EPC puedes usar un escritor RFID para grabarlos en "
+"las etiquetas RFID. El proceso para realizar esta acción varía según el "
+"fabricante del escritor RFID. Consulta la documentación del escritor RFID "
+"para obtener más información."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:72
 msgid ":doc:`gs1_usage`"
-msgstr ""
+msgstr ":doc:`gs1_usage`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:73
 msgid ":doc:`adjustments`"
-msgstr ""
+msgstr ":doc:`adjustments`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:3
 msgid "Manage inventory with RFID"
-msgstr ""
+msgstr "Gestionar el inventario con RFID"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:5
 msgid ""
 "Managing inventory with an RFID barcode scanner is possible with the "
 "**Barcodes** app and a physical RFID scanner."
 msgstr ""
+"Es posible gestionar el inventario con un escáner de códigos de barras RFID "
+"desde la aplicación **Código de barras** y un lector RFID físico."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:8
 msgid ""
@@ -3284,10 +3321,16 @@ msgid ""
 "an existing operation barcode pulls up the relevant inventory or "
 "manufacturing documents in Odoo on the mobile device."
 msgstr ""
+"Asegúrate de que el lector RFD40 esté emparejado y conectado a la "
+"computadora o al celular. Abre una operación (como una recepción, un "
+"traslado, una orden de entrega o una orden de fabricación) o realiza un "
+"conteo de inventario con el lector RFID. Al escanear el código de barras de "
+"una operación existente, Odoo abre los documentos de inventario o "
+"manufactura correspondientes en el dispositivo móvil."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:14
 msgid "Overview of the workflow"
-msgstr ""
+msgstr "Descripción general del flujo de trabajo"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:16
 msgid ""
@@ -3296,20 +3339,27 @@ msgid ""
 "the operation barcode), or open the :guilabel:`Inventory count` operation. "
 "Scan the RFID barcodes for the product."
 msgstr ""
+"Con el lector RFD40 en la mano, abre la aplicación **Código de barras** en "
+"la computadora o el teléfono. Abre el registro de la operación (desde la "
+"interfaz de **Código de barras** o al escanear el código de barras de la "
+"operación) o abre la operación :guilabel:`Conteo de inventario`. Escanea los "
+"códigos de barras RFID del producto."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:21
 msgid ":doc:`../setup/operation_types`"
-msgstr ""
+msgstr ":doc:`../setup/operation_types`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:23
 msgid ""
 "To begin managing inventory using RFID tags, open the **Barcode** app on the "
 "smart device."
 msgstr ""
+"Abre la aplicación **Código de barras** en el dispositivo inteligente para "
+"comenzar a gestionar el inventario con etiquetas RFID."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:28
 msgid "Manage inventory"
-msgstr ""
+msgstr "Gestionar el inventario"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:30
 msgid ""
@@ -3321,14 +3371,22 @@ msgid ""
 "verifies the connection. Scan the products, then validate the scan on the "
 "mobile computer or smartphone."
 msgstr ""
+"Desde la aplicación **Códigos de barras**, escanea el código de barras de la "
+"operación o presiona el botón :guilabel:`Operaciones` para abrir las "
+"operaciones de recepción, traslados internos, órdenes de entrega u órdenes "
+"de fabricación. Si el dispositivo de lectura no está conectado, Odoo se "
+"conecta al dispositivo de forma automática. Cuando el dispositivo esté "
+"conectado aparecerá una notificación en la pantalla que confirma la "
+"conexión. Escanea los productos y valida la acción en la computadora o el "
+"celular."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:-1
 msgid "Validate the operation on the mobile device."
-msgstr ""
+msgstr "Valida la operación en el dispositivo móvil."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:42
 msgid "Counting inventory"
-msgstr ""
+msgstr "Conteo de inventario"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:44
 msgid ""
@@ -3340,10 +3398,18 @@ msgid ""
 "the :icon:`fa-pencil` :guilabel:`(edit)` icon. Click :guilabel:`Apply` to "
 "apply the count on the smart device."
 msgstr ""
+"Muchas fábricas y almacenes requieren llevar control del inventario, lo que "
+"incluye realizar conteos periódicos de los productos para garantizar que los "
+"registros son correctos. Para cambiar la cantidad de un producto en "
+"existencia o ajustar el inventario, abre la operación :guilabel:`Conteo de "
+"inventario` y escanea los productos para contarlos. Si es necesario, "
+"verifica el conteo de forma manual. Puedes actualizarlo al hacer clic en el "
+"icono :icon:`fa-pencil` :guilabel:`(editar)`. Haz clic en :guilabel:`Aplicar`"
+" para aplicar el conteo en el dispositivo inteligente."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:-1
 msgid "Apply the count on the Inventory Adjustment page."
-msgstr ""
+msgstr "Aplicar el conteo en la página de ajustes de inventario."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:3
 msgid "Create and process transfers with barcodes"
@@ -5274,7 +5340,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:3
 msgid "RFID"
-msgstr ""
+msgstr "RFID"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:7
 msgid ""
@@ -5284,6 +5350,12 @@ msgid ""
 "RFID helps automate processes by keeping inventory accurate and tracking "
 "internal and external moves."
 msgstr ""
+"RFID son las siglas de identificación por radiofrecuencia en inglés. RFID "
+"permite rastrear artículos a través de ondas de radio: las etiquetas RFID se "
+"colocan en los productos del inventario y los lectores RFID leen esas "
+"etiquetas para transmitir la información a una computadora. RFID ayuda a "
+"automatizar procesos, mantiene el inventario actualizado de forma precisa y "
+"rastrea movimientos internos y externos."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:12
 msgid ""
@@ -5293,40 +5365,49 @@ msgid ""
 "establishes common rules for encoding information within a barcode to "
 "facilitate the global exchange of goods."
 msgstr ""
+"Las etiquetas RFID transmiten códigos electrónicos de producto "
+"(EPC, por sus siglas en inglés), estos son identificadores únicos para "
+"distinguir artículos individuales. El EPC en Odoo se basa en estándares GS1 "
+"para identificar productos de forma consistente en todo el mundo. La "
+"nomenclatura GS1 define reglas comunes para codificar información en un "
+"código de barras y facilitar el intercambio global de bienes."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:18
 msgid ":doc:`../operations/gs1_nomenclature`"
-msgstr ""
+msgstr ":doc:`../operations/gs1_nomenclature`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:21
 msgid "Hardware"
-msgstr ""
+msgstr "Hardware"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:23
 msgid "The following are required to begin working with RFID in Odoo:"
-msgstr ""
+msgstr "Para empezar a trabajar con RFID en Odoo necesitas lo siguiente:"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:25
 msgid "Zebra TCX Series mobile computer, or"
-msgstr ""
+msgstr "Una computadora móvil serie TCX de Zebra."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:26
 msgid "Android Smartphone"
-msgstr ""
+msgstr "O un teléfono inteligente con Android."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:28
 msgid "Paired with:"
-msgstr ""
+msgstr "Usado en conjunto con:"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:30
 msgid "Zebra RFD40 (can read and write RFID tags)"
-msgstr ""
+msgstr "Zebra RFD40 (que lee y escribe etiquetas RFID)."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:35
 msgid ""
 "Before using RFID tags to manage inventory, the Android Package Kit (APK) "
 "with RFID support must be installed on the mobile computer or smartphone."
 msgstr ""
+"Antes de usar etiquetas RFID para gestionar el inventario, instala el "
+"Android Package Kit (APK) con compatibilidad RFID en el equipo móvil o el "
+"teléfono inteligente."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:39
 msgid ""
@@ -5335,6 +5416,11 @@ msgid ""
 "device's :guilabel:`App` or :guilabel:`App & Notification` settings, under "
 "the :guilabel:`Special access` or :guilabel:`Special app access` section."
 msgstr ""
+"Antes de instalar el APK en un dispositivo individual, primero activa la "
+"opción para instalar aplicaciones desconocidas en los ajustes del "
+"dispositivo. Busca este ajuste en :guilabel:`Aplicaciones` o :guilabel:`"
+"Aplicaciones y notificaciones` dentro de la sección :guilabel:`Acceso "
+"especial` o :guilabel:`Acceso especial a las aplicaciones`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:44
 msgid ""
@@ -5345,10 +5431,16 @@ msgid ""
 "computer and transfer the APK via USB or Bluetooth, or use the device's web "
 "browser to download the APK."
 msgstr ""
+"Después, descarga el APK. En la página :guilabel:`Descargas`, dentro de la "
+"sección :guilabel:`Aplicación móvil`, haz clic en :guilabel:`Descargar` "
+"junto a la opción :guilabel:`Android` y selecciona :guilabel:`Descargar APK "
+"(con compatibilidad RFID de Zebra)` en el menú desplegable. Descarga el "
+"archivo desde una computadora y transfiere el APK por USB o Bluetooth, o usa "
+"el navegador web del dispositivo para hacerlo."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:-1
 msgid "Download the APK from the Download page."
-msgstr ""
+msgstr "Descargar el APK desde la página de descargas."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:53
 msgid ""
@@ -5358,26 +5450,38 @@ msgid ""
 "device's file manager, open it and navigate to the location where the file "
 "is stored, then tap it to install the APK."
 msgstr ""
+"Instala el APK. Si la opción :guilabel:`Instalar aplicaciones desconocidas` "
+"está activa en el navegador web del dispositivo, instala el APK desde la "
+"notificación de descarga del navegador. Si la opción está activa en el "
+"gestor de archivos del dispositivo, ábrelo, dirígete a la ubicación del "
+"archivo y tócalo para instalar el APK."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:58
 msgid ""
 "Then, when reading or writing RFID tags, ensure that the Zebra device and "
 "the smart device are paired and connected."
 msgstr ""
+"Después, al leer o escribir etiquetas RFID, asegúrate de que el dispositivo "
+"Zebra y el dispositivo inteligente estén emparejados y conectados."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:62
 msgid "Set a compatible barcode"
-msgstr ""
+msgstr "Configurar un código de barras compatible"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:64
 msgid ""
 "Before you can manage inventory using RFID tags, a compatible barcode must "
 "be assigned to the products. Set the product barcode in the product form."
 msgstr ""
+"Antes de gestionar el inventario con etiquetas RFID, asigna un código de "
+"barras compatible a los productos. Define el código de barras del producto "
+"en el formulario del mismo."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:68
 msgid ":ref:`Set product barcodes <inventory/barcode/set-barcodes>`"
 msgstr ""
+":ref:`Configurar códigos de barras de productos <inventory/barcode/set-"
+"barcodes>`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:70
 msgid ""
@@ -5385,16 +5489,22 @@ msgid ""
 "inventory tracking must be enabled for the product. Product barcodes that "
 "are not GTIN-14-compatible must be upgraded to work with RFID."
 msgstr ""
+"Para trabajar con RFID, el código de barras del producto debe ser compatible "
+"con GTIN-14 y debes activar el seguimiento de inventario del producto. Los "
+"códigos de barras de producto que no sean compatibles con GTIN-14 requieren "
+"una actualización para funcionar con RFID."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:75
 msgid ""
 "Tracking by serial number or lots does not need to be enabled for this "
 "feature to work properly."
 msgstr ""
+"No necesitas activar el rastreo por número de serie o lote para que esta "
+"función trabaje de forma correcta."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:78
 msgid "Limitations"
-msgstr ""
+msgstr "Limitaciones"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:80
 msgid ""
@@ -5402,6 +5512,9 @@ msgid ""
 "SGTIN-96 is the only supported encoding scheme for RFID tags in Odoo. "
 "Alphanumeric serial numbers are **not** supported."
 msgstr ""
+"El número de serie que forma parte del EPC solo puede ser numérico, ya que "
+"SGTIN-96 es el único esquema de codificación compatible con las etiquetas "
+"RFID en Odoo. Odoo **no** admite números de serie alfanuméricos."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:83
 msgid ""
@@ -5409,14 +5522,21 @@ msgid ""
 "considered as one lot with a quantity of `1`. It does not count individual "
 "products in a receipt."
 msgstr ""
+"En productos con rastreo por lote podrás escanear el lote, pero el sistema "
+"lo considerará como un solo lote con una cantidad de `1`. No contabiliza "
+"productos individuales en una recepción."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:85
 msgid "Only ultra-high frequency (UHF) RFID tags are supported."
 msgstr ""
+"El sistema solo es compatible con las etiquetas RFID de ultra alta "
+"frecuencia (UHF)."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:86
 msgid "Products need to be GS1-registered because barcodes must be unique."
 msgstr ""
+"Los productos deben estar registrados en GS1, ya que los códigos de barras "
+"deben ser únicos."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/serial_numbers_lots.rst:3
 msgid "Barcodes for lot and serial numbers"
@@ -7017,6 +7137,9 @@ msgid ""
 "field (i.e. `International Shipping`). In the :guilabel:`Product Type` "
 "field, select :guilabel:`Service` as the :guilabel:`Product Type`."
 msgstr ""
+"Asígnale un nombre al producto de costo en destino en el campo :guilabel:`"
+"Nombre del producto` (por ejemplo, `Envío internacional`). En el campo "
+":guilabel:`Tipo de producto`, selecciona :guilabel:`Servicio`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/landed_costs.rst:50
 msgid ""
@@ -7096,6 +7219,9 @@ msgid ""
 "landed cost. This product can also be added to vendor bills that are in the "
 "draft state."
 msgstr ""
+"Al crear nuevas solicitudes de cotización puedes agregar este producto en "
+"una línea de la factura como costo en destino. También puedes agregarlo a "
+"las facturas de proveedor que estén en estado de borrador."
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/landed_costs.rst:71
 msgid ""
@@ -7120,6 +7246,11 @@ msgid ""
 "click :guilabel:`Add a product`, under the :guilabel:`Products` tab, to add "
 "products to the |RfQ|."
 msgstr ""
+"Ve a :menuselection:`Compras --> Nuevo` para crear una solicitud de "
+"cotización. En el campo :guilabel:`Proveedor`, agrega el proveedor al que le "
+"comprarás los productos. Después, haz clic en :guilabel:`Agregar un producto`"
+" en la pestaña :guilabel:`Productos` para agregar productos a la solicitud "
+"de cotización."
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/landed_costs.rst:81
 msgid ""
@@ -7127,6 +7258,9 @@ msgid ""
 "click :guilabel:`Receive` once the products have been received, followed "
 "by :guilabel:`Validate`."
 msgstr ""
+"Cuando todo esté listo, haz clic en :guilabel:`Confirmar orden` para "
+"confirmarla. Después, haz clic en :guilabel:`Recibir` cuando recibas los "
+"productos y, a continuación, en :guilabel:`Validar`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/landed_costs.rst:85
 msgid "Create vendor bill"
@@ -7147,6 +7281,11 @@ msgid ""
 "the :guilabel:`Bill Matching` smart button to match with an existing bill. "
 "This opens a new :guilabel:`Vendor Bill` in the :guilabel:`Draft` stage."
 msgstr ""
+"Ve a :menuselection:`Compras` y abre la orden de compra para la que debes "
+"crear una factura de proveedor. Luego, sube la factura o haz clic en el "
+"botón inteligente :guilabel:`Conciliación de factura` para vincular una "
+"factura existente. Esto abre una nueva :guilabel:`factura de proveedor` en "
+"estado de :guilabel:`borrador`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/landed_costs.rst:95
 msgid ""
@@ -7161,12 +7300,16 @@ msgstr ""
 msgid ""
 "Click :guilabel:`Add a line`. Add the landed cost product to the vendor bill."
 msgstr ""
+"Haz clic en :guilabel:`Agregar una línea` y agrega el producto de costo en "
+"destino a la factura de proveedor."
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/landed_costs.rst:100
 msgid ""
 "Click the :icon:`fa-cloud-upload` :guilabel:`(Save)` icon to manually save "
 "and update the draft bill."
 msgstr ""
+"Haz clic en el icono :icon:`fa-cloud-upload` :guilabel:`(Guardar)` para "
+"guardar de forma manual y actualizar la factura en borrador."
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/landed_costs.rst:-1
 msgid "Landed Costs column checkboxes for product and landed cost."
@@ -7205,6 +7348,8 @@ msgstr "Agregar costos en destino"
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/landed_costs.rst:118
 msgid "Click :guilabel:`Create Landed Costs` at the top of the vendor bill."
 msgstr ""
+"Haz clic en :guilabel:`Crear costos en destino` en la parte superior de la "
+"factura de proveedor."
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/landed_costs.rst:120
 msgid ""
@@ -7221,6 +7366,9 @@ msgid ""
 "down menu, and select which transfer the landed cost belongs to. Only "
 "validated transfers can be selected."
 msgstr ""
+"Desde el formulario :guilabel:`Costo en destino`, haz clic en el menú "
+"desplegable :guilabel:`Traslados` y selecciona a qué traslado corresponde el "
+"costo en destino. Solo puedes seleccionar traslados validados."
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/landed_costs.rst:-1
 msgid "Landed cost form with selected receipt transfer."
@@ -7257,6 +7405,12 @@ msgid ""
 "landed cost, and the :guilabel:`New Value` column displays the sum of the "
 "two, for the total cost of the |PO|."
 msgstr ""
+"Haz clic en la pestaña :guilabel:`Ajustes de valoración` para ver cómo "
+"influyen los costos en destino. La columna :guilabel:`Valor original` "
+"muestra el precio original de la orden de compra, la columna :guilabel:`"
+"Costo en destino adicional` muestra el costo en destino y la columna "
+":guilabel:`Nuevo valor` muestra la suma de ambos como costo total de la "
+"orden de compra."
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/landed_costs.rst:142
 msgid ""
@@ -7271,6 +7425,9 @@ msgid ""
 "Each journal entry created for a landed cost on a vendor bill can be viewed "
 "in the :menuselection:`Accounting` app."
 msgstr ""
+"Puedes ver cada asiento contable que el sistema crea por un costo en destino "
+"en una factura de proveedor desde la aplicación "
+":menuselection:`Contabilidad`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/landed_costs.rst:148
 msgid ""
@@ -7278,6 +7435,9 @@ msgid ""
 "--> Accounting --> Journal Entries`, and locate the correct entry, by number "
 "(e.g. `STJ/2025/XXXXX`)."
 msgstr ""
+"Para localizar estos asientos contables, ve a :menuselection:`Contabilidad --"
+"> Contabilidad --> Asientos contables` y busca el asiento correcto por "
+"número (por ejemplo, `STJ/2025/XXXXX`)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/landed_costs.rst:151
 msgid ""
@@ -7326,6 +7486,8 @@ msgid ""
 "Depreciate specific lot or serial numbers when they sit in stock for too "
 "long."
 msgstr ""
+"Deprecia ciertos números de serie o lote cuando permanecen en el inventario "
+"por mucho tiempo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/valuation_by_lots.rst:15
 msgid ""
@@ -10067,6 +10229,11 @@ msgid ""
 "Purchase units of measure must be in the same category as the default unit "
 "of measure."
 msgstr ""
+"Las unidades de medida en las que compras el producto deben estar definidas "
+"en la pestaña :guilabel:`Compras` del producto. Puedes crear órdenes de "
+"compra con estas unidades de medida después de definirlas en la lista de "
+"precios del proveedor. Las unidades de medida de compra deben pertenecer a "
+"la misma categoría que la unidad de medida predeterminada."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:-1
 msgid "Specify a purchase unit of measure in the \"Purchase\" tab."
@@ -21110,6 +21277,12 @@ msgid ""
 "sales by showing customers the exact cost for each shipping carrier or "
 "delivery timeframe."
 msgstr ""
+"En Odoo, los *métodos de entrega* permiten calcular los costos de envío en "
+"las órdenes de venta y en los carritos de comercio electrónico. Además, "
+"estos ofrecen información precisa sobre las tarifas de envío a los clientes "
+"y a los equipos de ventas. Esta transparencia ayuda a cerrar ventas, ya que "
+"los clientes pueden visualizar el costo exacto de cada transportista o plazo "
+"de entrega."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:12
 msgid ""
@@ -21151,6 +21324,9 @@ msgid ""
 "module must be installed. To do so, navigate to the :menuselection:`Apps` "
 "application from the main Odoo dashboard."
 msgstr ""
+"Instala el módulo **Costos de envío** para calcular el costo de envío de las "
+"órdenes de venta y de comercio electrónico. Para ello, ve a la aplicación "
+":menuselection:`Aplicaciones` desde el tablero principal de Odoo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:29
 msgid ""
@@ -21158,6 +21334,9 @@ msgid ""
 "the search bar. After finding the :guilabel:`Delivery Costs` module, "
 "click :guilabel:`Install` to install it."
 msgstr ""
+"Después elimina el filtro :guilabel:`Aplicaciones` y escribe `Costos de "
+"envío` en la barra de búsqueda. Una vez que encuentres el módulo :guilabel:`"
+"Costos de envío` haz clic en :guilabel:`Instalar` para instalarlo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:-1
 msgid "Install the Delivery Costs module."
@@ -21173,6 +21352,10 @@ msgid ""
 "which appear as individual line items. First, navigate to the desired sales "
 "order by going to :menuselection:`Sales app --> Orders --> Orders`."
 msgstr ""
+"Los métodos de envío forman parte de las órdenes de venta como productos de "
+"entrega y aparecen como artículos individuales en su respectiva línea. "
+"Primero, ve a la orden de venta que quieres desde :menuselection:`Ventas --> "
+"Órdenes --> Órdenes`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:44
 msgid ""
@@ -21180,6 +21363,10 @@ msgid ""
 "button. The :guilabel:`Add a shipping method` pop-up window opens. Then, "
 "using the drop-down menu, select an available shipping method."
 msgstr ""
+"Abre la orden de venta correspondiente, haz clic en el botón :guilabel:`"
+"Agregar envío` para abrir la ventana :guilabel:`Agregar un método de envío` "
+"y después usa el menú desplegable para seleccionar uno de los métodos de "
+"envío disponibles."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:48
 msgid ""
@@ -21188,6 +21375,11 @@ msgid ""
 "manufacture>` tab for each product form). Edit the field to specify the "
 "exact weight, and then click :guilabel:`Add` to add the shipping method."
 msgstr ""
+"El sistema completa el :guilabel:`peso total de la orden` según los pesos de "
+"los productos (definidos en la pestaña :ref:`Inventario <inventory/"
+"product_management/manufacture>` de cada formulario de producto). Edita el "
+"campo para indicar el peso exacto y haz clic en :guilabel:`Agregar` para "
+"incluir el método de envío."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:53
 msgid ""
@@ -21204,12 +21396,19 @@ msgid ""
 "button, and the shipping costs are automatically updated from the carrier. "
 "These rates cannot be modified."
 msgstr ""
+"Algunos de los métodos de envío conectados necesitan obtener las tarifas del "
+"transportista. En ese caso, haz clic en el botón :icon:`oi-arrow-right` "
+":guilabel:`Obtener tarifa` y los costos de envío se actualizan de forma "
+"automática con datos del transportista. No puedes modificar estas tarifas."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:61
 msgid ""
 "The shipping cost is added as a line item in the :guilabel:`Order Lines` tab "
 "as the :guilabel:`Delivery Product` detailed on the shipping method form."
 msgstr ""
+"El costo de envío se agrega como una línea de artículo en la pestaña "
+":guilabel:`Líneas de la orden` como el :guilabel:`producto de entrega` "
+"definido en el formulario del método de envío."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:65
 msgid ""
@@ -21218,6 +21417,10 @@ msgid ""
 "(Manual)` and has a cost of `$200`. The sales order contains two line items: "
 "one for the desk, and another for the delivery method."
 msgstr ""
+"Un cliente compró un escritorio izquierdo con almacenamiento y pidió que se "
+"lo entregaran. Este método de entrega está definido como `Entrega de muebles "
+"(Manual)` y tiene un costo de `$200`. La orden de venta incluye dos líneas "
+"de artículos: una para el escritorio y otra para el método de entrega."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:0
 msgid "Show delivery order on the sales order line."
@@ -21238,6 +21441,13 @@ msgid ""
 "the delivery itself, open the :guilabel:`Additional Info` tab and modify "
 "the :guilabel:`Carrier` field."
 msgstr ""
+"El método de envío agregado a la orden de venta estará vinculado a los "
+"detalles del transportista en la orden de entrega. Después de confirmar la "
+"orden, aparece el botón inteligente :icon:`fa-truck` :guilabel:`Entrega` en "
+"la parte superior de la página. Haz clic en el botón :icon:`fa-truck` "
+":guilabel:`Entrega` para abrir el formulario de entrega del almacén. Abre la "
+"pestaña :guilabel:`Información adicional` de la entrega y modifica el campo "
+":guilabel:`Transportista` para agregar o cambiar el método de entrega."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:-1
 msgid "Shipping carrier information on the delivery form."
@@ -24973,6 +25183,8 @@ msgid ""
 "To configure delivery methods, go to :menuselection:`Inventory --> "
 "Configuration --> Delivery Methods`."
 msgstr ""
+"Para configurar métodos de entrega, ve a :menuselection:`Inventario --> "
+"Configuración --> Métodos de entrega`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:19
 msgid ""
@@ -24986,7 +25198,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:22
 msgid "Go to :menuselection:`Inventory --> Configuration --> Settings`."
-msgstr ""
+msgstr "Ve a :menuselection:`Inventario --> Configuración --> Ajustes`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:23
 msgid ""
@@ -25026,6 +25238,11 @@ msgid ""
 "apply the method to all web pages. This field only appears when the "
 "**eCommerce** app is enabled."
 msgstr ""
+":guilabel:`Sitio web`: Configura métodos de envío para una página de **"
+"Comercio electrónico**. Selecciona el sitio web correcto en el menú "
+"desplegable o deja el campo vacío para aplicar el método a todas las páginas "
+"web. Este campo solo aparece cuando la aplicación **Comercio electrónico** "
+"está activa."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:39
 msgid ""
@@ -25052,6 +25269,10 @@ msgid ""
 "Delivery <payment_providers/inperson_payments/cash_on_delivery>` payment "
 "method when selecting this delivery option on the ecommerce website."
 msgstr ""
+":guilabel:`Pago contra entrega`: Permite que los clientes seleccionen el "
+"método de pago :ref:`Pago contra entrega <payment_providers/"
+"inperson_payments/cash_on_delivery>` al seleccionar esta opción de entrega "
+"en el sitio web de comercio electrónico."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:48
 msgid ""
@@ -25060,6 +25281,10 @@ msgid ""
 "the method to all companies. This field only appears in multi-company "
 "databases."
 msgstr ""
+":guilabel:`Empresa`: Si el método de envío aplica a una empresa específica, "
+"selecciónala con el menú desplegable. Deja el campo vacío para aplicar el "
+"método a todas las empresas. Este campo solo aparece en las bases de datos "
+"multiempresa."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:51
 msgid ""
@@ -25070,6 +25295,12 @@ msgid ""
 "the :ref:`Set routes on shipping method <inventory/shipping_receiving/"
 "shipping-route>` section."
 msgstr ""
+":guilabel:`Rutas`: Selecciona las rutas aplicables para definir distintos "
+"métodos de entrega, como envío estándar o exprés, según los tiempos de "
+"entrega. Este campo solo aparece cuando las rutas multietapa están "
+"habilitadas en los ajustes de inventario. Consulta la sección :ref:`Definir "
+"rutas en un método de entrega <inventory/shipping_receiving/shipping-route>` "
+"para obtener más información."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:55
 msgid ""
@@ -25096,10 +25327,12 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:64
 msgid "To set up `$200` flate-rate shipping, fill in the following fields:"
 msgstr ""
+"Completa los siguientes campos para configurar un envío con una tarifa fija "
+"de `$200`:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:66
 msgid ":guilabel:`Delivery Method`: `Furniture Delivery (Manual)`"
-msgstr ""
+msgstr ":guilabel:`Método de entrega`: `Entrega de muebles (Manual)`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:67
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:110
@@ -25108,15 +25341,16 @@ msgstr ":guilabel:`Proveedor`: :guilabel:`Precio fijo`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:68
 msgid ":guilabel:`Fixed Price`: `200`"
-msgstr ""
+msgstr ":guilabel:`Precio fijo`: `200`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:69
 msgid ":guilabel:`Delivery Product`: :guilabel:`Furniture Delivery (manual)`"
 msgstr ""
+":guilabel:`Producto de entrega`: :guilabel:`Entrega de muebles (manual)`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:0
 msgid "Set up a delivery method with a fixed price of 200."
-msgstr ""
+msgstr "Configurar un método de entrega con un precio fijo de 200."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:76
 msgid ""
@@ -25187,6 +25421,12 @@ msgid ""
 "this option makes the :guilabel:`Fixed Price` field become available, which "
 "is where the fixed rate shipping amount is defined."
 msgstr ""
+"Para configurar el mismo precio de envío para todas las órdenes, ve a la "
+"aplicación :menuselection:`Inventario --> Configuración --> Métodos de "
+"entrega`. Haz clic en :guilabel:`Nuevo` y, en el formulario de método de "
+"envío, establece el :guilabel:`proveedor` como la opción :guilabel:`precio "
+"fijo`. Al seleccionar esta opción, el campo :guilabel:`Precio fijo` estará "
+"disponible, ahí puedes definir el importe de la tarifa fija de envío."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:102
 msgid ""
@@ -25413,6 +25653,8 @@ msgid ""
 "To set up routes, go to :menuselection:`Inventory --> Configuration --> "
 "Routes`. Click :guilabel:`New`, or select the desired route."
 msgstr ""
+"Para configurar rutas, ve a :menuselection:`Inventario --> Configuración --> "
+"Rutas`. Haz clic en :guilabel:`Nuevo` o selecciona la ruta deseada."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:195
 msgid ""
@@ -25437,6 +25679,8 @@ msgid ""
 "Then, go to :menuselection:`Inventory --> Configuration --> Delivery "
 "Methods`, and select the desired shipping method."
 msgstr ""
+"Después, ve a :menuselection:`Inventario --> Configuración --> Métodos de "
+"entrega` y selecciona el método de envío deseado."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:206
 msgid ""
@@ -26219,6 +26463,10 @@ msgid ""
 "account.sendcloud.com/signup/ ?"
 "utm_source=odoo&utm_medium=partnerships&utm_campaign=partner_integrations_page>`_."
 msgstr ""
+"Para empezar, `crea o inicia sesión en una cuenta de Sendcloud <https://"
+"account.sendcloud.com/signup/ "
+"?utm_source=odoo&utm_medium=partnerships&utm_campaign=partner_integrations_page>`_."
+""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:18
 msgid ""
@@ -26227,6 +26475,10 @@ msgid ""
 "integration>`_ to configure the account and generate the connector "
 "credentials."
 msgstr ""
+"En la plataforma de Sendcloud, sigue la `documentación de integración de "
+"Sendcloud <https://support.sendcloud.com/hc/en-us/articles/360059470491-Odoo-"
+"Native-integration>`_ para configurar la cuenta y generar las credenciales "
+"del conector."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:23
 msgid ""
