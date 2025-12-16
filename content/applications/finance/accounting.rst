@@ -278,8 +278,7 @@ Inventory valuation
 ===================
 
 Both periodic (manual) and perpetual (automated) inventory valuations are supported in Odoo. The
-available methods are standard price, average price, :abbr:`LIFO (Last-In, First-Out)` and
-:abbr:`FIFO (First-In, First-Out).`
+available methods are Standard Price, Average Cost (AVCO), and First In First Out (FIFO).
 
 .. seealso::
    :doc:`../inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config`
