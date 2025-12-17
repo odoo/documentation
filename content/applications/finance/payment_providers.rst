@@ -23,6 +23,7 @@ Online payments
    payment_providers/razorpay
    payment_providers/sips
    payment_providers/stripe
+   payment_providers/worldline
 
 Odoo embeds several **payment providers** that allow your customers to pay online, on their
 *customer portals*, or on your *eCommerce website*. They can pay sales orders, invoices, or
@@ -146,6 +147,13 @@ Online payment providers
      - Full only
      - Full and partial
      - |V|
+     -
+   * - :doc:`Worldline <payment_providers/worldline>`
+     - The provider's website
+     - |V|
+     -
+     -
+     -
      -
 
 .. |V| replace:: ✔
