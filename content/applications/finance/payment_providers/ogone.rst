@@ -2,6 +2,11 @@
 Ogone
 =====
 
+.. important::
+   As of January 1, 2026, Worldline, the company behind the Ogone payment solution, no longer
+   supports Ogone. Users of the Ogone payment provider in Odoo should :ref:`migrate to Worldline
+   <worldline/ogone-migration>`.
+
 `Ogone <https://www.ingenico.com/>`_, also known as **Ingenico Payment Services** is a France-based
 company that provides the technology involved in secure electronic transactions.
 
