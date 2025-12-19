@@ -8,7 +8,7 @@ Odoo Enterprise Subscription Agreement
 
    `Download PDF <https://www.odoo.com/documentation/{CURRENT_BRANCH}/odoo_enterprise_agreement.pdf>`_
 
-.. note:: Version 11 - 2025-07-09
+.. note:: Version 12 - 2025-12-19
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
@@ -26,6 +26,7 @@ Odoo Enterprise Subscription Agreement
         clarify what happens with non-covered versions;
         for Data Protection, clarify that data deletion may be restricted by law (e.g. DK bookkeeping act)
 .. v11a, 11b: clarify fee for non-covered versions in 5.1, and delay after LTS release.
+.. v12: 7% increase is per year, not per Term
 
 By subscribing to the Odoo Enterprise services (the "Services") provided by Odoo SA and its
 affiliates (collectively, "Odoo SA") in relation with Odoo Enterprise Edition or Odoo Community
@@ -323,7 +324,7 @@ for each missing month of coverage.
 
 Upon renewal as covered in section :ref:`term`, if the charges applied during the previous Term
 (excluding any extra fee for use of a non-Covered Version) are lower than the most current
-applicable list price, these charges will increase by up to 7%.
+applicable list price, these charges will increase by up to 7% per year of the previous Term.
 
 .. _taxes:
 
