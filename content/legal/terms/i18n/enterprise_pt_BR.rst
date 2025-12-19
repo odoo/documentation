@@ -13,7 +13,7 @@ Contrato de Assinatura do Odoo Enterprise
     valor legal. A única referência oficial aos termos do Contrato “Odoo Enterprise Subscription Agreement”
     é a :ref:`versão original em inglês <enterprise_agreement>`.
 
-.. note:: Version 11 - 2025-07-09
+.. note:: Version 12 - 2025-12-19
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
@@ -33,6 +33,7 @@ Contrato de Assinatura do Odoo Enterprise
         clarify what happens with non-covered versions;
         for Data Protection, clarify that data deletion may be restricted by law (e.g. DK bookkeeping act)
 .. v11a, 11b: clarify fee for non-covered versions in 5.1, and delay after LTS release.
+.. v12: 7% increase is per year, not per Term
 
 Ao assinar os serviços do Odoo Enterprise (os "Serviços") fornecidos pela Odoo SA e suas
 afiliadas (coletivamente, "Odoo SA") em relação ao Odoo Enterprise Edition ou Odoo
@@ -329,7 +330,7 @@ uma taxa extra única para cada mês de cobertura faltante.
 Após a renovação, conforme previsto na seção :ref:`term_pt`, se os preços aplicados
 durante a Vigência anterior (excluindo qualquer taxa extra pelo uso de uma Versão
 não Coberta) forem inferiores ao preço de tabela aplicável mais atual, tais preços
-aumentarão em até 7%.
+aumentarão em até 7% por ano da Vigência anterior.
 
 .. _taxes_pt:
 
