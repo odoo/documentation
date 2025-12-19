@@ -14,8 +14,8 @@ msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-17 18:30+0000\n"
-"PO-Revision-Date: 2025-12-18 23:05+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2025-12-19 23:05+0000\n"
+"Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-17-doc/administration/es_419/>\n"
 "Language: es_419\n"
@@ -172,6 +172,8 @@ msgid ""
 "The database's current version must be :doc:`supported "
 "<standard_extended_support>`."
 msgstr ""
+"La versión actual de la base de datos debe ser :doc:`compatible "
+"<standard_extended_support>`."
 
 #: ../../content/administration/hosting.rst:23
 msgid "Create a :ref:`duplicate of the database <on-premise/duplicate>`."
@@ -262,6 +264,11 @@ msgid ""
 "the next :doc:`major version <standard_extended_support>`, waiting for its "
 "release if necessary."
 msgstr ""
+"Las :doc:`versiones intermedias <standard_extended_support>` de Odoo en "
+"línea no son compatibles con Odoo.sh ni con las instalaciones alojadas de "
+"forma local. Si la base de datos que deseas transferir usa una versión "
+"intermedia, primero deberás actualizarla a la siguiente :doc:`versión mayor "
+"<standard_extended_support>` y esperar su lanzamiento si hace falta."
 
 #: ../../content/administration/hosting.rst:55
 msgid ""
@@ -1710,6 +1717,11 @@ msgid ""
 "The procedure is detailed in the chapter :ref:`Settings > Submodules <odoo-"
 "sh/settings/submodules>`."
 msgstr ""
+"Si agregas repositorios privados como submódulos en tus ramas deberás "
+"configurar una llave de despliegue en los ajustes de tu proyecto de Odoo.sh "
+"y en los ajustes de tu repositorio. De lo contrario, Odoo.sh no tendrá "
+"permiso para descargarlos. Encontrarás detalles sobre el procedimiento en el "
+"capítulo :ref:`Ajustes > Submódulos <odoo-sh/settings/submodules>`."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:34
 msgid "Adding a submodule"
@@ -1724,6 +1736,8 @@ msgid ""
 "For now it is not possible to add **private** repositories with this method. "
 "You can nevertheless do so :ref:`with Git <odoo-sh/settings/submodules>`."
 msgstr ""
+"Por ahora no es posible agregar repositorios **privados** con este método, "
+"pero puedes hacerlo :ref:`con Git <odoo-sh/settings/submodules>`."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:43
 msgid ""
@@ -2730,6 +2744,8 @@ msgid ""
 "The :guilabel:`Branches` view provides an overview of the different branches "
 "in your repository."
 msgstr ""
+"La vista de :guilabel:`ramas` muestra un resumen de las distintas ramas de "
+"tu repositorio."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:10
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:43
@@ -2990,6 +3006,11 @@ msgid ""
 "the production database. It is possible to create manual backups of staging "
 "databases."
 msgstr ""
+"Las bases de datos de prueba no se respaldan de forma automática. Aun así, "
+"puedes restaurar una copia de seguridad de la base de datos de producción en "
+"una rama de prueba para hacer pruebas o para recuperar los datos eliminados "
+"por accidente de la base de datos de producción de forma manual. También "
+"puedes crear respaldos manuales de las bases de datos de prueba."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:116
 msgid ""
@@ -2997,6 +3018,9 @@ msgid ""
 "months. After that, they can be automatically blocked without prior notice. "
 "Only rebuilding the branch will allow you to use that specific branch again."
 msgstr ""
+"Las bases de datos creadas para ramas de prueba están pensadas para durar "
+"hasta tres meses. Después de ese plazo, el sistema puede bloquearlas sin "
+"aviso previo. Solo al volver a compilar la rama podrás volver a usarla."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:123
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:510
@@ -4520,6 +4544,8 @@ msgid ""
 "Provided you have the necessary :ref:`access rights <odoo-sh/settings/"
 "collaborators>` on the project, you will be granted SSH access to the build."
 msgstr ""
+"Recibirás acceso SSH a la compilación si cuentas con los :ref:`permisos de "
+"acceso <odoo-sh/settings/collaborators>` necesarios en el proyecto."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:789
 msgid ""
@@ -4638,6 +4664,8 @@ msgid ""
 "In the :guilabel:`Builds` view, a row represents a branch, and a cell within "
 "that row represents a build of that branch."
 msgstr ""
+"En la vista de :guilabel:`compilaciones`, cada fila representa una rama y "
+"cada celda dentro de esa fila representa una compilación de esa rama."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:22
 msgid ""
@@ -5081,6 +5109,9 @@ msgid ""
 "project, provided it uses a :doc:`supported version <../../"
 "standard_extended_support>` of Odoo."
 msgstr ""
+"Una vez que tu plataforma esté desplegada podrás importar una base de datos "
+"a tu proyecto de Odoo.sh si esta usa una :doc:`versión compatible <../../"
+"standard_extended_support>` de Odoo."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:73
 msgid ""
@@ -5700,6 +5731,8 @@ msgid ""
 "The :guilabel:`Settings` view allow you to manage the configuration of your "
 "project."
 msgstr ""
+"La vista de :guilabel:`ajustes` te permite gestionar la configuración de tu "
+"proyecto."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:10
 msgid "Project name"
@@ -5712,10 +5745,14 @@ msgid ""
 "automatically derived from this name. If you change the project name, only "
 "future builds will use the new name."
 msgstr ""
+"El nombre del proyecto define la dirección que usarás para acceder a la base "
+"de datos de producción. Las direcciones de las compilaciones de prueba y de "
+"desarrollo se derivan de ese nombre. Si cambias el nombre del proyecto, solo "
+"las próximas compilaciones usarán el nuevo nombre."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:None
 msgid "The project name setting"
-msgstr ""
+msgstr "Captura de pantalla de los ajustes del nombre del proyecto"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:22
 msgid "Collaborators"
@@ -5728,6 +5765,10 @@ msgid ""
 "the :guilabel:`Developer` role. Click the dropdown menu to select another "
 "one:"
 msgstr ""
+"Para otorgarle acceso a un usuario de GitHub, escribe su nombre de usuario y "
+"haz clic en :guilabel:`Agregar`. De forma predeterminada, el sistema le "
+"asignará el rol :guilabel:`Desarrollador`. Haz clic en el menú desplegable "
+"para seleccionar otro:"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:27
 msgid ""
@@ -5735,6 +5776,9 @@ msgid ""
 "is dedicated to project management and has exclusive access to the project's "
 "settings."
 msgstr ""
+":guilabel:`Administrador`: Acceso total a todas las funciones y herramientas "
+"de Odoo.sh. Este rol está pensado para la gestión del proyecto y tiene "
+"acceso exclusivo a los ajustes del proyecto."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:29
 msgid ""
@@ -5743,6 +5787,12 @@ msgid ""
 "(UAT). Testers can work with copies of production data, but they cannot "
 "access the production database through Odoo.sh's tools."
 msgstr ""
+":guilabel:`Encargado de pruebas`: Acceso a las bases de datos de prueba y "
+"desarrollo, y a sus herramientas. Este rol está pensado para los usuarios "
+"que realizan pruebas de aceptación de usuarios "
+"(UAT, por sus siglas en inglés). Los encargados de pruebas pueden trabajar "
+"con copias de los datos de producción, pero no pueden acceder a la base de "
+"datos de producción a través de las herramientas de Odoo.sh."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:32
 msgid ""
@@ -5751,14 +5801,20 @@ msgid ""
 "production data. Developers cannot connect to the production or staging "
 "databases and do not have access to the web shell or server logs."
 msgstr ""
+":guilabel:`Desarrollador`: No tiene acceso a las bases de datos de "
+"producción ni de prueba. Este rol está pensado para los usuarios que "
+"modifican el código y no deben acceder a los datos de producción. Los "
+"desarrolladores no pueden conectarse a las bases de datos de producción ni "
+"de prueba, tampoco tienen acceso a la shell web ni a los registros del "
+"servidor."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:None
 msgid "The collaborators setting"
-msgstr ""
+msgstr "Captura de pantalla de los ajustes de colaboradores"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:42
 msgid "Feature access by stage and role"
-msgstr ""
+msgstr "Acceso a las funciones por etapas y roles"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:50
 msgid "Feature"
@@ -5780,7 +5836,7 @@ msgstr "Admin"
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:100
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:150
 msgid "Connect + / Connect as"
-msgstr ""
+msgstr "Conectar + / Conectar como"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:56
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:57
@@ -5881,7 +5937,7 @@ msgstr ":ref:`Editor <odoo-sh/branches/tabs/editor>`"
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:125
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:170
 msgid ":ref:`Monitor <odoo-sh/branches/tabs/monitor>`"
-msgstr ":ref:`Monitoreo <odoo-sh/branches/tabs/monitor>`"
+msgstr ":ref:`Monitor <odoo-sh/branches/tabs/monitor>`"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:80
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:130
@@ -5993,10 +6049,18 @@ msgid ""
 "<odoo-sh/branches/tabs/mails>` for development builds. Production and "
 "staging builds remain private; visitors can only view their status."
 msgstr ""
+"Al habilitar :guilabel:`Permitir acceso público`, la :doc:`página de "
+"compilaciones <builds>` pasa a ser pública y permite que los visitantes se "
+"conecten a las compilaciones de desarrollo. Los visitantes también pueden "
+"acceder a los :ref:`registros <odoo-sh/branches/tabs/logs>`, al :ref:`shell "
+"<odoo-sh/branches/tabs/shell>` y a los :ref:`correos <odoo-sh/branches/tabs/"
+"mails>` de las compilaciones de desarrollo. Las compilaciones de producción "
+"y de prueba siguen siendo privadas, así que los visitantes solo pueden ver "
+"su estado."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:None
 msgid "The public access setting"
-msgstr ""
+msgstr "Captura de pantalla de los ajustes de acceso público"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:236
 msgid "GitHub commit statuses"
@@ -6008,10 +6072,15 @@ msgid ""
 "GitHub. The token must have the *commit statuses (write)* repository "
 "permission."
 msgstr ""
+"Puedes agregar un token de GitHub para que Odoo.sh envíe los estados de las "
+"confirmaciones o commits de vuelta a GitHub. El token debe contar con el "
+"permiso de repositorio *commit statuses (write)*."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:None
 msgid "The GitHub commit statuses setting"
 msgstr ""
+"Captura de pantalla de los ajustes de estados de confirmaciones o commits de "
+"GitHub"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:245
 msgid ""
@@ -6019,10 +6088,14 @@ msgid ""
 "tokens <https://docs.github.com/en/authentication/keeping-your-account-and-"
 "data-secure/managing-your-personal-access-tokens>`_."
 msgstr ""
+"Consulta la `documentación de GitHub sobre la administración de tokens de "
+"acceso <https://docs.github.com/es/authentication/"
+"keeping-your-account-and-data-secure/managing-your-personal-access-tokens>`_ "
+"para obtener más información."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:250
 msgid "GitHub key and webhook"
-msgstr ""
+msgstr "Clave y webhook de GitHub"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:252
 msgid ""
@@ -6032,14 +6105,20 @@ msgid ""
 "the :guilabel:`Verify Deploy Key` and :guilabel:`Verify Webhook` buttons "
 "below to verify their configuration."
 msgstr ""
+"El sistema crea una clave de despliegue y un webhook en tu repositorio de "
+"GitHub de forma automática para que Odoo.sh obtenga el código y reciba las "
+"notificaciones de las confirmaciones o commits. Como alguien podría "
+"modificarlos o eliminarlos por error, puedes usar los botones :guilabel:`"
+"Verificar clave de despliegue` y :guilabel:`Verificar webhook` para "
+"comprobar su configuración."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:None
 msgid "The GitHub key and webhook setting"
-msgstr ""
+msgstr "Captura de pantalla de los ajustes de la clave y el webhook de GitHub"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:261
 msgid "Administrative rights on the GitHub repository are necessary."
-msgstr ""
+msgstr "Necesitas tener permisos de administrador en el repositorio de GitHub."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:268
 msgid ""
@@ -6047,10 +6126,13 @@ msgid ""
 "<https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ into your codebase "
 "without copying the code directly."
 msgstr ""
+"El comando `git submodule` te permite `integrar otros proyectos de Git <https"
+"://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ en tu base de código sin "
+"copiar el código de forma directa."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:None
 msgid "The submodules setting"
-msgstr ""
+msgstr "Captura de pantalla de los ajustes de los submódulos"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:277
 msgid ""
@@ -6058,6 +6140,9 @@ msgid ""
 "Store <https://apps.odoo.com/apps>`_ or `community modules <https://"
 "github.com/OCA>`_, is necessary."
 msgstr ""
+"Necesitas un repositorio de Git que contenga módulos de Odoo, por ejemplo de "
+"la `tienda de aplicaciones de Odoo <https://apps.odoo.com/apps>`_ o de los `"
+"módulos de la comunidad <https://github.com/OCA>`_."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:280
 msgid "Private repositories"
@@ -6069,50 +6154,62 @@ msgid ""
 "making-a-public-repository-private/>`_ as a submodule, it is necessary to "
 "add a deploy key:"
 msgstr ""
+"Antes de agregar un `repositorio privado de GitHub <https://help.github.com/"
+"articles/making-a-public-repository-private/>`_ como submódulo debes agregar "
+"una clave de despliegue:"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:286
 msgid ""
 "Paste the SSH URL of the sub-repository (e.g., `git@github.com:USERNAME/"
 "REPOSITORY.git`) and click :guilabel:`Add`."
 msgstr ""
+"Pega la URL SSH del subrepositorio, por ejemplo `git@github.com:"
+"NOMBREDEUSUARIO/REPOSITORIO.git`, y haz clic en :guilabel:`Agregar`."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:288
 msgid "Copy the generated :guilabel:`Public Key`."
-msgstr ""
+msgstr "Copia la :guilabel:`clave pública` generada."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:289
 msgid ""
 "On the sub-repository's GitHub, go to :menuselection:`Settings --> Deploy "
 "keys`."
 msgstr ""
+"Ve a :menuselection:`Ajustes --> Claves de despliegue` en el GitHub del "
+"subrepositorio."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:290
 msgid ""
 "Click :menuselection:`Add deploy key`, enter a :guilabel:`Title`, paste the "
 "public key into the :guilabel:`Key` field, and click :guilabel:`Add key`."
 msgstr ""
+"Haz clic en :menuselection:`Agregar clave de despliegue`, escribe un "
+":guilabel:`título`, pega la clave pública en el campo :guilabel:`Clave` y "
+"haz clic en :guilabel:`Agregar clave`."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:293
 msgid ""
 "To add a public repository or private repository with a deploy key as a "
 "submodule:"
 msgstr ""
+"Para agregar un repositorio público o un repositorio privado con una clave "
+"de despliegue como submódulo:"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:295
 msgid "Add the submodule to your project."
-msgstr ""
+msgstr "Agrega el submódulo a tu proyecto."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:301
 msgid "Commit and push the change."
-msgstr ""
+msgstr "Confirma y envía el cambio."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:307
 msgid "Wait for Odoo.sh to rebuild the project."
-msgstr ""
+msgstr "Espera a que Odoo.sh vuelva a compilar el proyecto."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:312
 msgid "Production database size"
-msgstr ""
+msgstr "Tamaño de la base de datos de producción"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:314
 msgid ""
@@ -6122,16 +6219,27 @@ msgid ""
 "storage included in your subscription, the plan will be automatically "
 "adjusted."
 msgstr ""
+"Esta sección muestra el almacenamiento total que usa el proyecto. Incluye el "
+"tamaño de la base de datos de PostgreSQL y los archivos en disco del "
+"contenedor (como el filestore de la base de datos, el almacenamiento de "
+"sesiones, entre otras cosas). Si la base de datos de producción supera el "
+"almacenamiento incluido en tu suscripción, el plan se ajusta de forma "
+"automática."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:None
 msgid "The production database size setting"
 msgstr ""
+"Captura de pantalla de los ajustes de tamaño de la base de datos de "
+"producción"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:322
 msgid ""
 "To analyze disk usage, run the `Ncdu tool <https://dev.yorhel.nl/ncdu/man>`_ "
 "in the :ref:`web shell <odoo-sh/branches/tabs/shell>`."
 msgstr ""
+"Para analizar el uso del disco, ejecuta la `herramienta Ncdu <https://"
+"dev.yorhel.nl/ncdu/man>`_ en el :ref:`shell web <odoo-sh/branches/tabs/"
+"shell>`."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:328
 msgid "Database workers"
@@ -6142,16 +6250,20 @@ msgid ""
 "Additional database workers can be configured to allow your production "
 "database to handle higher concurrent loads."
 msgstr ""
+"Puedes configurar workers adicionales en la base de datos para que la base "
+"de datos de producción gestione cargas concurrentes más altas."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:None
 msgid "The database workers setting"
-msgstr ""
+msgstr "Captura de pantalla de los ajustes de los workers de la base de datos"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:336
 msgid ""
 "To add more workers, contact your account manager. After payment, the new "
 "worker(s) will be added to your project."
 msgstr ""
+"Contacta a tu gerente de cuenta para agregar más workers. Después de pagar "
+"los nuevos workers, el sistema los agregará a tu proyecto."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:340
 msgid ""
@@ -6161,6 +6273,12 @@ msgid ""
 "due to your customizations, contact `Odoo Support <https://www.odoo.com/"
 "help>`_."
 msgstr ""
+"Agregar más workers no soluciona los problemas de rendimiento de forma "
+"automática, sino que solo aumenta la cantidad de conexiones concurrentes que "
+"el servidor puede gestionar. Si algunas operaciones siguen siendo lentas, es "
+"muy probable que el problema esté en el código. Si no se debe a tus "
+"personalizaciones, contacta al `equipo de soporte de Odoo <https://"
+"www.odoo.com/help>`_."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:348
 msgid "Staging branches"
@@ -6175,10 +6293,16 @@ msgid ""
 "with Odoo.sh will occur automatically, and the number of available staging "
 "branches will be updated."
 msgstr ""
+"Las ramas de prueba adicionales te permiten desarrollar y probar varias "
+"funciones al mismo tiempo. Para agregar más ramas de prueba, solicita un "
+"aumento del producto desde tu proyecto de Odoo.sh. Un widget te guiará al "
+"portal de suscripción para que completes la compra. Luego de realizar el "
+"pago, la sincronización con Odoo.sh ocurrirá de forma automática y el número "
+"de ramas de prueba disponibles se actualizará."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:None
 msgid "The staging branches setting"
-msgstr ""
+msgstr "Captura de pantalla de los ajustes de las ramas de prueba"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:361
 msgid "Activation"
@@ -6190,27 +6314,36 @@ msgid ""
 "activation code if necessary, provided the new code is not already assigned "
 "to another project."
 msgstr ""
+"Esta sección muestra el estado de activación del proyecto. Puedes cambiar el "
+"código de activación en caso de que sea necesario siempre que el nuevo "
+"código no esté asignado a otro proyecto."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:370
 msgid "You cannot change the activation code to:"
-msgstr ""
+msgstr "No puedes cambiar el código de activación a:"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:372
 msgid "A code already used in another project"
-msgstr ""
+msgstr "Un código que ya se usa en otro proyecto."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:373
 msgid "A trial code (downgrading from paid to trial is not allowed)"
 msgstr ""
+"Un código de prueba "
+"(no está permitido pasar de un plan de pago a uno de prueba)."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:374
 msgid "An invalid code (not linked to an Odoo.sh custom plan)"
 msgstr ""
+"Un código inválido (que no esté vinculado a un plan personalizado de Odoo.sh)"
+"."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:376
 msgid ""
 "For any other issue, contact `Odoo Support <https://www.odoo.com/help>`_."
 msgstr ""
+"Contacta al `equipo de soporte de Odoo <https://www.odoo.com/help>`_ en caso "
+"de que tengas cualquier otro problema."
 
 #: ../../content/administration/odoo_sh/getting_started/status.rst:8
 msgid ""
@@ -9743,7 +9876,7 @@ msgstr ""
 
 #: ../../content/administration/standard_extended_support.rst:3
 msgid "Standard and extended support"
-msgstr ""
+msgstr "Soporte estándar y extendido"
 
 #: ../../content/administration/standard_extended_support.rst:6
 msgid ""
@@ -9752,12 +9885,19 @@ msgid ""
 "legal/terms/enterprise>`. In the event of any inconsistency or conflict, the "
 "Subscription Agreement shall govern."
 msgstr ""
+"La información que aparece en esta página no busca modificar ni reemplazar "
+"ninguno de los términos del :doc:`contrato de suscripción de Odoo Enterprise "
+"<../legal/terms/enterprise>`. En caso de que hayan inconsistencias o "
+"contradicciones, el contrato de suscripción prevalece."
 
 #: ../../content/administration/standard_extended_support.rst:10
 msgid ""
 "Odoo provides **standard support** for all major versions for three years. "
 "It includes helpdesk support, bug fixing, and security updates."
 msgstr ""
+"Odoo ofrece **soporte estándar** para todas las versiones mayores durante "
+"tres años. Incluye soporte por parte de nuestro equipo, corrección de "
+"errores y actualizaciones de seguridad."
 
 #: ../../content/administration/standard_extended_support.rst:13
 msgid ""
@@ -9765,6 +9905,9 @@ msgid ""
 "paying an extra fee. It includes helpdesk support and bug fixes (depending "
 "on feasibility)."
 msgstr ""
+"Después de esos tres años puedes acceder al **soporte extendido** mediante "
+"el pago de una tarifa adicional. Este incluye soporte por parte de nuestro "
+"equipo y correcciones de errores (según su viabilidad)."
 
 #: ../../content/administration/standard_extended_support.rst:17
 msgid ""
@@ -9772,16 +9915,22 @@ msgid ""
 "two to three months. These versions are only available on Odoo Online and "
 "are not eligible for extended support."
 msgstr ""
+"Odoo lanza versiones intermedias, llamadas versiones en línea o SaaS, cada "
+"dos o tres meses. Estas versiones solo están disponibles en Odoo en línea y "
+"no califican para soporte extendido."
 
 #: ../../content/administration/standard_extended_support.rst:19
 msgid "You can `upgrade <https://upgrade.odoo.com>`_ from any version."
 msgstr ""
+"Puedes `actualizar <https://upgrade.odoo.com>`_ desde cualquier versión."
 
 #: ../../content/administration/standard_extended_support.rst:21
 msgid ""
 "The table below shows the support status of every version. Major releases "
 "are highlighted in bold."
 msgstr ""
+"La siguiente tabla muestra el estado de soporte de cada versión. Las "
+"versiones mayores aparecen resaltadas en negrita."
 
 #: ../../content/administration/standard_extended_support.rst:31
 msgid "Release date"
@@ -9789,7 +9938,7 @@ msgstr "Fecha de lanzamiento"
 
 #: ../../content/administration/standard_extended_support.rst:32
 msgid "End of standard support"
-msgstr ""
+msgstr "Fin del soporte estándar"
 
 #: ../../content/administration/standard_extended_support.rst:33
 msgid "**Odoo 19.0**"
@@ -9892,11 +10041,11 @@ msgstr "Antes de 2024"
 
 #: ../../content/administration/standard_extended_support.rst:90
 msgid "|green| : Standard support"
-msgstr ""
+msgstr "|green| : Soporte estándar"
 
 #: ../../content/administration/standard_extended_support.rst:92
 msgid "|red| : Extended support available (with an extra fee)"
-msgstr ""
+msgstr "|red| : Soporte extendido disponible (con una tarifa adicional)"
 
 #: ../../content/administration/standard_extended_support.rst:94
 msgid "N/A : Never released for this platform"
@@ -9910,6 +10059,12 @@ msgid ""
 "patches. Using a :doc:`supported version <standard_extended_support>` is "
 "strongly recommended. Each major version is supported for three years."
 msgstr ""
+"Una actualización implica mover una base de datos de una versión anterior a "
+"una versión compatible más reciente (por ejemplo, de Odoo 16.0 a Odoo 18.0). "
+"Las actualizaciones periódicas son indispensables, ya que cada versión "
+"incluye nuevas funciones, correcciones de errores y parches de seguridad. Te "
+"recomendamos usar una :doc:`versión compatible <standard_extended_support>`. "
+"Cada versión principal cuenta con soporte durante tres años."
 
 #: ../../content/administration/upgrade.rst:10
 msgid ""
@@ -11016,7 +11171,7 @@ msgstr ":doc:`Documentación de Odoo.sh <odoo_sh>`"
 
 #: ../../content/administration/upgrade.rst:432
 msgid ":doc:`Supported Odoo versions <standard_extended_support>`"
-msgstr ""
+msgstr ":doc:`Versiones compatibles de Odoo <standard_extended_support>`"
 
 #~ msgid ":doc:`History of Versions <administration/supported_versions>`"
 #~ msgstr ":doc:`Historial de versiones <administration/supported_versions>`"
