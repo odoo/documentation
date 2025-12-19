@@ -15,6 +15,8 @@ Odoo Enterprise Abonnementsovereenkomst
     De enige officiële referentie van de algemene voorwaarden van de "Odoo Enterprise Subscription Agreement"
     is :ref:`de originele Engelse versie <enterprise_agreement>`
 
+.. note:: Version 12 - 2025-12-19
+
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
 .. 7.1: specify that 7% renewal increase applies to all charges, not just per-User.
@@ -31,8 +33,7 @@ Odoo Enterprise Abonnementsovereenkomst
         clarify what happens with non-covered versions;
         for Data Protection, clarify that data deletion may be restricted by law (e.g. DK bookkeeping act)
 .. v11a, 11b: clarify fee for non-covered versions in 5.1, and delay after LTS release.
-
-.. note:: Version 11 - 2025-07-09
+.. v12: 7% increase is per year, not per Term
 
 Door u op de Odoo Enterprise-diensten (de “Diensten”) te abonneren die door
 Odoo NV en haar dochterondernemingen (gezamenlijk “Odoo NV”) worden verleend
@@ -353,7 +354,8 @@ een eenmalige extra vergoeding aanrekenen voor elke ontbrekende maand dekking.
 Indien, bij verlenging zoals beschreven in sectie :ref:`term_nl`, de
 kosten (met uitzondering van extra vergoeding voor het gebruik van een
 niet-Ondersteunde Versie) gedurende de vorige Looptijd lager zijn dan de meest
-actuele geldende tarieven, zullen de kosten met maximaal 7% stijgen.
+actuele geldende tarieven, zullen de kosten met maximaal 7% per jaar van
+de vorige Looptijd stijgen.
 
 .. _taxes_nl:
 
