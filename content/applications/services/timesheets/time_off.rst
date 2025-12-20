@@ -1,46 +1,58 @@
-==========================================
-Create Timesheets upon Time Off Validation
-==========================================
+================
+Time off entries
+================
 
-Odoo automatically timesheets on project/tasks upon time off requests. This allows for better
-overall control over the validation of timesheets, as it does not leave place for forgetfulness
-and questions after hours that have not been timesheeted by the employee.
+Odoo automatically generates timesheet entries on projects and tasks once a time off request is
+approved. This streamlines timesheet validation by ensuring approved time off is accurately
+reflected in timesheets.
 
-Activate the :ref:`developer mode <developer-mode>`, go to *Timesheets*, and change the *Project*
-and *Task* set by default, if you like.
+.. _timesheets/config:
 
-.. image:: time_off/record_time_off.png
-   :align: center
-   :alt: View of Timesheets setting enabling the feature record time off in Odoo Timesheets
+Configuration
+=============
 
-Go to :menuselection:`Time Off --> Configuration --> Time Off Types`. Select or create the
-needed type, and decide if you would like the requests to be validated or not.
+First, activate the :ref:`developer mode <developer-mode>`, then open the **Timesheets** app, and
+navigate to :menuselection:`Configuration --> Settings`. Scroll to the :guilabel:`Time Off` section
+and enable the :guilabel:`Time Off` checkbox. Enabling this option creates timesheet entries for
+validated time off requests and public holidays.
 
-.. image:: time_off/time_off_types.png
-   :align: center
-   :alt: View of a time off types form emphasizing the time off requests and timesheets section in
-         Odoo Time Off
+Once enabled, two fields appear: :guilabel:`Project` and :guilabel:`Task`. The default selection
+for :guilabel:`Project` is :guilabel:`Internal`, and the default selection for :guilabel:`Task` is
+:guilabel:`Time Off`. These inform Odoo where to log the time off requests, which project, and task.
+These can be modified, if desired, using the drop-down menu.
 
-| Now, once the employee has requested his time off and the request has been validated (or not,
-  depending on the setting chosen), the time is automatically allocated on *Timesheets*, under the
-  respective project and task.
-| On the example below, the user requested *Paid Time off* from July 13th to 15th.
+.. note::
+   The available options presented vary based on the installed applications.
 
-.. image:: time_off/time_off_request.png
-   :align: center
-   :alt: View of the time off request form in Odoo Time Off
+.. tip::
+   Time off categories without validation requirements create timesheet records instantly. Requests
+   requiring validation creates timesheet entries *after* the time off request is approved.
 
-Considering that validation is not required, the requested time off is automatically displayed in
-*Timesheets*. If validation is necessary, the time is automatically allocated after the responsible
-person for validating does it so.
+   To check if a time off type requires approval, check the :guilabel:`Approvals` section of the
+   :ref:`time off type form <time_off/time-off-requests>`.
 
-.. image:: time_off/timesheets.png
-   :align: center
-   :alt: Video of timesheets emphasizing the requested time off from the employee in Odoo Timesheets
+Workflow
+========
 
-Click on the magnifying glass, hovering over the concerned cell, to access all the aggregated data
-on that cell (day), and see details regarding the project/task.
+Once the employee has :doc:`requested time off <../../hr/time_off/request_time_off>`, and the
+request has been validated, if necessary, the time is automatically logged on the **Timesheets**
+app, under the respective project and task.
 
-.. image:: time_off/timesheet_description.png
-   :align: center
-   :alt: View of the details of a project/task in Odoo Timeheets
+To view the logged entry, open the **Timesheets** app and navigate to the relevant time period. The
+time off appears in the corresponding field, according to the :ref:`configuration
+<timesheets/config>`.
+
+To view the timesheet entry details, click the :icon:`fa-search` :guilabel:`(magnifying glass)` icon
+that appears when hovering over the entry, and the detailed timesheet information appears.
+
+.. example::
+   An employee is attending internal training the week of December 15-19, 2025, and logs their time
+   in the **Timesheets** app under the `Internal` project, with a task of `Training`. On December
+   19, 2025, the employee is home sick, and requests the day off in the **Time Off** app.
+
+   The *time off type* they request is *Sick Time off*, which is configured to **not** require
+   validation. The employee's time off request is automatically approved, and is logged in the
+   **Timesheets** app, under the `Internal` project, and the `Time Off` task.
+
+   .. image:: time_off/timesheet-sick-time.png
+      :alt: A timecard reflecting training hours and sick time off.
