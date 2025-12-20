@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-18 11:05+0000\n"
+"POT-Creation-Date: 2025-12-19 18:31+0000\n"
 "PO-Revision-Date: 2025-11-19 20:11+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
@@ -110,20 +110,48 @@ msgstr ""
 "法` 时使用。"
 
 #: ../../content/applications/productivity/appointments.rst:40
-msgid "Lastly, add a :guilabel:`Description` for this resource."
-msgstr "最后，为该资源添加 :guilabel:`说明` 。"
-
-#: ../../content/applications/productivity/appointments.rst:43
 msgid ""
-"The contents of the :guilabel:`Description` tab are visible to customers "
-"when booking an appointment online."
-msgstr "在线预约时，客户可以看到 :guilabel:`说明` 选项卡的内容。"
+"Lastly, add a :guilabel:`Description` for this resource. The contents of "
+"the :guilabel:`Description` tab are visible to customers when booking an "
+"appointment online."
+msgstr ""
 
-#: ../../content/applications/productivity/appointments.rst:49
+#: ../../content/applications/productivity/appointments.rst:44
+msgid "Resource capacity"
+msgstr ""
+
+#: ../../content/applications/productivity/appointments.rst:46
+msgid ""
+"When booking an appointment based on resource availability, the website only "
+"displays capacity up to `12`. This occurs even if the resource has a higher "
+"capacity. To avoid this, a new *System Parameter* needs to be added to the "
+"database."
+msgstr ""
+
+#: ../../content/applications/productivity/appointments.rst:50
+msgid ""
+"First, ensure that :ref:`developer mode <developer-mode>` is enabled. Then, "
+"navigate to the :menuselection:`Settings app --> Technical --> Parameters --"
+"> System Parameters`. Click :guilabel:`New` to add a new parameter."
+msgstr ""
+
+#: ../../content/applications/productivity/appointments.rst:54
+msgid ""
+"In the :guilabel:`Key` field, enter "
+"`appointment.resource_max_capacity_allowed`. In the :guilabel:`Value` field, "
+"enter the maximum capacity that should be allowed. Click :icon:`fa-cloud-"
+"upload` :guilabel:`(Save manually)` when finished."
+msgstr ""
+
+#: ../../content/applications/productivity/appointments.rst:None
+msgid "The new system parameter for capacity limits."
+msgstr ""
+
+#: ../../content/applications/productivity/appointments.rst:64
 msgid "Appointment type configuration"
 msgstr "预约类型配置"
 
-#: ../../content/applications/productivity/appointments.rst:51
+#: ../../content/applications/productivity/appointments.rst:66
 msgid ""
 "Before appointments can be scheduled or booked, an appointment type must be "
 "created. Navigate to the :menuselection:`Appointments` app dashboard and "
@@ -135,7 +163,7 @@ msgstr ""
 "表板，然后点击 :guilabel:`新建`。在新的空白记录中输入 :guilabel:`预约标题`，"
 "然后为该约会类型设置 :guilabel:`持续时间`。"
 
-#: ../../content/applications/productivity/appointments.rst:55
+#: ../../content/applications/productivity/appointments.rst:70
 msgid ""
 "Next, set a :guilabel:`Pre-Booking Time`. This is the minimum amount of time "
 "between when an appointment can be booked and when the appointment can "
@@ -145,7 +173,7 @@ msgstr ""
 "然后，设置 :guilabel:`预定前时间`。这是预约时间与预约开始时间之间的最短间隔时"
 "间。如果 :guilabel:`预定前时间` 为`1`小时，则必须至少提前*`1`小时预约。"
 
-#: ../../content/applications/productivity/appointments.rst:60
+#: ../../content/applications/productivity/appointments.rst:75
 msgid ""
 "An appointment type is created for `Tennis Courts`, with "
 "a :guilabel:`Duration` of `1` hour, and a :guilabel:`Pre-Booking Time` of "
@@ -160,11 +188,11 @@ msgstr ""
 msgid "An example of the booking calendar showing available times."
 msgstr "预订日历示例，显示可用时间。"
 
-#: ../../content/applications/productivity/appointments.rst:67
+#: ../../content/applications/productivity/appointments.rst:82
 msgid "Select a :guilabel:`Scheduling Window`:"
 msgstr "选择 :guilabel:`调度窗口`："
 
-#: ../../content/applications/productivity/appointments.rst:69
+#: ../../content/applications/productivity/appointments.rst:84
 msgid ""
 "Select :guilabel:`Available now` to allow customers to book an appointment "
 "immediately. Use the :guilabel:`Up to X days into the future` field to "
@@ -176,7 +204,7 @@ msgstr ""
 "定义客户可以提前多长时间预约。例如，如果输入 `14`，客户就不能预订距当前日期超"
 "过 14 天的时间。"
 
-#: ../../content/applications/productivity/appointments.rst:73
+#: ../../content/applications/productivity/appointments.rst:88
 msgid ""
 "Select :guilabel:`Within a date range` to limit bookings to a specific range "
 "of dates. After selecting this option, click the :guilabel:`From` "
@@ -187,7 +215,7 @@ msgstr ""
 "击 :guilabel:`从` 和 :guilabel:`至` 字段，并使用弹出的日历窗口自定义日期和时"
 "间范围。"
 
-#: ../../content/applications/productivity/appointments.rst:77
+#: ../../content/applications/productivity/appointments.rst:92
 msgid ""
 "Update the :guilabel:`Allow Cancelling` field to limit the amount of time "
 "before an appointment where a customer can cancel. If this setting is "
@@ -196,7 +224,7 @@ msgstr ""
 "更新 :guilabel:`允许取消` 字段，以限制客户可以取消预约的时间。如果启用此设"
 "置，客户将无法在指定时间内取消预约。"
 
-#: ../../content/applications/productivity/appointments.rst:82
+#: ../../content/applications/productivity/appointments.rst:97
 msgid ""
 "If a customer does try to cancel within the time frame, they receive an "
 "error message with contact information. If the appointment is for a "
@@ -212,7 +240,7 @@ msgstr ""
 msgid "An example of the message a customer sees when cancelling."
 msgstr "客户取消预约时看到的消息示例。"
 
-#: ../../content/applications/productivity/appointments.rst:90
+#: ../../content/applications/productivity/appointments.rst:105
 msgid ""
 "Next, designate whether this appointment type is based on :guilabel:`Users` "
 "or :guilabel:`Resources`, by selecting the appropriate radio button. If it "
@@ -225,19 +253,19 @@ msgstr ""
 "户`。如果基于 :ref:`资源 <appointments/resources>`，请在下拉菜单中选择一个或"
 "多个 :guilabel:`资源`。"
 
-#: ../../content/applications/productivity/appointments.rst:96
+#: ../../content/applications/productivity/appointments.rst:111
 msgid ""
 "User-based appointment types can be used for scheduling sales meetings and "
 "demos, as well as recruiting interviews."
 msgstr "基于用户的预约类型可用于安排销售会议、产品演示以及招聘面试。"
 
-#: ../../content/applications/productivity/appointments.rst:99
+#: ../../content/applications/productivity/appointments.rst:114
 msgid ""
 "Resource-based appointment types can be used for scheduling time in specific "
 "rooms or locations."
 msgstr "基于资源的预约类型可用于安排特定房间或场所的使用时间。"
 
-#: ../../content/applications/productivity/appointments.rst:101
+#: ../../content/applications/productivity/appointments.rst:116
 msgid ""
 "Selecting :guilabel:`Resources` in the :guilabel:`Availability on` field "
 "reveals the :guilabel:`Manage Capacities` option. If selected, the "
@@ -247,13 +275,13 @@ msgstr ""
 "在 :guilabel:`可用性`字段中选择 :guilabel:`资源`后，会出现 :guilabel:`管理容"
 "量`选项。如果选中此项，预约将根据所选资源的容量来限制参与者人数。"
 
-#: ../../content/applications/productivity/appointments.rst:105
+#: ../../content/applications/productivity/appointments.rst:120
 msgid ""
 "Choose an :guilabel:`Assignment Method` by selecting the appropriate radio "
 "button:"
 msgstr "通过选择相应的单选按钮来确定 :guilabel:`分配方式`："
 
-#: ../../content/applications/productivity/appointments.rst:107
+#: ../../content/applications/productivity/appointments.rst:122
 msgid ""
 ":guilabel:`Pick User/Resource then Time`: customers select from a list of "
 "available users/resources, then select an open time slot."
@@ -261,7 +289,7 @@ msgstr ""
 ":guilabel:`先选用户/资源，再选时间`：客户先从可用用户/资源列表中选择，然后再"
 "选择一个空闲的时间段。"
 
-#: ../../content/applications/productivity/appointments.rst:109
+#: ../../content/applications/productivity/appointments.rst:124
 msgid ""
 ":guilabel:`Select Time then User/Resource`: customers choose a date and "
 "time, then select from the list of available users/resources."
@@ -269,7 +297,7 @@ msgstr ""
 ":guilabel:`先选时间，再选用户/资源`：客户先选择日期和时间，然后再从可用的用"
 "户/资源列表中选择。"
 
-#: ../../content/applications/productivity/appointments.rst:111
+#: ../../content/applications/productivity/appointments.rst:126
 msgid ""
 ":guilabel:`Select Time then auto-assign`: customers select a time slot and "
 "are automatically assigned a user/resource."
@@ -277,12 +305,12 @@ msgstr ""
 ":guilabel:`先选时间，然后自动分配`：客户选择一个时间段，系统会自动为其分配一"
 "位用户或一项资源。"
 
-#: ../../content/applications/productivity/appointments.rst:115
+#: ../../content/applications/productivity/appointments.rst:130
 #: ../../content/applications/productivity/calendar.rst:208
 msgid "Schedule tab"
 msgstr "日程安排标签页"
 
-#: ../../content/applications/productivity/appointments.rst:117
+#: ../../content/applications/productivity/appointments.rst:132
 msgid ""
 "The :guilabel:`Schedule` tab is used to outline when this appointment type "
 "is to be made available. The settings define the time slots shown on the "
@@ -291,7 +319,7 @@ msgstr ""
 ":guilabel:`日程安排`标签页用于设定此预约类型的可用时间。这些设置将决定预订页"
 "面上显示的时间段。"
 
-#: ../../content/applications/productivity/appointments.rst:120
+#: ../../content/applications/productivity/appointments.rst:135
 msgid ""
 "Click :guilabel:`Add a line` to create a new time frame. Select a day of the "
 "week from the :guilabel:`Every` drop-down menu, then update the times in "
@@ -303,7 +331,7 @@ msgstr ""
 "选择星期几，然后在 :guilabel:`从` 和`到`字段中更新时间。点击 :icon:`fa-trash-"
 "o` :guilabel:`（垃圾桶）`图标，可删除一个条目。一天内可以包含多个时间条目。"
 
-#: ../../content/applications/productivity/appointments.rst:126
+#: ../../content/applications/productivity/appointments.rst:141
 msgid ""
 "If an appointment should not be available at specific times, such as when "
 "users are taking lunch, include time slots before and after."
@@ -315,19 +343,19 @@ msgstr ""
 msgid "An example of the Schedule tab in an appointment."
 msgstr "预约中日程安排标签页的示例。"
 
-#: ../../content/applications/productivity/appointments.rst:133
+#: ../../content/applications/productivity/appointments.rst:148
 #: ../../content/applications/productivity/calendar.rst:221
 msgid "Options tab"
 msgstr "选项标签页"
 
-#: ../../content/applications/productivity/appointments.rst:135
+#: ../../content/applications/productivity/appointments.rst:150
 msgid ""
 "The :guilabel:`Options` tab is used to customize the display options for "
 "this appointment, as well as notification settings for customers and users."
 msgstr ""
 ":guilabel:`选项`标签页用于自定义此预约的显示选项，以及客户和用户的通知设置。"
 
-#: ../../content/applications/productivity/appointments.rst:138
+#: ../../content/applications/productivity/appointments.rst:153
 msgid ""
 "The :guilabel:`Front-End Display` field determines how the appointment is "
 "presented on the website to customers. Select the :guilabel:`Show Pictures` "
@@ -337,7 +365,7 @@ msgstr ""
 ":guilabel:`前端显示`字段决定如何在网站上向客户展示预约。选择 :guilabel:`显示"
 "图片` 单选按钮可在网站上发布此预约的用户或资源的默认图片。"
 
-#: ../../content/applications/productivity/appointments.rst:142
+#: ../../content/applications/productivity/appointments.rst:157
 msgid ""
 "The :guilabel:`Timezone` and :guilabel:`Location` fields automatically "
 "populate for resource appointments, based on where the resource is located. "
@@ -351,7 +379,7 @@ msgstr ""
 "生成一个 :guilabel:`视频会议链接 `。如果此预约不应为在线会议，请"
 "在 :guilabel:`地点`字段中选择其他选项。"
 
-#: ../../content/applications/productivity/appointments.rst:148
+#: ../../content/applications/productivity/appointments.rst:163
 msgid ""
 "Tick the :guilabel:`Manual Confirmation` checkbox to require approval before "
 "a meeting is accepted. If this feature is enabled, the appointment time slot "
@@ -363,7 +391,7 @@ msgstr ""
 "功能，该预约时段在被确认或拒绝前，仍将被视为*已预留*。如将此复选框留空，则通"
 "过此预约类型创建的会议将被自动接受。"
 
-#: ../../content/applications/productivity/appointments.rst:153
+#: ../../content/applications/productivity/appointments.rst:168
 msgid ""
 "The :doc:`Create Opportunities <appointments/create-opps>` feature adds an "
 "opportunity to the **CRM** app for each scheduled appointment, which is "
@@ -374,12 +402,12 @@ msgstr ""
 "应用中添加一个商机，并将其分配给负责的用户。勾选 :guilabel:`创建商机`复选框以"
 "启用此选项。"
 
-#: ../../content/applications/productivity/appointments.rst:158
+#: ../../content/applications/productivity/appointments.rst:173
 msgid ""
 "This field is only visible if the **CRM** app is installed on the database."
 msgstr "仅当数据库中安装了**CRM**应用时，此字段才可见。"
 
-#: ../../content/applications/productivity/appointments.rst:160
+#: ../../content/applications/productivity/appointments.rst:175
 msgid ""
 "The :guilabel:`Reminders` field is used to set how customers are to be "
 "contacted before the appointment time. Select one or more options from the "
@@ -388,19 +416,19 @@ msgstr ""
 ":guilabel:`提醒`字段用于设置在预约时间之前如何联系客户。根据沟通方式和时间范"
 "围，从下拉菜单中选择一个或多个选项。"
 
-#: ../../content/applications/productivity/appointments.rst:164
+#: ../../content/applications/productivity/appointments.rst:179
 msgid ""
 "Tick the :guilabel:`Allow Guests` checkbox to grant customers the ability to "
 "add additional guests when registering for an appointment."
 msgstr ""
 "勾选 :guilabel:`允许访客` 复选框，可允许客户在注册预约时添加额外的访客。"
 
-#: ../../content/applications/productivity/appointments.rst:170
+#: ../../content/applications/productivity/appointments.rst:185
 #: ../../content/applications/productivity/calendar.rst:260
 msgid "Questions tab"
 msgstr "问题选项卡"
 
-#: ../../content/applications/productivity/appointments.rst:172
+#: ../../content/applications/productivity/appointments.rst:187
 msgid ""
 "The :guilabel:`Questions` tab can be used to prompt customers for additional "
 "information while they are booking an appointment. Click :guilabel:`Add a "
@@ -409,7 +437,7 @@ msgstr ""
 ":guilabel:`问题`标签页可用于在客户预订预约时，向他们询问额外信息。点"
 "击 :guilabel:`添加一行`来添加一个新问题。"
 
-#: ../../content/applications/productivity/appointments.rst:175
+#: ../../content/applications/productivity/appointments.rst:190
 msgid ""
 "On the :guilabel:`Create Questions` pop-up window, enter "
 "the :guilabel:`Question`, then choose an :guilabel:`Answer Type`."
@@ -417,7 +445,7 @@ msgstr ""
 "在 :guilabel:`创建问题`弹出窗口中，输入 :guilabel:`问题`，然后选择一"
 "个 :guilabel:`答案类型`。"
 
-#: ../../content/applications/productivity/appointments.rst:178
+#: ../../content/applications/productivity/appointments.rst:193
 msgid ""
 "Tick the :guilabel:`Mandatory Answer` checkbox to require customers to "
 "answer this question before they are allowed to book an appointment. "
@@ -428,24 +456,24 @@ msgstr ""
 "击 :guilabel:`保存并新建`添加另一个问题，或在完成后点击 :guilabel:`保存并关闭"
 "`。"
 
-#: ../../content/applications/productivity/appointments.rst:183
+#: ../../content/applications/productivity/appointments.rst:198
 #: ../../content/applications/productivity/calendar.rst:274
 msgid "Messages tab"
 msgstr "消息标签页"
 
-#: ../../content/applications/productivity/appointments.rst:185
+#: ../../content/applications/productivity/appointments.rst:200
 msgid ""
 "The :guilabel:`Messages` tab is used by the business to provide additional "
 "information to customers regarding this appointment type."
 msgstr ":guilabel:`消息`标签页用于让商家向客户提供有关此预约类型的附加信息。"
 
-#: ../../content/applications/productivity/appointments.rst:189
+#: ../../content/applications/productivity/appointments.rst:204
 msgid ""
 "The content in the :guilabel:`Messages` tab is visible to customers and "
 "website visitors."
 msgstr ":guilabel:`消息`标签页中的内容对客户和网站访客均可见。"
 
-#: ../../content/applications/productivity/appointments.rst:191
+#: ../../content/applications/productivity/appointments.rst:206
 msgid ""
 "In the :guilabel:`Introduction Message` field, add a short description of "
 "the appointment type. This can include the topic of the appointment, a "
@@ -454,7 +482,7 @@ msgstr ""
 "在 :guilabel:`介绍消息`字段中，添加关于此预约类型的简短描述。内容可包括预约主"
 "题、会议议程或负责会议的用户介绍。"
 
-#: ../../content/applications/productivity/appointments.rst:195
+#: ../../content/applications/productivity/appointments.rst:210
 msgid ""
 "The :guilabel:`Extra Message on Confirmation` is displayed to a customer "
 "after they have booked a meeting. Add any additional information here that "
@@ -464,11 +492,11 @@ msgstr ""
 ":guilabel:`确认后的额外消息`会在客户成功预订会议后显示给他们。在此处添加客户"
 "需要了解的任何附加信息，例如停车信息、临时规定或其他说明。"
 
-#: ../../content/applications/productivity/appointments.rst:200
+#: ../../content/applications/productivity/appointments.rst:215
 msgid "Publishing an appointment"
 msgstr "发布预约"
 
-#: ../../content/applications/productivity/appointments.rst:202
+#: ../../content/applications/productivity/appointments.rst:217
 msgid ""
 "When an appointment is ready to publish, click the :guilabel:`Go to Website` "
 "smart button at the top of the record. Then, slide the :icon:`fa-toggle-"
@@ -512,7 +540,7 @@ msgstr ""
 "cog` :guilabel:`该预约条目最右侧的 操作图标以打开下拉菜单，然后点"
 "击 :icon:`fa-pencil` :guilabel:`编辑`。"
 
-#: ../../content/applications/productivity/appointments/create-opps.rst:-1
+#: ../../content/applications/productivity/appointments/create-opps.rst:None
 msgid "The edit button on an appointment type record."
 msgstr "预约类型记录上的编辑按钮。"
 
@@ -524,7 +552,7 @@ msgstr ""
 "在预约类型记录上，点击 :guilabel:`选项`标签页，然后勾选 :guilabel:`创建商机` "
 "复选框。"
 
-#: ../../content/applications/productivity/appointments/create-opps.rst:-1
+#: ../../content/applications/productivity/appointments/create-opps.rst:None
 msgid "The options tab on an appointment type form."
 msgstr "预约类型表单上的选项标签页。"
 
@@ -593,7 +621,7 @@ msgstr ""
 "在 :guilabel:`内部备注`标签页中。已安排的预约会列在记录的*沟通栏* 中，并可在"
 "此处进行编辑。"
 
-#: ../../content/applications/productivity/appointments/create-opps.rst:-1
+#: ../../content/applications/productivity/appointments/create-opps.rst:None
 msgid ""
 "The chatter of an opportunity in the CRM with the scheduled appointment "
 "information."
@@ -640,7 +668,7 @@ msgstr ""
 "单形式出现。在视图选项下拉菜单下方，用户还可以启用或禁用 :guilabel:`显示周末"
 "`。"
 
-#: ../../content/applications/productivity/calendar.rst:-1
+#: ../../content/applications/productivity/calendar.rst:None
 msgid "Overview of Calendar app."
 msgstr "日历应用程序概览。"
 
@@ -749,7 +777,7 @@ msgstr ""
 "要在日历上添加活动，请打开 :menuselection:`日历应用程序` 并点击目标日期。在弹"
 "出的 :guilabel:`新活动` 窗口中，首先添加活动标题。"
 
-#: ../../content/applications/productivity/calendar.rst:-1
+#: ../../content/applications/productivity/calendar.rst:None
 msgid "Schedule an event window on Calendar app."
 msgstr "在日历应用程序上安排活动窗口。"
 
@@ -812,7 +840,7 @@ msgid ""
 "from the calendar event to access more configuration options."
 msgstr "创建活动后，用户可直接从日历活动中点击进入虚拟会议，访问更多配置选项。"
 
-#: ../../content/applications/productivity/calendar.rst:-1
+#: ../../content/applications/productivity/calendar.rst:None
 msgid "The full event form for a new calendar event."
 msgstr "新日历活动的完整活动表单。"
 
@@ -932,7 +960,7 @@ msgstr ""
 "者`旁边的复选框，以查看团队成员的空闲时间。勾选（或取消勾选）所列用户旁边的复"
 "选框，即可显示（或隐藏）其个人日历。"
 
-#: ../../content/applications/productivity/calendar.rst:-1
+#: ../../content/applications/productivity/calendar.rst:None
 msgid "View of Attendees section on Calendar app."
 msgstr "查看日历应用程序上的参与者部分。"
 
@@ -973,7 +1001,7 @@ msgstr ""
 "选定空闲时间后，点击 :icon:`fa-external-link` :guilabel:`打开`按钮以前往相关"
 "联的预约。"
 
-#: ../../content/applications/productivity/calendar.rst:-1
+#: ../../content/applications/productivity/calendar.rst:None
 msgid "Share availability window on Calendar app."
 msgstr "日历应用中的分享空闲时间窗口。"
 
@@ -1326,7 +1354,7 @@ msgstr ""
 "接下来，单击:guilabel:`选择项目`并选择（或创建）一个 API 项目，以便在其中配"
 "置 OAuth 和存储凭据。单击 :guilabel:`新建项目`。"
 
-#: ../../content/applications/productivity/calendar/google.rst:-1
+#: ../../content/applications/productivity/calendar/google.rst:None
 msgid "Create a new API project to store credentials."
 msgstr "创建一个新的API项目来存储凭据。"
 
@@ -1351,7 +1379,7 @@ msgstr ""
 "现在，点击左侧菜单中的 :guilabel:`已启用应用程序接口和服务`。如果没有出"
 "现 :guilabel:`搜索栏`，请再次选择 :guilabel:`已启用应用程序接口和服务`。"
 
-#: ../../content/applications/productivity/calendar/google.rst:-1
+#: ../../content/applications/productivity/calendar/google.rst:None
 msgid "Enable APIs and Services on the API Project."
 msgstr "在API项目中启用API和服务。"
 
@@ -1364,7 +1392,7 @@ msgstr ""
 "然后，使用搜索栏搜索 `Google 日历 API`，并从搜索结果中选择 :guilabel:`Google "
 "日历 API`。点击 :guilabel:`启用`。"
 
-#: ../../content/applications/productivity/calendar/google.rst:-1
+#: ../../content/applications/productivity/calendar/google.rst:None
 msgid "Enable the Google Calendar API."
 msgstr "启用谷歌日历API。"
 
@@ -1519,7 +1547,7 @@ msgstr ""
 "入公司的 Odoo :abbr:`URL（统一资源定位符）` 地址，后面跟上`/google_account/"
 "authentication`。最后，点击 :guilabel:`创建`。"
 
-#: ../../content/applications/productivity/calendar/google.rst:-1
+#: ../../content/applications/productivity/calendar/google.rst:None
 msgid "Add the authorized JavaScript origins and the authorized redirect URIs."
 msgstr "添加授权的 JavaScript 起源和授权的重定向 URI。"
 
@@ -1546,7 +1574,7 @@ msgstr ""
 "> 日历` 找到 :guilabel:`Google 日历` 功能。勾选标有 :guilabel:`Google 日历` "
 "的复选框。"
 
-#: ../../content/applications/productivity/calendar/google.rst:-1
+#: ../../content/applications/productivity/calendar/google.rst:None
 msgid "The Google Calendar checkbox in General Settings."
 msgstr "常规设置中的谷歌日历复选框。"
 
@@ -1582,7 +1610,7 @@ msgstr ""
 "最后，打开 Odoo 中的 :menuselection:`日历` 应用程序，点击 :guilabel:`Google` "
 "同步按钮，将 Google 日历与 Odoo 同步。"
 
-#: ../../content/applications/productivity/calendar/google.rst:-1
+#: ../../content/applications/productivity/calendar/google.rst:None
 msgid ""
 "Click the Google sync button in Odoo Calendar to sync Google Calendar with "
 "Odoo."
@@ -1600,7 +1628,7 @@ msgstr ""
 "具有访问权限的 :guilabel:`电子邮件帐户`，然后选择 :guilabel:`继续`（如果应用"
 "程序未经验证），最后选择 :guilabel:`继续`（允许传输数据）。"
 
-#: ../../content/applications/productivity/calendar/google.rst:-1
+#: ../../content/applications/productivity/calendar/google.rst:None
 msgid "Give Odoo permission to access Google Calendar."
 msgstr "给 Odoo 访问 Google 日历的权限。"
 
@@ -1677,8 +1705,8 @@ msgstr ""
 "置，该按钮可通过导航至 :menuselection:`设置应用程序 --> 管理用户` 访问。然"
 "后，选择要修改日历的用户，并点击 :guilabel:`日历` 选项卡。"
 
-#: ../../content/applications/productivity/calendar/google.rst:-1
-#: ../../content/applications/productivity/calendar/outlook.rst:-1
+#: ../../content/applications/productivity/calendar/google.rst:None
+#: ../../content/applications/productivity/calendar/outlook.rst:None
 msgid "Reset buttons highlighted on the calendar tab of the user."
 msgstr "用户日历选项卡上突出显示的重置按钮。"
 
@@ -1698,7 +1726,7 @@ msgid ""
 "calendar sync with Odoo:"
 msgstr "以下重置选项可用于排除 Google 日历与 Odoo 同步的故障："
 
-#: ../../content/applications/productivity/calendar/google.rst:-1
+#: ../../content/applications/productivity/calendar/google.rst:None
 msgid "Google calendar reset options in Odoo."
 msgstr "Odoo 中的 Google 日历重置选项。"
 
@@ -1812,7 +1840,7 @@ msgstr ""
 "如果没有测试用户添加到 :guilabel:`OAuth consent 屏幕`，则会弹出 :guilabel:`错"
 "误 403: access_denied`。"
 
-#: ../../content/applications/productivity/calendar/google.rst:-1
+#: ../../content/applications/productivity/calendar/google.rst:None
 msgid "403 Access Denied Error."
 msgstr "403 拒绝访问错误"
 
@@ -1840,7 +1868,7 @@ msgstr ""
 "择了 :guilabel:`桌面应用程序`，则会出现 :guilabel:`授权错误`（:guilabel:`错误"
 "400:redirect_uri_mismatch`）。"
 
-#: ../../content/applications/productivity/calendar/google.rst:-1
+#: ../../content/applications/productivity/calendar/google.rst:None
 msgid "Error 400 Redirect URI Mismatch."
 msgstr "错误 400 重定向 URI 不匹配。"
 
@@ -1964,7 +1992,7 @@ msgstr ""
 "要创建应用程序，请点击顶部菜单中的 :guilabel:`+ 添加`。从出现的下拉菜单中选"
 "择 :guilabel:`应用程序注册`。"
 
-#: ../../content/applications/productivity/calendar/outlook.rst:-1
+#: ../../content/applications/productivity/calendar/outlook.rst:None
 msgid ""
 "Microsoft Azure management page with + Add and App Registration menu "
 "highlighted."
@@ -2028,7 +2056,7 @@ msgstr ""
 "--> 技术标题菜单 --> 参数部分 --> 系统参数，访问 `web.base.url`。然后，"
 "从 :guilabel:`系统参数` 页面的 :guilabel:`密钥` 列表中选择它。"
 
-#: ../../content/applications/productivity/calendar/outlook.rst:-1
+#: ../../content/applications/productivity/calendar/outlook.rst:None
 msgid ""
 "The \"Supported account type\" and \"Redirect URI\" settings in the "
 "Microsoft Entra ID portal."
@@ -2056,7 +2084,7 @@ msgstr ""
 "成 :guilabel:`应用程序（客户端）ID`。将此值复制到 :ref:`outlook_calendar/"
 "odo_setup`。"
 
-#: ../../content/applications/productivity/calendar/outlook.rst:-1
+#: ../../content/applications/productivity/calendar/outlook.rst:None
 msgid ""
 "Application client ID highlighted in the essentials section of the newly "
 "created\n"
@@ -2087,7 +2115,7 @@ msgstr ""
 "要添加客户密钥，请点击左侧菜单中的 :menuselection:`凭证和密钥`。然后点"
 "击 :guilabel:`+ 新建客户密钥` 创建客户密钥。"
 
-#: ../../content/applications/productivity/calendar/outlook.rst:-1
+#: ../../content/applications/productivity/calendar/outlook.rst:None
 msgid ""
 "New client secret page with certificates and secrets menu and new client "
 "secret option\n"
@@ -2148,7 +2176,7 @@ msgstr ""
 "选 :guilabel:`Outlook 日历` 设置旁边的复选框。记住点击 :guilabel:`保存` 以执"
 "行更改。"
 
-#: ../../content/applications/productivity/calendar/outlook.rst:-1
+#: ../../content/applications/productivity/calendar/outlook.rst:None
 msgid "The \"Outlook Calendar\" setting activated in Odoo."
 msgstr "在 Odoo 中激活 \"Outlook 日历\" 设置。"
 
@@ -2163,7 +2191,7 @@ msgstr ""
 "制 :guilabel:`应用程序（客户端）ID`（如果尚未复制），并将其粘贴到 Odoo 中"
 "的 :guilabel:`客户 ID` 字段。"
 
-#: ../../content/applications/productivity/calendar/outlook.rst:-1
+#: ../../content/applications/productivity/calendar/outlook.rst:None
 msgid "The \"Client ID\" in the Microsoft Azure portal."
 msgstr "Microsoft Azure 门户中的 \"客户 ID\"。"
 
@@ -2175,7 +2203,7 @@ msgstr ""
 "复制之前获得的 :guilabel:`值`（客户密钥值），并将其粘贴到 Odoo 中"
 "的 :guilabel:`客户密钥` 字段。"
 
-#: ../../content/applications/productivity/calendar/outlook.rst:-1
+#: ../../content/applications/productivity/calendar/outlook.rst:None
 msgid "The \"Client Secret\" token to be copied from Microsoft to Odoo."
 msgstr "从 Microsoft 复制到 Odoo 的 \"客户密钥\" 令牌。"
 
@@ -2290,7 +2318,7 @@ msgstr ""
 "在 Odoo 数据库中，打开*日历*模块，然后点击页面右侧月历下方"
 "的 :guilabel:`Outlook` 同步按钮。"
 
-#: ../../content/applications/productivity/calendar/outlook.rst:-1
+#: ../../content/applications/productivity/calendar/outlook.rst:None
 msgid "The \"Outlook\" sync button in Odoo Calendar."
 msgstr "Odoo 日历中的 \"Outlook\" 同步按钮。"
 
@@ -2306,7 +2334,7 @@ msgstr ""
 "节。页面将重定向到 Microsoft 登录页面，如果用户尚未登录，则要求其登录到自己的"
 "账户。最后，点击 :guilabel:`接受`，授予所需权限。"
 
-#: ../../content/applications/productivity/calendar/outlook.rst:-1
+#: ../../content/applications/productivity/calendar/outlook.rst:None
 msgid "Authentication process on Microsoft Outlook OAuth page."
 msgstr "Microsoft Outlook OAuth 页面上的验证过程。"
 
@@ -2356,7 +2384,7 @@ msgid ""
 "Outlook Calendar* sync with Odoo:"
 msgstr "以下重置选项可用于排除 *Microsoft Outlook 日历* 与 Odoo 同步的故障："
 
-#: ../../content/applications/productivity/calendar/outlook.rst:-1
+#: ../../content/applications/productivity/calendar/outlook.rst:None
 msgid "Outlook calendar reset options in Odoo."
 msgstr "在 Odoo 中重置 Outlook 日历选项。"
 
@@ -3795,7 +3823,7 @@ msgid ""
 "Deduplication`."
 msgstr "可通过 :menuselection:`数据清理应用 --> 去重` 访问此仪表板。"
 
-#: ../../content/applications/productivity/data_cleaning.rst:-1
+#: ../../content/applications/productivity/data_cleaning.rst:None
 msgid "Deduplication dashboard in the Data Cleaning application."
 msgstr "数据清理应用中的去重仪表板。"
 
@@ -4127,7 +4155,7 @@ msgid ""
 "Recycle Records`."
 msgstr "可通过 :menuselection:`数据清理应用 --> 回收记录` 访问此仪表板。"
 
-#: ../../content/applications/productivity/data_cleaning.rst:-1
+#: ../../content/applications/productivity/data_cleaning.rst:None
 msgid "Field Recycle Records dashboard in the Data Cleaning application."
 msgstr "数据清理应用程序中的字段回收记录仪表板。"
 
@@ -4413,7 +4441,7 @@ msgid ""
 "Field Cleaning`."
 msgstr "可通过 :menuselection:`数据清理应用 --> 字段清理` 访问此仪表板。"
 
-#: ../../content/applications/productivity/data_cleaning.rst:-1
+#: ../../content/applications/productivity/data_cleaning.rst:None
 msgid "Field Cleaning Records dashboard in the Data Cleaning application."
 msgstr "数据清理应用中的字段清理记录仪表板。"
 
@@ -4899,7 +4927,7 @@ msgstr ""
 "在私聊窗口顶部，点击私聊的名称以更改群组名称，并在相邻的 :guilabel:`添加说明"
 "` 字段中选择添加说明。"
 
-#: ../../content/applications/productivity/discuss.rst:-1
+#: ../../content/applications/productivity/discuss.rst:None
 msgid "View of the conversation actions."
 msgstr "对话操作视图。"
 
@@ -4984,7 +5012,7 @@ msgstr ""
 "拉窗口选择会议邀请对象。要通过直接消息开始会议，请点击右上角的 :icon:`fa-"
 "phone`：`开始通话`图标。"
 
-#: ../../content/applications/productivity/discuss.rst:-1
+#: ../../content/applications/productivity/discuss.rst:None
 msgid "View of a Meeting in Odoo Discuss."
 msgstr "在 Odoo 内部讨论中查看会议。"
 
@@ -5080,7 +5108,7 @@ msgstr ""
 "通过导航至 :menuselection:`设置应用程序 --> 管理用户`，选择一个用户，然后点"
 "击 :guilabel:`偏好` 选项卡，访问 **内部讨论** 应用程序的特定用户首选项。"
 
-#: ../../content/applications/productivity/discuss.rst:-1
+#: ../../content/applications/productivity/discuss.rst:None
 msgid "View of the Preferences tab for Odoo Discuss."
 msgstr "Odoo 内部沟通应用的偏好选项卡视图。"
 
@@ -5118,7 +5146,7 @@ msgstr ""
 "通过**内部讨论**应用程序，可在 Odoo 的所有应用程序之间进行交流。要查看聊天和"
 "频道，或开始一条新信息，请选择数据库标题右上角的语音气泡。"
 
-#: ../../content/applications/productivity/discuss.rst:-1
+#: ../../content/applications/productivity/discuss.rst:None
 msgid "Use Discuss across other applications by clicking the speech bubbles."
 msgstr "点击语音气泡，在其他应用程序中使用 “内部讨论” 功能。"
 
@@ -5168,7 +5196,7 @@ msgstr ""
 "预设回复由两个主要部分组成：*快捷指令*和*回复内容*。快捷方式是需要被替换的关"
 "键词或关键短语。回复内容是用于替换快捷指令的完整信息。"
 
-#: ../../content/applications/productivity/discuss/canned_responses.rst:-1
+#: ../../content/applications/productivity/discuss/canned_responses.rst:None
 msgid "A live chat conversation using a canned response."
 msgstr "使用预设回复的实时聊天对话。"
 
@@ -5207,7 +5235,7 @@ msgid ""
 "enters, and the *substitution* that replaces the shortcut."
 msgstr "预设回复包含两个核心组件，用户输入的*快捷指令*及其对应的*替换内容*。"
 
-#: ../../content/applications/productivity/discuss/canned_responses.rst:-1
+#: ../../content/applications/productivity/discuss/canned_responses.rst:None
 msgid ""
 "A list of canned responses emphasizing the shortcut and substitution fields."
 msgstr "强调快捷键和替代字段的预设回复列表。"
@@ -5480,7 +5508,7 @@ msgstr ""
 "如果记录通过导入文件而创建或编辑，或者是通过系统干预更新，沟通栏线程就会创建"
 "日志备注，并将更改记入 OdooBot。"
 
-#: ../../content/applications/productivity/discuss/chatter.rst:-1
+#: ../../content/applications/productivity/discuss/chatter.rst:None
 msgid "A close up of a chatter thread of an OdooBot created contact record."
 msgstr "OdooBot 创建的联系人记录的沟通栏线程特写。"
 
@@ -5713,7 +5741,7 @@ msgstr ""
 "人。如果关注者**不**应该收到信息，则必须在发送信息前将其从关注者中删除，或记"
 "录备注。"
 
-#: ../../content/applications/productivity/discuss/chatter.rst:-1
+#: ../../content/applications/productivity/discuss/chatter.rst:None
 msgid ""
 "A chatter composer preparing to send a message to the followers of a CRM "
 "opportunity and\n"
@@ -5783,7 +5811,7 @@ msgstr ""
 "点击:icon:`fa-paperclip` :guilabel:`(paperclip)`图标，在信息中添加任何文件，"
 "然后点击 :guilabel:`发送`。"
 
-#: ../../content/applications/productivity/discuss/chatter.rst:-1
+#: ../../content/applications/productivity/discuss/chatter.rst:None
 msgid "The expanded full chatter composer in the CRM application."
 msgstr "CRM 应用程序中扩展的完整沟通栏聊天窗口。"
 
@@ -5808,7 +5836,7 @@ msgstr ""
 "在 :guilabel:`发送消息` 字段中输入提示，指示人工智能所需的内容类型，然后按回"
 "车键，或点击 :icon:`fa-paper-plane` :guilabel:`(paper plane)` 图标。"
 
-#: ../../content/applications/productivity/discuss/chatter.rst:-1
+#: ../../content/applications/productivity/discuss/chatter.rst:None
 msgid "The generate text with AI popup."
 msgstr "用 AI 弹出窗口生成文本。"
 
@@ -5852,7 +5880,7 @@ msgstr ""
 "要编辑已发送的信息，请点击信息右侧的 |ve| 菜单。然后选择 :guilabel:`编辑`。对"
 "信息进行必要的调整。"
 
-#: ../../content/applications/productivity/discuss/chatter.rst:-1
+#: ../../content/applications/productivity/discuss/chatter.rst:None
 msgid "The edit message option in a chatter thread."
 msgstr "沟通栏线程中的编辑信息选项。"
 
@@ -6057,7 +6085,7 @@ msgid ""
 "**Green** icons indicate an activity with a due date scheduled in the future."
 msgstr "**绿色**图标表示活动的到期日在未来。"
 
-#: ../../content/applications/productivity/discuss/chatter.rst:-1
+#: ../../content/applications/productivity/discuss/chatter.rst:None
 msgid "A chatter thread with planned activities with varying due dates."
 msgstr "沟通栏线程，包含不同到期日的计划活动。"
 
@@ -6095,7 +6123,7 @@ msgstr ""
 "活动标记完成后，活动类型、标题和弹出窗口中包含的任何其他详细信息都会列在聊天"
 "记录中。"
 
-#: ../../content/applications/productivity/discuss/chatter.rst:-1
+#: ../../content/applications/productivity/discuss/chatter.rst:None
 msgid ""
 "A chatter thread with a completed activity, included additional details."
 msgstr "已完成活动的沟通栏线程，包含更多细节。"
@@ -6244,7 +6272,7 @@ msgstr ""
 "*WhatsApp*模板**必须**通过审批后才能使用。有关详细信息，请参"
 "阅 :ref:`WhatsApp 模板 <productivity/whatsapp/templates>` 。"
 
-#: ../../content/applications/productivity/discuss/chatter.rst:-1
+#: ../../content/applications/productivity/discuss/chatter.rst:None
 msgid "A send WhatsApp message pop-up window."
 msgstr "弹出发送 WhatsApp 消息窗口。"
 
@@ -6291,7 +6319,7 @@ msgstr ""
 "翻译`。内容将翻译为 :doc:`用户偏好 <.../../general/users/language/>` 中设置的"
 "语言。"
 
-#: ../../content/applications/productivity/discuss/chatter.rst:-1
+#: ../../content/applications/productivity/discuss/chatter.rst:None
 msgid "alt text"
 msgstr ""
 
@@ -6391,7 +6419,7 @@ msgstr ""
 "问题:guilabel:`What is your goal today?`，选择:guilabel:`3rd party "
 "integrations`。"
 
-#: ../../content/applications/productivity/discuss/ice_servers.rst:-1
+#: ../../content/applications/productivity/discuss/ice_servers.rst:None
 msgid "The Twilio welcome page."
 msgstr "Twilio欢迎页面。"
 
@@ -6418,7 +6446,7 @@ msgstr ""
 "的:guilabel:`建立`。在:guilabel:`账户`部分，找到:guilabel:`账户SID`"
 "和:guilabel:`身份验证令牌`。均需将Twilio连接至Odoo。"
 
-#: ../../content/applications/productivity/discuss/ice_servers.rst:-1
+#: ../../content/applications/productivity/discuss/ice_servers.rst:None
 msgid ""
 "The Twilio Account SID and Auth Token can be found uner the Account Info "
 "section."
@@ -6440,7 +6468,7 @@ msgstr ""
 "Twilio ICE servers 旁边的框并输入 Twilio 帐户的 Account SID 和 Auth Token。 "
 "最后，单击 :guilabel:`Save` 以应用这些更改。"
 
-#: ../../content/applications/productivity/discuss/ice_servers.rst:-1
+#: ../../content/applications/productivity/discuss/ice_servers.rst:None
 msgid "Enable the \"Use Twilio ICE servers\" option in Odoo General Settings."
 msgstr "在Odoo一般设置中启用“使用Twilio ICE服务器”选项。"
 
@@ -6466,7 +6494,7 @@ msgstr ""
 "在:menuselection:`设置-->一般设置--> Discuss`中，在:guilabel:`Custom ICE "
 "server list`下点击:guilabel:`ICE服务器`键。"
 
-#: ../../content/applications/productivity/discuss/ice_servers.rst:-1
+#: ../../content/applications/productivity/discuss/ice_servers.rst:None
 msgid "The \"ICE Servers\" button in Odoo General Settings."
 msgstr "Odoo一般设置中的“ICE服务器”按钮。"
 
@@ -6478,7 +6506,7 @@ msgstr ""
 "Odoo将重新定向至:guilabel:`ICE servers`页面，在该页面上，您定义您的ICE服务器"
 "列表。"
 
-#: ../../content/applications/productivity/discuss/ice_servers.rst:-1
+#: ../../content/applications/productivity/discuss/ice_servers.rst:None
 msgid "The \"ICE servers\" page in Odoo."
 msgstr "Odoo中的“ICE服务器”页面。"
 
@@ -6519,7 +6547,7 @@ msgstr ""
 "要创建新频道，请前往 :menuselection:`内部讨论` 应用程序，然后点击左侧菜单"
 "中 :guilabel:`频道` 标题旁边的 :icon:`fa-plus` :guilabel:`(加号)`图标。"
 
-#: ../../content/applications/productivity/discuss/team_communication.rst:-1
+#: ../../content/applications/productivity/discuss/team_communication.rst:None
 msgid "View of discuss's sidebar and a channel being created in Odoo Discuss."
 msgstr "查看讨论侧边栏和正在 Odoo 讨论应用程序中创建的频道。"
 
@@ -6546,7 +6574,7 @@ msgstr ""
 "要控制哪些用户可以加入频道，请打开频道设置页面并前往 :guilabel:`隐私` 选项"
 "卡。"
 
-#: ../../content/applications/productivity/discuss/team_communication.rst:-1
+#: ../../content/applications/productivity/discuss/team_communication.rst:None
 msgid "View of a channel's settings form in Odoo Discuss."
 msgstr "在 Odoo 讨论应用程序中得频道设置表视图。"
 
@@ -6610,7 +6638,7 @@ msgstr ""
 "的 :icon:`fa-user-plus`:guilabel:`（添加用户）` 图标，并在添加所有用户后点"
 "击 :guilabel:`邀请到频道`，来邀请成员。"
 
-#: ../../content/applications/productivity/discuss/team_communication.rst:-1
+#: ../../content/applications/productivity/discuss/team_communication.rst:None
 msgid "View of Discuss' option to invite members in Odoo Discuss."
 msgstr "Odoo 内部沟通应用中强调邀请成员选项的讨论工具栏视图"
 
@@ -6628,7 +6656,7 @@ msgstr ""
 "在侧边栏中固定至少 20 个频道、直接消息或在线客服对话后，就会显示 :guilabel:`"
 "快速搜索...`栏。该功能是筛选对话和查找相关交流的便捷方法。"
 
-#: ../../content/applications/productivity/discuss/team_communication.rst:-1
+#: ../../content/applications/productivity/discuss/team_communication.rst:None
 msgid ""
 "View of the Discuss' sidebar emphasizing the quick search bar in Odoo "
 "Discuss."
@@ -6683,7 +6711,7 @@ msgid ""
 "window and pressing *enter*."
 msgstr "用户只需在窗口中输入信息并按 *回车* 键，就能为该群组频道作出贡献。"
 
-#: ../../content/applications/productivity/discuss/team_communication.rst:-1
+#: ../../content/applications/productivity/discuss/team_communication.rst:None
 msgid "Channel linked in chatter."
 msgstr "频道关联沟通栏。"
 
@@ -7136,7 +7164,7 @@ msgid ""
 "to confirm."
 msgstr ""
 
-#: ../../content/applications/productivity/documents.rst:-1
+#: ../../content/applications/productivity/documents.rst:None
 msgid "Split a PDF"
 msgstr ""
 
@@ -7261,7 +7289,7 @@ msgid ""
 "Document` column and select :guilabel:`Document Request: Reminder`."
 msgstr ""
 
-#: ../../content/applications/productivity/documents.rst:-1
+#: ../../content/applications/productivity/documents.rst:None
 msgid "Send a reminder email from the Activity view"
 msgstr ""
 
@@ -8704,7 +8732,7 @@ msgstr ""
 "准备就绪后，点击:guilabel:`发送`，并填写必填字段。发送后，您的文档仍然可用。"
 "进入 :menuselection:`文档 --> 所有文档` 查看您的文档和签名状态。"
 
-#: ../../content/applications/productivity/sign.rst:-1
+#: ../../content/applications/productivity/sign.rst:None
 msgid "Signature status"
 msgstr "签名状态"
 
@@ -8726,7 +8754,7 @@ msgstr ""
 "到 :guilabel:`选项` 部分，填写 :guilabel:`有效期至` 字段，切换 :guilabel:`提"
 "醒` 开关，并点击该值以编辑默认的提醒间隔天数。"
 
-#: ../../content/applications/productivity/sign.rst:-1
+#: ../../content/applications/productivity/sign.rst:None
 msgid "Set the number of days between reminders"
 msgstr "设置提醒的间隔天数"
 
@@ -8888,7 +8916,7 @@ msgstr ""
 "证并发送完成的文件`。这时会弹出一个 :guilabel:`最终验证` 页面，在此添加电话号"
 "码。一次性代码将通过 SMS 发送。"
 
-#: ../../content/applications/productivity/sign.rst:-1
+#: ../../content/applications/productivity/sign.rst:None
 msgid "Add a hash to your document"
 msgstr "在文件中添加哈希值"
 
@@ -8939,7 +8967,7 @@ msgstr ""
 "转到需要签署的文档，添加 :guilabel:`签署` 字段。切换到配置为使用该功能的任何"
 "角色，然后单击 :guilabel:`验证` 和 :guilabel:`发送`。"
 
-#: ../../content/applications/productivity/sign.rst:-1
+#: ../../content/applications/productivity/sign.rst:None
 msgid "select customer identified with itsme®"
 msgstr "选择使用 itsme® 进行身份验证的客户"
 
@@ -8978,7 +9006,7 @@ msgstr ""
 "签名中会添加一个显示哈希值开头的可视化安全框架。内部用户可以在签署文件时通过"
 "打开或关闭 :guilabel:`框架` 选项来隐藏或显示该框架。"
 
-#: ../../content/applications/productivity/sign.rst:-1
+#: ../../content/applications/productivity/sign.rst:None
 msgid "Adding the visual security frame to a signature."
 msgstr "为签名添加可视化安全框。"
 
@@ -9038,7 +9066,7 @@ msgstr ""
 "换 :guilabel:`指定签署顺序` 开关并搜索签署人姓名或电子邮件信息以添加他们。您"
 "可以在第一栏输入**1**或**2**来决定签署顺序。"
 
-#: ../../content/applications/productivity/sign.rst:-1
+#: ../../content/applications/productivity/sign.rst:None
 msgid "Toggle the switch to specify the signing order."
 msgstr "切换开关以指定签署顺序。"
 
@@ -9177,7 +9205,7 @@ msgstr ""
 "以帮助他们了解该步骤的内容（例如，“在此签名” 或 “填写出生日期”）。您还可以使"
 "用 :guilabel:`占位符` 文本，在字段完成之前显示在字段内。"
 
-#: ../../content/applications/productivity/sign.rst:-1
+#: ../../content/applications/productivity/sign.rst:None
 msgid "Tip and placeholder example in Odoo Sign"
 msgstr "Odoo签名中的提示和占位符示例"
 
@@ -14238,7 +14266,7 @@ msgid ""
 "that indicates the spreadsheet locale and highlights formats that differ."
 msgstr ""
 
-#: ../../content/applications/productivity/spreadsheet/get_started.rst:-1
+#: ../../content/applications/productivity/spreadsheet/get_started.rst:None
 msgid "Warning about difference between user and spreadsheet locale"
 msgstr ""
 
@@ -14436,7 +14464,7 @@ msgstr ""
 "list` :guilabel:`（列表）` 或 :icon:`fa-bar-chart`:guilabel:`（图表）` 图标标"
 "识，后跟 ID 和名称，例如，:icon:`oi-view-pivot` *(#1)产品销售分析*。"
 
-#: ../../content/applications/productivity/spreadsheet/insert.rst:-1
+#: ../../content/applications/productivity/spreadsheet/insert.rst:None
 msgid "Data sources listed in Data menu"
 msgstr "数据菜单中列出的数据源"
 
@@ -14488,7 +14516,7 @@ msgstr ""
 "在 :guilabel:`数据` 菜单中的警告会指出电子表格中不再出现相应列表或透视表的任"
 "何数据源。"
 
-#: ../../content/applications/productivity/spreadsheet/insert.rst:-1
+#: ../../content/applications/productivity/spreadsheet/insert.rst:None
 msgid "Warning message about unused list"
 msgstr "关于未使用列表的警告信息"
 
@@ -16533,7 +16561,7 @@ msgid ""
 "static>` that retrieves data from your database."
 msgstr ""
 
-#: ../../content/applications/productivity/spreadsheet/work_with_data/dynamic_pivot_tables.rst:-1
+#: ../../content/applications/productivity/spreadsheet/work_with_data/dynamic_pivot_tables.rst:None
 msgid "Function of static pivot table cell"
 msgstr ""
 
@@ -16664,7 +16692,7 @@ msgid ""
 "other cell reveals this formula greyed out."
 msgstr ""
 
-#: ../../content/applications/productivity/spreadsheet/work_with_data/dynamic_pivot_tables.rst:-1
+#: ../../content/applications/productivity/spreadsheet/work_with_data/dynamic_pivot_tables.rst:None
 msgid "Array function of a dynamic pivot table"
 msgstr ""
 
@@ -20933,7 +20961,7 @@ msgstr ""
 "从 :guilabel:`产品` 筛选器中选择一个产品，并使数据透视表和图表只显示与该特定"
 "产品相关的销售数据。"
 
-#: ../../content/applications/productivity/spreadsheet/work_with_data/global_filters.rst:-1
+#: ../../content/applications/productivity/spreadsheet/work_with_data/global_filters.rst:None
 msgid "Global filters set on a pivot table"
 msgstr "设置在枢轴表上的全局筛选器"
 
@@ -20948,7 +20976,7 @@ msgstr ""
 "围 :guilabel:`‘产品（清单＃1）’!A2:A34`。这对应于包含插入电子表格的列表中产品"
 "的 :guilabel:`显示名称` 的范围。"
 
-#: ../../content/applications/productivity/spreadsheet/work_with_data/global_filters.rst:-1
+#: ../../content/applications/productivity/spreadsheet/work_with_data/global_filters.rst:None
 msgid "A text filter with a restricted range"
 msgstr "限制范围的文本筛选器"
 
@@ -21121,7 +21149,7 @@ msgstr ""
 "接下来，选择 :guilabel:`项目`、:guilabel:`指定人`和 :guilabel:`标签`，然后单"
 "击 :guilabel:`转换为任务`。待办事项现在是项目任务，出现在选定的项目中。"
 
-#: ../../content/applications/productivity/to_do.rst:-1
+#: ../../content/applications/productivity/to_do.rst:None
 msgid "Converting a to-do into a task"
 msgstr "将待办事项转化为任务"
 
@@ -21137,7 +21165,7 @@ msgstr ""
 "您分配的**待办事项**会显示在应用程序仪表板上。您可以拖放待办事项，将其从一个"
 "阶段移动到另一个阶段。"
 
-#: ../../content/applications/productivity/to_do.rst:-1
+#: ../../content/applications/productivity/to_do.rst:None
 msgid "Example of a to-do pipeline"
 msgstr "待办事项流程示例"
 
@@ -21171,7 +21199,7 @@ msgstr ""
 "要在待办事项上安排活动，请单击应用程序仪表板上的时钟按钮，然后单"
 "击 :guilabel:`+ 安排活动` 按钮。"
 
-#: ../../content/applications/productivity/to_do.rst:-1
+#: ../../content/applications/productivity/to_do.rst:None
 msgid "Scheduling an activity from the To-do dashboard"
 msgstr "从待办事项仪表板安排活动"
 
@@ -21221,7 +21249,7 @@ msgstr ""
 "如果您使用 :doc:`项目应用程序 <../services/project>`，您的待办事项也会作为私"
 "人任务出现在 :guilabel:`我的任务` 视图下。"
 
-#: ../../content/applications/productivity/to_do.rst:-1
+#: ../../content/applications/productivity/to_do.rst:None
 msgid "Example of a \"My Tasks\" pipeline in the Project app"
 msgstr "项目应用程序中“我的任务”管道示例"
 
@@ -21445,7 +21473,7 @@ msgstr ""
 msgid ":guilabel:`VoIP Environment`: set as :guilabel:`Production`"
 msgstr ":guilabel:`VoIP 环境`：设置为 :guilabel:`正式运行`"
 
-#: ../../content/applications/productivity/voip/axivox/axivox_config.rst:-1
+#: ../../content/applications/productivity/voip/axivox/axivox_config.rst:None
 msgid "Integration of Axivox as VoIP provider in an Odoo database."
 msgstr "将 Axivox 作为 VoIP 提供商整合到 Odoo 数据库中。"
 
@@ -21519,7 +21547,7 @@ msgid ""
 "device"
 msgstr "guilabel:`如何在移动设备上拨打电话`：在移动设备上拨打电话的方法"
 
-#: ../../content/applications/productivity/voip/axivox/axivox_config.rst:-1
+#: ../../content/applications/productivity/voip/axivox/axivox_config.rst:None
 msgid "Integration of Axivox user in the Odoo user preference."
 msgstr "在 Odoo 用户偏好中整合 Axivox 用户。"
 
@@ -21791,7 +21819,7 @@ msgid ""
 "agents forget to log out at the end of the day."
 msgstr ""
 
-#: ../../content/applications/productivity/voip/axivox/call_queues.rst:-1
+#: ../../content/applications/productivity/voip/axivox/call_queues.rst:None
 msgid ""
 "Call queue with connected agents column highlighted and connect an agent and "
 "report buttons\n"
@@ -21904,7 +21932,7 @@ msgid ""
 "in the drop-down menu."
 msgstr "要选择单个 :guilabel:`活动类型`，请单击下拉菜单中的所需选项。"
 
-#: ../../content/applications/productivity/voip/axivox/call_queues.rst:-1
+#: ../../content/applications/productivity/voip/axivox/call_queues.rst:None
 msgid "Axivox queue report with result, event type, and period highlighted."
 msgstr "Axivox 队列报告，突出显示结果、活动类型和时间段。"
 
@@ -22006,7 +22034,7 @@ msgstr ""
 "接下来，单击标有 :guilabel:`添加会议` 的绿色按钮，出现 :guilabel:`新会议` 表"
 "单。"
 
-#: ../../content/applications/productivity/voip/axivox/conference_calls.rst:-1
+#: ../../content/applications/productivity/voip/axivox/conference_calls.rst:None
 msgid "New conference form on Axivox."
 msgstr "Axivox 上的新会议表单。"
 
@@ -22174,7 +22202,7 @@ msgstr ""
 "*VoIP* 小工具。然后，拨打会议的特定分机号码，并点击 :guilabel:`📞 （电话）` "
 "图标。"
 
-#: ../../content/applications/productivity/voip/axivox/conference_calls.rst:-1
+#: ../../content/applications/productivity/voip/axivox/conference_calls.rst:None
 msgid "Connecting to a conference extension using the Odoo VoIP widget."
 msgstr "使用 Odoo VoIP 工具连接会议分机。"
 
@@ -22287,7 +22315,7 @@ msgstr ""
 "然后，单击所需拨号计划右侧的 :guilabel:`可视化编辑器` 按钮进行编辑。最后，打"
 "开 :guilabel:`新元素` 下拉菜单，选择元素，然后单击 :guilabel:`添加`。"
 
-#: ../../content/applications/productivity/voip/axivox/dial_plan_advanced.rst:-1
+#: ../../content/applications/productivity/voip/axivox/dial_plan_advanced.rst:None
 msgid ""
 "Visual editor for a dial plan in Axivox, with Add and the dispatcher element "
 "highlighted."
@@ -22646,7 +22674,7 @@ msgstr ""
 "要指定某个国家代码或区号后面的所有号码，请在国家代码或国家代码 + 区号后面加"
 "上 `\\d+`。"
 
-#: ../../content/applications/productivity/voip/axivox/dial_plan_advanced.rst:-1
+#: ../../content/applications/productivity/voip/axivox/dial_plan_advanced.rst:None
 msgid ""
 "Dispatcher configuration panel, with name, regular expression and add a line "
 "highlighted."
@@ -22726,7 +22754,7 @@ msgstr ""
 "当呼叫号码与 :guilabel:`调度器` 元素上设置的任何 :guilabel:`正则表达式` 不匹"
 "配时，呼叫会遵循此路径。"
 
-#: ../../content/applications/productivity/voip/axivox/dial_plan_advanced.rst:-1
+#: ../../content/applications/productivity/voip/axivox/dial_plan_advanced.rst:None
 msgid "Dial plan with dispatcher element highlighted."
 msgstr "拨号计划，突出调度器元素。"
 
@@ -22785,7 +22813,7 @@ msgid ""
 "reduces wasted time and hangups."
 msgstr ""
 
-#: ../../content/applications/productivity/voip/axivox/dial_plan_advanced.rst:-1
+#: ../../content/applications/productivity/voip/axivox/dial_plan_advanced.rst:None
 msgid ""
 "Time condition element set in a dial plan on Axivox. Time condition is "
 "highlighted."
@@ -22838,7 +22866,7 @@ msgid ""
 "specifies a match pattern in text."
 msgstr ""
 
-#: ../../content/applications/productivity/voip/axivox/dial_plan_advanced.rst:-1
+#: ../../content/applications/productivity/voip/axivox/dial_plan_advanced.rst:None
 msgid ""
 "Access list element configuration with the allow/deny fields highlighted."
 msgstr ""
@@ -22884,7 +22912,7 @@ msgstr ""
 "通过常规菜单流进行路由。 :guilabel:`已拒绝` 呼叫可路由到 :guilabel:`挂机` 元"
 "素。最后，:guilabel:`已授权`呼叫者可被发送到特定的分机或队列。"
 
-#: ../../content/applications/productivity/voip/axivox/dial_plan_advanced.rst:-1
+#: ../../content/applications/productivity/voip/axivox/dial_plan_advanced.rst:None
 msgid "Access list element highlighted in an example dial plan."
 msgstr "拨号计划示例中突出显示的访问列表元素。"
 
@@ -22991,7 +23019,7 @@ msgstr ""
 "然后，从 :guilabel:`新建元素` 下拉菜单中选择 :guilabel:`交换机`，再点"
 "击 :guilabel:`添加`。双击该元素可进一步配置 :guilabel:`交换机` 元素。"
 
-#: ../../content/applications/productivity/voip/axivox/dial_plan_advanced.rst:-1
+#: ../../content/applications/productivity/voip/axivox/dial_plan_advanced.rst:None
 msgid ""
 "Switch configuration in a dial plan, with inactive and active routes "
 "highlighted."
@@ -23090,7 +23118,7 @@ msgstr ""
 "单，选择 :guilabel:`多路开关`。然后点击 :guilabel:`添加`。双击该元素，进一步"
 "配置 :guilabel:`切换` 元素。"
 
-#: ../../content/applications/productivity/voip/axivox/dial_plan_advanced.rst:-1
+#: ../../content/applications/productivity/voip/axivox/dial_plan_advanced.rst:None
 msgid ""
 "Multi-switch configuration in a dial plan, with chosen route highlighted."
 msgstr "拨号方案中的多路交换机配置（含高亮显示的选定路由）。"
@@ -23167,7 +23195,7 @@ msgstr ""
 "Axivox 不限制可创建拨号计划的数量。这些计划可以随时添加和改进。这样就可以创建"
 "具有多种不同配置的沙盒。"
 
-#: ../../content/applications/productivity/voip/axivox/dial_plan_basics.rst:-1
+#: ../../content/applications/productivity/voip/axivox/dial_plan_basics.rst:None
 msgid ""
 "Dial plan dashboard with the edit features and Add a dial plan button "
 "highlighted."
@@ -23228,7 +23256,7 @@ msgstr ""
 "个 :abbr:`GUI（图形用户界面）`，在这里可以配置各种拨号计划元素并将它们链接在"
 "一起。"
 
-#: ../../content/applications/productivity/voip/axivox/dial_plan_basics.rst:-1
+#: ../../content/applications/productivity/voip/axivox/dial_plan_basics.rst:None
 msgid ""
 "Visual editor for an example dial plan, with the new element, Add, and Save "
 "buttons\n"
@@ -23505,7 +23533,7 @@ msgstr ""
 "本拨号计划方案包括以下链接元素：menuselection:`开始-->播放文件-->菜单-->（挂"
 "断、通话、队列、会议）-->（语音信箱、挂断）`。"
 
-#: ../../content/applications/productivity/voip/axivox/dial_plan_basics.rst:-1
+#: ../../content/applications/productivity/voip/axivox/dial_plan_basics.rst:None
 msgid "Basic dial plan configuration."
 msgstr "基本拨号计划配置。"
 
@@ -24034,7 +24062,7 @@ msgstr ""
 "国家/地区代码列表，请访问： `https://countrycode.org <https://"
 "countrycode.org>`_。"
 
-#: ../../content/applications/productivity/voip/axivox/manage_users.rst:-1
+#: ../../content/applications/productivity/voip/axivox/manage_users.rst:None
 msgid "General tab layout in the Axivox management console."
 msgstr "Axivox 管理控制台的常规选项卡布局。"
 
@@ -24155,7 +24183,7 @@ msgstr ""
 "可以设置 :guilabel:`目的地`（用户）和时间范围。如果原始用户的 :abbr:`网络电话"
 "` 分机或来电号码繁忙，呼叫将被转发到目的地。"
 
-#: ../../content/applications/productivity/voip/axivox/manage_users.rst:-1
+#: ../../content/applications/productivity/voip/axivox/manage_users.rst:None
 msgid ""
 "Manage forwarding calls to different users or phone numbers in the "
 "Forwardings tab."
@@ -24212,7 +24240,7 @@ msgstr ""
 "选择该选项后，原用户的 :abbr:`VoIP（网络电话）` 号码 **不会** 响铃。响铃时间"
 "也可以错开，这样在第一个用户不接电话后，呼叫就会被转发给另一个用户。"
 
-#: ../../content/applications/productivity/voip/axivox/manage_users.rst:-1
+#: ../../content/applications/productivity/voip/axivox/manage_users.rst:None
 msgid ""
 "Ring destinations like different users or phone numbers from the Follow Me "
 "tab."
@@ -24294,7 +24322,7 @@ msgid ""
 "from a desk-phone."
 msgstr ":guilabel:`接听`：该操作允许用户从桌面电话接听来电。"
 
-#: ../../content/applications/productivity/voip/axivox/manage_users.rst:-1
+#: ../../content/applications/productivity/voip/axivox/manage_users.rst:None
 msgid ""
 "Manage user page with Keys tab highlighted and number 2 key drop-down menu "
 "selected (with\n"
@@ -24380,7 +24408,7 @@ msgstr ""
 "每个 Axivox 用户在 :guilabel:`SIP 密码` 字段中的值都是唯一的。此值用于在 "
 "Odoo 上登录 Axivox，以及用于任何移动 :abbr:`SIP（会话启动协议）` 客户端。"
 
-#: ../../content/applications/productivity/voip/axivox/manage_users.rst:-1
+#: ../../content/applications/productivity/voip/axivox/manage_users.rst:None
 msgid "Important credentials used for external configurations of Axivox VoIP."
 msgstr "用于 Axivox VoIP 外部配置的重要凭证。"
 
@@ -24539,7 +24567,7 @@ msgid ""
 "incoming_number` can be linked."
 msgstr "完成新用户设置后，可链接 :ref:`voip/axivox/incoming_number` 。"
 
-#: ../../content/applications/productivity/voip/axivox/manage_users.rst:-1
+#: ../../content/applications/productivity/voip/axivox/manage_users.rst:None
 msgid ""
 "Manage a user page, with the permissions tab highlighted, along with the "
 "first permission\n"
@@ -24875,7 +24903,7 @@ msgstr ""
 "送到语音信箱` 选项位于 :guilabel:`无应答时转发` 和 :guilabel:`忙碌时转发` 字"
 "段中。"
 
-#: ../../content/applications/productivity/voip/axivox/vm_audio_messages.rst:-1
+#: ../../content/applications/productivity/voip/axivox/vm_audio_messages.rst:None
 msgid ""
 "Send to voicemail as a last resort options highlighted on the Forwardings "
 "tab of the user."
@@ -25100,7 +25128,7 @@ msgid ""
 "corner of the screen."
 msgstr "要执行更改，请点击屏幕右上角的 :guilabel:`应用更改`。"
 
-#: ../../content/applications/productivity/voip/axivox/vm_audio_messages.rst:-1
+#: ../../content/applications/productivity/voip/axivox/vm_audio_messages.rst:None
 msgid ""
 "Convert text to message window with voice, text, generate button and save "
 "highlighted."
@@ -25336,7 +25364,7 @@ msgid ""
 "browser."
 msgstr "无论是使用手机 Odoo 应用程序还是网络浏览器，这一步骤都是**必要的**。"
 
-#: ../../content/applications/productivity/voip/devices_integrations.rst:-1
+#: ../../content/applications/productivity/voip/devices_integrations.rst:None
 msgid "Allow the database to access the microphone."
 msgstr "允许数据库访问麦克风。"
 
@@ -25351,7 +25379,7 @@ msgstr ""
 "话`（如果平板电脑已启用呼叫功能）。点击:guilabel:`记注？`旁边的方框，以便将此"
 "决定作为默认设置。"
 
-#: ../../content/applications/productivity/voip/devices_integrations.rst:-1
+#: ../../content/applications/productivity/voip/devices_integrations.rst:None
 msgid ""
 "Window prompt to choose whether to use VOIP or the devices phone to make the "
 "call."
@@ -25362,7 +25390,7 @@ msgid ""
 "Here is the layout of what the Odoo *VoIP* app looks like on a mobile device:"
 msgstr "以下是 Odoo *VoIP* 应用程序在移动设备上的布局："
 
-#: ../../content/applications/productivity/voip/devices_integrations.rst:-1
+#: ../../content/applications/productivity/voip/devices_integrations.rst:None
 msgid "Layout of what the VoIP app looks like on the a mobile device."
 msgstr "网络电话应用程序在移动设备上的布局。"
 
@@ -25415,7 +25443,7 @@ msgstr ""
 "如果 :abbr:`VoIP（互联网语音协议）` 帐户已经设置，请单击 :guilabel:`是`。这意"
 "味着已经生成了账户用户名和密码。"
 
-#: ../../content/applications/productivity/voip/devices_integrations.rst:-1
+#: ../../content/applications/productivity/voip/devices_integrations.rst:None
 msgid "Zoiper account setup, shown in the view from a mobile device."
 msgstr "Zoiper 帐户设置，显示在移动设备的视图中。"
 
@@ -25438,7 +25466,7 @@ msgstr ""
 "如果配置的提供程序是 *Axivox*，则选择 :guilabel:`比利时`。然后，选"
 "择 :guilabel:`Axivox` 作为提供商。"
 
-#: ../../content/applications/productivity/voip/devices_integrations.rst:-1
+#: ../../content/applications/productivity/voip/devices_integrations.rst:None
 msgid "Zoiper account setup, choosing the provider."
 msgstr "设置 Zoiper 帐户，选择提供商。"
 
@@ -25515,7 +25543,7 @@ msgid ""
 "the :abbr:`VoIP (Voice over Internet Protocol)` service."
 msgstr "至此，*Zoiper*已设置为使用:abbr:`VoIP（互联网语音协议）`服务拨打电话。"
 
-#: ../../content/applications/productivity/voip/devices_integrations.rst:-1
+#: ../../content/applications/productivity/voip/devices_integrations.rst:None
 msgid "Zoiper account setup, registration successful."
 msgstr "设置 Zoiper 帐户，注册成功。"
 
@@ -25580,7 +25608,7 @@ msgstr ""
 "此时，*Linphone* 就可以开始拨打电话了，应用程序屏幕顶部会出现一个绿色按钮，上"
 "面写着 :guilabel:`已连接`。"
 
-#: ../../content/applications/productivity/voip/devices_integrations.rst:-1
+#: ../../content/applications/productivity/voip/devices_integrations.rst:None
 msgid "Linphone account setup, registration successful."
 msgstr "设置 Linphone 帐户，注册成功。"
 
@@ -25652,7 +25680,7 @@ msgid ""
 "CLI."
 msgstr ""
 
-#: ../../content/applications/productivity/voip/didww.rst:-1
+#: ../../content/applications/productivity/voip/didww.rst:None
 msgid "The purchase dashboard in DIDWW."
 msgstr ""
 
@@ -25678,7 +25706,7 @@ msgid ""
 "enter the necessary information."
 msgstr ""
 
-#: ../../content/applications/productivity/voip/didww.rst:-1
+#: ../../content/applications/productivity/voip/didww.rst:None
 msgid "The add a new user screen in DIDWW."
 msgstr ""
 
@@ -25710,7 +25738,7 @@ msgstr ""
 msgid ":guilabel:`Transport protocol`: `UDP`, `TCP`, `WSS`, `TLS`"
 msgstr ""
 
-#: ../../content/applications/productivity/voip/didww.rst:-1
+#: ../../content/applications/productivity/voip/didww.rst:None
 msgid "The settings for a new contact method in DIDWW."
 msgstr ""
 
@@ -25740,7 +25768,7 @@ msgid ""
 "`sip.phone.systems`."
 msgstr ""
 
-#: ../../content/applications/productivity/voip/didww.rst:-1
+#: ../../content/applications/productivity/voip/didww.rst:None
 msgid "The VoIP providers page in Odoo."
 msgstr ""
 
@@ -25753,7 +25781,7 @@ msgid ""
 "enter the :guilabel:`Voip Username` and :guilabel:`Voip Secret`, then save."
 msgstr ""
 
-#: ../../content/applications/productivity/voip/didww.rst:-1
+#: ../../content/applications/productivity/voip/didww.rst:None
 msgid "DIDWW provider, username, and secret credentials entered."
 msgstr ""
 
@@ -25834,7 +25862,7 @@ msgstr ""
 msgid "Next, activate the :guilabel:`VOIP OnSIP` module."
 msgstr "接下来，激活 :guilabel:`VOIP OnSIP` 模块。"
 
-#: ../../content/applications/productivity/voip/onsip.rst:-1
+#: ../../content/applications/productivity/voip/onsip.rst:None
 msgid "View of OnSIP app in the app search results."
 msgstr "在应用程序搜索结果中查看 OnSIP 应用程序。"
 
@@ -25869,7 +25897,7 @@ msgstr ":guilabel:`WebSocket`: `wss://edge.sip.onsip.com`"
 msgid ":guilabel:`VoIP Environment`: :guilabel:`Production`"
 msgstr ":guilabel:`VoIP 环境`: :guilabel:`正式运行`"
 
-#: ../../content/applications/productivity/voip/onsip.rst:-1
+#: ../../content/applications/productivity/voip/onsip.rst:None
 msgid "VoIP configuration settings in Odoo Settings app."
 msgstr "在 Odoo 设置应用程序中进行 VoIP 配置设置。"
 
@@ -25997,7 +26025,7 @@ msgstr ""
 msgid "To ignore the call, click the red :guilabel:`📞 (phone)` icon."
 msgstr "要忽略来电，请点击红色的 :guilabel:`📞（电话）` 图标。"
 
-#: ../../content/applications/productivity/voip/onsip.rst:-1
+#: ../../content/applications/productivity/voip/onsip.rst:None
 msgid "Incoming call shown in the Odoo VoIP widget."
 msgstr "来电显示在 Odoo VoIP 组件中。"
 
@@ -26021,7 +26049,7 @@ msgstr ""
 "如果 Odoo 组件中出现*缺少参数*信息，请确保刷新 Odoo 浏览器窗口（或标签页），"
 "然后再试一次。"
 
-#: ../../content/applications/productivity/voip/onsip.rst:-1
+#: ../../content/applications/productivity/voip/onsip.rst:None
 msgid "Missing parameter message in the Odoo VoIP widget."
 msgstr "Odoo VoIP 组件中的参数缺失信息。"
 
@@ -26045,7 +26073,7 @@ msgid ""
 "United States)."
 msgstr "例如，`16505555555`（其中 `1` 是美国的国际前缀）。"
 
-#: ../../content/applications/productivity/voip/onsip.rst:-1
+#: ../../content/applications/productivity/voip/onsip.rst:None
 msgid "Incorrect number message populated in the Odoo VoIP widget."
 msgstr "Odoo VoIP 小工具中输入的号码信息不正确。"
 
@@ -26176,7 +26204,7 @@ msgstr ""
 msgid ":icon:`fa-pause` :guilabel:`(pause)`: Place the caller on hold."
 msgstr ""
 
-#: ../../content/applications/productivity/voip/sales_calls.rst:-1
+#: ../../content/applications/productivity/voip/sales_calls.rst:None
 msgid ""
 "The VoIP widget opened to a call, showing the shortcut icons a salesperson "
 "has access to."
@@ -26371,7 +26399,7 @@ msgstr ""
 "的 :guilabel:`活动类型` 设置为 :guilabel:`呼叫`，然后填写活动表单的其余部分，"
 "最后点击 :guilabel:`安排`。"
 
-#: ../../content/applications/productivity/voip/support_calls.rst:-1
+#: ../../content/applications/productivity/voip/support_calls.rst:None
 msgid "Scheduling a call activity for a support ticket."
 msgstr "为支持工单安排呼叫活动。"
 
@@ -26519,7 +26547,7 @@ msgstr ""
 "和:guilabel:`联系人`，用于管理 Odoo 中的通话和日常活动。使用搜索栏可更快查找"
 "联系人。"
 
-#: ../../content/applications/productivity/voip/voip_widget.rst:-1
+#: ../../content/applications/productivity/voip/voip_widget.rst:None
 msgid "VoIP tabs that can be clicked on."
 msgstr "可点击的 VOIP 标签页。"
 
@@ -26629,7 +26657,7 @@ msgstr ""
 "标签页。然后将鼠标悬停于需要添加通话的商机上，点击带有绿色小 :icon:fa-"
 "plus :guilabel:`加号` 图标的 :icon:`fa-phone` :guilabel:`(电话)` 按钮。"
 
-#: ../../content/applications/productivity/voip/voip_widget.rst:-1
+#: ../../content/applications/productivity/voip/voip_widget.rst:None
 msgid "A sales opportunity with the option to add a call to the VoIP widget."
 msgstr "可添加至 VOIP 组件通话列表的销售商机。"
 
@@ -26644,7 +26672,7 @@ msgstr ""
 "点击出现的带有 :icon:`fa-minus` :guilabel:`(减号)` 图标的红色 :icon:`fa-"
 "phone` :guilabel:`(电话)` 按钮。"
 
-#: ../../content/applications/productivity/voip/voip_widget.rst:-1
+#: ../../content/applications/productivity/voip/voip_widget.rst:None
 msgid ""
 "A sales opportunity with the option to remove a call from the VoIP widget."
 msgstr "可从 VOIP 组件移除通话的销售商机。"
@@ -27415,7 +27443,7 @@ msgstr ""
 "WhatsApp :guilabel:`快速入门` 页面；在该 :guilabel:`快速入门` 页面上，您可以"
 "添加电话号码并发送初始测试消息，从而开始配置 WhatsApp API。"
 
-#: ../../content/applications/productivity/whatsapp.rst:-1
+#: ../../content/applications/productivity/whatsapp.rst:None
 msgid ""
 "Navigating to the WhatsApp quickstart wizard in Meta for Developer dashboard."
 msgstr "在 Meta 开发者模式仪表板中导航到 WhatsApp 快速入门向导。"
@@ -27776,7 +27804,7 @@ msgid ""
 "Meta developer console:"
 msgstr "已完成的:guilabel:`网络钩子` 配置将在 Meta 开发者控制台中显示如下："
 
-#: ../../content/applications/productivity/whatsapp.rst:-1
+#: ../../content/applications/productivity/whatsapp.rst:None
 msgid "WhatsApp webhooks set in the Meta developer console."
 msgstr "在 Meta 开发者控制台中设置 WhatsApp 网络钩子。"
 
@@ -28236,7 +28264,7 @@ msgstr ""
 "要查找特定字段，可能需要在搜索结果框中浏览多个层级。使用 :guilabel:`>（右箭"
 "头）` 和 :guilabel:`⬅️（左箭头）` 图标在菜单层级之间导航。"
 
-#: ../../content/applications/productivity/whatsapp.rst:-1
+#: ../../content/applications/productivity/whatsapp.rst:None
 msgid "Searching for the phone field in the search bar."
 msgstr "在搜索栏中搜索电话字段。"
 
@@ -28398,7 +28426,7 @@ msgstr ""
 "以通过设置动态变量引用模型中的字段来实现这一目的。例如，可在电子邮件中引"
 "用 :guilabel:`销售订单` 模型中 :guilabel:`客户` 字段中的客户姓名。"
 
-#: ../../content/applications/productivity/whatsapp.rst:-1
+#: ../../content/applications/productivity/whatsapp.rst:None
 msgid "WhatsApp message with dynamic variables highlighted."
 msgstr "突出显示动态变量的 WhatsApp 消息。"
 
@@ -28636,7 +28664,7 @@ msgstr ""
 "的 :guilabel:`同步模板`。Meta 将更新已批准的模板，以便它们可以与数据库中的各"
 "种应用程序一起使用。"
 
-#: ../../content/applications/productivity/whatsapp.rst:-1
+#: ../../content/applications/productivity/whatsapp.rst:None
 msgid ""
 "Syncing Meta WhatsApp templates to the Odoo database, with the 'Sync "
 "Templates'\n"
@@ -28673,7 +28701,7 @@ msgstr ""
 "首先，导航到 `Meta 的 WhatsApp 模板仪表板 <https://business.facebook.com/wa/"
 "manage/home>`_，然后转到 :menuselection:`账户工具 --> 消息模板`。"
 
-#: ../../content/applications/productivity/whatsapp.rst:-1
+#: ../../content/applications/productivity/whatsapp.rst:None
 msgid ""
 "Account tools highlighted in business manager with the manage templates link "
 "highlighted."
@@ -28703,7 +28731,7 @@ msgstr "输入模板的 :guilabel:`名称`，然后选择模板的 :guilabel:`�
 msgid "Multiple languages can be selected."
 msgstr ""
 
-#: ../../content/applications/productivity/whatsapp.rst:-1
+#: ../../content/applications/productivity/whatsapp.rst:None
 msgid ""
 "Template configuration options listed, with Marketing, Utility, Name and "
 "Language\n"
@@ -28722,7 +28750,7 @@ msgstr ""
 "模板` 页面。在此可配置 :guilabel:`标题`、:guilabel:`正文`、:guilabel:`页脚`"
 "和 :guilabel:`按钮`。模板右侧是生产中模板的预览。"
 
-#: ../../content/applications/productivity/whatsapp.rst:-1
+#: ../../content/applications/productivity/whatsapp.rst:None
 msgid "Edit the template using a header, body, footer and buttons."
 msgstr "使用页眉、正文、页脚和按钮编辑模板。"
 
@@ -28811,7 +28839,7 @@ msgstr ""
 "内部沟通*应用程序中。点击旁边的 :guilabel:`👤+（添加用户）` 图标，就会出现一"
 "个窗口邀请用户加入对话。"
 
-#: ../../content/applications/productivity/whatsapp.rst:-1
+#: ../../content/applications/productivity/whatsapp.rst:None
 msgid ""
 "Adding users to a WhatsApp conversation, with the add user icon highlighted."
 msgstr "在 WhatsApp 对话中添加用户，添加用户图标突出显示。"
@@ -28872,7 +28900,7 @@ msgstr ""
 "这会导致重复验证错误。要纠正此问题，请重命名 Odoo 中的重复模板名称，然后按照"
 "以下步骤再次同步模板：:ref:`productivity/whatsapp/sync`。"
 
-#: ../../content/applications/productivity/whatsapp.rst:-1
+#: ../../content/applications/productivity/whatsapp.rst:None
 msgid "User error populated in Odoo when a duplicate template exists."
 msgstr "当存在重复模板时，Odoo 中出现用户错误。"
 
@@ -28893,7 +28921,7 @@ msgstr ""
 "如果临时令牌未替换为永久令牌，则在发送失败后测试连接时，Odoo 中将弹出用户错"
 "误。要纠正此问题，请参阅 :ref:`productivity/whatsapp/token`。"
 
-#: ../../content/applications/productivity/whatsapp.rst:-1
+#: ../../content/applications/productivity/whatsapp.rst:None
 msgid "User error populated in Odoo when token expires."
 msgstr "令牌过期时，Odoo 中出现用户错误。"
 
@@ -28916,11 +28944,19 @@ msgstr ""
 "要纠正这一错误，请按照以下步骤创建一个 :guilabel:`管理` 系统用"
 "户：:ref:`productivity/whatsapp/token`。"
 
-#: ../../content/applications/productivity/whatsapp.rst:-1
+#: ../../content/applications/productivity/whatsapp.rst:None
 msgid ""
 "User error populated in Odoo when an employee token is generated instead of "
 "a Admin user."
 msgstr "当生成的是员工令牌而不是管理员用户时，Odoo 中会出现用户错误。"
+
+#~ msgid "Lastly, add a :guilabel:`Description` for this resource."
+#~ msgstr "最后，为该资源添加 :guilabel:`说明` 。"
+
+#~ msgid ""
+#~ "The contents of the :guilabel:`Description` tab are visible to customers "
+#~ "when booking an appointment online."
+#~ msgstr "在线预约时，客户可以看到 :guilabel:`说明` 选项卡的内容。"
 
 #~ msgid ""
 #~ "If you intend to use :doc:`global filters <global_filters>` to "
