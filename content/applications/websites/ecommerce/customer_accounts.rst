@@ -5,13 +5,14 @@ Customer accounts
 Using customer accounts for an e-commerce enables you to :ref:`manage customers
 <ecommerce/customer_accounts/account-creation>`, control access to the :ref:`shop
 <ecommerce/customer_accounts/shop-access>`, the :ref:`checkout
-<ecommerce/customer_accounts/checkout-access>`, or the :ref:`customer portal <portal/access>`,
-and support both :doc:`B2B and B2C operations <b2b_b2c>`.
+<ecommerce/customer_accounts/checkout-access>`, or the :doc:`customer portal
+<../../general/users/user_portals/portal_access>`, and support both :doc:`B2B and B2C operations
+<b2b_b2c>`.
 
-After logging in, customers can access their :doc:`customer portal <../../general/users/portal>`
-by clicking their username in the top-right corner of the screen and selecting :guilabel:`My
-Account`. From there, they can view all their documents in one place, such as quotations, orders,
-invoices, and more.
+After logging in, customers can access their :doc:`customer portal
+<../../general/users/user_portals>` by clicking their username in the top-right corner of the
+screen and selecting :guilabel:`My Account`. From there, they can view all their documents in one
+place, such as quotations, orders, invoices, and more.
 
 .. image:: customer_accounts/account-log.png
    :alt: Customer account access
@@ -33,7 +34,7 @@ of the following options:
 - :guilabel:`On invitation`: Customers can only create an account if the website owner sends them
   an invitation.
 - :guilabel:`Free sign up`: Every website visitor can create an account and sign in. They will
-  get access to the :doc:`portal <../../general/users/portal>` by default.
+  get access to the :doc:`portal <../../general/users/user_portals>` by default.
 
 .. _ecommerce/customer_accounts/grant-access:
 
@@ -73,7 +74,7 @@ Access restriction
 Once a customer account is created, it is still possible to adjust the access rights
 either globally or for individual users:
 
-- :ref:`Revoke access or re-invite a customer <portal/access>`
+- :doc:`Revoke access or re-invite a user <../../general/users/user_portals/portal_access>`
   using the related buttons in the :guilabel:`Portal Access Management` pop-up.
 - Restrict :ref:`access to the shop <ecommerce/customer_accounts/shop-access>`;
 - Decide whether customers need to create an account to :ref:`complete the checkout

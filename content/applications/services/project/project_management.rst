@@ -76,7 +76,7 @@ option:
 - :guilabel:`All internal users`: All internal users can access the project and all of its tasks.
 - :guilabel:`Invited portal users and all internal users (public)`: All internal users can access
   the project and all of its tasks. When following a project, :doc:`portal users
-  </applications/general/users/portal>` only have access to the specific tasks they are following.
+  </applications/general/users/user_portals>` only have access to the specific tasks they are following.
   This option is selected by default.
 
 Inviting external users

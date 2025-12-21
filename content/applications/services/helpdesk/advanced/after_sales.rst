@@ -238,8 +238,8 @@ Create field service task from a ticket
 =======================================
 
 On-site interventions can be planned from a ticket and managed through the **Field Service**
-application. Customers with :doc:`portal access <../../../general/users/portal>` are able to track
-the progress of a **Field Service** task the same as they would a **Helpdesk** ticket.
+application. Customers with :doc:`portal access <../../../general/users/user_portals>` are able
+to track the progress of a **Field Service** task the same as they would a **Helpdesk** ticket.
 
 .. tip::
    To change the default **Field Service** project for the team, go to :menuselection:`Helpdesk app
