@@ -284,10 +284,6 @@ Administrative centers
 In order for **FACe** to work with **administrative centers**, the invoice *must* include specific
 data about the centers.
 
-.. note::
-   Make sure to have the :guilabel:`Spain - Facturae EDI - Administrative Centers Patch
-   (l10n_es_edi_facturae_adm_centers)` module :ref:`installed <general/install>`.
-
 To add **administrative centers**, create a new **contact** to add to the **partner** company.
 Select :guilabel:`FACe Center` as the **type**, assign one or more **role(s)** to that contact, and
 :guilabel:`Save`. The **three** roles usually required are:
