@@ -302,29 +302,29 @@ The following examples showcase how to execute two of the :ref:`common ORM metho
           const reqSearch = {
               method: "POST",
               headers: headers,
-              body: {
+              body: JSON.stringify({
                   context: {lang: "en_US"},
                   domain: [
                       ["name", "ilike", "%deco%"],
                       ["is_company", "=", true],
                   ],
-              },
+              }),
           };
           const resSearch = await fetch(BASE_URL + "/res.partner/search_read", reqSearch);
-          if (!response.ok) throw new Error(resSearch.json());
+          if (!resSearch.ok) throw new Error(resSearch.json());
           const ids = await resSearch.json();
 
           const reqRead = {
               method: "POST",
               headers: headers,
-              body: {
+              body: JSON.stringify({
                   ids: ids,
                   context: {lang: "en_US"},
                   fields: ["name"],
-              },
+              }),
           };
           const resRead = await fetch(BASE_URL + "/res.partner/search_read", reqRead);
-          if (!response.ok) throw new Error(resRead.json());
+          if (!resRead.ok) throw new Error(resRead.json());
           const names = await resRead.json();
           console.log(names);
       })();
