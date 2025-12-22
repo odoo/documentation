@@ -391,7 +391,7 @@ db (database) and object. All three services are deprecated.
 Common service
 --------------
 
-The common service defines 3 fonctions:
+The common service defines 3 functions:
 
 1. ``version()``
 2. ``login(db, login, password)``
