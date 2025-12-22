@@ -24,7 +24,7 @@ msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-19 18:31+0000\n"
-"PO-Revision-Date: 2025-12-01 20:21+0000\n"
+"PO-Revision-Date: 2025-12-22 23:21+0000\n"
 "Last-Translator: \"Larissa Manderfeld (lman)\" <lman@odoo.com>\n"
 "Language-Team: German <https://translate.odoo.com/projects/odoo-19-doc/"
 "inventory_and_mrp/de/>\n"
@@ -3115,7 +3115,7 @@ msgstr "Übersicht der Lieferungen im zu validierenden Transfer"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:3
 msgid "Retrieve EPC codes"
-msgstr ""
+msgstr "EPC-Codes abrufen"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:9
 msgid ""
@@ -3124,6 +3124,12 @@ msgid ""
 "level. These identifiers support accurate inventory management by enabling "
 "faster cycle counts, streamlined adjustments, and more precise stock control."
 msgstr ""
+"Elektronische Produktcodes (|EPC|) sind weltweit eindeutige Identifikatoren, "
+"die bestimmten Produkten zugewiesen werden und eine Unterscheidung der "
+"Artikel auf individueller Ebene ermöglichen. Diese Identifikatoren "
+"unterstützen eine genaue Bestandsverwaltung, indem sie schnellere "
+"Zykluszählungen, optimierte Anpassungen und eine präzisere Bestandskontrolle "
+"ermöglichen."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:14
 msgid ""
@@ -3132,46 +3138,56 @@ msgid ""
 "tags, which are then applied to products and used throughout the inventory "
 "process."
 msgstr ""
+"Nachdem die EPCs von |GS1| :ref:`erhalten <barcode/operations/"
+"retrieve_epcs_gs1>` wurden, werden sie auf |RFID|-Etiketten :ref:`codiert <"
+"barcode/operations/write_epcs>`, die dann auf die Produkte aufgebracht und "
+"während des gesamten Bestandsprozesses verwendet werden."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:19
 msgid "Set up :doc:`../setup/rfid`"
-msgstr ""
+msgstr ":doc:`../setup/rfid` einrichten"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:24
 msgid "Retrieving EPCs from GS1"
-msgstr ""
+msgstr "EPC von GS1 abrufen"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:26
 msgid ""
 "To retrieve an EPC to encode on a tag, use `GS1's EPC Encoder/Decoder tool "
 "<https://www.gs1.org/services/epc-encoderdecoder>`__."
 msgstr ""
+"Um einen EPC zum Codieren auf einem Etikett abzurufen, verwenden Sie das "
+"`EPC-Codierer-/Decodierer-Tool von GS1 <https://www.gs1.org/services/epc-"
+"encoderdecoder>`_."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:29
 msgid ""
 "Enter the GTIN-14 barcode of the product in the application "
 "identifier :guilabel:`(01)` field."
 msgstr ""
+"Geben Sie den GTIN-14-Barcode des Produkts in das Anwendungsfeld :guilabel:`"
+"(01)` ein."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:30
 msgid "Enter the product's serial number in the :guilabel:`(21)` field."
 msgstr ""
+"Geben Sie die Seriennummer des Produkts in das Feld :guilabel:`(21)` ein."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:31
 msgid "Specify a company prefix length."
-msgstr ""
+msgstr "Geben Sie die Länge des Unternehmenspräfixes an."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:32
 msgid "Specify the size of the tag and its filter value."
-msgstr ""
+msgstr "Geben Sie die Größe des Etiketts und seinen Filterwert an."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:None
 msgid "Complete the fields of the EPC Encoder/Decoder tool."
-msgstr ""
+msgstr "Ausfüllen der Felder des EPC-Codierer-/Decodierer-Tools."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:40
 msgid "Generating EPCs in Odoo"
-msgstr ""
+msgstr "EPC in Odoo generieren"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:42
 msgid ""
@@ -3179,10 +3195,14 @@ msgid ""
 "tracked by serial number, but this is not a requirement. A GTIN-14-"
 "compatible barcode must be set on the product."
 msgstr ""
+"Generieren Sie EPC für nachverfolgte Produkte direkt in Odoo. Produkte "
+"sollten anhand ihrer Seriennummer nachverfolgt werden, dies ist jedoch keine "
+"Voraussetzung. Auf dem Produkt muss ein GTIN-14-kompatibler Barcode "
+"angebracht sein."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:45
 msgid "To retrieve the EPCs for a receipt of products:"
-msgstr ""
+msgstr "So rufen Sie die EPCs für einen Wareneingang ab:"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:47
 msgid ""
@@ -3190,16 +3210,21 @@ msgid ""
 "button next to the :guilabel:`Quantity` field. The :guilabel:`Detailed "
 "Operations` box opens."
 msgstr ""
+"Klicken Sie auf dem Wareneingang neben dem Feld :guilabel:`Menge` auf die "
+"Schaltfläche :icon:`fa-list` :guilabel:`Detaillierte Vorgänge`. Das Feld "
+":guilabel:`Detaillierte Vorgänge` wird geöffnet."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:49
 msgid ""
 "From here, specify or generate serial numbers for the products. Be sure to "
 "save the serial numbers."
 msgstr ""
+"Geben Sie hier die Seriennummern für die Produkte an oder generieren Sie "
+"sie. Speichern Sie die Seriennummern unbedingt."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:51
 msgid ":guilabel:`Validate` the receipt."
-msgstr ""
+msgstr ":guilabel:`Validieren` Sie den Wareneingang."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:52
 msgid ""
@@ -3207,6 +3232,9 @@ msgid ""
 "click the :icon:`fa-cog` :guilabel:`Actions` button, then "
 "select :guilabel:`Export`."
 msgstr ""
+"Klicken Sie auf die Schaltfläche :guilabel:`Buchungen`. Wählen Sie alle "
+"empfangenen Artikel aus, klicken Sie dann auf die Schaltfläche :icon:`fa-cog`"
+" :guilabel:`Aktionen` und wählen Sie :guilabel:`Exportieren`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:54
 msgid ""
@@ -3215,15 +3243,22 @@ msgid ""
 "file downloads to the device. All of the EPCs for the receipt are included "
 "in that file."
 msgstr ""
+"Wählen Sie auf dem Bildschirm :guilabel:`Daten exportieren` aus der Liste "
+"der verfügbaren Felder :guilabel:`Elektronischer Produktcode` aus und "
+"klicken Sie dann auf :guilabel:`Exportieren`. Die Datei wird auf das Gerät "
+"heruntergeladen. Alle EPCs für den Wareneingang sind in dieser Datei "
+"enthalten."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:59
 msgid ""
 "EPCs can be exported from any :guilabel:`Moves` list, not just receipts."
 msgstr ""
+"EPC können aus jeder Liste von :guilabel:`Buchungen` exportiert werden, "
+"nicht nur aus Wareneingängen."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:64
 msgid "Writing EPCs to RFID tags"
-msgstr ""
+msgstr "EPC auf RFID-Etiketten schreiben"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:66
 msgid ""
@@ -3231,28 +3266,34 @@ msgid ""
 "RFID tags. The process to write EPCs varies by RFID writer manufacturer. "
 "Refer to the RFID writer's documentation for more information."
 msgstr ""
+"Nachdem Sie die EPC abgerufen haben, können Sie einen RFID-Schreiber "
+"verwenden, um die EPCs auf RFID-Etiketten zu schreiben. Der Vorgang zum "
+"Schreiben von EPCs variiert je nach Hersteller des RFID-Schreibers. Weitere "
+"Informationen finden Sie in der Dokumentation des RFID-Schreibers."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:72
 msgid ":doc:`gs1_usage`"
-msgstr ""
+msgstr ":doc:`gs1_usage`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/retrieve_epcs.rst:73
 msgid ":doc:`adjustments`"
-msgstr ""
+msgstr ":doc:`adjustments`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:3
 msgid "Manage inventory with RFID"
-msgstr ""
+msgstr "Lager mit RFID verwalten"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:5
 msgid ""
 "Managing inventory with an RFID barcode scanner is possible with the "
 "**Barcodes** app and a physical RFID scanner."
 msgstr ""
+"Die Bestandsverwaltung mit einem RFID-Barcode-Scanner ist mit der "
+"**Barcode**-App und einem physischen RFID-Scanner möglich."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:9
 msgid ":doc:`../setup/rfid`"
-msgstr ""
+msgstr ":doc:`../setup/rfid`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:11
 msgid ""
@@ -3262,10 +3303,16 @@ msgid ""
 "an existing operation barcode pulls up the relevant inventory or "
 "manufacturing documents in Odoo on the mobile device."
 msgstr ""
+"Stellen Sie sicher, dass der RFD40-Scanner gekoppelt und mit dem mobilen "
+"Computer oder Smartphone verbunden ist. Öffnen Sie einen Vorgang (z. B. "
+"einen Wareneingang, einen Transfer, einen Lieferauftrag oder einen "
+"Fertigungsauftrag) oder zählen Sie den Bestand mit dem RFID-Scanner. Durch "
+"Scannen eines vorhandenen Vorgangsbarcodes werden die entsprechenden "
+"Bestands- oder Fertigungsdokumente in Odoo auf dem mobilen Gerät angezeigt."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:17
 msgid "Overview of the workflow"
-msgstr ""
+msgstr "Übersicht über den Arbeitsablauf"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:19
 msgid ""
@@ -3274,20 +3321,27 @@ msgid ""
 "the operation barcode), or open the :guilabel:`Inventory count` operation. "
 "Scan the RFID barcodes for the product."
 msgstr ""
+"Öffnen Sie mit dem RFD40-Scanner in der Hand die **Barcode**-App auf dem "
+"Computer oder Telefon. Öffnen Sie den Vorgangsdatensatz "
+"(über die **Barcode**-Oberfläche oder durch Scannen des Vorgangsbarcodes) "
+"oder öffnen Sie den Vorgang :guilabel:`Bestandsaufnahme`. Scannen Sie die "
+"RFID-Barcodes für das Produkt."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:24
 msgid ":doc:`../setup/operation_types`"
-msgstr ""
+msgstr ":doc:`../setup/operation_types`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:26
 msgid ""
 "To begin managing inventory using RFID tags, open the **Barcode** app on the "
 "smart device."
 msgstr ""
+"Um mit der Bestandsverwaltung mithilfe von RFID-Etiketten zu beginnen, "
+"öffnen Sie die **Barcode**-App auf dem intelligenten Gerät."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:31
 msgid "Manage inventory"
-msgstr ""
+msgstr "Bestand verwalten"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:33
 msgid ""
@@ -3299,14 +3353,22 @@ msgid ""
 "verifies the connection. Scan the products, then validate the scan on the "
 "mobile computer or smartphone."
 msgstr ""
+"Scannen Sie in der **Barcode**-App den Vorgangsbarcode oder tippen Sie auf "
+"die Schaltfläche :guilabel:`Vorgänge`, um Vorgänge für Wareneingänge, "
+"interne Transfers, Lieferaufträge oder Fertigungsaufträge zu öffnen. Wenn "
+"das Lesegerät nicht verbunden ist, stellt Odoo automatisch eine Verbindung "
+"zum Gerät her. Wenn das Gerät verbunden ist, erscheint auf dem Bildschirm "
+"eine Benachrichtigung, die die Verbindung bestätigt. Scannen Sie die "
+"Produkte und bestätigen Sie den Scan auf dem mobilen Computer oder "
+"Smartphone."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:None
 msgid "Validate the operation on the mobile device."
-msgstr ""
+msgstr "Validieren Sie den Vorgang auf dem Mobilgerät."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:45
 msgid "Counting inventory"
-msgstr ""
+msgstr "Bestand zählen"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:47
 msgid ""
@@ -3318,14 +3380,23 @@ msgid ""
 "the :icon:`fa-pencil` :guilabel:`(edit)` icon. Click :guilabel:`Apply` to "
 "apply the count on the smart device."
 msgstr ""
+"In vielen Fabriken und Lagern ist es erforderlich, den Lagerbestand zu "
+"verfolgen, einschließlich regelmäßiger Produktzählungen, um sicherzustellen, "
+"dass alle Aufzeichnungen korrekt sind. Um die Menge eines Produkts im "
+"Lagerbestand zu ändern oder den Lagerbestand anzupassen, öffnen Sie den "
+"Vorgang :guilabel:`Bestandsaufnahme`. Scannen Sie die zu zählenden Produkte. "
+"Überprüfen Sie die Zählung gegebenenfalls manuell. Sie können die Zählung "
+"aktualisieren, indem Sie auf das Symbol :icon:`fa-pencil` :guilabel:`"
+"(Bearbeiten)` klicken. Klicken Sie auf :guilabel:`Anwenden`, um die Zählung "
+"auf dem intelligenten Gerät zu übernehmen."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:None
 msgid "Apply the count on the Inventory Adjustment page."
-msgstr ""
+msgstr "Wenden Sie die Anzahl auf der Seite der Bestandsaufnahme an."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/scan_rfid.rst:57
 msgid ":doc:`retrieve_epcs`"
-msgstr ""
+msgstr ":doc:`retrieve_epcs`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:3
 msgid "Create and process transfers with barcodes"
@@ -3825,7 +3896,7 @@ msgstr "Einrichtung"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:5
 msgid "Barcode Lookup"
-msgstr ""
+msgstr "Barcode Lookup"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:7
 msgid ""
@@ -3835,37 +3906,54 @@ msgid ""
 "Number)`) to automatically create them in your Odoo database, complete with "
 "product names, descriptions, images, categories, etc."
 msgstr ""
+"Mit `Barcode Lookup <https://www.barcodelookup.com/>`_ können Sie die "
+"Barcodes (:abbr:`UPC (Universal Product Code)`, :abbr:`EAN "
+"(European Article Number)` oder :abbr:`ISBN "
+"(International Standard Book Number)`) von Produkten scannen (oder eingeben)"
+", um sie automatisch in Ihrer Odoo-Datenbank zu erstellen, inklusive "
+"Produktnamen, Beschreibungen, Bildern, Kategorien usw."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:17
 msgid ""
 "If your database is hosted on **Odoo Online**, you can use Barcode Lookup "
 "without configuration."
 msgstr ""
+"Wenn Ihre Datenbank auf **Odoo Online** gehostet wird, können Sie Barcode "
+"Lookup ohne Konfiguration verwenden."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:19
 msgid ""
 "If your database is hosted on **Odoo.sh** or **on-premise**, proceed as "
 "follows:"
 msgstr ""
+"Wenn Ihre Datenbank auf **Odoo.sh** oder **On-premise** gehostet wird, gehen "
+"Sie wie folgt vor:"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:21
 msgid ""
 "Visit the `Barcode Lookup website <https://www.barcodelookup.com/api>`_ and "
 "click :guilabel:`Sign Up for the API`."
 msgstr ""
+"Besuchen Sie die `Website von Barcode Lookup <https://www.barcodelookup.com/"
+"api>`_ und klicken Sie auf :guilabel:`Sign Up for the API` "
+"(Für die API registrieren)."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:23
 msgid ""
 "Choose the appropriate plan based on the number of barcodes you need to scan."
 msgstr ""
+"Wählen Sie den geeigneten Tarif basierend auf der Anzahl der Barcodes, die "
+"Sie scannen müssen."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:24
 msgid "Fill in the required details and complete the registration process."
 msgstr ""
+"Geben Sie die erforderlichen Daten ein und schließen Sie den "
+"Registrierungsprozess ab."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:25
 msgid "Copy the API key."
-msgstr ""
+msgstr "Kopieren Sie den API-Schlüssel."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:26
 msgid ""
@@ -3873,10 +3961,13 @@ msgid ""
 "section, and, under :guilabel:`Barcode Database`, paste the Barcode "
 "Lookup :guilabel:`API Key`."
 msgstr ""
+"Öffnen Sie in Odoo die Einstellungen-App, scrollen Sie nach unten zum "
+"Abschnitt :guilabel:`Integrationen` und fügen Sie unter :guilabel:`Barcode-"
+"Datenbank` den :guilabel:`API-Schlüssel` von Barcode Lookup ein."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:30
 msgid "Use"
-msgstr ""
+msgstr "Anwendung"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:32
 msgid ""
@@ -3887,12 +3978,21 @@ msgid ""
 "category`, and :guilabel:`Volume`. You can then modify any field(s) as "
 "needed."
 msgstr ""
+"Um Produktinformationen mit Barcode Lookup einzugeben, erstellen Sie ein "
+"neues Produkt und füllen Sie das Feld :guilabel:`Barcode` aus. Die "
+"Produktdetails werden dann automatisch aus Barcode Lookup importiert und die "
+"folgenden Felder aktualisiert: :guilabel:`Name`, :guilabel:`Preis`, "
+":guilabel:`Beschreibung`, :guilabel:`Steuer`, :guilabel:`Bild`, "
+":guilabel:`Gewicht`, :guilabel:`Attribute`, :guilabel:`Produktkategorie` und "
+":guilabel:`Volumen`. Sie können dann alle Felder nach Bedarf ändern."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:39
 msgid ""
 ":ref:`Create new products during internal transfers using the Barcode Lookup "
 "database <barcode/setup/barcodelookup>`."
 msgstr ""
+":ref:`Erstellen Sie neue Produkte bei internen Transfers mithilfe der "
+"Barcode-Lookup-Datenbank. <barcode/setup/barcodelookup>`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/device_troubleshooting.rst:3
 msgid "Barcode device troubleshooting"
@@ -5322,7 +5422,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:3
 msgid "RFID"
-msgstr ""
+msgstr "RFID"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:7
 msgid ""
@@ -5332,6 +5432,12 @@ msgid ""
 "RFID helps automate processes by keeping inventory accurate and tracking "
 "internal and external moves."
 msgstr ""
+"RFID steht für Radio Frequency Identification (Radiofrequenz-Identifikation)"
+". RFID ermöglicht die Verfolgung von Artikeln mithilfe von Funkwellen: RFID-"
+"Etiketten werden an Produkten im Lager angebracht, und RFID-Lesegeräte "
+"können diese Etiketten lesen, um Informationen an einen Computer zu "
+"übertragen. RFID trägt zur Automatisierung von Prozessen bei, indem es den "
+"Lagerbestand genau erfasst und interne und externe Bewegungen verfolgt."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:12
 msgid ""
@@ -5341,40 +5447,50 @@ msgid ""
 "establishes common rules for encoding information within a barcode to "
 "facilitate the global exchange of goods."
 msgstr ""
+"RFID-Etiketten übertragen elektronische Produktcodes (|EPC|), bei denen es "
+"sich um eindeutige Identifikatoren zur Unterscheidung einzelner Artikel "
+"handelt. Der |EPC| in Odoo basiert auf GS1-Standards, um Produkte weltweit "
+"einheitlich zu identifizieren. Die GS1-Nomenklatur legt gemeinsame Regeln "
+"für die Codierung von Informationen in einem Barcode fest, um den globalen "
+"Warenaustausch zu erleichtern."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:18
 msgid ":doc:`../operations/gs1_nomenclature`"
-msgstr ""
+msgstr ":doc:`../operations/gs1_nomenclature`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:21
 msgid "Hardware"
-msgstr ""
+msgstr "Geräte"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:23
 msgid "The following are required to begin working with RFID in Odoo:"
 msgstr ""
+"Um mit RFID in Odoo zu arbeiten, sind folgende Komponenten erforderlich:"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:25
 msgid "Zebra TCX Series mobile computer, or"
-msgstr ""
+msgstr "Mobiler Computer der Zebra-TCX-Serie oder"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:26
 msgid "Android Smartphone"
-msgstr ""
+msgstr "Android-Smartphone"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:28
 msgid "Paired with:"
-msgstr ""
+msgstr "Gekoppelt mit:"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:30
 msgid "Zebra RFD40 (can read and write RFID tags)"
-msgstr ""
+msgstr "Zebra RFD40 (kann RFID-Etiketten lesen und schreiben)"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:35
 msgid ""
 "Before using RFID tags to manage inventory, the Android Package Kit (APK) "
 "with RFID support must be installed on the mobile computer or smartphone."
 msgstr ""
+"Bevor Sie RFID-Etiketten zur Bestandsverwaltung verwenden können, muss das "
+"Android Package Kit (APK) mit RFID-Unterstützung auf dem mobilen Computer "
+"oder Smartphone installiert werden."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:39
 msgid ""
@@ -5383,6 +5499,12 @@ msgid ""
 "device's :guilabel:`App` or :guilabel:`App & Notification` settings, under "
 "the :guilabel:`Special access` or :guilabel:`Special app access` section."
 msgstr ""
+"Bevor Sie das APK auf einem einzelnen Gerät installieren, aktivieren Sie "
+"zunächst in den Geräteeinstellungen die Möglichkeit, unbekannte Apps zu "
+"installieren. Diese Einstellung finden Sie in den Einstellungen "
+":guilabel:`App` oder :guilabel:`App & Notification` (App & Benachrichtigung) "
+"des Geräts unter dem Abschnitt :guilabel:`Special access` (Spezialzugriff) "
+"oder :guilabel:`Special app access` (App-Spezialzugriff)."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:44
 msgid ""
@@ -5393,10 +5515,19 @@ msgid ""
 "computer and transfer the APK via USB or Bluetooth, or use the device's web "
 "browser to download the APK."
 msgstr ""
+"Laden Sie anschließend das APK herunter. Klicken Sie auf der Seite "
+":guilabel:`Downloads` im Abschnitt :guilabel:`Mobile Application` "
+"(Mobile Anwendung) neben der Option :guilabel:`Android` auf "
+":guilabel:`Download` (Herunterladen) und wählen Sie dann :guilabel:`Download "
+"APK (with Zebra RFID support)` "
+"(APK herunterladen (mit Zebra RFID-Unterstützung) aus dem Drop-down-Menü. "
+"Laden Sie diese Datei über einen Computer herunter und übertragen Sie das "
+"APK über USB oder Bluetooth, oder verwenden Sie den Webbrowser des Geräts, "
+"um das APK herunterzuladen."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:None
 msgid "Download the APK from the Download page."
-msgstr ""
+msgstr "APK auf der Seite zum Herunterladen herunterladen."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:53
 msgid ""
@@ -5406,26 +5537,38 @@ msgid ""
 "device's file manager, open it and navigate to the location where the file "
 "is stored, then tap it to install the APK."
 msgstr ""
+"Installieren Sie das APK. Wenn :guilabel:`Install unknown apps` "
+"(Unbekannte Apps installieren) für den Webbrowser des Geräts aktiviert ist, "
+"installieren Sie das APK direkt über die Download-Benachrichtigung des "
+"Browsers. Wenn :guilabel:`Install unknown apps` "
+"(Unbekannte Apps installieren) für den Dateimanager des Geräts aktiviert "
+"ist, öffnen Sie diesen, navigieren Sie zu dem Speicherort der Datei und "
+"tippen Sie darauf, um das APK zu installieren."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:58
 msgid ""
 "Then, when reading or writing RFID tags, ensure that the Zebra device and "
 "the smart device are paired and connected."
 msgstr ""
+"Stellen Sie beim Lesen oder Schreiben von RFID-Etiketten sicher, dass das "
+"Zebra-Gerät und das intelligente Gerät gekoppelt und verbunden sind."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:62
 msgid "Set a compatible barcode"
-msgstr ""
+msgstr "Einen kompatiblen Barcode einrichten"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:64
 msgid ""
 "Before you can manage inventory using RFID tags, a compatible barcode must "
 "be assigned to the products. Set the product barcode in the product form."
 msgstr ""
+"Bevor Sie den Bestand mithilfe von RFID-Etiketten verwalten können, muss den "
+"Produkten ein kompatibler Barcode zugewiesen werden. Legen Sie den Produkt-"
+"Barcode im Produktformular fest."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:68
 msgid ":ref:`Set product barcodes <inventory/barcode/set-barcodes>`"
-msgstr ""
+msgstr ":ref:`Produktbarcode festlegen <inventory/barcode/set-barcodes>`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:70
 msgid ""
@@ -5433,16 +5576,22 @@ msgid ""
 "inventory tracking must be enabled for the product. Product barcodes that "
 "are not GTIN-14-compatible must be upgraded to work with RFID."
 msgstr ""
+"Um mit RFID arbeiten zu können, muss der Produkt-Barcode GTIN-14-kompatibel "
+"sein und die Bestandsverfolgung für das Produkt muss aktiviert sein. "
+"ProduktbBarcodes, die nicht GTIN-14-kompatibel sind, müssen aktualisiert "
+"werden, um mit RFID zu funktionieren."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:75
 msgid ""
 "Tracking by serial number or lots does not need to be enabled for this "
 "feature to work properly."
 msgstr ""
+"Die Verfolgung anhand von Seriennummern oder Losen muss nicht aktiviert "
+"sein, damit diese Funktion ordnungsgemäß funktioniert."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:78
 msgid "Limitations"
-msgstr ""
+msgstr "Einschränkungen"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:80
 msgid ""
@@ -5450,6 +5599,9 @@ msgid ""
 "SGTIN-96 is the only supported encoding scheme for RFID tags in Odoo. "
 "Alphanumeric serial numbers are **not** supported."
 msgstr ""
+"Die Seriennummer, die Teil des |EPC| ist, darf nur aus Ziffern bestehen, da "
+"SGTIN-96 das einzige unterstützte Kodierungsschema für RFID-Etiketten in "
+"Odoo ist. Alphanumerische Seriennummern werden **nicht** unterstützt."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:83
 msgid ""
@@ -5457,22 +5609,26 @@ msgid ""
 "considered as one lot with a quantity of `1`. It does not count individual "
 "products in a receipt."
 msgstr ""
+"Bei Produkten, die nach Losen verfolgt werden, kann das Los eingescannt "
+"werden, sie wird jedoch als ein Los mit einer Menge von `1` betrachtet. "
+"Einzelne Produkte in einem Wareneingang werden nicht gezählt."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:85
 msgid "Only ultra-high frequency (UHF) RFID tags are supported."
-msgstr ""
+msgstr "Es werden nur UHF-RFID-Etiketten (Ultra High Frequency) unterstützt."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:86
 msgid "Products need to be GS1-registered because barcodes must be unique."
 msgstr ""
+"Produkte müssen GS1-registriert sein, da Barcodes eindeutig sein müssen."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:89
 msgid ":doc:`../operations/scan_rfid`"
-msgstr ""
+msgstr ":doc:`../operations/scan_rfid`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:90
 msgid ":doc:`../operations/retrieve_epcs`"
-msgstr ""
+msgstr ":doc:`../operations/retrieve_epcs`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/serial_numbers_lots.rst:3
 msgid "Barcodes for lot and serial numbers"
@@ -5885,7 +6041,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:48
 msgid ":doc:`Barcode Lookup <barcodelookup>`"
-msgstr ""
+msgstr ":doc:`Barcode Lookup <barcodelookup>`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:53
 msgid "Set product barcodes"
