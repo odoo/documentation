@@ -53,6 +53,5 @@ Odoo.sh involves different types of users, each with a specific role in the proj
    getting_started/create
    getting_started/branches
    getting_started/builds
-   getting_started/status
    getting_started/settings
-   getting_started/online-editor
+   getting_started/online_editor
