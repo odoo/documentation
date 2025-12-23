@@ -172,11 +172,8 @@ From an Odoo.sh editor terminal:
 
   $ git push https HEAD:feature-1
 
-The above command is explained in the section
-:ref:`Commit & Push your changes
-<odoosh-gettingstarted-online-editor-push>` of the
-:ref:`Online Editor <odoosh-gettingstarted-online-editor>`
-chapter.
+The above command is explained in the section :ref:`Commit and push changes
+<odoo-sh/editor/commit>` of the :doc:`Online editor page <getting_started/online_editor>`.
 It includes the explanation regarding the fact you will be prompted to type your username and
 password, and what to do if you use the two-factor authentication.
 
