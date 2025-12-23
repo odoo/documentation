@@ -289,7 +289,7 @@ shell consoles.
 You can open multiple tabs and drag and drop them to arrange the layout as you wish.
 
 .. seealso::
-   :doc:`Online editor documentation <online-editor>`.
+   :doc:`Online editor documentation <online_editor>`.
 
 .. _odoo-sh/branches/tabs/monitor:
 
