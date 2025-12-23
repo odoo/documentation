@@ -58,12 +58,30 @@ optional products at once when using this form by clicking their checkboxes and 
 .. image:: optional_products/search-optional-products-form.png
    :alt: The Search: Optional Products form accessed by clicking Search more...
 
-.. important::
-   Prior to Odoo 19.0, optional products were added to quotations on a separate tab in the quotation
-   and quotation template forms. Beginning in 19.0, that tab has been removed from both quotations
-   and quotation templates. If a core product with associated optional products is added to a
-   quotation template, those optional products **will not** be automatically suggested during the
-   quotation process and must instead be manually suggested to customers.
+Setting optional product sections in quotations
+===============================================
+
+When developing a quotation for customers, entire sections of the quotation can be set as optional
+products, even if they haven't been configured in the product form. To create a section, click the
+:guilabel:`Add a section` link and enter its desired name in the :guilabel:`Enter a description`
+field. Click the :icon:`fa-ellipsis-v` :guilabel:`(drop-down menu)` and choose :icon:`fa-list`
+:guilabel:`Set Optional`.
+
+.. image:: optional_products/set-optional-dropdown.png
+   :alt: The dropdown menu with the "Set Optional" text highlighted.
+
+Once a section is set to optional, the font color changes to reflect its status. All products within
+that section default to a quantity of `0`, ensuring they are not included in the total cost
+automatically. Both portal users (such as customers or vendors) and employees with access to create
+quotations and sales orders can update these quantities. Once a quantity is set to `1` or more, the
+product is added to the quote total.
+
+Once an optional product section has been created in a quotation, users who have been :doc:`granted
+portal access <../../../general/users/portal>` can interact with the quotation there. They can view
+the quotation and decide whether or not to add the optional products to their final sales order.
+
+.. image:: optional_products/optional-products-section.png
+   :alt: An optional products section with the quanitty and corresponding amount set to 0.
 
 .. seealso::
    :doc:`quote_template`
