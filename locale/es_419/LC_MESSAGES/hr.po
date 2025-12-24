@@ -22,8 +22,8 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-19 18:31+0000\n"
-"PO-Revision-Date: 2025-12-23 23:21+0000\n"
-"Last-Translator: \"Patricia Gutiérrez (pagc)\" <pagc@odoo.com>\n"
+"PO-Revision-Date: 2025-12-24 23:21+0000\n"
+"Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-19-doc/hr/es_419/>\n"
 "Language: es_419\n"
@@ -15546,6 +15546,15 @@ msgid ""
 "**Attendances**, **Planning**, or **Timesheets** apps. Any errors with work "
 "entries **must** be resolved *before* continuing to process payroll."
 msgstr ""
+"Cuando llega el momento de ejecutar la nómina según el calendario de la "
+"empresa (mensual, semanal, quincenal, etc.), puedes crear :doc:`recibos de "
+"nómina <payroll/payslips>` por separado o en :doc:`grupos <payroll/pay_runs>`"
+". Odoo calcula cuándo trabajaron los empleados según sus :doc:`entradas de "
+"trabajo <payroll/work_entries>`. El sistema crea las entradas de trabajo a "
+"partir de sus :doc:`contratos <payroll/contracts>` basadas en la información "
+"de las aplicaciones **Asistencias**, **Planeación** y **Registro de horas**. "
+"**Debes** resolver cualquier error en las entradas de trabajo *antes* de "
+"procesar la nómina."
 
 #: ../../content/applications/hr/payroll.rst:30
 msgid ""
@@ -15843,7 +15852,7 @@ msgstr ":doc:`payroll/payslips`"
 
 #: ../../content/applications/hr/payroll.rst:148
 msgid ":doc:`payroll/pay_runs`"
-msgstr ""
+msgstr ":doc:`payroll/pay_runs`"
 
 #: ../../content/applications/hr/payroll.rst:149
 msgid ":doc:`payroll/commissions`"
@@ -15973,12 +15982,19 @@ msgid ""
 "reffered to as a *pay run* in Odoo, or click :guilabel:`Export` to export a "
 "CSV file of the commissions."
 msgstr ""
+"Una vez que todas las comisiones son correctas, haz clic en el botón "
+":guilabel:`Generar recibos de nómina` para crear los recibos de nómina de "
+"garantía en grupo, lo que en Odoo se conoce como un *periodo de nómina*, o "
+"haz clic en :guilabel:`Exportar` para exportar un archivo CSV con las "
+"comisiones."
 
 #: ../../content/applications/hr/payroll/commissions.rst:46
 msgid ""
 ":ref:`Process the pay run <payroll/pay-run-process>` in the same way as a "
 "typical batch to complete the payment process."
 msgstr ""
+":ref:`Procesa el periodo de nómina <payroll/pay-run-process>` igual que un "
+"lote regular para completar el proceso de pago."
 
 #: ../../content/applications/hr/payroll/commissions.rst:None
 msgid "Enter the commission details."
@@ -17180,7 +17196,7 @@ msgstr ":guilabel:`Salario en nómina`: El monto en los reportes de nómina."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:3
 msgid "Pay runs"
-msgstr ""
+msgstr "Periodos de nómina"
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:5
 msgid ""
@@ -17189,6 +17205,10 @@ msgid ""
 "payslips. This method not only helps the payroll department pay employees in "
 "less time, but it also helps keep payslips organized."
 msgstr ""
+"Los *periodos de nómina* permiten generar varios :doc:`recibos de nómina "
+"<payslips>` a la vez y procesarlos en grupo, en lugar de crear y procesar "
+"cada recibo por separado. Este método ayuda al equipo de nómina a pagar a "
+"los empleados en menos tiempo y mantiene los recibos de nómina organizados."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:9
 msgid ""
@@ -17197,16 +17217,24 @@ msgid ""
 "(usually weekly, bi-weekly, or monthly). If desired, pay runs can be further "
 "organized by department, job position, etc."
 msgstr ""
+"Por lo general, el área de nómina de una empresa :ref:`crea un nuevo periodo "
+"de nómina <payroll/new-pay-run>` para cada estructura salarial y para cada "
+"periodo de pago, que suele ser semanal, quincenal o mensual. Si lo deseas, "
+"puedes organizar los periodos de nómina por departamento, puesto, entre "
+"otras cosas."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:13
 msgid ""
 "Once a pay run is made, :ref:`payslips are added to the pay run <payroll/add-"
 "payslips>`, then the pay run is processed, and employees are paid."
 msgstr ""
+"Luego de crear un periodo de nómina, es necesario :ref:`agregar los recibos "
+"de nómina al periodo <payroll/add-payslips>` para luego procesar el periodo "
+"y pagarle a los empleados."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:17
 msgid "View pay runs"
-msgstr ""
+msgstr "Ver los periodos de nómina"
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:19
 msgid ""
@@ -17217,6 +17245,12 @@ msgid ""
 "(either :guilabel:`Ready`, :guilabel:`Done`, or :guilabel:`Paid`), by "
 "default."
 msgstr ""
+"Para ver todos los periodos de nómina de la base de datos, ve a "
+":menuselection:`Nómina --> Recibos de nómina --> Periodos de nómina`. El "
+"sistema mostrará todos los periodos de nómina creados en una vista de lista "
+"agrupados por :icon:`oi-group` :guilabel:`estado` "
+"(:guilabel:`Listo`, :guilabel:`Hecho` o :guilabel:`Pagado`) de forma "
+"predeterminada."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:24
 msgid ""
@@ -17224,14 +17258,18 @@ msgid ""
 "payslips, and the total :guilabel:`employer cost`, :guilabel:`gross`, "
 "and :guilabel:`net` amounts for all payslips."
 msgstr ""
+"Cada periodo de nómina muestra el nombre, sus respectivas fechas, el número "
+"de recibos de nómina y los importes totales de :guilabel:`costo del "
+"empleador`, :guilabel:`bruto` y :guilabel:`neto` de todos los recibos de "
+"nómina."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:None
 msgid "View displaying all pay runs created."
-msgstr ""
+msgstr "Vista que muestra todos los periodos de nómina creados."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:33
 msgid "Create a new pay run"
-msgstr ""
+msgstr "Crear un nuevo periodo de nómina"
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:35
 msgid ""
@@ -17239,6 +17277,10 @@ msgid ""
 "pay-run>`, :ref:`Employee Payslips <payroll/payslips-pay-run>`, or :ref:`Pay "
 "Runs <payroll/pay-runs-pay-run>` dashboards."
 msgstr ""
+"Puedes crear nuevos periodos de nómina desde los tableros de :ref:`Entradas "
+"de trabajo <payroll/work-entry-pay-run>`, :ref:`Recibos de nómina de "
+"empleados <payroll/payslips-pay-run>` o :ref:`Periodos de nómina <payroll/"
+"pay-runs-pay-run>`."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:41
 #: ../../content/applications/hr/payroll/work_entries.rst:24
@@ -17251,12 +17293,18 @@ msgid ""
 "to :menuselection:`Payroll app --> Work Entries --> Work Entries`. The "
 "current time period is displayed, with the current day highlighted in yellow."
 msgstr ""
+"Para crear un periodo de nómina desde el tablero de entradas de trabajo, ve "
+"a :menuselection:`Nómina --> Entradas de trabajo --> Entradas de trabajo`. "
+"El periodo actual es el que aparece en la pantalla con el día actual "
+"resaltado en amarillo."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:47
 msgid ""
 "All employees appear in a default Gantt view, with all work entries "
 "displayed. If necessary, navigate to the desired time period."
 msgstr ""
+"Todos los empleados aparecen en una vista de Gantt predeterminada con todas "
+"las entradas de trabajo visibles. Si es necesario, ve al periodo deseado."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:50
 msgid ""
@@ -17265,14 +17313,21 @@ msgid ""
 "the :guilabel:`Generate Pay Run` button. The pay run is created for all "
 "employees, with a status of :guilabel:`Ready`."
 msgstr ""
+"Una vez que agregues todas las :ref:`entradas de trabajo faltantes <payroll/"
+"new-work-entry>` y resuelvas todos los :ref:`conflictos <payroll/conflicts>`"
+", haz clic en el botón :guilabel:`Generar periodo de nómina`. El sistema "
+"creará el periodo de nómina con estado :guilabel:`Listo` para todos los "
+"empleados."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:None
 msgid "The work entries dashboard with the GeneratePay Runs button visible."
 msgstr ""
+"El tablero de entradas de trabajo con el botón Generar periodos de nómina "
+"visible."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:60
 msgid "Employee payslips dashboard"
-msgstr ""
+msgstr "Tablero de recibos de nómina de empleados"
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:62
 msgid ""
@@ -17280,6 +17335,10 @@ msgid ""
 "to :menuselection:`Payroll app --> Payslips --> Payslips`. All payslips for "
 "all employees are displayed in a default list view, in chronological order."
 msgstr ""
+"Para crear un periodo de nómina desde el tablero de recibos de nómina, ve a "
+":menuselection:`Nómina --> Recibos de nómina --> Recibos de nómina`. Todos "
+"los recibos de nómina de todos los empleados aparecen en una vista de lista "
+"en orden cronológico de forma predeterminada."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:68
 msgid ""
@@ -17293,6 +17352,15 @@ msgid ""
 "months`, :guilabel:`month`, :guilabel:`half-month`, :guilabel:`2 "
 "weeks`, :guilabel:`week`, or :guilabel:`day`."
 msgstr ""
+"Haz clic en el botón :guilabel:`Periodo de nómina` para abrir la ventana "
+"emergente :guilabel:`Nuevo periodo de nómina`. Selecciona la :guilabel:`"
+"estructura salarial` con el menú desplegable. Si no seleccionas ninguna "
+":guilabel:`estructura salarial`, el periodo de nómina aplicará a *todas* las "
+"estructuras salariales. Después selecciona el :guilabel:`calendario de pago` "
+"para definir *cada cuánto* los empleados recibirán su pago. Las opciones "
+"predeterminadas son :guilabel:`año`, :guilabel:`medio año`, "
+":guilabel:`trimestre`, :guilabel:`2 meses`, :guilabel:`mes`, :guilabel:`"
+"medio mes`, :guilabel:`2 semanas`, :guilabel:`semana` y :guilabel:`día`."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:75
 msgid ""
@@ -17300,6 +17368,10 @@ msgid ""
 "the first blank :guilabel:`Period` field. The second field is automatically "
 "populated based on the selection in the :guilabel:`Pay Schedule` field."
 msgstr ""
+"Por último, usa el selector de calendario para definir el primer día que "
+"cubre el periodo de nómina en el primer campo vacío de :guilabel:`periodo`. "
+"El segundo campo se completará de forma automática según lo que elijas en el "
+"campo :guilabel:`Calendario de pago`."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:80
 msgid ""
@@ -17308,10 +17380,15 @@ msgid ""
 "first :guilabel:`Period` field is set to `Nov 1`. Once entered, the second "
 "field is automatically populated with `Nov 30`."
 msgstr ""
+"Una empresa paga a sus empleados de forma mensual. Para configurar el "
+"periodo de nómina de noviembre, el :guilabel:`calendario de pago` está "
+"configurado con la opción :guilabel:`mes` y el primer campo de "
+":guilabel:`periodo` está configurado con `1 de nov`. Al hacerlo, el segundo "
+"campo se completa de forma automática con `30 de nov`."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:0
 msgid "A monthly pay run configured for November."
-msgstr ""
+msgstr "Un periodo de nómina mensual configurado para noviembre."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:87
 msgid ""
@@ -17322,20 +17399,30 @@ msgid ""
 "list. Select the desired employees to add to the pay run, or click the box "
 "next to :guilabel:`Employees` to select *all* employees in the list."
 msgstr ""
+"Haz clic en :guilabel:`Continuar` cuando termines de configurar la ventana "
+"emergente :guilabel:`Nuevo periodo de nómina`. La ventana cambiará a "
+":guilabel:`Seleccionar empleados`. En la lista aparecerán todos los "
+"empleados que cumplen con los parámetros definidos en la ventana anterior. "
+"Selecciona los empleados que quieras agregar al periodo de nómina o haz clic "
+"en la casilla junto a :guilabel:`Empleados` para seleccionar *todos* los "
+"empleados de la lista."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:None
 msgid "The pay run employee selection pop-up window."
-msgstr ""
+msgstr "La ventana emergente de selección de empleados del periodo de nómina."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:96
 msgid ""
 "Once all desired employees are selected, click :guilabel:`Select`. The pop-"
 "up window closes, and the pay run appears on the screen."
 msgstr ""
+"Luego de seleccionar a todos los empleados deseados, haz clic en "
+":guilabel:`Seleccionar`. La ventana se cerrará y el periodo de nómina "
+"aparecerá en pantalla."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:102
 msgid "Pay runs dashboard"
-msgstr ""
+msgstr "Tablero de periodos de nómina"
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:104
 msgid ""
@@ -17343,16 +17430,22 @@ msgid ""
 "to :menuselection:`Payroll app --> Payslips --> Pay Runs`. Click "
 "the :guilabel:`New` button and a :guilabel:`New Pay Run` pop-up window loads."
 msgstr ""
+"Para crear un periodo de nómina desde el tablero de periodos de nómina, ve a "
+":menuselection:`Nómina --> Recibos de nómina --> Periodos de nómina`. Haz "
+"clic en el botón :guilabel:`Nuevo` para abrir la ventana emergente "
+":guilabel:`Nuevo periodo de nómina`."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:108
 msgid ""
 "Follow the same directions as if creating a :ref:`pay run form the payslips "
 "dashboard <payroll/new-pay-run-pop-up>`."
 msgstr ""
+"Sigue las mismas instrucciones que al crear un :ref:`periodo de nómina desde "
+"el tablero de recibos de nómina <payroll/new-pay-run-pop-up>`."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:114
 msgid "Add a payslips to a pay run"
-msgstr ""
+msgstr "Agregar recibos de nómina a un periodo de nómina"
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:116
 msgid ""
@@ -17360,6 +17453,10 @@ msgid ""
 "added as part of the pay run creation. If needed, additional payslips can be "
 "created individually, and added to a pay run after it has been created."
 msgstr ""
+"Luego de :ref:`crear un periodo de nómina <payroll/new-pay-run>`, el sistema "
+"agrega los recibos de nómina como parte de la creación del periodo. Si lo "
+"necesitas, puedes crear recibos de nómina de forma individual y agregarlos a "
+"un periodo de nómina después de crearlo."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:120
 msgid ""
@@ -17369,16 +17466,25 @@ msgid ""
 "form <payroll/new-payslip>`, and ensure the :guilabel:`Pay Run` field is "
 "populated."
 msgstr ""
+"Para agregar un nuevo recibo de nómina, ve a :menuselection:`Nómina --> "
+"Recibos de nómina --> Recibos de nómina`. Haz clic en el botón :guilabel:`"
+"Nuevo fuera de ciclo` para abrir un formulario vacío de :guilabel:`recibos "
+"de nómina de empleados`. :ref:`Configura el formulario del recibo de nómina <"
+"payroll/new-payslip>` y asegúrate de que el campo :guilabel:`Periodo de "
+"nómina` tenga un valor."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:125
 msgid ""
 "Once the form is configured, click :guilabel:`Compute Sheet` to calculate "
 "the payslip and add it to the selected pay run."
 msgstr ""
+"Cuando termines de configurar el formulario, haz clic en :guilabel:`Calcular "
+"hoja` para calcular el recibo de nómina y agregarlo al periodo de nómina "
+"seleccionado."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:131
 msgid "Process a pay run"
-msgstr ""
+msgstr "Procesar un periodo de nómina"
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:133
 msgid ""
@@ -17386,12 +17492,18 @@ msgid ""
 "required payslips have been added <payroll/add-payslips>`, the pay run must "
 "then be processed, and employees paid."
 msgstr ""
+"Después de :ref:`crear un periodo de nómina <payroll/new-pay-run>` y de "
+":ref:`agregar todos los recibos de nómina requeridos <payroll/add-payslips>`"
+", procesa el periodo de nómina y págale a los empleados."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:136
 msgid ""
 "Open the desired pay run by navigating to :menuselection:`Payroll app --> "
 "Payslips --> Pay Runs`, and clicking on the desired pay run."
 msgstr ""
+"Abre el periodo de nómina que deseas desde :menuselection:`Nómina --> "
+"Recibos de nómina --> Periodos de nómina` y haz clic en el periodo "
+"correspondiente."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:139
 msgid ""
@@ -17399,6 +17511,9 @@ msgid ""
 "That means the pay run has been created and payslips have been added, but "
 "the payslips have *not* been processed."
 msgstr ""
+"El estado del periodo de nómina debe ser :guilabel:`Listo` para poder "
+"procesarlo. Esto indica que el periodo se creó y que agregaste los recibos "
+"de nómina, pero que aún *no* los procesas."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:142
 msgid ""
@@ -17408,6 +17523,12 @@ msgid ""
 "run status changes to :guilabel:`Done`, and moves to the corresponding "
 "grouping on the :guilabel:`Pay Runs` dashboard."
 msgstr ""
+"Haz clic en el botón :guilabel:`Crear un asiento en estado de borrador` y "
+"luego haz clic en :guilabel:`Aceptar` en la ventana emergente de "
+":guilabel:`confirmación` para confirmar y crear el borrador de todos los "
+"recibos de nómina individuales del periodo. Después de esto, el estado del "
+"periodo de nómina cambiará a :guilabel:`Hecho` y pasará al grupo "
+"correspondiente en el tablero de :guilabel:`periodos de nómina`."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:148
 msgid ""
@@ -17416,12 +17537,19 @@ msgid ""
 "**not** remove any payslips that have already been added to the pay run, "
 "instead, the status changes back to :guilabel:`Ready`."
 msgstr ""
+"Si necesitas regresar el periodo de nómina al estado :guilabel:`Listo` en "
+"cualquier momento, haz clic en el botón :guilabel:`Revertir`. Esta acción "
+"**no** elimina los recibos de nómina que ya agregaste al periodo, solo "
+"cambia su estado a :guilabel:`Listo`."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:152
 msgid ""
 "After any desired changes have been made, click :guilabel:`Create Draft "
 "Entry` and the pay run status changes to :guilabel:`Done`."
 msgstr ""
+"Cuando termines de hacer los cambios necesarios, haz clic en :guilabel:`"
+"Crear un asiento en estado de borrador` y el estado del periodo de nómina "
+"cambiará a :guilabel:`Hecho`."
 
 #: ../../content/applications/hr/payroll/pay_runs.rst:155
 msgid ""
