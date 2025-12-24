@@ -92,6 +92,9 @@ account and to complete the setup process.
    <https://developers.facebook.com>`__ and click the *account name* in the top-right corner. Under
    :guilabel:`Business Accounts`, select the business to be configured.
 
+   .. image:: whatsapp/toggle.png
+      :alt: Toggle between Meta personal and business accounts.
+
 Create a Meta developer app for Odoo
 ------------------------------------
 
@@ -433,8 +436,10 @@ or :guilabel:`Never`.
 
 Meta asks which permissions the system user allows.  Add both of the following permissions:
 
-- WhatsApp_business_messaging
-- WhatsApp_business_management
+- `business_management`
+- `whatsapp_business_messaging`
+- `whatsapp_business_management`
+- `whatsapp_business_manage_events`
 
 When permissions are set, click :guilabel:`Generate token`. Copy the token value that populates on
 the screen that follows.
