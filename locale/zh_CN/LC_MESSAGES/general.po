@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-19 15:06+0000\n"
+"POT-Creation-Date: 2025-12-25 18:30+0000\n"
 "PO-Revision-Date: 2025-12-18 23:05+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
@@ -6585,20 +6585,17 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:98
 msgid ""
-"If the database is not using a custom domain, then in order to verify the "
-"sender's address, a temporary alias (of the three email addresses mentioned "
-"above) should be set up in Odoo CRM to create a lead. Then, the database is "
-"able to receive the verification email and verify the accounts."
+"It is recommended to set up a custom domain. Due to increased security on "
+"provider side, emails sent with an outgoing mail server other than the "
+"Odoo's provided one using subdomain (dbname.odoo.com) will fail due to DMARC "
+"policy, and/or be marked as spam."
 msgstr ""
-"如果数据库没有使用自定义域，那么为了验证发件人地址，应在 Odoo CRM 中设置一个"
-"临时别名（上述三个电子邮件地址）来创建线索。然后，数据库就能接收验证电子邮件"
-"并验证账户。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:106
+#: ../../content/applications/general/email_communication/mailjet_api.rst:105
 msgid "Add a domain"
 msgstr "添加域名"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:108
+#: ../../content/applications/general/email_communication/mailjet_api.rst:107
 msgid ""
 "By adding an entire domain to the Mailjet account, all the sender addresses "
 "related to that domain are automatically validated for sending emails using "
@@ -6613,13 +6610,13 @@ msgstr ""
 "的 :guilabel:`添加发件人域名或地址` 链接。然后，点击:guilabel:`添加域名` 添加"
 "自定义域名。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:115
+#: ../../content/applications/general/email_communication/mailjet_api.rst:114
 msgid ""
 "The domain needs to be added to the Mailjet account and then validated "
 "through the :abbr:`DNS (Domain Name System)`."
 msgstr "域名需要添加到 Mailjet 账户，然后通过:abbr:`DNS（域名系统）`进行验证。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:118
+#: ../../content/applications/general/email_communication/mailjet_api.rst:117
 msgid ""
 "After that, fill out the :guilabel:`Add a new Domain` page on Mailjet and "
 "click :guilabel:`Continue`."
@@ -6627,7 +6624,7 @@ msgstr ""
 "然后，在 Mailjet 上填写 :guilabel:`添加新域名` 页面，并单击 :guilabel:`继续"
 "`。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:121
+#: ../../content/applications/general/email_communication/mailjet_api.rst:120
 msgid ""
 "After adding the domain, a validation page will populate. Unless the Odoo "
 "database is on-premise (in which case, choose :guilabel:`Option 1`), "
@@ -6644,11 +6641,11 @@ msgstr ""
 msgid "The TXT record information to input on the domain's DNS."
 msgstr "要输入域名 DNS 的 TXT 记录信息。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:130
+#: ../../content/applications/general/email_communication/mailjet_api.rst:129
 msgid "Setup in the domain's DNS"
 msgstr "在域名的 DNS 中设置"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:132
+#: ../../content/applications/general/email_communication/mailjet_api.rst:131
 msgid ""
 "After getting the TXT record information from the Mailjet account, add a TXT "
 "record to the domain's :abbr:`DNS (Domain Name System)`. This process varies "
@@ -6662,11 +6659,11 @@ msgstr ""
 "商。TXT 记录信息由 :guilabel:`主机` 和 :guilabel:`值` 组成。将这些信息粘贴到 "
 "TXT 记录的相应字段中。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:139
+#: ../../content/applications/general/email_communication/mailjet_api.rst:138
 msgid "Return to Mailjet account information"
 msgstr "返回 Mailjet 账户信息"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:141
+#: ../../content/applications/general/email_communication/mailjet_api.rst:140
 msgid ""
 "After adding the TXT record to the domain's :abbr:`DNS (Domain Name "
 "System)`, navigate back to the Mailjet account. Then, navigate "
@@ -6678,7 +6675,7 @@ msgstr ""
 "导航至 :menuselection:`账户信息 --> 添加发件人域名或地址`，单击 :guilabel:`域"
 "名` 旁边的齿轮图标，并选择 :guilabel:`验证`。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:145
+#: ../../content/applications/general/email_communication/mailjet_api.rst:144
 msgid ""
 "This action can also be done by going to the `Sender domains & addresses "
 "<https://app.mailjet.com/ account/sender>`_ page on the Mailjet account "
@@ -6687,7 +6684,7 @@ msgstr ""
 "要执行此操作，也可进入 Mailjet 账户信息中的`发送域和地址 <https://"
 "app.mailjet.com/ account/sender>`_页面，然后单击 :guilabel:`管理`。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:148
+#: ../../content/applications/general/email_communication/mailjet_api.rst:147
 msgid ""
 "Next, click :guilabel:`Check Now` to validate the TXT record that was added "
 "on the domain. A success screen will appear if the domain is configured "
@@ -6700,7 +6697,7 @@ msgstr ""
 msgid "Check DNS record in Mailjet."
 msgstr "检查 Mailjet 中的 DNS 记录。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:154
+#: ../../content/applications/general/email_communication/mailjet_api.rst:153
 msgid ""
 "After successfully setting up the domain, there is an option "
 "to :guilabel:`Authenticate this domain (SPF/DKIM)`. This button "
@@ -6712,7 +6709,7 @@ msgstr ""
 "充 :abbr:`SPF （发件人策略框架）`和 :abbr:`DKIM （域名密钥识别邮件）记录，以"
 "便输入到 :abbr:`DNS （域名系统）`提供商。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:159
+#: ../../content/applications/general/email_communication/mailjet_api.rst:158
 msgid ""
 "`Mailjet's SPF/DKIM/DMARC documentation <https://documentation.mailjet.com/"
 "hc/articles/ 360042412734-Authenticating-Domains-with-SPF-DKIM>`_"
@@ -6724,11 +6721,11 @@ msgstr ""
 msgid "Authenticate the domain with SPF/DKIM records in Mailjet."
 msgstr "使用 Mailjet 中的 SPF/DKIM 记录验证域名。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:168
+#: ../../content/applications/general/email_communication/mailjet_api.rst:167
 msgid "Set up in Odoo"
 msgstr "在 Odoo 中设置"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:170
+#: ../../content/applications/general/email_communication/mailjet_api.rst:169
 msgid ""
 "To complete the setup, navigate to the Odoo database and go to "
 "the :guilabel:`Settings`. With :ref:`developer-mode` turned on, go to "
@@ -6740,7 +6737,7 @@ msgstr ""
 "式` 后，进入 :menuselection:`技术菜单 --> 电子邮件 --> 外发邮件服务器`。然"
 "后，点击 :guilabel:`创建` 按钮创建新的外发服务器配置。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:175
+#: ../../content/applications/general/email_communication/mailjet_api.rst:174
 msgid ""
 "Next, input the `SMTP server` (in-v3.mailjet.com), `port number` (587 or "
 "465), and `Security (SSL/TLS)` that was copied earlier from the Mailjet "
@@ -6754,7 +6751,7 @@ msgstr ""
 "account/setup>`_ 找到。建议使用 :abbr:`SSL（安全套接字层）`/: abbr:`TLS（传输"
 "层安全）`，即使 Mailjet 可能不需要它。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:180
+#: ../../content/applications/general/email_communication/mailjet_api.rst:179
 msgid ""
 "For the :guilabel:`Username`, input the :guilabel:`API KEY`. For "
 "the :guilabel:`Password`, input the :guilabel:`SECRET KEY` that was copied "
@@ -6766,7 +6763,7 @@ msgstr ""
 "入之前从 Mailjet 账户复制到记事本的 :guilabel:`SECRET KEY`。这些设置可"
 "在 :menuselection:`Mailjet --> 帐户设置 --> SMTP 和 SEND API 设置` 中找到。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:185
+#: ../../content/applications/general/email_communication/mailjet_api.rst:184
 msgid ""
 "Then, if the Mailjet server is used for mass emailing, set "
 "the :guilabel:`Priority` value higher than that of any transactional email "
@@ -14091,6 +14088,17 @@ msgid ""
 msgstr ""
 "如果客户希望管理付款选项，请导航至右侧菜单中的 :guilabel:`管理付款方式`。然"
 "后，添加新的付款信息，并选择 :guilabel:`添加新卡`。"
+
+#~ msgid ""
+#~ "If the database is not using a custom domain, then in order to verify the "
+#~ "sender's address, a temporary alias (of the three email addresses "
+#~ "mentioned above) should be set up in Odoo CRM to create a lead. Then, the "
+#~ "database is able to receive the verification email and verify the "
+#~ "accounts."
+#~ msgstr ""
+#~ "如果数据库没有使用自定义域，那么为了验证发件人地址，应在 Odoo CRM 中设置一"
+#~ "个临时别名（上述三个电子邮件地址）来创建线索。然后，数据库就能接收验证电子"
+#~ "邮件并验证账户。"
 
 #~ msgid ""
 #~ "On some occasions, new improvements or app features are added "

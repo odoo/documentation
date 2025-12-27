@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-19 15:06+0000\n"
-"PO-Revision-Date: 2025-12-18 23:05+0000\n"
+"POT-Creation-Date: 2025-12-25 18:30+0000\n"
+"PO-Revision-Date: 2025-12-27 23:08+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: German <https://translate.odoo.com/projects/odoo-17-doc/"
 "general/de/>\n"
@@ -3772,6 +3772,12 @@ msgid ""
 "the key contained in the record match, it proves the message is authentic "
 "and has not been altered during transport."
 msgstr ""
+"Beim Versenden einer E-Mail fügt der Odoo-E-Mail-Server eine eindeutige DKIM-"
+"Signatur in die Kopfzeilen ein. Der Server des Empfängers entschlüsselt "
+"diese Signatur mithilfe des DKIM-Eintrags im Domainnamen der Datenbank. Wenn "
+"die Signatur und der im Eintrag enthaltene Schlüssel übereinstimmen, wird "
+"die Authentizität der Nachricht bestätigt und es wird sichergestellt, dass "
+"sie während des Transports nicht verändert wurde."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:75
 msgid ""
@@ -3783,13 +3789,15 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_domain.rst:79
 msgid "Add a CNAME record for domain"
-msgstr ""
+msgstr "CNAME-Datensatz für Domain hinzufügen"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:81
 msgid ""
 "To enable DKIM, add a canonical name (CNAME) record to the domain name "
 "system (DNS) zone of the domain name:"
 msgstr ""
+"Um DKIM zu aktivieren, fügen Sie einen kanonischen Namen (CNAME) zur DNS-"
+"Zone (Domain Name System) des Domainnamens hinzu:"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:89
 msgid ""
@@ -3798,10 +3806,15 @@ msgid ""
 "the canonical name (value/content) is `odoo._domainkey.odoo.com.`. For "
 "example, note the differences between each key/value in italics\\:"
 msgstr ""
+"Wenn der Domainname *company-name.com* lautet, stellen Sie sicher, dass Sie "
+"einen CNAME-Eintrag erstellen, bei dem der CNAME-Eintrag (Schlüssel/Name) "
+"`odoo._domainkey.company-name.com` und der kanonische Name (Wert/Inhalt) "
+"`odoo._domainkey.odoo.com.` lautet. Beachten Sie beispielsweise die "
+"Unterschiede zwischen den einzelnen Schlüsseln/Werten in Kursivschrift\\:"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:93
 msgid "Example CNAME record"
-msgstr ""
+msgstr "Beispiel für CNAME-Datensatz"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:98
 #: ../../content/applications/general/email_communication/email_domain.rst:119
@@ -3811,7 +3824,7 @@ msgstr "Schlüssel"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:100
 msgid "odoo.\\_domainkey"
-msgstr ""
+msgstr "odoo.\\_domainkey"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:102
 #: ../../content/applications/general/email_communication/email_domain.rst:123
@@ -3823,7 +3836,7 @@ msgstr "Wert"
 #: ../../content/applications/general/email_communication/email_domain.rst:125
 #: ../../content/applications/general/email_communication/email_domain.rst:156
 msgid "odoo.\\_domainkey.\\ *odoo.com.* |nbsp|"
-msgstr ""
+msgstr "odoo.\\_domainkey.\\ *odoo.com.* |nbsp|"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:107
 #: ../../content/applications/general/email_communication/email_domain.rst:128
@@ -3836,13 +3849,13 @@ msgstr "ODER"
 #: ../../content/applications/general/email_communication/email_domain.rst:129
 #: ../../content/applications/general/email_communication/email_domain.rst:160
 msgid "odoo.\\_domainkey.\\ *dbname*\\ .odoo.com."
-msgstr ""
+msgstr "odoo.\\_domainkey.\\ *dbname*\\ .odoo.com."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:109
 #: ../../content/applications/general/email_communication/email_domain.rst:130
 #: ../../content/applications/general/email_communication/email_domain.rst:161
 msgid "... where *dbname* is the name of the Odoo database."
-msgstr ""
+msgstr "... wo *dbname* der Name der Odoo-Datenbank ist."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:111
 msgid ""
@@ -3850,55 +3863,63 @@ msgid ""
 "*company-name.com*) by default. In this case, the key looks different while "
 "the value remains the same:"
 msgstr ""
+"Auf den meisten DNS-Plattformen fügt der DNS-Anbieter standardmäßig die "
+"benutzerdefinierte Domain (z. B. *Unternehmensname.com*) hinzu. In diesem "
+"Fall sieht der Schlüssel anders aus, während der Wert gleich bleibt:"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:114
 msgid "Example CNAME record with custom domain"
-msgstr ""
+msgstr "Beispiel eines CNAME-Datensatz mit benutzerdefinierter Domain"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:121
 msgid "odoo.\\_domainkey.\\ *company-name.com* |nbsp|"
-msgstr ""
+msgstr "odoo.\\_domainkey.\\ *company-name.com* |nbsp|"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:122
 #: ../../content/applications/general/email_communication/email_domain.rst:153
 msgid "... where *company-name.com* is the custom domain."
-msgstr ""
+msgstr "... wo *company-name.com* die benutzerdefinierte Domain ist."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:133
 msgid ""
 "If the DNS provider does not add the custom domain by default, make sure to "
 "include it."
 msgstr ""
+"Falls der DNS-Anbieter die benutzerdefinierte Domain nicht standardmäßig "
+"hinzufügt, stellen Sie sicher, dass Sie diese hinzufügen."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:136
 msgid "Add a CNAME record for subdomain"
-msgstr ""
+msgstr "CNAME-Datensatz für Subdomain hinzufügen"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:138
 msgid ""
 "If there's a \\ *subdomain* (e.g., *marketing* in *marketing*\\ .company-"
 "name.com), add a CNAME record to include it for compliance as well:"
 msgstr ""
+"Falls eine *Subdomain* vorhanden ist "
+"(z. B. *marketing* in *marketing*\\.company-name.com”), fügen Sie einen "
+"CNAME-Datensatz hinzu, um diese ebenfalls für die Konformität einzubeziehen:"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:141
 msgid "Example CNAME record with subdomain"
-msgstr ""
+msgstr "Beispiel eines CNAME-Datensatzes mit Subdomain"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:148
 msgid "odoo.\\_domainkey.\\ *marketing* |nbsp|"
-msgstr ""
+msgstr "odoo.\\_domainkey.\\ *marketing* |nbsp|"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:149
 msgid "... where *marketing* is the subdomain."
-msgstr ""
+msgstr "... wo *marketing* die Subdomain ist."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:152
 msgid "odoo.\\_domainkey.marketing.\\ *company-name.com*\\ |nbsp|"
-msgstr ""
+msgstr "odoo.\\_domainkey.marketing.\\ *company-name.com*\\ |nbsp|"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:164
 msgid "See DNS provider documentation"
-msgstr ""
+msgstr "Dokumentation zum DNS-Anbieter einsehen"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:166
 msgid ""
@@ -3917,6 +3938,10 @@ msgid ""
 "DKIM lookup tool, specifying that the selector being tested is *odoo* for "
 "the custom domain *example.com*."
 msgstr ""
+"Überprüfen Sie die Gültigkeit des DKIM-Datensatzes mit einem Tool wie `"
+"MXToolbox DKIM Record Lookup <https://mxtoolbox.com/dkim.aspx>`_. Geben Sie "
+"`example.com:odoo` in das DKIM-Lookup-Tool ein und geben Sie an, dass der zu "
+"testende Selektor *odoo* für die benutzerdefinierte Domain *example.com* ist."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:177
 msgid "DMARC (Domain-based Message Authentication, Reporting and Conformance)"
@@ -7468,22 +7493,17 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:98
 msgid ""
-"If the database is not using a custom domain, then in order to verify the "
-"sender's address, a temporary alias (of the three email addresses mentioned "
-"above) should be set up in Odoo CRM to create a lead. Then, the database is "
-"able to receive the verification email and verify the accounts."
+"It is recommended to set up a custom domain. Due to increased security on "
+"provider side, emails sent with an outgoing mail server other than the "
+"Odoo's provided one using subdomain (dbname.odoo.com) will fail due to DMARC "
+"policy, and/or be marked as spam."
 msgstr ""
-"Wenn die Datenbank keine benutzerdefinierte Domain verwendet, sollte zur "
-"Überprüfung der Absenderadresse ein temporärer Alias (der drei oben "
-"genannten E-Mail-Adressen) in Odoo CRM eingerichtet werden, um einen Lead zu "
-"erstellen. Dann kann die Datenbank die Verifizierungs-E-Mail empfangen und "
-"die Konten verifizieren."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:106
+#: ../../content/applications/general/email_communication/mailjet_api.rst:105
 msgid "Add a domain"
 msgstr "Eine Domain hinzufügen"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:108
+#: ../../content/applications/general/email_communication/mailjet_api.rst:107
 msgid ""
 "By adding an entire domain to the Mailjet account, all the sender addresses "
 "related to that domain are automatically validated for sending emails using "
@@ -7501,7 +7521,7 @@ msgstr ""
 "dann auf :guilabel:`Eine Domain hinzufügen`, um die benutzerdefinierte "
 "Domain hinzuzufügen."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:115
+#: ../../content/applications/general/email_communication/mailjet_api.rst:114
 msgid ""
 "The domain needs to be added to the Mailjet account and then validated "
 "through the :abbr:`DNS (Domain Name System)`."
@@ -7509,7 +7529,7 @@ msgstr ""
 "Die Domain muss zum Mailjet-Konto hinzugefügt und dann über das :abbr:`DNS "
 "(Domain Name System)` validiert werden."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:118
+#: ../../content/applications/general/email_communication/mailjet_api.rst:117
 msgid ""
 "After that, fill out the :guilabel:`Add a new Domain` page on Mailjet and "
 "click :guilabel:`Continue`."
@@ -7517,7 +7537,7 @@ msgstr ""
 "Danach füllen Sie die Seite :guilabel:`Neue Domain hinzufügen` auf Mailjet "
 "aus und klicken auf :guilabel:`Hinzufügen`."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:121
+#: ../../content/applications/general/email_communication/mailjet_api.rst:120
 msgid ""
 "After adding the domain, a validation page will populate. Unless the Odoo "
 "database is on-premise (in which case, choose :guilabel:`Option 1`), "
@@ -7538,11 +7558,11 @@ msgstr ""
 "Die TXT-Datensatzinformationen, die in den DNS der Domain eingegeben werden "
 "sollen."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:130
+#: ../../content/applications/general/email_communication/mailjet_api.rst:129
 msgid "Setup in the domain's DNS"
 msgstr "Einrichtung im DNS der Domain"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:132
+#: ../../content/applications/general/email_communication/mailjet_api.rst:131
 msgid ""
 "After getting the TXT record information from the Mailjet account, add a TXT "
 "record to the domain's :abbr:`DNS (Domain Name System)`. This process varies "
@@ -7559,11 +7579,11 @@ msgstr ""
 "aus :guilabel:`Host` und :guilabel:`Wert`. Fügen Sie diese in die "
 "entsprechenden Felder im TXT-Datensatz ein."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:139
+#: ../../content/applications/general/email_communication/mailjet_api.rst:138
 msgid "Return to Mailjet account information"
 msgstr "Zurück zu den Mailjet-Kontoinformationen"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:141
+#: ../../content/applications/general/email_communication/mailjet_api.rst:140
 msgid ""
 "After adding the TXT record to the domain's :abbr:`DNS (Domain Name "
 "System)`, navigate back to the Mailjet account. Then, navigate "
@@ -7577,7 +7597,7 @@ msgstr ""
 "Absenderdomain oder -adresse hinzufügen`, klicken Sie auf das Zahnradsymbol "
 "neben :guilabel:`Domain` und wählen Sie :guilabel:`Validieren`."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:145
+#: ../../content/applications/general/email_communication/mailjet_api.rst:144
 msgid ""
 "This action can also be done by going to the `Sender domains & addresses "
 "<https://app.mailjet.com/ account/sender>`_ page on the Mailjet account "
@@ -7588,7 +7608,7 @@ msgstr ""
 "app.mailjet.com/ Konto/Absender>`_ aufrufen und auf :guilabel:`Verwalten` "
 "klicken."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:148
+#: ../../content/applications/general/email_communication/mailjet_api.rst:147
 msgid ""
 "Next, click :guilabel:`Check Now` to validate the TXT record that was added "
 "on the domain. A success screen will appear if the domain is configured "
@@ -7602,7 +7622,7 @@ msgstr ""
 msgid "Check DNS record in Mailjet."
 msgstr "DNS-Datensatz in Mailjet überprüfen."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:154
+#: ../../content/applications/general/email_communication/mailjet_api.rst:153
 msgid ""
 "After successfully setting up the domain, there is an option "
 "to :guilabel:`Authenticate this domain (SPF/DKIM)`. This button "
@@ -7616,7 +7636,7 @@ msgstr ""
 "(DomainKeys Identified Mail)-Einträge aus, die in den :abbr:`DNS (Domain "
 "Name System)`-Anbieter eingegeben werden."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:159
+#: ../../content/applications/general/email_communication/mailjet_api.rst:158
 msgid ""
 "`Mailjet's SPF/DKIM/DMARC documentation <https://documentation.mailjet.com/"
 "hc/articles/ 360042412734-Authenticating-Domains-with-SPF-DKIM>`_"
@@ -7628,11 +7648,11 @@ msgstr ""
 msgid "Authenticate the domain with SPF/DKIM records in Mailjet."
 msgstr "Die Domain mit SPF/DKIM-Einträgen in Mailjet authentifizieren."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:168
+#: ../../content/applications/general/email_communication/mailjet_api.rst:167
 msgid "Set up in Odoo"
 msgstr "Einrichtung in Odoo"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:170
+#: ../../content/applications/general/email_communication/mailjet_api.rst:169
 msgid ""
 "To complete the setup, navigate to the Odoo database and go to "
 "the :guilabel:`Settings`. With :ref:`developer-mode` turned on, go to "
@@ -7647,7 +7667,7 @@ msgstr ""
 "Postausgangsserver-Konfiguration, indem Sie auf die "
 "Schaltfläche :guilabel:`Neu` klicken."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:175
+#: ../../content/applications/general/email_communication/mailjet_api.rst:174
 msgid ""
 "Next, input the `SMTP server` (in-v3.mailjet.com), `port number` (587 or "
 "465), and `Security (SSL/TLS)` that was copied earlier from the Mailjet "
@@ -7663,7 +7683,7 @@ msgstr ""
 "Layer)`/:abbr:`TLS (Transport Layer Security)` zu verwenden, auch wenn "
 "Mailjet dies nicht unbedingt erfordert."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:180
+#: ../../content/applications/general/email_communication/mailjet_api.rst:179
 msgid ""
 "For the :guilabel:`Username`, input the :guilabel:`API KEY`. For "
 "the :guilabel:`Password`, input the :guilabel:`SECRET KEY` that was copied "
@@ -7677,7 +7697,7 @@ msgstr ""
 "Einstellungen finden Sie unter :menuselection:`Mailjet --> "
 "Kontoeinstellungen --> SMTP and SEND API Einstellungen`."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:185
+#: ../../content/applications/general/email_communication/mailjet_api.rst:184
 msgid ""
 "Then, if the Mailjet server is used for mass emailing, set "
 "the :guilabel:`Priority` value higher than that of any transactional email "
@@ -12211,22 +12231,28 @@ msgid ""
 "Due to the complexity of IoT systems, the term *updating* can refer to "
 "several processes, including:"
 msgstr ""
+"Aufgrund der Komplexität von IoT-Systemen kann sich der Begriff "
+"*Aktualisierung* auf mehrere Prozesse beziehen, darunter:"
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:7
 msgid ""
 ":ref:`Updating the IoT system's image and/or core code <iot/updating_iot/"
 "image-code>`;"
 msgstr ""
+":ref:`Aktualisierung des Images und/oder des Kerncodes des IoT-Systems <iot/"
+"updating_iot/image-code>`;"
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:8
 msgid ""
 ":ref:`Updating the handlers <iot_updating_iot/handlers>`, which include the "
 "interfaces and drivers."
 msgstr ""
+":ref:`Aktualisierung der Handler <iot_updating_iot/handlers>`, "
+"einschließlich der Schnittstellen und Treiber."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:13
 msgid "Image and core code update"
-msgstr ""
+msgstr "Image und Kerncode aktualisieren"
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:19
 msgid ""
@@ -12235,12 +12261,19 @@ msgid ""
 "the :icon:`fa-cogs` (:guilabel:`cogs`) button at the top-right, "
 "then :guilabel:`Update` in the :guilabel:`Version` section."
 msgstr ""
+"Um zu überprüfen, ob die IoT-Box auf dem neuesten Stand ist "
+"(und sie gegebenenfalls zu aktualisieren), rufen Sie die :ref:`Homepage der "
+"IoT-Box <iot/iot-box/homepage>` auf, klicken Sie oben rechts auf die "
+"Schaltfläche :icon:`fa-cogs` (:guilabel:`Zahnräder`) und dann im Abschnitt "
+":guilabel:`Version` auf :guilabel:`Update` (Aktualisieren)."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:24
 msgid ""
 ":ref:`Enable the developer mode <developer-mode>` to view the current "
 "versions of the IoT box's image and core code."
 msgstr ""
+":ref:`Aktivieren Sie den Entwicklermodus <developer-mode>`, um die aktuellen "
+"Versionen des Images und des Kerncodes der IoT-Box anzuzeigen."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:27
 msgid "**Image update**"
@@ -12252,18 +12285,26 @@ msgid ""
 "using `balenaEtcher <https://etcher.balena.io>`_, a free and open-source "
 "tool for writing disk images to SD cards."
 msgstr ""
+"Um das Image der IoT-Box zu aktualisieren, flashen Sie deren SD-Karte. Das "
+"Flashen kann mit `balenaEtcher <https://etcher.balena.io>`_ durchgeführt "
+"werden, einem kostenlosen Open-Source-Tool zum Schreiben von Disk-Images auf "
+"SD-Karten."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:34
 msgid ""
 "Updating the IoT system's image is often required after upgrading the Odoo "
 "database to a newer version."
 msgstr ""
+"Nach der Aktualisierung der Odoo-Datenbank auf eine neuere Version ist es "
+"häufig erforderlich, das Image des IoT-Systems zu aktualisieren."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:36
 msgid ""
 "A computer with a micro SD card reader/adapter is required to flash the "
 "micro SD card."
 msgstr ""
+"Zum Flashen der Micro-SD-Karte ist ein Computer mit einem "
+"Micro-SD-Kartenleser/-adapter erforderlich."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:37
 msgid ""
@@ -12288,28 +12329,38 @@ msgid ""
 "Open balenaEtcher, click :guilabel:`Flash from URL`, and enter the following "
 "URL: `http://nightly.odoo.com/master/iotbox/iotbox-latest.zip`."
 msgstr ""
+"Bitte öffnen Sie balenaEtcher, klicken Sie auf :guilabel:`Flash from URL` "
+"(Aus URL flashen) und geben Sie die folgende URL ein: `http://"
+"nightly.odoo.com/master/iotbox/iotbox-latest.zip`."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:44
 msgid "Click :guilabel:`Select target` and select the SD card."
 msgstr ""
+"Klicken Sie auf :guilabel:`Select target` (Ziel auswählen) und wählen Sie "
+"die SD-Karte aus."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:45
 msgid "Click :guilabel:`Flash` and wait for the process to finish."
 msgstr ""
+"Klicken Sie auf :guilabel:`Flash` (Flashen) und warten Sie, bis der Vorgang "
+"abgeschlossen ist."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:0
 msgid "Flashing the SD card with balenaEtcher"
-msgstr ""
+msgstr "SD-Karte mit balenaEtcher flashen"
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:50
 msgid "**Core code update**"
-msgstr ""
+msgstr "**Aktualisierung des Kerncodes**"
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:52
 msgid ""
 "To update the IoT box's core code, click :guilabel:`Update` "
 "under :guilabel:`IoT Box Update` in the :guilabel:`Update` popup."
 msgstr ""
+"Um den Kerncode der IoT-Box zu aktualisieren, klicken Sie im Pop-up-Fenster "
+":guilabel:`Update` (Aktualisieren) unter :guilabel:`IoT Box Update` "
+"(Aktualisierung der IoT-Box) auf :guilabel:`Update` (Aktualisieren)."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:56
 msgid ""
@@ -12317,6 +12368,10 @@ msgid ""
 "box** during this time, as doing so could leave the device in an "
 "inconsistent state, requiring the IoT box to be reflashed with a new image."
 msgstr ""
+"Dieser Vorgang kann über 30 Minuten dauern. **Schalten Sie die IoT-Box "
+"während dieser Zeit nicht aus** und ziehen Sie nicht den Stecker, da das "
+"Gerät sonst in einen inkonsistenten Zustand versetzt werden könnte und die "
+"IoT-Box mit einem neuen Image neu geflasht werden müsste."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:62
 msgid ""
@@ -12324,10 +12379,13 @@ msgid ""
 "program <iot/windows_iot/uninstall>` and :ref:`reinstall <iot/windows-iot/"
 "installation>` the latest package."
 msgstr ""
+"Um das Image und den Code des virtuellen Windows-IoT zu aktualisieren, :ref:`"
+"deinstallieren Sie das Programm <iot/windows_iot/uninstall>` und :ref:`"
+"installieren <iot/windows-iot/installation>` Sie das neueste Paket neu."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:69
 msgid "Handler (driver) update"
-msgstr ""
+msgstr "Handler (Treiber) aktualisieren"
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:71
 msgid ""
@@ -12336,6 +12394,11 @@ msgid ""
 "resolve issues where :doc:`devices <../devices>` are not functioning "
 "properly with the IoT system, proceed as follows:"
 msgstr ""
+"Um die Handler des IoT-Systems (d. h. Treiber und Schnittstellen) zu "
+"aktualisieren und sie mit dem Code des konfigurierten Server-Handlers zu "
+"synchronisieren, beispielsweise um Probleme zu beheben, bei denen :doc:`"
+"Geräte <../devices>` mit dem IoT-System nicht ordnungsgemäß funktionieren, "
+"gehen Sie wie folgt vor:"
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:75
 msgid ""
@@ -12343,16 +12406,24 @@ msgid ""
 "IoT's <iot/windows-iot/homepage>` homepage and click the :icon:`fa-cogs` "
 "(:guilabel:`cogs`) button at the top-right."
 msgstr ""
+"Rufen Sie die Startseite der :ref:`IoT-Box <iot/iot-box/homepage>` oder des "
+":ref:`virtuellen Windows-IoT <iot/windows-iot/homepage>` auf und klicken Sie "
+"oben rechts auf die Schaltfläche :icon:`fa-cogs` (:guilabel:`Zahnräder`)."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:78
 msgid "Click :guilabel:`Update` in the :guilabel:`Version` section."
 msgstr ""
+"Klicken Sie im Abschnitt :guilabel:`Version` auf :guilabel:`Update` "
+"(Aktualisieren)."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:79
 msgid ""
 "In the :guilabel:`Update` popup that opens, click :guilabel:`Force Drivers "
 "Update`."
 msgstr ""
+"Klicken Sie im sich öffnenden Pop-up-Fenster :guilabel:`Update` "
+"(Aktualisieren) auf :guilabel:`Force Drivers Update` "
+"(Treiberaktualisierung erzwingen)."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:82
 msgid ""
@@ -12361,6 +12432,10 @@ msgid ""
 "must be up-to-date to ensure the handlers' code includes the latest fixes "
 "and patches."
 msgstr ""
+"Wenn Sie über eine :doc:`On-Premise </administration/on_premise>` oder :doc:`"
+"Odoo.sh </administration/odoo_sh>`-Datenbank verfügen, muss der "
+"konfigurierte Server auf dem neuesten Stand sein, um sicherzustellen, dass "
+"der Code der Handler die neuesten Korrekturen und Patches enthält."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:87
 msgid ""
@@ -12369,6 +12444,10 @@ msgid ""
 "disabled in the :guilabel:`Technical information` tab in the :ref:`IoT "
 "system's form <iot/connect/IoT-form>` in Odoo."
 msgstr ""
+"Eine Handler-Aktualisierung wird auch bei jedem Neustart des IoT-Systems "
+"automatisch durchgeführt, es sei denn, die Option :guilabel:`Automatische "
+"Treiberaktualisierung` ist im Reiter :guilabel:`Technische Informationen` im "
+":ref:`Formular des IoT-Systems <iot/connect/IoT-form>` in Odoo deaktiviert."
 
 #: ../../content/applications/general/iot/iot_box.rst:5
 msgid "To start using an IoT box:"
@@ -12412,6 +12491,10 @@ msgid ""
 "network. Exposing them to the public Internet would create a **security "
 "risk**."
 msgstr ""
+"Stellen Sie die IoT-Box niemals über das öffentliche Internet zugänglich. "
+"IoT-Systeme sind so konzipiert, dass sie Ihrer Datenbank Zugriff auf Geräte "
+"in Ihrem lokalen Netzwerk gewähren. Eine Freigabe über das öffentliche "
+"Internet würde ein **Sicherheitsrisiko** darstellen."
 
 #: ../../content/applications/general/iot/iot_box.rst:25
 msgid "Network connection"
@@ -12582,30 +12665,38 @@ msgstr ""
 
 #: ../../content/applications/general/iot/windows_iot.rst:5
 msgid "To start using the Windows virtual IoT:"
-msgstr ""
+msgstr "Um mit der Nutzung des virtuellen Windows-IoT zu beginnen:"
 
 #: ../../content/applications/general/iot/windows_iot.rst:7
 msgid ""
 "Make sure all :ref:`prerequisites <iot/windows-iot/prerequisites>` are met."
 msgstr ""
+"Stellen Sie sicher, dass alle :ref:`Voraussetzungen <iot/windows-iot/"
+"prerequisites>` erfüllt sind."
 
 #: ../../content/applications/general/iot/windows_iot.rst:8
 msgid ""
 ":ref:`Install the Windows virtual IoT <iot/windows-iot/installation>` on a "
 "Windows computer."
 msgstr ""
+":ref:`Installieren Sie das virtuelle Windows-IoT <iot/windows-iot/"
+"installation>` auf einem Windows-Computer."
 
 #: ../../content/applications/general/iot/windows_iot.rst:9
 msgid ":ref:`Configure the Windows Firewall <iot/windows-iot/firewall>`."
 msgstr ""
+":ref:`Konfigurieren Sie die Windows-Firewall <iot/windows-iot/firewall>`."
 
 #: ../../content/applications/general/iot/windows_iot.rst:10
 msgid "Connect your :doc:`devices <devices>` to the Windows virtual IoT."
 msgstr ""
+"Verbinden Sie Ihre :doc:`Geräte <devices>` mit dem virtuellen Windows-IoT."
 
 #: ../../content/applications/general/iot/windows_iot.rst:11
 msgid ":doc:`Connect the Windows virtual IoT to your Odoo database <connect>`."
 msgstr ""
+":doc:`Verbinden Sie das virtuelle Windows-IoT mit Ihrer Odoo-Datenbank "
+"<connect>`."
 
 #: ../../content/applications/general/iot/windows_iot.rst:18
 msgid ""
@@ -15538,6 +15629,19 @@ msgstr ""
 "zu :guilabel:`Zahlungsmethoden verwalten` im Menü auf der rechten Seite. "
 "Fügen Sie dann die neuen Zahlungsinformationen hinzu, und wählen "
 "Sie :guilabel:`Neue Karte hinzufügen`."
+
+#~ msgid ""
+#~ "If the database is not using a custom domain, then in order to verify the "
+#~ "sender's address, a temporary alias (of the three email addresses "
+#~ "mentioned above) should be set up in Odoo CRM to create a lead. Then, the "
+#~ "database is able to receive the verification email and verify the "
+#~ "accounts."
+#~ msgstr ""
+#~ "Wenn die Datenbank keine benutzerdefinierte Domain verwendet, sollte zur "
+#~ "Überprüfung der Absenderadresse ein temporärer Alias (der drei oben "
+#~ "genannten E-Mail-Adressen) in Odoo CRM eingerichtet werden, um einen Lead "
+#~ "zu erstellen. Dann kann die Datenbank die Verifizierungs-E-Mail empfangen "
+#~ "und die Konten verifizieren."
 
 #~ msgid ""
 #~ "On some occasions, new improvements or app features are added "

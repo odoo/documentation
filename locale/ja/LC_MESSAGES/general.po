@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-19 15:06+0000\n"
+"POT-Creation-Date: 2025-12-25 18:30+0000\n"
 "PO-Revision-Date: 2025-12-18 23:05+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-17-doc/"
@@ -6879,21 +6879,17 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:98
 msgid ""
-"If the database is not using a custom domain, then in order to verify the "
-"sender's address, a temporary alias (of the three email addresses mentioned "
-"above) should be set up in Odoo CRM to create a lead. Then, the database is "
-"able to receive the verification email and verify the accounts."
+"It is recommended to set up a custom domain. Due to increased security on "
+"provider side, emails sent with an outgoing mail server other than the "
+"Odoo's provided one using subdomain (dbname.odoo.com) will fail due to DMARC "
+"policy, and/or be marked as spam."
 msgstr ""
-"データベースがカスタムドメインを使用していない場合、送信者のアドレスを確認す"
-"るには、Odoo CRMに一時的なエイリアス(上記の3つのEメールアドレスのうちの1つ)を"
-"設定してリードを作成する必要があります。 その後、データベースは確認Eメールを"
-"受信し、アカウントを確認することができます。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:106
+#: ../../content/applications/general/email_communication/mailjet_api.rst:105
 msgid "Add a domain"
 msgstr "ドメインを追加する"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:108
+#: ../../content/applications/general/email_communication/mailjet_api.rst:107
 msgid ""
 "By adding an entire domain to the Mailjet account, all the sender addresses "
 "related to that domain are automatically validated for sending emails using "
@@ -6910,7 +6906,7 @@ msgstr ""
 "に、カスタムドメインを追加するには、:guilabel:`ドメインの追加` をクリックしま"
 "す。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:115
+#: ../../content/applications/general/email_communication/mailjet_api.rst:114
 msgid ""
 "The domain needs to be added to the Mailjet account and then validated "
 "through the :abbr:`DNS (Domain Name System)`."
@@ -6918,7 +6914,7 @@ msgstr ""
 "ドメインはMailjetアカウントに追加し、 :abbr:`DNS (Domain Name System)` で検証"
 "済である必要があります。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:118
+#: ../../content/applications/general/email_communication/mailjet_api.rst:117
 msgid ""
 "After that, fill out the :guilabel:`Add a new Domain` page on Mailjet and "
 "click :guilabel:`Continue`."
@@ -6926,7 +6922,7 @@ msgstr ""
 "その後、Mailjetの :guilabel:`新規ドメインを追加` ページで :guilabel:`続行` を"
 "クリックします。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:121
+#: ../../content/applications/general/email_communication/mailjet_api.rst:120
 msgid ""
 "After adding the domain, a validation page will populate. Unless the Odoo "
 "database is on-premise (in which case, choose :guilabel:`Option 1`), "
@@ -6944,11 +6940,11 @@ msgstr ""
 msgid "The TXT record information to input on the domain's DNS."
 msgstr "TXTレコードは、ドメインのDNSに入力する情報です。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:130
+#: ../../content/applications/general/email_communication/mailjet_api.rst:129
 msgid "Setup in the domain's DNS"
 msgstr "ドメインのDNSでの設定"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:132
+#: ../../content/applications/general/email_communication/mailjet_api.rst:131
 msgid ""
 "After getting the TXT record information from the Mailjet account, add a TXT "
 "record to the domain's :abbr:`DNS (Domain Name System)`. This process varies "
@@ -6964,11 +6960,11 @@ msgstr ""
 "スト`と:guilabel:`値`で構成されています。これらの情報をTXTレコードの対応する"
 "フィールドに貼付けます。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:139
+#: ../../content/applications/general/email_communication/mailjet_api.rst:138
 msgid "Return to Mailjet account information"
 msgstr "Return to Mailjetアカウント情報に戻る"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:141
+#: ../../content/applications/general/email_communication/mailjet_api.rst:140
 msgid ""
 "After adding the TXT record to the domain's :abbr:`DNS (Domain Name "
 "System)`, navigate back to the Mailjet account. Then, navigate "
@@ -6981,7 +6977,7 @@ msgstr ""
 "またはアドレスの追加` に移動し、:guilabel:`ドメイン` の隣にある歯車アイコンを"
 "クリックし、:guilabel:`検証` を選択します。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:145
+#: ../../content/applications/general/email_communication/mailjet_api.rst:144
 msgid ""
 "This action can also be done by going to the `Sender domains & addresses "
 "<https://app.mailjet.com/ account/sender>`_ page on the Mailjet account "
@@ -6991,7 +6987,7 @@ msgstr ""
 "app.mailjet.com/ account/sender>`_ ページで、:guilabel:`管理` をクリックする"
 "ことでも行えます。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:148
+#: ../../content/applications/general/email_communication/mailjet_api.rst:147
 msgid ""
 "Next, click :guilabel:`Check Now` to validate the TXT record that was added "
 "on the domain. A success screen will appear if the domain is configured "
@@ -7004,7 +7000,7 @@ msgstr ""
 msgid "Check DNS record in Mailjet."
 msgstr "MailjetでDNSレコードを確認します。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:154
+#: ../../content/applications/general/email_communication/mailjet_api.rst:153
 msgid ""
 "After successfully setting up the domain, there is an option "
 "to :guilabel:`Authenticate this domain (SPF/DKIM)`. This button "
@@ -7017,7 +7013,7 @@ msgstr ""
 "Policy Framework)` および :abbr:`DKIM(DomainKeys Identified Mail)レコードが入"
 "力され、:abbr:`DNS (Domain Name System)` プロバイダーに送信されます。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:159
+#: ../../content/applications/general/email_communication/mailjet_api.rst:158
 msgid ""
 "`Mailjet's SPF/DKIM/DMARC documentation <https://documentation.mailjet.com/"
 "hc/articles/ 360042412734-Authenticating-Domains-with-SPF-DKIM>`_"
@@ -7030,11 +7026,11 @@ msgstr ""
 msgid "Authenticate the domain with SPF/DKIM records in Mailjet."
 msgstr "MailjetのSPF/DKIMレコードでドメインを認証します。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:168
+#: ../../content/applications/general/email_communication/mailjet_api.rst:167
 msgid "Set up in Odoo"
 msgstr "Odooでの設定"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:170
+#: ../../content/applications/general/email_communication/mailjet_api.rst:169
 msgid ""
 "To complete the setup, navigate to the Odoo database and go to "
 "the :guilabel:`Settings`. With :ref:`developer-mode` turned on, go to "
@@ -7047,7 +7043,7 @@ msgstr ""
 "メール --> 送信メールサーバ` に進みます。次に、:guilabel:`作成` ボタンをク"
 "リックして、新しい送信サーバ設定を作成します。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:175
+#: ../../content/applications/general/email_communication/mailjet_api.rst:174
 msgid ""
 "Next, input the `SMTP server` (in-v3.mailjet.com), `port number` (587 or "
 "465), and `Security (SSL/TLS)` that was copied earlier from the Mailjet "
@@ -7062,7 +7058,7 @@ msgstr ""
 "す。Mailjetが要求しない場合でも、:abbr:`SSL (Secure Sockets "
 "Layer)`/:abbr:`TLS (Transport Layer Security)` を使用することを推奨します。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:180
+#: ../../content/applications/general/email_communication/mailjet_api.rst:179
 msgid ""
 "For the :guilabel:`Username`, input the :guilabel:`API KEY`. For "
 "the :guilabel:`Password`, input the :guilabel:`SECRET KEY` that was copied "
@@ -7076,7 +7072,7 @@ msgstr ""
 "定 --> SMTP およびAPI送信設定` (Mailjet --> アカウント設定 --> SMTPおよび"
 "SEND API設定)で確認できます。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:185
+#: ../../content/applications/general/email_communication/mailjet_api.rst:184
 msgid ""
 "Then, if the Mailjet server is used for mass emailing, set "
 "the :guilabel:`Priority` value higher than that of any transactional email "
@@ -15051,6 +15047,18 @@ msgstr ""
 "顧客が支払オプションを管理したい場合は、右側のメニューにある :guilabel:`支払"
 "方法を管理`に進みます。次に、新しい支払情報を追加し、:guilabel:`新しいカード"
 "を追加` をクリックします。"
+
+#~ msgid ""
+#~ "If the database is not using a custom domain, then in order to verify the "
+#~ "sender's address, a temporary alias (of the three email addresses "
+#~ "mentioned above) should be set up in Odoo CRM to create a lead. Then, the "
+#~ "database is able to receive the verification email and verify the "
+#~ "accounts."
+#~ msgstr ""
+#~ "データベースがカスタムドメインを使用していない場合、送信者のアドレスを確認"
+#~ "するには、Odoo CRMに一時的なエイリアス(上記の3つのEメールアドレスのうちの1"
+#~ "つ)を設定してリードを作成する必要があります。 その後、データベースは確認E"
+#~ "メールを受信し、アカウントを確認することができます。"
 
 #~ msgid ""
 #~ "On some occasions, new improvements or app features are added "
