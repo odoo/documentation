@@ -114,6 +114,7 @@ Fiscal localization modules are available for the countries listed below.
 - Niger
 - Nigeria
 - Norway
+- :doc:`Oman <fiscal_localizations/oman>`
 - Pakistan
 - Panama
 - :doc:`Peru <fiscal_localizations/peru>`
@@ -176,6 +177,7 @@ Fiscal localization modules are available for the countries listed below.
    fiscal_localizations/mexico
    fiscal_localizations/netherlands
    fiscal_localizations/new_zealand
+   fiscal_localizations/oman
    fiscal_localizations/peru
    fiscal_localizations/philippines
    fiscal_localizations/romania
