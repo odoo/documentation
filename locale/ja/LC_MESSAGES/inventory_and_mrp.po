@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-19 18:31+0000\n"
+"POT-Creation-Date: 2025-12-26 18:30+0000\n"
 "PO-Revision-Date: 2025-12-19 23:23+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -7861,6 +7861,7 @@ msgstr ""
 "策は時間がかかり、エラーが発生しやすいという欠点があります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:7
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:32
 msgid ""
 "A *package* is a physical container holding one or more products. Packages "
 "can also be used to store items in bulk."
@@ -17755,6 +17756,7 @@ msgstr ""
 "` フィールドに希望の名前を入力します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/closest_location.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:48
 msgid "Set the removal strategy"
 msgstr ""
 
@@ -17808,7 +17810,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/closest_location.rst:74
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/fefo.rst:143
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/fifo.rst:107
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:30
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:95
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/lifo.rst:84
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:30
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:79
@@ -17881,7 +17883,7 @@ msgid "Display Pick From quantities for the order for iPhone chargers."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/closest_location.rst:109
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:9
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:133
 msgid ":doc:`About removal strategies <../removal_strategies>`"
 msgstr ":doc:`払出方針について <../removal_strategies>`"
 
@@ -18009,6 +18011,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/fefo.rst:71
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/fifo.rst:71
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:74
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/lifo.rst:68
 msgid "On the product category"
 msgstr ""
@@ -18027,6 +18030,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/fefo.rst:81
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/fifo.rst:81
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:84
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/lifo.rst:79
 msgid ""
 "When there are different removal strategies applied on both the location and "
@@ -18543,14 +18547,6 @@ msgstr ""
 "*最少梱包* 払出方針は、最小数の梱包を開けることでオーダ需要を満たします。 複"
 "数の箱を開けることなく、整理された在庫を維持するのに最適です。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:10
-msgid ""
-"`Odoo Tutorials: Least Packages <https://www.odoo.com/slides/slide/5477/"
-"share>`_"
-msgstr ""
-"`Odooチュートリアル: 最少梱包 <https://www.odoo.com/slides/slide/5477/"
-"share>`_"
-
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:12
 msgid ""
 "To understand how the removal strategy works, consider the following "
@@ -18562,14 +18558,13 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:15
 msgid ""
-"To minimize moisture, and/or prevent pests from entering open packages, the "
-"least packages removal strategy is used to pick from a single, opened "
-"package."
+"To minimize moisture and prevent possible loss of product due to spillage "
+"and repacking, the least packages removal strategy is used to fill the order "
+"by opening the fewest packages of flour, instead of opening multiple "
+"packages."
 msgstr ""
-"湿気を最小限に抑え、かつ/または開封した梱包への外注の侵入を防ぐため、最少梱包"
-"払出方針を適用し、1つの開封済の梱包からピッキングを行います。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:21
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:19
 msgid ""
 "A package of `100 kg` of flour is depleted to `54 kg` after fulfilling some "
 "orders. There are other packages of `100 kg` in stock."
@@ -18577,86 +18572,140 @@ msgstr ""
 "いくつかのオーダに対応した後、`100 kg` の小麦粉が `54 kg` に減りました。在庫"
 "には他の `100 kg` の梱包があります。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:24
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:22
 msgid ""
 "When an order for `14 kg` of flour is placed, the package of `54 kg` is "
-"selected."
+"selected, leaving `40 kg` of flour in the bag. Another order for `80 kg` of "
+"flour is placed. An unopened `100 kg` package is used to fulfill the order."
 msgstr ""
-"小麦粉の `14 kg` のオーダが入力されると、 `54 kg` の梱包が選択されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:25
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:26
 msgid ""
-"When an order for *more* than `54 kg` of flour is placed, an unopened `100 "
-"kg` package is used to fulfill the order. While this temporarily results in "
-"two open packages, these open packages are prioritized in the next picking."
+"While this temporarily results in two open packages, one for `40 kg` and "
+"another for `20 kg`, these open packages are prioritized in the next "
+"pickings that are those sizes or smaller."
 msgstr ""
-"小麦粉のオーダが `54 kg` を超える数量の場合、未開封の `100 kg` の梱包がオーダ"
-"を満たすため使用されます。これにより一時的に開封された梱包が2つになりますが、"
-"次のピッキングではこれらの開封された梱包が優先されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:32
-msgid ""
-"Using the least package removal strategy, the fewest number of packages is "
-"used to fulfill an order."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:30
+msgid "Enabling the least packages removal strategy"
 msgstr ""
-"最少梱包払出方針では、オーダを満たすために使用される梱包の数が最少に抑えられ"
-"ます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:35
 msgid ""
-"The :ref:`Packages feature <inventory/warehouses_storage/pack-setup>` "
-"**must** be enabled to use this strategy."
+"The packages feature is used to group products together and is required for "
+"the *least packages* removal strategy."
 msgstr ""
-"この方針を使用するには :ref:`梱包機能 <inventory/warehouses_storage/pack-"
-"setup>` が有効化されている **必要があります** 。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:38
 msgid ""
-"Consider the following example, featuring the product, `Flour`. The "
-"product's :guilabel:`Units of Measure` field, located on the product form, "
-"is set to `kg`. The product is stored in packages of `100 kg`, with one "
-"remaining package containing `54 kg`. The product "
-"category's :guilabel:`Force Removal Strategy` is set to :guilabel:`Least "
-"Packages`."
+"Navigate to :menuselection:`Inventory app --> Configuration --> Settings` "
+"and in the :guilabel:`Operations` section, select the check box for "
+"the :guilabel:`Packages` feature."
 msgstr ""
-"次の例では、プロダクト `小麦粉` を例に考えてみましょう。プロダクトフォームに"
-"あるプロダクトの :guilabel:`単位` フィールドは `kg` に設定されています。プロ"
-"ダクトは `100 kg` の梱包で保管されており、残りの梱包には `54 kg` が残っていま"
-"す。プロダクトカテゴリの :guilabel:`払出方針強制` は :guilabel:`最少梱包` に"
-"設定されています。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:42
+msgid "Store products in packages"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:44
 msgid ""
-":ref:`Set removal strategy on product category <inventory/warehouses_storage/"
-"removal-config>`"
+"First, products are received either in packages or individually. Next, the "
+"received products are stored in packages created :ref:`during a transfer "
+"<inventory/warehouses_storage/pack>`."
 msgstr ""
-":ref:`プロダクトカテゴリの払出方針を設定する <inventory/warehouses_storage/"
-"removal-config>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:47
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:50
 msgid ""
-"To check the product's on-hand stock, navigate to the product form, and "
-"click the :guilabel:`On Hand` smart button."
+"After you have configured your product inventory, set the removal strategy "
+"on the :ref:`storage location <inventory/warehouses_storage/lp-location>` "
+"or :ref:`product category <inventory/warehouses_storage/lp-category>`."
 msgstr ""
-"プロダクトの在庫を確認するには、プロダクトフォームに移動し、:guilabel:`手持在"
-"庫` スマートボタンをクリックします。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:57
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/lifo.rst:58
+msgid "On the storage location"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:59
+msgid ""
+"To set a removal strategy on a storage location, you must first enable a "
+"couple settings in the **Inventory** configuration settings. "
+"Open :menuselection:`Inventory app --> Configuration --> Settings`, and in "
+"the :guilabel:`Warehouse` section, enable :guilabel:`Storage Locations` "
+"and :guilabel:`Multi-Step Routes`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:64
+msgid ""
+"Next, open :menuselection:`Inventory app --> Configuration --> Locations`. "
+"Open an existing location or create a new location. On the location form, "
+"under the :guilabel:`Logistics` heading, set the :guilabel:`Removal "
+"Strategy`. to :guilabel:`Least Packages`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:None
+msgid "Set Least Packages as the location's removal strategy."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:76
+msgid ""
+"Configure removal strategies on product categories by going "
+"to :menuselection:`Inventory app --> Configuration --> Categories` and "
+"selecting the intended product category. Next, in the :guilabel:`Force "
+"Removal Strategy` field, select :guilabel:`Least Packages`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:None
+msgid "Set Least Packages as the category's removal strategy."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:88
+msgid ""
+"For example, flour is stored in 100-kilogram packages. It is stored in a "
+"location with other heavy items. To minimize how far pickers have to walk, "
+"the location uses the :doc:`closest location removal strategy "
+"<closest_location>`. To further optimize the picking time, and to reduce the "
+"number of packages opened during picking, the flour's product category, "
+"`Baking Materials`, uses the least packages removal strategy."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:97
+msgid ""
+"Using the *least packages* removal strategy, the fewest number of packages "
+"is used to fulfill an order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:100
+msgid ""
+"Consider the following example, featuring the product, `Flour (kg)`. The "
+"product's :doc:`unit of measure <../../product_management/configure/uom>`, "
+"located on the product form, is set to `kg`. The product is stored in "
+"packages of `100 kg`, with one remaining package containing `54 kg`. The "
+"product category's :guilabel:`Force Removal Strategy` is set "
+"to :guilabel:`Least Packages`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:106
+msgid ""
+"You can verify the product's on-hand stock in the :guilabel:`Locations` "
+"report. Open :menuselection:`Inventory app --> Reporting --> Locations`. "
+"Click in the :guilabel:`Search` field to filter by :guilabel:`On Hand`, as "
+"well as product."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:0
 msgid "Show on-hand stock in each package."
 msgstr "各梱包の手持在庫を表示します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:54
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:113
 msgid ""
-"Create a :ref:`delivery order <inventory/delivery/one-step>` for eighty "
-"kilograms of flour by going to the :menuselection:`Sales app` and creating a "
-"new quotation. After clicking :guilabel:`Confirm`, the delivery order is "
-"created."
+"A sales order is created for eighty kilograms of flour by going to "
+"the :menuselection:`Sales app` and creating a new quotation. After "
+"clicking :guilabel:`Confirm`, the :ref:`delivery order <inventory/delivery/"
+"one-step>` is created."
 msgstr ""
-"小麦粉80kgの :ref:`配送オーダ <inventory/delivery/one-step>` を作成するに"
-"は、:menuselection:`販売アプリ` に移動し、新しい見積を作成しま"
-"す。 :guilabel:`確認` をクリックすると、配送オーダが作成されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:58
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:117
 msgid ""
 "On the delivery order, the :guilabel:`Quantity` field displays the amount "
 "automatically picked, according to the removal strategy."
@@ -18664,34 +18713,34 @@ msgstr ""
 "配送オーダの :guilabel:`数量` フィールドには、払出方針に従って自動的にピッキ"
 "ングされた数量が表示されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:61
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:120
 msgid ""
-"For more details about *where* the units were picked, select "
-"the :guilabel:`⦙≣ (bulleted list)` icon, located on the far-right. Doing so "
-"opens the :guilabel:`Open: Stock move` pop-up window, displaying how the "
+"For more details about *where* the units were picked, "
+"click  :guilabel:`Details` on the product line. Doing so opens "
+"the :guilabel:`Detailed Operations` pop-up window, displaying how the "
 "reserved items were picked, according to the removal strategy."
 msgstr ""
-"*どこ* でユニットがピッキングされたかについての詳細は、右端にあ"
-"る :guilabel:`⦙≣ (箇条書き)` アイコンを選択して下さい。すると、 :guilabel:`開"
-"く: 在庫移動` ポップアップウィンドウが開き、払出方針に従って引当されたアイテ"
-"ムがどのようにピッキングされたかが表示されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:65
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:124
 msgid ""
-"In the :guilabel:`Open: Stock move` pop-up window, the :guilabel:`Pick from` "
-"field displays where the quantities to fulfill the :guilabel:`Demand` are "
-"picked. Since the order demanded eighty kilograms, which exceeds the "
+"In the :guilabel:`Detailed Operations` pop-up window, the :guilabel:`Pick "
+"From` field displays where the quantities to fulfill the :guilabel:`Demand` "
+"are picked. Because the order demands eighty kilograms, which exceeds the "
 "quantity in the opened package of `54 kg`, an unopened package of `100 kg` "
 "is selected."
 msgstr ""
-":guilabel:`開く: 在庫移動` ポップアップウィンドウの :guilabel:`ピッキング元` "
-"フィールドには、:guilabel:`需要` を満たす数量が選択された場所が表示されま"
-"す。 オーダは80kgを要求しており、これは開封済の梱包の数量である `54 kg` を超"
-"えるため、未開封の梱包である`100 kg` が選択されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:None
 msgid "Show which package was picked in the *Pick From* field."
 msgstr "どの梱包が *ピッキング元* フィールドでピッキングされたか表示します。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/least_packages.rst:134
+msgid ""
+"`Odoo Tutorials: Least Packages <https://www.odoo.com/slides/slide/5477/"
+"share>`_"
+msgstr ""
+"`Odooチュートリアル: 最少梱包 <https://www.odoo.com/slides/slide/5477/"
+"share>`_"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/lifo.rst:3
 msgid "LIFO removal"
@@ -18753,10 +18802,6 @@ msgstr ""
 msgid ""
 "After lots or serial numbers have been assigned, set the removal strategy on "
 "the product category or storage location."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/lifo.rst:58
-msgid "On the storage location"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/lifo.rst:60
@@ -58449,6 +58494,105 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "To minimize moisture, and/or prevent pests from entering open packages, "
+#~ "the least packages removal strategy is used to pick from a single, opened "
+#~ "package."
+#~ msgstr ""
+#~ "湿気を最小限に抑え、かつ/または開封した梱包への外注の侵入を防ぐため、最少"
+#~ "梱包払出方針を適用し、1つの開封済の梱包からピッキングを行います。"
+
+#~ msgid ""
+#~ "When an order for `14 kg` of flour is placed, the package of `54 kg` is "
+#~ "selected."
+#~ msgstr ""
+#~ "小麦粉の `14 kg` のオーダが入力されると、 `54 kg` の梱包が選択されます。"
+
+#~ msgid ""
+#~ "When an order for *more* than `54 kg` of flour is placed, an unopened "
+#~ "`100 kg` package is used to fulfill the order. While this temporarily "
+#~ "results in two open packages, these open packages are prioritized in the "
+#~ "next picking."
+#~ msgstr ""
+#~ "小麦粉のオーダが `54 kg` を超える数量の場合、未開封の `100 kg` の梱包が"
+#~ "オーダを満たすため使用されます。これにより一時的に開封された梱包が2つにな"
+#~ "りますが、次のピッキングではこれらの開封された梱包が優先されます。"
+
+#~ msgid ""
+#~ "Using the least package removal strategy, the fewest number of packages "
+#~ "is used to fulfill an order."
+#~ msgstr ""
+#~ "最少梱包払出方針では、オーダを満たすために使用される梱包の数が最少に抑えら"
+#~ "れます。"
+
+#~ msgid ""
+#~ "The :ref:`Packages feature <inventory/warehouses_storage/pack-setup>` "
+#~ "**must** be enabled to use this strategy."
+#~ msgstr ""
+#~ "この方針を使用するには :ref:`梱包機能 <inventory/warehouses_storage/pack-"
+#~ "setup>` が有効化されている **必要があります** 。"
+
+#~ msgid ""
+#~ "Consider the following example, featuring the product, `Flour`. The "
+#~ "product's :guilabel:`Units of Measure` field, located on the product "
+#~ "form, is set to `kg`. The product is stored in packages of `100 kg`, with "
+#~ "one remaining package containing `54 kg`. The product "
+#~ "category's :guilabel:`Force Removal Strategy` is set to :guilabel:`Least "
+#~ "Packages`."
+#~ msgstr ""
+#~ "次の例では、プロダクト `小麦粉` を例に考えてみましょう。プロダクトフォーム"
+#~ "にあるプロダクトの :guilabel:`単位` フィールドは `kg` に設定されています。"
+#~ "プロダクトは `100 kg` の梱包で保管されており、残りの梱包には `54 kg` が"
+#~ "残っています。プロダクトカテゴリの :guilabel:`払出方針強制` は :guilabel:`"
+#~ "最少梱包` に設定されています。"
+
+#~ msgid ""
+#~ ":ref:`Set removal strategy on product category <inventory/"
+#~ "warehouses_storage/removal-config>`"
+#~ msgstr ""
+#~ ":ref:`プロダクトカテゴリの払出方針を設定する <inventory/"
+#~ "warehouses_storage/removal-config>`"
+
+#~ msgid ""
+#~ "To check the product's on-hand stock, navigate to the product form, and "
+#~ "click the :guilabel:`On Hand` smart button."
+#~ msgstr ""
+#~ "プロダクトの在庫を確認するには、プロダクトフォームに移動し、:guilabel:`手"
+#~ "持在庫` スマートボタンをクリックします。"
+
+#~ msgid ""
+#~ "Create a :ref:`delivery order <inventory/delivery/one-step>` for eighty "
+#~ "kilograms of flour by going to the :menuselection:`Sales app` and "
+#~ "creating a new quotation. After clicking :guilabel:`Confirm`, the "
+#~ "delivery order is created."
+#~ msgstr ""
+#~ "小麦粉80kgの :ref:`配送オーダ <inventory/delivery/one-step>` を作成するに"
+#~ "は、:menuselection:`販売アプリ` に移動し、新しい見積を作成しま"
+#~ "す。 :guilabel:`確認` をクリックすると、配送オーダが作成されます。"
+
+#~ msgid ""
+#~ "For more details about *where* the units were picked, select "
+#~ "the :guilabel:`⦙≣ (bulleted list)` icon, located on the far-right. Doing "
+#~ "so opens the :guilabel:`Open: Stock move` pop-up window, displaying how "
+#~ "the reserved items were picked, according to the removal strategy."
+#~ msgstr ""
+#~ "*どこ* でユニットがピッキングされたかについての詳細は、右端にあ"
+#~ "る :guilabel:`⦙≣ (箇条書き)` アイコンを選択して下さい。する"
+#~ "と、 :guilabel:`開く: 在庫移動` ポップアップウィンドウが開き、払出方針に"
+#~ "従って引当されたアイテムがどのようにピッキングされたかが表示されます。"
+
+#~ msgid ""
+#~ "In the :guilabel:`Open: Stock move` pop-up window, the :guilabel:`Pick "
+#~ "from` field displays where the quantities to fulfill "
+#~ "the :guilabel:`Demand` are picked. Since the order demanded eighty "
+#~ "kilograms, which exceeds the quantity in the opened package of `54 kg`, "
+#~ "an unopened package of `100 kg` is selected."
+#~ msgstr ""
+#~ ":guilabel:`開く: 在庫移動` ポップアップウィンドウの :guilabel:`ピッキング"
+#~ "元` フィールドには、:guilabel:`需要` を満たす数量が選択された場所が表示さ"
+#~ "れます。 オーダは80kgを要求しており、これは開封済の梱包の数量である `54 "
+#~ "kg` を超えるため、未開封の梱包である`100 kg` が選択されます。"
 
 #~ msgid ""
 #~ "Databases hosted on **Odoo.sh** or **on-premise**, "

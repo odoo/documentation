@@ -25,7 +25,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-19 18:31+0000\n"
+"POT-Creation-Date: 2025-12-26 18:30+0000\n"
 "PO-Revision-Date: 2025-10-03 12:52+0000\n"
 "Last-Translator: \"Tiffany Chang (tic)\" <tic@odoo.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
@@ -8426,20 +8426,16 @@ msgstr ""
 "可安装在 Windows 计算机上。"
 
 #: ../../content/applications/general/iot.rst:20
-#: ../../content/applications/general/iot/windows_iot.rst:25
 msgid ""
 ":abbr:`MRP (Material Requirement Planning)` devices, including cameras and "
-"measurement tools, are not compatible with Windows virtual IoT."
+"measurement tools, are not compatible with the Windows virtual IoT."
 msgstr ""
-":abbr:`MRP（物料需求计划）` 设备，包括摄像头和测量工具在内，都与 Windows 虚拟"
-"物联网不兼容。"
 
 #: ../../content/applications/general/iot.rst:22
 msgid "Multiple IoT systems can be used at the same time."
 msgstr "可同时使用多个物联网系统。"
 
 #: ../../content/applications/general/iot.rst:23
-#: ../../content/applications/general/iot/windows_iot.rst:27
 msgid ""
 "It is also possible to create a Windows Virtual Machine on a MacOS/Linux "
 "computer. However, this option is not supported by Odoo, and no "
@@ -8454,27 +8450,19 @@ msgstr "订阅物联网盒子"
 
 #: ../../content/applications/general/iot.rst:31
 msgid ""
-"An IoT box subscription is required for production use of IoT systems. If "
-"you have issues related to your subscription, contact the database's account "
-"manager or Odoo partner for assistance."
+"An IoT box subscription is required for production use of IoT systems and "
+"generating the :ref:`HTTPS certificate <iot/connect/https_certificate>`. It "
+"is created automatically when an IoT system is :doc:`connected to the "
+"database <iot/connect>`. If you have issues related to your subscription, "
+"contact the database's account manager or Odoo partner for assistance."
 msgstr ""
-"物联网系统的生产使用需要订阅物联网盒。如果您遇到与订阅相关的问题，请联系数据"
-"库客户经理或 Odoo 合作伙伴寻求帮助。"
 
-#: ../../content/applications/general/iot.rst:35
-msgid ""
-"If the subscription is linked to an `Odoo.com <https://www.odoo.com>`_ "
-"portal user, check the information on the portal's subscription page."
-msgstr ""
-"如果订阅与 `Odoo.com <https://www.odoo.com>`_ 门户用户链接，请检查门户订阅页"
-"面上的信息。"
-
-#: ../../content/applications/general/iot.rst:39
+#: ../../content/applications/general/iot.rst:37
 msgid ""
 "`Odoo's compatible IoT devices <https://www.odoo.com/app/iot-hardware>`_"
 msgstr "`Odoo 的兼容物联网设备 <https://www.odoo.com/app/iot-hardware>`_"
 
-#: ../../content/applications/general/iot.rst:40
+#: ../../content/applications/general/iot.rst:38
 msgid ""
 "`Odoo Tutorials: Internet of Things (IoT) Tutorials <https://www.odoo.com/"
 "slides/internet-of-things-iot-175>`_"
@@ -8482,11 +8470,11 @@ msgstr ""
 "`Odoo 教程：物联网（IoT）教程<https://www.odoo.com/slides/internet-of-things-"
 "iot-175>`_"
 
-#: ../../content/applications/general/iot.rst:42
+#: ../../content/applications/general/iot.rst:40
 msgid "`IoT system FAQ <https://www.odoo.com/app/iot-faq>`_"
 msgstr "`物联网系统常见问题 <https://www.odoo.com/app/iot-faq>`_"
 
-#: ../../content/applications/general/iot.rst:43
+#: ../../content/applications/general/iot.rst:41
 msgid ""
 "`Magic Sheet - Odoo Internet of Things [PDF] <https://drive.google.com/file/"
 "d/18D0VqlGvW6kUg-xKmyELrQqJ6J3bHKGy/view>`_"
@@ -8497,7 +8485,6 @@ msgid "IoT system connection to Odoo"
 msgstr "物联网系统与 Odoo 的连接"
 
 #: ../../content/applications/general/iot/connect.rst:6
-#: ../../content/applications/general/iot/windows_iot.rst:16
 msgid "Prerequisites"
 msgstr "先决条件"
 
@@ -8518,9 +8505,8 @@ msgstr "物联网系统必须与网络连接。"
 
 #: ../../content/applications/general/iot/connect.rst:12
 msgid ""
-"The computer connecting to Odoo must be on the same network as the IoT "
-"system."
-msgstr "连接到 Odoo 的计算机必须与物联网系统位于同一网络。"
+"The device connecting to Odoo must be on the same network as the IoT system."
+msgstr ""
 
 #: ../../content/applications/general/iot/connect.rst:15
 msgid ""
@@ -8543,72 +8529,82 @@ msgstr ":doc:`windows_iot`"
 #: ../../content/applications/general/iot/devices/camera.rst:12
 #: ../../content/applications/general/iot/devices/footswitch.rst:14
 #: ../../content/applications/general/iot/devices/printer.rst:16
-#: ../../content/applications/general/iot/devices/screen.rst:18
+#: ../../content/applications/general/iot/devices/screen.rst:10
 msgid "Connection"
 msgstr "连接"
 
 #: ../../content/applications/general/iot/connect.rst:26
 msgid ""
-"The IoT system can be connected to the Odoo database using a :ref:`pairing "
-"code <iot/connect/pairing-code>` or a :ref:`connection token <iot/connect/"
-"token>`."
+"To connect the IoT system to an Odoo database, open the IoT app and "
+"click :guilabel:`Connect`."
 msgstr ""
-"物联网系统可通过 :ref:`配对代码 <iot/connect/pairing-code>` 或 :ref:`连接令"
-"牌 <iot/connect/token>` 连接到 Odoo 数据库。"
 
-#: ../../content/applications/general/iot/connect.rst:32
-msgid "Connection using a pairing code"
-msgstr "使用配对代码连接"
+#: ../../content/applications/general/iot/connect.rst:28
+msgid ""
+"The browser then scans the network to which the computer is connected for "
+"available IoT systems. If an IoT system is detected, it is connected "
+"automatically. If multiple IoT systems are found, select the appropriate one "
+"in the popup that opens, then click :guilabel:`Connect`. If no IoT system is "
+"detected automatically, try connecting it to the database using "
+"a :ref:`pairing code <iot/connect/pairing-code>` or a :ref:`connection token "
+"<iot/connect/token>`."
+msgstr ""
 
 #: ../../content/applications/general/iot/connect.rst:35
 msgid ""
-"The pairing code is displayed for up to 5 minutes after the IoT system "
-"starts. If the code is no longer visible, reboot the IoT box "
-"or :ref:`restart the Windows virtual IoT service <iot/windows_iot/restart>` "
-"to display the pairing code again. Alternatively, connect the IoT system to "
-"the database using a :ref:`connection token <iot/connect/token>`."
+"The IoT system’s name is composed of either the :doc:`IoT box <iot_box>` or "
+"the :doc:`Windows computer <windows_iot>`’s motherboard serial number, "
+"followed by its :ref:`pairing code <iot/connect/pairing-code>`."
 msgstr ""
-"物联网系统启动后，配对代码最多显示 5 分钟。如果配对码不再可见，请重新启动物联"
-"网盒或 :ref:`重启 Windows 虚拟物联网服务 <iot/windows_iot/restart>` 以再次显"
-"示配对码。或者，使用 :ref:`连接令牌 <iot/connect/token>` 将物联网系统连接到数"
-"据库。"
-
-#: ../../content/applications/general/iot/connect.rst:39
-msgid ""
-"The pairing code is not displayed if the IoT system is already connected to "
-"a database (e.g., a test database)."
-msgstr "如果物联网系统已经连接到数据库（如测试数据库），则不会显示配对代码。"
 
 #: ../../content/applications/general/iot/connect.rst:42
-msgid "Retrieve the IoT's system pairing code:"
-msgstr "读取物联网的系统配对代码："
+msgid "Connection using a pairing code"
+msgstr "使用配对代码连接"
 
-#: ../../content/applications/general/iot/connect.rst:46
+#: ../../content/applications/general/iot/connect.rst:45
+msgid ""
+"The pairing code is valid for up to 2 hours after the IoT system powers on. "
+"If the code is no longer valid, restart the IoT box or :ref:`restart the "
+"Windows virtual IoT service <iot/windows_iot/restart>` to display another "
+"pairing code. Alternatively, connect the IoT system to the database using "
+"a :ref:`connection token <iot/connect/token>`."
+msgstr ""
+
+#: ../../content/applications/general/iot/connect.rst:49
+msgid ""
+"The pairing code is not displayed if the IoT system is already connected to "
+"a database (e.g., a test database). If necessary, :ref:`disconnect the IoT "
+"system from the database <iot/connect/disconnect>`."
+msgstr ""
+
+#: ../../content/applications/general/iot/connect.rst:53
+msgid "Retrieve the IoT system's pairing code:"
+msgstr ""
+
+#: ../../content/applications/general/iot/connect.rst:57
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:17
 #: ../../content/applications/general/iot/iot_box.rst:3
 msgid "IoT box"
 msgstr "物联网盒子"
 
-#: ../../content/applications/general/iot/connect.rst:48
+#: ../../content/applications/general/iot/connect.rst:59
 msgid ""
-"Connect the IoT box to an external monitor or printer. If the IoT box was "
-"already plugged prior to this, reboot it by unplugging it for a few seconds "
-"and replugging it."
+"Connect the IoT box to an external monitor or a USB printer. If the IoT box "
+"was already plugged prior to this, :ref:`restart <iot/iot-box/restart>` it."
 msgstr ""
-"将物联网盒子连接到外部显示器或打印机。如果物联网盒在此之前已经插好电源，请拔"
-"掉电源插头数秒后重新插上，重新启动。"
 
-#: ../../content/applications/general/iot/connect.rst:51
+#: ../../content/applications/general/iot/connect.rst:62
 msgid ""
-"External monitor: The pairing code should be displayed on the screen a few "
-"minutes after rebooting the IoT box."
-msgstr "外部监视器：重新启动物联网盒几分钟后，屏幕上应显示配对代码。"
+"External monitor: The pairing code will be displayed on the screen after "
+"(re)starting the IoT box."
+msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:53
-msgid "Printer: The pairing code should be printed automatically."
-msgstr "打印机：应自动打印配对代码。"
+#: ../../content/applications/general/iot/connect.rst:64
+msgid ""
+"USB-connected printer: The pairing code should be printed automatically."
+msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:56
+#: ../../content/applications/general/iot/connect.rst:67
 msgid ""
 "If no external monitor or printer is connected to the IoT box, access "
 "the :ref:`IoT box's homepage <iot/iot-box/homepage>`; the code is displayed "
@@ -8617,13 +8613,13 @@ msgstr ""
 "如果物联网盒未连接外部显示器或打印机，请访问 :ref:`物联网盒主页 <iot/iot-box/"
 "homepage>`；代码显示在 :guilabel:`配对代码` 部分。"
 
-#: ../../content/applications/general/iot/connect.rst:60
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:60
+#: ../../content/applications/general/iot/connect.rst:71
+#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:59
 #: ../../content/applications/general/iot/windows_iot.rst:3
 msgid "Windows virtual IoT"
 msgstr "Windows 虚拟物联网"
 
-#: ../../content/applications/general/iot/connect.rst:62
+#: ../../content/applications/general/iot/connect.rst:73
 msgid ""
 "On the computer with the Windows virtual IoT installed, open the IoT "
 "system's homepage in a web browser by navigating to the URL `http://"
@@ -8633,34 +8629,44 @@ msgstr ""
 "localhost:8069`，在 Web 浏览器中打开物联网系统的主页。然后，滚动"
 "到 :guilabel:`配对代码` 部分。"
 
-#: ../../content/applications/general/iot/connect.rst:66
-#: ../../content/applications/general/iot/connect.rst:75
+#: ../../content/applications/general/iot/connect.rst:77
+#: ../../content/applications/general/iot/connect.rst:87
 msgid "In Odoo, open the IoT app and click :guilabel:`Connect`."
 msgstr "在 Odoo 中，打开物联网应用程序并点击 :guilabel:`连接`。"
 
-#: ../../content/applications/general/iot/connect.rst:67
+#: ../../content/applications/general/iot/connect.rst:78
 msgid ""
-"In the :guilabel:`Connect an IoT Box` popup that opens, enter "
-"the :guilabel:`Pairing code`."
+"In the :guilabel:`Searching for an IoT Box` popup that opens, "
+"click :guilabel:`Use Pairing Code`."
 msgstr ""
-"在打开的 :guilabel:`连接物联网盒子` 弹出窗口中，输入 :guilabel:`配对代码`。"
 
-#: ../../content/applications/general/iot/connect.rst:68
-msgid "Click :guilabel:`Pair`."
-msgstr "点击 :guilabel:`配对`。"
+#: ../../content/applications/general/iot/connect.rst:79
+msgid "Enter the :guilabel:`Pairing code` and click :guilabel:`Connect`."
+msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:73
+#: ../../content/applications/general/iot/connect.rst:84
 msgid "Connection using a connection token"
 msgstr "使用连接令牌连接"
 
-#: ../../content/applications/general/iot/connect.rst:76
-msgid ""
-"In the :guilabel:`Connect an IoT Box` popup that opens, copy "
-"the :guilabel:`Token`."
-msgstr "在打开的 :guilabel:`连接物联网盒` 弹出窗口中，复制 :guilabel:`令牌`。"
+#: ../../content/applications/general/iot/connect.rst:86
+msgid ":ref:`Enable the developer mode <developer-mode>`."
+msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:77
-#: ../../content/applications/general/iot/devices/printer.rst:177
+#: ../../content/applications/general/iot/connect.rst:88
+msgid ""
+"In the :guilabel:`Searching for an IoT Box` popup that opens, "
+"click :guilabel:`Offline pairing`."
+msgstr ""
+
+#: ../../content/applications/general/iot/connect.rst:89
+msgid ""
+"In the :guilabel:`Pair an IoT Box offline` popup that opens, copy "
+"the :guilabel:`Token`."
+msgstr ""
+
+#: ../../content/applications/general/iot/connect.rst:90
+#: ../../content/applications/general/iot/connect.rst:141
+#: ../../content/applications/general/iot/devices/printer.rst:181
 msgid ""
 "Access the :ref:`IoT box's <iot/iot-box/homepage>` or :ref:`Windows virtual "
 "IoT's <iot/windows-iot/homepage>` homepage."
@@ -8668,167 +8674,175 @@ msgstr ""
 "访问 :ref:`物联网盒子的 <iot/iot-box/homepage>` 主页或 :ref:`Windows 虚拟物联"
 "网的 <iot/windows-iot/homepage>` 主页。"
 
-#: ../../content/applications/general/iot/connect.rst:79
+#: ../../content/applications/general/iot/connect.rst:92
 msgid ""
-"In the :guilabel:`Odoo database connected` section, "
+"In the :icon:`fa-link` :guilabel:`Odoo database connected` section, "
 "click :guilabel:`Configure`."
-msgstr "在 :guilabel:`Odoo 数据库已连接` 部分，点击 :guilabel:`配置`。"
+msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:80
+#: ../../content/applications/general/iot/connect.rst:93
 msgid ""
 "Paste the token into the :guilabel:`Server Token` field and "
 "click :guilabel:`Connect`."
 msgstr "将令牌粘贴到 :guilabel:`服务器令牌` 字段，然后点击 :guilabel:`连接`。"
 
-#: ../../content/applications/general/iot/connect.rst:83
-msgid ""
-"Once the IoT box is connected to a database, its green LED remains "
-"constantly lit."
-msgstr ""
-
-#: ../../content/applications/general/iot/connect.rst:88
-msgid "IoT system form"
-msgstr "物联网系统表格"
-
-#: ../../content/applications/general/iot/connect.rst:90
-msgid ""
-"Once the IoT system is connected to the Odoo database, it is displayed as a "
-"card in the IoT app. Click the IP address on the card to access "
-"the :ref:`IoT box's <iot/windows-iot/homepage>` or :ref:`Windows virtual "
-"IoT's <iot/iot-box/homepage>` homepage. Click the card to access the list "
-"of :doc:`devices <devices>` connected to the IoT system."
-msgstr ""
-"一旦物联网系统连接到 Odoo 数据库，它将以卡片形式显示在 IoT 应用程序中。点击卡"
-"片上的 IP 地址访问 :ref:`IoT 盒子 <iot/windows-iot/homepage>` "
-"或 :ref:`Windows 虚拟 IoT <iot/iot-box/homepage>` 的主页。点击卡片访问连接到 "
-"IoT 系统的 :doc:`设备<devices>` 列表。"
-
 #: ../../content/applications/general/iot/connect.rst:96
-msgid ""
-":ref:`Enable the developer mode <developer-mode>` to access the IoT "
-"system's :guilabel:`Technical Information`, such as "
-"its :guilabel:`Identifier`, :guilabel:`Domain address`, and :guilabel:`Image "
-"version`."
+msgid "Once the IoT system is connected to a database:"
 msgstr ""
-":ref:`启用开发者模式<developer-mode>`以访问 IoT 系统的 :guilabel:`技术信息`，"
-"例如其 :guilabel:`标识符`、:guilabel:`域名地址` 和 :guilabel:`镜像版本`。"
+
+#: ../../content/applications/general/iot/connect.rst:98
+msgid ""
+"If the :doc:`Point of Sale app </applications/sales/point_of_sale>` is "
+"installed, a popup appears to select the :doc:`POS the IoT system should be "
+"associated with </applications/sales/point_of_sale/configuration/pos_iot>`."
+msgstr ""
 
 #: ../../content/applications/general/iot/connect.rst:101
 msgid ""
-"By default, drivers are automatically :ref:`updated <iot_updating_iot/"
-"handlers>` every time the IoT system is restarted. To disable automatic "
-"updates, uncheck the :guilabel:`Automatic drivers update` option."
+"If using an :doc:`IoT box <iot_box>`, wait a few minutes for it to update "
+"before using the connected :doc:`devices <devices>`."
 msgstr ""
-"默认情况下，每次重启物联网系统时，驱动程序都会自动 :ref:`更新 "
-"<iot_updating_iot/handlers>`。要禁用自动更新，请取消选中 :guilabel:`自动更新"
-"驱动程序` 选项。"
+
+#: ../../content/applications/general/iot/connect.rst:103
+msgid ""
+"The IoT system automatically requests an :ref:`HTTPS certificate <iot/"
+"connect/https_certificate>` and its homepage is updated to a new HTTPS URL "
+"ending with `.odoo-iot.com` when it becomes available."
+msgstr ""
 
 #: ../../content/applications/general/iot/connect.rst:108
-msgid "Troubleshooting"
-msgstr "故障排除"
-
-#: ../../content/applications/general/iot/connect.rst:111
-msgid "The pairing code does not appear or does not work"
-msgstr "配对代码不显示或不起作用"
+#: ../../content/applications/general/iot/iot_box.rst:13
+#: ../../content/applications/general/iot/windows_iot.rst:21
+msgid ":doc:`iot_advanced/troubleshooting`"
+msgstr ""
 
 #: ../../content/applications/general/iot/connect.rst:113
+msgid "IoT system form"
+msgstr "物联网系统表格"
+
+#: ../../content/applications/general/iot/connect.rst:115
 msgid ""
-"The :ref:`pairing code <iot/connect/pairing-code>` might not be displayed or "
-"printed under the following circumstances:"
+"Once the IoT system is connected to the Odoo database, it is displayed as a "
+"card in the IoT app. Click the card to access the IoT system's form, which "
+"allows to access the :ref:`IoT box's <iot/iot-box/homepage>` "
+"or :ref:`Windows virtual IoT's <iot/windows-iot/homepage>` homepage and view "
+"the list of :doc:`devices <devices>` connected to the IoT system."
 msgstr ""
-"在下列情况下，可能无法显示或打印 :ref:`配对代码 <iot/connect/pairing-code>` "
-"："
-
-#: ../../content/applications/general/iot/connect.rst:116
-msgid "The IoT system is not connected to the Internet."
-msgstr "物联网系统不与互联网连接。"
-
-#: ../../content/applications/general/iot/connect.rst:117
-msgid "The IoT system is already connected to an Odoo database."
-msgstr "物联网系统已连接到 Odoo 数据库。"
-
-#: ../../content/applications/general/iot/connect.rst:118
-msgid ""
-"The :ref:`pairing code <iot/connect/pairing-code>` display time has expired. "
-"Reboot the IoT box or :ref:`restart the Windows virtual IoT service <iot/"
-"windows_iot/restart>` to display the pairing code again."
-msgstr ""
-":ref:`配对代码 <iot/connect/pairing-code>` 显示时间已过。重新启动物联网盒"
-"或 :ref:`重启 Windows 虚拟物联网服务 <iot/windows_iot/restart>` 重新显示配对"
-"码。"
 
 #: ../../content/applications/general/iot/connect.rst:121
 msgid ""
-"The IoT system's image version is too old and needs to be :ref:`updated <iot/"
-"updating_iot/image-code>`."
+"Enable the :ref:`developer mode <developer-mode>` to access the IoT "
+"system's :guilabel:`Technical Information`, such as its :guilabel:`Domain "
+"Address`, :guilabel:`Image Version`, and :ref:`SSL Certificate <iot/connect/"
+"https_certificate>` :guilabel:`End Date`. By default, drivers are "
+"automatically :ref:`updated <iot_updating_iot/handlers>` every time the IoT "
+"system is restarted. To disable automatic updates, uncheck "
+"the :guilabel:`Automatic drivers update` option."
 msgstr ""
-"物联网系统的映像版本太旧，需要 :ref:`更新 <iot/updating_iot/image-code>`。"
 
-#: ../../content/applications/general/iot/connect.rst:125
-msgid "The IoT system is connected but does not appear in the database"
-msgstr "物联网系统已连接，但未出现在数据库中"
-
-#: ../../content/applications/general/iot/connect.rst:127
-msgid ""
-"The IoT system might take a few minutes to restart when it connects to a "
-"database. If it still does not appear after a few minutes:"
+#: ../../content/applications/general/iot/connect.rst:131
+msgid "Disconnecting an IoT system from a database"
 msgstr ""
-"物联网系统在连接数据库时可能需要几分钟才能重新启动。如果几分钟后仍未出现："
 
-#: ../../content/applications/general/iot/connect.rst:130
-msgid ""
-"Verify that the IoT system can reach the database and the server does not "
-"use a multi-database environment."
-msgstr "验证物联网系统是否可以访问数据库，服务器是否使用了多数据库环境。"
-
-#: ../../content/applications/general/iot/connect.rst:132
-msgid ""
-"Reboot the IoT box or :ref:`restart the Windows virtual IoT service <iot/"
-"windows_iot/restart>`."
+#: ../../content/applications/general/iot/connect.rst:133
+msgid "To disconnect the IoT system from a database, follow these steps:"
 msgstr ""
-"重启物联网盒或 :ref:`重启 Windows 虚拟物联网服务 <iot/windows_iot/restart>`。"
 
 #: ../../content/applications/general/iot/connect.rst:135
-msgid "The IoT box is connected to the Odoo database but cannot be reached"
-msgstr "物联网盒子已连接到 Odoo 数据库，但无法访问"
+msgid "Open the IoT app and click the relevant IoT system's card."
+msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:137
+#: ../../content/applications/general/iot/connect.rst:136
 msgid ""
-"Verify that the IoT system and the computer running the Odoo database are "
-"connected to the same network."
-msgstr "确认物联网系统和运行 Odoo 数据库的计算机连接到同一网络。"
+"Click the :icon:`fa-cog` :guilabel:`(Actions)` icon, and "
+"select :guilabel:`Delete`."
+msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:141
-msgid ""
-"The Windows virtual IoT's homepage cannot be accessed from another device"
-msgstr "无法从其他设备访问 Windows 虚拟物联网的主页"
+#: ../../content/applications/general/iot/connect.rst:139
+msgid "Alternatively:"
+msgstr ""
 
 #: ../../content/applications/general/iot/connect.rst:143
-msgid "Check the :ref:`iot/windows-iot/firewall`."
-msgstr "检查 :ref:`iot/windows-iot/firewall`。"
-
-#: ../../content/applications/general/iot/connect.rst:146
-msgid "The IoT system is disconnected from the database after an Odoo upgrade"
-msgstr "Odoo 升级后，物联网系统与数据库断开连接"
-
-#: ../../content/applications/general/iot/connect.rst:148
 msgid ""
-":ref:`Update the IoT system's image <iot/updating_iot/image-code>` by "
-"flashing the IoT box's card or :ref:`uninstalling the Windows virtual IoT "
-"program <iot/windows_iot/uninstall>` and :ref:`reinstalling <iot/windows-iot/"
-"installation>` the latest package for Windows **matching your database's "
-"version**."
+"Click :guilabel:`Configure` in the :icon:`fa-link` :guilabel:`Odoo database "
+"connected` section."
 msgstr ""
-":ref:`更新物联网系统的映像 <iot/updating_iot/image-code>` 通过刷新物联网盒子"
-"的卡或 :ref:`卸载 Windows 虚拟物联网程序 <iot/windows_iot/uninstall>` "
-"并 :ref:`重新安装 <iot/windows-iot/installation>` 与您的数据库版本**匹配的 "
-"Windows 最新软件包**。"
+
+#: ../../content/applications/general/iot/connect.rst:145
+msgid "Click :guilabel:`Disconnect` in the popup that opens."
+msgstr ""
+
+#: ../../content/applications/general/iot/connect.rst:150
+msgid "HTTPS certificate"
+msgstr ""
+
+#: ../../content/applications/general/iot/connect.rst:152
+msgid ""
+":abbr:`HTTPS (Hypertext Transfer Protocol Secure)` is the secure, encrypted "
+"version of :abbr:`HTTP (Hypertext Transfer Protocol)`. It uses :abbr:`TLS "
+"(Transport Layer Security)` (previously :abbr:`SSL (Secure Sockets Layer)`) "
+"certificates to authenticate the server and protect the data exchanged "
+"between a browser and a website. Some network devices, such as payment "
+"terminals, require a valid HTTPS certificate to communicate with the IoT "
+"system; without it, they cannot interact properly."
+msgstr ""
+
+#: ../../content/applications/general/iot/connect.rst:160
+msgid ""
+"In this documentation and throughout Odoo, the term *HTTPS certificate*  "
+"refers to a valid SSL certificate that allows an HTTPS connection."
+msgstr ""
+"在本文档和整个 Odoo 中，术语 *HTTPS 证书* 指的是允许 HTTPS 连接的有效 SSL 证"
+"书。"
+
+#: ../../content/applications/general/iot/connect.rst:163
+msgid ""
+"When the IoT system is (re-)started and connected to a database, it "
+"automatically downloads the HTTPS certificate if the database meets the "
+"following eligibility criteria:"
+msgstr ""
+
+#: ../../content/applications/general/iot/connect.rst:168
+msgid ""
+"The database must be a **production** instance. The database instance should "
+"not be a copy, a duplicate, a staging, or a development environment."
+msgstr ""
+"数据库必须是**正式运行**实例。数据库实例不应是副本、复制、暂存或开发环境。"
+
+#: ../../content/applications/general/iot/connect.rst:170
+msgid "The Odoo subscription must be ongoing (:guilabel:`In Progress` status)."
+msgstr ""
+
+#: ../../content/applications/general/iot/connect.rst:172
+msgid "When the certificate has been received:"
+msgstr "收到证书后："
+
+#: ../../content/applications/general/iot/connect.rst:174
+msgid ""
+"The IoT system's homepage address is updated to a new HTTPS URL ending with "
+"`.odoo-iot.com`."
+msgstr ""
+
+#: ../../content/applications/general/iot/connect.rst:175
+msgid ""
+"The :guilabel:`HTTPS certificate` banner displays the certificate's validity "
+"period. To view this information, click the :icon:`fa-cogs` "
+"(:guilabel:`cogs`) button at the top-right of the IoT system's homepage."
+msgstr ""
+
+#: ../../content/applications/general/iot/connect.rst:0
+msgid "IoT box homepage with HTTPS certificate validity date."
+msgstr "带有 HTTPS 证书有效期的物联网盒子主页。"
+
+#: ../../content/applications/general/iot/connect.rst:183
+msgid ":ref:`iot/troubleshooting/https_certificate`"
+msgstr ""
 
 #: ../../content/applications/general/iot/devices.rst:7
 msgid "Devices"
 msgstr "设备"
 
-#: ../../content/applications/general/iot/devices.rst:10
+#: ../../content/applications/general/iot/devices.rst:21
 msgid ""
 ":doc:`Connect a Worldline payment terminal <../../sales/point_of_sale/"
 "payment_methods/terminals/worldline>`"
@@ -8836,13 +8850,19 @@ msgstr ""
 ":doc:`连接 Worldline 支付终端 <.../../sales/point_of_sale/payment_methods/"
 "terminals/worldline>`"
 
-#: ../../content/applications/general/iot/devices.rst:12
+#: ../../content/applications/general/iot/devices.rst:23
 msgid ""
 ":doc:`Connect an Ingenico payment terminal <../../sales/point_of_sale/"
 "payment_methods/terminals/ingenico>`"
 msgstr ""
 ":doc:`连接 Ingenico 支付终端 <.../../sales/point_of_sale/payment_methods/"
 "terminals/ingenico>`"
+
+#: ../../content/applications/general/iot/devices.rst:25
+msgid ""
+":doc:`Connect a SIX payment terminal <../../sales/point_of_sale/"
+"payment_methods/terminals/six>`"
+msgstr ""
 
 #: ../../content/applications/general/iot/devices/camera.rst:3
 msgid "Connect a camera"
@@ -8951,7 +8971,7 @@ msgstr ""
 "从 :guilabel:`质量检查` 页面创建新的质量检查。"
 
 #: ../../content/applications/general/iot/devices/camera.rst:58
-#: ../../content/applications/general/iot/devices/printer.rst:65
+#: ../../content/applications/general/iot/devices/printer.rst:69
 msgid ""
 ":doc:`/applications/inventory_and_mrp/quality/quality_management/"
 "quality_control_points`"
@@ -8960,7 +8980,7 @@ msgstr ""
 "quality_control_points`"
 
 #: ../../content/applications/general/iot/devices/camera.rst:59
-#: ../../content/applications/general/iot/devices/printer.rst:66
+#: ../../content/applications/general/iot/devices/printer.rst:70
 msgid ""
 ":doc:`/applications/inventory_and_mrp/quality/quality_management/"
 "quality_alerts`"
@@ -9307,13 +9327,10 @@ msgstr ""
 #: ../../content/applications/general/iot/devices/printer.rst:18
 msgid ""
 "IoT systems support printers connected through USB, network connection, or "
-"Bluetooth. `Supported printers <https://www.odoo.com/page/iot-hardware>`__ "
+"Bluetooth. `Supported printers <https://www.odoo.com/page/iot-hardware>`_ "
 "are detected automatically, and appear in the :guilabel:`Devices` list of "
 "the IoT app."
 msgstr ""
-"物联网系统支持通过 USB、网络连接或蓝牙连接的打印机。系统能自动侦测 `支持的打"
-"印机 <https://www.odoo.com/page/iot-hardware>`__ ，并显示在物联网应用程序"
-"的 :guilabel:`设备` 列表中。"
 
 #: ../../content/applications/general/iot/devices/printer.rst:None
 msgid "The printer as it would appear in the IoT app devices list."
@@ -9321,25 +9338,31 @@ msgstr "打印机会显示在物联网应用程序设备列表中。"
 
 #: ../../content/applications/general/iot/devices/printer.rst:26
 msgid ""
-"Printers can take up to two minutes to appear in the IoT "
-"app :guilabel:`Devices` list."
-msgstr "打印机可能需要两分钟才能出现在物联网应用程序 :guilabel:`设备` 列表中。"
+"Printers connecting to the IoT system via the network must be on the **same "
+"network** as the IoT system."
+msgstr ""
 
-#: ../../content/applications/general/iot/devices/printer.rst:29
+#: ../../content/applications/general/iot/devices/printer.rst:30
+msgid ""
+"Printers can take up to two minutes to appear in the IoT "
+"app's :guilabel:`Devices` list."
+msgstr ""
+
+#: ../../content/applications/general/iot/devices/printer.rst:33
 msgid "Link a printer"
 msgstr "连接打印机"
 
-#: ../../content/applications/general/iot/devices/printer.rst:32
+#: ../../content/applications/general/iot/devices/printer.rst:36
 msgid "Link work orders to a printer"
 msgstr "将工单链接到打印机"
 
-#: ../../content/applications/general/iot/devices/printer.rst:34
+#: ../../content/applications/general/iot/devices/printer.rst:38
 msgid ""
 "Work orders can be linked to printers, via a quality control point, to print "
 "labels for manufactured products."
 msgstr "工单可通过质量控制点与打印机连接，为制成品打印标签。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:37
+#: ../../content/applications/general/iot/devices/printer.rst:41
 msgid ""
 "In the :doc:`Quality app </applications/inventory_and_mrp/quality>`, a "
 "device can be set up on a quality control point. To do so, go to "
@@ -9350,7 +9373,7 @@ msgstr ""
 "量控制点上设置设备。要执行此操作，请进入 :menuselection:`质量 --> 品控 --> 控"
 "制点`，打开所需的控制点。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:42
+#: ../../content/applications/general/iot/devices/printer.rst:46
 msgid ""
 "A manufacturing operation and work order operation need to be attached to a "
 "quality control point before the :guilabel:`Type` field allows for "
@@ -9359,7 +9382,7 @@ msgstr ""
 "在 :guilabel:`类型` 字段允许选择 :guilabel:`打印标签` 选项之前，需要将生产操"
 "作和工单操作附加到质量控制点。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:46
+#: ../../content/applications/general/iot/devices/printer.rst:50
 msgid ""
 "From here, edit the control point by selecting the :guilabel:`Type` field, "
 "and selecting :guilabel:`Print Label` from the dropdown menu of options. "
@@ -9370,7 +9393,7 @@ msgstr ""
 "签` 即可编辑控制点。这样就会显示 :guilabel:`设备` 字段，可在此选择连接的设"
 "备。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:50
+#: ../../content/applications/general/iot/devices/printer.rst:54
 msgid ""
 "The printer can now be used with the selected quality control point. When "
 "the quality control point is reached during the manufacturing process, the "
@@ -9379,7 +9402,7 @@ msgstr ""
 "现在，打印机可用于选定的质量控制点。在生产过程中达到质量控制点时，数据库会显"
 "示为特定产品打印标签的选项。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:55
+#: ../../content/applications/general/iot/devices/printer.rst:59
 msgid ""
 "Quality control points can also be accessed by navigating "
 "to :menuselection:`IoT --> Devices`, then selecting the device. Go to "
@@ -9388,7 +9411,7 @@ msgstr ""
 "质量控制点也可通过导航至 :menuselection:`物联网 --> 设备`，然后选择设备进行访"
 "问。转到 :guilabel:`质量控制点` 选项卡，将其添加到设备。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:60
+#: ../../content/applications/general/iot/devices/printer.rst:64
 msgid ""
 "On a :doc:`quality check form </applications/inventory_and_mrp/quality/"
 "quality_management/quality_checks>`, the :guilabel:`Type` of check can also "
@@ -9398,24 +9421,24 @@ msgstr ""
 "quality_management/quality_checks>` 中，支票的 :guilabel:`类型` 也可以设置"
 "为 :guilabel:`打印标签`。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:71
+#: ../../content/applications/general/iot/devices/printer.rst:75
 msgid "Link reports to a printer"
 msgstr "将报告关联打印机"
 
-#: ../../content/applications/general/iot/devices/printer.rst:73
+#: ../../content/applications/general/iot/devices/printer.rst:77
 msgid "It is possible to link report types to a specific printer. To do so:"
 msgstr "可以将报告类型关联到特定打印机。要执行此操作："
 
-#: ../../content/applications/general/iot/devices/printer.rst:75
+#: ../../content/applications/general/iot/devices/printer.rst:79
 msgid "Go to :menuselection:`IoT --> Devices` and select the desired printer."
 msgstr "转到 :menuselection:`物联网 --> 设备` 并选择所需的打印机。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:76
+#: ../../content/applications/general/iot/devices/printer.rst:80
 msgid ""
 "Go to the :guilabel:`Printer Reports` tab and click :guilabel:`Add a line`."
 msgstr "转到 :guilabel:`打印机报告` 选项卡，然后点击 :guilabel:`添加一行`。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:77
+#: ../../content/applications/general/iot/devices/printer.rst:81
 msgid ""
 "In the pop-up that opens, select the types of reports to be linked to the "
 "printer and click :guilabel:`Select`."
@@ -9426,7 +9449,7 @@ msgstr ""
 msgid "The list of reports assigned to a printer in the IoT app."
 msgstr "在物联网应用程序中，分配给打印机的报告列表。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:84
+#: ../../content/applications/general/iot/devices/printer.rst:88
 msgid ""
 "Reports can also be configured by :ref:`enabling the developer mode "
 "<developer-mode>` and going to :menuselection:`Settings --> Technical --> "
@@ -9437,7 +9460,7 @@ msgstr ""
 "置 --> 技术 --> 报告` 来配置报告。从列表中选择所需的报告，并设置 :guilabel:`"
 "物联网设备`。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:88
+#: ../../content/applications/general/iot/devices/printer.rst:92
 msgid ""
 "The first time a linked report is selected to print, a :guilabel:`Select "
 "Printers` pop-up window appears. Tick the checkbox next to the correct "
@@ -9448,11 +9471,11 @@ msgstr ""
 "的正确打印机旁边的复选框，然后点击 :guilabel:`打印`。此时，报告已链接到打印"
 "机。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:93
+#: ../../content/applications/general/iot/devices/printer.rst:97
 msgid "Clear device printer cache"
 msgstr "清除设备打印机缓存"
 
-#: ../../content/applications/general/iot/devices/printer.rst:95
+#: ../../content/applications/general/iot/devices/printer.rst:99
 msgid ""
 "After a printer is linked to print a report, the setting is saved in a "
 "browser's cache. This means a user can have different devices saved in their "
@@ -9464,7 +9487,7 @@ msgstr ""
 "Odoo 的设备，在缓存中为不同的报告保存不同的设备。这也意味着不同的用户可以根据"
 "自己的偏好，让不同的打印机自动打印报告。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:100
+#: ../../content/applications/general/iot/devices/printer.rst:104
 msgid ""
 "To unlink a report from a printer, navigate to :menuselection:`IoT --> "
 "Configuration --> Reset Linked Printers`. This generates a list of reports "
@@ -9475,7 +9498,7 @@ msgstr ""
 "接的打印机`。这将生成与当前设备上的打印机连接的报告列表。点击每个报告旁边"
 "的 :guilabel:`取消连接` 按钮以取消。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:105
+#: ../../content/applications/general/iot/devices/printer.rst:109
 msgid ""
 "This step **only** prevents the report from automatically printing to the "
 "listed printer from the current browser. The report is still :ref:`linked "
@@ -9488,19 +9511,19 @@ msgstr ""
 msgid "A list of reports currently linked to a printer in the IoT app."
 msgstr "物联网应用程序中当前与打印机链接的报告列表。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:113
+#: ../../content/applications/general/iot/devices/printer.rst:117
 msgid ":ref:`POS Order Printing <pos/restaurant/orders-printing>`"
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/printer.rst:116
+#: ../../content/applications/general/iot/devices/printer.rst:120
 msgid "Potential issues"
 msgstr "潜在问题"
 
-#: ../../content/applications/general/iot/devices/printer.rst:119
+#: ../../content/applications/general/iot/devices/printer.rst:123
 msgid "The printer is not detected"
 msgstr "未检测到打印机"
 
-#: ../../content/applications/general/iot/devices/printer.rst:121
+#: ../../content/applications/general/iot/devices/printer.rst:125
 msgid ""
 "If a printer does not appear in the devices list, go to the :ref:`IoT box's "
 "<iot/iot-box/homepage>` or :ref:`Windows virtual IoT's <iot/windows-iot/"
@@ -9511,7 +9534,7 @@ msgstr ""
 "homepage>` 或 :ref:`Windows 虚拟物联网 <iot/windows-iot/homepage>` 主页，点"
 "击 :guilabel:`设备` 部分中的 :guilabel:`显示`，确保打印机已列出。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:125
+#: ../../content/applications/general/iot/devices/printer.rst:129
 msgid ""
 "If the printer does not appear on the IoT system's homepage, "
 "click :guilabel:`Printer Server`, then :guilabel:`Administration`, "
@@ -9522,11 +9545,11 @@ msgstr ""
 "击 :guilabel:`管理`，再单击 :guilabel:`添加打印机`。如果打印机不在列表中，则"
 "可能连接不正确。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:130
+#: ../../content/applications/general/iot/devices/printer.rst:134
 msgid "The printer outputs random text"
 msgstr "我打印机输出随机文本"
 
-#: ../../content/applications/general/iot/devices/printer.rst:132
+#: ../../content/applications/general/iot/devices/printer.rst:136
 msgid ""
 "For most printers, the correct driver should be automatically detected and "
 "selected. However, in some cases, the automatic detection mechanism might "
@@ -9536,7 +9559,7 @@ msgstr ""
 "对于大多数打印机，应自动检测并选择正确的驱动程序。然而，在某些情况下，自动检"
 "测机制可能不够，如果没有找到驱动程序，打印机可能会打印随机字符。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:136
+#: ../../content/applications/general/iot/devices/printer.rst:140
 msgid ""
 "The solution is to manually select the corresponding driver. On the IoT "
 "system's homepage, click :guilabel:`Printer Server`, "
@@ -9553,7 +9576,7 @@ msgstr ""
 msgid "Edit the printer connected to the IoT system."
 msgstr "编辑连接到 IoT 系统的打印机。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:146
+#: ../../content/applications/general/iot/devices/printer.rst:150
 msgid ""
 "Epson receipt printers and Zebra label printers do not need a driver to "
 "work. Make sure that no driver is selected for those printers."
@@ -9561,11 +9584,11 @@ msgstr ""
 "Epson 收据打印机和 Zebra 标签打印机不需要驱动程序即可工作。确保没有为这些打印"
 "机选择驱动程序。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:150
+#: ../../content/applications/general/iot/devices/printer.rst:154
 msgid "The printer is detected but is not recognized correctly"
 msgstr "已检测到打印机，但无法正确识别"
 
-#: ../../content/applications/general/iot/devices/printer.rst:152
+#: ../../content/applications/general/iot/devices/printer.rst:156
 msgid ""
 "If Odoo and the IoT system do not recognize the printer correctly, go "
 "to :menuselection:`IoT --> Devices`, click the device's card to access its "
@@ -9578,11 +9601,11 @@ msgstr ""
 "项：:guilabel:`收据打印机`、:guilabel:`标签打印机` 或 :guilabel:`办公室打印机"
 "`。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:158
+#: ../../content/applications/general/iot/devices/printer.rst:162
 msgid "Epson configuration special case"
 msgstr "爱普生配置专案"
 
-#: ../../content/applications/general/iot/devices/printer.rst:160
+#: ../../content/applications/general/iot/devices/printer.rst:164
 msgid ""
 "Most Epson printers support printing receipts in Odoo Point of Sale using "
 "the `GS v 0` command. However, the following Epson printer models do not "
@@ -9591,29 +9614,29 @@ msgstr ""
 "大多数爱普生打印机都支持在 Odoo 销售点中使用 `GS v 0` 命令打印收据。但是，以"
 "下爱普生打印机型号不支持该指令："
 
-#: ../../content/applications/general/iot/devices/printer.rst:163
+#: ../../content/applications/general/iot/devices/printer.rst:167
 msgid "TM-U220"
 msgstr "TM-U220"
 
-#: ../../content/applications/general/iot/devices/printer.rst:164
+#: ../../content/applications/general/iot/devices/printer.rst:168
 msgid "TM-U230"
 msgstr "TM-U230"
 
-#: ../../content/applications/general/iot/devices/printer.rst:165
+#: ../../content/applications/general/iot/devices/printer.rst:169
 msgid "TM-P60"
 msgstr "TM-P60"
 
-#: ../../content/applications/general/iot/devices/printer.rst:166
+#: ../../content/applications/general/iot/devices/printer.rst:170
 msgid "TMP-P60II"
 msgstr "TMP-P60II"
 
-#: ../../content/applications/general/iot/devices/printer.rst:168
+#: ../../content/applications/general/iot/devices/printer.rst:172
 msgid ""
 "To bypass this issue, you can configure the printer to use the `ESC *` "
 "command."
 msgstr "要绕过这个问题，可以将打印机配置为使用 `ESC *` 指令。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:170
+#: ../../content/applications/general/iot/devices/printer.rst:174
 msgid ""
 "First, review Epson's website for compatibility for both the `GS v 0 "
 "<https://download4.epson.biz/sec_pubs/pos/reference_en/escpos/"
@@ -9624,7 +9647,7 @@ msgstr ""
 "reference_en/escpos/gs_lv_0.html>`_ 和 `ESC * <https://download4.epson.biz/"
 "sec_pubs/pos/reference_en/escpos/esc_asterisk.html>`_ 指令的兼容性。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:174
+#: ../../content/applications/general/iot/devices/printer.rst:178
 msgid ""
 "If the printer is incompatible with `GS v 0` but supports `ESC *`, configure "
 "the IoT system to use the `ESC *` command as follows:"
@@ -9632,14 +9655,14 @@ msgstr ""
 "如果打印机与 `GS v 0` 不兼容，但支持 `ESC *` ，请按以下步骤配置 IoT 系统以使"
 "用 `ESC *` 命令："
 
-#: ../../content/applications/general/iot/devices/printer.rst:179
+#: ../../content/applications/general/iot/devices/printer.rst:183
 msgid ""
 "Click the :guilabel:`Printer server` button, then "
 "click :guilabel:`Administration` on the CUPS page."
 msgstr ""
 "点击 :guilabel:`打印机服务器` 按钮，然后点击 CUPS 页面上的 :guilabel:`管理`。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:181
+#: ../../content/applications/general/iot/devices/printer.rst:185
 msgid ""
 "Click :guilabel:`Add Printer` in the :guilabel:`Printers` section, select "
 "the printer, and click :guilabel:`Continue`."
@@ -9647,32 +9670,32 @@ msgstr ""
 "点击 :guilabel:`打印机` 部分中的 :guilabel:`添加打印机`，选择打印机，然后点"
 "击 :guilabel:`继续`。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:185
+#: ../../content/applications/general/iot/devices/printer.rst:189
 msgid "If the printer's name is still uncertain, take the following steps:"
 msgstr "如果打印机名称仍然不确定，请采取以下步骤："
 
-#: ../../content/applications/general/iot/devices/printer.rst:187
+#: ../../content/applications/general/iot/devices/printer.rst:191
 msgid "Take note of the listed printers on the CUPS page."
 msgstr "注意 CUPS 页面上列出的打印机。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:188
+#: ../../content/applications/general/iot/devices/printer.rst:192
 msgid "Turn the printer off and refresh the page."
 msgstr "关闭打印机并刷新页面。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:189
+#: ../../content/applications/general/iot/devices/printer.rst:193
 msgid ""
 "Compare the difference with the first list to see which printer disappeared."
 msgstr "比较与第一份清单的差异，看看哪台打印机消失了。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:190
+#: ../../content/applications/general/iot/devices/printer.rst:194
 msgid "Turn the printer back on and refresh the page again."
 msgstr "重新打开打印机，再次刷新页面。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:191
+#: ../../content/applications/general/iot/devices/printer.rst:195
 msgid "Double-check the list again to see if the printer re-appears."
 msgstr "再次仔细检查列表，看看打印机是否再次出现。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:192
+#: ../../content/applications/general/iot/devices/printer.rst:196
 msgid ""
 "The printer that disappeared and reappears again on the listed printers is "
 "the name of the printer in question. It can be :guilabel:`Unknown` "
@@ -9681,7 +9704,7 @@ msgstr ""
 "在列出的打印机中消失和再次出现的打印机是有关打印机的名称。它可以"
 "是 :guilabel:`本地打印机` 下的 :guilabel:`未知`。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:195
+#: ../../content/applications/general/iot/devices/printer.rst:199
 msgid ""
 "On the :guilabel:`Add Printer` page, specify the printer's :guilabel:`Name` "
 "using the following convention: "
@@ -9690,7 +9713,7 @@ msgstr ""
 "在 :guilabel:`添加打印机` 页面上，使用以下约定指定打印机的 :guilabel:`名称`："
 "`<printer_name>__IMC_<param_1>__<param_2>_..._<param_n>__`，其中："
 
-#: ../../content/applications/general/iot/devices/printer.rst:198
+#: ../../content/applications/general/iot/devices/printer.rst:202
 msgid ""
 "`printer_name` is the printer's name. It can contain any character except "
 "`_`, `/`, `#`, or ` ` (space character)."
@@ -9698,16 +9721,16 @@ msgstr ""
 "`printer_name` 是打印机名称。它可以包含除 `_`、`/`、`#` 或 ``（空格符）以外的"
 "任何字符。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:200
+#: ../../content/applications/general/iot/devices/printer.rst:204
 msgid ""
 "`IMC`: This stands for *Image Mode Column* (the simplified name for `ESC *`)."
 msgstr "`IMC`：代表*图像模式列*（`ESC *`的简化名称）。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:201
+#: ../../content/applications/general/iot/devices/printer.rst:205
 msgid "`param_1`: This stands for the specific parameter:"
 msgstr "`param_1`：代表特定参数："
 
-#: ../../content/applications/general/iot/devices/printer.rst:203
+#: ../../content/applications/general/iot/devices/printer.rst:207
 msgid ""
 "`SCALE<X>`: Scale of the picture (with the same aspect ratio). `X` should be "
 "an integer describing the scale percentage that should be used. For example, "
@@ -9717,25 +9740,25 @@ msgstr ""
 "`比例<X>`：图片的比例（宽高比相同）。`X` 应该是一个整数，描述应使用的比例百分"
 "比。例如，`100` 为原始尺寸，`50` 为原始尺寸的一半，`200` 为原始尺寸的两倍。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:206
+#: ../../content/applications/general/iot/devices/printer.rst:210
 msgid ""
 "`LDV`: *Low Density Vertical* (will be set to *High Density Vertical* if not "
 "specified)."
 msgstr "`LDV`：*低密度垂直*（如果未指定，将设置为*高密度垂直*）。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:207
+#: ../../content/applications/general/iot/devices/printer.rst:211
 msgid ""
 "`LDH`: *Low Density Horizontal* (will be set to *High Density Horizontal* if "
 "not specified)."
 msgstr "`LDH`：*低密度水平*（如果未指定，将设置为*高密度水平*）。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:210
+#: ../../content/applications/general/iot/devices/printer.rst:214
 msgid ""
 "*Density* parameters might need to be configured in a particular way, "
 "depending on the printer model."
 msgstr "*密度*参数可能需要以特定方式配置，具体取决于打印机型号。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:212
+#: ../../content/applications/general/iot/devices/printer.rst:216
 msgid ""
 "Refer to `Epson's ESC * documentation <https://download4.epson.biz/sec_pubs/"
 "pos/reference_en/escpos/esc_asterisk.html>`_ to determine if the printer "
@@ -9744,60 +9767,60 @@ msgstr ""
 "请参阅 `Epson's ESC * 文档 <https://download4.epson.biz/sec_pubs/pos/"
 "reference_en/escpos/esc_asterisk.html>`_ 以确定打印机是否需要设置这些参数。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:216
+#: ../../content/applications/general/iot/devices/printer.rst:220
 msgid "The following are examples of proper and improper name formatting:"
 msgstr "以下是正确和不正确名称格式的示例："
 
-#: ../../content/applications/general/iot/devices/printer.rst:218
+#: ../../content/applications/general/iot/devices/printer.rst:222
 msgid "Proper name formatting:"
 msgstr "正确的名称格式："
 
-#: ../../content/applications/general/iot/devices/printer.rst:220
+#: ../../content/applications/general/iot/devices/printer.rst:224
 msgid "`EPSONTMm30II__IMC__`"
 msgstr "`EPSONTMm30II__IMC__`"
 
-#: ../../content/applications/general/iot/devices/printer.rst:221
+#: ../../content/applications/general/iot/devices/printer.rst:225
 msgid "`EPSON_TM_U220__IMC_LDV_LDH_SCALE80__`"
 msgstr "`EPSON_TM_U220__IMC_LDV_LDH_SCALE80__`"
 
-#: ../../content/applications/general/iot/devices/printer.rst:223
+#: ../../content/applications/general/iot/devices/printer.rst:227
 msgid ""
 "Improper name formatting (this will not prevent printing, but the result "
 "might not have the expected printed output):"
 msgstr "名称格式不正确（不会妨碍打印，但结果可能不是预期的打印内容）："
 
-#: ../../content/applications/general/iot/devices/printer.rst:226
+#: ../../content/applications/general/iot/devices/printer.rst:230
 msgid "`EPSON TMm 30II`: The name cannot contain spaces."
 msgstr "`EPSON TMm 30II`：名称不能包含空格。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:227
+#: ../../content/applications/general/iot/devices/printer.rst:231
 msgid ""
 "`EPSONTMm30II`: The name itself is correct, but it will not use `ESC *`."
 msgstr "`EPSONTMm30II`：名称本身是正确的，但它不会使用 `ESC*`。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:228
+#: ../../content/applications/general/iot/devices/printer.rst:232
 msgid "`EPSONTMm30II__IMC`: This name is missing the end `__`."
 msgstr "`EPSONTMm30II__IMC`：该名称缺少末尾 `__`。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:229
+#: ../../content/applications/general/iot/devices/printer.rst:233
 msgid ""
 "`EPSONTMm30II__IMC_XDV__`: The parameter `XDV` does not match any existing "
 "parameters."
 msgstr "`EPSONTMm30II__IMC_XDV__`：参数 `XDV` 与任何现有参数不匹配。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:230
+#: ../../content/applications/general/iot/devices/printer.rst:234
 msgid ""
 "`EPSONTMm30II__IMC_SCALE__`: The parameter `SCALE` is missing the scale "
 "value."
 msgstr "`EPSONTMm30II__IMC_SCALE___`：参数 `SCALE` 缺少比例值。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:232
+#: ../../content/applications/general/iot/devices/printer.rst:236
 msgid ""
 "Once the printer's name has been defined using the appropriate naming "
 "convention, click :guilabel:`Continue`."
 msgstr "使用适当的命名约定定义打印机名称后，点击 :guilabel:`继续`。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:234
+#: ../../content/applications/general/iot/devices/printer.rst:238
 msgid ""
 "Set the :guilabel:`Make` value to :guilabel:`Raw` and the :guilabel:`Model` "
 "value to :guilabel:`Raw Queue (en)`."
@@ -9805,7 +9828,7 @@ msgstr ""
 "将 :guilabel:`Make` 值设置为 :guilabel:`Raw`，将 :guilabel:`Model` 值设置"
 "为 :guilabel:`Raw Queue (en)`。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:236
+#: ../../content/applications/general/iot/devices/printer.rst:240
 msgid ""
 "Click :guilabel:`Add Printer`. If everything was done correctly, the page "
 "should redirect to the :guilabel:`Banners` page."
@@ -9813,13 +9836,13 @@ msgstr ""
 "点击 :guilabel:`添加打印机`。如果一切操作正确，页面应重定向到 :guilabel:`横幅"
 "` 页面。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:238
+#: ../../content/applications/general/iot/devices/printer.rst:242
 msgid ""
 "Wait a few minutes for the IoT system to detect the printer and sync to "
 "Odoo's server."
 msgstr "等待几分钟，让物联网系统检测到打印机并同步到 Odoo 服务器。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:239
+#: ../../content/applications/general/iot/devices/printer.rst:243
 msgid ""
 ":ref:`Access the POS settings <configuration/settings>` and select your POS, "
 "or click the vertical ellipsis button (:guilabel:`⋮`) on a POS card and "
@@ -9832,7 +9855,7 @@ msgstr ""
 "到 :guilabel:`已连接设备` 部分，启用 :guilabel:`物联网盒子` 并在 :guilabel:`"
 "收据打印机` 字段中选择打印机。点击 :guilabel:`保存`。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:245
+#: ../../content/applications/general/iot/devices/printer.rst:249
 msgid ""
 "If the printer was set up incorrectly (e.g., it continues to print random "
 "text, or the printed receipt is too large or too small), it cannot be "
@@ -9843,7 +9866,7 @@ msgstr ""
 "CUPS 中的打印机名称进行修改。相反，请按照上述步骤，用修改后的参数从头配置一台"
 "新打印机。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:253
+#: ../../content/applications/general/iot/devices/printer.rst:257
 msgid ""
 "The following is an example of the troubleshooting process for a TM-U220B "
 "printer model using the `ESC *` command. The receipt pictured below is an "
@@ -9857,7 +9880,7 @@ msgstr ""
 msgid "Properly formatted receipt picture from a demo database."
 msgstr "演示数据库中格式正确的收据图片。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:261
+#: ../../content/applications/general/iot/devices/printer.rst:265
 msgid ""
 "Printing this receipt immediately without proper formatting will not work, "
 "as the TM-U220B printer model does not support the `GS v 0` command. "
@@ -9870,13 +9893,13 @@ msgstr ""
 msgid "Printer paper with seemingly random characters."
 msgstr "打印纸上的字符看似随机。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:268
+#: ../../content/applications/general/iot/devices/printer.rst:272
 msgid ""
 "To properly configure formatting for the Epson TM-U220B printer model, "
 "follow these steps:"
 msgstr "要正确配置 Epson TM-U220B 打印机型号的格式化，请按照以下步骤操作："
 
-#: ../../content/applications/general/iot/devices/printer.rst:270
+#: ../../content/applications/general/iot/devices/printer.rst:274
 msgid ""
 "After checking Epson's website for compatibility with both the `GS v 0 "
 "<https://download4.epson.biz/sec_pubs/pos/reference_en/escpos/"
@@ -9893,7 +9916,7 @@ msgstr ""
 msgid "Epson compatibility evaluation from Epson website."
 msgstr "爱普生网站上的爱普生兼容性评估。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:278
+#: ../../content/applications/general/iot/devices/printer.rst:282
 msgid "When adding the printer, CUPS displays the list of available printers:"
 msgstr "添加打印机时，CUPS 会显示可用打印机的列表："
 
@@ -9901,7 +9924,7 @@ msgstr "添加打印机时，CUPS 会显示可用打印机的列表："
 msgid "Administration menu, add printer selection."
 msgstr "管理菜单，添加打印机选项。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:284
+#: ../../content/applications/general/iot/devices/printer.rst:288
 msgid ""
 "In this case, the printer is connected via USB, so it is not part of "
 "the :guilabel:`Discovered Network Printers`. Instead, it is likely part of "
@@ -9915,7 +9938,7 @@ msgstr ""
 "从 IoT 系统拔下打印机的 USB 线缆并刷新页面，:guilabel:`未知` 打印机会消失。通"
 "过重新插入，打印机会重新出现。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:290
+#: ../../content/applications/general/iot/devices/printer.rst:294
 msgid ""
 "For the naming convention, since the printer must print using the `ESC *` "
 "command, it is imperative to add `__IMC`."
@@ -9926,7 +9949,7 @@ msgstr ""
 msgid "Epson TM-U220 specifications on manufacturer's website."
 msgstr "制造商网站上的爱普生 TM-U220 规格。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:296
+#: ../../content/applications/general/iot/devices/printer.rst:300
 msgid ""
 "For this particular model (TM-U220) `m` should be equal to 0 or 1. While "
 "referencing the :guilabel:`Description` table on `Epson's ESC * website "
@@ -9940,7 +9963,7 @@ msgstr ""
 "esc_asterisk.html>`_上的 :guilabel:`描述` 表格，`m` 值可以是0、1、32或33。因"
 "此，在这种情况下，`m` 值不能是 32 或 33（否则，将会打印随机字符）。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:302
+#: ../../content/applications/general/iot/devices/printer.rst:306
 msgid ""
 "The table includes the numeric values 32 and 33; they both occur if "
 "the :guilabel:`Number of bits for vertical data` is set to 24, i.e. it has a "
@@ -9952,7 +9975,7 @@ msgstr ""
 "密度*时，它们都会出现。在配置 Epson TM-U220 的情况下，需要强制使用 *低垂直密"
 "度*，因为这种打印机型号不支持此命令 `ESC *` 的*高垂直密度*。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:307
+#: ../../content/applications/general/iot/devices/printer.rst:311
 msgid ""
 "To add a *Low Vertical Density*, add the `LDV` parameter to the naming "
 "convention."
@@ -9963,7 +9986,7 @@ msgid ""
 "Add a *Low Vertical Density* (the `LDV` parameter) to the naming convention."
 msgstr "在命名规则中添加*低垂直密度*（`LDV`参数）。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:312
+#: ../../content/applications/general/iot/devices/printer.rst:316
 msgid ""
 "Click :guilabel:`Continue` to proceed. Next, set the :guilabel:`Make` value "
 "to :guilabel:`Raw` and the :guilabel:`Model` value to :guilabel:`Raw Queue "
@@ -9977,7 +10000,7 @@ msgstr ""
 msgid "Epson TM-U220 specifications on manufacturers website."
 msgstr "爱普生 TM-U220 的规格请参见制造商网站。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:318
+#: ../../content/applications/general/iot/devices/printer.rst:322
 msgid ""
 "However, when trying to print with the naming convention "
 "`EpsonTMU220B__IMC_LDV__`, the receipt is printed, but it is too large and "
@@ -9988,27 +10011,27 @@ msgstr ""
 "据，但收据太大，超出页边距。要解决这个问题，请添加一台新打印机（和命名规"
 "范），并设置 `SCALE<X>` 参数，以适应我们的收据尺寸。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:322
+#: ../../content/applications/general/iot/devices/printer.rst:326
 msgid "Here are some examples:"
 msgstr "示例如下："
 
-#: ../../content/applications/general/iot/devices/printer.rst:327
+#: ../../content/applications/general/iot/devices/printer.rst:331
 msgid "Printer Naming Convention"
 msgstr "打印机命名规则"
 
-#: ../../content/applications/general/iot/devices/printer.rst:328
+#: ../../content/applications/general/iot/devices/printer.rst:332
 msgid "`EpsonTMU220B__IMC_LDV__`"
 msgstr "`EpsonTMU220B__IMC_LDV__`"
 
-#: ../../content/applications/general/iot/devices/printer.rst:329
+#: ../../content/applications/general/iot/devices/printer.rst:333
 msgid "`EpsonTMU220B__IMC_LDV_SCALE75__`"
 msgstr "`EpsonTMU220B__IMC_LDV_SCALE75__`"
 
-#: ../../content/applications/general/iot/devices/printer.rst:330
+#: ../../content/applications/general/iot/devices/printer.rst:334
 msgid "`EpsonTMU220B__IMC_LDV_LDH__`"
 msgstr "`EpsonTMU220B__IMC_LDV_LDH__`"
 
-#: ../../content/applications/general/iot/devices/printer.rst:331
+#: ../../content/applications/general/iot/devices/printer.rst:335
 msgid "`EpsonTMU220B__IMC_LDV_LDH_SCALE35__`"
 msgstr "`EpsonTMU220B__IMC_LDV_LDH_SCALE35__`"
 
@@ -10034,11 +10057,11 @@ msgid ""
 "Receipt format using naming convention: EpsonTMU220B__IMC_LDV_LDH_SCALE35__."
 msgstr "使用命名约定的收据格式：EpsonTMU220B__IMC_LDV_LDH_SCALE35__。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:344
+#: ../../content/applications/general/iot/devices/printer.rst:348
 msgid "DYMO LabelWriter print issue"
 msgstr "DYMO LabelWriter 打印问题"
 
-#: ../../content/applications/general/iot/devices/printer.rst:346
+#: ../../content/applications/general/iot/devices/printer.rst:350
 msgid ""
 "The DYMO LabelWriter has a known issue in printing with IoT systems. The "
 "OpenPrinting CUPS server installs the printer using :guilabel:`Local RAW "
@@ -10050,13 +10073,13 @@ msgstr ""
 "服务器使用 :guilabel:`本地 RAW 打印机` 驱动程序安装打印机。要打印任何内容，需"
 "要设置正确的 :guilabel:`Make and Model`，以便在使用设备时引用正确的驱动程序。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:351
+#: ../../content/applications/general/iot/devices/printer.rst:355
 msgid ""
 "Additionally, a new printer needs to be added to reduce the print delay that "
 "occurs after updating the driver."
 msgstr "此外，还需要添加新打印机，以减少更新驱动程序后出现的打印延迟。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:355
+#: ../../content/applications/general/iot/devices/printer.rst:359
 msgid ""
 "The DYMO LabelWriter 450 DUO printer is the recommended DYMO printer for use "
 "with Odoo and IoT systems. This device combines two printers: a label "
@@ -10072,16 +10095,16 @@ msgstr ""
 "(en)）。为保持一致性，以下流程概述了DYMO LabelWriter 450 DUO Label (en)型号的"
 "配置步骤。请根据需要调整型号选择。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:365
+#: ../../content/applications/general/iot/devices/printer.rst:369
 msgid "DYMO LabelWriter not printing"
 msgstr "DYMO LabelWriter 无法打印"
 
-#: ../../content/applications/general/iot/devices/printer.rst:367
+#: ../../content/applications/general/iot/devices/printer.rst:371
 msgid "If the DYMO LabelWriter fails to print, install a new driver:"
 msgstr "如果 DYMO LabelWriter 无法打印，请安装新驱动程序："
 
-#: ../../content/applications/general/iot/devices/printer.rst:369
-#: ../../content/applications/general/iot/devices/printer.rst:405
+#: ../../content/applications/general/iot/devices/printer.rst:373
+#: ../../content/applications/general/iot/devices/printer.rst:409
 msgid ""
 "Access the IoT system's homepage and click :menuselection:`Printer server` "
 "to open the OpenPrinting CUPS console."
@@ -10089,17 +10112,17 @@ msgstr ""
 "访问 IoT 系统的主页并点击 :menuselection:`打印机服务器` 打开 OpenPrinting "
 "CUPS 控制台。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:371
+#: ../../content/applications/general/iot/devices/printer.rst:375
 msgid ""
 "Click :menuselection:`Printers` in the top menu, then click the printer in "
 "the list."
 msgstr "点击顶部菜单中的 :menuselection:`打印机`，然后点击列表中的打印机。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:372
+#: ../../content/applications/general/iot/devices/printer.rst:376
 msgid "Select :guilabel:`Maintenance` in the first dropdown menu."
 msgstr "在第一个下拉菜单中选择 :guilabel:`维护保养`。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:373
+#: ../../content/applications/general/iot/devices/printer.rst:377
 msgid "Select :guilabel:`Modify Printer` in the second dropdown menu."
 msgstr "在第二个下拉菜单中选择 :guilabel:`修改打印机`。"
 
@@ -10110,13 +10133,13 @@ msgid ""
 "menus highlighted."
 msgstr "修改 DYMO LabelWriter 的品牌和型号。突出显示维护保养和修改下拉菜单。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:379
+#: ../../content/applications/general/iot/devices/printer.rst:383
 msgid ""
 "Select the specific network connection/printer on which the modification "
 "should be made and click :guilabel:`Continue`."
 msgstr "选择要进行修改的特定网络连接/打印机，然后点击 :guilabel:`继续`。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:381
+#: ../../content/applications/general/iot/devices/printer.rst:385
 msgid ""
 "On the next page, click :guilabel:`Continue`, then select :guilabel:`DYMO` "
 "from the :guilabel:`Make` dropdown list."
@@ -10124,7 +10147,7 @@ msgstr ""
 "在下一页，点击 :guilabel:`继续`，然后从 :guilabel:`品牌` 下拉列表中选"
 "择 :guilabel:`DYMO`。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:383
+#: ../../content/applications/general/iot/devices/printer.rst:387
 msgid ""
 "Click on :guilabel:`Continue` and set the :guilabel:`Model` "
 "to :guilabel:`DYMO LabelWriter 450 DUO Label (en)` (or whichever DYMO "
@@ -10133,13 +10156,13 @@ msgstr ""
 "点击 :guilabel:`继续` 并将 :guilabel:`型号` 设置为 :guilabel:`DYMO "
 "LabelWriter 450 DUO Label (en)`（或正在使用的任何 DYMO 打印机型号）。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:385
+#: ../../content/applications/general/iot/devices/printer.rst:389
 msgid ""
 "Click :guilabel:`Modify Printer` to set the new driver; a confirmation page "
 "appears."
 msgstr "点击 :guilabel:`修改打印机` 设置新驱动程序；会出现一个确认页面。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:386
+#: ../../content/applications/general/iot/devices/printer.rst:390
 msgid ""
 "Click :menuselection:`Printers` in the top menu; all printers installed on "
 "the OpenPrinting CUPS server appear, including the newly "
@@ -10150,7 +10173,7 @@ msgstr ""
 "有打印机都会显示，包括新更新的 :guilabel:`DYMO LabelWriter 450 DUO Label`（或"
 "正在使用的任何 DYMO 打印机型号）。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:389
+#: ../../content/applications/general/iot/devices/printer.rst:393
 msgid ""
 "Click the newly updated printer, then click the :guilabel:`Maintenance` "
 "dropdown menu and select :guilabel:`Print Test Page` to print a test label. "
@@ -10161,15 +10184,15 @@ msgstr ""
 "打印测试页` 以打印测试标签。如果驱动程序更新成功，测试标签将在几秒钟后打印出"
 "来。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:393
+#: ../../content/applications/general/iot/devices/printer.rst:397
 msgid "To reduce this delay, add a new printer using the steps below."
 msgstr "要减少延迟，请使用以下步骤添加新打印机。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:396
+#: ../../content/applications/general/iot/devices/printer.rst:400
 msgid "DYMO LabelWriter print delay"
 msgstr "DYMO LabelWriter 打印延迟"
 
-#: ../../content/applications/general/iot/devices/printer.rst:399
+#: ../../content/applications/general/iot/devices/printer.rst:403
 msgid ""
 "If the DYMO LabelWriter 450 DUO printer is not printing at all, or is not "
 "recognized (i.e., it has a :guilabel:`RAW` driver type), then :ref:`update "
@@ -10179,19 +10202,19 @@ msgstr ""
 "有 :guilabel:`RAW` 驱动程序类型），则 :ref:`更新设备上的驱动程序 <printer/"
 "dymo/update_drivers>`。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:403
+#: ../../content/applications/general/iot/devices/printer.rst:407
 msgid ""
 "To resolve the delay issue after modifying the driver, reinstall the printer:"
 msgstr "要解决修改驱动程序后的延迟问题，请重新安装打印机："
 
-#: ../../content/applications/general/iot/devices/printer.rst:407
+#: ../../content/applications/general/iot/devices/printer.rst:411
 msgid ""
 "Click :menuselection:`Administration` in the top menu, then "
 "click :guilabel:`Add a Printer`."
 msgstr ""
 "点击顶部菜单中的 :menuselection:`管理`，然后点击 :guilabel:`添加打印机`。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:408
+#: ../../content/applications/general/iot/devices/printer.rst:412
 msgid ""
 "On the next page, in the :guilabel:`Local Printers` section, "
 "select :guilabel:`DYMO LabelWriter 450 DUO Label (DYMO LabelWriter 450 DUO "
@@ -10211,7 +10234,7 @@ msgstr ""
 "在 OpenPrinting CUPS 上添加一个打印机屏幕，突出显示 DYMO LabelWriter 450 DUO "
 "标签。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:416
+#: ../../content/applications/general/iot/devices/printer.rst:420
 msgid ""
 "On the following screen, update the :guilabel:`Name` to something easily "
 "identifiable, as the original printer will remain in the list. Then, "
@@ -10226,7 +10249,7 @@ msgid ""
 "highlighted."
 msgstr "在 '添加打印机' 流程中重命名打印机页面，名称字段突出显示。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:422
+#: ../../content/applications/general/iot/devices/printer.rst:426
 msgid ""
 "Set the :guilabel:`Model` field to :guilabel:`DYMO LabelWriter 450 DUO Label "
 "(en)` (or whichever DYMO printer model is being used), then "
@@ -10244,7 +10267,7 @@ msgid ""
 msgstr ""
 "在 OpenPrinting CUPS 控制台上的“选择型号”屏幕上，突出显示型号和添加打印机。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:430
+#: ../../content/applications/general/iot/devices/printer.rst:434
 msgid ""
 "Click :menuselection:`Printers` in the top menu and click the newly "
 "installed printer :guilabel:`DYMO LabelWriter 450 DUO Label` (or whichever "
@@ -10258,7 +10281,7 @@ msgstr ""
 msgid "Printer page with newly installed printer highlighted."
 msgstr "突出显示新安装打印机的打印机页面。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:437
+#: ../../content/applications/general/iot/devices/printer.rst:441
 msgid ""
 "Click the :guilabel:`Maintenance` dropdown list and select :guilabel:`Print "
 "Test Page` to print a test label. The test label should print out "
@@ -10267,11 +10290,11 @@ msgstr ""
 "点击 :guilabel:`维护保养` 下拉列表并选择 :guilabel:`打印测试页` 以打印测试标"
 "签。测试标签应立即打印出来，或者一两秒钟后打印出来。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:441
+#: ../../content/applications/general/iot/devices/printer.rst:445
 msgid "The Zebra printer does not print anything"
 msgstr "Zebra 打印机不打印任何内容"
 
-#: ../../content/applications/general/iot/devices/printer.rst:443
+#: ../../content/applications/general/iot/devices/printer.rst:447
 msgid ""
 "Zebra printers are quite sensitive to the format of the printed Zebra "
 "Programming Language (ZPL) code. If nothing comes out of the printer or "
@@ -10285,7 +10308,7 @@ msgstr ""
 "请激活 :ref:`开发者模式<developer-mode>`，进入 :menuselection:`设置 --> 技术 "
 "--> 用户界面 --> 视图`，然后搜索相应的模板。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:450
+#: ../../content/applications/general/iot/devices/printer.rst:454
 msgid ""
 "`Zebra's instructions on printing ZPL files <https://"
 "supportcommunity.zebra.com/s/article/Print-a-zpl-file-using-the-Generic-Text-"
@@ -10294,15 +10317,15 @@ msgstr ""
 "`Zebra 关于打印 ZPL 文件的说明 <https://supportcommunity.zebra.com/s/article/"
 "Print-a-zpl-file-using-the-Generic-Text-Printer>`_"
 
-#: ../../content/applications/general/iot/devices/printer.rst:454
+#: ../../content/applications/general/iot/devices/printer.rst:458
 msgid "Barcode scanner issues"
 msgstr "条形码扫描仪问题"
 
-#: ../../content/applications/general/iot/devices/printer.rst:457
+#: ../../content/applications/general/iot/devices/printer.rst:461
 msgid "The characters read by the barcode scanner do not match the barcode"
 msgstr "条形码扫描仪读取的字符与条形码不匹配"
 
-#: ../../content/applications/general/iot/devices/printer.rst:459
+#: ../../content/applications/general/iot/devices/printer.rst:463
 msgid ""
 "By default, most barcode scanners are configured in the US QWERTY format. If "
 "the barcode scanner uses a different layout, go to :menuselection:`IoT --> "
@@ -10313,8 +10336,8 @@ msgstr ""
 "不同的布局，请前往 :menuselection:`IoT --> 设备` 并点击条形码设备卡片。然后，"
 "在 :guilabel:`键盘布局` 字段中选择正确的语言。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:464
-#: ../../content/applications/general/iot/devices/printer.rst:494
+#: ../../content/applications/general/iot/devices/printer.rst:468
+#: ../../content/applications/general/iot/devices/printer.rst:498
 msgid ""
 "The :guilabel:`Keyboard Layout` is language-specific, with available options "
 "varying based on the device and the language of the database "
@@ -10323,11 +10346,11 @@ msgstr ""
 ":guilabel:`键盘布局`基于语言，可用选项根据设备和数据库的语言而变化。例"
 "如：:guilabel:`英语（英国）`、:guilabel:`英语（美国）` 等。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:469
+#: ../../content/applications/general/iot/devices/printer.rst:473
 msgid "Nothing happens when a barcode is scanned"
 msgstr "扫描条形码时不会发生任何情况"
 
-#: ../../content/applications/general/iot/devices/printer.rst:471
+#: ../../content/applications/general/iot/devices/printer.rst:475
 msgid ""
 "Make sure the correct device is selected in the :doc:`Point of Sale settings "
 "</applications/sales/point_of_sale/configuration/pos_iot>` (when applicable) "
@@ -10338,18 +10361,18 @@ msgstr ""
 "pos_iot>`（在适用情况下）中选择了正确的设备，并且条形码扫描器配置为在每个条形"
 "码结束时发送 ENTER 字符（键码28）。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:476
+#: ../../content/applications/general/iot/devices/printer.rst:480
 msgid "The barcode scanner is detected as a keyboard"
 msgstr "条形码扫描仪被检测为键盘"
 
-#: ../../content/applications/general/iot/devices/printer.rst:479
+#: ../../content/applications/general/iot/devices/printer.rst:483
 msgid ""
 "Some barcode scanners are identified as USB keyboards rather than barcode "
 "scanners and are not recognized by IoT systems."
 msgstr ""
 "有些条形码扫描器被识别为 USB 键盘而非条形码扫描器，因此不被 IoT 系统识别。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:482
+#: ../../content/applications/general/iot/devices/printer.rst:486
 msgid ""
 "To change the device type manually, go to :menuselection:`IoT --> Devices` "
 "and click the barcode device's card. Then, enable :guilabel:`Is scanner`."
@@ -10357,11 +10380,11 @@ msgstr ""
 "要手动更改设备类型，请前往 :menuselection:`IoT --> 设备` 并点击条形码设备卡"
 "片。然后，启用 :guilabel:`是扫描仪`。"
 
-#: ../../content/applications/general/iot/devices/printer.rst:486
+#: ../../content/applications/general/iot/devices/printer.rst:490
 msgid "The barcode scanner processes barcode characters individually"
 msgstr "条形码扫描器逐个处理条形码字符"
 
-#: ../../content/applications/general/iot/devices/printer.rst:488
+#: ../../content/applications/general/iot/devices/printer.rst:492
 msgid ""
 "When accessing the mobile version of Odoo from a mobile device or tablet "
 "paired with a barcode scanner via the IoT system, the scanner might "
@@ -10412,10 +10435,10 @@ msgstr ""
 #: ../../content/applications/general/iot/devices/scale.rst:22
 msgid ""
 "Once the scale is connected to the IoT system, :ref:`configure it in the POS "
-"settings <pos/scale>`."
+"settings <pos/hardware/scale>`."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:25
+#: ../../content/applications/general/iot/devices/scale.rst:26
 msgid ""
 ":doc:`Connect an IoT system to a POS </applications/sales/point_of_sale/"
 "configuration/pos_iot>`"
@@ -10423,11 +10446,11 @@ msgstr ""
 ":doc:`将 IoT 系统连接到POS </applications/sales/point_of_sale/configuration/"
 "pos_iot>`"
 
-#: ../../content/applications/general/iot/devices/scale.rst:28
+#: ../../content/applications/general/iot/devices/scale.rst:29
 msgid "Ariva S scales"
 msgstr "Ariva S 电子秤"
 
-#: ../../content/applications/general/iot/devices/scale.rst:30
+#: ../../content/applications/general/iot/devices/scale.rst:31
 msgid ""
 "For Ariva S series scales (manufactured by Mettler-Toledo, LLC.) to function "
 "with IoT systems, a specific setting must be modified, and a dedicated "
@@ -10436,7 +10459,7 @@ msgstr ""
 "要使 Ariva S 系列电子秤（由 Mettler-Toledo, LLC. 制造）与物联网系统配合使用，"
 "必须修改特定设置，并且需要 Mettler 专用 USB 至专有 RJ45 电缆。"
 
-#: ../../content/applications/general/iot/devices/scale.rst:34
+#: ../../content/applications/general/iot/devices/scale.rst:35
 msgid ""
 "The official Mettler USB-to-RJ45 cable (Mettler part number 72256236) must "
 "be used. Contact Mettler or a partner to purchase an authentic cable. **No "
@@ -10445,7 +10468,7 @@ msgstr ""
 "必须使用 Mettler 官方 USB 至 RJ45 连接线（Mettler 部件号 72256236）。请联系 "
 "Mettler 或合作伙伴购买正品电缆。此配置不能使用**其他**电缆。"
 
-#: ../../content/applications/general/iot/devices/scale.rst:38
+#: ../../content/applications/general/iot/devices/scale.rst:39
 msgid ""
 "To configure the Ariva S scale for IoT system recognition, refer to page 17 "
 "of `Mettler's Setup Guide for Ariva S series scales <https://www.mt.com/dam/"
@@ -10455,17 +10478,17 @@ msgstr ""
 "子秤设置指南`<https://www.mt.com/dam/RET_DOCS/Ariv.pdf>`_ 第 17 页，并按照以"
 "下步骤操作："
 
-#: ../../content/applications/general/iot/devices/scale.rst:41
+#: ../../content/applications/general/iot/devices/scale.rst:42
 msgid ""
 "Hold the **>T<** button for eight seconds, or until :guilabel:`CONF` appears."
 msgstr "按住 **>T<** 按钮 8 秒钟，或直到出现 :guilabel:`CONF`。"
 
-#: ../../content/applications/general/iot/devices/scale.rst:42
+#: ../../content/applications/general/iot/devices/scale.rst:43
 msgid ""
 "Press **>T<** until :guilabel:`GRP 3` appears, then press **>0<** to confirm."
 msgstr "按 **>T<** 直到出现 :guilabel:`GRP 3` ，然后按 **>0<** 确认。"
 
-#: ../../content/applications/general/iot/devices/scale.rst:43
+#: ../../content/applications/general/iot/devices/scale.rst:44
 msgid ""
 "At step :guilabel:`3.1`, make sure the value is set to :guilabel:`1` (USB "
 "Virtual COM ports) by pressing **>T<** to cycle through the options."
@@ -10473,13 +10496,13 @@ msgstr ""
 "在步骤 :guilabel:`3.1` 中，按 **>T<** 循环浏览选项，确保值设置"
 "为 :guilabel:`1`（USB 虚拟 COM 端口）。"
 
-#: ../../content/applications/general/iot/devices/scale.rst:45
+#: ../../content/applications/general/iot/devices/scale.rst:46
 msgid ""
 "Press **>0<** until :guilabel:`3.6` (if available, otherwise skip the next "
 "step)."
 msgstr "按 **>0<** 直到 :guilabel:`3.6`（如有，否则跳过下一步）。"
 
-#: ../../content/applications/general/iot/devices/scale.rst:46
+#: ../../content/applications/general/iot/devices/scale.rst:47
 msgid ""
 "At step :guilabel:`3.6`, make sure the value is set to :guilabel:`3` (8217 "
 "Mettler-Toledo (WO)) by pressing **>T<** to cycle through the options."
@@ -10487,28 +10510,28 @@ msgstr ""
 "在步骤 :guilabel:`3.6`，确保值设置为 :guilabel:`3` (8217 Mettler-Toledo "
 "(WO))，按 **>T<** 循环浏览选项。"
 
-#: ../../content/applications/general/iot/devices/scale.rst:48
+#: ../../content/applications/general/iot/devices/scale.rst:49
 msgid ""
 "Press **>0<** (multiple times if necessary) until :guilabel:`GRP 4` appears."
 msgstr "按 **>0<**（必要时多次），直到出现 :guilabel:`GRP 4`。"
 
-#: ../../content/applications/general/iot/devices/scale.rst:49
+#: ../../content/applications/general/iot/devices/scale.rst:50
 msgid "Press **>T<** until :guilabel:`EXIT` appears."
 msgstr "按 **>T<** 直到出现 :guilabel:`退出`。"
 
-#: ../../content/applications/general/iot/devices/scale.rst:52
+#: ../../content/applications/general/iot/devices/scale.rst:53
 msgid "Do **not** make any other changes unless otherwise needed."
 msgstr "除非另有需要，否则**不要**做任何其他更改。"
 
-#: ../../content/applications/general/iot/devices/scale.rst:54
+#: ../../content/applications/general/iot/devices/scale.rst:55
 msgid "Press **>0<**."
 msgstr "按 **>0<**。"
 
-#: ../../content/applications/general/iot/devices/scale.rst:55
+#: ../../content/applications/general/iot/devices/scale.rst:56
 msgid "Press **>0<** again to :guilabel:`SAVE`; the scale restarts."
 msgstr "再次按 **>0<**，:guilabel:`保存`；电子秤重新启动。"
 
-#: ../../content/applications/general/iot/devices/scale.rst:56
+#: ../../content/applications/general/iot/devices/scale.rst:57
 msgid ""
 "Reboot the IoT box or :ref:`restart the Windows virtual IoT service <iot/"
 "windows_iot/restart>`. The scale should then appear as `Toledo 8217`."
@@ -10520,570 +10543,60 @@ msgstr "连接屏幕"
 
 #: ../../content/applications/general/iot/devices/screen.rst:5
 msgid ""
-"In Odoo, an :abbr:`IoT (Internet of Things)` box can be connected to a "
-"screen display. After being configured, the screen can be used to display a "
-"Point of Sale (PoS) order to a client."
+"The :doc:`IoT box <../iot_box>` can be connected to a screen, e.g. to ease "
+"the IoT box's setup and/or serve as a :ref:`customer display <pos/hardware/"
+"display>` to show customers their :doc:`Point of Sale </applications/sales/"
+"point_of_sale>` orders."
 msgstr ""
-"在 Odoo 中，:abbr:`IoT（物联网）`盒子可以连接到屏幕显示器。经过配置后，屏幕可"
-"用于向客户显示销售点（PoS）订单。"
-
-#: ../../content/applications/general/iot/devices/screen.rst:10
-msgid "An example of a PoS (point of sale) order on a screen display."
-msgstr "屏幕显示销售点（PoS）订单示例。"
 
 #: ../../content/applications/general/iot/devices/screen.rst:12
 msgid ""
-"Access the customer display by going to the :abbr:`IoT (Internet of Things)` "
-"box homepage and clicking on the :guilabel:`PoS Display` button. To get to "
-"the :abbr:`IoT (Internet of Things)` box homepage, navigate "
-"to :menuselection:`IoT app --> IoT Boxes` and click on the :abbr:`IoT "
-"(Internet of Things)` box homepage link."
+"Connect the screen to the IoT box using a micro-HDMI cable. If the "
+"connection was successful, the external monitor displays "
+"the :guilabel:`Status display` screen."
 msgstr ""
-"访问:abbr:`IoT（物联网）` 盒子主页并点击 :guilabel:`PoS 显示器` 按钮，即可访"
-"问客户显示器。要进入 :abbr:`IoT （物联网）` 盒子主页，请导航"
-"至 :menuselection:`物联网应用程序 --> 物联网盒子` 并点击 :abbr:`IoT （物联"
-"网）` 盒子主页链接。"
+
+#: ../../content/applications/general/iot/devices/screen.rst:None
+msgid "Default Status Display screen"
+msgstr ""
+
+#: ../../content/applications/general/iot/devices/screen.rst:18
+msgid "The screen also appears in the IoT box's list of devices:"
+msgstr ""
 
 #: ../../content/applications/general/iot/devices/screen.rst:20
-msgid ""
-"The way to connect the screen display to the :abbr:`IoT (Internet of "
-"Things)` box differs depending on the model."
-msgstr "屏幕显示器与 :abbr:`IoT （物联网）` 盒子的连接方式因型号而异。"
+msgid "on the :ref:`IoT box's form <iot/connect/IoT-form>`;"
+msgstr ""
+
+#: ../../content/applications/general/iot/devices/screen.rst:21
+msgid "on the :ref:`IoT box's homepage <iot/iot-box/homepage>`;"
+msgstr ""
+
+#: ../../content/applications/general/iot/devices/screen.rst:22
+msgid "in the IoT app, under the menu :menuselection:`IoT --> Devices`."
+msgstr ""
 
 #: ../../content/applications/general/iot/devices/screen.rst:25
-msgid "IoT Box model 4"
-msgstr "物联网（IoT）盒子型号4"
+msgid "Customer display"
+msgstr ""
 
 #: ../../content/applications/general/iot/devices/screen.rst:27
 msgid ""
-"Connect up to two screens with micro-HDMI cables on the side of "
-"the :abbr:`IoT (Internet of Things)` box. If two screens are connected, they "
-"can display distinct content (see :ref:`Screen Usage <iot/usage_screen>`)."
+"To use the screen as a :ref:`customer display <pos/hardware/"
+"display>`, :ref:`configure the POS accordingly <pos/hardware/display-"
+"configuration>`."
 msgstr ""
-"在 :abbr:`IoT（物联网）`盒子的侧面，使用 micro-HDMI 电缆最多可连接两个屏幕。"
-"如果连接了两个屏幕，则可以显示不同的内容（参见 :ref:`屏幕用法 <iot/"
-"usage_screen>`）。"
 
-#: ../../content/applications/general/iot/devices/screen.rst:31
-msgid "IoT Box model 3"
-msgstr "物联网（IoT）盒子型号3"
-
-#: ../../content/applications/general/iot/devices/screen.rst:33
+#: ../../content/applications/general/iot/devices/screen.rst:30
 msgid ""
-"Connect the screen with an HDMI cable on the side of the :abbr:`IoT "
-"(Internet of Things)` box."
-msgstr "用:abbr:`IoT（物联网）`盒子侧面的 HDMI 电缆连接屏幕。"
-
-#: ../../content/applications/general/iot/devices/screen.rst:36
-msgid ":ref:`See the Raspberry Pi Schema <pos/pos_iot/connect_schema>`."
-msgstr ":ref:`查看 Raspberry Pi 模式 <pos/pos_iot/connect_schema>`。"
-
-#: ../../content/applications/general/iot/devices/screen.rst:39
-msgid ""
-"Screen(s) should be connected before the :abbr:`IoT (Internet of Things)` "
-"box is switched on. If it is already on, connect the screen(s), and then "
-"restart the :abbr:`IoT (Internet of Things)` box by unplugging it for ten "
-"seconds and plugging it back into its power source."
+"To display a specific website on the screen instead of the POS customer "
+"display, go to :menuselection:`IoT --> Devices`, click the screen's card, "
+"then enter the desired website's URL in the :guilabel:`Display URL` field."
 msgstr ""
-"应在打开 :abbr:`IoT（物联网）` 盒子之前连接屏幕。如果已经打开，请连接屏幕，然"
-"后拔下 :abbr:`IoT （物联网）`盒子的插头十秒钟，再将其插回电源，重新启动。"
-
-#: ../../content/applications/general/iot/devices/screen.rst:44
-msgid ""
-"The usage of HDMI/micro-HDMI adapters may cause issues which will result in "
-"a blank, black screen on the screen display. Using the specific cable for "
-"the display connection is recommended."
-msgstr ""
-"使用 HDMI/micro-HDMI 适配器可能会导致屏幕显示空白、黑屏等问题。建议使用专用电"
-"缆连接显示器。"
-
-#: ../../content/applications/general/iot/devices/screen.rst:47
-msgid ""
-"If the connection was successful, the screen should display "
-"the :guilabel:`POS Client display` screen."
-msgstr "连接成功后，屏幕应显示:guilabel:`销售点客户显示`。"
-
-#: ../../content/applications/general/iot/devices/screen.rst:None
-msgid ""
-"The default \"POS Client Display\" screen that appears when a screen display "
-"is successfully\n"
-"connected to an IoT box."
-msgstr ""
-"当屏幕显示器成功连接到物联网盒子时，会出现默认的 \"POS 客户端显示\" 屏幕。"
-
-#: ../../content/applications/general/iot/devices/screen.rst:55
-msgid ""
-"The screen should also appear in the list of :guilabel:`Displays` on "
-"the :abbr:`IoT (Internet of Things)` box homepage. Alternatively, the "
-"display can be seen by accessing :menuselection:`IoT app --> Devices`."
-msgstr ""
-"屏幕也应出现在 :abbr:`IoT （物联网）` 盒子主页上的 :guilabel:`显示` 列表中。"
-"此外，也可通过访问 :menuselection:`物联网应用程序 --> 设备` 查看显示屏。"
-
-#: ../../content/applications/general/iot/devices/screen.rst:None
-msgid "An example of a screen display name shown on the IoT Box Home Page."
-msgstr "物联网盒子主页上显示的屏幕显示名称示例。"
-
-#: ../../content/applications/general/iot/devices/screen.rst:64
-msgid ""
-"If no screen is detected, a default display named :guilabel:`Distant "
-"Display` will be displayed instead. This indicates that there is no hardware "
-"screen connected."
-msgstr ""
-"如果未检测到屏幕，则将显示名为 :guilabel:`远程显示` 的默认显示屏。这表示没有"
-"连接硬件屏幕。"
-
-#: ../../content/applications/general/iot/devices/screen.rst:0
-msgid ""
-"The \"Distant Display\" screen name will be used if no screen is detected."
-msgstr "如果未检测到屏幕，则使用“远程显示”屏幕名称。"
-
-#: ../../content/applications/general/iot/devices/screen.rst:74
-msgid "Usage"
-msgstr "用途"
-
-#: ../../content/applications/general/iot/devices/screen.rst:77
-msgid "Show Point of Sale orders to customers"
-msgstr "向客户显示销售点订单"
-
-#: ../../content/applications/general/iot/devices/screen.rst:79
-msgid ""
-"To use the screen in the *Point of Sale app*, go to :menuselection:`Point of "
-"Sale --> Configuration --> Point of Sale`, select a :abbr:`PoS (Point of "
-"Sale)`, click :guilabel:`Edit` if necessary, and enable the :guilabel:`IoT "
-"Box` feature."
-msgstr ""
-"要在*销售点应用程序*中使用该屏幕，请转到:menuselection:`销售点-->配置-->销售"
-"点`，选择一个: abbr:`PoS（销售点）`，必要时点击:guilabel:`编辑`，并启"
-"用:guilabel:`物联网盒子`功能。"
-
-#: ../../content/applications/general/iot/devices/screen.rst:83
-msgid ""
-"Next, select the screen from the :guilabel:`Customer Display` drop-down "
-"menu. Then click :guilabel:`Save`, if required."
-msgstr ""
-"然后，从 :guilabel:`客户显示屏` 下拉菜单中选择屏幕。然后点击 :guilabel:`保存`"
-"（如需要）。"
-
-#: ../../content/applications/general/iot/devices/screen.rst:None
-msgid "Connect the screen display to the Point of Sale app."
-msgstr "将显示屏幕连接至销售点应用程序。"
-
-#: ../../content/applications/general/iot/devices/screen.rst:90
-msgid ""
-"The screen is now available for :abbr:`PoS (Point of Sale)` sessions. A "
-"screen icon will appear in the menu at the top of the screen to indicate the "
-"screen's connection status."
-msgstr ""
-"屏幕现在可用于 :abbr:`PoS（销售点）` 会话。屏幕顶部的菜单中会出现一个屏幕图"
-"标，显示屏幕的连接状态。"
-
-#: ../../content/applications/general/iot/devices/screen.rst:None
-msgid ""
-"The \"screen\" icon on the Point of Sale display shows the connection status "
-"with the\n"
-"screen."
-msgstr "销售点显示屏上的 \"屏幕\" 图标显示与屏幕的连接状态。"
-
-#: ../../content/applications/general/iot/devices/screen.rst:98
-msgid ""
-"The screen will automatically show the :abbr:`PoS (Point of Sale)` orders "
-"and update when changes are made to the order."
-msgstr "屏幕将自动显示 :abbr:`PoS（销售点）`订单，并在订单发生更改时进行更新。"
-
-#: ../../content/applications/general/iot/devices/screen.rst:None
-msgid "An example of a PoS order on a screen display."
-msgstr "屏幕显示的销售点（PoS）订单示例。"
-
-#: ../../content/applications/general/iot/devices/screen.rst:106
-msgid "Display a website on the screen"
-msgstr "在屏幕上显示网站"
-
-#: ../../content/applications/general/iot/devices/screen.rst:108
-msgid ""
-"Open the screen form view by accessing :menuselection:`IoT app --> Devices --"
-"> Customer Display`. This allows the user to choose a particular website URL "
-"to display on the screen using the :guilabel:`Display URL` field."
-msgstr ""
-"通过访问 :menuselection:`物联网应用程序 --> 设备 --> 客户显示器` 打开屏幕表单"
-"视图。这样，用户就可以使用 :guilabel:`显示 URL` 字段，选择要在屏幕上显示的特"
-"定网站 URL。"
 
 #: ../../content/applications/general/iot/iot_advanced.rst:5
 msgid "Advanced"
 msgstr "高级"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:5
-msgid "HTTPS certificate (IoT)"
-msgstr "HTTPS 证书（物联网）"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:7
-msgid ""
-"*Hypertext Transfer Protocol Secure* (HTTPS) is the secure and encrypted "
-"version of *Hypertext Transfer Protocol* (HTTP), which is the primary "
-"protocol used for data communication between a web browser and a website. It "
-"secures communications by using an encryption protocol known as *Transport "
-"Layer Security* (TLS), previously called *Secure Sockets Layer* (SSL). The "
-"security of :abbr:`HTTPS (Hypertext Transfer Protocol Secure)` relies "
-"on :abbr:`TLS (Transport Layer Security)` /:abbr:`SSL (Secure Sockets "
-"Layer)` certificates, which authenticate the provider and verify their "
-"identity."
-msgstr ""
-"*超文本传输协议安全协议*（HTTPS）是*超文本传输协议*（HTTP）的安全加密版本，是"
-"网络浏览器与网站之间进行数据通信的主要协议。它通过使用一种称为*传输层安全*"
-"（TLS）的加密协议，以前称为*安全套接层*（SSL），来确保通信安全。:abbr:`HTTPS"
-"（超文本传输协议安全）`的安全性依赖于 :abbr:`TLS（传输层安全）`/:abbr:`SSL"
-"（安全套接字层）`证书，这些证书可以验证提供者的身份。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:15
-msgid ""
-"The use of HTTPS is required to communicate with certain network devices, "
-"particularly payment terminals. If the HTTPS certificate is not valid, some "
-"devices cannot interact with the IoT system."
-msgstr ""
-"与某些网络设备（尤其是支付终端）进行通信需要使用 HTTPS。如果 HTTPS 证书无效，"
-"某些设备就无法与物联网系统进行交互。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:20
-msgid ""
-"In this documentation and throughout Odoo, the term *HTTPS certificate*  "
-"refers to a valid SSL certificate that allows an HTTPS connection."
-msgstr ""
-"在本文档和整个 Odoo 中，术语 *HTTPS 证书* 指的是允许 HTTPS 连接的有效 SSL 证"
-"书。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:26
-msgid "HTTPS certificate generation"
-msgstr "生成 HTTPS 证书"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:28
-msgid ""
-"The HTTPS certificate is generated automatically. When the IoT system is "
-"(re-)started (e.g., after it is connected to the Odoo database), a request "
-"is sent to `<https://www.odoo.com>`_, which returns the HTTPS certificate if "
-"the IoT system and database meet the eligibility criteria:"
-msgstr ""
-"HTTPS 证书是自动生成的。当物联网系统（重新）启动时（例如，连接到 Odoo 数据库"
-"后），会向 `<https://www.odoo.com>`_发送一个请求，如果物联网系统和数据库符合"
-"资格标准，该请求就会返回 HTTPS 证书："
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:34
-msgid ""
-"The database must be a **production** instance. The database instance should "
-"not be a copy, a duplicate, a staging, or a development environment."
-msgstr ""
-"数据库必须是**正式运行**实例。数据库实例不应是副本、复制、暂存或开发环境。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:36
-msgid ""
-"The Odoo subscription must be ongoing (:guilabel:`In Progress` status) and "
-"have an :ref:`IoT box subscription <iot/iot/iot-subscription>` line."
-msgstr ""
-"Odoo 订阅必须为正在进行中（:guilabel:`进行中` 状态），并且有 :ref:`订阅物联网"
-"盒子 <iot/iot/iot-subscription>` 行。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:39
-msgid "When the certificate has been received:"
-msgstr "收到证书后："
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:41
-msgid ""
-"The IoT system's homepage address is updated to a new HTTPS URL ending with "
-"`.odoo-iot.com`. Click the URL to establish a secure HTTPS connection."
-msgstr ""
-"物联网系统的主页地址将更新为以 `.odoo-iot.com` 结尾的新 HTTPS URL。点击该 "
-"URL，建立安全的 HTTPS 连接。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:0
-msgid "Odoo IoT app IoT box with .odoo-iot.com domain."
-msgstr "带有 .odoo-iot.com 域名的 Odoo 物联网应用程序物联网盒子。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:47
-msgid ""
-"The :guilabel:`HTTPS certificate` banner displays the certificate's validity "
-"period. To view this information, click the :icon:`fa-cogs` "
-"(:guilabel:`cogs`) button on the IoT system's homepage."
-msgstr ""
-":guilabel:`HTTPS证书` 横幅显示证书的有效期。要查看此信息，请点击物联网系统主"
-"页上的 :icon:`fa-cogs`（:guilabel:`齿轮`）按钮。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:0
-msgid "IoT box homepage with HTTPS certificate validity date."
-msgstr "带有 HTTPS 证书有效期的物联网盒子主页。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:54
-msgid "HTTPS certificate generation issues and errors"
-msgstr "HTTPS 证书生成问题和错误"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:57
-msgid "The HTTPS certificate does not generate"
-msgstr "HTTPS 证书不会生成"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:59
-msgid "Potential causes include the following:"
-msgstr "潜在原因包括以下几点："
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:61
-msgid ""
-"No :ref:`IoT box subscription <iot/iot/iot-subscription>` is linked to your "
-"account."
-msgstr "您的账户中没有 :ref:`订阅物联网盒子 <iot/iot/iot-subscription>` 关联。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:62
-msgid ""
-"The :ref:`IoT box subscription <iot/iot/iot-subscription>` was added *after* "
-"connecting the IoT system to the database. In this case, refresh the IoT "
-"system's homepage or reboot/:ref:`restart <iot/windows_iot/restart>` the IoT "
-"system to regenerate the HTTPS certificate."
-msgstr ""
-"在将物联网系统连接到数据库*之后*，添加了 :ref:`订阅物联网盒子 <iot/iot/iot-"
-"subscription>` 。在这种情况下，刷新物联网系统主页或重新启动/:ref:`重新启动 "
-"<iot/windows_iot/restart>` 物联网系统，以重新生成 HTTPS 证书。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:65
-msgid ""
-"The firewall is preventing the HTTPS certificate from generating correctly. "
-"In this case, deactivate the firewall until the certificate is successfully "
-"generated."
-msgstr ""
-"防火墙阻止了 HTTPS 证书正确生成。在这种情况下，请停用防火墙，直到证书成功生"
-"成。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:69
-msgid ""
-"Some devices, such as routers with a built-in firewall, can prevent the "
-"HTTPS certificate from generating."
-msgstr "某些设备，如内置防火墙的路由器，可能会阻止 HTTPS 证书的生成。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:73
-msgid ""
-"The IoT system's homepage can be accessed using its IP address but not the "
-"`xxx.odoo-iot.com` URL"
-msgstr ""
-"使用 IP 地址可以访问物联网系统的主页，但不能访问 `xxx.odoo-iot.com` URL"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:75
-msgid ""
-"Contact your system or network administrator to address the issue. Network-"
-"related problems are beyond the scope of Odoo support services."
-msgstr ""
-"请联系您的系统或网络管理员解决问题。网络相关问题不属于 Odoo 支持服务的范围。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:78
-msgid ""
-"If the router allows manual :abbr:`DNS (Domain Name System)` configuration, "
-"update the settings to use `Google DNS <https://developers.google.com/speed/"
-"public-dns>`_."
-msgstr ""
-"如果路由器允许手动 :abbr:`DNS（域名系统）` 配置，请将设置更新为使用 `Google "
-"DNS <https://developers.google.com/speed/public-dns>`_。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:80
-msgid ""
-"If the router does not support this, you need to update the DNS settings "
-"directly on each device that interacts with the IoT system to use `Google "
-"DNS <https://developers.google.com/speed/public-dns>`_. Instructions for "
-"configuring DNS on individual devices can be found on the respective "
-"manufacturer's website."
-msgstr ""
-"如果路由器不支持此功能，则需要直接更新与物联网系统交互的每个设备上的 DNS 设"
-"置，以使用 `Google DNS <https://developers.google.com/speed/public-dns>`_。有"
-"关在各设备上配置 DNS 的说明，可在各制造商的网站上找到。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:86
-msgid ""
-"Some IoT devices, such as payment terminals, likely do not require DNS "
-"changes, as they are typically pre-configured with custom DNS settings."
-msgstr ""
-"一些物联网设备（如支付终端）可能不需要更改 DNS，因为它们通常都预先配置了自定"
-"义 DNS 设置。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:88
-msgid ""
-"On some browsers, an error code mentioning the DNS (such as "
-"`DNS_PROBE_FINISHED_NXDOMAIN`) is displayed."
-msgstr ""
-"在某些浏览器上，会显示提及 DNS 的错误代码（如 "
-"`DNS_PROBE_FINISHED_NXDOMAIN`）。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:92
-msgid "Errors"
-msgstr "错误"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:94
-msgid ""
-"A specific error code is displayed on the IoT system's homepage if any "
-"issues occur during the generation or reception of the HTTPS certificate."
-msgstr ""
-"如果在生成或接收 HTTPS 证书过程中出现任何问题，物联网系统主页上会显示特定的错"
-"误代码。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:98
-msgid ""
-"When you access the IoT system's homepage, it automatically checks for an "
-"HTTPS certificate and attempts to generate one if it is missing. If an error "
-"appears, refresh the page to see if the issue is resolved."
-msgstr ""
-"访问物联网系统主页时，它会自动检查是否有 HTTPS 证书，如果没有，会尝试生成一"
-"个。如果出现错误，请刷新页面查看问题是否已解决。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:103
-msgid "`ERR_IOT_HTTPS_CHECK_NO_SERVER`"
-msgstr "`ERR_IOT_HTTPS_CHECK_NO_SERVER`"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:105
-msgid ""
-"The server configuration is missing, i.e., the Odoo instance is "
-"not :doc:`connected <../connect>` to the IoT system."
-msgstr ""
-"服务器配置丢失，即 Odoo 实例未 :doc:`成功连接 <.../connect>` 到 IoT 系统。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:109
-msgid "`ERR_IOT_HTTPS_CHECK_CERT_READ_EXCEPTION`"
-msgstr "`ERR_IOT_HTTPS_CHECK_CERT_READ_EXCEPTION`"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:111
-msgid ""
-"An error occurred while attempting to read the existing HTTPS certificate. "
-"Verify that the HTTPS certificate file is readable."
-msgstr "尝试读取现有 HTTPS 证书时发生错误。验证 HTTPS 证书文件是否可读。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:115
-msgid "`ERR_IOT_HTTPS_LOAD_NO_CREDENTIAL`"
-msgstr "`ERR_IOT_HTTPS_LOAD_NO_CREDENTIAL`"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:117
-msgid ""
-"The contract and/or database :abbr:`UUID (Universal Unique Identifier)` is "
-"missing form the IoT."
-msgstr "物联网中缺少合同和/或数据库 :abbr:`UUID（通用唯一标识符）`。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:119
-msgid ""
-"Verify that both values are correctly configured. To update "
-"them, :ref:`access the IoT box's <iot/iot-box/homepage>` or :ref:`Windows "
-"virtual IoT's homepage <iot/windows-iot/homepage>`, click the :icon:`fa-"
-"cogs` (:guilabel:`cogs`) button, then click :guilabel:`Credential`."
-msgstr ""
-"验证这两个值是否配置正确。要更新它们，请 :ref:`访问物联网盒子的主页 <iot/iot-"
-"box/homepage>` 或 :ref:`Windows 虚拟物联网的主页 <iot/windows-iot/"
-"homepage>`，点击 :icon:`fa-cogs`（:guilabel:`齿轮`）按钮，然后点"
-"击 :guilabel:`证书`。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:124
-msgid "`ERR_IOT_HTTPS_LOAD_REQUEST_EXCEPTION`"
-msgstr "`ERR_IOT_HTTPS_LOAD_REQUEST_EXCEPTION`"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:126
-msgid ""
-"An unexpected error occurred while the IoT system tried to reach `<https://"
-"www.odoo.com>`_. This is likely due to network-related issues, such as:"
-msgstr ""
-"物联网系统在尝试访问 `<https://www.odoo.com>`_时发生了意外错误。这可能是由于"
-"网络相关问题造成的，例如："
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:129
-msgid "The IoT system does not have Internet access."
-msgstr "物联网系统无法访问互联网。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:130
-msgid ""
-"Network restrictions (e.g., firewalls or VPNs) are preventing communication "
-"with https://www.odoo.com."
-msgstr "网络限制（如防火墙或 VPN）阻碍了与 https://www.odoo.com 的通信。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:134
-msgid ""
-"To access the full request exception details with information regarding the "
-"error, :ref:`enable the developer mode <developer-mode>`, click the IoT "
-"system's card in the IoT app, and click :guilabel:`Download logs` on "
-"the :ref:`IoT system's form <iot/connect/IoT-form>`. To define the log "
-"levels recorded in the IoT system's log file, :ref:`access the IoT box's "
-"<iot/windows-iot/homepage>` or :ref:`Windows virtual IoT's <iot/iot-box/"
-"homepage>` homepage, click the :icon:`fa-cogs` (:guilabel:`cogs`) button, "
-"then :guilabel:`Log level` at the bottom of the page."
-msgstr ""
-"要访问包含错误信息的完整请求异常详细信息，请 :ref:`启用开发者模式<developer-"
-"mode>`，在物联网应用程序中点击物联网系统的卡片，然后在 :ref:`物联网系统的表"
-"单 <iot/connect/IoT-form>` 中点击 :guilabel:`下载日志`。要定义记录在物联网系"
-"统日志文件中的日志级别，请 :ref:`访问物联网盒子的主页 <iot/windows-iot/"
-"homepage>` 或 :ref:`Windows 虚拟物联网的 <iot/iot-box/homepage>` 主页，点"
-"击 :icon:`fa-cogs`（:guilabel:`齿轮`）按钮，然后点击页面底部的 :guilabel:`日"
-"志级别`。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:141
-msgid ""
-"To address network-related issues, contact your system or network "
-"administrator; these issues are beyond the scope of Odoo support services."
-msgstr ""
-"要解决与网络相关的问题，请联系您的系统或网络管理员；这些问题超出了 Odoo 支持"
-"服务的范围。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:145
-msgid "`ERR_IOT_HTTPS_LOAD_REQUEST_STATUS`"
-msgstr "`ERR_IOT_HTTPS_LOAD_REQUEST_STATUS`"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:147
-msgid ""
-"The IoT system successfully reached `<https://www.odoo.com>`_ but received "
-"an unexpected `HTTP response (status codes) <https://developer.mozilla.org/"
-"en-US/docs/Web/HTTP/Status>`_."
-msgstr ""
-"物联网系统成功访问了`<https://www.odoo.com>`_，但收到了异常的`HTTP 响应（状态"
-"码）<https://developer.mozilla.org/en-US/docs/Web/HTTP/Status>`_。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:150
-msgid ""
-"This error code includes the HTTP status. For example, "
-"`ERR_IOT_HTTPS_LOAD_REQUEST_STATUS 404` means the server returned a \"Page "
-"Not Found\" response."
-msgstr ""
-"该错误代码包括 HTTP 状态。例如，`ERR_IOT_HTTPS_LOAD_REQUEST_STATUS 404` 表示"
-"服务器返回了 “未找到页面” 响应。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:153
-msgid "To solve this issue:"
-msgstr "解决问题："
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:155
-msgid ""
-"Open `<https://www.odoo.com>`_ in a web browser to check if the website is "
-"temporarily down for maintenance."
-msgstr ""
-"在浏览器中打开 `<https://www.odoo.com>`_，查看网站是否因维护而暂时关闭。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:0
-msgid ""
-"If `<https://www.odoo.com>`_ is down for maintenance, wait for it to resume."
-msgstr "如果 `<https://www.odoo.com>`_ 因维护而停机，请等待其恢复。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:0
-msgid ""
-"If the website is operational, open a `support ticket <https://www.odoo.com/"
-"help>`_ and make sure to include the 3-digit HTTPS status code in the ticket."
-msgstr ""
-"如果网站可以运行，请打开 `支持票据 <https://www.odoo.com/help>`_，并确保在工"
-"单中包含 3 位 HTTPS 状态代码。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:162
-msgid "`ERR_IOT_HTTPS_LOAD_REQUEST_NO_RESULT`"
-msgstr "`ERR_IOT_HTTPS_LOAD_REQUEST_NO_RESULT`"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:164
-msgid ""
-"The IoT system successfully connected to `<https://www.odoo.com>`_, but the "
-"server refused to provide the HTTPS certificate."
-msgstr ""
-"物联网系统成功连接到 `<https://www.odoo.com>`_，但服务器拒绝提供 HTTPS 证书。"
-
-#: ../../content/applications/general/iot/iot_advanced/https_certificate_iot.rst:167
-msgid ""
-"Check that the IoT system and database meet the :ref:`eligibility "
-"requirements <iot/https_certificate_iot/iot-eligibility>` for an HTTPS "
-"certificate."
-msgstr ""
-"检查物联网系统和数据库是否符合 HTTPS 证书的 :ref:`资格要求 <iot/"
-"https_certificate_iot/iot-eligibility>` 。"
 
 #: ../../content/applications/general/iot/iot_advanced/ssh_connect.rst:3
 msgid "IoT box SSH connection"
@@ -11122,20 +10635,17 @@ msgstr "要为物联网盒子提供 :abbr:`SSH （安全外壳协议）` 连接�
 
 #: ../../content/applications/general/iot/iot_advanced/ssh_connect.rst:19
 msgid ""
-"Access the IoT box's homepage by opening the IoT app and clicking the IP "
-"address displayed on the IoT box's card."
+"Open the IoT app, click the relevant IoT box's card, and "
+"click :guilabel:`Homepage`."
 msgstr ""
-"打开物联网应用程序，点击物联网盒子卡上显示的 IP 地址，访问物联网盒子主页。"
 
-#: ../../content/applications/general/iot/iot_advanced/ssh_connect.rst:21
+#: ../../content/applications/general/iot/iot_advanced/ssh_connect.rst:20
 msgid ""
-"Click the :icon:`fa-cogs` (:guilabel:`cogs`) button at the top-right, "
-"then :guilabel:`Remote Debug`."
+"On the IoT system's homepage, click the :icon:`fa-cogs` (:guilabel:`cogs`) "
+"button at the top-right, then :guilabel:`Remote Debug`."
 msgstr ""
-"点击右上角的 :icon:`fa-cogs`（:guilabel:`齿轮`）按钮，然后点击 :guilabel:`远"
-"程调试`。"
 
-#: ../../content/applications/general/iot/iot_advanced/ssh_connect.rst:23
+#: ../../content/applications/general/iot/iot_advanced/ssh_connect.rst:22
 msgid ""
 "In the :guilabel:`Remote Debugging` popup that opens, "
 "click :guilabel:`Generate` and save the password securely. Once you close "
@@ -11148,23 +10658,378 @@ msgstr ""
 msgid "The Remote Debugging password generation window."
 msgstr "远程调试密码生成窗口。"
 
-#: ../../content/applications/general/iot/iot_advanced/ssh_connect.rst:29
+#: ../../content/applications/general/iot/iot_advanced/ssh_connect.rst:28
 msgid ""
 "Enter the :guilabel:`Authentication Token` provided by the user attempting "
 "to connect to the IoT box."
 msgstr "输入试图连接到物联网盒子的用户提供的 :guilabel:`认证令牌`。"
 
-#: ../../content/applications/general/iot/iot_advanced/ssh_connect.rst:31
+#: ../../content/applications/general/iot/iot_advanced/ssh_connect.rst:30
 msgid "Click :guilabel:`Enable Remote Debugging`."
 msgstr "点击 :guilabel:`启用远程调试`。"
 
-#: ../../content/applications/general/iot/iot_advanced/ssh_connect.rst:34
+#: ../../content/applications/general/iot/iot_advanced/ssh_connect.rst:33
 msgid ":doc:`../iot_box`"
 msgstr ":doc:`../iot_box`"
 
-#: ../../content/applications/general/iot/iot_advanced/ssh_connect.rst:35
+#: ../../content/applications/general/iot/iot_advanced/ssh_connect.rst:34
 msgid ":doc:`../connect`"
 msgstr ":doc:`../connect`"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:5
+msgid "Troubleshooting"
+msgstr "故障排除"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:8
+msgid "The pairing code does not appear or does not work"
+msgstr "配对代码不显示或不起作用"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:10
+msgid ""
+"The :ref:`pairing code <iot/connect/pairing-code>` might not be displayed or "
+"printed under the following circumstances:"
+msgstr ""
+"在下列情况下，可能无法显示或打印 :ref:`配对代码 <iot/connect/pairing-code>` "
+"："
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:13
+msgid "The IoT system is not connected to the network."
+msgstr ""
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:14
+msgid ""
+"The IoT system is already connected to an Odoo database. :ref:`Disconnect it "
+"from the database <iot/connect/disconnect>`."
+msgstr ""
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:16
+msgid ""
+"The :ref:`pairing code <iot/connect/pairing-code>` display time has expired. "
+"Restart the :ref:`IoT box <iot/iot-box/restart>` or the :ref:`Windows "
+"virtual IoT service <iot/windows_iot/restart>` to generate and display the "
+"pairing code."
+msgstr ""
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:21
+msgid "The IoT system does not connect to the database"
+msgstr ""
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:23
+msgid ""
+"The IoT system might take a few minutes to restart when it connects to a "
+"database. If it still does not appear after a few minutes:"
+msgstr ""
+"物联网系统在连接数据库时可能需要几分钟才能重新启动。如果几分钟后仍未出现："
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:26
+msgid ""
+"Verify that the IoT system can reach the database and the server does not "
+"use a multi-database environment."
+msgstr "验证物联网系统是否可以访问数据库，服务器是否使用了多数据库环境。"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:28
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:46
+msgid ""
+"Restart the :ref:`IoT box <iot/iot-box/restart>` or the :ref:`Windows "
+"virtual IoT service <iot/windows_iot/restart>`."
+msgstr ""
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:32
+msgid "The IoT system is connected to the Odoo database but cannot be reached"
+msgstr ""
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:34
+msgid ""
+"Verify that the IoT system and the computer running the Odoo database are "
+"connected to the same network and :ref:`update the DNS settings <iot/"
+"troubleshooting/dns>` if necessary."
+msgstr ""
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:38
+msgid ""
+"The Windows virtual IoT's homepage cannot be accessed from another device"
+msgstr "无法从其他设备访问 Windows 虚拟物联网的主页"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:40
+msgid ""
+"Ensure the device is connected to the same network as the Windows virtual "
+"IoT."
+msgstr ""
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:41
+msgid "Check the :ref:`iot/windows-iot/firewall`."
+msgstr "检查 :ref:`iot/windows-iot/firewall`。"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:44
+msgid "The IoT system does not work after an Odoo upgrade"
+msgstr ""
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:49
+msgid ""
+"If the issue persists, :ref:`update its image <iot/updating_iot/image-code>` "
+"by flashing the IoT box's card or :ref:`uninstalling the Windows virtual IoT "
+"program <iot/windows_iot/uninstall>` and :ref:`reinstalling the virtual IoT "
+"package <iot/windows-iot/installation>`."
+msgstr ""
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:56
+msgid ""
+"The IoT system's homepage can be accessed using its IP address but not the "
+"`xxx.odoo-iot.com` URL"
+msgstr ""
+"使用 IP 地址可以访问物联网系统的主页，但不能访问 `xxx.odoo-iot.com` URL"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:58
+msgid ""
+"Contact your system or network administrator to address the issue. Network-"
+"related problems are beyond the scope of Odoo support services."
+msgstr ""
+"请联系您的系统或网络管理员解决问题。网络相关问题不属于 Odoo 支持服务的范围。"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:61
+msgid ""
+"If the router allows manual :abbr:`DNS (Domain Name System)` configuration, "
+"update the settings to use `Google DNS <https://developers.google.com/speed/"
+"public-dns>`_."
+msgstr ""
+"如果路由器允许手动 :abbr:`DNS（域名系统）` 配置，请将设置更新为使用 `Google "
+"DNS <https://developers.google.com/speed/public-dns>`_。"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:63
+msgid ""
+"If the router does not support this, you need to update the DNS settings "
+"directly on each device that interacts with the IoT system to use `Google "
+"DNS <https://developers.google.com/speed/public-dns>`_. Instructions for "
+"configuring DNS on individual devices can be found on the respective "
+"manufacturer's website."
+msgstr ""
+"如果路由器不支持此功能，则需要直接更新与物联网系统交互的每个设备上的 DNS 设"
+"置，以使用 `Google DNS <https://developers.google.com/speed/public-dns>`_。有"
+"关在各设备上配置 DNS 的说明，可在各制造商的网站上找到。"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:69
+msgid ""
+"Some IoT devices, such as payment terminals, likely do not require DNS "
+"changes, as they are typically pre-configured with custom DNS settings."
+msgstr ""
+"一些物联网设备（如支付终端）可能不需要更改 DNS，因为它们通常都预先配置了自定"
+"义 DNS 设置。"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:71
+msgid ""
+"On some browsers, an error code mentioning the DNS (such as "
+"`DNS_PROBE_FINISHED_NXDOMAIN`) is displayed."
+msgstr ""
+"在某些浏览器上，会显示提及 DNS 的错误代码（如 "
+"`DNS_PROBE_FINISHED_NXDOMAIN`）。"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:77
+msgid "HTTPS certificate generation issues and errors"
+msgstr "HTTPS 证书生成问题和错误"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:80
+msgid "The HTTPS certificate does not generate"
+msgstr "HTTPS 证书不会生成"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:82
+msgid "Potential causes include the following:"
+msgstr "潜在原因包括以下几点："
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:84
+msgid ""
+"The database doesn't meet the :ref:`eligibility requirements <iot/"
+"https_certificate_iot/iot-eligibility>` for generating an :ref:`HTTPS "
+"certificate <iot/connect/https_certificate>`."
+msgstr ""
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:87
+msgid ""
+"The firewall is preventing the HTTPS certificate from generating correctly. "
+"In this case, deactivate the firewall until the certificate is successfully "
+"generated."
+msgstr ""
+"防火墙阻止了 HTTPS 证书正确生成。在这种情况下，请停用防火墙，直到证书成功生"
+"成。"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:91
+msgid ""
+"Some devices, such as routers with a built-in firewall, can prevent the "
+"HTTPS certificate from generating."
+msgstr "某些设备，如内置防火墙的路由器，可能会阻止 HTTPS 证书的生成。"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:95
+msgid "Errors"
+msgstr "错误"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:97
+msgid ""
+"A specific error code is displayed on the IoT system's homepage if any "
+"issues occur during the generation or reception of the ref:`HTTPS "
+"certificate <iot/connect/https_certificate>`."
+msgstr ""
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:101
+msgid ""
+"When you access the IoT system's homepage, it automatically checks for an "
+"HTTPS certificate and attempts to generate one if it is missing. If an error "
+"appears, refresh the page to see if the issue is resolved."
+msgstr ""
+"访问物联网系统主页时，它会自动检查是否有 HTTPS 证书，如果没有，会尝试生成一"
+"个。如果出现错误，请刷新页面查看问题是否已解决。"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:106
+msgid "`ERR_IOT_HTTPS_CHECK_NO_SERVER`"
+msgstr "`ERR_IOT_HTTPS_CHECK_NO_SERVER`"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:108
+msgid ""
+"The server configuration is missing, i.e., the database is "
+"not :doc:`connected <../connect>` to the IoT system."
+msgstr ""
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:112
+msgid "`ERR_IOT_HTTPS_CHECK_CERT_READ_EXCEPTION`"
+msgstr "`ERR_IOT_HTTPS_CHECK_CERT_READ_EXCEPTION`"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:114
+msgid ""
+"An error occurred while attempting to read the existing ref:`HTTPS "
+"certificate <iot/connect/https_certificate>`. Verify that the HTTPS "
+"certificate file is readable."
+msgstr ""
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:119
+msgid "`ERR_IOT_HTTPS_LOAD_NO_CREDENTIAL`"
+msgstr "`ERR_IOT_HTTPS_LOAD_NO_CREDENTIAL`"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:121
+msgid ""
+"The contract and/or database :abbr:`UUID (Universal Unique Identifier)` is "
+"missing from the IoT."
+msgstr ""
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:123
+msgid ""
+"Verify that both values are correctly configured. To update "
+"them, :ref:`access the IoT box's <iot/iot-box/homepage>` or :ref:`Windows "
+"virtual IoT's homepage <iot/windows-iot/homepage>`, click the :icon:`fa-"
+"cogs` (:guilabel:`cogs`) button, then click :guilabel:`Credentials`."
+msgstr ""
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:128
+msgid "`ERR_IOT_HTTPS_LOAD_REQUEST_EXCEPTION`"
+msgstr "`ERR_IOT_HTTPS_LOAD_REQUEST_EXCEPTION`"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:130
+msgid ""
+"An unexpected error occurred while the IoT system tried to reach `<https://"
+"www.odoo.com>`_. This is likely due to network-related issues, such as:"
+msgstr ""
+"物联网系统在尝试访问 `<https://www.odoo.com>`_时发生了意外错误。这可能是由于"
+"网络相关问题造成的，例如："
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:133
+msgid "The IoT system does not have Internet access."
+msgstr "物联网系统无法访问互联网。"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:134
+msgid ""
+"Network restrictions (e.g., firewalls or VPNs) are preventing communication "
+"with https://www.odoo.com."
+msgstr "网络限制（如防火墙或 VPN）阻碍了与 https://www.odoo.com 的通信。"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:138
+msgid ""
+"To access the full request exception details with information regarding the "
+"error, :ref:`enable the developer mode <developer-mode>`, click the IoT "
+"system's card in the IoT app, and click :guilabel:`Download logs` on "
+"the :ref:`IoT system's form <iot/connect/IoT-form>`. To define the log "
+"levels recorded in the IoT system's log file, :ref:`access the IoT box's "
+"<iot/windows-iot/homepage>` or :ref:`Windows virtual IoT's <iot/iot-box/"
+"homepage>` homepage, click the :icon:`fa-cogs` (:guilabel:`cogs`) button, "
+"then :guilabel:`Log level` at the bottom of the page."
+msgstr ""
+"要访问包含错误信息的完整请求异常详细信息，请 :ref:`启用开发者模式<developer-"
+"mode>`，在物联网应用程序中点击物联网系统的卡片，然后在 :ref:`物联网系统的表"
+"单 <iot/connect/IoT-form>` 中点击 :guilabel:`下载日志`。要定义记录在物联网系"
+"统日志文件中的日志级别，请 :ref:`访问物联网盒子的主页 <iot/windows-iot/"
+"homepage>` 或 :ref:`Windows 虚拟物联网的 <iot/iot-box/homepage>` 主页，点"
+"击 :icon:`fa-cogs`（:guilabel:`齿轮`）按钮，然后点击页面底部的 :guilabel:`日"
+"志级别`。"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:145
+msgid ""
+"To address network-related issues, contact your system or network "
+"administrator; these issues are beyond the scope of Odoo support services."
+msgstr ""
+"要解决与网络相关的问题，请联系您的系统或网络管理员；这些问题超出了 Odoo 支持"
+"服务的范围。"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:149
+msgid "`ERR_IOT_HTTPS_LOAD_REQUEST_STATUS`"
+msgstr "`ERR_IOT_HTTPS_LOAD_REQUEST_STATUS`"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:151
+msgid ""
+"The IoT system successfully reached `<https://www.odoo.com>`_ but received "
+"an unexpected `HTTP response (status codes) <https://developer.mozilla.org/"
+"en-US/docs/Web/HTTP/Status>`_."
+msgstr ""
+"物联网系统成功访问了`<https://www.odoo.com>`_，但收到了异常的`HTTP 响应（状态"
+"码）<https://developer.mozilla.org/en-US/docs/Web/HTTP/Status>`_。"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:154
+msgid ""
+"This error code includes the HTTP status. For example, "
+"`ERR_IOT_HTTPS_LOAD_REQUEST_STATUS 404` means the server returned a \"Page "
+"Not Found\" response."
+msgstr ""
+"该错误代码包括 HTTP 状态。例如，`ERR_IOT_HTTPS_LOAD_REQUEST_STATUS 404` 表示"
+"服务器返回了 “未找到页面” 响应。"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:157
+msgid "To solve this issue:"
+msgstr "解决问题："
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:159
+msgid ""
+"Open `<https://www.odoo.com>`_ in a web browser to check if the website is "
+"temporarily down for maintenance."
+msgstr ""
+"在浏览器中打开 `<https://www.odoo.com>`_，查看网站是否因维护而暂时关闭。"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:0
+msgid ""
+"If `<https://www.odoo.com>`_ is down for maintenance, wait for it to resume."
+msgstr "如果 `<https://www.odoo.com>`_ 因维护而停机，请等待其恢复。"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:0
+msgid ""
+"If the website is operational, open a `support ticket <https://www.odoo.com/"
+"help>`_ and make sure to include the 3-digit HTTPS status code in the ticket."
+msgstr ""
+"如果网站可以运行，请打开 `支持票据 <https://www.odoo.com/help>`_，并确保在工"
+"单中包含 3 位 HTTPS 状态代码。"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:166
+msgid "`ERR_IOT_HTTPS_LOAD_REQUEST_NO_RESULT`"
+msgstr "`ERR_IOT_HTTPS_LOAD_REQUEST_NO_RESULT`"
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:168
+msgid ""
+"The IoT system successfully connected to `<https://www.odoo.com>`_, but the "
+"server refused to provide the ref:`HTTPS certificate <iot/connect/"
+"https_certificate>`."
+msgstr ""
+
+#: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:171
+msgid ""
+"Check that the IoT system and database meet the :ref:`eligibility "
+"requirements <iot/https_certificate_iot/iot-eligibility>` for an HTTPS "
+"certificate."
+msgstr ""
+"检查物联网系统和数据库是否符合 HTTPS 证书的 :ref:`资格要求 <iot/"
+"https_certificate_iot/iot-eligibility>` 。"
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:3
 msgid "IoT system updates"
@@ -11254,13 +11119,15 @@ msgstr "`下载 balenaEtcher。 <https://etcher.balena.io/#download-etcher>`_"
 msgid "Insert the IoT box's micro SD card into the computer or adapter."
 msgstr "将物联网盒子的 micro SD 卡插入电脑或适配器。"
 
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:42
+#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:0
 msgid ""
 "Open balenaEtcher, click :guilabel:`Flash from URL`, and enter the following "
-"URL: `http://nightly.odoo.com/master/iotbox/iotbox-latest.zip`."
+"URL:"
 msgstr ""
-"打开 balenaEtcher，点击 :guilabel:`从 URL 闪写`，输入以下 URL：`http://"
-"nightly.odoo.com/master/iotbox/iotbox-latest.zip`。"
+
+#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:0
+msgid "`http://nightly.odoo.com/master/iotbox/iotbox-latest.zip`."
+msgstr ""
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:44
 msgid "Click :guilabel:`Select target` and select the SD card."
@@ -11288,14 +11155,12 @@ msgstr ""
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:56
 msgid ""
-"This process may take over 30 minutes. **Do not turn off or unplug the IoT "
-"box** during this time, as doing so could leave the device in an "
-"inconsistent state, requiring the IoT box to be reflashed with a new image."
+"**Do not turn off or unplug the IoT box** during the update process, as "
+"doing so could leave the device in an inconsistent state, requiring the IoT "
+"box to be reflashed with a new image."
 msgstr ""
-"此过程可能需要 30 分钟以上。在此期间，**请勿关闭或拔下物联网盒子**，因为这样"
-"做可能会使设备处于不一致的状态，需要重新刷新物联网盒的映像。"
 
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:62
+#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:61
 msgid ""
 "To update the Windows virtual IoT's image and code, :ref:`uninstall the "
 "program <iot/windows_iot/uninstall>` and :ref:`reinstall <iot/windows-iot/"
@@ -11304,11 +11169,11 @@ msgstr ""
 "要更新 Windows 虚拟物联网的映像和代码，请 :ref:`卸载程序 <iot/windows_iot/"
 "uninstall>` 并 :ref:`重新安装 <iot/windows-iot/installation>` 最新软件包。"
 
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:69
+#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:68
 msgid "Handler (driver) update"
 msgstr "处理程序（驱动程序）更新"
 
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:71
+#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:70
 msgid ""
 "To update the IoT system's handlers (i.e., drivers and interfaces) and "
 "synchronize them with the configured server handler's code, for example, to "
@@ -11319,7 +11184,7 @@ msgstr ""
 "步，例如，解决 :doc:`设备 <../devices>` 与物联网系统无法正常运行的问题，步骤"
 "如下："
 
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:75
+#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:74
 msgid ""
 "Access the :ref:`IoT box's <iot/iot-box/homepage>` or :ref:`Windows virtual "
 "IoT's <iot/windows-iot/homepage>` homepage and click the :icon:`fa-cogs` "
@@ -11329,18 +11194,18 @@ msgstr ""
 "网的主页 <iot/windows-iot/homepage>`，然后点击右上角的 :icon:`fa-cogs` "
 "（:guilabel:`齿轮`）按钮。"
 
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:78
+#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:77
 msgid "Click :guilabel:`Update` in the :guilabel:`Version` section."
 msgstr "点击 :guilabel:`版本` 部分中的 :guilabel:`更新`。"
 
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:79
+#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:78
 msgid ""
 "In the :guilabel:`Update` popup that opens, click :guilabel:`Force Drivers "
 "Update`."
 msgstr ""
 "在打开的 :guilabel:`更新` 弹出窗口中，点击 :guilabel:`强制更新驱动程序`。"
 
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:82
+#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:81
 msgid ""
 "If you have an :doc:`on-premise </administration/on_premise>` "
 "or :doc:`Odoo.sh </administration/odoo_sh>` database, the configured server "
@@ -11348,7 +11213,7 @@ msgid ""
 "and patches."
 msgstr ""
 
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:87
+#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:86
 msgid ""
 "A handler update is also performed automatically every time the IoT system "
 "is restarted unless the :guilabel:`Automatic drivers update` option is "
@@ -11364,26 +11229,18 @@ msgid "To start using an IoT box:"
 msgstr "要开始使用物联网盒子："
 
 #: ../../content/applications/general/iot/iot_box.rst:7
-msgid ""
-"Make sure you have a :ref:`valid IoT box subscription <iot/iot/iot-"
-"subscription>` in addition to your Odoo subscription."
-msgstr ""
-"除 Odoo 订阅外，请确保您还有 :ref:`有效物联网盒子订阅 <iot/iot/iot-"
-"subscription>` 。"
-
-#: ../../content/applications/general/iot/iot_box.rst:9
 msgid "Connect your :doc:`devices <devices>` to the IoT box."
 msgstr "将 :doc:`设备<devices>` 连接到物联网盒子。"
 
-#: ../../content/applications/general/iot/iot_box.rst:10
+#: ../../content/applications/general/iot/iot_box.rst:8
 msgid ":ref:`Connect the IoT box to the network <iot/iot_box/network>`."
 msgstr ":ref:`将物联网盒子连接到网络 <iot/iot_box/network>`。"
 
-#: ../../content/applications/general/iot/iot_box.rst:11
+#: ../../content/applications/general/iot/iot_box.rst:9
 msgid ":doc:`Connect the IoT box to your Odoo database <connect>`."
 msgstr ":doc:`将物联网盒子连接到 Odoo 数据库<connect>`。"
 
-#: ../../content/applications/general/iot/iot_box.rst:14
+#: ../../content/applications/general/iot/iot_box.rst:12
 msgid ""
 "`Video: How to Set Up and Use the Odoo IoT Box: A Beginner's Guide <https://"
 "www.youtube.com/watch?v=w2_Dcm3r_7o&ab_channel=Odoo>`_"
@@ -11391,28 +11248,11 @@ msgstr ""
 "`视频：如何设置和使用 Odoo 物联网盒子：新手指南 <https://www.youtube.com/"
 "watch?v=w2_Dcm3r_7o&ab_channel=Odoo>`_"
 
-#: ../../content/applications/general/iot/iot_box.rst:17
-msgid ""
-"Devices can also be connected after the IoT box is added to the network and/"
-"or connected to the database; however, a reboot of the IoT box might be "
-"required."
-msgstr ""
-"设备也可以在物联网盒子添加到网络和/或连接到数据库后进行连接；不过，可能需要重"
-"新启动物联网盒子。"
-
-#: ../../content/applications/general/iot/iot_box.rst:21
-msgid ""
-"Never make the IoT box accessible from the public Internet. IoT systems are "
-"designed to provide your database with access to devices on your local "
-"network. Exposing them to the public Internet would create a **security "
-"risk**."
-msgstr ""
-
-#: ../../content/applications/general/iot/iot_box.rst:28
+#: ../../content/applications/general/iot/iot_box.rst:18
 msgid "Network connection"
 msgstr "网络连接"
 
-#: ../../content/applications/general/iot/iot_box.rst:30
+#: ../../content/applications/general/iot/iot_box.rst:20
 msgid ""
 "The IoT box can be connected to the network via :ref:`Ethernet <iot/iot_box/"
 "network-ethernet>` or :ref:`Wi-Fi <iot/iot_box/network-wifi>`."
@@ -11420,19 +11260,25 @@ msgstr ""
 "物联网盒可通过 :ref:`Ethernet <iot/iot_box/network-ethernet>` 或 :ref:`Wi-Fi "
 "<iot/iot_box/network-wifi>` 连接到网络。"
 
-#: ../../content/applications/general/iot/iot_box.rst:34
+#: ../../content/applications/general/iot/iot_box.rst:24
 msgid ""
-"**All** devices must be connected to the **same network**: the IoT box, the "
-"device(s) connected to the IoT box, and the computer connected to Odoo."
+"It is recommended to connect the IoT box to the same network as "
+"the :doc:`devices <devices>` connecting to it."
 msgstr ""
-"**所有**设备必须连接到**相同的网络**：物联网盒子、连接到物联网盒子的设备、以"
-"及连接到 Odoo 的计算机。"
 
-#: ../../content/applications/general/iot/iot_box.rst:40
+#: ../../content/applications/general/iot/iot_box.rst:28
+msgid ""
+"Never make the IoT box accessible from the public Internet. IoT systems are "
+"designed to provide your database with access to devices on your local "
+"network. Exposing them to the public Internet would create a **security "
+"risk**."
+msgstr ""
+
+#: ../../content/applications/general/iot/iot_box.rst:35
 msgid "Ethernet"
 msgstr "以太网"
 
-#: ../../content/applications/general/iot/iot_box.rst:42
+#: ../../content/applications/general/iot/iot_box.rst:37
 msgid ""
 "Plug the Ethernet cable into the IoT box's Ethernet port and an available "
 "port on your router, then connect the IoT box to a power source."
@@ -11440,23 +11286,23 @@ msgstr ""
 "将以太网电缆插入物联网盒子的以太网端口和路由器上的可用端口，然后将物联网盒子"
 "连接到电源。"
 
-#: ../../content/applications/general/iot/iot_box.rst:48
+#: ../../content/applications/general/iot/iot_box.rst:43
 msgid "Wi-Fi"
 msgstr "Wi-Fi"
 
-#: ../../content/applications/general/iot/iot_box.rst:50
+#: ../../content/applications/general/iot/iot_box.rst:45
 msgid ""
 "Make sure no Ethernet cable is connected to the IoT box and follow these "
 "steps:"
 msgstr "确保没有以太网电缆连接到物联网盒子，然后按照以下步骤操作："
 
-#: ../../content/applications/general/iot/iot_box.rst:52
+#: ../../content/applications/general/iot/iot_box.rst:47
 msgid ""
 "Connect the IoT box to a power source and wait a few minutes for it to power "
 "on."
 msgstr "将物联网盒子连接到电源上，等待几分钟让其通电。"
 
-#: ../../content/applications/general/iot/iot_box.rst:53
+#: ../../content/applications/general/iot/iot_box.rst:48
 msgid ""
 "Access your computer's Wi-Fi settings and select the IoT box's network. The "
 "network name is in the format `IoTBox-xxxxxxxxxxxx` (where `xxxxxxxxxxxx` is "
@@ -11465,7 +11311,7 @@ msgstr ""
 "访问计算机的 Wi-Fi 设置并选择物联网盒子的网络。网络名称格式为 `IoTBox-"
 "xxxxxxxxxxxx`（其中 `xxxxxxxxxxxx` 为唯一标识符）。"
 
-#: ../../content/applications/general/iot/iot_box.rst:55
+#: ../../content/applications/general/iot/iot_box.rst:50
 msgid ""
 "Connect to the IoT box's Wi-Fi network and sign into it; your browser should "
 "automatically open and redirect to the :ref:`IoT box's homepage <iot/iot-box/"
@@ -11474,24 +11320,25 @@ msgstr ""
 "连接到物联网盒子的 Wi-Fi 网络并登录；浏览器应自动打开并重定向到 :ref:`物联网"
 "盒子的主页 <iot/iot-box/homepage>`。"
 
-#: ../../content/applications/general/iot/iot_box.rst:59
+#: ../../content/applications/general/iot/iot_box.rst:54
 msgid ""
 "Depending on your operating system, the browser might not open and redirect "
 "to the IoT box's homepage. In this case, open your browser manually and "
-"navigate to `http://10.11.12.1` or any url starting with **http** (e.g., "
+"navigate to `http://10.11.12.1` or any URL starting with **http** (e.g., "
 "`http://odoo.com`)."
 msgstr ""
-"根据操作系统的不同，浏览器可能无法打开并重定向到物联网盒子的主页。在这种情况"
-"下，请手动打开浏览器并导航到 `http://10.11.12.1` 或任何以 **http** 开头的网址"
-"（如 `http://odoo.com`）。"
 
-#: ../../content/applications/general/iot/iot_box.rst:63
+#: ../../content/applications/general/iot/iot_box.rst:58
 msgid ""
 "On the IoT box's homepage, click :guilabel:`Configure` next to "
 "the :guilabel:`Internet Status` section."
 msgstr ""
 "在物联网盒子的主页上，点击 :guilabel:`配置` 旁边的 :guilabel:`互联网状态` 部"
 "分。"
+
+#: ../../content/applications/general/iot/iot_box.rst:0
+msgid "IoT box's WiFi hotspot"
+msgstr ""
 
 #: ../../content/applications/general/iot/iot_box.rst:65
 msgid ""
@@ -11510,11 +11357,52 @@ msgstr ""
 "连接到 Wi-Fi 网络后，物联网盒子就会停止发射 Wi-Fi 信号，电脑应自动重新连接到"
 "原来的网络。如果没有，请手动重新连接。"
 
-#: ../../content/applications/general/iot/iot_box.rst:76
+#: ../../content/applications/general/iot/iot_box.rst:74
+msgid ""
+"If the IoT box is connected to an :doc:`external monitor <devices/screen>`, "
+"you can also scan the first QR code displayed on the screen to connect to "
+"the network, then scan the second QR code to access the IoT "
+"box's :ref:`homepage <iot/iot-box/homepage>`. On the homepage, "
+"click :guilabel:`Configure` in the :guilabel:`Internet Status` section, "
+"select the relevant Wi-Fi network, enter the password, and "
+"click :guilabel:`Connect`."
+msgstr ""
+
+#: ../../content/applications/general/iot/iot_box.rst:83
+msgid "LED status"
+msgstr ""
+
+#: ../../content/applications/general/iot/iot_box.rst:85
+msgid ""
+"The IoT box features two LEDs, located to the right of the SD card slot, "
+"which show its status and help with troubleshooting when no display is "
+"connected. The LEDs can be interpreted as follows:"
+msgstr ""
+
+#: ../../content/applications/general/iot/iot_box.rst:88
+msgid ""
+"**Red LED lit**: The IoT box has no Internet connection. Ensure the Ethernet "
+"cable is properly connected or :ref:`connect the IoT box via Wi-Fi <iot/"
+"iot_box/network-wifi>`."
+msgstr ""
+
+#: ../../content/applications/general/iot/iot_box.rst:90
+msgid ""
+"**Green LED flashing**: The IoT box is awaiting :doc:`connection to a "
+"database <connect>`."
+msgstr ""
+
+#: ../../content/applications/general/iot/iot_box.rst:91
+msgid ""
+"**Green LED constantly lit**: The IoT box is connected to a database; no "
+"further action is required."
+msgstr ""
+
+#: ../../content/applications/general/iot/iot_box.rst:97
 msgid "IoT box homepage"
 msgstr "物联网盒子主页"
 
-#: ../../content/applications/general/iot/iot_box.rst:78
+#: ../../content/applications/general/iot/iot_box.rst:99
 msgid ""
 "To access the IoT box's homepage, open a web browser **on the same network "
 "as the IoT box** and navigate to the IoT box's IP address."
@@ -11526,21 +11414,21 @@ msgstr ""
 msgid "IoT box's homepage"
 msgstr "物联网盒子主页"
 
-#: ../../content/applications/general/iot/iot_box.rst:85
+#: ../../content/applications/general/iot/iot_box.rst:106
 msgid "The IoT box's IP address can be retrieved by:"
 msgstr "可以通过以下方式检索物联网盒子的 IP 地址："
 
-#: ../../content/applications/general/iot/iot_box.rst:87
+#: ../../content/applications/general/iot/iot_box.rst:108
 msgid ""
-"connecting the IoT box to an external monitor: the IP address is displayed "
-"on the screen."
-msgstr "将物联网盒子连接到外部显示屏：屏幕上会显示 IP 地址。"
+"connecting the IoT box to an :doc:`external monitor <devices/screen>`: the "
+"IP address is displayed on the screen."
+msgstr ""
 
 #: ../../content/applications/general/iot/iot_box.rst:0
-msgid "POS display with IoT box's IP address"
-msgstr "显示物联网盒子 IP 地址的 POS 显示屏"
+msgid "Status display with IoT box's IP address"
+msgstr ""
 
-#: ../../content/applications/general/iot/iot_box.rst:93
+#: ../../content/applications/general/iot/iot_box.rst:115
 msgid ""
 "connecting the IoT box to a `supported receipt or label printer <https://"
 "www.odoo.com/app/iot-hardware>`_ with a USB cable: the IP address is "
@@ -11549,49 +11437,41 @@ msgstr ""
 "将 IoT 盒子通过 USB 数据线连接到 `支持的票据或标签打印机 <https://"
 "www.odoo.com/app/iot-hardware>`_：IP 地址会自动打印出来。"
 
-#: ../../content/applications/general/iot/iot_box.rst:95
+#: ../../content/applications/general/iot/iot_box.rst:117
 msgid ""
 "accessing the administrator interface of the router to which the IoT box is "
 "connected or using third-party software to scan the network."
 msgstr "访问物联网盒子所连接路由器的管理员界面，或使用第三方软件扫描网络。"
 
-#: ../../content/applications/general/iot/iot_box.rst:98
+#: ../../content/applications/general/iot/iot_box.rst:121
+msgid ""
+"If the IoT box is connected to an :doc:`external monitor <devices/screen>` "
+"or a :doc:`printer <devices/printer>`, its homepage can also be accessed by "
+"scanning the displayed or printed QR code with a device connected to the "
+"same network as the IoT box."
+msgstr ""
+
+#: ../../content/applications/general/iot/iot_box.rst:125
 msgid ""
 "Once the IoT box is :doc:`connected to the Odoo database <connect>`, its "
-"homepage can be accessed from Odoo by opening the IoT app and clicking the "
-"URL displayed on the IoT box's card."
-msgstr ""
-"物联网盒子 :doc:`连接至 Odoo 数据库后<connect>`，可通过打开物联网应用程序并点"
-"击物联网盒子卡片上显示的 URL 从 Odoo 访问其主页。"
-
-#: ../../content/applications/general/iot/iot_box.rst:104
-msgid "LED status"
+"homepage can be accessed from the IoT app: click the relevant IoT box's "
+"card, then click :guilabel:`Homepage`."
 msgstr ""
 
-#: ../../content/applications/general/iot/iot_box.rst:106
+#: ../../content/applications/general/iot/iot_box.rst:131
+msgid "IoT box restart"
+msgstr ""
+
+#: ../../content/applications/general/iot/iot_box.rst:133
 msgid ""
-"The IoT box features two LEDs, located to the right of the SD card slot, "
-"which show its status and help with troubleshooting when no display is "
-"connected. The LEDs can be interpreted as follows:"
+"To manually restart the IoT box, access its :ref:`homepage <iot/iot-box/"
+"homepage>`, then click the :icon:`fa-power-off` :guilabel:`(power off)` "
+"button in the top-right corner."
 msgstr ""
 
-#: ../../content/applications/general/iot/iot_box.rst:109
+#: ../../content/applications/general/iot/iot_box.rst:137
 msgid ""
-"**Red LED lit**: The IoT box has no Internet connection. Ensure the Ethernet "
-"cable is properly connected or :ref:`connect the IoT box via Wi-Fi <iot/"
-"iot_box/network-wifi>`."
-msgstr ""
-
-#: ../../content/applications/general/iot/iot_box.rst:111
-msgid ""
-"**Green LED flashing**: The IoT box is awaiting :doc:`connection to a "
-"database <connect>`."
-msgstr ""
-
-#: ../../content/applications/general/iot/iot_box.rst:112
-msgid ""
-"**Green LED constantly lit**: The IoT box is connected to a database; no "
-"further action is required."
+"You can also fully reboot the IoT box by unplugging and plugging it back in."
 msgstr ""
 
 #: ../../content/applications/general/iot/windows_iot.rst:5
@@ -11600,48 +11480,44 @@ msgstr "开始使用 Windows 虚拟物联网："
 
 #: ../../content/applications/general/iot/windows_iot.rst:7
 msgid ""
-"Make sure all :ref:`prerequisites <iot/windows-iot/prerequisites>` are met."
-msgstr "确保满足所有 :ref:`先决条件 <iot/windows-iot/prerequisites>` 要求。"
-
-#: ../../content/applications/general/iot/windows_iot.rst:8
-msgid ""
-":ref:`Install the Windows virtual IoT <iot/windows-iot/installation>` on a "
-"Windows computer."
+"Make sure the computer runs an updated version of Windows (Windows 10 or "
+"Windows 11), whether it's a laptop, desktop, or server."
 msgstr ""
-":ref:`在 Windows 计算机上安装 Windows 虚拟物联网 <iot/windows-iot/"
-"installation>` 。"
 
 #: ../../content/applications/general/iot/windows_iot.rst:9
-msgid ":ref:`Configure the Windows Firewall <iot/windows-iot/firewall>`."
-msgstr ":ref:`配置 Windows 防火墙 <iot/windows-iot/firewall>`。"
+msgid ""
+":ref:`Install the Windows virtual IoT <iot/windows-iot/installation>` on the "
+"Windows computer."
+msgstr ""
 
 #: ../../content/applications/general/iot/windows_iot.rst:10
 msgid "Connect your :doc:`devices <devices>` to the Windows virtual IoT."
 msgstr "将 :doc:`设备<devices>` 连接到 Windows 虚拟物联网。"
 
 #: ../../content/applications/general/iot/windows_iot.rst:11
+msgid ":ref:`Configure the Windows Firewall <iot/windows-iot/firewall>`."
+msgstr ":ref:`配置 Windows 防火墙 <iot/windows-iot/firewall>`。"
+
+#: ../../content/applications/general/iot/windows_iot.rst:12
 msgid ":doc:`Connect the Windows virtual IoT to your Odoo database <connect>`."
 msgstr ":doc:`将 Windows 虚拟物联网连接到 Odoo 数据库<connect>`。"
 
-#: ../../content/applications/general/iot/windows_iot.rst:18
+#: ../../content/applications/general/iot/windows_iot.rst:15
 msgid ""
-"The following prerequisites must be met before setting up and using the "
-"Windows virtual IoT:"
-msgstr "在设置和使用 Windows 虚拟物联网之前，必须满足以下前提条件："
-
-#: ../../content/applications/general/iot/windows_iot.rst:20
-msgid "A valid :ref:`IoT box subscription <iot/iot/iot-subscription>`."
-msgstr "有效的 :ref:`物联网盒子订阅 <iot/iot/iot-subscription>`。"
-
-#: ../../content/applications/general/iot/windows_iot.rst:21
-msgid ""
-"An updated and recent version of Windows (i.e., Windows 10 or Windows 11) "
-"installed on a Windows computer (laptop, desktop, or server)."
+":abbr:`MRP (Material Requirement Planning)` devices, including cameras and "
+"measurement tools, are not compatible with Windows virtual IoT."
 msgstr ""
-"Windows 电脑（笔记本电脑、台式电脑或服务器）上安装的 Windows 最新版本（即 "
-"Windows 10 或 Windows 11）。"
+":abbr:`MRP（物料需求计划）` 设备，包括摄像头和测量工具在内，都与 Windows 虚拟"
+"物联网不兼容。"
 
-#: ../../content/applications/general/iot/windows_iot.rst:31
+#: ../../content/applications/general/iot/windows_iot.rst:17
+msgid ""
+"It is also possible to create a Windows Virtual Machine on a macOS/Linux "
+"computer. However, this option is not supported by Odoo, and no "
+"troubleshooting assistance will be provided."
+msgstr ""
+
+#: ../../content/applications/general/iot/windows_iot.rst:24
 msgid ""
 "Never make the Windows virtual IoT accessible from the public Internet. IoT "
 "systems are designed to provide your database with access to devices on your "
@@ -11649,21 +11525,21 @@ msgid ""
 "**security risk**."
 msgstr ""
 
-#: ../../content/applications/general/iot/windows_iot.rst:38
+#: ../../content/applications/general/iot/windows_iot.rst:31
 msgid "Installation"
 msgstr "安装"
 
-#: ../../content/applications/general/iot/windows_iot.rst:40
+#: ../../content/applications/general/iot/windows_iot.rst:33
 msgid "To install the Windows virtual IoT on a Windows computer:"
 msgstr "在 Windows 计算机上安装 Windows 虚拟物联网："
 
-#: ../../content/applications/general/iot/windows_iot.rst:42
+#: ../../content/applications/general/iot/windows_iot.rst:35
 msgid ""
 "Access `Odoo's download page <https://odoo.com/download>`_, scroll down to "
 "the :guilabel:`Virtual IOT` section, and click :guilabel:`Download`."
 msgstr ""
 
-#: ../../content/applications/general/iot/windows_iot.rst:44
+#: ../../content/applications/general/iot/windows_iot.rst:37
 msgid ""
 "Open the downloaded :file:`.exe` file, allow the app to make changes to your "
 "device, select a language, and click :guilabel:`OK`."
@@ -11671,35 +11547,34 @@ msgstr ""
 "打开下载的 :file:`.exe` 文件，让应用程序对设备进行更改，选择语言，然后点"
 "击 :guilabel:`确认`。"
 
-#: ../../content/applications/general/iot/windows_iot.rst:46
+#: ../../content/applications/general/iot/windows_iot.rst:39
 msgid ""
 "Click :guilabel:`Next`, then :guilabel:`I Agree` to accept the terms and "
 "conditions and continue."
 msgstr ""
 "点击 :guilabel:`下一步`，然后点击 :guilabel:`我同意` 接受条款和条件并继续。"
 
-#: ../../content/applications/general/iot/windows_iot.rst:47
+#: ../../content/applications/general/iot/windows_iot.rst:40
 msgid ""
 "Verify you have the required space on your computer and "
 "click :guilabel:`Next`."
 msgstr "确认计算机上有所需空间，然后点击 :guilabel:`下一步`。"
 
-#: ../../content/applications/general/iot/windows_iot.rst:48
+#: ../../content/applications/general/iot/windows_iot.rst:41
 msgid ""
 "In the :guilabel:`Destination folder`, enter C:\\\\odoo and "
 "click :guilabel:`Install`."
 msgstr ""
 "在 :guilabel:`目标文件夹` 中输入 C:\\\\odoo，然后点击 :guilabel:`安装`。"
 
-#: ../../content/applications/general/iot/windows_iot.rst:51
+#: ../../content/applications/general/iot/windows_iot.rst:44
 msgid ""
 "Do not install Odoo's Windows virtual IoT in any Windows user directory, as "
-"this can cause issues with :ref:`iot/https_certificate_iot/generation`."
+"this can cause issues with :ref:`HTTPS certificate generation <iot/connect/"
+"https_certificate>`."
 msgstr ""
-"请勿在任何 Windows 用户目录下安装 Odoo 的 Windows 虚拟 IoT，因为这会导"
-"致 :ref:`iot/https_certificate_iot/generation` 出现问题。"
 
-#: ../../content/applications/general/iot/windows_iot.rst:54
+#: ../../content/applications/general/iot/windows_iot.rst:47
 msgid ""
 "Set up GPL Ghostscript: Click :guilabel:`Next`, agree to the terms and "
 "conditions, click :guilabel:`Install`, then :guilabel:`Finish`."
@@ -11707,19 +11582,19 @@ msgstr ""
 "设置 GPL Ghostscript：点击 :guilabel:`下一步`，同意条款和条件，点"
 "击 :guilabel:`安装`，然后点击 :guilabel:`完成`。"
 
-#: ../../content/applications/general/iot/windows_iot.rst:56
+#: ../../content/applications/general/iot/windows_iot.rst:49
 msgid ""
 "Click :guilabel:`Next` and :guilabel:`Finish` to complete the setup. "
 "The :ref:`IoT system's homepage <iot/windows-iot/homepage>` automatically "
 "opens in a web browser with the URL `http://localhost:8069`."
 msgstr ""
 
-#: ../../content/applications/general/iot/windows_iot.rst:59
+#: ../../content/applications/general/iot/windows_iot.rst:52
 msgid ""
 ":ref:`Restart <iot/windows_iot/restart>` the Windows virtual IoT service."
 msgstr ""
 
-#: ../../content/applications/general/iot/windows_iot.rst:61
+#: ../../content/applications/general/iot/windows_iot.rst:53
 msgid ""
 "Check that you can access the :ref:`IoT system's homepage <iot/windows-iot/"
 "homepage>` in a web browser:"
@@ -11727,11 +11602,11 @@ msgstr ""
 "检查是否可以在网络浏览器中访问 :ref:`物联网系统主页 <iot/windows-iot/"
 "homepage>` ："
 
-#: ../../content/applications/general/iot/windows_iot.rst:64
+#: ../../content/applications/general/iot/windows_iot.rst:56
 msgid "on the Windows virtual IoT computer, and"
 msgstr "在 Windows 虚拟物联网计算机上，以及"
 
-#: ../../content/applications/general/iot/windows_iot.rst:65
+#: ../../content/applications/general/iot/windows_iot.rst:57
 msgid ""
 "on another device **on the same network as the IoT system** by navigating to "
 "the URL `http://xxx:8069` (where `xxx` is the IoT system's IP address)."
@@ -11739,17 +11614,14 @@ msgstr ""
 "通过导航到 URL `http://xxx:8069`（其中 `xxx` 是物联网系统的 IP 地址），在与物"
 "联网系统**在同一网络上的另一台设备上**。"
 
-#: ../../content/applications/general/iot/windows_iot.rst:67
+#: ../../content/applications/general/iot/windows_iot.rst:59
 msgid ""
 "on another device **on the same network as the IoT system** by navigating to "
 "the URL `https://xxx` (where `xxx` is the IoT system's IP address) to test "
-"for :doc:`HTTPS <iot_advanced/https_certificate_iot>` connection."
+"for :ref:`HTTPS <iot/connect/https_certificate>` connection."
 msgstr ""
-"通过导航到 URL `https://xxx`（其中 `xxx` 是物联网系统的 IP 地址），**在与物联"
-"网系统在同一网络上**的另一台设备上测试 :doc:`HTTPS <iot_advanced/"
-"https_certificate_iot>` 连接。"
 
-#: ../../content/applications/general/iot/windows_iot.rst:72
+#: ../../content/applications/general/iot/windows_iot.rst:64
 msgid ""
 "If you cannot access the :ref:`IoT system's homepage <iot/windows-iot/"
 "homepage>` from another device, create a :ref:`Windows Firewall <iot/windows-"
@@ -11759,157 +11631,11 @@ msgstr ""
 "建 :ref:`Windows 防火墙 <iot/windows-iot/firewall>`规则，允许通过端口`8069`进"
 "行通信。"
 
-#: ../../content/applications/general/iot/windows_iot.rst:79
-msgid "Windows Firewall configuration"
-msgstr "Windows 防火墙配置"
-
-#: ../../content/applications/general/iot/windows_iot.rst:81
-msgid ""
-"Firewalls help keep devices secure but can sometimes block legitimate "
-"connections. If the Windows virtual IoT isn't accessible on the :abbr:`LAN "
-"(Local Area Network)`, for example from another device, it could be due to a "
-"firewall blocking the connection. To prevent this issue, configure "
-"exceptions for network discovery in the :abbr:`OS (Operating System)` or "
-"firewall settings."
-msgstr ""
-"防火墙有助于确保设备安全，但有时也会阻止合法连接。如果 Windows 虚拟物联网无法"
-"通过 : abbr:`LAN（局域网）`访问，例如无法从其他设备访问，可能是因为防火墙阻止"
-"了连接。为防止出现此问题，请在 :abbr:`OS （操作系统）` 或防火墙设置中配置网络"
-"发现的例外。"
-
-#: ../../content/applications/general/iot/windows_iot.rst:87
-msgid ""
-"If third-party firewall software is installed on the Windows computer, refer "
-"to the software's documentation to configure firewall exceptions."
-msgstr ""
-"如果 Windows 计算机上安装了第三方防火墙软件，请参阅软件文档配置防火墙例外。"
-
-#: ../../content/applications/general/iot/windows_iot.rst:90
-msgid ""
-"To create a rule on Windows Defender and allow communication through port "
-"`8069`, follow these steps:"
-msgstr ""
-"要在 Windows Defender 上创建一条规则并允许通过端口 `8069` 进行通信，请按照以"
-"下步骤操作："
-
-#: ../../content/applications/general/iot/windows_iot.rst:93
-msgid ""
-"Search the Windows start menu for `firewall` and select "
-"the :guilabel:`Windows Defender Firewall with Advanced Security` app."
-msgstr ""
-"在 Windows 开始菜单中搜索 “防火墙”，然后选择 :guilabel:`带高级安全功能的 "
-"Windows Defender 防火墙` 应用程序。"
-
-#: ../../content/applications/general/iot/windows_iot.rst:95
-msgid "In the left part of the window, select :guilabel:`Inbound Rules`."
-msgstr "在窗口左侧选择 :guilabel:`入站规则`。"
-
-#: ../../content/applications/general/iot/windows_iot.rst:96
-msgid ""
-"In the right part of the window, under :guilabel:`Actions`, "
-"click :guilabel:`New Rule`."
-msgstr "在窗口右侧的 :guilabel:`操作` 下，点击 :guilabel:`新规则`。"
-
-#: ../../content/applications/general/iot/windows_iot.rst:97
-msgid ""
-"In the :guilabel:`New Inbound Rule Wizard` that opens, select "
-"the :guilabel:`Port` type of rule and click :guilabel:`Next`."
-msgstr ""
-"在打开的 :guilabel:`新的入站规则向导` 中，选择规则的 :guilabel:`端口` 类型，"
-"然后点击 :guilabel:`下一步`。"
-
-#: ../../content/applications/general/iot/windows_iot.rst:99
-msgid ""
-"On the :guilabel:`Protocols and Ports` page, make sure :guilabel:`TCP` "
-"and :guilabel:`Specified local ports` are selected, enter the following in "
-"the field: `8069, 80, 443`, and click :guilabel:`Next`."
-msgstr ""
-"在 :guilabel:`协议和端口` 页面，确保选中 :guilabel:`TCP` 和 :guilabel:`指定的"
-"本地端口`，在字段中输入以下内容：`8069, 80, 443`，然后点击 :guilabel:`下一步"
-"`。"
-
-#: ../../content/applications/general/iot/windows_iot.rst:104
-msgid ""
-"Other ports may be necessary depending on your IoT devices. For example, for "
-"the :doc:`/applications/sales/point_of_sale/payment_methods/terminals/"
-"worldline` payment terminal, add the `9050` port."
-msgstr ""
-"根据您的物联网设备，可能还需要其他端口。例如，对于 :doc:`/applications/sales/"
-"point_of_sale/payment_methods/terminals/worldline` 支付终端，添加 `9050` 端"
-"口。"
-
-#: ../../content/applications/general/iot/windows_iot.rst:108
-msgid ""
-"On the :guilabel:`Action` page, select :guilabel:`Allow the connection` and "
-"click :guilabel:`Next`."
-msgstr ""
-"在 :guilabel:`操作` 页面，选择 :guilabel:`允许连接` 并点击 :guilabel:`下一步"
-"`。"
-
-#: ../../content/applications/general/iot/windows_iot.rst:110
-msgid ""
-"On the :guilabel:`Profile` page, disable any connection type(s) that don't "
-"apply to your Windows computer and click :guilabel:`Next`."
-msgstr ""
-"在 :guilabel:`简介` 页面，禁用任何不适用于 Windows 计算机的连接类型，然后点"
-"击 :guilabel:`下一步`。"
-
-#: ../../content/applications/general/iot/windows_iot.rst:112
-msgid ""
-"On the :guilabel:`Name` page, provide a :guilabel:`Name` (e.g., `Odoo`) and, "
-"optionally, a brief :guilabel:`Description`, then click :guilabel:`Finish`."
-msgstr ""
-"在 :guilabel:`名称` 页面，输入 :guilabel:`名称` （例如，`Odoo`）和可选"
-"的 :guilabel:`说明` 简介，然后点击 :guilabel:`完成`。"
-
-#: ../../content/applications/general/iot/windows_iot.rst:116
-msgid ""
-"`Windows Firewall rules documentation <https://learn.microsoft.com/en-us/"
-"windows/security/operating-system-security/network-security/windows-firewall/"
-"rules>`_"
-msgstr ""
-"`Windows 防火墙规则文档 <https://learn.microsoft.com/en-us/windows/security/"
-"operating-system-security/network-security/windows-firewall/rules>`_"
-
-#: ../../content/applications/general/iot/windows_iot.rst:122
-msgid "Windows virtual IoT homepage"
-msgstr "Windows 虚拟物联网主页"
-
-#: ../../content/applications/general/iot/windows_iot.rst:124
-msgid ""
-"To access the Windows virtual IoT's homepage, navigate to the URL `http://"
-"localhost:8069` on the Windows virtual IoT computer or open a web browser "
-"from another computer **on the same network as the IoT system** and navigate "
-"to the URL `http://xxx:8069` (where `xxx` is the IoT system's IP address)."
-msgstr ""
-"要访问 Windows 虚拟物联网主页，请导航到 Windows 虚拟物联网计算机上的 URL "
-"`http://localhost:8069`，或从**与物联网系统在同一网络上**的另一台计算机打开网"
-"络浏览器，导航到 URL `http://xxx:8069`（其中 `xxx` 是物联网系统的 IP 地址）。"
-
-#: ../../content/applications/general/iot/windows_iot.rst:129
-msgid ""
-"Once the Windows virtual IoT is :doc:`connected to the Odoo database "
-"<connect>`, its homepage can be accessed from Odoo by opening the IoT app "
-"and clicking the URL displayed on the IoT system's card."
-msgstr ""
-"一旦 Windows 虚拟物联网与 :doc:`Odoo 数据库<connect>`连接，就可以通过打开物联"
-"网应用程序，并点击物联网系统卡片上显示的 URL 从 Odoo 访问其主页。"
-
-#: ../../content/applications/general/iot/windows_iot.rst:None
-msgid "Windows virtual IoT's homepage"
-msgstr "Windows 虚拟物联网主页"
-
-#: ../../content/applications/general/iot/windows_iot.rst:138
-msgid ""
-"Make sure the :ref:`Windows Firewall is configured <iot/windows-iot/"
-"firewall>` to allow access."
-msgstr "确保 :ref:`Windows 防火墙已配置 <iot/windows-iot/firewall>` 允许访问。"
-
-#: ../../content/applications/general/iot/windows_iot.rst:141
+#: ../../content/applications/general/iot/windows_iot.rst:69
 msgid "Device connection"
 msgstr "设备连接"
 
-#: ../../content/applications/general/iot/windows_iot.rst:143
+#: ../../content/applications/general/iot/windows_iot.rst:71
 msgid ""
 "Most :doc:`devices <devices>` automatically connect to the Windows computer "
 "used for the Windows Virtual IoT through `Windows Plug and Play (PnP) "
@@ -11923,7 +11649,7 @@ msgstr ""
 "plug-and-play>`_自动连接到用于 Windows 虚拟物联网的 Windows 计算机。但是，如"
 "果 Windows 无法在连接时自动识别设备，管理员可能需要手动安装相应的驱动程序。"
 
-#: ../../content/applications/general/iot/windows_iot.rst:150
+#: ../../content/applications/general/iot/windows_iot.rst:78
 msgid ""
 "After connecting the devices to the computer, refresh the :ref:`IoT system's "
 "homepage <iot/windows-iot/homepage>` to verify that the device is listed. If "
@@ -11934,27 +11660,160 @@ msgstr ""
 "以验证设备是否已列出。如果设备未出现，则 从 :ref:`物联网系统主页 <iot/"
 "windows-iot/homepage>` 重新加载处理程序 <iot_updating_iot/handlers>`。"
 
-#: ../../content/applications/general/iot/windows_iot.rst:158
+#: ../../content/applications/general/iot/windows_iot.rst:86
+msgid "Windows Firewall configuration"
+msgstr "Windows 防火墙配置"
+
+#: ../../content/applications/general/iot/windows_iot.rst:88
+msgid ""
+"Firewalls help keep devices secure but can sometimes block legitimate "
+"connections. If the Windows virtual IoT isn't accessible on the :abbr:`LAN "
+"(Local Area Network)`, for example, from another device, it could be due to "
+"a firewall blocking the connection. To prevent this issue, configure "
+"exceptions for network discovery in the :abbr:`OS (Operating System)` or "
+"firewall settings."
+msgstr ""
+
+#: ../../content/applications/general/iot/windows_iot.rst:94
+msgid ""
+"If third-party firewall software is installed on the Windows computer, refer "
+"to the software's documentation to configure firewall exceptions."
+msgstr ""
+"如果 Windows 计算机上安装了第三方防火墙软件，请参阅软件文档配置防火墙例外。"
+
+#: ../../content/applications/general/iot/windows_iot.rst:97
+msgid ""
+"To create a rule on Windows Defender and allow communication through the "
+"required ports, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/general/iot/windows_iot.rst:100
+msgid ""
+"Search the Windows start menu for `firewall` and select "
+"the :guilabel:`Windows Defender Firewall with Advanced Security` app."
+msgstr ""
+"在 Windows 开始菜单中搜索 “防火墙”，然后选择 :guilabel:`带高级安全功能的 "
+"Windows Defender 防火墙` 应用程序。"
+
+#: ../../content/applications/general/iot/windows_iot.rst:102
+msgid "In the left part of the window, select :guilabel:`Inbound Rules`."
+msgstr "在窗口左侧选择 :guilabel:`入站规则`。"
+
+#: ../../content/applications/general/iot/windows_iot.rst:103
+msgid ""
+"In the right part of the window, under :guilabel:`Actions`, "
+"click :guilabel:`New Rule`."
+msgstr "在窗口右侧的 :guilabel:`操作` 下，点击 :guilabel:`新规则`。"
+
+#: ../../content/applications/general/iot/windows_iot.rst:104
+msgid ""
+"In the :guilabel:`New Inbound Rule Wizard` that opens, select "
+"the :guilabel:`Port` type of rule and click :guilabel:`Next`."
+msgstr ""
+"在打开的 :guilabel:`新的入站规则向导` 中，选择规则的 :guilabel:`端口` 类型，"
+"然后点击 :guilabel:`下一步`。"
+
+#: ../../content/applications/general/iot/windows_iot.rst:106
+msgid ""
+"On the :guilabel:`Protocols and Ports` page, make sure :guilabel:`TCP` "
+"and :guilabel:`Specified local ports` are selected, enter the following in "
+"the field: `8069, 80, 443`, and click :guilabel:`Next`."
+msgstr ""
+"在 :guilabel:`协议和端口` 页面，确保选中 :guilabel:`TCP` 和 :guilabel:`指定的"
+"本地端口`，在字段中输入以下内容：`8069, 80, 443`，然后点击 :guilabel:`下一步"
+"`。"
+
+#: ../../content/applications/general/iot/windows_iot.rst:111
+msgid ""
+"Other ports may be required depending on your IoT devices. For example, add "
+"port `9050` for the :doc:`/applications/sales/point_of_sale/payment_methods/"
+"terminals/worldline` payment terminal and port `9000` for the :doc:`/"
+"applications/sales/point_of_sale/payment_methods/terminals/ingenico` payment "
+"terminal."
+msgstr ""
+
+#: ../../content/applications/general/iot/windows_iot.rst:116
+msgid ""
+"On the :guilabel:`Action` page, select :guilabel:`Allow the connection` and "
+"click :guilabel:`Next`."
+msgstr ""
+"在 :guilabel:`操作` 页面，选择 :guilabel:`允许连接` 并点击 :guilabel:`下一步"
+"`。"
+
+#: ../../content/applications/general/iot/windows_iot.rst:118
+msgid ""
+"On the :guilabel:`Profile` page, disable any connection type(s) that don't "
+"apply to your Windows computer and click :guilabel:`Next`."
+msgstr ""
+"在 :guilabel:`简介` 页面，禁用任何不适用于 Windows 计算机的连接类型，然后点"
+"击 :guilabel:`下一步`。"
+
+#: ../../content/applications/general/iot/windows_iot.rst:120
+msgid ""
+"On the :guilabel:`Name` page, provide a :guilabel:`Name` (e.g., `Odoo`) and, "
+"optionally, a brief :guilabel:`Description`, then click :guilabel:`Finish`."
+msgstr ""
+"在 :guilabel:`名称` 页面，输入 :guilabel:`名称` （例如，`Odoo`）和可选"
+"的 :guilabel:`说明` 简介，然后点击 :guilabel:`完成`。"
+
+#: ../../content/applications/general/iot/windows_iot.rst:124
+msgid ""
+"`Windows Firewall rules documentation <https://learn.microsoft.com/en-us/"
+"windows/security/operating-system-security/network-security/windows-firewall/"
+"rules>`_"
+msgstr ""
+"`Windows 防火墙规则文档 <https://learn.microsoft.com/en-us/windows/security/"
+"operating-system-security/network-security/windows-firewall/rules>`_"
+
+#: ../../content/applications/general/iot/windows_iot.rst:130
+msgid "Windows virtual IoT homepage"
+msgstr "Windows 虚拟物联网主页"
+
+#: ../../content/applications/general/iot/windows_iot.rst:132
+msgid ""
+"To access the Windows virtual IoT's homepage, navigate to the URL `http://"
+"localhost:8069` on the Windows virtual IoT computer or open a web browser "
+"from another computer **on the same network as the IoT system** and navigate "
+"to the URL `http://xxx:8069` (where `xxx` is the IoT system's IP address)."
+msgstr ""
+"要访问 Windows 虚拟物联网主页，请导航到 Windows 虚拟物联网计算机上的 URL "
+"`http://localhost:8069`，或从**与物联网系统在同一网络上**的另一台计算机打开网"
+"络浏览器，导航到 URL `http://xxx:8069`（其中 `xxx` 是物联网系统的 IP 地址）。"
+
+#: ../../content/applications/general/iot/windows_iot.rst:137
+msgid ""
+"Once the Windows virtual IoT is :doc:`connected to the Odoo database "
+"<connect>`, its homepage can be accessed from Odoo by opening the IoT app, "
+"clicking the relevant IoT box's card, and clicking :guilabel:`Homepage`."
+msgstr ""
+
+#: ../../content/applications/general/iot/windows_iot.rst:None
+msgid "Windows virtual IoT's homepage"
+msgstr "Windows 虚拟物联网主页"
+
+#: ../../content/applications/general/iot/windows_iot.rst:146
+msgid ""
+"Make sure the :ref:`Windows Firewall is configured <iot/windows-iot/"
+"firewall>` to allow access."
+msgstr "确保 :ref:`Windows 防火墙已配置 <iot/windows-iot/firewall>` 允许访问。"
+
+#: ../../content/applications/general/iot/windows_iot.rst:151
 msgid "Windows virtual IoT restart"
 msgstr "重启 Windows 虚拟物联网"
 
-#: ../../content/applications/general/iot/windows_iot.rst:160
+#: ../../content/applications/general/iot/windows_iot.rst:153
 msgid ""
 "To manually restart the Windows IoT server, search the Windows start menu "
-"for `services` and select the :guilabel:`Services` app. Scroll down to "
-"the :guilabel:`odoo-server-xxx` service (where `xxx` is the odoo version), "
-"right-click it, and select :guilabel:`Start` or :guilabel:`Restart`."
+"for `services` and select the Services app. Scroll down to "
+"the :guilabel:`odoo-server-xxx` service, right-click it, and "
+"select :guilabel:`Start` or :guilabel:`Restart`."
 msgstr ""
-"要手动重启 Windows IoT 服务器，请在 Windows 开始菜单中搜索 `服务`，然后选"
-"择 :guilabel:`服务` 应用程序。向下滚动到 :guilabel:`odoo-server-xxx` 服务（其"
-"中 `xxx` 是 odoo 版本），右键点击它，然后选择 :guilabel:`开始` 或 :guilabel:`"
-"重启`。"
 
-#: ../../content/applications/general/iot/windows_iot.rst:167
+#: ../../content/applications/general/iot/windows_iot.rst:160
 msgid "Windows virtual IoT uninstall"
 msgstr "卸载 Windows 虚拟物联网"
 
-#: ../../content/applications/general/iot/windows_iot.rst:169
+#: ../../content/applications/general/iot/windows_iot.rst:162
 msgid ""
 "To uninstall the Windows virtual IoT, `uninstall <https://"
 "support.microsoft.com/en-us/windows/uninstall-or-remove-apps-and-programs-in-"
@@ -14740,6 +14599,657 @@ msgid ""
 "Payment details **cannot** be edited. Customers must delete and re-enter "
 "information to update their details."
 msgstr ""
+
+#~ msgid ""
+#~ "An IoT box subscription is required for production use of IoT systems. If "
+#~ "you have issues related to your subscription, contact the database's "
+#~ "account manager or Odoo partner for assistance."
+#~ msgstr ""
+#~ "物联网系统的生产使用需要订阅物联网盒。如果您遇到与订阅相关的问题，请联系数"
+#~ "据库客户经理或 Odoo 合作伙伴寻求帮助。"
+
+#~ msgid ""
+#~ "If the subscription is linked to an `Odoo.com <https://www.odoo.com>`_ "
+#~ "portal user, check the information on the portal's subscription page."
+#~ msgstr ""
+#~ "如果订阅与 `Odoo.com <https://www.odoo.com>`_ 门户用户链接，请检查门户订阅"
+#~ "页面上的信息。"
+
+#~ msgid ""
+#~ "The computer connecting to Odoo must be on the same network as the IoT "
+#~ "system."
+#~ msgstr "连接到 Odoo 的计算机必须与物联网系统位于同一网络。"
+
+#~ msgid ""
+#~ "The IoT system can be connected to the Odoo database using "
+#~ "a :ref:`pairing code <iot/connect/pairing-code>` or a :ref:`connection "
+#~ "token <iot/connect/token>`."
+#~ msgstr ""
+#~ "物联网系统可通过 :ref:`配对代码 <iot/connect/pairing-code>` 或 :ref:`连接"
+#~ "令牌 <iot/connect/token>` 连接到 Odoo 数据库。"
+
+#~ msgid ""
+#~ "The pairing code is displayed for up to 5 minutes after the IoT system "
+#~ "starts. If the code is no longer visible, reboot the IoT box "
+#~ "or :ref:`restart the Windows virtual IoT service <iot/windows_iot/"
+#~ "restart>` to display the pairing code again. Alternatively, connect the "
+#~ "IoT system to the database using a :ref:`connection token <iot/connect/"
+#~ "token>`."
+#~ msgstr ""
+#~ "物联网系统启动后，配对代码最多显示 5 分钟。如果配对码不再可见，请重新启动"
+#~ "物联网盒或 :ref:`重启 Windows 虚拟物联网服务 <iot/windows_iot/restart>` 以"
+#~ "再次显示配对码。或者，使用 :ref:`连接令牌 <iot/connect/token>` 将物联网系"
+#~ "统连接到数据库。"
+
+#~ msgid ""
+#~ "The pairing code is not displayed if the IoT system is already connected "
+#~ "to a database (e.g., a test database)."
+#~ msgstr ""
+#~ "如果物联网系统已经连接到数据库（如测试数据库），则不会显示配对代码。"
+
+#~ msgid "Retrieve the IoT's system pairing code:"
+#~ msgstr "读取物联网的系统配对代码："
+
+#~ msgid ""
+#~ "Connect the IoT box to an external monitor or printer. If the IoT box was "
+#~ "already plugged prior to this, reboot it by unplugging it for a few "
+#~ "seconds and replugging it."
+#~ msgstr ""
+#~ "将物联网盒子连接到外部显示器或打印机。如果物联网盒在此之前已经插好电源，请"
+#~ "拔掉电源插头数秒后重新插上，重新启动。"
+
+#~ msgid ""
+#~ "External monitor: The pairing code should be displayed on the screen a "
+#~ "few minutes after rebooting the IoT box."
+#~ msgstr "外部监视器：重新启动物联网盒几分钟后，屏幕上应显示配对代码。"
+
+#~ msgid "Printer: The pairing code should be printed automatically."
+#~ msgstr "打印机：应自动打印配对代码。"
+
+#~ msgid ""
+#~ "In the :guilabel:`Connect an IoT Box` popup that opens, enter "
+#~ "the :guilabel:`Pairing code`."
+#~ msgstr ""
+#~ "在打开的 :guilabel:`连接物联网盒子` 弹出窗口中，输入 :guilabel:`配对代码"
+#~ "`。"
+
+#~ msgid "Click :guilabel:`Pair`."
+#~ msgstr "点击 :guilabel:`配对`。"
+
+#~ msgid ""
+#~ "In the :guilabel:`Connect an IoT Box` popup that opens, copy "
+#~ "the :guilabel:`Token`."
+#~ msgstr ""
+#~ "在打开的 :guilabel:`连接物联网盒` 弹出窗口中，复制 :guilabel:`令牌`。"
+
+#~ msgid ""
+#~ "In the :guilabel:`Odoo database connected` section, "
+#~ "click :guilabel:`Configure`."
+#~ msgstr "在 :guilabel:`Odoo 数据库已连接` 部分，点击 :guilabel:`配置`。"
+
+#~ msgid ""
+#~ "Once the IoT system is connected to the Odoo database, it is displayed as "
+#~ "a card in the IoT app. Click the IP address on the card to access "
+#~ "the :ref:`IoT box's <iot/windows-iot/homepage>` or :ref:`Windows virtual "
+#~ "IoT's <iot/iot-box/homepage>` homepage. Click the card to access the list "
+#~ "of :doc:`devices <devices>` connected to the IoT system."
+#~ msgstr ""
+#~ "一旦物联网系统连接到 Odoo 数据库，它将以卡片形式显示在 IoT 应用程序中。点"
+#~ "击卡片上的 IP 地址访问 :ref:`IoT 盒子 <iot/windows-iot/homepage>` "
+#~ "或 :ref:`Windows 虚拟 IoT <iot/iot-box/homepage>` 的主页。点击卡片访问连接"
+#~ "到 IoT 系统的 :doc:`设备<devices>` 列表。"
+
+#~ msgid ""
+#~ ":ref:`Enable the developer mode <developer-mode>` to access the IoT "
+#~ "system's :guilabel:`Technical Information`, such as "
+#~ "its :guilabel:`Identifier`, :guilabel:`Domain address`, "
+#~ "and :guilabel:`Image version`."
+#~ msgstr ""
+#~ ":ref:`启用开发者模式<developer-mode>`以访问 IoT 系统的 :guilabel:`技术信息"
+#~ "`，例如其 :guilabel:`标识符`、:guilabel:`域名地址` 和 :guilabel:`镜像版本"
+#~ "`。"
+
+#~ msgid ""
+#~ "By default, drivers are automatically :ref:`updated <iot_updating_iot/"
+#~ "handlers>` every time the IoT system is restarted. To disable automatic "
+#~ "updates, uncheck the :guilabel:`Automatic drivers update` option."
+#~ msgstr ""
+#~ "默认情况下，每次重启物联网系统时，驱动程序都会自动 :ref:`更新 "
+#~ "<iot_updating_iot/handlers>`。要禁用自动更新，请取消选中 :guilabel:`自动更"
+#~ "新驱动程序` 选项。"
+
+#~ msgid "The IoT system is not connected to the Internet."
+#~ msgstr "物联网系统不与互联网连接。"
+
+#~ msgid "The IoT system is already connected to an Odoo database."
+#~ msgstr "物联网系统已连接到 Odoo 数据库。"
+
+#~ msgid ""
+#~ "The :ref:`pairing code <iot/connect/pairing-code>` display time has "
+#~ "expired. Reboot the IoT box or :ref:`restart the Windows virtual IoT "
+#~ "service <iot/windows_iot/restart>` to display the pairing code again."
+#~ msgstr ""
+#~ ":ref:`配对代码 <iot/connect/pairing-code>` 显示时间已过。重新启动物联网盒"
+#~ "或 :ref:`重启 Windows 虚拟物联网服务 <iot/windows_iot/restart>` 重新显示配"
+#~ "对码。"
+
+#~ msgid ""
+#~ "The IoT system's image version is too old and needs to be :ref:`updated "
+#~ "<iot/updating_iot/image-code>`."
+#~ msgstr ""
+#~ "物联网系统的映像版本太旧，需要 :ref:`更新 <iot/updating_iot/image-code>`。"
+
+#~ msgid "The IoT system is connected but does not appear in the database"
+#~ msgstr "物联网系统已连接，但未出现在数据库中"
+
+#~ msgid ""
+#~ "Reboot the IoT box or :ref:`restart the Windows virtual IoT service <iot/"
+#~ "windows_iot/restart>`."
+#~ msgstr ""
+#~ "重启物联网盒或 :ref:`重启 Windows 虚拟物联网服务 <iot/windows_iot/"
+#~ "restart>`。"
+
+#~ msgid "The IoT box is connected to the Odoo database but cannot be reached"
+#~ msgstr "物联网盒子已连接到 Odoo 数据库，但无法访问"
+
+#~ msgid ""
+#~ "Verify that the IoT system and the computer running the Odoo database are "
+#~ "connected to the same network."
+#~ msgstr "确认物联网系统和运行 Odoo 数据库的计算机连接到同一网络。"
+
+#~ msgid ""
+#~ "The IoT system is disconnected from the database after an Odoo upgrade"
+#~ msgstr "Odoo 升级后，物联网系统与数据库断开连接"
+
+#~ msgid ""
+#~ ":ref:`Update the IoT system's image <iot/updating_iot/image-code>` by "
+#~ "flashing the IoT box's card or :ref:`uninstalling the Windows virtual IoT "
+#~ "program <iot/windows_iot/uninstall>` and :ref:`reinstalling <iot/windows-"
+#~ "iot/installation>` the latest package for Windows **matching your "
+#~ "database's version**."
+#~ msgstr ""
+#~ ":ref:`更新物联网系统的映像 <iot/updating_iot/image-code>` 通过刷新物联网盒"
+#~ "子的卡或 :ref:`卸载 Windows 虚拟物联网程序 <iot/windows_iot/uninstall>` "
+#~ "并 :ref:`重新安装 <iot/windows-iot/installation>` 与您的数据库版本**匹配"
+#~ "的 Windows 最新软件包**。"
+
+#~ msgid ""
+#~ "IoT systems support printers connected through USB, network connection, "
+#~ "or Bluetooth. `Supported printers <https://www.odoo.com/page/iot-"
+#~ "hardware>`__ are detected automatically, and appear in "
+#~ "the :guilabel:`Devices` list of the IoT app."
+#~ msgstr ""
+#~ "物联网系统支持通过 USB、网络连接或蓝牙连接的打印机。系统能自动侦测 `支持的"
+#~ "打印机 <https://www.odoo.com/page/iot-hardware>`__ ，并显示在物联网应用程"
+#~ "序的 :guilabel:`设备` 列表中。"
+
+#~ msgid ""
+#~ "Printers can take up to two minutes to appear in the IoT "
+#~ "app :guilabel:`Devices` list."
+#~ msgstr ""
+#~ "打印机可能需要两分钟才能出现在物联网应用程序 :guilabel:`设备` 列表中。"
+
+#~ msgid ""
+#~ "In Odoo, an :abbr:`IoT (Internet of Things)` box can be connected to a "
+#~ "screen display. After being configured, the screen can be used to display "
+#~ "a Point of Sale (PoS) order to a client."
+#~ msgstr ""
+#~ "在 Odoo 中，:abbr:`IoT（物联网）`盒子可以连接到屏幕显示器。经过配置后，屏"
+#~ "幕可用于向客户显示销售点（PoS）订单。"
+
+#~ msgid "An example of a PoS (point of sale) order on a screen display."
+#~ msgstr "屏幕显示销售点（PoS）订单示例。"
+
+#~ msgid ""
+#~ "Access the customer display by going to the :abbr:`IoT (Internet of "
+#~ "Things)` box homepage and clicking on the :guilabel:`PoS Display` button. "
+#~ "To get to the :abbr:`IoT (Internet of Things)` box homepage, navigate "
+#~ "to :menuselection:`IoT app --> IoT Boxes` and click on the :abbr:`IoT "
+#~ "(Internet of Things)` box homepage link."
+#~ msgstr ""
+#~ "访问:abbr:`IoT（物联网）` 盒子主页并点击 :guilabel:`PoS 显示器` 按钮，即可"
+#~ "访问客户显示器。要进入 :abbr:`IoT （物联网）` 盒子主页，请导航"
+#~ "至 :menuselection:`物联网应用程序 --> 物联网盒子` 并点击 :abbr:`IoT （物联"
+#~ "网）` 盒子主页链接。"
+
+#~ msgid ""
+#~ "The way to connect the screen display to the :abbr:`IoT (Internet of "
+#~ "Things)` box differs depending on the model."
+#~ msgstr "屏幕显示器与 :abbr:`IoT （物联网）` 盒子的连接方式因型号而异。"
+
+#~ msgid "IoT Box model 4"
+#~ msgstr "物联网（IoT）盒子型号4"
+
+#~ msgid ""
+#~ "Connect up to two screens with micro-HDMI cables on the side of "
+#~ "the :abbr:`IoT (Internet of Things)` box. If two screens are connected, "
+#~ "they can display distinct content (see :ref:`Screen Usage <iot/"
+#~ "usage_screen>`)."
+#~ msgstr ""
+#~ "在 :abbr:`IoT（物联网）`盒子的侧面，使用 micro-HDMI 电缆最多可连接两个屏"
+#~ "幕。如果连接了两个屏幕，则可以显示不同的内容（参见 :ref:`屏幕用法 <iot/"
+#~ "usage_screen>`）。"
+
+#~ msgid "IoT Box model 3"
+#~ msgstr "物联网（IoT）盒子型号3"
+
+#~ msgid ""
+#~ "Connect the screen with an HDMI cable on the side of the :abbr:`IoT "
+#~ "(Internet of Things)` box."
+#~ msgstr "用:abbr:`IoT（物联网）`盒子侧面的 HDMI 电缆连接屏幕。"
+
+#~ msgid ":ref:`See the Raspberry Pi Schema <pos/pos_iot/connect_schema>`."
+#~ msgstr ":ref:`查看 Raspberry Pi 模式 <pos/pos_iot/connect_schema>`。"
+
+#~ msgid ""
+#~ "Screen(s) should be connected before the :abbr:`IoT (Internet of Things)` "
+#~ "box is switched on. If it is already on, connect the screen(s), and then "
+#~ "restart the :abbr:`IoT (Internet of Things)` box by unplugging it for ten "
+#~ "seconds and plugging it back into its power source."
+#~ msgstr ""
+#~ "应在打开 :abbr:`IoT（物联网）` 盒子之前连接屏幕。如果已经打开，请连接屏"
+#~ "幕，然后拔下 :abbr:`IoT （物联网）`盒子的插头十秒钟，再将其插回电源，重新"
+#~ "启动。"
+
+#~ msgid ""
+#~ "The usage of HDMI/micro-HDMI adapters may cause issues which will result "
+#~ "in a blank, black screen on the screen display. Using the specific cable "
+#~ "for the display connection is recommended."
+#~ msgstr ""
+#~ "使用 HDMI/micro-HDMI 适配器可能会导致屏幕显示空白、黑屏等问题。建议使用专"
+#~ "用电缆连接显示器。"
+
+#~ msgid ""
+#~ "If the connection was successful, the screen should display "
+#~ "the :guilabel:`POS Client display` screen."
+#~ msgstr "连接成功后，屏幕应显示:guilabel:`销售点客户显示`。"
+
+#~ msgid ""
+#~ "The default \"POS Client Display\" screen that appears when a screen "
+#~ "display is successfully\n"
+#~ "connected to an IoT box."
+#~ msgstr ""
+#~ "当屏幕显示器成功连接到物联网盒子时，会出现默认的 \"POS 客户端显示\" 屏幕。"
+
+#~ msgid ""
+#~ "The screen should also appear in the list of :guilabel:`Displays` on "
+#~ "the :abbr:`IoT (Internet of Things)` box homepage. Alternatively, the "
+#~ "display can be seen by accessing :menuselection:`IoT app --> Devices`."
+#~ msgstr ""
+#~ "屏幕也应出现在 :abbr:`IoT （物联网）` 盒子主页上的 :guilabel:`显示` 列表"
+#~ "中。此外，也可通过访问 :menuselection:`物联网应用程序 --> 设备` 查看显示"
+#~ "屏。"
+
+#~ msgid "An example of a screen display name shown on the IoT Box Home Page."
+#~ msgstr "物联网盒子主页上显示的屏幕显示名称示例。"
+
+#~ msgid ""
+#~ "If no screen is detected, a default display named :guilabel:`Distant "
+#~ "Display` will be displayed instead. This indicates that there is no "
+#~ "hardware screen connected."
+#~ msgstr ""
+#~ "如果未检测到屏幕，则将显示名为 :guilabel:`远程显示` 的默认显示屏。这表示没"
+#~ "有连接硬件屏幕。"
+
+#~ msgid ""
+#~ "The \"Distant Display\" screen name will be used if no screen is detected."
+#~ msgstr "如果未检测到屏幕，则使用“远程显示”屏幕名称。"
+
+#~ msgid "Usage"
+#~ msgstr "用途"
+
+#~ msgid "Show Point of Sale orders to customers"
+#~ msgstr "向客户显示销售点订单"
+
+#~ msgid ""
+#~ "To use the screen in the *Point of Sale app*, go to :menuselection:`Point "
+#~ "of Sale --> Configuration --> Point of Sale`, select a :abbr:`PoS (Point "
+#~ "of Sale)`, click :guilabel:`Edit` if necessary, and enable "
+#~ "the :guilabel:`IoT Box` feature."
+#~ msgstr ""
+#~ "要在*销售点应用程序*中使用该屏幕，请转到:menuselection:`销售点-->配置-->销"
+#~ "售点`，选择一个: abbr:`PoS（销售点）`，必要时点击:guilabel:`编辑`，并启"
+#~ "用:guilabel:`物联网盒子`功能。"
+
+#~ msgid ""
+#~ "Next, select the screen from the :guilabel:`Customer Display` drop-down "
+#~ "menu. Then click :guilabel:`Save`, if required."
+#~ msgstr ""
+#~ "然后，从 :guilabel:`客户显示屏` 下拉菜单中选择屏幕。然后点击 :guilabel:`保"
+#~ "存`（如需要）。"
+
+#~ msgid "Connect the screen display to the Point of Sale app."
+#~ msgstr "将显示屏幕连接至销售点应用程序。"
+
+#~ msgid ""
+#~ "The screen is now available for :abbr:`PoS (Point of Sale)` sessions. A "
+#~ "screen icon will appear in the menu at the top of the screen to indicate "
+#~ "the screen's connection status."
+#~ msgstr ""
+#~ "屏幕现在可用于 :abbr:`PoS（销售点）` 会话。屏幕顶部的菜单中会出现一个屏幕"
+#~ "图标，显示屏幕的连接状态。"
+
+#~ msgid ""
+#~ "The \"screen\" icon on the Point of Sale display shows the connection "
+#~ "status with the\n"
+#~ "screen."
+#~ msgstr "销售点显示屏上的 \"屏幕\" 图标显示与屏幕的连接状态。"
+
+#~ msgid ""
+#~ "The screen will automatically show the :abbr:`PoS (Point of Sale)` orders "
+#~ "and update when changes are made to the order."
+#~ msgstr ""
+#~ "屏幕将自动显示 :abbr:`PoS（销售点）`订单，并在订单发生更改时进行更新。"
+
+#~ msgid "An example of a PoS order on a screen display."
+#~ msgstr "屏幕显示的销售点（PoS）订单示例。"
+
+#~ msgid "Display a website on the screen"
+#~ msgstr "在屏幕上显示网站"
+
+#~ msgid ""
+#~ "Open the screen form view by accessing :menuselection:`IoT app --> "
+#~ "Devices --> Customer Display`. This allows the user to choose a "
+#~ "particular website URL to display on the screen using "
+#~ "the :guilabel:`Display URL` field."
+#~ msgstr ""
+#~ "通过访问 :menuselection:`物联网应用程序 --> 设备 --> 客户显示器` 打开屏幕"
+#~ "表单视图。这样，用户就可以使用 :guilabel:`显示 URL` 字段，选择要在屏幕上显"
+#~ "示的特定网站 URL。"
+
+#~ msgid "HTTPS certificate (IoT)"
+#~ msgstr "HTTPS 证书（物联网）"
+
+#~ msgid ""
+#~ "*Hypertext Transfer Protocol Secure* (HTTPS) is the secure and encrypted "
+#~ "version of *Hypertext Transfer Protocol* (HTTP), which is the primary "
+#~ "protocol used for data communication between a web browser and a website. "
+#~ "It secures communications by using an encryption protocol known as "
+#~ "*Transport Layer Security* (TLS), previously called *Secure Sockets "
+#~ "Layer* (SSL). The security of :abbr:`HTTPS (Hypertext Transfer Protocol "
+#~ "Secure)` relies on :abbr:`TLS (Transport Layer Security)` /:abbr:`SSL "
+#~ "(Secure Sockets Layer)` certificates, which authenticate the provider and "
+#~ "verify their identity."
+#~ msgstr ""
+#~ "*超文本传输协议安全协议*（HTTPS）是*超文本传输协议*（HTTP）的安全加密版"
+#~ "本，是网络浏览器与网站之间进行数据通信的主要协议。它通过使用一种称为*传输"
+#~ "层安全*（TLS）的加密协议，以前称为*安全套接层*（SSL），来确保通信安"
+#~ "全。:abbr:`HTTPS（超文本传输协议安全）`的安全性依赖于 :abbr:`TLS（传输层安"
+#~ "全）`/:abbr:`SSL（安全套接字层）`证书，这些证书可以验证提供者的身份。"
+
+#~ msgid ""
+#~ "The use of HTTPS is required to communicate with certain network devices, "
+#~ "particularly payment terminals. If the HTTPS certificate is not valid, "
+#~ "some devices cannot interact with the IoT system."
+#~ msgstr ""
+#~ "与某些网络设备（尤其是支付终端）进行通信需要使用 HTTPS。如果 HTTPS 证书无"
+#~ "效，某些设备就无法与物联网系统进行交互。"
+
+#~ msgid "HTTPS certificate generation"
+#~ msgstr "生成 HTTPS 证书"
+
+#~ msgid ""
+#~ "The HTTPS certificate is generated automatically. When the IoT system is "
+#~ "(re-)started (e.g., after it is connected to the Odoo database), a "
+#~ "request is sent to `<https://www.odoo.com>`_, which returns the HTTPS "
+#~ "certificate if the IoT system and database meet the eligibility criteria:"
+#~ msgstr ""
+#~ "HTTPS 证书是自动生成的。当物联网系统（重新）启动时（例如，连接到 Odoo 数据"
+#~ "库后），会向 `<https://www.odoo.com>`_发送一个请求，如果物联网系统和数据库"
+#~ "符合资格标准，该请求就会返回 HTTPS 证书："
+
+#~ msgid ""
+#~ "The Odoo subscription must be ongoing (:guilabel:`In Progress` status) "
+#~ "and have an :ref:`IoT box subscription <iot/iot/iot-subscription>` line."
+#~ msgstr ""
+#~ "Odoo 订阅必须为正在进行中（:guilabel:`进行中` 状态），并且有 :ref:`订阅物"
+#~ "联网盒子 <iot/iot/iot-subscription>` 行。"
+
+#~ msgid ""
+#~ "The IoT system's homepage address is updated to a new HTTPS URL ending "
+#~ "with `.odoo-iot.com`. Click the URL to establish a secure HTTPS "
+#~ "connection."
+#~ msgstr ""
+#~ "物联网系统的主页地址将更新为以 `.odoo-iot.com` 结尾的新 HTTPS URL。点击该 "
+#~ "URL，建立安全的 HTTPS 连接。"
+
+#~ msgid "Odoo IoT app IoT box with .odoo-iot.com domain."
+#~ msgstr "带有 .odoo-iot.com 域名的 Odoo 物联网应用程序物联网盒子。"
+
+#~ msgid ""
+#~ "The :guilabel:`HTTPS certificate` banner displays the certificate's "
+#~ "validity period. To view this information, click the :icon:`fa-cogs` "
+#~ "(:guilabel:`cogs`) button on the IoT system's homepage."
+#~ msgstr ""
+#~ ":guilabel:`HTTPS证书` 横幅显示证书的有效期。要查看此信息，请点击物联网系统"
+#~ "主页上的 :icon:`fa-cogs`（:guilabel:`齿轮`）按钮。"
+
+#~ msgid ""
+#~ "No :ref:`IoT box subscription <iot/iot/iot-subscription>` is linked to "
+#~ "your account."
+#~ msgstr ""
+#~ "您的账户中没有 :ref:`订阅物联网盒子 <iot/iot/iot-subscription>` 关联。"
+
+#~ msgid ""
+#~ "The :ref:`IoT box subscription <iot/iot/iot-subscription>` was added "
+#~ "*after* connecting the IoT system to the database. In this case, refresh "
+#~ "the IoT system's homepage or reboot/:ref:`restart <iot/windows_iot/"
+#~ "restart>` the IoT system to regenerate the HTTPS certificate."
+#~ msgstr ""
+#~ "在将物联网系统连接到数据库*之后*，添加了 :ref:`订阅物联网盒子 <iot/iot/"
+#~ "iot-subscription>` 。在这种情况下，刷新物联网系统主页或重新启动/:ref:`重新"
+#~ "启动 <iot/windows_iot/restart>` 物联网系统，以重新生成 HTTPS 证书。"
+
+#~ msgid ""
+#~ "A specific error code is displayed on the IoT system's homepage if any "
+#~ "issues occur during the generation or reception of the HTTPS certificate."
+#~ msgstr ""
+#~ "如果在生成或接收 HTTPS 证书过程中出现任何问题，物联网系统主页上会显示特定"
+#~ "的错误代码。"
+
+#~ msgid ""
+#~ "The server configuration is missing, i.e., the Odoo instance is "
+#~ "not :doc:`connected <../connect>` to the IoT system."
+#~ msgstr ""
+#~ "服务器配置丢失，即 Odoo 实例未 :doc:`成功连接 <.../connect>` 到 IoT 系统。"
+
+#~ msgid ""
+#~ "An error occurred while attempting to read the existing HTTPS "
+#~ "certificate. Verify that the HTTPS certificate file is readable."
+#~ msgstr "尝试读取现有 HTTPS 证书时发生错误。验证 HTTPS 证书文件是否可读。"
+
+#~ msgid ""
+#~ "The contract and/or database :abbr:`UUID (Universal Unique Identifier)` "
+#~ "is missing form the IoT."
+#~ msgstr "物联网中缺少合同和/或数据库 :abbr:`UUID（通用唯一标识符）`。"
+
+#~ msgid ""
+#~ "Verify that both values are correctly configured. To update "
+#~ "them, :ref:`access the IoT box's <iot/iot-box/homepage>` or :ref:`Windows "
+#~ "virtual IoT's homepage <iot/windows-iot/homepage>`, click the :icon:`fa-"
+#~ "cogs` (:guilabel:`cogs`) button, then click :guilabel:`Credential`."
+#~ msgstr ""
+#~ "验证这两个值是否配置正确。要更新它们，请 :ref:`访问物联网盒子的主页 <iot/"
+#~ "iot-box/homepage>` 或 :ref:`Windows 虚拟物联网的主页 <iot/windows-iot/"
+#~ "homepage>`，点击 :icon:`fa-cogs`（:guilabel:`齿轮`）按钮，然后点"
+#~ "击 :guilabel:`证书`。"
+
+#~ msgid ""
+#~ "The IoT system successfully connected to `<https://www.odoo.com>`_, but "
+#~ "the server refused to provide the HTTPS certificate."
+#~ msgstr ""
+#~ "物联网系统成功连接到 `<https://www.odoo.com>`_，但服务器拒绝提供 HTTPS 证"
+#~ "书。"
+
+#~ msgid ""
+#~ "Access the IoT box's homepage by opening the IoT app and clicking the IP "
+#~ "address displayed on the IoT box's card."
+#~ msgstr ""
+#~ "打开物联网应用程序，点击物联网盒子卡上显示的 IP 地址，访问物联网盒子主页。"
+
+#~ msgid ""
+#~ "Click the :icon:`fa-cogs` (:guilabel:`cogs`) button at the top-right, "
+#~ "then :guilabel:`Remote Debug`."
+#~ msgstr ""
+#~ "点击右上角的 :icon:`fa-cogs`（:guilabel:`齿轮`）按钮，然后点击 :guilabel:`"
+#~ "远程调试`。"
+
+#~ msgid ""
+#~ "Open balenaEtcher, click :guilabel:`Flash from URL`, and enter the "
+#~ "following URL: `http://nightly.odoo.com/master/iotbox/iotbox-latest.zip`."
+#~ msgstr ""
+#~ "打开 balenaEtcher，点击 :guilabel:`从 URL 闪写`，输入以下 URL：`http://"
+#~ "nightly.odoo.com/master/iotbox/iotbox-latest.zip`。"
+
+#~ msgid ""
+#~ "This process may take over 30 minutes. **Do not turn off or unplug the "
+#~ "IoT box** during this time, as doing so could leave the device in an "
+#~ "inconsistent state, requiring the IoT box to be reflashed with a new "
+#~ "image."
+#~ msgstr ""
+#~ "此过程可能需要 30 分钟以上。在此期间，**请勿关闭或拔下物联网盒子**，因为这"
+#~ "样做可能会使设备处于不一致的状态，需要重新刷新物联网盒的映像。"
+
+#~ msgid ""
+#~ "Make sure you have a :ref:`valid IoT box subscription <iot/iot/iot-"
+#~ "subscription>` in addition to your Odoo subscription."
+#~ msgstr ""
+#~ "除 Odoo 订阅外，请确保您还有 :ref:`有效物联网盒子订阅 <iot/iot/iot-"
+#~ "subscription>` 。"
+
+#~ msgid ""
+#~ "Devices can also be connected after the IoT box is added to the network "
+#~ "and/or connected to the database; however, a reboot of the IoT box might "
+#~ "be required."
+#~ msgstr ""
+#~ "设备也可以在物联网盒子添加到网络和/或连接到数据库后进行连接；不过，可能需"
+#~ "要重新启动物联网盒子。"
+
+#~ msgid ""
+#~ "**All** devices must be connected to the **same network**: the IoT box, "
+#~ "the device(s) connected to the IoT box, and the computer connected to "
+#~ "Odoo."
+#~ msgstr ""
+#~ "**所有**设备必须连接到**相同的网络**：物联网盒子、连接到物联网盒子的设备、"
+#~ "以及连接到 Odoo 的计算机。"
+
+#~ msgid ""
+#~ "Depending on your operating system, the browser might not open and "
+#~ "redirect to the IoT box's homepage. In this case, open your browser "
+#~ "manually and navigate to `http://10.11.12.1` or any url starting with "
+#~ "**http** (e.g., `http://odoo.com`)."
+#~ msgstr ""
+#~ "根据操作系统的不同，浏览器可能无法打开并重定向到物联网盒子的主页。在这种情"
+#~ "况下，请手动打开浏览器并导航到 `http://10.11.12.1` 或任何以 **http** 开头"
+#~ "的网址（如 `http://odoo.com`）。"
+
+#~ msgid ""
+#~ "connecting the IoT box to an external monitor: the IP address is "
+#~ "displayed on the screen."
+#~ msgstr "将物联网盒子连接到外部显示屏：屏幕上会显示 IP 地址。"
+
+#~ msgid "POS display with IoT box's IP address"
+#~ msgstr "显示物联网盒子 IP 地址的 POS 显示屏"
+
+#~ msgid ""
+#~ "Once the IoT box is :doc:`connected to the Odoo database <connect>`, its "
+#~ "homepage can be accessed from Odoo by opening the IoT app and clicking "
+#~ "the URL displayed on the IoT box's card."
+#~ msgstr ""
+#~ "物联网盒子 :doc:`连接至 Odoo 数据库后<connect>`，可通过打开物联网应用程序"
+#~ "并点击物联网盒子卡片上显示的 URL 从 Odoo 访问其主页。"
+
+#~ msgid ""
+#~ "Make sure all :ref:`prerequisites <iot/windows-iot/prerequisites>` are "
+#~ "met."
+#~ msgstr "确保满足所有 :ref:`先决条件 <iot/windows-iot/prerequisites>` 要求。"
+
+#~ msgid ""
+#~ ":ref:`Install the Windows virtual IoT <iot/windows-iot/installation>` on "
+#~ "a Windows computer."
+#~ msgstr ""
+#~ ":ref:`在 Windows 计算机上安装 Windows 虚拟物联网 <iot/windows-iot/"
+#~ "installation>` 。"
+
+#~ msgid ""
+#~ "The following prerequisites must be met before setting up and using the "
+#~ "Windows virtual IoT:"
+#~ msgstr "在设置和使用 Windows 虚拟物联网之前，必须满足以下前提条件："
+
+#~ msgid "A valid :ref:`IoT box subscription <iot/iot/iot-subscription>`."
+#~ msgstr "有效的 :ref:`物联网盒子订阅 <iot/iot/iot-subscription>`。"
+
+#~ msgid ""
+#~ "An updated and recent version of Windows (i.e., Windows 10 or Windows 11) "
+#~ "installed on a Windows computer (laptop, desktop, or server)."
+#~ msgstr ""
+#~ "Windows 电脑（笔记本电脑、台式电脑或服务器）上安装的 Windows 最新版本（即 "
+#~ "Windows 10 或 Windows 11）。"
+
+#~ msgid ""
+#~ "Do not install Odoo's Windows virtual IoT in any Windows user directory, "
+#~ "as this can cause issues with :ref:`iot/https_certificate_iot/generation`."
+#~ msgstr ""
+#~ "请勿在任何 Windows 用户目录下安装 Odoo 的 Windows 虚拟 IoT，因为这会导"
+#~ "致 :ref:`iot/https_certificate_iot/generation` 出现问题。"
+
+#~ msgid ""
+#~ "on another device **on the same network as the IoT system** by navigating "
+#~ "to the URL `https://xxx` (where `xxx` is the IoT system's IP address) to "
+#~ "test for :doc:`HTTPS <iot_advanced/https_certificate_iot>` connection."
+#~ msgstr ""
+#~ "通过导航到 URL `https://xxx`（其中 `xxx` 是物联网系统的 IP 地址），**在与"
+#~ "物联网系统在同一网络上**的另一台设备上测试 :doc:`HTTPS <iot_advanced/"
+#~ "https_certificate_iot>` 连接。"
+
+#~ msgid ""
+#~ "Firewalls help keep devices secure but can sometimes block legitimate "
+#~ "connections. If the Windows virtual IoT isn't accessible on "
+#~ "the :abbr:`LAN (Local Area Network)`, for example from another device, it "
+#~ "could be due to a firewall blocking the connection. To prevent this "
+#~ "issue, configure exceptions for network discovery in the :abbr:`OS "
+#~ "(Operating System)` or firewall settings."
+#~ msgstr ""
+#~ "防火墙有助于确保设备安全，但有时也会阻止合法连接。如果 Windows 虚拟物联网"
+#~ "无法通过 : abbr:`LAN（局域网）`访问，例如无法从其他设备访问，可能是因为防"
+#~ "火墙阻止了连接。为防止出现此问题，请在 :abbr:`OS （操作系统）` 或防火墙设"
+#~ "置中配置网络发现的例外。"
+
+#~ msgid ""
+#~ "To create a rule on Windows Defender and allow communication through port "
+#~ "`8069`, follow these steps:"
+#~ msgstr ""
+#~ "要在 Windows Defender 上创建一条规则并允许通过端口 `8069` 进行通信，请按照"
+#~ "以下步骤操作："
+
+#~ msgid ""
+#~ "Other ports may be necessary depending on your IoT devices. For example, "
+#~ "for the :doc:`/applications/sales/point_of_sale/payment_methods/terminals/"
+#~ "worldline` payment terminal, add the `9050` port."
+#~ msgstr ""
+#~ "根据您的物联网设备，可能还需要其他端口。例如，对于 :doc:`/applications/"
+#~ "sales/point_of_sale/payment_methods/terminals/worldline` 支付终端，添加 "
+#~ "`9050` 端口。"
+
+#~ msgid ""
+#~ "Once the Windows virtual IoT is :doc:`connected to the Odoo database "
+#~ "<connect>`, its homepage can be accessed from Odoo by opening the IoT app "
+#~ "and clicking the URL displayed on the IoT system's card."
+#~ msgstr ""
+#~ "一旦 Windows 虚拟物联网与 :doc:`Odoo 数据库<connect>`连接，就可以通过打开"
+#~ "物联网应用程序，并点击物联网系统卡片上显示的 URL 从 Odoo 访问其主页。"
+
+#~ msgid ""
+#~ "To manually restart the Windows IoT server, search the Windows start menu "
+#~ "for `services` and select the :guilabel:`Services` app. Scroll down to "
+#~ "the :guilabel:`odoo-server-xxx` service (where `xxx` is the odoo "
+#~ "version), right-click it, and select :guilabel:`Start` "
+#~ "or :guilabel:`Restart`."
+#~ msgstr ""
+#~ "要手动重启 Windows IoT 服务器，请在 Windows 开始菜单中搜索 `服务`，然后选"
+#~ "择 :guilabel:`服务` 应用程序。向下滚动到 :guilabel:`odoo-server-xxx` 服务"
+#~ "（其中 `xxx` 是 odoo 版本），右键点击它，然后选择 :guilabel:`开始` "
+#~ "或 :guilabel:`重启`。"
 
 #~ msgid ""
 #~ "With each :doc:`new Odoo release </administration/supported_versions>`, "
