@@ -8,3 +8,4 @@ Advanced
    :titlesonly:
 
    advanced/analyze
+   advanced/sps
