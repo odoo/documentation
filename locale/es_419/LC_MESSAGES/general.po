@@ -28,7 +28,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-26 18:30+0000\n"
-"PO-Revision-Date: 2025-12-24 23:21+0000\n"
+"PO-Revision-Date: 2025-12-29 23:20+0000\n"
 "Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-19-doc/general/es_419/>\n"
@@ -36,8 +36,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == "
-"0) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == 0)"
+" ? 1 : 2);\n"
 "X-Generator: Weblate 5.14.3\n"
 
 #: ../../content/applications/general.rst:3
@@ -9708,6 +9708,10 @@ msgid ""
 ":abbr:`MRP (Material Requirement Planning)` devices, including cameras and "
 "measurement tools, are not compatible with the Windows virtual IoT."
 msgstr ""
+"Los dispositivos de :abbr:`MRP "
+"(Planificación de requerimientos de materiales)`, como cámaras y "
+"herramientas de medición, no son compatibles con la caja IoT virtual de "
+"Windows."
 
 #: ../../content/applications/general/iot.rst:22
 msgid "Multiple IoT systems can be used at the same time."
@@ -9719,8 +9723,8 @@ msgid ""
 "computer. However, this option is not supported by Odoo, and no "
 "troubleshooting assistance will be provided."
 msgstr ""
-"También puede crear una máquina virtual de Windows en una computadora con "
-"MacOS o Linux, pero esta opción es incompatible con Odoo y no contamos con "
+"También puedes crear una máquina virtual de Windows en una computadora con "
+"macOS o Linux, pero esta opción es incompatible con Odoo y no contamos con "
 "asistencia para resolver problemas de ese tipo."
 
 #: ../../content/applications/general/iot.rst:29
@@ -9735,6 +9739,12 @@ msgid ""
 "database <iot/connect>`. If you have issues related to your subscription, "
 "contact the database's account manager or Odoo partner for assistance."
 msgstr ""
+"Necesitas una suscripción a una caja IoT para usar sistemas IoT en "
+"producción y para generar el :ref:`certificado HTTPS <iot/connect/"
+"https_certificate>`. El sistema lo crea de forma automática hay una caja IoT "
+":doc:`conectada a la base de datos <iot/connect>`. Si tienes problemas con "
+"tu suscripción, contacta al gerente de cuenta de la base de datos o a un "
+"partner de Odoo para recibir ayuda."
 
 #: ../../content/applications/general/iot.rst:37
 msgid ""
@@ -9794,6 +9804,8 @@ msgstr "El sistema IoT debe estar conectado a la red."
 msgid ""
 "The device connecting to Odoo must be on the same network as the IoT system."
 msgstr ""
+"El dispositivo que se conecta a Odoo debe estar en la misma red que el "
+"sistema IoT."
 
 #: ../../content/applications/general/iot/connect.rst:15
 msgid ""
@@ -9827,6 +9839,8 @@ msgid ""
 "To connect the IoT system to an Odoo database, open the IoT app and "
 "click :guilabel:`Connect`."
 msgstr ""
+"Para conectar el sistema IoT a una base de datos de Odoo, abre la aplicación "
+"IoT y haz clic en :guilabel:`Conectar`."
 
 #: ../../content/applications/general/iot/connect.rst:28
 msgid ""
@@ -9838,6 +9852,13 @@ msgid ""
 "a :ref:`pairing code <iot/connect/pairing-code>` or a :ref:`connection token "
 "<iot/connect/token>`."
 msgstr ""
+"Después, el navegador analiza la red a la que está conectada la computadora "
+"para buscar los sistemas IoT disponibles. Si detecta un sistema IoT, lo "
+"conectará de forma automática. Si encuentra varios sistemas IoT, selecciona "
+"el correcto en la ventana emergente que se abre y haz clic en "
+":guilabel:`Conectar`. Si no detecta ningún sistema IoT, intenta conectarlo a "
+"la base de datos con un :ref:`código de emparejamiento <iot/connect/pairing-"
+"code>` o con un :ref:`token de conexión <iot/connect/token>`."
 
 #: ../../content/applications/general/iot/connect.rst:35
 msgid ""
@@ -9845,6 +9866,10 @@ msgid ""
 "the :doc:`Windows computer <windows_iot>`’s motherboard serial number, "
 "followed by its :ref:`pairing code <iot/connect/pairing-code>`."
 msgstr ""
+"El nombre del sistema IoT está compuesto por el número de serie de la placa "
+"base de la :doc:`caja IoT <iot_box>` o de la :doc:`computadora con Windows "
+"<windows_iot>` seguido de su :ref:`código de emparejamiento <iot/connect/"
+"pairing-code>`."
 
 #: ../../content/applications/general/iot/connect.rst:42
 msgid "Connection using a pairing code"
@@ -9858,6 +9883,12 @@ msgid ""
 "pairing code. Alternatively, connect the IoT system to the database using "
 "a :ref:`connection token <iot/connect/token>`."
 msgstr ""
+"El código de emparejamiento es válido hasta 2 horas después de encender el "
+"sistema IoT. Si el código deja de ser válido, reinicia la caja IoT o :ref:`"
+"reinicia el servicio de la IoT virtual de Windows <iot/windows_iot/restart>` "
+"para acceder a otro código de emparejamiento. Como alternativa, conecta el "
+"sistema IoT a la base de datos con un :ref:`token de conexión <iot/connect/"
+"token>`."
 
 #: ../../content/applications/general/iot/connect.rst:49
 msgid ""
@@ -9865,10 +9896,14 @@ msgid ""
 "a database (e.g., a test database). If necessary, :ref:`disconnect the IoT "
 "system from the database <iot/connect/disconnect>`."
 msgstr ""
+"El sistema no muestra el código de emparejamiento si el sistema IoT ya está "
+"conectado a una base de datos (por ejemplo, una base de datos de prueba). "
+":ref:`Desconecta el sistema IoT de la base de datos <iot/connect/disconnect>`"
+" en caso de que sea necesario."
 
 #: ../../content/applications/general/iot/connect.rst:53
 msgid "Retrieve the IoT system's pairing code:"
-msgstr ""
+msgstr "Obtén el código de emparejamiento del sistema IoT:"
 
 #: ../../content/applications/general/iot/connect.rst:57
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:17
@@ -9881,17 +9916,23 @@ msgid ""
 "Connect the IoT box to an external monitor or a USB printer. If the IoT box "
 "was already plugged prior to this, :ref:`restart <iot/iot-box/restart>` it."
 msgstr ""
+"Conecta la caja IoT a un monitor externo o a una impresora USB. Si ya habías "
+"conectado la caja IoT, :ref:`reiníciala <iot/iot-box/restart>`."
 
 #: ../../content/applications/general/iot/connect.rst:62
 msgid ""
 "External monitor: The pairing code will be displayed on the screen after "
 "(re)starting the IoT box."
 msgstr ""
+"Monitor externo: El código de emparejamiento aparecerá en la pantalla "
+"después de encender (o reiniciar) la caja IoT."
 
 #: ../../content/applications/general/iot/connect.rst:64
 msgid ""
 "USB-connected printer: The pairing code should be printed automatically."
 msgstr ""
+"Impresora conectada por USB: El código de emparejamiento será impreso en "
+"automático."
 
 #: ../../content/applications/general/iot/connect.rst:67
 msgid ""
@@ -9930,10 +9971,14 @@ msgid ""
 "In the :guilabel:`Searching for an IoT Box` popup that opens, "
 "click :guilabel:`Use Pairing Code`."
 msgstr ""
+"Haz clic en :guilabel:`Usar código de emparejamiento` en la ventana "
+"emergente :guilabel:`Buscando una caja IoT` que aparece."
 
 #: ../../content/applications/general/iot/connect.rst:79
 msgid "Enter the :guilabel:`Pairing code` and click :guilabel:`Connect`."
 msgstr ""
+"Escribe el :guilabel:`código de emparejamiento` y haz clic en "
+":guilabel:`Conectar`."
 
 #: ../../content/applications/general/iot/connect.rst:84
 msgid "Connection using a connection token"
@@ -9941,19 +9986,23 @@ msgstr "Conexión con un token"
 
 #: ../../content/applications/general/iot/connect.rst:86
 msgid ":ref:`Enable the developer mode <developer-mode>`."
-msgstr ""
+msgstr ":ref:`Activa el modo de desarrollador <developer-mode>`."
 
 #: ../../content/applications/general/iot/connect.rst:88
 msgid ""
 "In the :guilabel:`Searching for an IoT Box` popup that opens, "
 "click :guilabel:`Offline pairing`."
 msgstr ""
+"En la ventana emergente :guilabel:`Buscando una caja IoT` que aparece, haz "
+"clic en :guilabel:`Emparejamiento sin conexión`."
 
 #: ../../content/applications/general/iot/connect.rst:89
 msgid ""
 "In the :guilabel:`Pair an IoT Box offline` popup that opens, copy "
 "the :guilabel:`Token`."
 msgstr ""
+"Copia el :guilabel:`token` de la ventana emergente :guilabel:`Emparejar una "
+"caja IoT sin conexión` que aparece."
 
 #: ../../content/applications/general/iot/connect.rst:90
 #: ../../content/applications/general/iot/connect.rst:141
@@ -9970,6 +10019,8 @@ msgid ""
 "In the :icon:`fa-link` :guilabel:`Odoo database connected` section, "
 "click :guilabel:`Configure`."
 msgstr ""
+"Haz clic en :guilabel:`Configurar` en la sección :icon:`fa-link` :guilabel:`"
+"Base de datos de Odoo conectada`."
 
 #: ../../content/applications/general/iot/connect.rst:93
 msgid ""
@@ -9981,7 +10032,7 @@ msgstr ""
 
 #: ../../content/applications/general/iot/connect.rst:96
 msgid "Once the IoT system is connected to a database:"
-msgstr ""
+msgstr "Una vez que el sistema IoT esté conectado a una base de datos:"
 
 #: ../../content/applications/general/iot/connect.rst:98
 msgid ""
@@ -9989,12 +10040,18 @@ msgid ""
 "installed, a popup appears to select the :doc:`POS the IoT system should be "
 "associated with </applications/sales/point_of_sale/configuration/pos_iot>`."
 msgstr ""
+"Si la :doc:`aplicación Punto de venta </applications/sales/point_of_sale>` "
+"está instalada aparecerá una ventana emergente para seleccionar el :doc:`PdV "
+"al que se debe asociar el sistema IoT </applications/sales/point_of_sale/"
+"configuration/pos_iot>`."
 
 #: ../../content/applications/general/iot/connect.rst:101
 msgid ""
 "If using an :doc:`IoT box <iot_box>`, wait a few minutes for it to update "
 "before using the connected :doc:`devices <devices>`."
 msgstr ""
+"Si usas una :doc:`caja IoT <iot_box>`, espera unos minutos a que se "
+"actualice antes de usar los :doc:`dispositivos <devices>` conectados."
 
 #: ../../content/applications/general/iot/connect.rst:103
 msgid ""
@@ -10002,12 +10059,16 @@ msgid ""
 "connect/https_certificate>` and its homepage is updated to a new HTTPS URL "
 "ending with `.odoo-iot.com` when it becomes available."
 msgstr ""
+"El sistema IoT solicita un :ref:`certificado HTTPS <iot/connect/"
+"https_certificate>` de forma automática y actualiza su página de inicio a "
+"una nueva URL HTTPS que termina en `.odoo-iot.com` cuando el certificado "
+"está disponible."
 
 #: ../../content/applications/general/iot/connect.rst:108
 #: ../../content/applications/general/iot/iot_box.rst:13
 #: ../../content/applications/general/iot/windows_iot.rst:21
 msgid ":doc:`iot_advanced/troubleshooting`"
-msgstr ""
+msgstr ":doc:`iot_advanced/troubleshooting`"
 
 #: ../../content/applications/general/iot/connect.rst:113
 msgid "IoT system form"
@@ -10021,6 +10082,12 @@ msgid ""
 "or :ref:`Windows virtual IoT's <iot/windows-iot/homepage>` homepage and view "
 "the list of :doc:`devices <devices>` connected to the IoT system."
 msgstr ""
+"Una vez que el sistema IoT está conectado a la base de datos de Odoo, este "
+"aparece como una tarjeta en la aplicación IoT. Haz clic en la tarjeta para "
+"acceder al formulario del sistema IoT, así podrás ir a la página de inicio "
+"de la :ref:`caja IoT <iot/iot-box/homepage>` o de la caja :ref:`IoT virtual "
+"de Windows <iot/windows-iot/homepage>` y ver la lista de :doc:`dispositivos "
+"<devices>` conectados al sistema IoT."
 
 #: ../../content/applications/general/iot/connect.rst:121
 msgid ""
@@ -10032,42 +10099,57 @@ msgid ""
 "system is restarted. To disable automatic updates, uncheck "
 "the :guilabel:`Automatic drivers update` option."
 msgstr ""
+"Activa el :ref:`modo de desarrollador <developer-mode>` para acceder a la "
+":guilabel:`información técnica` del sistema IoT, como la :guilabel:`"
+"dirección de dominio`, la :guilabel:`versión de la imagen` y la :guilabel:`"
+"fecha de finalización` del :ref:`certificado SSL <iot/connect/"
+"https_certificate>`. De forma predeterminada, el sistema :ref:`actualiza <"
+"iot_updating_iot/handlers>` los controladores cada vez que reinicias el "
+"sistema IoT. Desmarca la opción :guilabel:`Actualización automática de "
+"controladores` para desactivar las actualizaciones automáticas."
 
 #: ../../content/applications/general/iot/connect.rst:131
 msgid "Disconnecting an IoT system from a database"
-msgstr ""
+msgstr "Desconectar un sistema IoT de una base de datos"
 
 #: ../../content/applications/general/iot/connect.rst:133
 msgid "To disconnect the IoT system from a database, follow these steps:"
-msgstr ""
+msgstr "Sigue estos pasos para desconectar el sistema IoT de una base de datos:"
 
 #: ../../content/applications/general/iot/connect.rst:135
 msgid "Open the IoT app and click the relevant IoT system's card."
 msgstr ""
+"Abre la aplicación IoT y haz clic en la tarjeta del sistema IoT "
+"correspondiente."
 
 #: ../../content/applications/general/iot/connect.rst:136
 msgid ""
 "Click the :icon:`fa-cog` :guilabel:`(Actions)` icon, and "
 "select :guilabel:`Delete`."
 msgstr ""
+"Haz clic en el icono :icon:`fa-cog` :guilabel:`(Acciones)` y selecciona "
+":guilabel:`Eliminar`."
 
 #: ../../content/applications/general/iot/connect.rst:139
 msgid "Alternatively:"
-msgstr ""
+msgstr "También puedes hacer lo siguiente:"
 
 #: ../../content/applications/general/iot/connect.rst:143
 msgid ""
 "Click :guilabel:`Configure` in the :icon:`fa-link` :guilabel:`Odoo database "
 "connected` section."
 msgstr ""
+"Haz clic en :guilabel:`Configurar` en la sección :icon:`fa-link` :guilabel:`"
+"Base de datos de Odoo conectada`."
 
 #: ../../content/applications/general/iot/connect.rst:145
 msgid "Click :guilabel:`Disconnect` in the popup that opens."
 msgstr ""
+"Haz clic en :guilabel:`Desconectar` en la ventana emergente que aparece."
 
 #: ../../content/applications/general/iot/connect.rst:150
 msgid "HTTPS certificate"
-msgstr ""
+msgstr "Certificado HTTPS"
 
 #: ../../content/applications/general/iot/connect.rst:152
 msgid ""
@@ -10079,6 +10161,15 @@ msgid ""
 "terminals, require a valid HTTPS certificate to communicate with the IoT "
 "system; without it, they cannot interact properly."
 msgstr ""
+":abbr:`HTTPS (Protocolo seguro de transferencia de hipertexto)` es la "
+"versión segura y cifrada de :abbr:`HTTP "
+"(Protocolo de transferencia de hipertexto)`. Usa certificados :abbr:`TLS "
+"(Seguridad de la capa de transporte)` "
+"(antes :abbr:`SSL (Capa de sockets seguros)`) para autenticar el servidor y "
+"proteger los datos que intercambian un navegador y un sitio web. Algunos "
+"dispositivos de red, como las terminales de pago, requieren un certificado "
+"HTTPS válido para comunicarse con el sistema IoT, ya que sin él no pueden "
+"interactuar de forma correcta."
 
 #: ../../content/applications/general/iot/connect.rst:160
 msgid ""
@@ -10094,6 +10185,10 @@ msgid ""
 "automatically downloads the HTTPS certificate if the database meets the "
 "following eligibility criteria:"
 msgstr ""
+"Una vez que el sistema IoT encienda o haya sido reiniciado y esté conectado "
+"a una base de datos, este descargará el certificado HTTPS de forma "
+"automática si la base de datos cumple con los siguientes criterios de "
+"elegibilidad:"
 
 #: ../../content/applications/general/iot/connect.rst:168
 msgid ""
@@ -10106,6 +10201,7 @@ msgstr ""
 #: ../../content/applications/general/iot/connect.rst:170
 msgid "The Odoo subscription must be ongoing (:guilabel:`In Progress` status)."
 msgstr ""
+"La suscripción de Odoo debe estar activa (con estado :guilabel:`En curso`)."
 
 #: ../../content/applications/general/iot/connect.rst:172
 msgid "When the certificate has been received:"
@@ -10116,6 +10212,8 @@ msgid ""
 "The IoT system's homepage address is updated to a new HTTPS URL ending with "
 "`.odoo-iot.com`."
 msgstr ""
+"El sistema actualizará la dirección de la página de inicio del sistema IoT a "
+"una nueva URL HTTPS que termina en `.odoo-iot.com`."
 
 #: ../../content/applications/general/iot/connect.rst:175
 msgid ""
@@ -10123,6 +10221,10 @@ msgid ""
 "period. To view this information, click the :icon:`fa-cogs` "
 "(:guilabel:`cogs`) button at the top-right of the IoT system's homepage."
 msgstr ""
+"El mensaje :guilabel:`Certificado HTTPS` muestra el periodo de validez del "
+"certificado. Para ver esta información, haz clic en el botón :icon:`fa-cogs` "
+"(:guilabel:`engranajes`) ubicado en la esquina superior derecha de la página "
+"de inicio del sistema IoT."
 
 #: ../../content/applications/general/iot/connect.rst:0
 msgid "IoT box homepage with HTTPS certificate validity date."
@@ -10132,7 +10234,7 @@ msgstr ""
 
 #: ../../content/applications/general/iot/connect.rst:183
 msgid ":ref:`iot/troubleshooting/https_certificate`"
-msgstr ""
+msgstr ":ref:`iot/troubleshooting/https_certificate`"
 
 #: ../../content/applications/general/iot/devices.rst:7
 msgid "Devices"
@@ -10143,7 +10245,7 @@ msgid ""
 ":doc:`Connect a Worldline payment terminal <../../sales/point_of_sale/"
 "payment_methods/terminals/worldline>`"
 msgstr ""
-":doc:`Conecte una terminal de pago de Worldline <../../sales/point_of_sale/"
+":doc:`Conectar una terminal de pago de Worldline <../../sales/point_of_sale/"
 "payment_methods/terminals/worldline>`"
 
 #: ../../content/applications/general/iot/devices.rst:23
@@ -10151,7 +10253,7 @@ msgid ""
 ":doc:`Connect an Ingenico payment terminal <../../sales/point_of_sale/"
 "payment_methods/terminals/ingenico>`"
 msgstr ""
-":doc:`Conecte una terminal de pago de Ingenico <../../sales/point_of_sale/"
+":doc:`Conectar una terminal de pago de Ingenico <../../sales/point_of_sale/"
 "payment_methods/terminals/ingenico>`"
 
 #: ../../content/applications/general/iot/devices.rst:25
@@ -10159,6 +10261,8 @@ msgid ""
 ":doc:`Connect a SIX payment terminal <../../sales/point_of_sale/"
 "payment_methods/terminals/six>`"
 msgstr ""
+":doc:`Conectar una terminal de pago de SIX <../../sales/point_of_sale/"
+"payment_methods/terminals/six>`"
 
 #: ../../content/applications/general/iot/devices/camera.rst:3
 msgid "Connect a camera"
@@ -10703,6 +10807,10 @@ msgid ""
 "are detected automatically, and appear in the :guilabel:`Devices` list of "
 "the IoT app."
 msgstr ""
+"Los sistemas IoT son compatibles con impresoras conectadas por USB, de forma "
+"inalámbrica o Bluetooth. La aplicación IoT detecta las `impresoras "
+"compatibles <https://www.odoo.com/page/iot-hardware>`_ en automático y "
+"aparecen en la lista de :guilabel:`dispositivos` de la misma."
 
 #: ../../content/applications/general/iot/devices/printer.rst:None
 msgid "The printer as it would appear in the IoT app devices list."
@@ -10715,12 +10823,16 @@ msgid ""
 "Printers connecting to the IoT system via the network must be on the **same "
 "network** as the IoT system."
 msgstr ""
+"Las impresoras a conectar al sistema IoT por red deben estar en la **misma "
+"red** que el sistema IoT."
 
 #: ../../content/applications/general/iot/devices/printer.rst:30
 msgid ""
 "Printers can take up to two minutes to appear in the IoT "
 "app's :guilabel:`Devices` list."
 msgstr ""
+"Las impresoras pueden tardar hasta dos minutos en aparecer en la lista de "
+":guilabel:`dispositivos` de la aplicación IoT."
 
 #: ../../content/applications/general/iot/devices/printer.rst:33
 msgid "Link a printer"
@@ -11984,6 +12096,8 @@ msgid ""
 "Once the scale is connected to the IoT system, :ref:`configure it in the POS "
 "settings <pos/hardware/scale>`."
 msgstr ""
+"Una vez que hayas conectado la báscula al sistema IoT, :ref:`configúrala en "
+"los ajustes del PdV <pos/hardware/scale>`."
 
 #: ../../content/applications/general/iot/devices/scale.rst:26
 msgid ""
@@ -12113,6 +12227,10 @@ msgid ""
 "display>` to show customers their :doc:`Point of Sale </applications/sales/"
 "point_of_sale>` orders."
 msgstr ""
+"La :doc:`caja IoT <../iot_box>` se puede conectar a una pantalla, por "
+"ejemplo, para facilitar la configuración de la caja IoT o para funcionar "
+"como :ref:`pantalla para clientes <pos/hardware/display>` y mostrarles sus "
+"órdenes del :doc:`punto de venta </applications/sales/point_of_sale>`."
 
 #: ../../content/applications/general/iot/devices/screen.rst:12
 msgid ""
@@ -12120,26 +12238,30 @@ msgid ""
 "connection was successful, the external monitor displays "
 "the :guilabel:`Status display` screen."
 msgstr ""
+"Conecta la pantalla a la caja IoT con un cable micro-HDMI. Si la conexión "
+"funciona, el monitor externo mostrará la pantalla de :guilabel:`"
+"visualización de estado`."
 
 #: ../../content/applications/general/iot/devices/screen.rst:None
 msgid "Default Status Display screen"
-msgstr ""
+msgstr "Pantalla de visualización de estado de forma predeterminada"
 
 #: ../../content/applications/general/iot/devices/screen.rst:18
 msgid "The screen also appears in the IoT box's list of devices:"
-msgstr ""
+msgstr "La pantalla también aparece en la lista de dispositivos de la caja IoT:"
 
 #: ../../content/applications/general/iot/devices/screen.rst:20
 msgid "on the :ref:`IoT box's form <iot/connect/IoT-form>`;"
-msgstr ""
+msgstr "En el :ref:`formulario de la caja IoT <iot/connect/IoT-form>`."
 
 #: ../../content/applications/general/iot/devices/screen.rst:21
 msgid "on the :ref:`IoT box's homepage <iot/iot-box/homepage>`;"
-msgstr ""
+msgstr "En la :ref:`página de inicio de la caja IoT <iot/iot-box/homepage>`."
 
 #: ../../content/applications/general/iot/devices/screen.rst:22
 msgid "in the IoT app, under the menu :menuselection:`IoT --> Devices`."
 msgstr ""
+"En la aplicación IoT, dentro del menú :menuselection:`IoT --> Dispositivos`."
 
 #: ../../content/applications/general/iot/devices/screen.rst:25
 msgid "Customer display"
@@ -12151,6 +12273,9 @@ msgid ""
 "display>`, :ref:`configure the POS accordingly <pos/hardware/display-"
 "configuration>`."
 msgstr ""
+"Para usar la pantalla como :ref:`pantalla para clientes <pos/hardware/"
+"display>`, :ref:`configura el PdV según corresponda <pos/hardware/display-"
+"configuration>`."
 
 #: ../../content/applications/general/iot/devices/screen.rst:30
 msgid ""
@@ -12158,6 +12283,10 @@ msgid ""
 "display, go to :menuselection:`IoT --> Devices`, click the screen's card, "
 "then enter the desired website's URL in the :guilabel:`Display URL` field."
 msgstr ""
+"Para mostrar un sitio web específico en la pantalla en lugar de la pantalla "
+"para clientes del PdV, ve a :menuselection:`IoT --> Dispositivos`, haz clic "
+"en la tarjeta de la pantalla y luego ingresa la URL del sitio web que "
+"quieras en el campo :guilabel:`URL a mostrar`."
 
 #: ../../content/applications/general/iot/iot_advanced.rst:5
 msgid "Advanced"
@@ -12207,12 +12336,17 @@ msgid ""
 "Open the IoT app, click the relevant IoT box's card, and "
 "click :guilabel:`Homepage`."
 msgstr ""
+"Abre la aplicación IoT, haz clic en la tarjeta de la caja IoT "
+"correspondiente y haz clic en :guilabel:`Página de inicio`."
 
 #: ../../content/applications/general/iot/iot_advanced/ssh_connect.rst:20
 msgid ""
 "On the IoT system's homepage, click the :icon:`fa-cogs` (:guilabel:`cogs`) "
 "button at the top-right, then :guilabel:`Remote Debug`."
 msgstr ""
+"En la página de inicio del sistema IoT, haz clic en el botón :icon:`fa-cogs` "
+"(:guilabel:`engranajes`) en la esquina superior derecha y luego en "
+":guilabel:`Depuración de errores remota`."
 
 #: ../../content/applications/general/iot/iot_advanced/ssh_connect.rst:22
 msgid ""
@@ -12266,13 +12400,15 @@ msgstr ""
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:13
 msgid "The IoT system is not connected to the network."
-msgstr ""
+msgstr "El sistema IoT no está conectado a la red."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:14
 msgid ""
 "The IoT system is already connected to an Odoo database. :ref:`Disconnect it "
 "from the database <iot/connect/disconnect>`."
 msgstr ""
+"El sistema IoT ya está conectado a una base de datos de Odoo. :ref:`"
+"Desconéctalo de la base de datos <iot/connect/disconnect>`."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:16
 msgid ""
@@ -12281,10 +12417,14 @@ msgid ""
 "virtual IoT service <iot/windows_iot/restart>` to generate and display the "
 "pairing code."
 msgstr ""
+"El tiempo de visualización del :ref:`código de emparejamiento <iot/connect/"
+"pairing-code>` expiró. Reinicia la :ref:`caja IoT <iot/iot-box/restart>` o "
+"el :ref:`servicio de IoT virtual de Windows <iot/windows_iot/restart>` para "
+"generar y mostrar el código de emparejamiento."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:21
 msgid "The IoT system does not connect to the database"
-msgstr ""
+msgstr "El sistema IoT no se conecta a la base de datos"
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:23
 msgid ""
@@ -12308,10 +12448,12 @@ msgid ""
 "Restart the :ref:`IoT box <iot/iot-box/restart>` or the :ref:`Windows "
 "virtual IoT service <iot/windows_iot/restart>`."
 msgstr ""
+"Reinicia la :ref:`caja IoT <iot/iot-box/restart>` o el :ref:`servicio de IoT "
+"virtual de Windows <iot/windows_iot/restart>`."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:32
 msgid "The IoT system is connected to the Odoo database but cannot be reached"
-msgstr ""
+msgstr "El sistema IoT se conecta a la base de datos de Odoo, pero no responde"
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:34
 msgid ""
@@ -12319,6 +12461,9 @@ msgid ""
 "connected to the same network and :ref:`update the DNS settings <iot/"
 "troubleshooting/dns>` if necessary."
 msgstr ""
+"Verifica que el sistema IoT y la computadora que ejecuta la base de datos de "
+"Odoo estén conectados a la misma red y :ref:`actualiza los ajustes de DNS <"
+"iot/troubleshooting/dns>` en caso de que sea necesario."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:38
 msgid ""
@@ -12332,6 +12477,8 @@ msgid ""
 "Ensure the device is connected to the same network as the Windows virtual "
 "IoT."
 msgstr ""
+"Asegúrate de que el dispositivo esté conectado a la misma red que la IoT "
+"virtual de Windows."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:41
 msgid "Check the :ref:`iot/windows-iot/firewall`."
@@ -12339,7 +12486,7 @@ msgstr "Revise la :ref:`iot/windows-iot/firewall`."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:44
 msgid "The IoT system does not work after an Odoo upgrade"
-msgstr ""
+msgstr "El sistema IoT no funciona después de una actualización de Odoo"
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:49
 msgid ""
@@ -12348,6 +12495,10 @@ msgid ""
 "program <iot/windows_iot/uninstall>` and :ref:`reinstalling the virtual IoT "
 "package <iot/windows-iot/installation>`."
 msgstr ""
+"Si el problema continúa, :ref:`actualiza la imagen <iot/updating_iot/image-"
+"code>` de la tarjeta de la caja IoT o al :ref:`desinstala el programa de IoT "
+"virtual de Windows <iot/windows_iot/uninstall>` y :ref:`reinstala el paquete "
+"de IoT virtual <iot/windows-iot/installation>`."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:56
 msgid ""
@@ -12426,6 +12577,9 @@ msgid ""
 "https_certificate_iot/iot-eligibility>` for generating an :ref:`HTTPS "
 "certificate <iot/connect/https_certificate>`."
 msgstr ""
+"La base de datos no cumple con los :ref:`requisitos de elegibilidad <iot/"
+"https_certificate_iot/iot-eligibility>` para generar un :ref:`certificado "
+"HTTPS <iot/connect/https_certificate>`."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:87
 msgid ""
@@ -12454,6 +12608,9 @@ msgid ""
 "issues occur during the generation or reception of the ref:`HTTPS "
 "certificate <iot/connect/https_certificate>`."
 msgstr ""
+"El sistema muestra un código de error específico en la página de inicio del "
+"sistema IoT si ocurre algún problema al generar o recibir el :ref:`"
+"certificado HTTPS <iot/connect/https_certificate>`."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:101
 msgid ""
@@ -12475,6 +12632,8 @@ msgid ""
 "The server configuration is missing, i.e., the database is "
 "not :doc:`connected <../connect>` to the IoT system."
 msgstr ""
+"Falta la configuración del servidor, es decir, la base de datos no está "
+":doc:`conectada <../connect>` al sistema IoT."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:112
 msgid "`ERR_IOT_HTTPS_CHECK_CERT_READ_EXCEPTION`"
@@ -12486,6 +12645,9 @@ msgid ""
 "certificate <iot/connect/https_certificate>`. Verify that the HTTPS "
 "certificate file is readable."
 msgstr ""
+"Ocurrió un error al intentar leer el :ref:`certificado HTTPS <iot/connect/"
+"https_certificate>` existente. Verifica que sea posible leer el archivo del "
+"certificado HTTPS."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:119
 msgid "`ERR_IOT_HTTPS_LOAD_NO_CREDENTIAL`"
@@ -12496,6 +12658,8 @@ msgid ""
 "The contract and/or database :abbr:`UUID (Universal Unique Identifier)` is "
 "missing from the IoT."
 msgstr ""
+"Falta el contrato o el :abbr:`UUID (Identificador único universal)` de la "
+"base de datos en el sistema IoT."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:123
 msgid ""
@@ -12504,6 +12668,11 @@ msgid ""
 "virtual IoT's homepage <iot/windows-iot/homepage>`, click the :icon:`fa-"
 "cogs` (:guilabel:`cogs`) button, then click :guilabel:`Credentials`."
 msgstr ""
+"Verifica que ambos valores estén configurados de forma correcta. Para "
+"actualizarlos, :ref:`accede a la página de inicio de la caja IoT <iot/"
+"iot-box/homepage>` o a la :ref:`página de inicio del IoT virtual de Windows <"
+"iot/windows-iot/homepage>`, haz clic en el botón :icon:`fa-cogs` "
+"(:guilabel:`engranajes`) y luego en :guilabel:`Credenciales`."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:128
 msgid "`ERR_IOT_HTTPS_LOAD_REQUEST_EXCEPTION`"
@@ -12624,6 +12793,9 @@ msgid ""
 "server refused to provide the ref:`HTTPS certificate <iot/connect/"
 "https_certificate>`."
 msgstr ""
+"El sistema IoT se conectó con éxito a `<https://www.odoo.com>`_, pero el "
+"servidor rechazó la entrega del :ref:`certificado HTTPS <iot/connect/"
+"https_certificate>`."
 
 #: ../../content/applications/general/iot/iot_advanced/troubleshooting.rst:171
 msgid ""
@@ -12741,10 +12913,12 @@ msgid ""
 "Open balenaEtcher, click :guilabel:`Flash from URL`, and enter the following "
 "URL:"
 msgstr ""
+"Abre balenaEtcher, haz clic en :guilabel:`Actualizar desde URL` "
+"(Flash from URL) y escribe la siguiente URL:"
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:0
 msgid "`http://nightly.odoo.com/master/iotbox/iotbox-latest.zip`."
-msgstr ""
+msgstr "`http://nightly.odoo.com/master/iotbox/iotbox-latest.zip`."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:44
 msgid "Click :guilabel:`Select target` and select the SD card."
@@ -12777,6 +12951,9 @@ msgid ""
 "doing so could leave the device in an inconsistent state, requiring the IoT "
 "box to be reflashed with a new image."
 msgstr ""
+"**No apagues ni desconectes la caja IoT** durante el proceso de "
+"actualización, ya que podrías dejar el dispositivo en un estado incompatible "
+"y tendrías que reiniciar la caja IoT con una imagen nueva."
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:61
 msgid ""
@@ -12895,6 +13072,8 @@ msgid ""
 "It is recommended to connect the IoT box to the same network as "
 "the :doc:`devices <devices>` connecting to it."
 msgstr ""
+"Te recomendamos conectar la caja IoT a la misma red que los :doc:`"
+"dispositivos <devices>` que se conectan a ella."
 
 #: ../../content/applications/general/iot/iot_box.rst:28
 msgid ""
@@ -12968,6 +13147,10 @@ msgid ""
 "navigate to `http://10.11.12.1` or any URL starting with **http** (e.g., "
 "`http://odoo.com`)."
 msgstr ""
+"Según tu sistema operativo, es posible que el navegador no abra ni redirija "
+"a la página de inicio de la caja IoT. En ese caso, abre el navegador de "
+"forma manual y ve a `http://10.11.12.1` o a cualquier URL que empiece con "
+"**http** (por ejemplo, `http://odoo.com`)."
 
 #: ../../content/applications/general/iot/iot_box.rst:58
 msgid ""
@@ -12979,7 +13162,7 @@ msgstr ""
 
 #: ../../content/applications/general/iot/iot_box.rst:0
 msgid "IoT box's WiFi hotspot"
-msgstr ""
+msgstr "Punto de acceso Wi-Fi de la caja IoT"
 
 #: ../../content/applications/general/iot/iot_box.rst:65
 msgid ""
@@ -13010,6 +13193,13 @@ msgid ""
 "select the relevant Wi-Fi network, enter the password, and "
 "click :guilabel:`Connect`."
 msgstr ""
+"Si conectas la caja IoT a un :doc:`monitor externo <devices/screen>` también "
+"puedes escanear el primer código QR que aparezca en la pantalla para "
+"conectarte a la red y luego escanear el segundo código QR para acceder a la "
+":ref:`página de inicio <iot/iot-box/homepage>` de la caja IoT. En la página "
+"de inicio, haz clic en :guilabel:`Configurar` dentro de la sección "
+":guilabel:`Estado de internet`, selecciona la red Wi-Fi correspondiente, "
+"ingresa la contraseña y haz clic en :guilabel:`Conectar`."
 
 #: ../../content/applications/general/iot/iot_box.rst:83
 msgid "LED status"
@@ -13077,10 +13267,12 @@ msgid ""
 "connecting the IoT box to an :doc:`external monitor <devices/screen>`: the "
 "IP address is displayed on the screen."
 msgstr ""
+"Al conectar la caja IoT a un :doc:`monitor externo <devices/screen>`, su "
+"dirección IP aparecerá en la pantalla."
 
 #: ../../content/applications/general/iot/iot_box.rst:0
 msgid "Status display with IoT box's IP address"
-msgstr ""
+msgstr "Pantalla de estado con la dirección IP de la caja IoT"
 
 #: ../../content/applications/general/iot/iot_box.rst:115
 msgid ""
@@ -13107,6 +13299,10 @@ msgid ""
 "scanning the displayed or printed QR code with a device connected to the "
 "same network as the IoT box."
 msgstr ""
+"Si conectas la caja IoT a un :doc:`monitor externo <devices/screen>` o a una "
+":doc:`impresora <devices/printer>`, también puedes acceder a su página de "
+"inicio al escanear el código QR que aparece en pantalla o que se imprime "
+"desde un dispositivo conectado a la misma red que la caja IoT."
 
 #: ../../content/applications/general/iot/iot_box.rst:125
 msgid ""
@@ -13114,10 +13310,14 @@ msgid ""
 "homepage can be accessed from the IoT app: click the relevant IoT box's "
 "card, then click :guilabel:`Homepage`."
 msgstr ""
+"Una vez que la caja IoT está :doc:`conectada a la base de datos de Odoo "
+"<connect>`, puedes acceder a su página de inicio desde la aplicación IoT. "
+"Haz clic en la tarjeta de la caja IoT correspondiente y luego en :guilabel:`"
+"Página de inicio`."
 
 #: ../../content/applications/general/iot/iot_box.rst:131
 msgid "IoT box restart"
-msgstr ""
+msgstr "Reiniciar la caja IoT"
 
 #: ../../content/applications/general/iot/iot_box.rst:133
 msgid ""
@@ -13125,11 +13325,16 @@ msgid ""
 "homepage>`, then click the :icon:`fa-power-off` :guilabel:`(power off)` "
 "button in the top-right corner."
 msgstr ""
+"Para reiniciar la caja IoT de forma manual, accede a su :ref:`página de "
+"inicio <iot/iot-box/homepage>` y haz clic en el botón :icon:`fa-power-off` "
+":guilabel:`(apagar)` en la esquina superior derecha."
 
 #: ../../content/applications/general/iot/iot_box.rst:137
 msgid ""
 "You can also fully reboot the IoT box by unplugging and plugging it back in."
 msgstr ""
+"También puedes reiniciar por completo la caja IoT al desconectarla y volver "
+"a conectarla."
 
 #: ../../content/applications/general/iot/windows_iot.rst:5
 msgid "To start using the Windows virtual IoT:"
@@ -13140,12 +13345,17 @@ msgid ""
 "Make sure the computer runs an updated version of Windows (Windows 10 or "
 "Windows 11), whether it's a laptop, desktop, or server."
 msgstr ""
+"Asegúrate de que la computadora ejecute una versión actualizada de Windows "
+"(Windows 10 o Windows 11), ya sea una laptop, una computadora de escritorio "
+"o un servidor."
 
 #: ../../content/applications/general/iot/windows_iot.rst:9
 msgid ""
 ":ref:`Install the Windows virtual IoT <iot/windows-iot/installation>` on the "
 "Windows computer."
 msgstr ""
+":ref:`Instala el IoT virtual de Windows <iot/windows-iot/installation>` en "
+"la computadora con Windows."
 
 #: ../../content/applications/general/iot/windows_iot.rst:10
 msgid "Connect your :doc:`devices <devices>` to the Windows virtual IoT."
@@ -13176,6 +13386,9 @@ msgid ""
 "computer. However, this option is not supported by Odoo, and no "
 "troubleshooting assistance will be provided."
 msgstr ""
+"También puedes crear una máquina virtual de Windows en una computadora con "
+"macOS o Linux, pero esta opción es incompatible con Odoo y no contamos con "
+"asistencia para resolver problemas de ese tipo."
 
 #: ../../content/applications/general/iot/windows_iot.rst:24
 msgid ""
@@ -13244,6 +13457,9 @@ msgid ""
 "this can cause issues with :ref:`HTTPS certificate generation <iot/connect/"
 "https_certificate>`."
 msgstr ""
+"No instales el IoT virtual de Windows de Odoo en ningún directorio de "
+"usuario de Windows, ya que esto puede causar problemas con la :ref:`"
+"generación del certificado HTTPS <iot/connect/https_certificate>`."
 
 #: ../../content/applications/general/iot/windows_iot.rst:47
 msgid ""
@@ -13299,6 +13515,9 @@ msgid ""
 "the URL `https://xxx` (where `xxx` is the IoT system's IP address) to test "
 "for :ref:`HTTPS <iot/connect/https_certificate>` connection."
 msgstr ""
+"Desde otro dispositivo **en la misma red que el sistema IoT**, ve a la URL "
+"`https://xxx` (donde `xxx` es la dirección IP del sistema IoT) para probar "
+"la conexión :ref:`HTTPS <iot/connect/https_certificate>`."
 
 #: ../../content/applications/general/iot/windows_iot.rst:64
 msgid ""
@@ -13359,6 +13578,13 @@ msgid ""
 "exceptions for network discovery in the :abbr:`OS (Operating System)` or "
 "firewall settings."
 msgstr ""
+"Los firewalls ayudan a mantener los dispositivos seguros, pero a veces "
+"pueden bloquear conexiones que sí son legítimas. Si no puedes acceder al IoT "
+"virtual de Windows desde la :abbr:`LAN (red de área local)`, por ejemplo, "
+"desde otro dispositivo, es posible que el firewall esté bloqueando la "
+"conexión. Para evitar este problema, configura excepciones para el "
+"descubrimiento de red en los ajustes del :abbr:`SO (sistema operativo)` o "
+"del firewall."
 
 #: ../../content/applications/general/iot/windows_iot.rst:94
 msgid ""
@@ -13374,6 +13600,8 @@ msgid ""
 "To create a rule on Windows Defender and allow communication through the "
 "required ports, follow these steps:"
 msgstr ""
+"Sigue estos pasos para crear una regla en Windows Defender y permitir la "
+"comunicación a través de los puertos necesarios:"
 
 #: ../../content/applications/general/iot/windows_iot.rst:100
 msgid ""
@@ -13424,6 +13652,11 @@ msgid ""
 "applications/sales/point_of_sale/payment_methods/terminals/ingenico` payment "
 "terminal."
 msgstr ""
+"Según tus dispositivos IoT, puede que necesites otros puertos. Por ejemplo, "
+"agrega el puerto `9050` para la terminal de pago :doc:`/applications/sales/"
+"point_of_sale/payment_methods/terminals/worldline` y el puerto `9000` para "
+"la terminal de pago :doc:`/applications/sales/point_of_sale/payment_methods/"
+"terminals/ingenico`."
 
 #: ../../content/applications/general/iot/windows_iot.rst:116
 msgid ""
@@ -13483,6 +13716,10 @@ msgid ""
 "<connect>`, its homepage can be accessed from Odoo by opening the IoT app, "
 "clicking the relevant IoT box's card, and clicking :guilabel:`Homepage`."
 msgstr ""
+"Una vez que el IoT virtual de Windows esté :doc:`conectado a la base de "
+"datos de Odoo <connect>` podrás acceder a su página de inicio desde Odoo. "
+"Abre la aplicación IoT, haz clic en la tarjeta de la caja IoT "
+"correspondiente y luego en :guilabel:`Página de inicio`."
 
 #: ../../content/applications/general/iot/windows_iot.rst:None
 msgid "Windows virtual IoT's homepage"
@@ -13507,6 +13744,10 @@ msgid ""
 "the :guilabel:`odoo-server-xxx` service, right-click it, and "
 "select :guilabel:`Start` or :guilabel:`Restart`."
 msgstr ""
+"Para reiniciar el servidor IoT de Windows de forma manual, busca `servicios` "
+"en el menú Inicio de Windows y abre la aplicación \"Servicios\". Dirígete "
+"hasta el servicio :guilabel:`odoo-server-xxx`, haz clic derecho y selecciona "
+":guilabel:`Iniciar` o :guilabel:`Reiniciar`."
 
 #: ../../content/applications/general/iot/windows_iot.rst:160
 msgid "Windows virtual IoT uninstall"
@@ -13731,11 +13972,11 @@ msgid ""
 msgstr ""
 "Haz clic en una tarjeta para ver los detalles del dispositivo. Cada tarjeta "
 "muestra el nombre del :guilabel:`usuario`, el :guilabel:`nombre` del "
-"dispositivo, la :guilabel:`última dirección IP` usada y "
-"la :guilabel:`dirección IP vinculada`. También muestra la :guilabel:`primera "
-"actividad` y la :guilabel:`última actividad`, que indican cuándo inició "
-"sesión por primera vez el dispositivo en la base de datos y la última vez "
-"que tuvo actividad en la misma."
+"dispositivo, la :guilabel:`última dirección IP` usada y la :guilabel:`"
+"dirección IP vinculada`. También muestra la :guilabel:`primera actividad` y "
+"la :guilabel:`última actividad`, que indican cuándo inició sesión por "
+"primera vez el dispositivo en la base de datos y la última vez que tuvo "
+"actividad en la misma."
 
 #: ../../content/applications/general/users.rst:89
 msgid ""
