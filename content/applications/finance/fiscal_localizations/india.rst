@@ -79,6 +79,42 @@ Configuration --> Settings` and scroll down to the :guilabel:`Indian Integration
    production environment. If you want to use the testing environment then keep the checkbox
    unchecked.
 
+.. _india/invoice-compliance:
+
+Invoice Compliance
+==================
+
+**Section 31 of the CGST Act** mandates the issuance of a **Tax Invoice**, **Bill Of Supply**,
+or **Invoice-cum-Bill of supply** for supplies of goods or services and forms the **legal basis for
+invoicing under GST**, while the format, contents, and conditions are prescribed under
+**Rules 46, 49, and 54** respectively.
+
+.. list-table::
+   :header-rows: 1
+
+   * - Customer GST Treatment
+     - Supply Type
+     - Invoice Type
+   * - Regular/Composition/Deemed Export/UIN Holders
+     - Taxable
+     - Tax Invoice
+   * - Regular/Composition/Deemed Export/UIN Holders
+     - Exempt(Nil/Non-GST/Exempt)
+     - Bill Of Supply
+   * - Unregistered/Consumer
+     - Both(Taxable/Exempt)
+     - Invoice-cum-Bill Of Supply
+   * - overseas/Special Economic Zone(SEZ)
+     - Both(Taxable/Exempt)
+     - Tax Invoice
+
+.. important::
+   If a single document contains both taxable and exempt supplies, and the customer belongs to any of the following categories:
+   Regular, Composition, Deemed Export, or UIN holder, then the supplier must issue separate documents, i.e.,
+
+      - Tax Invoice for the taxable supply, and
+      - Bill of Supply for the exempt supply.
+
 .. _india/e-invoicing:
 
 e-Invoice system
