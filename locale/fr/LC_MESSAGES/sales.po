@@ -36,7 +36,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-26 18:30+0000\n"
+"POT-Creation-Date: 2026-01-02 18:30+0000\n"
 "PO-Revision-Date: 2025-11-19 20:20+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: French <https://translate.odoo.com/projects/odoo-19-doc/sales/"
@@ -21252,7 +21252,7 @@ msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:231
 #: ../../content/applications/sales/sales/invoicing/expense.rst:255
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:238
+#: ../../content/applications/sales/sales/invoicing/milestone.rst:114
 #: ../../content/applications/sales/sales/invoicing/proforma.rst:71
 #: ../../content/applications/sales/sales/invoicing/time_materials.rst:166
 msgid ":doc:`invoicing_policy`"
@@ -21903,7 +21903,7 @@ msgstr ""
 "cette facture est entièrement payée. Le flux de travail est ainsi terminé."
 
 #: ../../content/applications/sales/sales/invoicing/expense.rst:256
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:236
+#: ../../content/applications/sales/sales/invoicing/milestone.rst:112
 msgid ":doc:`time_materials`"
 msgstr ":doc:`time_materials`"
 
@@ -22135,593 +22135,219 @@ msgstr ""
 msgid "Invoice project milestones"
 msgstr "Facturer les jalons d'un projet"
 
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:5
+#: ../../content/applications/sales/sales/invoicing/milestone.rst:8
 msgid ""
-"Invoicing based on project milestones can be used for expensive or large-"
-"scale projects with discrete, measurable deliverables. The series of "
-"milestones in a project represent a clear sequence of work that will "
-"inevitably result in the completion of a project and/or contract."
+"Milestone-based invoicing is designed for companies that deliver work in "
+"clearly defined phases. Instead of invoicing an entire service upfront or at "
+"the very end, businesses can bill customers progressively as each stage of "
+"work is completed. This approach provides customers clearer visibility into "
+"progress and value delivered over time."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:9
+#: ../../content/applications/sales/sales/invoicing/milestone.rst:13
 msgid ""
-"This method of invoicing ensures the company gets a consistent flow of money "
-"throughout the lifetime of the project. Customers can closely monitor every "
-"phase of the project's development as it happens, in addition to paying a "
-"large bill in several installments, instead of all at once."
+"In Odoo, milestone invoicing is configured at the product level in the "
+"**Sales** app, with milestone progress and completion managed in the "
+"**Projects** app. When a milestone is marked as reached, the delivered "
+"quantity on the sales order (SO) is updated and can be invoiced."
 msgstr ""
-"Cette méthode de facturation garantit à l'entreprise un flux d'argent "
-"constant tout au long du projet. Les clients peuvent suivre de près chaque "
-"phrase du développement du projet au fur et à mesure qu'il se déroule, en "
-"plus de payer une facture importante en plusieurs fois, plutôt qu'en une "
-"seule fois."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:14
-msgid "Create milestone products"
-msgstr "Créer des produits de jalon"
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:16
-msgid ""
-"In Odoo, each milestone of a project is considered as an individual product."
-msgstr ""
-"Dans Odoo, chaque jalon d'un projet est considéré comme un produit "
-"individuel."
 
 #: ../../content/applications/sales/sales/invoicing/milestone.rst:18
-msgid ""
-"To create and/or configure products to work like this, first navigate "
-"to :menuselection:`Sales app --> Products --> Products`. Then, click on a "
-"product, or create a new one by clicking :guilabel:`New`."
+msgid "How milestone invoicing works"
 msgstr ""
-"Pour créer et/ou configurer les produits, allez d'abord à "
-"l'application :menuselection:`Ventes --> Produits --> Produits`. Puis "
-"cliquez sur un produit ou créez-en un nouveau en cliquant "
-"sur :guilabel:`Nouveau`."
+
+#: ../../content/applications/sales/sales/invoicing/milestone.rst:20
+msgid ""
+"Milestone invoicing follows a clear workflow involving multiple applications "
+"in Odoo:"
+msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/milestone.rst:22
 msgid ""
-"The option to invoice based on milestones is only available for certain "
-"product types."
+"A product is created in the **Sales** application, configured to be invoiced "
+"based on milestones."
 msgstr ""
-"L'option de facturer sur la base des jalons n'est disponible que pour "
-"certains types de produits."
+
+#: ../../content/applications/sales/sales/invoicing/milestone.rst:23
+msgid "A |SO| is created with the product."
+msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/milestone.rst:24
 msgid ""
-"On the product form, under the :guilabel:`General Information` tab, "
-"the :guilabel:`Product Type` field *must* be set on any of the following "
-"options: :guilabel:`Service`, :guilabel:`Event Ticket`, :guilabel:`Event "
-"Booth`, or :guilabel:`Course`."
+"A project in the **Projects** app is created with multiple milestones "
+"included."
 msgstr ""
-"Sur le formulaire du produit, dans l'onglet :guilabel:`Informations "
-"générales` le champ :guilabel:`Type de produit` *doit* être défini sur l'une "
-"des options suivantes : :guilabel:`Service`, :guilabel:`Ticket "
-"d'événement`, :guilabel:`Stand d'événement`, ou :guilabel:`Cours`."
 
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:None
-msgid "The invoicing policy field drop-down menu with options on product form."
-msgstr ""
-"Le menu déroulant du champ Politique de facturation et ses options sur le "
-"formulaire du produit."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:32
+#: ../../content/applications/sales/sales/invoicing/milestone.rst:25
 msgid ""
-"With any of those :guilabel:`Product Type` options selected, "
-"choose :guilabel:`Based on Milestones` from the :guilabel:`Invoicing Policy` "
-"drop-down menu."
+"A milestone is reached, and marked complete, causing the *Delivered* "
+"quantity on the |SO| line to update."
 msgstr ""
-"Si l'un de ces :guilabel:`Types de produit` est sélectionné, "
-"choisissez :guilabel:`Basé sur les jalons` dans le menu "
-"déroulant :guilabel:`Politique de facturation`."
 
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:39
-msgid "Beneath that is the :guilabel:`Create on Order` field."
-msgstr "En dessous se trouve le champ :guilabel:`Créer à la commande`."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:41
+#: ../../content/applications/sales/sales/invoicing/milestone.rst:27
 msgid ""
-"To ensure workflows are as seamless as possible, it is recommended that an "
-"option in the :guilabel:`Create on Order` field is selected."
+"An invoice is created for the completed milestone, which can be sent to the "
+"customer."
 msgstr ""
-"Pour assurer que les flux de travail soient aussi transparents que possible, "
-"il est recommandé de sélectionner une option dans le champ :guilabel:`Créer "
-"à la commande`."
 
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:45
+#: ../../content/applications/sales/sales/invoicing/milestone.rst:30
 msgid ""
-"Leaving it on the default :guilabel:`Nothing` option won't negatively affect "
-"the desired workflow. However, a project *must* then be created directly "
-"from a sales order form with that specific product. Once a project is "
-"created *then* milestones and tasks can be created and configured."
+"This document covers the **Sales** app configuration and invoicing flow for "
+"invoicing based on project milestones. For more information on creating, "
+"managing, and marking milestones as complete, and how to link them to tasks, "
+"see :doc:`Project milestones <../../../services/project/project_management/"
+"project_milestones>`."
 msgstr ""
-"Le fait de laisser l'option :guilabel:`Rien` par défaut n'aura pas "
-"d'incidence négative sur le flux de travail souhaité. Cependant, un projet "
-"*doit* être créé directement à partir d'une commande avec ce produit "
-"spécifique. Une fois qu'un produit est créé, les jalons et les tâches "
-"peuvent être créés et configurés *par la suite*."
 
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:50
-msgid ""
-"When the :guilabel:`Create on Order` default option of :guilabel:`Nothing` "
-"is clicked, a drop-down menu is revealed with the following options:"
-msgstr ""
-"Lorsque vous cliquez sur l'option par défaut :guilabel:`Rien` dans le "
-"champ :guilabel:`Créer à la commande Order`, un menu déroulant s'affiche et "
-"propose les options suivantes :"
+#: ../../content/applications/sales/sales/invoicing/milestone.rst:36
+msgid "Create milestone products"
+msgstr "Créer des produits de jalon"
 
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:53
+#: ../../content/applications/sales/sales/invoicing/milestone.rst:38
 msgid ""
-":guilabel:`Task`: Odoo creates a task related to this milestone product in "
-"the *Projects* app when this specific product is ordered."
+"To begin, a service product must be configured specifically for milestone-"
+"based invoicing. Navigate to :menuselection:`Sales app --> Products --> "
+"Products` and click :guilabel:`New`. Enter the necessary information, "
+"including the product title and :guilabel:`Sales Price`."
 msgstr ""
-":guilabel:`Tâche` : Odoo crée une tâche associée à ce produit de jalon dans "
-"l'application *Projets* lorsque ce produit spécifique est commandé."
 
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:55
+#: ../../content/applications/sales/sales/invoicing/milestone.rst:42
 msgid ""
-":guilabel:`Project \\& Task`: Odoo creates a project and task related to "
-"this milestone product in the *Projects* app when this specific product is "
-"ordered."
+"For the :guilabel:`Product Type`, select :guilabel:`Service`. Doing so "
+"reveals the :guilabel:`Create on Order` field. Select "
+"either :guilabel:`Project`, :guilabel:`Project and Task`, "
+"or :guilabel:`Task`, depending on how the product is to be tracked in the "
+"**Project** app."
 msgstr ""
-":guilabel:`Projet \\& Tâche` : Odoo crée un projet et une tâche associés à "
-"ce projet de jalon dans l'application *Projets* lorsque ce produit "
-"spécifique est commandé."
 
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:57
+#: ../../content/applications/sales/sales/invoicing/milestone.rst:47
 msgid ""
-":guilabel:`Project`: Odoo creates a project related to this milestone "
-"product in the *Projects* app when this specific product is ordered."
+"A :guilabel:`Project Template` can also be selected for the product. "
+"See :doc:`Project templates <../../../services/project/project_management/"
+"project_templates>` for more information. Project templates can have "
+"milestones defined, however, the *Quantity (%)* field must be manually "
+"updated on each newly created project."
 msgstr ""
-":guilabel:`Projet` : Odoo crée un projet associé à ce produit de jalon dans "
-"l'application *Projets* lorsque ce produit spécifique est commandé."
+
+#: ../../content/applications/sales/sales/invoicing/milestone.rst:52
+msgid ""
+"For the :guilabel:`Invoicing Policy`, select :guilabel:`Based on "
+"Milestones`. This option ensures that the product's delivered quantities "
+"update automatically once a milestone is completed."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/milestone.rst:56
+msgid ""
+"*Based on Milestones* is only available if there is at least one project "
+"with *Milestones* enabled."
+msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/milestone.rst:60
-msgid ""
-"When :guilabel:`Task` is selected, a :guilabel:`Project` field appears. In "
-"this field, select to which existing project in the *Projects* app this "
-"created task should be connected."
+msgid "Defining milestones"
 msgstr ""
-"Lorsque vous sélectionnez :guilabel:`Tâche`, un champ :guilabel:`Projet` "
-"apparaît. Dans ce champ, sélectionnez à quel projet existant dans "
-"l'application *Projets* cette tâche créée doit être liée."
 
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:None
+#: ../../content/applications/sales/sales/invoicing/milestone.rst:63
 msgid ""
-"The Project field appears when the Task option is selected in Create on "
-"Order field."
+"This document focuses on the process of selling and invoicing a milestone "
+"product in the **Sales** app. For more information on creating milestones in "
+"the **Project** app, see :doc:`Project milestones <../../../services/project/"
+"project_management/project_milestones>`."
 msgstr ""
-"Le champ Projet apparaît lorsque l'option Tâche est choisie dans le champ "
-"Créer à la commande."
 
 #: ../../content/applications/sales/sales/invoicing/milestone.rst:67
 msgid ""
-"When :guilabel:`Project \\& Task` or :guilabel:`Project` is selected, two "
-"new fields appear: :guilabel:`Project Template` and :guilabel:`Workspace "
-"Template`."
+"After the milestone product has been sold, a  *Milestones* smart button is "
+"added to the |SO|. Click the smart button to view, edit, or create new "
+"milestones."
 msgstr ""
-"Lorsque vous sélectionnez :guilabel:`Projet \\& Tâche` "
-"ou :guilabel:`Projet`, deux nouveaux champs apparaissent : :guilabel:`Modèle "
-"de projet` et :guilabel:`Modèle d'espace de travail`."
 
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:None
+#: ../../content/applications/sales/sales/invoicing/milestone.rst:70
 msgid ""
-"The Project template and workspace template fields that appear on milestone "
-"product."
+"From here, the :guilabel:`Delivered %` can be altered. This amount equates "
+"to the total cost of the |SO| that is billed when the milestone is reached."
 msgstr ""
-"Les champs Modèle de projet et Modèle d'espace de travail qui apparaissent "
-"sur le projet de jalon."
 
 #: ../../content/applications/sales/sales/invoicing/milestone.rst:74
 msgid ""
-"The :guilabel:`Project Template` field provides template options to use for "
-"the project that will be created when this specific product is ordered."
+"A company that provides pool installation services bills based on predefined "
+"milestones as the work is completed. Each milestone equates to 25% of the "
+"total services:"
 msgstr ""
-"Le champ :guilabel:`Modèle de projet` fournit des options de modèle à "
-"utiliser pour le projet qui sera créé lorsque ce produit spécifique est "
-"commandé."
 
 #: ../../content/applications/sales/sales/invoicing/milestone.rst:77
-msgid ""
-"The :guilabel:`Workspace Template` field provides template options to use "
-"for the workspace (for the *Documents* app, not the *Projects* app) that "
-"will be automatically generated for the project when this specific product "
-"is ordered."
+msgid "Site Preparation & Excavation"
 msgstr ""
-"Le champ :guilabel:`Modèle d'espace de travail` fournit des options de "
-"modèle à utiliser pour l'espace de travail (pour l'application *Documents* "
-"et non l'application *Projets*) qui sera automatiquement généré pour le "
-"projet lorsque ce produit spécifique est commandé."
 
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:82
-msgid ""
-"For organizational purposes, click the :guilabel:`Sales` tab on the product "
-"form, and enter a custom 'Milestone' related descriptor in "
-"the :guilabel:`Sales Description` field. This information appears in "
-"the :guilabel:`Description` column on the :guilabel:`Order Lines` tab of the "
-"sales order."
+#: ../../content/applications/sales/sales/invoicing/milestone.rst:78
+msgid "Structural Installation"
 msgstr ""
-"Pour des raisons d'organisation, cliquez sur l'onglet :guilabel:`Ventes` sur "
-"le formulaire du produit et saisissez une description du 'Jalon' dans le "
-"champ :guilabel:`Description vente`. Ces informations apparaissent dans la "
-"colonne :guilabel:`Description` de l'onglet :guilabel:`Lignes de commande` "
-"de la commande."
 
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:87
-msgid ""
-"Or, directly edit/modify the :guilabel:`Description` field on "
-"the :guilabel:`Order Lines` tab of the sales order."
+#: ../../content/applications/sales/sales/invoicing/milestone.rst:79
+msgid "Plumbing & Equipment Installation"
 msgstr ""
-"Ou, modifiez directement le champ :guilabel:`Description` de "
-"l'onglet :guilabel:`Lignes de commande` de la commande."
+
+#: ../../content/applications/sales/sales/invoicing/milestone.rst:80
+msgid "Finishing & Final Inspection"
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/milestone.rst:None
+msgid "The milestones for a sales order line."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/milestone.rst:85
+msgid ""
+"The team uses a project template, called *Pool installation*, with these "
+"milestones defined. A new project is created whenever a |SO| with the *Pool "
+"installation services* product is confirmed."
+msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/milestone.rst:90
-msgid "This is *not* a requirement."
-msgstr "Ceci n'est *pas* obligatoire."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:93
-msgid "Invoice milestones"
-msgstr "Facturer des jalons"
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:96
-msgid ""
-"The following flow features a trio of milestone products that "
-"have :guilabel:`Service` set as their :guilabel:`Product Type`, "
-"and :guilabel:`Task` set on their :guilabel:`Create on Order` field."
+msgid "Invoicing a completed milestone"
 msgstr ""
-"Le flux suivant présente un trio de produits de jalon qui dont "
-"le :guilabel:`Type de produit` est :guilabel:`Service` et le "
-"champ :guilabel:`Créer à la commande` est défini sur :guilabel:`Tâche`."
 
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:0
+#: ../../content/applications/sales/sales/invoicing/milestone.rst:92
 msgid ""
-"Product with Service \"Product Type\" and \"Task\" in the Create on Order "
-"field on form."
+"Milestones can be tracked through the **Project** app (see :ref:`Using "
+"milestones <project/using-milestones>`). Additionally, a milestone can be "
+"marked complete by navigating to the |SO|, and clicking "
+"the :guilabel:`Milestones` smart button. On the *Milestones* page, enable "
+"the checkbox in the :guilabel:`Reached` column for the milestone."
 msgstr ""
-"Produit avec le \"Type de produit\" Service et le champ Créer à la commande "
-"défini sur \"Tâche\"."
 
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:104
+#: ../../content/applications/sales/sales/invoicing/milestone.rst:97
 msgid ""
-"Those tasks are then attached to a pre-existing :guilabel:`Project`, which, "
-"in this case, is titled, :guilabel:`Rebranding Projects`."
+"Then, click :guilabel:`View Sales Order` or use the breadcrumbs to return to "
+"the |SO|. The :guilabel:`Delivered` column will be updated to reflect the "
+"*Delivered %* for the milestone reached."
 msgstr ""
-"Ces tâches sont alors associées à un :guilabel:`Projet` préexistant, qui, "
-"dans ce cas, s'intitule :guilabel:`Projets de rebranding`."
 
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:107
+#: ../../content/applications/sales/sales/invoicing/milestone.rst:100
 msgid ""
-"To invoice milestones, create a sales order with the milestone product(s). "
-"To do that, go to :menuselection:`Sales app --> New`. Doing so reveals a "
-"blank quotation form."
+"These steps can be repeated as additional milestones are reached until the |"
+"SO| has been fulfilled."
 msgstr ""
-"Pour facturer les jalons, créez une commande avec le ou les produits de "
-"jalon. Pour ce faire, allez à l'application :menuselection:`Ventes --> "
-"Nouveau`. Cette opération fait apparaître un formulaire de devis vierge."
 
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:110
+#: ../../content/applications/sales/sales/invoicing/milestone.rst:103
 msgid ""
-"From this quotation form, add a :guilabel:`Customer`. Then, "
-"click :guilabel:`Add a product` in the :guilabel:`Order Lines` tab. Next, "
-"add the milestone product(s) to the :guilabel:`Order Lines` tab."
+"Reaching a milestone does *not* automatically create an invoice. Instead, it "
+"updates the |SO| to reflect the amount of the total that is ready for "
+"invoicing."
 msgstr ""
-"Dans ce formulaire de devis, ajoutez un :guilabel:`Client`. Puis cliquez "
-"sur :guilabel:`Ajouter un produit` dans l'onglet :guilabel:`Lignes de "
-"commande`. Ajoutez ensuite le ou les produits de jalon dans "
-"l'onglet :guilabel:`Lignes de commande`."
+
+#: ../../content/applications/sales/sales/invoicing/milestone.rst:106
+msgid ""
+"Once one or more milestones have been reached, navigate to the |SO|, and "
+"confirm the :guilabel:`Delivered` column has updated correctly. Then, "
+"click :guilabel:`Create Invoice`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/milestone.rst:109
+msgid ""
+"Additional milestones can be invoiced as they are completed, until all "
+"services are complete."
+msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/milestone.rst:113
-msgid ""
-"Once the corresponding milestone product(s) have been added, "
-"click :guilabel:`Confirm` to confirm the order, which turns the quotation "
-"into a sales order."
-msgstr ""
-"Une fois que le ou les produits de jalon correspondants ont été ajoutés, "
-"cliquez sur :guilabel:`Confirmer` pour confirmer la commande, ce qui "
-"transforme le devis en commande."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:116
-msgid ""
-"When the order is confirmed, new smart buttons appear at the top of the "
-"sales order based on what was selected in the :guilabel:`Create on Order` "
-"field on the product form."
-msgstr ""
-"Lorsque la commande est confirmée, de nouveaux boutons intelligents "
-"apparaissent en haut de la commande en fonction de ce qui a été sélectionné "
-"dans le champ :guilabel:`Créer à la commande` sur le formulaire du produit."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:119
-msgid ""
-"From the sales order, click the :guilabel:`Milestones` smart button. Doing "
-"so reveals a blank :guilabel:`Milestones` page. Click :guilabel:`New` to add "
-"milestones."
-msgstr ""
-"À partir de la commande, cliquez sur le bouton "
-"intelligent :guilabel:`Jalons`. Cette opération fait apparaître une "
-"page :guilabel:`Jalons` vierge. Cliquez sur :guilabel:`Nouveau` pour ajouter "
-"des jalons."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:None
-msgid "Adding milestones to a sales order with milestone products."
-msgstr "Ajout de jalons à une commande avec des produits de jalon."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:126
-msgid ""
-"Enter a :guilabel:`Name` for the milestone. Next, apply it to the "
-"corresponding :guilabel:`Sales Order Item`. Lastly, assign "
-"a :guilabel:`Deadline` to the milestone, if desired."
-msgstr ""
-"Donnez un :guilabel:`Nom` au jalon. Ensuite, appliquez-le à "
-"l':guilabel:`Article de commande` correspondant. Enfin, attribuez "
-"une :guilabel:`Date limite` au jalon, si vous le souhaitez."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:129
-msgid "Repeat that process for all milestone sales order items."
-msgstr "Répétez ce processus pour tous les articles de commande."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:131
-msgid ""
-"Then, return to the sales order, via the breadcrumbs. From the sales order, "
-"click the :guilabel:`Tasks` smart button. Doing so reveals "
-"a :guilabel:`Tasks` page with a task for each sales order item with that "
-"option designated in the :guilabel:`Create on Order` field."
-msgstr ""
-"Retournez ensuite à la commande via le fil d'Ariane. À partir de la "
-"commande, cliquez sur le bouton intelligent, :guilabel:`Tâches`. Cette "
-"opération fait apparaître une page :guilabel:`Tâches` avec une tache pour "
-"chaque article de commande dont l’option est désignée dans le "
-"champ :guilabel:`Créer à la commande`."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:None
-msgid ""
-"Sample tasks page accessed via the smart button from a sales order with "
-"milestone products."
-msgstr ""
-"Exemple de page de tâches accessible via le bouton intelligent à partir "
-"d'une commande avec des produits de jalon."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:139
-msgid ""
-"To manually assign a configured milestone to a task, click the desired task, "
-"which reveals the task form. On the task form, select the appropriate "
-"milestone to which this task should be connected, in "
-"the :guilabel:`Milestone` field."
-msgstr ""
-"Pour assigner manuellement un jalon configuré à une tâche, cliquez sur la "
-"tâche souhaitée, ce qui fait apparaître son formulaire. Sur le formulaire, "
-"sélectionnez le jalon approprié auquel cette tâche doit être associée, dans "
-"le champ :guilabel:`Jalon`."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:None
-msgid ""
-"The milestone field on the task form when dealing with milestone products in "
-"Odoo Sales."
-msgstr ""
-"Le champ Jalon sur le formulaire lorsqu'il s'agit de produits de jalon dans "
-"Odoo Ventes."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:147
-msgid "Repeat this process for all milestone tasks."
-msgstr "Répétez ce processus pour toutes les tâches de jalon."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:149
-msgid ""
-"With those tasks properly configured, employees log in their progress as "
-"they work on the task, in addition to adding any notes related to the task."
-msgstr ""
-"Une fois ces tâches correctement configurées, les employés enregistrent leur "
-"progression au fur et à mesure qu'ils travaillent sur la tâche, en plus "
-"d'ajouter toutes les notes liées à la tâche."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:152
-msgid ""
-"Then, when that task is complete, that means that milestone has been "
-"reached. At that point, it is time to invoice that milestone."
-msgstr ""
-"Ensuite, lorsque cette tâche est terminée, cela signifie que le jalon a été "
-"atteint. Il est alors temps de facturer ce jalon."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:155
-msgid ""
-"To invoice a milestone, first return to the sales order — either via the "
-"breadcrumb links, or by navigating to :menuselection:`Sales app --> Orders --"
-"> Orders` and picking the appropriate sales order."
-msgstr ""
-"Pour facturer un jalon, retournez d'abord à la commande — soit via le fil "
-"d'Ariane, soit en allant à l'application :menuselection:`Ventes --> "
-"Commandes --> Commandes` et choisissez la commande appropriée."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:159
-msgid ""
-"Back on the sales order form, click the :guilabel:`Milestones` smart button, "
-"and check the box in the :guilabel:`Reached` column for that particular task."
-msgstr ""
-"De retour sur le formulaire de commande, cliquez sur le bouton "
-"intelligent :guilabel:`Jalons` et cochez la case dans la "
-"colonne :guilabel:`Atteint` pour cette tâche en particulier."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:None
-msgid ""
-"What it looks like to mark a milestone as reached via the milestone smart "
-"button."
-msgstr ""
-"A quoi ressemble le marquage d'un jalon comme atteint via le bouton "
-"intelligent jalons."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:166
-msgid ""
-"Next, return to the sales order — either by clicking :guilabel:`View Sales "
-"Order` on the :guilabel:`Milestones` page, or via the breadcrumb links."
-msgstr ""
-"Ensuite, retournez à la commande — soit en cliquant sur :guilabel:`Afficher "
-"le bon de commande` sur la page des :guilabel:`Jalons`, soit via le fil "
-"d'Ariane."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:169
-msgid ""
-"Back on the sales order, the line item for the milestone that's been reached "
-"has its :guilabel:`Delivered` column filled. That's because the milestone "
-"has been reached, and therefore delivered."
-msgstr ""
-"De retour sur la commande, la colonne :guilabel:`Livré` est rempli pour la "
-"ligne correspondant au jalon. C'est parce que le jalon a été atteint, et "
-"donc livré."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:None
-msgid ""
-"A milestone product that's been reached marked as delivered on the sales "
-"order in Odoo."
-msgstr ""
-"Un produit de jalon qui a été atteint, marqué comme livré sur la commande "
-"dans Odoo."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:177
-msgid ""
-"Click :guilabel:`Create Invoice` in the upper-left corner. Doing so reveals "
-"a :guilabel:`Create invoices` pop-up window."
-msgstr ""
-"Cliquez sur :guilabel:`Créer une facture` dans le coin supérieur gauche, ce "
-"qui fait apparaître une fenêtre contextuelle :guilabel:`Créer les factures`."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:None
-msgid ""
-"The create invoices pop-up window that appears when create invoice button is "
-"clicked."
-msgstr ""
-"La fenêtre contextuelle permettant de créer des factures qui s'affiche "
-"lorsque vous cliquez sur le bouton Créer une facture."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:184
-msgid ""
-"On the :guilabel:`Create invoices` pop-up window, leave "
-"the :guilabel:`Create Invoice` option on the default :guilabel:`Regular "
-"Invoice` selection, and click the :guilabel:`Create Draft Invoice` button."
-msgstr ""
-"Dans la fenêtre contextuelle :guilabel:`Créer les factures`, laissez "
-"l'option :guilabel:`Créer une facture` sur la sélection :guilabel:`Facture "
-"normale` par défaut et cliquez sur le bouton :guilabel:`Créer une facture "
-"brouillon`."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:188
-msgid ""
-"Upon clicking :guilabel:`Create Draft Invoice`, Odoo reveals "
-"the :guilabel:`Customer Invoice Draft`, *only* showing that reached "
-"milestone in the :guilabel:`Invoice Lines` tab."
-msgstr ""
-"Lorsque vous cliquez sur :guilabel:`Créer une facture brouillon`, Odoo ouvre "
-"la :guilabel:`Facture client brouillon`, ne montrant *que* ce jalon atteint "
-"dans l'onglet :guilabel:`Lignes de facture`."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:None
-msgid ""
-"A customer invoice draft showing only the milestone product that's been "
-"reached."
-msgstr ""
-"Une facture client brouillon qui ne montre que le produit de jalon qui a été "
-"atteint."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:195
-msgid ""
-"From this invoice page, click the :guilabel:`Confirm` button to confirm the "
-"invoice. Then, when the customer has paid for this milestone, "
-"click :guilabel:`Register Payment`."
-msgstr ""
-"Sur cette page de facture, cliquez sur le bouton :guilabel:`Confirmer` pour "
-"confirmer la facture. Ensuite, lorsque le client a payé ce jalon, cliquez "
-"sur :guilabel:`Enregistrer un paiement`."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:198
-msgid ""
-"When :guilabel:`Register Payment` is clicked, a :guilabel:`Register Payment` "
-"pop-up window appears."
-msgstr ""
-"Une fois que vous avez cliqué sur :guilabel:`Enregistrer un paiement`, une "
-"fenêtre contextuelle :guilabel:`Enregistrer un paiement` s'affiche."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:None
-msgid ""
-"The Register Payment pop-up window that appears when Register Payment is "
-"clicked."
-msgstr ""
-"La fenêtre contextuelle permettant d'enregistrer un paiement qui s'affiche "
-"lorsque vous cliquez sur Enregistrer un paiement."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:204
-msgid ""
-"On this pop-up window, confirm the accuracy of the auto-populated fields, "
-"then click :guilabel:`Create Payment`."
-msgstr ""
-"Dans cette fenêtre contextuelle, vérifiez les champs qui se sont remplis "
-"automatiquement, puis cliquez sur :guilabel:`Créer un paiement`."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:207
-msgid ""
-"When clicked, the pop-up window disappears, and Odoo returns to the invoice "
-"for that milestone, which now has a green :guilabel:`In Payment` banner in "
-"the upper-right corner. This banner signifies the invoice has been paid."
-msgstr ""
-"Lorsque vous cliquez dessus, la fenêtre contextuelle disparaît et Odoo "
-"revient à la facture de ce jalon, pour laquelle s'affiche désormais une "
-"bannière verte :guilabel:`En paiement` dans le coin supérieur droit. Cette "
-"bannière signifie que la facture a été payée."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:None
-msgid ""
-"An invoice with a milestone product that has been paid with an In Payment "
-"banner."
-msgstr ""
-"Une facture avec un produit de jalon qui a été payé avec une bannière En "
-"paiement."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:215
-msgid ""
-"Then, return to the sales order, via the breadcrumb links. Back on the sales "
-"order, in the :guilabel:`Order Lines` tab, the reached milestone that's been "
-"invoiced and paid for, now has its :guilabel:`Invoiced` column filled."
-msgstr ""
-"Retournez ensuite à la commande via le fil d'Ariane. De retour sur la "
-"commande, dans l'onglet :guilabel:`Lignes de commande`, le jalon atteint qui "
-"a été facturé et payé, a désormais sa colonne :guilabel:`Facturé` remplie."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:None
-msgid ""
-"The Invoiced column of a milestone product that's been paid for is filled."
-msgstr "La colonne Facturé d'un produit de jalon qui a été payé est remplie."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:223
-msgid ""
-"There is also a new :guilabel:`Invoices` smart button at the top of the "
-"sales order. Clicking that reveals all the invoices that are connected to "
-"this sales order."
-msgstr ""
-"Il y a également un nouveau bouton intelligent :guilabel:`Factures` en haut "
-"de la commande. En cliquant sur ce bouton, toutes les factures associées à "
-"cette commande s'affichent."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:None
-msgid ""
-"The invoices smart button that appears at the top of a sales order with "
-"milestones."
-msgstr ""
-"Le bouton intelligent Factures qui s'affiche en haut de la commande avec des "
-"jalons."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:230
-msgid ""
-"Simply repeat the above process for each milestone as it is worked on, and "
-"subsequently, completed."
-msgstr ""
-"Il suffit de répéter le processus susmentionné pour chaque jalon au fur et à "
-"mesure qu'il est travaillé, puis achevé."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:232
-msgid ""
-"Continue that process until the entire project has been completed, each "
-"milestone has been invoiced, and the entire order has been paid for in full."
-msgstr ""
-"Poursuivez ce processus jusqu'à ce que l'ensemble du projet soit achevé, que "
-"chaque étape ait été facturée et que la commande ait été entièrement payée."
-
-#: ../../content/applications/sales/sales/invoicing/milestone.rst:237
 msgid ":doc:`proforma`"
 msgstr ":doc:`proforma`"
 
@@ -28834,7 +28460,7 @@ msgstr ""
 #: ../../content/applications/sales/sales/sales_quotations/deadline.rst:56
 #: ../../content/applications/sales/sales/sales_quotations/get_paid_to_validate.rst:89
 #: ../../content/applications/sales/sales/sales_quotations/get_signature_to_validate.rst:85
-#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:69
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:88
 #: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:281
 msgid ":doc:`quote_template`"
 msgstr ":doc:`quote_template`"
@@ -28992,154 +28618,100 @@ msgstr "Livrer et facturer à des adresses différentes"
 #: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:5
 msgid ""
 "People and businesses often use separate addresses for billing (invoicing) "
-"and shipping (delivery) purposes. With the Odoo *Sales* app, contacts can "
+"and shipping (delivery) purposes. With the Odoo **Sales** app, contacts can "
 "have different specified addresses for delivery and invoicing."
 msgstr ""
-"Les particuliers et les sociétés utilisent souvent des adresses distinctes "
-"pour la facturation et la livraison. Avec l'application *Ventes* d'Odoo, les "
-"contacts peuvent préciser différentes adresses pour la livraison et la "
-"facturation."
 
 #: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:12
 msgid ""
-"To properly utilize multiple addresses in Odoo, go "
-"to :menuselection:`Accounting app --> Configuration --> Settings`, and "
-"scroll down to the :guilabel:`Customer Invoices` heading. Then, tick the "
-"checkbox."
+"To properly utilize multiple addresses in Odoo, go to "
+"the :menuselection:`Accounting app --> Configuration --> Settings`, and "
+"scroll down to the :guilabel:`Customer Invoices` heading. Then, tick "
+"the :guilabel:`Customer Addresses` checkbox."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:None
 msgid "Activate the Customer Addresses setting."
 msgstr "Activez le paramètre Adresses du client."
 
-#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:23
+#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:22
 msgid "Contact form configuration"
 msgstr "Configuration du formulaire de contact"
 
-#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:25
+#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:24
 msgid ""
-"To add multiple addresses to a contact, go to :menuselection:`Sales app --> "
-"Orders --> Customers`, and clear any default filters from the search bar. "
-"Then, click on the desired customer to open their contact form."
+"To add multiple addresses to a contact, go to the :menuselection:`Sales app "
+"--> Orders --> Customers`, and clear any default filters from the search "
+"bar. Then, click on the desired customer to open their contact form."
 msgstr ""
-"Pour ajouter plusieurs adresses à un contact, allez à "
-"l'application :menuselection:`Ventes --> Commandes --> Clients` et supprimez "
-"tous les filtres par défaut de la barre de recherche. Cliquez ensuite sur le "
-"client souhaité pour ouvrir leur formulaire de contact."
 
-#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:30
-msgid "Contact forms can be accessed in the *Contacts* application, as well."
+#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:29
+msgid "Contact forms can be accessed in the **Contacts** application, as well."
 msgstr ""
-"Vous pouvez également accéder aux formulaires de contact via l'application "
-"*Contacts*."
 
-#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:32
+#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:31
 msgid ""
-"From the contact form, click :guilabel:`Edit`, and then "
-"select :guilabel:`Add`, which is located under the :guilabel:`Contacts & "
-"Addresses` tab. Doing so reveals a :guilabel:`Create Contact` pop-up form, "
-"in which additional addresses can be configured."
+"From the contact form, click the :guilabel:`Add Contact` button, which is "
+"located under the :guilabel:`Contacts` tab. This brings up "
+"the :guilabel:`Create Contact` pop-up form, in which additional addresses "
+"can be configured."
 msgstr ""
-"Sur le formulaire de contact, cliquez sur :guilabel:`Modifier`, puis "
-"sur :guilabel:`Ajouter`, qui se trouve dans l'onglet :guilabel:`Contacts & "
-"Adresses`. Cette opération fait apparaître un formulaire "
-"contextuel :guilabel:`Créer contact` dans lequel vous pouvez configurer des "
-"adresses supplémentaires."
 
 #: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:None
 msgid "Add a contact/address to the contact form."
 msgstr "Ajoutez un contact/une adresse au formulaire de contact."
 
+#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:38
+msgid ""
+"On the :guilabel:`Create Contact` pop-up form, select any of the following "
+"options:"
+msgstr ""
+
 #: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:40
 msgid ""
-"On the :guilabel:`Create Contact` pop-up form, start by clicking the "
-"default :guilabel:`Other Address` field to reveal a drop-down menu of "
-"address-related options."
+":guilabel:`Contact`: Adds another contact, such as an employee at a company, "
+"to the contact form."
 msgstr ""
-"Dans le formulaire contextuel :guilabel:`Créer contact`, commencez par "
-"cliquer sur le champ :guilabel:`Autre adresse` par défaut pour afficher un "
-"menu déroulant d'options relatives à l'adresse."
+
+#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:41
+msgid ""
+":guilabel:`Invoice`: Adds a default invoice address to the contact form."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:42
+msgid ""
+":guilabel:`Delivery`: Adds a default delivery address to the contact form."
+msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:43
-msgid "Select any of the following options:"
-msgstr "Sélectionnez l'une des options suivantes :"
-
-#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:45
-msgid ":guilabel:`Contact`: adds another contact to the existing contact form."
-msgstr ""
-":guilabel:`Contact` : ajoute un autre contact au formulaire de contact "
-"existant."
-
-#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:46
 msgid ""
-":guilabel:`Invoice Address`: adds a specific invoice address to the existing "
-"contact form."
+":guilabel:`Other Address`: Adds an alternate address to the contact form."
 msgstr ""
-":guilabel:`Adresse de facturation` : ajoute une adresse de facturation "
-"spécifique à un formulaire de contact existant."
-
-#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:47
-msgid ""
-":guilabel:`Delivery Address`: adds a specific delivery address to the "
-"existing contact form."
-msgstr ""
-":guilabel:`Adresse de livraison` : ajoute une adresse de livraison "
-"spécifique au formulaire de contact existant."
-
-#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:48
-msgid ""
-":guilabel:`Other Address`: adds an alternate address to the existing contact "
-"form."
-msgstr ""
-":guilabel:`Autre adresse` : ajoute une adresse alternative au formulaire de "
-"contact existant."
-
-#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:49
-msgid ""
-":guilabel:`Private Address`: adds a private address to the existing contact "
-"form."
-msgstr ""
-":guilabel:`Adresse personnelle` : ajoute une adresse personnelle au "
-"formulaire de contact existant."
-
-#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:51
-msgid ""
-"Once an option is selected, proceed to enter the corresponding contact "
-"information that should be used for the specified address type."
-msgstr ""
-"Lorsque vous avez sélectionné une option, saisissez les informations de "
-"contact correspondantes à utiliser pour ce type d'adresse spécifié."
 
 #: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:None
 msgid "Create a new contact/address on a contact form."
 msgstr ""
 "Créez un nouveau contact/une nouvelle adresse sur un formulaire de contact."
 
-#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:58
+#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:48
 msgid ""
-"Then, click :guilabel:`Save & Close` to save the address and close "
-"the :guilabel:`Create Contact` window. Or, click :guilabel:`Save & New` to "
-"save the address and immediately input another one."
+"Once the corresponding information has been entered, click :guilabel:`Save & "
+"Close` to save the address and close the :guilabel:`Create Contact` window. "
+"To save the address and input additional contact information, "
+"click :guilabel:`Save & New` instead."
 msgstr ""
-"Cliquez ensuite sur :guilabel:`Enregistrer & Fermer` pour enregistrer "
-"l'adresse et fermer la fenêtre :guilabel:`Créer contact`. Ou cliquez "
-"sur :guilabel:`Enregistrer & Nouveau` pour enregistrer l'adresse et "
-"immédiatement en saisir une autre."
 
-#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:62
-msgid "Address added to quotations"
-msgstr "Adresse ajoutée aux devis"
+#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:53
+msgid "Quotations and autopopulated addresses"
+msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:64
+#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:55
 msgid ""
-"When a customer is added to a quotation, the :guilabel:`Invoice Address` "
+"When a customer with invoice and delivery addresses in their contact form is "
+"added to a quotation, the :guilabel:`Invoice Address` "
 "and :guilabel:`Delivery Address` fields autopopulate with the corresponding "
-"addresses specified on the customer's contact form."
+"addresses."
 msgstr ""
-"Lorsqu'un client est ajouté à un devis, les champs :guilabel:`Adresse de "
-"facturation` et :guilabel:`Adresse de livraison` se remplissent "
-"automatiquement en fonction des adresses précisées sur le formulaire de "
-"contact du client."
 
 #: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:None
 msgid "Invoice and Delivery Addresses autopopulate on a quotation."
@@ -29147,35 +28719,12 @@ msgstr ""
 "Les adresses de facturation et de livraison se remplissent automatiquement "
 "dans un devis."
 
-#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:72
+#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:62
 msgid ""
 "The :guilabel:`Invoice Address` and :guilabel:`Delivery Address` can also be "
-"edited directly from the quotation by clicking the :guilabel:`Edit` button, "
-"and then clicking the :guilabel:`➡️ (right arrow)` internal link buttons next "
-"to each address line."
+"edited directly from the quotation by mousing over the address and clicking "
+"the :icon:`oi-arrow-right` :guilabel:`(Internal Link)` icon."
 msgstr ""
-"Il est également possible de modifier l':guilabel:`Adresse de facturation` "
-"et l':guilabel:`Adresse de livraison` directement à partir du devis en "
-"cliquant sur le bouton :guilabel:`Modifier`, puis sur les boutons de lien "
-"interne :guilabel:`➡️ (flèche droite)` à côté de chaque ligne d'adresse."
-
-#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:76
-msgid ""
-"These addresses can be updated at any time to ensure accurate invoicing and "
-"delivery."
-msgstr ""
-"Ces adresses peuvent être mises à jour à tout moment pour garantir "
-"l'exactitude de la facturation et de la livraison."
-
-#: ../../content/applications/sales/sales/sales_quotations/different_addresses.rst:79
-msgid ""
-"If any changes are made on a form in Odoo, include *Contacts* forms, "
-"remember to click :guilabel:`Save` to save the changes to the database."
-msgstr ""
-"Si des modifications sont apportées à un formulaire dans Odoo, y compris aux "
-"formulaires de *Contact*, n'oubliez pas de cliquer "
-"sur :guilabel:`Enregistrer` pour enregistrer les modifications dans la base "
-"de données."
 
 #: ../../content/applications/sales/sales/sales_quotations/get_paid_to_validate.rst:3
 msgid "Online payment order confirmation"
@@ -29876,13 +29425,46 @@ msgid "The Search: Optional Products form accessed by clicking Search more..."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:62
+msgid "Setting optional product sections in quotations"
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:64
 msgid ""
-"Prior to Odoo 19.0, optional products were added to quotations on a separate "
-"tab in the quotation and quotation template forms. Beginning in 19.0, that "
-"tab has been removed from both quotations and quotation templates. If a core "
-"product with associated optional products is added to a quotation template, "
-"those optional products **will not** be automatically suggested during the "
-"quotation process and must instead be manually suggested to customers."
+"When developing a quotation for customers, entire sections of the quotation "
+"can be set as optional products, even if they haven't been configured in the "
+"product form. To create a section, click the :guilabel:`Add a section` link "
+"and enter its desired name in the :guilabel:`Enter a description` field. "
+"Click the :icon:`fa-ellipsis-v` :guilabel:`(drop-down menu)` and "
+"choose :icon:`fa-list` :guilabel:`Set Optional`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:None
+msgid "The dropdown menu with the \"Set Optional\" text highlighted."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:73
+msgid ""
+"Once a section is set to optional, the font color changes to reflect its "
+"status. All products within that section default to a quantity of `0`, "
+"ensuring they are not included in the total cost automatically. Both portal "
+"users (such as customers or vendors) and employees with access to create "
+"quotations and sales orders can update these quantities. Once a quantity is "
+"set to `1` or more, the product is added to the quote total."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:79
+msgid ""
+"Once an optional product section has been created in a quotation, users who "
+"have been :doc:`granted portal access <../../../general/users/user_portals/"
+"portal_access>` can interact with the quotation there. They can view the "
+"quotation and decide whether or not to add the optional products to their "
+"final sales order."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:None
+msgid ""
+"An optional products section with the quanitty and corresponding amount set "
+"to 0."
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/orders_and_variants.rst:3
@@ -32779,9 +32361,9 @@ msgid ""
 "Once these steps are complete, payment providers will be able to create "
 "tokens with customers' saved payment details during the checkout process. "
 "Saved payment details can then be used for future online or recurring "
-"subscription charges. Customers will also be able to log into "
-"their :doc:`customer portal <../../general/users/portal>` and enter their "
-"payment information there."
+"subscription charges. Customers can also log into their :doc:`customer "
+"portal <../../general/users/user_portals>` and enter their payment "
+"information there."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/automatic_payments.rst:43
@@ -32873,7 +32455,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/automatic_payments.rst:90
-msgid ":doc:`../../general/users/portal`"
+msgid ":doc:`../../general/users/user_portals`"
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/closing.rst:3
@@ -34624,6 +34206,676 @@ msgid ""
 "The related sales order viewable from the Sales History smart button in Odoo "
 "Subscriptions."
 msgstr ""
+
+#~ msgid ""
+#~ "This method of invoicing ensures the company gets a consistent flow of "
+#~ "money throughout the lifetime of the project. Customers can closely "
+#~ "monitor every phase of the project's development as it happens, in "
+#~ "addition to paying a large bill in several installments, instead of all "
+#~ "at once."
+#~ msgstr ""
+#~ "Cette méthode de facturation garantit à l'entreprise un flux d'argent "
+#~ "constant tout au long du projet. Les clients peuvent suivre de près "
+#~ "chaque phrase du développement du projet au fur et à mesure qu'il se "
+#~ "déroule, en plus de payer une facture importante en plusieurs fois, "
+#~ "plutôt qu'en une seule fois."
+
+#~ msgid ""
+#~ "In Odoo, each milestone of a project is considered as an individual "
+#~ "product."
+#~ msgstr ""
+#~ "Dans Odoo, chaque jalon d'un projet est considéré comme un produit "
+#~ "individuel."
+
+#~ msgid ""
+#~ "To create and/or configure products to work like this, first navigate "
+#~ "to :menuselection:`Sales app --> Products --> Products`. Then, click on a "
+#~ "product, or create a new one by clicking :guilabel:`New`."
+#~ msgstr ""
+#~ "Pour créer et/ou configurer les produits, allez d'abord à "
+#~ "l'application :menuselection:`Ventes --> Produits --> Produits`. Puis "
+#~ "cliquez sur un produit ou créez-en un nouveau en cliquant "
+#~ "sur :guilabel:`Nouveau`."
+
+#~ msgid ""
+#~ "The option to invoice based on milestones is only available for certain "
+#~ "product types."
+#~ msgstr ""
+#~ "L'option de facturer sur la base des jalons n'est disponible que pour "
+#~ "certains types de produits."
+
+#~ msgid ""
+#~ "On the product form, under the :guilabel:`General Information` tab, "
+#~ "the :guilabel:`Product Type` field *must* be set on any of the following "
+#~ "options: :guilabel:`Service`, :guilabel:`Event Ticket`, :guilabel:`Event "
+#~ "Booth`, or :guilabel:`Course`."
+#~ msgstr ""
+#~ "Sur le formulaire du produit, dans l'onglet :guilabel:`Informations "
+#~ "générales` le champ :guilabel:`Type de produit` *doit* être défini sur "
+#~ "l'une des options suivantes : :guilabel:`Service`, :guilabel:`Ticket "
+#~ "d'événement`, :guilabel:`Stand d'événement`, ou :guilabel:`Cours`."
+
+#~ msgid ""
+#~ "The invoicing policy field drop-down menu with options on product form."
+#~ msgstr ""
+#~ "Le menu déroulant du champ Politique de facturation et ses options sur le "
+#~ "formulaire du produit."
+
+#~ msgid ""
+#~ "With any of those :guilabel:`Product Type` options selected, "
+#~ "choose :guilabel:`Based on Milestones` from the :guilabel:`Invoicing "
+#~ "Policy` drop-down menu."
+#~ msgstr ""
+#~ "Si l'un de ces :guilabel:`Types de produit` est sélectionné, "
+#~ "choisissez :guilabel:`Basé sur les jalons` dans le menu "
+#~ "déroulant :guilabel:`Politique de facturation`."
+
+#~ msgid "Beneath that is the :guilabel:`Create on Order` field."
+#~ msgstr "En dessous se trouve le champ :guilabel:`Créer à la commande`."
+
+#~ msgid ""
+#~ "To ensure workflows are as seamless as possible, it is recommended that "
+#~ "an option in the :guilabel:`Create on Order` field is selected."
+#~ msgstr ""
+#~ "Pour assurer que les flux de travail soient aussi transparents que "
+#~ "possible, il est recommandé de sélectionner une option dans le "
+#~ "champ :guilabel:`Créer à la commande`."
+
+#~ msgid ""
+#~ "Leaving it on the default :guilabel:`Nothing` option won't negatively "
+#~ "affect the desired workflow. However, a project *must* then be created "
+#~ "directly from a sales order form with that specific product. Once a "
+#~ "project is created *then* milestones and tasks can be created and "
+#~ "configured."
+#~ msgstr ""
+#~ "Le fait de laisser l'option :guilabel:`Rien` par défaut n'aura pas "
+#~ "d'incidence négative sur le flux de travail souhaité. Cependant, un "
+#~ "projet *doit* être créé directement à partir d'une commande avec ce "
+#~ "produit spécifique. Une fois qu'un produit est créé, les jalons et les "
+#~ "tâches peuvent être créés et configurés *par la suite*."
+
+#~ msgid ""
+#~ "When the :guilabel:`Create on Order` default option "
+#~ "of :guilabel:`Nothing` is clicked, a drop-down menu is revealed with the "
+#~ "following options:"
+#~ msgstr ""
+#~ "Lorsque vous cliquez sur l'option par défaut :guilabel:`Rien` dans le "
+#~ "champ :guilabel:`Créer à la commande Order`, un menu déroulant s'affiche "
+#~ "et propose les options suivantes :"
+
+#~ msgid ""
+#~ ":guilabel:`Task`: Odoo creates a task related to this milestone product "
+#~ "in the *Projects* app when this specific product is ordered."
+#~ msgstr ""
+#~ ":guilabel:`Tâche` : Odoo crée une tâche associée à ce produit de jalon "
+#~ "dans l'application *Projets* lorsque ce produit spécifique est commandé."
+
+#~ msgid ""
+#~ ":guilabel:`Project \\& Task`: Odoo creates a project and task related to "
+#~ "this milestone product in the *Projects* app when this specific product "
+#~ "is ordered."
+#~ msgstr ""
+#~ ":guilabel:`Projet \\& Tâche` : Odoo crée un projet et une tâche associés "
+#~ "à ce projet de jalon dans l'application *Projets* lorsque ce produit "
+#~ "spécifique est commandé."
+
+#~ msgid ""
+#~ ":guilabel:`Project`: Odoo creates a project related to this milestone "
+#~ "product in the *Projects* app when this specific product is ordered."
+#~ msgstr ""
+#~ ":guilabel:`Projet` : Odoo crée un projet associé à ce produit de jalon "
+#~ "dans l'application *Projets* lorsque ce produit spécifique est commandé."
+
+#~ msgid ""
+#~ "When :guilabel:`Task` is selected, a :guilabel:`Project` field appears. "
+#~ "In this field, select to which existing project in the *Projects* app "
+#~ "this created task should be connected."
+#~ msgstr ""
+#~ "Lorsque vous sélectionnez :guilabel:`Tâche`, un champ :guilabel:`Projet` "
+#~ "apparaît. Dans ce champ, sélectionnez à quel projet existant dans "
+#~ "l'application *Projets* cette tâche créée doit être liée."
+
+#~ msgid ""
+#~ "The Project field appears when the Task option is selected in Create on "
+#~ "Order field."
+#~ msgstr ""
+#~ "Le champ Projet apparaît lorsque l'option Tâche est choisie dans le champ "
+#~ "Créer à la commande."
+
+#~ msgid ""
+#~ "When :guilabel:`Project \\& Task` or :guilabel:`Project` is selected, two "
+#~ "new fields appear: :guilabel:`Project Template` and :guilabel:`Workspace "
+#~ "Template`."
+#~ msgstr ""
+#~ "Lorsque vous sélectionnez :guilabel:`Projet \\& Tâche` "
+#~ "ou :guilabel:`Projet`, deux nouveaux champs "
+#~ "apparaissent : :guilabel:`Modèle de projet` et :guilabel:`Modèle d'espace "
+#~ "de travail`."
+
+#~ msgid ""
+#~ "The Project template and workspace template fields that appear on "
+#~ "milestone product."
+#~ msgstr ""
+#~ "Les champs Modèle de projet et Modèle d'espace de travail qui "
+#~ "apparaissent sur le projet de jalon."
+
+#~ msgid ""
+#~ "The :guilabel:`Project Template` field provides template options to use "
+#~ "for the project that will be created when this specific product is "
+#~ "ordered."
+#~ msgstr ""
+#~ "Le champ :guilabel:`Modèle de projet` fournit des options de modèle à "
+#~ "utiliser pour le projet qui sera créé lorsque ce produit spécifique est "
+#~ "commandé."
+
+#~ msgid ""
+#~ "The :guilabel:`Workspace Template` field provides template options to use "
+#~ "for the workspace (for the *Documents* app, not the *Projects* app) that "
+#~ "will be automatically generated for the project when this specific "
+#~ "product is ordered."
+#~ msgstr ""
+#~ "Le champ :guilabel:`Modèle d'espace de travail` fournit des options de "
+#~ "modèle à utiliser pour l'espace de travail (pour l'application "
+#~ "*Documents* et non l'application *Projets*) qui sera automatiquement "
+#~ "généré pour le projet lorsque ce produit spécifique est commandé."
+
+#~ msgid ""
+#~ "For organizational purposes, click the :guilabel:`Sales` tab on the "
+#~ "product form, and enter a custom 'Milestone' related descriptor in "
+#~ "the :guilabel:`Sales Description` field. This information appears in "
+#~ "the :guilabel:`Description` column on the :guilabel:`Order Lines` tab of "
+#~ "the sales order."
+#~ msgstr ""
+#~ "Pour des raisons d'organisation, cliquez sur l'onglet :guilabel:`Ventes` "
+#~ "sur le formulaire du produit et saisissez une description du 'Jalon' dans "
+#~ "le champ :guilabel:`Description vente`. Ces informations apparaissent "
+#~ "dans la colonne :guilabel:`Description` de l'onglet :guilabel:`Lignes de "
+#~ "commande` de la commande."
+
+#~ msgid ""
+#~ "Or, directly edit/modify the :guilabel:`Description` field on "
+#~ "the :guilabel:`Order Lines` tab of the sales order."
+#~ msgstr ""
+#~ "Ou, modifiez directement le champ :guilabel:`Description` de "
+#~ "l'onglet :guilabel:`Lignes de commande` de la commande."
+
+#~ msgid "This is *not* a requirement."
+#~ msgstr "Ceci n'est *pas* obligatoire."
+
+#~ msgid "Invoice milestones"
+#~ msgstr "Facturer des jalons"
+
+#~ msgid ""
+#~ "The following flow features a trio of milestone products that "
+#~ "have :guilabel:`Service` set as their :guilabel:`Product Type`, "
+#~ "and :guilabel:`Task` set on their :guilabel:`Create on Order` field."
+#~ msgstr ""
+#~ "Le flux suivant présente un trio de produits de jalon qui dont "
+#~ "le :guilabel:`Type de produit` est :guilabel:`Service` et le "
+#~ "champ :guilabel:`Créer à la commande` est défini sur :guilabel:`Tâche`."
+
+#~ msgid ""
+#~ "Product with Service \"Product Type\" and \"Task\" in the Create on Order "
+#~ "field on form."
+#~ msgstr ""
+#~ "Produit avec le \"Type de produit\" Service et le champ Créer à la "
+#~ "commande défini sur \"Tâche\"."
+
+#~ msgid ""
+#~ "Those tasks are then attached to a pre-existing :guilabel:`Project`, "
+#~ "which, in this case, is titled, :guilabel:`Rebranding Projects`."
+#~ msgstr ""
+#~ "Ces tâches sont alors associées à un :guilabel:`Projet` préexistant, qui, "
+#~ "dans ce cas, s'intitule :guilabel:`Projets de rebranding`."
+
+#~ msgid ""
+#~ "To invoice milestones, create a sales order with the milestone "
+#~ "product(s). To do that, go to :menuselection:`Sales app --> New`. Doing "
+#~ "so reveals a blank quotation form."
+#~ msgstr ""
+#~ "Pour facturer les jalons, créez une commande avec le ou les produits de "
+#~ "jalon. Pour ce faire, allez à l'application :menuselection:`Ventes --> "
+#~ "Nouveau`. Cette opération fait apparaître un formulaire de devis vierge."
+
+#~ msgid ""
+#~ "From this quotation form, add a :guilabel:`Customer`. Then, "
+#~ "click :guilabel:`Add a product` in the :guilabel:`Order Lines` tab. Next, "
+#~ "add the milestone product(s) to the :guilabel:`Order Lines` tab."
+#~ msgstr ""
+#~ "Dans ce formulaire de devis, ajoutez un :guilabel:`Client`. Puis cliquez "
+#~ "sur :guilabel:`Ajouter un produit` dans l'onglet :guilabel:`Lignes de "
+#~ "commande`. Ajoutez ensuite le ou les produits de jalon dans "
+#~ "l'onglet :guilabel:`Lignes de commande`."
+
+#~ msgid ""
+#~ "Once the corresponding milestone product(s) have been added, "
+#~ "click :guilabel:`Confirm` to confirm the order, which turns the quotation "
+#~ "into a sales order."
+#~ msgstr ""
+#~ "Une fois que le ou les produits de jalon correspondants ont été ajoutés, "
+#~ "cliquez sur :guilabel:`Confirmer` pour confirmer la commande, ce qui "
+#~ "transforme le devis en commande."
+
+#~ msgid ""
+#~ "When the order is confirmed, new smart buttons appear at the top of the "
+#~ "sales order based on what was selected in the :guilabel:`Create on Order` "
+#~ "field on the product form."
+#~ msgstr ""
+#~ "Lorsque la commande est confirmée, de nouveaux boutons intelligents "
+#~ "apparaissent en haut de la commande en fonction de ce qui a été "
+#~ "sélectionné dans le champ :guilabel:`Créer à la commande` sur le "
+#~ "formulaire du produit."
+
+#~ msgid ""
+#~ "From the sales order, click the :guilabel:`Milestones` smart button. "
+#~ "Doing so reveals a blank :guilabel:`Milestones` page. "
+#~ "Click :guilabel:`New` to add milestones."
+#~ msgstr ""
+#~ "À partir de la commande, cliquez sur le bouton "
+#~ "intelligent :guilabel:`Jalons`. Cette opération fait apparaître une "
+#~ "page :guilabel:`Jalons` vierge. Cliquez sur :guilabel:`Nouveau` pour "
+#~ "ajouter des jalons."
+
+#~ msgid "Adding milestones to a sales order with milestone products."
+#~ msgstr "Ajout de jalons à une commande avec des produits de jalon."
+
+#~ msgid ""
+#~ "Enter a :guilabel:`Name` for the milestone. Next, apply it to the "
+#~ "corresponding :guilabel:`Sales Order Item`. Lastly, assign "
+#~ "a :guilabel:`Deadline` to the milestone, if desired."
+#~ msgstr ""
+#~ "Donnez un :guilabel:`Nom` au jalon. Ensuite, appliquez-le à "
+#~ "l':guilabel:`Article de commande` correspondant. Enfin, attribuez "
+#~ "une :guilabel:`Date limite` au jalon, si vous le souhaitez."
+
+#~ msgid "Repeat that process for all milestone sales order items."
+#~ msgstr "Répétez ce processus pour tous les articles de commande."
+
+#~ msgid ""
+#~ "Then, return to the sales order, via the breadcrumbs. From the sales "
+#~ "order, click the :guilabel:`Tasks` smart button. Doing so reveals "
+#~ "a :guilabel:`Tasks` page with a task for each sales order item with that "
+#~ "option designated in the :guilabel:`Create on Order` field."
+#~ msgstr ""
+#~ "Retournez ensuite à la commande via le fil d'Ariane. À partir de la "
+#~ "commande, cliquez sur le bouton intelligent, :guilabel:`Tâches`. Cette "
+#~ "opération fait apparaître une page :guilabel:`Tâches` avec une tache pour "
+#~ "chaque article de commande dont l’option est désignée dans le "
+#~ "champ :guilabel:`Créer à la commande`."
+
+#~ msgid ""
+#~ "Sample tasks page accessed via the smart button from a sales order with "
+#~ "milestone products."
+#~ msgstr ""
+#~ "Exemple de page de tâches accessible via le bouton intelligent à partir "
+#~ "d'une commande avec des produits de jalon."
+
+#~ msgid ""
+#~ "To manually assign a configured milestone to a task, click the desired "
+#~ "task, which reveals the task form. On the task form, select the "
+#~ "appropriate milestone to which this task should be connected, in "
+#~ "the :guilabel:`Milestone` field."
+#~ msgstr ""
+#~ "Pour assigner manuellement un jalon configuré à une tâche, cliquez sur la "
+#~ "tâche souhaitée, ce qui fait apparaître son formulaire. Sur le "
+#~ "formulaire, sélectionnez le jalon approprié auquel cette tâche doit être "
+#~ "associée, dans le champ :guilabel:`Jalon`."
+
+#~ msgid ""
+#~ "The milestone field on the task form when dealing with milestone products "
+#~ "in Odoo Sales."
+#~ msgstr ""
+#~ "Le champ Jalon sur le formulaire lorsqu'il s'agit de produits de jalon "
+#~ "dans Odoo Ventes."
+
+#~ msgid "Repeat this process for all milestone tasks."
+#~ msgstr "Répétez ce processus pour toutes les tâches de jalon."
+
+#~ msgid ""
+#~ "With those tasks properly configured, employees log in their progress as "
+#~ "they work on the task, in addition to adding any notes related to the "
+#~ "task."
+#~ msgstr ""
+#~ "Une fois ces tâches correctement configurées, les employés enregistrent "
+#~ "leur progression au fur et à mesure qu'ils travaillent sur la tâche, en "
+#~ "plus d'ajouter toutes les notes liées à la tâche."
+
+#~ msgid ""
+#~ "Then, when that task is complete, that means that milestone has been "
+#~ "reached. At that point, it is time to invoice that milestone."
+#~ msgstr ""
+#~ "Ensuite, lorsque cette tâche est terminée, cela signifie que le jalon a "
+#~ "été atteint. Il est alors temps de facturer ce jalon."
+
+#~ msgid ""
+#~ "To invoice a milestone, first return to the sales order — either via the "
+#~ "breadcrumb links, or by navigating to :menuselection:`Sales app --> "
+#~ "Orders --> Orders` and picking the appropriate sales order."
+#~ msgstr ""
+#~ "Pour facturer un jalon, retournez d'abord à la commande — soit via le fil "
+#~ "d'Ariane, soit en allant à l'application :menuselection:`Ventes --> "
+#~ "Commandes --> Commandes` et choisissez la commande appropriée."
+
+#~ msgid ""
+#~ "Back on the sales order form, click the :guilabel:`Milestones` smart "
+#~ "button, and check the box in the :guilabel:`Reached` column for that "
+#~ "particular task."
+#~ msgstr ""
+#~ "De retour sur le formulaire de commande, cliquez sur le bouton "
+#~ "intelligent :guilabel:`Jalons` et cochez la case dans la "
+#~ "colonne :guilabel:`Atteint` pour cette tâche en particulier."
+
+#~ msgid ""
+#~ "What it looks like to mark a milestone as reached via the milestone smart "
+#~ "button."
+#~ msgstr ""
+#~ "A quoi ressemble le marquage d'un jalon comme atteint via le bouton "
+#~ "intelligent jalons."
+
+#~ msgid ""
+#~ "Next, return to the sales order — either by clicking :guilabel:`View "
+#~ "Sales Order` on the :guilabel:`Milestones` page, or via the breadcrumb "
+#~ "links."
+#~ msgstr ""
+#~ "Ensuite, retournez à la commande — soit en cliquant "
+#~ "sur :guilabel:`Afficher le bon de commande` sur la page "
+#~ "des :guilabel:`Jalons`, soit via le fil d'Ariane."
+
+#~ msgid ""
+#~ "Back on the sales order, the line item for the milestone that's been "
+#~ "reached has its :guilabel:`Delivered` column filled. That's because the "
+#~ "milestone has been reached, and therefore delivered."
+#~ msgstr ""
+#~ "De retour sur la commande, la colonne :guilabel:`Livré` est rempli pour "
+#~ "la ligne correspondant au jalon. C'est parce que le jalon a été atteint, "
+#~ "et donc livré."
+
+#~ msgid ""
+#~ "A milestone product that's been reached marked as delivered on the sales "
+#~ "order in Odoo."
+#~ msgstr ""
+#~ "Un produit de jalon qui a été atteint, marqué comme livré sur la commande "
+#~ "dans Odoo."
+
+#~ msgid ""
+#~ "Click :guilabel:`Create Invoice` in the upper-left corner. Doing so "
+#~ "reveals a :guilabel:`Create invoices` pop-up window."
+#~ msgstr ""
+#~ "Cliquez sur :guilabel:`Créer une facture` dans le coin supérieur gauche, "
+#~ "ce qui fait apparaître une fenêtre contextuelle :guilabel:`Créer les "
+#~ "factures`."
+
+#~ msgid ""
+#~ "The create invoices pop-up window that appears when create invoice button "
+#~ "is clicked."
+#~ msgstr ""
+#~ "La fenêtre contextuelle permettant de créer des factures qui s'affiche "
+#~ "lorsque vous cliquez sur le bouton Créer une facture."
+
+#~ msgid ""
+#~ "On the :guilabel:`Create invoices` pop-up window, leave "
+#~ "the :guilabel:`Create Invoice` option on the default :guilabel:`Regular "
+#~ "Invoice` selection, and click the :guilabel:`Create Draft Invoice` button."
+#~ msgstr ""
+#~ "Dans la fenêtre contextuelle :guilabel:`Créer les factures`, laissez "
+#~ "l'option :guilabel:`Créer une facture` sur la "
+#~ "sélection :guilabel:`Facture normale` par défaut et cliquez sur le "
+#~ "bouton :guilabel:`Créer une facture brouillon`."
+
+#~ msgid ""
+#~ "Upon clicking :guilabel:`Create Draft Invoice`, Odoo reveals "
+#~ "the :guilabel:`Customer Invoice Draft`, *only* showing that reached "
+#~ "milestone in the :guilabel:`Invoice Lines` tab."
+#~ msgstr ""
+#~ "Lorsque vous cliquez sur :guilabel:`Créer une facture brouillon`, Odoo "
+#~ "ouvre la :guilabel:`Facture client brouillon`, ne montrant *que* ce jalon "
+#~ "atteint dans l'onglet :guilabel:`Lignes de facture`."
+
+#~ msgid ""
+#~ "A customer invoice draft showing only the milestone product that's been "
+#~ "reached."
+#~ msgstr ""
+#~ "Une facture client brouillon qui ne montre que le produit de jalon qui a "
+#~ "été atteint."
+
+#~ msgid ""
+#~ "From this invoice page, click the :guilabel:`Confirm` button to confirm "
+#~ "the invoice. Then, when the customer has paid for this milestone, "
+#~ "click :guilabel:`Register Payment`."
+#~ msgstr ""
+#~ "Sur cette page de facture, cliquez sur le bouton :guilabel:`Confirmer` "
+#~ "pour confirmer la facture. Ensuite, lorsque le client a payé ce jalon, "
+#~ "cliquez sur :guilabel:`Enregistrer un paiement`."
+
+#~ msgid ""
+#~ "When :guilabel:`Register Payment` is clicked, a :guilabel:`Register "
+#~ "Payment` pop-up window appears."
+#~ msgstr ""
+#~ "Une fois que vous avez cliqué sur :guilabel:`Enregistrer un paiement`, "
+#~ "une fenêtre contextuelle :guilabel:`Enregistrer un paiement` s'affiche."
+
+#~ msgid ""
+#~ "The Register Payment pop-up window that appears when Register Payment is "
+#~ "clicked."
+#~ msgstr ""
+#~ "La fenêtre contextuelle permettant d'enregistrer un paiement qui "
+#~ "s'affiche lorsque vous cliquez sur Enregistrer un paiement."
+
+#~ msgid ""
+#~ "On this pop-up window, confirm the accuracy of the auto-populated fields, "
+#~ "then click :guilabel:`Create Payment`."
+#~ msgstr ""
+#~ "Dans cette fenêtre contextuelle, vérifiez les champs qui se sont remplis "
+#~ "automatiquement, puis cliquez sur :guilabel:`Créer un paiement`."
+
+#~ msgid ""
+#~ "When clicked, the pop-up window disappears, and Odoo returns to the "
+#~ "invoice for that milestone, which now has a green :guilabel:`In Payment` "
+#~ "banner in the upper-right corner. This banner signifies the invoice has "
+#~ "been paid."
+#~ msgstr ""
+#~ "Lorsque vous cliquez dessus, la fenêtre contextuelle disparaît et Odoo "
+#~ "revient à la facture de ce jalon, pour laquelle s'affiche désormais une "
+#~ "bannière verte :guilabel:`En paiement` dans le coin supérieur droit. "
+#~ "Cette bannière signifie que la facture a été payée."
+
+#~ msgid ""
+#~ "An invoice with a milestone product that has been paid with an In Payment "
+#~ "banner."
+#~ msgstr ""
+#~ "Une facture avec un produit de jalon qui a été payé avec une bannière En "
+#~ "paiement."
+
+#~ msgid ""
+#~ "Then, return to the sales order, via the breadcrumb links. Back on the "
+#~ "sales order, in the :guilabel:`Order Lines` tab, the reached milestone "
+#~ "that's been invoiced and paid for, now has its :guilabel:`Invoiced` "
+#~ "column filled."
+#~ msgstr ""
+#~ "Retournez ensuite à la commande via le fil d'Ariane. De retour sur la "
+#~ "commande, dans l'onglet :guilabel:`Lignes de commande`, le jalon atteint "
+#~ "qui a été facturé et payé, a désormais sa colonne :guilabel:`Facturé` "
+#~ "remplie."
+
+#~ msgid ""
+#~ "The Invoiced column of a milestone product that's been paid for is filled."
+#~ msgstr ""
+#~ "La colonne Facturé d'un produit de jalon qui a été payé est remplie."
+
+#~ msgid ""
+#~ "There is also a new :guilabel:`Invoices` smart button at the top of the "
+#~ "sales order. Clicking that reveals all the invoices that are connected to "
+#~ "this sales order."
+#~ msgstr ""
+#~ "Il y a également un nouveau bouton intelligent :guilabel:`Factures` en "
+#~ "haut de la commande. En cliquant sur ce bouton, toutes les factures "
+#~ "associées à cette commande s'affichent."
+
+#~ msgid ""
+#~ "The invoices smart button that appears at the top of a sales order with "
+#~ "milestones."
+#~ msgstr ""
+#~ "Le bouton intelligent Factures qui s'affiche en haut de la commande avec "
+#~ "des jalons."
+
+#~ msgid ""
+#~ "Simply repeat the above process for each milestone as it is worked on, "
+#~ "and subsequently, completed."
+#~ msgstr ""
+#~ "Il suffit de répéter le processus susmentionné pour chaque jalon au fur "
+#~ "et à mesure qu'il est travaillé, puis achevé."
+
+#~ msgid ""
+#~ "Continue that process until the entire project has been completed, each "
+#~ "milestone has been invoiced, and the entire order has been paid for in "
+#~ "full."
+#~ msgstr ""
+#~ "Poursuivez ce processus jusqu'à ce que l'ensemble du projet soit achevé, "
+#~ "que chaque étape ait été facturée et que la commande ait été entièrement "
+#~ "payée."
+
+#~ msgid ""
+#~ "People and businesses often use separate addresses for billing "
+#~ "(invoicing) and shipping (delivery) purposes. With the Odoo *Sales* app, "
+#~ "contacts can have different specified addresses for delivery and "
+#~ "invoicing."
+#~ msgstr ""
+#~ "Les particuliers et les sociétés utilisent souvent des adresses "
+#~ "distinctes pour la facturation et la livraison. Avec l'application "
+#~ "*Ventes* d'Odoo, les contacts peuvent préciser différentes adresses pour "
+#~ "la livraison et la facturation."
+
+#~ msgid ""
+#~ "To add multiple addresses to a contact, go to :menuselection:`Sales app --"
+#~ "> Orders --> Customers`, and clear any default filters from the search "
+#~ "bar. Then, click on the desired customer to open their contact form."
+#~ msgstr ""
+#~ "Pour ajouter plusieurs adresses à un contact, allez à "
+#~ "l'application :menuselection:`Ventes --> Commandes --> Clients` et "
+#~ "supprimez tous les filtres par défaut de la barre de recherche. Cliquez "
+#~ "ensuite sur le client souhaité pour ouvrir leur formulaire de contact."
+
+#~ msgid ""
+#~ "Contact forms can be accessed in the *Contacts* application, as well."
+#~ msgstr ""
+#~ "Vous pouvez également accéder aux formulaires de contact via "
+#~ "l'application *Contacts*."
+
+#~ msgid ""
+#~ "From the contact form, click :guilabel:`Edit`, and then "
+#~ "select :guilabel:`Add`, which is located under the :guilabel:`Contacts & "
+#~ "Addresses` tab. Doing so reveals a :guilabel:`Create Contact` pop-up "
+#~ "form, in which additional addresses can be configured."
+#~ msgstr ""
+#~ "Sur le formulaire de contact, cliquez sur :guilabel:`Modifier`, puis "
+#~ "sur :guilabel:`Ajouter`, qui se trouve dans l'onglet :guilabel:`Contacts "
+#~ "& Adresses`. Cette opération fait apparaître un formulaire "
+#~ "contextuel :guilabel:`Créer contact` dans lequel vous pouvez configurer "
+#~ "des adresses supplémentaires."
+
+#~ msgid ""
+#~ "On the :guilabel:`Create Contact` pop-up form, start by clicking the "
+#~ "default :guilabel:`Other Address` field to reveal a drop-down menu of "
+#~ "address-related options."
+#~ msgstr ""
+#~ "Dans le formulaire contextuel :guilabel:`Créer contact`, commencez par "
+#~ "cliquer sur le champ :guilabel:`Autre adresse` par défaut pour afficher "
+#~ "un menu déroulant d'options relatives à l'adresse."
+
+#~ msgid "Select any of the following options:"
+#~ msgstr "Sélectionnez l'une des options suivantes :"
+
+#~ msgid ""
+#~ ":guilabel:`Contact`: adds another contact to the existing contact form."
+#~ msgstr ""
+#~ ":guilabel:`Contact` : ajoute un autre contact au formulaire de contact "
+#~ "existant."
+
+#~ msgid ""
+#~ ":guilabel:`Invoice Address`: adds a specific invoice address to the "
+#~ "existing contact form."
+#~ msgstr ""
+#~ ":guilabel:`Adresse de facturation` : ajoute une adresse de facturation "
+#~ "spécifique à un formulaire de contact existant."
+
+#~ msgid ""
+#~ ":guilabel:`Delivery Address`: adds a specific delivery address to the "
+#~ "existing contact form."
+#~ msgstr ""
+#~ ":guilabel:`Adresse de livraison` : ajoute une adresse de livraison "
+#~ "spécifique au formulaire de contact existant."
+
+#~ msgid ""
+#~ ":guilabel:`Other Address`: adds an alternate address to the existing "
+#~ "contact form."
+#~ msgstr ""
+#~ ":guilabel:`Autre adresse` : ajoute une adresse alternative au formulaire "
+#~ "de contact existant."
+
+#~ msgid ""
+#~ ":guilabel:`Private Address`: adds a private address to the existing "
+#~ "contact form."
+#~ msgstr ""
+#~ ":guilabel:`Adresse personnelle` : ajoute une adresse personnelle au "
+#~ "formulaire de contact existant."
+
+#~ msgid ""
+#~ "Once an option is selected, proceed to enter the corresponding contact "
+#~ "information that should be used for the specified address type."
+#~ msgstr ""
+#~ "Lorsque vous avez sélectionné une option, saisissez les informations de "
+#~ "contact correspondantes à utiliser pour ce type d'adresse spécifié."
+
+#~ msgid ""
+#~ "Then, click :guilabel:`Save & Close` to save the address and close "
+#~ "the :guilabel:`Create Contact` window. Or, click :guilabel:`Save & New` "
+#~ "to save the address and immediately input another one."
+#~ msgstr ""
+#~ "Cliquez ensuite sur :guilabel:`Enregistrer & Fermer` pour enregistrer "
+#~ "l'adresse et fermer la fenêtre :guilabel:`Créer contact`. Ou cliquez "
+#~ "sur :guilabel:`Enregistrer & Nouveau` pour enregistrer l'adresse et "
+#~ "immédiatement en saisir une autre."
+
+#~ msgid "Address added to quotations"
+#~ msgstr "Adresse ajoutée aux devis"
+
+#~ msgid ""
+#~ "When a customer is added to a quotation, the :guilabel:`Invoice Address` "
+#~ "and :guilabel:`Delivery Address` fields autopopulate with the "
+#~ "corresponding addresses specified on the customer's contact form."
+#~ msgstr ""
+#~ "Lorsqu'un client est ajouté à un devis, les champs :guilabel:`Adresse de "
+#~ "facturation` et :guilabel:`Adresse de livraison` se remplissent "
+#~ "automatiquement en fonction des adresses précisées sur le formulaire de "
+#~ "contact du client."
+
+#~ msgid ""
+#~ "The :guilabel:`Invoice Address` and :guilabel:`Delivery Address` can also "
+#~ "be edited directly from the quotation by clicking the :guilabel:`Edit` "
+#~ "button, and then clicking the :guilabel:`➡️ (right arrow)` internal link "
+#~ "buttons next to each address line."
+#~ msgstr ""
+#~ "Il est également possible de modifier l':guilabel:`Adresse de "
+#~ "facturation` et l':guilabel:`Adresse de livraison` directement à partir "
+#~ "du devis en cliquant sur le bouton :guilabel:`Modifier`, puis sur les "
+#~ "boutons de lien interne :guilabel:`➡️ (flèche droite)` à côté de chaque "
+#~ "ligne d'adresse."
+
+#~ msgid ""
+#~ "These addresses can be updated at any time to ensure accurate invoicing "
+#~ "and delivery."
+#~ msgstr ""
+#~ "Ces adresses peuvent être mises à jour à tout moment pour garantir "
+#~ "l'exactitude de la facturation et de la livraison."
+
+#~ msgid ""
+#~ "If any changes are made on a form in Odoo, include *Contacts* forms, "
+#~ "remember to click :guilabel:`Save` to save the changes to the database."
+#~ msgstr ""
+#~ "Si des modifications sont apportées à un formulaire dans Odoo, y compris "
+#~ "aux formulaires de *Contact*, n'oubliez pas de cliquer "
+#~ "sur :guilabel:`Enregistrer` pour enregistrer les modifications dans la "
+#~ "base de données."
 
 #~ msgid ""
 #~ "go to the :guilabel:`Authorities` tab, click :guilabel:`Import`, and "
