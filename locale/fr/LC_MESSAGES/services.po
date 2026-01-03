@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-19 18:31+0000\n"
+"POT-Creation-Date: 2026-01-01 18:30+0000\n"
 "PO-Revision-Date: 2025-11-17 20:10+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: French <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -279,6 +279,7 @@ msgstr ":doc:`../../inventory_and_mrp/inventory`"
 #: ../../content/applications/services/project/tasks/recurring_tasks.rst:13
 #: ../../content/applications/services/timesheets/billing_rates.rst:19
 #: ../../content/applications/services/timesheets/billing_rates.rst:54
+#: ../../content/applications/services/timesheets/time_off.rst:12
 msgid "Configuration"
 msgstr "Configuration"
 
@@ -6643,115 +6644,196 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/services/timesheets/time_off.rst:3
-msgid "Create Timesheets upon Time Off Validation"
-msgstr "Créer des feuilles de temps lors de la validation des congés"
+msgid "Time off entries"
+msgstr ""
 
 #: ../../content/applications/services/timesheets/time_off.rst:5
 msgid ""
-"Odoo automatically timesheets on project/tasks upon time off requests. This "
-"allows for better overall control over the validation of timesheets, as it "
-"does not leave place for forgetfulness and questions after hours that have "
-"not been timesheeted by the employee."
+"Odoo automatically generates timesheet entries on projects and tasks once a "
+"time off request is approved. This streamlines timesheet validation by "
+"ensuring approved time off is accurately reflected in timesheets."
 msgstr ""
-"Odoo établit automatiquement des feuilles de temps sur les projets/tâches "
-"lors des demandes de congés. Cela permet un meilleur contrôle global sur la "
-"validation des feuilles de temps, car il ne laisse pas de place aux oublis "
-"et aux questions après les heures non renseignées par l'employé."
 
-#: ../../content/applications/services/timesheets/time_off.rst:9
+#: ../../content/applications/services/timesheets/time_off.rst:14
 msgid ""
-"Activate the :ref:`developer mode <developer-mode>`, go to *Timesheets*, and "
-"change the *Project* and *Task* set by default, if you like."
+"First, activate the :ref:`developer mode <developer-mode>`, then open the "
+"**Timesheets** app, and navigate to :menuselection:`Configuration --> "
+"Settings`. Scroll to the :guilabel:`Time Off` section and enable "
+"the :guilabel:`Time Off` checkbox. Enabling this option creates timesheet "
+"entries for validated time off requests and public holidays."
 msgstr ""
-"Activez le :ref:`mode développeur <developer-mode>`, allez à *Feuilles de "
-"temps* et modifiez le *Projet* et la *Tâche* définis par défaut, si vous le "
-"souhaitez."
 
-#: ../../content/applications/services/timesheets/time_off.rst:None
+#: ../../content/applications/services/timesheets/time_off.rst:19
 msgid ""
-"View of Timesheets setting enabling the feature record time off in Odoo "
-"Timesheets"
+"Once enabled, two fields appear: :guilabel:`Project` and :guilabel:`Task`. "
+"The default selection for :guilabel:`Project` is :guilabel:`Internal`, and "
+"the default selection for :guilabel:`Task` is :guilabel:`Time Off`. These "
+"inform Odoo where to log the time off requests, which project, and task. "
+"These can be modified, if desired, using the drop-down menu."
 msgstr ""
-"Vue du paramètre des Feuilles de temps permettant d'activer la fonction "
-"d'enregistrement des congés dans Odoo Feuilles de temps"
 
-#: ../../content/applications/services/timesheets/time_off.rst:16
+#: ../../content/applications/services/timesheets/time_off.rst:25
 msgid ""
-"Go to :menuselection:`Time Off --> Configuration --> Time Off Types`. Select "
-"or create the needed type, and decide if you would like the requests to be "
-"validated or not."
+"The available options presented vary based on the installed applications."
 msgstr ""
-"Allez à :menuselection:`Congés --> Configuration -->  Types de congés`. "
-"Sélectionnez le type nécessaire ou créez-le et décidez si vous souhaitez que "
-"les demandes soient validées ou non."
 
-#: ../../content/applications/services/timesheets/time_off.rst:None
+#: ../../content/applications/services/timesheets/time_off.rst:28
 msgid ""
-"View of a time off types form emphasizing the time off requests and "
-"timesheets section in\n"
-"Odoo Time Off"
+"Time off categories without validation requirements create timesheet records "
+"instantly. Requests requiring validation creates timesheet entries *after* "
+"the time off request is approved."
 msgstr ""
-"Vue d'un formulaire de types de congé mettant en évident les demandes de "
-"congé et la section des feuilles de temps dans\n"
-"Odoo Congés"
 
-#: ../../content/applications/services/timesheets/time_off.rst:26
+#: ../../content/applications/services/timesheets/time_off.rst:31
 msgid ""
-"Now, once the employee has requested his time off and the request has been "
-"validated (or not, depending on the setting chosen), the time is "
-"automatically allocated on *Timesheets*, under the respective project and "
-"task."
+"To check if a time off type requires approval, check "
+"the :guilabel:`Approvals` section of the :ref:`time off type form <time_off/"
+"time-off-requests>`."
 msgstr ""
-"Désormais, une fois que l'employé a demandé son congé et que la demande a "
-"été validée (ou non, selon le paramètre choisi), le temps est "
-"automatiquement attribué sur *Feuilles de temps*, sous le projet et la tâche "
-"respectifs."
 
-#: ../../content/applications/services/timesheets/time_off.rst:27
+#: ../../content/applications/services/timesheets/time_off.rst:35
+msgid "Workflow"
+msgstr ""
+
+#: ../../content/applications/services/timesheets/time_off.rst:37
 msgid ""
-"On the example below, the user requested *Paid Time off* from July 13th to "
-"15th."
+"Once the employee has :doc:`requested time off <../../hr/time_off/"
+"request_time_off>`, and the request has been validated, if necessary, the "
+"time is automatically logged on the **Timesheets** app, under the respective "
+"project and task."
 msgstr ""
-"Dans l'exemple suivant, l'utilisateur a demandé des *congés payés* du 13 au "
-"15 juillet."
-
-#: ../../content/applications/services/timesheets/time_off.rst:None
-msgid "View of the time off request form in Odoo Time Off"
-msgstr "Vue d'un formulaire de demande de congé dans Odoo Congés"
-
-#: ../../content/applications/services/timesheets/time_off.rst:33
-msgid ""
-"Considering that validation is not required, the requested time off is "
-"automatically displayed in *Timesheets*. If validation is necessary, the "
-"time is automatically allocated after the responsible person for validating "
-"does it so."
-msgstr ""
-"Étant donné qu'aucune validation n'est requise, le congé demandé est "
-"automatiquement affiché dans *Feuilles de temps*. Si une validation est "
-"nécessaire, le temps est automatiquement alloué après que la personne "
-"responsable de la validation l'a fait."
-
-#: ../../content/applications/services/timesheets/time_off.rst:None
-msgid ""
-"Video of timesheets emphasizing the requested time off from the employee in "
-"Odoo Timesheets"
-msgstr ""
-"Vue des feuilles de temps mettant en évident le congé demande par l'employé "
-"dans Odoo Feuilles de temps"
 
 #: ../../content/applications/services/timesheets/time_off.rst:41
 msgid ""
-"Click on the magnifying glass, hovering over the concerned cell, to access "
-"all the aggregated data on that cell (day), and see details regarding the "
-"project/task."
+"To view the logged entry, open the **Timesheets** app and navigate to the "
+"relevant time period. The time off appears in the corresponding field, "
+"according to the :ref:`configuration <timesheets/config>`."
 msgstr ""
-"Cliquez sur la loupe, survolant la cellule concernée, pour accéder à toutes "
-"les données agrégées sur cette cellule (jour), et voir les détails "
-"concernant le projet/la tâche."
 
-#: ../../content/applications/services/timesheets/time_off.rst:None
-msgid "View of the details of a project/task in Odoo Timeheets"
-msgstr "Vue des détails d'un projet/tâche dans Odoo Feuilles de temps"
+#: ../../content/applications/services/timesheets/time_off.rst:45
+msgid ""
+"To view the timesheet entry details, click the :icon:`fa-"
+"search` :guilabel:`(magnifying glass)` icon that appears when hovering over "
+"the entry, and the detailed timesheet information appears."
+msgstr ""
+
+#: ../../content/applications/services/timesheets/time_off.rst:49
+msgid ""
+"An employee is attending internal training the week of December 15-19, 2025, "
+"and logs their time in the **Timesheets** app under the `Internal` project, "
+"with a task of `Training`. On December 19, 2025, the employee is home sick, "
+"and requests the day off in the **Time Off** app."
+msgstr ""
+
+#: ../../content/applications/services/timesheets/time_off.rst:53
+msgid ""
+"The *time off type* they request is *Sick Time off*, which is configured to "
+"**not** require validation. The employee's time off request is automatically "
+"approved, and is logged in the **Timesheets** app, under the `Internal` "
+"project, and the `Time Off` task."
+msgstr ""
+
+#: ../../content/applications/services/timesheets/time_off.rst:0
+msgid "A timecard reflecting training hours and sick time off."
+msgstr ""
+
+#~ msgid "Create Timesheets upon Time Off Validation"
+#~ msgstr "Créer des feuilles de temps lors de la validation des congés"
+
+#~ msgid ""
+#~ "Odoo automatically timesheets on project/tasks upon time off requests. "
+#~ "This allows for better overall control over the validation of timesheets, "
+#~ "as it does not leave place for forgetfulness and questions after hours "
+#~ "that have not been timesheeted by the employee."
+#~ msgstr ""
+#~ "Odoo établit automatiquement des feuilles de temps sur les projets/tâches "
+#~ "lors des demandes de congés. Cela permet un meilleur contrôle global sur "
+#~ "la validation des feuilles de temps, car il ne laisse pas de place aux "
+#~ "oublis et aux questions après les heures non renseignées par l'employé."
+
+#~ msgid ""
+#~ "Activate the :ref:`developer mode <developer-mode>`, go to *Timesheets*, "
+#~ "and change the *Project* and *Task* set by default, if you like."
+#~ msgstr ""
+#~ "Activez le :ref:`mode développeur <developer-mode>`, allez à *Feuilles de "
+#~ "temps* et modifiez le *Projet* et la *Tâche* définis par défaut, si vous "
+#~ "le souhaitez."
+
+#~ msgid ""
+#~ "View of Timesheets setting enabling the feature record time off in Odoo "
+#~ "Timesheets"
+#~ msgstr ""
+#~ "Vue du paramètre des Feuilles de temps permettant d'activer la fonction "
+#~ "d'enregistrement des congés dans Odoo Feuilles de temps"
+
+#~ msgid ""
+#~ "Go to :menuselection:`Time Off --> Configuration --> Time Off Types`. "
+#~ "Select or create the needed type, and decide if you would like the "
+#~ "requests to be validated or not."
+#~ msgstr ""
+#~ "Allez à :menuselection:`Congés --> Configuration -->  Types de congés`. "
+#~ "Sélectionnez le type nécessaire ou créez-le et décidez si vous souhaitez "
+#~ "que les demandes soient validées ou non."
+
+#~ msgid ""
+#~ "View of a time off types form emphasizing the time off requests and "
+#~ "timesheets section in\n"
+#~ "Odoo Time Off"
+#~ msgstr ""
+#~ "Vue d'un formulaire de types de congé mettant en évident les demandes de "
+#~ "congé et la section des feuilles de temps dans\n"
+#~ "Odoo Congés"
+
+#~ msgid ""
+#~ "Now, once the employee has requested his time off and the request has "
+#~ "been validated (or not, depending on the setting chosen), the time is "
+#~ "automatically allocated on *Timesheets*, under the respective project and "
+#~ "task."
+#~ msgstr ""
+#~ "Désormais, une fois que l'employé a demandé son congé et que la demande a "
+#~ "été validée (ou non, selon le paramètre choisi), le temps est "
+#~ "automatiquement attribué sur *Feuilles de temps*, sous le projet et la "
+#~ "tâche respectifs."
+
+#~ msgid ""
+#~ "On the example below, the user requested *Paid Time off* from July 13th "
+#~ "to 15th."
+#~ msgstr ""
+#~ "Dans l'exemple suivant, l'utilisateur a demandé des *congés payés* du 13 "
+#~ "au 15 juillet."
+
+#~ msgid "View of the time off request form in Odoo Time Off"
+#~ msgstr "Vue d'un formulaire de demande de congé dans Odoo Congés"
+
+#~ msgid ""
+#~ "Considering that validation is not required, the requested time off is "
+#~ "automatically displayed in *Timesheets*. If validation is necessary, the "
+#~ "time is automatically allocated after the responsible person for "
+#~ "validating does it so."
+#~ msgstr ""
+#~ "Étant donné qu'aucune validation n'est requise, le congé demandé est "
+#~ "automatiquement affiché dans *Feuilles de temps*. Si une validation est "
+#~ "nécessaire, le temps est automatiquement alloué après que la personne "
+#~ "responsable de la validation l'a fait."
+
+#~ msgid ""
+#~ "Video of timesheets emphasizing the requested time off from the employee "
+#~ "in Odoo Timesheets"
+#~ msgstr ""
+#~ "Vue des feuilles de temps mettant en évident le congé demande par "
+#~ "l'employé dans Odoo Feuilles de temps"
+
+#~ msgid ""
+#~ "Click on the magnifying glass, hovering over the concerned cell, to "
+#~ "access all the aggregated data on that cell (day), and see details "
+#~ "regarding the project/task."
+#~ msgstr ""
+#~ "Cliquez sur la loupe, survolant la cellule concernée, pour accéder à "
+#~ "toutes les données agrégées sur cette cellule (jour), et voir les détails "
+#~ "concernant le projet/la tâche."
+
+#~ msgid "View of the details of a project/task in Odoo Timeheets"
+#~ msgstr "Vue des détails d'un projet/tâche dans Odoo Feuilles de temps"
 
 #~ msgid "Stages"
 #~ msgstr "Étapes"

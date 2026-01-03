@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-19 18:31+0000\n"
+"POT-Creation-Date: 2026-01-01 18:30+0000\n"
 "PO-Revision-Date: 2025-11-20 20:10+0000\n"
 "Last-Translator: \"Kwanghee Park (kwpa)\" <kwpa@odoo.com>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -331,6 +331,7 @@ msgstr ":doc:`../../inventory_and_mrp/inventory`"
 #: ../../content/applications/services/project/tasks/recurring_tasks.rst:13
 #: ../../content/applications/services/timesheets/billing_rates.rst:19
 #: ../../content/applications/services/timesheets/billing_rates.rst:54
+#: ../../content/applications/services/timesheets/time_off.rst:12
 msgid "Configuration"
 msgstr "환경설정"
 
@@ -7733,105 +7734,188 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/services/timesheets/time_off.rst:3
-msgid "Create Timesheets upon Time Off Validation"
-msgstr "휴가 승인 시 작업시간표 생성하기"
+msgid "Time off entries"
+msgstr ""
 
 #: ../../content/applications/services/timesheets/time_off.rst:5
 msgid ""
-"Odoo automatically timesheets on project/tasks upon time off requests. This "
-"allows for better overall control over the validation of timesheets, as it "
-"does not leave place for forgetfulness and questions after hours that have "
-"not been timesheeted by the employee."
+"Odoo automatically generates timesheet entries on projects and tasks once a "
+"time off request is approved. This streamlines timesheet validation by "
+"ensuring approved time off is accurately reflected in timesheets."
 msgstr ""
-"Odoo에서는 휴가를 신청할 경우 프로젝트/작업에 대한 작업시간표를 자동으로 생성"
-"합니다. 이렇게 하면 전반적인 작업시간표 승인 관리 업무를 더욱 개선시킬 수 있"
-"습니다. 직원이 시간 외 근무 시간에 대해서 출퇴근 기록을 작성하지 않은 경우 잊"
-"어버리거나 문제가 될 여지를 남겨두지 않습니다."
 
-#: ../../content/applications/services/timesheets/time_off.rst:9
+#: ../../content/applications/services/timesheets/time_off.rst:14
 msgid ""
-"Activate the :ref:`developer mode <developer-mode>`, go to *Timesheets*, and "
-"change the *Project* and *Task* set by default, if you like."
+"First, activate the :ref:`developer mode <developer-mode>`, then open the "
+"**Timesheets** app, and navigate to :menuselection:`Configuration --> "
+"Settings`. Scroll to the :guilabel:`Time Off` section and enable "
+"the :guilabel:`Time Off` checkbox. Enabling this option creates timesheet "
+"entries for validated time off requests and public holidays."
 msgstr ""
-":ref:`개발자 모드 <developer-mode>`를 활성화하고 *작업시간표*로 이동한 다음, "
-"기본 설정되어 있는 *프로젝트*와 *작업*을 원하는 대로 변경합니다."
 
-#: ../../content/applications/services/timesheets/time_off.rst:None
+#: ../../content/applications/services/timesheets/time_off.rst:19
 msgid ""
-"View of Timesheets setting enabling the feature record time off in Odoo "
-"Timesheets"
-msgstr "Odoo 작업 기록에서 휴가 기록 기능을 활성화시키는 작업시간표 설정 화면"
-
-#: ../../content/applications/services/timesheets/time_off.rst:16
-msgid ""
-"Go to :menuselection:`Time Off --> Configuration --> Time Off Types`. Select "
-"or create the needed type, and decide if you would like the requests to be "
-"validated or not."
+"Once enabled, two fields appear: :guilabel:`Project` and :guilabel:`Task`. "
+"The default selection for :guilabel:`Project` is :guilabel:`Internal`, and "
+"the default selection for :guilabel:`Task` is :guilabel:`Time Off`. These "
+"inform Odoo where to log the time off requests, which project, and task. "
+"These can be modified, if desired, using the drop-down menu."
 msgstr ""
-":menuselection:`휴가 --> 환경 설정 --> 휴가 유형`으로 이동합니다. 필요한 유형"
-"을 선택하거나 생성하고 , 신청 내용 승인 여부를 결정합니다."
 
-#: ../../content/applications/services/timesheets/time_off.rst:None
+#: ../../content/applications/services/timesheets/time_off.rst:25
 msgid ""
-"View of a time off types form emphasizing the time off requests and "
-"timesheets section in\n"
-"Odoo Time Off"
+"The available options presented vary based on the installed applications."
 msgstr ""
-"Odoo 휴가 앱의 휴가 신청 및 출퇴근 시간표 영역이 강조 표시된 휴가 유형\n"
-"양식 화면"
 
-#: ../../content/applications/services/timesheets/time_off.rst:26
+#: ../../content/applications/services/timesheets/time_off.rst:28
 msgid ""
-"Now, once the employee has requested his time off and the request has been "
-"validated (or not, depending on the setting chosen), the time is "
-"automatically allocated on *Timesheets*, under the respective project and "
-"task."
+"Time off categories without validation requirements create timesheet records "
+"instantly. Requests requiring validation creates timesheet entries *after* "
+"the time off request is approved."
 msgstr ""
-"이제 직원이 휴가를 신청하고 해당 내용이 승인되면 (선택한 설정에 따라 승인 여"
-"부가 달라질 수 있음), 해당 프로젝트 및 업무의 *작업시간표*에 자동으로 시간이 "
-"배정됩니다."
 
-#: ../../content/applications/services/timesheets/time_off.rst:27
+#: ../../content/applications/services/timesheets/time_off.rst:31
 msgid ""
-"On the example below, the user requested *Paid Time off* from July 13th to "
-"15th."
+"To check if a time off type requires approval, check "
+"the :guilabel:`Approvals` section of the :ref:`time off type form <time_off/"
+"time-off-requests>`."
 msgstr ""
-"아래 예시에서, 사용자는 7월 13일부터 15일까지 *유급 휴가*를 신청했습니다."
 
-#: ../../content/applications/services/timesheets/time_off.rst:None
-msgid "View of the time off request form in Odoo Time Off"
-msgstr "Odoo 휴가 앱에서의 휴가 신청 양식 화면"
+#: ../../content/applications/services/timesheets/time_off.rst:35
+msgid "Workflow"
+msgstr ""
 
-#: ../../content/applications/services/timesheets/time_off.rst:33
+#: ../../content/applications/services/timesheets/time_off.rst:37
 msgid ""
-"Considering that validation is not required, the requested time off is "
-"automatically displayed in *Timesheets*. If validation is necessary, the "
-"time is automatically allocated after the responsible person for validating "
-"does it so."
+"Once the employee has :doc:`requested time off <../../hr/time_off/"
+"request_time_off>`, and the request has been validated, if necessary, the "
+"time is automatically logged on the **Timesheets** app, under the respective "
+"project and task."
 msgstr ""
-"승인이 필수가 아닌 경우에는, 신청한 휴가가 *작업시간표*에 자동으로 표시됩니"
-"다. 승인이 필수인 경우에는, 결재 담당자가 승인한 후 자동으로 시간이 배정됩니"
-"다."
-
-#: ../../content/applications/services/timesheets/time_off.rst:None
-msgid ""
-"Video of timesheets emphasizing the requested time off from the employee in "
-"Odoo Timesheets"
-msgstr ""
-"Odoo 작업 기록에서 직원이 신청한 휴가가 강조 표시되어 있는 작업시간표 동영상"
 
 #: ../../content/applications/services/timesheets/time_off.rst:41
 msgid ""
-"Click on the magnifying glass, hovering over the concerned cell, to access "
-"all the aggregated data on that cell (day), and see details regarding the "
-"project/task."
+"To view the logged entry, open the **Timesheets** app and navigate to the "
+"relevant time period. The time off appears in the corresponding field, "
+"according to the :ref:`configuration <timesheets/config>`."
 msgstr ""
-"돋보기 아이콘을 클릭한 후 해당 셀에 마우스를 대면 해당 셀 (일)에 집계된 전체 "
-"데이터에 액세스하야 프로젝트/작업 세부 정보를 확인할 수 있습니다."
 
-#: ../../content/applications/services/timesheets/time_off.rst:None
-msgid "View of the details of a project/task in Odoo Timeheets"
-msgstr "Odoo 작업시간표의 프로젝트/작업 세부 정보 화면"
+#: ../../content/applications/services/timesheets/time_off.rst:45
+msgid ""
+"To view the timesheet entry details, click the :icon:`fa-"
+"search` :guilabel:`(magnifying glass)` icon that appears when hovering over "
+"the entry, and the detailed timesheet information appears."
+msgstr ""
+
+#: ../../content/applications/services/timesheets/time_off.rst:49
+msgid ""
+"An employee is attending internal training the week of December 15-19, 2025, "
+"and logs their time in the **Timesheets** app under the `Internal` project, "
+"with a task of `Training`. On December 19, 2025, the employee is home sick, "
+"and requests the day off in the **Time Off** app."
+msgstr ""
+
+#: ../../content/applications/services/timesheets/time_off.rst:53
+msgid ""
+"The *time off type* they request is *Sick Time off*, which is configured to "
+"**not** require validation. The employee's time off request is automatically "
+"approved, and is logged in the **Timesheets** app, under the `Internal` "
+"project, and the `Time Off` task."
+msgstr ""
+
+#: ../../content/applications/services/timesheets/time_off.rst:0
+msgid "A timecard reflecting training hours and sick time off."
+msgstr ""
+
+#~ msgid "Create Timesheets upon Time Off Validation"
+#~ msgstr "휴가 승인 시 작업시간표 생성하기"
+
+#~ msgid ""
+#~ "Odoo automatically timesheets on project/tasks upon time off requests. "
+#~ "This allows for better overall control over the validation of timesheets, "
+#~ "as it does not leave place for forgetfulness and questions after hours "
+#~ "that have not been timesheeted by the employee."
+#~ msgstr ""
+#~ "Odoo에서는 휴가를 신청할 경우 프로젝트/작업에 대한 작업시간표를 자동으로 "
+#~ "생성합니다. 이렇게 하면 전반적인 작업시간표 승인 관리 업무를 더욱 개선시"
+#~ "킬 수 있습니다. 직원이 시간 외 근무 시간에 대해서 출퇴근 기록을 작성하지 "
+#~ "않은 경우 잊어버리거나 문제가 될 여지를 남겨두지 않습니다."
+
+#~ msgid ""
+#~ "Activate the :ref:`developer mode <developer-mode>`, go to *Timesheets*, "
+#~ "and change the *Project* and *Task* set by default, if you like."
+#~ msgstr ""
+#~ ":ref:`개발자 모드 <developer-mode>`를 활성화하고 *작업시간표*로 이동한 다"
+#~ "음, 기본 설정되어 있는 *프로젝트*와 *작업*을 원하는 대로 변경합니다."
+
+#~ msgid ""
+#~ "View of Timesheets setting enabling the feature record time off in Odoo "
+#~ "Timesheets"
+#~ msgstr ""
+#~ "Odoo 작업 기록에서 휴가 기록 기능을 활성화시키는 작업시간표 설정 화면"
+
+#~ msgid ""
+#~ "Go to :menuselection:`Time Off --> Configuration --> Time Off Types`. "
+#~ "Select or create the needed type, and decide if you would like the "
+#~ "requests to be validated or not."
+#~ msgstr ""
+#~ ":menuselection:`휴가 --> 환경 설정 --> 휴가 유형`으로 이동합니다. 필요한 "
+#~ "유형을 선택하거나 생성하고 , 신청 내용 승인 여부를 결정합니다."
+
+#~ msgid ""
+#~ "View of a time off types form emphasizing the time off requests and "
+#~ "timesheets section in\n"
+#~ "Odoo Time Off"
+#~ msgstr ""
+#~ "Odoo 휴가 앱의 휴가 신청 및 출퇴근 시간표 영역이 강조 표시된 휴가 유형\n"
+#~ "양식 화면"
+
+#~ msgid ""
+#~ "Now, once the employee has requested his time off and the request has "
+#~ "been validated (or not, depending on the setting chosen), the time is "
+#~ "automatically allocated on *Timesheets*, under the respective project and "
+#~ "task."
+#~ msgstr ""
+#~ "이제 직원이 휴가를 신청하고 해당 내용이 승인되면 (선택한 설정에 따라 승인 "
+#~ "여부가 달라질 수 있음), 해당 프로젝트 및 업무의 *작업시간표*에 자동으로 시"
+#~ "간이 배정됩니다."
+
+#~ msgid ""
+#~ "On the example below, the user requested *Paid Time off* from July 13th "
+#~ "to 15th."
+#~ msgstr ""
+#~ "아래 예시에서, 사용자는 7월 13일부터 15일까지 *유급 휴가*를 신청했습니다."
+
+#~ msgid "View of the time off request form in Odoo Time Off"
+#~ msgstr "Odoo 휴가 앱에서의 휴가 신청 양식 화면"
+
+#~ msgid ""
+#~ "Considering that validation is not required, the requested time off is "
+#~ "automatically displayed in *Timesheets*. If validation is necessary, the "
+#~ "time is automatically allocated after the responsible person for "
+#~ "validating does it so."
+#~ msgstr ""
+#~ "승인이 필수가 아닌 경우에는, 신청한 휴가가 *작업시간표*에 자동으로 표시됩"
+#~ "니다. 승인이 필수인 경우에는, 결재 담당자가 승인한 후 자동으로 시간이 배정"
+#~ "됩니다."
+
+#~ msgid ""
+#~ "Video of timesheets emphasizing the requested time off from the employee "
+#~ "in Odoo Timesheets"
+#~ msgstr ""
+#~ "Odoo 작업 기록에서 직원이 신청한 휴가가 강조 표시되어 있는 작업시간표 동영"
+#~ "상"
+
+#~ msgid ""
+#~ "Click on the magnifying glass, hovering over the concerned cell, to "
+#~ "access all the aggregated data on that cell (day), and see details "
+#~ "regarding the project/task."
+#~ msgstr ""
+#~ "돋보기 아이콘을 클릭한 후 해당 셀에 마우스를 대면 해당 셀 (일)에 집계된 전"
+#~ "체 데이터에 액세스하야 프로젝트/작업 세부 정보를 확인할 수 있습니다."
+
+#~ msgid "View of the details of a project/task in Odoo Timeheets"
+#~ msgstr "Odoo 작업시간표의 프로젝트/작업 세부 정보 화면"
 
 #~ msgid "Stages"
 #~ msgstr "단계"
