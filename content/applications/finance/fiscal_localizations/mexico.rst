@@ -535,6 +535,25 @@ bill **Must be in draft state** for the update to happen.
 .. seealso::
    :doc:`../accounting/vendor_bills`
 
+.. _l10n/mx/journals:
+
+Journals
+~~~~~~~~
+
+The module :guilabel:`EDI for Mexico (Advanced Features)` (`l10n_mx_edi_extended`) must be installed
+on the database to complete the :guilabel:`Address Issued` field on the sales journal. This ensures
+that all invoices from that sales journal, as well as :ref:`global invoices <l10n/mx/global-invoice>`,
+use the correct zipcode when generating the CFDI.
+
+To invoice within a company under different time zones with the same user, a system parameter must be
+created to ensure the correct time zone is applied when invoicing, as the user's time zone is used
+by default.
+
+To do so, enable :doc:`developer mode <../../general/developer_mode>` and go to
+:menuselection:`Settings --> Technical --> System Parameters`. Click :guilabel:`New` to create a new
+parameter with the key `l10n_mx_edi_tz_XX` where `XX` is the ID of the journal, and set the desired
+time zone as the value, for example, “America/Tijuana”.
+
 .. _l10n/mx/payments:
 
 Payments
@@ -1019,11 +1038,26 @@ single invoice that can contain all operations, known as a *global invoice*.
    `Guía de llenado del CFDI global
    <http://omawww.sat.gob.mx/tramitesyservicios/Paginas/documentos/GuiallenadoCFDIglobal311221.pdf>`_
 
+Setup
+^^^^^
+
+The :guilabel:`Global Invoice Serie` is specific to each branch or company and is used to define the
+sequence of global invoices. To configure it, go to :menuselection:`Accounting --> Configuration -->
+Settings`, and navigate to the :guilabel:`MX Electronic invoicing` section. The :guilabel:`Global
+Invoice Serie` field can be found within the :guilabel:`Service Tax Administration (SAT)` section.
+
+.. image:: mexico/mx-accounting-settings.png
+   :alt: Accounting setting with an MX company.
+
+.. tip::
+   The default sequence for every company/branch is `GINV/`
+
 Sales flow
 ^^^^^^^^^^
 
-First, it is necessary to create a special :guilabel:`Journal` created in :menuselection:`Accounting
---> Configuration --> Journals` with the purpose of keeping a separate sequence.
+First, create a dedicated journal in :menuselection:`Accounting --> Configuration --> Journals` to
+maintain a separate sequence that is used for global invoices, which function as orders when they
+are created.
 
 Then, make sure that all the sales orders that need to be signed have the following configurations:
 
