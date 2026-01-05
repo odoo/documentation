@@ -39,8 +39,8 @@ A large selection of default background shapes is available.
 
 .. code-block:: xml
 
-   <section data-oe-shape-data="{'shape':'web_editor/Zigs/06'}">
-       <div class="o_we_shape o_web_editor_Zigs_06"/>
+   <section data-oe-shape-data="{'shape':'html_builder/Zigs/06'}">
+       <div class="o_we_shape o_html_builder_Zigs_06"/>
        <div class="container">
            <!-- Content -->
         </div>
@@ -54,8 +54,8 @@ this:
 
 .. code-block:: xml
 
-   <section data-oe-shape-data="{'shape':'web_editor/Zigs/06','flip':[x,y]}">
-       <div class="o_we_shape o_we_flip_x o_we_flip_y o_web_editor_Zigs_06"/>
+   <section data-oe-shape-data="{'shape':'html_builder/Zigs/06','flip':['x','y']}">
+       <div class="o_we_shape o_html_builder_Zigs_06"/>
        <div class="container">
            <!-- Content -->
        </div>
@@ -119,14 +119,14 @@ We are going to rewrite the `colors` map with some `key: value` couples:
 .. code-block:: scss
    :caption: ``/website_airproof/static/src/scss/primary_variables.scss``
 
-    $o-bg-shapes: change-shape-colors-mapping('web_editor', 'Zigs/06', (4: 3, 5: rgb(187, 27, 152)))
+    $o-bg-shapes: change-shape-colors-mapping('html_builder', 'Zigs/06', (4: 3, 5: rgb(187, 27, 152)))
 
 **Or just with references**
 
 .. code-block:: scss
    :caption: ``/website_airproof/static/src/scss/primary_variables.scss``
 
-    $o-bg-shapes: change-shape-colors-mapping('web_editor', 'Zigs/06', (4: 3, 5: 1));
+    $o-bg-shapes: change-shape-colors-mapping('html_builder', 'Zigs/06', (4: 3, 5: 1));
 
 The `c4` (white) will be replaced by `c3` (whitish) and `c5` (black) by `c1` (white).
 
@@ -149,12 +149,12 @@ keeping the original.
 .. code-block:: scss
    :caption: ``/website_airproof/static/src/scss/boostrap_overridden.scss``
 
-   $o-bg-shapes: add-extra-shape-colors-mapping('web_editor', 'Zigs/06', 'second', (4: 3, 5: 1));
+   $o-bg-shapes: add-extra-shape-colors-mapping('html_builder', 'Zigs/06', 'second', (4: 3, 5: 1));
 
 .. code-block:: xml
 
-   <section data-oe-shape-data="{'shape':'web_editor/Zigs/06'}">
-       <div class="o_we_shape o_web_editor_Zigs_06 o_second_extra_shape_mapping"/>
+   <section data-oe-shape-data="{'shape':'html_builder/Zigs/06'}">
+       <div class="o_we_shape o_html_builder_Zigs_06 o_second_extra_shape_mapping"/>
        <div class="container">
            <!-- Content -->
        </div>
@@ -200,7 +200,7 @@ Declare your shape file.
    <record id="shape_hexagon_01" model="ir.attachment">
        <field name="name">01.svg</field>
        <field name="datas" type="base64" file="website_airproof/static/shapes/hexagons/01.svg"/>
-       <field name="url">/web_editor/shape/illustration/hexagons/01.svg</field>
+       <field name="url">/html_editor/shape/illustration/hexagons/01.svg</field>
        <field name="public" eval="True"/>
    </record>
 
@@ -217,7 +217,7 @@ Declare your shape file.
      - Path to the shape
    * - url
      - The location of your shape in the web editor. The file is automatically duplicated in
-       `/web_editor/shape/illustration` by the Website Builder.
+       `/html_editor/shape/illustration` by the Website Builder.
    * - public
      - Makes the shape available for later editing.
 
@@ -270,26 +270,44 @@ Define the styles of your shape.
 Add the option
 ~~~~~~~~~~~~~~
 
-Lastly, add your shape to the list of shapes available on the Website Builder.
+Lastly, add your shape to the list of shapes available on the Website Builder by extending the
+`background_shape_groups_providers` resource.
 
-.. code-block:: xml
-   :caption: ``/website_airproof/views/snippets/options.xml``
+.. code-block:: javascript
+   :caption: ``/website_airproof/static/src/builder/airproof_background_shapes.js``
 
-   <template id="snippet_options_background_options" inherit_id="website.snippet_options_background_options" name="Airproof - Shapes">
-      <xpath expr="//*[hasclass('o_we_bg_shape_menu')]/header[hasclass('o_pager_nav')]//*[hasclass('o_pager_nav_btn')][last()]" position="after">
-         <button type="button" class="o_pager_nav_btn p-0 text-uppercase" data-scroll-to="x_scroll_bgshapes_airproof">
-            <span class="w-100">Airproof</span>
-         </button>
-      </xpath>
-      <xpath expr="//*[hasclass('o_we_bg_shape_menu')]/div[hasclass('o_pager_container')]" position="inside">
-         <div class="x_scroll_bgshapes_airproof">
-            <we-title>Airproof</we-title>
-            <we-select-page string="Airproof">
-               <we-button data-shape="illustration/airproof/01" data-select-label="Airproof 01"/>
-            </we-select-page>
-         </div>
-      </xpath>
-   </template>
+   import { Plugin } from "@html_editor/plugin";
+   import { _t } from "@web/core/l10n/translation";
+   import { registry } from "@web/core/registry";
+
+   export class AirproofBackgroundShapesPlugin extends Plugin {
+       static id = "airproofBackgroundShapes";
+       resources = {
+           background_shape_groups_providers: () => ({
+               airproof: {
+                   label: _t("Airproof"),
+                   subgroups: {
+                       airproof: {
+                           label: _t("Airproof"),
+                           shapes: {
+                               "illustration/airproof/01": {
+                                   selectLabel: _t("Airproof 01"),
+                               },
+                           },
+                       },
+                   },
+               },
+           }),
+       };
+   }
+
+   registry.category("website-plugins").add(
+       AirproofBackgroundShapesPlugin.id,
+       AirproofBackgroundShapesPlugin
+   );
+
+.. note::
+   Add the JavaScript file to the `website.website_builder_assets` bundle so the editor loads it.
 
 .. _website_themes/shapes/bg/custom/use:
 
@@ -300,7 +318,7 @@ In your XML pages, you can use your shape in the same way as the others.
 
 .. code-block:: xml
 
-    <section class="..." data-oe-shape-data="{'shape': 'illustration/airproof/01', 'colors': 'c4': '#8595A2', 'c5': 'rgba(0, 255, 0)'}">
+    <section class="..." data-oe-shape-data="{'shape': 'illustration/airproof/01', 'colors': {'c4': '#8595A2', 'c5': 'rgba(0, 255, 0)'}}">
         <div class="o_we_shape o_illustration_airproof_01"/>
         <div class="container">
             <!-- Content -->
@@ -308,4 +326,3 @@ In your XML pages, you can use your shape in the same way as the others.
     </section>
 
 You can also redefine colors using the `data-oe-shape-data attribute`, but this is optional.
-

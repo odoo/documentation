@@ -442,15 +442,27 @@ Create your own template and add it to the list.
 Use the following code to add an option for your new custom header on the Website Builder.
 
 .. code-block:: xml
-   :caption: ``/website_airproof/views/website_templates.xml``
+   :caption: ``/website_airproof/static/src/website_builder/header_option.xml``
 
-   <template id="template_header_opt" inherit_id="website.snippet_options" name="Header Template - Option">
-      <xpath expr="//we-select[@data-variable='header-template']" position="inside">
-         <we-button title="airproof"
-            data-customize-website-views="website_airproof.header"
-            data-customize-website-variable="'airproof'"  data-img="/website_airproof/static/src/img/wbuilder/template_header_opt.svg"/>
+   <t t-inherit="website.HeaderTemplateOption" t-inherit-mode="extension">
+      <xpath expr="//BuilderRow[@label.translate='Template']//BuilderSelect" position="inside">
+         <BuilderSelectItem
+            id="'header_airproof_opt'"
+            title.translate="Airproof"
+            actionParam="[
+               {
+                  action: 'websiteConfig',
+                  actionParam: {
+                        views: ['website_airproof.header'],
+                        vars: { 'header-template': 'airproof' },
+                        checkVars: false,
+                  }
+               }
+            ]">
+            <Img attrs="{ style: 'width: calc(100% - 0.5rem);' }" src="'/website_airproof/static/src/img/wbuilder/template_header_opt.svg'"/>
+         </BuilderSelectItem>
       </xpath>
-   </template>
+   </t>
 
 .. list-table::
    :header-rows: 1
@@ -459,11 +471,11 @@ Use the following code to add an option for your new custom header on the Websit
 
    * - Attribute
      - Description
-   * - data-customize-website-views
+   * - views
      - The template to enable
-   * - data-customize-website-variable
+   * - vars
      - The name given to the variable
-   * - data-img
+   * - <Img> src
      - The thumbnail of the custom template shown in the templates selection on the Website Builder
 
 Now you have to explicitly define that you want to use your custom template in the Odoo SASS
@@ -658,16 +670,21 @@ active footer template first.
 **Option**
 
 .. code-block:: xml
-   :caption: ``/website_airproof/views/website_templates.xml``
+   :caption: ``/website_airproof/static/src/website_builder/footer_option.xml``
 
-   <template id="template_footer_opt" inherit_id="website.snippet_options" name="Footer Template - Option">
-      <xpath expr="//we-select[@data-variable='footer-template']" position="inside">
-         <we-button title="airproof"
-            data-customize-website-views="website_airproof.footer"
-            data-customize-website-variable="'airproof'"
-            data-img="/website_airproof/static/src/img/wbuilder/template_footer_opt.svg"/>
+   <t t-inherit="website.FooterTemplateOption" t-inherit-mode="extension">
+      <xpath expr="//BuilderSelect" position="inside">
+         <BuilderSelectItem
+            title.translate="airproof"
+            actionParam="{
+                  view: 'website_airproof.footer',
+                  vars: { 'footer-template': 'airproof' }
+            }">
+            <Img attrs="{ style: 'width: 100%;' }"
+               src="'/website_airproof/static/src/img/wbuilder/template_footer_opt.svg'"/>
+         </BuilderSelectItem>
       </xpath>
-   </template>
+   </t>
 
 **Declaration**
 

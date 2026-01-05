@@ -258,14 +258,17 @@ Create your own template and add it to the list.
 Use the following code to add an option for your new custom mega menu on the Website Builder.
 
 .. code-block:: xml
-   :caption: ``/website_airproof/views/snippets/options.xml``
+   :caption: ``/website_airproof/static/src/website_builder/mega_menu_option.xml``
 
-   <template id="snippet_options" inherit_id="website.snippet_options" name="Airproof - Mega Menu Options">
-       <xpath expr="//*[@data-name='mega_menu_template_opt']/*" position="before">
-           <t t-set="_label">Airproof</t>
-           <we-button t-att-data-select-label="_label"
-               data-select-template="website_airproof.s_mega_menu_airproof"
-               data-img="/website_airproof/static/src/img/builder/header_opt.svg"
-               t-out="_label"/>
-       </xpath>
-   </template>
+    <t t-inherit="website.MegaMenuOption" t-inherit-mode="extension">
+        <xpath expr="//BuilderRow[@label.translate='Template']//BuilderSelect" position="inside">
+            <BuilderSelectItem
+                title.translate="Airproof"
+                actionParam="{
+                    view: 'website_airproof.s_mega_menu_airproof',
+                    templateClass: 's_mega_menu_airproof',
+                }">
+                <Img class="'w-75 m-auto'" style="'margin-block: -0.25em !important;'" src="'/website_airproof/static/src/img/builder/header_opt.svg'"/>
+            </BuilderSelectItem>
+        </xpath>
+    </t>
