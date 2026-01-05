@@ -20,31 +20,38 @@ At the end of this chapter, you will be able to :ref:`create custom snippets
 File structure
 ==============
 
-The layout's file structure is the following.
+The view templates live under `views/snippets/`:
 
 ::
 
    views
-   ├── snippets
-   │   └── options.xml
-   │   └── s_snippet_name.xml
+   └── snippets
+       ├── snippets.xml
+       └── s_snippet_name.xml
 
-The styles' file structure is the following.
+Client-side assets live under `static/src/` and are grouped by purpose:
 
 ::
 
    static
-   ├── src
-   │   └── snippets
-   │       └── s_snippet_name
-   │           └── 000.js
-   │           └── 000.scss
-   │           └── 000.xml
-   │           └── options.js
+   └── src
+       ├── snippets
+       │   └── s_snippet_name
+       │       ├── snippet_name.js
+       │       ├── 000.scss
+       │       └── 000.xml
+       └── website_builder
+           ├── snippet_name_option.js
+           ├── snippet_name_option.xml
+           └── snippet_name_option_plugin.js
 
 .. seealso::
-   `XML templates of the different snippets
-   <https://github.com/odoo/odoo/blob/ccb78f7af2a4413836a969ff8009dc3df6c2df33/addons/website/views/snippets/snippets.xml>`_
+   `Snippets and groups registry in XML
+   <https://github.com/odoo/odoo/blob/8fe9109b8915c940998108ded22960eb699c1f4b/addons/website/views/snippets/snippets.xml>`_
+
+.. tip::
+   JS Files under `/snippets` are interactions:
+   `example <https://github.com/odoo/odoo/blob/dd148d22a03e27c0687f106aeb5179741e8f1e5e/addons/website/static/src/snippets/s_floating_blocks/floating_blocks.js>`_ with the `s_floating_blocks` snippet and the base `Interaction <https://github.com/odoo/odoo/blob/78fdef11cb79a40222e26c3a1f9971c0b45cb000/addons/web/static/src/public/interaction.js>`_ class.
 
 .. admonition:: Demo page
 
@@ -479,7 +486,7 @@ page, directly from the edit panel.
 Add a group at the top of the list (feel free to put it where needed in this list).
 
 .. code-block:: xml
-   :caption: ``/website_airproof/views/snippets/options.xml``
+   :caption: ``/website_airproof/views/snippets/snippets.xml``
 
    <template id="snippets" inherit_id="website.snippets" name="Airproof - Snippets">
       <!-- Create the group -->
@@ -512,7 +519,7 @@ all existing ones on the same level. The Website Builder will split them automat
 categories by reading the `group` attribute on the `<t t-snippet="">`
 
 .. code-block:: xml
-   :caption: ``/website_airproof/views/snippets/options.xml``
+   :caption: ``/website_airproof/views/snippets/snippets.xml``
    :emphasize-lines: 7-12
 
    <template id="snippets" inherit_id="website.snippets" name="Airproof - Snippets">
@@ -543,14 +550,16 @@ categories by reading the `group` attribute on the `<t t-snippet="">`
    * - <keywords>
      - Keywords entered by the user in the search field in the Snippets panel
 
+.. _website_themes/building_blocks/custom/inner_content_snippet:
+
 Inner content snippet
 ~~~~~~~~~~~~~~~~~~~~~
 
-To make a custom snippet appearing in the :guilabel:`Inner content` list, add it to the `snippet_content`
+To make a custom snippet appear in the :guilabel:`Inner content` list, add it to `snippet_content`
 instead:
 
 .. code-block:: xml
-   :caption: ``/website_airproof/views/snippets/options.xml``
+   :caption: ``/website_airproof/views/snippets/snippets.xml``
 
    <template id="snippets" inherit_id="website.snippets" name="Airproof - Snippets">
       <!-- Add the custom snippet to the group -->
@@ -559,330 +568,448 @@ instead:
       </xpath>
    </template>
 
+.. _website_themes/building_blocks/custom/options/inner_content:
+
+Inner content selectors
+***********************
+
+To make a custom snippet "inner content" (droppable in another building block), add its selector
+to the `so_content_addition_selector` resource, which contains all selectors for existing inner
+content building blocks.
+
+.. code-block:: javascript
+   :caption: ``/website_airproof/static/src/builder/airproof_snippet_option_plugin.js``
+
+   export class AirproofSnippetOptionPlugin extends Plugin {
+       static id = "airproofSnippetOption";
+       resources = {
+           so_content_addition_selector: [".s_airproof_snippet"],
+       };
+   }
+
 .. important::
    - Don't forget to add a `t-thumbnail` and remove the `group` attribute as this kind of building
      blocks is directly available in the right options panel of the Website Builder.
    - Don't forget to :ref:`add the snippet to the list of all available "Inner content" snippets
-     <website_themes/building_blocks/custom/options/inner_content>`.
+     <website_themes/building_blocks/custom/inner_content_snippet>`.
 
 .. _website_themes/building_blocks/custom/options:
 
 Options
 -------
 
-Options allow users to edit a snippet's appearance/behavior using the Website Builder. You can create
-snippet options easily and automatically add them to the Website Builder.
+Options allow users to edit a snippet's appearance and behavior using the Website Builder. Options
+are OWL components defined in JavaScript and rendered with XML templates. Each option is registered
+through a builder plugin and loaded in the editor assets.
+
+.. note::
+   Add the JavaScript and XML files to the `website.website_builder_assets` bundle in your module.
 
 .. seealso::
-   `Standard snippet options <https://github.com/odoo/odoo/blob/247f28fdec788c7eb7c4288db29b931c73a23757/addons/website/views/snippets/snippets.xml>`_
+   - `HTML Builder options <https://github.com/odoo/odoo/tree/edc67e78046cddb5ca06aa8f928075337a328aa9/addons/html_builder/static/src/plugins>`_
+   - `Website builder options <https://github.com/odoo/odoo/tree/edc67e78046cddb5ca06aa8f928075337a328aa9/addons/website/static/src/builder/plugins>`_
+   - `Alert option example <https://github.com/odoo/odoo/blob/edc67e78046cddb5ca06aa8f928075337a328aa9/addons/html_builder/static/src/plugins/alert_option_plugin.js>`_
 
 .. _website_themes/building_blocks/custom/options/template:
 
-Template
-~~~~~~~~
+Component and template
+~~~~~~~~~~~~~~~~~~~~~~
 
-There are a bunch of commands to set the options of a custom snippet. These options can be created
-into :file:`/website_airproof/views/snippets/s_airproof_snippet.xml`.
+Define the option component and register it in a builder plugin.
+
+.. code-block:: javascript
+   :caption: ``/website_airproof/static/src/builder/airproof_snippet_option_plugin.js``
+
+   import { BaseOptionComponent } from "@html_builder/core/utils";
+   import { Plugin } from "@html_editor/plugin";
+   import { registry } from "@web/core/registry";
+
+   export class AirproofSnippetOption extends BaseOptionComponent {
+       static template = "website_airproof.AirproofSnippetOption";
+       static selector = ".s_airproof_snippet";
+       static applyTo = ":scope > .row";
+   }
+
+   export class AirproofSnippetOptionPlugin extends Plugin {
+       static id = "airproofSnippetOption";
+       resources = {
+           builder_options: [AirproofSnippetOption],
+       };
+   }
+
+   registry.category("website-plugins").add(
+       AirproofSnippetOptionPlugin.id,
+       AirproofSnippetOptionPlugin
+   );
+
+Then define the XML template rendered in the options panel.
 
 .. code-block:: xml
-   :caption: ``/website_airproof/views/snippets/s_airproof_snippet.xml``
-
-   <template id="s_airproof_snippet_options" inherit_id="website.snippet_options" name="Airproof - Snippets Options">
-      <xpath expr="." position="inside">
-         <!-- Options -->
-      </xpath>
-   </template>
-
-Then insert the different available options:
-
-.. code-block:: xml
-   :caption: ``/website_airproof/views/snippets/s_airproof_snippet.xml``
+   :caption: ``/website_airproof/static/src/builder/airproof_snippet_option.xml``
    :emphasize-lines: 3-16
 
-   <template id="s_airproof_snippet_options" inherit_id="website.snippet_options" name="Airproof - Snippets Options">
-      <xpath expr="." position="inside">
-         <div data-selector=".s_airproof_snippet">
-            <we-select string="Layout">
-               <we-button data-select-class="">Default</we-button>
-               <we-button data-select-class="s_airproof_snippet_portrait">Portrait</we-button>
-               <we-button data-select-class="s_airproof_snippet_square">Square</we-button>
-               <we-button data-select-class="s_airproof_snippet_landscape">Landscape</we-button>
-            </we-select>
-            <we-title>Space</we-title>
-            <we-button-group string="Before">
-               <we-button data-select-class="mt-0">1</we-button>
-               <we-button data-select-class="mt-3">2</we-button>
-               <we-button data-select-class="mt-5">3</we-button>
-            </we-button-group>
-         </div>
-      </xpath>
-   </template>
+   <templates xml:space="preserve">
+      <t t-name="website_airproof.AirproofSnippetOption">
+         <BuilderRow label.translate="Layout">
+            <BuilderSelect>
+               <BuilderSelectItem classAction="''">Default</BuilderSelectItem>
+               <BuilderSelectItem classAction="'s_airproof_snippet_portrait'">Portrait</BuilderSelectItem>
+               <BuilderSelectItem classAction="'s_airproof_snippet_square'">Square</BuilderSelectItem>
+               <BuilderSelectItem classAction="'s_airproof_snippet_landscape'">Landscape</BuilderSelectItem>
+            </BuilderSelect>
+         </BuilderRow>
+         <BuilderRow label.translate="Space">
+            <BuilderButtonGroup>
+               <BuilderButton classAction="'mt-0'">1</BuilderButton>
+               <BuilderButton classAction="'mt-3'">2</BuilderButton>
+               <BuilderButton classAction="'mt-5'">3</BuilderButton>
+            </BuilderButtonGroup>
+         </BuilderRow>
+      </t>
+   </templates>
 
-.. _website_themes/building_blocks/custom/options/inner_content:
+.. _website_themes/building_blocks/custom/options/option_logic:
 
-**Inner content**
+Option logic
+~~~~~~~~~~~~
 
-Make a custom snippet "inner content" (droppable in an other building block) by extending the
-`so_content_addition_selector` variable which contains all CSS selectors referring to the existing
-inner content building blocks:
+Define option behavior in JavaScript on the `BaseOptionComponent` class and register any
+`BuilderAction` used by the template in the builder plugin resources.
 
-.. code-block:: xml
-   :caption: `/website_airproof/views/snippets/options.xml`
+.. _website_themes/building_blocks/custom/options/plugin_api:
 
-   <template id="snippet_options" inherit_id="website.snippet_options" name="Airproof - Snippets Options">
-      <xpath expr="//t[@t-set='so_content_addition_selector']" position="after">
-         <t t-set="so_content_addition_selector"
-            t-value="so_content_addition_selector + ', .s_airproof_snippet'" />
-      </xpath>
-   </template>
+Plugin API
+**********
+
+Builder plugins register option components, actions, and editor hooks through the `resources`
+object. They are added to the `website-plugins` registry category to be accessible by the editor.
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 30 70
+
+   * - Property
+     - Purpose
+   * - `static dependencies`
+     - Declare required plugins before setup runs.
+   * - `static shared`
+     - Expose shared methods to other plugins.
+   * - `setup()`
+     - Initialize plugin state.
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 30 70
+
+   * - Resources
+     - Purpose
+   * - `builder_options`
+     - Register `BaseOptionComponent` classes for the options panel.
+   * - `builder_actions`
+     - Register `BuilderAction` classes referenced by option templates.
+   * - `dropzone_selector`
+     - Define snippet drop rules (`selector`, `dropIn`, `dropNear`, `exclude`, `excludeNearParent`).
+   * - `so_content_addition_selector`
+     - Extend the list of inner content selectors.
+   * - **Handlers**
+     - Editor lifecycle hooks registered on the plugin.
+   * - `on_snippet_dropped_handlers`
+     - Called after a snippet is dropped and inserted in the DOM.
+   * - `on_cloned_handlers`
+     - Called after an element is cloned and inserted in the DOM.
+   * - `on_will_remove_handlers`
+     - Called just before an element is removed.
+   * - `on_removed_handlers`
+     - Called after an element has been removed.
+   * - `clean_for_save_handlers`
+     - Called on a cleaned clone of the DOM before saving.
+   * - `before_save_handlers`
+     - Called at the beginning of the save process.
+   * - `after_save_handlers`
+     - Called after the save process completes.
 
 .. seealso::
+   `Full resources list <https://github.com/odoo/odoo/blob/edc67e78046cddb5ca06aa8f928075337a328aa9/addons/html_builder/static/src/%40types/plugins.d.ts#L63-L153>`_
 
-   `Standard "inner content" snippets declaration on Odoo's GitHub repository <https://github.com/odoo/odoo/blob/cc05d9d50ac668eaa26363e1127f914897a4b125/addons/website/views/snippets/snippets.xml#L988>`_
+.. _website_themes/building_blocks/custom/options/base_option_component:
+
+BaseOptionComponent API
+***********************
+
+Option components inherit from `BaseOptionComponent` and define static metadata plus optional
+component behavior.
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 30 70
+
+   * - Property
+     - Description
+   * - `static template`
+     - OWL template name rendered in the options panel.
+   * - `static selector`
+     - CSS selector that binds the option to elements.
+   * - `static exclude`
+     - CSS selector of elements to exclude from the match.
+   * - `static applyTo`
+     - CSS selector targeting a child element of the matched snippet.
+   * - `static components`
+     - Child builder components used in the template.
+   * - `setup()`
+     - Initialize component state.
 
 .. _website_themes/building_blocks/custom/options/binding:
 
 Binding
 ~~~~~~~
 
-These options use CSS selectors (class, XML tag, id, etc).
+.. _website_themes/building_blocks/custom/options/binding/selector:
 
-.. _website_themes/building_blocks/custom/options/binding/data_selector:
+selector
+********
 
-data-selector
-*************
+Option components declare a selector property that controls when they appear.
 
-Options are wrapped in groups. Groups can have properties that define how the included options
-interact with the user interface.
+`selector` binds the option component to elements matching a CSS selector (class, ID, etc). The
+option appears when a matching element is selected.
 
-`data-selector` binds all the options included in the group to a particular element matching the
-selector value (CSS class, ID, etc). The option will appear when the matching selector is selected.
+.. code-block:: javascript
 
-.. code-block:: xml
+   export class AirproofSnippetOption extends BaseOptionComponent {
+       static selector = "section, h1, .custom_class, #custom_id";
+   }
 
-   <div data-selector="section, h1, .custom_class, #custom_id">
+It can be used in combination with `exclude` or `applyTo`.
 
-It can be used in combination with other attributes like `data-target`, `data-exclude` or
-`data-apply-to`.
+.. _website_themes/building_blocks/custom/options/binding/apply_to:
 
-.. _website_themes/building_blocks/custom/options/binding/data_target:
-
-data-target
-***********
-
-`data-target=""` allows to apply the option to a child element of the `data-selector=""`.
-
-.. code-block:: xml
-
-   <div
-      data-selector=".s_airproof_snippet"
-      data-target=".row">
-
-.. _website_themes/building_blocks/custom/options/binding/data_exclude:
-
-data-exclude
-************
-
-`data-exclude=""` allows to exclude some particular selectors from the rule.
-
-.. code-block:: xml
-   :caption: The option appears if an `<ul>` tag (without `.navbar-nav` class) is selected
-
-   <div
-      data-selector="ul"
-      data-exclude=".navbar-nav">
-
-.. _website_themes/building_blocks/custom/options/binding/data_drop_in:
-
-data-drop-in
-************
-
-`data-drop-in` defines the list of elements where the snippet can be dropped into.
-
-.. code-block:: xml
-
-   <div data-selector=".s_airproof_snippet" data-drop-in=".x_custom_location">
-
-.. _website_themes/building_blocks/custom/options/binding/data_drop_near:
-
-data-drop-near
-**************
-
-`data-drop-near` defines the list of elements where the snippet can be dropped beside.
-
-.. code-block:: xml
-
-   <div data-selector=".s_airproof_snippet_card" data-drop-near=".card">
-
-.. _website_themes/building_blocks/custom/options/binding/data_js:
-
-data-js
+applyTo
 *******
 
-`data-js` binds a custom JavaScript methods.
+`applyTo` allows the option to apply to a child element of the matched selector.
 
-.. code-block:: xml
+.. code-block:: javascript
 
-   <div data-selector=".s_airproof_snippet" data-js="CustomMethodName">
+   export class AirproofSnippetOption extends BaseOptionComponent {
+       static selector = ".s_airproof_snippet";
+       static applyTo = ".row";
+   }
+
+.. _website_themes/building_blocks/custom/options/binding/exclude:
+
+exclude
+*******
+
+`exclude` removes specific selectors from the match.
+
+.. code-block:: javascript
+   :caption: The option appears if an `<ul>` tag (without `.navbar-nav` class) is selected
+
+   export class AirproofSnippetOption extends BaseOptionComponent {
+       static selector = "ul";
+       static exclude = ".navbar-nav";
+   }
+
+.. _website_themes/building_blocks/custom/options/binding/drop_in:
+
+dropzone_selector (dropIn)
+**************************
+
+`dropIn` defines the elements the snippet can be dropped into.
+
+.. code-block:: javascript
+
+   export class AirproofSnippetOptionPlugin extends Plugin {
+       static id = "airproofSnippetOption";
+       resources = {
+           dropzone_selector: {
+               selector: ".s_airproof_snippet",
+               dropIn: ".x_custom_location",
+           },
+       };
+   }
+
+.. _website_themes/building_blocks/custom/options/binding/drop_near:
+
+dropzone_selector (dropNear)
+****************************
+
+`dropNear` defines the elements the snippet can be dropped next to.
+
+.. code-block:: javascript
+
+   export class AirproofSnippetOptionPlugin extends Plugin {
+       static id = "airproofSnippetOption";
+       resources = {
+           dropzone_selector: {
+               selector: ".s_airproof_snippet_card",
+               dropNear: ".card",
+           },
+       };
+   }
 
 .. _website_themes/building_blocks/custom/options/layout_fields:
 
 Layout & fields
 ~~~~~~~~~~~~~~~
 
-.. _website_themes/building_blocks/custom/options/layout_fields/we_title:
+Use builder components to compose the options panel UI.
 
-`<we-title>`
-************
+.. _website_themes/building_blocks/custom/options/layout_fields/builder_row:
 
-Add titles between options to categorize them.
+`<BuilderRow>`
+**************
 
-.. code-block:: xml
-
-   <we-title>Option subtitle 1</we-title>
-
-.. image:: building_blocks/we-title.jpg
-   :alt: Add a subtitle between custom options
-   :width: 300
-
-.. _website_themes/building_blocks/custom/options/layout_fields/we_row:
-
-`<we-row>`
-**********
-
-Create a row in which elements is displayed next to each other.
+Create a labeled row to group option fields. Use `label.translate` for the row title and `level` to
+indent nested rows.
 
 .. code-block:: xml
 
-   <we-row string="My option">
-      <we-select>...</we-select>
-      <we-button-group>...</we-button-group>
-   </we-row>
+   <BuilderRow label.translate="My option">
+      <BuilderSelect>...</BuilderSelect>
+      <BuilderButtonGroup>...</BuilderButtonGroup>
+   </BuilderRow>
 
 The perfect example for this case is the :guilabel:`Animation` row:
 
-.. image:: building_blocks/we-row.png
+.. image:: building_blocks/builder-row.png
    :alt: Group different option fields into the same row.
 
-.. _website_themes/building_blocks/custom/options/layout_fields/we_button:
+.. _website_themes/building_blocks/custom/options/layout_fields/builder_button:
 
-`<we-button>`
-*************
+`<BuilderButton>`
+*****************
 
-This tag is used inside `<we-select>` and `<we-button-group>`.
+This tag is used inside `<BuilderButtonGroup>` or on its own.
 
 .. code-block:: xml
    :emphasize-lines: 2-4
 
-   <we-button-group string="Before">
-      <we-button data-select-class="mt-0">1</we-button>
-      <we-button data-select-class="mt-3">2</we-button>
-      <we-button data-select-class="mt-5">3</we-button>
-   </we-button-group>
+   <BuilderButtonGroup>
+      <BuilderButton classAction="'mt-0'">1</BuilderButton>
+      <BuilderButton classAction="'mt-3'">2</BuilderButton>
+      <BuilderButton classAction="'mt-5'">3</BuilderButton>
+   </BuilderButtonGroup>
 
-Add `data-select-class=""` to indicate which class is added to the targeted element when this
-choice is selected. Like any XML node, add other attributes allows to improve the style and/or the
-user experience.
+Add `classAction` to indicate which class is applied to the targeted element when this choice is
+selected. Like any XML node, add other attributes to improve the style and/or the user experience.
 
 .. code-block:: xml
 
-   <we-button
-      class="fa fa-fw fa-angle-double-right"
-      title="Move to last"
-      data-position="last" />
+   <BuilderButton
+      icon="'fa-align-right'"
+      title.translate="Align right"
+      classAction="'ms-auto'" />
 
-.. image:: building_blocks/we-button.jpg
+.. image:: building_blocks/builder-button.png
    :alt: Add option choices and style them with some icons
    :width: 300
 
-.. _website_themes/building_blocks/custom/options/layout_fields/we_select:
+.. _website_themes/building_blocks/custom/options/layout_fields/builder_select:
 
-`<we-select>`
-*************
+`<BuilderSelect>`
+*****************
 
-Formats the option as a dropdown list. Add `string=""` to indicate the field name.
+Formats the option as a dropdown list.
 
 .. code-block:: xml
 
-   <we-select string="Layout">...</we-select>
+   <BuilderSelect>
+      <BuilderSelectItem classAction="''">Default</BuilderSelectItem>
+      <BuilderSelectItem classAction="'s_layout_variant'">Variant</BuilderSelectItem>
+   </BuilderSelect>
 
-.. image:: building_blocks/we-select.jpg
-   :alt: Add a dropddown list field
+.. image:: building_blocks/builder-select.png
+   :alt: Add a dropdown list field
    :width: 300
 
-.. _website_themes/building_blocks/custom/options/layout_fields/we_button_group:
+.. _website_themes/building_blocks/custom/options/layout_fields/builder_button_group:
 
-`<we-button-group>`
+`<BuilderButtonGroup>`
+**********************
+
+Formats the option as buttons next to each other and handles selection state.
+
+.. code-block:: xml
+
+   <BuilderButtonGroup>...</BuilderButtonGroup>
+
+.. image:: building_blocks/builder-button-group.png
+   :alt: Add a group of buttons
+   :width: 300
+
+.. _website_themes/building_blocks/custom/options/layout_fields/builder_checkbox:
+
+`<BuilderCheckbox>`
 *******************
-
-Formats the option as buttons next to each other.
-
-.. code-block:: xml
-
-   <we-button-group string="Before">...</we-button-group>
-
-.. image:: building_blocks/we-button-group.jpg
-   :alt: Add a dropddown list field
-   :width: 300
-
-.. _website_themes/building_blocks/custom/options/layout_fields/we_checkbox:
-
-`<we-checkbox>`
-***************
 
 Formats the option as a toggle switch.
 
 .. code-block:: xml
 
-   <we-checkbox
-      string="Tooltip"
-      data-select-class="s_airproof_snippet_tooltip" />
+   <BuilderCheckbox
+      classAction="'s_airproof_snippet_tooltip'" />
 
-.. image:: building_blocks/we-checkbox.jpg
+.. image:: building_blocks/builder-checkbox.png
    :alt: Add a toggle switch.
    :width: 300
 
-.. _website_themes/building_blocks/custom/options/layout_fields/we_range:
+.. _website_themes/building_blocks/custom/options/layout_fields/builder_range:
 
-`<we-range>`
-************
+`<BuilderRange>`
+****************
 
 Formats the option as a slider.
 
+`<BuilderRange>` can be used to set a numeric value:
+
 .. code-block:: xml
 
-   <we-range
-      string="Images Spacing"
-      data-select-class="o_spc-none|o_spc-small|o_spc-medium|o_spc-big" />
+   <BuilderRange
+      action="'setSpeed'"
+      min="0"
+      max="10"
+      step="1"
+      displayRangeValue="true" />
 
-Each step of the range is separated by a `|`. Here, each class name corresponds to a step.
+It can also be used to map each step to an entry in `actionParam`:
 
-.. image:: building_blocks/we-range.jpg
-   :alt: Add a toggle switch.
+.. code-block:: xml
+
+   <BuilderRange
+      action="'setClassRange'"
+      actionParam="['o_spc-none', 'o_spc-small', 'o_spc-medium', 'o_spc-big']"
+      max="3" />
+
+.. image:: building_blocks/builder-range.png
+   :alt: Add a range slider.
    :width: 300
 
-.. _website_themes/building_blocks/custom/options/layout_fields/we_input:
+.. _website_themes/building_blocks/custom/options/layout_fields/builder_input:
 
-`<we-input>`
-************
+`<BuilderNumberInput>` and `<BuilderTextInput>`
+***********************************************
 
-Formats the option as a text field.
+Format the option as a numeric or text field.
 
 .. code-block:: xml
    :emphasize-lines: 3-5
-   :caption: `data-unit`, `data-save-unit` and `data-step` are optional
+   :caption: `unit`, `saveUnit` and `step` are optional
 
-   <we-input
-      string="Speed"
-      data-unit="s"
-      data-save-unit="ms"
-      data-step="0.1" />
+   <BuilderNumberInput
+      styleAction="'animation-duration'"
+      unit="'s'"
+      saveUnit="'ms'"
+      step="0.1" />
 
-.. image:: building_blocks/we-input.jpg
-   :alt: Add a text field.
+.. image:: building_blocks/builder-number-input.png
+   :alt: Add a numeric input.
    :width: 300
 
-`<we-input>` comes with optional attributes particularly useful in specific case:
+`<BuilderNumberInput>` comes with optional props:
 
 .. list-table::
    :header-rows: 1
@@ -891,30 +1018,71 @@ Formats the option as a text field.
 
    * - Attribute
      - Description
-   * - `data-unit`
+   * - `unit`
      - Shows the expected unit of measure.
-   * - `data-save-unit`
+   * - `saveUnit`
      - Set the unit of measure to which the value entered by the user is converted and saved.
-   * - `data-step`
+   * - `step`
      - Set the numerical value by which the field can be incremented.
 
-.. _website_themes/building_blocks/custom/options/layout_fields/we_colorpicker:
+.. _website_themes/building_blocks/custom/options/layout_fields/builder_list:
 
-`<we-colorpicker>`
-******************
+`<BuilderList>`
+***************
+
+Render and edit a list of items (add, remove, reorder) in the options panel. Useful for prefilled
+values, custom options, or settings that map to a list of objects.
+
+.. code-block:: xml
+   :caption: Simple list with two fields
+
+   <BuilderList
+      action="'setPrefilledOptions'"
+      addItemTitle.translate="Add"
+      itemShape="{ value: 'number', description: 'text' }"
+      default="{ value: '50', description: 'Add a description here' }"
+      columnWidth="{ value: 'w-25' }"
+      sortable="true" />
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 30 70
+
+   * - Prop
+     - Description
+   * - `itemShape`
+     - Field types per column. Supported types: `text`, `number`, `boolean`, `exclusive_boolean`.
+   * - `default`
+     - Default values for new items. Keys must match `itemShape`.
+   * - `records`
+     - Optional list of available records (JSON list). When set, the add button becomes a dropdown.
+   * - `defaultNewValue`
+     - Extra values injected when creating a new item (e.g., record ID).
+   * - `sortable`
+     - Allow drag-and-drop reordering (default: true).
+   * - `hiddenProperties`
+     - Hide specific columns by name.
+   * - `columnWidth`
+     - CSS classes applied per column (e.g., `w-25`).
+   * - `forbidLastItemRemoval`
+     - Prevent removing the last remaining item.
+
+.. _website_themes/building_blocks/custom/options/layout_fields/builder_colorpicker:
+
+`<BuilderColorPicker>`
+**********************
 
 Formats the option as a color/gradient to choose from.
 
 .. code-block:: xml
 
-   <we-colorpicker
-      string="Color filter"
-      data-select-style="true"
-      data-css-property="background-color"
-      data-color-prefix="bg-"
-      data-apply-to=".s_map_color_filter" />
+   <BuilderColorPicker
+      action="'selectFilterColor'"
+      defaultOpacity="50"
+      enabledTabs="['custom', 'gradient']" />
 
-.. image:: building_blocks/we-colorpicker.jpg
+.. image:: building_blocks/builder-colorpicker.png
    :alt: Add a colorpicker.
    :width: 300
 
@@ -925,160 +1093,130 @@ Formats the option as a color/gradient to choose from.
 
    * - Attribute
      - Description
-   * - `data-select-style`
-     - Refers to `selectStyle` JavaScript method. Matchs the value of the `style=""` attribute
-       applied on the target to thick the right option choice.
-   * - `data-css-property`
-     - Define the CSS property targeted by the colorpicker.
-   * - `data-color-prefix`
-     - Define the prefix applied to the CSS class returned.
-   * - `data-apply-to`
-     - Set the element on which the color is applied.
+   * - `enabledTabs`
+     - Restrict the available picker tabs (e.g., `['theme', 'gradient', 'custom']`).
+   * - `defaultColor`
+     - Default color shown when no selection is applied.
+   * - `defaultOpacity`
+     - Default alpha value for the picker.
 
-.. _website_themes/building_blocks/custom/options/methods:
+.. _website_themes/building_blocks/custom/options/actions:
 
-Methods
+Actions
 ~~~~~~~
 
-Beside *binding options* allowing to select, target or exclude an element. Option fields have
-several useful data attributes refering to standard JavaScript methods.
+Builder components trigger `BuilderAction` classes. Use shorthand action props or declare custom
+actions and reference them by `action` id in the template.
 
-For example, `data-select-class` refers to the JavaScript method named `selectClass`.
+.. _website_themes/building_blocks/custom/options/actions/core:
 
-.. _website_themes/building_blocks/custom/options/methods/builtin:
+Core actions
+************
 
-Built-in methods
-****************
-
-.. _website_themes/building_blocks/custom/options/methods/builtin/selection:
-
-Selection
-^^^^^^^^^
-
-There are several built-in methods available. They are callable by using the related data attribute
-directly into the XML template.
+Core actions are available as shorthand props on builder components.
 
 .. list-table::
    :header-rows: 1
    :stub-columns: 1
    :widths: 35 65
 
-   * - Data attributes
+   * - Action/prop
      - Description
-   * - `data-select-class`
-     - Allows to select one and only one class in the option classes
-       set and set it on the associated snippet.
-   * - `data-select-data-attribute` + `data-attribute-name`
-     - Allows to select a value and set it on the associated snippet as an attribute. The attribute
-       name is given by the `data-attribute-name` attribute.
-   * - `data-select-property` + `data-property-name`
-     - Allows to select a value and set it on the associated snippet as a property. The attribute
-       name is given by the `data-property-name` attribute.
-   * - `data-select-style` + `data-css-property`
-     - Allows to select a value and set it on the associated snippet as a CSS style. The attribute
-       name is given by the `data-css-property` attribute.
-   * - `data-select-color-combination`
-     - Enable the selection of a color palette.
-       **Only for** `<we-colorpicker>`
+   * - `classAction`
+     - Add/remove CSS classes on the target element.
+   * - `styleAction`
+     - Set an inline style property on the target element.
+   * - `attributeAction`
+     - Set or remove a DOM attribute.
+   * - `dataAttributeAction`
+     - Set or remove a dataset key (without the `data-` prefix).
+   * - `setClassRange`
+     - Apply one class from a predefined list based on the selected range value.
+   * - `action` + `actionParam`
+     - Call a custom action registered in the builder plugin.
 
-.. _website_themes/building_blocks/custom/options/methods/builtin/events:
+.. _website_themes/building_blocks/custom/options/actions/lifecycle:
 
-Events
-^^^^^^
+Action lifecycle
+****************
 
-There are also built-in methods directly linked to events the Website Builder listens to:
+`BuilderAction` classes can implement a lifecycle that the builder invokes depending on the widget:
 
 .. list-table::
    :header-rows: 1
    :stub-columns: 1
    :widths: 20 80
 
-   * - Name
+   * - Method
      - Description
-   * - start
-     - Occurs when the publisher selects the snippet for the first time in an editing session or
-       when the snippet is drag-and-dropped on the page.
-   * - destroy
-     - Occurs after the publisher has saved the page.
-   * - onFocus
-     - Occurs each time the snippet is selected by the user or when the snippet is drag-and-dropped
-       on the page.
-   * - onBlur
-     - Occurs when a snippet loses focus.
-   * - onClone
-     - Occurs just after a snippet is duplicated.
-   * - onRemove
-     - Occurs just before the snippet is removed.
-   * - onBuilt
-     - Occurs just after the snippet is drag-and-dropped on a drop zone. When this event is
-       triggered, the content is already inserted in the page.
-   * - cleanForSave
-     - Occurs before the publisher saves the page.
+   * - `prepare`
+     - Prepare asynchronous data before a component is used.
+   * - `load`
+     - Load data before `apply` when actions are previewed.
+   * - `apply`
+     - Apply the action to the targeted element.
+   * - `clean`
+     - Reset the action when a new choice supersedes it.
+   * - `getValue`
+     - Return the current value for input widgets.
+   * - `isApplied`
+     - Return whether the action is active for selectable widgets.
+   * - `getPriority`
+     - Decide which selectable item wins when multiple are valid.
 
-.. seealso::
-   - `Web Editor - JavaScript methods related to snippet options on GitHub
-     <https://github.com/odoo/odoo/blob/cc05d9d50ac668eaa26363e1127f914897a4b125/addons/web_editor/static/src/js/editor/snippets.options.js#L3512>`_
-   - `XML templates of the different standard snippets
-     <https://github.com/odoo/odoo/blob/cc05d9d50ac668eaa26363e1127f914897a4b125/addons/website/views/snippets/snippets.xml>`_
+.. _website_themes/building_blocks/custom/options/actions/custom:
 
-.. _website_themes/building_blocks/custom/options/methods/custom:
-
-Custom methods
+Custom actions
 **************
 
-To create custom JavaScript methods, a link between the options group and the custom methods has to
-be created. To do so, a JavaScript class has to be created and called in the XML template with
-`data-js`.
-
-Add the `data-js` attribute to your options group:
-
-.. code-block:: xml
-   :emphasize-lines: 3
-
-   <template id="s_airproof_snippet_options" inherit_id="website.snippet_options" name="Airproof - Snippets Options">
-      <xpath expr="." position="inside">
-         <div data-selector=".s_airproof_snippet" data-js="airproofSnippet">
-            // Options
-         </div>
-      </xpath>
-   </template>
-
-Then, the class can be created in a JavaScript file:
+To create custom behaviors, define a `BuilderAction` and register it in your builder plugin.
 
 .. code-block:: javascript
-   :caption: ``/website_airproof/static/src/s_airproof_snippet/options.js``
+   :caption: ``/website_airproof/static/src/builder/airproof_snippet_option_plugin.js``
 
-   /** @odoo-module */
+   import { BuilderAction } from "@html_builder/core/builder_action";
+   import { Plugin } from "@html_editor/plugin";
+   import { registry } from "@web/core/registry";
 
-   import options from 'web_editor.snippets.options';
+   export class AirproofLayoutAction extends BuilderAction {
+       static id = "airproofLayout";
+       apply({ editingElement, params: { mainParam } }) {
+           editingElement.classList.toggle("s_airproof_snippet_portrait", mainParam === "portrait");
+           editingElement.classList.toggle("s_airproof_snippet_square", mainParam === "square");
+       }
+       isApplied({ editingElement, params: { mainParam } }) {
+           return editingElement.classList.contains(`s_airproof_snippet_${mainParam}`);
+       }
+   }
 
-   const AirproofSnippet = options.Class.extend({
-      // Built-in method example
-      start: function() {
-         //...
-      }
-      // Custom method example
-      customMethodName: function() {
-         //...
-      }
-   });
+   export class AirproofSnippetOptionPlugin extends Plugin {
+       static id = "airproofSnippetOption";
+       resources = {
+           builder_actions: { AirproofLayoutAction },
+       };
+   }
 
-   options.registry.AirproofSnippet = AirproofSnippet;
+   registry.category("website-plugins").add(
+       AirproofSnippetOptionPlugin.id,
+       AirproofSnippetOptionPlugin
+   );
 
-   export default AirproofSnippet;
-
-Finally, the custom method can be called on your custom option through the XML template:
+Finally, the custom action can be called from the XML template.
 
 .. code-block:: xml
-   :emphasize-lines: 3
+   :emphasize-lines: 3-5
 
-   <template id="s_airproof_snippet_options" inherit_id="website.snippet_options" name="Airproof - Snippets Options">
-      <xpath expr="." position="inside">
-         <div data-selector=".s_airproof_snippet" data-js="airproofSnippet">
-            <we-checkbox data-custom-method-name="" />
-         </div>
-      </xpath>
-   </template>
+   <t t-name="website_airproof.AirproofSnippetOption">
+      <BuilderRow label.translate="Layout">
+         <BuilderButtonGroup action="'airproofLayout'">
+            <BuilderButton actionParam="'portrait'">Portrait</BuilderButton>
+            <BuilderButton actionParam="'square'">Square</BuilderButton>
+         </BuilderButtonGroup>
+      </BuilderRow>
+   </t>
+
+.. seealso::
+   - `Builder actions API <https://github.com/odoo/odoo/blob/edc67e78046cddb5ca06aa8f928075337a328aa9/addons/html_builder/static/src/core/builder_action.js>`_
 
 .. _website_themes/building_blocks/custom/dynamic:
 
@@ -1129,7 +1267,7 @@ Examples
    .. tab:: Blog posts
 
       .. code-block:: xml
-         :caption: ``/website_airproof/views/snippets/options.xml``
+         :caption: ``/website_airproof/views/snippets/s_snippet_name.xml``
 
          <template id="dynamic_filter_template_blog_post_airproof" name="...">
             <div t-foreach="records" t-as="data" class="s_blog_posts_post">
@@ -1153,7 +1291,7 @@ Examples
    .. tab:: Products
 
       .. code-block:: xml
-         :caption: ``/website_airproof/views/snippets/options.xml``
+         :caption: ``/website_airproof/views/snippets/s_snippet_name.xml``
 
          <template id="dynamic_filter_template_product_product_airproof" name="...">
             <t t-foreach="records" t-as="data" data-number-of-elements="4" data-number-of-elements-sm="1" data-number-of-elements-fetch="8">
@@ -1183,7 +1321,7 @@ Examples
    .. tab:: Events
 
       .. code-block:: xml
-         :caption: ``/website_airproof/views/snippets/options.xml``
+         :caption: ``/website_airproof/views/snippets/s_snippet_name.xml``
 
          <template id="dynamic_filter_template_event_event_airproof" name="...">
             <div t-foreach="records" t-as="data" class="s_events_event">
