@@ -288,6 +288,10 @@ impacts that can be taken advantage of throughout the Odoo database.
 - :guilabel:`Inventory`: inventory is counted for each individual product variant. On the product
   template form, the inventory reflects the sum of all variants, but the actual inventory is
   computed by individual variants.
+- :guilabel:`Manufacturing`: a single BoM can be used for multiple variants of the same product.
+     Refer to
+     :doc:`../../../../inventory_and_mrp/manufacturing/advanced_configuration/product_variants`
+     documentation for more information.
 - :guilabel:`Picture`: each product variant can have its own specific picture.
 
 .. note::
