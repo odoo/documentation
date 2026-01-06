@@ -156,7 +156,7 @@ documents.
      - Yes
    * - :ref:`Use putaway rules <inventory/product_management/putaway>`
      - Yes
-     - No
+     - Yes
    * - :ref:`Can be manufactured, subcontracted, or used in another good's BoM
        <inventory/product_management/manufacturing>`
      - Yes
