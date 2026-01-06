@@ -61,7 +61,7 @@ within the template.
    require to be added to the template after it is created.
 
 On the project template, define the :guilabel:`Planned dates` for both the project and each task.
-When tasks have planned start dates in the template, Odoo calculates the number of working days
+When tasks have planned start dates in the template, Odoo calculates the number of days
 between the project’s start date and the first scheduled task. This time window is referred to as
 the *delta*.
 
