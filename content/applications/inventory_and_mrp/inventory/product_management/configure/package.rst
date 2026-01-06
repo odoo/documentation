@@ -15,14 +15,15 @@ Packages are commonly used for the following purposes:
    and ensuring compliance with carrier shipping specifications.
 #. Storing items in bulk.
 
-*Package use* is a field on the package form in Odoo that is only visible by enabling the *Batch
-Transfers* and *Packages* features (:menuselection:`Inventory app --> Configuration --> Settings`).
+:guilabel:`Package Use` is a field on the package form in Odoo that is only visible by enabling the
+:guilabel:`Batch, Wave & Cluster Transfers` and :guilabel:`Packages` features
+(:menuselection:`Inventory app --> Configuration --> Settings`).
 
-By default, the *Package Use* field on a packages form is set to *Disposable Box*. Change this field
-to *Reusable Box* **only** when configuring packages for :ref:`cluster pickings
-<inventory/warehouses_storage/cluster-pack>`.
+By default, the :guilabel:`Package Use` field on a packages form is set to :guilabel:`Disposable
+Box`. Change this field to :guilabel:`Reusable Box` **only** when configuring packages for
+:ref:`cluster pickings <inventory/warehouses_storage/cluster-pack>`.
 
-*Package type* is an optional feature used for :doc:`calculating shipping cost
+:guilabel:`Package Type` is an optional feature used for :doc:`calculating shipping cost
 <../../shipping_receiving/setup_configuration>`, based on real shipping weight. Create package types
 to include the weight of the package itself (e.g. boxes, pallets, other shipping containers) in
 shipping cost calculations.
@@ -42,7 +43,6 @@ the :guilabel:`Operations` heading, activate the :guilabel:`Packages` feature. T
 :guilabel:`Save`.
 
 .. image:: package/enable-pack.png
-   :align: center
    :alt: Activate the *Packages* setting in Inventory > Configuration > Settings.
 
 .. _inventory/product_management/move-entire-pack:
@@ -63,38 +63,36 @@ Pack items
 
 Products can be added to packages in any transfer by:
 
-#. Clicking each :ref:`Detailed Operations <inventory/warehouses_storage/detailed-operations>` icon
-   on the product line.
+#. Clicking each :ref:`Details <inventory/warehouses_storage/detailed-operations>` link on the
+   product line.
 #. Using the :ref:`Put in Pack <inventory/warehouses_storage/put-in-pack>` button to place
    everything in the transfer into a package.
 
 .. _inventory/warehouses_storage/detailed-operations:
 
-Detailed operations
--------------------
+Details
+-------
 
 On any warehouse transfer (e.g. receipt, delivery order), add a product to a package by clicking the
-:guilabel:`⦙≣ (bulleted list)` icon in the :guilabel:`Operations` tab.
+:guilabel:`Details` link in the :guilabel:`Operations` tab.
 
 .. image:: package/detailed-operations.png
-   :align: center
-   :alt: Show "Detailed Operations" icon in the product line.
+   :alt: Details link on the product line.
 
 Doing so opens the :guilabel:`Detailed Operations` pop-up window for the :guilabel:`Product`.
 
-To put the :guilabel:`Product` in a package, click :guilabel:`Add a line`, and assign the product to
-a :guilabel:`Destination Package`. Select an existing package, or create a new one by typing the
-name of the new package, then select :guilabel:`Create...`.
+To put the :guilabel:`Product` in a package, assign the product to a :guilabel:`Destination
+Package`. Split into multiple packages by clicking :guilabel:`Add a line`. Select an existing
+package, or create a new one by typing the name of the new package, then select :guilabel:`Create`.
 
 .. figure:: package/destination-package.png
-   :align: center
    :alt: Assign a package to "Destination Package" field.
 
-   Twelve units of `Acoustic Bloc Screen` are placed in `PACK0000001`.
+   20 units of `Acoustic Bloc Screen` are placed in `PACK0000001`.
 
-Then, specify the quantity of items to go into the package in the :guilabel:`Done` column. Repeat
-the above steps to place the :guilabel:`Product` in different packages. Once finished, click
-:guilabel:`Confirm` to close the window.
+Then, specify the quantity of items to go into the package in the :guilabel:`Quantity` column.
+Repeat the above steps to place the :guilabel:`Product` in different packages. Once finished, click
+:guilabel:`Save` to close the window.
 
 .. seealso::
    :doc:`Ship one order in multiple packages
@@ -114,16 +112,15 @@ new package, and place all the items in the transfer in that newly-created packa
    Settings`.
 
 .. figure:: package/put-in-pack.png
-   :align: center
    :alt: Image of the "Put in Pack" button being clicked.
 
-   In batch transfer `BATCH/00003`, the :guilabel:`Put in Pack` button was clicked to create a new
+   In batch transfer `BATCH/00001`, the :guilabel:`Put in Pack` button was clicked to create a new
    package, `PACK0000002`, and assign all items to it in the :guilabel:`Destination Package` field.
 
 .. _inventory/warehouses_storage/package-type:
 
-Package type
-============
+Create package types
+====================
 
 Create package types by navigating to :menuselection:`Inventory app --> Configuration --> Package
 Types`, in order to set custom dimensions and weight limits. This feature is mainly used to
@@ -147,14 +144,13 @@ fields of the form are as follows:
    tab, of each product form.
 
 - :guilabel:`Max Weight`: maximum shipping weight allowed in the package.
-- :guilabel:`Barcode`: define a barcode to identify the package type from a scan.
-- :guilabel:`Company`: specify a company to make the package type available **only** at the selected
+- :guilabel:`Barcode`: Define a barcode to identify the package type from a scan.
+- :guilabel:`Company`: Specify a company to make the package type available **only** at the selected
   company. Leave the field blank if it is available at all companies.
-- :guilabel:`Carrier`: specify the intended shipping carrier for this package type.
-- :guilabel:`Carrier Code`: define a code that is linked to the package type.
+- :guilabel:`Carrier`: Specify the intended shipping carrier for this package type.
+- :guilabel:`Carrier Code`: Define a code that is linked to the package type.
 
 .. image:: package/package-type.png
-   :align: center
    :alt: Package type for FedEx's 25 kilogram box.
 
 .. _inventory/warehouses_storage/cluster-pack:
@@ -163,13 +159,12 @@ Cluster packages
 ================
 
 To use *cluster packages*, first navigate to :menuselection:`Inventory app --> Configuration -->
-Settings`, and activate the :guilabel:`Batch Transfers` feature, located in the
+Settings`, and activate the :guilabel:`Batch, Wave & Cluster Transfers` feature, located in the
 :guilabel:`Operations` section. Doing so makes the *Package Use* field become visible on a package
 form.
 
 .. image:: package/enable-batch.png
-   :align: center
-   :alt: Activate the *Batch Transfers* feature in Inventory > Configuration > Settings.
+   :alt: Activate the Batch, Wave & Cluster Transfers feature in Inventory Settings.
 
 Add new packages by going to :menuselection:`Inventory app --> Products --> Packages`. Then, click
 :guilabel:`New`, or select an existing package. Doing so opens the package form, which contains the
@@ -184,15 +179,15 @@ following fields:
 
 - :guilabel:`Shipping Weight`: used to input the weight of the package after measuring it on a
   scale.
-- :guilabel:`Company`: specify a company to make the package available **only** at the selected
+- :guilabel:`Company`: Specify a company to make the package available **only** at the selected
   company. Leave the field blank if the package is available at all companies.
 - :guilabel:`Location`: current location of the package.
 - :guilabel:`Pack Date`: the date the package was created.
-- :guilabel:`Package Use`: choose :guilabel:`Reusable` for packages used for moving products within
-  the warehouse; :guilabel:`Disposable` for packages used to ship products to customers.
+- :guilabel:`Package Use`: Choose :guilabel:`Reusable Box` for packages used for moving products
+  within the warehouse. Choose :guilabel:`Disposable Box` for packages used to ship products to
+  customers.
 
 .. image:: package/package.png
-   :align: center
    :alt: Display package form to create a cluster pack.
 
 .. seealso::
@@ -201,13 +196,8 @@ following fields:
 View packages
 =============
 
-To view all packages go to :menuselection:`Inventory app --> Products --> Packages`. By default,
-packages are shown in Kanban view, in their current storage location.
-
-.. tip::
-   Drag-and-drop packages to move them between internal locations.
+To view all packages, go to :menuselection:`Inventory app --> Products --> Packages`. By default,
+packages are shown in Kanban view.
 
 .. image:: package/packages-kanban.png
-   :align: center
    :alt: Packages dashboard.
-
