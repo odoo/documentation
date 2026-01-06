@@ -9,7 +9,7 @@ sales order and pay for it directly from your point of sale.
 Select a sales order
 ====================
 
-From the **Point of Sale** application, open a new session. Then, click on
+From the **Point of Sale** application, open the POS register. Then, click on
 :guilabel:`Quotations/Orders` to get the complete list of quotations and sales orders created on the
 sales application.
 

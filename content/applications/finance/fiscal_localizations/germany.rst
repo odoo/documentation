@@ -315,7 +315,7 @@ Once the creation of the TSS is successful, you can find the:
 DSFinV-K export
 ~~~~~~~~~~~~~~~
 
-Whenever you close a PoS session, the details of the orders are sent to the :abbr:`DSFinV-K
+Whenever you close the POS register, the details of the orders are sent to the :abbr:`DSFinV-K
 (Digitale Schnittstelle der Finanzverwaltung für Kassensysteme)` service of fiskaly.
 
 In case of an audit, you can export the data sent to DSFinV-K by going to :menuselection:`Point of

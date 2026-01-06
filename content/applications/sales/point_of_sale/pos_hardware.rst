@@ -165,7 +165,7 @@ Using a scale in PoS
 --------------------
 
 #. :ref:`Open the POS register <pos/session-start>`.
-#. Select the product to weigh on the order screen or scan its barcode.
+#. Select the product to weigh on the POS register or scan its barcode.
 #. Place the product on the scale and wait for the weight to be displayed in the popup window.
 #. Once the weight is determined, the price is automatically computed.
 #. Click :guilabel:`Order` :icon:`fa-angle-double-right` to add the product to the cart.

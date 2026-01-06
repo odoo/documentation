@@ -202,8 +202,8 @@ Usage guidelines
          :alt: Popup window to open the kiosk
 
       .. note::
-         - Once a session is open, :guilabel:`Start Kiosk` switches to :guilabel:`Open Kiosk` on the
-           POS card.
+         - Once the register is open, :guilabel:`Start Kiosk` switches to :guilabel:`Open Kiosk` on
+           the POS card.
          - Click :guilabel:`Open Kiosk` on the POS card to reopen the popup window and access the
            self-ordering interface.
 
@@ -219,6 +219,6 @@ Usage guidelines
          :scale: 65 %
 
 .. important::
-   - A POS session must be open for customers to place an order.
+   - The POS register must be open for customers to place an order.
    - Once an order is placed, it is automatically sent to :doc:`the preparation screen
      <preparation>` and added to the list of POS orders.

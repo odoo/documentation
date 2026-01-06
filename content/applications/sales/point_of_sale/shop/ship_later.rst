@@ -31,7 +31,7 @@ Once activated, you can:
 Practical application
 =====================
 
-#. :ref:`Open a session <pos/session-start>` and make a sale.
+#. :ref:`Open the register <pos/session-start>` and make a sale.
 #. On the payment screen, set a customer and select :guilabel:`Ship Later`.
 #. On the popup window, set a shipping date and click :guilabel:`Confirm` to proceed to payment.
 
