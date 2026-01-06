@@ -64,5 +64,4 @@ be compatible with Odoo:
    - Epson printers that connect via Bluetooth are **not compatible**.
 
 .. seealso::
-   - :doc:`https`
-   - :doc:`epos_ssc`
+   :doc:`epos_ssc`
