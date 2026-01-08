@@ -40,6 +40,8 @@ wish to use by toggling the :guilabel:`Active` button.
 Currency rates
 --------------
 
+.. _multi-currency/manual-update:
+
 Manual update
 ~~~~~~~~~~~~~
 
@@ -50,6 +52,8 @@ tab, click :guilabel:`Add a line` to create a new rate.
 .. image:: multi_currency/manual-rate-update.png
   :align: center
   :alt: Create or modify the currency rate.
+
+.. _multi-currency/automatic-update:
 
 Automatic update
 ~~~~~~~~~~~~~~~~
