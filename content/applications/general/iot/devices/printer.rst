@@ -15,7 +15,7 @@ control point or a quality check.
 Connection
 ==========
 
-IoT systems support printers connected through USB, network connection, or Bluetooth.
+IoT systems support printers connected through USB or network connection.
 `Supported printers <https://www.odoo.com/page/iot-hardware>`__ are detected automatically, and
 appear in the :guilabel:`Devices` list of the IoT app.
 
