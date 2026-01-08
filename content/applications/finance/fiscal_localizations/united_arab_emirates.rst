@@ -2,13 +2,12 @@
 United Arab Emirates
 ====================
 
-.. _uae/installation:
+.. _localizations/uae/modules:
 
-Installation
-============
+Modules
+=======
 
-:ref:`Install <general/install>` the following modules to get all the features of the **United Arab
-Emirates** localization:
+The following modules related to the United Arab Emirates localization are available:
 
 .. list-table::
    :header-rows: 1
@@ -17,190 +16,263 @@ Emirates** localization:
      - Technical name
      - Description
    * - :guilabel:`United Arab Emirates - Accounting`
-     - ``l10n_ae``
-     - Default :doc:`fiscal localization package </applications/finance/fiscal_localizations>`.
-       Includes all accounts, taxes, and reports.
-   * - :guilabel:`U.A.E. - Payroll`
-     - ``l10n_ae_hr_payroll``
-     - Includes all rules, calculations, and salary structures.
-   * - :guilabel:`U.A.E. - Payroll with Accounting`
-     - ``l10n_ae_hr_payroll_account``
-     - Includes all accounts related to the payroll module.
+     - `l10n_ae`
+     - Default :doc:`fiscal localization package </applications/finance/fiscal_localizations>` for
+       the UAE.
+   * - :guilabel:`United Arab Emirates - Accounting Reports`
+     - `l10n_ae_reports`
+     - Adds VAT and corporate tax reporting capabilities.
    * - :guilabel:`United Arab Emirates - Point of Sale`
-     - ``l10n_ae_pos``
-     - Includes the UAE-compliant POS receipt.
+     - `l10n_ae_pos`
+     - Adds local compliance behavior for PoS receipts.
 
-.. image:: united_arab_emirates/l10n-ae-modules.png
-   :align: center
-   :alt: Select the modules to install.
+.. note::
+   The localization's core modules are installed automatically with the localization. The rest can
+   be manually :doc:`installed </applications/general/apps_modules>`.
 
 .. seealso::
-   :doc:`United Arab Emirates Payroll localization documentation
-   <../../hr/payroll/payroll_localizations/united_arab_emirates>`
+   :doc:`United Arab Emirates Payroll localization documentation <../../hr/payroll/payroll_localizations/united_arab_emirates>`
+
+.. _localizations/uae/loc-review:
+
+Localization overview
+=====================
+
+The UAE fiscal localisation provides a fully configured accounting setup aligned with national VAT
+and corporate tax regulations. It includes a localised chart of accounts, VAT-compliant tax groups,
+standard journals, fiscal year configurations, and reporting features that ensure accuracy and
+compliance with the Federal Tax Authority (FTA).
+
+The UAE localization package provides the following key features to ensure compliance with local
+fiscal and accounting regulations:
+
+- :ref:`Chart of accounts <localizations/uae/coa>`: a predefined structure aligned with UEA
+  accounting standards
+- :ref:`Taxes <localizations/uae/taxes>`: preconfigured tax groups and templates based on UAE VAT
+  rules
+- :doc:`../accounting/taxes/fiscal_positions`: automated tax adjustments to handle local and
+  cross-border transactions
+- :ref:`VAT return <localizations/uae/tax-return>`: structured according to the UAE VAT return
+  format, as issued by the :abbr:`FTA (Federal Tax Authority)`
+- :ref:`Corporate Tax Report <localizations/uae/corporate-tax-report>`: structured according to the
+  UAE Corporate Tax Report, as issued by the :abbr:`FTA (Federal Tax Authority)`
+
+.. _localizations/uae/coa:
 
 Chart of accounts
-=================
+-----------------
 
-Go to :menuselection:`Accounting --> Configuration --> Chart of Accounts` to view all default
-accounts available for the UAE localization package. You can filter by :guilabel:`Code` using the
-numbers on the far left or by clicking on :menuselection:`Group By --> Account Type`. You can
-:guilabel:`Enable`/:guilabel:`Disable` reconciliation or **configure** specific accounts according
-to your needs.
+The UAE :doc:`chart of accounts <../accounting/get_started/chart_of_accounts>` is aligned with
+:abbr:`IFRS (International Financial Reporting Standards)` and :abbr:`FTA (Federal Tax Authority)`
+tax requirements. This includes classified accounts for assets, liabilities, equity, income, and
+expenses, as well as separate accounts for VAT payable and VAT receivable.
 
-.. important::
-   - Always keep at least one **receivable account** and one **payable account** active.
-   - It is also advised to **keep the accounts below active**, as they are used either as transitory
-     accounts by Odoo or are specific to the **UAE localization package**.
+This structure ensures compatibility with UAE reporting obligations, VAT, and corporate income tax
+filings.
 
-     .. list-table::
-        :header-rows: 1
-
-        * - Code
-          - Account Name
-          - Type
-        * - 102011
-          - Accounts Receivable
-          - Receivable
-        * - 102012
-          - Accounts Receivable (POS)
-          - Receivable
-        * - 201002
-          - Payables
-          - Payable
-        * - 101004
-          - Bank
-          - Bank and Cash
-        * - 105001
-          - Cash
-          - Bank and Cash
-        * - 100001
-          - Liquidity Transfer
-          - Current Assets
-        * - 101002
-          - Outstanding Receipts
-          - Current Assets
-        * - 101003
-          - Outstanding Payments
-          - Current Assets
-        * - 104041
-          - VAT Input
-          - Current Assets
-        * - 100103
-          - VAT Receivable
-          - Non-current Assets
-        * - 101001
-          - Bank Suspense Account
-          - Current Liabilities
-        * - 201017
-          - VAT Output
-          - Current Liabilities
-        * - 202001
-          - End of Service Provision
-          - Current Liabilities
-        * - 202003
-          - VAT Payable
-          - Non-current Liabilities
-        * - 999999
-          - Undistributed Profits/Losses
-          - Current Year Earnings
-        * - 400003
-          - Basic Salary
-          - Expenses
-        * - 400004
-          - Housing Allowance
-          - Expenses
-        * - 400005
-          - Transportation Allowance
-          - Expenses
-        * - 400008
-          - End of Service Indemnity
-          - Expenses
+.. _localizations/uae/taxes:
 
 Taxes
-=====
+-----
 
-To access your taxes, go to :menuselection:`Accounting --> Configuration --> Taxes`.
-Activate/deactivate, or :doc:`configure </applications/finance/accounting/taxes/>` the
-taxes relevant to your business by clicking on them. Remember to only set tax accounts on the **5%**
-tax group, as other groups do not need closing. To do so, enable the :doc:`developer mode
-<../../general/developer_mode>` and go to :menuselection:`Configuration --> Tax Groups`. Then, set a
-:guilabel:`Tax current account (payable)`, :guilabel:`Tax current account (receivable)`, and an
-:guilabel:`Advance Tax payment account` for the **5%** group.
+The UAE localization includes preconfigured VAT rates and :doc:`taxes <../accounting/taxes>` as
+defined by the :abbr:`FTA (Federal Tax Authority)`:
 
-.. note::
-   The :abbr:`RCM (Reverse Charge Mechanism)` is supported by Odoo.
+- | Standard VAT (5%): The prevailing VAT rate applied to most taxable goods and services supplied
+    within the UAE.
+  | The supplier charges 5% VAT on the sale (Output VAT). VAT-registered businesses may generally
+    recover the VAT paid on eligible business purchases (Input VAT).
 
-.. image:: united_arab_emirates/uae-localization-taxes.png
-   :align: center
-   :alt: Preview of the UAE localization package's taxes.
+  .. example::
+     Most commercial sales, retail goods, telecommunication services, non-exempt private education,
+     and non-exempt private healthcare.
 
-Currency exchange rates
-=======================
+- | Zero-Rated VAT (0%): Taxable supplies on which VAT is applied at a rate of 0%.
+  | No VAT is collected on the sale, but the supplier remains fully entitled to recover input VAT
+    related to making these supplies.
 
-To update the currency exchange rates, go to :menuselection:`Accounting --> Configuration -->
-Settings --> Currencies`. Click on the update button (:guilabel:`🗘`) found next to the
-:guilabel:`Next Run` field.
+  .. example::
+     - Exports of goods and services (subject to qualifying conditions)
+     - International transport and related services
+     - Designated sectors such as specific healthcare and education services
+     - First supply of residential property (subject to conditions)
 
-To launch the update automatically at set intervals, change the :guilabel:`Interval` from
-:guilabel:`Manually` to the desired frequency.
+- | Exempt VAT: Supplies that fall outside the taxable category and are not subject to VAT.
+  | The supplier does not charge VAT and cannot recover input VAT on costs related to exempt
+    activities.
 
-.. note::
-   By default, the UAE Central Bank exchange rates web service is used. Several other providers are
-   available under the :guilabel:`Service` field.
+  .. example::
+     - Financial services: Interest on loans, bank account operations, and life insurance (when no
+       explicit fee is charged).
+     - Local passenger transport: Taxis, buses, metro services, and domestic flights within the UAE.
 
-Salary rules
-------------
+- | Import VAT: VAT that is applied to goods imported into the UAE.
+  | Import VAT is recorded at the applicable rate (generally 5%). In UAE VAT reporting, only the VAT
+    amount is declared; the import base amount is not required in the tax report.
+  | Applied when recording customs-import transactions or imports recognized through the VAT return.
 
-To apply these rules to an employee's contract, go to :menuselection:`Payroll --> Contracts -->
-Contracts` and select the employee's contract. In the :guilabel:`Salary Structure Type` field,
-select :guilabel:`UAE Employee`.
+- | Out of Scope: Transactions that fall outside the scope of UAE VAT legislation.
 
-.. image:: united_arab_emirates/uae-localization-salary-structure.png
-   :align: center
-   :alt: Select the Salary Structure Type to apply to the contract.
+  .. example::
+     - Transactions entirely outside the UAE
+     - Internal accounting adjustments
+     - Certain government-mandated transfers
 
-Under the :guilabel:`Salary Information` tab, you can find details such as the:
+  .. note::
+     These taxes can be applied directly to products or managed dynamically through fiscal
+     positions.
 
-- :guilabel:`Wage`;
-- :guilabel:`Housing Allowance`;
-- :guilabel:`Transportation Allowance`;
-- :guilabel:`Other Allowances`;
-- :guilabel:`Number of Days`: used to calculate the :ref:`end of service provision
-  <uae-end-of-service-provision>`.
+.. _localizations/uae/reverse-charge-mechanism:
 
-.. note::
-   - **Leave deductions** are calculated using a salary rule linked to the **unpaid leave** time-off
-     type;
-   - Any other deductions or reimbursements are made *manually* using other inputs;
-   - **Overtimes** are added *manually* by going to :menuselection:`Work Entries --> Work Entries`;
-   - **Salary attachments** are generated by going to :menuselection:`Contracts -->
-     Salary Attachments`. Then, :guilabel:`Create` an attachment and select the :guilabel:`Employee`
-     and the :guilabel:`Type (Attachment of Salary, Assignment of Salary, Child Support)`.
+Reverse charge mechanism (RCM)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. tip::
-   To prevent a rule from appearing on a paycheck, go to :menuselection:`Payroll --> Configuration
-   --> Rules`. Click on :guilabel:`UAE Employee Payroll Structure`, select the rule to hide, and
-   uncheck :guilabel:`Appears on Payslip`.
+- Description: Mechanism that transfers the obligation to account for VAT from the non-resident
+  supplier to the UAE VAT-registered recipient.
+- Mechanism: The recipient declares VAT as both output VAT and input VAT in the VAT return. This
+  typically results in a net-zero impact when fully recoverable.
+- Application: Commonly used for imported services and cross-border B2B transactions where the
+  supplier has no UAE VAT registration.
 
-.. _uae-end-of-service-provision:
+.. _localizations/uae/tax-return:
 
-End of service provision
+VAT return (VAT201)
+-------------------
+
+The UAE :ref:`VAT Return report <accounting/tax-returns/vat-report>` includes:
+
+- Output VAT
+- Input VAT
+- Reverse charge VAT
+- Zero-rated and exempt sales
+
+ .. note::
+    The report structure follows the official :abbr:`FTA (Federal Tax Authority)` format and can
+    be exported in both Excel and PDF formats for manual submission.
+
+.. _localizations/uae/corporate-tax-report:
+
+Corporate tax report
+--------------------
+
+The UAE Corporate Tax Report helps companies prepare for compliance with local corporate tax
+regulations. The report is found under :menuselection:`Accounting --> Reporting --> Corporate Tax
+Report` and includes:
+
+- Net profit
+- Exempt income
+- Allowable deductions
+- Adjustments for non-deductible (disallowed) expenses
+- Corporate tax amount
+
+As part of this report, users can set :ref:`exempt income
+<localizations/uae/exempt-income-accounts>`, :ref:`allowable deductions
+<localizations/uae/allowable-deductions-accounts>`, and :ref:`disallowed expenses accounts
+<localizations/uae/disallowed-expenses>`.
+
+.. important::
+   No default fiscal categories, disallowed expenses, allowable deduction accounts, or exempt income
+   accounts are configured. Users must classify them manually according to their tax situation.
+
+.. _localizations/uae/exempt-income-accounts:
+
+Exempt income accounts
+~~~~~~~~~~~~~~~~~~~~~~
+
+Exempt income generally refers to revenue that is not subject to corporate tax under UAE rules.
+Examples may include:
+
+- Dividends received from qualifying shareholdings
+- Capital gains on the sale of qualifying shares
+
+To classify exempt income, navigate to the :doc:`chart of accounts
+<../accounting/get_started/chart_of_accounts>`, open the relevant account, and assign the tag
+:guilabel:`Corporate Tax Report – Exempted Income Accounts`. Tagging these accounts ensures that
+exempt income is reported accurately without being included in the taxable base.
+
+.. _localizations/uae/allowable-deductions-accounts:
+
+Allowable deductions accounts
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Allowable deductions are expenses that are incurred solely for business purposes. Examples
+include:
+
+- Employee salaries and benefits
+- Office rent, utilities, and professional services
+
+To classify allowable deductions, navigate to the :doc:`chart of accounts
+<../accounting/get_started/chart_of_accounts>`, open the relevant expense account, and assign the
+tag :guilabel:`Corporate Tax Report – Allowable Deductions Accounts`. Tagging these accounts ensures
+that they effectively reduce taxable profits.
+
+.. _localizations/uae/disallowed-expenses:
+
+Disallowed expenses
+~~~~~~~~~~~~~~~~~~~
+
+Some expenses are not deductible for corporate tax purposes. Examples include:
+
+- Fines and penalties (e.g., traffic or administrative violations)
+- Non-business or personal expenses
+- Excessive entertainment costs beyond permitted limits
+- Certain related-party costs that do not meet transfer-pricing requirements
+
+To configure these expenses, navigate to the :doc:`chart of accounts
+<../accounting/get_started/chart_of_accounts>`, open the relevant account, and assign a fiscal
+category. Then, in the :guilabel:`Fiscal Rates` tab, configure the start date and the fiscal rate.
+
+.. _localizations/uae/automatic-currency-rates:
+
+Automatic currency rates
 ------------------------
 
-The provision is defined as the total monthly allowance *divided* by 30 and then *multiplied* by the
-number of days set in the field :guilabel:`Number of days` at the bottom of a contract's form.
-
-The provision is then calculated via a salary rule associated with two accounts: the **End Of
-Service Indemnity (Expense account)** and the **End of Service Provision (Non-current Liabilities
-account)**. The latter is used to pay off the **end of service amount** by settling it with the
-**payables account**.
+The UAE localization includes automatic synchronization of foreign :ref:`currency rates
+<multi-currency/config-rates>` through a built-in connection with the Central Bank of the UAE.
+Exchange rates are retrieved :ref:`automatically <multi-currency/automatic-update>` and applied
+across transactions when the :guilabel:`Automatic Currency Rates` option is enabled.
 
 .. note::
-   The end of service amount is calculated based on the gross salary and the start and end dates of
-   the employee’s contract.
+   Rates are updated automatically, but can also be :ref:`manually updated
+   <multi-currency/manual-update>` when necessary.
 
-Invoices
---------
+.. _localizations/uae/invoicing-language:
 
-The UAE localization package allows the generation of invoices in English, Arabic, or both. The
-localization also includes a line to display the **VAT amount** per line.
+Invoicing language
+==================
+
+Invoices can be issued in different languages to meet regional or customer-specific requirements at
+two levels:
+
+- Customer level: To assign a preferred language to a customer, go to :menuselection:`Accounting -->
+  Customers --> Customers` or :menuselection:`Point of Sale --> Orders --> Customers`, and open the
+  relevant customer form.  In the :guilabel:`Language` field, update the language preference. All
+  documents for that customer are then automatically generated in the selected language.
+- Company level: To add Arabic as a secondary language to meet business needs:
+
+  - For :guilabel:`Tax Invoices`: Go to :menuselection:`Accounting --> Configuration --> Settings`,
+    in the :guilabel:`Customer Invoices` section.
+  - For Point of Sale receipts: Go to :menuselection:`Point of Sale --> Configuration --> Settings`,
+    and navigate to the :guilabel:`Bills & Receipts` section.
+
+  Then, enable the :guilabel:`Gulf Cooperation Council Format` option, and :guilabel:`Save`.
+
+.. _localizations/uae/invoice-types:
+
+Invoice types
+=============
+
+The type of invoice to be issued depends on the following criteria:
+
+- :guilabel:`Tax Invoices (B2B)`: A :guilabel:`Tax Invoice`, used for business-to-business
+  transactions, contains all the details required for VAT recovery, including the supplier and
+  customer legal names, addresses, :abbr:`TRN (Tax Registration Number)` numbers (where applicable),
+  itemized VAT amounts, and total amounts. This is the standard document required when a customer
+  intends to reclaim VAT.
+- :guilabel:`Simplified Tax Invoices (B2C)`: A :guilabel:`Simplified Tax Invoice` is primarily
+  used for business-to-consumer (B2C) transactions, where the customer is not expected to reclaim
+  VAT. It contains reduced customer information (customer :abbr:`TRN (Tax Registration Number)` is
+  not required), focusing instead on supplier details, VAT charged, and the total amount payable.
+
+.. important::
+   A :guilabel:`Simplified Tax Invoice` is still a legally valid tax invoice under VAT law.
