@@ -15,8 +15,16 @@ control point or a quality check.
 Connection
 ==========
 
+<<<<<<< a57bf26a7f9eede6fe08fe636af79250a466e8d7
 IoT systems support printers connected through USB, network connection, or Bluetooth.
 `Supported printers <https://www.odoo.com/page/iot-hardware>`_ are detected automatically, and
+||||||| 7f06849e938fce60597093dc6fba52f145b4b27b
+IoT systems support printers connected through USB, network connection, or Bluetooth.
+`Supported printers <https://www.odoo.com/page/iot-hardware>`__ are detected automatically, and
+=======
+IoT systems support printers connected through USB or network connection.
+`Supported printers <https://www.odoo.com/page/iot-hardware>`__ are detected automatically, and
+>>>>>>> 1da9b0b7a9ad8d8976aa6ba8d927eca72526bfbc
 appear in the :guilabel:`Devices` list of the IoT app.
 
 .. image:: printer/printer-detected.png
