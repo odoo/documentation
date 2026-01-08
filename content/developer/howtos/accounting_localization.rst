@@ -218,13 +218,13 @@ So, once you have properly configured taxes, you just need to add the :file:`dat
 ... followed by the declaration of its lines, as `account.report.line` records.
 
 .. example::
-  `addons/l10n_au/data/account_tax_report_data.xml <{GITHUB_PATH}/addons/l10n_au/data/account_tax_report_data.xml>`_
+  `addons/l10n_at/data/account_tax_report_data.xml <{GITHUB_PATH}/addons/l10n_at/data/account_tax_report_data.xml>`_
 
-  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_au/data/account_tax_report_data.xml
+  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_at/data/account_tax_report_data.xml
     :condition: odoo_dir_in_path
     :language: xml
     :start-at: tax_report
-    :end-before: account_tax_report_gstrpt_g3
+    :end-before: tax_report_line_l10n_at_tva_line_3_zm_igl3
 
 
 
