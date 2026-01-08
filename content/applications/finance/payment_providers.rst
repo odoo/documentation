@@ -29,10 +29,9 @@ Online payments
    payment_providers/bank_payments
    payment_providers/inperson_payments
 
-Odoo embeds several **payment providers** that allow your customers to pay online, on their
-*customer portals*, or on your *eCommerce website*. They can pay sales orders, invoices, or
-subscriptions with recurring payments using their favorite payment methods, such as
-**credit cards**.
+Odoo embeds several **payment providers** that enable customers to pay online through *customer
+portals*, or *eCommerce websites*. Customers pay for sales orders, invoices, or subscriptions with
+recurring payments using their favorite payment methods, such as **credit cards**.
 
 Each payment provider is linked to a list of supported :ref:`payment methods
 <payment_providers/payment_methods>` that can be (de)activated based on your needs.
@@ -185,8 +184,7 @@ Online payment providers
 .. [*] Refer to the :doc:`Xendit documentation <payment_providers/xendit>` for more information.
 
 .. note::
-   - Each provider has its own specific configuration flow, depending on which feature is
-     available.
+   - Each provider has its own specific configuration flow, depending on which feature is available.
    - Some of these online payment providers can also be added as :doc:`bank accounts
      <../finance/accounting/bank>`, but this is **not** the same process as adding them as payment
      providers. Payment providers allow customers to pay online, and bank accounts are added and
@@ -240,10 +238,10 @@ proceed as follows:
    - The fields available in the :guilabel:`Credentials` tab depend on the payment provider. Refer
      to the :ref:`related documentation <payment_providers/supported_providers>` for more
      information.
-   - Once you have enabled the payment provider, it is automatically published on your website.
-     If you wish to unpublish it, click the :guilabel:`Published` button. Customers cannot make
-     payments through an unpublished provider, but they can still manage
-     :dfn:`(delete and assign to a subscription)` their existing tokens linked to such a provider.
+   - Once you have enabled the payment provider, it is automatically published on your website. If
+     you wish to unpublish it, click the :guilabel:`Published` button. Customers cannot make
+     payments through an unpublished provider, but they can still manage :dfn:`(delete and assign to
+     a subscription)` their existing tokens linked to such a provider.
 
 .. _payment_providers/test-mode:
 
@@ -275,8 +273,8 @@ click :guilabel:`Enable Payment Methods`, then click the toggle button of the re
 
 .. tip::
    - To view the complete list of supported payment methods, go to :menuselection:`Accounting -->
-     Configuration --> Payment Methods`, :menuselection:`Website --> Configuration -->
-     Payment Methods`, or :menuselection:`Sales --> Configuration --> Payment Methods`.
+     Configuration --> Payment Methods`, :menuselection:`Website --> Configuration --> Payment
+     Methods`, or :menuselection:`Sales --> Configuration --> Payment Methods`.
    - Payment methods are displayed on the ecommerce website based on their sequence order. To
      reorder them, drag and drop the payment methods into the desired order in the
      :guilabel:`Payment Methods` list.
@@ -312,8 +310,8 @@ To further configure payment methods, follow these steps:
    - Each payment method is preconfigured in a way that aligns with the payment providers'
      behavior and their integration with Odoo. Any change to this configuration may result in errors
      and should be tested on a duplicate or test database first.
-   - Modifications to the payment method's configuration only work to the extent of the method's
-     and provider's capabilities. For example, adding :ref:`countries
+   - Modifications to the payment method's configuration only work to the extent of the method's and
+     provider's capabilities. For example, adding :ref:`countries
      <payment_providers/currencies_countries>` for a payment method only supported in one country or
      enabling :ref:`tokenization <payment_providers/tokenization>` for a method linked to a provider
      that does not support it will not produce the intended results.
@@ -338,13 +336,13 @@ particularly useful for the eCommerce conversion rate and subscriptions that use
 
 .. admonition:: PCI DSS and Attestation of Compliance
 
-   Odoo is not `PCI <https://www.pcisecuritystandards.org>`_ DSS-certified because it does not
-   store cardholder data or process payments. Instead, it outsources tokenization and payment to
+   Odoo is not `PCI <https://www.pcisecuritystandards.org>`_ DSS-certified because it does not store
+   cardholder data or process payments. Instead, it outsources tokenization and payment to
    :ref:`external payment providers <payment_providers/online_providers>`, which means that as an
-   Odoo customer, you only need to complete the minimal Self-Assessment Questionnaire (SAQ) with
-   the provider to obtain the Attestation of Compliance (AoC) and achieve PCI compliance. Odoo
-   should not be mentioned as a payment processor or a third-party service provider in the
-   :abbr:`SAQ (Self-Assessment Questionnaire)`.
+   Odoo customer, you only need to complete the minimal Self-Assessment Questionnaire (SAQ) with the
+   provider to obtain the Attestation of Compliance (AoC) and achieve PCI compliance. Odoo should
+   not be mentioned as a payment processor or a third-party service provider in the :abbr:`SAQ
+   (Self-Assessment Questionnaire)`.
 
 .. _payment_providers/manual_capture:
 
@@ -422,17 +420,31 @@ enable :guilabel:`Allow Express Checkout`.
 Availability
 ============
 
-You can adapt the payment provider's availability by specifying the :guilabel:`Maximum amount`
-allowed and modifying the :guilabel:`Currencies` and :guilabel:`Countries` in the
-:guilabel:`Configuration` tab.
+You can adapt the payment provider's availability by specifying the **Minimum** and
+:guilabel:`Maximum amounts` allowed, modifying the :guilabel:`Currencies` and :guilabel:`Countries`,
+and specifying :guilabel:`Pricelists` in the :guilabel:`Configuration` tab.
 
 .. tip::
    To display an availability report for payment providers and payment methods, and to help diagnose
    potential availability issues on the payment form, enable the :ref:`developer-mode`, then click
-   the :icon:`fa-bug` (:guilabel:`bug`) icon next to the :guilabel:`Choose a payment method`
-   heading on the payment form. The report includes a list of enabled payment providers and payment
-   methods, reasons for any payment providers or methods not being available, if applicable, and a
-   list of supported providers for each payment method.
+   the :icon:`fa-bug` (:guilabel:`bug`) icon next to the :guilabel:`Choose a payment method` heading
+   on the payment form. The report includes a list of enabled payment providers and payment methods,
+   reasons for any payment providers or methods not being available, if applicable, and a list of
+   supported providers for each payment method.
+
+.. _payment_providers/maximum_amount:
+
+Minimum and maximum amount
+--------------------------
+
+Set the :guilabel:`Minimum Amount` and :guilabel:`Maximum Amount` that can be paid with the selected
+provider. Leave the fields to `0.00` to make the payment provider available regardless of the
+payment amount.
+
+.. important::
+   This feature is not intended to work on pages that allow the customer to update the payment
+   amount, e.g., the **Donation** snippet and the **Checkout** page when paid :doc:`shipping methods
+   <../websites/ecommerce/shipping>` are enabled.
 
 .. _payment_providers/currencies_countries:
 
@@ -446,7 +458,6 @@ there might be errors, updates, and unknowns in the lists of available currencie
 adding or removing a payment provider's supported currencies or countries is possible.
 
 .. note::
-
    - :ref:`Payment methods <payment_providers/payment_methods>` also have their own list of
      available currencies and countries that serves as another filter during payment operations.
    - If the list of supported currencies or countries is empty, it means the list is too long to be
@@ -454,18 +465,11 @@ adding or removing a payment provider's supported currencies or countries is pos
      remains available, even though it is possible the payment will be refused at a later stage
      should the country or currency not be supported.
 
-.. _payment_providers/maximum_amount:
+Pricelists
+----------
 
-Maximum amount
---------------
-
-You can restrict the :guilabel:`Maximum Amount` that can be paid with the selected provider. Leave
-the field to `0.00` to make the payment provider available regardless of the payment amount.
-
-.. important::
-   This feature is not intended to work on pages that allow the customer to update the payment
-   amount, e.g., the **Donation** snippet and the **Checkout** page when paid :doc:`shipping methods
-   <../websites/ecommerce/shipping>` are enabled.
+Select specifc :guilabel:`Pricelists` that can apply to the payment provider. Leaving the field
+blank makes all pricelists available to the provider.
 
 .. _payment_providers/journal:
 
@@ -498,7 +502,7 @@ By default, the :guilabel:`Bank Account` defined for the :ref:`payment journal
 <accounting/journals/outstanding-accounts>` for each payment provider to separate the provider's
 payments from other payments.
 
-.. image:: payment_providers/bank_journal.png
+.. image:: payment_providers/bank-journal.png
    :alt: Define an outstanding account for a payment provider.
 
 .. seealso::
