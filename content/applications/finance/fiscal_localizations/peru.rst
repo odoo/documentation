@@ -68,8 +68,8 @@ Peruvian localization.
        electronic invoices.
    * - :guilabel:`Peruvian - Point of Sale with PE Doc`
      - `l10n_pe_pos`
-     - Enables contact fiscal information to be editable from a PoS Session to generate electronic
-       invoices and refunds.
+     - Enables contact fiscal information to be editable from the POS register to generate
+       electronic invoices and refunds.
 
 .. note::
    - Odoo automatically installs the appropriate package for the company according to the country

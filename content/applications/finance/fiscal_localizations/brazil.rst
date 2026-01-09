@@ -728,7 +728,7 @@ To generate an NFC-e, follow these steps:
    side of the screen.
 
 .. image:: brazil/l10n-br-nfce-succesfully-issued.png
-   :alt: NFC-e Success in a POS session.
+   :alt: NFC-e Success in the POS register.
 
 .. note::
    It is also possible to issue an NFC-e that identifies the customer by their CPF/CNPJ. To do
@@ -770,7 +770,7 @@ If the NFC-e returns an error, follow these steps:
 #. Click :guilabel:`Send NFC-e`.
 
 .. note::
-   If the error has been corrected and the PoS session is closed, Odoo logs the tax adjustment in
+   If the error has been corrected and the POS register is closed, Odoo logs the tax adjustment in
    the chatter of the related journal entry. The journal entry for the order indicates that the
    taxes were incorrectly calculated. In this case, reprocessing the NFC-e is required.
 

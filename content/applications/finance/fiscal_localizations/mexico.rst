@@ -1349,7 +1349,7 @@ Point of sale
 =============
 
 The :doc:`Point of sale <../../sales/point_of_sale>` adaptation of the Mexican Localization enables
-the creation of invoices that comply with the |SAT| requirements directly in the **POS session**,
+the creation of invoices that comply with the |SAT| requirements directly on the **POS register**,
 with the added benefit of creating receipt tickets that allow *self-invoicing* in a special portal
 and creating global invoices.
 
@@ -1430,7 +1430,7 @@ account for the new invoices.
 Global invoice
 --------------
 
-As with regular sales orders, global invoices can also be created from a POS session.
+As with regular sales orders, global invoices can also be created from the POS register.
 
 For this, make sure not to select a customer or the invoice option in the payment menu and go to
 :menuselection:`Point of Sale --> Orders --> Orders`. There, select all the orders to invoice, click
@@ -1442,7 +1442,7 @@ This attaches an XML file to each of the selected orders. The XML files can be d
 to the :guilabel:`CFDI` tab. If needed, it is possible to cancel the invoice from the same tab.
 
 If eventually any of the orders that are part of the global invoice need to be addressed to a
-customer, it is still possible to send an invoice by entering a new POS session, clicking the
+customer, it is still possible to send an invoice by opening the POS register, clicking the
 :icon:`fa-bars` :guilabel:`(drop-down menu)`, then click :guilabel:`Orders`. Change the
 :guilabel:`All active orders` filter to :guilabel:`Paid`, select the order, and click the
 :icon:`fa-file-text-o` :guilabel:`Invoice` button.

@@ -697,8 +697,8 @@ To access closings, either go to :menuselection:`Point of Sales --> Reporting --
 .. note::
    - Closings compute the totals for journal entries of sales journals (Journal Type = Sales).
    - For multi-companies environments, such closings are performed by company.
-   - POS orders are posted as journal entries at the closing of the POS session. Closing a POS
-     session can be done anytime. To prompt users to do it daily, the module prevents them from
+   - POS orders are posted as journal entries at the closing of the POS register. Closing the POS
+     register can be done anytime. To prompt users to do it daily, the module prevents them from
      resuming a session that was opened more than 24 hours ago. Such a session must be closed before
      selling again.
    - A period’s total is computed from all the journal entries posted after the previous closing of
