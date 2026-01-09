@@ -75,7 +75,7 @@ Revenues
  - :guilabel:`Down payments`: a total of
    :doc:`down payments </applications/sales/sales/invoicing/down_payment>` linked to the project.
  - :guilabel:`Expenses`: any :doc:`expenses </applications/finance/expenses>` that have been
-   :doc:`reinvoiced to the customer </applications/sales/sales/invoicing/expense>`.
+   reinvoiced to the customer.
 
 .. _project/project-profitability/costs:
 
