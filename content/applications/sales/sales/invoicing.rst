@@ -12,4 +12,3 @@ Invoicing Method
    invoicing/proforma
    invoicing/time_materials
    invoicing/milestone
-   invoicing/expense
