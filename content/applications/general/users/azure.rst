@@ -29,7 +29,7 @@ Odoo System Parameter
 First activate the :ref:`developer mode <developer-mode>`, and then go to :menuselection:`Settings
 --> Technical --> System Parameters`.
 
-Click :guilabel:`Create` and on the new/blank form that appears, add the following system parameter
+Click :guilabel:`New` and in the blank row that appears, add the following system parameter
 `auth_oauth.authorization_header` to the :guilabel:`Key` field, and set the :guilabel:`Value` to
 `1`. Then click :guilabel:`Save` to finish.
 
@@ -89,7 +89,6 @@ issued by the authorization endpoint by scrolling down the screen and check the 
 hybrid flows)`.
 
 .. image:: azure/authentication-tokens.png
-   :align: center
    :alt: Authentication settings and endpoint tokens.
 
 Click :guilabel:`Save` to ensure these settings are saved.
@@ -107,24 +106,41 @@ next to :guilabel:`OAuth 2.0 authorization endpoint (v2)` field. Paste this valu
 notepad.
 
 .. image:: azure/overview-azure-app.png
-   :align: center
    :alt: Application ID and OAuth 2.0 authorization endpoint (v2) credentials.
+
+API permissions
+~~~~~~~~~~~~~~~
+
+Odoo needs permission to read the signed-in user's profile information from Microsoft Graph during
+the OAuth flow. At minimum, ensure the delegated permission :guilabel:`User.Read` is granted on the
+Azure app registration. Otherwise, the login process may fail or be unable to correctly link the
+Microsoft account to the Odoo user.
+
+.. note::
+   :guilabel:`User.Read` is often added by default for new app registrations, but it should be
+   explicitly verified here.
+
+To configure this, click on the :guilabel:`Manage` menu item in the left-hand column, then:
+
+#. Click :guilabel:`API permissions` in the left menu.
+#. Click :guilabel:`(+) Add a Permission`.
+#. Select :guilabel:`Microsoft Graph` under :guilabel:`Commonly Used Microsoft APIs`.
+#. Choose :guilabel:`Delegated Permissions`.
+#. Search for :guilabel:`User.Read`, select it, and click :guilabel:`Add permissions`.
 
 Odoo setup
 ----------
 
-Finally, the last step in the Microsoft Azure OAuth configuration is to configure some settings in
-Odoo. Navigate to :menuselection:`Settings --> Integrations --> OAuth Authentication` and check the
-box to activate the OAuth login feature. Click :guilabel:`Save` to ensure the progress is saved.
-Then, sign in to the database once the login screen loads.
+Finally, the last step in the Microsoft Azure OAuth configuration is to complete the setup in Odoo.
+Navigate to :menuselection:`Settings --> Integrations` and enable the checkbox for :guilabel:`OAuth
+Authentication`. Click :guilabel:`Save` to save the changes and refresh the page. Scroll down to the
+:menuselection:`Integrations` section, and click on :guilabel:`OAuth Providers`. Then click
+:guilabel:`New`.
 
-Once again, navigate to :menuselection:`Settings --> Integrations --> OAuth Authentication` and
-click on :guilabel:`OAuth Providers`. Now, select :guilabel:`New` in the upper-left corner and name
-the provider `Azure`.
-
-Paste the :guilabel:`Application (client) ID` from the previous section into the :guilabel:`Client
-ID` field. After completing this, paste the new :guilabel:`OAuth 2.0 authorization endpoint (v2)`
-value into the :guilabel:`Authorization URL` field.
+Enter the :guilabel:`Provider name` as `Azure`. Paste the :guilabel:`Application (client) ID` from
+the previous section into the :guilabel:`Client ID` field. After completing this, paste the new
+:guilabel:`OAuth 2.0 authorization endpoint (v2)` value into the :guilabel:`Authorization URL`
+field.
 
 For the :guilabel:`UserInfo URL` field, paste the following :abbr:`URL (Uniform Resource Locator)`:
 `https://graph.microsoft.com/oidc/userinfo`
@@ -138,7 +154,6 @@ Check the box next to the :guilabel:`Allowed` field to enable the OAuth provider
 Windows logo on the login page.
 
 .. image:: azure/odoo-provider-settings.png
-   :align: center
    :alt: Odoo provider setup in the Settings application.
 
 :guilabel:`Save` the changes to complete the OAuth authentication setup in Odoo.
@@ -161,22 +176,10 @@ To sign in to Odoo for the first time using the Microsoft Azure OAuth provider, 
 page should appear. Then, click on the option labeled :guilabel:`Microsoft Azure`. The page will
 redirect to the Microsoft login page.
 
-.. image:: azure/odoo-login.png
-   :align: center
-   :alt: Microsoft Outlook login page.
-
 Enter the :guilabel:`Microsoft Email Address` and click :guilabel:`Next`. Follow the process to sign
 in to the account. Should :abbr:`2FA (Two Factor Authentication)` be turned on, then an extra step
 may be required.
 
-.. image:: azure/login-next.png
-   :align: center
-   :alt: Enter Microsoft login credentials.
-
 Finally, after logging in to the account, the page will redirect to a permissions page where the
 user will be prompted to :guilabel:`Accept` the conditions that the Odoo application will access
 their Microsoft information.
-
-.. image:: azure/accept-access.png
-   :align: center
-   :alt: Accept Microsoft conditions for permission access to your account information.
