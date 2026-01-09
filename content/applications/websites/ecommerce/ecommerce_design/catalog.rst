@@ -117,7 +117,7 @@ number of attribute sections:
 
 .. seealso::
    - :doc:`../../../sales/sales/products_prices/products/variants`
-   - :doc:`categories_variants`
+   - :doc:`../../ecommerce/products/categories_variants`
 
 .. _ecommerce/catalog/product-listing:
 
@@ -168,7 +168,7 @@ To customize the product cards' design, choose a :guilabel:`Products Design`, cl
 
 .. tip::
    You can also add a :ref:`variant picture <ecommerce/categories_variants/attributes>` on the
-   product card and product page.
+   product card.
 
 .. _ecommerce/catalog/customize-layout:
 
@@ -200,8 +200,7 @@ The design of the shop and individual category pages can be customized as follow
        own specific URL that can be pointed to and is indexed by search engines.
      - E-commerce categories can also be added as :ref:`mega menu items
        <website/header_footer/mega-menus>` for quick access.
-     - It is also possible to customize individual :ref:`product pages
-       <ecommerce/products/product-form>`.
+     - It is also possible to customize individual :doc:`product pages <product_page>`.
 
 .. _ecommerce/catalog/catalog-blocks:
 
