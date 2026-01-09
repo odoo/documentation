@@ -65,8 +65,8 @@ To customize the variables used by predictive lead scoring, go to :menuselection
 Configuration --> Settings`. Under :guilabel:`Predictive Lead Scoring`, click on the
 :guilabel:`Update Probabilities` button.
 
-Then, click on the drop-down menu to choose which variables the predictive lead scoring feature
-takes into account.
+Then, click on the drop-down menu and the :icon:`oi-close` :guilabel:`(Delete)` icon to choose which
+variables the predictive lead scoring feature takes into account.
 
 .. image:: lead_scoring/update-probabilities.png
    :alt: The Update Probabilities window in the Predictive Lead Scoring settings.
@@ -90,23 +90,28 @@ Any number of the following variables can be activated:
 Next, click on the date field next to the option :guilabel:`Consider leads created as of the:` to
 select the date from which predictive lead scoring begins its calculations.
 
-Lastly, click :guilabel:`Confirm` to save changes.
+Lastly, click :guilabel:`Update` to save changes.
 
 Change the probability manually
 -------------------------------
 
 An opportunity's probability of success can be changed manually on the opportunity form. Click on
-the probability number to edit it.
+the probability number to edit it. The probability for a lead **cannot** be manually set to 100%.
+Attemping to convert a lead with a 100% probability into an opportunity will result in an error
+message:
 
-.. important::
-   Manually changing the probability removes the automatic probability updates for that opportunity.
-   The probability no longer automatically updates as the opportunity moves through each stage of
-   the pipeline.
+.. image:: lead_scoring/100-percent-lead-error.png
+   :alt: The error message that appears when attempting to convert a 100% probability lead into an
+         opportunity.
 
-To reactivate automatic probability, click on the gear icon next to the probability percentage.
+Manually changing the probability overwrites the automatic probability updates for that
+lead/opportunity. The AI-computed probability remains visible and automatically updates as the
+opportunity moves through each stage of the pipeline or as more information is added to the lead
+form. To revert to the AI-computed probability, click on the AI icon next to the probability
+percentage.
 
-.. image:: lead_scoring/probability-gear-icon.png
-   :alt: The gear icon used to reactivate automatic probability on an opportunity form.
+.. image:: lead_scoring/probability-icon.png
+   :alt: The icon used to reactivate automatic probability on an opportunity form.
 
 Assign leads based on probability
 =================================
@@ -134,10 +139,10 @@ desired interval. Time periods range from :guilabel:`Minutes` to :guilabel:`Week
    :alt: The Rule-Based Assignment setting in CRM settings.
 
 If :guilabel:`rule-based assignment` is set to run :guilabel:`Repeatedly`, the assignment can still
-be triggered manually using the circular arrow icon in the :guilabel:`Rule-Based Assignment`
-settings, or using the :guilabel:`Assign Leads` button on the sales team configuration page. Once a
-lead has been assigned to a salesperson via this rule, the leads are automatically converted into an
-opportunity by the system.
+be triggered manually using the :icon:`fa-refresh` :guilabel:`(Update now)` icon in the
+:guilabel:`Rule-Based Assignment` settings, or using the :guilabel:`Assign Leads` button on the
+sales team configuration page. Once a lead has been assigned to a salesperson via this rule, the
+leads are automatically converted into an opportunity by the system.
 
 Configure assignment rules
 --------------------------
