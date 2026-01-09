@@ -99,7 +99,7 @@ on fix price, they use a regular sales order.
 
 .. seealso::
    - :doc:`/applications/sales/sales/invoicing/time_materials`
-   - :doc:`/applications/sales/sales/invoicing/expense`
+   - :doc:`/applications/finance/accounting/customer_invoices/overview`
    - :doc:`/applications/sales/sales/invoicing/milestone`
 
 Recurring Contracts ‣ Invoices
