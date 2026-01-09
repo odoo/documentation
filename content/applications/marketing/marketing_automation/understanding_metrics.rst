@@ -6,176 +6,157 @@ Campaign metrics
 success and effectiveness. Triggered marketing activities populate relevant activity blocks with
 real-time metrics, in the campaign detail form.
 
+.. note::
+   It is **not** possible to track email campaigns with 100% accuracy as some email service
+   providers have security restrictions that do not allow senders to know when recipients have
+   received, opened, or answered an email. This is something that cannot be controlled by Odoo, and
+   is expected for any email marketing tool.
+
 Activity analytics
 ==================
 
-In the :guilabel:`Workflow` section of a campaign detail form in the *Marketing Automation* app,
-where the various campaign activities are located, a collection of useful data can be found on every
-individual activity block, like number of communications :guilabel:`Sent`, percentage of messages
-that have been :guilabel:`Clicked`, and more.
+To view the various metrics for a campaign, open the **Marketing Automation** app and click on the
+desired campaign Kanban card.
 
-.. image:: understanding_metrics/activity-analytics-block-sample.png
-   :align: center
-   :alt: An activity block in the workflow section with useful analytical data in Odoo.
+The default stages are :guilabel:`New`, :guilabel:`Running`, and :guilabel:`Stopped`.
 
-To the left of the activity block, the configured :doc:`trigger time <workflow_activities>` is
-displayed as a duration (either :guilabel:`Hours`, :guilabel:`Days`, :guilabel:`Weeks`, or
-:guilabel:`Months`) if it corresponds to period after the workflow begins.
+A campaign in the :guilabel:`New` stage will not have any metrics to display, whereas a campaign in
+the :guilabel:`Running` stage displays the currently available data. Campaigns in the
+:guilabel:`Stopped` stage display all metrics.
 
-.. note::
-   If the trigger time is dependent on another activity or triggering action (e.g. :guilabel:`Mail:
-   Replied`, etc.) the time is displayed, along with the necessary action for that activity to be
-   activated (e.g. `Replied after 2 Hours`).
+The :guilabel:`Workflow` section of the selected campaign form displays all the various campaign
+activities, the duration of time before the activities is triggered, and the various metrics for the
+activity.
 
-   .. image:: understanding_metrics/replied-after-activity-time-trigger.png
-      :align: center
-      :alt: Time trigger display when dependent on another activity in Odoo Marketing Automation.
+Each activity displays the following information:
 
-In the activity block, an icon represents each activity type. An :guilabel:`✉️ (envelope)` icon
-means the activity is an email. Three tiny, interlocking :guilabel:`⚙️ (gear)` icons means the
-activity is an internal action. And, a small, basic :guilabel:`📱 (mobile)` icon means the activity
-is an SMS.
+- :icon:`fa-clock-o` :guilabel:`(Trigger Time)`: This indicates :doc:`when the activity starts
+  <workflow_activities>` after the workflow begins. This is displayed in :guilabel:`Hours`,
+  :guilabel:`Days`, :guilabel:`Weeks`, or :guilabel:`Months`. If the trigger time is dependent on
+  another activity or triggering action (e.g. :guilabel:`Mail: Replied`) the time is displayed along
+  with the necessary action for that activity to be triggered (e.g. `Replied after 2 Hours`).
+- :guilabel:`Activity Type Icon`: The type of activity being triggered is displayed in a purple
+  icon. The activity icons are:
 
-.. tip::
-   The activity type name is also displayed in smaller font below the activity title.
+  - :icon:`fa-envelope-o` :guilabel:`(Email)`: This action sends an email.
+  - :icon:`fa-mobile` :guilabel:`(SMS)` : This action sends an SMS message.
+  - :icon:`fa-whatsapp` :guilabel:`(WhatsApp Message)` : This action sends a WhatsApp message. This
+    option is only available if the **WhatsApp** app is installed.
+  - :icon:`fa-cogs`:guilabel:`(Server Action)`: This action creates a :ref:`server action
+    <marketing_automation/sa-activity-type>`.
 
-Beside the activity icon, at the top of the activity block, is the title of the activity. To the
-right of the activity title, there are :guilabel:`Edit` and :guilabel:`Delete` buttons.
+- :guilabel:`Activity Block`: Each activity displays a detailed :ref:`activity block,
+  <marketing_automation/activity_blocks>` with the :guilabel:`Activity Name` appearing at the top.
 
-Click :guilabel:`Edit` to open the :guilabel:`Open: Activities` pop-up form for that specific
-activity, in which that activity can be modified. Click the :guilabel:`Delete` button to completely
-delete that specific activity from the workflow.
+  .. important::
+     To delete an activity, click the :icon:`fa-trash` :guilabel:`(Delete)` icon to the right of the
+     :guilabel:`Activity Name`. There is **no confirmation** pop-up window asking if the user wants
+     to delete the activity. The activity is **immediately deleted**.
 
-.. seealso::
-   :doc:`workflow_activities`
+.. _marketing_automation/activity_blocks:
 
-Activity graph tab
-------------------
+Activity blocks
+===============
 
-In every activity block, the :guilabel:`Graph (pie chart icon)` tab is open by default, displaying
-related metrics as a simple line graph. The success metrics are represented in `green` and the
-rejected metrics are represented in `red`.
+In every activity block, the :icon:`fa-pie-chart` :guilabel:`(Graph)` tab is open by default,
+displaying related metrics in a line graph. The success metrics are represented in green and the
+rejected metrics are represented in red.
 
-Numerical representations of both :guilabel:`Success` and :guilabel:`Rejected` activities are shown
+Numerical representations of both :guilabel:`SUCCESS` and :guilabel:`REJECTED` activities are shown
 to the right of the line graph.
 
 .. tip::
    Hovering over any point in the line graph of the activity block reveals a notated breakdown of
    data for that specific date.
 
-   .. image:: understanding_metrics/graph-breakdown-data.png
-      :align: center
-      :alt: Hovering over any point in line graph reveals notated breakdown of data in Odoo.
+For email, SMS, or WhatsApp activity blocks, a :icon:`fa-pie-chart` :guilabel:`DETAILS` line
+appears beneath the graph, displaying the following metrics:
 
-Beneath the graph in the activity block, for *Email* or *SMS* activity types, a line of accessible
-data figures provide a bird's eye view of the campaign activity, including: :guilabel:`Sent`
-(numerical), :guilabel:`Clicked` (percentage), :guilabel:`Replied` (percentage), and
-:guilabel:`Bounced` (percentage).
-
-.. tip::
-   Clicking any of those stats on the :guilabel:`DETAILS` line, beneath the line graph, reveals a
-   separate page containing every specific record for that particular data point.
-
-Activity filter tab
--------------------
-
-Next to the :guilabel:`Graph` tab on the activity block, there's the option to open a
-:guilabel:`Filter` tab (represented by a :guilabel:`filter/funnel` icon).
-
-.. image:: understanding_metrics/activity-filter-tab.png
-   :align: center
-   :alt: What a campaign activity filter tab looks like in Odoo Marketing Automation.
-
-Clicking the :guilabel:`Filter` tab on an activity block, reveals what the specific filters are for
-that particular campaign activity, and how many records in the database match that specific
-criteria.
+- :guilabel:`Sent`: The number of messages or emails sent.
+- :guilabel:`Opened`: The percentage of recipients that opened the message or email.
+- :guilabel:`Clicked`: The percentage of recipients that clicked on a link inside the message or
+  email.
+- :guilabel:`Replied`: The percentage of recipients that replied to the message or email.
 
 .. tip::
-   Clicking the :guilabel:`records` link beneath the displayed filter reveals a separate pop-up
-   window containing a list of all the records that match that specific campaign activity rule(s).
+   Click any of the metrics on the :icon:`fa-pie-chart` :guilabel:`DETAILS` line, and a separate
+   page loads, containing the specific details for that particular data point.
 
-Link tracker
-============
+.. image:: understanding_metrics/activity-block-details.png
+   :alt: An activity block in the workflow section with useful analytical data in Odoo.
 
-Odoo tracks all URLs used in marketing campaigns. To access and analyze those URLs, navigate to
-:menuselection:`Marketing Automation app --> Reporting --> Link Tracker`. Doing so reveals a
-:guilabel:`Link Statistics` page, wherein all campaign-related URLs can be analyzed.
+Filter tab
+----------
 
-.. image:: understanding_metrics/campaign-link-tracker.png
-   :align: center
+Click the :icon:`fa-filter` :guilabel:`(Filter)` tab, located next to the :icon:`fa-pie-chart`
+:guilabel:`(Graph)` tab, to reveal the specific filters set for campaign activity. This tab displays
+how many records in the database that match the specific criteria.
+
+.. image:: understanding_metrics/filter-tab.png
    :alt: What a campaign activity filter tab looks like in Odoo Marketing Automation.
 
-The default view on the :guilabel:`Link Statistics` page is the :guilabel:`Bar Chart` view, but
-there are different view options available in the upper-left corner. There is the option to view the
-statistics as a :guilabel:`Line Chart` or :guilabel:`Pie Chart`.
+.. tip::
+   Click the :guilabel:`# record(s)` link next to the filter, and a :guilabel:`Selected records`
+   pop-up window loads, containing a list of all the records that match that specific campaign
+   activity rules.
 
-Beside that, there is also the option to view the statistics as :guilabel:`Stacked`, and the data
-can be put into :guilabel:`Descending` or :guilabel:`Ascending` order.
+   .. image:: understanding_metrics/filter-contacts.png
+      :alt: A list of contacts that result form the active filter.
 
-To the far-left of the view options, there is the :guilabel:`Measures` drop-down menu. When clicked,
-the options to view the :guilabel:`Number of Clicks` or total :guilabel:`Count` are available. And,
-to the right of the :guilabel:`Measures` drop-down menu, there's the ability to add any data to a
-spreadsheet by clicking the :guilabel:`Insert in Spreadsheet` button.
+Link statistics
+===============
 
-Also, in the upper-right corner of the :guilabel:`Link Statistics` page, to the far-right of the
-search bar, there are additional view options to choose from: the default :guilabel:`Graph` view,
-the :guilabel:`Pivot` table view, and the :guilabel:`List` view.
+Odoo tracks all URLs used in marketing campaigns. These URLs are accessed by navigating to
+:menuselection:`Marketing Automation app --> Reporting --> Link Tracker`. This reveals a
+:guilabel:`Link Statistics` report, where all campaign-related URLs are displayed, by campaign.
+
+The default view for the :guilabel:`Link Statistics` report is a :icon:`fa-database`
+:guilabel:`(Stacked)` :icon:`fa-bar-chart` :guilabel:`(Bar Chart)`. The X-axis represents all the
+individual URLs being tracked, and the Y-axis represents the total :guilabel:`Number of Clicks`.
+
+.. example::
+   In this example, the Facebook link had the most clicks, while the LinkedIn link had the fewest
+   clicks. This indicates the Facebook link was the most successful in terms of clicks.
+
+  .. image:: understanding_metrics/campaign-stats.png
+     :alt: What a campaign activity filter tab looks like in Odoo Marketing Automation.
 
 Traces
 ======
 
-Odoo tracks all activities used in every marketing campaign. The data related to these activities
-can be accessed and analyzed in the :guilabel:`Traces` page, which can be found by navigating to
-:menuselection:`Marketing Automation app --> Reporting --> Traces`.
+All automated marketing activities, such as emails, text messages, or server actions, are tracked by
+Odoo, and are visible on the :guilabel:`Traces` report. These are accessed by navigating to
+:menuselection:`Marketing Automation app --> Reporting --> Tracers`. This reveals a
+:guilabel:`Tracers` report, where all actions are displayed in their own column.
+
+The default view for the :guilabel:`Tracers` report is a :icon:`fa-database` :guilabel:`(Stacked)`
+:icon:`fa-bar-chart` :guilabel:`(Bar Chart)`. The X-axis represents all the individual scheduled
+actions, and the Y-axis represents the total :guilabel:`Count` for each action.
+
+The actions are color-coded as follows:
+
+- :guilabel:`Red`: Scheduled
+- :guilabel:`Orange`: Processed
+- :guilabel:`Blue`: Error
+- :guilabel:`Green`: Cancelled
+- :guilabel:`Yellow`: Rejected
 
 .. image:: understanding_metrics/traces-page-marketing-automation.png
-   :align: center
    :alt: The Traces page in the Odoo Marketing Automation application.
-
-The default view on the :guilabel:`Traces` page is the :guilabel:`Bar Chart` view, but there are
-different view options available in the upper-left corner. There is the option to view the
-statistics as a :guilabel:`Line Chart` or :guilabel:`Pie Chart`.
-
-At the top of the graph, there's a color key, informing the user which activities have been
-:guilabel:`Processed`, :guilabel:`Scheduled`, and :guilabel:`Rejected`. There's also an outline
-indicator to inform users of the :guilabel:`Sum` of certain activities, as well.
-
-Beside the various view option in the upper-left corner of the :guilabel:`Traces` page, there is
-also the option to view the statistics as :guilabel:`Stacked`, and the data can be put into
-:guilabel:`Descending` or :guilabel:`Ascending` order.
-
-To the far-left of the view options, there is the :guilabel:`Measures` drop-down menu. When clicked,
-the options to view the :guilabel:`Document ID` or total :guilabel:`Count` are available. And, to
-the right of the :guilabel:`Measures` drop-down menu, there's the ability to add any data to a
-spreadsheet by clicking the :guilabel:`Insert in Spreadsheet` button.
-
-Also, in the upper-right corner of the :guilabel:`Link Statistics` page, to the far-right of the
-search bar, there are additional view options to choose from: the default :guilabel:`Graph` view,
-the :guilabel:`Pivot` table view, and the :guilabel:`List` view.
 
 Participants
 ============
 
-Odoo tracks all participants related to every marketing campaign. The data related to these
-participants can be accessed and analyzed in the :guilabel:`Participants` page, which can be found
-by navigating to :menuselection:`Marketing Automation app --> Reporting --> Participants`.
+Odoo tracks all participants related to every marketing campaign, which can be viewed in the
+:guilabel:`Participants` report. To view the :guilabel:`Participants` report, navigate to
+:menuselection:`Marketing Automation app --> Reporting --> Participants`.
+
+The :guilabel:`Participants` report appears in a :icon:`fa-pie-chart` :guilabel:`(Pie Chart)` view,
+by default.
+
+A color key defines the types of participants in the graph. To hide any type of participant, click
+on the name of the group, and the information is hidden on the pie chart, and the name of the group
+is striked-out. Click on the name again to reveal the data.
 
 .. image:: understanding_metrics/participants-page-marketing-automation.png
-   :align: center
    :alt: The Participants page in the Odoo Marketing Automation application.
-
-The default view on the :guilabel:`Participants` page is the :guilabel:`Pie Chart` view, but there
-are different view options available in the upper-left corner. There is the option to view the
-statistics as a :guilabel:`Line Chart` or :guilabel:`Bar Chart`.
-
-At the top of the graph, there's a color key that describes the type of participants found in the
-graph.
-
-To the far-left of the view options, there is the :guilabel:`Measures` drop-down menu. When clicked,
-the options to view the :guilabel:`Record ID` or total :guilabel:`Count` are available. And, to the
-right of the :guilabel:`Measures` drop-down menu, there's the ability to add any data to a
-spreadsheet by clicking the :guilabel:`Insert in Spreadsheet` button.
-
-Also, in the upper-right corner of the :guilabel:`Link Statistics` page, to the far-right of the
-search bar, there are additional view options to choose from: the default :guilabel:`Graph` view,
-the :guilabel:`Pivot` table view, and the :guilabel:`List` view.
