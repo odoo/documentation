@@ -66,14 +66,14 @@ Request
 The request object is automatically set on :data:`odoo.http.request` at
 the start of the request.
 
-.. autoclass:: odoo.http.Request
+.. autoclass:: odoo.http.requestlib.Request
     :members:
     :member-order: bysource
 
-.. autoclass:: odoo.http.JsonRPCDispatcher
+.. autoclass:: odoo.http.dispatcher.JsonRPCDispatcher
     :members:
     :member-order: bysource
-.. autoclass:: odoo.http.HttpDispatcher
+.. autoclass:: odoo.http.dispatcher.HttpDispatcher
     :members:
     :member-order: bysource
 
