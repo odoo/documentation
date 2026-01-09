@@ -12,14 +12,12 @@ To activate the *Leads* setting, navigate to :menuselection:`CRM app --> Configu
 and check the box labeled, :guilabel:`Leads`. Then, click :guilabel:`Save`.
 
 .. image:: convert/convert-leads-leads-setting.png
-   :align: center
    :alt: Leads setting on CRM configuration page.
 
 Activating this feature adds a new menu option, :guilabel:`Leads`, to the header bar, located along
 the top of the screen.
 
 .. image:: convert/convert-leads-leads-menu.png
-   :align: center
    :alt: Leads menu on CRM application.
 
 Once the *Leads* setting has been activated, it applies to all sales teams by default. To turn off
@@ -29,7 +27,6 @@ Then, select a team from the list to open that team's configuration page. Clear 
 :guilabel:`Save`.
 
 .. image:: convert/convert-leads-leads-button.png
-   :align: center
    :alt: Leads menu on CRM application.
 
 Convert a lead into an opportunity
@@ -39,18 +36,23 @@ To convert a lead into an *opportunity*, navigate to :menuselection:`CRM app -->
 on a lead from the list to open it.
 
 .. warning::
+   Attempting to convert a lead with a 100% probability into an opportunity will result in an error
+   message.
+
+   .. image:: convert/100-percent-lead-error.png
+      :alt: The error message that appears when attempting to convert a 100% probability lead into
+            an opportunity.
+
    If a :guilabel:`Similar Leads` smart button appears at the top of the page for the lead, it
    indicates a similar lead or opportunity already exists in the database. Before converting this
    lead, click the smart button to confirm if the lead should be merged.
 
    .. image:: convert/similar-leads-smart-button.png
-      :align: center
       :alt: Close up of a lead with emphasis on the Similar Leads smart button.
 
 Click the :guilabel:`Convert to Opportunity` button, located at the top-left of the page.
 
 .. image:: convert/convert-leads-convert-opp-button.png
-   :align: center
    :alt: Create opportunity button on a lead record.
 
 This opens a :guilabel:`Convert to opportunity` pop-up modal. Here, in the :guilabel:`Conversion
@@ -75,7 +77,6 @@ If the lead has already been assigned to a salesperson or a team, these fields a
 populate with that information.
 
 .. image:: convert/convert-leads-conversion-action.png
-   :align: center
    :alt: Create opportunity pop-up.
 
 Under the :guilabel:`Customer` heading, choose from the following options:
@@ -94,4 +95,3 @@ To view the newly created opportunity, navigate to :menuselection:`CRM app --> M
 .. note::
    Some filters may need to be removed from the :guilabel:`Search...` bar on the top
    :guilabel:`Pipeline` page to view all opportunities.
-
