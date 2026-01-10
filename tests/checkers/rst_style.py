@@ -140,8 +140,8 @@ def check_early_line_breaks(file, lines, options=None):
         if lno + 1 < len(lines):
             next_line = lines[lno + 1]
             if (
-                is_valid_line(line, ('+', '|'))
-                and is_valid_line(next_line, ('+', '|', '- ', '* ', '#. '))
+                is_valid_line(line, ('+', '| '))
+                and is_valid_line(next_line, ('+', '| ', '- ', '* ', '#. '))
             ):
                 current_line_remaining_space = options.max_line_length - len(line.rstrip())
                 next_line_first_word = get_next_line_first_word(next_line).rstrip()
