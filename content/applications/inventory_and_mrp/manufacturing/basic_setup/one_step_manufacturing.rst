@@ -32,6 +32,8 @@ them to and from inventory is not tracked.
    to do so, see the documentation on how to :ref:`configure a product for manufacturing
    <manufacturing/management/configure-manufacturing-product>`.
 
+.. _manufacturing/one-step-manufacturing/create-mo:
+
 Create manufacturing order
 ==========================
 
