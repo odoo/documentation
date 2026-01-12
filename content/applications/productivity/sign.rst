@@ -39,7 +39,7 @@ With Sign, you can:
 - configure :ref:`auto-complete fields <sign/fields/auto-fill>` that populate with data from your
   database during signing
 - define :ref:`advanced configuration for signers <sign/prepare-document/signer-settings>` to
-  require authentication (via SMS, Aadhaar eSisgn, or itsme®), allow delegation, or, for templates,
+  require authentication (via SMS, Aadhaar eSign, or itsme®), allow delegation, or, for templates,
   assign a fixed signer
 
 .. seealso::
