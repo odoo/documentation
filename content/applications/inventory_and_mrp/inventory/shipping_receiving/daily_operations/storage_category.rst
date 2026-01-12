@@ -89,6 +89,8 @@ On a storage category form (:menuselection:`Inventory app --> Configuration --> 
 Categories`), set a maximum product weight in the :guilabel:`Max Weight` field. This limit applies
 to each location assigned this storage category.
 
+This value must be set to greater than `0` if a product weight is defined.
+
 Capacity by product
 -------------------
 
@@ -173,16 +175,18 @@ category:
 - :guilabel:`Closest Location`: The locations specified as part of the storage category are used. A
   storage category is mandatory in the :guilabel:`Having Category` field.
 
-If using multiple storage locations for a single storage category, create putaway rules for each
-location to ensure that if one storage location is in use, the secondary locations must be used.
-
 .. example::
    Continuing the example from above, the `High frequency pallets` storage category is assigned to
    the putaway rule directing pallets of lemonade to locations with the `High frequency pallets`
    storage category :ref:`assigned to them <inventory/routes/assign-location>`.
 
    .. image:: storage_category/smart-putaways.png
-      :alt: Storage Categories used in a variety of putaway rules.
+      :alt: Storage Categories used in putaway rules.
+
+.. note::
+   If products are not routing to secondary locations for a storage category and a product weight is
+   defined, verify that the storage category's :guilabel:`Max Weight` value is set to a number
+   greater than `0`.
 
 Use case: limit capacity by package
 ===================================
@@ -204,9 +208,10 @@ lemonade cans is received, the following scenarios happen:
 - If `PAL1` and `PAL2` are full, the pallet is redirected to `WH/Stock/Pallets`.
 - If `PAL1` is partially full (for example, with one pallet), Odoo treats more than one received
   pallet as a single pallet on the receipt. You must manually separate the two pallets into separate
-  storage locations. Click the :guilabel:`Open Move` icon to the right of the :guilabel:`Units`
-  field, and then in the :guilabel:`Open: Stock move` box, click :guilabel:`Add a line`. Finally,
-  split the receipt by quantity into separate locations, then click :guilabel:`Save`.
+  storage locations. Click the :icon:`fa-list` :guilabel:`Open Move` icon to the right of the
+  :guilabel:`Units` field, and then in the :guilabel:`Open: Stock move` box, click :guilabel:`Add a
+  line`. Finally, split the receipt by quantity into separate locations, then click
+  :guilabel:`Save`.
 
      .. image:: storage_category/package-stock-move.png
         :alt: Update the Stock move box to route pallets to the correct locations before validating.
