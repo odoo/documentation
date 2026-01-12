@@ -23,9 +23,9 @@ SEND API Settings`.
 Then, copy the :abbr:`SMTP (Simple Mail Transfer Protocol)` configuration settings onto a notepad.
 They can be found under the :guilabel:`Configuration (SMTP only)` section. The :abbr:`SMTP (Simple
 Mail Transfer Protocol)` configuration settings include the server address, the security option
-needed (Use :abbr:`SSL (Secure Sockets Layer)`/:abbr:`TLS (Transport Layer Security)`), and the
-port number. The settings are needed to configure Mailjet in Odoo, which is covered in the
-:ref:`last section <maintain/mailjet-api/odoo-setup>`.
+needed (Use :abbr:`SSL (Secure Sockets Layer)`/:abbr:`TLS (Transport Layer Security)`), and the port
+number. The settings are needed to configure Mailjet in Odoo, which is covered in the :ref:`last
+section <maintain/mailjet-api/odoo-setup>`.
 
 .. seealso::
    `Mailjet: How can I configure my SMTP parameters?
@@ -42,9 +42,9 @@ Next, click on the button labeled :guilabel:`Retrieve your API credentials` to r
 API credentials.
 
 Then, click on the eye icon to reveal the :guilabel:`API key`. Copy this key to a notepad, as this
-serves as the :guilabel:`Username` in the Odoo configuration. Next, click on the
-:guilabel:`Generate Secret Key` button to generate the :guilabel:`Secret Key`. Copy this key to a
-notepad, as this serves as the :guilabel:`Password` in the Odoo configuration.
+serves as the :guilabel:`Username` in the Odoo configuration. Next, click on the :guilabel:`Generate
+Secret Key` button to generate the :guilabel:`Secret Key`. Copy this key to a notepad, as this
+serves as the :guilabel:`Password` in the Odoo configuration.
 
 Add verified sender address(es)
 -------------------------------
@@ -66,9 +66,9 @@ steps on adding the domain.
    Either all email addresses of the Odoo database users who are sending emails using Mailjet's
    servers need to be configured or the domain(s) of the users' email addresses can be configured.
 
-By default, the email address originally set up in the Mailjet account is added as a trusted
-sender. To add another email address, click on the button labeled :guilabel:`Add a sender address`.
-Then, add the email address that is configured to send from the custom domain.
+By default, the email address originally set up in the Mailjet account is added as a trusted sender.
+To add another email address, click on the button labeled :guilabel:`Add a sender address`. Then,
+add the email address that is configured to send from the custom domain.
 
 At minimum the following email addresses should be set up in the provider and verified in Mailjet:
 
@@ -84,20 +84,20 @@ After that, fill out the :guilabel:`Email Information` form, making sure to sele
 email type: transactional email or mass emails. After completing the form, an activation email is
 sent to the email address and the trusted sender can be activated.
 
-It is recommended to set up the :abbr:`SPF (Sender Policy Framework)`/:abbr:`DKIM (DomainKeys
-Identified Mail)`/:abbr:`DMARC (Domain-based Message Authentication, Reporting, and
-Conformance)` settings on the domain of the sender.
+.. warning::
+   To prevent emails from being marked as spam, :ref:`set up a custom domain
+   <email-online-sh-domain>`. Using the Odoo-provided subdomain (*dbname.odoo.com*) with the Mailjet
+   server may lead to email deliverability issues, because the email authentication protocols
+   (:abbr:`SPF (Sender Policy Framework)`, :abbr:`DKIM (DomainKeys Identified Mail)`, and
+   :abbr:`DMARC (Domain-based Message Authentication, Reporting & Conformance)`) cannot be
+   configured on that subdomain.
+
 
 .. seealso::
    - `Mailjet's SPF/DKIM documentation
      <https://documentation.mailjet.com/hc/en-us/articles/360049641733-Authenticating-Domains-with-SPF-and-DKIM-A-Complete-Guide>`_
    - `Mailjet's DMARC documentation
      <https://documentation.mailjet.com/hc/en-us/articles/20531905163419-Understanding-DMARC>`_
-
-.. warning::
-   It is recommended to set up a custom domain. Due to increased security on provider side, emails
-   sent with an outgoing mail server other than the Odoo's provided one using subdomain
-   (dbname.odoo.com) will fail due to DMARC policy, and/or be marked as spam.
 
 .. _maintain/mailjet-api/add-domain:
 
@@ -106,9 +106,9 @@ Add a domain
 
 By adding an entire domain to the Mailjet account, all the sender addresses related to that domain
 are automatically validated for sending emails using Mailjet servers. First, navigate to the
-`Mailjet Account Information <https://app.mailjet.com/account>`_ page. Next, click on
-:guilabel:`Add a Sender Domain or Address` link under the :guilabel:`Senders & Domains` section.
-Then, click on :guilabel:`Add domain` to add the custom domain.
+`Mailjet Account Information <https://app.mailjet.com/account>`_ page. Next, click on :guilabel:`Add
+a Sender Domain or Address` link under the :guilabel:`Senders & Domains` section. Then, click on
+:guilabel:`Add domain` to add the custom domain.
 
 .. note::
    The domain needs to be added to the Mailjet account and then validated through the :abbr:`DNS
@@ -117,10 +117,10 @@ Then, click on :guilabel:`Add domain` to add the custom domain.
 After that, fill out the :guilabel:`Add a new Domain` page on Mailjet and click
 :guilabel:`Continue`.
 
-After adding the domain, a validation page will populate. Unless the Odoo database is on-premise
-(in which case, choose :guilabel:`Option 1`), choose :guilabel:`Option 2: Create a DNS Record`.
-Copy the TXT record information to a notepad and then navigate to the domain's :abbr:`DNS (Domain
-Name System)` provider to complete validation.
+After adding the domain, a validation page will populate. Unless the Odoo database is on-premise (in
+which case, choose :guilabel:`Option 1`), choose :guilabel:`Option 2: Create a DNS Record`. Copy the
+TXT record information to a notepad and then navigate to the domain's :abbr:`DNS (Domain Name
+System)` provider to complete validation.
 
 .. image:: mailjet_api/host-value-dns.png
    :alt: The TXT record information to input on the domain's DNS.
@@ -131,8 +131,8 @@ Setup in the domain's DNS
 After getting the TXT record information from the Mailjet account, add a TXT record to the domain's
 :abbr:`DNS (Domain Name System)`. This process varies depending on the :abbr:`DNS (Domain Name
 System)` provider. Consult the provider for specific configuration processes. The TXT record
-information consists of the :guilabel:`Host` and :guilabel:`Value`. Paste these into
-the corresponding fields in the TXT record.
+information consists of the :guilabel:`Host` and :guilabel:`Value`. Paste these into the
+corresponding fields in the TXT record.
 
 Return to Mailjet account information
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -144,8 +144,8 @@ Address`, click the gear icon next to :guilabel:`Domain`, and select :guilabel:`
 This action can also be done by going to the `Sender domains & addresses <https://app.mailjet.com/
 account/sender>`_ page on the Mailjet account information and clicking on :guilabel:`Manage`.
 
-Next, click :guilabel:`Check Now` to validate the TXT record that was added on the domain. A
-success screen will appear if the domain is configured correctly.
+Next, click :guilabel:`Check Now` to validate the TXT record that was added on the domain. A success
+screen will appear if the domain is configured correctly.
 
 .. image:: mailjet_api/check-dns.png
    :alt: Check DNS record in Mailjet.
@@ -176,8 +176,8 @@ Next, input the `SMTP server` (in-v3.mailjet.com), `port number` (587 or 465), a
 <https://app.mailjet.com/account/setup>`_. It is recommended to use :abbr:`SSL (Secure Sockets
 Layer)`/:abbr:`TLS (Transport Layer Security)` even though Mailjet may not require it.
 
-For the :guilabel:`Username`, input the :guilabel:`API KEY`. For the :guilabel:`Password`, input
-the :guilabel:`SECRET KEY` that was copied from the Mailjet account to the notepad earlier. These
+For the :guilabel:`Username`, input the :guilabel:`API KEY`. For the :guilabel:`Password`, input the
+:guilabel:`SECRET KEY` that was copied from the Mailjet account to the notepad earlier. These
 settings can be found on :menuselection:`Mailjet -->  Account Settings --> SMTP and SEND API
 Settings`.
 
