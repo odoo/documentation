@@ -18,11 +18,12 @@ Settings
 Before registering any vehicles, review two **Fleet** settings that directly affect day-to-day
 operations and employee benefits:
 
-- :ref:`End Date Contract Alert <fleet/end-contract>` — emails the contract's *Responsible* person a
-  set number of days before the vehicle agreement expires, so renewals or returns aren't missed.
-- :ref:`New Vehicle Request <fleet/request>` — (Belgian Payroll localization only) blocks employees
-  from requesting a new company car through the salary configurator, once the available vehicles
-  already exceeds the defined limit, helping control benefits costs.
+- :ref:`End Date Contract Alert <fleet/end-contract>`: Emails the contract's *Responsible* person a
+  set number of days before the vehicle agreement expires, so renewals or returns are not missed.
+- :ref:`New Vehicle Request <fleet/request>`: (Only for the :doc:`Belgian payroll localization
+  <../payroll/payroll_localizations/belgium>`) Blocks employees from requesting a new company car
+  through the salary configurator, once the available vehicles already exceed the defined limit,
+  helping control benefits costs.
 
 To access the settings menu, go to :menuselection:`Fleet app --> Configuration --> Settings`.
 
@@ -44,8 +45,8 @@ this field.
 Responsible parties
 ~~~~~~~~~~~~~~~~~~~
 
-To determine the responsible person is for a contract, open an individual contract. The person
-listed as :guilabel:`Responsible` under the :guilabel:`Contract Information` section of the contract
+To determine the responsible person for a contract, open an individual contract. The person listed
+as :guilabel:`Responsible` under the :guilabel:`Contract Information` section of the contract
 receives the alert.
 
 To open a contract from a list of all contracts, navigate to :menuselection:`Fleet app --> Fleet -->
@@ -55,18 +56,18 @@ receives expiration alerts.
 
 An individual contract can also be opened from a specific vehicle by navigating to
 :menuselection:`Fleet app --> Fleet --> Fleet` and clicking on an individual vehicle. On the vehicle
-form, click the :guilabel:`Contracts` smart button at the top of the page. Only contracts associated
-with the vehicle appear in the list. Click on an individual contract to open it. The
-:guilabel:`Responsible` person is listed on the contract.
+form, click the :icon:`fa-book` :guilabel:`Contracts` smart button at the top of the page. Only
+contracts associated with the vehicle appear in the list. Click on an individual contract to open
+it. The :guilabel:`Responsible` person is listed on the contract.
 
 .. _fleet/request:
 
-New Vehicle Request (Belgian Payroll - Fleet)
----------------------------------------------
+New vehicle request
+-------------------
 
 Enter the maximum fleet size that may be reached through the salary-configurator flow. When the
 total number of available vehicles (vehicles without an assigned driver) is equal to or below this
-limit, employees can request a new company car. Once the available vehicles exceeds the limit, the
+limit, employees can request a new company car. Once the available vehicles exceed the limit, the
 request option is hidden.
 
 .. example::
@@ -116,14 +117,12 @@ This section of the vehicle form relates to the person who is currently driving 
 any plans for a change in the driver in the future, and when.
 
 - :guilabel:`Driver`: Using the drop-down menu, select the driver for the vehicle. If the driver is
-  not listed, :ref:`create the new driver, and edit the driver details
+  not listed, :ref:`create the new driver and edit the driver details
   <fleet/new_vehicle/add-driver>`.
 
   .. important::
      A driver does *not* have to be an employee. When creating a new driver, the driver is added to
-     the **Fleet** app, *not* the **Employees** app.
-
-     If the **Contacts** app is installed, the driver information is also stored there.
+     the **Fleet** app and the **Contacts** app (if installed), *not* in the **Employees** app.
 
 - :guilabel:`Mobility Card`: If the selected driver has a mobility card (such as a gas card) listed
   on their employee record in the **Employees** application, the mobility card number automatically
@@ -135,12 +134,9 @@ any plans for a change in the driver in the future, and when.
   driver details <fleet/new_vehicle/add-driver>`.
 
   .. note::
-     If this field is populated, a :guilabel:`Apply New Driver` button appears on the vehicle form.
+     If this field is populated, an :guilabel:`Apply New Driver` button appears on the vehicle form.
      Click the :guilabel:`Apply New Driver` button to change the driver information.
 
-- :guilabel:`Plan To Change Car`: Tick this box when the current driver already knows they'll switch
-  to another vehicle, whether they are awaiting an ordered car, using this one only temporarily, or
-  are leaving the company.
 - :guilabel:`Assignment Date`: Using the calendar selector, select when the vehicle is available for
   another driver. If this field is left blank, that indicates the vehicle is currently available,
   and can be assigned to another driver. If it is populated, the vehicle is not available for
@@ -163,7 +159,7 @@ Driver` field, then click :guilabel:`Create and edit...`. A :guilabel:`Create Dr
 
 Both the :guilabel:`Create Driver` and :guilabel:`Create Future Driver` forms are identical, and are
 stored in the **Contacts** app. :doc:`Configure the new contact <../../essentials/contacts>`, then
-click :guilabel:`Save & Close`.
+click :guilabel:`Save`.
 
 .. note::
    Depending on the installed applications, different tabs or fields may be visible on the
@@ -174,8 +170,8 @@ click :guilabel:`Save & Close`.
 Vehicle
 -------
 
-This section captures key physical details of a vehicle. Selecting an existing Model may auto-fill
-some fields.
+This section captures key physical details of a vehicle. Selecting an existing :guilabel:`Model` may
+auto-fill some fields.
 
 Fill in the following fields on the form:
 
@@ -204,6 +200,8 @@ Fill in the following fields on the form:
   field. The entry should clearly explain where the vehicle can be found, such as `Main Garage` or
   `Building 2 Parking Lot`. This is crucial information for companies with many locations where
   vehicles are stored.
+- :guilabel:`Make Vehicle Available`: Click the checkbox if the vehicle can be selected when an
+  employee fills out the :ref:`salary configurator <recruitment/configure-package>`.
 
 .. image:: new_vehicle/new-vehicle-type.png
    :alt: The new vehicle form, showing the vehicle tax section.
@@ -223,9 +221,10 @@ Fiscality
 - :guilabel:`Horsepower Taxation`: Enter the amount that is taxed based on the size of the vehicle's
   engine. This is determined by local taxes and regulations, and varies depending on the location.
   It is recommended to check with the accounting department to ensure this value is correct.
-- :guilabel:`Disallowed Expenses Rate`: Configure the dates and percentages of the vehicle-related
-  costs (fuel, maintenance, depreciation, etc.) that **cannot** be deducted from the company's
-  taxable income.
+- :guilabel:`Deductibility Rates`: Configure the dates and percentages of the vehicle-related costs
+  (fuel, maintenance, depreciation, etc.) that can be deducted from the company's taxable income.
+  The :guilabel:`Start Date` field indicates *when* the deduction begins, and the
+  :guilabel:`Deductibility (%)` field indicates the percentage to be deducted.
 
 Contract
 ~~~~~~~~
@@ -248,22 +247,22 @@ Contract
 Model tab
 ---------
 
-If the model for the new vehicle is already configured in the database, the :guilabel:`MODEL` and
-:guilabel:`ENGINE` sections are populated with the corresponding information. If the model is *not*
+If the model for the new vehicle is already configured in the database, the :guilabel:`Model` and
+:guilabel:`Engine` sections are populated with the corresponding information. If the model is *not*
 already in the database and the :guilabel:`Model` tab needs to be configured, :ref:`configure the
 new vehicle model <fleet/add-model>`.
 
 Check the information in the :guilabel:`Model` tab to ensure it is accurate. For example, the color
-of the vehicle, or if a trailer hitch is installed, are examples of common information that may need
-updating.
+of the vehicle or whether a trailer hitch is installed are examples of common information that may
+need updating.
+
+.. image:: new_vehicle/model-tab.png
+   :alt: The new vehicle form, showing the vehicle tax section.
 
 Note tab
 --------
 
 Enter any notes for the vehicle in this section.
-
-.. image:: new_vehicle/model-tab.png
-   :alt: The new vehicle form, showing the vehicle tax section.
 
 .. seealso::
    - :doc:`../fleet/models`
