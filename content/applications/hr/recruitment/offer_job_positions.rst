@@ -117,6 +117,8 @@ Once the email is ready to send, click :guilabel:`Send`. The email pop-up window
 .. image:: offer_job_positions/send-offer.png
    :alt: Send an email to the applicant with a link to the offered salary.
 
+.. _recruitment/configure-package:
+
 Configure your package
 ----------------------
 
