@@ -3,22 +3,23 @@ Models & manufacturers
 ======================
 
 Odoo's **Fleet** app categorizes each vehicle by *manufacturer* and *model* (e.g. `BMW`, `X2`).
-Before the vehicle can be added to the Odoo database, its :ref:`manufacturer <fleet/manufacturers>`
-and a :ref:`model <fleet/add-model>` records must already exist in the database.
+Before a vehicle can be added to the Odoo database, its :ref:`manufacturer <fleet/manufacturers>`
+and :ref:`model <fleet/add-model>` record must already exist in the database.
 
 .. _fleet/manufacturers:
 
 Manufacturers
 =============
 
-Odoo's **Fleet** app comes preconfigured with sixty-six commonly used car and bicycle manufacturers
-in the database, along with their logos. To view the pre-loaded manufacturers, go to
-:menuselection:`Fleet app --> Configuration --> Manufacturers`.
+Odoo's **Fleet** app comes preconfigured with sixty-seven commonly used car and bicycle
+manufacturers in the database, along with their logos. To view the pre-loaded manufacturers, go to
+:menuselection:`Fleet app --> Configuration --> Manufacturers`, and the :guilabel:`Manufacturers`
+dashboard loads.
 
 The default filter, :guilabel:`With Models`, displays only manufacturers that already have vehicle
 models. Remove the default filter to view *all* manufacturers.
 
-Manufacturers re listed alphabetically, and each card shows how many specific :ref:`models
+Manufacturers are listed alphabetically, and each card shows how many specific :ref:`models
 <fleet/models>` are configured for each particular manufacturer.
 
 .. image:: models/manufacturer.png
@@ -29,9 +30,9 @@ Manufacturers re listed alphabetically, and each card shows how many specific :r
 Add a manufacturer
 ------------------
 
-To add a new manufacturer to the database, click :guilabel:`New` in the upper-left corner, to open a
-blank manufacturers form. Type the name of the manufacturer in the :guilabel:`Name` field, and
-select an image to upload for the logo.
+To add a new manufacturer to the database, click :guilabel:`New` in the upper-left corner of the
+:guilabel:`Manufacturers` dashboard, and a blank manufacturers form loads. Type the name of the
+manufacturer in the :guilabel:`Name` field, and select an image to upload for the :guilabel:`Logo`.
 
 .. _fleet/models:
 
@@ -39,7 +40,7 @@ Models
 ======
 
 When adding a vehicle to the fleet, specify the vehicle model to maintain updated records, which
-keeps track of specific details, like maintenance schedules and parts compatibility.
+keeps track of specific details, like vehicle capacity and parts compatibility.
 
 Unlike :ref:`manufacturers <fleet/manufacturers>`, models do **not** come preconfigured in the
 **Fleet** app. When a new vehicle model joins the fleet, the model (and, if necessary, the
@@ -71,19 +72,26 @@ form.
 - :guilabel:`Category`: Using the drop-down menu, select a :ref:`category <fleet/categories>` for
   the vehicle or :ref:`create a new one <fleet/new-category>`.
 
+  .. note::
+     No categories come preconfigured in Odoo's **Fleet** app. All categories must be added to the
+     database.
+
+.. image:: models/vehicle-form-top-.png
+   :alt: A vehicle form with the name, manufacturer, type, and category filled in.
+
 Information tab
 ---------------
 
 In the :guilabel:`Information` tab, specify details about the car model, such as the car size,
-passenger capacity, cost settings (applicable to the Belgium localization only), and engine
-information.
+passenger capacity, and engine information.
 
 Model
 ~~~~~
 
-- :guilabel:`Seats Number`: Enter how many passengers the vehicle can accommodate.
-- :guilabel:`Doors Number`: Enter the number of doors the vehicle has.
 - :guilabel:`Model Year`: Enter the year the vehicle was manufactured.
+- :guilabel:`Seating Capacity`: Enter how many passengers the vehicle can accommodate.
+- :guilabel:`Number of Doors`: Enter the number of doors the vehicle has.
+- :guilabel:`Color`: Enter the color of the vehicle.
 - :guilabel:`Trailer Hitch`: Tick this checkbox if the vehicle has a trailer hitch installed.
 
 Salary
@@ -93,17 +101,18 @@ The :guilabel:`Salary` section **only** appears if the company has their localiz
 Belgium. The cost values are all *monthly*, with the exception of the :guilabel:`Catalog Value (VAT
 Incl.)`.
 
-- :guilabel:`Can be requested`: Tick this checkbox if employees can request this model vehicle, if a
-  vehicle is part of their employee contract.
-- :guilabel:`Catalog Value (VAT Incl.)`: enter the :abbr:`MSRP (Manufacturer's Suggested Retail
+- :guilabel:`Can be requested`: Enable this checkbox if employees can request this model vehicle, if
+  a vehicle is part of their employee contract.
+- :guilabel:`Catalog Value (VAT Incl.)`: Enter the :abbr:`MSRP (Manufacturer's Suggested Retail
   Price)` for the vehicle at the time of purchase or lease.
 - :guilabel:`C02 fee`: Represents the carbon dioxide emission fee paid to the Belgian government.
   This value is automatically calculated, based on Belgian laws and regulations, and **cannot** be
   modified. The value is based on the figure entered in the :guilabel:`CO2 Emissions` field (in the
   :guilabel:`Engine` section of the :guilabel:`Information` tab) on the vehicle form.
 
-.. important::
-   Modifying the :guilabel:`CO2 Emissions` field adjusts the value in the :guilabel:`CO2 fee` field.
+  .. important::
+     Modifying the :guilabel:`CO2 Emissions` field adjusts the value in the :guilabel:`CO2 fee`
+     field.
 
 - :guilabel:`Cost (Depreciated)`: Enter the monthly vehicle cost, which appears in the salary
   configurator for future employees. This value impacts the gross and net salary of the employee
@@ -121,11 +130,15 @@ Engine
   :guilabel:`Plug-in Hybrid Diesel`, :guilabel:`Plug-in Hybrid Gasoline`, :guilabel:`CNG`,
   :guilabel:`LPG`, :guilabel:`Hydrogen`, or :guilabel:`Electric`.
 - :guilabel:`Range`: Enter the distance the vehicle can travel on one tank of gas, or one battery
-  charge, in kilometers.
+  charge, in miles (:guilabel:`mi`) or kilometers (:guilabel:`km`). To change the unit of distance,
+  click the drop-down next to the :guilabel:`km` or :guilabel:`mi` field, and select the desired
+  unit of distance.
 - :guilabel:`CO2 Emissions`: Enter the average carbon dioxide emissions the vehicle produces in
-  grams per kilometer (g/km). This information is provided by the car manufacturer.
-- :guilabel:`CO2 Standard`: Enter the standard amount of carbon dioxide in grams per kilometer
-  (g/km) for a similar-sized vehicle.
+  grams per kilometer (:guilabel:`g/km`) or miles (:guilabel:`g/mi`). This information is provided
+  by the car manufacturer.
+- :guilabel:`Emission Standard`: Enter the regulatory test procedure or guideline used to determine
+  the :guilabel:`CO2 Emissions`, such as the :abbr:`EPA (Environmental Protection Agency)` or Euro
+  6.
 - :guilabel:`Transmission`: Using the drop-down menu, select the type of transmission, either
   :guilabel:`Manual` or :guilabel:`Automatic`.
 - :guilabel:`Power Unit`: Using the drop-down menu, select how the vehicle's power is measured,
@@ -133,19 +146,18 @@ Engine
 - :guilabel:`Power`: If the vehicle is electric or hybrid, enter the power the vehicle uses in
   kilowatts (:guilabel:`kW`). This field only appears if :guilabel:`kW` is selected for the
   :guilabel:`Power` field.
-- :guilabel:`Horsepower`: Enter the vehicle's horsepower in this field. This field only appears if
-  :guilabel:`Horsepower` is selected for the :guilabel:`Power` field.
-- :guilabel:`Horsepower Taxation`: Enter the amount that is taxed, based on the size of the
-  vehicle's engine. This is determined by local taxes and regulations, and varies depending on the
-  location. It is recommended to check with the accounting department to ensure this value is
-  correct. This field only appears if :guilabel:`Horsepower` is selected for the :guilabel:`Power`
-  field.
+- :guilabel:`Horsepower`: Enter the vehicle's horsepower (hp) in this field. This field only appears
+  if :guilabel:`Horsepower` is selected for the :guilabel:`Power` field.
 - :guilabel:`Horsepower Taxation`: Enter the amount of taxes incurred according to the engine
   specifications. The number is dependent on the local tax laws, therefore it is recommended to
   check with the accounting department to ensure the correct taxation amount is entered. This field
-  only appears if the :guilabel:`Power` field is set to :guilabel:`Horsepower`.
+  only appears if the :guilabel:`Power` field is set to :guilabel:`Horsepower` (which changes the
+  :guilabel:`Power` field to :guilabel:`Range`) .
 - :guilabel:`Tax Deduction`: The percentage that can be deducted from taxes is populated based on
   the localization, and **cannot** be modified. This field only appears for certain localizations.
+
+.. image:: models/engines.png
+   :alt: A side-by-side comparison of the Engine section of a form, one gasoline, one electric.
 
 Vendors tab
 -----------
@@ -154,15 +166,19 @@ Specify the vendors a vehicle can be purchased from in this tab. With proper set
 for quotations <../../inventory_and_mrp/purchase/manage_deals/rfq>` for vehicles can be created
 through Odoo's **Purchase** app.
 
-To add a vendor, click :guilabel:`Add` in the upper-left corner of the :guilabel:`Vendors` tab. This
-opens an :guilabel:`Add: Vendors` pop-up window, with a list of all the vendors currently in the
-database. Add a vendor by ticking the checkbox next to the vendor name, then click
+To add a vendor, click the :guilabel:`Add Vendors` block in the :guilabel:`Vendors` tab. This opens
+an :guilabel:`Add: Vendors` pop-up window, with a list of all the vendors currently in the database.
+Add any preexisting vendors by clicking the checkbox next to the vendor name, then click
 :guilabel:`Select`. No limitations exist on the number of vendors that can be added to this list.
 
-If a vendor is *not* already in the database, add a vendor by clicking :guilabel:`New` in the
+If a vendor is *not* already in the database, add a new vendor by clicking :guilabel:`New` in the
 bottom-left of the :guilabel:`Add: Vendors` pop-up window. In the :guilabel:`Create Vendors` form
-that appears, enter the necessary information, then click :guilabel:`Save & Close` to add the
-vendor, or click :guilabel:`Save & New` to add the current vendor and create another new vendor.
+that appears, :doc:`enter the necessary information <../../essentials/contacts>`, then click
+:guilabel:`Save & Close` to add the vendor, or click :guilabel:`Save & New` to add the current
+vendor and create another new vendor.
+
+.. tip::
+   Vendors are stored in the **Contacts** application.
 
 .. image:: models/vendor.png
    :alt: Vendor form to fill out when adding a new vendor.
