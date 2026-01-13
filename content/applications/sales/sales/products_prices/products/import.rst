@@ -249,29 +249,13 @@ To view and modify the attributes and variants on any products, select the desir
    of the company's products have different variations:
 
    - Customizable Desk
+
      - Color: White, Black
      - Legs: Wood, Steel
    - Stool
+
      - Color: Green, Navy
      - Seat: Leather, Wood
-
-   In the template, the Customizable desk and Stool are in the *Name* column with Color, Legs, and
-   Seat in the *Product Attribute/Attribute* column. White, black, wood, steel, and leather are all
-   in the *Product Attribute/Value* column.
-
-   .. image:: import/product-variants-spreadsheet.png
-      :alt: Example of a product variant type import spreadsheet.
-
-.. example::
-   A furniture company wants to import their existing product list into Odoo **Sales** app. Several
-   of the company's products have different variations:
-
-   - Customizable Desk
-      + Color: White, Black
-      + Legs: Wood, Steel
-   - Stool
-      + Color: Green, Navy
-      + Seat: Leather, Wood
 
    In the template, the Customizable desk and Stool are in the *Name* column with Color, Legs, and
    Seat in the *Product Attribute/Attribute* column. White, black, wood, steel, and leather are all
