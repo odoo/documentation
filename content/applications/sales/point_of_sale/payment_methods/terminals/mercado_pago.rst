@@ -2,100 +2,126 @@
 Mercado Pago
 ============
 
-Connecting a payment terminal allows you to offer a fluid payment flow to your customers and ease
-the work of your cashiers.
+Mercado Pago offers payment solutions through :doc:`payment terminals <../terminals>` to handle
+customer transactions.
 
 .. important::
-   Only **Point Smart** payment terminals in Argentina, Brazil, Chile, Colombia, Mexico, Peru, and
-   Uruguay are supported. They can be purchased on `Mercado Pago's website
-   <https://www.mercadopago.com.mx/herramientas-para-vender/lectores-point>`_.
+   - Odoo is compatible with Point Smart 1 or Point Smart 2 payment terminals, which can be
+     purchased on the Mercado Pago website in `Argentina
+     <https://www.mercadopago.com.ar/herramientas-para-vender/lectores-point>`_, `Brazil
+     <https://www.mercadopago.com.br/ferramentas-para-vender/maquininhas-point>`_, and `Mexico
+     <https://www.mercadopago.com.mx/herramientas-para-vender/lectores-point>`_.
+   - Mercado Pago payment terminals do not require an :doc:`IoT Box </applications/general/iot>` to
+     operate.
 
 .. seealso::
-   `Mercado Pago online payments
-   <https://www.mercadopago.com.mx/herramientas-para-vender/check-out#benefits-checkout>`_
+   - :doc:`Mercado Pago online payments </applications/finance/payment_providers/mercado_pago>`
+   - `Mercado Pago tutorial video (Spanish only) <https://www.youtube.com/watch?v=dpbexfTc4VQ>`_
 
-.. _pos-mercado-pago-configuration:
+.. _pos/mercado-pago/configuration:
 
-Configuration
-=============
+Mercado Pago configuration
+==========================
 
-#. Create a `Mercado Pago account <https://www.mercadopago.com.mx/>`_.
-#. Associate your Point Smart terminal with a :guilabel:`store` and a :guilabel:`cash drawer` by
-   following `Mercado Pago's documentation <https://vendedores.mercadolibre.com.ar/nota/locales-una-herramienta-para-mejorar-la-gestion-de-tus-puntos-de-venta/>`_.
+The Mercado Pago configuration requires creating an account, if needed, and :ref:`connecting it
+to your payment terminal and store <pos/mercado-pago/terminal>`. Then, create a :ref:`Point Smart
+application <pos/mercado-pago/point-smart>` for technical setup and acquiring :ref:`credentials
+<pos/mercado-pago/credentials>` to complete the integration.
 
-   .. note::
-      All purchased terminals are automatically displayed on your Mercado dashboard.
+.. _pos/mercado-pago/terminal:
 
-#. Set your Point Smart terminal to the :guilabel:`Point of Sale` operation mode.
+Terminal and store connection
+-----------------------------
 
-   .. warning::
-      Odoo does not support the :guilabel:`Standalone` operation mode.
+#. Create a Mercado Pago account if needed:
 
-#. :ref:`Create a Point Smart application <pos-mercado-pago-application>`.
-#. :ref:`Generate your credentials <pos-mercado-pago-credentials>`.
-#. :ref:`Create and configure the related payment method <pos-mercado-pago-method>`.
+   - `Mercado Pago for Mexico <https://www.mercadopago.com.mx/>`_
+   - `Mercado Pago for Argentina <https://www.mercadopago.com.ar/>`_
+   - `Mercado Pago for Brazil <https://www.mercadopago.com.br/>`_
+#. Turn on the Point Smart terminal. Follow the on-screen instructions until prompted to link the
+   terminal with your Mercado Pago account.
+#. Click :guilabel:`Soy responsable del negocio` to get a pairing QR code.
+#. Connect to your Mercado Pago account with a mobile device.
+#. Scan the QR code with the mobile device and complete the connection in your Mercado Pago account.
+#. Ensure the terminal is correctly linked to your store:
 
-.. _pos-mercado-pago-application:
+   #. Type your Mercado Pago account email address or phone number, then click
+      :guilabel:`Continuar`.
+   #. In the popover, click :guilabel:`Continuar`.
+   #. On the :guilabel:`Configura el lector para tu cuenta [account name]` screen, click
+      :guilabel:`Empezar configuración`.
+   #. Click :guilabel:`Crear nueva sucursal` to add a new point of sale.
+   #. Type the point of sale's name and address. Add more information if needed, then click
+      :guilabel:`Crear sucursal`.
+   #. Type your register's name and click :guilabel:`Confirmar sucursal y caja`.
+   #. Click :guilabel:`Crear clave` to create a security key and protect the point of sale.
+
+.. _pos/mercado-pago/point-smart:
 
 Point Smart application
 -----------------------
 
-Create a new application from Mercado Pago's `developer panel
-<https://www.mercadopago.com/developers>`_ by following `Mercado Pago's applications documentation
-<https://www.mercadopago.com.mx/ayuda/20152>`_, making sure you select :guilabel:`In
-person Payments`.
+#. Log in to the `Mercado Pago Developer <https://www.mercadopago.com/developers>`_ portal.
+#. Click :guilabel:`Tus integraciones`, then click `Crear aplicación
+   <https://www.mercadopago.com.mx/ayuda/20152>`_.
+#. In the :guilabel:`Configuraciones básicas` section, type the application name, select
+   :guilabel:`Pagos presencial` and :guilabel:`PointdeMercadoPago`, then click :guilabel:`Crear
+   aplicación` to receive the application number.
 
-.. _pos-mercado-pago-credentials:
+.. _pos/mercado-pago/credentials:
 
-Credentials
------------
+Credentials generation
+----------------------
 
-Once the Point Smart application is created, three credentials are required:
+There are three credentials to generate and collect from the `Mercado Pago Developer dashboard
+<https://www.mercadopago.com/developers>`_: a **webhook secret key**, an **access token**, and the
+**terminal serial number**.
 
-- An access token that Odoo uses to call Mercado Pago.
-- A webhook secret key that Odoo uses to authenticate notifications sent by Mercado Pago.
-- The **terminal serial number** at the back of your Point Smart terminal.
+#. Generate the webhook secret key:
 
-Retrieve the access token and webhook secret key by following `Mercado Pago's credentials
-documentation <https://www.mercadopago.com.mx/developers/en/docs/your-integrations/credentials>`_.
-Then, copy and paste them into Odoo when creating the payment method.
+   #. Click :guilabel:`Webhooks` under the :guilabel:`Notificaciones` section, then
+      :guilabel:`Modo productivo`.
+   #. Paste your Odoo database's URL followed by `/pos_mercado_pago/notification`. For example:
+      `https://mycompany.odoo.com/pos_mercado_pago/notification`.
+   #. Copy the generated webhook secret key and save it for the
+      :ref:`pos/mercado-pago/payment-method` step.
+#. Generate the access token:
 
-.. important::
-   For the webhooks configuration, add the URL of your Odoo database (e.g.,
-   `https://mycompany.odoo.com`) followed by `/pos_mercado_pago/notification` (e.g.,
-   `https://mycompany.odoo.com/pos_mercado_pago/notification`).
+   #. Click :guilabel:`Credenciales de producción` under the :guilabel:`Producción` section,
+      then :guilabel:`Activar credenciales de producción`.
+   #. Copy the generated access token and save it for the :ref:`pos/mercado-pago/payment-method`
+      step.
+#. Locate the terminal serial number on the back of the terminal and write it down for the
+   :ref:`pos/mercado-pago/payment-method` step.
 
-   .. image:: mercado_pago/webhooks.png
-      :alt: Webhooks configuration on Mercado Pago.
+Once the Mercado Pago configuration is complete, log in to your Odoo database to create a
+:ref:`payment method <pos/mercado-pago/payment-method>` using the collected credentials.
 
-.. _pos-mercado-pago-method:
+.. warning::
+   Odoo does not support the :guilabel:`Standalone` operation mode.
 
-Payment method
---------------
+.. note::
+   All terminals purchased with your Mercado Pago account are automatically displayed on the
+   Mercado Pago dashboard.
 
-#. Go to :menuselection:`Point of Sale --> Configuration --> Settings` and enable :guilabel:`Mercado
-   Pago` under the :guilabel:`Payment Terminals` section.
-#. :doc:`Create the related payment method <../../payment_methods>` by going to
-   :menuselection:`Point of Sale --> Configuration --> Payment Methods`.
-#. Set the journal type as :guilabel:`Bank`
-#. Select :guilabel:`Mercado Pago` in the :guilabel:`Use a Payment Terminal` field.
-#. Fill in the mandatory fields with the :ref:`previously generated credentials
-   <pos-mercado-pago-credentials>`:
+.. _pos/mercado-pago/payment-method:
 
-   - Fill in the :guilabel:`Production user token` field using the access token.
-   - Fill in the :guilabel:`Production secret key` field using the webhook secret key.
-   - Fill in the :guilabel:`Terminal S/N` field using the terminal serial number. You can find it at
-     the back of your terminal.
-   - Click the :guilabel:`Force PDV` button to activate the Point of Sale mode.
+Odoo POS configuration
+======================
 
-.. image:: mercado_pago/payment-method.png
-   :alt: Form to create a new payment method.
+#. Go to :menuselection:`Point of Sale --> Configuration --> Settings`, scroll down to the
+   :guilabel:`Payment Terminals` section, enable :guilabel:`Mercado Pago`, and click
+   :guilabel:`Save`.
+#. Go to :menuselection:`Point of Sale --> Configuration --> Payment Methods` and :doc:`create the
+   related payment method <../../payment_methods>`.
+#. Fill in the mandatory fields using the :ref:`previously generated credentials
+   <pos/mercado-pago/configuration>`:
 
-Select the payment method by going to the :ref:`POS' settings <configuration/settings>` and adding
-it to the payment method under the :guilabel:`Payment Methods` field of the :guilabel:`Payment`
-section.
+   - Paste the access token in the :guilabel:`Production user token` field.
+   - Paste the webhook secret key in the :guilabel:`Production secret key` field.
+   - Type the terminal serial number in the :guilabel:`Terminal S/N` field.
+#. Save the payment method.
 
-.. important::
-   Any action made on the terminal should trigger a notification on the POS interface. Ensure the
-   :ref:`webhook secret key <pos-mercado-pago-credentials>` is correctly configured if you are not
-   notified.
+.. note::
+   Actions on the terminal should trigger a notification on the Odoo POS interface. If not, ensure
+   the webhook secret key is correct.
