@@ -31,7 +31,7 @@
 # Wil Odoo, 2025
 # Fernanda Alvarez, 2025
 # "Larissa Manderfeld (lman)" <lman@odoo.com>, 2025.
-# "Noemi Pla Garcia (nopl)" <nopl@odoo.com>, 2025.
+# "Noemi Pla Garcia (nopl)" <nopl@odoo.com>, 2025, 2026.
 # Weblate <noreply-mt-weblate@weblate.org>, 2025.
 #
 # Translators:
@@ -41,17 +41,17 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-28 19:36+0000\n"
-"PO-Revision-Date: 2025-11-19 20:11+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-01-13 23:11+0000\n"
+"Last-Translator: \"Noemi Pla Garcia (nopl)\" <nopl@odoo.com>\n"
 "Language-Team: Spanish <https://translate.odoo.com/projects/odoo-18-doc/"
 "finance/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == "
-"0) ? 1 : 2);\n"
-"X-Generator: Weblate 5.12.2\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == 0)"
+" ? 1 : 2);\n"
+"X-Generator: Weblate 5.14.3\n"
 
 #: ../../content/applications/finance.rst:5
 msgid "Finance"
@@ -23099,7 +23099,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting/vendor_bills.rst:60
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:105
 msgid ":guilabel:`Always`"
-msgstr ""
+msgstr ":guilabel:`Siempre`"
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:61
 msgid ":guilabel:`Ask after 3 validations without edits`"
@@ -23108,7 +23108,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting/vendor_bills.rst:62
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:110
 msgid ":guilabel:`Never`"
-msgstr ""
+msgstr ":guilabel:`Nunca`"
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:65
 msgid ""
@@ -24091,7 +24091,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:3
 msgid "Document digitization"
-msgstr ""
+msgstr "Digitalización de documentos"
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:5
 msgid ""
@@ -24101,6 +24101,12 @@ msgid ""
 "content and automatically creates and fills in the record's details. This "
 "process is mainly used for vendor bills (or refunds)."
 msgstr ""
+"La digitalización de documentos hace referencia al proceso de convertir "
+"documentos en papel o documentos digitales en registros dentro de una base "
+"de datos. Mediante el uso de :abbr:`OCR (reconocimiento óptico de caracteres)"
+"` y tecnologías de inteligencia artificial, Odoo lee el contenido y crea y "
+"completa automáticamente los datos del registro. Este proceso se utiliza "
+"principalmente para facturas de proveedor (o reembolsos)."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:11
 msgid ""
@@ -24108,6 +24114,10 @@ msgid ""
 "customer invoices and credit notes. The :ref:`settings <accounting/bill-"
 "digitization/configuration>` need to be adjusted accordingly."
 msgstr ""
+"Aunque es menos habitual, este proceso de digitalización también puede "
+"aplicarse a facturas de cliente y notas de crédito. Es necesario ajustar la "
+"referencia :ref:`configuración <accounting/bill-digitization/configuration>` "
+"según corresponda."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:16
 msgid ""
@@ -24122,7 +24132,7 @@ msgid ""
 "`Odoo Tutorials: Vendor Bill Digitization <https://www.odoo.com/slides/slide/"
 "vendor-bill-digitization-7065>`_"
 msgstr ""
-"'Tutoriales de Odoo: Digitalización de facturas de proveedores <https://"
+"'Tutoriales de Odoo: digitalización de facturas de proveedores <https://"
 "www.odoo.com/slides/slide/vendor-bill-digitization-7065>'_"
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:26
@@ -24133,6 +24143,10 @@ msgid ""
 "whether :guilabel:`Vendor Bills` should be processed automatically or on "
 "demand."
 msgstr ""
+"Diríjase a :menuselection:`Contabilidad --> Configuración --> Ajustes` y "
+"vaya a la sección :guilabel:`Digitalización`. Active la opción :guilabel:`"
+"Digitalización de documentos` y elija si las :guilabel:`facturas de "
+"proveedor` deben procesarse automáticamente o bajo demanda."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:31
 msgid ""
@@ -24140,10 +24154,13 @@ msgid ""
 "line is created per tax in the new vendor bill, regardless of the number of "
 "lines on it."
 msgstr ""
+"Si la opción :guilabel:`Una sola línea de factura por impuesto` está "
+"activada, solo se creará una línea por impuesto en la nueva factura de "
+"proveedor, independientemente del número de líneas que tenga."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:37
 msgid "Vendor bills upload"
-msgstr ""
+msgstr "Subida de facturas de proveedor"
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:39
 msgid ""
@@ -24153,73 +24170,98 @@ msgid ""
 "be :ref:`automatically posted <accounting/bill-digitization/auto-post-"
 "bills>` for selected vendors."
 msgstr ""
+"Las facturas de proveedor se :ref:`suben manualmente <accounting/"
+"bill-digitization/manual-upload>` o se envían a un :ref:`alias de correo "
+"electrónico designado <accounting/bill-digitization/email-alias>` para su "
+"digitalización. También pueden :ref:`contabilizarse automáticamente <"
+"accounting/bill-digitization/auto-post-bills>` para proveedores "
+"seleccionados."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:45
 msgid ""
 "Once the bill is uploaded, the document preview appears on the right side of "
 "the screen."
 msgstr ""
+"Una vez se ha subido la factura, la vista previa del documento aparece en la "
+"parte derecha de la pantalla."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:48
 msgid ":doc:`Vendor bills <../vendor_bills>`"
-msgstr ""
+msgstr ":doc:`Facturas de proveedor <../vendor_bills>`"
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:53
 msgid "Manual upload"
-msgstr ""
+msgstr "Subida manual"
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:55
 msgid ""
 "In the Accounting dashboard, drag and drop vendor bills into the desired "
 "purchase journal or click :guilabel:`Upload` on the purchase journal."
 msgstr ""
+"En el panel de Contabilidad, arrastre y suelte las facturas de proveedor en "
+"el diario de compras deseado o haga clic en :guilabel:`Subir` en el diario "
+"de compras."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:61
 msgid "Upload via email alias"
-msgstr ""
+msgstr "Subir mediante alias de correo electrónico"
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:63
 msgid ""
 "Vendor bills can be uploaded via an email alias associated with the relevant "
 "journal in two ways:"
 msgstr ""
+"Las facturas de proveedor se pueden enviar a un alias de correo electrónico "
+"asociado al diario correspondiente de dos maneras:"
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:65
 msgid ""
 "scanned from a connected scanner configured to send email to an email alias;"
 msgstr ""
+"escaneadas desde un escáner conectado configurado para enviar correos "
+"electrónicos a un alias de correo electrónico;"
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:66
 msgid "sent directly to an email alias."
-msgstr ""
+msgstr "enviadas directamente a un alias de correo electrónico."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:68
 msgid ""
 "Each PDF attached to the email is automatically converted into a new draft "
 "vendor bill."
 msgstr ""
+"Cada PDF adjunto al correo electrónico se convierte automáticamente en una "
+"nueva factura de proveedor en borrador."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:71
 msgid ""
 "Only PDF and XML formats are processed via an email alias associated with a "
 "journal."
 msgstr ""
+"Solo se procesan los formatos PDF y XML mediante un alias de correo "
+"electrónico asociado a un diario."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:72
 msgid ""
 "JPEG files must be processed via :ref:`email alias in the Documents app "
 "<documents/email-aliases>`."
 msgstr ""
+"Los archivos JPEG debe procesarse mediante un :ref:`alias de correo "
+"electrónico en la aplicación Documentos <documents/email-aliases>`."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:75
 msgid "To add an email alias to a journal, follow these steps:"
 msgstr ""
+"Para añadir un alias de correo electrónico a un diario, siga los siguientes "
+"pasos:"
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:77
 msgid ""
 "Make sure an :doc:`alias domain <../../../websites/website/configuration/"
 "domain_names>` has been configured."
 msgstr ""
+"Asegúrese de que se haya configurado un :doc:`dominio de alias de correo "
+"electrónico <../../../websites/website/configuration/domain_names>`."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:79
 msgid ""
@@ -24227,6 +24269,9 @@ msgid ""
 "automatically created and available in the :guilabel:`Advanced Settings` tab "
 "of the :guilabel:`Vendor Bills` journal."
 msgstr ""
+"El alias de correo electrónico predeterminado `vendor-bills@`, seguido del "
+"dominio de alias, se crea automáticamente y está disponible en la pestaña "
+":guilabel:`Ajustes avanzados` del diario :guilabel:`Facturas de proveedor`."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:81
 msgid ""
@@ -24234,12 +24279,18 @@ msgid ""
 "Configuration --> Journals`, select the corresponding journal, and edit "
 "the :guilabel:`Email Alias` in the :guilabel:`Advanced Settings` tab."
 msgstr ""
+"Para cambiar un alias de correo electrónico predeterminado, diríjase a "
+":menuselection:`Contabilidad --> Configuración --> Diarios`, seleccione el "
+"diario correspondiente y edite el :guilabel:`alias de correo electrónico` en "
+"la pestaña :guilabel:`Ajustes avanzados`."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:84
 msgid ""
 "Configure the connected scanner to send scanned documents to the email "
 "alias, if needed."
 msgstr ""
+"Si es necesario, configure el escáner conectado para que envíe documentos "
+"escaneados al alias de correo electrónico."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:87
 msgid ""
@@ -24248,10 +24299,14 @@ msgid ""
 "the :guilabel:`Finance` :ref:`folder <documents/folders>` (e.g., `inbox-"
 "financial@example.odoo.com`)."
 msgstr ""
+"Como alternativa, se puede utilizar un :ref:`alias de correo en la "
+"aplicación Documentos <documents/email-aliases>` para enviar automáticamente "
+"las facturas de proveedor a la :ref:`carpeta <documents/folders>` "
+":guilabel:`Finanzas` (por ejemplo, `inbox-financial@example.odoo.com`)."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:94
 msgid "Automatic vendor bill posting"
-msgstr ""
+msgstr "Contabilización automática de facturas de proveedor"
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:97
 msgid ""
@@ -24259,6 +24314,10 @@ msgid ""
 "automatically` setting in the :ref:`Document Digitization <accounting/bill-"
 "digitization/configuration>` section must be enabled for vendor bills."
 msgstr ""
+"Para utilizar la opción :guilabel:`Contabilizar automáticamente facturas`, "
+"debe estar habilitada la configuración :guilabel:`Digitalizar "
+"automáticamente` en la sección :ref:`Digitalización de documentos <"
+"accounting/bill-digitization/configuration>` para facturas de proveedor."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:101
 msgid ""
@@ -24267,6 +24326,12 @@ msgid ""
 "vendor. In the :guilabel:`Accounting` tab of the contact form, select "
 "an :guilabel:`Auto-post bills` option in the :guilabel:`Automation` section:"
 msgstr ""
+"Para contabilizar automáticamente las facturas de proveedor digitalizadas de "
+"proveedores específicos, diríjase a :menuselection:`Contabilidad --> "
+"Proveedores --> Proveedores` y haga clic en el proveedor deseado. En la "
+"pestaña :guilabel:`Contabilidad` del formulario de contacto, seleccione una "
+"opción de :guilabel:`Contabilización automática de facturas` en la sección "
+":guilabel:`Automatización`:"
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:106
 msgid ""
@@ -24275,6 +24340,12 @@ msgid ""
 "appears. The following options can be chosen: :guilabel:`Activate auto-"
 "validation`, :guilabel:`Ask me later`, or :guilabel:`Never for this vendor`."
 msgstr ""
+":guilabel:`Preguntar después de 3 validaciones sin modificaciones`: Cuando "
+"la tercera factura cargada se confirme sin realizar ninguna modificación, "
+"aparecerá una ventana de :guilabel:`Contabilización automática de facturas`. "
+"Se podrán elegir las siguientes opciones: :guilabel:`Activar validación "
+"automática`, :guilabel:`Preguntarme más tarde`, o :guilabel:`Nunca para este "
+"proveedor`."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:113
 msgid ""
@@ -24282,10 +24353,13 @@ msgid ""
 "contact name must already exist in the database, and each uploaded vendor "
 "bill must include a bill date."
 msgstr ""
+"Dado que la automatización se activa después de validar tres facturas sin "
+"modificaciones, el contacto debe existir previamente en la base de datos y "
+"cada factura que se suba debe incluir una fecha de factura."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:119
 msgid "Digitization and data recognition with AI"
-msgstr ""
+msgstr "Digitalización y reconocimiento de datos con IA"
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:121
 msgid ""
@@ -24293,12 +24367,18 @@ msgid ""
 "configuration>`, documents are either automatically digitized or require "
 "manual processing if digitization is set to on-demand only."
 msgstr ""
+"Según la :ref:`configuración <accounting/bill-digitization/configuration>`, "
+"los documentos se digitalizan automáticamente o requieren un procesamiento "
+"manual si la digitalización está configurada únicamente bajo demanda."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:124
 msgid ""
 "To manually digitize an :ref:`uploaded document <accounting/bill-"
 "digitization/vendor-bills-upload>`, click :guilabel:`Digitize document`."
 msgstr ""
+"Para digitalizar manualmente un :ref:`documento subido <accounting/"
+"bill-digitization/vendor-bills-upload>`, haga clic en :guilabel:`Digitalizar "
+"documento`."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:127
 msgid ""
@@ -24307,6 +24387,11 @@ msgid ""
 "uploaded during digitization: click on the related field(s) to edit them, or "
 "click :guilabel:`Reload AI data` to refresh the data."
 msgstr ""
+"Una vez digitalizado el documento, aparecerá un banner azul; haga clic en "
+":icon:`oi-arrow-right` :guilabel:`Actualizar`. Revise y corrija toda la "
+"información que se haya cargado durante la digitalización: haga clic en los "
+"campos correspondientes para editarlos o haga clic en :guilabel:`Volver a "
+"cargar datos de IA` para actualizar la información."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:131
 msgid "Then, click :guilabel:`Confirm` to post the document."
@@ -24320,10 +24405,17 @@ msgid ""
 "field; the vendor name appears highlighted in the document preview on the "
 "right. Click it to open a new vendor form with the name pre-filled."
 msgstr ""
+"Una vez que un documento se ha digitalizado, el campo :guilabel:`Proveedor` "
+"se queda vacío si el proveedor no existe en la base de datos. Para añadirlo, "
+"haga clic en :icon:`fa-caret-down` :guilabel:`(flecha hacia abajo)` del "
+"campo :guilabel:`Proveedor`; el nombre del proveedor aparecerá resaltado en "
+"la vista previa del documento a la derecha. Haga clic sobre él para abrir un "
+"nuevo formulario de proveedor con el nombre ya completado."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:140
 msgid "The following vendor bill fields are recognized by OCR:"
 msgstr ""
+"Los siguientes campos de la factura de proveedor se reconocen mediante OCR:"
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:142
 msgid ""
@@ -24333,6 +24425,11 @@ msgid ""
 "currency (in a :doc:`multi-currency <../get_started/multi_currency>` "
 "environment and if the currency is activated)."
 msgstr ""
+":guilabel:`Proveedor`, :guilabel:`Referencia de la factura`, :guilabel:`"
+"Fecha de la factura`, :guilabel:`Referencia de pago` "
+"(solo en el formato belga +++xxx/xxxx/xxxxx+++), :guilabel:`Banco receptor`, "
+":guilabel:`Fecha de vencimiento`y la moneda (en un entorno :doc:`multidivisa "
+"<../get_started/multi_currency>`y si la moneda está activada)."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:146
 msgid ""
@@ -24343,6 +24440,12 @@ msgid ""
 "fiscal_localizations/india>`), :guilabel:`Untaxed Amount`, "
 "and :guilabel:`Total`."
 msgstr ""
+"Desde la pestaña :guilabel:`Líneas de factura`: descripción/etiqueta del "
+":guilabel:`Producto`, :guilabel:`Cantidad`, :guilabel:`Precio` unitario, "
+":guilabel:`Impuestos` (si el :ref:`impuesto está activado <taxes/"
+"list_activation>`; este campo no se reconoce por OCR para la :doc:`"
+"localización india <../../fiscal_localizations/india>`), :guilabel:`Importe "
+"sin impuestos` y :guilabel:`Total`."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:155
 msgid "Purchase order matching"
@@ -24355,6 +24458,11 @@ msgid ""
 "found, the vendor bill can be manually matched with the existing open "
 "purchase order lines."
 msgstr ""
+"Cuando una factura de proveedor digitalizada es reconocida por :abbr:`OCR "
+"(reconocimiento óptico de caracteres)`, Odoo busca en la base de datos un "
+"pedido de compra coincidente. Si se encuentra, la factura de proveedor puede "
+"vincularse manualmente con las líneas abiertas del pedido de compra "
+"existente."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:161
 msgid ""
@@ -24366,6 +24474,14 @@ msgid ""
 "the relevant purchase order lines and the draft vendor bill (shown in grey), "
 "and click :guilabel:`Match`."
 msgstr ""
+"Una vez que se ha :ref:`subido <accounting/bill-digitization/vendor-bills-"
+"upload>` la factura de proveedor y :ref:`se ha digitalizado <accounting/"
+"bill-digitization/digitization>`, puede hacer clic en el botón inteligente "
+":guilabel:`Coincidencia de compra` para acceder a la vista de lista "
+":guilabel:`Coincidencia de compra`, que muestra todas las líneas de pedidos "
+"de compra vinculadas al proveedor asignado a la factura. A continuación, "
+"seleccione las líneas del pedido de compra correspondientes y la factura de "
+"proveedor en borrador (aparece en gris) y haga clic en :guilabel:`Conciliar`."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:168
 msgid ""
@@ -24373,6 +24489,9 @@ msgid ""
 "the :guilabel:`Quantity` and :guilabel:`Price` in the purchase order lines, "
 "if necessary."
 msgstr ""
+"En la vista de lista :guilabel:`Coincidencia de compra`, actualice la "
+":guilabel:`Cantidad` y el :guilabel:`Precio` de las líneas del pedido de "
+"compra, si es necesario."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:171
 msgid ""
@@ -24380,12 +24499,17 @@ msgid ""
 "vendor bill, a new purchase order can be directly created from the vendor "
 "bill lines. To do so, follow these steps:"
 msgstr ""
+"Si no existe ningún pedido de compra relacionado con el proveedor de la "
+"factura de proveedor subida, se puede crear directamente un nuevo pedido de "
+"compra a partir de las líneas de la factura. Para hacerlo, siga estos pasos:"
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:174
 msgid ""
 "Once the vendor bill is uploaded, make sure the :guilabel:`Vendor` field is "
 "filled in with the correct vendor."
 msgstr ""
+"Una vez subida la factura de proveedor, asegúrese de que el campo "
+":guilabel:`Proveedor` esté completado con el proveedor correcto."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:176
 msgid ""
@@ -24439,6 +24563,9 @@ msgid ""
 "The document digitization feature is an In-App Purchase (IAP) service "
 "requiring prepaid credits. Digitizing one document uses one credit."
 msgstr ""
+"La digitalización de documentos es un servicio de compra dentro de la "
+"aplicación (IAP) que requiere créditos prepago. La digitalización de un "
+"documento consume un crédito."
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:204
 msgid ""
