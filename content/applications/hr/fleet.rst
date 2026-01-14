@@ -11,3 +11,4 @@ Fleet
    fleet/service
    fleet/accidents
    fleet/cost_analysis
+   fleet/odometers
