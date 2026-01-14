@@ -3,8 +3,8 @@ Google Merchant Center
 ======================
 
 Google Merchant Center is a tool that allows e-commerce retailers to manage and submit product
-data to Google. It serves as a central hub to upload and maintain product details, such as images,
-prices, and descriptions so that products can appear across Google's platforms.
+data to Google. It serves as a central hub for uploading and maintaining product details, such as
+images, prices, and descriptions so that products can appear across Google's platforms.
 
 .. note::
    Google Merchant Center is only available for physical products and does not support services.
@@ -14,7 +14,7 @@ prices, and descriptions so that products can appear across Google's platforms.
    <../website/configuration/google_search_console>`, :ref:`Google Analytics
    <analytics/google-analytics>` or :ref:`Google Tag Manager <analytics/google-tag-manager>`
    to obtain detailed reports on product listing issues, improve marketing strategies, increase
-   your products' online visibility, and enhance the overall sales performance.
+   your products' online visibility, and enhance overall sales performance.
 
 Google Merchant Center setup
 ============================
@@ -60,7 +60,7 @@ Linking Odoo to GMC
    one :ref:`pricelist <ecommerce/prices/pricelists>` must be assigned to the website.
 
 #. Navigate to :menuselection:`Website --> Configuration --> Settings`, scroll to the
-   :guilabel:`Tracking & SEO` section, and enable :guilabel:`Google Merchant Center`, and
+   :guilabel:`Tracking & SEO` section, enable :guilabel:`Google Merchant Center`, and
    :guilabel:`Save`.
 
    .. note::
@@ -69,7 +69,7 @@ Linking Odoo to GMC
 
 #. Click :guilabel:`Manage feeds`.
 #. In the :guilabel:`Product Feeds` pop-up window, select a :ref:`pricelist
-   <ecommerce/prices/pricelists>`, a :ref:`language <language/add>` and :ref:`categories
+   <ecommerce/prices/pricelists>`, a :ref:`language <language/add>`, and :ref:`categories
    <ecommerce/categories_variants/categories>`, and :guilabel:`Save`.
 
    .. note::
@@ -90,19 +90,25 @@ Linking Odoo to GMC
       a :guilabel:`feed label` as well.
 
       .. image:: google_merchant_center/gmc-feed-creation.png
-         :alt: Select countries, purpose and feed label in GMC.
+         :alt: Select countries, purpose, and feed label in GMC.
 
 #. Click :guilabel:`Continue`.
 
 .. tip::
-   - Create as many feeds as needed, and on the :abbr:`GMC (Google Merchant Center)` dashboard,
-     create several :guilabel:`Product sources`. To do so, expand the :icon:`fa-caret-down`
-     :guilabel:`Products & store` menu, go to :guilabel:`Products`, click the :icon:`fa-caret-down`
-     :guilabel:`Add products` dropdown menu, and select :guilabel:`Add another product source`.
+   - It is also possible to connect Odoo eCommerce to other platforms such as
+     `TikTok <https://ads.tiktok.com/help/article/create-manage-catalogs?lang=en>`_,
+     `Facebook, and Instagram <https://www.facebook.com/business/help/125074381480892?id=725943027795860>`_.
+     To do so, copy the :abbr:`GMC (Google Merchant Center)` the product feed URL and add it to the
+     relevant section of the selected platform.
    - To manually change the currency of the feed, go to the :guilabel:`Products` tab in :abbr:`GMC
      (Google Merchant Center)`, click :guilabel:`Manage product sources`, and choose a
      :guilabel:`Products source`. Navigate to the :guilabel:`Data source setup` tab, click
      :guilabel:`Show advanced options`, and choose a :guilabel:`Currency`.
+   - Create as many feeds as needed, and on the :abbr:`GMC (Google Merchant Center)` dashboard,
+     create several :guilabel:`Product sources`. To do so, expand the :icon:`fa-caret-down`
+     :guilabel:`Products & store` menu, go to :guilabel:`Products`, click the :icon:`fa-caret-down`
+     :guilabel:`Add products` dropdown menu, and select :guilabel:`Add another product source`.
 
 .. seealso::
-   `Google Merchant Center Product Feed Specifications <https://support.google.com/merchants/answer/7052112>`_.
+   - `Google Merchant Center Product Feed Specifications <https://support.google.com/merchants/answer/7052112>`_
+   - :doc:`/applications/sales/sales/amazon_connector`
