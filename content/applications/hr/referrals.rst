@@ -18,8 +18,8 @@ is installed.
 Users with either :guilabel:`Referral User`, :guilabel:`Officer`, or :guilabel:`Administrator`
 access rights for the **Recruitment** app can access the **Referrals** app. Only users with
 :guilabel:`Administrator` access rights for the **Recruitment** app have access to the
-:doc:`reporting <referrals/reporting>` and configuration menus. For more information on users and
-access rights, refer to these documents: :doc:`../general/users` and
+:doc:`referral analysis <referrals/referral_analysis>` report and configuration menus. For more
+information on users and access rights, refer to these documents: :doc:`../general/users` and
 :doc:`../general/users/access_rights`.
 
 .. _referrals/onboarding:
@@ -252,11 +252,13 @@ points required.
    - :doc:`referrals/points`
    - :doc:`referrals/rewards`
    - :doc:`referrals/alerts`
-   - :doc:`referrals/reporting`
+   - :doc:`referrals/referral_analysis`
+   - :doc:`referrals/points_report`
 
 .. toctree::
    referrals/share_jobs
    referrals/points
    referrals/rewards
    referrals/alerts
-   referrals/reporting
+   referrals/referral_analysis
+   referrals/points_report
