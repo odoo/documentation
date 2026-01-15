@@ -291,6 +291,9 @@ If an :guilabel:`Online signature` or :guilabel:`Online payment` is required to 
 quotation, set the checkboxes next to either (or both) of these labels in the :guilabel:`Other Info`
 tab, under the :guilabel:`SALES` section.
 
+.. tip:: 
+   If we want the renewal to stay in draft, we just need to remove the email template from the recurring plan. (it is particularly helpful for localizations where the invoice is send and signed on that action)
+
 .. seealso::
    - :doc:`/applications/finance/accounting/payments/online`
    - :doc:`Payment providers and payment methods </applications/finance/payment_providers>`
