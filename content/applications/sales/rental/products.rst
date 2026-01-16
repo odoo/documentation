@@ -2,8 +2,8 @@
 Physical rental products
 ========================
 
-Odoo **Rental** app allows users to customize the scheduling, pricing, and inventory for rental
-physical products. Users can set up multiple pickup and drop-off locations and track rental products
+The Odoo **Rental** app allows users to customize scheduling, pricing, and inventory for physical
+rental products. Users can set up multiple pickup and drop-off locations and track rental products
 by serial number.
 
 Settings
@@ -15,37 +15,29 @@ Configuration --> Settings`.
 .. image:: products/rental-settings.png
    :alt: The Rental setting view in the Rental app.
 
-In the **Rental** section, under the :guilabel:`Default Delay Costs` subsection, fill in the
-:guilabel:`Apply after` field.
+In the **Rental** section, tick the :guilabel:`Rental Transfers` checkbox.
 
-.. note::
-   For finer control, configure the costs of late returns for the :guilabel:`Per Hour` and
-   :guilabel:`Per Day` fields at the product level. If the defaults apply to all products, leave the
-   :guilabel:`Product` field blank.
+Click **Save** to apply the change.
 
-In the :guilabel:`Default Padding Time` section, fill in the :guilabel:`Padding` field. Next, enable
-:guilabel:`Rental Transfers`.
+.. important::
+   If the product has multiple rental rates, the **Sales** app is required, and
+   :guilabel:`Pricelists` must be enabled.
 
-In the :guilabel:`Rent Online` section, fill in the :guilabel:`Minimal Rental Duration` field and
-designate :guilabel:`Unavailability` days.
-
-Click **Save** to apply the changes.
-
-Rental products
-===============
+View rental products
+====================
 
 To view all products that can be rented in the database, navigate to :menuselection:`Rentals app -->
 Products`. By default, the :guilabel:`Rental` filter appears in the search bar, and the view is
 Kanban.
 
-Each product Kanban card displays the name of the product, rental rate, amount of units on hand, and
+Each product Kanban card displays the product name, rental rate, number of units on hand, and
 product image (if applicable).
 
 Create a new physical product
 =============================
 
 To set up a new physical rental product, go to the :menuselection:`Rental app --> Products`, then
-click :guilabel:`New`. In the new product window, the :guilabel:`Rental` checkbox is already ticked
+click :guilabel:`New`. In the new product window, the :guilabel:`Sales` checkbox is already ticked
 by default.
 
 .. image:: products/new-product.png
@@ -53,137 +45,179 @@ by default.
 
 Select the :guilabel:`Product Type` as :guilabel:`Goods` and tick the :guilabel:`Track Inventory`
 checkbox. Next to the :guilabel:`Track Inventory` checkbox, select the :guilabel:`By Unique Serial
-Number` from the drop-down menu. For the :guilabel:`Category` field, select :guilabel:`Goods` from
-the drop-down menu or create a new category by typing in the name and clicking :guilabel:`Create`.
+Number` from the drop-down menu.
 
-Click the :guilabel:`Rental prices` tab and in the :guilabel:`Pricing` section, click :guilabel:`Add
-a price` to enter a new rental rate. Choose a *pricing period* (:dfn:`the unit of duration of the
-rental`) in the :guilabel:`Period` column, or create a new pricing period by typing in the name and
-clicking :guilabel:`Create and edit`.
+For the :guilabel:`Category` field, select :guilabel:`Goods` from the drop-down menu or create a new
+category by typing in the name and clicking :guilabel:`Create`.
 
-.. note::
-   Creating a new pricing period opens a pop-up :guilabel:`Create period` window. Fill in the
-   :guilabel:`Name`, :guilabel:`Duration`, and :guilabel:`Unit`, and click :guilabel:`Save`. The new
-   pricing period automatically applies.
+Set a base rental period and price
+----------------------------------
 
-   .. image:: products/new-rental-period.png
-      :alt: Sample of a New Period view in the Rental app.
+Set up a base rental rate by entering the lowest rental price in the :guilabel:`Sales Price` field.
+Next, click the :guilabel:`Sales` tab, then in the *Rental* section select a unit of time from the
+:guilabel:`Periodicity` dropdown menu.
 
-Next, enter the :guilabel:`Price` for that specific :guilabel:`Period`. To apply the configured
-rental rate to an existing pricelist, click in the :guilabel:`Pricelist` column and select the
-desired list from the drop-down menu.
+Then enter the :guilabel:`Padding Time` to make the product unavailable for pickup for the
+configured duration.
 
-In the :guilabel:`Reservations` section, fill in the :guilabel:`Hourly Fine`, :guilabel:`Daily
-Fine`, and the :guilabel:`Reserve product` time. These values are automatically populated from the
-:guilabel:`Default Delay Costs` section, provided they have been configured in the
-:menuselection:`Rental app --> Configuration --> Settings`.
+.. important::
+   To set a pricelist for additional rental rates, the **Sales** app must be installed, and
+   *Pricelists* must be enabled. Otherwise, the :guilabel:`Prices` tab is not available.
 
-Click the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon near the top to save.
+.. image:: products/rental-periodicity.png
+   :alt: Sample of the Rental product's Periodicity and Padding time in the Rental app.
+
+Set additional rental periods and pricing
+-----------------------------------------
+
+There are two ways to configure additional rental rates in the **Rental** app: :ref:`Pricelists
+<rental/products/pricelist>` and the :ref:`Prices tab <rental/products/price-tab>`.
+
+.. _rental/products/pricelist:
+
+Using the Pricelists method
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Creating a new :guilabel:`Pricelist` allows for better customization when applying rental rates to
+specific time periods, products, or customers by using :guilabel:`Pricelist Rules`. To set up
+additional rental rates, go to :menuselection:`Rental app --> Products --> Pricelists` and click
+:guilabel:`New` to :ref:`create a new pricelist <sales/products/create-edit-pricelists>`. A *Create
+Pricelist Rules* window displays.
+
+.. tip::
+   It is recommended to create a new :guilabel:`Pricelist` first, then select the customized
+   :guilabel:`Pricelist` in the :guilabel:`Prices` tab instead of using the :guilabel:`Default`
+   pricelist. Keeping the :guilabel:`Default` pricelist blank ensures there is a clean pricelist for
+   the base rental rate.
+
+.. image:: products/create-pricelist-rules-window.png
+   :alt: Sample of the Create Pricelist Rules window in the Odoo Rental application.
+
+.. _rental/products/price-tab:
+
+Using the Prices tab method
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Prices can also be configured directly on the product using the :guilabel:`Prices` tab. Navigate to
+:menuselection:`Products --> Products`, then click the desired product.
+
+Click the :guilabel:`Prices` tab and click :guilabel:`Add a price`. Select the desired
+:guilabel:`Pricelist`, then enter the minimum time required for the price change to trigger in the
+:guilabel:`Min. Quantity` column. The :guilabel:`Min. Quantity` column is based on the
+:guilabel:`Periodicity` field in the :guilabel:`Sales` tab.
+
+Lastly, enter the :guilabel:`Price` rate. Click the :icon:`fa-cloud-upload` :guilabel:`(Save
+manually)` icon near the top to save.
 
 .. example::
-   A bike rental business only rents out tandem bikes for the local park for two hours. The hourly
-   rental rate for their tandem bikes is $20, but since tandem bikes are popular they want to set a
-   fixed price of $35. To ensure the business gets their bikes returned on time they set the late
-   return fee as $20 per hour and $160 per day ($20 x 8 hrs).
+   A bike rental business rents out its bikes on an hourly and daily basis. The hourly rental rate
+   for their tandem bikes is $20, but the daily rate is $128. All bike reservations require at least
+   a 30-minute notice.
 
-   Create a new pricing period by navigating to :menuselection:`Rental app --> Configuration -->
-   Rental periods`. Click :guilabel:`New` and configure a the period for 2 hours.
+   Enter the :guilabel:`Sales Price`, then click the :guilabel:`Sales` tab to configure the
+   :guilabel:`Periodicity` and :guilabel:`Padding Time`.
 
-   Navigate to the tandem bike product and in the :guilabel:`Rental prices` tab and add the 2 hour
-   period set at $35. Manually save to apply changes.
+   .. image:: products/rental-sales-tab-rental-section.png
+      :alt: Add alt text.
 
-   .. image:: products/rental-prices-tab-with-rental-period.png
-       :alt: Sample of a rental product with the custom rental period applied.
+   Using the Pricelist method, navigate to :menuselection:`Rental app --> Products --> Pricelists`
+   and click :guilabel:`New`. Configure :guilabel:`Pricelist Rules` for the daily rate.
+
+   .. image:: products/example-rental-pricelist-rules.png
+       :alt: Sample of a rental product with the custom rental pricelist applied.
+
+   Using the :guilabel:`Prices` tab method, navigate to :menuselection:`Rental app --> Products -->
+   Products` and click the Bike product.  Click the :guilabel:`Prices` tab, then add a new price for
+   the daily rate.
+
+   .. image:: products/example-rental-prices-tab.png
+      :alt: Sample of a rental product's Price tab.
 
 .. _rental/order:
 
 Create a rental order
 =====================
 
-To create a rental order in the *Rental* app, navigate to :menuselection:`Rental app --> Orders -->
-Orders`, and click :guilabel:`New`. Doing so reveals a blank rental order form.
+To create a rental order in the **Rental** app, navigate to :menuselection:`Rental app --> Orders
+--> Orders`, and click :guilabel:`New`. Doing so reveals a blank rental order form.
 
 .. image:: products/rental-order.png
    :alt: Sample of a filled out rental order available in the Odoo Rental application.
 
-Start by adding a :guilabel:`Customer`, then configure the desired duration of the rental in the
-:guilabel:`Rental period` field.
+Start by adding a :guilabel:`Customer`, then set the desired duration in the :guilabel:`Rental
+period` field.
 
 To adjust the rental duration, click the first date in the :guilabel:`Rental period` field, and
-select the range of dates and time to represent the rental duration from the pop-up calendar form
+select the range of dates and times to represent the rental duration from the pop-up calendar form
 that appears.
 
 .. image:: products/rental-period-field-popup.png
    :alt: Sample of a rental period calendar pop-up window in the Odoo Rental application.
 
-Once complete, click :guilabel:`Apply` in the calendar pop-up form. Following that, the pop-up form
-disappears, and the designated time period of the rental is represented in the :guilabel:`Duration`
-field.
-
-Next, add a rental product in the :guilabel:`Order Lines` tab, by clicking :guilabel:`Add a
-product`, and selecting the desired rental product to add to the form.
+Once complete, click :guilabel:`Apply` in the calendar pop-up form. Next, add a rental product in
+the :guilabel:`Order Lines` tab by clicking :guilabel:`Add a product` and selecting the desired
+rental product to add to the form.
 
 .. note::
-   If a rental product is added *before* the :guilabel:`Rental period` field has been properly
-   configured, the user can *still* adjust the :guilabel:`Rental period` field accordingly.
+   If a rental product is added *before* the :guilabel:`Rental period` field is properly configured,
+   the user can *still* adjust it accordingly.
 
-   Select the desired range of dates to represent the duration of the rental, then click
-   :guilabel:`Update Rental Prices` in the :guilabel:`Duration` field.
+   Select the desired date range to represent the rental duration, then click the :guilabel:`Update
+   Rental Prices`.
 
    .. image:: products/rental-update-rental-prices.png
       :alt: The update rental prices option that appears in the Odoo Rental application.
 
-   Doing so reveals a :guilabel:`Confirmation` pop-up window. If everything is correct, click
-   :guilabel:`Ok`, and Odoo recalculates the rental price accordingly.
+   Odoo recalculates the rental price accordingly.
 
-Once all the information has been entered correctly on the rental order form, click :guilabel:`Send`
-to send the quotation to the customer and when the customer confirms the quotation, click
+Once all information has been entered correctly on the rental order form, click :guilabel:`Send` to
+send the quotation to the customer. When the customer confirms the quotation, click
 :guilabel:`Confirm` to confirm the order. A :guilabel:`Pickup` banner displays on the rental order.
 
 Create an invoice
 =================
 
-Navigate to the desired invoice by navigating to **Rental** app and on the :guilabel:`Rental Orders`
-dashboard, in the :guilabel:`INVOICE STATUS` section, click :guilabel:`To Invoice` to view all the
-rental orders that require to be sent.
+Navigate to the desired invoice by opening the **Rental** app and landing on the :guilabel:`Rental
+Orders` dashboard. Click :guilabel:`To Invoice` in the :guilabel:`Invoice Status` section to view
+all the rental orders that need to be sent.
 
 .. image:: products/invoice-status-section.png
    :alt: Sample of the INVOICE STATUS section in the Rental app.
 
-Click on the desired rental order and click :guilabel:`Create Invoice`. Select :guilabel:`Regular
-invoice` from the :guilabel:`Create invoice(s)` window and click :guilabel:`Create Draft`.
+Click the desired rental order , then click :guilabel:`Create Invoice`. Select :guilabel:`Regular
+invoice` from the *Create invoice(s)* window and click :guilabel:`Create Draft`.
 
 .. image:: products/create-invoices.png
    :alt: Sample of Create invoices window in the Rental app.
 
-If all the details are correct, click :guilabel:`Confirm` and click :guilabel:`Send` to email the
-invoice to the customer or :guilabel:`Print` and then click :guilabel:`Pay` if the customer is in
-person. In the :guilabel:`Pay` pop-up window, select a :guilabel:`Journal` and click
-:guilabel:`Create Payment`.
+If all the details are correct, click :guilabel:`Confirm` and then :guilabel:`Send` to email the
+invoice to the customer. For in-person transactions, click :guilabel:`Print` and then click
+:guilabel:`Pay`.
+
+In the *Pay* pop-up window, select a :guilabel:`Journal` and click :guilabel:`Create Payment`.
 
 .. image:: products/pay-page.png
    :alt: Sample of the Pay page in the Rental app.
 
-Click on the :guilabel:`Payments` smart button that appears on the top of the rental order. Click
-:guilabel:`Validate` on the Payment page.
+Click the :guilabel:`Payments` smart button at the top of the rental order. Click
+:guilabel:`Validate` to complete the payment.
 
 .. image:: products/payment-page-validate.png
    :alt: Sample of the Payment page in the Rental app.
 
-Customer signature
-==================
+Request a customer signature
+============================
 
-Odoo has the ability to request the customer sign a rental agreement, outlining the arrangement
-between the company and customer, *before* they pick up the rental products. Such documents can
-ensure everything is returned on-time and in its original condition.
+Before the customer picks up the rental product, Odoo can request that the customer sign a rental
+agreement. Rental agreements outline the arrangement between the company and customer to ensure
+everything is returned on time and in its original condition.
 
 .. note::
-   Requesting a signature can be done during any stage of the order. This feature also requires the
+   The customer signature can be requested during any stage of the order. This feature requires the
    :doc:`Sign <../../productivity/sign>` app.
 
-If signatures are required, go to the **Rental** app and from the default :guilabel:`Rental Orders`
-dashboard, select the desired rental order. To go the :icon:`fa-cog` :guilabel:`(Actions)` icon, and
-click :guilabel:`Request Signature`.
+To request a signature, open the **Rental** app and select the desired rental order. Click the
+:icon:`fa-cog` :guilabel:`(Actions)` icon, then click :guilabel:`Request Signature`.
 
 .. image:: products/request-signature.png
    :alt: The Request Signature option in the Odoo Rental application.
@@ -194,27 +228,34 @@ A :guilabel:`Sign Documents` pop-up window displays. Select the desired document
 .. image:: products/sign-documents-popup.png
    :alt: The Sign Documents pop-up window that appears in the Odoo Rental application.
 
-Doing so reveals a :guilabel:`New Signature Request` pop-up window. Upon confirming the information
-in the :guilabel:`New Signature Request` pop-up form, click :guilabel:`Send` to initiate the signing
-process.
+Doing so reveals a *New Signature Request* pop-up window. Confirm the information in the *New
+Signature Request* pop-up window, then click :guilabel:`Send` to initiate the signing process.
 
 .. image:: products/new-signature-request-form.png
    :alt: The New Signature Request pop-up window that appears in the Odoo Rental application.
 
-A link to the signature request will appear in the record's chatter. The document is accessible to
-the customer via the customer portal or email.
+.. tip::
+   If the agreement is configured to require a signature from the rental company, a :guilabel:`Sign
+   Now` button displays on the pop-up window. The user can add a signature via the **Sign** app
+   integration before sending it to the customer.
 
-When the customer clicks :guilabel:`Sign document`, a separate page is then revealed, showcasing the
-document to be signed. The customer begins the process by clicking :guilabel:`Click to start`. The
-app guides the signee to the required signature locations and allows them to create electronic
-signatures to complete the form.
+A link to the signature request will appear in the chatter. The document is accessible to the
+customer via the customer portal or email.
+
+Signing a document from an email link
+-------------------------------------
+
+When the customer clicks :guilabel:`Sign document`, the document displays in a new webpage. The
+customer uses the :guilabel:`Click to start` button to begin the process. The app guides the
+customer to the required signature locations and allows them to create electronic signatures to
+complete the form.
 
 .. image:: products/adopt-signature-popup.png
    :alt: The adopt your signature pop-up window that appears in the Odoo Rental application.
 
 Once the document has been signed and completed, click :guilabel:`Validate & Send Completed
-Document` at the bottom of the document. Odoo presents the option to download the signed document
-for record-keeping purposes, if necessary.
+Document` at the bottom of the document. The signed document can be downloaded for record-keeping
+purposes, if necessary.
 
 .. image:: products/validate-send-doc-button.png
    :alt: The validate and send completed document button in the Odoo Rental application.
@@ -225,39 +266,42 @@ for record-keeping purposes, if necessary.
 Multi-location management and transfers
 =======================================
 
-Tracking the location of high-value physical products between locations is essential. The **Rental**
-app helps with the *Rental Transfers* feature. Activating rental transfers means the system treats
-rental movements similarly to sales, requiring a receipt and a delivery order every time a physical
+The **Rental** app makes it easy to track the location of high-value physical products with the
+:guilabel:`Rental Transfers` feature.
+
+When the :guilabel:`Rental Transfers` feature is enabled, the system treats rental movements in the
+same way as sales. The **Rental** app generates a receipt and a delivery order every time a physical
 product is rented or returned.
 
-For multi-location management and rental item transfer tracking, navigate to the
-:menuselection:`Rental app > Configuration > Settings` and in the :guilabel:`Rental` section, tick
-the :guilabel:`Rental Transfers` checkbox.
+For multi-location management and rental item transfer tracking, navigate to :menuselection:`Rental
+app --> Configuration --> Settings` and in the :guilabel:`Rental` section, tick the
+:guilabel:`Rental Transfers` checkbox.
 
-.. image:: products/rental-transfers-checkbox.png
+.. image:: products/rental-settings.png
    :alt: Sample of the Rental settings with the Rental Transfers enabled.
 
-.. note::
-   The **Inventory** app automatically creates an internal default location once the *Rental
-   Transfers* feature is enabled. Odoo uses the new default location, :guilabel:`Customer/Rental`,
-   to track products during the rental period (moving them from :guilabel:`Stock` to
-   :guilabel:`Customer/Rental` upon rental, and back upon return). Do not modify to avoid corrupting
-   inventory tracking.
+The **Inventory** app automatically creates an internal default location when the *Rental Transfers*
+feature is enabled. Odoo uses the new default location, :guilabel:`Customer/Rental`, to track
+products during the rental period (moving them from :guilabel:`Stock` to :guilabel:`Customer/Rental`
+upon rental, and back upon return).
 
-Next, go to the :menuselection:`Inventory app --> Configuration --> Settings` and in the
+.. warning::
+   **Do not** modify the `Customer/Rental` location to avoid corrupting inventory tracking.
+
+Next, go to :menuselection:`Inventory app --> Configuration --> Settings` and in the
 :guilabel:`Warehouse` section, tick the :guilabel:`Storage Locations` checkbox. Click
 :guilabel:`Save` to apply the changes.
 
 To configure new locations, navigate to :menuselection:`Inventory app --> Configuration -->
 Locations`. Click :guilabel:`New` to configure a new internal location.
 
-On the new location page, enter the :guilabel:`Location Name` and ensure the :guilabel:`Parent
-Location` field is set to :guilabel:`WH`. Click the :icon:`fa-cloud-upload` :guilabel:`Save
-manually` icon near the top to save.
+On the new location page, enter the :guilabel:`Location Name` and for the :guilabel:`Parent
+Location` field, select :guilabel:`WH`. Click the :icon:`fa-cloud-upload` (:guilabel:`Save
+manually`) icon near the top to save.
 
 .. example::
    A bike rental business has two store locations within the same city. Both locations allow for
-   pick-up and drop-off of their bikes. The company wants to track its bikes accurately at each
+   pickup and dropoff of their bikes. The company wants to track its bikes accurately at each
    location.
 
    Ensure the **Rental** and **Inventory** apps are configured by enabling :guilabel:`Rental
@@ -269,12 +313,13 @@ manually` icon near the top to save.
    .. image:: products/configured-locations.png
       :alt: Sample of internal inventory locations that represent different rental store locations.
 
-Pickup products
-===============
+Process a rental order pickup
+=============================
 
-When a customer picks up products, navigate to the appropriate rental order, click
+When a customer picks up rental products, navigate to the desired rental order and click
 :guilabel:`Pickup`. The **Rental** app displays a warehouse delivery form listing the reserved
-rental products. Click :guilabel:`Validate` to move the order to the :guilabel:`Done` stage.
+rental products. Verify the list, then click :guilabel:`Validate` to move the order to the
+:guilabel:`Done` stage.
 
 .. image:: products/pickup-page.png
    :alt: Sample of a Pickup page in the Rental app.
@@ -283,14 +328,15 @@ Doing so places a :guilabel:`Pickedup` status banner on the rental order.
 
 .. _rental/return-products:
 
-Return products
-===============
+Process a rental order return
+=============================
 
-When a customer returns products, navigate to the desired rental order, click :guilabel:`Return`.
-The **Rental** app displays a warehouse receipt form listing the checked out rental products.
+When a customer returns products, navigate to the desired rental order and click :guilabel:`Return`.
+The **Rental** app displays a warehouse receipt form listing the checked-out rental products.
 
-Enter the same amount of products the customer returned in the :guilabel:`Quantity` column. If any
-of the products have serial numbers, enter them into the :guilabel:`Serial Numbers` column.
+Enter the same amount of each product being returned by the customer in the :guilabel:`Quantity`
+column. If any of the products have serial numbers, enter them in the :guilabel:`Serial Numbers`
+column.
 
 .. image:: products/return-page.png
    :alt: Sample of the Return page in the Rental app.
@@ -298,13 +344,13 @@ of the products have serial numbers, enter them into the :guilabel:`Serial Numbe
 Click :guilabel:`Validate` to move the order to the :guilabel:`Done` stage. A :guilabel:`Returned`
 status banner appears on the rental order.
 
-Print pickup and return receipts
-================================
+Download pickup and return receipts
+===================================
 
-Pickup and return receipts can be printed for customers when they pick up and/or return rental
-products.
+Pickup and return receipts can be created and downloaded for customers when they pick up and/or
+return rental products.
 
-To print pickup and/or return receipts, navigate to the appropriate rental order, click the
+To create pickup and/or return receipts, navigate to the desired rental order, click the
 :icon:`fa-cog` :guilabel:`(Actions)` icon to reveal a drop-down menu.
 
 .. image:: products/print-pickup-return-receipt.png
@@ -313,6 +359,5 @@ To print pickup and/or return receipts, navigate to the appropriate rental order
 From this drop-down menu, hover over the :guilabel:`Print` option to reveal a sub-menu. Then select
 :guilabel:`Pickup and Return Receipt`.
 
-Odoo generates and downloads a PDF, detailing all information about the current status of the rented
-items.
+Odoo downloads a PDF detailing all information about the current status of the rented items.
 
