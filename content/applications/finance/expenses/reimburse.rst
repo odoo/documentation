@@ -93,8 +93,8 @@ pop-up window loads. Enter the following information in the pop-up window:
 - :guilabel:`Amount`: The total amount being reimbursed populates this field, by default.
 - :guilabel:`Payment Date`: Enter the date the payment is issued in this field. The current date
   populates this field, by default.
-- :guilabel:`Memo`: The text entered in the :doc:`Expense Report Summary
-  <../expenses/expense_reports>` field of the expense report populates this field, by default.
+- :guilabel:`Memo`: The text entered in the :guilabel:`Expense Report Summary` field of the expense
+  report populates this field, by default.
 
 .. image:: reimburse/payment.png
    :alt: The Register Payment pop-up window filled out for an individual expense report
