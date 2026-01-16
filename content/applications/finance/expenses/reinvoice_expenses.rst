@@ -25,7 +25,7 @@ the customer is charged for the expenses.
    following documentation:
 
    - :doc:`Log expenses <../expenses/log_expenses>`
-   - :doc:`Expense reports <../expenses/expense_reports>`
+   - :doc:`Submit expenses <../expenses/submit_expenses>`
    - :doc:`Approve expenses <../expenses/approve_expenses>`
    - :doc:`Post expenses <../expenses/post_expenses>`
 
@@ -80,8 +80,8 @@ then select the desired :guilabel:`Analytic Distribution` from the drop-down men
 Create an expense report
 ========================
 
-After the expenses are created, the expense report must be :ref:`created <expenses/create_report>`
-and :ref:`submitted <expenses/submit>`, in the same manner as all other expenses.
+After the expenses are created, the expense report must be created and submitted, in the same manner
+as all other expenses.
 
 Once the expense report is submitted, a :icon:`fa-money` :guilabel:`Sales Orders` smart button
 appears at the top-center of both the expense report, and each individual expense record being
@@ -111,8 +111,7 @@ If an :guilabel:`Analytic Distribution` entry is missing, assign the correct acc
 drop-down menu, then click :guilabel:`Approve`.
 
 .. note::
-   The :guilabel:`Approve` button **only** appears after an expense report has been :ref:`submitted
-   <expenses/submit>`.
+   The :guilabel:`Approve` button **only** appears after an expense report has been submitted.
 
 The accounting department is typically responsible for :doc:`posting journal entries
 <../expenses/post_expenses>`. To post expenses to an accounting journal, click :guilabel:`Post
