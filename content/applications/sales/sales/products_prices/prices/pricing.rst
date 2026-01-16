@@ -51,6 +51,8 @@ modified at any time.
    The chatter section is available on pricelist forms, which allows you to add notes and
    communications on each pricelist page.
 
+.. _sales/products/create-edit-pricelists:
+
 Creating and editing pricelists
 -------------------------------
 
