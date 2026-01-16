@@ -209,13 +209,16 @@ Configure an existing domain name
 If you already have a domain name, you can use it for your Odoo website.
 
 .. warning::
-   It is strongly recommended to follow **in order** these three steps to avoid any :ref:`SSL
-   certificate validation <domain-name/ssl>` issues:
+   To avoid potential :ref:`SSL certificate validation <domain-name/ssl>` issues, it is strongly
+   recommended to follow these five steps, in the specified order:
 
-   #. :ref:`Add a CNAME record <domain-name/cname>`
-   #. :ref:`Redirect your naked domain name <domain-name/naked>` (optional, but recommended)
-   #. :ref:`Map your domain name to your Odoo database <domain-name/db-map>`
-   #. :ref:`Map your domain name to your Odoo website <domain-name/website-map>`
+   #. Set up :ref:`URL redirections <website/pages/URL-redirection>` before transferring the domain
+      name to preserve the website's SEO.
+   #. :ref:`Add a CNAME record. <domain-name/cname>`
+   #. :ref:`Redirect your naked domain name. <domain-name/naked>` (This step is optional, but
+      recommended.)
+   #. :ref:`Map your domain name to your Odoo database. <domain-name/db-map>`
+   #. :ref:`Map your domain name to your Odoo website. <domain-name/website-map>`
 
 .. _domain-name/cname:
 
@@ -450,8 +453,3 @@ the one you want to configure. In the :guilabel:`Domain` field, enter the addres
    :guilabel:`Company` under :menuselection:`Website --> Configuration --> Settings`. Doing so
    indicates Odoo which URL to use as the :ref:`base URL <domain-name/web-base-url>` according to
    the company in use.
-
-.. tip::
-   When migrating from an existing website, make sure to set up the necessary :ref:`redirects <website/pages/url-redirection>`
-   before adding your domain name. For example, if a previous URL like `/path/about/something`
-   existed, redirect it to the new corresponding page on your Odoo website, such as `/something`.
