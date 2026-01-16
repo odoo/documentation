@@ -2,11 +2,11 @@
 Approve expenses
 ================
 
-In Odoo, most users cannot approve expense reports; only users with the necessary access rights or
-permissions can. This means that a user **must** have at least *Team Approver* rights for the
-**Expenses** app. Employees with the necessary rights can review expense reports, approve or refuse
-them, and provide feedback with an integrated :ref:`Refuse Expense <expenses/refuse-report>`
-communication tool.
+In Odoo, most users cannot approve expenses; only users with the necessary :doc:`access rights
+<../../general/users/access_rights>` or permissions can. This means that a user **must** have at least
+*Team Approver* rights for the **Expenses** app. Employees with the necessary rights can review
+expenses, approve or refuse them, and provide feedback with an integrated :ref:`Refuse Expense
+<expenses/refuse-report>` communication tool.
 
 Please refer to the :doc:`access rights documentation </applications/general/users>` to learn more
 about managing users and their access rights.

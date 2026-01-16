@@ -2,11 +2,11 @@
 Expense categories
 ==================
 
-Odoo **Expenses** streamlines the management of expenses. After an employee :doc:`logs their
-expenses <../expenses/log_expenses>` and :doc:`submits their expense report
-<../expenses/expense_reports>` in Odoo, expenses are reviewed by management and accounting teams.
-Once :doc:`approved <../expenses/approve_expenses>`, payments can be processed and :doc:`disbursed
-back to the employee <../expenses/reimburse>` for reimbursement.
+Odoo **Expenses** streamlines the management of expenses. After an employee :doc:`logs
+<../expenses/log_expenses>` and :doc:`submits <../expenses/submit_expenses>` their expenses in Odoo,
+expenses are reviewed by management and accounting teams. Once :doc:`approved
+<../expenses/approve_expenses>`, payments can be processed and :doc:`disbursed back to the employee
+<../expenses/reimburse>` for reimbursement.
 
 .. seealso::
    `Odoo Expenses: product page <https://www.odoo.com/app/expenses>`_
