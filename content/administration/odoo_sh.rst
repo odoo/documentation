@@ -12,5 +12,5 @@ range of features such as web shell, module dependencies, continuous integration
    :titlesonly:
 
    odoo_sh/getting_started
-   odoo_sh/first_module
+   odoo_sh/create_module
    odoo_sh/advanced
