@@ -9,7 +9,7 @@ Expenses
    expenses/expense_categories
    expenses/expense_cards
    expenses/log_expenses
-   expenses/expense_reports
+   expenses/submit_expenses
    expenses/approve_expenses
    expenses/post_expenses
    expenses/reimburse
