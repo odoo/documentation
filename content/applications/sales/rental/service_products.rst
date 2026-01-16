@@ -145,6 +145,8 @@ Click the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon near the top 
    .. image:: service_products/example-4hrs-rental-period.png
       :alt: Sample of the Rental prices tab of service product in the Rental app.
 
+.. _rental/service_products/create-rental-order:
+
 Create a rental order with a service product
 ============================================
 
