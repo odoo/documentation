@@ -1,11 +1,16 @@
 .. _epos_ssc/ePOS printers:
 
 =========================================
-Self-signed certificate for ePOS printers
+Certificate for ePOS printers
 =========================================
 
+.. important::
+   Since the recent Chromium update, it is no longer necessary to use a certificate.
+   It is recommended to follow the new :doc:`Local Network Access<pos_lna>` method.
+.. _pos_lna:
+
 To work with Odoo, some printer models that can be used without an
-:doc:`IoT system </applications/general/iot>` may require :doc:`the HTTPS protocol <https>` to
+:doc:`IoT system </applications/general/iot>` may require the HTTPS protocol to
 establish a secure connection between the browser and the printer. However, trying to reach the
 printer's IP address using HTTPS leads to a warning page on most web browsers. In that case, you can
 temporarily :ref:`force the connection <epos_ssc/instructions>`, which allows you to reach the page
@@ -287,3 +292,6 @@ To confirm your printer's connection is secure, connect to its IP address using 
 navigate to `https://192.168.1.25` in your browser. If the SSL certificate has been applied
 correctly, you should no longer see a warning page, and the address bar should display a padlock
 icon, indicating that the connection is secure.
+
+.. seealso::
+   - :doc:`pos_lna`

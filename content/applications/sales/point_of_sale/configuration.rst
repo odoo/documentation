@@ -1,6 +1,3 @@
-:show-content:
-:show-toc:
-
 =============
 Configuration
 =============
@@ -14,7 +11,7 @@ To access the general POS settings, go to :menuselection:`Point of Sale --> Conf
 Settings`. Then, open the dropdown menu in the :guilabel:`Point of Sale` field and select the POS to
 configure.
 
-.. image:: configuration/select-pos-dropdown.png
+.. image:: pos_hardware/select-pos-dropdown.png
    :alt: Dropdown menu to select the POS in the app settings
 
 .. note::
@@ -25,10 +22,10 @@ You can also configure some settings from the dashboard by clicking the vertical
 (:guilabel:`⋮`) on a POS card. Doing so opens a popup window, from which you can:
 
 - :doc:`Enable multiple employees to log in. <employee_login>`
-- :doc:`Connect and set up an IoT sytem. <configuration/pos_iot>`
-- :doc:`Connect and set up an ePOS printer. <configuration/epos_ssc>`
+- :doc:`Connect and set up an IoT sytem. <pos_hardware/pos_iot>`
+- :doc:`Connect and set up an ePOS printer. <pos_hardware/epos_ssc>`
 
-.. image:: configuration/toggle-settings.png
+.. image:: pos_hardware/toggle-settings.png
    :alt: popup window to access quick settings in POS
 
 .. note::
@@ -44,7 +41,7 @@ To make products available for sale,
 #. Select a product to open the product form.
 #. Tick the :guilabel:`Point of Sale` checkbox at the top of the form.
 
-.. image:: configuration/pos-available.png
+.. image:: pos_hardware/pos-available.png
    :alt: Making a product available in your POS.
 
 PoS product categories
@@ -64,7 +61,7 @@ To associate a category with a parent category, fill in the :guilabel:`Parent Ca
 parent category groups one or more child categories.
 
 .. example::
-   .. image:: configuration/parent-categories.png
+   .. image:: pos_hardware/parent-categories.png
       :alt: The PoS product categories grouped by parent categories
 
 Assign PoS product categories
@@ -74,7 +71,7 @@ Go to :menuselection:`Point of Sale --> Products --> Products` and open a produc
 the :guilabel:`Point of Sale` tab and fill in the :guilabel:`Category` field under the
 :guilabel:`Point of Sale` section with one or multiple PoS categories.
 
-.. image:: configuration/form-pos-category.png
+.. image:: pos_hardware/form-pos-category.png
    :alt: Point of Sale tab of a product form to add a PoS product category
 
 Restrict categories
@@ -84,13 +81,5 @@ You can limit the categories displayed on your POS interface. To achieve this, g
 settings <configuration/settings>` and choose the specific categories to display in the
 :guilabel:`Restrict Categories` field within the :guilabel:`Product & PoS categories` section.
 
-.. image:: configuration/restrict-category.png
+.. image:: pos_hardware/restrict-category.png
    :alt: Setting to set up the restrict category feature
-
-.. toctree::
-   :titlesonly:
-
-   configuration/pos_iot
-   configuration/epos_printers
-   configuration/https
-   configuration/epos_ssc

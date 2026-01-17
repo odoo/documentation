@@ -20,7 +20,7 @@ Receipt Printing` setting.
 
 .. seealso::
    - :ref:`pos/restaurant/bills`
-   - :doc:`configuration/epos_printers`
+   - :doc:`pos_hardware/epos_printers`
 
 Reprint a receipt
 -----------------

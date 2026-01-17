@@ -3,7 +3,7 @@ Connect a screen
 ================
 
 The :doc:`IoT box <../iot_box>` can be connected to a screen, e.g. to ease the IoT box's setup
-and/or serve as a :ref:`customer display <pos/hardware/display>` to show customers their :doc:`Point
+and/or serve as a :ref:`customer display <pos/pos_hardware/display>` to show customers their :doc:`Point
 of Sale </applications/sales/point_of_sale>` orders.
 
 Connection
@@ -24,8 +24,8 @@ The screen also appears in the IoT box's list of devices:
 Customer display
 ================
 
-To use the screen as a :ref:`customer display <pos/hardware/display>`, :ref:`configure the POS
-accordingly <pos/hardware/display-configuration>`.
+To use the screen as a :ref:`customer display <pos/pos_hardware/display>`, :ref:`configure the POS
+accordingly <pos/pos_hardware/display-configuration>`.
 
 To display a specific website on the screen instead of the POS customer display, go to
 :menuselection:`IoT --> Devices`, click the screen's card, then enter the desired website's URL in

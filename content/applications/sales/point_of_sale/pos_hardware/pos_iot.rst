@@ -2,6 +2,11 @@
 IoT system connection
 =====================
 
+.. important::
+   Most printers can be used without IoT. This makes it easier to manage your IT equipment.
+   It is recommended to follow the new :doc:`Local Network Access<pos_lna>` method.
+.. _pos_lna:
+
 To connect the POS with an :doc:`IoT system </applications/general/iot>`:
 
 #. Make sure both the Point of Sale and Internet of Things (IoT) apps are installed on your
@@ -27,9 +32,9 @@ To connect the POS with an :doc:`IoT system </applications/general/iot>`:
           the barcode scanner to be compatible. This is most likely the barcode scanner's default
           configuration.
       * - Scale
-        - :ref:`Connect the scale and power it on <pos/hardware/scale>`.
+        - :ref:`Connect the scale and power it on <pos/pos_hardware/scale>`.
       * - Customer display
-        - :ref:`Connect a screen <pos/hardware/display>` to the :abbr:`IoT (Internet of
+        - :ref:`Connect a screen <pos/pos_hardware/display>` to the :abbr:`IoT (Internet of
           Things)` box to display the :abbr:`PoS (Point of Sale)` order.
       * - Payment terminal
         - The connection process depends on the terminal. Refer to the :doc:`payment terminals

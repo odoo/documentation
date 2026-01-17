@@ -1,14 +1,17 @@
+:show-content:
+:show-toc:
+
 ========
 Hardware
 ========
 
 Odoo Point of Sale supports integration with a variety of hardware, including :doc:`payment
 terminals <payment_methods/terminals>` and cash drawers, as well as :ref:`customer displays
-<pos/hardware/display>`, :ref:`scales <pos/hardware/scale>`, :doc:`barcode scanners <shop/barcode>`,
-:doc:`ePOS printers <configuration/epos_printers>`, and in-store :doc:`electronic shelf labels
+<pos/pos_hardware/display>`, :ref:`scales <pos/pos_hardware/scale>`, :doc:`barcode scanners <shop/barcode>`,
+:doc:`ePOS printers <pos_hardware/epos_printers>`, and in-store :doc:`electronic shelf labels
 <pricing/electronic_labels>`.
 
-.. _pos/hardware/display:
+.. _pos/pos_hardware/display:
 
 Customer display
 ================
@@ -26,7 +29,7 @@ the selected :doc:`payment method <payment_methods>`, and any change to be retur
    Both the customer and POS displays must have a minimum diagonal size of 6 inches. For optimal
    readability, larger screens are recommended.
 
-.. _pos/hardware/display-configuration:
+.. _pos/pos_hardware/display-configuration:
 
 Configuration
 -------------
@@ -64,7 +67,7 @@ To open the customer display, follow these steps:
    For IoT-connected screens, both devices need to be connected to the same local network.
 
 .. seealso::
-   - :doc:`configuration/pos_iot`
+   - :doc:`pos_hardware/pos_iot`
    - :doc:`../../general/iot`
 
 For POS terminals running the
@@ -78,7 +81,7 @@ support, follow these steps:
 #. Click the :icon:`fa-desktop` (:guilabel:`Customer Display`) icon, which opens the customer
    display on the terminal's secondary screen.
 
-.. _pos/hardware/scale:
+.. _pos/pos_hardware/scale:
 
 Scale
 =====
@@ -158,7 +161,7 @@ turns green.
 
 .. admonition:: Additional guidelines
 
-   Both the :ref:`customer <pos/hardware/display>` and POS displays must have a minimum diagonal
+   Both the :ref:`customer <pos/pos_hardware/display>` and POS displays must have a minimum diagonal
    size of 6 inches. For optimal readability, larger screens are recommended.
 
 Using a scale in PoS
@@ -178,3 +181,11 @@ Using a scale in PoS
 .. important::
    Make sure the scale returns to `zero` before weighing a new product. If it does not, the
    :guilabel:`Order` :icon:`fa-angle-double-right` button remains unclickable until it is reset.
+
+.. toctree::
+   :titlesonly:
+
+   pos_hardware/epos_printers
+   pos_hardware/pos_lna
+   pos_hardware/epos_ssc
+   pos_hardware/pos_iot

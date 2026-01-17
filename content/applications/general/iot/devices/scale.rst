@@ -20,10 +20,10 @@ scale's drivers <iot_updating_iot/handlers>`.
    must be used.
 
 Once the scale is connected to the IoT system, :ref:`configure it in the POS settings
-<pos/hardware/scale>`.
+<pos/pos_hardware/scale>`.
 
 .. seealso::
-   :doc:`Connect an IoT system to a POS </applications/sales/point_of_sale/configuration/pos_iot>`
+   :doc:`Connect an IoT system to a POS </applications/sales/point_of_sale/pos_hardware/pos_iot>`
 
 Ariva S scales
 ==============

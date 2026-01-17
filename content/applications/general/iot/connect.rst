@@ -97,7 +97,7 @@ Connection using a connection token
 
    - If the :doc:`Point of Sale app </applications/sales/point_of_sale>` is installed, a popup
      appears to select the :doc:`POS the IoT system should be associated with
-     </applications/sales/point_of_sale/configuration/pos_iot>`.
+     </applications/sales/point_of_sale/pos_hardware/pos_iot>`.
    - If using an :doc:`IoT box <iot_box>`, wait a few minutes for it to update before using the
      connected :doc:`devices <devices>`.
    - The IoT system automatically requests an :ref:`HTTPS certificate
