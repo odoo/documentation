@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-06 19:43+0000\n"
+"POT-Creation-Date: 2026-01-15 18:31+0000\n"
 "PO-Revision-Date: 2025-10-03 15:48+0000\n"
 "Last-Translator: \"Tiffany Chang (tic)\" <tic@odoo.com>\n"
 "Language-Team: Italian <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -2708,6 +2708,7 @@ msgstr ""
 "l'applicazione per crearla."
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:47
+#: ../../content/applications/general/users/azure.rst:112
 msgid "API permissions"
 msgstr "Autorizzazioni API"
 
@@ -14403,15 +14404,11 @@ msgstr ""
 
 #: ../../content/applications/general/users/azure.rst:32
 msgid ""
-"Click :guilabel:`Create` and on the new/blank form that appears, add the "
-"following system parameter `auth_oauth.authorization_header` to "
-"the :guilabel:`Key` field, and set the :guilabel:`Value` to `1`. Then "
-"click :guilabel:`Save` to finish."
+"Click :guilabel:`New` and in the blank row that appears, add the following "
+"system parameter `auth_oauth.authorization_header` to the :guilabel:`Key` "
+"field, and set the :guilabel:`Value` to `1`. Then click :guilabel:`Save` to "
+"finish."
 msgstr ""
-"Fai clic su :guilabel:`Crea` e sul nuovo modulo vuoto che appare aggiungi i "
-"seguenti parametri di sistema `auth_oauth.authorization_header` nel "
-"campo :guilabel:`Chiave` e imposta il :guilabel:`Valore` su `1`. In seguito, "
-"fai clic su :guilabel:`Salva` per terminare."
 
 #: ../../content/applications/general/users/azure.rst:37
 msgid "Microsoft Azure dashboard"
@@ -14553,17 +14550,17 @@ msgstr ""
 msgid "Authentication settings and endpoint tokens."
 msgstr "Impostazioni di autenticazione e token endpoint."
 
-#: ../../content/applications/general/users/azure.rst:95
+#: ../../content/applications/general/users/azure.rst:94
 msgid "Click :guilabel:`Save` to ensure these settings are saved."
 msgstr ""
 "Fai clic su :guilabel:`Salva` per essere sicuro di aver salvato le "
 "impostazioni."
 
-#: ../../content/applications/general/users/azure.rst:98
+#: ../../content/applications/general/users/azure.rst:97
 msgid "Gather credentials"
 msgstr "Ottenere le credenziali"
 
-#: ../../content/applications/general/users/azure.rst:100
+#: ../../content/applications/general/users/azure.rst:99
 msgid ""
 "With the application created and authenticated in the Microsoft Azure "
 "console, credentials will be gathered next. To do so, click on "
@@ -14579,7 +14576,7 @@ msgstr ""
 "finestra che appare. Incolla questa credenziale negli appunti, poiché verrà "
 "utilizzata in seguito nella configurazione di Odoo."
 
-#: ../../content/applications/general/users/azure.rst:105
+#: ../../content/applications/general/users/azure.rst:104
 msgid ""
 "After finishing this step, click on :guilabel:`Endpoints` on the top menu "
 "and click the *copy icon* next to :guilabel:`OAuth 2.0 authorization "
@@ -14594,50 +14591,75 @@ msgid "Application ID and OAuth 2.0 authorization endpoint (v2) credentials."
 msgstr "Credenziali ID applicazione e OAuth 2.0 authorization endpoint (v2)."
 
 #: ../../content/applications/general/users/azure.rst:114
+msgid ""
+"Odoo needs permission to read the signed-in user's profile information from "
+"Microsoft Graph during the OAuth flow. At minimum, ensure the delegated "
+"permission :guilabel:`User.Read` is granted on the Azure app registration. "
+"Otherwise, the login process may fail or be unable to correctly link the "
+"Microsoft account to the Odoo user."
+msgstr ""
+
+#: ../../content/applications/general/users/azure.rst:120
+msgid ""
+":guilabel:`User.Read` is often added by default for new app registrations, "
+"but it should be explicitly verified here."
+msgstr ""
+
+#: ../../content/applications/general/users/azure.rst:123
+msgid ""
+"To configure this, click on the :guilabel:`Manage` menu item in the left-"
+"hand column, then:"
+msgstr ""
+
+#: ../../content/applications/general/users/azure.rst:125
+msgid "Click :guilabel:`API permissions` in the left menu."
+msgstr ""
+
+#: ../../content/applications/general/users/azure.rst:126
+msgid "Click :guilabel:`(+) Add a Permission`."
+msgstr ""
+
+#: ../../content/applications/general/users/azure.rst:127
+msgid ""
+"Select :guilabel:`Microsoft Graph` under :guilabel:`Commonly Used Microsoft "
+"APIs`."
+msgstr ""
+
+#: ../../content/applications/general/users/azure.rst:128
+msgid "Choose :guilabel:`Delegated Permissions`."
+msgstr ""
+
+#: ../../content/applications/general/users/azure.rst:129
+msgid ""
+"Search for :guilabel:`User.Read`, select it, and click :guilabel:`Add "
+"permissions`."
+msgstr ""
+
+#: ../../content/applications/general/users/azure.rst:132
 #: ../../content/applications/general/users/facebook.rst:111
 msgid "Odoo setup"
 msgstr "Configurare Odoo"
 
-#: ../../content/applications/general/users/azure.rst:116
+#: ../../content/applications/general/users/azure.rst:134
 msgid ""
 "Finally, the last step in the Microsoft Azure OAuth configuration is to "
-"configure some settings in Odoo. Navigate to :menuselection:`Settings --> "
-"Integrations --> OAuth Authentication` and check the box to activate the "
-"OAuth login feature. Click :guilabel:`Save` to ensure the progress is saved. "
-"Then, sign in to the database once the login screen loads."
+"complete the setup in Odoo. Navigate to :menuselection:`Settings --> "
+"Integrations` and enable the checkbox for :guilabel:`OAuth Authentication`. "
+"Click :guilabel:`Save` to save the changes and refresh the page. Scroll down "
+"to the :menuselection:`Integrations` section, and click on :guilabel:`OAuth "
+"Providers`. Then click :guilabel:`New`."
 msgstr ""
-"Infine, l'ultimo step nella configurazione di Microsoft Azure OAuth "
-"corrisponde alla configurazione di alcune impostazioni in Odoo. Accedi "
-"alle :menuselection:`Impostazioni --> Integrazioni --> Autenticazione OAuth` "
-"e spunta la casella per attivare la funzionalità di accesso OAuth. Fai clic "
-"su :guilabel:`Salva` per assicurarti che il processo venga salvato. In "
-"seguito, accedi al database quando apparirà la schermata di accesso."
 
-#: ../../content/applications/general/users/azure.rst:121
+#: ../../content/applications/general/users/azure.rst:140
 msgid ""
-"Once again, navigate to :menuselection:`Settings --> Integrations --> OAuth "
-"Authentication` and click on :guilabel:`OAuth Providers`. Now, "
-"select :guilabel:`New` in the upper-left corner and name the provider "
-"`Azure`."
-msgstr ""
-"Apri di nuovo l'app :menuselection:`Impostazioni --> Integrazioni --> "
-"Autenticazione OAuth` e fai clic su :guilabel:`Fornitori OAuth`. Ora, "
-"seleziona :guilabel:`Nuovo` nell'angolo in alto a sinistra e rinomina il "
-"fornitore `Azure`."
-
-#: ../../content/applications/general/users/azure.rst:125
-msgid ""
-"Paste the :guilabel:`Application (client) ID` from the previous section into "
+"Enter the :guilabel:`Provider name` as `Azure`. Paste "
+"the :guilabel:`Application (client) ID` from the previous section into "
 "the :guilabel:`Client ID` field. After completing this, paste the "
 "new :guilabel:`OAuth 2.0 authorization endpoint (v2)` value into "
 "the :guilabel:`Authorization URL` field."
 msgstr ""
-"Incolla l':guilabel:`ID applicazione (client)` dalla sezione precedente nel "
-"campo :guilabel:`ID client`. Dopo aver completato questa parte, incolla il "
-"nuovo valore :guilabel:`OAuth 2.0 authorization endpoint (v2)` nel "
-"campo :guilabel:`URL autorizzazione`."
 
-#: ../../content/applications/general/users/azure.rst:129
+#: ../../content/applications/general/users/azure.rst:145
 msgid ""
 "For the :guilabel:`UserInfo URL` field, paste the following :abbr:`URL "
 "(Uniform Resource Locator)`: `https://graph.microsoft.com/oidc/userinfo`"
@@ -14645,7 +14667,7 @@ msgstr ""
 "Per il campo :guilabel:`UserInfo URL`, incolla il seguente :abbr:`URL "
 "(Uniform Resource Locator)`: `https://graph.microsoft.com/oidc/userinfo`"
 
-#: ../../content/applications/general/users/azure.rst:132
+#: ../../content/applications/general/users/azure.rst:148
 msgid ""
 "In the :guilabel:`Scope` field, paste the following value: `openid profile "
 "email`. Next, the Windows logo can be used as the CSS class on the login "
@@ -14657,7 +14679,7 @@ msgstr ""
 "schermata di accesso inserendo il seguente valore: `fa fa-fw fa-windows` nel "
 "campo :guilabel:`classe CSS`."
 
-#: ../../content/applications/general/users/azure.rst:136
+#: ../../content/applications/general/users/azure.rst:152
 msgid ""
 "Check the box next to the :guilabel:`Allowed` field to enable the OAuth "
 "provider. Finally, add `Microsoft Azure` to the :guilabel:`Login button "
@@ -14673,7 +14695,7 @@ msgstr ""
 msgid "Odoo provider setup in the Settings application."
 msgstr "Configurazione fornitore Odoo nell'applicazione Impostazioni."
 
-#: ../../content/applications/general/users/azure.rst:144
+#: ../../content/applications/general/users/azure.rst:159
 msgid ""
 ":guilabel:`Save` the changes to complete the OAuth authentication setup in "
 "Odoo."
@@ -14681,11 +14703,11 @@ msgstr ""
 ":guilabel:`Salva` le modifiche per completare la configurazione "
 "dell'autenticazione OAuth in Odoo."
 
-#: ../../content/applications/general/users/azure.rst:147
+#: ../../content/applications/general/users/azure.rst:162
 msgid "User experience flows"
 msgstr "Flussi esperienza utente"
 
-#: ../../content/applications/general/users/azure.rst:149
+#: ../../content/applications/general/users/azure.rst:164
 msgid ""
 "For a user to log in to Odoo using Microsoft Azure, the user must be on "
 "the :menuselection:`Odoo password reset page`. This is the only way that "
@@ -14697,7 +14719,7 @@ msgstr ""
 "Odoo`. Questo è l'unico modo in cui Odoo è in grado di collegare l'account "
 "Microsoft Azure e consentire all'utente di accedere."
 
-#: ../../content/applications/general/users/azure.rst:154
+#: ../../content/applications/general/users/azure.rst:169
 msgid ""
 "Existing users must :ref:`reset their password <users/reset-password>` to "
 "access the :menuselection:`Odoo password reset page`. New Odoo users must "
@@ -14711,7 +14733,7 @@ msgstr ""
 "su :guilabel:`Microsoft Azure`. Gli utenti non devono impostare una nuova "
 "password."
 
-#: ../../content/applications/general/users/azure.rst:159
+#: ../../content/applications/general/users/azure.rst:174
 msgid ""
 "To sign in to Odoo for the first time using the Microsoft Azure OAuth "
 "provider, navigate to the :menuselection:`Odoo password reset page` (using "
@@ -14725,11 +14747,7 @@ msgstr ""
 "seguito, fai clic sull'opzione denominata :guilabel:`Microsoft Azure`. La "
 "pagina reindirizzerà alla pagina di accesso di Microsoft."
 
-#: ../../content/applications/general/users/azure.rst:None
-msgid "Microsoft Outlook login page."
-msgstr "Pagina di accesso Microsoft Outlook."
-
-#: ../../content/applications/general/users/azure.rst:168
+#: ../../content/applications/general/users/azure.rst:179
 msgid ""
 "Enter the :guilabel:`Microsoft Email Address` and click :guilabel:`Next`. "
 "Follow the process to sign in to the account. Should :abbr:`2FA (Two Factor "
@@ -14740,11 +14758,7 @@ msgstr ""
 "attiva la :abbr:`2FA (Autenticazione a due fattori)`, potrebbe essere "
 "necessario completare uno step aggiuntivo."
 
-#: ../../content/applications/general/users/azure.rst:None
-msgid "Enter Microsoft login credentials."
-msgstr "Inserimento delle credenziali di accesso Microsoft."
-
-#: ../../content/applications/general/users/azure.rst:176
+#: ../../content/applications/general/users/azure.rst:183
 msgid ""
 "Finally, after logging in to the account, the page will redirect to a "
 "permissions page where the user will be prompted to :guilabel:`Accept` the "
@@ -14754,14 +14768,6 @@ msgstr ""
 "a una pagina di autorizzazioni in cui verrà richiesto all'utente "
 "di :guilabel:`Accettare` le condizioni di accesso dell'applicazione Odoo "
 "alle sue informazioni Microsoft."
-
-#: ../../content/applications/general/users/azure.rst:None
-msgid ""
-"Accept Microsoft conditions for permission access to your account "
-"information."
-msgstr ""
-"Schermata per l'accettazione delle condizioni Microsoft per accedere alle "
-"informazioni dell'account."
 
 #: ../../content/applications/general/users/facebook.rst:3
 msgid "Facebook sign-in authentication"
@@ -16017,6 +16023,67 @@ msgstr ""
 #: ../../content/applications/general/users/user_portals/updating_portal_info.rst:154
 msgid ":doc:`Portal access documentation <portal_access>`"
 msgstr ""
+
+#~ msgid ""
+#~ "Click :guilabel:`Create` and on the new/blank form that appears, add the "
+#~ "following system parameter `auth_oauth.authorization_header` to "
+#~ "the :guilabel:`Key` field, and set the :guilabel:`Value` to `1`. Then "
+#~ "click :guilabel:`Save` to finish."
+#~ msgstr ""
+#~ "Fai clic su :guilabel:`Crea` e sul nuovo modulo vuoto che appare aggiungi "
+#~ "i seguenti parametri di sistema `auth_oauth.authorization_header` nel "
+#~ "campo :guilabel:`Chiave` e imposta il :guilabel:`Valore` su `1`. In "
+#~ "seguito, fai clic su :guilabel:`Salva` per terminare."
+
+#~ msgid ""
+#~ "Finally, the last step in the Microsoft Azure OAuth configuration is to "
+#~ "configure some settings in Odoo. Navigate to :menuselection:`Settings --> "
+#~ "Integrations --> OAuth Authentication` and check the box to activate the "
+#~ "OAuth login feature. Click :guilabel:`Save` to ensure the progress is "
+#~ "saved. Then, sign in to the database once the login screen loads."
+#~ msgstr ""
+#~ "Infine, l'ultimo step nella configurazione di Microsoft Azure OAuth "
+#~ "corrisponde alla configurazione di alcune impostazioni in Odoo. Accedi "
+#~ "alle :menuselection:`Impostazioni --> Integrazioni --> Autenticazione "
+#~ "OAuth` e spunta la casella per attivare la funzionalità di accesso OAuth. "
+#~ "Fai clic su :guilabel:`Salva` per assicurarti che il processo venga "
+#~ "salvato. In seguito, accedi al database quando apparirà la schermata di "
+#~ "accesso."
+
+#~ msgid ""
+#~ "Once again, navigate to :menuselection:`Settings --> Integrations --> "
+#~ "OAuth Authentication` and click on :guilabel:`OAuth Providers`. Now, "
+#~ "select :guilabel:`New` in the upper-left corner and name the provider "
+#~ "`Azure`."
+#~ msgstr ""
+#~ "Apri di nuovo l'app :menuselection:`Impostazioni --> Integrazioni --> "
+#~ "Autenticazione OAuth` e fai clic su :guilabel:`Fornitori OAuth`. Ora, "
+#~ "seleziona :guilabel:`Nuovo` nell'angolo in alto a sinistra e rinomina il "
+#~ "fornitore `Azure`."
+
+#~ msgid ""
+#~ "Paste the :guilabel:`Application (client) ID` from the previous section "
+#~ "into the :guilabel:`Client ID` field. After completing this, paste the "
+#~ "new :guilabel:`OAuth 2.0 authorization endpoint (v2)` value into "
+#~ "the :guilabel:`Authorization URL` field."
+#~ msgstr ""
+#~ "Incolla l':guilabel:`ID applicazione (client)` dalla sezione precedente "
+#~ "nel campo :guilabel:`ID client`. Dopo aver completato questa parte, "
+#~ "incolla il nuovo valore :guilabel:`OAuth 2.0 authorization endpoint (v2)` "
+#~ "nel campo :guilabel:`URL autorizzazione`."
+
+#~ msgid "Microsoft Outlook login page."
+#~ msgstr "Pagina di accesso Microsoft Outlook."
+
+#~ msgid "Enter Microsoft login credentials."
+#~ msgstr "Inserimento delle credenziali di accesso Microsoft."
+
+#~ msgid ""
+#~ "Accept Microsoft conditions for permission access to your account "
+#~ "information."
+#~ msgstr ""
+#~ "Schermata per l'accettazione delle condizioni Microsoft per accedere alle "
+#~ "informazioni dell'account."
 
 #~ msgid ""
 #~ "Odoo databases have three types of users: :guilabel:`Internal "
