@@ -4157,6 +4157,17 @@ take the following attributes:
 
   will display the users avatars next to their names when grouped by user_id.
 
+.. attribute:: schedule
+   :noindex:
+
+   If set to `True`, non-scheduled events (events which have their start date and
+   stop date unset) will appear in a side-panel so that the user can drag and drop
+   these events into the gantt view in order to schedule them instantaneously.
+
+   :requirement: Optional
+   :type: bool
+   :default: `False`
+
 .. include:: view_architectures/root_attribute_sample.rst
 
 .. _reference/view_architectures/map:
