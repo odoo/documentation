@@ -72,6 +72,34 @@ module for the ``estate.property`` model. For now, the overridden action will si
         def inherited_action(self):
             return super().inherited_action()
 
+.. warning::
+   When inheriting a model to override methods, you must explicitly set ``_name`` 
+   to the same value as the parent model. If you omit ``_name`` (implicit inheritance), 
+   your method overrides may not be invoked correctly.
+   
+   **Incorrect (method won't be called):**
+   
+   .. code-block:: python
+   
+      class EstateModel(models.Model):
+          _inherit = ["estate_property"]  # Missing _name
+          
+          def action_sold(self):
+              # This will NOT be called!
+              return super().action_sold()
+   
+   **Correct (method will be called):**
+   
+   .. code-block:: python
+   
+      class EstateModel(models.Model):
+          _name = "estate_property"  # Explicitly set _name
+          _inherit = ["estate_property"]
+          
+          def action_sold(self):
+              # This WILL be called correctly
+              return super().action_sold()
+
 A practical example can be found
 `here <https://github.com/odoo/odoo/blob/f1f48cdaab3dd7847e8546ad9887f24a9e2ed4c1/addons/event_sale/models/account_move.py#L7-L16>`__.
 
