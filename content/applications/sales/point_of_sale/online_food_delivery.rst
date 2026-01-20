@@ -20,15 +20,18 @@ Supported providers:
 - `HungerStation <https://hungerstation.com>`_
 - `Jahez <https://www.jahez.net/>`_
 - `Just Eat <https://www.just-eat.ie/>`_
+- `Keeta <https://www.keeta-global.com/SA/en>`_
 - `Mrsool <https://mrsool.co>`_
 - `Ninja <https://ananinja.com/>`_
 - `NoonFood <https://www.noon.com>`_
 - `Postmates <https://www.postmates.com>`_
 - `Rafeeq <https://www.gorafeeq.com/en>`_
+- `Rappi <https://about.rappi.com/>`_
 - `SkipTheDishes <https://www.skipthedishes.com/>`_
 - `Swiggy <https://www.swiggy.com>`_
 - `Talabat <https://www.talabat.com>`_
 - `UberEats <https://www.ubereats.com>`_
+- `Wolt <https://wolt.com/>`_
 - `Zomato <https://www.zomato.com>`_
 
 Configuration
