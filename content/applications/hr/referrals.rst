@@ -253,6 +253,7 @@ points required.
    - :doc:`referrals/rewards`
    - :doc:`referrals/alerts`
    - :doc:`referrals/referral_analysis`
+   - :doc:`referrals/rewards_report`
    - :doc:`referrals/points_report`
 
 .. toctree::
@@ -261,4 +262,5 @@ points required.
    referrals/rewards
    referrals/alerts
    referrals/referral_analysis
+   referrals/rewards_report
    referrals/points_report
