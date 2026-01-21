@@ -24,37 +24,37 @@ Settings`.
 
 Configure the following:
 
-- :guilabel:`Lunch Overdraft`: enter the maximum overdraft amount for employees. The currency format
+- :guilabel:`Lunch Overdraft`: Enter the maximum overdraft amount for employees. The currency format
   is determined by the localization setting of the company.
-- :guilabel:`Reception notification`: set the message users receive via the **Discuss** app when
+- :guilabel:`Reception notification`: Set the message users receive via the **Discuss** app when
   their food has been delivered. The default message `Your lunch has been delivered. Enjoy your
   meal!` populates this field, but can be modified, if desired.
 
-.. tip::
-   If a database has multiple languages installed, many forms in the **Lunch** application have the
-   option of entering translations for various fields.
+Translation support
+-------------------
 
-   If translations are available to be configured, a language code appears next to a translatable
-   field on a form. To add translations for that field, click the two letter language code (for
-   example, :guilabel:`EN` for English) and a translation pop-up window appears.
+If a database has multiple languages installed, many forms in the **Lunch** application have the
+option of entering translations for various fields.
 
-   The following is an example for the :guilabel:`Reception notification` field in the settings
-   menu:
+If translations are available to be configured, a language code appears next to a translatable field
+on a form. To add translations for that field, click the two letter language code (for example,
+:guilabel:`EN` for English) and a translation pop-up window appears.
 
-   Navigate to :menuselection:`Lunch app --> Configuration --> Settings`. Click the :guilabel:`EN`
-   In the top-right of the text box beneath the :guilabel:`Reception notification` section. A
-   :guilabel:`Translate: company_lunch_notify_message` pop-up window loads with the option to enter
-   a translation for the other languages used by the database.
+The image below is an example for the :guilabel:`Reception notification` field in the settings menu.
 
-   The first column lists the different languages in alphabetical order, with the currently selected
-   language in bold. The second column has the currently configured message in each column. The last
-   column in the far-right provides a text box to type in a translation for each language.
+Navigate to :menuselection:`Lunch app --> Configuration --> Settings`. Click the :guilabel:`EN` in
+the top-right of the text box beneath the :guilabel:`Reception notification` section. A
+:guilabel:`Translate: company_lunch_notify_message` pop-up window loads with the option to enter a
+translation for the other languages used by the database.
 
-   Enter the text that should appear for each language, then click :guilabel:`Save`.
+The first column lists the different languages in alphabetical order, with the currently selected
+language in bold. The second column has the currently configured message in each column. The last
+column in the far-right provides a text box to type in a translation for each language.
 
-  .. image:: lunch/translation.png
-     :alt: The translation text box, with the current language highlighted, and the Arabic
-           translation field highlighted.
+Enter the text that should appear for each language, then click :guilabel:`Save`.
+
+.. image:: lunch/translation.png
+   :alt: The translation text box with the current language at the top and translations below.
 
 .. _lunch/locations:
 
@@ -87,32 +87,37 @@ No alerts are preconfigured by default. To set up an alert, navigate to :menusel
 --> Configuration --> Alerts`. Click the :guilabel:`New` button in the top-left corner and a blank
 lunch alert form loads. Enter the following information on the form:
 
-- :guilabel:`Alert Name`: enter a name for the alert. This should be short and descriptive, such as
+- :guilabel:`Alert Name`: Enter a name for the alert. This should be short and descriptive, such as
   `New Lunch Vendor` or `Order by 11:00 AM`. This field is **required**.
-- :guilabel:`Display`: select whether the alert is visible in the **Lunch** app (:guilabel:`Alert in
-  app)` or sent to employees via the **Discuss** app in a chat window (:guilabel:`Chat
-  notification`).
+- :guilabel:`Display`: Select how the alert is shown. The options are:
 
-  - :guilabel:`Recipients`: this field only appears if :guilabel:`Chat notification` is selected for
-    the :guilabel:`Display` option. Select who receives the chat alert. The options are:
-    :guilabel:`Everyone`, :guilabel:`Employee who ordered last week`, :guilabel:`Employee who
-    ordered last month`, or :guilabel:`Employee who ordered last year`.
+  - :guilabel:`Alert in app`: The alert is visible on the main **Lunch** app dashboard, in an orange
+    box, above the user's name on the right side of the dashboard.
+  - :guilabel:`Chat notification`: The alert is sent to users via the **Discuss** app in a chat
+    window. If this option is selected, the following additional field appears:
 
-- :guilabel:`Location`: select the locations the alert should appear for from the drop-down menu.
+    - :guilabel:`Recipients`: Select who receives the chat alert. The options are:
+      :guilabel:`Everyone`, :guilabel:`Employee who ordered last week`, :guilabel:`Employee who
+      ordered last month`, or :guilabel:`Employee who ordered last year`.
+
+- :guilabel:`Location`: Select the locations the alert appears for using the drop-down menu.
   Multiple locations can be selected. This field is **required**, therefore, if the alert applies to
-  all locations, select all the locations from the drop-down menu.
-- :guilabel:`Show Until`: if the alert should expire on a specific date, select the date from the
+  all locations, select all the locations from the drop-down menu. If this field is left blank, the
+  alert will **not** be displayed.
+- :guilabel:`Show Until`: If the alert should expire on a specific date, select the date from the
   calendar picker.
-- :guilabel:`Active`: this option is on (appears green) by default. To turn off the alert, click the
-  toggle so that it no longer appears green.
+- :guilabel:`Active`: This option is enabled (appears green) by default. To turn off the alert,
+  click the toggle so that it no longer appears green.
 - :guilabel:`Message`: Enter the alert message in this field. This field is **required**.
-- :guilabel:`Notification Time`: select the days of the week the alert should be sent. By default,
-  all seven days are active. Click on a checkbox to change the setting from active to inactive.
+- :guilabel:`Notification Time`: Select the days of the week the alert is visible or sent. By
+  default, all seven days are active. Click on a checkbox to change the setting from active to
+  inactive.
 
-  If :guilabel:`Chat notification` was selected for the :guilabel:`Display` option, a
-  :guilabel:`Time` field also appears. Enter the time the chat message should be sent. Next, select
-  if the time is either :guilabel:`AM` or :guilabel:`PM` using the drop-down menu to the right of
-  the :guilabel:`Time` field.
+  .. note::
+     If :guilabel:`Chat notification` was selected for the :guilabel:`Display` option, a time field
+     appears beneath the :guilabel:`Notification Time` block. Enter the time the chat message is
+     sent. Next, select if the time is either :guilabel:`AM` or :guilabel:`PM` using the drop-down
+     menu to the right of the time field.
 
 .. image:: lunch/alert.png
    :alt: An alert form with all of the information filled out for a chat alert sent at 10:30 AM,
