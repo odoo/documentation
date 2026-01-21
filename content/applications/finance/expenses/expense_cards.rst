@@ -21,6 +21,10 @@ employees can use their expense cards, and the money is pulled from the company'
    To create and use expense cards, both the **Accounting** and **Invoicing** apps **must** be
    :ref:`installed <general/install>`.
 
+   To access confidential card data (card number and CVV for virtual cards; PIN for physical cards),
+   the employee **must** have a :doc:`user <../../general/users>` profile. These details can
+   **only** be accessed through that profile.
+
 .. note::
    Expense cards act like pre-paid debit cards, as they can **only** be used with a connected Stripe
    account, and **only** if funds are added to that account, to be drawn from.
@@ -329,17 +333,18 @@ activation.
 Card PIN
 --------
 
-To view the card's PIN, open the card form in the **Expenses** app, and enter the six-digit code
-sent via SMS to the associated phone number. The card and its PIN appear in a pop-up window. The PIN
-is displayed below the card and **cannot** be changed.
+To view the card's PIN, the cardholder **must** have a :doc:`user <../../general/users>` profile.
+Navigate to :menuselection:`Expenses app --> Cards`, and click on the card to open the card form.
+Enter the six-digit code sent via SMS to the associated phone number. The card and its PIN appear in
+a pop-up window. The PIN is displayed below the card and **cannot** be changed.
 
 .. _expenses/virtual:
 
 Virtual card
 ============
 
-If using a virtual card, there is one additional step to access the card information to use for
-purchases.
+If using a virtual card, the cardholder **must** have a :doc:`user <../../general/users>` profile to
+access the card information required for purchases.
 
 To obtain the card information, navigate to :menuselection:`Expenses app --> Cards` and click on the
 virtual card being used. Next, click into the :guilabel:`Card Details` tab, and two items appear:
