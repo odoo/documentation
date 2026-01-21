@@ -5,17 +5,20 @@ AI API keys
 .. |AI| replace:: :abbr:`AI (artificial intelligence)`
 .. |API| replace:: :abbr:`API (application program interface)`
 
-Odoo's *AI* application settings contain options to control which |AI| provider the app utilizes,
+Odoo's **AI** application settings contain options to control which |AI| provider the app utilizes,
 manage |API| credentials, and define the default prompts. Odoo supports both Gemini and OpenAI
-(ChatGPT) as providers in the *AI* application.
+(ChatGPT) as providers in the  **AI** application.
 
-Some |AI| features can be used without the *AI* app installed. However, to use custom |API|
+Some |AI| features can be used without the  **AI** app installed. However, to use custom |API|
 credentials or to alter the |AI| provider used for a specific agent, the app **must** be installed.
 
 .. important::
-   While users can add their own |API| keys, it is **not** required. However, some organizations may
-   prefer to use their own keys for greater control over permissions, version updates, or internal
-   policy compliance.
+   |API| keys are required for :doc:`Odoo.sh </../../../../administration/odoo_sh>` or
+   :doc:`On-premise </../../../../administration/on_premise>` databases to use |AI| features.
+
+   While :doc:`Odoo Online </../../../../administration/odoo_online>` users can add their own |API|
+   keys, it is not required. However, some organizations may prefer to use their own keys for
+   greater control over permissions, version updates, or internal policy compliance.
 
 .. _ai/apikeys/chatgpt:
 
