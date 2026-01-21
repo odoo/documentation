@@ -446,10 +446,16 @@ Lookup
      - Description or link
    * - ADDRESS(row, column, [absolute_relative_mode], [use_a1_notation], [sheet])
      - `Excel ADDRESS article <https://support.microsoft.com/office/address-function-d0c26c0d-3991-446b-8de4-ab46431d4f89>`_
+   * - CHOOSE(index, [choice, ...])
+     - `Excel CHOOSE article <https://support.microsoft.com/en-us/office/choose-function-fc5c184f-cb62-4ec7-a46e-38653b98f5bc>`_
    * - COLUMN([cell_reference])
      - `Excel COLUMN article <https://support.microsoft.com/office/column-function-44e8c754-711c-4df3-9da4-47a55042554b>`_
    * - COLUMNS(range)
      - `Excel COLUMNS article <https://support.microsoft.com/office/columns-function-4e8e7b4e-e603-43e8-b177-956088fa48ca>`_
+   * - DROP(array, rows, [columns])
+     - `Excel DROP article <https://support.microsoft.com/en-us/office/drop-function-1cb4e151-9e17-4838-abe5-9ba48d8c6a34>`_
+   * - FORMULATEXT(cell_reference)
+     - `Excel FORMULATEXT article <https://support.microsoft.com/en-us/office/formulatext-function-0a786771-54fd-4ae2-96ee-09cda35439c8>`_
    * - HLOOKUP(search_key, range, index, [is_sorted])
      - `Excel HLOOKUP article <https://support.microsoft.com/office/hlookup-function-a3034eec-b719-4ba3-bb65-e1ad662ed95f>`_
    * - INDEX(reference, row, column)
@@ -472,6 +478,8 @@ Lookup
      - `Excel ROW article <https://support.microsoft.com/office/row-function-3a63b74a-c4d0-4093-b49a-e76eb49a6d8d>`_
    * - ROWS(range)
      - `Excel ROWS article <https://support.microsoft.com/office/rows-function-b592593e-3fc2-47f2-bec1-bda493811597>`_
+   * - TAKE(array, rows, [columns])
+     - `Excel TAKE article <https://support.microsoft.com/en-us/office/take-function-25382ff1-5da1-4f78-ab43-f33bd2e4e003>`_
    * - VLOOKUP(search_key, range, index, [is_sorted])
      - `Excel VLOOKUP article <https://support.microsoft.com/office/vlookup-function-0bbc8083-26fe-4963-8ab8-93a18ad188a1>`_
    * - XLOOKUP(search_key, lookup_range, return_range, [if_not_found], [match_mode], [search_mode])
@@ -795,6 +803,8 @@ Text
 
    * - Name and arguments
      - Description or link
+   * - ARRAYTOTEXT(array, [format])
+     - `Excel ARRAYTOTEXT article <https://support.microsoft.com/en-us/office/arraytotext-function-9cdcad46-2fa5-4c6b-ac92-14e7bc862b8b>`_
    * - CHAR(table_number)
      - `Excel CHAR article <https://support.microsoft.com/office/char-function-bbd249c8-b36e-4a91-8017-1c133f9b837a>`_
    * - CLEAN(text)
