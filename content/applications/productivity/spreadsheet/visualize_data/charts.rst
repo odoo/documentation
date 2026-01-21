@@ -239,6 +239,13 @@ When a chart is:
       format, such as total sales or conversion rates, and compare to a baseline or a previous
       value.
 
+      .. image:: charts/chart-type-calendar.png
+         :alt: Calendar chart icon
+
+      :guilabel:`Calendar`: shows activity over a long, continuous span of time, such as
+      months or years. This chart type can be used to illustrate fluctuations based on e.g.,
+      specific days of the week or for tracking long-term trends.
+
 .. _spreadsheet/visualize/charts-design:
 
 Design
