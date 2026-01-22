@@ -167,5 +167,6 @@ errors.
    configure/type
    configure/uom
    configure/package
+   configure/pack_in_pack
    configure/packaging
 
