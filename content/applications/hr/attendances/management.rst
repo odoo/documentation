@@ -93,6 +93,8 @@ Once overtime hours are partially approved, the status changes to :guilabel:`App
    - :guilabel:`Manual`: the record was created manually in the **Attendances** app. This is
      typically done by management, to add a missing record.
 
+.. _attendances/create-records:
+
 Create attendance records
 =========================
 
