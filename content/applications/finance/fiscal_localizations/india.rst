@@ -67,7 +67,7 @@ You must register on the :abbr:`NIC (National Informatics Centre)` e-Invoice por
    User`;
 #. After that, you should receive an :abbr:`OTP (one-time password)` code on your registered mobile
    number. Enter the OTP code and click :guilabel:`Verify OTP`;
-#. Select :guilabel:`Through GSP` for the API interface, set :guilabel:`Tera Software Limited` as
+#. Select :guilabel:`Through GSP` for the API interface, set :guilabel:`BVM IT Consulting Services India Private Limited` as
    GSP, and type in a :guilabel:`Username` and :guilabel:`Password` for your API. Once it is done,
    click :guilabel:`Submit`.
 
@@ -201,13 +201,13 @@ You must register on the :abbr:`NIC (National Informatics Centre)` E-Way bill po
 #. From your dashboard, go to :menuselection:`Registration --> For GSP`;
 #. Click :guilabel:`Send OTP`. Once you have received the code on your registered mobile number,
    enter it and click :guilabel:`Verify OTP`;
-#. Check if :guilabel:`Tera Software Limited` is already on the registered GSP/ERP list. If so, use
+#. Check if :guilabel:`BVM IT Consulting Services India Private Limited` is already on the registered GSP/ERP list. If so, use
    the username and password used to log in to the NIC portal. Otherwise, follow the next steps;
 
    .. image:: india/e-waybill-gsp-list.png
       :alt: E-Way bill list of registered GSP/ERP
 
-#. Select :guilabel:`Add/New`, select :guilabel:`Tera Software Limited` as your GSP Name, create a
+#. Select :guilabel:`Add/New`, select :guilabel:`BVM IT Consulting Services India Private Limited` as your GSP Name, create a
    :guilabel:`Username` and a :guilabel:`Password` for your API, and click :guilabel:`Add`.
 
    .. image:: india/e-waybill-registration-details.png
