@@ -4191,10 +4191,6 @@ The view's root element is ``<map>``. It can have the following attributes:
     if ``1`` hide the name from the pin's popup (default: ``0``).
 ``hide_address``
     if ``1`` hide the address from the pin's popup (default: ``0``).
-``hide_title``
-    if ``1`` hide the title from the pin list (default: ``0``).
-``panel_title``
-    String to display as title of the pin list. If not provided, the title is the action's name or "Items" if the view is not in an action.
 ``limit``
     Maximum number of records to fetch (default: ``80``). It must be a positive integer.
 
