@@ -8,12 +8,12 @@ various elements on your website, including its content, social sharing, URLs, i
 speed.
 
 .. note::
-   - Odoo provides several modules to help you build your website content, such as
+   - Several modules are provided to help build the website's content, such as
      :doc:`eCommerce <../../ecommerce>`, :doc:`Blog <../../blog>`, :doc:`eLearning
      <../../elearning>`, and :doc:`Forum <../../forum>`.
-   - All Odoo :doc:`themes <../web_design/themes>` rely on the CSS Framework `Bootstrap
-     <https://getbootstrap.com/>`_ to render efficiently according to the device: desktop, tablet,
-     or mobile, which positively impacts ranking in search engines.
+   - All provided :doc:`themes <../web_design/themes>` are built with the `Bootstrap
+     <https://getbootstrap.com/>`_ CSS framework to ensure responsive layouts across desktop, tablet,
+     or mobile, which can support SEO.
 
 .. seealso::
    `Magic Sheet - Optimize your website [PDF]
@@ -25,13 +25,20 @@ Content optimization
 To optimize a webpage's SEO, access the page, then go to :menuselection:`Website --> Site -->
 Optimize SEO`.
 
-.. image:: seo/optimize-seo.png
-   :alt: Optimize SEO
+.. image:: seo/Search-engine-Optimization.png
+   :alt: Search Engine Optimization
 
 .. note::
-   If you change the title of a blog post or the name of a product, the link to the related webpage
-   is automatically updated. The old link still functions as Odoo creates a
-   :ref:`301 redirect <website/pages/URL-redirection>`, maintaining the SEO.
+   Changing the title of a blog post or the name of a product automatically updates the link to the
+   related webpage. The old link still functions as a
+   :ref:`301 redirect <website/pages/URL-redirection>` is created, maintaining the SEO.
+
+.. tip::
+   Click :guilabel:`Fill with AI` to automatically generate a meta title, a description, and benefit
+   from suggested keywords with a single click.
+
+   Remove incorrect URLs from the :guilabel:`Broken Link` field and select valid ones to
+   prevent errors.
 
 Keywords and meta tags
 ----------------------
@@ -56,7 +63,7 @@ Meta tags and meta keywords
 **Meta tags** are HTML elements that provide information about a webpage to search engines and
 website visitors. They play a crucial role in SEO by helping search engines understand the content
 and context of a webpage and attract visitors with appealing content. They can be edited in the
-:guilabel:`optimize SEO` pop-up. There are two types of meta tags in Odoo:
+:guilabel:`optimize SEO` pop-up. There are two types of meta tags:
 
 - :guilabel:`Title` tags specify a webpage's title and are displayed as a clickable link in search
   engine results. They should be concise, descriptive, and relevant to the page's content. You can
@@ -64,9 +71,9 @@ and context of a webpage and attract visitors with appealing content. They can b
   content.
 
 - :guilabel:`Description` tags summarize the webpage's content, often displayed in search engine
-  results below the title. They are used to encourage the user to visit the page. You can update
-  the description tag of your webpage or keep it empty to use the default value based on the page’s
-  content.
+  results below the title. They are used to encourage the user to visit the page.
+  Update the description tag of the webpage, or keep it empty to use the default description based
+  on the page's content.
 
 .. note::
    The :guilabel:`Preview` card displays how the title and description tags should appear in search
@@ -94,10 +101,9 @@ search engines to optimize SEO ranking.
 Odoo automatically compresses uploaded images and converts them to `Webp`. With this file format,
 photos are smaller, which increases the page loading speed and, therefore, gives a better ranking in
 SEO. All images used in Odoo official :doc:`themes <../web_design/themes>` are also compressed by
-default. If you are using a third-party theme, it may provide images that are not compressed
-efficiently.
+default. Third-party themes may not provide compressed images efficiently.
 
-**To modify an image** from your website, select the image, click :guilabel:`Edit`, then go to the
+**To modify an image** from a webpage, select the image, click :guilabel:`Edit`, then go to the
 :guilabel:`Customize` tab, and adapt the :guilabel:`Format` in the :guilabel:`Image` section.
 
 .. important::
@@ -109,17 +115,18 @@ efficiently.
 Image for social share
 ~~~~~~~~~~~~~~~~~~~~~~
 
-When you share your page on social media, your website logo is selected by default, but you can
-search the :doc:`Unsplash image library <../../../general/integrations/unsplash>` or upload any
+When you share a page on social media, the website logo is selected by default.
+Search the :doc:`Unsplash image library <../../../general/integrations/unsplash>` or upload any
 other image by clicking the :icon:`fa-upload` :guilabel:`(upload)` button.
 
 .. tip::
-   You can set a default social share image. Go to :menuselection:`Website --> Configuration --> Settings`
-   in the :guilabel:`SEO`section and tick the :guilabel:`Default Social Share Image` checkbox.
+   To set a default social share image, go to :menuselection:`Website --> Configuration -->
+   Settings`. Under the :guilabel:`Tracking & SEO` section, enable
+   :guilabel:`Default Social Share Image`.
 
 .. note::
-   - The :guilabel:`Social Preview` card displays how the page's information would appear when
-     shared.
+   The :guilabel:`Social Preview` card displays how the page's information would appear when
+   shared.
 
 Indexation
 ==========
@@ -136,10 +143,10 @@ and organic traffic.
 .. note::
    **When you first create your website on Odoo, it will not appear directly in search engine
    results.** Search engines need time to crawl and index it, which can take anywhere from a few
-   days to several weeks. For Google, you can use the :doc:`Search Console <../configuration/google_search_console>`
-   and request indexing for specific URLs, though this does not guarantee faster results.
-   If you have an existing website and are migrating, your previous website may still appear instead
-   of the new one during that timeframe.
+   days to several weeks. For Google, you can use the :doc:`Search Console
+   <../configuration/google_search_console>` and request indexing for specific URLs, though this
+   does not guarantee faster results. If you have an existing website and are migrating, your
+   previous website may still appear instead of the new one during that timeframe.
 
 SEO impact when migrating your existing website to Odoo
 -------------------------------------------------------
@@ -148,14 +155,14 @@ In most cases, migrating to Odoo will not negatively impact your SEO. While no p
 guarantee that rankings will remain unchanged, follow these best practices to significantly reduce
 the risk.
 
-- Keep your existing content.
+- Keep the existing content.
 
 - Implement :ref:`redirects <website/pages/URL-redirection>` from old URLs to their new counterparts.
 
-- Monitor traffic and indexation to make sure that everything is going well, using :doc:`../configuration/google_search_console`.
+- Monitor traffic and indexation to make sure that everything is going well, using
+  :doc:`../configuration/google_search_console`.
 
-By doing this, you help search engines reindex your site and maintain your visibility in search
-results.
+By doing this, search engines reindex the site and maintain its visibility in search results.
 
 .. note::
    It is normal to experience a traffic decrease in the first days.
@@ -178,7 +185,8 @@ methods:
 
     - **404:** :ref:`Configure a 404 redirection. <website/pages/URL-redirection>`
     - **403:** Access the page's :ref:`properties <website/pages/page_properties>`
-      and toggle the :guilabel:`Visibility` switch off or :ref:`unpublish the page <website/pages/un-publish-page>`.
+      and toggle the :guilabel:`Visibility` switch off or :ref:`unpublish the page
+      <website/pages/un-publish-page>`.
 
  - **Google Search Console:** Use Google Search Console to request the removal of specific URLs from
    Google's index.
