@@ -143,7 +143,7 @@ There are two available methods for calculating withholding tax: gross and deduc
   calculates the base plus Withholding Tax (WHT) without reducing the payment amount.
 - Deducted withholding: It reduces the payable amount by the withholding amount directly, meaning
   the total payment reflects the deduction upfront. This affects how the accounting entries and
-  payable lines are booked, as seen in the comparison screenshots provided.
+  payable lines are booked.
 
 .. note::
    Deducted withholding taxes are not enabled by default. To activate it, go to Accounting -->
@@ -237,7 +237,7 @@ two levels:
 - Company level: To add Arabic as a secondary language to meet Saudi Arabia VAT regulations:
 
   - For :guilabel:`Tax Invoices`: Go to :menuselection:`Accounting --> Configuration --> Settings`,
-    in the :guilabel:`Fiscal Localization` section.
+    in the :guilabel:`Customer Invoices` section.
   - For Point of Sale receipts: Go to :menuselection:`Point of Sale --> Configuration --> Settings`,
     and navigate to the :guilabel:`Bills & Receipts` section.
 
@@ -535,10 +535,11 @@ Within this same tax position, retention can also be applied at the invoice leve
 negative invoice line using a 0% (Not Subject to VAT) tax rate.
 
 .. warning::
-   - Using a negative tax with :guilabel:`Is Retention` enabled, along with a generic tax on the
-     invoice line, usually indicates that VAT has been paid on the full taxable amount. Therefore,
-     the final invoice for releasing the retention amount does not qualify as a :guilabel:`Tax
-     Invoice` and should not be submitted to ZATCA.
+   - Adding either a negative tax with :guilabel:`Is Retention` enabled and a generic tax on the
+     invoice line, or a separate negative invoice line with a 0% (:guilabel:`Not Subject to VAT`)
+     tax rate at the invoice level, usually indicates that VAT has been paid on the full taxable
+     amount. Therefore, the final invoice for releasing the retention amount does not qualify as a
+     :guilabel:`Tax Invoice` and should not be submitted to ZATCA.
    - The 0% (Not Subject to VAT) tax is already preconfigured according to ZATCA rules; do not
      modify it.
 
