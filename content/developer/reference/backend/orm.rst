@@ -118,7 +118,7 @@ Fields
 
 .. _reference/fields/basic:
 
-Basic Fields
+Basic fields
 ------------
 
 .. autoclass:: Boolean()
@@ -131,14 +131,10 @@ Basic Fields
 
 .. _reference/fields/advanced:
 
-Advanced Fields
+Advanced fields
 ---------------
 
-.. autoclass:: Binary()
-
 .. autoclass:: Html()
-
-.. autoclass:: Image()
 
 .. autoclass:: Monetary()
 
@@ -148,7 +144,7 @@ Advanced Fields
 
 .. _reference/fields/date:
 
-Date(time) Fields
+Date(time) fields
 ~~~~~~~~~~~~~~~~~
 
 :class:`Dates <odoo.fields.Date>` and :class:`Datetimes <odoo.fields.Datetime>`
@@ -209,7 +205,7 @@ These helpers are also available by importing `odoo.tools.date_utils`.
 
 .. _reference/fields/relational:
 
-Relational Fields
+Relational fields
 ~~~~~~~~~~~~~~~~~
 
 .. autoclass:: Many2one()
@@ -232,7 +228,27 @@ Pseudo-relational fields
 
 .. _reference/fields/compute:
 
-Computed Fields
+Binary fields
+~~~~~~~~~~~~~
+
+:class:`BinaryValue <odoo.tools.binary.BinaryValue>` represents a bytes (buffer)
+that can be lazily loaded. This allows to access binary fields and delay loading
+of the data into memory until it is needed. Binary fields will always return
+that object.
+You can instantiate it with :func:`~odoo.tools.binary.BinaryBytes`.
+
+When using :func:`odoo.orm.models.BaseModel.read`, a base64-encoded string is
+read.  When writing a binary field, you can:
+
+* write a ``BinaryValue``: general case
+* write ``bytes`` on the ``raw`` field: backward compatiblity
+* write base64-encoded ``str``: value coming from RPC
+
+.. autoclass:: Binary()
+
+.. autoclass:: Image()
+
+Computed fields
 ~~~~~~~~~~~~~~~
 
 Fields can be computed (instead of read straight from the database) using the
@@ -408,7 +424,7 @@ Automatic fields
 
 .. _reference/fields/automatic/log_access:
 
-Access Log fields
+Access log fields
 ~~~~~~~~~~~~~~~~~
 
 These fields are automatically set and updated if
@@ -442,7 +458,7 @@ as :attr:`~odoo.models.BaseModel._auto`
 
 .. _reference/orm/fields/reserved:
 
-Reserved Field names
+Reserved field names
 --------------------
 
 A few field names are reserved for pre-defined behaviors beyond that of
@@ -1368,7 +1384,7 @@ and it's possible to write directly on the delegated field::
     * chained `_inherits` is essentially not implemented, we cannot guarantee anything on the final behavior.
 
 
-Fields Incremental Definition
+Fields incremental definition
 -----------------------------
 
 A field is defined as class attribute on a model class. If the model
