@@ -127,25 +127,11 @@ Obviously, :guilabel:`Chart of Accounts` cannot exist without :guilabel:`Account
     - Don't create too many accounts: 200-300 is enough. But mostly, we try to find a good balance where the CoA needs minimal adapting for most companies afterwards.
 
 
-Account groups
---------------
+Account parents
+---------------
 
-.. seealso::
-   :ref:`Account Group References <reference/account_group>`
+Account parents allow describing the hierarchical structure of the chart of accounts. The filter `Subtotal` needs to be activated in the report and then when you decollapse into journal entries it will show the parents of the account.
 
-Account groups allow describing the hierarchical structure of the chart of accounts. The filter needs to be activated in the report and then when you decollapse into journal entries it will show the parents of the account.
-
-It works with the prefix *start*/*end*, so every account where the code starts with something between *start* and *end* will have this ``account.group`` as the parent group.  Furthermore, the account groups can have a parent account group as well to form the hierarchy.
-
-
-.. example::
-  `addons/l10n_il/data/template/account.group-il.csv <{GITHUB_PATH}/addons/l10n_il/data/template/account.group-il.csv>`_
-
-  .. csv-table::
-     :condition: odoo_dir_in_path
-     :file: {ODOO_RELPATH}/addons/l10n_il/data/template/account.group-il.csv
-     :widths: 20,20,20,20,20
-     :header-rows: 1
 
 Taxes
 -----
