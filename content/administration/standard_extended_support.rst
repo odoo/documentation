@@ -89,7 +89,7 @@ The table below shows the support status of every version. Major releases are hi
 
    |green| : Standard support
 
-   |red| : Extended support available (with an extra fee)
+   |red| : Extended support available (with an extra fee). Odoo Online databases need to be migrated to Odoo SH or On-premise to benefit from extended support.
 
    N/A : Never released for this platform
 
