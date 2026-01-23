@@ -53,6 +53,43 @@
             // Use the style of L2 toctrees on L1 toctrees.
             toctreeWrapper?.classList.add('o_toc_l1_to_l2');
         }
-    });
 
+        // Position tooltips to prevent overflow at screen edges
+        content.querySelectorAll('.dfn').forEach(dfn => {
+            const tooltip = dfn.querySelector('span');
+            if (!tooltip) return;
+
+            // Calculate and position tooltip when hovering over dfn
+            dfn.addEventListener('mouseenter', function() {
+                const dfnRect = dfn.getBoundingClientRect();
+                const viewportWidth = window.innerWidth;
+
+                // Get css values to calculate tooltip positioning
+                const computedStyle = window.getComputedStyle(tooltip);
+
+                // Use maxWidth to calculate potential overflow, since tooltip uses max-content
+                // width which could be narrower than maxWidth but we need worst-case positioning
+                const tooltipMaxWidth = parseFloat(computedStyle.maxWidth) || 300;
+                const viewportMargin = 10; // Minimum distance from viewport edges
+
+                // Calculate where edges of tooltip would be positioned
+                const tooltipCenterX = dfnRect.left + (dfnRect.width / 2);
+                const tooltipLeftEdge = tooltipCenterX - (tooltipMaxWidth / 2);
+                const tooltipRightEdge = tooltipCenterX + (tooltipMaxWidth / 2);
+
+                // Remove any previous positioning classes
+                tooltip.classList.remove('tooltip-position-left', 'tooltip-position-right');
+
+                // Check if tooltip would overflow right edge
+                if (tooltipRightEdge > viewportWidth - viewportMargin) {
+                    tooltip.classList.add('tooltip-position-right');
+                }
+
+                // Check if tooltip would overflow left edge
+                if (tooltipLeftEdge < viewportMargin) {
+                    tooltip.classList.add('tooltip-position-left');
+                }
+            });
+        });
+    });
 })();
