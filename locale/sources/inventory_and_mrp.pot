@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-09 18:30+0000\n"
+"POT-Creation-Date: 2026-01-22 18:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -4093,6 +4093,134 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/landed_costs.rst:0
 msgid "Journal Entry form for landed cost created from vendor bill."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:3
+msgid "Account for scrapped goods"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:5
+msgid "It's essential to strike a balance between having sufficient stock on hand to meet demand while avoiding overpurchasing. When working with perishable products, or when inventoried goods have defects that prevent the product from being sold, occasionally, products must be scrapped and removed from inventory. It's important to account for these losses in the :ref:`Profit and Loss report <accounting/reporting/profit-and-loss>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:11
+msgid "Generally, follow this process to account for scrapped goods in the *Profit and Loss* report:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:13
+msgid ":ref:`Enable settings in the Inventory configuration <inventory/inventory_valuation/scrap-enable>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:15
+msgid ":ref:`Configure the product category <inventory/inventory_valuation/scrap-category>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:16
+msgid ":ref:`Set up a scrap location and its scrap journal <inventory/inventory_valuation/scrap-location>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:18
+msgid ":ref:`Scrap products <inventory/inventory_valuation/scrap-products>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:19
+msgid ":ref:`View scrapped products in the Profit and Loss report <inventory/inventory_valuation/view-profit-loss>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:25
+msgid "Enable settings"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:27
+msgid "To ensure scrapped goods can be seen in the *Profit and Loss* report, open :menuselection:`Inventory app --> Configuration --> Settings`. In the :guilabel:`Warehouse` section, enable :guilabel:`Storage Locations`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:34
+msgid "Configure the product category"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:36
+msgid "Next, configure the product category. Open :menuselection:`Inventory app --> Configuration --> Categories`. Open or create a product category."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:39
+msgid "Next, set the :guilabel:`Costing Method` to either :guilabel:`First In First Out (FIFO)` or :guilabel:`Average Cost (AVCO)`:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:42
+msgid ":guilabel:`First In First Out (FIFO)`: Inventory is valued, and the cost of goods sold (COGS) is calculated by assuming the oldest items purchased are the first ones sold, tracking costs by specific receipt lots. It's a precise method for fluctuating costs, and requires tracking units by their entry time (load/serial numbers) for accurate removal from stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:46
+msgid ":guilabel:`Average Cost (AVCO)`: Inventory value is calculated by dynamically averaging the cost of all units in stock, updating with each new purchase or manufacturing receipt to reflect fluctuating prices, making it ideal for varied vendor costs, with the system automatically recalculating the unit cost and value for assets and COGS. Odoo handles the math, adjusting the average cost automatically as products are bought or sold, but doesn't change it when products sell, only updating when new stock arrives at a different price."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:53
+msgid "Next, set the :guilabel:`Inventory Valuation` field to :guilabel:`Perpetual (at invoicing)`. This setting ensures that real-time journal entries are created in the *Accounting* app whenever stock enters or leaves the company's warehouse."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:60
+msgid "Set up a scrap location and its scrap journal"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:62
+msgid "Next, you must create or edit an existing scrap location. Open :menuselection:`Inventory app --> Configuration --> Locations`. Open an existing location or create a new one by clicking :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:67
+msgid "By default, the :guilabel:`Locations` list is filtered to show only internal locations. Remove this filter to view all locations, including *Inventory Loss* locations."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:70
+msgid "Update the :guilabel:`Location Type` field to select :guilabel:`Inventory Loss`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:72
+msgid "Specify a :guilabel:`Loss Account` by selecting the account used for scrapped goods."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:75
+msgid "The `WH/Scrap` location is an :guilabel:`Inventory Loss` location that uses the `600001 Scrapped Goods` journal as its :guilabel:`Loss Account`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:0
+msgid "Specify an Inventory Loss Location Type and a Loss Account."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:84
+msgid "Scrap products"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:86
+msgid "After the product category and location are set up, :doc:`products can be scrapped <../warehouses_storage/inventory_management/scrap_inventory>`. Be sure to select the scrap location in the :guilabel:`Scrap Location` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:91
+msgid "`20` units of `Under-Eye Masks` are scrapped to `WH/Scrap`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:0
+msgid "Specify the Product, Quantity, and Scrap Location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:99
+msgid "View scrapped products in the Profit and Loss report"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:101
+msgid "After products have been scrapped to the correct scrap location, view items scrapped to it in the Profit and Loss report. Open :menuselection:`Accounting app --> Reporting --> Profit and Loss`. To view the scrap order in the report, under the :guilabel:`Gross Profit` section, expand the :guilabel:`Expense` category. Search for the scrap journal in the list and click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon next to the scrap account and select :guilabel:`General Ledger`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:109
+msgid "`$100` worth of `Under-Eye Masks` appear as a debit in the Profit and Loss' General Ledger."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:0
+msgid "View the General Ledger to see scrapped items in the Profit and Loss report."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:115
+msgid ":ref:`Profit and Loss report <accounting/reporting/profit-and-loss>`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/valuation_by_lots.rst:3
@@ -8579,12 +8707,12 @@ msgid "When clicked, the :icon:`oi-arrows-v` :guilabel:`Locations` smart button 
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:77
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:131
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:133
 msgid "Odoo does **not** automatically split quantities across multiple storage locations. If an incoming receipt contains several units or packages and the first recommended location exceeds its capacity, Odoo still routes all items to that same location instead of selecting another one with available space."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:82
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:136
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:138
 msgid "*(Example: If a location can hold 10 units and 12 units arrive, all 12 are still assigned to that location.)*"
 msgstr ""
 
@@ -8596,15 +8724,19 @@ msgstr ""
 msgid "On a storage category form (:menuselection:`Inventory app --> Configuration --> Storage Categories`), set a maximum product weight in the :guilabel:`Max Weight` field. This limit applies to each location assigned this storage category."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:93
-msgid "Capacity by product"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:92
+msgid "This value must be set to greater than `0` if a product weight is defined."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:95
+msgid "Capacity by product"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:97
 msgid "In the :guilabel:`Capacity by Product` tab, click :guilabel:`Add a Line` to input items, and enter their capacities in the :guilabel:`Quantity` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:99
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:101
 msgid "Ensure only a maximum of five `Large Cabinets` and two `Corner Desk Right Sit` are stored at a single storage location, by specifying those amounts in the :guilabel:`Capacity by Product` tab of a storage category form."
 msgstr ""
 
@@ -8612,23 +8744,23 @@ msgstr ""
 msgid "Show storage category limiting by product count."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:109
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:111
 msgid "Capacity by package"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:113
 msgid "For companies using :doc:`packages <../../product_management/configure/package>`, it becomes possible to ensure real-time storage capacity checks, based on package types (e.g., crates, bins, boxes, etc.)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:115
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:117
 msgid "Create the :ref:`package type <inventory/warehouses_storage/package-type>` before assigning it to a storage category. Create it on the :guilabel:`Inventory` tab of the product form (in the :guilabel:`Packaging` section), or create it from the :guilabel:`Product Packagings` page. Be sure to set the :guilabel:`Package Type`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:121
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:123
 msgid "Create putaway rules for pallet-stored items, by creating the `High frequency pallets` storage category."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:124
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:126
 msgid "In the :guilabel:`Capacity by Package` tab, specify the number of packages for the designated :guilabel:`Package Type`, and set a maximum of `2.00` `Pallets` for a specific location."
 msgstr ""
 
@@ -8636,15 +8768,15 @@ msgstr ""
 msgid "Create a storage category."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:142
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:144
 msgid "Assign to location"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:144
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:146
 msgid "Once the storage category is created, assign it to a location. Navigate to the location by going to :menuselection:`Inventory app --> Configuration --> Locations`, and select the desired location. Then, select the created category in the :guilabel:`Storage Category` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:149
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:151
 msgid "Assign the `High frequency pallets` storage category (which limits pallets stored at any location to two pallets) to the `WH/Stock/Pallets/PAL1` sub-location."
 msgstr ""
 
@@ -8652,80 +8784,80 @@ msgstr ""
 msgid "When a Storage Category is created, it can be linked to a warehouse location."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:158
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:160
 msgid "Putaway rule"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:160
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:162
 msgid "With the :ref:`storage category <inventory/routes/define-storage>` and :ref:`location <inventory/routes/assign-location>` set up, create the :doc:`putaway rule <putaway>` by navigating to :menuselection:`Inventory app --> Configuration --> Putaway Rules`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:164
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:166
 msgid "Click the :guilabel:`New` button to create the putaway rule. Specify a location to store to in the :guilabel:`Store to` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:167
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:169
 msgid "Use the :guilabel:`Sublocation` field to specify that you want to use a sublocation with the storage category:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:170
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:172
 msgid ":guilabel:`Last Used`: The last location that had a move associated with it for that product or product category is used. If there is no last location used, the destination is whatever is specified in the :guilabel:`Store to` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:173
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:175
 msgid ":guilabel:`Closest Location`: The locations specified as part of the storage category are used. A storage category is mandatory in the :guilabel:`Having Category` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:176
-msgid "If using multiple storage locations for a single storage category, create putaway rules for each location to ensure that if one storage location is in use, the secondary locations must be used."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:180
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:179
 msgid "Continuing the example from above, the `High frequency pallets` storage category is assigned to the putaway rule directing pallets of lemonade to locations with the `High frequency pallets` storage category :ref:`assigned to them <inventory/routes/assign-location>`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
-msgid "Storage Categories used in a variety of putaway rules."
+msgid "Storage Categories used in putaway rules."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:188
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:187
+msgid "If products are not routing to secondary locations for a storage category and a product weight is defined, verify that the storage category's :guilabel:`Max Weight` value is set to a number greater than `0`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:192
 msgid "Use case: limit capacity by package"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:190
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:194
 msgid "To limit the capacity of a storage location by a specific number of packages, :ref:`create a storage category with a Capacity By Package <inventory/routes/set-capacity-package>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:193
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:197
 msgid "Continuing the example from above, the `High frequency pallets` storage category is assigned to the `PAL1` and `PAL2` locations."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:196
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:200
 msgid "Then, :ref:`putaway rules <inventory/routes/putaway-rule>` are set, so that any pallets received in the warehouse are directed to be stored in `PAL1` and `PAL2` locations."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:199
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:203
 msgid "Depending on the number of pallets on-hand at each of the storage locations, when two pallets of lemonade cans is received, the following scenarios happen:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:202
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:206
 msgid "If `PAL1` and `PAL2` are empty, the pallet is redirected to `WH/Stock/Pallets/PAL1`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:203
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:207
 msgid "If `PAL1` is full, the pallet is redirected to `WH/Stock/Pallets/PAL2`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:204
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:208
 msgid "If `PAL1` and `PAL2` are full, the pallet is redirected to `WH/Stock/Pallets`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:205
-msgid "If `PAL1` is partially full (for example, with one pallet), Odoo treats more than one received pallet as a single pallet on the receipt. You must manually separate the two pallets into separate storage locations. Click the :guilabel:`Open Move` icon to the right of the :guilabel:`Units` field, and then in the :guilabel:`Open: Stock move` box, click :guilabel:`Add a line`. Finally, split the receipt by quantity into separate locations, then click :guilabel:`Save`."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:209
+msgid "If `PAL1` is partially full (for example, with one pallet), Odoo treats more than one received pallet as a single pallet on the receipt. You must manually separate the two pallets into separate storage locations. Click the :guilabel:`Details` link to the right of the :guilabel:`Units` field, and then in the :guilabel:`Detailed Operations` box, click :guilabel:`Add a line`. Finally, split the receipt by quantity into separate locations, then click :guilabel:`Save`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
-msgid "Update the Stock move box to route pallets to the correct locations before validating."
+msgid "Update the Detailed Operations box to route pallets to the correct locations."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:3
@@ -15708,23 +15840,23 @@ msgid "In any warehouse management system, the recorded inventory counts in the 
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:15
-msgid "Inventory Adjustments page"
+msgid "Physical Inventory page"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:17
-msgid "To view the :guilabel:`Inventory Adjustments` page, navigate to :menuselection:`Inventory app --> Operations --> Physical Inventory`."
+msgid "To view the :guilabel:`Physical Inventory` page, navigate to :menuselection:`Inventory app --> Operations --> Physical Inventory`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:20
+msgid "The :guilabel:`Physical Inventory` page lists all products that are currently in stock."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:None
-msgid "In stock products listed on the Inventory adjustments page."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:23
-msgid "The :guilabel:`Inventory Adjustments` page lists all products that are currently in stock."
+msgid "In stock products listed on the Physical Inventory page."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:26
-msgid "Only products with a quantity greater than zero are listed on the :guilabel:`Inventory Adjustments` page. To view product lines with zero current quantity, go to :menuselection:`Inventory app --> Reporting --> Stock`."
+msgid "Only products with a quantity greater than zero are listed on the :guilabel:`Physical Inventory` page. To view product lines with zero current quantity, go to :menuselection:`Inventory app --> Reporting --> Stock`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:30
@@ -15732,248 +15864,303 @@ msgid "For each product line, the following information is listed:"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:32
-msgid ":guilabel:`Location`: the specific location in the warehouse where a product is stored. This column is **only** visible if :doc:`Storage Locations <use_locations>` are enabled."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:34
-msgid ":guilabel:`Favorite`: identifies products that have been favorited."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:35
 msgid ":guilabel:`Product`: the product whose quantity is listed on the inventory adjustment line."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:36
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:33
 msgid ":guilabel:`Lot/Serial Number`: the tracking identifier assigned to the specific product listed. It can contain letters, numbers, or a combination of both."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:40
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:37
 msgid "If a specific product has a quantity of more than `1.00` in stock, and more than one serial number, or lot number, assigned to it, each uniquely-identified product is displayed on its own product line with its own lot/serial number, displayed under the :guilabel:`Lot/Serial Number` column."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:45
-msgid ":guilabel:`Expiration Date`: the date on which the goods with this serial number are due to expire."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:42
+msgid ":guilabel:`Scheduled`: the date at which a count should be made. If not otherwise specified, this date will default to the 31st of December of the current year."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:47
-msgid ":guilabel:`Last Count Date`: the last time the quantity was updated."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:48
-msgid ":guilabel:`Package`: the package containing the quantity listed."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:49
-msgid ":guilabel:`On Hand Quantity`: the quantity of the product currently recorded in the database."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:50
-msgid ":guilabel:`Unit`: the *unit of measure* in which the product is measured. Unless otherwise specified (e.g., in :guilabel:`Pounds` or :guilabel:`Ounces`), the default :abbr:`UoM (Unit of Measure)` is :guilabel:`Units`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:53
-msgid ":guilabel:`Counted Quantity`: the real quantity counted during an inventory count. This field is left blank by default but can be changed, depending on if it matches the :guilabel:`On Hand Quantity` or not."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:56
-msgid ":guilabel:`Difference`: the difference between the :guilabel:`On Hand Quantity` and :guilabel:`Counted Quantity`, once an inventory adjustment is made. The difference is automatically calculated after every inventory adjustment."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:59
-msgid ":guilabel:`Scheduled Date`: the date at which a count should be made. If not otherwise specified, this date will default to the 31st of December of the current year."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:61
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:44
 msgid ":guilabel:`User`: the person assigned to the count in the database. This can either be the person physically counting the inventory, or applying the count in the database."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:65
-msgid "Additional columns are hidden by default. To reveal these columns, click the :icon:`oi-settings-adjust` :guilabel:`(adjust)` icon to the far right of the form's top row, and reveal any desired column by ticking the checkbox next to that option."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:46
+msgid ":guilabel:`On Hand`: the quantity of the product currently recorded in the database."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:72
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:47
+msgid ":guilabel:`Counted`: the real quantity counted during an inventory count. This field is left blank by default but can be changed, depending on if it matches the :guilabel:`On Hand` quantity or not."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:49
+msgid ":guilabel:`Difference`: the difference between the :guilabel:`On Hand` quantity and :guilabel:`Counted` quantity, once an inventory adjustment is made. The difference is automatically calculated after every inventory adjustment."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:54
+msgid "Some columns are hidden by default. To reveal these columns, click the :icon:`oi-settings-adjust` :guilabel:`(adjust)` icon to the far right of the form's top row, and reveal any desired column by selecting the checkbox next to that option."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:58
+msgid "The following additional columns are available, depending on the settings in the database:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:60
+msgid ":guilabel:`Location`: the specific location in the warehouse where a product is stored. This column is **only** visible if :doc:`Storage Locations <use_locations>` are enabled."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:62
+msgid ":guilabel:`Product Category`: the category of the product list on the inventory adjustment line."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:63
+msgid ":guilabel:`Last Count Date`: the last time the quantity was updated."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:64
+msgid ":guilabel:`Expiration Date`: the date on which the goods with this serial number are due to expire. This column is only available if :doc:`Expiration Dates <../../product_management/product_tracking/expiration_dates>` is enabled in the *Inventory* settings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:68
+msgid ":guilabel:`Package`: the package containing the quantity listed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:69
+msgid ":guilabel:`Unit`: the :doc:`unit of measure <../../product_management/configure/uom>` in which the product is measured. Unless otherwise specified (e.g., in :guilabel:`Pounds` or :guilabel:`Ounces`), the default :abbr:`UoM (Unit of Measure)` is :guilabel:`Units`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:76
 msgid "Create an inventory adjustment"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:74
-msgid "To create a new inventory adjustment from the :menuselection:`Inventory Adjustments` page, click :guilabel:`New`. Doing so creates a new, blank inventory adjustment line at the bottom of the page."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:78
+msgid "To update an existing physical inventory entry, click into the corresponding field in the :guilabel:`Counted` column for the product that must be adjusted. Adjust the count, then click :guilabel:`Apply All`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:78
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:82
+msgid "To create a new inventory adjustment from the :menuselection:`Physical Inventory` page, click :guilabel:`New`. Doing so creates a new, blank inventory adjustment line at the bottom of the page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:86
 msgid "|Ia| can also be created from the :guilabel:`Forecasted Report` on an individual product record. To open the report, navigate to a product record and click the :guilabel:`Forecasted` smart button. Then, at the top of the page, click :guilabel:`Update Quantity`, then :guilabel:`New`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:0
-msgid "The Update Quantities button on a Forecast report in the Inventory app."
+msgid "The Update Quantity button on a Forecast report in the Inventory app."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:86
-msgid "On this blank inventory adjustment line, click the drop-down menu under the :guilabel:`Product` column, and select a product. If the selected product is tracked using either lots or serial numbers, the desired lot or serial number needs to be chosen from the drop-down menu under the :guilabel:`Lot/Serial Number` column."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:93
+msgid "On this blank inventory adjustment line, click the drop-down menu under the :guilabel:`Product` column, and select a product. If the selected product is tracked using either lots or serial numbers, the desired lot or serial number must be chosen from the drop-down menu under the :guilabel:`Lot/Serial Number` column."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:99
 msgid "The inventory adjustment line can also be used to create or record lots and serial numbers."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:94
-msgid "Next, set the value in the :guilabel:`Counted Quantity` column to the quantity counted for that product during the inventory adjustment process."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:101
+msgid "Next, set the value in the :guilabel:`Counted` column to the quantity counted for that product during the inventory adjustment process."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:97
-msgid "To the right of the :guilabel:`Counted Quantity` column, the :guilabel:`Scheduled Date` and :guilabel:`User` can also be changed via their respective drop-down menus. Changing the :guilabel:`Scheduled Date` changes the date that the inventory adjustment should be processed on, and selecting a responsible :guilabel:`User` assigns a user to the specific inventory adjustment for traceability purposes."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:104
+msgid "The :guilabel:`Scheduled` date and :guilabel:`User` can also be changed via their respective drop-down menus. Changing the :guilabel:`Scheduled` date changes the date that the inventory adjustment should be processed on, and selecting a responsible :guilabel:`User` assigns a user to the specific inventory adjustment for traceability purposes."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:103
-msgid "Once all changes have been made to the new inventory adjustment line, click away from the line. Doing so saves the adjustment, and moves the line to the top of the page."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:109
+msgid "Once all changes have been made to the new inventory adjustment line, click away from the line. Doing so saves the adjustment, and moves the line alphabetically with the other products in inventory."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:106
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:205
-msgid "If the :guilabel:`Counted Quantity` is greater than the :guilabel:`On Hand Quantity`, the value in the :guilabel:`Difference` column is **green**. If the :guilabel:`Counted Quantity` is less than the :guilabel:`On Hand Quantity`, the value in the :guilabel:`Difference` column is **red**. If the quantities match, and have not been changed at all, no value appears in the :guilabel:`Difference` column."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:113
+msgid "If the :guilabel:`Counted` quantity is greater than the :guilabel:`On Hand` quantity, the value in the :guilabel:`Difference` column is *green*. If the :guilabel:`Counted` quantity is less than the :guilabel:`On Hand` quantity, the value in the :guilabel:`Difference` column is *red* with a negative value. If the quantities match, and have not been changed at all, `0.00` appears in the :guilabel:`Difference` column."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:None
-msgid "Difference column on inventory adjustments page."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:115
-msgid "At this stage, the count (:dfn:`inventory adjustment`) is recorded, but not yet applied. This means that the quantity on hand before the adjustment has not yet been updated to match the new, real counted quantity."
+msgid "Difference column on Physical Inventory page."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:122
+msgid "At this stage, the count (*inventory adjustment*) is recorded, but not yet applied. This means that the quantity on hand before the adjustment has not yet been updated to match the new, real counted quantity."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:129
 msgid "Apply adjusted count"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:124
-msgid "|Ia| can be completed in several ways. The first way is to click the :guilabel:`Apply` button on the line at the far right of the page. The second way is to tick the checkbox on the far left of the line. Doing so reveals new button options at the top of the page, one of which is an :guilabel:`Apply` button. Clicking this button instead causes an :guilabel:`Inventory Adjustment` pop-up window to appear."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:130
-msgid "From this pop-up menu, a reference or reason can be assigned to the inventory adjustment. By default, the :guilabel:`Inventory Reason` field is pre-populated with today's date, the date the adjustment is being made on, but can be changed to reflect whatever reference or reason is desired."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:131
+msgid "|Ia| can be completed in three ways."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:134
-msgid "Once ready, click :guilabel:`Apply` to apply the inventory adjustment."
+msgid "Apply a single adjustment"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:137
-msgid "Applying an inventory adjustment simultaneously creates a :doc:`stock move line (SML) <../reporting/moves_history>` in the *Moves History* report for traceability."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:136
+msgid "Some companies do not require adjustment reasons to be recorded. In this circumstance, you can apply adjustments to a single line at a time by clicking the :guilabel:`Apply` button on the line at the far right of the page."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:None
-msgid "Apply all option applies the inventory adjustment once a reason is specified."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:141
+msgid "Apply multiple adjustments"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:144
-msgid "Relocate products"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:143
+msgid "To apply multiple adjustments at once, or to ensure that reasons for adjustments are recorded, use one of the following methods to apply multiple adjustments at once:"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:146
-msgid "|Ia| can also be used to relocate products to different storage locations, or to different packages. To relocate a product, tick the checkbox at the far left of the line for the desired product. At the top of the page, click the :guilabel:`Relocate` button. Doing so opens a pop-up."
+msgid "Click the :guilabel:`Apply All` button on the top left corner of the page."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:None
-msgid "The Relocate products pop-up on the Inventory Adjustments page."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:147
+msgid "Select the checkbox on the far left of the line. Doing so reveals new button options at the top of the page, one of which is an :guilabel:`Apply` button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:151
+msgid "It may be necessary to click the :guilabel:`Save` button at the top left of the screen before applying the changes."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:154
-msgid "On the resulting pop-up, enter the following information:"
+msgid "Clicking these buttons opens a *Physical Inventory* pop-up window."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:156
-msgid ":guilabel:`To Location`: the new location for the products."
+msgid "In the *Physical Inventory* window, a reference or reason can be assigned to the inventory adjustment. By default, the :guilabel:`Inventory Reason` field is pre-populated with `Physical Inventory`. Modify this text as necessary. Today's date is populated in the :guilabel:`Counting Date` field. Once ready, click :guilabel:`Update Quantities` to apply the inventory adjustment."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:157
-msgid ":guilabel:`To Package`: the new package for the products."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:None
+msgid "Apply All option applies the inventory adjustment once a reason is specified."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:158
-msgid ":guilabel:`Reason for relocation`: the reason for the move."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:165
+msgid "An FDA-regulated factory is required by law to trace, log, and explain all inventory adjustments to ensure that it remains in compliance with federal law. Any product stock moves and associated reasonings would need to be documented thoroughly to ensure that all product is accounted for in case of a recall."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:161
-msgid "Product relocations **only** work on internal locations. Products **cannot** be moved between companies."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:164
-msgid "Only users with *Administrator* rights can perform product relocations."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:167
-msgid "Set to zero"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:169
-msgid "|Ia| can also be used to clear inventory counts by setting the quantity to zero. To do this, tick the checkbox at the far left of the line for the desired product. At the top of the page, click the :icon:`fa-gear` :guilabel:`Actions` button to open a drop-down menu. Click :guilabel:`Set to 0`. Once this is complete, :ref:`apply <inventory/apply-adjustment>` the adjusted count."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:171
+msgid "Applying an inventory adjustment simultaneously creates a :doc:`stock move record <../reporting/moves_history>` in the *Moves History* report for traceability."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:175
-msgid "Count products"
+msgid "Relocate products"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:177
-msgid "Counting products is a recurring activity in a warehouse. Once a count is complete, go to :menuselection:`Inventory app --> Operations --> Physical Inventory` to update the :guilabel:`Counted Quantity` column for each product line."
+msgid "|Ia| can also be used to relocate products to different storage locations, or to different packages. To relocate a product, click on the checkbox at the far left of the line for the desired product. At the top of the page, click the :icon:`fa-cog` :guilabel:`Actions` button, then select :guilabel:`Relocate`. Doing so opens a pop-up."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:181
-msgid "On each product line, identify whether the value in the :guilabel:`On Hand Quantity` column recorded in the database matches the newly-counted value. If the recorded value and the counted value do match, click the :icon:`fa-bullseye` :guilabel:`Set` icon at the far right of the product line."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:182
+msgid "On the resulting pop-up, enter the following information:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:184
+msgid ":guilabel:`To Location`: the new location for the products."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:185
-msgid "Doing so copies the value from the :guilabel:`On Hand Quantity` column over to the :guilabel:`Counted Quantity` column, and sets the value of the :guilabel:`Difference` column to `0.00`. Subsequently, once applied, an inventory move with `0.00` :guilabel:`Quantity Done` is recorded in the product's inventory adjustment history."
+msgid ":guilabel:`To Package`: the new package for the products. This field only appears if you have :guilabel:`Packages` enabled in the *Inventory* settings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:187
+msgid ":guilabel:`Reason for relocation`: the reason for the move."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:189
+msgid "Click :guilabel:`Confirm` to confirm the move."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:None
+msgid "The Relocate products pop-up on the Physical Inventory page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:195
+msgid "Product relocations **only** work on internal locations. Products **cannot** be moved between companies."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:198
+msgid "Only users with *Administrator* rights can perform product relocations."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:201
+msgid "Set to zero"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:203
+msgid "|Ia| can also be used to clear inventory counts by setting the quantity to zero. To do this, select the checkbox at the far left of the line for the desired product. At the top of the page, click the :icon:`fa-gear` :guilabel:`Actions` button to open a drop-down menu. Click :guilabel:`Set to 0`. Once this is complete, :ref:`apply <inventory/apply-adjustment>` the adjusted count."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:209
+msgid "Setting the quantity to zero for a product that has already been reserved for sales orders will set the forecasted quantity to negative. The product will be marked as unavailable for current delivery orders."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:214
+msgid "Count products"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:216
+msgid "Counting products is a recurring activity in a warehouse. Once a count is complete, go to :menuselection:`Inventory app --> Operations --> Physical Inventory` to update the :guilabel:`Counted` quantity for each product line."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:220
+msgid "On each product line, identify whether the value in the :guilabel:`On Hand` column recorded in the database matches the newly-counted value. If the recorded value and the counted value match, enter the 'On Hand' quantity in the :guilabel:`Counted` column."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:224
+msgid "Doing so sets the value of the :guilabel:`Difference` column to `0.00`. Subsequently, once applied, an inventory move with `0.00` :guilabel:`Done` is recorded in the product's inventory adjustment history."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:None
 msgid "Zero count inventory adjustment move."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:193
-msgid "If the newly-counted value for a given product does **not** match the value in the :guilabel:`On Hand Quantity` recorded in the database, instead of clicking the :icon:`fa-bullseye` :guilabel:`Set` icon, record the real value in the field in the :guilabel:`Counted Quantity` column."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:231
+msgid "If the newly-counted value for a given product does **not** match the value in the :guilabel:`On Hand` column recorded in the database, record the real value in the field in the :guilabel:`Counted` column."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:197
-msgid "To do so, click the field in the :guilabel:`Counted Quantity` column on the specific inventory adjustment line for the product whose count is being changed. This automatically assigns a :guilabel:`Counted Quantity` of `0.00`."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:235
+msgid "To do so, click the field in the :guilabel:`Counted` column on the specific inventory adjustment line for the product whose count is being changed. Specify the updated count in the field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:201
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:238
 msgid "To change this value, type in a new value that matches the real, newly-counted value. Then, click away from the line. Doing so saves the adjustment, and automatically adjusts the value in the :guilabel:`Difference` column."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:211
-msgid "Subsequently, once applied, a move with the difference between the :guilabel:`On Hand Quantity` and the :guilabel:`Counted Quantity` is recorded in the product's inventory adjustment history."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:242
+msgid "If the :guilabel:`Counted` quantity is greater than the :guilabel:`On Hand` quantity, the value in the :guilabel:`Difference` column is *green*. If the :guilabel:`Counted` quantity is less than the :guilabel:`On Hand` quantity, the value in the :guilabel:`Difference` column is *red* and is a negative value. If the quantities match, and have not been changed at all, `0.00` appears in the :guilabel:`Difference` column."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:248
+msgid "Subsequently, once applied, a move with the difference between the :guilabel:`On Hand` quantity and the :guilabel:`Counted` quantity is recorded in the product's inventory adjustment history."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:None
 msgid "Inventory Adjustments History dashboard detailing a list of prior product moves."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:217
-msgid "The :guilabel:`Actions` menu appears when one or more products' checkboxes are selected. The :guilabel:`Actions` menu includes the option to :guilabel:`Set to quantity on hand`, which sets the selected products' :guilabel:`Counted Quantity` to the :guilabel:`On Hand Quantity`, and :guilabel:`Set to 0`, which sets the selected products' :guilabel:`Counted Quantity` to zero."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:254
+msgid "The :icon:`fa-cog` :guilabel:`Actions` menu appears when one or more products' checkboxes are selected. The :icon:`fa-cog` :guilabel:`Actions` menu includes the option to :guilabel:`Set to quantity on hand`, which sets the selected products' :guilabel:`Counted` quantity to the :guilabel:`On Hand` quantity."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:None
-msgid "Inventory Adjustments Actions menu."
+msgid "Physical Inventory Actions menu."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:226
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:316
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:263
+msgid "If other inventory adjustments were created during the count process, click :guilabel:`Save` in the top-left corner to save the current entry. Make sure this is done before opening the :icon:`fa-cog` :guilabel:`Actions` menu to set the count."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:268
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:347
 msgid "Sometimes a count occurs, but cannot be applied in the database right away. In the time between the actual count and applying the inventory adjustment, product moves can occur. In that case, the on-hand quantity in the database can change and no longer be consistent with the counted quantity. As an extra precaution, Odoo asks for confirmation before applying the inventory adjustment."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:233
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:275
 msgid "Revert an inventory adjustment"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:235
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:277
 msgid "To revert the changes made in an inventory adjustment, navigate to :menuselection:`Inventory --> Reporting --> Moves History`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:238
-msgid "Tick the checkbox at the far left of the line for the desired product. At the top of the page, click the :icon:`fa-gear` :guilabel:`Actions` button to open a drop-down menu, and click :guilabel:`Revert Inventory Adjustment`."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:280
+msgid "Select the checkbox at the far left of the line for the desired product. At the top of the page, click the :icon:`fa-gear` :guilabel:`Actions` button to open a drop-down menu, and click :guilabel:`Revert Inventory Adjustment`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:243
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:285
 msgid "After an inventory adjustment is reverted, the line is not removed from the :guilabel:`Moves History` report. Instead, an additional line is added, this time with the word `[reverted]` added to the :guilabel:`Reference` column."
 msgstr ""
 
@@ -15981,15 +16168,15 @@ msgstr ""
 msgid "The reference fields on the Moves History report in the Inventory app."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:251
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:293
 msgid "Change inventory count frequency"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:253
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:295
 msgid "By default, the *scheduled date* for |ia| are always scheduled for the 31st of December of the current year. However, for some companies, it is crucial that they have an accurate inventory count at all times. In such cases, the default scheduled date can be modified."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:257
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:299
 msgid "To modify the default scheduled date, go to :menuselection:`Inventory app --> Configuration --> Settings`. Then, in the :guilabel:`Operations` section, locate the :guilabel:`Annual Inventory Day and Month` setting, which includes a drop-down menu that is set to `31 December` by default."
 msgstr ""
 
@@ -15997,84 +16184,72 @@ msgstr ""
 msgid "Adjust the next inventory count date with the Annual Inventory Day and Month setting."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:264
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:306
 msgid "To change the day, click the `31`, enter a number from `1-31`, depending on the desired month of the year."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:267
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:309
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:117
 msgid "Then, to change the month, click :guilabel:`December` to reveal the drop-down menu, and select the desired month."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:270
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:312
 msgid "Once all desired changes have been made, click :guilabel:`Save` to save all changes."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:275
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:317
 msgid "Plan big inventory counts"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:277
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:319
 msgid "To plan big inventory counts, such as a full count of everything currently in stock, first navigate to :menuselection:`Inventory app --> Operations --> Physical Inventory`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:280
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:322
 msgid "Then, select the desired products to be counted by ticking the checkbox on the far left of each product line."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:284
-msgid "To request a count of **all** products currently in stock, tick the checkbox at the top of the table, in the header row next to the :guilabel:`Location` label. This selects **all** product lines."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:326
+msgid "To request a count of **all** products currently in stock, select the checkbox at the top of the table, in the header row next to the :guilabel:`Location` label. This selects **all** product lines."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:330
+msgid "Once all desired products have been selected, click the :guilabel:`Request a Count` button at the top of the page. Doing so opens the :guilabel:`Inventory Request` pop-up window, where the following information can be filled:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:334
+msgid ":guilabel:`Assign to`: the user responsible for the count."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:335
+msgid ":guilabel:`Scheduled at`: the planned date of the count."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:336
+msgid ":guilabel:`Show Expected Quantity`: whether the assigned user can see the expected quantity."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:None
-msgid "Request a count pop-up on inventory adjustments page."
+msgid "Request a count pop-up on the Physical Inventory page."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:291
-msgid "Once all desired products have been selected, click the :guilabel:`Request a Count` button at the top of the page. Doing so opens the :guilabel:`Request a Count` pop-up window, where the following information can be filled:"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:295
-msgid ":guilabel:`Inventory Date`: the planned date of the count."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:296
-msgid ":guilabel:`User`: the user responsible for the count."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:297
-msgid ":guilabel:`Accounting Date`: the date at which the inventory adjustment will be accounted."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:298
-msgid ":guilabel:`Count`: to leave the on-hand quantity of each product line blank, select :guilabel:`Leave Empty`. To pre-fill the on-hand quantity of each product line with the current value recorded in the database, select :guilabel:`Set Current Value`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:303
-msgid "The :guilabel:`Leave Empty` option forces the employee conducting the audit to manually type in the number they counted, while the :guilabel:`Set Current Value` option only requires the employee to *verify* the counted quantity and click :guilabel:`Apply`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:307
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:341
 msgid "Finally, once ready, click :guilabel:`Confirm` to request the count."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:None
-msgid "Request a count popup on inventory adjustments page."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:313
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:344
 msgid "In the Odoo **Barcode** app, users can only view inventory counts that are assigned to *them*, and are scheduled for *today* or *earlier*."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:323
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:354
 msgid "Adjustment history"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:325
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:356
 msgid "Details regarding inventory adjustment can be viewed by clicking the :icon:`fa-history` :guilabel:`History` icon."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:328
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:359
 msgid "The user who performed the count is listed in parenthesis in the :guilabel:`Reference` field, while the user who applied the count is listed in the :guilabel:`Done By`."
 msgstr ""
 
@@ -16082,23 +16257,23 @@ msgstr ""
 msgid "The history record for an inventory adjustment."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:335
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:366
 msgid "Inventory audit"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:337
-msgid "An inventory audit can be accessed from the :guilabel:`Inventory Adjustment` page. This audit includes an inventory record both before and after a count is completed, to track what changed."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:368
+msgid "An inventory audit can be accessed from the :guilabel:`Physical Inventory` page. This audit includes an inventory record both before and after a count is completed, to track what changed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:340
-msgid "On the :guilabel:`Inventory Adjustment` page, tick the checkbox at the top-left of the page to select all of the lines. Then click the :guilabel:`Request a Count` button. On the pop-up, set :guilabel:`Count` to :guilabel:`Set Current Value`, then click :guilabel:`Confirm`."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:371
+msgid "On the :guilabel:`Physical Inventory` page, select the checkbox at the top-left of the page to select all of the lines. Then click the :guilabel:`Request a Count` button. On the pop-up, click :guilabel:`Confirm`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:344
-msgid "After returning to the :guilabel:`Inventory Adjustment` page, select all of the lines again. Click :menuselection:`Print --> Count Sheet`. The :guilabel:`Count Sheet` exports in PDF form."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:375
+msgid "After returning to the :guilabel:`Physical Inventory` page, select all of the lines again. Click :menuselection:`Print --> Count Sheet`. The :guilabel:`Count Sheet` exports in PDF form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:348
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:379
 msgid ":doc:`cycle_counts`"
 msgstr ""
 
@@ -21163,7 +21338,7 @@ msgid ":doc:`../../../sales/sales/sales_quotations/create_quotations`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:209
-msgid ":doc:`../../../websites/ecommerce/products/catalog`"
+msgid ":doc:`../../../websites/ecommerce/ecommerce_design/catalog`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:5
