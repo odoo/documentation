@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-15 18:31+0000\n"
+"POT-Creation-Date: 2026-01-22 18:30+0000\n"
 "PO-Revision-Date: 2025-11-19 20:20+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Spanish <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -1156,6 +1156,272 @@ msgstr ""
 
 #: ../../content/applications/productivity/ai/live-chat.rst:116
 msgid ":doc:`AI Agents <agents>`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:3
+msgid "AI server actions"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:7
+msgid ""
+"|AI| server actions extend Odoo's automation framework by allowing "
+"artificial intelligence to make decisions during a workflow."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:10
+msgid ""
+"They are designed for cases where logic cannot be expressed entirely through "
+"fixed conditions, but still requires controlled execution through standard "
+"server actions."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:14
+msgid "How AI server actions work"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:16
+msgid ""
+"AI-driven workflows in Odoo are built around a clear separation of "
+"responsibilities between the |AI| server action, or *the Manager*, and the "
+"tool, or *the Worker*."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:20
+msgid "AI server action: the manager"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:22
+msgid ""
+"An |AI| server action acts as a decision maker, or a manager. It reads the "
+"record and its context. It interprets the |AI| prompt. And it decides which "
+"tool to call, and what arguments to use."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:25
+msgid ""
+"The server action does not enforce business rules, modify records directly, "
+"or guarantee the correctness of the operation. Its role is limited to "
+"decision-making."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:29
+msgid "AI tool: the worker"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:31
+msgid ""
+"A tool is a standard server action with the *Use in AI* option enabled in "
+"its *Usage* tab. Tools contain all execution logic and perform record "
+"updates, moves, or writes. Tools **must** enforce business rules explicitly "
+"in Python code."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:35
+msgid ""
+"If a tool is called by the |AI| server action, it will execute "
+"unconditionally, unless the code itself prevents it."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:39
+msgid "AI server action workflow"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:41
+msgid "The |AI| server action workflow follows this sequence:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:43
+msgid "A record triggers an |AI| server action."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:44
+msgid "The |AI| prompt is evaluated, using the record as context."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:45
+msgid "The |AI| selects one of the available tools."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:46
+msgid "The |AI| provides arguments expected by the tool."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:47
+msgid "The selected tool executes its Python code."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:50
+msgid ""
+"|AI| server actions work without custom logic only when the underlying "
+"behavior already exists in Odoo, such as moving a document to a folder. In "
+"these cases, the |AI| selects parameters, and Odoo executes the action."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:55
+msgid "Use case walkthrough"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:57
+msgid ""
+"The *Auto-sort documents in Inbox* example demonstrates the full |AI| Server "
+"Action pattern. Navigate to the *Server Actions* menu by going "
+"to :menuselection:`Settings --> Technical --> Server Actions`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:62
+msgid ""
+"This server action is designed to review documents for their content, and "
+"add tags. The action itself does **not** move documents or add tags, it only "
+"decides which tool should be used, based on the documents' content."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:66
+msgid ""
+"The :guilabel:`Model` for the action is listed as *Document*, and "
+"the :guilabel:`Type` is *AI*."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:None
+msgid "The record for the Auto-sort documents in inbox server action."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:71
+msgid ""
+"The prompt for this action provides context about the document, as well as "
+"intent of the action."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:73
+msgid ""
+"The :guilabel:`Tool` field includes several actions that may be taken based "
+"on this prompt, including moving a document, adding tags, or creating "
+"invoices or bills."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:77
+msgid ""
+"*AI: Add Tags*, *AI: Move to Folder*, and *AI: Rename Document* are all "
+"*Execute Code* server actions, meaning they trigger python code."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:80
+msgid ""
+"For example, if the action determines, based on the content of the document, "
+"that the most appropriate tool is *AI: Move to Folder*, the Python code "
+"performs the following operation:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:87
+msgid ""
+"This code, executes unconditionally when called and performs the move using "
+"an existing method."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:90
+msgid ""
+"The |AI| does not infer arguments from the Python code or from the method "
+"signature. Instead, arguments passed to a tool are determined entirely by "
+"the tool's configuration."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:93
+msgid ""
+"For the *AI: Move to Folder* tool, the Python code expects a variable named "
+"`folder_id`. The |AI| knows to provide `folder_id` because it is explicitly "
+"declared as an argument in the configuration. This can be found on the "
+"*Usage* tab of the server action, in the :guilabel:`AI Schema` field. "
+"The :guilabel:`Name` column under *AI Schema* must match the variable name "
+"used in the Python code exactly."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:99
+msgid ""
+"The |AI| uses the argument description to understand what the parameter "
+"represents, what type of value is expected, and when it is appropriate to "
+"supply it."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:102
+msgid ""
+"If an argument is not defined in the Usage tab, the AI cannot provide it, "
+"even if the Python code references it."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:0
+msgid "The usage tab of the AI move to folder server action."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:109
+msgid "Creating custom AI tools"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:111
+msgid ""
+"The same pattern in the *Auto-sort documents in Inbox* example above can be "
+"implemented using standard Odoo logic. For example, to create an action that "
+"can update a task description, an *Execute Code* action could be created "
+"with the following code:"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:119
+msgid ""
+"To function correctly, `content` **must** be defined as an argument in "
+"tool's *Usage* tab."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:122
+msgid ":ref:`Server Actions <reference/actions/server>`"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:125
+msgid "Common issues"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:128
+msgid "Why is the Tools field empty?"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:130
+msgid ""
+"Confirm that at least one server action has :guilabel:`Use in AI` enabled."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:131
+msgid ""
+"Confirm that at least one tool is assigned to the same "
+"model :guilabel:`Model` as the server action."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:135
+msgid "Why did the tool run but nothing happened?"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:137
+msgid "The Python code exited without changes."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:138
+msgid "Required arguments were missing or empty."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:139
+msgid "Business conditions were not implemented in the tool logic."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:142
+msgid "Why did the AI choose an unexpected tool?"
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:144
+msgid "The prompt lacked sufficient context."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:145
+msgid "Multiple tools matched the same intent."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/server-actions.rst:146
+msgid "No constraints were enforced at the tool level."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/webpage.rst:3

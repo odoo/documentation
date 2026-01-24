@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-15 18:31+0000\n"
+"POT-Creation-Date: 2026-01-22 18:30+0000\n"
 "PO-Revision-Date: 2026-01-22 23:20+0000\n"
 "Last-Translator: \"Kwanghee Park (kwpa)\" <kwpa@odoo.com>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -142,10 +142,10 @@ msgstr "은행 동기화, 조정 및 현금 출납 관리"
 #: ../../content/applications/finance/accounting.rst:144
 #: ../../content/applications/finance/accounting.rst:187
 #: ../../content/applications/finance/accounting/customer_invoices.rst:177
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:88
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:95
 #: ../../content/applications/finance/accounting/reporting.rst:5
 #: ../../content/applications/finance/accounting/reporting/budget.rst:126
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:88
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:95
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:336
 #: ../../content/applications/finance/fiscal_localizations/france.rst:69
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:111
@@ -862,7 +862,7 @@ msgstr ":doc:`거래`"
 #: ../../content/applications/finance/accounting/taxes/retention.rst:11
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:29
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:24
-#: ../../content/applications/finance/expenses/expense_cards.rst:55
+#: ../../content/applications/finance/expenses/expense_cards.rst:59
 #: ../../content/applications/finance/fiscal_localizations.rst:18
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:20
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:715
@@ -4719,17 +4719,51 @@ msgstr ""
 "만, :guilabel:`수동 및 그룹화` 항목을 대신 선택하여 :ref:`수동 생성 "
 "<customer_invoices/deferred/generate_manually>` 을 진행할 수도 있습니다."
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:57
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:57
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:64
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:64
 msgid "Based on"
 msgstr "기준"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:44
-msgid "Suppose an invoice of $1200 must be deferred over 12 months."
-msgstr "$1200에 해당하는 청구서가 12개월 동안 이연된다고 가정합니다."
+msgid "There are three ways to calculate the deferred revenue recognition:"
+msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:46
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:46
+msgid ""
+":guilabel:`Days`: The total amount is divided equally by the total number of "
+"days in the period, inclusive of the start and end dates."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:48
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:48
+msgid ""
+":guilabel:`Months`: Each full month represents an equal proportion of the "
+"total amount, regardless of the actual number of days in that month "
+"(standardized basis)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:50
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:50
+msgid ""
+":guilabel:`Full Months`: Any month started is treated as a complete month. "
+"However, the final month is only considered full if the period extends to "
+"the very last day of that month."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:53
+msgid "Suppose an invoice of $1200 must be deferred over 12 months."
+msgstr "$1200에 해당하는 청구서가 12개월 동안 이연된다고 가정합니다."
+
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:55
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:55
+msgid ""
+"The :guilabel:`Days` option accounts for different amounts depending on the "
+"number of days in each month (e.g., ~$102 for January and ~$92 for February)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:57
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:57
 msgid ""
 "The :guilabel:`Months` option accounts for $100 each month prorated to the "
 "number of days in that month (e.g., $50 for the first month if "
@@ -4738,8 +4772,8 @@ msgstr ""
 ":guilabel:`월` 옵션에서는 매월 $100을 해당하는 월의 날짜 수로 일할하여 계산합"
 "니다 (예: :guilabel:`시작일` 이 매월 15일로 설정된 경우 첫 달은 $50)."
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:50
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:50
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:60
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:60
 msgid ""
 "The :guilabel:`Full Months` option considers each month started to be full "
 "(e.g., $100 for the first month even if the :guilabel:`Start Date` is set to "
@@ -4754,38 +4788,27 @@ msgstr ""
 "액을 인식하므로 :guilabel:`월` 옵션을 사용할 때처럼 나머지를 인식하기 위해 13"
 "번째 달 기능을 활용하지 않아도 됩니다."
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:56
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:56
-msgid ""
-"The :guilabel:`Days` option accounts for different amounts depending on the "
-"number of days in each month (e.g., ~$102 for January and ~$92 for February)."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:62
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:62
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:69
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:69
 msgid "Generate deferral entries on validation"
 msgstr "승인할 때 이연 항목 생성하기"
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:65
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:72
 msgid ""
-"Make sure the :guilabel:`Start Date` and :guilabel:`End Date` fields are "
-"visible in the :guilabel:`Invoice Lines` tab. In most cases, "
-"the :guilabel:`Start Date` should be in the same month as "
-"the :guilabel:`Invoice Date`. Deferred revenue entries are posted from the "
-"invoice date and are displayed in the report accordingly."
+"Make sure the :guilabel:`Deferred Date` field is visible in "
+"the :guilabel:`Invoice Lines` tab. In most cases, the start of the deferred "
+"period should be in the same month as the :guilabel:`Invoice Date`. Deferred "
+"revenue entries are posted from the invoice date and are displayed in the "
+"report accordingly."
 msgstr ""
-":guilabel:`시작일` 및 :guilabel:`종료일` 항목이 :guilabel:`청구서 줄` 탭에 표"
-"시되는지 확인합니다. 대부분의 경우 :guilabel:`시작일` 은 :guilabel:`청구일` "
-"과 같은 달에 속해 있어야 합니다. 청구일부터 이연 수익 항목이 발행되며 이에 따"
-"라 보고서에 표시됩니다."
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:70
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:77
 msgid ""
 "For each line of the invoice that should be deferred, specify the start and "
 "end dates of the deferral period."
 msgstr "이연할 청구서의 각 줄에 이연 기간의 시작일과 종료일을 지정합니다."
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:73
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:80
 msgid ""
 "If the :guilabel:`Generate Entries` field in the **Settings** is set "
 "to :guilabel:`On invoice/bill validation`, Odoo automatically generates the "
@@ -4797,7 +4820,7 @@ msgstr ""
 "수 있습니다. :guilabel:`이연 항목` 스마트 버튼을 클릭하면 해당 내용을 볼 수 "
 "있습니다."
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:77
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:84
 msgid ""
 "One entry, dated on the same day as the invoice's accounting date, moves the "
 "invoice amounts from the income account to the deferred account. The other "
@@ -4810,7 +4833,7 @@ msgstr ""
 "연 항목으로, 매월 청구서 금액을 이연 계정에서 수입 계정으로 이동하여 수익을 "
 "인식하도록 하는 항목입니다."
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:83
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:90
 msgid ""
 "You can defer a January invoice of $1200 over 12 months by specifying a "
 "start date of 01/01/2023 and an end date of 12/31/2023. At the end of "
@@ -4821,7 +4844,7 @@ msgstr ""
 "로 지정하여 12개월에 걸쳐 이연되도록 할 수 있습니다. 8월 말에 수익으로 인식되"
 "는 금액은 $800이고 이연 계정에는 $400가 남아 있게 됩니다."
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:90
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:97
 msgid ""
 "The deferred revenue report computes an overview of the necessary deferral "
 "entries for each account. To access it, go to :menuselection:`Accounting --> "
@@ -4830,8 +4853,8 @@ msgstr ""
 "이연 수익 보고서는 각 계정별 전체 이연 항목에 대해 계산합니다. 이 보고서에 액"
 "세스하려면 :menuselection:`회계 --> 보고 --> 이연 수익` 으로 이동합니다."
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:93
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:93
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:100
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:100
 msgid ""
 "To view the journal items of each account, click on the account name and "
 "then :guilabel:`Journal Items`."
@@ -4843,19 +4866,19 @@ msgstr ""
 msgid "Deferred revenue report"
 msgstr "이연 수익 보고서"
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:100
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:107
 msgid ""
 "Only invoices whose accounting date is before the end of the period of the "
 "report are taken into account."
 msgstr "청구서의 회계 날짜가 보고서 기간 종료 전인 경우에 한하여 검토합니다."
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:106
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:106
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:113
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:113
 msgid "Generate grouped deferral entries manually"
 msgstr "수동으로 이연 항목 그룹 생성하기"
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:108
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:108
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:115
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:115
 msgid ""
 "If you have a lot of deferred revenues and wish to reduce the number of "
 "journal entries created, you can generate deferral entries manually. To do "
@@ -4868,7 +4891,7 @@ msgstr ""
 "에서 :guilabel:`수동 및 그룹화` 를 설정합니다. 그러면 Odoo에서 이연 금액을 단"
 "일 항목으로 집계합니다."
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:113
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:120
 msgid ""
 "At the end of each month, go to :menuselection:`Accounting --> Reporting --> "
 "Deferred Revenue` and click the :guilabel:`Generate Entries` button. This "
@@ -4878,7 +4901,7 @@ msgstr ""
 "여 :guilabel:`항목 생성` 버튼을 클릭합니다. 그러면 두 개의 이연 항목이 생성됩"
 "니다:"
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:116
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:123
 msgid ""
 "One dated at the end of the month which aggregates, for each account, all "
 "the deferred amounts of that month. This means that a part of the deferred "
@@ -4887,8 +4910,8 @@ msgstr ""
 "각 계정에 대해 해당 월의 말일 날짜로 해당 월의 모든 이연 금액을 집계합니다. "
 "이연 수익의 일부가 해당 기간 말에 인식된다는 의미입니다."
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:119
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:119
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:126
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:126
 msgid ""
 "The reversal of this created entry, dated on the following day (i.e., the "
 "first day of the next month) to cancel the previous entry."
@@ -4896,25 +4919,31 @@ msgstr ""
 "이전에 입력한 항목을 취소하려면, 다음 날 (예: 다음 달 1일) 기준으로 생성된 항"
 "목을 역분개합니다."
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:123
-msgid "There are two invoices:"
-msgstr "두 건의 청구서를 살펴 봅니다:"
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:130
+msgid "There are three invoices deferred based on :guilabel:`Months`:"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:125
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:132
 msgid "Invoice A: $1200 to be deferred from 01/01/2023 to 12/31/2023"
 msgstr "청구서 A: $1200를 01/01/2023부터 12/31/2023까지 이연"
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:126
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:133
 msgid "Invoice B: $600 to be deferred from 01/01/2023 to 12/31/2023"
 msgstr "청구서 B: $600를 01/01/2023부터 12/31/2023까지 이연"
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:143
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:144
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:134
+msgid ""
+"Invoice C: $600 to be deferred in a future period (it will appear on "
+"the :guilabel:`Not Started` column)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:152
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:152
 msgid "In January"
 msgstr "1월"
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:129
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:130
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:138
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:138
 msgid ""
 "At the end of January, after clicking the :guilabel:`Generate Entries` "
 "button, there are the following entries:"
@@ -4922,61 +4951,56 @@ msgstr ""
 "1월 말일 자로 :guilabel:`항목 생성` 버튼을 클릭하면 다음과 같은 항목을 확인"
 "할 수 있습니다."
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:132
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:133
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:141
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:141
 msgid "Entry 1 dated on the 31st January:"
 msgstr "1번 항목의 날짜는 1월 31일입니다:"
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:134
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:151
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:167
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:143
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:160
 msgid ""
-"Line 1: Expense account -1200 -600 = **-1800** (cancelling the total of both "
-"invoices)"
-msgstr "1번 줄: 비용 계정 -1200 -600 = **-1800** (두 청구서 합계 취소)"
+"Line 1: Income account -1200 -600 -600 = **-2400** (cancelling the total of "
+"all invoices)"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:135
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:144
 msgid ""
-"Line 2: Expense account 100 + 50 = **150** (recognizing 1/12 of invoice A "
-"and invoice B)"
-msgstr "2번 줄: 비용 계정 100 + 50 = **150** (청구서 A와 청구서 B의 1/12 인식)"
+"Line 2: Income account 100 + 50 = **150** (recognizing 1/12 of invoice A and "
+"invoice B)"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:136
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:137
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:145
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:145
 msgid ""
-"Line 3: Deferred account 1800 - 150 = **1650** (amount that has yet to be "
+"Line 3: Deferred account 2400 - 150 = **2250** (amount that has yet to be "
 "deferred later on)"
 msgstr ""
-"3번 줄: 이연 계정 1800 - 150 = **1650** (아직 이연되지 않고 나중에 이연될 금"
-"액)"
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:139
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:140
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:148
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:148
 msgid "Entry 2 dated on the 1st February, the reversal of the previous entry:"
 msgstr "2번 항목의 날짜는 2월 1일이며, 이전 항목에 대한 역분개입니다:"
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:141
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:142
-msgid "Line 1: Expense account **1800**"
-msgstr "1번 줄: 비용 계정 **1800**"
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:150
+msgid "Line 1: Income account **2400**"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:142
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:143
-msgid "Line 2: Deferred account **-150**"
-msgstr "2번 줄: 이연 계정 **-150**"
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:151
+msgid "Line 3: Income account **-150**"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:143
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:144
-msgid "Line 3: Expense account **-1650**"
-msgstr "3번 줄: 비용 계정 **-1650**"
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:152
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:152
+msgid "Line 2: Deferred account **-2250**"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:156
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:157
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:165
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:165
 msgid "In February"
 msgstr "2월"
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:146
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:147
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:155
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:155
 msgid ""
 "At the end of February, after clicking the :guilabel:`Generate Entries` "
 "button, there are the following entries:"
@@ -4984,117 +5008,75 @@ msgstr ""
 "2월 말일 자로 :guilabel:`항목 생성` 버튼을 클릭하면 다음과 같은 항목을 확인"
 "할 수 있습니다."
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:149
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:150
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:158
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:158
 msgid "Entry 1 dated on the 28th February:"
 msgstr "1번 항목의 날짜는 2월 28일입니다:"
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:152
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:161
 msgid ""
-"Line 2: Expense account 200 + 100 = **300** (recognizing 2/12 of invoice A "
+"Line 2: Income account 200 + 100 = **300** (recognizing 2/12 of invoice A "
 "and invoice B)"
 msgstr ""
-"2번 줄: 비용 계정 200 + 100 = **300** (청구서 A와 청구서 B의 2/12 인식)"
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:153
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:154
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:162
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:162
 msgid ""
-"Line 3: Deferred account 1800 - 300 = **1500** (amount that has yet to be "
+"Line 3: Deferred account 2400 - 300 = **2100** (amount that has yet to be "
 "deferred later on)"
 msgstr ""
-"3번 줄: 이연 계정 1800 - 300 = **1500** (아직 이연되지 않고 나중에 이연될 금"
-"액)"
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:156
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:157
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:165
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:165
 msgid "Entry 2 dated on the 1st March, the reversal of the previous entry."
 msgstr "2번 항목의 날짜는 3월 1일이며, 이전 항목의 역분개입니다."
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:159
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:160
-msgid "From March to October"
-msgstr "3월부터 10월"
-
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:159
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:160
-msgid "The same computation is done for each month until October."
-msgstr "10월까지 매월 같은 방식으로 계산합니다."
-
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:173
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:173
-msgid "In November"
-msgstr "11월"
-
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:162
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:163
-msgid ""
-"At the end of November, after clicking the :guilabel:`Generate Entries` "
-"button, there are the following entries:"
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:168
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:168
+msgid "From March to November"
 msgstr ""
-"11월 말일 자로 :guilabel:`항목 생성` 버튼을 클릭하면 다음과 같은 항목을 확인"
-"할 수 있습니다."
-
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:165
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:166
-msgid "Entry 1 dated on the 30th November:"
-msgstr "1번 항목의 날짜는 11월 30일입니다:"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:168
-msgid ""
-"Line 2: Expense account 1100 + 550 = **1650** (recognizing 11/12 of invoice "
-"A and invoice B)"
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:168
+msgid "The same computation is done for each month until November."
 msgstr ""
-"2번 줄: 비용 계정 1100 + 550 = **1650** (청구서 A와 청구서 B의 11/12 인식)"
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:170
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:170
-msgid ""
-"Line 3: Deferred account 1800 - 1650 = **150** (amount that has yet to be "
-"deferred later on)"
-msgstr ""
-"3번 줄: 이연 계정 1800 - 1650 = **150** (아직 이연되지 않고 나중에 이연될 금"
-"액)"
-
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:173
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:173
-msgid "Entry 2 dated on the 1st December, the reversal of the previous entry."
-msgstr "2번 항목의 날짜는 12월 1일이며, 이전 항목에 대한 역분개입니다."
-
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:177
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:177
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:171
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:171
 msgid "In December"
 msgstr "12월"
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:176
-msgid ""
-"There is no need to generate entries in December. Indeed, if we do the "
-"computation for December, we have an amount of 0 to be deferred."
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:171
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:171
+msgid "There is no need to generate entries in December."
 msgstr ""
-"12월에는 항목을 생성할 필요가 없습니다. 실제로 12월에 대한 계산을 해 보면, 이"
-"연 금액은 0이 됩니다."
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:186
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:186
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:181
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:181
 msgid "In total"
 msgstr "합계"
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:180
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:180
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:174
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:174
 msgid "If we aggregate everything, we would have:"
 msgstr "모든 항목을 합산하면, 다음과 같습니다:"
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:182
-msgid "invoice A and invoice B"
-msgstr "청구서 A 및 청구서 B"
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:176
+msgid "Invoice A and invoice B"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:183
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:183
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:177
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:177
 msgid ""
-"two entries (one for the deferral and one for the reversal) for each month "
+"Two entries (one for the deferral and one for the reversal) for each month "
 "from January to November"
-msgstr "1월부터 11월까지 매월 두 개의 항목 (이연용 및 역분개용)이 생성됩니다."
+msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:186
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:179
+msgid "Invoice C will be deferred later"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:181
 msgid ""
 "Therefore, at the end of December, invoices A and B are fully recognized as "
 "income only once in spite of all the created entries thanks to the reversal "
@@ -25082,23 +25064,23 @@ msgstr ""
 "generate_manually>`할 수도 있습니다."
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:44
+msgid "There are three ways to calculate the deferred expenses recognition:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:53
 msgid "Suppose a bill of $1200 must be deferred over 12 months."
 msgstr "$1200에 해당하는 업체 청구서가 12개월 동안 이연된다고 가정합니다."
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:65
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:72
 msgid ""
-"Make sure the :guilabel:`Start Date` and :guilabel:`End Date` fields are "
-"visible in the :guilabel:`Invoice Lines` tab. In most cases, "
-"the :guilabel:`Start Date` should be in the same month as "
-"the :guilabel:`Bill Date`. Deferred expense entries are posted from the bill "
-"date and are displayed in the report accordingly."
+"Make sure the :guilabel:`Deferred Date` field is visible in "
+"the :guilabel:`Invoice Lines` tab. In most cases, the start of the deferred "
+"period should be in the same month as the :guilabel:`Accounting Date`. "
+"Deferred expense entries are posted from the accounting date and are "
+"displayed in the report accordingly."
 msgstr ""
-":guilabel:`시작일` 및 :guilabel:`종료일` 필드가 :guilabel:`청구서 줄` 탭에 표"
-"시되는지 확인합니다. 대부분의 경우 :guilabel:`시작일` 은 :guilabel:`공급업체 "
-"청구일` 과 같은 달이어야 합니다. 이연 비용 항목이 청구일로부터 전기되며 이에 "
-"따라 보고서에 표시됩니다."
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:70
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:77
 msgid ""
 "For each line of the bill that should be deferred, specify the start and end "
 "dates of the deferral period."
@@ -25106,7 +25088,7 @@ msgstr ""
 "이연해야 할 업체 청구서의 각 라인에 이연 기간의 시작 날짜와 종료 날짜를 지정"
 "합니다."
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:73
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:80
 msgid ""
 "If the :guilabel:`Generate Entries` field is set to :guilabel:`On invoice/"
 "bill validation`, Odoo automatically generates the deferral entries when the "
@@ -25117,7 +25099,7 @@ msgstr ""
 "있으면 업체 청구서를 검증할 때 Odoo에서 자동으로 이연 항목을 생성합니"
 "다. :guilabel:`이연 항목` 스마트 버튼을 클릭하면 내용을 볼 수 있습니다."
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:77
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:84
 msgid ""
 "One entry, dated on the same day as the bill's accounting date, moves the "
 "bill amounts from the expense account to the deferred account. The other "
@@ -25129,7 +25111,7 @@ msgstr ""
 "액을 비용 계정에서 이연 계정으로 이동합니다. 다른 항목들은 매월 업체 청구서 "
 "금액을 이연 계정에서 비용 계정으로 이동하여 비용을 인식하는 이연 항목입니다."
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:83
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:90
 msgid ""
 "You can defer a January bill of $1200 over 12 months by specifying a start "
 "date of 01/01/2023 and an end date of 12/31/2023. At the end of August, $800 "
@@ -25139,7 +25121,7 @@ msgstr ""
 "일로 지정하여 12개월에 걸쳐 연기할 수 있습니다. 8월 말에는 $800를 비용으로 인"
 "식하고 $400는 이연 계정에 남아 있게 됩니다."
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:90
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:97
 msgid ""
 "The deferred expense report computes an overview of the necessary deferral "
 "entries for each account. To access it, go to :menuselection:`Accounting --> "
@@ -25153,13 +25135,13 @@ msgstr ""
 msgid "Deferred expense report"
 msgstr "이연 지출결의서"
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:100
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:107
 msgid ""
 "Only bills whose accounting date is before the end of the period of the "
 "report are taken into account."
 msgstr "회계 날짜가 보고서 기간 종료 전인 업체 청구서만 검토합니다."
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:113
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:120
 msgid ""
 "At the end of each month, go to the Deferred Expenses report and click "
 "the :guilabel:`Generate Entries` button. This generates two deferral entries:"
@@ -25167,7 +25149,7 @@ msgstr ""
 "매월 말에 이연 비용 보고서로 이동하여 :guilabel:`항목 생성` 버튼을 클릭합니"
 "다. 그러면 이연 항목이 두 개 생성됩니다:"
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:116
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:123
 msgid ""
 "One dated at the end of the month which aggregates, for each account, all "
 "the deferred amounts of that month. This means that at the end of that "
@@ -25176,27 +25158,32 @@ msgstr ""
 "각 계정에 대해 해당 월의 말일 날짜로 해당 월의 모든 이연 금액을 집계합니다. "
 "이연 수익의 일부가 해당 기간 말에 인식된다는 의미입니다."
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:124
-msgid "There are two bills:"
-msgstr "두 건의 업체 청구서를 살펴 봅니다:"
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:130
+msgid "There are three bills deferred based on :guilabel:`Months`:"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:126
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:132
 msgid "Bill A: $1200 to be deferred from 01/01/2023 to 12/31/2023"
 msgstr "업체 청구서 A: $1200를 01/01/2023부터 12/31/2023까지 이연"
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:127
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:133
 msgid "Bill B: $600 to be deferred from 01/01/2023 to 12/31/2023"
 msgstr "업체 청구서 B: $600를 01/01/2023부터 12/31/2023까지 이연"
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:135
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:152
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:168
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:134
 msgid ""
-"Line 1: Expense account -1200 -600 = **-1800** (cancelling the total of both "
-"bills)"
-msgstr "1번 라인: 비용 계정 -1200 -600 = **-1800**(양쪽 업체 청구서 총계 취소)"
+"Bill C: $600 to be deferred in a future period (it will appear on "
+"the :guilabel:`Not Started` column)"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:136
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:143
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:160
+msgid ""
+"Line 1: Expense account -1200 -600 -600 = **-2400** (cancelling the total of "
+"all bills)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:144
 msgid ""
 "Line 2: Expense account 100 + 50 = **150** (recognizing 1/12 of bill A and "
 "bill B)"
@@ -25204,7 +25191,15 @@ msgstr ""
 "2번 라인: 비용 계정 100 + 50 = **150** (업체 청구서 A와 업체 청구서 B의 1/12 "
 "인식)"
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:153
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:150
+msgid "Line 1: Expense account **2400**"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:151
+msgid "Line 3: Expense account **-150**"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:161
 msgid ""
 "Line 2: Expense account 200 + 100 = **300** (recognizing 2/12 of bill A and "
 "bill B)"
@@ -25212,27 +25207,15 @@ msgstr ""
 "2번 라인: 비용 계정 200 + 100 = **300** (업체 청구서 A와 업체 청구서 B의 "
 "2/12 인식)"
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:169
-msgid ""
-"Line 2: Expense account 1100 + 550 = **1650** (recognizing 11/12 of bill A "
-"and bill B)"
-msgstr ""
-"2번 라인: 비용 계정 1100 + 550 = **1650** (업체 청구서 A와 업체 청구서 B의 "
-"11/12 인식)"
-
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:176
-msgid ""
-"There is no need to generate entries in December. Indeed, if we do the "
-"computation for December, we will have an amount of 0 to be deferred."
+msgid "Bill A and Bill B"
 msgstr ""
-"12월에는 항목을 생성할 필요가 없습니다. 실제로 12월에 대한 계산을 해 보면, 이"
-"연 금액은 0이 됩니다."
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:182
-msgid "bill A and bill B"
-msgstr "업체 청구서 A와 B"
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:179
+msgid "Bill C will be deferred later"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:186
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:181
 msgid ""
 "Therefore, at the end of December, bills A and B are fully recognized as "
 "expense only once in spite of all the created entries thanks to the reversal "
@@ -26557,137 +26540,144 @@ msgid ""
 "apps **must** be :ref:`installed <general/install>`."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:25
+#: ../../content/applications/finance/expenses/expense_cards.rst:24
+msgid ""
+"To access confidential card data (card number and CVV for virtual cards; PIN "
+"for physical cards), the employee **must** have a :doc:`user <../../general/"
+"users>` profile. These details can **only** be accessed through that profile."
+msgstr ""
+
+#: ../../content/applications/finance/expenses/expense_cards.rst:29
 msgid ""
 "Expense cards act like pre-paid debit cards, as they can **only** be used "
 "with a connected Stripe account, and **only** if funds are added to that "
 "account, to be drawn from."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:29
+#: ../../content/applications/finance/expenses/expense_cards.rst:33
 #: ../../content/applications/finance/payment_providers.rst:423
 msgid "Availability"
 msgstr "적용 여부"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:31
+#: ../../content/applications/finance/expenses/expense_cards.rst:35
 msgid "Expense cards are currently available for the following countries:"
 msgstr "현재 다음 국가에서 경비 카드를 사용할 수 있습니다:"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:34
+#: ../../content/applications/finance/expenses/expense_cards.rst:38
 #: ../../content/applications/finance/fiscal_localizations/austria.rst:3
 msgid "Austria"
 msgstr "오스트리아"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:34
+#: ../../content/applications/finance/expenses/expense_cards.rst:38
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:3
 msgid "Belgium"
 msgstr "벨기에"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:34
+#: ../../content/applications/finance/expenses/expense_cards.rst:38
 #: ../../content/applications/finance/fiscal_localizations.rst:70
 msgid "Croatia"
 msgstr "크로아티아"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:34
+#: ../../content/applications/finance/expenses/expense_cards.rst:38
 #: ../../content/applications/finance/fiscal_localizations.rst:71
 msgid "Cyprus"
 msgstr "키프로스"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:36
+#: ../../content/applications/finance/expenses/expense_cards.rst:40
 #: ../../content/applications/finance/fiscal_localizations.rst:79
 msgid "Estonia"
 msgstr "에스토니아"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:36
+#: ../../content/applications/finance/expenses/expense_cards.rst:40
 #: ../../content/applications/finance/fiscal_localizations.rst:81
 msgid "Finland"
 msgstr "핀란드"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:36
+#: ../../content/applications/finance/expenses/expense_cards.rst:40
 #: ../../content/applications/finance/fiscal_localizations/france.rst:3
 msgid "France"
 msgstr "프랑스"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:36
+#: ../../content/applications/finance/expenses/expense_cards.rst:40
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:3
 msgid "Germany"
 msgstr "독일"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:38
+#: ../../content/applications/finance/expenses/expense_cards.rst:42
 #: ../../content/applications/finance/fiscal_localizations.rst:86
 msgid "Greece"
 msgstr "그리스"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:38
+#: ../../content/applications/finance/expenses/expense_cards.rst:42
 msgid "Ireland"
 msgstr "아일랜드"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:38
+#: ../../content/applications/finance/expenses/expense_cards.rst:42
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:3
 msgid "Italy"
 msgstr "이탈리아"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:38
+#: ../../content/applications/finance/expenses/expense_cards.rst:42
 #: ../../content/applications/finance/fiscal_localizations.rst:101
 msgid "Latvia"
 msgstr "라트비아"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:40
+#: ../../content/applications/finance/expenses/expense_cards.rst:44
 #: ../../content/applications/finance/fiscal_localizations.rst:102
 msgid "Lithuania"
 msgstr "리투아니아"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:40
+#: ../../content/applications/finance/expenses/expense_cards.rst:44
 #: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:3
 msgid "Luxembourg"
 msgstr "룩셈부르크"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:40
+#: ../../content/applications/finance/expenses/expense_cards.rst:44
 #: ../../content/applications/finance/fiscal_localizations.rst:105
 msgid "Malta"
 msgstr "몰타"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:40
+#: ../../content/applications/finance/expenses/expense_cards.rst:44
 #: ../../content/applications/finance/fiscal_localizations/netherlands.rst:3
 msgid "Netherlands"
 msgstr "네덜란드"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:42
+#: ../../content/applications/finance/expenses/expense_cards.rst:46
 #: ../../content/applications/finance/fiscal_localizations.rst:123
 msgid "Portugal"
 msgstr "포르투갈"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:42
+#: ../../content/applications/finance/expenses/expense_cards.rst:46
 #: ../../content/applications/finance/fiscal_localizations.rst:131
 msgid "Slovakia"
 msgstr "슬로바키아"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:42
+#: ../../content/applications/finance/expenses/expense_cards.rst:46
 #: ../../content/applications/finance/fiscal_localizations.rst:132
 msgid "Slovenia"
 msgstr "슬로베니아"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:42
+#: ../../content/applications/finance/expenses/expense_cards.rst:46
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:3
 msgid "Spain"
 msgstr "스페인"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:45
+#: ../../content/applications/finance/expenses/expense_cards.rst:49
 msgid ""
 "Only companies located in one of these countries are able to create and use "
 "expense cards."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:48
+#: ../../content/applications/finance/expenses/expense_cards.rst:52
 msgid "Fees"
 msgstr "수수료"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:50
+#: ../../content/applications/finance/expenses/expense_cards.rst:54
 msgid ""
 "Odoo covers **all fees** associated with creating virtual and physical cards."
 msgstr "Odoo에서 가상 카드 및 실물 카드 발급 시 **모든 수수료** 를 부담합니다."
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:57
+#: ../../content/applications/finance/expenses/expense_cards.rst:61
 msgid ""
 "Two settings must be configured to use expense cards. Navigate "
 "to :menuselection:`Expenses app --> Configuration --> Settings`. Tick the "
@@ -26696,14 +26686,14 @@ msgid ""
 "the :guilabel:`Expense Card` option."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:62
+#: ../../content/applications/finance/expenses/expense_cards.rst:66
 msgid ""
 "A :guilabel:`Journal` field with :guilabel:`Stripe Issuing` appears, "
 "populating the field. This is the default journal, and it is **not** "
 "recommended to alter this unless instructed by the accounting department."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:66
+#: ../../content/applications/finance/expenses/expense_cards.rst:70
 msgid ""
 "Next, click the text link :guilabel:`terms and conditions` and "
 "an :guilabel:`Expense Cards Terms and Conditions` pop-up window loads, with "
@@ -26713,50 +26703,50 @@ msgid ""
 "click :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:72
+#: ../../content/applications/finance/expenses/expense_cards.rst:76
 msgid "The terms and conditions **must** be agreed to use expense cards."
 msgstr "경비 카드를 사용하려면 **반드시** 이용 약관에 동의해야 합니다."
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:74
+#: ../../content/applications/finance/expenses/expense_cards.rst:78
 msgid ""
 "After agreeing to the terms and conditions, :ref:`create a Stripe connected "
 "account <expenses/create-stripe>`."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:80
+#: ../../content/applications/finance/expenses/expense_cards.rst:84
 msgid "Create Stripe connected account"
 msgstr "Stripe 연결 계정 생성"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:82
+#: ../../content/applications/finance/expenses/expense_cards.rst:86
 msgid ""
 "To create a Stripe connected account, open the **Expenses** app, and ensure "
 "the :guilabel:`Expense Card` option is enabled. Next, click :icon:`oi-arrow-"
 "right` :guilabel:`Connect` to create a new Stripe Issuing connect account."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:86
+#: ../../content/applications/finance/expenses/expense_cards.rst:90
 msgid ""
 "Fill in the KYC questionnaire provided by Stripe. Stripe takes +/-24 hours "
 "to approve or refuse account creation requests."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:89
+#: ../../content/applications/finance/expenses/expense_cards.rst:93
 msgid ""
 "A green :guilabel:`Verified` tag now appears next to :icon:`oi-arrow-"
 "left` :guilabel:`Refresh`, indicating the account is properly configured."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:92
+#: ../../content/applications/finance/expenses/expense_cards.rst:96
 msgid ""
 "Once the account is verified, the company must :ref:`add funds <expenses/add-"
 "funds>` to their Stripe balance."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:98
+#: ../../content/applications/finance/expenses/expense_cards.rst:102
 msgid "Add funds to Stripe account"
 msgstr "Stripe 계정에 금액을 추가합니다"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:100
+#: ../../content/applications/finance/expenses/expense_cards.rst:104
 msgid ""
 "For employees to use their expense cards, funds must be available in the "
 "company's Stripe account, to make purchases against. To add funds to the "
@@ -26765,7 +26755,7 @@ msgid ""
 "a :guilabel:`Top-up` pop-up window loads."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:105
+#: ../../content/applications/finance/expenses/expense_cards.rst:109
 msgid ""
 "Enter the amount being transferred into the account in "
 "the :guilabel:`Amount` field. The :guilabel:`IBAN` and :guilabel:`BIC` "
@@ -26774,23 +26764,23 @@ msgid ""
 "initiated."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:110
+#: ../../content/applications/finance/expenses/expense_cards.rst:114
 msgid ""
 "The user wires money to the IBAN shown using a SEPA Credit Transfer (for the "
 "EURO Zone). The Stripe issuing partner bank is `Circle Bank`."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:114
+#: ../../content/applications/finance/expenses/expense_cards.rst:118
 msgid ""
 "It typically takes 2-3 business days for transfers to be processed. Funds "
 "are **not** available until the transfer is complete."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:120
+#: ../../content/applications/finance/expenses/expense_cards.rst:124
 msgid "Configure expense cards"
 msgstr "경비용 카드 환경설정"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:122
+#: ../../content/applications/finance/expenses/expense_cards.rst:126
 msgid ""
 "To create and configure a new expense card, click :menuselection:`Cards` in "
 "the main **Expenses** app menu to view the :guilabel:`Cards` dashboard. "
@@ -26798,7 +26788,7 @@ msgid ""
 "following information on the form:"
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:126
+#: ../../content/applications/finance/expenses/expense_cards.rst:130
 msgid ""
 ":guilabel:`Card Name`: The first line on the card form is blank, and "
 "displays `Draft`. Enter a name for the card in this field. This does **not** "
@@ -26806,7 +26796,7 @@ msgid ""
 "use of the card."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:131
+#: ../../content/applications/finance/expenses/expense_cards.rst:135
 msgid ""
 "An employee is going on a week-long business trip to Berlin to visit many "
 "clients. The employee needs to pay for meals, transportation, and other "
@@ -26814,7 +26804,7 @@ msgid ""
 "created to capture all the expenses, with the name `Business Trip - Berlin`."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:136
+#: ../../content/applications/finance/expenses/expense_cards.rst:140
 msgid ""
 "The marketing department pays for many expenses throughout the year, from "
 "email marketing services, venue rentals for events, promotional merchandise, "
@@ -26822,14 +26812,14 @@ msgid ""
 "entire department, a physical card is ordered with the name `Marketing`."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:141
+#: ../../content/applications/finance/expenses/expense_cards.rst:145
 msgid ""
 ":guilabel:`Cardholder`: Select the person using the card from the drop-down "
 "menu. Once selected, the person's name populates the :guilabel:`Draft` "
 "field, above :guilabel:`Cardholder`."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:143
+#: ../../content/applications/finance/expenses/expense_cards.rst:147
 msgid ""
 ":guilabel:`Update info`: Next to the cardholder's name, "
 "click :guilabel:`Update info` and a :guilabel:`Cardholder Configuration` pop-"
@@ -26847,20 +26837,20 @@ msgstr ""
 "데 사용되므로 **반드시** 입력해야 합니다. 이 양식에 정보가 누락된 경우 카드"
 "를 **만들 수 없으며**, 카드를 생성 또는 주문 시 오류가 발생합니다."
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:151
+#: ../../content/applications/finance/expenses/expense_cards.rst:155
 msgid ""
 "The phone number listed is used for two-factor authentication. The phone "
 "number can be changed in the future. When changing the phone number, an "
 "alert is sent to the original phone number, notifying them of the change."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:155
+#: ../../content/applications/finance/expenses/expense_cards.rst:159
 msgid ""
 ":guilabel:`Type`: Click the radio button next to the desired *type* of "
 "expense card. Options are:"
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:157
+#: ../../content/applications/finance/expenses/expense_cards.rst:161
 msgid ""
 ":guilabel:`Physical`: A physical card is printed and mailed out to the "
 "employee. If selected, a :guilabel:`Delivery Address` field appears. Using "
@@ -26868,13 +26858,13 @@ msgid ""
 "mailed to."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:160
+#: ../../content/applications/finance/expenses/expense_cards.rst:164
 msgid ""
 ":guilabel:`Virtual`: Virtual cards are available instantaneously once the "
 "card configuration is completed and the card is activated."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:163
+#: ../../content/applications/finance/expenses/expense_cards.rst:167
 msgid ""
 ":guilabel:`Company`: Select the company the expenses are associated with "
 "using the drop-down menu. Each card must be associated with a single "
@@ -26883,19 +26873,19 @@ msgid ""
 "account configured, or the expense cards will not work."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:167
+#: ../../content/applications/finance/expenses/expense_cards.rst:171
 msgid ""
 ":guilabel:`Stripe Journal`: :guilabel:`Stripe Issuing` populates this field "
 "by default, and cannot be modified."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:170
+#: ../../content/applications/finance/expenses/expense_cards.rst:174
 msgid ""
 "Next, configure the following fields in the :guilabel:`Spending Policy` tab "
 "of the card form:"
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:172
+#: ../../content/applications/finance/expenses/expense_cards.rst:176
 msgid ""
 ":guilabel:`Countries`: Using the drop-down menu, select the countries the "
 "card is able to be used in. The company's country location populates this "
@@ -26903,14 +26893,14 @@ msgid ""
 "purchase expensable items from, should be included in this list."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:175
+#: ../../content/applications/finance/expenses/expense_cards.rst:179
 msgid ""
 ":guilabel:`Categories`: If the expense card is limited to purchase items "
 "within a specific *category*, select them using the drop-down menu. If this "
 "field is left blank, the card may be used for *any* expense category."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:179
+#: ../../content/applications/finance/expenses/expense_cards.rst:183
 msgid ""
 "Odoo is able to categorize transactions based on the :abbr:`MCC (Merchant "
 "Category Code)` provided by the card network provider (such as Mastercard). "
@@ -26920,13 +26910,13 @@ msgid ""
 "allowing Stripe to approve or block it based on the card's configuration."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:186
+#: ../../content/applications/finance/expenses/expense_cards.rst:190
 msgid ""
 "A company issues an expense card that is only authorized for airline, train, "
 "and taxi travel expenses."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:189
+#: ../../content/applications/finance/expenses/expense_cards.rst:193
 msgid ""
 "To configure this, click into the :guilabel:`Category` field, and "
 "click :guilabel:`Search more...` at the bottom. In the :guilabel:`Search: "
@@ -26935,7 +26925,7 @@ msgid ""
 "filter` :guilabel:`Filters` column."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:194
+#: ../../content/applications/finance/expenses/expense_cards.rst:198
 msgid ""
 "Next, tick the checkboxes next to the desired transportation categories. In "
 "this example, only :guilabel:`Railroads`, :guilabel:`Passenger "
@@ -26943,13 +26933,13 @@ msgid ""
 "Carriers` are selected."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:198
+#: ../../content/applications/finance/expenses/expense_cards.rst:202
 msgid ""
 "Click :guilabel:`Select` and the selected transportation categories now "
 "populate the :guilabel:`Categories` field."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:201
+#: ../../content/applications/finance/expenses/expense_cards.rst:205
 msgid ""
 ":guilabel:`Limit`: Configure the two spending limits for the card. The first "
 "configuration sets the total expense amount allowed during a specific time "
@@ -26960,32 +26950,32 @@ msgid ""
 "selected time period."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:207
+#: ../../content/applications/finance/expenses/expense_cards.rst:211
 msgid ""
 "Next, set the *per transaction* limit. Enter the maximum amount that can be "
 "charged on the expense card in a single transaction in the field."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:211
+#: ../../content/applications/finance/expenses/expense_cards.rst:215
 msgid ""
 "A company allows employees to purchase airline tickets that are less than "
 "$1,000.00 total. Additionally, there is a monthly cap of $3,000.00 for all "
 "expenses."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:214
+#: ../../content/applications/finance/expenses/expense_cards.rst:218
 msgid ""
 "The company would configure the limit as follows: `3,000.00` "
 "per :guilabel:`Month` and `1,000.00` per transaction."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:218
+#: ../../content/applications/finance/expenses/expense_cards.rst:222
 msgid ""
 "Card limits can be modified at any point. Once modified, they immediately go "
 "into effect."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:221
+#: ../../content/applications/finance/expenses/expense_cards.rst:225
 msgid ""
 "All expense cards pull payments from a single Stripe account. It is "
 "recommended to set card limits to avoid large charges or transactions that "
@@ -26996,11 +26986,11 @@ msgstr ""
 msgid "An expense card form filled out for transportation and food only."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:231
+#: ../../content/applications/finance/expenses/expense_cards.rst:235
 msgid "Activate expense cards"
 msgstr "경비용 카드 활성화"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:233
+#: ../../content/applications/finance/expenses/expense_cards.rst:237
 msgid ""
 "Once an expense card is configured, the next step is to activate the cards. "
 "First, navigate to :menuselection:`Expenses app --> Cards`, and "
@@ -27008,43 +26998,43 @@ msgid ""
 "Kanban view."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:237
+#: ../../content/applications/finance/expenses/expense_cards.rst:241
 msgid ""
 "All cards display their status on a banner in the upper-right corner of each "
 "card. Statuses are either:"
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:240
+#: ../../content/applications/finance/expenses/expense_cards.rst:244
 msgid ""
 ":guilabel:`Draft`: The card form is filled out, but the card has not been "
 "requested or activated."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:241
+#: ../../content/applications/finance/expenses/expense_cards.rst:245
 msgid ""
 ":guilabel:`Pending`: A physical card has been ordered, but not activated."
 msgstr ""
 ":guilabel:`보류 중`: 실물 카드 주문이 완료되었으나 활성화되지 않았습니다."
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:242
+#: ../../content/applications/finance/expenses/expense_cards.rst:246
 msgid ""
 ":guilabel:`Active`: The card is able to be used. This status does **not** "
 "display a status banner on the card."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:244
+#: ../../content/applications/finance/expenses/expense_cards.rst:248
 msgid ""
 ":guilabel:`Paused`: A card has been put *on hold* and no transactions can be "
 "processed with this status."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:246
+#: ../../content/applications/finance/expenses/expense_cards.rst:250
 msgid ""
 ":guilabel:`Blocked`: The physical or virtual card is *cancelled* and cannot "
 "be used."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:248
+#: ../../content/applications/finance/expenses/expense_cards.rst:252
 msgid ""
 "Click on a card to activate, and the card form loads. Ensure all the fields "
 "are :ref:`configured <expenses/card-configure>`, then click "
@@ -27052,14 +27042,14 @@ msgid ""
 "or :guilabel:`Activate` if creating a virtual card."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:253
+#: ../../content/applications/finance/expenses/expense_cards.rst:257
 msgid ""
 "Physical cards take 5 to 10 business days to be delivered. Once ordered, "
 "delivery information is added to the chatter, and the user who placed the "
 "card order receives the information by email."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:256
+#: ../../content/applications/finance/expenses/expense_cards.rst:260
 msgid ""
 "If a physical card is requested, the card status changes "
 "to :guilabel:`Inactive`, while it is being printed and mailed to the "
@@ -27067,24 +27057,24 @@ msgid ""
 "activate the card."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:260
+#: ../../content/applications/finance/expenses/expense_cards.rst:264
 msgid ""
 "If the card is a virtual card, once :guilabel:`Activate` is clicked, the "
 "status changes to :guilabel:`Active` and it is available for use."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:263
+#: ../../content/applications/finance/expenses/expense_cards.rst:267
 msgid ""
 "Once the status of an expense card is :guilabel:`Active`, the user can use "
 "the card to purchase expensable items, as long as the purchases are within "
 "the limits set on the card."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:267
+#: ../../content/applications/finance/expenses/expense_cards.rst:271
 msgid "Demo expense card"
 msgstr "데모 경비용 카드"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:269
+#: ../../content/applications/finance/expenses/expense_cards.rst:273
 msgid ""
 "To test the expense card feature without using a live Stripe "
 "account, :ref:`install <general/install>` the `Expense Cards: Demo` module. "
@@ -27093,38 +27083,38 @@ msgid ""
 "transactions."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:275
+#: ../../content/applications/finance/expenses/expense_cards.rst:279
 msgid ""
 "If a production account is already configured, **do not use** the demo "
 "module, as it overwrites the existing setup."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:279
+#: ../../content/applications/finance/expenses/expense_cards.rst:283
 msgid "Using expense cards"
 msgstr "경비용 카드 사용"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:281
+#: ../../content/applications/finance/expenses/expense_cards.rst:285
 msgid ""
 "Using an expense card is almost identical to using any other credit or debit "
 "card. The only difference is if a :ref:`physical card <expenses/physical>` "
 "or a :ref:`virtual card <expenses/virtual>` is used."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:285
+#: ../../content/applications/finance/expenses/expense_cards.rst:289
 msgid ""
 "When a charge is made using an expense card, an expense record is "
 "automatically created in the **Expenses** app, linked to the specific card. "
 "The next step is to attach the corresponding receipt."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:289
+#: ../../content/applications/finance/expenses/expense_cards.rst:293
 msgid ""
 "It is best proactive to take a photo of a receipt as soon as it is received, "
 "to eliminate the risk of losing the receipt and having an expense "
 "reimbursement request denied."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:292
+#: ../../content/applications/finance/expenses/expense_cards.rst:296
 msgid ""
 "Open the expense record by navigating to :menuselection:`Expenses app --> "
 "Cards`, and click on the specific card. Next, click the :icon:`fa-"
@@ -27134,7 +27124,7 @@ msgid ""
 "upload the receipt.`"
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:297
+#: ../../content/applications/finance/expenses/expense_cards.rst:301
 msgid ""
 "Click on the desired expense record to open the detailed expense form. Click "
 "the :guilabel:`Attach Receipt` button, and a file explorer loads. Navigate "
@@ -27142,7 +27132,7 @@ msgid ""
 "expense."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:301
+#: ../../content/applications/finance/expenses/expense_cards.rst:305
 msgid ""
 "Make any other adjustments to :ref:`the expense record <expenses/"
 "manual_expense>`, if necessary. Once the record is correct, "
@@ -27150,7 +27140,7 @@ msgid ""
 "receipt needs to be split between multiple expenses."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:306
+#: ../../content/applications/finance/expenses/expense_cards.rst:310
 msgid ""
 "If a purchase is attempted that either is outside the listed countries, "
 "listed categories, or exceeds the transaction limit or total expense limit "
@@ -27158,7 +27148,7 @@ msgid ""
 "the :guilabel:`Expenses` dashboard for the card, with a status of *Refused*."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:311
+#: ../../content/applications/finance/expenses/expense_cards.rst:315
 msgid ""
 "To view the details of why the transaction was refused, click on "
 "the :icon:`fa-usd` :guilabel:`Expenses` smart button for the card, and click "
@@ -27166,17 +27156,17 @@ msgid ""
 "refused appears in the chatter, authored by *OdooBot*."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:318
+#: ../../content/applications/finance/expenses/expense_cards.rst:322
 msgid "Physical card"
 msgstr "실물 카드"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:320
+#: ../../content/applications/finance/expenses/expense_cards.rst:324
 msgid ""
 "When using a physical card, make charges in the same manner as a regular "
 "physical pre-paid debit card."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:323
+#: ../../content/applications/finance/expenses/expense_cards.rst:327
 msgid ""
 "Once the user receives the card, the cardholder must activate the card using "
 "the instructions provided with the card. Next, open the **Expenses** app, "
@@ -27186,29 +27176,32 @@ msgid ""
 "complete the activation."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:330
+#: ../../content/applications/finance/expenses/expense_cards.rst:334
 msgid "Card PIN"
 msgstr "카드 비밀번호"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:332
+#: ../../content/applications/finance/expenses/expense_cards.rst:336
 msgid ""
-"To view the card's PIN, open the card form in the **Expenses** app, and "
-"enter the six-digit code sent via SMS to the associated phone number. The "
-"card and its PIN appear in a pop-up window. The PIN is displayed below the "
-"card and **cannot** be changed."
-msgstr ""
-
-#: ../../content/applications/finance/expenses/expense_cards.rst:339
-msgid "Virtual card"
-msgstr "가상 카드"
-
-#: ../../content/applications/finance/expenses/expense_cards.rst:341
-msgid ""
-"If using a virtual card, there is one additional step to access the card "
-"information to use for purchases."
+"To view the card's PIN, the cardholder **must** have a :doc:`user <../../"
+"general/users>` profile. Navigate to :menuselection:`Expenses app --> "
+"Cards`, and click on the card to open the card form. Enter the six-digit "
+"code sent via SMS to the associated phone number. The card and its PIN "
+"appear in a pop-up window. The PIN is displayed below the card and "
+"**cannot** be changed."
 msgstr ""
 
 #: ../../content/applications/finance/expenses/expense_cards.rst:344
+msgid "Virtual card"
+msgstr "가상 카드"
+
+#: ../../content/applications/finance/expenses/expense_cards.rst:346
+msgid ""
+"If using a virtual card, the cardholder **must** have a :doc:`user <../../"
+"general/users>` profile to access the card information required for "
+"purchases."
+msgstr ""
+
+#: ../../content/applications/finance/expenses/expense_cards.rst:349
 msgid ""
 "To obtain the card information, navigate to :menuselection:`Expenses app --> "
 "Cards` and click on the virtual card being used. Next, click into "
@@ -27216,7 +27209,7 @@ msgid ""
 "number, with only the last four digits displayed, and the expiration date."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:348
+#: ../../content/applications/finance/expenses/expense_cards.rst:353
 msgid ""
 "To view the full details, click :icon:`fa-eye` :guilabel:`View Details`, and "
 "a :guilabel:`Two-Factor Authentication` pop-up window loads. Enter the six-"
@@ -27226,24 +27219,24 @@ msgid ""
 "window by clicking :guilabel:`X`."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:355
+#: ../../content/applications/finance/expenses/expense_cards.rst:360
 msgid ""
 "Android users can add their virtual expense cards `to a Google wallet "
 "<https://support.google.com/wallet/answer/12058983?hl=en>`_."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:359
+#: ../../content/applications/finance/expenses/expense_cards.rst:364
 msgid "Lost cards"
 msgstr "분실 카드"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:361
+#: ../../content/applications/finance/expenses/expense_cards.rst:366
 msgid ""
 "When a physical card is lost, or if credentials for a virtual card have been "
 "compromised, the cards must be updated in the **Expenses** app so they "
 "cannot be used. This is referred to in Odoo as *blocking*."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:365
+#: ../../content/applications/finance/expenses/expense_cards.rst:370
 msgid ""
 "To stop any charges on a card, navigate to :menuselection:`Expenses app --> "
 "Cards`, and click on the specific card being deactivated. On the card form, "
@@ -27251,7 +27244,7 @@ msgid ""
 "window loads."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:369
+#: ../../content/applications/finance/expenses/expense_cards.rst:374
 msgid ""
 "Click into the field next to :guilabel:`Reason`, and select the reason the "
 "card is being blocked. The options are :guilabel:`Lost`, :guilabel:`Stolen`, "
@@ -27260,21 +27253,21 @@ msgid ""
 "on the card in the :guilabel:`Cards` dashboard view."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:375
+#: ../../content/applications/finance/expenses/expense_cards.rst:380
 msgid ""
 "An employee is given a virtual expense card to use for an upcoming business "
 "trip. The employee uses this card to purchase an airline ticket and a hotel "
 "room, one month before the scheduled trip."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:379
+#: ../../content/applications/finance/expenses/expense_cards.rst:384
 msgid ""
 "A week before the trip, they receive an email from the airline, explaining "
 "there has been a data breach, and customer names, contact information, and "
 "purchase details including credit card numbers have been leaked."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:383
+#: ../../content/applications/finance/expenses/expense_cards.rst:388
 msgid ""
 "The employee reaches out to their manager, explaining the situation. The "
 "manager opens the virtual expense card, and blocks the card using the "
@@ -27282,11 +27275,11 @@ msgid ""
 "the employee to use for their business trip."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:388
+#: ../../content/applications/finance/expenses/expense_cards.rst:393
 msgid "Temporary card pauses"
 msgstr "일시적인 카드 사용 중지"
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:390
+#: ../../content/applications/finance/expenses/expense_cards.rst:395
 msgid ""
 "When an employee is out of office for an extended period of time, such as a "
 "vacation, or an illness, it is recommended to temporarily deactivate their "
@@ -27294,7 +27287,7 @@ msgid ""
 "*pausing* a card."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:394
+#: ../../content/applications/finance/expenses/expense_cards.rst:399
 msgid ""
 "To pause a card, navigate to :menuselection:`Expenses app --> Cards`, and "
 "click on the specific card being paused. On the card form, "
@@ -27302,14 +27295,14 @@ msgid ""
 "activated."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:399
+#: ../../content/applications/finance/expenses/expense_cards.rst:404
 msgid ""
 "An employee in the sales department has a physical expense card to use for "
 "client meetings. They recently welcomed a new child, and will be out of "
 "office on parental leave for three months."
 msgstr ""
 
-#: ../../content/applications/finance/expenses/expense_cards.rst:402
+#: ../../content/applications/finance/expenses/expense_cards.rst:407
 msgid ""
 "On the employee's last day, their manager opens the expense card record, and "
 "clicks :guilabel:`Pause`. When the employee returns to work, the manager "
@@ -71398,6 +71391,151 @@ msgid ""
 msgstr ""
 ":guilabel:`보안 키` 및 :guilabel:`웹훅 토큰` 항목에 :ref:`payment_providers/"
 "xendit/configure_dashboard` 단계에서 저장한 내용을 입력합니다."
+
+#~ msgid ""
+#~ "Make sure the :guilabel:`Start Date` and :guilabel:`End Date` fields are "
+#~ "visible in the :guilabel:`Invoice Lines` tab. In most cases, "
+#~ "the :guilabel:`Start Date` should be in the same month as "
+#~ "the :guilabel:`Invoice Date`. Deferred revenue entries are posted from "
+#~ "the invoice date and are displayed in the report accordingly."
+#~ msgstr ""
+#~ ":guilabel:`시작일` 및 :guilabel:`종료일` 항목이 :guilabel:`청구서 줄` 탭"
+#~ "에 표시되는지 확인합니다. 대부분의 경우 :guilabel:`시작일` 은 :guilabel:`"
+#~ "청구일` 과 같은 달에 속해 있어야 합니다. 청구일부터 이연 수익 항목이 발행"
+#~ "되며 이에 따라 보고서에 표시됩니다."
+
+#~ msgid "There are two invoices:"
+#~ msgstr "두 건의 청구서를 살펴 봅니다:"
+
+#~ msgid ""
+#~ "Line 1: Expense account -1200 -600 = **-1800** (cancelling the total of "
+#~ "both invoices)"
+#~ msgstr "1번 줄: 비용 계정 -1200 -600 = **-1800** (두 청구서 합계 취소)"
+
+#~ msgid ""
+#~ "Line 2: Expense account 100 + 50 = **150** (recognizing 1/12 of invoice A "
+#~ "and invoice B)"
+#~ msgstr ""
+#~ "2번 줄: 비용 계정 100 + 50 = **150** (청구서 A와 청구서 B의 1/12 인식)"
+
+#~ msgid ""
+#~ "Line 3: Deferred account 1800 - 150 = **1650** (amount that has yet to be "
+#~ "deferred later on)"
+#~ msgstr ""
+#~ "3번 줄: 이연 계정 1800 - 150 = **1650** (아직 이연되지 않고 나중에 이연될 "
+#~ "금액)"
+
+#~ msgid "Line 1: Expense account **1800**"
+#~ msgstr "1번 줄: 비용 계정 **1800**"
+
+#~ msgid "Line 2: Deferred account **-150**"
+#~ msgstr "2번 줄: 이연 계정 **-150**"
+
+#~ msgid "Line 3: Expense account **-1650**"
+#~ msgstr "3번 줄: 비용 계정 **-1650**"
+
+#~ msgid ""
+#~ "Line 2: Expense account 200 + 100 = **300** (recognizing 2/12 of invoice "
+#~ "A and invoice B)"
+#~ msgstr ""
+#~ "2번 줄: 비용 계정 200 + 100 = **300** (청구서 A와 청구서 B의 2/12 인식)"
+
+#~ msgid ""
+#~ "Line 3: Deferred account 1800 - 300 = **1500** (amount that has yet to be "
+#~ "deferred later on)"
+#~ msgstr ""
+#~ "3번 줄: 이연 계정 1800 - 300 = **1500** (아직 이연되지 않고 나중에 이연될 "
+#~ "금액)"
+
+#~ msgid "From March to October"
+#~ msgstr "3월부터 10월"
+
+#~ msgid "The same computation is done for each month until October."
+#~ msgstr "10월까지 매월 같은 방식으로 계산합니다."
+
+#~ msgid "In November"
+#~ msgstr "11월"
+
+#~ msgid ""
+#~ "At the end of November, after clicking the :guilabel:`Generate Entries` "
+#~ "button, there are the following entries:"
+#~ msgstr ""
+#~ "11월 말일 자로 :guilabel:`항목 생성` 버튼을 클릭하면 다음과 같은 항목을 확"
+#~ "인할 수 있습니다."
+
+#~ msgid "Entry 1 dated on the 30th November:"
+#~ msgstr "1번 항목의 날짜는 11월 30일입니다:"
+
+#~ msgid ""
+#~ "Line 2: Expense account 1100 + 550 = **1650** (recognizing 11/12 of "
+#~ "invoice A and invoice B)"
+#~ msgstr ""
+#~ "2번 줄: 비용 계정 1100 + 550 = **1650** (청구서 A와 청구서 B의 11/12 인식)"
+
+#~ msgid ""
+#~ "Line 3: Deferred account 1800 - 1650 = **150** (amount that has yet to be "
+#~ "deferred later on)"
+#~ msgstr ""
+#~ "3번 줄: 이연 계정 1800 - 1650 = **150** (아직 이연되지 않고 나중에 이연될 "
+#~ "금액)"
+
+#~ msgid ""
+#~ "Entry 2 dated on the 1st December, the reversal of the previous entry."
+#~ msgstr "2번 항목의 날짜는 12월 1일이며, 이전 항목에 대한 역분개입니다."
+
+#~ msgid ""
+#~ "There is no need to generate entries in December. Indeed, if we do the "
+#~ "computation for December, we have an amount of 0 to be deferred."
+#~ msgstr ""
+#~ "12월에는 항목을 생성할 필요가 없습니다. 실제로 12월에 대한 계산을 해 보"
+#~ "면, 이연 금액은 0이 됩니다."
+
+#~ msgid "invoice A and invoice B"
+#~ msgstr "청구서 A 및 청구서 B"
+
+#~ msgid ""
+#~ "two entries (one for the deferral and one for the reversal) for each "
+#~ "month from January to November"
+#~ msgstr ""
+#~ "1월부터 11월까지 매월 두 개의 항목 (이연용 및 역분개용)이 생성됩니다."
+
+#~ msgid ""
+#~ "Make sure the :guilabel:`Start Date` and :guilabel:`End Date` fields are "
+#~ "visible in the :guilabel:`Invoice Lines` tab. In most cases, "
+#~ "the :guilabel:`Start Date` should be in the same month as "
+#~ "the :guilabel:`Bill Date`. Deferred expense entries are posted from the "
+#~ "bill date and are displayed in the report accordingly."
+#~ msgstr ""
+#~ ":guilabel:`시작일` 및 :guilabel:`종료일` 필드가 :guilabel:`청구서 줄` 탭"
+#~ "에 표시되는지 확인합니다. 대부분의 경우 :guilabel:`시작일` 은 :guilabel:`"
+#~ "공급업체 청구일` 과 같은 달이어야 합니다. 이연 비용 항목이 청구일로부터 전"
+#~ "기되며 이에 따라 보고서에 표시됩니다."
+
+#~ msgid "There are two bills:"
+#~ msgstr "두 건의 업체 청구서를 살펴 봅니다:"
+
+#~ msgid ""
+#~ "Line 1: Expense account -1200 -600 = **-1800** (cancelling the total of "
+#~ "both bills)"
+#~ msgstr ""
+#~ "1번 라인: 비용 계정 -1200 -600 = **-1800**(양쪽 업체 청구서 총계 취소)"
+
+#~ msgid ""
+#~ "Line 2: Expense account 1100 + 550 = **1650** (recognizing 11/12 of bill "
+#~ "A and bill B)"
+#~ msgstr ""
+#~ "2번 라인: 비용 계정 1100 + 550 = **1650** (업체 청구서 A와 업체 청구서 B"
+#~ "의 11/12 인식)"
+
+#~ msgid ""
+#~ "There is no need to generate entries in December. Indeed, if we do the "
+#~ "computation for December, we will have an amount of 0 to be deferred."
+#~ msgstr ""
+#~ "12월에는 항목을 생성할 필요가 없습니다. 실제로 12월에 대한 계산을 해 보"
+#~ "면, 이연 금액은 0이 됩니다."
+
+#~ msgid "bill A and bill B"
+#~ msgstr "업체 청구서 A와 B"
 
 #~ msgid ""
 #~ ":ref:`Install <general/install>` the following modules to get all the "

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-09 18:30+0000\n"
+"POT-Creation-Date: 2026-01-22 18:30+0000\n"
 "PO-Revision-Date: 2026-01-23 23:21+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -6951,12 +6951,207 @@ msgstr ""
 msgid ""
 "Click into the journal entry to view the :guilabel:`Journal Items`, and "
 "other information about the entry."
-msgstr "仕訳明細をクリックすると、:guilabel:`仕訳帳項目` や仕訳に関するその他の情報を"
+msgstr ""
+"仕訳明細をクリックすると、:guilabel:`仕訳帳項目` や仕訳に関するその他の情報を"
 "表示できます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/landed_costs.rst:0
 msgid "Journal Entry form for landed cost created from vendor bill."
 msgstr "仕入先請求書から作成された仕入諸掛用の仕訳フォーム。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:3
+msgid "Account for scrapped goods"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:5
+msgid ""
+"It's essential to strike a balance between having sufficient stock on hand "
+"to meet demand while avoiding overpurchasing. When working with perishable "
+"products, or when inventoried goods have defects that prevent the product "
+"from being sold, occasionally, products must be scrapped and removed from "
+"inventory. It's important to account for these losses in the :ref:`Profit "
+"and Loss report <accounting/reporting/profit-and-loss>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:11
+msgid ""
+"Generally, follow this process to account for scrapped goods in the *Profit "
+"and Loss* report:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:13
+msgid ""
+":ref:`Enable settings in the Inventory configuration <inventory/"
+"inventory_valuation/scrap-enable>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:15
+msgid ""
+":ref:`Configure the product category <inventory/inventory_valuation/scrap-"
+"category>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:16
+msgid ""
+":ref:`Set up a scrap location and its scrap journal <inventory/"
+"inventory_valuation/scrap-location>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:18
+msgid ":ref:`Scrap products <inventory/inventory_valuation/scrap-products>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:19
+msgid ""
+":ref:`View scrapped products in the Profit and Loss report <inventory/"
+"inventory_valuation/view-profit-loss>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:25
+msgid "Enable settings"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:27
+msgid ""
+"To ensure scrapped goods can be seen in the *Profit and Loss* report, "
+"open :menuselection:`Inventory app --> Configuration --> Settings`. In "
+"the :guilabel:`Warehouse` section, enable :guilabel:`Storage Locations`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:34
+msgid "Configure the product category"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:36
+msgid ""
+"Next, configure the product category. Open :menuselection:`Inventory app --> "
+"Configuration --> Categories`. Open or create a product category."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:39
+msgid ""
+"Next, set the :guilabel:`Costing Method` to either :guilabel:`First In First "
+"Out (FIFO)` or :guilabel:`Average Cost (AVCO)`:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:42
+msgid ""
+":guilabel:`First In First Out (FIFO)`: Inventory is valued, and the cost of "
+"goods sold (COGS) is calculated by assuming the oldest items purchased are "
+"the first ones sold, tracking costs by specific receipt lots. It's a precise "
+"method for fluctuating costs, and requires tracking units by their entry "
+"time (load/serial numbers) for accurate removal from stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:46
+msgid ""
+":guilabel:`Average Cost (AVCO)`: Inventory value is calculated by "
+"dynamically averaging the cost of all units in stock, updating with each new "
+"purchase or manufacturing receipt to reflect fluctuating prices, making it "
+"ideal for varied vendor costs, with the system automatically recalculating "
+"the unit cost and value for assets and COGS. Odoo handles the math, "
+"adjusting the average cost automatically as products are bought or sold, but "
+"doesn't change it when products sell, only updating when new stock arrives "
+"at a different price."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:53
+msgid ""
+"Next, set the :guilabel:`Inventory Valuation` field to :guilabel:`Perpetual "
+"(at invoicing)`. This setting ensures that real-time journal entries are "
+"created in the *Accounting* app whenever stock enters or leaves the "
+"company's warehouse."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:60
+msgid "Set up a scrap location and its scrap journal"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:62
+msgid ""
+"Next, you must create or edit an existing scrap location. "
+"Open :menuselection:`Inventory app --> Configuration --> Locations`. Open an "
+"existing location or create a new one by clicking :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:67
+msgid ""
+"By default, the :guilabel:`Locations` list is filtered to show only internal "
+"locations. Remove this filter to view all locations, including *Inventory "
+"Loss* locations."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:70
+msgid ""
+"Update the :guilabel:`Location Type` field to select :guilabel:`Inventory "
+"Loss`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:72
+msgid ""
+"Specify a :guilabel:`Loss Account` by selecting the account used for "
+"scrapped goods."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:75
+msgid ""
+"The `WH/Scrap` location is an :guilabel:`Inventory Loss` location that uses "
+"the `600001 Scrapped Goods` journal as its :guilabel:`Loss Account`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:0
+msgid "Specify an Inventory Loss Location Type and a Loss Account."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:84
+msgid "Scrap products"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:86
+msgid ""
+"After the product category and location are set up, :doc:`products can be "
+"scrapped <../warehouses_storage/inventory_management/scrap_inventory>`. Be "
+"sure to select the scrap location in the :guilabel:`Scrap Location` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:91
+msgid "`20` units of `Under-Eye Masks` are scrapped to `WH/Scrap`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:0
+msgid "Specify the Product, Quantity, and Scrap Location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:99
+msgid "View scrapped products in the Profit and Loss report"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:101
+msgid ""
+"After products have been scrapped to the correct scrap location, view items "
+"scrapped to it in the Profit and Loss report. "
+"Open :menuselection:`Accounting app --> Reporting --> Profit and Loss`. To "
+"view the scrap order in the report, under the :guilabel:`Gross Profit` "
+"section, expand the :guilabel:`Expense` category. Search for the scrap "
+"journal in the list and click the :icon:`fa-ellipsis-v` :guilabel:`(vertical "
+"ellipsis)` icon next to the scrap account and select :guilabel:`General "
+"Ledger`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:109
+msgid ""
+"`$100` worth of `Under-Eye Masks` appear as a debit in the Profit and Loss' "
+"General Ledger."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:0
+msgid ""
+"View the General Ledger to see scrapped items in the Profit and Loss report."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/scrapped_inventory_valuation.rst:115
+msgid ":ref:`Profit and Loss report <accounting/reporting/profit-and-loss>`"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/valuation_by_lots.rst:3
 msgid "Valuation by lots/serial numbers"
@@ -15072,7 +15267,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:77
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:131
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:133
 msgid ""
 "Odoo does **not** automatically split quantities across multiple storage "
 "locations. If an incoming receipt contains several units or packages and the "
@@ -15081,7 +15276,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:82
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:136
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:138
 msgid ""
 "*(Example: If a location can hold 10 units and 12 units arrive, all 12 are "
 "still assigned to that location.)*"
@@ -15102,11 +15297,16 @@ msgstr ""
 "で、:guilabel:`最大重量` フィールドにプロダクトの最大重量を設定します。この制"
 "限は、この保管カテゴリが割当てられた各ロケーションに適用されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:93
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:92
+msgid ""
+"This value must be set to greater than `0` if a product weight is defined."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:95
 msgid "Capacity by product"
 msgstr "プロダクトごとの容量"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:95
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:97
 msgid ""
 "In the :guilabel:`Capacity by Product` tab, click :guilabel:`Add a Line` to "
 "input items, and enter their capacities in the :guilabel:`Quantity` field."
@@ -15114,7 +15314,7 @@ msgstr ""
 ":guilabel:`プロダクトごとの容量` タブで、:guilabel:`明細追加` をクリックして"
 "項目を入力し、:guilabel:`容量` フィールドにそれぞれの容量を入力します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:99
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:101
 msgid ""
 "Ensure only a maximum of five `Large Cabinets` and two `Corner Desk Right "
 "Sit` are stored at a single storage location, by specifying those amounts in "
@@ -15128,11 +15328,11 @@ msgstr ""
 msgid "Show storage category limiting by product count."
 msgstr "プロダクト数による保管カテゴリの制限を表示します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:109
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:111
 msgid "Capacity by package"
 msgstr "梱包ごとの容量"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:113
 msgid ""
 "For companies using :doc:`packages <../../product_management/configure/"
 "package>`, it becomes possible to ensure real-time storage capacity checks, "
@@ -15142,7 +15342,7 @@ msgstr ""
 "は、梱包の種類 (例:クレート、大型箱、箱など) に基づくリアルタイムの保管容量"
 "チェックを確実に実行することが可能になります。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:115
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:117
 msgid ""
 "Create the :ref:`package type <inventory/warehouses_storage/package-type>` "
 "before assigning it to a storage category. Create it on "
@@ -15151,13 +15351,13 @@ msgid ""
 "Packagings` page. Be sure to set the :guilabel:`Package Type`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:121
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:123
 msgid ""
 "Create putaway rules for pallet-stored items, by creating the `High "
 "frequency pallets` storage category."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:124
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:126
 msgid ""
 "In the :guilabel:`Capacity by Package` tab, specify the number of packages "
 "for the designated :guilabel:`Package Type`, and set a maximum of `2.00` "
@@ -15170,11 +15370,11 @@ msgstr ""
 msgid "Create a storage category."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:142
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:144
 msgid "Assign to location"
 msgstr "ロケーションに割り当てる"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:144
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:146
 msgid ""
 "Once the storage category is created, assign it to a location. Navigate to "
 "the location by going to :menuselection:`Inventory app --> Configuration --> "
@@ -15186,7 +15386,7 @@ msgstr ""
 "ションを選択します。次に、:guilabel:`保管カテゴリ` フィールドで作成したカテゴ"
 "リを選択します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:149
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:151
 msgid ""
 "Assign the `High frequency pallets` storage category (which limits pallets "
 "stored at any location to two pallets) to the `WH/Stock/Pallets/PAL1` sub-"
@@ -15199,11 +15399,11 @@ msgid ""
 msgstr ""
 "保管カテゴリが作成されると、倉庫ロケーションにリンクすることができます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:158
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:160
 msgid "Putaway rule"
 msgstr "入庫規則"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:160
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:162
 msgid ""
 "With the :ref:`storage category <inventory/routes/define-storage>` "
 "and :ref:`location <inventory/routes/assign-location>` set up, create "
@@ -15214,19 +15414,19 @@ msgstr ""
 "<inventory/routes/assign-location>` 設定で、:menuselection:`在庫アプリ --> 設"
 "定 --> 入庫規則` に移動し、:doc:`置場規則 <putaway>` を作成して下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:164
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:166
 msgid ""
 "Click the :guilabel:`New` button to create the putaway rule. Specify a "
 "location to store to in the :guilabel:`Store to` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:167
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:169
 msgid ""
 "Use the :guilabel:`Sublocation` field to specify that you want to use a "
 "sublocation with the storage category:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:170
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:172
 msgid ""
 ":guilabel:`Last Used`: The last location that had a move associated with it "
 "for that product or product category is used. If there is no last location "
@@ -15234,21 +15434,14 @@ msgid ""
 "field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:173
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:175
 msgid ""
 ":guilabel:`Closest Location`: The locations specified as part of the storage "
 "category are used. A storage category is mandatory in the :guilabel:`Having "
 "Category` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:176
-msgid ""
-"If using multiple storage locations for a single storage category, create "
-"putaway rules for each location to ensure that if one storage location is in "
-"use, the secondary locations must be used."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:180
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:179
 msgid ""
 "Continuing the example from above, the `High frequency pallets` storage "
 "category is assigned to the putaway rule directing pallets of lemonade to "
@@ -15257,14 +15450,21 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
-msgid "Storage Categories used in a variety of putaway rules."
-msgstr "様々な入庫規則で使用される保管カテゴリ。"
+msgid "Storage Categories used in putaway rules."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:188
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:187
+msgid ""
+"If products are not routing to secondary locations for a storage category "
+"and a product weight is defined, verify that the storage "
+"category's :guilabel:`Max Weight` value is set to a number greater than `0`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:192
 msgid "Use case: limit capacity by package"
 msgstr "使用例: 梱包ごとに容量を制限します"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:190
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:194
 msgid ""
 "To limit the capacity of a storage location by a specific number of "
 "packages, :ref:`create a storage category with a Capacity By Package "
@@ -15273,13 +15473,13 @@ msgstr ""
 "保管場所の容量を特定の梱包数に制限するには、:ref:`梱包ごとの容量で保管カテゴ"
 "リを作成  <inventory/routes/set-capacity-package>` します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:193
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:197
 msgid ""
 "Continuing the example from above, the `High frequency pallets` storage "
 "category is assigned to the `PAL1` and `PAL2` locations."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:196
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:200
 msgid ""
 "Then, :ref:`putaway rules <inventory/routes/putaway-rule>` are set, so that "
 "any pallets received in the warehouse are directed to be stored in `PAL1` "
@@ -15289,14 +15489,14 @@ msgstr ""
 "入荷したパレットは全て`PAL1` および `PAL2` ロケーションに保管されるよう誘導さ"
 "れます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:199
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:203
 msgid ""
 "Depending on the number of pallets on-hand at each of the storage locations, "
 "when two pallets of lemonade cans is received, the following scenarios "
 "happen:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:202
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:206
 msgid ""
 "If `PAL1` and `PAL2` are empty, the pallet is redirected to `WH/Stock/"
 "Pallets/PAL1`."
@@ -15304,13 +15504,13 @@ msgstr ""
 "`PAL1` および `PAL2` が空の場合、パレットは `WH/在庫/パレット/PAL1` に再配置"
 "されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:203
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:207
 msgid "If `PAL1` is full, the pallet is redirected to `WH/Stock/Pallets/PAL2`."
 msgstr ""
 "`PAL1` が満杯の場合、パレットは `WH/在庫/パレット/PAL2` にリダイレクトされま"
 "す。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:204
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:208
 msgid ""
 "If `PAL1` and `PAL2` are full, the pallet is redirected to `WH/Stock/"
 "Pallets`."
@@ -15318,21 +15518,20 @@ msgstr ""
 "`PAL1` および `PAL2` が満杯の場合パレットは`WH/在庫/パレット` に再配置されま"
 "す。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:205
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:209
 msgid ""
 "If `PAL1` is partially full (for example, with one pallet), Odoo treats more "
 "than one received pallet as a single pallet on the receipt. You must "
 "manually separate the two pallets into separate storage locations. Click "
-"the :guilabel:`Open Move` icon to the right of the :guilabel:`Units` field, "
-"and then in the :guilabel:`Open: Stock move` box, click :guilabel:`Add a "
+"the :guilabel:`Details` link to the right of the :guilabel:`Units` field, "
+"and then in the :guilabel:`Detailed Operations` box, click :guilabel:`Add a "
 "line`. Finally, split the receipt by quantity into separate locations, then "
 "click :guilabel:`Save`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
 msgid ""
-"Update the Stock move box to route pallets to the correct locations before "
-"validating."
+"Update the Detailed Operations box to route pallets to the correct locations."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:3
@@ -27616,39 +27815,32 @@ msgstr ""
 "要があります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:15
-msgid "Inventory Adjustments page"
-msgstr "在庫調整ページ"
+msgid "Physical Inventory page"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:17
 msgid ""
-"To view the :guilabel:`Inventory Adjustments` page, navigate "
+"To view the :guilabel:`Physical Inventory` page, navigate "
 "to :menuselection:`Inventory app --> Operations --> Physical Inventory`."
 msgstr ""
-":guilabel:`在庫調整`ページを表示するには、:menuselection:`在庫アプリ --> オペ"
-"レーション --> 実地棚卸` に移動します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:None
-msgid "In stock products listed on the Inventory adjustments page."
-msgstr "在庫調整ページに表示されている在庫プロダクト。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:23
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:20
 msgid ""
-"The :guilabel:`Inventory Adjustments` page lists all products that are "
+"The :guilabel:`Physical Inventory` page lists all products that are "
 "currently in stock."
 msgstr ""
-":guilabel:`在庫調整` ページには、現在在庫にあるプロダクトが全てリストアップさ"
-"れています。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:None
+msgid "In stock products listed on the Physical Inventory page."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:26
 msgid ""
 "Only products with a quantity greater than zero are listed on "
-"the :guilabel:`Inventory Adjustments` page. To view product lines with zero "
+"the :guilabel:`Physical Inventory` page. To view product lines with zero "
 "current quantity, go to :menuselection:`Inventory app --> Reporting --> "
 "Stock`."
 msgstr ""
-":guilabel:`在庫調整` ページには、数量がゼロより大きいプロダクトのみがリストさ"
-"れます。現在の数量がゼロのプロダクト明細を表示するには、:menuselection:`在庫"
-"アプリ --> レポート --> 在庫` にアクセスして下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:30
 msgid "For each product line, the following information is listed:"
@@ -27656,25 +27848,11 @@ msgstr "各プロダクトラインごとに、以下の情報が記載されて
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:32
 msgid ""
-":guilabel:`Location`: the specific location in the warehouse where a product "
-"is stored. This column is **only** visible if :doc:`Storage Locations "
-"<use_locations>` are enabled."
-msgstr ""
-":guilabel:`ロケーション`: プロダクトが保管されている倉庫内の特定のロケーショ"
-"ン。この列は、:doc:`保管場所 <use_locations>` が有効になっている場合にのみ表"
-"示されます。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:34
-msgid ":guilabel:`Favorite`: identifies products that have been favorited."
-msgstr ":guilabel:`お気に入り`: お気に入りに追加されたプロダクトを識別します。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:35
-msgid ""
 ":guilabel:`Product`: the product whose quantity is listed on the inventory "
 "adjustment line."
 msgstr ":guilabel:`プロダクト`: 在庫調整明細に数量が記載されているプロダクト。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:36
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:33
 msgid ""
 ":guilabel:`Lot/Serial Number`: the tracking identifier assigned to the "
 "specific product listed. It can contain letters, numbers, or a combination "
@@ -27683,7 +27861,7 @@ msgstr ""
 ":guilabel:`ロット/シリアル番号`: リスト済の特定のプロダクトに割当てられた追跡"
 "識別子です。アルファベット、数字、またはその両方を組合わせることができます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:40
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:37
 msgid ""
 "If a specific product has a quantity of more than `1.00` in stock, and more "
 "than one serial number, or lot number, assigned to it, each uniquely-"
@@ -27695,68 +27873,14 @@ msgstr ""
 "ロット/シリアル番号とともに、独自のプロダクト明細に表示され、:guilabel:`ロッ"
 "ト/シリアル番号` 列の下に表示されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:45
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:42
 msgid ""
-":guilabel:`Expiration Date`: the date on which the goods with this serial "
-"number are due to expire."
-msgstr ":guilabel:`使用期限`: このシリアル番号の商品が使用期限切れとなる期日。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:47
-msgid ":guilabel:`Last Count Date`: the last time the quantity was updated."
-msgstr ":guilabel:`最終棚卸日`: 数量が最後に更新された日時。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:48
-msgid ":guilabel:`Package`: the package containing the quantity listed."
-msgstr ":guilabel:`梱包`: 記載された数量の梱包。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:49
-msgid ""
-":guilabel:`On Hand Quantity`: the quantity of the product currently recorded "
-"in the database."
-msgstr ""
-":guilabel:`手持数量`: 現在データベースに記録されているプロダクトの数量です。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:50
-msgid ""
-":guilabel:`Unit`: the *unit of measure* in which the product is measured. "
-"Unless otherwise specified (e.g., in :guilabel:`Pounds` "
-"or :guilabel:`Ounces`), the default :abbr:`UoM (Unit of Measure)` "
-"is :guilabel:`Units`."
-msgstr ""
-":guilabel:`単位`: プロダクトが測定される *単位*。特に指定のない限り (例: \n"
-" :guilabel:`ポンド` または :guilabel:`オンス`)、デフォルトの :abbr:`単位 (測"
-"定単位)` は :guilabel:`単位` です。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:53
-msgid ""
-":guilabel:`Counted Quantity`: the real quantity counted during an inventory "
-"count. This field is left blank by default but can be changed, depending on "
-"if it matches the :guilabel:`On Hand Quantity` or not."
-msgstr ""
-":guilabel:`棚卸数量`: 在庫カウント時に実際にカウントされた数量。このフィール"
-"ドはデフォルトでは空白ですが、:guilabel:`手持在庫数量` と一致するかどうかに"
-"よって変更することができます。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:56
-msgid ""
-":guilabel:`Difference`: the difference between the :guilabel:`On Hand "
-"Quantity` and :guilabel:`Counted Quantity`, once an inventory adjustment is "
-"made. The difference is automatically calculated after every inventory "
-"adjustment."
-msgstr ""
-":guilabel:`差異`: :guilabel:`手持数量` と :guilabel:`棚卸数量` の差分で、在庫"
-"調整が行われた後の値です。差分は在庫調整が行われる度に自動的に計算されます。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:59
-msgid ""
-":guilabel:`Scheduled Date`: the date at which a count should be made. If not "
+":guilabel:`Scheduled`: the date at which a count should be made. If not "
 "otherwise specified, this date will default to the 31st of December of the "
 "current year."
 msgstr ""
-":guilabel:`予定日`: カウントを行う日付です。特に指定がない場合、この日付のデ"
-"フォルトは現在の年の12月31日となります。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:61
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:44
 msgid ""
 ":guilabel:`User`: the person assigned to the count in the database. This can "
 "either be the person physically counting the inventory, or applying the "
@@ -27766,33 +27890,100 @@ msgstr ""
 "を物理的にカウントする人、またはデータベースでカウントを適用する人のどちらか"
 "になります。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:65
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:46
 msgid ""
-"Additional columns are hidden by default. To reveal these columns, click "
+":guilabel:`On Hand`: the quantity of the product currently recorded in the "
+"database."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:47
+msgid ""
+":guilabel:`Counted`: the real quantity counted during an inventory count. "
+"This field is left blank by default but can be changed, depending on if it "
+"matches the :guilabel:`On Hand` quantity or not."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:49
+msgid ""
+":guilabel:`Difference`: the difference between the :guilabel:`On Hand` "
+"quantity and :guilabel:`Counted` quantity, once an inventory adjustment is "
+"made. The difference is automatically calculated after every inventory "
+"adjustment."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:54
+msgid ""
+"Some columns are hidden by default. To reveal these columns, click "
 "the :icon:`oi-settings-adjust` :guilabel:`(adjust)` icon to the far right of "
-"the form's top row, and reveal any desired column by ticking the checkbox "
+"the form's top row, and reveal any desired column by selecting the checkbox "
 "next to that option."
 msgstr ""
-"追加の列はデフォルトでは非表示になっています。これらの列を表示するには、"
-"フォームの一番上の行の一番右にあるアイコン :icon:`oi-settings-"
-"adjust` :guilabel:`(調整)` をクリックし、表示させたい列のオプションの横にある"
-"チェックボックスにチェックを入れます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:72
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:58
+msgid ""
+"The following additional columns are available, depending on the settings in "
+"the database:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:60
+msgid ""
+":guilabel:`Location`: the specific location in the warehouse where a product "
+"is stored. This column is **only** visible if :doc:`Storage Locations "
+"<use_locations>` are enabled."
+msgstr ""
+":guilabel:`ロケーション`: プロダクトが保管されている倉庫内の特定のロケーショ"
+"ン。この列は、:doc:`保管場所 <use_locations>` が有効になっている場合にのみ表"
+"示されます。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:62
+msgid ""
+":guilabel:`Product Category`: the category of the product list on the "
+"inventory adjustment line."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:63
+msgid ":guilabel:`Last Count Date`: the last time the quantity was updated."
+msgstr ":guilabel:`最終棚卸日`: 数量が最後に更新された日時。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:64
+msgid ""
+":guilabel:`Expiration Date`: the date on which the goods with this serial "
+"number are due to expire. This column is only available if :doc:`Expiration "
+"Dates <../../product_management/product_tracking/expiration_dates>` is "
+"enabled in the *Inventory* settings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:68
+msgid ":guilabel:`Package`: the package containing the quantity listed."
+msgstr ":guilabel:`梱包`: 記載された数量の梱包。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:69
+msgid ""
+":guilabel:`Unit`: the :doc:`unit of measure <../../product_management/"
+"configure/uom>` in which the product is measured. Unless otherwise specified "
+"(e.g., in :guilabel:`Pounds` or :guilabel:`Ounces`), the default :abbr:`UoM "
+"(Unit of Measure)` is :guilabel:`Units`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:76
 msgid "Create an inventory adjustment"
 msgstr "在庫調整を作成する"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:74
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:78
 msgid ""
-"To create a new inventory adjustment from the :menuselection:`Inventory "
-"Adjustments` page, click :guilabel:`New`. Doing so creates a new, blank "
+"To update an existing physical inventory entry, click into the corresponding "
+"field in the :guilabel:`Counted` column for the product that must be "
+"adjusted. Adjust the count, then click :guilabel:`Apply All`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:82
+msgid ""
+"To create a new inventory adjustment from the :menuselection:`Physical "
+"Inventory` page, click :guilabel:`New`. Doing so creates a new, blank "
 "inventory adjustment line at the bottom of the page."
 msgstr ""
-":menuselection:`在庫調整` ページから新しい在庫調整を作成するには、:guilabel:`"
-"新規作成` をクリックします。そうすると、ページの一番下に新しい空の在庫調整明"
-"細が作成されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:78
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:86
 msgid ""
 "|Ia| can also be created from the :guilabel:`Forecasted Report` on an "
 "individual product record. To open the report, navigate to a product record "
@@ -27805,178 +27996,189 @@ msgstr ""
 "クし、次に :guilabel:`新規` をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:0
-msgid "The Update Quantities button on a Forecast report in the Inventory app."
-msgstr "在庫アプリの予測レポートにある数量を更新ボタン。"
+msgid "The Update Quantity button on a Forecast report in the Inventory app."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:86
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:93
 msgid ""
 "On this blank inventory adjustment line, click the drop-down menu under "
 "the :guilabel:`Product` column, and select a product. If the selected "
 "product is tracked using either lots or serial numbers, the desired lot or "
-"serial number needs to be chosen from the drop-down menu under "
+"serial number must be chosen from the drop-down menu under "
 "the :guilabel:`Lot/Serial Number` column."
 msgstr ""
-"この空の在庫調整明細で、:guilabel:`プロダクト` 列の下にあるドロップダウンメ"
-"ニューをクリックし、プロダクトを選択します。選択したプロダクトがロットまたは"
-"シリアル番号で追跡されている場合、:guilabel:`ロット/シリアル番号` 列の下にあ"
-"るドロップダウンメニューから希望のロットまたはシリアル番号を選択する必要があ"
-"ります。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:99
 msgid ""
 "The inventory adjustment line can also be used to create or record lots and "
 "serial numbers."
 msgstr "在庫調整明細は、ロット番号やシリアル番号の作成や記録にも使用できます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:94
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:101
 msgid ""
-"Next, set the value in the :guilabel:`Counted Quantity` column to the "
-"quantity counted for that product during the inventory adjustment process."
+"Next, set the value in the :guilabel:`Counted` column to the quantity "
+"counted for that product during the inventory adjustment process."
 msgstr ""
-"次に、 :guilabel:`棚卸数量` 列の値を、在庫調整プロセスでそのプロダクトについ"
-"てカウントされた数量に設定します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:97
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:104
 msgid ""
-"To the right of the :guilabel:`Counted Quantity` column, "
-"the :guilabel:`Scheduled Date` and :guilabel:`User` can also be changed via "
-"their respective drop-down menus. Changing the :guilabel:`Scheduled Date` "
+"The :guilabel:`Scheduled` date and :guilabel:`User` can also be changed via "
+"their respective drop-down menus. Changing the :guilabel:`Scheduled` date "
 "changes the date that the inventory adjustment should be processed on, and "
 "selecting a responsible :guilabel:`User` assigns a user to the specific "
 "inventory adjustment for traceability purposes."
 msgstr ""
-":guilabel:`棚卸数量`列の右側にある :guilabel:`予定日` と :guilabel:`ユーザ` "
-"は、それぞれのドロップダウンメニューから変更することもできます。 :guilabel:`"
-"予定日` を変更すると、在庫調整を処理すべき日付が変更され、担当 :guilabel:`"
-"ユーザ` を選択すると、トレーサビリティの目的で特定の在庫調整にユーザが割当て"
-"られます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:103
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:109
 msgid ""
 "Once all changes have been made to the new inventory adjustment line, click "
-"away from the line. Doing so saves the adjustment, and moves the line to the "
-"top of the page."
+"away from the line. Doing so saves the adjustment, and moves the line "
+"alphabetically with the other products in inventory."
 msgstr ""
-"新しい在庫調整明細に全て変更を加えたら、その明細からクリックして離れます。そ"
-"うすることで、調整が保存され、明細がページの一番上に移動します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:106
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:205
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:113
 msgid ""
-"If the :guilabel:`Counted Quantity` is greater than the :guilabel:`On Hand "
-"Quantity`, the value in the :guilabel:`Difference` column is **green**. If "
-"the :guilabel:`Counted Quantity` is less than the :guilabel:`On Hand "
-"Quantity`, the value in the :guilabel:`Difference` column is **red**. If the "
-"quantities match, and have not been changed at all, no value appears in "
-"the :guilabel:`Difference` column."
+"If the :guilabel:`Counted` quantity is greater than the :guilabel:`On Hand` "
+"quantity, the value in the :guilabel:`Difference` column is *green*. If "
+"the :guilabel:`Counted` quantity is less than the :guilabel:`On Hand` "
+"quantity, the value in the :guilabel:`Difference` column is *red* with a "
+"negative value. If the quantities match, and have not been changed at all, "
+"`0.00` appears in the :guilabel:`Difference` column."
 msgstr ""
-":guilabel:`棚卸数量` が :guilabel:`手持在庫数量` より大きい場合、:guilabel:`"
-"差異` 列の値は **緑** 色で表示されます。:guilabel:`棚卸数量` が :guilabel:`手"
-"持在庫数量` より少ない場合、:guilabel:`差異` 列の値は **赤** になります。数量"
-"が一致しており、全く変更されていない場合、:guilabel:`差異` 列には何も表示され"
-"ません。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:None
-msgid "Difference column on inventory adjustments page."
-msgstr "在庫調整ページの差異列。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:115
-msgid ""
-"At this stage, the count (:dfn:`inventory adjustment`) is recorded, but not "
-"yet applied. This means that the quantity on hand before the adjustment has "
-"not yet been updated to match the new, real counted quantity."
+msgid "Difference column on Physical Inventory page."
 msgstr ""
-"この段階では、カウント(:dfn:`在庫調整`)は記録されていますが、まだ適用されてい"
-"ません。これは、調整前の手持数量が、新しい実際の棚卸数量と一致するようにまだ"
-"更新されていないことを意味します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:122
+msgid ""
+"At this stage, the count (*inventory adjustment*) is recorded, but not yet "
+"applied. This means that the quantity on hand before the adjustment has not "
+"yet been updated to match the new, real counted quantity."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:129
 msgid "Apply adjusted count"
 msgstr "調整した棚卸数量を適用する"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:124
-msgid ""
-"|Ia| can be completed in several ways. The first way is to click "
-"the :guilabel:`Apply` button on the line at the far right of the page. The "
-"second way is to tick the checkbox on the far left of the line. Doing so "
-"reveals new button options at the top of the page, one of which is "
-"an :guilabel:`Apply` button. Clicking this button instead causes "
-"an :guilabel:`Inventory Adjustment` pop-up window to appear."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:131
+msgid "|Ia| can be completed in three ways."
 msgstr ""
-"|Ia| は、いくつかの方法で完了できます。 最初の方法は、ページの一番右の行にあ"
-"る :guilabel:`適用` ボタンをクリックすることです。2つ目の方法は、明細の一番左"
-"のチェックボックスにチェックを入れることです。そうすると、ページの上部に新し"
-"いボタンのオプションが表示され、そのうちの1つが :guilabel:`適用` ボタンです。"
-"このボタンをクリックすると、代わりに :guilabel:`在庫調整` ポップアップウィン"
-"ドウが表示されます。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:130
-msgid ""
-"From this pop-up menu, a reference or reason can be assigned to the "
-"inventory adjustment. By default, the :guilabel:`Inventory Reason` field is "
-"pre-populated with today's date, the date the adjustment is being made on, "
-"but can be changed to reflect whatever reference or reason is desired."
-msgstr ""
-"このポップアップメニューから、在庫調整に参照または理由を割当てることができま"
-"す。デフォルトでは、:guilabel:`在庫調整理由` フィールドには、調整が行われる日"
-"付である本日の日付が入力されていますが、希望する参照または理由を反映するよう"
-"に変更することができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:134
-msgid "Once ready, click :guilabel:`Apply` to apply the inventory adjustment."
-msgstr "準備ができたら、 :guilabel:`適用` をクリックして在庫調整を適用します。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:137
-msgid ""
-"Applying an inventory adjustment simultaneously creates a :doc:`stock move "
-"line (SML) <../reporting/moves_history>` in the *Moves History* report for "
-"traceability."
+msgid "Apply a single adjustment"
 msgstr ""
-"在庫調整を適用すると、トレーサビリティのため、*移動履歴* レポートに :doc:`在"
-"庫移動明細 (SML) <../reporting/moves_history>` が同時に作成されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:None
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:136
 msgid ""
-"Apply all option applies the inventory adjustment once a reason is specified."
-msgstr "全て適用オプションは、理由が指定されると在庫調整を適用します。"
+"Some companies do not require adjustment reasons to be recorded. In this "
+"circumstance, you can apply adjustments to a single line at a time by "
+"clicking the :guilabel:`Apply` button on the line at the far right of the "
+"page."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:144
-msgid "Relocate products"
-msgstr "プロダクトの移動"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:141
+msgid "Apply multiple adjustments"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:143
+msgid ""
+"To apply multiple adjustments at once, or to ensure that reasons for "
+"adjustments are recorded, use one of the following methods to apply multiple "
+"adjustments at once:"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:146
 msgid ""
-"|Ia| can also be used to relocate products to different storage locations, "
-"or to different packages. To relocate a product, tick the checkbox at the "
-"far left of the line for the desired product. At the top of the page, click "
-"the :guilabel:`Relocate` button. Doing so opens a pop-up."
+"Click the :guilabel:`Apply All` button on the top left corner of the page."
 msgstr ""
-"|Ia| は、プロダクトを別の保管場所や別の梱包に移動させる場合にも使用できま"
-"す。 プロダクトを移動させるには、移動させたいプロダクトの明細の左端にある"
-"チェックボックスにチェックを入れます。 ページの上部にある :guilabel:`移動` ボ"
-"タンをクリックするとポップアップが開きます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:None
-msgid "The Relocate products pop-up on the Inventory Adjustments page."
-msgstr "プロダクト移動が在庫調整ページにポップアップ表示されます。"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:147
+msgid ""
+"Select the checkbox on the far left of the line. Doing so reveals new button "
+"options at the top of the page, one of which is an :guilabel:`Apply` button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:151
+msgid ""
+"It may be necessary to click the :guilabel:`Save` button at the top left of "
+"the screen before applying the changes."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:154
+msgid "Clicking these buttons opens a *Physical Inventory* pop-up window."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:156
+msgid ""
+"In the *Physical Inventory* window, a reference or reason can be assigned to "
+"the inventory adjustment. By default, the :guilabel:`Inventory Reason` field "
+"is pre-populated with `Physical Inventory`. Modify this text as necessary. "
+"Today's date is populated in the :guilabel:`Counting Date` field. Once "
+"ready, click :guilabel:`Update Quantities` to apply the inventory adjustment."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:None
+msgid ""
+"Apply All option applies the inventory adjustment once a reason is specified."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:165
+msgid ""
+"An FDA-regulated factory is required by law to trace, log, and explain all "
+"inventory adjustments to ensure that it remains in compliance with federal "
+"law. Any product stock moves and associated reasonings would need to be "
+"documented thoroughly to ensure that all product is accounted for in case of "
+"a recall."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:171
+msgid ""
+"Applying an inventory adjustment simultaneously creates a :doc:`stock move "
+"record <../reporting/moves_history>` in the *Moves History* report for "
+"traceability."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:175
+msgid "Relocate products"
+msgstr "プロダクトの移動"
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:177
+msgid ""
+"|Ia| can also be used to relocate products to different storage locations, "
+"or to different packages. To relocate a product, click on the checkbox at "
+"the far left of the line for the desired product. At the top of the page, "
+"click the :icon:`fa-cog` :guilabel:`Actions` button, then "
+"select :guilabel:`Relocate`. Doing so opens a pop-up."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:182
 msgid "On the resulting pop-up, enter the following information:"
 msgstr "表示されるポップアップ画面に、以下の情報を入力して下さい:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:156
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:184
 msgid ":guilabel:`To Location`: the new location for the products."
 msgstr ":guilabel:`移動先`: プロダクト用の新しいロケーション"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:157
-msgid ":guilabel:`To Package`: the new package for the products."
-msgstr ":guilabel:`移動先梱包`: プロダクト用の新しい梱包"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:185
+msgid ""
+":guilabel:`To Package`: the new package for the products. This field only "
+"appears if you have :guilabel:`Packages` enabled in the *Inventory* settings."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:158
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:187
 msgid ":guilabel:`Reason for relocation`: the reason for the move."
 msgstr ":guilabel:`移動理由`: 移動の理由"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:161
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:189
+msgid "Click :guilabel:`Confirm` to confirm the move."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:None
+msgid "The Relocate products pop-up on the Physical Inventory page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:195
 msgid ""
 "Product relocations **only** work on internal locations. Products **cannot** "
 "be moved between companies."
@@ -27984,98 +28186,77 @@ msgstr ""
 "プロダクトの移動は、内部ロケーション間でのみ有効です。プロダクトを会社間で移"
 "動することはできません。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:164
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:198
 msgid "Only users with *Administrator* rights can perform product relocations."
 msgstr ""
 "プロダクトの移動は、*管理者* 権限を持つユーザのみが行うことができます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:167
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:201
 msgid "Set to zero"
 msgstr "0に設定する"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:169
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:203
 msgid ""
 "|Ia| can also be used to clear inventory counts by setting the quantity to "
-"zero. To do this, tick the checkbox at the far left of the line for the "
+"zero. To do this, select the checkbox at the far left of the line for the "
 "desired product. At the top of the page, click the :icon:`fa-"
 "gear` :guilabel:`Actions` button to open a drop-down menu. "
 "Click :guilabel:`Set to 0`. Once this is complete, :ref:`apply <inventory/"
 "apply-adjustment>` the adjusted count."
 msgstr ""
-"|Ia| は、数量をゼロに設定することで在庫数をクリアすることもできます。 これを"
-"行うには、該当するプロダクトの明細の左端にあるチェックボックスにチェックを入"
-"れます。 ページの上部にある :icon:`fa-gear` :guilabel:`アクション` ボタンをク"
-"リックしてドロップダウンメニューを開きます。 :guilabel:`0に設定` をクリックし"
-"ます。完了したら、調整した数を :ref:`適用 <inventory/apply-adjustment>` しま"
-"す。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:175
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:209
+msgid ""
+"Setting the quantity to zero for a product that has already been reserved "
+"for sales orders will set the forecasted quantity to negative. The product "
+"will be marked as unavailable for current delivery orders."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:214
 msgid "Count products"
 msgstr "プロダクトをカウントする"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:177
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:216
 msgid ""
 "Counting products is a recurring activity in a warehouse. Once a count is "
 "complete, go to :menuselection:`Inventory app --> Operations --> Physical "
-"Inventory` to update the :guilabel:`Counted Quantity` column for each "
-"product line."
+"Inventory` to update the :guilabel:`Counted` quantity for each product line."
 msgstr ""
-"倉庫内でのプロダクトのカウントは、定期的に行う作業です。カウントが完了した"
-"ら、:menuselection:`在庫アプリ --> オペレーション --> 実地棚卸` に移動し、各"
-"プロダクト明細の :guilabel:`棚卸数量` 列を更新します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:181
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:220
 msgid ""
-"On each product line, identify whether the value in the :guilabel:`On Hand "
-"Quantity` column recorded in the database matches the newly-counted value. "
-"If the recorded value and the counted value do match, click the :icon:`fa-"
-"bullseye` :guilabel:`Set` icon at the far right of the product line."
+"On each product line, identify whether the value in the :guilabel:`On Hand` "
+"column recorded in the database matches the newly-counted value. If the "
+"recorded value and the counted value match, enter the 'On Hand' quantity in "
+"the :guilabel:`Counted` column."
 msgstr ""
-"各プロダクト明細において、データベースに記録されている :guilabel:`手持数量` "
-"列の値が、新たに数えた値と一致しているかどうかを確認します。 記録されている値"
-"と棚卸数量が一致している場合は、プロダクト明細の右端にある :icon:`的"
-"` :guilabel:`設定` アイコンをクリックします。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:185
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:224
 msgid ""
-"Doing so copies the value from the :guilabel:`On Hand Quantity` column over "
-"to the :guilabel:`Counted Quantity` column, and sets the value of "
-"the :guilabel:`Difference` column to `0.00`. Subsequently, once applied, an "
-"inventory move with `0.00` :guilabel:`Quantity Done` is recorded in the "
-"product's inventory adjustment history."
+"Doing so sets the value of the :guilabel:`Difference` column to `0.00`. "
+"Subsequently, once applied, an inventory move with `0.00` :guilabel:`Done` "
+"is recorded in the product's inventory adjustment history."
 msgstr ""
-"これにより :guilabel:`手持数量` 列の値が :guilabel:`棚卸数量` 列にコピーさ"
-"れ、 :guilabel:`差異` 列の値が `0.00` に設定されます。その後、適用されると、"
-"`0.00` :guilabel:`完了数量` の在庫移動がプロダクトの在庫調整履歴に記録されま"
-"す。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:None
 msgid "Zero count inventory adjustment move."
 msgstr "ゼロカウント在庫調整移動。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:193
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:231
 msgid ""
 "If the newly-counted value for a given product does **not** match the value "
-"in the :guilabel:`On Hand Quantity` recorded in the database, instead of "
-"clicking the :icon:`fa-bullseye` :guilabel:`Set` icon, record the real value "
-"in the field in the :guilabel:`Counted Quantity` column."
+"in the :guilabel:`On Hand` column recorded in the database, record the real "
+"value in the field in the :guilabel:`Counted` column."
 msgstr ""
-"新たにカウントされた特定のプロダクトの値が、データベースに記録され"
-"た :guilabel:`手持在庫数量` の値と一致しない場合は、:icon:`的` の :guilabel:`"
-"設定` アイコンをクリックする代わりに、実際の値を :guilabel:`棚卸数量` 列の"
-"フィールドに記録して下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:197
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:235
 msgid ""
-"To do so, click the field in the :guilabel:`Counted Quantity` column on the "
-"specific inventory adjustment line for the product whose count is being "
-"changed. This automatically assigns a :guilabel:`Counted Quantity` of `0.00`."
+"To do so, click the field in the :guilabel:`Counted` column on the specific "
+"inventory adjustment line for the product whose count is being changed. "
+"Specify the updated count in the field."
 msgstr ""
-"これを行うには、カウントを変更するプロダクトの特定の在庫調整明細"
-"の :guilabel:`棚卸数量` 列のフィールドをクリックします。これで自動的"
-"に :guilabel:`棚卸数量` に `0.00` が割当てられます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:201
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:238
 msgid ""
 "To change this value, type in a new value that matches the real, newly-"
 "counted value. Then, click away from the line. Doing so saves the "
@@ -28086,14 +28267,22 @@ msgstr ""
 "ます。その後、明細をクリックします。そうすることで調整が保存され、自動的"
 "に :guilabel:`差異` 列の値が調整されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:211
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:242
+msgid ""
+"If the :guilabel:`Counted` quantity is greater than the :guilabel:`On Hand` "
+"quantity, the value in the :guilabel:`Difference` column is *green*. If "
+"the :guilabel:`Counted` quantity is less than the :guilabel:`On Hand` "
+"quantity, the value in the :guilabel:`Difference` column is *red* and is a "
+"negative value. If the quantities match, and have not been changed at all, "
+"`0.00` appears in the :guilabel:`Difference` column."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:248
 msgid ""
 "Subsequently, once applied, a move with the difference between "
-"the :guilabel:`On Hand Quantity` and the :guilabel:`Counted Quantity` is "
+"the :guilabel:`On Hand` quantity and the :guilabel:`Counted` quantity is "
 "recorded in the product's inventory adjustment history."
 msgstr ""
-"その後、適用されると :guilabel:`手持数量` と :guilabel:`棚卸数量` の差による"
-"移動がプロダクトの在庫調整履歴に記録されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:None
 msgid ""
@@ -28102,27 +28291,29 @@ msgid ""
 msgstr ""
 "在庫調整履歴ダッシュボードには、過去のプロダクト移動のリストが表示されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:217
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:254
 msgid ""
-"The :guilabel:`Actions` menu appears when one or more products' checkboxes "
-"are selected. The :guilabel:`Actions` menu includes the option "
-"to :guilabel:`Set to quantity on hand`, which sets the selected "
-"products' :guilabel:`Counted Quantity` to the :guilabel:`On Hand Quantity`, "
-"and :guilabel:`Set to 0`, which sets the selected "
-"products' :guilabel:`Counted Quantity` to zero."
+"The :icon:`fa-cog` :guilabel:`Actions` menu appears when one or more "
+"products' checkboxes are selected. The :icon:`fa-cog` :guilabel:`Actions` "
+"menu includes the option to :guilabel:`Set to quantity on hand`, which sets "
+"the selected products' :guilabel:`Counted` quantity to the :guilabel:`On "
+"Hand` quantity."
 msgstr ""
-"1つ以上のプロダクトのチェックボックスが選択されると、:guilabel:`アクション` "
-"メニューが表示されます。:guilabel:`アクション` メニューには、:guilabel:`手持"
-"在庫数に設定` オプションがあり、選択したプロダクトの :guilabel:`棚卸数量` "
-"を :guilabel:`手持在庫数` に設定します。また、:guilabel:`0に設定` オプション"
-"では、選択したプロダクトの :guilabel:`棚卸数量` をゼロに設定します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:None
-msgid "Inventory Adjustments Actions menu."
-msgstr "在庫調整アクションメニュー"
+msgid "Physical Inventory Actions menu."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:226
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:316
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:263
+msgid ""
+"If other inventory adjustments were created during the count process, "
+"click :guilabel:`Save` in the top-left corner to save the current entry. "
+"Make sure this is done before opening the :icon:`fa-cog` :guilabel:`Actions` "
+"menu to set the count."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:268
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:347
 msgid ""
 "Sometimes a count occurs, but cannot be applied in the database right away. "
 "In the time between the actual count and applying the inventory adjustment, "
@@ -28136,11 +28327,11 @@ msgstr ""
 "があります。その場合、データベースの手持数量が変更され、棚卸数量と一致しなく"
 "なる可能性があります。念のため、在庫調整を適用する前にOdooは確認を求めます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:233
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:275
 msgid "Revert an inventory adjustment"
 msgstr "在庫調整を元に戻す"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:235
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:277
 msgid ""
 "To revert the changes made in an inventory adjustment, navigate "
 "to :menuselection:`Inventory --> Reporting --> Moves History`."
@@ -28148,17 +28339,14 @@ msgstr ""
 "在庫調整で加えた変更を元に戻すには、:menuselection:`在庫 --> レポーティング "
 "--> 移動履歴` に移動します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:238
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:280
 msgid ""
-"Tick the checkbox at the far left of the line for the desired product. At "
+"Select the checkbox at the far left of the line for the desired product. At "
 "the top of the page, click the :icon:`fa-gear` :guilabel:`Actions` button to "
 "open a drop-down menu, and click :guilabel:`Revert Inventory Adjustment`."
 msgstr ""
-"ご希望のプロダクトの明細の左端にあるチェックボックスにチェックを入れます。"
-"ページ上部の:icon:`fa-gear` :guilabel:`アクション` ボタンをクリックしてドロッ"
-"プダウンメニューを開き、:guilabel:`棚卸調整を元に戻す` をクリックします。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:243
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:285
 msgid ""
 "After an inventory adjustment is reverted, the line is not removed from "
 "the :guilabel:`Moves History` report. Instead, an additional line is added, "
@@ -28173,11 +28361,11 @@ msgstr ""
 msgid "The reference fields on the Moves History report in the Inventory app."
 msgstr "在庫アプリの移動履歴レポートの参照フィールド。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:251
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:293
 msgid "Change inventory count frequency"
 msgstr "在庫カウント頻度を変更する"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:253
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:295
 msgid ""
 "By default, the *scheduled date* for |ia| are always scheduled for the 31st "
 "of December of the current year. However, for some companies, it is crucial "
@@ -28188,7 +28376,7 @@ msgstr ""
 "かし、会社によっては、常に正確な在庫数を把握することが非常に重要である場合も"
 "あります。そのような場合には、デフォルトの予定日を変更することができます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:257
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:299
 msgid ""
 "To modify the default scheduled date, go to :menuselection:`Inventory app --"
 "> Configuration --> Settings`. Then, in the :guilabel:`Operations` section, "
@@ -28206,7 +28394,7 @@ msgid ""
 "setting."
 msgstr "年度末棚卸の月日の設定で、次回の在庫棚卸日を調整します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:264
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:306
 msgid ""
 "To change the day, click the `31`, enter a number from `1-31`, depending on "
 "the desired month of the year."
@@ -28214,7 +28402,7 @@ msgstr ""
 "日付を変更するには、`31`をクリックし、希望する月に応じて`1-31`の数字を入力し"
 "ます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:267
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:309
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:117
 msgid ""
 "Then, to change the month, click :guilabel:`December` to reveal the drop-"
@@ -28223,7 +28411,7 @@ msgstr ""
 "月を変更するには、:guilabel:`12月` をクリックしてドロップダウンメニューを表示"
 "し、希望の月を選択します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:270
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:312
 msgid ""
 "Once all desired changes have been made, click :guilabel:`Save` to save all "
 "changes."
@@ -28231,11 +28419,11 @@ msgstr ""
 "全ての変更が完了したら、 :guilabel:`保存` をクリックして全ての変更を保存しま"
 "す。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:275
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:317
 msgid "Plan big inventory counts"
 msgstr "大規模な在庫棚卸の計画"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:277
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:319
 msgid ""
 "To plan big inventory counts, such as a full count of everything currently "
 "in stock, first navigate to :menuselection:`Inventory app --> Operations --> "
@@ -28245,84 +28433,52 @@ msgstr ""
 "は、 :menuselection:在庫アプリ --> オペレーション --> 実施棚卸 に移動して下さ"
 "い。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:280
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:322
 msgid ""
 "Then, select the desired products to be counted by ticking the checkbox on "
 "the far left of each product line."
 msgstr ""
 "次に、棚卸したいプロダクトの左端にあるチェックボックスにチェックを入れます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:284
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:326
 msgid ""
-"To request a count of **all** products currently in stock, tick the checkbox "
-"at the top of the table, in the header row next to the :guilabel:`Location` "
-"label. This selects **all** product lines."
+"To request a count of **all** products currently in stock, select the "
+"checkbox at the top of the table, in the header row next to "
+"the :guilabel:`Location` label. This selects **all** product lines."
 msgstr ""
-"現在在庫にある **全ての** プロダクトの数を要求するには、表の上部にあるヘッ"
-"ダー行の :guilabel:`ロケーション` ラベルの隣にあるチェックボックスにチェック"
-"を入れます。これにより、**全ての** プロダクトラインが選択されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:None
-msgid "Request a count pop-up on inventory adjustments page."
-msgstr "在庫調整ページの「棚卸を依頼」ポップアップ"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:291
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:330
 msgid ""
 "Once all desired products have been selected, click the :guilabel:`Request a "
-"Count` button at the top of the page. Doing so opens the :guilabel:`Request "
-"a Count` pop-up window, where the following information can be filled:"
+"Count` button at the top of the page. Doing so opens "
+"the :guilabel:`Inventory Request` pop-up window, where the following "
+"information can be filled:"
 msgstr ""
-"必要なプロダクトを全て選択したら、ページ上部の :guilabel:`棚卸を依頼` ボタン"
-"をクリックします。そうすると :guilabel:`棚卸を依頼` ポップアップウィンドウが"
-"開きますので、以下の情報を入力します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:295
-msgid ":guilabel:`Inventory Date`: the planned date of the count."
-msgstr ":guilabel:`棚卸日`: 棚卸の予定日。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:296
-msgid ":guilabel:`User`: the user responsible for the count."
-msgstr ":guilabel:`ユーザ`:棚卸を担当するユーザ。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:297
-msgid ""
-":guilabel:`Accounting Date`: the date at which the inventory adjustment will "
-"be accounted."
-msgstr ":guilabel:`会計日`: 在庫の調整が計上される日付。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:298
-msgid ""
-":guilabel:`Count`: to leave the on-hand quantity of each product line blank, "
-"select :guilabel:`Leave Empty`. To pre-fill the on-hand quantity of each "
-"product line with the current value recorded in the database, "
-"select :guilabel:`Set Current Value`."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:334
+msgid ":guilabel:`Assign to`: the user responsible for the count."
 msgstr ""
-":guilabel:`カウント`: 各プロダクトラインの手持ち数量を空白にするに"
-"は、 :guilabel:`空白のまま` を選択します。各プロダクト明細の手持数量をあらか"
-"じめデータベースに記録されている現在の値で埋めるには、 :guilabel:`現在の値を"
-"設定` を選択します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:303
-msgid ""
-"The :guilabel:`Leave Empty` option forces the employee conducting the audit "
-"to manually type in the number they counted, while the :guilabel:`Set "
-"Current Value` option only requires the employee to *verify* the counted "
-"quantity and click :guilabel:`Apply`."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:335
+msgid ":guilabel:`Scheduled at`: the planned date of the count."
 msgstr ""
-":guilabel:`空白のまま` オプションは、監査を行う従業員に、手作業で棚卸数量を入"
-"力することを強制します。一方、:guilabel:`現在の値を設定` オプションでは、従業"
-"員は棚卸数量を*確認*し、:guilabel:`適用` をクリックするだけで済みます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:307
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:336
+msgid ""
+":guilabel:`Show Expected Quantity`: whether the assigned user can see the "
+"expected quantity."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:None
+msgid "Request a count pop-up on the Physical Inventory page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:341
 msgid "Finally, once ready, click :guilabel:`Confirm` to request the count."
 msgstr ""
 "最後に、準備ができたら :guilabel:`確認` をクリックしてカウントを要求します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:None
-msgid "Request a count popup on inventory adjustments page."
-msgstr "在庫調整ページの「棚卸を依頼」ポップアップ"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:313
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:344
 msgid ""
 "In the Odoo **Barcode** app, users can only view inventory counts that are "
 "assigned to *them*, and are scheduled for *today* or *earlier*."
@@ -28330,11 +28486,11 @@ msgstr ""
 "Odoo **バーコード** アプリでは、ユーザは *自分に* 割当てられた *在庫数* と、*"
 "今日* または *それ以前* に予定されている在庫数のみを表示することができます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:323
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:354
 msgid "Adjustment history"
 msgstr "調整履歴"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:325
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:356
 msgid ""
 "Details regarding inventory adjustment can be viewed by clicking "
 "the :icon:`fa-history` :guilabel:`History` icon."
@@ -28342,7 +28498,7 @@ msgstr ""
 "在庫調整の詳細は、:icon:`fa-history` :guilabel:`履歴` アイコンをクリックする"
 "と見ることができます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:328
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:359
 msgid ""
 "The user who performed the count is listed in parenthesis in "
 "the :guilabel:`Reference` field, while the user who applied the count is "
@@ -28355,42 +28511,33 @@ msgstr ""
 msgid "The history record for an inventory adjustment."
 msgstr "在庫調整用の履歴記録"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:335
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:366
 msgid "Inventory audit"
 msgstr "在庫監査"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:337
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:368
 msgid ""
-"An inventory audit can be accessed from the :guilabel:`Inventory Adjustment` "
+"An inventory audit can be accessed from the :guilabel:`Physical Inventory` "
 "page. This audit includes an inventory record both before and after a count "
 "is completed, to track what changed."
 msgstr ""
-"在庫監査は、:guilabel:`在庫調整` ページからアクセスできます。この監査には、在"
-"庫記録がカウント完了の前後両方含まれており、変更点を追跡することができます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:340
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:371
 msgid ""
-"On the :guilabel:`Inventory Adjustment` page, tick the checkbox at the top-"
+"On the :guilabel:`Physical Inventory` page, select the checkbox at the top-"
 "left of the page to select all of the lines. Then click "
-"the :guilabel:`Request a Count` button. On the pop-up, set :guilabel:`Count` "
-"to :guilabel:`Set Current Value`, then click :guilabel:`Confirm`."
+"the :guilabel:`Request a Count` button. On the pop-up, "
+"click :guilabel:`Confirm`."
 msgstr ""
-":guilabel:`在庫調整` ページで、ページ左上のチェックボックスにチェックを入れ、"
-"全ての明細を選択します。次に、:guilabel:`棚卸を依頼` ボタンをクリックします。"
-"ポップアップで、:guilabel:`在庫数` を:guilabel:`現在の値の設定` に設定"
-"し、:guilabel:`確認` をクリックします。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:344
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:375
 msgid ""
-"After returning to the :guilabel:`Inventory Adjustment` page, select all of "
+"After returning to the :guilabel:`Physical Inventory` page, select all of "
 "the lines again. Click :menuselection:`Print --> Count Sheet`. "
 "The :guilabel:`Count Sheet` exports in PDF form."
 msgstr ""
-":guilabel:`在庫調整`ページに戻ったら、全ての明細を再度選択しま"
-"す。:menuselection:`印刷 --> 在庫棚卸シート` をクリックします。:guilabel:`在"
-"庫棚卸シート` はPDF形式でエクスポートされます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:348
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:379
 msgid ":doc:`cycle_counts`"
 msgstr ":doc:`cycle_counts`"
 
@@ -38033,8 +38180,8 @@ msgid ":doc:`../../../sales/sales/sales_quotations/create_quotations`"
 msgstr ":doc:`../../../sales/sales/sales_quotations/create_quotations`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:209
-msgid ":doc:`../../../websites/ecommerce/products/catalog`"
-msgstr ":doc:`../../../websites/ecommerce/products/catalog`"
+msgid ":doc:`../../../websites/ecommerce/ecommerce_design/catalog`"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:5
 msgid ""
@@ -53272,8 +53419,8 @@ msgid ""
 "and :guilabel:`Product` forms."
 msgstr ""
 "確定したら、 :guilabel:`仕訳明細` タブをクリックして、 :guilabel:`勘定` 仕訳"
-"帳を表示します。これらの仕訳帳は、対応する :guilabel:`仕入先` および  :guilab"
-"el:`プロダクト` フォームの設定に基づいて入力されます。"
+"帳を表示します。これらの仕訳帳は、対応する :guilabel:`仕入先` およ"
+"び  :guilabel:`プロダクト` フォームの設定に基づいて入力されます。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:73
 msgid ""
@@ -58487,6 +58634,447 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid "Storage Categories used in a variety of putaway rules."
+#~ msgstr "様々な入庫規則で使用される保管カテゴリ。"
+
+#~ msgid "Inventory Adjustments page"
+#~ msgstr "在庫調整ページ"
+
+#~ msgid ""
+#~ "To view the :guilabel:`Inventory Adjustments` page, navigate "
+#~ "to :menuselection:`Inventory app --> Operations --> Physical Inventory`."
+#~ msgstr ""
+#~ ":guilabel:`在庫調整`ページを表示するには、:menuselection:`在庫アプリ --> "
+#~ "オペレーション --> 実地棚卸` に移動します。"
+
+#~ msgid "In stock products listed on the Inventory adjustments page."
+#~ msgstr "在庫調整ページに表示されている在庫プロダクト。"
+
+#~ msgid ""
+#~ "The :guilabel:`Inventory Adjustments` page lists all products that are "
+#~ "currently in stock."
+#~ msgstr ""
+#~ ":guilabel:`在庫調整` ページには、現在在庫にあるプロダクトが全てリストアッ"
+#~ "プされています。"
+
+#~ msgid ""
+#~ "Only products with a quantity greater than zero are listed on "
+#~ "the :guilabel:`Inventory Adjustments` page. To view product lines with "
+#~ "zero current quantity, go to :menuselection:`Inventory app --> Reporting "
+#~ "--> Stock`."
+#~ msgstr ""
+#~ ":guilabel:`在庫調整` ページには、数量がゼロより大きいプロダクトのみがリス"
+#~ "トされます。現在の数量がゼロのプロダクト明細を表示するに"
+#~ "は、:menuselection:`在庫アプリ --> レポート --> 在庫` にアクセスして下さ"
+#~ "い。"
+
+#~ msgid ":guilabel:`Favorite`: identifies products that have been favorited."
+#~ msgstr ""
+#~ ":guilabel:`お気に入り`: お気に入りに追加されたプロダクトを識別します。"
+
+#~ msgid ""
+#~ ":guilabel:`Expiration Date`: the date on which the goods with this serial "
+#~ "number are due to expire."
+#~ msgstr ""
+#~ ":guilabel:`使用期限`: このシリアル番号の商品が使用期限切れとなる期日。"
+
+#~ msgid ""
+#~ ":guilabel:`On Hand Quantity`: the quantity of the product currently "
+#~ "recorded in the database."
+#~ msgstr ""
+#~ ":guilabel:`手持数量`: 現在データベースに記録されているプロダクトの数量で"
+#~ "す。"
+
+#~ msgid ""
+#~ ":guilabel:`Unit`: the *unit of measure* in which the product is measured. "
+#~ "Unless otherwise specified (e.g., in :guilabel:`Pounds` "
+#~ "or :guilabel:`Ounces`), the default :abbr:`UoM (Unit of Measure)` "
+#~ "is :guilabel:`Units`."
+#~ msgstr ""
+#~ ":guilabel:`単位`: プロダクトが測定される *単位*。特に指定のない限り "
+#~ "(例: \n"
+#~ " :guilabel:`ポンド` または :guilabel:`オンス`)、デフォルトの :abbr:`単位 "
+#~ "(測定単位)` は :guilabel:`単位` です。"
+
+#~ msgid ""
+#~ ":guilabel:`Counted Quantity`: the real quantity counted during an "
+#~ "inventory count. This field is left blank by default but can be changed, "
+#~ "depending on if it matches the :guilabel:`On Hand Quantity` or not."
+#~ msgstr ""
+#~ ":guilabel:`棚卸数量`: 在庫カウント時に実際にカウントされた数量。このフィー"
+#~ "ルドはデフォルトでは空白ですが、:guilabel:`手持在庫数量` と一致するかどう"
+#~ "かによって変更することができます。"
+
+#~ msgid ""
+#~ ":guilabel:`Difference`: the difference between the :guilabel:`On Hand "
+#~ "Quantity` and :guilabel:`Counted Quantity`, once an inventory adjustment "
+#~ "is made. The difference is automatically calculated after every inventory "
+#~ "adjustment."
+#~ msgstr ""
+#~ ":guilabel:`差異`: :guilabel:`手持数量` と :guilabel:`棚卸数量` の差分で、"
+#~ "在庫調整が行われた後の値です。差分は在庫調整が行われる度に自動的に計算され"
+#~ "ます。"
+
+#~ msgid ""
+#~ ":guilabel:`Scheduled Date`: the date at which a count should be made. If "
+#~ "not otherwise specified, this date will default to the 31st of December "
+#~ "of the current year."
+#~ msgstr ""
+#~ ":guilabel:`予定日`: カウントを行う日付です。特に指定がない場合、この日付の"
+#~ "デフォルトは現在の年の12月31日となります。"
+
+#~ msgid ""
+#~ "Additional columns are hidden by default. To reveal these columns, click "
+#~ "the :icon:`oi-settings-adjust` :guilabel:`(adjust)` icon to the far right "
+#~ "of the form's top row, and reveal any desired column by ticking the "
+#~ "checkbox next to that option."
+#~ msgstr ""
+#~ "追加の列はデフォルトでは非表示になっています。これらの列を表示するには、"
+#~ "フォームの一番上の行の一番右にあるアイコン :icon:`oi-settings-"
+#~ "adjust` :guilabel:`(調整)` をクリックし、表示させたい列のオプションの横に"
+#~ "あるチェックボックスにチェックを入れます。"
+
+#~ msgid ""
+#~ "To create a new inventory adjustment from the :menuselection:`Inventory "
+#~ "Adjustments` page, click :guilabel:`New`. Doing so creates a new, blank "
+#~ "inventory adjustment line at the bottom of the page."
+#~ msgstr ""
+#~ ":menuselection:`在庫調整` ページから新しい在庫調整を作成するに"
+#~ "は、:guilabel:`新規作成` をクリックします。そうすると、ページの一番下に新"
+#~ "しい空の在庫調整明細が作成されます。"
+
+#~ msgid ""
+#~ "The Update Quantities button on a Forecast report in the Inventory app."
+#~ msgstr "在庫アプリの予測レポートにある数量を更新ボタン。"
+
+#~ msgid ""
+#~ "On this blank inventory adjustment line, click the drop-down menu under "
+#~ "the :guilabel:`Product` column, and select a product. If the selected "
+#~ "product is tracked using either lots or serial numbers, the desired lot "
+#~ "or serial number needs to be chosen from the drop-down menu under "
+#~ "the :guilabel:`Lot/Serial Number` column."
+#~ msgstr ""
+#~ "この空の在庫調整明細で、:guilabel:`プロダクト` 列の下にあるドロップダウン"
+#~ "メニューをクリックし、プロダクトを選択します。選択したプロダクトがロットま"
+#~ "たはシリアル番号で追跡されている場合、:guilabel:`ロット/シリアル番号` 列の"
+#~ "下にあるドロップダウンメニューから希望のロットまたはシリアル番号を選択する"
+#~ "必要があります。"
+
+#~ msgid ""
+#~ "Next, set the value in the :guilabel:`Counted Quantity` column to the "
+#~ "quantity counted for that product during the inventory adjustment process."
+#~ msgstr ""
+#~ "次に、 :guilabel:`棚卸数量` 列の値を、在庫調整プロセスでそのプロダクトにつ"
+#~ "いてカウントされた数量に設定します。"
+
+#~ msgid ""
+#~ "To the right of the :guilabel:`Counted Quantity` column, "
+#~ "the :guilabel:`Scheduled Date` and :guilabel:`User` can also be changed "
+#~ "via their respective drop-down menus. Changing the :guilabel:`Scheduled "
+#~ "Date` changes the date that the inventory adjustment should be processed "
+#~ "on, and selecting a responsible :guilabel:`User` assigns a user to the "
+#~ "specific inventory adjustment for traceability purposes."
+#~ msgstr ""
+#~ ":guilabel:`棚卸数量`列の右側にある :guilabel:`予定日` と :guilabel:`ユーザ"
+#~ "` は、それぞれのドロップダウンメニューから変更することもできま"
+#~ "す。 :guilabel:`予定日` を変更すると、在庫調整を処理すべき日付が変更され、"
+#~ "担当 :guilabel:`ユーザ` を選択すると、トレーサビリティの目的で特定の在庫調"
+#~ "整にユーザが割当てられます。"
+
+#~ msgid ""
+#~ "Once all changes have been made to the new inventory adjustment line, "
+#~ "click away from the line. Doing so saves the adjustment, and moves the "
+#~ "line to the top of the page."
+#~ msgstr ""
+#~ "新しい在庫調整明細に全て変更を加えたら、その明細からクリックして離れます。"
+#~ "そうすることで、調整が保存され、明細がページの一番上に移動します。"
+
+#~ msgid ""
+#~ "If the :guilabel:`Counted Quantity` is greater than the :guilabel:`On "
+#~ "Hand Quantity`, the value in the :guilabel:`Difference` column is "
+#~ "**green**. If the :guilabel:`Counted Quantity` is less than "
+#~ "the :guilabel:`On Hand Quantity`, the value in the :guilabel:`Difference` "
+#~ "column is **red**. If the quantities match, and have not been changed at "
+#~ "all, no value appears in the :guilabel:`Difference` column."
+#~ msgstr ""
+#~ ":guilabel:`棚卸数量` が :guilabel:`手持在庫数量` より大きい場"
+#~ "合、:guilabel:`差異` 列の値は **緑** 色で表示されます。:guilabel:`棚卸数量"
+#~ "` が :guilabel:`手持在庫数量` より少ない場合、:guilabel:`差異` 列の値は **"
+#~ "赤** になります。数量が一致しており、全く変更されていない場合、:guilabel:`"
+#~ "差異` 列には何も表示されません。"
+
+#~ msgid "Difference column on inventory adjustments page."
+#~ msgstr "在庫調整ページの差異列。"
+
+#~ msgid ""
+#~ "At this stage, the count (:dfn:`inventory adjustment`) is recorded, but "
+#~ "not yet applied. This means that the quantity on hand before the "
+#~ "adjustment has not yet been updated to match the new, real counted "
+#~ "quantity."
+#~ msgstr ""
+#~ "この段階では、カウント(:dfn:`在庫調整`)は記録されていますが、まだ適用され"
+#~ "ていません。これは、調整前の手持数量が、新しい実際の棚卸数量と一致するよう"
+#~ "にまだ更新されていないことを意味します。"
+
+#~ msgid ""
+#~ "|Ia| can be completed in several ways. The first way is to click "
+#~ "the :guilabel:`Apply` button on the line at the far right of the page. "
+#~ "The second way is to tick the checkbox on the far left of the line. Doing "
+#~ "so reveals new button options at the top of the page, one of which is "
+#~ "an :guilabel:`Apply` button. Clicking this button instead causes "
+#~ "an :guilabel:`Inventory Adjustment` pop-up window to appear."
+#~ msgstr ""
+#~ "|Ia| は、いくつかの方法で完了できます。 最初の方法は、ページの一番右の行に"
+#~ "ある :guilabel:`適用` ボタンをクリックすることです。2つ目の方法は、明細の"
+#~ "一番左のチェックボックスにチェックを入れることです。そうすると、ページの上"
+#~ "部に新しいボタンのオプションが表示され、そのうちの1つが :guilabel:`適用` "
+#~ "ボタンです。このボタンをクリックすると、代わりに :guilabel:`在庫調整` ポッ"
+#~ "プアップウィンドウが表示されます。"
+
+#~ msgid ""
+#~ "From this pop-up menu, a reference or reason can be assigned to the "
+#~ "inventory adjustment. By default, the :guilabel:`Inventory Reason` field "
+#~ "is pre-populated with today's date, the date the adjustment is being made "
+#~ "on, but can be changed to reflect whatever reference or reason is desired."
+#~ msgstr ""
+#~ "このポップアップメニューから、在庫調整に参照または理由を割当てることができ"
+#~ "ます。デフォルトでは、:guilabel:`在庫調整理由` フィールドには、調整が行わ"
+#~ "れる日付である本日の日付が入力されていますが、希望する参照または理由を反映"
+#~ "するように変更することができます。"
+
+#~ msgid ""
+#~ "Once ready, click :guilabel:`Apply` to apply the inventory adjustment."
+#~ msgstr ""
+#~ "準備ができたら、 :guilabel:`適用` をクリックして在庫調整を適用します。"
+
+#~ msgid ""
+#~ "Applying an inventory adjustment simultaneously creates a :doc:`stock "
+#~ "move line (SML) <../reporting/moves_history>` in the *Moves History* "
+#~ "report for traceability."
+#~ msgstr ""
+#~ "在庫調整を適用すると、トレーサビリティのため、*移動履歴* レポートに :doc:`"
+#~ "在庫移動明細 (SML) <../reporting/moves_history>` が同時に作成されます。"
+
+#~ msgid ""
+#~ "Apply all option applies the inventory adjustment once a reason is "
+#~ "specified."
+#~ msgstr "全て適用オプションは、理由が指定されると在庫調整を適用します。"
+
+#~ msgid ""
+#~ "|Ia| can also be used to relocate products to different storage "
+#~ "locations, or to different packages. To relocate a product, tick the "
+#~ "checkbox at the far left of the line for the desired product. At the top "
+#~ "of the page, click the :guilabel:`Relocate` button. Doing so opens a pop-"
+#~ "up."
+#~ msgstr ""
+#~ "|Ia| は、プロダクトを別の保管場所や別の梱包に移動させる場合にも使用できま"
+#~ "す。 プロダクトを移動させるには、移動させたいプロダクトの明細の左端にある"
+#~ "チェックボックスにチェックを入れます。 ページの上部にある :guilabel:`移動"
+#~ "` ボタンをクリックするとポップアップが開きます。"
+
+#~ msgid "The Relocate products pop-up on the Inventory Adjustments page."
+#~ msgstr "プロダクト移動が在庫調整ページにポップアップ表示されます。"
+
+#~ msgid ":guilabel:`To Package`: the new package for the products."
+#~ msgstr ":guilabel:`移動先梱包`: プロダクト用の新しい梱包"
+
+#~ msgid ""
+#~ "|Ia| can also be used to clear inventory counts by setting the quantity "
+#~ "to zero. To do this, tick the checkbox at the far left of the line for "
+#~ "the desired product. At the top of the page, click the :icon:`fa-"
+#~ "gear` :guilabel:`Actions` button to open a drop-down menu. "
+#~ "Click :guilabel:`Set to 0`. Once this is complete, :ref:`apply <inventory/"
+#~ "apply-adjustment>` the adjusted count."
+#~ msgstr ""
+#~ "|Ia| は、数量をゼロに設定することで在庫数をクリアすることもできます。 これ"
+#~ "を行うには、該当するプロダクトの明細の左端にあるチェックボックスにチェック"
+#~ "を入れます。 ページの上部にある :icon:`fa-gear` :guilabel:`アクション` ボ"
+#~ "タンをクリックしてドロップダウンメニューを開きます。 :guilabel:`0に設定` "
+#~ "をクリックします。完了したら、調整した数を :ref:`適用 <inventory/apply-"
+#~ "adjustment>` します。"
+
+#~ msgid ""
+#~ "Counting products is a recurring activity in a warehouse. Once a count is "
+#~ "complete, go to :menuselection:`Inventory app --> Operations --> Physical "
+#~ "Inventory` to update the :guilabel:`Counted Quantity` column for each "
+#~ "product line."
+#~ msgstr ""
+#~ "倉庫内でのプロダクトのカウントは、定期的に行う作業です。カウントが完了した"
+#~ "ら、:menuselection:`在庫アプリ --> オペレーション --> 実地棚卸` に移動し、"
+#~ "各プロダクト明細の :guilabel:`棚卸数量` 列を更新します。"
+
+#~ msgid ""
+#~ "On each product line, identify whether the value in the :guilabel:`On "
+#~ "Hand Quantity` column recorded in the database matches the newly-counted "
+#~ "value. If the recorded value and the counted value do match, click "
+#~ "the :icon:`fa-bullseye` :guilabel:`Set` icon at the far right of the "
+#~ "product line."
+#~ msgstr ""
+#~ "各プロダクト明細において、データベースに記録されている :guilabel:`手持数量"
+#~ "` 列の値が、新たに数えた値と一致しているかどうかを確認します。 記録されて"
+#~ "いる値と棚卸数量が一致している場合は、プロダクト明細の右端にある :icon:`的"
+#~ "` :guilabel:`設定` アイコンをクリックします。"
+
+#~ msgid ""
+#~ "Doing so copies the value from the :guilabel:`On Hand Quantity` column "
+#~ "over to the :guilabel:`Counted Quantity` column, and sets the value of "
+#~ "the :guilabel:`Difference` column to `0.00`. Subsequently, once applied, "
+#~ "an inventory move with `0.00` :guilabel:`Quantity Done` is recorded in "
+#~ "the product's inventory adjustment history."
+#~ msgstr ""
+#~ "これにより :guilabel:`手持数量` 列の値が :guilabel:`棚卸数量` 列にコピーさ"
+#~ "れ、 :guilabel:`差異` 列の値が `0.00` に設定されます。その後、適用される"
+#~ "と、`0.00` :guilabel:`完了数量` の在庫移動がプロダクトの在庫調整履歴に記録"
+#~ "されます。"
+
+#~ msgid ""
+#~ "If the newly-counted value for a given product does **not** match the "
+#~ "value in the :guilabel:`On Hand Quantity` recorded in the database, "
+#~ "instead of clicking the :icon:`fa-bullseye` :guilabel:`Set` icon, record "
+#~ "the real value in the field in the :guilabel:`Counted Quantity` column."
+#~ msgstr ""
+#~ "新たにカウントされた特定のプロダクトの値が、データベースに記録され"
+#~ "た :guilabel:`手持在庫数量` の値と一致しない場合は、:icon:`的` "
+#~ "の :guilabel:`設定` アイコンをクリックする代わりに、実際の値を :guilabel:`"
+#~ "棚卸数量` 列のフィールドに記録して下さい。"
+
+#~ msgid ""
+#~ "To do so, click the field in the :guilabel:`Counted Quantity` column on "
+#~ "the specific inventory adjustment line for the product whose count is "
+#~ "being changed. This automatically assigns a :guilabel:`Counted Quantity` "
+#~ "of `0.00`."
+#~ msgstr ""
+#~ "これを行うには、カウントを変更するプロダクトの特定の在庫調整明細"
+#~ "の :guilabel:`棚卸数量` 列のフィールドをクリックします。これで自動的"
+#~ "に :guilabel:`棚卸数量` に `0.00` が割当てられます。"
+
+#~ msgid ""
+#~ "Subsequently, once applied, a move with the difference between "
+#~ "the :guilabel:`On Hand Quantity` and the :guilabel:`Counted Quantity` is "
+#~ "recorded in the product's inventory adjustment history."
+#~ msgstr ""
+#~ "その後、適用されると :guilabel:`手持数量` と :guilabel:`棚卸数量` の差によ"
+#~ "る移動がプロダクトの在庫調整履歴に記録されます。"
+
+#~ msgid ""
+#~ "The :guilabel:`Actions` menu appears when one or more products' "
+#~ "checkboxes are selected. The :guilabel:`Actions` menu includes the option "
+#~ "to :guilabel:`Set to quantity on hand`, which sets the selected "
+#~ "products' :guilabel:`Counted Quantity` to the :guilabel:`On Hand "
+#~ "Quantity`, and :guilabel:`Set to 0`, which sets the selected "
+#~ "products' :guilabel:`Counted Quantity` to zero."
+#~ msgstr ""
+#~ "1つ以上のプロダクトのチェックボックスが選択されると、:guilabel:`アクション"
+#~ "` メニューが表示されます。:guilabel:`アクション` メニューには、:guilabel:`"
+#~ "手持在庫数に設定` オプションがあり、選択したプロダクトの :guilabel:`棚卸数"
+#~ "量` を :guilabel:`手持在庫数` に設定します。また、:guilabel:`0に設定` オプ"
+#~ "ションでは、選択したプロダクトの :guilabel:`棚卸数量` をゼロに設定します。"
+
+#~ msgid "Inventory Adjustments Actions menu."
+#~ msgstr "在庫調整アクションメニュー"
+
+#~ msgid ""
+#~ "Tick the checkbox at the far left of the line for the desired product. At "
+#~ "the top of the page, click the :icon:`fa-gear` :guilabel:`Actions` button "
+#~ "to open a drop-down menu, and click :guilabel:`Revert Inventory "
+#~ "Adjustment`."
+#~ msgstr ""
+#~ "ご希望のプロダクトの明細の左端にあるチェックボックスにチェックを入れます。"
+#~ "ページ上部の:icon:`fa-gear` :guilabel:`アクション` ボタンをクリックしてド"
+#~ "ロップダウンメニューを開き、:guilabel:`棚卸調整を元に戻す` をクリックしま"
+#~ "す。"
+
+#~ msgid ""
+#~ "To request a count of **all** products currently in stock, tick the "
+#~ "checkbox at the top of the table, in the header row next to "
+#~ "the :guilabel:`Location` label. This selects **all** product lines."
+#~ msgstr ""
+#~ "現在在庫にある **全ての** プロダクトの数を要求するには、表の上部にあるヘッ"
+#~ "ダー行の :guilabel:`ロケーション` ラベルの隣にあるチェックボックスにチェッ"
+#~ "クを入れます。これにより、**全ての** プロダクトラインが選択されます。"
+
+#~ msgid "Request a count pop-up on inventory adjustments page."
+#~ msgstr "在庫調整ページの「棚卸を依頼」ポップアップ"
+
+#~ msgid ""
+#~ "Once all desired products have been selected, click "
+#~ "the :guilabel:`Request a Count` button at the top of the page. Doing so "
+#~ "opens the :guilabel:`Request a Count` pop-up window, where the following "
+#~ "information can be filled:"
+#~ msgstr ""
+#~ "必要なプロダクトを全て選択したら、ページ上部の :guilabel:`棚卸を依頼` ボタ"
+#~ "ンをクリックします。そうすると :guilabel:`棚卸を依頼` ポップアップウィンド"
+#~ "ウが開きますので、以下の情報を入力します。"
+
+#~ msgid ":guilabel:`Inventory Date`: the planned date of the count."
+#~ msgstr ":guilabel:`棚卸日`: 棚卸の予定日。"
+
+#~ msgid ":guilabel:`User`: the user responsible for the count."
+#~ msgstr ":guilabel:`ユーザ`:棚卸を担当するユーザ。"
+
+#~ msgid ""
+#~ ":guilabel:`Accounting Date`: the date at which the inventory adjustment "
+#~ "will be accounted."
+#~ msgstr ":guilabel:`会計日`: 在庫の調整が計上される日付。"
+
+#~ msgid ""
+#~ ":guilabel:`Count`: to leave the on-hand quantity of each product line "
+#~ "blank, select :guilabel:`Leave Empty`. To pre-fill the on-hand quantity "
+#~ "of each product line with the current value recorded in the database, "
+#~ "select :guilabel:`Set Current Value`."
+#~ msgstr ""
+#~ ":guilabel:`カウント`: 各プロダクトラインの手持ち数量を空白にするに"
+#~ "は、 :guilabel:`空白のまま` を選択します。各プロダクト明細の手持数量をあら"
+#~ "かじめデータベースに記録されている現在の値で埋めるには、 :guilabel:`現在の"
+#~ "値を設定` を選択します。"
+
+#~ msgid ""
+#~ "The :guilabel:`Leave Empty` option forces the employee conducting the "
+#~ "audit to manually type in the number they counted, while "
+#~ "the :guilabel:`Set Current Value` option only requires the employee to "
+#~ "*verify* the counted quantity and click :guilabel:`Apply`."
+#~ msgstr ""
+#~ ":guilabel:`空白のまま` オプションは、監査を行う従業員に、手作業で棚卸数量"
+#~ "を入力することを強制します。一方、:guilabel:`現在の値を設定` オプションで"
+#~ "は、従業員は棚卸数量を*確認*し、:guilabel:`適用` をクリックするだけで済み"
+#~ "ます。"
+
+#~ msgid "Request a count popup on inventory adjustments page."
+#~ msgstr "在庫調整ページの「棚卸を依頼」ポップアップ"
+
+#~ msgid ""
+#~ "An inventory audit can be accessed from the :guilabel:`Inventory "
+#~ "Adjustment` page. This audit includes an inventory record both before and "
+#~ "after a count is completed, to track what changed."
+#~ msgstr ""
+#~ "在庫監査は、:guilabel:`在庫調整` ページからアクセスできます。この監査に"
+#~ "は、在庫記録がカウント完了の前後両方含まれており、変更点を追跡することがで"
+#~ "きます。"
+
+#~ msgid ""
+#~ "On the :guilabel:`Inventory Adjustment` page, tick the checkbox at the "
+#~ "top-left of the page to select all of the lines. Then click "
+#~ "the :guilabel:`Request a Count` button. On the pop-up, "
+#~ "set :guilabel:`Count` to :guilabel:`Set Current Value`, then "
+#~ "click :guilabel:`Confirm`."
+#~ msgstr ""
+#~ ":guilabel:`在庫調整` ページで、ページ左上のチェックボックスにチェックを入"
+#~ "れ、全ての明細を選択します。次に、:guilabel:`棚卸を依頼` ボタンをクリック"
+#~ "します。ポップアップで、:guilabel:`在庫数` を:guilabel:`現在の値の設定` に"
+#~ "設定し、:guilabel:`確認` をクリックします。"
+
+#~ msgid ""
+#~ "After returning to the :guilabel:`Inventory Adjustment` page, select all "
+#~ "of the lines again. Click :menuselection:`Print --> Count Sheet`. "
+#~ "The :guilabel:`Count Sheet` exports in PDF form."
+#~ msgstr ""
+#~ ":guilabel:`在庫調整`ページに戻ったら、全ての明細を再度選択しま"
+#~ "す。:menuselection:`印刷 --> 在庫棚卸シート` をクリックします。:guilabel:`"
+#~ "在庫棚卸シート` はPDF形式でエクスポートされます。"
+
+#~ msgid ":doc:`../../../websites/ecommerce/products/catalog`"
+#~ msgstr ":doc:`../../../websites/ecommerce/products/catalog`"
 
 #~ msgid ""
 #~ "*Package use* is a field on the package form in Odoo that is only visible "
