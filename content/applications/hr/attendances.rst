@@ -143,14 +143,15 @@ when extra time is counted and what time is not logged.
 - :guilabel:`Display Extra Hours`: Activate this box to display the extra hours logged by an
   employee when they check out with a kiosk, or when a user checks out in the database.
 
-  .. note::
-     Approved extra hours can be :ref:`deducted from an approved time off request
-     <time_off/deduct-extra-hours>`.
+.. note::
+   Approved extra hours can be :ref:`deducted from an approved time off request
+   <time_off/deduct-extra-hours>`.
 
 .. seealso::
    - :doc:`attendances/check_in_check_out`
    - :doc:`attendances/kiosks`
    - :doc:`attendances/management`
+   - :doc:`attendances/attendance_logs`
    - :doc:`attendances/hardware`
    - :doc:`attendances/attendance_reporting`
 
@@ -160,5 +161,6 @@ when extra time is counted and what time is not logged.
    attendances/check_in_check_out
    attendances/kiosks
    attendances/management
+   attendances/attendance_logs
    attendances/hardware
    attendances/attendance_reporting
