@@ -102,9 +102,13 @@ and fill out the following fields for the new reordering rule line item:
   levels goes below this number, the replenishment is triggered.
 - :guilabel:`Max Quantity`: The amount of product that should be available after replenishing the
   product.
-- :guilabel:`Multiple Quantity`: If the product should be ordered in specific quantities, enter the
-  number that should be ordered. For example, if the :guilabel:`Multiple Quantity` is set to `5`,
-  and only 3 are needed, 5 products are replenished.
+- :guilabel:`Multiple Quantity`: Ensures products are replenished in fixed multiples, rounding the
+  ordered quantity up to the nearest multiple that meets or slightly exceeds the :guilabel:`Max
+  Quantity`.
+
+  For example, if :guilabel:`Multiple Quantity` is set to `3`, Odoo orders in multiples of three (3,
+  6, 9, ...). If the :guilabel:`Max Quantity` is `20`, `21` is ordered because it is the smallest
+  multiple of three that reaches or exceeds the maximum.
 
 .. image:: reordering_rules/reordering-rule-form.png
    :align: center
