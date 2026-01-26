@@ -26,27 +26,22 @@ determined by access rights.
 
 To see what access rights a user has, navigate to the :menuselection:`Settings app --> Users &
 Companies --> Users`, and click on an individual user. The :guilabel:`Access Rights` tab is visible
-by default. Scroll down to the :guilabel:`HUMAN RESOURCES` section to view the settings. For the
-:guilabel:`Attendances` field, the options are either to leave the field blank or select
-:guilabel:`Administrator`.
+by default. Scroll down to the *Human Resources* section to view the settings. For the
+:guilabel:`Attendances` field, the following options appear:
 
-If the :guilabel:`Administrator` option is selected, the user has full access to the entire
-**Attendances** application, with no restrictions. They can view all employee attendance records,
-enter *Kiosk Mode* from the application, access all reporting metrics, and make modifications to the
-settings. If left blank, the user does **not** have access to the **Attendances** application.
-
-.. note::
-   If a user does **not** have :guilabel:`Administrator` rights for the **Attendances** app, they
-   are **not** able to open the app, even though it appears on the main database dashboard. An
-   :guilabel:`Access Error` pop-up message appears, stating:
-
-   `You do not have enough rights to access the fields "attendance_manager_id" on Employee
-   (hr.employee). Please contact your system administrator.`
-
-   Users who cannot access the **Attendances** app can still :doc:`check in and check out
-   <../hr/attendances/check_in_check_out>` of work within the database, using the :icon:`fa-circle`
-   :guilabel:`(red circle)` or :icon:`fa-circle` :guilabel:`(green circle)` that are always
-   available at the top of the database.
+- :guilabel:`No`: The user does **not** have access to the **Attendances** application, and is
+  **not** able to open the app, even though it appears on the main database dashboard. An *Access
+  Error* pop-up message appears when the application is clicked. The user can only check in and out
+  of the database either through an :ref:`attendance kiosk <attendances/kiosk-mode-entry>` or the
+  :doc:`attendance icon <attendances/check_in_check_out>` in the top-right corner of the Odoo
+  database, which is visible at all times, in every application).
+- :guilabel:`Officer: Manage all attendances`: The user has full access to all employee attendance
+  records, including the ability to modify and create records, but does **not** have access to the
+  configuration menu and settings.
+- :guilabel:`Administrator`: The user has full access to the entire **Attendances** application,
+  with no restrictions. They can view all employee attendance records, enter :ref:`kiosk mode
+  <attendances/enable-kiosk-mode>` from the application, access all :doc:`reporting
+  <attendances/attendance_reporting>` metrics, and make modifications to the settings.
 
 .. _attendances/approvers:
 
@@ -58,47 +53,50 @@ typically a manager, though that is not required. Approvers without administrati
 and modify attendance records **only** for the employees they are assigned to. This is the only
 exception where non-admin users can view records in the **Attendances** app.
 
-To view who the attendance approver for an employee is, navigate to the :menuselection:`Employees
-application` and click on the specific employee. Click on the :guilabel:`Work Information` tab,
-scroll to the :guilabel:`APPROVERS` section, and check the :guilabel:`Attendance` field. The person
-selected is able to view that employee's attendance records, both on the **Attendances** application
-dashboard as well as in the attendance reports, and make modifications to their records.
+To view the attendance approver for an employee, navigate to the :menuselection:`Employees`
+application and click on the specific employee. Click on the :guilabel:`Settings` tab, scroll to the
+*Approvers* section, and check the :guilabel:`Attendance` field. The person selected is able to view
+that employee's attendance records, both on the **Attendances** application dashboard as well as in
+the attendance reports, and make modifications to their records.
 
 Configuration
 =============
 
 Few configurations are needed in the **Attendances** app. Determining how employees check in and
-out, defining how the kiosks function, and determining how extra hours are computed are all set in
-the Configuration menu. Navigate to the :menuselection:`Attendances application --> Configuration`
-to access the configuration menu.
+out, defining how the kiosks function, and determining how extra hours are computed are all
+configured in the settings menu. Navigate to the :menuselection:`Attendances app --> Configuration
+--> Settings` to access the settings menu.
 
 .. note::
    Any configuration item with a :icon:`fa-building-o` :guilabel:`(building)` icon is a
-   company-specific configuration. Items without an :icon:`fa-building-o` :guilabel:`(building)`
-   icon apply to all companies within the database.
+   company-specific configuration. Items without a :icon:`fa-building-o` :guilabel:`(building)` icon
+   apply to all companies within the database.
 
 .. _attendances/modes:
 
 Modes
 -----
 
+This section specifies how employees log in and out, and how absences are handled.
+
 - :guilabel:`Attendances from Backend` :icon:`fa-building-o`: Activate this feature to allow users
   to check in and out directly from the Odoo database. If this is not activated, users must use a
   kiosk to check in and out of work.
 - :guilabel:`Automatic Check-Out` :icon:`fa-building-o`: Activate this feature to automatically
-  check out employees according to their working schedule, after a buffer of time has passed.
-- :guilabel:`Tolerance`: This field appears only when the :guilabel:`Automatic Check-Out`
-  :icon:`fa-building-o` feature is enabled. Enter the amount of time, in hours, that must elapse
-  after an employee's working hours have ended, before they are automatically checked out.
+  check out employees according to their working schedule, after a buffer of time has passed. When
+  enabled, a :guilabel:`Tolerance` field appears below this option. Enter the amount of time, in
+  hours, that must elapse after an employee's working hours have ended, before they are
+  automatically checked out.
 
-.. example::
-   With the :guilabel:`Automatic Check-Out` option enabled, and the :guilabel:`Tolerance` set to
-   `2.00` hours, an employee checks in to work at 9:00 AM and forgets to check out at 5:00 PM. At
-   7:00 PM, they are automatically checked out.
+  .. example::
+     With the :guilabel:`Automatic Check-Out` option enabled, and the :guilabel:`Tolerance` set to
+     `2.00` hours, an employee checks in to work at 9:00 AM and forgets to check out at 5:00 PM. At
+     7:00 PM, they are automatically checked out.
 
 - :guilabel:`Absence Management` :icon:`fa-building-o`: Activate this feature to log any absences
   that are not associated with a time off request, such as vacation time or sick time, on the
-  :doc:`attendance report <attendances/attendance_reporting>`.
+  :doc:`attendance report <attendances/attendance_reporting>`. This does **not** apply for employees
+  with a flexible working schedule.
 
 Extra Hours
 -----------
