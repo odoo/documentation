@@ -56,6 +56,17 @@ will be part of the `addons-path` that references all directories containing Odo
             $ cd /tutorials
             $ git remote add dev git@github.com:odoo-dev/tutorials.git
             $ git remote set-url --push origin you_should_not_push_on_this_repository
+#. Create a virtual environment:
+   .. tabs::
+      .. tab:: Run the command below to create a virtual python environment.
+         #. Replace `<myenvname>` in the command below with your desired name for the virtual environment.
+            .. code-block:: console
+
+               $ python3 -m venv <myenvname>
+         #. After creating the virtual environment, install the required Python packages by running.
+            .. code-block:: console
+
+               $ pip install -r requirements.txt
 
 That's it! Your environment is now prepared to run Odoo from the sources, and you have successfully
 created a repository to serve as an addons directory. This will allow you to push your work to GitHub.
