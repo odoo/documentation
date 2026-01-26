@@ -27,7 +27,7 @@ level of Python. Advanced topics will require more knowledge in the other subjec
 plenty of tutorials freely accessible, so we cannot recommend one over another since it depends
 on your background.
 
-For reference this is the official `Python tutorial`_.
+For reference, this is the official `Python tutorial <https://docs.python.org/3/tutorial/index.html>`_.
 
 .. note::
   Since version 15.0, Odoo is actively transitioning to using its own in-house developed `OWL
