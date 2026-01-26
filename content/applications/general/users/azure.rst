@@ -114,11 +114,11 @@ Odoo setup
 ----------
 
 Finally, the last step in the Microsoft Azure OAuth configuration is to configure some settings in
-Odoo. Navigate to :menuselection:`Settings --> Integrations --> OAuth Authentication` and check the
+Odoo. Navigate to :menuselection:`Settings --> Users & Companies --> OAuth Providers` and check the
 box to activate the OAuth login feature. Click :guilabel:`Save` to ensure the progress is saved.
 Then, sign in to the database once the login screen loads.
 
-Once again, navigate to :menuselection:`Settings --> Integrations --> OAuth Authentication` and
+Once again, navigate to :menuselection:`Settings --> Users & Companies --> OAuth Providers` and
 click on :guilabel:`OAuth Providers`. Now, select :guilabel:`New` in the upper-left corner and name
 the provider `Azure`.
 
