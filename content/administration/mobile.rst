@@ -25,10 +25,10 @@ instructions to install a PWA depend on the platform and browser used.
 
    .. tab:: Android
 
-      **Chrome**: open Chrome's menu (:guilabel:`⋮`), select :guilabel:`Install app`, and tap
+      **Chrome**: open Chrome's menu (:guilabel:`⋮`), select :guilabel:`Add to home screen`, and tap
       :guilabel:`Install`.
 
-      **Firefox**: open Firefox's menu (:guilabel:`⋮`), select :guilabel:`Install`, and either touch
+      **Firefox**: open Firefox's menu (:guilabel:`⋮`), select :guilabel:`Add to Home screen`, and either touch
       and hold the Odoo icon or tap :guilabel:`Add automatically`.
 
       The PWA can also be installed with **Samsung Internet**, **Edge**, and **Opera**.
