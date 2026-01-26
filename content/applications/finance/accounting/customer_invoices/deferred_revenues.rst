@@ -41,20 +41,27 @@ Generate Entries
   :ref:`generate them manually <customer_invoices/deferred/generate_manually>` by selecting the
   :guilabel:`Manually & Grouped` option instead.
 Based on
+  There are three ways to calculate the deferred revenue recognition:
+
+   - :guilabel:`Days`: The total amount is divided equally by the total number of days in the
+     period, inclusive of the start and end dates.
+   - :guilabel:`Months`: Each full month represents an equal proportion of the total amount,
+     regardless of the actual number of days in that month (standardized basis).
+   - :guilabel:`Full Months`: Any month started is treated as a complete month. However, the final
+     month is only considered full if the period extends to the very last day of that month.
+
   Suppose an invoice of $1200 must be deferred over 12 months.
 
+  - The :guilabel:`Days` option accounts for different amounts depending on the number of days in
+    each month (e.g., ~$102 for January and ~$92 for February).
   - The :guilabel:`Months` option accounts for $100 each month prorated to the number of days in
     that month (e.g., $50 for the first month if the :guilabel:`Start Date` is set to the 15th of
     the month).
-
   - The :guilabel:`Full Months` option considers each month started to be full (e.g., $100 for the
     first month even if the :guilabel:`Start Date` is set to the 15th of the month); this means that
     with the :guilabel:`Full Months` option, a full $100 is recognized in the first partial month,
     eliminating the need for a 13th month to recognize any remainder as would be the case when using
     the :guilabel:`Months` option.
-
-  - The :guilabel:`Days` option accounts for different amounts depending on the number of days in
-    each month (e.g., ~$102 for January and ~$92 for February).
 
 .. _customer_invoices/deferred/generate_on_validation:
 
@@ -62,10 +69,10 @@ Generate deferral entries on validation
 =======================================
 
 .. tip::
-   Make sure the :guilabel:`Start Date` and :guilabel:`End Date` fields are visible in the
-   :guilabel:`Invoice Lines` tab. In most cases, the :guilabel:`Start Date` should be in the same
-   month as the :guilabel:`Invoice Date`. Deferred revenue entries are posted from the invoice
-   date and are displayed in the report accordingly.
+   Make sure the :guilabel:`Deferred Date` field is visible in the :guilabel:`Invoice Lines`
+   tab. In most cases, the start of the deferred period should be in the same month as the
+   :guilabel:`Invoice Date`. Deferred revenue entries are posted from the invoice date and are
+   displayed in the report accordingly.
 
 For each line of the invoice that should be deferred, specify the start and end dates of the
 deferral period.
@@ -97,8 +104,8 @@ Items`.
    :alt: Deferred revenue report
 
 .. note::
-    Only invoices whose accounting date is before the end of the period of the report
-    are taken into account.
+   Only invoices whose accounting date is before the end of the period of the report are taken
+   into account.
 
 .. _customer_invoices/deferred/generate_manually:
 
@@ -120,10 +127,12 @@ click the :guilabel:`Generate Entries` button. This generates two deferral entri
   next month) to cancel the previous entry.
 
 .. example::
-   There are two invoices:
+   There are three invoices deferred based on :guilabel:`Months`:
 
    - Invoice A: $1200 to be deferred from 01/01/2023 to 12/31/2023
    - Invoice B: $600 to be deferred from 01/01/2023 to 12/31/2023
+   - Invoice C: $600 to be deferred in a future period (it will appear on the :guilabel:`Not
+     Started` column)
 
    In January
       At the end of January, after clicking the :guilabel:`Generate Entries` button, there are the
@@ -131,16 +140,16 @@ click the :guilabel:`Generate Entries` button. This generates two deferral entri
 
       - Entry 1 dated on the 31st January:
 
-        - Line 1: Expense account -1200 -600 = **-1800** (cancelling the total of both invoices)
-        - Line 2: Expense account 100 + 50 = **150** (recognizing 1/12 of invoice A and invoice B)
-        - Line 3: Deferred account 1800 - 150 = **1650** (amount that has yet to be deferred later
+        - Line 1: Income account -1200 -600 -600 = **-2400** (cancelling the total of all invoices)
+        - Line 2: Income account 100 + 50 = **150** (recognizing 1/12 of invoice A and invoice B)
+        - Line 3: Deferred account 2400 - 150 = **2250** (amount that has yet to be deferred later
           on)
 
       - Entry 2 dated on the 1st February, the reversal of the previous entry:
 
-        - Line 1: Expense account **1800**
-        - Line 2: Deferred account **-150**
-        - Line 3: Expense account **-1650**
+        - Line 1: Income account **2400**
+        - Line 3: Income account **-150**
+        - Line 2: Deferred account **-2250**
 
    In February
       At the end of February, after clicking the :guilabel:`Generate Entries` button, there are the
@@ -148,40 +157,26 @@ click the :guilabel:`Generate Entries` button. This generates two deferral entri
 
       - Entry 1 dated on the 28th February:
 
-        - Line 1: Expense account -1200 -600 = **-1800** (cancelling the total of both invoices)
-        - Line 2: Expense account 200 + 100 = **300** (recognizing 2/12 of invoice A and invoice B)
-        - Line 3: Deferred account 1800 - 300 = **1500** (amount that has yet to be deferred later
+        - Line 1: Income account -1200 -600 -600 = **-2400** (cancelling the total of all invoices)
+        - Line 2: Income account 200 + 100 = **300** (recognizing 2/12 of invoice A and invoice B)
+        - Line 3: Deferred account 2400 - 300 = **2100** (amount that has yet to be deferred later
           on)
 
       - Entry 2 dated on the 1st March, the reversal of the previous entry.
 
-   From March to October
-      The same computation is done for each month until October.
-
-   In November
-      At the end of November, after clicking the :guilabel:`Generate Entries` button, there are the
-      following entries:
-
-      - Entry 1 dated on the 30th November:
-
-        - Line 1: Expense account -1200 -600 = **-1800** (cancelling the total of both invoices)
-        - Line 2: Expense account 1100 + 550 = **1650** (recognizing 11/12 of invoice A and invoice
-          B)
-        - Line 3: Deferred account 1800 - 1650 = **150** (amount that has yet to be deferred later
-          on)
-
-      - Entry 2 dated on the 1st December, the reversal of the previous entry.
+   From March to November
+      The same computation is done for each month until November.
 
    In December
-      There is no need to generate entries in December. Indeed, if we do the computation for
-      December, we have an amount of 0 to be deferred.
+      There is no need to generate entries in December.
 
    In total
       If we aggregate everything, we would have:
 
-      - invoice A and invoice B
-      - two entries (one for the deferral and one for the reversal) for each month from January to
+      - Invoice A and invoice B
+      - Two entries (one for the deferral and one for the reversal) for each month from January to
         November
+      - Invoice C will be deferred later
 
       Therefore, at the end of December, invoices A and B are fully recognized as income
       only once in spite of all the created entries thanks to the reversal mechanism.
