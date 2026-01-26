@@ -302,29 +302,29 @@ The following examples showcase how to execute two of the :ref:`common ORM metho
           const reqSearch = {
               method: "POST",
               headers: headers,
-              body: {
+              body: JSON.stringify({
                   context: {lang: "en_US"},
                   domain: [
                       ["name", "ilike", "%deco%"],
                       ["is_company", "=", true],
                   ],
-              },
+              }),
           };
           const resSearch = await fetch(BASE_URL + "/res.partner/search_read", reqSearch);
-          if (!response.ok) throw new Error(resSearch.json());
+          if (!resSearch.ok) throw new Error(resSearch.json());
           const ids = await resSearch.json();
 
           const reqRead = {
               method: "POST",
               headers: headers,
-              body: {
+              body: JSON.stringify({
                   ids: ids,
                   context: {lang: "en_US"},
                   fields: ["name"],
-              },
+              }),
           };
           const resRead = await fetch(BASE_URL + "/res.partner/search_read", reqRead);
-          if (!response.ok) throw new Error(resRead.json());
+          if (!resRead.ok) throw new Error(resRead.json());
           const names = await resRead.json();
           console.log(names);
       })();
@@ -391,7 +391,7 @@ db (database) and object. All three services are deprecated.
 Common service
 --------------
 
-The common service defines 3 fonctions:
+The common service defines 3 functions:
 
 1. ``version()``
 2. ``login(db, login, password)``
@@ -422,7 +422,7 @@ Database service
 .. seealso::
    :ref:`db_manager_security`
 
-The db service defines 13 fonctions:
+The db service defines 13 functions:
 
 #. ``create_database(master_pwd, db_name, demo, lang, user_password, login, country_code, phone)``
 #. ``duplicate_database(master_pwd, db_original_name, db_name, neutralize_database)``
@@ -470,7 +470,7 @@ and ``list_countries``, which exist via JSON-2 on the ``res.lang`` and ``res.cou
 Object service
 --------------
 
-The object service defines 2 fonctions:
+The object service defines 2 functions:
 
 #. ``execute(db, uid, passwd, model, method, *args)``
 #. ``execute_kw(db, uid, passwd, model, method, args, kw={})``
