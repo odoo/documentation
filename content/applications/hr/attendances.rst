@@ -150,6 +150,7 @@ when extra time is counted and what time is not logged.
 .. seealso::
    - :doc:`attendances/check_in_check_out`
    - :doc:`attendances/kiosks`
+   - :doc:`attendances/attendance_onboarding`
    - :doc:`attendances/management`
    - :doc:`attendances/attendance_logs`
    - :doc:`attendances/hardware`
@@ -160,6 +161,7 @@ when extra time is counted and what time is not logged.
 
    attendances/check_in_check_out
    attendances/kiosks
+   attendances/attendance_onboarding
    attendances/management
    attendances/attendance_logs
    attendances/hardware

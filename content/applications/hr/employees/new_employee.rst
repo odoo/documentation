@@ -592,6 +592,8 @@ this section.
 
 - :guilabel:`Fleet Mobility Card`: if applicable, enter the :guilabel:`Fleet Mobility Card` number
 
+.. _employees/hr-attn-pos:
+
 ATTENDANCE/POINT OF SALE
 ------------------------
 
