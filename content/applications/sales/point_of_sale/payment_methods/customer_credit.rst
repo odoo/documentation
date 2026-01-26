@@ -68,13 +68,13 @@ Debt tracking
 
 When a customer pays using their customer account, the purchase amount is recorded as debt until it
 is paid off. To keep track of a customer’s debt, consult their customer statement in the backend or
-their profile in an open session.
+their customer profile from the POS register.
 
 To access the :guilabel:`Customer Statement` report, go to :menuselection:`Point of Sale --> Orders
 --> Customers`, select a customer to open their form, and click the :guilabel:`Customer Statements`
 smart button.
 
-To view the total amount due or deposited by a customer from an open session, access the customer
+To view the total amount due or deposited by a customer from the POS register, access the customer
 list by clicking :guilabel:`Customer` and search for the desired customer; the amount due or
 deposited is displayed next to their name.
 

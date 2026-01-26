@@ -3,7 +3,7 @@ Multi-employee management
 =========================
 
 Odoo Point of Sale (POS) offers a **Log in with Employees** feature, allowing multiple users to
-:ref:`log into a POS session <pos/employee_login/use>`. Activating this feature enables the
+:ref:`log into the POS register <pos/employee_login/use>`. Activating this feature enables the
 following actions:
 
 - Select specific users who can :ref:`log into the POS <pos/employee_login/use>`.
@@ -45,9 +45,9 @@ settings <configuration/settings>`. Then,
 
       Employees with minimal rights can perform the following actions within the POS:
 
-      **Session management:**
+      **Register management:**
 
-      - Lock and unlock an open POS session.
+      - Lock and unlock an open POS register.
       - Reload data.
 
       **Sales transactions:**
@@ -64,9 +64,9 @@ settings <configuration/settings>`. Then,
 
       In addition to the minimal rights, employees with basic rights can also:
 
-      **Session management:**
+      **Register management:**
 
-      - :ref:`Open a POS session <pos/session-start>`.
+      - :ref:`Open the POS register <pos/session-start>`.
       - :ref:`Perform cash-in and cash-out operations <pos/cash-register>`.
 
       **Sales transactions:**
@@ -91,7 +91,7 @@ settings <configuration/settings>`. Then,
 
       - Create products.
       - Access the Odoo backend interface.
-      - :ref:`Close the current POS session <pos/session-close>`.
+      - :ref:`Close the current POS register <pos/session-close>`.
 
       .. note::
          An employee with advanced POS rights who is not a database user cannot access the backend.
@@ -104,16 +104,16 @@ Usage guidelines
 Logging in
 ----------
 
-Once the **Log in with Employees** feature is enabled, employees must log in to :ref:`open a POS
-session <pos/session-start>` and access the POS interface. They can :ref:`scan their employee badge
+Once the **Log in with Employees** feature is enabled, employees must log in to :ref:`open the POS
+register <pos/session-start>` and access the POS interface. They can :ref:`scan their employee badge
 <pos/employee_login/badge>`, click the :icon:`fa-users` icon (:guilabel:`users`) to select their
 name from the list of authorized users, or by entering :ref:`their PIN code
 <pos/employee_login/pin>` in the :guilabel:`Enter your PIN` field.
 
 .. image:: employee_login/log-in.png
-   :alt: Login window to open a session when the multiple cashiers feature is active
+   :alt: Login window to open the register when the multiple cashiers feature is active
 
-To switch between users during an :ref:`active session <pos/session-start>`, click on the currently
+To switch between users from an :ref:`open POS register <pos/session-start>`, click on the currently
 logged-in employee's name at the top right of the POS screen and select the user to switch to.
 
 .. tip::
@@ -137,17 +137,17 @@ the employee's profile in the **Employees** module:
    - Click :guilabel:`Generate` to create a unique badge ID automatically.
 #. Click :guilabel:`Print Badge` to generate a barcode representation of the assigned badge ID.
 
-To switch users within an open POS session using a badge, you must first lock the session. To do so,
-click the :icon:`fa-lg fa-lock` icon (:guilabel:`lock`) to return to the login screen. Then, the new
-employee can scan their badge to log in.
+To switch users within an open POS register using a badge, you must first lock the register. To do
+so, click the :icon:`fa-lg fa-lock` icon (:guilabel:`lock`) to return to the login screen. Then, the
+new employee can scan their badge to log in.
 
 .. _pos/employee_login/pin:
 
 Adding a PIN Code
 -----------------
 
-For enhanced security, employees may be forced to enter a PIN code each time they log into a POS
-session. To set up a PIN code for an employee:
+For enhanced security, employees may be forced to enter a PIN code each time they log into the POS
+register. To set up a PIN code for an employee:
 
 #. Navigate to the **Employees** module.
 #. Open the form view of the relevant employee.

@@ -585,8 +585,8 @@ POS.
   Configuration --> Settings`, and from the :guilabel:`Accounting` section, open the
   :guilabel:`Default Sales Tax` form by clicking the arrow next to the default sales tax field.
   There, click :guilabel:`Advanced Options` and enable :guilabel:`Included in Price`.
-- At the start of a POS session, users must click :guilabel:`Work in` to clock in. Doing so allows
-  the registration of POS orders. If users are not clocked in, they cannot make POS orders.
+- At the opening of the POS register, users must click :guilabel:`Work in` to clock in. Doing so
+  allows the registration of POS orders. If users are not clocked in, they cannot make POS orders.
   Likewise, they must click :guilabel:`Work Out` to clock out at the end of the session.
 
 .. warning::
@@ -680,6 +680,6 @@ Point of Sale`, select your POS, scroll down to the :guilabel:`Connected Device`
 VAT signing card
 ----------------
 
-When you open a POS session and make your initial transaction, you are prompted to enter the PIN
+When you open the POS register and make your initial transaction, you are prompted to enter the PIN
 provided with your :abbr:`VSC (VAT signing card)`. The card is delivered by the :abbr:`FPS (Service
 Public Federal Finances)` upon `registration <https://www.systemedecaisseenregistreuse.be/fr/enregistrement>`_.

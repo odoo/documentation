@@ -21,7 +21,7 @@ products inside an order.
 Apply a discount on a product
 -----------------------------
 
-From your PoS session interface, use the *Disc* button.
+From your POS register interface, use the *Disc* button.
 
 .. image:: discounts/discounts_01.png
    :align: center

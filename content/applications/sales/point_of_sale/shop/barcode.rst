@@ -4,7 +4,7 @@ Barcodes
 
 Using a barcode scanner to process point-of-sale orders improves your efficiency in providing
 quicker customer service. Barcode scanners can be used both to scan products or to log employees
-into a POS session.
+into the POS register.
 
 Configuration
 =============

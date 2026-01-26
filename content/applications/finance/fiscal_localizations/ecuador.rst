@@ -868,7 +868,7 @@ Identification type and number
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The P0S cashier can :ref:`create a new contact for a customer <pos/customers>` who requests an
-invoice from an open POS session.
+invoice from an open POS register.
 
 The *Ecuadorian Module for Point of Sale* adds two new fields to the contact creation form:
 :guilabel:`Identification Type` and :guilabel:`Tax ID`.
@@ -890,7 +890,7 @@ customer as :guilabel:`Consumidor Final` and generates an electronic invoice any
 .. note::
    If the client requests a credit note due to a return of this type of purchase, the credit note
    should be made using the client's real contact information. Credit notes cannot be created for
-   *Consumidor Final* and can be managed :ref:`directly from the POS session <pos/refund>`.
+   *Consumidor Final* and can be managed :ref:`directly from the POS register <pos/refund>`.
 
 .. _localizations/ecuador/specific-customer:
 
@@ -902,4 +902,4 @@ with their fiscal information. This ensures the invoice is generated with accura
 
 .. note::
    If the client requests a credit note due to a return of this type of purchase, the credit note
-   and return process can be managed :ref:`directly from the POS session <pos/refund>`.
+   and return process can be managed :ref:`directly from the POS register <pos/refund>`.

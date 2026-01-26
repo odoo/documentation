@@ -110,8 +110,8 @@ Go to the :ref:`specific POS settings <configuration/settings>` and add all the 
 pricelists in the :guilabel:`Available` field. Then, set its **default pricelist** in the
 :guilabel:`Default` field.
 
-When you :ref:`open a POS session <pos/session-start>`, click the **pricelists** button, and select
-the desired pricelist from the list.
+When you :ref:`open the POS register <pos/session-start>`, click the **pricelists** button, and
+select the desired pricelist from the list.
 
 .. image:: pricelists/pricelist-button.png
    :alt: Button to select a pricelist on the POS frontend
