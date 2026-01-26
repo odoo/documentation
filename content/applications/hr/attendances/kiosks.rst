@@ -77,6 +77,8 @@ out with kiosks.
      event of a security breach, click :icon:`fa-refresh` :guilabel:`Generate new URL`, located
      beneath the link, to generate a new URL, and update the kiosk, accordingly.
 
+.. _attendances/enable-kiosk-mode:
+
 Kiosk mode
 ==========
 
