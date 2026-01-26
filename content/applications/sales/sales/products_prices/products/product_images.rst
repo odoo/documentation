@@ -2,6 +2,9 @@
 Product images with Google Images
 =================================
 
+.. warning::
+   Product images with Google Images has been removed as of Odoo 19 in favor of images imported through barcode lookup. 
+
 Having appropriate product images in Odoo is useful for a number of reasons. However, if a lot of
 products need images, assigning them can become incredibly time-consuming.
 
