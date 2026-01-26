@@ -26,8 +26,8 @@ The columns presented are:
 - :guilabel:`Balance`: The difference between the *approved* overtime, and the *total* overtime
   worked.
 
-To present different information, adjust the :ref:`filters and groups <attendances/filters-groups>`
-in the same way as in the :guilabel:`Overview` dashboard.
+To present different information, adjust the filters and groups in the same way as in the
+:guilabel:`Overview` dashboard.
 
 .. image:: attendance_ reporting/reporting.png
    :alt: The default report view, with all the optional view buttons highlighted.
