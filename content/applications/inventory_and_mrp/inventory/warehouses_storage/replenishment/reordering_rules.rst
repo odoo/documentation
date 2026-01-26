@@ -112,9 +112,13 @@ rule line item:
   triggered. When forecasted stock falls below this number, a replenishment order for the product is
   created.
 - :guilabel:`Max`: The maximum quantity at which the stock is replenished.
-- :guilabel:`Multiple Quantity`: If the product should be ordered in specific quantities, enter the
-  number that should be ordered. For example, if the :guilabel:`Multiple Quantity` is set to `5`,
-  and only 3 are needed, 5 products are replenished.
+- :guilabel:`Multiple Quantity`: Ensures products are replenished in fixed multiples, rounding the
+  ordered quantity up to the nearest multiple that remains below or equal to the :guilabel:`Max`
+  quantity.
+
+  For example, if :guilabel:`Multiple Quantity` is set to `3`, Odoo orders in multiples of three (3,
+  6, 9, ...). If the :guilabel:`Max` is `20`, `18` is ordered because it is the highest multiple of
+  three that does not exceed the maximum.
 
 .. figure:: reordering_rules/reordering-rule-form.png
    :alt: The form for creating a new reordering rule.
