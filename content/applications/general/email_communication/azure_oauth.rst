@@ -90,6 +90,16 @@ or group of users that will be sending emails from the :guilabel:`Microsoft acco
 :guilabel:`Add` the users/groups, click :guilabel:`Select`, and then :guilabel:`Assign` them to the
 application.
 
+
+Enable Third-party software OATH tokens in Office 365 for Outlook OAuth Authentication
+--------------------------------------------------------------------------------------
+
+To be able to use the :guilabel:`Outlook OAuth Authentication` option you will have to enable the :guilabel:`third-party
+software OATH tokens` option in Office 365. 
+
+Go to `Home > Security > Authentication methods` and enable :guilabel:`Third-party software OATH tokens` for
+the users who will be sending emails. You might choose All Users.
+
 Create credentials
 ------------------
 
