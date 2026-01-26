@@ -57,23 +57,23 @@ Here are the Odoo.sh pertinent directories:
        │         └── dist-packages       Python 2.7 standard libraries
        │    ├── python3
        │         └── dist-packages       Python 3 standard libraries
-       │    └── python3.5
-       │         └── dist-packages       Python 3.5 standard libraries
+       │    └── python3.10
+       │         └── dist-packages       Python 3.10 standard libraries
        ├── local
        │    └── lib
        │         ├── python2.7
        │         │    └── dist-packages  Python 2.7 third-party libraries
-       │         └── python3.5
-       │              └── dist-packages  Python 3.5 third-party libraries
+       │         └── python3.10
+       │              └── dist-packages  Python 3.10 third-party libraries
        └── usr
             └── bin
                  ├── python2.7           Python 2.7 executable
-                 └── python3.5           Python 3.5 executable
+                 └── python3.10           Python 3.10 executable
 
-Both Python 2.7 and 3.5 are installed in the containers. However:
+Both Python 2.7 and 3.10 are installed in the containers. However:
 
 * If your project is configured to use Odoo 10.0, the Odoo server runs with Python 2.7.
-* If your project is configured to use Odoo 11.0 or above, the Odoo server runs with Python 3.5.
+* If your project is configured to use Odoo 11.0 or above, the Odoo server runs with Python 3.10.
 
 Database shell
 ==============
