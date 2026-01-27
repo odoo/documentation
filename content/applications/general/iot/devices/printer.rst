@@ -473,7 +473,7 @@ Nothing happens when a barcode is scanned
 -----------------------------------------
 
 Make sure the correct device is selected in the :doc:`Point of Sale settings
-</applications/sales/point_of_sale/configuration/pos_iot>` (when applicable) and the barcode is
+</applications/sales/point_of_sale/pos_hardware/pos_iot>` (when applicable) and the barcode is
 configured to send an `ENTER` character (keycode 28) at the end of every barcode.
 
 The barcode scanner is detected as a keyboard
