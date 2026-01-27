@@ -1073,7 +1073,8 @@ Odoo will redirect to a list of invoices. Select all of them and in the :icon:`f
 and go back to the  :icon:`fa-gear` :guilabel:`Actions` drop-down menu to select :guilabel:`Create
 Global Invoice`.
 
-In the wizard, select the :guilabel:`Periodicity` indicated by a professional accountant and press
+In the wizard, select the :guilabel:`Periodicity` indicated by a professional accountant and the
+period to be invoiced by selecting the :guilabel:`Date` field, then press
 :guilabel:`Create`. All invoices should be signed under the same XML file, with the same
 :guilabel:`Fiscal Folio`.
 
