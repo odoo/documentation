@@ -13,3 +13,4 @@ Basic setup
    basic_setup/two_step_manufacturing
    basic_setup/three_step_manufacturing
    basic_setup/mo_costs
+   basic_setup/work_in_progress
