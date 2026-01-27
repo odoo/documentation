@@ -829,26 +829,98 @@ ol ol {
     }
 }
 
-// Definitions
-.dfn{
+// Definitions with tooltip
+.dfn {
     @include font-size($font-size-sm);
     line-height: 1;
     color: $blue-600;
     font-weight: $font-weight-bold;
+    position: relative;
+    display: inline-block;
 
     &:before {
         content:'?';
         display: inline-block;
         width: 15px;
         height: 15px;
-        margin: 0 .1rem;
-        border: 2px solid $blue-600;
-        border-radius: 20px;
         text-align: center;
         color: $blue-600;
-        font-size: 12px;
+        font-size: 16px;
         font-weight: $font-weight-bolder;
         font-style: normal;
+        position: relative;
+        top: -0.4em;
+        vertical-align: baseline;
+    }
+
+    // tooltip
+    span {
+        background-color: $gray-900;
+        border-radius: 3px;
+        bottom: 160%;
+        color: $white;
+        font-size: 12px;
+        font-weight: 400;
+        left: 50%;
+        line-height: 1.2;
+        margin-bottom: 8px;
+        max-width: 300px;
+        opacity: 0;
+        padding: 10px;
+        position: absolute;
+        transform: translateX(-50%);
+        transition: opacity .2s ease, visibility .2s ease;
+        visibility: hidden;
+        white-space: normal;
+        width: max-content;
+        z-index: 10;
+
+        // Position tooltip at right edge when it would overflow
+        &.tooltip-position-right {
+            left: auto;
+            right: -7px;
+            transform: translateX(0);
+        }
+
+        // Position tooltip at left edge when it would overflow
+        &.tooltip-position-left {
+            left: -7px;
+            transform: translateX(0);
+        }
+
+        // tooltip arrow
+        &:before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 6px solid $gray-900;
+        }
+
+        // Adjust arrow position when tooltip is at edges
+        &.tooltip-position-right:before {
+            left: auto;
+            right: 10px;
+            transform: translateX(0);
+        }
+
+        &.tooltip-position-left:before {
+            left: 10px;
+            transform: translateX(0);
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+        span {
+            visibility: visible;
+            opacity: 1;
+        }
     }
 }
 
