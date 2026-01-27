@@ -134,11 +134,7 @@ Basic Fields
 Advanced Fields
 ---------------
 
-.. autoclass:: Binary()
-
 .. autoclass:: Html()
-
-.. autoclass:: Image()
 
 .. autoclass:: Monetary()
 
@@ -223,7 +219,7 @@ Relational Fields
    :undoc-members:
    :member-order: bysource
 
-Pseudo-relational fields
+Pseudo-relational Fields
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. autoclass:: Reference()
@@ -231,6 +227,27 @@ Pseudo-relational fields
 .. autoclass:: Many2oneReference()
 
 .. _reference/fields/compute:
+
+Binary Fields
+~~~~~~~~~~~~~
+
+:class:`BinaryValue <odoo.tools.binary.BinaryValue>` represents a bytes (buffer)
+that can be lazily loaded. This allows to access binary fields and delay loading
+of the data into memory until it is needed. Binary fields will always return
+that object.
+You can instantiate it with :func:`~odoo.tools.binary.BinaryValue.from_bytes` or
+:func:`~odoo.tools.binary.BinaryValue.from_file`.
+
+When using :func:`odoo.orm.models.BaseModel.read`, a base64-encoded string is
+read.  When writing a binary field, you can:
+
+* write a ``BinaryValue``: general case
+* write ``bytes`` on the ``raw`` field: backward compatiblity
+* write base64-encoded ``str``: value coming from RPC
+
+.. autoclass:: Binary()
+
+.. autoclass:: Image()
 
 Computed Fields
 ~~~~~~~~~~~~~~~
@@ -319,7 +336,7 @@ it uses the values of other *fields*, it should specify those fields using
 
 .. _reference/fields/related:
 
-Related fields
+Related Fields
 ~~~~~~~~~~~~~~
 
 A special case of computed fields are *related* (proxy) fields, which provide
