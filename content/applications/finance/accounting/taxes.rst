@@ -12,11 +12,11 @@ Overview
 
 In general, managing taxes in Odoo involves the following steps:
 
-1. Taxes are added on individual lines of documents created via the Sales, Purchase, Accounting, and
+#. Taxes are added on individual lines of documents created via the Sales, Purchase, Accounting, and
    Point of Sale apps.
-2. Odoo automatically computes tax amounts on the documents.
-3. On accounting documents, Odoo generates journal items to keep track of tax debit and tax credit.
-4. The total base, tax debit, and tax credit for a period can be viewed in the tax return report
+#. Odoo automatically computes tax amounts on the documents.
+#. On accounting documents, Odoo generates journal items to keep track of tax debit and tax credit.
+#. The total base, tax debit, and tax credit for a period can be viewed in the tax return report
    and used to file a tax return.
 
 Taxes on sales and purchases
@@ -44,7 +44,7 @@ Automatic computation of tax amounts
 
 Applying a tax to a sale or purchase line allows Odoo to automatically compute the tax amount based
 on the sale or purchase line's subtotal and the tax's configuration. The details of the computation
-are explained in the :doc:`Tax Computation <taxes/tax_computation>` page.
+are explained in the :doc:`Tax computation documentation <taxes/tax_computation>`.
 
 .. image:: taxes/invoice-tax-amount.png
    :alt: Odoo automatically computes a tax amount for the 21% tax.
@@ -96,9 +96,9 @@ Basic tax configuration
 
 Follow these basic steps to set up taxes:
 
-1. Enable any relevant :ref:`company-wide options <taxes/configuration/company>`
-2. Activate any needed :ref:`pre-configured taxes <taxes/list_activation>`
-3. Assign taxes on your :ref:`products <taxes/product>`
+#. Enable any relevant :ref:`company-wide options <taxes/configuration/company>`.
+#. Activate any needed :ref:`pre-configured taxes <taxes/list_activation>`.
+#. Assign taxes on your :ref:`products <taxes/product>`.
 
 .. _taxes/configuration/company:
 
