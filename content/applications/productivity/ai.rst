@@ -91,3 +91,4 @@ Below are some common requests that the *Ask AI* agent can assist with:
    ai/webpage
    ai/live-chat
    ai/server-actions
+   ai/email-templates
