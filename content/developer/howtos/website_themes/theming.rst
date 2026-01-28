@@ -219,11 +219,21 @@ By reading the source code, variables related to options are easily noticeable.
 
 .. code-block:: xml
 
-   <we-button title="..."
-      data-name="..."
-      data-customize-website-views="..."
-      data-customize-website-variable="'Sidebar'"
-      data-img="..."/>
+   <BuilderSelectItem
+      id="'...'"
+      title.translate="..."
+      actionParam="[
+         {
+            action: 'websiteConfig',
+            actionParam: {
+               views: [...],
+               vars: { 'header-template': 'sidebar' },
+               checkVars: false,
+            }
+         }
+      ]">
+      <Img/>
+   </BuilderSelectItem>
 
 These variables can be overridden through the `$o-website-value-palettes` map, for example.
 
@@ -475,7 +485,7 @@ The colors used in a color combination are accessible and can be overridden thro
 
 .. seealso::
    `Color combinations SCSS
-   <https://github.com/odoo/odoo/blob/c272c49657e8b7865bb93e5f1dcc183cc7d44f17/addons/web_editor/static/src/scss/web_editor.common.scss#L16>`_
+   <https://github.com/odoo/odoo/blob/944d7c8d5d6bf97cba71644b615e081e4fff6595/addons/html_editor/static/src/scss/html_editor.common.scss#L16>`_
 
 .. admonition:: Demo page
 
@@ -739,11 +749,11 @@ By reading the source code, templates related to options are easily found.
 
 .. code-block:: xml
 
-   <we-button title="..."
-      data-name="..."
-      data-customize-website-views="website.template_header_default"
-      data-customize-website-variable="'...'"
-      data-img="..."/>
+   <BuilderContext action="'websiteConfig'">
+      <BuilderRow label.translate="...">
+         <BuilderCheckbox actionParam="{views: ['website.show_website_info']}" />
+      </BuilderRow>
+   </BuilderContext>
 
 .. code-block:: xml
 
@@ -811,8 +821,9 @@ Assets
 ======
 
 For this part, we will refer to the `assets_frontend` bundle located in the web module. This bundle
-specifies the list of assets loaded by the Website Builder, and the goal is to add your SCSS and JS
-files to the bundle.
+specifies the list of assets loaded on the website frontend (public pages), and the goal is to add
+your SCSS and JS files to the bundle. The Website Builder uses its own bundles (for example,
+`website.website_builder_assets` and `website.assets_wysiwyg`).
 
 This is a non-exhaustive list of the frequently used bundles for a website:
 
@@ -831,7 +842,7 @@ This is a non-exhaustive list of the frequently used bundles for a website:
      - Mainly used for the `bootstrap_overridden.scss` file
    * - web.assets_frontend
      - You can add all your custom SCSS, JS or QWeb JS files
-   * - website.assets_wysiwyg
+   * - website.website_builder_assets
      - Add your JS files related to the Website Builder options behaviors (for instance, a custom
        method for your custom building block)
    * - website.assets_wysiwyg
@@ -900,7 +911,7 @@ brings the benefit of a better developer experience with better integration with
    folder of your module.
 
 .. tip::
-   - Use a linter (JSHint, ...).
+   - Use a linter (ESLint, ...).
    - Never add minified JavaScript libraries.
    - Add `'use strict';` at the top of every old-style module (this is automatic for new-style
      modules).
@@ -915,8 +926,8 @@ brings the benefit of a better developer experience with better integration with
    - Use double quotes for all textual strings (such as `"Hello"`) and single quotes for all other
      strings, such as a CSS selector `.x_nav_item`.
    - If you're using native standard JS functions (`start()`, `willStart()`, `cleanForSave()`,
-     etc), make sure you call `this._super.apply(this, arguments)`; (Check if it's necessary in the
-     standard code).
+     etc), make sure you call the parent implementation (for example, `super.start(...arguments)`;
+     check if it's necessary in the standard code).
 
 .. seealso::
    - `Odoo JavaScript coding guidelines <https://github.com/odoo/odoo/wiki/Javascript-coding-guidelines>`_
