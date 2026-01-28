@@ -21,7 +21,7 @@ To add or modify a website element:
    The default styles for headings, buttons, links, and paragraph text, for example, are defined in
    the :doc:`Theme tab <themes>` of the website editor.
 
-.. image:: elements/webdesign-elements.png
+.. image:: elements/elements-webdesign.png
    :alt: Type / to add website elements.
 
 .. _website/elements/titles:
