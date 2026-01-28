@@ -1073,9 +1073,31 @@ Odoo will redirect to a list of invoices. Select all of them and in the :icon:`f
 and go back to the  :icon:`fa-gear` :guilabel:`Actions` drop-down menu to select :guilabel:`Create
 Global Invoice`.
 
-In the wizard, select the :guilabel:`Periodicity` indicated by a professional accountant and press
+In the wizard, select the :guilabel:`Periodicity` indicated by a professional accountant and the
+period to be invoiced by selecting the :guilabel:`Date` field, then press
 :guilabel:`Create`. All invoices should be signed under the same XML file, with the same
 :guilabel:`Fiscal Folio`.
+
+.. image:: mexico/mx-global-invoice-periodicity.png
+   :alt: Global invoice wizard with periodicity.
+
+When selecting the :guilabel:`Date` field the day is not relevant, it is just used to extract the
+*month* and *year* for the xml. 
+Please note that in the case of bimonthly periodicity the month will determine which month is
+declared:
+
+- For the first 12 months the number corresponds to the month number.
+- January - February -> 13
+- March - April -> 14
+- May - June -> 15
+- July - August -> 16
+- September - October -> 17
+- November - December -> 18
+
+.. example::
+   Selecting the date 01/12/2026 with monthly periodicity will declare the month 12 and year 2026.
+   Selecting the date 01/12/2026 with bimonthly periodicity will declare the month 18 and year 2026.
+   Selecting the date 01/12/2026 with daily periodicity will delcare the month 12 and year 2026.
 
 .. tip::
    - Click :guilabel:`Show` in the :guilabel:`CFDI` tab to display a list with all related invoices.
