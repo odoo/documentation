@@ -54,17 +54,36 @@ pop-up widget appears on the screen, and is where emails can be sent, user and e
 edited, and activities can be managed. While this pop-up widget is open, the user can navigate
 through their Odoo apps.
 
-Using |VOIP| also requires a service provider. The next section explains how to connect a service
-provider to the Odoo database.
+Assign user permissions
+-----------------------
 
-VoIP providers
---------------
+By default, users can receive their own calls, and managers can receive calls for their team
+members. To grant additional |VOIP| permissions to a user, go to :menuselection:`Settings app -->
+Users \& Companies --> Users` and search for the user. Open the user's contact card and navigate to
+the *Access Rights* tab. Go to the *Productivity* section, and in the |VOIP| field select the
+desired access level.
 
-While |VOIP| setup is minimal in Odoo, most configuration happens in the external |VOIP| service
-provider. Two verified providers are :doc:`OnSIP <voip/onsip>` and :doc:`Axivox <voip/axivox>`.
-Click on the cards below to learn how to configure these service providers in the Odoo database. If
-these providers cannot be used, an alternate provider must meet these requirements to connect with
-Odoo:
+There are three access roles for |VOIP|:
+
+- :guilabel:`No`: cannot access |VOIP| features.
+- :guilabel:`Officer`: can view and report on all calls.
+- :guilabel:`Administrator`: can view, report, and manage call settings.
+
+.. important::
+   | Database administrators are not automatically granted administrator rights for |VOIP|.
+   | Make sure to set the correct access level for each |VOIP| user.
+
+To modify these roles or add custom roles, see :ref:`Create and modify groups
+<access-rights/groups>`.
+
+Add a VoIP provider
+-------------------
+
+In order to use |VOIP|, a service provider must be connected to the Odoo database. While |VOIP|
+setup is minimal in Odoo, most configuration happens in the external |VOIP| service provider. Two
+verified providers are :doc:`OnSIP <voip/onsip>` and :doc:`Axivox <voip/axivox>`. Click on the cards
+below to learn how to configure these service providers in the Odoo database. If these providers
+cannot be used, an alternate provider must meet these requirements to connect with Odoo:
 
 - |VOIP| host must provide access to a SIP server via a websocket connection
 - |VOIP| host must support WebRTC protocol
