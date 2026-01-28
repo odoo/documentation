@@ -109,6 +109,8 @@ To create individual :guilabel:`Working Hours`, for example, for employees worki
 .. seealso::
    :doc:`../hr/payroll/working_schedules`
 
+.. _planning/planning-roles:
+
 Planning roles
 ~~~~~~~~~~~~~~
 
