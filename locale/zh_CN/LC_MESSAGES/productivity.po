@@ -24,7 +24,7 @@ msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-01-22 18:30+0000\n"
-"PO-Revision-Date: 2026-01-22 23:20+0000\n"
+"PO-Revision-Date: 2026-01-28 23:21+0000\n"
 "Last-Translator: \"Chloe Wang (chwa)\" <chwa@odoo.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
 "projects/odoo-19-doc/productivity/zh_Hans/>\n"
@@ -1358,53 +1358,57 @@ msgstr ":doc:`AI坐席 <agents>`"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:3
 msgid "AI server actions"
-msgstr ""
+msgstr "AI 服务器操作"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:7
 msgid ""
 "|AI| server actions extend Odoo's automation framework by allowing "
 "artificial intelligence to make decisions during a workflow."
-msgstr ""
+msgstr "|AI| 服务器操作扩展了 Odoo 的自动化框架，允许人工智能在工作流程中做出决策。"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:10
 msgid ""
 "They are designed for cases where logic cannot be expressed entirely through "
 "fixed conditions, but still requires controlled execution through standard "
 "server actions."
-msgstr ""
+msgstr "此类服务端动作适用于业务逻辑无法通过固定条件完整实现，但仍需依托标准服务端动"
+"作实现可控执行的场景。"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:14
 msgid "How AI server actions work"
-msgstr ""
+msgstr "AI 服务端动作的工作原理"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:16
 msgid ""
 "AI-driven workflows in Odoo are built around a clear separation of "
 "responsibilities between the |AI| server action, or *the Manager*, and the "
 "tool, or *the Worker*."
-msgstr ""
+msgstr "Odoo 中由 AI 驱动的工作流，核心是让 AI 服务端操作（即 *管理端*） 与工具（即 *"
+"执行端*） 实现清晰的职责分离。"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:20
 msgid "AI server action: the manager"
-msgstr ""
+msgstr "AI 服务端动作：管理端"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:22
 msgid ""
 "An |AI| server action acts as a decision maker, or a manager. It reads the "
 "record and its context. It interprets the |AI| prompt. And it decides which "
 "tool to call, and what arguments to use."
-msgstr ""
+msgstr "AI 服务端动作承担决策角色，即管理端的职责：读取记录及相关上下文、解析 AI 提示"
+"词、选定待调用的工具并确定所需传入的参数。"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:25
 msgid ""
 "The server action does not enforce business rules, modify records directly, "
 "or guarantee the correctness of the operation. Its role is limited to "
 "decision-making."
-msgstr ""
+msgstr "该服务端动作不负责执行业务规则、直接修改记录，也不保障操作的准确性，其作用仅"
+"限定于决策环节。"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:29
 msgid "AI tool: the worker"
-msgstr ""
+msgstr "AI 工具：执行端"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:31
 msgid ""
@@ -1413,40 +1417,44 @@ msgid ""
 "updates, moves, or writes. Tools **must** enforce business rules explicitly "
 "in Python code."
 msgstr ""
+"工具是指在*用途*标签页中开启了*AI 中使用*选项的标准服务端动作，所有执行逻辑均"
+"封装在工具中，记录的更新、转移、写入等操作也由工具完成。工具必须在 Python 代"
+"码中显式定义并执行相关业务规则。"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:35
 msgid ""
 "If a tool is called by the |AI| server action, it will execute "
 "unconditionally, unless the code itself prevents it."
-msgstr ""
+msgstr "工具被 AI 服务端动作调用后，将无条件执行，除非其自身代码中设置了执行限制条件"
+"。"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:39
 msgid "AI server action workflow"
-msgstr ""
+msgstr "AI 服务端动作工作流"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:41
 msgid "The |AI| server action workflow follows this sequence:"
-msgstr ""
+msgstr "AI 服务端动作的工作流遵循以下执行顺序："
 
 #: ../../content/applications/productivity/ai/server-actions.rst:43
 msgid "A record triggers an |AI| server action."
-msgstr ""
+msgstr "某条记录触发 AI 服务端动作。"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:44
 msgid "The |AI| prompt is evaluated, using the record as context."
-msgstr ""
+msgstr "以该记录为上下文，对 AI 提示词进行解析运算。"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:45
 msgid "The |AI| selects one of the available tools."
-msgstr ""
+msgstr "AI 从可用工具中选定其一。"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:46
 msgid "The |AI| provides arguments expected by the tool."
-msgstr ""
+msgstr "AI 向该工具传入其所需的参数。"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:47
 msgid "The selected tool executes its Python code."
-msgstr ""
+msgstr "被选定的工具执行自身的 Python 代码。"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:50
 msgid ""
@@ -1454,10 +1462,13 @@ msgid ""
 "behavior already exists in Odoo, such as moving a document to a folder. In "
 "these cases, the |AI| selects parameters, and Odoo executes the action."
 msgstr ""
+"仅当相关基础操作行为已在 Odoo 中内置时（例如将文档移动至文件夹），AI 服务端动"
+"作才可在无自定义逻辑的情况下运行。此类场景中，由 AI 选定参数，再由 Odoo 执行"
+"该动作。"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:55
 msgid "Use case walkthrough"
-msgstr ""
+msgstr "用例实操详解"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:57
 msgid ""
@@ -1465,62 +1476,69 @@ msgid ""
 "Action pattern. Navigate to the *Server Actions* menu by going "
 "to :menuselection:`Settings --> Technical --> Server Actions`."
 msgstr ""
+"*自动整理收件箱文档* 示例完整呈现了 AI 服务端操作的标准使用范式。可通过路径 "
+":menuselection:`设置 --> 技术 --> 服务端操作`，进入服务端操作菜单。"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:62
 msgid ""
 "This server action is designed to review documents for their content, and "
 "add tags. The action itself does **not** move documents or add tags, it only "
 "decides which tool should be used, based on the documents' content."
-msgstr ""
+msgstr "该服务端操作的设计用途为识别文档内容并添加标签，但操作本身**并不**执行文档移"
+"动或标签添加操作，仅会根据文档内容判定应调用的工具。"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:66
 msgid ""
 "The :guilabel:`Model` for the action is listed as *Document*, and "
 "the :guilabel:`Type` is *AI*."
-msgstr ""
+msgstr "此操作的 :guilabel:`模型`字段配置为*文档*，:guilabel:`类型` 字段配置为AI。"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:None
 msgid "The record for the Auto-sort documents in inbox server action."
-msgstr ""
+msgstr "自动整理收件箱文档服务端操作的相关配置记录。"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:71
 msgid ""
 "The prompt for this action provides context about the document, as well as "
 "intent of the action."
-msgstr ""
+msgstr "该动作的提示词会同时提供文档相关上下文，以及该动作的执行意图。"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:73
 msgid ""
 "The :guilabel:`Tool` field includes several actions that may be taken based "
 "on this prompt, including moving a document, adding tags, or creating "
 "invoices or bills."
-msgstr ""
+msgstr ":guilabel:`工具` 字段中配置了多项可根据该提示词触发的操作，包括文档移动、标签"
+"添加、发票创建、账单创建等。"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:77
 msgid ""
 "*AI: Add Tags*, *AI: Move to Folder*, and *AI: Rename Document* are all "
 "*Execute Code* server actions, meaning they trigger python code."
-msgstr ""
+msgstr "*AI：添加标签*、*AI：移动至文件夹*、*AI：重命名文档* 均为*执行代码*类型的服务"
+"端操作，即这类动作会触发 Python 代码执行。"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:80
 msgid ""
 "For example, if the action determines, based on the content of the document, "
 "that the most appropriate tool is *AI: Move to Folder*, the Python code "
 "performs the following operation:"
-msgstr ""
+msgstr "举例来说，若该动作根据文档内容判定，最适配的工具为 *AI：移动至文件夹 *，则对"
+"应的 Python 代码会执行下述操作："
 
 #: ../../content/applications/productivity/ai/server-actions.rst:87
 msgid ""
 "This code, executes unconditionally when called and performs the move using "
 "an existing method."
-msgstr ""
+msgstr "此段代码被调用后将无条件执行，并通过现有方法完成文档移动操作。"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:90
 msgid ""
 "The |AI| does not infer arguments from the Python code or from the method "
 "signature. Instead, arguments passed to a tool are determined entirely by "
 "the tool's configuration."
-msgstr ""
+msgstr "AI不会从 Python 代码或方法签名中自动推导所需参数，传递给工具的所有参数，均由"
+"工具自身的配置唯一确定。"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:93
 msgid ""
@@ -1531,27 +1549,33 @@ msgid ""
 "The :guilabel:`Name` column under *AI Schema* must match the variable name "
 "used in the Python code exactly."
 msgstr ""
+"以 *AI：移动至文件夹* 工具为例，其 Python 代码需接收一个名为`folder_id`的变量"
+"。AI 之所以能准确传入该参数，是因为该变量已在工具配置中被显式声明为入参，相关"
+"配置可在服务端动作的*用途*标签页、:guilabel:`AI 模式` 字段中查看。AI 模式下的"
+" :guilabel:`名称`列，其内容必须与 Python 代码中使用的变量名完全一致。"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:99
 msgid ""
 "The |AI| uses the argument description to understand what the parameter "
 "represents, what type of value is expected, and when it is appropriate to "
 "supply it."
-msgstr ""
+msgstr "AI 会通过入参的描述信息，理解该参数的含义、预期的数值类型，以及适用的传入场景"
+"。"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:102
 msgid ""
 "If an argument is not defined in the Usage tab, the AI cannot provide it, "
 "even if the Python code references it."
-msgstr ""
+msgstr "若某一参数未在用途标签页中定义，即便 Python 代码中引用了该参数，AI 也无法为其"
+"传入对应值。"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:0
 msgid "The usage tab of the AI move to folder server action."
-msgstr ""
+msgstr "AI 移动至文件夹服务端操作的用途标签页。"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:109
 msgid "Creating custom AI tools"
-msgstr ""
+msgstr "创建自定义 AI 工具"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:111
 msgid ""
@@ -1560,67 +1584,71 @@ msgid ""
 "can update a task description, an *Execute Code* action could be created "
 "with the following code:"
 msgstr ""
+"上文*自动整理收件箱文档*示例中采用的范式，也可通过 Odoo 标准逻辑实现。例如，"
+"若需创建一个能更新任务描述的动作，可新建一个*执行代码*类型的服务端动作，并写"
+"入以下代码："
 
 #: ../../content/applications/productivity/ai/server-actions.rst:119
 msgid ""
 "To function correctly, `content` **must** be defined as an argument in "
 "tool's *Usage* tab."
-msgstr ""
+msgstr "为确保该工具正常运行，*必须*在工具的*用途*标签页中将 `content`显式定义为入参"
+"。"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:122
 msgid ":ref:`Server Actions <reference/actions/server>`"
-msgstr ""
+msgstr ":ref:`服务器操作 <reference/actions/server>`"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:125
 msgid "Common issues"
-msgstr ""
+msgstr "常见问题"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:128
 msgid "Why is the Tools field empty?"
-msgstr ""
+msgstr "为什么“工具” 字段为空？"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:130
 msgid ""
 "Confirm that at least one server action has :guilabel:`Use in AI` enabled."
-msgstr ""
+msgstr "确认至少一个服务器操作已启用 :guilabel:`AI 中使用`。"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:131
 msgid ""
 "Confirm that at least one tool is assigned to the same "
 "model :guilabel:`Model` as the server action."
-msgstr ""
+msgstr "确认至少有一个工具与该 AI 服务端动作配置了相同的 :guilabel:`模型`。"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:135
 msgid "Why did the tool run but nothing happened?"
-msgstr ""
+msgstr "工具已运行但无任何效果？"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:137
 msgid "The Python code exited without changes."
-msgstr ""
+msgstr "Python 代码执行完毕但未触发任何数据变更；"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:138
 msgid "Required arguments were missing or empty."
-msgstr ""
+msgstr "必需的入参缺失或为空值；"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:139
 msgid "Business conditions were not implemented in the tool logic."
-msgstr ""
+msgstr "工具逻辑中未实现对应的业务校验条件。"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:142
 msgid "Why did the AI choose an unexpected tool?"
-msgstr ""
+msgstr "AI 为何选择了非预期的工具？"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:144
 msgid "The prompt lacked sufficient context."
-msgstr ""
+msgstr "提示词缺少足够的上下文信息；"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:145
 msgid "Multiple tools matched the same intent."
-msgstr ""
+msgstr "多个工具匹配了相同的执行意图；"
 
 #: ../../content/applications/productivity/ai/server-actions.rst:146
 msgid "No constraints were enforced at the tool level."
-msgstr ""
+msgstr "工具层面未设置任何调用约束条件。"
 
 #: ../../content/applications/productivity/ai/webpage.rst:3
 msgid "AI webpage generator"
@@ -11937,18 +11965,20 @@ msgid ""
 "configuration/tags>`, if the displayed templates have been assigned tags. "
 "Click the :icon:`oi-panel-right` icon to close or open the panel."
 msgstr ""
+"若展示的模板已被分配标签，左侧面板可按 :ref:`标签 <sign/configuration/tags>`"
+"筛选视图。点击:icon:`oi-panel-right`图标可收起或展开该面板。"
 
 #: ../../content/applications/productivity/sign/request_signatures.rst:293
 msgid "For each template, the following information is shown:"
-msgstr ""
+msgstr "每个模板会展示以下信息："
 
 #: ../../content/applications/productivity/sign/request_signatures.rst:295
 msgid "the name of the template"
-msgstr ""
+msgstr "模板名称"
 
 #: ../../content/applications/productivity/sign/request_signatures.rst:296
 msgid "the month and year in which the template was created"
-msgstr ""
+msgstr "模板的创建年月"
 
 #: ../../content/applications/productivity/sign/request_signatures.rst:297
 msgid ""
@@ -11957,16 +11987,19 @@ msgid ""
 "configuration settings of the template if :guilabel:`Manage template access` "
 "is enabled in the :ref:`main Sign settings <sign/configuration/settings>`"
 msgstr ""
+"模板的 :guilabel:`负责人` 用户的头像；默认情况下是创建模板的用户，但如果在 "
+":ref:`电子签主设置 <sign/configuration/settings>` 中启用了 :guilabel:`管理模"
+"板访问权限` 功能，则可以在模板的配置设置中进行更改。"
 
 #: ../../content/applications/productivity/sign/request_signatures.rst:301
 msgid "any tags assigned to the template"
-msgstr ""
+msgstr "分配给该模板的所有标签"
 
 #: ../../content/applications/productivity/sign/request_signatures.rst:302
 msgid ""
 "the number of documents created using the template for which a signature "
 "request is :guilabel:`In Progress`"
-msgstr ""
+msgstr "通过该模板创建、且签名请求状态为 :guilabel:`处理中` 的文档数量"
 
 #: ../../content/applications/productivity/sign/request_signatures.rst:304
 msgid ""
