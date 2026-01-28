@@ -30,6 +30,8 @@ adds an associated core product to their shopping cart.
 
    Optional products as they appear when viewing the shopping cart on an eCommerce website.
 
+.. _sales/sales_quotations/config-optional-product:
+
 Configuring optional products
 =============================
 

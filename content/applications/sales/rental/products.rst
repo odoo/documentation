@@ -33,6 +33,8 @@ Kanban.
 Each product Kanban card displays the product name, rental rate, number of units on hand, and
 product image (if applicable).
 
+.. _rental/physical-products:
+
 Create a new physical product
 =============================
 
