@@ -213,7 +213,9 @@ allow you to customize the shape.
      :guilabel:`Send to back` or :guilabel:`Bring to front` icons.
 
      .. image:: building_blocks/change-block-position.png
-        :alt: Change block position
+        :alt: Change block positionBuilding block documentation
+
+
 
    - To resize a block, click and drag the dots around its edges to adjust it as needed.
 
