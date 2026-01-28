@@ -294,6 +294,7 @@ class.
           </div>
       </div>
 
+<<<<<<< 656e676e15e9bc659734b857891991877aa2dcc6
       <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
           <div class="card text-center">
               <i class="oi oi-food-delivery h1 p-4"></i>
@@ -531,6 +532,233 @@ class.
               <code>oi-bring-front</code>
           </div>
       </div>
+||||||| 3aacf5863625f2d2ff7d7b034d7728dcbf52971b
+=======
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-close h1 p-4"></i>
+              <code>oi-close</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-food-delivery h1 p-4"></i>
+              <code>oi-food-delivery</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-activity h1 p-4"></i>
+              <code>oi-activity</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-activity-plus h1 p-4"></i>
+              <code>oi-activity-plus</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-schedule-today h1 p-4"></i>
+              <code>oi-schedule-today</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-schedule-tomorrow h1 p-4"></i>
+              <code>oi-schedule-tomorrow</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-schedule-later h1 p-4"></i>
+              <code>oi-schedule-later</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-backspace-o h1 p-4"></i>
+              <code>oi-backspace-o</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-numpad h1 p-4"></i>
+              <code>oi-numpad</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-record h1 p-4"></i>
+              <code>oi-record</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-merge h1 p-4"></i>
+              <code>oi-merge</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-transfer h1 p-4"></i>
+              <code>oi-transfer</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-suitcase h1 p-4"></i>
+              <code>oi-suitcase</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-suitcase-plus h1 p-4"></i>
+              <code>oi-suitcase-plus</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-user h1 p-4"></i>
+              <code>oi-user</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-user-plus h1 p-4"></i>
+              <code>oi-user-plus</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-users h1 p-4"></i>
+              <code>oi-users</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-ellipsis-v h1 p-4"></i>
+              <code>oi-ellipsis-v</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-ellipsis-h h1 p-4"></i>
+              <code>oi-ellipsis-h</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-plus h1 p-4"></i>
+              <code>oi-plus</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-minus h1 p-4"></i>
+              <code>oi-minus</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-star-plus h1 p-4"></i>
+              <code>oi-star-plus</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-subtitle h1 p-4"></i>
+              <code>oi-subtitle</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-bluesky h1 p-4"></i>
+              <code>oi-bluesky</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-tiktok h1 p-4"></i>
+              <code>oi-tiktok</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-discord h1 p-4"></i>
+              <code>oi-discord</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-google-play h1 p-4"></i>
+              <code>oi-google-play</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-kickstarter h1 p-4"></i>
+              <code>oi-kickstarter</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-strava h1 p-4"></i>
+              <code>oi-strava</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-threads h1 p-4"></i>
+              <code>oi-threads</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-x h1 p-4"></i>
+              <code>oi-x</code>
+          </div>
+      </div>
+
+      <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+          <div class="card text-center">
+              <i class="oi oi-x-square h1 p-4"></i>
+              <code>oi-x-square</code>
+          </div>
+      </div>
+
+>>>>>>> 8a7908586731d6a8405564e6edaa009526b3027d
    </section>
 
 RTL adaptations
