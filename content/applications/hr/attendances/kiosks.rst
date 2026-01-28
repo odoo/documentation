@@ -22,20 +22,20 @@ Configuration
 =============
 
 To use kiosks in the **Attendances** application, navigate to :menuselection:`Attendances app -->
-Configuration`. On the :guilabel:`Settings` page, configure the :ref:`Modes section
-<attendances/kiosk-mode>` and the :ref:`attendances/kiosk-settings`.
+Configuration --> Settings`, and configure the :ref:`Modes section <attendances/kiosk-mode>` and the
+:ref:`attendances/kiosk-settings`.
 
 Once all desired settings have been configured, click the :guilabel:`Save` button on the
-:guilabel:`Settings` page, to activate and enable them.
+:guilabel:`Settings` page to activate and enable them.
 
 .. _attendances/kiosk-mode:
 
 Modes section
 -------------
 
-Determine how an employee checks in when using a kiosk, either by searching for their name on the
-kiosk (:guilabel:`Manual Selection`), scanning an employee ID or key fob (:guilabel:`Barcode/RFID`).
-or both.
+Determine how an employee checks in at a kiosk, either by searching for their name
+(:guilabel:`Manual Selection`), scanning an employee ID or key fob (:guilabel:`Barcode/RFID`), or
+both.
 
 On the settings page, using the drop-down menu for the :guilabel:`Kiosk Mode` :icon:`fa-building-o`
 field in the :guilabel:`Modes` section, make the desired selection. Options are
@@ -54,19 +54,18 @@ Kiosk Settings section
 The various settings in the :guilabel:`Kiosk Settings` section determine how employees check in and
 out with kiosks.
 
-- :guilabel:`Barcode Source` :icon:`fa-building-o`: this setting **only** appears if one of the two
+- :guilabel:`Barcode Source` :icon:`fa-building-o`: This setting appears **only** if one of the two
   *Barcode/RFID* selections were configured for the :ref:`Kiosk Mode <attendances/kiosk-mode>`
   setting.
 
-  If available, select how barcodes are scanned at the kiosk, via one of the drop-down menu options.
-  Barcodes can be scanned with a dedicated :guilabel:`Scanner`, or with a device's camera
-  (:guilabel:`Front Camera` or :guilabel:`Back Camera`).
-- :guilabel:`Display Time` :icon:`fa-building-o`: determine how many seconds a check-in/check-out
-  confirmation message remains on the kiosk screen before returning to the main check in screen.
-- :guilabel:`Employee PIN Identification`: tick this checkbox if employees should use a unique PIN
-  to check in. PINs are configured on each individual employee record. Refer to the :ref:`new
-  employee documentation <employees/hr-settings>` documentation for more information on setting up
-  PINs.
+  If available, select how barcodes are scanned at the kiosk from the drop-down menu. Barcodes can
+  be scanned with a dedicated :guilabel:`Scanner`, or with a device's :guilabel:`Front Camera` or
+  :guilabel:`Back Camera`.
+- :guilabel:`Display Time` :icon:`fa-building-o`: Determine how many seconds a check-in/check-out
+  confirmation message remains on the kiosk screen before returning to the main check-in screen.
+- :guilabel:`Employee PIN Identification`: Click this checkbox to require employees to use a unique
+  PIN to check in. PINs are configured on each individual employee record. Refer to the :ref:`new
+  employee documentation <employees/hr-settings>` for more information on setting up PINs.
 - :guilabel:`Attendance Kiosk Url`: Odoo generates a unique web address (URL) to use a device as a
   kiosk, without having to sign in to the Odoo database. When setting up a kiosk device, navigate to
   this unique web address in a web browser to present the **Attendances** app kiosk.
@@ -75,7 +74,7 @@ out with kiosks.
      These kiosk URLs are **not** secured with any type of access code. Anyone who has the URL can
      access the **Attendances** app kiosk. If the URL is compromised for any reason, such as in the
      event of a security breach, click :icon:`fa-refresh` :guilabel:`Generate new URL`, located
-     beneath the link, to generate a new URL, and update the kiosk, accordingly.
+     beneath the link, to generate a new URL and update the kiosk accordingly.
 
 .. _attendances/enable-kiosk-mode:
 
@@ -103,6 +102,16 @@ Entering *Kiosk Mode* is **only** available for users with specific :ref:`access
 .. note::
    At any time, a new kiosk URL can be generated, if needed. Click the :icon:`fa-refresh`
    :guilabel:`Generate a new Kiosk Mode URL`
+
+The kiosk loads, displaying the current date and time, along with the following banner at the top:
+:guilabel:`Connect an RFID reader, and scan a token. 'Read the Documentation'/ 'Buy an RFID Device`.
+
+Click the text link :guilabel:`Read the Documentation` to open the :doc:`corresponding documentation
+<../attendances/hardware>` in a new tab. Click the text link :guilabel:`Buy an RFID Device` to open
+a new tab with available products to purchase on Amazon. Close either tab to return to the kiosk.
+
+At the end of the text, an :guilabel:`X` appears. Click the :guilabel:`X` to close the banner.
+Closing the banner hides it from that point on, and *cannot be enabled again*.
 
 To exit *Kiosk Mode*, either close the tab in the web browser or return to the main log-in screen of
 Odoo.
@@ -138,20 +147,17 @@ Once scanned, the employee is either checked in or checked out, and a :ref:`conf
 Manually
 --------
 
-Users who do not have a scannable badge, or an RFID fob, can manually check in and out at a kiosk.
+Users who do not have a scannable badge or an RFID fob can manually check in and out at a kiosk.
 
 Tap the :icon:`fa-user-o` :guilabel:`Identify Manually` button on the kiosk, and a screen appears
-with all the employees that can be checked in or out. The **Employees** app dashboard has the same
-display.
-
-Tap on a person to check them in or out, and a :ref:`confirmation message
-<attendances/confirmation>` appears.
+with all the employees who can be checked in or out. Tap on a person to check them in or out, and a
+:ref:`confirmation message <attendances/confirmation>` appears.
 
 To find a specific person, either:
 
-- Search: tap into the search bar and enter the desired person's name. As the name is typed in, the
+- Search: Tap into the search bar and enter the desired person's name. As the name is typed,
   matching results are displayed on the screen.
-- By department: tap on any desired selection in the department section, located on the left side of
+- By department: Tap on any desired selection in the department section, located on the left side of
   the screen, to **only** view employees from that specific department. The number at the end of
   each listed department represents how many employees that department has.
 
@@ -177,16 +183,16 @@ in or out, and a :ref:`confirmation message <attendances/confirmation>` appears.
 Confirmation message
 --------------------
 
-When an employee checks in or out, a confirmation message appears, with all the check in or check
-out information.
+When an employee checks in or out, a confirmation message appears, with all the check-in or
+check-out information.
 
 When checking in, the :guilabel:`Welcome (Employee)` message appears, along with the current date
 and time. If the employee has already checked in and out that day, an :guilabel:`Hours Previously
 Today: HH:MM` message also appears, showing the total hours logged earlier.
 
-When checking out, :guilabel:`Goodbye (Employee)` appears, as well as the date and time of check
-out. Beneath the message is an :guilabel:`Hours Today: HH:MM` field, with the total hours and
-minutes logged for the day.
+When checking out, :guilabel:`Goodbye (Employee)` appears, as well as the date and time of checkout.
+Beneath the message is an :guilabel:`Hours Today: HH:MM` field, with the total hours and minutes
+logged for the day.
 
 Beneath both the "welcome" and "goodbye" messages is an :guilabel:`OK` button. To exit the screen
 before the preset time in the kiosk, tap the :guilabel:`OK` button.
