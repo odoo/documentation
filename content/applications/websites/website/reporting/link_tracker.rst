@@ -18,7 +18,7 @@ Create a traceable URL
 ======================
 
 To create and manage tracked links, navigate to :menuselection:`Website --> Site --> Link Tracker`.
-Fill in the following information and click :guilabel:`Get tracked link` to generate a tracking URL.
+Fill in the following information and click :guilabel:`Generate tracked link` to get a tracking URL.
 
 #. :guilabel:`URL`: The URL which is the target of the campaign. It is automatically populated with
    the URL from where you access the menu.
@@ -32,7 +32,7 @@ Fill in the following information and click :guilabel:`Get tracked link` to gene
 #. :guilabel:`Source`: The source identifies the precise platform or website that referred the
    visitor, such as a search engine, a newsletter, or a website.
 
-.. image:: link_tracker/create-link-tracker.png
+.. image:: link_tracker/create-link-trackers.png
    :alt: Create a link tracker URL
 
 The :guilabel:`Campaign`, :guilabel:`Medium`, and :guilabel:`Source` are called :abbr:`UTM (Urchin
@@ -48,17 +48,13 @@ Tracked links overview
 To get an overview of your tracked links, go to :menuselection:`Website --> Site --> Link Tracker`
 and scroll down to :guilabel:`Your tracked links` section.
 
-.. image:: link_tracker/your-tracked-links.png
+.. image:: link_tracker/your-tracked-link.png
    :alt: Get an overview of all the links you track.
 
 Statistics
 ----------
 
-To measure the performance of tracked links, click the :guilabel:`Stats` button.
-
-.. image:: link_tracker/statistics.png
-   :alt: View the statistics related to a specific tracked link.
-
-Scroll down to the :guilabel:`Statistics` section to get an overview of the number of clicks of your
-tracked links. You can display information for a specific period by clicking the
-:guilabel:`All Time`, :guilabel:`Last Month`, or :guilabel:`Last Week` options.
+To measure the performance of tracked links, click the track link and scroll down to the
+:guilabel:`Statistics` section to get an overview of the number of clicks of your tracked links.
+You can display information for a specific period by clicking the :guilabel:`All Time`,
+:guilabel:`Last Month`, or :guilabel:`Last Week` options that appear at the right side of the page.
