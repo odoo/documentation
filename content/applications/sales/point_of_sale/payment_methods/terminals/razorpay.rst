@@ -50,7 +50,7 @@ Configure the payment method
       production.
 
 Once the payment method is created, you can enable it for your POS. To do so, go to the :ref:`POS'
-settings <configuration/settings>` and add the payment method under the :guilabel:`Payment` section.
+settings <pos/use/settings>` and add the payment method under the :guilabel:`Payment` section.
 
 .. note::
    The terminal must have at least a 10% battery level to use it.

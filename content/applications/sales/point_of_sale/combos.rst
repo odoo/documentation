@@ -53,8 +53,9 @@ store or restaurant.
 Practical application
 =====================
 
-:ref:`Open a POS session <pos/session-start>` and select the combo product. Choose the options and
-click :guilabel:`Add to order`. As a reminder, the extra price appears under the related choices.
+:ref:`Access the POS register <pos/use/open-register>` and select the combo product. Choose the
+options and click :guilabel:`Add to order`. As a reminder, the extra price appears under the related
+choices.
 
 .. image:: combos/combo-select.png
    :scale: 75%

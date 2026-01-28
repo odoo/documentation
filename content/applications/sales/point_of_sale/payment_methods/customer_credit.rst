@@ -15,8 +15,8 @@ Configuration
 To allow customers to pay using their customer account, :doc:`create a payment method
 <../payment_methods>` and configure it as follows:
 
-#. Enable :guilabel:`Identify Customer` to force the :ref:`selection of a customer <pos/customers>`
-   to allow using this payment method.
+#. Enable :guilabel:`Identify Customer` to force the :ref:`selection of a customer
+   <pos/use/customers>` to allow using this payment method.
 #. Keep the :guilabel:`Journal` field blank to use the customer's receivable account.
 #. Select the points of sale where this payment method is available in the :guilabel:`Point of Sale`
    field.
@@ -60,7 +60,7 @@ To use the customer account as a payment method for a purchase from the POS paym
 
 .. important::
    To effectively monitor and manage the customer’s unpaid debt, either :doc:`create an invoice
-   <../receipts_invoices>` for the order or install the :doc:`Accounting application
+   <../use/pos_invoices>` for the order or install the :doc:`Accounting application
    <../../../finance/accounting>`.
 
 Debt tracking

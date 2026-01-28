@@ -295,10 +295,9 @@ Then, click :guilabel:`Print` to download the PDF file with DEP7 data.
 Monthly / Yearly closing receipts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To print monthly/yearly closing receipts, :ref:`start a session <pos/session-start>` from the **POS
-dashboard** and click :guilabel:`Open Register` on the related point of sale. Click the
-:icon:`oi-view-list` :guilabel:`(list view)` icon in the top-right corner and select
-:guilabel:`Montly/Yearly Receipts`.
+To print monthly/yearly closing receipts, :ref:`open the related POS register
+<pos/use/open-register>` from the **POS dashboard**. Click the :icon:`oi-view-list`
+:guilabel:`(list view)` icon in the top-right corner and select :guilabel:`Montly/Yearly Receipts`.
 
 The last month is selected by default in the :guilabel:`Print closing receipts` window. To change
 it,  select :guilabel:`Monthly` or :guilabel:`Yearly`, then click the :icon:`fa-calendar-o`

@@ -171,7 +171,7 @@ listed by their creation date and current status.
 Point of sale orders
 --------------------
 
-Once an order has been :ref:`paid <pos/sell>`, a JSON file containing the order details is
+Once an order has been :ref:`paid <pos/use/sell>`, a JSON file containing the order details is
 generated. This file is stored as a Veri*Factu document.
 
 Go to :menuselection:`Point of Sale --> Orders --> Orders`. In the :guilabel:`Orders` list view,

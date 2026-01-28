@@ -240,10 +240,10 @@ the `ESC *` command as follows:
 #. Click :guilabel:`Add Printer`. If everything was done correctly, the page should redirect to the
    :guilabel:`Banners` page.
 #. Wait a few minutes for the IoT system to detect the printer and sync to Odoo's server.
-#. :ref:`Access the POS settings <configuration/settings>` and select your POS, or click the
-   vertical ellipsis button (:guilabel:`⋮`) on a POS card and click :guilabel:`Edit`. Scroll down
-   to the :guilabel:`Connected Devices` section, enable :guilabel:`IoT Box`, and select the printer
-   in the :guilabel:`Receipt Printer` field. Click :guilabel:`Save`.
+#. :ref:`Access the POS settings <pos/use/settings>` and select your POS, or click the vertical
+   ellipsis button (:guilabel:`⋮`) on a POS card and click :guilabel:`Edit`. Scroll down to the
+   :guilabel:`Connected Devices` section, enable :guilabel:`IoT Box`, and select the printer in the
+   :guilabel:`Receipt Printer` field. Click :guilabel:`Save`.
 
 .. note::
    If the printer was set up incorrectly (e.g., it continues to print random text, or the printed

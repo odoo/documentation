@@ -12,8 +12,8 @@ Feature activation
 ------------------
 
 To enable this feature and select a self-ordering type, access the :ref:`POS settings
-<configuration/settings>`, scroll down to the :guilabel:`Mobile self-order & Kiosk` section, and
-select a :guilabel:`Self Ordering` type under the :guilabel:`QR menu & Kiosk activation` section.
+<pos/use/settings>`, scroll down to the :guilabel:`Mobile self-order & Kiosk` section, and select a
+:guilabel:`Self Ordering` type under the :guilabel:`QR menu & Kiosk activation` section.
 
 You can choose from:
 

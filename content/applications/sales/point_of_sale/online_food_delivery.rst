@@ -67,7 +67,7 @@ UrbanPiper credentials
 
 #. Get your Atlas credentials:
 
-   #. Go to the :ref:`POS settings <configuration/settings>`.
+   #. Go to the :ref:`POS settings <pos/use/settings>`.
    #. Scroll down to the :guilabel:`Food Delivery Connector` section.
    #. Click :guilabel:`Fill this form to get Username & Api key` and fill out the survey.
 #. `Go to your Atlas account <https://atlas.urbanpiper.com>`_ and retrieve your API key and username
@@ -81,7 +81,7 @@ Point of Sale
 
 #. Enable the :guilabel:`Urban Piper` setting:
 
-   #. Go to the :ref:`POS settings <configuration/settings>`.
+   #. Go to the :ref:`POS settings <pos/use/settings>`.
    #. Scroll down to the :guilabel:`Food Delivery Connector` section.
    #. Check the :guilabel:`Urban Piper` setting.
 
@@ -153,7 +153,7 @@ Synchronization
 
 To make products available on food delivery platforms, synchronize with your UrbanPiper account:
 
-#. Go to the :ref:`POS settings <configuration/settings>`.
+#. Go to the :ref:`POS settings <pos/use/settings>`.
 #. Scroll down the :guilabel:`Food Delivery Connector` section.
 #. Click the :guilabel:`Sync Menu` button.
 

@@ -1420,7 +1420,7 @@ receipt.
    :alt: Invoice Configuration for Point of Sale.
 
 To sign a credit note automatically, tick the :icon:`fa-file-text-o` :guilabel:`Invoice` checkbox
-when processing a :ref:`refund <pos/refund>`.
+when processing a :ref:`refund <pos/use/refund>`.
 
 .. note::
    Credit notes for returned products will contain the relation type :guilabel:`03 - Devolución de
@@ -1457,7 +1457,7 @@ to handle reversals of the sales entries when invoices are requested as well as 
 account for the new invoices.
 
 .. seealso::
-   :doc:`../../sales/point_of_sale/receipts_invoices`
+   :doc:`../../sales/point_of_sale/use/pos_invoices`
 
 .. _l10n/mx/pos/global-invoice:
 

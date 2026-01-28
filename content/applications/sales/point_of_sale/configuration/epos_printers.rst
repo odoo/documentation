@@ -11,7 +11,7 @@ Configuration
 
 To use an ePos printer in Point of Sale:
 
-#. :ref:`Access the POS settings <configuration/settings>`.
+#. :ref:`Access the POS settings <pos/use/settings>`.
 #. Activate the :guilabel:`ePos Printer` feature.
 #. Fill in the field with your ePos IP address.
 

@@ -9,8 +9,8 @@ or if, for any reason, the customer needs their order to be shipped later, etc.
 Configuration
 =============
 
-:ref:`Go to the POS settings <configuration/settings>`, scroll down to the :guilabel:`Inventory`
-section, and enable :guilabel:`Allow Ship Later`.
+:ref:`Go to the POS settings <pos/use/settings>`, scroll down to the :guilabel:`Inventory` section,
+and enable :guilabel:`Allow Ship Later`.
 
 .. image:: ship_later/settings.png
    :scale: 85%
@@ -31,7 +31,7 @@ Once activated, you can:
 Practical application
 =====================
 
-#. :ref:`Open a session <pos/session-start>` and make a sale.
+#. :ref:`Access the POS register <pos/use/open-register>` and make a sale.
 #. On the payment screen, set a customer and select :guilabel:`Ship Later`.
 #. On the popup window, set a shipping date and click :guilabel:`Confirm` to proceed to payment.
 

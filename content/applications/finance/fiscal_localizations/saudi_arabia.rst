@@ -586,8 +586,7 @@ ZATCA integration configuration
 
 PoS orders must be properly reported in compliance with ZATCA Phase 2. To do so, follow these steps:
 
-- Onboard the :guilabel:`Invoices` default journal in the :ref:`PoS settings
-  <configuration/settings>`:
+- Onboard the :guilabel:`Invoices` default journal in the :ref:`PoS settings <pos/use/settings>`:
 
   - Go to :menuselection:`Point of Sale --> Configuration --> Settings`. In the yellow banner,
     select the relevant :guilabel:`Point of Sale`, then navigate to the :guilabel:`Accounting`
@@ -598,7 +597,7 @@ PoS orders must be properly reported in compliance with ZATCA Phase 2. To do so,
   - In the :guilabel:`Enter the OTP` window, enter the 6-digit :guilabel:`OTP` retrieved from the
     Fatoora Portal under the Production Environment. Then click :guilabel:`Confirm`.
 
-- :ref:`Assign a customer <pos/customers>` to the order before finalizing the transaction.
+- :ref:`Assign a customer <pos/use/customers>` to the order before finalizing the transaction.
 
 These steps ensure that each receipt is processed as a compliant e-invoice and reported to the ZATCA
 portal in real time. Once the receipt is generated, the Phase 2 QR code automatically appears on

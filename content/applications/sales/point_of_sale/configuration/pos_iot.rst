@@ -41,9 +41,9 @@ To connect the POS with an :doc:`IoT system </applications/general/iot>`:
    the POS.
 
    .. tip::
-      Alternatively, :ref:`access the POS settings <configuration/settings>` and select the POS, or
-      click the vertical ellipsis button (:guilabel:`⋮`) on a POS card and click :guilabel:`Edit`.
-      Then, enable :guilabel:`IoT Box`, select the devices to use with the POS, and click
+      Alternatively, :ref:`access the POS settings <pos/use/settings>` and select the POS, or click
+      the vertical ellipsis button (:guilabel:`⋮`) on a POS card and click :guilabel:`Edit`. Then,
+      enable :guilabel:`IoT Box`, select the devices to use with the POS, and click
       :guilabel:`Save`.
 
 .. seealso::

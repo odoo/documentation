@@ -13,7 +13,7 @@ Configuration
 
 To enable the preparation display feature,
 
-#. Go to the :ref:`POS settings <configuration/settings>`.
+#. Go to the :ref:`POS settings <pos/use/settings>`.
 #. Scroll down to the :guilabel:`Preparation` section.
 #. Check the :guilabel:`Preparation Display` option.
 
