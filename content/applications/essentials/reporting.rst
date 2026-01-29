@@ -10,9 +10,9 @@ and visualize the data of your records.
 Selecting a view
 ================
 
-Depending on the report, Odoo can display the data in various ways. Sometimes, a unique view
-fully tailored to the report is available, while several views are available for others. However,
-two generic views are dedicated to reporting: the graph and pivot views.
+Depending on the report, Odoo can display the data in various ways. Sometimes, a unique view fully
+tailored to the report is available, while several views are available for others. However, two
+generic views are dedicated to reporting: the graph and pivot views.
 
 .. _reporting/views/graph:
 
@@ -21,8 +21,7 @@ Graph view
 
 The :ref:`graph view <reporting/using-graph>` is used to visualize your records' data, helping you
 identify patterns and trends. The view is often found under the :guilabel:`Reporting` menu of apps
-but can be found elsewhere. Click the **graph view button** located at the top right to access
-it.
+but can be found elsewhere. Click the **graph view button** located at the top right to access it.
 
 .. image:: reporting/graph-button.png
    :alt: Selecting the graph view
@@ -58,12 +57,6 @@ edit it, click :guilabel:`Measures` and choose one or, only for pivots, multiple
 After choosing what you want to measure, you can define how the data should be :ref:`grouped
 <search/group>` depending on the dimension you want to analyze. By default, the data is often
 grouped by *Date > Month*, which is used to analyze the evolution of a measure over the months.
-
-.. tip::
-   When you filter a single time period, the option to compare it against another one appears.
-
-   .. image:: reporting/comparison.png
-      :alt: Using the comparison option
 
 .. example::
 
