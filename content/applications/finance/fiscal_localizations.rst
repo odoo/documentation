@@ -186,6 +186,7 @@ Fiscal localization modules are available for the countries listed below.
    fiscal_localizations/spain
    fiscal_localizations/switzerland
    fiscal_localizations/thailand
+   fiscal_localizations/turkiye
    fiscal_localizations/united_arab_emirates
    fiscal_localizations/united_kingdom
    fiscal_localizations/united_states
