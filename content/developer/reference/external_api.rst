@@ -517,7 +517,7 @@ context with ``execute_kw``, as it is extracted from the keyword argument named 
           "load": load,
       })
 
-The JSON-2 API replaces the object service with a few differences. The database must only be 
+The JSON-2 API replaces the object service with a few differences. The database must only be
 provided (via the ``X-Odoo-Database`` HTTP header) on systems where there are multiple databases
 available for a same domain. The login/password authentication scheme is replaced by an API key (via
 the ``Authorization: bearer`` HTTP header). The ``model`` and ``method`` are placed in the URL. The
