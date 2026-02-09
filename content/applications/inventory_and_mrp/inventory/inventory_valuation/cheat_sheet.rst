@@ -12,6 +12,7 @@ Valuation cheat sheet
       This documentation is for Odoo 19 or later.
       :ref:`Discover why we changed. <changes-in-19>`
 
+.. _costing-methods:
 
 Costing Methods
 ===============
@@ -223,6 +224,10 @@ like the USA and India.
   (optional, recommended for Anglo-Saxon accounting)
 * :darkblue:`Expense` on the stock account
   (for perpetual Continental accounting only)
+
+.. seealso::
+   For more detailed instructions on the accounting aspects of configuring inventory valuation, see
+   :doc:`../../../finance/accounting/get_started/inventory_valuation`.
 
 .. h:div:: doc-aside
 
