@@ -43,6 +43,8 @@ checkbox, and the configuration to track valuation by lot or serial numbers is c
 
    Product form showing the Valuation by Lot or Serial Number feature
 
+.. _inventory/product_management/valuation-layers:
+
 Valuation layers
 ================
 

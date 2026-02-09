@@ -195,3 +195,4 @@ Get started with Stripe and enable secure integrated credit and debit card payme
    get_started/multi_currency
    get_started/avg_price_valuation
    get_started/tax_units
+   get_started/inventory_valuation
