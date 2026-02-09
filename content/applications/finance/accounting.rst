@@ -281,6 +281,7 @@ Both periodic (manual) and perpetual (automated) inventory valuations are suppor
 available methods are Standard Price, Average Cost (AVCO), and First In First Out (FIFO).
 
 .. seealso::
+   :doc:`Inventory valuation <accounting/get_started/inventory_valuation>`
    :doc:`../inventory_and_mrp/inventory/inventory_valuation/cheat_sheet`
 
 .. _accounting/retained-earnings:
