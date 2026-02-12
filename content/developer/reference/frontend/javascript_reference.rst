@@ -667,7 +667,7 @@ Time (`float_time`)
 
     - `unit`: specify what is the unit of time of the float value (`"hours"` by default)
 
-        The units of time available are: `"hours"`, `"minutes"` and `"seconds"`.
+        The units of time available are: `"days"`, `"hours"`, `"minutes"` and `"seconds"`.
 
         .. code-block:: xml
 
