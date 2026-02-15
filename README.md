@@ -21,8 +21,24 @@
 3. Build the documentation: `make html` (see more commands with `make help`)
 4. Open `documentation/_build/html/index.html` in your web browser.
 
+### Build as Markdown
+
+To build the documentation as Markdown files (instead of HTML):
+
+```
+make markdown
+```
+
+The output files are in `documentation/_build/markdown/`, preserving the original directory structure.
+Cross-references (`:doc:`, `:ref:`) are converted to relative `.md` links, and code blocks keep
+their language annotations.
+
+This uses a custom Sphinx builder located in `extensions/markdown_builder/` with a separate
+configuration in `_conf_markdown/conf.py`.
+
 ### Additional build options
 
+- `make markdown` to build the documentation as Markdown files.
 - `make fast` to build the documentation with a shallow menu (faster).
 - `make clean` to delete the build files.
 - `make test` to run the guidelines tests.
