@@ -33,8 +33,7 @@ The output files are in `documentation/_build/markdown/`, preserving the origina
 Cross-references (`:doc:`, `:ref:`) are converted to relative `.md` links, and code blocks keep
 their language annotations.
 
-This uses a custom Sphinx builder located in `extensions/markdown_builder/` with a separate
-configuration in `_conf_markdown/conf.py`.
+This uses a custom Sphinx builder and configuration located in `extensions/markdown_builder/`.
 
 ### Additional build options
 
