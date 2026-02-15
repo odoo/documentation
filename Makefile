@@ -39,7 +39,7 @@ endif
 
 #=== Standard rules ===#
 
-.PHONY: all help clean html latexpdf gettext fast static test review
+.PHONY: all help clean html markdown latexpdf gettext fast static test review
 
 # In first position to build the documentation from scratch by default
 all: html
@@ -47,6 +47,7 @@ all: html
 help:
 	@echo "Please use 'make <target>' where <target> is one of"
 	@echo "  html         to build the documentation to HTML"
+	@echo "  markdown     to build the documentation to Markdown"
 	@echo "  fast         to build the documentation to HTML with shallow menu (faster)"
 	@echo "  clean        to delete the build files"
 	@echo "  test         to run the guidelines tests"
@@ -60,6 +61,14 @@ html: $(HTML_BUILD_DIR)/_static/style.css
 	@echo "Starting build..."
 	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b html $(SPHINXOPTS) $(SOURCE_DIR) $(HTML_BUILD_DIR)
 	@echo "Build finished."
+
+MD_CONFIG_DIR  = _conf_markdown
+MD_BUILD_DIR   = $(BUILD_DIR)/markdown
+
+markdown:
+	@echo "Starting Markdown build..."
+	$(SPHINX_BUILD) -c $(MD_CONFIG_DIR) -b markdown $(SPHINXOPTS) $(SOURCE_DIR) $(MD_BUILD_DIR)
+	@echo "Markdown build finished. Output in $(MD_BUILD_DIR)/"
 
 # To call *after* `make html`
 # Binary dependencies (Debian): texlive-fonts-recommended texlive-latex-extra
