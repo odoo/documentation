@@ -62,7 +62,7 @@ html: $(HTML_BUILD_DIR)/_static/style.css
 	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b html $(SPHINXOPTS) $(SOURCE_DIR) $(HTML_BUILD_DIR)
 	@echo "Build finished."
 
-MD_CONFIG_DIR  = _conf_markdown
+MD_CONFIG_DIR  = extensions/markdown_builder
 MD_BUILD_DIR   = $(BUILD_DIR)/markdown
 
 markdown:

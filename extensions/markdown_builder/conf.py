@@ -7,14 +7,15 @@ import os
 import sys
 from pathlib import Path
 
-# Add parent directory to path so we can import from it
-_parent = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(_parent))
-sys.path.insert(0, str(_parent / 'extensions'))
+# Add documentation directory to path so we can import from it
+# This file is at extensions/markdown_builder/conf.py, so parent.parent.parent = documentation/
+_doc_dir = Path(__file__).resolve().parent.parent.parent
+sys.path.insert(0, str(_doc_dir))
+sys.path.insert(0, str(_doc_dir / 'extensions'))
 
 # Change CWD to the documentation/ directory so that the base conf.py
 # resolves relative paths (Path('odoo'), Path('../odoo')) correctly.
-os.chdir(str(_parent))
+os.chdir(str(_doc_dir))
 
 # Import everything from the base conf
 from conf import *  # noqa: F401, F403
