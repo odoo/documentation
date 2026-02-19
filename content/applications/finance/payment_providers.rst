@@ -7,27 +7,8 @@ Online payments
 .. toctree::
    :titlesonly:
 
-   payment_providers/adyen
-   payment_providers/amazon_payment_services
-   payment_providers/asiapay
-   payment_providers/authorize
-   payment_providers/buckaroo
-   payment_providers/demo
-   payment_providers/dpo
-   payment_providers/flutterwave
-   payment_providers/iyzico
-   payment_providers/mercado_pago
-   payment_providers/mollie
-   payment_providers/nuvei
-   payment_providers/paymob
-   payment_providers/paypal
-   payment_providers/razorpay
-   payment_providers/redsys
-   payment_providers/stripe
-   payment_providers/worldline
-   payment_providers/xendit
-   payment_providers/bank_payments
-   payment_providers/inperson_payments
+   payment_providers/ upi QR code phonepe,paytm and gpay
+   payment_providers/ upi id phonepe,paytm and gpay
 
 Odoo embeds several **payment providers** that allow your customers to pay online, on their
 *customer portals*, or on your *eCommerce website*. They can pay sales orders, invoices, or
@@ -78,108 +59,14 @@ Online payment providers
      - Full and partial
      - Full and partial
      -
-   * - :doc:`Amazon Payment Services <payment_providers/amazon_payment_services>`
+   * - :doc:`Amazon upi qr code<payment_providers/upi qr code>`
      - The provider's website
      -
      -
      -
      -
-   * - :doc:`AsiaPay <payment_providers/asiapay>`
+   * - :doc:`upi id <payment_providers/upi id>`
      - The provider's website
-     -
-     -
-     -
-     -
-   * - :doc:`Authorize.Net <payment_providers/authorize>`
-     - Odoo
-     - |V|
-     - Full only
-     - Full only
-     -
-   * - :doc:`Buckaroo <payment_providers/buckaroo>`
-     - The provider's website
-     -
-     -
-     -
-     -
-   * - :doc:`DPO Pay <payment_providers/dpo>`
-     - The provider's website
-     -
-     -
-     -
-     -
-   * - :doc:`Flutterwave <payment_providers/flutterwave>`
-     - The provider's website
-     - |V|
-     -
-     -
-     -
-   * - :doc:`Iyzico <payment_providers/iyzico>`
-     - The provider's website
-     -
-     -
-     -
-     -
-   * - :doc:`Mercado Pago <payment_providers/mercado_pago>`
-     - The provider's website
-     -
-     -
-     -
-     -
-   * - :doc:`Mollie <payment_providers/mollie>`
-     - The provider's website
-     -
-     -
-     -
-     -
-   * - :doc:`Nuvei <payment_providers/nuvei>`
-     - The provider's website
-     -
-     -
-     -
-     -
-   * - :doc:`Paymob <payment_providers/paymob>`
-     - The provider's website
-     -
-     -
-     -
-     -
-   * - :doc:`PayPal <payment_providers/paypal>`
-     - Odoo
-     -
-     -
-     -
-     -
-   * - :doc:`Razorpay <payment_providers/razorpay>`
-     - Odoo
-     - |V|
-     - Full only
-     - Full and partial
-     -
-   * - :doc:`Redsys <payment_providers/redsys>`
-     - The provider's website
-     -
-     -
-     -
-     -
-   * - :doc:`Stripe <payment_providers/stripe>`
-     - Odoo
-     - |V|
-     - Full only
-     - Full and partial
-     - |V|
-   * - :doc:`Worldline <payment_providers/worldline>`
-     - The provider's website
-     - |V|
-     -
-     -
-     -
-   * - :doc:`Xendit <payment_providers/xendit>`
-     - Odoo or the provider's website
-     - |V| *
-     -
-     -
-     -
 
 .. |V| replace:: ✔
 .. [*] Refer to the :doc:`Xendit documentation <payment_providers/xendit>` for more information.
@@ -502,22 +389,6 @@ payments from other payments.
    :alt: Define an outstanding account for a payment provider.
 
 .. seealso::
-   - :doc:`payment_providers/adyen`
-   - :doc:`payment_providers/authorize`
-   - :doc:`payment_providers/asiapay`
-   - :doc:`payment_providers/buckaroo`
-   - :doc:`payment_providers/demo`
-   - :doc:`payment_providers/dpo`
-   - :doc:`payment_providers/mercado_pago`
-   - :doc:`payment_providers/mollie`
-   - :doc:`payment_providers/nuvei`
-   - :doc:`payment_providers/paymob`
-   - :doc:`payment_providers/paypal`
-   - :doc:`payment_providers/razorpay`
-   - :doc:`payment_providers/redsys`
-   - :doc:`payment_providers/stripe`
-   - :doc:`payment_providers/worldline`
-   - :doc:`payment_providers/xendit`
-   - :doc:`payment_providers/bank_payments`
-   - :doc:`payment_providers/inperson_payments`
+   - :doc:`payment_providers/upi qr code`
+   - :doc:`payment_providers/upi id`
    - :doc:`accounting/bank`
