@@ -591,7 +591,7 @@ Manage signature requests and signed documents
 ==============================================
 
 All signature requests that have been sent are visible in :menuselection:`Sign --> Documents --> All
-Documents`. The list view and Kanban view offer different possiblities:
+Documents`. The list view and Kanban view offer different possibilities:
 
 In the list view:
 

@@ -171,7 +171,7 @@ Patching is a dangerous operation and should be done with care as it will
 modify all instances of the class, even if they have already been created. To
 avoid weird issues, patches should be applied as soon as possible, at the
 top-level of your module. Patching classes at runtime can result in extremely
-difficult to debug issues if the class has already been instanciated.
+difficult to debug issues if the class has already been instantiated.
 
 Registries
 ==========

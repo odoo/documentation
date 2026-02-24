@@ -121,7 +121,7 @@ confirmed, and that it is possible to proceed with the payment flow as normal.
    A produce distributor using the invoice what is delivered option sells 50 heads of lettuce to a
    local restaurant. At the time the delivery is made, only 40 heads are available. The distributor
    delivers the available heads of lettuce and creates an invoice for what was delivered. Later,
-   when more supply comes in, the distributor delivers the remaning 10 heads of lettuce and creates
+   when more supply comes in, the distributor delivers the remaining 10 heads of lettuce and creates
    a second invoice to complete the order.
 
 .. seealso::

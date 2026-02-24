@@ -479,7 +479,7 @@ Journal creation
 
 A specific bank journal must be created for Codaclean synchronization. To do so, :doc:`create a new
 bank journal <../accounting/bank>`, make sure to enter the correct IBAN in the :guilabel:`Bank
-Account Number` field, and select :guilabel:`Codaclean Syncronization` in the :guilabel:`Bank Feeds`
+Account Number` field, and select :guilabel:`Codaclean Synchronization` in the :guilabel:`Bank Feeds`
 field.
 
 .. tip::

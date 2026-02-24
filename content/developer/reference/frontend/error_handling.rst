@@ -36,7 +36,7 @@ recommend that you ever throw anything that is not an *Error object*, the Odoo
 JavaScript framework needs to be able to deal with these scenarios, which will
 help you understand some design decisions that we've had to make.
 
-When instanciating an *Error object*, the browser collects information about
+When instantiating an *Error object*, the browser collects information about
 the current state of the "call stack" (either a proper call stack, or a reconstructed
 call stack for async functions and promise continuations). This information is
 called a "stack trace" and is very useful for debugging. The Odoo framework displays
@@ -328,7 +328,7 @@ meaning. After deciding that it is able to handle the error, the handler needs t
 decide if the error it received is something that is allowed to happen during
 normal operation and if it is, it should call `preventDefault`. This is generally
 applicable to business errors such as an access errors or validation errors: users can
-share links with other users to ressources to which they do not have acces, and users
+share links with other users to resources to which they do not have access, and users
 can attempt to save a record that's in an invalid state.
 
 When not calling `preventDefault`, the error is treated as unexpected, any such

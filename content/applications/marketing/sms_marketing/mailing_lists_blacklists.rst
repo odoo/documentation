@@ -102,7 +102,7 @@ Blacklist
 =========
 
 Odoo *SMS Marketing* has a :guilabel:`Blacklist` feature that provides recipients with the power to
-add their phone number to a list of people who no longer want to receieve communications or
+add their phone number to a list of people who no longer want to receive communications or
 mailings.
 
 This is also known as the unsubscribe process: customers will automatically be added onto a
@@ -119,7 +119,7 @@ blacklisted phone number in the database.
 
 To manually add a number to a blacklist, click the :guilabel:`Create` button in the upper-left
 corner of the dashboard and enter the phone number on the next page's form. There's also a
-checkbox to indicate whether that particular phone numnber is :guilabel:`Active` (or not).
+checkbox to indicate whether that particular phone number is :guilabel:`Active` (or not).
 
 .. image:: mailing_lists_blacklists/sms-blacklist-create.png
    :align: center

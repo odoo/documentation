@@ -184,7 +184,7 @@ the repository, it will be passed to the production branch when merging.
 If you test configuration changes in staging branches, and want them to be applied to the production
 branch, you have to, either:
 
-- Write the configuration changes in XML data files to overide the default configuration or views in
+- Write the configuration changes in XML data files to override the default configuration or views in
   the branch, and then increase the version of the module in its manifest (:file:`__manifest__.py`)
   to trigger the module update when merging the staging branch in the production branch.
 
@@ -382,7 +382,7 @@ The :guilabel:`Concurrent requests (max)` graph displays the maximum number of c
 requests per second.
 
 .. image:: branches/monitor-concurrent-graph.png
-   :alt: The concurrent rquests graph in the monitor tab
+   :alt: The concurrent requests graph in the monitor tab
 
 .. note::
    Database workers determine the number of concurrent requests that can be managed simultaneously.
@@ -402,7 +402,7 @@ Mails
 
 The :guilabel:`Incoming` graph displays data about the daily number of incoming emails:
 
-- :guilabel:`Received Emails` represents emails successfuly received.
+- :guilabel:`Received Emails` represents emails successfully received.
 - :guilabel:`Received Emails bounced` represents emails unsuccessfully received.
 
 .. image:: branches/monitor-incoming-graph.png
@@ -488,7 +488,7 @@ update triggered afterwards. In these two cases, a backup is triggered as it may
 If the merged commit does not update the version of a module or linked dependencies, then no backup
 is triggered by Odoo.sh, as neither the container nor the database is modified; therefore, the
 platform considers this safe enough. As an extra precaution, you can make a manual backup before
-modifiyng production sources.
+modifying production sources.
 
 The purpose of manual backups is to create a specific snapshot of production or staging databases
 (not available for development). These remain available for seven days. However, there is a limit of

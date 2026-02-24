@@ -40,7 +40,7 @@ To view the necessary Axivox credentials, navigate to `manage.axivox.com
 Add Axivox credentials
 ----------------------
 
-After :ref:`instaling <general/install>` the *Phone - Axivox* module, go to the
+After :ref:`installing <general/install>` the *Phone - Axivox* module, go to the
 :menuselection:`Phone app --> Configuration --> Providers`. Locate the *Axivox* provider entry, and
 enter the following information:
 

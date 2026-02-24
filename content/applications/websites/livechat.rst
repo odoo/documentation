@@ -197,7 +197,7 @@ Fill out the fields on the :guilabel:`Create Rules` pop-up window as instructed 
       :guilabel:`URL Regex` field, input the relative URL of the page where the chat button should
       appear.
 
-      For example, to apply the rule to the URL, `https://mydatabse.odoo.com/shop`, enter `/shop` to
+      For example, to apply the rule to the URL, `https://mydatabase.odoo.com/shop`, enter `/shop` to
       the :guilabel:`URL Regex` field.
 
       To apply the rule to *all* pages on the database, enter `/` in the :guilabel:`URL Regex`

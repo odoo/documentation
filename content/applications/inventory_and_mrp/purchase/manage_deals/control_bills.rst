@@ -19,7 +19,7 @@ Configuration
 To configure the control policy for a product, navigate to :menuselection:`Purchase app --> Products
 --> Products`, then click on a product record to open it. Click to the :guilabel:`Purchase` tab.
 Scroll to the :guilabel:`Vendor Bills` section. Under :guilabel:`Control Policy`, tick the radio
-button for either :guilabel:`On ordered quantities` or :guilabel:`On recieved quantities`.
+button for either :guilabel:`On ordered quantities` or :guilabel:`On received quantities`.
 
 - :guilabel:`On ordered quantities`: Creates a vendor bill as soon as a |PO| is confirmed. The
   products and quantities in the |PO| are used to generate a draft bill.

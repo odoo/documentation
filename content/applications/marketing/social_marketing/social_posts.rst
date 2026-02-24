@@ -373,7 +373,7 @@ specific group of recipients in the database, based on certain criteria, and can
 To utilize this field, click the :guilabel:`+ Add condition` button, which reveals an equation-like
 rule field.
 
-In this equation-like rule field, specifiy the specific criteria Odoo should take into account when
+In this equation-like rule field, specify the specific criteria Odoo should take into account when
 sending this post to a particular target audience.
 
 .. image:: social_posts/push-notification-condition.png

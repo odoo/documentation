@@ -163,8 +163,8 @@ Inventory section
 Under the :guilabel:`Inventory` heading, use the :guilabel:`Customer Location` drop-down to select
 the stock location to be used as a destination when sending goods to this contact. Next, use the
 :guilabel:`Vendor Location` drop-down to selection the stock location used as a source when
-recieving goods from this contact. Finally, use the :guilabel:`Subcontractor Location` drop-down to
-idenfy a location used as both a source and destination when sending goods to this contact during a
+receiving goods from this contact. Finally, use the :guilabel:`Subcontractor Location` drop-down to
+identify a location used as both a source and destination when sending goods to this contact during a
 subcontracting process.
 
 Accounting tab

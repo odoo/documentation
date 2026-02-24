@@ -314,7 +314,7 @@ We want the user to obtain sometimes bonuses, to reward using Odoo.
          {
             description: "Increase bot power!",
             apply(clicker) {
-                  clicker.multipler += 1;
+                  clicker.multiplier += 1;
             },
             minLevel: 3,
          },
@@ -432,7 +432,7 @@ a system to automatically update the states if it is not up to date.
 #. Add a version number to the state.
 #. Define an (empty) list of migrations. A migration is an object with a `fromVersion` number, a `toVersion` number, and a `apply` function.
 #. Whenever the code loads the state from the local storage, it should check the version number. If the state is not
-   uptodate, it should apply all necessary migrations.
+   up-to-date, it should apply all necessary migrations.
 
 21. Add another type of trees
 =============================

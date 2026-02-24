@@ -40,7 +40,7 @@ Add a new commission by clicking :guilabel:`Add a Line`, and entering the :guila
 the appropriate :guilabel:`Commission Amount`.
 
 Once all the commissions are properly entered, click the :guilabel:`Generate Payslips` button to
-create the warrant payslips in a group, which is reffered to as a *pay run* in Odoo, or click
+create the warrant payslips in a group, which is referred to as a *pay run* in Odoo, or click
 :guilabel:`Export` to export a CSV file of the commissions.
 
 :ref:`Process the pay run <payroll/pay-run-process>` in the same way as a typical batch to complete

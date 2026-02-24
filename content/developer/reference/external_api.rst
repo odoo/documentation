@@ -31,7 +31,7 @@ Post a JSON object at the ``/json/2/<model>/<method>`` URL.
 **HTTP Headers**
 
 :Host: Required, the hostname of the server.
-:Autorization: Required, ``bearer`` followed by an :ref:`API key <reference/external_api/api_key>`.
+:Authorization: Required, ``bearer`` followed by an :ref:`API key <reference/external_api/api_key>`.
 :Content-Type: Required, ``application/json``, a charset is recommended.
 :X-Odoo-Database: Optional, the name of the database to connect to.
 :User-Agent: Recommended, the name of your software.
@@ -89,7 +89,7 @@ in the body.
 
 In case of **error**, a **4xx**/**5xx** status with a JSON-serialized error object in the body.
 
-:name: The fully qualified name of the Python exception that occured.
+:name: The fully qualified name of the Python exception that occurred.
 :message: The exception message, usually the same as `arguments[0]`.
 :arguments: All the exception arguments.
 :context: The context used by the request.
@@ -531,7 +531,7 @@ the arguments are named; there is no way in JSON-2 to call a function with posit
 
       import requests
 
-      DATABSE = ...
+      DATABASE = ...
       DOMAIN = ...
       API_KEY = "6578616d706c65206a736f6e20617069206b6579"
 

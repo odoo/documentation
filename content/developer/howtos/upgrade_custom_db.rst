@@ -238,7 +238,7 @@ Running and testing upgrade scripts
 
    .. group-tab:: Odoo Online
 
-      As the instalation of custom modules containing Python files is not allowed on Odoo Online
+      As the installation of custom modules containing Python files is not allowed on Odoo Online
       databases, it is not possible to run upgrade scripts on this platform.
 
    .. group-tab:: Odoo.sh

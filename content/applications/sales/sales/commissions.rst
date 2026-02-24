@@ -17,7 +17,7 @@ To enable the *Commissions* feature, navigate to :menuselection:`Sales app --> C
 Settings`. Scroll to the :guilabel:`Invoicing` section, and tick the :guilabel:`Commissions`
 checkbox. Then, click :guilabel:`Save`. Doing so causes a new :guilabel:`Commissions` menu to appear
 in the menu bar. To create a new commission plan, navigate to :menuselection:`Commissions -->
-Comission Plans` and click :guilabel:`New`.
+Commission Plans` and click :guilabel:`New`.
 
 Commission plan structure
 =========================

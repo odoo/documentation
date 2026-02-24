@@ -162,6 +162,6 @@ Notice how we're giving the template `session_info`. We get it from the `get_fro
 method, and it will end up containing information used by the web framework, such as the current
 user's ID if they are logged in, the server version, the Odoo edition, etc.
 
-At this point, if you open the url `/your_module/standalone_app` in your brower, you should
+At this point, if you open the url `/your_module/standalone_app` in your browser, you should
 see a blank page with the text "Hello, World!". At this point, you can start actually writing the
 code for your app.

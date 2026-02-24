@@ -189,7 +189,7 @@ in an xml template as shown above. But sometimes, you may want to extend an exis
 and would not want to duplicate the template. It is possible to do just that.
 
 If you want to extend the behavior of an existing element, you must place the element
-inside, by wrapping it directly. Also, you can conditionnally add props to manage when the
+inside, by wrapping it directly. Also, you can conditionally add props to manage when the
 element might be swipable, its animation and the minimum portion to swipe to perform the action.
 
 You can use the component to interact easily with records, messages, items in lists and much more.
@@ -572,7 +572,7 @@ By default, selecting a DropdownItem will close the whole Dropdown tree.
       </t>
     </Dropdown>
 
-   In the example bellow, we recursively call a template to display a tree-like structure.
+   In the example below, we recursively call a template to display a tree-like structure.
 
    .. code-block:: xml
 
@@ -667,7 +667,7 @@ To do this, either surround all the Dropdowns with a single DropdownGroup or sur
 DropdownGroups with the same `group` key.
 
 .. example::
-   In the example bellow, all dropdown in the snippet bellow will share the same group:
+   In the example below, all dropdown in the snippet below will share the same group:
 
    .. code-block:: xml
 
@@ -710,7 +710,7 @@ Description
 The Notebook is made to display multiple pages in a tabbed interface. Tabs can be located
 at the top of the element to display horizontally, or at the left for a vertical layout.
 
-There are two ways to define your Notebook pages to instanciate, either by using `slot`'s,
+There are two ways to define your Notebook pages to instantiate, either by using `slot`'s,
 or by passing a dedicated `props`.
 
 A page can be disabled with the `isDisabled` attribute, set directly on the slot node, or

@@ -441,7 +441,7 @@ off is approved and any overtime is appropriate.
 Work entries sync based on the employee's :doc:`contract <../contracts>` configuration. Odoo pulls
 from the assigned working schedule, attendance records, planning schedule, and approved time off.
 
-Any :ref:`discrepencies or conflicts <payroll/conflicts>` must be resolved, then the work entries
+Any :ref:`discrepancies or conflicts <payroll/conflicts>` must be resolved, then the work entries
 can be :ref:`regenerated <payroll/regenerate-work-entries>`.
 
 Once everything is correct, draft payslips can be :ref:`created individually <payroll/process>` or

@@ -332,7 +332,7 @@ require a :guilabel:`Mandatory Answer` and/or if Odoo should :guilabel:`Ask once
 ticking their respective boxes, if desired.
 
 If the :guilabel:`Ask once per order` checkbox is ticked, the question will only be asked once, and
-its value is propogated to every attendee in the order (if multiple tickets are purchased at once).
+its value is propagated to every attendee in the order (if multiple tickets are purchased at once).
 If the checkbox is *not* ticked for this setting, Odoo will present the question for every attendee
 that is connected to that registration.
 

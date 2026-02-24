@@ -329,7 +329,7 @@ Click :guilabel:`Add a line` to add a link or a file that supports your particip
 The resource appears in the course content on your website.
 
 .. image:: elearning/additional-content.png
-  :alt: Additional ressources
+  :alt: Additional resources
 
 .. _elearning/content-quiz:
 

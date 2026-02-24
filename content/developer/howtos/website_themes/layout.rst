@@ -420,7 +420,7 @@ Mobile template
 ~~~~~~~~~~~~~~~
 
 Each header template comes with the `template_header_mobile` template ensuring a seamless user
-experience accross every devices.
+experience across every devices.
 
 .. seealso::
    `Mobile header template on Odoo's Git repository <https://github.com/odoo/odoo/blob/43b20e6e52526c415e28c21810cd7023f6feef1e/addons/website/views/website_templates.xml#L354>`_
@@ -771,7 +771,7 @@ Odoo in general relies on the Bootstrap framework which eases the responsiveness
    - `Bootstrap documentation on display property
      <https://getbootstrap.com/docs/5.3/utilities/display/>`_
 
-.. _website_themes/layout/reponsive/font_sizes :
+.. _website_themes/layout/responsive/font_sizes :
 
 Font sizes
 ----------
@@ -783,7 +783,7 @@ across device and viewport sizes (relying on the `$enable-rfs` variable).
    - `Bootstrap documentation about responsive font sizes
      <https://getbootstrap.com/docs/5.3/getting-started/rfs/>`_
 
-.. _website_themes/layout/reponsive/column_sizes :
+.. _website_themes/layout/responsive/column_sizes :
 
 Column sizes
 ------------
@@ -800,7 +800,7 @@ medium breakpoints (`col-md-4` for example).
    - `Bootstrap documentation on responsive breakpoints <https://getbootstrap.com/docs/5.3/layout/breakpoints/>`_
    - `Bootstrap documentation about the grid <https://getbootstrap.com/docs/5.3/layout/grid/>`_
 
-.. _website_themes/layout/reponsive/visibility_conditions :
+.. _website_themes/layout/responsive/visibility_conditions :
 
 Visibility conditions
 ---------------------

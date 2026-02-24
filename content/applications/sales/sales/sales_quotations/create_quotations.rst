@@ -227,8 +227,8 @@ fields that can be configured.
 
 - :guilabel:`Shipping Weight`: Displays the weight of the items being shipped. This field is not
   modifiable. Product weight is configured on individual product forms.
-- :guilabel:`Incoterm`: Select an Incoterm (International Commerical Term) to use as predefined
-  commerical terms for international transactions.
+- :guilabel:`Incoterm`: Select an Incoterm (International Commercial Term) to use as predefined
+  commercial terms for international transactions.
 - :guilabel:`Incoterm Location`: If an Incoterm is being used, enter the international location in
   this field.
 - :guilabel:`Shipping Policy`: Select a desired shipping policy from the drop-down menu. If all

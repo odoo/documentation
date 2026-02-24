@@ -32,10 +32,10 @@ access. Then click the :guilabel:`Grant Access` button to finish.
 
 .. note::
    When portal access is granted to a Company, all contacts affiliated with that company will be
-   granted portal access. Indiviual contacts can be removed as needed.
+   granted portal access. Individual contacts can be removed as needed.
 
-Granting accesss to multiple users at once
-------------------------------------------
+Granting access to multiple users at once
+-----------------------------------------
 
 To grant portal access to multiple users from a single company at once, navigate to the contact
 listing for that company, then click :menuselection:`Action --> Grant portal access` to view a list

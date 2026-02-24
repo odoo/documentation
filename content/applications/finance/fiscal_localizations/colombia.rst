@@ -336,7 +336,7 @@ Invoice creation
 
 Electronic invoices are generated and sent to both the |DIAN| and the customer. These documents can
 be created from the sales order or manually generated. To create a new invoice, go to
-:menuselection:`Accounting --> Costumers --> Invoices`, and select :guilabel:`Create`. On the
+:menuselection:`Accounting --> Customers --> Invoices`, and select :guilabel:`Create`. On the
 invoice form, configure the following fields:
 
 - :guilabel:`Customer`: customer's information.

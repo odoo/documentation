@@ -91,8 +91,8 @@ warning appears on the **Payroll** dashboard and an error occurs when attempting
 If the employee is **not** a resident of Jordan, tick the :guilabel:`Non-resident` box. This
 indicates the employee is *not* eligible for personal exemptions.
 
-Under the :guilabel:`Family` section, ensure the :guilabel:`Has Dependants` box is ticked if the
-employee has any dependants, such as a spouse, children, or parents. This ensures they receive an
+Under the :guilabel:`Family` section, ensure the :guilabel:`Has Dependents` box is ticked if the
+employee has any dependents, such as a spouse, children, or parents. This ensures they receive an
 additional exemption on their taxable salary.
 
 By default, the :guilabel:`Is Eligible for EOS` checkbox is ticked, in the :guilabel:`Personal
@@ -401,7 +401,7 @@ off is approved and any overtime is appropriate.
 Work entries sync based on the employee's :doc:`contract <../contracts>` configuration. Odoo pulls
 from the assigned working schedule, attendance records, planning schedule, and approved time off.
 
-Any :ref:`discrepencies or conflicts <payroll/conflicts>` must be resolved, then the work entries
+Any :ref:`discrepancies or conflicts <payroll/conflicts>` must be resolved, then the work entries
 can be :ref:`regenerated <payroll/regenerate-work-entries>`.
 
 Once everything is correct, draft payslips can be :ref:`created individually <payroll/process>` or

@@ -119,7 +119,7 @@ Expertise
 
 The :guilabel:`Expertise` field allows agents to designate the topic of conversation to a specific
 skillset or knowledge scope. This helps to categorize the conversation for assignment purposes, as
-well as issue tacking and enchanced reporting. Click into the field and select one or more options
+well as issue tacking and enhanced reporting. Click into the field and select one or more options
 from the drop-down list.
 
 Country & language

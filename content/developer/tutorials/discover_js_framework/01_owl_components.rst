@@ -169,7 +169,7 @@ to allow the user to display some html. This is done with the
 `t-out directive <{OWL_PATH}/doc/reference/templates.md#outputting-data>`_.
 
 However, displaying arbitrary content as html is dangerous, it could be used to inject malicious code, so
-by default, Owl will always escape a string unless it has been explicitely marked as safe with the `markup`
+by default, Owl will always escape a string unless it has been explicitly marked as safe with the `markup`
 function.
 
 #. Update `Card` to use `t-out`

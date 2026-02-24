@@ -16,7 +16,7 @@ sections. Each shape has one or several customizable colors, and some of them ar
 
 .. warning::
     Odoo's default shapes use the Odoo default colors palette map as reference. This way, colors
-    will be automatically adapted to a new palette everytime it changes:
+    will be automatically adapted to a new palette every time it changes:
 
     .. code-block:: scss
 
@@ -147,7 +147,7 @@ Adding extra color mapping allows you to add a color variant to the template of 
 keeping the original.
 
 .. code-block:: scss
-   :caption: ``/website_airproof/static/src/scss/boostrap_overridden.scss``
+   :caption: ``/website_airproof/static/src/scss/bootstrap_overridden.scss``
 
    $o-bg-shapes: add-extra-shape-colors-mapping('web_editor', 'Zigs/06', 'second', (4: 3, 5: 1));
 
