@@ -19,9 +19,9 @@ localization:
      - The base module to manage chart of accounting and localization for Hong Kong.
    * - :guilabel:`Hong Kong - Payroll`
      - `l10n_hk_hr_payroll`
-     - Enables :ref:`payroll <payroll/l10n_hk/payroll>` specific localization features for Odoo *Payroll*
-       app. This module also installs :guilabel:`Hong Kong - Payroll with Accounting` and
-       :guilabel:`Documents - Hong Kong Payroll`.
+     - Enables :doc:`payroll specific localization features </applications/hr/payroll/payroll_localizations/hong_kong>`
+       for Odoo's *Payroll* app. This module also installs :guilabel:`Hong Kong - Payroll with
+       Accounting` and :guilabel:`Documents - Hong Kong Payroll`.
    * - :guilabel:`Hong Kong - Payroll with Accounting`
      - `l10n_hk_hr_payroll_account`
      - Installs the link between Hong Kong payroll and accounting.
