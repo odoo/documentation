@@ -270,7 +270,7 @@ RainbowMan
       - `("slow"|"medium"|"fast"|"no")?="medium"`
       - Delay for rainbowman to disappear.
 
-        `"fast"` will make rainbowman dissapear quickly.
+        `"fast"` will make rainbowman disappear quickly.
 
         `"medium"` and `"slow"` will wait little longer before disappearing (can be used when `params.message` is longer).
 
@@ -543,7 +543,7 @@ API
    * `pathname (string)`: the path for the current location (most likely `/web` )
    * `search (object)`: a dictionary mapping each search keyword (the querystring)
      from the url to its value. An empty string is the value if no value was
-     explicitely given
+     explicitly given
    * `hash (object)`: same as above, but for values described in the hash.
 
 For example:

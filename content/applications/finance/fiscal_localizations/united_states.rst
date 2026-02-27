@@ -531,7 +531,7 @@ record to view the sections of a contract that directly affect *Payroll*:
 
   - :guilabel:`SSN No`: the last four digits of the employee's Social Security Number (SSN) appears
     on payslips.
-  - :guilabel:`Wage type`: determines how the employee is paid, wether a Fixed wage (salary) or
+  - :guilabel:`Wage type`: determines how the employee is paid, whether a Fixed wage (salary) or
     Hourly wage.
   - :guilabel:`Schedule Pay`: defines how often the employee is paid, either :guilabel:`Annually`,
     :guilabel:`Semi-annually`, :guilabel:`Quarterly`, :guilabel:`Bi-monthly`, :guilabel:`Monthly`,

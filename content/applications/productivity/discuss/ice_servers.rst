@@ -43,7 +43,7 @@ to Odoo.
 
 .. image:: ice_servers/twilio-acct-info.png
    :align: center
-   :alt: The Twilio Account SID and Auth Token can be found uner the Account Info section.
+   :alt: The Twilio Account SID and Auth Token can be found under the Account Info section.
 
 Connect Twilio to Odoo
 ======================

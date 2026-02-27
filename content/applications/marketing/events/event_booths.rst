@@ -67,7 +67,7 @@ button in the upper-left corner to reveal a blank booth category form.
    :alt: A typical booth category form in the Odoo Events application.
 
 Start by entering a name for the booth category in the top :guilabel:`Booth Category` field. This is
-a **requried** field.
+a **required** field.
 
 To add a corresponding image to the booth category (e.g. a sample photo of how the booth looks),
 click the :icon:`fa-pencil` :guilabel:`(pencil)` icon that appears when the cursor hovers over the

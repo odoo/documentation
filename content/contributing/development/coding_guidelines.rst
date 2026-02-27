@@ -600,7 +600,7 @@ a different context, the ``with_context`` method should be used :
 .. code-block:: python
 
     records.with_context(new_context).do_stuff() # all the context is replaced
-    records.with_context(**additionnal_context).do_other_stuff() # additionnal_context values override native context ones
+    records.with_context(**additional_context).do_other_stuff() # additional_context values override native context ones
 
 .. warning::
       Passing parameter in context can have dangerous side-effects.

@@ -70,7 +70,7 @@ the previous action.
    It is recommended to use an event-specific filter on the :guilabel:`Attendees` page, via the
    search bar drop-down menu.
 
-   To do that, click the :icon:`fa-sort-desc` :guilabel:`(down arrow)` beside the seach bar to
+   To do that, click the :icon:`fa-sort-desc` :guilabel:`(down arrow)` beside the search bar to
    reveal a drop-down menu with :guilabel:`Filters`, :guilabel:`Group By`, and :guilabel:`Favorites`
    options.
 

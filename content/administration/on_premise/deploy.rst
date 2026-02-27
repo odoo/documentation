@@ -472,7 +472,7 @@ added to serve static files via NGINX.
         }
     }
 
-The actual ``root`` and ``try_files`` directives are dependant on your installation, specifically on
+The actual ``root`` and ``try_files`` directives are dependent on your installation, specifically on
 your :option:`--addons-path <odoo-bin --addons-path>`.
 
 .. example::
@@ -526,7 +526,7 @@ X-Sendfile and X-Accel).
 .. note::
    - The X-Sendfile extension for apache (and compatible web servers) does not require any
      supplementary configuration.
-   - The X-Accel extension for NGINX **does** require the following additionnal configuration:
+   - The X-Accel extension for NGINX **does** require the following additional configuration:
 
      .. code-block:: nginx
 

@@ -505,7 +505,7 @@ processed, while keeping the connection open.
                     if not self.env['ir.cron']._commit_progress(1):
                         break
                 except Exception:
-                    # if you handle exceptions, the default stategy is to
+                    # if you handle exceptions, the default strategy is to
                     # rollback first the error
                     self.env.cr.rollback()
                     _logger.warning(...)

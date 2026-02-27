@@ -172,7 +172,7 @@ The `KeepLast` primitive from Odoo solves this problem, it manages a list of tas
 keeps the last task active.
 
 #. Import `KeepLast` from :file:`@web/core/utils/concurrency`.
-#. Instanciate a `KeepLast` object in the model.
+#. Instantiate a `KeepLast` object in the model.
 #. Add the `webSearchRead` call in the `KeepLast` so that only the last call is resolved.
 
 .. seealso::

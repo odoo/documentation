@@ -45,7 +45,7 @@ accounts **must** be added as a *stream* on the application's main dashboard.
    in a permission error.
 
    For example, if Company 1 is the only company selected from the main Odoo dashboard, and
-   activates *Facebook Page 1* and *Facebook Page 2*, then those pages will be accesible on the
+   activates *Facebook Page 1* and *Facebook Page 2*, then those pages will be accessible on the
    *Social Marketing* dashboard.
 
    However, if on that same database, the user adds Company 2 from the company drop-down menu in the

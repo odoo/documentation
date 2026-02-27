@@ -406,7 +406,7 @@ Deprecated output directives
 
         Use ``out`` with a :class:`markupsafe.Markup` value instead.
 
-        ``t-raw`` was deprecated because as the code *producting* the content
+        ``t-raw`` was deprecated because as the code *producing* the content
         evolves it can be hard to track that it's going to be used for markup,
         leading to more complicated reviews and more dangerous lapses.
 

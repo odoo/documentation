@@ -29,7 +29,7 @@ country into the search bar. All available modules for that country are presente
 
 .. example::
    Some countries only have one localization module, while other have multiple modules. This is
-   typically when other software is neede to process payroll, and importing and exporting data is
+   typically when other software is needed to process payroll, and importing and exporting data is
    required.
 
    For example. when searching for **Payroll** modules for `Egypt`, the following modules appear in

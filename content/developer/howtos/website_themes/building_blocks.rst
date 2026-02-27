@@ -941,7 +941,7 @@ Methods
 ~~~~~~~
 
 Beside *binding options* allowing to select, target or exclude an element. Option fields have
-several useful data attributes refering to standard JavaScript methods.
+several useful data attributes referring to standard JavaScript methods.
 
 For example, `data-select-class` refers to the JavaScript method named `selectClass`.
 

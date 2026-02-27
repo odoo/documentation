@@ -382,8 +382,8 @@ In Mexico, all companies are **required** to configure the following rule parame
   be updated when configuring the Mexico payroll localization.
 - :guilabel:`Mexico: Christmas Bonus` (Días de Aguinaldo): In Mexico, an annual Christmas bonus is
   given to all employees. The bonus must be for a minimum of 15 days of pay. Companies that provide
-  a higher bonus **must** modify this value. In Odoo, all employees of a company recieve the same
-  amout of paid days for their Chirstmas bonus.
+  a higher bonus **must** modify this value. In Odoo, all employees of a company receive the same
+  amount of paid days for their Chirstmas bonus.
 - :guilabel:`Mexico: Holiday Table` (Tabla de vacaciones): This rule outlines the number of vacation
   days an employee is allocated, based on their years of service. This **must** be modified, if
   needed, to reflect the company's paid vacation policy.
@@ -413,7 +413,7 @@ off is approved and any overtime is appropriate.
 Work entries sync based on the employee's :doc:`contract <../contracts>` configuration. Odoo pulls
 from the assigned working schedule, attendance records, planning schedule, and approved time off.
 
-Any :ref:`discrepencies or conflicts <payroll/conflicts>` must be resolved, then the work entries
+Any :ref:`discrepancies or conflicts <payroll/conflicts>` must be resolved, then the work entries
 can be :ref:`regenerated <payroll/regenerate-work-entries>`.
 
 Once everything is correct, draft payslips can be :ref:`created individually <payroll/process>` or

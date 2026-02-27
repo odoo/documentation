@@ -16,7 +16,7 @@ as content in the page.
    You will need to deactivate the default homepage.
 
 .. seealso::
-   See reference documentation on how to :ref:`desactivate a default page
+   See reference documentation on how to :ref:`deactivate a default page
    <website_themes/pages/default>` and how to :ref:`start a new page
    <website_themes/pages/theme_pages>`.
 
@@ -160,7 +160,7 @@ The client has requested the following changes:
    - You can find the original mega-menu templates code in Odoo :
      `odoo/addons/website/views/snippets/s_mega_menu_**.xml
      <{GITHUB_PATH}/addons/website/views/snippets>`_
-   - See reference documentation on how to modifiy the
+   - See reference documentation on how to modify the
      :doc:`/developer/howtos/website_themes/navigation`.
 
 .. image:: 02_build_website/mega-menu.png

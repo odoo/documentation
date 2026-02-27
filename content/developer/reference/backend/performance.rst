@@ -153,7 +153,7 @@ can access from the top menu.
 - The :guilabel:`sql (no gap)` view shows all the SQL queries as if they were executed one after
   another, without any Python logic. This is useful for optimizing SQL only.
 - The :guilabel:`sql (density)` view shows only all the SQL queries, leaving gap between them. This
-  can be useful to spot if eiter SQL or Python code is the problem, and to identify zones in where
+  can be useful to spot if either SQL or Python code is the problem, and to identify zones in where
   many small queries could be batched.
 - The :guilabel:`frames` view shows the results of only the :ref:`periodic collector
   <performance/profiling/collectors/periodic>`.

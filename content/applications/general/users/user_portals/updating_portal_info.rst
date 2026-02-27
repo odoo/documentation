@@ -32,7 +32,7 @@ On this screen, users can update their:
 - Mailing address
 - Invoice delivery preference
 
-Additonal fields and descriptions may appear depending on the user's location and the location of
+Additional fields and descriptions may appear depending on the user's location and the location of
 the company that created the portal.
 
 Once users have updated their information, they can click :guilabel:`Save Address` to save any
@@ -77,7 +77,7 @@ password can be saved by clicking :guilabel:`Change Password`.
 Two-factor authentication
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The user's currrent 2FA status is shownn as an alert. If 2FA is not enabled, an :guilabel:`Enable
+The user's current 2FA status is shown as an alert. If 2FA is not enabled, an :guilabel:`Enable
 two-factor authentication` link appears. If it is enabled, a link reading :guilabel:`Disable
 two-factor authentication` appears instead.
 

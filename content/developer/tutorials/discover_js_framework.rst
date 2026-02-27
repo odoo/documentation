@@ -27,7 +27,7 @@ This tutorial assumes that you have some basic knowledge of development with Odo
 
 .. note::
 
-    Each chapter of this tutorial is an independant project.  If you feel comfortable with Owl, you can
+    Each chapter of this tutorial is an independent project.  If you feel comfortable with Owl, you can
     start directly with chapter 2.
 
 .. _tutorials/discover_js_framework/setup:

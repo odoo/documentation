@@ -84,7 +84,7 @@ drop-down menu.
 Linking channel in chatter
 ==========================
 
-Channels can be linked in the *chatter* of a record to share relvant discussions. To do so, type:
+Channels can be linked in the *chatter* of a record to share relevant discussions. To do so, type:
 `#` and the channel name. Click or press enter on the *Channel* name. Upon logging the note a link
 to the channel appears. After clicking on the link a chat window with the channel conversation pops
 up in the lower right corner of the screen.

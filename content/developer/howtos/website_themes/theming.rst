@@ -554,7 +554,7 @@ values and *not* the :file:`primary_variables.scss` file.
    Don't override Bootstrap variables that depend on Odoo variables. Otherwise, you might break the
    possibility for the user to customize them using the Website Builder.
 
-   When an option is defined by a variable in `primary_variables.scss` and by a Boostrap variable,
+   When an option is defined by a variable in `primary_variables.scss` and by a Bootstrap variable,
    you should always go for an override through the primary variables. Do it via
    `bootstrap_overridden.scss` only if nothing exists in the primary variables.
 
@@ -835,7 +835,7 @@ This is a non-exhaustive list of the frequently used bundles for a website:
      - Add your JS files related to the Website Builder options behaviors (for instance, a custom
        method for your custom building block)
    * - website.assets_wysiwyg
-     - If you need to extend Boostrap through the Bootstrap Utilities API, for example
+     - If you need to extend Bootstrap through the Bootstrap Utilities API, for example
 
 .. _theming/assets/styles:
 

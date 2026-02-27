@@ -53,7 +53,7 @@ Click the :guilabel:`Account Security` tab, then slide the :guilabel:`Two-Factor
 toggle to *active*.
 
 .. image:: 2fa/account-security.png
-   :alt: The account secuirty tab in a user profile.
+   :alt: The account security tab in a user profile.
 
 This generates a :guilabel:`Security Control` pop-up window that requires password confirmation to
 continue. Enter the appropriate password, then click :guilabel:`Confirm Password`. Next, a

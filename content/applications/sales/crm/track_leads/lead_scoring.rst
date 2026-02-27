@@ -97,7 +97,7 @@ Change the probability manually
 
 An opportunity's probability of success can be changed manually on the opportunity form. Click on
 the probability number to edit it. The probability for a lead **cannot** be manually set to 100%.
-Attemping to convert a lead with a 100% probability into an opportunity will result in an error
+Attempting to convert a lead with a 100% probability into an opportunity will result in an error
 message:
 
 .. image:: lead_scoring/100-percent-lead-error.png

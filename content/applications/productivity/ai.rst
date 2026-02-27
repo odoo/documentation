@@ -21,8 +21,8 @@ To enter a prompt from anywhere in the database, enter :kbd:`Ctrl` + :kbd:`k` to
 palette. From here, type in a prompt, then click the |AI| icon or hit enter. This opens a
 conversation window with the *Ask AI* agent.
 
-.. image:: ai/command-palatte.png
-   :alt: An open command palatte with a prompt.
+.. image:: ai/command-palette.png
+   :alt: An open command palette with a prompt.
 
 .. important::
    The *Ask AI* agent is instructed not to display an error to a user. If it is unable to complete

@@ -252,7 +252,7 @@ API
        `left`, `bottom-fit`. (default position: `bottom`)
    * - `onPositioned`
      - (el: HTMLElement, position: PositioningSolution) => void
-     - a callback that will be called everytime a positioning occurs
+     - a callback that will be called every time a positioning occurs
        (e.g. on component mounted/patched, document scroll, window resize...).
        Can be used i.e. for dynamic styling regarding the current position.
        The `PositioningSolution` is an object having the following type:

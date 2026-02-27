@@ -74,7 +74,7 @@ Marketplace, one for the shipping charges (if any), and one for the gift wrappin
 .. _amazon/matching:
 
 The selection of a database product for a sales order item is done by matching its
-:guilabel:`Internal Reference` (a customizable product reference idenifier in Odoo, like `FURN001`)
+:guilabel:`Internal Reference` (a customizable product reference identifier in Odoo, like `FURN001`)
 with the Amazon *SKU* for marketplace items, the Amazon *Shipping Code* for delivery charges, and
 the Amazon *Gift Wrapping* code for gift wrapping charges.
 
@@ -132,7 +132,7 @@ follows:
 #. Go to :menuselection:`Sales app --> Configuration --> Settings --> Connectors --> Amazon Sync -->
    Amazon Marketplaces`.
 #. Click :guilabel:`New` to create a new marketplace record.
-#. Enter the Marketplace ID in the :guilabel:`API Idenifier` field, and select the :guilabel:`Amazon
+#. Enter the Marketplace ID in the :guilabel:`API Identifier` field, and select the :guilabel:`Amazon
    Region` for your marketplace as described in the `Amazon Documentation for marketplace IDs and
    regions <https://developer-docs.amazon.com/sp-api/docs/marketplace-ids>`_, and the
    :guilabel:`Seller Central URL` as described in the `Amazon Documentation for seller central URLs

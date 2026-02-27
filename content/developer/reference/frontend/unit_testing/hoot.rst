@@ -823,7 +823,7 @@ test, and to evaluate them later on.
     :param { message?\: string } options:
     :returns: `Promise<boolean>`
 
-    Same as :js:meth:`expect.verifyErrors`, but will not immediatly fail if errors
+    Same as :js:meth:`expect.verifyErrors`, but will not immediately fail if errors
     are not caught yet, and will instead wait for a certain timeout (default: 2000ms)
     to allow errors to be caught later.
 
@@ -841,7 +841,7 @@ test, and to evaluate them later on.
     :param { ignoreOrder?\: boolean, message?\: string, partial?\: boolean } options:
     :returns: `Promise<boolean>`
 
-    Same as :js:meth:`expect.verifySteps`, but will not immediatly fail if steps
+    Same as :js:meth:`expect.verifySteps`, but will not immediately fail if steps
     have not been registered yet, and will instead wait for a certain timeout (default:
     2000ms) to allow steps to be registered later.
 

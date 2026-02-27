@@ -326,7 +326,7 @@ in the :guilabel:`To` field, and the :guilabel:`Subject` is `(Job Position)`. Th
 empty by default.
 
 To use a preconfigured email template, click the :icon:`fa-ellipsis-v` :guilabel:`(vertical
-elipsis)` button in the bottom of the window. Select the email template to use from the drop-down
+ellipsis)` button in the bottom of the window. Select the email template to use from the drop-down
 menu.
 
 Preconfigured email templates may contain dynamic placeholders so unique information can be
@@ -346,7 +346,7 @@ right of the attachment.
 
 If any changes need to be made to the email, edit the body of the email. If the edits should be
 saved to be used in the future, the email can be saved as a new template. Click the
-:icon:`fa-ellipsis-v` :guilabel:`(vertical elipsis)` button in the bottom of the window, and select
+:icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` button in the bottom of the window, and select
 :guilabel:`Save as Template`. Options are presented to either overwrite an existing template, or
 save a new template. Click on an existing template name to overwrite that template, or click
 :guilabel:`Save as Template` to save a new template. A :guilabel:`Create a Mail Template` pop-up

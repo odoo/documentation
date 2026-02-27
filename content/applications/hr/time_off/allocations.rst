@@ -78,7 +78,7 @@ end of that period based on the *Accrued Gain Time* entered on the :ref:`accrual
    - *At the end of the accrual period*: A :guilabel:`Start Date` of `06/18/25` applies from
      `07/01/25`
 
-Automatic adjustments on the start date to either the begining or end of an accural period ensures
+Automatic adjustments on the start date to either the beginning or end of an accrual period ensures
 accruals align with the defined period boundaries, rather than the exact date entered.
 
 Multiple requests
@@ -137,7 +137,7 @@ Fill out the remainder of the :ref:`Multiple Requests form <time_off/allocation-
    :guilabel:`Raffle Winner - 2025 Employee Picnic Prize`.
 
    The :guilabel:`Time Off Type` is set to :guilabel:`Vacation Time Off`, with the
-   :guilabel:`Allocation Type` set to :guilabel:`Regular Allocaiton`, since the time off is given up
+   :guilabel:`Allocation Type` set to :guilabel:`Regular Allocation`, since the time off is given up
    front, and is not *earned*.
 
    The :guilabel:`Validity Period` is set to :guilabel:`07/18/2025` :icon:`oi-arrow-right`

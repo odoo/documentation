@@ -1700,7 +1700,7 @@ The `control` element takes no attributes. It accepts the following children ele
       :noindex:
 
       Whether the element is visible (`False`) or hidden (`True`), as a Python expression that evaluates to a
-      bool. The parent record and the context can be used in the expresion.
+      bool. The parent record and the context can be used in the expression.
 
       :requirement: Optional
       :type: :ref:`Python expression <reference/view_architectures/python_expression>`
@@ -1713,14 +1713,14 @@ The `control` element takes no attributes. It accepts the following children ele
 
 .. attribute:: delete
 
-   The `delete` element allows to conditionnaly hide the delete icon, row by row. There can only be
+   The `delete` element allows to conditionally hide the delete icon, row by row. There can only be
    one child of this type. It can have only one attribute:
 
    .. attribute:: invisible
       :noindex:
 
       Same as for `create`, except that in this case the record itself can also be used in the
-      expresion.
+      expression.
 
 .. admonition:: Possible structure and representation of its rendering
 
