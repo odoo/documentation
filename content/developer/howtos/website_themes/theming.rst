@@ -834,7 +834,7 @@ This is a non-exhaustive list of the frequently used bundles for a website:
    * - website.assets_wysiwyg
      - Add your JS files related to the Website Builder options behaviors (for instance, a custom
        method for your custom building block)
-   * - website._assets_bootstrap
+   * - website._assets_bootstrap_frontend
      - If you need to extend Boostrap through the Bootstrap Utilities API, for example
 
 .. _theming/assets/styles:
