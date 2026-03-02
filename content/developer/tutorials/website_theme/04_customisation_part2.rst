@@ -198,7 +198,7 @@ that, add the gradient to the website builder so that the client can easily reus
             data-custom-template-data="{}"
             data-number-of-records="16"
             data-product-category-id="all"
-            data-show-variants="true"
+            data-split-variants="true"
             data-filter-id="3"
             data-template-key="website_airproof.dynamic_filter_template_product_product_airproof"
             data-carousel-interval="5000"
