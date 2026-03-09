@@ -380,8 +380,9 @@ Migrating from XML-RPC / JSON-RPC
 =================================
 
 Both the XML-RPC and JSON-RPC APIs at endpoints ``/xmlrpc``, ``/xmlrpc/2`` and ``/jsonrpc`` are
-scheduled for removal in Odoo 20 (fall 2026). Both RPC APIs expose the three same services: common,
-db (database) and object. All three services are deprecated.
+deprecated. Both RPC APIs expose the three same services: common, db (database) and object. The db
+service was removed in Odoo 20 (fall 2026) and Online 19.1 (winter 2025). The common and object
+services are scheduled for removal in Odoo 22 (fall 2028) and Online 21.1 (winter 2027).
 
 .. note::
 
