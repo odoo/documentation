@@ -189,8 +189,8 @@ The client has requested the following changes:
 
          <record id="website.default_website" model="website">
             <field name="name">Airproof</field>
-            <field name="logo" type="base64" file="website_airproof/static/src/img/content/branding/airproof-logo.svg"/>
-            <field name="favicon" type="base64" file="website_airproof/static/description/airproof-favicon.png" />
+            <field name="logo" type="bytes" file="website_airproof/static/src/img/content/branding/airproof-logo.svg"/>
+            <field name="favicon" type="bytes" file="website_airproof/static/description/airproof-favicon.png" />
          </record>
 
    #. Declare your :file:`website.xml` file in :file:`__manifest__.py`.

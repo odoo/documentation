@@ -956,7 +956,7 @@ Binary File (`binary`)
 
         .. code-block:: xml
 
-            <field name="datas" filename="datas_fname" />
+            <field name="raw" filename="datas_fname" />
 
     Options:
 

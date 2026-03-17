@@ -35,7 +35,7 @@ reuse them), declare them like this:
 
    <record id="img_about_01" model="ir.attachment">
        <field name="name">About Image 01</field>
-       <field name="datas" type="base64" file="website_airproof/static/src/img/content/img_about_01.jpg"/>
+       <field name="raw" type="bytes" file="website_airproof/static/src/img/content/img_about_01.jpg"/>
        <field name="res_model">ir.ui.view</field>
        <field name="public" eval="True"/>
    </record>
@@ -51,7 +51,7 @@ reuse them), declare them like this:
      - The name of your image to be used in your code
    * - name
      - A descriptive name for your image
-   * - datas
+   * - raw
      - The location of your image
 
 .. _website_themes/media/images/use:
@@ -94,7 +94,7 @@ use `<t t-call="website.placeholder_header_brand">`.
     :caption: ``/website_airproof/data/images.xml``
 
     <record id="website.default_website" model="website">
-        <field name="logo" type="base64" file="website_airproof/static/src/img/content/logo.png"/>
+        <field name="logo" type="bytes" file="website_airproof/static/src/img/content/logo.png"/>
     </record>
 
 .. note::

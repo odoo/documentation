@@ -196,7 +196,7 @@ Declare your shape file.
 
    <record id="shape_hexagon_01" model="ir.attachment">
       <field name="name">01.svg</field>
-      <field name="datas" type="base64" file="website_airproof/static/shapes/hexagons/01.svg" />
+      <field name="raw" type="bytes" file="website_airproof/static/shapes/hexagons/01.svg" />
       <field name="url">/html_editor/shape/illustration/hexagons/01.svg</field>
       <field name="public" eval="True" />
    </record>
@@ -210,7 +210,7 @@ Declare your shape file.
      - Description
    * - name
      - Name of the shape
-   * - datas
+   * - raw
      - Path to the shape
    * - url
      - The location of your shape in the web editor. The file is automatically duplicated in
