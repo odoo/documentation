@@ -18,7 +18,8 @@ To :ref:`create a restaurant <pos/use/create-pos>` from scratch, go to the :ref:
 Bar/Restaurant` setting, then click :guilabel:`Save`.
 
 .. seealso::
-   :doc:`UrbanPiper order management for food delivery <restaurant/urban_piper>`
+   - :doc:`UrbanPiper order management for food delivery <restaurant/urban_piper>`
+   - :doc:`Order management for APAC food delivery <restaurant/APAC_food_delivery>`
 
 .. _pos/restaurant/interface:
 
@@ -303,7 +304,8 @@ To process an order from the POS register, follow these steps:
      :guilabel:`Edit Order Name`.
 
 .. seealso::
-   :doc:`UrbanPiper order management for food delivery <restaurant/urban_piper>`
+   - :doc:`UrbanPiper order management for food delivery <restaurant/urban_piper>`
+   - :doc:`Order mangement for APAC food delivery <restaurant/APAC_food_delivery>`
 
 .. _pos/restaurant/floors/transfer:
 
@@ -585,3 +587,4 @@ after payment, follow these steps:
    :titlesonly:
 
    restaurant/urban_piper
+   restaurant/APAC_food_delivery
