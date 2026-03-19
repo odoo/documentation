@@ -7,8 +7,8 @@ relationships between data.
 
 .. tip::
    Charts can be :ref:`created manually based on spreadsheet data
-   <spreadsheet/visualize/create-chart>` or :ref:`inserted directly from an Odoo graph view
-   <spreadsheet/insert/chart>`.
+   <spreadsheet/visualize/create-chart>` or :doc:`inserted directly from an Odoo graph view
+   <../insert/insert_chart>`.
 
 .. _spreadsheet/visualize/create-chart:
 
@@ -33,8 +33,8 @@ To create a chart manually:
 Customize charts
 ----------------
 
-A chart that has been :ref:`created manually <spreadsheet/visualize/create-chart>` or :ref:`inserted
-from an Odoo graph view <spreadsheet/insert/chart>` can be further customized via the
+A chart that has been :ref:`created manually <spreadsheet/visualize/create-chart>` or :doc:`inserted
+from an Odoo graph view <../insert/insert_chart>` can be further customized via the
 :ref:`chart properties <spreadsheet/visualize/customize-charts>`.
 
 Here, it is possible to modify various aspects of the chart's configuration and design via the
@@ -69,7 +69,7 @@ The :icon:`fa-sliders` :guilabel:`Configuration` tab includes the following sect
 
 - :guilabel:`Domain`: the rules used to determine which records are shown. Click :ref:`Edit domain
   <search/custom-filters>` to add or edit rules.
-- :guilabel:`Link to Odoo menu`: to add a :ref:`clickable link <spreadsheet/insert/clickable-links>`
+- :guilabel:`Link to Odoo menu`: to add a :doc:`clickable link <../insert/insert_clickable_links>`
   from a chart to an Odoo menu item, i.e., a specific view of a model.
 
 .. _spreadsheet/visualize/chart-types:
@@ -81,9 +81,8 @@ When a chart is:
 
 - :ref:`created manually <spreadsheet/visualize/create-chart>`, any of the chart types in the tabs
   below can be selected;
-- :ref:`inserted directly from an Odoo graph view <spreadsheet/insert/chart>`, any chart type except
-  those
-  shown in the :guilabel:`Other` tab can be selected.
+- :doc:`inserted directly from an Odoo graph view <../insert/insert_chart>`, any chart type except
+  those shown in the :guilabel:`Other` tab can be selected.
 
 .. tabs::
 
