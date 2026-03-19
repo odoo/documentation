@@ -26,7 +26,7 @@ With Odoo Spreadsheet, you can:
 - :ref:`create and use templates <spreadsheet/get-started/templates>`
 - :doc:`use functions, including Odoo-specific functions <spreadsheet/work_with_data/functions>`
 - :doc:`insert and link to Odoo data <spreadsheet/insert>`
-- :doc:`create and use dynamic pivot tables <spreadsheet/work_with_data/dynamic_pivot_tables>`
+- :doc:`use pivot tables <spreadsheet/work_with_data/pivot_tables>`
 - filter data across multiple Odoo data sources using :doc:`global filters
   <spreadsheet/work_with_data/global_filters>`
 - visualize data using :doc:`charts <spreadsheet/visualize_data/charts>` and :doc:`formatting
