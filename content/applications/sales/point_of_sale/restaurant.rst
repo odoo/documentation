@@ -31,7 +31,8 @@ orders:
    and manage bookings.
 
 .. seealso::
-   :doc:`restaurant/urban_piper`
+   - :doc:`UrbanPiper order management for food delivery <restaurant/urban_piper>`
+   - :doc:`Order management for APAC food delivery <restaurant/APAC_food_delivery>`
 
 .. _pos/restaurant/default:
 
@@ -290,6 +291,7 @@ To process an order from the POS register, follow these steps:
 .. seealso::
    - :doc:`extra/preparation`
    - :doc:`UrbanPiper order management for food delivery <restaurant/urban_piper>`
+   - :doc:`Order management for APAC food delivery <restaurant/APAC_food_delivery>`
 
 .. _pos/restaurant/floors/transfer:
 
@@ -565,3 +567,4 @@ after payment, follow these steps:
    :titlesonly:
 
    restaurant/urban_piper
+   restaurant/APAC_food_delivery
