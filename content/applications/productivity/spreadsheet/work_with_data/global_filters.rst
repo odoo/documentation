@@ -125,10 +125,11 @@ With the :guilabel:`Filter properties` panel open:
    or :guilabel:`Next`, then select the desired number of periods in the past or future.
 
    .. tip::
-      To compare data effectively using the :guilabel:`Period offset` feature, duplicate the
-      relevant inserted :ref:`list <spreadsheet/insert/list-duplicate>` or :ref:`pivot table
-      <spreadsheet/insert/pivot-table-duplicate>`, then, when defining field matching, set a
-      period offset for the second data source but not the first.
+
+      To compare data effectively using the :guilabel:`Period offset` feature, :ref:`duplicate the
+      relevant inserted list <spreadsheet/insert-list/duplicate>` or :ref:`pivot table
+      <spreadsheet/pivot-tables/duplicate>`, then, when setting up field matching, set a period
+      offset for the second data source but not the first.
 
       When applying the filter, the original list or pivot table shows data for the time range
       selected, while the second shows data for a period before or after that time range, as

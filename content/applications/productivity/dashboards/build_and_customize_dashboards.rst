@@ -47,13 +47,14 @@ Data insertion and manipulation
 
 This stage involves:
 
-- :doc:`inserting the prepared lists, pivot tables or charts <../spreadsheet/insert>` into the
-  spreadsheet you will use to build your dashboard;
+- inserting the prepared :doc:`lists <../spreadsheet/insert/insert_list>`, :doc:`pivot tables
+  <../spreadsheet/insert/insert_pivot_table>` or :doc:`charts <../spreadsheet/insert/insert_chart>`
+  into the spreadsheet you will use to build your dashboard;
 - manipulating the data, if needed, to be able to draw the necessary insights. This may involve
   performing calculations or creating custom metrics using :doc:`standard or Odoo-specific functions
   and formulas <../spreadsheet/work_with_data/functions>`, referencing data from
-  various sources within the spreadsheet, or :doc:`converting static pivot tables to dynamic pivot
-  tables <../spreadsheet/work_with_data/dynamic_pivot_tables>`.
+  various sources within the spreadsheet, or :ref:`converting static pivot tables to dynamic pivot
+  tables <spreadsheet/insert-pivot-table/static-convert>`.
 
 .. _build_and_customize_dashboards/build-visualization:
 
@@ -68,9 +69,9 @@ This stage involves:
   charts, as well as using tools and techniques to guide the user, such as clear and descriptive
   headings, text formatting and colors, carefully chosen chart types, and conditional formatting to
   highlight specific data visually;
-- :ref:`inserting clickable links <spreadsheet/insert/clickable-links>`, if relevant, to provide
-  access to Odoo menu items, URLs, or other sheets within the same spreadsheet if these should also
-  be accessible from the front end of your dashboard;
+- :doc:`inserting clickable links <../spreadsheet/insert/insert_clickable_links>`, if relevant, to
+  provide access to Odoo menu items, URLs, or other sheets within the same spreadsheet if these
+  should also be accessible from the front end of your dashboard;
 - :doc:`creating global filters <../spreadsheet/work_with_data/global_filters>` to
   allow users to tailor the view to their needs;
 - :ref:`converting the spreadsheet into a dashboard
@@ -185,8 +186,8 @@ Dashboards can be customized in various ways, such as by:
   to :ref:`building a dashboard from scratch <build_and_customize_dashboards/build>`;
 - :doc:`adding new global filters <../spreadsheet/work_with_data/global_filters>`
   or editing or deleting existing ones;
-- :ref:`adding or editing clickable links <spreadsheet/insert/clickable-links>` to Odoo menus, URLs,
-  or to other sheets within the same spreadsheet.
+- :doc:`adding or editing clickable links <../spreadsheet/insert/insert_clickable_links>` to Odoo
+  menus, URLs, or to other sheets within the same spreadsheet.
 
 .. tip::
    - The first tab of the spreadsheet serves as the front end of the dashboard. Any tables or charts
