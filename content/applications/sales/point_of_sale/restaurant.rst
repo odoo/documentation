@@ -344,6 +344,8 @@ The printer is then connected to the point of sale and can print kitchen orders 
    - After :ref:`processing an order <pos/restaurant/orders/process>`, click the :icon:`fa-cutlery`
      (:guilabel:`order`) icon in the :ref:`POS register <pos/restaurant/orders>` next to
      :guilabel:`Payment` to reprint a duplicate of the last kitchen order.
+   - Access the :doc:`preparation display <extra/preparation>` through the **Kitchen Display** app
+     to manage orders without using paper.
 
 .. seealso::
    - :doc:`Connect an IoT system to a POS <hardware_network/pos_iot>`
