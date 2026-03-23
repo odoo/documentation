@@ -896,8 +896,8 @@ Symbols and Conventions
     partners = Partner.browse(ids)
     partner_id = partners[0].id
 
-- ``One2Many`` and ``Many2Many`` fields should always have *_ids* as suffix (example: sale_order_line_ids)
-- ``Many2One`` fields should have *_id* as suffix (example : partner_id, user_id, ...)
+- ``One2Many`` and ``Many2Many`` fields should always have *_ids* as suffix, and the base name should be plural (example: sale_order_lines_ids)
+- ``Many2One`` fields should have *_id* as suffix, and the base name should be singular (example : partner_id, user_id, ...)
 - Method conventions
     - Compute Field : the compute method pattern is *_compute_<field_name>*
     - Search method : the search method pattern is *_search_<field_name>*
