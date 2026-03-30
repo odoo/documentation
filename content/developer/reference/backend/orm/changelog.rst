@@ -10,12 +10,37 @@ Odoo Online version 19.3
 - The type of Binary fields is now a BinaryValue. We no longer encode using
   base64 all over the data flow, just use the new object.
   See `#244421 <https://github.com/odoo/odoo/pull/244421>`_.
+- Fixing cache pollution for x2many fields. Accessing such a field returns only
+  the accessible records.
+  See `#254944 <https://github.com/odoo/odoo/pull/254944>`_.
+- Custom access permissions implemented using domains. A domain operator
+  "access" can check explicitly the permissions of the comodel easing writing
+  access rules.
+  See `#254381 <https://github.com/odoo/odoo/pull/254381>`_ and
+  `#239862 <https://github.com/odoo/odoo/pull/239862>`_.
+- Simpler ``Model.concat`` and ``Model.union`` API.
+  See `#249731 <https://github.com/odoo/odoo/pull/249731>`_.
+- Write multiple translations in one write.
+  See `#246357 <https://github.com/odoo/odoo/pull/246357>`_.
+
+Odoo Online version 19.2
+========================
+
+- Binary fields store only binary data in raw format.
+  See `#235832 <https://github.com/odoo/odoo/pull/235832>`_
+  and `#238513 <https://github.com/odoo/odoo/pull/238513>`_.
+- Various qweb improvements.
+  See `#232539 <https://github.com/odoo/odoo/pull/232539>`_
+  and `#244092 <https://github.com/odoo/odoo/pull/244092>`_.
 
 Odoo Online version 19.1
 ========================
 
 - New API for ir.config_parameter. See `#223180 <https://github.com/odoo/odoo/pull/223180>`_.
 - New API to build SQL. See `#234156 <https://github.com/odoo/odoo/pull/234156>`_.
+- ``Field.compute_sql`` allows to define a way to produce SQL for computed
+  fields. Once done, we can group by and sort using computed fields.
+  See `#221544 <https://github.com/odoo/odoo/pull/221544>`_.
 
 Odoo version 19.0
 =================
