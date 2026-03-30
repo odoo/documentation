@@ -255,6 +255,7 @@ Gain invaluable insight into event-related revenues with customizable reports an
 
 .. toctree::
 
+   events/events_workflow
    events/create_events
    events/sell_tickets
    events/track_manage_talks
