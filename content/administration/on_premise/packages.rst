@@ -120,7 +120,7 @@ be downloaded from the `Odoo download page <https://www.odoo.com/page/download>`
 
       .. code-block:: console
 
-         $ sudo dnf localinstall odoo_{CURRENT_MAJOR_BRANCH}.latest.noarch.rpm
+         $ sudo dnf install odoo_{CURRENT_MAJOR_BRANCH}.latest.noarch.rpm
          $ sudo systemctl enable odoo
          $ sudo systemctl start odoo
 
