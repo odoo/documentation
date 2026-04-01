@@ -462,6 +462,8 @@ Do not reschedule yourself the job.
 
 .. automethod:: IrCron._commit_progress
 
+.. automethod:: IrCron._rollback_progress
+
 .. code-block:: python
 
     def _cron_do_something(self, *, limit=300):  # limit: allows for tweaking
@@ -507,7 +509,7 @@ processed, while keeping the connection open.
                 except Exception:
                     # if you handle exceptions, the default stategy is to
                     # rollback first the error
-                    self.env.cr.rollback()
+                    self.env['ir.cron']._rollback_progress()
                     _logger.warning(...)
                     # you may commit some status using _commit_progress
 
