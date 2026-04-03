@@ -82,29 +82,29 @@ To create or edit a field:
 
 #. Go to :menuselection:`Sign --> Configuration --> Fields`.
 #. Click :guilabel:`New` to create a new field or click on a field to open and edit it.
+#. Choose the relevant :ref:`field type <sign/configuration/field-types>` by clicking the
+   corresponding button at the top of the form.
 #. Complete or edit the following fields:
 
    - :guilabel:`Field Name`: Enter or edit the field name. This is visible in the list of fields in
      the left panel when a document is being :ref:`prepared for signature
      <sign/request-signatures/prepare-document>`.
-   - :guilabel:`Type`: Choose the relevant :ref:`field type <sign/configuration/field-types>` from
-     the dropdown; there are nine possible field types.
    - :guilabel:`Placeholder`: Optionally, specify a placeholder text that provides the signer with a
      hint or example :ref:`during the signing process <sign/sign-document/signature-request>`. If
      this field is left blank, the :guilabel:`Field Name` is used as placeholder text.
    - :guilabel:`Tip`: Add a tip that will be displayed inside an arrow to the left
      of the document during the signing process to help the signer understand what action to take
      (e.g., "Sign here").
-   - For :guilabel:`Text` fields only, optionally change the default :guilabel:`Field Size` from
-     :guilabel:`Regular Text` to :guilabel:`Short Text` or :guilabel:`Long Text`.
+   - :guilabel:`Mandatory`: Enable the checkbox to make the field mandatory by default.
+   - :guilabel:`Read Only`: Enable the checkbox to make the field read-only by default.
 
      .. note::
-        The size of any field can be modified manually when :ref:`adding the field to a document
-        <sign/request-signatures/add-fields>`.
+        The :guilabel:`Mandatory` and :guilabel:`Read Only` attributes of a field can be modified
+        manually when :ref:`adding the field to a document <sign/request-signatures/add-fields>`.
 
-   - For :guilabel:`Text` and :guilabel:`Multiline Text` fields only, optionally use the
-     :guilabel:`Linked to` field to :ref:`configure auto-completion <sign/configuration/auto-fill>`
-     so the field can be auto-completed during the signing process.
+   - For :guilabel:`Text`, :guilabel:`Multiline Text`, and :guilabel:`Date` fields only, use the
+     :guilabel:`Linked to` field to :ref:`configure auto-completion
+     <sign/configuration/auto-fill>` so the field is auto-completed during the signing process.
 
 .. _sign/configuration/field-types:
 
@@ -132,6 +132,10 @@ Field types
   which adds a visible line through the text.
 - :guilabel:`Stamp`: Signers can add a company stamp (defined when the
   field is :ref:`added to the document <sign/request-signatures/add-fields>`).
+- :guilabel:`Date`: When signers click a date field, today's date is filled in by default. Clicking
+  the field again allows a different date to be selected in the date picker. This field type can
+  also be :ref:`configured to be auto-completed <sign/configuration/auto-fill>` during the signing
+  process.
 
 .. _sign/configuration/auto-fill:
 
@@ -139,23 +143,18 @@ Configure auto-complete fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To reduce the need for manual input and ensure accurate and consistent information, it is possible
-to have certain fields automatically completed with data from your database :ref:`during the signing
+to have certain fields automatically completed with data from the database :ref:`during the signing
 process <sign/sign-document/signature-request>`. This is done by linking a Sign field to a field
-from a specific :doc:`Odoo model <../../studio/models_modules_apps>`.
+from a specific :doc:`Odoo model </applications/studio/models_modules_apps>`.
 
 To enable auto-completion for a Sign field:
 
 #. Go to :menuselection:`Sign --> Configuration --> Fields`.
 #. Open the relevant field.
-#. From the dropdown beside :guilabel:`Linked to` select the model, e.g., *Contact*, that contains
-   the field you want to link to.
-#. Click beside :guilabel:`Linked Field`, then use the field selector to select the relevant field,
-   e.g., Email.
-
-.. note::
-   When a document containing this field is being signed, the field is auto-completed. By default,
-   field can still be edited after auto-completion. However, this can be prevented by editing the
-   field *after it has been added to the document* and setting it to :guilabel:`Read-only`.
+#. From the :guilabel:`Linked to` dropdown, select the model that contains the field to link to,
+   e.g., *Contact*.
+#. Click beside :guilabel:`Field`, then use the field selector to select the relevant field, e.g.,
+   *Email*.
 
 .. example::
    In the example, the :icon:`fa-envelope` :guilabel:`Email` field in the Sign app is linked to the
