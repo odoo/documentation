@@ -4,7 +4,7 @@ Sign a document
 
 Depending on the situation, you may need to sign:
 
-- a single document or :ref:`envelope of multiple documents
+- a single document or an :ref:`envelope of multiple documents
   <sign/request-signatures/create-envelope>` that you or another person :ref:`prepared for electronic
   signature using Odoo Sign <sign/sign-document/signature-request>`; or
 - one or more `.pdf` documents that have :ref:`not been prepared for electronic signature
@@ -118,26 +118,48 @@ To define how your initials/signature should appear after clicking the relevant 
 If there are multiple documents to sign within the same document envelope, the defined
 initials/signature can thereafter be added directly by clicking the relevant field.
 
+.. _sign/sign-document/delegate:
+
+Delegate signing
+----------------
+
+A signer can delegate their signature to someone else if the :guilabel:`Can delegate` option was
+:ref:`enabled for them <sign/request-signatures/signer-settings>` when the document was being
+prepared for signing. The person to whom signing is delegated then signs the document in their
+own name.
+
+To delegate the signing of a document or document envelope, click :guilabel:`Options` in the
+top-right corner next to the name(s) of the signer(s), then select :guilabel:`Delegate`. Enter the
+:guilabel:`Name` and :guilabel:`Email` address of the person you are delegating to, then click
+:guilabel:`Delegate`. The signature request is then sent to the new signer.
+
+.. note::
+   - Delegation is only available when accessing the signature request through the link sent by
+     email, not when the document is accessed directly from Odoo.
+   - It is not possible to delegate the signature of an individual document within a document
+     envelope.
+   - The original signer is replaced by the new signer in the :guilabel:`Signers` tab of the
+     :ref:`signature request's details form <sign/request-signatures/manage-form>`, moved to the
+     :guilabel:`Contacts in copy` tab, and the change is recorded in the chatter.
+
 .. _sign/sign-document/decline:
 
 Decline a signature request
 ---------------------------
 
-.. note::
-   It is only possible to decline a signature request when accessing it through the link sent by
-   email. Declining is not available when the document is accessed directly from Odoo.
-
-To decline a signature request, click the :icon:`fa-caret-down` (:guilabel:`dropdown`) button in
-the top-right corner next to the name(s) of the signer(s), then select :guilabel:`Decline to sign`.
-Enter the reason for the refusal, then click :guilabel:`Decline`.
-
-The signature request is then marked as :guilabel:`Cancelled` and the refusal is recorded in the
-:ref:`signature request's activity logs and chatter <sign/request-signatures/manage-form>`.
-Any other signers are notified and any remaining signers can no longer sign the document.
+To decline a signature request, click :guilabel:`Options` in the top-right corner next to the
+name(s) of the signer(s), then select :guilabel:`Decline to sign`. Enter the reason for the refusal,
+then click :guilabel:`Decline`. The other signers are notified and any remaining signers can no
+longer sign the document.
 
 .. note::
-   It is not possible to decline the signature of an individual document within a document envelope.
-   Declining to sign cancels the entire signature request.
+   - Declining is only available when accessing the signature request through the link sent by
+     email, not when the document is accessed directly from Odoo.
+   - It is not possible to decline the signature of an individual document within a document
+     envelope.
+   - Once a signer has declined to sign, the signature request is marked as :guilabel:`Cancelled`
+     and the refusal is recorded in its :ref:`activity logs and chatter
+     <sign/request-signatures/manage-form>`.
 
 .. _sign/sign-document/pdf-document:
 

@@ -17,7 +17,8 @@ The icon used to display activities varies, depending on the :ref:`activity type
 - :icon:`fa-check` :guilabel:`(check)` icon: a "to-do" is scheduled.
 - :icon:`fa-users` :guilabel:`(users)` icon: a meeting is scheduled.
 - :icon:`fa-upload` :guilabel:`(upload)` icon: a document is scheduled to be uploaded.
-- :icon:`fa-pencil-square-o` :guilabel:`(request signature)` icon: a signature request is scheduled.
+- :icon:`fa-pencil-square-o` :guilabel:`Signature`: a :doc:`signature request
+  </applications/productivity/sign>` has been sent.
 
 Schedule activities
 ===================
@@ -245,16 +246,14 @@ Activity Settings section
     relevant records.
   - :guilabel:`Meeting`: If selected, a meeting is created in the chatter and displayed on relevant
     records.
-  - :guilabel:`Request Signature`: If selected, a link to open a signature request pop-up window is
-    automatically added to the planned activity in the chatter. This requires the Odoo **Sign**
-    application to be installed.
+  - :guilabel:`Signature`: If selected, :doc:`signature requests
+    </applications/productivity/sign/request_signatures>` can be sent from the chatter.
 
   .. note::
      Available activity types vary based on the installed applications in the database.
 
 - :guilabel:`Folder`: Select a specific :ref:`folder <documents/folders>` to save a document to.
   This field **only** appears if :guilabel:`Upload Document` is selected for the :guilabel:`Action`.
-
 - :guilabel:`Default User`: Select a user from the drop-down menu to automatically assign this
   activity to the selected user when this activity type is scheduled. If this field is left blank,
   the activity is assigned to the user who creates the activity.
