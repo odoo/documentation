@@ -190,7 +190,7 @@ Map
 ---
 
 The :guilabel:`Map` :icon:`fa-map-marker` view is used to display records on a map. For example, it
-is used in the Field Service app to plan an itinerary between different tasks.
+is used in the Project app to plan an itinerary between different tasks.
 
 .. note::
    A :ref:`Many2One field <studio/fields/relational-fields-many2one>` linked to the *Contact* model
@@ -201,8 +201,14 @@ is used in the Field Service app to plan an itinerary between different tasks.
 - To hide the name or the address of the record, tick :guilabel:`Hide Name` or :guilabel:`Hide
   Address`.
 - To add information from other fields, select them under :guilabel:`Additional Fields`.
-- To have a route suggested between the different records, tick :guilabel:`Enable Routing` and
-  select which field should be used to sort records for the routing.
+- To have a route suggested between the different records, select a :guilabel:`Routing` mode
+  (:guilabel:`Optimized` or :guilabel:`Ordered`). The view requires a valid Mapbox token and at
+  least two located records, or one located record and the user's current position.
+
+  - :guilabel:`Optimized`: Computes the route for minimal travel time between records.
+  - :guilabel:`Ordered`: Routes strictly follow the default order (:guilabel:`Sort by`) set
+    on the view. This selection field is dynamically hidden unless the routing mode is set
+    to :guilabel:`Ordered`.
 
 .. example::
 

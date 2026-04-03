@@ -4,6 +4,23 @@ from PIL import Image
 import sphinxlint
 
 
+CHECKED_FILE_EXTENSIONS = [
+    '.cer',
+    '.csv',
+    '.dot',
+    '.gif',
+    '.jpg',
+    '.key',
+    '.pdf',
+    '.png',
+    '.py',
+    '.sql',
+    '.svg',
+    '.txt',
+    '.xlsx',
+    '.xml',
+    '.zip',
+]
 MAX_IMAGE_SIZES = {  # in bytes
     '.png': 505000,
     '.gif': 2100000,
@@ -19,6 +36,7 @@ def log_error(file, line, msg, checker_name):
     print(f"{file}:{line or 0}: {msg} ({checker_name})")
 
 
+@sphinxlint.checker(*CHECKED_FILE_EXTENSIONS)
 def check_image_size(file):
     """ Check that images are not larger than the maximum file size allowed for their extension. """
     file_path = Path(file)
@@ -33,6 +51,7 @@ def check_image_size(file):
             'image-size',
         )
 
+@sphinxlint.checker(*CHECKED_FILE_EXTENSIONS)
 def check_image_color_depth(file):
     """ Check that PNG images are compressed to 8-bit color depth with PNGQuant. """
     file_path = Path(file)
@@ -47,6 +66,7 @@ def check_image_color_depth(file):
                 'image-color-depth'
             )
 
+@sphinxlint.checker(*CHECKED_FILE_EXTENSIONS)
 def check_resource_file_name(file_path):
     """ Check that resource file names use hyphens rather than underscores. """
     if '_' in file_path.split('/')[-1]:
@@ -57,6 +77,7 @@ def check_resource_file_name(file_path):
             'resource-file-name'
         )
 
+@sphinxlint.checker(*CHECKED_FILE_EXTENSIONS)
 def check_resource_file_referenced(file, options=None):
     """ Check that resource files are referenced in at least one RST file. """
     resource_file = Path(file)

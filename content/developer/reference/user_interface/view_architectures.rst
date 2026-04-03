@@ -4197,8 +4197,8 @@ API
 ---
 
 The view uses location data platforms' API to fetch the tiles (the map's background), do the geoforwarding (converting addresses to a set of coordinates) and fetch the routes.
-The view implements two API, OpenStreetMap and MapBox. OpenStreetMap is used by default and is able to fetch `tiles`_ and do `geoforwarding`_. This API does not require a token.
-As soon as a valid `MapBox`_ token is provided in the general settings the view switches to the MapBox API. This API is faster and allows the computation of routes. A token can be obtained by `signing up`_ to MapBox.
+The view implements two API, OpenStreetMap and Mapbox. OpenStreetMap is used by default and is able to fetch `tiles`_ and do `geoforwarding`_. This API does not require a token.
+As soon as a valid `Mapbox`_ token is provided in the general settings the view switches to the Mapbox API. This API is faster and allows the computation of routes. A token can be obtained by `signing up`_ to Mapbox.
 
 Structural components
 ---------------------
@@ -4213,7 +4213,13 @@ The view's root element is ``<map>``. It can have the following attributes:
 ``default_order``
     If a field is provided the view overrides the model's default order. The field must be part of the model on which the view is applied, not from `res.partner`.
 ``routing``
-    if ``1`` display the routes between the records. The view needs a valid MapBox token and at least two located records (i.e the records have a `res.partner` many2one and the partner has an address or valid coordinates).
+    This attribute defines how travel paths are calculated and displayed. To use routing, the view requires a valid Mapbox token and at least two located records (or only one if
+    the user's location is provided). It supports 3 values (default: ``""``):
+
+   * ``optimized``: The system calculates the most efficient route to minimize total travel time between all records.
+   * ``ordered``: The route strictly follows the sequence defined by the default order of the view.
+   * ``""`` (Disabled): No routing paths are calculated or displayed.
+
 ``hide_name``
     if ``1`` hide the name from the pin's popup (default: ``0``).
 ``hide_address``
@@ -4233,7 +4239,7 @@ The ``<map>`` element can contain multiple ``<field>`` elements. Each ``<field>`
 For example here is a map:
     .. code-block:: xml
 
-        <map res_partner="partner_id" default_order="date_begin" routing="1" hide_name="1">
+        <map res_partner="partner_id" default_order="date_begin" routing="ordered" hide_name="1">
             <field name="partner_id" string="Customer Name"/>
         </map>
 
@@ -4245,7 +4251,7 @@ For example here is a map:
 .. _`HTML`: https://en.wikipedia.org/wiki/HTML
 .. _`integer`: https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex
 .. _`keyboard_shortcut`: https://en.wikipedia.org/wiki/Keyboard_shortcut
-.. _`MapBox`: https://docs.mapbox.com/api/
+.. _`Mapbox`: https://docs.mapbox.com/api/
 .. _`Odoo`: https://www.odoo.com/
 .. _`path`: https://en.wikipedia.org/wiki/Path_(computing)
 .. _`pivot table`: https://en.wikipedia.org/wiki/Pivot_table
