@@ -286,6 +286,8 @@ settings' --> Save`).
 Microsoft Excel can modify the encoding when saving (:menuselection:`'Save As' dialog box -->
 'Tools' drop-down menu --> Encoding tab`).
 
+.. _export_import_data/different-ids:
+
 Difference between Database ID and External ID
 ----------------------------------------------
 

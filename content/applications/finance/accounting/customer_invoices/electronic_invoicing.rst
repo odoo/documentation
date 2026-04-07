@@ -261,6 +261,9 @@ bills list view.
    .. image:: electronic_invoicing/peppol-fetch-bills.png
       :alt: Fetch bills from Peppol
 
+.. note::
+   It is also possible to send :ref:`self-bills <accounting/vendor_bills/self-billing>` via Peppol.
+
 .. _accounting/e-invoicing/extra-fields:
 
 Add extra fields
