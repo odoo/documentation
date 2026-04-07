@@ -212,6 +212,9 @@ steps:
 Then, open the Documents app, navigate to the appropriate folder, select the relevant vendor bills,
 and click :guilabel:`Create Vendor Bill`. The corresponding vendor bill is then created.
 
+.. note::
+   It is also possible to send :ref:`self-bills <accounting/vendor_bills/self-billing>` via Peppol.
+
 .. _accounting/e-invoicing/extra-fields:
 
 Add extra fields
