@@ -97,13 +97,29 @@ customers to browse the online store.
    :alt: Category quick access in the toolbar.
 
 To create categories, go to :menuselection:`Website --> eCommerce --> Categories`, and click
-:guilabel:`New`. On the category form, add a :guilabel:`Name`, optionally enter a :guilabel:`Parent`
-category, restrict it to a specific :guilabel:`Website`, and write a :guilabel:`Description`, if
-needed. You can also add a :guilabel:`Cover Image` for the category.
+:guilabel:`New`. On the category form, you can:
 
-To use shop :guilabel:`Categories`, go to :menuselection:`Website --> eCommerce --> Products`,
-select the product you wish to modify, go to the :guilabel:`eCommerce` tab, navigate to the
-:guilabel:`Shop` section, and select the :guilabel:`Categories` it belongs to.
+- Add a :guilabel:`Category` name (required).
+- Enter a :guilabel:`Parent` category.
+- Restrict it to a specific :guilabel:`Website`.
+- Enable the :guilabel:`Not in Shop` option to hide the category from the main shop page, e.g., when
+  creating a dedicated category for promotional product selections.
+- Add products to the category in the :guilabel:`Products` tab.
+- In the :guilabel:`Description` tab:
+
+  - Write a category :guilabel:`Description`. It is displayed on the :ref:`category page
+    <ecommerce/catalog/customize-layout>` of the :doc:`catalog <../ecommerce_design/catalog>`, below
+    the breadcrumbs.
+  - Add a :guilabel:`Cover Image` for the category. This image is only displayed in the
+    :guilabel:`Category List` snippet of the :ref:`catalog blocks
+    <ecommerce/catalog/catalog-blocks>`.
+
+.. tip::
+   - You can also assign categories to products directly from the :ref:`product form
+     <ecommerce/products/product-form>` by navigating to the :guilabel:`Shop` section of the
+     :guilabel:`eCommerce` tab and selecting the relevant :guilabel:`Categories`.
+   - It is also possible to :ref:`prevent direct sales for specific categories
+     <ecommerce/prices/hide-prices>`.
 
 .. note::
    - A single product can belong to multiple e-commerce categories.
