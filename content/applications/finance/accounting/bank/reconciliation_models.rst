@@ -37,8 +37,9 @@ Items <accounting/rec-models/counterpart>` to be generated during reconciliation
    :guilabel:`Next Activity` field.
 
 .. important::
-   If a record matches with several reconciliation models, the first one in the *sequence* of models
-   is applied. Rearrange the order by dragging and dropping the handle next to the name.
+   If a record matches with several *automated* reconciliation models, the first one in the sequence
+   of models is applied. Rearrange the order by dragging and dropping the :icon:`oi-draggable`
+   :guilabel:`(handle)` icon next to the name.
 
    .. image:: reconciliation_models/list-view.png
       :alt: Rearrange the sequence of models in the list view.
