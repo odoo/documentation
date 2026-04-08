@@ -304,45 +304,38 @@ discount <sales/products/price-rules>`. When a customer enters the code during :
 
 .. _ecommerce/prices/hide-prices:
 
-Hiding the Add to Cart button and prices
-========================================
+Preventing direct sales and hiding prices
+=========================================
 
-Many :ref:`B2B <ecommerce/b2b_b2c/prices>` businesses or companies that sell luxury or custom items
-showcase their products online but restrict direct purchases and hide pricing.
+Some businesses, such as :ref:`B2B shops <ecommerce/b2b_b2c/prices>` or companies that sell luxury
+or custom items, may want to showcase their products online while restricting direct purchases and
+hiding prices.
 
-To control price visibility and prevent direct online sales on the e-commerce site, replace the
-:guilabel:`Add to cart` button with a :guilabel:`Contact Us` button. To do so, go to
-:menuselection:`Website --> Configuration --> Settings`, scroll to the :guilabel:`eCommerce`
-section, and enable the :guilabel:`Hide Add To Cart` checkbox.
+To control price visibility and prevent direct online sales on the e-commerce site, go to
+:menuselection:`Website --> Configuration --> Settings`, scroll down to the :guilabel:`eCommerce`
+section, and enable :guilabel:`Hide Add To Cart`.
 
-Then, enter a redirect URL in the :guilabel:`Link URL` field. The :guilabel:`Contact us` button
-appears on the relevant product page. If needed, it can be :ref:`customized
-<ecommerce/checkout/prevent-sale>`.
+Then, select one of the following options from the :guilabel:`For` drop-down list to define which
+products are affected:
 
-Select one of the options from the :guilabel:`For` drop-down list to define when the :guilabel:`Add
-to cart` button is replaced:
+- For :guilabel:`0 price products`: On the :ref:`product form <ecommerce/products/product-creation>`,
+  set the price to `0` for all desired products, or create a :ref:`pricelist
+  <ecommerce/prices/pricelists>` where all product prices are set to `0`. The price is then **not**
+  displayed on the :doc:`product page <../ecommerce_design/product_page>`.
 
-- For :guilabel:`0 price products`: When the product price is set to `0`, the price is not displayed
-  on the product page.
-- For :guilabel:`Specific categories`: The prices of the selected categories are displayed only if
-  the product price is greater than `0`.
+  .. note::
+     Ensure the pricelist is assigned to the correct website and is listed first among the website's
+     pricelists.
 
-If choosing the :guilabel:`0 price products` option, either set the price to `0` for all desired
-products or create a :ref:`pricelist <ecommerce/prices/pricelists>` with all product prices set to
-`0`. Ensure the pricelist is assigned to the correct website and is listed first among the website's
-pricelists.
+- For :guilabel:`Specific categories`: Select one or more product :ref:`categories
+  <ecommerce/categories_variants/categories>` from the :guilabel:`Categories` drop-down menu that
+  appears. At least one category **must** be selected. The price is only displayed for products in
+  these categories if it is **not** `0`.
 
-If choosing the :guilabel:`Specific categories` option, the :guilabel:`Categories` submenu appears.
-Select **at least one** product category from the drop-down menu.
-
-.. example::
-   A jewelry company wants to direct customers to the contact form for all of its rings. Instead of
-   an :guilabel:`Add to cart` option, the product pages display only the prices and a link to the
-   contact us form.
-
-   .. image:: prices/specific-categories-setting.png
-      :alt: Example of the Specific categories option configuration for the Hide Add To Cart
-       setting.
+Then, enter a redirect URL in the :guilabel:`Link URL` field. The :guilabel:`Add to Cart` button
+on the :doc:`product page <../ecommerce_design/product_page>` for zero-priced products or the
+selected shop categories is then replaced by a default :guilabel:`Contact us` button, which can be
+:ref:`customized <ecommerce/checkout/prevent-sale>` if needed.
 
 .. tip::
    - Ensure no pricelist used on the e-commerce has been marked as :guilabel:`Selectable` to prevent
