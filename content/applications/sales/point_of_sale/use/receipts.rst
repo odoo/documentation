@@ -16,7 +16,7 @@ Receipts
 | - The complete order, discounts, prices, and used        |                                 |
 |   payment methods                                        |                                 |
 | - Optionally, a QR code or URL link for customers to     |                                 |
-|   generate :doc:`invoices <pos_invoices>`                |                                 |
+|   generate :ref:`invoices <pos/invoices/qr-codes>`       |                                 |
 +----------------------------------------------------------+---------------------------------+
 
 .. _pos/configuration/receipt-configuration:
@@ -43,6 +43,7 @@ scroll down to the :guilabel:`Bills & Receipts` section.
    - :ref:`pos/restaurant/bills`
    - :doc:`pos_invoices`
    - :doc:`../hardware_network/receipt_printers`
+   - `Receipts and Invoices (video tutorial) <https://youtu.be/w_DKgHcIV0U?si=Gnf6untzAz2zvNku>`_
 
 .. _pos/configuration/receipt-reprint:
 
