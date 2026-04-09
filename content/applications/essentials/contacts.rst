@@ -14,6 +14,8 @@ Contact form
 To create a new contact, navigate to the :menuselection:`Contacts app`, and click :guilabel:`New`. A
 new form appears where various contact information can be added.
 
+.. _essentials/contacts/type:
+
 Contact type
 ------------
 
