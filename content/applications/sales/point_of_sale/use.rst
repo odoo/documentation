@@ -141,7 +141,7 @@ Set customers
 
 Registering customers is necessary to :ref:`collect their loyalty points and grant them rewards
 <pos/pricing/loyalty>`, automatically apply an :ref:`attributed pricelist
-<pos/pricing/pricelists>`, or :ref:`generate and print invoices <pos_invoices/invoices>`.
+<pos/pricing/pricelists>`, or :ref:`generate and print invoices <pos/invoices/invoices>`.
 
 To create customers from :ref:`the POS register <pos/use/open-register>`:
 
