@@ -495,10 +495,11 @@ To download the PDF file locally, click the :guilabel:`Print` button.
    On a testing environment, the message :guilabel:`Not Found` will always come up.
 
 .. warning::
-   If the partner does not contain the :guilabel:`Country` or :guilabel:`Zip` the invoicing is
-   assumed as a |CFDI| to public and the invoicing will be addressed to the generic customer. If
-   however, these fields are left empty and the user unticks the :guilabel:`CFDI to public`
-   checkbox, a pop-up will appear blocking the operation.
+   Invoices with a :guilabel:`Country` different from Mexico or missing the :guilabel:`Zip` field in
+   the customer form are classified as :guilabel:`CFDI to public` and addressed to a generic customer.
+   The :guilabel:`CFDI to public` checkbox stays active on the invoice form until valid partner information
+   is provided. Once the contact information for a national customer is complete, the checkbox is
+   automatically deactivated.
 
 .. _l10n/mx/credit-notes:
 
@@ -513,6 +514,9 @@ be a relation between a credit note and an invoice through the fiscal folio.
 
 Because of this requirement, the field :guilabel:`CFDI Origin` adds this relation with a `01|`,
 followed by the fiscal folio of the original :abbr:`UUID (universally unique identifier)`.
+
+When creating credit notes, make sure the line description clearly indicates its purpose and
+specifies which entry applies to a bonus, discount, or refund.
 
 .. tip::
    For the :guilabel:`CFDI Origin` field to be automatically added, use the :guilabel:`Add Credit
@@ -647,6 +651,69 @@ download the payment PDF from the :guilabel:`CFDI` tab on the invoice by clickin
 
 .. image:: mexico/mx-print-payment.png
    :alt: Example of the print button on the CFDI tab.
+
+.. _l10n/mx/factoring:
+
+Factoring
+*********
+
+Factoring is a financial transaction in which a business sells its accounts receivable (outstanding
+invoices) to a specialized financial institution, known as a *factor*, to gain immediate liquidity.
+
+To record a payment for financial factoring, follow these steps:
+
+#. Go to :menuselection:`Accounting --> Configuration --> Settings`, scroll down to the
+   :guilabel:`Default Accounts` section and ensure a :guilabel:`Factoring account`  is selected in
+   the :guilabel:`Factoring account` field.
+#. From the Accounting Dashboard, click the word :guilabel:`Bank` on it's corresponding Kanban card to manually :ref:`add a
+   transaction line <accounting/transactions/register>` and record the factoring payment. Complete
+   the following fields:
+
+   - :guilabel:`Label`: Enter a brief description of the transaction.
+   - :guilabel:`Partner`: Select the financial institution (factor) that will purchase the debt.
+   - :guilabel:`Amount`: Enter the actual amount to be received by the factor.
+
+   .. important::
+      The currency of the factoring payment **must** match the bank journal's currency.
+
+#. In the newly created transaction line, click the :icon:`fa-ellipsis-v` :guilabel:`(vertical
+   ellipsis)` icon and select :guilabel:`Reconcile`.
+#. In the :guilabel:`Search: Journal Items to Match` window, remove the :guilabel:`Partner` filter,
+   select the related invoices to be paid by the factor, and click :guilabel:`Select`.
+
+   .. note::
+      Do not select the tax lines related to the invoices.
+
+#. In the :guilabel:`Distribute Payment` window, fill in the following fields to distribute the
+   payment on the selected invoices:
+
+   - :guilabel:`Amount`: Enter the amount that will actually be received from the factor.
+   - :guilabel:`Compensation`: Enter the compensation that was paid to the factor.
+
+   .. tip::
+      - The :guilabel:`Amount` and :guilabel:`Compensation` amounts are provided by the factor and
+        are stated on the factoring receipt.
+      - Make sure the :guilabel:`Amount` and :guilabel:`Compensation` amounts equal the
+        :guilabel:`Due` amount. If it exceeds the :guilabel:`Due` amount, the line is highlighted in
+        red.
+      - The :guilabel:`To distribute` field should balance the :guilabel:`Amount` to the transaction
+        amount entered, ensuring it equals zero.
+
+#. Click :guilabel:`Save`
+
+In the :guilabel:`Bank Matching` view, the factoring payment is then reconciled with the relevant
+invoices, and the factoring commission is allocated to the :guilabel:`Factoring` account set up.
+
+To generate the XML file, go to :menuselection:`Accounting --> Customers --> Invoices`, access one
+of the paid invoices, and click :guilabel:`Update Payments`.
+
+.. note::
+   - The factoring company can retain a portion of the invoice amount, referred to as aforo, until
+     the end customer completes payment. The retained balance is then released to the vendor.
+   - For multi-currency factoring, use the :icon:`oi-settings-adjust` (:guilabel:`adjust settings`)
+     button in the :guilabel:`Distribute Payment` window and add the :guilabel:`Due (Company)`
+     column to display the due amount in the company's currency.
+
 
 .. _l10n/mx/invoice-cancellations:
 
