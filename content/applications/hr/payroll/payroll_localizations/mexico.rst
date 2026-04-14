@@ -47,6 +47,13 @@ localization:
        - l10n_mx_hr_payroll
        - l10n_mx_edi
      - Adds the required rules and parameters to manage local payroll calculations.
+   * - :guilabel:`Documents - Mexican Payroll`
+     - `documents_l10n_mx_hr_payroll_account_edi`
+     - - hr_payroll_account
+       - l10n_mx
+       - l10n_mx_hr_payroll
+       - l10n_mx_edi
+     - Adds CFDI XML and PDF files as an attachment on payslip emails.
 
 .. tip::
    Installing the :guilabel:`Mexico - Payroll CFDI` module automatically installs both the
@@ -524,14 +531,19 @@ After the :ref:`journal entries <payroll/journal-mx>` are validated, Odoo can ge
 Generate CFDI XML files
 -----------------------
 
-After payslips have bee processed and paid, a :abbr:`CFDI (Comprobante Fiscal Digital por Internet)`
+After payslips have been processed and paid, a :abbr:`CFDI (Comprobante Fiscal Digital por Internet)`
 XML file must be generated, which is then electronically submitted to Mexico's :abbr:`SAT (Servicio
 de Administración Tributaria)`.
 
 To create the :abbr:`CFDI (Comprobante Fiscal Digital por Internet)` file, open the individual
-payslip, and click the :guilabel:`Generate CFDI` button.
+payslip, and click the :guilabel:`Generate CFDI` button, alternatively this can also be processed on
+the payrun.
 
 Once the file has been created and sent, a record is stored in the chatter.
+
+If the **documents_l10n_mx_hr_payroll_account_edi** module is :ref:`installed <payroll/mexico_apps>`,
+an email will be sent to the employee with the download link of the folder containing the XML and PDF
+files of the payslip.
 
 Close Payroll
 -------------
