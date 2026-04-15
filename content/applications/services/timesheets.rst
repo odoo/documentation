@@ -201,3 +201,4 @@ relevant task or ticket, then:
 
    timesheets/billing_rates
    timesheets/time_off
+   timesheets/timesheet_assistant
