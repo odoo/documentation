@@ -587,6 +587,14 @@ logging to other destinations and to customize the verbosity.
         In case of conflict between :option:`--log-level` and
         :option:`--log-handler`, the latter is used
 
+.. admonition:: Colorful logs 🌈
+
+    When logs are output on the terminal (``tty``), they are colored to ease reading. You can control
+    the coloring using the `NO_COLOR <https://no-color.org>`_ and `FORCE_COLOR <https://force-color.org>`_
+    environment variables (the former takes precedence over the latter).
+    You can disable the coloring of the pids by using `FORCE_COLOR='-pid'`.
+
+
 .. _reference/cdmline/workers:
 
 Multiprocessing
