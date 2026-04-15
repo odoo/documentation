@@ -263,21 +263,15 @@ Media editor toolbar
 After :ref:`inserting an image <insert-media>`, click it to display the media editor toolbar, and
 apply any of the following formatting options:
 
-- :icon:`fa-search-plus` (:guilabel:`Preview image`): Preview the image, zoom in or out, rotate it,
-  print it, or download it. Exit the preview by clicking the :icon:`fa-times` :guilabel:`(close)`
-  icon in the top right corner.
-- :guilabel:`Description`: Edit the image description and tooltip, then click :guilabel:`Apply`.
-- :guilabel:`Caption`: Write a caption under 100 characters below the image.
-- :icon:`fa-square` (:guilabel:`Rounded`): Apply a rounded shape to the corners of the image.
-- :icon:`fa-circle-o` (:guilabel:`Circle`): Apply a circular shape to the image.
-- :icon:`fa-sun-o` (:guilabel:`Shadow`): Apply a shadow effect to the image.
-- :icon:`fa-picture-o` (:guilabel:`Thumbnail`): Apply a border to the image.
-- :icon:`fa-plus-square-o` (:guilabel:`Padding`): Add an image padding and choose from
+- :icon:`oi-text-inline` (:guilabel:`Image alignment`): Select the alignment of the image relative
+  to the surrounding text:
+
+  - :icon:`oi-text-inline` (:guilabel:`inline`): Align the image with the surrounding text.
+  - :icon:`oi-text-wrap` (:guilabel:`wrap text`): Wrap the text around the image.
+  - :icon:`oi-text-break` (:guilabel:`break text`): Break the text around the image.
+
+- :guilabel:`Padding`: Add an image padding and choose from
   :guilabel:`Small`, :guilabel:`Medium`, :guilabel:`Large`, or :guilabel:`XL` sizes.
-- :guilabel:`Resize`: Restore the image to its default size or set its size to :guilabel:`25%`,
-  :guilabel:`50%`, or :guilabel:`100%`.
-- :icon:`fa-object-ungroup` (:guilabel:`object`): Resize and rotate the image. Click the
-  :icon:`fa-object-ungroup` :guilabel:`(object)` icon a second time to reset the transformation.
 - :icon:`fa-crop` (:guilabel:`Crop image`): Crop the image manually or apply the following options:
 
    - Choose from the `Flexible`, `16:9`, `4:3`, `1:1`, or `2:3` aspect ratios.
@@ -286,9 +280,15 @@ apply any of the following formatting options:
    - Flip horizontally or vertically.
    - Reset the image.
 
+- :guilabel:`Resize`: Restore the image to its default size or set its size to :guilabel:`25%`,
+  :guilabel:`50%`, or :guilabel:`100%`.
+- :icon:`fa-search-plus` (:guilabel:`Preview image`): Preview the image, zoom in or out, rotate it,
+  print it, or download it. Exit the preview by clicking the :icon:`fa-times` :guilabel:`(close)`
+  icon in the top right corner.
+- :guilabel:`Caption`: Write a caption under 100 characters below the image.
 - :icon:`fa-link` (:guilabel:`Add a link`): Add a link to the image, type the URL, then click
   :guilabel:`Apply`. To remove the link, click :icon:`fa-unlink` (:guilabel:`Remove Link`).
-- :icon:`fa-exchange` (:guilabel:`Replace`): Replace the image by searching in the :doc:`Unsplash
+- :icon:`fa-file-image-o` (:guilabel:`Replace`): Replace the image by searching the :doc:`Unsplash
   </applications/general/integrations/unsplash>` database, adding a URL, or uploading a different
   one.
 - :icon:`fa-trash` (:guilabel:`Delete`): Delete the image.
