@@ -20,6 +20,8 @@ select :guilabel:`Open Street Map`.
      OpenStreetMap might not always be accurate. You can `join the OpenStreetMap community
      <https://www.openstreetmap.org/fixthemap>`_ to fix any issues encountered.
 
+.. _geolocation/google-places-api:
+
 **Google Places API map**
 
 The Google Places API map provides detailed info on places, businesses, and points of interest. It
@@ -36,4 +38,4 @@ To use it, select :guilabel:`Google Place Map` and enter your :ref:`API Key
    :alt: Google Places API key
 
 .. seealso::
-   :doc:`/applications/websites/website/configuration/address_autocomplete`
+   :doc:`address_autocomplete`
