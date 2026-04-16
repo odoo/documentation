@@ -15,7 +15,7 @@ and make payments using a dedicated kiosk or their own mobile device.
 
 .. cards::
 
-   .. card:: Use
+   .. card:: Workflow
       :target: point_of_sale/use
 
       Set up a POS, manage basic settings, and handle daily operations.
