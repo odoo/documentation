@@ -50,6 +50,7 @@ Other optional directories compose the module.
 - *wizard/* : regroups the transient models (``models.TransientModel``) and their views
 - *report/* : contains the printable reports and models based on SQL views. Python objects and XML views are included in this directory
 - *tests/* : contains the Python tests
+- *populate/* : contains the data population blueprints and optional generators
 
 
 File naming
@@ -119,6 +120,21 @@ activities and mail templates all related to mail module:
     |   |-- plant_nursery_data.xml
     |   |-- plant_nursery_demo.xml
     |   |-- mail_data.xml
+
+Concerning *populate*, blueprints are records of ``populate.blueprint`` that
+declaratively describe what data to create. They are typically shipped in the
+module's ``populate/`` directory and loaded automatically when the ``populate``
+module is upgraded. If this directory is a valid Python package (contains an
+``__init__.py``), its code is imported, allowing the module to register custom
+generators.
+
+.. code-block:: text
+
+    addons/plant_nursery/
+    |-- populate/
+    |   |-- plant_nursery.xml (blueprint records)
+    |   |-- __init__.py (optional, imports custom generators)
+    |   |-- generators.py (optional custom generators)
 
 Concerning *controllers*, generally all controllers belong to a single controller
 contained in a file named ``<module_name>.py``. An old convention in Odoo is to
@@ -195,6 +211,10 @@ The complete tree of our Odoo module therefore looks like
     |   |-- plant_nursery.py
     |   |-- plant_order.py
     |   |-- res_partner.py
+    |-- populate/
+    |   |-- plant_nursery.xml
+    |   |-- __init__.py
+    |   |-- generators.py
     |-- report/
     |   |-- __init__.py
     |   |-- plant_order_report.py

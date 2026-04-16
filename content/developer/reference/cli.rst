@@ -7,7 +7,9 @@ Command-line interface (CLI)
 The CLI :dfn:`command-line interface` offers several functionalities related to Odoo. You can use it
 to :ref:`run the server <reference/cmdline/server>`, :ref:`launch Odoo as a Python console
 environment <reference/cmdline/shell>`, :ref:`scaffold an Odoo module <reference/cmdline/scaffold>`,
-:ref:`populate a database <reference/cmdline/populate>` or :ref:`count the number of lines of code <reference/cmdline/cloc>`.
+:ref:`duplicate records <reference/cmdline/duplicate>`,
+:ref:`populate a database <reference/cmdline/populate>`, or
+:ref:`count the number of lines of code <reference/cmdline/cloc>`.
 
 .. important::
    The command to use to call the CLI depends on how you installed Odoo. In the examples below, we
@@ -1241,6 +1243,43 @@ Scaffolding is available via the :command:`odoo-bin scaffold` subcommand.
 
 This will create module *my_module* in directory */addons/*.
 
+.. _reference/cmdline/duplicate:
+
+`duplicate` - Duplicate Records
+===============================
+
+.. program:: odoo-bin duplicate
+
+Odoo Duplicate allows to duplicate existing data in a given database. This can be used
+for testing and benchmarking when large tables are needed. The duplication process
+introduces variation for some fields to respect ``UNIQUE`` constraints, among other things.
+It also follows x2Many relationships.
+
+.. seealso::
+    For generating synthetic data from scratch using blueprints, see :ref:`reference/cmdline/populate`.
+
+.. code-block:: console
+
+    $ odoo-bin duplicate -d <database> --models res.partner,account.move --factors 1000
+
+.. option:: -d <database>
+
+    name of the database to duplicate records in
+
+.. option:: --models <models>
+
+    list of models to duplicate. Models appearing twice will only be duplicated once.
+
+.. option:: --factors <factors>
+
+    list of duplication factors. A factor of ``3`` means the model's records will be copied
+    3 times, reaching 4x their original count. In case a factor is missing for a model, the
+    last factor in the list will be used.
+
+.. option:: --sep <separator>
+
+    separator used to generate record names
+
 .. _reference/cmdline/populate:
 
 `populate` - Populate a Database
@@ -1248,31 +1287,44 @@ This will create module *my_module* in directory */addons/*.
 
 .. program:: odoo-bin populate
 
-Odoo Populate allows to duplicate existing data in a given database. This can be used
-for testing and benchmarking when large tables are needed. The duplication process
-introduces variation for some fields to respect `UNIQUE` constraints, among other things.
-It also follows x2Many relationships.
+Generate synthetic data from a blueprint stored in ``populate.blueprint``.
+
+.. note::
+   The ``populate`` module must be installed on the target database before running this command.
+
+.. seealso::
+   This section documents the command-line interface only. For how to define and structure
+   blueprints, write custom generators, and use advanced populate features, see
+   :ref:`reference/populate`.
 
 .. code-block:: console
 
-    $ odoo-bin populate -d  my_database --models res.partner,account.move --factors 1000
+   $ odoo-bin populate -d <database> -b my_module.my_blueprint
 
-.. option:: -d <database>
+.. option:: -d <database>, --database <database>
 
-    name of the database to populate
+   Target database.
 
-.. option:: --models <models>
+.. option:: -b <blueprint>, --blueprint <blueprint>
 
-    list of models to populate. Models appearing twice will only be populated once.
+   Blueprint name or full xmlid. Required unless ``--resume`` is used.
 
-.. option:: --factors <factors>
+.. option:: --seed <seed>
 
-    list of populate factors. In case a factor is missing for a model, the last factor in
-    the list will be used.
+   Seed for deterministic generation.
 
-.. option:: --sep <separator>
+.. option:: --scale <factor>
 
-    separator used to generate record names
+   Multiply all record counts in the blueprint. Default: ``1``.
+
+.. option:: -j <workers>, --jobs <workers>
+
+   Number of parallel worker processes. Use ``auto`` to use all available CPU threads.
+   Default: ``1``.
+
+.. option:: --resume [session_id]
+
+   Resume the most recent unfinished session, or the specified session.
 
 .. _reference/cmdline/cloc:
 
