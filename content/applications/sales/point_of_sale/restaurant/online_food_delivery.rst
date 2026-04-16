@@ -34,6 +34,8 @@ Supported providers:
 - `Wolt <https://wolt.com/>`_
 - `Zomato <https://www.zomato.com>`_
 
+.. _pos/online_food_delivery/configuration:
+
 Configuration
 =============
 
