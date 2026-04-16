@@ -1,51 +1,48 @@
 :show-content:
 
-===
-Use
-===
+========
+Workflow
+========
 
-This section covers the essential daily operations of the Point of Sale, from initial setup and
-configuration to managing sales transactions, customer records, and receipt/invoice handling.
+Odoo Point of Sale allows for the :ref:`creation <pos/use/create-pos>` and :ref:`configuration
+<pos/use/settings>` of a point of sale as well as the management of typical daily operations. These
+include :ref:`opening the POS register <pos/use/open-register>` and :ref:`processing sales
+transactions <pos/use/sell>`, :ref:`registering and assigning customers <pos/use/customers>`,
+:ref:`handling returns and refunds <pos/use/refund>`, :ref:`managing the cash register
+<pos/use/cash-register>`, and :ref:`closing the POS register <pos/use/register-close>`.
 
-.. cards::
-
-   .. card:: Receipts
-      :target: use/receipts
-      :large:
-
-      Set up automatic printing, customize headers and footers, and learn how to reprint
-      past receipts.
-
-   .. card:: Invoices
-      :target: use/pos_invoices
-      :large:
-
-      Configure default invoicing parameters, issue invoices during checkout, and manage
-      reprinting or emailing them later.
+.. seealso::
+   - :doc:`use/receipts`
+   - :doc:`use/pos_invoices`
 
 .. _pos/use/create-pos:
 
 Create a POS
 ============
 
-If no point of sale exists yet in the database, a set of POS cards is displayed on the Point of Sale
+If no point of sale exists in the database, a set of POS cards is displayed on the Point of Sale
 :guilabel:`Dashboard`. Each card represents a business type. Click a card to create a POS with
 preconfigured settings tailored to that type. These settings can be adjusted later as needed.
 
 To create additional POS or to create one from scratch, go to :menuselection:`Point of Sale -->
-Configuration --> Point of Sales` and click :guilabel:`New`. Then, configure the :ref:`POS settings
-<pos/use/settings>` to meet your specific business requirements.
+Configuration --> Point of Sales`, click :guilabel:`New`, and type a name. Additionally, click
+:guilabel:`Configurations > Settings` to fully configure the point of sale.
 
-.. note::
-   Click :guilabel:`Configurations > Settings` to access more settings.
+.. tip::
+   Alternatively, go to :menuselection:`Point of Sale --> Configuration --> Settings` and click
+   :guilabel:`+ New Shop` in the header.
 
 .. important::
-   - To prevent the POS app tab from slowing down, disable the `Memory Saver
+   - To optimize the POS app tab's performance, disable the `Memory Saver
      <https://support.google.com/chrome/answer/12929150?hl=en#zippy=%2Cturn-memory-saver-on-or-off>`_
      setting in Google Chrome.
-   - Assign a dedicated :doc:`cash payment method <../point_of_sale/payment_methods>` and :ref:`cash
-     journal <accounting/journals/cash>` to each POS. This ensures that accounting entries are
+   - Assign a dedicated :doc:`cash payment method and a cash journal
+     <../point_of_sale/payment_methods>` to each POS. This ensures that accounting entries are
      separated and traceable to specific points of sale.
+
+.. seealso::
+   - :doc:`shop`
+   - :doc:`restaurant`
 
 .. _pos/use/settings:
 
@@ -59,12 +56,12 @@ Settings`. Then, open the :guilabel:`Point of Sale` dropdown menu and select the
    :alt: Dropdown menu to select the POS in the app settings
 
 .. tip::
-   To configure basic settings, access the POS dashboard, click the :icon:`fa-ellipsis-v`
-   (:guilabel:`vertical ellipsis`) icon on the relevant POS card, then select :guilabel:`Edit`.
-   In the popup window, you can:
+   To configure basic settings, go to :menuselection:`Point of Sale --> Dashboard`, click the
+   :icon:`fa-ellipsis-v` (:guilabel:`vertical ellipsis`) icon on the relevant POS card, then select
+   :guilabel:`Configure` to perform the following actions:
 
    - :doc:`Enable multiple employees to log in. <extra/employee_login>`
-   - :doc:`Connect and set up an IoT sytem. <hardware_network/pos_iot>`
+   - :doc:`Connect and set up an IoT system. <hardware_network/pos_iot>`
    - :doc:`Connect and set up an ePOS printer. <hardware_network/epos_ssc>`
 
 .. _pos/use/open-register:
@@ -72,23 +69,26 @@ Settings`. Then, open the :guilabel:`Point of Sale` dropdown menu and select the
 Open the POS register
 =====================
 
-Once the POS is fully :doc:`configured <hardware_network>`, access the POS interface by opening the
-register. Navigate to :menuselection:`Point of Sale --> Dashboard` and:
+The POS register is divided into three sections: the product selector, the cart to visualize the
+products added to the order, and the numpad for order actions. Once the POS is fully
+:doc:`configured <hardware_network>`, follow these steps to access the register:
 
+#. Go to :menuselection:`Point of Sale --> Dashboard`.
 #. On the relevant POS card, click :guilabel:`Open Register`.
-#. In the :guilabel:`Opening Control` popup, ensure the :guilabel:`Opening cash` amount is correct.
+#. In the :guilabel:`Opening Control` popover, ensure the :guilabel:`Opening cash` amount is
+   correct.
 #. Click :guilabel:`Open Register`.
 
 .. note::
-   - Once the register is open, :guilabel:`Open Register` is replaced by :guilabel:`Continue
-     Selling` on the POS card.
-   - You can switch between :doc:`multiple users <extra/employee_login>` from an open POS register,
-     provided :ref:`multi-employee management is enabled <pos/employee_login/use>`.
+   - Once the register is open, the :guilabel:`Open Register` button is replaced by the
+     :guilabel:`Continue Selling` button on the :guilabel:`Dashboard's` POS card.
+   - It is possible to switch between :doc:`multiple users <extra/employee_login>` from an open POS
+     register, provided :ref:`multi-employee management is enabled <pos/employee_login/use>`.
 
 From the POS interface header:
 
-- Click :guilabel:`Register` to access the register for daily POS actions such as :ref:`sales
-  <pos/use/sell>`, :ref:`refunds <pos/use/refund>`, etc.
+- Click :guilabel:`Register` to access the register for daily POS actions, such as :ref:`sales
+  <pos/use/sell>`, :ref:`refunds <pos/use/refund>`, and more.
 - Click :guilabel:`Orders` to access the POS :ref:`orders <pos/use/orders>` overview screen and
   retrieve past or ongoing orders.
 - Click the :icon:`fa-plus-circle` :guilabel:`(plus)` icon to put the current order aside and start
@@ -98,87 +98,91 @@ From the POS interface header:
 - Click the :icon:`fa-barcode` (:guilabel:`barcode`) icon to use a webcam as a barcode scanner.
 - Click the user's avatar to switch between employees, provided :ref:`multi-employee management is
   enabled <pos/employee_login/use>`.
-- Click the :icon:`fa-bars` (:guilabel:`hamburger menu`) icon to access more advanced options, such
-  as :ref:`closing the register <pos/use/register-close>`.
+- Click the :icon:`fa-bars` (:guilabel:`hamburger menu`) icon to access more advanced options, as
+  well as to :ref:`close the register <pos/use/register-close>`.
+
+.. image:: use/pos-register.png
+   :alt: POS register
 
 .. _pos/use/sell:
 
 Sell products
 =============
 
-The POS register can be divided into three sections: the cart, a pad to adjust cart items, apply
-discounts, set customers, etc., and the list of products. To make sales:
+To sell products in the :ref:`POS register <pos/use/open-register>`, follow these steps:
 
 #. Click on products to add them to the cart.
 
-   - To change the **quantity**, click :guilabel:`Qty` and enter the number of products using the
-     keypad.
-   - To add a **discount**, click :guilabel:`%` and enter the discount value using the keypad.
-   - To modify the product **price**, click :guilabel:`Price` and enter the new amount using the
-     keypad.
-#. Once the order is completed, click :guilabel:`Payment` to proceed to checkout.
-#. Select the :doc:`payment method <payment_methods>`.
-#. Enter the received amount, then click :guilabel:`Validate`.
-#. Click :guilabel:`New Order` to move on to the next order.
+   - To change the quantity, click :guilabel:`Qty`, then enter the number of products using the
+     numpad.
+   - To add a discount, click :guilabel:`%`, then enter the discount value using the numpad.
+   - To modify the product price, click :guilabel:`Price`, then enter the new amount using the
+     numpad.
+#. Optionally, add a :ref:`customer <pos/use/customers>` or a :ref:`note <pos/use/notes>` to the
+   order.
+#. Once the order is complete, click :guilabel:`Payment` to proceed to the payment screen.
+#. Select the :doc:`payment method <payment_methods>`, then enter the amount, if needed.
+#. Click :guilabel:`Validate`.
 
-.. image:: use/pos-register.png
-   :alt: POS register
+Once payment is successful, the :doc:`receipt <use/receipts>` can be printed or sent to the
+customer.
 
-.. note::
-   After clicking :guilabel:`Validate`, the order :ref:`receipt
-   <pos/configuration/receipt-configuration>` can be sent via email, SMS, or WhatsApp from the
-   :guilabel:`Receipt` screen.
+To move on to the next order, click :guilabel:`New Order` on the receipt screen.
 
-.. tip::
-   - You can use both `,` and `.` on the keyboard as decimal separators.
-   - **Cash** is selected by default if no :doc:`payment method <payment_methods>` is manually
-     selected.
+.. seealso::
+   :doc:`Issue invoices for registered customers <use/pos_invoices>`
 
 .. _pos/use/customers:
 
-Set customers
-=============
+Register and assign customers
+=============================
 
 Registering customers is necessary to :ref:`collect their loyalty points and grant them rewards
 <pos/pricing/loyalty>`, automatically apply an :ref:`attributed pricelist
-<pos/pricing/pricelists>`, or :ref:`generate and print invoices <pos/invoices/invoices>`.
+<pos/pricing/pricelists>`, or :doc:`generate and print invoices <use/pos_invoices>`.
 
-To create customers from :ref:`the POS register <pos/use/open-register>`:
+To create customers from the :ref:`POS register <pos/use/open-register>`:
 
 #. Click :guilabel:`Customer`.
 #. Click :guilabel:`Create`.
-#. Complete the customer form information and save.
+#. Enter the customer's details, then click :guilabel:`Save`.
 
 To create customers from the backend:
 
 #. Go to :menuselection:`Point of Sale --> Orders --> Customers`.
 #. Click :guilabel:`New`.
-#. Fill in the customer form information.
+#. Enter the customer's details and save.
 
-To assign a customer to an order, click :guilabel:`Customer` to open the :guilabel:`Choose customer`
-pop-up on the POS register or the payment screen, and select the desired customer. To change the
-customer, click their name in the pad, then select another one.
+To assign a customer to an order in the POS register or on the payment screen, click
+:guilabel:`Customer` and select the desired customer. To select a different customer, click the
+current customer's name on the numpad, then select another one.
 
 .. tip::
-   To edit the customer's details, click the customer's name in the pad, then click the
-   :icon:`fa-bars` (:guilabel:`hamburger menu`) icon next to the relevant customer and select
+   To edit the customer's details, click the customer's name on the numpad, click the
+   :icon:`fa-bars` (:guilabel:`hamburger menu`) icon next to the relevant customer, then select
    :guilabel:`Edit Details`.
 
 .. note::
-   Creating a new customer from the POS register or the payment screen assigns them automatically to
-   the current order upon saving.
+   Creating a new customer in the POS register or on the payment screen automatically assigns them
+   to the current order upon saving.
 
 Send marketing messages
 -----------------------
 
-Customers' contact details, such as their phone number or email addresses, are stored
-automatically when sending :doc:`receipts <use/receipts>` by email, SMS or Whatsapp. They can then
-be used, for example, for :doc:`marketing <../../marketing>` purposes.
+Customers' contact details, such as phone numbers or email addresses, are automatically stored when
+:doc:`receipts <use/receipts>` are sent via email, SMS, or WhatsApp. They can then be used, for
+example, for marketing purposes.
 
-To send marketing messages manually from the POS application, go to :menuselection:`Point of Sale
---> Orders --> Orders`, open a POS order form, navigate to the :guilabel:`Contact Info` category
-under the :guilabel:`Extra Info` tab, then click the :icon:`fa-envelope` (:guilabel:`email`) icon or
-:icon:`fa-whatsapp` (:guilabel:`whatsapp`) icon.
+To send marketing messages manually from the POS backend, follow these steps:
+
+#. Go to :menuselection:`Point of Sale --> Orders --> Orders`.
+#. Click a POS order and open the :guilabel:`Extra Info` tab.
+#. Under the :guilabel:`Contact Info` category, click the :icon:`fa-envelope` (:guilabel:`email`)
+   icon or the :icon:`fa-whatsapp` (:guilabel:`WhatsApp`) icon next to the completed
+   :guilabel:`Email` or :guilabel:`Mobile` field.
+
+.. note::
+   Make sure a customer is assigned to the order to send marketing messages manually.
 
 .. seealso::
    - :doc:`../../marketing/email_marketing`
@@ -187,20 +191,11 @@ under the :guilabel:`Extra Info` tab, then click the :icon:`fa-envelope` (:guila
 
 .. _pos/use/orders:
 
-Orders overview
-===============
+Access the orders overview
+==========================
 
-The :guilabel:`Orders` overview allows for viewing, searching, and retrieving orders from the POS
-interface. To access it, click :guilabel:`Orders` in the header.
-
-Then, search for orders in the search bar using their:
-
-- :guilabel:`Reference`
-- :guilabel:`Receipt Number`
-- :guilabel:`Date`
-- :guilabel:`Customer`
-- :guilabel:`Delivery Channel`
-- :guilabel:`Delivery Order Status`
+The orders overview allows for viewing, searching, and retrieving orders from the POS interface. To
+access it, click :guilabel:`Orders` in the POS interface header.
 
 To filter orders based on their status, click the :guilabel:`Active` dropdown menu and select one of
 the following options:
@@ -209,6 +204,11 @@ the following options:
   :guilabel:`Ongoing`, as well as those in the :guilabel:`Payment` or the :guilabel:`Receipt` stages
   (i.e., orders for which the receipt has been emailed to the customer).
 - :guilabel:`Paid`: Paid orders.
+- :guilabel:`Cancelled`: Orders cancelled on online platforms through :ref:`UrbanPiper
+  <pos/online_food_delivery/configuration>`.
+
+It is also possible to search for orders based on, for example, the :guilabel:`Receipt Number`,
+:guilabel:`Date`, or :guilabel:`Customer`.
 
 To navigate between pages, click the :icon:`fa-caret-left` or :icon:`fa-caret-right`
 (:guilabel:`caret`) icon.
@@ -216,11 +216,11 @@ To navigate between pages, click the :icon:`fa-caret-left` or :icon:`fa-caret-ri
 To access an order in the register, click it, then click :guilabel:`Load Order`.
 
 .. note::
-   Paid orders can be :ref:`refunded <pos/use/refund>`.
+   :guilabel:`Paid` orders can be :ref:`refunded <pos/use/refund>`.
 
 .. tip::
    - To define the number of orders visible on a page, click `1-x / x`. Enter a number lower than
-     the total number of pages, and click :guilabel:`Ok`.
+     the total number of pages, and click :guilabel:`Confirm`.
    - Click the :icon:`fa-trash` (:guilabel:`trash`) icon next to an :guilabel:`Active` order to
      delete it.
    - If using :doc:`presets <extra/presets>`, click one to view the related orders. Click it again
@@ -231,89 +231,133 @@ To access an order in the register, click it, then click :guilabel:`Load Order`.
 Return and refund products
 ==========================
 
-To refund a returned product, follow these steps:
+The steps to process a refund from the :ref:`POS register <pos/use/open-register>` depend on whether
+the refund is :ref:`based on an order <pos/use/refund-order-based>` or processed as a
+:ref:`standalone refund that is not based on an order <pos/use/refund-standalone>`.
 
-#. :ref:`Open or access the register <pos/use/open-register>` from the POS dashboard.
-#. Click the :icon:`fa-ellipsis-v` (:guilabel:`vertical ellipsis`) button, then :icon:`fa-undo`
-   :guilabel:`Refund`.
-
-   .. note::
-      Alternatively, you can refund orders from the :ref:`orders overview <pos/use/orders>` screen.
-      Access the list of orders and filter them by status to display only :guilabel:`Paid` orders.
-
-#. Select the relevant order from the order list.
-#. Select the items and use the keypad to set the refund quantity, then click :guilabel:`Refund`.
-#. Choose how to handle the refund:
-
-   - To reimburse the customer, select a payment method on the payment screen, then click
-     :guilabel:`Validate`.
-   - To issue a :ref:`gift card <ewallet_gift/gift-cards>` for the refund amount, click
-     :guilabel:`Back`. A new order containing the returned items (with negative quantities) is
-     created automatically. Then, add the gift card from the product list to the order; its value
-     is set automatically to match the total refund amount. Click :guilabel:`Payment`, then
-     :guilabel:`Validate` the refund.
+In both cases, the amount can be refunded or a :ref:`gift card <pos/pricing/loyalty>` issued for the
+refunded amount.
 
 .. note::
-   - You cannot add other products to the cart until the refund has been validated.
-   - Alternatively, refunds can be processed by:
-
-      - Selecting the returned product(s) from the POS register and setting a negative quantity
-        equal to the number of returned items. To do so, click :guilabel:`Qty` and :guilabel:`+/-`,
-        and update the quantity accordingly.
-      - Selecting the returned product(s) from the POS register and a :doc:`preset
-        <extra/presets>` set up for the return mode.
-      - Accessing the POS dashboard, navigating to :menuselection:`Point of Sale --> Orders -->
-        Orders`, selecting an order, and clicking :guilabel:`Return Products`.
-
-Once the return is validated, a corresponding credit note is generated, referencing the original
-:doc:`receipt <use/receipts>` or :doc:`invoice <use/pos_invoices>`.
+   Once the return is validated, a corresponding credit note is generated, referencing the original
+   :doc:`receipt <use/receipts>` or :doc:`invoice <use/pos_invoices>`.
 
 .. seealso::
    :doc:`/applications/finance/accounting/customer_invoices/credit_notes`
 
+.. _pos/use/refund-order-based:
+
+Order-based refunds
+-------------------
+
+To process a refund based on an order, follow these steps:
+
+#. Click the :icon:`fa-ellipsis-v` (:guilabel:`vertical ellipsis`) icon in the POS register.
+#. Select :guilabel:`Refund`. The orders overview opens, displaying all :guilabel:`Paid` orders.
+#. Select the product(s) to refund, and then enter the quantity to refund if needed.
+#. Click :guilabel:`Refund` to open the payment screen.
+#. Choose how to handle the refund:
+
+   - To refund the customer, on the payment screen, select a payment method, then click
+     :guilabel:`Validate`.
+   - To issue a :ref:`gift card <pos/pricing/loyalty>` for the refund amount, on the payment screen,
+     click :guilabel:`Back`. The cart displays the returned product(s) with a negative quantity.
+     Then, add the gift card from the product selector to the order; its value is automatically set
+     to match the total refund amount. Click :guilabel:`Payment`, then :guilabel:`Validate` the
+     refund.
+
+.. tip::
+   - Alternatively, access the list of paid orders by clicking :guilabel:`Orders` in the POS
+     interface header and selecting :guilabel:`Paid` from the :guilabel:`Active` dropdown menu.
+   - Refunds can also be initiated and processed from the backend. To do so, go to
+     :menuselection:`Point of Sale --> Orders --> Orders`, select an order, then click
+     :guilabel:`Return Products`. Note that this method can only be used to refund the entire order.
+
+.. _pos/use/refund-standalone:
+
+Standalone refunds
+------------------
+
+To process a standalone refund that is *not* based on an order, follow these steps:
+
+#. Select the relevant product from the POS register.
+#. Click :guilabel:`Qty` to enter the quantity to refund, then click :guilabel:`+/-` to set it as a
+   negative quantity.
+#. Click :guilabel:`Payment` to open the payment screen.
+#. Choose how to handle the refund:
+
+   - To refund the customer, on the payment screen, select a payment method, then click
+     :guilabel:`Validate`.
+   - To issue a :ref:`gift card <pos/pricing/loyalty>` for the refund amount, on the payment screen,
+     click :guilabel:`Back`. The cart displays the returned product(s) with a negative quantity.
+     Then, add the gift card from the product selector to the order; its value is automatically set
+     to match the total refund amount. Click :guilabel:`Payment`, then :guilabel:`Validate` the
+     refund.
+
+.. tip::
+   To facilitate management of standalone returns, create a :doc:`preset <extra/presets>` with only
+   the :guilabel:`Return mode` enabled. When this preset is selected from the POS register, the
+   quantity of any item added to the cart is set to negative.
+
 .. _pos/use/notes:
 
-Notes
-=====
+Add and manage notes
+====================
 
-Notes allow you to attach extra information to specific products in an order. There are two types of
-notes: internal notes and customer notes.
+Notes allow for extra information to be added to specific products in an order. There are two types
+of notes: :ref:`internal notes <pos/use/internal-notes>` and :ref:`customer notes
+<pos/use/customer-notes>`.
+
+.. tip::
+   If the same content is frequently used, configure a note model to save time. To create or edit
+   note models, go to :menuselection:`Point of Sale --> Configuration --> Note Models`, click
+   :guilabel:`New` or click the relevant note model, then complete or edit the :guilabel:`Name`
+   column.
 
 .. note::
-   Any notes added to a product from the :ref:`POS register <pos/use/open-register>` are displayed
-   on the :doc:`customer display <../point_of_sale/hardware_network/customer_display>`.
+   Any customer notes added to a product from the :ref:`POS register <pos/use/open-register>` are
+   displayed on the :doc:`customer display <../point_of_sale/hardware_network/customer_display>`.
+
+.. _pos/use/internal-notes:
 
 Internal notes
 --------------
 
-Internal notes provide information meant for staff (e.g., `no tomato` for the kitchen). These notes
-do not appear on the customer’s receipt. To add a note to an order, ensure no item is selected and
-click :guilabel:`Note`. Likewise, to add a note to one specific item, select it from the cart and
-click :guilabel:`Note`. Then, add or modify the note's content in the popup that opens:
+Internal notes provide information intended for staff (e.g., `no tomato` for the kitchen team) and
+do not appear on the customer's receipt.
 
-     - Type the note directly into the window, or
-     - Use a configured note model to save time if the same content is frequently used. Click on the
-       desired note model to insert its text.
+To add or edit an internal note from the POS register, follow these steps:
 
-To create or edit note models, navigate to :menuselection:`Point of Sale --> Configuration -->
-Note Models`, click :guilabel:`New` or the relevant note model, then complete or edit the
-:guilabel:`Name` column.
+#. If the note applies to:
+
+   - The entire order: Ensure no item is selected in the cart, then click :guilabel:`Note`.
+   - A specific item: Select the item in the cart, then click :guilabel:`Note`.
+#. Add or modify the note's content in the popover or select a previously configured note model.
+#. Click :guilabel:`Apply`.
+
+.. _pos/use/customer-notes:
 
 Customer notes
 --------------
 
-Notes for customers appear on :doc:`receipts <use/receipts>` and :doc:`invoices <use/pos_invoices>`.
+Customer notes appear on :doc:`receipts <use/receipts>` and :doc:`invoices <use/pos_invoices>`.
 They can be used, for example, to provide warranty details for a high-value item or specific care
 instructions, such as `Dry clean only`.
 
-To add a **customer note** from the :ref:`POS register <pos/use/open-register>` to a specific item,
-select a product from the cart and click the :icon:`fa-ellipsis-v` (:guilabel:`vertical ellipsis`)
-button. Click :guilabel:`Customer Note`, then add the note's content in the popup window.
+To add or edit a customer note from the POS register, follow these steps:
+
+#. If the note applies to:
+
+   - The entire order: Ensure no item is selected in the cart, click the :icon:`fa-ellipsis-v`
+     (:guilabel:`vertical ellipsis`) icon, then click :guilabel:`Customer Note`.
+   - A specific item: Select the item in the cart, click the :icon:`fa-ellipsis-v`
+     (:guilabel:`vertical ellipsis`) icon, then click :guilabel:`Customer Note`.
+#. Add or modify the note's content in the popover or select a previously configured note model.
+#. Click :guilabel:`Apply`.
 
 .. note::
-   - If no item is selected, the note applies for the whole order.
-   - Product notes from an :ref:`imported SO <pos/shop/so>` are displayed identically in
-     the cart.
+   Product notes from :ref:`imported sales orders <pos/shop/so>` are displayed in the same way as
+   customer notes.
 
 .. image:: use/customer-notes.png
    :alt: Customer note button and notes (SO and POS register) on products in the cart
@@ -323,25 +367,24 @@ button. Click :guilabel:`Customer Note`, then add the note's content in the popu
 Manage the cash register
 ========================
 
-Odoo POS allows you to determine which coins and bills are accepted. To set up the allowed coins and
-bills:
+Odoo POS allows accepted coins and bills to be defined. To set up the allowed coins and bills:
 
 #. Navigate to :menuselection:`Point of Sale --> Configuration --> Coins/Bills`.
 #. Click :guilabel:`New` to add a new value.
-#. Select the POS where this value is available in the :guilabel:`Point of Sale` column or leave the
-   field empty to make it available for all POS.
+#. Select the POS where this value is accepted in the :guilabel:`Point of Sales` column, or leave
+   the field empty to make it available for all POS.
 
-To record a cash in or cash out transaction not associated with a sale:
+To record a cash-in or cash-out transaction not associated with a sale from the POS register:
 
 #. Click the :icon:`fa-bars` (:guilabel:`hamburger menu`) icon on the POS interface.
 #. Click :guilabel:`Cash In/Out`.
-#. In the popup that opens, select :guilabel:`Cash In` or :guilabel:`Cash Out`.
-#. Enter the amount.
-#. Specify the reason for the addition or removal of cash, and :guilabel:`Confirm`.
+#. Select :guilabel:`Cash In` or :guilabel:`Cash Out` in the popover.
+#. Enter the amount in the field with the currency symbol.
+#. Specify the reason for the addition or removal of cash, and click :guilabel:`Confirm`.
 
 .. note::
    Only employees with :ref:`basic or advanced access rights <pos/employee_login/configuration>`
-   are allowed to perform cash in/out actions.
+   are allowed to perform cash-in/out actions.
 
 .. _pos/use/register-close:
 
@@ -351,24 +394,26 @@ Close the POS register
 To close the POS register, click the :icon:`fa-bars` (:guilabel:`hamburger menu`) icon, then
 :guilabel:`Close Register`.
 
-In the :guilabel:`Closing Register` pop-up that opens, you can view:
+The :guilabel:`Closing Register` popover displays:
 
 - The number of orders and the total amount made during the session.
 - The expected amounts grouped by payment method.
 
-#. Click :icon:`fa-money` (:guilabel:`money`) to specify the number of each coin and bill.
-#. Click :guilabel:`Confirm` to return to the previous pop-up window. The computed amount is set in
-   the :guilabel:`Cash Count` field, and the :guilabel:`Closing Details` are specified in the
-   :guilabel:`Closing Note` section.
-#. Click :guilabel:`Close Register` to close the register and post accounting entries.
+Click the :icon:`fa-money` (:guilabel:`money`) icon to specify the number of coins and bills, then
+click :guilabel:`Confirm`.
+
+Click :guilabel:`Close Register` to close the register and post accounting entries.
 
 .. tip::
-   Click :icon:`fa-clone` (:guilabel:`clone`) to automatically fill in the field with the expected
-   cash amount.
+   Click the :icon:`fa-clone` (:guilabel:`clone`) icon to automatically fill in the field with the
+   expected cash amount.
 
 .. note::
+   - After specifying the number of coins and bills, the computed amount is set in the
+     :guilabel:`Cash Count` field, and the :guilabel:`Closing details` are specified in the
+     :guilabel:`Closing note` section.
    - Closing the register of a :doc:`restaurant <restaurant>` POS when orders are still in draft
-     and not scheduled for later is not allowed and opens a pop-up window on which you can either
+     and not scheduled for later is not allowed and opens a popover with options to
      :guilabel:`Review Orders` or :guilabel:`Cancel Orders`.
    - It is strongly advised to close the POS register at the end of each day.
 
