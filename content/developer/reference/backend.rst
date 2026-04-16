@@ -16,5 +16,6 @@ Server framework
    backend/security
    backend/performance
    backend/testing
+   backend/populate
    backend/http
    backend/mixins
