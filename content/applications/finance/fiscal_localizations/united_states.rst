@@ -11,6 +11,7 @@ United States
 .. |CFS| replace:: :abbr:`CFS (Cash Flow Statement)`
 .. |NACHA| replace:: :abbr:`NACHA (National Automated Clearing House Association)`
 .. |ACH| replace:: :abbr:`ACH (Automated Clearing House)`
+.. |P&L| replace:: :abbr:`P&L (Profit and Loss)`
 
 The Odoo fiscal localization package for the United States follows the Generally Acceptable
 Accounting Principles (GAAP) accounting standards and rules used to prepare financial statements, as
@@ -33,26 +34,20 @@ workflows, and provide in-depth looks at some specific use cases, as well.
 Configuration
 =============
 
-Below are the available modules in Odoo for accounting use in the United States.
+The core module for the US fiscal localization is included in the default package installed during
+database initialization. Verify the US package is in use by navigating to :menuselection:`Accounting
+App --> Settings`. Under the :guilabel:`Fiscal Localization` section, the :guilabel:`Package` field
+should be set to `United States`. This package includes the necessary settings for the US
+localization for the Odoo **Accounting** app.
 
-.. note::
-   The modules listed below are either for reference only or are optional, as the core requirements
-   to operate under the US fiscal localization in Odoo are already included under the default
-   package that came installed during database initialization.
+.. image:: united_states/us-l10n-package.png
+   :alt: The Package field with the United States package selected.
 
-   Verify the default package is in use by navigating to :menuselection:`Accounting App -->
-   Settings` and under the :guilabel:`Fiscal Localization` section at the top, look for the `Generic
-   Chart Template` selection to be listed next to the :guilabel:`Package` field label. This chart
-   template includes the necessary settings for the US localization for the Odoo **Accounting** app.
+Optional modules
+----------------
 
-   .. image:: united_states/us-l10n-generic-chart-template.png
-      :alt: The Generic Chart Template comes preconfigured for the US localization.
-
-Modules installation
---------------------
-
-:ref:`Install <general/install>` the following modules to get all the features of the United States
-localization:
+The following modules may be :ref:`installed <general/install>` for additional functionality
+specific to the US fiscal localization:
 
 .. list-table::
    :header-rows: 1
@@ -269,26 +264,26 @@ Reports
 A number of :doc:`report selections <../accounting/reporting>` are readily available for the US
 localization, under the :menuselection:`Accounting app --> Reporting` drop-down menu:
 
-- :ref:`Balance Sheet <accounting/reporting/balance-sheet>`: a "snapshot" of a company's financial
+- :ref:`Balance Sheet <accounting/reporting/balance-sheet>`: A "snapshot" of a company's financial
   position at a specific point in time, which contains an overview of a company's assets,
   liabilities, and equity.
-- :ref:`Profit & Loss <accounting/reporting/balance-sheet>`: otherwise known as a *P&L statement* or
-  *income statement*, provides a summary of a company's revenues, expenses, and profits/losses over
-  a given period of time.
-- :ref:`Cash Flow Statement <l10n_us/cash-flow-statement>`: shows how much cash and cash equivalents
+- :ref:`Profit and Loss (P&L) <l10n_us/profit-loss-statement>`: Provides a summary of a company's
+  revenues, expenses, and profits/losses over a given period of time. Also known as a *P&L
+  statement* or *income statement*.
+- :ref:`Cash Flow Statement <l10n_us/cash-flow-statement>`: Shows how much cash and cash equivalents
   a company has received and spent in a given period.
-- :ref:`Executive Summary <accounting/reporting/executive-summary>`: an overview report that covers
+- :ref:`Executive Summary <accounting/reporting/executive-summary>`: An overview report that covers
   the key performance indicators of a company's financial position, such as revenue, profit, and
   debt.
-- :ref:`Tax Report <accounting/reporting/tax-report>`: an official form filed for a tax authority
+- :ref:`Tax Report <accounting/reporting/tax-report>`: An official form filed for a tax authority
   that reports income, expenses, and other pertinent tax information. Tax reports allow taxpayers to
   calculate their tax liability, schedule tax payments, or request refunds for the overpayment of
   taxes. In Odoo, the tax report can be made monthly, every two months, quarterly, every 4 months,
   semi-annually, and annually.
-- :guilabel:`Check Register`: a report that displays cash transactions (regardless of the journal)
+- :guilabel:`Check Register`: A report that displays cash transactions (regardless of the journal)
   with their running balance after the transaction. Only visible with the *US - Accounting Reports*
   (`l10n_us_reports`) module installed.
-- :ref:`1099 Report <l10n_us/1099-report>`: a CSV download of payments made to non-employees in a
+- :ref:`1099 Report <l10n_us/1099-report>`: A CSV download of payments made to non-employees in a
   period to file electronically in a third-party service. Only visible with the *1099 Reporting*
   (`l10n_us_1099`) module installed.
 
@@ -296,14 +291,14 @@ localization, under the :menuselection:`Accounting app --> Reporting` drop-down 
 
 Depending on the type of report, certain filters are available at the top of the dashboard:
 
-- a *date* filter, indicated by a :icon:`fa-calendar` :guilabel:`(calendar)` icon that precedes a
+- A *date* filter, indicated by a :icon:`fa-calendar` :guilabel:`(calendar)` icon that precedes a
   date in *MM/DD/YYYY* format. Use this to select a specific date or date range for the report.
-- a :icon:`fa-bar-chart` :guilabel:`Comparison` filter, to compare reporting periods against each
+- A :icon:`fa-bar-chart` :guilabel:`Comparison` filter, to compare reporting periods against each
   other
-- a *journal* filter, as indicated by a :icon:`fa-book` :guilabel:`(book)` icon and the default
+- A *journal* filter, as indicated by a :icon:`fa-book` :guilabel:`(book)` icon and the default
   setting of :guilabel:`All Journals`. Use this filter to specify which journals should be included
   in the report.
-- an *entries type* filter, as indicated by a :icon:`fa-filter` :guilabel:`(filter)` icon, with the
+- An *entries type* filter, as indicated by a :icon:`fa-filter` :guilabel:`(filter)` icon, with the
   default setting of :guilabel:`Posted Entries Only, Accrual Basis`. Use this filter to determine
   which type of journal entries should be included in the report (e.g. posted or draft), along with
   the type of accounting method (e.g. accrual or cash basis).
@@ -315,11 +310,11 @@ Depending on the type of report, certain filters are available at the top of the
     .. image:: united_states/us-l1on-accounting-method-reporting-menu.png
        :alt: Accounting method filter menu for reports, covering accrual vs. cash basis methods.
 
-- a *decimal* filter, that by default, includes figures with cents, as indicated by the
+- A *decimal* filter, that by default, includes figures with cents, as indicated by the
   :guilabel:`In .$` setting. Use the other options in the drop-down menu to change figures in the
   report to whole numbers (:guilabel:`In $`), thousands (:guilabel:`In K$`), or millions
   (:guilabel:`In M$`) formats.
-- a report *customization* filter, indicated by the :icon:`fa-cogs` :guilabel:`(gears)` icon. Use
+- A report *customization* filter, indicated by the :icon:`fa-cogs` :guilabel:`(gears)` icon. Use
   this filter to customize the current report's sections and line items, or build new reports, as
   desired.
 
@@ -387,6 +382,57 @@ Additionally, the cash flow statement in Odoo:
 
    .. image:: united_states/us-l10n-operating-expenses-example.png
       :alt: Example of a bill registered as an operating expense as part of a cash flow statement.
+
+.. _l10n_us/profit-loss-statement:
+
+Profit & loss statement
+-----------------------
+
+To view the |P&L| statement, navigate to :menuselection:`Accounting --> Reporting --> Profit and
+Loss`. To conform with |GAAP| standards and facilitate migration from other US accounting software,
+the labels of the generic |P&L| statement are modified for the US localization. The structure and
+formulas in this :doc:`custom report <../accounting/reporting/customize>` are identical to the
+generic report.
+
+To view the labels used in the report, enter :ref:`developer mode <developer-mode>`, navigate to the
+|P&L| statement, and click the :icon:`fa-cogs` :guilabel:`(cogs)` smart button. The US |P&L|
+statement line items correspond to the generic |P&L| statement line items as follows:
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 0
+
+   * - Generic P&L Statement
+     - US P&L Statement
+   * - Revenue
+     - Income
+   * - Less Costs of Revenue
+     - Cost of Sales
+   * - Gross Profit
+     - Gross Profit
+   * - Less Operating Expenses
+     - Expense
+   * - Operating Income (or Loss)
+     - Net Operating Income
+   * - Plus Other Income
+     - Other Income
+   * - Less Other Expenses
+     - Other Expense
+   * - *--*
+     - Net Other Income
+   * - Net Profit
+     - Net Income
+   * - Less Allocations and Plus Withdrawals
+     - *--*
+   * - Net Profit Left After Allocations and Withdrawals
+     - *--*
+
+.. note::
+   *Net Other Income* is calculated by subtracting *Other Expense* from *Other Income*.
+
+   European accounting frameworks include appropriation of profit in the generic |P&L| statement.
+   Under |GAAP| accounting standards, the |P&L| statement summarizes performance only. As a result,
+   the US report does not include *Allocations and Withdrawals*.
 
 .. _l10n_us/cash-discount:
 
