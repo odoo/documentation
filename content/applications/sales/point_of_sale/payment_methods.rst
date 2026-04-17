@@ -9,6 +9,35 @@ options, including cash, card payments through a :ref:`configured payment termin
 <pos/terminals/configuration>`, :doc:`online payments <../../finance/payment_providers>`, or
 :doc:`customer accounts <payment_methods/customer_credit>`.
 
+.. cards::
+
+   .. card:: Cash machines
+      :target: payment_methods/cash_machines
+
+      Integrate cash machines to automate cash handling and transaction validation.
+
+   .. card:: Customer account
+      :target: payment_methods/customer_credit
+
+      Allow customers to pay on credit, deposit funds, and manage their debt directly from the POS.
+
+   .. card:: QR code payments
+      :target: payment_methods/qr_code_payment
+
+      Generate QR codes for customers to scan and pay using mobile banking apps.
+
+   .. card:: Payment terminals
+      :target: payment_methods/terminals
+
+      Connect and configure supported card terminals (e.g., Adyen, Stripe, Ingenico) to process card
+      payments.
+
+.. seealso::
+   `Payment methods (video tutorial) <https://www.youtube.com/watch?v=eHr4tS8Wmss>`_
+
+Configuration
+-------------
+
 To create a payment method, go to :menuselection:`Point of Sale --> Configuration --> Payment
 Methods`, click :guilabel:`New`, and follow the next steps:
 
@@ -53,31 +82,26 @@ Methods`, click :guilabel:`New`, and follow the next steps:
    - Always set the :guilabel:`Journal` to :guilabel:`Bank` when :ref:`configuring a payment
      terminal <pos/terminals/configuration>`.
 
-.. cards::
+One-click payment
+-----------------
 
-   .. card:: Cash machines
-      :target: payment_methods/cash_machines
+The one-click payment feature allows you to bypass the payment screen for a faster checkout. To
+activate this setting, navigate to the :ref:`POS settings <pos/use/settings>`, scroll down to the
+:guilabel:`Payment` section, and enable :guilabel:`One-click Payment`. Then, select one or multiple
+payment methods in the :guilabel:`Payment Methods` field.
 
-      Integrate cash machines to automate cash handling and transaction validation.
+Once activated and configured, :ref:`open the POS register <pos/use/open-register>` and add products
+to the cart. The previously selected payment methods are displayed as shortcut buttons next to the
+:guilabel:`Payment` button. Clicking a payment method validates the order immediately and brings
+you to the receipt screen.
 
-   .. card:: Customer account
-      :target: payment_methods/customer_credit
+.. important::
+   While cash payments are supported, the one-click payment feature assumes the amount received is
+   exact. If the customer requires change, use the standard :guilabel:`Payment` button to enter the
+   amount tendered manually.
 
-      Allow customers to pay on credit, deposit funds, and manage their debt directly from the POS.
-
-   .. card:: QR code payments
-      :target: payment_methods/qr_code_payment
-
-      Generate QR codes for customers to scan and pay using mobile banking apps.
-
-   .. card:: Payment terminals
-      :target: payment_methods/terminals
-
-      Connect and configure supported card terminals (e.g., Adyen, Stripe, Ingenico) to process card
-      payments.
-
-.. seealso::
-   `Payment methods (video tutorial) <https://www.youtube.com/watch?v=eHr4tS8Wmss>`_
+.. note::
+   The feature is unavailable for online, delivery, terminal, or ID-verified payment methods.
 
 .. toctree::
    :titlesonly:
