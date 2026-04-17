@@ -367,13 +367,25 @@ In the :guilabel:`Closing Register` pop-up that opens, you can view:
    cash amount.
 
 .. note::
-   - When the money counted does **not** match the expected amount, a :guilabel:`Payments
-     Difference` window automatically pops up. Selecting :guilabel:`Proceed Anyway` validates the
-     session and automatically posts the discrepancy to the designated cash difference journal.
    - Closing the register of a :doc:`restaurant <restaurant>` POS when orders are still in draft
      and not scheduled for later is not allowed and opens a pop-up window on which you can either
      :guilabel:`Review Orders` or :guilabel:`Cancel Orders`.
    - It is strongly advised to close the POS register at the end of each day.
+
+Set maximum difference
+----------------------
+
+When the counted money does **not** match the expected amount, a :guilabel:`Payments Difference`
+window appears, prompting you to acknowledge the discrepancy. Click :guilabel:`Proceed Anyway` to
+accept the difference and post it to the designated cash difference journal.
+
+To restrict this behavior, you can prevent users from closing the register when a discrepancy occurs
+by enabling the :guilabel:`Set Maximum Difference` setting in the :guilabel:`Payment` section of the
+:ref:`POS settings <pos/use/settings>`. Then, specify the allowed limit in the :guilabel:`Authorized
+Difference` field.
+
+Once configured, if a discrepancy exceeds this limit, the pop-up window displays the authorized
+threshold and instructs the user to contact a manager to approve the closing.
 
 .. seealso::
    - :doc:`shop`
