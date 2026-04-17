@@ -141,4 +141,5 @@ Odoo always uses two rules to compute the price of a product when a rental order
    rental/products
    rental/service_products
    rental/manage_deposits
+   rental/customer_signature
 
