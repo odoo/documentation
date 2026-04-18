@@ -14,6 +14,11 @@ exchanging a code from the authenticator when trying to log in.
 This means an unauthorized user would need to guess the account password *and* have access to the
 authenticator, which is a more difficult proposition.
 
+.. note::
+   Some governments, such as the :doc:`Australian <../../finance/fiscal_localizations/australia>`
+   government, require |2fa|. For these :doc:`fiscal localizations
+   <../../finance/fiscal_localizations>`, it is not possible to deactivate |2fa|.
+
 Requirements
 ============
 
@@ -32,7 +37,7 @@ Phone-based authenticators are the easiest and most commonly used. Examples incl
 Password managers are another option. Common examples include:
 
 - `1Password <https://support.1password.com/one-time-passwords/>`_
-- `Bitwarden <https://bitwarden.com/help/article/authenticator-keys/>`_,
+- `Bitwarden <https://bitwarden.com/help/article/authenticator-keys/>`_
 
 .. note::
    The remainder of this document uses Google Authenticator as an example, as it is one of the most

@@ -9,6 +9,8 @@ time periods, etc., and is useful for creating pricing strategies and optimizing
 Odoo **Sales** has a useful pricelist feature that can be tailored to fit any unique pricing
 strategy. Pricelists suggest certain prices, but they can always be overridden on the sales order.
 
+.. _sales/products/pricelist-configuration:
+
 Configuration
 =============
 
@@ -32,18 +34,14 @@ modified at any time.
 
 .. important::
    If there is no specific pricelist configured on a sales quotation, the :guilabel:`Default`
-   pricelist is applied.
+   pricelist is applied. The :guilabel:`Default` pricelist is the first pricelist found in
+   :menuselection:`Sales app --> Products --> Pricelists` without an assigned :guilabel:`Country
+   Group`. Odoo will read the :guilabel:`Pricelist Name` column from top to bottom to determine the
+   :guilabel:`Default` pricelist.
 
 .. note::
    The :guilabel:`Selectable` column is only applicable to Odoo **eCommerce**. This option allows
    website visitors to choose a pricelist when shopping in your **eCommerce** website.
-
-.. note::
-   In Odoo 17 (and above), you are *not required* to enter a pricelist in the :guilabel:`Pricelist`
-   field on a sales quotation form in order to confirm it (i.e. turn it into a sales order).
-
-   The chatter section is available on pricelist forms, which allows you to add notes and
-   communications on each pricelist page.
 
 Creating and editing pricelists
 -------------------------------
@@ -173,7 +171,6 @@ and :guilabel:`Pricing` options. When the configurations are complete, click the
 Close` button.
 
 .. image:: pricing/time-period-popup.png
-   :align: center
    :alt: Custom time period pop-up form in Odoo Sales.
 
 Lastly, add the desired price for this recurring price rule in the :guilabel:`Recurring Price`
@@ -199,26 +196,10 @@ Lastly, configure a :guilabel:`Price` for the rental rule in the respective colu
 .. image:: pricing/sales-pricelist-rental.png
    :alt: The rental tab in a pricelist configuration form.
 
-Ecommerce Tab
--------------
+.. seealso::
+   :doc:`Ecommerce price configuration </applications/websites/ecommerce/products/prices>`
 
-Under the :guilabel:`Ecommerce` tab, price rules can be configured for products sold on an
-:doc:`Ecommerce website <../../../../websites/ecommerce/products>`.
-
-To enable the pricelist to be visible, select the target website in the :guilabel:`Website` field.
-
-The :guilabel:`Selectable` can be enabled to allow the customer to choose this pricelist.
-
-Finally, promotional and loyalty codes can be added to the :guilabel:`E-commerce Promotional Code`
-field.
-
-Tick the :guilabel:`Selectable` checkbox to have this pricelist as a selectable option for customers
-to choose as they shop. If the :guilabel:`Selectable` box is left unticked, customers **cannot**
-select this pricelist for themselves.
-
-Lastly, there is the option to add an :guilabel:`E-commerce Promotional Code`. To add a code, type
-in the desired promo code that, when entered during the checkout process, applies the pricelist to
-the customer, even if the customer does not fall into the previously-specified criteria.
+.. _sales/products/customer-pricelist-application:
 
 Customer pricelist application
 ==============================
@@ -231,7 +212,6 @@ app --> Orders --> Customers` and selecting the customer from the main :guilabel
 or by clicking on the customer's name on a sales order.
 
 .. image:: pricing/customer-detail-form.png
-   :align: center
    :alt: Sample customer detail form in Odoo Sales.
 
 On the desired customer's contact form, under the :guilabel:`Sales & Purchase` tab, in the
@@ -239,7 +219,6 @@ On the desired customer's contact form, under the :guilabel:`Sales & Purchase` t
 the drop-down menu in the :guilabel:`Pricelist` field.
 
 .. image:: pricing/customer-form-pricelist-field.png
-   :align: center
    :alt: The pricelist field in a customer detail form in Odoo Sales.
 
 .. note::
@@ -285,4 +264,4 @@ rule on a fresh form.
 
 .. seealso::
    - :doc:`/applications/sales/sales/products_prices/prices/currencies`
-   - :doc:`/applications/websites/ecommerce/products/price_management`
+   - :doc:`/applications/websites/ecommerce/products/prices`

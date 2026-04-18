@@ -17,6 +17,7 @@ FORBIDDEN_HEADING_DELIMITER_RE = re.compile(
 )
 GIT_CONFLICT_MARKERS = ['<' * 7, '>' * 7]
 ALLOWED_EARLY_BREAK_RE = re.compile(r'^\s*(\.\. |:\S+:\s+)', re.IGNORECASE)  # Contains markup.
+TOCTREE_DIRECTIVE_RE = re.compile(r'^\s*\.\.\s+toctree::\s*$', re.IGNORECASE)
 
 
 @sphinxlint.checker('.rst')
@@ -136,12 +137,31 @@ def check_early_line_breaks(file, lines, options=None):
         else:
             return next_line_.split(' ', 1)[0]
 
+    # Skip indented body lines after .. toctree:: (path lists, :maxdepth:, etc.)
+    toctree_skip = set()
+    in_toctree = False
+    for i, line in enumerate(lines):
+        if TOCTREE_DIRECTIVE_RE.match(line):
+            in_toctree = True
+            continue
+        if not in_toctree:
+            continue
+        stripped = line.strip()
+        if stripped == '':
+            continue
+        if line.startswith(' ') or line.startswith('\t'):
+            toctree_skip.add(i)
+        else:
+            in_toctree = False
+
     for lno, line in enumerate(lines):
         if lno + 1 < len(lines):
+            if lno in toctree_skip or (lno + 1) in toctree_skip:
+                continue
             next_line = lines[lno + 1]
             if (
-                is_valid_line(line, ('+', '|'))
-                and is_valid_line(next_line, ('+', '|', '- ', '* ', '#. '))
+                is_valid_line(line, ('+', '| '))
+                and is_valid_line(next_line, ('+', '| ', '- ', '* ', '#. '))
             ):
                 current_line_remaining_space = options.max_line_length - len(line.rstrip())
                 next_line_first_word = get_next_line_first_word(next_line).rstrip()

@@ -11,6 +11,8 @@ respective quantities, that are needed to produce or repair a product. In Odoo, 
 blueprints for manufactured goods and kits, and often include production operations and step-by-step
 guidelines, as well.
 
+.. _manufacturing/basic_setup/bom-setup:
+
 BoM setup
 =========
 

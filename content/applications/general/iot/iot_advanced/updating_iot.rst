@@ -80,8 +80,8 @@ are not functioning properly with the IoT system, proceed as follows:
 
 .. important::
    If you have an :doc:`on-premise </administration/on_premise>` or :doc:`Odoo.sh
-   </administration/odoo_sh/overview/introduction>` database, the configured server must be
-   up-to-date to ensure the handlers' code includes the latest fixes and patches.
+   </administration/odoo_sh>` database, the configured server must be up-to-date to ensure the
+   handlers' code includes the latest fixes and patches.
 
 .. note::
    A handler update is also performed automatically every time the IoT system is restarted unless

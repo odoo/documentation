@@ -25,11 +25,13 @@ On top of technical data, business data can be defined, e.g. countries, currenci
 as well as complete country localization (legal reports, tax definitions, chart of account), and much
 more...
 
+
+.. _tutorials/define_module_data/demo_data:
+
 Demo Data
 ---------
 
-In additional to master data, which are requirements for a module to work properly, we also like
-having data for demonstration purposes:
+In addition to master data, which is required for a module to work properly, we can also provide data for demonstration purposes:
 
 * Help the sales representatives make their demos quickly.
 * Have a set of working data for developers to test new features and see how these new features look

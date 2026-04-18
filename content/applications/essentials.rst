@@ -4,6 +4,7 @@ Odoo essentials
 
 .. toctree::
 
+   essentials/stages
    essentials/activities
    essentials/reporting
    essentials/search

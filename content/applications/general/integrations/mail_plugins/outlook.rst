@@ -6,10 +6,23 @@ Outlook allows for third-party applications to connect in order to execute datab
 emails. Odoo has a plugin for Outlook that allows for the creation of an opportunity from the email
 panel.
 
+.. note::
+   The Outlook plugin is available for both the desktop and web versions of Outlook. See
+   `Microsoft's add-in article
+   <https://support.microsoft.com/en-us/office/use-add-ins-in-outlook-1ee261f9-49bf-4ba6-b3e2-2ba7bcab64c8>`_.
+
 Configuration
 =============
 
 The Outlook :doc:`Mail Plugin <../mail_plugins>` needs to be configured both on Odoo and Outlook.
+
+.. important::
+   Make sure to check the database version in the :guilabel:`Settings app --> General Settings`, at
+   the bottom of the page.
+
+   For database versions 19.2 and later, see the `latest documentation
+   <https://www.odoo.com/documentation/master/applications/general/integrations/mail_plugins/outlook.html>`_
+   for installation instructions.
 
 .. _mail-plugin/outlook/enable-mail-plugin:
 
@@ -94,8 +107,8 @@ The right-side panel can now display **Company Insights**. At the bottom, click 
 
    For Google Chrome, change the browser cookie settings by following the guide at:
    `https://support.google.com/chrome/answer/95647
-   <https://support.google.com/chrome/answer/95647>`_
-   and adding `download.odoo.com` to the list of :guilabel:`Sites that can always use cookies`.
+   <https://support.google.com/chrome/answer/95647>`_ and adding `download.odoo.com` to the list of
+   :guilabel:`Sites that can always use cookies`.
 
    Once this is complete, the Outlook panel needs to be opened again.
 

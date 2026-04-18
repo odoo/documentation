@@ -5,159 +5,85 @@ Adyen
 `Adyen <https://www.adyen.com/>`_ is a Dutch company that offers several online payment
 possibilities.
 
-.. seealso::
-   - :ref:`payment_providers/add_new`
-   - :doc:`../payment_providers`
+.. note::
+   Adyen only works with customers processing **more than 10 million annually** or invoicing a
+   **minimum of 1000 transactions per month**.
+
+.. _payment_providers/adyen/configure_dashboard:
+
+Adyen configuration
+===================
+
+#. Create an Adyen account if necessary and log into your Adyen Customer Area.
+
+   .. tip::
+      Log into your **Test account** to try the integration without charging customers.
+      Switch to your **Live account** once you are ready to accept payments.
+
+#. `Contact the Adyen support team <https://docs.adyen.com/platforms/quickstart-guide/support#contact-adyen-support>`_
+   to enable the **Multiple partial capture** feature.
+#. In the Adyen Customer Area, go to :menuselection:`Developers --> API credentials` and click the
+   relevant API credential user name in the list or click :guilabel:`Create new credential` to
+   create a new one.
+#. In the :guilabel:`Server settings` section, click :guilabel:`Generate API key`, then click the
+   :icon:`fa-copy` (:guilabel:`Copy API key`) icon and save the value for the
+   :ref:`payment_providers/adyen/configure_odoo` step.
+#. In the :guilabel:`Client settings` section, click :guilabel:`Generate client key`, then
+   click the :icon:`fa-copy` (:guilabel:`Copy API key`) icon and save the value for
+   the :ref:`payment_providers/adyen/configure_odoo` step.
+#. Enter your Odoo website URL in the :guilabel:`Add allowed origins` field, then click
+   :guilabel:`Add`.
+#. Click :guilabel:`Save changes` at the bottom of the page.
+#. Go to :menuselection:`Developers --> Webhooks` in the left menu and click :guilabel:`Create new
+   webhook`.
+#. In the :guilabel:`Create new webhook` popup, click :guilabel:`Add` on to the :guilabel:`Standard
+   webhook` line.
+#. On the :guilabel:`Webhook generation` form, in the :guilabel:`Server configuration` section,
+   enter your Odoo database :guilabel:`URL` followed by `/payment/adyen/notification`.
+#. In the :guilabel:`Security` section, click :guilabel:`Generate` under :guilabel:`HMAC`, then
+   click the :icon:`fa-copy` (:guilabel:`Copy HMAC to the clipboard`) icon and save the value for
+   the :ref:`payment_providers/adyen/configure_odoo` step.
+#. Click :guilabel:`Save configuration` at the bottom of the page.
+#. Go to :menuselection:`Developers --> API URLs`, then copy the :guilabel:`Prefix` and save it for
+   the :ref:`payment_providers/adyen/configure_odoo` step.
+
+.. _payment_providers/adyen/configure_odoo:
+
+Odoo configuration
+==================
+
+#. :ref:`Navigate to the Adyen payment provider<payment_providers/add_new>`.
+#. Fill in the :guilabel:`Merchant account`, :guilabel:`API Key`, :guilabel:`Client Key`,
+   :guilabel:`HMAC Key`, and :guilabel:`API URL Prefix` fields with the values saved at the
+   :ref:`Adyen configuration step <payment_providers/adyen/configure_dashboard>`.
+#. Configure the remaining options as needed.
+#. Set the :guilabel:`State` field to :guilabel:`Enabled`.
+
+.. tip::
+   If you want to :ref:`test Adyen without affecting live transactions
+   <payment_providers/test-mode>`, use your **Test account** credentials, enter
+   `https://checkout-test.adyen.com` in the :guilabel:`API URL Prefix` field, and set the
+   :guilabel:`State` field to :guilabel:`Test Mode`.
+
+Manual capture
+==============
+
+To enable :ref:`manual capture <payment_providers/manual_capture>` for Adyen payments, follow
+these steps:
+
+#. :ref:`Navigate to the Adyen payment provider <payment_providers/add_new>`.
+#. Go to the :guilabel:`Configuration` tab and enable :guilabel:`Capture Amount Manually`.
+#. Log in to your Adyen Customer Area, then go to :menuselection:`Settings` and click
+   :guilabel:`Company` in the :guilabel:`Account management` section.
+#. In the :guilabel:`General` section, click the :icon:`fa-pencil` (:guilabel:`Edit property`)
+   icon next to the :guilabel:`Capture Delay` field.
+#. In the popup, set the :guilabel:`Capture delay` field to :guilabel:`Manual` and click
+   :guilabel:`Save`.
 
 .. note::
-   Adyen works only with customers processing **more** than **10 million annually** or invoicing a
-   **minimum** of **1.000** transactions **per month**.
-
-Configuration
-=============
-
-.. seealso::
-   :ref:`payment_providers/add_new`
-
-First, reach Adyen support to enable :guilabel:`multiple partial capture` for you.
-
-Credentials tab
----------------
-
-Odoo needs your **API Credentials** to connect with your Adyen account, which comprise:
-
-- **Merchant Account**: The code of the merchant account to use with Adyen.
-- :ref:`API Key <adyen/api_and_client_keys>`: The API key of the webservice user.
-- :ref:`Client Key <adyen/api_and_client_keys>`: The client key of the webservice user.
-- :ref:`HMAC Key <adyen/hmac_key>`: The HMAC key of the webhook.
-- :ref:`Checkout API URL <adyen/urls>`: The base URL for the Checkout API endpoints.
-- :ref:`Recurring API URL <adyen/urls>`: The base URL for the Recurring API endpoints.
-
-You can copy your credentials from your Adyen account, and paste them in the related fields under
-the **Credentials** tab.
-
-.. important::
-   If you are trying Adyen as a test, with an Adyen *test account*, head to
-   :menuselection:`Accounting --> Configuration --> Payment Providers`. There, click on
-   :guilabel:`Adyen`, enable :guilabel:`Test Mode` and enter your credentials in the
-   :guilabel:`Credentials` tab.
-
-.. _adyen/api_and_client_keys:
-
-API Key and Client Key
-~~~~~~~~~~~~~~~~~~~~~~
-
-In order to retrieve the API Key and the Client Key, log into your Adyen account, go to
-:menuselection:`Developers --> API Credentials`.
-
-- If you already have an API user, open it.
-- If you don't have an API user yet, click on **Create new credential**.
-
-Go to :menuselection:`Server settings --> Authentification` and copy or generate your **API Key**.
-Be careful to copy your API key as you'll not be allowed to get it later without generating a new
-one.
-
-Now, head to :menuselection:`Client settings --> Authentification` and cody or generate your
-**Client Key**. This is also the place where you can :ref:`allow payments to be made from your
-website <adyen/allowed_origins>`.
-
-.. _adyen/hmac_key:
-
-HMAC key
-~~~~~~~~
-
-In order to retrieve the HMAC Key, you'll need to configure a `Standard Notification` webhook. For
-this, log into your Adyen account then go to :menuselection:`Developers --> Webhooks --> Add webhook
---> Add Standard notification`.
-
-.. image:: adyen/adyen-add-webhook.png
-   :align: center
-   :alt: Configure a webhook.
-
-There, in :menuselection:`General --> Server configuration --> URL`, enter your server address
-followed by `/payment/adyen/notification`.
-
-.. image:: adyen/adyen-webhook-url.png
-   :align: center
-   :alt: Enter the notification URL.
-
-Then enter :menuselection:`Security --> HMAC Key --> Generate`. Be careful to copy the key as you
-will not be allowed to do it later without generating a new one.
-
-.. image:: adyen/adyen-hmac-key.png
-   :align: center
-   :alt: Generate a HMAC key and save it.
-
-You have to save the webhook to finalize its creation.
-
-.. _adyen/urls:
-
-API URLs
-~~~~~~~~
-
-All Adyen API URLs include a customer area-specific prefix generated by Adyen. To configure the
-URLs, proceed as follows:
-
-#. Log into your Adyen account, then go to :menuselection:`Developers --> API URLs`.
-#. Copy the :guilabel:`Prefix` for your live Customer area (i.e., **data center**) and save it for
-   later.
-
-   .. image:: adyen/adyen-api-urls.png
-     :alt: Copy the prefix for the Adyen APIs
-
-#. In Odoo, :ref:`navigate to the payment provider Adyen <payment_providers/add_new>`.
-#. In the :guilabel:`Checkout API URL` field, enter the following URL and replace `yourprefix` with
-   the prefix you previously saved:
-   `https://yourprefix-checkout-live.adyenpayments.com/checkout`
-#. In the :guilabel:`Recurring API URL` field, enter the following URL and replace `yourprefix` with
-   the prefix you previously saved:
-   `https://yourprefix-pal-live.adyenpayments.com/pal/servlet/Recurring`.
-
-.. note::
-   If you are trying Adyen as a test, you can use the following URLs instead:
-
-   - :guilabel:`Checkout API URL`: `https://checkout-test.adyen.com`
-   - :guilabel:`Recurring API URL`: `https://pal-test.adyen.com/pal/servlet/Recurring`
-
-Adyen Account
--------------
-
-.. _adyen/allowed_origins:
-
-Allow payments from a specific origin
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-To allow payment originated from your website, follow the steps in :ref:`adyen/api_and_client_keys`
-to navigate to your API user and go to :menuselection:`Add allowed origins`, then add the URLs from
-where payments will be made (the URLs of the servers hosting your Odoo instances).
-
-.. image:: adyen/adyen-allowed-origins.png
-   :align: center
-   :alt: Allows payments originated from a specific domain.
-
-Place a hold on a card
-----------------------
-
-Adyen allows you to capture an amount manually instead of having an immediate capture.
-
-To set it up, enable the **Capture Amount Manually** option on Odoo, as explained in the
-:ref:`payment providers documentation <payment_providers/manual_capture>`.
-
-Then, open your Adyen Merchant Account, go to :menuselection:`Account --> Settings`, and set the
-**Capture Delay** to **manual**.
-
-.. image:: adyen/adyen_capture_delay.png
-   :align: center
-   :alt: Capture Delay settings in Adyen
-
-.. caution::
-   - If you configure Odoo to capture amounts manually, make sure to set the **Capture Delay** to
-     **manual** on Adyen. Otherwise, the transaction will be blocked in the authorized state in
-     Odoo.
-
-.. note::
-   - After **7 days**, if the transaction has not been captured yet, the customer has the right to
-     **revoke** it.
+   - If the transaction is not captured within 7 days, the customer is entitled to revoke it.
+   - You can :ref:`manually capture <payment_providers/manual_capture>` and :ref:`refund
+     <payment_providers/refunds>` payments directly from your Adyen Customer Area.
 
 .. seealso::
    :doc:`../payment_providers`

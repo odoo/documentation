@@ -319,7 +319,7 @@ Email is not received
 
       .. seealso::
          For more information on logs and how to access them via the Odoo.sh dashboard, refer to the
-         :ref:`Odoo.sh logs documentation <odoosh/logs>`.
+         :ref:`Odoo.sh logs documentation <odoo-sh/branches/tabs/logs>`.
 
          For more information on accessing logs via the command line, refer to the :ref:`developer
          logging documentation <reference/cmdline/server/logging>`.

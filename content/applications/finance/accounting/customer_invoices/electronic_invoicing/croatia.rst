@@ -18,8 +18,8 @@ e-invoicing in public procurement. Under these regulations, all businesses invol
 (business-to-government)` transactions are required to use electronic invoicing via the :abbr:`CIS
 (Central Invoice System)`, Croatia’s official platform for public sector e-invoicing. Croatia is
 also part of the Peppol network, facilitating standardized cross-border e-invoicing within the
-European Union. Furthermore, e-invoicing is increasingly encouraged for B2B transactions, promoting
-greater transparency and tax compliance.
+European Union. Furthermore, e-invoicing through the e-Račun platform is mandatory for B2B
+transactions as of 1 January 2026.
 
 Compliance with Croatian e-invoicing regulations
 ================================================
@@ -27,9 +27,20 @@ Compliance with Croatian e-invoicing regulations
 Odoo Invoicing makes it easy for businesses to send, store, and ensure the integrity of their
 invoices. Here is how Odoo ensures compliance:
 
+- **Integrations**: Odoo can send invoices and report payments to the e-Račun platform via an
+  integration with third-party provider `moj-eRačun <https://moj-eracun.hr>`_. As an accredited
+  provider, mojeRačun is designed to handle the differing technical requirements of the two parallel
+  systems:
+
+  - **For Fiscalization 1.0 (B2C):** MojeRačun supports the real-time reporting of receipts to the
+    Croatian Tax Administration for all payment types (cash, cards, and bank transfers).
+  - **For Fiscalization 2.0 (B2B/B2G):** MojeRačun facilitates the exchange of mandatory structured
+    e-invoices (XML) through certified access points, ensuring automatic fiscalization and real-time
+    reporting to the Croatian Tax Administration.
 - **Supported formats**: Odoo supports standard e-invoice formats, such as PDF with digital
   signatures and XML in :abbr:`UBL (Universal Business Language)` format, which are fully compatible
-  with Croatia's :abbr:`CIS (Central Invoice System)` for public procurement transactions.
+  with Croatia's :abbr:`CIS (Central Invoice System)` for public procurement transactions and
+  e-Račun platform for B2B transactions.
   Additionally, Odoo enables transmission of e-invoices through any platform connected to the Peppol
   network, as the *Servis eRačun za državu* reached via Peppol, ensuring compliance with both
   Croatian and EU standards.
@@ -41,10 +52,14 @@ invoices. Here is how Odoo ensures compliance:
   that each invoice follows the legal format for both B2B and :abbr:`B2G (business-to-government)`
   transactions.
 
+.. seealso::
+   :doc:`Croatian fiscal localization documentation
+   <../../../fiscal_localizations/croatia>`
+
 .. admonition:: Disclaimer
 
    This page provides an overview of Croatian e-invoicing laws and how Odoo Invoicing supports
    compliance with the Fiscalization Act, Peppol standards, and other relevant regulations. It does
-   not constitute legal adviceWe recommend consulting with a tax advisor or legal professional
+   not constitute legal advice. We recommend consulting with a tax advisor or legal professional
    familiar with Croatian e-invoicing regulations to ensure compliance tailored to your specific
    business needs.

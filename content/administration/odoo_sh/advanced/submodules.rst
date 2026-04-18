@@ -28,7 +28,7 @@ and add them to your addons path automatically so you can install them in your d
 If you add private repositories as submodules in your branches,
 you need to configure a deploy key in your Odoo.sh project settings and in your repository settings.
 Otherwise Odoo.sh won't be allowed to download them.
-The procedure is detailed in the chapter :ref:`Settings > Submodules <odoosh-gettingstarted-settings-submodules>`.
+The procedure is detailed in the chapter :ref:`Settings > Submodules <odoo-sh/settings/submodules>`.
 
 Adding a submodule
 ==================
@@ -38,7 +38,7 @@ With Odoo.sh (simple)
 
 .. warning::
    For now it is not possible to add **private** repositories with this method. You can nevertheless
-   do so :ref:`with Git <odoosh-advanced-submodules-withgit>`.
+   do so :ref:`with Git <odoo-sh/settings/submodules>`.
 
 On Odoo.sh, in the branches view of your project, choose the branch in which you want to add a submodule.
 

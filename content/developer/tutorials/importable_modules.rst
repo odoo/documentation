@@ -863,7 +863,7 @@ response object:
 - `request.redirect(location, code=303, local=True)` to redirect to a different URL; the `local`
   argument is used to specify whether the redirection should be relative to the website or not
   (default: `True`).
-- `request.notfound()` to return a `werkzeug.HTTPException` exception to signal a 404 error to
+- `request.not_found()` to return a `werkzeug.HTTPException` exception to signal a 404 error to
   the website.
 - `request.make_response(data, headers=None, cookies=None, status=200)` to manually create a
   `werkzeug.Response` object; the `status` argument is the HTTP status code to return (default:

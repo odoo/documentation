@@ -40,7 +40,8 @@ Company information
 Go to :menuselection:`Settings --> General Settings --> Companies`, click :guilabel:`Update info`,
 and ensure the following company information is complete and up-to-date.
 
-- The full :guilabel:`Company Name`.
+- The :guilabel:`Company Name`, limited to a maximum of 63 characters to comply with ZATCA
+  requirements.
 - All relevant :guilabel:`Address` fields, including the :guilabel:`Building Number` and
   :guilabel:`Plot Identification` (four digits each).
 - Select an enterprise :guilabel:`Identification Scheme`. It is recommended to use the

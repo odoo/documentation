@@ -116,7 +116,7 @@ To set up a Uruware account, follow these steps:
    Configuration --> Settings`.
 #. Scroll down to the :guilabel:`Uruguayan Localization` section and select the environment
    (:guilabel:`Production` or :guilabel:`Testing`).
-#. Click on :guilabel:`Create Uruware Account`.
+#. Click :guilabel:`Create Uruware Account`.
 
 Upon doing so, an email is sent to the address associated with your Odoo subscription with the
 password to enter Uruware's portal and set up your account.
@@ -341,7 +341,7 @@ document that, when validated, is sent to |DGI| via Uruware. It is necessary to 
 
 .. note::
    Confirm the invoice to create it with an internal reference. To send the document to |DGI| via
-   Uruware, click on :guilabel:`Send and Print` and select the checkbox :guilabel:`Create CFE`. The
+   Uruware, click :guilabel:`Send` and select the checkbox :guilabel:`Create CFE`. The
    legal document sequence (number) is brought from Uruware once the document has been processed.
    Make sure you have |CAEs| available in Uruware.
 

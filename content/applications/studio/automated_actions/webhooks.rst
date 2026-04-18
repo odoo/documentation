@@ -36,7 +36,7 @@ Create a webhook in Odoo
 
 .. important::
    Before implementing a webhook in a live database, configure and test it using a :ref:`duplicate
-   database <odoo_online/database-management>` to ensure the webhook performs as intended.
+   database <odoo-online/duplicate>` to ensure the webhook performs as intended.
 
 .. tip::
    :ref:`Activating developer mode <developer-mode>` before creating up a webhook gives greater

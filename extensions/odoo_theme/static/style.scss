@@ -954,6 +954,47 @@ span.viewcode-link {
     margin-left: .3rem;
 }
 
+// Table with sticky header (for long tables)
+// Offset top by header height so table header sticks below the site header
+.table-sticky-header  {
+    // override the display: block in the mobile override
+    display: table!important;
+    border-collapse: separate;
+    border-spacing: 0;
+    thead th {
+        position: sticky;
+        z-index: 2;
+        background-color: $white;
+        top: $o-headers-mobile-height;
+        @include media-breakpoint-up(lg) {
+            top: $o-headers-height;
+        }
+    }
+}
+
+//------------------------------------------------------------------------------
+// Ref target highlighting
+//------------------------------------------------------------------------------
+
+span:target + h1,
+span:target + h2,
+span:target + h3,
+span:target + h4 {
+    animation: highlight-fade 5s ease-out 0s 1;
+}
+
+@keyframes highlight-fade {
+    0% {
+        background-color: lighten($warning, 15%);
+    }
+    50% {
+        background-color: lighten($warning, 15%);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
 //------------------------------------------------------------------------------
 // Alerts
 //------------------------------------------------------------------------------

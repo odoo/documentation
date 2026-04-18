@@ -10,6 +10,7 @@ Productivity
     productivity/documents
     productivity/sign
     productivity/spreadsheet
+    productivity/dashboards
     productivity/knowledge
     productivity/calendar
     productivity/appointments

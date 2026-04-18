@@ -38,7 +38,7 @@ page. When you :guilabel:`Save`, the product page is automatically published.
 
 .. seealso::
    :doc:`Create new products using the Barcode Lookup database
-   </applications/general/integrations/barcodelookup>`.
+   </applications/inventory_and_mrp/barcode/setup/barcodelookup>`.
 
 .. _ecommerce/products/import-products:
 
@@ -86,6 +86,8 @@ tab, scroll down to the :guilabel:`Ecommerce description` section, and add a des
 .. tip::
    Click the :guilabel:`Go to Website` smart button to return to the frontend product's page.
 
+.. _ecommerce/products/product-presentation:
+
 Product presentation
 --------------------
 
@@ -120,7 +122,7 @@ Use the :guilabel:`Customize` tab to modify the page layout or add features:
   they want to purchase.
 
 - :guilabel:`Tax Indication`: Toggle the switch to indicate if the price is
-  :ref:`VAT included or excluded <ecommerce-price-management-tax-display>`.
+  :ref:`VAT included or excluded <ecommerce/prices/taxes>`.
 
 - :guilabel:`Variants`: Show all possible product :ref:`variants
   <ecommerce/products/product-variants>` vertically as a :guilabel:`Products List`
@@ -182,7 +184,8 @@ and select the relevant media. In the :guilabel:`Customize` tab, use the followi
   :guilabel:`Remove all`.
 
 .. note::
-   Images must be in PNG or JPG format and with a minimum size of 1024x1024 to trigger the zoom.
+   Images must be in PNG or JPG format, with at least one dimension (height or width) greater than
+   1024 pixels to trigger the zoom.
 
 .. _ecommerce/products/products-block:
 
@@ -392,5 +395,5 @@ Configuration --> Settings`, scroll down to the :guilabel:`Shop - Products` sect
    :titlesonly:
 
    products/catalog
-   products/price_management
+   products/prices
    products/cross_upselling

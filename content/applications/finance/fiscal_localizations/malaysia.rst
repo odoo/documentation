@@ -41,6 +41,10 @@ localization:
      - This module improves the MyInvois E-invoicing feature by adding proper support for self
        billing, rendering the MyInvois QR code in the invoice PDF file and allows better management
        of foreign customer TIN.
+   * - :guilabel:`Malaysia - E-invoicing (POS)`
+     - `l10n_my_edi_pos`
+     - This module includes the features required to send invoices and consolidated invoices to the
+       MyInvois system when using the POS app.
 
 .. _malaysia/configuration/company:
 
@@ -66,13 +70,15 @@ and select it. Then configure the following fields:
 E-invoicing integration with MyInvois
 =====================================
 
-The MyInvois Portal is a platform provided by the :abbr:`IRBM (Inland Revenue Board of Malaysia)`
+The MyInvois portal is a platform provided by the :abbr:`IRBM (Inland Revenue Board of Malaysia)`
 that facilitates the implementation of e-invoices for Malaysian taxpayers.
 Odoo supports integration with MyInvois to submit the invoices generated in Odoo.
 
 .. note::
-   The :guilabel:`Malaysia - E-invoicing module` must be installed to submit invoices to MyInvois.
-
+   - The :guilabel:`Malaysia - E-invoicing module` (`l10n_my_edi`) must be installed to submit
+     invoices to MyInvois.
+   - Each company in the database requires an individual connection to the MyInvois portal using
+     its own :abbr:`TIN (tax identification number)`.
 .. _malaysia/myinvois/setup:
 
 Set-up
@@ -189,6 +195,12 @@ Access the contact's form and fill in the following fields:
    - :guilabel:`Identification`: the :guilabel:`ID Type` and the corresponding
      :guilabel:`Identification number` of the contact registered on MyTax.
 
+.. note::
+   For specific use cases—such as transactions with buyers without a
+   :abbr:`TIN (tax identification number)` or foreign customers—refer to the list of general TINs
+   provided in the **Appendix** of the `e-Invoice Specific Guideline
+   <https://www.hasil.gov.my/en/e-invoice/reference-for-the-implementation-of-e-invoice/guidelines/>`_.
+
 .. _malaysia/myinvois/setup/odoo/product:
 
 Products
@@ -224,6 +236,10 @@ Send invoices to MyInvois
 
 Invoices can be sent to MyInvois once they have been confirmed. To do so, click
 :guilabel:`Send to MyInvois`.
+
+.. note::
+   For invoices in foreign currencies, the exchange rate applied to the invoice is sent to
+   :guilabel:`MyInvois`.
 
 Send bills to MyInvois
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -302,6 +318,67 @@ Send debit notes to MyInvois
 :ref:`Issue a debit note from an existing bill or invoice <accounting/credit_notes/issue-debit-note>`
 and click :guilabel:`Send To MyInvois`. In MyInvois, it appears then as a :guilabel:`Debit Note` if
 issued from an invoice or a :guilabel:`Self-billed Debit Note` from a vendor bill.
+
+.. _malaysia/myinvois/pos_workflow:
+
+POS workflow
+------------
+
+Two workflows are available to issue e-invoices in
+:doc:`Point of Sale <../../sales/point_of_sale>`:
+
+- :ref:`Individual e-invoice <malaysia/myinvois/pos_workflow/submit>`: Issue an e-invoice
+  immediately for a specific order using the customer's details.
+- :ref:`Consolidated e-invoice <malaysia/myinvois/pos_workflow/consolidated>`: Create orders as
+  usual, then aggregate them periodically into a single consolidated e-invoice.
+
+.. _malaysia/myinvois/pos_workflow/submit:
+
+Individual e-invoice
+~~~~~~~~~~~~~~~~~~~~
+
+To issue an individual e-invoice and send it to MyInvois,
+:ref:`create an invoice <receipts-invoices/invoices>`, and ensure the selected customer has a valid
+:abbr:`TIN (tax identification number)` or **Identification Number**.
+
+.. note::
+   If the QR code does not appear on the invoice, the MyInvois validation is still in progress.
+   Odoo automatically retrieves the status in the background. Simply reopen the invoice later to
+   retrieve the validated version with the QR code.
+
+.. _malaysia/myinvois/pos_workflow/consolidated:
+
+Consolidated e-invoice
+~~~~~~~~~~~~~~~~~~~~~~
+
+Orders that are not e-invoiced individually can be aggregated into a consolidated e-invoice.
+
+#. Navigate to :menuselection:`Point of Sale --> Orders --> Consolidated Invoice`.
+#. Click :guilabel:`Consolidate Orders` and set the :guilabel:`Date From` and :guilabel:`Date To`.
+#. Click :guilabel:`Submit to MyInvois`.
+
+Odoo automatically fetches all eligible POS orders within that timeframe that have not been
+individually :ref:`invoiced <malaysia/myinvois/pos_workflow/submit>` nor
+:ref:`refunded <malaysia/myinvois/pos_workflow/refund>`.
+
+.. note::
+   Orders belonging to an :ref:`open <pos/session-start>` POS session are not included in the
+   consolidation. :ref:`Close <pos/session-close>` the session to include them.
+
+To submit the consolidation, click :guilabel:`Submit to MyInvois` on the form view.
+For multiple records, click :guilabel:`Consolidated Invoices` to go back to the list view, and
+select the relevant consolidated invoices. Then, click :guilabel:`Submit to MyInvois`.
+Consolidated e-invoices are issued to the pre-configured :guilabel:`General Public` contact.
+
+.. _malaysia/myinvois/pos_workflow/refund:
+
+Refunds
+~~~~~~~
+
+To refund a customer, :ref:`process a return <pos/refund>`.
+
+Refunds for orders e-invoiced individually or via consolidation must be issued as e-invoices
+(Refund Notes). To do so, click :guilabel:`Invoice` before processing the refund.
 
 Access invoices via QR code
 ---------------------------

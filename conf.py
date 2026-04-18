@@ -232,12 +232,13 @@ sphinx.transforms.i18n.docname_to_domain = (
 # option. If a provided version has no label, the version string is used as label.
 versions_names = {
     'master': "Master",
+    'saas-19.2': "Odoo 19.2",
+    'saas-19.1': "Odoo 19.1",
+    '19.0': "Odoo 19",
     'saas-18.4': "Odoo 18.4",
     'saas-18.3': "Odoo 18.3",
     'saas-18.2': "Odoo 18.2",
-    'saas-18.1': "Odoo 18.1",
     '18.0': "Odoo 18",
-    'saas-17.4': "Odoo 17.4",
     '17.0': "Odoo 17",
     '16.0': "Odoo 16",
 }
@@ -390,11 +391,13 @@ def source_read_replace(app, docname, source):
 def upgrade_util_signature_rewrite(app, domain, objtype, contentnode):
     # Same as add_module_names=False but **only** for odoo.upgrade.util functions or classes
     signature = contentnode.parent[0]
-    if objtype == 'function' and signature.astext().startswith('odoo.upgrade.util.'):
+    if objtype == 'function' and signature.astext().startswith(('odoo.upgrade.util.', 'odoo.upgrade.testing.')):
         # <odoo.upgrade.util.modules>, <modules_installed>, <(cr, *modules)>
+        # <odoo.upgrade.testing>, <change_version>, <(version_str)>
         signature.pop(0)
-    if objtype == 'class' and signature.astext().startswith('class odoo.upgrade.util.'):
+    if objtype == 'class' and signature.astext().startswith(('class odoo.upgrade.util.', 'class odoo.upgrade.testing.')):
         # <class >, <odoo.upgrade.util.pg.>, <PGRegexp>
+        # <class >, <odoo.upgrade.testing.>, <UpgradeCase>
         signature.pop(1)
 
 def setup(app):

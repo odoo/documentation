@@ -218,8 +218,88 @@ When using multiple purchase journals, new vendor bills can be received via the 
    identification.
 #. Click :guilabel:`Save`.
 
-Then, open the Document app, navigate to the appropriate folder, select the relevant vendor bills,
+Then, open the Documents app, navigate to the appropriate folder, select the relevant vendor bills,
 and click :guilabel:`Create Vendor Bill`. The corresponding vendor bill is then created.
+
+.. _accounting/e-invoicing/extra-fields:
+
+Add extra fields
+----------------
+
+.. important::
+   Adding fields requires the :doc:`Studio <../../../studio>` app.
+
+Odoo supports the most common Peppol fields by default, but additional Peppol data can be included
+when sending e-invoices via Peppol by :ref:`adding extra fields <studio/fields/add>` to the invoice
+using Studio.
+
+The table below shows:
+
+- the extra Peppol fields that can be added. Fields in the:
+
+  - :guilabel:`Main invoice` section are added to the :ref:`form view <studio/views/general/form>`
+    of the invoice
+  - :guilabel:`Invoice lines` section are added to the :ref:`list view
+    <studio/views/multiple-records/list>` of the invoice line
+
+- the data type, which *must* match the :ref:`field type <studio/fields/field-types>` when adding
+  the field using Studio
+- the exact field label that *must* be entered when adding the field using Studio
+
+.. important::
+   Odoo uses a new field's label to automatically generate the technical name of the field. To
+   ensure the field's technical name is formatted correctly, it is crucial to use the exact text
+   from the :guilabel:`Studio field label` column below.
+
++-------------------+-------------------------------+-----------+-----------------------------------------+
+|                   | Peppol technical name (XML)   | Data type | Studio field label                      |
++===================+===============================+===========+=========================================+
+| **Main invoice**  | TaxPointDate                  | Date      | `Peppol tax point date`                 |
+|                   +-------------------------------+-----------+-----------------------------------------+
+|                   | ContractDocumentReference.ID  | Text      | `Peppol contract document reference ID` |
+|                   +-------------------------------+-----------+-----------------------------------------+
+|                   | DespatchDocumentReference.ID  | Text      | `Peppol despatch document reference ID` |
+|                   +-------------------------------+-----------+-----------------------------------------+
+|                   | AccountingCost                | Text      | `Peppol accounting cost`                |
+|                   +-------------------------------+-----------+-----------------------------------------+
+|                   | ProjectReference.ID           | Text      | `Peppol project reference ID`           |
+|                   +-------------------------------+-----------+-----------------------------------------+
+|                   | InvoicePeriodStartDate        | Date      | `Peppol Invoice period Start Date`      |
+|                   +-------------------------------+-----------+-----------------------------------------+
+|                   | InvoicePeriodEndDate          | Date      | `Peppol Invoice period End Date`        |
+|                   +-------------------------------+-----------+-----------------------------------------+
+|                   | OrderReference.ID             | Text      | `Peppol Order Reference ID`             |
++-------------------+-------------------------------+-----------+-----------------------------------------+
+| **Invoice lines** | OrderLineReference/LineID     | Text      | `Peppol order line reference ID`        |
+|                   +-------------------------------+-----------+-----------------------------------------+
+|                   | item.buyersItemIdentification | Text      | `Peppol buyers item ID`                 |
++-------------------+-------------------------------+-----------+-----------------------------------------+
+
+To add a new field to the invoice form view or invoice line list view, as relevant, follow these
+steps:
+
+#. Activate :ref:`developer mode <developer-mode>`.
+#. Navigate to :menuselection:`Accounting --> Customers --> Invoices` (or :menuselection:`Invoicing
+   --> Customers --> Invoices` for Invoicing users).
+#. Open an existing invoice, or click :guilabel:`New`.
+#. Open Studio by clicking the :icon:`oi-studio` (:guilabel:`Toggle Studio`) icon.
+#. If adding a field to invoice line list view, click in the :guilabel:`Invoice Lines` tab and click
+   :guilabel:`Edit List view`.
+#. Click and drag a :guilabel:`Text` or :guilabel:`Date` field from the panel on the left to the
+   desired location in the view on the right.
+#. Enter the :guilabel:`Label` exactly as it appears in the :guilabel:`Studio field label` column in
+   the table above, then click outside the field label to see the :guilabel:`Technical Name` update
+   automatically.
+#. Click :guilabel:`Close` to save all changes.
+
+.. note::
+   The :guilabel:`Technical Name` in Odoo should match the format of
+   `x_studio_peppol_tax_point_date`. If a mistake is made and the technical name is incorrect,
+   :ref:`edit the technical name <studio/fields/properties-technical-name-change>`.
+
+.. tip::
+   After a new field has been created as explained above, it can be :ref:`added to other views
+   <studio/fields/add-existing>` such as the invoice list view.
 
 .. _accounting/e-invoicing/peppol-deregister:
 

@@ -34,9 +34,9 @@ time period, as well as the :guilabel:`Variation` between the two, in a percenta
    :alt: A pivot table comparing the work entries of the current month and the previous month.
 
 .. note::
-   If no work entries for a specific :ref:`work entry type <payroll/work-entries>` are logged for
-   the time period, it does **not** appear on the report. That does **not** mean the work entry type
-   does not exist, or is not configured.
+   If no work entries for a specific :ref:`work entry type <payroll/work-entry-types>` are logged
+   for the time period, it does **not** appear on the report. That does **not** mean the work entry
+   type does not exist, or is not configured.
 
    Additionally, if the default :guilabel:`Current month: (Month)(Year)` filter is removed from the
    search bar, the :guilabel:`Comparison` column does **not** appear; there must be a time-frame

@@ -7,7 +7,7 @@
 Barcode
 =======
 
-**Odoo Barcode** allows users to assign barcodes to individual products and product categories, and
+**Odoo Barcode** allows users to assign barcodes to individual products and product packagings, and
 track inventory movements using those barcodes. By connecting a barcode scanner, certain inventory
 processes can be triggered by scanning barcodes.
 

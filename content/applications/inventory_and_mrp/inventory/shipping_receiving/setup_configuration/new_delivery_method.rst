@@ -34,7 +34,8 @@ a form to provide details about the shipping provider, including:
 - :guilabel:`Delivery Method` (*Required field*): the name of the delivery method (e.g. `flat-rate
   shipping`, `same day delivery`, etc.).
 - :guilabel:`Website`: configure shipping methods for an **eCommerce** page. Select the applicable
-  website from the drop-down menu, or leave it blank to apply the method to all web pages.
+  website from the drop-down menu, or leave it blank to apply the method to all web pages. This
+  field only appears when the **eCommerce** app is enabled.
 - :guilabel:`Provider` (*Required field*): choose the delivery service, like FedEx, if using a
   :ref:`third-party carrier <inventory/shipping/third_party>`. Ensure the integration with the
   shipping carrier is properly installed and select the provider from the drop-down menu. For more
@@ -42,10 +43,12 @@ a form to provide details about the shipping provider, including:
   <inventory/shipping/fixed>` or :ref:`based on rules <inventory/shipping/rules>` options, refer to
   their respective sections below.
 - :guilabel:`Company`: If the shipping method should apply to a specific company, select it from the
-  drop-down menu. Leave the field blank to apply the method to all companies.
+  drop-down menu. Leave the field blank to apply the method to all companies. This field only
+  appears in multi-company databases.
 - :guilabel:`Routes`: select the applicable routes to define different delivery methods, such as
-  standard or express shipping, based on varying lead times. For more information, jump to the
-  :ref:`Set routes on shipping method <inventory/shipping_receiving/shipping-route>` section.
+  standard or express shipping, based on varying lead times. This field only appears when you have
+  enabled multi-step routes in your inventory configuration settings. For more information, refer to
+  the :ref:`Set routes on shipping method <inventory/shipping_receiving/shipping-route>` section.
 - :guilabel:`Delivery Product` (*Required field*): the product listed on the :ref:`sales order line
   <inventory/shipping/sales-order>` as the delivery charge.
 - :guilabel:`Free if order amount is above`: checking this box enables free shipping if the customer
@@ -53,6 +56,17 @@ a form to provide details about the shipping provider, including:
 - :guilabel:`Tracking Link`: This option adds a link to the portal so the customer can track their
   delivery. When a custom carrier is added in a delivery order, the tracking button is enabled, and
   the link directs to the tracking portal with that URL.
+
+.. example::
+   To set up `$200` flate-rate shipping, fill in the following fields:
+
+   - :guilabel:`Delivery Method`: `Furniture Delivery (Manual)`
+   - :guilabel:`Provider`: :guilabel:`Fixed Price`
+   - :guilabel:`Fixed Price`: `200`
+   - :guilabel:`Delivery Product`: :guilabel:`Furniture Delivery (manual)`
+
+   .. image:: new_delivery_method/sample-delivery-method.png
+      :alt: Set up a delivery method with a fixed price of 200.
 
 .. _inventory/shipping_receiving/availability:
 

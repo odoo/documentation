@@ -268,8 +268,8 @@ Use case
 --------
 
 Once you have :doc:`created <../../finance/accounting/customer_invoices>` an invoice and confirmed
-it, click :guilabel:`Send & Print`. Make sure :guilabel:`Generate Facturae edi file` is enabled, and
-click :guilabel:`Send & Print` again. Once the invoice is sent, the generated XML file is available
+it, click :guilabel:`Send`. Make sure :guilabel:`Generate Facturae edi file` is enabled, and
+click :guilabel:`Send` again. Once the invoice is sent, the generated XML file is available
 in the **chatter**.
 
 .. warning::
@@ -283,10 +283,6 @@ Administrative centers
 
 In order for **FACe** to work with **administrative centers**, the invoice *must* include specific
 data about the centers.
-
-.. note::
-   Make sure to have the :guilabel:`Spain - Facturae EDI - Administrative Centers Patch
-   (l10n_es_edi_facturae_adm_centers)` module :ref:`installed <general/install>`.
 
 To add **administrative centers**, create a new **contact** to add to the **partner** company.
 Select :guilabel:`FACe Center` as the **type**, assign one or more **role(s)** to that contact, and

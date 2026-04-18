@@ -53,12 +53,8 @@ redirects users to the default contact form.
    Removing the ability to add products to the cart is often used by businesses that want to display
    an online catalog but cannot share prices publicly (e.g., to offer custom or variable pricing).
 
-To do so, go to :menuselection:`Website --> Configuration --> Settings`. Under the :guilabel:`Shop -
-Products` section, tick :guilabel:`Prevent Sale of Zero Priced Product`. A new :guilabel:`Button
-url` field appears to enter a redirect URL.
-
-Then, for all products that should display the :guilabel:`Contact Us` button, set their price to
-`0` using the product form or a :doc:`pricelist <../../sales/sales/products_prices/prices/pricing>`.
+To display the :guilabel:`Contact Us` button and a note saying `Not Available For Sale` , you need
+to :ref:`hide your prices <ecommerce/prices/hide-prices>` on your product page.
 
 .. image:: checkout/cart-contact-us.png
    :alt: Contact us button on product page
@@ -126,53 +122,6 @@ Portal` feature.
 .. image:: checkout/order-again-button.png
    :alt: Re-order button
 
-.. _ecommerce/checkout/policy:
-
-Checkout policy
-===============
-
-To allow customers to checkout as guests or force them to sign in/create an account, go to
-:menuselection:`Website --> Configuration --> Settings`, scroll down to the :guilabel:`Shop -
-Checkout Process` section, and configure the :guilabel:`Sign in/up at checkout` setting. The
-following options are available:
-
-- :guilabel:`Optional`: Customers can check out as guests and register later via the order
-  confirmation email to track their order.
-- :guilabel:`Disabled (buy as guest)`: Customers can checkout as guests without creating an account.
-- :guilabel:`Mandatory (no guest checkout)`: Customers must sign in or create an account at the
-  :ref:`Review Order <ecommerce/checkout/review_order>` step to complete their purchase.
-
-B2B access management
----------------------
-
-To restrict checkout to selected B2B customers:
-
-#. Go to :menuselection:`Website --> Configuration --> Settings`, and in the :guilabel:`Shop -
-   Checkout Process` section, enable the :ref:`Mandatory (no guest checkout)
-   <ecommerce/checkout/policy>` option.
-#. Scroll down to the :guilabel:`Privacy` section, go to :guilabel:`Customer Account`, and select
-   :guilabel:`On invitation`.
-#. Go to :menuselection:`Website --> eCommerce --> Customers`, switch to the :guilabel:`List` view,
-   and select the customers you wish to grant access to your :doc:`portal
-   <../../general/users/portal>`.
-#. Click the :icon:`fa-cog` :guilabel:`Actions` button, then :guilabel:`Grant portal access`.
-#. Review the selected customers in the :guilabel:`Portal Access Management` pop-up and click
-   :guilabel:`Grant Access`.
-
-Once done, the relevant customers receive an email confirming their account creation, including
-instructions on setting a password and activating their account.
-
-.. note::
-   - You can revoke access or re-invite a customer using the related buttons in the
-     :guilabel:`Portal Access Management` pop-up.
-   - Users can only have one :doc:`portal access <../../general/users/portal>` per email.
-   - Settings are website-specific, so you could set up a B2C website that allows guest checkout and
-     a B2B website with mandatory sign-in.
-
-.. seealso::
-   - :doc:`Customer accounts documentation <customer_accounts>`
-   - :doc:`Portal access documentation <../../general/users/portal>`
-
 .. _ecommerce/checkout/steps:
 
 Checkout steps
@@ -194,6 +143,11 @@ checkout options.
 
 .. note::
    Content added through building blocks is **specific** to each step.
+
+.. tip::
+   Restrict access to the :ref:`shop <ecommerce/customer_accounts/shop-access>` and :ref:`checkout
+   <ecommerce/customer_accounts/checkout-access>` for specific customers, e.g., in a :doc:`B2B
+   <b2b_b2c>` business setup.
 
 .. _ecommerce/checkout/review_order:
 
@@ -241,8 +195,7 @@ addresses are identical), and click :guilabel:`Confirm` to proceed to the next s
 
 .. tip::
    - For B2B customers, you can also :ref:`enable <ecommerce/checkout/customize_steps>` optional
-     :guilabel:`VAT` and :guilabel:`Company name` fields by toggling the :guilabel:`Show B2B Fields`
-     option in the website editor.
+     :ref:`B2B fields <ecommerce/b2b_b2c/b2b-fields>` in the website editor.
    - You can add a checkbox for users without an account to sign up for a newsletter. To do so, go
      to :menuselection:`Website --> Configuration --> Settings`. Under the :guilabel:`Shop -
      Checkout Process` section, enable the :guilabel:`Newsletter` feature and select a

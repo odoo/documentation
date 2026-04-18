@@ -50,6 +50,8 @@ Select a quality check type from the :guilabel:`Type` drop-down field:
 - :guilabel:`Instructions` provides specific instructions for how to conduct the quality check.
 - :guilabel:`Take a Picture` requires a picture to be attached to the check before the check can be
   completed.
+- :guilabel:`Print label` opens a pop-up from which labels can be printed. This step can be
+  customized to provide instructions about where to add the labels on a product.
 - :guilabel:`Pass - Fail` is used when the product being checked must meet a certain criteria to
   pass the check.
 - Selecting :guilabel:`Measure` causes a :guilabel:`Measure` input field to appear, in which a

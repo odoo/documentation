@@ -278,8 +278,7 @@ Inventory valuation
 ===================
 
 Both periodic (manual) and perpetual (automated) inventory valuations are supported in Odoo. The
-available methods are standard price, average price, :abbr:`LIFO (Last-In, First-Out)` and
-:abbr:`FIFO (First-In, First-Out).`
+available methods are Standard Price, Average Cost (AVCO), and First In First Out (FIFO).
 
 .. seealso::
    :doc:`../inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config`
@@ -310,10 +309,19 @@ Configuration --> Settings`. When enabled:
 - :guilabel:`Invoice Date` and :guilabel:`Bill Date` are pre-filled when encoding a transaction.
 - A :guilabel:`Quick encoding` option is available for customer invoices and vendor bills.
 
+.. _accounting/share-invoices:
+
+Share invoices with external accountants
+========================================
+
+Odoo offers multiple ways to share invoices and bills with an external accountant, including
+the abilities to :ref:`grant access rights <accounting/accountant-access-rights>` to your database
+and to :ref:`download ZIP files <accounting/zip>` containing all invoices and all bills.
+
 .. _accounting/accountant-access-rights:
 
 Accountant access rights
-========================
+------------------------
 
 To grant access to the company's accountant, :ref:`add the accountant as a new user
 <users/add-individual>` and configure the appropriate :doc:`access rights
@@ -332,6 +340,22 @@ company's financial data:
    `Odoo's pricing <https://www.odoo.com/pricing-plan>`_.
 
 For a multi-company environment, set the appropriate :ref:`access <users/multi-companies>`.
+
+.. _accounting/zip:
+
+ZIP file export
+---------------
+
+Groups of invoices and bills can be exported in ZIP files. To export invoices or bills in ZIP files,
+follow these steps:
+
+#. Navigate to :menuselection:`Accounting --> Customers --> Invoices` or :menuselection:`Accounting
+   --> Vendors --> Bills`.
+#. Select the invoices or bills to be included in the ZIP file.
+#. Click :icon:`fa-cog` :guilabel:`Actions` menu, and click :guilabel:`Export ZIP`.
+
+Once the ZIP file is exported, it can be sent to an external accountant to provide them with all the
+information of your invoices and bills.
 
 .. toctree::
    :titlesonly:

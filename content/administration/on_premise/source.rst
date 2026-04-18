@@ -57,15 +57,15 @@ Started developer tutorial </developer/tutorials/server_framework_101>`.
 
             .. code-block:: console
 
-               $ git clone https://github.com/odoo/odoo.git
-               $ git clone https://github.com/odoo/enterprise.git
+               $ git clone --branch {CURRENT_BRANCH} --single-branch https://github.com/odoo/odoo.git
+               $ git clone --branch {CURRENT_BRANCH} --single-branch https://github.com/odoo/enterprise.git
 
          .. tab:: Clone with SSH
 
             .. code-block:: console
 
-               $ git clone git@github.com:odoo/odoo.git
-               $ git clone git@github.com:odoo/enterprise.git
+               $ git clone --branch {CURRENT_BRANCH} --single-branch git@github.com:odoo/odoo.git
+               $ git clone --branch {CURRENT_BRANCH} --single-branch git@github.com:odoo/enterprise.git
 
    .. group-tab:: Windows
 
@@ -75,15 +75,15 @@ Started developer tutorial </developer/tutorials/server_framework_101>`.
 
             .. code-block:: doscon
 
-               C:\> git clone https://github.com/odoo/odoo.git
-               C:\> git clone https://github.com/odoo/enterprise.git
+               C:\> git clone --branch {CURRENT_BRANCH} --single-branch https://github.com/odoo/odoo.git
+               C:\> git clone --branch {CURRENT_BRANCH} --single-branch https://github.com/odoo/enterprise.git
 
          .. tab:: Clone with SSH
 
             .. code-block:: doscon
 
-               C:\> git clone git@github.com:odoo/odoo.git
-               C:\> git clone git@github.com:odoo/enterprise.git
+               C:\> git clone --branch {CURRENT_BRANCH} --single-branch git@github.com:odoo/odoo.git
+               C:\> git clone --branch {CURRENT_BRANCH} --single-branch git@github.com:odoo/enterprise.git
 
    .. group-tab:: Mac OS
 
@@ -93,15 +93,15 @@ Started developer tutorial </developer/tutorials/server_framework_101>`.
 
             .. code-block:: console
 
-               $ git clone https://github.com/odoo/odoo.git
-               $ git clone https://github.com/odoo/enterprise.git
+               $ git clone --branch {CURRENT_BRANCH} --single-branch https://github.com/odoo/odoo.git
+               $ git clone --branch {CURRENT_BRANCH} --single-branch https://github.com/odoo/enterprise.git
 
          .. tab:: Clone with SSH
 
             .. code-block:: console
 
-               $ git clone git@github.com:odoo/odoo.git
-               $ git clone git@github.com:odoo/enterprise.git
+               $ git clone --branch {CURRENT_BRANCH} --single-branch git@github.com:odoo/odoo.git
+               $ git clone --branch {CURRENT_BRANCH} --single-branch git@github.com:odoo/enterprise.git
 
 .. note::
    **The Enterprise git repository does not contain the full Odoo source code**. It is only a

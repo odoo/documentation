@@ -79,22 +79,6 @@ For the purpose of this documentation, we will use the above use case:
 
 -   but we want to sell it at 10€, tax included, in our shops or eCommerce website
 
-.. _b2b_b2c/ecommerce:
-
-eCommerce
----------
-
-If you only use B2C or B2B prices on your website, simply select the appropriate setting in the
-**Website** app settings.
-
-If you have both B2B and B2C prices on a single website, please follow these instructions:
-
-#. Activate the :ref:`developer mode <developer-mode>` and go to :menuselection:`General Settings
-   --> Users & Companies --> Groups`.
-#. Open either `Technical / Tax display B2B` or `Technical / Tax display B2C`.
-#. Under the :guilabel:`Users` tab, add the users requiring access to the price type. Add B2C users
-   in the B2C group and B2B users in the B2B group.
-
 Setting your products
 ---------------------
 

@@ -75,7 +75,7 @@ You first need to enable the related server action to send WhatsApp marketing me
 using the phone numbers collected from POS orders. To do so,
 
 #. Go to the WhatsApp application;
-#. Create a new :ref:`WhatsApp template <WhatsApp/templates>`;
+#. Create a new :ref:`WhatsApp template <whatsapp/odoo-templates>`;
 #. Configure the fields:
 
    - :guilabel:`Applies to` field set to :guilabel:`Point of Sale Orders`;

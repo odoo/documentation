@@ -30,16 +30,15 @@ In most cases, credit notes are created directly from the corresponding invoices
 go to :menuselection:`Accounting --> Customers --> Invoices`, open the relevant :guilabel:`Invoice`,
 and click :guilabel:`Credit Note`.
 
-In the :guilabel:`Credit Note` window, fill in the :guilabel:`Reason displayed on Credit Note` and
-update the :guilabel:`Journal` and :guilabel:`Reversal date` if needed.
-There are two options:
+In the :guilabel:`Credit Note` window, fill in the :guilabel:`Reason` and update the
+:guilabel:`Journal` and :guilabel:`Reversal date` if needed. There are two options:
 
 - Click :guilabel:`Reverse` to open a draft credit note prefilled with the exact details from the
   original invoice. Update the :guilabel:`Product` and :guilabel:`Quantity` and click
   :guilabel:`Confirm`. This option allows for a partial refund or modifications to the credit note.
-- Click :guilabel:`Reverse and Create invoice` to create a credit note, validate it automatically,
-  reconcile it with the related invoice, and open a new draft invoice prefilled with the exact
-  details from the original invoice.
+- Click :guilabel:`Reverse and Create invoice` to create a credit note that is automatically
+  validated and reconciled with the related invoice, and to open a new draft invoice prefilled with
+  the exact details from the original invoice.
 
 To create a credit note from scratch, go to :menuselection:`Accounting --> Customers --> Credit
 Notes`, and click :guilabel:`New`. Filling out a credit note follows the same process as completing
@@ -60,7 +59,7 @@ these steps:
 #. Select the desired invoice(s), click :icon:`fa-cog` :guilabel:`Actions` and select
    :guilabel:`Create Debit Note`.
 #. In the :guilabel:`Create Debit Note` window, fill in the :guilabel:`Reason` and update the
-   :guilabel:`Use Specific Journal` and :guilabel:`Debit Note Date` fields if needed.
+   :guilabel:`Use Specific Journal` and :guilabel:`Debit Note Date` fields.
 #. Enable the :guilabel:`Copy Lines` option to copy the invoice lines and click :guilabel:`Create
    Debit Note`.
 #. In the debit note, update the :guilabel:`Product` and :guilabel:`Quantity` and click
@@ -82,7 +81,7 @@ To record a vendor refund or a vendor credit note directly from the correspondin
 :menuselection:`Accounting --> Vendors --> Bills`, open the relevant vendor bill, and click
 :guilabel:`Credit Note`.
 
-To record it from scratch, go to :menuselection:`Accounting --> Vendors --> Refund`, and click on
+To record it from scratch, go to :menuselection:`Accounting --> Vendors --> Refunds`, and click on
 :guilabel:`New`.
 
 .. _accounting/credit_notes/record-debit-note:

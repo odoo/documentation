@@ -13,7 +13,7 @@ Acuerdo de suscripción de Odoo Enterprise
 .. in some countries where Odoo has subsidiaries. Care must be taken to make the translation
 .. as accurate as possible in its intent and effects.
 
-.. note:: Version 11 - 2025-07-09
+.. note:: Version 12 - 2025-12-19
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
@@ -34,6 +34,7 @@ Acuerdo de suscripción de Odoo Enterprise
         clarify what happens with non-covered versions;
         for Data Protection, clarify that data deletion may be restricted by law (e.g. DK bookkeeping act)
 .. v11a, 11b: clarify fee for non-covered versions in 5.1, and delay after LTS release.
+.. v12: 7% increase is per year, not per Term
 
 Al suscribirse a los servicios de Odoo Enterprise (en adelante “los Servicios”) proporcionados por
 Odoo SA y sus filiales (en adelante denominadas conjuntamente “Odoo SA”), relacionados con las
@@ -338,7 +339,7 @@ Siguiendo la renovación descrita en la sección :ref:`term_es` del presente Acu
 aplicados durante el Plazo anterior (excluyendo cualquier tarifa adicional por el uso de una
 Versión no Cubierta) son
 más bajos que el precio aplicable en la lista de precios actual, dichos cargos podrán aumentar
-hasta un 7%.
+hasta un 7% por año del Plazo anterior.
 
 .. _taxes_es:
 

@@ -14,6 +14,8 @@ Odoo Enterprise Abonnementsvertrag
    offizielle Verweis auf die Geschäftsbedingungen des "Odoo Enterprise Subscription Agreement" ist
    :ref:`die englische Original version <enterprise_agreement>`.
 
+.. note:: Version 12 - 2025-12-19
+
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
 .. 7.1: specify that 7% renewal increase applies to all charges, not just per-User.
@@ -30,8 +32,7 @@ Odoo Enterprise Abonnementsvertrag
         clarify what happens with non-covered versions;
         for Data Protection, clarify that data deletion may be restricted by law (e.g. DK bookkeeping act)
 .. v11a, 11b: clarify fee for non-covered versions in 5.1, and delay after LTS release.
-
-.. note:: Version 11 - 2025-07-09
+.. v12: 7% increase is per year, not per Term
 
 Indem Sie (der "Kunde") die Odoo Enterprise-Dienstleistungen (die "Dienstleistungen"), die von Odoo
 SA und seinen verbundenen Unternehmen (zusammen "Odoo SA") in Verbindung mit der Odoo Enterprise
@@ -327,9 +328,10 @@ für jeden fehlenden Abdeckungsmonat erheben.
 5.2 Verlängerungsgebühren
 -------------------------
 
-Bei einer Verlängerung gemäß Abschnitt :ref:`term_de` erhöhen sich die Gebühren um bis zu 7 %, wenn
+Bei einer Verlängerung gemäß Abschnitt :ref:`term_de` erhöhen sich die Gebühren, sofern
 die während der vorherigen Laufzeit erhobenen Gebühren (ohne zusätzliche Gebühr für die Nutzung
-nicht unterstützter Versionen) unter dem jeweils gültigen Listenpreis liegen.
+nicht unterstützter Versionen) unter dem jeweils gültigen Listenpreis liegen,
+um bis zu 7 % pro Jahr der vorherigen Laufzeit.
 
 .. _taxes_de:
 

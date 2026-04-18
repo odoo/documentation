@@ -6,9 +6,13 @@ Connecting a payment terminal allows you to offer a fluid payment flow to your c
 the work of your cashiers.
 
 .. important::
-   Only **Point Smart** payment terminals in **Argentina**, **Brazil**, and **Mexico** are
-   supported. They can be purchased on `Mercado Pago's website
-   <https://www.mercadopago.com.mx/herramientas-para-vender/lectores-point>`_.
+   - Odoo is compatible with Point Smart 1 or Point Smart 2 payment terminals, which can be
+     purchased on the Mercado Pago website in `Argentina
+     <https://www.mercadopago.com.ar/herramientas-para-vender/lectores-point>`_, `Brazil
+     <https://www.mercadopago.com.br/ferramentas-para-vender/maquininhas-point>`_, and `Mexico
+     <https://www.mercadopago.com.mx/herramientas-para-vender/lectores-point>`_.
+   - Mercado Pago payment terminals do not require an :doc:`IoT Box </applications/general/iot>` to
+     operate.
 
 .. seealso::
    `Mercado Pago online payments

@@ -104,9 +104,9 @@ Invoice and legal requirements
 ==============================
 
 The final step of an ecommerce order is to generate the invoice and send it to the customer.
-Depending on the type of business (B2B or B2C), an invoice can either be generated automatically
-(B2B) or on demand of the customer (B2C). This process can be automated if (and when) the online
-payment is :ref:`confirmed <handling/sales>`.
+Depending on your needs, an invoice can either be generated automatically or on demand of the
+customer. This process can be automated if (and when) the online payment is :ref:`confirmed
+<handling/sales>`.
 
 To automate invoicing, go to :menuselection:`Website --> Configuration --> Settings` and in the
 :guilabel:`Invoicing` section, enable :guilabel:`Automatic Invoice`.

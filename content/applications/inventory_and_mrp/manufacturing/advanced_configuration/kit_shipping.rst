@@ -10,6 +10,8 @@ also useful tools for managing more complex bills of materials (BoMs).
    To use, manufacture, and sell kits, both the :guilabel:`Manufacturing` and :guilabel:`Inventory`
    apps need to be installed.
 
+.. _manufacturing/advanced_configuration/kits:
+
 Create the kit as a product
 ===========================
 
@@ -71,6 +73,8 @@ Regardless of which setup is used, there are some similarities between the two o
 * **No Kit-Level Stock Adjustments**: Stock adjustments cannot be handled at the kit-level.
 * **Kit Value Does Not Change**: The stock's value is the same whether the kit's is tracked.
 * **Kit Internal Transfers**: An internal transfer for the kit breaks it into components.
+
+.. _manufacturing/advanced_configuration/kit-bom:
 
 Set up the kit BoM
 ==================

@@ -13,6 +13,10 @@ ifndef CURRENT_LANG
   CURRENT_LANG = en
 endif
 
+ifndef EXPORT_PATH
+  EXPORT_PATH = locale/sources
+endif
+
 SPHINX_BUILD   = sphinx-build
 CONFIG_DIR     = .
 SPHINXOPTS     = -D project_root=$(ROOT) -D canonical_version=$(CANONICAL_VERSION) \
@@ -69,7 +73,7 @@ latexpdf:
 
 gettext:
 	@echo "Generating translatable files..."
-	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b gettext $(SOURCE_DIR) locale/sources
+	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b gettext $(SOURCE_DIR) $(EXPORT_PATH)
 	@echo "Generation finished."
 
 $(HTML_BUILD_DIR)/_static/style.css: extensions/odoo_theme/static/style.scss extensions/odoo_theme/static/scss/*.scss
@@ -91,7 +95,8 @@ static: $(HTML_BUILD_DIR)/_static/style.css
 test:
 	@python tests/main.py $(SOURCE_DIR)/administration $(SOURCE_DIR)/applications $(SOURCE_DIR)/contributing $(SOURCE_DIR)/developer redirects
 
-# Similar as `test`, but called only manually by content reviewers to trigger extra checks.
+# Similar to `test`, but called only manually by content reviewers to specify a path and a max line
+# length.
 review:
 	@read -p "Enter relative content path: " path; read -p "Enter max line length (default: 100): " line_length; \
 	if [ -z "$$path" ]; then echo "Error: Path cannot be empty"; exit 1; fi; \

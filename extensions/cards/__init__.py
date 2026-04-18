@@ -2,7 +2,9 @@ from pathlib import Path
 
 from docutils import nodes
 from docutils.parsers.rst import directives
+from sphinx import addnodes
 from sphinx.util.docutils import SphinxDirective
+from sphinx.util.nodes import set_source_info
 
 
 class Cards(SphinxDirective):
@@ -67,21 +69,24 @@ class Card(SphinxDirective):
         div_card_body = Div(classes=['card-body', 'pb-0'])
         div_card += div_card_body
 
-        h4_title = H4(classes=['card-title', 'text-primary', 'mb-1'])
-        h4_title += nodes.Text(self.arguments[0])
+        title_nodes, _ = self.state.inline_text(self.arguments[0], self.lineno)
+        h4_title = H4('', *title_nodes, classes=['card-title', 'text-primary', 'mb-1'])
+        set_source_info(self, h4_title)
         div_card_body += h4_title
 
-        p_card_text = nodes.paragraph(classes=['card-text', 'text-dark', 'fw-normal'])
-        p_card_text += nodes.Text('\n'.join(self.content))
+        text_nodes, _ = self.state.inline_text('\n'.join(self.content), self.lineno)
+        p_card_text = nodes.paragraph('', *text_nodes, classes=['card-text', 'text-dark', 'fw-normal'])
+        set_source_info(self, p_card_text)
         div_card_body += p_card_text
 
         div_card_footer = Div(classes=['card-footer', 'border-0'])
         div_card += div_card_footer
 
         if 'tag' in self.options:
-            span_badge = Span(classes=['badge', 'rounded-pill', 'bg-dark', 'mt-auto', 'mb-2'])
+            tag_nodes, _ = self.state.inline_text(self.options['tag'], self.lineno)
+            span_badge = Span('', *tag_nodes, classes=['badge', 'rounded-pill', 'bg-dark', 'mt-auto', 'mb-2'])
+            set_source_info(self, span_badge)
             div_card_footer += span_badge
-            span_badge += nodes.Text(self.options['tag'])
 
         return [a_col]
 
@@ -94,16 +99,34 @@ class A(nodes.General, nodes.Element):
     custom_tag_name = 'a'
 
 
-class Span(nodes.General, nodes.Element):
+class TranslatableMixin(addnodes.translatable):
+    """
+    Mixin to make a node translatable.
+    """
+    def preserve_original_messages(self):
+        # Store the original text (msgid) if not already saved.
+        if 'rawtext' not in self:
+            self['rawcontent'] = self.astext()
+
+    def apply_translated_message(self, original_message, translated_message):
+        # Replace the node's children (content) with the translated text.
+        self.children = [nodes.Text(translated_message)]
+
+    def extract_original_messages(self):
+        # Retrieve the preserved msgid.
+        return [self['rawcontent']]
+
+
+class Span(nodes.General, nodes.Element, TranslatableMixin):
     custom_tag_name = 'span'
 
 
-class H4(nodes.General, nodes.Element):
+class H4(nodes.General, nodes.Element, TranslatableMixin):
     custom_tag_name = 'h4'
 
 
 def visit_node(translator, node):
-    custom_attr = {k: v for k, v in node.attributes.items() if k not in node.known_attributes}
+    custom_attr = {k: v for k, v in node.attributes.items() if k not in node.known_attributes and k != 'rawtext'}
     translator.body.append(translator.starttag(node, node.custom_tag_name, **custom_attr).rstrip())
 
 

@@ -3,7 +3,7 @@ Post expenses
 =============
 
 Once an expense report is :doc:`approved <../expenses/approve_expenses>`, the next step is to post
-the expense report to the proper accounting journal.
+the expenses to the proper accounting journal.
 
 .. important::
    To post expense reports to an accounting journal, the user **must** have the following
@@ -14,16 +14,15 @@ the expense report to the proper accounting journal.
 
 Only expense reports with an *Approved* status can post the expenses to a journal. To view all
 expense reports, navigate to :menuselection:`Expenses app --> Expense Reports`. Next, to view
-**only** approved expense reports that need to be posted, adjust the filters on the left side, so
+**only** approved expense reports that need to be posted, adjust the filters on the left side so
 only the :guilabel:`Approved` checkbox is ticked.
 
-.. image:: post_expenses/post-reports.png
-   :align: center
+.. image:: post_expenses/approved-expenses.png
    :alt: View reports to post by clicking on expense reports, then reports to post.
 
 .. note::
-   The default :guilabel:`All Reports` dashboard displays all expense reports, except reports with a
-   status of :guilabel:`Refused`.
+   The default :guilabel:`All Reports` dashboard displays all expense reports that are not
+   :guilabel:`Refused`.
 
 Expense reports can be posted to accounting journals in two ways: :ref:`individually
 <expenses/post-individual>` or :ref:`in bulk <expenses/post-multiple>`.
@@ -38,14 +37,15 @@ click on an individual report with a :guilabel:`Status` of :guilabel:`Approved`,
 form. In this view, several options are presented: :guilabel:`Post Journal Entries`,
 :guilabel:`Report In Next Payslip`, :guilabel:`Refuse`, or :guilabel:`Reset to Draft`.
 
-Click :guilabel:`Post Journal Entries` to post the report.
-
-The accounting journal the expenses are posted to is listed in the :guilabel:`Journal` field of the
-expense report.
+Click :guilabel:`Post Journal Entries` to post the report. The accounting journal the expenses are
+posted to is listed in the :guilabel:`Journal` field of the expense report.
 
 After posting the expenses to an accounting journal, a :guilabel:`Journal Entry` smart button
 appears at the top of the screen. Click the :guilabel:`Journal Entry` smart button, and the details
 for the journal entry appear, with a status of :guilabel:`Posted`.
+
+.. image:: post_expenses/post-one.png
+   :alt: A single expense report to be approved.
 
 .. _expenses/post-multiple:
 
@@ -71,5 +71,4 @@ checkbox next to each report being approved.
 Next, click the :guilabel:`Post Entries` button.
 
 .. image:: post_expenses/post-entries.png
-   :align: center
    :alt: Post multiple reports at a time from the Expense Reports view, with the Approved filter.

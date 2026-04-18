@@ -750,6 +750,14 @@ By reading the source code, templates related to options are easily found.
    <template id="..." inherit_id="..." name="..." active="True"/>
    <template id="..." inherit_id="..." name="..." active="False"/>
 
+.. seealso::
+
+   In such cases, the ``<template id="...">`` syntax should be preferred over
+   the ``<record id="..." model="ir.ui.view">`` syntax when defining the record
+   in XML.
+
+   See :ref:`reference/data/template`, especially about the ``active`` value.
+
 .. _theming/module/views/presets:
 
 Presets
@@ -826,7 +834,7 @@ This is a non-exhaustive list of the frequently used bundles for a website:
    * - website.assets_wysiwyg
      - Add your JS files related to the Website Builder options behaviors (for instance, a custom
        method for your custom building block)
-   * - website.assets_wysiwyg
+   * - web._assets_bootstrap_frontend
      - If you need to extend Boostrap through the Bootstrap Utilities API, for example
 
 .. _theming/assets/styles:
@@ -893,7 +901,7 @@ brings the benefit of a better developer experience with better integration with
 
 .. tip::
    - Use a linter (JSHint, ...).
-   - Never add minified JavaScript libraries.
+   - Always add minified JavaScript libraries.
    - Add `'use strict';` at the top of every old-style module (this is automatic for new-style
      modules).
    - Use `js_` prefixed CSS classes on elements you target with JavaScript.

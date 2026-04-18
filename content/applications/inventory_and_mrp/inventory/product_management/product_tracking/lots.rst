@@ -33,7 +33,6 @@ Then, click :guilabel:`Save`.
    - :ref:`Print GS1 barcodes for lots and serial numbers <barcode/operations/gs1-lots>`
 
 .. image:: lots/enabled-lots-setting.png
-   :align: center
    :alt: Enabled lots and serial numbers feature in inventory settings.
 
 .. _inventory/management/track_products_by_lots:
@@ -45,9 +44,10 @@ Once the :guilabel:`Lots & Serial Numbers` feature is activated, configure indiv
 tracked using lots. To do this, go to :menuselection:`Inventory app --> Products --> Products`, and
 choose a product to configure.
 
-On the product form, go to the :guilabel:`Inventory` tab. In the :guilabel:`Traceability` section,
-select the :guilabel:`By Lots` option in the :guilabel:`Tracking` field. Now, new or existing lot
-numbers can be assigned to newly-received or manufactured batches of this product.
+On the product form, click into the :guilabel:`General Information` tab. In the :guilabel:`Track
+Inventory` field, tick the checkbox, then select :guilabel:`By Lots` from the drop-down menu. Now,
+new or existing lot numbers can be assigned to newly-received or manufactured batches of this
+product.
 
 .. seealso::
    :doc:`expiration_dates`
@@ -58,7 +58,6 @@ numbers can be assigned to newly-received or manufactured batches of this produc
    products in stock.
 
 .. image:: lots/tracking-product-form.png
-   :align: center
    :alt: Enabled tracking by lots feature on product form.
 
 Assign lots for shipping and receiving
@@ -90,14 +89,12 @@ warehouse receipt form.
    lot number **must** be assigned before validating the receipt.
 
    .. image:: lots/user-error.png
-      :align: center
       :alt: Add lot/serial number user error popup.
 
 On the receipt form, on the product line in the :guilabel:`Operations` tab, select the |list| icon
 to the right of the product that is tracked by lot numbers.
 
 .. image:: lots/list-icon.png
-   :align: center
    :alt: Show the bulleted list icon on the product line.
 
 Doing so opens the :guilabel:`Open: Stock move` pop-up window, where the :guilabel:`Lot/Serial
@@ -118,7 +115,6 @@ Package`, if any.
    :guilabel:`Quantity` column matches the :guilabel:`Demand` at the top.
 
 .. image:: lots/assign-lots-popup.png
-   :align: center
    :alt: Assign lot number detailed operations popup.
 
 Import lots
@@ -127,14 +123,7 @@ Import lots
 In the :guilabel:`Open: Stock move` pop-up window, click :guilabel:`Import Serials/Lots`, then paste
 the bulk lot numbers, in the :guilabel:`Lots/Serial numbers` field.
 
-.. figure:: lots/lots-excel-spreadsheet.png
-   :align: center
-   :alt: List of lot numbers copied on excel spreadsheet.
-
-   List of lot numbers copied on *Google* spreadsheets.
-
 .. figure:: lots/bulk-sn.png
-   :align: center
    :alt: Lot numbers copied to the lot number line.
 
    Lot numbers pasted to the "Lots/Serial numbers" field, in the **Import Lots** pop-up window.
@@ -193,7 +182,6 @@ Repeat the above steps to select enough lots to fulfill the :guilabel:`Demand`, 
 |DO| to deliver the products.
 
 .. image:: lots/pick-from-lots.png
-   :align: center
    :alt: Popup for source lot number on sales order.
 
 .. seealso::
@@ -212,7 +200,6 @@ displays the existing lot numbers. Select a lot number to :ref:`modify or add de
 button.
 
 .. figure:: lots/lot-dashboard.png
-   :align: center
    :alt: Show the "Lot/Serial Number" dashboard.
 
    Display lot numbers, grouped by products, on the **Lot/Serial Number** dashboard.
@@ -243,7 +230,6 @@ On the lot number form, the following fields can be modified:
    modified, as the lot numbers are linked with existing stock moves.
 
 .. image:: lots/lot-number.png
-   :align: center
    :alt: Show the lot number form.
 
 .. seealso::
@@ -259,14 +245,13 @@ on a lot number form:
    :icon:`fa-cogs` :guilabel:`Add Properties` from the drop-down menu.
 #. Click the :icon:`fa-plus` :guilabel:`Add a Property` button, located below the existing fields.
 
-Name and :doc:`configure the new field </applications/essentials/property_fields>`. Once
-finished, enter the property value in the new field.
+Name and :doc:`configure the new field </applications/essentials/property_fields>`. Once finished,
+enter the property value in the new field.
 
 .. example::
    The new property, `Wood type`, is added. The value is recorded as `Cherry wood`.
 
    .. image:: lots/add-properties.png
-      :align: center
       :alt: Show the "Add Properties" button on a lot number form.
 
 .. seealso::
@@ -298,21 +283,11 @@ number will be assigned.
    The lot number, `000001`, is created for the product, `Drawer Black`.
 
    .. image:: lots/new-lot-number.png
-      :align: center
       :alt: New lot number creation form with assigned product.
 
 After a new lot number has been created, saved, and assigned to the desired product, the lot number
 is saved as an existing lot number linked to the product, and can be selected when :ref:`assigning
-lot numbers to products on a receipt <inventory/product_management/assign-lots>`, or when making an
-inventory adjustment.
-
-.. example::
-   After creating the lot number, `000001` appears as an option for `Drawer Black` when assigning
-   lot numbers on the :guilabel:`Inventory Adjustment` page.
-
-   .. image:: lots/inventory-adjustment.png
-      :align: center
-      :alt: Show how to assign lot numbers on the Inventory Adjustment page.
+lot numbers to products on a receipt <inventory/product_management/assign-lots>`.
 
 Manage lots for different operations types
 ==========================================
@@ -330,7 +305,6 @@ On the operation type form, under the :guilabel:`Lots/Serial Numbers` section, t
 Choose :guilabel:`Use Existing ones` if only existing lot numbers can be selected.
 
 .. image:: lots/operation-type-form.png
-   :align: center
    :alt: Enabled traceability setting on operations type form.
 
 .. tip::
@@ -398,7 +372,6 @@ Doing so reorganizes all the records on the page to display all existing lots an
 and can be expanded to show all quantities of products with that assigned number.
 
 .. image:: lots/group-by-number.png
-   :align: center
    :alt: Lots and serial numbers traceability report.
 
 Traceability report
@@ -409,7 +382,6 @@ To view a full stock moves report for a lot number, select the lot number line f
 smart button.
 
 .. image:: lots/traceability-report.png
-   :align: center
    :alt: Show the Traceability Report for a lot, that displays the stock moves.
 
 .. seealso::

@@ -431,15 +431,97 @@ Potential issues
     :guilabel:`CodaBox` section, click on :guilabel:`Manage Connection`, then click on
     :guilabel:`Revoke`.
 
-Electronic invoicing
-====================
+.. _belgium/codaclean:
 
-Odoo supports the **Peppol BIS Billing 3.0 (UBL)** electronic invoicing format. To enable it for a
-customer, go to :menuselection:`Accounting --> Customers --> Customers`, open their contact form,
-and under the :guilabel:`Accounting` tab, select the :guilabel:`Peppol BIS Billing 3.0` format.
+Codaclean
+---------
+
+**Codaclean** is a service that allows Belgian companies and accounting firms to access bank
+information and statements. Odoo provides a way to import such statements and their transactions
+automatically.
+
+.. _belgium/codaclean-configuration:
+
+Configuration
+~~~~~~~~~~~~~
+
+.. note::
+   Make sure to :ref:`install <general/install>` the :guilabel:`Codaclean` (`l10n_be_codaclean`)
+   module.
+
+
+.. _belgium/codaclean-configuration-connection:
+
+Connection with Odoo
+********************
+
+To connect Odoo with Codaclean, follow these steps:
+
+#. Open the Settings app, navigate to the :ref:`Companies <general/companies/company>` section, and
+   click :icon:`oi-arrow-right` :guilabel:`Manage Companies` to make sure the company's
+   :guilabel:`Country` is set to :guilabel:`Belgium`.
+#. Go to :menuselection:`Accounting --> Configuration --> Settings` and scroll to the
+   :guilabel:`Codaclean` section.
+#. Click :guilabel:`Manage Connection` to open the connection wizard, enter the Codaclean
+   :guilabel:`Username` and :guilabel:`Password` and click :guilabel:`Connect`.
+
+The :guilabel:`Status` is updated to :guilabel:`Connected`.
+
+.. tip::
+   Once the connection is established, the :guilabel:`Manage Connection` wizard provides two options:
+
+   - Update Codaclean credentials: Enter the new :guilabel:`Username` and :guilabel:`Password`, then
+     click :guilabel:`Change Credentials`.
+   - Remove Codaclean connection: Click :guilabel:`Disconnect`; no :guilabel:`Username` or
+     :guilabel:`Password` is required.
+
+.. _belgium/codaclean-configuration-journal:
+
+Journal creation
+****************
+
+A specific bank journal must be created for Codaclean synchronization. To do so, :doc:`create a new
+bank journal <../accounting/bank>`, make sure to enter the correct IBAN in the :guilabel:`Bank
+Account Number` field, and select :guilabel:`Codaclean Syncronization` in the :guilabel:`Bank Feeds`
+field.
+
+.. tip::
+   For bank transactions in different currencies, it is recommended to create a separate journal for
+   each currency, using the same bank account.
+
+.. _belgium/codaclean-synchronization:
+
+Synchronization
+~~~~~~~~~~~~~~~
+
+Once the connection is established, Odoo is synchronized with Codaclean, and new CODA files received
+via Codaclean are checked every twelve hours.
+
+.. tip::
+   To manually check for new CODA files, go to the Accounting Dashboard and click :guilabel:`Fetch
+   from Codaclean` on the relevant :ref:`journal <belgium/codaclean-configuration-journal>` .
+
+.. _belgium/peppol:
+
+Electronic invoicing with Peppol
+================================
+
+As of 1 January 2026, all Belgian companies must be registered on the Peppol network to send and
+receive electronic invoices.
+
+To activate Peppol, refer to the :ref:`Peppol documentation <accounting/e-invoicing/peppol>`,
+ensuring during :ref:`registration <accounting/e-invoicing/peppol-registration>` that:
+
+- The :guilabel:`Peppol EAS` field is set to :guilabel:`0208 - Numero d'entreprise /
+  ondernemingsnummer / Unternehmensnummer`.
+- the :guilabel:`Peppol Endpoint` field is set to the company registry number.
+
+In addition, when veryfing that a customer is :ref:`registered as a Peppol participant
+<accounting/e-invoicing/contact-verification>`, ensure the :guilabel:`Format` field is set to
+:guilabel:`BIS Billing 3.0`.
 
 .. seealso::
-   :doc:`../accounting/customer_invoices/electronic_invoicing`
+   :ref:`Peppol documentation <accounting/e-invoicing/peppol>`
 
 .. _belgium/cash-discount:
 
@@ -481,7 +563,7 @@ The Odoo POS system is certified for databases hosted on **Odoo Online**, **Odoo
 **On-Premise**.
 
 .. seealso::
-   :doc:`/administration/supported_versions`
+   :doc:`/administration/standard_extended_support`
 
 A `certified POS system <https://www.systemedecaisseenregistreuse.be/systemes-certifies>`_ must
 adhere to rigorous government regulations, which means it operates differently from a non-certified

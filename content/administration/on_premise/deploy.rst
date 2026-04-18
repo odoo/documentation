@@ -533,6 +533,8 @@ X-Sendfile and X-Accel).
          location /web/filestore {
              internal;
              alias /path/to/odoo/data-dir/filestore;
+             add_header Content-Security-Policy $upstream_http_content_security_policy;
+             add_header X-Content-Type-Options nosniff;
          }
 
      In case you don't know what is the path to your filestore, start Odoo with the
@@ -750,8 +752,7 @@ reset. The following process is for system administrators of an Odoo on-premise 
 how to manually reset and re-encrypt the master password.
 
 .. seealso::
-   For more information about changing an Odoo.com account password, see this documentation:
-   :ref:`odoocom/change_password`.
+   :doc:`../odoo_accounts`
 
 When creating a new on-premise database, a random master password is generated. Odoo recommends
 using this password to secure the database. This password is implemented by default, so there is a

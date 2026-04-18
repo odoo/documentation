@@ -33,7 +33,8 @@ Each job position card contains the following information:
   form.
 - The number of :guilabel:`Open Positions` being recruited. This information is taken from the
   *Expected New Employees* field of the *Recruitment* tab of the job form.
-- The :doc:`points <points>` a user earns when an applicant applies for the position.
+- The total :doc:`points <points>` a user earns when the referred applicant is hired for the
+  position.
 - The job description detailing the job position. This information is taken from the *Job Position*
   tab of the job form.
 

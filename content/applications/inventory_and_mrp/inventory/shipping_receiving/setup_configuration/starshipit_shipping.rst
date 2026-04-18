@@ -89,8 +89,8 @@ Odoo.
 Setup in Odoo
 =============
 
-Install
--------
+Install the Starshipit module
+-----------------------------
 
 After the Starshipit account is set up, integrate it with the Odoo database. To do that, go to
 Odoo's :guilabel:`Apps` module, search for the :guilabel:`Starshipit Shipping` module, and click
@@ -100,25 +100,25 @@ Odoo's :guilabel:`Apps` module, search for the :guilabel:`Starshipit Shipping` m
    :align: center
    :alt: Starshipit Shipping module in the Odoo Apps module.
 
-Configuration
--------------
+Configure a Starshipit delivery method
+--------------------------------------
 
 Once installed, activate the feature by going to :menuselection:`Inventory --> Configuration -->
 Settings`. Under the :guilabel:`Shipping Connectors` section, activate the :guilabel:`Starshipit
 Connector` option.
 
 After activating :guilabel:`Starshipit Connector`, click the :guilabel:`Starshipit Shipping Methods`
-link below the listed connector. Once on the :guilabel:`Shipping Methods` page, click
+link below the listed connector. Once on the :guilabel:`Delivery Methods` page, click
 :guilabel:`Create`.
 
 .. tip::
-   :guilabel:`Shipping Methods` can also be accessed by going to :menuselection:`Inventory -->
-   Configuration --> Delivery --> Shipping Methods`.
+   :guilabel:`Delivery Methods` can also be accessed by going to :menuselection:`Inventory -->
+   Configuration --> Delivery --> Delivery Methods`.
 
-Configure Starshipit in Odoo by filling out the fields on the :guilabel:`Shipping Methods` form as
+Configure a Starshipit delivery method in Odoo by filling out the fields on the :guilabel:`Delivery Methods` form as
 follows:
 
-- :guilabel:`Shipping Method`: type `Starshipit`.
+- :guilabel:`Delivery Method`: type `Starshipit`.
 - :guilabel:`Provider`: select :guilabel:`Starshipit` from the drop-down menu.
 - :guilabel:`Delivery Product`: assign or create the delivery product that will appear on the sales
   order line when the cost of shipping is computed.
@@ -143,17 +143,21 @@ In the :guilabel:`Starshipit Configuration` tab, fill out these fields:
    To set a default package type, the *Packages* feature **must** be enabled in
    :menuselection:`Inventory --> Configuration --> Settings`.
 
-- Manually :guilabel:`Save` the form by clicking the cloud icon next to the :guilabel:`Shipping
-  Methods / New` breadcrumbs.
+Click the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon at the top of the page to save the changes.
 
-To load the newly configured shipping products, click the :guilabel:`Select a service linked to the
-Starshipit account` link at the bottom of the :guilabel:`Starshipit Configuration` tab.
+To load the newly configured shipping products, click :guilabel:`Select a service linked to your
+starshipit account` at the bottom of the :guilabel:`Starshipit Configuration` tab, and a :guilabel:`Choose Starshipit Shipping Service` pop-up window appears. In the
+:guilabel:`Delivery Service` field, select the desired shipping service for deliveries and returns
+from the drop-down menu.
 
-Doing so opens the :guilabel:`Choose Starshipit Shipping Service` pop-up window. In the
-:guilabel:`Delivery Service` field, choose the desired shipping service for deliveries and returns
-from the drop-down menu. Finally, click :guilabel:`Confirm`.
+.. note::
+   The list of services shown during initial configuration may be incomplete. Starshipit determines
+   service availability based on shipment details such as the destination address and package
+   weight, which are not yet available at this stage. To select from the full list of services
+   available for a specific order, use the :guilabel:`Get more delivery methods` option directly
+   from the sales order. See :ref:`inventory/shipping_receiving/star-label` for details.
 
-The chosen delivery service will populate in the :guilabel:`Service Name` field.
+Click :guilabel:`Confirm` and the selected delivery service populates in the :guilabel:`Shipping Method` and :guilabel:`Starshipit Service Code` fields.
 
 .. example::
    Sample of a Starshipit shipping product configured in Odoo:
@@ -188,8 +192,14 @@ Generate a label with Starshipit
 When creating a quotation in Odoo, add the Starshipit shipping method by clicking the :guilabel:`Add
 shipping` button.
 
-In the :guilabel:`Add a shipping method` pop-up window, select Starshipit in the :guilabel:`Shipping
-Method` field.
+.. tip::
+   In the :guilabel:`Add a shipping method` pop-up window, select a Starshipit shipping method in the
+   :guilabel:`Shipping Method` field.
+
+   If the desired service is not available, click :guilabel:`Get more delivery methods`. This sends the
+   actual order details (including the destination address, weight, and volume) to Starshipit, which
+   returns the complete list of services available for that specific shipment. A new Starshipit
+   delivery method is then created automatically and selected in the :guilabel:`Shipping Method` field.
 
 Calculate the shipping rate by clicking :guilabel:`Get rate`.
 Finally, click :guilabel:`Add` to include the cost of shipping to the sales order line, labeled as

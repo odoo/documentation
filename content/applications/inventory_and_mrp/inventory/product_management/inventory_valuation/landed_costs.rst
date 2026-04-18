@@ -7,9 +7,6 @@ Landed costs
 .. |FIFO| replace:: :abbr:`FIFO (First In First Out)`
 .. |AVCO| replace:: :abbr:`AVCO (Average Costing)`
 
-When shipping products to customers, the landed cost is the total price of a product or shipment,
-including all expenses associated with shipping the product.
-
 In Odoo, the *Landed Costs* feature is used to take additional costs into account when calculating
 the valuation of a product. This includes the cost of shipment, insurance, customs duties, taxes,
 and other fees.
@@ -19,13 +16,13 @@ Configuration
 
 To add landed costs to products, the *Landed Costs* feature must first be enabled. To enable this
 feature, navigate to :menuselection:`Inventory app --> Configuration --> Settings`, and scroll to
-the :guilabel:`Valuation` section.
+the *Valuation* section.
 
-Tick the checkbox next to the :guilabel:`Landed Costs` option, and click :guilabel:`Save` to save
+Select the checkbox next to the :guilabel:`Landed Costs` option, and click :guilabel:`Save` to save
 changes.
 
 Once the page refreshes, a new :guilabel:`Default Journal` field appears below the :guilabel:`Landed
-Costs` feature in the :guilabel:`Valuation` section.
+Costs` feature in the *Valuation* section.
 
 Click the :guilabel:`Default Journal` drop-down menu to reveal a list of accounting journals. Select
 a journal for which all accounting entries related to landed costs should be recorded.
@@ -50,17 +47,17 @@ Shipping`). In the :guilabel:`Product Type` field, click the drop-down menu, and
 .. important::
    Landed cost products **must** have their :guilabel:`Product Type` set to :guilabel:`Service`.
 
-Click the :guilabel:`Purchase` tab, and tick the checkbox next to :guilabel:`Is a Landed Cost` in
-the :guilabel:`Vendor Bills` section. Once ticked, a new :guilabel:`Default Split Method` field
-appears below it, prompting a selection. Clicking that drop-down menu reveals the following options:
+Click the *Purchase* tab, and select the checkbox next to :guilabel:`Is a Landed Cost` in the
+*Vendor Bills* section. Once selected, a new :guilabel:`Default Split Method` field appears below
+it, prompting a selection. Clicking that drop-down menu reveals the following options:
 
 - :guilabel:`Equal`: splits the cost equally across each product included in the receipt, regardless
   of the quantity of each.
 - :guilabel:`By Quantity`: splits the cost across each unit of all products in the receipt.
 - :guilabel:`By Current Cost`: splits the cost according to the cost of each product unit, so a
   product with a higher cost receives a greater share of the landed cost.
-- :guilabel:`By Weight`: splits the cost, according to the weight of the products in the receipt.
-- :guilabel:`By Volume`: splits the cost, according to the volume of the products in the receipt.
+- :guilabel:`By Weight`: splits the cost according to the weight of the products in the receipt.
+- :guilabel:`By Volume`: splits the cost according to the volume of the products in the receipt.
 
 .. image:: landed_costs/integrating-landed-costs-landed-cost-product.png
    :alt: Is a Landed Cost checkbox and Default Split Method on service type product form.
@@ -78,7 +75,7 @@ Create purchase order
 
 Navigate to :menuselection:`Purchase app --> New` to create a new request for quotation (RfQ). In
 the :guilabel:`Vendor` field, add a vendor to order products from. Then, click :guilabel:`Add a
-product`, under the :guilabel:`Products` tab, to add products to the |RfQ|.
+product`, under the *Products* tab, to add products to the |RfQ|.
 
 Once ready, click :guilabel:`Confirm Order` to confirm the order. Then, click :guilabel:`Receive
 Products` once the products have been received, followed by :guilabel:`Validate`.
@@ -96,17 +93,16 @@ the :guilabel:`Draft` stage.
 In the :guilabel:`Bill Date` field, click the line to open a calendar popover menu, and select the
 date on which this draft bill should be billed.
 
-Then, under the :guilabel:`Invoice Lines` tab, click :guilabel:`Add a line`, and click the drop-down
-menu in the :guilabel:`Product` column to select the previously-created landed cost product. Click
-the :icon:`fa-cloud-upload` :guilabel:`(cloud with arrow)` icon to manually save and update the
-draft bill.
+Then, under the *Invoice Lines* tab, click :guilabel:`Add a line`, and click the drop-down menu in
+the :guilabel:`Product` column to select the previously-created landed cost product. Click the
+:icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon to manually save and update the draft bill.
 
 .. image:: landed_costs/integrating-landed-costs-checkboxes.png
    :alt: Landed Costs column checkboxes for product and landed cost.
 
 In the :guilabel:`Landed Costs` column, the product ordered from the vendor does **not** have its
-checkbox ticked, while the landed cost product's checkbox **is** ticked. This differentiates landed
-costs from all other costs displayed on the bill.
+checkbox selected, while the landed cost product's checkbox **is** selected. This differentiates
+landed costs from all other costs displayed on the bill.
 
 Additionally, at the top of the form, a :guilabel:`Create Landed Costs` button appears.
 
@@ -120,7 +116,7 @@ Once a landed cost is added to the vendor bill, click :guilabel:`Create Landed C
 the vendor bill.
 
 Doing so automatically creates a landed cost record, with a set landed cost pre-filled in the
-product line in the :guilabel:`Additional Costs` tab.
+product line in the *Additional Costs* tab.
 
 From the :guilabel:`Landed Cost` form, click the :guilabel:`Transfers` drop-down menu, and select
 which transfer the landed cost belongs to.
@@ -136,10 +132,10 @@ which transfer the landed cost belongs to.
 After setting the picking from the :guilabel:`Transfers` drop-down menu, click :guilabel:`Compute`
 (at the bottom of the form, under the :guilabel:`Total:` cost).
 
-Click the :guilabel:`Valuation Adjustments` tab to see the impact of the landed costs. The
-:guilabel:`Original Value` column lists the original price of the |PO|, the :guilabel:`Additional
-Landed Cost` column displays the landed cost, and the :guilabel:`New Value` displays the sum of the
-two, for the total cost of the |PO|.
+Click the *Valuation Adjustments* tab to see the impact of the landed costs. The :guilabel:`Original
+Value` column lists the original price of the |PO|, the :guilabel:`Additional Landed Cost` column
+displays the landed cost, and the :guilabel:`New Value` displays the sum of the two, for the total
+cost of the |PO|.
 
 Once ready, click :guilabel:`Validate` to post the landed cost entry to the accounting journal.
 

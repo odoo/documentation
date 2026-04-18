@@ -186,8 +186,8 @@ Sending invoices to SInvoice
 ----------------------------
 
 Invoices can be sent to SInvoice once they have been confirmed. To do so, follow the
-:ref:`invoice sending <accounting/invoice/sending>` steps. In the :guilabel:`Send` popup, enable
-:guilabel:`Send to SInvoice` and click :guilabel:`Send & Print`.
+:ref:`invoice sending <accounting/invoice/sending>` steps. In the popup window, enable
+:guilabel:`Send to SInvoice` and click :guilabel:`Send`.
 
 Once the invoice has been successfully submitted to SInvoice, the :guilabel:`SInvoice Status` field
 in the :guilabel:`SInvoice` tab of the invoice is updated to :guilabel:`Sent`. The
@@ -255,7 +255,7 @@ Enable :guilabel:`Include Reference` to include the invoice number in the QR cod
 .. important::
    - The account holder's country must be set to `Vietnam`, and their city must be specified on the
      contact form.
-   - The :ref:`account number <accounting/bank/account-number>` and bank must be set on the
+   - The :ref:`account number <accounting/journals/bank>` and bank must be set on the
      :guilabel:`Bank` journal.
 
 .. seealso::

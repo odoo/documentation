@@ -43,9 +43,14 @@ be able to send SMS messages. These cost credits that are to be bought on Twilio
 #. Go back to bottom of the :guilabel:`Dashboard` page
 #. Copy the :guilabel:`Account SID` and :guilabel:`Auth Token`
 
-Beware that sending SMS to some countries (such as the US or Canada) might require a registration.
-This can only be done by you, and not by Odoo. Please check out `Twilio's Help Center
-<https://help.twilio.com>`_
+.. important::
+   In case of a testing account, you will only be able to send SMS to phones that you have verified
+   within `Twilio's console <https://console.twilio.com>`_.
+
+.. note::
+   Sending SMS to some countries (such as the US or Canada) might require a registration. This can
+   only be done by you, and not by Odoo. Please check out `Twilio's Help Center
+   <https://help.twilio.com>`_.
 
 
 Setup Odoo to use Twilio

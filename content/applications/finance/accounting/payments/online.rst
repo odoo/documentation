@@ -28,7 +28,7 @@ Settings --> Customer Payments`, enable **Invoice Online Payment**, and click on
 Customer Portal
 ===============
 
-After issuing the invoice, click on *Send & Print* and send the invoice by email to the customer.
+After issuing the invoice, click on :guilabel:`Send` and send the invoice by email to the customer.
 They will receive an email with a link that redirects them to the invoice on their **Customer
 Portal**.
 

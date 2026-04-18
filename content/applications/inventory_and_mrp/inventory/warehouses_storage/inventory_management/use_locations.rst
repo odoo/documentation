@@ -4,6 +4,8 @@ Locations
 
 A *location* is a specific space within a warehouse. This can be a shelf, room, aisle, etc.
 
+.. _use_locations/configuration:
+
 Configuration
 =============
 

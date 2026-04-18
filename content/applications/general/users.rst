@@ -64,6 +64,51 @@ The :guilabel:`Portal` user option does **not** allow the administrator to choos
 These users have specific access rights pre-set (such as, record rules and restricted menus), and
 usually do not belong to the usual Odoo groups.
 
+User devices
+============
+
+For security purposes, when a user logs into the database, the various login information, such as
+the IP address, is stored in the user's profile. It is best practice to check this periodically, to
+ensure all access is from the user, and no one else has accessed the database.
+
+To check the logged-in devices, click the user icon in the upper-right corner, and click
+:guilabel:`My Profile`. This opens the user's profile in the **Settings** app. Click the
+:guilabel:`Devices` tab to view a Kanban list of all devices the user has logged into the database
+with. Any device currently logged into the system displays a green circle next to the device name on
+the Kanban card.
+
+.. image:: users/devices.png
+   :alt: The Kanban view of all user devices.
+
+Click on a card to view the details for the device. Each card displays the :guilabel:`User` name,
+the :guilabel:`Name` of the device, the :guilabel:`Last IP Address` used as well as the
+:guilabel:`Linked IP Address`. It also shows the :guilabel:`First Activity` and :guilabel:`Last
+Activity`, which shows when the device first logged into the database, and the last time it was
+active on the database.
+
+If a device is legitimate and should be retained, click :guilabel:`Save`.
+
+If the device is legitimate but should **not** be retained, and does not pose a security risk, click
+:guilabel:`Delete`.
+
+.. image:: users/individual-device.png
+   :alt: The device details for one device.
+
+Revoke devices
+--------------
+
+If a listed device is **not** a legitimate user device, and could be a potential security risk,
+remove the device and revoke access by clicking the :guilabel:`Revoke` button.
+
+A :guilabel:`Security Control` pop-up window loads, asking to `Please confirm your identity by
+entering your password`. Enter the user's password, then click :guilabel:`Confirm Password`.
+
+The device disappears from the :guilabel:`Devices` tab and can no longer be used to log into the
+database.
+
+ .. image:: users/security.png
+    :alt: The security pop-up window asking to verify the account with a password.
+
 .. _users/deactivate:
 
 Deactivate users

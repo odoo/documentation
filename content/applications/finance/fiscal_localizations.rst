@@ -67,7 +67,7 @@ Fiscal localization modules are available for the countries listed below.
 - Comoros
 - Congo
 - Costa Rica
-- Croatia
+- :doc:`Croatia <fiscal_localizations/croatia>`
 - Cyprus
 - Czech Republic
 - Democratic Republic of the Congo
@@ -114,6 +114,7 @@ Fiscal localization modules are available for the countries listed below.
 - Niger
 - Nigeria
 - Norway
+- :doc:`Oman <fiscal_localizations/oman>`
 - Pakistan
 - Panama
 - :doc:`Peru <fiscal_localizations/peru>`
@@ -133,7 +134,7 @@ Fiscal localization modules are available for the countries listed below.
 - :doc:`Spain <fiscal_localizations/spain>`
 - Sweden
 - :doc:`Switzerland <fiscal_localizations/switzerland>`
-- Taiwan
+- :doc:`Taiwan <fiscal_localizations/taiwan>`
 - Tanzania
 - :doc:`Thailand <fiscal_localizations/thailand>`
 - Tunisia
@@ -159,6 +160,7 @@ Fiscal localization modules are available for the countries listed below.
    fiscal_localizations/canada
    fiscal_localizations/chile
    fiscal_localizations/colombia
+   fiscal_localizations/croatia
    fiscal_localizations/denmark
    fiscal_localizations/ecuador
    fiscal_localizations/egypt
@@ -176,6 +178,7 @@ Fiscal localization modules are available for the countries listed below.
    fiscal_localizations/mexico
    fiscal_localizations/netherlands
    fiscal_localizations/new_zealand
+   fiscal_localizations/oman
    fiscal_localizations/peru
    fiscal_localizations/philippines
    fiscal_localizations/romania
@@ -183,6 +186,7 @@ Fiscal localization modules are available for the countries listed below.
    fiscal_localizations/singapore
    fiscal_localizations/spain
    fiscal_localizations/switzerland
+   fiscal_localizations/taiwan
    fiscal_localizations/thailand
    fiscal_localizations/united_arab_emirates
    fiscal_localizations/united_kingdom

@@ -40,5 +40,5 @@ email, as usual, but the invoice is sent to the email of the address set as the
 .. note::
    - Reports, such as the delivery slip and invoice report, can be :doc:`customized using Studio
      </applications/studio/pdf_reports>`.
-   - If :doc:`Send by Post <snailmail>` is checked when you click :guilabel:`Send & Print`, the
+   - If :doc:`Send by Post <snailmail>` is checked when you click :guilabel:`Send`, the
      invoice will be mailed to the invoice address.

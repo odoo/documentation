@@ -2,33 +2,59 @@
 Fields and widgets
 ==================
 
-Fields structure the models of a database. If you picture a model as a table or spreadsheet, fields
-are the columns where data is stored in the records (i.e., the rows). Fields also define the type of
-data that is stored within them. How the data is presented and formatted on the :abbr:`UI (User
-Interface)` is defined by their widget.
+Fields structure the :doc:`models <models_modules_apps>` of a database. If you think of a model as a
+table or spreadsheet, fields are the columns and records are the individual rows. Fields also define
+the type of data that is stored within them. The way in which a field's data is presented and
+formatted on the :abbr:`UI (User Interface)` is controlled by its widget.
 
-From a technical point of view, there are 15 field types in Odoo. However, you can choose from 20
-fields in Studio, as some field types are available more than once with a different default widget.
+With Studio, it is possible to:
 
-.. tip::
-   :guilabel:`New Fields` can only be added to the :ref:`studio/views/general/form` and
-   :ref:`studio/views/multiple-records/list` views. On other views, you can only add
-   :guilabel:`Existing Fields` :dfn:`(fields already on the model)`.
+- :ref:`add new fields <studio/fields/add-new>` to your database. From a technical point of view, there
+  are 15 :ref:`field types <studio/fields/field-types>` in Odoo. However, you can choose from 20
+  field types in Studio, as some field types are available more than once with a different default
+  widget;
+- :ref:`add existing fields, <studio/fields/add-existing>` i.e., fields that already exists on a
+  model, to any view of that model;
+- :ref:`modify a field's properties <studio/fields/modify>`; or
+- :ref:`remove a field from a view <studio/fields/remove>`.
+
+.. admonition:: Studio fields vs. property fields
+
+   Fields created using Studio are saved as columns in your Odoo database. :doc:`Property fields
+   <../essentials/property_fields>`, on the other hand, act as pseudo-fields; they are shared by all
+   records that are linked to the same parent record (e.g., for tasks, the project, or for a
+   product, the product category), but they are not saved as columns in your database.
+
+   .. example::
+      Adding a :guilabel:`Deadline` field to the form view of a task using Studio makes that field
+      visible in every task in your database. Adding a :guilabel:`Special instructions` property
+      field to a task makes the field visible in all tasks *within the same project* (i.e., its
+      parent) while other projects’ tasks remain unaffected.
+
+.. _studio/fields/field-types:
+
+Field types
+===========
+
+Fields can be broadly divided into two categories:
+
+- :ref:`Simple fields <studio/fields/simple-fields>`, which contain basic values, such as text,
+  numbers, files, etc.
+- :ref:`Relational fields <studio/fields/relational-fields>`, which are used to link and
+  display the data from records on another model.
 
 .. _studio/fields/simple-fields:
 
 Simple fields
-=============
-
-Simple fields contain basic values, such as text, numbers, files, etc.
+-------------
 
 .. note::
-   Non-default widgets, when available, are presented as bullet points or sub-headings below.
+   Non-default widgets, when available, are presented as bullet points or sub-headings.
 
 .. _studio/fields/simple-fields-text:
 
 Text (`char`)
--------------
+~~~~~~~~~~~~~
 
 The :guilabel:`Text` field is used for short text containing any character. One text line is
 displayed when filling out the field.
@@ -41,7 +67,7 @@ displayed when filling out the field.
   default value can be set.
 
   .. note::
-     This works differently than selecting the :ref:`Image field
+     This works differently from selecting the :ref:`Image field
      <studio/fields/simple-fields-image>` directly, as the image is not stored in Odoo when using a
      :guilabel:`Text` field with the :guilabel:`Image` widget. For example, it can be useful if you
      want to save disk space.
@@ -62,7 +88,7 @@ displayed when filling out the field.
 .. _studio/fields/simple-fields-multiline-text:
 
 Multiline Text (`text`)
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 The :guilabel:`Multiline Text` field is used for longer text containing any type of character. Two
 text lines are displayed on the UI when filling out the field.
@@ -77,7 +103,7 @@ text lines are displayed on the UI when filling out the field.
 .. _studio/fields/simple-fields-integer:
 
 Integer (`integer`)
--------------------
+~~~~~~~~~~~~~~~~~~~
 
 The :guilabel:`Integer` field is used for all integer numbers (:dfn:`positive, negative, or zero,
 without a decimal`).
@@ -97,7 +123,7 @@ without a decimal`).
 .. _studio/fields/simple-fields-decimal:
 
 Decimal (`float`)
------------------
+~~~~~~~~~~~~~~~~~
 
 The :guilabel:`Decimal` field is used for all decimal numbers (:dfn:`positive, negative, or zero,
 with a decimal`).
@@ -124,7 +150,7 @@ with a decimal`).
 .. _studio/fields/simple-fields-monetary:
 
 Monetary (`monetary`)
----------------------
+~~~~~~~~~~~~~~~~~~~~~
 
 The :guilabel:`Monetary` field is used for all monetary values.
 
@@ -141,7 +167,7 @@ The :guilabel:`Monetary` field is used for all monetary values.
 .. _studio/fields/simple-fields-html:
 
 Html (`html`)
--------------
+~~~~~~~~~~~~~
 
 The :guilabel:`Html` field is used to add text that can be edited using the Odoo HTML editor.
 
@@ -155,7 +181,7 @@ The :guilabel:`Html` field is used to add text that can be edited using the Odoo
 .. _studio/fields/simple-fields-date:
 
 Date (`date`)
--------------
+~~~~~~~~~~~~~
 
 The :guilabel:`Date` field is used to select a date on a calendar.
 
@@ -170,7 +196,7 @@ The :guilabel:`Date` field is used to select a date on a calendar.
 .. _studio/fields/simple-fields-date-time:
 
 Date & Time (`datetime`)
-------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 The :guilabel:`Date & Time` field is used to select a date on a calendar and a time on a clock. The
 user's current time is automatically used if no time is set.
@@ -183,7 +209,7 @@ user's current time is automatically used if no time is set.
    widget set.
 
 Date Range (`daterange`)
-~~~~~~~~~~~~~~~~~~~~~~~~
+************************
 
 The :guilabel:`Date Range` widget is used to display a period of time defined by a start date and an
 end date in a single line. A date range can have a mandatory start and end date, e.g., for a
@@ -225,7 +251,7 @@ To add a date range:
       :alt: Examples of Date & Time fields with different widgets
 
 Remaining Days (`remaining_days`)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*********************************
 
 The :guilabel:`Remaining Days` widget displays the remaining number of days before the selected date
 (e.g., *In 5 days*), based on the current date and time. This field should be set to :guilabel:`Read
@@ -234,7 +260,7 @@ only`.
 .. _studio/fields/simple-fields-checkbox:
 
 Checkbox (`boolean`)
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 The :guilabel:`Checkbox` field is used when a value should only be true or false, indicated by
 checking or unchecking a checkbox.
@@ -250,7 +276,7 @@ checking or unchecking a checkbox.
 .. _studio/fields/simple-fields-selection:
 
 Selection (`selection`)
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 The :guilabel:`Selection` field is used when users should select a single value from a group of
 predefined values.
@@ -283,7 +309,7 @@ predefined values.
 .. _studio/fields/simple-fields-priority:
 
 Priority (`selection`)
-----------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 The :guilabel:`Priority` field is used to display a three-star rating system, which can be used to
 indicate importance or satisfaction level. This field type is a :ref:`Selection field
@@ -305,7 +331,7 @@ and four priority values predefined. Consequently, the :guilabel:`Badge`, :guila
 .. _studio/fields/simple-fields-file:
 
 File (`binary`)
----------------
+~~~~~~~~~~~~~~~
 
 The :guilabel:`File` field is used to upload any type of file, or sign a form (:guilabel:`Sign`
 widget).
@@ -326,7 +352,7 @@ widget).
 .. _studio/fields/simple-fields-image:
 
 Image (`binary`)
-----------------
+~~~~~~~~~~~~~~~~
 
 The :guilabel:`Image` field is used to upload an image and display it in :ref:`Form view
 <studio/views/general/form>`. This field type is a :ref:`File field
@@ -341,7 +367,7 @@ same effects as described under :ref:`File <studio/fields/simple-fields-file>`.
 .. _studio/fields/simple-fields-sign:
 
 Sign (`binary`)
----------------
+~~~~~~~~~~~~~~~
 
 The :guilabel:`Sign` field is used to sign the form electronically. This field type is a :ref:`File
 field <studio/fields/simple-fields-file>` with the :guilabel:`Sign` widget selected by default.
@@ -358,17 +384,15 @@ same effects as described under :ref:`File <studio/fields/simple-fields-file>`.
 .. _studio/fields/relational-fields:
 
 Relational fields
-=================
-
-Relational fields are used to link and display the data from records on another model.
+-----------------
 
 .. note::
-   Non-default widgets, when available, are presented as bullet points below.
+   Non-default widgets, when available, are presented as bullet points or sub-headings.
 
 .. _studio/fields/relational-fields-many2one:
 
 Many2One (`many2one`)
----------------------
+~~~~~~~~~~~~~~~~~~~~~
 
 The :guilabel:`Many2One` field is used to link another record (from another model) to the record
 being edited. The record's name from the other model is then displayed on the record being edited.
@@ -394,7 +418,7 @@ being edited. The record's name from the other model is then displayed on the re
 .. _studio/fields/relational-fields-one2many:
 
 One2Many (`one2many`)
----------------------
+~~~~~~~~~~~~~~~~~~~~~
 
 The :guilabel:`One2Many` field is used to display the existing relations between a record on the
 current model and multiple records from another model.
@@ -414,7 +438,7 @@ current model and multiple records from another model.
 .. _studio/fields/relational-fields-lines:
 
 Lines (`one2many`)
-------------------
+~~~~~~~~~~~~~~~~~~
 
 The :guilabel:`Lines` field is used to create a table with rows and columns (e.g., the lines of
 products on a sales order).
@@ -432,7 +456,7 @@ products on a sales order).
 .. _studio/fields/relational-fields-many2many:
 
 Many2Many (`many2many`)
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 The :guilabel:`Many2Many` field is used to link multiple records from another model to multiple
 records on the current model. Many2Many fields can use :guilabel:`Disable creation`,
@@ -455,7 +479,7 @@ records on the current model. Many2Many fields can use :guilabel:`Disable creati
 .. _studio/fields/relational-fields-tags:
 
 Tags (`many2many`)
-------------------
+~~~~~~~~~~~~~~~~~~
 
 The :guilabel:`Tags` field is used to display several values from another model appearing in rounded
 shapes, also known as *tags*. This field type is a :ref:`Many2Many field
@@ -474,7 +498,7 @@ described under :ref:`Many2Many <studio/fields/relational-fields-many2many>`.
 .. _studio/fields/relational-fields-related-field:
 
 Related Field (`related`)
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A :guilabel:`Related Field` is not a relational field per se; no relationship is created between
 models. It uses an existing relationship to fetch and display information from another record.
@@ -483,48 +507,154 @@ models. It uses an existing relationship to fetch and display information from a
    To display the email address of a customer on the *Sales Order* model, use the :guilabel:`Related
    Field` `partner_id.email` by selecting :guilabel:`Customer` and then :guilabel:`Email`.
 
+.. _studio/fields/add:
+
+Add a field to a view
+=====================
+
+With Studio, it is possible to add:
+
+- :ref:`a new field <studio/fields/add-new>` to a :ref:`form <studio/views/general/form>` or
+  :ref:`list view <studio/views/multiple-records/list>` of a model
+- :ref:`an existing field <studio/fields/add-existing>`, i.e., a field that already exists on the
+  :doc:`model <models_modules_apps>` in question, to *any* view of that model
+
+.. tip::
+   Add a new field to a form or list view to save it to the model and make it available as an
+   existing field in other views of the same model.
+
+.. _studio/fields/add-new:
+
+Add a new field
+---------------
+
+.. tip::
+   Activate :ref:`developer mode <developer-mode>` *before* adding a new field to see, and be able
+   to edit, the field's technical name during configuration.
+
+To add a new field, follow these steps:
+
+#. Navigate to the relevant form or list view, then click the :icon:`oi-studio`
+   (:guilabel:`Toggle Studio`) icon in the upper-right corner. Alternatively, with any app open,
+   click the :icon:`oi-studio` (:guilabel:`Toggle Studio`) icon, then navigate to the relevant form
+   or list view.
+
+#. In the :icon:`fa-plus` :guilabel:`Add` tab, drag the relevant :ref:`field type
+   <studio/fields/field-types>` from the :guilabel:`New Fields` section and drop it in the desired
+   position. If the new field is a :ref:`relational field <studio/fields/relational-fields>`, select
+   the relevant reciprocal field, model, or related field in the pop-up.
+
+#. In the :icon:`fa-server` :guilabel:`Properties` tab, configure the field's :ref:`properties
+   <studio/fields/properties>`:
+
+   - Enter the :guilabel:`Label` to be displayed as the field name on the UI; this is also used to
+     generate the default technical name of the field.
+   - Click anywhere outside the :guilabel:`Label` field to see the :guilabel:`Technical Name`
+     updated with the default technical name.
+
+     .. note::
+        - The :guilabel:`Technical Name` of a new field can be edited in Studio during the
+          configuration process. At any other time, a field's technical name can only be
+          :ref:`modified via the technical settings of the database
+          <studio/fields/properties-technical-name-change>`.
+        - The technical name of a new field added using Studio is by default prefixed by
+          `x_studio_`.
+
+   - Optionally, select a different :guilabel:`Widget` via the dropdown; the default widget for the
+     :ref:`field type <studio/fields/field-types>` is selected by default.
+   - Optionally, configure any other :ref:`field properties <studio/fields/properties>`.
+
+#. Click :guilabel:`Close` in the top-right corner to close Studio.
+
+.. _studio/fields/add-existing:
+
+Add an existing field
+---------------------
+
+To add a field that exists on the model but that is not present on the current view, follow these
+steps:
+
+#. Navigate to the relevant view, then click the :icon:`oi-studio` (:guilabel:`Toggle
+   Studio`) icon in the upper-right corner. Alternatively, with any app open, click the
+   :icon:`oi-studio` (:guilabel:`Toggle Studio`) icon, then navigate to the relevant view.
+#. In the :icon:`fa-plus` :guilabel:`Add` tab, in the left panel, click :guilabel:`Existing
+   Fields` :icon:`fa-caret-right` to reveal a list of all the model's fields that are not currently
+   present in the view.
+#. Drag the relevant field and drop it in the desired position.
+#. In the :icon:`fa-server` :guilabel:`Properties` tab, configure the relevant
+   :ref:`properties <studio/fields/properties>` for the field in the current view.
+
+   .. note::
+      Various properties can be configured independently for different views, if needed, such as the
+      :guilabel:`Label`, the :guilabel:`Widget`, the visibility of the field for certain user
+      groups, as well as whether or not the field is :guilabel:`Invisible`, :guilabel:`Required`,
+      or :guilabel:`Readonly`.
+
+#. Click :guilabel:`Close` in the top-right corner to close Studio.
+
 .. _studio/fields/properties:
 
-Properties
-==========
+Field properties
+----------------
+
+A series of :ref:`general properties <studio/fields/properties-general>` can be configured for most
+combinations of :ref:`field type and widget <studio/fields/field-types>`. Additional properties are
+available depending on the specific field type and widget selected. For example, :guilabel:`Date &
+Time` fields using the :guilabel:`Date & Time` or :guilabel:`Date Range` widget have various
+:ref:`specific properties <studio/fields/properties-date-datetime>` that can be configured.
+
+.. _studio/fields/properties-general:
 
 General properties
-------------------
+~~~~~~~~~~~~~~~~~~
+
+- :guilabel:`Class`: Use `Bootstrap <https://getbootstrap.com/docs/5.3/examples/cheatsheet/>`_ or
+  other custom classes defined in Odoo to customize how the field is styled and displayed on the UI.
 
 - :guilabel:`Invisible`: Enable this property when it is not necessary for users to view a field on
   the UI. This helps declutter the UI by only showing the essential fields depending on a specific
   situation.
-
-  The :guilabel:`Invisible` attribute also applies inside Studio. To view hidden fields in Studio,
-  click on a view's :guilabel:`View` tab and enable :guilabel:`Show Invisible Elements`.
 
 - :guilabel:`Required`: Enable this property if a field should always be completed by the user
   before being able to proceed.
 
 - :guilabel:`Readonly`: Enable this property if users should not be able to modify a field.
 
-.. note::
-   You can choose to enable :guilabel:`Invisible`, :guilabel:`Required` and :guilabel:`Readonly`
-   for specific records only by clicking on :guilabel:`Conditional` and creating a filter.
+.. tip::
+   - The :guilabel:`Invisible` property also applies inside Studio. To view hidden fields in
+     Studio, click on a view's :guilabel:`View` tab and enable :guilabel:`Show Invisible Elements`.
+   - The :guilabel:`Invisible`, :guilabel:`Required`, and :guilabel:`Readonly` properties can be
+     enabled for specific records only by clicking on :guilabel:`Conditional` and creating a filter.
 
-  .. example::
-     On the *Form* view of the *Contact* model, the :guilabel:`Title` field only appears when
-     :guilabel:`Individual` is selected, as that field would not be helpful for a
-     :guilabel:`Company` contact.
+     .. example::
+        On the form view of the *Contact* model, the :guilabel:`Title` field only appears when
+        :guilabel:`Individual` is selected, as that field would not be helpful for a
+        :guilabel:`Company` contact.
 
-- :guilabel:`Label`: the field's name on the UI. This is not the name used in the PostgreSQL
-  database. To view and change the latter, activate the :ref:`developer mode <developer-mode>` and
-  edit the :guilabel:`Technical Name`.
+- :guilabel:`Label`: This is the field name on the UI; the label is used to generate the technical
+  name of the field.
 
 - :guilabel:`Help Tooltip`: To explain the purpose of a field, add a description. The text is
   displayed inside a tooltip box when hovering with your mouse over the question mark beside the
   field's label.
 
+- :guilabel:`Technical Name`: To view a field's technical name in Studio (and, during the
+  configuration of a new field, edit it if desired), activate :ref:`developer mode
+  <developer-mode>`.
+
+  .. tip::
+     If this field needs to be updated but is no longer editable via Studio, the technical name can
+     be :ref:`modified via the technical settings of the database
+     <studio/fields/properties-technical-name-change>`.
+
 - :guilabel:`Widget`: To change the default appearance or functionality of a field, select one of
   the available widgets.
 
-- :guilabel:`Placeholder`: To provide an example of how a field should be completed, add placeholder
-  text. The text appears in light gray until a value is entered.
+- :guilabel:`Placeholder`: To provide an example of how a field should be completed, add a fixed
+  placeholder text. The text appears in light gray until a value is entered.
+
+- :guilabel:`Dynamic Placeholder`: To provide the value of the selected field as an example of how a
+  field should be completed. The text appears in light gray until a value is entered.
 
 - :guilabel:`Default value`: To display a default value in a field when a record is created, add a
   value.
@@ -537,17 +667,17 @@ General properties
 .. _studio/fields/properties-date-datetime:
 
 Properties for Date & Time fields
----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For :guilabel:`Date & Time` fields that have the :guilabel:`Date & Time` or :guilabel:`Date Range`
-widget set, some specific properties are available:
+For :guilabel:`Date & Time` fields using the :guilabel:`Date & Time` or :guilabel:`Date Range`
+widget, some specific properties are available:
 
 - :guilabel:`Minimal precision`: Determine the smallest date unit that must be selected in the date
-  selector. The possible values are :guilabel:`Day`, :guilabel:`Month`, :guilabel:`Year` or
-  :guilabel:`Decade`. If no value is selected, the user must select a day in the date selector.
+  selector. The possible values are `Day`, `Month`, `Year` or `Decade`. If no value is selected, the
+  user must select a day in the date selector.
 - :guilabel:`Maximal precision`: Determine the largest date unit that can be used to navigate the
-  date selector. The possible values are :guilabel:`Day`, :guilabel:`Month`, :guilabel:`Year` or
-  :guilabel:`Decade`. If no value is selected, the user can navigate the date selector by decade.
+  date selector. The possible values are `Day`, `Month`, `Year` or `Decade`. If no value is
+  selected, the user can navigate the date selector by decade.
 - :guilabel:`Warning for future dates`: Enable this property to display a warning icon if a future
   date is selected.
 - :guilabel:`Condensed display`: Enable this property to show days, months and hours with no leading
@@ -569,3 +699,72 @@ widget set, some specific properties are available:
   date, enter `today`. On the date selector, dates later than the latest accepted date are grayed
   out.
 
+.. _studio/fields/modify:
+
+Modify a field's properties
+===========================
+
+To modify the properties of a field, follow these steps:
+
+#. Navigate to the relevant view, then click the :icon:`oi-studio` (:guilabel:`Toggle
+   Studio`) icon in the upper-right corner. Alternatively, with any app open, click the
+   :icon:`oi-studio` (:guilabel:`Toggle Studio`) icon, then navigate to the relevant view.
+#. Click on the relevant field.
+#. In the :icon:`fa-server` :guilabel:`Properties` tab, make any desired changes to the :ref:`field
+   properties <studio/fields/properties>`.
+
+   .. tip::
+      Various properties can be configured independently for different views, such as the
+      :guilabel:`Label`, the :guilabel:`Widget`, the visibility of the field for certain user
+      groups, as well as whether or not the field is :guilabel:`Invisible`, :guilabel:`Required`, or
+      :guilabel:`Readonly`.
+
+#. Click :guilabel:`Close` in the top-right corner to close Studio.
+
+.. note::
+   The :guilabel:`Technical Name` of a field (visible in Studio with :ref:`developer mode
+   <developer-mode>` activated) cannot be modified in Studio; this can be done :ref:`via the
+   technical settings of the database <studio/fields/properties-technical-name-change>`.
+
+.. _studio/fields/properties-technical-name-change:
+
+Modify a field's technical name
+-------------------------------
+
+To modify the technical name of a field, activate :ref:`developer mode <developer-mode>`, then
+follow these steps:
+
+#. With the field open in Studio, copy the technical name of the field.
+#. :ref:`Remove the field <studio/fields/remove>` from *all* views in Studio, then click
+   :guilabel:`Close` to close Studio.
+#. Navigate to :menuselection:`Settings app --> Technical --> Fields`.
+#. Paste the copied technical name into the search bar, then open the relevant field.
+#. Modify the :guilabel:`Field Name` as needed.
+
+Once the field's technical name has been updated, the field can then be :ref:`added (back) to the
+relevant view(s) <studio/fields/add-existing>` from the list of existing fields.
+
+.. important::
+   When updating the technical name of a field, make sure to keep at least the `x_` prefix, which is
+   required for any custom field; for fields created using Studio, keep the `x_studio_` prefix to
+   allow such fields to be more easily identified.
+
+.. _studio/fields/remove:
+
+Remove a field from a view
+==========================
+
+To remove a field from a view, follow these steps:
+
+#. Navigate to the relevant view, then click the :icon:`oi-studio` (:guilabel:`Toggle
+   Studio`) icon in the upper-right corner. Alternatively, with any app open, click the
+   :icon:`oi-studio` (:guilabel:`Toggle Studio`) icon, then navigate to the relevant view.
+#. Click on the relevant field.
+#. Scroll to the bottom of the :guilabel:`Properties` tab, then click :guilabel:`Remove from view`.
+#. Click :guilabel:`Ok` to confirm the action.
+
+.. tip::
+   - A removed field can be easily :ref:`added back to the view <studio/fields/add-existing>` at a
+     later stage, if needed.
+   - If the intention is to declutter the view, it is also possible to :ref:`modify a field
+     <studio/fields/modify>` and make it :guilabel:`Invisible` on the view in question.

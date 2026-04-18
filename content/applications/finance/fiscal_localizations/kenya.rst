@@ -305,8 +305,8 @@ This is the **advised sales flow** in Odoo when selling:
 #. Create a **sales order**.
 #. :guilabel:`Validate` the delivery.
 #. :guilabel:`Confirm` the invoice.
-#. Click :guilabel:`Send and print`, and then enable :guilabel:`Send to eTIMS`.
-#. Click :guilabel:`Send & print` to send the invoice.
+#. Click :guilabel:`Send`, and then enable :guilabel:`Send to eTIMS`.
+#. Click :guilabel:`Send` to send the invoice.
 
 Once the invoice has been sent and signed by the KRA, the following information can be found on
 it:

@@ -3,9 +3,9 @@ Connect Microsoft Outlook 365 to Odoo using Azure OAuth
 =======================================================
 
 Odoo is compatible with Microsoft's Azure OAuth for Microsoft 365. In order to send and receive
-secure emails from a custom domain, all that is required is to configure a few settings on the
-Azure platform and on the back end of the Odoo database. This configuration works with either a
-personal email address or an address created by a custom domain.
+secure emails from a custom domain, all that is required is to configure a few settings on the Azure
+platform and on the back end of the Odoo database. This configuration works with either a personal
+email address or an address created by a custom domain.
 
 .. seealso::
    `Microsoft Learn: Register an application with the Microsoft identity platform
@@ -22,10 +22,10 @@ Create a new application
 ------------------------
 
 To get started, go to `Microsoft's Azure Portal <https://portal.azure.com/>`_. Log in with the
-:guilabel:`Microsoft Outlook Office 365` account if there is one, otherwise log in with the
-personal :guilabel:`Microsoft account`. A user with administrative access to the Azure Settings
-will need to connect and perform the following configuration. Next, navigate to the section
-labeled :guilabel:`Manage Microsoft Entra ID` (formally *Azure Active Directory*).
+:guilabel:`Microsoft Outlook Office 365` account if there is one, otherwise log in with the personal
+:guilabel:`Microsoft account`. A user with administrative access to the Azure Settings will need to
+connect and perform the following configuration. Next, navigate to the section labeled
+:guilabel:`Manage Microsoft Entra ID` (formally *Azure Active Directory*).
 
 Now, click on :guilabel:`Add (+)`, located in the top menu, and then select :guilabel:`App
 registration`. On the :guilabel:`Register an application` screen, rename the :guilabel:`Name` to
@@ -93,28 +93,28 @@ application.
 Create credentials
 ------------------
 
-Now that the Microsoft Azure app is set up, credentials need to be created for the Odoo setup.
-These include the :guilabel:`Client ID` and :guilabel:`Client Secret`. To start, the
-:guilabel:`Client ID` can be copied from the :guilabel:`Overview` page of the app. The
-:guilabel:`Client ID` or :guilabel:`Application ID` is located under the :guilabel:`Display Name`
-in the :guilabel:`Essentials` overview of the app.
+Now that the Microsoft Azure app is set up, credentials need to be created for the Odoo setup. These
+include the :guilabel:`Client ID` and :guilabel:`Client Secret`. To start, the :guilabel:`Client ID`
+can be copied from the :guilabel:`Overview` page of the app. The :guilabel:`Client ID` or
+:guilabel:`Application ID` is located under the :guilabel:`Display Name` in the
+:guilabel:`Essentials` overview of the app.
 
 .. image:: azure_oauth/application-id.png
    :align: center
    :alt: Application/Client ID located in the Overview of the app.
 
 Next, the :guilabel:`Client Secret Value` needs to be retrieved. To get this value, click on
-:guilabel:`Certificates & Secrets` in the left sidebar menu. Then, a :guilabel:`Client Secret`
-needs to be produced. In order to do this, click on the :guilabel:`(+) New Client Secret` button.
+:guilabel:`Certificates & Secrets` in the left sidebar menu. Then, a :guilabel:`Client Secret` needs
+to be produced. In order to do this, click on the :guilabel:`(+) New Client Secret` button.
 
 A window on the right will populate with a button labeled :guilabel:`Add a client secret`. Under
 :guilabel:`Description`, type in `Odoo Fetchmail` or something recognizable, and then set the
 :guilabel:`expiration date`.
 
 .. important::
-   A new :guilabel:`Client Secret` will need to be produced and configured if the first one
-   expires. In this event, there could be an interruption of service, so the expiration date should
-   be noted and set to the furthest possible date.
+   A new :guilabel:`Client Secret` will need to be produced and configured if the first one expires.
+   In this event, there could be an interruption of service, so the expiration date should be noted
+   and set to the furthest possible date.
 
 Next, click on :guilabel:`Add` when these two values are entered. A :guilabel:`Client Secret Value`
 and :guilabel:`Secret ID` will be created. It is important to copy the :guilabel:`Value` or
@@ -142,14 +142,14 @@ First, open the Odoo database and navigate to the :guilabel:`Apps` module. Then,
 :guilabel:`Apps` filter from the search bar and type in `Outlook`. After that, install the module
 called :guilabel:`Microsoft Outlook`.
 
-Next, navigate to :menuselection:`Settings --> General Settings`, and under the :guilabel:`Discuss`
-section, ensure that the checkbox for :guilabel:`Custom Email Servers` is checked. This populates
-a new option for :guilabel:`Outlook Credentials`.
+Next, navigate to :menuselection:`Settings --> General Settings`, and under the *Emails* section,
+ensure that the checkbox for :guilabel:`Use Custom Email Servers` is checked. This populates a new
+option for :guilabel:`Outlook Credentials`.
 
 :guilabel:`Save` the progress.
 
-Then, copy and paste the :guilabel:`Client ID` (Application ID) and :guilabel:`Client Secret
-(Client Secret Value)` into the respective fields and :guilabel:`Save` the settings.
+Then, copy and paste the :guilabel:`ID` (Application ID) and :guilabel:`Secret (Client Secret
+Value)` into the respective fields and :guilabel:`Save` the settings.
 
 .. image:: azure_oauth/outlookcreds.png
    :align: center
@@ -158,8 +158,8 @@ Then, copy and paste the :guilabel:`Client ID` (Application ID) and :guilabel:`C
 Configure outgoing email server
 -------------------------------
 
-On the :guilabel:`General Settings` page, under the :guilabel:`Custom Email Servers` setting,
-click the :guilabel:`Outgoing Email Servers` link to configure the Microsoft account.
+On the :guilabel:`General Settings` page, under the :guilabel:`Custom Email Servers` setting, click
+the :guilabel:`Outgoing Email Servers` link to configure the Microsoft account.
 
 Then, create a new email server and check the box for :guilabel:`Outlook`. Next, fill in the
 :guilabel:`Name` (it can be anything) and the Microsoft Outlook email :guilabel:`Username`.
@@ -193,8 +193,8 @@ can now send safe, secure emails through Microsoft Outlook using OAuth authentic
 Configuration with a single outgoing mail server
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Configuring a single outgoing server is the simplest configuration available for Microsoft Azure
-and it doesn't require extensive access rights for the users in the database.
+Configuring a single outgoing server is the simplest configuration available for Microsoft Azure and
+it doesn't require extensive access rights for the users in the database.
 
 A generic email address would be used to send emails for all users within the database. For example
 it could be structured with a `notifications` alias (`notifications@example.com`) or `contact` alias
@@ -203,8 +203,8 @@ This address must also match the `{mail.default.from}@{mail.catchall.domain}` ke
 system parameters.
 
 .. seealso::
-   Visit the :ref:`From Filtering documentation <email-outbound-different-servers-personalized-from-filtering>` for more
-   information.
+   Visit the :ref:`From Filtering <email-outbound-different-servers-personalized-from-filtering>`
+   documentation for more information.
 
 .. note::
    The :guilabel:`System Parameters` can be accessed by activating :ref:`developer-mode` in the
@@ -245,8 +245,8 @@ so that only the user's email is sent from that server. In other words, only a u
 address that matches the set :guilabel:`FROM Filtering` is able to use this server.
 
 .. seealso::
-   Visit the :ref:`From Filtering documentation <email-outbound-different-servers-personalized-from-filtering>` for more
-   information.
+   Visit the :ref:`From Filtering <email-outbound-different-servers-personalized-from-filtering>`
+   documentation for more information.
 
 A :ref:`fallback server <azure_oauth/notifications>` must be setup to allow for the sending of
 :guilabel:`notifications`. The :guilabel:`FROM Filtering` for this server should have the value of

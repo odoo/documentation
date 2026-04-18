@@ -14,32 +14,32 @@ be used to improve decision-making and event-planning.
 .. cards::
 
    .. card:: Create events
-      :target: events/create_events
+      :target: events/event_setup/create_events
 
       Discover how to create events with Odoo.
 
    .. card:: Sell event tickets
-      :target: events/sell_tickets
+      :target: events/promote_monetize/sell_tickets
 
       Learn how to create, configure, and sell event tickets.
 
    .. card:: Track and manage talks
-      :target: events/track_manage_talks
+      :target: events/attendee_experience/track_manage_talks
 
       See how to create, track, and manage event tracks with Odoo.
 
    .. card:: Event templates
-      :target: events/event_templates
+      :target: events/event_setup/event_templates
 
       Expedite the event-creation process with event templates.
 
    .. card:: Event tracks
-      :target: events/event_tracks
+      :target: events/attendee_experience/event_tracks
 
       Learn how to create, track, and manage event tracks with Odoo.
 
    .. card:: Event booths
-      :target: events/event_booths
+      :target: events/promote_monetize/event_booths
 
       Create, manage, and sell event booths.
 
@@ -49,7 +49,7 @@ be used to improve decision-making and event-planning.
       Instantly grant access to event attendees with Odoo's Registration Desk feature.
 
    .. card:: Revenues report
-      :target: events/revenues_report
+      :target: events/event_reporting/revenues_report
 
       Analyze the financial success of events with Odoo.
 
@@ -186,7 +186,7 @@ promotion and registration of the event for attendees, the **Sales** app for the
 of paid tickets, and the **CRM** application through customizable lead generation rules.
 
 .. seealso::
-   :doc:`events/create_events`
+   :doc:`events/event_setup/create_events`
 
 Sell event tickets
 ==================
@@ -198,7 +198,7 @@ Odoo simplifies the ticket-purchasing process by providing plenty of payment met
 well.
 
 .. seealso::
-   :doc:`events/sell_tickets`
+   :doc:`events/promote_monetize/sell_tickets`
 
 Track and manage talks
 ======================
@@ -207,7 +207,7 @@ Discover how to access various event tracks (talks, presentations, etc.), view e
 learn how attendees can propose talks for the event.
 
 .. seealso::
-   :doc:`events/track_manage_talks`
+   :doc:`events/attendee_experience/track_manage_talks`
 
 Event templates
 ===============
@@ -216,7 +216,7 @@ Learn the process to customize and configure event templates, which can be used 
 event-creation process.
 
 .. seealso::
-   :doc:`events/event_templates`
+   :doc:`events/event_setup/event_templates`
 
 Event booths
 ============
@@ -225,7 +225,7 @@ Explore the various ways to create, manage, and sell event booths with the Odoo 
 application.
 
 .. seealso::
-   :doc:`events/event_booths`
+   :doc:`events/promote_monetize/event_booths`
 
 Event tracks
 ============
@@ -234,7 +234,7 @@ Find out how to create, manage, and schedule different experiences (aka *Tracks*
 Odoo.
 
 .. seealso::
-   :doc:`events/event_tracks`
+   :doc:`events/attendee_experience/event_tracks`
 
 Registration desk
 =================
@@ -251,15 +251,12 @@ Revenues report
 Gain invaluable insight into event-related revenues with customizable reports and metrics.
 
 .. seealso::
-   :doc:`events/revenues_report`
+   :doc:`events/event_reporting/revenues_report`
 
 .. toctree::
 
-   events/create_events
-   events/sell_tickets
-   events/track_manage_talks
-   events/event_templates
-   events/event_booths
-   events/event_tracks
+   events/event_setup
+   events/promote_monetize
+   events/attendee_experience
    events/registration_desk
-   events/revenues_report
+   events/event_reporting

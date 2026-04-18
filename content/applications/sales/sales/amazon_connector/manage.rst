@@ -90,6 +90,8 @@ corrected in Odoo, synchronize the shipment again using the :guilabel:`Retry Ama
    click on :guilabel:`Sync Orders` to manually synchronize these orders, or click on
    :guilabel:`Recover Order` and enter the relevant Amazon Order Reference.
 
+.. _amazon_connector/fba/follow-deliveries:
+
 Follow deliveries in FBA
 ========================
 

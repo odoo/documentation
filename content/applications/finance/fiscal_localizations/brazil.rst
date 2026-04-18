@@ -244,7 +244,7 @@ After the account is created from Odoo, go to the Avalara Portal to set up the p
 #. Click :guilabel:`Meu primeiro acesso`.
 #. Add the email address used in Odoo to create the Avalara/AvaTax account, and click
    :guilabel:`Solicitar Senha`.
-#. An email will then be received with a token and a link to create a password. Click on this link
+#. An email will then be received with a token and a link to create a password. Click this link
    and copy-paste the token to allocate the desired password.
 
 .. tip::
@@ -512,7 +512,7 @@ government when the invoice is submitted:
 - :guilabel:`Freight Model` determines how the goods are planned to be transported - domestic.
 - :guilabel:`Transporter Brazil` determines who is doing the transportation.
 
-Then, click :guilabel:`Send`. In the :guilabel:`Print & Send` window, click :guilabel:`Process
+Then, click :guilabel:`Send`. In the pop-up window, click :guilabel:`Process
 e-invoice` and any other options, such as :guilabel:`Download` or :guilabel:`Email`. Finally, click
 :guilabel:`Send` to process the invoice with the government.
 

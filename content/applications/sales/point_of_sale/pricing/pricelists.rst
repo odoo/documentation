@@ -24,7 +24,7 @@ dynamically using percentage discounts or more complex formulas in addition to s
 
 .. note::
    The selected pricelist type applies to the entire database, including the :doc:`Sales
-   <../../sales/products_prices/prices/pricing>` and :ref:`eCommerce <ecommerce/pricelists>`
+   <../../sales/products_prices/prices/pricing>` and :ref:`eCommerce <ecommerce/prices/pricelists>`
    apps.
 
 .. _pricelists/create:
@@ -128,4 +128,4 @@ the desired pricelist from the list.
 
 .. seealso::
    - :doc:`../../sales/products_prices/prices/pricing`
-   - :ref:`How to use pricelists in an ecommerce environment <ecommerce/pricelists>`
+   - :ref:`How to use pricelists in an ecommerce environment <ecommerce/prices/pricelists>`

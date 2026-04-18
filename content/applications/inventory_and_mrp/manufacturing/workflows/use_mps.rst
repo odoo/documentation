@@ -69,7 +69,6 @@ If the values of the :guilabel:`Time Range` or :guilabel:`Number of Columns` fie
 click :guilabel:`Save` again to save the changes.
 
 .. image:: use_mps/mps-setting.png
-   :align: center
    :alt: The MPS setting in the Manufacturing app's settings.
 
 |MPS| dashboard
@@ -79,7 +78,6 @@ To open the |MPS|, navigate to :menuselection:`Manufacturing app --> Planning --
 Schedule`. The |MPS| view appears as follows:
 
 .. image:: use_mps/mps.png
-   :align: center
    :alt: The Master Production Schedule in the Manufacturing app.
 
 The grey column on the left side of the screen shows a section for every product added to the |MPS|,
@@ -96,12 +94,11 @@ page. The default categories that appear in the rows are:
   products that are components of other products. It represents the demand for the component from
   existing MOs.
 - :guilabel:`+ Suggested Replenishment`: the quantity of the product that is suggested to be
-  replenished through |MOs| or |POs|. To the right of the category title is a
-  :guilabel:`Replenish` button, which is used to manually replenish the product, based on the
-  quantity suggested to be replenished.
+  replenished through |MOs| or |POs|. To the right of the category title is a :guilabel:`Replenish`
+  button, which is used to manually replenish the product, based on the quantity suggested to be
+  replenished.
 
   .. figure:: use_mps/replenish-button.png
-     :align: center
      :alt: The Replenish button on the "+ Suggested Replenishment" row.
 
      The "Replenish" button on the "+ Suggested Replenishment" row.
@@ -145,7 +142,8 @@ configured to use months, the first column displays data for the current month. 
 column, the :guilabel:`+ Suggested Replenishment` field appears in one of five colors:
 
 - :guilabel:`Green`: a replenishment order must be generated to keep stock at the :guilabel:`Safety
-  Stock Target`.
+  Stock Target`, based on the configured :doc:`lead times
+  <../../inventory/warehouses_storage/replenishment/lead_times>`.
 - :guilabel:`Gray`: a replenishment order has already been generated to keep stock at the
   :guilabel:`Safety Stock Target`.
 - :guilabel:`Yellow`: a replenishment order has already been generated, but the quantity it was
@@ -205,7 +203,6 @@ field of the :guilabel:`Add a Product` pop-up window, any components listed on t
 the page, as well.
 
 .. image:: use_mps/add-a-product.png
-   :align: center
    :alt: The Add a Product pop-up window in the MPS.
 
 Edit a product

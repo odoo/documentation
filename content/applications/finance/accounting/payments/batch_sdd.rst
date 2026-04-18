@@ -99,7 +99,7 @@ left empty, the mandate remains active until it is closed or revoked. To close o
 go to :menuselection:`Accounting --> Customers --> Direct Debit Mandates`, select the relevant
 mandate, and click :guilabel:`Close` or :guilabel:`Revoke`.
 
-**Closing** a mandate updates the mandate's end day to the current day. Invoices issued after the
+**Closing** a mandate updates the mandate's end date to the current day. Invoices issued after the
 present day will not be processed with an |sdd| payment. **Revoking** a mandate disables the
 mandate immediately. No |sdd| payment can be registered anymore, regardless of the invoice's
 date. However, payments that have already been registered are still included in the next :ref:`SDD
@@ -135,7 +135,7 @@ of all posted |sdd| payments to your online banking interface. To do so, follow 
    - To view the payments and invoices linked to a specific |sdd| mandate, click the
      :guilabel:`Collections` and :guilabel:`Invoices Paid` smart button on the :ref:`Direct Debit
      Mandate <accounting/batch_sdd/sdd_mandates>` form.
-   - Click :guilabel:`Re-generate Export file` to regenerate the XML file.
+   - Click :guilabel:`Re-generate Export file` in the batch payment form to regenerate the XML file.
 
 .. seealso::
    - :doc:`batch`
@@ -153,7 +153,7 @@ automatically withdraws the amount of that payment from the recipient's account,
 transaction for a negative amount is created to reflect the |sdd| rejection.
 
 |sdd| rejections are handled differently depending on whether :ref:`outstanding accounts
-<accounting/bank/outstanding-accounts>` are configured or not for the |sdd| payment method.
+<accounting/journals/outstanding-accounts>` are configured or not for the |sdd| payment method.
 
 .. note::
    The following procedures assume that the incoming |sdd| payment's bank transaction has already
@@ -163,8 +163,8 @@ transaction for a negative amount is created to reflect the |sdd| rejection.
 
    .. tab:: Without outstanding accounts
 
-      If no :ref:`outstanding accounts <accounting/bank/outstanding-accounts>` are configured for
-      the |sdd| payment method, no journal entry is created. In this case, you must cancel and
+      If no :ref:`outstanding accounts <accounting/journals/outstanding-accounts>` are configured
+      for the |sdd| payment method, no journal entry is created. In this case, you must cancel and
       unreconcile the payment.
 
       #. Access the invoice linked to the rejected |sdd| payment.
@@ -180,11 +180,11 @@ transaction for a negative amount is created to reflect the |sdd| rejection.
 
    .. tab:: Using outstanding accounts
 
-      If an :ref:`outstanding account <accounting/bank/outstanding-accounts>` is set on the |sdd|
-      payment method, |sdd| payments create journal entries. If an |sdd| payment is rejected, you
-      must reverse the journal entry associated with the rejected payment and reconcile the reversal
-      of the journal entry with the transaction for the |sdd| rejection. To do so, follow these
-      steps:
+      If an :ref:`outstanding account <accounting/journals/outstanding-accounts>` is set on the
+      |sdd| payment method, |sdd| payments create journal entries. If an |sdd| payment is rejected,
+      you must reverse the journal entry associated with the rejected payment and reconcile the
+      reversal of the journal entry with the transaction for the |sdd| rejection. To do so, follow
+      these steps:
 
       #. Access the invoice linked to the rejected |sdd| payment.
       #. Click the :icon:`fa-info-circle` :guilabel:`(information)` icon in the footer of the

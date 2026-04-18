@@ -359,9 +359,9 @@ Electronic invoice sending
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 After the :ref:`invoice confirmation <localization/colombia/invoice-creation>`, click
-:guilabel:`Print & Send`. In the wizard that appears, make sure to enable the :guilabel:`DIAN` and
+:guilabel:`Send`. In the wizard that appears, make sure to enable the :guilabel:`DIAN` and
 :guilabel:`Email` checkboxes to send an XML to the |DIAN| web service and the validated invoice to
-the client fiscal email and click :guilabel:`Print & Send`. Then:
+the client fiscal email and click :guilabel:`Send`. Then:
 
 - The XML document is created.
 - The CUFE is generated.

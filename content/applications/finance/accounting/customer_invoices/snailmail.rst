@@ -11,45 +11,45 @@ reports through postal mail worldwide, all from within your database.
 Configuration
 =============
 
-Go to :menuselection:`Accounting --> Configuration --> Settings --> Customer invoices` section to
-activate :guilabel:`Snailmail`.
+Go to :menuselection:`Accounting --> Configuration --> Settings` and scroll down to the
+:guilabel:`Customer Invoices` section to activate :guilabel:`Snailmail`.
 
-To make it a by-default feature, select :guilabel:`Send by Post` in the :guilabel:`Default Sending
-Options` section.
+.. tip::
+   Set a preferred :ref:`invoice sending <accounting/invoice/sending>` method in the
+   :guilabel:`Accounting` tab of a contact to use it by default.
 
-.. image:: snailmail/setup-snailmail.png
-   :align: center
-   :alt: Under settings enable the snailmail feature in Odoo Accounting
+Sending invoices by post
+========================
 
-Send invoices by post
-=====================
-
-Open your invoice, click on :guilabel:`Send & Print` and select :guilabel:`Send by Post`. Make sure
-your customer’s address is set correctly, including the country, before sending the letter.
+In the invoice form view, ensure the :guilabel:`Customer` address is correct and has the country
+set. Click :guilabel:`Send`, select :guilabel:`by Post`, then :guilabel:`Send` the letter.
 
 .. important::
-   Your document must respect the following rules to pass the validation before being sent:
+   Documents sent via snailmail must respect the following rules:
 
-   - Margins must be **5 mm** on all sides. As Odoo forces the outer margins by filling them with
-     white before sending the snailmail, it can results in the user's custom being cut off if it
-     protrudes into the margins. To check the margins, activate the :ref:`developer mode
-     <developer-mode>`, go to :menuselection:`General Settings --> Technical --> Reporting
-     section: Paper Format`.
-   - A square of **15mm by 15mm** on the bottom left corner has to stay clear.
-   - The postage area has to stay clear (:download:`download the snailmail PDF template
-     <snailmail/snailmail-template.pdf>` for more details).
-   - Pingen (Odoo Snailmail service provider) scans the area to process the address, so if something
-     gets written outside the area, it is not counted as part of the address.
+   - The paper format must be **A4**.
+   - Margins must be at least **5 mm** on all sides. To configure margins, activate the
+     :ref:`developer mode <developer-mode>` and go to :menuselection:`Settings --> Technical -->
+     Paper Format`.
+   - A square of **15mm by 15mm** on the bottom left corner must remain clear.
+   - Odoo fills these areas with white before sending the letter; any overflowing content will be
+     cut.
+   - The **postage area** must remain clear (download the :download:`snailmail PDF template
+     <snailmail/snailmail-template.pdf>` for details).
+   - Pingen (Odoo's snailmail service provider) scans the **address area** to obtain the address.
+     Any text outside the address area is not considered part of the address.
 
 Pricing
 =======
 
 Snailmail is an :doc:`/applications/essentials/in_app_purchase` service that requires prepaid stamps
-(=credits) to work. Sending one document consumes one stamp.
+(credits) to work. Sending one document consumes one stamp.
 
-To buy stamps, go to :menuselection:`Accounting --> Configuration --> Settings --> Customer
-invoices: Snailmail`, click on :guilabel:`Buy credits`, or go to :menuselection:`Settings --> In-App
-Purchases: Odoo IAP`, and click on :guilabel:`View my Services`.
+To buy stamps, go to :menuselection:`Accounting --> Configuration --> Settings`, scroll down to the
+:guilabel:`Snailmail` section, and click :guilabel:`Buy credits`.
 
 .. seealso::
-   `Odoo's IAP Privacy Policy <https://iap.odoo.com/privacy#header_4>`_
+   - :ref:`accounting/invoice/sending`
+   - `Odoo's IAP Privacy Policy <https://iap.odoo.com/privacy#header_4>`_
+   - `Pingen's layout requirements <https://help.pingen.com/en/templates-and-postal-requirements/
+     letter-standards>`_
