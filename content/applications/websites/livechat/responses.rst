@@ -178,7 +178,7 @@ Use canned responses in a live chat conversation
 ------------------------------------------------
 
 To use a canned response in a conversation, click the :icon:`fa-plus-circle` :guilabel:`(plus)` icon
-in the message window. Then, click :guilabel:`Insert a Canned Response`. This opens a list of
+in the message window. Then, click :guilabel:`Insert Canned Response`. This opens a list of
 available canned responses. Either select a response from the list, or type the appropriate
 shortcut, then click the :icon:`fa-paper-plane` :guilabel:`(send)` icon or hit :kbd:`Enter`.
 
