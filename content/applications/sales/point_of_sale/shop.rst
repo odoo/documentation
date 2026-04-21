@@ -17,7 +17,7 @@ Select a sales order or quotation
 
 From the POS register, click the :icon:`oi-ellipsis-v` (:guilabel:`vertical ellipsis`) icon and
 :icon:`fa-link` :guilabel:`Quotation/Order` to open the list of quotations and sales orders created
-from the sales application. When imported, the sales order reference number is displayed under
+from the sales application. When loaded, the sales order reference number is displayed under
 the ordered products, next to the :icon:`fa-shopping-basket` (:guilabel:`shopping basket`) icon.
 
 Apply a down payment or settle the order
