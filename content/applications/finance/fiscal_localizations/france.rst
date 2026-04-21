@@ -119,8 +119,7 @@ Customers
 
 To submit invoices to Chorus Pro, configure the relevant customers' contact form as follows:
 
-#. Verify the :guilabel:`Country` and :guilabel:`VAT` fields are filled out.
-#. In the :guilabel:`Sales & Purchase` tab, ensure the :guilabel:`SIRET` field is completed.
+#. Verify the :guilabel:`Country`, :guilabel:`VAT`, and :guilabel:`SIRET` fields are filled out.
 #. In the :guilabel:`Accounting` tab, fill in the following fields in the :guilabel:`Customer
    Invoices` section:
 
@@ -493,12 +492,12 @@ Then, click :guilabel:`Generate`.
 Liasse fiscale
 --------------
 
-The *liasse fiscale* (tax returns) is a collection of standardized financial documents that
+The *liasse fiscale* (tax declaration) is a collection of standardized financial documents that
 businesses must submit annually to the tax authorities. It comprehensively summarizes the company’s
 financial activities and determines corporate taxes.
 
-`Teledec <https://www.teledec.fr>`_ is a platform used to prepare and submit tax returns using data
-from accounting records. To synchronize your accounting data stored in Odoo with Teledec and
+`Teledec <https://www.teledec.fr>`_ is a platform used to prepare and submit tax declaration using
+data from accounting records. To synchronize your accounting data stored in Odoo with Teledec and
 electronically send your company's *liasse fiscale* to the DGFiP (Direction Générale des Finances
 Publiques), follow these steps:
 
@@ -533,7 +532,8 @@ company information in the :guilabel:`Coordonnées de l'entreprise` (Company's d
 - :guilabel:`Nom de l'entreprise`: Company's name.
 - :guilabel:`Forme juridique`: Select the company's legal form.
 - :guilabel:`Les comptes sont clôturés le`: Closing date.
-- :guilabel:`Régime d'imposition, choix de la liasse`: Select the Tax scheme and tax return option.
+- :guilabel:`Régime d'imposition, choix de la liasse`: Select the tax scheme or the tax declaration
+  option.
 - :guilabel:`Adresse du siège social`: Head office address.
 - :guilabel:`Nom du représentant légal`: Legal representative's name.
 - :guilabel:`Agissant en qualité de`: Legal representative's function.
@@ -544,7 +544,7 @@ Click :guilabel:`Sauvegarder` (Save) to display the next step
 fiscal year). Then, fill in information on the financial year, such as the fiscal year start and end
 dates or the closing date and duration of the previous fiscal period. After saving, the list of
 documents included in the *liasse fiscale* is displayed, including both standard tax forms and
-those customized for the company’s tax return.
+those customized for the company’s tax declaration.
 
 .. tip::
    - The :guilabel:`Etat` (Status) column shows the progress of the document filing.
@@ -591,6 +591,64 @@ synchronization of the *liasse fiscale* with Odoo and import the balance.
 To make payment and send the declaration to the tax authorities, click :guilabel:`Paiement & envoi
 de la déclaration`.
 
+.. _localization/france/edi-tva:
+
+EDI tax return
+--------------
+
+.. note::
+   A valid Odoo Enterprise subscription is required to use this service.
+
+The EDI tax return (VAT report) can be submitted directly to :abbr:`DGFIP (Direction Générale des
+Finances Publiques)` through Odoo. To do so, follow these steps:
+
+#. :ref:`Review and validate <accounting/tax-returns/vat-return-review>` the tax return (VAT
+   report).
+#. Click :guilabel:`Submit`, or in the :guilabel:`Tax Return` view, click the :guilabel:`Tax Report
+   (FR)` button, then the :icon:`fa-cog` (:guilabel:`gear`) icon, and select :guilabel:`EDI VAT`.
+#. In the :guilabel:`EDI VAT` window, make sure a valid VAT :guilabel:`ROF` (Référence d’Obligation
+   Fiscale) is entered.
+#. If needed, enable the :guilabel:`Add express mention` option and include a comment.
+#. - If payment to :abbr:`DGFIP (Direction Générale des Finances Publiques)` is required:
+
+     - Click :guilabel:`Add a line` in the :guilabel:`IBAN` column to enter an IBAN account number
+       and BIC for the payment.
+     - In the :guilabel:`Amount` field, enter the total :guilabel:`VAT to pay`; the
+       :guilabel:`Amount to pay` field updates automatically.
+
+     .. tip::
+        A yellow banner appears if the entered amount does not match the required payment, as
+        partial payments are not allowed.
+
+   - If reimbursement from :abbr:`DGFIP (Direction Générale des Finances Publiques)` is expected:
+
+     - Enable the :guilabel:`Add reimbursement comment` option and include a comment if needed.
+     - Click :guilabel:`Add the line` in the :guilabel:`IBAN` column to enter an IBAN account number
+       and BIC for the payment.
+     - Select the :guilabel:`Reimbursement type`:
+
+       - :guilabel:`First asking`: Select the company's creation :guilabel:`Date`.
+       - :guilabel:`Assignment, cessation, death, entry into a VAT group`: Update the
+         :guilabel:`Date` accordingly.
+
+     - In the :guilabel:`Amount` field, enter the total or partial :guilabel:`Amount` to be
+       received; the :guilabel:`Amount to receive` field updates automatically.
+
+     .. tip::
+        A yellow banner appears if the amount does not match the amount that needs to be received.
+        If proceeding without matching the VAT amount, the difference will be carried over to the
+        next period.
+
+#. Click :guilabel:`Send VAT Report` to submit the tax return (VAT report) to :abbr:`DGFIP
+   (Direction Générale des Finances Publiques)`.
+
+The :guilabel:`Submit` action step turns orange, and a submission message appears in the chatter,
+then turns green when :abbr:`DGFIP (Direction Générale des Finances Publiques)` confirms reception.
+
+.. note::
+   To access the tax report XML file, go to :menuselection:`Accounting --> Reporting --> EDI
+   Exports`.
+
 .. _localizations/france/pos:
 
 Point of sale
@@ -629,7 +687,7 @@ imposed.
 
 .. note::
    This `certificate <https://www.odoo.com/my/contract/french-certification/>`_ is granted by Odoo
-   SA to Odoo Enterprise users.
+   SA to Odoo Enterprise users with a subscription number.
 
 To get the certification, follow these steps:
 
