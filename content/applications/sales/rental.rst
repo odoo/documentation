@@ -1,4 +1,6 @@
+:nosearch:
 :show-content:
+:show-toc:
 
 ======
 Rental
@@ -28,7 +30,7 @@ invoice customers from a single platform.
 
       Discover how to rent services alongside products.
    .. card:: Manage deposits
-      :target: rental/manage_deposits
+      :target: rental/rental_orders/manage_deposits
       :large:
 
       Learn how to create a refundable deposit for rental products.
@@ -48,11 +50,141 @@ receipts for rental orders.
 If a rental business has :ref:`multiple locations <rental/multi-location-management>`, rental
 products can be transferred and tracked between them.
 
+<<<<<<< 1f0aaed795f84abe9e833b3f8f686803bb800e2f
 In the :guilabel:`Rent Online` section, designate :guilabel:`Unavailability days` when pickup and
 return are not allowed.
+||||||| 0076c7a76a74bfaec01450707e38d6d1e16d91bd
+In the :guilabel:`Rent Online` section, there are options to configure a :guilabel:`Minimal Rental
+Duration` and designate :guilabel:`Unavailability days`, or days during which pickup and return are
+not possible.
+
+Rental products
+===============
+
+To view all products that can rented in the database, navigate to :menuselection:`Rentals app -->
+Products`. By default, the :guilabel:`Rental` search filter appears in the search bar.
+
+Each product Kanban card displays that product's name, rental price, and product image (if
+applicable).
+
+.. seealso::
+   :doc:`rental/manage_deposits`
+=======
+In the :guilabel:`Rent Online` section, there are options to configure a :guilabel:`Minimal Rental
+Duration` and designate :guilabel:`Unavailability days`, or days during which pickup and return are
+not possible.
+
+Rental products
+===============
+
+To view all products that can rented in the database, navigate to :menuselection:`Rentals app -->
+Products`. By default, the :guilabel:`Rental` search filter appears in the search bar.
+
+Each product Kanban card displays that product's name, rental price, and product image (if
+applicable).
+
+.. seealso::
+   :doc:`rental/rental_orders/manage_deposits`
+>>>>>>> 4f2793bd904af6e52ec8b6161fbccbc644f83b01
 
 .. _rental/pricing:
 
+<<<<<<< 1f0aaed795f84abe9e833b3f8f686803bb800e2f
+||||||| 0076c7a76a74bfaec01450707e38d6d1e16d91bd
+Rental pricing
+==============
+
+To adjust the rental pricing on a product, go to the :guilabel:`Products` page in the **Rental**
+app, then select the desired product or click :guilabel:`New` to create a new product from scratch.
+
+On the product form, ensure the :guilabel:`Rental` checkbox is ticked. Then, open the
+:guilabel:`Rental prices` tab.
+
+.. image:: rental/rental-prices-tab.png
+   :alt: How the Settings page appears in the Odoo Rental application.
+
+Pricing
+-------
+
+Under the :guilabel:`Pricing` section of the :guilabel:`Rental prices` tab, designate custom rental
+prices and rental periods for the product.
+
+To add pricing for a rental, click :guilabel:`Add a price`. Then, choose a *pricing period*
+(:dfn:`the unit of duration of the rental`) in the :guilabel:`Period` column, or create a new
+pricing period by typing in the name and clicking :guilabel:`Create`.
+
+Next, decide whether or not to apply this custom rental price to a specific :guilabel:`Pricelist`.
+
+Lastly, enter the desired :guilabel:`Price` for that specific :guilabel:`Period`.
+
+.. note::
+   No limit exists on how many pricing lines can be added. Multiple pricing options for rental
+   products are typically used to give discounts for customers who agree to longer rental durations.
+
+.. note::
+    Remember when considering pricing that renting for a day is usually limited to operating hours,
+    not 24 hours. When determining pricing, keep in mind that a rental day typically refers to
+    operating hours, not a full 24-hour period.
+
+Reservations
+------------
+
+Under the :guilabel:`Reservations` section of the :guilabel:`Rental prices` tab, there is the option
+to configure additional fines for any :guilabel:`Hourly Fine` or :guilabel:`Daily Fine` that the
+customer takes to return a rental.
+
+Also, there is the option to set the :guilabel:`Reserve product` time, expressed in hours, to make the rental
+product temporarily unavailable between two rental orders. Such a feature may prove useful if
+maintenance or cleaning is required between rentals.
+
+=======
+Rental pricing
+==============
+
+To adjust the rental pricing on a product, go to the :guilabel:`Products` page in the **Rental**
+app, then select the desired product or click :guilabel:`New` to create a new product from scratch.
+
+On the product form, ensure the :guilabel:`Rental` checkbox is ticked. Then, open the
+:guilabel:`Rental prices` tab.
+
+.. image:: rental/rental-prices-tab.png
+   :alt: How the Settings page appears in the Odoo Rental application.
+
+Pricing
+-------
+
+Under the :guilabel:`Pricing` section of the :guilabel:`Rental prices` tab, designate custom rental
+prices and rental periods for the product.
+
+To add pricing for a rental, click :guilabel:`Add a price`. Then, choose a *pricing period*
+(:dfn:`the unit of duration of the rental`) in the :guilabel:`Period` column, or create a new
+pricing period by typing in the name and clicking :guilabel:`Create`.
+
+Next, decide whether or not to apply this custom rental price to a specific :guilabel:`Pricelist`.
+
+Lastly, enter the desired :guilabel:`Price` for that specific :guilabel:`Period`.
+
+.. note::
+   No limit exists on how many pricing lines can be added. Multiple pricing options for rental
+   products are typically used to give discounts for customers who agree to longer rental durations.
+
+.. note::
+    Remember when considering pricing that renting for a day is usually limited to operating hours,
+    not 24 hours. When determining pricing, keep in mind that a rental day typically refers to
+    operating hours, not a full 24-hour period.
+
+Reservations
+------------
+
+Under the :guilabel:`Reservations` section of the :guilabel:`Rental prices` tab, there is the option
+to configure additional fines for any :guilabel:`Hourly Fine` or :guilabel:`Daily Fine` that the
+customer takes to return a rental.
+
+Also, there is the option to set the :guilabel:`Reserve product` time, expressed in hours, to make
+the rental product temporarily unavailable between two rental orders. Such a feature may prove
+useful if maintenance or cleaning is required between rentals.
+
+>>>>>>> 4f2793bd904af6e52ec8b6161fbccbc644f83b01
 Price computing
 ===============
 
@@ -139,7 +271,9 @@ The formula used is:
       :alt: Rental order for two sleeping bags for two nights.
 
 .. toctree::
-   rental/products
-   rental/service_products
-   rental/manage_deposits
+   :titlesonly:
+
+   rental/configure_products
+   rental/rental_orders
+
 

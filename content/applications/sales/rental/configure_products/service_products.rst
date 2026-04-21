@@ -47,6 +47,7 @@ product and rental order:
  - **eCommerce** app: Allows rental products and services to be rented directly from the website.
 
 .. seealso::
+<<<<<<< 1f0aaed795f84abe9e833b3f8f686803bb800e2f:content/applications/sales/rental/service_products.rst
    - :doc:`../sales/sales_quotations/quote_template`
    - :doc:`../sales/sales_quotations/get_paid_to_validate`
    - :doc:`../../services/project/project_management`
@@ -54,6 +55,19 @@ product and rental order:
    - :doc:`../../productivity/sign`
    - :doc:`../../services/timesheets`
    - :doc:`../../websites/ecommerce`
+||||||| 0076c7a76a74bfaec01450707e38d6d1e16d91bd:content/applications/sales/rental/service_products.rst
+   - :doc:`../sales/sales_quotations/quote_template`
+   - :doc:`../sales/sales_quotations/get_paid_to_validate`
+   - :doc:`../../services/project/project_management`
+   - :doc:`../../services/planning`
+   - :doc:`../../productivity/sign`
+=======
+   - :doc:`../../sales/sales_quotations/quote_template`
+   - :doc:`../../sales/sales_quotations/get_paid_to_validate`
+   - :doc:`../../../services/project/project_management`
+   - :doc:`../../../services/planning`
+   - :doc:`../../../productivity/sign`
+>>>>>>> 4f2793bd904af6e52ec8b6161fbccbc644f83b01:content/applications/sales/rental/configure_products/service_products.rst
 
 .. _rental/service_products/service:
 
@@ -259,7 +273,7 @@ ensure everything is returned on-time and in its original condition.
 
 .. note::
    Requesting a signature can be done during any stage of the order. This feature also requires the
-   :doc:`Sign <../../productivity/sign>` app.
+   :doc:`Sign <../../../productivity/sign>` app.
 
 If signatures are required, go to the **Rental** app and from the default :guilabel:`Rental Orders`
 dashboard, select the desired rental order. To go the :icon:`fa-cog` :guilabel:`(Actions)` icon, and

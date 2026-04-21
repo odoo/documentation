@@ -36,8 +36,16 @@ specifically for the deposit.
    configured: `Digital Camera Rental` and `Digital Camera Rental Deposit` products.
 
 .. tip::
+<<<<<<< 1f0aaed795f84abe9e833b3f8f686803bb800e2f:content/applications/sales/rental/manage_deposits.rst
    Including the product name within the deposit service product name improves organizational
    clarity and simplifies deposit tracking.
+||||||| 0076c7a76a74bfaec01450707e38d6d1e16d91bd:content/applications/sales/rental/manage_deposits.rst
+   If :doc:`eCommerce <../../websites/ecommerce>` is installed, add an :guilabel:`Ecommerce
+   Description` stating the deposit is required in the rental product's :guilabel:`Sales` tab.
+=======
+   If :doc:`eCommerce <../../../websites/ecommerce>` is installed, add an :guilabel:`Ecommerce
+   Description` stating the deposit is required in the rental product's :guilabel:`Sales` tab.
+>>>>>>> 4f2793bd904af6e52ec8b6161fbccbc644f83b01:content/applications/sales/rental/rental_orders/manage_deposits.rst
 
 Go to :menuselection:`Rental --> Products --> Products`, click :guilabel:`New`, and clearly name the
 service product as a deposit.
@@ -188,3 +196,13 @@ Click :guilabel:`Send` to email the final invoice to the customer. For in-person
 :guilabel:`Pay` to process the payment.
 
 
+<<<<<<< 1f0aaed795f84abe9e833b3f8f686803bb800e2f:content/applications/sales/rental/manage_deposits.rst
+||||||| 0076c7a76a74bfaec01450707e38d6d1e16d91bd:content/applications/sales/rental/manage_deposits.rst
+Once a customer :ref:`returns the rented product <rental/return-products>`, reimburse their deposit with a
+:doc:`credit note <../../finance/accounting/customer_invoices/credit_notes>` from the invoice, and
+change the *delivered quantity* to `0` on the linked sales order.
+=======
+Once a customer :ref:`returns the rented product <rental/return-products>`, reimburse their deposit
+with a :doc:`credit note <../../../finance/accounting/customer_invoices/credit_notes>` from the
+invoice, and change the *delivered quantity* to `0` on the linked sales order.
+>>>>>>> 4f2793bd904af6e52ec8b6161fbccbc644f83b01:content/applications/sales/rental/rental_orders/manage_deposits.rst

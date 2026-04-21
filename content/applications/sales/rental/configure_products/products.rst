@@ -215,8 +215,16 @@ agreement. Rental agreements outline the arrangement between the company and cus
 everything is returned on time and in its original condition.
 
 .. note::
+<<<<<<< 1f0aaed795f84abe9e833b3f8f686803bb800e2f:content/applications/sales/rental/products.rst
    The customer signature can be requested during any stage of the order. This feature requires the
    :doc:`Sign <../../productivity/sign>` app.
+||||||| 0076c7a76a74bfaec01450707e38d6d1e16d91bd:content/applications/sales/rental/products.rst
+   Requesting a signature can be done during any stage of the order. This feature also requires the
+   :doc:`Sign <../../productivity/sign>` app.
+=======
+   Requesting a signature can be done during any stage of the order. This feature also requires the
+   :doc:`Sign <../../../productivity/sign>` app.
+>>>>>>> 4f2793bd904af6e52ec8b6161fbccbc644f83b01:content/applications/sales/rental/configure_products/products.rst
 
 To request a signature, open the **Rental** app and select the desired rental order. Click the
 :icon:`fa-cog` :guilabel:`(Actions)` icon, then click :guilabel:`Request Signature`.
