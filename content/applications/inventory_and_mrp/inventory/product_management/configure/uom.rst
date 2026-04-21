@@ -17,6 +17,8 @@ then sells those products in individual units.
 
 Odoo can be set up to use different *units of measure (UoM)* for one product.
 
+.. _inventory/product_replenishment/configuration:
+
 Configuration
 =============
 

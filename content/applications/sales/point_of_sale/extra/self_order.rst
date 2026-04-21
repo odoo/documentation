@@ -8,6 +8,8 @@ and complete payment using their mobile device or a self-ordering kiosk.
 Configuration
 =============
 
+.. _pos/self-order/activation:
+
 Feature activation
 ------------------
 
