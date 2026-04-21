@@ -27,6 +27,7 @@ To activate a payment terminal and allow processing payments with it, follow the
    - :doc:`Dpopay <terminals/dpo>`
    - :doc:`Ingenico <terminals/ingenico>`
    - :doc:`Mercado Pago <terminals/mercado_pago>`
+   - :doc:`Mollie <terminals/mollie>`
    - :doc:`Pine Labs <terminals/pine_labs>`
    - :doc:`QFPay <terminals/qfpay>`
    - :doc:`Razorpay <terminals/razorpay>`
@@ -60,6 +61,7 @@ Once the transaction is successful, the payment is automatically validated in Po
    terminals/dpo
    terminals/ingenico
    terminals/mercado_pago
+   terminals/mollie
    terminals/pine_labs
    terminals/qfpay
    terminals/razorpay
