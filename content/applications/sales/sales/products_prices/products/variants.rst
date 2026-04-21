@@ -30,6 +30,8 @@ within the Odoo *Sales* application.
 .. seealso::
    :ref:`Product variants in the eCommerce <ecommerce/categories_variants/product-variants>`
 
+.. _products/variants/configuration:
+
 Configuration
 =============
 
@@ -160,6 +162,8 @@ menu to group similar attributes under the same section for added specificity an
    :guilabel:`Create and edit...` creates the category and reveals a :guilabel:`Create Category`
    pop-up window, in which the new attribute category can be configured and customized.
 
+.. _products/variants/attributes-values:
+
 Attribute values
 ----------------
 
@@ -208,6 +212,8 @@ will appear as a color option on the eCommerce product page.
 Once an attribute is added to a product, that product is listed and accessible via the attribute's
 :guilabel:`Related Products` smart button. That button lists every product in the database currently
 using that attribute.
+
+.. _products/variants/variants:
 
 Product variants
 ================
