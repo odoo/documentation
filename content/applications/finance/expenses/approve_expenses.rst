@@ -1,93 +1,85 @@
 ================
+Process expenses
+================
+
+Once expenses have been created and submitted, they must be processed by an authorized database
+user. In Odoo, most users cannot process expenses; only users with the necessary :doc:`access rights
+<../../general/users/access_rights>` or permissions can. This means that a user **must** have at
+least *Team Approver* rights for the **Expenses** app. Employees with the necessary rights can
+review expenses, approve or refuse them, and provide feedback with an integrated :ref:`refuse
+expense <expenses/refuse-report>` communication tool.
+
+View expenses
+=============
+
+Users who are able to process expenses (typically managers) can view all expenses they have access
+rights for in the *Expenses to Process* dashboard. To view the dashboard, navigate to
+:menuselection:`Expenses app --> My Expenses --> Expenses to Process`.
+
+A list of all expenses with a status of :guilabel:`Submit` appears, while expenses with a status of
+:guilabel:`Draft`, :guilabel:`Approved`, :guilabel:`Posted`, :guilabel:`In Payment`,
+:guilabel:`Paid`, or :guilabel:`Refused` are hidden by default. To view expenses with a different
+status, click the corresponding :guilabel:`Status` button in the side panel.
+
+.. image:: approve_expenses/expenses-to-process-dash.png
+   :alt: Expenses to validate are found on the Expenses to Process dashboard.
+
 Approve expenses
 ================
 
-In Odoo, most users cannot approve expenses; only users with the necessary :doc:`access rights
-<../../general/users/access_rights>` or permissions can. This means that a user **must** have at least
-*Team Approver* rights for the **Expenses** app. Employees with the necessary rights can review
-expenses, approve or refuse them, and provide feedback with an integrated :ref:`Refuse Expense
-<expenses/refuse-report>` communication tool.
-
-Please refer to the :doc:`access rights documentation </applications/general/users>` to learn more
-about managing users and their access rights.
-
-View expense reports
-====================
-
-Users who are able to approve expense reports (typically managers) have an :guilabel:`Expense
-Reports` main navigation button at the top of the **Expenses** app. This allows managers to view all
-expense reports they have access rights for. Navigate to :menuselection:`Expenses app --> Expense
-Reports`, to view the :guilabel:`All Reports` dashboard.
-
-A list of all expense reports with a status of either :guilabel:`To Submit`, :guilabel:`Submitted`,
-:guilabel:`Approved`, :guilabel:`Posted`, or :guilabel:`Done` appears. Expense reports with a status
-of :guilabel:`Refused` are hidden, by default.
-
-.. image:: approve_expenses/expense-reports-list.png
-   :alt: Reports to validate are found on the Reports to Approve page.
-
-Approve expense reports
-=======================
-
-Expense reports can be approved in two ways: :ref:`individually <expenses/individual>` or :ref:`in
-bulk <expenses/multiple>`.
+Expenses can be approved in two ways: :ref:`individually <expenses/individual>` or :ref:`in bulk
+<expenses/multiple>`.
 
 .. important::
    Only reports with a status of :guilabel:`Submitted` can be approved.
 
-   It is recommended to display only :guilabel:`Submitted` reports by ticking the checkbox beside
-   the :guilabel:`Submitted` filter, in the left column, under the :guilabel:`Status` section.
-
-   If a report is **not** able to be approved, the :guilabel:`Approve Report` button **does not**
-   appear on the :guilabel:`All Reports` page.
-
 .. _expenses/individual:
 
-Approve individual reports
---------------------------
+Approve individual expenses
+---------------------------
 
-To approve an individual report, navigate to :menuselection:`Expenses app --> Expense Reports`, and
-click on an individual report to view the detailed report form.
+To approve an individual expense, navigate to :menuselection:`Expenses app --> My Expenses -->
+Expenses to Process`, and click on an individual expense to view the details.
 
-From here, several options are presented: :guilabel:`Approve`,  :guilabel:`Refuse`, and
-:guilabel:`Reset to draft`. Click :guilabel:`Approve` to approve the report.
+From here, several options are presented: :guilabel:`Post Journal Entries`, :guilabel:`Report in
+Next Payslip` :guilabel:`Approve`, :guilabel:`Refuse`, :guilabel:`Reset`, :guilabel:`Split Expense`,
+and :guilabel:`Attach Receipt`. Click :guilabel:`Approve` to approve the expense.
 
    .. image:: approve_expenses/approve-individual.png
       :alt: An individual expense report that can be approved or refused.
 
 .. _expenses/multiple:
 
-Approve multiple reports
-------------------------
+Approve multiple expenses
+-------------------------
 
-To approve multiple expense reports at once, first navigate to :menuselection:`Expenses app -->
-Expense Reports` to view a list of expense reports. Next, select the reports to approve by ticking
-the checkbox next to each report being approved, or tick the checkbox next to the
-:guilabel:`Employee` column title to select all the reports in the list.
+To approve multiple expenses at once, first navigate to :menuselection:`Expenses app --> My Expenses
+--> Expenses to Process` to view a list of all expenses waiting to be processed. Next, select the
+expenses to approve by ticking the checkbox next to each expense being approved, or tick the
+checkbox next to the :guilabel:`Employee` column title to select all the expenses in the list.
 
-Next, click the :guilabel:`Approve Report` button.
+Next, click the :guilabel:`Approve` button.
 
    .. image:: approve_expenses/approve-multiple.png
       :alt: Select multiple expense reports at once.
 
 .. tip::
-   Team managers can view all the expense reports for their team members only. While on the
-   :guilabel:`All Reports` page, click the :icon:`fa-caret-down` :guilabel:`(down arrow)` to the
-   right of the search bar, then click :guilabel:`My Team` in the :icon:`fa-filter`
-   :guilabel:`Filters` section. This presents all the reports for only the manager's team.
+   Team managers can view all the expenses for their team members only. While on the
+   :guilabel:`Expenses to Process` page, click the :icon:`fa-caret-down` :guilabel:`(down arrow)` on
+   the right-side of the search bar, then click :guilabel:`My Team` in the :icon:`fa-filter`
+   :guilabel:`Filters` section. This presents all the expenses for only the manager's team.
 
 .. _expenses/refuse-report:
 
-Refuse expense reports
-======================
+Refuse expenses
+===============
 
-Expense reports can **only** be refused on the individual expense report, and **not** from the
-:guilabel:`All Reports` dashboard. To open an individual expense report, navigate to
-:menuselection:`Expenses app --> Expense Reports`, then click on an individual expense report to
-view the detailed expense report form.
+Expenses can **only** be refused individually, and **not** from the :guilabel:`Expenses to Process`
+dashboard. To refuse an individual expense, navigate to :menuselection:`Expenses app --> My expenses
+--> Expenses to Process`, then click on an individual expense to open the detailed expense record.
 
 If more information is needed, such as a missing receipt, communicate any necessary information
-requests in the *chatter* of the report form. On the individual expense report, click either
+requests in the *chatter* of the expense record. On the individual expense, click either
 :guilabel:`Send message` or :guilabel:`Log note` to open a message text box.
 
 Type in a message, tagging the proper people, and post it to the *chatter* by clicking
@@ -95,19 +87,22 @@ Type in a message, tagging the proper people, and post it to the *chatter* by cl
 in the chatter, and the tagged people are notified via email.
 
 .. note::
-   The only people that can be tagged in a message are *followers* of the specific report. To see
+   The only people that can be tagged in a message are *followers* of the specific expense. To see
    who is a follower, click the :icon:`fa-user-o` :guilabel:`(Show Followers)` icon to display the
-   followers of the expense report.
+   followers of the expense report. Additional followers can be added by clicking the
+   :icon:`fa-user-o` :guilabel:`(Show Followers)` icon, then clicking :guilabel:`Add Followers`.
 
    .. image:: approve_expenses/chatter.png
       :alt: Send messages in the chatter.
 
-To refuse an expense report, click :guilabel:`Refuse`, and a :guilabel:`Refuse Expense` pop-up
-window loads. Enter a brief explanation for the refusal on the :guilabel:`Reason` line, then click
-:guilabel:`Refuse`.
+To refuse an expense, click :guilabel:`Refuse`, and a *Refuse Expense* pop-up window loads. Enter a
+brief explanation for the refusal in the :guilabel:`Reason` field, then click :guilabel:`Refuse`.
 
-.. image:: approve_expenses/refuse-expense.png
-   :alt: Send messages in the chatter.
+.. important::
+   A reason **must** be entered in the :guilabel:`Reason` field, or the expense cannot be refused.
 
-Once the expense report is refused, the status changes to :guilabel:`Refused`, and the only button
-that appears is :guilabel:`Reset to Draft`.
+  .. image:: approve_expenses/refuse-expense.png
+     :alt: Send messages in the chatter.
+
+Once the expense is refused, the status changes to :guilabel:`Refused`, and the only buttons that
+appear are :guilabel:`Add Receipt` and :guilabel:`Reset`.
