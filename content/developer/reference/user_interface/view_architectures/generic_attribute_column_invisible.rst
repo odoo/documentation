@@ -11,6 +11,10 @@
 
          <field name="product_is_late" column_invisible="parent.has_late_products == False"/>
          <button type="object" name="action_confirm" column_invisible="context.get('hide_confirm')"/>
+         <column string="Contact" column_invisible="context.get('hide_contact')">
+             <field name="partner_id"/>
+             <field name="email"/>
+         </column>
 
    :requirement: Optional
    :type: :ref:`Python expression <reference/view_architectures/python_expression>`
