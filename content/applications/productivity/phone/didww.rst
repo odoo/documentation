@@ -102,10 +102,10 @@ app --> Users & Companies --> Users` select the user, and click the **VoIP** tab
 
 Add the following credentials for the user:
 
-- :guilabel:`Username`: the user's DIDWW username.
-- :guilabel:`Secret`: the user's password.
+- :guilabel:`Username`: the user's SIP username.
+- :guilabel:`Secret`: the user's SIP password.
 
-Once the DIDWW credentials have been saved, the user can make calls with Odoo **Phone** by clicking
+Once the SIP credentials have been saved, the user can make calls with Odoo **Phone** by clicking
 the :icon:`oi-voip` :guilabel:`(Show Softphone)` icon in the top-right corner of Odoo.
 
 .. seealso::
