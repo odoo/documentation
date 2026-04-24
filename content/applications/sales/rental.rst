@@ -28,7 +28,7 @@ Dashboard
 
 Upon opening the **Rental** application, the :guilabel:`Rental Orders` dashboard is revealed.
 
-.. image:: rental/rental-orders-dashboard.png
+.. image:: rental/rental/rental-orders-dashboard.png
    :alt: Example of the Rental Orders dashboard available in the Odoo Rental application.
 
 In the default Kanban view, all rentals are visible. Each rental card displays the customer name,
@@ -44,7 +44,7 @@ Settings
 To configure additional rental delay costs, availability of rental items, or minimum time of rental,
 navigate to :menuselection:`Rental app --> Configuration --> Settings`.
 
-.. image:: rental/rental-settings.png
+.. image:: rental/rental/rental-settings.png
    :alt: How the Settings page appears in the Odoo Rental application.
 
 In the :guilabel:`Rental` section, there are options to configure :guilabel:`Default Delay Costs`
@@ -82,7 +82,7 @@ app, then select the desired product or click :guilabel:`New` to create a new pr
 On the product form, ensure the :guilabel:`Rental` checkbox is ticked. Then, open the
 :guilabel:`Rental prices` tab.
 
-.. image:: rental/rental-prices-tab.png
+.. image:: rental/rental/rental-prices-tab.png
    :alt: How the Settings page appears in the Odoo Rental application.
 
 Pricing
