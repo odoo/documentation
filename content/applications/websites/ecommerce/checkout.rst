@@ -15,7 +15,7 @@ Order buttons
 
 To customize the ordering process in Odoo eCommerce, you can:
 
-- change the :ref:`Add to Cart <ecommerce/checkout/add-to-cart>` button's behavior;
+- use the :ref:`Add to Cart <ecommerce/checkout/add-to-cart>` button;
 - replace it with a :ref:`customized <ecommerce/checkout/prevent-sale>` button;
 - add a :ref:`Buy now <ecommerce/checkout/buy-now>` button.
 
@@ -27,17 +27,19 @@ Add to cart options
 Default add to cart behavior
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When clicking the :guilabel:`Add to cart` button, different actions can be triggered. To configure
-them, go to :menuselection:`Website --> Configuration --> Settings`, scroll down to the
-:guilabel:`eCommerce` section, and select one of the following options for the :guilabel:`Add to
-Cart` feature:
+When clicking the :guilabel:`Add to Cart` button, the customer remains on
+the product page by default.
 
-- :guilabel:`Stay on Product Page`: The customer remains on the product page after adding a product
-  to the cart. If the added product has linked :ref:`optional products
-  <ecommerce/products/cross_upselling>`, the customer can choose between :guilabel:`Add to cart` (to
-  stay on the product page) and :guilabel:`Go to Checkout` :icon:`fa-chevron-right` (to be
-  redirected to the cart).
-- :guilabel:`Go to cart`: The customer is redirected to the cart immediately.
+- On the **e-commerce landing page** (`/shop`): if the selected product is configurable (i.e., it
+  has configurable attributes and/or multiple packagings), a :guilabel:`Configure` pop-up opens to let
+  the customer choose the desired options.
+- On a specific **product page**: attributes/packagings configuration is done directly on the page.
+
+If the product has linked :ref:`optional products
+<ecommerce/products/cross_upselling>`, a :guilabel:`Configure` pop-up opens
+on both the shop page and the product page. The customer can then choose
+between :guilabel:`Add to Cart` (to stay on the product page) and
+:guilabel:`Go to Checkout` (to be redirected to the cart).
 
 .. _ecommerce/checkout/prevent-sale:
 
