@@ -580,7 +580,7 @@ POS.
 
 - The :ref:`cash rounding <pos/pricing/rounding>` feature must be activated and set to a
   :guilabel:`Rounding Precision` of `0,05` and a :guilabel:`Rounding Method` set as
-  :guilabel:`Up`.
+  :guilabel:`Nearest`.
 - Taxes must be set as included in the price. To set it up, go to :menuselection:`Point of Sale -->
   Configuration --> Settings`, and from the :guilabel:`Accounting` section, open the
   :guilabel:`Default Sales Tax` form by clicking the arrow next to the default sales tax field.
