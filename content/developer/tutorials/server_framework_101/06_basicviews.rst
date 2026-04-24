@@ -190,7 +190,7 @@ predefined searches. Filters must have one of the following attributes:
   results on the given field name
 
 A simple example can be found
-`here <https://github.com/odoo/odoo/blob/715a24333bf000d5d98b9ede5155d3af32de067c/addons/delivery/views/delivery_view.xml#L30-L44>`__.
+`here <https://github.com/odoo/odoo/blob/b71994b66bc42b9ba8c654037f10a6d417fd61b8/addons/delivery/views/delivery_carrier_views.xml#L22-L36>`__.
 
 Before going further in the exercise, it is necessary to introduce the 'domain' concept.
 
