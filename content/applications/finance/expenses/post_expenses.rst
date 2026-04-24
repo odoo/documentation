@@ -2,73 +2,75 @@
 Post expenses
 =============
 
-Once an expense report is :doc:`approved <../expenses/approve_expenses>`, the next step is to post
-the expenses to the proper accounting journal.
+Once an expense is :doc:`approved <../expenses/approve_expenses>`, the next step is to post the
+expense to the proper accounting journal.
 
 .. important::
-   To post expense reports to an accounting journal, the user **must** have the following
-   :doc:`access rights <../../general/users/access_rights>`:
+   To post an expense to an accounting journal, the user **must** have the following :doc:`access
+   rights <../../general/users/access_rights>`:
 
    - Accounting: *Accountant* or *Adviser*
    - Expenses: *Manager*
 
-Only expense reports with an *Approved* status can post the expenses to a journal. To view all
-expense reports, navigate to :menuselection:`Expenses app --> Expense Reports`. Next, to view
-**only** approved expense reports that need to be posted, adjust the filters on the left side so
-only the :guilabel:`Approved` checkbox is ticked.
+Only expenses with an *Approved* status can be posted to a journal. To view all expenses ready to be
+posted, navigate to :menuselection:`Expenses app --> My Expenses --> Expenses to Process`. Next, to
+view **only** approved expenses that need to be posted, adjust the filters on the left side so only
+the :guilabel:`Approved` checkbox is ticked.
+
+Expenses can be posted to accounting journals in two ways: :ref:`individually
+<expenses/post-individual>` or :ref:`in bulk <expenses/post-multiple>`.
 
 .. image:: post_expenses/approved-expenses.png
    :alt: View reports to post by clicking on expense reports, then reports to post.
 
 .. note::
-   The default :guilabel:`All Reports` dashboard displays all expense reports that are not
-   :guilabel:`Refused`.
-
-Expense reports can be posted to accounting journals in two ways: :ref:`individually
-<expenses/post-individual>` or :ref:`in bulk <expenses/post-multiple>`.
+   The default :guilabel:`Expenses to Process` dashboard displays all expenses with a status of
+   :guilabel:`Submitted`.
 
 .. _expenses/post-individual:
 
-Post individual reports
------------------------
+Post individual expenses
+------------------------
 
-To post an individual report, navigate to :menuselection:`Expenses app --> Expense Reports`, and
-click on an individual report with a :guilabel:`Status` of :guilabel:`Approved`, to view the report
-form. In this view, several options are presented: :guilabel:`Post Journal Entries`,
-:guilabel:`Report In Next Payslip`, :guilabel:`Refuse`, or :guilabel:`Reset to Draft`.
+To post an individual expense, navigate to :menuselection:`Expenses app --> My Expenses --> Expenses
+to Process`, and click on an individual expense, to view the detailed expense form. In this view,
+several options are presented: :guilabel:`Post Journal Entries`, :guilabel:`Report In Next Payslip`,
+:guilabel:`Refuse`, :guilabel:`Reset`, :guilabel:`Split Expense`, and :guilabel:`Attach Receipt`.
 
-Click :guilabel:`Post Journal Entries` to post the report. The accounting journal the expenses are
-posted to is listed in the :guilabel:`Journal` field of the expense report.
+Click :guilabel:`Post Journal Entries` and a *Post expenses* pop-up window loads. The default
+accounting journal for the expense category populates the :guilabel:`Journal` field, but can be
+modified if needed. The default journal for all expense categories is *Purchases*. Additionally, the
+date of the expense populates the :guilabel:`Accounting Date` field, indicating when the expense was
+incurred.
 
-After posting the expenses to an accounting journal, a :guilabel:`Journal Entry` smart button
-appears at the top of the screen. Click the :guilabel:`Journal Entry` smart button, and the details
-for the journal entry appear, with a status of :guilabel:`Posted`.
+Click the :guilabel:`Post Expenses` button, and the journal entry loads, displaying all the details,
+and has a status of :guilabel:`Posted`.
 
 .. image:: post_expenses/post-one.png
    :alt: A single expense report to be approved.
 
 .. _expenses/post-multiple:
 
-Post multiple reports
----------------------
+Post multiple expenses
+----------------------
 
-To post multiple expense reports at once, navigate to :menuselection:`Expenses app --> Expense
-Reports` to view a list of expense reports. Next, select the reports to approve by ticking the
-checkbox next to each report being approved.
+To post multiple expenses at once, navigate to :menuselection:`Expenses app --> My Expenses -->
+Expenses to Process`, then adjust the filters on the left side so only the :guilabel:`Approved`
+checkbox is ticked. Next, select the expenses to approve by ticking the checkbox next to each
+expense being approved.
+
+Next, click the :guilabel:`Post Entries` button. A *Post Expenses* pop-up window loads, with the
+default accounting journal :guilabel:`Purchases` populating the :guilabel:`Journal` field, and the
+expense date populating the :guilabel:`Accounting date` field. Make any necessary modifications,
+then click :guilabel:`Post Expenses`.
+
+Once posted, the list changes ot show all the various accounting journal entries created. Click on
+any entry to view the accounting journal details.
 
 .. note::
-   Only expense reports with a status of :guilabel:`Approved` are able to post the expenses to an
-   accounting journal. If an expense report is selected that **cannot** be posted, such as an
-   unapproved report, or the report has already been posted to a journal, the :guilabel:`Post
-   Entries` button is **not** visible.
-
-.. tip::
-   To select **only** approved expense reports, adjust the filters on the left side, so that only
-   the :guilabel:`Approved` checkbox is ticked. Next, tick the checkbox next to the
-   :guilabel:`Employee` column title to select **all** the :guilabel:`Approved` reports in the list
-   at once.
-
-Next, click the :guilabel:`Post Entries` button.
+   Only expenses with a status of :guilabel:`Approved` can be posted to an accounting journal. If an
+   expense is selected that **cannot** be posted, such as an unapproved expense, or the expense has
+   already been posted to a journal, the :guilabel:`Post Entries` button is **not** visible.
 
 .. image:: post_expenses/post-entries.png
    :alt: Post multiple reports at a time from the Expense Reports view, with the Approved filter.
