@@ -526,7 +526,7 @@ Testing of a cron function should be done by calling
 Security
 --------
 
-To avoid a fair usage of resources among scheduled actions, some security measures ensure the
+To maintain a fair usage of resources among scheduled actions, some security measures ensure the
 correct functioning of your scheduled actions.
 
 - If a scheduled action encounters an error or a timeout three consecutive times,
