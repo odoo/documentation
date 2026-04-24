@@ -39,8 +39,8 @@ Settings
 To configure transfer locations and rental item availability, go to :menuselection:`Rental app -->
 Configuration --> Settings`.
 
-.. image:: rental-settings.png
-   :alt: Settings page in the Odoo Rental application.
+.. image:: rental/rental/rental-settings.png
+   :alt: How the Settings page appears in the Odoo Rental application.
 
 In the :guilabel:`Rental` section, enable :guilabel:`Rental Transfers` to use stock deliveries and
 receipts for rental orders.
@@ -51,7 +51,7 @@ products can be transferred and tracked between them.
 In the :guilabel:`Rent Online` section, designate :guilabel:`Unavailability days` when pickup and
 return are not allowed.
 
-.. _rental/pricing:
+.. _rental/price-computing:
 
 Price computing
 ===============
@@ -83,6 +83,8 @@ Odoo uses two rules to compute the price of a product when a rental order is cre
       500 + 500 &= $1000
 
    Therefore, the customer pays $750 for the eight-day rental period.
+
+.. _rental/rental-pricelist-rules:
 
 Rental pricelist rules
 ======================
@@ -118,24 +120,24 @@ The formula used is:
    rate of $20 per night. They set up a rental pricelist rule with a :guilabel:`Min. Quantity` of
    four nights to apply the discount.
 
-   .. image:: rental/example-sleeping-bag-pricelist.png
+   .. image:: rental/rental/example-sleeping-bag-pricelist.png
       :alt: Sleeping bag pricelist for four nights.
 
    The following customer orders can trigger the discount:
 
    A group of people rents four sleeping bags for one night.
 
-   .. image:: rental/example-four-sleeping-bag-one-night.png
+   .. image:: rental/rental/example-four-sleeping-bag-one-night.png
       :alt: Rental order for four sleeping bags for one night.
 
    A person rents one sleeping bag for four nights.
 
-   .. image:: rental/example-one-sleeping-bag-four-nights.png
+   .. image:: rental/rental/example-one-sleeping-bag-four-nights.png
       :alt: Rental order for one sleeping bag for four nights.
 
    Two people rent two sleeping bags for two nights.
 
-   .. image:: rental/example-two-sleeping-bag-two-nights.png
+   .. image:: rental/rental/example-two-sleeping-bag-two-nights.png
       :alt: Rental order for two sleeping bags for two nights.
 
 .. toctree::
