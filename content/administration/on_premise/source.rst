@@ -439,6 +439,27 @@ Running Odoo
 Once all dependencies are set up, Odoo can be launched by running `odoo-bin`, the command-line
 interface of the server. It is located at the root of the Odoo Community directory.
 
+.. tip::
+    **Timezone issues (WSL/Linux)**
+
+    If Odoo fails to start with a ``psycopg2.errors.InvalidParameterValue`` regarding a specific time zone name (e.g., "Asia/Calcutta", which is deprecated; use "Asia/Kolkata" instead):
+
+    1. Ensure your system's timezone data is up to date:
+
+       .. code-block:: console
+
+          $ sudo apt update && sudo apt install tzdata && sudo dpkg-reconfigure tzdata
+
+    2. Select the correct **Geographic area** and **City** (e.g., *Asia/Kolkata* instead of the legacy *Asia/Calcutta*).
+    3. Restart your PostgreSQL service:
+
+       .. code-block:: console
+
+          $ sudo service postgresql restart
+
+    This ensures that the PostgreSQL server recognizes the timezone string being passed by the host environment.
+
+
 To configure the server, either specify :ref:`command-line arguments <reference/cmdline/server>` or
 a :ref:`configuration file <reference/cmdline/config>`.
 
