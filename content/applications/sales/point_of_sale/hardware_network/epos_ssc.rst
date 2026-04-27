@@ -82,7 +82,8 @@ The generation process depends on the :abbr:`OS (Operating System)` and the brow
       next steps:
 
       #. Access the :guilabel:`Keychain Access` app on Mac.
-      #. Go to :menuselection:`Access --> Certificate Assistant --> Create a Certificate`.
+      #. From the menu bar, go to :menuselection:`Keychain Access --> Certificate Assistant -->
+         Create a Certificate...`.
       #. Enter a name for the certificate.
       #. Select an identity type, then the type of certificate.
       #. Click :guilabel:`Create`.
