@@ -27,7 +27,7 @@ msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-24 17:30+0000\n"
-"PO-Revision-Date: 2026-04-20 23:20+0000\n"
+"PO-Revision-Date: 2026-04-27 23:20+0000\n"
 "Last-Translator: \"Chloe Wang (chwa)\" <chwa@odoo.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
 "projects/odoo-19-doc/general/zh_Hans/>\n"
@@ -36,7 +36,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 5.17\n"
 
 #: ../../content/applications/general.rst:3
 msgid "General settings"
@@ -1695,6 +1695,9 @@ msgid ""
 "key defined in the system parameters. For more information about this, "
 "see :ref:`system parameters <domain-name/existing/db-map/web-base-url>`."
 msgstr ""
+"默认情况下，数据库生成的链接会使用系统参数中定义的动态 `web.base.url` 键。有"
+"关此内容的更多信息，请参阅 :ref:`系统参数 <domain-name/existing/db-map/web-"
+"base-url>`。"
 
 #: ../../content/applications/general/companies/email_template.rst:225
 msgid ""
@@ -1899,6 +1902,8 @@ msgid ""
 "For more information, refer to `Odoo's pricing page <https://www.odoo.com/"
 "pricing-plan>`_ or contact the account manager."
 msgstr ""
+"如需了解更多信息，请参阅 `Odoo 的定价页面 <https://www.odoo.com/pricing-plan>"
+"`_ 或联系客户经理。"
 
 #: ../../content/applications/general/companies/multi_company.rst:35
 msgid ""
@@ -1907,10 +1912,13 @@ msgid ""
 "o` :guilabel:`(Values set here are company-specific)` icon, and can also be "
 "accessed through company records."
 msgstr ""
+"大多数 *通用设置* 适用于数据库中的所有公司。*公司特定设置* 标有 :icon:`fa-"
+"building-o` :guilabel:`(此处设置的值仅适用于该公司)` 图标，也可通过公司记录进"
+"行访问。"
 
 #: ../../content/applications/general/companies/multi_company.rst:40
 msgid "Create or edit a company"
-msgstr ""
+msgstr "创建或编辑公司"
 
 #: ../../content/applications/general/companies/multi_company.rst:42
 msgid ""
@@ -1919,14 +1927,17 @@ msgid ""
 "and :ref:`fill out the form with the company's information <general/"
 "companies/company>` or select an existing company to edit it."
 msgstr ""
+"要创建或编辑特定公司，请导航至 :menuselection:`设置应用程序 --> 用户与公"
+"司--> 公司` 。点击:guilabel:`新建` 并:ref:`填写公司信息表单 <general/"
+"companies/company>` 或选择现有公司进行编辑。"
 
 #: ../../content/applications/general/companies/multi_company.rst:48
 msgid "Archive a company"
-msgstr ""
+msgstr "将公司存档"
 
 #: ../../content/applications/general/companies/multi_company.rst:50
 msgid "To archive a company, follow these steps:"
-msgstr "要归档一家公司，请按以下步骤操作："
+msgstr "要存档一家公司，请按以下步骤操作："
 
 #: ../../content/applications/general/companies/multi_company.rst:52
 msgid ""
@@ -2024,16 +2035,18 @@ msgid ""
 "companies or restricted to a specific company by setting "
 "the :guilabel:`Company` field on relevant records:"
 msgstr ""
+"可以通过在相关记录上设置 :guilabel:`公司` 字段，将产品、联系人、设备等数据在"
+"不同公司之间共享，或限制为仅供特定公司使用："
 
 #: ../../content/applications/general/companies/multi_company.rst:103
 msgid "Leave the field blank to make the record accessible to all companies."
-msgstr ""
+msgstr "若要使该记录对所有公司可见，请将该字段留空。"
 
 #: ../../content/applications/general/companies/multi_company.rst:104
 msgid ""
 "Select specific companies to make the record visible to users logged in to "
 "those companies only."
-msgstr ""
+msgstr "选择特定公司，仅允许登录这些公司的用户查看该记录。"
 
 #: ../../content/applications/general/companies/multi_company.rst:106
 msgid ""
@@ -2064,6 +2077,10 @@ msgid ""
 "specific. This allows for different cost structures across companies while "
 "maintaining consistent sales pricing and product references."
 msgstr ""
+"共享记录中的各个属性可能是共享的，也可能是公司专有的。例如，产品记录共享 "
+":guilabel:`销售价格` 和 :guilabel:`参考号` 这些通用值，但 :guilabel:`成本` 值"
+"则是公司专有的。这样既能保持销售价格和产品参考号的一致性，又能支持不同公司采"
+"用不同的成本结构。"
 
 #: ../../content/applications/general/companies/multi_company.rst:124
 msgid "Inter-company transactions"
@@ -2079,6 +2096,10 @@ msgid ""
 "documents for orders and invoices can be automatically generated and "
 "synchronized."
 msgstr ""
+":guilabel:`公司间交易`功能允许数据库中的一家公司向同一数据库内的另一家公司销"
+"售或购买商品和服务。对于公司间交易，:ref:`产品记录会在相关公司之间共享 "
+"<general/multi-company/shared-and-unshared-records>`。根据配置设置，订单和发"
+"票的对应单据可以自动生成并同步。"
 
 #: ../../content/applications/general/companies/multi_company.rst:133
 msgid ""
@@ -2101,18 +2122,26 @@ msgid ""
 "enable :guilabel:`Inter-Company Transactions`, and click :guilabel:`Save`. "
 "Then, select the options to create a counterpart for the selected company:"
 msgstr ""
+"要启用公司间交易，请在 :ref:`公司选择器 <general/multi-company/company-"
+"selector>` 中选择相关公司，打开 **设置** 应用，导航至 :guilabel:`公司` 部分，"
+"启用 :guilabel:`公司间交易`，然后点击 :guilabel:`保存`。随后，选择相应选项为"
+"所选公司创建交易对手："
 
 #: ../../content/applications/general/companies/multi_company.rst:143
 msgid ""
 ":guilabel:`Create Vendor Bills`: Automatically create a bill/refund when a "
 "company confirms an invoice/credit note for the selected company."
 msgstr ""
+":guilabel:`创建供应商账单`：当公司确认所选公司的发票/贷方凭证时，自动生成账"
+"单/退款。"
 
 #: ../../content/applications/general/companies/multi_company.rst:145
 msgid ""
 ":guilabel:`Create Sales Orders`: Automatically create a quotation (drafted "
 "sales order) when a purchase order is confirmed for the selected company."
 msgstr ""
+":guilabel:`创建销售订单`：当选定公司的采购订单被确认时，自动创建报价单（销售"
+"订单草稿）。"
 
 #: ../../content/applications/general/companies/multi_company.rst:147
 msgid ""
@@ -2121,6 +2150,8 @@ msgid ""
 "the :guilabel:`Use Warehouse` field when a sales order is confirmed for the "
 "selected company."
 msgstr ""
+":guilabel:`创建采购订单`：当选定公司的销售订单被确认时，系统将使用 "
+":guilabel:`使用仓库` 字段中选定的公司仓库，自动创建询价单（采购订单草稿）。"
 
 #: ../../content/applications/general/companies/multi_company.rst:150
 msgid ""
@@ -2128,12 +2159,14 @@ msgid ""
 "between companies when fulfilling or receiving deliveries for the selected "
 "company."
 msgstr ""
+":guilabel:`同步库存移动`：在为所选公司处理发货或收货时，自动同步各公司之间的"
+"库存移动。"
 
 #: ../../content/applications/general/companies/multi_company.rst:153
 msgid ""
 "To automatically validate the records, select :guilabel:`Validated`. This "
 "setting applies to all of the inter-company transaction options."
-msgstr ""
+msgstr "要自动验证记录，请选择 :guilabel:`已验证`。此设置适用于所有公司间交易选项。"
 
 #: ../../content/applications/general/companies/multi_company.rst:157
 msgid ""
@@ -2143,6 +2176,9 @@ msgid ""
 "after the initial database setup. Warehouses for each company must be "
 "created manually."
 msgstr ""
+"如果选择了 :guilabel:`创建销售订单` 或 :guilabel:`创建采购订单`，则会显示 "
+":guilabel:`使用仓库` 字段。但是，在初始数据库设置完成后，Odoo 不会为新创建的"
+"公司自动创建仓库。每个公司的仓库都必须手动创建。"
 
 #: ../../content/applications/general/companies/multi_company.rst:162
 msgid ""
@@ -2151,6 +2187,9 @@ msgid ""
 "selecting the company. Enable :doc:`../developer_mode` and "
 "the :guilabel:`Inter-Company Transactions` tab appears."
 msgstr ""
+"您还可以通过以下路径访问并修改公司间交易设置：:menuselection:`设置 --> 用户与"
+"公司 --> 公司`，然后选择相应公司。启用 :doc:`../developer_mode` 后，将显示 "
+":guilabel:`公司间交易` 选项卡。"
 
 #: ../../content/applications/general/companies/multi_company.rst:167
 msgid ""
@@ -2158,6 +2197,8 @@ msgid ""
 "for :guilabel:`Customer` `JS Store US` is posted on `JS Store Belgium`, a "
 "vendor bill is automatically created in `JS Store US`."
 msgstr ""
+":guilabel:`创建账单和退款`：当针对 :guilabel:`客户` `JS 美国门店` 的发票在 "
+"`JS 比利时门店` 过账时，系统会在 `JS 美国门店` 中自动生成一张供应商账单。"
 
 #: ../../content/applications/general/companies/multi_company.rst:170
 msgid ""
@@ -2166,6 +2207,9 @@ msgid ""
 "purchase order on `JS Store US` is automatically created (and confirmed if "
 "the :guilabel:`Create and validate` option is selected)."
 msgstr ""
+":guilabel:`创建采购订单`：当在 `JS 比利时门店` 上确认了针对 :guilabel:`客户` "
+"`JS 美国门店` 的销售订单时，系统会在 `JS 美国门店` 上自动创建采购订单（如果选"
+"择了 :guilabel:`创建并验证` 选项，则该采购订单也会被确认）。"
 
 #: ../../content/applications/general/companies/multi_company.rst:175
 msgid ":doc:`Multi-company Guidelines <../../../developer/howtos/company>`"
@@ -3387,6 +3431,9 @@ msgid ""
 "the key contained in the record match, it proves the message is authentic "
 "and has not been altered during transport."
 msgstr ""
+"发送电子邮件时，Odoo 邮件服务器会在邮件头中添加一个唯一的 DKIM 签名。收件人的"
+"服务器会使用数据库中该域名的 DKIM 记录对该签名进行解密。如果签名与记录中包含"
+"的密钥匹配，则证明该邮件是真实的，且在传输过程中未被篡改。"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:75
 msgid ""
@@ -3397,13 +3444,13 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_domain.rst:79
 msgid "Add a CNAME record for domain"
-msgstr ""
+msgstr "为域名添加 CNAME 记录"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:81
 msgid ""
 "To enable DKIM, add a canonical name (CNAME) record to the domain name "
 "system (DNS) zone of the domain name:"
-msgstr ""
+msgstr "要启用 DKIM，请在域名的域名系统（DNS）区域中添加一个规范名称（CNAME）记录："
 
 #: ../../content/applications/general/email_communication/email_domain.rst:89
 msgid ""
@@ -3412,51 +3459,54 @@ msgid ""
 "the canonical name (value/content) is `odoo._domainkey.odoo.com.`. For "
 "example, note the differences between each key/value in italics\\:"
 msgstr ""
+"如果域名是 *company-name.com*，请确保创建一个 CNAME 记录，其中 CNAME 记录（"
+"键/名称）为 `odoo._domainkey.company-name.com`，规范名称（值/内容）为 "
+"`odoo._domainkey.odoo.com.`。例如，请注意斜体部分中各键/值之间的区别："
 
 #: ../../content/applications/general/email_communication/email_domain.rst:93
 msgid "Example CNAME record"
-msgstr ""
+msgstr "CNAME 记录示例"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:98
 #: ../../content/applications/general/email_communication/email_domain.rst:119
 #: ../../content/applications/general/email_communication/email_domain.rst:146
 msgid "Key"
-msgstr ""
+msgstr "名称"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:100
 msgid "odoo.\\_domainkey"
-msgstr ""
+msgstr "odoo.\\_domainkey"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:102
 #: ../../content/applications/general/email_communication/email_domain.rst:123
 #: ../../content/applications/general/email_communication/email_domain.rst:154
 msgid "Value"
-msgstr ""
+msgstr "值"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:104
 #: ../../content/applications/general/email_communication/email_domain.rst:125
 #: ../../content/applications/general/email_communication/email_domain.rst:156
 msgid "odoo.\\_domainkey.\\ *odoo.com.* |nbsp|"
-msgstr ""
+msgstr "odoo.\\_domainkey.\\ *odoo.com.* |nbsp|"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:107
 #: ../../content/applications/general/email_communication/email_domain.rst:128
 #: ../../content/applications/general/email_communication/email_domain.rst:151
 #: ../../content/applications/general/email_communication/email_domain.rst:159
 msgid "OR"
-msgstr ""
+msgstr "或"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:108
 #: ../../content/applications/general/email_communication/email_domain.rst:129
 #: ../../content/applications/general/email_communication/email_domain.rst:160
 msgid "odoo.\\_domainkey.\\ *dbname*\\ .odoo.com."
-msgstr ""
+msgstr "odoo.\\_domainkey.\\ *dbname*\\ .odoo.com."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:109
 #: ../../content/applications/general/email_communication/email_domain.rst:130
 #: ../../content/applications/general/email_communication/email_domain.rst:161
 msgid "... where *dbname* is the name of the Odoo database."
-msgstr ""
+msgstr "... 其中 *dbname* 是 Odoo 数据库的名称。"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:111
 msgid ""
@@ -3464,55 +3514,59 @@ msgid ""
 "*company-name.com*) by default. In this case, the key looks different while "
 "the value remains the same:"
 msgstr ""
+"在大多数 DNS 平台上，DNS 提供商会默认添加自定义域名（例如：*company-"
+"name.com* ）。在此情况下，键值看起来不同，但值保持不变："
 
 #: ../../content/applications/general/email_communication/email_domain.rst:114
 msgid "Example CNAME record with custom domain"
-msgstr ""
+msgstr "自定义域名的 CNAME 记录示例"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:121
 msgid "odoo.\\_domainkey.\\ *company-name.com* |nbsp|"
-msgstr ""
+msgstr "odoo.\\_domainkey.\\ *company-name.com* |nbsp|"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:122
 #: ../../content/applications/general/email_communication/email_domain.rst:153
 msgid "... where *company-name.com* is the custom domain."
-msgstr ""
+msgstr "... 其中 *company-name.com* 代表自定义域名。"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:133
 msgid ""
 "If the DNS provider does not add the custom domain by default, make sure to "
 "include it."
-msgstr ""
+msgstr "如果 DNS 提供商默认未添加自定义域名，请务必将其包含在内。"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:136
 msgid "Add a CNAME record for subdomain"
-msgstr ""
+msgstr "为子域名添加 CNAME 记录"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:138
 msgid ""
 "If there's a \\ *subdomain* (e.g., *marketing* in *marketing*\\ .company-"
 "name.com), add a CNAME record to include it for compliance as well:"
 msgstr ""
+"如果存在 \\*子域名* （例如，*marketing* 在*marketing*\\ .company-name.com 中"
+"），请添加一个 CNAME 记录将其包含在内，以确保合规："
 
 #: ../../content/applications/general/email_communication/email_domain.rst:141
 msgid "Example CNAME record with subdomain"
-msgstr ""
+msgstr "包含子域名的 CNAME 记录示例"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:148
 msgid "odoo.\\_domainkey.\\ *marketing* |nbsp|"
-msgstr ""
+msgstr "odoo.\\_domainkey.\\ *marketing* |nbsp|"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:149
 msgid "... where *marketing* is the subdomain."
-msgstr ""
+msgstr "... 其中 *marketing* 是子域名。"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:152
 msgid "odoo.\\_domainkey.marketing.\\ *company-name.com*\\ |nbsp|"
-msgstr ""
+msgstr "odoo.\\_domainkey.marketing.\\ *company-name.com*\\ |nbsp|"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:164
 msgid "See DNS provider documentation"
-msgstr ""
+msgstr "参见 DNS 提供商文档"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:166
 msgid ""
@@ -3530,6 +3584,9 @@ msgid ""
 "DKIM lookup tool, specifying that the selector being tested is *odoo* for "
 "the custom domain *example.com*."
 msgstr ""
+"请使用 `MXToolbox DKIM Record Lookup <https://mxtoolbox.com/dkim.aspx>`_ 等工"
+"具检查 DKIM 记录是否有效。在 DKIM 查询工具中输入 `example.com:odoo`，并指定要"
+"测试的选定符为 *odoo*，对应自定义域名 *example.com*。"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:177
 msgid "DMARC (Domain-based Message Authentication, Reporting and Conformance)"
@@ -3639,6 +3696,8 @@ msgid ""
 "`GoDaddy SPF, DKIM, or DMARC records <https://www.godaddy.com/help/set-up-"
 "spf-dkim-or-dmarc-records-for-my-hosting-email-40810>`_"
 msgstr ""
+"`GoDaddy 的 SPF、DKIM 或 DMARC 记录 <https://www.godaddy.com/help/set-up-spf-"
+"dkim-or-dmarc-records-for-my-hosting-email-40810>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:223
 msgid ""
@@ -3696,6 +3755,8 @@ msgid ""
 "`Magic Sheet - SPF, DKIM and DMARC configuration [PDF] <https://"
 "drive.google.com/drive/folders/1TJIXQpdR0VN8UQx5JP7q7vFuAr3e1Q3r>`_"
 msgstr ""
+"`Magic Sheet - SPF、DKIM 和 DMARC 配置 [PDF] <https://drive.google.com/drive/"
+"folders/1TJIXQpdR0VN8UQx5JP7q7vFuAr3e1Q3r>`_"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:3
 msgid "Manage inbound messages"
@@ -4113,12 +4174,17 @@ msgid ""
 "have reported that Microsoft 365 does not support true redirection and only "
 "allows forwarding, which may not behave as needed for Odoo's email routing."
 msgstr ""
+"在使用 Microsoft 365（Exchange Online）配置电子邮件重定向时，请注意某些技术限"
+"制可能会影响您的设置。有用户反映，Microsoft 365 不支持真正的重定向，仅允许转"
+"发，这可能无法满足 Odoo 电子邮件路由的需求。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:210
 msgid ""
 "For more information on Microsoft Exchange configuration, visit `Microsoft "
 "Learn <https://learn.microsoft.com/en-us/exchange/exchange-online>`_."
 msgstr ""
+"如需了解有关 Microsoft Exchange 配置的更多信息，请访问 `Microsoft Learn "
+"<https://learn.microsoft.com/en-us/exchange/exchange-online>`_。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:213
 msgid ""
@@ -4201,7 +4267,7 @@ msgstr ""
 msgid ""
 "When using email redirection to manage incoming messages, additional "
 "configuration may be required to ensure correct behavior."
-msgstr ""
+msgstr "当使用电子邮件重定向来管理收到的邮件时，可能需要进行额外配置以确保正常运行。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:245
 msgid ""
@@ -4209,6 +4275,8 @@ msgid ""
 "explicitly confirmed before emails are forwarded, otherwise the redirection "
 "may not function."
 msgstr ""
+"某些电子邮件服务提供商（例如 Gmail）要求在转发邮件前必须明确确认转发地址，否"
+"则转发功能可能无法正常工作。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:248
 msgid ""
@@ -4218,6 +4286,9 @@ msgid ""
 "setting can be found under :menuselection:`Settings --> Technical --> "
 "Aliases`."
 msgstr ""
+"此外，当使用重定向代替收件服务器时，除非在相应的别名上启用了 *基于本地部分的"
+"收件检测*，否则该别名可能会显示为 `@yourdb.odoo.com` 域名。此设置位于 "
+":menuselection:`设置 --> 技术 --> 别名` 下。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:256
 msgid "Incoming mail servers"
@@ -4231,6 +4302,9 @@ msgid ""
 "mailbox on your server, catchall, bounce, and every alias of the database, "
 "in order to fetch all incoming emails."
 msgstr ""
+"如前所述，使用重定向是 Odoo 中接收电子邮件的推荐方法。不过，也可以配置收件服"
+"务器。采用此方法意味着需要为服务器上的每个邮箱、catchall、退信地址以及数据库"
+"中的每个别名分别创建一个收件服务器，以便收取所有收到的电子邮件。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:264
 msgid ""
@@ -4238,6 +4312,8 @@ msgid ""
 "`sales@yourcompany.com` or `support@yourcompany.com`) to route messages to "
 "team pipelines, tickets, or documents."
 msgstr ""
+"Odoo 的 *收件服务器* 功能专为共享收件箱（例如 `sales@yourcompany.com` 或 "
+"`support@yourcompany.com`）设计，用于将邮件路由到团队流程、工单或文档。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:268
 msgid ""
@@ -4246,12 +4322,15 @@ msgid ""
 "security risks, unintended message routing, privacy issues, and difficulties "
 "syncing replies correctly."
 msgstr ""
+"不建议将个人电子邮件地址（例如 `mitchell.admin@yourcompany.com`）用作收件服务"
+"器。这样做可能会增加安全风险、导致邮件路由异常、引发隐私问题，并造成回复同步"
+"困难。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:272
 msgid ""
 "Incoming mail servers are created by going to :menuselection:`Settings --> "
 "Technical --> Emails: Incoming Mail Servers`."
-msgstr ""
+msgstr "要创建收件服务器，请前往：`设置 --> 技术 --> 电子邮件：收件服务器`。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:276
 msgid ""
@@ -5863,6 +5942,8 @@ msgid ""
 "dashboard, refer to the :ref:`Odoo.sh logs documentation <odoo-sh/branches/"
 "tabs/logs>`."
 msgstr ""
+"有关日志以及如何通过 Odoo.sh 仪表板访问日志的更多信息，请参阅 :ref:`Odoo.sh "
+"日志文档 <odoo-sh/branches/tabs/logs>`。"
 
 #: ../../content/applications/general/email_communication/faq.rst:324
 msgid ""
@@ -6664,6 +6745,11 @@ msgid ""
 "and :abbr:`DMARC (Domain-based Message Authentication, Reporting & "
 "Conformance)`) cannot be configured on that subdomain."
 msgstr ""
+"为避免邮件被判定为垃圾邮件，请参阅 :ref:`自定义域名设置 <email-online-sh-"
+"domain>`。若使用 Odoo 提供的子域名（*<dbname>.odoo.com*）搭配 Mailjet 邮件服"
+"务器，可能会引发邮件投递异常；原因是该子域名无法配置各类邮件认证协议（"
+"abbr:`SPF（发件人认证机制）`、abbr:`DKIM（域名密钥识别）` 以及 abbr:`DMARC（"
+"域名邮件认证协议）`）。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:97
 msgid ""
@@ -7883,7 +7969,7 @@ msgstr ""
 msgid ""
 "Make sure to check the database version in the :menuselection:`Settings app "
 "--> General Settings`, at the bottom of the page."
-msgstr ""
+msgstr "请务必在 :menuselection:`设置应用 --> 常规设置` 页面底部查看数据库版本。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:12
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:23
@@ -7892,12 +7978,17 @@ msgid ""
 "www.odoo.com/documentation/master/applications/general/integrations/"
 "mail_plugins/outlook.html>`_ for installation instructions."
 msgstr ""
+"对于数据库 19.2 及更高版本，请参阅 `最新文档 <https://www.odoo.com/"
+"documentation/master/applications/general/integrations/mail_plugins/"
+"outlook.html>`_ 以获取安装说明。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:17
 msgid ""
 "Learn how Odoo handles your data by reading Odoo's `Privacy Policy <https://"
 "www.odoo.com/privacy>`_ and :doc:`Terms and Conditions <../../../../legal>`."
 msgstr ""
+"请阅读 Odoo 的 `隐私政策 <https://www.odoo.com/privacy>`_ 和 :doc:`使用条款 "
+"<../../../../legal>`_，了解 Odoo 如何处理您的数据。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:21
 msgid "Odoo Online users"
@@ -8171,6 +8262,9 @@ msgid ""
 "Outlook. See `Microsoft's add-in article <https://support.microsoft.com/en-"
 "us/office/use-add-ins-in-outlook-1ee261f9-49bf-4ba6-b3e2-2ba7bcab64c8>`_."
 msgstr ""
+"该 Outlook 插件适用于 Outlook 的桌面版和网页版。请参阅 `微软的加载项文章 "
+"<https://support.microsoft.com/en-us/office/use-add-ins-in-outlook-1ee261f9-"
+"49bf-4ba6-b3e2-2ba7bcab64c8>`_。"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:17
 msgid ""
@@ -8182,7 +8276,7 @@ msgstr "Outlook:文档:`邮件插件<../mail_plugins>`需要在Odoo和Outlook上
 msgid ""
 "Make sure to check the database version in the :guilabel:`Settings app --> "
 "General Settings`, at the bottom of the page."
-msgstr ""
+msgstr "请务必在 :guilabel:`设置应用 --> 常规设置` 页面底部查看数据库版本。"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:30
 msgid "Enable Mail Plugin"
@@ -8194,6 +8288,8 @@ msgid ""
 "to :menuselection:`Settings --> General Settings --> Integrations`, "
 "enable :guilabel:`Mail Plugin`, and :guilabel:`Save` the configuration."
 msgstr ""
+"首先，在数据库中启用 *邮件插件* 模块。前往 :menuselection:`设置 --> 常规设"
+"置 --> 整合`，启用 :guilabel:`邮件插件`，然后 :guilabel:`保存` 配置。"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:38
 msgid "Install the Outlook Plugin"
@@ -8215,10 +8311,12 @@ msgid ""
 "click on the :guilabel:`Apps` button in the upper right-side, then "
 "click :guilabel:`Get add-ins`."
 msgstr ""
+"接下来，打开 Outlook 邮箱，并选择任意一封邮件。完成后，点击右上角的 "
+":guilabel:`应用` 按钮，然后点击 :guilabel:`获取加载项`。"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:None
 msgid "Apps button in Outlook"
-msgstr ""
+msgstr "Outlook 中的应用程序按钮"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:50
 msgid ""
@@ -8234,6 +8332,8 @@ msgid ""
 "Under :guilabel:`Custom Addins` towards the bottom, click on :guilabel:`+ "
 "Add a custom add-in`, then select :guilabel:`Add from file...`"
 msgstr ""
+"在页面底部的 :guilabel:`自定义插件` 下方，点击 :guilabel:`+ 添加自定义插件`，"
+"然后选择 :guilabel:`从文件添加...`"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:None
 msgid "Custom add-ins in Outlook"
@@ -8262,6 +8362,9 @@ msgid ""
 "in the Outlook mailbox, click on the :guilabel:`Apps` button in the upper "
 "right-side, and select :guilabel:`Odoo Inbox Addin`."
 msgstr ""
+"现在，Outlook 将连接到 Odoo 数据库。首先，在 Outlook 收件箱中打开任意一封邮件"
+"，点击右上角的 :guilabel:`应用程序` 按钮，然后选择 :guilabel:`Odoo Inbox "
+"Addin`。"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:None
 msgid "Odoo for Outlook add-in button"
@@ -8292,6 +8395,8 @@ msgid ""
 "browser cookie settings prevented it from loading. Note that these settings "
 "also change if the browser is in *Incognito* mode."
 msgstr ""
+"如果过了一会儿面板仍然为空，可能是浏览器的 Cookie 设置阻止了其加载。请注意，"
+"如果浏览器处于 *无痕* 模式，这些设置也会发生变化。"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:94
 msgid ""
@@ -8346,7 +8451,7 @@ msgstr "允许Outlook插件连接至数据库"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:122
 msgid "Using the inbox plugin"
-msgstr ""
+msgstr "使用收件箱插件"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:124
 msgid ""
@@ -8354,32 +8459,36 @@ msgid ""
 "the :guilabel:`Apps` button in the upper right-side, and "
 "select :guilabel:`Odoo Inbox Addin` to open the panel."
 msgstr ""
+"要使用该插件，请在 Outlook 邮箱中打开任意一封邮件，点击右上角的 :guilabel:`应"
+"用程序` 按钮，然后选择 :guilabel:`Odoo 收件箱插件` 以打开面板。"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:128
 msgid ""
 "The options available in the panel will vary based on the applications "
 "installed in the database."
-msgstr ""
+msgstr "面板中显示的选项将根据数据库中安装的应用程序而有所不同。"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:131
 msgid "Create a contact"
-msgstr ""
+msgstr "创建联系人"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:133
 msgid ""
 "To create a contact record in Odoo from an email, click the :icon:`fa-plus-"
 "circle` :guilabel:`(circle plus)` icon."
 msgstr ""
+"要在 Odoo 中根据一封电子邮件创建联系人记录，请点击 :icon:`fa-plus-circle` "
+":guilabel:`(圆圈加号)` 图标。"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:137
 msgid ""
 "A contact record **must** be created before a lead/opportunity can be "
 "created."
-msgstr ""
+msgstr "在创建潜在客户/商机之前，**必须**先创建联系人记录。"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:140
 msgid "Create an opportunity"
-msgstr ""
+msgstr "创建商机"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:142
 msgid ""
@@ -8389,10 +8498,14 @@ msgid ""
 "email is used as the opportunity title, and the content of the email is "
 "added to the :guilabel:`Notes` tab of the opportunity."
 msgstr ""
+"要从一封电子邮件中创建商机，请点击 :icon:`fa-plus` :guilabel:`(加号)` 图标（"
+"位于 :guilabel:`商机` 旁边）。此操作将在 Odoo 中以新标签页的形式打开一个新的"
+"商机记录。电子邮件的主题将作为商机标题，而邮件内容将添加到商机的 "
+":guilabel:`备注` 标签页中。"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:148
 msgid "Create a task"
-msgstr ""
+msgstr "创建任务"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:150
 msgid ""
@@ -8403,10 +8516,14 @@ msgid ""
 "Odoo in a new tab. The subject of the email is used as the task title, and "
 "the content of the email is added to the :guilabel:`Description` tab."
 msgstr ""
+"要从电子邮件创建任务，请点击 :icon:`fa-plus` :guilabel:`(加号)` 图标（位于 "
+":guilabel:`任务` 旁边）。然后，在弹出的字段中输入要创建任务的项目名称，并从列"
+"表中选择相应的项目。这将在 Odoo 中以新标签页的形式打开一个新的任务记录。邮件"
+"的主题将作为任务标题，而邮件内容则会添加到 :guilabel:`描述` 标签页中。"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:157
 msgid "Create a ticket"
-msgstr ""
+msgstr "创建工单"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:159
 msgid ""
@@ -8416,6 +8533,10 @@ msgid ""
 "content of the email is added to the :guilabel:`Description` tab of the "
 "ticket."
 msgstr ""
+"要从电子邮件创建任务，请点击 :icon:`fa-plus` :guilabel:`(加号)` 图标（位于 "
+":guilabel:`工单` 旁边）。此操作将在 Odoo 中以新标签页的形式打开一个新的工单记"
+"录。电子邮件的主题将作为工单标题，而邮件内容将添加到工单的 :guilabel:`描述` "
+"标签页中。"
 
 #: ../../content/applications/general/integrations/unsplash.rst:3
 msgid "Unsplash"
@@ -8529,6 +8650,8 @@ msgid ""
 ":abbr:`MRP (Material Requirement Planning)` devices, including cameras and "
 "measurement tools, are not compatible with the Windows virtual IoT."
 msgstr ""
+":abbr:`MRP（物料需求计划）`设备（包括相机和测量工具）与 Windows 虚拟物联网不"
+"兼容。"
 
 #: ../../content/applications/general/iot.rst:22
 msgid "Multiple IoT systems can be used at the same time."
