@@ -241,6 +241,8 @@ versions_names = {
     '18.0': "Odoo 18",
     '17.0': "Odoo 17",
     '16.0': "Odoo 16",
+    '15.0': "Odoo 15",
+    '14.0': "Odoo 14",
 }
 
 # The labels used in the language switcher to show the languages provided with the `languages`
