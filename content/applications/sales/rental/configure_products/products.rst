@@ -216,7 +216,7 @@ everything is returned on time and in its original condition.
 
 .. note::
    The customer signature can be requested during any stage of the order. This feature requires the
-   :doc:`Sign <../../productivity/sign>` app.
+   :doc:`Sign <../../../productivity/sign>` app.
 
 To request a signature, open the **Rental** app and select the desired rental order. Click the
 :icon:`fa-cog` :guilabel:`(Actions)` icon, then click :guilabel:`Request Signature`.

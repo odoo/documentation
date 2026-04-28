@@ -47,13 +47,13 @@ product and rental order:
  - **eCommerce** app: Allows rental products and services to be rented directly from the website.
 
 .. seealso::
-   - :doc:`../sales/sales_quotations/quote_template`
-   - :doc:`../sales/sales_quotations/get_paid_to_validate`
-   - :doc:`../../services/project/project_management`
-   - :doc:`../../services/planning`
-   - :doc:`../../productivity/sign`
-   - :doc:`../../services/timesheets`
-   - :doc:`../../websites/ecommerce`
+   - :doc:`../../sales/sales_quotations/quote_template`
+   - :doc:`../../sales/sales_quotations/get_paid_to_validate`
+   - :doc:`../../../services/project/project_management`
+   - :doc:`../../../services/planning`
+   - :doc:`../../../productivity/sign`
+   - :doc:`../../../services/timesheets`
+   - :doc:`../../../websites/ecommerce`
 
 .. _rental/service_products/service:
 
@@ -259,7 +259,7 @@ ensure everything is returned on-time and in its original condition.
 
 .. note::
    Requesting a signature can be done during any stage of the order. This feature also requires the
-   :doc:`Sign <../../productivity/sign>` app.
+   :doc:`Sign <../../../productivity/sign>` app.
 
 If signatures are required, go to the **Rental** app and from the default :guilabel:`Rental Orders`
 dashboard, select the desired rental order. To go the :icon:`fa-cog` :guilabel:`(Actions)` icon, and
@@ -300,11 +300,12 @@ When the rental order is confirmed, the following smart buttons appear at the to
 
 Click the :icon:`fa-puzzle-piece` :guilabel:`Tasks` smart button to view a Kanban view of all the
 associated tasks that were automatically created when confirming the rental order. :doc:`Customize
-the tasks <../../services/project/tasks/task_creation>` in the project as needed.
+the tasks <../../../services/project/tasks/task_creation>` in the project as needed.
 
 .. tip::
-   Configuring the use of :doc:`../../services/project/project_management/project_templates` on the
-   product form creates new projects with predefined tasks, priority levels, and assigned employees.
+   Configuring the use of :doc:`../../../services/project/project_management/project_templates` on
+   the product form creates new projects with predefined tasks, priority levels, and assigned
+   employees.
 
 .. image:: service_products/rental-order-task-card.png
    :alt: Sample of a project task card for the rental order in the Rental app.
