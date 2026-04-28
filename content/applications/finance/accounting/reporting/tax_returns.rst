@@ -14,6 +14,12 @@ refunded.
    You can find additional information about VAT and its mechanism on this page from the European
    Commission: `"What is VAT?" <https://ec.europa.eu/taxation_customs/business/vat/what-is-vat_en>`_.
 
+.. warning::
+   Different contacts sharing the same VAT ID may result in an incorrect VAT report. If your
+   contacts are related (e.g., related partners, divisions within the same company, etc.), consider
+   using :doc:`parent-type and children-type contacts
+   <../../../essentials/contacts>`.
+
 .. _tax-returns/prerequisites:
 
 Prerequisites
