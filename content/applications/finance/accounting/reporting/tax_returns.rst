@@ -16,6 +16,12 @@ Based on these values, the company can calculate the tax amount they must pay or
    - :doc:`../get_started`
    - :doc:`../../fiscal_localizations`
 
+.. warning::
+   Different contacts sharing the same VAT ID may result in an incorrect VAT report. If your
+   contacts are related (e.g., related partners, divisions within the same company, etc.), consider
+   using :doc:`parent-type and children-type contacts
+   <../../../essentials/contacts>`.
+
 .. _accounting/tax-returns/configuration:
 
 Configuration
