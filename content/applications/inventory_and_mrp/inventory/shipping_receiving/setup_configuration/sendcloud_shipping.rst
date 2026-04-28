@@ -30,6 +30,10 @@ configure the account and generate the connector credentials.
    since Sendcloud won't ship for free. To use shipping rules, or individual custom carrier
    contacts, a paid plan of Sendcloud is **required**.
 
+.. seealso::
+   `Magic Sheet - Connect Sendcloud [PDF]
+   <https://drive.google.com/drive/folders/1Cj_bbIn2gOA6HNDFEI8AhjUvcxe2wSMf>`_
+
 .. _inventory/shipping_receiving/sendcloud-warehouse-config:
 
 Warehouse configuration
