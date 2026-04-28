@@ -1,4 +1,6 @@
+:nosearch:
 :show-content:
+:show-toc:
 
 ======
 Rental
@@ -17,18 +19,18 @@ invoice customers from a single platform.
 .. cards::
 
    .. card:: Rental products
-      :target: rental/products
+      :target: rental/configure_products/products
       :large:
 
       Explore how to create and manage rental products.
 
    .. card:: Service products
-      :target: rental/service_products
+      :target: rental/configure_products/service_products
       :large:
 
       Discover how to rent services alongside products.
    .. card:: Manage deposits
-      :target: rental/manage_deposits
+      :target: rental/rental_orders/manage_deposits
       :large:
 
       Learn how to create a refundable deposit for rental products.
@@ -141,7 +143,9 @@ The formula used is:
       :alt: Rental order for two sleeping bags for two nights.
 
 .. toctree::
-   rental/products
-   rental/service_products
-   rental/manage_deposits
+   :titlesonly:
+
+   rental/configure_products
+   rental/rental_orders
+
 
