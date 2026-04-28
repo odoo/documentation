@@ -17,10 +17,10 @@ App integration configuration
 The following apps are essential for configuring deposit service products and processing deposit
 refunds:
 
-- **Sales**: Enables the *Price* tab on product forms when :doc:`../sales/products_prices/prices` is
-  enabled. Also enables the use of quotation templates.
+- **Sales**: Enables the *Price* tab on product forms when :doc:`../../sales/products_prices/prices`
+  is enabled. Also enables the use of quotation templates.
 - **Accounting**: Enables the use of :doc:`Credit Notes
-  <../../finance/accounting/customer_invoices/credit_notes>` on rental orders, which are required
+  <../../../finance/accounting/customer_invoices/credit_notes>` on rental orders, which are required
   when returning a deposit.
 
 .. _rental/manage_deposits/config:
@@ -87,8 +87,8 @@ Lines` tab. A *Configure your product* pop-up window appears. Click :icon:`fa-pl
 for the deposit item, then click :guilabel:`Confirm`.
 
 .. tip::
-   If :doc:`eCommerce <../../websites/ecommerce>` is installed, add a :guilabel:`Short Description`
-   to the rental product's :guilabel:`Sales` tab stating a deposit is required.
+   If :doc:`eCommerce <../../../websites/ecommerce>` is installed, add a :guilabel:`Short
+   Description` to the rental product's :guilabel:`Sales` tab stating a deposit is required.
 
    When a customer adds the rental product to their cart, a *Configure* pop-up window displays the
    deposit service product under :guilabel:`Available options`.
@@ -142,7 +142,7 @@ Refund deposits upon return
 
 To process a deposit return, the **Accounting** app must be installed. After a customer
 :ref:`returns the rented item <rental/return-products>`, begin the deposit return by preparing a
-:doc:`credit note <../../finance/accounting/customer_invoices/credit_notes>` against the original
+:doc:`credit note <../../../finance/accounting/customer_invoices/credit_notes>` against the original
 deposit invoice.
 
 First, go to the :menuselection:`Rental app --> Orders --> Orders`, and select the correct rental
