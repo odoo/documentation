@@ -78,12 +78,12 @@ Increase the maximum displayed capacity
 ---------------------------------------
 
 When booking an appointment based on resource availability, the website only displays capacity up to
-``12``. This occurs even if the resource has a higher capacity. To raise this limit, a new system
+``20``. This occurs even if the resource has a higher capacity. To raise this limit, a new system
 parameter needs to be added to the database.
 
 First, ensure that :ref:`developer mode <developer-mode>` is enabled. Then, navigate to
-:menuselection:`Settings app --> Technical --> Parameters --> System Parameters`. Click :guilabel:`New`
-to add a new parameter.
+:menuselection:`Settings app --> Technical --> Parameters --> System Parameters`. Click
+:guilabel:`New` to add a new parameter.
 
 In the :guilabel:`Key` field, enter ``appointment.resource_max_capacity_allowed``. In the
 :guilabel:`Value` field, enter the desired maximum capacity. Click the :guilabel:`Save` button when
@@ -211,8 +211,7 @@ canceled.
    cancellation, without being listed as attendees.
 
 .. seealso::
-   For information on configuring the :guilabel:`Google Bookings` tab, see
-   :doc:`google_reserve`.
+   For information on configuring the :guilabel:`Google Bookings` tab, see :doc:`google_reserve`.
 
 .. _appointments/appointment-types/options-tab:
 
@@ -279,7 +278,6 @@ Tick the :guilabel:`Employee Schedule` checkbox to additionally constrain user a
 working schedule defined in the **Employees** app. When enabled, a slot is only bookable if it falls
 within **both** the time windows in the :ref:`Availabilities tab
 <appointments/appointment-types/availabilities-tab>` and the user's employee working schedule.
-
 
 Publishing an appointment
 =========================
