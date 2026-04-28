@@ -272,7 +272,9 @@ emails sent to your domain. **Advanced technical knowledge is required.**
 
 .. important::
    This configuration only works with a subdomain on the Odoo Online or Odoo.sh infrastructure
-   (e.g., `@mail.mydomain.com`)
+   (e.g., `@mail.mydomain.com`). Simply point the MX record on the custom subdomain to the Odoo
+   subdomain of your database.
+   Example: mail.mydomain.com MX -> dbname.odoo.com
 
 Below are presented some specifications depending on the hosting type:
 
