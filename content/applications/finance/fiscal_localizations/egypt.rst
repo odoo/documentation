@@ -195,47 +195,35 @@ send invoices to the ETA portal through an ERP.
    You can contact the :abbr:`ETA (Egyptian Tax Authority)` or `Egypt Trust
    <https://www.egypttrust.com/>`_ to get these USB keys.
 
-.. _egypt/e-invoicing-local-proxy:
+.. _egypt/e-invoicing-virtual-iot:
 
-Install Odoo as a local proxy on your computer
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Install Odoo's Windows virtual IoT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-An Odoo local server works as a bridge between your computer and your Odoo database hosted online.
+The :doc:`Windows virtual IoT <../../general/iot/windows_iot>` acts as a bridge between your
+computer and your Odoo database hosted online.
 
-Download the Odoo Community installer from the page https://www.odoo.com/page/download and start the
-installation on your computer.
+Follow the :ref:`installation instructions for the Windows virtual IoT
+<iot/windows-iot/installation>`. Once installed:
 
-Select :guilabel:`Odoo IoT` as the type of install.
-
-.. image:: egypt/install-odoo-local-proxy.png
-   :align: center
-   :alt: Selection of "Odoo IoT" during the installation of Odoo Community.
-
-.. note::
-   This installation of Odoo only works as a server and does not install any Odoo apps on your
-   computer.
-
-Once the installation is complete, the installer displays your **access token** for the Odoo Local
-Proxy. Copy the token and save it in a safe place for later use.
-
-.. seealso::
-   - `Odoo: Download Odoo <https://www.odoo.com/page/download>`_
-   - :doc:`../../../administration/on_premise`
+#. Open the :ref:`virtual IoT homepage <iot/windows-iot/homepage>`
+#. Click the :icon:`fa-cogs` (:guilabel:`cogs`) button then :guilabel:`Credentials`.
+#. Copy the content under the :guilabel:`Proxy Access Token (for Egypt only)` field and save it for
+   the next step.
 
 .. _egypt/e-invoicing-usb-configuration:
 
 Configure the USB key
 ~~~~~~~~~~~~~~~~~~~~~
 
-Once the local proxy server is installed on your computer, you can link it with your Odoo database.
+Once the Windows virtual IoT is installed, configure your USB key by going to
+:menuselection:`Accounting --> Configuration --> Thumb Drive` and clicking :guilabel:`New`:
 
-#. Go to :menuselection:`Accounting --> Configurations --> Thumb Drive` and click on
-   :guilabel:`Create`.
-#. Input a :guilabel:`Company` name, the :guilabel:`ETA USB Pin` given to you by your USB key
-   provider, and the :guilabel:`Access Token` provided at the end of the :ref:`local proxy
-   installation <egypt/e-invoicing-local-proxy>`, then click on :guilabel:`Save`.
-#. Click on :guilabel:`Get certificate`.
+#. Select the :guilabel:`Company`.
+#. Enter the :guilabel:`ETA USB Pin` given to you by your USB key provider.
+#. Paste the :guilabel:`Access Token` :ref:`provided on the virtual IoT homepage
+   <egypt/e-invoicing-virtual-iot>`.
+#. Click :guilabel:`Get certificate`.
 
 .. image:: egypt/thumb-drive.png
-   :align: center
    :alt: Creating a new thumb drive for the e-invoicing of an egyptian company.
