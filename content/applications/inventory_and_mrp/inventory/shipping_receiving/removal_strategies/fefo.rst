@@ -3,17 +3,26 @@ FEFO removal
 ============
 
 The *First Expired, First Out* (FEFO) removal strategy targets products for removal based on their
-assigned removal dates.
+assigned *removal dates*.
+
+Products **must** be removed from inventory before their removal date, which is set as a certain
+number of days before the product's *expiration date*.
+
+The expiration date of a product is determined by adding the date the product was received to the
+number of days specified in the :guilabel:`Expiration Date` field of the product form.
+
+The removal date takes this expiration date, and subtracts the number of days specified in the
+:guilabel:`Removal Date` field of the product form.
 
 .. _inventory/warehouses_storage/fefo_enable:
 
-Enabling the FEFO removal strategy
-==================================
+Configuration
+=============
 
 Lots and serial numbers differentiate identical products and track information like arrival or
 expiration dates. To enable this feature, navigate to :menuselection:`Inventory --> Configuration
 --> Settings`. Under the :guilabel:`Traceability` heading, check the box beside :guilabel:`Lots &
-Serial Numbers`. After :guilabel:`Lots & Serial Numbers` is enabled, the :guilabel:`Expiration Date`
+Serial Numbers`. After :guilabel:`Lots & Serial Numbers` is enabled, the :guilabel:`Expiration Dates`
 feature appears. Enable it to track expiration dates, best-before dates, removal dates, and alert
 dates.
 
@@ -24,32 +33,32 @@ Enable tracking by lots or serial numbers
 -----------------------------------------
 
 Next, ensure the intended product is tracked by lots or serial numbers by navigating to the product
-form through :menuselection:`Inventory --> Products --> Products` and selecting the desired product.
-On the product form, open the :guilabel:`General Information` tab and select the check box next to
-the :guilabel:`Track Inventory` field, then select either :guilabel:`By Unique Serial Number` or
-:guilabel:`By Lots`.
+form through :menuselection:`Inventory app --> Products --> Products` and selecting the desired
+product. On the product form, open the :guilabel:`General Information` tab. In the
+:guilabel:`Tracking` field, select either :guilabel:`By Unique Serial Number` or :guilabel:`By
+Lots`.
 
 .. image:: fefo/track-by-lots.png
    :alt: Enable tracking by lot.
 
-Setting dates
--------------
+Set FEFO dates
+--------------
 
-Next, set the :guilabel:`Expiration Date`, :guilabel:`Best Before Date`, :guilabel:`Removal Date`,
-and :guilabel:`Alert Date` settings for the product. In the :guilabel:`Inventory` tab of the product
-form, under the :guilabel:`Traceability` heading, select the :guilabel:`Expiration Date` check box.
-The :guilabel:`Dates` heading appears. See :ref:`Removal date
-<inventory/warehouses_storage/removal-date>` for more information.
+Next, set the dates for the product. In the :guilabel:`Inventory` tab of the product form, under the
+:guilabel:`Traceability` heading, select the :guilabel:`Expiration Date` checkbox. The
+:guilabel:`Dates` heading appears. Specify the :guilabel:`Expiration Date`, :guilabel:`Best Before
+Date`, :guilabel:`Removal Date`, and :guilabel:`Alert Date` settings for the product. See
+:ref:`Removal date <inventory/warehouses_storage/removal-date>` for more information.
 
-Assigning lots and serial numbers
----------------------------------
+Assign lots and serial numbers
+------------------------------
 
 After enabling the features, assign lot or serial numbers to products using an :doc:`inventory
 adjustment <../../warehouses_storage/inventory_management/count_products>` or during :ref:`product
 reception <inventory/product_management/assign-lots>`.
 
-Setting removal strategies
---------------------------
+Set removal strategies
+----------------------
 
 After lot or serial numbers have been assigned, set the removal strategy on the storage location or
 product category.
@@ -87,26 +96,20 @@ Configuration --> Categories` and selecting the intended product category. Next,
 Removal date
 ============
 
-Products **must** be removed from inventory before their *removal date*, which is set as a certain
-number of days before the product's *expiration date*.
-
-The user sets this number of days by navigating to the product form's :guilabel:`Inventory` tab.
-Under the :guilabel:`Traceability` section, ensure the :guilabel:`Tracking` field is set to either
+Before setting this date, ensure that the :guilabel:`Tracking` property field is set to
 :guilabel:`By Lots` or :guilabel:`By Unique Serial Number`.
 
-Next, select the :guilabel:`Expiration Date` option, which makes the :guilabel:`Removal Date` field
-(and other date fields) appear.
+Set this number of days by navigating to the product form's :guilabel:`Inventory` tab. Next, select
+the :guilabel:`Expiration Date` option, which makes the :guilabel:`Removal Date` field (and other
+date fields) appear.
 
 .. important::
    The :guilabel:`Lots and Serial Numbers` and :guilabel:`Expiration Dates` features **must** be
    enabled in :menuselection:`Inventory app --> Configuration --> Settings` to track expiration
    dates.
 
-The expiration date of a product is determined by adding the date the product was received to the
-number of days specified in the :guilabel:`Expiration Date` field of the product form.
-
-The removal date takes this expiration date, and subtracts the number of days specified in the
-:guilabel:`Removal Date` field of the product form.
+Set the :guilabel:`Expiration Date`, :guilabel:`Best Before Date`, :guilabel:`Removal Date`, and the
+:guilabel:`Alert Date`.
 
 .. example::
    In the :guilabel:`Inventory` tab of the product, `Egg`, the following :guilabel:`Dates` are set
@@ -181,12 +184,12 @@ removal strategy.
 
 To view the detailed pickings, click the :guilabel:`Details` link, located on the far-right of the
 Carton of Eggs' product line, in the :guilabel:`Operations` tab of the delivery order. Doing so
-opens the :guilabel:`Detailed Operations` pop-up window.
+opens the *Detailed Operations* pop-up window.
 
-In the :guilabel:`Detailed Operations` pop-up window, the :guilabel:`Pick From` field displays where
-the quantities to fulfill the :guilabel:`Demand` are picked from.
+In the *Detailed Operations* pop-up window, the :guilabel:`Pick From` field displays where the
+quantities to fulfill the :guilabel:`Demand` are picked from.
 
-Since the order demanded six Cartons of Eggs, using the :abbr:`FEFO (First Expired, First Out)`
+Because the order demanded six Cartons of Eggs, using the :abbr:`FEFO (First Expired, First Out)`
 removal strategy, all five Cartons from `LOT1`, with the removal date of December 24, are picked.
 The remaining Carton is selected from `LOT2`, which has a removal date of December 31.
 
