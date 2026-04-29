@@ -62,8 +62,8 @@ product form:
   .. important::
      The :guilabel:`Invoicing Policy` field **only** appears if the **Sales** app is installed.
 
-- :ref:`Track Inventory <inventory/product_management/tracking-inventory>` field: This checkbox
-  determines whether Odoo tracks inventory for this product.
+- :ref:`Tracking <inventory/product_management/tracking-inventory>` field: This field determines
+  whether and how Odoo tracks inventory for this product.
 - *Inventory* tab: From here, :doc:`purchasing and manufacturing routes
   <../../shipping_receiving/daily_operations/use_routes>`, as well as product logistics such as
   product weight and customer lead time, can be specified.
@@ -95,13 +95,12 @@ When configuring a product for sale, it is necessary to choose an :doc:`invoicin
 Tracked vs. untracked goods
 ---------------------------
 
-The :guilabel:`Track Inventory` field on the product form drives many of Odoo's **Inventory**
-operations.
+The :guilabel:`Tracking` field on the product form drives many of Odoo's **Inventory** operations.
 
 *Tracked* products are those for which stock and inventory are maintained. Examples include finished
 goods and, often, the raw materials or components needed to make them.
 
-When :guilabel:`Track Inventory` is selected, a drop-down menu appears, offering three ways to track
+In the :guilabel:`Tracking` field, a drop-down menu appears, offering three ways to track
 inventory: :guilabel:`By Unique Serial Number`, :guilabel:`By Lots`, or :guilabel:`By Quantity`.
 
 .. image:: type/tracked.png
@@ -112,10 +111,12 @@ quickly, so stock (or inventory) does *not* need to be maintained. Non-inventory
 essential, but exact counts are unnecessary. Examples include: office supplies, packaging materials,
 or items used in production that do not need to be individually tracked.
 
+To mark a product as untracked, select the text in the :guilabel:`Tracking` field, delete it, then
+click outside of the field.
+
 .. tip::
-   Select the :guilabel:`Track Inventory` checkbox if it is necessary to track a product's stock at
-   various locations, for inventory valuation, with lots or serial numbers, or when using reordering
-   rules.
+   Select a :guilabel:`Tracking` option if it is necessary to track a product's stock at various
+   locations, perform inventory valuation, use lots or serial numbers, or create reordering rules.
 
 .. seealso::
    :doc:`Tracking storable products using lot and serial numbers <../product_tracking>`
@@ -244,7 +245,7 @@ Only tracked products can trigger :doc:`reordering rules
 goods *cannot* be managed using reordering rules.
 
 Reordering rules can be configured directly on the product form via the :icon:`fa-refresh`
-:guilabel:`(refresh)` icon.
+:guilabel:`Reordering Rules` smart button.
 
 .. note::
    If reordering rules already exist on a product, Odoo re-labels this button to :guilabel:`Min /
@@ -333,10 +334,10 @@ Inventory reports
   comprehensive list of all on-hand, unreserved, incoming, and outgoing tracked inventory. This
   includes a detailed record of the monetary value of all tracked inventory. To access the report,
   go to :menuselection:`Inventory app --> Reporting --> Stock`.
-- :doc:`Locations report  <../../warehouses_storage/reporting/locations>`: This report shows a
+- :doc:`Stock Locations report <../../warehouses_storage/reporting/locations>`: This report shows a
   breakdown of which tracked products are held at each location. The report is only available with
   the *Storage Locations* feature activated (:menuselection:`Inventory app --> Configuration -->
-  Settings`). To access it, go to :menuselection:`Inventory app --> Reporting --> Locations`.
+  Settings`). To access it, go to :menuselection:`Inventory app --> Reporting --> Stock Locations`.
 - :doc:`Moves History report <../../warehouses_storage/reporting/moves_history>`: This report
   summarizes where and when goods have moved in or out of stock. To access the report, go to
   :menuselection:`Inventory app --> Reporting --> Moves History`. Alternatively, click the
