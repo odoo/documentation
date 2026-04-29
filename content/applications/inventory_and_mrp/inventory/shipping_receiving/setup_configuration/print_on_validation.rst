@@ -31,6 +31,29 @@ to the related section.
    :align: center
    :alt: Show the *Print on Validation* option in the "Pick" *Operation Type*.
 
+.. _inventory/shipping_receiving/configure-printers:
+
+Configure printers
+==================
+
+By default, Odoo will download the PDF document to the user's device,
+but the user can also configure an actual printer to print the document directly.
+
+Three types of printers can be configured from the
+:menuselection:`Inventory app --> Configuration --> Manage Printers` menu
+
+- **ePOS:** to print PNG carrier labels
+- **ZPL:** to print ZPL carrier labels over the network
+- :doc:`IoT <../../../../general/iot/devices/printer>`: to print ZPL or PDF reports
+  depending on the printer's capabilities
+
+.. note::
+    - For *ePOS* and *ZPL*, you need to set up the printer's IP address.
+
+    - For *IoT* printers, the records are automatically created when an IoT Box detects one.
+      Refer to the :doc:`Connect a printer <../../../../general/iot/connect>`
+      documentation for details on connecting an IoT Box to Odoo's *IoT* app.
+
 .. _inventory/shipping_receiving/delivery-slip:
 
 Delivery slip
@@ -169,42 +192,26 @@ details for specific third-party shipping carriers, complete the following setup
 
 #. Tick the :guilabel:`Carrier Labels` checkbox in the :ref:`operation type settings
    <inventory/shipping_receiving/print_setup>`.
-#. :doc:`Connect a printer <../../../../general/iot/devices/printer>` to Odoo's *IoT* app.
-#. :ref:`Assign the carrier label to the printer <inventory/shipping_receiving/assign-printer>`.
+#. :ref:`Configure a printer <inventory/shipping_receiving/configure-printers>`.
+#. Assign the carrier label to the printer.
 #. Configure the shipping method's :ref:`label type <inventory/shipping_receiving/label-type>`.
 
-.. _inventory/shipping_receiving/assign-printer:
+After :ref:`connecting a compatible printer to Odoo <inventory/shipping_receiving/configure-printers>`,
+go to :menuselection:`Inventory --> Configuration --> Manage Printers`, and select the desired printer.
 
-Assign printer
---------------
-
-Refer to the :doc:`Connect a printer <../../../../general/iot/devices/printer>` documentation for
-details on connecting a printer to Odoo's *IoT* app. Upon completion, assign the carrier label to
-the printer, by navigating to :menuselection:`IoT app --> Devices`, and selecting the desired
-printer.
-
-.. image:: print_on_validation/select-printer.png
-   :align: center
-   :alt: Show a list of IoT devices.
-
-In the printer configuration form, go to the :guilabel:`Printer Reports` tab to configure the types
-of documents the printer automatically prints. Click :guilabel:`Add a line` to open the
-:guilabel:`Add: Reports` pop-up window. In the :guilabel:`Search...` bar, type `Shipping`, and
-select :guilabel:`Shipping Labels`.
+In the printer configuration form, select the :guilabel:`Shipping Labels` report
+in the :guilabel:`Linked Reports` field.
 
 .. note::
    The :guilabel:`Shipping Documents` report is for :ref:`export documents
    <inventory/shipping_receiving/export-doc>`.
 
-.. image:: print_on_validation/printer-report.png
-   :align: center
-   :alt: Show carrier label report added to the *Printer Reports*.
+.. note::
+    For **IoT printers** only: ensure the :guilabel:`Report Type` matches the
+    printer's type.
 
-After adding the :guilabel:`Shipping Labels` report in the :guilabel:`Printer Reports` tab, ensure
-the :guilabel:`Report Type` matches the IoT-connected printer's type.
-
-- For laser printers, set the :guilabel:`Report Type` to :guilabel:`PDF`.
-- For Zebra printers, set the :guilabel:`Report Type` to :guilabel:`Text`.
+    - For laser printers, set the :guilabel:`Report Type` to :guilabel:`PDF`.
+    - For Zebra printers, set the :guilabel:`Report Type` to :guilabel:`Text`.
 
 .. _inventory/shipping_receiving/label-type:
 
@@ -216,11 +223,11 @@ Next, complete the setup for the :doc:`third-party shipping connector
 Configuration --> Shipping Methods`, and select the desired shipping method.
 
 On the shipping method configuration form, in the :guilabel:`[carrier name] Configuration` tab,
-ensure the :guilabel:`Label Format` matches the :ref:`report type assigned earlier
-<inventory/shipping_receiving/assign-printer>`:
+ensure the :guilabel:`Label Format` matches the report type assigned earlier:
 
+- For ePOS printers, set the :guilabel:`Label Format` to :guilabel:`PNG`.
+- For Zebra (ZPL) printers, set the :guilabel:`Label Format` to :guilabel:`ZPL2`.
 - For laser printers, set the :guilabel:`Label Format` to :guilabel:`PDF`.
-- For Zebra printers, set the :guilabel:`Label Format` to :guilabel:`ZPL2`.
 
 .. image:: print_on_validation/label-type.png
    :align: center
@@ -254,19 +261,15 @@ automatically printed in Odoo by following these steps:
 
 #. Tick the :guilabel:`Export Documents` checkbox in the :ref:`operation type settings
    <inventory/shipping_receiving/print_setup>`.
-#. :doc:`Connect a printer <../../../../general/iot/devices/printer>` to Odoo's *IoT* app.
+#. :ref:`Configure a printer <inventory/shipping_receiving/configure-printers>`.
 #. Assign the export document to the printer.
 
-Assign printer
---------------
+Similar to the printer assignment instructions for carrier labels,
+after :ref:`connecting a compatible printer to Odoo <inventory/shipping_receiving/configure-printers>`,
+go to :menuselection:`Inventory --> Configuration --> Manage Printers`, and select the desired printer.
 
-Similar to the :ref:`printer assignment instructions for carrier labels
-<inventory/shipping_receiving/assign-printer>`, after connecting a compatible printer to the Odoo
-*IoT* app, go to :menuselection:`IoT app --> Devices`, and select the desired printer.
-
-In the printer configuration form, go to the :guilabel:`Printer Reports` tab, and click
-:guilabel:`Add a line`. In the :guilabel:`Add: Reports` pop-up window that appears, add the
-:guilabel:`Shipping Documents` report to assign the export document to the printer.
+In the printer configuration form, select the :guilabel:`Shipping Documents` report
+in the :guilabel:`Linked Reports` field.
 
 .. spoiler:: Example export document
 
