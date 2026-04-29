@@ -65,6 +65,8 @@ be added (or removed) from the :guilabel:`Purchase` tab.
    the top-left corner. In the :guilabel:`Vendor` section of the pricelist form that appears, add
    the product information as it pertains to the vendor.
 
+.. _purchase/rfq/order-products:
+
 Order products
 ==============
 
