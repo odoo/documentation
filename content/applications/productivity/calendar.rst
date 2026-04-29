@@ -7,7 +7,7 @@ Calendar
 Odoo **Calendar** is a scheduling app that allows users to integrate a company's business flow into
 a single management platform. By integrating with the other apps in Odoo's ecosystem, **Calendar**
 allows users to schedule and organize meetings, schedule events, plan employee appraisals,
-coordinate projects, and more – all from the same platform.
+coordinate projects, and more.
 
 Upon opening the :menuselection:`Calendar app`, users have an overview of their current meetings.
 The selected view option appears as a :guilabel:`Day`, :guilabel:`Week`, :guilabel:`Month`, or
@@ -25,13 +25,13 @@ disable :guilabel:`Show weekends`.
 Sync third-party calendars
 --------------------------
 
-Users can sync Odoo with existing :doc:`Outlook <calendar/outlook>` and/or
-:doc:`Google <calendar/google>` calendars, by heading to
-:menuselection:`Calendar app --> Configuration --> Settings`. From here, enter
-:guilabel:`Client ID` and :guilabel:`Client Secret`. There is also an option to pause
-synchronization by ticking the checkbox, or automating synchronization by keeping it blank.
+Users can sync Odoo with existing :doc:`Outlook <calendar/outlook>` and/or :doc:`Google
+<calendar/google>` calendars, by heading to :menuselection:`Calendar app --> Configuration -->
+Settings`. From here, enter :guilabel:`Client ID` and :guilabel:`Client Secret`. There is also an
+option to pause synchronization by ticking the checkbox, or automating synchronization by keeping it
+blank.
 
-Once the desired configurations are complete, be sure to click :guilabel:`Save` before moving on.
+Once the desired configurations are complete, click :guilabel:`Save` before moving on.
 
 Events created in synced calendars automatically appear across the integrated platforms.
 
@@ -42,18 +42,16 @@ Events created in synced calendars automatically appear across the integrated pl
 Create activities from chatter
 ------------------------------
 
-Instantly create new meetings anywhere in Odoo through an individual record's chatter, like
-in a **CRM** opportunity card or task in the **Projects** app.
+Instantly create new meetings anywhere in Odoo through an individual record's chatter, like in a
+**CRM** opportunity card or task in the **Project** app.
 
-From the chatter, click on the :guilabel:`Activities` button. In the :guilabel:`Schedule Activity`
+From the chatter, click on the :guilabel:`Activity` button. In the :guilabel:`Schedule Activity`
 pop-up window, select the desired :guilabel:`Activity Type`, which populates a set of buttons,
 depending on the activity.
 
 Activities that involve other schedules, like :guilabel:`Meeting` or :guilabel:`Call for Demo`, link
 to the **Calendar** app. Select one of these activities to link to the **Calendar** app, then hit
-:guilabel:`Open Calendar` to navigate back to the app. Alternatively, it is also possible to
-:guilabel:`Schedule & Mark as Done` to close out the activity, or select :guilabel:`Done & Schedule
-Next` to keep the :guilabel:`Schedule Activity` window open to create another.
+:guilabel:`Schedule` to navigate back to the app.
 
 .. seealso::
    :doc:`Schedule activities in Odoo <../essentials/activities>`
@@ -67,9 +65,9 @@ date. On the :guilabel:`New Event` pop-up window that appears, start by adding t
 .. image:: calendar/calendar-schedule-event.png
    :alt: Schedule an event window on Calendar app.
 
-The target date auto-populates in the :guilabel:`Start` field. This can be changed by clicking
-into the date section, and selecting a date from the calendar. For multi-day events, select the end
-date in the second field, then click :guilabel:`Apply`.
+The target date auto-populates in the :guilabel:`Start` field. This can be changed by clicking into
+the date section, and selecting a date from the calendar. For multi-day events, select the end date
+in the second field, then click :guilabel:`Apply`.
 
 Tick the :guilabel:`All Day` checkbox if there is no specific start or end time.
 
@@ -80,9 +78,8 @@ the :guilabel:`Start` field.
 The signed-in user auto-populates as the first attendee. Additional :guilabel:`Attendees` can be
 added or created from here, as well.
 
-For virtual meetings, copy and paste the URL into the space provided in the
-:guilabel:`Videocall URL` field. Or, click :icon:`fa-plus` :guilabel:`Odoo meeting` to create a
-link.
+For virtual meetings, copy and paste the URL into the space provided in the :guilabel:`Videocall
+URL` field. Or, click :icon:`fa-plus` :guilabel:`Video` to create a link.
 
 Next, either create the event by clicking :guilabel:`Save & Close`, or select :guilabel:`More
 Options` to further configure the event.
@@ -102,10 +99,16 @@ configurations for the event:
 
 - :guilabel:`Duration`: Define the length of the meeting in :guilabel:`hours`, or toggle the
   :guilabel:`All Day` switch.
-- :guilabel:`Recurrent`: Tick the checkbox to create a recurring meeting. Once selected, this
-  opens new fields:
+- :guilabel:`Organizer`: This is defaulted to the current Odoo user. Select a new one from existing
+  users, or create and edit a new user.
+- :guilabel:`Tags`: Add tags to the event, like `Customer Meeting` or `Internal Meeting`. These can
+  be searched and filtered in the **Calendar** app when organizing multiple events.
+- :guilabel:`Calendar description`: Add additional information or details about the meeting.
+- :guilabel:`Reminders`: Select notification options to send to attendees. Choose a default
+  notification, or configure new reminders.
+- :guilabel:`Recurrent`: Tick the checkbox to create a recurring meeting. Once selected, this opens
+  new fields:
 
-  - :guilabel:`Timezone`: Select the timezone for which this meeting time is specified.
   - :guilabel:`Repeat`: Select the recurring period of this meeting. Depending on what type of
     recurrence has been selected, a subsequent field appears, in which users can indicate when the
     meeting should recur. For example, if :guilabel:`Monthly` is selected as the :guilabel:`Repeat`
@@ -114,17 +117,7 @@ configurations for the event:
   - :guilabel:`Until`: Select the limited :guilabel:`Number of repetitions` this meeting should
     recur, the :guilabel:`End date` of when the recurrences should stop, or if the meetings should
     recur :guilabel:`Forever`.
-- :guilabel:`Tags`: Add tags to the event, like `Customer Meeting` or `Internal Meeting`. These can
-  be searched and filtered in the **Calendar** app when organizing multiple events.
-- :guilabel:`Appointment`: Link existing or new appointments. These can be configured through the
-  :ref:`Share Availabilities <calendar/share-availabilities>` button from the main **Calendar**
-  dashboard.
-- :guilabel:`Privacy`: Toggle between visibility options to control who can view the event.
-- :guilabel:`Organizer`: This is defaulted to the current Odoo user. Select a new one from
-  existing users, or create and edit a new user.
-- :guilabel:`Description`: Add additional information or details about the meeting.
-- :guilabel:`Reminders`: Select notification options to send to attendees. Choose a default
-  notification, or configure new reminders.
+  - :guilabel:`Timezone`: Select the timezone for which this meeting time is specified.
 
 Coordinate with teams' availability
 -----------------------------------
@@ -141,62 +134,52 @@ to listed users to show (or hide) individual calendars.
 Share Availabilities
 --------------------
 
-On the **Calendar** app main dashboard, click the :guilabel:`Share Availabilities` button at the top
-of the page. Next, click and drag to select the available times and dates on the calendar to add
-them as options in the invitation.
+On the **Calendar** app main dashboard, click the :guilabel:`Share` button at the top of the page,
+then select :guilabel:`Specific Slots` from the drop-down. Next, click and drag to select the
+available times and dates on the calendar to add them as options in the invitation.
+
+.. image:: calendar/share-availabilities.png
+   :alt: Selecting availabilites on the Calendar dashboard.
 
 .. tip::
    To remove a selected time range, hover over the availability to click the :icon:`fa-trash`
    :guilabel:`(trash)` icon.
 
-.. note::
-   Within the :guilabel:`Share Availabilities` feature, selecting times is only possible on the
-   *Day* calendar views.
-
-Once availability has been selected, click the :icon:`fa-external-link` :guilabel:`Open` button to
+Once availability has been selected, click :icon:`fa-clipboard` :guilabel:`Copy Link` to copy a
+sharable link to the clipboard. Or, click :icon:`fa-cog` :guilabel:`Configure` icon button to
 navigate to the associated appointment.
 
 .. image:: calendar/calendar-meeting-share-availability.png
    :alt: Share availability window on Calendar app.
 
-Several configuration options are available on the appointment form:
+On the **Share Availabilities** form, enter an :guilabel:`Appointment Title`. Confirm the correct
+user is selected in the :guilabel:`Users` field. To add a meeting room to the appointment, click the
+:guilabel:`Location` field.
 
-In the :guilabel:`Scheduling` field, set a minimum hour window to ensure appointments are confirmed
-a specified amount of time in advance. For example, set `01:00` to require attendees to confirm at
-least one hour before their appointment time.
+.. note::
+   If nothing is selected in the :guilabel:`Location` field, the appointment defaults to an *Online
+   Meeting*.
 
-In the :guilabel:`Allow Cancelling` field, set a maximum hour window before the appointment that
-attendees are able to cancel.
+In the :guilabel:`Video Link` field, select the type of video call link that will be used for the
+generated appointments. If this field is left blank, no meeting URLs will be created.
 
-The :guilabel:`Availability on` field enables attendees to book :guilabel:`Users` or
-:guilabel:`Resources`, such as meeting rooms or tables. After selecting :guilabel:`Users` or
-:guilabel:`Resources`, type in the desired user or resource in the space below.
+To allow attendees to invite others to the event, tick the :guilabel:`Allow invitations` checkbox.
 
-The :guilabel:`Front-End Display` field is used to choose :guilabel:`No Picture` or
-:guilabel:`Show Pictures` related to the selected user or resource on the appointment page.
+Add a message in the :guilabel:`Introduction Message` field. This is used as a description for the
+event. Add a message to the :guilabel:`Extra Message on Confirmation` field to be displayed after
+the appointment is booked.
 
-If :guilabel:`Resources` has been selected in the :guilabel:`Availability on` field, users have an
-option to :guilabel:`Manage Capacities`.
+Click :icon:`fa-clipboard` :guilabel:`Save & Copy Link`. To futher customize the appointment, click
+the :icon:`fa-expand` :guilabel:`(expand)` icon at the top of the pop-up window.
 
-Tick the checkbox to limit the maximum amount of people that can use the resource at the same time.
-
-The :guilabel:`Assignment Method` field enables the order in which attendees book their time and
-user/resource:
-
-- :guilabel:`Pick User/Resource then Time`
-- :guilabel:`Select Time then User/Resource`
-
-If :guilabel:`Resources` has been selected in the :guilabel:`Availability On` field, a third option
-is available, :guilabel:`Select Time then auto-assign`.
+Click the :guilabel:`Preview` button to see how the appointment link looks for attendees.
 
 Optionally, configure the following tabs:
 
 - :ref:`calendar/appointment-schedule`
-- :ref:`calendar/appointment-options`
 - :ref:`calendar/appointment-questions`
 - :ref:`calendar/appointment-messages`
-
-Click the :guilabel:`Preview` button to see how the appointment link looks for attendees.
+- :ref:`calendar/appointment-options`
 
 Once the configurations are finished, click the :guilabel:`Share` button to generate a link to send
 directly, or click :guilabel:`Publish` to publish the appointment selection on the connected Odoo
@@ -204,55 +187,16 @@ website.
 
 .. _calendar/appointment-schedule:
 
-Schedule tab
-~~~~~~~~~~~~
+Availabilites tab
+~~~~~~~~~~~~~~~~~
 
-In the :guilabel:`Schedule` tab of the appointment form, time slots can be managed. The target date
-and time populate as the first time slots.
+In the :guilabel:`Availabilites` tab of the appointment form, time slots can be managed. The target
+date and time populate as the first time slots.
 
-To add a new time slot, hit :guilabel:`Add a line`. Click into the new blank space under the
+To add a new time slot, click :guilabel:`Add a line`. Click into the new blank space under the
 :guilabel:`From` field, then select and enter the new target start date and time, respectively.
 Repeat under the new blank space under :guilabel:`To` to select and enter the new target end date
 and time.
-
-.. _calendar/appointment-options:
-
-Options tab
-~~~~~~~~~~~
-
-The :guilabel:`Options` tab provides additional configurations:
-
-- :guilabel:`Website`: Specify which website this meeting invitation will be published on.
-- :guilabel:`Timezone`: This defaults to the company's timezone selected in the **Settings** app.
-  To change the timezone, select the desired option from the drop-down menu.
-- :guilabel:`Location`: Select or create new locations from the drop-down menu. If this field is
-  left empty, the meeting is considered to be taking place online.
-- :guilabel:`Videoconference Link`: Select from :guilabel:`Odoo Discuss` or :guilabel:`Google Meet`
-  to include a video conference link in the meeting invitation, or leave it blank to prevent
-  generating a meeting URL.
-- :guilabel:`Manual Confirmation`: Only shown if :guilabel:`Resources` has been selected in the
-  :guilabel:`Availability On` field. Tick the checkbox and enter a maximum percentage of the
-  selected resource(s)' total capacity to create a manual confirmation requirement to finalize the
-  meeting.
-- :guilabel:`Up-front Payment`: Tick the checkbox to require users to pay before confirming their
-  booking. Once this is ticked, a link appears to :icon:`oi-arrow-right` :guilabel:`Configure
-  Payment Providers`, which enables online payments.
-- :guilabel:`Limit to Work Hours`: If :guilabel:`Users` has been selected in the
-  :guilabel:`Availability On` field, tick the checkbox to limit meeting time slots to the selected
-  :doc:`users' working hours <../hr/employees/new_employee>`.
-- :guilabel:`Create Opportunities`: When this is selected, each scheduled appointment creates
-  a new **CRM** opportunity.
-- :guilabel:`Reminders`: Add or delete notification reminders in this field. Select the blank space
-  for additional options.
-- :guilabel:`Confirmation Email`: Tick the checkbox to automatically send a confirmation email to
-  attendees once the meeting is confirmed. Select from the email templates or click
-  :guilabel:`Search More...`, then :guilabel:`New` to create a custom template.
-- :guilabel:`Cancelation Email`: Tick the checkbox to automatically send a cancelation email to
-  attendees if the meeting is canceled. Select from the email templates or click
-  :guilabel:`Search More...`, then :guilabel:`New` to create a custom template.
-- :guilabel:`CC to`: Add contacts to be notified of meeting updates in this field, regardless if
-  they attend the meeting.
-- :guilabel:`Allow Guests`: Tick the checkbox to allow attendees to invite guests.
 
 .. _calendar/appointment-questions:
 
@@ -262,22 +206,56 @@ Questions tab
 In the :guilabel:`Questions` tab, add questions for the attendee to answer when confirming their
 meeting. Click :guilabel:`Add a line` to configure a :guilabel:`Question`. Then select a
 :guilabel:`Question Type`, optionally add a :guilabel:`Placeholder` answer, and choose whether it is
-a :guilabel:`Required Answer`.
+meeting. Click :guilabel:`Add a line` to configure a :guilabel:`Question`. Then select an
+:guilabel:`Answer Type`, optionally add a placeholder :guilabel:`Answer`, and choose whether it is
+:guilabel:`Mandatory`.
 
-To learn how to create more comprehensive questionnaires, head to the **Survey** app
-documentation on :doc:`creating and configuring data-capturing questions
-<../marketing/surveys/questions>`.
+To learn how to create more comprehensive questionnaires, head to the **Survey** app documentation
+on :doc:`creating and configuring data-capturing questions <../marketing/surveys/questions>`.
 
 .. _calendar/appointment-messages:
 
-Messages tab
-~~~~~~~~~~~~
+Communication tab
+~~~~~~~~~~~~~~~~~
 
-In the :guilabel:`Introduction Message` field of the :guilabel:`Messages` tab, add additional
-meeting information that appears on the invitation.
+In the :guilabel:`Introduction Page` field of the :guilabel:`Communication` tab, add additional
+meeting information to appear on the invitation.
 
-Information added to the :guilabel:`Extra Message on Confirmation` field appears once the meeting is
-confirmed.
+Information added to the :guilabel:`Confirmation Page` field appears once the meeting is confirmed.
+
+Under the *Emails & SMS* heading, click the :guilabel:`Reminders` field to add one or more methods
+of reminding attendees about the appointment. Under the :guilabel:`Booking Email` field, and
+:guilabel:`Cancellation Email` field, select an email template to be sent to attendees when booking
+or cancelling meetings.
+
+.. _calendar/appointment-options:
+
+Options tab
+~~~~~~~~~~~
+
+The :guilabel:`Options` tab provides additional configurations:
+
+- :guilabel:`Allow invitations`: Tick the checkbox to allow attendees to invite guests.
+- :guilabel:`Auto Confirm`: Only shown if :guilabel:`Resources` has been selected in the
+  :guilabel:`Availability On` field. Tick the checkbox and enter a maximum percentage of the
+  selected resource(s)' total capacity to create a manual confirmation requirement to finalize the
+  meeting.
+- :guilabel:`Display pictures`: Tick the checkbox to display user or resource images across the
+  entire booking flow.
+- :guilabel:`Create Opportunity`: When this is selected, each scheduled appointment creates a new
+  **CRM** opportunity.
+- :guilabel:`Up-front Payment`: Tick the checkbox to require users to pay before confirming their
+  booking. Once this is ticked, a link appears to :icon:`oi-arrow-right` :guilabel:`Configure
+  Payment Providers`, which enables online payments.
+- :guilabel:`Website`: Specify which website this meeting invitation will be published on.
+- :guilabel:`Schedule`: Select :guilabel:`Weekly` or :guilabel:`Flexible` scheduling.
+- :guilabel:`Allow Bookings`: set a minimum hour window to ensure appointments are confirmed a
+  specified amount of time in advance. For example, set `01:00` to require attendees to confirm at
+  least one hour before their appointment time.
+- :guilabel:`Cancellation`: set a maximum hour window before the appointment that attendees are able
+  to cancel.
+- :guilabel:`Timezone`: This defaults to the company's timezone selected in the **Settings** app. To
+  change the timezone, select the desired option from the drop-down menu.
 
 .. toctree::
    :titlesonly:
