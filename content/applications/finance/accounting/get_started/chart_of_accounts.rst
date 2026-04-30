@@ -22,31 +22,33 @@ Configuration of an account
 
 The country you select during the creation of your database (or additional company in your database)
 determines which :doc:`fiscal localization package <../../fiscal_localizations>` is installed by
-default. This package includes a standard chart of accounts already configured according to the
-country's regulations. You can use it directly or set it according to your company's needs.
+default. This package adds a standard chart of accounts already configured according to the
+country's regulations, including expense accounts that may be :ref:`linked to default asset models
+<chart-of-account/assets>`. You can use the chart of accounts directly or modify it according to
+your company's needs.
 
 To create a new account, go to :menuselection:`Accounting --> Configuration --> Chart of Accounts`,
-click :guilabel:`Create`, and fill in (at the minimum) the required fields
-(:guilabel:`Code, Account Name, Type`).
+click :guilabel:`Create`, and fill in (at the minimum) the required fields (:guilabel:`Code, Account
+Name, Type`).
 
 .. warning::
    It is not possible to modify the **fiscal localization** of a company once a journal entry has
    been posted.
 
-Code and name
--------------
+Code and account name
+---------------------
 
-Each account is identified by its :guilabel:`Code` and :guilabel:`Name`, which also indicate the
-account's purpose.
+Each account is identified by its :guilabel:`Code` and :guilabel:`Account Name`, which also indicate
+the account's purpose.
 
 .. _chart-of-account/type:
 
 Type
 ----
 
-Correctly configuring the **account type** is critical as it serves multiple purposes:
+Correctly configuring the account's :guilabel:`Type` is critical as it serves multiple purposes:
 
-- Information on the account's purpose and behavior
+- Provide information on the account's purpose and behavior
 - Generate country-specific legal and financial reports
 - Set the rules to close a fiscal year
 - Generate opening entries
@@ -94,14 +96,16 @@ corresponding type from the following list:
 | Other         | Other       | Off-Balance Sheet       | Transactions not displayed on the balance sheet or profit and loss report                                       |
 +---------------+-------------+-------------------------+-----------------------------------------------------------------------------------------------------------------+
 
+.. _chart-of-account/assets:
+
 Assets
 ~~~~~~
 
-Some **account types** can **automate** the creation of :ref:`asset <assets-automation>` entries.
-To **automate** entries, click :guilabel:`View` on an account line and go to the
-:guilabel:`Automation` tab.
+Account types of :guilabel:`Fixed Assets` and :guilabel:`Non-current Assets` can **automate** the
+creation of :ref:`asset <assets-automation>` entries. To **automate** entries, click
+:guilabel:`View` on an account line and go to the :guilabel:`Automation` tab.
 
-You have three choices for the :guilabel:`Automation` tab:
+There are three options for the :guilabel:`Automation` tab:
 
 #. :guilabel:`No`: this is the default value. Nothing happens.
 #. :guilabel:`Create in draft`: whenever a transaction is posted on the account, a draft entry is
@@ -112,8 +116,8 @@ You have three choices for the :guilabel:`Automation` tab:
 Default taxes
 -------------
 
-In the :guilabel:`View` menu of an account, select a **default tax** to be applied when this
-account is chosen for a product sale or purchase.
+In the :guilabel:`View` menu of an account, select the :guilabel:`Default Taxes` to be applied when
+this account is chosen for a product sale or purchase.
 
 .. _chart-of-account/tags:
 
@@ -148,9 +152,9 @@ that you must enter the same code prefix in both :guilabel:`From` and :guilabel:
 .. image:: chart_of_accounts/account-groups.png
    :alt: Account groups creation.
 
-To display your **Trial Balance** report with your account groups, go to
-:menuselection:`Accounting --> Reporting --> Trial Balance`, then open the :guilabel:`Options` menu
-and select :guilabel:`Hierarchy and Subtotals`.
+To display your **Trial Balance** report with your account groups, go to :menuselection:`Accounting
+--> Reporting --> Trial Balance`, then open the :guilabel:`Options` menu and select
+:guilabel:`Hierarchy and Subtotals`.
 
 .. image:: chart_of_accounts/chart-of-accounts-groups.png
    :alt: Account Groups in the Trial Balance in Odoo Accounting
@@ -167,7 +171,7 @@ account's settings, and :guilabel:`Save`; or enable the button from the chart of
 
 .. _coa_shared_accounts:
 
-Shared Accounts
+Shared accounts
 ---------------
 
 The **Shared Accounts** feature allows the creation of a single account for a specific purpose and
