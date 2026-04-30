@@ -78,6 +78,10 @@ When a new project is generated from this template:
    the allocated time, while also considering task dependencies and assignee’s availability, working
    schedule, time off, and public holidays.
 
+.. seealso::
+   `Magic Sheet - Schedule tasks based on template [PDF]
+   <https://drive.google.com/drive/folders/1i6u_Qi7zHr1_btDuPhiK_LgLoAFKioIw>`_
+
 Using templates
 ===============
 
