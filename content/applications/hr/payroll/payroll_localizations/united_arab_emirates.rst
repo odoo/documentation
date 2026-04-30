@@ -78,8 +78,8 @@ found under the :guilabel:`Salary Information` tab:
   .. note::
      The :guilabel:`Number of Leave Days` affects the calculation for unpaid leave provisions.
 
-- :guilabel:`Is DEWS Applied`: DIFC Employee Workplace Savings (DEWS), if the employee is a
-  |UAE| national and has |DEWS| applied, tick this checkbox.
+- :guilabel:`Is DEWS Applied`: DIFC Employee Workplace Savings (DEWS), if the employee is a |UAE|
+  national and has |DEWS| applied, tick this checkbox.
 - :guilabel:`Computed Based On Daily Salary`: Defines the way that the end of service is calculated:
 
   - Do not tick this checkbox if the standard calculation is to be used. This computes the
@@ -263,7 +263,7 @@ It is calculated based on the number of years that employees have spent in the c
 Unpaid leaves
 -------------
 
-Unpaid leaves allows for calculating the amount to be deducted when an employee takes an unpaid
+Unpaid leaves allow for calculating the amount to be deducted when an employee takes an unpaid
 leave. It is calculated by the following equation:
 
 .. math::
@@ -310,6 +310,27 @@ It is calculated by adding basic to all allowances and deducting all deductions 
    that are set on the contract and then deduct the amounts that should be deducted such as unpaid
    leaves, sick leaves, manual deductions, commission, etc.
 
+Employee net cost
+-----------------
+
+The employee net cost allows payroll officers to track the total employee cost beyond the employee's
+net salary. The employee's net cost is computed automatically upon each generated payslip and
+includes both direct and indirect costs.
+
+Direct costs represent the total amount payable to the employee, while indirect costs include
+additional employer expenses, such as DEWS and social insurance. Although these amounts are
+calculated and available in the system for internal reporting and analysis, they do not appear on
+the payslip PDF generated for the employee.
+
+.. example::
+   If an employee has a net payable salary of 20,000 AED, and the following indirect costs:
+
+   - Medical insurance of 3,000 AED a year (250 AED a month).
+   - Social Insurance Company Contribution of 3,000 AED.
+   - Social Insurance Employee Contribution 2,200 AED.
+
+   The employee's Net Cost is: 20,000 + 250 + 3,000 + 2,200 = 23,250 AED
+
 Generating accounting entries from payslips
 ===========================================
 
@@ -347,9 +368,9 @@ is done from a single/multiple payment bank/cash journal.
 Payslip printouts
 =================
 
-Two printout formats can be extracted from the payslip, it depends on the type of the payslip either
-a *Monthly* payslip or an *End of Service* Payslip. It is triggered if the employee for the payslip
-is generated is archived during that month.
+Two printout formats can be extracted from the payslip depending on the *type* of payslip, either a
+*Monthly* payslip or an *End of Service* Payslip. It is triggered if the employee the payslip is
+generated for was archived during that month.
 
 Instant Pay structure
 =====================
@@ -374,7 +395,7 @@ payroll officer can issue a salary advance using the following steps:
 #. Confirm the payslip and process the payment.
 
 In the next cycle, when a payslip is generated for the employee using the `United Arab Emirates:
-Regular Pay` structure, another input type, `Advance Recovery` is automatically added for the same
+Regular Pay` structure, another input type, `Advance Recovery`, is automatically added for the same
 amount that was previously paid.
 
 .. tip::
@@ -392,8 +413,8 @@ employees the right amounts on the right dates. It can either be generated per p
 
 The following steps need to be followed before generating the report:
 
-#. Go to :menuselection:`Payroll --> Configuration --> Settings` and under the :guilabel:`UAE
-   Payroll WPS Settings` section, configure the following:
+#. Go to :menuselection:`Payroll --> Configuration --> Settings` and under the :guilabel:`Emirati
+   Localization` section, configure the following:
 
    - :guilabel:`Employer Unique ID`: Set a unique identifier for the company to be used in the |WPS|
      report.
@@ -405,14 +426,15 @@ The following steps need to be followed before generating the report:
 
         - :guilabel:`Account Holder`: set as the company.
         - :guilabel:`Account Number`: has to be a valid IBAN.
-        - :guilabel:`Bank`: has to have the :guilabel:`UAE Routing Code Agent ID` set.
+        - :guilabel:`Bank`: has to have the :guilabel:`Routing Code Agent` set and consist of a
+          9-digit numeric value only.
         - :guilabel:`Send Money`: should be enabled and set to :guilabel:`Trusted`.
 
 #. Set the unique identifier on all of the employees who are a part of the target of the
    batch/payslip.
 
    The :guilabel:`Identification No` field can be found on the employee's page under the
-   :guilabel:`Private Information` tab.
+   :guilabel:`Personal` tab.
 
 Once the initial setup is done, the |WPS| can be generated either for one payslip or for a batch as
 follows:
@@ -422,9 +444,7 @@ follows:
 #. Create the payment report and set the :guilabel:`Export Format` to :guilabel:`UAE WPS`.
 
 .. note::
-   The report comes in a :file:`.sif` format as per the governmental requirements, so either use
-   software that can open :file:`.sif` files or convert it to another format (:file:`.xslx`) to be
-   able to review it.
+   The Report can either be exported in a .sif format or a .xslx, as they both have the same format.
 
 The resulting file consists of the following:
 
@@ -436,3 +456,8 @@ The resulting file consists of the following:
    --> Rules`).
 #. **Salary Control Record** (**SCR**): There should only be one :abbr:`SCR (Salary Control Record)`
    per |WPS| file as it indicates the employer details and the totals for the payslips.
+
+.. note::
+   The exported format is based on MoHRE guidelines and is aligned with the formats used by most WPS
+   agents in the United Arab Emirates, including Emirates NBD, Emirates Islamic Bank, First Abu
+   Dhabi Bank (FAB), and Dubai Islamic Bank (DIB), among others.
