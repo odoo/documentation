@@ -40,7 +40,7 @@ product <rental/manage_deposits/config>` to the :guilabel:`Optional Products`.
 
 Be sure to configure the rental product's prices on the :ref:`Rental prices <rental/pricing>` tab.
 
-With the above configuration, a :ref:`rental order <rental/order>` can be created.
+With the above configuration, a :doc:`rental order <create_rental_order>` can be created.
 
 .. important::
    After selecting the rental product in the :guilabel:`Order Lines` tab, be sure to :icon:`fa-plus`
