@@ -4,10 +4,10 @@
 Fiscal localizations
 ====================
 
-Fiscal localizations are country-specific modules that allow you to be compliant with a country's
-fiscal requirements. Most of these modules are related to the Accounting app, but they can also be
-necessary for other apps such as Point of Sale, eCommerce, etc., depending on a country's fiscal
-requirements.
+Fiscal localizations are country-specific modules that allows for compliance with a country's fiscal
+requirements. Most of these modules are related to the **Accounting** app, but they can also be
+necessary for other apps such as **Point of Sale**, **eCommerce**, etc., depending on a country's
+fiscal requirements.
 
 .. seealso::
    :doc:`../hr/payroll/payroll_localizations` are documented separately.
