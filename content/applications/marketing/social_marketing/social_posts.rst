@@ -40,8 +40,8 @@ search bar.
       overview of any planned day, week, or month, and Odoo displays all drafted, scheduled, and
       published posts.
 
-      Clicking on a date reveals a blank social media post detail form, in which a social media
-      post can be created, and Odoo will post it on that specific date/time.
+      Clicking on a date reveals a blank social media post detail form, in which a social media post
+      can be created, and Odoo will post it on that specific date/time.
 
       The calendar view is represented by a :guilabel:`calendar icon` in the upper-right corner.
 
@@ -76,8 +76,8 @@ search bar.
       The pivot view option provides numerous analytical options, allowing for in-depth, detailed
       analysis of various posts and metrics.
 
-      Click on any :guilabel:`➕ (plus sign) icon` next to a line in the pivot table to reveal more
-      metric options to add to the grid.
+      Click on any :icon:`fa-plus` :guilabel:`(plus sign)` next to a line in the pivot table to
+      reveal more metric options to add to the grid.
 
       While in the pivot view, the option to :guilabel:`Insert in Spreadsheet` is available, located
       to the right of the :guilabel:`Measures` drop-down menu, in the upper-left corner of the
@@ -100,7 +100,6 @@ Clicking on a post from a social media stream reveals a pop-up window, showcasin
 that specific post, along with all the engagement data related to it (e.g. likes, comments, etc.).
 
 .. image:: social_posts/social-post-popup.png
-   :align: center
    :alt: Sample of a social media post's pop-up window in Odoo Social Marketing application.
 
 If desired, the user can leave a new comment of the post from the post's pop-up window, by typing
@@ -120,14 +119,12 @@ click the :guilabel:`three vertical dots` icon to the right of that comment.
 Doing so reveals a drop-down menu with the option: :guilabel:`Create Lead`.
 
 .. image:: social_posts/create-lead-drop-down.png
-   :align: center
    :alt: The drop-down menu beside a comment revealing the option to create a lead.
 
-Upon clicking :guilabel:`Create Lead` from the comment's drop-down menu, a :guilabel:`Conver Post to
-Lead` pop-up window appears.
+Upon clicking :guilabel:`Create Lead` from the comment's drop-down menu, a :guilabel:`Convert Post
+to Lead` pop-up window appears.
 
 .. image:: social_posts/convert-post-to-lead-popup.png
-   :align: center
    :alt: The convert post to lead pop-up window that appears in Odoo Social Marketing.
 
 In this pop-up window, select to either: :guilabel:`Create a new customer`, :guilabel:`Link to an
@@ -142,7 +139,6 @@ Once the desired selection has been made, click the :guilabel:`Convert` button a
 necessary information can be entered and processed.
 
 .. image:: social_posts/new-lead-detail-form-comments.png
-   :align: center
    :alt: New lead detail form generated from a social media comment in Odoo Social Marketing.
 
 Insights
@@ -155,7 +151,6 @@ To get redirected to the statistics and metrics related to any social media acco
 the :guilabel:`Insights` link, located at the top of each stream.
 
 .. image:: social_posts/social-marketing-insights-link.png
-   :align: center
    :alt: Visual of how the Insights link appears on the dashboard of the Social Marketing app.
 
 .. note::
@@ -174,26 +169,23 @@ Create and post social media content
 Odoo *Social Marketing* offers the ability to create and post content for social media accounts
 directly through the application.
 
-To create content for social media accounts, navigated to the :menuselection:`Social Marketing app`,
+To create content for social media accounts, navigate to the :menuselection:`Social Marketing app`,
 and click :guilabel:`New Post` located in the upper-right corner of the *Social Marketing*
 dashboard.
 
 .. image:: social_posts/new-post-button-social-marketing-dashboard.png
-   :align: center
    :alt: New Post button on the main dashboard of the Odoo Social Marketing application.
 
 Or, navigate to :menuselection:`Social Marketing app --> Posts` and click the :guilabel:`New`
 button.
 
 .. image:: social_posts/new-button-social-posts-page.png
-   :align: center
    :alt: New button on the Social Posts page in the Odoo Social Marketing application.
 
 Either route reveals a blank social media post detail form that can be customized and configured in
 a number of different ways.
 
 .. image:: social_posts/blank-post-detail-page.png
-   :align: center
    :alt: Blank social media post detail page in Odoo Social Marketing.
 
 Post detail form
@@ -243,7 +235,6 @@ click away from the :guilabel:`Message` field to reveal visual samples of how th
 all the previously selected social media accounts (and/or websites, as push notifications).
 
 .. image:: social_posts/visual-samples-social-media-outlets-preview.png
-   :align: center
    :alt: Sample social media post with visual samples of how it will appear on social media outlets.
 
 .. tip::
@@ -267,7 +258,6 @@ After successfully uploading and attaching the desired image, Odoo reveals a new
 social media post, complete with the newly-added image, on the right side of the detail form.
 
 .. image:: social_posts/attach-images-visual-social-post-sample.png
-   :align: center
    :alt: Visualized samples of post with newly-attached images in Odoo Social Marketing.
 
 Campaign
@@ -282,20 +272,18 @@ from this drop-down menu to add this post to that campaign.
 
 To create a new campaign directly from the social media post detail form, start typing the name of
 the new campaign in the blank :guilabel:`Campaign` field, and select either :guilabel:`Create` or
-:guilabel:`Create and edit...`.
+:guilabel:`Create and edit`.
 
 .. image:: social_posts/campaign-drop-down-menu-options.png
-   :align: center
    :alt: Drop-down menu options of Create or Create and edit in the Campaign field.
 
 Clicking :guilabel:`Create` creates the campaign, which can be edited/customized later.
 
-Clicking :guilabel:`Create and edit...` creates the campaign, and reveals a :guilabel:`Create
-Campaign` pop-up form, wherein the :guilabel:`Campaign Identifier`, :guilabel:`Responsible`, and
+Clicking :guilabel:`Create and edit` creates the campaign, and reveals a :guilabel:`Create Campaign`
+pop-up form, wherein the :guilabel:`Campaign Identifier`, :guilabel:`Responsible`, and
 :guilabel:`Tags` can be instantly configured.
 
 .. image:: social_posts/create-campaign-popup.png
-   :align: center
    :alt: Create campaign pop-up window that appears on a social media post detail form.
 
 When all the desired settings have been entered, click :guilabel:`Save & Close` to save the campaign
@@ -312,11 +300,10 @@ If :guilabel:`Schedule later` is selected, a new :guilabel:`Scheduled Date` fiel
 the empty field reveals a pop-up calendar, in which a future date and time can be designated.
 
 .. image:: social_posts/schedule-post-calendar-popup.png
-   :align: center
    :alt: Schedule date pop-up window that appears on social media post detail form in Odoo.
 
 After selecting a desired date and time, click :guilabel:`Apply`. Then, Odoo will promptly publish
-the post at that specific date and time on the pre-detemined social media account(s).
+the post at that specific date and time on the pre-determined social media accounts.
 
 .. note::
    If scheduling a post, the :guilabel:`Post` button at the top of the social media post detail form
@@ -334,7 +321,6 @@ field, a specific :guilabel:`Push Notification Options` section appears at the b
 media post detail form.
 
 .. image:: social_posts/push-notification-options-section.png
-   :align: center
    :alt: Push notification options section on a social media post detail form.
 
 It should be noted that *none* of these fields are required.
@@ -342,16 +328,15 @@ It should be noted that *none* of these fields are required.
 The first field in this section is :guilabel:`Notification Title`. In this field, there is the
 option to add a custom title to the push notification that will be sent.
 
-To designate a specific page on the website that should trigger this push notification, enter that
-page's URL in the :guilabel:`Target URL` field. Then, once a visitor reaches that specific page,
-Odoo will display the push notification.
+The :guilabel:`Target URL` field is the redirect URL for the push notification. When a user clicks
+on a push notification, they will be redirected to the URL specified in this field.
 
 Below that field is the option to add a custom :guilabel:`Icon Image` to the push notification. This
 is an icon that appears beside the push notification.
 
-To upload a new image, click the :guilabel:`✏️ (pencil) icon` when hovering over the :guilabel:`Icon
-Image` camera icon. Doing so reveals a pop-up window, in which the desired icon image can be located
-on the hard drive, and subsequently uploaded.
+To upload a new image, click the :icon:`fa-pencil` :guilabel:`(pencil)`  icon when hovering over the
+:guilabel:`Icon Image` camera icon. Doing so reveals a pop-up window, in which the desired icon
+image can be located on the hard drive, and subsequently uploaded.
 
 Once that's complete, Odoo automatically updates the visual preview of how the icon appears on the
 push notification.
@@ -363,7 +348,6 @@ push notification.
    consideration.
 
    .. image:: social_posts/push-notification-local-time.png
-      :align: center
       :alt: The Local Time option in the Push Notification Options section of features.
 
 Then, there is the :guilabel:`Match all records` field. This field provides the ability to target a
@@ -373,20 +357,20 @@ specific group of recipients in the database, based on certain criteria, and can
 To utilize this field, click the :guilabel:`+ Add condition` button, which reveals an equation-like
 rule field.
 
-In this equation-like rule field, specifiy the specific criteria Odoo should take into account when
-sending this post to a particular target audience.
+In this equation-like rule field, define the criteria Odoo should take into account when sending
+this post to a particular target audience.
 
 .. image:: social_posts/push-notification-condition.png
-   :align: center
    :alt: Push notification conditions set up to match a specific amount of records in the database.
 
-To add an additional rule, click the :guilabel:`➕ (plus sign) icon` to the far-right of the rule.
+To add an additional rule, click the :icon:`fa-plus` :guilabel:`(plus sign)` to the far-right of the
+rule.
 
 To add a branch (series of additional rules based on the previous rule, to further specify a target
-audience), click the unique :guilabel:`branch icon`, located to the right of the :guilabel:`➕ (plus
-sign) icon`.
+audience), click the unique :guilabel:`branch icon`, located to the right of the :icon:`fa-plus`
+:guilabel:`(plus sign)`.
 
-Lastly, click the :guilabel:`🗑️ (trash can) icon` to delete any rule.
+Lastly, click the :icon:`fa-trash` :guilabel:`(trash can)` icon to delete any rule.
 
 The size of the specified target audience of recipients is represented by the number of
 :guilabel:`Records` displayed beneath the rules.
