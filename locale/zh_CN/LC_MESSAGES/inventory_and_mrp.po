@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-17 18:30+0000\n"
+"POT-Creation-Date: 2026-05-01 17:30+0000\n"
 "PO-Revision-Date: 2026-04-03 23:11+0000\n"
 "Last-Translator: \"Chloe Wang (chwa)\" <chwa@odoo.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
@@ -208,10 +208,7 @@ msgstr "带有指定计数的条形码仪表盘。"
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:13
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:21
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting.rst:52
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:24
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:38
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:30
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:23
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:18
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:41
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:40
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/byproducts.rst:21
@@ -5358,7 +5355,6 @@ msgid "Product management"
 msgstr "产品管理"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:9
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:35
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:51
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:53
 msgid "Configure product"
@@ -13499,7 +13495,7 @@ msgstr "确认采购订单表格上的智能收据按钮。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:80
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:111
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:171
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:114
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:249
 msgid "Process receipt"
 msgstr "处理收据"
@@ -18911,6 +18907,7 @@ msgstr ""
 "过 Odoo 自动打印 Bpost 追踪标签。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:17
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:10
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:10
 msgid ":doc:`third_party_shipper`"
 msgstr ":doc:`third_party_shipper` "
@@ -19223,202 +19220,131 @@ msgstr "DHL 整合"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:5
 msgid ""
-"DHL is one of the shipping carriers for which a *shipping connector* is "
-"available in Odoo's **Inventory** app. By enabling the shipping connector in "
-"the app's settings, and configuring at least one *shipping method*, the "
+"Set up the DHL shipping connector in Odoo to manage DHL shipments to clients "
+"directly within Odoo. Configuring a DHL shipping method simplifies the "
 "process of :doc:`calculating shipping rates <../setup_configuration>` "
-"and :doc:`generating shipping labels <labels>` is greatly simplified."
+"and :doc:`generating shipping labels <labels>`."
 msgstr ""
-"DHL 是 Odoo 的 **库存** 应用程序中提供*运输连接器*的运输承运商之一。通过在应"
-"用程序的设置中启用运输连接器，并配置至少一种 *运输方法*，:doc:`计算运费 <../"
-"setup_configuration>` 和 :doc:`生成运输标签<labels>`的过程大大简化。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:11
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:13
+msgid "Configure the DHL shipping method"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:15
 msgid ""
-"While a variety of shipping connectors are available for different carriers, "
-"this documentation details the configuration settings specific to "
-"integrating DHL. For instructions on configuring the integration settings "
-"common to all shippers, see the documentation on :doc:`third-party shippers "
-"<third_party_shipper>`."
+"To enable DHL delivery methods, :ref:`install <general/install>` the **DHL "
+"Express Shipping** module. DHL delivery methods can be configured and added "
+"as a line item to sales orders, which allows for automatic computation of "
+"shipping rates and generation of shipping labels."
 msgstr ""
-"虽然系统为不同物流商提供了多种运输连接器，此说明文档专门详述 DHL 的整合配置设"
-"置。如需配置所有物流商通用集成设置的指引，请参阅：:doc:`第三方物流商"
-"<third_party_shipper>`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:17
-msgid "Enable DHL shipping connector"
-msgstr "启用 DHL 运输连接器"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:19
 msgid ""
-"Before creating a DHL shipping method, enable the carrier's shipping "
-"connector. To do so, navigate to :menuselection:`Inventory app --> "
-"Configuration --> Settings`."
+"To create a DHL shipping method, navigate to :menuselection:`Inventory app --"
+"> Configuration --> Delivery Methods`, then click :guilabel:`New` to open a "
+"delivery method form. If a shipping method has already been created, it can "
+"be selected from this screen."
 msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:22
-msgid ""
-"Scroll down to the :guilabel:`Shipping Connectors` section, and tick the "
-"checkbox next to :guilabel:`DHL Express Connector`. Finally, "
-"click :guilabel:`Save` to apply the changes."
-msgstr ""
-"向下滚动至 :guilabel:`运输连接器` 部分，勾选 :guilabel:`DHL 快递连接器` 旁的"
-"复选框，最后点击 :guilabel:`保存` 应用更改。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:25
-msgid ""
-"Then, click the :icon:`fa-arrow-right` :guilabel:`DHL Shipping Methods` link "
-"to open a page showing all shipping methods with the *Provider* set to DHL."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:29
-msgid "Configure DHL shipping method"
-msgstr "配置 DHL 运输方式"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:31
-msgid ""
-"After enabling the shipping connector for DHL, shipping methods can be "
-"configured for the carrier. Once configured, a shipping method can be added "
-"as a line item to sales orders (SOs), which allows for automatic computation "
-"of shipping rates, and generation of shipping labels."
-msgstr ""
-"启用 DHL 运输连接器后，即可为该物流商配置运输方式。配置完成后，可将运输方式作"
-"为行项添加至销售订单（SO），实现运费自动计算和运单自动生成功能。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:35
-msgid ""
-"To create a new DHL shipping method, navigate to :menuselection:`Inventory "
-"app --> Configuration --> Settings`. In the :guilabel:`Shipping Connectors` "
-"section, select the :guilabel:`DHL Shipping Methods` link below "
-"the :guilabel:`DHL Express Connector` checkbox."
-msgstr ""
-"要创建新的 DHL 运输方式，请导航至 :menuselection:`库存应用 --> 配置 --> 设置"
-"`。在 :guilabel:`运输连接器` 部分，选择 :guilabel:`DHL 运输连接器` 复选框下方"
-"的 :guilabel:`DHL 运输方式` 链接。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:40
-msgid ""
-"It is also possible to see existing shipping methods for every carrier, by "
-"navigating to :menuselection:`Inventory app --> Configuration --> Shipping "
-"Methods`."
-msgstr ""
-"您也可以通过导航至 :menuselection:`库存应用 --> 配置 --> 运输方式` 查看所有物"
-"流商的现有运输方式。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:43
-msgid ""
-"Click :guilabel:`New` to open a blank shipping method form. If a shipping "
-"method has already been created, it can be selected from this screen."
-msgstr ""
-"点击 :guilabel:`新建` 打开空白运输方式表单。若已有运输方式创建完成，也可在此"
-"界面进行选择。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:None
 msgid "The form for a DHL shipping method."
 msgstr "DHL 运输方式配置表单"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:27
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:58
 msgid "General information"
 msgstr "一般信息"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:52
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:29
 msgid ""
 "Begin configuring the shipping method by entering its title in "
 "the :guilabel:`Shipping Method` field."
 msgstr "首先在 :guilabel:`运输方式` 字段中输入名称以开始配置。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:55
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:32
 msgid ""
 "In the :guilabel:`Provider` drop-down menu, select the :guilabel:`DHL` "
-"option. After doing so, a new :guilabel:`DHL Configuration` tab appears at "
-"the bottom of the form."
+"option, and a new :guilabel:`DHL Configuration` tab appears at the bottom of "
+"the form."
 msgstr ""
-"在 :guilabel:`服务商` 下拉菜单中选择 :guilabel:`DHL` 选项。选择后，表单底部将"
-"显示新的 :guilabel:`DHL 配置` 标签页。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:58
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:35
 msgid ""
 "All other fields in this section are identical on the shipping method forms "
-"for each shipping carrier. See the documentation on :doc:`third-party "
-"shippers <third_party_shipper>` for instructions on how to properly "
-"configure them."
+"for each shipping carrier. See :doc:`third-party shippers "
+"<third_party_shipper>` for standard configuration instructions."
 msgstr ""
-"本部分其他字段与各物流商的运输方式表单完全一致。具体配置方法请参阅 :doc:`第三"
-"方物流商<third_party_shipper>` 文档。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:63
-msgid "DHL Configuration"
-msgstr "DHL配置"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:40
+msgid "DHL Configuration tab"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:65
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:42
 msgid ""
 "The :guilabel:`DHL Configuration` tab on the shipping method form is used to "
-"connect the user's DHL account to Odoo, and configure the shipping method's "
+"connect the user's DHL account to Odoo and configure the shipping method's "
 "details."
 msgstr ""
-"运输方式表单中的 :guilabel:`DHL 配置` 标签页用于将用户的 DHL 账户与 Odoo 对"
-"接，并配置运输方式详细信息。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:69
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:46
 msgid "DHL developer credentials"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:71
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:48
 msgid ""
 "To integrate DHL with Odoo, developer credentials must be retrieved from "
 "DHL's Developer Portal. These credentials are used to link the user's DHL "
 "account to Odoo's **Inventory** app."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:52
 msgid ""
-"The *SiteID* and *Password* are different credentials than the ones used to "
+"The *SiteID* and *Password* are different credentials from the ones used to "
 "log in to a DHL account."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:79
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:56
 msgid "With DHL Express Account"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:81
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:58
 msgid ""
-"If a DHL Express account is available, log into the `DHL Developer portal "
+"If a DHL Express account is available, log in to the `DHL Developer portal "
 "<https://developer.dhl.com/api-reference/dhl-express-mydhl-api#get-started-"
 "section/ user-guide%get-access>`_ and `request a DHL API account number "
 "<https://developer.dhl. com/form/dhl-express-onboarding>`_."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:86
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:108
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:63
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:85
 msgid ""
 "Then, in Odoo, on the shipping method form, enter the *DHL API Key* in "
 "the :guilabel:`DHL SiteID` field, and the *API Secret* in the :guilabel:`DHL "
 "Password` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:90
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:67
 msgid "Without DHL Express Account"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:69
 msgid "If a DHL Express account is **not** available:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:94
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:71
 msgid ""
 "Begin by opening a `DHL Express account <https://mydhl.express.dhl/gb/en/"
 "ship/open-account.html#/fs-step=connectors&fs-step=connectors>`_."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:96
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:73
 msgid ""
 "Once the developer portal account has been confirmed, log in to the portal "
 "using the username and password. Click the user avatar in the top-right "
 "corner of the screen to open the user dashboard."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:98
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:75
 msgid ""
 "On the dashboard, open the :guilabel:`Apps` tab, and create an app. Follow "
 "the four steps in the app creation flow (app name, needed apps, app status, "
@@ -19429,62 +19355,85 @@ msgstr ""
 msgid "Setup to create DHL account."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:104
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:81
 msgid ""
 "After setting up the DHL Express account, go `here <https://"
 "developer.dhl.com/user/login?destination=/form/dhl-express-onboarding>`_ to "
 "get the *DHL API Key* and *API Secret* credentials."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:89
 msgid "Shipping details"
 msgstr "运输详情"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:91
 msgid ""
 "The rest of the fields in the :guilabel:`DHL Configuration` tab are used to "
 "configure the shipping method itself:"
 msgstr ":guilabel:`DHL 配置` 标签页的其余字段用于配置运输方式本身："
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:117
-msgid ":guilabel:`Region`: the region in which the shipping method is used."
-msgstr ":guilabel:`区域`：该运输方式的适用地区。"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:94
+msgid ":guilabel:`Region`: The region in which the shipping method is used."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:118
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:95
 msgid ""
 ":guilabel:`DHL Product`: the shipping service purchased from DHL (e.g. "
 "Express Worldwide)."
 msgstr ":guilabel:`DHL 产品`：从 DHL 购买的运输服务（如全球特快）。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:119
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:96
 msgid ""
-":guilabel:`DHL Package Type`: the type of DHL package used for delivery "
-"(e.g. DHL Box)."
-msgstr ":guilabel:`DHL 包裹类型`：用于配送的 DHL 包装类型（如DHL箱子）"
+":guilabel:`DHL Product`: The shipping service purchased from DHL (e.g., "
+"Express Worldwide)."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:120
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:97
+msgid ""
+":guilabel:`DHL Package Type`: The type of DHL package used for delivery "
+"(e.g., DHL Box)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:98
 msgid ""
 ":guilabel:`Package Weight Unit`: the unit of measure used to display package "
 "weight."
 msgstr ":guilabel:`包裹重量单位`：显示包裹重量的计量单位。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:121
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:99
 msgid ""
 ":guilabel:`Package Dimension Unit`: the unit of measure used to display "
 "package size."
 msgstr ":guilabel:`包裹尺寸单位`：显示包裹大小的计量单位。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:122
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:100
 msgid ""
 ":guilabel:`Label Format`: the file format used to generate shipping labels."
 msgstr ":guilabel:`标签格式`：生成运输标签的文件格式。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:123
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:101
 msgid ""
-":guilabel:`Label Template`: the paper size used to print shipping labels."
-msgstr ":guilabel:`标签模板`：打印运输标签的纸张尺寸。"
+":guilabel:`Package Weight Unit`: The unit of measure used to display package "
+"weight."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:102
+msgid ""
+":guilabel:`Package Dimension Unit`: The unit of measure used to display "
+"package size."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:103
+msgid ""
+":guilabel:`Label Format`: The file format used to generate shipping labels."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:104
+msgid ""
+":guilabel:`Label Template`: The paper size used to print shipping labels."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:107
 msgid ""
 "Before selecting service options for a shipping method, make sure those "
 "services are actually available for the DHL account. Available services "
@@ -19493,56 +19442,57 @@ msgstr ""
 "为运输方式选择服务选项前，请确认该 DHL 账户实际开通了相应服务。可用服务取决于"
 "与 DHL 签订的合同条款。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:130
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:111
 msgid "Options"
 msgstr "选项"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:132
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:113
 msgid ""
 "Additional settings are available in the :guilabel:`Options` section at the "
 "bottom of the :guilabel:`DHL Configuration` tab:"
 msgstr ""
 "在 :guilabel:`DHL 配置` 标签页底部的 :guilabel:`选项` 区域提供以下附加设置："
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:135
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:116
 msgid ""
 ":guilabel:`Generate Return Label`: Enable this option to automatically "
 "generate a return label after validating a delivery order."
 msgstr ":guilabel:`生成退件标签`：启用此选项可在确认交货单时自动生成退件标签。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:137
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:118
 msgid ""
 ":guilabel:`Dutiable Material`: Enable this option if the shipping method is "
 "liable to customs or other duties."
 msgstr ""
 ":guilabel:`应税物品`：若该运输方式涉及海关关税或其他税费，请启用此选项。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:141
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:122
 msgid "Turn on the DHL Connection"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:143
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:124
 msgid ""
 "Once the DHL connection is set up, use the smart buttons at the top of the "
-"form to publish, turn on production mode or activate debug logging."
+"form to publish, turn on production mode, or activate debug logging."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:146
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:127
 msgid ""
-":guilabel:`Unpublished`/:guilabel:`Published`: determines if this shipping "
+":guilabel:`Unpublished`/:guilabel:`Published`: Determines if this shipping "
 "method is available on the user's **eCommerce** website."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:149
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:130
 msgid ""
-":guilabel:`Test Environment`/:guilabel:`Production Environment`: determines "
-"whether label creation is for testing and cancelled immediately (Test) or "
-"generate real shipping label that is charged to DHL account (Production)."
+":guilabel:`Test Environment`/:guilabel:`Production Environment`: Determines "
+"whether label creation is for testing and canceled immediately (Test) or "
+"generates a real shipping label that is charged to the DHL account "
+"(Production)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:152
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:133
 msgid ""
-":guilabel:`No Debug`/:guilabel:`Debug Requests`: determines whether API "
+":guilabel:`No Debug`/:guilabel:`Debug Requests`: Determines whether API "
 "requests and responses are logged in Odoo (turn on :ref:`developer mode "
 "<developer-mode>` and go to :menuselection:`Settings app --> Technical --> "
 "Logging`)."
@@ -40275,915 +40225,86 @@ msgstr ""
 "需要注意的是，并非所有分包产品的估价都包括所有这些变量。例如，如果产品不是以"
 "分装方式运送给最终客户，则无需考虑分装成本。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:3
-msgid "Basic subcontracting lead times"
-msgstr "基本分包周转时间"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:8
-msgid ""
-"In Odoo, lead times are used to predict how long it takes to complete a "
-"certain action. For example, a *delivery lead time* can be set for a "
-"purchased product, which specifies the number of days it usually takes for "
-"the product's vendor to delivery the product to the purchasing company."
-msgstr ""
-"在 Odoo 中，交付周期用于预测完成某项操作所需的时间。例如，可以为购买的产品设"
-"置*送货所需时间*，规定产品供应商将产品交付给购买公司通常需要的天数。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:12
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:13
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:13
-msgid ""
-"For subcontracted products specifically, delivery lead times can be "
-"configured to take into account the amount of time required for the "
-"subcontractor to manufacture a product. Doing so allows the contracting "
-"company to better predict the delivery dates of subcontracted products."
-msgstr ""
-"具体就分包产品而言，可以根据分包商生产产品所需的时间来配置交付周期。这样，承"
-"包公司就能更好地预测分包产品的交货日期。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:17
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:31
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:23
-msgid ""
-"Like all lead times in Odoo, lead times for subcontracted products are only "
-"an estimate, and are based on how long actions are *expected* to take."
-msgstr ""
-"与 Odoo 中的所有交付周期一样，分包产品的交付周期也只是一个估计值，根据*预计*"
-"的行动时间计算而来。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:20
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:34
-msgid ""
-"Unforeseen circumstances can impact the completion of these actions, which "
-"means that lead times should not be viewed as guarantees."
-msgstr "不可预见的情况可能会影响这些行动的完成，因此所需时间仅可视为参考。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:26
-msgid ""
-"When using the :doc:`basic subcontracting <subcontracting_basic>` workflow "
-"to manufacture a product, a company is not responsible for supplying the "
-"subcontractor with the necessary components. This means that the only "
-"factors affecting the delivery date of a product are the amount of time it "
-"takes the subcontractor to manufacture and deliver it."
-msgstr ""
-"使用 :doc:`基本分包<subcontracting_basic>` 工作流程制造产品时，公司不负责向分"
-"包商提供必要的组件。这意味着影响产品交付日期的唯一因素是分包商制造和交付产品"
-"所需的时间。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:31
-msgid ""
-"By assigning a product's subcontractor a delivery lead time that considers "
-"both of these factors, the *Expected Arrival* date displayed on purchase "
-"orders (POs) for the product more accurately reflects the amount of time "
-"required for both manufacturing and delivery."
-msgstr ""
-"通过为产品的分包商分配一个考虑到上述两个因素的送货准备时间，产品采购订单"
-"（PO）上显示的*预计到达*日期就能更准确地反映生产和送货所需的时间。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:36
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:54
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:44
-msgid "Product delivery lead time"
-msgstr "产品交付周期"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:38
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:46
-msgid ""
-"To set a delivery lead time for a product's subcontractor, navigate "
-"to :menuselection:`Inventory app --> Products --> Products`, and select a "
-"subcontracted product."
-msgstr ""
-"要为产品的分包商设置送货所需时间，请导航至 :menuselection:`库存应用程序 --> "
-"产品 --> 产品`，然后选择分包产品。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:41
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:59
-msgid ""
-"Then, select the :guilabel:`Purchase` tab on the product's page. If the "
-"subcontractor has not already been added as a vendor, do so now by "
-"clicking :guilabel:`Add a line`, and selecting the subcontractor in "
-"the :guilabel:`Vendor` column."
-msgstr ""
-"然后，选择产品页面上的 :guilabel:`采购` 选项卡。如果分包商尚未添加为供应商，"
-"请点击 :guilabel:`添加行`，然后在 :guilabel:`供应商` 列中选择分包商。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:45
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:63
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:53
-msgid ""
-"Once the subcontractor has been added, enter the number of days it takes "
-"them to manufacture and deliver the product, in the :guilabel:`Delivery Lead "
-"Time` column."
-msgstr ""
-"添加分包商后，在 :guilabel:`送货所需时间` 栏中输入生产和交付产品所需的天数。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:None
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:None
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:None
-msgid ""
-"The Delivery Lead Time field for a subcontractor, on the Purchase tab of a "
-"product page."
-msgstr "产品页面 “采购” 选项卡上分包商的交货所需时间字段。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:53
-msgid ""
-"Multiple subcontractors can be added to the :guilabel:`Purchase` tab on a "
-"product's page, and a different :guilabel:`Delivery Lead Time` can be set "
-"for each."
-msgstr ""
-"可在产品页面的 :guilabel:`采购` 标签中添加多个分包商，并为每个分包商设置不同"
-"的 :guilabel:`送货所需时间`。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:57
-msgid "Lead time workflow"
-msgstr "送货时间工作流程"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:59
-msgid ""
-"After setting a delivery lead time for a product's vendor, create an |RfQ| "
-"by navigating to :menuselection:`Purchase app --> Orders --> Purchase "
-"Orders`, and clicking :guilabel:`New`."
-msgstr ""
-"为产品供应商设置送货所需时间后，通过导航至 :menuselection:`采购应用程序 --> "
-"订单 --> 采购订单`，并点击 :guilabel:`新建`，创建一个 |RfQ|。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:62
-msgid ""
-"Specify the subcontractor in the :guilabel:`Vendor` field. Then, add the "
-"product in the :guilabel:`Products` tab by clicking :guilabel:`Add a "
-"product`, selecting the product in the :guilabel:`Product` column, and "
-"adding a quantity in the :guilabel:`Quantity` column."
-msgstr ""
-"在 :guilabel:`供应商` 字段中指定分包商。然后，在 :guilabel:`产品` 选项卡中点"
-"击:guilabel:`添加产品`，在 :guilabel:`产品`栏中选择产品，并在 :guilabel:`数量"
-"`栏中添加数量。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:66
-msgid ""
-"Once a product has been added, the :guilabel:`Expected Arrival` field on the "
-"|RfQ| auto-populates with a date that reflects the vendor's delivery lead "
-"time, as specified on the product's page."
-msgstr ""
-"添加产品后，|RfQ| 上的 :guilabel:`预计抵达时间` 字段会自动填充一个日期，该日"
-"期反映了产品页面上指定的供应商送货所需时间。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:69
-msgid ""
-"If the date needs to be adjusted, click on the :guilabel:`Expected Arrival` "
-"field to open a calendar popover, and select the desired date. Make sure not "
-"to choose a date sooner than the one that was auto-populated, unless the "
-"subcontractor has confirmed that they are able to deliver the product by "
-"that date."
-msgstr ""
-"如果需要调整日期，请点击 :guilabel:`预计到达` 字段打开日历弹出窗口，并选择所"
-"需的日期。确保选择的日期不要早于自动填充的日期，除非分包商已确认他们能在该日"
-"期前交付产品。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:74
-msgid ""
-"Finally, click :guilabel:`Confirm Order` on the |RfQ| to turn it into a |"
-"PO|. At this point, the subcontractor should begin manufacturing the "
-"subcontracted product, before delivering it to the contracting company."
-msgstr ""
-"最后，点击 |RfQ| 上的 :guilabel:`确认订单` 将其转化为 |PO|。此时，分包商应开"
-"始生产分包产品，然后交付给承包公司。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:79
-msgid ""
-"Bike retailer *Mike's Bikes* works with a subcontractor — *Bike Friends* — "
-"to produce units of their *Tricycle* product."
-msgstr ""
-"自行车零售商 *Mike's Bikes* 与分包商 *Bike Friends* 合作生产其 *Tricycle* 产"
-"品。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:82
-msgid ""
-"On average, Bike Friends requires three days to manufacture a tricycle, plus "
-"an additional two days to deliver it to Mike's Bikes."
-msgstr ""
-"Bike Friends 生产一辆三轮车平均需要 3 天时间，另外还需要 2 天时间将其交付给 "
-"Mike's Bikes。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:85
-msgid ""
-"As a result, Mike's Bikes sets a delivery lead time of five days for "
-"tricycles manufactured by Bike Friends: three days for manufacturing, plus "
-"two days for delivery."
-msgstr ""
-"因此，Mike's Bikes 为 Bike Friends 生产的三轮车规定了五天的交货期：三天生产，"
-"两天交货。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:88
-msgid ""
-"On May 3rd, Mike's Bikes confirms a |PO| to purchase one tricycle from Bike "
-"Friends."
-msgstr "5 月 3 日，Mike's Bikes 确认从 Bike Friends 购买一辆三轮车。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:90
-msgid ""
-"The :guilabel:`Expected Arrival` date listed on the |PO| is May 8th, five "
-"days after the :guilabel:`Confirmation Date`."
-msgstr ""
-"|PO|上列出的 :guilabel:`预计抵达时间` 日期是 5 月 8 日，即 :guilabel:`确认日"
-"期` 之后五天。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:None
-msgid "The Expected Arrival date on a PO for a subcontracted product."
-msgstr "分包产品的采购订单上的预计到达日期。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:97
-msgid ""
-"Bike Friends begins manufacturing the tricycle on May 3rd — the day that the "
-"|PO| is confirmed — and finishes on May 6th, three days later."
-msgstr ""
-"Bike Friends 于 5 月 3 日（PO 确定当天）开始生产 tricycle ，并于三天后的 5 "
-"月 6 日完成生产。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:100
-msgid ""
-"The tricycle is then shipped to Mike's Bikes the same day, and they receive "
-"it on May 8th, two days later."
-msgstr ""
-"然后，tricycle 在同一天被运到 Mike's Bikes，他们在两天后的 5 月 8 日收到了三"
-"轮车。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:3
-msgid "Dropship subcontracting lead times"
-msgstr "代发货分包所需时间"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:9
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:9
-msgid ""
-"In Odoo, lead times are used to predict how long it takes to complete a "
-"certain action. For example, a *delivery lead time* can be set for a "
-"purchased product, which specifies the number of days it usually takes for "
-"the product's vendor to deliver the product to the purchasing company."
-msgstr ""
-"在 Odoo 中，交付周期用于预测完成某项操作所需的时间。例如，可以为购买的产品设"
-"置*交货所需时间*，规定产品供应商将产品交付给购买公司通常需要的天数。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:17
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:17
-msgid ""
-"Certain subcontracted products require the contracting company to supply the "
-"subcontractor with manufacturing components. In this case, a *manufacturing "
-"lead time* can be used, in addition to the delivery lead time, to generate "
-"the date on which the subcontractor must receive the required components, in "
-"order to manufacture the product and deliver it on time."
-msgstr ""
-"某些分包产品要求承包公司向分包商提供制造组件。在这种情况下，除了交货所需时间"
-"外，还可以使用*制造所需时间*来生成分包商必须收到所需组件的日期，以便制造产品"
-"并按时交货。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:22
-msgid ""
-"In cases where components are dropshipped to the subcontractor, an "
-"additional delivery lead time can be set for each component. This should be "
-"set to the amount of time it takes the vendor to deliver components to the "
-"subcontractor."
-msgstr ""
-"如果组件是直接交付给分包商的，则可为每个组件设置额外的交付周期。该时间应设置"
-"为供应商向分包商交付组件所需的时间。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:26
-msgid ""
-"Once a delivery lead time has been set on a component, dropship orders for "
-"the component display the date by which the order must be confirmed, so that "
-"it can be dropshipped to the subcontractor by the date on which "
-"manufacturing must begin."
-msgstr ""
-"一旦设定了部件的交付周期，该部件的代发货订单就会显示必须确认订单的日期，以便"
-"在必须开始生产的日期前将其空运给分包商。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:40
-msgid ""
-"When using the :doc:`Dropship Subcontractor on Order "
-"<subcontracting_dropship>` route, a company is responsible for purchasing "
-"the necessary components from a vendor, and having them dropshipped directly "
-"to the subcontractor."
-msgstr ""
-"使用 :doc:`分包商按订单代发货<subcontracting_dropship>` 路线时，公司负责从供"
-"应商处购买必要的组件，并将其直接交付给分包商。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:44
-msgid ""
-"This means that, in addition to the amount of time it takes the "
-"subcontractor to manufacture and deliver the product, it is also necessary "
-"to consider how long it takes the component vendor to dropship the "
-"components to the subcontractor."
-msgstr ""
-"这意味着，除了分包商制造和交付产品所需的时间外，还必须考虑部件供应商将部件空"
-"运给分包商所需的时间。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:48
-msgid ""
-"By assigning a product's subcontractor a *delivery lead time*, specifying a "
-"*manufacturing lead time* on the product's BoM, and assigning the vendor of "
-"the components an additional *delivery lead time*, *Dropship Subcontractor* "
-"orders for the product's components display the deadline for confirming a "
-"dropship order to send the components to the subcontractor."
-msgstr ""
-"通过为产品的分包商指定*交货所需时间*，在产品的 BoM 上指定*制造所需时间*，并为"
-"组件供应商指定额外的*交货所需时间*，产品组件的*代发货分包商*订单就会显示确认"
-"将组件发送给分包商的分包订单的截止日期。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:56
-msgid ""
-"To set a delivery lead time for a product's subcontractor, navigate "
-"to :guilabel:`Inventory app --> Products --> Products`, and select a "
-"subcontracted product."
-msgstr ""
-"要为产品的分包商设置送货所需时间，请导航至 :guilabel:` 库存应用程序 --> 产品 "
-"--> 产品` 并选择分包产品。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:71
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:61
-msgid "Product manufacturing lead time"
-msgstr "产品制造所需时间"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:73
-msgid ""
-"Next, navigate to the product's |BoM| by clicking the :guilabel:`Bill of "
-"Materials` smart button at the top of the product's page. Then, select a BoM "
-"from the list."
-msgstr ""
-"然后，点击产品页面顶部的 :guilabel:`物料清单` 智能按钮，导航至产品的 |BoM| 。"
-"然后，从列表中选择一个物料清单。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:76
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:66
-msgid ""
-"On the |BoM|, select the :guilabel:`Miscellaneous` tab. In "
-"the :guilabel:`Manuf. Lead Time` field, enter the same number of days that "
-"was entered in the :guilabel:`Delivery Lead Time` field of the |BoM|'s "
-"product."
-msgstr ""
-"在 |BoM| 中，选择 :guilabel:`杂项` 选项卡。在 :guilabel:`制造所需时间` 字段"
-"中，输入与 |BoM| 产品的:guilabel:`交货所需时间` 字段中相同的天数。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:None
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:None
-msgid "The Manuf. Lead Time field on a product's BoM."
-msgstr "产品物料清单上的制造所需时间字段。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:84
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:74
-msgid ""
-"While not all of these days are actually used for manufacturing by the "
-"subcontractor, setting the same number of days in each field tells Odoo that "
-"the subcontractor must receive the components and begin production by the "
-"start of the product's delivery lead time. This gives the subcontractor "
-"enough time to both manufacture and deliver the product."
-msgstr ""
-"虽然分包商实际上并没有使用所有这些天数进行生产，但在每个字段中设置相同的天数"
-"会告诉 Odoo，分包商必须在产品交付周期开始前收到组件，并开始生产。这样分包商就"
-"有足够的时间生产和交付产品。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:90
-msgid "Component delivery lead time"
-msgstr "部件交付周期"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:92
-msgid ""
-"From the product's BoM, navigate to each component by clicking on the "
-"component in the :guilabel:`Components` tab, and then clicking the :icon:`oi-"
-"arrow-right` :guilabel:`(right arrow)` button to the right of the component."
-msgstr ""
-"在产品的 BoM 中，通过点击 :guilabel:`产品` 选项卡中的组件，然后点击组件右侧"
-"的 :icon:`oi-arrow-right`（右箭头）`按钮，导航到每个组件。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:96
-msgid ""
-"On the product page for each component, select the :guilabel:`Purchase` tab. "
-"If the vendor has not already been added, do so now by "
-"clicking :guilabel:`Add a line`, and selecting the subcontractor in "
-"the :guilabel:`Vendor` column."
-msgstr ""
-"在每个组件的产品页面上，选择 :guilabel:`采购` 选项卡。如果尚未添加供应商，请"
-"点击 :guilabel:`添加行`，并在 :guilabel:`供应商` 列中选择分包商。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:100
-msgid ""
-"Once the vendor has been added, enter the number of days it takes them to "
-"dropship the product to the subcontractor, in the :guilabel:`Delivery Lead "
-"Time` column."
-msgstr ""
-"添加供应商后，在 :guilabel:`送货所需时间` 栏中输入他们向分包商交付产品所需的"
-"天数。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:104
-msgid "Dropship subcontracting workflow"
-msgstr "代发货分包工作流程"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:106
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:82
-msgid ""
-"Create a request for quotation (RfQ) for the product by navigating "
-"to :menuselection:`Purchase app --> Orders --> Requests for Quotation`, and "
-"clicking :guilabel:`New`."
-msgstr ""
-"通过导航至 :menuselection:`采购应用程序 --> 订单 --> 报价请求`，并点"
-"击 :guilabel:`新建`，为产品创建询价单（RfQ）。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:109
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:85
-msgid ""
-"Specify the subcontractor in :guilabel:`Vendor` field. Then, add the product "
-"in the :guilabel:`Products` tab by clicking :guilabel:`Add a product`, "
-"selecting the product in the :guilabel:`Product` column, and specifying a "
-"quantity in the :guilabel:`Quantity` column."
-msgstr ""
-"在 :guilabel:`供应商` 字段中指定分包商。然后，通过点击 :guilabel:`添加产品`，"
-"在 :guilabel:`产品` 列中选择产品，并在 :guilabel:`数量` 列中指定数量，"
-"在 :guilabel:`产品` 选项卡中添加产品。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:113
-msgid ""
-"In the :guilabel:`Expected Arrival` field, enter a date that provides enough "
-"time for the component vendor to dropship the components, and the "
-"subcontractor to manufacture and deliver the product."
-msgstr ""
-"在 :guilabel:`预计抵达时间` 字段中，输入一个日期，使组件供应商有足够的时间空"
-"运组件，分包商有足够的时间制造和交付产品。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:117
-msgid ""
-"When a product is added to an |RfQ|, the :guilabel:`Expected Arrival` field "
-"auto-populates with a date that is today's date plus the delivery lead time "
-"of the product. However, this does not consider the time it takes to "
-"dropship the components to the subcontractor."
-msgstr ""
-"当产品添加到 |RfQ| 时，:guilabel:`预计到达`字段会自动填充一个日期，即今天的日"
-"期加上产品的交付周期。但是，并不考虑将组件空运到分包商所需的时间。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:121
-msgid ""
-"When purchasing a product subcontracted using the *Dropship Subcontractor on "
-"Order* route, it is necessary to adjust this date to take into account the "
-"extra time needed for the components to be delivered to the subcontractor."
-msgstr ""
-"在使用*分包商按订单直运*途径购买分包产品时，有必要调整该日期，以考虑到将部件"
-"交付给分包商所需的额外时间。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:125
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:102
-msgid ""
-"Since production does not begin until they receive the components, leaving "
-"the date as is results in the finished product arriving *after* the date "
-"listed on the |RfQ|."
-msgstr ""
-"由于生产要等到收到部件后才开始，如果不更改日期，成品就会在 |RfQ| 所列日期 *之"
-"后* 到达。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:128
-msgid ""
-"Next, click :guilabel:`Confirm Order` to turn the |RfQ| into a |PO|. Doing "
-"so creates a second |RfQ| to purchase the components from the dropshipper, "
-"and have them sent to the subcontractor."
-msgstr ""
-"接下来，点击 :guilabel:`确认订单` 将 |RfQ| 变成 |PO|。这样，就会创建第二个 |"
-"RfQ| 从分销商处购买组件，并将其发送给分包商。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:131
-msgid ""
-"Navigate to :menuselection:`Purchase app --> Orders --> Requests for "
-"Quotation`, and select the |RfQ| that lists the dropshipper in "
-"the :guilabel:`Vendor` column."
-msgstr ""
-"导航至 :menuselection:`采购应用程序 --> 订单 --> 报价请求`，并选择"
-"在 :guilabel:`供应商` 列中列出下单商的 |RfQ|。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:134
-msgid ""
-"On the |RfQ|, the :guilabel:`Expected Arrival` field lists the date on which "
-"the subcontractor must receive the components, in order to deliver the "
-"finished product by the *Expected Arrival* date listed on the subcontractor |"
-"PO|."
-msgstr ""
-"在 |RfQ| 上，:guilabel:`预计到达` 字段列出了分包商必须收到部件的日期，以便在"
-"分包商 |PO| 上列出的*预计到达*日期前交付成品。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:138
-msgid ""
-"The :guilabel:`Order Deadline` field lists the latest date on which the |"
-"RfQ| can be confirmed, in order for the dropshipper to deliver the "
-"components to the subcontractor by the :guilabel:`Expected Arrival` date."
-msgstr ""
-"在 :guilabel:`订购截止日期` 字段中，列出了可以确认 |RfQ| 的最晚日期，以便直运"
-"商在 :guilabel:`预计抵达时间` 日期前将部件交付给分包商。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:142
-msgid ""
-"Click :guilabel:`Confirm Order` to turn the |RfQ| into a |PO|, and confirm "
-"the purchase of the components from the dropshipper. Doing so causes "
-"a :guilabel:`Dropship` smart button to appear at the top of the page."
-msgstr ""
-"点击 :guilabel:`确认订单` 将 |RfQ| 变为 |PO|，并确认从代购商处购买组件。这"
-"样，页面顶部就会出现一个 :guilabel:`代发货` 智能按钮。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:146
-msgid ""
-"Click the :guilabel:`Dropship` smart button to open the dropship order. This "
-"order can also be accessed from the :guilabel:`Resupply` smart button that "
-"now appears on the subcontractor |PO|."
-msgstr ""
-"点击 :guilabel:`代发货` 智能按钮打开代发货订单。也可通过分包商 |PO| 上"
-"的 :guilabel:`重新补给` 智能按钮访问此订单。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:149
-msgid ""
-"After the dropshipper has delivered the components to the subcontractor, "
-"click the :guilabel:`Validate` button at the top of the dropship order to "
-"confirm that the subcontractor has received the components."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:153
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:127
-msgid ""
-"Once the subcontractor receives the components, they begin manufacturing the "
-"component, before delivering it to the contracting company."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:158
-msgid ""
-"Bike retailer *Mike's Bikes* works with a subcontractor — *Bike Friends* — "
-"to produce units of their *Bicycle* product."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:161
-msgid ""
-"Mike's Bikes must purchase the required components from vendor Bike World, "
-"and have them dropshipped to Bike Friends."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:164
-msgid ""
-"On average, Bike Friends takes three days to manufacture each bicycle, plus "
-"an addition two days to deliver it to Mike's Bikes."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:167
-msgid ""
-"As a result, Mike's Bikes sets a delivery lead time of five days for bicycle "
-"manufactured by Bike Friends: three days for manufacturing, plus two days "
-"for delivery."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:170
-msgid ""
-"On the bicycle's BoM, they enter a manufacturing lead time of five days as "
-"well, to remind themselves of the date that components must be delivered to "
-"the subcontractor."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:173
-msgid ""
-"On the product pages for each of the bicycle's components, they assign Bike "
-"World a delivery lead time of two days. This is the amount of time it takes "
-"Bike World to dropship each component directly to the subcontractor."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:177
-msgid ""
-"On May 10th, Mike's Bikes confirms a |PO| for one bicycle, with an expected "
-"delivery date of May 17th."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:180
-msgid ""
-"The |RfQ| for purchasing the components from Bike World and having them "
-"dropshipped to Bike Friends has an Expected Arrival date of May 12th, and a "
-"Deadline of May 10th. The |RfQ| must be confirmed by the deadline in order "
-"for Bike Friends to receive the components by the Expected Arrival date, "
-"giving them enough time to deliver the finished bicycle to Mike's Bikes by "
-"May 17th."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:None
-msgid "The Order Deadline and Expected Arrival dates on a dropship order."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:190
-msgid ""
-"Mike's Bikes confirms the |RfQ| on May 10th, and Bike World delivers the "
-"components to Bike Friends on May 12th. Bike Friends manufactures the "
-"bicycle, and delivers it to Mike's Bikes on May 17th."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:3
-msgid "Resupply subcontracting lead times"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:26
-msgid ""
-"Unforeseen circumstances can impact the completion of these actions, which "
-"means that lead times should **not** be viewed as guarantees."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:32
-msgid ""
-"When using the :doc:`Resupply Subcontractor on Order "
-"<subcontracting_resupply>` route, a company is responsible for supplying the "
-"subcontractor with the necessary components. As a result, the subcontractor "
-"cannot begin manufacturing until the components have been received."
-msgstr ""
-"当使用 :doc:`按订单向分包商补货<subcontracting_resupply>` 路线时，公司负责向"
-"分包商提供必要的组件。因此，在收到组件之前，分包商不能开始生产。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:36
-msgid ""
-"This means that, in addition to the amount of time it takes the "
-"subcontractor to manufacture and deliver the product, the date they receive "
-"the components must also be considered."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:39
-msgid ""
-"By assigning a product's subcontractor a delivery lead time, and specifying "
-"a manufacturing lead time on the product's bill of materials (BoM), "
-"*Resupply Subcontractor* orders for the product's components display the "
-"deadline by which the subcontractor must receive the components."
-msgstr ""
-"通过为产品的分包商指定交货所需时间，并在产品的物料清单（BoM）上指定制造所需时"
-"间，产品组件的 *分包商补货* 订单就会显示分包商必须收到组件的截止日期。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:49
-msgid ""
-"Then, select the :guilabel:`Purchase` tab on the product's page. If the "
-"subcontractor has not already been added as a vendor, do so now by "
-"clicking :guilabel:`Add a line`, and selecting the subcontractor in "
-"the :guilabel:`Vendor` field."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:63
-msgid ""
-"Next, navigate to the product's |BoM| by clicking the :guilabel:`Bill of "
-"Materials` smart button at the top of the product's page. Then, select a |"
-"BoM| from the list."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:80
-msgid "Resupply subcontracting workflow"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:89
-msgid ""
-"In the :guilabel:`Expected Arrival` field, enter a date that provides enough "
-"time for the subcontractor to receive the components, manufacture the "
-"product, and deliver it back to the subcontracting company."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:94
-msgid ""
-"When a product is added to an |RfQ|, the :guilabel:`Expected Arrival` field "
-"auto-populates with a date that is today's date plus the delivery lead time "
-"of the product. However, this does **not** consider the time it takes to "
-"ship the components to the subcontractor."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:98
-msgid ""
-"When purchasing a product subcontracted using the Resupply Subcontractor on "
-"Order route, it is necessary to adjust this date to take into account the "
-"extra time needed for the components to be shipped to the subcontractor."
-msgstr ""
-"在使用 “按订单向分包商补货” 路线购买分包产品时，有必要调整该日期，以考虑到部"
-"件运往分包商所需的额外时间。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:105
-msgid ""
-"Next, click :guilabel:`Confirm Order` to turn the |RfQ| into a |PO|. Doing "
-"so causes a :guilabel:`Resupply` smart button to appear at the top of the "
-"page."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:108
-msgid ""
-"Click the :guilabel:`Resupply` smart button to open the resupply "
-"subcontractor order, which is the order created to send components to the "
-"subcontractor."
-msgstr ""
-"点击 :guilabel:`补货` 智能按钮，打开分包商补货订单，这是为向分包商发送组件而"
-"创建的订单。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:111
-msgid ""
-"The :guilabel:`Deadline` field on the resupply subcontractor order shows the "
-"deadline for the subcontractor to receive the components, in order for them "
-"to have enough time to manufacture and deliver the finished product by the "
-"Expected Arrival date."
-msgstr ""
-"分包商补货订单上的 :guilabel:`截止日期` 字段显示分包商接收组件的截止日期，以"
-"便他们有足够的时间在预计到达日期前生产和交付成品。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:115
-msgid ""
-"The :guilabel:`Scheduled Date` field should display the latest date on which "
-"components can be shipped, while still arriving to the subcontractor by "
-"the :guilabel:`Deadline`. However, by default, the date displayed is the "
-"same as the date in the :guilabel:`Deadline` field, and must be updated to "
-"take into account the time required for shipping."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:120
-msgid ""
-"Click on the :guilabel:`Scheduled Date` field to open a calendar popover "
-"from which a date can be selected. Select a date that allows for the "
-"components to be delivered by the :guilabel:`Deadline` on the resupply "
-"subcontractor order."
-msgstr ""
-"点击 :guilabel:`已安排日期` 字段，打开日历弹出窗口，从中选择日期。选择一个可"
-"以在分包商补货订单上的 :guilabel:`截止日期` 之前交付组件的日期。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:124
-msgid ""
-"After the components are shipped, click the :guilabel:`Validate` button at "
-"the top of the order to confirm they have been sent to the subcontractor."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:131
-msgid ""
-"Bike retailer *Mike's Bikes* works with a subcontractor — *Bike Friends* — "
-"to produce units of their *Unicycle* product."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:134
-msgid ""
-"Mike's Bikes must supply Bike Friends with the necessary components for "
-"manufacturing the unicycles."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:137
-msgid ""
-"On average, Bike Friends takes three days to manufacture each unicycle, plus "
-"an additional two days to deliver it to Mike's Bikes."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:140
-msgid ""
-"As a result, Mike's Bikes sets a delivery lead time of five days for "
-"unicycles manufactured by Bike Friends: three days for manufacturing, plus "
-"two days for delivery."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:143
-msgid ""
-"On the unicycle's |BoM|, they enter a manufacturing lead time of five days, "
-"as well, to remind themselves of the date that components must be delivered "
-"to the subcontractor."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:146
-msgid ""
-"They confirm a |PO| for one unicycle, with an expected arrival date of May "
-"30th."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:148
-msgid ""
-"The resupply subcontractor order for shipping the components to the "
-"subcontractor shows a *Deadline* of May 25th. The subcontractor must receive "
-"the components by this date, in order to have enough time to manufacture the "
-"unicycle, and deliver it by May 30th."
-msgstr ""
-"向分包商运送部件的分包商补货订单显示*截止日期*为 5 月 25 日。分包商必须在此日"
-"期之前收到组件，以便有足够的时间制造独轮车，并在 5 月 30 日之前交货。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:152
-msgid ""
-"It takes Mike's Bikes two days to deliver the components, so they update the "
-"*Scheduled Date* field on the resupply subcontractor order to May 23rd, two "
-"days before the Deadline."
-msgstr ""
-"Mike's Bikes 需要两天时间来交付组件，因此他们将分包商补货订单上的*计划日期*字"
-"段更新为 5 月 23 日，即截止日期前两天。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:None
-msgid ""
-"The Scheduled Date and Deadline fields on a resupply subcontractor order."
-msgstr "分包商补货订单上的预定日期和截止日期字段。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:159
-msgid ""
-"Mike's Bikes ships the components to Bike Friends on the scheduled date of "
-"May 23rd, and they arrive on the deadline of May 25th. This gives Bike "
-"Friends enough time to manufacture the unicycle, and ship it back to Mike's "
-"Bikes by the expected arrival date of May 30th."
-msgstr ""
-
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:10
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:12
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:10
 msgid ""
-"In manufacturing, subcontracting is the process of a company engaging a "
-"third-party manufacturer, or subcontractor, to manufacture products that are "
-"then sold by the contracting company."
+"In basic subcontracting, a company's product is produced entirely by a "
+"subcontractor. The product is first purchased from the subcontractor, who "
+"acquires their own components, manufactures the final product, then delivers "
+"the final product to the contracting company's warehouse."
 msgstr ""
-"在制造中，分包是指公司聘请第三方制造商或分包商生产产品，然后由承包公司销售的"
-"过程。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:13
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:14
 msgid ""
-"In basic subcontracting, the subcontractor is responsible for acquiring the "
-"necessary components. This means that the contracting company only has to "
-"worry about what happens to subcontracted products once they are produced."
+"The following documentation covers how to configure a subcontracted product "
+"and trigger the subcontracting process."
 msgstr ""
-"在基本分包中，分包商负责获取必要的部件。这意味着承包公司只需负责分包产品生产"
-"出来后的情况。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:17
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:20
 msgid ""
-"The workflow for purchasing a product manufactured using basic "
-"subcontracting is similar to the one used when purchasing a non-"
-"subcontracted product from a vendor. The main differences are the way that "
-"subcontracted products are configured, and the fact that subcontracted "
-"products take longer to be sent from the vendor, since they must first be "
-"manufactured by them."
+"To use subcontracting, contractors must first configure products with "
+"a :ref:`vendor pricelist <purchase/products/pricelist>` as well as a "
+"subcontracting-type |BoM|."
 msgstr ""
-"购买使用基本分包生产的产品的工作流程与从供应商处购买非分包产品的流程类似。主"
-"要区别在于分包产品的配置方式，以及分包产品从供应商处发送的时间较长，因为它们"
-"必须首先由供应商生产。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:25
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:23
 msgid ""
-"To use subcontracting in Odoo, navigate to :menuselection:`Manufacturing app "
-"--> Configuration --> Settings`, and tick the checkbox next to "
-"the :guilabel:`Subcontracting` setting, under the :guilabel:`Operations` "
-"heading. Then, click :guilabel:`Save`."
+"The pricelist allows the contracting company to purchase the product from "
+"the vendor (subcontractor) through a |PO|, while the |BoM| allows the "
+"product to be manufactured externally by the subcontractor."
 msgstr ""
-"要在 Odoo 中使用分包，请导航至 :menuselection:`制造应用程序 --> 配置--> 设置"
-"`，并勾选 :guilabel:`操作` 标题下 :guilabel:`分包` 设置旁边的复选框。然后点"
-"击 :guilabel:`保存`。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:29
-msgid ""
-"Once the :guilabel:`Subcontracting` setting is enabled, it is also necessary "
-"to properly configure the subcontracted product, and the product's |BoM|."
-msgstr "启用 :guilabel:`分包` 设置后，还需要正确配置分包产品和产品的 |BoM|。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:37
-msgid ""
-"To configure a product for basic subcontracting, navigate "
-"to :menuselection:`Inventory app --> Products --> Products`, and select a "
-"product, or create a new one by clicking :guilabel:`New`."
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:30
+msgid "Configure product vendor"
 msgstr ""
-"要为基本分包配置产品，请导航至 :menuselection:`库存应用程序 --> 产品 --> 产品"
-"`，然后选择一个产品，或点击 :guilabel:`新建` 创建一个新产品。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:40
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:32
 msgid ""
-"On the product form, select the :guilabel:`Purchase` tab, and add the "
-"product's subcontractor as a vendor by clicking :guilabel:`Add a line`, "
-"selecting the subcontractor in the :guilabel:`Vendor` drop-down menu, and "
-"entering a price in the :guilabel:`Price` field."
+"To configure a product's vendor for basic subcontracting, navigate "
+"to :menuselection:`Inventory app --> Products --> Products`. Then, select a "
+"product or create a new one."
 msgstr ""
-"在产品表单中，选择:guilabel:`采购` 选项卡，然后点击 :guilabel:`添加行`，"
-"在:guilabel:`供应商` 下拉菜单中选择分包商，并在:guilabel:`价格` 字段中输入价"
-"格，将产品的分包商添加为供应商。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:44
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:35
 msgid ""
-"Then, click on the :guilabel:`Inventory` tab, and use the :guilabel:`Routes` "
-"field to configure a route that determines what happens to the finished "
-"product once it has been manufactured by the subcontractor."
+"On the product form, click the :guilabel:`Purchase` tab and add the "
+"product's subcontractor as a vendor by clicking :guilabel:`Add a line`. "
+"Select the subcontractor in the :guilabel:`Vendor` drop-down menu."
 msgstr ""
-"然后，点击 :guilabel:`库存` 选项卡，使用 :guilabel:`路线` 字段配置路线，该路"
-"线决定分包商生产成品后成品的去向。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:48
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:39
+msgid "Then, enter the price of the product in the :guilabel:`Price` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:41
 msgid ""
-"If the finished product is shipped back to the contracting company, make "
-"sure the :guilabel:`Buy` route is selected. In addition, select "
-"the :guilabel:`Replenish on Order (MTO)` route to automatically create a |"
-"PO| for the product upon confirmation of a sales order (SO), unless there is "
-"enough stock on-hand to fulfill the |SO|."
+"Finally, set a :doc:`lead time <../../inventory/warehouses_storage/"
+"replenishment/lead_times>` for the product in the :guilabel:`Delivery Lead "
+"Time` field to specify the number of days for the subcontractor to produce "
+"and deliver the final product."
 msgstr ""
-"如果成品运回承包公司，请确保选择 :guilabel:`购买` 路线。此外，选"
-"择 :guilabel:`按订单补货（MTO）`途径，在确认销售订单（SO）后自动为产品创建 |"
-"PO|，除非有足够的库存来满足 |SO|。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:53
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:46
 msgid ""
-"If the finished product is shipped directly to the customer by the "
-"subcontractor, make sure that **only** the :guilabel:`Dropship` route is "
-"selected."
+"Since contractors are only responsible for purchasing and receiving the "
+"final product, they do not need to additionally configure manufacturing lead "
+"times on a |BoM|. Instead, provide only a single *Delivery Lead Time* on the "
+"vendor pricelist that factors in both the subcontractor's manufacturing and "
+"delivery time."
 msgstr ""
-"如果成品由分包商直接运送给客户，请确保 **仅** 选择 :guilabel:`代发货` 路线。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:57
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:54
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:83
 msgid "Configure BoM"
 msgstr "配置 BoM"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:59
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:56
 msgid ""
-"To configure a |BoM| for basic subcontracting, click the :guilabel:`Bill of "
-"Materials` smart button on the product form, and select the desired |BoM|."
+"After specifying the vendor, configure a subcontracting-type |BoM| for the "
+"product. Click the :guilabel:`Bill of Materials` smart button on the product "
+"form. Then, select the desired |BoM| or create a new one."
 msgstr ""
-"要为基本分包配置 |物料清单|，请点击产品表单上的 :guilabel:`物料清单` 智能按"
-"钮，然后选择所需的 |物料清单|。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:62
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:61
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:78
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:88
 msgid ""
@@ -41193,317 +40314,150 @@ msgstr ""
 "或者，导航至 :menuselection:`制造应用程序 --> 产品 --> 物料清单`，然后选择分"
 "包产品的 |BoM| 。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:66
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:82
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:92
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:64
 msgid ""
-"For a full overview of |BoM| configuration, see the :doc:`Bill of materials "
-"<../basic_setup/bill_configuration>` documentation."
+"In the :guilabel:`BoM Type` field, select :guilabel:`Subcontracting`. In the "
+"resulting :guilabel:`Subcontractors` field, add one or more subcontractors."
 msgstr ""
-"有关 |BoM| 配置的完整概述，请参阅 :doc:`物料清单 <../basic_setup/"
-"bill_configuration>` 文档。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:69
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:85
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:95
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:67
 msgid ""
-"In the :guilabel:`BoM Type` field, select the :guilabel:`Subcontracting` "
-"option. Then, add one or more subcontractors in "
-"the :guilabel:`Subcontractors` field that appears below."
+"Because the components and manufacturing are both handled by the "
+"subcontractor, there is no need to list any components in "
+"the :guilabel:`Components` tab of the |BoM|."
 msgstr ""
-"在 :guilabel:`物料清单类型` 字段中，选择 :guilabel:`分包` 选项。然后，在下面"
-"显示的 :guilabel:`分包商` 字段中添加一个或多个分包商。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:None
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:None
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:None
-msgid ""
-"The \"BoM Type\" field on a BoM, configured to manufacture the product using "
-"subcontracting."
-msgstr "在物料清单（BoM）上，BoM 类型字段被配置为使用分包方式制造该产品。"
+msgid "Bill of Materials configuration for subcontracting in Odoo."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:76
-msgid ""
-"Finally, click on the :guilabel:`Miscellaneous` tab. In "
-"the :guilabel:`Manuf. Lead Time` field, enter the number of days it takes "
-"the subcontractor to manufacture the product. This number is factored in "
-"when calculating the product's expected arrival date."
-msgstr ""
-"最后，点击 :guilabel:`杂项` 选项卡。在 :guilabel:`杂项前置时间` 字段中，输入"
-"分包商生产产品所需的天数。在计算产品的预计到达日期时，这个数字将被计算在内。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:81
-msgid ""
-"When using basic subcontracting, there is no need to list components in "
-"the :guilabel:`Components` tab of the |BoM|, since the components required "
-"for manufacturing, and the means by which they are acquired, are handled by "
-"the subcontractor."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:86
 msgid "Basic subcontracting workflow"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:88
-msgid "The basic subcontracting workflow consists of up to four steps:"
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:None
+msgid "Basic subcontracting workflow diagram in Odoo."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:90
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:81
 msgid ""
-"Create a sales order (SO) for the subcontracted product; doing so creates a |"
-"PO| to purchase the product from the subcontractor."
+"The basic subcontracting workflow begins by :ref:`creating a PO "
+"<subcontracting_basic/workflow/create_po>` to purchase the product from the "
+"subcontractor (1)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:92
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:84
 msgid ""
-"Confirm the |PO| created in the previous step, or create a new |PO|; doing "
-"so creates a receipt order or a dropship order."
+"The contractor (YourCompany) then confirms the |PO|, which creates a receipt "
+"to transfer the final product (2). The subcontractor manufactures the "
+"product and delivers it back to the contractor when done."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:94
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:87
 msgid ""
-"Process the receipt once the subcontractor has finished manufacturing the "
-"subcontracted product, and shipped it back to the contracting company, "
-"**OR** process the dropship order to ship the product directly to the "
-"customer."
+"Once the product has been produced and received, the "
+"contractor :ref:`validates the receipt <subcontracting_basic/workflow/"
+"validate_receipt>` (5) to trigger :ref:`inventory moves "
+"<subcontracting_basic/workflow/track-inventory>` from the subcontractor to "
+"the company's stock (3, 4)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:95
+msgid "Create and confirm PO"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:97
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:135
 msgid ""
-"If the workflow was started by creating an |SO|, and the finished product is "
-"not dropshipped to the end customer, process the delivery order once the "
-"product is shipped to the customer."
+"To create a |PO| for the subcontracted product, navigate "
+"to :menuselection:`Purchase app --> Orders --> Purchase Orders`, and "
+"click :guilabel:`New`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:100
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:138
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:138
-msgid ""
-"The specific number of steps depends on the reason that the subcontracted "
-"product is being purchased from the subcontractor."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:103
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:141
-msgid ""
-"If the reason is to fulfill a specific customer order, the process starts "
-"with creating an |SO|, and ends with delivering the product to the customer, "
-"or having the subcontractor dropship it to them."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:106
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:144
-msgid ""
-"If the reason is to increase the quantity of stock on-hand, the process "
-"starts with creating a |PO|, and ends with receiving the product into "
-"inventory."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:110
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:169
-msgid "Create SO"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:112
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:150
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:171
-msgid ""
-"It is only necessary to complete this step if the product is being purchased "
-"from the subcontractor to fulfill a customer need. If the product is being "
-"purchased to increase the quantity of stock on-hand, move on to the next "
-"step."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:116
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:154
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:175
-msgid ""
-"To create a new |SO|, navigate to :menuselection:`Sales app --> Orders --> "
-"Orders`, and click :guilabel:`New`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:119
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:178
-msgid ""
-"Select the customer in the :guilabel:`Customer` drop-down menu. Then, "
-"click :guilabel:`Add a product` on the :guilabel:`Order Lines` tab, select a "
-"subcontracted product in the :guilabel:`Product` drop-down menu, and enter a "
-"quantity in the :guilabel:`Quantity` field."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:123
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:182
-msgid ""
-"Click :guilabel:`Confirm` to confirm the |SO|, at which point "
-"a :guilabel:`Purchase` smart button appears at the top of the page. This "
-"opens the |PO| created to purchase the subcontracted product from the "
-"subcontractor."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:128
-msgid ""
-"An |SO| for the product only creates a |PO| if the *Replenish on Order "
-"(MTO)* route is enabled on the product's form, **and** there is not enough "
-"stock of the product on-hand to fulfill the |SO|."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:131
-msgid ""
-"If there is enough stock on-hand, confirming an |SO| for the product creates "
-"a delivery order instead, because Odoo assumes that the |SO| is fulfilled "
-"using the stock in the warehouse."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:134
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:193
-msgid ""
-"This is not the case for subcontracted products that are dropshipped to the "
-"end customer. In that case, a |PO| is **always** created, even if there is "
-"enough stock on-hand."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:138
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:197
-msgid "Process PO"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:140
-msgid ""
-"If a |PO| was created in the previous step, navigate to it by clicking "
-"the :guilabel:`Purchase` smart button at the top of the |SO|, or by going "
-"to :guilabel:`Purchase app --> Orders --> Purchase Orders`, and selecting "
-"the |PO|. Then, click :guilabel:`Confirm Order` to confirm it, and move on "
-"to the next step."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:145
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:202
-msgid ""
-"If a |PO| was not created in the previous step, do so now by navigating "
-"to :menuselection:`Purchase app --> Orders --> Purchase Orders`, and "
-"clicking :guilabel:`New`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:148
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:205
 msgid ""
 "Begin filling out the |PO| by selecting a subcontractor from "
 "the :guilabel:`Vendor` drop-down menu. In the :guilabel:`Products` tab, "
-"click :guilabel:`Add a product` to create a new product line. Select a "
+"click :guilabel:`Add a product` to create a new product line. Select the "
 "subcontracted product in the :guilabel:`Product` field, and enter the "
-"quantity in the :guilabel:`Quantity` field. Finally, "
-"click :guilabel:`Confirm Order` to confirm the |PO|."
-msgstr ""
-"从 :guilabel:`供应商` 下拉菜单中选择分包商，开始填写 |PO|。在 :guilabel:`产品"
-"` 选项卡中，点击 :guilabel:`添加产品` 创建新产品系列。在 :guilabel:`产品` 字"
-"段中选择分包产品，并在 :guilabel:`数量` 字段中输入数量。最后，点"
-"击 :guilabel:`确认订单`。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:153
-msgid ""
-"When a |PO| is confirmed for a product manufactured using basic "
-"subcontracting, a receipt or dropship order is automatically created, and "
-"can be accessed from the corresponding :guilabel:`Receipt` "
-"or :guilabel:`Dropship` smart button that appears at the top of the |PO|."
-msgstr ""
-"当使用基本分包生产的产品的 |PO| 被确认时，会自动创建收据或交货单，可通过 |"
-"PO| 顶部相应的:guilabel:`收据`或:guilabel:`代发货`智能按钮访问。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:161
-msgid ""
-"A PO for a basic subcontracting product, with a Receipt smart button at the "
-"top of the page."
-msgstr "基本分包产品的 PO，页面顶部有一个智能收据按钮。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:161
-msgid ""
-"PO for a basic subcontracting product, with a Receipt smart button at the "
-"top of the page."
-msgstr "基本分包产品的 PO，页面顶部有一个智能收据按钮。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:164
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:237
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:242
-msgid "Process receipt or dropship order"
-msgstr "处理收据或代发货订单"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:166
-msgid ""
-"Once the subcontractor has finished manufacturing the product, they either "
-"ship it to the contracting company, or dropship it to the end customer, "
-"depending on how the product was :ref:`configured <manufacturing/workflows/"
-"subcontracting_basic/product-config>`."
-msgstr ""
-"分包商完成产品制造后，要么将其运送给承包公司，要么将其交付给最终客户，具体取"
-"决于产品的 :ref:`配置 <manufacturing/workflows/subcontracting_basic/product-"
-"config>`。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:173
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:251
-msgid ""
-"If the subcontractor ships the finished product to the contracting company, "
-"once it has been received, navigate to :menuselection:`Purchase app --> "
-"Orders --> Purchase Orders`, and select the |PO|."
-msgstr ""
-"如果分包商将成品运送到承包公司，收到成品后，导航至 :menuselection:`采购应用程"
-"序 --> 订单 --> 采购订单`，然后选择 |PO|。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:177
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:255
-msgid ""
-"Click the :guilabel:`Receive Products` button at the top of the |PO|, or "
-"the :guilabel:`Receipt` smart button at the top of the page, to open the "
-"receipt. Then, click :guilabel:`Validate` at the top of the receipt to enter "
-"the product into inventory."
-msgstr ""
-"点击 |PO| 顶部的 :guilabel:`接收产品` 按钮，或页面顶部的 :guilabel:`收据` 智"
-"能按钮，打开收据。然后，点击收据顶部的 :guilabel:`验证` 将产品登记入库。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:182
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:260
-msgid "Process dropship order"
-msgstr "处理代发货订单"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:184
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:262
-msgid ""
-"If the subcontractor dropships the product, once they have sent it, navigate "
-"to :menuselection:`Purchase app --> Orders --> Purchase Orders`, and select "
-"the |PO|."
+"quantity in the :guilabel:`Quantity` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:187
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:265
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:105
 msgid ""
-"Select the :guilabel:`Dropship` smart button at the top of the page to open "
-"the dropship order, and click :guilabel:`Validate` at the top of the order "
-"to confirm that the product has been sent to the customer."
+"After adding the product, the :guilabel:`Expected Arrival` field is updated "
+"with the finished product's expected delivery date, as configured earlier "
+"with the vendor's *Delivery Lead Time*."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:192
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:254
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:270
-msgid "Process delivery order"
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:108
+msgid ""
+"Finally, click :guilabel:`Confirm Order` to confirm the |PO|. A receipt is "
+"automatically created, and a :guilabel:`Receipt` smart button appears at the "
+"top of the form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:194
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:256
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:116
 msgid ""
-"If the subcontracting workflow was started by a customer |SO|, and the "
-"finished product was **not** dropshipped to the customer, but rather "
-"delivered to the contracting company, it is necessary to ship the product to "
-"the customer, and process the delivery order."
+"After the order is confirmed, the subcontractor manufactures the product and "
+"delivers the finished good back to the contracting company."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:198
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:119
 msgid ""
-"Once the product has been shipped to the customer, navigate to "
-"the :menuselection:`Sales` app, and select the |SO|. Select "
-"the :guilabel:`Delivery` smart button at the top of the page to open the "
-"delivery order, and click :guilabel:`Validate` on the order to confirm that "
-"the product has been shipped."
+"To receive the finished product from the subcontractor, click "
+"the :guilabel:`Receive Products` button on the |PO|, or click "
+"the :guilabel:`Receipt` smart button at the top of the page. Then, "
+"click :guilabel:`Validate` to enter the incoming shipment into inventory."
 msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:124
+msgid ""
+"If :doc:`multi-step inventory flows <../../inventory/shipping_receiving/"
+"daily_operations>` are enabled, additional transfers must be validated to "
+"enter the incoming product into stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:130
+msgid "Track inventory moves"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:132
+msgid ""
+"After validating a receipt, Odoo automatically generates inventory moves to "
+"track the movement of subcontracted products between locations. To view "
+"these inventory moves, navigate to :menuselection:`Inventory app --> "
+"Reporting --> Moves History`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:136
+msgid ""
+"To track inventory movement in subcontracting, Odoo sends any product "
+"components to a dedicated *Subcontracting Location*. A :ref:`virtual "
+"location <inventory/warehouses_storage/location-type>` called *Production* "
+"then consumes the components and produces the finished good. Once produced, "
+"the good then moves back to the *Subcontracting Location* before finally "
+"entering the contractor's stock when the receipt is validated."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:None
+msgid "Moves History page to see subcontracting moves in Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:146
+msgid ""
+"Because no components are sent in basic subcontracting, there is no movement "
+"from the *Subcontracting Location* to the *Production* location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:12
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:10
+msgid ""
+"In manufacturing, subcontracting is the process of a company engaging a "
+"third-party manufacturer, or subcontractor, to manufacture products that are "
+"then sold by the contracting company."
+msgstr ""
+"在制造中，分包是指公司聘请第三方制造商或分包商生产产品，然后由承包公司销售的"
+"过程。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:15
 msgid ""
@@ -41622,6 +40576,32 @@ msgid ""
 "select the |BoM|."
 msgstr ""
 
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:82
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:92
+msgid ""
+"For a full overview of |BoM| configuration, see the :doc:`Bill of materials "
+"<../basic_setup/bill_configuration>` documentation."
+msgstr ""
+"有关 |BoM| 配置的完整概述，请参阅 :doc:`物料清单 <../basic_setup/"
+"bill_configuration>` 文档。"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:85
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:95
+msgid ""
+"In the :guilabel:`BoM Type` field, select the :guilabel:`Subcontracting` "
+"option. Then, add one or more subcontractors in "
+"the :guilabel:`Subcontractors` field that appears below."
+msgstr ""
+"在 :guilabel:`物料清单类型` 字段中，选择 :guilabel:`分包` 选项。然后，在下面"
+"显示的 :guilabel:`分包商` 字段中添加一个或多个分包商。"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:None
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:None
+msgid ""
+"The \"BoM Type\" field on a BoM, configured to manufacture the product using "
+"subcontracting."
+msgstr "在物料清单（BoM）上，BoM 类型字段被配置为使用分包方式制造该产品。"
+
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:92
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:102
 msgid ""
@@ -41721,6 +40701,13 @@ msgid ""
 "product has been shipped to the customer."
 msgstr ""
 
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:138
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:138
+msgid ""
+"The specific number of steps depends on the reason that the subcontracted "
+"product is being purchased from the subcontractor."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:141
 msgid ""
 "If the reason is to fulfill a specific customer order, the process starts "
@@ -41736,6 +40723,22 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:148
 msgid "Create an SO"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:150
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:171
+msgid ""
+"It is only necessary to complete this step if the product is being purchased "
+"from the subcontractor to fulfill a customer need. If the product is being "
+"purchased to increase the quantity of stock on-hand, move on to the next "
+"step."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:154
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:175
+msgid ""
+"To create a new |SO|, navigate to :menuselection:`Sales app --> Orders --> "
+"Orders`, and click :guilabel:`New`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:157
@@ -41917,6 +40920,11 @@ msgstr ""
 "点击任一按钮都会打开*代发货分包商*订单。点击订单顶部的 :guilabel:`验证` 按"
 "钮，确认分包商已收到组件。"
 
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:237
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:242
+msgid "Process receipt or dropship order"
+msgstr "处理收据或代发货订单"
+
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:239
 msgid ""
 "Once the subcontractor has manufactured the finished product, navigate "
@@ -41956,6 +40964,19 @@ msgid ""
 msgstr ""
 "如果分包产品需要直运，请选择页面顶部的 :guilabel:`代发货` 按钮以打开直运订"
 "单，并在分包商将产品发送给客户后点击 :guilabel:`验证`。"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:254
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:270
+msgid "Process delivery order"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:256
+msgid ""
+"If the subcontracting workflow was started by a customer |SO|, and the "
+"finished product was **not** dropshipped to the customer, but rather "
+"delivered to the contracting company, it is necessary to ship the product to "
+"the customer, and process the delivery order."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:260
 msgid ""
@@ -42162,6 +41183,27 @@ msgstr ""
 "在分包商完成分包产品的生产，并将其运回承包公司后，处理收据 **或** 处理分包订"
 "单，将产品直接运给客户。"
 
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:135
+msgid ""
+"If the workflow was started by creating an |SO|, and the finished product is "
+"not dropshipped to the end customer, process the delivery order once the "
+"product is shipped to the customer."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:141
+msgid ""
+"If the reason is to fulfill a specific customer order, the process starts "
+"with creating an |SO|, and ends with delivering the product to the customer, "
+"or having the subcontractor dropship it to them."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:144
+msgid ""
+"If the reason is to increase the quantity of stock on-hand, the process "
+"starts with creating a |PO|, and ends with receiving the product into "
+"inventory."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:149
 msgid ""
 "While the *Resupply Subcontractor on Order* route can be used to "
@@ -42210,6 +41252,26 @@ msgstr ""
 "最后，点击 :guilabel:`标记为待办事项` 注册订单。组件发送给分包商后，点"
 "击 :guilabel:`验证` 确认订单已发送。"
 
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:169
+msgid "Create SO"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:178
+msgid ""
+"Select the customer in the :guilabel:`Customer` drop-down menu. Then, "
+"click :guilabel:`Add a product` on the :guilabel:`Order Lines` tab, select a "
+"subcontracted product in the :guilabel:`Product` drop-down menu, and enter a "
+"quantity in the :guilabel:`Quantity` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:182
+msgid ""
+"Click :guilabel:`Confirm` to confirm the |SO|, at which point "
+"a :guilabel:`Purchase` smart button appears at the top of the page. This "
+"opens the |PO| created to purchase the subcontracted product from the "
+"subcontractor."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:187
 msgid ""
 "An |SO| for the product only creates a |PO| if the *Replenish on Order "
@@ -42228,6 +41290,17 @@ msgstr ""
 "如果现有足够的库存，则确认产品的 |SO| 而不是创建交货单，因为 Odoo 假定 |SO| "
 "会使用仓库中的库存来完成。"
 
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:193
+msgid ""
+"This is not the case for subcontracted products that are dropshipped to the "
+"end customer. In that case, a |PO| is **always** created, even if there is "
+"enough stock on-hand."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:197
+msgid "Process PO"
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:199
 msgid ""
 "If a |PO| was created in the previous step, navigate to :guilabel:`Purchase "
@@ -42236,6 +41309,27 @@ msgid ""
 msgstr ""
 "如果在上一步中创建了|PO|，则导航至:guilabel:`采购应用程序 --> 订单 --> 采购订"
 "单`，并选择 |PO|。然后，点击 :guilabel:`确认订单`。"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:202
+msgid ""
+"If a |PO| was not created in the previous step, do so now by navigating "
+"to :menuselection:`Purchase app --> Orders --> Purchase Orders`, and "
+"clicking :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:205
+msgid ""
+"Begin filling out the |PO| by selecting a subcontractor from "
+"the :guilabel:`Vendor` drop-down menu. In the :guilabel:`Products` tab, "
+"click :guilabel:`Add a product` to create a new product line. Select a "
+"subcontracted product in the :guilabel:`Product` field, and enter the "
+"quantity in the :guilabel:`Quantity` field. Finally, "
+"click :guilabel:`Confirm Order` to confirm the |PO|."
+msgstr ""
+"从 :guilabel:`供应商` 下拉菜单中选择分包商，开始填写 |PO|。在 :guilabel:`产品"
+"` 选项卡中，点击 :guilabel:`添加产品` 创建新产品系列。在 :guilabel:`产品` 字"
+"段中选择分包产品，并在 :guilabel:`数量` 字段中输入数量。最后，点"
+"击 :guilabel:`确认订单`。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:210
 msgid ""
@@ -42319,6 +41413,43 @@ msgstr ""
 "分包商完成产品制造后，要么将其运送给承包公司，要么代发货给最终客户，具体取决"
 "于产品的 :ref:`配置 <manufacturing/workflows/subcontracting_resupply/product-"
 "config>`。"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:251
+msgid ""
+"If the subcontractor ships the finished product to the contracting company, "
+"once it has been received, navigate to :menuselection:`Purchase app --> "
+"Orders --> Purchase Orders`, and select the |PO|."
+msgstr ""
+"如果分包商将成品运送到承包公司，收到成品后，导航至 :menuselection:`采购应用程"
+"序 --> 订单 --> 采购订单`，然后选择 |PO|。"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:255
+msgid ""
+"Click the :guilabel:`Receive Products` button at the top of the |PO|, or "
+"the :guilabel:`Receipt` smart button at the top of the page, to open the "
+"receipt. Then, click :guilabel:`Validate` at the top of the receipt to enter "
+"the product into inventory."
+msgstr ""
+"点击 |PO| 顶部的 :guilabel:`接收产品` 按钮，或页面顶部的 :guilabel:`收据` 智"
+"能按钮，打开收据。然后，点击收据顶部的 :guilabel:`验证` 将产品登记入库。"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:260
+msgid "Process dropship order"
+msgstr "处理代发货订单"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:262
+msgid ""
+"If the subcontractor dropships the product, once they have sent it, navigate "
+"to :menuselection:`Purchase app --> Orders --> Purchase Orders`, and select "
+"the |PO|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:265
+msgid ""
+"Select the :guilabel:`Dropship` smart button at the top of the page to open "
+"the dropship order, and click :guilabel:`Validate` at the top of the order "
+"to confirm that the product has been sent to the customer."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:272
 msgid ""
@@ -53176,6 +52307,767 @@ msgstr "处理完交货并将产品退还给客户后，点击 :guilabel:`验证
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "DHL is one of the shipping carriers for which a *shipping connector* is "
+#~ "available in Odoo's **Inventory** app. By enabling the shipping connector "
+#~ "in the app's settings, and configuring at least one *shipping method*, "
+#~ "the process of :doc:`calculating shipping rates <../setup_configuration>` "
+#~ "and :doc:`generating shipping labels <labels>` is greatly simplified."
+#~ msgstr ""
+#~ "DHL 是 Odoo 的 **库存** 应用程序中提供*运输连接器*的运输承运商之一。通过在"
+#~ "应用程序的设置中启用运输连接器，并配置至少一种 *运输方法*，:doc:`计算运费 "
+#~ "<../setup_configuration>` 和 :doc:`生成运输标签<labels>`的过程大大简化。"
+
+#~ msgid ""
+#~ "While a variety of shipping connectors are available for different "
+#~ "carriers, this documentation details the configuration settings specific "
+#~ "to integrating DHL. For instructions on configuring the integration "
+#~ "settings common to all shippers, see the documentation on :doc:`third-"
+#~ "party shippers <third_party_shipper>`."
+#~ msgstr ""
+#~ "虽然系统为不同物流商提供了多种运输连接器，此说明文档专门详述 DHL 的整合配"
+#~ "置设置。如需配置所有物流商通用集成设置的指引，请参阅：:doc:`第三方物流商"
+#~ "<third_party_shipper>`。"
+
+#~ msgid "Enable DHL shipping connector"
+#~ msgstr "启用 DHL 运输连接器"
+
+#~ msgid ""
+#~ "Scroll down to the :guilabel:`Shipping Connectors` section, and tick the "
+#~ "checkbox next to :guilabel:`DHL Express Connector`. Finally, "
+#~ "click :guilabel:`Save` to apply the changes."
+#~ msgstr ""
+#~ "向下滚动至 :guilabel:`运输连接器` 部分，勾选 :guilabel:`DHL 快递连接器` 旁"
+#~ "的复选框，最后点击 :guilabel:`保存` 应用更改。"
+
+#~ msgid "Configure DHL shipping method"
+#~ msgstr "配置 DHL 运输方式"
+
+#~ msgid ""
+#~ "After enabling the shipping connector for DHL, shipping methods can be "
+#~ "configured for the carrier. Once configured, a shipping method can be "
+#~ "added as a line item to sales orders (SOs), which allows for automatic "
+#~ "computation of shipping rates, and generation of shipping labels."
+#~ msgstr ""
+#~ "启用 DHL 运输连接器后，即可为该物流商配置运输方式。配置完成后，可将运输方"
+#~ "式作为行项添加至销售订单（SO），实现运费自动计算和运单自动生成功能。"
+
+#~ msgid ""
+#~ "To create a new DHL shipping method, navigate "
+#~ "to :menuselection:`Inventory app --> Configuration --> Settings`. In "
+#~ "the :guilabel:`Shipping Connectors` section, select the :guilabel:`DHL "
+#~ "Shipping Methods` link below the :guilabel:`DHL Express Connector` "
+#~ "checkbox."
+#~ msgstr ""
+#~ "要创建新的 DHL 运输方式，请导航至 :menuselection:`库存应用 --> 配置 --> 设"
+#~ "置`。在 :guilabel:`运输连接器` 部分，选择 :guilabel:`DHL 运输连接器` 复选"
+#~ "框下方的 :guilabel:`DHL 运输方式` 链接。"
+
+#~ msgid ""
+#~ "It is also possible to see existing shipping methods for every carrier, "
+#~ "by navigating to :menuselection:`Inventory app --> Configuration --> "
+#~ "Shipping Methods`."
+#~ msgstr ""
+#~ "您也可以通过导航至 :menuselection:`库存应用 --> 配置 --> 运输方式` 查看所"
+#~ "有物流商的现有运输方式。"
+
+#~ msgid ""
+#~ "Click :guilabel:`New` to open a blank shipping method form. If a shipping "
+#~ "method has already been created, it can be selected from this screen."
+#~ msgstr ""
+#~ "点击 :guilabel:`新建` 打开空白运输方式表单。若已有运输方式创建完成，也可在"
+#~ "此界面进行选择。"
+
+#~ msgid ""
+#~ "In the :guilabel:`Provider` drop-down menu, select the :guilabel:`DHL` "
+#~ "option. After doing so, a new :guilabel:`DHL Configuration` tab appears "
+#~ "at the bottom of the form."
+#~ msgstr ""
+#~ "在 :guilabel:`服务商` 下拉菜单中选择 :guilabel:`DHL` 选项。选择后，表单底"
+#~ "部将显示新的 :guilabel:`DHL 配置` 标签页。"
+
+#~ msgid ""
+#~ "All other fields in this section are identical on the shipping method "
+#~ "forms for each shipping carrier. See the documentation on :doc:`third-"
+#~ "party shippers <third_party_shipper>` for instructions on how to properly "
+#~ "configure them."
+#~ msgstr ""
+#~ "本部分其他字段与各物流商的运输方式表单完全一致。具体配置方法请参阅 :doc:`"
+#~ "第三方物流商<third_party_shipper>` 文档。"
+
+#~ msgid "DHL Configuration"
+#~ msgstr "DHL配置"
+
+#~ msgid ""
+#~ "The :guilabel:`DHL Configuration` tab on the shipping method form is used "
+#~ "to connect the user's DHL account to Odoo, and configure the shipping "
+#~ "method's details."
+#~ msgstr ""
+#~ "运输方式表单中的 :guilabel:`DHL 配置` 标签页用于将用户的 DHL 账户与 Odoo "
+#~ "对接，并配置运输方式详细信息。"
+
+#~ msgid ":guilabel:`Region`: the region in which the shipping method is used."
+#~ msgstr ":guilabel:`区域`：该运输方式的适用地区。"
+
+#~ msgid ""
+#~ ":guilabel:`DHL Package Type`: the type of DHL package used for delivery "
+#~ "(e.g. DHL Box)."
+#~ msgstr ":guilabel:`DHL 包裹类型`：用于配送的 DHL 包装类型（如DHL箱子）"
+
+#~ msgid ""
+#~ ":guilabel:`Label Template`: the paper size used to print shipping labels."
+#~ msgstr ":guilabel:`标签模板`：打印运输标签的纸张尺寸。"
+
+#~ msgid "Basic subcontracting lead times"
+#~ msgstr "基本分包周转时间"
+
+#~ msgid ""
+#~ "In Odoo, lead times are used to predict how long it takes to complete a "
+#~ "certain action. For example, a *delivery lead time* can be set for a "
+#~ "purchased product, which specifies the number of days it usually takes "
+#~ "for the product's vendor to delivery the product to the purchasing "
+#~ "company."
+#~ msgstr ""
+#~ "在 Odoo 中，交付周期用于预测完成某项操作所需的时间。例如，可以为购买的产品"
+#~ "设置*送货所需时间*，规定产品供应商将产品交付给购买公司通常需要的天数。"
+
+#~ msgid ""
+#~ "For subcontracted products specifically, delivery lead times can be "
+#~ "configured to take into account the amount of time required for the "
+#~ "subcontractor to manufacture a product. Doing so allows the contracting "
+#~ "company to better predict the delivery dates of subcontracted products."
+#~ msgstr ""
+#~ "具体就分包产品而言，可以根据分包商生产产品所需的时间来配置交付周期。这样，"
+#~ "承包公司就能更好地预测分包产品的交货日期。"
+
+#~ msgid ""
+#~ "Like all lead times in Odoo, lead times for subcontracted products are "
+#~ "only an estimate, and are based on how long actions are *expected* to "
+#~ "take."
+#~ msgstr ""
+#~ "与 Odoo 中的所有交付周期一样，分包产品的交付周期也只是一个估计值，根据*预"
+#~ "计*的行动时间计算而来。"
+
+#~ msgid ""
+#~ "Unforeseen circumstances can impact the completion of these actions, "
+#~ "which means that lead times should not be viewed as guarantees."
+#~ msgstr "不可预见的情况可能会影响这些行动的完成，因此所需时间仅可视为参考。"
+
+#~ msgid ""
+#~ "When using the :doc:`basic subcontracting <subcontracting_basic>` "
+#~ "workflow to manufacture a product, a company is not responsible for "
+#~ "supplying the subcontractor with the necessary components. This means "
+#~ "that the only factors affecting the delivery date of a product are the "
+#~ "amount of time it takes the subcontractor to manufacture and deliver it."
+#~ msgstr ""
+#~ "使用 :doc:`基本分包<subcontracting_basic>` 工作流程制造产品时，公司不负责"
+#~ "向分包商提供必要的组件。这意味着影响产品交付日期的唯一因素是分包商制造和交"
+#~ "付产品所需的时间。"
+
+#~ msgid ""
+#~ "By assigning a product's subcontractor a delivery lead time that "
+#~ "considers both of these factors, the *Expected Arrival* date displayed on "
+#~ "purchase orders (POs) for the product more accurately reflects the amount "
+#~ "of time required for both manufacturing and delivery."
+#~ msgstr ""
+#~ "通过为产品的分包商分配一个考虑到上述两个因素的送货准备时间，产品采购订单"
+#~ "（PO）上显示的*预计到达*日期就能更准确地反映生产和送货所需的时间。"
+
+#~ msgid "Product delivery lead time"
+#~ msgstr "产品交付周期"
+
+#~ msgid ""
+#~ "To set a delivery lead time for a product's subcontractor, navigate "
+#~ "to :menuselection:`Inventory app --> Products --> Products`, and select a "
+#~ "subcontracted product."
+#~ msgstr ""
+#~ "要为产品的分包商设置送货所需时间，请导航至 :menuselection:`库存应用程序 --"
+#~ "> 产品 --> 产品`，然后选择分包产品。"
+
+#~ msgid ""
+#~ "Then, select the :guilabel:`Purchase` tab on the product's page. If the "
+#~ "subcontractor has not already been added as a vendor, do so now by "
+#~ "clicking :guilabel:`Add a line`, and selecting the subcontractor in "
+#~ "the :guilabel:`Vendor` column."
+#~ msgstr ""
+#~ "然后，选择产品页面上的 :guilabel:`采购` 选项卡。如果分包商尚未添加为供应"
+#~ "商，请点击 :guilabel:`添加行`，然后在 :guilabel:`供应商` 列中选择分包商。"
+
+#~ msgid ""
+#~ "Once the subcontractor has been added, enter the number of days it takes "
+#~ "them to manufacture and deliver the product, in the :guilabel:`Delivery "
+#~ "Lead Time` column."
+#~ msgstr ""
+#~ "添加分包商后，在 :guilabel:`送货所需时间` 栏中输入生产和交付产品所需的天"
+#~ "数。"
+
+#~ msgid ""
+#~ "The Delivery Lead Time field for a subcontractor, on the Purchase tab of "
+#~ "a product page."
+#~ msgstr "产品页面 “采购” 选项卡上分包商的交货所需时间字段。"
+
+#~ msgid ""
+#~ "Multiple subcontractors can be added to the :guilabel:`Purchase` tab on a "
+#~ "product's page, and a different :guilabel:`Delivery Lead Time` can be set "
+#~ "for each."
+#~ msgstr ""
+#~ "可在产品页面的 :guilabel:`采购` 标签中添加多个分包商，并为每个分包商设置不"
+#~ "同的 :guilabel:`送货所需时间`。"
+
+#~ msgid "Lead time workflow"
+#~ msgstr "送货时间工作流程"
+
+#~ msgid ""
+#~ "After setting a delivery lead time for a product's vendor, create an |"
+#~ "RfQ| by navigating to :menuselection:`Purchase app --> Orders --> "
+#~ "Purchase Orders`, and clicking :guilabel:`New`."
+#~ msgstr ""
+#~ "为产品供应商设置送货所需时间后，通过导航至 :menuselection:`采购应用程序 --"
+#~ "> 订单 --> 采购订单`，并点击 :guilabel:`新建`，创建一个 |RfQ|。"
+
+#~ msgid ""
+#~ "Specify the subcontractor in the :guilabel:`Vendor` field. Then, add the "
+#~ "product in the :guilabel:`Products` tab by clicking :guilabel:`Add a "
+#~ "product`, selecting the product in the :guilabel:`Product` column, and "
+#~ "adding a quantity in the :guilabel:`Quantity` column."
+#~ msgstr ""
+#~ "在 :guilabel:`供应商` 字段中指定分包商。然后，在 :guilabel:`产品` 选项卡中"
+#~ "点击:guilabel:`添加产品`，在 :guilabel:`产品`栏中选择产品，并"
+#~ "在 :guilabel:`数量`栏中添加数量。"
+
+#~ msgid ""
+#~ "Once a product has been added, the :guilabel:`Expected Arrival` field on "
+#~ "the |RfQ| auto-populates with a date that reflects the vendor's delivery "
+#~ "lead time, as specified on the product's page."
+#~ msgstr ""
+#~ "添加产品后，|RfQ| 上的 :guilabel:`预计抵达时间` 字段会自动填充一个日期，该"
+#~ "日期反映了产品页面上指定的供应商送货所需时间。"
+
+#~ msgid ""
+#~ "If the date needs to be adjusted, click on the :guilabel:`Expected "
+#~ "Arrival` field to open a calendar popover, and select the desired date. "
+#~ "Make sure not to choose a date sooner than the one that was auto-"
+#~ "populated, unless the subcontractor has confirmed that they are able to "
+#~ "deliver the product by that date."
+#~ msgstr ""
+#~ "如果需要调整日期，请点击 :guilabel:`预计到达` 字段打开日历弹出窗口，并选择"
+#~ "所需的日期。确保选择的日期不要早于自动填充的日期，除非分包商已确认他们能在"
+#~ "该日期前交付产品。"
+
+#~ msgid ""
+#~ "Finally, click :guilabel:`Confirm Order` on the |RfQ| to turn it into a |"
+#~ "PO|. At this point, the subcontractor should begin manufacturing the "
+#~ "subcontracted product, before delivering it to the contracting company."
+#~ msgstr ""
+#~ "最后，点击 |RfQ| 上的 :guilabel:`确认订单` 将其转化为 |PO|。此时，分包商应"
+#~ "开始生产分包产品，然后交付给承包公司。"
+
+#~ msgid ""
+#~ "Bike retailer *Mike's Bikes* works with a subcontractor — *Bike Friends* "
+#~ "— to produce units of their *Tricycle* product."
+#~ msgstr ""
+#~ "自行车零售商 *Mike's Bikes* 与分包商 *Bike Friends* 合作生产其 *Tricycle* "
+#~ "产品。"
+
+#~ msgid ""
+#~ "On average, Bike Friends requires three days to manufacture a tricycle, "
+#~ "plus an additional two days to deliver it to Mike's Bikes."
+#~ msgstr ""
+#~ "Bike Friends 生产一辆三轮车平均需要 3 天时间，另外还需要 2 天时间将其交付"
+#~ "给 Mike's Bikes。"
+
+#~ msgid ""
+#~ "As a result, Mike's Bikes sets a delivery lead time of five days for "
+#~ "tricycles manufactured by Bike Friends: three days for manufacturing, "
+#~ "plus two days for delivery."
+#~ msgstr ""
+#~ "因此，Mike's Bikes 为 Bike Friends 生产的三轮车规定了五天的交货期：三天生"
+#~ "产，两天交货。"
+
+#~ msgid ""
+#~ "On May 3rd, Mike's Bikes confirms a |PO| to purchase one tricycle from "
+#~ "Bike Friends."
+#~ msgstr "5 月 3 日，Mike's Bikes 确认从 Bike Friends 购买一辆三轮车。"
+
+#~ msgid ""
+#~ "The :guilabel:`Expected Arrival` date listed on the |PO| is May 8th, five "
+#~ "days after the :guilabel:`Confirmation Date`."
+#~ msgstr ""
+#~ "|PO|上列出的 :guilabel:`预计抵达时间` 日期是 5 月 8 日，即 :guilabel:`确认"
+#~ "日期` 之后五天。"
+
+#~ msgid "The Expected Arrival date on a PO for a subcontracted product."
+#~ msgstr "分包产品的采购订单上的预计到达日期。"
+
+#~ msgid ""
+#~ "Bike Friends begins manufacturing the tricycle on May 3rd — the day that "
+#~ "the |PO| is confirmed — and finishes on May 6th, three days later."
+#~ msgstr ""
+#~ "Bike Friends 于 5 月 3 日（PO 确定当天）开始生产 tricycle ，并于三天后的 "
+#~ "5 月 6 日完成生产。"
+
+#~ msgid ""
+#~ "The tricycle is then shipped to Mike's Bikes the same day, and they "
+#~ "receive it on May 8th, two days later."
+#~ msgstr ""
+#~ "然后，tricycle 在同一天被运到 Mike's Bikes，他们在两天后的 5 月 8 日收到了"
+#~ "三轮车。"
+
+#~ msgid "Dropship subcontracting lead times"
+#~ msgstr "代发货分包所需时间"
+
+#~ msgid ""
+#~ "In Odoo, lead times are used to predict how long it takes to complete a "
+#~ "certain action. For example, a *delivery lead time* can be set for a "
+#~ "purchased product, which specifies the number of days it usually takes "
+#~ "for the product's vendor to deliver the product to the purchasing company."
+#~ msgstr ""
+#~ "在 Odoo 中，交付周期用于预测完成某项操作所需的时间。例如，可以为购买的产品"
+#~ "设置*交货所需时间*，规定产品供应商将产品交付给购买公司通常需要的天数。"
+
+#~ msgid ""
+#~ "Certain subcontracted products require the contracting company to supply "
+#~ "the subcontractor with manufacturing components. In this case, a "
+#~ "*manufacturing lead time* can be used, in addition to the delivery lead "
+#~ "time, to generate the date on which the subcontractor must receive the "
+#~ "required components, in order to manufacture the product and deliver it "
+#~ "on time."
+#~ msgstr ""
+#~ "某些分包产品要求承包公司向分包商提供制造组件。在这种情况下，除了交货所需时"
+#~ "间外，还可以使用*制造所需时间*来生成分包商必须收到所需组件的日期，以便制造"
+#~ "产品并按时交货。"
+
+#~ msgid ""
+#~ "In cases where components are dropshipped to the subcontractor, an "
+#~ "additional delivery lead time can be set for each component. This should "
+#~ "be set to the amount of time it takes the vendor to deliver components to "
+#~ "the subcontractor."
+#~ msgstr ""
+#~ "如果组件是直接交付给分包商的，则可为每个组件设置额外的交付周期。该时间应设"
+#~ "置为供应商向分包商交付组件所需的时间。"
+
+#~ msgid ""
+#~ "Once a delivery lead time has been set on a component, dropship orders "
+#~ "for the component display the date by which the order must be confirmed, "
+#~ "so that it can be dropshipped to the subcontractor by the date on which "
+#~ "manufacturing must begin."
+#~ msgstr ""
+#~ "一旦设定了部件的交付周期，该部件的代发货订单就会显示必须确认订单的日期，以"
+#~ "便在必须开始生产的日期前将其空运给分包商。"
+
+#~ msgid ""
+#~ "When using the :doc:`Dropship Subcontractor on Order "
+#~ "<subcontracting_dropship>` route, a company is responsible for purchasing "
+#~ "the necessary components from a vendor, and having them dropshipped "
+#~ "directly to the subcontractor."
+#~ msgstr ""
+#~ "使用 :doc:`分包商按订单代发货<subcontracting_dropship>` 路线时，公司负责从"
+#~ "供应商处购买必要的组件，并将其直接交付给分包商。"
+
+#~ msgid ""
+#~ "This means that, in addition to the amount of time it takes the "
+#~ "subcontractor to manufacture and deliver the product, it is also "
+#~ "necessary to consider how long it takes the component vendor to dropship "
+#~ "the components to the subcontractor."
+#~ msgstr ""
+#~ "这意味着，除了分包商制造和交付产品所需的时间外，还必须考虑部件供应商将部件"
+#~ "空运给分包商所需的时间。"
+
+#~ msgid ""
+#~ "By assigning a product's subcontractor a *delivery lead time*, specifying "
+#~ "a *manufacturing lead time* on the product's BoM, and assigning the "
+#~ "vendor of the components an additional *delivery lead time*, *Dropship "
+#~ "Subcontractor* orders for the product's components display the deadline "
+#~ "for confirming a dropship order to send the components to the "
+#~ "subcontractor."
+#~ msgstr ""
+#~ "通过为产品的分包商指定*交货所需时间*，在产品的 BoM 上指定*制造所需时间*，"
+#~ "并为组件供应商指定额外的*交货所需时间*，产品组件的*代发货分包商*订单就会显"
+#~ "示确认将组件发送给分包商的分包订单的截止日期。"
+
+#~ msgid ""
+#~ "To set a delivery lead time for a product's subcontractor, navigate "
+#~ "to :guilabel:`Inventory app --> Products --> Products`, and select a "
+#~ "subcontracted product."
+#~ msgstr ""
+#~ "要为产品的分包商设置送货所需时间，请导航至 :guilabel:` 库存应用程序 --> 产"
+#~ "品 --> 产品` 并选择分包产品。"
+
+#~ msgid "Product manufacturing lead time"
+#~ msgstr "产品制造所需时间"
+
+#~ msgid ""
+#~ "Next, navigate to the product's |BoM| by clicking the :guilabel:`Bill of "
+#~ "Materials` smart button at the top of the product's page. Then, select a "
+#~ "BoM from the list."
+#~ msgstr ""
+#~ "然后，点击产品页面顶部的 :guilabel:`物料清单` 智能按钮，导航至产品的 |"
+#~ "BoM| 。然后，从列表中选择一个物料清单。"
+
+#~ msgid ""
+#~ "On the |BoM|, select the :guilabel:`Miscellaneous` tab. In "
+#~ "the :guilabel:`Manuf. Lead Time` field, enter the same number of days "
+#~ "that was entered in the :guilabel:`Delivery Lead Time` field of the |"
+#~ "BoM|'s product."
+#~ msgstr ""
+#~ "在 |BoM| 中，选择 :guilabel:`杂项` 选项卡。在 :guilabel:`制造所需时间` 字"
+#~ "段中，输入与 |BoM| 产品的:guilabel:`交货所需时间` 字段中相同的天数。"
+
+#~ msgid "The Manuf. Lead Time field on a product's BoM."
+#~ msgstr "产品物料清单上的制造所需时间字段。"
+
+#~ msgid ""
+#~ "While not all of these days are actually used for manufacturing by the "
+#~ "subcontractor, setting the same number of days in each field tells Odoo "
+#~ "that the subcontractor must receive the components and begin production "
+#~ "by the start of the product's delivery lead time. This gives the "
+#~ "subcontractor enough time to both manufacture and deliver the product."
+#~ msgstr ""
+#~ "虽然分包商实际上并没有使用所有这些天数进行生产，但在每个字段中设置相同的天"
+#~ "数会告诉 Odoo，分包商必须在产品交付周期开始前收到组件，并开始生产。这样分"
+#~ "包商就有足够的时间生产和交付产品。"
+
+#~ msgid "Component delivery lead time"
+#~ msgstr "部件交付周期"
+
+#~ msgid ""
+#~ "From the product's BoM, navigate to each component by clicking on the "
+#~ "component in the :guilabel:`Components` tab, and then clicking "
+#~ "the :icon:`oi-arrow-right` :guilabel:`(right arrow)` button to the right "
+#~ "of the component."
+#~ msgstr ""
+#~ "在产品的 BoM 中，通过点击 :guilabel:`产品` 选项卡中的组件，然后点击组件右"
+#~ "侧的 :icon:`oi-arrow-right`（右箭头）`按钮，导航到每个组件。"
+
+#~ msgid ""
+#~ "On the product page for each component, select the :guilabel:`Purchase` "
+#~ "tab. If the vendor has not already been added, do so now by "
+#~ "clicking :guilabel:`Add a line`, and selecting the subcontractor in "
+#~ "the :guilabel:`Vendor` column."
+#~ msgstr ""
+#~ "在每个组件的产品页面上，选择 :guilabel:`采购` 选项卡。如果尚未添加供应商，"
+#~ "请点击 :guilabel:`添加行`，并在 :guilabel:`供应商` 列中选择分包商。"
+
+#~ msgid ""
+#~ "Once the vendor has been added, enter the number of days it takes them to "
+#~ "dropship the product to the subcontractor, in the :guilabel:`Delivery "
+#~ "Lead Time` column."
+#~ msgstr ""
+#~ "添加供应商后，在 :guilabel:`送货所需时间` 栏中输入他们向分包商交付产品所需"
+#~ "的天数。"
+
+#~ msgid "Dropship subcontracting workflow"
+#~ msgstr "代发货分包工作流程"
+
+#~ msgid ""
+#~ "Create a request for quotation (RfQ) for the product by navigating "
+#~ "to :menuselection:`Purchase app --> Orders --> Requests for Quotation`, "
+#~ "and clicking :guilabel:`New`."
+#~ msgstr ""
+#~ "通过导航至 :menuselection:`采购应用程序 --> 订单 --> 报价请求`，并点"
+#~ "击 :guilabel:`新建`，为产品创建询价单（RfQ）。"
+
+#~ msgid ""
+#~ "Specify the subcontractor in :guilabel:`Vendor` field. Then, add the "
+#~ "product in the :guilabel:`Products` tab by clicking :guilabel:`Add a "
+#~ "product`, selecting the product in the :guilabel:`Product` column, and "
+#~ "specifying a quantity in the :guilabel:`Quantity` column."
+#~ msgstr ""
+#~ "在 :guilabel:`供应商` 字段中指定分包商。然后，通过点击 :guilabel:`添加产品"
+#~ "`，在 :guilabel:`产品` 列中选择产品，并在 :guilabel:`数量` 列中指定数量，"
+#~ "在 :guilabel:`产品` 选项卡中添加产品。"
+
+#~ msgid ""
+#~ "In the :guilabel:`Expected Arrival` field, enter a date that provides "
+#~ "enough time for the component vendor to dropship the components, and the "
+#~ "subcontractor to manufacture and deliver the product."
+#~ msgstr ""
+#~ "在 :guilabel:`预计抵达时间` 字段中，输入一个日期，使组件供应商有足够的时间"
+#~ "空运组件，分包商有足够的时间制造和交付产品。"
+
+#~ msgid ""
+#~ "When a product is added to an |RfQ|, the :guilabel:`Expected Arrival` "
+#~ "field auto-populates with a date that is today's date plus the delivery "
+#~ "lead time of the product. However, this does not consider the time it "
+#~ "takes to dropship the components to the subcontractor."
+#~ msgstr ""
+#~ "当产品添加到 |RfQ| 时，:guilabel:`预计到达`字段会自动填充一个日期，即今天"
+#~ "的日期加上产品的交付周期。但是，并不考虑将组件空运到分包商所需的时间。"
+
+#~ msgid ""
+#~ "When purchasing a product subcontracted using the *Dropship Subcontractor "
+#~ "on Order* route, it is necessary to adjust this date to take into account "
+#~ "the extra time needed for the components to be delivered to the "
+#~ "subcontractor."
+#~ msgstr ""
+#~ "在使用*分包商按订单直运*途径购买分包产品时，有必要调整该日期，以考虑到将部"
+#~ "件交付给分包商所需的额外时间。"
+
+#~ msgid ""
+#~ "Since production does not begin until they receive the components, "
+#~ "leaving the date as is results in the finished product arriving *after* "
+#~ "the date listed on the |RfQ|."
+#~ msgstr ""
+#~ "由于生产要等到收到部件后才开始，如果不更改日期，成品就会在 |RfQ| 所列日期 "
+#~ "*之后* 到达。"
+
+#~ msgid ""
+#~ "Next, click :guilabel:`Confirm Order` to turn the |RfQ| into a |PO|. "
+#~ "Doing so creates a second |RfQ| to purchase the components from the "
+#~ "dropshipper, and have them sent to the subcontractor."
+#~ msgstr ""
+#~ "接下来，点击 :guilabel:`确认订单` 将 |RfQ| 变成 |PO|。这样，就会创建第二"
+#~ "个 |RfQ| 从分销商处购买组件，并将其发送给分包商。"
+
+#~ msgid ""
+#~ "Navigate to :menuselection:`Purchase app --> Orders --> Requests for "
+#~ "Quotation`, and select the |RfQ| that lists the dropshipper in "
+#~ "the :guilabel:`Vendor` column."
+#~ msgstr ""
+#~ "导航至 :menuselection:`采购应用程序 --> 订单 --> 报价请求`，并选择"
+#~ "在 :guilabel:`供应商` 列中列出下单商的 |RfQ|。"
+
+#~ msgid ""
+#~ "On the |RfQ|, the :guilabel:`Expected Arrival` field lists the date on "
+#~ "which the subcontractor must receive the components, in order to deliver "
+#~ "the finished product by the *Expected Arrival* date listed on the "
+#~ "subcontractor |PO|."
+#~ msgstr ""
+#~ "在 |RfQ| 上，:guilabel:`预计到达` 字段列出了分包商必须收到部件的日期，以便"
+#~ "在分包商 |PO| 上列出的*预计到达*日期前交付成品。"
+
+#~ msgid ""
+#~ "The :guilabel:`Order Deadline` field lists the latest date on which the |"
+#~ "RfQ| can be confirmed, in order for the dropshipper to deliver the "
+#~ "components to the subcontractor by the :guilabel:`Expected Arrival` date."
+#~ msgstr ""
+#~ "在 :guilabel:`订购截止日期` 字段中，列出了可以确认 |RfQ| 的最晚日期，以便"
+#~ "直运商在 :guilabel:`预计抵达时间` 日期前将部件交付给分包商。"
+
+#~ msgid ""
+#~ "Click :guilabel:`Confirm Order` to turn the |RfQ| into a |PO|, and "
+#~ "confirm the purchase of the components from the dropshipper. Doing so "
+#~ "causes a :guilabel:`Dropship` smart button to appear at the top of the "
+#~ "page."
+#~ msgstr ""
+#~ "点击 :guilabel:`确认订单` 将 |RfQ| 变为 |PO|，并确认从代购商处购买组件。这"
+#~ "样，页面顶部就会出现一个 :guilabel:`代发货` 智能按钮。"
+
+#~ msgid ""
+#~ "Click the :guilabel:`Dropship` smart button to open the dropship order. "
+#~ "This order can also be accessed from the :guilabel:`Resupply` smart "
+#~ "button that now appears on the subcontractor |PO|."
+#~ msgstr ""
+#~ "点击 :guilabel:`代发货` 智能按钮打开代发货订单。也可通过分包商 |PO| 上"
+#~ "的 :guilabel:`重新补给` 智能按钮访问此订单。"
+
+#~ msgid ""
+#~ "When using the :doc:`Resupply Subcontractor on Order "
+#~ "<subcontracting_resupply>` route, a company is responsible for supplying "
+#~ "the subcontractor with the necessary components. As a result, the "
+#~ "subcontractor cannot begin manufacturing until the components have been "
+#~ "received."
+#~ msgstr ""
+#~ "当使用 :doc:`按订单向分包商补货<subcontracting_resupply>` 路线时，公司负责"
+#~ "向分包商提供必要的组件。因此，在收到组件之前，分包商不能开始生产。"
+
+#~ msgid ""
+#~ "By assigning a product's subcontractor a delivery lead time, and "
+#~ "specifying a manufacturing lead time on the product's bill of materials "
+#~ "(BoM), *Resupply Subcontractor* orders for the product's components "
+#~ "display the deadline by which the subcontractor must receive the "
+#~ "components."
+#~ msgstr ""
+#~ "通过为产品的分包商指定交货所需时间，并在产品的物料清单（BoM）上指定制造所"
+#~ "需时间，产品组件的 *分包商补货* 订单就会显示分包商必须收到组件的截止日期。"
+
+#~ msgid ""
+#~ "When purchasing a product subcontracted using the Resupply Subcontractor "
+#~ "on Order route, it is necessary to adjust this date to take into account "
+#~ "the extra time needed for the components to be shipped to the "
+#~ "subcontractor."
+#~ msgstr ""
+#~ "在使用 “按订单向分包商补货” 路线购买分包产品时，有必要调整该日期，以考虑到"
+#~ "部件运往分包商所需的额外时间。"
+
+#~ msgid ""
+#~ "Click the :guilabel:`Resupply` smart button to open the resupply "
+#~ "subcontractor order, which is the order created to send components to the "
+#~ "subcontractor."
+#~ msgstr ""
+#~ "点击 :guilabel:`补货` 智能按钮，打开分包商补货订单，这是为向分包商发送组件"
+#~ "而创建的订单。"
+
+#~ msgid ""
+#~ "The :guilabel:`Deadline` field on the resupply subcontractor order shows "
+#~ "the deadline for the subcontractor to receive the components, in order "
+#~ "for them to have enough time to manufacture and deliver the finished "
+#~ "product by the Expected Arrival date."
+#~ msgstr ""
+#~ "分包商补货订单上的 :guilabel:`截止日期` 字段显示分包商接收组件的截止日期，"
+#~ "以便他们有足够的时间在预计到达日期前生产和交付成品。"
+
+#~ msgid ""
+#~ "Click on the :guilabel:`Scheduled Date` field to open a calendar popover "
+#~ "from which a date can be selected. Select a date that allows for the "
+#~ "components to be delivered by the :guilabel:`Deadline` on the resupply "
+#~ "subcontractor order."
+#~ msgstr ""
+#~ "点击 :guilabel:`已安排日期` 字段，打开日历弹出窗口，从中选择日期。选择一个"
+#~ "可以在分包商补货订单上的 :guilabel:`截止日期` 之前交付组件的日期。"
+
+#~ msgid ""
+#~ "The resupply subcontractor order for shipping the components to the "
+#~ "subcontractor shows a *Deadline* of May 25th. The subcontractor must "
+#~ "receive the components by this date, in order to have enough time to "
+#~ "manufacture the unicycle, and deliver it by May 30th."
+#~ msgstr ""
+#~ "向分包商运送部件的分包商补货订单显示*截止日期*为 5 月 25 日。分包商必须在"
+#~ "此日期之前收到组件，以便有足够的时间制造独轮车，并在 5 月 30 日之前交货。"
+
+#~ msgid ""
+#~ "It takes Mike's Bikes two days to deliver the components, so they update "
+#~ "the *Scheduled Date* field on the resupply subcontractor order to May "
+#~ "23rd, two days before the Deadline."
+#~ msgstr ""
+#~ "Mike's Bikes 需要两天时间来交付组件，因此他们将分包商补货订单上的*计划日期"
+#~ "*字段更新为 5 月 23 日，即截止日期前两天。"
+
+#~ msgid ""
+#~ "The Scheduled Date and Deadline fields on a resupply subcontractor order."
+#~ msgstr "分包商补货订单上的预定日期和截止日期字段。"
+
+#~ msgid ""
+#~ "In basic subcontracting, the subcontractor is responsible for acquiring "
+#~ "the necessary components. This means that the contracting company only "
+#~ "has to worry about what happens to subcontracted products once they are "
+#~ "produced."
+#~ msgstr ""
+#~ "在基本分包中，分包商负责获取必要的部件。这意味着承包公司只需负责分包产品生"
+#~ "产出来后的情况。"
+
+#~ msgid ""
+#~ "The workflow for purchasing a product manufactured using basic "
+#~ "subcontracting is similar to the one used when purchasing a non-"
+#~ "subcontracted product from a vendor. The main differences are the way "
+#~ "that subcontracted products are configured, and the fact that "
+#~ "subcontracted products take longer to be sent from the vendor, since they "
+#~ "must first be manufactured by them."
+#~ msgstr ""
+#~ "购买使用基本分包生产的产品的工作流程与从供应商处购买非分包产品的流程类似。"
+#~ "主要区别在于分包产品的配置方式，以及分包产品从供应商处发送的时间较长，因为"
+#~ "它们必须首先由供应商生产。"
+
+#~ msgid ""
+#~ "To use subcontracting in Odoo, navigate to :menuselection:`Manufacturing "
+#~ "app --> Configuration --> Settings`, and tick the checkbox next to "
+#~ "the :guilabel:`Subcontracting` setting, under the :guilabel:`Operations` "
+#~ "heading. Then, click :guilabel:`Save`."
+#~ msgstr ""
+#~ "要在 Odoo 中使用分包，请导航至 :menuselection:`制造应用程序 --> 配置--> 设"
+#~ "置`，并勾选 :guilabel:`操作` 标题下 :guilabel:`分包` 设置旁边的复选框。然"
+#~ "后点击 :guilabel:`保存`。"
+
+#~ msgid ""
+#~ "Once the :guilabel:`Subcontracting` setting is enabled, it is also "
+#~ "necessary to properly configure the subcontracted product, and the "
+#~ "product's |BoM|."
+#~ msgstr ""
+#~ "启用 :guilabel:`分包` 设置后，还需要正确配置分包产品和产品的 |BoM|。"
+
+#~ msgid ""
+#~ "To configure a product for basic subcontracting, navigate "
+#~ "to :menuselection:`Inventory app --> Products --> Products`, and select a "
+#~ "product, or create a new one by clicking :guilabel:`New`."
+#~ msgstr ""
+#~ "要为基本分包配置产品，请导航至 :menuselection:`库存应用程序 --> 产品 --> "
+#~ "产品`，然后选择一个产品，或点击 :guilabel:`新建` 创建一个新产品。"
+
+#~ msgid ""
+#~ "On the product form, select the :guilabel:`Purchase` tab, and add the "
+#~ "product's subcontractor as a vendor by clicking :guilabel:`Add a line`, "
+#~ "selecting the subcontractor in the :guilabel:`Vendor` drop-down menu, and "
+#~ "entering a price in the :guilabel:`Price` field."
+#~ msgstr ""
+#~ "在产品表单中，选择:guilabel:`采购` 选项卡，然后点击 :guilabel:`添加行`，"
+#~ "在:guilabel:`供应商` 下拉菜单中选择分包商，并在:guilabel:`价格` 字段中输入"
+#~ "价格，将产品的分包商添加为供应商。"
+
+#~ msgid ""
+#~ "Then, click on the :guilabel:`Inventory` tab, and use "
+#~ "the :guilabel:`Routes` field to configure a route that determines what "
+#~ "happens to the finished product once it has been manufactured by the "
+#~ "subcontractor."
+#~ msgstr ""
+#~ "然后，点击 :guilabel:`库存` 选项卡，使用 :guilabel:`路线` 字段配置路线，该"
+#~ "路线决定分包商生产成品后成品的去向。"
+
+#~ msgid ""
+#~ "If the finished product is shipped back to the contracting company, make "
+#~ "sure the :guilabel:`Buy` route is selected. In addition, select "
+#~ "the :guilabel:`Replenish on Order (MTO)` route to automatically create a |"
+#~ "PO| for the product upon confirmation of a sales order (SO), unless there "
+#~ "is enough stock on-hand to fulfill the |SO|."
+#~ msgstr ""
+#~ "如果成品运回承包公司，请确保选择 :guilabel:`购买` 路线。此外，选"
+#~ "择 :guilabel:`按订单补货（MTO）`途径，在确认销售订单（SO）后自动为产品创"
+#~ "建 |PO|，除非有足够的库存来满足 |SO|。"
+
+#~ msgid ""
+#~ "If the finished product is shipped directly to the customer by the "
+#~ "subcontractor, make sure that **only** the :guilabel:`Dropship` route is "
+#~ "selected."
+#~ msgstr ""
+#~ "如果成品由分包商直接运送给客户，请确保 **仅** 选择 :guilabel:`代发货` 路"
+#~ "线。"
+
+#~ msgid ""
+#~ "To configure a |BoM| for basic subcontracting, click the :guilabel:`Bill "
+#~ "of Materials` smart button on the product form, and select the desired |"
+#~ "BoM|."
+#~ msgstr ""
+#~ "要为基本分包配置 |物料清单|，请点击产品表单上的 :guilabel:`物料清单` 智能"
+#~ "按钮，然后选择所需的 |物料清单|。"
+
+#~ msgid ""
+#~ "Finally, click on the :guilabel:`Miscellaneous` tab. In "
+#~ "the :guilabel:`Manuf. Lead Time` field, enter the number of days it takes "
+#~ "the subcontractor to manufacture the product. This number is factored in "
+#~ "when calculating the product's expected arrival date."
+#~ msgstr ""
+#~ "最后，点击 :guilabel:`杂项` 选项卡。在 :guilabel:`杂项前置时间` 字段中，输"
+#~ "入分包商生产产品所需的天数。在计算产品的预计到达日期时，这个数字将被计算在"
+#~ "内。"
+
+#~ msgid ""
+#~ "When a |PO| is confirmed for a product manufactured using basic "
+#~ "subcontracting, a receipt or dropship order is automatically created, and "
+#~ "can be accessed from the corresponding :guilabel:`Receipt` "
+#~ "or :guilabel:`Dropship` smart button that appears at the top of the |PO|."
+#~ msgstr ""
+#~ "当使用基本分包生产的产品的 |PO| 被确认时，会自动创建收据或交货单，可通过 |"
+#~ "PO| 顶部相应的:guilabel:`收据`或:guilabel:`代发货`智能按钮访问。"
+
+#~ msgid ""
+#~ "A PO for a basic subcontracting product, with a Receipt smart button at "
+#~ "the top of the page."
+#~ msgstr "基本分包产品的 PO，页面顶部有一个智能收据按钮。"
+
+#~ msgid ""
+#~ "PO for a basic subcontracting product, with a Receipt smart button at the "
+#~ "top of the page."
+#~ msgstr "基本分包产品的 PO，页面顶部有一个智能收据按钮。"
+
+#~ msgid ""
+#~ "Once the subcontractor has finished manufacturing the product, they "
+#~ "either ship it to the contracting company, or dropship it to the end "
+#~ "customer, depending on how the product was :ref:`configured "
+#~ "<manufacturing/workflows/subcontracting_basic/product-config>`."
+#~ msgstr ""
+#~ "分包商完成产品制造后，要么将其运送给承包公司，要么将其交付给最终客户，具体"
+#~ "取决于产品的 :ref:`配置 <manufacturing/workflows/subcontracting_basic/"
+#~ "product-config>`。"
 
 #~ msgid ""
 #~ "When manufacturing certain products, specific operations may need to be "

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-17 18:30+0000\n"
+"POT-Creation-Date: 2026-05-01 17:30+0000\n"
 "PO-Revision-Date: 2026-04-24 23:11+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -201,10 +201,7 @@ msgstr "カウント作業が割当てられたバーコードダッシュボー
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:13
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:21
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting.rst:52
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:24
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:38
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:30
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:23
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:18
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:41
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:40
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/byproducts.rst:21
@@ -5775,7 +5772,6 @@ msgid "Product management"
 msgstr "プロダクト管理"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:9
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:35
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:51
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:53
 msgid "Configure product"
@@ -10583,9 +10579,9 @@ msgid ""
 "like where it came from (and when), where it was stored, and to whom it was "
 "sent."
 msgstr ""
-"メーカーや企業は、トレーサビリティレポートを参照して、プロダクトの"
-"ライフサイクル全体を確認することができます。これらのレポートには、製品の出所"
-"(およびその時期)、保管場所、送付先などの重要な情報が含まれています。"
+"メーカーや企業は、トレーサビリティレポートを参照して、プロダクトのライフサイ"
+"クル全体を確認することができます。これらのレポートには、製品の出所(およびその"
+"時期)、保管場所、送付先などの重要な情報が含まれています。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking.rst:76
 msgid ""
@@ -11301,8 +11297,8 @@ msgid ""
 "Manufacturers assign lot numbers to groups of products sharing common "
 "properties, facilitating end-to-end traceability through their lifecycles."
 msgstr ""
-"メーカーは、共通の特性を持つプロダクトのグループにロット番号を割当て、"
-"ライフサイクルを通じたエンドツーエンドのトレーサビリティを容易にします。"
+"メーカーは、共通の特性を持つプロダクトのグループにロット番号を割当て、ライフ"
+"サイクルを通じたエンドツーエンドのトレーサビリティを容易にします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:16
 msgid ""
@@ -14661,7 +14657,7 @@ msgstr "確定した購買オーダフォームの入荷スマートボタン。
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:80
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:111
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:171
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:114
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:249
 msgid "Process receipt"
 msgstr "入荷処理"
@@ -20825,6 +20821,7 @@ msgstr ""
 "料金を適用し、Odooを通してBpost追跡ラベルを自動的に印刷することができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:17
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:10
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:10
 msgid ":doc:`third_party_shipper`"
 msgstr ":doc:`third_party_shipper`"
@@ -21167,116 +21164,42 @@ msgstr "DHL統合"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:5
 msgid ""
-"DHL is one of the shipping carriers for which a *shipping connector* is "
-"available in Odoo's **Inventory** app. By enabling the shipping connector in "
-"the app's settings, and configuring at least one *shipping method*, the "
+"Set up the DHL shipping connector in Odoo to manage DHL shipments to clients "
+"directly within Odoo. Configuring a DHL shipping method simplifies the "
 "process of :doc:`calculating shipping rates <../setup_configuration>` "
-"and :doc:`generating shipping labels <labels>` is greatly simplified."
+"and :doc:`generating shipping labels <labels>`."
 msgstr ""
-"DHLは、Odooの **在庫** アプリで利用できる *配送コネクタ* が利用できる配送業者"
-"の1つです。アプリの設定で配送コネクタを有効にし、少なくとも1つの *配送方法* "
-"を設定することで、:doc:`送料の計算 <../setup_configuration>` および :doc:`配"
-"送ラベルの生成 1` のプロセスが大幅に簡素化されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:11
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:13
+msgid "Configure the DHL shipping method"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:15
 msgid ""
-"While a variety of shipping connectors are available for different carriers, "
-"this documentation details the configuration settings specific to "
-"integrating DHL. For instructions on configuring the integration settings "
-"common to all shippers, see the documentation on :doc:`third-party shippers "
-"<third_party_shipper>`."
+"To enable DHL delivery methods, :ref:`install <general/install>` the **DHL "
+"Express Shipping** module. DHL delivery methods can be configured and added "
+"as a line item to sales orders, which allows for automatic computation of "
+"shipping rates and generation of shipping labels."
 msgstr ""
-"さまざまな配送業者に対応する多様な配送コネクタが利用可能ですが、このドキュメ"
-"ントでは、DHLとの統合に特化した設定の詳細を説明します。全ての配送業者に共通す"
-"る統合設定の構成方法については、:doc:`外部配送業者に関するドキュメントを参照"
-"して下さい <third_party_shipper>` 。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:17
-msgid "Enable DHL shipping connector"
-msgstr "DHL配送コネクタを有効にする"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:19
 msgid ""
-"Before creating a DHL shipping method, enable the carrier's shipping "
-"connector. To do so, navigate to :menuselection:`Inventory app --> "
-"Configuration --> Settings`."
+"To create a DHL shipping method, navigate to :menuselection:`Inventory app --"
+"> Configuration --> Delivery Methods`, then click :guilabel:`New` to open a "
+"delivery method form. If a shipping method has already been created, it can "
+"be selected from this screen."
 msgstr ""
-"DHLの配送方法を作成する前に、運送会社の配送コネクタを有効にしてください。これ"
-"を行うには、:menuselection:`在庫アプリ --> 設定 --> 管理設定` に移動します。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:22
-msgid ""
-"Scroll down to the :guilabel:`Shipping Connectors` section, and tick the "
-"checkbox next to :guilabel:`DHL Express Connector`. Finally, "
-"click :guilabel:`Save` to apply the changes."
-msgstr ""
-":guilabel:`配送コネクタ` セクションまでスクロールダウンし、:guilabel:`DHL "
-"Expressコネクタ` の横にあるチェックボックスにチェックを入れます。最後"
-"に、:guilabel:`保存` をクリックして変更を適用します。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:25
-msgid ""
-"Then, click the :icon:`fa-arrow-right` :guilabel:`DHL Shipping Methods` link "
-"to open a page showing all shipping methods with the *Provider* set to DHL."
-msgstr ""
-"次に、:icon:`fa-arrow-right` :guilabel:`DHL配送方法` リンクをクリックして、*"
-"プロバイダー* が DHLに設定されているすべての配送方法が表示されるページを開き"
-"ます。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:29
-msgid "Configure DHL shipping method"
-msgstr "DHL配送方法を設定する"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:31
-msgid ""
-"After enabling the shipping connector for DHL, shipping methods can be "
-"configured for the carrier. Once configured, a shipping method can be added "
-"as a line item to sales orders (SOs), which allows for automatic computation "
-"of shipping rates, and generation of shipping labels."
-msgstr ""
-"DHLの配送コネクタを有効にすると、配送業者向けの配送方法の設定が可能になりま"
-"す。 配送方法が設定されると、販売オーダ(SO)に明細として追加できるようになり、"
-"送料の自動計算や配送ラベルの作成が可能になります。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:35
-msgid ""
-"To create a new DHL shipping method, navigate to :menuselection:`Inventory "
-"app --> Configuration --> Settings`. In the :guilabel:`Shipping Connectors` "
-"section, select the :guilabel:`DHL Shipping Methods` link below "
-"the :guilabel:`DHL Express Connector` checkbox."
-msgstr ""
-"DHLの新しい配送方法を作成するには、:menuselection:`在庫アプリ --> 設定 --> 設"
-"定` に移動します。:guilabel:`配送コネクタ` セクションで、:guilabel:`DHL "
-"Expressコネクタ` チェックボックスの下にある :guilabel:`DHL配送方法` リンクを"
-"選択します。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:40
-msgid ""
-"It is also possible to see existing shipping methods for every carrier, by "
-"navigating to :menuselection:`Inventory app --> Configuration --> Shipping "
-"Methods`."
-msgstr ""
-"また、:menuselection:`在庫アプリ --> 設定 --> 配送方法` に移動すると、各配送"
-"業者の既存の配送方法を確認することができます。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:43
-msgid ""
-"Click :guilabel:`New` to open a blank shipping method form. If a shipping "
-"method has already been created, it can be selected from this screen."
-msgstr ""
-":guilabel:`新規` をクリックすると、空の配送方法フォームが開きます。配送方法が"
-"すでに作成されている場合は、この画面から選択できます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:None
 msgid "The form for a DHL shipping method."
 msgstr "DHL配送方法用のフォーム"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:27
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:58
 msgid "General information"
 msgstr "一般情報"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:52
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:29
 msgid ""
 "Begin configuring the shipping method by entering its title in "
 "the :guilabel:`Shipping Method` field."
@@ -21284,45 +21207,36 @@ msgstr ""
 ":guilabel:`配送方法` フィールドに配送方法のタイトルを入力して、配送方法の設定"
 "を開始します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:55
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:32
 msgid ""
 "In the :guilabel:`Provider` drop-down menu, select the :guilabel:`DHL` "
-"option. After doing so, a new :guilabel:`DHL Configuration` tab appears at "
-"the bottom of the form."
+"option, and a new :guilabel:`DHL Configuration` tab appears at the bottom of "
+"the form."
 msgstr ""
-":guilabel:`プロバイダ`ドロップダウンメニューで、:guilabel:`DHL` オプションを"
-"選択します。そうすると、フォームの下部に新しい :guilabel:`DHL 設定` タブが表"
-"示されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:58
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:35
 msgid ""
 "All other fields in this section are identical on the shipping method forms "
-"for each shipping carrier. See the documentation on :doc:`third-party "
-"shippers <third_party_shipper>` for instructions on how to properly "
-"configure them."
+"for each shipping carrier. See :doc:`third-party shippers "
+"<third_party_shipper>` for standard configuration instructions."
 msgstr ""
-"このセクションの他の全てのフィールドは、各配送業者の配送方法フォームで同一で"
-"す。それらを適切に設定する方法については、:doc:`サードバーティ配送業者 "
-"<third_party_shipper>` のドキュメントを参照して下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:63
-msgid "DHL Configuration"
-msgstr "DHLの設定"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:40
+msgid "DHL Configuration tab"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:65
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:42
 msgid ""
 "The :guilabel:`DHL Configuration` tab on the shipping method form is used to "
-"connect the user's DHL account to Odoo, and configure the shipping method's "
+"connect the user's DHL account to Odoo and configure the shipping method's "
 "details."
 msgstr ""
-"配送方法フォームの :guilabel:`DHL設定` タブは、ユーザの DHLアカウントをOdooに"
-"接続し、配送方法の詳細を設定するために使用します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:69
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:46
 msgid "DHL developer credentials"
 msgstr "DHL開発者認証情報"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:71
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:48
 msgid ""
 "To integrate DHL with Odoo, developer credentials must be retrieved from "
 "DHL's Developer Portal. These credentials are used to link the user's DHL "
@@ -21332,32 +21246,26 @@ msgstr ""
 "要があります。この認証情報は、ユーザのDHLアカウントを Odooの **在庫** アプリ"
 "にリンクするために使用されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:52
 msgid ""
-"The *SiteID* and *Password* are different credentials than the ones used to "
+"The *SiteID* and *Password* are different credentials from the ones used to "
 "log in to a DHL account."
 msgstr ""
-"*サイト ID* および *パスワード* は、DHL アカウントへのログインに使用する認証"
-"情報とは異なります。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:79
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:56
 msgid "With DHL Express Account"
 msgstr "DHL Expressアカウントの場合"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:81
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:58
 msgid ""
-"If a DHL Express account is available, log into the `DHL Developer portal "
+"If a DHL Express account is available, log in to the `DHL Developer portal "
 "<https://developer.dhl.com/api-reference/dhl-express-mydhl-api#get-started-"
 "section/ user-guide%get-access>`_ and `request a DHL API account number "
 "<https://developer.dhl. com/form/dhl-express-onboarding>`_."
 msgstr ""
-"DHL Expressアカウントをお持ちの場合は、`DHL 開発者ポータル <https://"
-"developer.dhl.com/api-reference/dhl-express-mydhl-api#get-started-section/ "
-"user-guide%get-access>`_ にログインし、`DHL API アカウント番号をリクエストし"
-"てください <https://developer.dhl. com/form/dhl-express-onboarding>`_。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:86
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:108
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:63
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:85
 msgid ""
 "Then, in Odoo, on the shipping method form, enter the *DHL API Key* in "
 "the :guilabel:`DHL SiteID` field, and the *API Secret* in the :guilabel:`DHL "
@@ -21367,15 +21275,15 @@ msgstr ""
 "フィールドに入力し、*APIシークレット* を :guilabel:`DHLパスワード` フィールド"
 "に入力します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:90
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:67
 msgid "Without DHL Express Account"
 msgstr "DHL Expressアカウントでない場合"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:69
 msgid "If a DHL Express account is **not** available:"
 msgstr "DHL Express アカウントを利用 **できない** 場合:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:94
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:71
 msgid ""
 "Begin by opening a `DHL Express account <https://mydhl.express.dhl/gb/en/"
 "ship/open-account.html#/fs-step=connectors&fs-step=connectors>`_."
@@ -21383,7 +21291,7 @@ msgstr ""
 "まずは `DHL Expressアカウント <https://mydhl.express.dhl/gb/en/ship/open-"
 "account.html#/fs-step=connectors&fs-step=connectors>`_ を開設してください。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:96
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:73
 msgid ""
 "Once the developer portal account has been confirmed, log in to the portal "
 "using the username and password. Click the user avatar in the top-right "
@@ -21393,7 +21301,7 @@ msgstr ""
 "にログインします。画面右上のユーザアバターをクリックして、ユーザダッシュボー"
 "ドを開きます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:98
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:75
 msgid ""
 "On the dashboard, open the :guilabel:`Apps` tab, and create an app. Follow "
 "the four steps in the app creation flow (app name, needed apps, app status, "
@@ -21407,7 +21315,7 @@ msgstr ""
 msgid "Setup to create DHL account."
 msgstr "DHLアカウントを作成するための設定"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:104
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:81
 msgid ""
 "After setting up the DHL Express account, go `here <https://"
 "developer.dhl.com/user/login?destination=/form/dhl-express-onboarding>`_ to "
@@ -21417,11 +21325,11 @@ msgstr ""
 "login?destination=/form/dhl-express-onboarding>`_ にアクセスして、*DHL API "
 "キー* および *API シークレット* 認証情報を取得してください。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:89
 msgid "Shipping details"
 msgstr "配送詳細"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:91
 msgid ""
 "The rest of the fields in the :guilabel:`DHL Configuration` tab are used to "
 "configure the shipping method itself:"
@@ -21429,11 +21337,11 @@ msgstr ""
 ":guilabel:`DHL設定` タブのその他のフィールドは、配送方法自体の設定に使用され"
 "ます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:117
-msgid ":guilabel:`Region`: the region in which the shipping method is used."
-msgstr ":guilabel:`地域`: その配送方法が使用される地域"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:94
+msgid ":guilabel:`Region`: The region in which the shipping method is used."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:118
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:95
 msgid ""
 ":guilabel:`DHL Product`: the shipping service purchased from DHL (e.g. "
 "Express Worldwide)."
@@ -21441,20 +21349,25 @@ msgstr ""
 ":guilabel:`DHLプロダクト`: DHLより購入された配送サービス (例: Express "
 "Worldwide)"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:119
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:96
 msgid ""
-":guilabel:`DHL Package Type`: the type of DHL package used for delivery "
-"(e.g. DHL Box)."
+":guilabel:`DHL Product`: The shipping service purchased from DHL (e.g., "
+"Express Worldwide)."
 msgstr ""
-":guilabel:`DHL梱包タイプ`: 配送に使用されるDHL梱包のタイプ (例: DHLボックス)"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:120
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:97
+msgid ""
+":guilabel:`DHL Package Type`: The type of DHL package used for delivery "
+"(e.g., DHL Box)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:98
 msgid ""
 ":guilabel:`Package Weight Unit`: the unit of measure used to display package "
 "weight."
 msgstr ":guilabel:`梱包重量単位`: パッケージの重量を表示する際に使用される単位"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:121
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:99
 msgid ""
 ":guilabel:`Package Dimension Unit`: the unit of measure used to display "
 "package size."
@@ -21462,20 +21375,36 @@ msgstr ""
 ":guilabel:`パッケージ寸法単位`：パッケージのサイズを表示する際に使用される単"
 "位"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:122
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:100
 msgid ""
 ":guilabel:`Label Format`: the file format used to generate shipping labels."
 msgstr ""
 ":guilabel:`ラベルフォーマット`: 配送ラベルを生成するために使用されるファイル"
 "フォーマット"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:123
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:101
 msgid ""
-":guilabel:`Label Template`: the paper size used to print shipping labels."
+":guilabel:`Package Weight Unit`: The unit of measure used to display package "
+"weight."
 msgstr ""
-":guilabel:`ラベルテンプレート`:  配送ラベルの印刷に使用される用紙サイズ"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:102
+msgid ""
+":guilabel:`Package Dimension Unit`: The unit of measure used to display "
+"package size."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:103
+msgid ""
+":guilabel:`Label Format`: The file format used to generate shipping labels."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:104
+msgid ""
+":guilabel:`Label Template`: The paper size used to print shipping labels."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:107
 msgid ""
 "Before selecting service options for a shipping method, make sure those "
 "services are actually available for the DHL account. Available services "
@@ -21485,11 +21414,11 @@ msgstr ""
 "実際に利用可能であることを確認して下さい。利用可能なサービスは、DHLとの契約内"
 "容によって異なります。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:130
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:111
 msgid "Options"
 msgstr "オプション"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:132
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:113
 msgid ""
 "Additional settings are available in the :guilabel:`Options` section at the "
 "bottom of the :guilabel:`DHL Configuration` tab:"
@@ -21497,7 +21426,7 @@ msgstr ""
 "追加の設定は、:guilabel:`DHL設定` タブの下部にある :guilabel:`オプション` セ"
 "クションで利用できます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:135
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:116
 msgid ""
 ":guilabel:`Generate Return Label`: Enable this option to automatically "
 "generate a return label after validating a delivery order."
@@ -21505,7 +21434,7 @@ msgstr ""
 ":guilabel:`返品ラベルを生成`: このオプションを有効にすると、出荷オーダの検証"
 "後に返品ラベルが自動的に生成されます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:137
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:118
 msgid ""
 ":guilabel:`Dutiable Material`: Enable this option if the shipping method is "
 "liable to customs or other duties."
@@ -21513,47 +21442,37 @@ msgstr ""
 ":guilabel:`関税対象物`: 配送方法が関税やその他の税金がかかる可能性がある場合"
 "は、このオプションを有効にして下さい。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:141
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:122
 msgid "Turn on the DHL Connection"
 msgstr "DHL接続をオンにする"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:143
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:124
 msgid ""
 "Once the DHL connection is set up, use the smart buttons at the top of the "
-"form to publish, turn on production mode or activate debug logging."
+"form to publish, turn on production mode, or activate debug logging."
 msgstr ""
-"DHL 接続の設定が完了したら、フォーム上部のスマートボタンを使用して、公開、本"
-"番モードの有効化、デバッグログの有効化を行います。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:146
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:127
 msgid ""
-":guilabel:`Unpublished`/:guilabel:`Published`: determines if this shipping "
+":guilabel:`Unpublished`/:guilabel:`Published`: Determines if this shipping "
 "method is available on the user's **eCommerce** website."
 msgstr ""
-":guilabel:`未公開`/:guilabel:`公開済`: この配送方法がユーザの **eコマース** "
-"ウェブサイトで使用可能かどうかを定義します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:149
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:130
 msgid ""
-":guilabel:`Test Environment`/:guilabel:`Production Environment`: determines "
-"whether label creation is for testing and cancelled immediately (Test) or "
-"generate real shipping label that is charged to DHL account (Production)."
+":guilabel:`Test Environment`/:guilabel:`Production Environment`: Determines "
+"whether label creation is for testing and canceled immediately (Test) or "
+"generates a real shipping label that is charged to the DHL account "
+"(Production)."
 msgstr ""
-":guilabel:`テスト環境`/:guilabel:`本番環境`: ラベルの作成がテスト用で即座に取"
-"消される (テスト) のか、DHLアカウントに請求される実際の配送ラベルを生成する "
-"(本番) かを定義します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:152
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:133
 msgid ""
-":guilabel:`No Debug`/:guilabel:`Debug Requests`: determines whether API "
+":guilabel:`No Debug`/:guilabel:`Debug Requests`: Determines whether API "
 "requests and responses are logged in Odoo (turn on :ref:`developer mode "
 "<developer-mode>` and go to :menuselection:`Settings app --> Technical --> "
 "Logging`)."
 msgstr ""
-":guilabel:`デバッグなし`/:guilabel:`デバッグ要求`: API 要求と応答を Odooに記"
-"録するかどうかを決定します ( :ref:`開発者モード <developer-mode>` をオンにし"
-"て、 :menuselection:`設定アプリ --> 技術設定 --> ログ管理` に移動してくださ"
-"い)。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:3
 msgid "Dispatch management system"
@@ -38254,10 +38173,10 @@ msgid ""
 "shop floor to control work orders in real-time and allow workers to trigger "
 "maintenance operations, feedback loops, quality issues, etc."
 msgstr ""
-"**Odoo製造** アプリは、メーカーの製造オーダのスケジュール、計画、処理を"
-"サポートします。作業区管理パネルを使用して、タブレットを工場フロアに配置し、"
-"作業オーダをリアルタイムで管理し、作業員が整備オペレーション、フィードバック"
-"・ループ、品質に関する問題などをトリガできるようにします。"
+"**Odoo製造** アプリは、メーカーの製造オーダのスケジュール、計画、処理をサポー"
+"トします。作業区管理パネルを使用して、タブレットを工場フロアに配置し、作業"
+"オーダをリアルタイムで管理し、作業員が整備オペレーション、フィードバック・"
+"ループ、品質に関する問題などをトリガできるようにします。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing.rst:14
 msgid "`Odoo Tutorials: MRP <https://www.odoo.com/slides/mrp-29>`_"
@@ -40039,8 +39958,8 @@ msgid ""
 "A manufacturer has two work centers, `Assembly Line 1` and `Assembly Line "
 "2`, and two working hours, `Day Shift` and `Night Shift`."
 msgstr ""
-"あるメーカーには、`組立ライン1` と `組立ライン2` の2つの作業区と、`日勤` と "
-"`夜勤` の 2 つの勤務時間があります。"
+"あるメーカーには、`組立ライン1` と `組立ライン2` の2つの作業区と、`日勤` と `"
+"夜勤` の 2 つの勤務時間があります。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:0
 msgid "Work centers copied for day and night shifts."
@@ -44838,1027 +44757,86 @@ msgstr ""
 "しましょう。例えば、プロダクトが最終顧客に直送されないのであれば、直送のコス"
 "トを考慮する必要はありません。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:3
-msgid "Basic subcontracting lead times"
-msgstr "基本的な外注リードタイム"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:8
-msgid ""
-"In Odoo, lead times are used to predict how long it takes to complete a "
-"certain action. For example, a *delivery lead time* can be set for a "
-"purchased product, which specifies the number of days it usually takes for "
-"the product's vendor to delivery the product to the purchasing company."
-msgstr ""
-"Odooでは、リードタイムは特定のアクションを完了するまでに要する時間を予測する"
-"ために使用されます。例えば、購買プロダクトに対して *配送リードタイム* を設定"
-"することができます。これは、通常、仕入先が購買会社にプロダクトを配送するまで"
-"に要する日数を指定します。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:12
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:13
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:13
-msgid ""
-"For subcontracted products specifically, delivery lead times can be "
-"configured to take into account the amount of time required for the "
-"subcontractor to manufacture a product. Doing so allows the contracting "
-"company to better predict the delivery dates of subcontracted products."
-msgstr ""
-"特に外注プロダクトについては、外注業者がプロダクトを製造するために必要な時間"
-"を考慮して、配送リードタイムを設定することができます。 そうすることで、発注元"
-"企業は外注製品の配送日をより正確に予測することができます。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:17
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:31
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:23
-msgid ""
-"Like all lead times in Odoo, lead times for subcontracted products are only "
-"an estimate, and are based on how long actions are *expected* to take."
-msgstr ""
-"Odooにおける全てのリードタイムと同様に、外注プロダクトのリードタイムはあくま"
-"で概算であり、アクションに要する時間の予想値に基づいています。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:20
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:34
-msgid ""
-"Unforeseen circumstances can impact the completion of these actions, which "
-"means that lead times should not be viewed as guarantees."
-msgstr ""
-"予期せぬ状況により、これらのアクションの完了に影響が及ぶ可能性があるため、"
-"リードタイムは確実に保証されたものではないと考えるべきです。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:26
-msgid ""
-"When using the :doc:`basic subcontracting <subcontracting_basic>` workflow "
-"to manufacture a product, a company is not responsible for supplying the "
-"subcontractor with the necessary components. This means that the only "
-"factors affecting the delivery date of a product are the amount of time it "
-"takes the subcontractor to manufacture and deliver it."
-msgstr ""
-"プロダクトの製造に :doc:`基本外注 <subcontracting_basic>` ワークフローを使用"
-"する場合、会社は外注業者に必要構成品を供給する責任を負いません。 つまり、プロ"
-"ダクトの配送日に影響を与える要因は、外注業者がプロダクトを製造し配送するのに"
-"かかる時間のみです。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:31
-msgid ""
-"By assigning a product's subcontractor a delivery lead time that considers "
-"both of these factors, the *Expected Arrival* date displayed on purchase "
-"orders (POs) for the product more accurately reflects the amount of time "
-"required for both manufacturing and delivery."
-msgstr ""
-"プロダクトの配送リードタイムにこれらの両方の要因を考慮して下請け業者を割当て"
-"ると、プロダクトの購買オーダ(PO) に表示される *到着予定日* は、製造と配送の両"
-"方に必要な時間をより正確に反映するようになります。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:36
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:54
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:44
-msgid "Product delivery lead time"
-msgstr "プロダクト配送リードタイム"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:38
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:46
-msgid ""
-"To set a delivery lead time for a product's subcontractor, navigate "
-"to :menuselection:`Inventory app --> Products --> Products`, and select a "
-"subcontracted product."
-msgstr ""
-"プロダクトの配送リードタイムを設定するには、:menuselection:`在庫アプリ --> プ"
-"ロダクト --> プロダクト` に移動し、外注プロダクトを選択します。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:41
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:59
-msgid ""
-"Then, select the :guilabel:`Purchase` tab on the product's page. If the "
-"subcontractor has not already been added as a vendor, do so now by "
-"clicking :guilabel:`Add a line`, and selecting the subcontractor in "
-"the :guilabel:`Vendor` column."
-msgstr ""
-"次に、プロダクトページの :guilabel:`購買` タブを選択します。下請業者がまだ仕"
-"入先として追加されていない場合は、:guilabel:`明細追加` をクリック"
-"し、:guilabel:`仕入先` 列で下請業者を選択して追加します。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:45
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:63
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:53
-msgid ""
-"Once the subcontractor has been added, enter the number of days it takes "
-"them to manufacture and deliver the product, in the :guilabel:`Delivery Lead "
-"Time` column."
-msgstr ""
-"外注先が追加されたら、プロダクトの製造と配送に要する日数を :guilabel:`配送"
-"リードタイム` 列に追加します。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:None
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:None
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:None
-msgid ""
-"The Delivery Lead Time field for a subcontractor, on the Purchase tab of a "
-"product page."
-msgstr "プロダクトページの購買タブにある外注先の配送リードタイムフィールド。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:53
-msgid ""
-"Multiple subcontractors can be added to the :guilabel:`Purchase` tab on a "
-"product's page, and a different :guilabel:`Delivery Lead Time` can be set "
-"for each."
-msgstr ""
-"プロダクトページの :guilabel:`購買` タブには複数の外注先を追加でき、それぞれ"
-"に異なる :guilabel:`配送リードタイム` を設定できます。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:57
-msgid "Lead time workflow"
-msgstr "リードタイムワークフロー"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:59
-msgid ""
-"After setting a delivery lead time for a product's vendor, create an |RfQ| "
-"by navigating to :menuselection:`Purchase app --> Orders --> Purchase "
-"Orders`, and clicking :guilabel:`New`."
-msgstr ""
-"プロダクトの仕入先への配送リードタイムを設定した後、:menuselection:`購買アプ"
-"リ --> オーダ --> 購買オーダ` に移動し、:guilabel:`新規作成` をクリックして見"
-"積依頼書を作成します。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:62
-msgid ""
-"Specify the subcontractor in the :guilabel:`Vendor` field. Then, add the "
-"product in the :guilabel:`Products` tab by clicking :guilabel:`Add a "
-"product`, selecting the product in the :guilabel:`Product` column, and "
-"adding a quantity in the :guilabel:`Quantity` column."
-msgstr ""
-"外注先を :guilabel:`仕入先` フィールドで指定します。次に、:guilabel:`プロダク"
-"ト追加` をクリックし、:guilabel:`プロダクト` 列でプロダクトを選択"
-"し、:guilabel:`数量` 列で数量を追加することで、:guilabel:`プロダクト` タブで"
-"プロダクトを追加します。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:66
-msgid ""
-"Once a product has been added, the :guilabel:`Expected Arrival` field on the "
-"|RfQ| auto-populates with a date that reflects the vendor's delivery lead "
-"time, as specified on the product's page."
-msgstr ""
-"プロダクトが追加されると、見積依頼書に表示される :guilabel:`入荷予定日`  "
-"フィールドには、プロダクトのページで指定された仕入先の配送リードタイムを反映"
-"した日付が自動的に入力されます。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:69
-msgid ""
-"If the date needs to be adjusted, click on the :guilabel:`Expected Arrival` "
-"field to open a calendar popover, and select the desired date. Make sure not "
-"to choose a date sooner than the one that was auto-populated, unless the "
-"subcontractor has confirmed that they are able to deliver the product by "
-"that date."
-msgstr ""
-"日付を調整する必要がある場合は、:guilabel:`入荷予定日` フィールドをクリックし"
-"てカレンダーポップオーバーを開き、希望の日付を選択します。外注先がその日付ま"
-"でに納品できることを確認している場合を除き、自動入力された日付よりも早い日付"
-"を選択しないようにして下さい。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:74
-msgid ""
-"Finally, click :guilabel:`Confirm Order` on the |RfQ| to turn it into a |"
-"PO|. At this point, the subcontractor should begin manufacturing the "
-"subcontracted product, before delivering it to the contracting company."
-msgstr ""
-"最後に、見積依頼書の見積依頼書番号の :guilabel:`オーダ確定` をクリックして購"
-"買オーダに変更します。この時点で、外注先は外注されたプロダクトの製造を開始"
-"し、発注元企業に納品する前に、外注先は製造を開始します。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:79
-msgid ""
-"Bike retailer *Mike's Bikes* works with a subcontractor — *Bike Friends* — "
-"to produce units of their *Tricycle* product."
-msgstr ""
-"自転車販売店 *Mike's Bikes* は、外注先である *Bike Friends* と協力して、製品 "
-"*三輪車* を生産しています。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:82
-msgid ""
-"On average, Bike Friends requires three days to manufacture a tricycle, plus "
-"an additional two days to deliver it to Mike's Bikes."
-msgstr ""
-"平均して、Bike Friendsが三輪車を製造するには3日、さらにMike's Bikesに届けるの"
-"に2日かかります。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:85
-msgid ""
-"As a result, Mike's Bikes sets a delivery lead time of five days for "
-"tricycles manufactured by Bike Friends: three days for manufacturing, plus "
-"two days for delivery."
-msgstr ""
-"そのため、Mike's Bikesでは、Bike Friends社製の三輪車の配送リードタイムを5日間"
-"に設定しました。製造に3日、配送に2日です。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:88
-msgid ""
-"On May 3rd, Mike's Bikes confirms a |PO| to purchase one tricycle from Bike "
-"Friends."
-msgstr ""
-"5月3日、Mike's Bikes購買オーダを確認し、Bike Friendsから三輪車1台を購買しま"
-"す。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:90
-msgid ""
-"The :guilabel:`Expected Arrival` date listed on the |PO| is May 8th, five "
-"days after the :guilabel:`Confirmation Date`."
-msgstr ""
-"購買オーダに記載されている :guilabel:`入荷予定日` は、:guilabel:`確認日` の5"
-"日後の5月8日です。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:None
-msgid "The Expected Arrival date on a PO for a subcontracted product."
-msgstr "外注プロダクトの購買オーダでの入荷予定日"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:97
-msgid ""
-"Bike Friends begins manufacturing the tricycle on May 3rd — the day that the "
-"|PO| is confirmed — and finishes on May 6th, three days later."
-msgstr ""
-"Bike Friendsは、購買オーダが確認された5月3日に三輪車の製造を開始し、3日後の5"
-"月6日に終了しました。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:100
-msgid ""
-"The tricycle is then shipped to Mike's Bikes the same day, and they receive "
-"it on May 8th, two days later."
-msgstr ""
-"その三輪車は同日中にMike's Bikesに発送され、2日後の5月8日に到着しました。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:3
-msgid "Dropship subcontracting lead times"
-msgstr "直送外注のリードタイム"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:9
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:9
-msgid ""
-"In Odoo, lead times are used to predict how long it takes to complete a "
-"certain action. For example, a *delivery lead time* can be set for a "
-"purchased product, which specifies the number of days it usually takes for "
-"the product's vendor to deliver the product to the purchasing company."
-msgstr ""
-"Odooでは、リードタイムは特定のアクションを完了するまでに要する時間を予測する"
-"ために使用されます。例えば、購買プロダクトに対して *配送リードタイム* を設定"
-"することができます。これは、通常、仕入先が購買会社にプロダクトを配送するまで"
-"に要する日数を指定します。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:17
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:17
-msgid ""
-"Certain subcontracted products require the contracting company to supply the "
-"subcontractor with manufacturing components. In this case, a *manufacturing "
-"lead time* can be used, in addition to the delivery lead time, to generate "
-"the date on which the subcontractor must receive the required components, in "
-"order to manufacture the product and deliver it on time."
-msgstr ""
-"一部の外注プロダクトでは、発注元企業が外注先に製造用の構成品を供給する必要が"
-"あります。この場合、配送リードタイムに加えて、製造リードタイムを使用して、外"
-"注先がプロダクトを製造し、期限内に配送するために必要な構成品を受け取る日付を"
-"生成することができます。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:22
-msgid ""
-"In cases where components are dropshipped to the subcontractor, an "
-"additional delivery lead time can be set for each component. This should be "
-"set to the amount of time it takes the vendor to deliver components to the "
-"subcontractor."
-msgstr ""
-"構成品が外注先に直送される場合は、各構成品に対して追加の配送リードタイムを設"
-"定することができます。これは、仕入先が外注先に構成品を配送するのにかかる時間"
-"として設定します。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:26
-msgid ""
-"Once a delivery lead time has been set on a component, dropship orders for "
-"the component display the date by which the order must be confirmed, so that "
-"it can be dropshipped to the subcontractor by the date on which "
-"manufacturing must begin."
-msgstr ""
-"構成品にリードタイムが設定されると、その構成品に対する直送オーダには、製造開"
-"始日までに外注先に直送できるように、オーダを確認しなければならない期限日が表"
-"示されます。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:40
-msgid ""
-"When using the :doc:`Dropship Subcontractor on Order "
-"<subcontracting_dropship>` route, a company is responsible for purchasing "
-"the necessary components from a vendor, and having them dropshipped directly "
-"to the subcontractor."
-msgstr ""
-":doc:`受注時外注先直送 <subcontracting_dropship> ` ルートを使用する場合、会社"
-"は仕入先から必要な構成品を購買し、それらを外注先に直送する責任があります。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:44
-msgid ""
-"This means that, in addition to the amount of time it takes the "
-"subcontractor to manufacture and deliver the product, it is also necessary "
-"to consider how long it takes the component vendor to dropship the "
-"components to the subcontractor."
-msgstr ""
-"つまり、外注先がプロダクトを製造し納品するのにかかる時間に加え、構成品の仕入"
-"先が外注先に構成品を直送するのにかかる時間も考慮する必要があります。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:48
-msgid ""
-"By assigning a product's subcontractor a *delivery lead time*, specifying a "
-"*manufacturing lead time* on the product's BoM, and assigning the vendor of "
-"the components an additional *delivery lead time*, *Dropship Subcontractor* "
-"orders for the product's components display the deadline for confirming a "
-"dropship order to send the components to the subcontractor."
-msgstr ""
-"プロダクトの外注先に *配送リードタイム* を割当て、プロダクトの部品表に *製造"
-"リードタイム* を指定し、さらに、構成品の仕入先に *配送リードタイム* を割当て"
-"ると、*外注先直送* オーダにプロダクトの構成品の受注時に、外注先に部品を送る直"
-"送オーダの確認期限が表示されます。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:56
-msgid ""
-"To set a delivery lead time for a product's subcontractor, navigate "
-"to :guilabel:`Inventory app --> Products --> Products`, and select a "
-"subcontracted product."
-msgstr ""
-"プロダクトの配送リードタイムを外注先に設定するには、:guilabel:`在庫アプリ --"
-"> プロダクト --> プロダクト` に移動し、外注プロダクトを選択します。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:71
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:61
-msgid "Product manufacturing lead time"
-msgstr "プロダクト製造リードタイム"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:73
-msgid ""
-"Next, navigate to the product's |BoM| by clicking the :guilabel:`Bill of "
-"Materials` smart button at the top of the product's page. Then, select a BoM "
-"from the list."
-msgstr ""
-"次に、プロダクトページの上部にある :guilabel:`部品表` スマートボタンをクリッ"
-"クして、プロダクトの部品表に移動します。 そして、リストから部品表を選択しま"
-"す。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:76
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:66
-msgid ""
-"On the |BoM|, select the :guilabel:`Miscellaneous` tab. In "
-"the :guilabel:`Manuf. Lead Time` field, enter the same number of days that "
-"was entered in the :guilabel:`Delivery Lead Time` field of the |BoM|'s "
-"product."
-msgstr ""
-"部品表で、:guilabel:`その他` タブを選択します。 :guilabel:`製造リードタイム` "
-"フィールドに、部品表のプロダクトの :guilabel:`配送リードタイム` フィールドに"
-"入力したのと同じ日数を入力します。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:None
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:None
-msgid "The Manuf. Lead Time field on a product's BoM."
-msgstr "プロダクトの部品表にある製造リードタイムフィールド"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:84
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:74
-msgid ""
-"While not all of these days are actually used for manufacturing by the "
-"subcontractor, setting the same number of days in each field tells Odoo that "
-"the subcontractor must receive the components and begin production by the "
-"start of the product's delivery lead time. This gives the subcontractor "
-"enough time to both manufacture and deliver the product."
-msgstr ""
-"これらの日数が全て実際に外注先での製造に使用されるわけではありませんが、各"
-"フィールドに同じ日数を設定することで、Odooは外注先がプロダクトの配送リードタ"
-"イムの開始までに、構成品を受け取り、製造を開始しなければならないことを認識し"
-"ます。これにより、外注先はプロダクトの製造と配送の両方に十分な時間を確保でき"
-"ます。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:90
-msgid "Component delivery lead time"
-msgstr "構成品配送リードタイム"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:92
-msgid ""
-"From the product's BoM, navigate to each component by clicking on the "
-"component in the :guilabel:`Components` tab, and then clicking the :icon:`oi-"
-"arrow-right` :guilabel:`(right arrow)` button to the right of the component."
-msgstr ""
-"プロダクトの部品表から、:guilabel:`` タブ内の構成品をクリックし、構成品の右側"
-"にある :icon:`oi-arrow-right` :guilabel:`(右矢印)` ボタンをクリックして、各構"
-"成品に移動します。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:96
-msgid ""
-"On the product page for each component, select the :guilabel:`Purchase` tab. "
-"If the vendor has not already been added, do so now by "
-"clicking :guilabel:`Add a line`, and selecting the subcontractor in "
-"the :guilabel:`Vendor` column."
-msgstr ""
-"各構成品のプロダクトページで、:guilabel:`購買` タブを選択します。 仕入先がま"
-"だ追加されていない場合は、:guilabel:`明細追加` をクリックして、:guilabel:`仕"
-"入先` 列から外注先を選択します。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:100
-msgid ""
-"Once the vendor has been added, enter the number of days it takes them to "
-"dropship the product to the subcontractor, in the :guilabel:`Delivery Lead "
-"Time` column."
-msgstr ""
-"仕入先を追加したら、:guilabel:`配送リードタイム` 列に、外注先への直送に要する"
-"日数を入力します。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:104
-msgid "Dropship subcontracting workflow"
-msgstr "直送外注ワークフロー"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:106
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:82
-msgid ""
-"Create a request for quotation (RfQ) for the product by navigating "
-"to :menuselection:`Purchase app --> Orders --> Requests for Quotation`, and "
-"clicking :guilabel:`New`."
-msgstr ""
-"プロダクトの見積依頼書を作成するには、:menuselection:`購買アプリ --> オーダ "
-"--> 見積依頼書` に移動し、:guilabel:`新規作成` をクリックします。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:109
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:85
-msgid ""
-"Specify the subcontractor in :guilabel:`Vendor` field. Then, add the product "
-"in the :guilabel:`Products` tab by clicking :guilabel:`Add a product`, "
-"selecting the product in the :guilabel:`Product` column, and specifying a "
-"quantity in the :guilabel:`Quantity` column."
-msgstr ""
-"外注先を :guilabel:`仕入先` フィールドで指定します。次に、:guilabel:`プロダク"
-"ト追加` をクリックし、:guilabel:`プロダクト` 列でプロダクトを選択"
-"し、:guilabel:`数量` 列で数量を指定して、:guilabel:`プロダクト` タブでプロダ"
-"クトを追加します。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:113
-msgid ""
-"In the :guilabel:`Expected Arrival` field, enter a date that provides enough "
-"time for the component vendor to dropship the components, and the "
-"subcontractor to manufacture and deliver the product."
-msgstr ""
-":guilabel:`入荷予定日` フィールドには、構成品の仕入先が構成品を直送し、外注先"
-"がプロダクトを製造して納品するのに十分な余裕を持った日付を入力して下さい。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:117
-msgid ""
-"When a product is added to an |RfQ|, the :guilabel:`Expected Arrival` field "
-"auto-populates with a date that is today's date plus the delivery lead time "
-"of the product. However, this does not consider the time it takes to "
-"dropship the components to the subcontractor."
-msgstr ""
-"プロダクトが見積依頼書に追加されると、:guilabel:`入荷予定日` フィールドには、"
-"その日の日付にそのプロダクトの配送リードタイムを加えた日付が自動的に入力され"
-"ます。ただし、これは外注先への構成品の直送に要する時間は考慮していません。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:121
-msgid ""
-"When purchasing a product subcontracted using the *Dropship Subcontractor on "
-"Order* route, it is necessary to adjust this date to take into account the "
-"extra time needed for the components to be delivered to the subcontractor."
-msgstr ""
-"*受注時外注先直送* ルートを利用して外注されたプロダクトを購入する際には、構成"
-"品が外注先に届くまでに余分に必要な時間を考慮して、この日付を調整する必要があ"
-"ります。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:125
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:102
-msgid ""
-"Since production does not begin until they receive the components, leaving "
-"the date as is results in the finished product arriving *after* the date "
-"listed on the |RfQ|."
-msgstr ""
-"構成品が届くまでは生産が開始されないため、日付をそのままにしておくと、見積依"
-"頼書に記載された日付よりも後に完成品が到着することになります。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:128
-msgid ""
-"Next, click :guilabel:`Confirm Order` to turn the |RfQ| into a |PO|. Doing "
-"so creates a second |RfQ| to purchase the components from the dropshipper, "
-"and have them sent to the subcontractor."
-msgstr ""
-"次に、:guilabel:`オーダ確定` をクリックすると、見積依頼書が購買オーダに変わり"
-"ます。直送業者から構成品を購買するための2つ目の見積依頼書が作成され、外注先に"
-"送られます。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:131
-msgid ""
-"Navigate to :menuselection:`Purchase app --> Orders --> Requests for "
-"Quotation`, and select the |RfQ| that lists the dropshipper in "
-"the :guilabel:`Vendor` column."
-msgstr ""
-":menuselection:`購買アプリ --> オーダ --> 見積依頼` に移動し、ドロップシッ"
-"パーが :guilabel:`仕入先` 列に記載されている見積依頼を選択します。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:134
-msgid ""
-"On the |RfQ|, the :guilabel:`Expected Arrival` field lists the date on which "
-"the subcontractor must receive the components, in order to deliver the "
-"finished product by the *Expected Arrival* date listed on the subcontractor |"
-"PO|."
-msgstr ""
-"見積依頼では、:guilabel:`入荷予定日` の欄に、外注先が購買オーダに記載された入"
-"荷予定日までに完成品を納品するために、構成品を受け取らなければならない日付が"
-"記載されています。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:138
-msgid ""
-"The :guilabel:`Order Deadline` field lists the latest date on which the |"
-"RfQ| can be confirmed, in order for the dropshipper to deliver the "
-"components to the subcontractor by the :guilabel:`Expected Arrival` date."
-msgstr ""
-":guilabel:`オーダ期日` フィールドには、ドロップシッパーが外注先へ構成品"
-"を :guilabel:`入荷予定日` までに納品できるよう、見積依頼が確認できる最も遅い"
-"日付が記載されます。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:142
-msgid ""
-"Click :guilabel:`Confirm Order` to turn the |RfQ| into a |PO|, and confirm "
-"the purchase of the components from the dropshipper. Doing so causes "
-"a :guilabel:`Dropship` smart button to appear at the top of the page."
-msgstr ""
-"見積依頼を購買オーダに変更し、直送業者からの構成品の購買を確定するに"
-"は、:guilabel:`オーダ確定` をクリックします。 そうすると、ページの一番上"
-"に :guilabel:`直送` スマートボタンが表示されます。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:146
-msgid ""
-"Click the :guilabel:`Dropship` smart button to open the dropship order. This "
-"order can also be accessed from the :guilabel:`Resupply` smart button that "
-"now appears on the subcontractor |PO|."
-msgstr ""
-":guilabel:`直送` スマートボタンをクリックして、直送オーダを開きます。このオー"
-"ダは、外注先購買オーダに表示されるようになった :guilabel:`補充` スマートボタ"
-"ンからもアクセスできます。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:149
-msgid ""
-"After the dropshipper has delivered the components to the subcontractor, "
-"click the :guilabel:`Validate` button at the top of the dropship order to "
-"confirm that the subcontractor has received the components."
-msgstr ""
-"直送業者が外注先に構成品を配送した後、直送オーダの上部にある :guilabel:`検証"
-"` ボタンをクリックして、外注先が構成品を受け取ったことを確認します。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:153
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:127
-msgid ""
-"Once the subcontractor receives the components, they begin manufacturing the "
-"component, before delivering it to the contracting company."
-msgstr ""
-"外注先が構成品を受け取ると、それを発注元企業に納品する前に、構成品の製造を開"
-"始します。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:158
-msgid ""
-"Bike retailer *Mike's Bikes* works with a subcontractor — *Bike Friends* — "
-"to produce units of their *Bicycle* product."
-msgstr ""
-"自転車販売店 *Mike's Bikes* は、外注先である *Bike Friends* と協力して、自社"
-"プロダクトである *自転車* を製造しています。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:161
-msgid ""
-"Mike's Bikes must purchase the required components from vendor Bike World, "
-"and have them dropshipped to Bike Friends."
-msgstr ""
-"自転車販売店 *Mike's Bikes* は、*自転車(Bicycle)* という自社プロダクトの製造"
-"を外注先である *Bike Friends* に委託しています。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:164
-msgid ""
-"On average, Bike Friends takes three days to manufacture each bicycle, plus "
-"an addition two days to deliver it to Mike's Bikes."
-msgstr ""
-"平均して、Bike Friendsが自転車を製造するには3日、さらにMike's Bikesに届けるの"
-"に2日かかります。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:167
-msgid ""
-"As a result, Mike's Bikes sets a delivery lead time of five days for bicycle "
-"manufactured by Bike Friends: three days for manufacturing, plus two days "
-"for delivery."
-msgstr ""
-"そのため、Mike's Bikesでは、Bike Friends社製の自転車の配送リードタイムを5日間"
-"に設定しました。製造に3日、配送に2日です。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:170
-msgid ""
-"On the bicycle's BoM, they enter a manufacturing lead time of five days as "
-"well, to remind themselves of the date that components must be delivered to "
-"the subcontractor."
-msgstr ""
-"自転車の部品表には、外注先に構成品を納品しなければならない期日を忘れないよう"
-"に、製造リードタイムとして5日という情報も入力されています。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:173
-msgid ""
-"On the product pages for each of the bicycle's components, they assign Bike "
-"World a delivery lead time of two days. This is the amount of time it takes "
-"Bike World to dropship each component directly to the subcontractor."
-msgstr ""
-"各自転車の構成品のプロダクトページでは、Bike Worldに2日間の配送リードタイムを"
-"割当てています。これは、Bike Worldが各構成品を外注先へ直送するのにかかる時間"
-"です。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:177
-msgid ""
-"On May 10th, Mike's Bikes confirms a |PO| for one bicycle, with an expected "
-"delivery date of May 17th."
-msgstr ""
-"5月10日、Mike's Bikesは1台の自転車に対する購買オーダを確認し、配送予定日は5月"
-"17日としました。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:180
-msgid ""
-"The |RfQ| for purchasing the components from Bike World and having them "
-"dropshipped to Bike Friends has an Expected Arrival date of May 12th, and a "
-"Deadline of May 10th. The |RfQ| must be confirmed by the deadline in order "
-"for Bike Friends to receive the components by the Expected Arrival date, "
-"giving them enough time to deliver the finished bicycle to Mike's Bikes by "
-"May 17th."
-msgstr ""
-"Bike Worldから構成品を購買し、Bike Friendsに直送してもらう場合の見積依頼は、"
-"入荷予定日が5月12日、締め切りが5月10日です。 Bike Friendsが構成品を入荷予定日"
-"までに受け取り、5月17日までに完成した自転車をMike's Bikesに配送できるよう、見"
-"積依頼は期日までに確認する必要があります。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:None
-msgid "The Order Deadline and Expected Arrival dates on a dropship order."
-msgstr "直送オーダのオーダ期日と入荷予定日"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:190
-msgid ""
-"Mike's Bikes confirms the |RfQ| on May 10th, and Bike World delivers the "
-"components to Bike Friends on May 12th. Bike Friends manufactures the "
-"bicycle, and delivers it to Mike's Bikes on May 17th."
-msgstr ""
-"Mike's Bikesは5月10日に見積依頼を確認し、Bike Worldは5月12日に構成品をBike "
-"Friendsに納品します。Bike Friendsは自転車を製造し、5月17日にMike's Bikesに納"
-"品します。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:3
-msgid "Resupply subcontracting lead times"
-msgstr "補充外注リードタイム"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:26
-msgid ""
-"Unforeseen circumstances can impact the completion of these actions, which "
-"means that lead times should **not** be viewed as guarantees."
-msgstr ""
-"予期せぬ事情がこれらの作業の完了に影響を及ぼす可能性があるため、リードタイム"
-"は確実に保証されたものと見なすべきでは **ありません**。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:32
-msgid ""
-"When using the :doc:`Resupply Subcontractor on Order "
-"<subcontracting_resupply>` route, a company is responsible for supplying the "
-"subcontractor with the necessary components. As a result, the subcontractor "
-"cannot begin manufacturing until the components have been received."
-msgstr ""
-":doc:`受注時外注先在庫補充 <subcontracting_resupply>` ルートを使用する場合、"
-"企業は外注先に必要な構成品を供給する責任があります。そのため、外注先は構成品"
-"を受け取るまで製造を開始できません。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:36
-msgid ""
-"This means that, in addition to the amount of time it takes the "
-"subcontractor to manufacture and deliver the product, the date they receive "
-"the components must also be considered."
-msgstr ""
-"つまり、外注先がプロダクトを製造し納品するのにかかる時間に加え、外注先が構成"
-"品を受け取る日付も考慮する必要があります。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:39
-msgid ""
-"By assigning a product's subcontractor a delivery lead time, and specifying "
-"a manufacturing lead time on the product's bill of materials (BoM), "
-"*Resupply Subcontractor* orders for the product's components display the "
-"deadline by which the subcontractor must receive the components."
-msgstr ""
-"製品の配送リードタイムを外注先に割当て、製品の部品表に製造リードタイムを指定"
-"すると、プロダクト構成品の *外注先補充* オーダには、外注先が構成品を受け取る"
-"必要がある期日が表示されます。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:49
-msgid ""
-"Then, select the :guilabel:`Purchase` tab on the product's page. If the "
-"subcontractor has not already been added as a vendor, do so now by "
-"clicking :guilabel:`Add a line`, and selecting the subcontractor in "
-"the :guilabel:`Vendor` field."
-msgstr ""
-"次に、プロダクトページの :guilabel:`購買` タブを選択します。外注先がまだ仕入"
-"先として追加されていない場合は、:guilabel:`明細追加` をクリック"
-"し、:guilabel:`仕入先` フィールドで外注先を選択して、追加します。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:63
-msgid ""
-"Next, navigate to the product's |BoM| by clicking the :guilabel:`Bill of "
-"Materials` smart button at the top of the product's page. Then, select a |"
-"BoM| from the list."
-msgstr ""
-"次に、プロダクトページの上部にある :guilabel:`部品表` スマートボタンをクリッ"
-"クして、プロダクトの部品表に移動します。 そして、リストから部品表を選択しま"
-"す。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:80
-msgid "Resupply subcontracting workflow"
-msgstr "補充外注ワークフロー"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:89
-msgid ""
-"In the :guilabel:`Expected Arrival` field, enter a date that provides enough "
-"time for the subcontractor to receive the components, manufacture the "
-"product, and deliver it back to the subcontracting company."
-msgstr ""
-":guilabel:`入荷予定日` フィールドには、外注先が構成品を受け取り、プロダクトを"
-"製造し、外注会社にそれを返送するのに十分な余裕を持った日付を入力して下さい。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:94
-msgid ""
-"When a product is added to an |RfQ|, the :guilabel:`Expected Arrival` field "
-"auto-populates with a date that is today's date plus the delivery lead time "
-"of the product. However, this does **not** consider the time it takes to "
-"ship the components to the subcontractor."
-msgstr ""
-"見積依頼にプロダクトが追加されると、:guilabel:`入荷予定日` フィールドには、そ"
-"の日の日付にプロダクトの配送リードタイムを加えた日付が自動的に入力されます。"
-"ただし、これは外注先への構成品の配送にかかる時間は考慮していません。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:98
-msgid ""
-"When purchasing a product subcontracted using the Resupply Subcontractor on "
-"Order route, it is necessary to adjust this date to take into account the "
-"extra time needed for the components to be shipped to the subcontractor."
-msgstr ""
-"受注時外注先在庫補充ルートを使用して外注されたプロダクトを購買する際には、構"
-"成品が外注先に発送されるのに余分な時間がかかることを考慮して、この日付を調整"
-"して下さい。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:105
-msgid ""
-"Next, click :guilabel:`Confirm Order` to turn the |RfQ| into a |PO|. Doing "
-"so causes a :guilabel:`Resupply` smart button to appear at the top of the "
-"page."
-msgstr ""
-"次に、:guilabel:`オーダ確定` をクリックすると、見積依頼が購買オーダに変わりま"
-"す。ページの一番上に :guilabel:`補充` スマートボタンが表示されます。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:108
-msgid ""
-"Click the :guilabel:`Resupply` smart button to open the resupply "
-"subcontractor order, which is the order created to send components to the "
-"subcontractor."
-msgstr ""
-":guilabel:`補充` スマートボタンをクリックして、外注先への構成品の発送用に作成"
-"されたオーダである外注先在庫補充オーダを開きます。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:111
-msgid ""
-"The :guilabel:`Deadline` field on the resupply subcontractor order shows the "
-"deadline for the subcontractor to receive the components, in order for them "
-"to have enough time to manufacture and deliver the finished product by the "
-"Expected Arrival date."
-msgstr ""
-"外注先在庫補充オーダの :guilabel:`期日` フィールドには、外注先が構成品を受け"
-"取る期限が表示されます。これにより、外注先は、入荷予定日までに完成品を製造"
-"し、納品するのに十分な時間を確保できます。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:115
-msgid ""
-"The :guilabel:`Scheduled Date` field should display the latest date on which "
-"components can be shipped, while still arriving to the subcontractor by "
-"the :guilabel:`Deadline`. However, by default, the date displayed is the "
-"same as the date in the :guilabel:`Deadline` field, and must be updated to "
-"take into account the time required for shipping."
-msgstr ""
-":guilabel:`予定日` フィールドには、外注先に :guilabel:`期日` までに到着する一"
-"方で、構成品の出荷が可能な最も遅い日付が表示されるべきです。 しかし、デフォル"
-"トでは、表示される日付は :guilabel:`期日` フィールドの日付と同じであり、出荷"
-"に必要な時間を考慮して更新する必要があります。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:120
-msgid ""
-"Click on the :guilabel:`Scheduled Date` field to open a calendar popover "
-"from which a date can be selected. Select a date that allows for the "
-"components to be delivered by the :guilabel:`Deadline` on the resupply "
-"subcontractor order."
-msgstr ""
-":guilabel:`予定日` フィールドをクリックすると、カレンダーポップオーバーが開"
-"き、そこから日付を選択できます。 外注先在庫補充オーダの :guilabel:`期日` まで"
-"に構成品が納品されるように日付を選択します。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:124
-msgid ""
-"After the components are shipped, click the :guilabel:`Validate` button at "
-"the top of the order to confirm they have been sent to the subcontractor."
-msgstr ""
-"構成品の出荷後、オーダの上部にある :guilabel:`検証` ボタンをクリックして、外"
-"注先に送信されたことを確認します。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:131
-msgid ""
-"Bike retailer *Mike's Bikes* works with a subcontractor — *Bike Friends* — "
-"to produce units of their *Unicycle* product."
-msgstr ""
-"自転車販売店 *Mike's Bikes* は、外注先である *Bike Friends* と協力して、自社"
-"プロダクトである *一輪車(Unicycle)* を製造しています。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:134
-msgid ""
-"Mike's Bikes must supply Bike Friends with the necessary components for "
-"manufacturing the unicycles."
-msgstr ""
-"自転車販売店 *Mike's Bikes* は、*一輪車* というプロダクトの製造を外注先であ"
-"る *Bike Friends* に委託しています。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:137
-msgid ""
-"On average, Bike Friends takes three days to manufacture each unicycle, plus "
-"an additional two days to deliver it to Mike's Bikes."
-msgstr ""
-"平均して、Bike Friendsは一輪車を製造するのに3日、さらにMike's Bikesに届けるの"
-"に2日を要します。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:140
-msgid ""
-"As a result, Mike's Bikes sets a delivery lead time of five days for "
-"unicycles manufactured by Bike Friends: three days for manufacturing, plus "
-"two days for delivery."
-msgstr ""
-"そのため、Mike's Bikesでは、Bike Friends社製の一輪車の配送リードタイムを5日間"
-"に設定しました。製造に3日、配送に2日です。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:143
-msgid ""
-"On the unicycle's |BoM|, they enter a manufacturing lead time of five days, "
-"as well, to remind themselves of the date that components must be delivered "
-"to the subcontractor."
-msgstr ""
-"一輪車の部品表には、外注先に構成品を納品すべき期日を忘れないように、5日の製造"
-"リードタイムも入力されています。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:146
-msgid ""
-"They confirm a |PO| for one unicycle, with an expected arrival date of May "
-"30th."
-msgstr "一輪車一台分の購買オーダが確認されており、入荷予定日は5月30日です。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:148
-msgid ""
-"The resupply subcontractor order for shipping the components to the "
-"subcontractor shows a *Deadline* of May 25th. The subcontractor must receive "
-"the components by this date, in order to have enough time to manufacture the "
-"unicycle, and deliver it by May 30th."
-msgstr ""
-"外注先への構成品出荷に関する外注先在庫補充オーダには、*期日* が5月25日と記載"
-"されています。外注先が一輪車の製造に十分な時間を確保し、5月30日までに納品する"
-"には、この日付までに構成品を受け取らなければなりません。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:152
-msgid ""
-"It takes Mike's Bikes two days to deliver the components, so they update the "
-"*Scheduled Date* field on the resupply subcontractor order to May 23rd, two "
-"days before the Deadline."
-msgstr ""
-"Mike's Bikesは構成品の配送に2日かかるため、外注先在庫補充オーダの * 予定日* "
-"フィールドを期日の2日前である5月23日に更新します。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:None
-msgid ""
-"The Scheduled Date and Deadline fields on a resupply subcontractor order."
-msgstr "外注先在庫補充オーダの「予定日」と「期日」のフィールド"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:159
-msgid ""
-"Mike's Bikes ships the components to Bike Friends on the scheduled date of "
-"May 23rd, and they arrive on the deadline of May 25th. This gives Bike "
-"Friends enough time to manufacture the unicycle, and ship it back to Mike's "
-"Bikes by the expected arrival date of May 30th."
-msgstr ""
-"Mike's Bikesは予定日である5月23日にBike Friendsに構成品を発送し、5月25日の締"
-"め切りまでに到着します。これにより、Bike Friendsは一輪車の製造に十分な時間を"
-"確保でき、5月30日の入荷予定日までにMike's Bikesに送り返すことができます。"
-
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:10
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:12
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:10
 msgid ""
-"In manufacturing, subcontracting is the process of a company engaging a "
-"third-party manufacturer, or subcontractor, to manufacture products that are "
-"then sold by the contracting company."
+"In basic subcontracting, a company's product is produced entirely by a "
+"subcontractor. The product is first purchased from the subcontractor, who "
+"acquires their own components, manufactures the final product, then delivers "
+"the final product to the contracting company's warehouse."
 msgstr ""
-"製造業において、外注とは、会社が第三者の製造業者、または外注先と契約し、その"
-"会社がプロダクトを製造し、発注元企業が販売するプロセスを指します。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:13
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:14
 msgid ""
-"In basic subcontracting, the subcontractor is responsible for acquiring the "
-"necessary components. This means that the contracting company only has to "
-"worry about what happens to subcontracted products once they are produced."
+"The following documentation covers how to configure a subcontracted product "
+"and trigger the subcontracting process."
 msgstr ""
-"基本的な外注では、外注先が必要な構成品を調達する責任を負います。つまり、発注"
-"元企業は、外注プロダクトが生産された後のことだけを心配すればよいのです。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:17
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:20
 msgid ""
-"The workflow for purchasing a product manufactured using basic "
-"subcontracting is similar to the one used when purchasing a non-"
-"subcontracted product from a vendor. The main differences are the way that "
-"subcontracted products are configured, and the fact that subcontracted "
-"products take longer to be sent from the vendor, since they must first be "
-"manufactured by them."
+"To use subcontracting, contractors must first configure products with "
+"a :ref:`vendor pricelist <purchase/products/pricelist>` as well as a "
+"subcontracting-type |BoM|."
 msgstr ""
-"基本的な外注を使用して製造されたプロダクトの購入に関するワークフローは、外注"
-"を使用しないプロダクトを仕入先から購入する場合とほぼ同様です。主な違いは、外"
-"注プロダクトの設定方法と、外注プロダクトはまず仕入先で製造される必要があるた"
-"め、仕入先から発送されるまでに時間がかかるという点です。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:25
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:23
 msgid ""
-"To use subcontracting in Odoo, navigate to :menuselection:`Manufacturing app "
-"--> Configuration --> Settings`, and tick the checkbox next to "
-"the :guilabel:`Subcontracting` setting, under the :guilabel:`Operations` "
-"heading. Then, click :guilabel:`Save`."
+"The pricelist allows the contracting company to purchase the product from "
+"the vendor (subcontractor) through a |PO|, while the |BoM| allows the "
+"product to be manufactured externally by the subcontractor."
 msgstr ""
-"Odooで外注を利用するには、:menuselection:`製造アプリ --> 設定 --> 管理設定` "
-"に移動し、:guilabel:`工程` の見出しの下にある :guilabel:`外注` 設定の横にある"
-"チェックボックスにチェックを入れます。次に、:guilabel:`保存` をクリックしま"
-"す。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:29
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:30
+msgid "Configure product vendor"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:32
 msgid ""
-"Once the :guilabel:`Subcontracting` setting is enabled, it is also necessary "
-"to properly configure the subcontracted product, and the product's |BoM|."
+"To configure a product's vendor for basic subcontracting, navigate "
+"to :menuselection:`Inventory app --> Products --> Products`. Then, select a "
+"product or create a new one."
 msgstr ""
-":guilabel:`外注` 管理設定を有効にした場合、外注プロダクトとプロダクトの部品表"
-"を適切に設定する必要があります。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:37
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:35
 msgid ""
-"To configure a product for basic subcontracting, navigate "
-"to :menuselection:`Inventory app --> Products --> Products`, and select a "
-"product, or create a new one by clicking :guilabel:`New`."
+"On the product form, click the :guilabel:`Purchase` tab and add the "
+"product's subcontractor as a vendor by clicking :guilabel:`Add a line`. "
+"Select the subcontractor in the :guilabel:`Vendor` drop-down menu."
 msgstr ""
-"基本的な外注用プロダクトを設定するには、:menuselection:`在庫アプリ --> プロダ"
-"クト --> プロダクト` に移動し、製品を選択するか、:guilabel:`新規作成` をク"
-"リックして新しいプロダクトを作成します。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:40
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:39
+msgid "Then, enter the price of the product in the :guilabel:`Price` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:41
 msgid ""
-"On the product form, select the :guilabel:`Purchase` tab, and add the "
-"product's subcontractor as a vendor by clicking :guilabel:`Add a line`, "
-"selecting the subcontractor in the :guilabel:`Vendor` drop-down menu, and "
-"entering a price in the :guilabel:`Price` field."
+"Finally, set a :doc:`lead time <../../inventory/warehouses_storage/"
+"replenishment/lead_times>` for the product in the :guilabel:`Delivery Lead "
+"Time` field to specify the number of days for the subcontractor to produce "
+"and deliver the final product."
 msgstr ""
-"プロダクトフォームで、:guilabel:`購買` タブを選択し、:guilabel:`明細追加` を"
-"クリックして、:guilabel:`仕入先` ドロップダウンメニューから外注先を選択"
-"し、:guilabel:`価格` フィールドに価格を入力して、プロダクトの外注先を仕入先と"
-"して追加します。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:44
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:46
 msgid ""
-"Then, click on the :guilabel:`Inventory` tab, and use the :guilabel:`Routes` "
-"field to configure a route that determines what happens to the finished "
-"product once it has been manufactured by the subcontractor."
+"Since contractors are only responsible for purchasing and receiving the "
+"final product, they do not need to additionally configure manufacturing lead "
+"times on a |BoM|. Instead, provide only a single *Delivery Lead Time* on the "
+"vendor pricelist that factors in both the subcontractor's manufacturing and "
+"delivery time."
 msgstr ""
-"次に、:guilabel:`在庫` タブをクリックし、:guilabel:`ルート` フィールドを使用"
-"して、外注先で製造された完成品が次にどう処理されるかを決定するルートを設定し"
-"ます。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:48
-msgid ""
-"If the finished product is shipped back to the contracting company, make "
-"sure the :guilabel:`Buy` route is selected. In addition, select "
-"the :guilabel:`Replenish on Order (MTO)` route to automatically create a |"
-"PO| for the product upon confirmation of a sales order (SO), unless there is "
-"enough stock on-hand to fulfill the |SO|."
-msgstr ""
-"完成品を発注元企業に返送する場合は、:guilabel:`購買` ルートが選択されているこ"
-"とを確認して下さい。さらに、オーダ確認時にプロダクトの :guilabel:`受注補充"
-"(MTO)` ルートを選択すると、手持在庫が十分でない限り、販売オーダ(SO)の確認時に"
-"自動的にプロダクトの購買オーダが作成されます。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:53
-msgid ""
-"If the finished product is shipped directly to the customer by the "
-"subcontractor, make sure that **only** the :guilabel:`Dropship` route is "
-"selected."
-msgstr ""
-"完成品が外注先から顧客に直送される場合は、:guilabel:`直送` ルート **のみ** が"
-"選択されていることを確認して下さい。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:57
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:54
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:83
 msgid "Configure BoM"
 msgstr "部品表を設定する"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:59
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:56
 msgid ""
-"To configure a |BoM| for basic subcontracting, click the :guilabel:`Bill of "
-"Materials` smart button on the product form, and select the desired |BoM|."
+"After specifying the vendor, configure a subcontracting-type |BoM| for the "
+"product. Click the :guilabel:`Bill of Materials` smart button on the product "
+"form. Then, select the desired |BoM| or create a new one."
 msgstr ""
-"基本的な外注のための部品表を設定するには、プロダクトフォーム上の  :guilabel:`"
-"部品表` スマートボタンをクリックし、必要な部品表を選択します。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:62
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:61
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:78
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:88
 msgid ""
@@ -45868,382 +44846,150 @@ msgstr ""
 "または、:menuselection:`製造アプリ --> プロダクト --> 部品表` に移動し、外注"
 "プロダクトの部品表を選択します。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:66
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:82
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:92
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:64
 msgid ""
-"For a full overview of |BoM| configuration, see the :doc:`Bill of materials "
-"<../basic_setup/bill_configuration>` documentation."
+"In the :guilabel:`BoM Type` field, select :guilabel:`Subcontracting`. In the "
+"resulting :guilabel:`Subcontractors` field, add one or more subcontractors."
 msgstr ""
-"部品表の設定に関する詳細な概要については、:doc:`部品表 <../basic_setup/"
-"bill_configuration>` のドキュメントを参照して下さい。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:69
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:85
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:95
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:67
 msgid ""
-"In the :guilabel:`BoM Type` field, select the :guilabel:`Subcontracting` "
-"option. Then, add one or more subcontractors in "
-"the :guilabel:`Subcontractors` field that appears below."
+"Because the components and manufacturing are both handled by the "
+"subcontractor, there is no need to list any components in "
+"the :guilabel:`Components` tab of the |BoM|."
 msgstr ""
-":guilabel:`部品表タイプ` フィールドで、:guilabel:`外注` オプションを選択しま"
-"す。次に、その下に表示される :guilabel:`外注先` フィールドに、1つ以上の外注先"
-"を追加します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:None
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:None
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:None
-msgid ""
-"The \"BoM Type\" field on a BoM, configured to manufacture the product using "
-"subcontracting."
+msgid "Bill of Materials configuration for subcontracting in Odoo."
 msgstr ""
-"外注を使用してプロダクトを製造するように設定された部品表の \"部品表タイプ\" "
-"フィールド"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:76
-msgid ""
-"Finally, click on the :guilabel:`Miscellaneous` tab. In "
-"the :guilabel:`Manuf. Lead Time` field, enter the number of days it takes "
-"the subcontractor to manufacture the product. This number is factored in "
-"when calculating the product's expected arrival date."
-msgstr ""
-"最後に、:guilabel:`その他` タブをクリックします。 :guilabel:`製造リードタイム"
-"` フィールドに、外注先がプロダクトを製造するのにかかる日数を入力します。 この"
-"数値は、プロダクトの入荷予定日を計算する際に考慮されます。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:81
-msgid ""
-"When using basic subcontracting, there is no need to list components in "
-"the :guilabel:`Components` tab of the |BoM|, since the components required "
-"for manufacturing, and the means by which they are acquired, are handled by "
-"the subcontractor."
-msgstr ""
-"基本的な外注を使用する場合、製造に必要な構成品やその入手手段は外注先が管理す"
-"るため、部品表の :guilabel:`構成品` タブに構成品をリスト化する必要はありませ"
-"ん。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:86
 msgid "Basic subcontracting workflow"
 msgstr "基本的な外注フロー"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:88
-msgid "The basic subcontracting workflow consists of up to four steps:"
-msgstr "基本的な外注ワークフローは、最大4つのステップで構成されています:"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:90
-msgid ""
-"Create a sales order (SO) for the subcontracted product; doing so creates a |"
-"PO| to purchase the product from the subcontractor."
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:None
+msgid "Basic subcontracting workflow diagram in Odoo."
 msgstr ""
-"外注プロダクト用の販売オーダ(SO)を作成します。そうすることで、外注先からプロ"
-"ダクトを購買するための購買オーダが作成されます。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:92
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:81
 msgid ""
-"Confirm the |PO| created in the previous step, or create a new |PO|; doing "
-"so creates a receipt order or a dropship order."
+"The basic subcontracting workflow begins by :ref:`creating a PO "
+"<subcontracting_basic/workflow/create_po>` to purchase the product from the "
+"subcontractor (1)."
 msgstr ""
-"前ステップで作成した購買オーダを確認するか、新しい購買オーダを作成します。す"
-"ると入荷オーダまたは直送オーダが作成されます。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:94
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:84
 msgid ""
-"Process the receipt once the subcontractor has finished manufacturing the "
-"subcontracted product, and shipped it back to the contracting company, "
-"**OR** process the dropship order to ship the product directly to the "
-"customer."
+"The contractor (YourCompany) then confirms the |PO|, which creates a receipt "
+"to transfer the final product (2). The subcontractor manufactures the "
+"product and delivers it back to the contractor when done."
 msgstr ""
-"外注先が外注されたプロダクトの製造を完了し、発注元企業にそれを送り返したら、"
-"その入荷を処理します。**または**、直送オーダを処理して、プロダクトを顧客に直"
-"接出荷します。"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:87
+msgid ""
+"Once the product has been produced and received, the "
+"contractor :ref:`validates the receipt <subcontracting_basic/workflow/"
+"validate_receipt>` (5) to trigger :ref:`inventory moves "
+"<subcontracting_basic/workflow/track-inventory>` from the subcontractor to "
+"the company's stock (3, 4)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:95
+msgid "Create and confirm PO"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:97
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:135
 msgid ""
-"If the workflow was started by creating an |SO|, and the finished product is "
-"not dropshipped to the end customer, process the delivery order once the "
-"product is shipped to the customer."
+"To create a |PO| for the subcontracted product, navigate "
+"to :menuselection:`Purchase app --> Orders --> Purchase Orders`, and "
+"click :guilabel:`New`."
 msgstr ""
-"ワークフローが販売オーダの作成により開始され、完成品が最終顧客に直送されない"
-"場合は、プロダクトが顧客に発送された時点で出荷オーダを処理します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:100
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:138
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:138
-msgid ""
-"The specific number of steps depends on the reason that the subcontracted "
-"product is being purchased from the subcontractor."
-msgstr "外注先から購買される副産品に応じて、具体的なステップ数は異なります。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:103
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:141
-msgid ""
-"If the reason is to fulfill a specific customer order, the process starts "
-"with creating an |SO|, and ends with delivering the product to the customer, "
-"or having the subcontractor dropship it to them."
-msgstr ""
-"特定の顧客オーダを満たすことを目的とする場合、プロセスは販売オーダ作成から始"
-"まり、プロダクトを顧客に納品するか、外注先から直送することで完了します。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:106
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:144
-msgid ""
-"If the reason is to increase the quantity of stock on-hand, the process "
-"starts with creating a |PO|, and ends with receiving the product into "
-"inventory."
-msgstr ""
-"在庫数量の追加が目的であれば、プロセスは購買オーダの作成から始まり、プロダク"
-"トを在庫として入荷することで完了します。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:110
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:169
-msgid "Create SO"
-msgstr "販売オーダを作成する"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:112
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:150
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:171
-msgid ""
-"It is only necessary to complete this step if the product is being purchased "
-"from the subcontractor to fulfill a customer need. If the product is being "
-"purchased to increase the quantity of stock on-hand, move on to the next "
-"step."
-msgstr ""
-"このステップは、顧客ニーズを満たすために外注先からプロダクトを購買する場合の"
-"み必要です。プロダクトを購買して手持在庫数量を追加する場合は、次のステップに"
-"進みます。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:116
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:154
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:175
-msgid ""
-"To create a new |SO|, navigate to :menuselection:`Sales app --> Orders --> "
-"Orders`, and click :guilabel:`New`."
-msgstr ""
-"新しい販売オーダを作成するには、:menuselection:`販売アプリ --> オーダ --> "
-"オーダ` に移動し、:guilabel:`新規` をクリックします。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:119
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:178
-msgid ""
-"Select the customer in the :guilabel:`Customer` drop-down menu. Then, "
-"click :guilabel:`Add a product` on the :guilabel:`Order Lines` tab, select a "
-"subcontracted product in the :guilabel:`Product` drop-down menu, and enter a "
-"quantity in the :guilabel:`Quantity` field."
-msgstr ""
-":guilabel:`顧客`ドロップダウンメニューで顧客を選択します。次に、:guilabel:`"
-"オーダ明細` タブの:guilabel:`プロダクト追加` をクリックし、:guilabel:`プロダ"
-"クト`ドロップダウンメニューで外注プロダクトを選択し、:guilabel:`数量` フィー"
-"ルドに数量を入力します。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:123
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:182
-msgid ""
-"Click :guilabel:`Confirm` to confirm the |SO|, at which point "
-"a :guilabel:`Purchase` smart button appears at the top of the page. This "
-"opens the |PO| created to purchase the subcontracted product from the "
-"subcontractor."
-msgstr ""
-":guilabel:`確認` をクリックして確認すると、ページの上部に :guilabel:`購買`  "
-"スマートボタンが表示されます。これにより、外注先から外注プロダクトを購入する"
-"ために作成された購買オーダが開きます。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:128
-msgid ""
-"An |SO| for the product only creates a |PO| if the *Replenish on Order "
-"(MTO)* route is enabled on the product's form, **and** there is not enough "
-"stock of the product on-hand to fulfill the |SO|."
-msgstr ""
-"プロダクトに対して *受注補充(MTO)* ルートがプロダクトフォーム上で有効になって"
-"おり、**かつ**、そのプロダクトの手持在庫が販売オーダを満たすのに十分でない場"
-"合のみ、購買オーダが作成されます。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:131
-msgid ""
-"If there is enough stock on-hand, confirming an |SO| for the product creates "
-"a delivery order instead, because Odoo assumes that the |SO| is fulfilled "
-"using the stock in the warehouse."
-msgstr ""
-"在庫が十分にある場合、プロダクトの販売オーダを確認すると、代わりに出荷オーダ"
-"が作成されます。これは、Odooが販売オーダが倉庫内の在庫を使用して満たされると"
-"想定しているためです。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:134
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:193
-msgid ""
-"This is not the case for subcontracted products that are dropshipped to the "
-"end customer. In that case, a |PO| is **always** created, even if there is "
-"enough stock on-hand."
-msgstr ""
-"これは、外注プロダクトが最終顧客に直送される場合には当てはまりません。その場"
-"合、たとえ手持在庫が十分にあっても、購買オーダは **常に** 作成されます。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:138
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:197
-msgid "Process PO"
-msgstr "購買オーダを処理する"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:140
-msgid ""
-"If a |PO| was created in the previous step, navigate to it by clicking "
-"the :guilabel:`Purchase` smart button at the top of the |SO|, or by going "
-"to :guilabel:`Purchase app --> Orders --> Purchase Orders`, and selecting "
-"the |PO|. Then, click :guilabel:`Confirm Order` to confirm it, and move on "
-"to the next step."
-msgstr ""
-"前のステップで購買オーダが作成された場合、販売オーダの一番上にあ"
-"る  :guilabel:`購買` スマートボタンをクリックするか、または :guilabel:`購買ア"
-"プリ --> オーダ --> 購買オーダ` に移動し、購買オーダを選択します。次"
-"に、  :guilabel:`オーダ確定` をクリックして確定し、次のステップに進みます。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:145
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:202
-msgid ""
-"If a |PO| was not created in the previous step, do so now by navigating "
-"to :menuselection:`Purchase app --> Orders --> Purchase Orders`, and "
-"clicking :guilabel:`New`."
-msgstr ""
-"前のステップで購買オーダが作成されていない場合は、:menuselection:`アプリの購"
-"入 --> オーダ --> 購買オーダ` に移動し、:guilabel:`新規作成` をクリックして作"
-"成して下さい。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:148
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:205
 msgid ""
 "Begin filling out the |PO| by selecting a subcontractor from "
 "the :guilabel:`Vendor` drop-down menu. In the :guilabel:`Products` tab, "
-"click :guilabel:`Add a product` to create a new product line. Select a "
+"click :guilabel:`Add a product` to create a new product line. Select the "
 "subcontracted product in the :guilabel:`Product` field, and enter the "
-"quantity in the :guilabel:`Quantity` field. Finally, "
-"click :guilabel:`Confirm Order` to confirm the |PO|."
+"quantity in the :guilabel:`Quantity` field."
 msgstr ""
-"購買オーダの入力を開始するには、:guilabel:`仕入先`ドロップダウンメニューから"
-"外注先を選択します。 :guilabel:`プロダクト` タブで、:guilabel:`プロダクト追加"
-"` をクリックして新しいプロダクト明細を作成します。 :guilabel:`プロダクト` "
-"フィールドで外注先プロダクトを選択し、:guilabel:`数量` フィールドに数量を入力"
-"します。最後に、購買オーダを確定する場合は、:guilabel:`オーダ確定` をクリック"
-"します。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:153
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:105
 msgid ""
-"When a |PO| is confirmed for a product manufactured using basic "
-"subcontracting, a receipt or dropship order is automatically created, and "
-"can be accessed from the corresponding :guilabel:`Receipt` "
-"or :guilabel:`Dropship` smart button that appears at the top of the |PO|."
+"After adding the product, the :guilabel:`Expected Arrival` field is updated "
+"with the finished product's expected delivery date, as configured earlier "
+"with the vendor's *Delivery Lead Time*."
 msgstr ""
-"基本的な外注を利用して製造されたプロダクトに対して購買オーダが確認されると、"
-"自動的に入荷または直送オーダが作成され、購買オーダの最上部に表示され"
-"る :guilabel:`入荷` または :guilabel:`直送` スマートボタンからアクセスできま"
-"す。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:161
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:108
 msgid ""
-"A PO for a basic subcontracting product, with a Receipt smart button at the "
-"top of the page."
-msgstr "基本的な外注プロダクトの購買オーダ、ページ上部の「入荷」スマートボタン"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:161
-msgid ""
-"PO for a basic subcontracting product, with a Receipt smart button at the "
-"top of the page."
-msgstr "基本的な外注プロダクトの購買オーダ、ページ上部の「入荷」スマートボタン"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:164
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:237
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:242
-msgid "Process receipt or dropship order"
-msgstr "入荷または直送オーダを処理する"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:166
-msgid ""
-"Once the subcontractor has finished manufacturing the product, they either "
-"ship it to the contracting company, or dropship it to the end customer, "
-"depending on how the product was :ref:`configured <manufacturing/workflows/"
-"subcontracting_basic/product-config>`."
+"Finally, click :guilabel:`Confirm Order` to confirm the |PO|. A receipt is "
+"automatically created, and a :guilabel:`Receipt` smart button appears at the "
+"top of the form."
 msgstr ""
-"外注先がプロダクトの製造を完了すると、プロダクトは、プロダクトの :ref:`設定 "
-"<manufacturing/workflows/subcontracting_basic/product-config>`  方法に応じ"
-"て、発注元企業に発送されるか、または最終顧客に直送されます。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:173
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:251
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:116
 msgid ""
-"If the subcontractor ships the finished product to the contracting company, "
-"once it has been received, navigate to :menuselection:`Purchase app --> "
-"Orders --> Purchase Orders`, and select the |PO|."
+"After the order is confirmed, the subcontractor manufactures the product and "
+"delivers the finished good back to the contracting company."
 msgstr ""
-"外注先が完成品を発注元企業に発送した場合、入荷後、:menuselection:`購買アプリ "
-"--> オーダ --> 購買オーダ` に移動し、購買オーダを選択します。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:177
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:255
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:119
 msgid ""
-"Click the :guilabel:`Receive Products` button at the top of the |PO|, or "
-"the :guilabel:`Receipt` smart button at the top of the page, to open the "
-"receipt. Then, click :guilabel:`Validate` at the top of the receipt to enter "
-"the product into inventory."
+"To receive the finished product from the subcontractor, click "
+"the :guilabel:`Receive Products` button on the |PO|, or click "
+"the :guilabel:`Receipt` smart button at the top of the page. Then, "
+"click :guilabel:`Validate` to enter the incoming shipment into inventory."
 msgstr ""
-"購買オーダの一番上にある :guilabel:`プロダクト入荷` ボタン、またはページの一"
-"番上にある :guilabel:`入荷` スマートボタンをクリックして、入荷を開きます。次"
-"に、入荷の上部にある :guilabel:`検証` をクリックして、プロダクトを在庫に入力"
-"します。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:182
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:260
-msgid "Process dropship order"
-msgstr "直送オーダを処理する"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:184
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:262
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:124
 msgid ""
-"If the subcontractor dropships the product, once they have sent it, navigate "
-"to :menuselection:`Purchase app --> Orders --> Purchase Orders`, and select "
-"the |PO|."
+"If :doc:`multi-step inventory flows <../../inventory/shipping_receiving/"
+"daily_operations>` are enabled, additional transfers must be validated to "
+"enter the incoming product into stock."
 msgstr ""
-"外注先がプロダクトを直送する場合、一度送付したら、:menuselection:`購買アプリ "
-"--> オーダ --> 購買オーダ` に移動し、購買オーダを選択します。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:187
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:265
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:130
+msgid "Track inventory moves"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:132
 msgid ""
-"Select the :guilabel:`Dropship` smart button at the top of the page to open "
-"the dropship order, and click :guilabel:`Validate` at the top of the order "
-"to confirm that the product has been sent to the customer."
+"After validating a receipt, Odoo automatically generates inventory moves to "
+"track the movement of subcontracted products between locations. To view "
+"these inventory moves, navigate to :menuselection:`Inventory app --> "
+"Reporting --> Moves History`."
 msgstr ""
-"ページ上部の :guilabel:`直送` スマートボタンを選択して直送オーダを開き、オー"
-"ダ上部の :guilabel:`検証` をクリックして、プロダクトが顧客に送付されたことを"
-"確認します。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:192
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:254
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:270
-msgid "Process delivery order"
-msgstr "出荷オーダを処理する"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:194
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:256
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:136
 msgid ""
-"If the subcontracting workflow was started by a customer |SO|, and the "
-"finished product was **not** dropshipped to the customer, but rather "
-"delivered to the contracting company, it is necessary to ship the product to "
-"the customer, and process the delivery order."
+"To track inventory movement in subcontracting, Odoo sends any product "
+"components to a dedicated *Subcontracting Location*. A :ref:`virtual "
+"location <inventory/warehouses_storage/location-type>` called *Production* "
+"then consumes the components and produces the finished good. Once produced, "
+"the good then moves back to the *Subcontracting Location* before finally "
+"entering the contractor's stock when the receipt is validated."
 msgstr ""
-"外注ワークフローが顧客によって開始され、完成品が顧客に直送 **されず** 、発注"
-"元企業に配送された場合、顧客にプロダクトを配送し、出荷オーダを処理する必要が"
-"あります。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:198
-msgid ""
-"Once the product has been shipped to the customer, navigate to "
-"the :menuselection:`Sales` app, and select the |SO|. Select "
-"the :guilabel:`Delivery` smart button at the top of the page to open the "
-"delivery order, and click :guilabel:`Validate` on the order to confirm that "
-"the product has been shipped."
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:None
+msgid "Moves History page to see subcontracting moves in Odoo."
 msgstr ""
-"プロダクトが顧客に発送されたら、:menuselection:`販売` アプリに移動し、販売"
-"オーダを選択します。ページ上部の :guilabel:`配送` スマートボタンを選択して出"
-"荷オーダを開き、オーダの:guilabel:`検証` をクリックしてプロダクトが発送された"
-"ことを確認します。"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:146
+msgid ""
+"Because no components are sent in basic subcontracting, there is no movement "
+"from the *Subcontracting Location* to the *Production* location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:12
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:10
+msgid ""
+"In manufacturing, subcontracting is the process of a company engaging a "
+"third-party manufacturer, or subcontractor, to manufacture products that are "
+"then sold by the contracting company."
+msgstr ""
+"製造業において、外注とは、会社が第三者の製造業者、または外注先と契約し、その"
+"会社がプロダクトを製造し、発注元企業が販売するプロセスを指します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:15
 msgid ""
@@ -46402,6 +45148,35 @@ msgstr ""
 "*受注時外注先直送* ルート用の部品表を設定するには、プロダクトページ"
 "で :guilabel:`部品表` スマートボタンをクリックし、部品表を選択します。"
 
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:82
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:92
+msgid ""
+"For a full overview of |BoM| configuration, see the :doc:`Bill of materials "
+"<../basic_setup/bill_configuration>` documentation."
+msgstr ""
+"部品表の設定に関する詳細な概要については、:doc:`部品表 <../basic_setup/"
+"bill_configuration>` のドキュメントを参照して下さい。"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:85
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:95
+msgid ""
+"In the :guilabel:`BoM Type` field, select the :guilabel:`Subcontracting` "
+"option. Then, add one or more subcontractors in "
+"the :guilabel:`Subcontractors` field that appears below."
+msgstr ""
+":guilabel:`部品表タイプ` フィールドで、:guilabel:`外注` オプションを選択しま"
+"す。次に、その下に表示される :guilabel:`外注先` フィールドに、1つ以上の外注先"
+"を追加します。"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:None
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:None
+msgid ""
+"The \"BoM Type\" field on a BoM, configured to manufacture the product using "
+"subcontracting."
+msgstr ""
+"外注を使用してプロダクトを製造するように設定された部品表の \"部品表タイプ\" "
+"フィールド"
+
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:92
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:102
 msgid ""
@@ -46528,6 +45303,13 @@ msgstr ""
 "ワークフローが販売オーダの作成により開始され、完成品が最終顧客に直送されない"
 "場合は、プロダクトが顧客に出荷された時点で出荷オーダを処理します。"
 
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:138
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:138
+msgid ""
+"The specific number of steps depends on the reason that the subcontracted "
+"product is being purchased from the subcontractor."
+msgstr "外注先から購買される副産品に応じて、具体的なステップ数は異なります。"
+
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:141
 msgid ""
 "If the reason is to fulfill a specific customer order, the process starts "
@@ -46549,6 +45331,27 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:148
 msgid "Create an SO"
 msgstr "販売オーダを作成する"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:150
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:171
+msgid ""
+"It is only necessary to complete this step if the product is being purchased "
+"from the subcontractor to fulfill a customer need. If the product is being "
+"purchased to increase the quantity of stock on-hand, move on to the next "
+"step."
+msgstr ""
+"このステップは、顧客ニーズを満たすために外注先からプロダクトを購買する場合の"
+"み必要です。プロダクトを購買して手持在庫数量を追加する場合は、次のステップに"
+"進みます。"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:154
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:175
+msgid ""
+"To create a new |SO|, navigate to :menuselection:`Sales app --> Orders --> "
+"Orders`, and click :guilabel:`New`."
+msgstr ""
+"新しい販売オーダを作成するには、:menuselection:`販売アプリ --> オーダ --> "
+"オーダ` に移動し、:guilabel:`新規` をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:157
 msgid ""
@@ -46760,6 +45563,11 @@ msgstr ""
 "にある :guilabel:`検証` ボタンをクリックして、外注先が構成品を受け取ったこと"
 "を確認します。"
 
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:237
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:242
+msgid "Process receipt or dropship order"
+msgstr "入荷または直送オーダを処理する"
+
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:239
 msgid ""
 "Once the subcontractor has manufactured the finished product, navigate "
@@ -46801,6 +45609,22 @@ msgstr ""
 "外注先プロダクトを直送する場合は、ページ上部の :guilabel:`直送` ボタンを選択"
 "して直送オーダを開き、外注先が顧客にプロダクトを発送した時点で :guilabel:`検"
 "証` をクリックします。"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:254
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:270
+msgid "Process delivery order"
+msgstr "出荷オーダを処理する"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:256
+msgid ""
+"If the subcontracting workflow was started by a customer |SO|, and the "
+"finished product was **not** dropshipped to the customer, but rather "
+"delivered to the contracting company, it is necessary to ship the product to "
+"the customer, and process the delivery order."
+msgstr ""
+"外注ワークフローが顧客によって開始され、完成品が顧客に直送 **されず** 、発注"
+"元企業に配送された場合、顧客にプロダクトを配送し、出荷オーダを処理する必要が"
+"あります。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:260
 msgid ""
@@ -47027,6 +45851,33 @@ msgstr ""
 "の入荷を処理します。**または**、直送オーダを処理して、プロダクトを顧客に直接"
 "出荷します。"
 
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:135
+msgid ""
+"If the workflow was started by creating an |SO|, and the finished product is "
+"not dropshipped to the end customer, process the delivery order once the "
+"product is shipped to the customer."
+msgstr ""
+"ワークフローが販売オーダの作成により開始され、完成品が最終顧客に直送されない"
+"場合は、プロダクトが顧客に発送された時点で出荷オーダを処理します。"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:141
+msgid ""
+"If the reason is to fulfill a specific customer order, the process starts "
+"with creating an |SO|, and ends with delivering the product to the customer, "
+"or having the subcontractor dropship it to them."
+msgstr ""
+"特定の顧客オーダを満たすことを目的とする場合、プロセスは販売オーダ作成から始"
+"まり、プロダクトを顧客に納品するか、外注先から直送することで完了します。"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:144
+msgid ""
+"If the reason is to increase the quantity of stock on-hand, the process "
+"starts with creating a |PO|, and ends with receiving the product into "
+"inventory."
+msgstr ""
+"在庫数量の追加が目的であれば、プロセスは購買オーダの作成から始まり、プロダク"
+"トを在庫として入荷することで完了します。"
+
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:149
 msgid ""
 "While the *Resupply Subcontractor on Order* route can be used to "
@@ -47077,6 +45928,33 @@ msgstr ""
 "品が外注先に送信されたら、:guilabel:`検証` をクリックしてオーダが送信されたこ"
 "とを確認します。"
 
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:169
+msgid "Create SO"
+msgstr "販売オーダを作成する"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:178
+msgid ""
+"Select the customer in the :guilabel:`Customer` drop-down menu. Then, "
+"click :guilabel:`Add a product` on the :guilabel:`Order Lines` tab, select a "
+"subcontracted product in the :guilabel:`Product` drop-down menu, and enter a "
+"quantity in the :guilabel:`Quantity` field."
+msgstr ""
+":guilabel:`顧客`ドロップダウンメニューで顧客を選択します。次に、:guilabel:`"
+"オーダ明細` タブの:guilabel:`プロダクト追加` をクリックし、:guilabel:`プロダ"
+"クト`ドロップダウンメニューで外注プロダクトを選択し、:guilabel:`数量` フィー"
+"ルドに数量を入力します。"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:182
+msgid ""
+"Click :guilabel:`Confirm` to confirm the |SO|, at which point "
+"a :guilabel:`Purchase` smart button appears at the top of the page. This "
+"opens the |PO| created to purchase the subcontracted product from the "
+"subcontractor."
+msgstr ""
+":guilabel:`確認` をクリックして確認すると、ページの上部に :guilabel:`購買`  "
+"スマートボタンが表示されます。これにより、外注先から外注プロダクトを購入する"
+"ために作成された購買オーダが開きます。"
+
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:187
 msgid ""
 "An |SO| for the product only creates a |PO| if the *Replenish on Order "
@@ -47097,6 +45975,19 @@ msgstr ""
 "わりに出荷オーダが作成されます。Odooはその販売オーダのために倉庫内の在庫が使"
 "用されると想定しているからです。"
 
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:193
+msgid ""
+"This is not the case for subcontracted products that are dropshipped to the "
+"end customer. In that case, a |PO| is **always** created, even if there is "
+"enough stock on-hand."
+msgstr ""
+"これは、外注プロダクトが最終顧客に直送される場合には当てはまりません。その場"
+"合、たとえ手持在庫が十分にあっても、購買オーダは **常に** 作成されます。"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:197
+msgid "Process PO"
+msgstr "購買オーダを処理する"
+
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:199
 msgid ""
 "If a |PO| was created in the previous step, navigate to :guilabel:`Purchase "
@@ -47106,6 +45997,32 @@ msgstr ""
 "前ステップで購買オーダが作成された場合、:guilabel:`購買アプリ --> オーダ --> "
 "購買オーダ` に移動し、購買オーダを選択します。次に、:guilabel:`オーダ確定` を"
 "クリックして確認します。"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:202
+msgid ""
+"If a |PO| was not created in the previous step, do so now by navigating "
+"to :menuselection:`Purchase app --> Orders --> Purchase Orders`, and "
+"clicking :guilabel:`New`."
+msgstr ""
+"前のステップで購買オーダが作成されていない場合は、:menuselection:`アプリの購"
+"入 --> オーダ --> 購買オーダ` に移動し、:guilabel:`新規作成` をクリックして作"
+"成して下さい。"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:205
+msgid ""
+"Begin filling out the |PO| by selecting a subcontractor from "
+"the :guilabel:`Vendor` drop-down menu. In the :guilabel:`Products` tab, "
+"click :guilabel:`Add a product` to create a new product line. Select a "
+"subcontracted product in the :guilabel:`Product` field, and enter the "
+"quantity in the :guilabel:`Quantity` field. Finally, "
+"click :guilabel:`Confirm Order` to confirm the |PO|."
+msgstr ""
+"購買オーダの入力を開始するには、:guilabel:`仕入先`ドロップダウンメニューから"
+"外注先を選択します。 :guilabel:`プロダクト` タブで、:guilabel:`プロダクト追加"
+"` をクリックして新しいプロダクト明細を作成します。 :guilabel:`プロダクト` "
+"フィールドで外注先プロダクトを選択し、:guilabel:`数量` フィールドに数量を入力"
+"します。最後に、購買オーダを確定する場合は、:guilabel:`オーダ確定` をクリック"
+"します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:210
 msgid ""
@@ -47192,6 +46109,50 @@ msgstr ""
 "外注先がプロダクトの製造を完了すると、プロダクトは、プロダクトの  :ref:`設定 "
 "<manufacturing/workflows/subcontracting_resupply/product-config>` 方法に応じ"
 "て、発注元企業に発送されるか、または最終顧客に直送されます。"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:251
+msgid ""
+"If the subcontractor ships the finished product to the contracting company, "
+"once it has been received, navigate to :menuselection:`Purchase app --> "
+"Orders --> Purchase Orders`, and select the |PO|."
+msgstr ""
+"外注先が完成品を発注元企業に発送した場合、入荷後、:menuselection:`購買アプリ "
+"--> オーダ --> 購買オーダ` に移動し、購買オーダを選択します。"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:255
+msgid ""
+"Click the :guilabel:`Receive Products` button at the top of the |PO|, or "
+"the :guilabel:`Receipt` smart button at the top of the page, to open the "
+"receipt. Then, click :guilabel:`Validate` at the top of the receipt to enter "
+"the product into inventory."
+msgstr ""
+"購買オーダの一番上にある :guilabel:`プロダクト入荷` ボタン、またはページの一"
+"番上にある :guilabel:`入荷` スマートボタンをクリックして、入荷を開きます。次"
+"に、入荷の上部にある :guilabel:`検証` をクリックして、プロダクトを在庫に入力"
+"します。"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:260
+msgid "Process dropship order"
+msgstr "直送オーダを処理する"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:262
+msgid ""
+"If the subcontractor dropships the product, once they have sent it, navigate "
+"to :menuselection:`Purchase app --> Orders --> Purchase Orders`, and select "
+"the |PO|."
+msgstr ""
+"外注先がプロダクトを直送する場合、一度送付したら、:menuselection:`購買アプリ "
+"--> オーダ --> 購買オーダ` に移動し、購買オーダを選択します。"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:265
+msgid ""
+"Select the :guilabel:`Dropship` smart button at the top of the page to open "
+"the dropship order, and click :guilabel:`Validate` at the top of the order "
+"to confirm that the product has been sent to the customer."
+msgstr ""
+"ページ上部の :guilabel:`直送` スマートボタンを選択して直送オーダを開き、オー"
+"ダ上部の :guilabel:`検証` をクリックして、プロダクトが顧客に送付されたことを"
+"確認します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:272
 msgid ""
@@ -55518,9 +54479,9 @@ msgid ""
 "Export vendor pricelist in XLSX format. It includes :guilabel:`Product "
 "Template` and other fields in the :guilabel:`Fields to export` section."
 msgstr ""
-"仕入先の価格表を XLSX 形式 でエクスポートします。このエクスポートには、 "
-":guilabel:`エクスポート対象フィールド` セクションで選択された  "
-":guilabel:`プロダクトテンプレート`  やその他のフィールドが含まれます。"
+"仕入先の価格表を XLSX 形式 でエクスポートします。このエクスポートに"
+"は、 :guilabel:`エクスポート対象フィールド` セクションで選択され"
+"た  :guilabel:`プロダクトテンプレート`  やその他のフィールドが含まれます。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:99
 msgid "External ID"
@@ -59746,6 +58707,1220 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "DHL is one of the shipping carriers for which a *shipping connector* is "
+#~ "available in Odoo's **Inventory** app. By enabling the shipping connector "
+#~ "in the app's settings, and configuring at least one *shipping method*, "
+#~ "the process of :doc:`calculating shipping rates <../setup_configuration>` "
+#~ "and :doc:`generating shipping labels <labels>` is greatly simplified."
+#~ msgstr ""
+#~ "DHLは、Odooの **在庫** アプリで利用できる *配送コネクタ* が利用できる配送"
+#~ "業者の1つです。アプリの設定で配送コネクタを有効にし、少なくとも1つの *配送"
+#~ "方法* を設定することで、:doc:`送料の計算 <../setup_configuration>` およ"
+#~ "び :doc:`配送ラベルの生成 1` のプロセスが大幅に簡素化されます。"
+
+#~ msgid ""
+#~ "While a variety of shipping connectors are available for different "
+#~ "carriers, this documentation details the configuration settings specific "
+#~ "to integrating DHL. For instructions on configuring the integration "
+#~ "settings common to all shippers, see the documentation on :doc:`third-"
+#~ "party shippers <third_party_shipper>`."
+#~ msgstr ""
+#~ "さまざまな配送業者に対応する多様な配送コネクタが利用可能ですが、このドキュ"
+#~ "メントでは、DHLとの統合に特化した設定の詳細を説明します。全ての配送業者に"
+#~ "共通する統合設定の構成方法については、:doc:`外部配送業者に関するドキュメン"
+#~ "トを参照して下さい <third_party_shipper>` 。"
+
+#~ msgid "Enable DHL shipping connector"
+#~ msgstr "DHL配送コネクタを有効にする"
+
+#~ msgid ""
+#~ "Before creating a DHL shipping method, enable the carrier's shipping "
+#~ "connector. To do so, navigate to :menuselection:`Inventory app --> "
+#~ "Configuration --> Settings`."
+#~ msgstr ""
+#~ "DHLの配送方法を作成する前に、運送会社の配送コネクタを有効にしてください。"
+#~ "これを行うには、:menuselection:`在庫アプリ --> 設定 --> 管理設定` に移動し"
+#~ "ます。"
+
+#~ msgid ""
+#~ "Scroll down to the :guilabel:`Shipping Connectors` section, and tick the "
+#~ "checkbox next to :guilabel:`DHL Express Connector`. Finally, "
+#~ "click :guilabel:`Save` to apply the changes."
+#~ msgstr ""
+#~ ":guilabel:`配送コネクタ` セクションまでスクロールダウンし、:guilabel:`DHL "
+#~ "Expressコネクタ` の横にあるチェックボックスにチェックを入れます。最後"
+#~ "に、:guilabel:`保存` をクリックして変更を適用します。"
+
+#~ msgid ""
+#~ "Then, click the :icon:`fa-arrow-right` :guilabel:`DHL Shipping Methods` "
+#~ "link to open a page showing all shipping methods with the *Provider* set "
+#~ "to DHL."
+#~ msgstr ""
+#~ "次に、:icon:`fa-arrow-right` :guilabel:`DHL配送方法` リンクをクリックし"
+#~ "て、*プロバイダー* が DHLに設定されているすべての配送方法が表示されるペー"
+#~ "ジを開きます。"
+
+#~ msgid "Configure DHL shipping method"
+#~ msgstr "DHL配送方法を設定する"
+
+#~ msgid ""
+#~ "After enabling the shipping connector for DHL, shipping methods can be "
+#~ "configured for the carrier. Once configured, a shipping method can be "
+#~ "added as a line item to sales orders (SOs), which allows for automatic "
+#~ "computation of shipping rates, and generation of shipping labels."
+#~ msgstr ""
+#~ "DHLの配送コネクタを有効にすると、配送業者向けの配送方法の設定が可能になり"
+#~ "ます。 配送方法が設定されると、販売オーダ(SO)に明細として追加できるように"
+#~ "なり、送料の自動計算や配送ラベルの作成が可能になります。"
+
+#~ msgid ""
+#~ "To create a new DHL shipping method, navigate "
+#~ "to :menuselection:`Inventory app --> Configuration --> Settings`. In "
+#~ "the :guilabel:`Shipping Connectors` section, select the :guilabel:`DHL "
+#~ "Shipping Methods` link below the :guilabel:`DHL Express Connector` "
+#~ "checkbox."
+#~ msgstr ""
+#~ "DHLの新しい配送方法を作成するには、:menuselection:`在庫アプリ --> 設定 --"
+#~ "> 設定` に移動します。:guilabel:`配送コネクタ` セクション"
+#~ "で、:guilabel:`DHL Expressコネクタ` チェックボックスの下にあ"
+#~ "る :guilabel:`DHL配送方法` リンクを選択します。"
+
+#~ msgid ""
+#~ "It is also possible to see existing shipping methods for every carrier, "
+#~ "by navigating to :menuselection:`Inventory app --> Configuration --> "
+#~ "Shipping Methods`."
+#~ msgstr ""
+#~ "また、:menuselection:`在庫アプリ --> 設定 --> 配送方法` に移動すると、各配"
+#~ "送業者の既存の配送方法を確認することができます。"
+
+#~ msgid ""
+#~ "Click :guilabel:`New` to open a blank shipping method form. If a shipping "
+#~ "method has already been created, it can be selected from this screen."
+#~ msgstr ""
+#~ ":guilabel:`新規` をクリックすると、空の配送方法フォームが開きます。配送方"
+#~ "法がすでに作成されている場合は、この画面から選択できます。"
+
+#~ msgid ""
+#~ "In the :guilabel:`Provider` drop-down menu, select the :guilabel:`DHL` "
+#~ "option. After doing so, a new :guilabel:`DHL Configuration` tab appears "
+#~ "at the bottom of the form."
+#~ msgstr ""
+#~ ":guilabel:`プロバイダ`ドロップダウンメニューで、:guilabel:`DHL` オプション"
+#~ "を選択します。そうすると、フォームの下部に新しい :guilabel:`DHL 設定` タブ"
+#~ "が表示されます。"
+
+#~ msgid ""
+#~ "All other fields in this section are identical on the shipping method "
+#~ "forms for each shipping carrier. See the documentation on :doc:`third-"
+#~ "party shippers <third_party_shipper>` for instructions on how to properly "
+#~ "configure them."
+#~ msgstr ""
+#~ "このセクションの他の全てのフィールドは、各配送業者の配送方法フォームで同一"
+#~ "です。それらを適切に設定する方法については、:doc:`サードバーティ配送業者 "
+#~ "<third_party_shipper>` のドキュメントを参照して下さい。"
+
+#~ msgid "DHL Configuration"
+#~ msgstr "DHLの設定"
+
+#~ msgid ""
+#~ "The :guilabel:`DHL Configuration` tab on the shipping method form is used "
+#~ "to connect the user's DHL account to Odoo, and configure the shipping "
+#~ "method's details."
+#~ msgstr ""
+#~ "配送方法フォームの :guilabel:`DHL設定` タブは、ユーザの DHLアカウントを"
+#~ "Odooに接続し、配送方法の詳細を設定するために使用します。"
+
+#~ msgid ""
+#~ "The *SiteID* and *Password* are different credentials than the ones used "
+#~ "to log in to a DHL account."
+#~ msgstr ""
+#~ "*サイト ID* および *パスワード* は、DHL アカウントへのログインに使用する認"
+#~ "証情報とは異なります。"
+
+#~ msgid ""
+#~ "If a DHL Express account is available, log into the `DHL Developer portal "
+#~ "<https://developer.dhl.com/api-reference/dhl-express-mydhl-api#get-"
+#~ "started-section/ user-guide%get-access>`_ and `request a DHL API account "
+#~ "number <https://developer.dhl. com/form/dhl-express-onboarding>`_."
+#~ msgstr ""
+#~ "DHL Expressアカウントをお持ちの場合は、`DHL 開発者ポータル <https://"
+#~ "developer.dhl.com/api-reference/dhl-express-mydhl-api#get-started-"
+#~ "section/ user-guide%get-access>`_ にログインし、`DHL API アカウント番号を"
+#~ "リクエストしてください <https://developer.dhl. com/form/dhl-express-"
+#~ "onboarding>`_。"
+
+#~ msgid ":guilabel:`Region`: the region in which the shipping method is used."
+#~ msgstr ":guilabel:`地域`: その配送方法が使用される地域"
+
+#~ msgid ""
+#~ ":guilabel:`DHL Package Type`: the type of DHL package used for delivery "
+#~ "(e.g. DHL Box)."
+#~ msgstr ""
+#~ ":guilabel:`DHL梱包タイプ`: 配送に使用されるDHL梱包のタイプ (例: DHLボック"
+#~ "ス)"
+
+#~ msgid ""
+#~ ":guilabel:`Label Template`: the paper size used to print shipping labels."
+#~ msgstr ""
+#~ ":guilabel:`ラベルテンプレート`:  配送ラベルの印刷に使用される用紙サイズ"
+
+#~ msgid ""
+#~ "Once the DHL connection is set up, use the smart buttons at the top of "
+#~ "the form to publish, turn on production mode or activate debug logging."
+#~ msgstr ""
+#~ "DHL 接続の設定が完了したら、フォーム上部のスマートボタンを使用して、公開、"
+#~ "本番モードの有効化、デバッグログの有効化を行います。"
+
+#~ msgid ""
+#~ ":guilabel:`Unpublished`/:guilabel:`Published`: determines if this "
+#~ "shipping method is available on the user's **eCommerce** website."
+#~ msgstr ""
+#~ ":guilabel:`未公開`/:guilabel:`公開済`: この配送方法がユーザの **eコマース"
+#~ "** ウェブサイトで使用可能かどうかを定義します。"
+
+#~ msgid ""
+#~ ":guilabel:`Test Environment`/:guilabel:`Production Environment`: "
+#~ "determines whether label creation is for testing and cancelled "
+#~ "immediately (Test) or generate real shipping label that is charged to DHL "
+#~ "account (Production)."
+#~ msgstr ""
+#~ ":guilabel:`テスト環境`/:guilabel:`本番環境`: ラベルの作成がテスト用で即座"
+#~ "に取消される (テスト) のか、DHLアカウントに請求される実際の配送ラベルを生"
+#~ "成する (本番) かを定義します。"
+
+#~ msgid ""
+#~ ":guilabel:`No Debug`/:guilabel:`Debug Requests`: determines whether API "
+#~ "requests and responses are logged in Odoo (turn on :ref:`developer mode "
+#~ "<developer-mode>` and go to :menuselection:`Settings app --> Technical --"
+#~ "> Logging`)."
+#~ msgstr ""
+#~ ":guilabel:`デバッグなし`/:guilabel:`デバッグ要求`: API 要求と応答を Odooに"
+#~ "記録するかどうかを決定します ( :ref:`開発者モード <developer-mode>` をオン"
+#~ "にして、 :menuselection:`設定アプリ --> 技術設定 --> ログ管理` に移動して"
+#~ "ください)。"
+
+#~ msgid "Basic subcontracting lead times"
+#~ msgstr "基本的な外注リードタイム"
+
+#~ msgid ""
+#~ "In Odoo, lead times are used to predict how long it takes to complete a "
+#~ "certain action. For example, a *delivery lead time* can be set for a "
+#~ "purchased product, which specifies the number of days it usually takes "
+#~ "for the product's vendor to delivery the product to the purchasing "
+#~ "company."
+#~ msgstr ""
+#~ "Odooでは、リードタイムは特定のアクションを完了するまでに要する時間を予測す"
+#~ "るために使用されます。例えば、購買プロダクトに対して *配送リードタイム* を"
+#~ "設定することができます。これは、通常、仕入先が購買会社にプロダクトを配送す"
+#~ "るまでに要する日数を指定します。"
+
+#~ msgid ""
+#~ "For subcontracted products specifically, delivery lead times can be "
+#~ "configured to take into account the amount of time required for the "
+#~ "subcontractor to manufacture a product. Doing so allows the contracting "
+#~ "company to better predict the delivery dates of subcontracted products."
+#~ msgstr ""
+#~ "特に外注プロダクトについては、外注業者がプロダクトを製造するために必要な時"
+#~ "間を考慮して、配送リードタイムを設定することができます。 そうすることで、"
+#~ "発注元企業は外注製品の配送日をより正確に予測することができます。"
+
+#~ msgid ""
+#~ "Like all lead times in Odoo, lead times for subcontracted products are "
+#~ "only an estimate, and are based on how long actions are *expected* to "
+#~ "take."
+#~ msgstr ""
+#~ "Odooにおける全てのリードタイムと同様に、外注プロダクトのリードタイムはあく"
+#~ "まで概算であり、アクションに要する時間の予想値に基づいています。"
+
+#~ msgid ""
+#~ "Unforeseen circumstances can impact the completion of these actions, "
+#~ "which means that lead times should not be viewed as guarantees."
+#~ msgstr ""
+#~ "予期せぬ状況により、これらのアクションの完了に影響が及ぶ可能性があるため、"
+#~ "リードタイムは確実に保証されたものではないと考えるべきです。"
+
+#~ msgid ""
+#~ "When using the :doc:`basic subcontracting <subcontracting_basic>` "
+#~ "workflow to manufacture a product, a company is not responsible for "
+#~ "supplying the subcontractor with the necessary components. This means "
+#~ "that the only factors affecting the delivery date of a product are the "
+#~ "amount of time it takes the subcontractor to manufacture and deliver it."
+#~ msgstr ""
+#~ "プロダクトの製造に :doc:`基本外注 <subcontracting_basic>` ワークフローを使"
+#~ "用する場合、会社は外注業者に必要構成品を供給する責任を負いません。 つま"
+#~ "り、プロダクトの配送日に影響を与える要因は、外注業者がプロダクトを製造し配"
+#~ "送するのにかかる時間のみです。"
+
+#~ msgid ""
+#~ "By assigning a product's subcontractor a delivery lead time that "
+#~ "considers both of these factors, the *Expected Arrival* date displayed on "
+#~ "purchase orders (POs) for the product more accurately reflects the amount "
+#~ "of time required for both manufacturing and delivery."
+#~ msgstr ""
+#~ "プロダクトの配送リードタイムにこれらの両方の要因を考慮して下請け業者を割当"
+#~ "てると、プロダクトの購買オーダ(PO) に表示される *到着予定日* は、製造と配"
+#~ "送の両方に必要な時間をより正確に反映するようになります。"
+
+#~ msgid "Product delivery lead time"
+#~ msgstr "プロダクト配送リードタイム"
+
+#~ msgid ""
+#~ "To set a delivery lead time for a product's subcontractor, navigate "
+#~ "to :menuselection:`Inventory app --> Products --> Products`, and select a "
+#~ "subcontracted product."
+#~ msgstr ""
+#~ "プロダクトの配送リードタイムを設定するには、:menuselection:`在庫アプリ --"
+#~ "> プロダクト --> プロダクト` に移動し、外注プロダクトを選択します。"
+
+#~ msgid ""
+#~ "Then, select the :guilabel:`Purchase` tab on the product's page. If the "
+#~ "subcontractor has not already been added as a vendor, do so now by "
+#~ "clicking :guilabel:`Add a line`, and selecting the subcontractor in "
+#~ "the :guilabel:`Vendor` column."
+#~ msgstr ""
+#~ "次に、プロダクトページの :guilabel:`購買` タブを選択します。下請業者がまだ"
+#~ "仕入先として追加されていない場合は、:guilabel:`明細追加` をクリック"
+#~ "し、:guilabel:`仕入先` 列で下請業者を選択して追加します。"
+
+#~ msgid ""
+#~ "Once the subcontractor has been added, enter the number of days it takes "
+#~ "them to manufacture and deliver the product, in the :guilabel:`Delivery "
+#~ "Lead Time` column."
+#~ msgstr ""
+#~ "外注先が追加されたら、プロダクトの製造と配送に要する日数を :guilabel:`配送"
+#~ "リードタイム` 列に追加します。"
+
+#~ msgid ""
+#~ "The Delivery Lead Time field for a subcontractor, on the Purchase tab of "
+#~ "a product page."
+#~ msgstr ""
+#~ "プロダクトページの購買タブにある外注先の配送リードタイムフィールド。"
+
+#~ msgid ""
+#~ "Multiple subcontractors can be added to the :guilabel:`Purchase` tab on a "
+#~ "product's page, and a different :guilabel:`Delivery Lead Time` can be set "
+#~ "for each."
+#~ msgstr ""
+#~ "プロダクトページの :guilabel:`購買` タブには複数の外注先を追加でき、それぞ"
+#~ "れに異なる :guilabel:`配送リードタイム` を設定できます。"
+
+#~ msgid "Lead time workflow"
+#~ msgstr "リードタイムワークフロー"
+
+#~ msgid ""
+#~ "After setting a delivery lead time for a product's vendor, create an |"
+#~ "RfQ| by navigating to :menuselection:`Purchase app --> Orders --> "
+#~ "Purchase Orders`, and clicking :guilabel:`New`."
+#~ msgstr ""
+#~ "プロダクトの仕入先への配送リードタイムを設定した後、:menuselection:`購買ア"
+#~ "プリ --> オーダ --> 購買オーダ` に移動し、:guilabel:`新規作成` をクリック"
+#~ "して見積依頼書を作成します。"
+
+#~ msgid ""
+#~ "Specify the subcontractor in the :guilabel:`Vendor` field. Then, add the "
+#~ "product in the :guilabel:`Products` tab by clicking :guilabel:`Add a "
+#~ "product`, selecting the product in the :guilabel:`Product` column, and "
+#~ "adding a quantity in the :guilabel:`Quantity` column."
+#~ msgstr ""
+#~ "外注先を :guilabel:`仕入先` フィールドで指定します。次に、:guilabel:`プロ"
+#~ "ダクト追加` をクリックし、:guilabel:`プロダクト` 列でプロダクトを選択"
+#~ "し、:guilabel:`数量` 列で数量を追加することで、:guilabel:`プロダクト` タブ"
+#~ "でプロダクトを追加します。"
+
+#~ msgid ""
+#~ "Once a product has been added, the :guilabel:`Expected Arrival` field on "
+#~ "the |RfQ| auto-populates with a date that reflects the vendor's delivery "
+#~ "lead time, as specified on the product's page."
+#~ msgstr ""
+#~ "プロダクトが追加されると、見積依頼書に表示される :guilabel:`入荷予定日`  "
+#~ "フィールドには、プロダクトのページで指定された仕入先の配送リードタイムを反"
+#~ "映した日付が自動的に入力されます。"
+
+#~ msgid ""
+#~ "If the date needs to be adjusted, click on the :guilabel:`Expected "
+#~ "Arrival` field to open a calendar popover, and select the desired date. "
+#~ "Make sure not to choose a date sooner than the one that was auto-"
+#~ "populated, unless the subcontractor has confirmed that they are able to "
+#~ "deliver the product by that date."
+#~ msgstr ""
+#~ "日付を調整する必要がある場合は、:guilabel:`入荷予定日` フィールドをクリッ"
+#~ "クしてカレンダーポップオーバーを開き、希望の日付を選択します。外注先がその"
+#~ "日付までに納品できることを確認している場合を除き、自動入力された日付よりも"
+#~ "早い日付を選択しないようにして下さい。"
+
+#~ msgid ""
+#~ "Finally, click :guilabel:`Confirm Order` on the |RfQ| to turn it into a |"
+#~ "PO|. At this point, the subcontractor should begin manufacturing the "
+#~ "subcontracted product, before delivering it to the contracting company."
+#~ msgstr ""
+#~ "最後に、見積依頼書の見積依頼書番号の :guilabel:`オーダ確定` をクリックして"
+#~ "購買オーダに変更します。この時点で、外注先は外注されたプロダクトの製造を開"
+#~ "始し、発注元企業に納品する前に、外注先は製造を開始します。"
+
+#~ msgid ""
+#~ "Bike retailer *Mike's Bikes* works with a subcontractor — *Bike Friends* "
+#~ "— to produce units of their *Tricycle* product."
+#~ msgstr ""
+#~ "自転車販売店 *Mike's Bikes* は、外注先である *Bike Friends* と協力して、製"
+#~ "品 *三輪車* を生産しています。"
+
+#~ msgid ""
+#~ "On average, Bike Friends requires three days to manufacture a tricycle, "
+#~ "plus an additional two days to deliver it to Mike's Bikes."
+#~ msgstr ""
+#~ "平均して、Bike Friendsが三輪車を製造するには3日、さらにMike's Bikesに届け"
+#~ "るのに2日かかります。"
+
+#~ msgid ""
+#~ "As a result, Mike's Bikes sets a delivery lead time of five days for "
+#~ "tricycles manufactured by Bike Friends: three days for manufacturing, "
+#~ "plus two days for delivery."
+#~ msgstr ""
+#~ "そのため、Mike's Bikesでは、Bike Friends社製の三輪車の配送リードタイムを5"
+#~ "日間に設定しました。製造に3日、配送に2日です。"
+
+#~ msgid ""
+#~ "On May 3rd, Mike's Bikes confirms a |PO| to purchase one tricycle from "
+#~ "Bike Friends."
+#~ msgstr ""
+#~ "5月3日、Mike's Bikes購買オーダを確認し、Bike Friendsから三輪車1台を購買し"
+#~ "ます。"
+
+#~ msgid ""
+#~ "The :guilabel:`Expected Arrival` date listed on the |PO| is May 8th, five "
+#~ "days after the :guilabel:`Confirmation Date`."
+#~ msgstr ""
+#~ "購買オーダに記載されている :guilabel:`入荷予定日` は、:guilabel:`確認日` "
+#~ "の5日後の5月8日です。"
+
+#~ msgid "The Expected Arrival date on a PO for a subcontracted product."
+#~ msgstr "外注プロダクトの購買オーダでの入荷予定日"
+
+#~ msgid ""
+#~ "Bike Friends begins manufacturing the tricycle on May 3rd — the day that "
+#~ "the |PO| is confirmed — and finishes on May 6th, three days later."
+#~ msgstr ""
+#~ "Bike Friendsは、購買オーダが確認された5月3日に三輪車の製造を開始し、3日後"
+#~ "の5月6日に終了しました。"
+
+#~ msgid ""
+#~ "The tricycle is then shipped to Mike's Bikes the same day, and they "
+#~ "receive it on May 8th, two days later."
+#~ msgstr ""
+#~ "その三輪車は同日中にMike's Bikesに発送され、2日後の5月8日に到着しました。"
+
+#~ msgid "Dropship subcontracting lead times"
+#~ msgstr "直送外注のリードタイム"
+
+#~ msgid ""
+#~ "In Odoo, lead times are used to predict how long it takes to complete a "
+#~ "certain action. For example, a *delivery lead time* can be set for a "
+#~ "purchased product, which specifies the number of days it usually takes "
+#~ "for the product's vendor to deliver the product to the purchasing company."
+#~ msgstr ""
+#~ "Odooでは、リードタイムは特定のアクションを完了するまでに要する時間を予測す"
+#~ "るために使用されます。例えば、購買プロダクトに対して *配送リードタイム* を"
+#~ "設定することができます。これは、通常、仕入先が購買会社にプロダクトを配送す"
+#~ "るまでに要する日数を指定します。"
+
+#~ msgid ""
+#~ "Certain subcontracted products require the contracting company to supply "
+#~ "the subcontractor with manufacturing components. In this case, a "
+#~ "*manufacturing lead time* can be used, in addition to the delivery lead "
+#~ "time, to generate the date on which the subcontractor must receive the "
+#~ "required components, in order to manufacture the product and deliver it "
+#~ "on time."
+#~ msgstr ""
+#~ "一部の外注プロダクトでは、発注元企業が外注先に製造用の構成品を供給する必要"
+#~ "があります。この場合、配送リードタイムに加えて、製造リードタイムを使用し"
+#~ "て、外注先がプロダクトを製造し、期限内に配送するために必要な構成品を受け取"
+#~ "る日付を生成することができます。"
+
+#~ msgid ""
+#~ "In cases where components are dropshipped to the subcontractor, an "
+#~ "additional delivery lead time can be set for each component. This should "
+#~ "be set to the amount of time it takes the vendor to deliver components to "
+#~ "the subcontractor."
+#~ msgstr ""
+#~ "構成品が外注先に直送される場合は、各構成品に対して追加の配送リードタイムを"
+#~ "設定することができます。これは、仕入先が外注先に構成品を配送するのにかかる"
+#~ "時間として設定します。"
+
+#~ msgid ""
+#~ "Once a delivery lead time has been set on a component, dropship orders "
+#~ "for the component display the date by which the order must be confirmed, "
+#~ "so that it can be dropshipped to the subcontractor by the date on which "
+#~ "manufacturing must begin."
+#~ msgstr ""
+#~ "構成品にリードタイムが設定されると、その構成品に対する直送オーダには、製造"
+#~ "開始日までに外注先に直送できるように、オーダを確認しなければならない期限日"
+#~ "が表示されます。"
+
+#~ msgid ""
+#~ "When using the :doc:`Dropship Subcontractor on Order "
+#~ "<subcontracting_dropship>` route, a company is responsible for purchasing "
+#~ "the necessary components from a vendor, and having them dropshipped "
+#~ "directly to the subcontractor."
+#~ msgstr ""
+#~ ":doc:`受注時外注先直送 <subcontracting_dropship> ` ルートを使用する場合、"
+#~ "会社は仕入先から必要な構成品を購買し、それらを外注先に直送する責任がありま"
+#~ "す。"
+
+#~ msgid ""
+#~ "This means that, in addition to the amount of time it takes the "
+#~ "subcontractor to manufacture and deliver the product, it is also "
+#~ "necessary to consider how long it takes the component vendor to dropship "
+#~ "the components to the subcontractor."
+#~ msgstr ""
+#~ "つまり、外注先がプロダクトを製造し納品するのにかかる時間に加え、構成品の仕"
+#~ "入先が外注先に構成品を直送するのにかかる時間も考慮する必要があります。"
+
+#~ msgid ""
+#~ "By assigning a product's subcontractor a *delivery lead time*, specifying "
+#~ "a *manufacturing lead time* on the product's BoM, and assigning the "
+#~ "vendor of the components an additional *delivery lead time*, *Dropship "
+#~ "Subcontractor* orders for the product's components display the deadline "
+#~ "for confirming a dropship order to send the components to the "
+#~ "subcontractor."
+#~ msgstr ""
+#~ "プロダクトの外注先に *配送リードタイム* を割当て、プロダクトの部品表に *製"
+#~ "造リードタイム* を指定し、さらに、構成品の仕入先に *配送リードタイム* を割"
+#~ "当てると、*外注先直送* オーダにプロダクトの構成品の受注時に、外注先に部品"
+#~ "を送る直送オーダの確認期限が表示されます。"
+
+#~ msgid ""
+#~ "To set a delivery lead time for a product's subcontractor, navigate "
+#~ "to :guilabel:`Inventory app --> Products --> Products`, and select a "
+#~ "subcontracted product."
+#~ msgstr ""
+#~ "プロダクトの配送リードタイムを外注先に設定するには、:guilabel:`在庫アプリ "
+#~ "--> プロダクト --> プロダクト` に移動し、外注プロダクトを選択します。"
+
+#~ msgid "Product manufacturing lead time"
+#~ msgstr "プロダクト製造リードタイム"
+
+#~ msgid ""
+#~ "Next, navigate to the product's |BoM| by clicking the :guilabel:`Bill of "
+#~ "Materials` smart button at the top of the product's page. Then, select a "
+#~ "BoM from the list."
+#~ msgstr ""
+#~ "次に、プロダクトページの上部にある :guilabel:`部品表` スマートボタンをク"
+#~ "リックして、プロダクトの部品表に移動します。 そして、リストから部品表を選"
+#~ "択します。"
+
+#~ msgid ""
+#~ "On the |BoM|, select the :guilabel:`Miscellaneous` tab. In "
+#~ "the :guilabel:`Manuf. Lead Time` field, enter the same number of days "
+#~ "that was entered in the :guilabel:`Delivery Lead Time` field of the |"
+#~ "BoM|'s product."
+#~ msgstr ""
+#~ "部品表で、:guilabel:`その他` タブを選択します。 :guilabel:`製造リードタイ"
+#~ "ム` フィールドに、部品表のプロダクトの :guilabel:`配送リードタイム` フィー"
+#~ "ルドに入力したのと同じ日数を入力します。"
+
+#~ msgid "The Manuf. Lead Time field on a product's BoM."
+#~ msgstr "プロダクトの部品表にある製造リードタイムフィールド"
+
+#~ msgid ""
+#~ "While not all of these days are actually used for manufacturing by the "
+#~ "subcontractor, setting the same number of days in each field tells Odoo "
+#~ "that the subcontractor must receive the components and begin production "
+#~ "by the start of the product's delivery lead time. This gives the "
+#~ "subcontractor enough time to both manufacture and deliver the product."
+#~ msgstr ""
+#~ "これらの日数が全て実際に外注先での製造に使用されるわけではありませんが、各"
+#~ "フィールドに同じ日数を設定することで、Odooは外注先がプロダクトの配送リード"
+#~ "タイムの開始までに、構成品を受け取り、製造を開始しなければならないことを認"
+#~ "識します。これにより、外注先はプロダクトの製造と配送の両方に十分な時間を確"
+#~ "保できます。"
+
+#~ msgid "Component delivery lead time"
+#~ msgstr "構成品配送リードタイム"
+
+#~ msgid ""
+#~ "From the product's BoM, navigate to each component by clicking on the "
+#~ "component in the :guilabel:`Components` tab, and then clicking "
+#~ "the :icon:`oi-arrow-right` :guilabel:`(right arrow)` button to the right "
+#~ "of the component."
+#~ msgstr ""
+#~ "プロダクトの部品表から、:guilabel:`` タブ内の構成品をクリックし、構成品の"
+#~ "右側にある :icon:`oi-arrow-right` :guilabel:`(右矢印)` ボタンをクリックし"
+#~ "て、各構成品に移動します。"
+
+#~ msgid ""
+#~ "On the product page for each component, select the :guilabel:`Purchase` "
+#~ "tab. If the vendor has not already been added, do so now by "
+#~ "clicking :guilabel:`Add a line`, and selecting the subcontractor in "
+#~ "the :guilabel:`Vendor` column."
+#~ msgstr ""
+#~ "各構成品のプロダクトページで、:guilabel:`購買` タブを選択します。 仕入先が"
+#~ "まだ追加されていない場合は、:guilabel:`明細追加` をクリックし"
+#~ "て、:guilabel:`仕入先` 列から外注先を選択します。"
+
+#~ msgid ""
+#~ "Once the vendor has been added, enter the number of days it takes them to "
+#~ "dropship the product to the subcontractor, in the :guilabel:`Delivery "
+#~ "Lead Time` column."
+#~ msgstr ""
+#~ "仕入先を追加したら、:guilabel:`配送リードタイム` 列に、外注先への直送に要"
+#~ "する日数を入力します。"
+
+#~ msgid "Dropship subcontracting workflow"
+#~ msgstr "直送外注ワークフロー"
+
+#~ msgid ""
+#~ "Create a request for quotation (RfQ) for the product by navigating "
+#~ "to :menuselection:`Purchase app --> Orders --> Requests for Quotation`, "
+#~ "and clicking :guilabel:`New`."
+#~ msgstr ""
+#~ "プロダクトの見積依頼書を作成するには、:menuselection:`購買アプリ --> オー"
+#~ "ダ --> 見積依頼書` に移動し、:guilabel:`新規作成` をクリックします。"
+
+#~ msgid ""
+#~ "Specify the subcontractor in :guilabel:`Vendor` field. Then, add the "
+#~ "product in the :guilabel:`Products` tab by clicking :guilabel:`Add a "
+#~ "product`, selecting the product in the :guilabel:`Product` column, and "
+#~ "specifying a quantity in the :guilabel:`Quantity` column."
+#~ msgstr ""
+#~ "外注先を :guilabel:`仕入先` フィールドで指定します。次に、:guilabel:`プロ"
+#~ "ダクト追加` をクリックし、:guilabel:`プロダクト` 列でプロダクトを選択"
+#~ "し、:guilabel:`数量` 列で数量を指定して、:guilabel:`プロダクト` タブでプロ"
+#~ "ダクトを追加します。"
+
+#~ msgid ""
+#~ "In the :guilabel:`Expected Arrival` field, enter a date that provides "
+#~ "enough time for the component vendor to dropship the components, and the "
+#~ "subcontractor to manufacture and deliver the product."
+#~ msgstr ""
+#~ ":guilabel:`入荷予定日` フィールドには、構成品の仕入先が構成品を直送し、外"
+#~ "注先がプロダクトを製造して納品するのに十分な余裕を持った日付を入力して下さ"
+#~ "い。"
+
+#~ msgid ""
+#~ "When a product is added to an |RfQ|, the :guilabel:`Expected Arrival` "
+#~ "field auto-populates with a date that is today's date plus the delivery "
+#~ "lead time of the product. However, this does not consider the time it "
+#~ "takes to dropship the components to the subcontractor."
+#~ msgstr ""
+#~ "プロダクトが見積依頼書に追加されると、:guilabel:`入荷予定日` フィールドに"
+#~ "は、その日の日付にそのプロダクトの配送リードタイムを加えた日付が自動的に入"
+#~ "力されます。ただし、これは外注先への構成品の直送に要する時間は考慮していま"
+#~ "せん。"
+
+#~ msgid ""
+#~ "When purchasing a product subcontracted using the *Dropship Subcontractor "
+#~ "on Order* route, it is necessary to adjust this date to take into account "
+#~ "the extra time needed for the components to be delivered to the "
+#~ "subcontractor."
+#~ msgstr ""
+#~ "*受注時外注先直送* ルートを利用して外注されたプロダクトを購入する際には、"
+#~ "構成品が外注先に届くまでに余分に必要な時間を考慮して、この日付を調整する必"
+#~ "要があります。"
+
+#~ msgid ""
+#~ "Since production does not begin until they receive the components, "
+#~ "leaving the date as is results in the finished product arriving *after* "
+#~ "the date listed on the |RfQ|."
+#~ msgstr ""
+#~ "構成品が届くまでは生産が開始されないため、日付をそのままにしておくと、見積"
+#~ "依頼書に記載された日付よりも後に完成品が到着することになります。"
+
+#~ msgid ""
+#~ "Next, click :guilabel:`Confirm Order` to turn the |RfQ| into a |PO|. "
+#~ "Doing so creates a second |RfQ| to purchase the components from the "
+#~ "dropshipper, and have them sent to the subcontractor."
+#~ msgstr ""
+#~ "次に、:guilabel:`オーダ確定` をクリックすると、見積依頼書が購買オーダに変"
+#~ "わります。直送業者から構成品を購買するための2つ目の見積依頼書が作成され、"
+#~ "外注先に送られます。"
+
+#~ msgid ""
+#~ "Navigate to :menuselection:`Purchase app --> Orders --> Requests for "
+#~ "Quotation`, and select the |RfQ| that lists the dropshipper in "
+#~ "the :guilabel:`Vendor` column."
+#~ msgstr ""
+#~ ":menuselection:`購買アプリ --> オーダ --> 見積依頼` に移動し、ドロップシッ"
+#~ "パーが :guilabel:`仕入先` 列に記載されている見積依頼を選択します。"
+
+#~ msgid ""
+#~ "On the |RfQ|, the :guilabel:`Expected Arrival` field lists the date on "
+#~ "which the subcontractor must receive the components, in order to deliver "
+#~ "the finished product by the *Expected Arrival* date listed on the "
+#~ "subcontractor |PO|."
+#~ msgstr ""
+#~ "見積依頼では、:guilabel:`入荷予定日` の欄に、外注先が購買オーダに記載され"
+#~ "た入荷予定日までに完成品を納品するために、構成品を受け取らなければならない"
+#~ "日付が記載されています。"
+
+#~ msgid ""
+#~ "The :guilabel:`Order Deadline` field lists the latest date on which the |"
+#~ "RfQ| can be confirmed, in order for the dropshipper to deliver the "
+#~ "components to the subcontractor by the :guilabel:`Expected Arrival` date."
+#~ msgstr ""
+#~ ":guilabel:`オーダ期日` フィールドには、ドロップシッパーが外注先へ構成品"
+#~ "を :guilabel:`入荷予定日` までに納品できるよう、見積依頼が確認できる最も遅"
+#~ "い日付が記載されます。"
+
+#~ msgid ""
+#~ "Click :guilabel:`Confirm Order` to turn the |RfQ| into a |PO|, and "
+#~ "confirm the purchase of the components from the dropshipper. Doing so "
+#~ "causes a :guilabel:`Dropship` smart button to appear at the top of the "
+#~ "page."
+#~ msgstr ""
+#~ "見積依頼を購買オーダに変更し、直送業者からの構成品の購買を確定するに"
+#~ "は、:guilabel:`オーダ確定` をクリックします。 そうすると、ページの一番上"
+#~ "に :guilabel:`直送` スマートボタンが表示されます。"
+
+#~ msgid ""
+#~ "Click the :guilabel:`Dropship` smart button to open the dropship order. "
+#~ "This order can also be accessed from the :guilabel:`Resupply` smart "
+#~ "button that now appears on the subcontractor |PO|."
+#~ msgstr ""
+#~ ":guilabel:`直送` スマートボタンをクリックして、直送オーダを開きます。この"
+#~ "オーダは、外注先購買オーダに表示されるようになった :guilabel:`補充` スマー"
+#~ "トボタンからもアクセスできます。"
+
+#~ msgid ""
+#~ "After the dropshipper has delivered the components to the subcontractor, "
+#~ "click the :guilabel:`Validate` button at the top of the dropship order to "
+#~ "confirm that the subcontractor has received the components."
+#~ msgstr ""
+#~ "直送業者が外注先に構成品を配送した後、直送オーダの上部にある :guilabel:`検"
+#~ "証` ボタンをクリックして、外注先が構成品を受け取ったことを確認します。"
+
+#~ msgid ""
+#~ "Once the subcontractor receives the components, they begin manufacturing "
+#~ "the component, before delivering it to the contracting company."
+#~ msgstr ""
+#~ "外注先が構成品を受け取ると、それを発注元企業に納品する前に、構成品の製造を"
+#~ "開始します。"
+
+#~ msgid ""
+#~ "Bike retailer *Mike's Bikes* works with a subcontractor — *Bike Friends* "
+#~ "— to produce units of their *Bicycle* product."
+#~ msgstr ""
+#~ "自転車販売店 *Mike's Bikes* は、外注先である *Bike Friends* と協力して、自"
+#~ "社プロダクトである *自転車* を製造しています。"
+
+#~ msgid ""
+#~ "Mike's Bikes must purchase the required components from vendor Bike "
+#~ "World, and have them dropshipped to Bike Friends."
+#~ msgstr ""
+#~ "自転車販売店 *Mike's Bikes* は、*自転車(Bicycle)* という自社プロダクトの製"
+#~ "造を外注先である *Bike Friends* に委託しています。"
+
+#~ msgid ""
+#~ "On average, Bike Friends takes three days to manufacture each bicycle, "
+#~ "plus an addition two days to deliver it to Mike's Bikes."
+#~ msgstr ""
+#~ "平均して、Bike Friendsが自転車を製造するには3日、さらにMike's Bikesに届け"
+#~ "るのに2日かかります。"
+
+#~ msgid ""
+#~ "As a result, Mike's Bikes sets a delivery lead time of five days for "
+#~ "bicycle manufactured by Bike Friends: three days for manufacturing, plus "
+#~ "two days for delivery."
+#~ msgstr ""
+#~ "そのため、Mike's Bikesでは、Bike Friends社製の自転車の配送リードタイムを5"
+#~ "日間に設定しました。製造に3日、配送に2日です。"
+
+#~ msgid ""
+#~ "On the bicycle's BoM, they enter a manufacturing lead time of five days "
+#~ "as well, to remind themselves of the date that components must be "
+#~ "delivered to the subcontractor."
+#~ msgstr ""
+#~ "自転車の部品表には、外注先に構成品を納品しなければならない期日を忘れないよ"
+#~ "うに、製造リードタイムとして5日という情報も入力されています。"
+
+#~ msgid ""
+#~ "On the product pages for each of the bicycle's components, they assign "
+#~ "Bike World a delivery lead time of two days. This is the amount of time "
+#~ "it takes Bike World to dropship each component directly to the "
+#~ "subcontractor."
+#~ msgstr ""
+#~ "各自転車の構成品のプロダクトページでは、Bike Worldに2日間の配送リードタイ"
+#~ "ムを割当てています。これは、Bike Worldが各構成品を外注先へ直送するのにかか"
+#~ "る時間です。"
+
+#~ msgid ""
+#~ "On May 10th, Mike's Bikes confirms a |PO| for one bicycle, with an "
+#~ "expected delivery date of May 17th."
+#~ msgstr ""
+#~ "5月10日、Mike's Bikesは1台の自転車に対する購買オーダを確認し、配送予定日は"
+#~ "5月17日としました。"
+
+#~ msgid ""
+#~ "The |RfQ| for purchasing the components from Bike World and having them "
+#~ "dropshipped to Bike Friends has an Expected Arrival date of May 12th, and "
+#~ "a Deadline of May 10th. The |RfQ| must be confirmed by the deadline in "
+#~ "order for Bike Friends to receive the components by the Expected Arrival "
+#~ "date, giving them enough time to deliver the finished bicycle to Mike's "
+#~ "Bikes by May 17th."
+#~ msgstr ""
+#~ "Bike Worldから構成品を購買し、Bike Friendsに直送してもらう場合の見積依頼"
+#~ "は、入荷予定日が5月12日、締め切りが5月10日です。 Bike Friendsが構成品を入"
+#~ "荷予定日までに受け取り、5月17日までに完成した自転車をMike's Bikesに配送で"
+#~ "きるよう、見積依頼は期日までに確認する必要があります。"
+
+#~ msgid "The Order Deadline and Expected Arrival dates on a dropship order."
+#~ msgstr "直送オーダのオーダ期日と入荷予定日"
+
+#~ msgid ""
+#~ "Mike's Bikes confirms the |RfQ| on May 10th, and Bike World delivers the "
+#~ "components to Bike Friends on May 12th. Bike Friends manufactures the "
+#~ "bicycle, and delivers it to Mike's Bikes on May 17th."
+#~ msgstr ""
+#~ "Mike's Bikesは5月10日に見積依頼を確認し、Bike Worldは5月12日に構成品を"
+#~ "Bike Friendsに納品します。Bike Friendsは自転車を製造し、5月17日にMike's "
+#~ "Bikesに納品します。"
+
+#~ msgid "Resupply subcontracting lead times"
+#~ msgstr "補充外注リードタイム"
+
+#~ msgid ""
+#~ "Unforeseen circumstances can impact the completion of these actions, "
+#~ "which means that lead times should **not** be viewed as guarantees."
+#~ msgstr ""
+#~ "予期せぬ事情がこれらの作業の完了に影響を及ぼす可能性があるため、リードタイ"
+#~ "ムは確実に保証されたものと見なすべきでは **ありません**。"
+
+#~ msgid ""
+#~ "When using the :doc:`Resupply Subcontractor on Order "
+#~ "<subcontracting_resupply>` route, a company is responsible for supplying "
+#~ "the subcontractor with the necessary components. As a result, the "
+#~ "subcontractor cannot begin manufacturing until the components have been "
+#~ "received."
+#~ msgstr ""
+#~ ":doc:`受注時外注先在庫補充 <subcontracting_resupply>` ルートを使用する場"
+#~ "合、企業は外注先に必要な構成品を供給する責任があります。そのため、外注先は"
+#~ "構成品を受け取るまで製造を開始できません。"
+
+#~ msgid ""
+#~ "This means that, in addition to the amount of time it takes the "
+#~ "subcontractor to manufacture and deliver the product, the date they "
+#~ "receive the components must also be considered."
+#~ msgstr ""
+#~ "つまり、外注先がプロダクトを製造し納品するのにかかる時間に加え、外注先が構"
+#~ "成品を受け取る日付も考慮する必要があります。"
+
+#~ msgid ""
+#~ "By assigning a product's subcontractor a delivery lead time, and "
+#~ "specifying a manufacturing lead time on the product's bill of materials "
+#~ "(BoM), *Resupply Subcontractor* orders for the product's components "
+#~ "display the deadline by which the subcontractor must receive the "
+#~ "components."
+#~ msgstr ""
+#~ "製品の配送リードタイムを外注先に割当て、製品の部品表に製造リードタイムを指"
+#~ "定すると、プロダクト構成品の *外注先補充* オーダには、外注先が構成品を受け"
+#~ "取る必要がある期日が表示されます。"
+
+#~ msgid ""
+#~ "Then, select the :guilabel:`Purchase` tab on the product's page. If the "
+#~ "subcontractor has not already been added as a vendor, do so now by "
+#~ "clicking :guilabel:`Add a line`, and selecting the subcontractor in "
+#~ "the :guilabel:`Vendor` field."
+#~ msgstr ""
+#~ "次に、プロダクトページの :guilabel:`購買` タブを選択します。外注先がまだ仕"
+#~ "入先として追加されていない場合は、:guilabel:`明細追加` をクリック"
+#~ "し、:guilabel:`仕入先` フィールドで外注先を選択して、追加します。"
+
+#~ msgid ""
+#~ "Next, navigate to the product's |BoM| by clicking the :guilabel:`Bill of "
+#~ "Materials` smart button at the top of the product's page. Then, select a |"
+#~ "BoM| from the list."
+#~ msgstr ""
+#~ "次に、プロダクトページの上部にある :guilabel:`部品表` スマートボタンをク"
+#~ "リックして、プロダクトの部品表に移動します。 そして、リストから部品表を選"
+#~ "択します。"
+
+#~ msgid "Resupply subcontracting workflow"
+#~ msgstr "補充外注ワークフロー"
+
+#~ msgid ""
+#~ "In the :guilabel:`Expected Arrival` field, enter a date that provides "
+#~ "enough time for the subcontractor to receive the components, manufacture "
+#~ "the product, and deliver it back to the subcontracting company."
+#~ msgstr ""
+#~ ":guilabel:`入荷予定日` フィールドには、外注先が構成品を受け取り、プロダク"
+#~ "トを製造し、外注会社にそれを返送するのに十分な余裕を持った日付を入力して下"
+#~ "さい。"
+
+#~ msgid ""
+#~ "When a product is added to an |RfQ|, the :guilabel:`Expected Arrival` "
+#~ "field auto-populates with a date that is today's date plus the delivery "
+#~ "lead time of the product. However, this does **not** consider the time it "
+#~ "takes to ship the components to the subcontractor."
+#~ msgstr ""
+#~ "見積依頼にプロダクトが追加されると、:guilabel:`入荷予定日` フィールドに"
+#~ "は、その日の日付にプロダクトの配送リードタイムを加えた日付が自動的に入力さ"
+#~ "れます。ただし、これは外注先への構成品の配送にかかる時間は考慮していませ"
+#~ "ん。"
+
+#~ msgid ""
+#~ "When purchasing a product subcontracted using the Resupply Subcontractor "
+#~ "on Order route, it is necessary to adjust this date to take into account "
+#~ "the extra time needed for the components to be shipped to the "
+#~ "subcontractor."
+#~ msgstr ""
+#~ "受注時外注先在庫補充ルートを使用して外注されたプロダクトを購買する際には、"
+#~ "構成品が外注先に発送されるのに余分な時間がかかることを考慮して、この日付を"
+#~ "調整して下さい。"
+
+#~ msgid ""
+#~ "Next, click :guilabel:`Confirm Order` to turn the |RfQ| into a |PO|. "
+#~ "Doing so causes a :guilabel:`Resupply` smart button to appear at the top "
+#~ "of the page."
+#~ msgstr ""
+#~ "次に、:guilabel:`オーダ確定` をクリックすると、見積依頼が購買オーダに変わ"
+#~ "ります。ページの一番上に :guilabel:`補充` スマートボタンが表示されます。"
+
+#~ msgid ""
+#~ "Click the :guilabel:`Resupply` smart button to open the resupply "
+#~ "subcontractor order, which is the order created to send components to the "
+#~ "subcontractor."
+#~ msgstr ""
+#~ ":guilabel:`補充` スマートボタンをクリックして、外注先への構成品の発送用に"
+#~ "作成されたオーダである外注先在庫補充オーダを開きます。"
+
+#~ msgid ""
+#~ "The :guilabel:`Deadline` field on the resupply subcontractor order shows "
+#~ "the deadline for the subcontractor to receive the components, in order "
+#~ "for them to have enough time to manufacture and deliver the finished "
+#~ "product by the Expected Arrival date."
+#~ msgstr ""
+#~ "外注先在庫補充オーダの :guilabel:`期日` フィールドには、外注先が構成品を受"
+#~ "け取る期限が表示されます。これにより、外注先は、入荷予定日までに完成品を製"
+#~ "造し、納品するのに十分な時間を確保できます。"
+
+#~ msgid ""
+#~ "The :guilabel:`Scheduled Date` field should display the latest date on "
+#~ "which components can be shipped, while still arriving to the "
+#~ "subcontractor by the :guilabel:`Deadline`. However, by default, the date "
+#~ "displayed is the same as the date in the :guilabel:`Deadline` field, and "
+#~ "must be updated to take into account the time required for shipping."
+#~ msgstr ""
+#~ ":guilabel:`予定日` フィールドには、外注先に :guilabel:`期日` までに到着す"
+#~ "る一方で、構成品の出荷が可能な最も遅い日付が表示されるべきです。 しかし、"
+#~ "デフォルトでは、表示される日付は :guilabel:`期日` フィールドの日付と同じで"
+#~ "あり、出荷に必要な時間を考慮して更新する必要があります。"
+
+#~ msgid ""
+#~ "Click on the :guilabel:`Scheduled Date` field to open a calendar popover "
+#~ "from which a date can be selected. Select a date that allows for the "
+#~ "components to be delivered by the :guilabel:`Deadline` on the resupply "
+#~ "subcontractor order."
+#~ msgstr ""
+#~ ":guilabel:`予定日` フィールドをクリックすると、カレンダーポップオーバーが"
+#~ "開き、そこから日付を選択できます。 外注先在庫補充オーダの :guilabel:`期日"
+#~ "` までに構成品が納品されるように日付を選択します。"
+
+#~ msgid ""
+#~ "After the components are shipped, click the :guilabel:`Validate` button "
+#~ "at the top of the order to confirm they have been sent to the "
+#~ "subcontractor."
+#~ msgstr ""
+#~ "構成品の出荷後、オーダの上部にある :guilabel:`検証` ボタンをクリックして、"
+#~ "外注先に送信されたことを確認します。"
+
+#~ msgid ""
+#~ "Bike retailer *Mike's Bikes* works with a subcontractor — *Bike Friends* "
+#~ "— to produce units of their *Unicycle* product."
+#~ msgstr ""
+#~ "自転車販売店 *Mike's Bikes* は、外注先である *Bike Friends* と協力して、自"
+#~ "社プロダクトである *一輪車(Unicycle)* を製造しています。"
+
+#~ msgid ""
+#~ "Mike's Bikes must supply Bike Friends with the necessary components for "
+#~ "manufacturing the unicycles."
+#~ msgstr ""
+#~ "自転車販売店 *Mike's Bikes* は、*一輪車* というプロダクトの製造を外注先で"
+#~ "ある *Bike Friends* に委託しています。"
+
+#~ msgid ""
+#~ "On average, Bike Friends takes three days to manufacture each unicycle, "
+#~ "plus an additional two days to deliver it to Mike's Bikes."
+#~ msgstr ""
+#~ "平均して、Bike Friendsは一輪車を製造するのに3日、さらにMike's Bikesに届け"
+#~ "るのに2日を要します。"
+
+#~ msgid ""
+#~ "As a result, Mike's Bikes sets a delivery lead time of five days for "
+#~ "unicycles manufactured by Bike Friends: three days for manufacturing, "
+#~ "plus two days for delivery."
+#~ msgstr ""
+#~ "そのため、Mike's Bikesでは、Bike Friends社製の一輪車の配送リードタイムを5"
+#~ "日間に設定しました。製造に3日、配送に2日です。"
+
+#~ msgid ""
+#~ "On the unicycle's |BoM|, they enter a manufacturing lead time of five "
+#~ "days, as well, to remind themselves of the date that components must be "
+#~ "delivered to the subcontractor."
+#~ msgstr ""
+#~ "一輪車の部品表には、外注先に構成品を納品すべき期日を忘れないように、5日の"
+#~ "製造リードタイムも入力されています。"
+
+#~ msgid ""
+#~ "They confirm a |PO| for one unicycle, with an expected arrival date of "
+#~ "May 30th."
+#~ msgstr "一輪車一台分の購買オーダが確認されており、入荷予定日は5月30日です。"
+
+#~ msgid ""
+#~ "The resupply subcontractor order for shipping the components to the "
+#~ "subcontractor shows a *Deadline* of May 25th. The subcontractor must "
+#~ "receive the components by this date, in order to have enough time to "
+#~ "manufacture the unicycle, and deliver it by May 30th."
+#~ msgstr ""
+#~ "外注先への構成品出荷に関する外注先在庫補充オーダには、*期日* が5月25日と記"
+#~ "載されています。外注先が一輪車の製造に十分な時間を確保し、5月30日までに納"
+#~ "品するには、この日付までに構成品を受け取らなければなりません。"
+
+#~ msgid ""
+#~ "It takes Mike's Bikes two days to deliver the components, so they update "
+#~ "the *Scheduled Date* field on the resupply subcontractor order to May "
+#~ "23rd, two days before the Deadline."
+#~ msgstr ""
+#~ "Mike's Bikesは構成品の配送に2日かかるため、外注先在庫補充オーダの * 予定日"
+#~ "* フィールドを期日の2日前である5月23日に更新します。"
+
+#~ msgid ""
+#~ "The Scheduled Date and Deadline fields on a resupply subcontractor order."
+#~ msgstr "外注先在庫補充オーダの「予定日」と「期日」のフィールド"
+
+#~ msgid ""
+#~ "Mike's Bikes ships the components to Bike Friends on the scheduled date "
+#~ "of May 23rd, and they arrive on the deadline of May 25th. This gives Bike "
+#~ "Friends enough time to manufacture the unicycle, and ship it back to "
+#~ "Mike's Bikes by the expected arrival date of May 30th."
+#~ msgstr ""
+#~ "Mike's Bikesは予定日である5月23日にBike Friendsに構成品を発送し、5月25日の"
+#~ "締め切りまでに到着します。これにより、Bike Friendsは一輪車の製造に十分な時"
+#~ "間を確保でき、5月30日の入荷予定日までにMike's Bikesに送り返すことができま"
+#~ "す。"
+
+#~ msgid ""
+#~ "In basic subcontracting, the subcontractor is responsible for acquiring "
+#~ "the necessary components. This means that the contracting company only "
+#~ "has to worry about what happens to subcontracted products once they are "
+#~ "produced."
+#~ msgstr ""
+#~ "基本的な外注では、外注先が必要な構成品を調達する責任を負います。つまり、発"
+#~ "注元企業は、外注プロダクトが生産された後のことだけを心配すればよいのです。"
+
+#~ msgid ""
+#~ "The workflow for purchasing a product manufactured using basic "
+#~ "subcontracting is similar to the one used when purchasing a non-"
+#~ "subcontracted product from a vendor. The main differences are the way "
+#~ "that subcontracted products are configured, and the fact that "
+#~ "subcontracted products take longer to be sent from the vendor, since they "
+#~ "must first be manufactured by them."
+#~ msgstr ""
+#~ "基本的な外注を使用して製造されたプロダクトの購入に関するワークフローは、外"
+#~ "注を使用しないプロダクトを仕入先から購入する場合とほぼ同様です。主な違い"
+#~ "は、外注プロダクトの設定方法と、外注プロダクトはまず仕入先で製造される必要"
+#~ "があるため、仕入先から発送されるまでに時間がかかるという点です。"
+
+#~ msgid ""
+#~ "To use subcontracting in Odoo, navigate to :menuselection:`Manufacturing "
+#~ "app --> Configuration --> Settings`, and tick the checkbox next to "
+#~ "the :guilabel:`Subcontracting` setting, under the :guilabel:`Operations` "
+#~ "heading. Then, click :guilabel:`Save`."
+#~ msgstr ""
+#~ "Odooで外注を利用するには、:menuselection:`製造アプリ --> 設定 --> 管理設定"
+#~ "` に移動し、:guilabel:`工程` の見出しの下にある :guilabel:`外注` 設定の横"
+#~ "にあるチェックボックスにチェックを入れます。次に、:guilabel:`保存` をク"
+#~ "リックします。"
+
+#~ msgid ""
+#~ "Once the :guilabel:`Subcontracting` setting is enabled, it is also "
+#~ "necessary to properly configure the subcontracted product, and the "
+#~ "product's |BoM|."
+#~ msgstr ""
+#~ ":guilabel:`外注` 管理設定を有効にした場合、外注プロダクトとプロダクトの部"
+#~ "品表を適切に設定する必要があります。"
+
+#~ msgid ""
+#~ "To configure a product for basic subcontracting, navigate "
+#~ "to :menuselection:`Inventory app --> Products --> Products`, and select a "
+#~ "product, or create a new one by clicking :guilabel:`New`."
+#~ msgstr ""
+#~ "基本的な外注用プロダクトを設定するには、:menuselection:`在庫アプリ --> プ"
+#~ "ロダクト --> プロダクト` に移動し、製品を選択するか、:guilabel:`新規作成` "
+#~ "をクリックして新しいプロダクトを作成します。"
+
+#~ msgid ""
+#~ "On the product form, select the :guilabel:`Purchase` tab, and add the "
+#~ "product's subcontractor as a vendor by clicking :guilabel:`Add a line`, "
+#~ "selecting the subcontractor in the :guilabel:`Vendor` drop-down menu, and "
+#~ "entering a price in the :guilabel:`Price` field."
+#~ msgstr ""
+#~ "プロダクトフォームで、:guilabel:`購買` タブを選択し、:guilabel:`明細追加` "
+#~ "をクリックして、:guilabel:`仕入先` ドロップダウンメニューから外注先を選択"
+#~ "し、:guilabel:`価格` フィールドに価格を入力して、プロダクトの外注先を仕入"
+#~ "先として追加します。"
+
+#~ msgid ""
+#~ "Then, click on the :guilabel:`Inventory` tab, and use "
+#~ "the :guilabel:`Routes` field to configure a route that determines what "
+#~ "happens to the finished product once it has been manufactured by the "
+#~ "subcontractor."
+#~ msgstr ""
+#~ "次に、:guilabel:`在庫` タブをクリックし、:guilabel:`ルート` フィールドを使"
+#~ "用して、外注先で製造された完成品が次にどう処理されるかを決定するルートを設"
+#~ "定します。"
+
+#~ msgid ""
+#~ "If the finished product is shipped back to the contracting company, make "
+#~ "sure the :guilabel:`Buy` route is selected. In addition, select "
+#~ "the :guilabel:`Replenish on Order (MTO)` route to automatically create a |"
+#~ "PO| for the product upon confirmation of a sales order (SO), unless there "
+#~ "is enough stock on-hand to fulfill the |SO|."
+#~ msgstr ""
+#~ "完成品を発注元企業に返送する場合は、:guilabel:`購買` ルートが選択されてい"
+#~ "ることを確認して下さい。さらに、オーダ確認時にプロダクトの :guilabel:`受注"
+#~ "補充(MTO)` ルートを選択すると、手持在庫が十分でない限り、販売オーダ(SO)の"
+#~ "確認時に自動的にプロダクトの購買オーダが作成されます。"
+
+#~ msgid ""
+#~ "If the finished product is shipped directly to the customer by the "
+#~ "subcontractor, make sure that **only** the :guilabel:`Dropship` route is "
+#~ "selected."
+#~ msgstr ""
+#~ "完成品が外注先から顧客に直送される場合は、:guilabel:`直送` ルート **のみ"
+#~ "** が選択されていることを確認して下さい。"
+
+#~ msgid ""
+#~ "To configure a |BoM| for basic subcontracting, click the :guilabel:`Bill "
+#~ "of Materials` smart button on the product form, and select the desired |"
+#~ "BoM|."
+#~ msgstr ""
+#~ "基本的な外注のための部品表を設定するには、プロダクトフォーム上"
+#~ "の  :guilabel:`部品表` スマートボタンをクリックし、必要な部品表を選択しま"
+#~ "す。"
+
+#~ msgid ""
+#~ "Finally, click on the :guilabel:`Miscellaneous` tab. In "
+#~ "the :guilabel:`Manuf. Lead Time` field, enter the number of days it takes "
+#~ "the subcontractor to manufacture the product. This number is factored in "
+#~ "when calculating the product's expected arrival date."
+#~ msgstr ""
+#~ "最後に、:guilabel:`その他` タブをクリックします。 :guilabel:`製造リードタ"
+#~ "イム` フィールドに、外注先がプロダクトを製造するのにかかる日数を入力しま"
+#~ "す。 この数値は、プロダクトの入荷予定日を計算する際に考慮されます。"
+
+#~ msgid ""
+#~ "When using basic subcontracting, there is no need to list components in "
+#~ "the :guilabel:`Components` tab of the |BoM|, since the components "
+#~ "required for manufacturing, and the means by which they are acquired, are "
+#~ "handled by the subcontractor."
+#~ msgstr ""
+#~ "基本的な外注を使用する場合、製造に必要な構成品やその入手手段は外注先が管理"
+#~ "するため、部品表の :guilabel:`構成品` タブに構成品をリスト化する必要はあり"
+#~ "ません。"
+
+#~ msgid "The basic subcontracting workflow consists of up to four steps:"
+#~ msgstr "基本的な外注ワークフローは、最大4つのステップで構成されています:"
+
+#~ msgid ""
+#~ "Create a sales order (SO) for the subcontracted product; doing so creates "
+#~ "a |PO| to purchase the product from the subcontractor."
+#~ msgstr ""
+#~ "外注プロダクト用の販売オーダ(SO)を作成します。そうすることで、外注先からプ"
+#~ "ロダクトを購買するための購買オーダが作成されます。"
+
+#~ msgid ""
+#~ "Confirm the |PO| created in the previous step, or create a new |PO|; "
+#~ "doing so creates a receipt order or a dropship order."
+#~ msgstr ""
+#~ "前ステップで作成した購買オーダを確認するか、新しい購買オーダを作成します。"
+#~ "すると入荷オーダまたは直送オーダが作成されます。"
+
+#~ msgid ""
+#~ "Process the receipt once the subcontractor has finished manufacturing the "
+#~ "subcontracted product, and shipped it back to the contracting company, "
+#~ "**OR** process the dropship order to ship the product directly to the "
+#~ "customer."
+#~ msgstr ""
+#~ "外注先が外注されたプロダクトの製造を完了し、発注元企業にそれを送り返した"
+#~ "ら、その入荷を処理します。**または**、直送オーダを処理して、プロダクトを顧"
+#~ "客に直接出荷します。"
+
+#~ msgid ""
+#~ "An |SO| for the product only creates a |PO| if the *Replenish on Order "
+#~ "(MTO)* route is enabled on the product's form, **and** there is not "
+#~ "enough stock of the product on-hand to fulfill the |SO|."
+#~ msgstr ""
+#~ "プロダクトに対して *受注補充(MTO)* ルートがプロダクトフォーム上で有効に"
+#~ "なっており、**かつ**、そのプロダクトの手持在庫が販売オーダを満たすのに十分"
+#~ "でない場合のみ、購買オーダが作成されます。"
+
+#~ msgid ""
+#~ "If there is enough stock on-hand, confirming an |SO| for the product "
+#~ "creates a delivery order instead, because Odoo assumes that the |SO| is "
+#~ "fulfilled using the stock in the warehouse."
+#~ msgstr ""
+#~ "在庫が十分にある場合、プロダクトの販売オーダを確認すると、代わりに出荷オー"
+#~ "ダが作成されます。これは、Odooが販売オーダが倉庫内の在庫を使用して満たされ"
+#~ "ると想定しているためです。"
+
+#~ msgid ""
+#~ "If a |PO| was created in the previous step, navigate to it by clicking "
+#~ "the :guilabel:`Purchase` smart button at the top of the |SO|, or by going "
+#~ "to :guilabel:`Purchase app --> Orders --> Purchase Orders`, and selecting "
+#~ "the |PO|. Then, click :guilabel:`Confirm Order` to confirm it, and move "
+#~ "on to the next step."
+#~ msgstr ""
+#~ "前のステップで購買オーダが作成された場合、販売オーダの一番上にあ"
+#~ "る  :guilabel:`購買` スマートボタンをクリックするか、または :guilabel:`購"
+#~ "買アプリ --> オーダ --> 購買オーダ` に移動し、購買オーダを選択します。次"
+#~ "に、  :guilabel:`オーダ確定` をクリックして確定し、次のステップに進みま"
+#~ "す。"
+
+#~ msgid ""
+#~ "When a |PO| is confirmed for a product manufactured using basic "
+#~ "subcontracting, a receipt or dropship order is automatically created, and "
+#~ "can be accessed from the corresponding :guilabel:`Receipt` "
+#~ "or :guilabel:`Dropship` smart button that appears at the top of the |PO|."
+#~ msgstr ""
+#~ "基本的な外注を利用して製造されたプロダクトに対して購買オーダが確認される"
+#~ "と、自動的に入荷または直送オーダが作成され、購買オーダの最上部に表示され"
+#~ "る :guilabel:`入荷` または :guilabel:`直送` スマートボタンからアクセスでき"
+#~ "ます。"
+
+#~ msgid ""
+#~ "A PO for a basic subcontracting product, with a Receipt smart button at "
+#~ "the top of the page."
+#~ msgstr ""
+#~ "基本的な外注プロダクトの購買オーダ、ページ上部の「入荷」スマートボタン"
+
+#~ msgid ""
+#~ "PO for a basic subcontracting product, with a Receipt smart button at the "
+#~ "top of the page."
+#~ msgstr ""
+#~ "基本的な外注プロダクトの購買オーダ、ページ上部の「入荷」スマートボタン"
+
+#~ msgid ""
+#~ "Once the subcontractor has finished manufacturing the product, they "
+#~ "either ship it to the contracting company, or dropship it to the end "
+#~ "customer, depending on how the product was :ref:`configured "
+#~ "<manufacturing/workflows/subcontracting_basic/product-config>`."
+#~ msgstr ""
+#~ "外注先がプロダクトの製造を完了すると、プロダクトは、プロダクトの :ref:`設"
+#~ "定 <manufacturing/workflows/subcontracting_basic/product-config>`  方法に"
+#~ "応じて、発注元企業に発送されるか、または最終顧客に直送されます。"
+
+#~ msgid ""
+#~ "Once the product has been shipped to the customer, navigate to "
+#~ "the :menuselection:`Sales` app, and select the |SO|. Select "
+#~ "the :guilabel:`Delivery` smart button at the top of the page to open the "
+#~ "delivery order, and click :guilabel:`Validate` on the order to confirm "
+#~ "that the product has been shipped."
+#~ msgstr ""
+#~ "プロダクトが顧客に発送されたら、:menuselection:`販売` アプリに移動し、販売"
+#~ "オーダを選択します。ページ上部の :guilabel:`配送` スマートボタンを選択して"
+#~ "出荷オーダを開き、オーダの:guilabel:`検証` をクリックしてプロダクトが発送"
+#~ "されたことを確認します。"
 
 #~ msgid ""
 #~ "When manufacturing certain products, specific operations may need to be "
