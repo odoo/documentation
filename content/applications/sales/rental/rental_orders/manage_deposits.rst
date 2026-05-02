@@ -7,9 +7,10 @@ Security deposits are insurance in case of damage, theft, or unpaid fees. It is 
 when the rented product is returned in good condition, and all terms of the rental or service
 agreement are met.
 
-This document covers the standard options for :ref:`configuring <rental/manage_deposits/config>`,
-:ref:`collecting <rental/manage_deposits/optional-product>`, and :ref:`refunding
-<rental/manage_deposits/refund>` deposits within the **Rentals** app.
+This document covers the standard options for :ref:`configuring
+<rental/rental_order/manage_deposits/config>`, :ref:`collecting
+<rental/rental_orders/manage_deposits/optional-product>`, and :ref:`refunding
+<rental/rental_order/manage_deposits/refund>` deposits within the **Rentals** app.
 
 App integration configuration
 =============================
@@ -23,7 +24,7 @@ refunds:
   <../../../finance/accounting/customer_invoices/credit_notes>` on rental orders, which are required
   when returning a deposit.
 
-.. _rental/manage_deposits/config:
+.. _rental/rental_order/manage_deposits/config:
 
 Configuration
 =============
@@ -52,7 +53,7 @@ Finally, :icon:`fa-cloud-upload` :guilabel:`(save)` the deposit service product.
 .. image:: manage_deposits/example-deposit-product-form.png
    :alt: Rental product form configured as a digital camera deposit service in the Rental app.
 
-.. _rental/manage_deposit/add-deposit:
+.. _rental/rental_order/manage_deposit/add-deposit:
 
 Add a deposit to a rental order
 ===============================
@@ -60,11 +61,11 @@ Add a deposit to a rental order
 There are several methods to add a deposit service product to a rental order, alongside the related
 product:
 
-- :ref:`Optional product menu <rental/manage_deposits/optional-product>`
-- :ref:`Quotation template <rental/manage_deposits/use-quotation-template>`
-- :ref:`Manually <rental/service_products/create-rental-order>`
+- :ref:`Optional product menu <rental/rental_orders/manage_deposits/optional-product>`
+- :ref:`Quotation template <rental/rental_orders/manage_deposits/use-quotation-template>`
+- :doc:`Manually <create_rental_order>`
 
-.. _rental/manage_deposits/optional-product:
+.. _rental/rental_orders/manage_deposits/optional-product:
 
 Optional product menu
 ---------------------
@@ -82,9 +83,9 @@ Products` field in the *Upsell & Cross-sell* section.
    :alt: A Digital Camera rental product form with an Optional Product field configured to
     its deposit.
 
-Then create a :ref:`rental order <rental/order>` and add the rental product in the :guilabel:`Order
-Lines` tab. A *Configure your product* pop-up window appears. Click :icon:`fa-plus` :guilabel:`Add`,
-for the deposit item, then click :guilabel:`Confirm`.
+Then :doc:`create_rental_order` and add the rental product in the :guilabel:`Order Lines` tab. A
+*Configure your product* pop-up window appears. Click :icon:`fa-plus` :guilabel:`Add`, for the
+deposit item, then click :guilabel:`Confirm`.
 
 .. tip::
    If :doc:`eCommerce <../../../websites/ecommerce>` is installed, add a :guilabel:`Short
@@ -99,7 +100,7 @@ for the deposit item, then click :guilabel:`Confirm`.
 .. image:: manage_deposits/configure-your-product-window.png
    :alt: A Configure your product window for a Digital Camera and its deposit.
 
-.. _rental/manage_deposits/use-quotation-template:
+.. _rental/rental_orders/manage_deposits/use-quotation-template:
 
 Quotation template
 ------------------
@@ -109,8 +110,8 @@ deposits are included in the order. Navigate to :menuselection:`Rental app --> C
 Quotation Templates` and click :guilabel:`New` to get started.
 
 :ref:`Create a quotation template <sales/send_quotations/create_templates>` that includes both the
-rental product and the rental product deposit, and save the template. Next, create a :ref:`rental
-order <rental/order>`. Select the desired template in the :guilabel:`Quotation Template` field.
+rental product and the rental product deposit, and save the template. Next, create a
+:doc:`create_rental_order`. Select the desired template in the :guilabel:`Quotation Template` field.
 
 Process a deposit on a rental order
 ===================================
@@ -135,7 +136,7 @@ customer.
 For in-person transactions, click :guilabel:`Pay`, verify the *Pay* pop-up window, then click
 :guilabel:`Create Payment` and click :guilabel:`Send` to email a copy of the receipt.
 
-.. _rental/manage_deposits/refund:
+.. _rental/rental_order/manage_deposits/refund:
 
 Refund deposits upon return
 ===========================
