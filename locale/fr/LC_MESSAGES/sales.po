@@ -37,7 +37,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-27 17:30+0000\n"
+"POT-Creation-Date: 2026-05-01 17:30+0000\n"
 "PO-Revision-Date: 2026-04-03 23:21+0000\n"
 "Last-Translator: \"Manon Rondou (ronm)\" <ronm@odoo.com>\n"
 "Language-Team: French <https://translate.odoo.com/projects/odoo-19-doc/sales/"
@@ -97,7 +97,7 @@ msgstr ""
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:59
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:9
 #: ../../content/applications/sales/point_of_sale/extra/employee_login.rst:17
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:12
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:21
 #: ../../content/applications/sales/point_of_sale/extra/presets.rst:24
 #: ../../content/applications/sales/point_of_sale/extra/pricing.rst:110
 #: ../../content/applications/sales/point_of_sale/extra/pricing.rst:153
@@ -119,7 +119,7 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:19
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/tyro.rst:14
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:90
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:423
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:425
 #: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:38
 #: ../../content/applications/sales/point_of_sale/shop.rst:60
 #: ../../content/applications/sales/point_of_sale/use/receipts.rst:25
@@ -132,7 +132,7 @@ msgstr ""
 #: ../../content/applications/sales/sales/sales_quotations/margin.rst:12
 #: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:53
 #: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:11
-#: ../../content/applications/sales/subscriptions/closing.rst:9
+#: ../../content/applications/sales/subscriptions/closing.rst:13
 #: ../../content/applications/sales/subscriptions/subscriptions_deliveries.rst:16
 msgid "Configuration"
 msgstr "Configuration"
@@ -6709,6 +6709,7 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra.rst:18
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:3
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:56
 msgid "Preparation display"
 msgstr "Écran de préparation"
 
@@ -7082,251 +7083,387 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:5
 msgid ""
-"The preparation display feature allows you to handle POS orders requiring "
-"preparation. Concretely,"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:7
-msgid ""
-"**For retail**:  The preparation team is notified after a payment is "
-"completed at the POS to gather the purchased items for customer pickup."
+"The preparation display helps manage POS orders that require preparation "
+"prior to completion. It is intended for use in environments where ordered "
+"items must be assembled, cooked, or otherwise processed before they are "
+"handed over to the customer."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:9
+msgid "Use cases"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:11
 msgid ""
-"**For restaurants**: POS orders inform the kitchen of the meals to be "
-"prepared."
+"**For retail**: Once an order is completed and paid in the :ref:`POS "
+"register <pos/use/open-register>`, it is sent to the preparation display. "
+"This notifies the preparation team to collect and prepare the purchased "
+"items for customer pickup."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:14
-msgid "To enable the preparation display feature,"
+msgid ""
+"**For restaurants**: Once orders are placed in the :ref:`POS register <pos/"
+"use/open-register>`, they are sent to the preparation display to inform the "
+"kitchen about the meals that need to be prepared."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:16
-#: ../../content/applications/sales/point_of_sale/extra/presets.rst:32
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:63
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/tyro.rst:60
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:70
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:84
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:156
-msgid "Go to the :ref:`POS settings <pos/use/settings>`."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:17
-msgid "Scroll down to the :guilabel:`Preparation` section."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:18
-msgid "Check the :guilabel:`Preparation Display` option."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:None
-msgid "Setting to enable the preparation display feature"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:24
-msgid "To create and set up a preparation display,"
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:23
+msgid ""
+"To create and set up a preparation display, go to :menuselection:`Point of "
+"Sale --> Orders --> Preparation Display`, click :guilabel:`New`, and "
+"configure it:"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:26
-msgid "Go to :menuselection:`Point of Sale --> Orders --> Preparation Display`"
+msgid ""
+"Enter a descriptive :guilabel:`Name` (e.g., `Main Kitchen`, `Bar`, `Pickup "
+"zone`)."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:27
-#: ../../content/applications/sales/point_of_sale/use.rst:155
-msgid "Click :guilabel:`New`."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:28
 msgid ""
-"Give the display a descriptive :guilabel:`Name` (e.g., `Main Kitchen`, `Bar`)"
+"Select the :guilabel:`Point of Sale` that sends orders to this display. "
+"Leave the field empty to link it to *all* points of sale."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:29
-msgid "Set it up:"
+msgid ""
+"Specify the POS :ref:`product categories <pos/products/categories>` to be "
+"sent to this display. Leave the field empty to allow *all* categories."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:31
 msgid ""
-":guilabel:`Point of Sale`: Select the POS that sends orders to this display."
+"Enable the :guilabel:`Auto clear` option to automatically remove orders from "
+"the :ref:`order status screen <preparation/order-status-screen>` after a "
+"given time."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:32
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:33
 msgid ""
-":guilabel:`Product categories`: Specify the POS :guilabel:`Product "
-"categories` sent to this display."
+"Define the steps required for orders to be processed in "
+"the :guilabel:`Stages` tab:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:34
-msgid ""
-":guilabel:`Stages`: Define the steps required for the orders to be ready."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:36
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:35
 msgid "Click :guilabel:`Add a line` to add a stage."
 msgstr ""
 
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:36
+msgid "Optionally, assign colors to stages for better visibility."
+msgstr ""
+
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:37
-msgid "Assign specific colors to each stage for clarity (optional)."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:38
 msgid ""
-"Define an :guilabel:`Alert timer (min)` for each stage to indicate the "
-"expected processing time."
+"Set an :guilabel:`Alert timer (min)` for each stage to define the expected "
+"processing time. Orders are highlighted when this time is exceeded."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:None
-msgid "preparation display set-up form"
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:41
+msgid ""
+"Configure communication channels for the preparation display to keep "
+"customers informed. To do so:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:44
+msgid "Install the :guilabel:`POS Enterprise SMS Whatsapp` module."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:45
+msgid ""
+"Go to the :ref:`preparation display form <pos/preparation/configuration>`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:46
 msgid ""
-"To edit a pre-existing preparation display, click the vertical ellipsis "
-"button (:icon:`fa-ellipsis-v`) on the display's card and "
-"select :guilabel:`Configure`."
+"Activate :guilabel:`SMS Enabled` and/or :guilabel:`WhatsApp Enabled` in "
+"the :guilabel:`Communication` tab."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:48
+msgid ""
+"Select templates for :guilabel:`Order received` and :guilabel:`Order is "
+"ready`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:50
-#: ../../content/applications/sales/point_of_sale/hardware_network/electronic_labels.rst:119
-#: ../../content/applications/sales/point_of_sale/shop.rst:78
-msgid "Practical application"
-msgstr "Application dans la pratique"
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:52
 msgid ""
-"Go to :menuselection:`Point of Sale --> Orders --> Preparation Display` to "
-"get an overview of all your displays."
+"To edit an existing preparation display, click :icon:`fa-ellipsis-v` "
+"(:guilabel:`Dropdown menu`) on the display's card and "
+"select :guilabel:`Configure`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:58
+msgid ""
+"To view all preparation displays and their related :ref:`order status "
+"screens <preparation/order-status-screen>`, go to :menuselection:`Point of "
+"Sale --> Orders --> Preparation Display`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:None
 msgid "Kanban view of the preparation display"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:59
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:66
 msgid "The display card shows:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:61
-msgid "The configured stages."
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:68
+msgid "The configured stages, e.g., `To prepare`, `Ready`, `Completed`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:62
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:69
 msgid "The number of orders currently :guilabel:`In progress`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:63
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:70
 msgid ""
 "The :guilabel:`Average time` employees usually take to complete an order."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:66
-msgid ""
-"Click the :guilabel:`Kitchen Display` app icon on your Odoo Dashboard for "
-"quicker access."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:69
-msgid "Using the preparation display"
-msgstr ""
-
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:71
 msgid ""
-"To access the preparation display, click :guilabel:`Preparation Screen`. "
-"This interface, designed for employees, shows:"
+"The :ref:`Order Status Screen <preparation/order-status-screen>` button."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:74
 msgid ""
-"**Stages and order count**: Displays the progress of orders across stages "
-"such as `To prepare`, `Ready`, and `Completed`, along with the number of "
-"orders in each stage."
+"A default preparation display named :guilabel:`Kitchen Display` is "
+"automatically configured when creating a new :doc:`restaurant point of sale "
+"<../restaurant>` :ref:`through the onboarding screen <pos/use/create-pos>` "
+"and selecting the :guilabel:`Restaurant` card."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:76
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:77
 msgid ""
-"**Ordered products by category**: Lists all items in progress, grouped by "
-"POS categories (e.g., `Drinks`, `Food`)."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:78
-msgid "**Order cards**: Summarizes individual orders, including:"
+"The **Kitchen Display** app is automatically installed whenever "
+"a :doc:`restaurant point of sale <../restaurant>` is :ref:`created <pos/use/"
+"create-pos>` and provides quick access to the :guilabel:`Preparation "
+"Display` overview from the main dashboard."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:80
-msgid "Associated tables and order numbers."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:81
-msgid ":doc:`Preset <presets>` service types, if configured."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:82
-msgid "Status, such as `Ready`, highlighted with the defined colors."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:83
-msgid "Waiting time, with visual indicators."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:86
 msgid ""
-"The duration indicator turns red if the elapsed time exceeds the predefined "
-"alert time."
+"If at least one :doc:`restaurant point of sale <../restaurant>` is "
+"configured, the :ref:`order status screen <preparation/order-status-screen>` "
+"is installed by default. To use it in a shop environment, install "
+"the :guilabel:`PoS Order Tracking Customer Display` module."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:85
+msgid ""
+"To use the preparation display, log in via a web browser on a mobile device "
+"or a touchscreen connected via USB or HDMI. IoT boxes are not supported."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:91
+msgid "Preparation display interface"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:93
+msgid ""
+"To open the preparation display, click :guilabel:`Preparation Screen` on the "
+"Kanban card. The interface consists of a :ref:`top bar <pos/preparation/top-"
+"bar>`, a collapsible :ref:`side panel <pos/preparation/sidepanel>`, and "
+"the :ref:`order cards <pos/preparation/order-cards>` section."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:100
+msgid "Top bar"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:102
+msgid ""
+"The top bar shows the progress of :guilabel:`All` orders across configured "
+"stages, such as `To prepare`/`To cook`, `Ready`, and `Completed`, along with "
+"the number of orders per stage. Click a stage to see the related orders."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:None
-msgid "the preparation display interface with orders to process."
+msgid "Order count in the top bar."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:92
-msgid "To update order progress:"
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:109
+msgid "The top bar offers the following buttons:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:94
-msgid "Click items on the order card to cross them off individually."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:95
-msgid "Click the order card itself to mark all items at once."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:96
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:111
 msgid ""
-"The card automatically moves to the next stage once every item is crossed "
-"off."
+":icon:`fa-undo` :guilabel:`Recall`: Undo the most recent order stage move. "
+"This is only possible if this move was made on the selected stage."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:97
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:113
 msgid ""
-"Click :icon:`fa-undo` :guilabel:`Recall` to move an order back to the "
-"previous stage if you mistakenly sent it to the next stage."
+":icon:`fa-trash` :guilabel:`Done`: Delete all completed orders in the last "
+"stage at once."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:101
-#: ../../content/applications/sales/point_of_sale/hardware_network.rst:39
-#: ../../content/applications/sales/point_of_sale/hardware_network/customer_display.rst:3
-#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:31
-msgid "Customer display"
-msgstr "Écran client"
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:114
+msgid ":icon:`fa-sign-out` :guilabel:`Close`: Exit the display."
+msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:103
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:119
+msgid "Side panel"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:121
 msgid ""
-"In parallel, click :guilabel:`Order Status Screen` to open the customer "
-"interface. This interface, designed for customers, provides an overview of "
-"orders that are:"
+"The side panel is folded by default. Open it by clicking the :icon:`oi-panel-"
+"right` icon in the upper-left corner. Then, filter orders by:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:106
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:124
+msgid ":guilabel:`Time`, such as :guilabel:`Today` or :guilabel:`Tomorrow`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:125
+msgid ""
+":doc:`Preset <presets>`, such as :guilabel:`Dine in` "
+"or :guilabel:`Delivery`, if applicable"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:126
+msgid ""
+":ref:`POS categories <pos/products/categories>` defined on the :ref:`display "
+"form <pos/preparation/configuration>`, such as :guilabel:`Food` "
+"or :guilabel:`Drinks`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:129
+msgid ""
+"The total number of orders/category items is displayed next to the "
+"corresponding filter. Each filter section consists of a breakdown of the "
+"individual elements."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:132
+msgid ""
+"Use the :icon:`fa-search-minus` and :icon:`fa-search-plus` zoom control at "
+"the bottom of the side panel to adjust the card view size, and "
+"the :guilabel:`Clear All Orders` button to move all orders in the current "
+"stage to the next one."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:139
+msgid "Order cards"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:141
+msgid ""
+"Order cards represent individual orders and display the following "
+"information:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:143
+msgid ""
+"Associated :ref:`tables <pos/restaurant/floors>`, order "
+"numbers, :ref:`customer <pos/use/customers>` or order names."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:145
+msgid "Number of guests."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:146
+msgid ":doc:`Presets <presets>`, if configured."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:147
+msgid ""
+"The selected time and date, if :ref:`orders are managed by time for the "
+"preset <pos/presets/preset-form>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:149
+msgid ""
+"Stages, i.e., the status such as `To prepare`, `Ready`, etc., highlighted in "
+"the defined color (only shown when :guilabel:`All` orders are displayed)."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:151
+msgid ""
+"Waiting time, with visual indicators, if the elapsed time exceeds the "
+"predefined alert time."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:153
+msgid ""
+"To update order progress from the order card, click individual items to "
+"cross them off individually or click the order card itself to mark all items "
+"at once. Once all items are completed, the order automatically moves to the "
+"next stage. Click :icon:`fa-undo` :guilabel:`Reset` on :guilabel:`Completed` "
+"orders to move them back to the first stage if needed."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:159
+msgid "The preparation display shows several orders to process:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:161
+msgid ""
+"Order 1: The `Lunch Maki 18pc` for takeout with order name `John Meyer`, "
+"scheduled for `14/04` at `13:00`, is ready (crossed out). The `Bacon Burger` "
+"is still being prepared."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:163
+msgid ""
+"Order 2: The delivery order for the customer `Acme Corporation` is marked "
+"red because it has exceeded the expected time in the `Ready` stage."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:165
+msgid ""
+"Order 3: Table 2 `T2` has a `Dine in` order with 3 dishes and 3 guests "
+"(:icon:`fa-users` icon) at this table. You can click `Done` to archive the "
+"order or :guilabel:`Reset` to move it back to the `To cook` stage."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:0
+msgid "The preparation display interface with orders to process."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:176
+msgid "Order status screen"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:178
+msgid ""
+"The :guilabel:`Order Status Screen` is automatically enabled once "
+"a :ref:`preparation display <pos/preparation/application>` is created. It is "
+"an additional display showing customers an overview of orders that are:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:182
 msgid ":guilabel:`Ready` for pickup."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:107
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:183
 msgid ":guilabel:`Almost there`, indicating they are taken care of."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:110
-msgid "The order number can be found at the top of the customer's receipt."
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:185
+msgid ""
+"To open this customer interface, click :guilabel:`Order Status Screen` on "
+"the :ref:`preparation display card <pos/preparation/application>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:None
+msgid "The overview of orders in the customer interface."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:193
+msgid ""
+"The order number can be found at the top of the customer's :doc:`receipt <../"
+"use/receipts>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:194
+msgid ""
+"To use the order status screen, log in via a web browser on a mobile device "
+"or a screen connected via USB or HDMI. IoT boxes are not supported."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/presets.rst:5
@@ -7369,6 +7506,15 @@ msgstr ""
 msgid "To enable and set presets for a POS, follow these steps:"
 msgstr ""
 
+#: ../../content/applications/sales/point_of_sale/extra/presets.rst:32
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:63
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/tyro.rst:60
+#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:70
+#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:84
+#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:156
+msgid "Go to the :ref:`POS settings <pos/use/settings>`."
+msgstr ""
+
 #: ../../content/applications/sales/point_of_sale/extra/presets.rst:33
 msgid ""
 "Under :guilabel:`Point of Sale`, enable :guilabel:`Take out / Delivery / "
@@ -7397,8 +7543,8 @@ msgid "Define a default preset in the :guilabel:`Default` field."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/presets.rst:43
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:114
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:146
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:115
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:147
 #: ../../content/applications/sales/point_of_sale/hardware_network/pos_lna.rst:36
 #: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:41
 #: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:28
@@ -8669,6 +8815,12 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network.rst:39
+#: ../../content/applications/sales/point_of_sale/hardware_network/customer_display.rst:3
+#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:31
+msgid "Customer display"
+msgstr "Écran client"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network.rst:39
 msgid ""
 "Set up a secondary screen to show order details and prices to customers "
 "during checkout."
@@ -9112,6 +9264,11 @@ msgid ""
 "information to Pricer."
 msgstr ""
 
+#: ../../content/applications/sales/point_of_sale/hardware_network/electronic_labels.rst:119
+#: ../../content/applications/sales/point_of_sale/shop.rst:78
+msgid "Practical application"
+msgstr "Application dans la pratique"
+
 #: ../../content/applications/sales/point_of_sale/hardware_network/electronic_labels.rst:121
 msgid ""
 "Odoo automatically sends requests to Pricer to synchronize the tags every 12 "
@@ -9316,7 +9473,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:51
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:100
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:101
 msgid "Windows 10 & Linux"
 msgstr ""
 
@@ -9327,15 +9484,15 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:55
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:136
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:152
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:137
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:153
 msgid ""
 "Open the browser, type the printer's IP address in the search bar (e.g., "
 "`https://192.168.1.25`), and press `Enter`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:57
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:138
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:139
 msgid ""
 "On the security warning page, click :guilabel:`Advanced`, "
 "then :guilabel:`Proceed to [IP address] (unsafe)` to force the connection."
@@ -9384,7 +9541,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:78
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:128
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:129
 msgid "Mac OS"
 msgstr "Mac OS"
 
@@ -9401,277 +9558,277 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:85
 msgid ""
-"Go to :menuselection:`Access --> Certificate Assistant --> Create a "
-"Certificate`."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:86
-msgid "Enter a name for the certificate."
+"From the menu bar, go to :menuselection:`Keychain Access --> Certificate "
+"Assistant --> Create a Certificate...`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:87
-msgid "Select an identity type, then the type of certificate."
+msgid "Enter a name for the certificate."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:88
+msgid "Select an identity type, then the type of certificate."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:89
 #: ../../content/applications/sales/point_of_sale/use.rst:149
 msgid "Click :guilabel:`Create`."
 msgstr "Cliquez sur :guilabel:`Créer`."
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:89
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:90
 msgid "Review the certificate, then click :guilabel:`Done`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:94
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:95
 msgid "Self-signed certificate export"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:96
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:97
 msgid ""
 "The export process depends on the :abbr:`OS (Operating System)` and the "
 "browser."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:104
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:132
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:197
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:105
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:133
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:198
 msgid "Google Chrome"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:106
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:118
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:134
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:150
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:107
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:119
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:135
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:151
 msgid "To export the certificate, follow the next steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:108
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:109
 msgid ""
 "Once the printer's lights are solid, hover the mouse over the browser's "
 "search bar and click :guilabel:`Not secure`, then :guilabel:`Certificate "
 "details`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:110
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:111
 msgid ""
 "Click the :guilabel:`Details` tab in the :guilabel:`Certificate Viewer` "
 "popover, then click :guilabel:`Export`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:112
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:113
 msgid "Add `.crt` next to the IP address in the :guilabel:`File name` field."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:113
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:114
 msgid ""
 "Set the :guilabel:`Save as type` field to `Base64-encoded ASCII, single "
 "certificate`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:116
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:148
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:211
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:117
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:149
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:212
 msgid "Mozilla Firefox"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:120
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:154
-msgid "Click :guilabel:`Not secure` next to the search bar."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:121
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:155
-msgid "Go to :menuselection:`Connection not secure --> More information`."
+msgid "Click :guilabel:`Not secure` next to the search bar."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:122
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:156
+msgid "Go to :menuselection:`Connection not secure --> More information`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:123
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:157
 msgid ""
 "Click :guilabel:`View certificate` in the :guilabel:`Security` tab, "
 "then :guilabel:`Details`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:124
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:158
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:125
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:159
 msgid ""
 "Select the certificate, click :guilabel:`Export`, then select a folder in "
 "your local drive."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:126
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:160
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:127
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:161
 msgid "Click :guilabel:`Close`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:140
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:141
 msgid ""
 "Click :guilabel:`Not secure` next to the search bar, "
 "then :guilabel:`Certificate is not valid`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:142
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:143
 msgid "Go to the :guilabel:`Details` tab and click :guilabel:`Export`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:143
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:144
 msgid ""
 "Add `.crt` at the end of the file name to ensure it has the correct "
 "extension."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:144
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:145
 msgid ""
 "Select `Base64-encoded ASCII, single certificate`, at the bottom of the "
 "popover."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:165
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:166
 msgid "Self-signed certificate import"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:167
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:168
 msgid ""
 "The import process depends on the :abbr:`OS (Operating System)` and the "
 "browser."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:171
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:172
 msgid "Windows 10"
 msgstr "Windows 10"
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:173
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:174
 msgid "To import a self-signed certificate from **Google Chrome**:"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:175
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:201
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:215
-msgid "Open the browser."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:176
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:202
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:216
+msgid "Open the browser."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:177
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:203
 msgid ""
 "Go to :menuselection:`Settings --> Privacy and security --> Security`, and "
 "click :guilabel:`Manage certificates`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:178
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:179
 msgid ""
 "Click :guilabel:`Manage imported certificates from Windows` on "
 "the :guilabel:`Certificate Manager` page."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:180
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:181
 msgid "Click :guilabel:`Import` in the :guilabel:`Certificates` popover."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:181
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:182
 msgid ""
 "In the :guilabel:`Certificate Import Wizard`, click :guilabel:`Next`, "
 "then :guilabel:`Browse` to select the certificate, and "
 "click :guilabel:`Next` again."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:183
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:184
 msgid ""
 "Select the :guilabel:`Place all certificates in the following store` option."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:184
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:185
 msgid ""
 "Click :guilabel:`Browse`, select the :guilabel:`Trusted Root Certification "
 "Authorities` folder, and click :guilabel:`OK`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:186
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:187
 msgid "Click :guilabel:`Next`, then :guilabel:`Finish`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:187
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:188
 msgid "Click :guilabel:`Yes` in the :guilabel:`Security Warning` popover."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:190
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:191
 msgid ""
 "To import a self-signed certificate using **Mozilla Firefox** on Windows, "
 "see the steps in the :guilabel:`Linux` tab."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:193
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:194
 msgid "Linux"
 msgstr "Linux"
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:199
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:213
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:200
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:214
 msgid "To import a self-signed certificate, follow the next steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:204
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:205
 msgid ""
 "Click :guilabel:`Installed by you` under the :guilabel:`Custom` section on "
 "the :guilabel:`Local certificates` tab."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:206
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:207
 msgid ""
 "Click :guilabel:`Import` next to :guilabel:`Trusted Certificates`, and "
 "select the exported certification file from your local drive."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:208
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:209
 msgid "Accept all warnings."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:209
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:210
 msgid "Click :guilabel:`ok`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:216
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:217
 msgid ""
 "Go to :menuselection:`Settings --> Privacy & Security --> Security --> View "
 "Certificates`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:218
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:219
 msgid ""
 "In the :guilabel:`Certificate Manager` popover, click the :guilabel:`Your "
 "Certificates` tab, then :guilabel:`Import`, and select the certificate in "
 "your local drive."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:221
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:222
 msgid ""
 "Click the :guilabel:`Servers` tab in the :guilabel:`Certificate Manager` "
 "popover."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:222
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:223
 msgid "Click :guilabel:`Add Exception`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:223
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:224
 msgid ""
 "Enter the printer's IP address in the :guilabel:`Location` field, then "
 "click :guilabel:`Get Certificate`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:225
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:226
 msgid ""
 "Enable the :guilabel:`Permanently store this exception` option and confirm."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:227
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:228
 msgid "Android OS"
 msgstr "Android OS"
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:230
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:231
 msgid ""
 "The specific steps for installing a certificate may vary depending on the "
 "Android version and the device manufacturer."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:233
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:234
 msgid ""
 "To import a self-signed certificate into an Android device, first create and "
 "export it from a computer. Then, transfer the `.crt` file to the device via "
@@ -9679,104 +9836,104 @@ msgid ""
 "ePOS SDK for JavaScript if required, then follow the next steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:238
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:239
 msgid "Go to the device settings."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:239
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:240
 msgid "Type `certificate` in the search bar."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:240
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:241
 msgid ""
 "Click :guilabel:`Certificate AC`, then :guilabel:`Install from device "
 "storage`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:241
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:242
 msgid "Select the certificate file to install it on the device."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:244
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:245
 msgid ""
 "Download the certificate on a computer if the tablet restricts direct "
 "downloads. Forward the file via email, then open it directly from the tablet "
 "to complete the installation."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:247
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:248
 msgid "iOS"
 msgstr "iOS"
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:249
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:250
 msgid ""
 "To import a self-signed certificate into an iOS device, first create and "
 "export it from a computer. Then, transfer the `.crt` file to the device via "
 "email, Bluetooth, or any file-sharing service."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:253
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:254
 msgid ""
 "Downloading this file triggers a warning popover. Click :guilabel:`Allow` to "
 "download the configuration profile, and close the second popover. Then "
 "follow the next steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:256
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:257
 msgid "Go to the **Settings** app on the iOS device."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:257
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:258
 msgid "Click :guilabel:`Profile Downloaded` under the user's details box."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:258
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:259
 msgid "Locate the downloaded `.crt` file and select it."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:259
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:260
 msgid "Click :guilabel:`Install` in the top-right corner."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:260
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:261
 msgid "Enter a passcode if needed."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:261
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:262
 msgid ""
 "Click :guilabel:`Install` in the top-right corner of the certificate warning "
 "screen and the popover."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:263
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:264
 msgid "Click :guilabel:`Done`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:265
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:266
 msgid "Once the certificate is installed, authenticate it as follows:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:267
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:268
 msgid ""
 "Go to :menuselection:`Settings --> General --> About > Certificate Trust "
 "Settings`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:268
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:269
 msgid ""
 "Enable the installed certificate using the :icon:`fa-toggle-on` (switch) "
 "toggle."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:269
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:270
 msgid "Click :guilabel:`Continue` in the popover."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:272
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:273
 msgid "Certificate import verification"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:274
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:275
 msgid ""
 "To confirm the printer's connection is secure, connect to its IP address "
 "using HTTPS. For example, navigate to `https://192.168.1.25` in a browser. "
@@ -10144,7 +10301,7 @@ msgid ":doc:`epos_ssc`"
 msgstr ":doc:`epos_ssc`"
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:54
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:350
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:352
 msgid ":doc:`/applications/general/iot/devices/printer`"
 msgstr ""
 
@@ -10339,7 +10496,7 @@ msgid "Connecting a scale requires the use of an **IoT System**."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:16
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:351
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:353
 msgid ":doc:`/applications/general/iot/connect`"
 msgstr ""
 
@@ -11373,8 +11530,8 @@ msgid "Click :guilabel:`Payment` and select the relevant payment method."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:105
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:397
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:451
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:399
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:453
 msgid "Click :guilabel:`Validate`."
 msgstr ""
 
@@ -11947,7 +12104,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:91
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:420
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:422
 msgid "Tips"
 msgstr "Pourboires"
 
@@ -14630,7 +14787,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:266
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:352
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:354
 msgid ":doc:`extra/preparation`"
 msgstr ""
 
@@ -14788,141 +14945,147 @@ msgid ""
 "of the last kitchen order."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:349
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:347
+msgid ""
+"Access the :doc:`preparation display <extra/preparation>` through the "
+"**Kitchen Display** app to manage orders without using paper."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:351
 msgid ":doc:`Connect an IoT system to a POS <hardware_network/pos_iot>`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:357
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:359
 msgid "Bills and payment"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:362
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:364
 msgid "Bill splitting"
 msgstr "Partage de l'addition"
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:364
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:366
 msgid ""
 "To allow bill splitting, go to :menuselection:`Point of Sale --> "
 "Configuration --> Settings`, and enable :guilabel:`Allow Bill Splitting` "
 "under the :guilabel:`Point of Sale` section."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:367
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:369
 msgid ""
 "To split a bill from the :ref:`POS register <pos/restaurant/orders>`, follow "
 "these steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:369
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:371
 msgid ""
 "Click the :icon:`fa-ellipsis-v` (:guilabel:`Actions`) icon, "
 "then :guilabel:`Split`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:370
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:372
 msgid "Select at least one product and perform one of the following actions:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:372
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:374
 msgid ""
 ":guilabel:`Payment`: Process the direct payment for the selected product(s)."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:373
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:375
 msgid ":guilabel:`Split Order`: Create a sub-order."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:374
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:376
 msgid ":guilabel:`Transfer`: Transfer one or all products to another table."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:375
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:377
 msgid "Process the :ref:`payment <pos/restaurant/bills/payment>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:376
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:378
 msgid ""
 "Click :icon:`fa-chevron-right` :guilabel:`Continue` and repeat the process "
 "for each guest."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:379
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:381
 msgid ""
 "Splitting a bill requires ordering at least two products and creates a sub-"
 "order, which must be paid before returning to the main order."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:385
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:387
 msgid "Order payment"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:387
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:389
 msgid ""
 "To proceed with the order payment from the :ref:`POS register <pos/"
 "restaurant/orders>`, follow these steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:390
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:392
 msgid "Click :guilabel:`Payment`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:391
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:393
 msgid "Select a :doc:`payment method <payment_methods>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:392
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:394
 msgid "Optionally, select a customer and send an invoice to them:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:394
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:396
 msgid ""
 "Click :icon:`fa-user` :guilabel:`Customer` to select or create a customer "
 "account."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:395
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:397
 msgid ""
 "Enable :icon:`fa-file-text-o` :guilabel:`Invoice` to allow sending an "
 "invoice to the customer."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:402
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:404
 msgid "Receipt printing"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:404
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:406
 msgid ""
 "To allow receipt printing, go to :menuselection:`Point of Sale --> "
 "Configuration --> Settings`, and enable :guilabel:`Early Receipt Printing` "
 "under the :guilabel:`Point of Sale` section."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:407
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:409
 msgid ""
 "After a successful :ref:`order payment <pos/restaurant/bills/payment>`, "
 "click :icon:`fa-print` :guilabel:`Print Full Receipt` to generate and print "
 "a bill."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:411
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:413
 msgid ""
 "If a printer is :doc:`configured and linked <hardware_network/"
 "receipt_printers>` to a point of sale, the receipt is automatically printed "
 "upon payment confirmation."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:415
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:417
 msgid ":doc:`/applications/sales/point_of_sale/use/pos_invoices`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:425
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:427
 msgid ""
 "To allow tipping in a POS, go to the :ref:`POS settings <pos/use/settings>`, "
 "scroll down to the :guilabel:`Payment` section, enable :guilabel:`Tips`, and "
 "click :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:429
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:431
 msgid ""
 "The :guilabel:`Add tip after payment` setting only works for a POS in the "
 "United States of America with an :doc:`Adyen <payment_methods/terminals/"
@@ -14930,13 +15093,13 @@ msgid ""
 "terminal <pos/terminals/configuration>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:432
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:434
 msgid ""
 "The :guilabel:`Add tip through payment terminal (Adyen)` setting only works "
 "with an :ref:`Adyen <adyen/tips>` terminal."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:436
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:438
 msgid ""
 "Saving the :guilabel:`Tips` setting automatically fills the :guilabel:`Tip "
 "product` field with the preconfigured :guilabel:`[TIPS] Tips` product, which "
@@ -14945,32 +15108,32 @@ msgid ""
 "register <pos/restaurant/orders>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:440
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:442
 msgid "Choose only one tip product per POS."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:445
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:447
 msgid "Tip and payment"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:447
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:449
 msgid ""
 "To process a tip during :ref:`payment <pos/restaurant/bills/payment>`, "
 "follow these steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:449
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:451
 msgid ""
 "Click :icon:`fa-heart` :guilabel:`Tip`, add the amount, then "
 "click :guilabel:`Ok`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:450
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:452
 msgid ""
 "Select a :doc:`payment method <payment_methods>` for the order and the tip."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:454
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:456
 msgid ""
 "If the order and the tip are paid using different payment methods, select "
 "a :doc:`payment method <payment_methods>` for the order first. Then, select "
@@ -14979,11 +15142,11 @@ msgid ""
 "payment."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:460
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:462
 msgid "Tip after payment (US only)"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:462
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:464
 msgid ""
 "To allow tipping after payment for a POS in the United States of America, "
 "ensure the :guilabel:`Add tip after payment` setting is enabled in "
@@ -14991,34 +15154,34 @@ msgid ""
 "follow these steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:466
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:468
 msgid ""
 "On the :guilabel:`Payment` screen, select a :guilabel:`Card` payment method "
 "linked to a :doc:`Stripe <payment_methods/terminals/stripe>` or :doc:`Adyen "
 "<payment_methods/terminals/adyen>` terminal."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:469
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:471
 msgid ""
 "Click :guilabel:`Close Tab` and select the relevant option in "
 "the :guilabel:`Add a tip` screen:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:471
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:473
 msgid ""
 ":guilabel:`15%`, :guilabel:`20%`, or :guilabel:`25%`: Tip rates based on "
 "order total."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:472
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:474
 msgid ":guilabel:`No Tip`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:473
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:475
 msgid ":guilabel:`Tip Amount`: Enter the relevant amount in the field."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:474
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:476
 msgid "Click :guilabel:`Settle` to validate."
 msgstr ""
 
@@ -16144,6 +16307,10 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/use.rst:154
 msgid "Go to :menuselection:`Point of Sale --> Orders --> Customers`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:155
+msgid "Click :guilabel:`New`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/use.rst:156
@@ -31447,7 +31614,7 @@ msgid "Offer more value for current subscribers on the same sales order"
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions.rst:30
-#: ../../content/applications/sales/subscriptions/closing.rst:25
+#: ../../content/applications/sales/subscriptions/closing.rst:28
 msgid "Close a subscription"
 msgstr "Résilier un abonnement"
 
@@ -32134,128 +32301,121 @@ msgstr ""
 
 #: ../../content/applications/sales/subscriptions/closing.rst:5
 msgid ""
-"Odoo *Subscriptions* provides flexibility for businesses to decide whether "
-"customers can self-manage their subscriptions, or restrict that ability "
-"entirely."
+"The Odoo **Subscriptions** app provides flexibility for businesses to decide "
+"whether customers can self-manage their subscriptions, or restrict that "
+"ability entirely."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/closing.rst:11
+#: ../../content/applications/sales/subscriptions/closing.rst:9
 msgid ""
-"Start by navigating to :menuselection:`Subscriptions app --> Configuration --"
-"> Recurring Plans`. From there, either create a new plan by "
-"clicking :guilabel:`New` or select an existing one to modify it."
+"A subscription must have been invoiced before it can be closed. "
+"Subscriptions that have not yet been invoiced may be cancelled instead."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/closing.rst:15
 msgid ""
+"To allow customers to close their own subscriptions using their user portal, "
+"navigate to :menuselection:`Subscriptions app --> Configuration --> "
+"Recurring Plans`. From there, either create a new plan by "
+"clicking :guilabel:`New` or select an existing one to modify it."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/closing.rst:19
+msgid ""
 "Once on the :guilabel:`Recurring Plans` form, enable "
-"the :guilabel:`Closable` option, in the :guilabel:`Self-Service` section, to "
-"allow customers to close their own subscriptions using the customer portal."
+"the :guilabel:`Closable` option in the :guilabel:`Self-Service` section. "
+"This adds a drop-down menu that allows plans to be closed either on the date "
+"of the user's choosing or at the end of the current renewal period."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/closing.rst:None
-msgid "The Closable option on a recurring plan form in Odoo Subscriptions."
+msgid ""
+"The Closable option enabled and displaying the drop-down menu in Odoo "
+"Subscriptions."
 msgstr ""
-
-#: ../../content/applications/sales/subscriptions/closing.rst:28
-msgid "Administrator view"
-msgstr "Vue administrateur"
 
 #: ../../content/applications/sales/subscriptions/closing.rst:30
 msgid ""
+"The methods available for closing a subscription depend on "
+"users' :doc:`access rights <../../general/users/access_rights>`. Users with "
+"administrator access rights to the Odoo database can close the subscription "
+"from within the **Subscriptions** app. External users must use "
+"their :doc:`user portal <../../general/users/user_portals>`."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/closing.rst:36
+msgid "With administrator access rights"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/closing.rst:38
+msgid ""
 "After a quotation for a subscription product has been confirmed, it becomes "
 "a sales order, and the subscription status changes to :guilabel:`In "
-"Progress`."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/closing.rst:33
-msgid ""
-"At that point, the ability to close the subscription becomes available, via "
-"the :guilabel:`Close` button at the top of the subscription order, near the "
-"row that contains :guilabel:`In Progress` and other stages. This option is "
-"also available after the order has been invoiced and the payment has been "
-"registered."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/closing.rst:None
-msgid ""
-"Close subscription from an administration point of view with Odoo "
-"Subscriptions."
+"Progress`. At that point, the subscription may be closed."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/closing.rst:42
 msgid ""
-"Clicking the :guilabel:`Close` button prompts a :guilabel:`Close Reason` pop-"
-"up window to appear, allowing administrators to input the reason for closing "
-"the subscription, or choose from the drop-down menu of options in "
-"the :guilabel:`Reason` field."
+"From the dashboard, open the :menuselection:`Subscriptions` app. By default, "
+"the **Subscriptions** dashboard displays both :guilabel:`In Progress` "
+"and :guilabel:`Paused` subscriptions. Open an in-progress subscription."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/closing.rst:None
+#: ../../content/applications/sales/subscriptions/closing.rst:46
 msgid ""
-"The Close Reason pop-up when the Close button is clicked in Odoo "
-"Subscriptions."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/closing.rst:50
-msgid ""
-"When the desired :guilabel:`Reason` is entered, click the :guilabel:`Submit` "
-"button."
+"The :guilabel:`Close` button is at the top of the subscription order. "
+"Clicking it opens the *Close Subscription* form, allowing an administrator "
+"to enter the date when the subscription is to be closed in "
+"the :guilabel:`When` field and select the reason for closing from the drop-"
+"down menu of options in the :guilabel:`Reason` field. Custom reasons may be "
+"created by opening the :guilabel:`Reason` drop-down and "
+"choosing :guilabel:`Search more...`"
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/closing.rst:52
 msgid ""
-"Clicking :guilabel:`Submit` on the :guilabel:`Close Reason` pop-up window "
-"updates the subscription sales order to show :guilabel:`Churned` status tag, "
-"along with the specified :guilabel:`Close Reason`."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/closing.rst:None
-msgid "A churned sales order for a closed subscription in Odoo Subscriptions."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/closing.rst:60
-msgid ""
-"That same close reason can be found in the *Chatter* of the sales order, as "
-"well."
+"When the desired :guilabel:`Reason` is entered, click the :guilabel:`Submit` "
+"button. Clicking :guilabel:`Submit` on the :guilabel:`Close` form updates "
+"the chatter with the reason for closing. Once it's been closed, "
+"a :guilabel:`Churned` banner appears on the subscription order and the "
+"chatter reflects the subscription's updated status, end date, and reason for "
+"closure."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/closing.rst:None
 msgid ""
-"The chatter of a churned sales order for a closed subscription in Odoo "
-"Subscriptions."
+"A churned sales order for a closed subscription in Odoo Subscriptions "
+"showing the banner\n"
+"and the chatter."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/closing.rst:67
+#: ../../content/applications/sales/subscriptions/closing.rst:62
 msgid "Customer view"
 msgstr "Vue client"
 
-#: ../../content/applications/sales/subscriptions/closing.rst:70
+#: ../../content/applications/sales/subscriptions/closing.rst:65
 msgid ""
-"As an administrator, the ability to visualize what customers see when "
-"managing their subscriptions is accessible via the :guilabel:`Preview` "
-"button, located at the top of the subscription sales order."
+"As an administrator, the ability to visualize what users see when managing "
+"their subscriptions is accessible via the :guilabel:`Preview` button at the "
+"top of each subscription sales order."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/closing.rst:74
+#: ../../content/applications/sales/subscriptions/closing.rst:68
 msgid ""
-"From the customer's point of view, in the customer portal, "
-"the :guilabel:`Close Subscription` button is located on the left side of the "
-"sales order."
+"In the user portal, subscriptions may be managed by clicking "
+"the :guilabel:`Subscriptions` button on the home page. Clicking this button "
+"takes the user to the :guilabel:`Subscriptions` page, where they can see a "
+"list of all subscriptions associated with their account, including those "
+"that are currently closed."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/closing.rst:None
+#: ../../content/applications/sales/subscriptions/closing.rst:73
 msgid ""
-"Close subscription button on a customer's view of a sales order in Odoo "
-"Subscriptions."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/closing.rst:81
-msgid ""
-"When the customer clicks the :guilabel:`Close Subscription` button, "
-"a :guilabel:`Close Subscription` pop-up window appears, in which the "
-"customer has to choose from a select list of reasons why they are choosing "
-"to close the subscription."
+"Clicking a subscription opens the details page for that subscription, which "
+"includes a :guilabel:`Close Subscription` button. Clicking "
+"the :guilabel:`Close Subscription` button opens a :guilabel:`Close "
+"Subscription` pop-up, where users must select from a list of reasons why "
+"they are choosing to close the subscription."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/closing.rst:None
@@ -32264,37 +32424,27 @@ msgid ""
 "subscription."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/closing.rst:90
+#: ../../content/applications/sales/subscriptions/closing.rst:82
 msgid ""
-"Customers can *only* chose a pre-configured reason why the subscription is "
-"being closed. They can *not* enter a custom reason from the customer portal. "
-"These selections can be adjusted by navigating "
-"to :menuselection:`Subscriptions --> Configuration --> Close Reasons`."
+"Users must choose a pre-configured reason why the subscription is being "
+"closed. They **cannot** enter a custom reason from the user portal. "
+"Administrators can create custom reasons for users to choose from by logging "
+"into the database and navigating to :menuselection:`Subscriptions app --> "
+"Configuration --> Close Reasons`."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/closing.rst:94
+#: ../../content/applications/sales/subscriptions/closing.rst:87
 msgid ""
-"Once the customer has chosen a close reason, they would click "
-"the :guilabel:`Submit` button on the pop-up window."
+"Once the customer has chosen a reason for closing the subscription, they can "
+"click the :guilabel:`Submit` button on the pop-up window. Upon closure, the "
+"subscription order in the user portal is labeled :guilabel:`Closed`. Within "
+"the database, the subscription is marked *Churned*, and the specified reason "
+"for closure is added to the chatter."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/closing.rst:97
-msgid ""
-"Upon closure, the subscription order in the customer portal is tagged "
-"as :guilabel:`Closed`."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/closing.rst:99
-msgid ""
-"In addition, the specified :guilabel:`Close Reason` appears on the "
-"subscription order in the *Subscriptions* app in the backend "
-"(Administrator's view)."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/closing.rst:103
+#: ../../content/applications/sales/subscriptions/closing.rst:93
 #: ../../content/applications/sales/subscriptions/renewals.rst:56
 #: ../../content/applications/sales/subscriptions/reports.rst:403
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:195
 #: ../../content/applications/sales/subscriptions/subscriptions_deliveries.rst:71
 #: ../../content/applications/sales/subscriptions/upselling.rst:79
 msgid ":doc:`../subscriptions`"
@@ -33197,369 +33347,6 @@ msgid ""
 "the :guilabel:`MRR Analysis` reporting page are:"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:3
-msgid "Scheduled actions"
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:5
-msgid ""
-"*Scheduled actions* are pre-configured processes that allow users to "
-"automate certain tasks within a database, based on a designated schedule or "
-"number of occurrences. These tasks can include sending emails, generating "
-"invoices, data clean-up, and so much more."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:9
-msgid ""
-"In Odoo, some scheduled actions are active, by default, to ensure that "
-"certain functions are triggered automatically, however there are *also* many "
-"scheduled action options that appear in the database that are **not** "
-"activated by default."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:13
-msgid ""
-"In Odoo *Subscriptions*, there are two scheduled actions that initiate the "
-"billing process for active recurring subscriptions, as well as when billing "
-"should stop due to subscription expiration."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:16
-msgid ""
-"They are turned on, by default and can be deactivated at any time in order "
-"to manage subscriptions manually."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:20
-msgid "Access scheduled actions"
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:23
-msgid ""
-"In order to access scheduled actions, :ref:`developer mode <developer-mode>` "
-"**must** be activated."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:26
-msgid ""
-"With developer mode activated, navigate to :menuselection:`Settings app --> "
-"Technical --> Scheduled Actions`."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:None
-msgid ""
-"The scheduled actions option under the technical menu in the Odoo Settings "
-"application."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:33
-msgid ""
-"Doing so reveals a dedicated :guilabel:`Scheduled Actions` dashboard. On "
-"this page, there is a complete list of scheduled actions for the entire "
-"database."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:36
-msgid ""
-"From here, enter `Subscription` in the search bar. Doing so provides three "
-"subscription-specific results. The following documentation focuses on the "
-"last two results in the list:"
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:39
-msgid ":guilabel:`Sale Subscription: generate recurring invoices and payments`"
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:40
-msgid ":guilabel:`Sale Subscription: subscriptions expiration`"
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:None
-msgid ""
-"The subscription-related results on the scheduled actions page in Odoo "
-"Settings."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:46
-msgid ""
-"Determine if a scheduled action is active by looking under "
-"the :guilabel:`Active` column, in the corresponding row on "
-"the :guilabel:`Scheduled Actions` dashboard, for a ticked checkbox; if the "
-"checkbox is green with a check mark, the scheduled action is active."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:50
-msgid ""
-"If a scheduled action needs to be activated, click into the desired "
-"scheduled action from the list."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:None
-msgid "The scheduled action form in the Odoo Settings application."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:55
-msgid ""
-"Then, from the scheduled action form, toggle the switch in "
-"the :guilabel:`Active` field to the right. Doing so turns the switch green, "
-"indicating that the scheduled action is now `Active`."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:58
-msgid ""
-"The ability to set up how often the scheduled action runs is also available "
-"on the scheduled action form, in the :guilabel:`Execute Every` field."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:62
-msgid ""
-"The scheduled action does **not** function correctly if the execution time "
-"is less than five minutes. This is a general rule for all scheduled actions."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:65
-msgid ""
-"For more information, read the :doc:`Frequent Technical Questions </"
-"administration/odoo_sh/advanced/frequent_technical_questions>` documentation."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:69
-msgid "Generate recurring invoices and payments"
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:71
-msgid ""
-"In order for the :guilabel:`Sale Subscription: generate recurring invoices "
-"and payments` scheduled action to properly generate recurring invoices and "
-"payments on subscriptions, the *Deferred Expense* and *Deferred Revenue* "
-"accounts **must** be set up, in order for Odoo to process various invoices "
-"and payments related to subscriptions."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:76
-msgid ""
-"To set up *Deferred Expense* and *Deferred Revenue* accounts, navigate "
-"to :menuselection:`Accounting app --> Configuration --> Settings`. Both "
-"accounts can be configured in the :guilabel:`Default Accounts` section."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:None
-msgid ""
-"The necessary deferred account settings in the Odoo Accounting app's "
-"settings page."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:84
-msgid ""
-"Once the correct accounts are entered in the :guilabel:`Deferred Expense` "
-"and :guilabel:`Deferred Revenue` drop-down menu fields, "
-"click :guilabel:`Save` in the upper-left corner."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:88
-msgid "Create invoice"
-msgstr "Créer une Facture"
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:90
-msgid ""
-"Elements related to the :guilabel:`Sale Subscription: generate recurring "
-"invoices and payments` scheduled action can be found on confirmed "
-"subscription sales orders."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:93
-msgid ""
-"To examine these elements, open any confirmed sales order in the "
-"*Subscriptions* application to reveal the subscription sales order form."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:96
-msgid ""
-"On a confirmed subscription sales order form, focus on "
-"the :guilabel:`Recurring Plan` and :guilabel:`Date of Next Invoice` fields."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:None
-msgid ""
-"A confirmed subscription sales order in the Odoo Subscriptions application."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:103
-msgid ""
-"The scheduled action creates an invoice when today's date is the same date "
-"as the :guilabel:`Date of Next Invoice`."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:106
-msgid ""
-"Odoo uses the information in the :guilabel:`Recurring Plan` field to update "
-"the next invoice date accordingly."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:110
-msgid ""
-"If the product invoicing policy is set to *Based on Delivered Quantities "
-"(Manual)*, and the delivered quantity is `0`, Odoo does **not** create an "
-"invoice, and the customer is not charged."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:113
-msgid ""
-"Instead, the subscription is processed as a free recurring product, and is "
-"reflected as such in the *chatter* of the subscription sales order."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:116
-msgid ""
-"When this occurs, the following message appears: `Automatic renewal "
-"succeeded. Free subscription. Next invoice:[date]. No email sent.`"
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:119
-msgid ""
-"Once the invoice for the subscription sales order is created, the invoice "
-"can be viewed by clicking the :guilabel:`Invoices` smart button that appears "
-"at the top of the subscription sales order."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:122
-msgid ""
-"An email is sent to the customer notifying them of the recurring "
-"subscription charge, *if* there is a :guilabel:`Payment Token` on the "
-"account."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:125
-msgid ""
-"To check if there is a :guilabel:`Payment Token`, open the :guilabel:`Other "
-"Info` tab, and look at the :guilabel:`Payment Token` field, under "
-"the :guilabel:`Subscription` section."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:128
-msgid ""
-"If there is no :guilabel:`Payment Token`, the invoice is created, and sent "
-"to the customer. The payment **must** be registered manually in this case."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:None
-msgid ""
-"The Payment Token field under the Other Info tab on a subscription sales "
-"order form."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:136
-msgid ""
-"If the :guilabel:`Online payment` checkbox is ticked on the :guilabel:`Other "
-"Info` tab, invoices are **not** automatically generated by the scheduled "
-"action on the date of the next invoice. Instead, invoices are generated when "
-"the client completes the manual payments for the subscription."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:141
-msgid ""
-"To use automatic payment and automatically generate invoices, this checkbox "
-"**must** remain empty."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:145
-msgid "Closing invoices"
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:147
-msgid ""
-"The :guilabel:`Sale Subscription: generate recurring invoices and payments` "
-"scheduled action also has the ability to close a subscription, if the "
-"following conditions are met:"
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:150
-msgid ""
-"If the subscription has no :guilabel:`Payment Token`, create and post the "
-"invoice."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:151
-msgid "If the subscription has a :guilabel:`Payment Token`, try to charge."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:153
-msgid "If the charge is successful, create and post the invoice."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:154
-msgid "If the charge fails, send reminders periodically."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:156
-msgid ""
-"Close the subscription if it continues to fail for more than fourteen days."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:159
-msgid "Subscriptions expiration"
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:161
-msgid ""
-"The :guilabel:`Sale Subscription: subscriptions expiration` scheduled action "
-"checks for all other conditions that may cause a subscription to close "
-"automatically. If certain conditions are met, the scheduled action closes "
-"that subscription."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:165
-msgid ""
-"First, the :guilabel:`Sale Subscription: subscriptions expiration` scheduled "
-"action checks to see if the end date has passed, which is configured on the "
-"subscription sales order."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:None
-msgid ""
-"The expiration date on a subscription sales order in Odoo Subscriptions."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:172
-msgid ""
-"Then, the :guilabel:`Sale Subscription: subscriptions expiration` scheduled "
-"action checks if the invoice has not been paid within the payment terms "
-"deadline."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:175
-msgid ""
-"To access the invoices attached to a subscription, access the sales order "
-"for the subscription product, and click the :guilabel:`Invoices` smart "
-"button. Then, look at the :guilabel:`Invoice Date` column."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:None
-msgid ""
-"The Invoice Date column on subscriptions invoice page in Odoo Subscriptions "
-"app."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:183
-msgid ""
-"Unpaid subscriptions with an :guilabel:`Invoice Date` that are past the "
-"determined number of days in the :guilabel:`Automatic Closing` field of "
-"a :guilabel:`Recurring Plan` are automatically closed by the :guilabel:`Sale "
-"Subscription: subscriptions expiration` scheduled action."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:None
-msgid ""
-"The Automatic Closing field on a Recurring Plan form in Odoo Subscriptions."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:191
-msgid ""
-"For example, if the next invoice date is July 1st, and "
-"the :guilabel:`Automatic Closing` is set to '30 Days', the scheduled action "
-"would close the subscription on August 1st."
-msgstr ""
-
 #: ../../content/applications/sales/subscriptions/subscriptions_deliveries.rst:3
 msgid "Subscriptions with deliveries"
 msgstr ""
@@ -33818,6 +33605,12 @@ msgstr ""
 #: ../../content/applications/sales/subscriptions/upselling.rst:80
 msgid ":doc:`../sales/products_prices/prices/discounts`"
 msgstr ""
+
+#~ msgid "Administrator view"
+#~ msgstr "Vue administrateur"
+
+#~ msgid "Create invoice"
+#~ msgstr "Créer une Facture"
 
 #~ msgid ""
 #~ "Subscription products can be sold in the Odoo *eCommerce* shop just like "

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-27 17:30+0000\n"
+"POT-Creation-Date: 2026-05-01 17:30+0000\n"
 "PO-Revision-Date: 2026-04-23 23:20+0000\n"
 "Last-Translator: \"Kwanghee Park (kwpa)\" <kwpa@odoo.com>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-19-doc/sales/"
@@ -68,7 +68,7 @@ msgstr ""
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:59
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:9
 #: ../../content/applications/sales/point_of_sale/extra/employee_login.rst:17
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:12
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:21
 #: ../../content/applications/sales/point_of_sale/extra/presets.rst:24
 #: ../../content/applications/sales/point_of_sale/extra/pricing.rst:110
 #: ../../content/applications/sales/point_of_sale/extra/pricing.rst:153
@@ -90,7 +90,7 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:19
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/tyro.rst:14
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:90
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:423
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:425
 #: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:38
 #: ../../content/applications/sales/point_of_sale/shop.rst:60
 #: ../../content/applications/sales/point_of_sale/use/receipts.rst:25
@@ -103,7 +103,7 @@ msgstr ""
 #: ../../content/applications/sales/sales/sales_quotations/margin.rst:12
 #: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:53
 #: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:11
-#: ../../content/applications/sales/subscriptions/closing.rst:9
+#: ../../content/applications/sales/subscriptions/closing.rst:13
 #: ../../content/applications/sales/subscriptions/subscriptions_deliveries.rst:16
 msgid "Configuration"
 msgstr "환경설정"
@@ -7427,6 +7427,7 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra.rst:18
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:3
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:56
 msgid "Preparation display"
 msgstr "준비 화면"
 
@@ -7805,266 +7806,389 @@ msgstr "PIN 코드는 숫자로만 연결하여 구성해야 합니다."
 
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:5
 msgid ""
-"The preparation display feature allows you to handle POS orders requiring "
-"preparation. Concretely,"
-msgstr ""
-"준비 표시 기능을 활용하면 준비가 필요한 POS 주문을 처리할 수 있습니다. 구체적"
-"으로는,"
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:7
-msgid ""
-"**For retail**:  The preparation team is notified after a payment is "
-"completed at the POS to gather the purchased items for customer pickup."
+"The preparation display helps manage POS orders that require preparation "
+"prior to completion. It is intended for use in environments where ordered "
+"items must be assembled, cooked, or otherwise processed before they are "
+"handed over to the customer."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:9
-msgid ""
-"**For restaurants**: POS orders inform the kitchen of the meals to be "
-"prepared."
+msgid "Use cases"
 msgstr ""
-"**레스토랑의 경우**: POS 주문이 들어오면 키친에 식사 주문을 준비하도록 알립니"
-"다."
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:11
+msgid ""
+"**For retail**: Once an order is completed and paid in the :ref:`POS "
+"register <pos/use/open-register>`, it is sent to the preparation display. "
+"This notifies the preparation team to collect and prepare the purchased "
+"items for customer pickup."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:14
-msgid "To enable the preparation display feature,"
-msgstr "준비 화면 기능을 활성화하려면,"
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:16
-#: ../../content/applications/sales/point_of_sale/extra/presets.rst:32
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:63
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/tyro.rst:60
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:70
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:84
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:156
-msgid "Go to the :ref:`POS settings <pos/use/settings>`."
+msgid ""
+"**For restaurants**: Once orders are placed in the :ref:`POS register <pos/"
+"use/open-register>`, they are sent to the preparation display to inform the "
+"kitchen about the meals that need to be prepared."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:17
-msgid "Scroll down to the :guilabel:`Preparation` section."
-msgstr ":guilabel:`준비` 섹션까지 아래로 스크롤합니다;"
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:18
-msgid "Check the :guilabel:`Preparation Display` option."
-msgstr ":guilabel:`준비 화면` 옵션을 확인합니다."
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:None
-msgid "Setting to enable the preparation display feature"
-msgstr "준비 화면 기능을 활성화 설정"
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:24
-msgid "To create and set up a preparation display,"
-msgstr "준비 화면을 생성한 후 설정합니다."
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:23
+msgid ""
+"To create and set up a preparation display, go to :menuselection:`Point of "
+"Sale --> Orders --> Preparation Display`, click :guilabel:`New`, and "
+"configure it:"
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:26
-msgid "Go to :menuselection:`Point of Sale --> Orders --> Preparation Display`"
-msgstr ":menuselection:`POS --> 주문서 --> 준비 화면` 으로 이동합니다."
+msgid ""
+"Enter a descriptive :guilabel:`Name` (e.g., `Main Kitchen`, `Bar`, `Pickup "
+"zone`)."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:27
-#: ../../content/applications/sales/point_of_sale/use.rst:155
-msgid "Click :guilabel:`New`."
-msgstr ":guilabel:`신규` 를 클릭합니다."
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:28
 msgid ""
-"Give the display a descriptive :guilabel:`Name` (e.g., `Main Kitchen`, `Bar`)"
-msgstr "화면에 :guilabel:`이름`(예: `메인 키친`, `바`)을 설명하여 지정합니다."
+"Select the :guilabel:`Point of Sale` that sends orders to this display. "
+"Leave the field empty to link it to *all* points of sale."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:29
-msgid "Set it up:"
-msgstr "설정:"
+msgid ""
+"Specify the POS :ref:`product categories <pos/products/categories>` to be "
+"sent to this display. Leave the field empty to allow *all* categories."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:31
 msgid ""
-":guilabel:`Point of Sale`: Select the POS that sends orders to this display."
-msgstr ":guilabel:`POS`: 이 화면으로 주문을 전송할 POS를 선택합니다."
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:32
-msgid ""
-":guilabel:`Product categories`: Specify the POS :guilabel:`Product "
-"categories` sent to this display."
+"Enable the :guilabel:`Auto clear` option to automatically remove orders from "
+"the :ref:`order status screen <preparation/order-status-screen>` after a "
+"given time."
 msgstr ""
-":guilabel:`품목 카테고리`: 이 화면으로 전송된 POS :guilabel:`품목 카테고리` "
-"를 지정합니다."
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:34
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:33
 msgid ""
-":guilabel:`Stages`: Define the steps required for the orders to be ready."
-msgstr ":guilabel:`단계`: 주문 준비에 필요한 단계를 지정합니다."
+"Define the steps required for orders to be processed in "
+"the :guilabel:`Stages` tab:"
+msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:36
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:35
 msgid "Click :guilabel:`Add a line` to add a stage."
 msgstr ":guilabel:`줄 추가` 를 클릭하면 단계가 추가됩니다."
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:37
-msgid "Assign specific colors to each stage for clarity (optional)."
-msgstr "명확하게 구분되도록 각 단계마다 색상을 지정합니다(선택 사항)."
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:38
-msgid ""
-"Define an :guilabel:`Alert timer (min)` for each stage to indicate the "
-"expected processing time."
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:36
+msgid "Optionally, assign colors to stages for better visibility."
 msgstr ""
-"각 단계별로 :guilabel:`알림 타이머(분)` 를 지정하여 예상 처리 시간을 표시합니"
-"다."
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:None
-msgid "preparation display set-up form"
-msgstr "준비 화면 설정 양식"
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:37
+msgid ""
+"Set an :guilabel:`Alert timer (min)` for each stage to define the expected "
+"processing time. Orders are highlighted when this time is exceeded."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:41
+msgid ""
+"Configure communication channels for the preparation display to keep "
+"customers informed. To do so:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:44
+msgid "Install the :guilabel:`POS Enterprise SMS Whatsapp` module."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:45
+msgid ""
+"Go to the :ref:`preparation display form <pos/preparation/configuration>`."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:46
 msgid ""
-"To edit a pre-existing preparation display, click the vertical ellipsis "
-"button (:icon:`fa-ellipsis-v`) on the display's card and "
-"select :guilabel:`Configure`."
+"Activate :guilabel:`SMS Enabled` and/or :guilabel:`WhatsApp Enabled` in "
+"the :guilabel:`Communication` tab."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:48
+msgid ""
+"Select templates for :guilabel:`Order received` and :guilabel:`Order is "
+"ready`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:50
-#: ../../content/applications/sales/point_of_sale/hardware_network/electronic_labels.rst:119
-#: ../../content/applications/sales/point_of_sale/shop.rst:78
-msgid "Practical application"
-msgstr "실무 적용"
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:52
 msgid ""
-"Go to :menuselection:`Point of Sale --> Orders --> Preparation Display` to "
-"get an overview of all your displays."
+"To edit an existing preparation display, click :icon:`fa-ellipsis-v` "
+"(:guilabel:`Dropdown menu`) on the display's card and "
+"select :guilabel:`Configure`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:58
+msgid ""
+"To view all preparation displays and their related :ref:`order status "
+"screens <preparation/order-status-screen>`, go to :menuselection:`Point of "
+"Sale --> Orders --> Preparation Display`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:None
 msgid "Kanban view of the preparation display"
 msgstr "준비 화면의 칸반 보기"
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:59
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:66
 msgid "The display card shows:"
 msgstr "화면 카드 표시:"
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:61
-msgid "The configured stages."
-msgstr "환경설정이 되어 있는 단계입니다."
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:68
+msgid "The configured stages, e.g., `To prepare`, `Ready`, `Completed`."
+msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:62
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:69
 msgid "The number of orders currently :guilabel:`In progress`."
 msgstr "현재 :guilabel:`진행 중` 인 주문 수"
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:63
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:70
 msgid ""
 "The :guilabel:`Average time` employees usually take to complete an order."
 msgstr ""
 "일반적으로 직원이 주문을 완료하기까지 걸리는 :guilabel:`평균 시간` 입니다."
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:66
-msgid ""
-"Click the :guilabel:`Kitchen Display` app icon on your Odoo Dashboard for "
-"quicker access."
-msgstr ""
-"Odoo 현황판에 있는 :guilabel:`주방 화면` 앱 아이콘을 클릭하면 더욱 빠르게 액"
-"세스할 수 있습니다."
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:69
-msgid "Using the preparation display"
-msgstr "준비 화면 사용하기"
-
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:71
 msgid ""
-"To access the preparation display, click :guilabel:`Preparation Screen`. "
-"This interface, designed for employees, shows:"
+"The :ref:`Order Status Screen <preparation/order-status-screen>` button."
 msgstr ""
-"준비 화면에 액세스하려면 :guilabel:`준비 화면` 을 클릭합니다. 이 인터페이스"
-"는 직원용으로 설계되었으며 다음 내용이 표시됩니다."
 
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:74
 msgid ""
-"**Stages and order count**: Displays the progress of orders across stages "
-"such as `To prepare`, `Ready`, and `Completed`, along with the number of "
-"orders in each stage."
+"A default preparation display named :guilabel:`Kitchen Display` is "
+"automatically configured when creating a new :doc:`restaurant point of sale "
+"<../restaurant>` :ref:`through the onboarding screen <pos/use/create-pos>` "
+"and selecting the :guilabel:`Restaurant` card."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:76
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:77
 msgid ""
-"**Ordered products by category**: Lists all items in progress, grouped by "
-"POS categories (e.g., `Drinks`, `Food`)."
+"The **Kitchen Display** app is automatically installed whenever "
+"a :doc:`restaurant point of sale <../restaurant>` is :ref:`created <pos/use/"
+"create-pos>` and provides quick access to the :guilabel:`Preparation "
+"Display` overview from the main dashboard."
 msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:78
-msgid "**Order cards**: Summarizes individual orders, including:"
-msgstr "**주문 카드**: 다음과 같은 개별 주문이 요약되어 있습니다."
 
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:80
-msgid "Associated tables and order numbers."
-msgstr "관련된 테이블 및 주문 번호입니다."
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:81
-msgid ":doc:`Preset <presets>` service types, if configured."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:82
-msgid "Status, such as `Ready`, highlighted with the defined colors."
-msgstr "상태에는 '준비' 상태 등이 있으며, 지정한 색상으로 강조 표시됩니다."
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:83
-msgid "Waiting time, with visual indicators."
-msgstr "대기 시간이 시각적인 표시로 나타난 모습입니다."
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:86
 msgid ""
-"The duration indicator turns red if the elapsed time exceeds the predefined "
-"alert time."
+"If at least one :doc:`restaurant point of sale <../restaurant>` is "
+"configured, the :ref:`order status screen <preparation/order-status-screen>` "
+"is installed by default. To use it in a shop environment, install "
+"the :guilabel:`PoS Order Tracking Customer Display` module."
 msgstr ""
-"미리 지정된 알림 시간을 경과할 경우 소요 시간 표시기가 빨간색으로 바뀝니다."
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:85
+msgid ""
+"To use the preparation display, log in via a web browser on a mobile device "
+"or a touchscreen connected via USB or HDMI. IoT boxes are not supported."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:91
+msgid "Preparation display interface"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:93
+msgid ""
+"To open the preparation display, click :guilabel:`Preparation Screen` on the "
+"Kanban card. The interface consists of a :ref:`top bar <pos/preparation/top-"
+"bar>`, a collapsible :ref:`side panel <pos/preparation/sidepanel>`, and "
+"the :ref:`order cards <pos/preparation/order-cards>` section."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:100
+msgid "Top bar"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:102
+msgid ""
+"The top bar shows the progress of :guilabel:`All` orders across configured "
+"stages, such as `To prepare`/`To cook`, `Ready`, and `Completed`, along with "
+"the number of orders per stage. Click a stage to see the related orders."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/preparation.rst:None
-msgid "the preparation display interface with orders to process."
-msgstr "처리할 주문이 나타나 있는 준비 화면 인터페이스입니다."
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:92
-msgid "To update order progress:"
-msgstr "주문 진행 상황을 업데이트합니다:"
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:94
-msgid "Click items on the order card to cross them off individually."
-msgstr "주문 카드에서 개별적으로 항목을 클릭하여 삭제합니다."
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:95
-msgid "Click the order card itself to mark all items at once."
-msgstr "주문 카드 자체를 클릭하면 모든 항목이 한 번에 표시합니다."
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:96
-msgid ""
-"The card automatically moves to the next stage once every item is crossed "
-"off."
-msgstr "모든 항목에 확인 표시가 되면 카드는 자동으로 다음 단계로 이동합니다."
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:97
-msgid ""
-"Click :icon:`fa-undo` :guilabel:`Recall` to move an order back to the "
-"previous stage if you mistakenly sent it to the next stage."
+msgid "Order count in the top bar."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:101
-#: ../../content/applications/sales/point_of_sale/hardware_network.rst:39
-#: ../../content/applications/sales/point_of_sale/hardware_network/customer_display.rst:3
-#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:31
-msgid "Customer display"
-msgstr "고객 디스플레이"
-
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:103
-msgid ""
-"In parallel, click :guilabel:`Order Status Screen` to open the customer "
-"interface. This interface, designed for customers, provides an overview of "
-"orders that are:"
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:109
+msgid "The top bar offers the following buttons:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:106
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:111
+msgid ""
+":icon:`fa-undo` :guilabel:`Recall`: Undo the most recent order stage move. "
+"This is only possible if this move was made on the selected stage."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:113
+msgid ""
+":icon:`fa-trash` :guilabel:`Done`: Delete all completed orders in the last "
+"stage at once."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:114
+msgid ":icon:`fa-sign-out` :guilabel:`Close`: Exit the display."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:119
+msgid "Side panel"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:121
+msgid ""
+"The side panel is folded by default. Open it by clicking the :icon:`oi-panel-"
+"right` icon in the upper-left corner. Then, filter orders by:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:124
+msgid ":guilabel:`Time`, such as :guilabel:`Today` or :guilabel:`Tomorrow`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:125
+msgid ""
+":doc:`Preset <presets>`, such as :guilabel:`Dine in` "
+"or :guilabel:`Delivery`, if applicable"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:126
+msgid ""
+":ref:`POS categories <pos/products/categories>` defined on the :ref:`display "
+"form <pos/preparation/configuration>`, such as :guilabel:`Food` "
+"or :guilabel:`Drinks`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:129
+msgid ""
+"The total number of orders/category items is displayed next to the "
+"corresponding filter. Each filter section consists of a breakdown of the "
+"individual elements."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:132
+msgid ""
+"Use the :icon:`fa-search-minus` and :icon:`fa-search-plus` zoom control at "
+"the bottom of the side panel to adjust the card view size, and "
+"the :guilabel:`Clear All Orders` button to move all orders in the current "
+"stage to the next one."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:139
+msgid "Order cards"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:141
+msgid ""
+"Order cards represent individual orders and display the following "
+"information:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:143
+msgid ""
+"Associated :ref:`tables <pos/restaurant/floors>`, order "
+"numbers, :ref:`customer <pos/use/customers>` or order names."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:145
+msgid "Number of guests."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:146
+msgid ":doc:`Presets <presets>`, if configured."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:147
+msgid ""
+"The selected time and date, if :ref:`orders are managed by time for the "
+"preset <pos/presets/preset-form>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:149
+msgid ""
+"Stages, i.e., the status such as `To prepare`, `Ready`, etc., highlighted in "
+"the defined color (only shown when :guilabel:`All` orders are displayed)."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:151
+msgid ""
+"Waiting time, with visual indicators, if the elapsed time exceeds the "
+"predefined alert time."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:153
+msgid ""
+"To update order progress from the order card, click individual items to "
+"cross them off individually or click the order card itself to mark all items "
+"at once. Once all items are completed, the order automatically moves to the "
+"next stage. Click :icon:`fa-undo` :guilabel:`Reset` on :guilabel:`Completed` "
+"orders to move them back to the first stage if needed."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:159
+msgid "The preparation display shows several orders to process:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:161
+msgid ""
+"Order 1: The `Lunch Maki 18pc` for takeout with order name `John Meyer`, "
+"scheduled for `14/04` at `13:00`, is ready (crossed out). The `Bacon Burger` "
+"is still being prepared."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:163
+msgid ""
+"Order 2: The delivery order for the customer `Acme Corporation` is marked "
+"red because it has exceeded the expected time in the `Ready` stage."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:165
+msgid ""
+"Order 3: Table 2 `T2` has a `Dine in` order with 3 dishes and 3 guests "
+"(:icon:`fa-users` icon) at this table. You can click `Done` to archive the "
+"order or :guilabel:`Reset` to move it back to the `To cook` stage."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:0
+msgid "The preparation display interface with orders to process."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:176
+msgid "Order status screen"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:178
+msgid ""
+"The :guilabel:`Order Status Screen` is automatically enabled once "
+"a :ref:`preparation display <pos/preparation/application>` is created. It is "
+"an additional display showing customers an overview of orders that are:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:182
 msgid ":guilabel:`Ready` for pickup."
 msgstr "픽업 :guilabel:`준비` 가 완료되었습니다."
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:107
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:183
 msgid ":guilabel:`Almost there`, indicating they are taken care of."
 msgstr ":guilabel:`거의 완료`, 처리 중임을 나타냅니다."
 
-#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:110
-msgid "The order number can be found at the top of the customer's receipt."
-msgstr "주문 번호는 고객 영수증 상단에서 확인할 수 있습니다."
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:185
+msgid ""
+"To open this customer interface, click :guilabel:`Order Status Screen` on "
+"the :ref:`preparation display card <pos/preparation/application>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:None
+msgid "The overview of orders in the customer interface."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:193
+msgid ""
+"The order number can be found at the top of the customer's :doc:`receipt <../"
+"use/receipts>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/extra/preparation.rst:194
+msgid ""
+"To use the order status screen, log in via a web browser on a mobile device "
+"or a screen connected via USB or HDMI. IoT boxes are not supported."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/presets.rst:5
 msgid ""
@@ -8106,6 +8230,15 @@ msgstr ""
 msgid "To enable and set presets for a POS, follow these steps:"
 msgstr ""
 
+#: ../../content/applications/sales/point_of_sale/extra/presets.rst:32
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:63
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/tyro.rst:60
+#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:70
+#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:84
+#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:156
+msgid "Go to the :ref:`POS settings <pos/use/settings>`."
+msgstr ""
+
 #: ../../content/applications/sales/point_of_sale/extra/presets.rst:33
 msgid ""
 "Under :guilabel:`Point of Sale`, enable :guilabel:`Take out / Delivery / "
@@ -8134,8 +8267,8 @@ msgid "Define a default preset in the :guilabel:`Default` field."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/presets.rst:43
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:114
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:146
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:115
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:147
 #: ../../content/applications/sales/point_of_sale/hardware_network/pos_lna.rst:36
 #: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:41
 #: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:28
@@ -9412,6 +9545,12 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network.rst:39
+#: ../../content/applications/sales/point_of_sale/hardware_network/customer_display.rst:3
+#: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:31
+msgid "Customer display"
+msgstr "고객 디스플레이"
+
+#: ../../content/applications/sales/point_of_sale/hardware_network.rst:39
 msgid ""
 "Set up a secondary screen to show order details and prices to customers "
 "during checkout."
@@ -9886,6 +10025,11 @@ msgid ""
 "information to Pricer."
 msgstr ""
 
+#: ../../content/applications/sales/point_of_sale/hardware_network/electronic_labels.rst:119
+#: ../../content/applications/sales/point_of_sale/shop.rst:78
+msgid "Practical application"
+msgstr "실무 적용"
+
 #: ../../content/applications/sales/point_of_sale/hardware_network/electronic_labels.rst:121
 msgid ""
 "Odoo automatically sends requests to Pricer to synchronize the tags every 12 "
@@ -10099,7 +10243,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:51
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:100
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:101
 msgid "Windows 10 & Linux"
 msgstr ""
 
@@ -10110,15 +10254,15 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:55
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:136
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:152
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:137
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:153
 msgid ""
 "Open the browser, type the printer's IP address in the search bar (e.g., "
 "`https://192.168.1.25`), and press `Enter`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:57
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:138
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:139
 msgid ""
 "On the security warning page, click :guilabel:`Advanced`, "
 "then :guilabel:`Proceed to [IP address] (unsafe)` to force the connection."
@@ -10165,7 +10309,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:78
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:128
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:129
 msgid "Mac OS"
 msgstr "Mac OS"
 
@@ -10182,277 +10326,277 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:85
 msgid ""
-"Go to :menuselection:`Access --> Certificate Assistant --> Create a "
-"Certificate`."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:86
-msgid "Enter a name for the certificate."
+"From the menu bar, go to :menuselection:`Keychain Access --> Certificate "
+"Assistant --> Create a Certificate...`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:87
-msgid "Select an identity type, then the type of certificate."
+msgid "Enter a name for the certificate."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:88
+msgid "Select an identity type, then the type of certificate."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:89
 #: ../../content/applications/sales/point_of_sale/use.rst:149
 msgid "Click :guilabel:`Create`."
 msgstr ":guilabel:`생성`을 클릭합니다."
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:89
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:90
 msgid "Review the certificate, then click :guilabel:`Done`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:94
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:95
 msgid "Self-signed certificate export"
 msgstr "자체 서명 인증서 내보내기"
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:96
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:97
 msgid ""
 "The export process depends on the :abbr:`OS (Operating System)` and the "
 "browser."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:104
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:132
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:197
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:105
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:133
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:198
 msgid "Google Chrome"
 msgstr "Google Chrome"
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:106
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:118
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:134
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:150
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:107
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:119
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:135
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:151
 msgid "To export the certificate, follow the next steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:108
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:109
 msgid ""
 "Once the printer's lights are solid, hover the mouse over the browser's "
 "search bar and click :guilabel:`Not secure`, then :guilabel:`Certificate "
 "details`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:110
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:111
 msgid ""
 "Click the :guilabel:`Details` tab in the :guilabel:`Certificate Viewer` "
 "popover, then click :guilabel:`Export`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:112
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:113
 msgid "Add `.crt` next to the IP address in the :guilabel:`File name` field."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:113
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:114
 msgid ""
 "Set the :guilabel:`Save as type` field to `Base64-encoded ASCII, single "
 "certificate`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:116
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:148
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:211
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:117
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:149
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:212
 msgid "Mozilla Firefox"
 msgstr "Mozilla Firefox"
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:120
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:154
-msgid "Click :guilabel:`Not secure` next to the search bar."
-msgstr ""
-
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:121
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:155
-msgid "Go to :menuselection:`Connection not secure --> More information`."
+msgid "Click :guilabel:`Not secure` next to the search bar."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:122
 #: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:156
+msgid "Go to :menuselection:`Connection not secure --> More information`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:123
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:157
 msgid ""
 "Click :guilabel:`View certificate` in the :guilabel:`Security` tab, "
 "then :guilabel:`Details`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:124
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:158
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:125
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:159
 msgid ""
 "Select the certificate, click :guilabel:`Export`, then select a folder in "
 "your local drive."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:126
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:160
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:127
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:161
 msgid "Click :guilabel:`Close`."
 msgstr ":guilabel:`닫기` 를 클릭합니다."
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:140
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:141
 msgid ""
 "Click :guilabel:`Not secure` next to the search bar, "
 "then :guilabel:`Certificate is not valid`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:142
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:143
 msgid "Go to the :guilabel:`Details` tab and click :guilabel:`Export`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:143
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:144
 msgid ""
 "Add `.crt` at the end of the file name to ensure it has the correct "
 "extension."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:144
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:145
 msgid ""
 "Select `Base64-encoded ASCII, single certificate`, at the bottom of the "
 "popover."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:165
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:166
 msgid "Self-signed certificate import"
 msgstr "자체 서명 인증서 가져오기"
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:167
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:168
 msgid ""
 "The import process depends on the :abbr:`OS (Operating System)` and the "
 "browser."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:171
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:172
 msgid "Windows 10"
 msgstr "Windows 10"
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:173
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:174
 msgid "To import a self-signed certificate from **Google Chrome**:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:175
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:201
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:215
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:176
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:202
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:216
 msgid "Open the browser."
 msgstr "브라우저를 엽니다."
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:176
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:202
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:177
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:203
 msgid ""
 "Go to :menuselection:`Settings --> Privacy and security --> Security`, and "
 "click :guilabel:`Manage certificates`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:178
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:179
 msgid ""
 "Click :guilabel:`Manage imported certificates from Windows` on "
 "the :guilabel:`Certificate Manager` page."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:180
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:181
 msgid "Click :guilabel:`Import` in the :guilabel:`Certificates` popover."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:181
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:182
 msgid ""
 "In the :guilabel:`Certificate Import Wizard`, click :guilabel:`Next`, "
 "then :guilabel:`Browse` to select the certificate, and "
 "click :guilabel:`Next` again."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:183
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:184
 msgid ""
 "Select the :guilabel:`Place all certificates in the following store` option."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:184
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:185
 msgid ""
 "Click :guilabel:`Browse`, select the :guilabel:`Trusted Root Certification "
 "Authorities` folder, and click :guilabel:`OK`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:186
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:187
 msgid "Click :guilabel:`Next`, then :guilabel:`Finish`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:187
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:188
 msgid "Click :guilabel:`Yes` in the :guilabel:`Security Warning` popover."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:190
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:191
 msgid ""
 "To import a self-signed certificate using **Mozilla Firefox** on Windows, "
 "see the steps in the :guilabel:`Linux` tab."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:193
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:194
 msgid "Linux"
 msgstr "리눅스"
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:199
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:213
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:200
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:214
 msgid "To import a self-signed certificate, follow the next steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:204
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:205
 msgid ""
 "Click :guilabel:`Installed by you` under the :guilabel:`Custom` section on "
 "the :guilabel:`Local certificates` tab."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:206
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:207
 msgid ""
 "Click :guilabel:`Import` next to :guilabel:`Trusted Certificates`, and "
 "select the exported certification file from your local drive."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:208
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:209
 msgid "Accept all warnings."
 msgstr "모든 경고 항목을 수락합니다."
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:209
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:210
 msgid "Click :guilabel:`ok`."
 msgstr ":guilabel:`확인` 을 클릭합니다."
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:216
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:217
 msgid ""
 "Go to :menuselection:`Settings --> Privacy & Security --> Security --> View "
 "Certificates`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:218
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:219
 msgid ""
 "In the :guilabel:`Certificate Manager` popover, click the :guilabel:`Your "
 "Certificates` tab, then :guilabel:`Import`, and select the certificate in "
 "your local drive."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:221
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:222
 msgid ""
 "Click the :guilabel:`Servers` tab in the :guilabel:`Certificate Manager` "
 "popover."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:222
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:223
 msgid "Click :guilabel:`Add Exception`."
 msgstr ":guilabel:`예외 추가` 를 클릭합니다."
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:223
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:224
 msgid ""
 "Enter the printer's IP address in the :guilabel:`Location` field, then "
 "click :guilabel:`Get Certificate`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:225
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:226
 msgid ""
 "Enable the :guilabel:`Permanently store this exception` option and confirm."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:227
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:228
 msgid "Android OS"
 msgstr "안드로이드 OS"
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:230
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:231
 msgid ""
 "The specific steps for installing a certificate may vary depending on the "
 "Android version and the device manufacturer."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:233
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:234
 msgid ""
 "To import a self-signed certificate into an Android device, first create and "
 "export it from a computer. Then, transfer the `.crt` file to the device via "
@@ -10460,104 +10604,104 @@ msgid ""
 "ePOS SDK for JavaScript if required, then follow the next steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:238
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:239
 msgid "Go to the device settings."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:239
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:240
 msgid "Type `certificate` in the search bar."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:240
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:241
 msgid ""
 "Click :guilabel:`Certificate AC`, then :guilabel:`Install from device "
 "storage`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:241
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:242
 msgid "Select the certificate file to install it on the device."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:244
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:245
 msgid ""
 "Download the certificate on a computer if the tablet restricts direct "
 "downloads. Forward the file via email, then open it directly from the tablet "
 "to complete the installation."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:247
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:248
 msgid "iOS"
 msgstr "iOS"
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:249
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:250
 msgid ""
 "To import a self-signed certificate into an iOS device, first create and "
 "export it from a computer. Then, transfer the `.crt` file to the device via "
 "email, Bluetooth, or any file-sharing service."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:253
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:254
 msgid ""
 "Downloading this file triggers a warning popover. Click :guilabel:`Allow` to "
 "download the configuration profile, and close the second popover. Then "
 "follow the next steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:256
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:257
 msgid "Go to the **Settings** app on the iOS device."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:257
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:258
 msgid "Click :guilabel:`Profile Downloaded` under the user's details box."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:258
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:259
 msgid "Locate the downloaded `.crt` file and select it."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:259
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:260
 msgid "Click :guilabel:`Install` in the top-right corner."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:260
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:261
 msgid "Enter a passcode if needed."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:261
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:262
 msgid ""
 "Click :guilabel:`Install` in the top-right corner of the certificate warning "
 "screen and the popover."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:263
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:264
 msgid "Click :guilabel:`Done`."
 msgstr ":guilabel:`완료` 를 클릭합니다."
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:265
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:266
 msgid "Once the certificate is installed, authenticate it as follows:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:267
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:268
 msgid ""
 "Go to :menuselection:`Settings --> General --> About > Certificate Trust "
 "Settings`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:268
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:269
 msgid ""
 "Enable the installed certificate using the :icon:`fa-toggle-on` (switch) "
 "toggle."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:269
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:270
 msgid "Click :guilabel:`Continue` in the popover."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:272
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:273
 msgid "Certificate import verification"
 msgstr "인증서 가져오기 승인"
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:274
+#: ../../content/applications/sales/point_of_sale/hardware_network/epos_ssc.rst:275
 msgid ""
 "To confirm the printer's connection is secure, connect to its IP address "
 "using HTTPS. For example, navigate to `https://192.168.1.25` in a browser. "
@@ -10928,7 +11072,7 @@ msgid ":doc:`epos_ssc`"
 msgstr ":doc:`epos_ssc`"
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:54
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:350
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:352
 msgid ":doc:`/applications/general/iot/devices/printer`"
 msgstr ":doc:`/applications/general/iot/devices/printer`"
 
@@ -11128,7 +11272,7 @@ msgid "Connecting a scale requires the use of an **IoT System**."
 msgstr "저울을 연결하려면 **IoT 시스템** 사용이 필수입니다."
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:16
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:351
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:353
 msgid ":doc:`/applications/general/iot/connect`"
 msgstr ":doc:`/applications/general/iot/connect`"
 
@@ -12201,8 +12345,8 @@ msgid "Click :guilabel:`Payment` and select the relevant payment method."
 msgstr ":guilabel:`결제` 를 클릭한 후 관련된 결제 수단을 선택합니다."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:105
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:397
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:451
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:399
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:453
 msgid "Click :guilabel:`Validate`."
 msgstr ":guilabel:`승인` 을 클릭합니다."
 
@@ -12814,7 +12958,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:91
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:420
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:422
 msgid "Tips"
 msgstr "팁"
 
@@ -15573,7 +15717,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:266
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:352
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:354
 msgid ":doc:`extra/preparation`"
 msgstr ":doc:`extra/preparation`"
 
@@ -15732,32 +15876,38 @@ msgid ""
 "of the last kitchen order."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:349
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:347
+msgid ""
+"Access the :doc:`preparation display <extra/preparation>` through the "
+"**Kitchen Display** app to manage orders without using paper."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:351
 msgid ":doc:`Connect an IoT system to a POS <hardware_network/pos_iot>`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:357
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:359
 msgid "Bills and payment"
 msgstr "고지서 및 결제"
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:362
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:364
 msgid "Bill splitting"
 msgstr "계산서 분할"
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:364
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:366
 msgid ""
 "To allow bill splitting, go to :menuselection:`Point of Sale --> "
 "Configuration --> Settings`, and enable :guilabel:`Allow Bill Splitting` "
 "under the :guilabel:`Point of Sale` section."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:367
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:369
 msgid ""
 "To split a bill from the :ref:`POS register <pos/restaurant/orders>`, follow "
 "these steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:369
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:371
 msgid ""
 "Click the :icon:`fa-ellipsis-v` (:guilabel:`Actions`) icon, "
 "then :guilabel:`Split`."
@@ -15765,29 +15915,29 @@ msgstr ""
 ":icon:`fa-ellipsis-v` (:guilabel:`활동`) 아이콘을 클릭한 후 :guilabel:`분할` "
 "을 선택합니다."
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:370
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:372
 msgid "Select at least one product and perform one of the following actions:"
 msgstr ""
 "최소 한 가지 이상 품목을 선택한 후 다음 활동 중에서 선택하여 진행합니다:"
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:372
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:374
 msgid ""
 ":guilabel:`Payment`: Process the direct payment for the selected product(s)."
 msgstr ":guilabel:`결제`: 선택한 품목에 대해 직접 결제를 진행합니다."
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:373
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:375
 msgid ":guilabel:`Split Order`: Create a sub-order."
 msgstr ":guilabel:`주문서 분할`: 하위 주문을 생성합니다."
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:374
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:376
 msgid ":guilabel:`Transfer`: Transfer one or all products to another table."
 msgstr ":guilabel:`이동`: 하나 이상 품목을 다른 테이블로 이동합니다."
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:375
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:377
 msgid "Process the :ref:`payment <pos/restaurant/bills/payment>`."
 msgstr ":ref:`결제 <pos/restaurant/bills/payment>` 를 진행합니다."
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:376
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:378
 msgid ""
 "Click :icon:`fa-chevron-right` :guilabel:`Continue` and repeat the process "
 "for each guest."
@@ -15795,35 +15945,35 @@ msgstr ""
 ":icon:`fa-chevron-right` :guilabel:`계속` 을 클릭하여 각 고객에 대해 이 과정"
 "을 반복하세요."
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:379
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:381
 msgid ""
 "Splitting a bill requires ordering at least two products and creates a sub-"
 "order, which must be paid before returning to the main order."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:385
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:387
 msgid "Order payment"
 msgstr "주문 결제"
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:387
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:389
 msgid ""
 "To proceed with the order payment from the :ref:`POS register <pos/"
 "restaurant/orders>`, follow these steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:390
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:392
 msgid "Click :guilabel:`Payment`."
 msgstr ":guilabel:`결제`를 클릭합니다."
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:391
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:393
 msgid "Select a :doc:`payment method <payment_methods>`."
 msgstr ":doc:`결제 수단 <payment_methods>` 을 선택합니다."
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:392
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:394
 msgid "Optionally, select a customer and send an invoice to them:"
 msgstr "선택 사항으로 고객을 선택하여 청구서를 발송할 수 있습니다."
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:394
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:396
 msgid ""
 "Click :icon:`fa-user` :guilabel:`Customer` to select or create a customer "
 "account."
@@ -15831,7 +15981,7 @@ msgstr ""
 ":icon:`fa-user` :guilabel:`고객` 을 클릭한 후 고객 계정을 선택하거나 계정을 "
 "생성하세요."
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:395
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:397
 msgid ""
 "Enable :icon:`fa-file-text-o` :guilabel:`Invoice` to allow sending an "
 "invoice to the customer."
@@ -15839,43 +15989,43 @@ msgstr ""
 "고객에게 청구서를 전송하려면 :icon:`fa-file-text-o` :guilabel:`청구서` 를 활"
 "성화하세요."
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:402
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:404
 msgid "Receipt printing"
 msgstr "영수증 인쇄"
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:404
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:406
 msgid ""
 "To allow receipt printing, go to :menuselection:`Point of Sale --> "
 "Configuration --> Settings`, and enable :guilabel:`Early Receipt Printing` "
 "under the :guilabel:`Point of Sale` section."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:407
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:409
 msgid ""
 "After a successful :ref:`order payment <pos/restaurant/bills/payment>`, "
 "click :icon:`fa-print` :guilabel:`Print Full Receipt` to generate and print "
 "a bill."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:411
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:413
 msgid ""
 "If a printer is :doc:`configured and linked <hardware_network/"
 "receipt_printers>` to a point of sale, the receipt is automatically printed "
 "upon payment confirmation."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:415
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:417
 msgid ":doc:`/applications/sales/point_of_sale/use/pos_invoices`"
 msgstr ":doc:`/applications/sales/point_of_sale/use/pos_invoices`"
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:425
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:427
 msgid ""
 "To allow tipping in a POS, go to the :ref:`POS settings <pos/use/settings>`, "
 "scroll down to the :guilabel:`Payment` section, enable :guilabel:`Tips`, and "
 "click :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:429
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:431
 msgid ""
 "The :guilabel:`Add tip after payment` setting only works for a POS in the "
 "United States of America with an :doc:`Adyen <payment_methods/terminals/"
@@ -15883,13 +16033,13 @@ msgid ""
 "terminal <pos/terminals/configuration>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:432
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:434
 msgid ""
 "The :guilabel:`Add tip through payment terminal (Adyen)` setting only works "
 "with an :ref:`Adyen <adyen/tips>` terminal."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:436
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:438
 msgid ""
 "Saving the :guilabel:`Tips` setting automatically fills the :guilabel:`Tip "
 "product` field with the preconfigured :guilabel:`[TIPS] Tips` product, which "
@@ -15898,15 +16048,15 @@ msgid ""
 "register <pos/restaurant/orders>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:440
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:442
 msgid "Choose only one tip product per POS."
 msgstr "팁 제품은 POS당 하나만 선택합니다."
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:445
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:447
 msgid "Tip and payment"
 msgstr "팁 및 결제"
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:447
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:449
 msgid ""
 "To process a tip during :ref:`payment <pos/restaurant/bills/payment>`, "
 "follow these steps:"
@@ -15914,7 +16064,7 @@ msgstr ""
 ":ref:`결제 <pos/restaurant/bills/payment>` 중에 팁을 처리하려면 다음에 따라 "
 "진행합니다:"
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:449
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:451
 msgid ""
 "Click :icon:`fa-heart` :guilabel:`Tip`, add the amount, then "
 "click :guilabel:`Ok`."
@@ -15922,12 +16072,12 @@ msgstr ""
 ":icon:`fa-heart` :guilabel:`팁` 을 클릭하고 금액을 입력한 후 :guilabel:`확인"
 "` 을 클릭합니다."
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:450
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:452
 msgid ""
 "Select a :doc:`payment method <payment_methods>` for the order and the tip."
 msgstr "주문 및 팁에 대한 :doc:`결제 수단 <payment_methods>` 을 선택합니다."
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:454
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:456
 msgid ""
 "If the order and the tip are paid using different payment methods, select "
 "a :doc:`payment method <payment_methods>` for the order first. Then, select "
@@ -15936,11 +16086,11 @@ msgid ""
 "payment."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:460
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:462
 msgid "Tip after payment (US only)"
 msgstr "결제 후 팁 지급 (미국 전용)"
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:462
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:464
 msgid ""
 "To allow tipping after payment for a POS in the United States of America, "
 "ensure the :guilabel:`Add tip after payment` setting is enabled in "
@@ -15948,20 +16098,20 @@ msgid ""
 "follow these steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:466
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:468
 msgid ""
 "On the :guilabel:`Payment` screen, select a :guilabel:`Card` payment method "
 "linked to a :doc:`Stripe <payment_methods/terminals/stripe>` or :doc:`Adyen "
 "<payment_methods/terminals/adyen>` terminal."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:469
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:471
 msgid ""
 "Click :guilabel:`Close Tab` and select the relevant option in "
 "the :guilabel:`Add a tip` screen:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:471
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:473
 msgid ""
 ":guilabel:`15%`, :guilabel:`20%`, or :guilabel:`25%`: Tip rates based on "
 "order total."
@@ -15969,15 +16119,15 @@ msgstr ""
 ":guilabel:`15%`, :guilabel:`20%` 또는 :guilabel:`25%`: 주문 총액을 기준으로 "
 "한 팁 비율입니다."
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:472
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:474
 msgid ":guilabel:`No Tip`."
 msgstr ":guilabel:`팁은 받지 않습니다`."
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:473
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:475
 msgid ":guilabel:`Tip Amount`: Enter the relevant amount in the field."
 msgstr ":guilabel:`팁 금액`: 필드에 해당하는 금액을 입력합니다."
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:474
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:476
 msgid "Click :guilabel:`Settle` to validate."
 msgstr ":guilabel:`정산` 을 클릭하여 승인합니다."
 
@@ -17133,6 +17283,10 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/use.rst:154
 msgid "Go to :menuselection:`Point of Sale --> Orders --> Customers`."
 msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use.rst:155
+msgid "Click :guilabel:`New`."
+msgstr ":guilabel:`신규` 를 클릭합니다."
 
 #: ../../content/applications/sales/point_of_sale/use.rst:156
 msgid "Fill in the customer form information."
@@ -32699,7 +32853,7 @@ msgid "Offer more value for current subscribers on the same sales order"
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions.rst:30
-#: ../../content/applications/sales/subscriptions/closing.rst:25
+#: ../../content/applications/sales/subscriptions/closing.rst:28
 msgid "Close a subscription"
 msgstr "구독 해지"
 
@@ -33436,145 +33590,122 @@ msgstr "구독 종료"
 
 #: ../../content/applications/sales/subscriptions/closing.rst:5
 msgid ""
-"Odoo *Subscriptions* provides flexibility for businesses to decide whether "
-"customers can self-manage their subscriptions, or restrict that ability "
-"entirely."
+"The Odoo **Subscriptions** app provides flexibility for businesses to decide "
+"whether customers can self-manage their subscriptions, or restrict that "
+"ability entirely."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/closing.rst:11
+#: ../../content/applications/sales/subscriptions/closing.rst:9
 msgid ""
-"Start by navigating to :menuselection:`Subscriptions app --> Configuration --"
-"> Recurring Plans`. From there, either create a new plan by "
-"clicking :guilabel:`New` or select an existing one to modify it."
+"A subscription must have been invoiced before it can be closed. "
+"Subscriptions that have not yet been invoiced may be cancelled instead."
 msgstr ""
-":menuselection:`구독 앱 --> 환경설정 --> 정기 결제 요금제` 로 이동하여 시작합"
-"니다. 거기에서 :guilabel:`새로 만들기` 를 클릭하여 새 요금제를 생성하거나 기"
-"존 요금제를 선택하여 수정합니다."
 
 #: ../../content/applications/sales/subscriptions/closing.rst:15
 msgid ""
+"To allow customers to close their own subscriptions using their user portal, "
+"navigate to :menuselection:`Subscriptions app --> Configuration --> "
+"Recurring Plans`. From there, either create a new plan by "
+"clicking :guilabel:`New` or select an existing one to modify it."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/closing.rst:19
+msgid ""
 "Once on the :guilabel:`Recurring Plans` form, enable "
-"the :guilabel:`Closable` option, in the :guilabel:`Self-Service` section, to "
-"allow customers to close their own subscriptions using the customer portal."
+"the :guilabel:`Closable` option in the :guilabel:`Self-Service` section. "
+"This adds a drop-down menu that allows plans to be closed either on the date "
+"of the user's choosing or at the end of the current renewal period."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/closing.rst:None
-msgid "The Closable option on a recurring plan form in Odoo Subscriptions."
-msgstr "Odoo 구독의 정기 구독 요금제 양식에 있는 해지 옵션입니다."
-
-#: ../../content/applications/sales/subscriptions/closing.rst:28
-msgid "Administrator view"
-msgstr "관리자 보기"
+msgid ""
+"The Closable option enabled and displaying the drop-down menu in Odoo "
+"Subscriptions."
+msgstr ""
 
 #: ../../content/applications/sales/subscriptions/closing.rst:30
 msgid ""
+"The methods available for closing a subscription depend on "
+"users' :doc:`access rights <../../general/users/access_rights>`. Users with "
+"administrator access rights to the Odoo database can close the subscription "
+"from within the **Subscriptions** app. External users must use "
+"their :doc:`user portal <../../general/users/user_portals>`."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/closing.rst:36
+msgid "With administrator access rights"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/closing.rst:38
+msgid ""
 "After a quotation for a subscription product has been confirmed, it becomes "
 "a sales order, and the subscription status changes to :guilabel:`In "
-"Progress`."
+"Progress`. At that point, the subscription may be closed."
 msgstr ""
-
-#: ../../content/applications/sales/subscriptions/closing.rst:33
-msgid ""
-"At that point, the ability to close the subscription becomes available, via "
-"the :guilabel:`Close` button at the top of the subscription order, near the "
-"row that contains :guilabel:`In Progress` and other stages. This option is "
-"also available after the order has been invoiced and the payment has been "
-"registered."
-msgstr ""
-"이 시점에서 :guilabel:`진행 중` 및 기타 단계가 있는 행 근처 구독 주문 상단에 "
-"있는 :guilabel:`닫기` 버튼을 통해 구독 해지 기능을 사용할 수 있습니다. 이 옵"
-"션은 주문 관련된 청구서가 발행되고 결제 등록이 된 후에도 사용할 수 있습니다."
-
-#: ../../content/applications/sales/subscriptions/closing.rst:None
-msgid ""
-"Close subscription from an administration point of view with Odoo "
-"Subscriptions."
-msgstr "Odoo 구독을 사용하면 관리자 측에서 구독을 종료할 수 있습니다."
 
 #: ../../content/applications/sales/subscriptions/closing.rst:42
 msgid ""
-"Clicking the :guilabel:`Close` button prompts a :guilabel:`Close Reason` pop-"
-"up window to appear, allowing administrators to input the reason for closing "
-"the subscription, or choose from the drop-down menu of options in "
-"the :guilabel:`Reason` field."
+"From the dashboard, open the :menuselection:`Subscriptions` app. By default, "
+"the **Subscriptions** dashboard displays both :guilabel:`In Progress` "
+"and :guilabel:`Paused` subscriptions. Open an in-progress subscription."
 msgstr ""
-":guilabel:`해지` 버튼을 클릭하면 :guilabel:`해지 사유` 팝업 창이 나타납니다. "
-"여기에서 관리자가 구독 해지 사유를 입력하거나 ::guilabel:`사유` 항목에 대한 "
-"드롭다운 메뉴에서 선택할 수 있습니다."
 
-#: ../../content/applications/sales/subscriptions/closing.rst:None
+#: ../../content/applications/sales/subscriptions/closing.rst:46
 msgid ""
-"The Close Reason pop-up when the Close button is clicked in Odoo "
-"Subscriptions."
-msgstr "Odoo 구독에서 해지 버튼을 클릭하면 해지 사유 팝업이 나타납니다."
-
-#: ../../content/applications/sales/subscriptions/closing.rst:50
-msgid ""
-"When the desired :guilabel:`Reason` is entered, click the :guilabel:`Submit` "
-"button."
+"The :guilabel:`Close` button is at the top of the subscription order. "
+"Clicking it opens the *Close Subscription* form, allowing an administrator "
+"to enter the date when the subscription is to be closed in "
+"the :guilabel:`When` field and select the reason for closing from the drop-"
+"down menu of options in the :guilabel:`Reason` field. Custom reasons may be "
+"created by opening the :guilabel:`Reason` drop-down and "
+"choosing :guilabel:`Search more...`"
 msgstr ""
-"원하는 :guilabel:`사유` 를 입력한 후 :guilabel:`제출` 버튼을 클릭합니다."
 
 #: ../../content/applications/sales/subscriptions/closing.rst:52
 msgid ""
-"Clicking :guilabel:`Submit` on the :guilabel:`Close Reason` pop-up window "
-"updates the subscription sales order to show :guilabel:`Churned` status tag, "
-"along with the specified :guilabel:`Close Reason`."
+"When the desired :guilabel:`Reason` is entered, click the :guilabel:`Submit` "
+"button. Clicking :guilabel:`Submit` on the :guilabel:`Close` form updates "
+"the chatter with the reason for closing. Once it's been closed, "
+"a :guilabel:`Churned` banner appears on the subscription order and the "
+"chatter reflects the subscription's updated status, end date, and reason for "
+"closure."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/closing.rst:None
-msgid "A churned sales order for a closed subscription in Odoo Subscriptions."
-msgstr "Odoo 구독에서 구독 해지 건과 관련하여 종료된 판매주문서입니다."
-
-#: ../../content/applications/sales/subscriptions/closing.rst:60
 msgid ""
-"That same close reason can be found in the *Chatter* of the sales order, as "
-"well."
-msgstr "동일한 마감 사유를 판매주문서의 *메시지창* 에서도 확인할 수 있습니다."
-
-#: ../../content/applications/sales/subscriptions/closing.rst:None
-msgid ""
-"The chatter of a churned sales order for a closed subscription in Odoo "
-"Subscriptions."
+"A churned sales order for a closed subscription in Odoo Subscriptions "
+"showing the banner\n"
+"and the chatter."
 msgstr ""
-"Odoo 구독에서 구독 해지 건에 대해 메시지창에서 판매주문서가 취소되어 있는 모"
-"습입니다."
 
-#: ../../content/applications/sales/subscriptions/closing.rst:67
+#: ../../content/applications/sales/subscriptions/closing.rst:62
 msgid "Customer view"
 msgstr "고객 화면"
 
-#: ../../content/applications/sales/subscriptions/closing.rst:70
+#: ../../content/applications/sales/subscriptions/closing.rst:65
 msgid ""
-"As an administrator, the ability to visualize what customers see when "
-"managing their subscriptions is accessible via the :guilabel:`Preview` "
-"button, located at the top of the subscription sales order."
-msgstr ""
-"관리자 기능으로, 고객이 구독 관리를 할 때 보이는 내용을 구독 판매주문서 상단"
-"에 있는 :guilabel:`미리보기` 버튼을 통해 확인할 수 있습니다."
-
-#: ../../content/applications/sales/subscriptions/closing.rst:74
-msgid ""
-"From the customer's point of view, in the customer portal, "
-"the :guilabel:`Close Subscription` button is located on the left side of the "
-"sales order."
+"As an administrator, the ability to visualize what users see when managing "
+"their subscriptions is accessible via the :guilabel:`Preview` button at the "
+"top of each subscription sales order."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/closing.rst:None
+#: ../../content/applications/sales/subscriptions/closing.rst:68
 msgid ""
-"Close subscription button on a customer's view of a sales order in Odoo "
-"Subscriptions."
-msgstr "Odoo 구독의 판매주문서에서 고객 보기에 있는 구독 해지 버튼입니다."
-
-#: ../../content/applications/sales/subscriptions/closing.rst:81
-msgid ""
-"When the customer clicks the :guilabel:`Close Subscription` button, "
-"a :guilabel:`Close Subscription` pop-up window appears, in which the "
-"customer has to choose from a select list of reasons why they are choosing "
-"to close the subscription."
+"In the user portal, subscriptions may be managed by clicking "
+"the :guilabel:`Subscriptions` button on the home page. Clicking this button "
+"takes the user to the :guilabel:`Subscriptions` page, where they can see a "
+"list of all subscriptions associated with their account, including those "
+"that are currently closed."
 msgstr ""
-"고객이 :guilabel:`구독 해지` 버튼을 클릭하면 :guilabel:`구독 해지` 팝업 창이 "
-"나타나며, 여기에서 고객은 선택 목록에서 구독 해지 사유를 선택해야 합니다."
+
+#: ../../content/applications/sales/subscriptions/closing.rst:73
+msgid ""
+"Clicking a subscription opens the details page for that subscription, which "
+"includes a :guilabel:`Close Subscription` button. Clicking "
+"the :guilabel:`Close Subscription` button opens a :guilabel:`Close "
+"Subscription` pop-up, where users must select from a list of reasons why "
+"they are choosing to close the subscription."
+msgstr ""
 
 #: ../../content/applications/sales/subscriptions/closing.rst:None
 msgid ""
@@ -33582,43 +33713,27 @@ msgid ""
 "subscription."
 msgstr "고객이 구독을 해지할 때 확인하게 되는 구독 해지 팝업창입니다."
 
-#: ../../content/applications/sales/subscriptions/closing.rst:90
+#: ../../content/applications/sales/subscriptions/closing.rst:82
 msgid ""
-"Customers can *only* chose a pre-configured reason why the subscription is "
-"being closed. They can *not* enter a custom reason from the customer portal. "
-"These selections can be adjusted by navigating "
-"to :menuselection:`Subscriptions --> Configuration --> Close Reasons`."
-msgstr ""
-"고객이 구독을 해지할 경우 *오직* 미리 설정되어 있는 사유 중에서만 선택할 수 "
-"있습니다. 고객 포털에서 사유를 사용자 지정하여 입력할 수 *없습니다*. 해당 항"
-"목은 :menuselection:`구독 --> 환경 설정 --> 해지 사유` 로 이동하여 조정할 수 "
-"있습니다."
-
-#: ../../content/applications/sales/subscriptions/closing.rst:94
-msgid ""
-"Once the customer has chosen a close reason, they would click "
-"the :guilabel:`Submit` button on the pop-up window."
+"Users must choose a pre-configured reason why the subscription is being "
+"closed. They **cannot** enter a custom reason from the user portal. "
+"Administrators can create custom reasons for users to choose from by logging "
+"into the database and navigating to :menuselection:`Subscriptions app --> "
+"Configuration --> Close Reasons`."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/closing.rst:97
+#: ../../content/applications/sales/subscriptions/closing.rst:87
 msgid ""
-"Upon closure, the subscription order in the customer portal is tagged "
-"as :guilabel:`Closed`."
-msgstr ""
-"해지할 경우, 고객 포털에 있는 구독 주문서에 :guilabel:`해지 완료` 태그가 지정"
-"됩니다."
-
-#: ../../content/applications/sales/subscriptions/closing.rst:99
-msgid ""
-"In addition, the specified :guilabel:`Close Reason` appears on the "
-"subscription order in the *Subscriptions* app in the backend "
-"(Administrator's view)."
+"Once the customer has chosen a reason for closing the subscription, they can "
+"click the :guilabel:`Submit` button on the pop-up window. Upon closure, the "
+"subscription order in the user portal is labeled :guilabel:`Closed`. Within "
+"the database, the subscription is marked *Churned*, and the specified reason "
+"for closure is added to the chatter."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/closing.rst:103
+#: ../../content/applications/sales/subscriptions/closing.rst:93
 #: ../../content/applications/sales/subscriptions/renewals.rst:56
 #: ../../content/applications/sales/subscriptions/reports.rst:403
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:195
 #: ../../content/applications/sales/subscriptions/subscriptions_deliveries.rst:71
 #: ../../content/applications/sales/subscriptions/upselling.rst:79
 msgid ":doc:`../subscriptions`"
@@ -34642,425 +34757,6 @@ msgstr ""
 ":guilabel:`MRR 분석` 보고 페이지의 :guilabel:`측정값` 드롭다운 메뉴에 있는 지"
 "표 관련 선택 항목은 다음과 같습니다."
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:3
-msgid "Scheduled actions"
-msgstr "예약된 활동"
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:5
-msgid ""
-"*Scheduled actions* are pre-configured processes that allow users to "
-"automate certain tasks within a database, based on a designated schedule or "
-"number of occurrences. These tasks can include sending emails, generating "
-"invoices, data clean-up, and so much more."
-msgstr ""
-"*예약된 작업* 은 지정된 일정이나 발생 횟수에 따라 데이터베이스 내에서의 특정 "
-"작업을 자동화할 수 있도록 사전 설정되된 프로세스입니다. 이러한 작업에는 이메"
-"일 보내기, 청구서 생성, 데이터 정리 등이 있습니다."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:9
-msgid ""
-"In Odoo, some scheduled actions are active, by default, to ensure that "
-"certain functions are triggered automatically, however there are *also* many "
-"scheduled action options that appear in the database that are **not** "
-"activated by default."
-msgstr ""
-"Odoo에서는 특정 기능이 자동으로 실행되도록 예약 작업 일부가 기본적으로 활성화"
-"되어 있으나, *동시에* 데이터베이스에 있는 예약 작업 옵션 중에는 기본값이 활성"
-"화되지 **않은** 작업도 다수 있습니다."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:13
-msgid ""
-"In Odoo *Subscriptions*, there are two scheduled actions that initiate the "
-"billing process for active recurring subscriptions, as well as when billing "
-"should stop due to subscription expiration."
-msgstr ""
-"Odoo *구독* 에서는 두 가지 예약된 작업을 통해 활성화 상태인 정기 결제 구독에 "
-"대한 청구 프로세스를 시작할 수 있으며, 구독 만료로 인해 청구를 중지하도록 할 "
-"수도 있습니다."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:16
-msgid ""
-"They are turned on, by default and can be deactivated at any time in order "
-"to manage subscriptions manually."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:20
-msgid "Access scheduled actions"
-msgstr "예약된 활동 액세스"
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:23
-msgid ""
-"In order to access scheduled actions, :ref:`developer mode <developer-mode>` "
-"**must** be activated."
-msgstr ""
-"예약된 작업에 액세스하려면 **반드시** :ref:`개발자 모드 <developer-mode>` 를 "
-"활성화해야 합니다."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:26
-msgid ""
-"With developer mode activated, navigate to :menuselection:`Settings app --> "
-"Technical --> Scheduled Actions`."
-msgstr ""
-"개발자 모드가 활성화된 상태에서 :menuselection:`설정 앱 --> 기술 --> 예약된 "
-"작업` 으로 이동합니다."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:None
-msgid ""
-"The scheduled actions option under the technical menu in the Odoo Settings "
-"application."
-msgstr "Odoo 설정 애플리케이션의 기술 메뉴 아래에 있는 예약된 작업 옵션입니다."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:33
-msgid ""
-"Doing so reveals a dedicated :guilabel:`Scheduled Actions` dashboard. On "
-"this page, there is a complete list of scheduled actions for the entire "
-"database."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:36
-msgid ""
-"From here, enter `Subscription` in the search bar. Doing so provides three "
-"subscription-specific results. The following documentation focuses on the "
-"last two results in the list:"
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:39
-msgid ":guilabel:`Sale Subscription: generate recurring invoices and payments`"
-msgstr ":guilabel:`판매 구독 : 반복 청구 및 결제 생성`"
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:40
-msgid ":guilabel:`Sale Subscription: subscriptions expiration`"
-msgstr ":guilabel:`판매 구독: 구독 만료`"
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:None
-msgid ""
-"The subscription-related results on the scheduled actions page in Odoo "
-"Settings."
-msgstr "Odoo 설정에서 예약된 작업 페이지에 구독 관련된 결과가 표시됩니다."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:46
-msgid ""
-"Determine if a scheduled action is active by looking under "
-"the :guilabel:`Active` column, in the corresponding row on "
-"the :guilabel:`Scheduled Actions` dashboard, for a ticked checkbox; if the "
-"checkbox is green with a check mark, the scheduled action is active."
-msgstr ""
-"예약한 활동이 활성화 상태인지 확인하려면 :guilabel:`예약된 활동` 현황판에 있"
-"는 해당 행에서 :guilabel:`활성화` 열 아래쪽 확인란에 표시가 되어 있는지 확인"
-"합니다. 확인란에 초록색으로 확인 표시가 되어 있으면 예약된 작업이 활성화되어 "
-"있는 것입니다."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:50
-msgid ""
-"If a scheduled action needs to be activated, click into the desired "
-"scheduled action from the list."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:None
-msgid "The scheduled action form in the Odoo Settings application."
-msgstr "Odoo 설정 애플리케이션에서 예약된 작업 양식입니다."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:55
-msgid ""
-"Then, from the scheduled action form, toggle the switch in "
-"the :guilabel:`Active` field to the right. Doing so turns the switch green, "
-"indicating that the scheduled action is now `Active`."
-msgstr ""
-"그런 다음 예약된 작업 양식에서 :guilabel:`활성화` 토글 스위치를 오른쪽으로 전"
-"환합니다. 그러면 스위치가 초록색으로 바뀌고 예약된 작업이 이제 '활성화' 상태"
-"라는 것을 알 수 있습니다."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:58
-msgid ""
-"The ability to set up how often the scheduled action runs is also available "
-"on the scheduled action form, in the :guilabel:`Execute Every` field."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:62
-msgid ""
-"The scheduled action does **not** function correctly if the execution time "
-"is less than five minutes. This is a general rule for all scheduled actions."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:65
-msgid ""
-"For more information, read the :doc:`Frequent Technical Questions </"
-"administration/odoo_sh/advanced/frequent_technical_questions>` documentation."
-msgstr ""
-"자세한 내용은 :doc:`자주 묻는 기술 질문 </administration/odoo_sh/advanced/"
-"frequent_technical_questions>` 문서를 참조하세요."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:69
-msgid "Generate recurring invoices and payments"
-msgstr "정기 결제 청구서 및 결제 생성하기"
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:71
-msgid ""
-"In order for the :guilabel:`Sale Subscription: generate recurring invoices "
-"and payments` scheduled action to properly generate recurring invoices and "
-"payments on subscriptions, the *Deferred Expense* and *Deferred Revenue* "
-"accounts **must** be set up, in order for Odoo to process various invoices "
-"and payments related to subscriptions."
-msgstr ""
-":guilabel:`판매 구독: 반복 청구서 및 결제 생성` 활동을 예약하여 구독에 대한 "
-"반복 청구서 및 결제를 알맞게 생성하려면 **반드시** *이연 비용* 및 *이연 수익"
-"* 계정을  설정해야 하며, 이를 통해 Odoo에서 구독과 관련된 다양한 청구서 및 결"
-"제 항목을 처리할 수 있습니다."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:76
-msgid ""
-"To set up *Deferred Expense* and *Deferred Revenue* accounts, navigate "
-"to :menuselection:`Accounting app --> Configuration --> Settings`. Both "
-"accounts can be configured in the :guilabel:`Default Accounts` section."
-msgstr ""
-"*이연 비용* 및 *이연 수익* 계정을 설정하려면 :menuselection:`회계 앱 --> 환경"
-"설정 --> 설정` 으로 이동합니다. 두 계정 모두 :guilabel:`기본 계정` 섹션에서 "
-"설정할 수 있습니다."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:None
-msgid ""
-"The necessary deferred account settings in the Odoo Accounting app's "
-"settings page."
-msgstr "Odoo 회계 앱의 설정 페이지에서 필수 이연 계정 설정 항목입니다."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:84
-msgid ""
-"Once the correct accounts are entered in the :guilabel:`Deferred Expense` "
-"and :guilabel:`Deferred Revenue` drop-down menu fields, "
-"click :guilabel:`Save` in the upper-left corner."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:88
-msgid "Create invoice"
-msgstr "청구서 생성"
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:90
-msgid ""
-"Elements related to the :guilabel:`Sale Subscription: generate recurring "
-"invoices and payments` scheduled action can be found on confirmed "
-"subscription sales orders."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:93
-msgid ""
-"To examine these elements, open any confirmed sales order in the "
-"*Subscriptions* application to reveal the subscription sales order form."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:96
-msgid ""
-"On a confirmed subscription sales order form, focus on "
-"the :guilabel:`Recurring Plan` and :guilabel:`Date of Next Invoice` fields."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:None
-msgid ""
-"A confirmed subscription sales order in the Odoo Subscriptions application."
-msgstr "Odoo 구독 애플리케이션에구독 판매주문서가 확정된 모습입니다."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:103
-msgid ""
-"The scheduled action creates an invoice when today's date is the same date "
-"as the :guilabel:`Date of Next Invoice`."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:106
-msgid ""
-"Odoo uses the information in the :guilabel:`Recurring Plan` field to update "
-"the next invoice date accordingly."
-msgstr ""
-"Odoo는 :guilabel:`정기 구독 요금제` 필드의 정보를 활용하여 다음 청구서 날짜"
-"를 알맞게 업데이트합니다."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:110
-msgid ""
-"If the product invoicing policy is set to *Based on Delivered Quantities "
-"(Manual)*, and the delivered quantity is `0`, Odoo does **not** create an "
-"invoice, and the customer is not charged."
-msgstr ""
-"제품에 설정된 청구서 발행 정책이 *납품 수량 기준 (수동)* 으로 되어 있고 납품 "
-"수량이 `0`인 경우, Odoo에서 청구서는 생성되지 **않으며** 고객에게 요금이 청구"
-"되지 않습니다."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:113
-msgid ""
-"Instead, the subscription is processed as a free recurring product, and is "
-"reflected as such in the *chatter* of the subscription sales order."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:116
-msgid ""
-"When this occurs, the following message appears: `Automatic renewal "
-"succeeded. Free subscription. Next invoice:[date]. No email sent.`"
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:119
-msgid ""
-"Once the invoice for the subscription sales order is created, the invoice "
-"can be viewed by clicking the :guilabel:`Invoices` smart button that appears "
-"at the top of the subscription sales order."
-msgstr ""
-"구독용 판매주문서에 대해 청구서가 생성되면 구독용 판매주문서 상단에 표시되"
-"는 :guilabel:`청구서` 스마트 버튼을 클릭하여 청구서를 확인할 수 있습니다."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:122
-msgid ""
-"An email is sent to the customer notifying them of the recurring "
-"subscription charge, *if* there is a :guilabel:`Payment Token` on the "
-"account."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:125
-msgid ""
-"To check if there is a :guilabel:`Payment Token`, open the :guilabel:`Other "
-"Info` tab, and look at the :guilabel:`Payment Token` field, under "
-"the :guilabel:`Subscription` section."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:128
-msgid ""
-"If there is no :guilabel:`Payment Token`, the invoice is created, and sent "
-"to the customer. The payment **must** be registered manually in this case."
-msgstr ""
-":guilabel:`결제 토큰` 이 없는 경우에는 청구서를 생성한 후 고객에게 전송합니"
-"다. 이 경우 결제 등록은 **반드시** 수동으로 진행해야 합니다."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:None
-msgid ""
-"The Payment Token field under the Other Info tab on a subscription sales "
-"order form."
-msgstr "구독 판매주문서 양식의 기타 정보 탭 아래에 있는 결제 토큰 필드입니다."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:136
-msgid ""
-"If the :guilabel:`Online payment` checkbox is ticked on the :guilabel:`Other "
-"Info` tab, invoices are **not** automatically generated by the scheduled "
-"action on the date of the next invoice. Instead, invoices are generated when "
-"the client completes the manual payments for the subscription."
-msgstr ""
-":guilabel:`기타 정보` 탭에서 :guilabel:`온라인 결제` 확인란에 표시할 경우, 청"
-"구서 자동 생성 기능은 다음 청구서 발행일 기준으로 실행되지 않습니다. 대신, 청"
-"구서는 고객이 구독을 수동 결제하는 경우에 생성됩니다."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:141
-msgid ""
-"To use automatic payment and automatically generate invoices, this checkbox "
-"**must** remain empty."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:145
-msgid "Closing invoices"
-msgstr "청구서 마감"
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:147
-msgid ""
-"The :guilabel:`Sale Subscription: generate recurring invoices and payments` "
-"scheduled action also has the ability to close a subscription, if the "
-"following conditions are met:"
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:150
-msgid ""
-"If the subscription has no :guilabel:`Payment Token`, create and post the "
-"invoice."
-msgstr ""
-"구독 항목에 :guilabel:`결제 토큰` 이 없는 경우에는 청구서를 생성한 후 게시합"
-"니다."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:151
-msgid "If the subscription has a :guilabel:`Payment Token`, try to charge."
-msgstr "구독에 :guilabel:`결제 토큰` 이 있는 경우 청구를 진행해 보세요."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:153
-msgid "If the charge is successful, create and post the invoice."
-msgstr "청구가 진행된 후에는 청구서를 생성하여 게시하세요."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:154
-msgid "If the charge fails, send reminders periodically."
-msgstr "충전에 실패할 경우, 주기적으로 리마인더를 전송합니다."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:156
-msgid ""
-"Close the subscription if it continues to fail for more than fourteen days."
-msgstr "14일 이상 계속하여 실패할 경우 구독이 해지됩니다."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:159
-msgid "Subscriptions expiration"
-msgstr "구독 만료"
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:161
-msgid ""
-"The :guilabel:`Sale Subscription: subscriptions expiration` scheduled action "
-"checks for all other conditions that may cause a subscription to close "
-"automatically. If certain conditions are met, the scheduled action closes "
-"that subscription."
-msgstr ""
-":guilabel:`구독 판매: 구독 만료` 에 대한 작업을 예약하면 구독이 자동으로 종료"
-"되는 다른 조건들을 모두 확인할 수 있습니다. 일정한 조건이 충족될 경우 예약해 "
-"놓은 작업을 통해 해당 구독이 종료됩니다."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:165
-msgid ""
-"First, the :guilabel:`Sale Subscription: subscriptions expiration` scheduled "
-"action checks to see if the end date has passed, which is configured on the "
-"subscription sales order."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:None
-msgid ""
-"The expiration date on a subscription sales order in Odoo Subscriptions."
-msgstr "Odoo 구독에 나타난 구독 판매주문서의 만료일입니다."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:172
-msgid ""
-"Then, the :guilabel:`Sale Subscription: subscriptions expiration` scheduled "
-"action checks if the invoice has not been paid within the payment terms "
-"deadline."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:175
-msgid ""
-"To access the invoices attached to a subscription, access the sales order "
-"for the subscription product, and click the :guilabel:`Invoices` smart "
-"button. Then, look at the :guilabel:`Invoice Date` column."
-msgstr ""
-"정기 결제에 첨부되어 있는 청구서에 액세스하려면 구독 제품에 대한 판매주문서"
-"에 액세스한 후 :guilabel:`청구서` 스마트 버튼을 클릭합니다. 그런 다"
-"음 :guilabel:`청구서 날짜` 열을 확인합니다."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:None
-msgid ""
-"The Invoice Date column on subscriptions invoice page in Odoo Subscriptions "
-"app."
-msgstr ""
-"구독 청구서 페이지에서 청구서 날짜 열이 Odoo 구독 앱에 나타나 있는 모습입니"
-"다."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:183
-msgid ""
-"Unpaid subscriptions with an :guilabel:`Invoice Date` that are past the "
-"determined number of days in the :guilabel:`Automatic Closing` field of "
-"a :guilabel:`Recurring Plan` are automatically closed by the :guilabel:`Sale "
-"Subscription: subscriptions expiration` scheduled action."
-msgstr ""
-"미납 구독의 :guilabel:`청구일` 이 :guilabel:`정기 결제 요금제` 의 :guilabel:`"
-"자동 해지` 필드에서 지정한 날짜 수를 초과하여 미납된 경우에는, :guilabel:`판"
-"매 구독: 구독 만료' 에서 예약된 활동에 따라 자동으로 해지됩니다."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:None
-msgid ""
-"The Automatic Closing field on a Recurring Plan form in Odoo Subscriptions."
-msgstr "Odoo 구독의 정기 구독 요금제 양식에 있는 자동 해지 필드입니다."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:191
-msgid ""
-"For example, if the next invoice date is July 1st, and "
-"the :guilabel:`Automatic Closing` is set to '30 Days', the scheduled action "
-"would close the subscription on August 1st."
-msgstr ""
-"예를 들어 다음 청구서 날짜가 7월 1일이고 :guilabel:`자동 종료` 가 '30일'로 설"
-"정되어 있는 경우에는 예약된 작업을 통해 8월 1일에 구독이 종료됩니다."
-
 #: ../../content/applications/sales/subscriptions/subscriptions_deliveries.rst:3
 msgid "Subscriptions with deliveries"
 msgstr "배송 포함 구독"
@@ -35335,6 +35031,515 @@ msgstr ""
 #: ../../content/applications/sales/subscriptions/upselling.rst:80
 msgid ":doc:`../sales/products_prices/prices/discounts`"
 msgstr ":doc:`../sales/products_prices/prices/discounts`"
+
+#~ msgid ""
+#~ "The preparation display feature allows you to handle POS orders requiring "
+#~ "preparation. Concretely,"
+#~ msgstr ""
+#~ "준비 표시 기능을 활용하면 준비가 필요한 POS 주문을 처리할 수 있습니다. 구"
+#~ "체적으로는,"
+
+#~ msgid ""
+#~ "**For restaurants**: POS orders inform the kitchen of the meals to be "
+#~ "prepared."
+#~ msgstr ""
+#~ "**레스토랑의 경우**: POS 주문이 들어오면 키친에 식사 주문을 준비하도록 알"
+#~ "립니다."
+
+#~ msgid "To enable the preparation display feature,"
+#~ msgstr "준비 화면 기능을 활성화하려면,"
+
+#~ msgid "Scroll down to the :guilabel:`Preparation` section."
+#~ msgstr ":guilabel:`준비` 섹션까지 아래로 스크롤합니다;"
+
+#~ msgid "Check the :guilabel:`Preparation Display` option."
+#~ msgstr ":guilabel:`준비 화면` 옵션을 확인합니다."
+
+#~ msgid "Setting to enable the preparation display feature"
+#~ msgstr "준비 화면 기능을 활성화 설정"
+
+#~ msgid "To create and set up a preparation display,"
+#~ msgstr "준비 화면을 생성한 후 설정합니다."
+
+#~ msgid ""
+#~ "Go to :menuselection:`Point of Sale --> Orders --> Preparation Display`"
+#~ msgstr ":menuselection:`POS --> 주문서 --> 준비 화면` 으로 이동합니다."
+
+#~ msgid ""
+#~ "Give the display a descriptive :guilabel:`Name` (e.g., `Main Kitchen`, "
+#~ "`Bar`)"
+#~ msgstr ""
+#~ "화면에 :guilabel:`이름`(예: `메인 키친`, `바`)을 설명하여 지정합니다."
+
+#~ msgid "Set it up:"
+#~ msgstr "설정:"
+
+#~ msgid ""
+#~ ":guilabel:`Point of Sale`: Select the POS that sends orders to this "
+#~ "display."
+#~ msgstr ":guilabel:`POS`: 이 화면으로 주문을 전송할 POS를 선택합니다."
+
+#~ msgid ""
+#~ ":guilabel:`Product categories`: Specify the POS :guilabel:`Product "
+#~ "categories` sent to this display."
+#~ msgstr ""
+#~ ":guilabel:`품목 카테고리`: 이 화면으로 전송된 POS :guilabel:`품목 카테고리"
+#~ "` 를 지정합니다."
+
+#~ msgid ""
+#~ ":guilabel:`Stages`: Define the steps required for the orders to be ready."
+#~ msgstr ":guilabel:`단계`: 주문 준비에 필요한 단계를 지정합니다."
+
+#~ msgid "Assign specific colors to each stage for clarity (optional)."
+#~ msgstr "명확하게 구분되도록 각 단계마다 색상을 지정합니다(선택 사항)."
+
+#~ msgid ""
+#~ "Define an :guilabel:`Alert timer (min)` for each stage to indicate the "
+#~ "expected processing time."
+#~ msgstr ""
+#~ "각 단계별로 :guilabel:`알림 타이머(분)` 를 지정하여 예상 처리 시간을 표시"
+#~ "합니다."
+
+#~ msgid "preparation display set-up form"
+#~ msgstr "준비 화면 설정 양식"
+
+#~ msgid "The configured stages."
+#~ msgstr "환경설정이 되어 있는 단계입니다."
+
+#~ msgid ""
+#~ "Click the :guilabel:`Kitchen Display` app icon on your Odoo Dashboard for "
+#~ "quicker access."
+#~ msgstr ""
+#~ "Odoo 현황판에 있는 :guilabel:`주방 화면` 앱 아이콘을 클릭하면 더욱 빠르게 "
+#~ "액세스할 수 있습니다."
+
+#~ msgid "Using the preparation display"
+#~ msgstr "준비 화면 사용하기"
+
+#~ msgid ""
+#~ "To access the preparation display, click :guilabel:`Preparation Screen`. "
+#~ "This interface, designed for employees, shows:"
+#~ msgstr ""
+#~ "준비 화면에 액세스하려면 :guilabel:`준비 화면` 을 클릭합니다. 이 인터페이"
+#~ "스는 직원용으로 설계되었으며 다음 내용이 표시됩니다."
+
+#~ msgid "**Order cards**: Summarizes individual orders, including:"
+#~ msgstr "**주문 카드**: 다음과 같은 개별 주문이 요약되어 있습니다."
+
+#~ msgid "Associated tables and order numbers."
+#~ msgstr "관련된 테이블 및 주문 번호입니다."
+
+#~ msgid "Status, such as `Ready`, highlighted with the defined colors."
+#~ msgstr "상태에는 '준비' 상태 등이 있으며, 지정한 색상으로 강조 표시됩니다."
+
+#~ msgid "Waiting time, with visual indicators."
+#~ msgstr "대기 시간이 시각적인 표시로 나타난 모습입니다."
+
+#~ msgid ""
+#~ "The duration indicator turns red if the elapsed time exceeds the "
+#~ "predefined alert time."
+#~ msgstr ""
+#~ "미리 지정된 알림 시간을 경과할 경우 소요 시간 표시기가 빨간색으로 바뀝니"
+#~ "다."
+
+#~ msgid "the preparation display interface with orders to process."
+#~ msgstr "처리할 주문이 나타나 있는 준비 화면 인터페이스입니다."
+
+#~ msgid "To update order progress:"
+#~ msgstr "주문 진행 상황을 업데이트합니다:"
+
+#~ msgid "Click items on the order card to cross them off individually."
+#~ msgstr "주문 카드에서 개별적으로 항목을 클릭하여 삭제합니다."
+
+#~ msgid "Click the order card itself to mark all items at once."
+#~ msgstr "주문 카드 자체를 클릭하면 모든 항목이 한 번에 표시합니다."
+
+#~ msgid ""
+#~ "The card automatically moves to the next stage once every item is crossed "
+#~ "off."
+#~ msgstr ""
+#~ "모든 항목에 확인 표시가 되면 카드는 자동으로 다음 단계로 이동합니다."
+
+#~ msgid "The order number can be found at the top of the customer's receipt."
+#~ msgstr "주문 번호는 고객 영수증 상단에서 확인할 수 있습니다."
+
+#~ msgid ""
+#~ "Start by navigating to :menuselection:`Subscriptions app --> "
+#~ "Configuration --> Recurring Plans`. From there, either create a new plan "
+#~ "by clicking :guilabel:`New` or select an existing one to modify it."
+#~ msgstr ""
+#~ ":menuselection:`구독 앱 --> 환경설정 --> 정기 결제 요금제` 로 이동하여 시"
+#~ "작합니다. 거기에서 :guilabel:`새로 만들기` 를 클릭하여 새 요금제를 생성하"
+#~ "거나 기존 요금제를 선택하여 수정합니다."
+
+#~ msgid "The Closable option on a recurring plan form in Odoo Subscriptions."
+#~ msgstr "Odoo 구독의 정기 구독 요금제 양식에 있는 해지 옵션입니다."
+
+#~ msgid "Administrator view"
+#~ msgstr "관리자 보기"
+
+#~ msgid ""
+#~ "At that point, the ability to close the subscription becomes available, "
+#~ "via the :guilabel:`Close` button at the top of the subscription order, "
+#~ "near the row that contains :guilabel:`In Progress` and other stages. This "
+#~ "option is also available after the order has been invoiced and the "
+#~ "payment has been registered."
+#~ msgstr ""
+#~ "이 시점에서 :guilabel:`진행 중` 및 기타 단계가 있는 행 근처 구독 주문 상단"
+#~ "에 있는 :guilabel:`닫기` 버튼을 통해 구독 해지 기능을 사용할 수 있습니다. "
+#~ "이 옵션은 주문 관련된 청구서가 발행되고 결제 등록이 된 후에도 사용할 수 있"
+#~ "습니다."
+
+#~ msgid ""
+#~ "Close subscription from an administration point of view with Odoo "
+#~ "Subscriptions."
+#~ msgstr "Odoo 구독을 사용하면 관리자 측에서 구독을 종료할 수 있습니다."
+
+#~ msgid ""
+#~ "Clicking the :guilabel:`Close` button prompts a :guilabel:`Close Reason` "
+#~ "pop-up window to appear, allowing administrators to input the reason for "
+#~ "closing the subscription, or choose from the drop-down menu of options in "
+#~ "the :guilabel:`Reason` field."
+#~ msgstr ""
+#~ ":guilabel:`해지` 버튼을 클릭하면 :guilabel:`해지 사유` 팝업 창이 나타납니"
+#~ "다. 여기에서 관리자가 구독 해지 사유를 입력하거나 ::guilabel:`사유` 항목"
+#~ "에 대한 드롭다운 메뉴에서 선택할 수 있습니다."
+
+#~ msgid ""
+#~ "The Close Reason pop-up when the Close button is clicked in Odoo "
+#~ "Subscriptions."
+#~ msgstr "Odoo 구독에서 해지 버튼을 클릭하면 해지 사유 팝업이 나타납니다."
+
+#~ msgid ""
+#~ "When the desired :guilabel:`Reason` is entered, click "
+#~ "the :guilabel:`Submit` button."
+#~ msgstr ""
+#~ "원하는 :guilabel:`사유` 를 입력한 후 :guilabel:`제출` 버튼을 클릭합니다."
+
+#~ msgid ""
+#~ "A churned sales order for a closed subscription in Odoo Subscriptions."
+#~ msgstr "Odoo 구독에서 구독 해지 건과 관련하여 종료된 판매주문서입니다."
+
+#~ msgid ""
+#~ "That same close reason can be found in the *Chatter* of the sales order, "
+#~ "as well."
+#~ msgstr ""
+#~ "동일한 마감 사유를 판매주문서의 *메시지창* 에서도 확인할 수 있습니다."
+
+#~ msgid ""
+#~ "The chatter of a churned sales order for a closed subscription in Odoo "
+#~ "Subscriptions."
+#~ msgstr ""
+#~ "Odoo 구독에서 구독 해지 건에 대해 메시지창에서 판매주문서가 취소되어 있는 "
+#~ "모습입니다."
+
+#~ msgid ""
+#~ "As an administrator, the ability to visualize what customers see when "
+#~ "managing their subscriptions is accessible via the :guilabel:`Preview` "
+#~ "button, located at the top of the subscription sales order."
+#~ msgstr ""
+#~ "관리자 기능으로, 고객이 구독 관리를 할 때 보이는 내용을 구독 판매주문서 상"
+#~ "단에 있는 :guilabel:`미리보기` 버튼을 통해 확인할 수 있습니다."
+
+#~ msgid ""
+#~ "Close subscription button on a customer's view of a sales order in Odoo "
+#~ "Subscriptions."
+#~ msgstr "Odoo 구독의 판매주문서에서 고객 보기에 있는 구독 해지 버튼입니다."
+
+#~ msgid ""
+#~ "When the customer clicks the :guilabel:`Close Subscription` button, "
+#~ "a :guilabel:`Close Subscription` pop-up window appears, in which the "
+#~ "customer has to choose from a select list of reasons why they are "
+#~ "choosing to close the subscription."
+#~ msgstr ""
+#~ "고객이 :guilabel:`구독 해지` 버튼을 클릭하면 :guilabel:`구독 해지` 팝업 창"
+#~ "이 나타나며, 여기에서 고객은 선택 목록에서 구독 해지 사유를 선택해야 합니"
+#~ "다."
+
+#~ msgid ""
+#~ "Customers can *only* chose a pre-configured reason why the subscription "
+#~ "is being closed. They can *not* enter a custom reason from the customer "
+#~ "portal. These selections can be adjusted by navigating "
+#~ "to :menuselection:`Subscriptions --> Configuration --> Close Reasons`."
+#~ msgstr ""
+#~ "고객이 구독을 해지할 경우 *오직* 미리 설정되어 있는 사유 중에서만 선택할 "
+#~ "수 있습니다. 고객 포털에서 사유를 사용자 지정하여 입력할 수 *없습니다*. 해"
+#~ "당 항목은 :menuselection:`구독 --> 환경 설정 --> 해지 사유` 로 이동하여 조"
+#~ "정할 수 있습니다."
+
+#~ msgid ""
+#~ "Upon closure, the subscription order in the customer portal is tagged "
+#~ "as :guilabel:`Closed`."
+#~ msgstr ""
+#~ "해지할 경우, 고객 포털에 있는 구독 주문서에 :guilabel:`해지 완료` 태그가 "
+#~ "지정됩니다."
+
+#~ msgid "Scheduled actions"
+#~ msgstr "예약된 활동"
+
+#~ msgid ""
+#~ "*Scheduled actions* are pre-configured processes that allow users to "
+#~ "automate certain tasks within a database, based on a designated schedule "
+#~ "or number of occurrences. These tasks can include sending emails, "
+#~ "generating invoices, data clean-up, and so much more."
+#~ msgstr ""
+#~ "*예약된 작업* 은 지정된 일정이나 발생 횟수에 따라 데이터베이스 내에서의 특"
+#~ "정 작업을 자동화할 수 있도록 사전 설정되된 프로세스입니다. 이러한 작업에"
+#~ "는 이메일 보내기, 청구서 생성, 데이터 정리 등이 있습니다."
+
+#~ msgid ""
+#~ "In Odoo, some scheduled actions are active, by default, to ensure that "
+#~ "certain functions are triggered automatically, however there are *also* "
+#~ "many scheduled action options that appear in the database that are "
+#~ "**not** activated by default."
+#~ msgstr ""
+#~ "Odoo에서는 특정 기능이 자동으로 실행되도록 예약 작업 일부가 기본적으로 활"
+#~ "성화되어 있으나, *동시에* 데이터베이스에 있는 예약 작업 옵션 중에는 기본값"
+#~ "이 활성화되지 **않은** 작업도 다수 있습니다."
+
+#~ msgid ""
+#~ "In Odoo *Subscriptions*, there are two scheduled actions that initiate "
+#~ "the billing process for active recurring subscriptions, as well as when "
+#~ "billing should stop due to subscription expiration."
+#~ msgstr ""
+#~ "Odoo *구독* 에서는 두 가지 예약된 작업을 통해 활성화 상태인 정기 결제 구독"
+#~ "에 대한 청구 프로세스를 시작할 수 있으며, 구독 만료로 인해 청구를 중지하도"
+#~ "록 할 수도 있습니다."
+
+#~ msgid "Access scheduled actions"
+#~ msgstr "예약된 활동 액세스"
+
+#~ msgid ""
+#~ "In order to access scheduled actions, :ref:`developer mode <developer-"
+#~ "mode>` **must** be activated."
+#~ msgstr ""
+#~ "예약된 작업에 액세스하려면 **반드시** :ref:`개발자 모드 <developer-mode>` "
+#~ "를 활성화해야 합니다."
+
+#~ msgid ""
+#~ "With developer mode activated, navigate to :menuselection:`Settings app --"
+#~ "> Technical --> Scheduled Actions`."
+#~ msgstr ""
+#~ "개발자 모드가 활성화된 상태에서 :menuselection:`설정 앱 --> 기술 --> 예약"
+#~ "된 작업` 으로 이동합니다."
+
+#~ msgid ""
+#~ "The scheduled actions option under the technical menu in the Odoo "
+#~ "Settings application."
+#~ msgstr ""
+#~ "Odoo 설정 애플리케이션의 기술 메뉴 아래에 있는 예약된 작업 옵션입니다."
+
+#~ msgid ""
+#~ ":guilabel:`Sale Subscription: generate recurring invoices and payments`"
+#~ msgstr ":guilabel:`판매 구독 : 반복 청구 및 결제 생성`"
+
+#~ msgid ":guilabel:`Sale Subscription: subscriptions expiration`"
+#~ msgstr ":guilabel:`판매 구독: 구독 만료`"
+
+#~ msgid ""
+#~ "The subscription-related results on the scheduled actions page in Odoo "
+#~ "Settings."
+#~ msgstr "Odoo 설정에서 예약된 작업 페이지에 구독 관련된 결과가 표시됩니다."
+
+#~ msgid ""
+#~ "Determine if a scheduled action is active by looking under "
+#~ "the :guilabel:`Active` column, in the corresponding row on "
+#~ "the :guilabel:`Scheduled Actions` dashboard, for a ticked checkbox; if "
+#~ "the checkbox is green with a check mark, the scheduled action is active."
+#~ msgstr ""
+#~ "예약한 활동이 활성화 상태인지 확인하려면 :guilabel:`예약된 활동` 현황판에 "
+#~ "있는 해당 행에서 :guilabel:`활성화` 열 아래쪽 확인란에 표시가 되어 있는지 "
+#~ "확인합니다. 확인란에 초록색으로 확인 표시가 되어 있으면 예약된 작업이 활성"
+#~ "화되어 있는 것입니다."
+
+#~ msgid "The scheduled action form in the Odoo Settings application."
+#~ msgstr "Odoo 설정 애플리케이션에서 예약된 작업 양식입니다."
+
+#~ msgid ""
+#~ "Then, from the scheduled action form, toggle the switch in "
+#~ "the :guilabel:`Active` field to the right. Doing so turns the switch "
+#~ "green, indicating that the scheduled action is now `Active`."
+#~ msgstr ""
+#~ "그런 다음 예약된 작업 양식에서 :guilabel:`활성화` 토글 스위치를 오른쪽으"
+#~ "로 전환합니다. 그러면 스위치가 초록색으로 바뀌고 예약된 작업이 이제 '활성"
+#~ "화' 상태라는 것을 알 수 있습니다."
+
+#~ msgid ""
+#~ "For more information, read the :doc:`Frequent Technical Questions </"
+#~ "administration/odoo_sh/advanced/frequent_technical_questions>` "
+#~ "documentation."
+#~ msgstr ""
+#~ "자세한 내용은 :doc:`자주 묻는 기술 질문 </administration/odoo_sh/advanced/"
+#~ "frequent_technical_questions>` 문서를 참조하세요."
+
+#~ msgid "Generate recurring invoices and payments"
+#~ msgstr "정기 결제 청구서 및 결제 생성하기"
+
+#~ msgid ""
+#~ "In order for the :guilabel:`Sale Subscription: generate recurring "
+#~ "invoices and payments` scheduled action to properly generate recurring "
+#~ "invoices and payments on subscriptions, the *Deferred Expense* and "
+#~ "*Deferred Revenue* accounts **must** be set up, in order for Odoo to "
+#~ "process various invoices and payments related to subscriptions."
+#~ msgstr ""
+#~ ":guilabel:`판매 구독: 반복 청구서 및 결제 생성` 활동을 예약하여 구독에 대"
+#~ "한 반복 청구서 및 결제를 알맞게 생성하려면 **반드시** *이연 비용* 및 *이"
+#~ "연 수익* 계정을  설정해야 하며, 이를 통해 Odoo에서 구독과 관련된 다양한 청"
+#~ "구서 및 결제 항목을 처리할 수 있습니다."
+
+#~ msgid ""
+#~ "To set up *Deferred Expense* and *Deferred Revenue* accounts, navigate "
+#~ "to :menuselection:`Accounting app --> Configuration --> Settings`. Both "
+#~ "accounts can be configured in the :guilabel:`Default Accounts` section."
+#~ msgstr ""
+#~ "*이연 비용* 및 *이연 수익* 계정을 설정하려면 :menuselection:`회계 앱 --> "
+#~ "환경설정 --> 설정` 으로 이동합니다. 두 계정 모두 :guilabel:`기본 계정` 섹"
+#~ "션에서 설정할 수 있습니다."
+
+#~ msgid ""
+#~ "The necessary deferred account settings in the Odoo Accounting app's "
+#~ "settings page."
+#~ msgstr "Odoo 회계 앱의 설정 페이지에서 필수 이연 계정 설정 항목입니다."
+
+#~ msgid "Create invoice"
+#~ msgstr "청구서 생성"
+
+#~ msgid ""
+#~ "A confirmed subscription sales order in the Odoo Subscriptions "
+#~ "application."
+#~ msgstr "Odoo 구독 애플리케이션에구독 판매주문서가 확정된 모습입니다."
+
+#~ msgid ""
+#~ "Odoo uses the information in the :guilabel:`Recurring Plan` field to "
+#~ "update the next invoice date accordingly."
+#~ msgstr ""
+#~ "Odoo는 :guilabel:`정기 구독 요금제` 필드의 정보를 활용하여 다음 청구서 날"
+#~ "짜를 알맞게 업데이트합니다."
+
+#~ msgid ""
+#~ "If the product invoicing policy is set to *Based on Delivered Quantities "
+#~ "(Manual)*, and the delivered quantity is `0`, Odoo does **not** create an "
+#~ "invoice, and the customer is not charged."
+#~ msgstr ""
+#~ "제품에 설정된 청구서 발행 정책이 *납품 수량 기준 (수동)* 으로 되어 있고 납"
+#~ "품 수량이 `0`인 경우, Odoo에서 청구서는 생성되지 **않으며** 고객에게 요금"
+#~ "이 청구되지 않습니다."
+
+#~ msgid ""
+#~ "Once the invoice for the subscription sales order is created, the invoice "
+#~ "can be viewed by clicking the :guilabel:`Invoices` smart button that "
+#~ "appears at the top of the subscription sales order."
+#~ msgstr ""
+#~ "구독용 판매주문서에 대해 청구서가 생성되면 구독용 판매주문서 상단에 표시되"
+#~ "는 :guilabel:`청구서` 스마트 버튼을 클릭하여 청구서를 확인할 수 있습니다."
+
+#~ msgid ""
+#~ "If there is no :guilabel:`Payment Token`, the invoice is created, and "
+#~ "sent to the customer. The payment **must** be registered manually in this "
+#~ "case."
+#~ msgstr ""
+#~ ":guilabel:`결제 토큰` 이 없는 경우에는 청구서를 생성한 후 고객에게 전송합"
+#~ "니다. 이 경우 결제 등록은 **반드시** 수동으로 진행해야 합니다."
+
+#~ msgid ""
+#~ "The Payment Token field under the Other Info tab on a subscription sales "
+#~ "order form."
+#~ msgstr ""
+#~ "구독 판매주문서 양식의 기타 정보 탭 아래에 있는 결제 토큰 필드입니다."
+
+#~ msgid ""
+#~ "If the :guilabel:`Online payment` checkbox is ticked on "
+#~ "the :guilabel:`Other Info` tab, invoices are **not** automatically "
+#~ "generated by the scheduled action on the date of the next invoice. "
+#~ "Instead, invoices are generated when the client completes the manual "
+#~ "payments for the subscription."
+#~ msgstr ""
+#~ ":guilabel:`기타 정보` 탭에서 :guilabel:`온라인 결제` 확인란에 표시할 경"
+#~ "우, 청구서 자동 생성 기능은 다음 청구서 발행일 기준으로 실행되지 않습니"
+#~ "다. 대신, 청구서는 고객이 구독을 수동 결제하는 경우에 생성됩니다."
+
+#~ msgid "Closing invoices"
+#~ msgstr "청구서 마감"
+
+#~ msgid ""
+#~ "If the subscription has no :guilabel:`Payment Token`, create and post the "
+#~ "invoice."
+#~ msgstr ""
+#~ "구독 항목에 :guilabel:`결제 토큰` 이 없는 경우에는 청구서를 생성한 후 게시"
+#~ "합니다."
+
+#~ msgid "If the subscription has a :guilabel:`Payment Token`, try to charge."
+#~ msgstr "구독에 :guilabel:`결제 토큰` 이 있는 경우 청구를 진행해 보세요."
+
+#~ msgid "If the charge is successful, create and post the invoice."
+#~ msgstr "청구가 진행된 후에는 청구서를 생성하여 게시하세요."
+
+#~ msgid "If the charge fails, send reminders periodically."
+#~ msgstr "충전에 실패할 경우, 주기적으로 리마인더를 전송합니다."
+
+#~ msgid ""
+#~ "Close the subscription if it continues to fail for more than fourteen "
+#~ "days."
+#~ msgstr "14일 이상 계속하여 실패할 경우 구독이 해지됩니다."
+
+#~ msgid "Subscriptions expiration"
+#~ msgstr "구독 만료"
+
+#~ msgid ""
+#~ "The :guilabel:`Sale Subscription: subscriptions expiration` scheduled "
+#~ "action checks for all other conditions that may cause a subscription to "
+#~ "close automatically. If certain conditions are met, the scheduled action "
+#~ "closes that subscription."
+#~ msgstr ""
+#~ ":guilabel:`구독 판매: 구독 만료` 에 대한 작업을 예약하면 구독이 자동으로 "
+#~ "종료되는 다른 조건들을 모두 확인할 수 있습니다. 일정한 조건이 충족될 경우 "
+#~ "예약해 놓은 작업을 통해 해당 구독이 종료됩니다."
+
+#~ msgid ""
+#~ "The expiration date on a subscription sales order in Odoo Subscriptions."
+#~ msgstr "Odoo 구독에 나타난 구독 판매주문서의 만료일입니다."
+
+#~ msgid ""
+#~ "To access the invoices attached to a subscription, access the sales order "
+#~ "for the subscription product, and click the :guilabel:`Invoices` smart "
+#~ "button. Then, look at the :guilabel:`Invoice Date` column."
+#~ msgstr ""
+#~ "정기 결제에 첨부되어 있는 청구서에 액세스하려면 구독 제품에 대한 판매주문"
+#~ "서에 액세스한 후 :guilabel:`청구서` 스마트 버튼을 클릭합니다. 그런 다"
+#~ "음 :guilabel:`청구서 날짜` 열을 확인합니다."
+
+#~ msgid ""
+#~ "The Invoice Date column on subscriptions invoice page in Odoo "
+#~ "Subscriptions app."
+#~ msgstr ""
+#~ "구독 청구서 페이지에서 청구서 날짜 열이 Odoo 구독 앱에 나타나 있는 모습입"
+#~ "니다."
+
+#~ msgid ""
+#~ "Unpaid subscriptions with an :guilabel:`Invoice Date` that are past the "
+#~ "determined number of days in the :guilabel:`Automatic Closing` field of "
+#~ "a :guilabel:`Recurring Plan` are automatically closed by "
+#~ "the :guilabel:`Sale Subscription: subscriptions expiration` scheduled "
+#~ "action."
+#~ msgstr ""
+#~ "미납 구독의 :guilabel:`청구일` 이 :guilabel:`정기 결제 요금제` "
+#~ "의 :guilabel:`자동 해지` 필드에서 지정한 날짜 수를 초과하여 미납된 경우에"
+#~ "는, :guilabel:`판매 구독: 구독 만료' 에서 예약된 활동에 따라 자동으로 해지"
+#~ "됩니다."
+
+#~ msgid ""
+#~ "The Automatic Closing field on a Recurring Plan form in Odoo "
+#~ "Subscriptions."
+#~ msgstr "Odoo 구독의 정기 구독 요금제 양식에 있는 자동 해지 필드입니다."
+
+#~ msgid ""
+#~ "For example, if the next invoice date is July 1st, and "
+#~ "the :guilabel:`Automatic Closing` is set to '30 Days', the scheduled "
+#~ "action would close the subscription on August 1st."
+#~ msgstr ""
+#~ "예를 들어 다음 청구서 날짜가 7월 1일이고 :guilabel:`자동 종료` 가 '30"
+#~ "일'로 설정되어 있는 경우에는 예약된 작업을 통해 8월 1일에 구독이 종료됩니"
+#~ "다."
 
 #~ msgid ""
 #~ "Subscription products can be sold in the Odoo *eCommerce* shop just like "
