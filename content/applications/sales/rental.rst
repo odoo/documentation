@@ -47,8 +47,8 @@ Configuration --> Settings`.
 In the :guilabel:`Rental` section, enable :guilabel:`Rental Transfers` to use stock deliveries and
 receipts for rental orders.
 
-If a rental business has :ref:`multiple locations <rental/multi-location-management>`, rental
-products can be transferred and tracked between them.
+If a rental business has :ref:`multiple locations <rental/configure_products/multi-location>`,
+rental products can be transferred and tracked between them.
 
 In the :guilabel:`Rent Online` section, designate :guilabel:`Unavailability days` when pickup and
 return are not allowed.
