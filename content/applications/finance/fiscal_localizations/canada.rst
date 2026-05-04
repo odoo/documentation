@@ -116,7 +116,7 @@ values that prefix individual journal entries:
           | :guilabel:`Foreign Exchange Loss`
           | :guilabel:`Cash Difference Loss`
       * - :guilabel:`Current Year Earnings`
-        - :guilabel:`Undistributed Profits/Losses`
+        - :guilabel:`Retained Earnings/Deficits, Unappropriated`
       * - :guilabel:`Receivable`
         - :guilabel:`Account Receivable`
       * - :guilabel:`Payable`
