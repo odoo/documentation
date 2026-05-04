@@ -4,157 +4,177 @@
 Phone widget
 ============
 
-The **Phone** widget is an add-on made available to Odoo users by installing the **Phone** app.
-Instead of managing mobile devices for every salesperson, fumbling through call transfers for upset
-customers, or needing a meeting room to handle a conference call, utilize the **Phone** widget to
-tackle any of these business needs.
+The **Phone** widget is a companion to the **Phone** app that can be used to :ref:`handle calls
+<phone/phone_widget/handle-calls>` and :ref:`manage related records
+<phone/phone_widget/manage-related-records>`. The widget stays open when navigating other Odoo apps,
+turning voice communication into a seamless part of the Odoo workflow.
 
-Navigate the Phone widget
-=========================
+.. _phone/phone_widget/configuration:
 
-The **Phone** widget contains four tabs: :guilabel:`Keypad`, :guilabel:`Recent`,
-:guilabel:`Contacts`, and :guilabel:`Activities`, which are used for managing calls and day-to-day
-activities in Odoo. Use the search bar to find contacts faster.
+Configuration
+=============
 
-.. image:: phone_widget/phone-widget.png
-   :alt: The **Phone** widget has four tabs: **Keypad**, **Recent**, **Contacts**, and **Activities**.
+To make calls through the **Phone** widget, enable microphone and speaker access in the browser
+settings.
 
-Keypad tab
-----------
+Click the :icon:`fa-microphone` :guilabel:`(microphone)` icon at the top of the widget and select
+:guilabel:`Click to Activate`, then click :guilabel:`Use Microphone` to open the browser settings.
+In the settings, select the option to allow access. When microphone and speaker access is allowed,
+the icon has a purple :icon:`fa-cog` icon :guilabel:`(Audio settings)`.
 
-Under the :guilabel:`Keypad` tab of the **Phone** widget, the user can type a name or number to make
-a call. There is also a numeric keypad for the user to enter the phone number.
+If the Odoo database does not have permission to access the microphone and speaker, the
+:icon:`fa-microphone` :guilabel:`(microphone)` icon at the top of the widget has a red
+:icon:`fa-exclamation-circle` icon :guilabel:`(Microphone access has not been granted yet)` instead.
 
-Recent tab
-----------
+.. _phone/phone_widget/navigation:
 
-Under the :guilabel:`Recent` tab of the **Phone** widget, the call history for the user is
-available. This includes incoming and outgoing calls. Any number can be clicked to begin a call.
+Navigation
+==========
 
-Contacts tab
-------------
+To open the **Phone** widget, click the :icon:`oi-voip` :guilabel:`(Show Softphone)` icon in the top
+corner of the screen. The widget also opens when clicking :icon:`fa-phone` :guilabel:`Call` next to
+a contact's phone number to initiate a call.
 
-Under the :guilabel:`Contacts` tab of the **Phone** widget, the user can access a contact in the
-**Contacts** app.
+Click the :icon:`oi-voip` :guilabel:`(Hide Softphone)` icon again to close the widget.
 
-Any contact that has a saved phone number can be called by clicking into the contact from the
-*Phone* widget's :guilabel:`Contacts` tab.
+The **Phone** widget contains four tabs:
 
-A search feature is also available at the top of the widget, represented by a :icon:`fa-search`
-:guilabel:`(search)` icon. Use this tool to find a specific contact. Scheduled activities will not
-appear as search results.
+- :icon:`oi-numpad` :guilabel:`Keypad`: Makes :ref:`outbound calls
+  <phone/phone_widget/outbound-call>`. Use the numeric keypad to dial a number, or type a name or
+  number to search for a contact. Click the :icon:`fa-globe` and/or :guilabel:`(country flag)` icon
+  to fill in a country code.
+- :icon:`fa-history` :guilabel:`Recent`: Lists recent :ref:`inbound calls
+  <phone/phone_widget/inbound-call>` and :ref:`outbound calls <phone/phone_widget/outbound-call>` on
+  the account, grouped by date. Click a call from the list to see the contact's phone number and
+  company name, and click the :icon:`fa-list-ul` :guilabel:`(Open full history)` icon to view the
+  full call history in the **Phone** app.
+- :icon:`fa-address-book-o` :guilabel:`Contacts`: Lists :doc:`contacts <../../essentials/contacts>`
+  that have a saved phone number. Click the :icon:`fa-phone` :guilabel:`(Call)` icon next to a
+  contact to call them, or click the contact's name to view their company name and phone number.
+- :icon:`fa-clock-o` :guilabel:`Activities`: Lists call :doc:`activities
+  <../../essentials/activities>` assigned to the user, grouped by due date.
 
-Activities tab
---------------
+.. _phone/phone_widget/handle-calls:
 
-Under the :guilabel:`Activities` tab of the **Phone** widget, a user can see any calls assigned to
-them, and which ones are due to be completed for the day.
+Handle calls
+============
 
-Click an activity from this tab to perform any of these actions to prepare for and complete (found
-under the **Documents** heading):
+.. _phone/phone_widget/outbound-call:
 
-- :icon:`fa-user` :guilabel:`Contact`: opens the contact information for this contact.
-- :icon:`fa-star` :guilabel:`Leads/Create Lead`: opens the lead information for this contact.
-- :icon:`oi-arrow-right` :guilabel:`(Open related record)`: opens the attached record in Odoo (like
-     Sales Orders, Invoices, Projects, Events).
-
-When viewing the activity, the user can also manage the activity's details and status:
-
-- :icon:`fa-check` :guilabel:`(Done)`: marks the activity as complete.
-- :icon:`fa-pencil` :guilabel:`(Edit)`: edits the activity (like its due date).
-- :icon:`fa-close` :guilabel:`(Cancel)`: cancels the activity.
-
-To call the customer related to a scheduled activity, click the :icon:`fa-phone` :guilabel:`(Call)`
-icon. Click the :icon:`fa-comment` :guilabel:`(SMS)` icon to send a text message.
-
-Add a call
-~~~~~~~~~~
-
-From the database home page, click :menuselection:`CRM app`. On the :guilabel:`Pipeline`, make sure
-it is open to the Kanban view. Next, near the top of the screen, click the :icon:`oi-voip`
-:guilabel:`(Show Softphone)` icon and make sure the **Phone** widget is opened to the
-:guilabel:`Activities` tab. After that, hover over the opportunity that should have a call and click
-the :icon:`fa-phone` :guilabel:`(phone)` with the small green :icon:`fa-plus` :guilabel:`(plus)`
-icon.
-
-.. image:: phone_widget/add-call.png
-   :alt: A sales opportunity with the option to add a call to the Phone widget.
-
-To remove a call from the :guilabel:`Activities` tab, hover over the opportunity that has a call
-scheduled, and click the red :icon:`fa-phone` :guilabel:`(phone)` icon that appears with the
-:icon:`fa-minus` :guilabel:`(minus)` icon.
-
-.. image:: phone_widget/remove-call.png
-   :alt: A sales opportunity with the option to remove a call from the Phone widget.
-
-Make a VoIP call with the Phone widget
-======================================
-
-One of the primary purposes of the Odoo **Phone** app is to make calls without needing a phone. Here
-are the three ways to make a phone call in the Odoo database. First, click the :icon:`oi-voip`
-:guilabel:`(Show Softphone)` icon, located in the top-right of the navigation bar. From here:
-
-- Enter the phone number to be called by clicking the :icon:`fa-keyboard-o` :guilabel:`(keyboard)`
-  icon, and then entering the phone number.
-- Click the :icon:`fa-phone` :guilabel:`(phone)` icon to redial the last called contact.
-- Search for a specific contact's name or go to the :guilabel:`Contacts` tab. Then, select the
-  contact and click the :icon:`fa-phone` :guilabel:`(phone)` icon.
-
-When receiving calls in Odoo, the **Phone** widget rings, and displays a notification. To close the
-widget, click the :icon:`oi-close` :guilabel:`(close)` icon in the upper-right of the widget screen.
-
-.. note::
-   The |VOIP| number is the one provided by Axivox. It can be accessed by navigating to
-   `https://manage.axivox.com/ <https://manage.axivox.com/>`_. After logging into the portal, go to
-   :menuselection:`Users --> Outgoing number` (column).
-
-Transfer a phone call
+Make an outbound call
 ---------------------
 
-Manually transferring a call only happens when on a call. To transfer a call within the *Phone*
-widget, first, answer the call using the green :icon:`fa-phone` :guilabel:`(phone)` icon.
-
-Once the incoming call is answered, click the :icon:`fa-arrows-h` :guilabel:`(left-right arrows)`
-icon. Then, enter the extension of the user the call should be forwarded to. Finally, click
-:guilabel:`Transfer` to route the call to that phone number.
+To make an outbound call, click the :icon:`oi-voip` :guilabel:`(Show Softphone)` icon to open the
+**Phone** widget. Select a contact or activity, then click the :icon:`fa-phone` :guilabel:`(Call)`
+icon next to that entry to start the call. Use the :ref:`Contacts or Keypad tabs
+<phone/phone_widget/navigation>` to search for a specific contact by name or number.
 
 .. tip::
-   To find the extension for a user, consult the **Phone** administrator. If the user has
-   :guilabel:`Administration` access rights set to :guilabel:`Settings`, find extensions by going to
-   :menuselection:`Settings app` and click the :icon:`fa-arrow-right` :guilabel:`Manage Users`
-   button. Select the user, and go to the :guilabel:`VoIP` tab. That user's extension is their
-   :guilabel:`VoIP username`.
+   Calls can also be initiated by hovering over a phone number in a record, then clicking the
+   :icon:`fa-phone` :guilabel:`(Call)` button.
 
-If the user does not pick up the call or is busy with another call, then calls can be automatically
-transferred. This gets configured with the |VOIP| service provider.
+.. _phone/phone_widget/inbound-call:
 
-Forward a phone call
+Receive an inbound call
+-----------------------
+
+When receiving an inbound call in Odoo, the **Phone** widget rings and displays a notification. To
+hide the widget, click the :icon:`fa-window-minimize` :guilabel:`(Hide)` icon in the top corner of
+the widget screen.
+
+.. _phone/phone_widget/active-call-controls:
+
+Active call controls
 --------------------
 
-To forward a call within the |VOIP| widget, first, answer the call using the green :icon:`fa-phone`
-:guilabel:`(phone)` icon.
+During an active call, the contact and the call duration are displayed, as well as the
+:guilabel:`Create`, :guilabel:`Go to`, and :guilabel:`Log` :ref:`related record menus
+<phone/phone_widget/manage-related-records>`.
 
-Then, click the :icon:`fa-arrows-h` :guilabel:`(left-right arrows)` icon. Enter the full phone
-number of the user the call should be forwarded to. Finally, click :guilabel:`Transfer` to route the
-call to that phone number.
+The call can be managed using the following controls:
 
-Send an email through the Phone widget
-======================================
+- :icon:`oi-transfer` :guilabel:`Transfer`: Transfer the call to another user or phone number.
+- :icon:`fa-plus` :guilabel:`Add Call`: Add another call to make it a conference call.
+- :icon:`fa-pause` :guilabel:`Hold`: Put the call on hold. Click again to end the hold.
+- :icon:`oi-record` :guilabel:`Record`: Start recording the call. Click again to stop recording.
+- :icon:`fa-microphone-slash` :guilabel:`Mute`: Mute the microphone. Click again to unmute.
+- :icon:`fa-phone fa-rotate-180` :guilabel:`Hang up`: End the call.
+- :icon:`oi-numpad` :guilabel:`Keypad`: Open the numeric keypad to dial another number.
 
-Emails can also be sent through the **Phone** widget. This is helpful for sending follow-up emails
-to the call participants, emailing a question to a coworker, or reminding a vendor to send over some
-components during a check-in call.
+.. _phone/phone_widget/transfer-call:
 
-To send an email through the **Phone** widget, click the :icon:`oi-voip` :guilabel:`(Show
-Softphone)` icon, located in the top navigation bar. When this is clicked, the **Phone** widget will
-appear in the bottom-left corner of the page. Then, search for a contact to email or find them in
-the :guilabel:`Contacts` tab of the **Phone** widget.
+Transfer a call
+---------------
 
-Next, click the :icon:`fa-envelope-o` :guilabel:`(envelope)` icon, and then select the email
-recipients, enter the email's subject line, and write the email. When it is ready to be sent, click
-:guilabel:`Send`. To schedule an email to send later, click the :icon:`fa-caret-down`
-:guilabel:`(dropdown)` icon next to :guilabel:`Send`, click :guilabel:`Send Later`, pick the
-scheduled time, and click :guilabel:`Schedule`.
+To transfer an active call, follow the steps below:
+
+#. Click :icon:`oi-transfer` :guilabel:`Transfer` and the contact list appears.
+#. Search for a contact to transfer the call to, or click the :icon:`oi-numpad` :guilabel:`Keypad`
+   to dial a number.
+#. Click :icon:`oi-transfer` :guilabel:`Transfer` again.
+#. Select one of three options:
+
+   - :guilabel:`Direct Transfer`: Transfer the call immediately without speaking to the selected
+     contact.
+   - :guilabel:`Ask First`: Speak to the selected contact before transferring the call. Click
+     :icon:`oi-transfer` :guilabel:`Confirm Transfer` to complete the transfer, or click
+     :icon:`fa-phone fa-rotate-180` :guilabel:`Hang up` to cancel the transfer.
+   - :guilabel:`Cancel transfer`: Cancel the transfer and return to the contact selection screen.
+     Click :icon:`oi-arrow-left` :guilabel:`(Back)` to return to the active call.
+
+If the user does not pick up the call or is busy with another call, calls may be automatically
+transferred depending on the |VOIP| service provider configuration.
+
+.. _phone/phone_widget/switch-devices:
+
+Move a call to another device
+-----------------------------
+
+Calls can be switched to another device signed into the same account. This is helpful for moving a
+call from a desktop to a mobile device for portable use, or moving a call from a mobile device to a
+desktop for screen sharing. During a call, the **Phone** widget on other devices displays *Active
+call(s) on another device*.
+
+Click :guilabel:`Switch here` on another device to move the call to that device.
+
+.. _phone/phone_widget/crm-calls:
+
+Add and remove CRM calls
+------------------------
+
+Call activities can be added and removed from the :doc:`CRM Pipeline <../../sales/crm>` without
+opening the opportunity record.
+
+To add a **CRM** call activity from the queue, open the **CRM** app and select the :ref:`Kanban view
+<studio/views/multiple-records/kanban>`. Hover over the desired opportunity, then click the
+:icon:`fa-phone` :guilabel:`(phone)` icon with a green plus :icon:`fa-plus` :guilabel:`(Add to Call
+Queue)`. The call activity for the opportunity appears in the :guilabel:`Activities` tab.
+
+To remove a **CRM** call activity from the queue, hover over the opportunity and click the
+:icon:`fa-phone` :guilabel:`(phone)` icon with a red minus :icon:`fa-minus` :guilabel:`(Remove from
+Call Queue)` icon. The call activity for the opportunity disappears from the :guilabel:`Activities`
+tab.
+
+.. note::
+   Moving calls to another device is not supported in demo mode.
+
+.. _phone/phone_widget/manage-related-records:
+
+Manage related records
+======================
+
+Select a record in the :guilabel:`Recent`, :guilabel:`Contacts`, or :guilabel:`Activities` tab to
+view the following drop-down action menus:
+
+- :icon:`fa-plus` :guilabel:`Create`: Create a lead, ticket, applicant, or task related to the
+  contact record.
+- :icon:`fa-ellipsis-v` :guilabel:`Go to`: Send an email or SMS, and open records related to the
+  contact. Depending on the type of contact, this can include call details, contacts, leads,
+  tickets, tasks, sales, and subscriptions.
+- :icon:`fa-history` :guilabel:`Log (Recents tab only)`: Log the call as an activity in a related
+  record.
+- :icon:`fa-clock-o` :guilabel:`Activity (Activities tab only)`: Complete, edit, or cancel the
+  activity.
 
 .. _phone/phone_widget/troubleshooting:
 
@@ -163,20 +183,25 @@ Troubleshooting
 
 Each section below goes through common issues with the **Phone** widget and how to resolve them.
 
+.. _phone/phone_widget/missing-parameter:
+
 Missing parameter
 -----------------
 
 If a *Missing Parameter* error message appears in the **Phone** widget, refresh the window, and try
 again.
 
+.. _phone/phone_widget/incorrect-number:
+
 Incorrect number
 ----------------
 
 If an *Incorrect Number* error message appears in the **Phone** widget, make sure to use the
 international format, leading with the :icon:`fa-plus` :guilabel:`(plus)`, followed by the
-international country code (e.g., +16506913277, where `+1` is the international prefix for the
+international country code (e.g., +15555555555, where `+1` is the international prefix for the
 United States.)
 
+.. _phone/phone_widget/websocket-connection-lost:
 
 The websocket connection with the server has been lost
 ------------------------------------------------------
@@ -186,6 +211,8 @@ message appears in the **Phone** widget, then refresh the page close other brows
 
 This error is caused by returning to the database after a period of inactivity, like lunch, or if
 there are too many browser tabs open.
+
+.. _phone/phone_widget/failed-to-start-user-agent:
 
 Failed to start the user agent
 ------------------------------
@@ -197,11 +224,15 @@ administrator verify the websocket server URL in the General Settings.* error me
 This error is caused by the browser or computer not being up-to-date (and can also cause issues with
 the microphone).
 
+.. _phone/phone_widget/grayed-out-phone-widget:
+
 Grayed-out Phone widget
 -----------------------
 
 If the **Phone** widget is completely grayed out and cannot be interacted with, then update the
 browser and computer, and delete the Google Chrome extension causing the problem.
+
+.. _phone/phone_widget/cannot-connect-to-voip:
 
 Cannot connect to the VoIP phone number
 ---------------------------------------
