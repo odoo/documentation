@@ -163,7 +163,8 @@ seven main categories, with corresponding numeric values that prefix individual 
          | :guilabel:`Foreign Exchange Loss`
          | :guilabel:`Cash Difference Loss`
      * - :guilabel:`Current Year Earnings`
-       - :guilabel:`Undistributed Profits/Losses`
+       - | :guilabel:`Accumulated Retained Earnings`
+         | :guilabel:`Profit or Loss Appropriation`
      * - :guilabel:`Receivable`
        - :guilabel:`Account Receivable`
      * - :guilabel:`Payable`
