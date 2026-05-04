@@ -174,10 +174,10 @@ Sometimes, your design might require creating one or several custom shapes.
 Firstly, you need to create an SVG file for your shape.
 
 .. code-block:: xml
-   :caption: ``/website_airproof/static/shapes/hexagons/01.svg``
+   :caption: ``/website_airproof/static/shapes/waves/01.svg``
 
-   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="86" height="100">
-      <polygon points="0 25, 43 0, 86 25, 86 75, 43 100, 0 75" style="fill: #3AADAA;" />
+   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1309 581">
+      <path style="fill: #3AADAA;" d="..." />
    </svg>
 
 .. important::
@@ -194,10 +194,10 @@ Declare your shape file.
 .. code-block:: xml
    :caption: ``/website_airproof/data/shapes.xml``
 
-   <record id="shape_hexagon_01" model="ir.attachment">
-      <field name="name">01.svg</field>
-      <field name="raw" type="bytes" file="website_airproof/static/shapes/hexagons/01.svg" />
-      <field name="url">/html_editor/shape/illustration/hexagons/01.svg</field>
+   <record id="shape_waves_01" model="ir.attachment">
+      <field name="name">waves_01.svg</field>
+      <field name="datas" type="base64" file="website_airproof/static/shapes/waves/01.svg" />
+      <field name="url">/html_editor/shape/website_airproof/waves/01.svg</field>
       <field name="public" eval="True" />
    </record>
 
@@ -213,8 +213,8 @@ Declare your shape file.
    * - raw
      - Path to the shape
    * - url
-     - The location of your shape in the web editor. The file is automatically duplicated in
-       `/html_editor/shape/illustration` by the Website Builder.
+     - The location of your shape in the HTML Editor. The file is automatically duplicated in
+       `/html_editor/shape/website_airproof` by the Website Builder.
    * - public
      - Makes the shape available for later editing.
 
@@ -229,15 +229,13 @@ Define the styles of your shape.
    :caption: ``/website_airproof/static/src/scss/primary_variables.scss``
 
    $o-bg-shapes: map-merge($o-bg-shapes,
-       (
-           'illustration': map-merge(
-               map-get($o-bg-shapes, 'illustration') or (),
-               (
-                   'hexagons/01': ('position': center center, 'size': auto 100%, 'colors': (1), 'repeat-x': true, 'repeat-y': true),
-               ),
-           ),
-       )
+      (
+         'website_airproof': (
+            'waves/01': ('position': left bottom, 'size': 100% auto, 'colors': (1)),
+         ),
+      )
    );
+
 
 .. list-table::
    :header-rows: 1
@@ -247,7 +245,7 @@ Define the styles of your shape.
    * - Key
      - Description
    * - File location
-     - `hexagons/01` corresponds to the location of your file in the `shapes` folder.
+     - `waves/01` corresponds to the location of your file in the `shapes` folder.
    * - position
      - Defines the position of your shape.
    * - size
@@ -288,7 +286,7 @@ Lastly, add your shape to the list of shapes available on the Website Builder by
                      label: _t("Airproof"),
                      shapes: {
                         "website_airproof/waves/01": {
-                           selectLabel: _t("Airproof 01"),
+                           selectLabel: _t("Waves 01"),
                         },
                      },
                   },
@@ -315,8 +313,10 @@ In your XML pages, you can use your shape in the same way as the others.
 
 .. code-block:: xml
 
-   <section class="..." data-oe-shape-data="{'shape': 'illustration/airproof/01', 'colors': {'c4': '#8595A2', 'c5': 'rgba(0, 255, 0)'}}">
-      <div class="o_we_shape o_illustration_airproof_01" />
+   <section class="..." data-oe-shape-data="{'shape': 'website_airproof/waves/01', 'colors': {'c1': '#BBE1FA'}, 'flip': ['x']}">
+      <div
+         class="o_we_shape o_website_airproof_waves_01 o_we_flip_x"
+         style="background-image: url('/html_editor/shape/website_airproof/waves/01.svg?c1=%23BBE1FA'); background-position: 100% 100%;" />
       <div class="container">
          <!-- Content -->
       </div>
@@ -348,6 +348,8 @@ A shape can only be applied on an image that has been previously declared in an 
 record as the Website Builder needs to re-process the image. To summarize, the system injects the
 original image into a SVG file containing both the image and the shape.
 
+Once fully processed a shaped image looks like the example below:
+
 .. code-block:: xml
 
    <img
@@ -363,7 +365,7 @@ original image into a SVG file containing both the image and the shape.
       data-original-id="590"
       data-attachment-id="590" />
 
-Once the shape applied, the `img` includes different data attributes allowing the Website Builder
+The `img` includes different data attributes allowing the Website Builder
 to re-process the image if it is edited again:
 
 .. list-table::
@@ -393,13 +395,31 @@ to re-process the image if it is edited again:
 
 **Call the shape**
 
-Insert a shaped image requires to call the processed attachment, not just the original image.
+Insert a shaped image requires to call the processed attachment with minimum required attributes,
+not just the original image.
+
+**Here is an example of the minimum required to call a shape with colored elements:**
+
+.. code-block:: xml
+
+   <img
+      src="..."
+      class="img img-fluid mx-auto"
+      alt="..."
+      data-shape="html_builder/solid/solid_blob_2"
+      data-shape-colors="#0B8EE6;;;;"
+      data-format-mimetype="image/jpeg"
+      data-file-name="s_text_image.svg"
+      loading="lazy" />
+
 When a shape is manually applied with the Website Builder:
 
 #. The original record is processed and the `src` attribute is updated with a `base64` image.
 #. Once the page is saved, the base64 image is moved into the final SVG (specified in `data-file-name`).
 #. Finally, the `src` attribute is updated with the following path structure:
-   `/web/image/<attachment_id>-<attachment_checksum>/<finale_image>.svg`
+   `/web/image/<attachment_id>-<attachment_checksum>/<finale_image>.svg` and some data attributes
+   are generated by the Website Builder (`data-original-id`, `data-attachment-id`, `data-mimetype`,
+   `data-mimetype-before-conversion`, etc).
 
 But here are 2 issues:
 
@@ -438,6 +458,21 @@ up to Odoo 18, and replace the placeholders with real data:
       data-file-name="drone-robin.svg"
       data-original-id="560"
       data-attachment-id="560" />
+
+.. tip::
+   If the shape displays a default Odoo color (compared to what is defined in `data-shape-colors`)
+   before any edition, pass a color palette parameter with the same escaped color as defined in
+   the `data-shape-colors`:
+
+   .. code-block:: xml
+
+      <img
+         src="/html_editor/image_shape/website_airproof.img_drone_robin/html_builder/solid/solid_blob_2.svg?c1=%230B8EE6" />
+
+   The `c*` matches the position within the `data-shape-colors`:
+    - `c1` with `#0B8EE6;;;;`
+    -  `c2` with `;#0B8EE6;;;`
+    -  Etc
 
 .. important::
    Keep in mind that as long as the image is not saved manually with the Website Builder, it is not
@@ -561,6 +596,7 @@ Custom
 ------
 
 The creation of a custom image shape is quite simple and relies on 2 steps:
+
 #. Create an SVG file with a specific structure
 #. Add the custom shape to the list
 
@@ -735,7 +771,7 @@ Finally, add the custom shape to the list:
                      label: _t("Duo"),
                      shapes: {
                         "website_airproof/duo/01": {
-                           selectLabel: _t("Airproof 01"),
+                           selectLabel: _t("Duo 01"),
                            transform: true,
                            togglableRatio: true,
                         },
@@ -785,14 +821,11 @@ Custom image shapes can be now applied on images, for example, in your static pa
 .. code-block:: xml
 
    <img
-      src="/html_editor/image_shape/website_airproof.img_drone_robin/website_airproof/duo/01.svg"
+      src="/html_editor/image_shape/website_airproof.img_drone_robin/website_airproof/duo/01.svg?c2=%230B8EE6"
       class="img img-fluid mx-auto"
       alt="..."
       data-shape="website_airproof/duo/01"
       data-shape-colors=";#0B8EE6;;;"
-      data-mimetype="image/svg+xml"
-      data-mimetype-before-conversion="image/webp"
-      data-original-src="website_airproof/static/src/img/content/drone-robin.webp"
+      data-format-mimetype="image/webp"
       data-file-name="drone-robin.svg"
-      data-original-id="560"
-      data-attachment-id="560" />
+      loading="lazy" />
