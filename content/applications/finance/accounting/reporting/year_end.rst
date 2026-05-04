@@ -153,8 +153,8 @@ Current year earnings
 
 At the end of a fiscal year, a company will almost always have a net profit or a net loss that is
 calculated by summing the income and expenses accounts of the profit and loss statement. Odoo
-displays the result for year **N** as a **dynamic line** called *Undistributed Profits/Losses* in
-the trial balance and general ledger of the year **N+1**. To clear this dynamic line, create a
+displays the result for year **N** as a **dynamic line** called *Result Brought Forward* in the
+trial balance and general ledger of the year **N+1**. To clear this dynamic line, create a
 :ref:`manual journal entry <accounting/year-end/manual-je>` in year **N** for the end-of-year result
 using a :ref:`Current Year Earnings type account <accounting/year-end/appropriation>`.
 
@@ -169,9 +169,9 @@ credits) because it records the sum of all journal entries which are themselves 
 fiscal years, whereas **profit and loss accounts** (income, expense, and
 :ref:`appropriation accounts <accounting/year-end/appropriation>`) reset to zero at the start of a
 new fiscal year. This difference in account behavior would leave the trial balance unbalanced if it
-were not for the dynamic line - *Undistributed Profits/Losses* - that balances this difference
-temporarily until an explicit, :ref:`manual journal entry <accounting/year-end/manual-je>` is made
-to appropriate the profit or the loss. Posting an explicit entry to a :ref:`current year earnings
+were not for the dynamic line - *Result Brought Forward* - that balances this difference temporarily
+until an explicit, :ref:`manual journal entry <accounting/year-end/manual-je>` is made to
+appropriate the profit or the loss. Posting an explicit entry to a :ref:`current year earnings
 account <accounting/year-end/appropriation>` at year-end "neutralizes" the dynamic line and ensures
 the trial balance is balanced by actual journal items. This manual journal entry does not need to be
 made immediately following the end of the fiscal year because the trial balance is always balanced,
@@ -204,7 +204,7 @@ function:
 Manual journal entry
 ^^^^^^^^^^^^^^^^^^^^
 
-To roll up income and expenses and replace the dynamic *Undistributed Profits/Losses* line with an
+To roll up income and expenses and replace the dynamic *Result Brought Forward* line with an
 explicit journal item that balances the trial balance, create a manual journal entry by following
 these steps:
 
@@ -218,7 +218,7 @@ these steps:
    recording a profit, debit one or more appropriation (current year earnings) accounts. In the case
    of recording a loss, credit one or more appropriation (current year earnings) accounts. Either
    way, to fully distribute the year's profit or loss, the amount should sum to the amount that is
-   on the dynamic :guilabel:`Undistributed Profits/Losses` line of the trial balance **for the year
+   on the dynamic :guilabel:`Result Brought Forward` line of the trial balance **for the year
    after the profit or loss was incurred**.
 #. Add one or more additional lines that credit (in the case of a profit) or debit (in the case of a
    loss) one or more destination accounts to balance the journal entry. Depending on the
@@ -295,8 +295,8 @@ displays the following, depending on the :doc:`fiscal localization <../../fiscal
   - :guilabel:`Bank Reconciliation`: Reconcile all bank account transactions up to year-end.
   - :guilabel:`Deferred Entries`: Ensure start and end dates are correctly set on bills and
     invoices.
-  - :guilabel:`Earnings Allocation`: After adjustments, transfer the undistributed profits/losses to
-    an equity account.
+  - :guilabel:`Earnings Allocation`: After adjustments, transfer the result brought forward to an
+    equity account.
   - :guilabel:`Fixed Assets`: Ensure assets are properly registered for automatic depreciation
     calculation.
   - :guilabel:`Loans`: Ensure loans are properly registered for automatic amortization calculations.
