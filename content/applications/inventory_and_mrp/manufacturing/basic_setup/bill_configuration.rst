@@ -5,11 +5,11 @@ Bill of materials
 .. |BOM| replace:: :abbr:`BoM (Bill of Materials)`
 .. |BOMs| replace:: :abbr:`BoMs (Bills of Materials)`
 .. |MO| replace:: :abbr:`MO (Manufacturing Order)`
+.. |QCP| replace:: :abbr:`QCP (quality control point)`
 
-A *bill of materials* (or *BoM* for short) documents specific components, along with their
-respective quantities, that are needed to produce or repair a product. In Odoo, |BoMs| serve as
-blueprints for manufactured goods and kits, and often include production operations and step-by-step
-guidelines, as well.
+A *bill of materials* (or *BoM* for short) documents specific components and their respective
+quantities that are needed to produce or repair a product. In Odoo, |BOMs| serve as blueprints for
+manufactured goods and kits and often include production operations and step-by-step guidelines.
 
 .. _manufacturing/basic_setup/bom-setup:
 
@@ -19,22 +19,21 @@ BoM setup
 To create a |BOM|, go to :menuselection:`Manufacturing app --> Products --> Bills of Materials` and
 click :guilabel:`New`.
 
-Next, set the :guilabel:`BoM Type` to :guilabel:`Manufacture this Product`.
+Next, set the :guilabel:`BoM Type` to :guilabel:`Manufacture this product`.
 
 Then, specify :ref:`required components <manufacturing/basic_setup/setup-components>` and, if
 necessary, define any :ref:`manufacturing operations <manufacturing/basic_setup/setup-operations>`.
 
 .. tip::
    Individual |BOMs| can also be quickly accessed or created by clicking the :guilabel:`Bill of
-   Materials` smart button on any product form, as accessible through the *Sales*, *Inventory*, and
-   *Manufacturing* apps, as well as through any internal links where a product is referenced (such
-   as in a field or a line item).
+   Materials` smart button on any product form available in the **Sales**, **Inventory**, and
+   **Manufacturing** apps, as well as through any internal links that reference a product (such as
+   in a field or a line item).
 
 .. figure:: bill_configuration/bom-example.png
-   :align: center
    :alt: Show BoM for a product, with components listed.
 
-   BoM for `Drawer`, displaying the **Components** tab.
+   BoM for the `Drawer` product, displaying the **Components** tab.
 
 .. seealso::
    - :doc:`../advanced_configuration/kit_shipping`
@@ -46,104 +45,133 @@ Components
 ----------
 
 In the :guilabel:`Components` tab of a |BOM|, specify components used to manufacture the product by
-clicking :guilabel:`Add a line`. From the :guilabel:`Components` drop-down menu, select from
+clicking :guilabel:`Add a line`. From the :guilabel:`Component` drop-down menu, select from
 existing products or create a new product by typing the name and selecting either the
-:guilabel:`Create " "` option to quickly add the line item, or the :guilabel:`Create and edit...`
+:guilabel:`Create " "` option to quickly add the line item, or the :guilabel:`Create and edit`
 option to add the component and continue to its configuration form.
 
 .. image:: bill_configuration/component.png
-   :align: center
    :alt: Add a component by selecting it from the drop-down menu.
 
 Optionally, access additional fields by clicking the :icon:`oi-settings-adjust` :guilabel:`(settings
-adjust)` icon to the far-right of the :guilabel:`Components` tab. Tick the checkboxes for the
-following features to enable these columns:
+adjust)` icon at the end of the :guilabel:`Components` tab. Select the checkboxes for the following
+features to enable these columns:
 
-- :guilabel:`Apply on Variants`: specify which :doc:`product variant
+- :guilabel:`Apply on Variants`: Specify which :doc:`product variant
   <../advanced_configuration/product_variants>` each component is used in. When the field is left
   blank, the component is used in all product variants.
 
 .. _manufacturing/basic_setup/consumed-in-operation:
 
-- :guilabel:`Consumed in Operation`: specify the operation using the component. Useful for
+- :guilabel:`Consumed in Operation`: Specify the operation using the component. Useful for
   determining :ref:`manufacturing readiness <manufacturing/basic_setup/manufacturing-readiness>`.
-- :guilabel:`Manual Consumption`: tick the checkbox to force operators to check the
-  :guilabel:`Consumed` checkbox on a manufacturing order (MO).
-
-  .. image:: bill_configuration/consumed-field.png
-     :align: center
-     :alt: Show a manufacturing order, highlighting the *Consumed* field.
-
-  Not doing so triggers the :guilabel:`Consumption Warning` error message, where the consumed
-  component quantity must be manually inputted. Otherwise, the operation cannot be completed.
-
-  .. image:: bill_configuration/consumption-warning.png
-     :align: center
-     :alt: Show the consumption warning error message.
 
 .. _manufacturing/basic_setup/setup-operations:
 
 Operations
 ----------
 
-Add an *operation* to a |BOM| to specify instructions for production and register time spent on an
+Add an *operation* to a |BOM| to specify production instructions and register time spent on an
 operation. To use this feature, first enable the *Work Orders* feature by going to
 :menuselection:`Manufacturing app --> Configuration --> Settings`. In the :guilabel:`Operations`
-section, tick the :guilabel:`Work Orders` checkbox to enable the feature.
+section, select the :guilabel:`Work Orders` checkbox to enable the feature.
 
 .. seealso::
    :doc:`../advanced_configuration/work_order_dependencies`
 
-.. image:: bill_configuration/enable-work-orders.png
-   :align: center
-   :alt: "Work Orders" feature in the Settings page.
-
 Next, navigate to the |BOM| by going to :menuselection:`Manufacturing app --> Products --> Bill of
 Materials` and selecting the desired |BOM|. To add a new operation, go to the :guilabel:`Operations`
-tab, and click :guilabel:`Add a line`.
+tab and click :guilabel:`Add a line`.
 
-Doing so opens the :guilabel:`Create Operations` pop-up window, where the various fields of the
-operation are configured:
+Doing so opens the *Open: Operations* pop-up window, where the various fields of the operation are
+configured:
 
-- :guilabel:`Operation`: name of the operation.
-- :guilabel:`Work Center`: select existing locations to perform the operation, or create a new work
-  center by typing the name and selecting the :guilabel:`Create " "` option.
-- :guilabel:`Apply on Variants`: specify if this operation is only available for certain product
+- :guilabel:`Operation`: Enter the name of the operation.
+- :guilabel:`Work Center`: Select an existing location to perform the operation, or create a new
+  work center by typing the name and selecting the :guilabel:`Create " "` option.
+- :guilabel:`Cost based on`: Specify whether the cost for the operation is based on
+  :guilabel:`Actual time` (tracked time and real employee costs) or :guilabel:`Theoretical time`
+  (estimated time and costs).
+- :guilabel:`Apply on Variants`: Specify if this operation is only available for certain product
   variants. If the operation applies to all product variants, leave this field blank.
 
   .. seealso::
      :doc:`Configuring BoMs for product variants <../advanced_configuration/product_variants>`
 
-- :guilabel:`Duration Computation`: choose how time spent on the operation is tracked. Opt for
-  :guilabel:`Compute based on tracked time` to use the operation's time tracker or :guilabel:`Set
-  duration manually` if operators can record and modify time themselves.
+- :guilabel:`Duration Computation`: Choose how time spent on the operation is tracked. Opt for
+  :guilabel:`Fixed` if operators can record and modify time themselves, which allows a
+  :guilabel:`Default Duration` to be specified. Alternatively, choose :guilabel:`Computed` to
+  use the operation's time tracker, which enables the :guilabel:`last __ work orders` field. This
+  ensures the time to complete will be estimated based on a specified number of the previous
+  operations.
+- :guilabel:`Company`: Specify the company for which the |BOM| is available.
 
-  Choosing the :guilabel:`Compute based on tracked time` option enables the :guilabel:`Based on last
-  __ work orders` option, which automatically estimates the time to complete this operation based on
-  the last few operations. Choosing :guilabel:`Set duration manually` enables the :guilabel:`Default
-  Duration` field instead.
-- :guilabel:`Default Duration`: estimated amount of time to complete the operation; used for
-  `planning manufacturing orders <https://www.youtube.com/watch?v=TK55jIq00pc>`_ and determining
-  `work center availability <https://www.youtube.com/watch?v=3YwFlD97Bio>`_.
-- :guilabel:`Company`: specify the company the |BOM| is available in.
+Include operation details in the :guilabel:`Instructions` tab.
 
-Include operation details in the :guilabel:`Work Sheet` tab. Choose :guilabel:`PDF` to attach a file
-or :guilabel:`Google Slide` with *public* access to share a link. Select :guilabel:`Text` to type
-instructions in the :guilabel:`Description` text field.
+Instructions
+~~~~~~~~~~~~
+
+Click the :guilabel:`Add a line` link to open the *Create Quality Point* window. Individual steps in
+the instructions are saved as :doc:`quality control points
+<../../quality/quality_management/quality_control_points>` (QCPs).
+
+In the *Create Quality Point* window, specify a :guilabel:`Title` and the :guilabel:`Company` for
+which the instruction is valid.
+
+In the :guilabel:`Type` field, specify the type of step that should be performed. The following
+types of steps are available:
+
+- :guilabel:`Instructions` checks provide specific instructions for how to complete the quality
+  check.
+- :guilabel:`Take a Picture` checks require a picture of the product to be uploaded for later review
+  by the assigned quality team.
+- :guilabel:`Register Consumed Materials` checks prompt operators to confirm the quantity of
+  materials that were consumed during the manufacturing operation.
+- :guilabel:`Register Production` checks prompt manufacturing employees to confirm the quantity of
+  the product that was produced during the manufacturing operation.
+- :guilabel:`Print label` checks prompt operators to download and print a label to attach to the
+  product or its packaging.
+- :guilabel:`Pass - Fail` checks specify a criterion that products must meet for the check to pass.
+- :guilabel:`Measure` checks prompt employees to record a measurement of the product that must be
+  within a tolerance of a norm value for the check to pass.
+- :guilabel:`Worksheet` checks require the employee processing the check to fill out an interactive
+  worksheet.
+- :guilabel:`Spreadsheet` checks require the employee processing the check to fill out an
+  interactive spreadsheet.
+
+.. important::
+   When a step is added to a work order, Odoo stores it in the **Quality** app as a |QCP|. It is
+   possible to manually create a |QCP| with the :guilabel:`Instructions` check type and even assign
+   it to an operation other than manufacturing, like receipts.
+
+In the :guilabel:`Team` field, specify the team that is responsible for the step.
+
+Use the :guilabel:`Instructions` tab to specify the step's instructions.
 
 .. tip::
    Type `/` for a list of formatting options and features, including ChatGPT.
 
    .. image:: bill_configuration/description.png
-      :align: center
-      :alt: Show ChatGPT feature to generate instructions for a work order.
+      :alt: Google Gemini feature to generate instructions for a work order.
 
-.. image:: bill_configuration/create-operations.png
-   :align: center
-   :alt: Fill out the Create Operations pop-up window.
+Use the :guilabel:`Worksheet` tab to upload a supplementary PDF that will display when the operator
+completes that step.
 
-Finally, click :guilabel:`Save \& Close` to close the pop-up window. To add more operations, click
-:guilabel:`Save & New` and repeat the same steps above to configure another operation.
+If the :guilabel:`Type` is set to :guilabel:`Pass - Fail`, :guilabel:`Measure`, :guilabel:`Register
+Production`, :guilabel:`Worksheet`, or :guilabel:`Spreadsheet`, the :guilabel:`Message if Failure`
+tab appears. Use this tab to include instructions for what to do if the quality check fails. For
+example, instruct the employee processing the step to create a quality alert.
+
+Click :guilabel:`Save` to save the step.
+
+.. image:: bill_configuration/create-step.png
+   :alt: Fill out the Quality Point pop-up window.
+
+After all instructions are added, click :guilabel:`Save & Close` to close the pop-up window. To add
+more steps, click :guilabel:`Save & New`, then repeat the same steps above to configure another
+operation.
+
+Finally in the *Open: Operations* window, click :guilabel:`Save` to save the operation.
 
 .. note::
    Each operation is unique, as it is always exclusively linked to one |BOM|.
@@ -153,85 +181,105 @@ Finally, click :guilabel:`Save \& Close` to close the pop-up window. To add more
    operation to duplicate.
 
    .. image:: bill_configuration/copy-existing-operations.png
-      :align: center
-      :alt: Show Operation tab, highlighting the "Copy Existing Operations" field.
-
-Instructions
-~~~~~~~~~~~~
-
-.. important::
-   To add detailed instructions to operations, the *Quality* app must be installed.
-
-Add specific instructions to an existing operation by clicking the operation's :icon:`fa-list-ul`
-:guilabel:`(list)` icon in the :guilabel:`Instructions` column. The number in the
-:guilabel:`Instructions` column shows the number of existing detailed instructions there are for the
-operation.
-
-.. image:: bill_configuration/add-instructions.png
-   :align: center
-   :alt: Show the Instructions column, and list icon.
-
-On the :guilabel:`Steps` dashboard, click :guilabel:`New` to open a blank quality control point form
-where the new manufacturing step can be created. Here, give the specific instruction a
-:guilabel:`Title` and set the :guilabel:`Type` to :guilabel:`Instructions`. In the
-:guilabel:`Instructions` tab of the form, write out the directions for the step in the operation.
-
-.. note::
-   Further customizations can be made here on this form, beyond ordinary instructions, to also
-   include specific types of quality control points that carry specific (or complex) conditions. For
-   more details about quality control points refer the :doc:`Instruction check
-   <../../quality/quality_check_types/instructions_check>` documentation.
-
-.. image:: bill_configuration/steps.png
-   :align: center
-   :alt: Show the page to add a quality check.
+      :alt: Click Copy Existing Operations to duplicate operations.
 
 Miscellaneous
 -------------
 
-The :guilabel:`Miscellaneous` tab contains more |BoM| configurations to customize procurement,
-calculate costs, and define how components are consumed.
+The :guilabel:`Miscellaneous` tab contains more |BoM| configurations to customize the following
+fields:
+
+- :guilabel:`Manufacturing Lead Time`: the number of days required to manufacture the product
+- :guilabel:`Days to prepare`: the number of days in advance that manufacturing orders should be
+  created to allow time to replenish components or manufacture sub-assemblies
+- :guilabel:`Batch Size Value`: If selected, the number of units to add to a manufacturing order can
+  be specified.
+- :guilabel:`Project`: the project to which the BoM applies. The Project app must be installed for
+  this field to display.
 
 .. _manufacturing/basic_setup/manufacturing-readiness:
 
-- :guilabel:`Manufacturing Readiness`: choosing :guilabel:`When components for the 1st operation are
-  available` shows the :guilabel:`Component Status` as a **green** :guilabel:`Not Available`, when
-  only the components that are consumed in the first operation are in stock. This indicates that
-  although not all components are available, operators can at least begin with the first operation.
-  Choosing :guilabel:`When all components are available` displays a **red** :guilabel:`Not
-  Available` component status unless all components are in available.
+- :guilabel:`Manufacturing Readiness`: Choosing :guilabel:`When all components are available`
+  displays a **red** :guilabel:`Not Available` component status unless all components are available.
+  Choosing :guilabel:`When components for the 1st operation are available` shows the
+  :guilabel:`Component Status` as a **green** :guilabel:`Not Available` when only the components
+  consumed in the first operation are in stock. This indicates that although not all components are
+  available, operators can at least begin with the first operation.
 
   .. tip::
-     Specify which operation consumes each component on the |BoM| in the :ref:`Manual Consumption
-     field <manufacturing/basic_setup/consumed-in-operation>`.
+     Add a *Register Consumed Materials* step to the |BoM| instructions to indicate when a component
+     is consumed.
 
   .. image:: bill_configuration/component-status.png
-     :align: center
      :alt: Show the *Component Status* field on the manufacturing order dashboard.
 
-- :guilabel:`Version`: displays the current |BoM| version, visible with the Odoo *PLM* app installed
-  for managing |BoM| changes.
-- :guilabel:`Flexible Consumption`: specifies if components used can deviate from the quantity
-  defined on the |BoM|. Choose :guilabel:`Blocked` if operators **must** adhere strictly to the
-  |BoM| quantity. Otherwise, choose :guilabel:`Allowed` or :guilabel:`Allowed with Warning`.
-- :guilabel:`Routing`: select the preferred warehouse's manufacturing operation type for products
-  produced in multiple warehouses. If left blank, this warehouse's `Manufacturing` operation type is
-  used by default.
-- :guilabel:`Analytic Distribution`: select pre-created :doc:`analytic distribution models
-  <../../../finance/accounting/reporting/analytic_accounting>` from the list to automatically record
-  the cost of manufacturing products in the chosen journal.
-- :guilabel:`Manuf Lead Time`: define the number of days needed to complete a |MO| from the date of
-  confirmation.
-- :guilabel:`Days to prepare Manufacturing Order`: number of days needed to replenish components, or
-  manufacture sub-assemblies of the product.
+- :guilabel:`Version`: displays the current |BoM| version, visible with the Odoo **PLM** app
+  installed for managing |BoM| changes.
 
 .. seealso::
-   - :doc:`Analytic distribution <../../../finance/accounting/reporting/analytic_accounting>`
-   - :doc:`Lead times <../../inventory/warehouses_storage/replenishment/lead_times>`
+   :doc:`Lead times <../../inventory/warehouses_storage/replenishment/lead_times>`
 
 .. image:: bill_configuration/misc-tab.png
-   :align: center
    :alt: Show the *Miscellaneous* tab of the BoM.
+
+Replace components across multiple BoMs
+=======================================
+
+Periodically, the design of a product may change to use different components. Use the :ref:`Bill of
+Materials page <manufacturing/basic-setup/bom-replace>` or the :ref:`component's product form
+<manufacturing/basic-setup/component-replace>` to update the component across multiple products at
+the same time.
+
+.. _manufacturing/basic-setup/bom-replace:
+
+Bill of Materials page
+----------------------
+
+To begin, navigate to :menuselection:`Manufacturing app --> Products --> Bills of Materials`. All
+|BOMs| are listed on this page.
+
+To locate all |BOMs| that use the affected component, click in the :guilabel:`Search` field. Filter
+using a :guilabel:`Custom Filter`. Select :menuselection:`BoM Lines --> Component`. Set
+:guilabel:`is equal to`, and select the component that you want to filter by. Click
+:guilabel:`Search`. |BOMs| with the matching component display.
+
+.. image:: bill_configuration/bom-match-component.png
+   :alt: The Bills of Materials page filtered by the Bolt component.
+
+Then, select the |BOMs| to update and select :icon:`fa-cog` :menuselection:`Actions --> Show BoM
+Lines`. The component lines display on the *BoM Lines* page.
+
+.. image:: bill_configuration/show-bom-lines.png
+   :alt: The BoM Lines page filtered to all BoMs that use the Bolt component.
+
+To update the component across multiple |BOMs|, first filter by the component again by clicking in
+the :guilabel:`Search` field and selecting :guilabel:`Custom Filter`. Filter by
+:guilabel:`Component`, set :guilabel:`is equal to`, and select the component, then click
+:guilabel:`Search`. The |BOM| lines (component and associated |BOMs|) display.
+
+.. image:: bill_configuration/bom-lines.png
+   :alt: The BoM lines matching the Bolt component display.
+
+Select the lines to update, then update the :guilabel:`Component` field for one of the lines. When
+clicking away from the :guilabel:`Component` field, a *Confirmation* window opens to verify that
+multiple components will be updated. Click :guilabel:`Update` to verify the changes.
+
+.. image:: bill_configuration/bom-lines-update-confirmation.png
+   :alt: Confirm that multiple records will be updated.
+
+.. _manufacturing/basic-setup/component-replace:
+
+Component product form
+----------------------
+
+To begin, navigate to :menuselection:`Manufacturing app --> Products --> Products`. Click in the
+:guilabel:`Search` field and search for the component product, then open its product form.
+
+Click the :icon:`fa-level-up` :guilabel:`Used In` smart button. All |BOM| lines that contain this
+component are displayed. To update the component across multiple products, select the checkbox next
+to the affected |BOMs|, then click in the :guilabel:`Component` field of one of the selected |BOMs|.
+Update the :guilabel:`Component` to the new component, then click away. A *Confirmation* pop-up
+window opens. Verify that the selected records should be updated by clicking :guilabel:`Update`.
 
 Add by-products to BoMs
 =======================
@@ -241,20 +289,14 @@ product of a |BOM|. Unlike the primary product, there can be more than one by-pr
 
 To add by-products to a |BOM|, first enable the *By-Products* feature in
 :menuselection:`Manufacturing app --> Configuration --> Settings`. In the :guilabel:`Operations`
-section, tick the checkbox for :guilabel:`By-Products` to enable the feature.
-
-.. image:: bill_configuration/by-products.png
-   :align: center
-   :alt: "By Products" feature in the settings page.
+section, select the checkbox for :guilabel:`By-Products` to enable the feature.
 
 Once the feature is enabled, add by-products to a |BOM| by clicking the :guilabel:`By-products` tab.
 Click :guilabel:`Add a line`, and fill in the :guilabel:`By-product`, :guilabel:`Quantity`, and
-:guilabel:`Unit of Measure`. Optionally, specify a :guilabel:`Produced in Operation` for the
-by-product.
+:guilabel:`Unit`. Optionally, specify a :guilabel:`Produced in Operation` for the by-product.
 
 .. example::
    The by-product, `Mush`, is created in the `Grind grapes` operation when producing `Red Wine`.
 
    .. image:: bill_configuration/add-by-product.png
-      :align: center
       :alt: Show sample by-product in the BoM.
