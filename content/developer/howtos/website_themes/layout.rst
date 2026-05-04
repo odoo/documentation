@@ -659,8 +659,7 @@ or create your own template.
 Standard
 --------
 
-Enable one of the default footer templates. Don't forget that you may need to disable the active
-footer template first.
+Enable one of the default footer templates.
 
 .. important::
    Don't forget that you may need to disable the active footer template first.
