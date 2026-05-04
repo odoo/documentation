@@ -239,6 +239,10 @@ There are **3 cases** for the employee to have:
    As per the labor law of the United Arab Emirates, the 15, 30, 45 days are not specified as
    working days or calendar days so this point will rely on the company policy.
 
+There is a single sick leave time-off type: Sick Time Off. The system automatically tracks the
+number of sick leave days taken by the employee and applies the corresponding percentage based on
+the accumulated balance.
+
 The amount paid for the employee per sick leave day is counted as follows:
 
 .. math::
