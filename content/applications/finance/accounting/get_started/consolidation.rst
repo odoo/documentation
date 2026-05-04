@@ -123,12 +123,12 @@ consolidation:
 #. **Cumulative Translation Adjustments:** When consolidating companies with different currencies,
    Odoo handles the translation.
 
-   - *Equity accounts:* Use the historical exchange rate.
+   - Equity accounts: Use the historical exchange rate.
 
-   - *Profit and loss (P&L) accounts (including :ref:`appropriation accounts
-     <accounting/year-end/appropriation>`:* Use the weighted average exchange rate.
+   - Profit and loss (P&L) accounts (including :ref:`appropriation accounts
+     <accounting/year-end/appropriation>`): Use the weighted average exchange rate.
 
-   - *Balance sheet accounts (excluding equity):* Use the closing exchange rate.
+   - Balance sheet accounts (excluding equity): Use the closing exchange rate.
 
    .. important::
       The rates used are those of the company currently selected.
