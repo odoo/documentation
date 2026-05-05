@@ -126,9 +126,6 @@ sequential order to identify and apply a match:
 
 - Exact match
 - Discounted match: for payment terms with discounts for early payments
-- Tolerance match: within 3% to account for merchant fees, rounding differences, and user errors
-- Currency match: when the transaction is in a different currency than the invoice, bill, or
-  payment (with a 3% tolerance for exchange rate differences)
 - Amount in label: if the invoice :guilabel:`Amount` is found in the transaction's
   :guilabel:`Label`
 
