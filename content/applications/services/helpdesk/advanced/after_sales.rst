@@ -5,7 +5,8 @@ After-Sales services
 *After-Sales* services can be configured in the **Helpdesk** application for individual teams. Once
 enabled, users can :ref:`issue refunds <helpdesk/refunds>`, :ref:`generate coupons
 <helpdesk/coupons>`, :ref:`process returns <helpdesk/returns>`, and :ref:`schedule repairs
-<helpdesk/repairs>` or :ref:`field service interventions <helpdesk/field>` directly from a ticket.
+<helpdesk/repairs>` or :ref:`field service interventions <helpdesk/after-sales/field-service>`
+directly from a ticket.
 
 Set up after-sales services
 ===========================
@@ -232,54 +233,24 @@ A :guilabel:`Repairs` smart button is then added to the ticket, linking to the r
    ticket's :guilabel:`Repair` smart button, or from a link in the chatter, even if they do not have
    access rights to the **Repair** application.
 
-.. _helpdesk/field:
+.. _helpdesk/after-sales/field-service:
 
-Create field service task from a ticket
-=======================================
+Plan field service interventions from a ticket
+==============================================
 
-On-site interventions can be planned from a ticket and managed through the **Field Service**
-application. Customers with :doc:`portal access <../../../general/users/user_portals>` are able
-to track the progress of a **Field Service** task the same as they would a **Helpdesk** ticket.
+On-site interventions can be planned from a ticket and managed through the Planning app.
+Customers with :doc:`portal access <../../../general/users/user_portals>` can track the progress of
+interventions the same way they would track a **Helpdesk** ticket.
 
-.. tip::
-   To change the default **Field Service** project for the team, go to :menuselection:`Helpdesk app
-   --> Configuration --> Helpdesk Teams` to select a :guilabel:`Team`. Scroll to the
-   :guilabel:`After-Sales` section, and choose a project under :guilabel:`Field Service`.
+To enable this feature, go to :menuselection:`Helpdesk --> Configuration --> Helpdesk Teams`,
+select the relevant team, scroll to the :guilabel:`After-Sales` section, and enable
+:guilabel:`Field Service`.
 
-To create a new **Field Service** task, navigate to a :menuselection:`Helpdesk` ticket. Click
-:guilabel:`Plan Intervention` to open the :guilabel:`Create a Field Service task` pop-up window.
+To plan an intervention from a helpdesk ticket, click :guilabel:`Plan Intervention`, then
+:ref:`create a shift <planning/create-shift>`.
 
-.. image:: after_sales/after-sales-field-service-create.png
-   :alt: View of a Field Service task creation page.
-
-Confirm or update the task :guilabel:`Title`.
-
-The :guilabel:`Project` field on the :guilabel:`Create a Field Service task` pop-up window defaults
-to the same **Field Service** project that was identified on the team's settings page. To change the
-project for this specific task, select one from the :guilabel:`Project` field.
-
-If applicable, select a :guilabel:`Worksheet Template` from the drop-down menu.
-
-.. note::
-   *Field Service Worksheets* are reports that detail the work completed during an on-site task.
-   When work is completed, worksheets are signed by the customer to confirm the job is done and the
-   customer is satisfied.
-
-   If the **Field Service** project assigned to the **Helpdesk** team has worksheets enabled, and
-   has a default template assigned, that template automatically appears in the :guilabel:`Worksheet
-   Template` drop-down field. Even so, the field can be edited, and another template can be
-   selected.
-
-   If the **Field Service** project does **not** have worksheets enabled, the :guilabel:`Worksheet
-   Template` field does not appear on the :guilabel:`Create a Field Service task` pop-up window.
-
-Click :guilabel:`Create Task` or :guilabel:`Create & View Task`.
-
-After the task is created, a :guilabel:`Tasks` smart button is added to the ticket, linking the
-:guilabel:`Field Service` task to the ticket.
-
-.. image:: after_sales/after-sales-field-service-smart-button.png
-   :alt: View of ticket smart buttons focused on task.
+Once the intervention has been planned, a :guilabel:`Scheduled` smart button displaying the
+intervention's date and time is added to the ticket. Click the button to open the schedule.
 
 .. seealso::
-   `Field Service  <https://www.odoo.com/slides/slide/advanced-settings-862?fullscreen=1>`_
+   :doc:`/applications/services/planning/field_service`
