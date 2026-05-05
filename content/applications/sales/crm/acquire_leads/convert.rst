@@ -27,7 +27,7 @@ Once the *Leads* setting has been activated, it applies to all sales teams by de
 leads for a specific team, navigate to :menuselection:`CRM app --> Configuration --> Sales Teams`.
 Then, select a team from the list to open that team's configuration page. Clear the
 :guilabel:`Leads` checkbox, located beneath the :guilabel:`Sales Team` field, then click
-:icon: `fa-cloud-upload` :guilabel:`Save`.
+:icon:`fa-cloud-upload` :guilabel:`Save`.
 
 .. image:: convert/convert-leads-leads-button.png
    :alt: Leads menu on CRM application.
