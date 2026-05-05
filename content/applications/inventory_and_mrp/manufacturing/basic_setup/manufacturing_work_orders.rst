@@ -64,6 +64,14 @@ can be done on the |MO| itself or from the *Shop Floor* module.
 Basic workflow
 --------------
 
+Work orders can be completed from the :ref:`Work Orders tab <manufacturing/basic_setup/wo-from-mo>`
+or a :ref:`work order form <manufacturing/basic_setup/wo-from-wo>`.
+
+.. _manufacturing/basic_setup/wo-from-mo:
+
+Work Orders tab
+~~~~~~~~~~~~~~~
+
 To complete work orders from the |MO| itself, navigate to :menuselection:`Manufacturing app -->
 Operations --> Manufacturing Orders`, then select an |MO|.
 
@@ -81,8 +89,50 @@ order. Repeat the same process for each work order listed in the :guilabel:`Work
 .. image:: manufacturing_work_orders/wo-operation-in-process.png
    :alt: Click the Done button to complete work on a work order.
 
-After completing all work orders, click :guilabel:`Produce All` at the top of the screen to mark the
-|MO| as :guilabel:`Done` and register the manufactured products into inventory.
+After all work orders are complete, :ref:`complete the MO <manufacturing/basic_setup/complete-mo>`.
+
+.. _manufacturing/basic_setup/wo-from-wo:
+
+Work order form
+~~~~~~~~~~~~~~~
+
+To process work orders from their forms, open the *Work Orders* page by navigating to
+:menuselection:`Manufacturing app --> Operations --> Work Orders`. A list of work orders displays.
+Choose a work order from the list. The work order form opens.
+
+In the top corner of the form, the status of the work order is displayed. When changing the status
+from :guilabel:`To Do` to :guilabel:`In Progress`, a new :guilabel:`Time Tracking` entry is created.
+The :guilabel:`Planned Date` updates to the current date and time, with the end time based on the
+:guilabel:`Expected Duration`.
+
+Work on a work order can be split into different :guilabel:`Time Tracking` entries. To end an entry
+and pause work, change the status of the work order to :guilabel:`To Do`. Then, to add a new entry
+and begin work, change the status of the work order back to :guilabel:`In Progress`.
+
+If :guilabel:`Instructions` are included, click an instruction. The *Open: Check* window opens.
+Click the :icon:`fa-expand` :guilabel:`(Expand)` icon in the top corner of the pop-up window. A
+quality check order form opens. Follow the :guilabel:`Instructions`, then click :guilabel:`Pass` to
+mark the instruction as completed.
+
+.. tip::
+   For an easier path to complete work orders, click the :icon:`oi-view-kanban` :guilabel:`Open Shop
+   Floor` smart button to open the *Shop Floor* module, filtered to the |MO|, then :ref:`process the
+   work order in Shop Floor <manufacturing/basic_setup/complete-wo>`.
+
+After all instructions are completed, complete the work order by changing its status to
+:guilabel:`Done`.
+
+After all work orders for the |MO| are complete, :ref:`complete the MO
+<manufacturing/basic_setup/complete-mo>`.
+
+.. _manufacturing/basic_setup/complete-mo:
+
+Complete the MO
+~~~~~~~~~~~~~~~
+
+Back in the |MO| form, after completing all work orders, click :guilabel:`Produce All` at the top of
+the screen to mark the |MO| as :guilabel:`Done` and register the manufactured products into
+inventory.
 
 Shop Floor workflow
 -------------------
@@ -90,10 +140,10 @@ Shop Floor workflow
 To complete the work orders for an |MO| using the *Shop Floor* module, begin by navigating to
 :menuselection:`Manufacturing app --> Operations --> Manufacturing Orders`, and then select an |MO|.
 
-Shop Floor can be opened in two ways for manufacturing orders and work orders:
+Shop Floor can be opened in two ways for manufacturing orders:
 
 - :ref:`From the MO form <manufacturing/basic_setup/shop-floor-mo>`
-- :ref:`From the Work Orders tab <manufacturing/basic_setup/shop-floor-wo-tab>`
+- :ref:`From the main Odoo dashboard <manufacturing/basic_setup/shop-floor-open>`
 
 .. _manufacturing/basic_setup/shop-floor-mo:
 
@@ -116,31 +166,18 @@ the number of units to be produced, and the next work order required for the |MO
 Click the work order in the *Overview* to open it in its work center, then :ref:`process it in
 Shop Floor <manufacturing/basic_setup/complete-wo>`.
 
-.. _manufacturing/basic_setup/shop-floor-wo-tab:
+.. _manufacturing/basic_setup/shop-floor-open:
 
-Work Orders tab
-~~~~~~~~~~~~~~~
+Shop Floor module
+~~~~~~~~~~~~~~~~~
 
-On the |MO|, click on the :guilabel:`Work Orders` tab, and then open the first work order to be
-processed. Doing so opens an *Open: Work Orders* pop-up window with details and processing options
-for the work order.
+Open *Shop Floor* from the main Odoo dashboard.
 
-In the pop-up window, click the :icon:`oi-view-kanban` :guilabel:`Open Shop Floor` button to open
-the *Shop Floor* module.
+Click the |MO| or work order from the *Overview* or work center view, then :ref:`process the work
+order in the Shop Floor module <manufacturing/basic_setup/complete-wo>`.
 
-.. image:: manufacturing_work_orders/shop-floor-wo.png
-   :alt: Open Shop Floor in the Work Orders window.
-
-When accessed directly from a specific work order within an |MO|, *Shop Floor* defaults to the work
-center page configured for that work order. The page shows a card for the work order that displays
-the |MO| number, the product, the number of units to be produced, and the steps required to complete
-it.
-
-.. image:: manufacturing_work_orders/wo-steps-shop-floor.png
-   :alt: Review details about the work order in the work order card.
-
-From here, :ref:`process the work order in the Shop Floor module
-<manufacturing/basic_setup/complete-wo>`.
+.. seealso::
+   :doc:`../shop_floor/shop_floor_overview`
 
 .. _manufacturing/basic_setup/complete-wo:
 
@@ -167,6 +204,47 @@ Clicking :guilabel:`Close Production` causes the work order card to disappear. T
    This section details the basic workflow for processing an |MO| in the *Shop Floor* module. For a
    more in-depth explanation of the module and all of its features, please see the
    :doc:`../shop_floor/shop_floor_overview` documentation.
+
+Adding or editing work order components
+=======================================
+
+Components can be edited from the work order form.
+
+Open a work order form by navigating to :menuselection:`Manufacturing app --> Operations --> Work
+Orders` and selecting a work order from the list.
+
+In the work order form, open the :guilabel:`Components` tab.
+
+Mark components as :guilabel:`Consumed` by selecting the checkbox for them on the product line.
+
+Add components by clicking the :guilabel:`Add component` link and adding them from the *Products*
+form. After all additional components are added, return to the work order form by clicking
+:guilabel:`Back to Order`.
+
+Work order properties
+=====================
+
+Add properties to a work order to customize it.
+
+Open a work order form by navigating to :menuselection:`Manufacturing app --> Operations --> Work
+Orders` and selecting a work order from the list.
+
+In the work order form, click the :icon:`fa-cog` :guilabel:`(Actions)` icon, then select
+:icon:`fa-cogs` :guilabel:`Edit Properties`. Add a property to the work order form. To add
+additional properties, click the :icon:`fa-plus` :guilabel:`Add Property` link.
+
+When all properties are added, click the :icon:`fa-cog` :guilabel:`(Actions)` icon, then select
+:icon:`fa-cogs` :guilabel:`Save Properties`. The properties are added to the form.
+
+.. example::
+   In the work order form for a `Table`, a `Wood Type` property is added to track the type of wood
+   used for a product.
+
+   .. image:: manufacturing_work_orders/wo-add-property.png
+      :alt: Add a property to a work order form.
+
+.. seealso::
+   :doc:`../../../essentials/property_fields`
 
 Lot/serial number tracking
 ==========================
