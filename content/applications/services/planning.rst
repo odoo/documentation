@@ -222,6 +222,7 @@ fill in the following details:
 - :guilabel:`Project`: If the Project app is installed in your database, this field allows you to
   link the project to the shift is available, allowing you to plan and track shifts dedicated to
   work on the selected project.
+- :guilabel:`Task`: If a project is selected, you can select a task within that project.
 - :guilabel:`Sales Order Item`: If the Sales app is installed in your database, this field allows
   you to link a sales order to the shift.
 - :guilabel:`Repeat`: Click the :icon:`fa-repeat` :guilabel:`(repeat)` button and configure the
@@ -237,11 +238,14 @@ fill in the following details:
     go to :menuselection:`Planning --> Configuration --> Settings` and edit the
     :guilabel:`Recurring Shifts`.
 
-- :guilabel:`Additional note sent to the employee`: Click on the field to add a note.
+- :guilabel:`Note`: Click on the field to add an additional note.
+- :guilabel:`Worksheet`: Add information and instructions for
+  :doc:`field service shifts <planning/field_service>`.
 - :guilabel:`Date`: Choose the date and time of your shift. This is the only mandatory field when
   creating a shift.
 - :guilabel:`Allocated time`: Is calculated based on the date and the employee’s :guilabel:`Working
   Schedule`. See more in :ref:`Shift Templates <planning/templates>`.
+- :guilabel:`Company`: Select the desired company if you are managing multiple companies in Odoo.
 
 Click :guilabel:`Publish & Save` to confirm the shift and send the assigned employee their schedule
 by email.
@@ -336,3 +340,8 @@ shift reverts to an open shift.
 
    - Only the shifts matching the employee's roles are displayed in their schedule.
    - Unassigning shifts is not available for shifts in the past.
+
+.. toctree::
+   :titlesonly:
+
+   planning/field_service
