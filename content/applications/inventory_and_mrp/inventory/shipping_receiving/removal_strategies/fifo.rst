@@ -26,17 +26,13 @@ expiration dates. To enable this feature, navigate to :menuselection:`Inventory 
 --> Settings`. Under the :guilabel:`Traceability` section, check the box beside :guilabel:`Lots &
 Serial Numbers`.
 
-.. image:: fifo/enable-lots-serial-numbers.png
-   :alt: Enable Lots & Serial Numbers in the Inventory settings.
-
 Enable tracking by lots or serial numbers
 -----------------------------------------
 
 Next, ensure the intended product is tracked by lots or serial numbers by navigating to the product
 form through :menuselection:`Inventory --> Products --> Products` and selecting the desired product.
-On the product form, open the :guilabel:`General Information` tab and select the check box next to
-the :guilabel:`Track Inventory` field, then select either :guilabel:`By Unique Serial Number` or
-:guilabel:`By Lots`.
+On the product form, open the :guilabel:`General Information` tab. In the :guilabel:`Tracking`
+field, select either :guilabel:`By Unique Serial Number` or :guilabel:`By Lots`.
 
 .. image:: fifo/track-by-serial-number.png
    :alt: Enable tracking by serial number.
@@ -112,8 +108,8 @@ example, focusing on three lots of white shirts.
 The shirts are from the *All/Clothes* category, where :abbr:`FIFO (First In, First Out)` is set as
 the :guilabel:`Force Removal Strategy`.
 
-The white shirts are tracked :guilabel:`By Lots` in the :guilabel:`Inventory` tab of the product
-form.
+The white shirts are tracked :guilabel:`By Lots` in the :guilabel:`General Information` tab of the
+product form.
 
 The following table represents the on-hand stock and lot number details of white shirts.
 
