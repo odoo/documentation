@@ -3,19 +3,18 @@ Property fields
 ===============
 
 Property fields, or properties, enable the customization of a :ref:`form
-<studio/views/general/form>` view by adding various :ref:`field types <property_field/add>`. These
-fields allow information storage and management by adding values.
+<studio/views/general/form>` view by adding various :ref:`field types
+<essentials/property-fields/add>`. These fields allow information storage and management by
+adding values.
 
 .. admonition:: Property vs. regular fields
 
   Properties act as pseudo-fields; they behave like regular fields but are not saved as columns in
   the database. They also rely on a defined :ref:`parent record <property-fields/properties-apps>`.
+  For example, adding a property to a *task* inserts a field in *all tasks* within the *same
+  project* while other projects' tasks remain unaffected.
 
-  .. example::
-     Adding a property to a *task* inserts a field in *all tasks* within the *same
-     project* while other projects' tasks remain unaffected.
-
-.. _property_field/add:
+.. _essentials/property-fields/add:
 
 Add property fields
 -------------------
@@ -23,99 +22,98 @@ Add property fields
 To add a first property field to a :ref:`form view <studio/views/general/form>`, click the
 :icon:`fa-cog` (:guilabel:`Actions`) icon, then select :icon:`fa-cogs` :guilabel:`Edit Properties`.
 
-In the popover, enter the property's :guilabel:`Label`, choose a :guilabel:`Field Type`, and then
-configure the field based on the selected type:
+Then, configure the property field in the popover:
 
-.. list-table::
-  :header-rows: 1
-  :widths: 20 30 50
+#. Enter the property's :guilabel:`Label`.
+#. Choose a :guilabel:`Field Type`.
+#. Configure the field based on the selected type:
 
-  * - Field type
-    - Use
-    - Options
-  * - :ref:`Text <studio/fields/simple-fields-text>`
-    - Short text on a single line
-    - Enter a :guilabel:`Default Value` if desired.
-  * - :ref:`Multiline Text <studio/fields/simple-fields-multiline-text>`
-    - Full text on multiple lines
-    - Enter a :guilabel:`Default Value` if desired.
-  * - :ref:`HTML <studio/fields/simple-fields-html>`
-    - HTML field
-    - Enter a :guilabel:`Default Value` if desired.
-  * - :ref:`Checkbox <studio/fields/simple-fields-checkbox>`
-    - Checked or unchecked status
-    - Choose the :guilabel:`Default State`.
-  * - :ref:`Integer <studio/fields/simple-fields-integer>`
-    - Integer numbers (:dfn:`positive, negative, or zero, without a decimal`)
-    - Enter a :guilabel:`Default Value` if desired.
-  * - :ref:`Decimal <studio/fields/simple-fields-decimal>`
-    - Decimal numbers (:dfn:`positive, negative, or zero, with a decimal`)
-    - Enter a :guilabel:`Default Value` if desired.
-  * - :ref:`Monetary <studio/fields/simple-fields-monetary>`
-    - Selection of a (cost) currency
-    - Enter a :guilabel:`Default Value` if desired.
-  * - :ref:`Date <studio/fields/simple-fields-date>`
-    - Selection of a date on a calendar
-    - Select a :guilabel:`Default Value` if desired.
-  * - :ref:`Date & Time <studio/fields/simple-fields-date-time>`
-    - Selection of a date on a calendar and a time on a clock
-    - Select a :guilabel:`Default Value` if desired.
-  * - :ref:`Selection <studio/fields/simple-fields-selection>`
-    - Selection of a value from a group of predefined values
-    - Add a selectable option by clicking :icon:`fa-plus` :guilabel:`Add a Value` and entering the
-      :guilabel:`Option Name`.
+   .. list-table::
+      :header-rows: 1
+      :widths: 20 30 50
 
-      If desired, set an option as default by clicking the :icon:`fa-star-o`
-      (:guilabel:`Select Default`) button.
+      * - Field type
+        - Use
+        - Options
+      * - :ref:`Text <studio/fields/simple-fields-text>`
+        - Short text on a single line
+        - Enter a :guilabel:`Default Value` if desired.
+      * - :ref:`Multiline Text <studio/fields/simple-fields-multiline-text>`
+        - Full text on multiple lines
+        - Enter a :guilabel:`Default Value` if desired.
+      * - :ref:`HTML <studio/fields/simple-fields-html>`
+        - HTML field
+        - Enter a :guilabel:`Default Value` if desired.
+      * - :ref:`Checkbox <studio/fields/simple-fields-checkbox>`
+        - Checked or unchecked status
+        - Choose the :guilabel:`Default State`.
+      * - :ref:`Integer <studio/fields/simple-fields-integer>`
+        - Integer numbers (:dfn:`positive, negative, or zero, without a decimal`)
+        - Enter a :guilabel:`Default Value` if desired.
+      * - :ref:`Decimal <studio/fields/simple-fields-decimal>`
+        - Decimal numbers (:dfn:`positive, negative, or zero, with a decimal`)
+        - Enter a :guilabel:`Default Value` if desired.
+      * - :ref:`Monetary <studio/fields/simple-fields-monetary>`
+        - Selection of a (cost) currency
+        - Enter a :guilabel:`Default Value` if desired.
+      * - :ref:`Date <studio/fields/simple-fields-date>`
+        - Selection of a date on a calendar
+        - Select a :guilabel:`Default Value` if desired.
+      * - :ref:`Date & Time <studio/fields/simple-fields-date-time>`
+        - Selection of a date on a calendar and a time on a clock
+        - Select a :guilabel:`Default Value` if desired.
+      * - :ref:`Selection <studio/fields/simple-fields-selection>`
+        - Selection of a value from a group of predefined values
+        - Add a selectable option by clicking :icon:`fa-plus` :guilabel:`Add a Value` and entering the
+          :guilabel:`Option Name`.
 
-      Reorder the options by dragging and dropping them using the :icon:`oi-draggable`
-      (:guilabel:`drag handle`) button.
+          If desired, set an option as default by clicking the :icon:`fa-star-o`
+          (:guilabel:`Select Default`) button.
 
-      Delete an option by clicking the :icon:`fa-trash-o` (:guilabel:`Remove Property`) button.
-  * - :ref:`Tags <studio/fields/relational-fields-tags>`
-    - Selection of multiple values in the form of tags
-    - Enter a :guilabel:`Tag` name and press `Enter` to save it.
+          Reorder the options by dragging and dropping them using the :icon:`oi-draggable`
+          (:guilabel:`drag handle`) button.
 
-      Change a tag's color by clicking it and selecting another one.
-  * - :ref:`Many2one <studio/fields/relational-fields-many2one>`
-    - Selection of a single record from another model
-    - Enter the :guilabel:`Model` name. Configure its :ref:`Domain <search/custom-filters>` to
-      filter records if needed.
+          Delete an option by clicking the :icon:`fa-trash-o` (:guilabel:`Remove Property`) button.
+      * - :ref:`Tags <studio/fields/relational-fields-tags>`
+        - Selection of multiple values in the form of tags
+        - Enter a :guilabel:`Tag` name and press `Enter` to save it.
 
-      Select a :guilabel:`Default Value` if desired.
-  * - :ref:`Many2many <studio/fields/relational-fields-many2many>`
-    - Selection of multiple records from another model
-    - Enter the :guilabel:`Model` name. Configure its :ref:`Domain <search/custom-filters>` to
-      filter records if needed.
+          Change a tag's color by clicking it and selecting another one.
+      * - :ref:`Many2one <studio/fields/relational-fields-many2one>`
+        - Selection of a single record from another model
+        - Enter the :guilabel:`Model` name. Configure its :ref:`Domain <search/custom-filters>` to
+          filter records if needed.
 
-      Select a :guilabel:`Default Value` if desired.
-  * - :guilabel:`Separator`
-    - Group several properties under a foldable label
-    -
+          Select a :guilabel:`Default Value` if desired.
+      * - :ref:`Many2many <studio/fields/relational-fields-many2many>`
+        - Selection of multiple records from another model
+        - Enter the :guilabel:`Model` name. Configure its :ref:`Domain <search/custom-filters>` to
+          filter records if needed.
 
-.. note::
-   - Enter a :guilabel:`Suffix` to add a contextual description after a field's value. For example,
-     to indicate the cost per kilometer, use the :guilabel:`Monetary` field and name it **Cost**,
-     then enter **per km** as the :guilabel:`Suffix` field. The property then displays the
-     following: **Cost** [added value] **per km**.
-   - Enable :guilabel:`Display in Cards` to select whether to display the property in the Kanban,
-     List, or Calendar views' cards for every field.
-   - Enable :guilabel:`AI` to add :ref:`AI fields <ai/add-a-new-field/properties>` to the property.
-     Write a :guilabel:`Prompt` and/or type `/field` to insert dynamic values.
-   - To add another property, click :icon:`fa-plus` :guilabel:`Add a Property` at the bottom of the
-     form.
+          Select a :guilabel:`Default Value` if desired.
+      * - :guilabel:`Separator`
+        - Group several properties under a foldable label
+        -
+
+#. Enter a :guilabel:`Suffix` to add a contextual description after a field's value. For example, to
+   indicate the cost per kilometer, use the :guilabel:`Monetary` field and name it **Cost**,
+   then enter **per km** as the :guilabel:`Suffix` field. The property then displays the
+   following: **Cost** [added value] **per km**.
+#. Enable :guilabel:`Display in Cards` to select whether to display the property in the Kanban,
+   List, or Calendar views' cards for every field.
+#. Enable :guilabel:`AI` to add :ref:`AI fields <ai/add-a-new-field/properties>` to the property.
+   Write a :guilabel:`Prompt` and/or type `/field` to insert dynamic values.
+#. Click outside the popover to save the added property field.
 
 .. tip::
-   - To edit an existing property, hover the cursor over the property:
-
-     - Click the :icon:`fa-pencil` (:guilabel:`pencil`) button to open a popover and modify the
-       property. In the popover, click the :icon:`fa-chevron-up` (up) or :icon:`fa-chevron-down`
-       (down) chevron to move a property upwards or downwards.
-     - Click :icon:`fa-trash` :guilabel:`Delete`, then :guilabel:`Delete` to permanently remove it.
-     - Use the :icon:`oi-draggable` (:guilabel:`drag handle`) icon to drag and drop the property to
-       reorder or regroup.
-
-   - Click outside the popover to save the added property.
+   - To add another property field, click :icon:`fa-plus` :guilabel:`Add a Property` at the bottom
+     of the form.
+   - To edit a property field, click the :icon:`fa-pencil` (:guilabel:`pencil`) icon next to it,
+     perform the necessary changes in the popover, then click outside the popover to save the
+     changes.
+   - To remove a property field, click the :icon:`fa-pencil` (:guilabel:`pencil`) icon next to it,
+     click :icon:`fa-trash` :guilabel:`Delete` in the popover, then click :guilabel:`Delete Field`.
+   - To reorder property fields, use the :icon:`oi-draggable` (:guilabel:`drag handle`) icon.
 
 .. _property-fields/properties-apps:
 
