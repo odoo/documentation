@@ -4079,12 +4079,6 @@ take the following attributes:
   name of a field to group tasks by
 ``disable_drag_drop``
   if set to true, the gantt view will not have any drag&drop support
-``consolidation``
-  field name to display consolidation value in record cell
-``consolidation_max``
-  dictionary with the "group by" field as key and the maximum consolidation
-  value that can be reached before displaying the cell in red
-  (e.g. ``{"user_id": 100}``)
 ``consolidation_exclude``
   name of the field that describes if the task has to be excluded
   from the consolidation
