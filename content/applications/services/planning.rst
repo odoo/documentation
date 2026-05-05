@@ -80,9 +80,6 @@ To adapt the employee's planning settings, go to :menuselection:`Planning --> Co
 Employees`, and choose the employee for whom you want to edit the settings. Then, go to the
 :guilabel:`Work Information` tab.
 
-.. image:: planning/employee-tab.png
-   :alt: Employee profile and the work information tab.
-
 .. tip::
    You can do the same from the **Employees** app, which is installed by default along with
    Planning.
@@ -131,8 +128,8 @@ Additionally, when a :guilabel:`Default role` is defined:
 
 .. note::
    If the Planning roles fields are left empty, there are no restrictions in the shift templates and
-   open shifts shared with the employee. However, it’s not possible to use the **Auto Plan** feature
-   for employee with no roles.
+   open shifts shared with the employee. However, it's not possible to use the **Auto Plan** feature
+   for employees with no roles.
 
 .. _planning/materials:
 
@@ -151,53 +148,39 @@ Shift templates
 ---------------
 
 To create a shift template, click :guilabel:`New` on any schedule, then fill in the
-:ref:`details of the shift <planning/create-shift>`. In order for the shift to be saved as a
-template, click :guilabel:`Save Template`.
+:ref:`details of the shift <planning/create-shift>`, and click :guilabel:`Save Template`.
 
 .. image:: planning/save-template.png
    :alt: Shift form.
 
-Alternatively, you can go to :menuselection:`Planning --> Configuration --> Shift Templates`, then
-click :guilabel:`New`. Fill in the :guilabel:`Start Hour` and :guilabel:`Span`. The shift’s
-:guilabel:`End Time` is then calculated based on the :guilabel:`Working Hours`, taking into
-account working time as well as breaks.
+Alternatively, go to :menuselection:`Planning --> Configuration --> Shift Templates`, then
+click :guilabel:`New`. Fill in the :guilabel:`Start & End Hours` and the shift's :guilabel:`Span`,
+then assign a :guilabel:`Role`.
 
-.. example::
-   The employee's working hours are Monday to Friday, 8 am to 5 pm, with a break between 12 and 1
-   pm.
-
-   - Creating a shift template with a start hour of 9 am and a duration of 8 hours will result in
-     the end hour being 5 pm, based on the working hours and the 1-hour break.
-   - Creating a shift template with a start hour of 10 am and a duration of 10 hours will result in
-     the end hour of 10 am the following day, as the company is closed at 5 pm according to the
-     working hours.
-
-Additionally, for each shift template, you can also configure:
-
-- :guilabel:`Role`: to link the shift to this specific role.
-- :guilabel:`Project`: to keep track of shifts that are dedicated to work on a project.
+If the Project app is installed, a :guilabel:`Project` can also be selected.
 
 .. _planning/shifts:
 
 Planning shifts
 ===============
 
-On opening the Planning app, the users see their own schedule. Users with admin roles can also see
-:guilabel:`Schedule by Resource`, :guilabel:`Role`, :guilabel:`Project`, or :guilabel:`Sales Order`,
-as well as reporting and configuration menus.
+On opening the Planning app, the users see their own schedule. Users with administrator access
+rights can also see the schedule :guilabel:`By Resource`, :guilabel:`By Role`, :guilabel:`By
+Project`, and :guilabel:`By Sales Order`, as well as reporting and configuration menus.
 
 .. note::
-   The schedule is displayed in the Gantt view, which allows you to edit (with a drag and drop),
-   resize, split, and duplicate shifts without having to open them.
+   The schedule is displayed in the Gantt view, which allows you to reassign, reschedule, resize,
+   split, and duplicate shifts without having to open them.
 
 .. image:: planning/schedule.png
    :alt: A schedule displaying various visual elements.
 
 The following visual elements are used on the shifts in the schedules:
 
-- **Full color**: shifts that are planned and published.
-- **Diagonal stripes**: shifts that are planned but have yet to be published.
-- **Grayed-out background**: employees that are on time off.
+- **Full color**: shifts that are planned and :ref:`published <planning/shifts-publish>`.
+- **Diagonal stripes**: shifts that are planned but have yet to be :ref:`published
+  <planning/shifts-publish>`.
+- **Grayed-out background**: employees who are on time off.
 - **Progress bar**: currently ongoing shifts with timesheets linked to them.
 - **Grayed-out shift**: when copying shifts, the copied shifts are shown in full color, whereas
   previously existing shifts are temporarily greyed out. The color changes back to full color or
@@ -205,63 +188,159 @@ The following visual elements are used on the shifts in the schedules:
 
 .. _planning/create-shift:
 
-Create a shift
---------------
+Create shifts
+-------------
 
 To create a shift, go to any schedule, then click :guilabel:`New`. In the pop-up window that opens,
 fill in the following details:
 
-- **Templates**: If there is one or more templates existing in your database, they are
-  displayed in the upper section of the pop-up window. Once selected, a template prefills the
-  shift form accordingly.
-- :guilabel:`Resource`: Resources can be both employees or materials. If this field is left empty,
+- **Templates**: If there is one or more :ref:`shift templates <planning/templates>` existing in the
+  database, they are displayed in the upper section of the pop-up window. Once selected, a template
+  prefills the shift form accordingly.
+- :guilabel:`Resources`: Resources can be both employees or materials. If this field is left empty,
   the shift is considered an :ref:`open shift <planning/open-shifts>`.
-- :guilabel:`Role`: Select the role that the resource assigned will be performing. This field is
-  used when :ref:`auto-planning <planning/open-shifts>` shifts. Once you select a role, the shift
-  templates associated with it are displayed in the upper section of the pop-up window.
-- :guilabel:`Project`: If the Project app is installed in your database, this field allows you to
-  link the project to the shift is available, allowing you to plan and track shifts dedicated to
-  work on the selected project.
-- :guilabel:`Sales Order Item`: If the Sales app is installed in your database, this field allows
-  you to link a sales order to the shift.
+- :guilabel:`Date`: Choose the date and time of the shift. This is the only mandatory field when
+  creating a shift.
 - :guilabel:`Repeat`: Click the :icon:`fa-repeat` :guilabel:`(repeat)` button and configure the
-  :guilabel:`Repeat every` fields according to your needs. The following rules apply to recurring
-  shifts:
+  :guilabel:`Repeat every` fields as needed. The following rules apply to recurring shifts:
 
   - All fields (e.g., :guilabel:`Resource`, :guilabel:`Role`, :guilabel:`Project`) are copied from
-    the original shift except for the date, which is adjusted according to the
-    :guilabel:`Repeat Every` field.
+    the original shift except for the date, which is adjusted according to the :guilabel:`Repeat
+    Every` field.
   - Recurrences are planned but not published.
   - By default, planned shifts are created six months in advance, after which they are created
-    gradually. To change the time frame, :ref:`activate the Developer mode <developer-mode>`, then
-    go to :menuselection:`Planning --> Configuration --> Settings` and edit the
-    :guilabel:`Recurring Shifts`.
+    gradually. To change the time frame, :ref:`activate the developer mode <developer-mode>`, then
+    go to :menuselection:`Planning --> Configuration --> Settings` and edit the :guilabel:`Recurring
+    Shifts`.
 
-- :guilabel:`Additional note sent to the employee`: Click on the field to add a note.
-- :guilabel:`Date`: Choose the date and time of your shift. This is the only mandatory field when
-  creating a shift.
-- :guilabel:`Allocated time`: Is calculated based on the date and the employee’s :guilabel:`Working
-  Schedule`. See more in :ref:`Shift Templates <planning/templates>`.
+- :guilabel:`Allocated Time`: Is calculated based on the shift's date and time, and the employee's
+  :guilabel:`Working Schedule`.
+- :guilabel:`Role`: Select the role that the assigned resources will be performing. This field is
+  especially useful when :ref:`auto-planning <planning/open-shifts>` shifts. Once you select a role,
+  the :ref:`shift templates <planning/templates>` associated with it are displayed in the upper
+  section of the pop-up window.
 
-Click :guilabel:`Publish & Save` to confirm the shift and send the assigned employee their schedule
-by email.
+Additionally, the following fields may also be available:
 
-.. note::
-   The draft is visible on the admin planning view and can be identified by diagonal lines. The
-   employee is only notified of the shift once it's published.
+- :guilabel:`Project`: If the :guilabel:`Project planning` setting is enabled in the Planning
+  settings, select the relevant project to link to the shift. Shifts dedicated to the selected
+  project are then planned and tracked accordingly.
+- :guilabel:`Task`: If a project is selected, optionally select a task within that project.
+- :guilabel:`Sales Order`: If the Sales app is installed, select the relevant sales order to link to
+  the shift.
+- :guilabel:`Customer`: If the shift is an :doc:`on-site intervention <planning/field_service>`,
+  select the relevant customer to link to the shift.
+- :guilabel:`Worksheet`: If :ref:`field service worksheets <planning/field-service/worksheets>` are
+  configured, optionally select the relevant worksheet template.
 
-   Two kinds of notifications are sent to the employees depending on their account configuration:
+Click :guilabel:`Save` to create the shift, or :guilabel:`Publish` to create it and notify the
+assigned employee by email.
 
-   - Employees without user accounts are redirected to a dedicated **Planning portal**.
-   - Employees with a user account are redirected to the :guilabel:`My Planning` view in the
-     backend view of Odoo.
+.. _planning/shifts-sales-orders:
+
+Create shifts from sales orders
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Shifts are created automatically from sales orders containing products configured as follows:
+
+- :guilabel:`Product Type`: Set to :guilabel:`Service`.
+- :guilabel:`Plan Services`: Enable the checkbox, then select the relevant :ref:`role
+  <planning/roles>`.
+
+Once the sales order is :ref:`confirmed <sales/sales_quotations/send-and-confirm>`, schedule the
+shift:
+
+#. Click the :guilabel:`To Plan` smart button on the sales order form.
+#. Click the relevant day in the appropriate resource's schedule.
+
+   .. note::
+      Only :ref:`resources whose role <planning/configuration>` matches the role configured for the
+      product on the sales order are available for shift assignment.
+
+#. Select the relevant shift from the list of open shifts for that role.
+#. :ref:`Publish <planning/shifts-publish>` the shift.
 
 .. tip::
-   The **split shifts** tool allows to easily split a long shift into segments. To do so, hover the
-   mouse over the desired shift and click the :icon:`fa-scissors` (:guilabel:`scissors`) icon.
+   - To edit the shift before planning it, on the :guilabel:`Schedule by Resource` view:
+
+     - either click :guilabel:`New`;
+     - or click the relevant day in the appropriate resource's schedule, then click
+       :guilabel:`Create New`.
+
+     Then, :ref:`edit the fields <planning/create-shift>` as needed and :guilabel:`Save` the shift
+     or :ref:`Publish <planning/shifts-publish>` it.
+
+   - Once shifts have been planned for the sales order, click the :guilabel:`Planned` smart button
+     on the sales order form to view them.
+
+.. _planning/shifts-edit:
+
+Edit and delete shifts
+----------------------
+
+To edit a shift, click it in the calendar or schedule, then click :guilabel:`Edit`.
+
+Shifts can also be adjusted directly on the schedule, without opening them:
+
+- Reassign or reschedule a shift by dragging and dropping it to the desired employee and day.
+- Extend a shift over several days by hovering over the right edge of the shift block. When the
+  cursor changes into a resize pointer, click and drag the edge to the desired day.
+- Split a shift spanning multiple consecutive days into two segments by hovering over the boundary
+  between the two affected day columns, then clicking the :icon:`fa-scissors` (:guilabel:`scissors`)
+  icon.
 
    .. image:: planning/split-shifts.png
       :alt: Split shifts tool.
+
+To delete a shift, click it in the schedule, then click :guilabel:`Delete`.
+
+.. tip::
+   Alternatively, the shift form can be accessed by switching to the list view and clicking
+   :guilabel:`View` on the relevant shift's line, or by switching to the Kanban view and clicking
+   the relevant shift's card.
+
+.. _planning/shifts-publish:
+
+Publish shifts
+--------------
+
+Publishing shifts notifies the assigned employees by email and makes the schedule visible to
+all users, including those without :guilabel:`Administrator` Planning :doc:`access rights
+</applications/general/users/access_rights>` (via :menuselection:`Planning --> Planning -->
+All Planning`).
+
+Shifts can be published individually or in bulk.
+
+To publish an individual shift:
+
+- either click :guilabel:`Publish` at the end of the :ref:`shift creation process
+  <planning/create-shift>`;
+- or click the shift in the schedule, click :guilabel:`Edit`, then click :guilabel:`Publish` on
+  the shift form.
+
+To publish all planned shifts:
+
+#. From any schedule, click :guilabel:`Publish`.
+#. In the pop-up, optionally edit the :guilabel:`Period`.
+#. Disable :guilabel:`Include Open Shifts` to exclude :ref:`open shifts <planning/open-shifts>` from
+   the publication.
+#. Optionally edit the list of employees; removing an employee from the list excludes their shifts
+   from this publication.
+#. Click :guilabel:`Publish & Send`.
+
+Employees are notified of their shifts once they are published:
+
+- Employees without user accounts are redirected to a dedicated **Planning portal**.
+- Employees with a user account are redirected to the :guilabel:`My Planning` view.
+
+.. note::
+   - If the email address of one or more employees in the list has not been configured, enter their
+     :guilabel:`Work Email` in the pop-up that opens, then click :guilabel:`Save & Send Schedule`.
+     If the missing email addresses are not added, the corresponding employees' schedules are not
+     published.
+   - Unpublished shifts are only visible on schedules for users with :guilabel:`Administrator`
+     Planning :doc:`access rights </applications/general/users/access_rights>` and are identified by
+     diagonal lines.
 
 .. _planning/open-shifts:
 
@@ -269,17 +348,17 @@ Open shifts and auto planning
 -----------------------------
 
 The :guilabel:`Auto Plan` button allows you to assign **Open shifts** (shifts with no resource
-assigned) and create and assign shifts linked to sales orders or project.
+assigned) and create and assign shifts linked to sales orders or project tasks.
 
 The following features have an impact on auto planning:
 
 - **Roles**: Open shifts are only assigned to resources (employees or materials) that have the
   corresponding role assigned. It is not possible to use the :guilabel:`Auto Plan` feature for
-  employee with no roles.
+  employees with no role.
 - **Default roles**: The default role assigned to a resource is given priority over the other roles
   they have assigned to them.
 - **Conflicts**: Employees or materials cannot be assigned multiple shifts at the same time.
-- **Time off**: The employees’ time off is taken into account, as well as public holidays.
+- **Time off**: The employees' time off is taken into account, as well as public holidays.
 - **Working hours**: Are taken into account when assigning shifts to employees or materials. It is
   not possible to use the :guilabel:`Auto Plan` feature for an employee who is working
   :ref:`flexible hours <planning/working-hours>`.
@@ -336,3 +415,8 @@ shift reverts to an open shift.
 
    - Only the shifts matching the employee's roles are displayed in their schedule.
    - Unassigning shifts is not available for shifts in the past.
+
+.. toctree::
+   :titlesonly:
+
+   planning/field_service
