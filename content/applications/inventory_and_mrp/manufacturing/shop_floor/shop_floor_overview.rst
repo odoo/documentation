@@ -121,7 +121,8 @@ After clicking :guilabel:`Close Production`, the |MO| card disappears and the wo
 On the right side of the footer is a :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` button,
 which opens an *Options* pop-up window with additional options for the |MO|:
 
-- :guilabel:`Register Production / Serial`: Record lots of serial numbers for the units produced.
+- :guilabel:`Register Quantity/Lot`: Record the quantity produced and any lot or serial numbers for
+  the manufactured products.
 - :guilabel:`Scrap`: Send components to a scrap location when they are found to be defective. Learn
   more about the scrap order form in :ref:`inventory/scrap-from-stock`.
 - :guilabel:`Add Work Order`: Add an additional work order to the |MO|. Specify the operation after
@@ -204,7 +205,8 @@ away. When the work order card disappears completely, the work order is marked a
 On the right side of the footer is a :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` button,
 which opens a pop-up window with additional options for the work order:
 
-- :guilabel:`Register Production/Serial`: Record a lot or serial numbers for the units produced.
+- :guilabel:`Register Quantity/Lot`: Record the quantity produced and any lot or serial numbers for
+  the manufactured products.
 - :guilabel:`Scrap`: Send components to a scrap location when they are found to be defective. Learn
   more about the scrap order form in :ref:`inventory/scrap-from-stock`.
 - :guilabel:`Modify Routing`: Move the work order to another work center or add another work order.
