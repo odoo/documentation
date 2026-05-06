@@ -35,7 +35,7 @@ Employees
 =========
 
 First, configure the :doc:`employee general information <../../employees/new_employee>` and then
-configure the following fields under the :guilabel:`Private Information` tab:
+configure the following fields under the *Private Information* tab:
 
 - :guilabel:`Nationality (Country)`: The nationality affects an employee's payslips, whether they
   are nationals or expats.
@@ -56,7 +56,7 @@ clicking on the :icon:`fa-book` :guilabel:`Contracts` smart button, or going to
 :menuselection:`Employees --> Contracts`.
 
 The following contractual information related to employees working in the United Arab Emirates are
-found under the :guilabel:`Salary Information` tab:
+found under the *Salary Information* tab:
 
 - :guilabel:`Wage Type`: select :guilabel:`Fixed Wage` for Full-time or Part-time employees, or
   :guilabel:`Hourly Wage` for employees who are paid hourly.
@@ -100,7 +100,8 @@ The following are the different allowances that can be defined directly on the :
 calculations as monthly variable salaries for the specific employee that they are linked to.
 
 Rules that are related to the |WPS| setup, are linked to other input types, and whenever they are
-used, their values are reflected on the |WPS| as monthly variable salary for that specific employee.
+used, their values are reflected on the |WPS| as a monthly variable salary for that specific
+employee.
 
 +--------------------------------------+---------------------+
 | **Type**                             | **Code**            |
@@ -200,18 +201,21 @@ The company contributes **15%** of the total monthly salary for the employee if 
 On the other hand, the employee contributes **5%** of their total monthly salary and that amount
 gets deducted from the payslip amount.
 
-Annual remaining leave balance rules
-------------------------------------
+Remaining leave balance rules
+-----------------------------
 
 Annual remaining leave balance rules are used for calculating the amount to be paid to or taken from
-the employee based on the number of leave days deserved by the employee during the current year.
+the employee at the end of their service in the company, based on the eligibility of the employee of
+leave days during the current year.
 
-The annual leave :ref:`time off type <time_off/time-off-types>` is specified using the :guilabel:`Is
-Annual Leave` checkbox.
+The number of eligible days is set on the employee's profile under the *Payroll* tab, and the time
+off type that is considered as the annual leave time off type is set in the :guilabel:`Annual Leave
+Time-off Type` field. This is found by navigating to menuselection:`Payroll app --> Configuration
+--> Settings`, and scrolling to the *Emirati Localization* section.
 
-If enabled, the rule calculates the amount of leave days deserved by the employee up to the current
-date and subtracts the number of annual leave days taken, and if the result is positive, this means
-that the employee should be compensated for remaining amount and if negative this means that the
+When the employee departs, the rule calculates the amount of leave days earned by the employee up
+to the current date, and subtracts the number of annual leave days taken. If the result is positive,
+this means the employee should be compensated for remaining amount, and if negative, this means the
 employee is liable to the company for the difference.
 
 Sick leave rules
@@ -239,6 +243,10 @@ There are **3 cases** for the employee to have:
    As per the labor law of the United Arab Emirates, the 15, 30, 45 days are not specified as
    working days or calendar days so this point will rely on the company policy.
 
+There is a single sick leave time-off type: Sick Time Off. The system automatically tracks the
+number of sick leave days taken by the employee and applies the corresponding percentage based on
+the accumulated balance.
+
 The amount paid for the employee per sick leave day is counted as follows:
 
 .. math::
@@ -252,13 +260,22 @@ Daman investments end of service programme (DEWS)
 -------------------------------------------------
 
 |DEWS| allows for calculating the |DEWS| amounts for the employees who are eligible for it and would
-like to be registered on it under their current contract with the company.
+like it to be registered under their current contract with the company.
 
-It is calculated based on the number of years that employees have spent in the company:
+If the employee is registered, the employer is required to contribute based on the number of years
+the employee spent in the company as follows:
 
-- **Less than 5 years:** 5.83% is deducted from the employee's **BASIC** salary towards the DEWS.
+- **Less than 5 years:** 5.83% is deducted from the employee's **BASIC** salary towards the |DEWS|.
 - **More than 5 years:** 8.33% of The employee's **BASIC** is deducted from the total payable for
   that employee.
+
+The employee may choose to contribute up to 10% of their basic salary as a voluntary contribution,
+which is deducted directly from their monthly salary. This contribution is configured in the
+:guilabel:`Employee Contribution` field of the |DEWS| Benefits section, found in the *Payroll* tab
+of the employee record.
+
+This field is only visible when :guilabel:`Is DEWS Applied` is set to :guilabel:`True`, and is used
+to enable and manage voluntary employee contributions within the |DEWS| setup.
 
 Unpaid leaves
 -------------
@@ -433,8 +450,8 @@ The following steps need to be followed before generating the report:
 #. Set the unique identifier on all of the employees who are a part of the target of the
    batch/payslip.
 
-   The :guilabel:`Identification No` field can be found on the employee's page under the
-   :guilabel:`Personal` tab.
+   The :guilabel:`Identification No` field can be found on the employee's page under the *Personal*
+   tab.
 
 Once the initial setup is done, the |WPS| can be generated either for one payslip or for a batch as
 follows:
