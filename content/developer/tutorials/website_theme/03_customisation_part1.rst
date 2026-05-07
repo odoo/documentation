@@ -10,11 +10,12 @@ Add custom SCSS
 You've adjusted Odoo and Bootstrap variables and set presets, yet you still notice disparities
 between your website and the client's design. The only solution is to incorporate custom SCSS.
 
-In :file:`theme.scss`, reproduce the following design elements:
+In appropriate SCSS files, reproduce the following design elements:
 
 - Add a **green underline** on active nav items.
 - Modify the **arrow** for collapsible nav items.
-- Modify the **slider's arrows** by adding a green background and changing their design.
+- Modify the **rounded and boxed slider's arrows** by adding a green background and changing their
+  design.
 
 You will find the various `media here
 <{GITHUB_TUTO_PATH}/website_airproof/static/src/img/content/icons>`_.
@@ -37,8 +38,8 @@ You will find the various `media here
 
    Find the solution in our Airproof example on `header.scss
    <{GITHUB_TUTO_PATH}/website_airproof/static/src/scss/layout/header.scss>`_
-   and `caroussel.scss
-   <{GITHUB_TUTO_PATH}/website_airproof/static/src/scss/snippets/caroussel.scss>`_.
+   and `carousel.scss
+   <{GITHUB_TUTO_PATH}/website_airproof/static/src/scss/snippets/carousel.scss>`_.
 
 .. _tutorials/website_theme/customisation_part1/custom_js:
 
@@ -73,7 +74,7 @@ cross-page elements, starting with the header.
 
    - A custom shopping cart icon.
    - A login/user as a button.
-   - Navigation text to 14px.
+   - Navigation text to 0.875rem.
 
    You can find the `cart icon
    <{GITHUB_TUTO_PATH}/website_airproof/static/src/img/content/icons/shopping.svg>`_ and `template
@@ -101,9 +102,7 @@ cross-page elements, starting with the header.
      For example, everything concerning the general layout (header, footer...) in
      :file:`website_templates.xml`, everything related to blog in :file:`website_blog_templates.xml`,
      to event in :file:`website_event_templates.xml`, etc.
-   - | To modify the cart icon, you can use an `XPath`.
-     | Since this is linked to eCommerce, place it in a new file called
-       :file:`website_sale_templates.xml`.
+   - To modify the cart icon, you can use an XPath.
    - Don't forget to continue making as many modifications as you can through the :file:`Bootstrap
      variables` and :file:`primary variables` (font, colors, size...). You can use them to help you
      with this exercise.
@@ -117,7 +116,7 @@ cross-page elements, starting with the header.
 
    Find the solution in our Airproof example for:
 
-   - the xml structure and how to add the header and mega menu template to the options list on
+   - the XML structure of the header and the mega menu in
      `website_template.xml <{GITHUB_TUTO_PATH}/website_airproof/views/website_templates.xml>`_.
    - disable the default header:
 
@@ -129,13 +128,27 @@ cross-page elements, starting with the header.
            <field name="active" eval="False"/>
         </record>
 
-   - declare your :file:`website_templates.xml` file along with all the new ones in your
-     :file:`manifest`.
+   - adding the header to the list of options in the Website Builder in
+     `header_template_option.xml
+     <{GITHUB_TUTO_PATH}/website_airproof/static/src/website_builder/header_template_option.xml>`_.
+   - adding the mega menu to the list of options in the Website Builder in
+     `mega_menu_option.xml <{GITHUB_TUTO_PATH}/website_airproof/static/src/website_builder/mega_menu_option.xml>`_.
    - disable the options you don’t want in your header via the `presets
      <{GITHUB_TUTO_PATH}/website_airproof/data/presets.xml>`_.
+   - the shopping cart icon, since it's linked to eCommerce, do an XPath that you place in
+     a new file called `website_sale_templates.xml
+     <{GITHUB_TUTO_PATH}/website_airproof/views/website_sale_templates.xml>`_.
+   - declare your :file:`website_templates.xml` file along with all the new ones in your
+     :file:`__manifest__.py`.
+
+     .. warning::
+        Don't forget that the files related to the Website Builder options behaviours are declared in
+        the bundle `website.website_builder_assets`.
+
    - make the use of `primaries
      <{GITHUB_TUTO_PATH}/website_airproof/static/src/scss/primary_variables.scss>`_ like
-     `header-template`, `navbar-font`, `header-font-size`...
+     `header-template`, `navbar-font`... As you should have done to set the navigation to 0.875rem
+     using the variable `header-font-size`.
    - use `bootstrap_overridden
      <{GITHUB_TUTO_PATH}/website_airproof/static/src/scss/bootstrap_overridden.scss>`_ like
      `$navbar-light-color`, `$navbar-light-hover-color`, `$navbar-padding-y`...
@@ -173,7 +186,7 @@ You will find the `icons here <{GITHUB_TUTO_PATH}/website_airproof/static/src/im
 .. image:: 03_customisation_part1/footer.png
 
 .. tip::
-   - You can enable or disable the copyright section via the presets.
+   - You can enable or disable the copyright section via the `presets`.
    - For the newsletter section to work, you need to install the `website_mass_mailing` application.
 
 .. spoiler:: Solutions
@@ -189,8 +202,11 @@ You will find the `icons here <{GITHUB_TUTO_PATH}/website_airproof/static/src/im
          'depends': ['website_sale', 'website_sale_wishlist', 'website_blog',
          'website_mass_mailing'],
 
-   - find the xml structure and add the template to the options list on
+   - create the XML structure in
      `website_template.xml <{GITHUB_TUTO_PATH}/website_airproof/views/website_templates.xml>`_.
+   - add the template to the options list in `footer_option_plugin.js
+     <{GITHUB_TUTO_PATH}/website_airproof/static/src/website_builder/footer_option_plugin.js>`_. And
+     add it to the :file:`manifest`.
    - disable the default footer and enable the copyright:
 
      .. code-block:: xml
@@ -222,8 +238,8 @@ can freely drag & drop onto different pages.
 Based on the Airproof design, create a custom carousel snippet to showcase drones. Then, add it as
 cover section on your homepage.
 
-#. Create the snippet template. Then, add it to the list of building blocks available in the website
-   builder. Place it in its own category. Here you will find the `images
+#. Create the snippet template. Then, add it to the list of building blocks available in the Website
+   Builder. Place it in its own group. Here you will find the `images
    <{GITHUB_TUTO_PATH}/website_airproof/static/src/img/snippets/s_airproof_caroussel>`_ and
    `snippet illustration
    <{GITHUB_TUTO_PATH}/website_airproof/static/src/img/wbuilder/s-airproof-snippet.svg>`_.
@@ -244,7 +260,6 @@ cover section on your homepage.
       <website_themes/building_blocks/custom/options>`.
 
    .. image:: 03_customisation_part1/custom-building-block-option.png
-      :scale: 75%
 
 #. Add the snippet on your homepage.
 
@@ -285,33 +300,19 @@ cover section on your homepage.
               </xpath>
            </template>
 
-   #. Add the option to the Website Builder. In our example, it looks like this:
+   #. Add the 2 options to edit the bubbles. In our example, it looks like this:
 
-      .. code-block:: xml
-         :caption: ``/website_airproof/views/snippets/s_airproof_carousel.xml``
-
-         <!-- Add options to snippets -->
-         <template id="snippet_options" inherit_id="website.snippet_options" name="Airproof -
-         Snippets Options">
-            <xpath expr="." position="inside">
-               <div data-selector=".x_bubble_item">
-                  <!-- Bubble shadow color -->
-                  <we-button-group string="Bubble shadow">
-                     <we-button data-select-class="x_bubble1">Blue</we-button>
-                     <we-button data-select-class="x_bubble2">Green</we-button>
-                  </we-button-group>
-                  <!-- Bubble spacing -->
-                  <we-range string="Bubble Spacing" data-select-class="mb-1|mb-2|mb-3|mb-4|mb-5"/>
-               </div>
-            </xpath>
-            <xpath expr="//div[@data-js='Box'][@data-selector='section .row > div']" position="attributes">
-               <!-- Disable standard shadow & borders for bubbles -->
-               <attribute name="t-attf-data-exclude" add=".x_bubble_item" separator=", "/>
-            </xpath>
-         </template>
-
-      Additionally, the SCSS related to the bubbles in the `s_airproof_carousel/000.scss
-      <{GITHUB_TUTO_PATH}/website_airproof/static/src/snippets/s_airproof_carousel/000.scss>`_ file.
+      - First define the options components in `airproof_carousel_option_plugin.js
+        <{GITHUB_TUTO_PATH}/website_airproof/static/src/website_builder/airproof_carousel_option_plugin.js>`_
+        and register them in a builder plugin.
+      - Then define the XML template rendered in the options panel in a `airproof_carousel_option.xml
+        <{GITHUB_TUTO_PATH}/website_airproof/static/src/website_builder/airproof_carousel_option.xml>`_
+        file.
+      - Additionally, add the SCSS related to the bubbles in the `s_airproof_carousel/000.scss
+        <{GITHUB_TUTO_PATH}/website_airproof/static/src/snippets/s_airproof_carousel/000.scss>`_ file.
+      - Declare your files in your `__manifest__.py
+        <{GITHUB_TUTO_PATH}/website_airproof/__manifest__.py>`_ in the section
+        `website.website_builder_assets`.
 
    #. Add your snippet to the homepage. You can find all the necessary information in the `home.xml
       <{GITHUB_TUTO_PATH}/website_airproof/data/pages/home.xml>`_ file from our example module.
@@ -360,9 +361,10 @@ snippet on the homepage.
 
    #. Create your snippet template. You can find all the necessary information in the
       `options.xml <{GITHUB_TUTO_PATH}/website_airproof/views/snippets/options.xml>`_
-      file and `caroussel.scss
-      <{GITHUB_TUTO_PATH}/website_airproof/static/src/scss/snippets/caroussel.scss>`_ file from our
-      example module.
+      file, `carousel.scss
+      <{GITHUB_TUTO_PATH}/website_airproof/static/src/scss/snippets/carousel.scss>`_ and
+      `product_card.scss <{GITHUB_TUTO_PATH}/website_airproof/static/src/scss/components/product_card.scss>`_
+      (for the hover effect) files from our example module.
 
    #. Apply the template to a product dynamic snippet on the homepage. You can find all the
       necessary information in the `home.xml
