@@ -144,8 +144,7 @@ when extra time is counted and what time is not logged.
   employee when they check out with a kiosk, or when a user checks out in the database.
 
 .. note::
-   Approved extra hours can be :ref:`deducted from an approved time off request
-   <time_off/deduct-extra-hours>`.
+   Approved extra hours can be deducted from an approved time off request.
 
 .. seealso::
    - :doc:`attendances/check_in_check_out`

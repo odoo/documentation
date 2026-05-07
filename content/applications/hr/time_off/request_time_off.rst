@@ -63,11 +63,11 @@ Enter the following information on the :guilabel:`New Time Off` request form:
 - :guilabel:`Requested (Days/Hours)`: This field updates automatically once the :guilabel:`Date`
   section is completed. If the :guilabel:`Date` section is modified, this section automatically
   updates to reflect the total time off requested. This field is in either hours or days, depending
-  on how the selected :ref:`Time Off Type <time_off/time-off-types>` is configured.
+  on how the selected :doc:`Time Off Type <../time_off/time_off_types>` is configured.
 - :guilabel:`Description`: Enter a description for the time off request. This should include any
   details that managers and approvers may need to approve the request.
-- :guilabel:`Supporting Document`: This field **only** appears if the :ref:`Time Off Type
-  <time_off/time-off-types>` selected allows for the attachment of documents. Click the
+- :guilabel:`Supporting Document`: This field **only** appears if the :doc:`Time Off Type
+  <../time_off/time_off_types>` selected allows for the attachment of documents. Click the
   :icon:`fa-paperclip` :guilabel:`Attach File` button, and a file explorer window appears.
 
   Navigate to the desired files that should be attached, select them, then click The

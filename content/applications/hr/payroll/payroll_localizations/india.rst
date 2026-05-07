@@ -268,7 +268,7 @@ Sandwich leave
 
 A *sandwich Leave* is a time off policy where weekends and public holidays falling between two applied
 leave days are also counted as time off.
-To enable this on a :ref:`time off types <time_off/time-off-types>` navigate to
+To enable this on a :doc:`time off type <../../time_off/time_off_types>` navigate to
 :menuselection:`Time Off app --> Configuration --> Time Off Types`, and click the desired
 time off type to enable this feature on. Tick the checkbox next to :guilabel:`Sandwich Leave`
 in the :guilabel:`Configuration` section of the :guilabel:`Time Off Type` form.
@@ -290,7 +290,7 @@ on these defined dates.
 If an employee attempts to request leave on any other date, a validation
 error will be raised.
 
-To enable this on a :ref:`time off types <time_off/time-off-types>` navigate to
+To enable this on a :doc:`time off type <../../time_off/time_off_types>` navigate to
 :menuselection:`Time Off app --> Configuration --> Time Off Types`, and create a new time off type or
 open an existing one, Tick the checkbox next to :guilabel:`Limited to Optional Holiday` in the
 :guilabel:`Configuration` section of the :guilabel:`Time Off Type` form.
