@@ -146,7 +146,7 @@ fields are specific to bank journals:
 - :guilabel:`Bank Account`: This :guilabel:`Bank and Cash` type account is the default account for
   this bank journal.
 - :guilabel:`Account Number`: The bank account's number is used when registering payments and is
-  required for generating outgoing payment files, such as :doc:`SEPA <../payments/pay_sepa>` or
+  required for generating outgoing payment files, such as :doc:`SEPA <../payments/sepa_payments>` or
   :ref:`NACHA <l10n_us/nacha>`. To edit the bank account details, click on the
   :icon:`oi-arrow-right` :guilabel:`(Internal link)` button next to the :guilabel:`Account Number`
   and update the account information accordingly.
@@ -160,7 +160,8 @@ fields are specific to bank journals:
 - :guilabel:`Split Transactions`: Split collective payments for CODA files.
 
 Multiple payment methods are available for bank journals, as are configurations for generating
-outgoing payment files, such as :doc:`SEPA <../payments/pay_sepa>` or :ref:`NACHA <l10n_us/nacha>`.
+outgoing payment files, such as :doc:`SEPA <../payments/sepa_payments>` or :ref:`NACHA
+<l10n_us/nacha>`.
 
 .. _accounting/journals/cash:
 
