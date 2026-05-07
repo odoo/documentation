@@ -131,7 +131,7 @@ Extra time off allocation
 -------------------------
 
 During salary package negotiations, enable the checkbox in this section if additional time off
-requests are allowed. When enabled, select the :ref:`Time Off Type <time_off/time-off-types>`
+requests are allowed. When enabled, select the :doc:`Time Off Type <time_off/time_off_types>`
 created for the additional days using the drop-down menu.
 
 The default available options are :guilabel:`Paid Time Off`, :guilabel:`Compensatory Days`, and
