@@ -5,7 +5,7 @@ Allocations
 Allocations are amounts of time off given to employees, either granted immediately or earned as the
 employee works, through an accrual plan.
 
-Once :ref:`time off types <time_off/time-off-types>` and :ref:`accrual plans
+Once :doc:`time off type <../time_off/time_off_types>` and :ref:`accrual plans
 <time_off/accrual-plans>` have been configured, the next step is to *allocate*, or give, time off to
 employees.
 
@@ -56,7 +56,7 @@ information:
   field is labeled :guilabel:`Run until`.
 - :guilabel:`Allocation`: Enter the amount of time that is being allocated to the employees. This
   field displays the time in either :guilabel:`Hours` or :guilabel:`Days`, depending on how the
-  selected :ref:`Time Off Type <time_off/time-off-types>` is configured.
+  selected  :doc:`Time Off Type <../time_off/time_off_types>` is configured.
 - :guilabel:`Employee`: Using the drop-down menu, select the employee being allocated the time off.
 - :guilabel:`Add a reason...`: If any description or note is necessary to explain the time off
   allocation, enter it in this field at the bottom of the form.
