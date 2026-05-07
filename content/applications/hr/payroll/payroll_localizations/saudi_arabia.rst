@@ -212,8 +212,9 @@ the drop-down space beneath the :guilabel:`Establishment Bank Account` field, an
 Next, enter the company's :guilabel:`MoL Establishment ID`. This ID number is provided by Saudi
 Arabia's Ministry of Labor.
 
-Finally, select the :ref:`time off type <time_off/time-off-types>` that is used to calculate the
-:guilabel:`Annual Leave Balance` set in the :ref:`employee's profile <payroll/saudi_payroll_info>`.
+Finally, select the :doc:`time off yype <../../time_off/time_off_types>` that is used to calculate
+the :guilabel:`Annual Leave Balance` set in the :ref:`employee's profile
+<payroll/saudi_payroll_info>`.
 
 Salary structures & structure types
 -----------------------------------

@@ -36,200 +36,6 @@ In order to allocate time off to employees, and for employees to request and use
 various time off types must be configured first, then allocated to employees (if allocation is
 required).
 
-.. _time_off/time-off-types:
-
-Time off types
---------------
-
-To view the currently configured time off types, navigate to :menuselection:`Time Off app -->
-Configuration --> Time Off Types`. The time off types are presented in a list view.
-
-The **Time Off** app comes with four preconfigured time off types: :guilabel:`Paid Time Off`,
-:guilabel:`Sick Time Off`, :guilabel:`Unpaid`, :guilabel:`Compensatory Days`, and :guilabel:`Extra
-Hours`. These can be modified to suit business needs, or used as-is.
-
-Create time off type
-~~~~~~~~~~~~~~~~~~~~
-
-To create a new time off type, navigate to :menuselection:`Time Off app --> Configuration --> Time
-Off Types`. From here, click the :guilabel:`New` button to reveal a blank time off type form.
-
-Enter the name for the particular type of time off in the blank line at the top of the form, such as
-`Vacation` or `Bereavement`. Then, enter the following information on the form.
-
-.. note::
-   The only **required** fields on the time off type form are the name of the :guilabel:`Time Off
-   Type`, the :guilabel:`Take Time Off In`, and the :guilabel:`Kind of Time Off`. In addition, the
-   :guilabel:`Time Off Requests` and :guilabel:`Allocation Requests` sections **must** be
-   configured.
-
-.. _time_off/time-off-requests:
-
-Time off requests section
-*************************
-
-This section determines how approvals are handled for time off requests for this time off type.
-
-- :guilabel:`Approval`: select what specific kind of approval is required for the time off type. The
-  options are:
-
-  - :guilabel:`No Validation`: No approvals are required when requesting this type of time off. The
-    time off request is automatically approved.
-  - :guilabel:`By Time Off Officer`: Only the specified :ref:`Time Off Officer
-    <time_off/time-off-officer>`, set on this form in the :guilabel:`Notified Time Off Officer`
-    field, is required to approve the time off request. This option is selected, by default.
-  - :guilabel:`By Employee's Approver`: Only the employee's specified approver for time off, which
-    is set on the *Work Information* tab on the :ref:`employee's form <employees/work-info-tab>`, is
-    required to approve the time off request.
-  - :guilabel:`By Employee's Approver and Time Off Officer`: Both the employee's :ref:`specified
-    time off approver <employees/work-info-tab>` and the :ref:`Time Off Officer
-    <time_off/time-off-officer>` are required to approve the time off request.
-
-Allocation requests section
-***************************
-
-This section determines how allocation requests are handled for this time off type.
-
-- :guilabel:`Requires allocation`: If the time off must be allocated to employees, select
-  :guilabel:`Yes`. If the time off can be requested without time off being previously allocated,
-  select :guilabel:`No Limit`. If :guilabel:`No Limit` is selected, the following options do not
-  appear on the form.
-- :guilabel:`Employee Requests`: Select :guilabel:`Extra Days Requests Allowed` if the employee is
-  able to request more time off than was allocated.
-
-  If employees should **not** be able to make requests for more time off than what was allocated,
-  select the :guilabel:`Not Allowed` option.
-
-  .. example::
-     Ten days are allocated to the employee for this particular type of time off, and the
-     :guilabel:`Extra Days Requests Allowed` option is enabled. The employee wants to take a
-     vacation for twelve days. They may submit a request for two additional days, since the
-     :guilabel:`Extra Days Requests Allowed` option is enabled.
-
-  .. important::
-     It is important to note that requesting additional time off does **not** guarantee that time
-     off is granted.
-
-- :guilabel:`Approval`: Select the type of approvals required for the allocation of this particular
-  time off type.
-
-  - :guilabel:`No Validation`: No approvals are required when requesting additional allocations for
-    the time off type. The allocation request is automatically approved.
-  - :guilabel:`By Time Off Officer`: Only the specified :ref:`Time Off Officer
-    <time_off/time-off-officer>`, set on this form in the :guilabel:`Notified Time Off Officer`
-    field, is required to approve the allocation request. This option is selected, by default.
-  - :guilabel:`By Employee's Approver`: Only the employee's specified approver for time off, which
-    is set on the *Work Information* tab on the :ref:`employee's form <employees/work-info-tab>`, is
-    required to approve the allocation request.
-  - :guilabel:`By Employee's Approver and Time Off Officer`: Both the employee's :ref:`specified
-    time off approver <employees/work-info-tab>` and the :ref:`Time Off Officer
-    <time_off/time-off-officer>` are required to approve the allocation request.
-
-Configuration section
-*********************
-
-This section determines all other details regarding the time off type, aside from approvals and
-allocations. This includes how the time off must be taken (hours, half days, or days), if the time
-off is visible to other users, and how the time off affects the **Payroll** app.
-
-.. _`time_off/time-off-officer`:
-
-- :guilabel:`Notified Time Off Officer`: Select the user who is notified and responsible for
-  approving requests and allocations for this specific type of time off.
-- :guilabel:`Take Time Off in`: Select the format the time off is requested in from the drop-down
-  menu. The options are:
-
-  - :guilabel:`Day`: if time off can only be requested in full day increments (8 hours).
-  - :guilabel:`Half Day`: if time off can only be requested in half day increments (4 hours).
-  - :guilabel:`Hours`: if the time off can be taken in hourly increments.
-
-  .. _`time_off/deduct-extra-hours`:
-
-- :guilabel:`Deduct Extra Hours`: Enable this option if the time off request should factor in any
-  extra time accrued by the employee.
-
-  .. example::
-     If an employee works two extra hours for the week, and requests five hours of time off, the
-     request would be for three hours, since the two extra worked hours are used first, and deducted
-     from the request.
-
-- :guilabel:`Public Holiday Included`: Enable this option if public holidays should be included in
-  time off requests.
-
-  .. example::
-     An employee in the United States requests time off for the week of July 4th, for a total of
-     five days. Since the 4th of July is a holiday in the United States, the time off request is
-     automatically modified to use four vacation days and one public holiday, instead of five
-     vacation days. That is because the holiday is included, and the user does not need to use their
-     own vacation time for a public holiday.
-
-     This option reduces extra work for users, enabling them to make only one time off request for
-     the entire week, instead of making two separate requests, one for the days *before* the
-     holiday, and another one for the days *after* the holiday.
-
-- :guilabel:`Allow To Attach Supporting Document`: Enable this option to allow the employee to
-  attach documents to the time off request. This is useful in situations where documentation is
-  required, such as long-term medical leave.
-- :guilabel:`Kind of Time Off`: From the drop-down menu, select the type of time off, either
-  :guilabel:`Worked Time` or :guilabel:`Absence`. :guilabel:`Worked Time` indicates the time off
-  taken counts toward worked time for any type of accrual the employee is working towards, whereas
-  :guilabel:`Absence` does not count toward any type of accrual.
-- :guilabel:`Company`: If multiple companies are created in the database, and this time off type
-  only applies to one company, select the company from the drop-down menu. If this field is left
-  blank, the time off type applies to all companies in the database. This field **only** appears in
-  a multi-company database.
-
-Negative cap section
-********************
-
-Enable the :guilabel:`Allow Negative Cap` option if employees are able to request more time off than
-they currently have, allowing a negative balance. If enabled, an :guilabel:`Maximum Excess Amount`
-field appears. In this field, enter the maximum amount of negative time allowed, in days.
-
-.. example::
-   Sara currently has three days of the time off type `Vacation`. She is planning a trip that
-   requires five days of time off.
-
-   The `Vacation` time off type has the :guilabel:`Allow Negative Cap` option enabled, and the
-   :guilabel:`Maximum Excess Amount` is set to five.
-
-   These settings allow Sara to submit a request for five days of the `Vacation` time off type. If
-   approved, her `Vacation` time off balance will be negative two (-2) days.
-
-.. image:: time_off/time-off-type-form-top.png
-   :alt: The top half of the time off type form, with all the information filled out for sick time
-         off.
-
-Payroll section
-***************
-
-If the time off type should create :doc:`../hr/payroll/work_entries` in the **Payroll** app, select
-the :guilabel:`Work Entry Type` from the drop-down list.
-
-Timesheets section
-******************
-
-.. note::
-   The :guilabel:`Timesheets` section only appears if the user is in developer mode. Refer to the
-   :ref:`developer-mode` document for details on how to access the developer mode.
-
-When an employee takes time off, and is also using timesheets, Odoo creates entries in the
-**Timesheets** app for the time off. This section defines how they are entered.
-
-- :guilabel:`Project`: Select the project the time off type entries appear in.
-- :guilabel:`Task`: Select the task that appears in the timesheet for this time off type. The
-  default options are: :guilabel:`Time Off`, :guilabel:`Meeting`, or :guilabel:`Training`.
-
-Display option section
-**********************
-
-- :guilabel:`Color`: Select a color to be used in the **Time Off** app dashboard.
-- :guilabel:`Cover Image`: Select an icon to be used in the **Time Off** app dashboard.
-
-.. image:: time_off/time-off-type-form-bottom.png
-   :alt: The lower half of the time off type form, with all the information filled out for sick time
-         off.
-
 .. _time_off/accrual-plans:
 
 Accrual plans
@@ -278,7 +84,7 @@ Enter the following information on the form:
      The employee works standard 40-hour weeks. According to the accrual plan, they should earn four
      vacation days per month.
 
-     The employee takes five days off using a :ref:`time off type <time_off/time-off-types>` with
+     The employee takes five days off using a :doc:`time off type <time_off/time_off_types>` with
      the :guilabel:`Kind of Time Off` set as an :guilabel:`Absence`. Because the plan grants
      vacation only for worked time, those five days do not count toward accrual.
 
@@ -569,6 +375,7 @@ the time off request in a modal, click the :guilabel:`View` button.
    :alt: Overview of the user's team, with time off requests shown.
 
 .. seealso::
+   - :doc:`time_off/time_off_types`
    - :doc:`time_off/allocations`
    - :doc:`time_off/request_time_off`
    - :doc:`time_off/my_time`
@@ -578,6 +385,7 @@ the time off request in a modal, click the :guilabel:`View` button.
 .. toctree::
    :titlesonly:
 
+   time_off/time_off_types
    time_off/allocations
    time_off/request_time_off
    time_off/my_time
