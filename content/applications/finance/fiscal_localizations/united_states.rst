@@ -755,4 +755,4 @@ a new |NACHA| |ACH| file.
 
 .. seealso::
    - :doc:`../accounting/payments/batch`
-   - :doc:`Europe's direct debiting <../accounting/payments/batch_sdd>`
+   - :doc:`Europe's direct debiting <../accounting/payments/sepa_payments>`
