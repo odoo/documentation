@@ -39,8 +39,9 @@ bank and click :guilabel:`Connect`.
    - Alternatively, go to :menuselection:`Accounting --> Configuration --> Add a Bank Account` or
      click :guilabel:`Search over 26000 banks` in the Accounting dashboard.
    - Depending on your bank and country, you can select the :guilabel:`Type of account` and/or
-     choose another :ref:`third-party provider <accounting/bank-synchronization/third-party-providers>`
-     to connect with the bank if needed before clicking :guilabel:`Connect`.
+     choose another
+     :ref:`third-party provider <accounting/bank-synchronization/third-party-providers>` to connect
+     with the bank if needed before clicking :guilabel:`Connect`.
    - If your bank is not listed in the :guilabel:`Search for an institution` window, scroll down the
      list and click :icon:`fa-plus` :guilabel:`Add new bank` to create a bank account manually. Fill
      in the :guilabel:`Account Number`, :guilabel:`Bank`, and :guilabel:`SWIFT Code` and click
@@ -64,8 +65,8 @@ bank and click :guilabel:`Connect`.
    - The :ref:`third-party provider <accounting/bank-synchronization/third-party-providers>` may
      request more information to connect with a bank. This information is not stored on Odoo's
      servers.
-   - To view all past synchronizations, activate the :ref:`developer mode <developer-mode>` and go to
-     :menuselection:`Accounting --> Configuration --> Online Synchronization`.
+   - To view all past synchronizations, activate the :ref:`developer mode <developer-mode>` and go
+     to :menuselection:`Accounting --> Configuration --> Online Synchronization`.
 
 .. _accounting/bank-synchronization/manual-synchronization:
 
@@ -122,6 +123,8 @@ import transactions and financial data into the database. The following provider
 - :doc:`Ponto <bank_synchronization/ponto>` (supported in Europe)
 - `Enable Banking <https://enablebanking.com/>`_ (supported in `Scandinavian countries
   <https://enablebanking.com/open-banking-apis>`_)
+- `Basiq <https://www.basiq.io/home.html>`_ (supported in `Australia
+  <https://www.basiq.io/resources/supported-insitutions.html>`_)
 
 .. tip::
    When :ref:`connecting a bank to Odoo <accounting/bank-synchronization/first-synchronization>`:
@@ -287,3 +290,4 @@ There are two options:
    :titlesonly:
 
    bank_synchronization/ponto
+   bank_synchronization/basiq
