@@ -91,7 +91,7 @@ color palette includes your specified colors.
       <{GITHUB_TUTO_PATH}/website_airproof/static/src/scss/primary_variables.scss>`_ file from our
       example module.
    #. Load your custom font in a `font.scss
-      <{GITHUB_TUTO_PATH}/website_airproof/static/src/scss/font.scss>`_ file.
+      <{GITHUB_TUTO_PATH}/website_airproof/static/src/scss/base/font.scss>`_ file.
    #. Declare the 2 files you just created in :file:`__manifest__.py` as indicated in the
       documentation.
    #. Install your module via your script. In our example, it looks like this:
@@ -99,7 +99,7 @@ color palette includes your specified colors.
    .. code-block:: xml
 
       ./odoo-bin --addons-path=../enterprise,addons,../myprojects --db-filter=theming -d theming
-      --without-demo=all -i website_airproof --dev=xml
+      --without-demo=True -i website_airproof --dev=xml
 
 .. _tutorials/website_theme/theming/bootstrap_variables:
 
@@ -121,7 +121,7 @@ Based on the Airproof design, define the following elements:
   - h6 : 1.25rem
   - Display 1 : 6.25rem (Who will be useful for the main title of your homepage)
 
-- Inputs border radius : 10px
+- Inputs border radius : 0.625rem
 - Inputs border color : black
 - Inputs border width : 1px
 - Large buttons border radius : 0px 10px 10px 10px
@@ -130,7 +130,7 @@ Based on the Airproof design, define the following elements:
    - See reference documentation on how to use :ref:`theming/module/bootstrap`.
    - A list of all `Bootstrap variables
      <{GITHUB_PATH}/addons/web/static/lib/bootstrap/scss/_variables.scss>`_ used by Odoo.
-   - And `Bootstrap framework <https://getbootstrap.com/docs/4.6/getting-started/introduction/>`_
+   - And `Bootstrap framework <https://getbootstrap.com/docs/5.3/getting-started/introduction/>`_
      official documentation.
 
 .. tip::
@@ -188,7 +188,7 @@ to meet the following client requests:
 
    To deactivate the Call-to-action:
 
-   #. The view you have to find is in :file:`odoo/addons/website/views/website_templates.xml l:2113`
+   #. The view you have to find is in :file:`odoo/addons/website/views/website_templates.xml` with the `id="website.header_call_to_action"`
    #. Create your :file:`presets.xml` file with the right records
 
       .. code-block:: xml
