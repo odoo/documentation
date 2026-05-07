@@ -54,8 +54,8 @@ Currency Rate Live Update
 
 You can update automatically your currencies rates based on the Federal
 Tax Administration from Switzerland. For this, go in
-:menuselection:`Accounting --> Settings`, activate the multi-currencies setting and choose the service
-you want.
+:menuselection:`Accounting --> Settings`, activate the multi-currencies setting and choose the
+service you want.
 
 .. image:: switzerland/switzerland04.png
     :align: center
@@ -75,7 +75,8 @@ don't have to do anything.
 
 If you have started on an earlier version, you first have to update the
 module "Switzerland - Accounting Reports". For this, you go in
-:menuselection:`Apps --> remove the filter "Apps" --> search for "Switzerland - Accounting Reports" --> open the module --> click on "upgrade"`.
+:menuselection:`Apps --> remove the filter "Apps" --> search for "Switzerland - Accounting Reports"
+--> open the module --> click on "upgrade"`.
 
 .. image:: switzerland/switzerland05.png
     :align: center
@@ -143,3 +144,42 @@ odoo.com/help.
     Don't forget to update your fiscal positions. If you have a version
     11.1 (or higher), there is nothing to do. Otherwise, you will also
     have to update your fiscal positions accordingly.
+
+.. _switzerland/iso20022:
+
+ISO 20022 and SEPA pain versions
+================================
+
+Switzerland uses a specific, localized version of the :ref:`ISO 20022
+<accounting/sepa_payments/iso20022>` format. To configure the appropriate Swiss format, open the
+**Accounting** app, go to :menuselection:`Configuration --> Journals`, and open your **bank**
+journal. Click the :guilabel:`Outgoing Payments` tab, then click :guilabel:`Add a line`, and select
+:guilabel:`Swiss ISO20022`.
+
+If you need to make :doc:`SEPA payments <../accounting/payments/sepa_payments>`, you can configure a
+specific PAIN version. Go to :menuselection:`Configuration --> Journals` and open your
+:guilabel:`Bank` journal. Depending on your configuration needs:
+
+- Click the :guilabel:`Incoming Payments` tab, click :guilabel:`Add a line`, select a SEPA payment
+  method, and choose a version from the :guilabel:`SEPA Pain Version` field.
+- Click the :guilabel:`Outgoing Payments` tab, click :guilabel:`Add a line`, select a SEPA payment
+  method, and choose a version from the :guilabel:`XML Format` field.
+
+.. _switzerland/export-xml:
+
+Export XML files
+================
+
+.. note::
+    To set the **PAIN** version used for XML exports, refer to this :ref:`section
+    <switzerland/iso20022>`.
+
+To generate the daily XML payment files required by your online banking portal, :ref:`create a batch
+payment <accounting/batch/creation>`. Odoo attaches the generated XML file directly to the chatter,
+where you can download it for submission to your bank.
+
+On the **batch payment creation** screen, before clicking :guilabel:`Validate`, you can define which
+parties will bear the charges through the :guilabel:`Charge Bearer` field.
+
+.. seealso::
+   :doc:`../accounting/bank/bank_synchronization`
