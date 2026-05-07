@@ -28,9 +28,9 @@ Payment methods
 Several payment methods are available in Odoo to allow different configurations for different types
 of payments. Examples of payment methods include manual payments (such as cash), :doc:`checks
 <payments/pay_checks>`, and batch payment files (such as :ref:`NACHA
-<l10n_us/ach-electronic-transfers>` and :doc:`SEPA <payments/pay_sepa>`). Payment methods can be
-configured in the :guilabel:`Incoming Payments` and :guilabel:`Outgoing Payments` tabs of a bank or
-cash journal.
+<l10n_us/ach-electronic-transfers>` and :doc:`SEPA <payments/sepa_payments>`). Payment methods can
+be configured in the :guilabel:`Incoming Payments` and :guilabel:`Outgoing Payments` tabs of a bank
+or cash journal.
 
 .. seealso::
    :doc:`../../sales/point_of_sale/payment_methods` for Point of Sale
@@ -321,9 +321,9 @@ Registering a single payment for multiple customers or vendors (batch payments)
 ===============================================================================
 
 Batch payments allow grouping payments from multiple customers to ease :doc:`reconciliation
-<bank/reconciliation>`. They are also useful when depositing :ref:`checks
-<accounting/payments/checks>` or cash payments to the bank or for generating bank payment files such
-as :doc:`SEPA <payments/pay_sepa>` or :ref:`NACHA <l10n_us/nacha>`.
+<bank/reconciliation>`. They are also useful when depositing :doc:`checks
+<payments/pay_checks>` or cash payments to the bank or for generating bank payment files such
+as :doc:`SEPA <payments/sepa_payments>` or :ref:`NACHA <l10n_us/nacha>`.
 
 .. seealso::
    :doc:`payments/batch`
@@ -403,9 +403,6 @@ Reconciling payments with bank transactions
 
    payments/online
    payments/batch
-   payments/batch_sdd
+   payments/sepa_payments
    payments/follow_up
-   payments/pay_sepa
    payments/pay_checks
-   payments/forecast
-   payments/trusted_accounts
