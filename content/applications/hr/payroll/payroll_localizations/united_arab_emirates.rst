@@ -206,8 +206,8 @@ Annual remaining leave balance rules
 Annual remaining leave balance rules are used for calculating the amount to be paid to or taken from
 the employee based on the number of leave days deserved by the employee during the current year.
 
-The annual leave :ref:`time off type <time_off/time-off-types>` is specified using the :guilabel:`Is
-Annual Leave` checkbox.
+The annual leave :doc:`time off type <../../time_off/time_off_types>` is specified using the
+:guilabel:`Is Annual Leave` checkbox.
 
 If enabled, the rule calculates the amount of leave days deserved by the employee up to the current
 date and subtracts the number of annual leave days taken, and if the result is positive, this means
@@ -226,8 +226,8 @@ There are **3 cases** for the employee to have:
    eligible for **15 days** of this type of leave per calendar year.
 
    .. tip::
-      The SLI is not mandatory in Odoo but can be done from the setup of the :ref:`time off types
-      <time_off/time-off-types>`.
+      The SLI is not mandatory in Odoo but can be done from the setup of the :doc:`time off types
+      <../../time_off/time_off_types>`.
 
 #. **50% paid sick leave:** Same as the fully paid one, but the employees are eligible for **30
    days** from this leave type. These 30 days are counted after the first **15** fully paid days.
