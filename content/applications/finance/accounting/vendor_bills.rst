@@ -75,7 +75,7 @@ appropriately completed:
   reference once the payment is registered.
 - :guilabel:`Recipient Bank`: Indicates the account number to which the payment will be made. This
   field is required when paying via batch payment files (such as :ref:`NACHA
-  <l10n_us/ach-electronic-transfers>` and :doc:`SEPA <payments/pay_sepa>`).
+  <l10n_us/ach-electronic-transfers>` and :doc:`SEPA Direct Debit <payments/sepa_payments>`).
 - :guilabel:`Due Date` or :guilabel:`Payment Terms` must be specified for the bill payment.
 - :guilabel:`Journal`: Select which journal should record the bill and in which :doc:`currency
   <get_started/multi_currency>`.
