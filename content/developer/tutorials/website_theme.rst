@@ -15,7 +15,7 @@ You will also need some knowledge in:
 
 - XML
 - JavaScript (not mandatory)
-- Bootstrap 5.1.3
+- Bootstrap 5.3
 - SCSS
 - QWeb (Odoo's own templating system)
 - OWL (JavaScript framework, not mandatory)
