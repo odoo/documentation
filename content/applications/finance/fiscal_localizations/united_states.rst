@@ -792,7 +792,7 @@ a new |NACHA| |ACH| file.
 
 .. seealso::
    - :doc:`../accounting/payments/batch`
-   - :doc:`Europe's direct debiting <../accounting/payments/batch_sdd>`
+   - :doc:`Europe's direct debiting <../accounting/payments/sepa_payments>`
 
 .. |API| replace:: :abbr:`API (Application Programming Interface)`
 
@@ -895,8 +895,8 @@ detailed below:
       .. important::
          To avoid errors when initiating payments to the vendor, ensure the following:
 
-         - Verify the destination bank account with the vendor, then mark it as :doc:`Trusted
-           <../accounting/payments/trusted_accounts>`.
+         - Verify the destination bank account with the vendor, then mark it as :ref:`Trusted
+           <accounting/batch/bank-accounts>`.
          - Select the correct :guilabel:`Bank Account Type` (checking or savings).
          - Select the preferred :guilabel:`Direct Deposit Transfer Type` for the vendor/destination
            account. Pricing can be verified directly in Wise.
@@ -1130,3 +1130,5 @@ etc.) are valid. The list of payments appears inside the file. Review and confir
 then click `Approve` or `Submit`.
 
 The bank processes each payment in the file and transfers the funds to the recipients.
+
+   - :doc:`Europe's direct debiting <../accounting/payments/sepa_payments>`
