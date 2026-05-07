@@ -14,6 +14,7 @@ Online payments
    payment_providers/buckaroo
    payment_providers/demo
    payment_providers/dpo
+   payment_providers/ecpay
    payment_providers/flutterwave
    payment_providers/iyzico
    payment_providers/mercado_pago
@@ -103,6 +104,12 @@ Online payment providers
      -
      -
    * - :doc:`DPO Pay <payment_providers/dpo>`
+     - The provider's website
+     -
+     -
+     -
+     -
+   * - :doc:`ECPay <payment_providers/ecpay>`
      - The provider's website
      -
      -
@@ -519,6 +526,7 @@ payments from other payments.
    - :doc:`payment_providers/buckaroo`
    - :doc:`payment_providers/demo`
    - :doc:`payment_providers/dpo`
+   - :doc:`payment_providers/ecpay`
    - :doc:`payment_providers/mercado_pago`
    - :doc:`payment_providers/mollie`
    - :doc:`payment_providers/nuvei`
