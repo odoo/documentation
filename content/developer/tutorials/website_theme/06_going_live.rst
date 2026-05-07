@@ -14,31 +14,53 @@ Now, the client wants the website translated into French. To do so:
 
 #. Add French to the website in the settings and enable the language switcher in the header via
    presets.
-#. Then for the translation itself, you have two options. We shall therefore test both:
+#. Then for the translations you have several options (normally to do after the production launch).
+   For the exercise we will test 2 of them in local:
 
-   - Translate the content of the homepage carousel through the backend.
-   - But for the menu, make the translations through the frontend.
-
-#. Export the French :file:`.po` file for your Airproof module and place it in the :file:`/i18n`
-   translations folder.
-#. If you would like, you can add more translations directly by editing the :file:`.po`
-   file. (Using Poedit software, your code editor, or another translation tool.)
+   - Translate the content of the `Airproof Mini` product page through the editor.
+   - Translate the content of the homepage carousel through the views.
 
 .. seealso::
-   See reference documentation on :ref:`website_themes/translations/backend` and
-   :ref:`website_themes/translations/frontend` translations, and how to
-   :ref:`website_themes/translations/export` them.
+   See reference documentation on :ref:`website_themes/translations/frontend` and
+   :ref:`website_themes/translations/backend` translations.
 
 .. note::
-   - Be careful when using Poedit, as it doesn't handle tags with styles well and generates an
-     :file:`.mo` file.
-   - To see the changes made directly via the :file:`.po` file, you will need to manually import the
-     file.
+   You can also create translations through the :ref:`export/import <website_themes/translations/export>`
+   of a :file:`.po` file. However, this method only works once during the module's import. It's quite
+   complicated to make changes afterwards via the :file:`.po` file. That's why we advise you to make translations through the editor or directly via the views.
 
 .. spoiler:: Solutions
 
-   Take a look at what the file `i18n/fr_BE.po <{GITHUB_TUTO_PATH}/website_airproof/i18n/fr_BE.po>`_
-   of our Airproof example looks like.
+   The preset to add for the language switcher is:
+
+   .. code-block:: xml
+         :caption: ``/website_airproof/data/presets.xml``
+
+         <?xml version="1.0" encoding="utf-8"?>
+         <odoo>
+            <!-- Activate language selector -->
+            <record id="website.header_language_selector" model="ir.ui.view">
+               <field name="active" eval="True" />
+            </record>
+         </odoo>
+
+   For translations via the editor:
+
+   #. Switch the website to French.
+   #. Go on the product page.
+   #. Click on :menuselection:`Edit --> Translate`.
+   #. Modify all the parts highlighted in `yellow`.
+
+   For translations via the views:
+
+   #. Activate developer mode.
+   #. Go to the settings then in the menu :menuselection:`Technical --> User Interface: Views`.
+   #. Search for the name of the page you want to translate. In this case, search in the `View
+      Architecture` for `homepage`.
+   #. Once you have found your page, click on :guilabel:`EN` (located at the top of the page
+      architecture).
+   #. This opens a popup in which you first see the English section. Then further down, all the
+      translations you can make for French.
 
 .. _tutorials/website_theme/going_live/module_import:
 
@@ -58,7 +80,6 @@ Just before that, test the import process on a new database.
    - Ensure the `base_import_module` is installed on the database before the module installation.
    - Verify all required applications are installed.
    - Skip the theme installation steps and start from scratch.
-   - Manually import translations after module installation, as they won't apply automatically.
 
 Conclusion
 ==========
@@ -73,8 +94,8 @@ Throughout this journey, you've mastered:
 | ✅ **Website building** - creating pages, adding media, and constructing dynamic building blocks.
 | ✅ **Advanced customization** - implementing custom SCSS, JavaScript, headers, footers, and unique
   design elements.
-| ✅ **Visual enhancements** - designing background shapes, gradients, and animations for an
-  engaging user experience.
+| ✅ **Visual enhancements** - designing background and image shapes, gradients, and animations for
+  an engaging user experience.
 | ✅ **eCommerce optimization** - adapting shop and product templates for a seamless shopping
   experience.
 | ✅ **Final preparations** - managing translations and ensuring a smooth module import.
