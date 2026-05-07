@@ -43,9 +43,11 @@ as content in the page.
          <record id="page_home" model="website.page">
             <field name="name">Home</field>
             <field name="is_published" eval="True"/>
+            <field name="is_homepage" eval="True" />
             <field name="key">website_airproof.page_home</field>
             <field name="url">/</field>
             <field name="type">qweb</field>
+            <field name="website_id" eval="1"/>
             <field name="arch" type="xml">
                <t t-name="website_airproof.page_home">
                   <t t-call="website.layout">
@@ -149,8 +151,8 @@ The client has requested the following changes:
 - Add the `Airproof logo
   <{GITHUB_TUTO_PATH}/website_airproof/static/src/img/content/branding/airproof-logo.svg>`_. At the
   same time, set the name and favicon of the website.
-- Remove the link to the homepage and the shop.
-- Add a link to the future “About us” page.
+- Remove the menu items to the homepage and the shop.
+- Add a menu item to the future “About us” page.
 - Replace the default blog item with a dropdown to display the different blogs: “Our latest news”
   and “Tutorials”.
 - Add a mega-menu “Waterproof drones” to display the different products.
@@ -168,8 +170,8 @@ The client has requested the following changes:
 
 .. tip::
    - Make sure the Blog app is installed and create the two different blogs in the backend.
-   - Create the different products via the backend. You can use these `product pictures
-     <{GITHUB_TUTO_PATH}/website_airproof/static/src/img/content>`_.
+   - Create the different products via the backend. You can use the `product pictures
+     <{GITHUB_TUTO_PATH}/website_airproof/static/src/img/content>`_ used in our example module.
 
 .. note::
    - If you want to make the logo available in the Media dialog, you have to add the record image.
@@ -189,8 +191,8 @@ The client has requested the following changes:
 
          <record id="website.default_website" model="website">
             <field name="name">Airproof</field>
-            <field name="logo" type="bytes" file="website_airproof/static/src/img/content/branding/airproof-logo.svg"/>
-            <field name="favicon" type="bytes" file="website_airproof/static/description/airproof-favicon.png" />
+            <field name="logo" type="base64" file="website_airproof/static/src/img/content/branding/airproof-logo.svg"/>
+            <field name="favicon" type="base64" file="website_airproof/static/description/airproof-favicon.png"/>
          </record>
 
    #. Declare your :file:`website.xml` file in :file:`__manifest__.py`.
