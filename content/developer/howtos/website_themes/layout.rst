@@ -284,7 +284,7 @@ First, create a record to declare the field. This field has to be linked to an e
       <field name="model_id" ref="website_blog.model_blog_post"/>
    </record>
 
-.. note:: Fields creation is also possible (and recommended) through `a model using Python </developer/tutorials/backend>`_.
+.. note:: Fields creation is also possible (and recommended) through `a model using Python <../../tutorials/getting_started/04_basicmodel.html#model-fields>`_.
 
 .. _website_themes/layout/custom_fields/backend :
 
