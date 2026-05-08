@@ -94,16 +94,6 @@ View records expose a number of fields.
       :requirement: Optional
       :type: :class:`~odoo.fields.Text`
 
-   .. attribute:: groups_id
-
-      The groups allowed to use/access the current view.
-
-      If the view extends an existing view, the extension will be applied only for a given user, if
-      that user has access to the provided `groups_id`.
-
-      :requirement: Optional
-      :type: :class:`~odoo.fields.Many2many` -> :class:`~odoo.addons.base.models.res_users.Groups`
-
    .. attribute:: priority
 
       When requesting a view by specifying the `model` and `type`, the matching view with the lowest
