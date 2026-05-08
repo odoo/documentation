@@ -145,6 +145,7 @@ Fiscal localization modules are available for the countries listed below.
 - :doc:`United Kingdom <fiscal_localizations/united_kingdom>`
 - :doc:`United States of America <fiscal_localizations/united_states>`
 - :doc:`Uruguay <fiscal_localizations/uruguay>`
+- :doc:`Uzbekistan <fiscal_localizations/uzbekistan>`
 - Venezuela
 - :doc:`Vietnam <fiscal_localizations/vietnam>`
 - Zambia
@@ -194,4 +195,5 @@ Fiscal localization modules are available for the countries listed below.
    fiscal_localizations/united_kingdom
    fiscal_localizations/united_states
    fiscal_localizations/uruguay
+   fiscal_localizations/uzbekistan
    fiscal_localizations/vietnam
