@@ -14,11 +14,11 @@ Configuration
 
 The *work order dependencies* setting is not enabled by default. To enable it, navigate to
 :menuselection:`Manufacturing app --> Configuration --> Settings`. Then, enable the
-:guilabel:`Work Orders` setting, if it is not already active.
+:guilabel:`Work Orders` setting if it is not already active.
 
-After enabling the :guilabel:`Work Orders` setting, the :guilabel:`Work Order Dependencies` setting
-appears below it. Enable :guilabel:`Work Order Dependencies`, then click :guilabel:`Save` to confirm
-the changes.
+After enabling the :guilabel:`Work Orders` setting, the :guilabel:`Custom Work Order Dependencies`
+option appears below it. Enable :guilabel:`Custom Work Order Dependencies`, then click
+:guilabel:`Save` to confirm the changes.
 
 Add dependencies to BoM
 =======================
@@ -44,7 +44,7 @@ operation in the tab.
 In the line of the operation that should be blocked by another operation, click the
 :guilabel:`Blocked By` field. The *Open: Operations* pop-up window opens. In the :guilabel:`Blocked
 By` field, select the blocking operation that must be completed *before* the operation that is
-blocked.
+blocked. Click :guilabel:`Save` to save the changes to the work order.
 
 .. image:: work_order_dependencies/blocked-by.png
    :alt: The Blocked By drop-down field for an operation on a BoM.
@@ -58,8 +58,13 @@ Plan work orders using dependencies
 ===================================
 
 After work order dependencies are configured for a |BOM|, the **Manufacturing** app can plan when
-work orders are scheduled based on those dependencies. To plan the work orders for a manufacturing
-order, navigate to :menuselection:`Manufacturing app --> Operations --> Manufacturing Orders`.
+work orders are scheduled based on those dependencies.
+
+From a manufacturing order
+--------------------------
+
+To plan the work orders for a manufacturing order, navigate to :menuselection:`Manufacturing app -->
+Operations --> Manufacturing Orders`.
 
 Next, select a manufacturing order for a product with work order dependencies set on its |BOM|, or
 create a new manufacturing order by clicking :guilabel:`New`. If a new manufacturing order is
@@ -78,8 +83,14 @@ the blocking work orders are completed, the tag updates to :guilabel:`To Do`.
 
 To schedule the manufacturing order's work orders, click the :guilabel:`Plan` button at the top of
 the page. After doing so, the :guilabel:`Start` field for each work order on the *Work Orders* tab
-populates with a scheduled start date and time. A blocked work order is scheduled at the end of the
-time period specified in the :guilabel:`Expected Duration` field of the work order that precedes it.
+populates with a scheduled start date and time.
+
+.. note::
+   If the :guilabel:`Start` field is not visible in the *Work Orders* tab, click the
+   :icon:`oi-settings-adjust` :guilabel:`(settings adjust)` icon and select :guilabel:`Start`.
+
+A blocked work order is scheduled at the end of the time period specified in the :guilabel:`Expected
+Duration` field of the work order that precedes it.
 
 .. image:: work_order_dependencies/scheduled-start-date.png
    :alt: The Scheduled Start Date field for work orders on a manufacturing order.
@@ -99,31 +110,50 @@ Planning views
 Two work order planning views are available to display a visual representation of how work orders
 are planned:
 
-- :menuselection:`Manufacturing app --> Planning --> Planning by Production`
-- :menuselection:`Manufacturing app --> Planning --> Planning by Workcenter`
+- :menuselection:`Manufacturing app --> Planning --> Gantt`
+- :menuselection:`Manufacturing app --> Planning --> Kanban`
 
-Both open a *Work Orders Planning* page. This page shows a timeline of all the work orders scheduled
-for each operation.
+Both open different views of the *Work Orders Planning* page. Both the *Gantt* and *Kanban* views
+show all work orders. The *Gantt* view shows a timeline of all the work orders scheduled for each
+operation.
 
-:guilabel:`Planning by Production` is best used to view work orders grouped by manufacturing order.
-This view is ideal for providing estimated delivery times or determining if an order will be
-completed on schedule.
+By default, the *Gantt* and *Kanban* views are grouped by *Work Center*. This grouping is best used
+to view work orders grouped by the work center at which they take place. This view can help identify
+overloaded machines or bottlenecks in production.
 
-:guilabel:`Planning by Workcenter` is best used to view work orders grouped by the work center at
-which they take place. This view can help identify overloaded machines or bottlenecks in production.
+To view orders grouped by manufacturing order, click in the search bar and deselect the
+:guilabel:`Work Center` filter, then select :menuselection:`Group By --> Manufacturing Order`. This
+view is ideal for providing estimated delivery times or determining if an order will be completed on
+schedule.
 
-In both views, if one work order is blocked by the completion of another, the work order that is
-blocked is shown as scheduled to start after the work order that blocks it. In addition, a grey
-arrow connects the two work orders, leading from the blocking operation to the blocked operation.
+In both views, when one work order is blocked by the pending completion of another, the blocked
+order is shown as scheduled to begin once the pending order is complete.
+
+The Gantt view
+~~~~~~~~~~~~~~
+
+In the Gantt view, a grey arrow connects the two work orders, leading from the blocking operation to
+the blocked operation.
 
 .. image:: work_order_dependencies/planning-arrow.png
    :alt: The arrow connecting a blocked work order to the work order blocking it.
 
-Rescheduling work orders
-~~~~~~~~~~~~~~~~~~~~~~~~
+Plan unplanned orders
+*********************
 
-By default, linked work orders on the *Work Orders Planning* page can be rescheduled automatically,
-ensuring that work orders cannot be moved out of the order they are set in.
+On the side of the screen, a list of unplanned work orders appears, with a title that reads
+:guilabel:`# to schedule`.
+
+To plan a work order, click it in the :guilabel:`# to schedule` list. The *Open* window opens, where
+a :guilabel:`Start Date` can be specified. When the :guilabel:`Start Date` and time are specified,
+the ending time is automatically populated, based on the :guilabel:`Expected Duration` of the work
+order. Click :guilabel:`Save` to plan the work order.
+
+Replan work orders
+******************
+
+By default, linked work orders in the *Gantt* view can be rescheduled automatically, preventing them
+from being moved out of the order they are set in.
 
 Work orders can be scheduled with a buffer, or the time gap between consecutive work orders. By
 default, this view is set to :guilabel:`Auto-Reschedule (Keep Buffer)`. When the buffer is kept,
@@ -149,15 +179,14 @@ For full control over rescheduling work orders, select :guilabel:`Manual Resched
    :guilabel:`Auto-Reschedule (Keep Buffer)` setting. Other work orders upstream from the work order
    being rescheduled could run late and cause issues with the production schedule.
 
-Resolving inconsistencies
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Resolve inconsistencies
+***********************
 
-When the *Work Orders Planning* page is set to manually reschedule work orders, it is possible to
-introduce inconsistencies in the manufacturing order.
+When the *Gantt* view is set to manually reschedule work orders, it is possible to introduce
+inconsistencies in the manufacturing order.
 
-The arrows on the *Work Orders Planning* page can also point out inconsistencies in the
-manufacturing order and how to correct them. When the arrow changes color, an inconsistency has been
-introduced.
+Inconsistencies can be pinpointed in two ways: The color of the arrows and the addition of a flag to
+the top corner of the work order.
 
 .. example::
    A workshop is manufacturing a table in three work orders:
@@ -167,8 +196,8 @@ introduced.
    #. Dry
 
    If the third work order is moved before the second work order, the third work order and the arrow
-   pointing to it turn red to indicate that the planned schedule violates the defined work order
-   dependency.
+   pointing to it turn orange, and a flag is added to the work order's top corner to indicate that
+   the planned schedule violates the defined work order dependency.
 
    .. image:: work_order_dependencies/out-of-order.png
       :alt: A red line appears between two work orders.
@@ -189,3 +218,44 @@ Date`, and the *Scheduling Information* pop-up window appears.
 Click the :guilabel:`Replan` button, then click :guilabel:`Save` to save the changes to the work
 order. The work order is rescheduled after the previous work order in a way that maintains the work
 order dependency.
+
+The Kanban view
+~~~~~~~~~~~~~~~
+
+By default, the *Kanban* view is filtered to show only :guilabel:`Planned` work orders. To show work
+orders that need to be planned, click in the search bar, then select :menuselection:`Filters --> To
+Plan`.
+
+In the *Kanban* view, blocked work orders are tagged with a yellow-orange circle in the bottom
+corner of the work order card.
+
+.. image:: work_order_dependencies/kanban-blocked-order.png
+   :alt: A blocked work order with the yellow-orange circle.
+
+If a work order's planned start is in the past, and it has not started yet, its start date and time
+appear in red.
+
+Plan unplanned manufacturing orders
+***********************************
+
+To plan confirmed manufacturing orders, click the :guilabel:`Plan Orders` button. The *Manufacturing
+Orders* pop-up window opens. Select a manufacturing order to plan. The manufacturing order will be
+planned so as not to disrupt the existing schedule.
+
+Reschedule work orders
+**********************
+
+To reschedule work orders in the *Kanban* view, drag and drop the cards to their intended order,
+then click the :guilabel:`Update Planning` button. To avoid introducing work order dependency
+conflicts, the work order and any dependencies are replanned to maintain the correct order.
+
+Work orders **can** be rescheduled without clicking the :guilabel:`Update Planning` button, but this
+may introduce conflicts, either via dependencies or scheduling work orders at the same time. To
+determine if a work order is in conflict, open the work order card from the *Kanban* view. If a work
+order is in conflict with another work order, a red :icon:`fa-exclamation-triangle`
+:guilabel:`(exclamation triangle)` icon appears next to the :guilabel:`Start Date` fields.
+
+Resolve the conflict by clicking the :guilabel:`Update Planning` button on the Kanban view.
+
+.. seealso::
+   :doc:`../basic_setup/manufacturing_work_orders`
