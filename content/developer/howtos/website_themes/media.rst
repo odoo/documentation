@@ -95,7 +95,7 @@ use `<t t-call="website.placeholder_header_brand">`.
 .. code-block:: xml
    :caption: ``/website_airproof/data/images.xml``
 
-   <record id="website.default_website" model="website">
+   <record id="base.default_website" model="website">
       <field name="logo" type="base64" file="website_airproof/static/src/img/content/logo.png" />
    </record>
 
