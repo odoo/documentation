@@ -82,27 +82,17 @@
     transform: rotate(359deg);
   }
 }
-.fa-rotate-90 {
-  transform: rotate(90deg);
-}
-.fa-rotate-180 {
-  transform: rotate(180deg);
-}
-.fa-rotate-270 {
-  transform: rotate(270deg);
+/* Generate rotation classes from 0 to 360 degrees in 5 degree increments */
+@for $i from 0 through 72 {
+  .fa-rotate-#{$i * 5} {
+    transform: rotate(#{$i * 5}deg);
+  }
 }
 .fa-flip-horizontal {
   transform: scale(-1, 1);
 }
 .fa-flip-vertical {
   transform: scale(1, -1);
-}
-:root .fa-rotate-90,
-:root .fa-rotate-180,
-:root .fa-rotate-270,
-:root .fa-flip-horizontal,
-:root .fa-flip-vertical {
-  filter: none;
 }
 .fa-stack {
   position: relative;
