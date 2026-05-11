@@ -689,7 +689,7 @@ structure below.
 
    <?xml version="1.0" encoding="utf-8"?>
    <odoo noupdate="1">
-      <record id="website.default_website" model="website">
+      <record id="base.default_website" model="website">
          <field name="name">Airproof</field>
          <field name="logo" type="bytes" file="website_airproof/static/src/img/content/logo_airproof.png"/>
          <field name="favicon" type="bytes" file="website_airproof/static/description/favicon.png" />
@@ -766,7 +766,7 @@ structure below.
 
 .. note::
 
-   `website.default_website` is the default reference whenever you work with only one website. If
+   `base.default_website` is the default reference whenever you work with only one website. If
    there are several websites in your database, this record will refer to the default site (the
    first one).
 

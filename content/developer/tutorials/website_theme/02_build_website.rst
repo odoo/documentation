@@ -189,7 +189,7 @@ The client has requested the following changes:
       .. code-block:: xml
          :caption: ``/website_airproof/data/website.xml``
 
-         <record id="website.default_website" model="website">
+         <record id="base.default_website" model="website">
             <field name="name">Airproof</field>
             <field name="logo" type="base64" file="website_airproof/static/src/img/content/branding/airproof-logo.svg"/>
             <field name="favicon" type="base64" file="website_airproof/static/description/airproof-favicon.png"/>
