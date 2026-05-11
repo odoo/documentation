@@ -2,6 +2,8 @@
 France
 ======
 
+.. |DGFiP| replace:: :abbr:`DGFiP (Direction Générale des Finances Publiques)`
+
 .. _localizations/france/configuration/modules:
 
 Modules
@@ -68,12 +70,161 @@ fiscal and accounting regulations:
 Reporting
 ---------
 
-:doc:`Installing </applications/general/apps_modules>` the :guilabel:`France - Accounting`
-(`l10n_fr_account`) module gives access to some accounting reports specific to France, such as:
+To have access to these accounting reports specific to France, :doc:`Install
+</applications/general/apps_modules>` the :guilabel:`France - Accounting` (`l10n_fr_account`):
 
 - :guilabel:`Bilan comptable (FR)` (:guilabel:`Balance Sheet`)
 - :guilabel:`Compte de résultats (FR)` (:guilabel:`Profit and Loss`)
 - :guilabel:`Rapport de taxes (FR)` (:guilabel:`Tax Report`)
+- :ref:`DAS2 report <localizations/france/reporting-das2>`
+- :ref:`Simplified Fiscal Declaration <localizations/france/reporting-fiscal-declaration>`
+
+.. _localizations/france/reporting-das2:
+
+DAS2 report
+~~~~~~~~~~~
+
+Any individual or legal entity that pays commissions, brokerage fees, rebates, gratuities, or other
+similar compensation to third parties during their professional activities must file a fee
+declaration (DAS2 report).
+
+To access the DAS2 report, go to :menuselection:`Accounting --> Reporting --> DAS2 Report`.
+
+.. tip::
+   Specific tags, related to the DAS2 report, indicate the nature of payments, including
+   :guilabel:`Fees (H)`, :guilabel:`Commissions (C)`, :guilabel:`Brokerage (CO)`, :guilabel:`Rebates
+   (R)`, :guilabel:`Attendance fees (JP)`, :guilabel:`Copyright (DA)`, :guilabel:`Inventor's rights
+   (DI)`, and :guilabel:`Other remuneration (AR)`.
+
+.. seealso::
+   - `Guide utilisateur français pour la transmission des informations relatives à la DAS2
+     Honoraires <https://edificas.org/download/document/ab4310d4-3bba-400e-87fe-a6e75f96e674/zip>`_
+   - `Formulaire n°DAS2 - Etat des honoraires, vacations, commissions, courtages, ristournes et
+     jetons <https://www.impots.gouv.fr/formulaire/das2/etat-des-honoraires-vacations-commissions-courtages-ristournes-et-jetons>`_
+
+.. _localizations/france/das2-contact:
+
+Contact
+*******
+
+To provide the necessary contact information, include the following details:
+
+- :guilabel:`Name`: Provide the full name for individuals or the business name.
+- :guilabel:`Address`: Include the :guilabel:`Street`, :guilabel:`ZIP` code, :guilabel:`City`, and
+  :guilabel:`Country`.
+- :guilabel:`SIRET` number: In the :guilabel:`VAT` field, click the :icon:`fa-plus`
+  :guilabel:`(plus)` icon and select :guilabel:`SIRET` to enter the :guilabel:`SIRET` number.
+- :guilabel:`DAS2 - Profession`: In the :guilabel:`Accounting tab`, fill in the :guilabel:`DAS2 -
+  Profession` field located in the :guilabel:`General` section.
+
+.. note::
+   The partner's birth date is required for DAS2 beneficiaries who are EU residents (excluding
+   France) and received copyright royalties (DA) or inventor's fees (DI).
+
+.. _localizations/france/das2-submit:
+
+Submit
+******
+
+.. note::
+   - A minimum total payment of €2,400 is required for the corresponding line to be included in the
+     DAS2 report.
+   - To successfully send the EDI DAS2 report, the :guilabel:`APE` and the company's main
+     :guilabel:`Activity` fields must be completed on the :doc:`company record
+     </applications/general/companies>`.
+
+The DAS2 report includes the total amount of the sums paid, including VAT if beneficiaries are
+subject to VAT. To submit the EDI DAS2 report, follow these steps:
+
+#. In the :guilabel:`DAS2 Report` view, click the :icon:`fa-cog` (:guilabel:`gear`) icon, and select
+   :guilabel:`EDI DAS2`.
+#. In the :guilabel:`DAS2 Report Generation` window, update the :guilabel:`Point of Contact` field
+   if necessary by selecting the contact responsible for directly sending the report to |DGFiP|.
+#. Click :guilabel:`Send DAS2 Report`.
+
+.. tip::
+   Alternatively, follow these steps for a step-by-step submission process:
+
+   #. Go to :menuselection:`Accounting --> Reporting --> DAS2 Report`. In the :guilabel:`DAS2
+      Report` view, click :guilabel:`Returns`.
+   #. Remove the :guilabel:`To do` filter in the Tax Return list view to display the :guilabel:`DAS2
+      Report` line.
+   #. The :guilabel:`DAS2 Report` line includes:
+
+      - A period (year).
+      - A deadline date.
+      - The related company and :ref:`branch(es) <general/branches>`, if applicable.
+      - Action steps, such as :guilabel:`Review` and :guilabel:`Submit`, which turn green when
+        completed.
+      - A :guilabel:`DAS2 Report (FR)` button to open the report.
+      - A :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` menu for additional options.
+
+   #. Click the :guilabel:`DAS2 Report` line, then click the :guilabel:`DAS2 Report (FR)` button to
+      access and review it.
+   #. After reviewing, click :guilabel:`Tax Return` in the breadcrumbs to return to the
+      :guilabel:`DAS2 Report` item.
+   #. Click :guilabel:`Validate` to complete the :guilabel:`Review` step; the DAS2 report PDF is
+      then available in the chatter.
+   #. Click :guilabel:`Submit` to submit the DAS2 Report to |DGFiP|.
+   #. In the :guilabel:`DAS2 Report` window, update the :guilabel:`Point of Contact` field if
+      necessary, select the contact responsible for directly sending the report to |DGFiP|, and
+      click :guilabel:`Send DAS2 Report`.
+
+.. _localizations/france/reporting-fiscal-declaration:
+
+Simplified fiscal declaration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Most taxpayers are required to file a simplified fiscal declaration as part of the standard
+procedure.
+
+To access the declaration, go to :menuselection:`Accounting --> Reporting --> Fiscal Declaration`.
+The fiscal declaration includes various sections, such as :guilabel:`2033 - A` and :guilabel:`2031
+- Annexes`. Use the section buttons to navigate through the report.
+
+.. tip::
+   - To update values, click the :icon:`fa-pencil` :guilabel:`(pencil)` icons; changes are saved
+     automatically.
+   - For lines requiring information, such as an accountant's name or an address, click the
+     :icon:`fa-caret-down` :guilabel:`(down arrow)` icon to select the relevant
+     :doc:`contact <../../essentials/contacts>`.
+   - Where available, click :guilabel:`Add` or :guilabel:`Add new section` lines to insert lines or
+     sub-sections within the report.
+   - To generate an XML file, click the :icon:`fa-cog` :guilabel:`(gear)` icon and select
+     :guilabel:`Download XML`.
+
+.. _localizations/france/fiscal-declaration-submit:
+
+Submit
+******
+
+To submit the fiscal declaration directly to |DGFiP| through Odoo, follow these steps:
+
+#. Go to :menuselection:`Accounting --> Reporting --> Fiscal Declaration` and click
+   :guilabel:`Returns`.
+#. Remove the :guilabel:`To Do` filter to display the :guilabel:`Fiscal Declaration` line.
+#. The :guilabel:`Fiscal Declaration` line includes:
+
+   - A period (year).
+   - A deadline date.
+   - The related company and :ref:`branch(es) <general/branches>`, if applicable.
+   - Action steps, such as :guilabel:`Review` and :guilabel:`Submit`, which turn green when
+     completed.
+   - A :guilabel:`Fiscal Declaration` button to open the fiscal declaration.
+   - A :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` menu for additional options.
+
+#. Click the :guilabel:`Fiscal Declaration` line, then click the :guilabel:`Fiscal Declaration`
+   button to access and review it.
+#. After reviewing, click :guilabel:`Tax Return` in the breadcrumbs to return to the
+   :guilabel:`Fiscal Declaration` item.
+#. Click :guilabel:`Validate` to complete the :guilabel:`Review` step; the fiscal declaration PDF is
+   then available in the chatter.
+#. Click :guilabel:`Submit` to submit the fiscal declaration to |DGFiP|.
+#. In the :guilabel:`Fiscal Declaration` window, select the :guilabel:`Type of tax`, indicate
+   whether it's a :guilabel:`Transfer/cessation of business or special circumstances`, choose the
+   reports that must be sent, and click :guilabel:`Send Fiscal Declaration`.
+
+The fiscal declaration is then submitted to |DGFiP| through ASPOne.
 
 .. _localizations/france/accounting:
 
@@ -498,8 +649,7 @@ financial activities and determines corporate taxes.
 
 `Teledec <https://www.teledec.fr>`_ is a platform used to prepare and submit tax declaration using
 data from accounting records. To synchronize your accounting data stored in Odoo with Teledec and
-electronically send your company's *liasse fiscale* to the DGFiP (Direction Générale des Finances
-Publiques), follow these steps:
+electronically send your company's *liasse fiscale* to |DGFiP|, follow these steps:
 
 #. :ref:`localization/france/teledec-account`
 #. :ref:`localization/france/teledec-registration`
@@ -599,8 +749,8 @@ EDI tax return
 .. note::
    A valid Odoo Enterprise subscription is required to use this service.
 
-The EDI tax return (VAT report) can be submitted directly to :abbr:`DGFIP (Direction Générale des
-Finances Publiques)` through Odoo. To do so, follow these steps:
+The EDI tax return (VAT report) can be submitted directly to |DGFiP| through Odoo. To do so, follow
+these steps:
 
 #. :ref:`Review and validate <accounting/tax-returns/vat-return-review>` the tax return (VAT
    report).
@@ -609,7 +759,7 @@ Finances Publiques)` through Odoo. To do so, follow these steps:
 #. In the :guilabel:`EDI VAT` window, make sure a valid VAT :guilabel:`ROF` (Référence d’Obligation
    Fiscale) is entered.
 #. If needed, enable the :guilabel:`Add express mention` option and include a comment.
-#. - If payment to :abbr:`DGFIP (Direction Générale des Finances Publiques)` is required:
+#. - If payment to |DGFiP| is required:
 
      - Click :guilabel:`Add a line` in the :guilabel:`IBAN` column to enter an IBAN account number
        and BIC for the payment.
@@ -620,7 +770,7 @@ Finances Publiques)` through Odoo. To do so, follow these steps:
         A yellow banner appears if the entered amount does not match the required payment, as
         partial payments are not allowed.
 
-   - If reimbursement from :abbr:`DGFIP (Direction Générale des Finances Publiques)` is expected:
+   - If reimbursement from |DGFiP| is expected:
 
      - Enable the :guilabel:`Add reimbursement comment` option and include a comment if needed.
      - Click :guilabel:`Add the line` in the :guilabel:`IBAN` column to enter an IBAN account number
@@ -639,11 +789,10 @@ Finances Publiques)` through Odoo. To do so, follow these steps:
         If proceeding without matching the VAT amount, the difference will be carried over to the
         next period.
 
-#. Click :guilabel:`Send VAT Report` to submit the tax return (VAT report) to :abbr:`DGFIP
-   (Direction Générale des Finances Publiques)`.
+#. Click :guilabel:`Send VAT Report` to submit the tax return (VAT report) to |DGFiP|.
 
 The :guilabel:`Submit` action step turns orange, and a submission message appears in the chatter,
-then turns green when :abbr:`DGFIP (Direction Générale des Finances Publiques)` confirms reception.
+then turns green when |DGFiP| confirms reception.
 
 .. note::
    To access the tax report XML file, go to :menuselection:`Accounting --> Reporting --> EDI
