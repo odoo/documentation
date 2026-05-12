@@ -34,8 +34,19 @@ and selecting the desired rental product to add to the form.
    the user can still adjust it accordingly.
 
    Select the desired date range to represent the rental duration, then click :icon:`fa-refresh`
+<<<<<<< 2b235609daba72f33d42afcd160bac3ed5a209ea
    :guilabel:`Update Rental Prices` next to the :guilabel:`Pricelist` field.
 
+||||||| 813bfe6250342058ba4e073e10d05eb1ae572b4c
+   :guilabel:`Update Rental Prices` in the :guilabel:`Duration` field.
+
+   .. image:: create_rental_order/rental-update-rental-prices.png
+      :alt: The update rental prices option that appears in the Odoo Rental application.
+
+=======
+   :guilabel:`Update Rental Prices` in the :guilabel:`Duration` field.
+
+>>>>>>> 91354bb4054292ba9083ed6ee0c849569dfd8b0e
    Doing so reveals a :guilabel:`Confirmation` pop-up window. If everything is correct, click
    :guilabel:`Ok`, and Odoo recalculates the rental price accordingly.
 
