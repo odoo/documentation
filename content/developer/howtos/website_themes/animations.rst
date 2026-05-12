@@ -118,7 +118,7 @@ On hover
 This third kind of animations is only related to images and triggered every time we hover on the
 animated image.
 
-We can add 6 animation on hover effects:
+We can choose among 6 animations to apply an hover effect:
 
 - Overlay
 - Zoom In
@@ -129,17 +129,27 @@ We can add 6 animation on hover effects:
 
 **Use**
 
-Enable animations on hover by adding the `o_animate_on_hover` class on your image tag. You can
-also define the type of animation in the `data-hover-effect` attribute.
+Enable animations on hover by adding the `o_animate_on_hover` class on your image tag. Define the
+type of animation in the `data-hover-effect` attribute.
+
+.. note::
+
+   Odoo processes the image and creates a final SVG file containing the image and the animation. By
+   default, it also applies a regular image shape. This final image is then stored in the database
+   as an attachment to keep it editable in the future.
 
 .. code-block:: xml
 
-    <img
+   <img
       src="..."
       alt="..."
       class="img img-fluid o_we_custom_image o_animate_on_hover"
       data-hover-effect="overlay"
-      data-hover-effect-color="rgba(0, 0, 0, 0.25)" />
+      data-hover-effect-color="rgba(0, 0, 0, 0.25)"
+      data-shape="web_editor/geometric/geo_square"
+      data-shape-colors=";;;;"
+      data-filename="my-image.svg"
+      data-format-mimetype="image/webp" />
 
 .. list-table::
    :header-rows: 1
@@ -161,9 +171,23 @@ also define the type of animation in the `data-hover-effect` attribute.
    * - Stroke width
      - `data-hover-stroke-width`
      - Integer (saved as `px`)
+   * - Shape
+     - `data-shape`
+     - Path to the shape
+   * - Colors of the shape
+     - `data-shape-colors`
+     - Hexadecimal code of the colors available (5 max) in the shape (each value, even if empty,
+       is separated by a semicolon and refer to the color palette index used in the shape file)
 
 .. image:: animations/hover.png
    :alt: Animation on hover options
+
+.. important::
+
+   At this point, you can insert images with animations on hover in a module but the effect won't be
+   applied directly after the module installation. As the Website Builder needs to process the image
+   first (transform it then store it as an attachment), the animation on hover will only be visible
+   after you re-select the effect and save the page with the Website Builder.
 
 .. seealso::
    `Hover effect options
