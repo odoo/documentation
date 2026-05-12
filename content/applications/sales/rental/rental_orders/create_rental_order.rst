@@ -38,16 +38,12 @@ and selecting the desired rental product to add to the form.
    Select the desired date range to represent the rental duration, then click :icon:`fa-refresh`
    :guilabel:`Update Rental Prices` in the :guilabel:`Duration` field.
 
-   .. image:: create_rental_order/rental-update-rental-prices.png
-      :alt: The update rental prices option that appears in the Odoo Rental application.
-
    Doing so reveals a :guilabel:`Confirmation` pop-up window. If everything is correct, click
    :guilabel:`Ok`, and Odoo recalculates the rental price accordingly.
 
 Once all the information has been entered correctly on the rental order form, click :guilabel:`Send`
 to send the quotation to the customer. When the customer confirms the quotation, click
-:guilabel:`Confirm` to finalize the order. A :guilabel:`Reserved` banner displays on the rental
-order.
+:guilabel:`Confirm` to finalize the order. A :guilabel:`Booked` banner displays on the rental order.
 
 When a rental order is confirmed, the following smart buttons appear at the top of the form:
 
