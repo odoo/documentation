@@ -64,8 +64,8 @@ an existing one, and configure the following fields:
 - :guilabel:`Company Name`: Enter the business name in this field.
 - :guilabel:`Address`: Complete the full address, including the :guilabel:`City`,
   :guilabel:`State`, :guilabel:`Zip Code`, and :guilabel:`Country`.
-- :guilabel:`Currency`: By default, `HKD` is selected. If not, select `HKD` from the
-  drop-down menu.
+- :guilabel:`Currency`: By default, :guilabel:`HKD` is selected. If not, select :guilabel:`HKD`
+  from the drop-down menu.
 - :guilabel:`Phone`: Enter the company phone number.
 - :guilabel:`Email`: Enter the email used for general contact information.
 
@@ -85,6 +85,21 @@ Types, Working Schedule, MPF Scheme) define specific localization rules for Hong
 Settings
 --------
 
+Hong Kong localization
+~~~~~~~~~~~~~~~~~~~~~~
+
+Navigate to :menuselection:`Payroll app --> Configuration --> Settings` to configure the
+company's information in the Hong Kong Localization section:
+
+- :guilabel:`Employer's Name shown on reports`: Auto-populated from company settings.
+  Employers can edit this specifically for IRD reports if needed.
+- :guilabel:`Employer's File Number`: Enter the EFN for IRD reports. Format: first three
+  characters and eight numbers (e.g., `EFN-12345678`).
+- :guilabel:`Configure your MPF Schemes`: Click this to configure the MPF scheme
+  (Manulife, AIA, etc.) for employee benefits.
+- :guilabel:`Salaries Bank Account`: Select the bank account to be used in the HSBCnet
+  report.
+
 Advantages
 ~~~~~~~~~~
 
@@ -101,19 +116,6 @@ Advantages
    The Advantages section is optional. Configuring benefits here applies the same value to
    all employees, reducing manual configuration.
 
-Accounting section
-~~~~~~~~~~~~~~~~~~
-
-Configure the entries for the :guilabel:`Accounting` section:
-
-- :guilabel:`Payroll HSBC Autopay`: Enable to create HSBC payment files.
-- :guilabel:`Batch Account Move Lines`: Enable to merge all accounting entries for the same
-  period into a single account move line. This anonymizes accounting entries but disables
-  single payment generations.
-
-.. image:: hong_kong/accounting-settings.png
-   :alt: The Accounting section in Payroll Settings.
-
 .. _payroll/hk/structures_rules:
 
 Structures & rules
@@ -129,7 +131,7 @@ Odoo provides the :guilabel:`CAP57: Employees Monthly Pay` salary structure to c
 compliant payroll for regular employees. The following salary rules are mandatory, which
 are added automatically to payslips:
 
-- :guilabel:`Rent Allowance`: Amount derived from the employee's active rental record.
+- :guilabel:`Housing Reimbursement`: Amount derived from the employee's active rental record.
 - :guilabel:`Basic Salary`: Amount of base salary provided (after rent allowance deduction).
 - :guilabel:`713 Gross`: Net payable amount considering commissions, internet allowance,
   reimbursements, back-pay, deductions, etc.
@@ -154,6 +156,8 @@ added as salary inputs in the payslip under the :guilabel:`Salary Inputs` tab:
 - :guilabel:`Referral Fee`: The additional bonus offered for any form of business-related
   referral.
 - :guilabel:`Moving Daily Wage`: To override the ADW value used for leave computation.
+- :guilabel:`Manual Housing Reimbursement`: To override the housing reimbursement amount
+  automatically derived from the employee's active rental record.
 - :guilabel:`Skip Rent Allowance`: If set, the rental allowance is excluded from the current
   payslip.
 - :guilabel:`Custom Average Monthly Salary`: To override the average monthly salary used for
@@ -233,6 +237,19 @@ offset salary rules:
   :abbr:`ORSO (Occupational Retirement Schemes Ordinance)` scheme) that can be used to offset
   the post-transition amount.
 
+CAP57: Casual Employees Pay
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The :guilabel:`CAP57: Casual Employees Pay` salary structure is designed for compliant
+payroll processing of casual workers. It shares the same salary rules as the
+:guilabel:`CAP57: Employees Monthly Pay` structure, with the primary difference being the
+application of `Industry Schemes <https://www.mpfa.org.hk/en/info-centre/faq/employee/industry-sche
+mes-employee#IndustrySchemesEmployee-2>`_ for MPF calculations.
+
+This structure supports compliance for workers enrolled in Industry Schemes, which are
+tailored for the construction and catering sectors—industries characterized by high labor
+mobility and frequent daily hiring.
+
 .. _payroll/hk/work_entry_types:
 
 Work entry type
@@ -247,6 +264,9 @@ In defining each work entry type for Hong Kong, employers can define:
   sick leave).
 - :guilabel:`ADW Calculation`: Enable this to calculate the employee's pay according to the
   Average Daily Wage (ADW) rules under Hong Kong employment regulations.
+- :guilabel:`Validity`: Set this to define a minimum duration of consecutive leave (e.g.,
+  4 days for paid sick leave) to automate eligibility for the 80% ADW leave types and
+  prevent invalid requests.
 
 .. image:: hong_kong/work-entry-type.png
    :alt: Configuration screen for an 80 percent Sick Leave Work Entry Type.
@@ -378,7 +398,7 @@ Contract overview section
 
 - :guilabel:`Contract`: Select contract start and end dates for contract management.
 - :guilabel:`Wage Type`: Select :guilabel:`Fixed Wage` or :guilabel:`Hourly Wage`.
-- :guilabel:`Wage`: Define the employee's monthly wage.
+- :guilabel:`Wage`: Define the employee’s pay schedule (month, half-month, 2 weeks, week, day)
 - :guilabel:`Pay Category`: Select :guilabel:`CAP57: Hong Kong Employee` for monthly Hong
   Kong payroll calculations. This defines when the employee is paid, their default working
   schedule, and the work entry type it applies to.
@@ -443,20 +463,105 @@ Benefits section
 - :guilabel:`Current Rental`: Configure rental information that is used as a rental allowance
   in the payslip for the IR56B reporting period.
 
-To create a rental record:
-Click the :guilabel:`History` button near the current rental field. Click :guilabel:`New` to
-create a rental history. Enter the rental reference, rental start date, rental end date,
-rental type, rental amount, and address. Change the rental status to :guilabel:`Running`.
+Rental system
+-------------
 
-.. image:: hong_kong/running-rental.png
-   :alt: Setting up a running rental record for an employee.
+Odoo's Rental System is designed to align with the `Inland Revenue Department (IRD) guidelines
+<https://www.ird.gov.hk/eng/tax/ere_house.htm>`_ regarding the taxation of a place of residence
+provided to an employee. This updated rental system automates the calculation of taxable
+income based on whether the employer provides a reimbursement, direct payment, or allowance.
 
-.. note::
-   Rental status definition:
-   :guilabel:`Draft`: Rental just created.
-   :guilabel:`Running`: Rental amount starts adding to payslips from the rental start date.
-   :guilabel:`Expired`: Rental amount is no longer added to payslips.
-   :guilabel:`Cancelled`: Rental has been canceled.
+Understanding housing benefit types
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The system categorizes rentals based on how they impact an employee's taxable income:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Benefit Type
+     - Odoo Treatment
+     - Impact on Taxable Income
+   * - Full/Partial Reimbursement
+     - Report as Housing Reimbursement
+     - Reduces taxable income (replaces cash salary with housing value).
+   * - Direct Payment to Landlord
+     - Non-involving item
+     - Not included in the taxable cash total; handled as a perquisite.
+   * - Co-Payment
+     - Report as Housing Reimbursement
+     - Deducts the relevant portion from taxable cash income.
+   * - Housing Allowance
+     - Report as Housing Allowance
+     - Increases taxable income (treated as standard cash salary).
+
+Creating a rental record
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+To manage a new lease agreement for an employee, navigate to :menuselection:`More --> Rentals`
+and click :guilabel:`New`.
+
+Fill in the :guilabel:`Rental Information` header section:
+
+- :guilabel:`Rental Period`: Enter the start and end dates as defined in the lease agreement.
+- :guilabel:`Lease Type`: Select the appropriate tax treatment:
+
+  - :guilabel:`Employee pays, Company refunds`: Reported as a housing benefit in IR56 reports.
+  - :guilabel:`Company pays Landlord`: Non-taxable; excluded from cash totals in IR56 reports.
+  - :guilabel:`Company pays, Employee contributes`: Reported as a housing benefit in IR56 reports.
+
+- :guilabel:`Rental Allowance`: The total housing benefit amount according to the lease agreement.
+- :guilabel:`Monthly Rent Amount`: The specific monthly rent amount.
+- :guilabel:`Payment Proof`: Attach monthly rental receipts submitted by the employee.
+- :guilabel:`Valid Up to`: The expiration date for current reimbursement eligibility.
+
+Fill in the :guilabel:`Rental Details` section:
+
+- :guilabel:`Nature`: The category of the residence (e.g., Flat, House).
+- :guilabel:`Landlord Name`: The name of the lessor as it appears on the lease.
+- :guilabel:`Stamped Duty`: Check this if the agreement has been officially stamped (required
+  for IR56).
+- :guilabel:`Address`: The physical location of the rental property.
+
+.. image:: hong_kong/reimbursement-in-payslip.png
+   :alt: The completed Rental Details section.
+
+.. important::
+   Only rentals in the :guilabel:`Confirmed` stage are processed during payroll. Click
+   :guilabel:`Confirm` to move a record from :guilabel:`Draft` to :guilabel:`Confirmed`.
+
+Functional examples
+~~~~~~~~~~~~~~~~~~~
+
+**Monthly reimbursement and warning**
+
+Process the payslip for Natalie Chan with a monthly wage of 30,000 and a rental record valid
+up to May:
+
+- May: Housing reimbursement is calculated at 12,000.
+- June: Odoo displays a warning notification to the HR Manager to update the :guilabel:`Valid
+  Up to` date before processing the payslip.
+
+.. image:: hong_kong/rental-submission-reminder.png
+   :alt: Warning notification to update the Valid Up to date.
+
+**Shared housing warning**
+
+If two rental records share the exact same address, Odoo displays a warning in the
+:guilabel:`Similar Rentals` tab on the rental record.
+
+.. image:: hong_kong/similar-rental-warning.png
+   :alt: Shared housing warning in the Similar Rentals tab.
+
+**Rental updates notification**
+
+Odoo sends an in-app or email notification in the following scenarios:
+
+- For new rental creations initiated by HR or the employer.
+- For monthly payment proofs submitted by the employee.
+
+.. image:: hong_kong/rental-notification.png
+   :alt: Examples of rental update notifications.
 
 .. _payroll/hk/run_hk_payroll:
 
@@ -482,10 +587,9 @@ to in the **Payroll** app as pay runs.
 Individual payslip
 ------------------
 
-To create an individual payslip in the **Payroll** app:
-Go to :menuselection:`Payroll app --> Payslips --> Payslips`. Click
-:guilabel:`New Off-Cyle` to create a payslip for a single employee. Select the
-employee and period.
+To create an individual payslip in the **Payroll** app, navigate to :menuselection:`Payroll app -->
+Payslips --> Payslips`. Click :guilabel:`New Off-Cyle` to create a payslip for a single employee.
+Select the employee and period.
 
 .. tip::
    Odoo automatically excludes out-of-contract days for pro-rata calculations (i.e., you
@@ -510,15 +614,16 @@ Batch pay run (payslips in groups)
 ----------------------------------
 
 To create a batch pay run in the **Payroll** app:
-Go to :menuselection:`Payroll app --> Payslips --> Pay Runs`. Click
-:guilabel:`New` to create a new pay run. Select the salary structure, pay schedule, MPF
-scheme, payroll group, and period.
+Go to :menuselection:`Payroll app --> Payslips --> Pay Runs`. Click :guilabel:`New`
+to create a new pay run. Select the :guilabel:`Employee Types`, :guilabel:`Salary Structure`,
+:guilabel:`Pay Schedule`, :guilabel:`MPF Scheme`, :guilabel:`Payroll Group`, and
+:guilabel:`Period`.
 
 .. note::
    The MPF scheme and payroll group are optional; if there is only one scheme and one group,
    you can leave it blank.
 
-Select employee(s). A pay run is created along with the drafted employee payslips. Check
+Next, select the employees. A pay run is created along with the drafted employee payslips. Check
 all calculations and click the :guilabel:`Validate` button.
 
 .. image:: hong_kong/batch-pay-run.png
@@ -591,13 +696,20 @@ After the journal entries are validated, Odoo generates payment report files.
    To generate payments from payslips, an employee must have a trusted bank account. If the
    employee's bank account is not marked as trusted, payment files cannot be generated.
 
-- **HSBC Auto Pay Report**: Click :guilabel:`HSBC Auto Pay Report`. (You must configure the
-  HSBC Autopay bank account in configuration for this button to appear). Configure the HSBC
-  Autopay report information. Click the :guilabel:`Confirm` button. Click the download icon
-  to download the `.apc` HSBC report.
-- **Payment Report**: Click :guilabel:`Payment Report`. Payments can be grouped by partner if
-  there is a partner associated with a salary rule. Select the export format and click
-  :guilabel:`Generate` to download the CSV.
+- **Payment Report**: Click :guilabel:`Pay`. Select the :guilabel:`Mode`. Configure the
+  HSBCnet report information, then click the :guilabel:`Download` button. You can click
+  the download icon at any time to download the HSBC report again.
+
+  .. image:: hong_kong/payment-report-hsbc.png
+     :alt: Downloading the HSBC Payment Report.
+
+- **Other Payment Report**: Click :guilabel:`Pay`. Select the :guilabel:`Mode`. Payments
+  can be grouped by :guilabel:`Partner` if there is a partner associated with a salary
+  rule. Select the :guilabel:`Export Format`, then click the :guilabel:`Generate` button.
+  Download the payment report and mark it as paid.
+
+  .. image:: hong_kong/payment-report-others.png
+     :alt: Generating the Other Payment Report.
 
 .. _payroll/hk/payroll_reporting:
 
@@ -605,7 +717,7 @@ Payroll reporting
 =================
 
 The Hong Kong localization contains several reports unique to HK, which provide eMPF
-contribution reports and auto-generated IR56 reports (both in `.xml` and PDF formats).
+contribution reports and auto-generated IR56 reports (both in XML and PDF formats).
 
 .. important::
    Payslips must be validated in order to generate eMPF reports and IR56 reports.
@@ -712,8 +824,8 @@ impacts the payslip.
 
 .. note::
      Manually adding an end-of-year payment to a specific payslip may require saving
-     the record manually, clicking the (gear) icon, and then selecting
-     :guilabel:`Recompute Whole Sheet`.
+     the record manually, clicking the :icon:`fa-gear` :guilabel:`(Action)` icon, and then
+     selecting :guilabel:`Recompute Whole Sheet`.
 
 .. image:: hong_kong/payslip-other-info.png
    :alt: Other info tab under payslip
@@ -729,7 +841,7 @@ In Hong Kong, payroll calculations typically follow a standard daily wage formul
 
    \text{Daily Wage} = \frac{\text{Total wage in a month}}{\text{Total days in a month}}
 
-However, the Employment (Amendment) Ordinance 2007 (often referred to as the "713 Ordinance")
+However, the Employment (Amendment) Ordinance 2007 (often referred to as the *713 Ordinance*)
 requires employers to use the Average Daily Wage (ADW) when calculating specific statutory
 entitlements. Statutory entitlements requiring ADW include: holiday pay, annual leave pay,
 sickness allowance, maternity leave pay, paternity leave pay, end of year payment, and
@@ -793,6 +905,30 @@ Calculate the March payslip for Natalie Chan who joined Jan 1, 2026, with a mont
 - MPF gross = 20,082.56
 - Employee mandatory contribution = 20,082.56 * 5% = 1,004.13
 - Net salary earned for Mar = 20,082.56 - 1,004.13 = 19,078.43
+
+CAP 57: Hong Kong Casual Employee
+---------------------------------
+
+Calculate the January first-week payslip for David Lee who joined Jan 1, 2026, with an
+hourly wage of 80 HKD.
+
+- Jan 5 - Jan 11: 8 hours per day, 5 days per week.
+
+**1. Calculate the daily income:**
+
+Calculate the daily income to determine the Industry Schemes MPF amount.
+
+.. math::
+
+   \text{Daily Income} = 80 \times 8 = 640
+
+**2. Calculate the daily MPF:**
+
+Based on the Industry Scheme daily income brackets, a daily income of 640 HKD falls into
+the "$550 to less than $650" bracket.
+
+- Employee mandatory contribution: 30 per day
+- Employer mandatory contribution: 30 per day
 
 CAP 57: Payment in Lieu of Notice
 ---------------------------------
