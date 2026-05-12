@@ -284,6 +284,7 @@ supports.
    setup_configuration/sendcloud_shipping
    setup_configuration/starshipit_shipping
    setup_configuration/ups_credentials
+   setup_configuration/usps
    setup_configuration/zebra
    setup_configuration/cancel
    setup_configuration/invoicing
