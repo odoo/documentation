@@ -32,6 +32,8 @@ materials).
   `Denim` and `Thread` product forms, only :guilabel:`Purchase` should be selected, whereas in the
   `Handmade Jacket` product form, only :guilabel:`Sales` should be selected.
 
+.. _inventory/product_management/goods-or-services:
+
 Goods vs. services
 ==================
 
