@@ -232,6 +232,7 @@ sphinx.transforms.i18n.docname_to_domain = (
 # option. If a provided version has no label, the version string is used as label.
 versions_names = {
     'master': "Master",
+    'saas-19.3': "Odoo 19.3",
     'saas-19.2': "Odoo 19.2",
     'saas-19.1': "Odoo 19.1",
     '19.0': "Odoo 19",
