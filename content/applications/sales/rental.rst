@@ -38,27 +38,6 @@ On the left sidebar, the :guilabel:`Rental Status` for each rental can be found.
 :guilabel:`Invoice Status` of the rentals is accessible. Clicking any option in the left sidebar
 filters the displayed rentals on the dashboard.
 
-Settings
-========
-
-To configure additional rental delay costs, availability of rental items, or minimum time of rental,
-navigate to :menuselection:`Rental app --> Configuration --> Settings`.
-
-.. image:: rental/rental/rental-settings.png
-   :alt: How the Settings page appears in the Odoo Rental application.
-
-In the :guilabel:`Rental` section, there are options to configure :guilabel:`Default Delay Costs`
-and :guilabel:`Default Padding Time`. Also, there is the option to activate :guilabel:`Rental
-Transfers`.
-
-- :guilabel:`Default Delay Costs` are additional costs for late returns.
-- :guilabel:`Default Padding Time` represents the minimum amount of time between two rentals.
-- :guilabel:`Rental Transfers` means stock deliveries and receipts can be used for rental orders.
-
-In the :guilabel:`Rent Online` section, there are options to configure a :guilabel:`Minimal Rental
-Duration` and designate :guilabel:`Unavailability days`, or days during which pickup and return are
-not possible.
-
 Rental products
 ===============
 
