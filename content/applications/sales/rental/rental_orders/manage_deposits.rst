@@ -109,8 +109,8 @@ Using quotation templates helps tailor the product list to the customer while en
 deposits are included in the order. Navigate to :menuselection:`Rental app --> Configuration -->
 Quotation Templates` and click :guilabel:`New` to get started.
 
-:ref:`Create a quotation template <sales/send_quotations/create_templates>` that includes both the
-rental product and the rental product deposit, and save the template. Next, create a
+:ref:`Create a quotation template <sales_quotations/quote_template/create-templates>` that includes
+both the rental product and the rental product deposit, and save the template. Next, create a
 :doc:`create_rental_order`. Select the desired template in the :guilabel:`Quotation Template` field.
 
 Process a deposit on a rental order

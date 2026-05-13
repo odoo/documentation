@@ -38,7 +38,7 @@ complete with a :guilabel:`Renewal Quotation` tag. Important reference informati
 date and next invoice date are automatically added to the renewal quotation's chatter.
 
 From here, follow the standard sales flow to :ref:`confirm the quotation
-<sales/sales_quotations/send-and-confirm>`, :doc:`invoice the order
+<sales_quotations/create_quotations/send-and-confirm>`, :doc:`invoice the order
 <../../sales/sales/invoicing/invoicing_policy>`, and :ref:`register payment
 <finance/accounting/register-payment-invoice-bill>`.
 

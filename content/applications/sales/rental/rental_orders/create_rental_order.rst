@@ -8,7 +8,7 @@ after a rental order is confirmed can rental products be picked up.
 
 .. important::
    To configure quotation settings, the **Sales** app **must** be installed. Refer to
-   :ref:`sales/quotation-settings` for detailed instructions.
+   :ref:`sales/create_quotations/configuration` for detailed instructions.
 
 Create a rental quote
 =====================
