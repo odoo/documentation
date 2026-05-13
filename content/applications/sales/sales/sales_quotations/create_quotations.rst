@@ -5,16 +5,15 @@ Create quotations
 In Odoo **Sales**, quotations can be created and sent to customers. Once a quotation has been
 confirmed, it officially turns into a *sales order*, which can then be invoiced and paid for.
 
-.. _sales/quotation-settings:
+.. _sales/create_quotations/configuration:
 
-Quotation settings
-==================
+Configuration
+=============
 
 To access these setting options, navigate to :menuselection:`Sales app --> Configuration -->
 Settings`, and scroll to the :guilabel:`Quotations & Orders` section.
 
 .. image:: create_quotations/quotations-orders-section.png
-   :align: center
    :alt: The Quotations and Orders section on the Odoo Sales app Settings page.
 
 - :guilabel:`Quotation Templates`: Enable this option to create quotation templates featuring
@@ -37,8 +36,10 @@ Settings`, and scroll to the :guilabel:`Quotations & Orders` section.
 - :guilabel:`Lock Confirmed Sales`: Ensure no further edits can be made to confirmed orders.
 - :guilabel:`Pro-Forma Invoice`: Send pro-forma invoices to customers.
 
-To activate any of these settings, tick the checkbox beside the desired option(s). Then, click
+To activate any of these settings, tick the checkbox beside the desired options. Then, click
 :guilabel:`Save`.
+
+.. _sales_quotations/create_quotations/quotations-dashboard:
 
 Quotations dashboard
 ====================
@@ -50,7 +51,6 @@ the current user, as indicated by the default :guilabel:`My Quotations` filter p
 bar.
 
 .. image:: create_quotations/quotations-dashboard.png
-   :align: center
    :alt: The Quotations dashboard present in the Odoo Sales application.
 
 .. note::
@@ -62,14 +62,14 @@ Quotations on this page appear in a default list view, but can also be viewed in
 :icon:`oi-view-pivot` :guilabel:`Pivot` table, :icon:`fa-area-chart` :guilabel:`Graph`, or
 :icon:`fa-clock-o` :guilabel:`Activity` view.
 
-To view and/or modify any listed quotation from the :guilabel:`Quotations` dashboard, click on the
+To view or modify any listed quotation from the :guilabel:`Quotations` dashboard, click on the
 desired quotation line from the list, and Odoo reveals the specific form for that selected
 quotation.
 
-.. _sales/create-quotation:
+.. _sales_quotations/create_quotations/create-quotation:
 
-Create quotation
-================
+Create a quotation
+==================
 
 To create a quotation, open the :menuselection:`Sales app`, and click the :guilabel:`New` button,
 located in the upper-left corner of the main :guilabel:`Quotations` dashboard.
@@ -82,7 +82,6 @@ Clicking the :guilabel:`New` button reveals a blank quotation form, with various
 configure.
 
 .. image:: create_quotations/quotation-form.png
-   :align: center
    :alt: A typical quotation form in the Odoo Sales application.
 
 Begin by entering the customer's name in the :guilabel:`Customer` field at the top of the form. This
@@ -109,7 +108,7 @@ quotation. It should be noted that some additional fields may appear, depending 
 selected.
 
 The default date that appears in the :guilabel:`Expiration` field is based on the number configured
-in the :ref:`Default Quotation Validity setting <sales/quotation-settings>` (in
+in the :ref:`Default Quotation Validity setting <sales/create_quotations/configuration>` (in
 :menuselection:`Sales app --> Configuration --> Settings`).
 
 .. tip::
@@ -140,26 +139,25 @@ product variant) in an organized catalog display, with items organizable by :gui
 Category` and :guilabel:`Attributes`.
 
 .. image:: create_quotations/product-catalog.png
-   :align: center
    :alt: A product catalog accessible via a quotation in the Odoo Sales application.
 
-From here, simply locate the desired items, click the :icon:`fa-shopping-cart` :guilabel:`Add`
-button on the product card, and adjust the quantity, if needed. When complete, click the
-:guilabel:`Back to Quotation` button in the upper-left corner to return to the quotation, where the
-newly-selected catalog items can be found in the :guilabel:`Order Lines` tab.
+From here, locate the desired items, click the :icon:`fa-shopping-cart` :guilabel:`Add` button on
+the product card, and adjust the quantity, if needed. When complete, click the :guilabel:`Back to
+Quotation` button in the upper-left corner to return to the quotation, where the newly-selected
+catalog items can be found in the :guilabel:`Order Lines` tab.
 
 If multiple items should be presented in a more organized way on the quotation, click :guilabel:`Add
 a section`, enter a name for the section, and drag-and-drop that section heading in the desired
 location amongst the items in the :guilabel:`Order Lines` tab. The section heading appears in bold
-and a sub-total for all products in a section is displayed.
+and a sub-total for all products in a section is displayed. Then, if desired, :ref:`add a Section
+Template <sales_quotations/quote_template/section-templates>` to this quotation.
 
 If needed, click :guilabel:`Add a note` beneath a certain product line to add a custom note about
 that specific product. The note appears in italics. Then, if needed, proceed to drag-and-drop the
 note beneath the desired product line.
 
 Beneath the product lines, there are buttons that can be clicked to apply any of the following:
-:guilabel:`Coupon Code`, :guilabel:`Promotions`, :guilabel:`Discount`, and/or :guilabel:`Add
-shipping`.
+:guilabel:`Coupon Code`, :guilabel:`Promotions`, :guilabel:`Discount`, and :guilabel:`Add shipping`.
 
 .. seealso::
    - :doc:`../products_prices/ewallets_giftcards`
@@ -195,7 +193,6 @@ In the :guilabel:`Sales` section of the :guilabel:`Other Info` tab, there are sa
 that can be configured.
 
 .. image:: create_quotations/other-info-sales.png
-   :align: center
    :alt: The Sales section of the Other Info tab of a quotation form in Odoo Sales.
 
 - :guilabel:`Salesperson`: Assign a salesperson from the drop-down menu to be associated with this
@@ -222,13 +219,12 @@ In the :guilabel:`Delivery` section of the :guilabel:`Other Info` tab, there are
 fields that can be configured.
 
 .. image:: create_quotations/other-info-delivery.png
-   :align: center
    :alt: The Delivery section of the Other Info tab of a quotation form in Odoo Sales.
 
 - :guilabel:`Shipping Weight`: Displays the weight of the items being shipped. This field is not
   modifiable. Product weight is configured on individual product forms.
 - :guilabel:`Incoterm`: Select an Incoterm (International Commerical Term) to use as predefined
-  commerical terms for international transactions.
+  commercial terms for international transactions.
 - :guilabel:`Incoterm Location`: If an Incoterm is being used, enter the international location in
   this field.
 - :guilabel:`Shipping Policy`: Select a desired shipping policy from the drop-down menu. If all
@@ -246,13 +242,12 @@ In the :guilabel:`Invoicing` section of the :guilabel:`Other Info` tab, there ar
 fields that can be configured.
 
 .. image:: create_quotations/other-info-invoicing.png
-   :align: center
    :alt: The Invoicing section of the Other Info tab of a quotation form in Odoo Sales.
 
 - :guilabel:`Fiscal Position`: Select a fiscal position to be used to adapt taxes and accounts for
   particular customers or sales orders/invoices. The default value comes from the customer. If a
   selection is made in this field, an :icon:`fa-refresh` :guilabel:`Update Taxes` clickable link and
-  icon appear. When clicked, the taxes for this partiuclar customer and quotation are updated. A
+  icon appear. When clicked, the taxes for this particular customer and quotation are updated. A
   confirmation window appears, as well.
 - :guilabel:`Analytic Account`: Select an analytic account to apply to this customer/quotation.
 
@@ -263,7 +258,6 @@ In the :guilabel:`Tracking` section of the :guilabel:`Other Info` tab, there are
 fields that can be configured.
 
 .. image:: create_quotations/other-info-tracking.png
-   :align: center
    :alt: The Tracking section of the Other Info tab of a quotation form in Odoo Sales.
 
 - :guilabel:`Source Document`: Enter the reference of the document that generated the
@@ -283,12 +277,12 @@ Notes tab
 ---------
 
 In the :guilabel:`Notes` tab of the quotation form, enter any specific internal notes about the
-quotation and/or customer, if desired.
+quotation and customer, if desired.
 
-.. _sales/sales_quotations/send-and-confirm:
+.. _sales_quotations/create_quotations/send-and-confirm:
 
-Sending and confirming quotations
-=================================
+Send and confirm a quotation
+============================
 
 Once all the necessary fields and tabs have been configured, it is time to send the quotation to the
 customer for confirmation. Upon confirmation, the quotation turns into an official sales order.
