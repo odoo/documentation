@@ -45,9 +45,8 @@ Click on the :guilabel:`Phone Settings` tab to view OnSIP configuration credenti
 Add OnSIP credentials
 ---------------------
 
-After :ref:`installing <general/install>` the *Phone - OnSIP* module, go to the
-:menuselection:`Phone app --> Configuration --> Providers`. Locate the *OnSIP* provider entry, and
-enter the following information:
+Go to the :menuselection:`Phone app --> Configuration --> Providers`. Locate the *OnSIP* provider
+entry, and enter the following information:
 
 - :guilabel:`OnSIP Domain`: the domain that was assigned when creating an account on `OnSIP
   <https://www.onsip.com/>`__. Replace `YOURACCOUNT` with the company account name.
@@ -68,6 +67,11 @@ Add the following :ref:`OnSIP credentials <productivity/voip/view-onsip-credenti
 - :guilabel:`Username`: the user's :guilabel:`OnSIP username`.
 - :guilabel:`OnSIP Auth Username`: the user's :guilabel:`Auth Username`.
 - :guilabel:`Secret`: the user's :guilabel:`SIP Password`.
+
+.. important::
+   In the OnSIP portal, go to :menuselection:`Users --> Phone Settings`, and ensure the
+   :guilabel:`Username` matches the *Auth username*. If it's not, edit it in :menuselection:`User
+   Info --> Primary SIP address`.
 
 Once the OnSIP credentials have been saved, the user can make calls with Odoo **Phone** by clicking
 the :icon:`oi-voip` :guilabel:`(Phone)` icon in the top-right corner of Odoo.
