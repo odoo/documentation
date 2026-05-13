@@ -43,6 +43,8 @@ Password managers are another option. Common examples include:
    The remainder of this document uses Google Authenticator as an example, as it is one of the most
    commonly used. This is **not** an endorsement of the product.
 
+.. _two-factor/setup:
+
 Two-factor authentication setup
 ===============================
 
