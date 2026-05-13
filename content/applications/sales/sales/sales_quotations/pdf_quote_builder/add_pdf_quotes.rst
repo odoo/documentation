@@ -7,6 +7,8 @@ with the quote details. They can be accessed from the *Quote Builder* tab on a q
 can have multiple headers or footers selected. If a quote has multiple headers or footers, they are
 merged together in the order they were selected, with the quote details in between.
 
+.. _pdf_quote_builder/add_pdf_quotes/add-to-quote:
+
 Add headers and footers to a quote
 ==================================
 
@@ -52,12 +54,14 @@ printing.
    PDF quote for the customer. The PDF quote contains the vehicle purchase order form as the header,
    the quote details in the body, and the dealership's standard footer.
 
+.. _pdf_quote_builder/add_pdf_quotes/add-to-quote-template:
+
 Add headers and footers to a quote template
 ===========================================
 
 .. important::
    Headers and footers added to a quote template are **only** available when that template is
-   applied — they won't appear as standalone header/footer options for quotes.
+   applied — they do not appear as standalone header or footer options for quotes.
 
 To add PDFs to a quote template, navigate to :menuselection:`Sales app --> Configuration --> Quote
 Templates`, and select the desired template. Click the :guilabel:`Quote Builder` tab and click
