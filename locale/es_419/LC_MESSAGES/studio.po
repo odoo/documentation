@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-17 18:30+0000\n"
-"PO-Revision-Date: 2026-03-26 23:20+0000\n"
+"PO-Revision-Date: 2026-05-14 23:20+0000\n"
 "Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-19-doc/studio/es_419/>\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == "
 "0) ? 1 : 2);\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 5.17\n"
 
 #: ../../content/applications/studio.rst:6
 msgid "Studio"
@@ -2689,10 +2689,15 @@ msgid ""
 "stored within them. The way in which a field's data is presented and "
 "formatted on the :abbr:`UI (User Interface)` is controlled by its widget."
 msgstr ""
+"Los campos estructuran los :doc:`modelos <models_modules_apps>` de una base "
+"de datos. Si piensas en un modelo como una tabla u hoja de cálculo, los "
+"campos son las columnas y los registros son las filas individuales. Los "
+"campos también definen el tipo de datos que almacenan. El widget controla la "
+"forma en que esos datos aparecen y se formatean en la interfaz de usuario."
 
 #: ../../content/applications/studio/fields.rst:10
 msgid "With Studio, it is possible to:"
-msgstr ""
+msgstr "Con Studio puedes:"
 
 #: ../../content/applications/studio/fields.rst:12
 msgid ""
@@ -2702,24 +2707,31 @@ msgid ""
 "some field types are available more than once with a different default "
 "widget;"
 msgstr ""
+":ref:`agregar nuevos campos <studio/fields/add-new>` a tu base de datos. "
+"Desde un punto de vista técnico, Odoo tiene 15 :ref:`tipos de campos <studio/"
+"fields/field-types>`. Sin embargo, en Studio puedes elegir entre 21 tipos de "
+"campos, ya que algunos aparecen varias veces con distintos widgets "
+"predeterminados;"
 
 #: ../../content/applications/studio/fields.rst:16
 msgid ""
 ":ref:`add existing fields, <studio/fields/add-existing>` i.e., fields that "
 "already exists on a model, to any view of that model;"
 msgstr ""
+":ref:`agregar campos existentes <studio/fields/add-existing>`, es decir, "
+"campos que ya existen en un modelo, a cualquier vista de ese modelo;"
 
 #: ../../content/applications/studio/fields.rst:18
 msgid ":ref:`modify a field's properties <studio/fields/modify>`; or"
-msgstr ""
+msgstr ":ref:`modificar las propiedades de un campo <studio/fields/modify>`; o"
 
 #: ../../content/applications/studio/fields.rst:19
 msgid ":ref:`remove a field from a view <studio/fields/remove>`."
-msgstr ""
+msgstr ":ref:`eliminar un campo de una vista <studio/fields/remove>`."
 
 #: ../../content/applications/studio/fields.rst:21
 msgid "Studio fields vs. property fields"
-msgstr ""
+msgstr "Campos de Studio y campos de propiedad"
 
 #: ../../content/applications/studio/fields.rst:23
 msgid ""
@@ -2730,6 +2742,12 @@ msgid ""
 "product, the product category), but they are not saved as columns in your "
 "database."
 msgstr ""
+"Los campos creados con Studio se almacenan como columnas en tu base de datos "
+"de Odoo. En cambio, los :doc:`campos de propiedad <../essentials/"
+"property_fields>` funcionan como pseudocampos, ya que se comparten entre "
+"todos los registros vinculados al mismo registro principal (por ejemplo, "
+"para las tareas, el proyecto, o para un producto, la categoría de producto), "
+"pero no se almacenan como columnas en tu base de datos."
 
 #: ../../content/applications/studio/fields.rst:29
 msgid ""
@@ -2739,30 +2757,40 @@ msgid ""
 "visible in all tasks *within the same project* (i.e., its parent) while "
 "other projects’ tasks remain unaffected."
 msgstr ""
+"Agregar el campo :guilabel:`Fecha límite` a la vista de formulario de una "
+"tarea con Studio, ese campo aparecerá en todas las tareas de la base de "
+"datos. Al agregar un campo de propiedad :guilabel:`Instrucciones especiales` "
+"a una tarea, el campo aparecerá en todas las tareas *dentro del mismo "
+"proyecto* (es decir, el proyecto principal), mientras que las tareas de "
+"otros proyectos permanecerán sin cambios."
 
 #: ../../content/applications/studio/fields.rst:37
 msgid "Field types"
-msgstr ""
+msgstr "Tipos de campo"
 
 #: ../../content/applications/studio/fields.rst:39
 msgid "Fields can be broadly divided into two categories:"
-msgstr ""
+msgstr "Los campos están divididos en dos categorías principales:"
 
 #: ../../content/applications/studio/fields.rst:41
 msgid ""
 ":ref:`Simple fields <studio/fields/simple-fields>`, which contain basic "
 "values, such as text, numbers, files, etc."
 msgstr ""
+":ref:`Campos simples <studio/fields/simple-fields>` que contienen valores "
+"básicos, como texto, números, archivos, etc."
 
 #: ../../content/applications/studio/fields.rst:43
 msgid ""
 ":ref:`Relational fields <studio/fields/relational-fields>`, which are used "
 "to link and display the data from records on another model."
 msgstr ""
+":ref:`Campos relacionales <studio/fields/relational-fields>` que se usan "
+"para vincular y mostrar los datos de los registros en otro modelo."
 
 #: ../../content/applications/studio/fields.rst:46
 msgid "AI fields"
-msgstr ""
+msgstr "Campos de IA"
 
 #: ../../content/applications/studio/fields.rst:48
 msgid ""
@@ -2770,6 +2798,9 @@ msgid ""
 "fields with added AI capabilities that allow their values to be generated "
 "automatically through prompts."
 msgstr ""
+"Los :doc:`campos de IA <../productivity/ai/fields>` son campos estándar de "
+"Odoo con capacidades adicionales de IA que permiten generar sus valores de "
+"forma automática mediante instrucciones."
 
 #: ../../content/applications/studio/fields.rst:54
 msgid "Simple fields"
@@ -2781,6 +2812,8 @@ msgid ""
 "Non-default widgets, when available, are presented as bullet points or sub-"
 "headings."
 msgstr ""
+"Los widgets que no son predeterminados, cuando están disponibles, aparecerán "
+"como viñetas o subtítulos."
 
 #: ../../content/applications/studio/fields.rst:62
 msgid "Text (`char`)"
@@ -2834,6 +2867,11 @@ msgid ""
 "using a :guilabel:`Text` field with the :guilabel:`Image` widget. For "
 "example, it can be useful if you want to save disk space."
 msgstr ""
+"Esto funciona de forma distinta a seleccionar el :ref:`campo Imagen <studio/"
+"fields/simple-fields-image>` de forma directa, ya que Odoo no almacena la "
+"imagen al utilizar el campo :guilabel:`Texto` con el widget "
+":guilabel:`Imagen`. Hacer esto puede ser útil, por ejemplo, si quieres "
+"ahorrar espacio en disco."
 
 #: ../../content/applications/studio/fields.rst:80
 msgid ":guilabel:`Phone`: the value becomes a clickable *tel* link."
@@ -3765,11 +3803,11 @@ msgstr ""
 
 #: ../../content/applications/studio/fields.rst:526
 msgid "Add a field to a view"
-msgstr ""
+msgstr "Agregar un campo a una vista"
 
 #: ../../content/applications/studio/fields.rst:528
 msgid "With Studio, it is possible to add:"
-msgstr ""
+msgstr "Con Studio puedes agregar:"
 
 #: ../../content/applications/studio/fields.rst:530
 msgid ""
@@ -3777,6 +3815,9 @@ msgid ""
 "general/form>` or :ref:`list view <studio/views/multiple-records/list>` of a "
 "model"
 msgstr ""
+":ref:`un campo nuevo <studio/fields/add-new>` a una :ref:`vista de "
+"formulario <studio/views/general/form>` o a una :ref:`vista de lista <studio/"
+"views/multiple-records/list>` de un modelo"
 
 #: ../../content/applications/studio/fields.rst:532
 msgid ""
@@ -3784,26 +3825,35 @@ msgid ""
 "already exists on the :doc:`model <models_modules_apps>` in question, to "
 "*any* view of that model"
 msgstr ""
+":ref:`un campo existente <studio/fields/add-existing>`, es decir, un campo "
+"que ya existe en el :doc:`modelo <models_modules_apps>` en cuestión, a "
+"*cualquier* vista de ese modelo"
 
 #: ../../content/applications/studio/fields.rst:536
 msgid ""
 "Add a new field to a form or list view to save it to the model and make it "
 "available as an existing field in other views of the same model."
 msgstr ""
+"Agrega un nuevo campo a una vista de formulario o vista de lista para "
+"guardarlo en el modelo y permitir que esté disponible como campo existente "
+"en otras vistas del mismo modelo."
 
 #: ../../content/applications/studio/fields.rst:542
 msgid "Add a new field"
-msgstr ""
+msgstr "Agregar un campo nuevo"
 
 #: ../../content/applications/studio/fields.rst:545
 msgid ""
 "Activate :ref:`developer mode <developer-mode>` *before* adding a new field "
 "to see, and be able to edit, the field's technical name during configuration."
 msgstr ""
+"Activa el :ref:`modo de desarrollador <developer-mode>` *antes* de agregar "
+"un campo nuevo para ver y editar el nombre técnico del campo durante la "
+"configuración."
 
 #: ../../content/applications/studio/fields.rst:548
 msgid "To add a new field, follow these steps:"
-msgstr ""
+msgstr "Sigue estos pasos para agregar un campo nuevo:"
 
 #: ../../content/applications/studio/fields.rst:550
 msgid ""
