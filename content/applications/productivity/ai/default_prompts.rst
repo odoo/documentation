@@ -54,16 +54,21 @@ In the :guilabel:`Call the Agent` field, select which agent this rule should app
 Buttons
 -------
 
-Within each default prompt, buttons can be configured with predefined prompts. While users have the
-option to write out a prompt, they can also click one of the buttons to begin the conversation.
+Within each default prompt, buttons can be configured with predefined prompt instructions. When a
+user clicks a button, Odoo combines the default prompt *Context* with the selected button prompt and
+sends both to the |AI| model. This structure allows organizations to create reusable AI actions for
+common workflows, such as rewriting content, summarizing information, applying tone guidelines, or
+generating standardized responses.
 
-On the *Buttons* tab, click :guilabel:`Add a line`, then enter a prompt in the :guilabel:`AI Prompt`
-field.
-
-These prompts are then available for a user to select in a conversation.
+On the *Buttons* tab, click :guilabel:`Add a line` to open the *Create Available User Prompts*
+pop-up. In the :guilabel:`Title` field, enter a name for this prompt. Whatever is entered in this
+field is visible on the button for the prompt.
 
 .. image:: default_prompts/ai-chatter.png
    :alt: AI prompts configured as buttons in a conversation with an agent.
+
+In the :guilabel:`Prompt` field, enter a prompt to be sent to the AI when the button is clicked.
+Click :guilabel:`Save & Close` or :guilabel:`Save & New` when finished.
 
 .. _ai/prompt-structure:
 
@@ -73,16 +78,18 @@ Understanding AI prompt structure
 |AI| conversations in Odoo are structured using multiple configuration layers.
 
 - Each :ref:`agent <ai/agents/prompts-in-odoo>` has a prompt that defines the global identity and
-  behavior of an AI agent. It is configured directly on the |AI| agent record and applies wherever
-  the agent is used. The Agent Prompt defines who the AI is.
+  behavior of an AI agent. It is configured directly on the agent's record and applies wherever the
+  agent is used. The Agent Prompt defines who the AI is.
 
-- A default prompt configures how an |AI| agent behaves when launched from a specific model. Default
+- A default prompt configures how an AI agent behaves when launched from a specific model. Default
   prompt instructions adapt the agent's behavior to the functional context of the model. The default
   prompt defines how the AI should behave in this specific context.
 
-- Button prompts represent predefined user requests within an |AI| chat window. They appear as
-  clickable buttons when a conversation is opened. Button prompts do **not** redefine the agent's
-  identity or contextual behavior. Instead, they specify what the |AI| should do at that moment.
+- Button prompts represent predefined user requests within an AI chat window. When a button is
+  clicked, Odoo combines the AI agent's global instructions, the default prompt Context, and the
+  selected button prompt. The Context provides the overall behavioral framework and functional
+  background for the interaction, while the button prompt specifies the exact task the AI should
+  perform at that moment.
 
 .. seealso::
    :doc:`agents`
