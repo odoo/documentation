@@ -97,13 +97,18 @@ Configuration --> Providers`. Locate the *DIDWW* provider entry, and verify the 
 Configure user settings
 -----------------------
 
-Next, each user's OnSIP credentials must be configured in Odoo. Navigate to :menuselection:`Settings
-app --> Users & Companies --> Users` select the user, and click the **VoIP** tab.
+Next, configure each user's OnSIP credentials in Odoo. Navigate to :menuselection:`Settings app -->
+Users & Companies --> Users` select the user, and open the **VoIP** tab.
 
 Add the following credentials for the user:
 
 - :guilabel:`Username`: the user's SIP username.
 - :guilabel:`Secret`: the user's SIP password.
+
+To find these credentials in DIDWW, open :guilabel:`Cloud Phone System`, and click :guilabel:`Launch
+admin UI`. Then, open :menuselection:`Contact Methods --> SIP Accounts` and click the
+:menuselection:`ellipsis icon --> Edit` to view the :guilabel:`Username` and :guilabel:`Password`
+fields.
 
 Once the SIP credentials have been saved, the user can make calls with Odoo **Phone** by clicking
 the :icon:`oi-voip` :guilabel:`(Show Softphone)` icon in the top-right corner of Odoo.
