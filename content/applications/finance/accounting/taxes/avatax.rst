@@ -48,6 +48,8 @@ connect with Avalara to purchase a license: `Avalara: Let's Talk
 Then, `create a basic company profile
 <https://www.odoo.com/r/2k0>`_.
 
+.. _accounting/avatax/create-basic-company-profile:
+
 Create basic company profile
 ----------------------------
 
@@ -440,5 +442,6 @@ menu, and select a category, or :guilabel:`Search More...` to find one that is n
 .. toctree::
    :titlesonly:
 
+   avatax/avalara_included
    avatax/avatax_use
    avatax/avalara_portal
