@@ -146,7 +146,7 @@ type of animation in the `data-hover-effect` attribute.
       class="img img-fluid o_we_custom_image o_animate_on_hover"
       data-hover-effect="overlay"
       data-hover-effect-color="rgba(0, 0, 0, 0.25)"
-      data-shape="web_editor/geometric/geo_square"
+      data-shape="html_editor/geometric/geo_square"
       data-shape-colors=";;;;"
       data-filename="my-image.svg"
       data-format-mimetype="image/webp" />
@@ -190,5 +190,7 @@ type of animation in the `data-hover-effect` attribute.
    after you re-select the effect and save the page with the Website Builder.
 
 .. seealso::
-   `Hover effect options
-   <https://github.com/odoo/odoo/blob/c272c49657e8b7865bb93e5f1dcc183cc7d44f17/addons/website/views/snippets/snippets.xml#L694>`_
+   * `Hover effect options (XML) <https://github.com/odoo/odoo/blob/654a1caafc2ab7b2841c372910b2e81dc6e9c035/addons/website/static/src/builder/plugins/options/animate_option.xml#L91>`_
+   * `Image hover plugin (JavaScript) <https://github.com/odoo/odoo/blob/654a1caafc2ab7b2841c372910b2e81dc6e9c035/addons/website/static/src/builder/plugins/image/image_hover_plugin.js>`_
+   * :ref:`Image Shapes: Image processing <website_themes/shapes/img/standard/use>`
+
