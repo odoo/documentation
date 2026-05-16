@@ -14,7 +14,7 @@
 # Tiffany Chang, 2025
 # Wil Odoo, 2025
 # Chloe Wang, 2025
-# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 #
 # Translators:
 # zhao yonghui, 2023
@@ -24,7 +24,7 @@ msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-20 18:30+0000\n"
-"PO-Revision-Date: 2025-12-18 23:05+0000\n"
+"PO-Revision-Date: 2026-05-16 23:11+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
 "projects/odoo-17-doc/general/zh_Hans/>\n"
@@ -33,7 +33,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.14.3\n"
+"X-Generator: Weblate 5.17\n"
 
 #: ../../content/applications/general.rst:3
 msgid "General settings"
@@ -3344,6 +3344,9 @@ msgid ""
 "the key contained in the record match, it proves the message is authentic "
 "and has not been altered during transport."
 msgstr ""
+"发送电子邮件时，Odoo 邮件服务器会在邮件头中添加一个唯一的 DKIM 签名。收件人的"
+"服务器会使用数据库中该域名的 DKIM 记录对该签名进行解密。如果签名与记录中包含"
+"的密钥匹配，则证明该邮件是真实的，且在传输过程中未被篡改。"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:75
 msgid ""
@@ -3354,13 +3357,13 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_domain.rst:79
 msgid "Add a CNAME record for domain"
-msgstr ""
+msgstr "为域名添加 CNAME 记录"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:81
 msgid ""
 "To enable DKIM, add a canonical name (CNAME) record to the domain name "
 "system (DNS) zone of the domain name:"
-msgstr ""
+msgstr "要启用 DKIM，请在域名的域名系统（DNS）区域中添加一个规范名称（CNAME）记录："
 
 #: ../../content/applications/general/email_communication/email_domain.rst:89
 msgid ""
@@ -3369,10 +3372,13 @@ msgid ""
 "the canonical name (value/content) is `odoo._domainkey.odoo.com.`. For "
 "example, note the differences between each key/value in italics\\:"
 msgstr ""
+"如果域名是 *company-name.com*，请确保创建一个 CNAME 记录，其中 CNAME 记录（"
+"键/名称）为 `odoo._domainkey.company-name.com`，规范名称（值/内容）为 "
+"`odoo._domainkey.odoo.com.`。例如，请注意斜体部分中各键/值之间的区别："
 
 #: ../../content/applications/general/email_communication/email_domain.rst:93
 msgid "Example CNAME record"
-msgstr ""
+msgstr "CNAME 记录示例"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:98
 #: ../../content/applications/general/email_communication/email_domain.rst:119
@@ -3382,7 +3388,7 @@ msgstr "密钥KEY"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:100
 msgid "odoo.\\_domainkey"
-msgstr ""
+msgstr "odoo.\\_domainkey"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:102
 #: ../../content/applications/general/email_communication/email_domain.rst:123
@@ -3394,7 +3400,7 @@ msgstr "值"
 #: ../../content/applications/general/email_communication/email_domain.rst:125
 #: ../../content/applications/general/email_communication/email_domain.rst:156
 msgid "odoo.\\_domainkey.\\ *odoo.com.* |nbsp|"
-msgstr ""
+msgstr "odoo.\\_domainkey.\\ *odoo.com.* |nbsp|"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:107
 #: ../../content/applications/general/email_communication/email_domain.rst:128
@@ -3407,13 +3413,13 @@ msgstr "或"
 #: ../../content/applications/general/email_communication/email_domain.rst:129
 #: ../../content/applications/general/email_communication/email_domain.rst:160
 msgid "odoo.\\_domainkey.\\ *dbname*\\ .odoo.com."
-msgstr ""
+msgstr "odoo.\\_domainkey.\\ *dbname*\\ .odoo.com."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:109
 #: ../../content/applications/general/email_communication/email_domain.rst:130
 #: ../../content/applications/general/email_communication/email_domain.rst:161
 msgid "... where *dbname* is the name of the Odoo database."
-msgstr ""
+msgstr "... 其中 *dbname* 是 Odoo 数据库的名称。"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:111
 msgid ""
@@ -3421,55 +3427,59 @@ msgid ""
 "*company-name.com*) by default. In this case, the key looks different while "
 "the value remains the same:"
 msgstr ""
+"在大多数 DNS 平台上，DNS 提供商会默认添加自定义域名（例如：*company-"
+"name.com* ）。在此情况下，键值看起来不同，但值保持不变："
 
 #: ../../content/applications/general/email_communication/email_domain.rst:114
 msgid "Example CNAME record with custom domain"
-msgstr ""
+msgstr "自定义域名的 CNAME 记录示例"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:121
 msgid "odoo.\\_domainkey.\\ *company-name.com* |nbsp|"
-msgstr ""
+msgstr "odoo.\\_domainkey.\\ *company-name.com* |nbsp|"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:122
 #: ../../content/applications/general/email_communication/email_domain.rst:153
 msgid "... where *company-name.com* is the custom domain."
-msgstr ""
+msgstr "... 其中 *company-name.com* 代表自定义域名。"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:133
 msgid ""
 "If the DNS provider does not add the custom domain by default, make sure to "
 "include it."
-msgstr ""
+msgstr "如果 DNS 提供商默认未添加自定义域名，请务必将其包含在内。"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:136
 msgid "Add a CNAME record for subdomain"
-msgstr ""
+msgstr "为子域名添加 CNAME 记录"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:138
 msgid ""
 "If there's a \\ *subdomain* (e.g., *marketing* in *marketing*\\ .company-"
 "name.com), add a CNAME record to include it for compliance as well:"
 msgstr ""
+"如果存在 \\*子域名* （例如，*marketing* 在*marketing*\\ .company-name.com 中"
+"），请添加一个 CNAME 记录将其包含在内，以确保合规："
 
 #: ../../content/applications/general/email_communication/email_domain.rst:141
 msgid "Example CNAME record with subdomain"
-msgstr ""
+msgstr "包含子域名的 CNAME 记录示例"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:148
 msgid "odoo.\\_domainkey.\\ *marketing* |nbsp|"
-msgstr ""
+msgstr "odoo.\\_domainkey.\\ *marketing* |nbsp|"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:149
 msgid "... where *marketing* is the subdomain."
-msgstr ""
+msgstr "... 其中 *marketing* 是子域名。"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:152
 msgid "odoo.\\_domainkey.marketing.\\ *company-name.com*\\ |nbsp|"
-msgstr ""
+msgstr "odoo.\\_domainkey.marketing.\\ *company-name.com*\\ |nbsp|"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:164
 msgid "See DNS provider documentation"
-msgstr ""
+msgstr "参见 DNS 提供商文档"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:166
 msgid ""
@@ -3487,6 +3497,9 @@ msgid ""
 "DKIM lookup tool, specifying that the selector being tested is *odoo* for "
 "the custom domain *example.com*."
 msgstr ""
+"请使用 `MXToolbox DKIM Record Lookup <https://mxtoolbox.com/dkim.aspx>`_ 等工"
+"具检查 DKIM 记录是否有效。在 DKIM 查询工具中输入 `example.com:odoo`，并指定要"
+"测试的选定符为 *odoo*，对应自定义域名 *example.com*。"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:177
 msgid "DMARC (Domain-based Message Authentication, Reporting and Conformance)"
@@ -3596,6 +3609,8 @@ msgid ""
 "`GoDaddy SPF, DKIM, or DMARC records <https://www.godaddy.com/help/set-up-"
 "spf-dkim-or-dmarc-records-for-my-hosting-email-40810>`_"
 msgstr ""
+"`GoDaddy 的 SPF、DKIM 或 DMARC 记录 <https://www.godaddy.com/help/set-up-spf-"
+"dkim-or-dmarc-records-for-my-hosting-email-40810>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:223
 msgid ""
@@ -3653,6 +3668,8 @@ msgid ""
 "`Magic Sheet - SPF, DKIM and DMARC configuration [PDF] <https://"
 "drive.google.com/drive/folders/1TJIXQpdR0VN8UQx5JP7q7vFuAr3e1Q3r>`_"
 msgstr ""
+"`Magic Sheet - SPF、DKIM 和 DMARC 配置 [PDF] <https://drive.google.com/drive/"
+"folders/1TJIXQpdR0VN8UQx5JP7q7vFuAr3e1Q3r>`_"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:3
 msgid "Manage inbound messages"
@@ -5764,6 +5781,8 @@ msgid ""
 "dashboard, refer to the :ref:`Odoo.sh logs documentation <odoo-sh/branches/"
 "tabs/logs>`."
 msgstr ""
+"有关日志以及如何通过 Odoo.sh 仪表板访问日志的更多信息，请参阅 :ref:`Odoo.sh "
+"日志文档 <odoo-sh/branches/tabs/logs>`。"
 
 #: ../../content/applications/general/email_communication/faq.rst:324
 msgid ""
@@ -6565,6 +6584,11 @@ msgid ""
 "and :abbr:`DMARC (Domain-based Message Authentication, Reporting & "
 "Conformance)`) cannot be configured on that subdomain."
 msgstr ""
+"为避免邮件被判定为垃圾邮件，请参阅 :ref:`自定义域名设置 <email-online-sh-"
+"domain>`。若使用 Odoo 提供的子域名（*<dbname>.odoo.com*）搭配 Mailjet 邮件服"
+"务器，可能会引发邮件投递异常；原因是该子域名无法配置各类邮件认证协议（"
+"abbr:`SPF（发件人认证机制）`、abbr:`DKIM（域名密钥识别）` 以及 abbr:`DMARC（"
+"域名邮件认证协议）`）。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:97
 msgid ""
@@ -7212,7 +7236,7 @@ msgstr ""
 msgid ""
 "Make sure to check the database version in the :menuselection:`Settings app "
 "--> General Settings`, at the bottom of the page."
-msgstr ""
+msgstr "请务必在 :menuselection:`设置应用 --> 常规设置` 页面底部查看数据库版本。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:12
 msgid ""
@@ -7493,6 +7517,9 @@ msgid ""
 "Outlook. See `Microsoft's add-in article <https://support.microsoft.com/en-"
 "us/office/use-add-ins-in-outlook-1ee261f9-49bf-4ba6-b3e2-2ba7bcab64c8>`_."
 msgstr ""
+"该 Outlook 插件适用于 Outlook 的桌面版和网页版。请参阅 `微软的加载项文章 "
+"<https://support.microsoft.com/en-us/office/use-add-ins-in-outlook-1ee261f9-"
+"49bf-4ba6-b3e2-2ba7bcab64c8>`_。"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:17
 msgid ""
@@ -7504,7 +7531,7 @@ msgstr "Outlook:文档:`邮件插件<../mail_plugins>`需要在Odoo和Outlook上
 msgid ""
 "Make sure to check the database version in the :guilabel:`Settings app --> "
 "General Settings`, at the bottom of the page."
-msgstr ""
+msgstr "请务必在 :guilabel:`设置应用 --> 常规设置` 页面底部查看数据库版本。"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:23
 msgid ""
@@ -7512,6 +7539,9 @@ msgid ""
 "www.odoo.com/documentation/master/applications/general/integrations/"
 "mail_plugins/outlook.html>`_ for installation instructions."
 msgstr ""
+"对于数据库 19.2 及更高版本，请参阅 `最新文档 <https://www.odoo.com/"
+"documentation/master/applications/general/integrations/mail_plugins/"
+"outlook.html>`_ 以获取安装说明。"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:30
 msgid "Enable Mail Plugin"
@@ -7931,7 +7961,7 @@ msgstr "物联网盒子"
 
 #: ../../content/applications/general/iot.rst:46
 msgid "Set up an IoT box."
-msgstr ""
+msgstr "设置一个物联网盒子。"
 
 #: ../../content/applications/general/iot.rst:52
 #: ../../content/applications/general/iot/connect.rst:60
@@ -7953,7 +7983,7 @@ msgstr "物联网系统与 Odoo 的连接"
 msgid ""
 "Connect the IoT system to your Odoo database and troubleshoot potential "
 "connection issues."
-msgstr ""
+msgstr "将物联网系统连接到您的 Odoo 数据库，并排查潜在的连接问题。"
 
 #: ../../content/applications/general/iot.rst:63
 #: ../../content/applications/general/iot/devices.rst:7
@@ -7964,11 +7994,11 @@ msgstr "设备"
 msgid ""
 "Connect devices such as printers, screens, measurement tools, etc., to the "
 "IoT system."
-msgstr ""
+msgstr "将打印机、显示器、测量工具等设备连接到物联网系统。"
 
 #: ../../content/applications/general/iot.rst:68
 msgid "HTTPS certificate"
-msgstr ""
+msgstr "HTTPS 证书"
 
 #: ../../content/applications/general/iot.rst:68
 msgid ""
@@ -7986,6 +8016,8 @@ msgid ""
 "Update your IoT system's image, core code, and handlers to benefit from the "
 "latest IoT fixes and features or reset the IoT system if needed."
 msgstr ""
+"请更新您的物联网系统的镜像、核心代码和处理程序，以获取最新的物联网修复程序和"
+"新功能；如有必要，请重置物联网系统。"
 
 #: ../../content/applications/general/iot/connect.rst:6
 #: ../../content/applications/general/iot/windows_iot.rst:16
@@ -9909,6 +9941,12 @@ msgid ""
 "or :ref:`restart the Windows virtual IoT service <iot/windows_iot/restart>` "
 "and :ref:`update the scale's drivers <iot_updating_iot/handlers>`."
 msgstr ""
+"要将电子秤连接到物联网系统，请使用 USB 数据线。在某些情况下，您可能需要一个串"
+"口转 USB 适配器来完成连接。如果电子秤 `与物联网系统兼容 <https://"
+"www.odoo.com/page/iot-hardware>`_，则无需额外设置；连接后系统会自动检测到电子"
+"秤。如果未检测到电子秤，请重启 IoT 盒子，或 :ref:`重启 Windows 虚拟 IoT 服务 "
+"<iot/windows_iot/restart>` 并 :ref:`更新电子秤的驱动程序 <iot_updating_iot/"
+"handlers>`。"
 
 #: ../../content/applications/general/iot/devices/scale.rst:22
 msgid ""
@@ -10897,6 +10935,9 @@ msgid ""
 "must be up-to-date to ensure the handlers' code includes the latest fixes "
 "and patches."
 msgstr ""
+"如果您有一个 :doc:`本地 </administration/on_premise>` 或 :doc:`Odoo.sh </"
+"administration/odoo_sh>` 数据库，必须确保配置的服务器是最新的，以确保处理程序"
+"的代码包含最新的修复和补丁。"
 
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:87
 msgid ""
@@ -10949,6 +10990,8 @@ msgid ""
 "network. Exposing them to the public Internet would create a **security "
 "risk**."
 msgstr ""
+"切勿让物联网设备盒子暴露在公共互联网上。物联网系统旨在让您的数据库能够访问本"
+"地网络中的设备。若将其暴露在公共互联网上，将造成**安全风险**。"
 
 #: ../../content/applications/general/iot/iot_box.rst:25
 msgid "Network connection"
@@ -11154,6 +11197,8 @@ msgid ""
 "local network. Exposing them to the public Internet would create a "
 "**security risk**."
 msgstr ""
+"切勿让 Windows 物联网虚拟机通过公共互联网访问。物联网系统旨在让您的数据库能够"
+"访问本地网络上的设备。若将其暴露在公共互联网中，将造成**安全风险**。"
 
 #: ../../content/applications/general/iot/windows_iot.rst:38
 msgid "Installation"
@@ -11994,6 +12039,9 @@ msgid ""
 "these :doc:`fiscal localizations <../../finance/fiscal_localizations>`, it "
 "is not possible to deactivate |2fa|."
 msgstr ""
+"某些政府机构，例如 :doc:`澳大利亚 <../../finance/fiscal_localizations/"
+"australia>` 政府，要求启用 |2fa|。对于这些 :doc:`财政本地化设置 <../../"
+"finance/fiscal_localizations>`，无法禁用 |2fa|。"
 
 #: ../../content/applications/general/users/2fa.rst:23
 msgid "Requirements"
@@ -12049,7 +12097,7 @@ msgstr "`1Password <https://support.1password.com/one-time-passwords/>`_"
 
 #: ../../content/applications/general/users/2fa.rst:40
 msgid "`Bitwarden <https://bitwarden.com/help/article/authenticator-keys/>`_"
-msgstr ""
+msgstr "`Bitwarden <https://bitwarden.com/help/article/authenticator-keys/>`_"
 
 #: ../../content/applications/general/users/2fa.rst:43
 msgid ""
