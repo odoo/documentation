@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-20 18:30+0000\n"
+"POT-Creation-Date: 2026-05-15 17:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1339,68 +1339,113 @@ msgid "Fields and widgets"
 msgstr ""
 
 #: ../../content/applications/studio/fields.rst:5
-msgid "Fields structure the models of a database. If you picture a model as a table or spreadsheet, fields are the columns where data is stored in the records (i.e., the rows). Fields also define the type of data that is stored within them. How the data is presented and formatted on the :abbr:`UI (User Interface)` is defined by their widget."
+msgid "Fields structure the :doc:`models <models_modules_apps>` of a database. If you think of a model as a table or spreadsheet, fields are the columns and records are the individual rows. Fields also define the type of data that is stored within them. The way in which a field's data is presented and formatted on the :abbr:`UI (User Interface)` is controlled by its widget."
 msgstr ""
 
 #: ../../content/applications/studio/fields.rst:10
-msgid "From a technical point of view, there are 15 field types in Odoo. However, you can choose from 20 fields in Studio, as some field types are available more than once with a different default widget."
+msgid "With Studio, it is possible to:"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:14
-msgid ":guilabel:`New Fields` can only be added to the :ref:`studio/views/general/form` and :ref:`studio/views/multiple-records/list` views. On other views, you can only add :guilabel:`Existing Fields` :dfn:`(fields already on the model)`."
+#: ../../content/applications/studio/fields.rst:12
+msgid ":ref:`add new fields <studio/fields/add-new>` to your database. From a technical point of view, there are 15 :ref:`field types <studio/fields/field-types>` in Odoo. However, you can choose from 21 field types in Studio, as some field types are available more than once with a different default widget;"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:16
+msgid ":ref:`add existing fields, <studio/fields/add-existing>` i.e., fields that already exists on a model, to any view of that model;"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:18
+msgid ":ref:`modify a field's properties <studio/fields/modify>`; or"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:19
+msgid ":ref:`remove a field from a view <studio/fields/remove>`."
 msgstr ""
 
 #: ../../content/applications/studio/fields.rst:21
-msgid "Simple fields"
+msgid "Studio fields vs. property fields"
 msgstr ""
 
 #: ../../content/applications/studio/fields.rst:23
-msgid "Simple fields contain basic values, such as text, numbers, files, etc."
+msgid "Fields created using Studio are saved as columns in your Odoo database. :doc:`Property fields <../essentials/property_fields>`, on the other hand, act as pseudo-fields; they are shared by all records that are linked to the same parent record (e.g., for tasks, the project, or for a product, the product category), but they are not saved as columns in your database."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:26
-msgid "Non-default widgets, when available, are presented as bullet points or sub-headings below."
+#: ../../content/applications/studio/fields.rst:29
+msgid "Adding a :guilabel:`Deadline` field to the form view of a task using Studio makes that field visible in every task in your database. Adding a :guilabel:`Special instructions` property field to a task makes the field visible in all tasks *within the same project* (i.e., its parent) while other projects’ tasks remain unaffected."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:31
-msgid "Text (`char`)"
-msgstr ""
-
-#: ../../content/applications/studio/fields.rst:33
-msgid "The :guilabel:`Text` field is used for short text containing any character. One text line is displayed when filling out the field."
-msgstr ""
-
-#: ../../content/applications/studio/fields.rst:36
-#: ../../content/applications/studio/fields.rst:258
-msgid ":guilabel:`Badge`: displays the value inside a rounded shape, similar to a tag. The value cannot be edited on the UI, but a default value can be set."
-msgstr ""
-
-#: ../../content/applications/studio/fields.rst:38
-#: ../../content/applications/studio/fields.rst:70
-msgid ":guilabel:`Copy to Clipboard`: users can copy the value by clicking a button."
+#: ../../content/applications/studio/fields.rst:37
+msgid "Field types"
 msgstr ""
 
 #: ../../content/applications/studio/fields.rst:39
+msgid "Fields can be broadly divided into two categories:"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:41
+msgid ":ref:`Simple fields <studio/fields/simple-fields>`, which contain basic values, such as text, numbers, files, etc."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:43
+msgid ":ref:`Relational fields <studio/fields/relational-fields>`, which are used to link and display the data from records on another model."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:46
+msgid "AI fields"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:48
+msgid ":doc:`AI fields <../productivity/ai/fields>` are essentially standard Odoo fields with added AI capabilities that allow their values to be generated automatically through prompts."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:54
+msgid "Simple fields"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:57
+#: ../../content/applications/studio/fields.rst:395
+msgid "Non-default widgets, when available, are presented as bullet points or sub-headings."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:62
+msgid "Text (`char`)"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:64
+msgid "The :guilabel:`Text` field is used for short text containing any character. One text line is displayed when filling out the field."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:67
+#: ../../content/applications/studio/fields.rst:289
+msgid ":guilabel:`Badge`: displays the value inside a rounded shape, similar to a tag. The value cannot be edited on the UI, but a default value can be set."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:69
+#: ../../content/applications/studio/fields.rst:101
+msgid ":guilabel:`Copy to Clipboard`: users can copy the value by clicking a button."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:70
 msgid ":guilabel:`E-mail`: the value becomes a clickable *mailto* link."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:40
+#: ../../content/applications/studio/fields.rst:71
 msgid ":guilabel:`Image`: displays an image using a URL. The value cannot be edited manually, but a default value can be set."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:44
-msgid "This works differently than selecting the :ref:`Image field <studio/fields/simple-fields-image>` directly, as the image is not stored in Odoo when using a :guilabel:`Text` field with the :guilabel:`Image` widget. For example, it can be useful if you want to save disk space."
+#: ../../content/applications/studio/fields.rst:75
+msgid "This works differently from selecting the :ref:`Image field <studio/fields/simple-fields-image>` directly, as the image is not stored in Odoo when using a :guilabel:`Text` field with the :guilabel:`Image` widget. For example, it can be useful if you want to save disk space."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:49
+#: ../../content/applications/studio/fields.rst:80
 msgid ":guilabel:`Phone`: the value becomes a clickable *tel* link."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:52
+#: ../../content/applications/studio/fields.rst:83
 msgid "Tick :guilabel:`Enable SMS` to add an option to send an SMS directly from Odoo next to the field."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:55
+#: ../../content/applications/studio/fields.rst:86
 msgid ":guilabel:`URL`: the value becomes a clickable URL."
 msgstr ""
 
@@ -1408,11 +1453,11 @@ msgstr ""
 msgid "Examples of Text fields with different widgets"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:65
+#: ../../content/applications/studio/fields.rst:96
 msgid "Multiline Text (`text`)"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:67
+#: ../../content/applications/studio/fields.rst:98
 msgid "The :guilabel:`Multiline Text` field is used for longer text containing any type of character. Two text lines are displayed on the UI when filling out the field."
 msgstr ""
 
@@ -1420,24 +1465,24 @@ msgstr ""
 msgid "Examples of Multiline Text fields with different widgets"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:80
+#: ../../content/applications/studio/fields.rst:111
 msgid "Integer (`integer`)"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:82
+#: ../../content/applications/studio/fields.rst:113
 msgid "The :guilabel:`Integer` field is used for all integer numbers (:dfn:`positive, negative, or zero, without a decimal`)."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:85
+#: ../../content/applications/studio/fields.rst:116
 msgid ":guilabel:`Percentage Pie`: displays the value inside a percentage circle, usually for a computed value. The value cannot be edited on the UI, but a default value can be set."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:87
-#: ../../content/applications/studio/fields.rst:115
+#: ../../content/applications/studio/fields.rst:118
+#: ../../content/applications/studio/fields.rst:146
 msgid ":guilabel:`Progress Bar`: displays the value next to a percentage bar, usually for a computed value. The field cannot be edited manually, but a default value can be set."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:89
+#: ../../content/applications/studio/fields.rst:120
 msgid ":guilabel:`Handle`: displays a drag handle icon to order records manually in :ref:`List view <studio/views/multiple-records/list>`."
 msgstr ""
 
@@ -1445,31 +1490,31 @@ msgstr ""
 msgid "Examples of Integer fields with different widgets"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:100
+#: ../../content/applications/studio/fields.rst:131
 msgid "Decimal (`float`)"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:102
+#: ../../content/applications/studio/fields.rst:133
 msgid "The :guilabel:`Decimal` field is used for all decimal numbers (:dfn:`positive, negative, or zero, with a decimal`)."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:106
+#: ../../content/applications/studio/fields.rst:137
 msgid "Decimal numbers are displayed with two decimals after the decimal point on the UI, but they are stored in the database with more precision."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:109
+#: ../../content/applications/studio/fields.rst:140
 msgid ":guilabel:`Monetary`: it is similar to using the :ref:`Monetary field <studio/fields/simple-fields-monetary>`. It is recommended to use the latter as it offers more functionalities."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:112
+#: ../../content/applications/studio/fields.rst:143
 msgid ":guilabel:`Percentage`: displays a percent character `%` after the value."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:113
+#: ../../content/applications/studio/fields.rst:144
 msgid ":guilabel:`Percentage Pie`: displays the value inside a percentage circle, usually for a computed value. The field cannot be edited manually, but a default value can be set."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:117
+#: ../../content/applications/studio/fields.rst:148
 msgid ":guilabel:`Time`: the value must follow the *hh:mm* format, with a maximum of 59 minutes."
 msgstr ""
 
@@ -1477,15 +1522,15 @@ msgstr ""
 msgid "Examples of Decimal fields with different widgets"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:127
+#: ../../content/applications/studio/fields.rst:158
 msgid "Monetary (`monetary`)"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:129
+#: ../../content/applications/studio/fields.rst:160
 msgid "The :guilabel:`Monetary` field is used for all monetary values."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:132
+#: ../../content/applications/studio/fields.rst:163
 msgid "When you first add a :guilabel:`Monetary` field, you are prompted to add a :guilabel:`Currency` field if none exists already on the model. Odoo offers to add the :guilabel:`Currency` field for you. Once it is added, add the :guilabel:`Monetary` field again."
 msgstr ""
 
@@ -1493,15 +1538,15 @@ msgstr ""
 msgid "Example of a Monetary field along with its Currency field"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:144
+#: ../../content/applications/studio/fields.rst:175
 msgid "Html (`html`)"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:146
+#: ../../content/applications/studio/fields.rst:177
 msgid "The :guilabel:`Html` field is used to add text that can be edited using the Odoo HTML editor."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:148
+#: ../../content/applications/studio/fields.rst:179
 msgid ":guilabel:`Multiline Text`: disables the Odoo HTML editor to allow editing raw HTML."
 msgstr ""
 
@@ -1509,15 +1554,15 @@ msgstr ""
 msgid "Examples of Html fields with different widgets"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:158
+#: ../../content/applications/studio/fields.rst:189
 msgid "Date (`date`)"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:160
+#: ../../content/applications/studio/fields.rst:191
 msgid "The :guilabel:`Date` field is used to select a date on a calendar."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:162
+#: ../../content/applications/studio/fields.rst:193
 msgid ":guilabel:`Remaining Days`: the remaining number of days before the selected date is displayed (e.g., *In 5 days*), based on the current date. This field should be set to :guilabel:`Read only`."
 msgstr ""
 
@@ -1525,67 +1570,67 @@ msgstr ""
 msgid "Examples of Date fields with different widgets"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:173
+#: ../../content/applications/studio/fields.rst:204
 msgid "Date & Time (`datetime`)"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:175
+#: ../../content/applications/studio/fields.rst:206
 msgid "The :guilabel:`Date & Time` field is used to select a date on a calendar and a time on a clock. The user's current time is automatically used if no time is set."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:180
+#: ../../content/applications/studio/fields.rst:211
 msgid "As well as :ref:`general properties <studio/fields/properties>`, some :ref:`specific properties <studio/fields/properties-date-datetime>` are available for :guilabel:`Date & Time` fields that have the :guilabel:`Date & Time` or :guilabel:`Date Range` widget set."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:186
+#: ../../content/applications/studio/fields.rst:217
 msgid "Date Range (`daterange`)"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:188
+#: ../../content/applications/studio/fields.rst:219
 msgid "The :guilabel:`Date Range` widget is used to display a period of time defined by a start date and an end date in a single line. A date range can have a mandatory start and end date, e.g., for a multi-day event, or allow an optional start or end date, e.g., for a field service intervention or a project task."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:193
+#: ../../content/applications/studio/fields.rst:224
 msgid "Adding a date range requires two fields: a :guilabel:`Date & Time` field with the :guilabel:`Date Range` widget set and another field that is selected as the start date *or* end date. This underlying field can be an existing :ref:`Date <studio/fields/simple-fields-date>` or :guilabel:`Date & Time` field, or one created specifically for this purpose."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:198
+#: ../../content/applications/studio/fields.rst:229
 msgid "To add a date range:"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:200
+#: ../../content/applications/studio/fields.rst:231
 msgid "Identify an existing :guilabel:`Date` or :guilabel:`Date & Time` field that can be used as the underlying start/end date field, or add a new one. If the date range:"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:203
+#: ../../content/applications/studio/fields.rst:234
 msgid "has a mandatory start date and end date, this field can be either the start date or end date; the outcome is the same."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:205
+#: ../../content/applications/studio/fields.rst:236
 msgid "allows an optional start or end date, this field is the start date or end date, respectively."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:208
+#: ../../content/applications/studio/fields.rst:239
 msgid "To avoid displaying the same information twice, the underlying start/end date field can be made invisible by enabling :guilabel:`Invisible` or removed from the view by clicking :guilabel:`Remove from view`."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:212
+#: ../../content/applications/studio/fields.rst:243
 msgid "Add a :guilabel:`Date & Time` field and set the :guilabel:`Widget` field to :guilabel:`Date Range`."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:214
+#: ../../content/applications/studio/fields.rst:245
 msgid "Enter an appropriate :guilabel:`Label`."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:215
+#: ../../content/applications/studio/fields.rst:246
 msgid "Select the underlying start/end date field from the :guilabel:`Start date field` or :guilabel:`End date field` dropdown, as relevant."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:217
+#: ../../content/applications/studio/fields.rst:248
 msgid "If the date range should have a mandatory start and end date, enable :guilabel:`Always range`."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:218
+#: ../../content/applications/studio/fields.rst:249
 msgid "Update any other :ref:`general properties <studio/fields/properties>` or specific :ref:`properties for Date & Time fields <studio/fields/properties-date-datetime>` as needed, then click :guilabel:`Close` in the upper right corner of the screen."
 msgstr ""
 
@@ -1593,27 +1638,27 @@ msgstr ""
 msgid "Examples of Date & Time fields with different widgets"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:228
+#: ../../content/applications/studio/fields.rst:259
 msgid "Remaining Days (`remaining_days`)"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:230
+#: ../../content/applications/studio/fields.rst:261
 msgid "The :guilabel:`Remaining Days` widget displays the remaining number of days before the selected date (e.g., *In 5 days*), based on the current date and time. This field should be set to :guilabel:`Read only`."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:237
+#: ../../content/applications/studio/fields.rst:268
 msgid "Checkbox (`boolean`)"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:239
+#: ../../content/applications/studio/fields.rst:270
 msgid "The :guilabel:`Checkbox` field is used when a value should only be true or false, indicated by checking or unchecking a checkbox."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:242
+#: ../../content/applications/studio/fields.rst:273
 msgid ":guilabel:`Button`: displays a radio button. The widget works without switching to the edit mode."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:243
+#: ../../content/applications/studio/fields.rst:274
 msgid ":guilabel:`Toggle`: displays a toggle button. The widget works without switching to the edit mode."
 msgstr ""
 
@@ -1621,36 +1666,36 @@ msgstr ""
 msgid "Examples of Checkbox fields with different widgets"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:253
+#: ../../content/applications/studio/fields.rst:284
 msgid "Selection (`selection`)"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:255
+#: ../../content/applications/studio/fields.rst:286
 msgid "The :guilabel:`Selection` field is used when users should select a single value from a group of predefined values."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:260
+#: ../../content/applications/studio/fields.rst:291
 msgid ":guilabel:`Badges`: displays all selectable values simultaneously inside rectangular shapes, organized horizontally."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:262
+#: ../../content/applications/studio/fields.rst:293
 msgid ":guilabel:`Priority`: displays star symbols instead of values, which can be used to indicate an importance or satisfaction level, for example. This has the same effect as selecting the :ref:`Priority field <studio/fields/simple-fields-priority>`, although, for the latter, four priority values are already predefined."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:266
-#: ../../content/applications/studio/fields.rst:395
+#: ../../content/applications/studio/fields.rst:297
+#: ../../content/applications/studio/fields.rst:424
 msgid ":guilabel:`Radio`: displays all selectable values at the same time as radio buttons."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:269
+#: ../../content/applications/studio/fields.rst:300
 msgid "By default, radio buttons are organized vertically. Enable :guilabel:`Display horizontally` to switch the way they are displayed."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:272
+#: ../../content/applications/studio/fields.rst:303
 msgid ":guilabel:`Status Bar`: displays all selectable values at the same time as an arrow progress bar."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:275
+#: ../../content/applications/studio/fields.rst:306
 msgid "By default, values on the status bar are selectable. Disable :guilabel:`Clickable` to prevent the value being edited on the UI."
 msgstr ""
 
@@ -1658,15 +1703,15 @@ msgstr ""
 msgid "Examples of Selection fields with different widgets"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:286
+#: ../../content/applications/studio/fields.rst:317
 msgid "Priority (`selection`)"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:288
+#: ../../content/applications/studio/fields.rst:319
 msgid "The :guilabel:`Priority` field is used to display a three-star rating system, which can be used to indicate importance or satisfaction level. This field type is a :ref:`Selection field <studio/fields/simple-fields-selection>` with the :guilabel:`Priority` widget selected by default and four priority values predefined. Consequently, the :guilabel:`Badge`, :guilabel:`Badges`, :guilabel:`Radio`, and :guilabel:`Selection` widgets have the same effects as described under :ref:`Selection <studio/fields/simple-fields-selection>`."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:296
+#: ../../content/applications/studio/fields.rst:327
 msgid "To change the number of available stars by adding or removing values, click :guilabel:`Edit Values`. Note that the first value is equal to 0 stars (i.e., when no selection is made), so having four values results in a three-star rating system, for example."
 msgstr ""
 
@@ -1674,23 +1719,23 @@ msgstr ""
 msgid "Example of a Priority field"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:308
+#: ../../content/applications/studio/fields.rst:339
 msgid "File (`binary`)"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:310
+#: ../../content/applications/studio/fields.rst:341
 msgid "The :guilabel:`File` field is used to upload any type of file, or sign a form (:guilabel:`Sign` widget)."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:313
+#: ../../content/applications/studio/fields.rst:344
 msgid ":guilabel:`Image`: users can upload an image file, which is then displayed in :ref:`Form view <studio/views/general/form>`. This has the same effect as using the :ref:`Image field <studio/fields/simple-fields-image>`."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:316
+#: ../../content/applications/studio/fields.rst:347
 msgid ":guilabel:`PDF Viewer`: users can upload a PDF file, which can be then browsed from the :ref:`Form view <studio/views/general/form>`."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:318
+#: ../../content/applications/studio/fields.rst:349
 msgid ":guilabel:`Sign`: users can electronically sign the form. This has the same effect as selecting the :ref:`Sign field <studio/fields/simple-fields-sign>`."
 msgstr ""
 
@@ -1698,51 +1743,43 @@ msgstr ""
 msgid "Examples of File fields with different widgets"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:329
+#: ../../content/applications/studio/fields.rst:360
 msgid "Image (`binary`)"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:331
+#: ../../content/applications/studio/fields.rst:362
 msgid "The :guilabel:`Image` field is used to upload an image and display it in :ref:`Form view <studio/views/general/form>`. This field type is a :ref:`File field <studio/fields/simple-fields-file>` with the :guilabel:`Image` widget selected by default. Consequently, the :guilabel:`File`, :guilabel:`PDF Viewer`, and :guilabel:`Sign` widgets have the same effects as described under :ref:`File <studio/fields/simple-fields-file>`."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:338
+#: ../../content/applications/studio/fields.rst:369
 msgid "To change the display size of uploaded images, select :guilabel:`Small`, :guilabel:`Medium`, or :guilabel:`Large` under the :guilabel:`Size` option."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:344
+#: ../../content/applications/studio/fields.rst:375
 msgid "Sign (`binary`)"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:346
+#: ../../content/applications/studio/fields.rst:377
 msgid "The :guilabel:`Sign` field is used to sign the form electronically. This field type is a :ref:`File field <studio/fields/simple-fields-file>` with the :guilabel:`Sign` widget selected by default. Consequently, the :guilabel:`File`, :guilabel:`Image`, and :guilabel:`PDF Viewer` widgets have the same effects as described under :ref:`File <studio/fields/simple-fields-file>`."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:352
+#: ../../content/applications/studio/fields.rst:383
 msgid "To give users the :guilabel:`Auto` option when having to draw their signature, select one of the available :guilabel:`Auto-complete with` fields (:ref:`Text <studio/fields/simple-fields-text>`, :ref:`Many2One <studio/fields/relational-fields-many2one>`, and :ref:`Related Field <studio/fields/relational-fields-related-field>` on the model only). The signature is automatically generated using the data from the selected field."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:361
+#: ../../content/applications/studio/fields.rst:392
 msgid "Relational fields"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:363
-msgid "Relational fields are used to link and display the data from records on another model."
-msgstr ""
-
-#: ../../content/applications/studio/fields.rst:366
-msgid "Non-default widgets, when available, are presented as bullet points below."
-msgstr ""
-
-#: ../../content/applications/studio/fields.rst:371
+#: ../../content/applications/studio/fields.rst:400
 msgid "Many2One (`many2one`)"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:373
+#: ../../content/applications/studio/fields.rst:402
 msgid "The :guilabel:`Many2One` field is used to link another record (from another model) to the record being edited. The record's name from the other model is then displayed on the record being edited."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:377
+#: ../../content/applications/studio/fields.rst:406
 msgid "On the *Sales Order* model, the :guilabel:`Customer` field is a :guilabel:`Many2One` field pointing at the *Contact* model. This allows **many** sales orders to be linked to **one** contact (customer)."
 msgstr ""
 
@@ -1750,35 +1787,35 @@ msgstr ""
 msgid "Diagram showing a many2one relationship"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:385
+#: ../../content/applications/studio/fields.rst:414
 msgid "To prevent users from creating a new record in the linked model, tick :guilabel:`Disable creation`."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:387
+#: ../../content/applications/studio/fields.rst:416
 msgid "To prevent users from opening records in a pop-up window, tick :guilabel:`Disable opening`."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:388
+#: ../../content/applications/studio/fields.rst:417
 msgid "To help users only select the right record, click on :guilabel:`Domain` to create a filter."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:389
+#: ../../content/applications/studio/fields.rst:418
 msgid "To only trigger the search for a linked record after a minimum number of characters has been entered, enter the desired number in the :guilabel:`Typeahead search` field. In situations where the data set is large, this can enhance both search relevancy and performance."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:393
+#: ../../content/applications/studio/fields.rst:422
 msgid ":guilabel:`Badge`: displays the value inside a rounded shape, similar to a tag. The value cannot be edited on the UI."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:400
+#: ../../content/applications/studio/fields.rst:429
 msgid "One2Many (`one2many`)"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:402
+#: ../../content/applications/studio/fields.rst:431
 msgid "The :guilabel:`One2Many` field is used to display the existing relations between a record on the current model and multiple records from another model."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:406
+#: ../../content/applications/studio/fields.rst:435
 msgid "You could add a :guilabel:`One2Many` field on the *Contact* model to look at **one** customer's **many** sales orders."
 msgstr ""
 
@@ -1786,19 +1823,19 @@ msgstr ""
 msgid "Diagram showing a one2many relationship"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:413
+#: ../../content/applications/studio/fields.rst:442
 msgid "To use a :guilabel:`One2Many` field, the two models must have been linked already using a :ref:`Many2One field <studio/fields/relational-fields-many2one>`. One2Many relations do not exist independently: a reverse-search of existing Many2One relations is performed."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:420
+#: ../../content/applications/studio/fields.rst:449
 msgid "Lines (`one2many`)"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:422
+#: ../../content/applications/studio/fields.rst:451
 msgid "The :guilabel:`Lines` field is used to create a table with rows and columns (e.g., the lines of products on a sales order)."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:426
+#: ../../content/applications/studio/fields.rst:455
 msgid "To modify the columns, click on the :guilabel:`Lines` field and then :guilabel:`Edit List View`. To edit the form that pops up when a user clicks on :guilabel:`Add a line`, click on :guilabel:`Edit Form View` instead."
 msgstr ""
 
@@ -1806,15 +1843,15 @@ msgstr ""
 msgid "Example of a Lines field"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:438
+#: ../../content/applications/studio/fields.rst:467
 msgid "Many2Many (`many2many`)"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:440
+#: ../../content/applications/studio/fields.rst:469
 msgid "The :guilabel:`Many2Many` field is used to link multiple records from another model to multiple records on the current model. Many2Many fields can use :guilabel:`Disable creation`, :guilabel:`Disable opening`, :guilabel:`Domain`, just like :ref:`Many2One fields <studio/fields/relational-fields-many2one>`."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:446
+#: ../../content/applications/studio/fields.rst:475
 msgid "On the *Task* model, the :guilabel:`Assignees` field is a :guilabel:`Many2Many` field pointing at the *Contact* model. This allows a single user to be assigned to **many** tasks and **many** users to be assigned to a single task."
 msgstr ""
 
@@ -1822,27 +1859,27 @@ msgstr ""
 msgid "Diagram showing many2many relationships"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:454
+#: ../../content/applications/studio/fields.rst:483
 msgid "To only trigger the search for the linked record after a minimum number of characters has been entered, enter the desired number in the :guilabel:`Typeahead search` field. In situations where the data set is large, this can enhance both search relevancy and performance."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:458
+#: ../../content/applications/studio/fields.rst:487
 msgid ":guilabel:`Checkboxes`: users can select several values using checkboxes."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:459
+#: ../../content/applications/studio/fields.rst:488
 msgid ":guilabel:`Tags`: users can select several values appearing in rounded shapes, also known as *tags*. This has the same effect as selecting the :ref:`Tags field <studio/fields/relational-fields-tags>`."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:466
+#: ../../content/applications/studio/fields.rst:495
 msgid "Tags (`many2many`)"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:468
+#: ../../content/applications/studio/fields.rst:497
 msgid "The :guilabel:`Tags` field is used to display several values from another model appearing in rounded shapes, also known as *tags*. This field type is a :ref:`Many2Many field <studio/fields/relational-fields-many2many>` with the :guilabel:`Tags` widget selected by default. Consequently, the :guilabel:`Checkboxes` and :guilabel:`Many2Many` widgets have the same effects as described under :ref:`Many2Many <studio/fields/relational-fields-many2many>`."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:475
+#: ../../content/applications/studio/fields.rst:504
 msgid "To display tags with different background colors, tick :guilabel:`Use colors`."
 msgstr ""
 
@@ -1850,124 +1887,337 @@ msgstr ""
 msgid "Example of a Tags field"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:485
+#: ../../content/applications/studio/fields.rst:514
 msgid "Related Field (`related`)"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:487
+#: ../../content/applications/studio/fields.rst:516
 msgid "A :guilabel:`Related Field` is not a relational field per se; no relationship is created between models. It uses an existing relationship to fetch and display information from another record."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:491
+#: ../../content/applications/studio/fields.rst:520
 msgid "To display the email address of a customer on the *Sales Order* model, use the :guilabel:`Related Field` `partner_id.email` by selecting :guilabel:`Customer` and then :guilabel:`Email`."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:497
-msgid "Properties"
+#: ../../content/applications/studio/fields.rst:526
+msgid "Add a field to a view"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:500
-msgid "General properties"
+#: ../../content/applications/studio/fields.rst:528
+msgid "With Studio, it is possible to add:"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:502
-msgid ":guilabel:`Invisible`: Enable this property when it is not necessary for users to view a field on the UI. This helps declutter the UI by only showing the essential fields depending on a specific situation."
+#: ../../content/applications/studio/fields.rst:530
+msgid ":ref:`a new field <studio/fields/add-new>` to a :ref:`form <studio/views/general/form>` or :ref:`list view <studio/views/multiple-records/list>` of a model"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:506
-msgid "The :guilabel:`Invisible` attribute also applies inside Studio. To view hidden fields in Studio, click on a view's :guilabel:`View` tab and enable :guilabel:`Show Invisible Elements`."
+#: ../../content/applications/studio/fields.rst:532
+msgid ":ref:`an existing field <studio/fields/add-existing>`, i.e., a field that already exists on the :doc:`model <models_modules_apps>` in question, to *any* view of that model"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:509
-msgid ":guilabel:`Required`: Enable this property if a field should always be completed by the user before being able to proceed."
-msgstr ""
-
-#: ../../content/applications/studio/fields.rst:512
-msgid ":guilabel:`Readonly`: Enable this property if users should not be able to modify a field."
-msgstr ""
-
-#: ../../content/applications/studio/fields.rst:515
-msgid "You can choose to enable :guilabel:`Invisible`, :guilabel:`Required` and :guilabel:`Readonly` for specific records only by clicking on :guilabel:`Conditional` and creating a filter."
-msgstr ""
-
-#: ../../content/applications/studio/fields.rst:519
-msgid "On the *Form* view of the *Contact* model, the :guilabel:`Title` field only appears when :guilabel:`Individual` is selected, as that field would not be helpful for a :guilabel:`Company` contact."
-msgstr ""
-
-#: ../../content/applications/studio/fields.rst:523
-msgid ":guilabel:`Label`: the field's name on the UI. This is not the name used in the PostgreSQL database. To view and change the latter, activate the :ref:`developer mode <developer-mode>` and edit the :guilabel:`Technical Name`."
-msgstr ""
-
-#: ../../content/applications/studio/fields.rst:527
-msgid ":guilabel:`Help Tooltip`: To explain the purpose of a field, add a description. The text is displayed inside a tooltip box when hovering with your mouse over the question mark beside the field's label."
-msgstr ""
-
-#: ../../content/applications/studio/fields.rst:531
-msgid ":guilabel:`Widget`: To change the default appearance or functionality of a field, select one of the available widgets."
-msgstr ""
-
-#: ../../content/applications/studio/fields.rst:534
-msgid ":guilabel:`Placeholder`: To provide an example of how a field should be completed, add placeholder text. The text appears in light gray until a value is entered."
-msgstr ""
-
-#: ../../content/applications/studio/fields.rst:537
-msgid ":guilabel:`Default value`: To display a default value in a field when a record is created, add a value."
-msgstr ""
-
-#: ../../content/applications/studio/fields.rst:540
-msgid ":guilabel:`Allow visibility to groups`: To limit which users can view the field, select one or more user access :ref:`groups <access-rights/groups>`."
+#: ../../content/applications/studio/fields.rst:536
+msgid "Add a new field to a form or list view to save it to the model and make it available as an existing field in other views of the same model."
 msgstr ""
 
 #: ../../content/applications/studio/fields.rst:542
-msgid ":guilabel:`Forbid visibility to groups`: To prevent certain users from seeing the field, select one or more user access :ref:`groups <access-rights/groups>`."
+msgid "Add a new field"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:545
+msgid "Activate :ref:`developer mode <developer-mode>` *before* adding a new field to see, and be able to edit, the field's technical name during configuration."
 msgstr ""
 
 #: ../../content/applications/studio/fields.rst:548
-msgid "Properties for Date & Time fields"
+msgid "To add a new field, follow these steps:"
 msgstr ""
 
 #: ../../content/applications/studio/fields.rst:550
-msgid "For :guilabel:`Date & Time` fields that have the :guilabel:`Date & Time` or :guilabel:`Date Range` widget set, some specific properties are available:"
+msgid "Navigate to the relevant form or list view, then click the :icon:`oi-studio` (:guilabel:`Toggle Studio`) icon in the upper-right corner. Alternatively, with any app open, click the :icon:`oi-studio` (:guilabel:`Toggle Studio`) icon, then navigate to the relevant form or list view."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:553
-msgid ":guilabel:`Minimal precision`: Determine the smallest date unit that must be selected in the date selector. The possible values are :guilabel:`Day`, :guilabel:`Month`, :guilabel:`Year` or :guilabel:`Decade`. If no value is selected, the user must select a day in the date selector."
+#: ../../content/applications/studio/fields.rst:555
+msgid "In the :icon:`fa-plus` :guilabel:`Add` tab, drag the relevant :ref:`field type <studio/fields/field-types>` from the :guilabel:`New Fields` section and drop it in the desired position. If the new field is a :ref:`relational field <studio/fields/relational-fields>`, select the relevant reciprocal field, model, or related field in the pop-up."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:556
-msgid ":guilabel:`Maximal precision`: Determine the largest date unit that can be used to navigate the date selector. The possible values are :guilabel:`Day`, :guilabel:`Month`, :guilabel:`Year` or :guilabel:`Decade`. If no value is selected, the user can navigate the date selector by decade."
+#: ../../content/applications/studio/fields.rst:560
+msgid "In the :icon:`fa-server` :guilabel:`Properties` tab, configure the field's :ref:`properties <studio/fields/properties>`:"
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:559
-msgid ":guilabel:`Warning for future dates`: Enable this property to display a warning icon if a future date is selected."
-msgstr ""
-
-#: ../../content/applications/studio/fields.rst:561
-msgid ":guilabel:`Date format`: By default the date will be shown as `Apr 2, 2025, 08:05 AM`. Enable this property to show the date in the format `4/2/2025 08:05:00`. The numeric mode is the format set on the current language. In this mode the seconds are always shown."
+#: ../../content/applications/studio/fields.rst:563
+msgid "Enter the :guilabel:`Label` to be displayed as the field name on the UI; this is also used to generate the default technical name of the field."
 msgstr ""
 
 #: ../../content/applications/studio/fields.rst:565
+msgid "Click anywhere outside the :guilabel:`Label` field to see the :guilabel:`Technical Name` updated with the default technical name."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:569
+msgid "The :guilabel:`Technical Name` of a new field can be edited in Studio during the configuration process. At any other time, a field's technical name can only be :ref:`modified via the technical settings of the database <studio/fields/properties-technical-name-change>`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:573
+msgid "The technical name of a new field added using Studio is by default prefixed by `x_studio_`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:576
+msgid "Optionally, select a different :guilabel:`Widget` via the dropdown; the default widget for the :ref:`field type <studio/fields/field-types>` is selected by default."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:578
+msgid "Optionally, configure any other :ref:`field properties <studio/fields/properties>`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:580
+#: ../../content/applications/studio/fields.rst:609
+#: ../../content/applications/studio/fields.rst:742
+msgid "Click :guilabel:`Close` in the top-right corner to close Studio."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:583
+msgid ":ref:`Adding a new AI field <ai/add-a-new-field>`"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:588
+msgid "Add an existing field"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:590
+msgid "To add a field that exists on the model but that is not present on the current view, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:593
+#: ../../content/applications/studio/fields.rst:729
+#: ../../content/applications/studio/fields.rst:779
+msgid "Navigate to the relevant view, then click the :icon:`oi-studio` (:guilabel:`Toggle Studio`) icon in the upper-right corner. Alternatively, with any app open, click the :icon:`oi-studio` (:guilabel:`Toggle Studio`) icon, then navigate to the relevant view."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:596
+msgid "In the :icon:`fa-plus` :guilabel:`Add` tab, in the left panel, click :guilabel:`Existing Fields` :icon:`fa-caret-right` to reveal a list of all the model's fields that are not currently present in the view."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:599
+msgid "Drag the relevant field and drop it in the desired position."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:600
+msgid "In the :icon:`fa-server` :guilabel:`Properties` tab, configure the relevant :ref:`properties <studio/fields/properties>` for the field in the current view."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:604
+msgid "Various properties can be configured independently for different views, if needed, such as the :guilabel:`Label`, the :guilabel:`Widget`, the visibility of the field for certain user groups, as well as whether or not the field is :guilabel:`Invisible`, :guilabel:`Required`, or :guilabel:`Readonly`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:614
+msgid "Field properties"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:616
+msgid "A series of :ref:`general properties <studio/fields/properties-general>` can be configured for most combinations of :ref:`field type and widget <studio/fields/field-types>`. Additional properties are available depending on the specific field type and widget selected. For example, :guilabel:`Date & Time` fields using the :guilabel:`Date & Time` or :guilabel:`Date Range` widget have various :ref:`specific properties <studio/fields/properties-date-datetime>` that can be configured."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:625
+msgid "General properties"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:627
+msgid ":guilabel:`Class`: Use `Bootstrap <https://getbootstrap.com/docs/5.3/examples/cheatsheet/>`_ or other custom classes defined in Odoo to customize how the field is styled and displayed on the UI."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:630
+msgid ":guilabel:`Invisible`: Enable this property when it is not necessary for users to view a field on the UI. This helps declutter the UI by only showing the essential fields depending on a specific situation."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:634
+msgid ":guilabel:`Required`: Enable this property if a field should always be completed by the user before being able to proceed."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:637
+msgid ":guilabel:`Readonly`: Enable this property if users should not be able to modify a field."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:640
+msgid "The :guilabel:`Invisible` property also applies inside Studio. To view hidden fields in Studio, click on a view's :guilabel:`View` tab and enable :guilabel:`Show Invisible Elements`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:642
+msgid "The :guilabel:`Invisible`, :guilabel:`Required`, and :guilabel:`Readonly` properties can be enabled for specific records only by clicking on :guilabel:`Conditional` and creating a filter."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:646
+msgid "On the form view of the *Contact* model, the :guilabel:`Title` field only appears when :guilabel:`Individual` is selected, as that field would not be helpful for a :guilabel:`Company` contact."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:650
+msgid ":guilabel:`Label`: This is the field name on the UI; the label is used to generate the technical name of the field."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:653
+msgid ":guilabel:`Help Tooltip`: To explain the purpose of a field, add a description. The text is displayed inside a tooltip box when hovering with your mouse over the question mark beside the field's label."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:657
+msgid ":guilabel:`Technical Name`: To view a field's technical name in Studio (and, during the configuration of a new field, edit it if desired), activate :ref:`developer mode <developer-mode>`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:662
+msgid "If this field needs to be updated but is no longer editable via Studio, the technical name can be :ref:`modified via the technical settings of the database <studio/fields/properties-technical-name-change>`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:666
+msgid ":guilabel:`Widget`: To change the default appearance or functionality of a field, select one of the available widgets."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:669
+msgid ":guilabel:`Placeholder`: To provide an example of how a field should be completed, add a fixed placeholder text. The text appears in light gray until a value is entered."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:672
+msgid ":guilabel:`Dynamic Placeholder`: To provide the value of the selected field as an example of how a field should be completed. The text appears in light gray until a value is entered."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:675
+msgid ":guilabel:`Default value`: To display a default value in a field when a record is created, add a value."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:678
+msgid ":guilabel:`Allow visibility to groups`: To limit which users can view the field, select one or more user access :ref:`groups <access-rights/groups>`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:680
+msgid ":guilabel:`Forbid visibility to groups`: To prevent certain users from seeing the field, select one or more user access :ref:`groups <access-rights/groups>`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:686
+msgid "Properties for Date & Time fields"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:688
+msgid "For :guilabel:`Date & Time` fields using the :guilabel:`Date & Time` or :guilabel:`Date Range` widget, some specific properties are available:"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:691
+msgid ":guilabel:`Minimal precision`: Determine the smallest date unit that must be selected in the date selector. The possible values are `Day`, `Month`, `Year` or `Decade`. If no value is selected, the user must select a day in the date selector."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:694
+msgid ":guilabel:`Maximal precision`: Determine the largest date unit that can be used to navigate the date selector. The possible values are `Day`, `Month`, `Year` or `Decade`. If no value is selected, the user can navigate the date selector by decade."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:697
+msgid ":guilabel:`Warning for future dates`: Enable this property to display a warning icon if a future date is selected."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:699
+msgid ":guilabel:`Date format`: By default the date will be shown as `Apr 2, 2025, 08:05 AM`. Enable this property to show the date in the format `4/2/2025 08:05:00`. The numeric mode is the format set on the current language. In this mode the seconds are always shown."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:703
 msgid ":guilabel:`Show date`: This property is enabled by default for :guilabel:`Date & Time` fields. Disable this property to show only the time."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:567
+#: ../../content/applications/studio/fields.rst:705
 msgid ":guilabel:`Show time`: This property is enabled by default for :guilabel:`Date & Time` fields. On a read-only field, disable the property to show only the date. This can keep a list view less cluttered, for example."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:570
+#: ../../content/applications/studio/fields.rst:708
 msgid ":guilabel:`Show seconds`: This property is disabled by default for :guilabel:`Date & Time` fields. Enable the property to show the seconds."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:572
+#: ../../content/applications/studio/fields.rst:710
 msgid ":guilabel:`Time interval`: Enter a value to determine the minute intervals shown in the time selector. For example, enter 15 to allow quarter-hour intervals. The default value is set to 5 minutes."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:575
+#: ../../content/applications/studio/fields.rst:713
 msgid ":guilabel:`Earliest accepted date`: Enter the earliest date that can be selected in the date selector in ISO-format, i.e., `YYYY-MM-DD`. If the current date is always the earliest accepted date, enter `today`. On the date selector, dates prior to the earliest accepted date are grayed out."
 msgstr ""
 
-#: ../../content/applications/studio/fields.rst:579
+#: ../../content/applications/studio/fields.rst:717
 msgid ":guilabel:`Latest accepted date`: Enter the latest date that can be selected in the date selector in ISO-format, i.e., `YYYY-MM-DD`. If the current date is always the latest accepted date, enter `today`. On the date selector, dates later than the latest accepted date are grayed out."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:725
+msgid "Modify a field's properties"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:727
+msgid "To modify the properties of a field, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:732
+#: ../../content/applications/studio/fields.rst:782
+msgid "Click on the relevant field."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:733
+msgid "In the :icon:`fa-server` :guilabel:`Properties` tab, make any desired changes to the :ref:`field properties <studio/fields/properties>`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:737
+msgid "Various properties can be configured independently for different views, such as the :guilabel:`Label`, the :guilabel:`Widget`, the visibility of the field for certain user groups, as well as whether or not the field is :guilabel:`Invisible`, :guilabel:`Required`, or :guilabel:`Readonly`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:745
+msgid "The :guilabel:`Technical Name` of a field (visible in Studio with :ref:`developer mode <developer-mode>` activated) cannot be modified in Studio; this can be done :ref:`via the technical settings of the database <studio/fields/properties-technical-name-change>`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:752
+msgid "Modify a field's technical name"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:754
+msgid "To modify the technical name of a field, activate :ref:`developer mode <developer-mode>`, then follow these steps:"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:757
+msgid "With the field open in Studio, copy the technical name of the field."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:758
+msgid ":ref:`Remove the field <studio/fields/remove>` from *all* views in Studio, then click :guilabel:`Close` to close Studio."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:760
+msgid "Navigate to :menuselection:`Settings app --> Technical --> Fields`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:761
+msgid "Paste the copied technical name into the search bar, then open the relevant field."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:762
+msgid "Modify the :guilabel:`Field Name` as needed."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:764
+msgid "Once the field's technical name has been updated, the field can then be :ref:`added (back) to the relevant view(s) <studio/fields/add-existing>` from the list of existing fields."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:768
+msgid "When updating the technical name of a field, make sure to keep at least the `x_` prefix, which is required for any custom field; for fields created using Studio, keep the `x_studio_` prefix to allow such fields to be more easily identified."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:775
+msgid "Remove a field from a view"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:777
+msgid "To remove a field from a view, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:783
+msgid "Scroll to the bottom of the :guilabel:`Properties` tab, then click :guilabel:`Remove from view`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:784
+msgid "Click :guilabel:`Ok` to confirm the action."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:787
+msgid "A removed field can be easily :ref:`added back to the view <studio/fields/add-existing>` at a later stage, if needed."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:789
+msgid "If the intention is to declutter the view, it is also possible to :ref:`modify a field <studio/fields/modify>` and make it :guilabel:`Invisible` on the view in question."
 msgstr ""
 
 #: ../../content/applications/studio/models_modules_apps.rst:3
@@ -2816,8 +3066,8 @@ msgstr ""
 
 #: ../../content/applications/studio/views.rst:33
 #: ../../content/applications/studio/views.rst:115
-#: ../../content/applications/studio/views.rst:223
-#: ../../content/applications/studio/views.rst:338
+#: ../../content/applications/studio/views.rst:230
+#: ../../content/applications/studio/views.rst:345
 msgid "The settings described below are found under the view's :guilabel:`View` tab unless specified otherwise."
 msgstr ""
 
@@ -2989,7 +3239,7 @@ msgid "Map"
 msgstr ""
 
 #: ../../content/applications/studio/views.rst:192
-msgid "The :guilabel:`Map` :icon:`fa-map-marker` view is used to display records on a map. For example, it is used in the Field Service app to plan an itinerary between different tasks."
+msgid "The :guilabel:`Map` :icon:`fa-map-marker` view is used to display records on a map. For example, it is used in the Project app to plan an itinerary between different tasks."
 msgstr ""
 
 #: ../../content/applications/studio/views.rst:196
@@ -3009,54 +3259,62 @@ msgid "To add information from other fields, select them under :guilabel:`Additi
 msgstr ""
 
 #: ../../content/applications/studio/views.rst:204
-msgid "To have a route suggested between the different records, tick :guilabel:`Enable Routing` and select which field should be used to sort records for the routing."
+msgid "To have a route suggested between the different records, select a :guilabel:`Routing` mode (:guilabel:`Optimized` or :guilabel:`Ordered`). The view requires a valid :ref:`Mapbox token <services/field_service/planning_itinerary>` and at least two located records, or one located record and the user's current position."
+msgstr ""
+
+#: ../../content/applications/studio/views.rst:209
+msgid ":guilabel:`Optimized`: Computes the route for minimal travel time between records."
+msgstr ""
+
+#: ../../content/applications/studio/views.rst:210
+msgid ":guilabel:`Ordered`: Routes strictly follow the default order (:guilabel:`Sort by`) set on the view. This selection field is dynamically hidden unless the routing mode is set to :guilabel:`Ordered`."
 msgstr ""
 
 #: ../../content/applications/studio/views.rst:0
 msgid "Task model's Map view"
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:215
+#: ../../content/applications/studio/views.rst:222
 msgid "Timeline views"
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:218
+#: ../../content/applications/studio/views.rst:225
 msgid "When you first activate one of the timeline views, you need to select which :ref:`Date <studio/fields/simple-fields-date>` or :ref:`Date & Time <studio/fields/simple-fields-date-time>` fields on your model should be used to define when the records start and stop in order to display them on the view. You can modify the :guilabel:`Start Date Field` and :guilabel:`Stop Date Field` after activating the view."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:229
+#: ../../content/applications/studio/views.rst:236
 msgid "Calendar"
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:231
+#: ../../content/applications/studio/views.rst:238
 msgid "The :guilabel:`Calendar` :icon:`fa-calendar` view is used to overview and manage records inside a calendar."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:234
+#: ../../content/applications/studio/views.rst:241
 msgid "To create records directly within the view instead of opening the :ref:`Form view <studio/views/general/form>`, enable :guilabel:`Quick Create`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:238
+#: ../../content/applications/studio/views.rst:245
 msgid "This only works on specific models that can be *quick-created* using only a *name*. However, most models do not support quick creation and open the :guilabel:`Form` view to fill in the required fields."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:242
+#: ../../content/applications/studio/views.rst:249
 msgid "To color records on the calendar, select a field under :guilabel:`Color`. All the records sharing the same value for that field are displayed using the same color."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:246
+#: ../../content/applications/studio/views.rst:253
 msgid "As the number of colors is limited, the same color can end up being assigned to different values."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:249
+#: ../../content/applications/studio/views.rst:256
 msgid "To display events lasting the whole day at the top of the calendar, select a :ref:`Checkbox field <studio/fields/simple-fields-checkbox>` that specifies if the event lasts the whole day."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:252
+#: ../../content/applications/studio/views.rst:259
 msgid "To choose the default time scale used to display events, select :guilabel:`Day`, :guilabel:`Week`, :guilabel:`Month`, or :guilabel:`Year` under :guilabel:`Default Display Mode`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:256
+#: ../../content/applications/studio/views.rst:263
 msgid "You can also use a :guilabel:`Delay Field` to display the duration of the event in hours by selecting a :ref:`Decimal <studio/fields/simple-fields-decimal>` or :ref:`Integer <studio/fields/simple-fields-integer>` field on the model which specifies the duration of the event. However, if you set an :guilabel:`End Date Field`, the :guilabel:`Delay Field` will not be taken into account."
 msgstr ""
 
@@ -3064,27 +3322,27 @@ msgstr ""
 msgid "Calendar Event model's Calendar view"
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:270
+#: ../../content/applications/studio/views.rst:277
 msgid "Cohort"
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:272
+#: ../../content/applications/studio/views.rst:279
 msgid "The :guilabel:`Cohort` :icon:`oi-view-cohort` view is used to examine the life cycle of records over a time period. For example, it is used in the Subscriptions app to view the subscriptions' retention rate."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:276
+#: ../../content/applications/studio/views.rst:283
 msgid "To display a measure (i.e., the aggregated value of a given field) by default on the view, select a :guilabel:`Measure Field`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:278
+#: ../../content/applications/studio/views.rst:285
 msgid "To choose which time interval is used by default to group results, select :guilabel:`Day`, :guilabel:`Week`, :guilabel:`Month`, or :guilabel:`Year` under :guilabel:`Interval`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:280
+#: ../../content/applications/studio/views.rst:287
 msgid "To change the cohort :guilabel:`Mode`, select either :guilabel:`Retention` :dfn:`the percentage of records staying over a period of time, it starts at 100% and decreases with time` or :guilabel:`Churn` :dfn:`the percentage of records moving out over a period of time - it starts at 0% and increases with time`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:284
+#: ../../content/applications/studio/views.rst:291
 msgid "To change the way the :guilabel:`Timeline` (i.e., the columns) progresses, select either :guilabel:`Forward` (from 0 to +15) or :guilabel:`Backward` (from -15 to 0). For most purposes, the :guilabel:`Forward` timeline is used."
 msgstr ""
 
@@ -3092,51 +3350,51 @@ msgstr ""
 msgid "Subscription model's Cohort view"
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:296
+#: ../../content/applications/studio/views.rst:303
 msgid "Gantt"
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:298
+#: ../../content/applications/studio/views.rst:305
 msgid "The :guilabel:`Gantt` :icon:`fa-tasks` view is used to forecast and examine the overall progress of records. Records are represented by a bar under a time scale."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:301
+#: ../../content/applications/studio/views.rst:308
 msgid "To prevent users from creating or editing records, untick :guilabel:`Can Create` or :guilabel:`Can Edit`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:303
+#: ../../content/applications/studio/views.rst:310
 msgid "To fill cells in gray whenever a record should not be created there (e.g., on weekends for employees), tick :guilabel:`Display Unavailability`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:307
+#: ../../content/applications/studio/views.rst:314
 msgid "The underlying model must support this feature, and support for it cannot be added using Studio. It is supported for the Project, Time Off, Planning, and Manufacturing apps."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:310
+#: ../../content/applications/studio/views.rst:317
 msgid "To show a total row at the bottom, tick :guilabel:`Display Total row`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:311
+#: ../../content/applications/studio/views.rst:318
 msgid "To collapse multiple records in a single row, tick :guilabel:`Collapse First Level`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:312
+#: ../../content/applications/studio/views.rst:319
 msgid "To choose which way records are grouped by default on rows (e.g., per employee or project), select a field under :guilabel:`Default Group by`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:314
+#: ../../content/applications/studio/views.rst:321
 msgid "To define a default time scale to view records, select :guilabel:`Day`, :guilabel:`Week`, :guilabel:`Month`, or :guilabel:`Year` under :guilabel:`Default Scale`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:316
+#: ../../content/applications/studio/views.rst:323
 msgid "To color records on the view, select a field under :guilabel:`Color`. All the records sharing the same value for that field are displayed using the same color."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:320
+#: ../../content/applications/studio/views.rst:327
 msgid "As the number of colors is limited, the same color can be assigned to different values."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:322
+#: ../../content/applications/studio/views.rst:329
 msgid "To specify with which degree of precision each time scale should be divided by, select :guilabel:`Quarter Hour`, :guilabel:`Half Hour`, or :guilabel:`Hour` under :guilabel:`Day Precision`, :guilabel:`Half Day` or :guilabel:`Day` under :guilabel:`Week Precision`, and :guilabel:`Month Precision`."
 msgstr ""
 
@@ -3144,31 +3402,31 @@ msgstr ""
 msgid "Planning Shift model's Gantt view"
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:335
+#: ../../content/applications/studio/views.rst:342
 msgid "Reporting views"
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:344
+#: ../../content/applications/studio/views.rst:351
 msgid "Pivot"
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:346
+#: ../../content/applications/studio/views.rst:353
 msgid "The :guilabel:`Pivot` :icon:`oi-view-pivot` view is used to explore and analyze the data contained in records in an interactive manner. It is especially useful to aggregate numeric data, create categories, and drill down the data by expanding and collapsing different levels of data."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:350
+#: ../../content/applications/studio/views.rst:357
 msgid "To access all records whose data is aggregated under a cell, tick :guilabel:`Access records from cell`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:352
+#: ../../content/applications/studio/views.rst:359
 msgid "To divide the data into different categories, select field(s) under :guilabel:`Column grouping`, :guilabel:`Row grouping - First level`, or :guilabel:`Row grouping - Second level`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:354
+#: ../../content/applications/studio/views.rst:361
 msgid "To add different types of data to be measured using the view, select a field under :guilabel:`Measures`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:356
+#: ../../content/applications/studio/views.rst:363
 msgid "To display a count of records that made up the aggregated data in a cell, tick :guilabel:`Display count`."
 msgstr ""
 
@@ -3176,35 +3434,35 @@ msgstr ""
 msgid "Purchase Report model's Pivot view"
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:367
+#: ../../content/applications/studio/views.rst:374
 msgid "Graph"
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:369
+#: ../../content/applications/studio/views.rst:376
 msgid "The :guilabel:`Graph` :icon:`fa-area-chart` view is used to showcase data from records in a bar, line, or pie chart."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:372
+#: ../../content/applications/studio/views.rst:379
 msgid "To change the default chart, select :guilabel:`Bar`, :guilabel:`Line`, or :guilabel:`Pie` under :guilabel:`Type`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:374
+#: ../../content/applications/studio/views.rst:381
 msgid "To choose a default data dimension (category), select a field under :guilabel:`First dimension` and, if needed, another under :guilabel:`Second dimension`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:376
+#: ../../content/applications/studio/views.rst:383
 msgid "To select a default type of data to be measured using the view, select a field under :guilabel:`Measure`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:378
+#: ../../content/applications/studio/views.rst:385
 msgid "*For Bar and Line charts only*: To sort the different data categories by their value, select :guilabel:`Ascending` (from lowest to highest value) or :guilabel:`Descending` (from highest to lowest) under :guilabel:`Sorting`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:381
+#: ../../content/applications/studio/views.rst:388
 msgid "*For Bar and Pie charts only*: To access all records whose data is aggregated under a data category on the chart, tick :guilabel:`Access records from graph`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:383
+#: ../../content/applications/studio/views.rst:390
 msgid "*For Bar charts only*: When using two data dimensions (categories), display the two columns on top of each other by default by ticking :guilabel:`Stacked graph`."
 msgstr ""
 
