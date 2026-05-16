@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-08 17:30+0000\n"
+"POT-Creation-Date: 2026-05-15 17:30+0000\n"
 "PO-Revision-Date: 2025-11-19 20:11+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Swedish <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -877,6 +877,7 @@ msgstr ":doc:`transaktioner`"
 #: ../../content/applications/finance/accounting/taxes/eu_distance_selling.rst:17
 #: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:20
 #: ../../content/applications/finance/accounting/taxes/retention.rst:11
+#: ../../content/applications/finance/accounting/vendor_bills.rst:145
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:29
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:24
 #: ../../content/applications/finance/fiscal_localizations.rst:18
@@ -3286,7 +3287,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:153
-#: ../../content/applications/finance/accounting/vendor_bills.rst:131
+#: ../../content/applications/finance/accounting/vendor_bills.rst:197
 msgid "Payment and reconciliation"
 msgstr ""
 
@@ -3297,13 +3298,13 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:159
-#: ../../content/applications/finance/accounting/vendor_bills.rst:150
+#: ../../content/applications/finance/accounting/vendor_bills.rst:216
 msgid ":doc:`payments`"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:160
 #: ../../content/applications/finance/accounting/payments.rst:19
-#: ../../content/applications/finance/accounting/vendor_bills.rst:151
+#: ../../content/applications/finance/accounting/vendor_bills.rst:217
 msgid ":doc:`bank/reconciliation`"
 msgstr ":doc:`bank/reconciliation`"
 
@@ -14441,7 +14442,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:141
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:157
-#: ../../content/applications/finance/accounting/vendor_bills.rst:165
+#: ../../content/applications/finance/accounting/vendor_bills.rst:231
 msgid ""
 "Click :guilabel:`PDF` or :guilabel:`XLSX` to generate a PDF or XLSX file, "
 "respectively."
@@ -23071,14 +23072,120 @@ msgid ""
 "Click :guilabel:`Reset to draft` if changes are required."
 msgstr ""
 
+#: ../../content/applications/finance/accounting/vendor_bills.rst:131
+msgid "Self-billing"
+msgstr ""
+
 #: ../../content/applications/finance/accounting/vendor_bills.rst:133
+msgid ""
+"Self-billing is a workflow where a customer generates a vendor bill on the "
+"supplier's behalf and sends a copy to the supplier for their records. It "
+"removes the need for the supplier to send the customer a vendor bill and is "
+"common in industries where the customer has more reliable transaction data. "
+"It also reduces payment time as the customer does not have to wait for the "
+"supplier to issue a vendor bill."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:139
+msgid ""
+"Odoo supports the generation of self-billing vendor bills and self-billing "
+"credit notes, both of which can be sent both by email and via Peppol."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:147
+msgid ""
+"To configure self-billing in Odoo, first create a separate purchase journal "
+"specifically for self-billing:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:150
+msgid "Navigate to :menuselection:`Accounting --> Configuration --> Journals`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:151
+msgid "Click the :guilabel:`New` button."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:152
+msgid ""
+"Enter a :guilabel:`Journal Name` and set the :guilabel:`Type` "
+"to :guilabel:`Purchase`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:153
+msgid ""
+"In the :guilabel:`Journal Entries` tab, set a :guilabel:`Default Expense "
+"Account` and enter a :guilabel:`Short Code`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:155
+msgid ""
+"In the :guilabel:`Advanced Settings` tab, enable :guilabel:`Self Billing`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:158
+msgid ":doc:`get_started/journals`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:163
+msgid "Create a self-bill"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:165
+msgid ""
+"Self-bills can be created both :ref:`manually <accounting/vendor_bills/"
+"creation-manual>` and :ref:`automatically <accounting/vendor_bills/"
+"automatic>`. When creating self-bills, be sure to either create them "
+"directly from the :ref:`self-billing purchase journal <accounting/"
+"vendor_bills/self-billing-config>` on the :guilabel:`Accounting Dashboard` "
+"or manually set the :guilabel:`Journal` of the self-bill to the self-billing "
+"purchase journal."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:172
+msgid ""
+"The sequence of self-bills contains the :ref:`database ID "
+"<export_import_data/different-ids>` (also known as the internal ID) of the "
+"partner, making the sequence unique per partner."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:178
+msgid "Send a self-bill"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:180
+msgid ""
+"To send a self-bill after :ref:`creating <accounting/vendor_bills/self-"
+"billing-create>` and confirming it, click :guilabel:`Send`. In "
+"the :guilabel:`Send` popup window, select the sending methods "
+"(i.e., :guilabel:`Email`, :guilabel:`By Post`, and/or the appropriate Peppol "
+"format), and click :guilabel:`Send`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:186
+msgid ""
+"If sending self-bills via :ref:`Peppol <accounting/e-invoicing/peppol>`, "
+"first :ref:`configure your Peppol registration <accounting/e-invoicing/"
+"peppol-registration>`, then verify that the vendor is registered with "
+"Peppol. To do so, go to :menuselection:`Accounting --> Vendors --> Vendors`, "
+"then go through the :ref:`contact verification process <accounting/e-"
+"invoicing/contact-verification>`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:191
+msgid ""
+"Not every Peppol access point supports self-billing. Check with your "
+"suppliers to ensure that theirs does."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:199
 msgid ""
 "To register a payment, click on :guilabel:`Pay`. In the :guilabel:`Pay` "
 "window, select the :guilabel:`Journal`, the :guilabel:`Payment Method`, "
 "the :guilabel:`Amount`, and the :guilabel:`Currency`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:137
+#: ../../content/applications/finance/accounting/vendor_bills.rst:203
 msgid ""
 "When the :guilabel:`Amount` paid is less than the total remaining amount on "
 "the vendor bill, the payment is :ref:`partial <accounting/payments/partial-"
@@ -23086,14 +23193,14 @@ msgid ""
 "outstanding balance."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:141
+#: ../../content/applications/finance/accounting/vendor_bills.rst:207
 msgid ""
 "The :guilabel:`Memo` field is filled automatically if the :guilabel:`Payment "
 "Reference` has been set correctly on the vendor bill. If the field is empty, "
 "select the vendor invoice number as a reference."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:145
+#: ../../content/applications/finance/accounting/vendor_bills.rst:211
 msgid ""
 "Then click :guilabel:`Create payment`. An :guilabel:`In "
 "Payment`/:guilabel:`Partial` banner appears on the bill until it "
@@ -23101,17 +23208,17 @@ msgid ""
 "to :guilabel:`Paid`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:156
+#: ../../content/applications/finance/accounting/vendor_bills.rst:222
 msgid "Aged payable report"
 msgstr "Föråldrad skuldrapport"
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:158
+#: ../../content/applications/finance/accounting/vendor_bills.rst:224
 msgid ""
 "To get an overview of the open vendor bills and their due dates, go "
 "to :menuselection:`Accounting --> Reporting --> Aged payable`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:161
+#: ../../content/applications/finance/accounting/vendor_bills.rst:227
 msgid ""
 "Click the :icon:`fa-caret-right` :guilabel:`(right arrow)` icon next to a "
 "vendor to view the details of all their outstanding bills, including the due "
