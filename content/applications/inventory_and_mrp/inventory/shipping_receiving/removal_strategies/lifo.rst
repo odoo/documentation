@@ -20,20 +20,23 @@ Enabling the LIFO removal strategy
 
 Lots and serial numbers differentiate identical products and track information like arrival or
 expiration dates. To enable this feature, navigate to :menuselection:`Inventory --> Configuration
---> Settings`. Under the :guilabel:`Traceability` section, check the box beside :guilabel:`Lots &
-Serial Numbers` to enable the feature.
+--> Settings`. Under the *Traceability* section, check the box beside :guilabel:`Lots & Serial
+Numbers` to enable the feature.
 
 .. image:: lifo/enable-lots-serial-numbers.png
    :alt: Enable Lots & Serial Numbers in the Inventory settings.
+
+If planning to :ref:`set the removal strategy on a location
+<inventory/removal_strategies/lifo-location>`, scroll down to the *Warehouse* section and select
+:guilabel:`Storage Locations`.
 
 Enable tracking by lots or serial numbers
 -----------------------------------------
 
 Next, ensure the intended product is tracked by lots or serial numbers by navigating to the product
 form in the :menuselection:`Inventory app --> Products --> Products`, then selecting the desired
-product. On the product form, open the :guilabel:`General Information` tab, select the checkbox next
-to the :guilabel:`Track Inventory` field, then choose either :guilabel:`By Unique Serial Number` or
-:guilabel:`By Lots`.
+product. On the product form, open the *General Information* tab, then set the :guilabel:`Tracking`
+field to either :guilabel:`By Unique Serial Number` or :guilabel:`By Lots`.
 
 .. image:: lifo/track-by-serial-number.png
    :alt: Enable tracking by serial number.
@@ -54,12 +57,14 @@ storage location.
 .. image:: lifo/location-categories.png
    :alt: Find the Locations or Categories from the Configuration menu.
 
+.. _inventory/removal_strategies/lifo-location:
+
 On the storage location
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Open :menuselection:`Inventory app --> Configuration --> Locations`. Select the desired location. On
-the location form, under the :guilabel:`Logistics` heading, select :guilabel:`Last In First Out
-(LIFO)` from the list of removal strategies.
+the location form, under the *Logistics* section, select :guilabel:`Last In First Out (LIFO)` from
+the list of removal strategies.
 
 .. image:: lifo/lifo-on-location.png
    :alt: Set Last In First Out as the location removal strategy.
@@ -68,9 +73,9 @@ On the product category
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Configure removal strategies on product categories by going to :menuselection:`Inventory app -->
-Configuration --> Categories` and selecting the intended product category. In the
-:guilabel:`Logistics` section, specify :guilabel:`Last In First Out (LIFO)` in the :guilabel:`Force
-Removal Strategy` field.
+Configuration --> Categories` and selecting the intended product category. In the *Logistics*
+section, specify :guilabel:`Last In First Out (LIFO)` in the :guilabel:`Force Removal Strategy`
+field.
 
 .. image:: lifo/lifo-on-category.png
    :alt: Set Last In First Out as the product category removal strategy.
@@ -113,7 +118,7 @@ Click :guilabel:`Confirm` on the sales order form to create a delivery order. Do
 newest lot numbers using the :abbr:`LIFO (Last In, First Out)` removal strategy.
 
 To view the detailed pickings, click the :guilabel:`Details` link at the far-right of the cinder
-block's product line in the :guilabel:`Operations` tab of the delivery order.
+block's product line in the *Operations* tab of the delivery order.
 
 .. image:: lifo/details-link.png
    :alt: Find the Details link in the Operations tab of the delivery order.
