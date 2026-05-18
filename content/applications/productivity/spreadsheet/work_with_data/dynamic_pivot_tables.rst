@@ -1,6 +1,6 @@
-====================
-Dynamic pivot tables
-====================
+===========================
+Dynamic pivot tables - test
+===========================
 
 When a pivot view from an Odoo database is inserted in a spreadsheet, it is by default a static
 pivot table. Each cell in a static pivot table contains an :ref:`Odoo-specific function
