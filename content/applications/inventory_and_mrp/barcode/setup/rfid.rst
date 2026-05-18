@@ -20,40 +20,72 @@ facilitate the global exchange of goods.
 Hardware
 ========
 
-The following are required to begin working with RFID in Odoo:
+To start working with RFID in Odoo, one of the following devices is recommended:
 
-- Zebra TCX Series mobile computer, or
-- Android Smartphone
-
-Paired with:
-
-- Zebra RFD40 (can read and write RFID tags)
+- CipherLab UHF RFID RS36, RS38 Series
+- Zebra TC53e-RFID Series
+- Zebra UHF RFID RFD90XX, RFD40XX Series paired with a mobile Android device
 
 Configuration
 =============
 
-Before using RFID tags to manage inventory, the Android Package Kit (APK) with RFID support must be
+.. |APK| replace:: :abbr:`APK (Android Package Kit)`
+
+.. important::
+   Before installing the |APK| on a device, enable installation from unknown sources in the Android
+   settings. This option can usually be found under :guilabel:`App` or :guilabel:`App &
+   Notification` settings, under the :guilabel:`Special access` or :guilabel:`Special app access`
+   section.
+
+CipherLab
+---------
+
+Before using RFID tags to manage inventory, an additional |APK| developed by CipherLab must be
 installed on the mobile computer or smartphone.
 
 .. important::
-   Before installing the APK on an individual device, first enable the ability to install unknown
-   apps in the device settings. Find this setting in the device's :guilabel:`App` or :guilabel:`App
-   & Notification` settings, under the :guilabel:`Special access` or :guilabel:`Special app access`
-   section.
+   Before installing the CipherLab |APK|, please make sure that the firmware of the CipherLab
+   Android device is up-to-date. To check for updates, go to :menuselection:`Settings --> System -->
+   System updates`. If asked to enter an :guilabel:`Input verify code`, contact a CipherLab
+   reseller.
 
-Then, download the APK. On the :guilabel:`Downloads` page, under the :guilabel:`Mobile Application`
-section, click :guilabel:`Download` next to the :guilabel:`Android` option, then select
+Obtain the :guilabel:`CipherLab Multi-Tag Output` |APK| from CipherLab or from a supplier partner.
+Transfer the |APK| to the device using USB or Bluetooth, or download it directly using the device's
+web browser.
+
+Open the |APK| from the browser download notification or the location where the file is stored. Tap
+to install the |APK|.
+
+Next, enable :guilabel:`Notification` permissions. Navigate to :menuselection:`Settings --> Apps -->
+Multi-Tag Output`. A vertical ellipsis menu appears in the top corner. Open the menu, then select
+:guilabel:`Allow restricted settings`.
+
+When the CipherLab app is opened, :guilabel:`Accessibility` settings open. In the
+:guilabel:`Multi-Tag Output` section, select :guilabel:`Use Multi-Tag Output`.
+
+For the :guilabel:`Multi-Tag Output` settings, set the :guilabel:`End Character` to `;`.
+
+.. note::
+   This scanner also works with the **Barcode** Progressive Web App (PWA) or in a web browser. The
+   Android Odoo app is not mandatory.
+
+Zebra
+-----
+
+Before using RFID tags to manage inventory, a dedicated Odoo Android app with RFID support must be
+installed on the mobile computer or smartphone.
+
+First, download the |APK|. On the :guilabel:`Downloads` page, under the :guilabel:`Mobile
+Application` section, click :guilabel:`Download` next to the :guilabel:`Android` option, then select
 :guilabel:`Download APK (with Zebra RFID support)` from the drop-down menu. Download this file via a
-computer and transfer the APK via USB or Bluetooth, or use the device's web browser to download the
-APK.
+computer and transfer the |APK| via USB or Bluetooth, or use the device's web browser to download
+the |APK|.
 
 .. image:: rfid/download-apk.png
    :alt: Download the APK from the Download page.
 
-Install the APK. If :guilabel:`Install unknown apps` is enabled for the device's web browser,
-install the APK directly from the browser download notification. If :guilabel:`Install unknown apps`
-is enabled for the device's file manager, open it and navigate to the location where the file is
-stored, then tap it to install the APK.
+Install the |APK| directly from the browser download notification or the location where it is
+stored.
 
 Then, when reading or writing RFID tags, ensure that the Zebra device and the smart device are
 paired and connected.
@@ -61,8 +93,8 @@ paired and connected.
 Set a compatible barcode
 ========================
 
-Before you can manage inventory using RFID tags, a compatible barcode must be assigned to the
-products. Set the product barcode in the product form.
+Before managing inventory using RFID tags, a compatible barcode must be assigned to the products.
+Set the product barcode in the product form.
 
 .. seealso::
    :ref:`Set product barcodes <inventory/barcode/set-barcodes>`
