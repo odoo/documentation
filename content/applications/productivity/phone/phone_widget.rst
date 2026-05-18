@@ -9,23 +9,6 @@ The **Phone** widget is a companion to the **Phone** app that can be used to :re
 <phone/phone_widget/manage-related-records>`. The widget stays open when navigating other Odoo apps,
 turning voice communication into a seamless part of the Odoo workflow.
 
-.. _phone/phone_widget/configuration:
-
-Configuration
-=============
-
-To make calls through the **Phone** widget, enable microphone and speaker access in the browser
-settings.
-
-Click the :icon:`fa-microphone` :guilabel:`(microphone)` icon at the top of the widget and select
-:guilabel:`Click to Activate`, then click :guilabel:`Use Microphone` to open the browser settings.
-In the settings, select the option to allow access. When microphone and speaker access is allowed,
-the icon has a purple :icon:`fa-cog` icon :guilabel:`(Audio settings)`.
-
-If the Odoo database does not have permission to access the microphone and speaker, the
-:icon:`fa-microphone` :guilabel:`(microphone)` icon at the top of the widget has a red
-:icon:`fa-exclamation-circle` icon :guilabel:`(Microphone access has not been granted yet)` instead.
-
 .. _phone/phone_widget/navigation:
 
 Navigation
@@ -53,6 +36,23 @@ The **Phone** widget contains four tabs:
   contact to call them, or click the contact's name to view their company name and phone number.
 - :icon:`fa-clock-o` :guilabel:`Activities`: Lists call :doc:`activities
   <../../essentials/activities>` assigned to the user, grouped by due date.
+
+.. _phone/phone_widget/configuration:
+
+Configuration
+=============
+
+To make calls through the **Phone** widget, enable microphone and speaker access in the browser
+settings.
+
+Click the :icon:`fa-microphone` :guilabel:`(microphone)` icon at the top of the widget and select
+:guilabel:`Click to Activate`, then click :guilabel:`Use Microphone` to open the browser settings.
+In the settings, select the option to allow access. When microphone and speaker access is allowed,
+the icon has a purple :icon:`fa-cog` icon :guilabel:`(Audio settings)`.
+
+If the Odoo database does not have permission to access the microphone and speaker, the
+:icon:`fa-microphone` :guilabel:`(microphone)` icon at the top of the widget has a red
+:icon:`fa-exclamation-circle` icon :guilabel:`(Microphone access has not been granted yet)` instead.
 
 .. _phone/phone_widget/handle-calls:
 
@@ -98,7 +98,7 @@ The call can be managed using the following controls:
 - :icon:`fa-pause` :guilabel:`Hold`: Put the call on hold. Click again to end the hold.
 - :icon:`oi-record` :guilabel:`Record`: Start recording the call. Click again to stop recording.
 - :icon:`fa-microphone-slash` :guilabel:`Mute`: Mute the microphone. Click again to unmute.
-- :icon:`fa-phone fa-rotate-180` :guilabel:`Hang up`: End the call.
+- :icon:`fa-phone fa-rotate-135` :guilabel:`Hang up`: End the call.
 - :icon:`oi-numpad` :guilabel:`Keypad`: Open the numeric keypad to dial another number.
 
 .. _phone/phone_widget/transfer-call:
@@ -118,7 +118,7 @@ To transfer an active call, follow the steps below:
      contact.
    - :guilabel:`Ask First`: Speak to the selected contact before transferring the call. Click
      :icon:`oi-transfer` :guilabel:`Confirm Transfer` to complete the transfer, or click
-     :icon:`fa-phone fa-rotate-180` :guilabel:`Hang up` to cancel the transfer.
+     :icon:`fa-phone fa-rotate-135` :guilabel:`Hang up` to cancel the transfer.
    - :guilabel:`Cancel transfer`: Cancel the transfer and return to the contact selection screen.
      Click :icon:`oi-arrow-left` :guilabel:`(Back)` to return to the active call.
 
