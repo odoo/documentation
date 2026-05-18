@@ -1,5 +1,5 @@
 ===============
-Odoo essentials
+Odoo Essentials
 ===============
 
 .. toctree::
