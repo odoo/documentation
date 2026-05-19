@@ -190,8 +190,9 @@ Date (`date`)
 
 The :guilabel:`Date` field is used to select a date on a calendar.
 
-- :guilabel:`Remaining Days`: the remaining number of days before the selected date is displayed
-  (e.g., *In 5 days*), based on the current date. This field should be set to :guilabel:`Read only`.
+- :guilabel:`Relative Date`: expresses the field value in relation to the current date using
+  relative terms such as :guilabel:`Yesterday`, :guilabel:`Today`, :guilabel:`In 3 days`,
+  :guilabel:`2 months ago`, etc. This field should be set to :guilabel:`Read only`.
 
 .. example::
 
@@ -254,13 +255,6 @@ To add a date range:
 
    .. image:: fields/date-time-examples.png
       :alt: Examples of Date & Time fields with different widgets
-
-Remaining Days (`remaining_days`)
-*********************************
-
-The :guilabel:`Remaining Days` widget displays the remaining number of days before the selected date
-(e.g., *In 5 days*), based on the current date and time. This field should be set to :guilabel:`Read
-only`.
 
 .. _studio/fields/simple-fields-checkbox:
 
