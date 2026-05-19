@@ -57,6 +57,11 @@ Next, fill out the following fields:
 - :guilabel:`Responsible`: Internal user responsible for managing the card campaign.
 - :guilabel:`Tags`: Relevant tags for the campaign.
 
+.. note::
+   If the :guilabel:`Post Link` is left unspecified, Odoo automatically sets the target to the
+   chosen record's webpage. If the record is unpublished, the target defaults to the corresponding
+   event's homepage.
+
 .. _marketing_card/create-campaign/card-layout:
 
 Card Layout tab
@@ -83,6 +88,20 @@ To customize the card, users can configure the following fields:
 
 A preview of the resulting card allows the user to interactively visualize their configuration.
 Above the preview are selectable themes to change the appearance of the card.
+
+.. note::
+   The following fields allow users to configure the translations of the inputted text into all
+   other :doc:`available languages <../general/users/language>` in the database:
+
+   - :guilabel:`Header`
+   - :guilabel:`Sub-Header`
+   - :guilabel:`Section`
+   - :guilabel:`Sub-Section 1`
+   - :guilabel:`Sub-Section 2`
+
+   To do so, click :guilabel:`EN` at the edge of the field. In the resulting pop-up window, make any
+   modifications to the translations. Finally, click :guilabel:`Save` to save or :guilabel:`Discard`
+   to cancel.
 
 .. _marketing_card/create-campaign/card-layout/dynamic-placeholders:
 
@@ -144,14 +163,16 @@ recipients.
 Configure mailing
 -----------------
 
-To configure the campaign mailing, click :guilabel:`Send`. On the :guilabel:`Send Cards` pop-up
-window, users configure the :ref:`email form <email_marketing/create_email>` to filter or specify
-recipients and customize the body of the message.
+To configure the campaign mailing, click :guilabel:`Send`. On a separate page, users configure the
+:ref:`email form <email_marketing/create_email>` to filter or specify recipients and customize the
+body of the message.
 
 .. image:: marketing_card/send-cards-form.png
    :alt: Send Cards window when sending mailing campaigns in Odoo Marketing Card.
 
 To start, enter the subject of the mailing in the :guilabel:`Subject` field.
+
+Next, under the :guilabel:`Card Language`, select the language in which to render the cards.
 
 The :guilabel:`Card Campaign` and :guilabel:`Recipients` fields are already populated. The filtering
 rule under the :guilabel:`Recipients` field can be modified to update the mailing list.
