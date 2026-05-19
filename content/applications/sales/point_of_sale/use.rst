@@ -209,7 +209,7 @@ the following options:
   (i.e., orders for which the receipt has been emailed to the customer).
 - :guilabel:`Paid`: Paid orders.
 - :guilabel:`Cancelled`: Orders cancelled on online platforms through :ref:`UrbanPiper
-  <pos/online_food_delivery/configuration>`.
+  <pos/urban_piper/configuration>`.
 
 It is also possible to search for orders based on, for example, the :guilabel:`Receipt Number`,
 :guilabel:`Date`, or :guilabel:`Customer`.
