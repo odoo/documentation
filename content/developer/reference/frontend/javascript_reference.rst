@@ -647,7 +647,7 @@ Time (`float_time`)
     a time interval (in hours by default). So, for example, `0.5` should be formatted as `0h 30m`,
     or `4.75` to `4h 45m`.
 
-    - Supported field types: `float`
+    - Supported field types: `float`, `integer`
 
     Options:
 
