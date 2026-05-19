@@ -29,6 +29,8 @@ localization:
      - `documents_l10n_hk_hr_payroll`
      - Integrates employee ir56 forms in the Odoo *Documents* app.
 
+.. _localization/hong-kong/fps:
+
 FPS QR codes on invoices
 ========================
 

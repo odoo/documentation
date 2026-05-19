@@ -5,102 +5,60 @@ QR code payments
 QR code payments allow users to generate a code that customers can scan with their mobile banking
 app to initiate a bank transfer or pay instantly.
 
-Configuration
-=============
+.. _pos/qrcode/configuration:
 
-Activate and set up QR code payments
-------------------------------------
+Activation
+==========
 
-Go to :menuselection:`Accounting --> Configuration --> Settings`, and
+To allow payments by scanning a QR code, go to :menuselection:`Invoicing --> Configuration -->
+Settings`, scroll down to the :guilabel:`Customer Payments` section, and enable the :guilabel:`QR
+Codes` setting.
 
-#. Activate or upgrade your country's fiscal localization package under the :guilabel:`Fiscal
-   Localization` section to access all country-specific accounting features.
-#. Activate :guilabel:`QR codes` under the :guilabel:`Customer Payments` section.
+QR code types vary by country. Refer to the corresponding documentation for the configuration
+required for each type:
 
-Then, as the QR code type differs depending on your country, follow the corresponding documentation
-page from the following table to set them up.
+- :doc:`Pix (Brazil) <../../../finance/fiscal_localizations/brazil>`
+- :ref:`FPS (Hong Kong) <localization/hong-kong/fps>`
+- :ref:`QRIS (Indonesia) <localizations/indonesia/qris>`
+- :ref:`PayNow (Singapore) <localization/singapore/paynow>`
+- :doc:`QR-bill (Switzerland) <../../../finance/fiscal_localizations/switzerland>`
+- :ref:`PromptPay (Thailand) <localization/thailand/promptpay>`
+- :ref:`VietQR (Vietnam) <localizations/vietnam/qrcode>`
+- :ref:`EPC (SEPA) <accounting/customer-invoices/epc>`
 
-.. list-table::
-   :widths: 20 20 20 40
-   :header-rows: 1
+.. _pos/qrcode/payment-method:
 
-   * - QR code types
-     - Module name
-     - Technical name
-     - Description
-   * - Pix
-     - :doc:`Brazilian - Accounting<../../../finance/fiscal_localizations/brazil>`
-     - `l10n_br`
-     - The base module to manage the accounting chart and localization for Brazil.
-   * - FPS
-     - :doc:`Hong Kong - Accounting<../../../finance/fiscal_localizations/hong_kong>`
-     - `l10n_hk`
-     - The base module to manage the accounting chart and localization for Hong Kong.
-   * - QRIS
-     - :doc:`Indonesian - Accounting<../../../finance/fiscal_localizations/indonesia>`
-     - `l10n_id`
-     - The base module to manage the accounting chart and localization for Indonesia.
-   * - PayNow
-     - :doc:`Singapore - Accounting<../../../finance/fiscal_localizations/singapore>`
-     - `l10n_sg`
-     - The base module to manage the accounting chart and localization for Singapore.
-   * - QR-bill
-     - :doc:`Switzerland - Accounting<../../../finance/fiscal_localizations/switzerland>`
-     - `l10n_ch`
-     - The base module to manage the accounting chart and localization for Switzerland.
-   * - PromptPay
-     - :doc:`Thailand - Accounting<../../../finance/fiscal_localizations/thailand>`
-     - `l10n_th`
-     - The base module to manage the accounting chart and localization for Thailand.
-   * - VietQR
-     - :doc:`Vietnam - Accounting<../../../finance/fiscal_localizations/vietnam>`
-     - `l10n_vn`
-     - The base module to manage the accounting chart and localization for Vietnam.
-   * - EPC
-     - :doc:`Account SEPA QR Code<../../../finance/accounting/customer_invoices/epc_qr_code>`
-     - `account_qr_code_sepa`
-     - This module adds support for SEPA Credit Transfer QR-code generation.
+QR code payment method
+======================
 
-Create the payment method
--------------------------
+To create a QR code :doc:`payment method <../payment_methods>` that allows customers to scan the
+code and pay, follow these steps:
 
-#. Open the Point of Sale application.
-#. Go to :menuselection:`Configuration --> Payment Methods` and create a payment method.
-#. Set a bank-type journal.
-#. Select :guilabel:`Bank App (QR Code)` under the :guilabel:`Integration` section.
-#. Select the :guilabel:`QR Code Format` from the dropdown menu.
+#. Go to :menuselection:`Point of Sale --> Configuration --> Payment Methods` and click
+   :guilabel:`New`.
+#. Enter a name and set the :guilabel:`Journal` field to :guilabel:`Bank`.
+#. Set the :guilabel:`Point of Sale` field to the relevant point of sale.
+#. Set the :guilabel:`Integration` field to the desired option:
 
-   - Select :guilabel:`SEPA Credit Transfer QR` if you are part of the Single Euro Payments Area
-     (SEPA).
-   - Select :guilabel:`EMV Merchant-Presented QR-code` for other QR code types.
+   - :guilabel:`Quick Pay (QR Code)`: Set the :guilabel:`Integrate with` field to :ref:`Bancontact
+     Pay <belgium/pos/bancontact-pay>`.
+   - :guilabel:`Bank App (QR Code)`: Set the :guilabel:`QR Code Format` field to the desired option.
 
-.. image:: qr_code_payment/qr-payment-methods-setting.png
-   :alt: QR code payment method configuration
-   :scale: 85 %
+     - Select :guilabel:`SEPA Credit Transfer QR` if your company is part of the Single Euro Payments
+       Area (SEPA).
+     - Select :guilabel:`EMV Merchant-Presented QR-code` for other QR code types.
+#. Save the payment method.
 
 .. important::
-   At least one bank account must be defined in the journal to allow QR code payments to be
-   registered with bank apps.
+   The :ref:`journal <accounting/journals/bank>` selected in the payment method must be linked to a
+   specific bank account to allow QR code payments to be registered with bank apps.
 
-Once the payment method is created, go to the :ref:`POS' settings <pos/use/settings>` and add the
-payment method to your POS under the :guilabel:`Payment` section.
+.. _pos/qrcode/payment-process:
 
-.. image:: qr_code_payment/qr-configuration-setting.png
-   :alt: Enable QR code payment method
-   :scale: 85 %
+QR code payments registration
+=============================
 
-Register payments using QR codes
-================================
-
-When processing a payment, select the payment method for QR code payments. A QR code is generated
-and displayed on the screen for the customer to scan and pay with their mobile banking app.
-
-.. image:: qr_code_payment/qr-payment-example.png
-   :alt: QR code payment example
-   :scale: 75 %
-
-Hit :guilabel:`Confirm Payment` to validate the transaction.
-
-.. important::
-   Odoo does **not** check the bank payment. It is recommended that users verify payments for
-   validity before confirming them on the POS register.
+To accept a QR code payment, select the relevant :ref:`payment method <pos/qrcode/payment-method>`
+on the :ref:`payment screen <pos/use/sell>`, then click :guilabel:`Validate`. A QR code is generated
+and displayed on the payment screen for customers to scan with their mobile banking app and complete
+the payment. The payment is validated in Odoo once processed in the mobile banking app.
