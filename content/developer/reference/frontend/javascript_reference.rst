@@ -808,10 +808,18 @@ Date Range (`daterange`)
 
             <field name="start_date" widget="daterange" options="{'end_date_field': 'end_date'}" />
 
-Remaining Days (`remaining_days`)
+Relative Date (`relative_date`)
     This widget can be used on date and datetime fields. In readonly, it displays
-    the delta (in days) between the value of the field and today. The widget turns
-    into a regular date or datetime field in edit mode.
+    a human-readable relative calendar string computed from the difference between
+    the field value and today (e.g. *"yesterday"*, *"today"*, *"in 3 days"*,
+    *"next month"*). The exact format depends on the magnitude of the difference:
+
+    - Within ±30 days: the unit is forced to *days* (e.g. *"in 5 days"*, *"3 days ago"*).
+    - Between 31 and 99 days: Luxon picks the most appropriate unit automatically
+      (e.g. *"next month"*, *"2 months ago"*).
+    - Beyond ±99 days: the widget falls back to the formatted date string.
+
+    In edit mode the widget falls back to a regular date/datetime field.
 
     - Supported field types: `date`, `datetime`
 
