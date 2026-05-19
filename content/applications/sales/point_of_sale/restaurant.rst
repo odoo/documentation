@@ -33,7 +33,7 @@ orders:
 .. cards::
 
    .. card:: Online food delivery
-      :target: restaurant/online_food_delivery
+      :target: restaurant/urban_piper
       :large:
 
       Integrate third-party delivery platforms via UrbanPiper to centralize and manage external
@@ -264,7 +264,7 @@ To process an order from the POS register, follow these steps:
 
 .. seealso::
    - :doc:`extra/preparation`
-   - :doc:`restaurant/online_food_delivery`
+   - :doc:`UrbanPiper order management for food delivery <restaurant/urban_piper>`
 
 .. _pos/restaurant/floors/transfer:
 
@@ -478,4 +478,4 @@ after payment, follow these steps:
 .. toctree::
    :titlesonly:
 
-   restaurant/online_food_delivery
+   restaurant/urban_piper
