@@ -2,6 +2,8 @@
 Singapore
 =========
 
+.. _localization/singapore/paynow:
+
 Add PayNow QR codes to invoices
 ===============================
 
