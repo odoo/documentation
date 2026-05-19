@@ -29,29 +29,19 @@ invoice customers from a single platform.
       :large:
 
       Discover how to rent services alongside products.
+
    .. card:: Manage deposits
       :target: rental/rental_orders/manage_deposits
       :large:
 
       Learn how to create a refundable deposit for rental products.
 
-Settings
-========
+   .. card:: Product types
+      :target: rental/configure_products/product_types
+      :large:
 
-To configure transfer locations and rental item availability, go to :menuselection:`Rental app -->
-Configuration --> Settings`.
-
-.. image:: rental/rental/rental-settings.png
-   :alt: How the Settings page appears in the Odoo Rental application.
-
-In the :guilabel:`Rental` section, enable :guilabel:`Rental Transfers` to use stock deliveries and
-receipts for rental orders.
-
-If a rental business has :ref:`multiple locations <rental/configure_products/multi-location>`,
-rental products can be transferred and tracked between them.
-
-In the :guilabel:`Rent Online` section, designate :guilabel:`Unavailability days` when pickup and
-return are not allowed.
+      Learn about the different rental product types, general configuration, and possible app
+      integrations.
 
 .. _rental/price-computing:
 
