@@ -182,6 +182,8 @@ To print commercial invoices, click the :icon:`fa-cog` :guilabel:`(gear)` icon, 
 
 .. _localizations/thailand/promptpay:
 
+.. _localization/thailand/promptpay:
+
 PromptPay QR code on invoices
 -----------------------------
 
