@@ -181,4 +181,4 @@ Presets are available in both the :ref:`POS register <pos/restaurant/orders>` an
 
 .. seealso::
   - :doc:`preparation`
-  - :doc:`../restaurant/online_food_delivery`
+  - :doc:`UrbanPiper order management for food delivery <../restaurant/urban_piper>`
