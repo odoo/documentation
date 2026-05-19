@@ -110,6 +110,8 @@ in the app, open the **contact form** of the company and under the :guilabel:`Sa
 .. tip::
    This information is used in the **tax invoice** PDF report and PND **tax report** export.
 
+.. _localization/thailand/promptpay:
+
 PromptPay QR code on invoices
 =============================
 
