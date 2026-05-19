@@ -136,8 +136,11 @@ Configuration
 
 .. _reference/external_api/api_key:
 
-API Key
--------
+API Keys
+--------
+
+Manual Key Generation
+~~~~~~~~~~~~~~~~~~~~~
 
 An API key must be set in the ``Authorization`` request header, as a bearer token.
 
@@ -170,6 +173,212 @@ securely. If the key is compromised or lost, delete it immediately and generate 
 Please refer to `OWASP's Secrets Management Cheat Sheet
 <https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html#secrets-management-cheat-sheet>`_
 for further guidance on the management of API keys.
+
+.. _reference/external_api/api_key_management:
+
+Programmatic Key Management
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Odoo provides RPC methods to generate and revoke API keys programmatically.
+
+Prerequisites
+*************
+
+By default, programmatic API key management is restricted to users with the *Settings*
+administration access right.
+
+To allow other users to manage API keys programmatically, navigate to
+:menuselection:`Settings --> Technical --> System Parameters` and set the parameter
+``base.enable_programmatic_api_keys`` to ``True``.
+
+Key Generation
+**************
+
+API keys can be generated with :meth:`res.users.apikeys.generate`.
+
+The method accepts the following parameters:
+
+- ``key`` (string): an existing valid API key
+- ``scope`` (string or ``null``): the scope assigned to the new key
+- ``name`` (string): a human-readable label
+- ``expiration_date`` (string): the expiration date formatted as ISO 8601
+  (e.g. ``"2026-05-19"``)
+
+A scope restricts where an API key can be used.
+
+The ``rpc`` scope is the generic scope used for RPC access through controllers with ``auth='bearer'``.
+
+The new key should generally use the same scope as the existing key. However, it is possible to create
+a scoped key from an unscoped key when needed. Unscoped keys use ``null`` as their scope value
+(``None`` in Python).
+
+The expiration date is validated against the maximum API key duration allowed by the roles assigned
+to the user.
+
+Use shorter expiration periods for high-privilege or externally exposed integrations, and longer
+periods only for tightly controlled internal systems.
+
+.. example::
+
+   .. tabs::
+
+      .. code-tab:: python
+
+         import requests
+
+         API_KEY = ...  # get it from a secure location
+
+         res_apikey = requests.post(
+             f"https://mycompany.example.com/json/2/res.users.apikeys/generate",
+             headers={"Authorization": f"bearer {API_KEY}"},
+             json={
+                 "key": API_KEY,
+                 "scope": None,
+                 "name": "Some service",
+                 "expiration_date": "2026-05-19",
+             },
+         )
+         res_apikey.raise_for_status()
+         new_apikey = res_apikey.json()
+
+         # store the new key securely
+
+      .. code-tab:: javascript
+
+         (async () => {
+             const API_KEY = ;  // get it from a secure location
+             const headers = {
+                 "Content-Type": "application/json",
+                 "Authorization": "bearer " + API_KEY,
+             }
+
+             const reqSearch = {
+                 method: "POST",
+                 headers: headers,
+                 body: JSON.stringify({
+                     "key": API_KEY,
+                     "scope": null,
+                     "name": "Some service",
+                     "expiration_date": "2026-05-19",
+                 }),
+             };
+             const resSearch = await fetch("https://mycompany.example.com/json/2/res.users.apikeys/generate", reqSearch);
+             if (!resSearch.ok) throw new Error(resSearch.json());
+             const new_apikey = await resSearch.json();
+
+             // store the new key securely
+         })();
+
+      .. code-tab:: bash
+
+         set -eu
+
+         API_KEY=
+
+         curl https://mycompany.example.com/json/2/res.users.apikeys/generate \
+             -X POST \
+             --oauth2-bearer $API_KEY \
+             -H "Content-Type: application/json" \
+             -d '{
+                 "key": "'"$API_KEY"'",
+                 "scope": null,
+                 "name": "Some service",
+                 "expiration_date": "2026-05-19"
+             }' \
+             --silent \
+             --fail
+
+         # store the new key securely
+
+The method returns the newly generated API key as a string that cannot be retrieved otherwise.
+
+By default, a user can generate up to 10 API keys programmatically. This limit can be configured with
+the system parameter ``base.programmatic_api_keys_limit``.
+
+Attempting to exceed the configured limit fails with an HTTP ``422 Unprocessable Content`` status
+code.
+
+Key Revocation
+**************
+
+API keys can be revoked with :meth:`res.users.apikeys.revoke`.
+
+The method accepts the following parameter:
+
+- ``key`` (string): the API key to revoke
+
+.. example::
+
+   .. tabs::
+
+      .. code-tab:: python
+
+         import requests
+
+         API_KEY = ...  # get it from a secure location
+
+         res_apikey = requests.post(
+             f"https://mycompany.example.com/json/2/res.users.apikeys/revoke",
+             headers={"Authorization": f"bearer {API_KEY}"},
+             json={
+                 "key": API_KEY,
+             },
+         )
+         res_apikey.raise_for_status()
+
+      .. code-tab:: javascript
+
+         (async () => {
+             const API_KEY = ;  // get it from a secure location
+             const headers = {
+                 "Content-Type": "application/json",
+                 "Authorization": "bearer " + API_KEY,
+             }
+
+             const reqSearch = {
+                 method: "POST",
+                 headers: headers,
+                 body: JSON.stringify({
+                     "key": API_KEY,
+                 }),
+             };
+             const resSearch = await fetch("https://mycompany.example.com/json/2/res.users.apikeys/revoke", reqSearch);
+             if (!resSearch.ok) throw new Error(resSearch.json());
+         })();
+
+      .. code-tab:: bash
+
+         set -eu
+
+         API_KEY=
+
+         curl https://mycompany.example.com/json/2/res.users.apikeys/revoke \
+             -X POST \
+             --oauth2-bearer $API_KEY \
+             -H "Content-Type: application/json" \
+             -d "{\"key\": \"$API_KEY\"}" \
+             --silent \
+             --fail
+
+If the key is valid, it is revoked immediately and becomes unusable for subsequent requests.
+Otherwise, the request fails with an HTTP ``403 Forbidden`` status code.
+
+Note that the key being revoked and the one given in the Authorization header don't need to match. A
+good practice during rotation is to authenticate with the new key to revoke the old key.
+
+Key Rotation Best Practices
+***************************
+
+Rotating API keys regularly reduces the risk of unauthorized access if a key is compromised.
+
+When rotating API keys:
+
+#. Generate a new key before revoking the previous one.
+#. Store the new key securely before deployment.
+#. Verify that all services are using the new key.
+#. Revoke the previous key only after the transition is complete.
+#. Use expiration dates appropriate for the security requirements of the system.
+#. Prefer dedicated API keys per service or integration to simplify auditing and revocation.
 
 .. _reference/external_api/access_rights:
 
