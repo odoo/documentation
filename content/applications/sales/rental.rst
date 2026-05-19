@@ -37,14 +37,43 @@ invoice customers from a single platform.
 
       Learn how to create a refundable deposit for rental products.
 
+<<<<<<< 499e8a64f5fbe87f2d217d16f4ec4135dcd3c672
       Discover how to rent services alongside products.
+||||||| bff8adfd76c40686b6551e15eb308231af965da1
+Settings
+========
+=======
+   .. card:: Product types
+      :target: rental/configure_products/product_types
+      :large:
+>>>>>>> 556d0f9be486210c1f290bc2440fd769a0d4d1a5
 
+<<<<<<< 499e8a64f5fbe87f2d217d16f4ec4135dcd3c672
    .. card:: Product types
       :target: rental/configure_products/product_type
       :large:
 
       Learn about the different rental product types, general configuration, and possible app
       integrations.
+||||||| bff8adfd76c40686b6551e15eb308231af965da1
+To configure transfer locations and rental item availability, go to :menuselection:`Rental app -->
+Configuration --> Settings`.
+
+.. image:: rental/rental/rental-settings.png
+   :alt: How the Settings page appears in the Odoo Rental application.
+
+In the :guilabel:`Rental` section, enable :guilabel:`Rental Transfers` to use stock deliveries and
+receipts for rental orders.
+
+If a rental business has :ref:`multiple locations <rental/configure_products/multi-location>`,
+rental products can be transferred and tracked between them.
+
+In the :guilabel:`Rent Online` section, designate :guilabel:`Unavailability days` when pickup and
+return are not allowed.
+=======
+      Learn about the different rental product types, general configuration, and possible app
+      integrations.
+>>>>>>> 556d0f9be486210c1f290bc2440fd769a0d4d1a5
 
 .. _rental/price-computing:
 
