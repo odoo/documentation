@@ -1,40 +1,123 @@
-====================
-Online food delivery
-====================
+==========
+UrbanPiper
+==========
 
 **UrbanPiper** is an order management system that integrates with multiple food delivery platforms.
 It consolidates orders from all connected platforms into a single interface, simplifying the
 delivery process.
 
-Supported providers:
+Supported providers and locations:
 
-- `Careem <https://www.careem.com>`_
-- `Cari <https://getcari.com/>`_
-- `ChowNow <https://www.chownow.com>`_
-- `Deliveroo <https://deliveroo.co.uk/>`_
-- `DoorDash <https://www.doordash.com>`_
-- `EatEasy <https://www.eateasy.ae/dubai>`_
-- `Glovo <https://glovoapp.com>`_
-- `Grubhub <https://www.grubhub.com>`_
-- `HungryPanda <https://www.hungrypanda.co>`_
-- `HungerStation <https://hungerstation.com>`_
-- `Jahez <https://www.jahez.net/>`_
-- `Just Eat <https://www.just-eat.ie/>`_
-- `Keeta <https://www.keeta-global.com/SA/en>`_
-- `Mrsool <https://mrsool.co>`_
-- `Ninja <https://ananinja.com/>`_
-- `NoonFood <https://www.noon.com>`_
-- `Postmates <https://www.postmates.com>`_
-- `Rafeeq <https://www.gorafeeq.com/en>`_
-- `Rappi <https://about.rappi.com/>`_
-- `SkipTheDishes <https://www.skipthedishes.com/>`_
-- `Swiggy <https://www.swiggy.com>`_
-- `Talabat <https://www.talabat.com>`_
-- `UberEats <https://www.ubereats.com>`_
-- `Wolt <https://wolt.com/>`_
-- `Zomato <https://www.zomato.com>`_
+.. tabs::
 
-.. _pos/online_food_delivery/configuration:
+   .. tab:: Global and multi-region providers
+
+      .. list-table::
+         :header-rows: 1
+         :stub-columns: 1
+         :widths: 25 75
+         :class: table-striped
+
+         * - Providers
+           - Locations
+         * - `Deliveroo <https://deliveroo.co>`_
+           - Belgium, France, Ireland, Italy, Kuwait, United Arab Emirates, United Kingdom
+         * - `DoorDash <https://www.doordash.com>`_
+           - Australia, Canada, United States
+         * - `Glovo <https://glovoapp.com/en>`_
+           - Armenia, Bosnia and Herzegovina, Bulgaria, Croatia, Côte d'Ivoire, Georgia, Italy,
+             Kazakhstan, Kenya, Kyrgyzstan, Moldova, Montenegro, Morocco, Nigeria, Poland, Portugal,
+             Romania, Serbia, Spain, Tunisia, Uganda, Ukraine
+         * - `HungryPanda <https://www.hungrypanda.co>`_
+           - Australia, Canada, France, Italy, Japan, New Zealand, Singapore, South Korea, United
+             Kingdom, United States
+         * - `Just Eat <https://www.just-eat.com>`_
+           - Austria, Belgium, Bulgaria, Canada, Denmark, Germany, Ireland, Israel, Italy,
+             Luxembourg, Poland, Slovakia, Spain, Switzerland, Netherlands, United Kingdom
+         * - `Keeta <https://www.keeta-global.com/AE/en>`_
+           - Bahrain, Brazil, Hong Kong (China), Kuwait, Qatar, Saudi Arabia, United Arab Emirates
+         * - `UberEats <https://www.ubereats.com>`_
+           - Argentina, Australia, Belgium, Canada, Chile, Costa Rica, Denmark, Dominican Republic,
+             Ecuador, El Salvador, Finland, France, Germany, Guatemala, Ireland, Italy, Japan,
+             Kenya, Luxembourg, Mexico, Netherlands, New Zealand, Norway, Panama, Poland, Portugal,
+             South Africa, Spain, Sri Lanka, Sweden, Switzerland, Taiwan (ROC), United Kingdom,
+             United States
+         * - `Wolt <https://wolt.com>`_
+           - Albania, Austria, Azerbaijan, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark,
+             Estonia, Finland, Georgia, Germany, Greece, Hungary, Iceland, Israel, Japan, Kazakhstan,
+             Kosovo, Latvia, Lithuania, Luxembourg, Malta, North Macedonia, Norway, Poland, Romania,
+             Serbia, Slovakia, Slovenia, Sweden, Uzbekistan
+
+   .. tab:: Regional and national providers: Americas
+
+      .. list-table::
+         :header-rows: 1
+         :stub-columns: 1
+         :widths: 25 75
+         :class: table-striped
+
+         * - Providers
+           - Locations
+         * - `Grubhub <https://www.grubhub.com>`_
+           - United States
+         * - `Postmates <https://www.postmates.com>`_
+           - Puerto Rico, United States
+         * - `ChowNow <https://get.chownow.com>`_
+           - Canada, United States
+         * - `Rappi <https://www.rappi.com>`_
+           - Argentina, Brazil, Chile, Colombia, Costa Rica, Ecuador, Mexico, Peru, Uruguay
+         * - `SkipTheDishes <https://www.skipthedishes.com/en>`_
+           - Canada (Alberta, British Columbia, Manitoba, New Brunswick, Newfoundland and Labrador,
+             Northwest Territories, Nova Scotia, Ontario, Prince Edward Island, Quebec,
+             Saskatchewan, Yukon)
+
+   .. tab:: Regional and national providers: Middle East and North Africa
+
+      .. list-table::
+         :header-rows: 1
+         :stub-columns: 1
+         :widths: 25 75
+         :class: table-striped
+
+         * - Providers
+           - Locations
+         * - `Careem <https://www.careem.com/en-AE>`_
+           - Egypt, Kuwait, Morocco, United Arab Emirates
+         * - `Cari <https://www.cariapp.com>`_
+           - Kuwait, Saudi Arabia, United Arab Emirates
+         * - `EatEasy <https://www.eateasy.ae>`_
+           - United Arab Emirates
+         * - `HungerStation <https://hungerstation.com/sa-en>`_
+           - Saudi Arabia (115+ regions)
+         * - `Jahez <https://www.jahez.net/index-en.html>`_
+           - Bahrain, Kuwait, Saudi Arabia
+         * - `Mrsool <https://mrsool.co>`_
+           - Bahrain, Egypt, Saudi Arabia
+         * - `Ninja <https://ananinja.com/sa/en>`_
+           - Bahrain, Kuwait, Qatar
+         * - `NoonFood <https://food.noon.com/uae-en>`_
+           - Saudi Arabia, United Arab Emirates
+         * - `Rafeeq <https://www.gorafeeq.com/en>`_
+           - Qatar
+         * - `Talabat <https://www.talabat.com/uae>`_
+           - Bahrain, Egypt, Iraq, Jordan, Kuwait, Oman, Qatar, Saudi Arabia, United Arab Emirates
+
+   .. tab:: Regional and national providers: Asia and Oceania
+
+      .. list-table::
+         :header-rows: 1
+         :stub-columns: 1
+         :widths: 25 75
+         :class: table-striped
+
+         * - Providers
+           - Locations
+         * - `Swiggy <https://www.swiggy.com>`_
+           - India
+         * - `Zomato <https://www.zomato.com>`_
+           - India
+
+.. _pos/urban_piper/configuration:
 
 Configuration
 =============
@@ -62,7 +145,7 @@ requirements are satisfied:
 - **Delivery platform reseller account:** A registered reseller account is required with each
   delivery platform to be integrated (e.g., Uber Eats, DoorDash, Careem, Deliveroo, Zomato).
 
-.. _online_food_delivery/credentials:
+.. _pos/urban_piper/credentials:
 
 UrbanPiper credentials
 ----------------------
@@ -75,7 +158,7 @@ UrbanPiper credentials
 #. `Go to your Atlas account <https://atlas.urbanpiper.com>`_ and retrieve your API key and username
    by navigating to :menuselection:`Settings --> API Access`.
 
-.. image:: online_food_delivery/urban-piper-api.png
+.. image:: urban_piper/urban-piper-api.png
    :alt: Atlas API access
 
 Point of Sale
@@ -90,7 +173,7 @@ Point of Sale
 #. Set up UrbanPiper:
 
    #. Fill in the :guilabel:`Username` and :guilabel:`Api Key` fields with your :ref:`UrbanPiper
-      credentials <online_food_delivery/credentials>`.
+      credentials <pos/urban_piper/credentials>`.
    #. Select the desired delivery providers in the :guilabel:`Food Delivery Platforms` field under
       the :guilabel:`Urban Piper Location` section (i.e., Zomato, Uber Eats).
 #. Save the settings.
@@ -105,7 +188,7 @@ Point of Sale
      platform.
    - The store is automatically named after your point of sale name.
 
-.. image:: online_food_delivery/create-store.png
+.. image:: urban_piper/create-store.png
    :alt: Food delivery connector settings
 
 Store timings
@@ -132,7 +215,7 @@ To make products available individually,
    - Optionally, set up the :guilabel:`Meal Type` field and enable the :guilabel:`Is Recommended`
      and :guilabel:`Is Alcoholic` buttons.
 
-.. image:: online_food_delivery/product-form.png
+.. image:: urban_piper/product-form.png
    :alt: where to make a single product available for delivery
 
 To make multiple products available for food delivery at once,
@@ -142,7 +225,7 @@ To make multiple products available for food delivery at once,
 #. Select the products.
 #. Enter the desired POS in the :guilabel:`Available on Food Delivery` column.
 
-.. image:: online_food_delivery/product-list.png
+.. image:: urban_piper/product-list.png
    :alt: Product list
 
 .. note::
@@ -173,7 +256,7 @@ Go live
 #. `Go to the Locations tab <https://atlas.urbanpiper.com/locations>`_ of your Atlas account.
 #. Select the location to activate, then click :guilabel:`Request to go Live`.
 
-   .. image:: online_food_delivery/go-live.png
+   .. image:: urban_piper/go-live.png
       :alt: Request to go live button in the locations tab of the Atlas account
 
 #. In the popup window:
@@ -183,7 +266,7 @@ Go live
       establish the connection between the platform and UrbanPiper.
    #. Click the :guilabel:`Request to Go Live` button.
 
-   .. image:: online_food_delivery/go-live-parameters.png
+   .. image:: urban_piper/go-live-parameters.png
       :alt: Go live parameters
 
    .. note::
@@ -206,7 +289,7 @@ orders, open the orders' list view by:
 #. Clicking :guilabel:`Review Orders` on the notification popup.
 #. Clicking the bag-shaped icon for online orders and :guilabel:`New`.
 
-   .. image:: online_food_delivery/cart-button.png
+   .. image:: urban_piper/cart-button.png
       :alt: Cart button
 
    .. note::
@@ -240,7 +323,7 @@ list view,
 #. Click the :guilabel:`Reject` button.
 #. Select one of the reasons from the popup window.
 
-.. image:: online_food_delivery/reject-order.png
+.. image:: urban_piper/reject-order.png
    :alt: Reject order pop-up
 
 .. important::
