@@ -77,11 +77,6 @@ Below are some common requests that the *Ask AI* agent can assist with:
 - Improve: *Improve this message draft*
 - Suggest: *Suggest next steps for the sales rep/support agent*
 
-.. important::
-   The standard *Ask AI* agent **cannot** make changes to the database. As such, it can open views
-   and display reports, but it cannot create leads or alter data. For more information on
-   customizing agents to complete tasks, see :ref:`Topics <ai/topics>`.
-
 .. toctree::
    :titlesonly:
 
