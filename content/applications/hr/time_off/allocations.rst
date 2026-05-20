@@ -5,9 +5,9 @@ Allocations
 Allocations are amounts of time off given to employees, either granted immediately or earned as the
 employee works, through an accrual plan.
 
-Once :doc:`time off type <../time_off/time_off_types>` and :ref:`accrual plans
-<time_off/accrual-plans>` have been configured, the next step is to *allocate*, or give, time off to
-employees.
+Once :doc:`time off type <../time_off/time_off_types>` and :doc:`accrual plan
+<../time_off/accrual_plans>` have been configured, the next step is to *allocate*, or give, time off
+to employees.
 
 The *Allocations* page of the **Time Off** app is **only** visible to users who have either *Time
 Off Officer* or *Administrator* access rights for the **Time Off** application. For more information
@@ -35,7 +35,7 @@ information:
   allocated to the employees.
 - :guilabel:`Allocation Type`: Select how the allocation is granted. Choose :guilabel:`Regular
   Allocation` if the time off is given immediately, or :guilabel:`Accrual Allocation` if the time
-  off is earned through an :ref:`accrual plan <time_off/accrual-plans>`.
+  off is earned through an :doc:`accrual plan <../time_off/accrual_plans>`.
 - :guilabel:`Accrual Plan`: If :guilabel:`Accrual Allocation` is selected for the
   :guilabel:`Allocation Type`, the :guilabel:`Accrual Plan` field appears. Using the drop-down menu,
   select the accrual plan associated with the allocation. An accrual plan is **required** when using
@@ -69,8 +69,8 @@ Accrual start date behavior
 ---------------------------
 
 If the :guilabel:`Start Date` is in the middle of an accrual period, Odoo adjusts it to the start or
-end of that period based on the *Accrued Gain Time* entered on the :ref:`accrual plan
-<time_off/accrual-plans>`.
+end of that period based on the *Accrued Gain Time* entered on the :doc:`accrual plan
+<../time_off/accrual_plans>`.
 
 .. example::
    - *At the start of the accrual period*: A :guilabel:`Start Date` of `06/16/25` applies from
