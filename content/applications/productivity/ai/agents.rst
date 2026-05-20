@@ -86,11 +86,17 @@ responses.
 
 The following topics are preconfigured in the **AI** app:
 
-- :guilabel:`Natural Language Search`: Supports the interpretation of a user query to open the
-  appropriate Odoo view with a set of tools necessary to perform the search. Natural language
-  queries can also include time-based grouping instructions. This allows agents to group results by
-  time intervals such as day, month, or year when querying records.
+- :guilabel:`View Builder`: Supports the interpretation of a user query to open the appropriate Odoo
+  view with a set of tools necessary to perform the search. Natural language queries can also
+  include time-based grouping instructions. This allows agents to group results by time intervals
+  such as day, month, or year when querying records.
 - :guilabel:`Information retrieval`: A collection of tools to retrieve information about the models.
+- :guilabel:`Update Records`: Tools to update records.
+- :guilabel:`Create Records`: Tools to create records.
+- :guilabel:`Generate Images`: Collection of tools to support image generation. Load this topic when
+  the user asks to generate/enhance an image.
+- :guilabel:`Web Search`: Enable the Agent to explore the internet in real time.
+- :guilabel:`Website Builder`: Tools for editing Odoo website pages.
 - :guilabel:`Create Leads`: A collection of tools to support automated lead creation. This topic is
   **only** available if the **CRM** app is installed.
 
