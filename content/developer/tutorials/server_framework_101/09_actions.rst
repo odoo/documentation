@@ -1,6 +1,6 @@
-==================================
+=================================
 Chapter 9: Ready For Some Action?
-==================================
+=================================
 
 So far we have mostly built our module by declaring fields and views. We just introduced business
 logic in the :doc:`previous chapter <08_compute_onchange>` thanks to
@@ -93,7 +93,7 @@ Finally, a public method should always return something so that it can be called
 When in doubt, just ``return True``.
 
 There are hundreds of examples in the Odoo source code. One example is this
-`button in a view <https://github.com/odoo/odoo/blob/cd9af815ba591935cda367d33a1d090f248dd18d/addons/crm/views/crm_lead_views.xml#L9-L11>`__
+`button in a view <https://github.com/odoo/odoo/blob/55cccddeb12a2096730e4fadc84c52fa838b1aec/addons/crm/views/crm_lead_views.xml#L9-L11>`__
 and its
 `corresponding Python method <https://github.com/odoo/odoo/blob/cd9af815ba591935cda367d33a1d090f248dd18d/addons/crm/models/crm_lead.py#L746-L760>`__
 
