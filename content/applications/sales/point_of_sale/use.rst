@@ -4,8 +4,13 @@
 Workflow
 ========
 
-This section covers the essential daily operations of the Point of Sale, from initial setup and
-configuration to managing sales transactions, customer records, and receipt/invoice handling.
+This page covers the basic setup and typical daily operations of the Point of Sale, including
+opening the POS register and processing sales transactions, registering and assigning customers,
+handling returns and refunds, managing the cash register, and closing the POS register.
+
+.. seealso::
+   - :doc:`use/receipts`
+   - :doc:`use/pos_invoices`
 
 .. _pos/use/create-pos:
 
@@ -110,28 +115,25 @@ To sell products in the :ref:`POS register <pos/use/open-register>`, follow thes
    - To add a discount, click :guilabel:`%`, then enter the discount value using the numpad.
    - To modify the product price, click :guilabel:`Price`, then enter the new amount using the
      numpad.
-#. Optionally, add a :ref:`customer <pos/use/customers>` to the order.
-#. Once the order is complete, click :guilabel:`Payment` to proceed to checkout on the
-   :guilabel:`Payment` screen.
-#. Select the :doc:`payment method <payment_methods>`.
-#. Optionally, enable the :icon:`fa-file-text-o` :guilabel:`Invoice` if the customer requests an
-   :doc:`invoice <use/pos_invoices>`. If no customer is assigned to the order, :ref:`select an
-   existing customer or create a new one <pos/use/customers>`.
-#. Enter the amount if needed, then click :guilabel:`Validate`.
-#. Optionally, click :icon:`fa-print` :guilabel:`Print Full Receipt` to print the :doc:`receipt
-   <use/receipts>`, or click the :icon:`fa-paper-plane` (:guilabel:`send`) icon to send the receipt
-   via email.
+#. Optionally, add a :ref:`customer <pos/use/customers>` or :ref:`note <pos/use/notes>` to the
+   order.
+#. Once the order is complete, click :guilabel:`Payment` to proceed to the payment screen.
+#. Select the :doc:`payment method <payment_methods>` then enter the amount, if needed.
+   Alternatively, enter the amount to have the first available payment method selected.
+#. Click :guilabel:`Validate`.
 
-To move on to the next order, click :guilabel:`New Order` on the :guilabel:`Receipt` screen.
+Once payment is successful, the :doc:`receipt <use/receipts>` can be printed or sent to the
+customer.
 
-.. note::
-   On the :guilabel:`Payment` screen, starting to enter the amount due automatically selects the
-   first available :doc:`payment method <payment_methods>`.
+To move on to the next order, click :guilabel:`New Order` on the receipt screen.
+
+.. tip::
+   The order in which payment methods are shown on the payment screen can be changed in
+   :menuselection:`Point of Sale --> Configuration --> Payment methods` by dragging and dropping
+   the relevant payment method(s).
 
 .. seealso::
-   - :doc:`payment_methods`
-   - :doc:`use/receipts`
-   - :doc:`use/pos_invoices`
+   :doc:`Issue invoices for registered customers <use/pos_invoices>`
 
 .. _pos/use/customers:
 
@@ -242,22 +244,51 @@ To access an order in the register, click it, then click :guilabel:`Load Order`.
 Return and refund products
 ==========================
 
-To process a refund for a returned product from the :ref:`POS register <pos/use/open-register>`,
-follow these steps:
+The steps to process a refund from :ref:`the POS register <pos/use/open-register>` depend on whether
+the refund needs to be :ref:`based on an order <pos/use/refund-order-based>` or whether you want to
+process a :ref:`standalone refund not based on an order <pos/use/refund-standalone>`. In both cases,
+the amount can be refunded or a gift card issued for the refunded amount.
 
-#. Click :guilabel:`Orders` to access the :ref:`Orders overview <pos/use/orders>`.
-#. Set the :guilabel:`Active` dropdown menu to :guilabel:`Paid`.
-#. Select the relevant order from the list.
-#. Select the items and use the numpad to set the refund quantity, then click :guilabel:`Refund`.
-#. Choose how to handle the refund:
+.. _pos/use/refund-order-based:
 
-   - To refund the customer, select a payment method on the :guilabel:`Payment` screen, then click
-     :guilabel:`Validate`.
-   - To issue a :ref:`gift card <ewallet_gift/gift-cards>` for the refund amount, click
-     :guilabel:`Back`. A new order containing the returned items (with negative quantities) is
-     created automatically. Then, add the gift card from the product list to the order; its value
-     is automatically set to match the total refund amount. Click :guilabel:`Payment`, then
-     :guilabel:`Validate` the refund.
+To initiate a refund based on an order, follow these steps:
+
+#. Click the :icon:`fa-ellipsis-v` (:guilabel:`vertical ellipsis`) icon in the POS register.
+#. Select :guilabel:`Refund`. The orders overview opens, with all :guilabel:`Paid` orders displayed.
+#. Select an order; if relevant, select :guilabel:`Review`.
+#. Select the product(s) to refund and enter the quantity to refund.
+#. Click :guilabel:`Refund` to open the payment screen.
+#. Choose how to :ref:`process the refund <pos/use/refund-process>`.
+
+.. tip::
+   Alternatively, access the list of paid orders by clicking :guilabel:`Orders` in the POS interface
+   header and selecting :guilabel:`Paid` from the :guilabel:`Active` dropdown menu.
+
+.. _pos/use/refund-standalone:
+
+To initiate a standalone refund *not* based on an order, follow these steps:
+
+#. Select the relevant product from the POS register.
+#. Click :guilabel:`Qty` to enter the quantity to refund, then click :guilabel:`+/-` to set it as a
+   negative quantity.
+#. Click :guilabel:`Payment` to open the payment screen.
+#. Choose how to :ref:`process the refund <pos/use/refund-process>`.
+
+.. tip::
+   To facilitate management of standalone returns, create a :doc:`preset <extra/presets>` with only
+   the :guilabel:`Return mode` enabled. When this preset is selected from the POS register, the
+   quantity of any item added to the cart is set to negative.
+
+.. _pos/use/refund-process:
+
+To process a refund initiated from the POS register:
+
+- To refund the customer, on the payment screen, select a payment method, then click
+  :guilabel:`Validate`.
+- To issue a gift card for the refund amount, on the payment screen, click :guilabel:`Back`. A new
+  order containing the returned items (with negative quantities) is created automatically. Then, add
+  the gift card from the product list to the order; its value is automatically set to match the
+  total refund amount. Click :guilabel:`Payment`, then :guilabel:`Validate` the refund.
 
 Once the return is validated, a corresponding credit note is generated, referencing the original
 :doc:`receipt <use/receipts>` or :doc:`invoice <use/pos_invoices>`.
@@ -266,18 +297,9 @@ Once the return is validated, a corresponding credit note is generated, referenc
    Additional products cannot be added to the cart until the refund is validated.
 
 .. tip::
-   Alternatively, refunds can be processed by:
-
-   - Clicking the :icon:`fa-ellipsis-v` (:guilabel:`vertical ellipsis`) icon in the POS register,
-     then :guilabel:`Refund`. Select an order, enter the number of items to refund, then click
-     :guilabel:`Refund`.
-   - Selecting products from the POS register, clicking :guilabel:`Qty` to enter the quantity to
-     refund, then clicking :guilabel:`+/-` to set it as a negative quantity. Continue with the
-     payment process.
-   - Creating a :doc:`preset <extra/presets>` with only the :guilabel:`Return mode` enabled. In the
-     POS register, click the configured preset.
-   - Accessing the POS dashboard, navigating to :menuselection:`Point of Sale --> Orders -->
-     Orders`, selecting an order, and clicking :guilabel:`Return Products`.
+   Refunds can also be initiated and processed from the backend. To do so, go to
+   :menuselection:`Point of Sale --> Orders --> Orders`, select an order, then click
+   :guilabel:`Return Products`. Note that this method can only be used to refund the entire order.
 
 .. seealso::
    :doc:`/applications/finance/accounting/customer_invoices/credit_notes`
