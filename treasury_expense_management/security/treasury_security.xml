@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Categories -->
+        <record id="module_category_treasury" model="ir.module.category">
+            <field name="name">إدارة الخزينة والعهدة</field>
+            <field name="description">إدارة الخزائن والعهد ومطالبات السداد</field>
+            <field name="sequence">30</field>
+        </record>
+
+        <!-- Groups -->
+        <record id="group_treasury_user" model="res.groups">
+            <field name="name">مستخدم</field>
+            <field name="category_id" ref="module_category_treasury"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="group_treasury_manager" model="res.groups">
+            <field name="name">مدير</field>
+            <field name="category_id" ref="module_category_treasury"/>
+            <field name="implied_ids" eval="[(4, ref('group_treasury_user'))]"/>
+        </record>
+
+        <record id="group_treasury_accountant" model="res.groups">
+            <field name="name">محاسب الخزينة</field>
+            <field name="category_id" ref="module_category_treasury"/>
+            <field name="implied_ids" eval="[(4, ref('group_treasury_user'))]"/>
+        </record>
+
+    </data>
+</odoo>
