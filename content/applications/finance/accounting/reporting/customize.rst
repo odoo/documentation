@@ -3,8 +3,8 @@ Custom reports
 ==============
 
 Odoo comes with a powerful and easy-to-use reporting framework. The engine allows you to create new
-reports, such as **tax reports**, or **balance sheets** and **income statements** with **specific
-groupings** and **layouts**.
+reports, such as :ref:`tax reports <accounting/reporting/custom_tax_report>`, or **balance sheets**
+and **income statements** with **specific groupings** and **layouts**.
 
 .. important::
    Activate the :ref:`developer mode <developer-mode>` to access the accounting report creation
@@ -313,3 +313,33 @@ use different **expression** labels.
 
 When using the **period comparison** feature found under the :guilabel:`Options` tab of an
 accounting report, all columns are repeated in and for each period.
+
+.. _accounting/reporting/custom_tax_report:
+
+Tax report
+==========
+
+.. tip::
+   All technical terms and functions of Odoo's reports engine are explained in the previous sections
+   of this page.
+
+To create a custom **tax report**, open the **Accounting** app and navigate to
+:menuselection:`Configuration --> Accounting Reports`, then click :guilabel:`New`. Enter a **name**
+for your report, select a :ref:`Root Report <_customize-reports/root>`, pick :guilabel:`Country
+Matches` from the :guilabel:`Availibity` dropdown menu, and then select the country matching your
+company from the :guilabel:`Country` dropdown menu.
+
+Click :guilabel:`Add a line` to create a parent line. Once created, click on that parent line. From
+this new view form, click :guilabel:`Add a line` again to create a child line (or **Expression**),
+and enter a name for that expression. In the :guilabel:`Definition`, select a :guilabel:`Computation
+Engine` for that expression depending on the following scenarios:
+
+- Scenario A: Your company uses tax grids
+  - Select :guilabel:`Tax Tags` as computation. Odoo uses this field to link the report line to your
+    taxes.
+
+- :guilabel:`Tax Tags`: Use this when a line needs to pull money totals directly from your customer
+  invoices or vendor bills.
+- :guilabel:`Aggregate Other Formulas`: Use this when a line should not look at transactions, but
+  instead needs to calculate a subtotal or final total using *other lines* on the report.
+
