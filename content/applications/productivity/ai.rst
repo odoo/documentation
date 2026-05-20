@@ -85,6 +85,7 @@ Below are some common requests that the *Ask AI* agent can assist with:
    ai/default_prompts
    ai/document_sort
    ai/fields
+   ai/generate_images
    ai/live-chat
    ai/server-actions
    ai/email-templates
