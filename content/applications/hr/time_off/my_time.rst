@@ -54,7 +54,7 @@ point. On the right side of the time off summary blocks, there is a :guilabel:`B
 
 .. note::
    The :guilabel:`Balance at the (date)` field **only** appears if the user is accruing time off
-   through an :ref:`accrual plan <time_off/accrual-plans>`.
+   through an :doc:`accrual plan <../time_off/accrual_plans>`.
 
 The current date is the default date selected. Navigate to the desired date, and Odoo displays the
 time off balances the user should have on that date. This takes into account all time off currently
