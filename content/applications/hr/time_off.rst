@@ -13,7 +13,7 @@ individuals, teams, or the whole company, and :ref:`approve time off requests
 <time_off/manage-time-off>`.
 
 Detailed :doc:`reports <time_off/reporting>` can be run to see how much time off (and what kinds of
-time off) are being used, :ref:`accrual plans <time_off/accrual-plans>` can be created, and
+time off) are being used, :doc:`accrual plans <time_off/accrual_plans>` can be created, and
 :ref:`public holidays <time_off/public-holidays>` can be set.
 
 .. note::
@@ -230,187 +230,6 @@ Display option section
    :alt: The lower half of the time off type form, with all the information filled out for sick time
          off.
 
-.. _time_off/accrual-plans:
-
-Accrual plans
--------------
-
-Some time off is earned through an accrual plan, meaning that for every specified amount of time an
-employee works (hour, day, week, etc), they earn or *accrue* a specified amount of time off.
-
-.. example::
-   If an employee accrues a vacation day for every week they work, they would earn 0.2 vacation days
-   for each hour they work. At the end of a forty hour work week, they would earn one whole vacation
-   day (8 hours).
-
-Create accrual plan
-~~~~~~~~~~~~~~~~~~~
-
-To create a new accrual plan, navigate to :menuselection:`Time Off app --> Configuration --> Accrual
-Plans`. Then, click the :guilabel:`New` button, which reveals a blank accrual plan form.
-
-Enter the following information on the form:
-
-- :guilabel:`Name`: Enter the accrual plan name.
-- :guilabel:`Accrued Gain Time`: Select when the employee begins to accrue time off, either
-  :guilabel:`At the start of the accrual period` or :guilabel:`At the end of the accrual period`.
-- :guilabel:`Carry-Over Time`: Select when the employee received previously earned time. The options
-  are:
-
-  - :guilabel:`At the start of the year`: Select this if the accrual rolls over on January 1 of the
-    upcoming year.
-  - :guilabel:`At the allocation date`: Select this if the accrual rolls over as soon as time is
-    allocated to the employee.
-  - :guilabel:`Other`: Select this option if neither of the other two options are applicable. When
-    selected, a :guilabel:`Carry-Over Date` field appears. Select the date using the two drop-down
-    menus, one for the day and one for the month.
-
-- :guilabel:`Based on worked time`: Enable this option if time off accrual is determined by the
-  employee's worked hours. Days **not** considered as worked time do **not** contribute to the
-  accrual plan in Odoo.
-
-  .. example::
-     An employee is granted time off from an accrual plan configured to accrue one day of vacation
-     for every five days worked. The accrual plan is based on the employee's worked time (the
-     :guilabel:`Based on worked time` checkbox is ticked), which means they **only** earn vacation
-     time for the five weekdays they work, *not* the entire seven day week period.
-
-     The employee works standard 40-hour weeks. According to the accrual plan, they should earn four
-     vacation days per month.
-
-     The employee takes five days off using a :ref:`time off type <time_off/time-off-types>` with
-     the :guilabel:`Kind of Time Off` set as an :guilabel:`Absence`. Because the plan grants
-     vacation only for worked time, those five days do not count toward accrual.
-
-     As a result, the employee accrues only three vacation days that month instead of four.
-
-- :guilabel:`Milestone Transition`: This field is **only** visible after a minimum of two
-  :ref:`rules <time_off/rules>` have been configured on the accrual plan. This selection determines
-  when employees move up to a new milestone. If they qualify to change milestones in the middle of a
-  pay period, decide whether the employee changes milestones :guilabel:`Immediately` or
-  :guilabel:`After this accrual's period` (after the current pay period).
-- :guilabel:`Company`: This field **only** appears in a multi-company database. Using the drop-down
-  menu, select the company the accrual plan applies to. If left blank, the accrual plan is available
-  for all companies.
-
-.. image:: time_off/accrual-plan-form.png
-   :alt: An accrual plan form with all the entries filled out.
-
-.. _time_off/rules:
-
-Rules
-*****
-
-Rules must be created in order for employees to accrue time off from the accrual plan.
-
-To create a new rule, click the :guilabel:`New Milestone` button in the gray :guilabel:`Rules`
-section, and a :guilabel:`Create Milestone` modal form appears.
-
-Fill out the following fields on the form:
-
-.. _time_off/accrue:
-
-- :guilabel:`Employee accrue`: Select the parameters for earned time off in this section.
-
-  First, select either :guilabel:`Days` or :guilabel:`Hours` for the increment of accrued time using
-  the drop-down menu.
-
-  Next, enter the numerical amount of the selected parameter that is accrued. The numerical format
-  is `X.XXXX`, so that partial days or hours can also be configured.
-
-  Last, select how often the time is accrued using the drop-down menu. The default options are
-  :guilabel:`Hourly`, :guilabel:`Daily`, :guilabel:`Weekly`, :guilabel:`Twice a month`,
-  :guilabel:`Monthly`, :guilabel:`Twice a year`, and :guilabel:`Yearly`.
-
-  Depending on which option is selected, additional fields may appear. For example, if
-  :guilabel:`Twice a month` is selected, two additional fields appear, to specify the two days of
-  each month the milestone occurs.
-- :guilabel:`Cap accrued time`: If there is a maximum amount of time the employee can accrue with
-  this plan, enable this option.
-
-  When enabled, two additional fields appear to the right of the checkbox. The second field is
-  populated with either :guilabel:`Days` or :guilabel:`Hours`, matching the selection made in the
-  :ref:`Employee Accrue <time_off/accrue>` section.
-
-  Enter a numerical value in the first field to specify the maximum amount of time that can be
-  accrued, in the specified increments.
-- :guilabel:`Start Accruing`: Enter the number and value of the time period that must pass before
-  the employee starts to accumulate time off.
-
-  Use the first field to enter a numerical value, then set the second field to the desired time
-  increment (either :guilabel:`Days`, :guilabel:`Months`, or :guilabel:`Years`).
-- :guilabel:`Carry over`: select how any unused time off is handled. The options are either:
-
-  - :guilabel:`None. Accrued time reset to 0`: Any unused time off is lost.
-  - :guilabel:`All accrued time carried over`: All unused time off is rolled over to the next
-    calendar year.
-  - :guilabel:`Carry over with a maximum`: Unused time off is rolled over to the next calendar year,
-    but there is a cap. An :guilabel:`Up to` field appears if this is selected.
-
-    Enter the maximum number of :guilabel:`Hours` or :guilabel:`Days` that can roll over to the
-    following year. The presented time increment is determined by how the :ref:`Employee Accrue
-    <time_off/accrue>` section is configured.
-
-    Any time off beyond this parameter is lost.
-
-.. important::
-   If the :guilabel:`Carry over` field is set to :guilabel:`None. Accrued time reset to 0`, that
-   rule *overrides* the :guilabel:`Carry-Over Time` set on the accrual plan.
-
-   If a company creates an accrual plan, granting employees time off :guilabel:`At the start of the
-   accrual period` (i.e., the beginning of the year), and sets the :guilabel:`Carry-Over Time` on
-   the *accrual plan* to :guilabel:`At the start of the year`, it allows unused vacation time to
-   rollover to the following year.
-
-   Then, the company adds rules to the accrual plan, allocating five days of vacation, annually, on
-   the first of the year (one week of vacation allocated on January 1st).
-
-   If the :guilabel:`Carry over` field is set to :guilabel:`None. Accrual time reset to 0` on the
-   :guilabel:`Create Milestone` pop-up for, any unused vacation time *does not* carry over, even
-   though on the :guilabel:`Accrual Plan` form, the :guilabel:`Carry-Over Time` is set to
-   :guilabel:`At the start of the year`.
-
-   The carry over set on the *rule* takes precedence over the carry over set on the *accrual plan
-   form*.
-
-- :guilabel:`Milestone cap`: Tick this checkbox to set a limit on the total amount of time that can
-  be accrued every calendar year. Enter the total maximum number of :guilabel:`Hours` or
-  :guilabel:`Days` the employee can accrue during a year. The presented time increment is determined
-  by how the :ref:`Employee Accrue <time_off/accrue>`  section is configured.
-
-  If the :guilabel:`Carry over` field is set to :guilabel:`None. Accrued time reset to 0`, the
-  :guilabel:`Milestone cap` field does not appear.
-- :guilabel:`Carry Over Validity`: Tick this checkbox to set a time-limit on how long the employee
-  has to use any rolled over time off. First, set the second field to the desired time-period using
-  the drop-down menu, either :guilabel:`Days` or :guilabel:`Months`.
-
-  Next, enter the maximum number of :guilabel:`Days` or :guilabel:`Months` the employee has to use
-  their rolled over time off. After that time period passes, any unused rolled over time will
-  expire.
-
-  If the :guilabel:`Carry over` field is set to :guilabel:`None. Accrued time reset to 0`, the
-  :guilabel:`Carry Over Validity` field does not appear.
-
-Once the form is completed, click :guilabel:`Save & Close` to save the :guilabel:`Create Milestone`
-form, and close the modal, or click :guilabel:`Save & New` to save the form and create another
-milestone. Add as many milestones as desired.
-
-.. example::
-   This milestone form is configured so the employee earns five days a year. They start to earn this
-   time yearly, on January 1st.
-
-   The employee can never accrue more than 120 days of time off with this accrual plan. Anytime they
-   have 120 days banked, they will stop accruing more time off.
-
-   Additionally, they can roll over up to 100 days of time off to the next year, and they have three
-   months to use that rollover time.
-
-   Note that due to the :guilabel:`Capped accrued time` of 120 days, the employee cannot carry over
-   any time off that exceeds 120 days in total.
-
-   .. image:: time_off/milestone.png
-      :alt: A milestone form with all the entries filled out.
-
 .. _time_off/public-holidays:
 
 Public holidays
@@ -570,6 +389,7 @@ the time off request in a modal, click the :guilabel:`View` button.
 
 .. seealso::
    - :doc:`time_off/allocations`
+   - :doc:`time_off/accrual_plans`
    - :doc:`time_off/request_time_off`
    - :doc:`time_off/my_time`
    - :doc:`time_off/management`
@@ -579,6 +399,7 @@ the time off request in a modal, click the :guilabel:`View` button.
    :titlesonly:
 
    time_off/allocations
+   time_off/accrual_plans
    time_off/request_time_off
    time_off/my_time
    time_off/management
