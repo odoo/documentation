@@ -21,7 +21,7 @@ The *one-step inventory flow* is the simplest option, with minimal handling step
 traceability. In this setup, products move directly from vendors to stock or from stock to
 customers, with Odoo only tracking when items enter or leave the warehouse. This makes it ideal for
 businesses with high-volume, low-risk products or fast-moving operations where additional validation
-steps aren’t necessary.
+steps are not necessary.
 
 - **Receiving**: Products go directly into stock.
 - **Shipping**: Products ship directly from stock.
@@ -160,6 +160,5 @@ needs.
    daily_operations/delivery_three_steps
    daily_operations/putaway
    daily_operations/storage_category
-   daily_operations/stock_warehouses
    daily_operations/owned_stock
    daily_operations/dropshipping
