@@ -17,7 +17,9 @@ To create slots for an event, the feature must be enabled on an event form. To d
 <../event_setup/create_events>`.
 
 On the event form, select the :guilabel:`Multiple Slots` checkbox. A :guilabel:`# Slot(s)` link
-appears next to the field, displaying the total number of slots for the event.
+appears next to the field, displaying the total number of slots for the event. A :icon:`fa-calendar`
+:guilabel:`Slots` smart button also appears at the top of the event form, similarly displaying the
+total number of slots.
 
 Additionally, under the *Tickets* tab, a :guilabel:`Maximum per slot` column appears on event
 registration lines. This option allows the user to specify the maximum number of registrations
@@ -32,11 +34,12 @@ the registration webpage.
 Viewing slots
 =============
 
-To access a dashboard of slots, click the :guilabel:`# Slot(s)` link next to the :guilabel:`Multiple
-Slots` checkbox on the event form. By default, this opens a :icon:`fa-calendar`
-:guilabel:`(Calendar)` view with clickable entries for valid event dates, allowing users to
-interactively :ref:`create <multi-slots/create-slots>` as well as :ref:`delete or modify
-<multi-slots/delete-modify-slots>` slots.
+To access a dashboard of slots, click the :icon:`fa-calendar` :guilabel:`Slots` smart button, or the
+:guilabel:`# Slot(s)` link next to the :guilabel:`Multiple Slots` checkbox on the event form.
+
+By default, this opens a :icon:`fa-calendar` :guilabel:`(Calendar)` view with clickable entries for
+valid event dates, allowing users to interactively :ref:`create <multi-slots/create-slots>` as well
+as :ref:`delete or modify <multi-slots/delete-modify-slots>` slots.
 
 Alternatively, users can also see a list of all created slots via the :icon:`oi-view-list`
 :guilabel:`(List)` view.
@@ -51,8 +54,8 @@ Creating slots
    .. tab:: Calendar
 
       To create slots in the calendar view, click on a calendar entry, or click and drag to select
-      multiple entries. A :guilabel:`# Selected` appears at the top of the calendar, displaying the
-      selected slots.
+      multiple entries. A :guilabel:`# Selected` label appears at the top of the calendar,
+      displaying the selected slots.
 
       Then, click the :guilabel:`Add` button at the top of the calendar. On the resulting popover,
       select the start and end time of the slot. Next, specify the :guilabel:`Timezone` and an
@@ -119,7 +122,7 @@ Registering for slots as an attendee
 ====================================
 
 The process of registering for a slot as an attendee is similar to :doc:`registering for regular
-events <../promote_monetize/sell_tickets>` via the *Website* app.
+events <../promote_monetize/sell_tickets>` via the **Website** app.
 
 To register, visitors on the website navigate to the desired event. Next, they click the
 :guilabel:`Register` button to open a :guilabel:`Slots` pop-up window. Then, they select their
