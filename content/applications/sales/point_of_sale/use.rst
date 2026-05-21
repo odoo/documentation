@@ -272,6 +272,12 @@ To process a refund based on an order, follow these steps:
    - Refunds can also be initiated and processed from the backend. To do so, go to
      :menuselection:`Point of Sale --> Orders --> Orders`, select an order, then click
      :guilabel:`Return Products`. Note that this method can only be used to refund the entire order.
+   - It is possible to process order-based refunds through an :doc:`Adyen
+     <payment_methods/terminals/adyen>` or :doc:`Stripe <payment_methods/terminals/stripe>`
+     :ref:`payment terminal <pos/terminals/configuration>`. However, only payments originally
+     processed through the same provider's terminal can be refunded this way. Refunds cannot be
+     issued for non-Adyen or non-Stripe transactions using an Adyen or Stripe terminal.
+     :ref:`pos/use/refund-standalone` with Adyen or Stripe are not supported.
 
 .. _pos/use/refund-standalone:
 

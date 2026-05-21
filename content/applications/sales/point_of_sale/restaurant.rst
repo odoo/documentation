@@ -461,11 +461,15 @@ To allow tipping in a POS, go to the :ref:`POS settings <pos/use/settings>`, scr
 :guilabel:`Payment` section, enable :guilabel:`Tips`, and click :guilabel:`Save`.
 
 .. important::
-   - The :guilabel:`Add tip after payment` setting only works for a POS in the United States
-     of America with an :doc:`Adyen <payment_methods/terminals/adyen>` or a :doc:`Stripe
-     <payment_methods/terminals/stripe>` :ref:`payment terminal <pos/terminals/configuration>`.
-   - The :guilabel:`Add tip through payment terminal (Adyen)` setting only works with an
-     :ref:`Adyen <adyen/tips>` terminal.
+   Depending on your hardware setup and geographical location, enable the following options as
+   relevant:
+
+   - :guilabel:`Add tip through payment terminal (Adyen)`: Only works with an :doc:`Adyen
+     <payment_methods/terminals/adyen>` card terminal.
+   - :ref:`Add tip after payment <pos/restaurant/tips-after-payment>`: Only works for a POS in the
+     United States of America with an :doc:`Adyen <payment_methods/terminals/adyen>` or a
+     :doc:`Stripe <payment_methods/terminals/stripe>` :ref:`payment terminal
+     <pos/terminals/configuration>`.
 
 .. note::
    Saving the :guilabel:`Tips` setting automatically fills the :guilabel:`Tip product` field with
@@ -490,6 +494,8 @@ To process a tip during :ref:`payment <pos/restaurant/bills/payment>`, follow th
    <payment_methods>` for the order first. Then, select a payment method for the tip, click
    :icon:`fa-heart` :guilabel:`Tip`, add the tip amount, and click :guilabel:`Confirm`.
    Finally, :guilabel:`Validate` the payment.
+
+.. _pos/restaurant/tips-after-payment:
 
 Tip after payment (US only)
 ---------------------------
