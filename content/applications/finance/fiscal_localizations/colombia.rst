@@ -23,8 +23,6 @@ solution with Odoo:
   by completing the certification process required by the |DIAN|.
 
 .. seealso::
-   - For more information on how to complete the certification process for the |DIAN| module, review
-     the following `webinar <https://www.youtube.com/watch?v=l0G6iDc7NQA>`_
    - `Smart Tutorial - Colombian Localization
      <https://www.odoo.com/slides/smart-tutorial-localizacion-de-colombia-132>`_
    - :doc:`Documentation on e-invoicing's legality and compliance in Colombia
@@ -175,12 +173,54 @@ scroll to the :guilabel:`Colombian Electronic Invoicing` section. Then, follow t
 .. note::
    In a multi-company database, each company can have its own certificate.
 
-.. seealso::
+.. also::
    For electronic invoicing configurations using the Carvajal solution, review the following video:
    `Configuración de Facturación Electrónica - Localización de Colombia
    <https://www.youtube.com/watch?v=bzweMwTEbfY&list=PL1-aSABtP6ABxZshems3snMjx7bj_7ZsZ&index=3>`_.
 
 .. _localization/colombia/master-data:
+
+Automatic DIAN Enablement
+-------------------------
+
+Odoo automates the |DIAN| enablement process to become an electronic invoicer using the `DIAN Own Software
+<https://micrositios.dian.gov.co/sistema-de-facturacion-electronica/como-puedes-facturar-electronicamente/>`_ solution,
+sending the requested number of valid customer invoices, credit notes and debit notes to the DIAN
+certification environment.
+
+To start this process it is necessary to complete the steps of the :ref:`electronic invoicing main configurations
+<localization/colombia/einvoice-configuration>`.
+
+.. tip::
+   Always run the enablement process in a **test database**. This will also serve as the environment
+   for continued electronic invoicing testing before going to production.
+
+To begin the process, go to :menuselection:`Accounting --> Configuration --> Settings` and complete the
+following steps:
+
+#. Enable the :guilabel:`Test Environment` checkbox.
+#. Enable the :guilabel:`Activate Certification Process` checkbox.
+#. Enter the number of documents requested by the |DIAN| for each type of document
+#. Click :guilabel:`Start Enablement Process`.
+
+.. note::
+   The exact number of documents required by the |DIAN| is shown in the portal when you register
+   your operation mode.
+
+Odoo will automatically generate the necessary journals, products, and the required documents, which are
+submitted to the |DIAN|'s certification environment.
+
+When the process is complete, click :guilabel:`Open` to review the generated documents. You can check each
+document's validation status under its :guilabel:`DIAN` tab.
+
+.. important::
+   Confirm in the |DIAN| portal that the company status has changed to **Enabled** before
+   proceeding to production. 
+   - If this is the case, the process has been finished successfully.
+   - If the company has not been **Enabled**, the process can be repeated until successfully getting enabled.
+
+.. seealso::
+   - For a demonstration of the process, review the following `video <https://www.youtube.com/watch?v=_0j9kqL9yOU>`_
 
 Master data
 -----------
