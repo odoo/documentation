@@ -9,11 +9,13 @@ This is accomplished by enabling the FedEx *shipping connector*, then configurin
 
 .. warning::
    As of October 21, 2025, the FedEx integration using the latest API is temporarily unavailable
-   while Odoo finalizes its solution-provider validation for FedEx. Any *existing* integrations
-   using the *FedEx Legacy* provider currently work, but *new* setups are currently **blocked**.
+   while Odoo finalizes its solution-provider validation for FedEx. *New* setups are currently
+   blocked, and *existing* integrations using the *FedEx Shipping (Legacy)* provider will stop
+   working as of June 1, 2026.
 
-   While this issue is being resolved, `submit a support ticket <https://www.odoo.com/help>`_ for
-   available workarounds.
+   For a temporary solution, the :doc:`Sendcloud integration <sendcloud_shipping>` also supports
+   FedEx services. To request further assistance, `submit a support ticket
+   <https://www.odoo.com/help>`_.
 
 .. note::
    This documentation contains configuration details specific to FedEx integration. See the
