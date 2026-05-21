@@ -6,15 +6,16 @@ Adyen
 possibilities.
 
 .. note::
-   Adyen only works with customers processing **more than 10 million annually** or invoicing a
-   **minimum of 1000 transactions per month**.
+   Adyen is more focused on enterprise customers and may require a minimum number of transactions
+   and a minimum processed volume.
 
 .. _payment_providers/adyen/configure_dashboard:
 
 Adyen configuration
 ===================
 
-#. Create an Adyen account if necessary and log into your Adyen Customer Area.
+#. Create an Adyen account if necessary and log into your `Adyen Customer Area
+   <https://ca-live.adyen.com/>`_.
 
    .. tip::
       Log into your **Test account** to try the integration without charging customers.
@@ -23,20 +24,20 @@ Adyen configuration
 #. `Contact the Adyen support team <https://docs.adyen.com/platforms/quickstart-guide/support#contact-adyen-support>`_
    to enable the **Multiple partial capture** feature.
 #. In the Adyen Customer Area, go to :menuselection:`Developers --> API credentials` and click the
-   relevant API credential user name in the list or click :guilabel:`Create new credential` to
-   create a new one.
+   relevant API credential user name in the list or click :icon:`fa-plus-circle` :guilabel:`Create
+   new credential` to create a new one.
 #. In the :guilabel:`Server settings` section, click :guilabel:`Generate API key`, then click the
    :icon:`fa-copy` (:guilabel:`Copy API key`) icon and save the value for the
    :ref:`payment_providers/adyen/configure_odoo` step.
-#. In the :guilabel:`Client settings` section, click :guilabel:`Generate client key`, then
-   click the :icon:`fa-copy` (:guilabel:`Copy API key`) icon and save the value for
-   the :ref:`payment_providers/adyen/configure_odoo` step.
-#. Enter your Odoo website URL in the :guilabel:`Add allowed origins` field, then click
+#. In the :guilabel:`Client settings` section, click :guilabel:`Generate client key`, then click the
+   :icon:`fa-copy` (:guilabel:`Copy client key`) icon and save the value for the
+   :ref:`payment_providers/adyen/configure_odoo` step.
+#. Enter your Odoo database URL in the :guilabel:`Add allowed origins` field, then click
    :guilabel:`Add`.
 #. Click :guilabel:`Save changes` at the bottom of the page.
-#. Go to :menuselection:`Developers --> Webhooks` in the left menu and click :guilabel:`Create new
-   webhook`.
-#. In the :guilabel:`Create new webhook` popup, click :guilabel:`Add` on to the :guilabel:`Standard
+#. Go to :menuselection:`Developers --> Webhooks` in the left menu and click :icon:`fa-plus-circle`
+   :guilabel:`Create new webhook`.
+#. In the :guilabel:`Create new webhook` popup, click :guilabel:`Add` on the :guilabel:`Standard
    webhook` line.
 #. On the :guilabel:`Webhook generation` form, in the :guilabel:`Server configuration` section,
    enter your Odoo database :guilabel:`URL` followed by `/payment/adyen/notification`.
@@ -44,18 +45,19 @@ Adyen configuration
    click the :icon:`fa-copy` (:guilabel:`Copy HMAC to the clipboard`) icon and save the value for
    the :ref:`payment_providers/adyen/configure_odoo` step.
 #. Click :guilabel:`Save configuration` at the bottom of the page.
-#. Go to :menuselection:`Developers --> API URLs`, then copy the :guilabel:`Prefix` and save it for
-   the :ref:`payment_providers/adyen/configure_odoo` step.
+#. Go to :menuselection:`Developers --> API URLs`, then copy the :guilabel:`Prefix` and save the
+   value for the :ref:`payment_providers/adyen/configure_odoo` step.
 
 .. _payment_providers/adyen/configure_odoo:
 
 Odoo configuration
 ==================
 
-#. :ref:`Navigate to the Adyen payment provider<payment_providers/add_new>`.
-#. Fill in the :guilabel:`Merchant account`, :guilabel:`API Key`, :guilabel:`Client Key`,
-   :guilabel:`HMAC Key`, and :guilabel:`API URL Prefix` fields with the values saved at the
-   :ref:`Adyen configuration step <payment_providers/adyen/configure_dashboard>`.
+#. :ref:`Navigate to the payment provider Ayden <payment_providers/supported_providers>`.
+#. Fill in the :ref:`Merchant Account <adyen/merchant-account>`, :guilabel:`API Key`,
+   :guilabel:`Client Key`, :guilabel:`HMAC Key`, and :guilabel:`API URL Prefix` fields with the
+   values saved at the :ref:`Adyen configuration step
+   <payment_providers/adyen/configure_dashboard>`.
 #. Configure the remaining options as needed.
 #. Set the :guilabel:`State` field to :guilabel:`Enabled`.
 
@@ -71,7 +73,7 @@ Manual capture
 To enable :ref:`manual capture <payment_providers/manual_capture>` for Adyen payments, follow
 these steps:
 
-#. :ref:`Navigate to the Adyen payment provider <payment_providers/add_new>`.
+#. :ref:`Navigate to the payment provider Ayden <payment_providers/supported_providers>`.
 #. Go to the :guilabel:`Configuration` tab and enable :guilabel:`Capture Amount Manually`.
 #. Log in to your Adyen Customer Area, then go to :menuselection:`Settings` and click
    :guilabel:`Company` in the :guilabel:`Account management` section.
