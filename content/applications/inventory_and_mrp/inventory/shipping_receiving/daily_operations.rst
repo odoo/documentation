@@ -161,6 +161,5 @@ needs.
    daily_operations/putaway
    daily_operations/storage_category
    daily_operations/cross_dock
-   daily_operations/stock_warehouses
    daily_operations/owned_stock
    daily_operations/dropshipping
