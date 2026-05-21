@@ -109,6 +109,11 @@ Optionally, to create event badges for attendees, fill in the following fields:
 - :guilabel:`Badge Background`: The custom background image for the badges. Click the
   :guilabel:`Upload your file` button to upload an image.
 
+.. note::
+   If the :doc:`IoT <../../../general/iot>` app is installed, the :guilabel:`96x82mm (Badge Printer)` option is also
+   displayed. This badge format requires an EPSON ColorWorks printer linked to an :doc:`IoT Box
+   <../../../general/iot/iot_box>`, and is designed for Nakagawa 96x82mm butterfly-style badge paper.
+
 Additional event configurations
 ===============================
 
