@@ -8,6 +8,8 @@ various price points.
 It also allows them to sell event tickets in different ways: via standard sales orders, through
 point of sales, and online through an integrated website.
 
+.. _events/sell-tickets/configuration:
+
 Configuration
 =============
 
@@ -37,6 +39,8 @@ that specific event.
 
 .. image:: sell_tickets/events-sales-smartbutton.png
    :alt: View of an event's form and the sales smart button in Odoo Events.
+
+.. _events/sell-tickets/sales:
 
 Sell event tickets with the Sales app
 =====================================
@@ -74,6 +78,8 @@ Lines` tab. The user can proceed to confirm and close the sale, per the usual pr
    To re-open the *Select an Event* pop-up window, click on the event registration product name in
    the :guilabel:`Order Lines` tab, then click on the :icon:`fa-pencil` :guilabel:`(pencil)` icon.
 
+.. _events/sell-tickets/pos:
+
 Sell event tickets through the Point of Sale app
 ================================================
 
@@ -98,6 +104,8 @@ corresponding event registration products, as well as the event registration pro
 
 To learn more about configuring and selling products in a :abbr:`POS (point of sale)`, refer to the
 :doc:`Point of Sale <../../../sales/point_of_sale>` documentation.
+
+.. _events/sell-tickets/website:
 
 Sell event tickets through the Website app
 ==========================================
