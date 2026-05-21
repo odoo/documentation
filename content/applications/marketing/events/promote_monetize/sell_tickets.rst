@@ -31,13 +31,16 @@ To activate a setting, tick the checkbox beside the desired feature's label, and
 .. image:: sell_tickets/events-settings-tickets.png
    :alt: View of the settings page for Odoo Events.
 
-With these settings enabled, any event with paid tickets sold (either through a sales order or
-through the website) features a :icon:`fa-dollar` :guilabel:`Sales` smart button at the top of the
-event form. Clicking the :icon:`fa-dollar` :guilabel:`Sales` smart button reveals a separate page,
-showcasing all the sales orders (standard and/or online) related to tickets that have been sold for
-that specific event.
+With these settings enabled, any event with paid tickets sold either through a sales order or
+through the website features a :icon:`fa-dollar` :guilabel:`Sales` smart button at the top of the
+event form. Additionally, a :icon:`fa-shopping-basket` :guilabel:`PoS Sales` smart button appears if
+any tickets are sold in a :abbr:`POS (point of sale)`.
 
-.. image:: sell_tickets/events-sales-smartbutton.png
+Clicking the :icon:`fa-dollar` :guilabel:`Sales` or :icon:`fa-shopping-basket` :guilabel:`PoS Sales`
+smart button opens a separate page that shows all the sales or :abbr:`POS (point of sale)` orders
+related to tickets sold for that specific event.
+
+.. image:: sell_tickets/events-orders-smart-buttons.png
    :alt: View of an event's form and the sales smart button in Odoo Events.
 
 .. _events/sell-tickets/sales:
@@ -53,7 +56,7 @@ After filling out the top portion of the form with the appropriate customer info
 column, select (or create) an event registration product.
 
 To add an event registration product to a sales order, its :guilabel:`Product Type` field **must**
-be set to :guilabel:`Service` and the :guilabel:`Create on Order` field **must** be set to
+be set to :guilabel:`Service`, and the :guilabel:`Create on Order` field **must** be set to
 :guilabel:`Event Registration`. These fields are accessible in the product form of the event
 registration product.
 
