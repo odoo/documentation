@@ -81,6 +81,9 @@ Methods`, click :guilabel:`New`, and follow the next steps:
    - Use a dedicated :ref:`cash journal <accounting/journals/cash>` to record cash payments.
    - Always set the :guilabel:`Journal` to :guilabel:`Bank` when :ref:`configuring a payment
      terminal <pos/terminals/configuration>`.
+   - You can manage all configured payment methods linked to a POS in the :ref:`POS settings
+     <pos/use/settings>` by navigating to the :guilabel:`Payment` section and adding or removing
+     them via the dropdown under :guilabel:`Payment Methods`.
 
 One-click payment
 -----------------
