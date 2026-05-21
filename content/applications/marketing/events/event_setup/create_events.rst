@@ -104,6 +104,11 @@ the maximum number of attendees allowed in the resulting field.
 
 .. _events/additional-event-configs:
 
+.. note::
+   If the :doc:`IoT <../../../general/iot>` app is installed, the :guilabel:`96x82mm (Badge Printer)` option is also
+   displayed. This badge format requires an EPSON ColorWorks printer linked to an :doc:`IoT Box
+   <../../../general/iot/iot_box>`, and is designed for Nakagawa 96x82mm butterfly-style badge paper.
+
 Additional event configurations
 ===============================
 
