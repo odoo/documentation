@@ -14,7 +14,7 @@ following circumstances:
 - The IoT system is already connected to an Odoo database. :ref:`Disconnect it from the database
   <iot/connect/disconnect>`.
 - The :ref:`pairing code <iot/connect/pairing-code>` display time has expired. Restart the :ref:`IoT
-  box <iot/iot-box/restart>` or the :ref:`Windows virtual IoT service <iot/windows_iot/restart>` to
+  box <iot/iot-box/homepage>` or the :ref:`Windows virtual IoT service <iot/windows_iot/restart>` to
   generate and display the pairing code.
 
 The IoT system does not connect to the database
@@ -25,7 +25,7 @@ not appear after a few minutes:
 
 - Verify that the IoT system can reach the database and the server does not use a multi-database
   environment.
-- Restart the :ref:`IoT box <iot/iot-box/restart>` or the :ref:`Windows virtual IoT service
+- Restart the :ref:`IoT box <iot/iot-box/homepage>` or the :ref:`Windows virtual IoT service
   <iot/windows_iot/restart>`.
 
 The IoT system is connected to the Odoo database but cannot be reached
@@ -43,7 +43,7 @@ The Windows virtual IoT's homepage cannot be accessed from another device
 The IoT system does not work after an Odoo upgrade
 ==================================================
 
-Restart the :ref:`IoT box <iot/iot-box/restart>` or the :ref:`Windows virtual IoT service
+Restart the :ref:`IoT box <iot/iot-box/homepage>` or the :ref:`Windows virtual IoT service
 <iot/windows_iot/restart>`.
 
 If the issue persists, :ref:`update its image <iot/updating_iot/image-code>` by flashing the IoT
@@ -95,7 +95,7 @@ Errors
 ------
 
 A specific error code is displayed on the IoT system's homepage if any issues occur during the
-generation or reception of the ref:`HTTPS certificate <iot/connect/https_certificate>`.
+generation or reception of the :ref:`HTTPS certificate <iot/connect/https_certificate>`.
 
 .. tip::
    When you access the IoT system's homepage, it automatically checks for an HTTPS certificate and
@@ -111,8 +111,9 @@ the IoT system.
 `ERR_IOT_HTTPS_CHECK_CERT_READ_EXCEPTION`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-An error occurred while attempting to read the existing ref:`HTTPS certificate
+An error occurred while attempting to read the existing :ref:`HTTPS certificate
 <iot/connect/https_certificate>`.
+
 Verify that the HTTPS certificate file is readable.
 
 `ERR_IOT_HTTPS_LOAD_NO_CREDENTIAL`
@@ -166,7 +167,7 @@ To solve this issue:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The IoT system successfully connected to `<https://www.odoo.com>`_, but the server refused to
-provide the ref:`HTTPS certificate <iot/connect/https_certificate>`.
+provide the :ref:`HTTPS certificate <iot/connect/https_certificate>`.
 
 Check that the IoT system and database meet the :ref:`eligibility requirements
 <iot/https_certificate_iot/iot-eligibility>` for an HTTPS certificate.

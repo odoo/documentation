@@ -9,7 +9,8 @@ To start using an IoT box:
 #. :doc:`Connect the IoT box to your Odoo database <connect>`.
 
 .. seealso::
-   - `Video: How to Set Up and Use the Odoo IoT Box: A Beginner's Guide <https://www.youtube.com/watch?v=w2_Dcm3r_7o&ab_channel=Odoo>`_
+   - `Video: How to Set Up and Use the Odoo IoT Box: A Beginner's Guide
+     <https://www.youtube.com/watch?v=w2_Dcm3r_7o>`_
    - :doc:`iot_advanced/troubleshooting`
 
 .. _iot/iot_box/network:
@@ -21,8 +22,8 @@ The IoT box can be connected to the network via :ref:`Ethernet <iot/iot_box/netw
 :ref:`Wi-Fi <iot/iot_box/network-wifi>`.
 
 .. note::
-   It is recommended to connect the IoT box to the same network as the :doc:`devices <devices>`
-   connecting to it.
+   It is recommended to connect the IoT box to the same network as the :doc:`devices <devices>` it
+   connects to.
 
 .. important::
    Never make the IoT box accessible from the public Internet.
@@ -45,35 +46,31 @@ Wi-Fi
 Make sure no Ethernet cable is connected to the IoT box and follow these steps:
 
   #. Connect the IoT box to a power source and wait a few minutes for it to power on.
-  #. Access your computer's Wi-Fi settings and select the IoT box's network. The network name is in
+  #. Access the computer's Wi-Fi settings and select the IoT box's network. The network name is in
      the format `IoTBox-xxxxxxxxxxxx` (where `xxxxxxxxxxxx` is a unique identifier).
-  #. Connect to the IoT box's Wi-Fi network and sign into it; your browser should automatically
+  #. Connect to the IoT box's Wi-Fi network and sign in to it; the browser should automatically
      open and redirect to the :ref:`IoT box's homepage <iot/iot-box/homepage>`.
-
-     .. note::
-        Depending on your operating system, the browser might not open and redirect to the IoT box's
-        homepage. In this case, open your browser manually and navigate to `http://10.11.12.1`
-        or any URL starting with **http** (e.g., `http://odoo.com`).
-
   #. On the IoT box's homepage, click :guilabel:`Configure` next to the :guilabel:`Internet Status`
      section.
+  #. Wait a few minutes for the available networks to be scanned, select the network, enter the
+     Wi-Fi's password, and click :guilabel:`Connect`.
 
      .. image:: iot_box/iot-wifi.png
         :scale: 75%
         :alt: IoT box's WiFi hotspot
 
-  #. Wait a few minutes for the available networks to be scanned, select the network, enter the
-     Wi-Fi's password, and click :guilabel:`Connect`.
-
 .. note::
-   Once connected to the Wi-Fi network, the IoT box stops emitting its Wi-Fi signal, and the
-   computer should automatically reconnect to its original network. If it does not, reconnect to it
-   manually.
+   - Once connected to the Wi-Fi network, the IoT box stops emitting its Wi-Fi signal, and the
+     computer should automatically reconnect to its original network. If it does not, reconnect to
+     it manually.
+   - Depending on the operating system used, the browser might not open and redirect to the IoT
+     box's homepage. In this case, open the browser manually and navigate to `http://10.11.12.1` or
+     any URL starting with **http** (e.g., `http://odoo.com`).
 
 .. tip::
-   If the IoT box is connected to an :doc:`external monitor <devices/screen>`, you can also scan the
-   first QR code displayed on the screen to connect to the network, then scan the second QR code to
-   access the IoT box's :ref:`homepage <iot/iot-box/homepage>`. On the homepage, click
+   If the IoT box is connected to an :doc:`external monitor <devices/screen>`, scan the first QR
+   code displayed on the screen to connect to the network, then scan the second QR code to access
+   the IoT box's :ref:`homepage <iot/iot-box/homepage>`. On the homepage, click
    :guilabel:`Configure` in the :guilabel:`Internet Status` section, select the relevant Wi-Fi
    network, enter the password, and click :guilabel:`Connect`.
 
@@ -82,12 +79,12 @@ Make sure no Ethernet cable is connected to the IoT box and follow these steps:
 LED status
 ==========
 
-The IoT box features two LEDs, located to the right of the SD card slot, which show its status and
-help with troubleshooting when no display is connected. The LEDs can be interpreted as follows:
+The IoT box features two LEDs, located to the right of the SD card slot, that indicate its status
+and help with troubleshooting when no display is connected. The LEDs can be interpreted as follows:
 
-- **Red LED lit**: The IoT box has no Internet connection. Ensure the Ethernet cable is properly
-  connected or :ref:`connect the IoT box via Wi-Fi <iot/iot_box/network-wifi>`.
-- **Green LED flashing**: The IoT box is awaiting :doc:`connection to a database <connect>`.
+- **Red LED lit**: The IoT box is not connected to the Internet. Ensure the Ethernet cable is
+  properly connected, or :ref:`connect the IoT box via Wi-Fi <iot/iot_box/network-wifi>`.
+- **Green LED flashing**: The IoT box is waiting to :doc:`connect to a database <connect>`.
 - **Green LED constantly lit**: The IoT box is connected to a database; no further action is
   required.
 
@@ -96,42 +93,35 @@ help with troubleshooting when no display is connected. The LEDs can be interpre
 IoT box homepage
 ================
 
-To access the IoT box's homepage, open a web browser **on the same network as the IoT box** and
+To access the IoT box's homepage on a device, first ensure the device is on the same network as the
+IoT box. Then, if using the IoT app, click :guilabel:`Homepage`, or open a browser on the device and
 navigate to the IoT box's IP address.
 
 .. image:: iot_box/iot-homepage.png
    :scale: 75%
    :alt: IoT box's homepage
 
-The IoT box's IP address can be retrieved by:
+If the IP address is not already known, use any of the following methods to retrieve it:
 
-- connecting the IoT box to an :doc:`external monitor <devices/screen>`: the IP address is displayed
-  on the screen.
+- While connected to the same network as the IoT box, open a web browser and navigate to
+  `http://iotbox.local`. The page automatically redirects to the homepage, which displays the IP
+  address.
+- Connect a `supported receipt or label printer <https://www.odoo.com/app/iot-hardware>`_ using a
+  USB cable, which then automatically prints a ticket with the IP address.
+- Connect the IoT box to an :doc:`external monitor <devices/screen>`, which then displays the IP
+  address on the screen.
+- On IoT box images `L2026.05.25` and later, the IoT box IP address is displayed as a discovered
+  Bluetooth device for 5 minutes after booting.
+- Access the router's administrator interface, or use third-party software to scan the network.
 
-  .. image:: iot_box/iot-status-display.png
-     :scale: 75%
-     :alt: Status display with IoT box's IP address
-
-- connecting the IoT box to a `supported receipt or label printer <https://www.odoo.com/app/iot-hardware>`_
-  with a USB cable: the IP address is automatically printed.
-- accessing the administrator interface of the router to which the IoT box is connected or using
-  third-party software to scan the network.
-
-.. tip::
-   If the IoT box is connected to an :doc:`external monitor <devices/screen>` or a :doc:`printer
-   <devices/printer>`, its homepage can also be accessed by scanning the displayed or printed QR
-   code with a device connected to the same network as the IoT box.
-
-Once the IoT box is :doc:`connected to the Odoo database <connect>`, its homepage can be accessed
-from the IoT app: click the relevant IoT box's card, then click :guilabel:`Homepage`.
-
-.. _iot/iot-box/restart:
-
-IoT box restart
-===============
-
-To manually restart the IoT box, access its :ref:`homepage <iot/iot-box/homepage>`, then click the
-:icon:`fa-power-off` :guilabel:`(power off)` button in the top-right corner.
+   .. image:: iot_box/iot-status-display.png
+      :scale: 75%
+      :alt: Status display with IoT box's IP address
 
 .. tip::
-   You can also fully reboot the IoT box by unplugging and plugging it back in.
+   - To manually restart the IoT box, access the :ref:`homepage <iot/iot-box/homepage>`, then click
+     the :icon:`fa-power-off` :guilabel:`(power off)` button in the top-right corner.
+   - If the IoT box is connected to an :doc:`external monitor <devices/screen>` or a :doc:`printer
+     <devices/printer>`, its homepage can also be accessed by scanning the displayed or printed QR
+     code with a device connected to the same network as the IoT box.
+   - To fully reboot the IoT box, unplug it and plug it back in.

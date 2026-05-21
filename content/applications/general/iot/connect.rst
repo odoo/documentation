@@ -57,7 +57,7 @@ Connection using a pairing code
       .. group-tab:: IoT box
 
          Connect the IoT box to an external monitor or a USB printer. If the IoT box was already plugged
-         prior to this, :ref:`restart <iot/iot-box/restart>` it.
+         prior to this, :ref:`restart it <iot/iot-box/homepage>`.
 
          - External monitor: The pairing code will be displayed on the screen after (re)starting the
            IoT box.
