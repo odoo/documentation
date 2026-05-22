@@ -49,7 +49,9 @@ installed on the mobile computer or smartphone.
    System updates`. If asked to enter an :guilabel:`Input verify code`, contact a CipherLab
    reseller.
 
-Obtain the :guilabel:`CipherLab Multi-Tag Output` |APK| from CipherLab or from a supplier partner.
+Download the `CipherLab Multi-Tag Output APK
+<https://www.cipherlab.com/en/download-c2429/Multi-Tag-Output.html>`_  from the CipherLab website.
+
 Transfer the |APK| to the device using USB or Bluetooth, or download it directly using the device's
 web browser.
 
