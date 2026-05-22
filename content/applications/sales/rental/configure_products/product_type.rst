@@ -18,6 +18,8 @@ work station, or storage unit.
 The following sections detail basic settings and app integration configurations for Goods and
 Services.
 
+.. _rental/product_type/settings:
+
 Settings
 ========
 
