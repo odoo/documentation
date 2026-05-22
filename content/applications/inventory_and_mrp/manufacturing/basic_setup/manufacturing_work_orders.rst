@@ -48,6 +48,18 @@ If a product has more than one |BoM| configured for it, the specific |BoM| can b
 :guilabel:`Bill of Material` field, and the :guilabel:`Product` field auto-populates with the
 associated product.
 
+.. note::
+   If the product does not have a |BoM| configured, one can be generated based on the current |MO|.
+
+   When the |MO| has at least one component or work order, the :icon:`fa-plus fa-fw`
+   :guilabel:`Generate BoM` button appears next to the :guilabel:`Bill of Material` field. Clicking
+   the button opens a |BoM| form with the components and operations from the |MO|, and the
+   :guilabel:`Reference` field is filled in with *New BoM from WH/MO/<MO number>*.
+
+   Click the :icon:`fa-cloud-upload fa-fw` :guilabel:`(Save manually)` icon to create the new |BoM|.
+   After saving, the :guilabel:`BoM Type` is set to :guilabel:`Manufacture this product` and the
+   :guilabel:`Company` is automatically filled in.
+
 After a |BoM| is selected, the *Components* and *Work Orders* tabs auto-populate with the components
 and operations specified on the |BoM|. If additional components or operations are required for the
 |MO|, add them to the :guilabel:`Components` and :guilabel:`Work Orders` tabs by clicking
