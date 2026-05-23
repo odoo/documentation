@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-15 17:30+0000\n"
+"POT-Creation-Date: 2026-05-22 17:35+0000\n"
 "PO-Revision-Date: 2026-04-22 23:20+0000\n"
 "Last-Translator: \"Marianna Ciofani (cima)\" <cima@odoo.com>\n"
 "Language-Team: Italian <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -7490,25 +7490,14 @@ msgid ""
 "Nevertheless, once the file has been located and the access rights verified "
 "by Odoo, it is a good idea to serve the file using the static web server "
 "instead of Odoo. For Odoo to delegate serving files to the static web "
-"server, the `X-Sendfile <https://tn123.org/mod_xsendfile/>`_ (apache) or `X-"
-"Accel <https://www.nginx.com/resources/wiki/start/topics/examples/x-accel/"
-">`_ (nginx) extensions must be enabled and configured on the static web "
+"server, the `X-Sendfile <https://tn123.org/mod_xsendfile/>`_ (apache) or X-"
+"Accel (nginx) extensions must be enabled and configured on the static web "
 "server. Once it is set up, start Odoo with the :option:`--x-sendfile <odoo-"
 "bin --x-sendfile>` CLI flag (this unique flag is used for both X-Sendfile "
 "and X-Accel)."
 msgstr ""
-"Tuttavia, una volta che il file è stato localizzato e i diritti di accesso "
-"verificati da Odoo, è una buona idea servire il file utilizzando un server "
-"web statico invece di Odoo. Affinché Odoo deleghi il servizio dei file al "
-"server web statico, le estensioni `X-Sendfile <https://tn123.org/"
-"mod_xsendfile/>`_ (apache) o `X-Accel <https://www.nginx.com/resources/wiki/"
-"start/topics/examples/x-accel/>`_ (nginx) devono essere abilitate e "
-"configurate sul server web statico. Una volta eseguita la configurazione, "
-"avvia Odoo con la bandiera CLI :option:`--x-sendfile <odoo-bin --x-"
-"sendfile>` CLI flag (la bandiera è utilizzata sia per X-Sendfile che X-"
-"Accel)."
 
-#: ../../content/administration/on_premise/deploy.rst:527
+#: ../../content/administration/on_premise/deploy.rst:526
 msgid ""
 "The X-Sendfile extension for apache (and compatible web servers) does not "
 "require any supplementary configuration."
@@ -7516,14 +7505,14 @@ msgstr ""
 "L'estensione X-Sendfile per apache (e server web compatibili) non richiede "
 "nessuna configurazione aggiuntiva."
 
-#: ../../content/administration/on_premise/deploy.rst:529
+#: ../../content/administration/on_premise/deploy.rst:528
 msgid ""
 "The X-Accel extension for NGINX **does** require the following additionnal "
 "configuration:"
 msgstr ""
 "L'estensione X-Accel per NGINX **richiede** una configurazione aggiuntiva:"
 
-#: ../../content/administration/on_premise/deploy.rst:540
+#: ../../content/administration/on_premise/deploy.rst:539
 msgid ""
 "In case you don't know what is the path to your filestore, start Odoo with "
 "the :option:`--x-sendfile <odoo-bin --x-sendfile>` option and navigate to "
@@ -7537,11 +7526,11 @@ msgstr ""
 "In seguito, comparirà un avviso con un messaggio contenente le impostazioni "
 "di cui hai bisogno."
 
-#: ../../content/administration/on_premise/deploy.rst:549
+#: ../../content/administration/on_premise/deploy.rst:548
 msgid "Security"
 msgstr "Sicurezza"
 
-#: ../../content/administration/on_premise/deploy.rst:551
+#: ../../content/administration/on_premise/deploy.rst:550
 msgid ""
 "For starters, keep in mind that securing an information system is a "
 "continuous process, not a one-shot operation. At any moment, you will only "
@@ -7551,7 +7540,7 @@ msgstr ""
 "processo continuo e non un'operazione singola. In qualsiasi momento, sarai "
 "sicuro tanto quanto il link più debole."
 
-#: ../../content/administration/on_premise/deploy.rst:555
+#: ../../content/administration/on_premise/deploy.rst:554
 msgid ""
 "So please do not take this section as the ultimate list of measures that "
 "will prevent all security problems. It's only intended as a summary of the "
@@ -7567,7 +7556,7 @@ msgstr ""
 "operativo e per la distribuzione, migliori pratiche in termini di utenti, "
 "password, gestione degli accessi, ecc."
 
-#: ../../content/administration/on_premise/deploy.rst:561
+#: ../../content/administration/on_premise/deploy.rst:560
 msgid ""
 "When deploying an internet-facing server, please be sure to consider the "
 "following security-related topics:"
@@ -7575,7 +7564,7 @@ msgstr ""
 "Quando implementi un server con accesso a internet, assicurati di prendere "
 "in considerazione i seguenti argomenti:"
 
-#: ../../content/administration/on_premise/deploy.rst:564
+#: ../../content/administration/on_premise/deploy.rst:563
 msgid ""
 "Always set a strong super-admin admin password, and restrict access to the "
 "database management pages as soon as the system is set up. "
@@ -7585,7 +7574,7 @@ msgstr ""
 "limita l'accesso alle pagine di gestione del database non appena configuri "
 "il sistema. Consulta la sezione :ref:`Sicurezza gestione database`."
 
-#: ../../content/administration/on_premise/deploy.rst:567
+#: ../../content/administration/on_premise/deploy.rst:566
 msgid ""
 "Choose unique logins and strong passwords for all administrator accounts on "
 "all databases. Do not use 'admin' as the login. Do not use those logins for "
@@ -7599,7 +7588,7 @@ msgstr ""
 "controllare/gestire l'installazione. Non utilizzare *mai* qualsiasi password "
 "predefinita come admin/admin, nemmeno per databse di test/staging."
 
-#: ../../content/administration/on_premise/deploy.rst:572
+#: ../../content/administration/on_premise/deploy.rst:571
 msgid ""
 "Do **not** install demo data on internet-facing servers. Databases with demo "
 "data contain default logins and passwords that can be used to get into your "
@@ -7610,7 +7599,7 @@ msgstr ""
 "essere utilizzati per accedere ai tuoi sistemi e causare problemi "
 "significativi, anche su sistemi di staging/dev."
 
-#: ../../content/administration/on_premise/deploy.rst:576
+#: ../../content/administration/on_premise/deploy.rst:575
 msgid ""
 "Use appropriate database filters ( :option:`--db-filter <odoo-bin --db-"
 "filter>`) to restrict the visibility of your databases according to the "
@@ -7625,7 +7614,7 @@ msgstr ""
 "disponibili da filtrare invece di lasciare che il sistema li recuperi tutti "
 "dal backend del database."
 
-#: ../../content/administration/on_premise/deploy.rst:583
+#: ../../content/administration/on_premise/deploy.rst:582
 msgid ""
 "Once your ``db_name`` and ``dbfilter`` are configured and only match a "
 "single database per hostname, you should set ``list_db`` configuration "
@@ -7641,7 +7630,7 @@ msgstr ""
 "come opzione riga di comando :option:`--no-database-list <odoo-bin --no-"
 "database-list>`)"
 
-#: ../../content/administration/on_premise/deploy.rst:589
+#: ../../content/administration/on_premise/deploy.rst:588
 msgid ""
 "Make sure the PostgreSQL user (:option:`--db_user <odoo-bin --db_user>`) is "
 "*not* a super-user, and that your databases are owned by a different user. "
@@ -7655,7 +7644,7 @@ msgstr ""
 "``postgres`` se stai utilizzando un ``db_user`` dedicato non privilegiato. "
 "Consulta anche la sezione :ref:`setup/deploy/odoo`."
 
-#: ../../content/administration/on_premise/deploy.rst:594
+#: ../../content/administration/on_premise/deploy.rst:593
 msgid ""
 "Keep installations updated by regularly installing the latest builds, either "
 "via GitHub or by downloading the latest version from https://www.odoo.com/"
@@ -7665,7 +7654,7 @@ msgstr ""
 "tramite GitHub che scaricandole da https://www.odoo.com/page/download oppure "
 "http://nightly.odoo.com."
 
-#: ../../content/administration/on_premise/deploy.rst:598
+#: ../../content/administration/on_premise/deploy.rst:597
 msgid ""
 "Configure your server in multi-process mode with proper limits matching your "
 "typical usage (memory/CPU/timeouts). See also :ref:`builtin_server`."
@@ -7674,7 +7663,7 @@ msgstr ""
 "corrispondenti all'uso tipico (memoria/CPU/timeout). Consulta anche la "
 "sezione  :ref:`builtin_server`."
 
-#: ../../content/administration/on_premise/deploy.rst:601
+#: ../../content/administration/on_premise/deploy.rst:600
 msgid ""
 "Run Odoo behind a web server providing HTTPS termination with a valid SSL "
 "certificate, in order to prevent eavesdropping on cleartext communications. "
@@ -7691,7 +7680,7 @@ msgstr ""
 "l'opzione :option:`proxy mode <odoo-bin --proxy-mode>`. Consulta anche la "
 "sezione :ref:`https_proxy`."
 
-#: ../../content/administration/on_premise/deploy.rst:608
+#: ../../content/administration/on_premise/deploy.rst:607
 msgid ""
 "If you need to allow remote SSH access to your servers, make sure to set a "
 "strong password for **all** accounts, not just `root`. It is strongly "
@@ -7708,7 +7697,7 @@ msgstr ""
 "consentendo solo IP verificati nel firewall e/o eseguire un sistema di "
 "rilevamento di forza bruta come `fail2ban` o equivalenti."
 
-#: ../../content/administration/on_premise/deploy.rst:614
+#: ../../content/administration/on_premise/deploy.rst:613
 msgid ""
 "Consider installing appropriate rate-limiting on your proxy or firewall, to "
 "prevent brute-force attacks and denial of service attacks. See "
@@ -7719,7 +7708,7 @@ msgstr ""
 "denial of service. Consulta anche la sezione :ref:`login_brute_force` per "
 "misure specifiche."
 
-#: ../../content/administration/on_premise/deploy.rst:618
+#: ../../content/administration/on_premise/deploy.rst:617
 msgid ""
 "Many network providers provide automatic mitigation for Distributed Denial "
 "of Service attacks (DDOS), but this is often an optional service, so you "
@@ -7729,7 +7718,7 @@ msgstr ""
 "tipo Distributed Denial of Service (DDoS) ma si tratta spesso di un servizio "
 "opzionale quindi dovresti parlare con loro."
 
-#: ../../content/administration/on_premise/deploy.rst:622
+#: ../../content/administration/on_premise/deploy.rst:621
 msgid ""
 "Whenever possible, host your public-facing demo/test/staging instances on "
 "different machines than the production ones. And apply the same security "
@@ -7739,7 +7728,7 @@ msgstr ""
 "al pubblico su vari dispositivi diversi da quelli di produzione. Applica le "
 "stesse misure di sicurezza utilizzate per la produzione."
 
-#: ../../content/administration/on_premise/deploy.rst:626
+#: ../../content/administration/on_premise/deploy.rst:625
 msgid ""
 "If your public-facing Odoo server has access to sensitive internal network "
 "resources or services (e.g. via a private VLAN), implement appropriate "
@@ -7765,7 +7754,7 @@ msgstr ""
 "systemd.html>`_  per implementare il controllo dell'accesso alla rete per "
 "processo."
 
-#: ../../content/administration/on_premise/deploy.rst:637
+#: ../../content/administration/on_premise/deploy.rst:636
 msgid ""
 "If your public-facing Odoo server is behind a Web Application Firewall, a "
 "load-balancer, a transparent DDoS protection service (like CloudFlare) or a "
@@ -7792,7 +7781,7 @@ msgstr ""
 "fornitori di servizi come CloudFlare di solito mantengono un elenco pubblico "
 "degli intervali dell'indirizzo IP proprio per questo motivo."
 
-#: ../../content/administration/on_premise/deploy.rst:648
+#: ../../content/administration/on_premise/deploy.rst:647
 msgid ""
 "If you are hosting multiple customers, isolate customer data and files from "
 "each other using containers or appropriate \"jail\" techniques."
@@ -7800,7 +7789,7 @@ msgstr ""
 "Se sei l'host di più clienti, isola i dati e i file dei clienti utilizzando "
 "contenitori o tecniche \"jail\" appropriati."
 
-#: ../../content/administration/on_premise/deploy.rst:651
+#: ../../content/administration/on_premise/deploy.rst:650
 msgid ""
 "Setup daily backups of your databases and filestore data, and copy them to a "
 "remote archiving server that is not accessible from the server itself."
@@ -7809,7 +7798,7 @@ msgstr ""
 "copiarli in un server di archiviazione remota che non è accessibile dal "
 "server stesso."
 
-#: ../../content/administration/on_premise/deploy.rst:654
+#: ../../content/administration/on_premise/deploy.rst:653
 msgid ""
 "Deploying Odoo on Linux is strongly recommended over Windows. Should you "
 "choose nevertheless to deploy on a Windows platform, a thorough security "
@@ -7821,11 +7810,11 @@ msgstr ""
 "necessario condurre un'analisi approfondita del server in materia di "
 "sicurezza, che non rientra nell'ambito di questa guida."
 
-#: ../../content/administration/on_premise/deploy.rst:662
+#: ../../content/administration/on_premise/deploy.rst:661
 msgid "Blocking Brute Force Attacks"
 msgstr "Bloccare attacchi di forza bruta"
 
-#: ../../content/administration/on_premise/deploy.rst:664
+#: ../../content/administration/on_premise/deploy.rst:663
 msgid ""
 "For internet-facing deployments, brute force attacks on user passwords are "
 "very common, and this threat should not be neglected for Odoo servers. Odoo "
@@ -7838,19 +7827,19 @@ msgstr ""
 "e riporta il risultato: successo o fallimento, insieme al login di "
 "destinazione e all'IP di origine."
 
-#: ../../content/administration/on_premise/deploy.rst:668
+#: ../../content/administration/on_premise/deploy.rst:667
 msgid "The log entries will have the following form."
 msgstr "Le voci di registro avranno la seguente struttura."
 
-#: ../../content/administration/on_premise/deploy.rst:670
+#: ../../content/administration/on_premise/deploy.rst:669
 msgid "Failed login::"
 msgstr "Accesso non riuscito::"
 
-#: ../../content/administration/on_premise/deploy.rst:674
+#: ../../content/administration/on_premise/deploy.rst:673
 msgid "Successful login::"
 msgstr "Accesso riuscito::"
 
-#: ../../content/administration/on_premise/deploy.rst:679
+#: ../../content/administration/on_premise/deploy.rst:678
 msgid ""
 "These logs can be easily analyzed by an intrusion prevention system such as "
 "`fail2ban`."
@@ -7858,7 +7847,7 @@ msgstr ""
 "I registri possono essere analizzati facilmente grazie ad un sistema di "
 "prevenzione delle intrusioni come `fail2ban`."
 
-#: ../../content/administration/on_premise/deploy.rst:681
+#: ../../content/administration/on_premise/deploy.rst:680
 msgid ""
 "For example, the following fail2ban filter definition should match a failed "
 "login::"
@@ -7866,7 +7855,7 @@ msgstr ""
 "Ad esempio, la definizione del seguente filtro fail2ban deve corrispondere "
 "ad un accesso non riuscito::"
 
-#: ../../content/administration/on_premise/deploy.rst:688
+#: ../../content/administration/on_premise/deploy.rst:687
 msgid ""
 "This could be used with a jail definition to block the attacking IP on "
 "HTTP(S)."
@@ -7874,7 +7863,7 @@ msgstr ""
 "Questo potrebbe essere utilizzato con una definizione jail per bloccare l'IP "
 "attaccato su HTTP(S)."
 
-#: ../../content/administration/on_premise/deploy.rst:690
+#: ../../content/administration/on_premise/deploy.rst:689
 msgid ""
 "Here is what it could look like for blocking the IP for 15 minutes when 10 "
 "failed login attempts are detected from the same IP within 1 minute::"
@@ -7883,15 +7872,15 @@ msgstr ""
 "dell'individuazione di 10 tentativi di accesso falliti dallo stesso "
 "indirizzo IP in 1 minuto:"
 
-#: ../../content/administration/on_premise/deploy.rst:704
+#: ../../content/administration/on_premise/deploy.rst:703
 msgid "Database Manager Security"
 msgstr "Sicurezza gestore database"
 
-#: ../../content/administration/on_premise/deploy.rst:706
+#: ../../content/administration/on_premise/deploy.rst:705
 msgid ":ref:`setup/deploy/odoo` mentioned ``admin_passwd`` in passing."
 msgstr ":ref:`setup/deploy/odoo` ha menzionato ``admin_passwd``."
 
-#: ../../content/administration/on_premise/deploy.rst:708
+#: ../../content/administration/on_premise/deploy.rst:707
 msgid ""
 "This setting is used on all database management screens (to create, delete, "
 "dump or restore databases)."
@@ -7899,7 +7888,7 @@ msgstr ""
 "L'impostazione viene utilizzata su tutte le pagine di gestione dei database "
 "(per creare, eliminare, eseguire il dump o ripristinare un database)."
 
-#: ../../content/administration/on_premise/deploy.rst:711
+#: ../../content/administration/on_premise/deploy.rst:710
 msgid ""
 "If the management screens must not be accessible at all, you should set "
 "``list_db`` configuration option to ``False``, to block access to all the "
@@ -7909,7 +7898,7 @@ msgstr ""
 "l'opzione ``list_db`` su ``Falso`` per bloccare l'accesso a tutte le pagine "
 "di gestione e selezione del database."
 
-#: ../../content/administration/on_premise/deploy.rst:717
+#: ../../content/administration/on_premise/deploy.rst:716
 msgid ""
 "It is strongly recommended to disable the Database Manager for any internet-"
 "facing system! It is meant as a development/demo tool, to make it easy to "
@@ -7924,7 +7913,7 @@ msgstr ""
 "funzionalità agli utenti malintenzionati. Inoltre, non è progettato per "
 "gestire grandi database e potrebbe attivare limiti di memoria."
 
-#: ../../content/administration/on_premise/deploy.rst:723
+#: ../../content/administration/on_premise/deploy.rst:722
 msgid ""
 "On production systems, database management operations should always be "
 "performed by the system administrator, including provisioning of new "
@@ -7934,7 +7923,7 @@ msgstr ""
 "essere sempre eseguite dall'amministratore di sistema compreso il "
 "provisioning di nuovi database e i backup automatici."
 
-#: ../../content/administration/on_premise/deploy.rst:726
+#: ../../content/administration/on_premise/deploy.rst:725
 msgid ""
 "Be sure to setup an appropriate ``db_name`` parameter (and optionally, "
 "``dbfilter`` too) so that the system can determine the target database for "
@@ -7946,7 +7935,7 @@ msgstr ""
 "destinazione per ogni richiesta, altrimenti gli utenti verranno bloccati in "
 "quanto non gli sarà consentito di scegliere in autonomia il database."
 
-#: ../../content/administration/on_premise/deploy.rst:731
+#: ../../content/administration/on_premise/deploy.rst:730
 msgid ""
 "If the management screens must only be accessible from a selected set of "
 "machines, use the proxy server's features to block access to all routes "
@@ -7959,7 +7948,7 @@ msgstr ""
 "eccetto (forse)  ``/web/database/selector`` che mostra la pagina di "
 "selezione dei database."
 
-#: ../../content/administration/on_premise/deploy.rst:735
+#: ../../content/administration/on_premise/deploy.rst:734
 msgid ""
 "If the database-management screen should be left accessible, the "
 "``admin_passwd`` setting must be changed from its ``admin`` default: this "
@@ -7970,21 +7959,21 @@ msgstr ""
 "predefinito: la password viene controllata prima di consentire operazioni di "
 "modifica del database."
 
-#: ../../content/administration/on_premise/deploy.rst:739
+#: ../../content/administration/on_premise/deploy.rst:738
 msgid "It should be stored securely, and should be generated randomly e.g."
 msgstr ""
 "La password deve essere conservata in modo sicuro e dovrebbe essere generata "
 "in maniera casuale, ad esempio."
 
-#: ../../content/administration/on_premise/deploy.rst:745
+#: ../../content/administration/on_premise/deploy.rst:744
 msgid "which generates a 32-character pseudorandom printable string."
 msgstr "che genera una stringa stampabile pseudocasuale di 32 caratteri."
 
-#: ../../content/administration/on_premise/deploy.rst:748
+#: ../../content/administration/on_premise/deploy.rst:747
 msgid "Reset the master password"
 msgstr "Ripristinare la password master"
 
-#: ../../content/administration/on_premise/deploy.rst:750
+#: ../../content/administration/on_premise/deploy.rst:749
 msgid ""
 "There may be instances where the master password is misplaced, or "
 "compromised, and needs to be reset. The following process is for system "
@@ -7996,11 +7985,11 @@ msgstr ""
 "amministratori di sistema di un database Odoo on-premise e spiega in maniera "
 "dettagliata come resettare manualmente e ri-crittografare la password master."
 
-#: ../../content/administration/on_premise/deploy.rst:755
+#: ../../content/administration/on_premise/deploy.rst:754
 msgid ":doc:`../odoo_accounts`"
 msgstr ":doc:`../odoo_accounts`"
 
-#: ../../content/administration/on_premise/deploy.rst:757
+#: ../../content/administration/on_premise/deploy.rst:756
 msgid ""
 "When creating a new on-premise database, a random master password is "
 "generated. Odoo recommends using this password to secure the database. This "
@@ -8013,7 +8002,7 @@ msgstr ""
 "predefinita, quindi esiste una password master sicura per ogni distribuzione "
 "Odoo on-premise."
 
-#: ../../content/administration/on_premise/deploy.rst:762
+#: ../../content/administration/on_premise/deploy.rst:761
 msgid ""
 "When creating an Odoo on-premise database the installation is accessible to "
 "anyone on the internet, until this password is set to secure the database."
@@ -8022,7 +8011,7 @@ msgstr ""
 "accessibile a chiunque su internet fino a quando viene configurata la "
 "password per proteggere il database."
 
-#: ../../content/administration/on_premise/deploy.rst:765
+#: ../../content/administration/on_premise/deploy.rst:764
 msgid ""
 "The master password is specified in the Odoo configuration file (`odoo.conf` "
 "or `odoorc` (hidden file)). The Odoo master password is needed to modify, "
@@ -8033,11 +8022,11 @@ msgstr ""
 "necessari aper modificare, creare o eliminare un database attraverso "
 "l'interfaccia utente grafica (GUI)."
 
-#: ../../content/administration/on_premise/deploy.rst:770
+#: ../../content/administration/on_premise/deploy.rst:769
 msgid "Locate configuration file"
 msgstr "Individuare file di configurazione"
 
-#: ../../content/administration/on_premise/deploy.rst:772
+#: ../../content/administration/on_premise/deploy.rst:771
 msgid ""
 "First, open the Odoo configuration file (`odoo.conf` or `odoorc` (hidden "
 "file))."
@@ -8045,7 +8034,7 @@ msgstr ""
 "Per prima cosa, apri il file di configurazione Odoo (`odoo.conf` o `odoorc` "
 "(file nascosto))."
 
-#: ../../content/administration/on_premise/deploy.rst:776
+#: ../../content/administration/on_premise/deploy.rst:775
 #: ../../content/administration/on_premise/packages.rst:130
 #: ../../content/administration/on_premise/source.rst:70
 #: ../../content/administration/on_premise/source.rst:133
@@ -8059,7 +8048,7 @@ msgstr ""
 msgid "Windows"
 msgstr "Windows"
 
-#: ../../content/administration/on_premise/deploy.rst:778
+#: ../../content/administration/on_premise/deploy.rst:777
 msgid ""
 "The configuration file is located at: `c:\\\\ProgramFiles\\\\Odoo{VERSION}\\"
 "\\server\\\\odoo.conf`"
@@ -8067,7 +8056,7 @@ msgstr ""
 "Il file di configurazione si trova in: `c:\\\\ProgramFiles\\\\Odoo{VERSION}\\"
 "\\server\\\\odoo.conf`"
 
-#: ../../content/administration/on_premise/deploy.rst:780
+#: ../../content/administration/on_premise/deploy.rst:779
 #: ../../content/administration/on_premise/packages.rst:25
 #: ../../content/administration/on_premise/source.rst:52
 #: ../../content/administration/on_premise/source.rst:129
@@ -8081,7 +8070,7 @@ msgstr ""
 msgid "Linux"
 msgstr "Linux"
 
-#: ../../content/administration/on_premise/deploy.rst:782
+#: ../../content/administration/on_premise/deploy.rst:781
 msgid ""
 "Depending on how Odoo is installed on the Linux machine, the configuration "
 "file is located in one of two different places:"
@@ -8089,19 +8078,19 @@ msgstr ""
 "In base al tipo di installazione di Odoo sul dispositivo Linux, il file di "
 "configurazione potrebbe essere situato in uno dei seguenti due posti:"
 
-#: ../../content/administration/on_premise/deploy.rst:785
+#: ../../content/administration/on_premise/deploy.rst:784
 msgid "Package installation: `/etc/odoo.conf`"
 msgstr "Pacchetto installazione: `/etc/odoo.conf`"
 
-#: ../../content/administration/on_premise/deploy.rst:786
+#: ../../content/administration/on_premise/deploy.rst:785
 msgid "Source installation: `~/.odoorc`"
 msgstr "Fonte installazione: `~/.odoorc`"
 
-#: ../../content/administration/on_premise/deploy.rst:789
+#: ../../content/administration/on_premise/deploy.rst:788
 msgid "Change old password"
 msgstr "Modificare password vecchie"
 
-#: ../../content/administration/on_premise/deploy.rst:791
+#: ../../content/administration/on_premise/deploy.rst:790
 msgid ""
 "Once the appropriate file has been opened, proceed to modify the old "
 "password in the configuration file to a temporary password."
@@ -8110,12 +8099,12 @@ msgstr ""
 "della password precedente nel file di configurazione, sostituendola con una "
 "password temporanea."
 
-#: ../../content/administration/on_premise/deploy.rst:796
-#: ../../content/administration/on_premise/deploy.rst:844
+#: ../../content/administration/on_premise/deploy.rst:795
+#: ../../content/administration/on_premise/deploy.rst:843
 msgid "Graphical user interface"
 msgstr "Interfaccia utente grafica"
 
-#: ../../content/administration/on_premise/deploy.rst:798
+#: ../../content/administration/on_premise/deploy.rst:797
 msgid ""
 "After locating the configuration file, open it using a (:abbr:`GUI "
 "(graphical user interface)`). This can be achieved by simply double clicking "
@@ -8128,7 +8117,7 @@ msgstr ""
 "disporre di una :abbr:`GUI (graphical user interface)` predefinita tramite "
 "cui aprire il file."
 
-#: ../../content/administration/on_premise/deploy.rst:802
+#: ../../content/administration/on_premise/deploy.rst:801
 msgid ""
 "Next, modify the master password line `admin_passwd = $pbkdf2-sha…` to "
 "`admin_passwd = newpassword1234`, for example. This password can be "
@@ -8140,8 +8129,8 @@ msgstr ""
 "può essere di qualsiasi tipo purché sia salvato temporaneamente. Assicurati "
 "di modificare tutti i caratteri dopo `=`."
 
-#: ../../content/administration/on_premise/deploy.rst:807
-#: ../../content/administration/on_premise/deploy.rst:826
+#: ../../content/administration/on_premise/deploy.rst:806
+#: ../../content/administration/on_premise/deploy.rst:825
 msgid ""
 "The line appears like this: `admin_passwd = $pbkdf2-"
 "sh39dji295.59mptrfW.9z6HkA$w9j9AMVmKAP17OosCqDxDv2hjsvzlLpF8Rra8I7p/"
@@ -8151,17 +8140,17 @@ msgstr ""
 "sh39dji295.59mptrfW.9z6HkA$w9j9AMVmKAP17OosCqDxDv2hjsvzlLpF8Rra8I7p/"
 "b573hji540mk/.3ek0lg%kvkol6k983mkf/40fjki79m`"
 
-#: ../../content/administration/on_premise/deploy.rst:811
-#: ../../content/administration/on_premise/deploy.rst:830
+#: ../../content/administration/on_premise/deploy.rst:810
+#: ../../content/administration/on_premise/deploy.rst:829
 msgid "The modified line appears like this: `admin_passwd = newpassword1234`"
 msgstr "La riga modificata appare come segue: `admin_passwd = newpassword1234`"
 
-#: ../../content/administration/on_premise/deploy.rst:813
-#: ../../content/administration/on_premise/deploy.rst:853
+#: ../../content/administration/on_premise/deploy.rst:812
+#: ../../content/administration/on_premise/deploy.rst:852
 msgid "Command-line interface"
 msgstr "Interfaccia riga comando"
 
-#: ../../content/administration/on_premise/deploy.rst:815
+#: ../../content/administration/on_premise/deploy.rst:814
 msgid ""
 "Modify the master password line using the following Unix command detailed "
 "below."
@@ -8169,7 +8158,7 @@ msgstr ""
 "Modifica la riga della password master utilizzando il comando Unix descritto "
 "dettagliatamente in basso."
 
-#: ../../content/administration/on_premise/deploy.rst:817
+#: ../../content/administration/on_premise/deploy.rst:816
 msgid ""
 "Connect to the Odoo server's terminal via Secure Shell (SSH) protocol, and "
 "edit the configuration file. To modify the configuration file, enter the "
@@ -8180,7 +8169,7 @@ msgstr ""
 "configurazione, inserisci il seguente comando: :command:`sudo nano /etc/"
 "odoo.conf`"
 
-#: ../../content/administration/on_premise/deploy.rst:821
+#: ../../content/administration/on_premise/deploy.rst:820
 msgid ""
 "After opening the configuration file, modify the master password line "
 "`admin_passwd = $pbkdf2-sha…` to `admin_passwd = newpassword1234`. This "
@@ -8192,7 +8181,7 @@ msgstr ""
 "La password può essere di qualsiasi tipo purché sia salvato temporaneamente. "
 "Assicurati di modificare tutti i caratteri dopo `=`."
 
-#: ../../content/administration/on_premise/deploy.rst:833
+#: ../../content/administration/on_premise/deploy.rst:832
 msgid ""
 "It is essential that the password is changed to something else, rather than "
 "triggering a new password reset by adding a semicolon `;` at the beginning "
@@ -8204,11 +8193,11 @@ msgstr ""
 "garantisce che il database venga protetto durante l'intero processo di "
 "ripristino della password."
 
-#: ../../content/administration/on_premise/deploy.rst:838
+#: ../../content/administration/on_premise/deploy.rst:837
 msgid "Restart Odoo server"
 msgstr "Riavviare il server Odoo"
 
-#: ../../content/administration/on_premise/deploy.rst:840
+#: ../../content/administration/on_premise/deploy.rst:839
 msgid ""
 "After setting the temporary password, a restart of the Odoo server is "
 "**required**."
@@ -8216,7 +8205,7 @@ msgstr ""
 "Dopo aver configurato la password temporanea, è richiesto il **riavvio** del "
 "server Odoo."
 
-#: ../../content/administration/on_premise/deploy.rst:846
+#: ../../content/administration/on_premise/deploy.rst:845
 msgid ""
 "To restart the Odoo server, first, type `services` into the "
 "Windows :guilabel:`Search` bar. Then, select the :guilabel:`Services` "
@@ -8226,7 +8215,7 @@ msgstr ""
 "barra di :guilabel:`Ricerca` di Windows. In seguito, seleziona "
 "l'applicazione :guilabel:`Servizi` e scorri fino a :guilabel:`Odoo`."
 
-#: ../../content/administration/on_premise/deploy.rst:850
+#: ../../content/administration/on_premise/deploy.rst:849
 msgid ""
 "Next, right click on :guilabel:`Odoo`, and select :guilabel:`Start` "
 "or :guilabel:`Restart`. This action manually restarts the Odoo server."
@@ -8234,7 +8223,7 @@ msgstr ""
 "In seguito, fai clic su :guilabel:`Odoo` e seleziona :guilabel:`Avvia` "
 "o :guilabel:`Riavvia`. L'azione riavvia manualmente il server Odoo."
 
-#: ../../content/administration/on_premise/deploy.rst:855
+#: ../../content/administration/on_premise/deploy.rst:854
 msgid ""
 "Restart the Odoo server by typing the command: :command:`sudo service odoo15 "
 "restart`"
@@ -8242,7 +8231,7 @@ msgstr ""
 "Riavvia il server Odoo digitando il comando: :command:`sudo service odoo15 "
 "restart`"
 
-#: ../../content/administration/on_premise/deploy.rst:858
+#: ../../content/administration/on_premise/deploy.rst:857
 msgid ""
 "Change the number after `odoo` to fit the specific version the server is "
 "running on."
@@ -8250,11 +8239,11 @@ msgstr ""
 "Modifica il numero dopo `odoo` per adeguarti alla versione specifica del "
 "server."
 
-#: ../../content/administration/on_premise/deploy.rst:861
+#: ../../content/administration/on_premise/deploy.rst:860
 msgid "Use web interface to re-encrypt password"
 msgstr "Utilizzare l'interfaccia web per ricrittografare la password"
 
-#: ../../content/administration/on_premise/deploy.rst:863
+#: ../../content/administration/on_premise/deploy.rst:862
 msgid ""
 "First, navigate to `/web/database/manager` or `http://server_ip:port/web/"
 "database/manager` in a browser."
@@ -8262,7 +8251,7 @@ msgstr ""
 "Per prima cosa, vai su `/web/database/manager` oppure `http://server_ip:port/"
 "web/database/manager` utilizzando un browser."
 
-#: ../../content/administration/on_premise/deploy.rst:867
+#: ../../content/administration/on_premise/deploy.rst:866
 msgid ""
 "Replace `server_ip` with the IP address of the database. Replace `port` with "
 "the numbered port the database is accessible from."
@@ -8270,7 +8259,7 @@ msgstr ""
 "Sostituisci `server_ip` con l'indirizzo IP del database. Sostituisci `port` "
 "con la porta numerata dalla quale è possibile accedere al database."
 
-#: ../../content/administration/on_premise/deploy.rst:870
+#: ../../content/administration/on_premise/deploy.rst:869
 msgid ""
 "Next, click :guilabel:`Set Master Password`, and type in the previously-"
 "selected temporary password into the :guilabel:`Master Password` field. "
@@ -8284,7 +8273,7 @@ msgstr ""
 "La :guilabel:`Nuova password master` viene sottoposta a hash (oppure è "
 "crittografata) una volta cliccato il pulsante :guilabel:`Contina`."
 
-#: ../../content/administration/on_premise/deploy.rst:875
+#: ../../content/administration/on_premise/deploy.rst:874
 msgid ""
 "At this point, the password has been successfully reset, and a hashed "
 "version of the new password now appears in the configuration file."
@@ -8292,7 +8281,7 @@ msgstr ""
 "A questo punto, la password è stata reimpostata con successo e una versione "
 "con hash della nuova password apparirà nel file di configurazione."
 
-#: ../../content/administration/on_premise/deploy.rst:879
+#: ../../content/administration/on_premise/deploy.rst:878
 msgid ""
 "For more information on Odoo database security, see this "
 "documentation: :ref:`db_manager_security`."
@@ -8300,31 +8289,31 @@ msgstr ""
 "Per maggiori informazioni sulla sicurezza del database Odoo, consulta la "
 "documentazione: :ref:`db_manager_security`."
 
-#: ../../content/administration/on_premise/deploy.rst:883
+#: ../../content/administration/on_premise/deploy.rst:882
 msgid "Supported Browsers"
 msgstr "Browser supportati"
 
-#: ../../content/administration/on_premise/deploy.rst:885
+#: ../../content/administration/on_premise/deploy.rst:884
 msgid "Odoo supports the latest version of the following browsers."
 msgstr "Odoo supporta le ultime versioni dei seguenti browser."
 
-#: ../../content/administration/on_premise/deploy.rst:887
+#: ../../content/administration/on_premise/deploy.rst:886
 msgid "Google Chrome"
 msgstr "Google Chrome"
 
-#: ../../content/administration/on_premise/deploy.rst:888
+#: ../../content/administration/on_premise/deploy.rst:887
 msgid "Mozilla Firefox"
 msgstr "Mozilla Firefox"
 
-#: ../../content/administration/on_premise/deploy.rst:889
+#: ../../content/administration/on_premise/deploy.rst:888
 msgid "Microsoft Edge"
 msgstr "Microsoft Edge"
 
-#: ../../content/administration/on_premise/deploy.rst:890
+#: ../../content/administration/on_premise/deploy.rst:889
 msgid "Apple Safari"
 msgstr "Apple Safari"
 
-#: ../../content/administration/on_premise/deploy.rst:893
+#: ../../content/administration/on_premise/deploy.rst:892
 msgid ""
 "to have multiple Odoo installations use the same PostgreSQL database, or to "
 "provide more computing resources to both software."
@@ -8332,7 +8321,7 @@ msgstr ""
 "per aver aver installazioni multiple di Odoo usa lo stesso database "
 "PostgreSQL o per fornire più risorse informatiche a entrambi i software."
 
-#: ../../content/administration/on_premise/deploy.rst:896
+#: ../../content/administration/on_premise/deploy.rst:895
 msgid ""
 "technically a tool like socat_ can be used to proxy UNIX sockets across "
 "networks, but that is mostly for software which can only be used over UNIX "
@@ -8342,7 +8331,7 @@ msgstr ""
 "eseguire il proxy dei socket UNIX nelle reti ma questo riguarda "
 "principalmente i software che possono essere utilizzati solo su socket UNIX."
 
-#: ../../content/administration/on_premise/deploy.rst:900
+#: ../../content/administration/on_premise/deploy.rst:899
 msgid ""
 "or be accessible only over an internal packet-switched network, but that "
 "requires secured switches, protections against `ARP spoofing`_ and precludes "
@@ -11073,6 +11062,28 @@ msgstr ":doc:`Documentazione Odoo.sh <odoo_sh>`"
 #: ../../content/administration/upgrade.rst:432
 msgid ":doc:`Supported Odoo versions <standard_extended_support>`"
 msgstr ":doc:`Versioni Odoo supportate <standard_extended_support>`"
+
+#~ msgid ""
+#~ "Nevertheless, once the file has been located and the access rights "
+#~ "verified by Odoo, it is a good idea to serve the file using the static "
+#~ "web server instead of Odoo. For Odoo to delegate serving files to the "
+#~ "static web server, the `X-Sendfile <https://tn123.org/mod_xsendfile/>`_ "
+#~ "(apache) or `X-Accel <https://www.nginx.com/resources/wiki/start/topics/"
+#~ "examples/x-accel/>`_ (nginx) extensions must be enabled and configured on "
+#~ "the static web server. Once it is set up, start Odoo with the :option:`--"
+#~ "x-sendfile <odoo-bin --x-sendfile>` CLI flag (this unique flag is used "
+#~ "for both X-Sendfile and X-Accel)."
+#~ msgstr ""
+#~ "Tuttavia, una volta che il file è stato localizzato e i diritti di "
+#~ "accesso verificati da Odoo, è una buona idea servire il file utilizzando "
+#~ "un server web statico invece di Odoo. Affinché Odoo deleghi il servizio "
+#~ "dei file al server web statico, le estensioni `X-Sendfile <https://"
+#~ "tn123.org/mod_xsendfile/>`_ (apache) o `X-Accel <https://www.nginx.com/"
+#~ "resources/wiki/start/topics/examples/x-accel/>`_ (nginx) devono essere "
+#~ "abilitate e configurate sul server web statico. Una volta eseguita la "
+#~ "configurazione, avvia Odoo con la bandiera CLI :option:`--x-sendfile "
+#~ "<odoo-bin --x-sendfile>` CLI flag (la bandiera è utilizzata sia per X-"
+#~ "Sendfile che X-Accel)."
 
 #~ msgid ""
 #~ "Databases created for staging branches are intended to last up to three "
