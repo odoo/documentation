@@ -1,0 +1,177 @@
+/* Treasury Management System - Custom Styles */
+
+:root {
+    --primary: #0d6efd;
+    --sidebar-width: 0px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+    background-color: #f5f6fa;
+    font-size: 14px;
+}
+
+/* Navbar */
+.navbar-brand {
+    font-size: 1.1rem;
+}
+
+/* Cards */
+.card {
+    border-radius: 10px;
+}
+
+.card-header {
+    border-radius: 10px 10px 0 0 !important;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+}
+
+/* Tables */
+.table th {
+    font-weight: 600;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(13, 110, 253, 0.05);
+}
+
+/* Badges */
+.badge {
+    font-weight: 500;
+    font-size: 0.78rem;
+    padding: 0.35em 0.65em;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 6px;
+    font-size: 0.875rem;
+}
+
+.btn-sm {
+    font-size: 0.8rem;
+}
+
+/* Forms */
+.form-label {
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+    font-size: 0.875rem;
+}
+
+.form-control, .form-select {
+    border-radius: 6px;
+    font-size: 0.875rem;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+/* Stat cards */
+.stat-card {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Amount display */
+.amount-display {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.amount-display.negative { color: #dc3545; }
+.amount-display.positive { color: #198754; }
+
+/* State colors */
+.state-draft { color: #6c757d; }
+.state-submitted { color: #0dcaf0; }
+.state-approved { color: #0d6efd; }
+.state-partial { color: #fd7e14; }
+.state-paid, .state-cleared, .state-done { color: #198754; }
+.state-rejected, .state-cancelled { color: #dc3545; }
+
+/* Print styles */
+@media print {
+    .navbar, .btn, .alert, footer, .no-print { display: none !important; }
+    body { background: white; }
+    .card { border: 1px solid #ddd !important; box-shadow: none !important; }
+}
+
+/* Print voucher */
+.print-voucher {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+}
+
+.print-voucher .signature-box {
+    border-top: 1px solid #333;
+    margin-top: 60px;
+    padding-top: 8px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.amount-box {
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    background: #f8f9fa;
+    margin: 20px 0;
+}
+
+/* Lines table in claim form */
+.lines-table input {
+    border: 1px solid #dee2e6;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.lines-table .subtotal-cell {
+    font-weight: 600;
+    color: #0d6efd;
+}
+
+/* Progress bar */
+.custody-progress {
+    height: 10px;
+    border-radius: 5px;
+}
+
+/* Info list */
+.info-list dt {
+    font-size: 0.8rem;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.info-list dd {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    font-size: 0.85rem;
+    background: transparent;
+    padding: 0;
+}
+
+/* Scrollable table */
+.table-scroll {
+    max-height: 400px;
+    overflow-y: auto;
+}

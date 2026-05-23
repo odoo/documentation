@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% block title %}{{ 'تعديل مطالبة' if claim else 'مطالبة جديدة' }}{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h5 class="mb-0"><i class="bi bi-file-earmark-plus me-2 text-primary"></i>
+        {% if claim %}تعديل {{ claim.type_label }}{% elif claim_type == 'vendor' %}مطالبة مورد جديدة{% else %}مطالبة مصاريف جديدة{% endif %}
+    </h5>
+    <a href="{{ url_for('claims.index') }}" class="btn btn-outline-secondary btn-sm"><i class="bi bi-arrow-right me-1"></i>رجوع</a>
+</div>
+<form method="POST">
+<input type="hidden" name="claim_type" value="{{ claim.claim_type if claim else claim_type }}">
+<div class="row g-3">
+  <div class="col-lg-8">
+    <div class="card border-0 shadow-sm mb-3">
+      <div class="card-header bg-white fw-bold">بيانات المطالبة</div>
+      <div class="card-body">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <label class="form-label">التاريخ *</label>
+            <input type="date" name="date" class="form-control" value="{{ claim.date.strftime('%Y-%m-%d') if claim and claim.date else '' }}" required>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">تاريخ الاستحقاق</label>
+            <input type="date" name="due_date" class="form-control" value="{{ claim.due_date.strftime('%Y-%m-%d') if claim and claim.due_date else '' }}">
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">الأولوية</label>
+            <select name="priority" class="form-select">
+              <option value="normal" {{ 'selected' if not claim or claim.priority == 'normal' else '' }}>عادي</option>
+              <option value="high" {{ 'selected' if claim and claim.priority == 'high' else '' }}>مهم</option>
+              <option value="urgent" {{ 'selected' if claim and claim.priority == 'urgent' else '' }}>عاجل</option>
+            </select>
+          </div>
+          {% set ctype = claim.claim_type if claim else claim_type %}
+          {% if ctype == 'vendor' %}
+          <div class="col-md-6">
+            <label class="form-label">المورد *</label>
+            <input type="text" name="vendor" class="form-control" value="{{ claim.vendor if claim else '' }}" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">رقم فاتورة المورد</label>
+            <input type="text" name="vendor_ref" class="form-control" value="{{ claim.vendor_ref if claim else '' }}">
+          </div>
+          {% else %}
+          <div class="col-md-6">
+            <label class="form-label">الموظف *</label>
+            <input type="text" name="employee" class="form-control" value="{{ claim.employee if claim else '' }}" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">القسم</label>
+            <input type="text" name="department" class="form-control" value="{{ claim.department if claim else '' }}">
+          </div>
+          {% endif %}
+          <div class="col-12">
+            <label class="form-label">البيان / الوصف *</label>
+            <textarea name="description" class="form-control" rows="2" required>{{ claim.description if claim else '' }}</textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lines -->
+    <div class="card border-0 shadow-sm">
+      <div class="card-header bg-white d-flex justify-content-between">
+        <span class="fw-bold">بنود المطالبة</span>
+        <button type="button" class="btn btn-sm btn-outline-primary" onclick="addLine()"><i class="bi bi-plus"></i> إضافة بند</button>
+      </div>
+      <div class="card-body p-0">
+        <div class="table-responsive">
+          <table class="table table-sm mb-0">
+            <thead class="table-light">
+              <tr><th>البيان *</th><th>الحساب</th><th style="width:80px">الكمية</th><th style="width:100px">السعر</th><th style="width:90px" class="text-end">المجموع</th><th style="width:40px"></th></tr>
+            </thead>
+            <tbody id="lines-body">
+              {% if claim and claim.lines %}
+                {% for line in claim.lines %}
+                <tr>
+                  <td><input type="text" name="line_description" class="form-control form-control-sm" value="{{ line.description }}" required></td>
+                  <td><input type="text" name="line_account" class="form-control form-control-sm" value="{{ line.account }}"></td>
+                  <td><input type="number" name="line_quantity" class="form-control form-control-sm line-qty" value="{{ line.quantity }}" min="0.01" step="0.01" onchange="calcSubtotal(this.closest('tr'))"></td>
+                  <td><input type="number" name="line_price" class="form-control form-control-sm line-price" value="{{ line.unit_price }}" min="0" step="0.01" onchange="calcSubtotal(this.closest('tr'))"></td>
+                  <td class="line-subtotal text-end fw-bold text-primary">{{ line.subtotal | currency }}</td>
+                  <td><button type="button" class="btn btn-sm btn-outline-danger" onclick="removeLine(this)"><i class="bi bi-trash"></i></button></td>
+                </tr>
+                {% endfor %}
+              {% else %}
+                <tr>
+                  <td><input type="text" name="line_description" class="form-control form-control-sm" placeholder="وصف البند" required></td>
+                  <td><input type="text" name="line_account" class="form-control form-control-sm" placeholder="الحساب"></td>
+                  <td><input type="number" name="line_quantity" class="form-control form-control-sm line-qty" value="1" min="0.01" step="0.01" onchange="calcSubtotal(this.closest('tr'))"></td>
+                  <td><input type="number" name="line_price" class="form-control form-control-sm line-price" value="0" min="0" step="0.01" onchange="calcSubtotal(this.closest('tr'))"></td>
+                  <td class="line-subtotal text-end fw-bold text-primary">0.00</td>
+                  <td><button type="button" class="btn btn-sm btn-outline-danger" onclick="removeLine(this)"><i class="bi bi-trash"></i></button></td>
+                </tr>
+              {% endif %}
+            </tbody>
+            <tfoot>
+              <tr class="table-light"><td colspan="4" class="text-end fw-bold">الإجمالي:</td><td class="text-end fw-bold text-primary fs-6" id="grand-total">{{ claim.total_amount | currency if claim else '0.00 ر.س' }}</td><td></td></tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4">
+    <div class="card border-0 shadow-sm mb-3">
+      <div class="card-header bg-white fw-bold">ملاحظات</div>
+      <div class="card-body">
+        <textarea name="notes" class="form-control" rows="4" placeholder="ملاحظات داخلية...">{{ claim.notes if claim else '' }}</textarea>
+      </div>
+    </div>
+    <div class="d-grid gap-2">
+      <button type="submit" class="btn btn-primary"><i class="bi bi-save me-1"></i>حفظ المطالبة</button>
+      <a href="{{ url_for('claims.index') }}" class="btn btn-outline-secondary">إلغاء</a>
+    </div>
+  </div>
+</div>
+</form>
+{% endblock %}

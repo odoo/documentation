@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}تقرير الخزائن{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between mb-3">
+  <h5 class="mb-0"><i class="bi bi-bar-chart me-2 text-primary"></i>تقرير الخزائن</h5>
+  <button onclick="window.print()" class="btn btn-outline-secondary btn-sm no-print"><i class="bi bi-printer me-1"></i>طباعة</button>
+</div>
+<div class="row g-3">
+{% for t in treasuries %}
+<div class="col-md-6 col-lg-4">
+  <div class="card border-0 shadow-sm h-100">
+    <div class="card-header bg-{{ 'primary' if t.state == 'open' else 'secondary' }} text-white">
+      <div class="d-flex justify-content-between">
+        <span class="fw-bold">{{ t.name }}</span>
+        <span class="badge bg-white text-dark">{{ t.type_label }}</span>
+      </div>
+    </div>
+    <div class="card-body text-center">
+      <div class="display-6 fw-bold {{ 'text-danger' if t.balance < 0 else 'text-success' }}">{{ t.balance | currency(t.currency) }}</div>
+      <div class="text-muted small mt-1">الرصيد الحالي</div>
+    </div>
+    <div class="card-footer bg-transparent">
+      <div class="row text-center small">
+        <div class="col"><div class="text-muted">المدفوعات</div><div class="fw-bold">{{ t.payments | length }}</div></div>
+        <div class="col"><div class="text-muted">العهد</div><div class="fw-bold">{{ t.custodies | length }}</div></div>
+        <div class="col"><div class="text-muted">المسؤول</div><div class="fw-bold">{{ t.responsible or '-' }}</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+{% else %}
+<div class="col-12 text-center text-muted py-5">لا توجد خزائن</div>
+{% endfor %}
+</div>
+{% endblock %}
