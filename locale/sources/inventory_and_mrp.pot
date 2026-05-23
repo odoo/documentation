@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-15 17:30+0000\n"
+"POT-Creation-Date: 2026-05-22 17:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -91,7 +91,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:52
 #: ../../content/applications/inventory_and_mrp/barcode/setup/barcodelookup.rst:15
 #: ../../content/applications/inventory_and_mrp/barcode/setup/hardware.rst:41
-#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:33
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:30
 #: ../../content/applications/inventory_and_mrp/barcode/setup/serial_numbers_lots.rst:11
 #: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:14
 #: ../../content/applications/inventory_and_mrp/inventory/inventory_valuation/landed_costs.rst:16
@@ -1553,7 +1553,7 @@ msgid "The **Barcode** app can be used to process receipts, deliveries, and othe
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:13
-msgid "This makes it possible to process operations on the warehouse floor when they happen, instead of having to wait to validate transfers from a computer. This real-time processing ensures barcodes are accurately assigned to the correct products, packaging, transfers, locations, and more, reducing errors and keeping inventory data in sync."
+msgid "This allows operations on the warehouse floor to be processed in real time, rather than waiting to validate transfers from a computer. This real-time processing ensures barcodes are accurately assigned to the correct products, packages, packaging, transfers, locations, and more. This helps reduce errors and keeps inventory data in sync."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:19
@@ -1570,7 +1570,7 @@ msgid "To do so, navigate to :menuselection:`Inventory app --> Configuration -->
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:28
-msgid "After the checkbox is selected, click :guilabel:`Save` at the top of the page to save changes."
+msgid "After selecting the checkbox, click :guilabel:`Save` at the top of the page to save changes."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:30
@@ -1586,7 +1586,7 @@ msgid ":guilabel:`Default GS1 Nomenclature`: Scan barcodes of sealed boxes and i
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:40
-msgid "There is also a :guilabel:`Configure Product Barcodes` internal link arrow, and a set of :guilabel:`Print` buttons for printing barcode commands and operation types, as well as a barcode demo sheet."
+msgid "There is also an internal link arrow to :guilabel:`Configure Product Barcodes`, a set of :guilabel:`Print` buttons for printing barcode commands and operation types, and a barcode demo sheet."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:48
@@ -1609,7 +1609,7 @@ msgid "Scan barcodes for receipts"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:58
-msgid "Purchase orders (POs) are used to process warehouse receipts for incoming products and product packagings. First, create a request for quotation, then confirm it to create a |PO|."
+msgid "Purchase orders (POs) are used to process warehouse receipts for incoming products, packages, and product packagings. First, create a request for quotation, then confirm it to create a |PO|."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:62
@@ -1625,7 +1625,7 @@ msgid "Once inside the **Barcode** app, a :guilabel:`Barcode Scanner` screen dis
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:72
-msgid "To process receipts, click the :guilabel:`Operations` button at the bottom of the screen. The :guilabel:`Operations` overview page opens."
+msgid "To process receipts, click the :guilabel:`Operations` button at the bottom of the screen. The *Operations* overview page opens."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:75
@@ -1637,7 +1637,7 @@ msgid "If *only* using a barcode scanner or the Odoo mobile app, scan each barco
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:84
-msgid "From this screen, an overview of all receipts to process within that transfer (**WH/IN/000XX**) is shown. At the bottom of the screen, there are options to :guilabel:`Add Product` or :guilabel:`Validate`, depending on whether products need to be added to the operation, or if the whole operation should be validated at once. If the *Packages* setting is enabled in the Inventory settings, the :guilabel:`Put in Pack` button is also available."
+msgid "From this screen, an overview of all receipts to process within that transfer (**WH/IN/000XX**) is shown. At the bottom of the screen, there are options to :guilabel:`Add Product` or :guilabel:`Validate`, depending on whether products need to be added to the operation or if the whole operation should be validated at once. If the *Packages* setting is enabled in the Inventory settings, the :guilabel:`Put in Pack` button is also available. If :doc:`quality checks <../../quality/quality_management/quality_checks>` are required for a product, the :guilabel:`Quality Checks` button displays."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
@@ -1645,39 +1645,67 @@ msgstr ""
 msgid "Overview of receipts in transfer to scan."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:93
-msgid "To process and scan each product individually, scan a product or product packaging, or choose a specific product line. Click the :guilabel:`+#` button (for example, `+10`) to indicate receipt of that product."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:98
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:173
-msgid "Editing a product line"
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:95
+msgid "To process and scan each product individually, scan a product, package, or product packaging, or choose a specific product line. Click the :guilabel:`+#` button (for example, `+10`) to indicate receipt of that product."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:100
-msgid "To manually adjust received quantities for a product, click the :icon:`fa-pencil` :guilabel:`(pencil)` icon to open a new screen to edit that product line."
+msgid "A |PO| is created for `20` `Bolts` and `2` `Cabinet with Doors` products. There are two packages (**PACK000002** and **PACK000003**) for the incoming products, each containing 10 Bolts and 1 Cabinet with Doors."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:103
-msgid "On this screen, the product that's being received is listed. Under the product name, edit the :guilabel:`Quantity` line. Change the `0.00` in the line to the desired quantity, or click the :guilabel:`+#` button (for example, `+12`) to automatically fill the quantity ordered from the |PO|."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:104
+msgid "A warehouse employee scans the **PACK000003** barcode. 10 Bolts and 1 Cabinet with Doors are processed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:107
-msgid "Additionally, click the :guilabel:`+1` and :guilabel:`-1` buttons to add or subtract quantity of the product. Click the product packaging button (for example, `6-pack`) to add a product packaging. Click the number keys to add quantity."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:0
+msgid "A warehouse order is partially processed when scanning a package."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:111
-msgid "Below the quantity buttons is the :guilabel:`Location` line, which reads `WH/Stock` by default, unless another *location* is listed on the product itself. Click this line to reveal a drop-down menu of additional locations to choose from."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:196
+msgid "Editing a product line"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:115
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:158
-#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:215
-msgid "Once ready, click :guilabel:`Confirm` to confirm the changes made to the product line."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:113
+msgid "To manually adjust received quantities for a product, click the :icon:`fa-pencil` :guilabel:`(pencil)` icon to open a new screen to edit that product line."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:118
-msgid "In the reception operation `WH/IN/00013`, `12 Units` of the `Soda Can` product is expected to be received. `[SODA-SINGLE-CAN]` is the barcode set on the product form. Warehouse employees can scan the barcode of the `Soda Can` product to receive one unit, or because they can be purchased in 6-pack packaging, they can scan the packaging barcode. Alternatively, they can click the :icon:`fa-pencil` :guilabel:`(pencil)` icon to manually enter the received quantities."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:116
+msgid "On this screen, the product that is being received is listed. Under the product name, edit the :guilabel:`Quantity` line. Change the `0.00` in the line to the desired quantity, or click the :guilabel:`+#` button (for example, `+12`) to automatically fill the quantity ordered from the |PO|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:120
+msgid "Additionally, click the :guilabel:`+1` and :guilabel:`-1` buttons to add or subtract a quantity of the product. Click the product packaging button (for example, `6-pack`) to add a product packaging."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:123
+msgid "Below the quantity buttons is the :guilabel:`Destination Location` line, which reads `WH/Stock` by default, unless another *location* is listed on the product itself. Click this line to reveal a drop-down menu of additional locations to choose from."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:127
+msgid "When the *Packages* feature is enabled in the **Inventory** app's settings, the following fields appear:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:130
+msgid ":guilabel:`Source Package`: If incoming products are part of their own source package, select or create the package."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:132
+msgid ":guilabel:`Destination Package`: If the products should be stored in a package in inventory, select or create the package."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:134
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:214
+msgid ":guilabel:`Destination Container Package`: If a package must be nested inside another (pack-in-pack), select or create the parent package. See :doc:`../../inventory/product_management/configure/pack_in_pack` for more details."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:138
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:227
+msgid "When ready, click :guilabel:`Confirm` to confirm the changes made to the product line."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:141
+msgid "In the reception operation `WH/IN/00019`, `12 Units` of the `Soda Can` product are expected to be received. `[SODA-SINGLE-CAN]` is the barcode set on the product form. Warehouse employees can scan the barcode of the `Soda Can` product to receive one unit, or because they can be purchased in 6-pack packaging, they can scan the packaging barcode. Alternatively, they can click the :icon:`fa-pencil` :guilabel:`(pencil)` icon to manually enter the received quantities."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:0
@@ -1685,15 +1713,15 @@ msgstr ""
 msgid "Product line editor for individual transfer in Barcode app."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:128
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:151
 msgid "Validating the transfer"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:130
-msgid "If not all products were scanned or manually entered from the pencil icon, click the :guilabel:`+#` button on the product line for the products being received, or scan the product or product packaging barcode."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:153
+msgid "If not all products were scanned or manually entered from the pencil icon, click the :guilabel:`+#` button on the product line for the products being received, or scan the product, package, or product packaging barcode."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:134
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:157
 msgid "Finally, click :guilabel:`Validate`. The receipt is processed, and the **Barcode** app can be closed."
 msgstr ""
 
@@ -1701,29 +1729,29 @@ msgstr ""
 msgid "Overview of receipts in transfer to validate."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:141
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:164
 msgid "Scan barcodes for delivery orders"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:143
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:166
 msgid "To process warehouse deliveries for outgoing products, a sales order (SO) must be created to create a delivery operation to process. First, create a quotation, then confirm it to create the |SO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:147
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:170
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:208
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/edi.rst:123
 msgid ":doc:`../../../sales/sales/sales_quotations/create_quotations`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:149
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:172
 msgid "To process and scan barcodes for warehouse deliveries, navigate to the :menuselection:`Barcode` app."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:151
-msgid "In the **Barcode** app, a :guilabel:`Barcode Scanner` screen displaying different options opens. To process deliveries, click the :guilabel:`Operations` button at the bottom of the screen. This opens an :guilabel:`Operations` overview page."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:174
+msgid "In the **Barcode** app, a :guilabel:`Barcode Scanner` screen opens, displaying different options. To process deliveries, click the :guilabel:`Operations` button at the bottom of the screen. This opens an *Operations* overview page."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:155
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:178
 msgid "On this page, click the :guilabel:`Delivery Orders` card to view all outstanding deliveries."
 msgstr ""
 
@@ -1731,44 +1759,52 @@ msgstr ""
 msgid "Operations overview page in Barcode app dashboard."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:160
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:183
 msgid "Select the desired delivery order to process. This navigates to the barcode transfer screen."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:162
-msgid "On this screen, first scan the source location of the products to deliver. Then, review the overview of all products and packagings to process within that transfer (**WH/OUT/000XX**). At the bottom of the screen, there are buttons to :guilabel:`Add Product` or :guilabel:`Validate`, depending on whether products need to be added to the operation, or if the whole operation should be validated at once."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:168
-msgid "To process and scan each product individually, choose a specific product line. Scan a product or product packaging, or click the :guilabel:`+#` (for example, `+6`) button to indicate delivery of that product."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:175
-msgid "To manually adjust quantities for a product, click the :icon:`fa-pencil` :guilabel:`(pencil)` icon to open a new screen to edit that product line."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:178
-msgid "The product that's being delivered is listed on this screen. Under the product name, edit the :guilabel:`Quantity` line. Change the `0.00` in the line to the desired quantity, or click the :guilabel:`+#` button (for example, `+6`) to automatically fill the quantity ordered from the |SO|. If the product is sold in a packaging, click the packaging button (for example, `6-pack`). Alternatively, click the :guilabel:`+1` and :guilabel:`-1` buttons to add or subtract quantity of the product."
-msgstr ""
-
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:185
-msgid "Below the quantity buttons is the :guilabel:`Source Location` line, which reads `WH/Stock` by default, unless the product is stored in a different location. This is the location that the product is being pulled from for delivery. Click this line to reveal a menu of additional locations to choose from (if this product is stored in multiple locations in the warehouse)."
+msgid "On this screen, first scan the source location of the products to deliver. Then, review the overview of all products, packages, and packagings to process within that transfer (**WH/OUT/000XX**). At the bottom of the screen, there are buttons to :guilabel:`Add Product` or :guilabel:`Validate`, depending on whether products need to be added to the operation or if the whole operation should be validated at once."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:191
-msgid "For warehouses that have multiple different storage locations, putaway rules, and removal strategies, additional steps can be added for various operation types, while using the **Barcode** app."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:195
-msgid "When ready, click :guilabel:`Confirm` to confirm the changes made to the product line."
+msgid "To process and scan each product individually, choose a specific product line. Scan a product, package, or product packaging, or click the :guilabel:`+#` (for example, `+6`) button to indicate delivery of that product."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:198
+msgid "To manually adjust quantities for a product, click the :icon:`fa-pencil` :guilabel:`(pencil)` icon to open a new screen to edit that product line."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:201
+msgid "The product that's being delivered is listed on this screen. Under the product name, edit the :guilabel:`Quantity` line. Change the `0.00` in the line to the desired quantity, or click the :guilabel:`+#` button (for example, `+6`) to automatically fill the quantity ordered from the |SO|. If the product is sold in a packaging, click the packaging button (for example, `6-pack`). Alternatively, click the :guilabel:`+1` and :guilabel:`-1` buttons to add or subtract a quantity of the product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:208
+msgid "When the *Packages* feature is enabled in the **Inventory** settings, the following fields appear:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:210
+msgid ":guilabel:`Source Package`: If outgoing products should be picked from a package in inventory, select or create the package."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:212
+msgid ":guilabel:`Destination Package`: If the products should be stored in a package before delivery, select or create the package."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:218
+msgid "The :guilabel:`Quantity in Stock` section lists the locations from which products can be picked. The selected location is the location from which the product is being pulled for delivery. Click this line to reveal a menu of additional locations to choose from (if this product is stored in multiple locations in the warehouse)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:224
+msgid "For warehouses with multiple different storage locations, putaway rules, and removal strategies, additional steps can be added for various operation types while using the **Barcode** app."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:230
 msgid "Validating the delivery"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:200
-msgid "If not all products or product packagings have been scanned or entered on the overview page, scan the products or packagings, or click the :guilabel:`+#` button on the product line for the products. Finally, click :guilabel:`Validate`. The delivery is processed, and the **Barcode** app can be closed."
+#: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:232
+msgid "If not all products, packages, or product packagings have been scanned or entered on the overview page, scan the products, packages, or packagings, or click the :guilabel:`+#` button on the product line for the products. Finally, click :guilabel:`Validate`. The delivery is processed, and the **Barcode** app can be closed."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/receipts_deliveries.rst:None
@@ -2085,6 +2121,11 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:154
 msgid "Below the number keys are the two :guilabel:`location` lines, which read whichever locations were previously specified on the internal transfer form, in this case `WH/Stock` and `WH/Stock/Shelf 1`. Click these lines to reveal a drop-down menu of additional locations to choose from."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:158
+#: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:215
+msgid "Once ready, click :guilabel:`Confirm` to confirm the changes made to the product line."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:160
@@ -2879,94 +2920,130 @@ msgid "Hardware"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:23
-msgid "The following are required to begin working with RFID in Odoo:"
+msgid "To start working with RFID in Odoo, one of the following devices is recommended:"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:25
-msgid "Zebra TCX Series mobile computer, or"
+msgid "CipherLab UHF RFID RS36, RS38 Series"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:26
-msgid "Android Smartphone"
+msgid "Zebra TC53e-RFID Series"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:28
-msgid "Paired with:"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:30
-msgid "Zebra RFD40 (can read and write RFID tags)"
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:27
+msgid "Zebra UHF RFID RFD90XX, RFD40XX Series paired with a mobile Android device"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:35
-msgid "Before using RFID tags to manage inventory, the Android Package Kit (APK) with RFID support must be installed on the mobile computer or smartphone."
+msgid "Before installing the |APK| on a device, enable installation from unknown sources in the Android settings. This option can usually be found under :guilabel:`App` or :guilabel:`App & Notification` settings, under the :guilabel:`Special access` or :guilabel:`Special app access` section."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:39
-msgid "Before installing the APK on an individual device, first enable the ability to install unknown apps in the device settings. Find this setting in the device's :guilabel:`App` or :guilabel:`App & Notification` settings, under the :guilabel:`Special access` or :guilabel:`Special app access` section."
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:41
+msgid "CipherLab"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:44
-msgid "Then, download the APK. On the :guilabel:`Downloads` page, under the :guilabel:`Mobile Application` section, click :guilabel:`Download` next to the :guilabel:`Android` option, then select :guilabel:`Download APK (with Zebra RFID support)` from the drop-down menu. Download this file via a computer and transfer the APK via USB or Bluetooth, or use the device's web browser to download the APK."
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:43
+msgid "Before using RFID tags to manage inventory, an additional |APK| developed by CipherLab must be installed on the mobile computer or smartphone."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:47
+msgid "Before installing the CipherLab |APK|, please make sure that the firmware of the CipherLab Android device is up-to-date. To check for updates, go to :menuselection:`Settings --> System --> System updates`. If asked to enter an :guilabel:`Input verify code`, contact a CipherLab reseller."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:52
+msgid "Obtain the :guilabel:`CipherLab Multi-Tag Output` |APK| from CipherLab or from a supplier partner. Transfer the |APK| to the device using USB or Bluetooth, or download it directly using the device's web browser."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:56
+msgid "Open the |APK| from the browser download notification or the location where the file is stored. Tap to install the |APK|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:59
+msgid "Next, enable :guilabel:`Notification` permissions. Navigate to :menuselection:`Settings --> Apps --> Multi-Tag Output`. A vertical ellipsis menu appears in the top corner. Open the menu, then select :guilabel:`Allow restricted settings`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:63
+msgid "When the CipherLab app is opened, :guilabel:`Accessibility` settings open. In the :guilabel:`Multi-Tag Output` section, select :guilabel:`Use Multi-Tag Output`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:66
+msgid "For the :guilabel:`Multi-Tag Output` settings, set the :guilabel:`End Character` to `;`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:69
+msgid "This scanner also works with the **Barcode** Progressive Web App (PWA) or in a web browser. The Android Odoo app is not mandatory."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:73
+msgid "Zebra"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:75
+msgid "Before using RFID tags to manage inventory, a dedicated Odoo Android app with RFID support must be installed on the mobile computer or smartphone."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:78
+msgid "First, download the |APK|. On the :guilabel:`Downloads` page, under the :guilabel:`Mobile Application` section, click :guilabel:`Download` next to the :guilabel:`Android` option, then select :guilabel:`Download APK (with Zebra RFID support)` from the drop-down menu. Download this file via a computer and transfer the |APK| via USB or Bluetooth, or use the device's web browser to download the |APK|."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:None
 msgid "Download the APK from the Download page."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:53
-msgid "Install the APK. If :guilabel:`Install unknown apps` is enabled for the device's web browser, install the APK directly from the browser download notification. If :guilabel:`Install unknown apps` is enabled for the device's file manager, open it and navigate to the location where the file is stored, then tap it to install the APK."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:58
-msgid "Then, when reading or writing RFID tags, ensure that the Zebra device and the smart device are paired and connected."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:62
-msgid "Set a compatible barcode"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:64
-msgid "Before you can manage inventory using RFID tags, a compatible barcode must be assigned to the products. Set the product barcode in the product form."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:68
-msgid ":ref:`Set product barcodes <inventory/barcode/set-barcodes>`"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:70
-msgid "To work with RFID, the product barcode must be GTIN-14-compatible, and inventory tracking must be enabled for the product. Product barcodes that are not GTIN-14-compatible must be upgraded to work with RFID."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:75
-msgid "Tracking by serial number or lots does not need to be enabled for this feature to work properly."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:78
-msgid "Limitations"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:80
-msgid "The serial number that is part of the |EPC| must only be numeric, as SGTIN-96 is the only supported encoding scheme for RFID tags in Odoo. Alphanumeric serial numbers are **not** supported."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:83
-msgid "For products tracked by lot, the lot can be scanned in, but it will be considered as one lot with a quantity of `1`. It does not count individual products in a receipt."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:85
-msgid "Only ultra-high frequency (UHF) RFID tags are supported."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:86
-msgid "Products need to be GS1-registered because barcodes must be unique."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:89
-msgid ":doc:`../operations/scan_rfid`"
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:87
+msgid "Install the |APK| directly from the browser download notification or the location where it is stored."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:90
+msgid "Then, when reading or writing RFID tags, ensure that the Zebra device and the smart device are paired and connected."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:94
+msgid "Set a compatible barcode"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:96
+msgid "Before managing inventory using RFID tags, a compatible barcode must be assigned to the products. Set the product barcode in the product form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:100
+msgid ":ref:`Set product barcodes <inventory/barcode/set-barcodes>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:102
+msgid "To work with RFID, the product barcode must be GTIN-14-compatible, and inventory tracking must be enabled for the product. Product barcodes that are not GTIN-14-compatible must be upgraded to work with RFID."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:107
+msgid "Tracking by serial number or lots does not need to be enabled for this feature to work properly."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:110
+msgid "Limitations"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:112
+msgid "The serial number that is part of the |EPC| must only be numeric, as SGTIN-96 is the only supported encoding scheme for RFID tags in Odoo. Alphanumeric serial numbers are **not** supported."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:115
+msgid "For products tracked by lot, the lot can be scanned in, but it will be considered as one lot with a quantity of `1`. It does not count individual products in a receipt."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:117
+msgid "Only ultra-high frequency (UHF) RFID tags are supported."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:118
+msgid "Products need to be GS1-registered because barcodes must be unique."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:121
+msgid ":doc:`../operations/scan_rfid`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/barcode/setup/rfid.rst:122
 msgid ":doc:`../operations/retrieve_epcs`"
 msgstr ""
 
@@ -12013,6 +12090,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:27
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:70
 msgid "General information"
 msgstr ""
 
@@ -13146,6 +13224,7 @@ msgid "This documentation contains configuration details specific to FedEx integ
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:24
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:12
 msgid "Enable shipping connector"
 msgstr ""
 
@@ -13162,6 +13241,7 @@ msgid "The FedEx Shipping Methods button below the FedEx Connector."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:37
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:48
 msgid "Configure delivery method"
 msgstr ""
 
@@ -15312,7 +15392,7 @@ msgid ":doc:`UPS <ups_credentials>`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:39
-msgid "US Postal Service"
+msgid ":doc:`US Postal Service <usps>`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:40
@@ -15945,6 +16025,174 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:208
 msgid ":guilabel:`Duties paid by`: Select whether duties or other fees are charged to the :guilabel:`Sender` or :guilabel:`Recipient` of the order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:3
+msgid "USPS integration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:7
+msgid "Integrating a USPS account with Odoo's **Inventory** app makes it possible to calculate delivery rates and generate delivery labels within Odoo. This is accomplished by enabling the USPS shipping connector, then configuring at least one delivery method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:14
+msgid "To enable the USPS shipping connector, open the :menuselection:`Apps` app from the main Odoo dashboard. In the :guilabel:`Search` field, search for `USPS`  and click :guilabel:`Install`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:17
+msgid "After the shipping connector is installed, the USPS connector is enabled by default."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:20
+msgid "Configure USPS business account"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:22
+msgid "A USPS business account is required to obtain the information needed to :ref:`fill out the fields in the delivery method form <inventory/shipping_receiving/usps-configuration>`. To create a new account, navigate to USPS's `Create Your USPS.com Account <https://reg.usps.com/entreg/RegistrationAction_input>`_ page, select the :guilabel:`Business Account` option, then follow the steps."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:29
+msgid "Create a developer app"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:31
+msgid "After the USPS Business Customer Onboarding Portal (COP) is set up, `sign in to the USPS COP <https://cop.usps.com/>`_ to manage business account information and access the USPS APIs."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:34
+msgid "On this page, make note of the :guilabel:`Customer Registration ID (CRID)`, the :guilabel:`Master Mailer ID`, and the :guilabel:`Label Mailer ID`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:37
+msgid "Click the :guilabel:`My Apps` link at the top of the screen."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:39
+msgid "Open the :guilabel:`Developer Apps` tab. Click the :guilabel:`Add App` button. In the *Add App* pop-up window, specify an :guilabel:`App Name`. Select the APIs to use. Finally, click the :guilabel:`Add App` button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:43
+msgid "A window opens, titled after the app name. Keep this window open as the delivery method is configured. The :guilabel:`Consumer Key` and :guilabel:`Consumer Secret` will be necessary in the delivery method form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:50
+msgid "Once the USPS shipping connector is enabled, at least one delivery method must be configured. After doing so, the delivery method can be included in sales orders (SOs) and used to compute delivery costs and print shipping labels."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:55
+msgid "The USPS shipping connector automatically creates two default delivery methods: :guilabel:`USPS Domestic` and :guilabel:`USPS International`. These methods are preconfigured with test credentials, allowing them to be used for testing purposes."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:59
+msgid "To create actual shipments using the default delivery methods, the test credentials must be replaced with credentials from a valid USPS account."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:62
+msgid "Open or create a new delivery method. Navigate to :menuselection:`Inventory --> Configuration --> Delivery Methods`, then open an existing USPS delivery method to display its form. Alternatively, click :guilabel:`New` to open a blank form and configure a new delivery method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:None
+msgid "The USPS Domestic delivery method, fully configured."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:72
+msgid "The fields at the top of the delivery method form configure how the method operates in Odoo. In the :guilabel:`Provider` field, select :guilabel:`USPS` from the drop-down menu if it is not already selected."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:76
+msgid "The remaining fields in this section are general to all delivery providers. For details on how to fill them out, see :doc:`third_party_shipper`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:82
+msgid "USPS Configuration tab"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:84
+msgid "The options in the *USPS Configuration* tab are used to connect the method to a USPS account and to configure the delivery details associated with it."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:87
+msgid "Fill out the following fields in the form:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:89
+msgid ":guilabel:`EPS Number`: The Enterprise Payment System (EPS) account number identifies the payment account and is used for electronic funds transfers. After a payment account is added in the |COP| tool, the EPS number will display, or it can be retrieved from the `USPS Business Customer Gateway <https://epay.usps.com/paymod/>`_."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:93
+msgid ":guilabel:`CRID`: The CRID is a number that identifies the physical business address across all USPS systems and applications."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:95
+msgid ":guilabel:`MID`: Fill in the :guilabel:`Master Mailer ID` listed in the |COP|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:96
+msgid ":guilabel:`Manifest MID`: Fill in the :guilabel:`Label Mailer ID` listed in the |COP|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:97
+msgid ":guilabel:`USPS API Key`: Enter the :guilabel:`Consumer Key` credential for the app created in the USPS |COP| tool."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:99
+msgid ":guilabel:`USPS API Secret`: Enter the :guilabel:`Consumer Secret` credential for the app created in the USPS |COP| tool."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:101
+msgid ":guilabel:`Label Format`: Select the file format that generated labels should use."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:102
+msgid ":guilabel:`USPS Package Type`: Select or create the package type to use for shipping."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:103
+msgid ":guilabel:`USPS Domestic Service` or :guilabel:`USPS International Service`: Select the service level that should be used to generate shipping labels."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:105
+msgid ":guilabel:`Delivery Nature`: Select whether the delivery method is :guilabel:`Domestic` or :guilabel:`International`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:107
+msgid ":guilabel:`Content Type`: Select the type of content that will be shipped in packages with this delivery method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:110
+msgid "In the :guilabel:`Options` section, configure the following fields:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:112
+msgid ":guilabel:`Domestic Rating Indicator` or :guilabel:`International Rating Indicator`: Select the rating indicator that works best for shipping needs. USPS uses specific indicators, pricing groups, and automated classification systems to distinguish between domestic and international shipments for rating purposes. These systems help ensure accurate postage calculations based on factors such as destination, package weight, dimensions, and selected mail class."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:117
+msgid ":guilabel:`Processing Category`: Select a packaging processing category."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:118
+msgid ":guilabel:`Generate Return Label`: For domestic shipments only. Select this checkbox to automatically generate a return label when the delivery is validated."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:122
+msgid "Turn on the USPS delivery method"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:124
+msgid "After the USPS connection is set up, use the smart buttons at the top of the form to publish, turn on production mode, or activate debug logging."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:127
+msgid ":guilabel:`Unpublished` / :guilabel:`Published`: Determines whether the delivery method is available on the **eCommerce** website."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:129
+msgid ":guilabel:`Test Environment` / :guilabel:`Production Environment`: Determines whether the delivery method creates :guilabel:`Test` labels, which are canceled immediately,  or :guilabel:`Production` labels, which are real shipping labels charged to the USPS account."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:132
+msgid ":guilabel:`No Debug` / :guilabel:`Debug Requests`: Determines whether API requests and responses are logged in Odoo (:doc:`turn on developer mode <../../../../general/developer_mode>` and go to :menuselection:`Settings app --> Technical --> Logging`)."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/zebra.rst:3
@@ -20488,6 +20736,7 @@ msgid "Once ready, click :guilabel:`Save`. When clicked, the new :guilabel:`Favo
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_calendar.rst:169
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:20
 msgid "Views"
 msgstr ""
 
@@ -21795,7 +22044,7 @@ msgid "Work centers only appear if the :guilabel:`Work Orders` setting is enable
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:17
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:55
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:54
 msgid ":doc:`../basic_setup/bill_configuration`"
 msgstr ""
 
@@ -22155,22 +22404,22 @@ msgid "When manufacturing certain products, specific operations may need to be c
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:15
-msgid "The *work order dependencies* setting is not enabled by default. To enable it, navigate to :menuselection:`Manufacturing app --> Configuration --> Settings`. Then, enable the :guilabel:`Work Orders` setting, if it is not already active."
+msgid "The *work order dependencies* setting is not enabled by default. To enable it, navigate to :menuselection:`Manufacturing app --> Configuration --> Settings`. Then, enable the :guilabel:`Work Orders` setting if it is not already active."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:19
-msgid "After enabling the :guilabel:`Work Orders` setting, the :guilabel:`Work Order Dependencies` setting appears below it. Enable :guilabel:`Work Order Dependencies`, then click :guilabel:`Save` to confirm the changes."
+msgid "The :guilabel:`Custom Work Order Dependencies` option appears below it. Enable this setting, then click :guilabel:`Save` to confirm the changes."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:24
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:23
 msgid "Add dependencies to BoM"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:26
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:25
 msgid "Work order dependencies are configured on a product's |BOM|. To do so, navigate to :menuselection:`Manufacturing app --> Products --> Bills of Materials`, then select a |BOM|, or create a new one by clicking :guilabel:`New`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:30
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:29
 msgid "On the |BOM|, open the *Miscellaneous* tab, then enable the :guilabel:`Operation Dependencies` checkbox. The :guilabel:`Blocked By` option becomes available under the :icon:`oi-settings-adjust` :guilabel:`(settings)` menu of the *Operations* tab."
 msgstr ""
 
@@ -22178,7 +22427,7 @@ msgstr ""
 msgid "The Operation Dependencies checkbox on the Miscellaneous tab of a BoM."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:37
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:36
 msgid "Open the *Operations* tab. Click the :icon:`oi-settings-adjust` :guilabel:`(settings)` icon, then enable the :guilabel:`Blocked By` checkbox. The :guilabel:`Blocked By` field appears for each operation in the tab."
 msgstr ""
 
@@ -22186,35 +22435,43 @@ msgstr ""
 msgid "The settings for the Operations tab on a BoM."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:44
-msgid "In the line of the operation that should be blocked by another operation, click the :guilabel:`Blocked By` field. The *Open: Operations* pop-up window opens. In the :guilabel:`Blocked By` field, select the blocking operation that must be completed *before* the operation that is blocked."
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:43
+msgid "In the line of the operation that should be blocked by another operation, click the :guilabel:`Blocked By` field. The *Open: Operations* pop-up window opens. In the :guilabel:`Blocked By` field, select the blocking operation that must be completed *before* the operation that is blocked. Click :guilabel:`Save` to save the changes to the work order."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:None
 msgid "The Blocked By drop-down field for an operation on a BoM."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:52
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:51
 msgid "Finally, save the |BOM| by clicking :icon:`fa-cloud-upload` :guilabel:`(Save manually)`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:58
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:57
 msgid "Plan work orders using dependencies"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:60
-msgid "After work order dependencies are configured for a |BOM|, the **Manufacturing** app can plan when work orders are scheduled based on those dependencies. To plan the work orders for a manufacturing order, navigate to :menuselection:`Manufacturing app --> Operations --> Manufacturing Orders`."
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:59
+msgid "After work order dependencies are configured for a |BOM|, the **Manufacturing** app can plan when work orders are scheduled based on those dependencies."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:64
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:63
+msgid "From a manufacturing order"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:65
+msgid "To plan the work orders for a manufacturing order, navigate to :menuselection:`Manufacturing app --> Operations --> Manufacturing Orders`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:68
 msgid "Next, select a manufacturing order for a product with work order dependencies set on its |BOM|, or create a new manufacturing order by clicking :guilabel:`New`. If a new manufacturing order is created, select a |BOM| configured with work order dependencies from the :guilabel:`Bill of Material` drop-down field, then click :guilabel:`Confirm`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:69
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:73
 msgid "After confirming the manufacturing order, open the *Work Orders* tab to view the work orders required to complete it. Any work orders that are *not* blocked by a different work order display a :guilabel:`To Do` tag in the :guilabel:`Status` column."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:73
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:77
 msgid "Work orders that are blocked by other work orders display a :guilabel:`Blocked` tag instead. After the blocking work orders are completed, the tag updates to :guilabel:`To Do`."
 msgstr ""
 
@@ -22222,142 +22479,263 @@ msgstr ""
 msgid "The status tags for work orders on a manufacturing order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:79
-msgid "To schedule the manufacturing order's work orders, click the :guilabel:`Plan` button at the top of the page. After doing so, the :guilabel:`Start` field for each work order on the *Work Orders* tab populates with a scheduled start date and time. A blocked work order is scheduled at the end of the time period specified in the :guilabel:`Expected Duration` field of the work order that precedes it."
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:83
+msgid "To schedule the manufacturing order's work orders, click the :guilabel:`Plan` button at the top of the page. After doing so, the :guilabel:`Start date` field for each work order on the *Work Orders* tab populates with a scheduled start date and time."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:88
+msgid "If the :guilabel:`Start date` field is not visible in the *Work Orders* tab, click the :icon:`oi-settings-adjust` :guilabel:`(settings adjust)` icon and select :guilabel:`Start date`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:91
+msgid "A blocked work order is scheduled at the end of the time period specified in the :guilabel:`Expected Duration` field of the work order that precedes it."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:None
 msgid "The Scheduled Start Date field for work orders on a manufacturing order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:88
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:98
 msgid "A manufacturing order is created for Product A. The manufacturing order has two operations: Cut and Assemble. Each operation has an expected duration of 60 minutes, and the Assemble operation is blocked by the Cut operation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:92
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:102
 msgid "The :guilabel:`Plan` button for the manufacturing order is clicked at 1:30 pm, and the Cut operation is scheduled to begin immediately. Since the Cut operation has an expected duration of 60 minutes, the Assemble operation is scheduled to begin at 2:30 pm."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:97
-msgid "Planning views"
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:107
+msgid "From a work order"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:99
-msgid "Two work order planning views are available to display a visual representation of how work orders are planned:"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:102
-msgid ":menuselection:`Manufacturing app --> Planning --> Planning by Production`"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:103
-msgid ":menuselection:`Manufacturing app --> Planning --> Planning by Workcenter`"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:105
-msgid "Both open a *Work Orders Planning* page. This page shows a timeline of all the work orders scheduled for each operation."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:108
-msgid ":guilabel:`Planning by Production` is best used to view work orders grouped by manufacturing order. This view is ideal for providing estimated delivery times or determining if an order will be completed on schedule."
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:109
+msgid "To plan a work order directly from a work order form, navigate to :menuselection:`Manufacturing app --> Operations --> Work Orders`, then open a work order from the list."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:112
-msgid ":guilabel:`Planning by Workcenter` is best used to view work orders grouped by the work center at which they take place. This view can help identify overloaded machines or bottlenecks in production."
+msgid "In the work order form, click the :icon:`fa-cog` :guilabel:`(Actions)` icon, then select :guilabel:`Plan`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:115
-msgid "In both views, if one work order is blocked by the completion of another, the work order that is blocked is shown as scheduled to start after the work order that blocks it. In addition, a grey arrow connects the two work orders, leading from the blocking operation to the blocked operation."
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:116
+msgid "Planning views"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:118
+msgid "Two work order planning views are available to display a visual representation of how work orders are planned:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:121
+msgid ":menuselection:`Manufacturing app --> Planning --> Work Orders --> Planning`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:122
+msgid ":menuselection:`Manufacturing app --> Planning --> Work Orders --> Kanban`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:124
+msgid "Both open different views of the *Work Orders Planning* page. Both the *Planning* and *Kanban* views show all work orders, while the *Planning* view shows a timeline of all the work orders scheduled for each operation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:128
+msgid "By default, the *Planning* and *Kanban* views are grouped by work center. This grouping is best used to view work orders grouped by the work center at which they take place. This view can help identify overloaded machines or bottlenecks in production."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:132
+msgid "To view orders grouped by manufacturing order, click in the search bar and select :menuselection:`Group By --> Manufacturing Order`. This view is ideal for providing estimated delivery times or determining if an order will be completed on schedule."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:136
+msgid "In both views, when one work order is blocked by the pending completion of another, the blocked order is shown as scheduled to begin once the pending order is complete."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:139
+msgid "To view potentially troublesome work orders, filter via the search bar:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:141
+msgid ":guilabel:`Late`: Shows work orders that are scheduled to start at some point in the past but haven't been started yet."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:143
+msgid ":guilabel:`Conflicts`: Shows work orders that have been planned at the same work center at the same time."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:145
+msgid ":guilabel:`Planning Issues`: Shows work orders that have planning issues, such as being scheduled out of sync with their work order dependencies."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:149
+msgid "The Planning view"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:151
+msgid "In the *Planning* view, a grey arrow connects the two work orders, leading from the blocking operation to the blocked operation."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:None
 msgid "The arrow connecting a blocked work order to the work order blocking it."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:123
-msgid "Rescheduling work orders"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:125
-msgid "By default, linked work orders on the *Work Orders Planning* page can be rescheduled automatically, ensuring that work orders cannot be moved out of the order they are set in."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:128
-msgid "Work orders can be scheduled with a buffer, or the time gap between consecutive work orders. By default, this view is set to :guilabel:`Auto-Reschedule (Keep Buffer)`. When the buffer is kept, the work orders are moved, and the gap is maintained. If the buffer is important, use this setting."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:133
-msgid "A manufacturing order for a table has two work orders:"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:135
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:166
-msgid "Apply finish"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:136
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:165
-msgid "Assemble"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:138
-msgid "The first work order has a 24-hour buffer built in to allow for the finish to cure. When a work order is rescheduled, the 24-hour buffer is maintained."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:141
-msgid "Alternatively, you can use the :guilabel:`Auto-Reschedule (Use Buffer)` setting by selecting it from the :guilabel:`Auto-Reschedule (Keep Buffer)` drop-down menu. Select this option if the gaps were accidental and meeting a due date is a priority."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:145
-msgid "For full control over rescheduling work orders, select :guilabel:`Manual Reschedule`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:148
-msgid "Unless there is a specific reason to compress the buffer, it is important to maintain the :guilabel:`Auto-Reschedule (Keep Buffer)` setting. Other work orders upstream from the work order being rescheduled could run late and cause issues with the production schedule."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:153
-msgid "Resolving inconsistencies"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:155
-msgid "When the *Work Orders Planning* page is set to manually reschedule work orders, it is possible to introduce inconsistencies in the manufacturing order."
-msgstr ""
-
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:158
-msgid "The arrows on the *Work Orders Planning* page can also point out inconsistencies in the manufacturing order and how to correct them. When the arrow changes color, an inconsistency has been introduced."
+msgid "Plan unplanned orders"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:160
+msgid "Unplanned orders can be planned in two ways: From the :guilabel:`Plan MO` button or from the :guilabel:`# to schedule` list."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:163
-msgid "A workshop is manufacturing a table in three work orders:"
+msgid "Click the :guilabel:`Plan MO` button. The *Manufacturing Orders* pop-up window opens. Select a manufacturing order to plan."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:167
-msgid "Dry"
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:166
+msgid "Alternatively, click the :guilabel:`# to schedule` panel on the side of the screen to open a list of unplanned work orders."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:169
-msgid "If the third work order is moved before the second work order, the third work order and the arrow pointing to it turn red to indicate that the planned schedule violates the defined work order dependency."
+msgid "To plan a work order, click it in the :guilabel:`# to schedule` list. The *Open* window opens, where a :guilabel:`Planned Date` can be specified. When the :guilabel:`Planned Date` and time are specified, the ending time is automatically populated, based on the :guilabel:`Expected Duration` of the work order. Click :guilabel:`Save` to plan the work order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:175
+msgid "Replan work orders"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:177
+msgid "By default, linked work orders in the *Planning* view can be rescheduled automatically, preventing them from being moved out of the order they are set in."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:180
+msgid "Work orders can be scheduled with a buffer, or the time gap between consecutive work orders. By default, this view is set to :guilabel:`Auto-Reschedule (Keep Buffer)`. When the buffer is kept, the work orders are moved, and the gap is maintained. If the buffer is important, use this setting."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:185
+msgid "A manufacturing order for a table has two work orders:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:187
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:218
+msgid "Apply finish"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:188
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:217
+msgid "Assemble"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:190
+msgid "The first work order has a 24-hour buffer built in to allow for the finish to cure. When a work order is rescheduled, the 24-hour buffer is maintained."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:193
+msgid "Alternatively, you can use the :guilabel:`Auto-Reschedule (Use Buffer)` setting by selecting it from the :guilabel:`Auto-Reschedule (Keep Buffer)` drop-down menu. Select this option if the gaps were accidental and meeting a due date is a priority."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:197
+msgid "For full control over rescheduling work orders, select :guilabel:`Manual Reschedule`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:200
+msgid "Unless there is a specific reason to compress the buffer, it is important to maintain the :guilabel:`Auto-Reschedule (Keep Buffer)` setting. Other work orders upstream from the work order being rescheduled could run late and cause issues with the production schedule."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:205
+msgid "Resolve inconsistencies"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:207
+msgid "When the *Planning* view is set to manually reschedule work orders, or if work orders are manually scheduled to conflicting times, it is possible to introduce inconsistencies in the manufacturing order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:211
+msgid "Inconsistencies can be identified in two ways: The color of the arrows and the addition of a flag to the top corner of the work order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:215
+msgid "A workshop is manufacturing a table in three work orders:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:219
+msgid "Dry"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:221
+msgid "If the third work order is moved before the second work order, the third work order and the arrow pointing to it turn orange, and a flag is added to the work order's top corner to indicate that the planned schedule violates the defined work order dependency."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:0
 msgid "A red line appears between two work orders."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:176
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:228
 msgid "When hovering over the connecting line, an **X** (cancel) button appears. When clicking this button, Odoo assumes the dependencies no longer apply due to an exception, and the link between the steps is broken. To remove the dependency, hover over the connecting line. Click the **X** (cancel) button that appears, and the arrow between the two work orders disappears."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:181
-msgid "To resolve the scheduling conflict and keep the dependency, select the red work order. Click the :guilabel:`Edit` button, and the *Open* window appears. Click the red :icon:`fa-exclamation-triangle` :guilabel:`(exclamation triangle)` icon next to the :guilabel:`Start Date`, and the *Scheduling Information* pop-up window appears."
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:233
+msgid "To resolve the scheduling conflict and keep the dependency, click the red work order. Click the :guilabel:`Replan` button. The work order is replanned to ensure the conflict is resolved."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:237
+msgid "The Kanban view"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:239
+msgid "By default, the *Kanban* view is filtered to show only :guilabel:`Planned` work orders. To show work orders that need to be planned, click in the search bar, then select :menuselection:`Filters --> To Plan`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:243
+msgid "Work orders appear in card form with the name of the manufacturing order, the product being manufactured, the quantity being manufactured, the name of the operation, the expected duration, the scheduled start date and time, and the selected employee who will complete the work order (if one is assigned)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:248
+msgid "If the work order is scheduled to start on the current date, its scheduled date appears in orange. If it was planned to start in the past, the scheduled start date appears in red. If it is planned to start in the future, the scheduled start date appears in grey."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:None
-msgid "Click the Replan button to reschedule the inconsistent work order."
+msgid "A work order for 1 Drawer, scheduled to start today."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:189
-msgid "Click the :guilabel:`Replan` button, then click :guilabel:`Save` to save the changes to the work order. The work order is rescheduled after the previous work order in a way that maintains the work order dependency."
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:255
+msgid "To assign a work order to an employee, click the :icon:`fa-user-plus` :guilabel:`(Assign)` icon in the work order card, then select an employee from the list, or click the :icon:`fa-pencil` :guilabel:`(Assign)` icon if another employee is already assigned."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:259
+msgid "Blocked work orders are tagged with a yellow-orange circle in the bottom corner of the work order card."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:None
+msgid "A blocked work order with the yellow-orange circle."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:265
+msgid "To update the status of a work order, click the circle in the bottom corner and select a status."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:269
+msgid "Plan unplanned work orders"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:271
+msgid "To add work orders to a work center's planning, click the :icon:`fa-plus` :guilabel:`(Quick add)` icon next to the work center name. The *Add Work Orders to planning* window opens. Select one or more work orders, then click :guilabel:`Select`. The work orders are scheduled for that work center."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:276
+msgid "Plan unplanned manufacturing orders"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:278
+msgid "To plan confirmed manufacturing orders, click the :guilabel:`Plan MO` button. The *Manufacturing Orders* pop-up window opens. Select a manufacturing order to plan. The manufacturing order will be planned so as not to disrupt the existing schedule."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:283
+msgid "Reschedule work orders"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:285
+msgid "To reschedule work orders in the *Kanban* view, drag and drop the cards to their intended order. To avoid introducing work order dependency conflicts, the work order and any dependencies are replanned to maintain the correct order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:290
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:78
+msgid ":doc:`../basic_setup/manufacturing_work_orders`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup.rst:5
@@ -24586,6 +24964,119 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_analysis.rst:0
 msgid "The pie chart view of the Production Analysis report, with a comparison filter enabled."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:3
+msgid "Production overview"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:5
+msgid "Odoo **Manufacturing** can display an overview of manufacturing order production to help monitor ongoing and future manufacturing orders."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:8
+msgid "The :icon:`oi-view-kanban` :guilabel:`(Kanban)` view on the *Manufacturing Orders* page functions as this production overview. Production managers can use it to filter and group manufacturing orders according to their needs and to monitor the time remaining on each order to ensure production remains on schedule."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:14
+msgid "Manufacturing Orders page"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:16
+msgid "Navigate to :menuselection:`Manufacturing app --> Operations --> Manufacturing Orders`. The *Manufacturing Orders* page opens."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:22
+msgid "The *Manufacturing Orders* page can be viewed in different ways:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:24
+msgid ":icon:`oi-view-list` :guilabel:`(List)`: View, search, and edit manufacturing orders. This is the default view."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:26
+msgid ":icon:`oi-view-kanban` :guilabel:`(Kanban)`: Move manufacturing orders across stages or display them inside cards."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:28
+msgid ":icon:`fa-tasks` :guilabel:`(Gantt)`: Forecast and examine the overall progress of manufacturing orders. Manufacturing orders are represented by a bar under a time scale."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:30
+msgid ":icon:`fa-calendar` :guilabel:`(Calendar)`: View and manage manufacturing orders inside a calendar."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:34
+msgid "Work in the Kanban view"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:36
+msgid "On the *Manufacturing Orders* page, click the :icon:`oi-view-kanban` :guilabel:`(Kanban)` icon."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:39
+msgid "By default, this view is filtered by manufacturing orders in :guilabel:`To Do` status. The filters can be changed from the search bar."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:42
+msgid "Manufacturing orders are displayed in card form. Each grouping of manufacturing orders lists the expected time remaining to produce all the orders in the stage. A progress bar is visible above each stage, displaying the percentage breakdown of every status type for all the cards within that stage. Each status type has an assigned color that appears within the bar."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:47
+msgid "By default, the cards in each stage are sorted by priority, then scheduled date."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:49
+msgid "Each card lists the manufacturing order number, the product and amount being manufactured, the manufacturing order's status, priority, activities, the remaining work order time, component availability, and the responsible user. If a work order is in progress, the active work center is visible. If there are child manufacturing orders created from a subassembly in a product's bill of materials, their statuses display in the card."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:None
+msgid "Manufacturing order cards on the Manufacturing Overview page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:58
+msgid "By default, this view is grouped by weekly production. The orders can be grouped in several different ways from the search bar:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:61
+msgid ":guilabel:`Product`: Manufacturing orders are grouped by the products being produced."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:62
+msgid ":guilabel:`Status`: Manufacturing orders are sorted by status (such as :guilabel:`Confirmed` or :guilabel:`Draft`)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:64
+msgid ":guilabel:`Material Availability`: Manufacturing orders are grouped by component availability. Manufacturing orders with all components available are listed in the :guilabel:`Ready` column, and those awaiting component availability are listed in the :guilabel:`Waiting` column."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:67
+msgid ":guilabel:`Date`: Group by :guilabel:`Year`, :guilabel:`Quarter`, :guilabel:`Month`, :guilabel:`Week`, or :guilabel:`Day`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:69
+msgid ":guilabel:`Deadline`: If deadlines are assigned to the manufacturing orders, they can be grouped by :guilabel:`Year`, :guilabel:`Quarter`, :guilabel:`Month`, :guilabel:`Week`, or :guilabel:`Day`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:73
+msgid ":doc:`../../../essentials/stages`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:74
+msgid ":doc:`../../../essentials/activities`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:75
+msgid ":doc:`../../../essentials/reporting`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:76
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:101
+msgid ":doc:`../../../essentials/search`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_overview.rst:77
+msgid ":doc:`delayed`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor.rst:5
@@ -29683,10 +30174,6 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:97
 msgid "In addition to view options, the :guilabel:`Requests for Quotation` dashboard provides :guilabel:`Filters` and :guilabel:`Group By` options, accessible via the search bar drop-down menu."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:101
-msgid ":doc:`../../../essentials/search`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:106

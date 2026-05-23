@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-15 17:30+0000\n"
+"POT-Creation-Date: 2026-05-22 17:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -677,6 +677,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:11
 #: ../../content/applications/finance/accounting/reporting/tax_returns.rst:28
 #: ../../content/applications/finance/accounting/taxes/B2B_B2C.rst:52
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:83
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:14
 #: ../../content/applications/finance/accounting/taxes/eu_distance_selling.rst:17
 #: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:22
@@ -1683,197 +1684,189 @@ msgid "Discounted match: for payment terms with discounts for early payments"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:129
-msgid "Tolerance match: within 3% to account for merchant fees, rounding differences, and user errors"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:130
-msgid "Currency match: when the transaction is in a different currency than the invoice, bill, or payment (with a 3% tolerance for exchange rate differences)"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:132
 msgid "Amount in label: if the invoice :guilabel:`Amount` is found in the transaction's :guilabel:`Label`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:135
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:132
 msgid "In addition to using these fixed matching rules, transactions can be matched automatically with the use of :doc:`reconciliation models <reconciliation_models>`. Otherwise, reconcile transactions manually by following these steps:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:139
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:136
 msgid "Expand the desired line among unmatched bank transactions to display all available action buttons."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:141
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:138
 msgid "Define the counterpart. There are several options for defining a counterpart, including :ref:`matching existing items <accounting/reconciliation/existing-items>`, :ref:`manually setting the account <accounting/reconciliation/set-account>`, matching with :doc:`batch payments <../payments/batch>`, and using :ref:`reconciliation model buttons <accounting/reconciliation/model>`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:146
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:143
 msgid "If the resulting entry is not fully balanced, add another existing counterpart item or write it off by :ref:`setting the account <accounting/reconciliation/set-account>` of the remaining amount."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:153
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:150
 msgid "Existing items"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:155
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:152
 msgid "To reconcile transactions with existing items related to records such as customer invoices, vendor bills, and payments, click the :guilabel:`Reconcile` action button, select the matching journal item(s) in the list, and click :guilabel:`Select`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:160
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:157
 msgid "If the :guilabel:`Partner` is set, this list is automatically filtered to only include items related to that partner."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:164
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:161
 msgid "Use the search bar within the :guilabel:`Search: Journal Items to Match` window to search for specific journal items."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:167
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:164
 msgid "If a transaction amount is lower than the invoice or bill it is reconciled with, the transaction is fully reconciled, but the difference remains open on the counterpart item. The remaining amount can be left open to be reconciled later or the invoice or bill can be marked as fully paid. To mark the invoice or bill as fully paid, :ref:`edit <accounting/reconciliation/edit>` the line, click :guilabel:`fully paid`, and :guilabel:`Save`. To reverse this, :ref:`edit <accounting/reconciliation/edit>` the line again, click :guilabel:`partial payment`, and :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:175
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:172
 msgid "If a transaction amount is greater than the invoice or bill it is reconciled with, the transaction is only partially reconciled. The remaining balance can be reconciled as any other transaction amount."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:180
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:177
 msgid "Existing items of draft entries can be matched. Eventual automatic moves (like currency exchange or cash basis moves) are created in draft simultaneously with the reconciliation. Posting the original entry also posts the automatic move."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:187
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:184
 msgid "Set account"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:189
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:186
 msgid "If no existing item matches the selected transaction, you can still write off the transaction manually: Click :guilabel:`Set Account`, then choose the appropriate account. To write off only part of the transaction, :ref:`edit the line <accounting/reconciliation/edit>` to reflect the correct value and reconcile the remaining amount as desired."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:195
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:192
 msgid "If the partner is set, write the amount off to their receivable or payable account directly by clicking the :guilabel:`Receivable` or :guilabel:`Payable` :ref:`action button <accounting/reconciliation/action-buttons>`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:202
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:199
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:3
 msgid "Reconciliation models"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:204
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:201
 msgid "Use :doc:`reconciliation models <reconciliation_models>` to create custom rules that can be applied automatically or manually via custom buttons for operations that are frequently repeated. These custom buttons allow you to quickly reconcile bank transactions manually and can also be combined with other reconciliation models and with counterpart items when reconciling transactions."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:210
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:207
 #: ../../content/applications/finance/accounting/bank/reconciliation_models.rst:141
 msgid "An outgoing bank transaction for $103 is partially matched with a vendor bill for $100, leaving $3 of the transaction still unreconciled. Use the :guilabel:`Bank Fees` reconciliation model to create a new counterpart item for $3 and reconcile it with the remaining $3 of the bank transaction."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:218
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:215
 msgid "Edit lines and unreconcile transactions"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:220
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:217
 msgid "To edit a counterpart item, expand the line, click the :icon:`fa-pencil` :guilabel:`(pencil)` icon, and edit the necessary fields in :guilabel:`Edit Line` window."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:224
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:221
 msgid "When the counterpart item is an existing journal item, some fields are read-only."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:226
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:223
 msgid "If a transaction is partially matched with a counterpart item, use the link to mark the invoice as :guilabel:`fully paid` or to switch back to a :guilabel:`partial payment`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:229
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:226
 msgid "To unreconcile a transaction, delete all counterpart items associated with the transaction by clicking on the :icon:`fa-trash` :guilabel:`(trash)` icon."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:235
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:232
 msgid "Netting"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:237
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:234
 msgid "Netting (also known as AP/AR offsetting) is the process of balancing incoming debts from and outgoing debts to the same partner. Reconciling the incoming and outgoing debts creates a new journal entry that balances the debts. Two main scenarios exist:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:241
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:238
 msgid ":ref:`A bank transaction balances <accounting/reconciliation/net-transaction>` (either fully or partially) the incoming and outgoing debts."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:243
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:240
 msgid ":ref:`No bank transaction balances <accounting/reconciliation/net-no-transaction>` the incoming and outgoing debts. This situation can occur either when the debts balance each other completely or when the debts remain unbalanced."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:250
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:247
 msgid "Netting with bank transactions"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:252
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:249
 msgid "When a bank transaction balances (either fully or partially) the incoming and outgoing debts, reconcile the bank transaction from the :guilabel:`Bank Matching` view like any other :ref:`existing items <accounting/reconciliation/existing-items>`:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:256
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:253
 msgid "Click :guilabel:`Reconcile` on the transaction."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:257
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:254
 msgid "Select all the relevant counterpart items on both the payable and receivable side."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:258
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:255
 msgid "Click :guilabel:`Select`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:259
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:256
 msgid "If a balance remains, depending on the details, the following situations are possible:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:261
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:258
 msgid "An invoice, bill, or other item is not fully reconciled, and the remaining balance can be :ref:`reconciled <accounting/reconciliation/reconcile>` with other bank transactions."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:263
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:260
 msgid "The bank transaction itself is not fully reconciled, and the remaining balance can be :ref:`reconciled <accounting/reconciliation/reconcile>` as in any other situation."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:269
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:266
 msgid "Netting without bank transactions"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:271
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:268
 msgid "When no bank transaction balances the incoming and outgoing debts, there is nothing to reconcile from the :guilabel:`Bank Matching` view. However, the debt amount is visible in both the account receivable and the account payable. To balance these debts so that they no longer appear on the partner ledger, follow these steps:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:276
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:273
 msgid "Go to :menuselection:`Accounting --> Accounting --> Reconcile`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:277
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:274
 msgid "Select the journal items that debit or credit the account receivable and account payable and represent the debts to be netted."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:279
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:276
 #: ../../content/applications/finance/accounting/payments.rst:279
 msgid "Click :guilabel:`Reconcile`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:280
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:277
 msgid "If the debts don't balance each other perfectly, a :guilabel:`Write-Off Entry` popup window appears, allowing you to decide how to resolve the remaining balance:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:283
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:280
 msgid "Select :guilabel:`Allow partials` to only partially reconcile the account receivable and account payable and leave the remaining balance open."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:285
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:282
 msgid "Use a :doc:`reconciliation model button <reconciliation_models>` to write off the balance."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:286
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:283
 msgid "Manually choose an :guilabel:`Account`, and optionally adjust the :guilabel:`Tax`, :guilabel:`Journal`, :guilabel:`Label`, :guilabel:`Date`, and :guilabel:`To Check` fields."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:289
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:286
 msgid "The items are then matched, and their balance is removed from the partner ledger, representing that no payment is due for these debts."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:293
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:290
 msgid "The workflow is the same whether there are only two equal debts in the receivable and payable accounts or multiple debts in each account."
 msgstr ""
 
@@ -7139,7 +7132,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:60
 #: ../../content/applications/finance/accounting/taxes.rst:227
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:166
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:168
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:34
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:14
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:77
@@ -7476,7 +7469,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:193
 #: ../../content/applications/finance/accounting/reporting/tax_returns.rst:17
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:126
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:128
 #: ../../content/applications/finance/accounting/taxes/eu_distance_selling.rst:38
 msgid ":doc:`../../fiscal_localizations`"
 msgstr ""
@@ -8540,7 +8533,7 @@ msgid "To create a **tax unit**, go to :menuselection:`Accounting --> Configurat
 msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started/tax_units.rst:30
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:343
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:345
 msgid "Fiscal position"
 msgstr ""
 
@@ -11695,7 +11688,7 @@ msgid "`European Commission documentation on VAT <https://ec.europa.eu/taxation_
 msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/tax_returns.rst:16
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:151
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:153
 msgid ":doc:`../get_started`"
 msgstr ""
 
@@ -12869,7 +12862,7 @@ msgid "The Distribution for Refunds of a 21% VAT tax."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes.rst:303
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:388
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:390
 #: ../../content/applications/finance/accounting/taxes/fiscal_positions.rst:35
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:61
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:65
@@ -13132,6 +13125,7 @@ msgid "*AvaTax* accounts for location-based tax rates for each state, county, an
 msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes/avatax.rst:25
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:17
 msgid "Some limitations exist in Odoo while using AvaTax for tax calculation:"
 msgstr ""
 
@@ -13140,10 +13134,12 @@ msgid "AvaTax uses the company address by default. To use the warehouse address,
 msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes/avatax.rst:29
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:22
 msgid "Excise tax is **not** supported. This includes tobacco/vape taxes, fuel taxes, and other specific industries."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes/avatax.rst:33
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:26
 msgid "Avalara's support documents: `About AvaTax <https://community.avalara.com/support/s/document-item?language=en_US>`_"
 msgstr ""
 
@@ -13163,75 +13159,75 @@ msgstr ""
 msgid "Then, `create a basic company profile <https://www.odoo.com/r/2k0>`_."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:52
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:54
 msgid "Create basic company profile"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:54
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:56
 msgid "Collect essential business details for the next step: locations where tax is collected, products/services sold (and their sales locations), and customer tax exemptions, if applicable. Follow the Avalara documentation for creating a basic company profile:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:58
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:60
 msgid "`Add company information <https://www.odoo.com/r/XZDW>`_."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:60
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:62
 msgid "`Tell us where the company collects and pays tax <https://www.odoo.com/r/E6g>`_."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:62
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:64
 msgid "`Verify jurisdictions and activate the company <https://www.odoo.com/r/NIy>`_."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:64
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:66
 msgid "`Add other company locations for location-based filing <https://www.odoo.com/r/GF4>`_."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:66
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:68
 msgid "`Add a marketplace to the company profile <https://www.odoo.com/r/QA5>`_."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:72
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:74
 msgid "Connect to AvaTax"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:74
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:76
 msgid "After creating the basic company profile in Avalara, connect to *AvaTax*. This step links Odoo and *AvaTax* bidirectionally."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:77
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:79
 msgid "Navigate to either Avalara's `sandbox <https://sandbox.admin.avalara.com/>`_ or `production <https://admin.avalara.com/>`_ environment. This will depend on which type of Avalara account the company would like to integrate."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:82
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:84
 msgid "`Sandbox vs production environments in Avalara <https://knowledge.avalara.com/bundle/fzc1692293626742/page/sandbox-vs-production.html>`_."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:85
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:87
 msgid "Log in to create the :guilabel:`License Key`. Go to :menuselection:`Settings --> License and API Keys`. Click :guilabel:`Generate License Key`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:89
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:91
 msgid "A warning appears stating: `If your business app is connected to Avalara solutions, the connection will be broken until you update the app with the new license key. This action cannot be undone.`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:93
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:95
 msgid "Generating a new license key breaks the connection with existing business apps using the *AvaTax* integration. Make sure to update these apps with the new license key."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:96
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:98
 msgid "If this will be the first :abbr:`API (application programming interface)` integration being made with *AvaTax* and Odoo, then click :guilabel:`Generate license key`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:99
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:101
 msgid "If this is an additional license key, ensure the previous connection can be broken. There is **only** one license key associated with each of the Avalara sandbox and production accounts."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:103
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:105
 msgid "Copy this key to a safe place. It is strongly encouraged to back up the license key for future reference. This key **cannot** be retrieved after leaving this screen."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:109
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:111
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:843
 #: ../../content/applications/finance/payment_providers/adyen.rst:53
 #: ../../content/applications/finance/payment_providers/authorize.rst:39
@@ -13243,59 +13239,59 @@ msgstr ""
 msgid "Odoo configuration"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:111
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:113
 msgid "Before using *AvaTax*, there are some additional configurations in Odoo to ensure tax calculations are made accurately."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:114
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:116
 msgid "Verify that the Odoo database contains necessary data. The country initially set up in the database determines the fiscal position, and aids *AvaTax* in calculating accurate tax rates."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:120
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:122
 msgid "Fiscal country"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:122
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:124
 msgid "To set the :guilabel:`Fiscal Country`, navigate to :menuselection:`Accounting app --> Configuration --> Settings`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:128
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:130
 msgid "Under the :guilabel:`Taxes` section, set the :guilabel:`Fiscal Country` feature to :guilabel:`United States`, :guilabel:`Canada`, or :guilabel:`Brazil`. Then, click :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:132
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:134
 msgid "Company settings"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:134
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:136
 msgid "All companies operating under the Odoo database should have a full and complete address listed in the settings. Navigate to the :menuselection:`Settings app`, and under the :guilabel:`Companies` section, ensure there is only one company operating the Odoo database. Click :guilabel:`Update Info` to open a separate page to update company details."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:139
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:141
 msgid "If there are multiple companies operating in the database, click :guilabel:`Manage Companies` to load a list of companies to select from. Update company information by clicking into the specific company."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:143
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:145
 msgid "Database administrators should ensure that the :guilabel:`Street...`, :guilabel:`Street2...`, :guilabel:`City`, :guilabel:`State`, :guilabel:`ZIP`, and :guilabel:`Country` are all updated for the companies."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:147
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:149
 msgid "This ensures accurate tax calculations and smooth end-of-year accounting operations."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:150
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:152
 msgid ":doc:`../../../general/companies`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:154
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:156
 msgid "Module installation"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:156
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:158
 msgid "Next, ensure that the Odoo *AvaTax* module is installed. To do so, navigate to the :menuselection:`Apps application`. In the :guilabel:`Search...` bar, type in `avatax`, and press :kbd:`Enter`. The following results populate:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:164
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:166
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:32
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:12
 #: ../../content/applications/finance/fiscal_localizations/austria.rst:16
@@ -13338,7 +13334,7 @@ msgstr ""
 msgid "Name"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:165
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:167
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:33
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:13
 #: ../../content/applications/finance/fiscal_localizations/austria.rst:17
@@ -13379,156 +13375,156 @@ msgstr ""
 msgid "Technical name"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:167
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:169
 msgid ":guilabel:`Avatax`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:168
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:170
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:85
 msgid "`account_avatax`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:169
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:171
 msgid "Default *AvaTax* module. This module adds the base *AvaTax* features for tax calculation."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:170
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:172
 msgid ":guilabel:`Avatax for geo localization`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:171
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:173
 msgid "`account_avatax_geolocalize`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:172
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:174
 msgid "This module includes the features required for integration of *AvaTax* into geo-localization in Odoo."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:174
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:176
 msgid ":guilabel:`Avatax for SO`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:175
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:177
 msgid "`account_avatax_sale`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:176
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:178
 msgid "Includes the information needed for tax calculation on sales orders in Odoo."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:177
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:179
 msgid ":guilabel:`Avatax for Inventory`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:178
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:180
 msgid "`account_avatax_stock`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:179
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:181
 msgid "Includes tax calculation in Odoo Inventory."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:180
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:182
 msgid ":guilabel:`Amazon/Avatax Bridge`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:181
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:183
 msgid "`sale_amazon_avatax`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:182
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:184
 msgid "Includes tax calculation features between the *Amazon Connector* and Odoo."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:183
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:185
 msgid ":guilabel:`Avatax Brazil`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:184
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:186
 msgid "`l10n_br_avatax`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:185
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:187
 msgid "Includes information for tax calculation in the Brazil localization."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:186
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:188
 msgid ":guilabel:`Avatax Brazil for Services`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:187
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:189
 msgid "`l10n_br_avatax_services`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:188
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:190
 msgid "This module includes the required features for tax calculation for services in the Brazil localization."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:190
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:192
 msgid ":guilabel:`Avatax Brazil Sale for Services`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:191
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:193
 msgid "`l10n_br_edi_sale_services`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:192
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:194
 msgid "This module includes the required features for tax calculation for the sale of services in the Brazil localization. This includes electronic data interchange (EDI)."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:194
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:196
 msgid ":guilabel:`Test SOs for the Brazilian AvaTax`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:195
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:197
 msgid "`l10n_br_test_avatax_sale`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:196
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:198
 msgid "This module includes the required features for test sales orders in the Brazil localization."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:198
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:200
 msgid "Click the :guilabel:`Install` button on the module labeled, :guilabel:`Avatax`: `account_avatax`. Doing so installs the following modules:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:201
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:203
 msgid ":guilabel:`Avatax`: `account_avatax`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:202
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:204
 msgid ":guilabel:`Avatax for SO`: `account_avatax_sale`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:203
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:205
 msgid ":guilabel:`Avatax for Inventory`: `account_avatax_stock`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:205
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:207
 msgid "Should *AvaTax* be needed for geo-localization, or with the *Amazon Connector*, then install those modules individually by clicking on :guilabel:`Install` on :guilabel:`Avatax for geo localization` and :guilabel:`Amazon/Avatax Bridge`, respectively."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:210
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:212
 msgid "For localization specific *AvaTax* instructions, view the following :doc:`fiscal localization <../../fiscal_localizations>` documentation:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:213
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:215
 msgid ":doc:`../../fiscal_localizations/brazil`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:214
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:216
 msgid ":doc:`../../fiscal_localizations/united_states`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:219
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:221
 msgid "Odoo AvaTax settings"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:221
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:223
 msgid "To integrate the *AvaTax* :abbr:`API (application programming interface)` with Odoo, go to :menuselection:`Accounting app --> Configuration --> Settings` section. The :guilabel:`AvaTax` fields in the :guilabel:`Taxes` section is where the *AvaTax* configurations are made, and the credentials are entered in."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:226
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:228
 msgid "First, tick the checkbox to the left of the :guilabel:`AvaTax` settings, to activate *AvaTax* on the database. This is a quick, convenient way to activate and deactivate *AvaTax* tax calculation on the Odoo database."
 msgstr ""
 
@@ -13536,41 +13532,41 @@ msgstr ""
 msgid "Configure AvaTax settings"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:237
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:239
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:32
 msgid "Prerequisites"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:239
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:241
 msgid "First, select the :guilabel:`Environment` in which the company wishes to use *AvaTax* in. It can either be :guilabel:`Sandbox` or :guilabel:`Production`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:243
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:245
 msgid "For help determining which *AvaTax* environment to use (either :guilabel:`Production` or :guilabel:`Sandbox`), visit: `Sandbox vs Production environments <https://knowledge.avalara.com/bundle/fzc1692293626742/page/sandbox-vs-production.html>`_."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:248
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:250
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:217
 msgid "Credentials"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:250
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:252
 msgid "Now, the credentials can be entered in. The *AvaTax* :guilabel:`Account ID` should be entered in the :guilabel:`API ID` field, and the :guilabel:`License Key` should be entered in the :guilabel:`API Key` field."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:255
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:257
 msgid "The :guilabel:`Account ID` can be found by logging into the *AvaTax* portal (`sandbox <https://sandbox.admin.avalara.com/>`_ or `production <https://admin.avalara.com/>`_). In the upper-right corner, click on the initials of the user and :guilabel:`Account`. The :guilabel:`Account ID` is listed first."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:260
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:262
 msgid "To access the :guilabel:`License Key` see this documentation: :ref:`accounting/avatax/create_avalara_credentials`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:263
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:265
 msgid "For the :guilabel:`Company Code` field, enter the Avalara company code for the company being configured. Avalara interprets this as `DEFAULT`, if it is not set. The :guilabel:`Company Code` can be accessed in the Avalara management portal."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:267
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:269
 msgid "First, log into the *AvaTax* portal (`sandbox <https://sandbox.admin.avalara.com/>`_ or `production <https://admin.avalara.com/>`_). Then, navigate to :menuselection:`Settings --> Manage Companies`. The :guilabel:`Company Code` value is located in the row of the :guilabel:`Company` in the :guilabel:`Company Code` column."
 msgstr ""
 
@@ -13578,51 +13574,51 @@ msgstr ""
 msgid "AvaTax company code highlighted on the company details page."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:277
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:279
 msgid "Transaction options"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:279
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:281
 msgid "There are two transactional settings in the Odoo *AvaTax* settings that can be configured: :guilabel:`Use UPC` and :guilabel:`Commit Transactions`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:282
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:284
 msgid "If the checkbox next to :guilabel:`Use UPC` is ticked, the transactions will use Universal Product Codes (UPC), instead of custom defined codes in Avalara. Consult a certified public accountant (CPA) for specific guidance."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:286
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:288
 msgid "Should the :guilabel:`Commit Transactions` checkbox be ticked, then, the transactions in the Odoo database will be committed for reporting in *AvaTax*."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:290
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:292
 msgid "Address validation"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:292
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:294
 msgid "The *Address Validation* feature ensures that the most up-to-date address by postal standards is set on a contact in Odoo. This is important to provide accurate tax calculations for customers."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:296
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:298
 msgid "The :guilabel:`Address Validation` feature only works with partners/customers in North America."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:298
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:300
 msgid "Additionally, tick the checkbox next to the :guilabel:`Address validation` field."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:301
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:303
 msgid "For accurate tax calculations, it is best practice to enter a complete address for the contacts saved in the database. However, *AvaTax* can still function by implementing a best effort attempt using only the :guilabel:`Country`, :guilabel:`State`, and :guilabel:`Zip code`. These are the three minimum required fields."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:306
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:308
 msgid ":guilabel:`Save` the settings to implement the configuration."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:309
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:311
 msgid "Manually :guilabel:`Validate` the address by navigating to the :menuselection:`Contacts app`, and selecting a contact. Now that the *AvaTax* module has been configured on the database, a :guilabel:`Validate` button appears directly below the :guilabel:`Address`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:313
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:315
 msgid "Click :guilabel:`Validate`, and a pop-up window appears with a :guilabel:`Validated Address` and :guilabel:`Original Address` listed. If the :guilabel:`Validated Address` is the correct mailing address for tax purposes, click :guilabel:`Save Validated`."
 msgstr ""
 
@@ -13631,85 +13627,85 @@ msgid "Validate address pop-up window in Odoo with \"Save Validated\" button and
 "Address\" highlighted."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:323
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:325
 msgid "All previously-entered addresses for contacts in the Odoo database will need to be validated using the manually validate process outlined above. Addresses are not automatically validated if they were entered previously. This only occurs upon tax calculation."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:328
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:330
 msgid "Test connection"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:330
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:332
 msgid "After entering all the above information into the *AvaTax* setup on Odoo, click :guilabel:`Test connection`. This ensures the :guilabel:`API ID` and :guilabel:`API KEY` are correct, and a connection is made between Odoo and the *AvaTax* application programming interface (API)."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:335
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:337
 msgid "Sync parameters"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:337
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:339
 msgid "Upon finishing the configuration and settings of the *AvaTax* section, click the :guilabel:`Sync Parameters` button. This action synchronizes the exemption codes from *AvaTax*."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:345
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:347
 msgid "Next, navigate to :menuselection:`Accounting app --> Configuration --> Accounting: Fiscal Positions`. A :guilabel:`Fiscal Position` is listed named, :guilabel:`Automatic Tax Mapping (AvaTax)`. Click it to open *AvaTax's* fiscal position configuration page."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:349
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:351
 msgid "Here, ensure that the :guilabel:`Use AvaTax API` checkbox is ticked."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:351
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:353
 msgid "Optionally, tick the checkbox next to the field labeled: :guilabel:`Detect Automatically`. Should this option be ticked, then, Odoo will automatically apply this :guilabel:`Fiscal Position` for transactions in Odoo."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:355
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:357
 msgid "Enabling :guilabel:`Detect Automatically` also makes specific parameters, such as :guilabel:`VAT required`, :guilabel:`Foreign Tax ID`, :guilabel:`Country Group`, :guilabel:`Country`, :guilabel:`Federal States`, or :guilabel:`Zip Range` appear. Filling these parameters filters the :guilabel:`Fiscal Position` usage. Leaving them blank ensures all calculations are made using this :guilabel:`Fiscal Position`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:362
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:364
 msgid "Should the :guilabel:`Detect Automatically` checkbox not be ticked, each customer will need to have the :guilabel:`Fiscal Position` set on their :guilabel:`Sales and Purchase` tab of the contact record. To do so, navigate to :menuselection:`Sales app --> Order --> Customers`, or :menuselection:`Contacts app --> Contacts`. Then, select a customer or contact to set the fiscal position on."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:368
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:370
 msgid "Navigate to the :guilabel:`Sales and Purchase` tab, and down to the section labeled, :guilabel:`Fiscal Position`. Set the :guilabel:`Fiscal Position` field to the fiscal position for the customer."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:373
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:434
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:375
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:436
 #: ../../content/applications/finance/accounting/taxes/eu_distance_selling.rst:39
 msgid ":doc:`fiscal_positions`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:376
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:378
 msgid "AvaTax accounts"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:378
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:380
 msgid "Upon selecting the checkbox option for :guilabel:`Use AvaTax API` a new :guilabel:`AvaTax` tab appears. Click into this tab to reveal two different settings."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:381
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:383
 msgid "The first setting is the :guilabel:`AvaTax Invoice Account`, while the second is, :guilabel:`AvaTax Refund Account`. Ensure both accounts are set for smooth end-of-year record keeping. Consult a certified public accountant (CPA) for specific guidance on setting both accounts."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:385
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:387
 msgid "Click :guilabel:`Save` to implement the changes."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:390
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:392
 msgid "The *AvaTax* integration is available on sale orders and invoices with the included *AvaTax* fiscal position."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:394
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:396
 msgid "Additionally, there is a :guilabel:`Tax Mapping` tab and :guilabel:`Account Mapping` tab in the :guilabel:`Automatic Tax Mapping (AvaTax)` fiscal position, where mapping for products can also be configured. To access :guilabel:`Fiscal Positions` navigate to :menuselection:`Accounting app --> Configuration --> Accounting: Fiscal Positions`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:400
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:402
 msgid "Product category mapping"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:402
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:404
 msgid "Before using the integration, specify an :guilabel:`Avatax Category` on the product categories. Navigate to :menuselection:`Inventory app --> Configuration --> Product Categories`. Select the product category to add the :guilabel:`AvaTax Category` to. In the :guilabel:`AvaTax Category` field, select a category from the drop-down menu, or :guilabel:`Search More...` to open the complete list of options."
 msgstr ""
 
@@ -13717,15 +13713,15 @@ msgstr ""
 msgid "Specify AvaTax Category on products."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:413
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:415
 msgid "Product mapping"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:415
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:417
 msgid "*AvaTax* Categories may be set on individual products, as well. To set the :guilabel:`Avatax Category` navigate to :menuselection:`Inventory app --> Products --> Products`. Select the product to add the :guilabel:`Avatax Category` to. Under the :guilabel:`General Information` tab, on the far-right, is a selector field labeled: :guilabel:`Avatax Category`. Finally, click the drop-down menu, and select a category, or :guilabel:`Search More...` to find one that is not listed."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:422
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:424
 msgid "If both the product, and its category, have an :guilabel:`AvaTax Category` set, the product's :guilabel:`AvaTax Category` takes precedence."
 msgstr ""
 
@@ -13733,22 +13729,258 @@ msgstr ""
 msgid "Override product categories as needed."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:430
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:432
 msgid "Mapping an :guilabel:`AvaTax Category` on either the *Product* or *Product Category* should be completed for every *Product* or *Product Category*, depending on the route that is chosen."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:435
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:437
 msgid ":doc:`avatax/avatax_use`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:436
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:438
 msgid ":doc:`avatax/avalara_portal`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxes/avatax.rst:437
+#: ../../content/applications/finance/accounting/taxes/avatax.rst:439
 #: ../../content/applications/finance/accounting/taxes/avatax/avalara_portal.rst:258
 #: ../../content/applications/finance/accounting/taxes/avatax/avatax_use.rst:165
 msgid "`US Tax Compliance: Avatax elearning video <https://www.odoo.com/slides/slide/us-tax-compliance-avatax-2858?fullscreen=1>`_"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:3
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:41
+msgid "Avalara Included"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:5
+msgid "*Avalara Included* is an affordable in-app tax calculation service designed for small and medium-sized businesses with essential tax compliance needs. Built on *Avalara's AvaTax* platform, *Avalara Included* integrates with Odoo to provide real-time, region-specific tax calculations for sales, purchases, and invoices."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:10
+msgid "Available for databases/companies with locations in the United States, Canada, and Brazil, *Avalara Included* automatically calculates precise tax rates at the state, county, and city levels. The service continuously accounts for changing tax laws, jurisdiction boundaries, and special circumstances such as tax holidays and product exemptions to help improve remittance accuracy and simplify tax compliance processes."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:19
+msgid "AvaTax uses the company address by default. To use the address of the specific warehouse that is listed in the :guilabel:`Warehouse` field on a sales order, enable :ref:`Allow Ship Later <pos/shop/ship>` in the **POS** app settings."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:30
+msgid "Available integrations"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:32
+msgid "For users in the United States and Canada, there are two options for AvaTax integration:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:34
+msgid "*Avalara Included*: An affordable In-App purchase service designed for SMBs with essential tax calculation needs."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:37
+msgid "*Avalara Direct*: A robust solution for high-volume or complex businesses, offering advanced features like tax filing and exemption management."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:41
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:49
+msgid "Avalara Direct"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:43
+msgid "Best fit"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:43
+msgid "SMBs / Lower Volume"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:43
+msgid "Mid-Market / Enterprise"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:45
+msgid "AvaTax Engine"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:45
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:45
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:51
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:51
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:57
+msgid "✅"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:47
+msgid "Cost per Transaction"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:47
+msgid "$ Credit-based"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:47
+msgid "$$ Contract-based"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:49
+msgid "Account Managed by"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:49
+msgid "Odoo IAP"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:51
+msgid "Odoo Technical Support"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:53
+msgid "Annual Transaction Limit"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:53
+msgid "5,000"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:53
+msgid "Unlimited Custom"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:55
+msgid "1st tier Support by"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:55
+#: ../../content/applications/finance/fiscal_localizations/guatemala.rst:142
+#: ../../content/applications/finance/payment_providers.rst:77
+#: ../../content/applications/finance/payment_providers.rst:95
+#: ../../content/applications/finance/payment_providers.rst:155
+#: ../../content/applications/finance/payment_providers.rst:161
+#: ../../content/applications/finance/payment_providers.rst:173
+#: ../../content/applications/finance/payment_providers.rst:179
+msgid "Odoo"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:55
+msgid "Avalara"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:57
+msgid "Avalara Direct Support"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:57
+msgid "Limited"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:59
+msgid "Return Prep & Filing"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:59
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:59
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:61
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:61
+msgid "⚠️ Add-on only"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:61
+msgid "Tax Remittance"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:65
+msgid "Businesses that exceed 5,000 transactions annually must transition to an *Avalara Direct* plan to ensure uninterrupted service at higher transaction volumes."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:71
+msgid "In-App purchase credits"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:73
+msgid "Avalara Included requires users to purchase credits on the `Odoo IAP page <https://iap.odoo.com/iap/in-app-services/865>`_."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:77
+msgid "How do credits work?"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:79
+msgid "One credit is consumed every time an invoice or credit note is posted with an *Avatax* fiscal position. Select the package that best fits the demand, based on the estimated transactions."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:85
+msgid "*Avalara Included* is available both for Odoo users who do not yet have an Avalara account and need to :ref:`create <accounting/avalara_included/create>` one and for Odoo users with an existing Avalara account that they would like to :ref:`migrate <accounting/avalara_included/migrate>` to the *Avalara Included* plan."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:93
+msgid "Create an Avalara Included account"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:96
+msgid "The Avalara account activation **must** be done on the production database. If the account is created from a sandbox database that does not have an associated valid enterprise account, the following error message may appear:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:100
+msgid "`Odoo was unable to register with the AvaTax proxy for My US Company INVALID_DBUUID - No valid enterprise contract!`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:103
+msgid "To activate and use the *Avalara Included* feature, first navigate to :menuselection:`Accounting --> Configuration --> Settings`. Then, in the :guilabel:`Taxes` section, enable the :guilabel:`AvaTax` checkbox."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:None
+msgid "The AvaTax settings in Odoo's Accounting app."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:110
+msgid "Next, select :guilabel:`Avalara Included` as the account type and enter a valid email address. This email address is used to link the company's information to the *Avalara Included* account."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:113
+msgid "After the information has been entered, click :icon:`fa-plug` :guilabel:`Connect to Avalara Included` to establish the connection between the Odoo database and the new Avalara account."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:117
+msgid "As part of the account creation, `Avalara's terms and conditions <https://legal.avalara.com/>`_ must be accepted."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:120
+msgid "After accepting the terms and conditions, the Avalara account is created and an email is automatically sent to the associated email address. Follow the instructions in the email to activate the account by creating a password and registering in the Avalara Portal."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:124
+msgid "To complete the Avalara account setup, create a :ref:`company profile <accounting/avatax/create-basic-company-profile>`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:130
+msgid "Migrate to Avalara Included"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:132
+msgid "Companies currently using *Avalara Direct* in production that have fewer than 5,000 annual transactions, including invoices and credit notes, are eligible to migrate their account plan to *Avalara Included*."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:137
+msgid "Migrating from *Avalara Direct* to *Avalara Included* changes the Avalara account from a monthly contract model to an in-app purchase model, where transaction credits can be purchased based on volume. First-level support is also transferred to Odoo."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:141
+msgid "To begin, navigate to :menuselection:`Accounting --> Configuration --> Settings`. In the :guilabel:`Taxes` section, under :guilabel:`Avatax` verify that the :guilabel:`Integration Method` is set to :guilabel:`Avalara Direct`. In the :guilabel:`Environment` field, select :guilabel:`Production`. Confirm that the :guilabel:`API ID` and :guilabel:`API KEY` are correctly configured. Click :icon:`fa-plug` :guilabel:`Migrate to Avalara Included`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:147
+msgid "After the button is clicked, a confirmation message appears outlining the changes to Avalara services and pricing before proceeding with the migration. Review the differences between each integration carefully before confirming the migration."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:151
+msgid "Once the migration is complete, a confirmation message appears indicating that the account was successfully migrated to *Avalara Included*."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:154
+msgid "Because the migration process uses the same email address associated with the *Avalara Direct* account, access to the *Avalara* portal remains available with the existing email address. No additional email configuration is required in Odoo."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxes/avatax/avalara_included.rst:159
+msgid "It is at this point that :ref:`IAP credits <accounting/avalara_included/iap-credits>` must be purchased to continue using the *AvaTax* engine."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes/avatax/avalara_portal.rst:6
@@ -30242,16 +30474,6 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/guatemala.rst:137
 msgid "To create an Infile account and benefit from the **8% discount** available for Odoo customers, fill out the: `Infile Registration Form <https://share.hsforms.com/1HksZ6i1VRRWHRhXPvYZORQrwu2r>`_. An Infile agent will contact you to help you complete the onboarding process and sign the service agreement."
-msgstr ""
-
-#: ../../content/applications/finance/fiscal_localizations/guatemala.rst:142
-#: ../../content/applications/finance/payment_providers.rst:77
-#: ../../content/applications/finance/payment_providers.rst:95
-#: ../../content/applications/finance/payment_providers.rst:155
-#: ../../content/applications/finance/payment_providers.rst:161
-#: ../../content/applications/finance/payment_providers.rst:173
-#: ../../content/applications/finance/payment_providers.rst:179
-msgid "Odoo"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/guatemala.rst:144
