@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-15 17:30+0000\n"
+"POT-Creation-Date: 2026-05-22 17:35+0000\n"
 "PO-Revision-Date: 2026-05-22 23:05+0000\n"
 "Last-Translator: \"Tony Ng (ngto)\" <ngto@odoo.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://translate.odoo.com/"
@@ -10533,424 +10533,6 @@ msgstr ""
 msgid "Internal transfer for product being moved to warehouse stock."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:3
-msgid "Sell stock from multiple warehouses using virtual locations"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:5
-msgid ""
-"While keeping stock and selling inventory from one warehouse might work for "
-"smaller companies, bigger companies might need to keep stock in, or sell "
-"from, multiple warehouses in multiple locations."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:9
-msgid ""
-"Sometimes products included in a single sales order might take stock from "
-"two (or more) warehouses; in Odoo, pulling products from multiple warehouses "
-"to satisfy sales demands can be done using *virtual locations*."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:14
-msgid ""
-"The solution in this document, describing the use of a virtual warehouse to "
-"fulfill orders for multiple warehouses, has some limitations. Consider the "
-"following before proceeding:"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:17
-msgid ""
-"When the :guilabel:`Warehouse` field is set to a virtual warehouse on a "
-"sales order, the virtual warehouse's address is indicated on the picking, "
-"packing, and delivery forms, **not** the actual warehouse's address."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:20
-msgid ""
-"Each location has a `warehouse_id` (hidden field). This means that the stock "
-"in the virtual warehouse will **not** be the sum of the stock of the real "
-"warehouses, but rather the sum of the stock in the locations whose warehouse "
-"ID is the virtual warehouse."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:25
-msgid ""
-"Potential limitation for those using :doc:`two <../../shipping_receiving/"
-"daily_operations/receipts_delivery_two_steps>` or :doc:`three-step delivery "
-"<../../shipping_receiving/daily_operations/delivery_three_steps>`:"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:29
-msgid ""
-"The output or packing zone on the various forms is incorrectly listed as the "
-"virtual warehouse's address."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:31
-msgid "There is no workaround for two or three-step deliveries."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:32
-msgid ""
-"Proceed **only** if setting a virtual warehouse's address as the output or "
-"packing zone makes sense for the company's workflow."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:36
-msgid ""
-"In order to create virtual locations in warehouses, and proceed to the "
-"following steps, the :guilabel:`Storage Locations` and :guilabel:`Multi-Step "
-"Routes` features **must** be enabled."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:39
-msgid ""
-"To do so, go to :menuselection:`Inventory app --> Configuration --> "
-"Settings`, scroll down to the :guilabel:`Warehouse` section, and enable "
-"the :guilabel:`Storage Locations` and :guilabel:`Multi-Step Routes` options. "
-"Then, :guilabel:`Save` the changes to finish."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:47
-msgid "Create virtual parent location"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:49
-msgid ""
-"Before creating any virtual stock locations, create a new warehouse that "
-"acts as a *virtual* warehouse — the *parent* location of other physical "
-"warehouses."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:54
-msgid ""
-"Virtual warehouses are great for companies with multiple physical "
-"warehouses. This is because a situation might arise when one warehouse runs "
-"out of stock of a particular product, but another warehouse still has stock "
-"on-hand. In this case, stock from these two (or more) warehouses could be "
-"used to fulfill a single sales order."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:59
-msgid ""
-"The \"virtual\" warehouse acts as a single aggregator of all the inventory "
-"stored in a company's physical warehouses, and is used (for traceability "
-"purposes) to create a hierarchy of locations in Odoo."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:63
-msgid ""
-"To create a new warehouse, go to :menuselection:`Inventory app --> "
-"Configuration --> Warehouses`, and click :guilabel:`Create`. From here, the "
-"warehouse :guilabel:`Name` and :guilabel:`Short Name` can be changed, and "
-"other warehouse details can be changed under the :guilabel:`Warehouse "
-"Configuration` tab."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:68
-msgid ""
-"Lastly, click :guilabel:`Save` to finish creating a *regular* warehouse. "
-"Continue following the steps below to finish configuring the virtual parent "
-"warehouse."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:None
-msgid "New warehouse form."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:76
-msgid ""
-":doc:`Warehouse configurations <../../warehouses_storage/"
-"inventory_management/warehouses>`"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:77
-msgid ""
-":ref:`Incoming and outgoing shipments <inventory/receipts_delivery_one_step/"
-"wh>`"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:78
-msgid ":doc:`../../warehouses_storage/replenishment/resupply_warehouses`"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:83
-msgid "Create child warehouses"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:85
-msgid ""
-"Create at least two *child* warehouses to link to the virtual warehouse."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:88
-msgid ""
-"In order to take stock from multiple warehouses to fulfill a sales order, "
-"there needs to be at least **two** warehouses acting as child locations of "
-"the virtual parent location warehouse."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:91
-msgid ""
-"To do that, navigate to :menuselection:`Inventory app --> Configuration --> "
-"Warehouses`, click :guilabel:`Create`, and follow the :ref:`preceding "
-"instructions <inventory/routes/virtual-wh>` to configure the physical stock "
-"locations."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid "**Parent Warehouse**"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid ":guilabel:`Warehouse`: `Virtual Warehouse`"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid ":guilabel:`Location`: `VWH/Stock`"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid "**Child Warehouses**"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid ":guilabel:`Warehouses`: `Warehouse A` and `Warehouse B`"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid ":guilabel:`Locations`: `WHA` and `WHB`"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid "Graphic of child locations 'WHA' and 'WHB' tied to the parent location."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:110
-msgid ""
-"While the virtual stock location will be changed to 'View' later, "
-"the :guilabel:`Location Type` **must** be :guilabel:`Internal Location` at "
-"this point to :ref:`link the child warehouses <inventory/routes/link-to-"
-"vwh>` in the next section."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:117
-msgid "Link child warehouses to virtual stock"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:119
-msgid ""
-"To set physical warehouses as child locations of the virtual location "
-"configured in the :ref:`previous step <inventory/routes/virtual-wh>`, "
-"navigate to :menuselection:`Inventory app --> Configuration --> Locations`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:123
-msgid ""
-"Remove any filters from the search bar. Then, click the physical "
-"warehouse :guilabel:`Location` that was previously created to be a child "
-"location (e.g. `WHA`), and click :guilabel:`Edit`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:126
-msgid ""
-"Change the :guilabel:`Parent Location` field from :guilabel:`Physical "
-"Locations` to the virtual warehouse's **stock location** (e.g. `VWH/Stock`) "
-"from the drop-down menu, and click :guilabel:`Save`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:131
-msgid ""
-"To select the virtual warehouse's stock location in the :guilabel:`Parent "
-"Location` drop-down menu, the parent warehouse stock location (e.g. `VWH/"
-"Stock`) **must**  have its :guilabel:`Location Type` set "
-"to :guilabel:`Internal Location`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:None
-msgid "Set the child warehouse's *Parent Location* to the virtual warehouse."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:139
-msgid "Repeat the preceding steps to configure two or more child warehouses."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:141
-msgid ""
-"Once complete, the virtual, parent warehouse (e.g. `VWH/Stock`) fulfills "
-"orders using stock from child warehouses (e.g. `WHA` and `WHB`), if there is "
-"insufficient stock in any one location."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:145
-msgid "Set virtual stock location as 'view'"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:147
-msgid ""
-"Set the virtual stock location's :guilabel:`Location Type` "
-"to :guilabel:`View`, as it is a non-existent location used to group various "
-"physical warehouses together."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:150
-msgid ""
-"To do that, navigate to :menuselection:`Inventory app --> Configuration --> "
-"Locations`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:152
-msgid ""
-"Click the virtual warehouse's stock location (e.g. `VWH/Stock`) that "
-"was :ref:`previously created <inventory/routes/virtual-wh>`, from "
-"the :guilabel:`Locations` list."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:155
-msgid ""
-"On the location form, under the :guilabel:`Additional Information` heading, "
-"set the :guilabel:`Location Type` to :guilabel:`View`. :guilabel:`Save` the "
-"changes."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:None
-msgid "Warehouse location types in location creation screen."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:163
-msgid ""
-"To view the total quantity across **all** linked child warehouses, go to the "
-"product form and click the :guilabel:`On Hand` smart button."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid "Display stock across all linked warehouses."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:171
-msgid "Example: sell products from a virtual warehouse"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:173
-msgid ""
-"To sell products from multiple warehouses using a virtual parent location, "
-"the database must have at least **two** warehouses configured — with at "
-"least **one** product, with quantity on-hand in each warehouse, respectively."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:178
-msgid ""
-"The following product, `Toy soldier`, is available at each location with the "
-"quantities:"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:180
-msgid "`WHA/Stock` : 1"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:181
-msgid "`WHB/Stock` : 2"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:182
-msgid ""
-"Warehouses `WHA` and `WHB` are child warehouses of the virtual warehouse "
-"`VWH`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:184
-msgid ""
-"Create a quotation for the product by navigating to "
-"the :menuselection:`Sales` app and clicking :guilabel:`Create`. On the "
-"quote, add a :guilabel:`Customer`, and click :guilabel:`Add a product` to "
-"add the two products stored in the two warehouses."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:188
-msgid ""
-"Then, click the :guilabel:`Other Info` tab on the sales order form. Under "
-"the :guilabel:`Delivery` section, change the :guilabel:`Warehouse` field "
-"value to the virtual warehouse that was :ref:`previously created <inventory/"
-"routes/virtual-wh>`. Next, :guilabel:`Confirm` the sales order."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:None
-msgid ""
-"Set virtual warehouse as the *Warehouse* field in sales order's *Other Info* "
-"tab."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:196
-msgid ""
-"Then, click the :guilabel:`Delivery` smart button. From the warehouse "
-"delivery form, confirm that the :guilabel:`Source Location` value matches "
-"the :guilabel:`Warehouse` field value from the sales order. Both should list "
-"the virtual warehouse location."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:200
-msgid ""
-"Finally, on the warehouse delivery form, under the :guilabel:`Detailed "
-"Operations` tab, confirm that the :guilabel:`Locations` in "
-"the :guilabel:`From` column for each product match the child locations that "
-"are tied to the virtual parent location."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:None
-msgid "Delivery order with matching source and child locations."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:209
-msgid ""
-"The :guilabel:`Source Location` on the warehouse delivery form, and "
-"the :guilabel:`Warehouse` under the :guilabel:`Other Info` tab on the sales "
-"order, **must** match for products in the sales order to be pulled from "
-"different warehouses."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:213
-msgid ""
-"If the virtual warehouse is not in the :guilabel:`Source Location` field on "
-"the warehouse delivery form, retry product reservation by:"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:216
-msgid ""
-"Running the scheduler: turn on :ref:`developer mode <developer-mode>`, and "
-"then go to :menuselection:`Inventory app --> Operations --> Run Scheduler`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:218
-msgid "Clicking :guilabel:`Check Availability` on the delivery order."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:219
-msgid ""
-"If the virtual warehouse is **not** assigned to the :guilabel:`Warehouse` "
-"field on the sales order, then cancel it, and create a new sales order with "
-"the virtual warehouse set in the :guilabel:`Warehouse` field."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:222
-msgid ""
-"If the :guilabel:`Warehouse` field is missing on the sales order form, then "
-"the multiple child warehouses may not have been set up correctly. Review "
-"the :ref:`previous section <inventory/routes/child-wh>` to ensure the "
-"correct settings."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:227
-msgid ""
-"To use a virtual *parent* location as the default warehouse for sales "
-"orders, each salesperson should have the virtual warehouse assigned to them "
-"from the drop-down menu next to :guilabel:`Default Warehouse` on their "
-"employee form."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid "Default warehouse location on employee form."
-msgstr ""
-
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:5
 msgid ""
 "A *storage category* is used with :doc:`putaway rules <putaway>`, as an "
@@ -15368,6 +14950,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:27
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:60
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:70
 msgid "General information"
 msgstr "一般資訊"
 
@@ -15858,6 +15441,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:16
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:12
 msgid "Enable shipping connector"
 msgstr ""
 
@@ -15881,6 +15465,7 @@ msgid "The FedEx Shipping Methods button below the FedEx Connector."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:30
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:48
 msgid "Configure shipping method"
 msgstr ""
 
@@ -18513,7 +18098,7 @@ msgid ":doc:`UPS <ups_credentials>`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:37
-msgid "US Postal Service"
+msgid ":doc:`US Postal Service <usps>`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:38
@@ -19415,6 +19000,272 @@ msgstr ""
 msgid ""
 ":guilabel:`Duties paid by`: Select whether duties or other fees are charged "
 "to the :guilabel:`Sender` or :guilabel:`Recipient` of the order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:3
+msgid "USPS integration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:7
+msgid ""
+"Integrating a USPS account with Odoo's **Inventory** app makes it possible "
+"to calculate delivery rates and generate delivery labels within Odoo. This "
+"is accomplished by enabling the USPS shipping connector, then configuring at "
+"least one shipping method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:14
+msgid ""
+"To enable the USPS shipping connector, open the :menuselection:`Apps` app "
+"from the main Odoo dashboard. In the :guilabel:`Search` field, search for "
+"`USPS` and click :guilabel:`Install`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:17
+msgid ""
+"After the shipping connector is installed, the USPS connector is enabled by "
+"default."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:20
+msgid "Configure USPS business account"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:22
+msgid ""
+"A USPS business account is required to obtain the information needed "
+"to :ref:`fill out the fields in the shipping method form <inventory/"
+"shipping_receiving/usps-configuration>`. To create a new account, navigate "
+"to USPS's `Create Your USPS.com Account <https://reg.usps.com/entreg/"
+"RegistrationAction_input>`_ page, select the :guilabel:`Business Account` "
+"option, then follow the steps."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:29
+msgid "Create a developer app"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:31
+msgid ""
+"After the USPS Business Customer Onboarding Portal (COP) is set up, `sign in "
+"to the USPS COP <https://cop.usps.com/>`_ to manage business account "
+"information and access the USPS APIs."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:34
+msgid ""
+"On this page, make note of the :guilabel:`Customer Registration ID (CRID)`, "
+"the :guilabel:`Master Mailer ID`, and the :guilabel:`Label Mailer ID`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:37
+msgid "Click the :guilabel:`My Apps` link at the top of the screen."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:39
+msgid ""
+"Open the :guilabel:`Developer Apps` tab. Click the :guilabel:`Add App` "
+"button. In the *Add App* pop-up window, specify an :guilabel:`App Name`. "
+"Select the APIs to use. Finally, click the :guilabel:`Add App` button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:43
+msgid ""
+"A window opens, titled after the app name. Keep this window open as the "
+"shipping method is configured. The :guilabel:`Consumer Key` "
+"and :guilabel:`Consumer Secret` will be necessary in the shipping method "
+"form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:50
+msgid ""
+"Once the USPS shipping connector is enabled, at least one shipping method "
+"must be configured. After doing so, the shipping method can be included in "
+"sales orders (SOs) and used to compute delivery costs and print shipping "
+"labels."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:54
+msgid ""
+"Open or create a new shipping method. Navigate to :menuselection:`Inventory "
+"--> Configuration --> Shipping Methods`, then open an existing USPS shipping "
+"method to display its form. Alternatively, click :guilabel:`New` to open a "
+"blank form and configure a new shipping method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:None
+msgid "The USPS Domestic shipping method, fully configured."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:62
+msgid ""
+"Enabling the USPS shipping connector automatically creates two default "
+"shipping methods: :guilabel:`USPS Domestic` and :guilabel:`USPS "
+"International`. Each of these methods is preconfigured with test "
+"credentials, allowing them to be used for testing purposes."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:66
+msgid ""
+"Before the shipping method can be used to create actual shipments, the test "
+"credentials must be replaced with credentials from a valid USPS account."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:72
+msgid ""
+"At the top of a delivery method form are fields that configure how the "
+"method operates in Odoo. In the :guilabel:`Provider` field, "
+"select :guilabel:`USPS` from the drop-down menu if it is not already "
+"selected."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:76
+msgid ""
+"The remaining fields in this section are general to all delivery providers. "
+"For details on how to fill them out, see :doc:`third_party_shipper`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:82
+msgid "USPS Configuration tab"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:84
+msgid ""
+"The options in the *USPS Configuration* tab of a USPS shipping method form "
+"are used to connect the method to a USPS account and to configure the "
+"delivery details associated with it."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:87
+msgid "Configure the following fields in the form:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:89
+msgid ""
+":guilabel:`EPS Number`: The Enterprise Payment System (EPS) account number "
+"identifies the payment account and is used for electronic funds transfers. "
+"After a payment account is added in the |COP| tool, the EPS number will "
+"display, or it can be retrieved from the `USPS Business Customer Gateway "
+"<https://epay.usps.com/paymod/>`_."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:93
+msgid ""
+":guilabel:`CRID`: The CRID is a number that identifies a physical business "
+"address across all USPS systems and applications."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:95
+msgid ""
+":guilabel:`MID`: This is the :guilabel:`Master Mailer ID` listed in the |"
+"COP|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:96
+msgid ""
+":guilabel:`Manifest MID`: This is the :guilabel:`Label Mailer ID` listed in "
+"the |COP|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:97
+msgid ""
+":guilabel:`USPS API Key`: This is the :guilabel:`Consumer Key` credential "
+"for the app created in the USPS |COP| tool."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:99
+msgid ""
+":guilabel:`USPS API Secret`: This is the :guilabel:`Consumer Secret` "
+"credential for the app created in the USPS |COP| tool."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:101
+msgid ""
+":guilabel:`Label Format`: Specify the file format that generated labels "
+"should use."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:102
+msgid ""
+":guilabel:`USPS Package Type`: Specify or select the package type to use for "
+"shipping."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:103
+msgid ""
+":guilabel:`USPS Domestic Service` or :guilabel:`USPS International Service`: "
+"Specify or select the service level that should be used to generate shipping "
+"labels."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:105
+msgid ""
+":guilabel:`Delivery Nature`: Specify whether the shipping method "
+"is :guilabel:`Domestic` or :guilabel:`International`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:107
+msgid ""
+":guilabel:`Content Type`: Specify the type of content that will be shipped "
+"in packages with this shipping method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:110
+msgid "In the :guilabel:`Options` section, configure the following fields:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:112
+msgid ""
+":guilabel:`Domestic Rating Indicator` or :guilabel:`International Rating "
+"Indicator`: USPS uses specific indicators, pricing groups, and automated "
+"classification systems to distinguish between domestic and international "
+"shipments for rating purposes. These systems help ensure accurate postage "
+"calculations based on factors such as destination, package weight, "
+"dimensions, and selected mail class. Select the rating indicator that works "
+"best for shipping needs."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:117
+msgid ""
+":guilabel:`Processing Category`: Select a packaging processing category."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:118
+msgid ""
+":guilabel:`Generate Return Label`: For domestic shipments only. Select this "
+"checkbox to automatically generate a return label when the delivery is "
+"validated."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:122
+msgid "Turn on the USPS integration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:124
+msgid ""
+"After the USPS connection is set up, use the smart buttons at the top of the "
+"form to publish, turn on production mode, or activate debug logging."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:127
+msgid ""
+":guilabel:`Unpublished` / :guilabel:`Published`: Determines if this shipping "
+"method is available on the user's **eCommerce** website."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:129
+msgid ""
+":guilabel:`Test Environment` / :guilabel:`Production Environment`: "
+"Determines whether label creation is for testing and canceled immediately "
+"(:guilabel:`Test`) or generating a real shipping label that is charged to "
+"the USPS account (:guilabel:`Production`)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:132
+msgid ""
+":guilabel:`No Debug` / :guilabel:`Debug Requests`: Determines whether API "
+"requests and responses are logged in Odoo (turn on developer mode and go "
+"to :menuselection:`Settings app --> Technical --> Logging`)."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/zebra.rst:3

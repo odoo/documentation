@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-15 17:30+0000\n"
+"POT-Creation-Date: 2026-05-22 17:35+0000\n"
 "PO-Revision-Date: 2026-04-18 23:06+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Vietnamese <https://translate.odoo.com/projects/odoo-17-doc/"
@@ -12161,546 +12161,6 @@ msgstr ""
 msgid "Internal transfer for product being moved to warehouse stock."
 msgstr "Lệnh chuyển kho nội bộ cho sản phẩm được chuyển vào tồn kho."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:3
-msgid "Sell stock from multiple warehouses using virtual locations"
-msgstr "Bán tồn kho từ nhiều kho hàng bằng cách sử dụng các vị trí ảo"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:5
-msgid ""
-"While keeping stock and selling inventory from one warehouse might work for "
-"smaller companies, bigger companies might need to keep stock in, or sell "
-"from, multiple warehouses in multiple locations."
-msgstr ""
-"Mặc dù việc giữ và bán tồn kho từ một kho hàng có thể hiệu quả với các công "
-"ty nhỏ, nhưng các công ty lớn hơn có thể cần lưu giữ tồn kho tại, hoặc bán "
-"từ, nhiều kho hàng ở nhiều vị trí."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:9
-msgid ""
-"Sometimes products included in a single sales order might take stock from "
-"two (or more) warehouses; in Odoo, pulling products from multiple warehouses "
-"to satisfy sales demands can be done using *virtual locations*."
-msgstr ""
-"Đôi khi các sản phẩm có trong một đơn bán hàng có thể lấy tồn kho từ (ít "
-"nhất) hai kho hàng; trong Odoo, việc lấy sản phẩm từ nhiều kho hàng để đáp "
-"ứng các nhu cầu bán hàng có thể được thực hiện bằng cách sử dụng *vị trí ảo*."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:14
-msgid ""
-"The solution in this document, describing the use of a virtual warehouse to "
-"fulfill orders for multiple warehouses, has some limitations. Consider the "
-"following before proceeding:"
-msgstr ""
-"Giải pháp trong tài liệu này, mô tả việc sử dụng một kho hàng ảo để thực "
-"hiện các đơn hàng cho nhiều kho hàng, có một số hạn chế. Hãy cân nhắc những "
-"điều sau trước khi tiếp tục:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:17
-msgid ""
-"When the :guilabel:`Warehouse` field is set to a virtual warehouse on a "
-"sales order, the virtual warehouse's address is indicated on the picking, "
-"packing, and delivery forms, **not** the actual warehouse's address."
-msgstr ""
-"Khi trường :guilabel:`Kho hàng` được đặt thành một kho hàng ảo trên đơn bán "
-"hàng, địa chỉ của kho hàng ảo sẽ được hiển thị trên các biểu mẫu lấy hàng, "
-"đóng gói và giao hàng, **không phải** địa chỉ thực tế của kho hàng."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:20
-msgid ""
-"Each location has a `warehouse_id` (hidden field). This means that the stock "
-"in the virtual warehouse will **not** be the sum of the stock of the real "
-"warehouses, but rather the sum of the stock in the locations whose warehouse "
-"ID is the virtual warehouse."
-msgstr ""
-"Mỗi vị trí có một `warehouse_id` (trường ẩn). Điều này có nghĩa là tồn kho "
-"trong kho hàng ảo sẽ **không phải** là tổng tồn kho của các kho hàng thực "
-"tế, mà là tổng tồn kho tại các vị trí có ID kho hàng là kho hàng ảo."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:25
-msgid ""
-"Potential limitation for those using :doc:`two <../../shipping_receiving/"
-"daily_operations/receipts_delivery_two_steps>` or :doc:`three-step delivery "
-"<../../shipping_receiving/daily_operations/delivery_three_steps>`:"
-msgstr ""
-"Hạn chế tiềm ẩn đối với những người đang sử dụng :doc:`giao hàng hai bước "
-"<../../shipping_receiving/daily_operations/receipts_delivery_two_steps>` "
-"hoặc :doc:`giao hàng ba bước <../../shipping_receiving/daily_operations/"
-"delivery_three_steps>`:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:29
-msgid ""
-"The output or packing zone on the various forms is incorrectly listed as the "
-"virtual warehouse's address."
-msgstr ""
-"Khu vực đầu ra hoặc khu đóng gói trên nhiều biểu mẫu bị hiển thị sai thành "
-"địa chỉ của kho ảo."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:31
-msgid "There is no workaround for two or three-step deliveries."
-msgstr "Không có cách khắc phục cho giao hàng hai hoặc ba bước."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:32
-msgid ""
-"Proceed **only** if setting a virtual warehouse's address as the output or "
-"packing zone makes sense for the company's workflow."
-msgstr ""
-"**Chỉ** tiếp tục nếu việc thiết lập địa chỉ của kho hàng ảo làm khu vực đầu "
-"ra hoặc đóng gói là hợp lý cho quy trình làm việc của công ty."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:36
-msgid ""
-"In order to create virtual locations in warehouses, and proceed to the "
-"following steps, the :guilabel:`Storage Locations` and :guilabel:`Multi-Step "
-"Routes` features **must** be enabled."
-msgstr ""
-"Để tạo vị trí ảo trong các kho hàng và tiến hành những bước tiếp theo, các "
-"tính năng :guilabel:`Vị trí lưu kho` và :guilabel:`Tuyến cung ứng nhiều "
-"bước` **phải** được bật."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:39
-msgid ""
-"To do so, go to :menuselection:`Inventory app --> Configuration --> "
-"Settings`, scroll down to the :guilabel:`Warehouse` section, and enable "
-"the :guilabel:`Storage Locations` and :guilabel:`Multi-Step Routes` options. "
-"Then, :guilabel:`Save` the changes to finish."
-msgstr ""
-"Để thực hiện việc này, vào :menuselection:`Ứng dụng Tồn kho --> Cấu hình --> "
-"Cài đặt`, cuộn xuống mục :guilabel:`Kho hàng`, và bật các tùy "
-"chọn :guilabel:`Vị trí lưu kho` và :guilabel:`Tuyến cung ứng nhiều bước`. "
-"Sau đó, nhấp :guilabel:`Lưu` để hoàn tất."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:47
-msgid "Create virtual parent location"
-msgstr "Tạo vị trí ảo chính"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:49
-msgid ""
-"Before creating any virtual stock locations, create a new warehouse that "
-"acts as a *virtual* warehouse — the *parent* location of other physical "
-"warehouses."
-msgstr ""
-"Trước khi tạo bất kỳ vị trí tồn kho ảo nào, hãy tạo một kho hàng mới đóng "
-"vai trò là một kho hàng *ảo* — vị trí *chính* của các kho hàng vật lý khác."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:54
-msgid ""
-"Virtual warehouses are great for companies with multiple physical "
-"warehouses. This is because a situation might arise when one warehouse runs "
-"out of stock of a particular product, but another warehouse still has stock "
-"on-hand. In this case, stock from these two (or more) warehouses could be "
-"used to fulfill a single sales order."
-msgstr ""
-"Kho hàng ảo rất hữu ích đối với các công ty có nhiều kho vật lý. Lý do là vì "
-"có thể xảy ra tình huống một kho không còn một sản phẩm cụ thể, trong khi "
-"một kho khác vẫn còn hàng tồn. Trong trường hợp này, hàng tồn kho từ hai "
-"(hoặc nhiều) kho này có thể được sử dụng để xử lý một đơn bán hàng duy nhất."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:59
-msgid ""
-"The \"virtual\" warehouse acts as a single aggregator of all the inventory "
-"stored in a company's physical warehouses, and is used (for traceability "
-"purposes) to create a hierarchy of locations in Odoo."
-msgstr ""
-"Kho “ảo” đóng vai trò như một điểm tổng hợp duy nhất của toàn bộ tồn kho "
-"được lưu trữ trong các kho vật lý của doanh nghiệp, và được sử dụng (cho mục "
-"đích truy xuất nguồn gốc) để tạo cấu trúc phân cấp các vị trí trong Odoo."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:63
-msgid ""
-"To create a new warehouse, go to :menuselection:`Inventory app --> "
-"Configuration --> Warehouses`, and click :guilabel:`Create`. From here, the "
-"warehouse :guilabel:`Name` and :guilabel:`Short Name` can be changed, and "
-"other warehouse details can be changed under the :guilabel:`Warehouse "
-"Configuration` tab."
-msgstr ""
-"Để tạo một kho hàng mới, vào :menuselection:`Ứng dụng Tồn kho --> Cấu hình --"
-"> Kho hàng`, rồi nhấp :guilabel:`Tạo`. Tại đây, có thể thay "
-"đổi :guilabel:`Tên` và :guilabel:`Tên viết tắt` của kho hàng, đồng thời "
-"chỉnh sửa các thông tin kho khác trong tab :guilabel:`Cấu hình kho hàng`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:68
-msgid ""
-"Lastly, click :guilabel:`Save` to finish creating a *regular* warehouse. "
-"Continue following the steps below to finish configuring the virtual parent "
-"warehouse."
-msgstr ""
-"Cuối cùng, nhấp :guilabel:`Lưu` để hoàn tất việc tạo một kho *thông thường*. "
-"Tiếp tục thực hiện các bước bên dưới để hoàn tất cấu hình kho ảo chính."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:None
-msgid "New warehouse form."
-msgstr "Biểu mẫu kho hàng mới."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:76
-msgid ""
-":doc:`Warehouse configurations <../../warehouses_storage/"
-"inventory_management/warehouses>`"
-msgstr ""
-":doc:`Cấu hình kho hàng <../../warehouses_storage/inventory_management/"
-"warehouses>`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:77
-msgid ""
-":ref:`Incoming and outgoing shipments <inventory/receipts_delivery_one_step/"
-"wh>`"
-msgstr ""
-":ref:`Lô hàng nhập về và xuất đi <inventory/receipts_delivery_one_step/wh>`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:78
-msgid ":doc:`../../warehouses_storage/replenishment/resupply_warehouses`"
-msgstr ":doc:`../../warehouses_storage/replenishment/resupply_warehouses`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:83
-msgid "Create child warehouses"
-msgstr "Tạo kho hàng phụ"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:85
-msgid ""
-"Create at least two *child* warehouses to link to the virtual warehouse."
-msgstr "Tạo ít nhất hai kho hàng *phụ* để liên kết với kho hàng ảo."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:88
-msgid ""
-"In order to take stock from multiple warehouses to fulfill a sales order, "
-"there needs to be at least **two** warehouses acting as child locations of "
-"the virtual parent location warehouse."
-msgstr ""
-"Để có thể lấy hàng tồn kho từ nhiều kho hàng nhằm thực hiện một đơn bán "
-"hàng, cần có ít nhất **hai** kho hoạt động như các vị trí phụ của kho ảo "
-"chính."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:91
-msgid ""
-"To do that, navigate to :menuselection:`Inventory app --> Configuration --> "
-"Warehouses`, click :guilabel:`Create`, and follow the :ref:`preceding "
-"instructions <inventory/routes/virtual-wh>` to configure the physical stock "
-"locations."
-msgstr ""
-"Để thực hiện việc này, vào :menuselection:`Ứng dụng Tồn kho --> Cấu hình --> "
-"Kho hàng`, nhấp :guilabel:`Tạo`, và làm theo :ref:`hướng dẫn trước đó "
-"<inventory/routes/virtual-wh>` để cấu hình các vị trí tồn kho vật lý."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid "**Parent Warehouse**"
-msgstr "**Kho hàng chính**"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid ":guilabel:`Warehouse`: `Virtual Warehouse`"
-msgstr ":guilabel:`Kho hàng`: `Kho hàng ảo`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid ":guilabel:`Location`: `VWH/Stock`"
-msgstr ":guilabel:`Vị trí`: `VWH/Stock`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid "**Child Warehouses**"
-msgstr "**Kho hàng phụ**"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid ":guilabel:`Warehouses`: `Warehouse A` and `Warehouse B`"
-msgstr ":guilabel:`Kho hàng`: `Kho hàng A` và `Kho hàng B`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid ":guilabel:`Locations`: `WHA` and `WHB`"
-msgstr ":guilabel:`Vị trí`: `WHA` và `WHB`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid "Graphic of child locations 'WHA' and 'WHB' tied to the parent location."
-msgstr "Sơ đồ các vị trí phụ 'WHA' và 'WHB' liên kết với vị trí chính."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:110
-msgid ""
-"While the virtual stock location will be changed to 'View' later, "
-"the :guilabel:`Location Type` **must** be :guilabel:`Internal Location` at "
-"this point to :ref:`link the child warehouses <inventory/routes/link-to-"
-"vwh>` in the next section."
-msgstr ""
-"Mặc dù vị trí tồn kho ảo sẽ được đổi sang loại 'Chế độ xem' ở bước sau, "
-"nhưng tại thời điểm này, :guilabel:`Loại vị trí` **bắt buộc** phải "
-"là :guilabel:`Vị trí nội bộ` để có thể :ref:`liên kết các kho hàng phụ "
-"<inventory/routes/link-to-vwh>` ở phần tiếp theo."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:117
-msgid "Link child warehouses to virtual stock"
-msgstr "Liên kết các kho hàng phụ với tồn kho ảo"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:119
-msgid ""
-"To set physical warehouses as child locations of the virtual location "
-"configured in the :ref:`previous step <inventory/routes/virtual-wh>`, "
-"navigate to :menuselection:`Inventory app --> Configuration --> Locations`."
-msgstr ""
-"Để thiết lập các kho hàng vật lý làm vị trí phụ của vị trí ảo đã được cấu "
-"hình ở :ref:`bước trước <inventory/routes/virtual-wh>`, "
-"vào :menuselection:`Ứng dụng Tồn kho --> Cấu hình --> Vị trí`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:123
-msgid ""
-"Remove any filters from the search bar. Then, click the physical "
-"warehouse :guilabel:`Location` that was previously created to be a child "
-"location (e.g. `WHA`), and click :guilabel:`Edit`."
-msgstr ""
-"Xóa tất cả các bộ lọc trên thanh tìm kiếm. Sau đó, nhấp vào :guilabel:`Vị "
-"trí` của kho vật lý đã được tạo trước đó làm vị trí phụ (ví dụ: `WHA`), rồi "
-"nhấp :guilabel:`Chỉnh sửa`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:126
-msgid ""
-"Change the :guilabel:`Parent Location` field from :guilabel:`Physical "
-"Locations` to the virtual warehouse's **stock location** (e.g. `VWH/Stock`) "
-"from the drop-down menu, and click :guilabel:`Save`."
-msgstr ""
-"Thay đổi trường :guilabel:`Vị trí chính` từ :guilabel:`Vị trí vật lý` sang "
-"**vị trí tồn kho** của kho ảo (ví dụ: `VWH/Stock`) trong menu thả xuống, rồi "
-"nhấp :guilabel:`Lưu`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:131
-msgid ""
-"To select the virtual warehouse's stock location in the :guilabel:`Parent "
-"Location` drop-down menu, the parent warehouse stock location (e.g. `VWH/"
-"Stock`) **must**  have its :guilabel:`Location Type` set "
-"to :guilabel:`Internal Location`."
-msgstr ""
-"Để chọn vị trí tồn kho của kho ảo trong menu thả xuống :guilabel:`Vị trí "
-"chính`, vị trí tồn kho của kho ảo chính (ví dụ: `VWH/Stock`) **bắt buộc** "
-"phải có :guilabel:`Loại vị trí` được đặt là :guilabel:`Vị trí nội bộ`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:None
-msgid "Set the child warehouse's *Parent Location* to the virtual warehouse."
-msgstr "Đặt *Vị trí chính* của kho phụ là kho ảo."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:139
-msgid "Repeat the preceding steps to configure two or more child warehouses."
-msgstr "Lặp lại các bước trước đó để cấu hình hai hoặc nhiều kho hàng phụ."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:141
-msgid ""
-"Once complete, the virtual, parent warehouse (e.g. `VWH/Stock`) fulfills "
-"orders using stock from child warehouses (e.g. `WHA` and `WHB`), if there is "
-"insufficient stock in any one location."
-msgstr ""
-"Sau khi hoàn tất, kho hàng ảo chính (ví dụ: `VWH/Stock`) sẽ thực hiện các "
-"đơn hàng bằng cách sử dụng tồn kho từ các kho hàng phụ (ví dụ: WHA và WHB), "
-"nếu không đủ tồn kho tại bất kỳ một vị trí nào."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:145
-msgid "Set virtual stock location as 'view'"
-msgstr "Đặt vị trí tồn kho ảo thành 'chế độ xem'"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:147
-msgid ""
-"Set the virtual stock location's :guilabel:`Location Type` "
-"to :guilabel:`View`, as it is a non-existent location used to group various "
-"physical warehouses together."
-msgstr ""
-"Đặt :guilabel:`Loại vị trí` của vị trí tồn kho ảo thành :guilabel:`Chế độ "
-"xem`, vì đây là một vị trí không tồn tại được sử dụng để nhóm các kho hàng "
-"vật lý khác nhau lại với nhau."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:150
-msgid ""
-"To do that, navigate to :menuselection:`Inventory app --> Configuration --> "
-"Locations`."
-msgstr ""
-"Để thực hiện, hãy điều hướng đến :menuselection:`ứng dụng Tồn kho --> Cấu "
-"hình --> Vị trí`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:152
-msgid ""
-"Click the virtual warehouse's stock location (e.g. `VWH/Stock`) that "
-"was :ref:`previously created <inventory/routes/virtual-wh>`, from "
-"the :guilabel:`Locations` list."
-msgstr ""
-"Nhấp vào vị trí tồn kho của kho ảo (ví dụ: `VWH/Stock`) đã được :ref:`tạo "
-"trước đó <inventory/routes/virtual-wh>` trong danh sách :guilabel:`Vị trí`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:155
-msgid ""
-"On the location form, under the :guilabel:`Additional Information` heading, "
-"set the :guilabel:`Location Type` to :guilabel:`View`. :guilabel:`Save` the "
-"changes."
-msgstr ""
-"Trên biểu mẫu vị trí, trong mục :guilabel:`Thông tin bổ sung`, "
-"đặt :guilabel:`Loại vị trí` thành :guilabel:`Chế độ xem`. "
-"Nhấp :guilabel:`Lưu` để xác nhận các thay đổi."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:None
-msgid "Warehouse location types in location creation screen."
-msgstr "Các loại vị trí kho hàng trên màn hình tạo vị trí."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:163
-msgid ""
-"To view the total quantity across **all** linked child warehouses, go to the "
-"product form and click the :guilabel:`On Hand` smart button."
-msgstr ""
-"Để xem tổng số lượng tồn kho trên **tất cả** các kho phụ đã liên kết, vào "
-"biểu mẫu sản phẩm và nhấp nút thông minh :guilabel:`Hiện có`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid "Display stock across all linked warehouses."
-msgstr "Hiển thị tồn kho trên tất cả kho hàng đã liên kết."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:171
-msgid "Example: sell products from a virtual warehouse"
-msgstr "Ví dụ: bán sản phẩm từ một kho hàng ảo"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:173
-msgid ""
-"To sell products from multiple warehouses using a virtual parent location, "
-"the database must have at least **two** warehouses configured — with at "
-"least **one** product, with quantity on-hand in each warehouse, respectively."
-msgstr ""
-"Để bán sản phẩm từ nhiều kho hàng bằng cách sử dụng vị trí ảo chính, cơ sở "
-"dữ liệu phải có ít nhất **hai** kho hàng được cấu hình — với ít nhất **một** "
-"sản phẩm, có số lượng hiện có trong mỗi kho hàng tương ứng."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:178
-msgid ""
-"The following product, `Toy soldier`, is available at each location with the "
-"quantities:"
-msgstr "Sản phẩm sau đây, `Lính đồ chơi`, có sẵn tại mỗi vị trí với số lượng:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:180
-msgid "`WHA/Stock` : 1"
-msgstr "`WHA/Stock`: 1"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:181
-msgid "`WHB/Stock` : 2"
-msgstr "`WHB/Stock`: 2"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:182
-msgid ""
-"Warehouses `WHA` and `WHB` are child warehouses of the virtual warehouse "
-"`VWH`."
-msgstr "Các kho hàng `WHA` và `WHB` là các kho hàng phụ của kho hàng ảo `VWH`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:184
-msgid ""
-"Create a quotation for the product by navigating to "
-"the :menuselection:`Sales` app and clicking :guilabel:`Create`. On the "
-"quote, add a :guilabel:`Customer`, and click :guilabel:`Add a product` to "
-"add the two products stored in the two warehouses."
-msgstr ""
-"Tạo báo giá cho sản phẩm bằng cách vào ứng dụng :menuselection:`Bán hàng` và "
-"nhấp :guilabel:`Tạo`. Trên báo giá, thêm một :guilabel:`Khách hàng`, rồi "
-"nhấp :guilabel:`Thêm sản phẩm` để thêm hai sản phẩm được lưu trong hai kho."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:188
-msgid ""
-"Then, click the :guilabel:`Other Info` tab on the sales order form. Under "
-"the :guilabel:`Delivery` section, change the :guilabel:`Warehouse` field "
-"value to the virtual warehouse that was :ref:`previously created <inventory/"
-"routes/virtual-wh>`. Next, :guilabel:`Confirm` the sales order."
-msgstr ""
-"Sau đó, nhấp vào tab :guilabel:`Thông tin khác` trên biểu mẫu đơn bán hàng. "
-"Trong mục :guilabel:`Giao hàng`, thay đổi giá trị trường :guilabel:`Kho "
-"hàng` thành kho hàng ảo đã được :ref:`tạo trước đó <inventory/routes/virtual-"
-"wh>`. Tiếp theo, :guilabel:`Xác nhận` đơn bán hàng."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:None
-msgid ""
-"Set virtual warehouse as the *Warehouse* field in sales order's *Other Info* "
-"tab."
-msgstr ""
-"Đặt kho hàng ảo làm giá trị *Kho hàng* trong tab *Thông tin khác* của đơn "
-"bán hàng."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:196
-msgid ""
-"Then, click the :guilabel:`Delivery` smart button. From the warehouse "
-"delivery form, confirm that the :guilabel:`Source Location` value matches "
-"the :guilabel:`Warehouse` field value from the sales order. Both should list "
-"the virtual warehouse location."
-msgstr ""
-"Sau đó, nhấp vào nút thông minh :guilabel:`Giao hàng`. Trên biểu mẫu giao "
-"hàng của kho hàng, xác nhận rằng giá trị :guilabel:`Vị trí nguồn` khớp với "
-"giá trị trường :guilabel:`Kho hàng` từ đơn bán hàng. Cả hai đều nên hiển thị "
-"vị trí của kho ảo."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:200
-msgid ""
-"Finally, on the warehouse delivery form, under the :guilabel:`Detailed "
-"Operations` tab, confirm that the :guilabel:`Locations` in "
-"the :guilabel:`From` column for each product match the child locations that "
-"are tied to the virtual parent location."
-msgstr ""
-"Cuối cùng, trên biểu mẫu giao hàng của kho, trong tab :guilabel:`Hoạt động "
-"chi tiết`, xác nhận rằng các :guilabel:`Vị trí` trong cột :guilabel:`Từ` cho "
-"mỗi sản phẩm khớp với các vị trí phụ được liên kết với kho ảo chính."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:None
-msgid "Delivery order with matching source and child locations."
-msgstr "Lệnh giao hàng với vị trí nguồn khớp với các vị trí phụ."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:209
-msgid ""
-"The :guilabel:`Source Location` on the warehouse delivery form, and "
-"the :guilabel:`Warehouse` under the :guilabel:`Other Info` tab on the sales "
-"order, **must** match for products in the sales order to be pulled from "
-"different warehouses."
-msgstr ""
-"Trường :guilabel:`Vị trí nguồn` trên biểu mẫu giao hàng của kho "
-"và :guilabel:`Kho hàng` trong tab :guilabel:`Thông tin khác` của đơn bán "
-"hàng **phải** khớp để các sản phẩm trong đơn bán hàng có thể được lấy từ "
-"những kho khác nhau."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:213
-msgid ""
-"If the virtual warehouse is not in the :guilabel:`Source Location` field on "
-"the warehouse delivery form, retry product reservation by:"
-msgstr ""
-"Nếu kho hàng ảo không xuất hiện trong trường :guilabel:`Vị trí nguồn` trên "
-"biểu mẫu giao hàng của kho, thử lại việc dự trữ sản phẩm bằng cách:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:216
-msgid ""
-"Running the scheduler: turn on :ref:`developer mode <developer-mode>`, and "
-"then go to :menuselection:`Inventory app --> Operations --> Run Scheduler`."
-msgstr ""
-"Chạy trình lên lịch: bật :ref:`chế độ nhà phát triển <developer-mode>`, sau "
-"đó vào :menuselection:`Ứng dụng Tồn kho --> Hoạt động --> Chạy trình lên "
-"lịch`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:218
-msgid "Clicking :guilabel:`Check Availability` on the delivery order."
-msgstr "Nhấp :guilabel:`Kiểm tra trình trạng còn hàng` trên lệnh giao hàng."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:219
-msgid ""
-"If the virtual warehouse is **not** assigned to the :guilabel:`Warehouse` "
-"field on the sales order, then cancel it, and create a new sales order with "
-"the virtual warehouse set in the :guilabel:`Warehouse` field."
-msgstr ""
-"Nếu kho hàng ảo **không** được gán vào trường :guilabel:`Kho hàng` trên đơn "
-"bán hàng, hãy hủy đơn đó và tạo một đơn bán hàng mới, đồng thời đặt kho ảo "
-"vào trường :guilabel:`Kho hàng`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:222
-msgid ""
-"If the :guilabel:`Warehouse` field is missing on the sales order form, then "
-"the multiple child warehouses may not have been set up correctly. Review "
-"the :ref:`previous section <inventory/routes/child-wh>` to ensure the "
-"correct settings."
-msgstr ""
-"Nếu trường :guilabel:`Kho hàng` không hiển thị trên biểu mẫu đơn bán hàng, "
-"có thể các kho phụ chưa được thiết lập đúng cách. Xem lại :ref:`phần trước "
-"<inventory/routes/child-wh>` để đảm bảo các cài đặt chính xác."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:227
-msgid ""
-"To use a virtual *parent* location as the default warehouse for sales "
-"orders, each salesperson should have the virtual warehouse assigned to them "
-"from the drop-down menu next to :guilabel:`Default Warehouse` on their "
-"employee form."
-msgstr ""
-"Để sử dụng một vị trí ảo *chính* làm kho hàng mặc định cho các đơn bán hàng, "
-"mỗi nhân viên sales cần được gán kho ảo cho họ từ menu thả xuống bên "
-"cạnh :guilabel:`Kho hàng mặc định` trên biểu mẫu nhân viên."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid "Default warehouse location on employee form."
-msgstr "Vị trí kho hàng mặc định trên biểu mẫu nhân viên."
-
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:5
 msgid ""
 "A *storage category* is used with :doc:`putaway rules <putaway>`, as an "
@@ -17414,6 +16874,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:27
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:60
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:70
 msgid "General information"
 msgstr ""
 
@@ -17904,6 +17365,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:16
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:12
 msgid "Enable shipping connector"
 msgstr ""
 
@@ -17927,6 +17389,7 @@ msgid "The FedEx Shipping Methods button below the FedEx Connector."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:30
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:48
 msgid "Configure shipping method"
 msgstr ""
 
@@ -20578,7 +20041,7 @@ msgid ":doc:`UPS <ups_credentials>`"
 msgstr ":doc:`UPS <ups_credentials>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:37
-msgid "US Postal Service"
+msgid ":doc:`US Postal Service <usps>`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:38
@@ -21488,6 +20951,272 @@ msgstr ""
 msgid ""
 ":guilabel:`Duties paid by`: Select whether duties or other fees are charged "
 "to the :guilabel:`Sender` or :guilabel:`Recipient` of the order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:3
+msgid "USPS integration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:7
+msgid ""
+"Integrating a USPS account with Odoo's **Inventory** app makes it possible "
+"to calculate delivery rates and generate delivery labels within Odoo. This "
+"is accomplished by enabling the USPS shipping connector, then configuring at "
+"least one shipping method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:14
+msgid ""
+"To enable the USPS shipping connector, open the :menuselection:`Apps` app "
+"from the main Odoo dashboard. In the :guilabel:`Search` field, search for "
+"`USPS` and click :guilabel:`Install`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:17
+msgid ""
+"After the shipping connector is installed, the USPS connector is enabled by "
+"default."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:20
+msgid "Configure USPS business account"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:22
+msgid ""
+"A USPS business account is required to obtain the information needed "
+"to :ref:`fill out the fields in the shipping method form <inventory/"
+"shipping_receiving/usps-configuration>`. To create a new account, navigate "
+"to USPS's `Create Your USPS.com Account <https://reg.usps.com/entreg/"
+"RegistrationAction_input>`_ page, select the :guilabel:`Business Account` "
+"option, then follow the steps."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:29
+msgid "Create a developer app"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:31
+msgid ""
+"After the USPS Business Customer Onboarding Portal (COP) is set up, `sign in "
+"to the USPS COP <https://cop.usps.com/>`_ to manage business account "
+"information and access the USPS APIs."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:34
+msgid ""
+"On this page, make note of the :guilabel:`Customer Registration ID (CRID)`, "
+"the :guilabel:`Master Mailer ID`, and the :guilabel:`Label Mailer ID`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:37
+msgid "Click the :guilabel:`My Apps` link at the top of the screen."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:39
+msgid ""
+"Open the :guilabel:`Developer Apps` tab. Click the :guilabel:`Add App` "
+"button. In the *Add App* pop-up window, specify an :guilabel:`App Name`. "
+"Select the APIs to use. Finally, click the :guilabel:`Add App` button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:43
+msgid ""
+"A window opens, titled after the app name. Keep this window open as the "
+"shipping method is configured. The :guilabel:`Consumer Key` "
+"and :guilabel:`Consumer Secret` will be necessary in the shipping method "
+"form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:50
+msgid ""
+"Once the USPS shipping connector is enabled, at least one shipping method "
+"must be configured. After doing so, the shipping method can be included in "
+"sales orders (SOs) and used to compute delivery costs and print shipping "
+"labels."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:54
+msgid ""
+"Open or create a new shipping method. Navigate to :menuselection:`Inventory "
+"--> Configuration --> Shipping Methods`, then open an existing USPS shipping "
+"method to display its form. Alternatively, click :guilabel:`New` to open a "
+"blank form and configure a new shipping method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:None
+msgid "The USPS Domestic shipping method, fully configured."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:62
+msgid ""
+"Enabling the USPS shipping connector automatically creates two default "
+"shipping methods: :guilabel:`USPS Domestic` and :guilabel:`USPS "
+"International`. Each of these methods is preconfigured with test "
+"credentials, allowing them to be used for testing purposes."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:66
+msgid ""
+"Before the shipping method can be used to create actual shipments, the test "
+"credentials must be replaced with credentials from a valid USPS account."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:72
+msgid ""
+"At the top of a delivery method form are fields that configure how the "
+"method operates in Odoo. In the :guilabel:`Provider` field, "
+"select :guilabel:`USPS` from the drop-down menu if it is not already "
+"selected."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:76
+msgid ""
+"The remaining fields in this section are general to all delivery providers. "
+"For details on how to fill them out, see :doc:`third_party_shipper`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:82
+msgid "USPS Configuration tab"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:84
+msgid ""
+"The options in the *USPS Configuration* tab of a USPS shipping method form "
+"are used to connect the method to a USPS account and to configure the "
+"delivery details associated with it."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:87
+msgid "Configure the following fields in the form:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:89
+msgid ""
+":guilabel:`EPS Number`: The Enterprise Payment System (EPS) account number "
+"identifies the payment account and is used for electronic funds transfers. "
+"After a payment account is added in the |COP| tool, the EPS number will "
+"display, or it can be retrieved from the `USPS Business Customer Gateway "
+"<https://epay.usps.com/paymod/>`_."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:93
+msgid ""
+":guilabel:`CRID`: The CRID is a number that identifies a physical business "
+"address across all USPS systems and applications."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:95
+msgid ""
+":guilabel:`MID`: This is the :guilabel:`Master Mailer ID` listed in the |"
+"COP|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:96
+msgid ""
+":guilabel:`Manifest MID`: This is the :guilabel:`Label Mailer ID` listed in "
+"the |COP|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:97
+msgid ""
+":guilabel:`USPS API Key`: This is the :guilabel:`Consumer Key` credential "
+"for the app created in the USPS |COP| tool."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:99
+msgid ""
+":guilabel:`USPS API Secret`: This is the :guilabel:`Consumer Secret` "
+"credential for the app created in the USPS |COP| tool."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:101
+msgid ""
+":guilabel:`Label Format`: Specify the file format that generated labels "
+"should use."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:102
+msgid ""
+":guilabel:`USPS Package Type`: Specify or select the package type to use for "
+"shipping."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:103
+msgid ""
+":guilabel:`USPS Domestic Service` or :guilabel:`USPS International Service`: "
+"Specify or select the service level that should be used to generate shipping "
+"labels."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:105
+msgid ""
+":guilabel:`Delivery Nature`: Specify whether the shipping method "
+"is :guilabel:`Domestic` or :guilabel:`International`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:107
+msgid ""
+":guilabel:`Content Type`: Specify the type of content that will be shipped "
+"in packages with this shipping method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:110
+msgid "In the :guilabel:`Options` section, configure the following fields:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:112
+msgid ""
+":guilabel:`Domestic Rating Indicator` or :guilabel:`International Rating "
+"Indicator`: USPS uses specific indicators, pricing groups, and automated "
+"classification systems to distinguish between domestic and international "
+"shipments for rating purposes. These systems help ensure accurate postage "
+"calculations based on factors such as destination, package weight, "
+"dimensions, and selected mail class. Select the rating indicator that works "
+"best for shipping needs."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:117
+msgid ""
+":guilabel:`Processing Category`: Select a packaging processing category."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:118
+msgid ""
+":guilabel:`Generate Return Label`: For domestic shipments only. Select this "
+"checkbox to automatically generate a return label when the delivery is "
+"validated."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:122
+msgid "Turn on the USPS integration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:124
+msgid ""
+"After the USPS connection is set up, use the smart buttons at the top of the "
+"form to publish, turn on production mode, or activate debug logging."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:127
+msgid ""
+":guilabel:`Unpublished` / :guilabel:`Published`: Determines if this shipping "
+"method is available on the user's **eCommerce** website."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:129
+msgid ""
+":guilabel:`Test Environment` / :guilabel:`Production Environment`: "
+"Determines whether label creation is for testing and canceled immediately "
+"(:guilabel:`Test`) or generating a real shipping label that is charged to "
+"the USPS account (:guilabel:`Production`)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:132
+msgid ""
+":guilabel:`No Debug` / :guilabel:`Debug Requests`: Determines whether API "
+"requests and responses are logged in Odoo (turn on developer mode and go "
+"to :menuselection:`Settings app --> Technical --> Logging`)."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/zebra.rst:3
@@ -45406,6 +45135,496 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid "Sell stock from multiple warehouses using virtual locations"
+#~ msgstr "Bán tồn kho từ nhiều kho hàng bằng cách sử dụng các vị trí ảo"
+
+#~ msgid ""
+#~ "While keeping stock and selling inventory from one warehouse might work "
+#~ "for smaller companies, bigger companies might need to keep stock in, or "
+#~ "sell from, multiple warehouses in multiple locations."
+#~ msgstr ""
+#~ "Mặc dù việc giữ và bán tồn kho từ một kho hàng có thể hiệu quả với các "
+#~ "công ty nhỏ, nhưng các công ty lớn hơn có thể cần lưu giữ tồn kho tại, "
+#~ "hoặc bán từ, nhiều kho hàng ở nhiều vị trí."
+
+#~ msgid ""
+#~ "Sometimes products included in a single sales order might take stock from "
+#~ "two (or more) warehouses; in Odoo, pulling products from multiple "
+#~ "warehouses to satisfy sales demands can be done using *virtual locations*."
+#~ msgstr ""
+#~ "Đôi khi các sản phẩm có trong một đơn bán hàng có thể lấy tồn kho từ (ít "
+#~ "nhất) hai kho hàng; trong Odoo, việc lấy sản phẩm từ nhiều kho hàng để "
+#~ "đáp ứng các nhu cầu bán hàng có thể được thực hiện bằng cách sử dụng *vị "
+#~ "trí ảo*."
+
+#~ msgid ""
+#~ "The solution in this document, describing the use of a virtual warehouse "
+#~ "to fulfill orders for multiple warehouses, has some limitations. Consider "
+#~ "the following before proceeding:"
+#~ msgstr ""
+#~ "Giải pháp trong tài liệu này, mô tả việc sử dụng một kho hàng ảo để thực "
+#~ "hiện các đơn hàng cho nhiều kho hàng, có một số hạn chế. Hãy cân nhắc "
+#~ "những điều sau trước khi tiếp tục:"
+
+#~ msgid ""
+#~ "When the :guilabel:`Warehouse` field is set to a virtual warehouse on a "
+#~ "sales order, the virtual warehouse's address is indicated on the picking, "
+#~ "packing, and delivery forms, **not** the actual warehouse's address."
+#~ msgstr ""
+#~ "Khi trường :guilabel:`Kho hàng` được đặt thành một kho hàng ảo trên đơn "
+#~ "bán hàng, địa chỉ của kho hàng ảo sẽ được hiển thị trên các biểu mẫu lấy "
+#~ "hàng, đóng gói và giao hàng, **không phải** địa chỉ thực tế của kho hàng."
+
+#~ msgid ""
+#~ "Each location has a `warehouse_id` (hidden field). This means that the "
+#~ "stock in the virtual warehouse will **not** be the sum of the stock of "
+#~ "the real warehouses, but rather the sum of the stock in the locations "
+#~ "whose warehouse ID is the virtual warehouse."
+#~ msgstr ""
+#~ "Mỗi vị trí có một `warehouse_id` (trường ẩn). Điều này có nghĩa là tồn "
+#~ "kho trong kho hàng ảo sẽ **không phải** là tổng tồn kho của các kho hàng "
+#~ "thực tế, mà là tổng tồn kho tại các vị trí có ID kho hàng là kho hàng ảo."
+
+#~ msgid ""
+#~ "Potential limitation for those using :doc:`two <../../shipping_receiving/"
+#~ "daily_operations/receipts_delivery_two_steps>` or :doc:`three-step "
+#~ "delivery <../../shipping_receiving/daily_operations/"
+#~ "delivery_three_steps>`:"
+#~ msgstr ""
+#~ "Hạn chế tiềm ẩn đối với những người đang sử dụng :doc:`giao hàng hai bước "
+#~ "<../../shipping_receiving/daily_operations/receipts_delivery_two_steps>` "
+#~ "hoặc :doc:`giao hàng ba bước <../../shipping_receiving/daily_operations/"
+#~ "delivery_three_steps>`:"
+
+#~ msgid ""
+#~ "The output or packing zone on the various forms is incorrectly listed as "
+#~ "the virtual warehouse's address."
+#~ msgstr ""
+#~ "Khu vực đầu ra hoặc khu đóng gói trên nhiều biểu mẫu bị hiển thị sai "
+#~ "thành địa chỉ của kho ảo."
+
+#~ msgid "There is no workaround for two or three-step deliveries."
+#~ msgstr "Không có cách khắc phục cho giao hàng hai hoặc ba bước."
+
+#~ msgid ""
+#~ "Proceed **only** if setting a virtual warehouse's address as the output "
+#~ "or packing zone makes sense for the company's workflow."
+#~ msgstr ""
+#~ "**Chỉ** tiếp tục nếu việc thiết lập địa chỉ của kho hàng ảo làm khu vực "
+#~ "đầu ra hoặc đóng gói là hợp lý cho quy trình làm việc của công ty."
+
+#~ msgid ""
+#~ "In order to create virtual locations in warehouses, and proceed to the "
+#~ "following steps, the :guilabel:`Storage Locations` and :guilabel:`Multi-"
+#~ "Step Routes` features **must** be enabled."
+#~ msgstr ""
+#~ "Để tạo vị trí ảo trong các kho hàng và tiến hành những bước tiếp theo, "
+#~ "các tính năng :guilabel:`Vị trí lưu kho` và :guilabel:`Tuyến cung ứng "
+#~ "nhiều bước` **phải** được bật."
+
+#~ msgid ""
+#~ "To do so, go to :menuselection:`Inventory app --> Configuration --> "
+#~ "Settings`, scroll down to the :guilabel:`Warehouse` section, and enable "
+#~ "the :guilabel:`Storage Locations` and :guilabel:`Multi-Step Routes` "
+#~ "options. Then, :guilabel:`Save` the changes to finish."
+#~ msgstr ""
+#~ "Để thực hiện việc này, vào :menuselection:`Ứng dụng Tồn kho --> Cấu hình "
+#~ "--> Cài đặt`, cuộn xuống mục :guilabel:`Kho hàng`, và bật các tùy "
+#~ "chọn :guilabel:`Vị trí lưu kho` và :guilabel:`Tuyến cung ứng nhiều bước`. "
+#~ "Sau đó, nhấp :guilabel:`Lưu` để hoàn tất."
+
+#~ msgid "Create virtual parent location"
+#~ msgstr "Tạo vị trí ảo chính"
+
+#~ msgid ""
+#~ "Before creating any virtual stock locations, create a new warehouse that "
+#~ "acts as a *virtual* warehouse — the *parent* location of other physical "
+#~ "warehouses."
+#~ msgstr ""
+#~ "Trước khi tạo bất kỳ vị trí tồn kho ảo nào, hãy tạo một kho hàng mới đóng "
+#~ "vai trò là một kho hàng *ảo* — vị trí *chính* của các kho hàng vật lý "
+#~ "khác."
+
+#~ msgid ""
+#~ "Virtual warehouses are great for companies with multiple physical "
+#~ "warehouses. This is because a situation might arise when one warehouse "
+#~ "runs out of stock of a particular product, but another warehouse still "
+#~ "has stock on-hand. In this case, stock from these two (or more) "
+#~ "warehouses could be used to fulfill a single sales order."
+#~ msgstr ""
+#~ "Kho hàng ảo rất hữu ích đối với các công ty có nhiều kho vật lý. Lý do là "
+#~ "vì có thể xảy ra tình huống một kho không còn một sản phẩm cụ thể, trong "
+#~ "khi một kho khác vẫn còn hàng tồn. Trong trường hợp này, hàng tồn kho từ "
+#~ "hai (hoặc nhiều) kho này có thể được sử dụng để xử lý một đơn bán hàng "
+#~ "duy nhất."
+
+#~ msgid ""
+#~ "The \"virtual\" warehouse acts as a single aggregator of all the "
+#~ "inventory stored in a company's physical warehouses, and is used (for "
+#~ "traceability purposes) to create a hierarchy of locations in Odoo."
+#~ msgstr ""
+#~ "Kho “ảo” đóng vai trò như một điểm tổng hợp duy nhất của toàn bộ tồn kho "
+#~ "được lưu trữ trong các kho vật lý của doanh nghiệp, và được sử dụng (cho "
+#~ "mục đích truy xuất nguồn gốc) để tạo cấu trúc phân cấp các vị trí trong "
+#~ "Odoo."
+
+#~ msgid ""
+#~ "To create a new warehouse, go to :menuselection:`Inventory app --> "
+#~ "Configuration --> Warehouses`, and click :guilabel:`Create`. From here, "
+#~ "the warehouse :guilabel:`Name` and :guilabel:`Short Name` can be changed, "
+#~ "and other warehouse details can be changed under the :guilabel:`Warehouse "
+#~ "Configuration` tab."
+#~ msgstr ""
+#~ "Để tạo một kho hàng mới, vào :menuselection:`Ứng dụng Tồn kho --> Cấu "
+#~ "hình --> Kho hàng`, rồi nhấp :guilabel:`Tạo`. Tại đây, có thể thay "
+#~ "đổi :guilabel:`Tên` và :guilabel:`Tên viết tắt` của kho hàng, đồng thời "
+#~ "chỉnh sửa các thông tin kho khác trong tab :guilabel:`Cấu hình kho hàng`."
+
+#~ msgid ""
+#~ "Lastly, click :guilabel:`Save` to finish creating a *regular* warehouse. "
+#~ "Continue following the steps below to finish configuring the virtual "
+#~ "parent warehouse."
+#~ msgstr ""
+#~ "Cuối cùng, nhấp :guilabel:`Lưu` để hoàn tất việc tạo một kho *thông "
+#~ "thường*. Tiếp tục thực hiện các bước bên dưới để hoàn tất cấu hình kho ảo "
+#~ "chính."
+
+#~ msgid "New warehouse form."
+#~ msgstr "Biểu mẫu kho hàng mới."
+
+#~ msgid ""
+#~ ":doc:`Warehouse configurations <../../warehouses_storage/"
+#~ "inventory_management/warehouses>`"
+#~ msgstr ""
+#~ ":doc:`Cấu hình kho hàng <../../warehouses_storage/inventory_management/"
+#~ "warehouses>`"
+
+#~ msgid ""
+#~ ":ref:`Incoming and outgoing shipments <inventory/"
+#~ "receipts_delivery_one_step/wh>`"
+#~ msgstr ""
+#~ ":ref:`Lô hàng nhập về và xuất đi <inventory/receipts_delivery_one_step/"
+#~ "wh>`"
+
+#~ msgid ":doc:`../../warehouses_storage/replenishment/resupply_warehouses`"
+#~ msgstr ":doc:`../../warehouses_storage/replenishment/resupply_warehouses`"
+
+#~ msgid "Create child warehouses"
+#~ msgstr "Tạo kho hàng phụ"
+
+#~ msgid ""
+#~ "Create at least two *child* warehouses to link to the virtual warehouse."
+#~ msgstr "Tạo ít nhất hai kho hàng *phụ* để liên kết với kho hàng ảo."
+
+#~ msgid ""
+#~ "In order to take stock from multiple warehouses to fulfill a sales order, "
+#~ "there needs to be at least **two** warehouses acting as child locations "
+#~ "of the virtual parent location warehouse."
+#~ msgstr ""
+#~ "Để có thể lấy hàng tồn kho từ nhiều kho hàng nhằm thực hiện một đơn bán "
+#~ "hàng, cần có ít nhất **hai** kho hoạt động như các vị trí phụ của kho ảo "
+#~ "chính."
+
+#~ msgid ""
+#~ "To do that, navigate to :menuselection:`Inventory app --> Configuration --"
+#~ "> Warehouses`, click :guilabel:`Create`, and follow the :ref:`preceding "
+#~ "instructions <inventory/routes/virtual-wh>` to configure the physical "
+#~ "stock locations."
+#~ msgstr ""
+#~ "Để thực hiện việc này, vào :menuselection:`Ứng dụng Tồn kho --> Cấu hình "
+#~ "--> Kho hàng`, nhấp :guilabel:`Tạo`, và làm theo :ref:`hướng dẫn trước đó "
+#~ "<inventory/routes/virtual-wh>` để cấu hình các vị trí tồn kho vật lý."
+
+#~ msgid "**Parent Warehouse**"
+#~ msgstr "**Kho hàng chính**"
+
+#~ msgid ":guilabel:`Warehouse`: `Virtual Warehouse`"
+#~ msgstr ":guilabel:`Kho hàng`: `Kho hàng ảo`"
+
+#~ msgid ":guilabel:`Location`: `VWH/Stock`"
+#~ msgstr ":guilabel:`Vị trí`: `VWH/Stock`"
+
+#~ msgid "**Child Warehouses**"
+#~ msgstr "**Kho hàng phụ**"
+
+#~ msgid ":guilabel:`Warehouses`: `Warehouse A` and `Warehouse B`"
+#~ msgstr ":guilabel:`Kho hàng`: `Kho hàng A` và `Kho hàng B`"
+
+#~ msgid ":guilabel:`Locations`: `WHA` and `WHB`"
+#~ msgstr ":guilabel:`Vị trí`: `WHA` và `WHB`"
+
+#~ msgid ""
+#~ "Graphic of child locations 'WHA' and 'WHB' tied to the parent location."
+#~ msgstr "Sơ đồ các vị trí phụ 'WHA' và 'WHB' liên kết với vị trí chính."
+
+#~ msgid ""
+#~ "While the virtual stock location will be changed to 'View' later, "
+#~ "the :guilabel:`Location Type` **must** be :guilabel:`Internal Location` "
+#~ "at this point to :ref:`link the child warehouses <inventory/routes/link-"
+#~ "to-vwh>` in the next section."
+#~ msgstr ""
+#~ "Mặc dù vị trí tồn kho ảo sẽ được đổi sang loại 'Chế độ xem' ở bước sau, "
+#~ "nhưng tại thời điểm này, :guilabel:`Loại vị trí` **bắt buộc** phải "
+#~ "là :guilabel:`Vị trí nội bộ` để có thể :ref:`liên kết các kho hàng phụ "
+#~ "<inventory/routes/link-to-vwh>` ở phần tiếp theo."
+
+#~ msgid "Link child warehouses to virtual stock"
+#~ msgstr "Liên kết các kho hàng phụ với tồn kho ảo"
+
+#~ msgid ""
+#~ "To set physical warehouses as child locations of the virtual location "
+#~ "configured in the :ref:`previous step <inventory/routes/virtual-wh>`, "
+#~ "navigate to :menuselection:`Inventory app --> Configuration --> "
+#~ "Locations`."
+#~ msgstr ""
+#~ "Để thiết lập các kho hàng vật lý làm vị trí phụ của vị trí ảo đã được cấu "
+#~ "hình ở :ref:`bước trước <inventory/routes/virtual-wh>`, "
+#~ "vào :menuselection:`Ứng dụng Tồn kho --> Cấu hình --> Vị trí`."
+
+#~ msgid ""
+#~ "Remove any filters from the search bar. Then, click the physical "
+#~ "warehouse :guilabel:`Location` that was previously created to be a child "
+#~ "location (e.g. `WHA`), and click :guilabel:`Edit`."
+#~ msgstr ""
+#~ "Xóa tất cả các bộ lọc trên thanh tìm kiếm. Sau đó, nhấp vào :guilabel:`Vị "
+#~ "trí` của kho vật lý đã được tạo trước đó làm vị trí phụ (ví dụ: `WHA`), "
+#~ "rồi nhấp :guilabel:`Chỉnh sửa`."
+
+#~ msgid ""
+#~ "Change the :guilabel:`Parent Location` field from :guilabel:`Physical "
+#~ "Locations` to the virtual warehouse's **stock location** (e.g. `VWH/"
+#~ "Stock`) from the drop-down menu, and click :guilabel:`Save`."
+#~ msgstr ""
+#~ "Thay đổi trường :guilabel:`Vị trí chính` từ :guilabel:`Vị trí vật lý` "
+#~ "sang **vị trí tồn kho** của kho ảo (ví dụ: `VWH/Stock`) trong menu thả "
+#~ "xuống, rồi nhấp :guilabel:`Lưu`."
+
+#~ msgid ""
+#~ "To select the virtual warehouse's stock location in the :guilabel:`Parent "
+#~ "Location` drop-down menu, the parent warehouse stock location (e.g. `VWH/"
+#~ "Stock`) **must**  have its :guilabel:`Location Type` set "
+#~ "to :guilabel:`Internal Location`."
+#~ msgstr ""
+#~ "Để chọn vị trí tồn kho của kho ảo trong menu thả xuống :guilabel:`Vị trí "
+#~ "chính`, vị trí tồn kho của kho ảo chính (ví dụ: `VWH/Stock`) **bắt buộc** "
+#~ "phải có :guilabel:`Loại vị trí` được đặt là :guilabel:`Vị trí nội bộ`."
+
+#~ msgid ""
+#~ "Set the child warehouse's *Parent Location* to the virtual warehouse."
+#~ msgstr "Đặt *Vị trí chính* của kho phụ là kho ảo."
+
+#~ msgid ""
+#~ "Repeat the preceding steps to configure two or more child warehouses."
+#~ msgstr "Lặp lại các bước trước đó để cấu hình hai hoặc nhiều kho hàng phụ."
+
+#~ msgid ""
+#~ "Once complete, the virtual, parent warehouse (e.g. `VWH/Stock`) fulfills "
+#~ "orders using stock from child warehouses (e.g. `WHA` and `WHB`), if there "
+#~ "is insufficient stock in any one location."
+#~ msgstr ""
+#~ "Sau khi hoàn tất, kho hàng ảo chính (ví dụ: `VWH/Stock`) sẽ thực hiện các "
+#~ "đơn hàng bằng cách sử dụng tồn kho từ các kho hàng phụ (ví dụ: WHA và "
+#~ "WHB), nếu không đủ tồn kho tại bất kỳ một vị trí nào."
+
+#~ msgid "Set virtual stock location as 'view'"
+#~ msgstr "Đặt vị trí tồn kho ảo thành 'chế độ xem'"
+
+#~ msgid ""
+#~ "Set the virtual stock location's :guilabel:`Location Type` "
+#~ "to :guilabel:`View`, as it is a non-existent location used to group "
+#~ "various physical warehouses together."
+#~ msgstr ""
+#~ "Đặt :guilabel:`Loại vị trí` của vị trí tồn kho ảo thành :guilabel:`Chế độ "
+#~ "xem`, vì đây là một vị trí không tồn tại được sử dụng để nhóm các kho "
+#~ "hàng vật lý khác nhau lại với nhau."
+
+#~ msgid ""
+#~ "To do that, navigate to :menuselection:`Inventory app --> Configuration --"
+#~ "> Locations`."
+#~ msgstr ""
+#~ "Để thực hiện, hãy điều hướng đến :menuselection:`ứng dụng Tồn kho --> Cấu "
+#~ "hình --> Vị trí`."
+
+#~ msgid ""
+#~ "Click the virtual warehouse's stock location (e.g. `VWH/Stock`) that "
+#~ "was :ref:`previously created <inventory/routes/virtual-wh>`, from "
+#~ "the :guilabel:`Locations` list."
+#~ msgstr ""
+#~ "Nhấp vào vị trí tồn kho của kho ảo (ví dụ: `VWH/Stock`) đã được :ref:`tạo "
+#~ "trước đó <inventory/routes/virtual-wh>` trong danh sách :guilabel:`Vị "
+#~ "trí`."
+
+#~ msgid ""
+#~ "On the location form, under the :guilabel:`Additional Information` "
+#~ "heading, set the :guilabel:`Location Type` "
+#~ "to :guilabel:`View`. :guilabel:`Save` the changes."
+#~ msgstr ""
+#~ "Trên biểu mẫu vị trí, trong mục :guilabel:`Thông tin bổ sung`, "
+#~ "đặt :guilabel:`Loại vị trí` thành :guilabel:`Chế độ xem`. "
+#~ "Nhấp :guilabel:`Lưu` để xác nhận các thay đổi."
+
+#~ msgid "Warehouse location types in location creation screen."
+#~ msgstr "Các loại vị trí kho hàng trên màn hình tạo vị trí."
+
+#~ msgid ""
+#~ "To view the total quantity across **all** linked child warehouses, go to "
+#~ "the product form and click the :guilabel:`On Hand` smart button."
+#~ msgstr ""
+#~ "Để xem tổng số lượng tồn kho trên **tất cả** các kho phụ đã liên kết, vào "
+#~ "biểu mẫu sản phẩm và nhấp nút thông minh :guilabel:`Hiện có`."
+
+#~ msgid "Display stock across all linked warehouses."
+#~ msgstr "Hiển thị tồn kho trên tất cả kho hàng đã liên kết."
+
+#~ msgid "Example: sell products from a virtual warehouse"
+#~ msgstr "Ví dụ: bán sản phẩm từ một kho hàng ảo"
+
+#~ msgid ""
+#~ "To sell products from multiple warehouses using a virtual parent "
+#~ "location, the database must have at least **two** warehouses configured — "
+#~ "with at least **one** product, with quantity on-hand in each warehouse, "
+#~ "respectively."
+#~ msgstr ""
+#~ "Để bán sản phẩm từ nhiều kho hàng bằng cách sử dụng vị trí ảo chính, cơ "
+#~ "sở dữ liệu phải có ít nhất **hai** kho hàng được cấu hình — với ít nhất "
+#~ "**một** sản phẩm, có số lượng hiện có trong mỗi kho hàng tương ứng."
+
+#~ msgid ""
+#~ "The following product, `Toy soldier`, is available at each location with "
+#~ "the quantities:"
+#~ msgstr ""
+#~ "Sản phẩm sau đây, `Lính đồ chơi`, có sẵn tại mỗi vị trí với số lượng:"
+
+#~ msgid "`WHA/Stock` : 1"
+#~ msgstr "`WHA/Stock`: 1"
+
+#~ msgid "`WHB/Stock` : 2"
+#~ msgstr "`WHB/Stock`: 2"
+
+#~ msgid ""
+#~ "Warehouses `WHA` and `WHB` are child warehouses of the virtual warehouse "
+#~ "`VWH`."
+#~ msgstr ""
+#~ "Các kho hàng `WHA` và `WHB` là các kho hàng phụ của kho hàng ảo `VWH`."
+
+#~ msgid ""
+#~ "Create a quotation for the product by navigating to "
+#~ "the :menuselection:`Sales` app and clicking :guilabel:`Create`. On the "
+#~ "quote, add a :guilabel:`Customer`, and click :guilabel:`Add a product` to "
+#~ "add the two products stored in the two warehouses."
+#~ msgstr ""
+#~ "Tạo báo giá cho sản phẩm bằng cách vào ứng dụng :menuselection:`Bán hàng` "
+#~ "và nhấp :guilabel:`Tạo`. Trên báo giá, thêm một :guilabel:`Khách hàng`, "
+#~ "rồi nhấp :guilabel:`Thêm sản phẩm` để thêm hai sản phẩm được lưu trong "
+#~ "hai kho."
+
+#~ msgid ""
+#~ "Then, click the :guilabel:`Other Info` tab on the sales order form. Under "
+#~ "the :guilabel:`Delivery` section, change the :guilabel:`Warehouse` field "
+#~ "value to the virtual warehouse that was :ref:`previously created "
+#~ "<inventory/routes/virtual-wh>`. Next, :guilabel:`Confirm` the sales order."
+#~ msgstr ""
+#~ "Sau đó, nhấp vào tab :guilabel:`Thông tin khác` trên biểu mẫu đơn bán "
+#~ "hàng. Trong mục :guilabel:`Giao hàng`, thay đổi giá trị "
+#~ "trường :guilabel:`Kho hàng` thành kho hàng ảo đã được :ref:`tạo trước đó "
+#~ "<inventory/routes/virtual-wh>`. Tiếp theo, :guilabel:`Xác nhận` đơn bán "
+#~ "hàng."
+
+#~ msgid ""
+#~ "Set virtual warehouse as the *Warehouse* field in sales order's *Other "
+#~ "Info* tab."
+#~ msgstr ""
+#~ "Đặt kho hàng ảo làm giá trị *Kho hàng* trong tab *Thông tin khác* của đơn "
+#~ "bán hàng."
+
+#~ msgid ""
+#~ "Then, click the :guilabel:`Delivery` smart button. From the warehouse "
+#~ "delivery form, confirm that the :guilabel:`Source Location` value matches "
+#~ "the :guilabel:`Warehouse` field value from the sales order. Both should "
+#~ "list the virtual warehouse location."
+#~ msgstr ""
+#~ "Sau đó, nhấp vào nút thông minh :guilabel:`Giao hàng`. Trên biểu mẫu giao "
+#~ "hàng của kho hàng, xác nhận rằng giá trị :guilabel:`Vị trí nguồn` khớp "
+#~ "với giá trị trường :guilabel:`Kho hàng` từ đơn bán hàng. Cả hai đều nên "
+#~ "hiển thị vị trí của kho ảo."
+
+#~ msgid ""
+#~ "Finally, on the warehouse delivery form, under the :guilabel:`Detailed "
+#~ "Operations` tab, confirm that the :guilabel:`Locations` in "
+#~ "the :guilabel:`From` column for each product match the child locations "
+#~ "that are tied to the virtual parent location."
+#~ msgstr ""
+#~ "Cuối cùng, trên biểu mẫu giao hàng của kho, trong tab :guilabel:`Hoạt "
+#~ "động chi tiết`, xác nhận rằng các :guilabel:`Vị trí` trong "
+#~ "cột :guilabel:`Từ` cho mỗi sản phẩm khớp với các vị trí phụ được liên kết "
+#~ "với kho ảo chính."
+
+#~ msgid "Delivery order with matching source and child locations."
+#~ msgstr "Lệnh giao hàng với vị trí nguồn khớp với các vị trí phụ."
+
+#~ msgid ""
+#~ "The :guilabel:`Source Location` on the warehouse delivery form, and "
+#~ "the :guilabel:`Warehouse` under the :guilabel:`Other Info` tab on the "
+#~ "sales order, **must** match for products in the sales order to be pulled "
+#~ "from different warehouses."
+#~ msgstr ""
+#~ "Trường :guilabel:`Vị trí nguồn` trên biểu mẫu giao hàng của kho "
+#~ "và :guilabel:`Kho hàng` trong tab :guilabel:`Thông tin khác` của đơn bán "
+#~ "hàng **phải** khớp để các sản phẩm trong đơn bán hàng có thể được lấy từ "
+#~ "những kho khác nhau."
+
+#~ msgid ""
+#~ "If the virtual warehouse is not in the :guilabel:`Source Location` field "
+#~ "on the warehouse delivery form, retry product reservation by:"
+#~ msgstr ""
+#~ "Nếu kho hàng ảo không xuất hiện trong trường :guilabel:`Vị trí nguồn` "
+#~ "trên biểu mẫu giao hàng của kho, thử lại việc dự trữ sản phẩm bằng cách:"
+
+#~ msgid ""
+#~ "Running the scheduler: turn on :ref:`developer mode <developer-mode>`, "
+#~ "and then go to :menuselection:`Inventory app --> Operations --> Run "
+#~ "Scheduler`."
+#~ msgstr ""
+#~ "Chạy trình lên lịch: bật :ref:`chế độ nhà phát triển <developer-mode>`, "
+#~ "sau đó vào :menuselection:`Ứng dụng Tồn kho --> Hoạt động --> Chạy trình "
+#~ "lên lịch`."
+
+#~ msgid "Clicking :guilabel:`Check Availability` on the delivery order."
+#~ msgstr "Nhấp :guilabel:`Kiểm tra trình trạng còn hàng` trên lệnh giao hàng."
+
+#~ msgid ""
+#~ "If the virtual warehouse is **not** assigned to the :guilabel:`Warehouse` "
+#~ "field on the sales order, then cancel it, and create a new sales order "
+#~ "with the virtual warehouse set in the :guilabel:`Warehouse` field."
+#~ msgstr ""
+#~ "Nếu kho hàng ảo **không** được gán vào trường :guilabel:`Kho hàng` trên "
+#~ "đơn bán hàng, hãy hủy đơn đó và tạo một đơn bán hàng mới, đồng thời đặt "
+#~ "kho ảo vào trường :guilabel:`Kho hàng`."
+
+#~ msgid ""
+#~ "If the :guilabel:`Warehouse` field is missing on the sales order form, "
+#~ "then the multiple child warehouses may not have been set up correctly. "
+#~ "Review the :ref:`previous section <inventory/routes/child-wh>` to ensure "
+#~ "the correct settings."
+#~ msgstr ""
+#~ "Nếu trường :guilabel:`Kho hàng` không hiển thị trên biểu mẫu đơn bán "
+#~ "hàng, có thể các kho phụ chưa được thiết lập đúng cách. Xem "
+#~ "lại :ref:`phần trước <inventory/routes/child-wh>` để đảm bảo các cài đặt "
+#~ "chính xác."
+
+#~ msgid ""
+#~ "To use a virtual *parent* location as the default warehouse for sales "
+#~ "orders, each salesperson should have the virtual warehouse assigned to "
+#~ "them from the drop-down menu next to :guilabel:`Default Warehouse` on "
+#~ "their employee form."
+#~ msgstr ""
+#~ "Để sử dụng một vị trí ảo *chính* làm kho hàng mặc định cho các đơn bán "
+#~ "hàng, mỗi nhân viên sales cần được gán kho ảo cho họ từ menu thả xuống "
+#~ "bên cạnh :guilabel:`Kho hàng mặc định` trên biểu mẫu nhân viên."
+
+#~ msgid "Default warehouse location on employee form."
+#~ msgstr "Vị trí kho hàng mặc định trên biểu mẫu nhân viên."
 
 #~ msgid "Create an SO"
 #~ msgstr "Tạo một SO"

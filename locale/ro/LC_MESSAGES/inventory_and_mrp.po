@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-15 17:30+0000\n"
+"POT-Creation-Date: 2026-05-22 17:35+0000\n"
 "PO-Revision-Date: 2026-04-03 23:06+0000\n"
 "Last-Translator: Odoo Translation Bot <c3p@odoo.com>\n"
 "Language-Team: Romanian <https://translate.odoo.com/projects/odoo-17-doc/"
@@ -13894,574 +13894,6 @@ msgstr ""
 msgid "Internal transfer for product being moved to warehouse stock."
 msgstr "Transfer intern pentru transferul produsului în stocul depozitului."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:3
-msgid "Sell stock from multiple warehouses using virtual locations"
-msgstr "Vinde stocuri din mai multe depozite folosind locații virtuale"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:5
-msgid ""
-"While keeping stock and selling inventory from one warehouse might work for "
-"smaller companies, bigger companies might need to keep stock in, or sell "
-"from, multiple warehouses in multiple locations."
-msgstr ""
-"În timp ce păstrarea stocului și vânzarea inventarului dintr-un singur "
-"depozit ar putea funcționa pentru companii mai mici, companiile mai mari ar "
-"putea avea nevoie să păstreze stocul în, sau să vândă din, mai multe "
-"depozite în mai multe locații."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:9
-msgid ""
-"Sometimes products included in a single sales order might take stock from "
-"two (or more) warehouses; in Odoo, pulling products from multiple warehouses "
-"to satisfy sales demands can be done using *virtual locations*."
-msgstr ""
-"Uneori, produsele incluse într-o singură comandă de vânzare pot face stocuri "
-"din două (sau mai multe) depozite; în Odoo, extragerea produselor din mai "
-"multe depozite pentru a satisface cerințele de vânzări se poate face "
-"folosind *locații virtuale*."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:14
-msgid ""
-"The solution in this document, describing the use of a virtual warehouse to "
-"fulfill orders for multiple warehouses, has some limitations. Consider the "
-"following before proceeding:"
-msgstr ""
-"Soluția din acest document, care descrie utilizarea unui depozit virtual "
-"pentru a onora comenzile pentru mai multe depozite, are unele limitări. "
-"Luați în considerare următoarele înainte de a continua:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:17
-msgid ""
-"When the :guilabel:`Warehouse` field is set to a virtual warehouse on a "
-"sales order, the virtual warehouse's address is indicated on the picking, "
-"packing, and delivery forms, **not** the actual warehouse's address."
-msgstr ""
-"Când câmpul :guilabel:`Depozit` este setat la un depozit virtual pe o "
-"comandă de vânzare, adresa depozitului virtual este indicată pe formularele "
-"de ridicare, ambalare și livrare, **nu** adresa depozitului real."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:20
-msgid ""
-"Each location has a `warehouse_id` (hidden field). This means that the stock "
-"in the virtual warehouse will **not** be the sum of the stock of the real "
-"warehouses, but rather the sum of the stock in the locations whose warehouse "
-"ID is the virtual warehouse."
-msgstr ""
-"Fiecare locație are un `warehouse_id` (câmp ascuns). Aceasta înseamnă că "
-"stocul din depozitul virtual va **nu** să fie suma stocului depozitelor "
-"reale, ci mai degrabă suma stocului din locațiile al căror ID de depozit "
-"este depozitul virtual."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:25
-msgid ""
-"Potential limitation for those using :doc:`two <../../shipping_receiving/"
-"daily_operations/receipts_delivery_two_steps>` or :doc:`three-step delivery "
-"<../../shipping_receiving/daily_operations/delivery_three_steps>`:"
-msgstr ""
-"Limitare potențială pentru cei care folosesc :doc:`două <../../"
-"shipping_receiving/daily_operations/receipts_delivery_two_steps>` "
-"sau :doc:`livrare în trei pași <../../shipping_receiving/daily_operations/"
-"delivery_three_steps>`:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:29
-msgid ""
-"The output or packing zone on the various forms is incorrectly listed as the "
-"virtual warehouse's address."
-msgstr ""
-"Zona de ieșire sau de ambalare de pe diferitele formulare este listată "
-"incorect ca adresă a depozitului virtual."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:31
-msgid "There is no workaround for two or three-step deliveries."
-msgstr "Nu există o soluție pentru livrările în doi sau trei pași."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:32
-msgid ""
-"Proceed **only** if setting a virtual warehouse's address as the output or "
-"packing zone makes sense for the company's workflow."
-msgstr ""
-"Continuați **numai** dacă setarea adresei unui depozit virtual ca zonă de "
-"ieșire sau de ambalare are sens pentru fluxul de lucru al companiei."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:36
-msgid ""
-"In order to create virtual locations in warehouses, and proceed to the "
-"following steps, the :guilabel:`Storage Locations` and :guilabel:`Multi-Step "
-"Routes` features **must** be enabled."
-msgstr ""
-"Pentru a crea locații virtuale în depozite și pentru a trece la următorii "
-"pași, funcțiile :guilabel:`Locații de stocare` și :guilabel:`Rute în mai "
-"mulți pași` **trebuie** să fie activate."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:39
-msgid ""
-"To do so, go to :menuselection:`Inventory app --> Configuration --> "
-"Settings`, scroll down to the :guilabel:`Warehouse` section, and enable "
-"the :guilabel:`Storage Locations` and :guilabel:`Multi-Step Routes` options. "
-"Then, :guilabel:`Save` the changes to finish."
-msgstr ""
-"Pentru a face acest lucru, accesați :menuselection:`Aplicația inventar --> "
-"Configurare --> Setări`, derulați în jos la secțiunea :guilabel:`Depozit` și "
-"activați :guilabel:`Locații de stocare` și :guilabel:`Multi -Opțiuni de rute "
-"cu pas. Apoi, :guilabel:`Salvați` modificările pentru a finaliza."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:47
-msgid "Create virtual parent location"
-msgstr "Creați o locație virtuală a părintelui"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:49
-msgid ""
-"Before creating any virtual stock locations, create a new warehouse that "
-"acts as a *virtual* warehouse — the *parent* location of other physical "
-"warehouses."
-msgstr ""
-"Înainte de a crea orice locații virtuale de stoc, creați un nou depozit care "
-"acționează ca un depozit *virtual* - locația *părinte* a altor depozite "
-"fizice."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:54
-msgid ""
-"Virtual warehouses are great for companies with multiple physical "
-"warehouses. This is because a situation might arise when one warehouse runs "
-"out of stock of a particular product, but another warehouse still has stock "
-"on-hand. In this case, stock from these two (or more) warehouses could be "
-"used to fulfill a single sales order."
-msgstr ""
-"Depozitele virtuale sunt excelente pentru companiile cu mai multe depozite "
-"fizice. Acest lucru se datorează faptului că ar putea apărea o situație când "
-"un depozit epuizează stocul unui anumit produs, dar un alt depozit mai are "
-"stoc la îndemână. În acest caz, stocul din aceste două (sau mai multe) "
-"depozite ar putea fi utilizat pentru a onora o singură comandă de vânzare."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:59
-msgid ""
-"The \"virtual\" warehouse acts as a single aggregator of all the inventory "
-"stored in a company's physical warehouses, and is used (for traceability "
-"purposes) to create a hierarchy of locations in Odoo."
-msgstr ""
-"Depozitul „virtual” acționează ca un singur agregator al întregului inventar "
-"stocat în depozitele fizice ale unei companii și este folosit (în scopuri de "
-"trasabilitate) pentru a crea o ierarhie a locațiilor în Odoo."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:63
-msgid ""
-"To create a new warehouse, go to :menuselection:`Inventory app --> "
-"Configuration --> Warehouses`, and click :guilabel:`Create`. From here, the "
-"warehouse :guilabel:`Name` and :guilabel:`Short Name` can be changed, and "
-"other warehouse details can be changed under the :guilabel:`Warehouse "
-"Configuration` tab."
-msgstr ""
-"Pentru a crea un nou depozit, accesați :menuselection:`Inventory app --> "
-"Configuration --> Warehouses` și faceți clic pe :guilabel:`Create`. De aici, "
-"depozitul :guilabel:`Nume` și :guilabel:`Nume scurt` pot fi modificate, iar "
-"alte detalii ale depozitului pot fi modificate în "
-"fila :guilabel:`Configurare depozit`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:68
-msgid ""
-"Lastly, click :guilabel:`Save` to finish creating a *regular* warehouse. "
-"Continue following the steps below to finish configuring the virtual parent "
-"warehouse."
-msgstr ""
-"În cele din urmă, faceți clic pe :guilabel:`Salvați` pentru a finaliza "
-"crearea unui depozit *obișnuit*. Continuați să urmați pașii de mai jos "
-"pentru a finaliza configurarea depozitului părinte virtual."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:None
-msgid "New warehouse form."
-msgstr "Nou formular de depozit."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:76
-msgid ""
-":doc:`Warehouse configurations <../../warehouses_storage/"
-"inventory_management/warehouses>`"
-msgstr ""
-":doc:`Configurări depozit <../../warehouses_storage/inventory_management/"
-"warehouses>`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:77
-msgid ""
-":ref:`Incoming and outgoing shipments <inventory/receipts_delivery_one_step/"
-"wh>`"
-msgstr ""
-":ref:`Livrări de intrare și de ieșire <inventory/receipts_delivery_one_step/"
-"wh>`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:78
-msgid ":doc:`../../warehouses_storage/replenishment/resupply_warehouses`"
-msgstr ":doc:`../../warehouses_storage/replenishment/resupply_warehouses`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:83
-msgid "Create child warehouses"
-msgstr "Creați depozite pentru copii"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:85
-msgid ""
-"Create at least two *child* warehouses to link to the virtual warehouse."
-msgstr ""
-"Creați cel puțin două depozite *copii* pentru a le conecta la depozitul "
-"virtual."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:88
-msgid ""
-"In order to take stock from multiple warehouses to fulfill a sales order, "
-"there needs to be at least **two** warehouses acting as child locations of "
-"the virtual parent location warehouse."
-msgstr ""
-"Pentru a face stocul din mai multe depozite pentru a onora o comandă de "
-"vânzare, trebuie să existe cel puțin **două** depozite care să acționeze ca "
-"locații secundare ale depozitului de locații părinte virtuale."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:91
-msgid ""
-"To do that, navigate to :menuselection:`Inventory app --> Configuration --> "
-"Warehouses`, click :guilabel:`Create`, and follow the :ref:`preceding "
-"instructions <inventory/routes/virtual-wh>` to configure the physical stock "
-"locations."
-msgstr ""
-"Pentru a face asta, navigați la :menuselection:`Inventory app --> "
-"Configuration --> Warehouses`, faceți clic pe :guilabel:`Create` și "
-"urmați :ref:`instrucțiunile precedente <inventory/routes/virtual-wh>` pentru "
-"configurați locațiile fizice ale stocurilor."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid "**Parent Warehouse**"
-msgstr "**Depozitul părinte**"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid ":guilabel:`Warehouse`: `Virtual Warehouse`"
-msgstr ":guilabel:`Depozit`: `Depozit virtual`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid ":guilabel:`Location`: `VWH/Stock`"
-msgstr ":guilabel:`Locație`: `VWH/Stock`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid "**Child Warehouses**"
-msgstr "**Depozite pentru copii**"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid ":guilabel:`Warehouses`: `Warehouse A` and `Warehouse B`"
-msgstr ":guilabel:`Depozite`: `Depozitul A` și `Depozitul B`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid ":guilabel:`Locations`: `WHA` and `WHB`"
-msgstr ":guilabel:`Locații`: `WHA` și `WHB`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid "Graphic of child locations 'WHA' and 'WHB' tied to the parent location."
-msgstr ""
-"Grafic al locațiilor copiilor „WHA” și „WHB” legate de locația părinte."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:110
-msgid ""
-"While the virtual stock location will be changed to 'View' later, "
-"the :guilabel:`Location Type` **must** be :guilabel:`Internal Location` at "
-"this point to :ref:`link the child warehouses <inventory/routes/link-to-"
-"vwh>` in the next section."
-msgstr ""
-"În timp ce locația stocului virtual va fi schimbată în „Vizualizare” mai "
-"târziu, :guilabel:„Tipul de locație” **trebuie** să fie :guilabel:„Locație "
-"internă” în acest moment pentru a :ref:„conecta depozitele copil <inventar/ "
-"rute/link-to-vwh>` în secțiunea următoare."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:117
-msgid "Link child warehouses to virtual stock"
-msgstr "Conectați depozitele pentru copii la stocul virtual"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:119
-msgid ""
-"To set physical warehouses as child locations of the virtual location "
-"configured in the :ref:`previous step <inventory/routes/virtual-wh>`, "
-"navigate to :menuselection:`Inventory app --> Configuration --> Locations`."
-msgstr ""
-"Pentru a seta depozitele fizice ca locații secundare ale locației virtuale "
-"configurate în :ref:`pasul anterior <inventory/routes/virtual-wh>`, navigați "
-"la :menuselection:`Inventory app --> Configuration --> Locations`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:123
-msgid ""
-"Remove any filters from the search bar. Then, click the physical "
-"warehouse :guilabel:`Location` that was previously created to be a child "
-"location (e.g. `WHA`), and click :guilabel:`Edit`."
-msgstr ""
-"Eliminați orice filtre din bara de căutare. Apoi, faceți clic pe depozitul "
-"fizic :guilabel:`Locație` care a fost creat anterior pentru a fi o locație "
-"secundară (de exemplu, `WHA`) și faceți clic pe :guilabel:`Editați`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:126
-msgid ""
-"Change the :guilabel:`Parent Location` field from :guilabel:`Physical "
-"Locations` to the virtual warehouse's **stock location** (e.g. `VWH/Stock`) "
-"from the drop-down menu, and click :guilabel:`Save`."
-msgstr ""
-"Schimbați câmpul :guilabel:`Locație părinte` din :guilabel:`Locații fizice` "
-"la **locația stocului** a depozitului virtual (de exemplu, `VWH/Stock`) din "
-"meniul derulant și faceți clic pe :guilabel:`Salvare `."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:131
-msgid ""
-"To select the virtual warehouse's stock location in the :guilabel:`Parent "
-"Location` drop-down menu, the parent warehouse stock location (e.g. `VWH/"
-"Stock`) **must**  have its :guilabel:`Location Type` set "
-"to :guilabel:`Internal Location`."
-msgstr ""
-"Pentru a selecta locația stocului depozitului virtual în meniul drop-"
-"down :guilabel:`Locația părinte`, locația stocului depozitului principal (de "
-"exemplu, `VWH/Stock`) **trebuie** să aibă :guilabel:`Tipul locației` setat "
-"la :guilabel:`Locație internă`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:None
-msgid "Set the child warehouse's *Parent Location* to the virtual warehouse."
-msgstr "Setați *Locația părinte* a depozitului copilului la depozitul virtual."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:139
-msgid "Repeat the preceding steps to configure two or more child warehouses."
-msgstr ""
-"Repetați pașii precedenți pentru a configura două sau mai multe depozite "
-"copii."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:141
-msgid ""
-"Once complete, the virtual, parent warehouse (e.g. `VWH/Stock`) fulfills "
-"orders using stock from child warehouses (e.g. `WHA` and `WHB`), if there is "
-"insufficient stock in any one location."
-msgstr ""
-"Odată finalizat, depozitul-mamă virtual (de exemplu, `VWH/Stock`) onorează "
-"comenzile folosind stocul din depozitele secundare (de exemplu, `WHA` și "
-"`WHB`), dacă există stoc insuficient în orice locație."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:145
-msgid "Set virtual stock location as 'view'"
-msgstr "Setați locația stocului virtual ca „vizualizare”"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:147
-msgid ""
-"Set the virtual stock location's :guilabel:`Location Type` "
-"to :guilabel:`View`, as it is a non-existent location used to group various "
-"physical warehouses together."
-msgstr ""
-"Setați locația de stoc virtuală :guilabel:`Tipul locației` "
-"la :guilabel:`Vizualizare`, deoarece este o locație inexistentă folosită "
-"pentru a grupa diferite depozite fizice."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:150
-msgid ""
-"To do that, navigate to :menuselection:`Inventory app --> Configuration --> "
-"Locations`."
-msgstr ""
-"Pentru a face asta, navigați la :menuselection:`Inventory app --> "
-"Configuration --> Locations`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:152
-msgid ""
-"Click the virtual warehouse's stock location (e.g. `VWH/Stock`) that "
-"was :ref:`previously created <inventory/routes/virtual-wh>`, from "
-"the :guilabel:`Locations` list."
-msgstr ""
-"Faceți clic pe locația stocului depozitului virtual (de exemplu, `VWH/"
-"Stock`) care a fost :ref:`creată anterior <inventory/routes/virtual-wh>`, "
-"din lista :guilabel:`Locații`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:155
-msgid ""
-"On the location form, under the :guilabel:`Additional Information` heading, "
-"set the :guilabel:`Location Type` to :guilabel:`View`. :guilabel:`Save` the "
-"changes."
-msgstr ""
-"Pe formularul de locație, sub titlul :guilabel:`Informații suplimentare`, "
-"setați :guilabel:`Tipul locației` "
-"la :guilabel:`Vizualizare`. :guilabel:`Salvați` modificările."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:None
-msgid "Warehouse location types in location creation screen."
-msgstr "Tipuri de locații ale depozitului în ecranul de creare a locației."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:163
-msgid ""
-"To view the total quantity across **all** linked child warehouses, go to the "
-"product form and click the :guilabel:`On Hand` smart button."
-msgstr ""
-"Pentru a vedea cantitatea totală din **toate** depozitele pentru copii "
-"conectate, accesați formularul de produs și faceți clic pe butonul "
-"inteligent :guilabel:`On Hand`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid "Display stock across all linked warehouses."
-msgstr "Afișați stocul în toate depozitele conectate."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:171
-msgid "Example: sell products from a virtual warehouse"
-msgstr "Exemplu: vinde produse dintr-un depozit virtual"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:173
-msgid ""
-"To sell products from multiple warehouses using a virtual parent location, "
-"the database must have at least **two** warehouses configured — with at "
-"least **one** product, with quantity on-hand in each warehouse, respectively."
-msgstr ""
-"Pentru a vinde produse din mai multe depozite folosind o locație părinte "
-"virtuală, baza de date trebuie să aibă cel puțin **două** depozite "
-"configurate — cu cel puțin **un** produs, cu cantitatea disponibilă în "
-"fiecare depozit, respectiv."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:178
-msgid ""
-"The following product, `Toy soldier`, is available at each location with the "
-"quantities:"
-msgstr ""
-"Următorul produs, „Toy Soldier”, este disponibil în fiecare locație cu "
-"cantitățile:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:180
-msgid "`WHA/Stock` : 1"
-msgstr "`WHA/Stoc` : 1"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:181
-msgid "`WHB/Stock` : 2"
-msgstr "`WHB/Stoc` : 2"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:182
-msgid ""
-"Warehouses `WHA` and `WHB` are child warehouses of the virtual warehouse "
-"`VWH`."
-msgstr ""
-"Depozitele `WHA` și `WHB` sunt depozite copii ale depozitului virtual `VWH`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:184
-msgid ""
-"Create a quotation for the product by navigating to "
-"the :menuselection:`Sales` app and clicking :guilabel:`Create`. On the "
-"quote, add a :guilabel:`Customer`, and click :guilabel:`Add a product` to "
-"add the two products stored in the two warehouses."
-msgstr ""
-"Creați o ofertă pentru produs navigând la aplicația :menuselection:`Vânzări` "
-"și făcând clic pe :guilabel:`Creați`. Pe cotație, adăugați "
-"un :guilabel:`Client` și faceți clic pe :guilabel:`Adăugați un produs` "
-"pentru a adăuga cele două produse stocate în cele două depozite."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:188
-msgid ""
-"Then, click the :guilabel:`Other Info` tab on the sales order form. Under "
-"the :guilabel:`Delivery` section, change the :guilabel:`Warehouse` field "
-"value to the virtual warehouse that was :ref:`previously created <inventory/"
-"routes/virtual-wh>`. Next, :guilabel:`Confirm` the sales order."
-msgstr ""
-"Apoi, faceți clic pe fila :guilabel:`Alte informații` din formularul de "
-"comandă de vânzare. În secțiunea :guilabel:`Livrare`, modificați valoarea "
-"câmpului :guilabel:`Depozit` la depozitul virtual care a fost creat "
-"anterior :ref:`<inventory/routes/virtual-wh>`. Apoi, :guilabel:`Confirmați` "
-"comanda de vânzare."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:None
-msgid ""
-"Set virtual warehouse as the *Warehouse* field in sales order's *Other Info* "
-"tab."
-msgstr ""
-"Setați depozitul virtual ca câmpul *Depozit* în fila *Alte informații* a "
-"comenzii de vânzare."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:196
-msgid ""
-"Then, click the :guilabel:`Delivery` smart button. From the warehouse "
-"delivery form, confirm that the :guilabel:`Source Location` value matches "
-"the :guilabel:`Warehouse` field value from the sales order. Both should list "
-"the virtual warehouse location."
-msgstr ""
-"Apoi, faceți clic pe butonul inteligent :guilabel:`Livrare`. Din formularul "
-"de livrare în depozit, confirmați că valoarea :guilabel:`Locația sursei` se "
-"potrivește cu valoarea câmpului :guilabel:`Depozit` din comanda de vânzare. "
-"Ambele ar trebui să enumere locația depozitului virtual."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:200
-msgid ""
-"Finally, on the warehouse delivery form, under the :guilabel:`Detailed "
-"Operations` tab, confirm that the :guilabel:`Locations` in "
-"the :guilabel:`From` column for each product match the child locations that "
-"are tied to the virtual parent location."
-msgstr ""
-"În cele din urmă, pe formularul de livrare în depozit, sub "
-"fila :guilabel:`Operațiuni detaliate`, confirmați că :guilabel:`Locații` din "
-"coloana :guilabel:`De la` pentru fiecare produs se potrivește cu locațiile "
-"secundare care sunt legate de virtualul locația părintelui."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:None
-msgid "Delivery order with matching source and child locations."
-msgstr ""
-"Comanda de livrare cu locațiile sursei și ale copilului care se potrivesc."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:209
-msgid ""
-"The :guilabel:`Source Location` on the warehouse delivery form, and "
-"the :guilabel:`Warehouse` under the :guilabel:`Other Info` tab on the sales "
-"order, **must** match for products in the sales order to be pulled from "
-"different warehouses."
-msgstr ""
-":guilabel:`Locația sursei` de pe formularul de livrare în depozit "
-"și :guilabel:`Depozit` din fila :guilabel:`Alte informații` din comanda de "
-"vânzare, **trebuie** să se potrivească pentru produsele din comanda de "
-"vânzare cu fie scoase din diferite depozite."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:213
-msgid ""
-"If the virtual warehouse is not in the :guilabel:`Source Location` field on "
-"the warehouse delivery form, retry product reservation by:"
-msgstr ""
-"Dacă depozitul virtual nu se află în câmpul :guilabel:`Locația sursei` din "
-"formularul de livrare a depozitului, reîncercați rezervarea produsului prin:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:216
-msgid ""
-"Running the scheduler: turn on :ref:`developer mode <developer-mode>`, and "
-"then go to :menuselection:`Inventory app --> Operations --> Run Scheduler`."
-msgstr ""
-"Rularea planificatorului: activați :ref:`modul dezvoltator <modul-"
-"dezvoltator>`, apoi accesați :menuselection:`Aplicația inventar --> Operații "
-"--> Executați planificatorul`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:218
-msgid "Clicking :guilabel:`Check Availability` on the delivery order."
-msgstr ""
-"Făcând clic pe :guilabel:`Verificați disponibilitatea` pe comanda de livrare."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:219
-msgid ""
-"If the virtual warehouse is **not** assigned to the :guilabel:`Warehouse` "
-"field on the sales order, then cancel it, and create a new sales order with "
-"the virtual warehouse set in the :guilabel:`Warehouse` field."
-msgstr ""
-"Dacă depozitul virtual **nu** este alocat câmpului :guilabel:`Depozit` din "
-"comanda de vânzare, anulați-l și creați o nouă comandă de vânzare cu "
-"depozitul virtual setat în câmpul :guilabel:`Depozit`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:222
-msgid ""
-"If the :guilabel:`Warehouse` field is missing on the sales order form, then "
-"the multiple child warehouses may not have been set up correctly. Review "
-"the :ref:`previous section <inventory/routes/child-wh>` to ensure the "
-"correct settings."
-msgstr ""
-"Dacă câmpul :guilabel:`Depozit` lipsește din formularul de comandă, atunci "
-"este posibil ca mai multe depozite secundare să nu fi fost configurate "
-"corect. Consultați :ref:`secțiunea anterioară <inventory/routes/child-wh>` "
-"pentru a vă asigura că setările sunt corecte."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:227
-msgid ""
-"To use a virtual *parent* location as the default warehouse for sales "
-"orders, each salesperson should have the virtual warehouse assigned to them "
-"from the drop-down menu next to :guilabel:`Default Warehouse` on their "
-"employee form."
-msgstr ""
-"Pentru a utiliza o locație virtuală *părinte* ca depozit implicit pentru "
-"comenzile de vânzări, fiecare agent de vânzări ar trebui să aibă depozitul "
-"virtual alocat din meniul derulant de lângă :guilabel:`Depozit implicit` din "
-"formularul de angajat."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid "Default warehouse location on employee form."
-msgstr "Locația implicită a depozitului pe formularul de angajat."
-
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:5
 msgid ""
 "A *storage category* is used with :doc:`putaway rules <putaway>`, as an "
@@ -20416,6 +19848,7 @@ msgstr "Formularul pentru o metodă de transport DHL."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:27
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:60
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:70
 msgid "General information"
 msgstr "Informații generale"
 
@@ -20950,6 +20383,7 @@ msgstr ""
 "transportatorilor."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:16
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:12
 msgid "Enable shipping connector"
 msgstr "Activează conectorul de transport"
 
@@ -20980,6 +20414,7 @@ msgid "The FedEx Shipping Methods button below the FedEx Connector."
 msgstr "Butonul FedEx Shipping Methods de sub FedEx Connector."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:30
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:48
 msgid "Configure shipping method"
 msgstr ""
 
@@ -24332,8 +23767,8 @@ msgid ":doc:`UPS <ups_credentials>`"
 msgstr ":doc:`UPS <ups_credentials>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:37
-msgid "US Postal Service"
-msgstr "Serviciul Poștal din SUA"
+msgid ":doc:`US Postal Service <usps>`"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:38
 msgid "United States of America"
@@ -25547,6 +24982,272 @@ msgstr ""
 ":guilabel:`Taxe plătite de`: Selectați dacă taxele sau alte taxe sunt "
 "percepute de către :guilabel:`Expeditorul` sau :guilabel:`Destinatarul` "
 "comenzii."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:3
+msgid "USPS integration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:7
+msgid ""
+"Integrating a USPS account with Odoo's **Inventory** app makes it possible "
+"to calculate delivery rates and generate delivery labels within Odoo. This "
+"is accomplished by enabling the USPS shipping connector, then configuring at "
+"least one shipping method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:14
+msgid ""
+"To enable the USPS shipping connector, open the :menuselection:`Apps` app "
+"from the main Odoo dashboard. In the :guilabel:`Search` field, search for "
+"`USPS` and click :guilabel:`Install`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:17
+msgid ""
+"After the shipping connector is installed, the USPS connector is enabled by "
+"default."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:20
+msgid "Configure USPS business account"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:22
+msgid ""
+"A USPS business account is required to obtain the information needed "
+"to :ref:`fill out the fields in the shipping method form <inventory/"
+"shipping_receiving/usps-configuration>`. To create a new account, navigate "
+"to USPS's `Create Your USPS.com Account <https://reg.usps.com/entreg/"
+"RegistrationAction_input>`_ page, select the :guilabel:`Business Account` "
+"option, then follow the steps."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:29
+msgid "Create a developer app"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:31
+msgid ""
+"After the USPS Business Customer Onboarding Portal (COP) is set up, `sign in "
+"to the USPS COP <https://cop.usps.com/>`_ to manage business account "
+"information and access the USPS APIs."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:34
+msgid ""
+"On this page, make note of the :guilabel:`Customer Registration ID (CRID)`, "
+"the :guilabel:`Master Mailer ID`, and the :guilabel:`Label Mailer ID`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:37
+msgid "Click the :guilabel:`My Apps` link at the top of the screen."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:39
+msgid ""
+"Open the :guilabel:`Developer Apps` tab. Click the :guilabel:`Add App` "
+"button. In the *Add App* pop-up window, specify an :guilabel:`App Name`. "
+"Select the APIs to use. Finally, click the :guilabel:`Add App` button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:43
+msgid ""
+"A window opens, titled after the app name. Keep this window open as the "
+"shipping method is configured. The :guilabel:`Consumer Key` "
+"and :guilabel:`Consumer Secret` will be necessary in the shipping method "
+"form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:50
+msgid ""
+"Once the USPS shipping connector is enabled, at least one shipping method "
+"must be configured. After doing so, the shipping method can be included in "
+"sales orders (SOs) and used to compute delivery costs and print shipping "
+"labels."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:54
+msgid ""
+"Open or create a new shipping method. Navigate to :menuselection:`Inventory "
+"--> Configuration --> Shipping Methods`, then open an existing USPS shipping "
+"method to display its form. Alternatively, click :guilabel:`New` to open a "
+"blank form and configure a new shipping method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:None
+msgid "The USPS Domestic shipping method, fully configured."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:62
+msgid ""
+"Enabling the USPS shipping connector automatically creates two default "
+"shipping methods: :guilabel:`USPS Domestic` and :guilabel:`USPS "
+"International`. Each of these methods is preconfigured with test "
+"credentials, allowing them to be used for testing purposes."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:66
+msgid ""
+"Before the shipping method can be used to create actual shipments, the test "
+"credentials must be replaced with credentials from a valid USPS account."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:72
+msgid ""
+"At the top of a delivery method form are fields that configure how the "
+"method operates in Odoo. In the :guilabel:`Provider` field, "
+"select :guilabel:`USPS` from the drop-down menu if it is not already "
+"selected."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:76
+msgid ""
+"The remaining fields in this section are general to all delivery providers. "
+"For details on how to fill them out, see :doc:`third_party_shipper`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:82
+msgid "USPS Configuration tab"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:84
+msgid ""
+"The options in the *USPS Configuration* tab of a USPS shipping method form "
+"are used to connect the method to a USPS account and to configure the "
+"delivery details associated with it."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:87
+msgid "Configure the following fields in the form:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:89
+msgid ""
+":guilabel:`EPS Number`: The Enterprise Payment System (EPS) account number "
+"identifies the payment account and is used for electronic funds transfers. "
+"After a payment account is added in the |COP| tool, the EPS number will "
+"display, or it can be retrieved from the `USPS Business Customer Gateway "
+"<https://epay.usps.com/paymod/>`_."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:93
+msgid ""
+":guilabel:`CRID`: The CRID is a number that identifies a physical business "
+"address across all USPS systems and applications."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:95
+msgid ""
+":guilabel:`MID`: This is the :guilabel:`Master Mailer ID` listed in the |"
+"COP|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:96
+msgid ""
+":guilabel:`Manifest MID`: This is the :guilabel:`Label Mailer ID` listed in "
+"the |COP|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:97
+msgid ""
+":guilabel:`USPS API Key`: This is the :guilabel:`Consumer Key` credential "
+"for the app created in the USPS |COP| tool."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:99
+msgid ""
+":guilabel:`USPS API Secret`: This is the :guilabel:`Consumer Secret` "
+"credential for the app created in the USPS |COP| tool."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:101
+msgid ""
+":guilabel:`Label Format`: Specify the file format that generated labels "
+"should use."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:102
+msgid ""
+":guilabel:`USPS Package Type`: Specify or select the package type to use for "
+"shipping."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:103
+msgid ""
+":guilabel:`USPS Domestic Service` or :guilabel:`USPS International Service`: "
+"Specify or select the service level that should be used to generate shipping "
+"labels."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:105
+msgid ""
+":guilabel:`Delivery Nature`: Specify whether the shipping method "
+"is :guilabel:`Domestic` or :guilabel:`International`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:107
+msgid ""
+":guilabel:`Content Type`: Specify the type of content that will be shipped "
+"in packages with this shipping method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:110
+msgid "In the :guilabel:`Options` section, configure the following fields:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:112
+msgid ""
+":guilabel:`Domestic Rating Indicator` or :guilabel:`International Rating "
+"Indicator`: USPS uses specific indicators, pricing groups, and automated "
+"classification systems to distinguish between domestic and international "
+"shipments for rating purposes. These systems help ensure accurate postage "
+"calculations based on factors such as destination, package weight, "
+"dimensions, and selected mail class. Select the rating indicator that works "
+"best for shipping needs."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:117
+msgid ""
+":guilabel:`Processing Category`: Select a packaging processing category."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:118
+msgid ""
+":guilabel:`Generate Return Label`: For domestic shipments only. Select this "
+"checkbox to automatically generate a return label when the delivery is "
+"validated."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:122
+msgid "Turn on the USPS integration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:124
+msgid ""
+"After the USPS connection is set up, use the smart buttons at the top of the "
+"form to publish, turn on production mode, or activate debug logging."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:127
+msgid ""
+":guilabel:`Unpublished` / :guilabel:`Published`: Determines if this shipping "
+"method is available on the user's **eCommerce** website."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:129
+msgid ""
+":guilabel:`Test Environment` / :guilabel:`Production Environment`: "
+"Determines whether label creation is for testing and canceled immediately "
+"(:guilabel:`Test`) or generating a real shipping label that is charged to "
+"the USPS account (:guilabel:`Production`)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:132
+msgid ""
+":guilabel:`No Debug` / :guilabel:`Debug Requests`: Determines whether API "
+"requests and responses are logged in Odoo (turn on developer mode and go "
+"to :menuselection:`Settings app --> Technical --> Logging`)."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/zebra.rst:3
 msgid "Zebra label configuration"
@@ -54454,6 +54155,526 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid "Sell stock from multiple warehouses using virtual locations"
+#~ msgstr "Vinde stocuri din mai multe depozite folosind locații virtuale"
+
+#~ msgid ""
+#~ "While keeping stock and selling inventory from one warehouse might work "
+#~ "for smaller companies, bigger companies might need to keep stock in, or "
+#~ "sell from, multiple warehouses in multiple locations."
+#~ msgstr ""
+#~ "În timp ce păstrarea stocului și vânzarea inventarului dintr-un singur "
+#~ "depozit ar putea funcționa pentru companii mai mici, companiile mai mari "
+#~ "ar putea avea nevoie să păstreze stocul în, sau să vândă din, mai multe "
+#~ "depozite în mai multe locații."
+
+#~ msgid ""
+#~ "Sometimes products included in a single sales order might take stock from "
+#~ "two (or more) warehouses; in Odoo, pulling products from multiple "
+#~ "warehouses to satisfy sales demands can be done using *virtual locations*."
+#~ msgstr ""
+#~ "Uneori, produsele incluse într-o singură comandă de vânzare pot face "
+#~ "stocuri din două (sau mai multe) depozite; în Odoo, extragerea produselor "
+#~ "din mai multe depozite pentru a satisface cerințele de vânzări se poate "
+#~ "face folosind *locații virtuale*."
+
+#~ msgid ""
+#~ "The solution in this document, describing the use of a virtual warehouse "
+#~ "to fulfill orders for multiple warehouses, has some limitations. Consider "
+#~ "the following before proceeding:"
+#~ msgstr ""
+#~ "Soluția din acest document, care descrie utilizarea unui depozit virtual "
+#~ "pentru a onora comenzile pentru mai multe depozite, are unele limitări. "
+#~ "Luați în considerare următoarele înainte de a continua:"
+
+#~ msgid ""
+#~ "When the :guilabel:`Warehouse` field is set to a virtual warehouse on a "
+#~ "sales order, the virtual warehouse's address is indicated on the picking, "
+#~ "packing, and delivery forms, **not** the actual warehouse's address."
+#~ msgstr ""
+#~ "Când câmpul :guilabel:`Depozit` este setat la un depozit virtual pe o "
+#~ "comandă de vânzare, adresa depozitului virtual este indicată pe "
+#~ "formularele de ridicare, ambalare și livrare, **nu** adresa depozitului "
+#~ "real."
+
+#~ msgid ""
+#~ "Each location has a `warehouse_id` (hidden field). This means that the "
+#~ "stock in the virtual warehouse will **not** be the sum of the stock of "
+#~ "the real warehouses, but rather the sum of the stock in the locations "
+#~ "whose warehouse ID is the virtual warehouse."
+#~ msgstr ""
+#~ "Fiecare locație are un `warehouse_id` (câmp ascuns). Aceasta înseamnă că "
+#~ "stocul din depozitul virtual va **nu** să fie suma stocului depozitelor "
+#~ "reale, ci mai degrabă suma stocului din locațiile al căror ID de depozit "
+#~ "este depozitul virtual."
+
+#~ msgid ""
+#~ "Potential limitation for those using :doc:`two <../../shipping_receiving/"
+#~ "daily_operations/receipts_delivery_two_steps>` or :doc:`three-step "
+#~ "delivery <../../shipping_receiving/daily_operations/"
+#~ "delivery_three_steps>`:"
+#~ msgstr ""
+#~ "Limitare potențială pentru cei care folosesc :doc:`două <../../"
+#~ "shipping_receiving/daily_operations/receipts_delivery_two_steps>` "
+#~ "sau :doc:`livrare în trei pași <../../shipping_receiving/daily_operations/"
+#~ "delivery_three_steps>`:"
+
+#~ msgid ""
+#~ "The output or packing zone on the various forms is incorrectly listed as "
+#~ "the virtual warehouse's address."
+#~ msgstr ""
+#~ "Zona de ieșire sau de ambalare de pe diferitele formulare este listată "
+#~ "incorect ca adresă a depozitului virtual."
+
+#~ msgid "There is no workaround for two or three-step deliveries."
+#~ msgstr "Nu există o soluție pentru livrările în doi sau trei pași."
+
+#~ msgid ""
+#~ "Proceed **only** if setting a virtual warehouse's address as the output "
+#~ "or packing zone makes sense for the company's workflow."
+#~ msgstr ""
+#~ "Continuați **numai** dacă setarea adresei unui depozit virtual ca zonă de "
+#~ "ieșire sau de ambalare are sens pentru fluxul de lucru al companiei."
+
+#~ msgid ""
+#~ "In order to create virtual locations in warehouses, and proceed to the "
+#~ "following steps, the :guilabel:`Storage Locations` and :guilabel:`Multi-"
+#~ "Step Routes` features **must** be enabled."
+#~ msgstr ""
+#~ "Pentru a crea locații virtuale în depozite și pentru a trece la următorii "
+#~ "pași, funcțiile :guilabel:`Locații de stocare` și :guilabel:`Rute în mai "
+#~ "mulți pași` **trebuie** să fie activate."
+
+#~ msgid ""
+#~ "To do so, go to :menuselection:`Inventory app --> Configuration --> "
+#~ "Settings`, scroll down to the :guilabel:`Warehouse` section, and enable "
+#~ "the :guilabel:`Storage Locations` and :guilabel:`Multi-Step Routes` "
+#~ "options. Then, :guilabel:`Save` the changes to finish."
+#~ msgstr ""
+#~ "Pentru a face acest lucru, accesați :menuselection:`Aplicația inventar --"
+#~ "> Configurare --> Setări`, derulați în jos la "
+#~ "secțiunea :guilabel:`Depozit` și activați :guilabel:`Locații de stocare` "
+#~ "și :guilabel:`Multi -Opțiuni de rute cu pas. Apoi, :guilabel:`Salvați` "
+#~ "modificările pentru a finaliza."
+
+#~ msgid "Create virtual parent location"
+#~ msgstr "Creați o locație virtuală a părintelui"
+
+#~ msgid ""
+#~ "Before creating any virtual stock locations, create a new warehouse that "
+#~ "acts as a *virtual* warehouse — the *parent* location of other physical "
+#~ "warehouses."
+#~ msgstr ""
+#~ "Înainte de a crea orice locații virtuale de stoc, creați un nou depozit "
+#~ "care acționează ca un depozit *virtual* - locația *părinte* a altor "
+#~ "depozite fizice."
+
+#~ msgid ""
+#~ "Virtual warehouses are great for companies with multiple physical "
+#~ "warehouses. This is because a situation might arise when one warehouse "
+#~ "runs out of stock of a particular product, but another warehouse still "
+#~ "has stock on-hand. In this case, stock from these two (or more) "
+#~ "warehouses could be used to fulfill a single sales order."
+#~ msgstr ""
+#~ "Depozitele virtuale sunt excelente pentru companiile cu mai multe "
+#~ "depozite fizice. Acest lucru se datorează faptului că ar putea apărea o "
+#~ "situație când un depozit epuizează stocul unui anumit produs, dar un alt "
+#~ "depozit mai are stoc la îndemână. În acest caz, stocul din aceste două "
+#~ "(sau mai multe) depozite ar putea fi utilizat pentru a onora o singură "
+#~ "comandă de vânzare."
+
+#~ msgid ""
+#~ "The \"virtual\" warehouse acts as a single aggregator of all the "
+#~ "inventory stored in a company's physical warehouses, and is used (for "
+#~ "traceability purposes) to create a hierarchy of locations in Odoo."
+#~ msgstr ""
+#~ "Depozitul „virtual” acționează ca un singur agregator al întregului "
+#~ "inventar stocat în depozitele fizice ale unei companii și este folosit "
+#~ "(în scopuri de trasabilitate) pentru a crea o ierarhie a locațiilor în "
+#~ "Odoo."
+
+#~ msgid ""
+#~ "To create a new warehouse, go to :menuselection:`Inventory app --> "
+#~ "Configuration --> Warehouses`, and click :guilabel:`Create`. From here, "
+#~ "the warehouse :guilabel:`Name` and :guilabel:`Short Name` can be changed, "
+#~ "and other warehouse details can be changed under the :guilabel:`Warehouse "
+#~ "Configuration` tab."
+#~ msgstr ""
+#~ "Pentru a crea un nou depozit, accesați :menuselection:`Inventory app --> "
+#~ "Configuration --> Warehouses` și faceți clic pe :guilabel:`Create`. De "
+#~ "aici, depozitul :guilabel:`Nume` și :guilabel:`Nume scurt` pot fi "
+#~ "modificate, iar alte detalii ale depozitului pot fi modificate în "
+#~ "fila :guilabel:`Configurare depozit`."
+
+#~ msgid ""
+#~ "Lastly, click :guilabel:`Save` to finish creating a *regular* warehouse. "
+#~ "Continue following the steps below to finish configuring the virtual "
+#~ "parent warehouse."
+#~ msgstr ""
+#~ "În cele din urmă, faceți clic pe :guilabel:`Salvați` pentru a finaliza "
+#~ "crearea unui depozit *obișnuit*. Continuați să urmați pașii de mai jos "
+#~ "pentru a finaliza configurarea depozitului părinte virtual."
+
+#~ msgid "New warehouse form."
+#~ msgstr "Nou formular de depozit."
+
+#~ msgid ""
+#~ ":doc:`Warehouse configurations <../../warehouses_storage/"
+#~ "inventory_management/warehouses>`"
+#~ msgstr ""
+#~ ":doc:`Configurări depozit <../../warehouses_storage/inventory_management/"
+#~ "warehouses>`"
+
+#~ msgid ""
+#~ ":ref:`Incoming and outgoing shipments <inventory/"
+#~ "receipts_delivery_one_step/wh>`"
+#~ msgstr ""
+#~ ":ref:`Livrări de intrare și de ieșire <inventory/"
+#~ "receipts_delivery_one_step/wh>`"
+
+#~ msgid ":doc:`../../warehouses_storage/replenishment/resupply_warehouses`"
+#~ msgstr ":doc:`../../warehouses_storage/replenishment/resupply_warehouses`"
+
+#~ msgid "Create child warehouses"
+#~ msgstr "Creați depozite pentru copii"
+
+#~ msgid ""
+#~ "Create at least two *child* warehouses to link to the virtual warehouse."
+#~ msgstr ""
+#~ "Creați cel puțin două depozite *copii* pentru a le conecta la depozitul "
+#~ "virtual."
+
+#~ msgid ""
+#~ "In order to take stock from multiple warehouses to fulfill a sales order, "
+#~ "there needs to be at least **two** warehouses acting as child locations "
+#~ "of the virtual parent location warehouse."
+#~ msgstr ""
+#~ "Pentru a face stocul din mai multe depozite pentru a onora o comandă de "
+#~ "vânzare, trebuie să existe cel puțin **două** depozite care să acționeze "
+#~ "ca locații secundare ale depozitului de locații părinte virtuale."
+
+#~ msgid ""
+#~ "To do that, navigate to :menuselection:`Inventory app --> Configuration --"
+#~ "> Warehouses`, click :guilabel:`Create`, and follow the :ref:`preceding "
+#~ "instructions <inventory/routes/virtual-wh>` to configure the physical "
+#~ "stock locations."
+#~ msgstr ""
+#~ "Pentru a face asta, navigați la :menuselection:`Inventory app --> "
+#~ "Configuration --> Warehouses`, faceți clic pe :guilabel:`Create` și "
+#~ "urmați :ref:`instrucțiunile precedente <inventory/routes/virtual-wh>` "
+#~ "pentru configurați locațiile fizice ale stocurilor."
+
+#~ msgid "**Parent Warehouse**"
+#~ msgstr "**Depozitul părinte**"
+
+#~ msgid ":guilabel:`Warehouse`: `Virtual Warehouse`"
+#~ msgstr ":guilabel:`Depozit`: `Depozit virtual`"
+
+#~ msgid ":guilabel:`Location`: `VWH/Stock`"
+#~ msgstr ":guilabel:`Locație`: `VWH/Stock`"
+
+#~ msgid "**Child Warehouses**"
+#~ msgstr "**Depozite pentru copii**"
+
+#~ msgid ":guilabel:`Warehouses`: `Warehouse A` and `Warehouse B`"
+#~ msgstr ":guilabel:`Depozite`: `Depozitul A` și `Depozitul B`"
+
+#~ msgid ":guilabel:`Locations`: `WHA` and `WHB`"
+#~ msgstr ":guilabel:`Locații`: `WHA` și `WHB`"
+
+#~ msgid ""
+#~ "Graphic of child locations 'WHA' and 'WHB' tied to the parent location."
+#~ msgstr ""
+#~ "Grafic al locațiilor copiilor „WHA” și „WHB” legate de locația părinte."
+
+#~ msgid ""
+#~ "While the virtual stock location will be changed to 'View' later, "
+#~ "the :guilabel:`Location Type` **must** be :guilabel:`Internal Location` "
+#~ "at this point to :ref:`link the child warehouses <inventory/routes/link-"
+#~ "to-vwh>` in the next section."
+#~ msgstr ""
+#~ "În timp ce locația stocului virtual va fi schimbată în „Vizualizare” mai "
+#~ "târziu, :guilabel:„Tipul de locație” **trebuie** să fie :guilabel:"
+#~ "„Locație internă” în acest moment pentru a :ref:„conecta depozitele copil "
+#~ "<inventar/ rute/link-to-vwh>` în secțiunea următoare."
+
+#~ msgid "Link child warehouses to virtual stock"
+#~ msgstr "Conectați depozitele pentru copii la stocul virtual"
+
+#~ msgid ""
+#~ "To set physical warehouses as child locations of the virtual location "
+#~ "configured in the :ref:`previous step <inventory/routes/virtual-wh>`, "
+#~ "navigate to :menuselection:`Inventory app --> Configuration --> "
+#~ "Locations`."
+#~ msgstr ""
+#~ "Pentru a seta depozitele fizice ca locații secundare ale locației "
+#~ "virtuale configurate în :ref:`pasul anterior <inventory/routes/virtual-"
+#~ "wh>`, navigați la :menuselection:`Inventory app --> Configuration --> "
+#~ "Locations`."
+
+#~ msgid ""
+#~ "Remove any filters from the search bar. Then, click the physical "
+#~ "warehouse :guilabel:`Location` that was previously created to be a child "
+#~ "location (e.g. `WHA`), and click :guilabel:`Edit`."
+#~ msgstr ""
+#~ "Eliminați orice filtre din bara de căutare. Apoi, faceți clic pe "
+#~ "depozitul fizic :guilabel:`Locație` care a fost creat anterior pentru a "
+#~ "fi o locație secundară (de exemplu, `WHA`) și faceți clic "
+#~ "pe :guilabel:`Editați`."
+
+#~ msgid ""
+#~ "Change the :guilabel:`Parent Location` field from :guilabel:`Physical "
+#~ "Locations` to the virtual warehouse's **stock location** (e.g. `VWH/"
+#~ "Stock`) from the drop-down menu, and click :guilabel:`Save`."
+#~ msgstr ""
+#~ "Schimbați câmpul :guilabel:`Locație părinte` din :guilabel:`Locații "
+#~ "fizice` la **locația stocului** a depozitului virtual (de exemplu, `VWH/"
+#~ "Stock`) din meniul derulant și faceți clic pe :guilabel:`Salvare `."
+
+#~ msgid ""
+#~ "To select the virtual warehouse's stock location in the :guilabel:`Parent "
+#~ "Location` drop-down menu, the parent warehouse stock location (e.g. `VWH/"
+#~ "Stock`) **must**  have its :guilabel:`Location Type` set "
+#~ "to :guilabel:`Internal Location`."
+#~ msgstr ""
+#~ "Pentru a selecta locația stocului depozitului virtual în meniul drop-"
+#~ "down :guilabel:`Locația părinte`, locația stocului depozitului principal "
+#~ "(de exemplu, `VWH/Stock`) **trebuie** să aibă :guilabel:`Tipul locației` "
+#~ "setat la :guilabel:`Locație internă`."
+
+#~ msgid ""
+#~ "Set the child warehouse's *Parent Location* to the virtual warehouse."
+#~ msgstr ""
+#~ "Setați *Locația părinte* a depozitului copilului la depozitul virtual."
+
+#~ msgid ""
+#~ "Repeat the preceding steps to configure two or more child warehouses."
+#~ msgstr ""
+#~ "Repetați pașii precedenți pentru a configura două sau mai multe depozite "
+#~ "copii."
+
+#~ msgid ""
+#~ "Once complete, the virtual, parent warehouse (e.g. `VWH/Stock`) fulfills "
+#~ "orders using stock from child warehouses (e.g. `WHA` and `WHB`), if there "
+#~ "is insufficient stock in any one location."
+#~ msgstr ""
+#~ "Odată finalizat, depozitul-mamă virtual (de exemplu, `VWH/Stock`) "
+#~ "onorează comenzile folosind stocul din depozitele secundare (de exemplu, "
+#~ "`WHA` și `WHB`), dacă există stoc insuficient în orice locație."
+
+#~ msgid "Set virtual stock location as 'view'"
+#~ msgstr "Setați locația stocului virtual ca „vizualizare”"
+
+#~ msgid ""
+#~ "Set the virtual stock location's :guilabel:`Location Type` "
+#~ "to :guilabel:`View`, as it is a non-existent location used to group "
+#~ "various physical warehouses together."
+#~ msgstr ""
+#~ "Setați locația de stoc virtuală :guilabel:`Tipul locației` "
+#~ "la :guilabel:`Vizualizare`, deoarece este o locație inexistentă folosită "
+#~ "pentru a grupa diferite depozite fizice."
+
+#~ msgid ""
+#~ "To do that, navigate to :menuselection:`Inventory app --> Configuration --"
+#~ "> Locations`."
+#~ msgstr ""
+#~ "Pentru a face asta, navigați la :menuselection:`Inventory app --> "
+#~ "Configuration --> Locations`."
+
+#~ msgid ""
+#~ "Click the virtual warehouse's stock location (e.g. `VWH/Stock`) that "
+#~ "was :ref:`previously created <inventory/routes/virtual-wh>`, from "
+#~ "the :guilabel:`Locations` list."
+#~ msgstr ""
+#~ "Faceți clic pe locația stocului depozitului virtual (de exemplu, `VWH/"
+#~ "Stock`) care a fost :ref:`creată anterior <inventory/routes/virtual-wh>`, "
+#~ "din lista :guilabel:`Locații`."
+
+#~ msgid ""
+#~ "On the location form, under the :guilabel:`Additional Information` "
+#~ "heading, set the :guilabel:`Location Type` "
+#~ "to :guilabel:`View`. :guilabel:`Save` the changes."
+#~ msgstr ""
+#~ "Pe formularul de locație, sub titlul :guilabel:`Informații suplimentare`, "
+#~ "setați :guilabel:`Tipul locației` "
+#~ "la :guilabel:`Vizualizare`. :guilabel:`Salvați` modificările."
+
+#~ msgid "Warehouse location types in location creation screen."
+#~ msgstr "Tipuri de locații ale depozitului în ecranul de creare a locației."
+
+#~ msgid ""
+#~ "To view the total quantity across **all** linked child warehouses, go to "
+#~ "the product form and click the :guilabel:`On Hand` smart button."
+#~ msgstr ""
+#~ "Pentru a vedea cantitatea totală din **toate** depozitele pentru copii "
+#~ "conectate, accesați formularul de produs și faceți clic pe butonul "
+#~ "inteligent :guilabel:`On Hand`."
+
+#~ msgid "Display stock across all linked warehouses."
+#~ msgstr "Afișați stocul în toate depozitele conectate."
+
+#~ msgid "Example: sell products from a virtual warehouse"
+#~ msgstr "Exemplu: vinde produse dintr-un depozit virtual"
+
+#~ msgid ""
+#~ "To sell products from multiple warehouses using a virtual parent "
+#~ "location, the database must have at least **two** warehouses configured — "
+#~ "with at least **one** product, with quantity on-hand in each warehouse, "
+#~ "respectively."
+#~ msgstr ""
+#~ "Pentru a vinde produse din mai multe depozite folosind o locație părinte "
+#~ "virtuală, baza de date trebuie să aibă cel puțin **două** depozite "
+#~ "configurate — cu cel puțin **un** produs, cu cantitatea disponibilă în "
+#~ "fiecare depozit, respectiv."
+
+#~ msgid ""
+#~ "The following product, `Toy soldier`, is available at each location with "
+#~ "the quantities:"
+#~ msgstr ""
+#~ "Următorul produs, „Toy Soldier”, este disponibil în fiecare locație cu "
+#~ "cantitățile:"
+
+#~ msgid "`WHA/Stock` : 1"
+#~ msgstr "`WHA/Stoc` : 1"
+
+#~ msgid "`WHB/Stock` : 2"
+#~ msgstr "`WHB/Stoc` : 2"
+
+#~ msgid ""
+#~ "Warehouses `WHA` and `WHB` are child warehouses of the virtual warehouse "
+#~ "`VWH`."
+#~ msgstr ""
+#~ "Depozitele `WHA` și `WHB` sunt depozite copii ale depozitului virtual "
+#~ "`VWH`."
+
+#~ msgid ""
+#~ "Create a quotation for the product by navigating to "
+#~ "the :menuselection:`Sales` app and clicking :guilabel:`Create`. On the "
+#~ "quote, add a :guilabel:`Customer`, and click :guilabel:`Add a product` to "
+#~ "add the two products stored in the two warehouses."
+#~ msgstr ""
+#~ "Creați o ofertă pentru produs navigând la "
+#~ "aplicația :menuselection:`Vânzări` și făcând clic pe :guilabel:`Creați`. "
+#~ "Pe cotație, adăugați un :guilabel:`Client` și faceți clic "
+#~ "pe :guilabel:`Adăugați un produs` pentru a adăuga cele două produse "
+#~ "stocate în cele două depozite."
+
+#~ msgid ""
+#~ "Then, click the :guilabel:`Other Info` tab on the sales order form. Under "
+#~ "the :guilabel:`Delivery` section, change the :guilabel:`Warehouse` field "
+#~ "value to the virtual warehouse that was :ref:`previously created "
+#~ "<inventory/routes/virtual-wh>`. Next, :guilabel:`Confirm` the sales order."
+#~ msgstr ""
+#~ "Apoi, faceți clic pe fila :guilabel:`Alte informații` din formularul de "
+#~ "comandă de vânzare. În secțiunea :guilabel:`Livrare`, modificați valoarea "
+#~ "câmpului :guilabel:`Depozit` la depozitul virtual care a fost creat "
+#~ "anterior :ref:`<inventory/routes/virtual-wh>`. "
+#~ "Apoi, :guilabel:`Confirmați` comanda de vânzare."
+
+#~ msgid ""
+#~ "Set virtual warehouse as the *Warehouse* field in sales order's *Other "
+#~ "Info* tab."
+#~ msgstr ""
+#~ "Setați depozitul virtual ca câmpul *Depozit* în fila *Alte informații* a "
+#~ "comenzii de vânzare."
+
+#~ msgid ""
+#~ "Then, click the :guilabel:`Delivery` smart button. From the warehouse "
+#~ "delivery form, confirm that the :guilabel:`Source Location` value matches "
+#~ "the :guilabel:`Warehouse` field value from the sales order. Both should "
+#~ "list the virtual warehouse location."
+#~ msgstr ""
+#~ "Apoi, faceți clic pe butonul inteligent :guilabel:`Livrare`. Din "
+#~ "formularul de livrare în depozit, confirmați că "
+#~ "valoarea :guilabel:`Locația sursei` se potrivește cu valoarea "
+#~ "câmpului :guilabel:`Depozit` din comanda de vânzare. Ambele ar trebui să "
+#~ "enumere locația depozitului virtual."
+
+#~ msgid ""
+#~ "Finally, on the warehouse delivery form, under the :guilabel:`Detailed "
+#~ "Operations` tab, confirm that the :guilabel:`Locations` in "
+#~ "the :guilabel:`From` column for each product match the child locations "
+#~ "that are tied to the virtual parent location."
+#~ msgstr ""
+#~ "În cele din urmă, pe formularul de livrare în depozit, sub "
+#~ "fila :guilabel:`Operațiuni detaliate`, confirmați că :guilabel:`Locații` "
+#~ "din coloana :guilabel:`De la` pentru fiecare produs se potrivește cu "
+#~ "locațiile secundare care sunt legate de virtualul locația părintelui."
+
+#~ msgid "Delivery order with matching source and child locations."
+#~ msgstr ""
+#~ "Comanda de livrare cu locațiile sursei și ale copilului care se potrivesc."
+
+#~ msgid ""
+#~ "The :guilabel:`Source Location` on the warehouse delivery form, and "
+#~ "the :guilabel:`Warehouse` under the :guilabel:`Other Info` tab on the "
+#~ "sales order, **must** match for products in the sales order to be pulled "
+#~ "from different warehouses."
+#~ msgstr ""
+#~ ":guilabel:`Locația sursei` de pe formularul de livrare în depozit "
+#~ "și :guilabel:`Depozit` din fila :guilabel:`Alte informații` din comanda "
+#~ "de vânzare, **trebuie** să se potrivească pentru produsele din comanda de "
+#~ "vânzare cu fie scoase din diferite depozite."
+
+#~ msgid ""
+#~ "If the virtual warehouse is not in the :guilabel:`Source Location` field "
+#~ "on the warehouse delivery form, retry product reservation by:"
+#~ msgstr ""
+#~ "Dacă depozitul virtual nu se află în câmpul :guilabel:`Locația sursei` "
+#~ "din formularul de livrare a depozitului, reîncercați rezervarea "
+#~ "produsului prin:"
+
+#~ msgid ""
+#~ "Running the scheduler: turn on :ref:`developer mode <developer-mode>`, "
+#~ "and then go to :menuselection:`Inventory app --> Operations --> Run "
+#~ "Scheduler`."
+#~ msgstr ""
+#~ "Rularea planificatorului: activați :ref:`modul dezvoltator <modul-"
+#~ "dezvoltator>`, apoi accesați :menuselection:`Aplicația inventar --> "
+#~ "Operații --> Executați planificatorul`."
+
+#~ msgid "Clicking :guilabel:`Check Availability` on the delivery order."
+#~ msgstr ""
+#~ "Făcând clic pe :guilabel:`Verificați disponibilitatea` pe comanda de "
+#~ "livrare."
+
+#~ msgid ""
+#~ "If the virtual warehouse is **not** assigned to the :guilabel:`Warehouse` "
+#~ "field on the sales order, then cancel it, and create a new sales order "
+#~ "with the virtual warehouse set in the :guilabel:`Warehouse` field."
+#~ msgstr ""
+#~ "Dacă depozitul virtual **nu** este alocat câmpului :guilabel:`Depozit` "
+#~ "din comanda de vânzare, anulați-l și creați o nouă comandă de vânzare cu "
+#~ "depozitul virtual setat în câmpul :guilabel:`Depozit`."
+
+#~ msgid ""
+#~ "If the :guilabel:`Warehouse` field is missing on the sales order form, "
+#~ "then the multiple child warehouses may not have been set up correctly. "
+#~ "Review the :ref:`previous section <inventory/routes/child-wh>` to ensure "
+#~ "the correct settings."
+#~ msgstr ""
+#~ "Dacă câmpul :guilabel:`Depozit` lipsește din formularul de comandă, "
+#~ "atunci este posibil ca mai multe depozite secundare să nu fi fost "
+#~ "configurate corect. Consultați :ref:`secțiunea anterioară <inventory/"
+#~ "routes/child-wh>` pentru a vă asigura că setările sunt corecte."
+
+#~ msgid ""
+#~ "To use a virtual *parent* location as the default warehouse for sales "
+#~ "orders, each salesperson should have the virtual warehouse assigned to "
+#~ "them from the drop-down menu next to :guilabel:`Default Warehouse` on "
+#~ "their employee form."
+#~ msgstr ""
+#~ "Pentru a utiliza o locație virtuală *părinte* ca depozit implicit pentru "
+#~ "comenzile de vânzări, fiecare agent de vânzări ar trebui să aibă "
+#~ "depozitul virtual alocat din meniul derulant de lângă :guilabel:`Depozit "
+#~ "implicit` din formularul de angajat."
+
+#~ msgid "Default warehouse location on employee form."
+#~ msgstr "Locația implicită a depozitului pe formularul de angajat."
+
+#~ msgid "US Postal Service"
+#~ msgstr "Serviciul Poștal din SUA"
 
 #~ msgid ""
 #~ "In manufacturing, subcontracting is the process of a company engaging a "
