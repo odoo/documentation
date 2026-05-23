@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-15 17:30+0000\n"
+"POT-Creation-Date: 2026-05-22 17:35+0000\n"
 "PO-Revision-Date: 2025-11-19 20:11+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Hindi <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -16963,6 +16963,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:27
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:58
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:70
 msgid "General information"
 msgstr ""
 
@@ -18517,6 +18518,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:16
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:12
 msgid "Enable shipping connector"
 msgstr ""
 
@@ -18540,6 +18542,7 @@ msgid "The FedEx Shipping Methods button below the FedEx Connector."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:29
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:48
 msgid "Configure delivery method"
 msgstr ""
 
@@ -21623,7 +21626,7 @@ msgid ":doc:`UPS <ups_credentials>`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:39
-msgid "US Postal Service"
+msgid ":doc:`US Postal Service <usps>`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:40
@@ -22535,6 +22538,270 @@ msgstr ""
 msgid ""
 ":guilabel:`Duties paid by`: Select whether duties or other fees are charged "
 "to the :guilabel:`Sender` or :guilabel:`Recipient` of the order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:3
+msgid "USPS integration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:7
+msgid ""
+"Integrating a USPS account with Odoo's **Inventory** app makes it possible "
+"to calculate delivery rates and generate delivery labels within Odoo. This "
+"is accomplished by enabling the USPS shipping connector, then configuring at "
+"least one delivery method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:14
+msgid ""
+"To enable the USPS shipping connector, open the :menuselection:`Apps` app "
+"from the main Odoo dashboard. In the :guilabel:`Search` field, search for "
+"`USPS`  and click :guilabel:`Install`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:17
+msgid ""
+"After the shipping connector is installed, the USPS connector is enabled by "
+"default."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:20
+msgid "Configure USPS business account"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:22
+msgid ""
+"A USPS business account is required to obtain the information needed "
+"to :ref:`fill out the fields in the delivery method form <inventory/"
+"shipping_receiving/usps-configuration>`. To create a new account, navigate "
+"to USPS's `Create Your USPS.com Account <https://reg.usps.com/entreg/"
+"RegistrationAction_input>`_ page, select the :guilabel:`Business Account` "
+"option, then follow the steps."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:29
+msgid "Create a developer app"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:31
+msgid ""
+"After the USPS Business Customer Onboarding Portal (COP) is set up, `sign in "
+"to the USPS COP <https://cop.usps.com/>`_ to manage business account "
+"information and access the USPS APIs."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:34
+msgid ""
+"On this page, make note of the :guilabel:`Customer Registration ID (CRID)`, "
+"the :guilabel:`Master Mailer ID`, and the :guilabel:`Label Mailer ID`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:37
+msgid "Click the :guilabel:`My Apps` link at the top of the screen."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:39
+msgid ""
+"Open the :guilabel:`Developer Apps` tab. Click the :guilabel:`Add App` "
+"button. In the *Add App* pop-up window, specify an :guilabel:`App Name`. "
+"Select the APIs to use. Finally, click the :guilabel:`Add App` button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:43
+msgid ""
+"A window opens, titled after the app name. Keep this window open as the "
+"delivery method is configured. The :guilabel:`Consumer Key` "
+"and :guilabel:`Consumer Secret` will be necessary in the delivery method "
+"form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:50
+msgid ""
+"Once the USPS shipping connector is enabled, at least one delivery method "
+"must be configured. After doing so, the delivery method can be included in "
+"sales orders (SOs) and used to compute delivery costs and print shipping "
+"labels."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:55
+msgid ""
+"The USPS shipping connector automatically creates two default delivery "
+"methods: :guilabel:`USPS Domestic` and :guilabel:`USPS International`. These "
+"methods are preconfigured with test credentials, allowing them to be used "
+"for testing purposes."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:59
+msgid ""
+"To create actual shipments using the default delivery methods, the test "
+"credentials must be replaced with credentials from a valid USPS account."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:62
+msgid ""
+"Open or create a new delivery method. Navigate to :menuselection:`Inventory "
+"--> Configuration --> Delivery Methods`, then open an existing USPS delivery "
+"method to display its form. Alternatively, click :guilabel:`New` to open a "
+"blank form and configure a new delivery method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:None
+msgid "The USPS Domestic delivery method, fully configured."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:72
+msgid ""
+"The fields at the top of the delivery method form configure how the method "
+"operates in Odoo. In the :guilabel:`Provider` field, select :guilabel:`USPS` "
+"from the drop-down menu if it is not already selected."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:76
+msgid ""
+"The remaining fields in this section are general to all delivery providers. "
+"For details on how to fill them out, see :doc:`third_party_shipper`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:82
+msgid "USPS Configuration tab"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:84
+msgid ""
+"The options in the *USPS Configuration* tab are used to connect the method "
+"to a USPS account and to configure the delivery details associated with it."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:87
+msgid "Fill out the following fields in the form:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:89
+msgid ""
+":guilabel:`EPS Number`: The Enterprise Payment System (EPS) account number "
+"identifies the payment account and is used for electronic funds transfers. "
+"After a payment account is added in the |COP| tool, the EPS number will "
+"display, or it can be retrieved from the `USPS Business Customer Gateway "
+"<https://epay.usps.com/paymod/>`_."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:93
+msgid ""
+":guilabel:`CRID`: The CRID is a number that identifies the physical business "
+"address across all USPS systems and applications."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:95
+msgid ""
+":guilabel:`MID`: Fill in the :guilabel:`Master Mailer ID` listed in the |"
+"COP|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:96
+msgid ""
+":guilabel:`Manifest MID`: Fill in the :guilabel:`Label Mailer ID` listed in "
+"the |COP|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:97
+msgid ""
+":guilabel:`USPS API Key`: Enter the :guilabel:`Consumer Key` credential for "
+"the app created in the USPS |COP| tool."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:99
+msgid ""
+":guilabel:`USPS API Secret`: Enter the :guilabel:`Consumer Secret` "
+"credential for the app created in the USPS |COP| tool."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:101
+msgid ""
+":guilabel:`Label Format`: Select the file format that generated labels "
+"should use."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:102
+msgid ""
+":guilabel:`USPS Package Type`: Select or create the package type to use for "
+"shipping."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:103
+msgid ""
+":guilabel:`USPS Domestic Service` or :guilabel:`USPS International Service`: "
+"Select the service level that should be used to generate shipping labels."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:105
+msgid ""
+":guilabel:`Delivery Nature`: Select whether the delivery method "
+"is :guilabel:`Domestic` or :guilabel:`International`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:107
+msgid ""
+":guilabel:`Content Type`: Select the type of content that will be shipped in "
+"packages with this delivery method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:110
+msgid "In the :guilabel:`Options` section, configure the following fields:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:112
+msgid ""
+":guilabel:`Domestic Rating Indicator` or :guilabel:`International Rating "
+"Indicator`: Select the rating indicator that works best for shipping needs. "
+"USPS uses specific indicators, pricing groups, and automated classification "
+"systems to distinguish between domestic and international shipments for "
+"rating purposes. These systems help ensure accurate postage calculations "
+"based on factors such as destination, package weight, dimensions, and "
+"selected mail class."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:117
+msgid ""
+":guilabel:`Processing Category`: Select a packaging processing category."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:118
+msgid ""
+":guilabel:`Generate Return Label`: For domestic shipments only. Select this "
+"checkbox to automatically generate a return label when the delivery is "
+"validated."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:122
+msgid "Turn on the USPS delivery method"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:124
+msgid ""
+"After the USPS connection is set up, use the smart buttons at the top of the "
+"form to publish, turn on production mode, or activate debug logging."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:127
+msgid ""
+":guilabel:`Unpublished` / :guilabel:`Published`: Determines whether the "
+"delivery method is available on the **eCommerce** website."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:129
+msgid ""
+":guilabel:`Test Environment` / :guilabel:`Production Environment`: "
+"Determines whether the delivery method creates :guilabel:`Test` labels, "
+"which are canceled immediately,  or :guilabel:`Production` labels, which are "
+"real shipping labels charged to the USPS account."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:132
+msgid ""
+":guilabel:`No Debug` / :guilabel:`Debug Requests`: Determines whether API "
+"requests and responses are logged in Odoo (:doc:`turn on developer mode "
+"<../../../../general/developer_mode>` and go to :menuselection:`Settings app "
+"--> Technical --> Logging`)."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/zebra.rst:3
