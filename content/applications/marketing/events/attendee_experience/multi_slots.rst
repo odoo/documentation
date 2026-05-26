@@ -121,8 +121,8 @@ Deleting and editing slots
 Registering for slots as an attendee
 ====================================
 
-The process of registering for a slot as an attendee is similar to :doc:`registering for regular
-events <../promote_monetize/sell_tickets>` via the **Website** app.
+The process of registering for a slot as an attendee is similar to :ref:`registering for regular
+events <events/sell-tickets/website>` via the **Website** app.
 
 To register, visitors on the website navigate to the desired event. Next, they click the
 :guilabel:`Register` button to open a :guilabel:`Slots` pop-up window. Then, they select their
