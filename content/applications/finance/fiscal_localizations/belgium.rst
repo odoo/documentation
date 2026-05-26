@@ -2,6 +2,51 @@
 Belgium
 =======
 
+.. _localizations_belgium/configuration/modules:
+
+Modules
+=======
+
+The following modules are installed automatically with the Belgian localization:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 25 50
+
+   * - Name
+     - Technical name
+     - Description
+   * - :guilabel:`Belgium - Accounting`
+     - `l10n_be`
+     - Belgian :ref:`fiscal localization package <fiscal_localizations/packages>`, complete with
+       the Belgian chart of accounts, taxes, tax report, and fiscal positions
+   * - :guilabel:`Belgium - Accounting Reports`
+     - `l10n_be_reports`
+     - Module providing Belgian accounting reports
+   * - :guilabel:`Belgium - Accounting Reports (post wizard)`
+     - `l10n_be_reports_post_wizard`
+     - Enables the VAT wizard when posting a tax return journal entry
+   * - :guilabel:`Belgium - Accounting Reports - Prorata Deduction`
+     - `l10n_be_reports_prorata`
+     - Provides the option to add the prorata deduction to the VAT export
+   * - :guilabel:`Belgium - Accounting Reports - SMS`
+     - `l10n_be_report_sms`
+     - Bridge module between Belgian accounting and SMS
+   * - :guilabel:`Belgium - Import SODA files`
+     - `l10n_be_soda`
+     - Module to import SODA files
+   * - :guilabel:`Belgium - Import Bank CODA Statements`
+     - `l10n_be_coda`
+     - Module to import CODA bank statements
+   * - :guilabel:`Belgium - Disallowed Expenses Data`
+     - `l10n_be_disallowed_expenses`
+     - Disallowed expenses data
+
+.. note::
+   In some cases, such as when upgrading to a version with additional modules, it is possible that
+   modules may not be installed automatically. Any missing modules can be manually :ref:`installed
+   <general/install>`.
+
 .. _belgium/configuration:
 
 Configuration
@@ -34,6 +79,10 @@ it in, click :guilabel:`Save`, and then :guilabel:`Setup` to configure it furthe
 
 Taxes
 =====
+
+.. important::
+   When submitting your tax returns, make sure to use XML or VAT format files. These are the only
+   file formats accepted by the Belgian tax authorities.
 
 Default Belgian taxes are created automatically when the :guilabel:`Belgium - Accounting` and
 the :guilabel:`Belgium - Accounting Reports` modules are installed. Each tax impacts the Belgian
@@ -79,9 +128,34 @@ the tax amount and allocates it to the corresponding accounts based on the tax r
    .. image:: belgium/deductible-tax.png
       :alt: Example of not-fully deductible tax
 
+Vehicle tax deduction
+---------------------
+
+.. note::
+   To see the tax deductibility of a vehicle, the **Belgium - Disallowed Expenses Fleet**
+   (`l10n_be_account_disallowed_expenses_fleet`) module must be :doc:`installed
+   <../../general/apps_modules>`.
+
+A vehicle's tax deductibility rate varies depending on its type (car or bicycle) and several
+factors, such as fuel type, CO2 emissions, engine power, etc.
+
+To view the **tax deductibility percentage** for a specific vehicle, open the **Fleet** app,
+navigate to :menuselection:`Configuration --> Models`, and select a vehicle model. Locate the
+:guilabel:`Tax Deduction` field, which is found under the :guilabel:`Engine` section for cars, or
+the :guilabel:`Vehicle Information` section for bicycles.
+
+.. important::
+   The :guilabel:`Tax Deduction` field is strictly **informative** and is computed automatically
+   based on the vehicle's specifications. It is **not** used for any automated calculations within
+   the **Accounting** app and should not be confused with the :ref:`tax rate deductibility
+   <belgium/non-deductible>` used on :ref:`tax grids <tax-returns/tax-grids>`. Instead, your
+   accountant can reference this field to manually apply the correct deductible rate to invoices or
+   disallowed expenses.
+
 .. seealso::
-  - :doc:`Taxes <../accounting/taxes>`
-  - :doc:`../accounting/reporting/tax_returns`
+   - :doc:`Taxes <../accounting/taxes>`
+   - :doc:`../accounting/reporting/tax_returns`
+   - :ref:`Vehicle models <fleet/models>`
 
 .. _belgium/reports:
 
