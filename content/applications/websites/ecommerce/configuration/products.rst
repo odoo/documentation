@@ -258,10 +258,6 @@ are identifiable by their language abbreviation (e.g., `EN`) next to the field, 
 Stock management
 ----------------
 
-.. important::
-   The :doc:`Inventory app </applications/inventory_and_mrp/inventory>` must be installed to handle
-   stock-related settings and operations.
-
 To configure stock-related e-commerce options, go to :menuselection:`Website --> Configuration -->
 Settings`, scroll down to the :guilabel:`eCommerce` section, then to the :guilabel:`Inventory
 Defaults` subsection. The following settings are available:
@@ -280,12 +276,18 @@ Defaults` subsection. The following settings are available:
   transfers.
 
 These settings apply to *all* products, but can be adapted for individual products if needed. To do
-so, go to the product form and make sure the :ref:`Track Inventory option
-<inventory/product_management/tracking-inventory>` is enabled. Then, navigate to the
-:guilabel:`eCommerce` tab and, in the :guilabel:`Inventory` section, enable or disable the
-relevant :guilabel:`Sell when Out-of-Stock` and :guilabel:`Show Available Qty` options. You can also
-compose a custom :guilabel:`Out-of-Stock Message`. If the field is left empty, the default message
-`Out of Stock` is displayed on the product page when the item is no longer in stock.
+so, go to the product form and ensure the :ref:`Track inventory option
+<inventory/product_management/tracking-inventory>` is enabled.
+
+.. note::
+   When the :doc:`Inventory app </applications/inventory_and_mrp/inventory>` is installed, and
+   :ref:`lots and serial numbers are enabled <inventory/product_management/enable-lot-serial>`,
+   select an option from the :guilabel:`Tracking` dropdown menu.
+
+Then, navigate to the :guilabel:`eCommerce` tab and, in the :guilabel:`Inventory` section, enable or
+disable the relevant :guilabel:`Sell when Out-of-Stock` and :guilabel:`Show Available Qty` options.
+You can also compose a custom :guilabel:`Out-of-Stock Message`. If the field is left empty, the
+default message `Out of Stock` is displayed on the product page when the item is no longer in stock.
 
 .. note::
    - Modifying the general :guilabel:`Inventory Defaults` settings does not automatically modify the
