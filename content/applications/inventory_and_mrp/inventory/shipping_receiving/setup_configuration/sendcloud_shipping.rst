@@ -13,9 +13,8 @@ Create an account and activate carriers
 ---------------------------------------
 
 To get started, `create or log in to a Sendcloud account <https://account.sendcloud.com/signup/
-?utm_source=odoo&utm_medium=partnerships&utm_campaign=partner_integrations_page>`_.
-
-On the Sendcloud platform, follow the `Sendcloud integration documentation
+?utm_source=odoo&utm_medium=partnerships&utm_campaign=partner_integrations_page>`_. On the Sendcloud
+platform, follow the `Sendcloud integration documentation
 <https://support.sendcloud.com/hc/en-us/articles/360059470491-Odoo-Native-integration>`_ to
 configure the account and generate the connector credentials.
 
@@ -30,10 +29,6 @@ configure the account and generate the connector credentials.
    since Sendcloud won't ship for free. To use shipping rules, or individual custom carrier
    contacts, a paid plan of Sendcloud is **required**.
 
-.. seealso::
-   `Magic Sheet - Connect Sendcloud [PDF]
-   <https://drive.google.com/drive/folders/1Cj_bbIn2gOA6HNDFEI8AhjUvcxe2wSMf>`_
-
 .. _inventory/shipping_receiving/sendcloud-warehouse-config:
 
 Warehouse configuration
@@ -43,7 +38,6 @@ Once logged into the Sendcloud account, navigate to :menuselection:`Settings -->
 Addresses`, and fill in the field for :guilabel:`Warehouse address`.
 
 .. image:: sendcloud_shipping/settings-shipping.png
-   :align: center
    :alt: Adding addresses in the Sendcloud settings.
 
 To allow Sendcloud to process returns as well, a :guilabel:`Return Address` is required. Under the
@@ -75,13 +69,12 @@ right. Next, search for :guilabel:`Odoo Native`. Then, click on :guilabel:`Conne
 After clicking on :guilabel:`Connect`, the page redirects to the :guilabel:`Sendcloud API` settings
 page, where the :guilabel:`Public and Secret Keys` are produced. The next step is to name the
 :guilabel:`Integration`. The naming convention is as follows: `Odoo CompanyName`, with the user's
-company name replacing `CompanyName` (e.g. `Odoo StealthyWood`).
+company name replacing `CompanyName` (e.g. `Odoo Stealthy Wood`).
 
 Then, check the box next to :guilabel:`Service Points` and select the shipping services for this
 integration. After saving, the :guilabel:`Public and Secret Keys` are generated.
 
 .. image:: sendcloud_shipping/public-secret-keys.png
-   :align: center
    :alt: Configuring the Sendcloud integration and receiving the credentials.
 
 Setup in Odoo
@@ -103,11 +96,10 @@ Install Sendcloud shipping module
 ---------------------------------
 
 After the Sendcloud account is set up and configured, it's time to configure the Odoo database. To
-get started, go to Odoo's :guilabel:`Apps` module, search for the `Sendcloud Shipping` integration,
-and install it.
+get started, go to Odoo's :guilabel:`Apps` module, search for the `Sendcloud Shipping`, and
+:ref:`install it <general/install>`.
 
 .. image:: sendcloud_shipping/sendcloud-mod.png
-   :align: center
    :alt: Sendcloud Shipping module in the Odoo Apps module.
 
 .. _inventory/shipping_receiving/link-sendcloud-module:
@@ -119,22 +111,26 @@ Once installed, activate the :guilabel:`Sendcloud Shipping` module in :menuselec
 Configuration --> Settings`. The :guilabel:`Sendcloud Connector` setting is found under the
 :guilabel:`Shipping Connectors` section.
 
-After activating the :guilabel:`Sendcloud Connector`, click on the :guilabel:`Sendcloud Shipping
-Methods` link below the listed connector. Once on the :guilabel:`Shipping Methods` page, click
+After activating the :guilabel:`Sendcloud Connector`, click on the :guilabel:`Sendcloud Delivery
+Methods` link below the listed connector. Once on the :guilabel:`Delivery Methods` page, click
 :guilabel:`New`.
 
 .. tip::
-   :guilabel:`Shipping Methods` can also be accessed by going to :menuselection:`Inventory -->
-   Configuration --> Delivery --> Shipping Methods`.
+   :guilabel:`Delivery Methods` can also be accessed by going to :menuselection:`Inventory -->
+   Configuration --> Delivery Methods`.
 
-Fill out the following fields in the :guilabel:`New Shipping Method` form:
+Fill out the following fields in the :guilabel:`New Delivery Method` form:
 
-- :guilabel:`Shipping Method`: type `Sendcloud DPD`.
-- :guilabel:`Provider`: select :guilabel:`Sendcloud` from the drop-down menu.
-- :guilabel:`Delivery Product`: set the product that was configured for this shipping method or
+- :guilabel:`Delivery Method`: Type `Sendcloud DPD`.
+- :guilabel:`Provider`: Select :guilabel:`Sendcloud` from the drop-down menu.
+- :guilabel:`Delivery Product`: Set the product that was configured for this shipping method or
   create a new product.
-- In the :guilabel:`SendCloud Configuration` tab, enter the :guilabel:`Sendcloud Public Key`.
-- In the :guilabel:`SendCloud Configuration` tab, enter the :guilabel:`Sendcloud Secret Key`.
+- :guilabel:`Invoicing Policy`: Select one of the options.
+- In the :guilabel:`SendCloud Configuration` tab:
+
+  - Enter the :guilabel:`Sendcloud Public Key`.
+  - Enter the :guilabel:`Sendcloud Secret Key`.
+  - Enter the :guilabel:`Ship From` location.
 
 .. _inventory/shipping_receiving/sendcloud-pickups:
 
@@ -146,54 +142,103 @@ Sendcloud's `service point delivery
 choose a pickup location (such as a nearby shop or locker) instead of entering a private delivery
 address.
 
-To enable the feature, go to the shipping method form, and in the :guilabel:`SendCloud
-Configuration` tab, under the :guilabel:`Options` section, enable :guilabel:`Use Sendcloud
-Locations` feature.
+To enable the feature, go to the shipping method form, and under the *Options* section in the
+*SendCloud Configuration* tab, enable :guilabel:`Use Sendcloud Locations` feature.
 
-.. important::
-   Pickup point selection is only available through the **Website** app (the online checkout view).
-   It is not currently possible to select a pickup point manually through the **Sales** app (the
-   internal database view).
+Once enabled, the pickup point selection is available through:
 
-   For example, if the customer selects a shipping method like *Sendcloud Mondial Relay*, they must
-   choose a pickup point during the checkout process on the website. If no pickup point is selected,
-   the delivery order cannot be validated in Odoo.
+ - The **Website** app on the *Delivery method* page during the online checkout process.
+
+   .. image:: sendcloud_shipping/website-delivery-method-option.png
+      :alt: The Delivery method page with Sendcloud option selected.
+
+ - The **Sales** app on the sales quotation using the *Add shipping* button or the *Delivery* smart
+   button.
+
+To add a :guilabel:`Pickup point` to a sales quote, :ref:`create a quotation
+<sales_quotations/create_quotations/create-quotation>` and click the :guilabel:`Add shipping`
+button. The *Add a delivery method* pop-up displays. Select :guilabel:`Sendcloud MR` (Sendcloud
+Mondial Relay) for the :guilabel:`Delivery Method` and then click :guilabel:`Get Rate`.
+
+Click the :icon:`fa-pencil` :guilabel:`pencil` icon next to the :guilabel:`Pickup Point` field and
+the *Choose a pick-up point* pop-up displays. Enter a zip code and select a location from the
+generated list. Click :guilabel:`Choose this location` to save it and return to the *Add a delivery
+method* pop-up, then click :guilabel:`Add`.
+
+.. image:: sendcloud_shipping/add-a-delivery-method-pop-up.png
+   :alt: Completed pop-up with the Sendcloud method selected and Pickup Point configured.
+
+To change a pickup point after a sales quotation is confirmed, ensure the delivery order has not
+been validated. If the delivery order is validated:
+
+ #. **Do not** attempt to change the pickup point on the sales order or delivery order.
+ #. Cancel the existing sales order.
+ #. Create a new sales order with the correct pickup point.
+
+.. example::
+   The customer has already confirmed the sales order with their chosen pickup point, however, now
+   they want to change the pickup point location.
+
+   Navigate to  :menuselection:`Sales app --> Orders --> Orders` and select the sales order. Click
+   the :guilabel:`Delivery` smart button and the delivery order displays. Ensure the delivery order
+   has not been validated, then click the :icon:`fa-pencil` :guilabel:`pencil` icon next to the
+   :guilabel:`Pickup Point` field to change the location.
+
+   .. image:: sendcloud_shipping/delivery-order-pickup-point.png
+      :alt: The Pickup Point field on the delivery receipt.
+
+   In the *Choose a pick-up point* window, enter in the preferred zip code and select a location
+   from the generated list. Click :guilabel:`Choose this location` to finalize the change.
+
+   .. image:: sendcloud_shipping/choose-a-pick-up-point-window.png
+      :alt: Completed window with a zip code entered and available locations listed.
 
 Load shipping products
 ~~~~~~~~~~~~~~~~~~~~~~
 
 After configuring and saving the form, follow these steps to load the shipping products:
 
-- In the :guilabel:`SendCloud Configuration` tab of the :guilabel:`New Shipping Method` form, click
-  on the :guilabel:`Load your SendCloud shipping products` link.
-- Select the shipping products the company would like to use for deliveries and returns.
-- Click :guilabel:`Select`.
+#. In the *SendCloud Configuration* tab of the :guilabel:`New Delivery Method` form, click the
+   :guilabel:`Load your products` button.
+#. Select the shipping products the company would like to use for deliveries and returns.
+#. Click :guilabel:`Confirm`.
 
 .. example::
    Sample Sendcloud shipping products configured in Odoo:
 
-   | :guilabel:`DELIVERY`
-   | :guilabel:`Shipping Product`: `DPD Home 0-31.5kg`
-   | :guilabel:`Carrier`: `DPD`
-   | :guilabel:`Minimum Weight`: `0.00`
-   | :guilabel:`Maximum Weight`: `31.50`
+   | :guilabel:`Delivery Product`: `DPD Relais`
+   | :guilabel:`Carrier`: `dpd_fr`
+   | :guilabel:`Weight range`: `1-20001 g`
+   | :guilabel:`Max length`: `100 cm`
+   | :guilabel:`Max width`: `0 cm`
+   | :guilabel:`Max height`: `0 cm`
+   | :guilabel:`Delivery attempts`: `2`
+   | :guilabel:`Delivery deadline`: `Best effort`
+   | :guilabel:`First mile`: `Pickup`
+   | :guilabel:`Other Functionalities`: `B2b` `B2c` `Direct contact only` `Tracked`
+   | :guilabel:`Form factor`: `Parcel`
+   | :guilabel:`Last mile`: `Service point`
 
-   :guilabel:`Countries`: `Austria` `Belgium` `Bosnia` `Herzegovina` `Bulgaria` `Croatia` `Czech`
-   `Republic` `Denmark` `Estonia` `Finland` `France` `Germany` `Greece` `Hungary` `Iceland`
-   `Ireland` `Italy` `Latvia` `Liechtenstein` `Lithuania` `Luxembourg` `Monaco` `Netherlands`
-   `Norway` `Poland` `Portugal` `Romania` `Serbia` `Slovakia` `Slovenia` `Spain` `Sweden`
-   `Switzerland`
+   :guilabel:`Service area`: `Domestic`
 
-   | :guilabel:`RETURN`
-   | :guilabel:`Return Shipping Product`: `DPD Return 0-20kg`
-   | :guilabel:`Return Carrier`: `DPD`
-   | :guilabel:`Return Minimum Weight`: `0.00`
-   | :guilabel:`Return Maximum Weight`: `20.00`
-   | :guilabel:`Return Countries`: `Belgium` `Netherlands`
+   | :guilabel:`Return Product`: `DPD Relais Return`
+   | :guilabel:`Carrier`: `dpd_fr`
+   | :guilabel:`Weight range`: `1-20001 g`
+   | :guilabel:`Max length`: `100 cm`
+   | :guilabel:`Max width`: `0 cm`
+   | :guilabel:`Max height`: `0 cm`
+   | :guilabel:`Delivery attempts`: `1`
+   | :guilabel:`Delivery deadline`: `Best effort`
+   | :guilabel:`First mile`: `Dropoff`
+   | :guilabel:`Other Functionalities`: `B2b` `B2c` `Direct contact only` `Returns` `Tracked`
+   | :guilabel:`Form factor`: `Parcel`
+   | :guilabel:`Insurance`: `1000`
+   | :guilabel:`Last mile`: `Home delivery`
 
-.. image:: sendcloud_shipping/sendcloud-example.png
-   :align: center
-   :alt: Example of shipping products configured in Odoo.
+   :guilabel:`Service area`: `Domestic`
+
+   .. image:: sendcloud_shipping/sendcloud-example.png
+      :alt: Example of shipping products configured in Odoo.
 
 .. tip::
    Sendcloud does not provide test keys when a company tests the sending of a package in Odoo. This
@@ -213,18 +258,18 @@ Shipping information
 To use Sendcloud to generate shipping labels, the following information **must** be filled out
 accurately and completely in Odoo:
 
-#. **Customer information**: when creating a quotation, ensure the selected :guilabel:`Customer` has
+#. **Customer information**: When creating a quotation, ensure the selected :guilabel:`Customer` has
    a valid phone number, email address, and shipping address.
 
    To verify, select the :guilabel:`Customer` field to open their contact page. Here, add their
    shipping address in the :guilabel:`Contact` field, along with their :guilabel:`Mobile` number and
    :guilabel:`Email` address.
 
-#. **Product weight**: ensure all products in an order have a specified :guilabel:`Weight` in the
+#. **Product weight**: Ensure all products in an order have a specified :guilabel:`Weight` in the
    :guilabel:`Inventory` tab of their product form. Refer to the :ref:`Product weight section
    <inventory/shipping_receiving/configure-weight>` of this article for detailed instructions.
 
-#. **Warehouse address**: ensure the warehouse name and address in Odoo match the :ref:`previously
+#. **Warehouse address**: Ensure the warehouse name and address in Odoo match the :ref:`previously
    defined warehouse <inventory/shipping_receiving/sendcloud-warehouse-config>` in the Sendcloud
    setup. For details on warehouse configuration in Odoo, refer to the :ref:`warehouse configuration
    section <inventory/shipping_receiving/configure-source-address>` of the third-party shipping
@@ -239,7 +284,9 @@ chatter, which include the following:
 
 #. :guilabel:`Shipping label(s)` depending on the number of packages.
 #. :guilabel:`Return label(s)` if the Sendcloud connector is configured for returns.
-#. :guilabel:`Customs document(s)` should the destination country require them.
+#. :guilabel:`Shipping labels` depending on the number of packages.
+#. :guilabel:`Return labels` if the Sendcloud connector is configured for returns.
+#. :guilabel:`Customs documents` should the destination country require them.
 
 Additionally, the tracking number is now available.
 
@@ -251,7 +298,8 @@ Shipping rules
 
 Optionally, create shipping rules to automatically generate shipping labels tailored to different
 product needs. For example, a shipping rule can be created for customers shipping expensive jewelry
-items to purchase insurance.
+product needs. For example, a shipping rule can be created to automatically purchase insurance for
+customers shipping expensive jewelry.
 
 .. note::
    Shipping rules do **not** affect :ref:`shipping rate calculations
@@ -263,13 +311,13 @@ Shipping Methods`, and select the intended `Sendcloud` shipping method.
 
 Under the :guilabel:`Sendcloud Configuration` tab, in the :guilabel:`OPTIONS` section, choose the
 kind of shipments the shipping rules apply to, via the :guilabel:`Use Sendcloud shipping rules`
-field.
+Under the *Sendcloud Configuration* tab, in the *Options* section, choose the kind of shipments the
+shipping rules apply to, via the :guilabel:`Use Sendcloud shipping rules` field.
 
 From here, choose either: :guilabel:`Shipping` to customers, :guilabel:`Returns` from customers, or
 :guilabel:`Both`.
 
 .. image:: sendcloud_shipping/enable-shipping-rules.png
-   :align: center
    :alt: Use Shipping Rules field.
 
 Then, in the Sendcloud website, navigate to :menuselection:`Settings --> Shipping rules`. Create a
@@ -304,7 +352,6 @@ navigating to :menuselection:`Settings --> Carriers --> My contracts`, and then 
 intended contract.
 
 .. image:: sendcloud_shipping/contracts.png
-   :align: center
    :alt: Navigate to the contracts section in Sendcloud.
 
 Under the :guilabel:`Contract prices` section, click :guilabel:`Download CSV` and fill out the
@@ -314,7 +361,6 @@ contract prices in the :guilabel:`price` column of the CSV file template.
    Ensure the CSV file includes the correct prices to avoid any inaccuracies.
 
 .. image:: sendcloud_shipping/price-csv.png
-   :align: center
    :alt: Show sample contract CSV from Sendcloud, highlighting the price column.
 
 :guilabel:`Upload` the completed CSV file to Sendcloud, then click :guilabel:`Save these prices`.
@@ -327,12 +373,11 @@ Measuring volumetric weight
 ---------------------------
 
 Many carriers have several measures for weight. There is the actual weight of the products in the
-parcel, and there is the *volumetric weight* (:dfn:`Volumetric weight is the volume that a package
-occupies when in transit. In other words it is the physical size of a package`).
+parcel, and there is the *volumetric weight*. Volumetric weight is the volume that a package
+occupies when in transit. In other words, it is the physical size of a package.
 
 .. tip::
-   Check to see if selected carrier(s) already have defined formulas to compute the volumetric
-   weight.
+   Check to see if selected carriers already have defined formulas to compute the volumetric weight.
 
 .. seealso::
    `Sendcloud: How to calculate & automate parcel volumetric weight <https://support.sendcloud.com/
@@ -345,3 +390,8 @@ First, verify that the product being shipped has a weight that is supported by t
 method. If this is set, then verify that the destination country (from the customer address) is
 supported by the carrier. The country of origin (warehouse address) should also be supported by the
 carrier.
+
+.. seealso::
+   `Magic Sheet - Connect Sendcloud [PDF]
+   <https://drive.google.com/drive/folders/1Cj_bbIn2gOA6HNDFEI8AhjUvcxe2wSMf>`_
+
