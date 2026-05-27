@@ -14,7 +14,7 @@ individuals, teams, or the whole company, and :ref:`approve time off requests
 
 Detailed :doc:`reports <time_off/reporting>` can be run to see how much time off (and what kinds of
 time off) are being used, :doc:`accrual plans <time_off/accrual_plans>` can be created, and
-:ref:`public holidays <time_off/public-holidays>` can be set.
+:doc:`public holidays <time_off/public_holidays>` can be set.
 
 .. note::
    Be advised, only users with specific access rights can see all aspects of the **Time Off** app.
@@ -35,77 +35,6 @@ Configuration
 In order to allocate time off to employees, and for employees to request and use their time off, the
 various :doc:`time off types must be configured <time_off/time_off_types>` first, then
 :doc:`allocated <time_off/allocations>` to employees (if allocation is required).
-
-.. _time_off/public-holidays:
-
-Public holidays
----------------
-
-Since holidays vary from country to country, or even city to city, there are no public holidays
-preconfigured in Odoo. To observe public or national holidays, and provide extra days off as
-holidays to employees, configure the observed public holidays in Odoo.
-
-It is important to configure public holidays in Odoo, so employees are aware of the days they have
-off, and do not request time off on days that are already set as a public holiday (non-working
-days).
-
-Additionally, all public holidays configured in the **Time Off** app are also reflected in any app
-that uses working schedules, such as **Calendar**, **Planning**, **Manufacturing**, and more.
-
-Due to Odoo's integration with other apps that use working schedules, it is considered best practice
-to ensure *all* public holidays are configured.
-
-Create public holidays
-~~~~~~~~~~~~~~~~~~~~~~
-
-To create a public holiday, navigate to :menuselection:`Time Off app --> Configuration --> Public
-Holidays`. All currently configured public holidays appear in a default list view.
-
-Click the :guilabel:`New` button, and a new line appears at the bottom of the list.
-
-Enter the following information on that new line:
-
-- :guilabel:`Name`: Enter the name of the holiday.
-- :guilabel:`Company`: If in a multi-company database, the current company populates this field by
-  default. It is **not** possible to edit this field.
-
-  .. note::
-     The :guilabel:`Company` field is hidden, by default. To view this field, click the
-     :icon:`oi-settings-adjust` :guilabel:`(settings adjusts)` icon in the top-right corner of the
-     list, to the far-right of the column titles, and activate the :guilabel:`Company` selection
-     from the drop-down menu that appears.
-
-- :guilabel:`Start Date`: Using the date and time picker, select the date and time the holiday
-  starts, then click :icon:`fa-check` :guilabel:`Apply`. By default, this field is configured for
-  the current date. The start time is set according to the start time for the company (according to
-  the :doc:`working schedules <payroll/working_schedules>`). If the user's computer is set to a
-  different time zone, the start time is adjusted accordingly, compared to the company's time zone.
-- :guilabel:`End Date`: Using the date and time picker, select the date and time the holiday ends,
-  then click :icon:`fa-check` :guilabel:`Apply`. By default, this field is configured for the
-  current date, and the time is set to the end time for the company (according to the :doc:`working
-  schedules <payroll/working_schedules>`). If the user's computer is set to a different time zone,
-  the start time is adjusted accordingly, compared to the company's time zone.
-
-  .. example::
-     A company located in San Francisco operates from 9:00 AM - 6:00 PM, with an eight hour work day
-     and one hour lunch break.
-
-     For a user in New York, with a computer time zone set to Eastern Standard Time, a created
-     public holiday displays a start time of 12:00 PM - 9:00 PM, accounting for the three hour time
-     zone difference.
-
-     Similarly, a user located in Los Angeles, with a computer time zone set to Pacific Standard
-     Time, sees a public holiday time as 9:00 AM - 6:00 PM.
-
-- :guilabel:`Working Hours`: If the holiday should only apply to employees who have a specific set
-  of working hours, select the working hours from the drop-down menu. If left blank, the holiday
-  applies to all employees.
-- :guilabel:`Work Entry Type`: If using the **Payroll** app, this field defines how the :doc:`work
-  entries <payroll/work_entries>` for the holiday appear. Select the work entry type from the
-  drop-down menu.
-
-.. image:: time_off/holidays.png
-   :alt: The list of public holidays in the configuration menu.
 
 Mandatory days
 --------------
@@ -195,6 +124,7 @@ the time off request in a modal, click the :guilabel:`View` button.
 
 .. seealso::
    - :doc:`time_off/time_off_types`
+   - :doc:`time_off/public_holidays`
    - :doc:`time_off/allocations`
    - :doc:`time_off/accrual_plans`
    - :doc:`time_off/request_time_off`
@@ -206,6 +136,7 @@ the time off request in a modal, click the :guilabel:`View` button.
    :titlesonly:
 
    time_off/time_off_types
+   time_off/public_holidays
    time_off/allocations
    time_off/accrual_plans
    time_off/request_time_off
