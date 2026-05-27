@@ -3,7 +3,7 @@ PDF reports
 ===========
 
 With Studio, you can :ref:`edit existing PDF reports <studio/pdf-reports/edit>` (e.g., invoices,
-quotations, etc.) or :ref:`create new ones <studio/pdf-reports/edit>`.
+quotations, etc.) or :ref:`create new ones <studio/pdf-reports/create>`.
 
 .. _studio/pdf-reports/default-layout:
 
