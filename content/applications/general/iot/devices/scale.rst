@@ -11,12 +11,11 @@ To connect a scale to the IoT system, use a USB cable. In some cases, you may ne
 adapter to complete the connection. If the scale is `compatible with an IoT system
 <https://www.odoo.com/page/iot-hardware>`_, no additional setup is required; the scale is
 automatically detected as soon as it is connected. If the scale is not detected, reboot the IoT box
-or :ref:`restart the Windows virtual IoT service <iot/windows_iot/restart>` and :ref:`update the
-scale's drivers <iot_updating_iot/handlers>`.
+or :ref:`restart the Windows virtual IoT service <iot/windows_iot/restart>`.
 
 .. note::
-   If the scale still does not function after updating the drivers, it might not be `compatible with
-   the Odoo IoT system <https://www.odoo.com/page/iot-hardware>`_. In such cases, a different scale
+   If the scale still does not function, it might not be `compatible with the Odoo IoT
+   system <https://www.odoo.com/page/iot-hardware>`_. In such cases, a different scale
    must be used.
 
 Once the scale is connected to the IoT system, :doc:`configure it in the POS settings

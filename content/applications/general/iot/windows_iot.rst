@@ -77,8 +77,7 @@ may need to manually install the appropriate drivers.
 .. tip::
    After connecting the devices to the computer, refresh the :ref:`IoT system's homepage
    <iot/windows-iot/homepage>` to verify that the device is listed. If the device does not appear,
-   :ref:`reload the handlers <iot_updating_iot/handlers>` from the :ref:`IoT system's homepage
-   <iot/windows-iot/homepage>`.
+   restart the IoT system from the :ref:`IoT system's homepage <iot/windows-iot/homepage>`.
 
 .. _iot/windows-iot/firewall:
 
