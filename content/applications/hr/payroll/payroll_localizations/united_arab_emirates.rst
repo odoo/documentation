@@ -186,6 +186,18 @@ divided by **12** to determine the monthly provision amount.
    \text{Monthly Leave Provision} = \frac{\text{Total Salary} \times \text{Number of Leave Days}}{30}
    \div 12
 
+Plane ticket allowance
+----------------------
+
+Employees can receive an airfare allowance based on the number of air tickets provided by the
+company per year. The allowance value per ticket is defined on the employee's contract under the
+*Payroll* tab, where the configuration is maintained for each employee.
+
+During payroll processing, the payroll officer can apply this allowance by opening the relevant
+payslip and specifying the number of air tickets under the *Salary Inputs* tab. The system then uses
+the defined per-ticket value from the employee profile to compute the total airfare allowance and
+include it in the payslip accordingly.
+
 Social insurance contributions
 ------------------------------
 
@@ -313,6 +325,17 @@ Manual deductions allows the user to add manual deductions to be applied to empl
 The amount to be deducted and the description of the deduction is to be set directly on the payslip
 manually as other inputs.
 
+Employer other costs
+--------------------
+
+Other than the employee's salary, there are additional employer costs that need to be accounted for.
+These include medical insurance, work permits, and employment visas for expatriate employees.
+
+These costs are defined as yearly values on the employee's record under the *Payroll* tab and are
+recognized on a monthly basis as other employer expenses.They are computed on the employee's
+payslip, but do not affect the net payable to the employee and do not appear on the payslip PDF
+shared with the employee.
+
 Net salary
 ----------
 
@@ -417,6 +440,26 @@ amount that was previously paid.
    If the employee and payroll officer agree to recover the advance over two consecutive cycles, the
    payroll officer can adjust the Advance Recovery amount on the first payslip. The remaining
    balance is automatically added to the following cycle.
+
+Emiratisation compliance report
+===============================
+
+The *Emiratisation Compliance Report* provides the ability to track the growth in the number of
+Emirati employees within the company to monitor Emiratisation compliance.
+
+The percentage is calculated based on Emirati employees who meet the skill level criteria defined by
+the Ministry of Human Resources and Emiratisation (MoHRE), determined by the employee's job position
+and its associated skill level. Emirati employees with a skill level of 5 or below are included in
+the calculation, while those with a skill level of 6 and above are excluded.
+
+For accurate results, the following steps must be followed:
+
+#. Ensure all Emirati employees have their nationality set to: United Arab Emirates.
+#. Ensure the job position is correctly set for all Emirati employees.
+#. Ensure the :abbr:`MoHRE (Ministry of Human Resources & Emiratisation)` skill level is correctly
+   configured on all job positions.
+#. Generate the Emiratisation Compliance Report by navigating to :menuselection:`Employees app -->
+   Reports --> Emiratisation Compliance Report`.
 
 .. _payroll/l10n_ae/wps-reports:
 
