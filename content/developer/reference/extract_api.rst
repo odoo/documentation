@@ -555,12 +555,9 @@ Integration Testing
 You can test your integration by using *integration_token* as ``account_token`` in the
 :ref:`/parse <extract_api/parse>` request.
 
-Using this token put you in test mode and allows you to simulate the entire flow without really
-parsing a document and without being billed one credit for each successful **document** parsing.
-
-The only technical differences in test mode is that the document you send is not parsed by the
-system and that the response you get from
-:ref:`/get_result <extract_api/get_result>` is a hard-coded one.
+Using this token allows you to parse documents without being billed. Please note that the
+integration token is subject to strict daily rate limits and is intended solely for testing
+purposes. If you exceed this limit, you must wait a full day for the limit to reset.
 
 A python implementation of the full flow for invoices can be found
 :download:`here <extract_api/implementation.py>`.
