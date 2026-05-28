@@ -6,6 +6,7 @@ Saudi Arabia
 .. |GOSI| replace:: :abbr:`GOSI (General Organization for Social Insurance)`
 .. |MHRSD| replace:: :abbr:`MHRSD (Ministry of Human Resources and Social Development)`
 .. |MoL| replace:: :abbr:`MoL (Ministry of Labor)`
+.. |EOS| replace:: :abbr:`EOS (End of Service Benefit)`
 
 The Saudi Arabia payroll localization covers salary computations for employees, including national
 and provincial regulations.
@@ -394,10 +395,81 @@ Payments can be :guilabel:`Grouped by Partner` if there is a partner associated 
 .. image:: saudi_arabia/paid.png
    :alt: Payslips with a status of paid.
 
-Close Payroll
+Close payroll
 -------------
 
 If there are no errors, payroll is completed for the pay period.
+
+End of employee collaboration
+=============================
+
+At the end of an employee's service with the company, they may be entitled to an *End of Service
+Benefit* (EOS) depending on:
+
+- The duration of their service.
+- The reason for the termination of the employment relationship.
+
+The reason for the termination can fall under one of the following categories:
+
+End of contract / retirement
+----------------------------
+
+If the employee's service duration is between one and five years, the employee is entitled to half
+of their latest monthly salary for each year of service.
+
+For each year beyond the fifth year, the employee is entitled to one full monthly salary per year.
+
+Resignation
+-----------
+
+If the employee resigns after completing between two and five years of service, they are entitled to
+one third of the |EOS| amount that would normally be granted in the case of an *End of Contract*.
+
+.. example::
+   If an employee worked for thee years and resigned, the |EOS| is first computed as if the
+   termination reason was *End of Contract*, then the employee receives one third of that amount.
+
+Fired
+-----
+
+If the employee is dismissed, they are not entitled to an |EOS| regardless of their service
+duration.
+
+Termination Without a valid legal reason
+----------------------------------------
+
+As defined under Article 77 of the Saudi Labor Law, if the employment contract does not define a
+compensation amount for unlawful termination by either party, the affected party is entitled to
+compensation as follows:
+
+- For indefinite-term contracts, the compensation is equal to half of the employee's monthly salary
+  for each year of service.
+- For fixed-term contracts, the compensation is equal to the employee's wage for the remaining
+  contract duration.
+
+In addition to the |EOS|, the employee is also entitled to receive compensation for any unused
+annual leave balance.
+
+The unused leave compensation is computed by multiplying the employees daily wage by the number of
+remaining unused days from the *Annual Leave* time off type.
+
+An |EOS| provision must also be recognized to account for the future liability payable to the
+employee at the end of their service with the company. Unlike the |EOS| benefit itself, the
+provision is accrued progressively and is included in the employee's payslips from the start of
+their contract.
+
+Similar to the |EOS| benefit, the provision is calculated differently depending on the employee's
+length of service:
+
+- For employees with less than 5 years of service: (Monthly wage / 12) × 0.5
+- For employees with more than 5 years of service: (Monthly wage / 12)
+
+The provision is always computed using the scenario that results in the highest expected expense,
+which is when the reason is `End of Contract`.
+
+In cases where the actual termination reason results in a lower entitlement, an adjustment line is
+automatically added on the paysliplines to account for the difference between the provisioned amount
+and the actual amount due.
 
 Employee loans and advances
 ===========================
@@ -553,6 +625,72 @@ specified on the :guilabel:`Advanced Recovery` line.
 Odoo automatically calculates the remainder of the advance, and adds an :guilabel:`Advanced
 Recovery` line for the balance in the subsequent payslip. If the employee cannot pay the second
 payment in full, the :guilabel:`Advanced Recovery` line can be edited in the following payslip.
+
+Late attendance tracking
+========================
+
+Monitoring late arrivals is an essential aspect of attendance tracking and workforce discipline.
+Within the attendance module, this can be handled by setting up the work schedules and check-in
+times for each day of the week. When employees check in after their expected start time, the record
+will be flagged for the HR responsible for approval, and once approved, it will take effect in the
+employee's next salary.
+
+Once the module **Saudi Arabia Payroll - Attendance** is installed, the HR manager needs to set the
+grace period from the payroll settings. This grace period defines the amount of time an employee is
+allowed to be late without triggering the late attendance rules.
+
+If the grace period is not set or it got exceeded, the system tracks how many minutes the employee
+was late, and the HR manager's approval will be required to confirm the lateness.
+
+Once confirmed, on the next payslip, the number of late hours is reflected on the payslip under the
+*Salary Inputs* tab, and a deduction is applied to the employee according to the following formula:
+
+.. math::
+   \frac{\text{Basic Wage} \div 30}{\text{Number of hours per day}} \times\text{Number of late hours}
+
+.. note::
+   If the employee is late for more than the grace period duration, then the grace period duration
+   itself will be considered as a part of the late time.
+
+GOSI Integration
+================
+
+The General Organization for Social Insurance (GOSI) is the government entity in Saudi Arabia
+responsible for implementing the Social Insurance Law, collecting contributions from employers, and
+providing insurance coverage and benefits to eligible contributors and their families.
+
+The insurance system is composed of three main branches: the Annuities Branch, the Occupational
+Hazards Branch, and the Unemployment Insurance (SANED) Branch.
+
+The integration with |GOSI| enables the automatic retrieval of contribution percentages for all
+three branches for both employees and employers. These percentages are then used to compute social
+insurance contributions in employees' payslips, ensuring accurate and compliant payroll
+calculations.
+
+To set up the integration, navigate to :menuselection:`Payroll --> Configuration --> Settings`.
+Under the *GOSI Integration* section, configure the following fields according to the information
+obtained from the |GOSI| portal:
+
+- Registration Number
+- API Key
+- Client ID
+- Client Secret
+- DPoP Key
+- API Mode
+
+.. important::
+   The DPoP must strictly follow the exact format provided by |GOSI|. Any missing space or character
+   will result in an error. After all details are filled in and saved, the :guilabel:`Test
+   Connection` button becomes available. Clicking it validates the provided credentials. Once the
+   integration is successful, ensure that the employee's Iqama number is correctly set on the
+   employee profile under the *Payroll* tab. When properly configured, the contribution percentages
+   are retrieved for each insurance branch. On the employee payslip, two salary rules are used to
+   calculate the total contributions for both the employee and the employer across all three
+   insurance branches.
+
+.. note::
+   Although both employee and employer contributions are computed on the payslip, only the
+   employee's contribution is displayed on the final PDF shared with the employee.
 
 .. _payroll/reports_saudi:
 
