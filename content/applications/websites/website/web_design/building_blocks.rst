@@ -125,8 +125,8 @@ You can display an Odoo contact form on another website using an iframe. To do s
 steps:
 
 #. **Prepare the Odoo form:** Create a contact form on a page in Odoo Website and remove the
-   :ref:`header design <website/header_footer/header-design>` and the :ref:`footer design
-   <website/header_footer/footer-design>`. Make sure only the contact form remains on the page.
+   :ref:`header and footer <website/header_footer/design>`. Make sure only the contact form
+   remains on the page.
 #. **Generate an embeddable code:** Copy the URL of the Odoo form page and paste it into an iframe
    generator, such as `La Digitale.dev <https://ladigitale.dev/digitools/generateur-iframe>`_ or
    `iFrame Generator <https://www.iframe-generator.com/>`_ . Adjust the width and height for proper

@@ -75,6 +75,8 @@ Button` section, and configure the following:
    - The default :guilabel:`Add to cart` button does not offer those options, but its label can be
      changed.
 
+.. _ecommerce/checkout/cart-button-header:
+
 .. tip::
    In the website editor, it is also possible to show or hide the :icon:`fa-shopping-cart`
    (:guilabel:`cart`) icon in the page's header. To do so, click the header, go to the

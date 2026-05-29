@@ -233,7 +233,7 @@ blocks in the :guilabel:`Style` tab.
 E-commerce-specific website footer
 ==================================
 
-The :ref:`website footer <website/header_footer/footer-design>` can also be configured to use
+The :ref:`website footer <website/header_footer/design>` can also be configured to use
 the e-commerce-specific template. Then, add the relevant :ref:`links <website/elements/links>`, and
 adapt the footer's text and layout as needed in the website editor. The :doc:`available payment
 methods </applications/finance/payment_providers>` are also shown in this footer. To adapt their
