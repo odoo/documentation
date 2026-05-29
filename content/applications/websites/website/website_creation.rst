@@ -61,11 +61,10 @@ Import an existing website
 The website import tool is a website scraper that searches for the specified website and analyzes
 it. It then uses custom AI models to rebuild it as an Odoo website. The extraction is performed page
 by page, preserving the original website's structure and content. Images, the sitemap, the
-:ref:`header <website/header_footer/header-design>`, and the :ref:`footer
-<website/header_footer/footer-design>` are also imported. Optionally, :doc:`product data
-<../ecommerce/configuration/products>` and :doc:`blog posts <../blog>` can also be extracted. The
-tool converts pages into standard Odoo :doc:`building blocks <web_design/building_blocks>`, making
-the imported website fully editable in Odoo.
+:doc:`header, and the footer <structure/header_footer>` are also imported. Optionally,
+:doc:`product data <../ecommerce/configuration/products>` can also be extracted. The tool converts
+pages into standard Odoo :doc:`building blocks <web_design/building_blocks>`, making the imported
+website fully editable in Odoo.
 
 .. note::
    The imported website is not an exact replica of the original. Manual adjustments to layout,
