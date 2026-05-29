@@ -25,44 +25,24 @@ This is accomplished by enabling the FedEx *shipping connector*, then configurin
 Enable shipping connector
 =========================
 
-To enable the shipping connector for FedEx, navigate to :menuselection:`Inventory app -->
-Configuration --> Settings`. Scroll down to the :guilabel:`Shipping Connectors` section, and tick
-the checkbox next to :guilabel:`FedEx Connector`.
-
-Finally, click :guilabel:`Save` to save the changes. After doing so, a :icon:`oi-arrow-right`
-:guilabel:`FedEx Shipping Methods` button appears below :guilabel:`FedEx Connector`.
-
-.. image:: fedex/fsm-button.png
-   :alt: The FedEx Shipping Methods button below the FedEx Connector.
+To enable the shipping connector for FedEx, open the :menuselection:`Apps` app. Search for `FedEx`.
+:guilabel:`Activate` the shipping connector.
 
 Configure delivery method
 =========================
 
-Once the FedEx shipping connector is enabled, it is necessary to configure at least one delivery
-method. After doing so, the delivery method can be included in sales orders (SOs), and used to
-compute delivery costs, and print delivery labels.
+After the FedEx shipping connector is enabled, it is necessary to configure at least one delivery
+method. After doing so, the delivery method can be included in sales orders (SOs) and used to
+compute delivery costs and print delivery labels.
 
-To enable a delivery method, navigate to :menuselection:`Inventory app --> Configuration -->
-Settings`, and click the :guilabel:`FedEx Shipping Methods` button below the :guilabel:`FedEx
-Connector` checkbox. Doing so opens a page that shows all existing FedEx delivery methods.
-
-.. note::
-   To see all delivery methods for every shipper with a connector enabled, navigate to
-   :menuselection:`Inventory app --> Configuration --> Delivery Methods`.
+To see all delivery methods for every shipper with a connector enabled, navigate to
+:menuselection:`Inventory app --> Configuration --> Delivery Methods`.
 
 Select a delivery method to open its form. Alternatively, click :guilabel:`New` to open a blank
 form, and configure a new delivery method.
 
 .. image:: fedex/fedex-form.png
    :alt: The form for a FedEx delivery method.
-
-.. important::
-   Enabling the FedEx shipping connector automatically creates two default shipping methods:
-   :guilabel:`FedEx US` and :guilabel:`FedEx International`. Each of these methods are
-   pre-configured with test credentials, allowing them to be used for testing purposes.
-
-   Before the delivery method can be used to create actual shipments, the test credentials must be
-   replaced with credentials from a valid FedEx account.
 
 General information
 -------------------
@@ -74,63 +54,23 @@ is not already selected.
 The rest of the fields in this section are general to all delivery providers. For details on how to
 fill them out, see the documentation on :doc:`third-party shippers <third_party_shipper>`.
 
-Fedex Configuration tab
+FedEx Configuration tab
 -----------------------
 
-The options in the :guilabel:`Fedex Configuration` tab of a FedEx delivery method form are used to
-connect the method to a FedEx account, and configure the delivery details associated with the method
-(drop-off type, package type, etc.).
+The options in the *Fedex Configuration* tab of a FedEx shipping method form are used to connect the
+method to a FedEx account and configure the delivery details associated with the method (drop-off
+type, package type, etc.).
 
-A FedEx developer account is required to obtain the information needed to fill out the fields in
+A FedEx business account is required to obtain the information needed to fill out the fields in
 this tab. To create a new account, navigate to FedEx's `Open Account
 <https://www.fedex.com/en-us/open-account.html>`_ page, click on :guilabel:`Create Account`, and
 follow the instructions.
 
-Create API Project
-~~~~~~~~~~~~~~~~~~
-
-After creating a `developer account <https://developer.fedex.com/api/en-us/home.html>`_, navigate to
-the :guilabel:`My Projects` tab, and click :guilabel:`CREATE API PROJECT`.
-
-On the :guilabel:`Tell us about your API needs` popup, select `Ships with FedEX and needs to
-integrate FedEx APIs into their system` in the :guilabel:`I work for a company that:` drop-down.
-
-.. image:: fedex/fed-ex-api-needs.png
-   :alt: Pop-up on FedEx website to select API needs.
-
-Next, when prompted to `Select API(s) for your project`, make sure to enable the following APIs:
-
- - :guilabel:`Ship, Rate & Other APIs`
- - :guilabel:`Address Validation API`
- - :guilabel:`Rates and Transit Times API`
- - :guilabel:`Ship API`
- - :guilabel:`Trade Documents Upload API`
-
-.. image:: fedex/select-apis.png
-   :alt: Page on FedEx website where users select the APIs needed for project.
-
-Enter a :guilabel:`Project name`, then select any countries where packages will be shipped to, or
-delivered from.
-
-.. image:: fedex/country-selector.png
-   :alt: Page on FedEx website where users select the countries they ship to and from.
-
-To move the project to production, click the :guilabel:`Production key` tab. From there, link a
-:guilabel:`Shipping Account`. Copy the `API Key`, `Secret Key`, and `Account` number, then paste
-them into the appropriate fields on the :guilabel:`Delivery Methods` form.
-
-Certification process
-~~~~~~~~~~~~~~~~~~~~~
-
-To enable the creation of FedEx shipping labels, the API must be certified. On the sidebar menu in
-the FedEx `developer portal <https://developer.fedex.com/api/en-us/home.html>`_, click
-:guilabel:`API Certification`, and follow the required instructions.
-
-.. note::
-   These certification often require reaching out to the FedEx support team via email.
-
-Account Number fields
-~~~~~~~~~~~~~~~~~~~~~
+Then, register the FedEx account in the database. Click the :guilabel:`Register FedEx Account`
+button. The *FedEx Account Registration* window opens. Accept the end user license agreement (EULA)
+by selecting the :guilabel:`I acknowledge the reading of the FedEx End User License Agreement` and
+:guilabel:`I accept the terms of FedEx EULA to start shipping` checkboxes, then click
+:guilabel:`Accept and Continue`.
 
 An *account number* is the unique number assigned to each FedEx account.
 
@@ -141,43 +81,63 @@ from the drop-down menu.
 On the profile page, click :guilabel:`Account Management` on the left side of the screen. The
 account number is displayed on this screen.
 
-Once the password and account number are determined, enter them in the :guilabel:`Password` and
-:guilabel:`Account Number` fields on the :guilabel:`Fedex Configuration` tab of the delivery method
-form.
+In the *FedEx Account Registration - Shipper Information* window, enter the :guilabel:`FedEx Account
+Number`. Enter the name of the company in the :guilabel:`Customer Name` field and provide the
+business address. If products are being shipped from a residential address, select the
+:guilabel:`Residential Address` checkbox. Click the :guilabel:`Validate Address` button.
 
-Delivery details
-~~~~~~~~~~~~~~~~
+Next, choose a :guilabel:`Validation Option` to verify access to the account. This is a form of
+multi-factor authentication (MFA). Two options are available:
 
-The main section of the :guilabel:`Fedex Configuration` tab includes a number of additional fields
-used provide information about the delivery method:
+- :guilabel:`Invoice Validation`: Use information from a recent invoice (within the past 90 days) to
+  validate the account information.
+- :guilabel:`Secure Code Validation`: Receive a PIN via :guilabel:`Email`, :guilabel:`SMS`, or
+  :guilabel:`Voice Call`.
 
-- :guilabel:`Fedex Service Type`: The FedEx service used to ship a package.
-- :guilabel:`Fedex Drop-Off Type`: The method for getting a package into FedEx's possession.
-- :guilabel:`Fedex Package Type`: The type of package used for the delivery method.
-- :guilabel:`Package Weight Unit`: The unit of measure used to weigh packages.
-- :guilabel:`Package Length Unit`: The unit of measure used to determine the dimensions of packages.
-- :guilabel:`Label Type`: The type of delivery label used for packages.
-- :guilabel:`Label Format`: The file format used by Odoo to generate delivery labels.
-- :guilabel:`Commercial Invoice Type`: The dimensions and type of the paper used to print invoices.
+If successful, the *FedEx Account Registration - Success* window displays, and the account is
+available for all companies. To change this setting, click :guilabel:`Open FedEx Account Form` and
+modify the company settings.
+
+In the *FedEx Configuration* tab, provide more information about the delivery method:
+
+- :guilabel:`FedEx Service Type`: Select the FedEx service used to ship a package.
+- :guilabel:`FedEx Drop-Off Type`: Select the method for getting a package into FedEx's possession.
+- :guilabel:`FedEx Package Type`: Select the type of package used for the shipping method.
+- :guilabel:`Package Weight Unit`: Select the unit of measure used to weigh packages.
+- :guilabel:`Package Length Unit`: This field changes based on what is selected in the
+  :guilabel:`Package Weight Unit` field. If :guilabel:`Pounds` is selected, the length unit updates
+  to :guilabel:`Inches`. If :guilabel:`Kilograms` is selected, the length unit updates to
+  :guilabel:`Centimeters`.
+- :guilabel:`Label Type`: Select the type of shipping label used for packages.
+- :guilabel:`Label Format`: Select the file format used by Odoo to generate shipping labels.
 
 .. important::
-   The options that should be selected on the :guilabel:`Fedex Configuration` tab of a delivery
-   method depend on the negotiated delivery services of the associated FedEx account. To confirm the
-   available services for a FedEx account, visit the *Account Management* page after logging in to
-   the FedEx website, or speak with a customer service representative.
+   The options that should be selected on the *FedEx Configuration* tab of a delivery method depend
+   on the negotiated shipping services of the associated FedEx account. To confirm the available
+   services for a FedEx account, visit the *Account Management* page after logging in to the FedEx
+   website or speak with a customer service representative.
 
 Options section
 ~~~~~~~~~~~~~~~
 
-The :guilabel:`Options` section of the :guilabel:`Fedex Configuration` tab provides a few additional
-options to further configure the delivery method:
+The :guilabel:`Options` section of the *FedEx Configuration* tab provides a few additional options
+to further configure the delivery method:
 
-- :guilabel:`Saturday Delivery`: Tick the checkbox to allow packages shipped with the delivery
-  method to be delivered on Saturdays.
-- :guilabel:`Generate Return Label`: Tick the checkbox to automatically generate a return label upon
-  validation of a delivery order.
+- :guilabel:`Generate Return Label`: Select this checkbox to automatically generate a label when a
+  delivery is validated.
+- :guilabel:`Email Notifications`: Select this checkbox to send updates via email to customers, if
+  an email address is configured for the customer.
 - :guilabel:`Duties paid by`: Use the drop-down menu to select whether duty charges should be paid
   by the :guilabel:`Sender` or :guilabel:`Recipient`.
+- :guilabel:`Residential delivery`: Specify when to mark a recipient's address as residential.
+- :guilabel:`Generate invoice`: Specify whether an invoice should be generated as a PDF or sent as
+  an electronic trade document. This is typically required when commercial invoices are needed for
+  international shipments.
+
+Declared Value section
+~~~~~~~~~~~~~~~~~~~~~~
+
+Specify the :guilabel:`Declared Value Percentage` for insurance purposes.
 
 Activate delivery method
 ========================
