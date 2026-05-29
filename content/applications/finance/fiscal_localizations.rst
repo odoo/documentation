@@ -119,7 +119,7 @@ Fiscal localization modules are available for the countries listed below.
 - Panama
 - :doc:`Peru <fiscal_localizations/peru>`
 - :doc:`Philippines <fiscal_localizations/philippines>`
-- Poland
+- :doc:`Poland <fiscal_localizations/poland>`
 - Portugal
 - Qatar
 - :doc:`Romania <fiscal_localizations/romania>`
@@ -182,6 +182,7 @@ Fiscal localization modules are available for the countries listed below.
    fiscal_localizations/oman
    fiscal_localizations/peru
    fiscal_localizations/philippines
+   fiscal_localizations/poland
    fiscal_localizations/romania
    fiscal_localizations/saudi_arabia
    fiscal_localizations/singapore
