@@ -6,7 +6,7 @@ Users in Odoo can utilize several keyboard shortcuts to navigate through modules
 and manage data.
 
 .. tip::
-   Hold :kbd:`Ctrl` to view the keyboard shortcuts assigned to each element on the interface.
+   Hold :kbd:`Ctrl` (macOS) or :kbd:`Alt` (Windows / Linux) to view the keyboard shortcuts assigned to each element on the interface.
 
    .. image:: keyboard_shortcuts/menu-shortcuts.png
       :align: center
