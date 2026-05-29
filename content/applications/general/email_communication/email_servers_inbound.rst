@@ -295,32 +295,72 @@ specified model. Each incoming mail server can create records in a different mod
 
 .. _email-inbound-custom-domain-mx:
 
-MX record
----------
+CNAME record
+------------
+**This setup requires advanced technical knowledge.**
 
-A third option is to create a MX record in your DNS zone which specifies the mail server managing
-emails sent to your domain. **Advanced technical knowledge is required.**
+To use a dedicated subdomain with Odoo, create a CNAME record in your DNS zone.
+This tells your DNS provider to route that subdomain to your Odoo database instead of pointing it
+to a separate mail server.
+
+The CNAME should point the subdomain to your database root domain so that incoming mail for that
+subdomain is routed to Odoo.
 
 .. important::
-   This configuration only works with a subdomain on the Odoo Online or Odoo.sh infrastructure
-   (e.g., `@mail.mydomain.com`)
+   For Odoo Online and Odoo.sh, CNAME-based routing is only supported when using a dedicated
+   subdomain. It cannot be configured on your root domain (e.g., `mydomain.com`).
 
-Below are presented some specifications depending on the hosting type:
+For example, you can create `subdomain.mydomain.com` and use it as the alias domain for the
+database.
 
 .. tabs::
 
    .. group-tab:: Odoo Online
 
-      The custom subdomain must be added to your :doc:`Odoo Portal
-      <../../websites/website/configuration/domain_names>`.
+      - Configure your DNS records
+         - If your domain is hosted with a third-party registrar (for example, GoDaddy, Namecheap, Cloudflare), sign in to the registrar and open the DNS management zone for your domain.
+         - If Odoo manages your DNS:
+            - Open the `database manager <https://www.odoo.com/my/databases>`_.
+            - Click the :icon:`fa-gear` (:guilabel:`gear`) button beside the database and choose :icon:`fa-globe` :guilabel:`Domain Names`.
+            - Click :guilabel:`DNS`, then :guilabel:`Add DNS record`.
+
+      - Create a CNAME record
+         - **Name / Host:** the subdomain you want to use (for example, `mail`).
+         - **Content / Target:** your database root domain with a trailing dot (for example, `mycompany.com.`).
+
+      - Connect the subdomain in Odoo
+         - In the `database manager <https://www.odoo.com/my/databases>`_, click the :icon:`fa-gear` (:guilabel:`gear`) button for your database and select :icon:`fa-globe` :guilabel:`Domain Names`.
+         - Click :guilabel:`Use my own domain`, enter the full subdomain (for example, `mail.mycompany.com`), then click :guilabel:`Verify`. When verification succeeds, click :guilabel:`I confirm, it's done`.
+
+      - Add the alias domain inside your database
+         - Log in to the database and open the :guilabel:`Settings` app.
+         - In the :guilabel:`Alias Domain` field enter the subdomain you configured (for example, `mail.mycompany.com`).
+         - Click :guilabel:`Create`, then :guilabel:`Save`.
+
+         .. image:: email_servers_inbound/alias-domain.png
+            :alt: Adding an alias domain in the settings.
 
    .. group-tab:: Odoo.sh
 
-      The custom subdomain must be added to the :doc:`settings of the project
-      <../../../administration/odoo_sh/getting_started/settings>`:
+      - Configure your DNS provider
+         - Log in to your domain registrar or DNS hosting provider.
+         - Create a new **CNAME** record for your desired subdomain (e.g., `mail`).
 
-      .. image:: email_servers_inbound/custom-subdomain-sh.png
-         :alt: Adding a custom subdomain for mail to Odoo.sh project settings.
+      - Add the subdomain to Odoo.sh settings
+         - Log in to the Odoo.sh platform and open your project.
+         - Select the production branch, go to the :guilabel:`Settings` tab, and locate the **Custom Domains** section.
+         - Enter the custom subdomain (e.g., `mail.mycompany.com`) and click :guilabel:`Add domain`.
+
+         .. image:: email_servers_inbound/custom-subdomain-sh.png
+            :alt: Adding a custom subdomain for mail to Odoo.sh project settings.
+      - Finally, add the alias domain to the database   
+         - Go to your database and open :guilabel:`Settings`.
+         - Under the :guilabel:`Alias Domain` field, enter the alias domain, for example, `mail.mycompany.com`.
+         - Click :guilabel:`Create`, and then :guilabel:`Save`.
+
+         .. image:: email_servers_inbound/alias-domain.png
+            :alt: Adding an alias domain in the settings.
+
 
 .. _email-inbound-loops:
 
