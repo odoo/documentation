@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-22 17:35+0000\n"
+"POT-Creation-Date: 2026-05-29 17:30+0000\n"
 "PO-Revision-Date: 2026-04-14 14:56+0000\n"
 "Last-Translator: Bren Driesen <brdri@odoo.com>\n"
 "Language-Team: Dutch <https://translate.odoo.com/projects/odoo-19-doc/hr/nl/"
@@ -4942,7 +4942,6 @@ msgstr ""
 #: ../../content/applications/hr/fleet/accidents.rst:48
 #: ../../content/applications/hr/frontdesk.rst:35
 #: ../../content/applications/hr/lunch/products.rst:12
-#: ../../content/applications/hr/time_off.rst:58
 msgid "Enter the following information on the form:"
 msgstr ""
 
@@ -7664,7 +7663,6 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/hr/employees/offboarding.rst:178
-#: ../../content/applications/hr/time_off.rst:115
 msgid "Fill out the following fields on the form:"
 msgstr ""
 
@@ -16194,7 +16192,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:428
 #: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:862
 #: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:1365
-#: ../../content/applications/hr/time_off.rst:335
+#: ../../content/applications/hr/time_off.rst:154
 msgid "Overview"
 msgstr "Overzicht"
 
@@ -39158,8 +39156,8 @@ msgstr ""
 #: ../../content/applications/hr/time_off.rst:15
 msgid ""
 "Detailed :doc:`reports <time_off/reporting>` can be run to see how much time "
-"off (and what kinds of time off) are being used, :ref:`accrual plans "
-"<time_off/accrual-plans>` can be created, and :ref:`public holidays "
+"off (and what kinds of time off) are being used, :doc:`accrual plans "
+"<time_off/accrual_plans>` can be created, and :ref:`public holidays "
 "<time_off/public-holidays>` can be set."
 msgstr ""
 
@@ -39189,369 +39187,16 @@ msgstr ""
 #: ../../content/applications/hr/time_off.rst:35
 msgid ""
 "In order to allocate time off to employees, and for employees to request and "
-"use their time off, the various time off types must be configured first, "
-"then allocated to employees (if allocation is required)."
+"use their time off, the various :doc:`time off types must be configured "
+"<time_off/time_off_types>` first, then :doc:`allocated <time_off/"
+"allocations>` to employees (if allocation is required)."
 msgstr ""
 
 #: ../../content/applications/hr/time_off.rst:42
-msgid "Accrual plans"
-msgstr "Opbouwplannen"
-
-#: ../../content/applications/hr/time_off.rst:44
-msgid ""
-"Some time off is earned through an accrual plan, meaning that for every "
-"specified amount of time an employee works (hour, day, week, etc), they earn "
-"or *accrue* a specified amount of time off."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:48
-msgid ""
-"If an employee accrues a vacation day for every week they work, they would "
-"earn 0.2 vacation days for each hour they work. At the end of a forty hour "
-"work week, they would earn one whole vacation day (8 hours)."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:53
-msgid "Create accrual plan"
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:55
-msgid ""
-"To create a new accrual plan, navigate to :menuselection:`Time Off app --> "
-"Configuration --> Accrual Plans`. Then, click the :guilabel:`New` button, "
-"which reveals a blank accrual plan form."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:60
-msgid ":guilabel:`Name`: Enter the accrual plan name."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:61
-msgid ""
-":guilabel:`Accrued Gain Time`: Select when the employee begins to accrue "
-"time off, either :guilabel:`At the start of the accrual period` "
-"or :guilabel:`At the end of the accrual period`."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:63
-msgid ""
-":guilabel:`Carry-Over Time`: Select when the employee received previously "
-"earned time. The options are:"
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:66
-msgid ""
-":guilabel:`At the start of the year`: Select this if the accrual rolls over "
-"on January 1 of the upcoming year."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:68
-msgid ""
-":guilabel:`At the allocation date`: Select this if the accrual rolls over as "
-"soon as time is allocated to the employee."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:70
-msgid ""
-":guilabel:`Other`: Select this option if neither of the other two options "
-"are applicable. When selected, a :guilabel:`Carry-Over Date` field appears. "
-"Select the date using the two drop-down menus, one for the day and one for "
-"the month."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:74
-msgid ""
-":guilabel:`Based on worked time`: Enable this option if time off accrual is "
-"determined by the employee's worked hours. Days **not** considered as worked "
-"time do **not** contribute to the accrual plan in Odoo."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:79
-msgid ""
-"An employee is granted time off from an accrual plan configured to accrue "
-"one day of vacation for every five days worked. The accrual plan is based on "
-"the employee's worked time (the :guilabel:`Based on worked time` checkbox is "
-"ticked), which means they **only** earn vacation time for the five weekdays "
-"they work, *not* the entire seven day week period."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:84
-msgid ""
-"The employee works standard 40-hour weeks. According to the accrual plan, "
-"they should earn four vacation days per month."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:87
-msgid ""
-"The employee takes five days off using a :doc:`time off type <time_off/"
-"time_off_types>` with the :guilabel:`Kind of Time Off` set as "
-"an :guilabel:`Absence`. Because the plan grants vacation only for worked "
-"time, those five days do not count toward accrual."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:91
-msgid ""
-"As a result, the employee accrues only three vacation days that month "
-"instead of four."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:93
-msgid ""
-":guilabel:`Milestone Transition`: This field is **only** visible after a "
-"minimum of two :ref:`rules <time_off/rules>` have been configured on the "
-"accrual plan. This selection determines when employees move up to a new "
-"milestone. If they qualify to change milestones in the middle of a pay "
-"period, decide whether the employee changes "
-"milestones :guilabel:`Immediately` or :guilabel:`After this accrual's "
-"period` (after the current pay period)."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:98
-msgid ""
-":guilabel:`Company`: This field **only** appears in a multi-company "
-"database. Using the drop-down menu, select the company the accrual plan "
-"applies to. If left blank, the accrual plan is available for all companies."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:None
-msgid "An accrual plan form with all the entries filled out."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:108
-msgid "Rules"
-msgstr "Regels"
-
-#: ../../content/applications/hr/time_off.rst:110
-msgid ""
-"Rules must be created in order for employees to accrue time off from the "
-"accrual plan."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:112
-msgid ""
-"To create a new rule, click the :guilabel:`New Milestone` button in the "
-"gray :guilabel:`Rules` section, and a :guilabel:`Create Milestone` modal "
-"form appears."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:119
-msgid ""
-":guilabel:`Employee accrue`: Select the parameters for earned time off in "
-"this section."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:121
-msgid ""
-"First, select either :guilabel:`Days` or :guilabel:`Hours` for the increment "
-"of accrued time using the drop-down menu."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:124
-msgid ""
-"Next, enter the numerical amount of the selected parameter that is accrued. "
-"The numerical format is `X.XXXX`, so that partial days or hours can also be "
-"configured."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:127
-msgid ""
-"Last, select how often the time is accrued using the drop-down menu. The "
-"default options "
-"are :guilabel:`Hourly`, :guilabel:`Daily`, :guilabel:`Weekly`, :guilabel:`Twice "
-"a month`, :guilabel:`Monthly`, :guilabel:`Twice a year`, "
-"and :guilabel:`Yearly`."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:131
-msgid ""
-"Depending on which option is selected, additional fields may appear. For "
-"example, if :guilabel:`Twice a month` is selected, two additional fields "
-"appear, to specify the two days of each month the milestone occurs."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:134
-msgid ""
-":guilabel:`Cap accrued time`: If there is a maximum amount of time the "
-"employee can accrue with this plan, enable this option."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:137
-msgid ""
-"When enabled, two additional fields appear to the right of the checkbox. The "
-"second field is populated with either :guilabel:`Days` or :guilabel:`Hours`, "
-"matching the selection made in the :ref:`Employee Accrue <time_off/accrue>` "
-"section."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:141
-msgid ""
-"Enter a numerical value in the first field to specify the maximum amount of "
-"time that can be accrued, in the specified increments."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:143
-msgid ""
-":guilabel:`Start Accruing`: Enter the number and value of the time period "
-"that must pass before the employee starts to accumulate time off."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:146
-msgid ""
-"Use the first field to enter a numerical value, then set the second field to "
-"the desired time increment (either :guilabel:`Days`, :guilabel:`Months`, "
-"or :guilabel:`Years`)."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:148
-msgid ""
-":guilabel:`Carry over`: select how any unused time off is handled. The "
-"options are either:"
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:150
-msgid ":guilabel:`None. Accrued time reset to 0`: Any unused time off is lost."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:151
-msgid ""
-":guilabel:`All accrued time carried over`: All unused time off is rolled "
-"over to the next calendar year."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:153
-msgid ""
-":guilabel:`Carry over with a maximum`: Unused time off is rolled over to the "
-"next calendar year, but there is a cap. An :guilabel:`Up to` field appears "
-"if this is selected."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:156
-msgid ""
-"Enter the maximum number of :guilabel:`Hours` or :guilabel:`Days` that can "
-"roll over to the following year. The presented time increment is determined "
-"by how the :ref:`Employee Accrue <time_off/accrue>` section is configured."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:160
-msgid "Any time off beyond this parameter is lost."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:163
-msgid ""
-"If the :guilabel:`Carry over` field is set to :guilabel:`None. Accrued time "
-"reset to 0`, that rule *overrides* the :guilabel:`Carry-Over Time` set on "
-"the accrual plan."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:166
-msgid ""
-"If a company creates an accrual plan, granting employees time "
-"off :guilabel:`At the start of the accrual period` (i.e., the beginning of "
-"the year), and sets the :guilabel:`Carry-Over Time` on the *accrual plan* "
-"to :guilabel:`At the start of the year`, it allows unused vacation time to "
-"rollover to the following year."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:171
-msgid ""
-"Then, the company adds rules to the accrual plan, allocating five days of "
-"vacation, annually, on the first of the year (one week of vacation allocated "
-"on January 1st)."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:174
-msgid ""
-"If the :guilabel:`Carry over` field is set to :guilabel:`None. Accrual time "
-"reset to 0` on the :guilabel:`Create Milestone` pop-up for, any unused "
-"vacation time *does not* carry over, even though on the :guilabel:`Accrual "
-"Plan` form, the :guilabel:`Carry-Over Time` is set to :guilabel:`At the "
-"start of the year`."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:179
-msgid ""
-"The carry over set on the *rule* takes precedence over the carry over set on "
-"the *accrual plan form*."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:182
-msgid ""
-":guilabel:`Milestone cap`: Tick this checkbox to set a limit on the total "
-"amount of time that can be accrued every calendar year. Enter the total "
-"maximum number of :guilabel:`Hours` or :guilabel:`Days` the employee can "
-"accrue during a year. The presented time increment is determined by how "
-"the :ref:`Employee Accrue <time_off/accrue>`  section is configured."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:187
-msgid ""
-"If the :guilabel:`Carry over` field is set to :guilabel:`None. Accrued time "
-"reset to 0`, the :guilabel:`Milestone cap` field does not appear."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:189
-msgid ""
-":guilabel:`Carry Over Validity`: Tick this checkbox to set a time-limit on "
-"how long the employee has to use any rolled over time off. First, set the "
-"second field to the desired time-period using the drop-down menu, "
-"either :guilabel:`Days` or :guilabel:`Months`."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:193
-msgid ""
-"Next, enter the maximum number of :guilabel:`Days` or :guilabel:`Months` the "
-"employee has to use their rolled over time off. After that time period "
-"passes, any unused rolled over time will expire."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:197
-msgid ""
-"If the :guilabel:`Carry over` field is set to :guilabel:`None. Accrued time "
-"reset to 0`, the :guilabel:`Carry Over Validity` field does not appear."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:200
-msgid ""
-"Once the form is completed, click :guilabel:`Save & Close` to save "
-"the :guilabel:`Create Milestone` form, and close the modal, or "
-"click :guilabel:`Save & New` to save the form and create another milestone. "
-"Add as many milestones as desired."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:205
-msgid ""
-"This milestone form is configured so the employee earns five days a year. "
-"They start to earn this time yearly, on January 1st."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:208
-msgid ""
-"The employee can never accrue more than 120 days of time off with this "
-"accrual plan. Anytime they have 120 days banked, they will stop accruing "
-"more time off."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:211
-msgid ""
-"Additionally, they can roll over up to 100 days of time off to the next "
-"year, and they have three months to use that rollover time."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:214
-msgid ""
-"Note that due to the :guilabel:`Capped accrued time` of 120 days, the "
-"employee cannot carry over any time off that exceeds 120 days in total."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:0
-msgid "A milestone form with all the entries filled out."
-msgstr ""
-
-#: ../../content/applications/hr/time_off.rst:223
 msgid "Public holidays"
 msgstr "Feestdagen"
 
-#: ../../content/applications/hr/time_off.rst:225
+#: ../../content/applications/hr/time_off.rst:44
 msgid ""
 "Since holidays vary from country to country, or even city to city, there are "
 "no public holidays preconfigured in Odoo. To observe public or national "
@@ -39559,59 +39204,59 @@ msgid ""
 "observed public holidays in Odoo."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:229
+#: ../../content/applications/hr/time_off.rst:48
 msgid ""
 "It is important to configure public holidays in Odoo, so employees are aware "
 "of the days they have off, and do not request time off on days that are "
 "already set as a public holiday (non-working days)."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:233
+#: ../../content/applications/hr/time_off.rst:52
 msgid ""
 "Additionally, all public holidays configured in the **Time Off** app are "
 "also reflected in any app that uses working schedules, such as **Calendar**, "
 "**Planning**, **Manufacturing**, and more."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:236
+#: ../../content/applications/hr/time_off.rst:55
 msgid ""
 "Due to Odoo's integration with other apps that use working schedules, it is "
 "considered best practice to ensure *all* public holidays are configured."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:240
+#: ../../content/applications/hr/time_off.rst:59
 msgid "Create public holidays"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:242
+#: ../../content/applications/hr/time_off.rst:61
 msgid ""
 "To create a public holiday, navigate to :menuselection:`Time Off app --> "
 "Configuration --> Public Holidays`. All currently configured public holidays "
 "appear in a default list view."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:245
+#: ../../content/applications/hr/time_off.rst:64
 msgid ""
 "Click the :guilabel:`New` button, and a new line appears at the bottom of "
 "the list."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:247
-#: ../../content/applications/hr/time_off.rst:309
+#: ../../content/applications/hr/time_off.rst:66
+#: ../../content/applications/hr/time_off.rst:128
 msgid "Enter the following information on that new line:"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:249
+#: ../../content/applications/hr/time_off.rst:68
 msgid ":guilabel:`Name`: Enter the name of the holiday."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:250
+#: ../../content/applications/hr/time_off.rst:69
 msgid ""
 ":guilabel:`Company`: If in a multi-company database, the current company "
 "populates this field by default. It is **not** possible to edit this field."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:254
+#: ../../content/applications/hr/time_off.rst:73
 msgid ""
 "The :guilabel:`Company` field is hidden, by default. To view this field, "
 "click the :icon:`oi-settings-adjust` :guilabel:`(settings adjusts)` icon in "
@@ -39620,7 +39265,7 @@ msgid ""
 "appears."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:259
+#: ../../content/applications/hr/time_off.rst:78
 msgid ""
 ":guilabel:`Start Date`: Using the date and time picker, select the date and "
 "time the holiday starts, then click :icon:`fa-check` :guilabel:`Apply`. By "
@@ -39631,7 +39276,7 @@ msgid ""
 "accordingly, compared to the company's time zone."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:264
+#: ../../content/applications/hr/time_off.rst:83
 msgid ""
 ":guilabel:`End Date`: Using the date and time picker, select the date and "
 "time the holiday ends, then click :icon:`fa-check` :guilabel:`Apply`. By "
@@ -39642,33 +39287,33 @@ msgid ""
 "time zone."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:271
+#: ../../content/applications/hr/time_off.rst:90
 msgid ""
 "A company located in San Francisco operates from 9:00 AM - 6:00 PM, with an "
 "eight hour work day and one hour lunch break."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:274
+#: ../../content/applications/hr/time_off.rst:93
 msgid ""
 "For a user in New York, with a computer time zone set to Eastern Standard "
 "Time, a created public holiday displays a start time of 12:00 PM - 9:00 PM, "
 "accounting for the three hour time zone difference."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:278
+#: ../../content/applications/hr/time_off.rst:97
 msgid ""
 "Similarly, a user located in Los Angeles, with a computer time zone set to "
 "Pacific Standard Time, sees a public holiday time as 9:00 AM - 6:00 PM."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:281
+#: ../../content/applications/hr/time_off.rst:100
 msgid ""
 ":guilabel:`Working Hours`: If the holiday should only apply to employees who "
 "have a specific set of working hours, select the working hours from the drop-"
 "down menu. If left blank, the holiday applies to all employees."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:284
+#: ../../content/applications/hr/time_off.rst:103
 msgid ""
 ":guilabel:`Work Entry Type`: If using the **Payroll** app, this field "
 "defines how the :doc:`work entries <payroll/work_entries>` for the holiday "
@@ -39679,18 +39324,18 @@ msgstr ""
 msgid "The list of public holidays in the configuration menu."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:292
+#: ../../content/applications/hr/time_off.rst:111
 msgid "Mandatory days"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:294
+#: ../../content/applications/hr/time_off.rst:113
 msgid ""
 "Some companies have special days where specific departments, or the entire "
 "staff, is required to be present, and time off is not allowed on those "
 "specific days."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:297
+#: ../../content/applications/hr/time_off.rst:116
 msgid ""
 "These types of days are called *mandatory days* in Odoo. These can be "
 "configured to be company-wide, or department specific. When configured, "
@@ -39698,35 +39343,35 @@ msgid ""
 "off requests for these mandatory days."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:302
+#: ../../content/applications/hr/time_off.rst:121
 msgid "Create mandatory days"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:304
+#: ../../content/applications/hr/time_off.rst:123
 msgid ""
 "No mandatory days are configured in Odoo by default. To create a mandatory "
 "day, navigate to :menuselection:`Time Off app --> Configuration --> "
 "Mandatory Days`."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:307
+#: ../../content/applications/hr/time_off.rst:126
 msgid ""
 "Click the :guilabel:`New` button in the top-left corner, and a blank line "
 "appears in the list."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:311
+#: ../../content/applications/hr/time_off.rst:130
 msgid ":guilabel:`Name`: Enter the name of the mandatory day."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:312
+#: ../../content/applications/hr/time_off.rst:131
 msgid ""
 ":guilabel:`Company`: If in a multi-company database, this field is visible, "
 "and the current company populates this field, by default. Using the drop-"
 "down menu, select the company the mandatory day is for."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:315
+#: ../../content/applications/hr/time_off.rst:134
 msgid ""
 ":guilabel:`Departments`: This column is hidden by default. First, click "
 "the :icon:`oi-settings-adjust` :guilabel:`(additional options)` icon in the "
@@ -39734,32 +39379,32 @@ msgid ""
 "to :guilabel:`Departments` to reveal that column."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:320
+#: ../../content/applications/hr/time_off.rst:139
 msgid ""
 "Next, select the desired departments from the drop-down menu. Multiple "
 "departments can be selected, and there is no limit to the amount of "
 "departments that can be added."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:323
+#: ../../content/applications/hr/time_off.rst:142
 msgid ""
 "If this field is left blank, the mandatory day applies to the entire company."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:324
+#: ../../content/applications/hr/time_off.rst:143
 msgid ""
 ":guilabel:`Start Date`: Using the calendar picker, select the date the "
 "mandatory day starts."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:325
+#: ../../content/applications/hr/time_off.rst:144
 msgid ""
 ":guilabel:`End Date`: Using the calendar picker, select the date the "
 "mandatory day ends. If creating a single mandatory day, the end date should "
 "be the same as the start date."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:327
+#: ../../content/applications/hr/time_off.rst:146
 msgid ""
 ":guilabel:`Color`: If desired, select a color from the available presented "
 "options. If no color is desired, select the `No color` option, represented "
@@ -39771,7 +39416,7 @@ msgstr ""
 msgid "The Mandatory Days section with three configured days."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:337
+#: ../../content/applications/hr/time_off.rst:156
 msgid ""
 "To view a color-coded schedule of the user's time off, and/or of the team "
 "managed by them, navigate to :menuselection:`Time Off app --> Overview`. "
@@ -39779,7 +39424,7 @@ msgid ""
 "quarterly (three month) view."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:341
+#: ../../content/applications/hr/time_off.rst:160
 msgid ""
 "To change the time period displayed, click on the :icon:`fa-"
 "calendar` :guilabel:`(time period)` button to reveal a drop-down menu. Then, "
@@ -39788,7 +39433,7 @@ msgid ""
 "calendar in that corresponding view."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:346
+#: ../../content/applications/hr/time_off.rst:165
 msgid ""
 "To navigate forward or backward in time, in the selected increment "
 "(:guilabel:`Month`, :guilabel:`Week`, etc.), click the :icon:`oi-arrow-"
@@ -39798,38 +39443,38 @@ msgid ""
 "the view by one month."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:352
+#: ../../content/applications/hr/time_off.rst:171
 msgid ""
 "To return to a view containing the current day, click the :icon:`fa-"
 "crosshairs` :guilabel:`(Focus Today)` button at any time."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:355
+#: ../../content/applications/hr/time_off.rst:174
 msgid ""
 "Team members are listed alphabetically on individual lines, and their "
 "requested time off, regardless of the status (*validated* or *to approve*), "
 "is visible on the calendar."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:358
+#: ../../content/applications/hr/time_off.rst:177
 msgid ""
 "Each employee is color-coded. The employee's color is selected at random, "
 "and does *not* correspond to the type of time off they requested."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:361
+#: ../../content/applications/hr/time_off.rst:180
 msgid ""
 "The status of the time off is represented by the color detail of the "
 "request, either appearing solid (*validated*) or striped (*to approve*)."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:364
+#: ../../content/applications/hr/time_off.rst:183
 msgid ""
 "The number of days or hours requested is written on the request (if there is "
 "enough space)."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:366
+#: ../../content/applications/hr/time_off.rst:185
 msgid ""
 "At the bottom of the calendar, in the :guilabel:`Total` line, a bar graph "
 "shows how many people are projected to be out on any given day. The number "
@@ -39837,7 +39482,7 @@ msgid ""
 "highlighted days."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:370
+#: ../../content/applications/hr/time_off.rst:189
 msgid ""
 "Click on a time off entry to view the details for the specific time off "
 "entry. The total number of hours or days are listed, along with the start "
@@ -39849,28 +39494,419 @@ msgstr ""
 msgid "Overview of the user's team, with time off requests shown."
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:378
+#: ../../content/applications/hr/time_off.rst:197
 msgid ":doc:`time_off/time_off_types`"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:379
+#: ../../content/applications/hr/time_off.rst:198
 msgid ":doc:`time_off/allocations`"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:380
+#: ../../content/applications/hr/time_off.rst:199
+msgid ":doc:`time_off/accrual_plans`"
+msgstr ""
+
+#: ../../content/applications/hr/time_off.rst:200
 msgid ":doc:`time_off/request_time_off`"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:381
+#: ../../content/applications/hr/time_off.rst:201
 msgid ":doc:`time_off/my_time`"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:382
+#: ../../content/applications/hr/time_off.rst:202
 msgid ":doc:`time_off/management`"
 msgstr ""
 
-#: ../../content/applications/hr/time_off.rst:383
+#: ../../content/applications/hr/time_off.rst:203
 msgid ":doc:`time_off/reporting`"
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:3
+msgid "Accrual plans"
+msgstr "Opbouwplannen"
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:5
+msgid ""
+"Some time off is granted to employees up front, while other kinds of time "
+"off are earned through an *accrual plan*, meaning that for every specified "
+"amount of time an employee works (hour, day, week, etc), they earn or "
+"*accrue* a specified amount of time off."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:10
+msgid ""
+"If an employee accrues a vacation day for every week they work, they would "
+"earn 0.2 vacation days for each hour they worked. At the end of a 40-hour "
+"work week, they would earn one full vacation day (8 hours)."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:15
+msgid "Create an accrual plan"
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:17
+msgid ""
+"To create a new accrual plan, navigate to :menuselection:`Time Off app --> "
+"Configuration --> Accrual Plans`. Then, click the :guilabel:`New` button, "
+"which reveals a blank *Accrual Plans* form."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:20
+msgid ""
+"First, enter a :guilabel:`Title` for the accrual plan. If in a multi-company "
+"database, a :guilabel:`Company` field appears beneath the :guilabel:`Title` "
+"field. Using the drop-down menu, select the company the accrual plan applies "
+"to. If left blank, the accrual plan is available for all companies."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:25
+msgid "Next, configure the following sections of the form:"
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:28
+#: ../../content/applications/hr/time_off/time_off_types.rst:131
+msgid "Configuration section"
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:30
+msgid ""
+"Configure the following fields in the *Configuration* section of the form:"
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:32
+msgid ""
+":guilabel:`When the time is accrued?`: Select when the employee begins to "
+"accrue time off, either :guilabel:`At the start of the accrual period` "
+"or :guilabel:`At the end of the accrual period`."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:34
+msgid ""
+":guilabel:`It is based on worked time?`: Select how time off accrual is "
+"determined. The options are:"
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:37
+msgid ""
+":guilabel:`Yes, consider the worked hours, excluding any time off taken "
+"during that period.`: Days **not** considered as *worked time* do **not** "
+"contribute to the accrual plan in Odoo."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:39
+msgid ""
+":guilabel:`No, always consider the entire accrual period (whole calendar "
+"days).`: Every day is calculated when determining worked time, with no "
+"exclusions."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:43
+msgid ""
+"An employee is granted time off from an accrual plan configured to accrue "
+"one day of vacation for every five days worked. The accrual plan is based on "
+"the employee's worked time (the :guilabel:`Yes, consider the worked hours, "
+"excluding any time off taken during that period.` option is selected), which "
+"means they **only** earn vacation time for the five weekdays they work, "
+"*not* the entire seven-day week period."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:49
+msgid ""
+"The employee works a standard 40-hour week. According to the accrual plan, "
+"they should earn four vacation days per month."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:52
+msgid ""
+"The employee takes five days off using a :doc:`time off type "
+"<time_off_types>` with the :guilabel:`Counts as` set as "
+"an :guilabel:`Absence`. Because the plan grants vacation only for worked "
+"time, those five days do not count toward accrual."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:56
+msgid ""
+"As a result, the employee accrues only three vacation days that month "
+"instead of four."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:58
+msgid ""
+":guilabel:`Do you need a carry-over of the accrued days from one year to "
+"another?`: Select when the employee receives previously earned time. The "
+"options are:"
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:61
+msgid ""
+":guilabel:`At the start of the year`: Select this if the accrual rolls over "
+"on January 1 of the upcoming year."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:63
+msgid ""
+":guilabel:`At the allocation date`: Select this if the accrual rolls over as "
+"soon as time is allocated to the employee."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:65
+msgid ""
+":guilabel:`Custom date`: Select this option if neither of the other two "
+"options is applicable. Once selected, set the date using the two drop-down "
+"menus, one for the day and one for the month."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:None
+msgid "An accrual plan form filled out for a Seniority Plan."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:73
+msgid "Milestones"
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:75
+msgid ""
+"Milestones must be created for employees to accrue time off from the accrual "
+"plan. Each milestone determines when and how much time off the employee "
+"earns."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:78
+msgid ""
+"To create a new milestone, click the :guilabel:`Create a milestone` button "
+"and a *New Milestone* pop-up window loads. Then fill out the following "
+"sections on the form."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:82
+msgid ""
+"Once milestones have been configured, click on a milestone to make edits, "
+"click the :icon:`fa-trash-o` :guilabel:`(Delete)` icon to delete it, or "
+"click :guilabel:`Add a milestone` to create additional milestones."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:None
+msgid "An accrual plan form with all the entries filled out."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:90
+msgid "Accrual level options section"
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:92
+msgid "This section determines how much the employee earns, and when."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:94
+msgid ""
+":guilabel:`Set the employee accrual frequency`: Configure how many hours or "
+"days the employee earns in a set period of time."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:97
+msgid ""
+"The first two fields set *how much* time off the employee earns, while the "
+"remaining fields determine *how often* the employee earns the time off."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:100
+msgid ""
+"Enter the numerical amount the employee earns in the first field. The "
+"numerical format is `X.XXXX`, so that partial days or hours can be earned. "
+"Next, set the middle field to either :guilabel:`Day(s)` "
+"or :guilabel:`Hour(s)`."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:104
+msgid ""
+"In the last field, use the drop-down menu to set the frequency the employee "
+"earns the time configured in the first two fields. Some options require "
+"additional fields to be configured. The default options are:"
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:108
+msgid ""
+":guilabel:`Hourly`: The employee earns the set amount of time for every hour "
+"worked. There are no additional fields needed."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:110
+msgid ""
+":guilabel:`Daily`: The employee earns the set amount of time for every day "
+"worked. There are no additional fields needed."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:112
+msgid ""
+":guilabel:`Weekly`: The employee earns the set amount of time for every week "
+"worked. When selected, use the drop-down menu to select the specific day of "
+"the week in the field that appears."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:115
+msgid ""
+":guilabel:`Twice a month`: The employee earns the set amount of time, twice "
+"a month, on two specific days. When selected, use the drop-down menus to "
+"select the specific days of the month in the two fields that appear."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:118
+msgid ""
+":guilabel:`Monthly`: The employee earns the set amount of time for every "
+"month worked. When selected, use the drop-down menu to select the specific "
+"day of the month in the field that appears."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:121
+msgid ""
+":guilabel:`Twice a year`: The employee earns the set amount of time, twice a "
+"year, on two specific dates. When selected, use the drop-down menus to "
+"select the specific day and month, in the four fields that appear."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:124
+msgid ""
+":guilabel:`Yearly`: The employee earns the set amount of time, once a year, "
+"on a specific day. When selected, use the drop-down menus to select the "
+"specific day and month in the two fields that appear."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:127
+msgid ""
+":guilabel:`Per Hour Worked`: The employee earns the set amount of time for "
+"every hour worked. There are no additional fields needed."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:130
+msgid ""
+":guilabel:`This milestone will be reached`: This selection determines *when* "
+"the employee starts to earn the time off. The options are:"
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:133
+msgid ""
+":guilabel:`At allocation creation`: The time off starts accruing immediately."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:134
+msgid ""
+":guilabel:`After (#) (Time) from the start of the allocation.`: Use the "
+"first two fields to set the time period the employee achieves the milestone. "
+"Enter a number in the first field, then set the middle field to "
+"either :guilabel:`Days`, :guilabel:`Months`, or :guilabel:`Years`."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:None
+msgid "An accrual plan set to give 10 days a year to employees."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:142
+msgid "Carry over options section"
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:144
+msgid ""
+"This section determines what happens to any unused time off at the end of "
+"the year. Configure the following field:"
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:147
+msgid ""
+":guilabel:`After a year, unused time off will be:`: Select :guilabel:`Lost` "
+"if any unused time off is lost, and does **not** carry over to the following "
+"year. Select :guilabel:`Carried over` if time off is rolled over to the next "
+"year. When this option is selected, two additional sections appear:"
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:152
+msgid ""
+":guilabel:`How much time can be carried over:`: Select :guilabel:`Unlimited` "
+"if *all* time off can be carried over. Select :guilabel:`Up to (#) Day(s)` "
+"if there *is* a limit. Enter the total number of days the employee can carry "
+"over from one year to the next in the blank field."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:155
+msgid ""
+":guilabel:`Define a carry over validity?`: If there is an expiration date "
+"for the carried over time off, enable this option. When enabled, the "
+"following appears: :guilabel:`The days carried over will be effective for "
+"(#) (Days or Months)`. Enter a number in the first field, then set the "
+"second field to either :guilabel:`Days` or :guilabel:`Months`."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:None
+msgid "The Carry Over section configured to have unlimited carry over time."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:164
+msgid "Cap options section"
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:166
+msgid "This section sets limits on total time off earned."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:168
+msgid ""
+":guilabel:`Define a yearly cap?`: Enable this option to set a limit on the "
+"total amount of time that can be accrued every calendar year. When enabled, "
+"the following line appears: :guilabel:`Accrual will stop until next carry-"
+"over date if accrued time's reach (#) Day(s).` Enter the maximum number of "
+"days the employee can earn in the number field."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:172
+msgid ""
+":guilabel:`Define a balance cap?`: If there is a maximum amount of time the "
+"employee can accrue with this plan, enable this option. When enabled, the "
+"following line appears: :guilabel:`The plan will be on hold if the balance "
+"reach (#) Day(s) of available time.` Enter the maximum number of days the "
+"employee can have at any given time in the number field. Any time off beyond "
+"this parameter is lost."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:178
+msgid ""
+"When completed, click :guilabel:`Save` to save the milestone, "
+"or :guilabel:`Save & New` to save the milestone and create a new one."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:None
+msgid "A balance cap of 30 days set in the Cap Options section."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:185
+msgid ""
+"This milestone form is configured so the employee earns two weeks (10 days) "
+"a year when they are hired, three weeks (15 days) after three years, and a "
+"month (20 days) after five years. They start to earn this time yearly, on "
+"January 1st."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:189
+msgid ""
+"The employee can never accrue more than 30 days in the first three years, 45 "
+"days from years 3-5, and 100 days after five years. Anytime they exceed "
+"those amounts for the respective years, they will stop accruing more time "
+"off."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:193
+msgid ""
+"Additionally, they can roll over all their unused time off during the first "
+"five years, then they can only rollover 20 days from one year to the next."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:196
+msgid ""
+"Note that in year five, the employee can have a yearly cap of 60 days, and a "
+"total balance cap of 100 days."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/accrual_plans.rst:0
+msgid "A milestone form with all the entries filled out."
 msgstr ""
 
 #: ../../content/applications/hr/time_off/allocations.rst:3
@@ -39885,8 +39921,8 @@ msgstr ""
 
 #: ../../content/applications/hr/time_off/allocations.rst:8
 msgid ""
-"Once :doc:`time off type <../time_off/time_off_types>` and :ref:`accrual "
-"plans <time_off/accrual-plans>` have been configured, the next step is to "
+"Once :doc:`time off type <../time_off/time_off_types>` and :doc:`accrual "
+"plan <../time_off/accrual_plans>` have been configured, the next step is to "
 "*allocate*, or give, time off to employees."
 msgstr ""
 
@@ -39944,7 +39980,7 @@ msgid ""
 ":guilabel:`Allocation Type`: Select how the allocation is granted. "
 "Choose :guilabel:`Regular Allocation` if the time off is given immediately, "
 "or :guilabel:`Accrual Allocation` if the time off is earned through "
-"an :ref:`accrual plan <time_off/accrual-plans>`."
+"an :doc:`accrual plan <../time_off/accrual_plans>`."
 msgstr ""
 
 #: ../../content/applications/hr/time_off/allocations.rst:39
@@ -40021,7 +40057,7 @@ msgstr ""
 msgid ""
 "If the :guilabel:`Start Date` is in the middle of an accrual period, Odoo "
 "adjusts it to the start or end of that period based on the *Accrued Gain "
-"Time* entered on the :ref:`accrual plan <time_off/accrual-plans>`."
+"Time* entered on the :doc:`accrual plan <../time_off/accrual_plans>`."
 msgstr ""
 
 #: ../../content/applications/hr/time_off/allocations.rst:76
@@ -40646,7 +40682,7 @@ msgstr ""
 #: ../../content/applications/hr/time_off/my_time.rst:56
 msgid ""
 "The :guilabel:`Balance at the (date)` field **only** appears if the user is "
-"accruing time off through an :ref:`accrual plan <time_off/accrual-plans>`."
+"accruing time off through an :doc:`accrual plan <../time_off/accrual_plans>`."
 msgstr ""
 
 #: ../../content/applications/hr/time_off/my_time.rst:59
@@ -41352,10 +41388,6 @@ msgstr ""
 msgid "The allocation section all filled out for  a new time off type."
 msgstr ""
 
-#: ../../content/applications/hr/time_off/time_off_types.rst:131
-msgid "Configuration section"
-msgstr ""
-
 #: ../../content/applications/hr/time_off/time_off_types.rst:133
 msgid ""
 "This section determines all other details regarding the time off type, aside "
@@ -41488,6 +41520,9 @@ msgstr ""
 msgid ""
 "The lower half of the time off type form, with the color and icon selected."
 msgstr ""
+
+#~ msgid "Rules"
+#~ msgstr "Regels"
 
 #~ msgid "Create employees"
 #~ msgstr "Medewerkers creëren"

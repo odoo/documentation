@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-22 17:35+0000\n"
+"POT-Creation-Date: 2026-05-29 17:30+0000\n"
 "PO-Revision-Date: 2026-05-11 23:20+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -12507,13 +12507,8 @@ msgid ""
 "vendors to stock or from stock to customers, with Odoo only tracking when "
 "items enter or leave the warehouse. This makes it ideal for businesses with "
 "high-volume, low-risk products or fast-moving operations where additional "
-"validation steps aren’t necessary."
+"validation steps are not necessary."
 msgstr ""
-"*1ステップ在庫フロー* は最もシンプルな選択肢で、取り扱い工程が最小限であり、"
-"トレーサビリティも最も低くなります。この構成では、プロダクトは仕入先から直接"
-"在庫へ、または在庫から直接顧客へと移動し、Odooはプロダクトの入出庫のみを記録"
-"します。このため、大量・低リスクの商品や、高速なオペレーションで追加の確認工"
-"程が不要なビジネスに最適です。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:26
 msgid "**Receiving**: Products go directly into stock."
@@ -14633,541 +14628,6 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_three_steps.rst:None
 msgid "Internal transfer for product being moved to warehouse stock."
 msgstr "倉庫在庫に移動するプロダクトのための内部転送。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:3
-msgid "Sell stock from multiple warehouses using virtual locations"
-msgstr "仮想ロケーションを利用した複数倉庫からの在庫販売"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:5
-msgid ""
-"While keeping stock and selling inventory from one warehouse might work for "
-"smaller companies, bigger companies might need to keep stock in, or sell "
-"from, multiple warehouses in multiple locations."
-msgstr ""
-"小規模な企業であれば、1つの倉庫で在庫を保管し、在庫を販売することも可能かもし"
-"れませんが、大企業では、複数の場所にある複数の倉庫に在庫を保管したり、複数の"
-"倉庫から在庫を販売したりする必要があるかもしれません。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:9
-msgid ""
-"Sometimes products included in a single sales order might take stock from "
-"two (or more) warehouses; in Odoo, pulling products from multiple warehouses "
-"to satisfy sales demands can be done using *virtual locations*."
-msgstr ""
-"1つの販売オーダに含まれるプロダクトが、2つ(またはそれ以上)の倉庫から在庫を引"
-"く場合があります。Odooでは、*仮想ロケーション* を使用して販売オーダを満たすた"
-"めに複数の倉庫からプロダクトを引き出すことができます。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:14
-msgid ""
-"The solution in this document, describing the use of a virtual warehouse to "
-"fulfill orders for multiple warehouses, has some limitations. Consider the "
-"following before proceeding:"
-msgstr ""
-"このドキュメントでは、複数の倉庫のオーダを処理するために仮想倉庫を使用するこ"
-"とを説明していますが、このソリューションにはいくつかの制限があります。先に進"
-"む前に、以下の点を考慮して下さい:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:17
-msgid ""
-"When the :guilabel:`Warehouse` field is set to a virtual warehouse on a "
-"sales order, the virtual warehouse's address is indicated on the picking, "
-"packing, and delivery forms, **not** the actual warehouse's address."
-msgstr ""
-"販売オーダで :guilabel:`倉庫` フィールドが仮想倉庫に設定されている場合、ピッ"
-"キング、梱包、配送フォームには仮想倉庫の住所が表示され、実際の倉庫の住所は表"
-"示されません。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:20
-msgid ""
-"Each location has a `warehouse_id` (hidden field). This means that the stock "
-"in the virtual warehouse will **not** be the sum of the stock of the real "
-"warehouses, but rather the sum of the stock in the locations whose warehouse "
-"ID is the virtual warehouse."
-msgstr ""
-"各ロケーションは `warehouse_id` (隠しフィールド)を持っています。つまり、仮想"
-"倉庫の在庫は実際の倉庫の在庫の合計では *なく*、倉庫IDが仮想倉庫のロケーション"
-"の在庫の合計になります。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:25
-msgid ""
-"Potential limitation for those using :doc:`two <../../shipping_receiving/"
-"daily_operations/receipts_delivery_two_steps>` or :doc:`three-step delivery "
-"<../../shipping_receiving/daily_operations/delivery_three_steps>`:"
-msgstr ""
-":doc:`2 <../../shipping_receiving/daily_operations/"
-"receipts_delivery_two_steps>` または :doc:`3ステップ配送 <../../"
-"shipping_receiving/daily_operations/delivery_three_steps>` を使用している場合"
-"に制限される可能性があります:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:29
-msgid ""
-"The output or packing zone on the various forms is incorrectly listed as the "
-"virtual warehouse's address."
-msgstr ""
-"各種フォームに記載されている出荷ゾーンまたは梱包ゾーンが、仮想倉庫の住所とし"
-"て誤って記載されています。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:31
-msgid "There is no workaround for two or three-step deliveries."
-msgstr "2ステップまたは3ステップ配送に対する回避策はありません。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:32
-msgid ""
-"Proceed **only** if setting a virtual warehouse's address as the output or "
-"packing zone makes sense for the company's workflow."
-msgstr ""
-"仮想倉庫の住所を出荷または梱包ゾーンとして設定することが、企業のワークフロー"
-"の理にかなっている場合 **のみ** 実行して下さい。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:36
-msgid ""
-"In order to create virtual locations in warehouses, and proceed to the "
-"following steps, the :guilabel:`Storage Locations` and :guilabel:`Multi-Step "
-"Routes` features **must** be enabled."
-msgstr ""
-"倉庫内に仮想の場所を作成し、次のステップに進むためには、 :guilabel:`保管場所"
-"` と :guilabel:`複数ステップルート` 機能を有効にする必要があります。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:39
-msgid ""
-"To do so, go to :menuselection:`Inventory app --> Configuration --> "
-"Settings`, scroll down to the :guilabel:`Warehouse` section, and enable "
-"the :guilabel:`Storage Locations` and :guilabel:`Multi-Step Routes` options. "
-"Then, :guilabel:`Save` the changes to finish."
-msgstr ""
-"そのためには :menuselection:`在庫アプリ --> 設定 --> 管理設定` に行"
-"き、 :guilabel:`倉庫` セクションまでスクロールダウンし、 :guilabel:`保管場所"
-"` と :guilabel:`複数ステップルート` オプションを有効にします。そし"
-"て、 :guilabel:`保存` で変更を終了します。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:47
-msgid "Create virtual parent location"
-msgstr "仮想の親ロケーションを作成する"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:49
-msgid ""
-"Before creating any virtual stock locations, create a new warehouse that "
-"acts as a *virtual* warehouse — the *parent* location of other physical "
-"warehouses."
-msgstr ""
-"仮想保管場所を作成する前に、*仮想* 倉庫として機能する新しい倉庫 — 他の実際の"
-"倉庫の *親* ロケーションを作成します。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:54
-msgid ""
-"Virtual warehouses are great for companies with multiple physical "
-"warehouses. This is because a situation might arise when one warehouse runs "
-"out of stock of a particular product, but another warehouse still has stock "
-"on-hand. In this case, stock from these two (or more) warehouses could be "
-"used to fulfill a single sales order."
-msgstr ""
-"仮想倉庫は、実際の倉庫を複数持つ企業に最適です。というのも、ある倉庫で特定の"
-"プロダクトの在庫が切れても、別の倉庫にはまだ在庫があるという状況が発生するか"
-"もしれないからです。この場合、これらの2つ(またはそれ以上)の倉庫からの在庫は、"
-"単一の販売オーダを満たすために使用することができます。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:59
-msgid ""
-"The \"virtual\" warehouse acts as a single aggregator of all the inventory "
-"stored in a company's physical warehouses, and is used (for traceability "
-"purposes) to create a hierarchy of locations in Odoo."
-msgstr ""
-"\"仮想\" 倉庫は企業の実際の倉庫に保管されている全ての在庫を集約する役割を果た"
-"し、Odoo内で(トレーサビリティの目的のため)ロケーションの階層を作成するために"
-"使用されます。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:63
-msgid ""
-"To create a new warehouse, go to :menuselection:`Inventory app --> "
-"Configuration --> Warehouses`, and click :guilabel:`Create`. From here, the "
-"warehouse :guilabel:`Name` and :guilabel:`Short Name` can be changed, and "
-"other warehouse details can be changed under the :guilabel:`Warehouse "
-"Configuration` tab."
-msgstr ""
-"新しい倉庫を作成するには、 :menuselection:`在庫アプリ --> 設定 --> 倉庫` に進"
-"み、 :guilabel:`作成` をクリックします。ここから倉庫の :guilabel:`名前` "
-"と :guilabel:`略称` を変更し、その他の倉庫の詳細は :guilabel:`倉庫設定` タブ"
-"で変更できます。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:68
-msgid ""
-"Lastly, click :guilabel:`Save` to finish creating a *regular* warehouse. "
-"Continue following the steps below to finish configuring the virtual parent "
-"warehouse."
-msgstr ""
-"最後に、:guilabel:`保存` をクリックし、*通常* 倉庫の作成を終了します。仮想親"
-"倉庫の設定を完了するには、以下の手順を続けて下さい。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:None
-msgid "New warehouse form."
-msgstr "新規倉庫フォーム。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:76
-msgid ""
-":doc:`Warehouse configurations <../../warehouses_storage/"
-"inventory_management/warehouses>`"
-msgstr ""
-":doc:`倉庫設定 <../../warehouses_storage/inventory_management/warehouses>`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:77
-msgid ""
-":ref:`Incoming and outgoing shipments <inventory/receipts_delivery_one_step/"
-"wh>`"
-msgstr ":ref:`入荷および出荷配送 <inventory/receipts_delivery_one_step/wh>`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:78
-msgid ":doc:`../../warehouses_storage/replenishment/resupply_warehouses`"
-msgstr ":doc:`../../warehouses_storage/replenishment/resupply_warehouses`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:83
-msgid "Create child warehouses"
-msgstr "子倉庫を作成する"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:85
-msgid ""
-"Create at least two *child* warehouses to link to the virtual warehouse."
-msgstr "仮想倉庫にリンクするために、少なくとも2つの *子* 倉庫を作成します。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:88
-msgid ""
-"In order to take stock from multiple warehouses to fulfill a sales order, "
-"there needs to be at least **two** warehouses acting as child locations of "
-"the virtual parent location warehouse."
-msgstr ""
-"販売オーダを満たすために複数の倉庫から在庫を引くには、仮想の親ロケーション倉"
-"庫の子ロケーションとして機能する倉庫が少なくとも**2つ**必要です。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:91
-msgid ""
-"To do that, navigate to :menuselection:`Inventory app --> Configuration --> "
-"Warehouses`, click :guilabel:`Create`, and follow the :ref:`preceding "
-"instructions <inventory/routes/virtual-wh>` to configure the physical stock "
-"locations."
-msgstr ""
-"そのためには :menuselection:`在庫アプリ --> 設定 --> 倉庫` に移動"
-"し、 :guilabel:`作成` をクリックし、 :ref:`事前指示 <inventory/routes/"
-"virtual-wh>` に従って実際の在庫ロケーションを設定します。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid "**Parent Warehouse**"
-msgstr "**親倉庫**"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid ":guilabel:`Warehouse`: `Virtual Warehouse`"
-msgstr ":guilabel:`親倉庫`: `仮想倉庫`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid ":guilabel:`Location`: `VWH/Stock`"
-msgstr ":guilabel:`ロケーション`: `VWH/在庫`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid "**Child Warehouses**"
-msgstr "**子倉庫**"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid ":guilabel:`Warehouses`: `Warehouse A` and `Warehouse B`"
-msgstr ":guilabel:`倉庫`: `倉庫A` と `倉庫B`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid ":guilabel:`Locations`: `WHA` and `WHB`"
-msgstr ":guilabel:`ロケーション`: `WHA` と `WHB`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid "Graphic of child locations 'WHA' and 'WHB' tied to the parent location."
-msgstr "親ロケーションに紐づく子ロケーション 'WHA' と 'WHB'のグラフィック。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:110
-msgid ""
-"While the virtual stock location will be changed to 'View' later, "
-"the :guilabel:`Location Type` **must** be :guilabel:`Internal Location` at "
-"this point to :ref:`link the child warehouses <inventory/routes/link-to-"
-"vwh>` in the next section."
-msgstr ""
-"仮想在庫ロケーションは後で'ビュー'に変更されますが、次のセクションで:ref:`子"
-"倉庫<inventory/routes/link-to-vwh>をリンクする`ために、この時点で:guilabel:`"
-"ロケーションタイプ`は:guilabel:`内部ロケーション`である**必要があります**。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:117
-msgid "Link child warehouses to virtual stock"
-msgstr "子倉庫を仮想在庫にリンクする"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:119
-msgid ""
-"To set physical warehouses as child locations of the virtual location "
-"configured in the :ref:`previous step <inventory/routes/virtual-wh>`, "
-"navigate to :menuselection:`Inventory app --> Configuration --> Locations`."
-msgstr ""
-":ref:`前のステップ <inventory/routes/virtual-wh>` で設定した仮想ロケーション"
-"の子ロケーションとして実際の倉庫を設定するには、 :menuselection:`在庫アプリ "
-"--> 設定 --> ロケーション` に移動します。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:123
-msgid ""
-"Remove any filters from the search bar. Then, click the physical "
-"warehouse :guilabel:`Location` that was previously created to be a child "
-"location (e.g. `WHA`), and click :guilabel:`Edit`."
-msgstr ""
-"検索バーからフィルタを取り除きます。次に、子ロケーション(例：`WHA`)として作成"
-"した実際の倉庫 :guilabel:`ロケーション` をクリックし、:guilabel:`編集` をク"
-"リックします。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:126
-msgid ""
-"Change the :guilabel:`Parent Location` field from :guilabel:`Physical "
-"Locations` to the virtual warehouse's **stock location** (e.g. `VWH/Stock`) "
-"from the drop-down menu, and click :guilabel:`Save`."
-msgstr ""
-":guilabel:`親ロケーション` フィールドを :guilabel:`実際のロケーション` から仮"
-"想倉庫の**在庫ロケーション**(例：`VWH/在庫`)にドロップダウンメニューから変更"
-"し、 :guilabel:`保存` をクリックします。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:131
-msgid ""
-"To select the virtual warehouse's stock location in the :guilabel:`Parent "
-"Location` drop-down menu, the parent warehouse stock location (e.g. `VWH/"
-"Stock`) **must**  have its :guilabel:`Location Type` set "
-"to :guilabel:`Internal Location`."
-msgstr ""
-":guilabel:`親ロケーション`ドロップダウンメニューで仮想倉庫の在庫ロケーション"
-"を選択するには、親倉庫の在庫ロケーション(例：`VWH/在庫` )の :guilabel:`ロケー"
-"ションタイプ`  が :guilabel:`内部ロケーション` に設定されている **必要があり"
-"ます**。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:None
-msgid "Set the child warehouse's *Parent Location* to the virtual warehouse."
-msgstr "子倉庫の *親倉庫の場所* を仮想倉庫に設定します。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:139
-msgid "Repeat the preceding steps to configure two or more child warehouses."
-msgstr "2つ以上の子倉庫を設定するには、前述の手順を繰り返します。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:141
-msgid ""
-"Once complete, the virtual, parent warehouse (e.g. `VWH/Stock`) fulfills "
-"orders using stock from child warehouses (e.g. `WHA` and `WHB`), if there is "
-"insufficient stock in any one location."
-msgstr ""
-"一旦完了すると、仮想の親倉庫(例：`VWH/在庫`)は、子倉庫(例：`WHA`と`WHB`)の在"
-"庫を使用してオーダを処理します。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:145
-msgid "Set virtual stock location as 'view'"
-msgstr "仮想在庫ロケーションを 'ビュー(照会)' として設定"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:147
-msgid ""
-"Set the virtual stock location's :guilabel:`Location Type` "
-"to :guilabel:`View`, as it is a non-existent location used to group various "
-"physical warehouses together."
-msgstr ""
-"仮想在庫ロケーションの :guilabel:`ロケーションタイプ` を :guilabel:`ビュー(照"
-"会)` に設定します。これは、様々な実際の倉庫をグループ化するために使用される存"
-"在しないロケーションだからです。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:150
-msgid ""
-"To do that, navigate to :menuselection:`Inventory app --> Configuration --> "
-"Locations`."
-msgstr ""
-"そのためには :menuselection:`在庫アプリ --> 設定 --> ロケーション` に移動しま"
-"す。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:152
-msgid ""
-"Click the virtual warehouse's stock location (e.g. `VWH/Stock`) that "
-"was :ref:`previously created <inventory/routes/virtual-wh>`, from "
-"the :guilabel:`Locations` list."
-msgstr ""
-":guilabel:`ロケーション` リストから、:ref:`前回作成済 <inventory/routes/"
-"virtual-wh>` の仮想倉庫の在庫ロケーション (例 :` VWH/在庫`) をクリックしま"
-"す。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:155
-msgid ""
-"On the location form, under the :guilabel:`Additional Information` heading, "
-"set the :guilabel:`Location Type` to :guilabel:`View`. :guilabel:`Save` the "
-"changes."
-msgstr ""
-"ロケーションフォームの :guilabel:`追加情報` 見出しの下にある :guilabel:`ロ"
-"ケーションタイプ` を :guilabel:ビュー(照会)` に設定します。変更を :guilabel:`"
-"保存` します。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:None
-msgid "Warehouse location types in location creation screen."
-msgstr "ロケーション作成スクリーンでの倉庫ロケーションタイプ"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:163
-msgid ""
-"To view the total quantity across **all** linked child warehouses, go to the "
-"product form and click the :guilabel:`On Hand` smart button."
-msgstr ""
-"リンクされている **全て** の子倉庫の合計数量を表示するには、プロダクトフォー"
-"ムに移動し、:guilabel:`手持` スマートボタンをクリックして下さい。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid "Display stock across all linked warehouses."
-msgstr "全てのリンク済倉庫の在庫を表示します。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:171
-msgid "Example: sell products from a virtual warehouse"
-msgstr "例: 仮想倉庫からプロダクトを販売"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:173
-msgid ""
-"To sell products from multiple warehouses using a virtual parent location, "
-"the database must have at least **two** warehouses configured — with at "
-"least **one** product, with quantity on-hand in each warehouse, respectively."
-msgstr ""
-"仮想の親ロケーションを使用して複数の倉庫からプロダクトを販売するには、データ"
-"ベースは少なくとも **2つ** の倉庫が、それぞれ各倉庫に手持ちの数量で、少なくと"
-"も **1つ** のプロダクトで構成されている必要があります。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:178
-msgid ""
-"The following product, `Toy soldier`, is available at each location with the "
-"quantities:"
-msgstr "プロダクト、`おもちゃの兵隊` は各ロケーションに以下の数量があります:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:180
-msgid "`WHA/Stock` : 1"
-msgstr "`WHA/在庫` : 1"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:181
-msgid "`WHB/Stock` : 2"
-msgstr "`WHB/在庫` : 2"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:182
-msgid ""
-"Warehouses `WHA` and `WHB` are child warehouses of the virtual warehouse "
-"`VWH`."
-msgstr "倉庫 `WHA` と `WHB` は仮想倉庫 `VWH` の子倉庫です。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:184
-msgid ""
-"Create a quotation for the product by navigating to "
-"the :menuselection:`Sales` app and clicking :guilabel:`Create`. On the "
-"quote, add a :guilabel:`Customer`, and click :guilabel:`Add a product` to "
-"add the two products stored in the two warehouses."
-msgstr ""
-":menuselection:`販売` アプリに移動して :guilabel:`作成` をクリックし、プロダ"
-"クトの見積を作成します。見積に :guilabel:`顧客` を追加し、 :guilabel:`プロダ"
-"クト追加` をクリックして2つの倉庫に保管されている2つのプロダクトを追加しま"
-"す。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:188
-msgid ""
-"Then, click the :guilabel:`Other Info` tab on the sales order form. Under "
-"the :guilabel:`Delivery` section, change the :guilabel:`Warehouse` field "
-"value to the virtual warehouse that was :ref:`previously created <inventory/"
-"routes/virtual-wh>`. Next, :guilabel:`Confirm` the sales order."
-msgstr ""
-"次に、販売オーダフォームの :guilabel:`その他情報` タブをクリックしま"
-"す。:guilabel:`配送` セクションの :guilabel:`倉庫` フィールドの値を :ref:`事"
-"前に作成済 <inventory/routes/virtual-wh>` で指定した仮想倉庫に変更します。次"
-"に、販売オーダを :guilabel:`確認` します。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:None
-msgid ""
-"Set virtual warehouse as the *Warehouse* field in sales order's *Other Info* "
-"tab."
-msgstr ""
-"販売オーダの*その他情報*タブの*倉庫*フィールドとして仮想倉庫を設定します。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:196
-msgid ""
-"Then, click the :guilabel:`Delivery` smart button. From the warehouse "
-"delivery form, confirm that the :guilabel:`Source Location` value matches "
-"the :guilabel:`Warehouse` field value from the sales order. Both should list "
-"the virtual warehouse location."
-msgstr ""
-"次に、 :guilabel:`配送` スマートボタンをクリックします。倉庫配送フォームか"
-"ら、 :guilabel:`移動元ロケーション` の値が販売オーダの :guilabel:`倉庫` "
-"フィールドの値と一致することを確認します。両方が仮想倉庫の場所をリストしてい"
-"るはずです。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:200
-msgid ""
-"Finally, on the warehouse delivery form, under the :guilabel:`Detailed "
-"Operations` tab, confirm that the :guilabel:`Locations` in "
-"the :guilabel:`From` column for each product match the child locations that "
-"are tied to the virtual parent location."
-msgstr ""
-"最後に、倉庫配送フォームの :guilabel:`詳細オペレーション` タブで、各プロプロ"
-"ダクトの :guilabel:`元` 列の :guilabel:`ロケーション` が、仮想親ロケーション"
-"に紐づく子ロケーションと一致していることを確認します。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:None
-msgid "Delivery order with matching source and child locations."
-msgstr "移動元と子ロケーションが一致する出荷オーダ。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:209
-msgid ""
-"The :guilabel:`Source Location` on the warehouse delivery form, and "
-"the :guilabel:`Warehouse` under the :guilabel:`Other Info` tab on the sales "
-"order, **must** match for products in the sales order to be pulled from "
-"different warehouses."
-msgstr ""
-"倉庫配送フォームの :guilabel:`移動元ロケーション` と販売オーダの :guilabel:`"
-"その他情報` タブにある :guilabel:`倉庫` は、販売オーダ内のプロダクトが異なる"
-"倉庫から引き出されるためには一致する **必要があります**。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:213
-msgid ""
-"If the virtual warehouse is not in the :guilabel:`Source Location` field on "
-"the warehouse delivery form, retry product reservation by:"
-msgstr ""
-"倉庫配送フォームの :guilabel:`移動元ロケーション` フィールドに仮想倉庫がない"
-"場合は、次の方法でプロダクト予約を再試行して下さい:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:216
-msgid ""
-"Running the scheduler: turn on :ref:`developer mode <developer-mode>`, and "
-"then go to :menuselection:`Inventory app --> Operations --> Run Scheduler`."
-msgstr ""
-"スケジューラ実行: :ref:`開発者モード <developer-mode>`をオンに"
-"し、 :menuselection:`在庫アプリ --> オペレーション -->スケジューラ実行` に進"
-"みます。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:218
-msgid "Clicking :guilabel:`Check Availability` on the delivery order."
-msgstr "出荷オーダで :guilabel:`利用可能確認` をクリックします。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:219
-msgid ""
-"If the virtual warehouse is **not** assigned to the :guilabel:`Warehouse` "
-"field on the sales order, then cancel it, and create a new sales order with "
-"the virtual warehouse set in the :guilabel:`Warehouse` field."
-msgstr ""
-"もし仮想倉庫が販売オーダの :guilabel:`倉庫` フィールドに割当てられて **いない"
-"** なら、その販売オーダを取消し、 :guilabel:`倉庫` フィールドに仮想倉庫を設定"
-"して新規販売オーダを作成します。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:222
-msgid ""
-"If the :guilabel:`Warehouse` field is missing on the sales order form, then "
-"the multiple child warehouses may not have been set up correctly. Review "
-"the :ref:`previous section <inventory/routes/child-wh>` to ensure the "
-"correct settings."
-msgstr ""
-"販売オーダフォームに :guilabel:`倉庫` フィールドがない場合、複数の子倉庫が正"
-"しく設定されていない可能性があります。:ref:`前のセクション<inventory/routes/"
-"child-wh>` を見直して、正しい設定を確認して下さい。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:227
-msgid ""
-"To use a virtual *parent* location as the default warehouse for sales "
-"orders, each salesperson should have the virtual warehouse assigned to them "
-"from the drop-down menu next to :guilabel:`Default Warehouse` on their "
-"employee form."
-msgstr ""
-"仮想 *親* ロケーションを販売オーダのデフォルト倉庫として使用するには、各販売"
-"担当者が、従業員フォームの :guilabel:`デフォルト倉庫` の隣にあるドロップダウ"
-"ンメニューから仮想倉庫を割当てなければなりません。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid "Default warehouse location on employee form."
-msgstr "従業員フォームのデフォルト倉庫ロケーション。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:5
 msgid ""
@@ -57172,6 +56632,494 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:212
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "The *one-step inventory flow* is the simplest option, with minimal "
+#~ "handling steps and the least traceability. In this setup, products move "
+#~ "directly from vendors to stock or from stock to customers, with Odoo only "
+#~ "tracking when items enter or leave the warehouse. This makes it ideal for "
+#~ "businesses with high-volume, low-risk products or fast-moving operations "
+#~ "where additional validation steps aren’t necessary."
+#~ msgstr ""
+#~ "*1ステップ在庫フロー* は最もシンプルな選択肢で、取り扱い工程が最小限であ"
+#~ "り、トレーサビリティも最も低くなります。この構成では、プロダクトは仕入先か"
+#~ "ら直接在庫へ、または在庫から直接顧客へと移動し、Odooはプロダクトの入出庫の"
+#~ "みを記録します。このため、大量・低リスクの商品や、高速なオペレーションで追"
+#~ "加の確認工程が不要なビジネスに最適です。"
+
+#~ msgid "Sell stock from multiple warehouses using virtual locations"
+#~ msgstr "仮想ロケーションを利用した複数倉庫からの在庫販売"
+
+#~ msgid ""
+#~ "While keeping stock and selling inventory from one warehouse might work "
+#~ "for smaller companies, bigger companies might need to keep stock in, or "
+#~ "sell from, multiple warehouses in multiple locations."
+#~ msgstr ""
+#~ "小規模な企業であれば、1つの倉庫で在庫を保管し、在庫を販売することも可能か"
+#~ "もしれませんが、大企業では、複数の場所にある複数の倉庫に在庫を保管したり、"
+#~ "複数の倉庫から在庫を販売したりする必要があるかもしれません。"
+
+#~ msgid ""
+#~ "Sometimes products included in a single sales order might take stock from "
+#~ "two (or more) warehouses; in Odoo, pulling products from multiple "
+#~ "warehouses to satisfy sales demands can be done using *virtual locations*."
+#~ msgstr ""
+#~ "1つの販売オーダに含まれるプロダクトが、2つ(またはそれ以上)の倉庫から在庫を"
+#~ "引く場合があります。Odooでは、*仮想ロケーション* を使用して販売オーダを満"
+#~ "たすために複数の倉庫からプロダクトを引き出すことができます。"
+
+#~ msgid ""
+#~ "The solution in this document, describing the use of a virtual warehouse "
+#~ "to fulfill orders for multiple warehouses, has some limitations. Consider "
+#~ "the following before proceeding:"
+#~ msgstr ""
+#~ "このドキュメントでは、複数の倉庫のオーダを処理するために仮想倉庫を使用する"
+#~ "ことを説明していますが、このソリューションにはいくつかの制限があります。先"
+#~ "に進む前に、以下の点を考慮して下さい:"
+
+#~ msgid ""
+#~ "When the :guilabel:`Warehouse` field is set to a virtual warehouse on a "
+#~ "sales order, the virtual warehouse's address is indicated on the picking, "
+#~ "packing, and delivery forms, **not** the actual warehouse's address."
+#~ msgstr ""
+#~ "販売オーダで :guilabel:`倉庫` フィールドが仮想倉庫に設定されている場合、"
+#~ "ピッキング、梱包、配送フォームには仮想倉庫の住所が表示され、実際の倉庫の住"
+#~ "所は表示されません。"
+
+#~ msgid ""
+#~ "Each location has a `warehouse_id` (hidden field). This means that the "
+#~ "stock in the virtual warehouse will **not** be the sum of the stock of "
+#~ "the real warehouses, but rather the sum of the stock in the locations "
+#~ "whose warehouse ID is the virtual warehouse."
+#~ msgstr ""
+#~ "各ロケーションは `warehouse_id` (隠しフィールド)を持っています。つまり、仮"
+#~ "想倉庫の在庫は実際の倉庫の在庫の合計では *なく*、倉庫IDが仮想倉庫のロケー"
+#~ "ションの在庫の合計になります。"
+
+#~ msgid ""
+#~ "Potential limitation for those using :doc:`two <../../shipping_receiving/"
+#~ "daily_operations/receipts_delivery_two_steps>` or :doc:`three-step "
+#~ "delivery <../../shipping_receiving/daily_operations/"
+#~ "delivery_three_steps>`:"
+#~ msgstr ""
+#~ ":doc:`2 <../../shipping_receiving/daily_operations/"
+#~ "receipts_delivery_two_steps>` または :doc:`3ステップ配送 <../../"
+#~ "shipping_receiving/daily_operations/delivery_three_steps>` を使用している"
+#~ "場合に制限される可能性があります:"
+
+#~ msgid ""
+#~ "The output or packing zone on the various forms is incorrectly listed as "
+#~ "the virtual warehouse's address."
+#~ msgstr ""
+#~ "各種フォームに記載されている出荷ゾーンまたは梱包ゾーンが、仮想倉庫の住所と"
+#~ "して誤って記載されています。"
+
+#~ msgid "There is no workaround for two or three-step deliveries."
+#~ msgstr "2ステップまたは3ステップ配送に対する回避策はありません。"
+
+#~ msgid ""
+#~ "Proceed **only** if setting a virtual warehouse's address as the output "
+#~ "or packing zone makes sense for the company's workflow."
+#~ msgstr ""
+#~ "仮想倉庫の住所を出荷または梱包ゾーンとして設定することが、企業のワークフ"
+#~ "ローの理にかなっている場合 **のみ** 実行して下さい。"
+
+#~ msgid ""
+#~ "In order to create virtual locations in warehouses, and proceed to the "
+#~ "following steps, the :guilabel:`Storage Locations` and :guilabel:`Multi-"
+#~ "Step Routes` features **must** be enabled."
+#~ msgstr ""
+#~ "倉庫内に仮想の場所を作成し、次のステップに進むためには、 :guilabel:`保管場"
+#~ "所` と :guilabel:`複数ステップルート` 機能を有効にする必要があります。"
+
+#~ msgid ""
+#~ "To do so, go to :menuselection:`Inventory app --> Configuration --> "
+#~ "Settings`, scroll down to the :guilabel:`Warehouse` section, and enable "
+#~ "the :guilabel:`Storage Locations` and :guilabel:`Multi-Step Routes` "
+#~ "options. Then, :guilabel:`Save` the changes to finish."
+#~ msgstr ""
+#~ "そのためには :menuselection:`在庫アプリ --> 設定 --> 管理設定` に行"
+#~ "き、 :guilabel:`倉庫` セクションまでスクロールダウンし、 :guilabel:`保管場"
+#~ "所` と :guilabel:`複数ステップルート` オプションを有効にします。そし"
+#~ "て、 :guilabel:`保存` で変更を終了します。"
+
+#~ msgid "Create virtual parent location"
+#~ msgstr "仮想の親ロケーションを作成する"
+
+#~ msgid ""
+#~ "Before creating any virtual stock locations, create a new warehouse that "
+#~ "acts as a *virtual* warehouse — the *parent* location of other physical "
+#~ "warehouses."
+#~ msgstr ""
+#~ "仮想保管場所を作成する前に、*仮想* 倉庫として機能する新しい倉庫 — 他の実際"
+#~ "の倉庫の *親* ロケーションを作成します。"
+
+#~ msgid ""
+#~ "Virtual warehouses are great for companies with multiple physical "
+#~ "warehouses. This is because a situation might arise when one warehouse "
+#~ "runs out of stock of a particular product, but another warehouse still "
+#~ "has stock on-hand. In this case, stock from these two (or more) "
+#~ "warehouses could be used to fulfill a single sales order."
+#~ msgstr ""
+#~ "仮想倉庫は、実際の倉庫を複数持つ企業に最適です。というのも、ある倉庫で特定"
+#~ "のプロダクトの在庫が切れても、別の倉庫にはまだ在庫があるという状況が発生す"
+#~ "るかもしれないからです。この場合、これらの2つ(またはそれ以上)の倉庫からの"
+#~ "在庫は、単一の販売オーダを満たすために使用することができます。"
+
+#~ msgid ""
+#~ "The \"virtual\" warehouse acts as a single aggregator of all the "
+#~ "inventory stored in a company's physical warehouses, and is used (for "
+#~ "traceability purposes) to create a hierarchy of locations in Odoo."
+#~ msgstr ""
+#~ "\"仮想\" 倉庫は企業の実際の倉庫に保管されている全ての在庫を集約する役割を"
+#~ "果たし、Odoo内で(トレーサビリティの目的のため)ロケーションの階層を作成する"
+#~ "ために使用されます。"
+
+#~ msgid ""
+#~ "To create a new warehouse, go to :menuselection:`Inventory app --> "
+#~ "Configuration --> Warehouses`, and click :guilabel:`Create`. From here, "
+#~ "the warehouse :guilabel:`Name` and :guilabel:`Short Name` can be changed, "
+#~ "and other warehouse details can be changed under the :guilabel:`Warehouse "
+#~ "Configuration` tab."
+#~ msgstr ""
+#~ "新しい倉庫を作成するには、 :menuselection:`在庫アプリ --> 設定 --> 倉庫` "
+#~ "に進み、 :guilabel:`作成` をクリックします。ここから倉庫の :guilabel:`名前"
+#~ "` と :guilabel:`略称` を変更し、その他の倉庫の詳細は :guilabel:`倉庫設定` "
+#~ "タブで変更できます。"
+
+#~ msgid ""
+#~ "Lastly, click :guilabel:`Save` to finish creating a *regular* warehouse. "
+#~ "Continue following the steps below to finish configuring the virtual "
+#~ "parent warehouse."
+#~ msgstr ""
+#~ "最後に、:guilabel:`保存` をクリックし、*通常* 倉庫の作成を終了します。仮想"
+#~ "親倉庫の設定を完了するには、以下の手順を続けて下さい。"
+
+#~ msgid "New warehouse form."
+#~ msgstr "新規倉庫フォーム。"
+
+#~ msgid ""
+#~ ":doc:`Warehouse configurations <../../warehouses_storage/"
+#~ "inventory_management/warehouses>`"
+#~ msgstr ""
+#~ ":doc:`倉庫設定 <../../warehouses_storage/inventory_management/warehouses>`"
+
+#~ msgid ""
+#~ ":ref:`Incoming and outgoing shipments <inventory/"
+#~ "receipts_delivery_one_step/wh>`"
+#~ msgstr ":ref:`入荷および出荷配送 <inventory/receipts_delivery_one_step/wh>`"
+
+#~ msgid ":doc:`../../warehouses_storage/replenishment/resupply_warehouses`"
+#~ msgstr ":doc:`../../warehouses_storage/replenishment/resupply_warehouses`"
+
+#~ msgid "Create child warehouses"
+#~ msgstr "子倉庫を作成する"
+
+#~ msgid ""
+#~ "Create at least two *child* warehouses to link to the virtual warehouse."
+#~ msgstr "仮想倉庫にリンクするために、少なくとも2つの *子* 倉庫を作成します。"
+
+#~ msgid ""
+#~ "In order to take stock from multiple warehouses to fulfill a sales order, "
+#~ "there needs to be at least **two** warehouses acting as child locations "
+#~ "of the virtual parent location warehouse."
+#~ msgstr ""
+#~ "販売オーダを満たすために複数の倉庫から在庫を引くには、仮想の親ロケーション"
+#~ "倉庫の子ロケーションとして機能する倉庫が少なくとも**2つ**必要です。"
+
+#~ msgid ""
+#~ "To do that, navigate to :menuselection:`Inventory app --> Configuration --"
+#~ "> Warehouses`, click :guilabel:`Create`, and follow the :ref:`preceding "
+#~ "instructions <inventory/routes/virtual-wh>` to configure the physical "
+#~ "stock locations."
+#~ msgstr ""
+#~ "そのためには :menuselection:`在庫アプリ --> 設定 --> 倉庫` に移動"
+#~ "し、 :guilabel:`作成` をクリックし、 :ref:`事前指示 <inventory/routes/"
+#~ "virtual-wh>` に従って実際の在庫ロケーションを設定します。"
+
+#~ msgid "**Parent Warehouse**"
+#~ msgstr "**親倉庫**"
+
+#~ msgid ":guilabel:`Warehouse`: `Virtual Warehouse`"
+#~ msgstr ":guilabel:`親倉庫`: `仮想倉庫`"
+
+#~ msgid ":guilabel:`Location`: `VWH/Stock`"
+#~ msgstr ":guilabel:`ロケーション`: `VWH/在庫`"
+
+#~ msgid "**Child Warehouses**"
+#~ msgstr "**子倉庫**"
+
+#~ msgid ":guilabel:`Warehouses`: `Warehouse A` and `Warehouse B`"
+#~ msgstr ":guilabel:`倉庫`: `倉庫A` と `倉庫B`"
+
+#~ msgid ":guilabel:`Locations`: `WHA` and `WHB`"
+#~ msgstr ":guilabel:`ロケーション`: `WHA` と `WHB`"
+
+#~ msgid ""
+#~ "Graphic of child locations 'WHA' and 'WHB' tied to the parent location."
+#~ msgstr "親ロケーションに紐づく子ロケーション 'WHA' と 'WHB'のグラフィック。"
+
+#~ msgid ""
+#~ "While the virtual stock location will be changed to 'View' later, "
+#~ "the :guilabel:`Location Type` **must** be :guilabel:`Internal Location` "
+#~ "at this point to :ref:`link the child warehouses <inventory/routes/link-"
+#~ "to-vwh>` in the next section."
+#~ msgstr ""
+#~ "仮想在庫ロケーションは後で'ビュー'に変更されますが、次のセクションで:ref:`"
+#~ "子倉庫<inventory/routes/link-to-vwh>をリンクする`ために、この時点"
+#~ "で:guilabel:`ロケーションタイプ`は:guilabel:`内部ロケーション`である**必要"
+#~ "があります**。"
+
+#~ msgid "Link child warehouses to virtual stock"
+#~ msgstr "子倉庫を仮想在庫にリンクする"
+
+#~ msgid ""
+#~ "To set physical warehouses as child locations of the virtual location "
+#~ "configured in the :ref:`previous step <inventory/routes/virtual-wh>`, "
+#~ "navigate to :menuselection:`Inventory app --> Configuration --> "
+#~ "Locations`."
+#~ msgstr ""
+#~ ":ref:`前のステップ <inventory/routes/virtual-wh>` で設定した仮想ロケーショ"
+#~ "ンの子ロケーションとして実際の倉庫を設定するには、 :menuselection:`在庫ア"
+#~ "プリ --> 設定 --> ロケーション` に移動します。"
+
+#~ msgid ""
+#~ "Remove any filters from the search bar. Then, click the physical "
+#~ "warehouse :guilabel:`Location` that was previously created to be a child "
+#~ "location (e.g. `WHA`), and click :guilabel:`Edit`."
+#~ msgstr ""
+#~ "検索バーからフィルタを取り除きます。次に、子ロケーション(例：`WHA`)として"
+#~ "作成した実際の倉庫 :guilabel:`ロケーション` をクリックし、:guilabel:`編集"
+#~ "` をクリックします。"
+
+#~ msgid ""
+#~ "Change the :guilabel:`Parent Location` field from :guilabel:`Physical "
+#~ "Locations` to the virtual warehouse's **stock location** (e.g. `VWH/"
+#~ "Stock`) from the drop-down menu, and click :guilabel:`Save`."
+#~ msgstr ""
+#~ ":guilabel:`親ロケーション` フィールドを :guilabel:`実際のロケーション` か"
+#~ "ら仮想倉庫の**在庫ロケーション**(例：`VWH/在庫`)にドロップダウンメニューか"
+#~ "ら変更し、 :guilabel:`保存` をクリックします。"
+
+#~ msgid ""
+#~ "To select the virtual warehouse's stock location in the :guilabel:`Parent "
+#~ "Location` drop-down menu, the parent warehouse stock location (e.g. `VWH/"
+#~ "Stock`) **must**  have its :guilabel:`Location Type` set "
+#~ "to :guilabel:`Internal Location`."
+#~ msgstr ""
+#~ ":guilabel:`親ロケーション`ドロップダウンメニューで仮想倉庫の在庫ロケーショ"
+#~ "ンを選択するには、親倉庫の在庫ロケーション(例：`VWH/在庫` )の :guilabel:`"
+#~ "ロケーションタイプ`  が :guilabel:`内部ロケーション` に設定されている **必"
+#~ "要があります**。"
+
+#~ msgid ""
+#~ "Set the child warehouse's *Parent Location* to the virtual warehouse."
+#~ msgstr "子倉庫の *親倉庫の場所* を仮想倉庫に設定します。"
+
+#~ msgid ""
+#~ "Repeat the preceding steps to configure two or more child warehouses."
+#~ msgstr "2つ以上の子倉庫を設定するには、前述の手順を繰り返します。"
+
+#~ msgid ""
+#~ "Once complete, the virtual, parent warehouse (e.g. `VWH/Stock`) fulfills "
+#~ "orders using stock from child warehouses (e.g. `WHA` and `WHB`), if there "
+#~ "is insufficient stock in any one location."
+#~ msgstr ""
+#~ "一旦完了すると、仮想の親倉庫(例：`VWH/在庫`)は、子倉庫(例：`WHA`と`WHB`)の"
+#~ "在庫を使用してオーダを処理します。"
+
+#~ msgid "Set virtual stock location as 'view'"
+#~ msgstr "仮想在庫ロケーションを 'ビュー(照会)' として設定"
+
+#~ msgid ""
+#~ "Set the virtual stock location's :guilabel:`Location Type` "
+#~ "to :guilabel:`View`, as it is a non-existent location used to group "
+#~ "various physical warehouses together."
+#~ msgstr ""
+#~ "仮想在庫ロケーションの :guilabel:`ロケーションタイプ` を :guilabel:`ビュー"
+#~ "(照会)` に設定します。これは、様々な実際の倉庫をグループ化するために使用さ"
+#~ "れる存在しないロケーションだからです。"
+
+#~ msgid ""
+#~ "To do that, navigate to :menuselection:`Inventory app --> Configuration --"
+#~ "> Locations`."
+#~ msgstr ""
+#~ "そのためには :menuselection:`在庫アプリ --> 設定 --> ロケーション` に移動"
+#~ "します。"
+
+#~ msgid ""
+#~ "Click the virtual warehouse's stock location (e.g. `VWH/Stock`) that "
+#~ "was :ref:`previously created <inventory/routes/virtual-wh>`, from "
+#~ "the :guilabel:`Locations` list."
+#~ msgstr ""
+#~ ":guilabel:`ロケーション` リストから、:ref:`前回作成済 <inventory/routes/"
+#~ "virtual-wh>` の仮想倉庫の在庫ロケーション (例 :` VWH/在庫`) をクリックしま"
+#~ "す。"
+
+#~ msgid ""
+#~ "On the location form, under the :guilabel:`Additional Information` "
+#~ "heading, set the :guilabel:`Location Type` "
+#~ "to :guilabel:`View`. :guilabel:`Save` the changes."
+#~ msgstr ""
+#~ "ロケーションフォームの :guilabel:`追加情報` 見出しの下にある :guilabel:`ロ"
+#~ "ケーションタイプ` を :guilabel:ビュー(照会)` に設定します。変更"
+#~ "を :guilabel:`保存` します。"
+
+#~ msgid "Warehouse location types in location creation screen."
+#~ msgstr "ロケーション作成スクリーンでの倉庫ロケーションタイプ"
+
+#~ msgid ""
+#~ "To view the total quantity across **all** linked child warehouses, go to "
+#~ "the product form and click the :guilabel:`On Hand` smart button."
+#~ msgstr ""
+#~ "リンクされている **全て** の子倉庫の合計数量を表示するには、プロダクト"
+#~ "フォームに移動し、:guilabel:`手持` スマートボタンをクリックして下さい。"
+
+#~ msgid "Display stock across all linked warehouses."
+#~ msgstr "全てのリンク済倉庫の在庫を表示します。"
+
+#~ msgid "Example: sell products from a virtual warehouse"
+#~ msgstr "例: 仮想倉庫からプロダクトを販売"
+
+#~ msgid ""
+#~ "To sell products from multiple warehouses using a virtual parent "
+#~ "location, the database must have at least **two** warehouses configured — "
+#~ "with at least **one** product, with quantity on-hand in each warehouse, "
+#~ "respectively."
+#~ msgstr ""
+#~ "仮想の親ロケーションを使用して複数の倉庫からプロダクトを販売するには、デー"
+#~ "タベースは少なくとも **2つ** の倉庫が、それぞれ各倉庫に手持ちの数量で、少"
+#~ "なくとも **1つ** のプロダクトで構成されている必要があります。"
+
+#~ msgid ""
+#~ "The following product, `Toy soldier`, is available at each location with "
+#~ "the quantities:"
+#~ msgstr ""
+#~ "プロダクト、`おもちゃの兵隊` は各ロケーションに以下の数量があります:"
+
+#~ msgid "`WHA/Stock` : 1"
+#~ msgstr "`WHA/在庫` : 1"
+
+#~ msgid "`WHB/Stock` : 2"
+#~ msgstr "`WHB/在庫` : 2"
+
+#~ msgid ""
+#~ "Warehouses `WHA` and `WHB` are child warehouses of the virtual warehouse "
+#~ "`VWH`."
+#~ msgstr "倉庫 `WHA` と `WHB` は仮想倉庫 `VWH` の子倉庫です。"
+
+#~ msgid ""
+#~ "Create a quotation for the product by navigating to "
+#~ "the :menuselection:`Sales` app and clicking :guilabel:`Create`. On the "
+#~ "quote, add a :guilabel:`Customer`, and click :guilabel:`Add a product` to "
+#~ "add the two products stored in the two warehouses."
+#~ msgstr ""
+#~ ":menuselection:`販売` アプリに移動して :guilabel:`作成` をクリックし、プロ"
+#~ "ダクトの見積を作成します。見積に :guilabel:`顧客` を追加し、 :guilabel:`プ"
+#~ "ロダクト追加` をクリックして2つの倉庫に保管されている2つのプロダクトを追加"
+#~ "します。"
+
+#~ msgid ""
+#~ "Then, click the :guilabel:`Other Info` tab on the sales order form. Under "
+#~ "the :guilabel:`Delivery` section, change the :guilabel:`Warehouse` field "
+#~ "value to the virtual warehouse that was :ref:`previously created "
+#~ "<inventory/routes/virtual-wh>`. Next, :guilabel:`Confirm` the sales order."
+#~ msgstr ""
+#~ "次に、販売オーダフォームの :guilabel:`その他情報` タブをクリックしま"
+#~ "す。:guilabel:`配送` セクションの :guilabel:`倉庫` フィールドの値を :ref:`"
+#~ "事前に作成済 <inventory/routes/virtual-wh>` で指定した仮想倉庫に変更しま"
+#~ "す。次に、販売オーダを :guilabel:`確認` します。"
+
+#~ msgid ""
+#~ "Set virtual warehouse as the *Warehouse* field in sales order's *Other "
+#~ "Info* tab."
+#~ msgstr ""
+#~ "販売オーダの*その他情報*タブの*倉庫*フィールドとして仮想倉庫を設定します。"
+
+#~ msgid ""
+#~ "Then, click the :guilabel:`Delivery` smart button. From the warehouse "
+#~ "delivery form, confirm that the :guilabel:`Source Location` value matches "
+#~ "the :guilabel:`Warehouse` field value from the sales order. Both should "
+#~ "list the virtual warehouse location."
+#~ msgstr ""
+#~ "次に、 :guilabel:`配送` スマートボタンをクリックします。倉庫配送フォームか"
+#~ "ら、 :guilabel:`移動元ロケーション` の値が販売オーダの :guilabel:`倉庫` "
+#~ "フィールドの値と一致することを確認します。両方が仮想倉庫の場所をリストして"
+#~ "いるはずです。"
+
+#~ msgid ""
+#~ "Finally, on the warehouse delivery form, under the :guilabel:`Detailed "
+#~ "Operations` tab, confirm that the :guilabel:`Locations` in "
+#~ "the :guilabel:`From` column for each product match the child locations "
+#~ "that are tied to the virtual parent location."
+#~ msgstr ""
+#~ "最後に、倉庫配送フォームの :guilabel:`詳細オペレーション` タブで、各プロプ"
+#~ "ロダクトの :guilabel:`元` 列の :guilabel:`ロケーション` が、仮想親ロケー"
+#~ "ションに紐づく子ロケーションと一致していることを確認します。"
+
+#~ msgid "Delivery order with matching source and child locations."
+#~ msgstr "移動元と子ロケーションが一致する出荷オーダ。"
+
+#~ msgid ""
+#~ "The :guilabel:`Source Location` on the warehouse delivery form, and "
+#~ "the :guilabel:`Warehouse` under the :guilabel:`Other Info` tab on the "
+#~ "sales order, **must** match for products in the sales order to be pulled "
+#~ "from different warehouses."
+#~ msgstr ""
+#~ "倉庫配送フォームの :guilabel:`移動元ロケーション` と販売オーダ"
+#~ "の :guilabel:`その他情報` タブにある :guilabel:`倉庫` は、販売オーダ内のプ"
+#~ "ロダクトが異なる倉庫から引き出されるためには一致する **必要があります**。"
+
+#~ msgid ""
+#~ "If the virtual warehouse is not in the :guilabel:`Source Location` field "
+#~ "on the warehouse delivery form, retry product reservation by:"
+#~ msgstr ""
+#~ "倉庫配送フォームの :guilabel:`移動元ロケーション` フィールドに仮想倉庫がな"
+#~ "い場合は、次の方法でプロダクト予約を再試行して下さい:"
+
+#~ msgid ""
+#~ "Running the scheduler: turn on :ref:`developer mode <developer-mode>`, "
+#~ "and then go to :menuselection:`Inventory app --> Operations --> Run "
+#~ "Scheduler`."
+#~ msgstr ""
+#~ "スケジューラ実行: :ref:`開発者モード <developer-mode>`をオンに"
+#~ "し、 :menuselection:`在庫アプリ --> オペレーション -->スケジューラ実行` に"
+#~ "進みます。"
+
+#~ msgid "Clicking :guilabel:`Check Availability` on the delivery order."
+#~ msgstr "出荷オーダで :guilabel:`利用可能確認` をクリックします。"
+
+#~ msgid ""
+#~ "If the virtual warehouse is **not** assigned to the :guilabel:`Warehouse` "
+#~ "field on the sales order, then cancel it, and create a new sales order "
+#~ "with the virtual warehouse set in the :guilabel:`Warehouse` field."
+#~ msgstr ""
+#~ "もし仮想倉庫が販売オーダの :guilabel:`倉庫` フィールドに割当てられて **い"
+#~ "ない** なら、その販売オーダを取消し、 :guilabel:`倉庫` フィールドに仮想倉"
+#~ "庫を設定して新規販売オーダを作成します。"
+
+#~ msgid ""
+#~ "If the :guilabel:`Warehouse` field is missing on the sales order form, "
+#~ "then the multiple child warehouses may not have been set up correctly. "
+#~ "Review the :ref:`previous section <inventory/routes/child-wh>` to ensure "
+#~ "the correct settings."
+#~ msgstr ""
+#~ "販売オーダフォームに :guilabel:`倉庫` フィールドがない場合、複数の子倉庫が"
+#~ "正しく設定されていない可能性があります。:ref:`前のセクション<inventory/"
+#~ "routes/child-wh>` を見直して、正しい設定を確認して下さい。"
+
+#~ msgid ""
+#~ "To use a virtual *parent* location as the default warehouse for sales "
+#~ "orders, each salesperson should have the virtual warehouse assigned to "
+#~ "them from the drop-down menu next to :guilabel:`Default Warehouse` on "
+#~ "their employee form."
+#~ msgstr ""
+#~ "仮想 *親* ロケーションを販売オーダのデフォルト倉庫として使用するには、各販"
+#~ "売担当者が、従業員フォームの :guilabel:`デフォルト倉庫` の隣にあるドロップ"
+#~ "ダウンメニューから仮想倉庫を割当てなければなりません。"
+
+#~ msgid "Default warehouse location on employee form."
+#~ msgstr "従業員フォームのデフォルト倉庫ロケーション。"
 
 #~ msgid "US Postal Service"
 #~ msgstr "US Postal Service"
