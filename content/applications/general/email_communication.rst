@@ -49,8 +49,8 @@ For incoming emails, after adding your own domain, :ref:`replies from customers 
 your domain <email-inbound-custom-domain>`, and you will need to use one of the three possible ways
 to get the emails back into Odoo (using either :ref:`incoming mail server
 <email-inbound-custom-domain-incoming-server>`, :ref:`redirection/forwarding
-<email-inbound-custom-domain-redirections>` or :ref:`DNS MX record
-<email-inbound-custom-domain-mx>`). Everything is covered in the :doc:`Manage inbound messages
+<email-inbound-custom-domain-redirections>` or :ref:`DNS CNAME record
+<email-inbound-custom-domain-cname>`). Everything is covered in the :doc:`Manage inbound messages
 documentation <email_communication/email_servers_inbound>`.
 
 .. _email-on-premise:
