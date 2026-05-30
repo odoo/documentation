@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-22 17:35+0000\n"
+"POT-Creation-Date: 2026-05-29 17:31+0000\n"
 "PO-Revision-Date: 2026-04-03 23:11+0000\n"
 "Last-Translator: \"Chloe Wang (chwa)\" <chwa@odoo.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
@@ -14208,508 +14208,6 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_three_steps.rst:None
 msgid "Internal transfer for product being moved to warehouse stock."
 msgstr "产品转入仓库库存的内部调拨单。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:3
-msgid "Sell stock from multiple warehouses using virtual locations"
-msgstr "利用虚拟地点从多个仓库销售库存产品"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:5
-msgid ""
-"While keeping stock and selling inventory from one warehouse might work for "
-"smaller companies, bigger companies might need to keep stock in, or sell "
-"from, multiple warehouses in multiple locations."
-msgstr ""
-"对于规模较小的公司来说，从一个仓库保存存货和销售存货可能是可行的，但规模较大"
-"的公司可能需要在多个地点的多个仓库保存存货或销售存货。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:9
-msgid ""
-"Sometimes products included in a single sales order might take stock from "
-"two (or more) warehouses; in Odoo, pulling products from multiple warehouses "
-"to satisfy sales demands can be done using *virtual locations*."
-msgstr "在 Odoo 中，可以使用*虚拟位置*从多个仓库提取产品，以满足销售需求。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:14
-msgid ""
-"The solution in this document, describing the use of a virtual warehouse to "
-"fulfill orders for multiple warehouses, has some limitations. Consider the "
-"following before proceeding:"
-msgstr ""
-"本文档中介绍的解决方案使用虚拟仓库来完成多个仓库的订单，但存在一些局限性。在"
-"继续之前，请考虑以下几点："
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:17
-msgid ""
-"When the :guilabel:`Warehouse` field is set to a virtual warehouse on a "
-"sales order, the virtual warehouse's address is indicated on the picking, "
-"packing, and delivery forms, **not** the actual warehouse's address."
-msgstr ""
-"当在销售订单上将 :guilabel:`仓库` 字段设置为虚拟仓库时，虚拟仓库的地址会在拣"
-"货、包装和发货单上显示，而**不是**实际仓库的地址。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:20
-msgid ""
-"Each location has a `warehouse_id` (hidden field). This means that the stock "
-"in the virtual warehouse will **not** be the sum of the stock of the real "
-"warehouses, but rather the sum of the stock in the locations whose warehouse "
-"ID is the virtual warehouse."
-msgstr ""
-"每个位置都有一个 `warehouse_id` （隐藏字段）。这意味着虚拟仓库的存货**不是**"
-"真实仓库的存货总和，而是仓库 ID 为虚拟仓库的位置库存的总和。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:25
-msgid ""
-"Potential limitation for those using :doc:`two <../../shipping_receiving/"
-"daily_operations/receipts_delivery_two_steps>` or :doc:`three-step delivery "
-"<../../shipping_receiving/daily_operations/delivery_three_steps>`:"
-msgstr ""
-"使用 :doc:`两步 <.../../shipping_receiving/daily_operations/"
-"receipts_delivery_twoo_steps>` 或 :doc:`三步交付<.../../shipping_receiving/"
-"daily_operations/delivery_three_steps>` 的潜在限制："
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:29
-msgid ""
-"The output or packing zone on the various forms is incorrectly listed as the "
-"virtual warehouse's address."
-msgstr "各种表格上的输出区或包装区被错误地列为虚拟仓库的地址。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:31
-msgid "There is no workaround for two or three-step deliveries."
-msgstr "对于两步式或三步式送货流程，没有其他替代方案。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:32
-msgid ""
-"Proceed **only** if setting a virtual warehouse's address as the output or "
-"packing zone makes sense for the company's workflow."
-msgstr ""
-"**仅**在将虚拟仓库的地址设为出货区或打包区符合公司工作流程的情况下，才可继续"
-"操作。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:36
-msgid ""
-"In order to create virtual locations in warehouses, and proceed to the "
-"following steps, the :guilabel:`Storage Locations` and :guilabel:`Multi-Step "
-"Routes` features **must** be enabled."
-msgstr ""
-"要在仓库中创建虚拟位置并进入以下步骤，必须启用 :guilabel:`存储位置` "
-"和 :guilabel:`多步骤路线` 功能。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:39
-msgid ""
-"To do so, go to :menuselection:`Inventory app --> Configuration --> "
-"Settings`, scroll down to the :guilabel:`Warehouse` section, and enable "
-"the :guilabel:`Storage Locations` and :guilabel:`Multi-Step Routes` options. "
-"Then, :guilabel:`Save` the changes to finish."
-msgstr ""
-"要执行此操作，请进入 :menuselection:`库存应用程序 --> 配置 --> 设置`，向下滚"
-"动到 :guilabel:`仓库` 部分，并启用 :guilabel:`存储位置` 和 :guilabel:`多步路"
-"线` 选项。然后，:guilabel:`保存` 完成更改。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:47
-msgid "Create virtual parent location"
-msgstr "创建虚拟母级位置"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:49
-msgid ""
-"Before creating any virtual stock locations, create a new warehouse that "
-"acts as a *virtual* warehouse — the *parent* location of other physical "
-"warehouses."
-msgstr ""
-"在创建任何虚拟库存位置之前，先创建一个新仓库，它将作为其他实体仓库的*母级*仓"
-"库。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:54
-msgid ""
-"Virtual warehouses are great for companies with multiple physical "
-"warehouses. This is because a situation might arise when one warehouse runs "
-"out of stock of a particular product, but another warehouse still has stock "
-"on-hand. In this case, stock from these two (or more) warehouses could be "
-"used to fulfill a single sales order."
-msgstr ""
-"虚拟仓库功能特别适合管理多个实体仓库的企业。当一个仓库的某种产品库存不足，而"
-"其他仓库还有现货时，可以通过虚拟仓库将多个仓库的库存统筹起来，满足同一个销售"
-"订单的需求。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:59
-msgid ""
-"The \"virtual\" warehouse acts as a single aggregator of all the inventory "
-"stored in a company's physical warehouses, and is used (for traceability "
-"purposes) to create a hierarchy of locations in Odoo."
-msgstr ""
-"“虚拟” 仓库可以汇总企业所有实体仓库的库存信息，并在Odoo 中建立清晰的库位层级"
-"架构，便于追踪管理。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:63
-msgid ""
-"To create a new warehouse, go to :menuselection:`Inventory app --> "
-"Configuration --> Warehouses`, and click :guilabel:`Create`. From here, the "
-"warehouse :guilabel:`Name` and :guilabel:`Short Name` can be changed, and "
-"other warehouse details can be changed under the :guilabel:`Warehouse "
-"Configuration` tab."
-msgstr ""
-"要创建新仓库，请进入 :menuselection:`库存应用程序 --> 配置 --> 仓库`，然后点"
-"击 :guilabel:`创建`。在此，可更改仓库的 :guilabel:`名称` 和 :guilabel:`简称"
-"`，还可在 :guilabel:`仓库配置` 标签下更改其他仓库细节。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:68
-msgid ""
-"Lastly, click :guilabel:`Save` to finish creating a *regular* warehouse. "
-"Continue following the steps below to finish configuring the virtual parent "
-"warehouse."
-msgstr ""
-"最后，点击 :guilabel:`保存` 完成创建 *常规* 仓库。继续按照以下步骤完成虚拟母"
-"仓库的配置。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:None
-msgid "New warehouse form."
-msgstr "新仓库表单"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:76
-msgid ""
-":doc:`Warehouse configurations <../../warehouses_storage/"
-"inventory_management/warehouses>`"
-msgstr ""
-":doc:`仓库配置<../../warehouses_storage/inventory_management/warehouses>`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:77
-msgid ""
-":ref:`Incoming and outgoing shipments <inventory/receipts_delivery_one_step/"
-"wh>`"
-msgstr ":ref:`进出货物 <inventory/receipts_delivery_one_step/wh>`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:78
-msgid ":doc:`../../warehouses_storage/replenishment/resupply_warehouses`"
-msgstr ":doc:`../../warehouses_storage/replenishment/resupply_warehouses`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:83
-msgid "Create child warehouses"
-msgstr "创建子仓库"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:85
-msgid ""
-"Create at least two *child* warehouses to link to the virtual warehouse."
-msgstr "创建至少两个*子*仓库与虚拟仓库链接。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:88
-msgid ""
-"In order to take stock from multiple warehouses to fulfill a sales order, "
-"there needs to be at least **two** warehouses acting as child locations of "
-"the virtual parent location warehouse."
-msgstr ""
-"为了从多个仓库中提取存货来完成销售订单，至少需要有**两个**仓库作为虚拟母仓库"
-"的子仓库。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:91
-msgid ""
-"To do that, navigate to :menuselection:`Inventory app --> Configuration --> "
-"Warehouses`, click :guilabel:`Create`, and follow the :ref:`preceding "
-"instructions <inventory/routes/virtual-wh>` to configure the physical stock "
-"locations."
-msgstr ""
-"要执行此操作，请导航至 :menuselection:`库存应用程序 --> 配置 --> 仓库`，点"
-"击 :guilabel:`创建`，然后按照 :ref:`先前说明 <inventory/routes/virtual-wh>` "
-"配置物理库存位置。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid "**Parent Warehouse**"
-msgstr "**母级仓库**"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid ":guilabel:`Warehouse`: `Virtual Warehouse`"
-msgstr ":guilabel:`仓库`：`虚拟仓库`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid ":guilabel:`Location`: `VWH/Stock`"
-msgstr ":guilabel:`位置`：`VWH/Stock`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid "**Child Warehouses**"
-msgstr "**子仓库**"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid ":guilabel:`Warehouses`: `Warehouse A` and `Warehouse B`"
-msgstr ":guilabel:`仓库`：`仓库 A` 和 `仓库 B`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid ":guilabel:`Locations`: `WHA` and `WHB`"
-msgstr ":guilabel:`位置`：`WHA` 和 `WHB`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid "Graphic of child locations 'WHA' and 'WHB' tied to the parent location."
-msgstr "展示了母级库位及其关联的子级库位 'WHA' 和 'WHB' 的结构图"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:110
-msgid ""
-"While the virtual stock location will be changed to 'View' later, "
-"the :guilabel:`Location Type` **must** be :guilabel:`Internal Location` at "
-"this point to :ref:`link the child warehouses <inventory/routes/link-to-"
-"vwh>` in the next section."
-msgstr ""
-"虽然虚拟库存位置稍后将更改为 '视图'，但此时 :guilabel:`位置类型` ** 必须**"
-"为 :guilabel:`内部位置`，以便在下一节中 :ref:`关联子仓库 <inventory/routes/"
-"link-to-vwh>`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:117
-msgid "Link child warehouses to virtual stock"
-msgstr "将子仓库链接到虚拟库存"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:119
-msgid ""
-"To set physical warehouses as child locations of the virtual location "
-"configured in the :ref:`previous step <inventory/routes/virtual-wh>`, "
-"navigate to :menuselection:`Inventory app --> Configuration --> Locations`."
-msgstr ""
-"要将物理仓库设置为在 :ref:`上一步 <inventory/routes/virtual-wh>` 中配置的虚拟"
-"位置的子位置，请导航至 :menuselection:`库存应用程序 --> 配置 --> 位置`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:123
-msgid ""
-"Remove any filters from the search bar. Then, click the physical "
-"warehouse :guilabel:`Location` that was previously created to be a child "
-"location (e.g. `WHA`), and click :guilabel:`Edit`."
-msgstr ""
-"删除搜索栏中的任何筛选器。然后，点击先前创建为子位置（如 `WHA`）的物理仓"
-"库 :guilabel:`位置`，然后点击 :guilabel:`编辑`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:126
-msgid ""
-"Change the :guilabel:`Parent Location` field from :guilabel:`Physical "
-"Locations` to the virtual warehouse's **stock location** (e.g. `VWH/Stock`) "
-"from the drop-down menu, and click :guilabel:`Save`."
-msgstr ""
-"从下拉菜单中将 :guilabel:`母位置` 字段从 :guilabel:`实体位置` 改为虚拟仓库的"
-"**库存位置**（例如，`VWH/Stock`），然后点击 :guilabel:`保存`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:131
-msgid ""
-"To select the virtual warehouse's stock location in the :guilabel:`Parent "
-"Location` drop-down menu, the parent warehouse stock location (e.g. `VWH/"
-"Stock`) **must**  have its :guilabel:`Location Type` set "
-"to :guilabel:`Internal Location`."
-msgstr ""
-"要在 :guilabel:`母位置` 下拉菜单中选择虚拟仓库的库存位置，母仓库库存位置（如 "
-"`VWH/Stock`）**必须**将其 :guilabel:`位置类型` 设置为 :guilabel:`内部位置`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:None
-msgid "Set the child warehouse's *Parent Location* to the virtual warehouse."
-msgstr "将子仓库的*母位置*设置为虚拟仓库。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:139
-msgid "Repeat the preceding steps to configure two or more child warehouses."
-msgstr "重复前面的步骤，配置两个或更多子仓库。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:141
-msgid ""
-"Once complete, the virtual, parent warehouse (e.g. `VWH/Stock`) fulfills "
-"orders using stock from child warehouses (e.g. `WHA` and `WHB`), if there is "
-"insufficient stock in any one location."
-msgstr ""
-"一旦完成，虚拟母仓库（如 `VWH/Stock`）会在任何一个地点库存不足时，使用子仓库"
-"（如 `WHA` 和 `WHB`）的库存来完成订单。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:145
-msgid "Set virtual stock location as 'view'"
-msgstr "将虚拟库存位置设置为 “视图”"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:147
-msgid ""
-"Set the virtual stock location's :guilabel:`Location Type` "
-"to :guilabel:`View`, as it is a non-existent location used to group various "
-"physical warehouses together."
-msgstr ""
-"将虚拟库存位置的 :guilabel:`位置类型` 设置为 :guilabel:`视图`，因为它是一个不"
-"存在的位置，用于将各种物理仓库组合在一起。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:150
-msgid ""
-"To do that, navigate to :menuselection:`Inventory app --> Configuration --> "
-"Locations`."
-msgstr ""
-"要执行此操作，请导航至 :menuselection:`库存应用程序 --> 配置 --> 位置`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:152
-msgid ""
-"Click the virtual warehouse's stock location (e.g. `VWH/Stock`) that "
-"was :ref:`previously created <inventory/routes/virtual-wh>`, from "
-"the :guilabel:`Locations` list."
-msgstr ""
-"从 :guilabel:`位置` 列表中点击 :ref:`之前创建 <inventory/routes/virtual-wh>` "
-"的虚拟仓库库存位置（例如 `VWH/Stock`）。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:155
-msgid ""
-"On the location form, under the :guilabel:`Additional Information` heading, "
-"set the :guilabel:`Location Type` to :guilabel:`View`. :guilabel:`Save` the "
-"changes."
-msgstr ""
-"在位置表单的 :guilabel:`其他信息` 标题下，将 :guilabel:`位置类型` 设"
-"为 :guilabel:`视图`。:guilabel:`保存` 更改。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:None
-msgid "Warehouse location types in location creation screen."
-msgstr "位置创建屏幕中的仓库位置类型。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:163
-msgid ""
-"To view the total quantity across **all** linked child warehouses, go to the "
-"product form and click the :guilabel:`On Hand` smart button."
-msgstr ""
-"要查看**所有**链接子仓库的总数量，请转到产品表单并点击 :guilabel:`现有` 智能"
-"按钮。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid "Display stock across all linked warehouses."
-msgstr "显示所有链接仓库的库存。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:171
-msgid "Example: sell products from a virtual warehouse"
-msgstr "例如：从虚拟仓库销售产品"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:173
-msgid ""
-"To sell products from multiple warehouses using a virtual parent location, "
-"the database must have at least **two** warehouses configured — with at "
-"least **one** product, with quantity on-hand in each warehouse, respectively."
-msgstr ""
-"要使用虚拟母位置从多个仓库销售产品，数据库必须至少配置**两个**仓库，每个仓库"
-"至少有**一种**产品和库存数量。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:178
-msgid ""
-"The following product, `Toy soldier`, is available at each location with the "
-"quantities:"
-msgstr "以下产品 `玩具士兵` 在每个地点都有供应，数量如下："
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:180
-msgid "`WHA/Stock` : 1"
-msgstr "`WHA/Stock` : 1"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:181
-msgid "`WHB/Stock` : 2"
-msgstr "`WHB/Stock` : 2"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:182
-msgid ""
-"Warehouses `WHA` and `WHB` are child warehouses of the virtual warehouse "
-"`VWH`."
-msgstr "仓库 `WHA` 和 `WHB` 是虚拟仓库 `VWH` 的子仓库。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:184
-msgid ""
-"Create a quotation for the product by navigating to "
-"the :menuselection:`Sales` app and clicking :guilabel:`Create`. On the "
-"quote, add a :guilabel:`Customer`, and click :guilabel:`Add a product` to "
-"add the two products stored in the two warehouses."
-msgstr ""
-"通过导航至 :menuselection:`销售` 应用程序并点击 :guilabel:`创建` 来创建产品报"
-"价。在报价单上添加 :guilabel:`客户` 并点击 :guilabel:`添加产品` 添加存储在两"
-"个仓库中的两种产品。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:188
-msgid ""
-"Then, click the :guilabel:`Other Info` tab on the sales order form. Under "
-"the :guilabel:`Delivery` section, change the :guilabel:`Warehouse` field "
-"value to the virtual warehouse that was :ref:`previously created <inventory/"
-"routes/virtual-wh>`. Next, :guilabel:`Confirm` the sales order."
-msgstr ""
-"然后，点击销售订单表单上的 :guilabel:`其他信息` 选项卡。在 :guilabel:`送货` "
-"部分，将 :guilabel:`仓库` 字段值更改为 :ref:`之前创建 <inventory/routes/"
-"virtual-wh>` 的虚拟仓库。接下来，:guilabel:`确认` 销售订单。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:None
-msgid ""
-"Set virtual warehouse as the *Warehouse* field in sales order's *Other Info* "
-"tab."
-msgstr "将虚拟仓库设置为销售订单 *其他信息* 选项卡中的 *仓库* 字段。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:196
-msgid ""
-"Then, click the :guilabel:`Delivery` smart button. From the warehouse "
-"delivery form, confirm that the :guilabel:`Source Location` value matches "
-"the :guilabel:`Warehouse` field value from the sales order. Both should list "
-"the virtual warehouse location."
-msgstr ""
-"然后，点击 :guilabel:`送货` 智能按钮。在仓库交货表单中，确认 :guilabel:`源位"
-"置` 值与销售订单中的 :guilabel:`仓库` 字段值相匹配。两者都应列出虚拟仓库位"
-"置。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:200
-msgid ""
-"Finally, on the warehouse delivery form, under the :guilabel:`Detailed "
-"Operations` tab, confirm that the :guilabel:`Locations` in "
-"the :guilabel:`From` column for each product match the child locations that "
-"are tied to the virtual parent location."
-msgstr ""
-"最后，在仓库交付表单的 :guilabel:`详细操作` 选项卡下，确认每个产品"
-"的 :guilabel:`来自` 列中的 :guilabel:`位置` 与绑定到虚拟母位置的子位置相匹"
-"配。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:None
-msgid "Delivery order with matching source and child locations."
-msgstr "与源位置和子位置相匹配的送货单。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:209
-msgid ""
-"The :guilabel:`Source Location` on the warehouse delivery form, and "
-"the :guilabel:`Warehouse` under the :guilabel:`Other Info` tab on the sales "
-"order, **must** match for products in the sales order to be pulled from "
-"different warehouses."
-msgstr ""
-"仓库交货单上的 :guilabel:`来源位置` 和销售订单上 :guilabel:`其他信息` 标签下"
-"的 :guilabel:`仓库` **必须**匹配，才能从不同仓库提取销售订单中的产品。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:213
-msgid ""
-"If the virtual warehouse is not in the :guilabel:`Source Location` field on "
-"the warehouse delivery form, retry product reservation by:"
-msgstr ""
-"如果虚拟仓库不在仓库交货表的 :guilabel:`来源位置` 字段中，请重新尝试产品预"
-"订："
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:216
-msgid ""
-"Running the scheduler: turn on :ref:`developer mode <developer-mode>`, and "
-"then go to :menuselection:`Inventory app --> Operations --> Run Scheduler`."
-msgstr ""
-"运行调度程序：打开 :ref:`开发者模式<developer-mode>`，然后转"
-"到 :menuselection:`库存应用程序 --> 操作 --> 运行调度程序`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:218
-msgid "Clicking :guilabel:`Check Availability` on the delivery order."
-msgstr "点击送货单上的 :guilabel:`检查可用性`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:219
-msgid ""
-"If the virtual warehouse is **not** assigned to the :guilabel:`Warehouse` "
-"field on the sales order, then cancel it, and create a new sales order with "
-"the virtual warehouse set in the :guilabel:`Warehouse` field."
-msgstr ""
-"如果虚拟仓库**未**分配给销售订单上的 :guilabel:`仓库` 字段，则取消该订单，并"
-"在 :guilabel:`仓库` 字段中设置虚拟仓库，创建新的销售订单。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:222
-msgid ""
-"If the :guilabel:`Warehouse` field is missing on the sales order form, then "
-"the multiple child warehouses may not have been set up correctly. Review "
-"the :ref:`previous section <inventory/routes/child-wh>` to ensure the "
-"correct settings."
-msgstr ""
-"如果销售订单表中缺少 :guilabel:`仓库` 字段，则可能未正确设置多个子仓库。查"
-"看 :ref:`前部分 <inventory/routes/child-wh>` 以确保设置正确。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:227
-msgid ""
-"To use a virtual *parent* location as the default warehouse for sales "
-"orders, each salesperson should have the virtual warehouse assigned to them "
-"from the drop-down menu next to :guilabel:`Default Warehouse` on their "
-"employee form."
-msgstr ""
-"要使用虚拟*母*仓库作为销售订单的默认仓库，每个销售人员都应从其员工表单"
-"上 :guilabel:`默认仓库` 旁边的下拉菜单中指定虚拟仓库。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:0
-msgid "Default warehouse location on employee form."
-msgstr "员工表格上的默认仓库位置。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:5
 msgid ""
@@ -52078,6 +51576,447 @@ msgstr "处理完交货并将产品退还给客户后，点击 :guilabel:`验证
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid "Sell stock from multiple warehouses using virtual locations"
+#~ msgstr "利用虚拟地点从多个仓库销售库存产品"
+
+#~ msgid ""
+#~ "While keeping stock and selling inventory from one warehouse might work "
+#~ "for smaller companies, bigger companies might need to keep stock in, or "
+#~ "sell from, multiple warehouses in multiple locations."
+#~ msgstr ""
+#~ "对于规模较小的公司来说，从一个仓库保存存货和销售存货可能是可行的，但规模较"
+#~ "大的公司可能需要在多个地点的多个仓库保存存货或销售存货。"
+
+#~ msgid ""
+#~ "Sometimes products included in a single sales order might take stock from "
+#~ "two (or more) warehouses; in Odoo, pulling products from multiple "
+#~ "warehouses to satisfy sales demands can be done using *virtual locations*."
+#~ msgstr "在 Odoo 中，可以使用*虚拟位置*从多个仓库提取产品，以满足销售需求。"
+
+#~ msgid ""
+#~ "The solution in this document, describing the use of a virtual warehouse "
+#~ "to fulfill orders for multiple warehouses, has some limitations. Consider "
+#~ "the following before proceeding:"
+#~ msgstr ""
+#~ "本文档中介绍的解决方案使用虚拟仓库来完成多个仓库的订单，但存在一些局限性。"
+#~ "在继续之前，请考虑以下几点："
+
+#~ msgid ""
+#~ "When the :guilabel:`Warehouse` field is set to a virtual warehouse on a "
+#~ "sales order, the virtual warehouse's address is indicated on the picking, "
+#~ "packing, and delivery forms, **not** the actual warehouse's address."
+#~ msgstr ""
+#~ "当在销售订单上将 :guilabel:`仓库` 字段设置为虚拟仓库时，虚拟仓库的地址会在"
+#~ "拣货、包装和发货单上显示，而**不是**实际仓库的地址。"
+
+#~ msgid ""
+#~ "Each location has a `warehouse_id` (hidden field). This means that the "
+#~ "stock in the virtual warehouse will **not** be the sum of the stock of "
+#~ "the real warehouses, but rather the sum of the stock in the locations "
+#~ "whose warehouse ID is the virtual warehouse."
+#~ msgstr ""
+#~ "每个位置都有一个 `warehouse_id` （隐藏字段）。这意味着虚拟仓库的存货**不是"
+#~ "**真实仓库的存货总和，而是仓库 ID 为虚拟仓库的位置库存的总和。"
+
+#~ msgid ""
+#~ "Potential limitation for those using :doc:`two <../../shipping_receiving/"
+#~ "daily_operations/receipts_delivery_two_steps>` or :doc:`three-step "
+#~ "delivery <../../shipping_receiving/daily_operations/"
+#~ "delivery_three_steps>`:"
+#~ msgstr ""
+#~ "使用 :doc:`两步 <.../../shipping_receiving/daily_operations/"
+#~ "receipts_delivery_twoo_steps>` 或 :doc:`三步交付<.../../"
+#~ "shipping_receiving/daily_operations/delivery_three_steps>` 的潜在限制："
+
+#~ msgid ""
+#~ "The output or packing zone on the various forms is incorrectly listed as "
+#~ "the virtual warehouse's address."
+#~ msgstr "各种表格上的输出区或包装区被错误地列为虚拟仓库的地址。"
+
+#~ msgid "There is no workaround for two or three-step deliveries."
+#~ msgstr "对于两步式或三步式送货流程，没有其他替代方案。"
+
+#~ msgid ""
+#~ "Proceed **only** if setting a virtual warehouse's address as the output "
+#~ "or packing zone makes sense for the company's workflow."
+#~ msgstr ""
+#~ "**仅**在将虚拟仓库的地址设为出货区或打包区符合公司工作流程的情况下，才可继"
+#~ "续操作。"
+
+#~ msgid ""
+#~ "In order to create virtual locations in warehouses, and proceed to the "
+#~ "following steps, the :guilabel:`Storage Locations` and :guilabel:`Multi-"
+#~ "Step Routes` features **must** be enabled."
+#~ msgstr ""
+#~ "要在仓库中创建虚拟位置并进入以下步骤，必须启用 :guilabel:`存储位置` "
+#~ "和 :guilabel:`多步骤路线` 功能。"
+
+#~ msgid ""
+#~ "To do so, go to :menuselection:`Inventory app --> Configuration --> "
+#~ "Settings`, scroll down to the :guilabel:`Warehouse` section, and enable "
+#~ "the :guilabel:`Storage Locations` and :guilabel:`Multi-Step Routes` "
+#~ "options. Then, :guilabel:`Save` the changes to finish."
+#~ msgstr ""
+#~ "要执行此操作，请进入 :menuselection:`库存应用程序 --> 配置 --> 设置`，向下"
+#~ "滚动到 :guilabel:`仓库` 部分，并启用 :guilabel:`存储位置` 和 :guilabel:`多"
+#~ "步路线` 选项。然后，:guilabel:`保存` 完成更改。"
+
+#~ msgid "Create virtual parent location"
+#~ msgstr "创建虚拟母级位置"
+
+#~ msgid ""
+#~ "Before creating any virtual stock locations, create a new warehouse that "
+#~ "acts as a *virtual* warehouse — the *parent* location of other physical "
+#~ "warehouses."
+#~ msgstr ""
+#~ "在创建任何虚拟库存位置之前，先创建一个新仓库，它将作为其他实体仓库的*母级*"
+#~ "仓库。"
+
+#~ msgid ""
+#~ "Virtual warehouses are great for companies with multiple physical "
+#~ "warehouses. This is because a situation might arise when one warehouse "
+#~ "runs out of stock of a particular product, but another warehouse still "
+#~ "has stock on-hand. In this case, stock from these two (or more) "
+#~ "warehouses could be used to fulfill a single sales order."
+#~ msgstr ""
+#~ "虚拟仓库功能特别适合管理多个实体仓库的企业。当一个仓库的某种产品库存不足，"
+#~ "而其他仓库还有现货时，可以通过虚拟仓库将多个仓库的库存统筹起来，满足同一个"
+#~ "销售订单的需求。"
+
+#~ msgid ""
+#~ "The \"virtual\" warehouse acts as a single aggregator of all the "
+#~ "inventory stored in a company's physical warehouses, and is used (for "
+#~ "traceability purposes) to create a hierarchy of locations in Odoo."
+#~ msgstr ""
+#~ "“虚拟” 仓库可以汇总企业所有实体仓库的库存信息，并在Odoo 中建立清晰的库位层"
+#~ "级架构，便于追踪管理。"
+
+#~ msgid ""
+#~ "To create a new warehouse, go to :menuselection:`Inventory app --> "
+#~ "Configuration --> Warehouses`, and click :guilabel:`Create`. From here, "
+#~ "the warehouse :guilabel:`Name` and :guilabel:`Short Name` can be changed, "
+#~ "and other warehouse details can be changed under the :guilabel:`Warehouse "
+#~ "Configuration` tab."
+#~ msgstr ""
+#~ "要创建新仓库，请进入 :menuselection:`库存应用程序 --> 配置 --> 仓库`，然后"
+#~ "点击 :guilabel:`创建`。在此，可更改仓库的 :guilabel:`名称` 和 :guilabel:`"
+#~ "简称`，还可在 :guilabel:`仓库配置` 标签下更改其他仓库细节。"
+
+#~ msgid ""
+#~ "Lastly, click :guilabel:`Save` to finish creating a *regular* warehouse. "
+#~ "Continue following the steps below to finish configuring the virtual "
+#~ "parent warehouse."
+#~ msgstr ""
+#~ "最后，点击 :guilabel:`保存` 完成创建 *常规* 仓库。继续按照以下步骤完成虚拟"
+#~ "母仓库的配置。"
+
+#~ msgid "New warehouse form."
+#~ msgstr "新仓库表单"
+
+#~ msgid ""
+#~ ":doc:`Warehouse configurations <../../warehouses_storage/"
+#~ "inventory_management/warehouses>`"
+#~ msgstr ""
+#~ ":doc:`仓库配置<../../warehouses_storage/inventory_management/warehouses>`"
+
+#~ msgid ""
+#~ ":ref:`Incoming and outgoing shipments <inventory/"
+#~ "receipts_delivery_one_step/wh>`"
+#~ msgstr ":ref:`进出货物 <inventory/receipts_delivery_one_step/wh>`"
+
+#~ msgid ":doc:`../../warehouses_storage/replenishment/resupply_warehouses`"
+#~ msgstr ":doc:`../../warehouses_storage/replenishment/resupply_warehouses`"
+
+#~ msgid "Create child warehouses"
+#~ msgstr "创建子仓库"
+
+#~ msgid ""
+#~ "Create at least two *child* warehouses to link to the virtual warehouse."
+#~ msgstr "创建至少两个*子*仓库与虚拟仓库链接。"
+
+#~ msgid ""
+#~ "In order to take stock from multiple warehouses to fulfill a sales order, "
+#~ "there needs to be at least **two** warehouses acting as child locations "
+#~ "of the virtual parent location warehouse."
+#~ msgstr ""
+#~ "为了从多个仓库中提取存货来完成销售订单，至少需要有**两个**仓库作为虚拟母仓"
+#~ "库的子仓库。"
+
+#~ msgid ""
+#~ "To do that, navigate to :menuselection:`Inventory app --> Configuration --"
+#~ "> Warehouses`, click :guilabel:`Create`, and follow the :ref:`preceding "
+#~ "instructions <inventory/routes/virtual-wh>` to configure the physical "
+#~ "stock locations."
+#~ msgstr ""
+#~ "要执行此操作，请导航至 :menuselection:`库存应用程序 --> 配置 --> 仓库`，点"
+#~ "击 :guilabel:`创建`，然后按照 :ref:`先前说明 <inventory/routes/virtual-"
+#~ "wh>` 配置物理库存位置。"
+
+#~ msgid "**Parent Warehouse**"
+#~ msgstr "**母级仓库**"
+
+#~ msgid ":guilabel:`Warehouse`: `Virtual Warehouse`"
+#~ msgstr ":guilabel:`仓库`：`虚拟仓库`"
+
+#~ msgid ":guilabel:`Location`: `VWH/Stock`"
+#~ msgstr ":guilabel:`位置`：`VWH/Stock`"
+
+#~ msgid "**Child Warehouses**"
+#~ msgstr "**子仓库**"
+
+#~ msgid ":guilabel:`Warehouses`: `Warehouse A` and `Warehouse B`"
+#~ msgstr ":guilabel:`仓库`：`仓库 A` 和 `仓库 B`"
+
+#~ msgid ":guilabel:`Locations`: `WHA` and `WHB`"
+#~ msgstr ":guilabel:`位置`：`WHA` 和 `WHB`"
+
+#~ msgid ""
+#~ "Graphic of child locations 'WHA' and 'WHB' tied to the parent location."
+#~ msgstr "展示了母级库位及其关联的子级库位 'WHA' 和 'WHB' 的结构图"
+
+#~ msgid ""
+#~ "While the virtual stock location will be changed to 'View' later, "
+#~ "the :guilabel:`Location Type` **must** be :guilabel:`Internal Location` "
+#~ "at this point to :ref:`link the child warehouses <inventory/routes/link-"
+#~ "to-vwh>` in the next section."
+#~ msgstr ""
+#~ "虽然虚拟库存位置稍后将更改为 '视图'，但此时 :guilabel:`位置类型` ** 必须**"
+#~ "为 :guilabel:`内部位置`，以便在下一节中 :ref:`关联子仓库 <inventory/"
+#~ "routes/link-to-vwh>`。"
+
+#~ msgid "Link child warehouses to virtual stock"
+#~ msgstr "将子仓库链接到虚拟库存"
+
+#~ msgid ""
+#~ "To set physical warehouses as child locations of the virtual location "
+#~ "configured in the :ref:`previous step <inventory/routes/virtual-wh>`, "
+#~ "navigate to :menuselection:`Inventory app --> Configuration --> "
+#~ "Locations`."
+#~ msgstr ""
+#~ "要将物理仓库设置为在 :ref:`上一步 <inventory/routes/virtual-wh>` 中配置的"
+#~ "虚拟位置的子位置，请导航至 :menuselection:`库存应用程序 --> 配置 --> 位置"
+#~ "`。"
+
+#~ msgid ""
+#~ "Remove any filters from the search bar. Then, click the physical "
+#~ "warehouse :guilabel:`Location` that was previously created to be a child "
+#~ "location (e.g. `WHA`), and click :guilabel:`Edit`."
+#~ msgstr ""
+#~ "删除搜索栏中的任何筛选器。然后，点击先前创建为子位置（如 `WHA`）的物理仓"
+#~ "库 :guilabel:`位置`，然后点击 :guilabel:`编辑`。"
+
+#~ msgid ""
+#~ "Change the :guilabel:`Parent Location` field from :guilabel:`Physical "
+#~ "Locations` to the virtual warehouse's **stock location** (e.g. `VWH/"
+#~ "Stock`) from the drop-down menu, and click :guilabel:`Save`."
+#~ msgstr ""
+#~ "从下拉菜单中将 :guilabel:`母位置` 字段从 :guilabel:`实体位置` 改为虚拟仓库"
+#~ "的**库存位置**（例如，`VWH/Stock`），然后点击 :guilabel:`保存`。"
+
+#~ msgid ""
+#~ "To select the virtual warehouse's stock location in the :guilabel:`Parent "
+#~ "Location` drop-down menu, the parent warehouse stock location (e.g. `VWH/"
+#~ "Stock`) **must**  have its :guilabel:`Location Type` set "
+#~ "to :guilabel:`Internal Location`."
+#~ msgstr ""
+#~ "要在 :guilabel:`母位置` 下拉菜单中选择虚拟仓库的库存位置，母仓库库存位置"
+#~ "（如 `VWH/Stock`）**必须**将其 :guilabel:`位置类型` 设置为 :guilabel:`内部"
+#~ "位置`。"
+
+#~ msgid ""
+#~ "Set the child warehouse's *Parent Location* to the virtual warehouse."
+#~ msgstr "将子仓库的*母位置*设置为虚拟仓库。"
+
+#~ msgid ""
+#~ "Repeat the preceding steps to configure two or more child warehouses."
+#~ msgstr "重复前面的步骤，配置两个或更多子仓库。"
+
+#~ msgid ""
+#~ "Once complete, the virtual, parent warehouse (e.g. `VWH/Stock`) fulfills "
+#~ "orders using stock from child warehouses (e.g. `WHA` and `WHB`), if there "
+#~ "is insufficient stock in any one location."
+#~ msgstr ""
+#~ "一旦完成，虚拟母仓库（如 `VWH/Stock`）会在任何一个地点库存不足时，使用子仓"
+#~ "库（如 `WHA` 和 `WHB`）的库存来完成订单。"
+
+#~ msgid "Set virtual stock location as 'view'"
+#~ msgstr "将虚拟库存位置设置为 “视图”"
+
+#~ msgid ""
+#~ "Set the virtual stock location's :guilabel:`Location Type` "
+#~ "to :guilabel:`View`, as it is a non-existent location used to group "
+#~ "various physical warehouses together."
+#~ msgstr ""
+#~ "将虚拟库存位置的 :guilabel:`位置类型` 设置为 :guilabel:`视图`，因为它是一"
+#~ "个不存在的位置，用于将各种物理仓库组合在一起。"
+
+#~ msgid ""
+#~ "To do that, navigate to :menuselection:`Inventory app --> Configuration --"
+#~ "> Locations`."
+#~ msgstr ""
+#~ "要执行此操作，请导航至 :menuselection:`库存应用程序 --> 配置 --> 位置`。"
+
+#~ msgid ""
+#~ "Click the virtual warehouse's stock location (e.g. `VWH/Stock`) that "
+#~ "was :ref:`previously created <inventory/routes/virtual-wh>`, from "
+#~ "the :guilabel:`Locations` list."
+#~ msgstr ""
+#~ "从 :guilabel:`位置` 列表中点击 :ref:`之前创建 <inventory/routes/virtual-"
+#~ "wh>` 的虚拟仓库库存位置（例如 `VWH/Stock`）。"
+
+#~ msgid ""
+#~ "On the location form, under the :guilabel:`Additional Information` "
+#~ "heading, set the :guilabel:`Location Type` "
+#~ "to :guilabel:`View`. :guilabel:`Save` the changes."
+#~ msgstr ""
+#~ "在位置表单的 :guilabel:`其他信息` 标题下，将 :guilabel:`位置类型` 设"
+#~ "为 :guilabel:`视图`。:guilabel:`保存` 更改。"
+
+#~ msgid "Warehouse location types in location creation screen."
+#~ msgstr "位置创建屏幕中的仓库位置类型。"
+
+#~ msgid ""
+#~ "To view the total quantity across **all** linked child warehouses, go to "
+#~ "the product form and click the :guilabel:`On Hand` smart button."
+#~ msgstr ""
+#~ "要查看**所有**链接子仓库的总数量，请转到产品表单并点击 :guilabel:`现有` 智"
+#~ "能按钮。"
+
+#~ msgid "Display stock across all linked warehouses."
+#~ msgstr "显示所有链接仓库的库存。"
+
+#~ msgid "Example: sell products from a virtual warehouse"
+#~ msgstr "例如：从虚拟仓库销售产品"
+
+#~ msgid ""
+#~ "To sell products from multiple warehouses using a virtual parent "
+#~ "location, the database must have at least **two** warehouses configured — "
+#~ "with at least **one** product, with quantity on-hand in each warehouse, "
+#~ "respectively."
+#~ msgstr ""
+#~ "要使用虚拟母位置从多个仓库销售产品，数据库必须至少配置**两个**仓库，每个仓"
+#~ "库至少有**一种**产品和库存数量。"
+
+#~ msgid ""
+#~ "The following product, `Toy soldier`, is available at each location with "
+#~ "the quantities:"
+#~ msgstr "以下产品 `玩具士兵` 在每个地点都有供应，数量如下："
+
+#~ msgid "`WHA/Stock` : 1"
+#~ msgstr "`WHA/Stock` : 1"
+
+#~ msgid "`WHB/Stock` : 2"
+#~ msgstr "`WHB/Stock` : 2"
+
+#~ msgid ""
+#~ "Warehouses `WHA` and `WHB` are child warehouses of the virtual warehouse "
+#~ "`VWH`."
+#~ msgstr "仓库 `WHA` 和 `WHB` 是虚拟仓库 `VWH` 的子仓库。"
+
+#~ msgid ""
+#~ "Create a quotation for the product by navigating to "
+#~ "the :menuselection:`Sales` app and clicking :guilabel:`Create`. On the "
+#~ "quote, add a :guilabel:`Customer`, and click :guilabel:`Add a product` to "
+#~ "add the two products stored in the two warehouses."
+#~ msgstr ""
+#~ "通过导航至 :menuselection:`销售` 应用程序并点击 :guilabel:`创建` 来创建产"
+#~ "品报价。在报价单上添加 :guilabel:`客户` 并点击 :guilabel:`添加产品` 添加存"
+#~ "储在两个仓库中的两种产品。"
+
+#~ msgid ""
+#~ "Then, click the :guilabel:`Other Info` tab on the sales order form. Under "
+#~ "the :guilabel:`Delivery` section, change the :guilabel:`Warehouse` field "
+#~ "value to the virtual warehouse that was :ref:`previously created "
+#~ "<inventory/routes/virtual-wh>`. Next, :guilabel:`Confirm` the sales order."
+#~ msgstr ""
+#~ "然后，点击销售订单表单上的 :guilabel:`其他信息` 选项卡。在 :guilabel:`送货"
+#~ "` 部分，将 :guilabel:`仓库` 字段值更改为 :ref:`之前创建 <inventory/routes/"
+#~ "virtual-wh>` 的虚拟仓库。接下来，:guilabel:`确认` 销售订单。"
+
+#~ msgid ""
+#~ "Set virtual warehouse as the *Warehouse* field in sales order's *Other "
+#~ "Info* tab."
+#~ msgstr "将虚拟仓库设置为销售订单 *其他信息* 选项卡中的 *仓库* 字段。"
+
+#~ msgid ""
+#~ "Then, click the :guilabel:`Delivery` smart button. From the warehouse "
+#~ "delivery form, confirm that the :guilabel:`Source Location` value matches "
+#~ "the :guilabel:`Warehouse` field value from the sales order. Both should "
+#~ "list the virtual warehouse location."
+#~ msgstr ""
+#~ "然后，点击 :guilabel:`送货` 智能按钮。在仓库交货表单中，确认 :guilabel:`源"
+#~ "位置` 值与销售订单中的 :guilabel:`仓库` 字段值相匹配。两者都应列出虚拟仓库"
+#~ "位置。"
+
+#~ msgid ""
+#~ "Finally, on the warehouse delivery form, under the :guilabel:`Detailed "
+#~ "Operations` tab, confirm that the :guilabel:`Locations` in "
+#~ "the :guilabel:`From` column for each product match the child locations "
+#~ "that are tied to the virtual parent location."
+#~ msgstr ""
+#~ "最后，在仓库交付表单的 :guilabel:`详细操作` 选项卡下，确认每个产品"
+#~ "的 :guilabel:`来自` 列中的 :guilabel:`位置` 与绑定到虚拟母位置的子位置相匹"
+#~ "配。"
+
+#~ msgid "Delivery order with matching source and child locations."
+#~ msgstr "与源位置和子位置相匹配的送货单。"
+
+#~ msgid ""
+#~ "The :guilabel:`Source Location` on the warehouse delivery form, and "
+#~ "the :guilabel:`Warehouse` under the :guilabel:`Other Info` tab on the "
+#~ "sales order, **must** match for products in the sales order to be pulled "
+#~ "from different warehouses."
+#~ msgstr ""
+#~ "仓库交货单上的 :guilabel:`来源位置` 和销售订单上 :guilabel:`其他信息` 标签"
+#~ "下的 :guilabel:`仓库` **必须**匹配，才能从不同仓库提取销售订单中的产品。"
+
+#~ msgid ""
+#~ "If the virtual warehouse is not in the :guilabel:`Source Location` field "
+#~ "on the warehouse delivery form, retry product reservation by:"
+#~ msgstr ""
+#~ "如果虚拟仓库不在仓库交货表的 :guilabel:`来源位置` 字段中，请重新尝试产品预"
+#~ "订："
+
+#~ msgid ""
+#~ "Running the scheduler: turn on :ref:`developer mode <developer-mode>`, "
+#~ "and then go to :menuselection:`Inventory app --> Operations --> Run "
+#~ "Scheduler`."
+#~ msgstr ""
+#~ "运行调度程序：打开 :ref:`开发者模式<developer-mode>`，然后转"
+#~ "到 :menuselection:`库存应用程序 --> 操作 --> 运行调度程序`。"
+
+#~ msgid "Clicking :guilabel:`Check Availability` on the delivery order."
+#~ msgstr "点击送货单上的 :guilabel:`检查可用性`。"
+
+#~ msgid ""
+#~ "If the virtual warehouse is **not** assigned to the :guilabel:`Warehouse` "
+#~ "field on the sales order, then cancel it, and create a new sales order "
+#~ "with the virtual warehouse set in the :guilabel:`Warehouse` field."
+#~ msgstr ""
+#~ "如果虚拟仓库**未**分配给销售订单上的 :guilabel:`仓库` 字段，则取消该订单，"
+#~ "并在 :guilabel:`仓库` 字段中设置虚拟仓库，创建新的销售订单。"
+
+#~ msgid ""
+#~ "If the :guilabel:`Warehouse` field is missing on the sales order form, "
+#~ "then the multiple child warehouses may not have been set up correctly. "
+#~ "Review the :ref:`previous section <inventory/routes/child-wh>` to ensure "
+#~ "the correct settings."
+#~ msgstr ""
+#~ "如果销售订单表中缺少 :guilabel:`仓库` 字段，则可能未正确设置多个子仓库。查"
+#~ "看 :ref:`前部分 <inventory/routes/child-wh>` 以确保设置正确。"
+
+#~ msgid ""
+#~ "To use a virtual *parent* location as the default warehouse for sales "
+#~ "orders, each salesperson should have the virtual warehouse assigned to "
+#~ "them from the drop-down menu next to :guilabel:`Default Warehouse` on "
+#~ "their employee form."
+#~ msgstr ""
+#~ "要使用虚拟*母*仓库作为销售订单的默认仓库，每个销售人员都应从其员工表单"
+#~ "上 :guilabel:`默认仓库` 旁边的下拉菜单中指定虚拟仓库。"
+
+#~ msgid "Default warehouse location on employee form."
+#~ msgstr "员工表格上的默认仓库位置。"
 
 #~ msgid "US Postal Service"
 #~ msgstr "美国邮政服务"
