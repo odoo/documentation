@@ -28,6 +28,8 @@ bar. After finding the :guilabel:`Delivery Costs` module, click :guilabel:`Activ
 .. image:: setup_configuration/install-module.png
    :alt: Install the Delivery Costs module.
 
+.. _inventory/setup_configuration/add-method:
+
 Add shipping method
 ===================
 
@@ -282,6 +284,7 @@ supports.
    setup_configuration/easypost
    setup_configuration/fedex
    setup_configuration/sendcloud_shipping
+   setup_configuration/shiprocket
    setup_configuration/starshipit_shipping
    setup_configuration/ups_credentials
    setup_configuration/usps
