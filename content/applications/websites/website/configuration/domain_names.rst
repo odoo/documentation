@@ -100,24 +100,12 @@ your domain name with a mailbox.
 Use a subdomain
 ~~~~~~~~~~~~~~~
 
-You can create a subdomain (e.g., `subdomain.yourdomain.com`) to use as an alias domain for the
-database. It allows users to create records in the database from emails received on their
-`email@subdomain.yourdomain.com` alias.
+Create a dedicated subdomain (for example, ``mail.mydomain.com``) to route incoming emails
+directly to your Odoo database via DNS records.
 
-To do so, open the `database manager <https://www.odoo.com/my/databases>`_, click the
-:icon:`fa-gear` (:guilabel:`gear`) button next to the database name and select :icon:`fa-globe`
-:guilabel:`Domain Names`. Click :guilabel:`DNS`, then :guilabel:`Add DNS record` and select
-:guilabel:`CNAME`. Next, enter the desired subdomain in the :guilabel:`Name` field (e.g.,
-`subdomain`), the original database domain with a period at the end (e.g., `mycompany.odoo.com.`) in
-the :guilabel:`Content` field, and click :guilabel:`Add record`.
+For more information, see :ref:`DNS records<dns_record_setup>` for inbound email routing.
 
-Then, add the alias domain as your *own domain* by clicking :guilabel:`Use my own domain`, entering
-the alias domain (e.g., `subdomain.yourdomain.com`), clicking :guilabel:`Verify`, and then
-:guilabel:`I confirm, it's done`.
-
-Finally, go to your database and open the :guilabel:`Settings`. Under the :guilabel:`Alias Domain`
-field, enter the alias domain (e.g., `subdomain.yourdomain.com`), click :guilabel:`Create`, and then
-:guilabel:`Save`.
+.. _domain-name/external-email:
 
 Use an external email provider
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
