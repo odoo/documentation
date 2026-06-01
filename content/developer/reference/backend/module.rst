@@ -150,6 +150,8 @@ Available manifest fields are:
 
     These hooks should only be used when setup/cleanup required for this module
     is either extremely difficult or impossible through the api.
+``sequence`` (``int``)
+    Where in the list your module will show within the Apps module. A lower number means your module will be higher in the list. By default, it is set to ``100``.
 ``active`` (``bool``)
     Deprecated. Replaced by ``auto_install``.
 
