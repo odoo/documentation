@@ -42,7 +42,7 @@ The following is a list of available shipping connectors in Odoo:
      - Belgium
    * - :doc:`Easypost <easypost>`
      - North America
-   * - Shiprocket
+   * - :doc:`Shiprocket <shiprocket>`
      - India
    * - :doc:`Starshipit <starshipit_shipping>`
      - Australia and New Zealand
