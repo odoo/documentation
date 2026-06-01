@@ -121,11 +121,10 @@ to a mailbox.
 Use a subdomain
 ~~~~~~~~~~~~~~~
 
-After :ref:`creating a subdomain <domain-name/register/subdomains>`, go to the database and open
-the :guilabel:`Settings` app. Under the :guilabel:`Alias Domain` field, enter the subdomain (e.g.,
-`subdomain.yourdomain.com`), click :guilabel:`Create`, and then :guilabel:`Save`.
+Create a dedicated subdomain (for example, ``mail.mydomain.com``) to :ref:`route incoming emails
+directly to your Od˛oo database via DNS records <dns_record_setup>`.
 
-.. _domain-name/register/mailbox/external:
+.. _domain-name/external-email:
 
 Use an external email provider
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
