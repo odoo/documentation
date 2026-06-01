@@ -95,7 +95,7 @@ orders, etc.), one of these three methods must be used:
 
 - :ref:`Redirections/forwarding <email-inbound-custom-domain-redirections>`,
 - :ref:`Incoming mail servers <email-inbound-custom-domain-incoming-server>`,
-- :ref:`MX record <email-inbound-custom-domain-mx>` (requires advanced technical knowledge)
+- :ref:`DNS records <email-inbound-custom-domain-dns>` (requires advanced technical knowledge)
 
 Using a custom domain implies that specific :ref:`local-parts
 <email-outbound-custom-domain-smtp-server-local-part>` might be used by Odoo to send emails.
