@@ -10,7 +10,7 @@ working more overtime <attendances/overtime>`, and who is :ref:`not working thei
 View report
 ===========
 
-To view the attendance report, click :guilabel:`Reporting` in the top menu. The default report
+To view the attendances report, click :guilabel:`Reporting` in the top menu. The default report
 displays attendance information for current employees over the past three months, in a default
 :icon:`oi-view-pivot` :guilabel:`Pivot table`. The rows are populated by employee, while the columns
 are populated by the various attendance records. All entries are grouped by month.
