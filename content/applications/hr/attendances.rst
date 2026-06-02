@@ -155,6 +155,7 @@ when extra time is counted and what time is not logged.
    - :doc:`attendances/overtime`
    - :doc:`attendances/hardware`
    - :doc:`attendances/attendance_reporting`
+   - :doc:`attendances/time_off_ledger`
 
 .. toctree::
    :titlesonly:
@@ -167,3 +168,4 @@ when extra time is counted and what time is not logged.
    attendances/overtime
    attendances/hardware
    attendances/attendance_reporting
+   attendances/time_off_ledger
