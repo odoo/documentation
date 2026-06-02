@@ -76,12 +76,40 @@ It is also possible to approve, validate, or refuse the request from this form. 
 :guilabel:`Approve` button to approve, the :guilabel:`Validate` button to validate, or the
 :guilabel:`Refuse` button to refuse the request.
 
-Once a request has been approved, validated, or refused, the Kanban card disappears from the default
 :guilabel:`All Time Off` page. To view *all* requests, including approved and refused requests,
 clear the default filters in the search bar.
 
 .. image:: management/detailed-request.png
    :alt: The detailed time off request form for the employee George Davis.
+
+.. _time_off/missing:
+
+Add missing time off requests
+-----------------------------
+
+If an employee forgets to request time off for days they did not work, a time off record must be
+created retroactively. To create missing time off requests, navigate to :menuselection:`Time Off app
+--> Management --> Time Off`, and click :guilabel:`New`.
+
+On the time off request form, configure the following fields:
+
+- :guilabel:`Employee`: Using the drop-down menu, select the employee missing the time off request.
+- :guilabel:`Time Off Type`: Using the drop-down menu, select the :doc:`type of time off
+  <time_off_types>` for the request.
+- :guilabel:`Payslip State`: Using the drop-down menu, select when the paid time off is given to the
+  employee. The options are: :guilabel:`To compute in next payslip`, :guilabel:`To compute in
+  current payslip`, and :guilabel:`To defer to next payslip`.
+- :guilabel:`Dates`: Using the calendar selector, configure the start and end dates for the time off
+  request.
+- :guilabel:`Description`: In the field below. enter any information regarding the request. For
+  example, `Forgot to request the time off.` or `Could not request time off as they were sick.`
+- :icon:`fa-paperclip` :guilabel:`Attach File`: If there is relevant documentation for the request,
+  click this button, navigate to the desired file, then click :guilabel:`Open`.
+
+Once the form is filled out, click :guilabel:`Approve` to approve the request.
+
+.. image:: management/missing-to-form.png
+   :alt: A time off form for missing time off.
 
 .. _time_off/manage-allocations:
 
