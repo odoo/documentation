@@ -206,6 +206,10 @@ computer and your Odoo database hosted online.
 Follow the :ref:`installation instructions for the Windows virtual IoT
 <iot/windows-iot/installation>`. Once installed:
 
+.. important::
+   Make sure to follow all the instructions from beginning to end, including connecting the Windows
+   virtual IoT to your Odoo database.
+
 #. Open the :ref:`virtual IoT homepage <iot/windows-iot/homepage>`
 #. Click the :icon:`fa-cogs` (:guilabel:`cogs`) button then :guilabel:`Credentials`.
 #. Copy the content under the :guilabel:`Proxy Access Token (for Egypt only)` field and save it for
