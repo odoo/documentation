@@ -81,9 +81,9 @@ Odoo uses two rules to compute the price of a product when a rental order is cre
 Rental pricelist rules
 ======================
 
-Extra rental prices are configured in the product's :guilabel:`Prices` tab. The prices are
-configured like advanced :doc:`pricelists <sales/products_prices/prices/pricing>`, where the
-following fields work as conditions for the price to be applied:
+Extra rental prices are configured in the product's :ref:`rental/products/prices-tab` tab. The
+prices are configured like advanced :doc:`pricelists <sales/products_prices/prices/pricing>`, where
+the following fields work as conditions for the price to be applied:
 
 - :guilabel:`Pricelist`: The pricelist for which the pricelist rule is valid.
 - :guilabel:`Min Quantity`: To trigger the Pricelist rule, the quantity must meet or exceed the
