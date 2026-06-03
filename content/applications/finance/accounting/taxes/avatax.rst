@@ -286,6 +286,8 @@ for specific guidance.
 Should the :guilabel:`Commit Transactions` checkbox be ticked, then, the transactions in the Odoo
 database will be committed for reporting in *AvaTax*.
 
+.. _accounting/avatax/address-validation:
+
 Address validation
 ~~~~~~~~~~~~~~~~~~
 
