@@ -211,6 +211,10 @@ is used in the Project app to plan an itinerary between different tasks.
     on the view. This selection field is dynamically hidden unless the routing mode is set
     to :guilabel:`Ordered`.
 
+  .. note::
+     A :ref:`Mapbox token <general/integrations/geolocation-routes>` must be configured to use the
+     routing.
+
 .. example::
 
    .. image:: views/map-task.png
