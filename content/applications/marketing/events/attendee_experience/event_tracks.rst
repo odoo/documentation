@@ -177,6 +177,8 @@ The :guilabel:`Group By` column has the following options:
 - :guilabel:`Location`: Group data by location.
 - :guilabel:`Custom Group...`: Group data by a :ref:`custom group <search/group>`.
 
+.. _events/event_tracks/create-track:
+
 Create event track
 ==================
 
