@@ -54,11 +54,11 @@ Most Nuvei payment methods are **region specific**. The supported payment method
 each country are listed below:
 
 +---------------------------------+----------------------------------+
-| **Argentina**                   | **Ecuador**                      |
+| **Argentina**                   | **Uruguay**                      |
 |                                 |                                  |
 | - Boleto                        | - Card (AMEX, Mastercard, Visa)  |
-| - Card (AMEX, Mastercard, Visa) | - AstroPay TEF (Banco Guayaquil, |
-|                                 |   Banco Pichincha, Facilito)     |
+| - Card (AMEX, Mastercard, Visa) | - Local Payments (Abitab,        |
+|                                 |   RedPagos)                      |
 +---------------------------------+----------------------------------+
 | **Brazil**                      | **Mexico**                       |
 |                                 |                                  |
@@ -76,11 +76,11 @@ each country are listed below:
 | - Card (AMEX, Mastercard, Visa) | - Card (AMEX, Mastercard, Visa)  |
 | - WebPay                        |                                  |
 +---------------------------------+----------------------------------+
-| **Colombia**                    | **Uruguay**                      |
+| **Colombia**                    |                                  |
 |                                 |                                  |
-| - Card (AMEX, Mastercard, Visa) | - Card (AMEX, Mastercard, Visa)  |
-| - PSE                           | - Local Payments (Abitab,        |
-|                                 |   RedPagos)                      |
+| - Card (AMEX, Mastercard, Visa) |                                  |
+| - PSE                           |                                  |
+|                                 |                                  |
 +---------------------------------+----------------------------------+
 
 .. seealso::
