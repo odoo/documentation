@@ -2,142 +2,159 @@
 Talks, proposals, and agenda
 ============================
 
-With Odoo *Events*, users can utilize a fully-integrated event website, where attendees can quickly
-access various tracks (talks, presentations, etc.), view entire agendas, and propose talks for the
-event.
+With Odoo **Events**, visitors can use the event website to view tracks, propose talks, and see a
+detailed agenda for their events.
+
+.. important::
+   In order to access talks, proposals, and agendas, internal users must have event tracks enabled
+   and set up. See the :doc:`event_tracks` documentation to learn more about enabling and creating
+   tracks.
+
+.. _events/talks-proposals-agenda/website:
 
 Event website
 =============
 
-To access an event website, navigate to the specific event form in the Odoo *Events* app, and click
-the :guilabel:`Go to Website` smart button. Or, while on the Odoo-built website for the company,
-click the :guilabel:`Events` header option, and select the desired event to view that event's
-website.
+When an internal user :doc:`creates an event <../event_setup/create_events>`, Odoo **Events**
+generates a separate website for it on the user's Odoo-built website.
 
-On the event website, there is an event-specific subheader menu with different options to choose
-from.
+Visitors can access that event website in two ways:
 
-With the *Schedule & Tracks* setting enabled in the Odoo *Events* app, the following links are
-automatically added to the subheader menu, located on the event website: :guilabel:`Talks`,
-:guilabel:`Talk Proposals`, and :guilabel:`Agenda`.
+#. Open the **Events** app, navigate to the specific event, and click the :guilabel:`Go to Website`
+   smart button.
 
-.. image:: track_manage_talks/track-submenu-options.png
-   :align: center
-   :alt: The track-related event submenu options on an event website built with Odoo Events.
+#. Or, while on the Odoo-built website, click the :guilabel:`Events` header option, then select the
+   desired event.
 
-To enable the :guilabel:`Schedule & Tracks` setting, navigate to :menuselection:`Events app -->
-Configuration --> Settings`, tick the checkbox beside :guilabel:`Schedule & Tracks`, and click
-:guilabel:`Save`.
+On the event website, there is a sub-header menu with different pages, including the following:
 
-Talks page
-----------
-
-The :guilabel:`Talks` link takes the attendee to a page filled with all the planned tracks for the
-event.
-
-.. image:: track_manage_talks/talks-page.png
-   :align: center
-   :alt: The Talks page on an event website built through the Odoo Events application.
-
-At the top of :guilabel:`Talks` page, there are drop-down filter menus beside a :guilabel:`Search
-a talk...` search bar.
-
-The first drop-down filter menu (with the starting title: :guilabel:`Favorites`) is the only
-drop-down filter menu that appears by default. When clicked, the resulting menu presents two
-options: :guilabel:`Favorites` and :guilabel:`All Talks`.
-
-Selecting :guilabel:`Favorites` shows *only* the tracks that have been favorited by the attendee.
+- :guilabel:`Talks`: :ref:`View a schedule <events/talks-proposals-agenda/view-talks>` of all tracks
+  scheduled for the event, listed by date.
+- :guilabel:`Talk Proposals`: :ref:`Submit a proposal <events/talks-proposals-agenda/propose-talks>`
+  to participate as a speaker during the event.
+- :guilabel:`Agenda`: :ref:`View a calendar <events/talks-proposals-agenda/view-agenda>` of all
+  scheduled tracks for the event, showing detailed times for each date.
 
 .. note::
-   If no tracks have been favorited, and the :guilabel:`Favorites` filter is selected, Odoo presents
-   all the event tracks.
+   If the sub-header menu does not appear, it must be manually enabled by the internal user.
 
-Selecting :guilabel:`All Talks` shows *all* the tracks, regardless if they have been favorited or
-not.
+   To do so, click the :guilabel:`Edit` button at the top. In the editor panel, click the
+   :guilabel:`Customize` tab at the top, then enable the :guilabel:`Sub-menu (Specific)` setting.
+   Finally, click :guilabel:`Save` to apply changes.
 
-The other drop-down filter menus that appear on this page are related to any configured tags (and
-tag categories) created for event tracks in the backend.
+.. image:: track_manage_talks/talks-submenu-options.png
+   :alt: The track-related event submenu options on an event website built with Odoo Events.
 
-.. tip::
-   To add tags and tag categories to track forms, open a desired event track form, and start typing
-   a new tag in the :guilabel:`Tags` field. Then, click :guilabel:`Create and edit...` from the
-   resulting drop-down menu.
+.. _events/talks-proposals-agenda/view-talks:
 
-   Doing so reveals a :guilabel:`Create Tags` pop-up form.
+View talks
+==========
 
-   .. image:: track_manage_talks/create-tags-popup.png
-      :align: center
-      :alt: The Create Tags pop-up form that coincides with drop-down filter menus on Talks page.
+The *Talks* page displays a schedule of planned tracks for the event, sorted by date.
 
-   From here, users see the recently added tag in the :guilabel:`Tag Name` field. Beneath that,
-   there is an option to add a specific :guilabel:`Color Index` to the tag for added organization.
+Visitors can mark a track as a *Favorite* by clicking the :icon:`fa-bell-o` :guilabel:`(empty bell)`
+icon to the right of the track title. A track marked as a *Favorite* appears with the
+:icon:`fa-bell` :guilabel:`(filled bell)` icon. Visitors can then :ref:`filter tracks by favorites
+<events/talks-proposals-agenda/filter-favorites>`.
 
-   Lastly, there is the :guilabel:`Category` field, where users can either select a pre-existing
-   category for this new tag, or create a new one.
+Additionally, visitors can also :ref:`filter tracks by their tags
+<events/talks-proposals-agenda/filter-tags>` (customized on each track's form).
 
-   All options in the :guilabel:`Category` field for tags appear as their own drop-down filter menu
-   on the :guilabel:`Talks` page, located on the event website.
+.. image:: track_manage_talks/talks-page.png
+   :alt: The Talks page on an event website built through the Odoo Events application.
 
-Beneath the drop-down filter menus at the top of the :guilabel:`Talks` page, there is a list of
-planned tracks for the specific event, organized by day.
+.. _events/talks-proposals-agenda/filter-favorites:
 
-If an attendee wishes to favorite a track, they can click the :icon:`fa-bell-o` :guilabel:`(empty
-bell)` icon, located to the right of the track title. Attendees will know a track has been favorited
-when they notice the icon has been changed to :icon:`fa-bell` :guilabel:`(filled bell)` icon.
-
-Favoriting a track this way places it on the list of :guilabel:`Favorites`, which is accessible from
-the default drop-down filter menu, located at the top of the :guilabel:`Talks` page.
-
-Talk Proposals page
+Filter by favorites
 -------------------
 
-The :guilabel:`Talk Proposals` link takes attendees to a page on the event website, wherein they can
-formerly submit a proposal for a talk (:dfn:`track`) for the event, via a custom online form.
+To filter the *Talks* page by any tracks marked as a *Favorite*, click on the :guilabel:`Favorites`
+drop-down menu.
+
+Visitors can then choose one of two options:
+
+- :guilabel:`Favorites`: shows **only** tracks marked as *Favorite*.
+
+- :guilabel:`All Talks`: shows **all** tracks.
+
+.. note::
+   If the visitor applies the :guilabel:`Favorites` option without having marked any tracks as a
+   *Favorite*, all event tracks are displayed.
+
+.. _events/talks-proposals-agenda/filter-tags:
+
+Filter by tags
+--------------
+
+If any tracks have tags and tag categories configured in the database during :ref:`track creation
+<events/event_tracks/create-track>`, additional drop-down filter menus will appear at the top of the
+page next to the :guilabel:`Favorites` drop-down, allowing users to filter tracks by tag categories.
+
+.. tip::
+   To add tags and tag categories to track forms, navigate to the **Events** app and open the
+   desired event. Click the :icon:`fa-microphone` :guilabel:`Tracks` smart button and open the
+   desired event track.
+
+   On the track form, type a new tag in the :guilabel:`Tags` field. Then, click :guilabel:`Create
+   and edit...` from the resulting drop-down menu.
+
+   Doing so reveals a :guilabel:`Create Tags` pop-up form with the following fields:
+
+   - :guilabel:`Tag Name`: The name of the tag. This field is already populated.
+   - :guilabel:`Color Index`: The color of the track associated with this tag, displayed on the
+     website.
+   - :guilabel:`Category`: The category of the tag. This category appears as the drop-down filter
+     menu on the *Talks* page.
+
+   .. image:: track_manage_talks/create-tags-popup.png
+      :alt: The Create Tags pop-up form that coincides with drop-down filter menus on Talks page.
+
+.. _events/talks-proposals-agenda/propose-talks:
+
+Propose talks
+=============
+
+The *Talk Proposals* page allows visitors to submit a proposal for a talk via a custom online form.
+
+.. tip::
+   By default, the *Talk Proposals* page is automatically generated by Odoo. If needed, internal
+   users can :doc:`edit <../../../websites/website/web_design/elements>` any part of the page,
+   including the proposal form.
 
 .. image:: track_manage_talks/talk-proposals-page.png
-   :align: center
    :alt: The Talk Proposals page on the event website built with the Odoo Events application.
 
-In addition to the form, an introduction to the page, along with any other pertinent information
-related to the types of talks the event will feature can be added, if needed.
+To submit their proposal, visitors fill out the form, then click the :guilabel:`Submit Proposal`
+button.
 
-The talk proposal form can be modified in a number of different ways, via the web builder tools,
-accessible by clicking :guilabel:`Edit` while on the specific page.
+Doing so creates a new track form in the database. Internal users can access it by navigating to the
+**Events** app, clicking the relevant event, and selecting the :icon:`fa-microphone`
+:guilabel:`Tracks` smart button. The newly-proposed talk now appears as a new track in the
+:guilabel:`Proposal` stage.
 
-Then, proceed to edit any of the default fields, or add new forms with the :guilabel:`Form` building
-block (located in the :guilabel:`Blocks` section of the web builder tools sidebar).
+At this point, an internal user can review the proposed talk and accept or deny the proposal by
+moving the track to the appropriate stage in the pipeline.
 
-Once all the necessary information is entered into the form, the attendees just need to click the
-:guilabel:`Submit Proposal` button.
+If accepted, the internal user can publish the track on the event website by clicking the
+:guilabel:`Go to Website` smart button and toggling the :guilabel:`Unpublished` switch at the top to
+:guilabel:`Published`.
 
-Then, that talk, and all the information entered on the form, can be accessed on the
-:guilabel:`Event Tracks` page for that specific event in the :guilabel:`Proposal` stage, which is
-accessible via the :guilabel:`Tracks` smart button on the event form.
+Visitors can then see the track on the *Talks* page.
 
-At that point, an internal user can review the proposed talk, and choose to accept or deny the
-proposal.
+.. _events/talks-proposals-agenda/view-agenda:
 
-If accepted, the internal user can then move the track to the next appropriate stage in the Kanban
-pipeline on the :guilabel:`Event Tracks` page for the event. Then, they can open that track form,
-and click the :guilabel:`Go to Website` smart button to reveal that track's page on the event
-website.
+View agenda
+===========
 
-From there, they can toggle the :guilabel:`Unpublished` switch in the header to
-:guilabel:`Published`, which allows all event attendees to view and access the talk.
+The *Agenda* page displays an event calendar, showing each talk's specified location by column and
+its scheduled time by row.
 
-Agenda page
------------
+Visitors can click any track on the calendar to open the track's specific page on the website.
 
-The :guilabel:`Agenda` link takes attendees to a page on the event website, showcasing an event
-calendar, depicting when (and where) events are taking place for that specific event.
+.. tip::
+   A talk's location can be found on its track form. To find it, navigate to **Events** app, click
+   on the relevant event, click the :icon:`fa-microphone` :guilabel:`Tracks` smart button, and
+   select the desired track. In the track form, view or modify the :guilabel:`Location` field.
 
 .. image:: track_manage_talks/event-agenda-page.png
-   :align: center
    :alt: The event Agenda page on the event website built with the Odoo Events application.
-
-Clicking any track on the calendar takes the attendee to that specific track's detail page on the
-event website.
-
-If an attendee wishes to favorite a track, they can click the :icon:`fa-bell-o` :guilabel:`(empty
-bell)` icon, located to the right of the track title. Attendees will know a track has been favorited
-when they notice the icon has been changed to :icon:`fa-bell` :guilabel:`(filled bell)` icon.
