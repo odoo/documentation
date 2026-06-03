@@ -24,8 +24,7 @@ To use the dispatch management system, the following setup must be completed:
 #. :ref:`Install <general/install>` the **Fleet** application.
 #. Enable :ref:`necessary features <inventory/shipping_receiving/inventory-features>` in the
    **Inventory** app.
-#. Enable and configure the :ref:`Mapbox integration
-   <inventory/shipping_receiving/mapbox-integration>`.
+#. Enable and configure the :ref:`Mapbox integration <general/integrations/geolocation-routes>`.
 #. Configure vehicle :ref:`capacity (volume and weight)
    <inventory/shipping_receiving/vehicle-capacity>`.
 #. Enter vehicle :doc:`car models <../../../../hr/fleet/models>`.
@@ -58,36 +57,10 @@ Management` checkboxes. Doing so allows specific vehicles to be :ref:`set as car
 In the *Warehouse* section, select the :guilabel:`Storage Locations` checkbox to assign specific
 locations in the warehouse as loading zones for delivery trucks.
 
-Then, once all the configurations are complete, be sure to click :guilabel:`Save`.
+Once all the configurations are complete, be sure to click :guilabel:`Save`.
 
-.. _inventory/shipping_receiving/mapbox-integration:
-
-Mapbox integration
-------------------
-
-Next, configure the `Mapbox <https://www.mapbox.com/>`_ integration.
-
-First, `create a Mapbox account <https://account.mapbox.com/auth/signup/>`_. If you already have a
-MapBox account, `log in <https://account.mapbox.com/auth/signin/>`_. Upon login, the *Account
-overview* page displays.
-
-Then, `create an access token <https://docs.mapbox.com/help/dive-deeper/access-tokens/>`_.
-
-After the token is created, copy it to the clipboard.
-
-.. important::
-   If you have created a secret token, Mapbox does not display secret tokens again after leaving the
-   *Access tokens* page. Make a copy of this token now.
-
-.. seealso::
-   - `How to use Mapbox securely: Access tokens
-     <https://docs.mapbox.com/help/dive-deeper/how-to-use-mapbox-securely/#access-tokens>`_
-   - `URL restrictions <https://docs.mapbox.com/accounts/guides/tokens/#url-restrictions>`_
-
-In Odoo, navigate to the :menuselection:`Settings` app. In the *Integrations* section, locate the
-:guilabel:`Mapbox` setting. Paste the token in the :guilabel:`Token` field.
-
-Be sure to click :guilabel:`Save` to save the settings.
+Then, enable and configure the :ref:`Mapbox integration <general/integrations/geolocation-routes>`
+to be able to create :ref:`delivery routes <inventory/shipping_receiving/delivery-route>`.
 
 .. _inventory/shipping_receiving/vehicle-capacity:
 
@@ -291,6 +264,8 @@ On the batch transfer form, fill the following fields out accordingly:
 
    .. image:: dispatch/batch-form.png
       :alt: Show batch form.
+
+.. _inventory/shipping_receiving/delivery-route:
 
 Prepare delivery route
 ~~~~~~~~~~~~~~~~~~~~~~
