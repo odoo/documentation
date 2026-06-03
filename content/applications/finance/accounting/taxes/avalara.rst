@@ -475,6 +475,8 @@ Configuration --> Settings` and enable the relevant options in the :guilabel:`Av
   guidance.
 - :guilabel:`Commit Transactions`: to add the Odoo database's transactions to AvaTax reports.
 
+.. _accounting/avalara/address-validation:
+
 Address validation
 ------------------
 
