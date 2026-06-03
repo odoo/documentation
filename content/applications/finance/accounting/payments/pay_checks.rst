@@ -22,20 +22,8 @@ payment method as well as set up the :guilabel:`Check Layout`.
    - Once the :guilabel:`Checks` setting is activated, the **Checks** payment method is
      automatically set up in the :guilabel:`Outgoing Payments` tabs of **bank** journals.
    - Some countries require specific modules to print checks; such modules may be installed by
-     default. For instance, the :guilabel:`U.S. Checks Layout` module is required to print U.S.
-     checks.
-
-Compatible check stationery for printing checks
-===============================================
-
-United States
--------------
-
-For the United States, Odoo supports by default the check formats of:
-
-- **Quickbooks & Quicken**: check on top, stubs in the middle and bottom;
-- **Peachtree**: check in the middle, stubs on top and bottom;
-- **ADP**: check in the bottom, and stubs on the top.
+     default. For instance, the :ref:`US Checks Layout module <l10n_us/optional-modules>` is
+     required to :ref:`print US checks <l10n_us/writing-checks>`.
 
 .. _accounting/pay-checks/pay-bill-check:
 
