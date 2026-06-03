@@ -178,6 +178,8 @@ in Google Maps.
 .. tip::
    - By default, the map displays today's planned interventions. To display all shifts, remove
      the :guilabel:`Start Date: Today` filter in the search bar.
+   - Click :icon:`fa-map-marker` :guilabel:`Maps` in the upper-right corner to view locations and
+     itineraries in Google Maps.
    - Administrators can view all resources and their respective intervention locations on the map
      by going to  :menuselection:`Planning --> Maps`.
    - You can also display an intervention's location by clicking the shift in the calendar or
@@ -185,22 +187,11 @@ in Google Maps.
 
 .. _planning/field-service/itinerary:
 
-Itinerary planning
-------------------
+.. admonition:: Itinerary planning
 
-To display an itinerary on the map in the Planning app, enable MapBox:
-
-#. Create or sign in to a `MapBox account <https://www.mapbox.com/>`_.
-#. `Create a token <https://docs.mapbox.com/help/getting-started/access-tokens/#adding-url-restrictions-to-access-tokens>`_.
-#. Go to the `Access tokens <https://account.mapbox.com/access-tokens/>`_ page on MapBox and copy
-   the token.
-#. In Odoo, open the Settings app and scroll down to the :guilabel:`Integrations` section.
-#. Paste the MapBox access token in the :guilabel:`Token` field under :guilabel:`Map Routes`, then
-   click :guilabel:`Save`.
-
-Once enabled, the technician's map displays a complete itinerary for the day, which can be
-opened on the Google Maps website or app by clicking :guilabel:`Maps`. Google Maps uses the current
-location as the starting point.
+   To display an itinerary on the map in the **Planning** app, :ref:`configure the Mapbox
+   integration <general/integrations/geolocation-routes>`. Once enabled, the technician's map
+   displays a complete itinerary for the day.
 
 .. _planning/field-service/invoicing:
 
