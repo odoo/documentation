@@ -138,3 +138,4 @@ more detail and information, such as :doc:`quotation templates <sales_quotations
    sales_quotations/different_addresses
    sales_quotations/orders_and_variants
    sales_quotations/pdf_quote_builder
+   sales_quotations/custom_email_signatures
