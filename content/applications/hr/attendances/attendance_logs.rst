@@ -141,6 +141,8 @@ information:
 .. image:: attendance_logs/attendance-log.png
    :alt: The details on the attendance log pop-up window.
 
+.. _attendances/check-in-out-details:
+
 Check in/check out details
 --------------------------
 
