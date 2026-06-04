@@ -15,6 +15,7 @@ Odoo includes **generic** and **dynamic** reports available for all countries, r
 -  :ref:`accounting/reporting/aged-payable`
 -  :ref:`accounting/reporting/cash-flow-statement`
 -  :ref:`accounting/reporting/tax-report`
+-  :ref:`accounting/reporting/audit-trail`
 
 To expand the lines of a report and view its details, click the :icon:`fa-caret-right`
 (:guilabel:`right arrow`) on the left. Then click the :icon:`fa-caret-down` (:guilabel:`down arrow`)
@@ -142,3 +143,25 @@ taxes grouped by type (:guilabel:`Sales`/:guilabel:`Purchases`).
    reporting/silverfin
    reporting/customize
    reporting/year_end
+
+.. _accounting/reporting/audit-trail:
+
+Audit Trail
+===========
+
+The :guilabel:`Audit Trail` report tracks changes made to fields that have an impact on accounting
+and includes the date and time of the changes, the user who made the changes, the type of change,
+the previous value, and the updated value.
+
+In addition to being recorded in the :doc:`chatter </applications/productivity/discuss/chatter>`,
+changes to records are also tracked in the audit trail, providing users a dedicated and detailed
+audit trail report. The audit trail report is available for audit checks, satisfying the
+requirements of the financial authorities and auditors of various countries.
+
+To access the audit trail, navigate to :menuselection:`Accounting --> Review --> Audit Trail`.
+
+An optional restrictive mode prevents tracked records from being deleted for more controlled
+immutability. Instead of being deleted, these records can only be cancelled or archived. To enable
+this restrictive mode, navigate to :menuselection:`Accounting --> Settings --> Configuration`,
+scroll down to the :guilabel:`Reporting` section, and tick the checkbox beside
+:guilabel:`Restrictive Audit Trail`.
