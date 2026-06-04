@@ -2,7 +2,8 @@
 Cashdro
 =======
 
-**Cashdro** :doc:`cash machines <../cash_machines>` enable the automation of cash transactions.
+`Cashdro <https://www.cashdro.com/be>`_ :doc:`cash machines <../cash_machines>` enable the
+automation of cash transactions.
 
 .. note::
    - The integration with the Cashdro cash machine only supports payments and refunds.
@@ -52,7 +53,8 @@ Odoo configuration
 
 To connect the Cashdro machine to Odoo, follow the next steps:
 
-#. :ref:`Install <general/install>` the :guilabel:`POS Cashdro Cash Machines` module.
+#. :ref:`Install <general/install>` the :guilabel:`POS Cashdro Cash Machines` (`pos_cashdro`)
+   module.
 #. Go to :menuselection:`Point of Sale --> Configuration --> Payment Methods` and click
    :guilabel:`New`.
 #. Set the :guilabel:`Journal` field to :guilabel:`Cash`.
