@@ -12,8 +12,9 @@ counting, and change return.
 Configuration
 =============
 
-Configure the cash machine itself before setting it up in Odoo. Currently, Odoo supports :doc:`Glory
-<cash_machines/glory>` and :doc:`Cashdro<cash_machines/cashdro>` cash machines. Once the cash machine is fully set up:
+Configure the cash machine itself before setting it up in Odoo. Currently, Odoo supports
+:doc:`Cashdro <cash_machines/cashdro>`, :doc:`Cashmatic <cash_machines/cashmatic>`, and :doc:`Glory
+<cash_machines/glory>` cash machines. Once the cash machine is fully set up:
 
 #. Create the associated :doc:`payment method <../payment_methods>`.
 #. Select the POS in the :guilabel:`Point of Sale` field.
@@ -36,5 +37,6 @@ Once the transaction is successful, the payment is automatically validated in Po
 .. toctree::
    :titlesonly:
 
-   cash_machines/glory
    cash_machines/cashdro
+   cash_machines/cashmatic
+   cash_machines/glory

@@ -2,7 +2,8 @@
 Glory
 =====
 
-**Glory** :doc:`cash machines <../cash_machines>` enable the automation of cash transactions.
+`Glory <https://www.glory-global.com/en-us>`_ :doc:`cash machines <../cash_machines>` enable the
+automation of cash transactions.
 
 .. important::
    - Odoo supports the Glory CI-5, CI-10, and CI-10X models.
@@ -119,7 +120,8 @@ POS. The import process is heavily dependent on the :abbr:`OS (Operating System)
 Payment method
 --------------
 
-#. :ref:`Install <general/install>` the POS Glory Cash Machines module.
+#. :ref:`Install <general/install>` the :guilabel:`POS Glory Cash Machines` (`pos_glory_cash`)
+   module.
 #. :doc:`Associate a cash payment method <../../payment_methods>`:
 
    - Go to :menuselection:`Point of Sale --> Configuration --> Payment Methods`. Create a new
