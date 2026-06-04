@@ -16,7 +16,9 @@ helpdesk support and bug fixes (depending on feasibility).
 .. note::
    - Odoo releases intermediary versions, called online or SaaS versions, every two to three months.
      These versions are only available on Odoo Online and are not eligible for extended support.
-   - You can `upgrade <https://upgrade.odoo.com>`_ from any version.
+   - You can `upgrade <https://upgrade.odoo.com>`_ from any version **to supported versions** only.
+     The last unsupported version can still be used as an upgrade target for up to six months
+     following its end-of-life date.
 
 The table below shows the support status of every version. Major releases are highlighted in bold.
 
