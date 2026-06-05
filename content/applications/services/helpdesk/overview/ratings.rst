@@ -11,35 +11,30 @@ to gauge team performance and track customer satisfaction.
 
 .. _helpdesk/enable-ratings:
 
-Enable customer ratings on Helpdesk teams
-=========================================
+Configure customer ratings on a Helpdesk stage
+==============================================
 
-To enable *customer ratings* on a helpdesk team, navigate to :menuselection:`Helpdesk app -->
-Configuration --> Helpdesk Teams`. Click on a team from the list to open the settings page. Scroll
-to the :guilabel:`Performance` section, and tick the :guilabel:`Customer Ratings` checkbox.
+Customer ratings are configured directly on helpdesk stages. To configure ratings, activate the
+:ref:`developer mode <developer-mode>`, then navigate to
+:menuselection:`Helpdesk app --> Configuration --> Stages`. Open an existing stage or click
+:guilabel:`New` to create a new one and configure its rating settings.
 
-.. image:: ratings/ratings-enable.png
-   :alt: Overview of the settings page of a helpdesk team emphasizing the rating on ticket feature
-         in Odoo Helpdesk.
-
-Set a ratings request email template on a stage
-===============================================
+.. image:: ratings/rating-active.png
+   :alt: Overview of the helpdesk stage form emphasizing the rating on ticket feature in Odoo
+         Helpdesk.
 
 To automatically request ratings from customers once their tickets have closed, an email template
 needs to be added to the appropriate stage.
-
-After the :guilabel:`Customer Ratings` :ref:`setting has been enabled <helpdesk/enable-ratings>` on
-the team's settings page, click the :guilabel:`Set an Email Template on Stages` link. Select a stage
-from the list, or click :guilabel:`New` to create a new stage.
 
 .. important::
    Customers should only be asked to rate tickets once an issue has been resolved and their ticket
    is *closed*. Therefore, a *ratings request* email should **only** be added to a stage that is
    folded in the Kanban, as tickets in a *folded stage* are considered closed.
 
-On the stage's settings page, select the template, `Helpdesk: Ticket Rating Request` in the
-:guilabel:`Email Template` field. This template has been preconfigured with ratings customers can
-use to provide feedback. To view the template, click the arrow button to the right of the field.
+On the stage's settings page, enable the :guilabel:`Ask for Ratings` option and select the template,
+`Helpdesk: Ticket Rating Request` in the :guilabel:`Rating Email` field. This template has been
+preconfigured with ratings customers can use to provide feedback. To view the template, click the
+arrow button to the right of the field.
 
 After the template is added to the stage, it automatically sends a message when a ticket is moved to
 that stage. Customers are then asked to rate the support they received with colored icons.
