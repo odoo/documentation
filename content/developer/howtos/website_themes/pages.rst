@@ -369,13 +369,12 @@ existing groups:
    :caption: `/website/views/new_page_template_templates.xml`
 
    <template id="new_page_template_groups">
-      <div id="basic">Basic</div>
-      <div id="about">About</div>
-      <div id="landing">Landing Pages</div>
-      <div id="gallery">Gallery</div>
+      <div id="about_us">About Us</div>
       <div id="services">Services</div>
-      <div id="pricing">Pricing Plans</div>
-      <div id="team">Team</div>
+      <div id="pricing">Pricing</div>
+      <div id="portfolio">Portfolio</div>
+      <div id="contact_us">Contact Us</div>
+      <div id="utility">Utility</div>
    </template>
 
 Feel free to add custom groups to the list:
