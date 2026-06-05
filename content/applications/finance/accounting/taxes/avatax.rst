@@ -230,6 +230,8 @@ Odoo database.
    :align: center
    :alt: Configure AvaTax settings
 
+.. _avatax/prerequisites:
+
 Prerequisites
 ~~~~~~~~~~~~~
 
