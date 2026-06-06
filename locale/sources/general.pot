@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-15 17:30+0000\n"
+"POT-Creation-Date: 2026-06-05 19:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2605,28 +2605,28 @@ msgid "A third option is to create a MX record in your DNS zone which specifies 
 msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:305
-msgid "This configuration only works with a subdomain on the Odoo Online or Odoo.sh infrastructure (e.g., `@mail.mydomain.com`)"
+msgid "This configuration only works with a subdomain on the Odoo Online or Odoo.sh infrastructure (e.g., `@mail.mydomain.com`). Point the MX record from the custom subdomain to the Odoo subdomain of your database, e.g., from `mail.mydomain.com` to `dbname.odoo.com`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:308
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:309
 msgid "Below are presented some specifications depending on the hosting type:"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:312
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:313
 #: ../../content/applications/general/email_communication/faq.rst:296
 msgid "Odoo Online"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:314
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:315
 msgid "The custom subdomain must be added to your :doc:`Odoo Portal <../../websites/website/configuration/domain_names>`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:317
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:318
 #: ../../content/applications/general/email_communication/faq.rst:301
 msgid "Odoo.sh"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:319
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:320
 msgid "The custom subdomain must be added to the :doc:`settings of the project <../../../administration/odoo_sh/getting_started/settings>`:"
 msgstr ""
 
@@ -2634,15 +2634,15 @@ msgstr ""
 msgid "Adding a custom subdomain for mail to Odoo.sh project settings."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:328
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:329
 msgid "Infinite email loops"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:330
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:331
 msgid "In some cases, infinite mailing loops can be created. Odoo provides some protection against such loops, ensuring the same sender cannot send too many emails **that would create records** to an alias in a specific time span."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:334
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:335
 msgid "By default, an email address can send up to 20 emails in 120 minutes. If more emails are sent, they are blocked and the sender receives the following message:"
 msgstr ""
 
@@ -2650,43 +2650,43 @@ msgstr ""
 msgid "Bounce email received after attempting contact too many times an alias."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:340
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:341
 msgid "To change the default behavior, enable :ref:`developer-mode`, then go to :menuselection:`Settings --> Technical --> Parameters: System Parameters` to add two parameters."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:343
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:344
 msgid "For the first parameter, enter `mail.gateway.loop.minutes` as the :guilabel:`Key` and choose a number of minutes as the :guilabel:`Value` (`120` is the default behavior)."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:345
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:346
 msgid "For the second parameter, enter `mail.gateway.loop.threshold` as the :guilabel:`Key` and choose a number of emails as the :guilabel:`Value` (`20` is the default behavior)."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:349
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:350
 msgid "Allow alias domain system parameter"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:351
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:352
 msgid "Incoming aliases are set in the Odoo database to create records by receiving incoming emails. To view aliases set in the Odoo database, first activate the :ref:`developer mode <developer-mode>`. Then, go to :menuselection:`Settings app --> Technical --> Aliases`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:355
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:356
 msgid "The following system parameter, `mail.catchall.domain.allowed`, set with allowed alias domain values, separated by commas, filters out correctly addressed emails to aliases. Setting the domains for which the alias can create a ticket, lead, opportunity, etc., eliminates false positives where email addresses with only the prefix alias, not the domain, are present."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:360
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:361
 msgid "In some instances, matches have been made in the Odoo database when an email is received with the same alias prefix and a different domain on the incoming email address. This is true in the sender, recipient, and :abbr:`CC (Carbon Copy)` email addresses of an incoming email."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:365
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:366
 msgid "When Odoo receives emails with the `commercial` prefix alias in the sender, recipient, or :abbr:`CC (Carbon Copy)` email addresses (e.g. commercial\\@example.com), the database falsely treats the email as the full `commercial` alias, with a different domain, and therefore, creates a ticket/lead/opportunity/etc."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:370
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:371
 msgid "To add the `mail.catchall.domain.allowed` system parameter, first, activate the :ref:`developer mode <developer-mode>`. Then, go to :menuselection:`Settings app --> Technical --> System Parameters`. Click :guilabel:`New`. Then, type in `mail.catchall.domain.allowed` for the :guilabel:`Key` field."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:374
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:375
 msgid "Next, for the :guilabel:`Value` field, add the domains separated by commas. Manually :icon:`fa-cloud-upload` :guilabel:`(Save)`, and the system parameter takes immediate effect."
 msgstr ""
 
@@ -2694,11 +2694,11 @@ msgstr ""
 msgid "mail.catchall.domain.allowed system parameter set."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:381
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:382
 msgid "Local-part based incoming detection"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:383
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:384
 msgid "When creating a new alias, there is an option to enable :guilabel:`Local-part based incoming detection`. If enabled, Odoo only requires the local-part to match for routing an incoming email. If this feature is turned off, Odoo requires the whole email address to match for routing an incoming email."
 msgstr ""
 
@@ -4931,7 +4931,7 @@ msgstr ""
 
 #: ../../content/applications/general/iot.rst:46
 #: ../../content/applications/general/iot/connect.rst:57
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:17
+#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:23
 #: ../../content/applications/general/iot/iot_box.rst:3
 msgid "IoT box"
 msgstr ""
@@ -4942,7 +4942,7 @@ msgstr ""
 
 #: ../../content/applications/general/iot.rst:52
 #: ../../content/applications/general/iot/connect.rst:71
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:59
+#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:41
 #: ../../content/applications/general/iot/windows_iot.rst:3
 msgid "Windows virtual IoT"
 msgstr ""
@@ -5105,7 +5105,7 @@ msgid "In the :guilabel:`Pair an IoT Box offline` popup that opens, copy the :gu
 msgstr ""
 
 #: ../../content/applications/general/iot/connect.rst:90
-#: ../../content/applications/general/iot/connect.rst:141
+#: ../../content/applications/general/iot/connect.rst:139
 #: ../../content/applications/general/iot/devices/printer.rst:181
 msgid "Access the :ref:`IoT box's <iot/iot-box/homepage>` or :ref:`Windows virtual IoT's <iot/windows-iot/homepage>` homepage."
 msgstr ""
@@ -5149,70 +5149,70 @@ msgid "Once the IoT system is connected to the Odoo database, it is displayed as
 msgstr ""
 
 #: ../../content/applications/general/iot/connect.rst:121
-msgid "Enable the :ref:`developer mode <developer-mode>` to access the IoT system's :guilabel:`Technical Information`, such as its :guilabel:`Domain Address`, :guilabel:`Image Version`, and :ref:`SSL Certificate <iot/connect/https_certificate>` :guilabel:`End Date`. By default, drivers are automatically :ref:`updated <iot_updating_iot/handlers>` every time the IoT system is restarted. To disable automatic updates, uncheck the :guilabel:`Automatic drivers update` option."
+msgid "Enable the :ref:`developer mode <developer-mode>` to access the IoT system's :guilabel:`Technical Information`, such as its :guilabel:`Domain Address`, :guilabel:`Image Version`, and :ref:`SSL Certificate <iot/connect/https_certificate>` :guilabel:`End Date`. By default, drivers are automatically updated every time the IoT system is restarted."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:131
+#: ../../content/applications/general/iot/connect.rst:129
 msgid "Disconnecting an IoT system from a database"
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:133
+#: ../../content/applications/general/iot/connect.rst:131
 msgid "To disconnect the IoT system from a database, follow these steps:"
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:135
+#: ../../content/applications/general/iot/connect.rst:133
 msgid "Open the IoT app and click the relevant IoT system's card."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:136
+#: ../../content/applications/general/iot/connect.rst:134
 msgid "Click the :icon:`fa-cog` :guilabel:`(Actions)` icon, and select :guilabel:`Delete`."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:139
+#: ../../content/applications/general/iot/connect.rst:137
 msgid "Alternatively:"
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:143
+#: ../../content/applications/general/iot/connect.rst:141
 msgid "Click :guilabel:`Configure` in the :icon:`fa-link` :guilabel:`Odoo database connected` section."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:145
+#: ../../content/applications/general/iot/connect.rst:143
 msgid "Click :guilabel:`Disconnect` in the popup that opens."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:150
+#: ../../content/applications/general/iot/connect.rst:148
 msgid "HTTPS certificate"
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:152
+#: ../../content/applications/general/iot/connect.rst:150
 msgid ":abbr:`HTTPS (Hypertext Transfer Protocol Secure)` is the secure, encrypted version of :abbr:`HTTP (Hypertext Transfer Protocol)`. It uses :abbr:`TLS (Transport Layer Security)` (previously :abbr:`SSL (Secure Sockets Layer)`) certificates to authenticate the server and protect the data exchanged between a browser and a website. Some network devices, such as payment terminals, require a valid HTTPS certificate to communicate with the IoT system; without it, they cannot interact properly."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:160
+#: ../../content/applications/general/iot/connect.rst:158
 msgid "In this documentation and throughout Odoo, the term *HTTPS certificate*  refers to a valid SSL certificate that allows an HTTPS connection."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:163
+#: ../../content/applications/general/iot/connect.rst:161
 msgid "When the IoT system is (re-)started and connected to a database, it automatically downloads the HTTPS certificate if the database meets the following eligibility criteria:"
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:168
+#: ../../content/applications/general/iot/connect.rst:166
 msgid "The database must be a **production** instance. The database instance should not be a copy, a duplicate, a staging, or a development environment."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:170
+#: ../../content/applications/general/iot/connect.rst:168
 msgid "The Odoo subscription must be ongoing (:guilabel:`In Progress` status)."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:172
+#: ../../content/applications/general/iot/connect.rst:170
 msgid "When the certificate has been received:"
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:174
+#: ../../content/applications/general/iot/connect.rst:172
 msgid "The IoT system's homepage address is updated to a new HTTPS URL ending with `.odoo-iot.com`."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:175
+#: ../../content/applications/general/iot/connect.rst:173
 msgid "The :guilabel:`HTTPS certificate` banner displays the certificate's validity period. To view this information, click the :icon:`fa-cogs` (:guilabel:`cogs`) button at the top-right of the IoT system's homepage."
 msgstr ""
 
@@ -5220,7 +5220,7 @@ msgstr ""
 msgid "IoT box homepage with HTTPS certificate validity date."
 msgstr ""
 
-#: ../../content/applications/general/iot/connect.rst:183
+#: ../../content/applications/general/iot/connect.rst:181
 msgid ":ref:`iot/troubleshooting/https_certificate`"
 msgstr ""
 
@@ -6110,78 +6110,78 @@ msgid "In EU member states, `certification is legally required <https://eur-lex.
 msgstr ""
 
 #: ../../content/applications/general/iot/devices/scale.rst:10
-msgid "To connect a scale to the IoT system, use a USB cable. In some cases, you may need a serial-to-USB adapter to complete the connection. If the scale is `compatible with an IoT system <https://www.odoo.com/page/iot-hardware>`_, no additional setup is required; the scale is automatically detected as soon as it is connected. If the scale is not detected, reboot the IoT box or :ref:`restart the Windows virtual IoT service <iot/windows_iot/restart>` and :ref:`update the scale's drivers <iot_updating_iot/handlers>`."
+msgid "To connect a scale to the IoT system, use a USB cable. In some cases, you may need a serial-to-USB adapter to complete the connection. If the scale is `compatible with an IoT system <https://www.odoo.com/page/iot-hardware>`_, no additional setup is required; the scale is automatically detected as soon as it is connected. If the scale is not detected, reboot the IoT box or :ref:`restart the Windows virtual IoT service <iot/windows_iot/restart>`."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:18
-msgid "If the scale still does not function after updating the drivers, it might not be `compatible with the Odoo IoT system <https://www.odoo.com/page/iot-hardware>`_. In such cases, a different scale must be used."
+#: ../../content/applications/general/iot/devices/scale.rst:17
+msgid "If the scale still does not function, it might not be `compatible with the Odoo IoT system <https://www.odoo.com/page/iot-hardware>`_. In such cases, a different scale must be used."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:22
+#: ../../content/applications/general/iot/devices/scale.rst:21
 msgid "Once the scale is connected to the IoT system, :doc:`configure it in the POS settings </applications/sales/point_of_sale/hardware_network/scale>`."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:26
+#: ../../content/applications/general/iot/devices/scale.rst:25
 msgid ":doc:`Connect an IoT system to a POS </applications/sales/point_of_sale/hardware_network/pos_iot>`"
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:30
+#: ../../content/applications/general/iot/devices/scale.rst:29
 msgid "Ariva S scales"
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:32
+#: ../../content/applications/general/iot/devices/scale.rst:31
 msgid "For Ariva S series scales (manufactured by Mettler-Toledo, LLC.) to function with IoT systems, a specific setting must be modified, and a dedicated Mettler USB-to-proprietary RJ45 cable is required."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:36
+#: ../../content/applications/general/iot/devices/scale.rst:35
 msgid "The official Mettler USB-to-RJ45 cable (Mettler part number 72256236) must be used. Contact Mettler or a partner to purchase an authentic cable. **No other** cable works for this configuration."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:40
+#: ../../content/applications/general/iot/devices/scale.rst:39
 msgid "To configure the Ariva S scale for IoT system recognition, refer to page 17 of `Mettler's Setup Guide for Ariva S series scales <https://www.mt.com/dam/RET_DOCS/Ariv.pdf>`_ and follow these steps:"
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:43
+#: ../../content/applications/general/iot/devices/scale.rst:42
 msgid "Hold the **>T<** button for eight seconds, or until :guilabel:`CONF` appears."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:44
+#: ../../content/applications/general/iot/devices/scale.rst:43
 msgid "Press **>T<** until :guilabel:`GRP 3` appears, then press **>0<** to confirm."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:45
+#: ../../content/applications/general/iot/devices/scale.rst:44
 msgid "At step :guilabel:`3.1`, make sure the value is set to :guilabel:`1` (USB Virtual COM ports) by pressing **>T<** to cycle through the options."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:47
+#: ../../content/applications/general/iot/devices/scale.rst:46
 msgid "Press **>0<** until :guilabel:`3.6` (if available, otherwise skip the next step)."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:48
+#: ../../content/applications/general/iot/devices/scale.rst:47
 msgid "At step :guilabel:`3.6`, make sure the value is set to :guilabel:`3` (8217 Mettler-Toledo (WO)) by pressing **>T<** to cycle through the options."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:50
+#: ../../content/applications/general/iot/devices/scale.rst:49
 msgid "Press **>0<** (multiple times if necessary) until :guilabel:`GRP 4` appears."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:51
+#: ../../content/applications/general/iot/devices/scale.rst:50
 msgid "Press **>T<** until :guilabel:`EXIT` appears."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:54
+#: ../../content/applications/general/iot/devices/scale.rst:53
 msgid "Do **not** make any other changes unless otherwise needed."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:56
+#: ../../content/applications/general/iot/devices/scale.rst:55
 msgid "Press **>0<**."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:57
+#: ../../content/applications/general/iot/devices/scale.rst:56
 msgid "Press **>0<** again to :guilabel:`SAVE`; the scale restarts."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:58
+#: ../../content/applications/general/iot/devices/scale.rst:57
 msgid "Reboot the IoT box or :ref:`restart the Windows virtual IoT service <iot/windows_iot/restart>`. The scale should then appear as `Toledo 8217`."
 msgstr ""
 
@@ -6498,55 +6498,31 @@ msgstr ""
 msgid "Check that the IoT system and database meet the :ref:`eligibility requirements <iot/https_certificate_iot/iot-eligibility>` for an HTTPS certificate."
 msgstr ""
 
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:5
-msgid "Due to the complexity of IoT systems, the term *updating* can refer to several processes, including:"
-msgstr ""
-
 #: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:7
-msgid ":ref:`Updating the IoT system's image and/or core code <iot/updating_iot/image-code>`;"
+msgid "IoT Boxes and Virtual IoT Boxes update themselves automatically every week. You can still force an update if you think your IoT system is not up-to-date by accessing the :ref:`homepage <iot/iot-box/homepage>`, clicking the :icon:`fa-cogs` (:guilabel:`cogs`) button at the top-right, then :guilabel:`Update` in the :guilabel:`Version` section."
 msgstr ""
 
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:8
-msgid ":ref:`Updating the handlers <iot_updating_iot/handlers>`, which include the interfaces and drivers."
+#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:14
+msgid "**Do not turn off or unplug the IoT box** during the update process, as doing so could leave the device in an inconsistent state, requiring the IoT box to be reflashed with a new image."
 msgstr ""
 
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:13
-msgid "Image and core code update"
+#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:17
+msgid "In extreme cases, you might need to perform a full reset of the IoT system, which requires flashing the IoT box's SD card or uninstalling and reinstalling the Windows virtual IoT package."
 msgstr ""
 
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:19
-msgid "To check if the IoT box is up-to-date (and update it if needed), :ref:`access the IoT box's homepage <iot/iot-box/homepage>`, click the :icon:`fa-cogs` (:guilabel:`cogs`) button at the top-right, then :guilabel:`Update` in the :guilabel:`Version` section."
-msgstr ""
-
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:24
-msgid ":ref:`Enable the developer mode <developer-mode>` to view the current versions of the IoT box's image and core code."
-msgstr ""
-
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:27
-msgid "**Image update**"
-msgstr ""
-
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:29
-msgid "To update the IoT box's image, flash its SD card. Flashing can be performed using `balenaEtcher <https://etcher.balena.io>`_, a free and open-source tool for writing disk images to SD cards."
-msgstr ""
-
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:34
-msgid "Updating the IoT system's image is often required after upgrading the Odoo database to a newer version."
-msgstr ""
-
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:36
+#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:26
 msgid "A computer with a micro SD card reader/adapter is required to flash the micro SD card."
 msgstr ""
 
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:37
+#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:27
 msgid "An alternative software for flashing the micro SD card is `Raspberry Pi Imager <https://www.raspberrypi.com/software/>`_."
 msgstr ""
 
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:40
-msgid "`Download balenaEtcher. <https://etcher.balena.io/#download-etcher>`_"
+#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:30
+msgid "`Download balenaEtcher <https://etcher.balena.io/#download-etcher>`_ (a free and open-source tool for writing disk images to SD cards)."
 msgstr ""
 
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:41
+#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:32
 msgid "Insert the IoT box's micro SD card into the computer or adapter."
 msgstr ""
 
@@ -6558,11 +6534,11 @@ msgstr ""
 msgid "`http://nightly.odoo.com/master/iotbox/iotbox-latest.zip`."
 msgstr ""
 
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:44
+#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:35
 msgid "Click :guilabel:`Select target` and select the SD card."
 msgstr ""
 
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:45
+#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:36
 msgid "Click :guilabel:`Flash` and wait for the process to finish."
 msgstr ""
 
@@ -6570,48 +6546,8 @@ msgstr ""
 msgid "Flashing the SD card with balenaEtcher"
 msgstr ""
 
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:50
-msgid "**Core code update**"
-msgstr ""
-
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:52
-msgid "To update the IoT box's core code, click :guilabel:`Update` under :guilabel:`IoT Box Update` in the :guilabel:`Update` popup."
-msgstr ""
-
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:56
-msgid "**Do not turn off or unplug the IoT box** during the update process, as doing so could leave the device in an inconsistent state, requiring the IoT box to be reflashed with a new image."
-msgstr ""
-
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:61
-msgid "To update the Windows virtual IoT's image and code, :ref:`uninstall the program <iot/windows_iot/uninstall>` and :ref:`reinstall <iot/windows-iot/installation>` the latest package."
-msgstr ""
-
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:68
-msgid "Handler (driver) update"
-msgstr ""
-
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:70
-msgid "To update the IoT system's handlers (i.e., drivers and interfaces) and synchronize them with the configured server handler's code, for example, to resolve issues where :doc:`devices <../devices>` are not functioning properly with the IoT system, proceed as follows:"
-msgstr ""
-
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:74
-msgid "Access the :ref:`IoT box's <iot/iot-box/homepage>` or :ref:`Windows virtual IoT's <iot/windows-iot/homepage>` homepage and click the :icon:`fa-cogs` (:guilabel:`cogs`) button at the top-right."
-msgstr ""
-
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:77
-msgid "Click :guilabel:`Update` in the :guilabel:`Version` section."
-msgstr ""
-
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:78
-msgid "In the :guilabel:`Update` popup that opens, click :guilabel:`Force Drivers Update`."
-msgstr ""
-
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:81
-msgid "If you have an :doc:`on-premise </administration/on_premise>` or :doc:`Odoo.sh </administration/odoo_sh>` database, the configured server must be up-to-date to ensure the handlers' code includes the latest fixes and patches."
-msgstr ""
-
-#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:86
-msgid "A handler update is also performed automatically every time the IoT system is restarted unless the :guilabel:`Automatic drivers update` option is disabled in the :guilabel:`Technical information` tab in the :ref:`IoT system's form <iot/connect/IoT-form>` in Odoo."
+#: ../../content/applications/general/iot/iot_advanced/updating_iot.rst:43
+msgid ":ref:`Uninstall the program <iot/windows_iot/uninstall>` and :ref:`reinstall <iot/windows-iot/installation>` the latest package."
 msgstr ""
 
 #: ../../content/applications/general/iot/iot_box.rst:5
@@ -6883,74 +6819,74 @@ msgid "Most :doc:`devices <devices>` automatically connect to the Windows comput
 msgstr ""
 
 #: ../../content/applications/general/iot/windows_iot.rst:78
-msgid "After connecting the devices to the computer, refresh the :ref:`IoT system's homepage <iot/windows-iot/homepage>` to verify that the device is listed. If the device does not appear, :ref:`reload the handlers <iot_updating_iot/handlers>` from the :ref:`IoT system's homepage <iot/windows-iot/homepage>`."
+msgid "After connecting the devices to the computer, refresh the :ref:`IoT system's homepage <iot/windows-iot/homepage>` to verify that the device is listed. If the device does not appear, restart the IoT system from the :ref:`IoT system's homepage <iot/windows-iot/homepage>`."
 msgstr ""
 
-#: ../../content/applications/general/iot/windows_iot.rst:86
+#: ../../content/applications/general/iot/windows_iot.rst:85
 msgid "Windows Firewall configuration"
 msgstr ""
 
-#: ../../content/applications/general/iot/windows_iot.rst:88
+#: ../../content/applications/general/iot/windows_iot.rst:87
 msgid "Firewalls help keep devices secure but can sometimes block legitimate connections. If the Windows virtual IoT isn't accessible on the :abbr:`LAN (Local Area Network)`, for example, from another device, it could be due to a firewall blocking the connection. To prevent this issue, configure exceptions for network discovery in the :abbr:`OS (Operating System)` or firewall settings."
 msgstr ""
 
-#: ../../content/applications/general/iot/windows_iot.rst:94
+#: ../../content/applications/general/iot/windows_iot.rst:93
 msgid "If third-party firewall software is installed on the Windows computer, refer to the software's documentation to configure firewall exceptions."
 msgstr ""
 
-#: ../../content/applications/general/iot/windows_iot.rst:97
+#: ../../content/applications/general/iot/windows_iot.rst:96
 msgid "To create a rule on Windows Defender and allow communication through the required ports, follow these steps:"
 msgstr ""
 
-#: ../../content/applications/general/iot/windows_iot.rst:100
+#: ../../content/applications/general/iot/windows_iot.rst:99
 msgid "Search the Windows start menu for `firewall` and select the :guilabel:`Windows Defender Firewall with Advanced Security` app."
 msgstr ""
 
-#: ../../content/applications/general/iot/windows_iot.rst:102
+#: ../../content/applications/general/iot/windows_iot.rst:101
 msgid "In the left part of the window, select :guilabel:`Inbound Rules`."
 msgstr ""
 
-#: ../../content/applications/general/iot/windows_iot.rst:103
+#: ../../content/applications/general/iot/windows_iot.rst:102
 msgid "In the right part of the window, under :guilabel:`Actions`, click :guilabel:`New Rule`."
 msgstr ""
 
-#: ../../content/applications/general/iot/windows_iot.rst:104
+#: ../../content/applications/general/iot/windows_iot.rst:103
 msgid "In the :guilabel:`New Inbound Rule Wizard` that opens, select the :guilabel:`Port` type of rule and click :guilabel:`Next`."
 msgstr ""
 
-#: ../../content/applications/general/iot/windows_iot.rst:106
+#: ../../content/applications/general/iot/windows_iot.rst:105
 msgid "On the :guilabel:`Protocols and Ports` page, make sure :guilabel:`TCP` and :guilabel:`Specified local ports` are selected, enter the following in the field: `8069, 80, 443`, and click :guilabel:`Next`."
 msgstr ""
 
-#: ../../content/applications/general/iot/windows_iot.rst:111
+#: ../../content/applications/general/iot/windows_iot.rst:110
 msgid "Other ports may be required depending on your IoT devices. For example, add port `9050` for the :doc:`/applications/sales/point_of_sale/payment_methods/terminals/worldline_axepta` payment terminals."
 msgstr ""
 
-#: ../../content/applications/general/iot/windows_iot.rst:115
+#: ../../content/applications/general/iot/windows_iot.rst:114
 msgid "On the :guilabel:`Action` page, select :guilabel:`Allow the connection` and click :guilabel:`Next`."
 msgstr ""
 
-#: ../../content/applications/general/iot/windows_iot.rst:117
+#: ../../content/applications/general/iot/windows_iot.rst:116
 msgid "On the :guilabel:`Profile` page, disable any connection type(s) that don't apply to your Windows computer and click :guilabel:`Next`."
 msgstr ""
 
-#: ../../content/applications/general/iot/windows_iot.rst:119
+#: ../../content/applications/general/iot/windows_iot.rst:118
 msgid "On the :guilabel:`Name` page, provide a :guilabel:`Name` (e.g., `Odoo`) and, optionally, a brief :guilabel:`Description`, then click :guilabel:`Finish`."
 msgstr ""
 
-#: ../../content/applications/general/iot/windows_iot.rst:123
+#: ../../content/applications/general/iot/windows_iot.rst:122
 msgid "`Windows Firewall rules documentation <https://learn.microsoft.com/en-us/windows/security/operating-system-security/network-security/windows-firewall/rules>`_"
 msgstr ""
 
-#: ../../content/applications/general/iot/windows_iot.rst:129
+#: ../../content/applications/general/iot/windows_iot.rst:128
 msgid "Windows virtual IoT homepage"
 msgstr ""
 
-#: ../../content/applications/general/iot/windows_iot.rst:131
+#: ../../content/applications/general/iot/windows_iot.rst:130
 msgid "To access the Windows virtual IoT's homepage, navigate to the URL `http://localhost:8069` on the Windows virtual IoT computer or open a web browser from another computer **on the same network as the IoT system** and navigate to the URL `http://xxx:8069` (where `xxx` is the IoT system's IP address)."
 msgstr ""
 
-#: ../../content/applications/general/iot/windows_iot.rst:136
+#: ../../content/applications/general/iot/windows_iot.rst:135
 msgid "Once the Windows virtual IoT is :doc:`connected to the Odoo database <connect>`, its homepage can be accessed from Odoo by opening the IoT app, clicking the relevant IoT box's card, and clicking :guilabel:`Homepage`."
 msgstr ""
 
@@ -6958,23 +6894,23 @@ msgstr ""
 msgid "Windows virtual IoT's homepage"
 msgstr ""
 
-#: ../../content/applications/general/iot/windows_iot.rst:145
+#: ../../content/applications/general/iot/windows_iot.rst:144
 msgid "Make sure the :ref:`Windows Firewall is configured <iot/windows-iot/firewall>` to allow access."
 msgstr ""
 
-#: ../../content/applications/general/iot/windows_iot.rst:150
+#: ../../content/applications/general/iot/windows_iot.rst:149
 msgid "Windows virtual IoT restart"
 msgstr ""
 
-#: ../../content/applications/general/iot/windows_iot.rst:152
+#: ../../content/applications/general/iot/windows_iot.rst:151
 msgid "To manually restart the Windows IoT server, search the Windows start menu for `services` and select the Services app. Scroll down to the :guilabel:`odoo-server-xxx` service, right-click it, and select :guilabel:`Start` or :guilabel:`Restart`."
 msgstr ""
 
-#: ../../content/applications/general/iot/windows_iot.rst:159
+#: ../../content/applications/general/iot/windows_iot.rst:158
 msgid "Windows virtual IoT uninstall"
 msgstr ""
 
-#: ../../content/applications/general/iot/windows_iot.rst:161
+#: ../../content/applications/general/iot/windows_iot.rst:160
 msgid "To uninstall the Windows virtual IoT, `uninstall <https://support.microsoft.com/en-us/windows/uninstall-or-remove-apps-and-programs-in-windows-4b55f974-2cc6-2d2b-d092-5905080eaf98#ID0EBD=Windows_11>`_ the Odoo program on your Windows computer. Confirm the uninstallation and complete the steps in the :guilabel:`Odoo Uninstall` dialog."
 msgstr ""
 
