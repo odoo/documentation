@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-08 17:30+0000\n"
+"POT-Creation-Date: 2026-06-05 19:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2606,28 +2606,28 @@ msgid "A third option is to create a MX record in your DNS zone which specifies 
 msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:305
-msgid "This configuration only works with a subdomain on the Odoo Online or Odoo.sh infrastructure (e.g., `@mail.mydomain.com`)"
+msgid "This configuration only works with a subdomain on the Odoo Online or Odoo.sh infrastructure (e.g., `@mail.mydomain.com`). Point the MX record from the custom subdomain to the Odoo subdomain of your database, e.g., from `mail.mydomain.com` to `dbname.odoo.com`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:308
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:309
 msgid "Below are presented some specifications depending on the hosting type:"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:312
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:313
 #: ../../content/applications/general/email_communication/faq.rst:296
 msgid "Odoo Online"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:314
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:315
 msgid "The custom subdomain must be added to your :doc:`Odoo Portal <../../websites/website/configuration/domain_names>`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:317
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:318
 #: ../../content/applications/general/email_communication/faq.rst:301
 msgid "Odoo.sh"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:319
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:320
 msgid "The custom subdomain must be added to the :doc:`settings of the project <../../../administration/odoo_sh/getting_started/settings>`:"
 msgstr ""
 
@@ -2635,15 +2635,15 @@ msgstr ""
 msgid "Adding a custom subdomain for mail to Odoo.sh project settings."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:328
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:329
 msgid "Infinite email loops"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:330
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:331
 msgid "In some cases, infinite mailing loops can be created. Odoo provides some protection against such loops, ensuring the same sender cannot send too many emails **that would create records** to an alias in a specific time span."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:334
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:335
 msgid "By default, an email address can send up to 20 emails in 120 minutes. If more emails are sent, they are blocked and the sender receives the following message:"
 msgstr ""
 
@@ -2651,43 +2651,43 @@ msgstr ""
 msgid "Bounce email received after attempting contact too many times an alias."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:340
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:341
 msgid "To change the default behavior, enable :ref:`developer-mode`, then go to :menuselection:`Settings --> Technical --> Parameters: System Parameters` to add two parameters."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:343
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:344
 msgid "For the first parameter, enter `mail.gateway.loop.minutes` as the :guilabel:`Key` and choose a number of minutes as the :guilabel:`Value` (`120` is the default behavior)."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:345
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:346
 msgid "For the second parameter, enter `mail.gateway.loop.threshold` as the :guilabel:`Key` and choose a number of emails as the :guilabel:`Value` (`20` is the default behavior)."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:349
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:350
 msgid "Allow alias domain system parameter"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:351
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:352
 msgid "Incoming aliases are set in the Odoo database to create records by receiving incoming emails. To view aliases set in the Odoo database, first activate the :ref:`developer mode <developer-mode>`. Then, go to :menuselection:`Settings app --> Technical --> Aliases`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:355
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:356
 msgid "The following system parameter, `mail.catchall.domain.allowed`, set with allowed alias domain values, separated by commas, filters out correctly addressed emails to aliases. Setting the domains for which the alias can create a ticket, lead, opportunity, etc., eliminates false positives where email addresses with only the prefix alias, not the domain, are present."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:360
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:361
 msgid "In some instances, matches have been made in the Odoo database when an email is received with the same alias prefix and a different domain on the incoming email address. This is true in the sender, recipient, and :abbr:`CC (Carbon Copy)` email addresses of an incoming email."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:365
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:366
 msgid "When Odoo receives emails with the `commercial` prefix alias in the sender, recipient, or :abbr:`CC (Carbon Copy)` email addresses (e.g. commercial\\@example.com), the database falsely treats the email as the full `commercial` alias, with a different domain, and therefore, creates a ticket/lead/opportunity/etc."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:370
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:371
 msgid "To add the `mail.catchall.domain.allowed` system parameter, first, activate the :ref:`developer mode <developer-mode>`. Then, go to :menuselection:`Settings app --> Technical --> System Parameters`. Click :guilabel:`New`. Then, type in `mail.catchall.domain.allowed` for the :guilabel:`Key` field."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:374
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:375
 msgid "Next, for the :guilabel:`Value` field, add the domains separated by commas. Manually :icon:`fa-cloud-upload` :guilabel:`(Save)`, and the system parameter takes immediate effect."
 msgstr ""
 
@@ -2695,11 +2695,11 @@ msgstr ""
 msgid "mail.catchall.domain.allowed system parameter set."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:381
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:382
 msgid "Local-part based incoming detection"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:383
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:384
 msgid "When creating a new alias, there is an option to enable :guilabel:`Local-part based incoming detection`. If enabled, Odoo only requires the local-part to match for routing an incoming email. If this feature is turned off, Odoo requires the whole email address to match for routing an incoming email."
 msgstr ""
 
