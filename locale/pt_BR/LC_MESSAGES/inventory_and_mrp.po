@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-22 17:35+0000\n"
+"POT-Creation-Date: 2026-06-05 19:24+0000\n"
 "PO-Revision-Date: 2026-05-02 23:13+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate.odoo.com/projects/"
@@ -19769,7 +19769,7 @@ msgid "The form for a DHL shipping method."
 msgstr "Formulário para um método de envio da DHL."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:27
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:60
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:48
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:70
 msgid "General information"
 msgstr "Informações gerais"
@@ -19884,7 +19884,6 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:89
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:123
 msgid "Shipping details"
 msgstr "Detalhes do envio"
 
@@ -20269,18 +20268,29 @@ msgstr "Integração com FedEx"
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:5
 msgid ""
 "Integrating a FedEx account with Odoo's **Inventory** app makes it possible "
-"to :doc:`calculate shipping rates <../setup_configuration>`, "
+"to :doc:`calculate shipping rates <../setup_configuration>` "
 "and :doc:`generate shipping labels <labels>` within Odoo. This is "
 "accomplished by enabling the FedEx *shipping connector*, then configuring at "
 "least one *shipping method*."
 msgstr ""
-"A integração de uma conta FedEx com o aplicativo Odoo **Inventário** "
-"possibilita :doc:`calcular preços de frete <../setup_configuration>` "
-"e :doc:`gerar etiquetas de envio <labels>` no Odoo. Isso é feito ativando o "
-"*conector de envio* da FedEx e, em seguida, configurando pelo menos um "
-"*método de envio*."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:11
+msgid ""
+"As of October 21, 2025, the FedEx integration using the latest API is "
+"temporarily unavailable while Odoo finalizes its solution-provider "
+"validation for FedEx. New setups are currently blocked, and existing "
+"integrations using the FedEx Shipping (Legacy) provider will stop working as "
+"of June 1, 2026."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:16
+msgid ""
+"For a temporary solution, the :doc:`Sendcloud integration "
+"<sendcloud_shipping>` also supports FedEx services. To request further "
+"assistance, `submit a support ticket <https://www.odoo.com/help>`_."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:21
 msgid ""
 "This documentation contains configuration details specific to FedEx "
 "integration. See the documentation on :doc:`third-party shippers "
@@ -20291,67 +20301,31 @@ msgstr ""
 "<third_party_shipper>` para instruções gerais da integração de "
 "transportadoras."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:16
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:26
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:12
 msgid "Enable shipping connector"
 msgstr "Ativar o conector de envio"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:18
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:28
 msgid ""
-"To enable the shipping connector for FedEx, navigate "
-"to :menuselection:`Inventory app --> Configuration --> Settings`. Scroll "
-"down to the :guilabel:`Shipping Connectors` section, and tick the checkbox "
-"next to :guilabel:`FedEx Connector`."
+"To enable the shipping connector for FedEx, open the :menuselection:`Apps` "
+"app. Search for `FedEx`. :guilabel:`Activate` the shipping connector."
 msgstr ""
-"Para ativar o conector de envio da FedEx, navegue até :menuselection:`app "
-"Inventário --> Configuração --> Definições`. Role para baixo até a "
-"seção :guilabel:`Conectores de envio` e marque a caixa de seleção ao lado "
-"de :guilabel:`Conector FedEx`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:22
-msgid ""
-"Finally, click :guilabel:`Save` to save the changes. After doing so, "
-"a :icon:`oi-arrow-right` :guilabel:`FedEx Shipping Methods` button appears "
-"below :guilabel:`FedEx Connector`."
-msgstr ""
-"Por fim, clique em :guilabel:`Salvar` para salvar as alterações. Depois de "
-"fazer isso, um botão :icon:`oi-arrow-right` :guilabel:`Métodos de envio da "
-"FedEx` aparece abaixo de :guilabel:`Conector FedEx`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
-msgid "The FedEx Shipping Methods button below the FedEx Connector."
-msgstr "O botão Métodos de envio da FedEx abaixo do Conector FedEx."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:30
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:32
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/usps.rst:48
 msgid "Configure shipping method"
 msgstr "Configurar o método de envio"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:32
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:34
 msgid ""
-"Once the FedEx shipping connector is enabled, it is necessary to configure "
+"After the FedEx shipping connector is enabled, it is necessary to configure "
 "at least one shipping method. After doing so, the shipping method can be "
 "included in sales orders (SOs), and used to compute shipping costs, and "
 "print shipping labels."
 msgstr ""
-"Quando o conector de envio FedEx estiver ativado, será necessário configurar "
-"pelo menos um método de envio. Depois de fazer isso, o método de envio pode "
-"ser incluído nos pedidos de vendas (SOs) e usado para calcular os custos de "
-"envio e imprimir etiquetas de remessa."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:36
-msgid ""
-"To enable a shipping method, navigate to :menuselection:`Inventory app --> "
-"Configuration --> Settings`, and click the :guilabel:`FedEx Shipping "
-"Methods` button below the :guilabel:`FedEx Connector` checkbox. Doing so "
-"opens a page that shows all existing FedEx shipping methods."
-msgstr ""
-"Para ativar um método de envio, navegue até :menuselection:`app Inventário --"
-"> Configuração --> Definições` e clique no botão :guilabel:`Métodos de envio "
-"FedEx` abaixo da caixa de seleção :guilabel:`Conector FedEx`. Isso abre uma "
-"página que mostra todos os métodos de envio da FedEx existentes."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:41
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:38
 msgid ""
 "To see all shipping methods for every shipper with a connector enabled, "
 "navigate to :menuselection:`Inventory app --> Configuration --> Shipping "
@@ -20361,42 +20335,18 @@ msgstr ""
 "ativado, navegue até :menuselection:`app Inventário --> Configuração --> "
 "Métodos de envio`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:44
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:41
 msgid ""
-"Select a shipping method to open its form. Alternatively, "
+"Select a FedEx shipping method to open its form. Alternatively, "
 "click :guilabel:`New` to open a blank form, and configure a new shipping "
 "method."
 msgstr ""
-"Selecione um método de envio para abrir o respectivo formulário. Como "
-"alternativa, clique em :guilabel:`Novo` para abrir um formulário em branco e "
-"configurar um novo método de envio."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:None
 msgid "The form for a FedEx shipping method."
 msgstr "Formulário do método de envio da FedEx."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:52
-msgid ""
-"Enabling the FedEx shipping connector automatically creates two default "
-"shipping methods: :guilabel:`FedEx US` and :guilabel:`FedEx International`. "
-"Each of these methods are pre-configured with test credentials, allowing "
-"them to be used for testing purposes."
-msgstr ""
-"A ativação do conector de envio da FedEx cria automaticamente dois métodos "
-"de envio padrão: :guilabel:`FedEx US` e :guilabel:`FedEx International`. "
-"Cada um desses métodos é pré-configurado com credenciais de teste, o que "
-"permite que eles sejam usados para fins de teste."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:56
-msgid ""
-"Before the shipping method can be used to create actual shipments, the test "
-"credentials must be replaced with credentials from a valid FedEx account."
-msgstr ""
-"Antes que o método de envio possa ser usado para criar remessas reais, as "
-"credenciais de teste devem ser substituídas por credenciais de uma conta "
-"FedEx válida."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:62
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:50
 msgid ""
 "At the very top of a shipping method form are fields used to configure the "
 "way the method operates in Odoo. In the :guilabel:`Provider` field, "
@@ -20408,7 +20358,7 @@ msgstr ""
 "campo :guilabel:`Fornecedor`, selecione :guilabel:`FedEx` no menu suspenso, "
 "se ainda não estiver selecionado."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:54
 msgid ""
 "The rest of the fields in this section are general to all shipping "
 "providers. For details on how to fill them out, see the documentation "
@@ -20418,23 +20368,19 @@ msgstr ""
 "Para obter detalhes sobre como preenchê-los, consulte a documentação "
 "sobre :doc:`transportadoras terceirizadas <third_party_shipper>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:70
-msgid "Fedex Configuration tab"
-msgstr "Aba Configuração do Fedex"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:72
-msgid ""
-"The options in the :guilabel:`Fedex Configuration` tab of a FedEx shipping "
-"method form are used to connect the method to a FedEx account, and configure "
-"the shipping details associated with the method (drop-off type, package "
-"type, etc.)."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:58
+msgid "FedEx Configuration tab"
 msgstr ""
-"As opções na aba :guilabel:`Configuração do Fedex` de um formulário de "
-"método de envio FedEx são usadas para conectar o método a uma conta FedEx e "
-"configurar os detalhes de envio associados ao método (tipo de entrega, tipo "
-"de pacote etc.)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:76
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:60
+msgid ""
+"The options in the *Fedex Configuration* tab of a FedEx shipping method form "
+"are used to connect the method to a FedEx account, and configure the "
+"shipping details associated with the method (drop-off type, package type, "
+"etc.)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:64
 msgid ""
 "A FedEx business account is required to obtain the information needed to "
 "fill out the fields in this tab. To create a new account, navigate to "
@@ -20447,229 +20393,134 @@ msgstr ""
 "account.html>`_ da FedEx, clique em :guilabel:`Create Account` e siga as "
 "instruções."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:82
-msgid "Developer Key and Meter Number fields"
-msgstr "Campos Chave de desenvolvedor e Número do medidor"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:84
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:69
 msgid ""
-"A *developer key* is used to integrate a FedEx account with an external "
-"service, like the Odoo **Inventory** app. A *meter number* is a unique ID "
-"number used by FedEx to identify negotiated shipping rates for each account."
+"Then, register the FedEx account in the database. Click "
+"the :guilabel:`Register FedEx Account` button. The *FedEx Account "
+"Registration* window opens. Accept the end user license agreement (EULA) by "
+"selecting the :guilabel:`I acknowledge the reading of the FedEx End User "
+"License Agreement` and :guilabel:`I accept the terms of FedEx EULA to start "
+"shipping` checkboxes, then click :guilabel:`Accept and Continue`."
 msgstr ""
-"A *chave de desenvolvedor* é usada para integrar uma conta FedEx a um "
-"serviço externo, como o aplicativo Odoo **Inventário**. *Número do medidor* "
-"é um número de identificação exclusivo usado pela FedEx para identificar os "
-"preços de frete negociados para cada conta."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:75
+msgid ""
+"In the *FedEx Account Registration - Shipper Information* window, enter "
+"the :guilabel:`FedEx Account Number`. Enter the name of the company in "
+"the :guilabel:`Customer Name` field and provide the business address. If "
+"products are being shipped from a residential address, select "
+"the :guilabel:`Residential Address` checkbox. Click the :guilabel:`Validate "
+"Address` button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:80
+msgid ""
+"Next, choose a :guilabel:`Validation Option` to verify access to the "
+"account. This is a form of multi-factor authentication (MFA). Two options "
+"are available:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:83
+msgid ""
+":guilabel:`Invoice Validation`: Use information from a recent invoice "
+"(within the past 90 days) to validate the account information."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:85
+msgid ""
+":guilabel:`Secure Code Validation`: Receive a PIN "
+"via :guilabel:`Email`, :guilabel:`SMS`, or :guilabel:`Voice Call`."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:88
 msgid ""
-"To get a developer key and meter number, begin by navigating to FedEx's "
-"`Developer Resource Center <https://www.fedex.com/en-us/developer/web-"
-"services.html>`_. Then, click on the :guilabel:`FedEx Web Services` drop-"
-"down menu."
+"If successful, the *FedEx Account Registration - Success* window displays, "
+"and the account is available for all companies. To change this setting, "
+"click :guilabel:`Open FedEx Account Form` and modify the company settings."
 msgstr ""
-"Para obter uma chave de desenvolvedor e um número de medidor, comece "
-"navegando até o `Developer Resource Center da FedEx <https://www.fedex.com/"
-"en-us/developer/web-services.html>`_. Em seguida, clique no menu "
-"suspenso :guilabel:`Serviços web FedEx`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:92
 msgid ""
-"Click :guilabel:`Get Test Key` to start the process of getting a developer "
-"key and meter number which can be used to configure a shipping method for "
-"testing purposes."
+"In the *FedEx Configuration* tab, provide more information about the "
+"shipping method:"
 msgstr ""
-"Clique em :guilabel:`Obter chave de teste` para iniciar o processo de "
-"obtenção de uma chave de desenvolvedor e um número de medidor que podem ser "
-"usados para configurar um método de envio para fins de teste."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:94
+msgid ""
+":guilabel:`FedEx Service Type`: Select the FedEx service used to ship a "
+"package."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:95
 msgid ""
-"Click :guilabel:`Get Production Key` to start the process of getting a "
-"developer key and meter number, which can be used to configure a shipping "
-"method that generates real shipments with FedEx."
+":guilabel:`FedEx Drop-Off Type`: Select the method for getting a package "
+"into FedEx's possession."
 msgstr ""
-"Clique em :guilabel:`Obter chave de produção` para iniciar o processo de "
-"obtenção de uma chave de desenvolvedor e de um número de medidor, que podem "
-"ser usados para configurar um método de envio que gera envios reais com a "
-"FedEx."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:96
+msgid ""
+":guilabel:`FedEx Package Type`: Select the type of package used for the "
+"shipping method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:97
+msgid ""
+":guilabel:`Package Weight Unit`: Select the unit of measure used to weigh "
+"packages."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:98
 msgid ""
-"After clicking either option, follow the instructions until "
-"the :guilabel:`Confirmation` screen is reached. This screen displays the "
-"developer key and meter number."
+":guilabel:`Package Length Unit`: This field changes based on what is "
+"selected in the :guilabel:`Package Weight Unit` field. If :guilabel:`Pounds` "
+"is selected, the length unit updates to :guilabel:`Inches`. "
+"If :guilabel:`Kilograms` is selected, the length unit updates "
+"to :guilabel:`Centimeters`."
 msgstr ""
-"Depois de clicar em uma das opções, siga as instruções até chegar à "
-"tela :guilabel:`Confirmação`. Essa tela exibe a chave do desenvolvedor e o "
-"número do medidor."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:102
 msgid ""
-"Once the developer key and meter number are determined, enter them in "
-"the :guilabel:`Developer Key` and :guilabel:`Meter Number` fields on "
-"the :guilabel:`Fedex Configuration` tab of the shipping method form."
+":guilabel:`Label Size`: Select the type of shipping label used for packages."
 msgstr ""
-"Depois que a chave do desenvolvedor e o número do medidor forem "
-"determinados, insira-os nos campos :guilabel:`Chave de desenvolvedor` "
-"e :guilabel:`Número do medidor` na aba :guilabel:`Configuração Fedex` do "
-"formulário do método de envio."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:103
+msgid ""
+":guilabel:`Label Format`: Select the file format used by Odoo to generate "
+"shipping labels."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:106
-msgid "Password and Account Number fields"
-msgstr "Campos Senha e Número da conta"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:108
 msgid ""
-"A *password* is used, along with a username, to log into a FedEx account. An "
-"*account number* is the unique number assigned to each FedEx account."
+"The options that should be selected on the *FedEx Configuration* tab of a "
+"shipping method depend on the negotiated shipping services of the associated "
+"FedEx account. To confirm the available services for a FedEx account, visit "
+"the *Account Management* page after logging in to the FedEx website or speak "
+"with a customer service representative."
 msgstr ""
-"Uma *senha* e um nome de usuário são usados para fazer login em uma conta "
-"FedEx. Um *número de conta* é o número exclusivo atribuído a cada conta "
-"FedEx."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:111
-msgid ""
-"To find a FedEx account number, log in to a FedEx account at https://"
-"www.fedex.com. Click on the account holder's name in the top-right corner of "
-"the screen, and select :menuselection:`My Profile` from the drop-down menu."
-msgstr ""
-"Para encontrar um número de conta FedEx, faça login em uma conta FedEx em "
-"https://www.fedex.com. Clique no nome do titular da conta no canto superior "
-"direito da tela e selecione :menuselection:`Meu perfil` no menu suspenso."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:115
-msgid ""
-"On the profile page, click :guilabel:`Account Management` on the left side "
-"of the screen. The account number is displayed on this screen."
-msgstr ""
-"On the profile page, click :guilabel:`Account Management` on the left side "
-"of the screen. The account number is displayed on this screen."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:118
-msgid ""
-"Once the password and account number are determined, enter them in "
-"the :guilabel:`Password` and :guilabel:`Account Number` fields on "
-"the :guilabel:`Fedex Configuration` tab of the shipping method form."
-msgstr ""
-"Depois que a senha e o número da conta forem determinados, insira-os nos "
-"campos :guilabel:`Senha` e :guilabel:`Número da conta` na "
-"aba :guilabel:`Configuração Fedex` do formulário do método de envio."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:125
-msgid ""
-"The main section of the :guilabel:`Fedex Configuration` tab includes a "
-"number of additional fields used provide information about the shipping "
-"method:"
-msgstr ""
-"A seção principal da aba :guilabel:`Configuraão Fedex` inclui vários campos "
-"adicionais usados para fornecer informações sobre o método de envio:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:128
-msgid ""
-":guilabel:`Fedex Service Type`: The FedEx service used to ship a package."
-msgstr ""
-":guilabel:`Tipo de serviço Fedex`: O serviço FedEx usado para enviar um "
-"pacote."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:129
-msgid ""
-":guilabel:`Fedex Drop-Off Type`: The method for getting a package into "
-"FedEx's possession."
-msgstr ""
-":guilabel:`Tipo de entrega da FedEx`: O método para colocar um pacote em "
-"posse da FedEx."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:130
-msgid ""
-":guilabel:`Fedex Package Type`: The type of package used for the shipping "
-"method."
-msgstr ""
-":guilabel:`Tipo de pacote Fedex`: O tipo de pacote usado para o método de "
-"envio."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:131
-msgid ""
-":guilabel:`Package Weight Unit`: The unit of measure used to weigh packages."
-msgstr ""
-":guilabel:`Unidade de peso do pacote`: A unidade de medida usada para pesar "
-"pacotes."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:132
-msgid ""
-":guilabel:`Package Length Unit`: The unit of measure used to determine the "
-"dimensions of packages."
-msgstr ""
-":guilabel:`Unidade de comprimento do pacote`: A unidade de medida usada para "
-"determinar as dimensões das embalagens."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:133
-msgid ":guilabel:`Label Type`: The type of shipping label used for packages."
-msgstr ""
-":guilabel:`Tipo de etiqueta`: O tipo de etiqueta de remessa usada para "
-"pacotes."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:134
-msgid ""
-":guilabel:`Label Format`: The file format used by Odoo to generate shipping "
-"labels."
-msgstr ""
-":guilabel:`Formato de etiqueta`: O formato de arquivo usado pelo Odoo para "
-"gerar etiquetas de remessa."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:135
-msgid ""
-":guilabel:`Commercial Invoice Type`: The dimensions and type of the paper "
-"used to print invoices."
-msgstr ""
-":guilabel:`Tipo de fatura comercial`: As dimensões e o tipo de papel usado "
-"para imprimir faturas."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:138
-msgid ""
-"The options that should be selected on the :guilabel:`Fedex Configuration` "
-"tab of a shipping method depend on the negotiated shipping services of the "
-"associated FedEx account. To confirm the available services for a FedEx "
-"account, visit the *Account Management* page after logging in to the FedEx "
-"website, or speak with a customer service representative."
-msgstr ""
-"As opções que devem ser selecionadas na aba :guilabel:`Configuração Fedex` "
-"de um método de envio dependem dos serviços de remessa negociados da conta "
-"FedEx associada. Para confirmar os serviços disponíveis para uma conta "
-"FedEx, visite a página *Gerenciamento da conta* depois de fazer login no "
-"site da FedEx ou fale com um representante do atendimento ao cliente"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:144
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:112
 msgid "Options section"
 msgstr "Seção de opções"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:146
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:114
 msgid ""
-"The :guilabel:`Options` section of the :guilabel:`Fedex Configuration` tab "
-"provides a few additional options to further configure the shipping method:"
+"The :guilabel:`Options` section of the *FedEx Configuration* tab provides a "
+"few additional options to further configure the shipping method:"
 msgstr ""
-"A seção :guilabel:`Opções` da aba :guilabel:`Configuração Fedex` fornece "
-"algumas opções adicionais para configurar ainda mais o método de envio:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:149
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:117
 msgid ""
-":guilabel:`Saturday Delivery`: Tick the checkbox to allow packages shipped "
-"with the delivery method to be delivered on Saturdays."
+":guilabel:`Generate Return Label`: Select this checkbox to automatically "
+"generate a label when a delivery is validated."
 msgstr ""
-":guilabel:`Entrega aos sábados`: Marque a caixa de seleção para permitir que "
-"os pacotes enviados com o método de entrega sejam entregues aos sábados."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:151
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:119
 msgid ""
-":guilabel:`Generate Return Label`: Tick the checkbox to automatically "
-"generate a return label upon validation of a delivery order."
+":guilabel:`Email Notifications`: Select this checkbox to send updates via "
+"email to customers, if an email address is configured for the customer."
 msgstr ""
-":guilabel:`Gerar etiqueta de devolução`: Marque a caixa de seleção para "
-"gerar automaticamente uma etiqueta de devolução após a validação de um "
-"pedido de entrega."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:153
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:121
 msgid ""
 ":guilabel:`Duties paid by`: Use the drop-down menu to select whether duty "
 "charges should be paid by the :guilabel:`Sender` or :guilabel:`Recipient`."
@@ -20678,11 +20529,33 @@ msgstr ""
 "os encargos tributários devem ser pagos pelo :guilabel:`Emissor` "
 "ou :guilabel:`Destinatário`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:157
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:123
+msgid ""
+":guilabel:`Residential delivery`: Specify when to mark a recipient's address "
+"as residential."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:124
+msgid ""
+":guilabel:`Generate invoice`: Specify whether an invoice should be generated "
+"as a PDF or sent as an electronic trade document. This is typically required "
+"when commercial invoices are needed for international shipments."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:129
+msgid "Declared Value section"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:131
+msgid ""
+"Specify the :guilabel:`Declared Value Percentage` for insurance purposes."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:134
 msgid "Activate shipping method"
 msgstr "Ativar método de envio"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:159
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:136
 msgid ""
 "By default, shipping methods in Odoo are created within a *test "
 "environment*. This means they can only be used for testing purposes, and are "
@@ -20692,7 +20565,7 @@ msgstr ""
 "teste*. Isso significa que eles só podem ser usados para fins de teste e não "
 "podem gerar pedidos de remessa reais."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:162
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:139
 msgid ""
 "To activate a shipping method in a *production environment*, click "
 "the :icon:`fa-stop` :guilabel:`Test Environment` smart button at the top of "
@@ -20704,7 +20577,7 @@ msgstr ""
 "do formulário do método de envio. Depois de fazer isso, os botões "
 "inteligentes mudarão para :icon:`fa-play` :guilabel:`Ambiente de produção`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:166
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:143
 msgid ""
 "With the production environment enabled, validating a delivery order using "
 "the shipping method generates an actual shipping label with FedEx."
@@ -20712,7 +20585,7 @@ msgstr ""
 "Com o ambiente de produção ativado, a validação de um pedido de entrega "
 "usando o método de envio gera uma etiqueta de envio real com a FedEx."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:169
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:146
 msgid ""
 "Click the :icon:`fa-play` :guilabel:`Production Environment` smart button to "
 "return the shipping method to a test environment."
@@ -20720,7 +20593,7 @@ msgstr ""
 "Clique no botão inteligente :icon:`fa-play` :guilabel:`Ambiente de produção` "
 "para que o método de envio volte a um ambiente de teste."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:173
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:150
 msgid ""
 "**Do not** enable the production environment for a shipping method before it "
 "is ready to be used for actual shipping orders. Doing so may lead to the "
@@ -54135,6 +54008,311 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "Integrating a FedEx account with Odoo's **Inventory** app makes it "
+#~ "possible to :doc:`calculate shipping rates <../setup_configuration>`, "
+#~ "and :doc:`generate shipping labels <labels>` within Odoo. This is "
+#~ "accomplished by enabling the FedEx *shipping connector*, then configuring "
+#~ "at least one *shipping method*."
+#~ msgstr ""
+#~ "A integração de uma conta FedEx com o aplicativo Odoo **Inventário** "
+#~ "possibilita :doc:`calcular preços de frete <../setup_configuration>` "
+#~ "e :doc:`gerar etiquetas de envio <labels>` no Odoo. Isso é feito ativando "
+#~ "o *conector de envio* da FedEx e, em seguida, configurando pelo menos um "
+#~ "*método de envio*."
+
+#~ msgid ""
+#~ "To enable the shipping connector for FedEx, navigate "
+#~ "to :menuselection:`Inventory app --> Configuration --> Settings`. Scroll "
+#~ "down to the :guilabel:`Shipping Connectors` section, and tick the "
+#~ "checkbox next to :guilabel:`FedEx Connector`."
+#~ msgstr ""
+#~ "Para ativar o conector de envio da FedEx, navegue até :menuselection:`app "
+#~ "Inventário --> Configuração --> Definições`. Role para baixo até a "
+#~ "seção :guilabel:`Conectores de envio` e marque a caixa de seleção ao lado "
+#~ "de :guilabel:`Conector FedEx`."
+
+#~ msgid ""
+#~ "Finally, click :guilabel:`Save` to save the changes. After doing so, "
+#~ "a :icon:`oi-arrow-right` :guilabel:`FedEx Shipping Methods` button "
+#~ "appears below :guilabel:`FedEx Connector`."
+#~ msgstr ""
+#~ "Por fim, clique em :guilabel:`Salvar` para salvar as alterações. Depois "
+#~ "de fazer isso, um botão :icon:`oi-arrow-right` :guilabel:`Métodos de "
+#~ "envio da FedEx` aparece abaixo de :guilabel:`Conector FedEx`."
+
+#~ msgid "The FedEx Shipping Methods button below the FedEx Connector."
+#~ msgstr "O botão Métodos de envio da FedEx abaixo do Conector FedEx."
+
+#~ msgid ""
+#~ "Once the FedEx shipping connector is enabled, it is necessary to "
+#~ "configure at least one shipping method. After doing so, the shipping "
+#~ "method can be included in sales orders (SOs), and used to compute "
+#~ "shipping costs, and print shipping labels."
+#~ msgstr ""
+#~ "Quando o conector de envio FedEx estiver ativado, será necessário "
+#~ "configurar pelo menos um método de envio. Depois de fazer isso, o método "
+#~ "de envio pode ser incluído nos pedidos de vendas (SOs) e usado para "
+#~ "calcular os custos de envio e imprimir etiquetas de remessa."
+
+#~ msgid ""
+#~ "To enable a shipping method, navigate to :menuselection:`Inventory app --"
+#~ "> Configuration --> Settings`, and click the :guilabel:`FedEx Shipping "
+#~ "Methods` button below the :guilabel:`FedEx Connector` checkbox. Doing so "
+#~ "opens a page that shows all existing FedEx shipping methods."
+#~ msgstr ""
+#~ "Para ativar um método de envio, navegue até :menuselection:`app "
+#~ "Inventário --> Configuração --> Definições` e clique no "
+#~ "botão :guilabel:`Métodos de envio FedEx` abaixo da caixa de "
+#~ "seleção :guilabel:`Conector FedEx`. Isso abre uma página que mostra todos "
+#~ "os métodos de envio da FedEx existentes."
+
+#~ msgid ""
+#~ "Select a shipping method to open its form. Alternatively, "
+#~ "click :guilabel:`New` to open a blank form, and configure a new shipping "
+#~ "method."
+#~ msgstr ""
+#~ "Selecione um método de envio para abrir o respectivo formulário. Como "
+#~ "alternativa, clique em :guilabel:`Novo` para abrir um formulário em "
+#~ "branco e configurar um novo método de envio."
+
+#~ msgid ""
+#~ "Enabling the FedEx shipping connector automatically creates two default "
+#~ "shipping methods: :guilabel:`FedEx US` and :guilabel:`FedEx "
+#~ "International`. Each of these methods are pre-configured with test "
+#~ "credentials, allowing them to be used for testing purposes."
+#~ msgstr ""
+#~ "A ativação do conector de envio da FedEx cria automaticamente dois "
+#~ "métodos de envio padrão: :guilabel:`FedEx US` e :guilabel:`FedEx "
+#~ "International`. Cada um desses métodos é pré-configurado com credenciais "
+#~ "de teste, o que permite que eles sejam usados para fins de teste."
+
+#~ msgid ""
+#~ "Before the shipping method can be used to create actual shipments, the "
+#~ "test credentials must be replaced with credentials from a valid FedEx "
+#~ "account."
+#~ msgstr ""
+#~ "Antes que o método de envio possa ser usado para criar remessas reais, as "
+#~ "credenciais de teste devem ser substituídas por credenciais de uma conta "
+#~ "FedEx válida."
+
+#~ msgid "Fedex Configuration tab"
+#~ msgstr "Aba Configuração do Fedex"
+
+#~ msgid ""
+#~ "The options in the :guilabel:`Fedex Configuration` tab of a FedEx "
+#~ "shipping method form are used to connect the method to a FedEx account, "
+#~ "and configure the shipping details associated with the method (drop-off "
+#~ "type, package type, etc.)."
+#~ msgstr ""
+#~ "As opções na aba :guilabel:`Configuração do Fedex` de um formulário de "
+#~ "método de envio FedEx são usadas para conectar o método a uma conta FedEx "
+#~ "e configurar os detalhes de envio associados ao método (tipo de entrega, "
+#~ "tipo de pacote etc.)."
+
+#~ msgid "Developer Key and Meter Number fields"
+#~ msgstr "Campos Chave de desenvolvedor e Número do medidor"
+
+#~ msgid ""
+#~ "A *developer key* is used to integrate a FedEx account with an external "
+#~ "service, like the Odoo **Inventory** app. A *meter number* is a unique ID "
+#~ "number used by FedEx to identify negotiated shipping rates for each "
+#~ "account."
+#~ msgstr ""
+#~ "A *chave de desenvolvedor* é usada para integrar uma conta FedEx a um "
+#~ "serviço externo, como o aplicativo Odoo **Inventário**. *Número do "
+#~ "medidor* é um número de identificação exclusivo usado pela FedEx para "
+#~ "identificar os preços de frete negociados para cada conta."
+
+#~ msgid ""
+#~ "To get a developer key and meter number, begin by navigating to FedEx's "
+#~ "`Developer Resource Center <https://www.fedex.com/en-us/developer/web-"
+#~ "services.html>`_. Then, click on the :guilabel:`FedEx Web Services` drop-"
+#~ "down menu."
+#~ msgstr ""
+#~ "Para obter uma chave de desenvolvedor e um número de medidor, comece "
+#~ "navegando até o `Developer Resource Center da FedEx <https://"
+#~ "www.fedex.com/en-us/developer/web-services.html>`_. Em seguida, clique no "
+#~ "menu suspenso :guilabel:`Serviços web FedEx`."
+
+#~ msgid ""
+#~ "Click :guilabel:`Get Test Key` to start the process of getting a "
+#~ "developer key and meter number which can be used to configure a shipping "
+#~ "method for testing purposes."
+#~ msgstr ""
+#~ "Clique em :guilabel:`Obter chave de teste` para iniciar o processo de "
+#~ "obtenção de uma chave de desenvolvedor e um número de medidor que podem "
+#~ "ser usados para configurar um método de envio para fins de teste."
+
+#~ msgid ""
+#~ "Click :guilabel:`Get Production Key` to start the process of getting a "
+#~ "developer key and meter number, which can be used to configure a shipping "
+#~ "method that generates real shipments with FedEx."
+#~ msgstr ""
+#~ "Clique em :guilabel:`Obter chave de produção` para iniciar o processo de "
+#~ "obtenção de uma chave de desenvolvedor e de um número de medidor, que "
+#~ "podem ser usados para configurar um método de envio que gera envios reais "
+#~ "com a FedEx."
+
+#~ msgid ""
+#~ "After clicking either option, follow the instructions until "
+#~ "the :guilabel:`Confirmation` screen is reached. This screen displays the "
+#~ "developer key and meter number."
+#~ msgstr ""
+#~ "Depois de clicar em uma das opções, siga as instruções até chegar à "
+#~ "tela :guilabel:`Confirmação`. Essa tela exibe a chave do desenvolvedor e "
+#~ "o número do medidor."
+
+#~ msgid ""
+#~ "Once the developer key and meter number are determined, enter them in "
+#~ "the :guilabel:`Developer Key` and :guilabel:`Meter Number` fields on "
+#~ "the :guilabel:`Fedex Configuration` tab of the shipping method form."
+#~ msgstr ""
+#~ "Depois que a chave do desenvolvedor e o número do medidor forem "
+#~ "determinados, insira-os nos campos :guilabel:`Chave de desenvolvedor` "
+#~ "e :guilabel:`Número do medidor` na aba :guilabel:`Configuração Fedex` do "
+#~ "formulário do método de envio."
+
+#~ msgid "Password and Account Number fields"
+#~ msgstr "Campos Senha e Número da conta"
+
+#~ msgid ""
+#~ "A *password* is used, along with a username, to log into a FedEx account. "
+#~ "An *account number* is the unique number assigned to each FedEx account."
+#~ msgstr ""
+#~ "Uma *senha* e um nome de usuário são usados para fazer login em uma conta "
+#~ "FedEx. Um *número de conta* é o número exclusivo atribuído a cada conta "
+#~ "FedEx."
+
+#~ msgid ""
+#~ "To find a FedEx account number, log in to a FedEx account at https://"
+#~ "www.fedex.com. Click on the account holder's name in the top-right corner "
+#~ "of the screen, and select :menuselection:`My Profile` from the drop-down "
+#~ "menu."
+#~ msgstr ""
+#~ "Para encontrar um número de conta FedEx, faça login em uma conta FedEx em "
+#~ "https://www.fedex.com. Clique no nome do titular da conta no canto "
+#~ "superior direito da tela e selecione :menuselection:`Meu perfil` no menu "
+#~ "suspenso."
+
+#~ msgid ""
+#~ "On the profile page, click :guilabel:`Account Management` on the left "
+#~ "side of the screen. The account number is displayed on this screen."
+#~ msgstr ""
+#~ "On the profile page, click :guilabel:`Account Management` on the left "
+#~ "side of the screen. The account number is displayed on this screen."
+
+#~ msgid ""
+#~ "Once the password and account number are determined, enter them in "
+#~ "the :guilabel:`Password` and :guilabel:`Account Number` fields on "
+#~ "the :guilabel:`Fedex Configuration` tab of the shipping method form."
+#~ msgstr ""
+#~ "Depois que a senha e o número da conta forem determinados, insira-os nos "
+#~ "campos :guilabel:`Senha` e :guilabel:`Número da conta` na "
+#~ "aba :guilabel:`Configuração Fedex` do formulário do método de envio."
+
+#~ msgid ""
+#~ "The main section of the :guilabel:`Fedex Configuration` tab includes a "
+#~ "number of additional fields used provide information about the shipping "
+#~ "method:"
+#~ msgstr ""
+#~ "A seção principal da aba :guilabel:`Configuraão Fedex` inclui vários "
+#~ "campos adicionais usados para fornecer informações sobre o método de "
+#~ "envio:"
+
+#~ msgid ""
+#~ ":guilabel:`Fedex Service Type`: The FedEx service used to ship a package."
+#~ msgstr ""
+#~ ":guilabel:`Tipo de serviço Fedex`: O serviço FedEx usado para enviar um "
+#~ "pacote."
+
+#~ msgid ""
+#~ ":guilabel:`Fedex Drop-Off Type`: The method for getting a package into "
+#~ "FedEx's possession."
+#~ msgstr ""
+#~ ":guilabel:`Tipo de entrega da FedEx`: O método para colocar um pacote em "
+#~ "posse da FedEx."
+
+#~ msgid ""
+#~ ":guilabel:`Fedex Package Type`: The type of package used for the shipping "
+#~ "method."
+#~ msgstr ""
+#~ ":guilabel:`Tipo de pacote Fedex`: O tipo de pacote usado para o método de "
+#~ "envio."
+
+#~ msgid ""
+#~ ":guilabel:`Package Weight Unit`: The unit of measure used to weigh "
+#~ "packages."
+#~ msgstr ""
+#~ ":guilabel:`Unidade de peso do pacote`: A unidade de medida usada para "
+#~ "pesar pacotes."
+
+#~ msgid ""
+#~ ":guilabel:`Package Length Unit`: The unit of measure used to determine "
+#~ "the dimensions of packages."
+#~ msgstr ""
+#~ ":guilabel:`Unidade de comprimento do pacote`: A unidade de medida usada "
+#~ "para determinar as dimensões das embalagens."
+
+#~ msgid ""
+#~ ":guilabel:`Label Type`: The type of shipping label used for packages."
+#~ msgstr ""
+#~ ":guilabel:`Tipo de etiqueta`: O tipo de etiqueta de remessa usada para "
+#~ "pacotes."
+
+#~ msgid ""
+#~ ":guilabel:`Label Format`: The file format used by Odoo to generate "
+#~ "shipping labels."
+#~ msgstr ""
+#~ ":guilabel:`Formato de etiqueta`: O formato de arquivo usado pelo Odoo "
+#~ "para gerar etiquetas de remessa."
+
+#~ msgid ""
+#~ ":guilabel:`Commercial Invoice Type`: The dimensions and type of the paper "
+#~ "used to print invoices."
+#~ msgstr ""
+#~ ":guilabel:`Tipo de fatura comercial`: As dimensões e o tipo de papel "
+#~ "usado para imprimir faturas."
+
+#~ msgid ""
+#~ "The options that should be selected on the :guilabel:`Fedex "
+#~ "Configuration` tab of a shipping method depend on the negotiated shipping "
+#~ "services of the associated FedEx account. To confirm the available "
+#~ "services for a FedEx account, visit the *Account Management* page after "
+#~ "logging in to the FedEx website, or speak with a customer service "
+#~ "representative."
+#~ msgstr ""
+#~ "As opções que devem ser selecionadas na aba :guilabel:`Configuração "
+#~ "Fedex` de um método de envio dependem dos serviços de remessa negociados "
+#~ "da conta FedEx associada. Para confirmar os serviços disponíveis para uma "
+#~ "conta FedEx, visite a página *Gerenciamento da conta* depois de fazer "
+#~ "login no site da FedEx ou fale com um representante do atendimento ao "
+#~ "cliente"
+
+#~ msgid ""
+#~ "The :guilabel:`Options` section of the :guilabel:`Fedex Configuration` "
+#~ "tab provides a few additional options to further configure the shipping "
+#~ "method:"
+#~ msgstr ""
+#~ "A seção :guilabel:`Opções` da aba :guilabel:`Configuração Fedex` fornece "
+#~ "algumas opções adicionais para configurar ainda mais o método de envio:"
+
+#~ msgid ""
+#~ ":guilabel:`Saturday Delivery`: Tick the checkbox to allow packages "
+#~ "shipped with the delivery method to be delivered on Saturdays."
+#~ msgstr ""
+#~ ":guilabel:`Entrega aos sábados`: Marque a caixa de seleção para permitir "
+#~ "que os pacotes enviados com o método de entrega sejam entregues aos "
+#~ "sábados."
+
+#~ msgid ""
+#~ ":guilabel:`Generate Return Label`: Tick the checkbox to automatically "
+#~ "generate a return label upon validation of a delivery order."
+#~ msgstr ""
+#~ ":guilabel:`Gerar etiqueta de devolução`: Marque a caixa de seleção para "
+#~ "gerar automaticamente uma etiqueta de devolução após a validação de um "
+#~ "pedido de entrega."
 
 #~ msgid "Sell stock from multiple warehouses using virtual locations"
 #~ msgstr "Venda de estoque de vários armazéns usando locais virtuais"
