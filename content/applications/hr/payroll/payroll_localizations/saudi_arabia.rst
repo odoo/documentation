@@ -213,7 +213,7 @@ the drop-down space beneath the :guilabel:`Establishment Bank Account` field, an
 Next, enter the company's :guilabel:`MoL Establishment ID`. This ID number is provided by Saudi
 Arabia's Ministry of Labor.
 
-Finally, select the :doc:`time off yype <../../time_off/time_off_types>` that is used to calculate
+Finally, select the :doc:`time off type <../../time_off/time_off_types>` that is used to calculate
 the :guilabel:`Annual Leave Balance` set in the :ref:`employee's profile
 <payroll/saudi_payroll_info>`.
 
@@ -323,6 +323,25 @@ correct, click :guilabel:`Validate`.
 .. image:: saudi_arabia/check-payslips-sa.png
    :alt: The worked days tab of a payslip.
 
+Employee net cost
+-----------------
+
+To allow payroll officers to track the total employee cost beyond the employee's net salary, the
+employee's net cost is computed automatically upon each generated payslip and includes both direct
+and indirect costs. Direct costs represent the employee's payable amount, while indirect costs
+include other employer costs, as well as contributions such as |GOSI|.
+
+Although these amounts are calculated and available in the system for internal reporting and
+analysis, they do not appear on the payslip PDF generated for the employee.
+
+.. example::
+   If an employee has a net payable salary of 10,500 SAR and the following indirect costs:
+
+   - Medical insurance of 20,000 SAR a year (1,666.67 SAR a month).
+   - GOSI company contribution of 1,057.5 SAR.
+
+   The net cost is: 10,500 + 1,666.67 + 1,057.5  =  13,224.17 SAR
+
 Accounting check
 ----------------
 
@@ -400,6 +419,36 @@ Close payroll
 
 If there are no errors, payroll is completed for the pay period.
 
+Sick leaves
+===========
+
+Sick leave rules define how the employee's payslip is affected when the employee takes sick leave.
+
+There are three sick leave cases:
+
+- Fully paid sick leave: Employees are entitled to 30 days per calendar year.
+- 75% paid sick leave: Employees are entitled to 60 additional days after the first 30 fully paid
+  sick leave days.
+- Unpaid sick leave: Any sick leave beyond the first 90 days is considered unpaid.
+
+.. important::
+   The sick leave entitlement limits mentioned above are calculated within a one-year period. This
+   period starts from the date of the employee's first sick leave, and any subsequent sick leave
+   taken during that period is counted toward the employee's entitlement.
+
+The sick leave compensation is calculated using the following formula, where the gross monthly
+salary is the employee's basic salary plus all allowances defined on the employee's contract:
+
+.. math::
+   :class: overflow-scroll
+
+   \text{Sick Leave Amount} = \left(\frac{\text{Gross Monthly Salary}}{30}\right) \times \text{Number of Sick Leave Days} \times \text{Percentage}
+
+.. note::
+   There is a single sick leave time off type, *Sick Time Off*. The system automatically tracks the
+   total number of sick leave days taken by the employee and applies the corresponding percentage
+   based on the accumulated balance.
+
 End of employee collaboration
 =============================
 
@@ -426,7 +475,7 @@ If the employee resigns after completing between two and five years of service, 
 one third of the |EOS| amount that would normally be granted in the case of an *End of Contract*.
 
 .. example::
-   If an employee worked for thee years and resigned, the |EOS| is first computed as if the
+   If an employee worked for three years and resigned, the |EOS| is first computed as if the
    termination reason was *End of Contract*, then the employee receives one third of that amount.
 
 Fired
@@ -639,7 +688,7 @@ Once the module **Saudi Arabia Payroll - Attendance** is installed, the HR manag
 grace period from the payroll settings. This grace period defines the amount of time an employee is
 allowed to be late without triggering the late attendance rules.
 
-If the grace period is not set or it got exceeded, the system tracks how many minutes the employee
+If the grace period is not set or it is exceeded, the system tracks how many minutes the employee
 was late, and the HR manager's approval will be required to confirm the lateness.
 
 Once confirmed, on the next payslip, the number of late hours is reflected on the payslip under the
