@@ -100,8 +100,8 @@ reporting period.
 Invoicing language
 ==================
 
-Invoices can be issued in different languages according to your customer or business needs. By
-default, billing documents are sent to customers or vendors in the language set on their
+Invoices and receipts can be issued in different languages according to your customer or business
+needs. By default, billing documents are sent to customers or vendors in the language set on their
 :doc:`contact form <../../essentials/contacts>`.
 
 It is also possible to add Arabic as a second language to your company's billing documents if
@@ -109,8 +109,12 @@ desired or required. To do so, go to :menuselection:`Configuration --> Settings`
 **Accounting** app, then, in the :guilabel:`Customer Invoices` section, enable :guilabel:`Gulf
 Cooperation Council Format`.
 
-When enabled, all invoices, credit/debit notes, vendor bills, and refund bills feature both the
-language set on your customer or vendor contact form and an Arabic translation.
+For point of sale receipts, go to :menuselection:`Point of Sale --> Configuration --> Settings`,
+navigate to the :guilabel:`Bills & Receipts` section, and enable :guilabel:`Gulf Cooperation Council
+Format`.
+
+When enabled, all invoices, credit/debit notes, vendor bills, refund bills, and receipts feature
+both the language set on your customer or vendor contact form and an Arabic translation.
 
 .. tip::
    Click :guilabel:`Preview` after confirming an invoice to see exactly how the invoice will appear
