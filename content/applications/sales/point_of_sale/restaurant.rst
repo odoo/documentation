@@ -34,10 +34,15 @@ orders:
 
    .. card:: Online food delivery
       :target: restaurant/online_food_delivery
-      :large:
 
       Integrate third-party delivery platforms via UrbanPiper to centralize and manage external
       orders directly within the POS.
+
+   .. card:: APAC food delivery integrations
+      :target: restaurant/APAC_food_delivery_integrations
+
+      Integrate with popular APAC food delivery platforms, allowing for synchronizing orders,
+      updating menus, managing store details directly from the POS.
 
 .. _pos/restaurant/default:
 
@@ -265,6 +270,7 @@ To process an order from the POS register, follow these steps:
 .. seealso::
    - :doc:`extra/preparation`
    - :doc:`restaurant/online_food_delivery`
+   - :doc:`restaurant/APAC_food_delivery_integrations`
 
 .. _pos/restaurant/floors/transfer:
 
@@ -479,3 +485,4 @@ after payment, follow these steps:
    :titlesonly:
 
    restaurant/online_food_delivery
+   restaurant/APAC_food_delivery_integrations
