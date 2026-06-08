@@ -3,11 +3,9 @@ Multi-currency system
 =====================
 
 Odoo allows you to issue invoices, receive bills, and record transactions in currencies other than
-the main currency configured for your company. You can also set up bank accounts in other currencies
-and run reports on your foreign currency activities.
-
-.. seealso::
-   - :doc:`../bank/foreign_currency`
+the main currency configured for your company. You can also :doc:`set up bank accounts in other
+currencies <../bank/foreign_currency>` and run :ref:`reports on your foreign currency activities
+<accounting/foreign_currency/report>`.
 
 .. _multi-currency/config:
 
