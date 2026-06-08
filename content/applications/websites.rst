@@ -13,3 +13,4 @@ Websites
     websites/forum
     websites/blog
     websites/livechat
+    websites/website_import_tool
