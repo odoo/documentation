@@ -4,6 +4,25 @@
 Changelog
 =========
 
+Odoo Online version 19.4
+========================
+
+- ``ir.access`` that merges ACLs and record rules.
+  See `#166359 <https://github.com/odoo/odoo/pull/166359>`_.
+- Field updates and inverse execution are now consistently ordered by
+  ``(field.write_sequence, field_index)`` in both ``create()`` and ``write()``.
+  See `#265469 <https://github.com/odoo/odoo/pull/265469>`_.
+- New HTTP server based on h11.
+  See `#247162 <https://github.com/odoo/odoo/pull/247162`>_.
+- Removing ``request`` from the code of models and adding ``env.website``.
+  See `#252766 <https://github.com/odoo/odoo/pull/252766`>_.
+- Thread-safe ormcache and automatic signaling.
+  See `#255059 <https://github.com/odoo/odoo/pull/255059`>_
+  and `#261736 <https://github.com/odoo/odoo/pull/261736`>_.
+- Modularize reporting engines and prepare paper-muncher.
+  See respectively `#259626 <https://github.com/odoo/odoo/pull/259626`>_.
+  and `#264068 <https://github.com/odoo/odoo/pull/264068`>_.
+
 Odoo Online version 19.3
 ========================
 
