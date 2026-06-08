@@ -24,9 +24,9 @@ whenever a message is sent to that unique email address. Choose whether to accep
 For databases with multiple companies, select a :guilabel:`Company` from the drop-down menu to
 assign this team to. Please note, this field is not required.
 
-If *Leads* have been enabled in the **CRM** app's Configuration settings, two checkboxes will appear
-that determine whether leads assigned to the sales team should go directly into the pipeline or be
-set as leads first.
+If *Leads* have been enabled in the **CRM** app's Configuration settings, two checkboxes appear that
+determine whether leads assigned to the sales team should go directly into the pipeline or be set as
+leads first.
 
 .. image:: manage_sales_teams/sales-team-creation.png
    :alt: The settings page for a new sales team.
@@ -54,6 +54,19 @@ Members` pop-up window. Assign a salesperson in the :guilabel:`Salesperson` fiel
 lead assignment rules if desired under the :guilabel:`Lead Assignment` tab. Click the
 :guilabel:`Save & Close` button to finish, or click :guilabel:`Save & New` to open a blank form and
 keep adding sales team members.
+
+.. note::
+   When using rules-based assignment, Odoo automatically limits the maximum number of leads an
+   individual team member can be assigned in a day. This limit is determined by the number in the
+   :guilabel:`Capacity` field and is equal to that number divided by 30 (for the number of days in
+   the period). **This may result in leads going unassigned if all sales team members' daily
+   capacity has been met.**
+
+.. example::
+   Sales team member John Doe has a :guilabel:`Capacity` maximum of 120 leads in a 30-day period.
+   This means that the database automatically assigns John a maximum of 4 leads per day. If John
+   were the only member of the sales team and 10 leads were created in a single day, only 4 would be
+   assigned to him. The other 6 would go unassigned.
 
 If it's necessary to prevent this salesperson from being automatically assigned leads, tick the
 :guilabel:`Pause assignment` checkbox. If auto assignment is paused, the salesperson can still be
