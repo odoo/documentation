@@ -6,6 +6,10 @@ Odoo allows you to issue invoices, receive bills, and record transactions in cur
 the main currency configured for your company. You can also set up bank accounts in other currencies
 and run reports on your foreign currency activities.
 
+Odoo allows you to issue invoices, receive bills, and record transactions in currencies other than
+the main currency configured for your company. You can also set up bank accounts in other
+currencies and run reports on your foreign currency activities.
+
 .. seealso::
    - :doc:`../bank/foreign_currency`
 
