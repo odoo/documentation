@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-19 18:31+0000\n"
+"POT-Creation-Date: 2026-06-05 19:23+0000\n"
 "PO-Revision-Date: 2025-12-01 20:10+0000\n"
 "Last-Translator: \"Tony Ng (ngto)\" <ngto@odoo.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://translate.odoo.com/"
@@ -1889,55 +1889,99 @@ msgstr "欄位及小工具"
 
 #: ../../content/applications/studio/fields.rst:5
 msgid ""
-"Fields structure the models of a database. If you picture a model as a table "
-"or spreadsheet, fields are the columns where data is stored in the records "
-"(i.e., the rows). Fields also define the type of data that is stored within "
-"them. How the data is presented and formatted on the :abbr:`UI (User "
-"Interface)` is defined by their widget."
+"Fields structure the :doc:`models <models_modules_apps>` of a database. If "
+"you think of a model as a table or spreadsheet, fields are the columns and "
+"records are the individual rows. Fields also define the type of data that is "
+"stored within them. The way in which a field's data is presented and "
+"formatted on the :abbr:`UI (User Interface)` is controlled by its widget."
 msgstr ""
-"欄位為資料庫模型提供結構。如果將模型比喻為表格或試算表，欄位可理解為直欄，為"
-"不同記錄（橫列）儲存數據。欄位亦定義其儲存數據的類型。至於數據在 :abbr:`UI"
-"（操作介面）` 上的顯示方式及格式，則由小工具定義。"
 
 #: ../../content/applications/studio/fields.rst:10
-msgid ""
-"From a technical point of view, there are 15 field types in Odoo. However, "
-"you can choose from 20 fields in Studio, as some field types are available "
-"more than once with a different default widget."
+msgid "With Studio, it is possible to:"
 msgstr ""
-"技術上，Odoo 共有 15 種欄位類型。若使用 Studio，會有 20 種欄位可供選擇，因為"
-"有些欄位類型可在不同的預設小工具中多次使用。"
 
-#: ../../content/applications/studio/fields.rst:14
+#: ../../content/applications/studio/fields.rst:12
 msgid ""
-":guilabel:`New Fields` can only be added to the :ref:`studio/views/general/"
-"form` and :ref:`studio/views/multiple-records/list` views. On other views, "
-"you can only add :guilabel:`Existing Fields` :dfn:`(fields already on the "
-"model)`."
+":ref:`add new fields <studio/fields/add-new>` to your database. From a "
+"technical point of view, there are 15 :ref:`field types <studio/fields/field-"
+"types>` in Odoo. However, you can choose from 20 field types in Studio, as "
+"some field types are available more than once with a different default "
+"widget;"
 msgstr ""
-":guilabel:`新欄位` 只可加入至 :ref:`studio/views/general/form` "
-"及 :ref:`studio/views/multiple-records/list` 檢視畫面。其他檢視畫面只可加"
-"入 :guilabel:`現有欄位` :dfn:`(模型中已有的欄位)`。"
+
+#: ../../content/applications/studio/fields.rst:16
+msgid ""
+":ref:`add existing fields, <studio/fields/add-existing>` i.e., fields that "
+"already exists on a model, to any view of that model;"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:18
+msgid ":ref:`modify a field's properties <studio/fields/modify>`; or"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:19
+msgid ":ref:`remove a field from a view <studio/fields/remove>`."
+msgstr ""
 
 #: ../../content/applications/studio/fields.rst:21
+msgid "Studio fields vs. property fields"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:23
+msgid ""
+"Fields created using Studio are saved as columns in your Odoo "
+"database. :doc:`Property fields <../essentials/property_fields>`, on the "
+"other hand, act as pseudo-fields; they are shared by all records that are "
+"linked to the same parent record (e.g., for tasks, the project, or for a "
+"product, the product category), but they are not saved as columns in your "
+"database."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:29
+msgid ""
+"Adding a :guilabel:`Deadline` field to the form view of a task using Studio "
+"makes that field visible in every task in your database. Adding "
+"a :guilabel:`Special instructions` property field to a task makes the field "
+"visible in all tasks *within the same project* (i.e., its parent) while "
+"other projects’ tasks remain unaffected."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:37
+msgid "Field types"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:39
+msgid "Fields can be broadly divided into two categories:"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:41
+msgid ""
+":ref:`Simple fields <studio/fields/simple-fields>`, which contain basic "
+"values, such as text, numbers, files, etc."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:43
+msgid ""
+":ref:`Relational fields <studio/fields/relational-fields>`, which are used "
+"to link and display the data from records on another model."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:49
 msgid "Simple fields"
 msgstr "簡單欄位"
 
-#: ../../content/applications/studio/fields.rst:23
-msgid "Simple fields contain basic values, such as text, numbers, files, etc."
-msgstr "簡單欄位包括基本的資料值，例如文字、數字、檔案等。"
-
-#: ../../content/applications/studio/fields.rst:26
+#: ../../content/applications/studio/fields.rst:52
+#: ../../content/applications/studio/fields.rst:390
 msgid ""
 "Non-default widgets, when available, are presented as bullet points or sub-"
-"headings below."
-msgstr "若有非預設的小工具可用，會在下方以點列符號或子標題的形式交代。"
+"headings."
+msgstr ""
 
-#: ../../content/applications/studio/fields.rst:31
+#: ../../content/applications/studio/fields.rst:57
 msgid "Text (`char`)"
 msgstr "文字（`char`）"
 
-#: ../../content/applications/studio/fields.rst:33
+#: ../../content/applications/studio/fields.rst:59
 msgid ""
 "The :guilabel:`Text` field is used for short text containing any character. "
 "One text line is displayed when filling out the field."
@@ -1945,8 +1989,8 @@ msgstr ""
 ":guilabel:`文字` 欄位適用於儲存任何字符的簡短文本。填寫這種欄位時，系統會顯示"
 "一行的文字輸入位置。"
 
-#: ../../content/applications/studio/fields.rst:36
-#: ../../content/applications/studio/fields.rst:258
+#: ../../content/applications/studio/fields.rst:62
+#: ../../content/applications/studio/fields.rst:284
 msgid ""
 ":guilabel:`Badge`: displays the value inside a rounded shape, similar to a "
 "tag. The value cannot be edited on the UI, but a default value can be set."
@@ -1954,39 +1998,36 @@ msgstr ""
 ":guilabel:`徽章`：以圓角形狀顯示資料值，類似標籤。該值不可在操作介面上編輯，"
 "但可設定預設值。"
 
-#: ../../content/applications/studio/fields.rst:38
-#: ../../content/applications/studio/fields.rst:70
+#: ../../content/applications/studio/fields.rst:64
+#: ../../content/applications/studio/fields.rst:96
 msgid ""
 ":guilabel:`Copy to Clipboard`: users can copy the value by clicking a button."
 msgstr ":guilabel:`複製至剪貼板`：使用者可按一下按鈕，複製該值。"
 
-#: ../../content/applications/studio/fields.rst:39
+#: ../../content/applications/studio/fields.rst:65
 msgid ":guilabel:`E-mail`: the value becomes a clickable *mailto* link."
 msgstr ":guilabel:`電郵`：該值會變成可點按的 **傳送電子郵件** （mailto）連結。"
 
-#: ../../content/applications/studio/fields.rst:40
+#: ../../content/applications/studio/fields.rst:66
 msgid ""
 ":guilabel:`Image`: displays an image using a URL. The value cannot be edited "
 "manually, but a default value can be set."
 msgstr ""
 ":guilabel:`圖片`：顯示資料值網址的圖片。該值不可手動編輯，但可設定預設值。"
 
-#: ../../content/applications/studio/fields.rst:44
+#: ../../content/applications/studio/fields.rst:70
 msgid ""
-"This works differently than selecting the :ref:`Image field <studio/fields/"
+"This works differently from selecting the :ref:`Image field <studio/fields/"
 "simple-fields-image>` directly, as the image is not stored in Odoo when "
 "using a :guilabel:`Text` field with the :guilabel:`Image` widget. For "
 "example, it can be useful if you want to save disk space."
 msgstr ""
-"此方式與直接選擇 :ref:`圖片欄位 <studio/fields/simple-fields-image>` 不同。若"
-"使用附有 :guilabel:`圖片` 小工具的 :guilabel:`文字` 欄位，圖片不會儲存在 "
-"Odoo 中。舉例，如果想節省儲存空間，這方式會很有用。"
 
-#: ../../content/applications/studio/fields.rst:49
+#: ../../content/applications/studio/fields.rst:75
 msgid ":guilabel:`Phone`: the value becomes a clickable *tel* link."
 msgstr ":guilabel:`電話`：該值會變成可點按的 **撥打電話** （tel）連結。"
 
-#: ../../content/applications/studio/fields.rst:52
+#: ../../content/applications/studio/fields.rst:78
 msgid ""
 "Tick :guilabel:`Enable SMS` to add an option to send an SMS directly from "
 "Odoo next to the field."
@@ -1994,7 +2035,7 @@ msgstr ""
 "勾選 :guilabel:`啟用短訊` 會加入選項，可直接在欄位旁邊，透過 Odoo 發送 SMS 電"
 "話短訊。"
 
-#: ../../content/applications/studio/fields.rst:55
+#: ../../content/applications/studio/fields.rst:81
 msgid ":guilabel:`URL`: the value becomes a clickable URL."
 msgstr ":guilabel:`網址`：該值會變成可點按的 URL 網址。"
 
@@ -2002,11 +2043,11 @@ msgstr ":guilabel:`網址`：該值會變成可點按的 URL 網址。"
 msgid "Examples of Text fields with different widgets"
 msgstr "附有不同小工具的文字欄位範例"
 
-#: ../../content/applications/studio/fields.rst:65
+#: ../../content/applications/studio/fields.rst:91
 msgid "Multiline Text (`text`)"
 msgstr "多行文字（`text`）"
 
-#: ../../content/applications/studio/fields.rst:67
+#: ../../content/applications/studio/fields.rst:93
 msgid ""
 "The :guilabel:`Multiline Text` field is used for longer text containing any "
 "type of character. Two text lines are displayed on the UI when filling out "
@@ -2019,11 +2060,11 @@ msgstr ""
 msgid "Examples of Multiline Text fields with different widgets"
 msgstr "附有不同小工具的多行文字欄位範例"
 
-#: ../../content/applications/studio/fields.rst:80
+#: ../../content/applications/studio/fields.rst:106
 msgid "Integer (`integer`)"
 msgstr "整數（`integer`）"
 
-#: ../../content/applications/studio/fields.rst:82
+#: ../../content/applications/studio/fields.rst:108
 msgid ""
 "The :guilabel:`Integer` field is used for all integer numbers "
 "(:dfn:`positive, negative, or zero, without a decimal`)."
@@ -2031,7 +2072,7 @@ msgstr ""
 ":guilabel:`整數` 欄位適用於所有整數數字（ :dfn:`正數、負數或零，沒有小數部份"
 "` ）。"
 
-#: ../../content/applications/studio/fields.rst:85
+#: ../../content/applications/studio/fields.rst:111
 msgid ""
 ":guilabel:`Percentage Pie`: displays the value inside a percentage circle, "
 "usually for a computed value. The value cannot be edited on the UI, but a "
@@ -2040,8 +2081,8 @@ msgstr ""
 ":guilabel:`百分比圓形圖`：以百分比圓形圖顯示數值，通常為計算得出的值。該值不"
 "可在操作介面上編輯，但可設定預設值。"
 
-#: ../../content/applications/studio/fields.rst:87
-#: ../../content/applications/studio/fields.rst:115
+#: ../../content/applications/studio/fields.rst:113
+#: ../../content/applications/studio/fields.rst:141
 msgid ""
 ":guilabel:`Progress Bar`: displays the value next to a percentage bar, "
 "usually for a computed value. The field cannot be edited manually, but a "
@@ -2050,7 +2091,7 @@ msgstr ""
 ":guilabel:`進度列`：在百分比進度列旁邊顯示數值，通常為計算得出的值。該欄位不"
 "可手動編輯，但可設定預設值。"
 
-#: ../../content/applications/studio/fields.rst:89
+#: ../../content/applications/studio/fields.rst:115
 msgid ""
 ":guilabel:`Handle`: displays a drag handle icon to order records manually "
 "in :ref:`List view <studio/views/multiple-records/list>`."
@@ -2062,11 +2103,11 @@ msgstr ""
 msgid "Examples of Integer fields with different widgets"
 msgstr "附有不同小工具的整數欄位範例"
 
-#: ../../content/applications/studio/fields.rst:100
+#: ../../content/applications/studio/fields.rst:126
 msgid "Decimal (`float`)"
 msgstr "小數（`float`）"
 
-#: ../../content/applications/studio/fields.rst:102
+#: ../../content/applications/studio/fields.rst:128
 msgid ""
 "The :guilabel:`Decimal` field is used for all decimal numbers "
 "(:dfn:`positive, negative, or zero, with a decimal`)."
@@ -2074,7 +2115,7 @@ msgstr ""
 ":guilabel:`小數` （或稱浮點數）欄位，適用於所有小數數字（ :dfn:`正數、負數或"
 "零，帶有小數部份` ）。"
 
-#: ../../content/applications/studio/fields.rst:106
+#: ../../content/applications/studio/fields.rst:132
 msgid ""
 "Decimal numbers are displayed with two decimals after the decimal point on "
 "the UI, but they are stored in the database with more precision."
@@ -2082,7 +2123,7 @@ msgstr ""
 "小數在用戶操作介面上，會顯示為兩個小數位的小數，但在資料庫中，其實是以更高精"
 "確度儲存。"
 
-#: ../../content/applications/studio/fields.rst:109
+#: ../../content/applications/studio/fields.rst:135
 msgid ""
 ":guilabel:`Monetary`: it is similar to using the :ref:`Monetary field "
 "<studio/fields/simple-fields-monetary>`. It is recommended to use the latter "
@@ -2091,12 +2132,12 @@ msgstr ""
 ":guilabel:`貨幣金額`：與使用 :ref:`貨幣金額 <studio/fields/simple-fields-"
 "monetary>` 欄位類似。建議使用後者，因為它提供較多功能。"
 
-#: ../../content/applications/studio/fields.rst:112
+#: ../../content/applications/studio/fields.rst:138
 msgid ""
 ":guilabel:`Percentage`: displays a percent character `%` after the value."
 msgstr ":guilabel:`百分比`：在數值後方顯示百分比符號 `%` 。"
 
-#: ../../content/applications/studio/fields.rst:113
+#: ../../content/applications/studio/fields.rst:139
 msgid ""
 ":guilabel:`Percentage Pie`: displays the value inside a percentage circle, "
 "usually for a computed value. The field cannot be edited manually, but a "
@@ -2105,7 +2146,7 @@ msgstr ""
 ":guilabel:`百分比圓形圖`：以百分比圓形圖顯示數值，通常為計算得出的值。該欄位"
 "不可手動編輯，但可設定預設值。"
 
-#: ../../content/applications/studio/fields.rst:117
+#: ../../content/applications/studio/fields.rst:143
 msgid ""
 ":guilabel:`Time`: the value must follow the *hh:mm* format, with a maximum "
 "of 59 minutes."
@@ -2116,15 +2157,15 @@ msgstr ""
 msgid "Examples of Decimal fields with different widgets"
 msgstr "附有不同小工具的小數欄位範例"
 
-#: ../../content/applications/studio/fields.rst:127
+#: ../../content/applications/studio/fields.rst:153
 msgid "Monetary (`monetary`)"
 msgstr "貨幣金額（`monetary`）"
 
-#: ../../content/applications/studio/fields.rst:129
+#: ../../content/applications/studio/fields.rst:155
 msgid "The :guilabel:`Monetary` field is used for all monetary values."
 msgstr ":guilabel:`貨幣金額` 欄位適用於所有貨幣值。"
 
-#: ../../content/applications/studio/fields.rst:132
+#: ../../content/applications/studio/fields.rst:158
 msgid ""
 "When you first add a :guilabel:`Monetary` field, you are prompted to add "
 "a :guilabel:`Currency` field if none exists already on the model. Odoo "
@@ -2139,17 +2180,17 @@ msgstr ""
 msgid "Example of a Monetary field along with its Currency field"
 msgstr "貨幣金額欄位連同其貨幣欄位範例"
 
-#: ../../content/applications/studio/fields.rst:144
+#: ../../content/applications/studio/fields.rst:170
 msgid "Html (`html`)"
 msgstr "HTML（`html`）"
 
-#: ../../content/applications/studio/fields.rst:146
+#: ../../content/applications/studio/fields.rst:172
 msgid ""
 "The :guilabel:`Html` field is used to add text that can be edited using the "
 "Odoo HTML editor."
 msgstr ":guilabel:`HTML` 欄位適用於加入可使用 Odoo HTML 編輯器編輯的文字。"
 
-#: ../../content/applications/studio/fields.rst:148
+#: ../../content/applications/studio/fields.rst:174
 msgid ""
 ":guilabel:`Multiline Text`: disables the Odoo HTML editor to allow editing "
 "raw HTML."
@@ -2160,15 +2201,15 @@ msgstr ""
 msgid "Examples of Html fields with different widgets"
 msgstr "附有不同小工具的 HTML 欄位範例"
 
-#: ../../content/applications/studio/fields.rst:158
+#: ../../content/applications/studio/fields.rst:184
 msgid "Date (`date`)"
 msgstr "日期（`date`）"
 
-#: ../../content/applications/studio/fields.rst:160
+#: ../../content/applications/studio/fields.rst:186
 msgid "The :guilabel:`Date` field is used to select a date on a calendar."
 msgstr ":guilabel:`日期` 欄位可從日曆中選擇日期。"
 
-#: ../../content/applications/studio/fields.rst:162
+#: ../../content/applications/studio/fields.rst:188
 msgid ""
 ":guilabel:`Remaining Days`: the remaining number of days before the selected "
 "date is displayed (e.g., *In 5 days*), based on the current date. This field "
@@ -2181,11 +2222,11 @@ msgstr ""
 msgid "Examples of Date fields with different widgets"
 msgstr "附有不同小工具的日期欄位範例"
 
-#: ../../content/applications/studio/fields.rst:173
+#: ../../content/applications/studio/fields.rst:199
 msgid "Date & Time (`datetime`)"
 msgstr "日期時間（`datetime`）"
 
-#: ../../content/applications/studio/fields.rst:175
+#: ../../content/applications/studio/fields.rst:201
 msgid ""
 "The :guilabel:`Date & Time` field is used to select a date on a calendar and "
 "a time on a clock. The user's current time is automatically used if no time "
@@ -2194,7 +2235,7 @@ msgstr ""
 ":guilabel:`日期時間` 欄位可從日曆中選擇日期，並從時鐘選擇時間。若未有設定時"
 "間，會自動採用使用者目前的時間。"
 
-#: ../../content/applications/studio/fields.rst:180
+#: ../../content/applications/studio/fields.rst:206
 msgid ""
 "As well as :ref:`general properties <studio/fields/properties>`, "
 "some :ref:`specific properties <studio/fields/properties-date-datetime>` are "
@@ -2205,11 +2246,11 @@ msgstr ""
 "` 或 :guilabel:`日期範圍` 小工具的 :guilabel:`日期時間` 欄位，有一些額外"
 "的 :ref:`特定屬性 <studio/fields/properties-date-datetime>` 可用。"
 
-#: ../../content/applications/studio/fields.rst:186
+#: ../../content/applications/studio/fields.rst:212
 msgid "Date Range (`daterange`)"
 msgstr "日期範圍（`daterange`）"
 
-#: ../../content/applications/studio/fields.rst:188
+#: ../../content/applications/studio/fields.rst:214
 msgid ""
 "The :guilabel:`Date Range` widget is used to display a period of time "
 "defined by a start date and an end date in a single line. A date range can "
@@ -2221,7 +2262,7 @@ msgstr ""
 "示全部資料。日期範圍可將開始及結束日期設為必填（例如：表示多天活動的日期），"
 "也可將開始或結束日期設為可選填（例如：用於上門介入工作或專案任務）。"
 
-#: ../../content/applications/studio/fields.rst:193
+#: ../../content/applications/studio/fields.rst:219
 msgid ""
 "Adding a date range requires two fields: a :guilabel:`Date & Time` field "
 "with the :guilabel:`Date Range` widget set and another field that is "
@@ -2234,11 +2275,11 @@ msgstr ""
 "層的參考欄位可以是現有的 :ref:`日期 <studio/fields/simple-fields-date>` "
 "或 :guilabel:`日期時間` 欄位，也可以是專門為此用途而建立的欄位。"
 
-#: ../../content/applications/studio/fields.rst:198
+#: ../../content/applications/studio/fields.rst:224
 msgid "To add a date range:"
 msgstr "要加入日期範圍："
 
-#: ../../content/applications/studio/fields.rst:200
+#: ../../content/applications/studio/fields.rst:226
 msgid ""
 "Identify an existing :guilabel:`Date` or :guilabel:`Date & Time` field that "
 "can be used as the underlying start/end date field, or add a new one. If the "
@@ -2247,20 +2288,20 @@ msgstr ""
 "確定一個現有的 :guilabel:`日期` 或 :guilabel:`日期時間` 欄位，用作底層的開始"
 "或結束日期參考欄位，或新增一個欄位。如果日期範圍是："
 
-#: ../../content/applications/studio/fields.rst:203
+#: ../../content/applications/studio/fields.rst:229
 msgid ""
 "has a mandatory start date and end date, this field can be either the start "
 "date or end date; the outcome is the same."
 msgstr ""
 "必須填寫開始及結束日期，此欄位可以是開始日期或結束日期，選擇兩者的結果相同。"
 
-#: ../../content/applications/studio/fields.rst:205
+#: ../../content/applications/studio/fields.rst:231
 msgid ""
 "allows an optional start or end date, this field is the start date or end "
 "date, respectively."
 msgstr "允許選填開始日期或結束日期，此欄位便會分別是開始日期或結束日期。"
 
-#: ../../content/applications/studio/fields.rst:208
+#: ../../content/applications/studio/fields.rst:234
 msgid ""
 "To avoid displaying the same information twice, the underlying start/end "
 "date field can be made invisible by enabling :guilabel:`Invisible` or "
@@ -2270,7 +2311,7 @@ msgstr ""
 "示`，或按一下 :guilabel:`從檢視中移除`，將該日期從檢視畫面中移除，使之無法看"
 "見。"
 
-#: ../../content/applications/studio/fields.rst:212
+#: ../../content/applications/studio/fields.rst:238
 msgid ""
 "Add a :guilabel:`Date & Time` field and set the :guilabel:`Widget` field "
 "to :guilabel:`Date Range`."
@@ -2278,11 +2319,11 @@ msgstr ""
 "加入一個 :guilabel:`日期時間` 欄位，並將 :guilabel:`小工具` 欄位設定"
 "為 :guilabel:`日期範圍`。"
 
-#: ../../content/applications/studio/fields.rst:214
+#: ../../content/applications/studio/fields.rst:240
 msgid "Enter an appropriate :guilabel:`Label`."
 msgstr "輸入適當的 :guilabel:`標籤`。"
 
-#: ../../content/applications/studio/fields.rst:215
+#: ../../content/applications/studio/fields.rst:241
 msgid ""
 "Select the underlying start/end date field from the :guilabel:`Start date "
 "field` or :guilabel:`End date field` dropdown, as relevant."
@@ -2290,14 +2331,14 @@ msgstr ""
 "根據需要，在 :guilabel:`開始日期欄位` 或 :guilabel:`結束日期欄位` 下拉式選單"
 "中，選擇相應的底層開始/結束日期欄位。"
 
-#: ../../content/applications/studio/fields.rst:217
+#: ../../content/applications/studio/fields.rst:243
 msgid ""
 "If the date range should have a mandatory start and end date, "
 "enable :guilabel:`Always range`."
 msgstr ""
 "若日期範圍必須包括開始日期及結束日期，請啟用 :guilabel:`總是使用範圍`。"
 
-#: ../../content/applications/studio/fields.rst:218
+#: ../../content/applications/studio/fields.rst:244
 msgid ""
 "Update any other :ref:`general properties <studio/fields/properties>` or "
 "specific :ref:`properties for Date & Time fields <studio/fields/properties-"
@@ -2312,11 +2353,11 @@ msgstr ""
 msgid "Examples of Date & Time fields with different widgets"
 msgstr "附有不同小工具的日期時間欄位範例"
 
-#: ../../content/applications/studio/fields.rst:228
+#: ../../content/applications/studio/fields.rst:254
 msgid "Remaining Days (`remaining_days`)"
 msgstr "剩餘天數（`remaining_days`）"
 
-#: ../../content/applications/studio/fields.rst:230
+#: ../../content/applications/studio/fields.rst:256
 msgid ""
 "The :guilabel:`Remaining Days` widget displays the remaining number of days "
 "before the selected date (e.g., *In 5 days*), based on the current date and "
@@ -2325,11 +2366,11 @@ msgstr ""
 ":guilabel:`剩餘天數` 小工具顯示從目前的日期及時間起計，距離選取的日期還剩下多"
 "少天，例如： **剩餘 5 天** 。此欄位應設為 :guilabel:`唯讀`。"
 
-#: ../../content/applications/studio/fields.rst:237
+#: ../../content/applications/studio/fields.rst:263
 msgid "Checkbox (`boolean`)"
 msgstr "勾選方格（`boolean`）"
 
-#: ../../content/applications/studio/fields.rst:239
+#: ../../content/applications/studio/fields.rst:265
 msgid ""
 "The :guilabel:`Checkbox` field is used when a value should only be true or "
 "false, indicated by checking or unchecking a checkbox."
@@ -2337,13 +2378,13 @@ msgstr ""
 ":guilabel:`勾選方格` 欄位適用於資料值只可以是「真」或「假」的情況，以方格有否"
 "被勾選去表示。"
 
-#: ../../content/applications/studio/fields.rst:242
+#: ../../content/applications/studio/fields.rst:268
 msgid ""
 ":guilabel:`Button`: displays a radio button. The widget works without "
 "switching to the edit mode."
 msgstr ":guilabel:`按鈕`：顯示為單選圓鈕。該小工具無需切換至編輯模式也可運作。"
 
-#: ../../content/applications/studio/fields.rst:243
+#: ../../content/applications/studio/fields.rst:269
 msgid ""
 ":guilabel:`Toggle`: displays a toggle button. The widget works without "
 "switching to the edit mode."
@@ -2353,11 +2394,11 @@ msgstr ":guilabel:`切換`：顯示為切換按鈕。該小工具無需切換至
 msgid "Examples of Checkbox fields with different widgets"
 msgstr "附有不同小工具的勾選方格欄位範例"
 
-#: ../../content/applications/studio/fields.rst:253
+#: ../../content/applications/studio/fields.rst:279
 msgid "Selection (`selection`)"
 msgstr "選單（`selection`）"
 
-#: ../../content/applications/studio/fields.rst:255
+#: ../../content/applications/studio/fields.rst:281
 msgid ""
 "The :guilabel:`Selection` field is used when users should select a single "
 "value from a group of predefined values."
@@ -2365,7 +2406,7 @@ msgstr ""
 ":guilabel:`選單` 欄位適用於提供選項清單，用戶可從一組預先定義的值中，選擇其中"
 "一個值。"
 
-#: ../../content/applications/studio/fields.rst:260
+#: ../../content/applications/studio/fields.rst:286
 msgid ""
 ":guilabel:`Badges`: displays all selectable values simultaneously inside "
 "rectangular shapes, organized horizontally."
@@ -2373,7 +2414,7 @@ msgstr ""
 ":guilabel:`徽章`：以長方形形狀顯示可選值，所有已選取的值會同時顯示，以水平方"
 "式排列。"
 
-#: ../../content/applications/studio/fields.rst:262
+#: ../../content/applications/studio/fields.rst:288
 msgid ""
 ":guilabel:`Priority`: displays star symbols instead of values, which can be "
 "used to indicate an importance or satisfaction level, for example. This has "
@@ -2385,14 +2426,14 @@ msgstr ""
 "等。與選用 :ref:`優先等級 <studio/fields/simple-fields-priority>` 欄位的效果"
 "相同，但後者已預先定義了 4 種優先級別數值。"
 
-#: ../../content/applications/studio/fields.rst:266
-#: ../../content/applications/studio/fields.rst:392
+#: ../../content/applications/studio/fields.rst:292
+#: ../../content/applications/studio/fields.rst:416
 msgid ""
 ":guilabel:`Radio`: displays all selectable values at the same time as radio "
 "buttons."
 msgstr ":guilabel:`單選圓鈕`：以單選圓鈕顯示可選的值，所有可選值會同時顯示。"
 
-#: ../../content/applications/studio/fields.rst:269
+#: ../../content/applications/studio/fields.rst:295
 msgid ""
 "By default, radio buttons are organized vertically. "
 "Enable :guilabel:`Display horizontally` to switch the way they are displayed."
@@ -2400,13 +2441,13 @@ msgstr ""
 "預設情況下，單選圓鈕是以垂直方式排列。你可啟用 :guilabel:`水平顯示` 選項，以"
 "切換顯示方式。"
 
-#: ../../content/applications/studio/fields.rst:272
+#: ../../content/applications/studio/fields.rst:298
 msgid ""
 ":guilabel:`Status Bar`: displays all selectable values at the same time as "
 "an arrow progress bar."
 msgstr ":guilabel:`狀態列`：以箭嘴進度列顯示可選值，所有可選值會同時顯示。"
 
-#: ../../content/applications/studio/fields.rst:275
+#: ../../content/applications/studio/fields.rst:301
 msgid ""
 "By default, values on the status bar are selectable. "
 "Disable :guilabel:`Clickable` to prevent the value being edited on the UI."
@@ -2418,11 +2459,11 @@ msgstr ""
 msgid "Examples of Selection fields with different widgets"
 msgstr "附有不同小工具的選單欄位範例"
 
-#: ../../content/applications/studio/fields.rst:286
+#: ../../content/applications/studio/fields.rst:312
 msgid "Priority (`selection`)"
 msgstr "優先級別（`selection`）"
 
-#: ../../content/applications/studio/fields.rst:288
+#: ../../content/applications/studio/fields.rst:314
 msgid ""
 "The :guilabel:`Priority` field is used to display a three-star rating "
 "system, which can be used to indicate importance or satisfaction level. This "
@@ -2439,7 +2480,7 @@ msgstr ""
 "此， :guilabel:`徽章` 、 :guilabel:`單選圓鈕` 及 :guilabel:`選單` 小工具的效"
 "果，與 :ref:`選單 <studio/fields/simple-fields-selection>` 章節所述相同。"
 
-#: ../../content/applications/studio/fields.rst:296
+#: ../../content/applications/studio/fields.rst:322
 msgid ""
 "To change the number of available stars by adding or removing values, "
 "click :guilabel:`Edit Values`. Note that the first value is equal to 0 stars "
@@ -2454,11 +2495,11 @@ msgstr ""
 msgid "Example of a Priority field"
 msgstr "優先級別欄位範例"
 
-#: ../../content/applications/studio/fields.rst:308
+#: ../../content/applications/studio/fields.rst:334
 msgid "File (`binary`)"
 msgstr "檔案（`binary`）"
 
-#: ../../content/applications/studio/fields.rst:310
+#: ../../content/applications/studio/fields.rst:336
 msgid ""
 "The :guilabel:`File` field is used to upload any type of file, or sign a "
 "form (:guilabel:`Sign` widget)."
@@ -2466,7 +2507,7 @@ msgstr ""
 ":guilabel:`檔案` 欄位可用作上載任何類型的檔案，或用作簽署表單（ :guilabel:`電"
 "子簽名` 小工具）。"
 
-#: ../../content/applications/studio/fields.rst:313
+#: ../../content/applications/studio/fields.rst:339
 msgid ""
 ":guilabel:`Image`: users can upload an image file, which is then displayed "
 "in :ref:`Form view <studio/views/general/form>`. This has the same effect as "
@@ -2476,7 +2517,7 @@ msgstr ""
 "<studio/views/general/form>` 中顯示。與使用 :ref:`圖片 <studio/fields/simple-"
 "fields-image>` 欄位的效果相同。"
 
-#: ../../content/applications/studio/fields.rst:316
+#: ../../content/applications/studio/fields.rst:342
 msgid ""
 ":guilabel:`PDF Viewer`: users can upload a PDF file, which can be then "
 "browsed from the :ref:`Form view <studio/views/general/form>`."
@@ -2484,7 +2525,7 @@ msgstr ""
 ":guilabel:`PDF 檢視工具`：使用者可上載 PDF 檔案，檔案上載後可在 :ref:`表單檢"
 "視畫面 <studio/views/general/form>` 中瀏覽。"
 
-#: ../../content/applications/studio/fields.rst:318
+#: ../../content/applications/studio/fields.rst:344
 msgid ""
 ":guilabel:`Sign`: users can electronically sign the form. This has the same "
 "effect as selecting the :ref:`Sign field <studio/fields/simple-fields-sign>`."
@@ -2496,11 +2537,11 @@ msgstr ""
 msgid "Examples of File fields with different widgets"
 msgstr "附有不同小工具的檔案欄位範例"
 
-#: ../../content/applications/studio/fields.rst:329
+#: ../../content/applications/studio/fields.rst:355
 msgid "Image (`binary`)"
 msgstr "圖片（`binary`）"
 
-#: ../../content/applications/studio/fields.rst:331
+#: ../../content/applications/studio/fields.rst:357
 msgid ""
 "The :guilabel:`Image` field is used to upload an image and display it "
 "in :ref:`Form view <studio/views/general/form>`. This field type is "
@@ -2516,7 +2557,7 @@ msgstr ""
 "` 、 :guilabel:`PDF 檢視工具` 及 :guilabel:`電子簽名` 小工具的效果，與 :ref:`"
 "檔案 <studio/fields/simple-fields-file>` 章節所述相同。"
 
-#: ../../content/applications/studio/fields.rst:338
+#: ../../content/applications/studio/fields.rst:364
 msgid ""
 "To change the display size of uploaded images, "
 "select :guilabel:`Small`, :guilabel:`Medium`, or :guilabel:`Large` under "
@@ -2525,11 +2566,11 @@ msgstr ""
 "若要變更上載圖片的顯示大小，請在 :guilabel:`大小` 選項下，選擇 :guilabel:`小"
 "` 、 :guilabel:`中` 或 :guilabel:`大`。"
 
-#: ../../content/applications/studio/fields.rst:344
+#: ../../content/applications/studio/fields.rst:370
 msgid "Sign (`binary`)"
 msgstr "電子簽名（`binary`）"
 
-#: ../../content/applications/studio/fields.rst:346
+#: ../../content/applications/studio/fields.rst:372
 msgid ""
 "The :guilabel:`Sign` field is used to sign the form electronically. This "
 "field type is a :ref:`File field <studio/fields/simple-fields-file>` with "
@@ -2543,7 +2584,7 @@ msgstr ""
 "工具。故此，:guilabel:`檔案`、:guilabel:`圖片` 及 :guilabel:`PDF 檢視工具` 小"
 "工具的效果，與 :ref:`檔案 <studio/fields/simple-fields-file>` 章節所述相同。"
 
-#: ../../content/applications/studio/fields.rst:352
+#: ../../content/applications/studio/fields.rst:378
 msgid ""
 "To give users the :guilabel:`Auto` option when having to draw their "
 "signature, select one of the available :guilabel:`Auto-complete with` fields "
@@ -2558,26 +2599,15 @@ msgstr ""
 "fields-many2one>` 及 :ref:`相關欄位 <studio/fields/relational-fields-related-"
 "field>`）。系統會使用所選欄位的資料，自動產生簽名圖樣。"
 
-#: ../../content/applications/studio/fields.rst:361
+#: ../../content/applications/studio/fields.rst:387
 msgid "Relational fields"
 msgstr "關係欄位"
 
-#: ../../content/applications/studio/fields.rst:363
-msgid ""
-"Relational fields are used to link and display the data from records on "
-"another model."
-msgstr "關係欄位用作連結及顯示其他模型的記錄資料。"
-
-#: ../../content/applications/studio/fields.rst:366
-msgid ""
-"Non-default widgets, when available, are presented as bullet points below."
-msgstr "若有非預設的小工具可用，會在下方以點列符號交代。"
-
-#: ../../content/applications/studio/fields.rst:371
+#: ../../content/applications/studio/fields.rst:395
 msgid "Many2One (`many2one`)"
 msgstr "多對一 Many2One（`many2one`）"
 
-#: ../../content/applications/studio/fields.rst:373
+#: ../../content/applications/studio/fields.rst:397
 msgid ""
 "The :guilabel:`Many2One` field is used to link another record (from another "
 "model) to the record being edited. The record's name from the other model is "
@@ -2586,7 +2616,7 @@ msgstr ""
 ":guilabel:`多對一` （Many2One）欄位適用於將另一項記錄（儲存於另一模型）連結至"
 "正在編輯的記錄。使用的另一模型記錄名稱，會於正在編輯的記錄中顯示。"
 
-#: ../../content/applications/studio/fields.rst:377
+#: ../../content/applications/studio/fields.rst:401
 msgid ""
 "On the *Sales Order* model, the :guilabel:`Customer` field is "
 "a :guilabel:`Many2One` field pointing at the *Contact* model. This allows "
@@ -2600,37 +2630,37 @@ msgstr ""
 msgid "Diagram showing a many2one relationship"
 msgstr "展示多對一關係的示意圖"
 
-#: ../../content/applications/studio/fields.rst:385
+#: ../../content/applications/studio/fields.rst:409
 msgid ""
 "To prevent users from creating a new record in the linked model, "
 "tick :guilabel:`Disable creation`."
 msgstr ""
 "若要防止使用者在已連結的模型中建立新的記錄，可勾選 :guilabel:`禁止建立`。"
 
-#: ../../content/applications/studio/fields.rst:387
+#: ../../content/applications/studio/fields.rst:411
 msgid ""
 "To prevent users from opening records in a pop-up window, "
 "tick :guilabel:`Disable opening`."
 msgstr "若要防止使用者以彈出視窗開啟記錄查看，可勾選 :guilabel:`禁止開啟`。"
 
-#: ../../content/applications/studio/fields.rst:388
+#: ../../content/applications/studio/fields.rst:412
 msgid ""
 "To help users only select the right record, click on :guilabel:`Domain` to "
 "create a filter."
 msgstr "為協助使用者選取正確的記錄，請按一下 :guilabel:`範圍`，以建立篩選器。"
 
-#: ../../content/applications/studio/fields.rst:390
+#: ../../content/applications/studio/fields.rst:414
 msgid ""
 ":guilabel:`Badge`: displays the value inside a rounded shape, similar to a "
 "tag. The value cannot be edited on the UI."
 msgstr ""
 ":guilabel:`徽章`：以圓角形狀顯示資料值，類似標籤。該值不可在操作介面上編輯。"
 
-#: ../../content/applications/studio/fields.rst:397
+#: ../../content/applications/studio/fields.rst:421
 msgid "One2Many (`one2many`)"
 msgstr "一對多 One2Many（`one2many`）"
 
-#: ../../content/applications/studio/fields.rst:399
+#: ../../content/applications/studio/fields.rst:423
 msgid ""
 "The :guilabel:`One2Many` field is used to display the existing relations "
 "between a record on the current model and multiple records from another "
@@ -2639,7 +2669,7 @@ msgstr ""
 ":guilabel:`一對多` （One2Many）欄位可用作顯示目前模型內的記錄與另一模型中多項"
 "記錄之間，已存在的現有關係。"
 
-#: ../../content/applications/studio/fields.rst:403
+#: ../../content/applications/studio/fields.rst:427
 msgid ""
 "You could add a :guilabel:`One2Many` field on the *Contact* model to look at "
 "**one** customer's **many** sales orders."
@@ -2651,7 +2681,7 @@ msgstr ""
 msgid "Diagram showing a one2many relationship"
 msgstr "展示一對多關係的示意圖"
 
-#: ../../content/applications/studio/fields.rst:410
+#: ../../content/applications/studio/fields.rst:434
 msgid ""
 "To use a :guilabel:`One2Many` field, the two models must have been linked "
 "already using a :ref:`Many2One field <studio/fields/relational-fields-"
@@ -2662,11 +2692,11 @@ msgstr ""
 "fields/relational-fields-many2one>` 連結。一對多關係不會獨立存在，系統會進行"
 "反向搜尋，尋找目前已有的多對一關係。"
 
-#: ../../content/applications/studio/fields.rst:417
+#: ../../content/applications/studio/fields.rst:441
 msgid "Lines (`one2many`)"
 msgstr "資料行（`one2many`）"
 
-#: ../../content/applications/studio/fields.rst:419
+#: ../../content/applications/studio/fields.rst:443
 msgid ""
 "The :guilabel:`Lines` field is used to create a table with rows and columns "
 "(e.g., the lines of products on a sales order)."
@@ -2674,7 +2704,7 @@ msgstr ""
 ":guilabel:`資料行` 欄位是用於建立由資料列（橫列）及直欄構成的表格，例如銷售單"
 "的產品資料行。"
 
-#: ../../content/applications/studio/fields.rst:423
+#: ../../content/applications/studio/fields.rst:447
 msgid ""
 "To modify the columns, click on the :guilabel:`Lines` field and "
 "then :guilabel:`Edit List View`. To edit the form that pops up when a user "
@@ -2689,11 +2719,11 @@ msgstr ""
 msgid "Example of a Lines field"
 msgstr "資料行欄位範例"
 
-#: ../../content/applications/studio/fields.rst:435
+#: ../../content/applications/studio/fields.rst:459
 msgid "Many2Many (`many2many`)"
 msgstr "多對多（`many2many`）"
 
-#: ../../content/applications/studio/fields.rst:437
+#: ../../content/applications/studio/fields.rst:461
 msgid ""
 "The :guilabel:`Many2Many` field is used to link multiple records from "
 "another model to multiple records on the current model. Many2Many fields can "
@@ -2706,7 +2736,7 @@ msgstr ""
 "欄位一樣，多對多欄位也可使用 :guilabel:`禁止建立` 、 :guilabel:`禁止開啟` "
 "及 :guilabel:`範圍` 功能。"
 
-#: ../../content/applications/studio/fields.rst:443
+#: ../../content/applications/studio/fields.rst:467
 msgid ""
 "On the *Task* model, the :guilabel:`Assignees` field is "
 "a :guilabel:`Many2Many` field pointing at the *Contact* model. This allows a "
@@ -2721,12 +2751,12 @@ msgstr ""
 msgid "Diagram showing many2many relationships"
 msgstr "展示多對多關係的示意圖"
 
-#: ../../content/applications/studio/fields.rst:450
+#: ../../content/applications/studio/fields.rst:474
 msgid ""
 ":guilabel:`Checkboxes`: users can select several values using checkboxes."
 msgstr ":guilabel:`勾選方格`：使用者可使用勾選方格，選取多個值。"
 
-#: ../../content/applications/studio/fields.rst:451
+#: ../../content/applications/studio/fields.rst:475
 msgid ""
 ":guilabel:`Tags`: users can select several values appearing in rounded "
 "shapes, also known as *tags*. This has the same effect as selecting "
@@ -2735,11 +2765,11 @@ msgstr ""
 ":guilabel:`標籤`：使用者可選取多個以圓角形狀顯示的值，這些值也稱為「標籤」。"
 "這與選用 :ref:`標籤 <studio/fields/relational-fields-tags>` 欄位的效果相同。"
 
-#: ../../content/applications/studio/fields.rst:458
+#: ../../content/applications/studio/fields.rst:482
 msgid "Tags (`many2many`)"
 msgstr "標籤（`many2many`）"
 
-#: ../../content/applications/studio/fields.rst:460
+#: ../../content/applications/studio/fields.rst:484
 msgid ""
 "The :guilabel:`Tags` field is used to display several values from another "
 "model appearing in rounded shapes, also known as *tags*. This field type is "
@@ -2755,7 +2785,7 @@ msgstr ""
 "選方格` 及 :guilabel:`多對多` 小工具的效果，與 :ref:`多對多 <studio/fields/"
 "relational-fields-many2many>` 章節所述相同。"
 
-#: ../../content/applications/studio/fields.rst:467
+#: ../../content/applications/studio/fields.rst:491
 msgid ""
 "To display tags with different background colors, tick :guilabel:`Use "
 "colors`."
@@ -2765,11 +2795,11 @@ msgstr "若要使用不同背景顏色顯示不同標籤，請勾選 :guilabel:`
 msgid "Example of a Tags field"
 msgstr "標籤欄位範例"
 
-#: ../../content/applications/studio/fields.rst:477
+#: ../../content/applications/studio/fields.rst:501
 msgid "Related Field (`related`)"
 msgstr "相關欄位（`related`）"
 
-#: ../../content/applications/studio/fields.rst:479
+#: ../../content/applications/studio/fields.rst:503
 msgid ""
 "A :guilabel:`Related Field` is not a relational field per se; no "
 "relationship is created between models. It uses an existing relationship to "
@@ -2778,7 +2808,7 @@ msgstr ""
 ":guilabel:`相關欄位` 本身並非一個關係欄位，不會在模型之間建立任何關係。它利用"
 "已有的關係，讀取其他記錄的資料，然後顯示。"
 
-#: ../../content/applications/studio/fields.rst:483
+#: ../../content/applications/studio/fields.rst:507
 msgid ""
 "To display the email address of a customer on the *Sales Order* model, use "
 "the :guilabel:`Related Field` `partner_id.email` by "
@@ -2787,15 +2817,190 @@ msgstr ""
 "舉例，若要在 **銷售單** 模型中顯示客戶的電郵地址，可選擇 :guilabel:`客戶`，然"
 "後選擇 :guilabel:`電郵`，以使用「partner_id.email」 :guilabel:`相關欄位`。"
 
-#: ../../content/applications/studio/fields.rst:489
-msgid "Properties"
-msgstr "屬性"
+#: ../../content/applications/studio/fields.rst:513
+msgid "Add a field to a view"
+msgstr ""
 
-#: ../../content/applications/studio/fields.rst:492
+#: ../../content/applications/studio/fields.rst:515
+msgid "With Studio, it is possible to add:"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:517
+msgid ""
+":ref:`a new field <studio/fields/add-new>` to a :ref:`form <studio/views/"
+"general/form>` or :ref:`list view <studio/views/multiple-records/list>` of a "
+"model"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:519
+msgid ""
+":ref:`an existing field <studio/fields/add-existing>`, i.e., a field that "
+"already exists on the :doc:`model <models_modules_apps>` in question, to "
+"*any* view of that model"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:523
+msgid ""
+"Add a new field to a form or list view to save it to the model and make it "
+"available as an existing field in other views of the same model."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:529
+msgid "Add a new field"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:532
+msgid ""
+"Activate :ref:`developer mode <developer-mode>` *before* adding a new field "
+"to see, and be able to edit, the field's technical name during configuration."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:535
+msgid "To add a new field, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:537
+msgid ""
+"Navigate to the relevant form or list view, then click the :icon:`oi-studio` "
+"(:guilabel:`Toggle Studio`) icon in the upper-right corner. Alternatively, "
+"with any app open, click the :icon:`oi-studio` (:guilabel:`Toggle Studio`) "
+"icon, then navigate to the relevant form or list view."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:542
+msgid ""
+"In the :icon:`fa-plus` :guilabel:`Add` tab, drag the relevant :ref:`field "
+"type <studio/fields/field-types>` from the :guilabel:`New Fields` section "
+"and drop it in the desired position. If the new field is a :ref:`relational "
+"field <studio/fields/relational-fields>`, select the relevant reciprocal "
+"field, model, or related field in the pop-up."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:547
+msgid ""
+"In the :icon:`fa-server` :guilabel:`Properties` tab, configure the "
+"field's :ref:`properties <studio/fields/properties>`:"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:550
+msgid ""
+"Enter the :guilabel:`Label` to be displayed as the field name on the UI; "
+"this is also used to generate the default technical name of the field."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:552
+msgid ""
+"Click anywhere outside the :guilabel:`Label` field to see "
+"the :guilabel:`Technical Name` updated with the default technical name."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:556
+msgid ""
+"The :guilabel:`Technical Name` of a new field can be edited in Studio during "
+"the configuration process. At any other time, a field's technical name can "
+"only be :ref:`modified via the technical settings of the database <studio/"
+"fields/properties-technical-name-change>`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:560
+msgid ""
+"The technical name of a new field added using Studio is by default prefixed "
+"by `x_studio_`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:563
+msgid ""
+"Optionally, select a different :guilabel:`Widget` via the dropdown; the "
+"default widget for the :ref:`field type <studio/fields/field-types>` is "
+"selected by default."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:565
+msgid ""
+"Optionally, configure any other :ref:`field properties <studio/fields/"
+"properties>`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:567
+#: ../../content/applications/studio/fields.rst:593
+#: ../../content/applications/studio/fields.rst:722
+msgid "Click :guilabel:`Close` in the top-right corner to close Studio."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:572
+msgid "Add an existing field"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:574
+msgid ""
+"To add a field that exists on the model but that is not present on the "
+"current view, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:577
+#: ../../content/applications/studio/fields.rst:709
+#: ../../content/applications/studio/fields.rst:759
+msgid ""
+"Navigate to the relevant view, then click the :icon:`oi-studio` "
+"(:guilabel:`Toggle Studio`) icon in the upper-right corner. Alternatively, "
+"with any app open, click the :icon:`oi-studio` (:guilabel:`Toggle Studio`) "
+"icon, then navigate to the relevant view."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:580
+msgid ""
+"In the :icon:`fa-plus` :guilabel:`Add` tab, in the left panel, "
+"click :guilabel:`Existing Fields` :icon:`fa-caret-right` to reveal a list of "
+"all the model's fields that are not currently present in the view."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:583
+msgid "Drag the relevant field and drop it in the desired position."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:584
+msgid ""
+"In the :icon:`fa-server` :guilabel:`Properties` tab, configure the "
+"relevant :ref:`properties <studio/fields/properties>` for the field in the "
+"current view."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:588
+msgid ""
+"Various properties can be configured independently for different views, if "
+"needed, such as the :guilabel:`Label`, the :guilabel:`Widget`, the "
+"visibility of the field for certain user groups, as well as whether or not "
+"the field is :guilabel:`Invisible`, :guilabel:`Required`, "
+"or :guilabel:`Readonly`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:598
+msgid "Field properties"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:600
+msgid ""
+"A series of :ref:`general properties <studio/fields/properties-general>` can "
+"be configured for most combinations of :ref:`field type and widget <studio/"
+"fields/field-types>`. Additional properties are available depending on the "
+"specific field type and widget selected. For example, :guilabel:`Date & "
+"Time` fields using the :guilabel:`Date & Time` or :guilabel:`Date Range` "
+"widget have various :ref:`specific properties <studio/fields/properties-date-"
+"datetime>` that can be configured."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:609
 msgid "General properties"
 msgstr "一般屬性"
 
-#: ../../content/applications/studio/fields.rst:494
+#: ../../content/applications/studio/fields.rst:611
+msgid ""
+":guilabel:`Class`: Use `Bootstrap <https://getbootstrap.com/docs/5.3/"
+"examples/cheatsheet/>`_ or other custom classes defined in Odoo to customize "
+"how the field is styled and displayed on the UI."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:614
 msgid ""
 ":guilabel:`Invisible`: Enable this property when it is not necessary for "
 "users to view a field on the UI. This helps declutter the UI by only showing "
@@ -2804,59 +3009,47 @@ msgstr ""
 ":guilabel:`隱藏`：若使用者無需在操作介面看到該欄位，便可啟用此屬性。這有助簡"
 "化使用者操作介面，只會顯示個別情況需要顯示的欄位。"
 
-#: ../../content/applications/studio/fields.rst:498
-msgid ""
-"The :guilabel:`Invisible` attribute also applies inside Studio. To view "
-"hidden fields in Studio, click on a view's :guilabel:`View` tab and "
-"enable :guilabel:`Show Invisible Elements`."
-msgstr ""
-":guilabel:`隱藏` 屬性在 Studio 內也適用。若要在 Studio 模式下查看隱藏欄位，請"
-"按一下檢視畫面的 :guilabel:`檢視` 分頁，然後啟用 :guilabel:`顯示隱藏元素`。"
-
-#: ../../content/applications/studio/fields.rst:501
+#: ../../content/applications/studio/fields.rst:618
 msgid ""
 ":guilabel:`Required`: Enable this property if a field should always be "
 "completed by the user before being able to proceed."
 msgstr ""
 ":guilabel:`必填`：若使用者必須先完成填寫該欄位才可繼續操作，可啟用此屬性。"
 
-#: ../../content/applications/studio/fields.rst:504
+#: ../../content/applications/studio/fields.rst:621
 msgid ""
 ":guilabel:`Readonly`: Enable this property if users should not be able to "
 "modify a field."
 msgstr ":guilabel:`唯讀`：若不應讓使用者修改該欄位，可啟用此屬性。"
 
-#: ../../content/applications/studio/fields.rst:507
+#: ../../content/applications/studio/fields.rst:624
 msgid ""
-"You can choose to enable :guilabel:`Invisible`, :guilabel:`Required` "
-"and :guilabel:`Readonly` for specific records only by clicking "
+"The :guilabel:`Invisible` property also applies inside Studio. To view "
+"hidden fields in Studio, click on a view's :guilabel:`View` tab and "
+"enable :guilabel:`Show Invisible Elements`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:626
+msgid ""
+"The :guilabel:`Invisible`, :guilabel:`Required`, and :guilabel:`Readonly` "
+"properties can be enabled for specific records only by clicking "
 "on :guilabel:`Conditional` and creating a filter."
 msgstr ""
-"你可按一下 :guilabel:`條件規則` 建立篩選器，選擇只為個別記錄啟用 :guilabel:`"
-"隱藏` 、 :guilabel:`必填` 及 :guilabel:`唯讀` 屬性。"
 
-#: ../../content/applications/studio/fields.rst:511
+#: ../../content/applications/studio/fields.rst:630
 msgid ""
-"On the *Form* view of the *Contact* model, the :guilabel:`Title` field only "
+"On the form view of the *Contact* model, the :guilabel:`Title` field only "
 "appears when :guilabel:`Individual` is selected, as that field would not be "
 "helpful for a :guilabel:`Company` contact."
 msgstr ""
-"舉例，在 **聯絡人** 模型的 **表單** 檢視畫面中，:guilabel:`職稱` 欄位只會在選"
-"擇了 :guilabel:`個人` 時才會顯示，因為該欄位不適用於 :guilabel:`公司` 聯絡"
-"人。"
 
-#: ../../content/applications/studio/fields.rst:515
+#: ../../content/applications/studio/fields.rst:634
 msgid ""
-":guilabel:`Label`: the field's name on the UI. This is not the name used in "
-"the PostgreSQL database. To view and change the latter, activate "
-"the :ref:`developer mode <developer-mode>` and edit the :guilabel:`Technical "
-"Name`."
+":guilabel:`Label`: This is the field name on the UI; the label is used to "
+"generate the technical name of the field."
 msgstr ""
-":guilabel:`顯示標籤`：使用者操作介面所顯示的欄位名稱，而非在 PostgreSQL 資料"
-"庫中使用的名稱。若要查看或變更資料庫中使用的技術名稱，請啟動 :ref:`開發人員模"
-"式 <developer-mode>`，然後編輯 :guilabel:`技術名稱`。"
 
-#: ../../content/applications/studio/fields.rst:519
+#: ../../content/applications/studio/fields.rst:637
 msgid ""
 ":guilabel:`Help Tooltip`: To explain the purpose of a field, add a "
 "description. The text is displayed inside a tooltip box when hovering with "
@@ -2866,7 +3059,21 @@ msgstr ""
 "者以滑鼠停留在欄位顯示標籤旁邊的問號圖示時，便會出現提示文字，以工具提示方塊"
 "顯示。"
 
-#: ../../content/applications/studio/fields.rst:523
+#: ../../content/applications/studio/fields.rst:641
+msgid ""
+":guilabel:`Technical Name`: To view a field's technical name in Studio (and, "
+"during the configuration of a new field, edit it if desired), "
+"activate :ref:`developer mode <developer-mode>`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:646
+msgid ""
+"If this field needs to be updated but is no longer editable via Studio, the "
+"technical name can be :ref:`modified via the technical settings of the "
+"database <studio/fields/properties-technical-name-change>`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:650
 msgid ""
 ":guilabel:`Widget`: To change the default appearance or functionality of a "
 "field, select one of the available widgets."
@@ -2874,22 +3081,27 @@ msgstr ""
 ":guilabel:`小工具`：若要變更欄位的預設外觀或功能，可選用其中一個可用的小工"
 "具。"
 
-#: ../../content/applications/studio/fields.rst:526
+#: ../../content/applications/studio/fields.rst:653
 msgid ""
 ":guilabel:`Placeholder`: To provide an example of how a field should be "
-"completed, add placeholder text. The text appears in light gray until a "
-"value is entered."
+"completed, add a fixed placeholder text. The text appears in light gray "
+"until a value is entered."
 msgstr ""
-":guilabel:`佔位符`：若想提供如何填寫欄位的範例，可加入佔位文字。使用者輸入資"
-"料值之前，佔位文字會在欄位內，以淺灰色顯示。"
 
-#: ../../content/applications/studio/fields.rst:529
+#: ../../content/applications/studio/fields.rst:656
+msgid ""
+":guilabel:`Dynamic Placeholder`: To provide the value of the selected field "
+"as an example of how a field should be completed. The text appears in light "
+"gray until a value is entered."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:659
 msgid ""
 ":guilabel:`Default value`: To display a default value in a field when a "
 "record is created, add a value."
 msgstr ":guilabel:`預設值`：若要在建立記錄時，在欄位中顯示預設值，可加入此值。"
 
-#: ../../content/applications/studio/fields.rst:532
+#: ../../content/applications/studio/fields.rst:662
 msgid ""
 ":guilabel:`Allow visibility to groups`: To limit which users can view the "
 "field, select one or more user access :ref:`groups <access-rights/groups>`."
@@ -2897,7 +3109,7 @@ msgstr ""
 ":guilabel:`允許向群組顯示`：若想限制哪些使用者可看見此欄位，可選取一個或多個"
 "「使用者存取 :ref:`群組 <access-rights/groups>` 」。"
 
-#: ../../content/applications/studio/fields.rst:534
+#: ../../content/applications/studio/fields.rst:664
 msgid ""
 ":guilabel:`Forbid visibility to groups`: To prevent certain users from "
 "seeing the field, select one or more user access :ref:`groups <access-rights/"
@@ -2906,43 +3118,33 @@ msgstr ""
 ":guilabel:`禁止向群組顯示`：若想防止部份使用者看見此欄位，可選取一個或多個"
 "「使用者存取 :ref:`群組 <access-rights/groups>` 」。"
 
-#: ../../content/applications/studio/fields.rst:540
+#: ../../content/applications/studio/fields.rst:670
 msgid "Properties for Date & Time fields"
 msgstr "日期時間欄位屬性"
 
-#: ../../content/applications/studio/fields.rst:542
+#: ../../content/applications/studio/fields.rst:672
 msgid ""
-"For :guilabel:`Date & Time` fields that have the :guilabel:`Date & Time` "
-"or :guilabel:`Date Range` widget set, some specific properties are available:"
+"For :guilabel:`Date & Time` fields using the :guilabel:`Date & Time` "
+"or :guilabel:`Date Range` widget, some specific properties are available:"
 msgstr ""
-"設定了 :guilabel:`日期時間` 或 :guilabel:`日期範圍` 小工具的 :guilabel:`日期"
-"時間` 欄位，可使用以下特別屬性："
 
-#: ../../content/applications/studio/fields.rst:545
+#: ../../content/applications/studio/fields.rst:675
 msgid ""
 ":guilabel:`Minimal precision`: Determine the smallest date unit that must be "
-"selected in the date selector. The possible values "
-"are :guilabel:`Day`, :guilabel:`Month`, :guilabel:`Year` "
-"or :guilabel:`Decade`. If no value is selected, the user must select a day "
-"in the date selector."
+"selected in the date selector. The possible values are `Day`, `Month`, "
+"`Year` or `Decade`. If no value is selected, the user must select a day in "
+"the date selector."
 msgstr ""
-":guilabel:`最小精確度`：決定使用者在日期選擇器中，必須選取的最小日期單位。此"
-"值可以是 :guilabel:`日` 、 :guilabel:`月` 、 :guilabel:`年` 或 :guilabel:`十"
-"年`。若未有設定任何值，使用者使用日期選擇器時，必須選擇一天（即一個日子）。"
 
-#: ../../content/applications/studio/fields.rst:548
+#: ../../content/applications/studio/fields.rst:678
 msgid ""
 ":guilabel:`Maximal precision`: Determine the largest date unit that can be "
-"used to navigate the date selector. The possible values "
-"are :guilabel:`Day`, :guilabel:`Month`, :guilabel:`Year` "
-"or :guilabel:`Decade`. If no value is selected, the user can navigate the "
-"date selector by decade."
+"used to navigate the date selector. The possible values are `Day`, `Month`, "
+"`Year` or `Decade`. If no value is selected, the user can navigate the date "
+"selector by decade."
 msgstr ""
-":guilabel:`最大精確度`：決定使用者在日期選擇器中，可用作導航的最大日期單位。"
-"此值可以是 :guilabel:`日` 、 :guilabel:`月` 、 :guilabel:`年` 或 :guilabel:`"
-"十年`。若未有設定任何值，使用者可按十年為單位，瀏覽及導航至不同日期。"
 
-#: ../../content/applications/studio/fields.rst:551
+#: ../../content/applications/studio/fields.rst:681
 msgid ""
 ":guilabel:`Warning for future dates`: Enable this property to display a "
 "warning icon if a future date is selected."
@@ -2950,7 +3152,7 @@ msgstr ""
 ":guilabel:`警告未來日期`：啟用此屬性後，若選取了未來日期，系統會顯示警告圖"
 "示。"
 
-#: ../../content/applications/studio/fields.rst:553
+#: ../../content/applications/studio/fields.rst:683
 msgid ""
 ":guilabel:`Condensed display`: Enable this property to show days, months and "
 "hours with no leading zeros, e.g., `4/2/2025 8:05:00` instead of `04/02/2025 "
@@ -2959,7 +3161,7 @@ msgstr ""
 ":guilabel:`精簡顯示`：啟用此屬性後，日子、月份及小時的數字前方，將不會顯示 0"
 "（零）。例如：會顯示為 `4/2/2025 8:05:00` 而非 `04/02/2025 08:05:00`。"
 
-#: ../../content/applications/studio/fields.rst:555
+#: ../../content/applications/studio/fields.rst:685
 msgid ""
 ":guilabel:`Show time`: This property is enabled by default "
 "for :guilabel:`Date & Time` fields. On a read-only field, disable the "
@@ -2969,7 +3171,7 @@ msgstr ""
 ":guilabel:`顯示時間`： :guilabel:`日期時間` 欄位預設會啟用此屬性。對於唯讀欄"
 "位，停用此屬性會只顯示日期。舉例，如此設定可使列表檢視畫面較簡潔。"
 
-#: ../../content/applications/studio/fields.rst:558
+#: ../../content/applications/studio/fields.rst:688
 msgid ""
 ":guilabel:`Show seconds`: This property is enabled by default "
 "for :guilabel:`Date & Time` fields. Disable the property to show only hours "
@@ -2978,7 +3180,7 @@ msgstr ""
 ":guilabel:`顯示秒數`： :guilabel:`日期時間` 欄位預設會啟用此屬性。若想只顯示"
 "小時及分鐘，可停用此屬性。"
 
-#: ../../content/applications/studio/fields.rst:560
+#: ../../content/applications/studio/fields.rst:690
 msgid ""
 ":guilabel:`Time interval`: Enter a value to determine the minute intervals "
 "shown in the time selector. For example, enter 15 to allow quarter-hour "
@@ -2987,7 +3189,7 @@ msgstr ""
 ":guilabel:`時間間隔`：此值決定時間選擇器所顯示的分鐘間隔。例如：輸入「15」可"
 "設定每隔 15 分鐘有可選時間。預設值為 5 分鐘。"
 
-#: ../../content/applications/studio/fields.rst:563
+#: ../../content/applications/studio/fields.rst:693
 msgid ""
 ":guilabel:`Earliest accepted date`: Enter the earliest date that can be "
 "selected in the date selector in ISO-format, i.e., `YYYY-MM-DD`. If the "
@@ -2998,7 +3200,7 @@ msgstr ""
 "`YYYY-MM-DD` （年年年年-月月-日日）。若最早接受的日期必定是目前日期，請輸入 "
 "`today` （今天）。在日期選擇器中，最早接受日期之前的日期會以灰色顯示。"
 
-#: ../../content/applications/studio/fields.rst:567
+#: ../../content/applications/studio/fields.rst:697
 msgid ""
 ":guilabel:`Latest accepted date`: Enter the latest date that can be selected "
 "in the date selector in ISO-format, i.e., `YYYY-MM-DD`. If the current date "
@@ -3008,6 +3210,121 @@ msgstr ""
 ":guilabel:`最遲接受日期`：日期選擇器可選取的最遲日期，以 ISO 格式輸入，即 "
 "`YYYY-MM-DD` （年年年年-月月-日日）。若最遲接受的日期必定是目前日期，請輸入 "
 "`today` （今天）。在日期選擇器中，最遲接受日期之後的日期會以灰色顯示。"
+
+#: ../../content/applications/studio/fields.rst:705
+msgid "Modify a field's properties"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:707
+msgid "To modify the properties of a field, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:712
+#: ../../content/applications/studio/fields.rst:762
+msgid "Click on the relevant field."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:713
+msgid ""
+"In the :icon:`fa-server` :guilabel:`Properties` tab, make any desired "
+"changes to the :ref:`field properties <studio/fields/properties>`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:717
+msgid ""
+"Various properties can be configured independently for different views, such "
+"as the :guilabel:`Label`, the :guilabel:`Widget`, the visibility of the "
+"field for certain user groups, as well as whether or not the field "
+"is :guilabel:`Invisible`, :guilabel:`Required`, or :guilabel:`Readonly`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:725
+msgid ""
+"The :guilabel:`Technical Name` of a field (visible in Studio "
+"with :ref:`developer mode <developer-mode>` activated) cannot be modified in "
+"Studio; this can be done :ref:`via the technical settings of the database "
+"<studio/fields/properties-technical-name-change>`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:732
+msgid "Modify a field's technical name"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:734
+msgid ""
+"To modify the technical name of a field, activate :ref:`developer mode "
+"<developer-mode>`, then follow these steps:"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:737
+msgid "With the field open in Studio, copy the technical name of the field."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:738
+msgid ""
+":ref:`Remove the field <studio/fields/remove>` from *all* views in Studio, "
+"then click :guilabel:`Close` to close Studio."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:740
+msgid "Navigate to :menuselection:`Settings app --> Technical --> Fields`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:741
+msgid ""
+"Paste the copied technical name into the search bar, then open the relevant "
+"field."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:742
+msgid "Modify the :guilabel:`Field Name` as needed."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:744
+msgid ""
+"Once the field's technical name has been updated, the field can then "
+"be :ref:`added (back) to the relevant view(s) <studio/fields/add-existing>` "
+"from the list of existing fields."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:748
+msgid ""
+"When updating the technical name of a field, make sure to keep at least the "
+"`x_` prefix, which is required for any custom field; for fields created "
+"using Studio, keep the `x_studio_` prefix to allow such fields to be more "
+"easily identified."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:755
+msgid "Remove a field from a view"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:757
+msgid "To remove a field from a view, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:763
+msgid ""
+"Scroll to the bottom of the :guilabel:`Properties` tab, then "
+"click :guilabel:`Remove from view`."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:764
+msgid "Click :guilabel:`Ok` to confirm the action."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:767
+msgid ""
+"A removed field can be easily :ref:`added back to the view <studio/fields/"
+"add-existing>` at a later stage, if needed."
+msgstr ""
+
+#: ../../content/applications/studio/fields.rst:769
+msgid ""
+"If the intention is to declutter the view, it is also possible "
+"to :ref:`modify a field <studio/fields/modify>` and make "
+"it :guilabel:`Invisible` on the view in question."
+msgstr ""
 
 #: ../../content/applications/studio/models_modules_apps.rst:3
 msgid "Models, modules, and apps"
@@ -3558,10 +3875,8 @@ msgstr "PDF 報告"
 msgid ""
 "With Studio, you can :ref:`edit existing PDF reports <studio/pdf-reports/"
 "edit>` (e.g., invoices, quotations, etc.) or :ref:`create new ones <studio/"
-"pdf-reports/edit>`."
+"pdf-reports/create>`."
 msgstr ""
-"利用 Studio，你可 :ref:`編輯現有 PDF 報告 <studio/pdf-reports/edit>` （例如發"
-"票、報價單等），或 :ref:`建立新的報告 <studio/pdf-reports/edit>`。"
 
 #: ../../content/applications/studio/pdf_reports.rst:11
 msgid "Default layout"
@@ -5127,6 +5442,150 @@ msgstr ""
 #: ../../content/applications/studio/views.rst:0
 msgid "Sales Analysis Report model's Bar chart on Graph view"
 msgstr ""
+
+#~ msgid ""
+#~ "With Studio, you can :ref:`edit existing PDF reports <studio/pdf-reports/"
+#~ "edit>` (e.g., invoices, quotations, etc.) or :ref:`create new ones "
+#~ "<studio/pdf-reports/edit>`."
+#~ msgstr ""
+#~ "利用 Studio，你可 :ref:`編輯現有 PDF 報告 <studio/pdf-reports/edit>` （例"
+#~ "如發票、報價單等），或 :ref:`建立新的報告 <studio/pdf-reports/edit>`。"
+
+#~ msgid ""
+#~ "Fields structure the models of a database. If you picture a model as a "
+#~ "table or spreadsheet, fields are the columns where data is stored in the "
+#~ "records (i.e., the rows). Fields also define the type of data that is "
+#~ "stored within them. How the data is presented and formatted on "
+#~ "the :abbr:`UI (User Interface)` is defined by their widget."
+#~ msgstr ""
+#~ "欄位為資料庫模型提供結構。如果將模型比喻為表格或試算表，欄位可理解為直欄，"
+#~ "為不同記錄（橫列）儲存數據。欄位亦定義其儲存數據的類型。至於數據"
+#~ "在 :abbr:`UI（操作介面）` 上的顯示方式及格式，則由小工具定義。"
+
+#~ msgid ""
+#~ "From a technical point of view, there are 15 field types in Odoo. "
+#~ "However, you can choose from 20 fields in Studio, as some field types are "
+#~ "available more than once with a different default widget."
+#~ msgstr ""
+#~ "技術上，Odoo 共有 15 種欄位類型。若使用 Studio，會有 20 種欄位可供選擇，因"
+#~ "為有些欄位類型可在不同的預設小工具中多次使用。"
+
+#~ msgid ""
+#~ ":guilabel:`New Fields` can only be added to the :ref:`studio/views/"
+#~ "general/form` and :ref:`studio/views/multiple-records/list` views. On "
+#~ "other views, you can only add :guilabel:`Existing Fields` :dfn:`(fields "
+#~ "already on the model)`."
+#~ msgstr ""
+#~ ":guilabel:`新欄位` 只可加入至 :ref:`studio/views/general/form` "
+#~ "及 :ref:`studio/views/multiple-records/list` 檢視畫面。其他檢視畫面只可加"
+#~ "入 :guilabel:`現有欄位` :dfn:`(模型中已有的欄位)`。"
+
+#~ msgid ""
+#~ "Simple fields contain basic values, such as text, numbers, files, etc."
+#~ msgstr "簡單欄位包括基本的資料值，例如文字、數字、檔案等。"
+
+#~ msgid ""
+#~ "Non-default widgets, when available, are presented as bullet points or "
+#~ "sub-headings below."
+#~ msgstr "若有非預設的小工具可用，會在下方以點列符號或子標題的形式交代。"
+
+#~ msgid ""
+#~ "This works differently than selecting the :ref:`Image field <studio/"
+#~ "fields/simple-fields-image>` directly, as the image is not stored in Odoo "
+#~ "when using a :guilabel:`Text` field with the :guilabel:`Image` widget. "
+#~ "For example, it can be useful if you want to save disk space."
+#~ msgstr ""
+#~ "此方式與直接選擇 :ref:`圖片欄位 <studio/fields/simple-fields-image>` 不"
+#~ "同。若使用附有 :guilabel:`圖片` 小工具的 :guilabel:`文字` 欄位，圖片不會儲"
+#~ "存在 Odoo 中。舉例，如果想節省儲存空間，這方式會很有用。"
+
+#~ msgid ""
+#~ "Relational fields are used to link and display the data from records on "
+#~ "another model."
+#~ msgstr "關係欄位用作連結及顯示其他模型的記錄資料。"
+
+#~ msgid ""
+#~ "Non-default widgets, when available, are presented as bullet points below."
+#~ msgstr "若有非預設的小工具可用，會在下方以點列符號交代。"
+
+#~ msgid "Properties"
+#~ msgstr "屬性"
+
+#~ msgid ""
+#~ "The :guilabel:`Invisible` attribute also applies inside Studio. To view "
+#~ "hidden fields in Studio, click on a view's :guilabel:`View` tab and "
+#~ "enable :guilabel:`Show Invisible Elements`."
+#~ msgstr ""
+#~ ":guilabel:`隱藏` 屬性在 Studio 內也適用。若要在 Studio 模式下查看隱藏欄"
+#~ "位，請按一下檢視畫面的 :guilabel:`檢視` 分頁，然後啟用 :guilabel:`顯示隱藏"
+#~ "元素`。"
+
+#~ msgid ""
+#~ "You can choose to enable :guilabel:`Invisible`, :guilabel:`Required` "
+#~ "and :guilabel:`Readonly` for specific records only by clicking "
+#~ "on :guilabel:`Conditional` and creating a filter."
+#~ msgstr ""
+#~ "你可按一下 :guilabel:`條件規則` 建立篩選器，選擇只為個別記錄啟"
+#~ "用 :guilabel:`隱藏` 、 :guilabel:`必填` 及 :guilabel:`唯讀` 屬性。"
+
+#~ msgid ""
+#~ "On the *Form* view of the *Contact* model, the :guilabel:`Title` field "
+#~ "only appears when :guilabel:`Individual` is selected, as that field would "
+#~ "not be helpful for a :guilabel:`Company` contact."
+#~ msgstr ""
+#~ "舉例，在 **聯絡人** 模型的 **表單** 檢視畫面中，:guilabel:`職稱` 欄位只會"
+#~ "在選擇了 :guilabel:`個人` 時才會顯示，因為該欄位不適用於 :guilabel:`公司` "
+#~ "聯絡人。"
+
+#~ msgid ""
+#~ ":guilabel:`Label`: the field's name on the UI. This is not the name used "
+#~ "in the PostgreSQL database. To view and change the latter, activate "
+#~ "the :ref:`developer mode <developer-mode>` and edit "
+#~ "the :guilabel:`Technical Name`."
+#~ msgstr ""
+#~ ":guilabel:`顯示標籤`：使用者操作介面所顯示的欄位名稱，而非在 PostgreSQL 資"
+#~ "料庫中使用的名稱。若要查看或變更資料庫中使用的技術名稱，請啟動 :ref:`開發"
+#~ "人員模式 <developer-mode>`，然後編輯 :guilabel:`技術名稱`。"
+
+#~ msgid ""
+#~ ":guilabel:`Placeholder`: To provide an example of how a field should be "
+#~ "completed, add placeholder text. The text appears in light gray until a "
+#~ "value is entered."
+#~ msgstr ""
+#~ ":guilabel:`佔位符`：若想提供如何填寫欄位的範例，可加入佔位文字。使用者輸入"
+#~ "資料值之前，佔位文字會在欄位內，以淺灰色顯示。"
+
+#~ msgid ""
+#~ "For :guilabel:`Date & Time` fields that have the :guilabel:`Date & Time` "
+#~ "or :guilabel:`Date Range` widget set, some specific properties are "
+#~ "available:"
+#~ msgstr ""
+#~ "設定了 :guilabel:`日期時間` 或 :guilabel:`日期範圍` 小工具的 :guilabel:`日"
+#~ "期時間` 欄位，可使用以下特別屬性："
+
+#~ msgid ""
+#~ ":guilabel:`Minimal precision`: Determine the smallest date unit that must "
+#~ "be selected in the date selector. The possible values "
+#~ "are :guilabel:`Day`, :guilabel:`Month`, :guilabel:`Year` "
+#~ "or :guilabel:`Decade`. If no value is selected, the user must select a "
+#~ "day in the date selector."
+#~ msgstr ""
+#~ ":guilabel:`最小精確度`：決定使用者在日期選擇器中，必須選取的最小日期單位。"
+#~ "此值可以是 :guilabel:`日` 、 :guilabel:`月` 、 :guilabel:`年` "
+#~ "或 :guilabel:`十年`。若未有設定任何值，使用者使用日期選擇器時，必須選擇一"
+#~ "天（即一個日子）。"
+
+#~ msgid ""
+#~ ":guilabel:`Maximal precision`: Determine the largest date unit that can "
+#~ "be used to navigate the date selector. The possible values "
+#~ "are :guilabel:`Day`, :guilabel:`Month`, :guilabel:`Year` "
+#~ "or :guilabel:`Decade`. If no value is selected, the user can navigate the "
+#~ "date selector by decade."
+#~ msgstr ""
+#~ ":guilabel:`最大精確度`：決定使用者在日期選擇器中，可用作導航的最大日期單"
+#~ "位。此值可以是 :guilabel:`日` 、 :guilabel:`月` 、 :guilabel:`年` "
+#~ "或 :guilabel:`十年`。若未有設定任何值，使用者可按十年為單位，瀏覽及導航至"
+#~ "不同日期。"
 
 #~ msgid ""
 #~ "Before implementing a webhook in a live database, configure and test it "

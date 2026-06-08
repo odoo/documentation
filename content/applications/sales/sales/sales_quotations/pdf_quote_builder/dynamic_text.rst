@@ -1,4 +1,7 @@
 .. _Adobe: https://helpx.adobe.com/acrobat/desktop/work-with-pdf-forms/create-forms/convert-to-forms.html
+.. _BentoPDF: https://www.bentopdf.com/form-creator.html
+.. _EmbedPDF: https://app.embedpdf.com/
+.. _Scribus: https://www.scribus.net/
 
 =====================================
 Configure dynamic form fields in PDFs
@@ -41,7 +44,16 @@ Create dynamic form fields in PDF
    Odoo does not permit spaces in PDF field names. Only use letters, numbers, hyphens, or
    underscores.
 
-To add dynamic form fields, use the preferred PDF editor, such as Adobe Acrobat Pro or Scribus.
+.. note::
+   The following software are examples. They are **not** endorsements of any specific software.
+
+To add dynamic form fields, use the preferred PDF editor. `Adobe Acrobat Pro <Adobe_>`_ is the
+easiest and most commonly used software. Some examples for free open source PDF editors are:
+
+-  Scribus_
+-  BentoPDF_
+-  EmbedPDF_
+
 Refer to the following instructions to:
 
 -  Find :ref:`sales/pdf_quote_builder/dynamic_text/common-dynamic-text-values`.

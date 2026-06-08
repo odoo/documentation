@@ -52,6 +52,10 @@ localization.
      - `l10n_cl_edi_stock`
      - Includes all technical and functional requirements to generate delivery guides via web
        service based on the :abbr:`SII (Servicio de Impuestos Internos)` regulations.
+   * - :guilabel:`Chile - Localization: Factoring Extension`
+     - `l10n_cl_edi_factoring`
+     - Generates AEC files to transfer invoice receivables to factoring companies, creates
+       corresponding accounting entries, and updates invoice payment status to :guilabel:`Yielded`.
 
 .. note::
    - Odoo automatically installs the appropriate package for the company according to the country
@@ -66,8 +70,8 @@ localization.
 Company information
 ===================
 
-Navigate to :menuselection:`Settings --> Companies: Update Info` and ensure the following company
-information is up-to-date and correctly filled in:
+To use all the features of this fiscal localization, the following fields are required on the
+:doc:`company record </applications/general/companies>`:
 
 - :guilabel:`Company Name`
 - :guilabel:`Address`:
@@ -78,16 +82,16 @@ information is up-to-date and correctly filled in:
   - :guilabel:`ZIP`
   - :guilabel:`Country`
 
-- :guilabel:`Tax ID`: enter the identification number for the selected :ref:`Taxpayer Type
+- :guilabel:`RUT`: Enter the identification number for the selected :ref:`Taxpayer Type
   <chile/fiscal-info>`.
-- :guilabel:`Activity Names`: select up to four activity codes.
-- :guilabel:`Company Activity Description`: enter a short description of the company's activity.
+- :guilabel:`Activity Names`: Select up to four activity codes.
+- :guilabel:`Company Activity Description`: Enter a short description of the company's activity.
 
 Accounting settings
 ===================
 
-Next, navigate to :menuselection:`Accounting --> Configuration --> Settings --> Chilean
-Localization` and follow the instructions to configure the:
+Next, go to :menuselection:`Accounting --> Configuration --> Settings`, and scroll down to the
+:guilabel:`Chilean Localization` section and follow the instructions to configure the:
 
 - :ref:`Fiscal information <chile/fiscal-info>`
 - :ref:`Electronic invoice data <chile/electronic-invoice>`
@@ -101,7 +105,7 @@ Fiscal information
 
 Configure the following :guilabel:`Tax payer information`:
 
-- :guilabel:`Taxpayer Type` by selecting the taxpayer type that applies:
+- :guilabel:`Taxpayer` type by selecting the taxpayer type that applies:
 
   - :guilabel:`VAT Affected (1st Category)`: for invoices that charge taxes to customers
   - :guilabel:`Fees Receipt Issuer (2nd Category)`: for suppliers who issue fees receipt (Boleta)
@@ -116,7 +120,7 @@ Configure the following :guilabel:`Tax payer information`:
 Electronic invoice data
 -----------------------
 
-Select your :guilabel:`SII Web Services` environment:
+Select the :guilabel:`SII Web Services` environment:
 
 - :guilabel:`SII - Test`: for test databases using test :abbr:`CAFs (Folio
   Authorization Code)` obtained from the :abbr:`SII (Servicio de Impuestos Internos)`. In this mode,
@@ -133,9 +137,10 @@ Then, enter the :guilabel:`Legal Electronic Invoicing Data`:
 - :guilabel:`SII Resolution N°`
 - :guilabel:`SII Resolution Date`
 
-.. image:: chile/electronic-invoice-data.png
-   :alt: Required information for electronic invoice.
-   :align: center
+.. warning::
+   In a :doc:`multi-company environment <../../general/companies/multi_company>`, each company and
+   :ref:`branch <general/companies/branches>` must have its own :guilabel:`RUT` and corresponding
+   certificate(s) to process invoices.
 
 .. _chile/dte-email:
 
@@ -184,7 +189,6 @@ In the :guilabel:`Server & Login` tab (for IMAP and POP servers):
 
 .. image:: chile/dte-incoming-email.png
    :alt: Incoming email server configuration for Chilean DTE.
-   :align: center
 
 .. tip::
    Before going live, it is recommended to archive or remove all emails related to vendor bills that
@@ -209,7 +213,6 @@ Certificates` section. Then, click :guilabel:`New` to configure the certificate:
 
 .. image:: chile/new-certificate.png
    :alt: Digital certificate configuration.
-   :align: center
 
 .. warning::
    If the :guilabel:`Certificate Owner` field is set to a specific user, and there are no
@@ -250,7 +253,6 @@ In the :guilabel:`Electronic Invoicing` tab:
 
 .. image:: chile/dte-email-electronic-invoice.png
    :alt: Chilean electronic invoice data for partners.
-   :align: center
 
 Document types
 ==============
@@ -263,7 +265,6 @@ managed by navigating to :menuselection:`Accounting --> Configuration --> Docume
 
 .. image:: chile/chilean-document-types.png
    :alt: Chilean fiscal document types list.
-   :align: center
 
 .. note::
    Several document types are inactive by default but can be activated by toggling the
@@ -403,7 +404,6 @@ vendor bill reception. The following diagram explains how information is shared 
 
 .. image:: chile/electronic-invoice-workflow.png
    :alt: Diagram with Electronic invoice transactions.
-   :align: center
 
 Customer invoice emission
 -------------------------
@@ -415,7 +415,6 @@ the taxpayer. The document type can be changed manually if needed on the invoice
 
 .. image:: chile/customer-invoice-document-type.png
    :alt: Customer invoice document type selection.
-   :align: center
 
 .. important::
    :guilabel:`Documents type 33` electronic invoice must have at least one item with tax, otherwise
@@ -436,7 +435,6 @@ order, validate the invoice. After the invoice is posted:
 
   .. image:: chile/xml-creation.png
      :alt: DTE XML File displayed in chatter.
-     :align: center
 
 The :abbr:`DTE (Documentos Tributarios Electrónicos)` status is updated automatically by Odoo with a
 scheduled action that runs every day at night, if the response from the :abbr:`SII (Servicio de
@@ -445,7 +443,6 @@ Impuestos Internos)` is needed immediately, you can do it manually as well by fo
 
 .. image:: chile/dte-status-flow.png
    :alt: Transition of DTE status flow.
-   :align: center
 
 #. The first step is to send the :abbr:`DTE (Documentos Tributarios Electrónicos)` to the :abbr:`SII
    (Servicio de Impuestos Internos)`. This can be sent manually by clicking the :guilabel:`Enviar
@@ -459,7 +456,6 @@ Impuestos Internos)` is needed immediately, you can do it manually as well by fo
 
    .. image:: chile/dte-status-steps.png
       :alt: Identification transaction for invoice and Status update.
-      :align: center
 
    .. important::
       There are intermediate statuses in the :abbr:`SII (Serviciqo de Impuestos Internos)` before
@@ -468,7 +464,6 @@ Impuestos Internos)` is needed immediately, you can do it manually as well by fo
 
       .. image:: chile/chatter-internal-statuses.png
          :alt: Electronic invoice data statuses.
-         :align: center
 
 #. The final response from the :abbr:`SII (Servicio de Impuestos Internos)` can take on one of these
    values:
@@ -492,7 +487,6 @@ Impuestos Internos)` is needed immediately, you can do it manually as well by fo
 
      .. image:: chile/rejected-invoice.png
         :alt: Message when an invoice is rejected.
-        :align: center
 
 Crossed references
 ~~~~~~~~~~~~~~~~~~
@@ -504,7 +498,6 @@ well. In the case of the credit and debit notes, they are set automatically by O
 
 .. image:: chile/cross-reference-tab-registration.png
    :alt: Crossed referenced document(s).
-   :align: center
 
 .. _chile/electronic-invoice-pdf-report:
 
@@ -536,7 +529,6 @@ Once the invoice has been sent to the customer:
 
 .. image:: chile/partner-dte-status.png
    :alt: Message with the commercial acceptance from the customer.
-   :align: center
 
 Processed for claimed invoices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -548,7 +540,6 @@ with a credit note to either cancel the invoice or correct it. Please refer to t
 
 .. image:: chile/accepted-invoice.png
    :alt: Invoice Commercial status updated to claimed.
-   :align: center
 
 Common errors
 ~~~~~~~~~~~~~
@@ -606,7 +597,6 @@ Authorization Code)` on each document type.
 
 .. image:: chile/credit-note-document-type.png
    :alt: Creation of CAF for Credit notes.
-   :align: center
 
 Use cases
 ~~~~~~~~~
@@ -621,7 +611,6 @@ Internos)` reference code is automatically set to :guilabel:`Anula Documento de 
 
 .. image:: chile/credit-note-cancel-ref-doc.png
    :alt: Credit note cancelling the referenced document.
-   :align: center
 
 Correct referenced document
 ***************************
@@ -633,13 +622,11 @@ Code` field is automatically set to :guilabel:`Corrects Referenced Document Text
 
 .. image:: chile/credit-note-correct-text.png
    :alt: Credit note correcting referenced document text.
-   :align: center
 
 Odoo creates a credit note with the corrected text in an invoice and :guilabel:`Price` `0.00`.
 
 .. image:: chile/text-correction-label.png
    :alt: Credit note with the corrected value on the invoice lines.
-   :align: center
 
 .. important::
    Make sure to define the :guilabel:`Default Credit Account` in the sales journal specifically for
@@ -654,7 +641,6 @@ When a correction on the amounts is required, use the button :guilabel:`Add Cred
 
 .. image:: chile/credit-note-correct-amount.png
    :alt: Credit note for partial refund to correct amounts, using the SII reference code 3.
-   :align: center
 
 Debit notes
 -----------
@@ -676,14 +662,12 @@ select option :guilabel:`3. Corrige el monto del Documento de Referencia` for th
 
 .. image:: chile/debit-note-correct-amount.png
    :alt: Debit note correcting referenced document amount.
-   :align: center
 
 In this case Odoo automatically includes the :guilabel:`Source Invoice` in the :guilabel:`Cross
 Reference` tab.
 
 .. image:: chile/auto-ref-debit-note.png
    :alt: Automatic reference to invoice in a debit note.
-   :align: center
 
 .. tip::
    You can only add debit notes to an invoice already accepted by the SII.
@@ -697,7 +681,6 @@ Debit Note` button and select the :guilabel:`1: Anula Documentos de referencia` 
 
 .. image:: chile/debit-note-cancel-ref-doc.png
    :alt: Debit note to cancel the referenced document (credit note).
-   :align: center
 
 Vendor bills
 ------------
@@ -729,7 +712,6 @@ Status` changes to :guilabel:`Accepted` and an email of acceptance is sent to th
 
 .. image:: chile/accept-vendor-bill-btn.png
    :alt: Button for accepting vendor bills.
-   :align: center
 
 Claim
 ~~~~~
@@ -742,7 +724,6 @@ vendor.
 .. image:: chile/claim-vendor-bill-btn.png
    :alt: Claim button in vendor bills to inform the vendor all the document is commercially
          rejected.
-   :align: center
 
 If you claim a vendor bill, the status changes from :guilabel:`Draft` to :guilabel:`Cancel`
 automatically. Considering this as best practice, all the claimed documents should be cancelled as
@@ -842,7 +823,6 @@ delivery order, the option to create a delivery guide is activated.
 
 .. image:: chile/delivery-guide-creation-btn.png
    :alt: Create Delivery Guide button on a sales process.
-   :align: center
 
 .. warning::
    When clicking on :guilabel:`Create Delivery Guide` for the first time, a warning message pops up,
@@ -853,7 +833,6 @@ delivery order, the option to create a delivery guide is activated.
 
    .. image:: chile/delivery-guide-number-warning.png
       :alt: First Delivery Guide number warning message.
-      :align: center
 
 This warning message means the user needs to indicate the next sequence number Odoo has to take to
 generate the delivery guide (e.g. next available :abbr:`CAF (Folio Authorization Code)` number), and
@@ -869,7 +848,6 @@ After the delivery guide is created:
 
 .. image:: chile/chatter-delivery-guide.png
    :alt: Chatter notes of Delivery Guide creation.
-   :align: center
 
 The :guilabel:`DTE Status` is automatically updated by Odoo with a scheduled action that runs every
 night. To get a response from the :abbr:`SII (Servicio de Impuestos Internos)` immediately, press
@@ -880,7 +858,6 @@ Guide` button.
 
 .. image:: chile/print-delivery-guide-btn.png
    :alt: Printing Delivery Guide PDF.
-   :align: center
 
 Delivery guide will have fiscal elements that indicate that the document is fiscally valid when
 printed (if hosted in *Odoo SH* or on *On-premise* remember to manually add the
@@ -912,7 +889,6 @@ used for electronic receipts or a new record may be created for the same purpose
 
 .. image:: chile/electronic-receipt-customer.png
    :alt: Electronic Receipt module.
-   :align: center
 
 Although electronic receipts should be used for final consumers with a generic :abbr:`RUT (Rol Único
 Tributario)`, it can also be used for specific partners. After the partners and journals are created
@@ -921,7 +897,6 @@ the type of document :guilabel:`(39) Electronic Receipt` should be selected in t
 
 .. image:: chile/document-type-39.png
    :alt: Document type 39 for Electronic Receipts.
-   :align: center
 
 Validation and DTE status
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -939,7 +914,6 @@ After the receipt is posted:
 
 .. image:: chile/electronic-receipt-ste-status.png
    :alt: Electronic Receipts STE creation status.
-   :align: center
 
 The :guilabel:`DTE Status` is automatically updated by Odoo with a scheduled action that runs every
 day at night. To get a response from the :abbr:`SII (Servicio de Impuestos Internos)` immediately,
@@ -974,7 +948,6 @@ Contact configurations
 
 .. image:: chile/taxpayer-type-export-goods.png
    :alt: Taxpayer Type needed for the Electronic Exports of Goods module.
-   :align: center
 
 Chilean customs
 ~~~~~~~~~~~~~~~
@@ -984,7 +957,6 @@ tab are required to comply with Chilean regulations.
 
 .. image:: chile/chilean-custom-fields.png
    :alt: Chilean customs fields.
-   :align: center
 
 PDF report
 ~~~~~~~~~~
@@ -995,7 +967,6 @@ valid and a new section needed for customs.
 
 .. image:: chile/pdf-report-section.png
    :alt: PDF report section for the Electronic Exports of Goods PDF Report.
-   :align: center
 
 eCommerce electronic invoicing
 ------------------------------
@@ -1004,7 +975,6 @@ To install the :guilabel:`Chilean eCommerce` module, go to :menuselection:`Apps,
 module by its technical name `l10n_cl_edi_website_sale`, and click the :guilabel:`Activate` button.
 
 .. image:: chile/ecommerce-module-chile.png
-   :align: center
    :alt: l10n_cl eCommerce module.
 
 This module enables the features and configurations to:
@@ -1024,7 +994,6 @@ To configure your website to generate electronic documents during the sale proce
 automatically generated when an online payment is confirmed.
 
 .. image:: chile/website-configurations-ecommerce-chile.png
-   :align: center
    :alt: Invoice Policy and Automatic Invoice configurations.
 
 Since an online payment needs to be confirmed for the *automatic invoice* feature to generate the
@@ -1040,7 +1009,6 @@ the product template of the desired product. Then, set the :guilabel:`Invoicing 
 :guilabel:`Ordered quantities`.
 
 .. image:: chile/ordered-quantities-product.png
-   :align: center
    :alt: Invoice Policy configuration in Products.
 
 Invoicing flows
@@ -1050,7 +1018,6 @@ Clients from Chile will be able to select if they need an **invoice** or a **bal
 purchase with an extra step added during the checkout process.
 
 .. image:: chile/select-edi-docs-ecommerce.png
-   :align: center
    :alt: Option for EDI Documents for clients.
 
 If the customer selects the :guilabel:`Electronic Invoice` option, fiscal fields are required to be
@@ -1058,7 +1025,6 @@ filled out, including the :guilabel:`Activity Description`, the :guilabel:`Ident
 and their :guilabel:`DTE Email`.
 
 .. image:: chile/fiscal-fields-invoice-ecommerce.png
-   :align: center
    :alt: Fiscal fields required for an Invoice to be requested.
 
 If the client selects the :guilabel:`Electronic Receipts` option, they will be directed to the next
@@ -1080,7 +1046,6 @@ application on the main Odoo dashboard, search for the module by its technical n
 `l10n_cl_edi_pos`, and click the :guilabel:`Activate` button.
 
 .. image:: chile/pos-edi-module-chile.png
-   :align: center
    :alt: l10n_cl POS EDI module.
 
 This module enables the following features and configurations to:
@@ -1105,7 +1070,6 @@ fields:
 - :guilabel:`RUT`
 
 .. image:: chile/fiscal-required-pos-session.png
-   :align: center
    :alt: Contact with fiscal information created from POS.
 
 To configure the products, navigate to :menuselection:`Point of Sale --> Products --> Products` and
@@ -1114,7 +1078,6 @@ the product as :guilabel:`Available for POS`, this makes the product available f
 *Point of Sale* app.
 
 .. image:: chile/available-in-pos-product.png
-   :align: center
    :alt: Product with fiscal information created from POS.
 
 Optionally, the following features are available for configuration in the :menuselection:`Point of
@@ -1126,7 +1089,6 @@ Sale --> Configuration --> Settings --> Bills & Receipts section`:
   receipt, allowing the user to request an invoice through the customer portal
 
 .. image:: chile/qr-code-ticket.png
-   :align: center
    :alt: Configuration to generate QR or 5 digit codes on tickets.
 
 Invoicing flows
@@ -1142,7 +1104,6 @@ automatically selects :guilabel:`Consumidor Final Anónimo` as the contact for t
 generates the electronic receipt.
 
 .. image:: chile/invoice-receipt-selection.png
-   :align: center
    :alt: Automatic contact selection of an anonymous end consumer.
 
 .. note::
@@ -1158,7 +1119,6 @@ selects the contact for the order as the :guilabel:`Consumidor Final Anónimo`, 
 select or create the required customer contact with their fiscal information for the receipt.
 
 .. image:: chile/contact-for-electronic-invoice.png
-   :align: center
    :alt: Selection of contact for the receipt.
 
 .. note::
@@ -1173,7 +1133,6 @@ with their fiscal information. When the payment is being made, select the option
 to generate the document.
 
 .. image:: chile/invoice-option-at-payment.png
-   :align: center
    :alt: Selection of invoice option at payment.
 
 .. note::
@@ -1188,14 +1147,12 @@ it is possible to manage the process to return products sold in a :abbr:`POS (Po
 by selecting the :guilabel:`Refund` button.
 
 .. image:: chile/refund-order.png
-   :align: center
    :alt: Refund option in the POS application.
 
 Orders can be searched by the order status or by contact, and be selected for the refund to be based
 on the client's original order.
 
 .. image:: chile/select-order-refund.png
-   :align: center
    :alt: Selection of order for the refund process.
 
 When the return payment is validated, Odoo generates the necessary credit note, referencing the
@@ -1205,60 +1162,111 @@ original receipt or invoice, partially or fully cancelling the document.
    `Smart tutorial - Electronic invoicing for point of sale
    <https://www.youtube.com/watch?v=B2XuWmtlmno&t=360s>`_.
 
+.. _chile/factoring:
+
+Factoring
+---------
+
+.. note::
+   Make sure the :guilabel:`Chile - Localization: Factoring Extension` (`l10n_cl_edi_factoring`)
+   module is :ref:`installed <general/install>`.
+
+**Factoring** is a financial strategy where accounts receivable invoices are sold to a factoring
+company to receive immediate liquidity (less an agreed commission) before the actual due date.
+The **AEC (Archivo Electrónico de Cesión)** is the document that formalizes and registers the
+assignment of a DTE to a third party (Factoring company) through the SII system.
+
+**Factoring of sales invoices**:
+
+- *Does not apply to tickets (boletas)*.
+- Can be multi-currency.
+- Does not require :abbr:`CAFs (Folio Authorization Code)`.
+- Generates an :abbr:`AEC (Archivo Electrónico de Cesión)` for each document that is factored.
+
+.. important::
+   This module supports companies transferring invoice ownership to a third party, not companies
+   acquiring invoice ownership.
+
+.. _chile/factoring-configuration:
+
+Configuration
+~~~~~~~~~~~~~
+
+To set the default journal and account for factoring purposes:
+
+#. Go to :menuselection:`Accounting --> Configuration --> Settings`.
+#. Scroll down to the :guilabel:`Chilean Localization` section.
+#. In the :guilabel:`Factoring Default Information` section, complete the following fields :
+
+   - :guilabel:`Journal`: Select a :guilabel:`Miscellaneous` type journal.
+   - :guilabel:`Receivable Account`: Update if necessary.
+
+     .. tip::
+        It's recommended to use a specific factoring account receivable.
+
+Then, for each factoring partner, open the relevant :guilabel:`Contact` form, and enable the
+:guilabel:`Factoring Company` option in the :guilabel:`Electronic Invoicing` tab.
+
+.. _chile/factoring-workflow:
+
+Workflow
+~~~~~~~~
+
+To factor an invoice, follow these steps:
+
+#. In the Invoices list view, open a Type 33 electronic invoice that has been :ref:`validated by the
+   SII <chile/electronic-invoice-validation>`.
+#. In the invoice form, click :icon:`oi-arrow-right` :guilabel:`Create AEC` in the
+   :guilabel:`SII DTE status` field.
+#. In the :guilabel:`Create AEC` window, specify the :guilabel:`Factoring Company` and the
+   :guilabel:`Date Due`, and click :guilabel:`Create AEC`. A yellow banner confirms that the invoice
+   has an account entry to be yielded.
+#. Click the :icon:`fa-share` :guilabel:`Yield Entry` smart button to open the yield entry.
+
+   .. note::
+      The entry is posted using the :ref:`configured receivable account and journal
+      <chile/factoring-configuration>`.
+
+#. Click :icon:`oi-arrow-right` :guilabel:`Send now to the SII` in the :guilabel:`SII DTE status`
+   field to generate, send and get the final status of the AEC.
+
+Once the assignment entry is :guilabel:`Accepted`, the original customer invoice is marked as
+:guilabel:`Paid`, with the accepted assignment entry serving as the payment reference.
+
+.. tip::
+   To factor multiple invoices, select them in the :guilabel:`Invoices` list view, click
+   :icon:`fa-cog` :guilabel:`Actions`, select :guilabel:`Create AEC`, and follow the same steps. An
+   XML file is generated for each invoice.
+
 Financial reports
 =================
 
 Balance tributario de 8 columnas
 --------------------------------
 
-This report presents the accounts in detail (with their respective balances), classifying them
-according to their origin and determining the level of profit or loss that the business had within
-the evaluated period of time.
+This report presents the accounts in detail (with their respective balances), classifying them by
+origin and determining the level of profit or loss for the evaluated period.
 
-You can find this report in :menuselection:`Accounting --> Reporting --> Balance Sheet` and
-selecting in the :guilabel:`Report` field the option :guilabel:`Chilean Fiscal Balance (8 Columns)
-(CL)`.
-
-.. image:: chile/locate-fiscal-balance-report.png
-   :alt: Location of the Reporte Balance Tributario de 8 Columnas.
-   :align: center
-
-.. image:: chile/8-col-fiscal-balance-report.png
-   :alt: Chilean Fiscal Balance (8 Columns).
-   :align: center
+To access it, go to :menuselection:`Accounting --> Reporting --> Balance Sheet`, click
+:icon:`fa-book` :guilabel:`Report:`, and select :guilabel:`Chilean Fiscal Balance (8 Columns)(CL)`.
 
 Propuesta F29
 -------------
 
-The form *F29* is a new system that the :abbr:`SII (Servicio de Impuestos Internos)` enabled to
-taxpayers, and that replaces the *Purchase and Sales Books*. This report is integrated by Purchase
+The *F29* form is a new system that the :abbr:`SII (Servicio de Impuestos Internos)` enabled for
+taxpayers and replaces the *Purchase and Sales Books*. This report is integrated by the Purchase
 Register (CR) and the Sales Register (RV). Its purpose is to support the transactions related to
 VAT, improving its control and declaration.
 
 .. important::
    The *Propuesta F29 (CL)* report in Odoo covers the basic legal requirements as a first proposal
-   for your final tax declaration.
+   for the final tax declaration.
 
-This record is supplied by the electronic tax documents (DTE's) that have been received by the
-:abbr:`SII (Servicio de Impuestos Internos)`.
+This record is supplied by the electronic tax documents (DTE's) that the :abbr:`SII (Servicio de
+Impuestos Internos)` has received.
 
-You can find this report in :menuselection:`Accounting --> Reporting --> Tax Reports` and selecting
-the :guilabel:`Report` option :guilabel:`Propuesta F29 (CL)`.
-
-.. image:: chile/locate-propuesta-f29-report.png
-   :alt: Location of the Propuesta F29 (CL) Report.
-   :align: center
-
-It is possible to set the :abbr:`PPM (Provisional Monthly Payments rate)` and the
-:guilabel:`Proportional Factor for the fiscal year` from the :menuselection:`Accounting -->
-Configuration --> Settings`.
-
-.. image:: chile/f29-report.png
-   :alt: Default PPM and Proportional Factor for the Propuesta F29 Report.
-   :align: center
-
-Or manually in the reports by clicking on the :guilabel:`✏️ (pencil)` icon.
-
-.. image:: chile/manual-ppm-f29-report.png
-   :alt: Manual PPM for the Propuesta F29 Report.
-   :align: center
+To access it, go to :menuselection:`Accounting --> Reporting --> Tax Return`, click :icon:`fa-book`
+:guilabel:`Report:`, and select :guilabel:`Propuesta F29 (CL)`. To manually set the
+:guilabel:`Proposed Ratio Factor (%)` and :guilabel:`PPM rate (%)`, click the :icon:`fa-pencil`
+:guilabel:`(pencil)` icon and add the percentage for each value. Calculations are then performed
+automatically.

@@ -128,8 +128,5 @@ to factor in the cost of dropshipping.
 .. toctree::
 
    subcontracting/subcontracting_basic
-   subcontracting/basic_subcontracting_lead_times
    subcontracting/subcontracting_resupply
-   subcontracting/resupply_subcontracting_lead_times
    subcontracting/subcontracting_dropship
-   subcontracting/dropship_subcontracting_lead_times

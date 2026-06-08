@@ -6,17 +6,15 @@ WhatsApp
 calls, and share content. Businesses can use `WhatsApp Business
 <https://developers.facebook.com/products/whatsapp/>`__ to communicate with their customers by text,
 send documents, and provide support. This documentation covers the integration of a WhatsApp
-Business Account (WABA) with Odoo.
+Business Account (WABA) with Odoo using the `WhatsApp Business API
+<https://developers.facebook.com/docs/whatsapp>`__.
 
-.. warning::
+.. note::
    **WhatsApp** is an Odoo Enterprise-only application that does not work in Odoo Community edition.
-   To use the Odoo **WhatsApp** app, sign up for `Odoo Enterprise edition
-   <https://www.odoo.com/trial>`_.
+   To use the Odoo **WhatsApp** app, :doc:`switch from Community to Enterprise
+   </administration/on_premise/community_to_enterprise>`.
 
-.. seealso::
-   :doc:`/administration/on_premise/community_to_enterprise`
-
-Connecting a WhatsApp Business Account (WABA) to an Odoo database enables the following in Odoo's
+Connecting a WhatsApp Business Account to an Odoo database enables the following in Odoo's
 **WhatsApp** app:
 
 - Send and receive WhatsApp messages directly from an Odoo database.
@@ -26,13 +24,16 @@ Connecting a WhatsApp Business Account (WABA) to an Odoo database enables the fo
   - Receipts and invoices from the **Point of Sale** app.
   - Tickets from the **Events** app.
 
-.. seealso::
-   - `Meta Business: create message templates for the WhatsApp Business account
-     <https://www.facebook.com/business/help/2055875911147364>`__
-   - `Meta Business: connect a phone number to the WhatsApp Business account
-     <https://www.facebook.com/business/help/456220311516626>`__
-   - `Meta Business: change the WhatsApp Business display name
-     <https://www.facebook.com/business/help/378834799515077>`__
+.. important::
+   The WhatsApp integration is only compatible with WhatsApp Business *Platform* Accounts.
+   *Personal* WhatsApp accounts and WhatsApp Business *App* accounts are **not** compatible with the
+   Odoo WhatsApp integration. See Meta's documentation to learn more:
+
+   - `Differences between the WhatsApp Business Platform and WhatsApp Business App
+     <https://www.facebook.com/business/help/338665938087159>`__.
+   - `How to migrate an existing WhatsApp Number to a Business Account
+     <https://developers.facebook.com/documentation/business-messaging/whatsapp/solution-providers/migrate-existing-whatsapp-number-to-a-business-account/>`__.
+
 
 The WhatsApp integration supports two flows: company-initiated and customer-initiated. A company can
 start a discussion by sending a template to one or more customers. If the customer answers within 15
@@ -412,7 +413,7 @@ business phone number to be used with WhatsApp.
 .. seealso::
    `Migrate an Existing WhatsApp Number to a Business Account
    <https://developers.facebook.com/docs/whatsapp/cloud-api/get-started/migrate-existing-whatsapp-
-   number-to-a-business-account>`__
+   number-to-a-business-account>`__.
 
 Select :guilabel:`Text message` or :guilabel:`Phone call` for the phone number verification method,
 and then click :guilabel:`Next` to proceed.
@@ -428,8 +429,10 @@ the business phone number.
    <https://www.facebook.com/business/help/915454841921082?id=180505742745347>`__.
 
 .. seealso::
-   `Meta for Developers: Add a Phone Number
-   <https://developers.facebook.com/docs/whatsapp/cloud-api/get-started/add-a-phone-number>`__
+   - `Meta Business: How to connect your phone number to your WhatsApp Business account
+     <https://www.facebook.com/business/help/456220311516626?id=2129163877102343>`__
+   - `Meta for Developers: Add a Phone Number
+     <https://developers.facebook.com/documentation/business-messaging/whatsapp/business-phone-numbers/phone-numbers>`__
 
 .. _productivity/whatsapp/permanent-token:
 
@@ -804,8 +807,10 @@ Meta. Once an email confirmation approving the template is received, the templat
 from within the Odoo database.
 
 .. seealso::
-   `Meta's WhatsApp template documentation
-   <https://developers.facebook.com/docs/whatsapp/business-management-api/message-templates/>`__
+   - `Meta Business: create message templates for your WhatsApp Business account
+     <https://www.facebook.com/business/help/2055875911147364>`__
+   - `Meta's WhatsApp template documentation
+     <https://developers.facebook.com/docs/whatsapp/business-management-api/message-templates/>`__
 
 .. _productivity/whatsapp/notifications:
 

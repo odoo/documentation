@@ -232,6 +232,7 @@ sphinx.transforms.i18n.docname_to_domain = (
 # option. If a provided version has no label, the version string is used as label.
 versions_names = {
     'master': "Master",
+    'saas-19.3': "Odoo 19.3",
     'saas-19.2': "Odoo 19.2",
     'saas-19.1': "Odoo 19.1",
     '19.0': "Odoo 19",
@@ -241,6 +242,8 @@ versions_names = {
     '18.0': "Odoo 18",
     '17.0': "Odoo 17",
     '16.0': "Odoo 16",
+    '15.0': "Odoo 15",
+    '14.0': "Odoo 14",
 }
 
 # The labels used in the language switcher to show the languages provided with the `languages`

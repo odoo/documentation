@@ -53,10 +53,11 @@ Go to :menuselection:`Accounting --> Reporting --> General Ledger`, click the :i
 .. image:: germany/datev-export.png
    :alt: General ledger's actions menu with DATEV exports
 
-Upload the downloaded ZIP file via the `DATEV Belegtransfer software <https://www.datev.de/web/de/service-und-support/software-bereitstellung/download-bereich/betriebliches-rechnungswesen/belegtransfer>`_.
+Upload the downloaded ZIP file via the `DATEV Belegtransfer software <https://www.datev.de/web/de/berufsgruppenuebergreifend/mydatev/cloud-anwendungen/datev-upload-online>`_.
 
-If you do not have the DATEV Belegtransfer software installed on your computer, ask your tax advisor
-to help you with this.
+.. note::
+   If you do not have the DATEV Belegtransfer software `installed <https://apps.datev.de/myupdates/download/products/ddc1adec-4b1e-4581-b5b0-504fe0d68fd2>`_
+   on your computer, ask your tax advisor to help you with this.
 
 .. warning::
    The DATEV ATCH ZIP file includes the files (reports) linked to an Odoo invoice or bill. For

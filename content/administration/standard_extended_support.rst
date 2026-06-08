@@ -10,13 +10,15 @@ Standard and extended support
 Odoo provides **standard support** for all major versions for three years. It includes helpdesk
 support, bug fixing, and security updates.
 
-Beyond those three years, you can benefit from **extended support** by paying an extra fee. It
-includes helpdesk support and bug fixes (depending on feasibility).
+Beyond those three years, **extended support** is subject to a mandatory additional fee and includes
+helpdesk support and bug fixes (depending on feasibility).
 
 .. note::
    - Odoo releases intermediary versions, called online or SaaS versions, every two to three months.
      These versions are only available on Odoo Online and are not eligible for extended support.
-   - You can `upgrade <https://upgrade.odoo.com>`_ from any version.
+   - You can `upgrade <https://upgrade.odoo.com>`_ from any version **to supported versions** only.
+     The last unsupported version can still be used as an upgrade target for up to six months
+     following its end-of-life date.
 
 The table below shows the support status of every version. Major releases are highlighted in bold.
 
@@ -30,6 +32,12 @@ The table below shows the support status of every version. Major releases are hi
      - On-premise
      - Release date
      - End of standard support
+   * - Odoo SaaS 19.3
+     - |green|
+     - N/A
+     - N/A
+     - May 2026
+     -
    * - Odoo SaaS 19.2
      - |green|
      - N/A
@@ -107,7 +115,7 @@ The table below shows the support status of every version. Major releases are hi
 
    |green| : Standard support
 
-   |orange| : Extended support available (with an extra fee)
+   |orange| : Extended support (mandatory extra fee)
 
    |red| : Not supported
 

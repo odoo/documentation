@@ -36,7 +36,7 @@ The following is a list of available shipping connectors in Odoo:
      - All
    * - :doc:`UPS <ups_credentials>`
      - All
-   * - US Postal Service
+   * - :doc:`US Postal Service <usps>`
      - United States of America
    * - :doc:`Sendcloud <sendcloud_shipping>`
      - Some European countries (see details below)
@@ -44,7 +44,7 @@ The following is a list of available shipping connectors in Odoo:
      - Belgium
    * - :doc:`EasyPost <easypost>`
      - North America
-   * - Shiprocket
+   * - :doc:`Shiprocket <shiprocket>`
      - India
    * - :doc:`Starshipit <starshipit_shipping>`
      - Australia and New Zealand

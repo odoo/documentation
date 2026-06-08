@@ -125,6 +125,72 @@ each vendor bill a unique number from a defined :doc:`sequence <vendor_bills/seq
    Once confirmed, a vendor bill can no longer be updated. Click :guilabel:`Reset to draft` if
    changes are required.
 
+.. _accounting/vendor_bills/self-billing:
+
+Self-billing
+============
+
+Self-billing is a workflow where a customer generates a vendor bill on the supplier's behalf and
+sends a copy to the supplier for their records. It removes the need for the supplier to send the
+customer a vendor bill and is common in industries where the customer has more reliable transaction
+data. It also reduces payment time as the customer does not have to wait for the supplier to issue a
+vendor bill.
+
+Odoo supports the generation of self-billing vendor bills and self-billing credit notes, both of
+which can be sent both by email and via Peppol.
+
+.. _accounting/vendor_bills/self-billing-config:
+
+Configuration
+-------------
+
+To configure self-billing in Odoo, first create a separate purchase journal specifically for
+self-billing:
+
+#. Navigate to :menuselection:`Accounting --> Configuration --> Journals`.
+#. Click the :guilabel:`New` button.
+#. Enter a :guilabel:`Journal Name` and set the :guilabel:`Type` to :guilabel:`Purchase`.
+#. In the :guilabel:`Journal Entries` tab, set a :guilabel:`Default Expense Account` and enter a
+   :guilabel:`Short Code`.
+#. In the :guilabel:`Advanced Settings` tab, enable :guilabel:`Self Billing`.
+
+.. seealso::
+   :doc:`get_started/journals`
+
+.. _accounting/vendor_bills/self-billing-create:
+
+Create a self-bill
+------------------
+
+Self-bills can be created both :ref:`manually <accounting/vendor_bills/creation-manual>` and
+:ref:`automatically <accounting/vendor_bills/automatic>`. When creating self-bills, be sure to
+either create them directly from the :ref:`self-billing purchase journal
+<accounting/vendor_bills/self-billing-config>` on the :guilabel:`Accounting Dashboard` or manually
+set the :guilabel:`Journal` of the self-bill to the self-billing purchase journal.
+
+.. note::
+   The sequence of self-bills contains the :ref:`database ID <export_import_data/different-ids>`
+   (also known as the internal ID) of the partner, making the sequence unique per partner.
+
+.. _accounting/vendor_bills/self-billing-send:
+
+Send a self-bill
+----------------
+
+To send a self-bill after :ref:`creating <accounting/vendor_bills/self-billing-create>` and
+confirming it, click :guilabel:`Send`. In the :guilabel:`Send` popup window, select the sending
+methods (i.e., :guilabel:`Email`, :guilabel:`By Post`, and/or the appropriate Peppol format), and
+click :guilabel:`Send`.
+
+.. note::
+   - If sending self-bills via :ref:`Peppol <accounting/e-invoicing/peppol>`, first
+     :ref:`configure your Peppol registration <accounting/e-invoicing/peppol-registration>`, then
+     verify that the vendor is registered with Peppol. To do so, go to :menuselection:`Accounting
+     --> Vendors --> Vendors`, then go through the :ref:`contact verification process
+     <accounting/e-invoicing/contact-verification>`.
+   - Not every Peppol access point supports self-billing. Check with your suppliers to ensure that
+     theirs does.
+
 .. _accounting/vendor_bills/bill-payment:
 
 Payment and reconciliation

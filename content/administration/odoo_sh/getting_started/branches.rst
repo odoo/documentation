@@ -113,9 +113,8 @@ been accidentally deleted from the production database. It is possible to create
 staging databases.
 
 .. warning::
-   Databases created for staging branches are intended to last up to three months. After that, they
-   can be automatically blocked without prior notice. Only rebuilding the branch will allow you to
-   use that specific branch again.
+   Databases created for staging branches are automatically deleted after one month. To use the
+   branch again, you must rebuild it.
 
 .. _odoo-sh/branches/stages/development:
 
