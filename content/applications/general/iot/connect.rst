@@ -118,10 +118,13 @@ Click the card to access the IoT system's form, which allows to access the :ref:
 view the list of :doc:`devices <devices>` connected to the IoT system.
 
 .. tip::
-   Enable the :ref:`developer mode <developer-mode>` to access the IoT system's :guilabel:`Technical
-   Information`, such as its :guilabel:`Domain Address`, :guilabel:`Image Version`, and
-   :ref:`SSL Certificate <iot/connect/https_certificate>` :guilabel:`End Date`.
-   By default, drivers are automatically updated every time the IoT system is restarted.
+   - Enable the :ref:`developer mode <developer-mode>` to access the IoT system's :guilabel:`Technical
+     Information`, such as its :guilabel:`Domain Address`, :guilabel:`Image Version`, and
+     :ref:`SSL Certificate <iot/connect/https_certificate>` :guilabel:`End Date`.
+     By default, drivers are automatically updated every time the IoT system is restarted.
+   - On the :ref:`IoT system's form <iot/connect/IoT-form>`, click the :guilabel:`Test` button to test
+     the connection between the IoT system and Odoo and assess the quality of the system's Internet
+     connection.
 
 .. _iot/connect/disconnect:
 
