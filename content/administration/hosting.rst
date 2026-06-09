@@ -26,8 +26,22 @@ To Odoo Online
 #. `Create a support ticket <https://www.odoo.com/help-form>`_ including the following:
 
    - your **subscription number**,
-   - the **URL** you want to use for the database (e.g., `company.odoo.com`), and
-   - the **dump** as an attachment or as a link to the file (required for 60 MB+ files).
+   - the **URL** you want to use for the database (e.g., `company.odoo.com`),
+   - the **dump** as an attachment or as a link to the file (required for 60 MB+ files),
+   - the **region** you wish to be hosted in,
+
+     .. note::
+        The list of available regions is available in `our privacy policy <https://www.odoo.com/privacy#data-transfer>`_.
+
+   - the **name** you want for the database,
+   - what **version** the database is in,
+   - the login (email) of the **administrator** user,
+   - whether you wish to have a first **test** deployment, and
+
+     .. tip::
+        This is strongly recommended, especially if you have ever installed third-party apps.
+
+   - **when** you will want the production database to be put online (day, time of day, and your timezone).
 
 #. Odoo then makes sure the database is compatible before putting it online. In case of technical
    issues during the process, Odoo might contact you.
