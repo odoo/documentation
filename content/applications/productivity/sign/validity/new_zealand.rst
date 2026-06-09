@@ -10,10 +10,13 @@ electronic signatures in New Zealand.
 Legal framework for electronic signatures in New Zealand
 ========================================================
 
-In New Zealand, electronic signatures are regulated under the `Contract and Commercial Law Act
-<https://www.legislation.govt.nz/act/public/2017/0005/21.0/DLM6844033.html>`_. The law establishes
-the legal basis for acknowledging electronic records, contracts, and digital signatures. The key
-points of the law include:
+In New Zealand, electronic signatures are regulated under the
+`Contract and Commercial Law Act 2017 (Part 4)
+<https://www.legislation.govt.nz/act/public/2017/0005/latest/whole.html>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -70,4 +73,4 @@ not be suitable or legally recognized in New Zealand:
    cases meet all legal requirements. Compliance with additional industry-specific regulations may
    also be necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*

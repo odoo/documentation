@@ -10,13 +10,13 @@ electronic signatures in Indonesia.
 Legal framework for electronic signatures in Indonesia
 ======================================================
 
-In Indonesia, electronic signatures are regulated under the `Law of the Republic of Indonesia No. 11
-of 2008 on Electronic Information and Transactions
-<https://www.icnl.org/wp-content/uploads/Indonesia_elec.pdf>`_, Government Regulation No. 71 of 2019
-on Organization of Electronic system and Transactions, as well as the Minister of Communications and
-Informatics (MoCI) Regulation No. 11 of 2018 on Administration of Electronic Certification ("MoCI
-Regulation 11 of 2018"). The law governs transactions performed through electronic means and the use
-of electronic signatures. The key points of the law include:
+In Indonesia, electronic signatures are regulated under the
+`Law No. 11/2008 on ITE as amended by Law No. 1/2024 <https://peraturan.go.id/id/uu-no-1-tahun-2024>`_
+and the `Government Regulation No. 71/2019 <https://peraturan.go.id/id/pp-no-71-tahun-2019>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -75,4 +75,4 @@ not be suitable or legally recognized in Indonesia:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 19, 2024*
+*Last updated: June 4, 2026*

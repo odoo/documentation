@@ -10,9 +10,14 @@ electronic signatures in Saudi Arabia.
 Legal framework for electronic signatures in Saudi Arabia
 =========================================================
 
-In Saudi Arabia, electronic signatures are regulated under the `Electronic Transactions Law <https://www.mcit.gov.sa/sites/default/files/2021-06/la_003_e_e-transactions_act%20%281%29.pdf>`_
-and the Regulation No. 1/1429. The law governs transactions performed through electronic means and
-the use of electronic signatures. The key points of the law include:
+In Saudi Arabia, electronic signatures are regulated under the
+`Electronic Transactions Law (Royal Decree M/18, 2007)
+<https://www.mcit.gov.sa/en/regulations/regulations/electronic-transactions-law>`_
+and the `Implementing Regulations (2024) <https://www.mcit.gov.sa/en/regulations>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -69,4 +74,4 @@ not be suitable or legally recognized in Saudi Arabia:
    cases meet all legal requirements. Compliance with additional industry-specific regulations may
    also be necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*

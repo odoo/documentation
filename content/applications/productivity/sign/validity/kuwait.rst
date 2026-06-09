@@ -10,10 +10,13 @@ electronic signatures in Kuwait.
 Legal framework for electronic signatures in Kuwait
 ===================================================
 
-In Kuwait, electronic signatures are regulated under the `Law No.20 of 2014 concerning Electronic
-Transactions and its Implementing Regulations <https://kdipa.gov.kw/wp-content/uploads/2022/08/%D9%82%D8%A7%D9%86%D9%88%D9%86-%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D9%85%D9%84%D8%A7%D8%AA-%D8%A7%D9%84%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A9-20-%D9%84%D8%B3%D9%86%D8%A9-2014-%D9%85%D8%AA%D8%B1%D8%AC%D9%85-%D8%A8%D8%A7%D9%84%D9%84%D8%BA%D8%A9-%D8%A7%D9%84%D8%A7%D9%86%D8%AC%D9%84%D9%8A%D8%B2%D9%8A%D8%A9.pdf>`_.
-The law establishes the legal basis for acknowledging electronic records, contracts, and digital
-signatures. The key points of the law include:
+In Kuwait, electronic signatures are regulated under the
+`Electronic Transactions Law No. 20/2014 (as amended by Decree Law 148/2025)
+<https://www.citra.gov.kw/en/Pages/LegalLibrary.aspx>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -68,4 +71,4 @@ not be suitable or legally recognized in Kuwait:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*
