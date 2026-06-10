@@ -78,7 +78,7 @@ The following categories are linked to the relevant accounts:
 ATC codes
 ~~~~~~~~~
 
-ATC codes are essential for generating :ref:`BIR 2307 <localizations/philippines/reports/bir2307>`,
+ATC codes are essential for generating :ref:`BIR 2306 and 2307 <localizations/philippines/reports/bir2306_2307>`,
 :ref:`localizations/philippines/reports/sawt_qap` reports. These codes ensure compliance with
 regulatory requirements.
 
@@ -161,28 +161,29 @@ SLS and SLP reports can be exported in `.DAT` format, which is compatible with t
    SLSP`.
 #. In the :guilabel:`DAT Export Options` window, click :guilabel:`Export`.
 
-.. _localizations/philippines/reports/bir2307:
+.. _localizations/philippines/reports/bir2306_2307:
 
-BIR 2307
-~~~~~~~~
+BIR 2306 & 2307
+~~~~~~~~~~~~~~~
 
-The **BIR 2307**, or *Certificate of Creditable Tax Withheld at Source*, can be generated for
-:guilabel:`vendor bills` that include expanded withholding taxes.
+Odoo supports the generation of **BIR Form 2306** (Certificate of Final Tax Withheld at Source) and
+**BIR Form 2307** (Certificate of Creditable Tax Withheld at Source) in latest BIR PDF format.
 
-To generate a BIR 2307 report:
+To access them, navigate to :menuselection:`Accounting --> Reporting --> Tax Report`, click
+:icon:`fa-book` :guilabel:`Report`, and select :guilabel:`2306 & 2307`.
 
-#. Go to :menuselection:`Accounting --> Vendors --> Bills` and select one or multiple vendor bills
-   from the list view.
-#. Click :icon:`fa-cog` :guilabel:`Actions`, and select :guilabel:`Download BIR 2307 XLS`.
-#. In the :guilabel:`BIR 2307 Report` window, review the selection and click :guilabel:`Generate`.
+Based on the period filtered, Odoo displays the transactions subject to each :abbr:`EWHT (Expanded
+Withholding Tax)` and :abbr:`FWHT (Final Withholding Tax)` grouped by ATC code per partner level.
+
+To export the certificates into PDF:
+
+#. Make sure to filter by the appropriate **Month** or **Quarter** using the calendar filter.
+#. By default, Odoo exports certificates for all the partners. To select a partner, use the
+   :guilabel:`Partners` filter.
+#. Click the :guilabel:`PDF` button to export the BIR-compliant PDF certificate.
 
 .. note::
-   The XLS file generates records **only** for bill lines with **expanded withholding taxes**
-   applied.
-
-.. important::
-   Odoo does not generate the BIR 2307 PDF report natively. The exported `Form_2307.xls` file must
-   be converted to BIR DAT or PDF format.
+   If the export contains multiple certificates, Odoo gathers them in a single ZIP file.
 
 .. _localizations/philippines/company:
 
