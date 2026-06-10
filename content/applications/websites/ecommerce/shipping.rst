@@ -69,18 +69,38 @@ To create a custom :doc:`delivery method
 go to :menuselection:`Website --> Configuration --> Delivery Methods`, click :guilabel:`New`, and
 :ref:`configure it <inventory/shipping_receiving/delivery-product>`.
 
-.. tip::
-   Upon :ref:`configuring <inventory/shipping_receiving/delivery-product>` a delivery method, you
-   can:
+Upon :ref:`configuring <inventory/shipping_receiving/delivery-product>` a delivery method, you can:
 
-   - Restrict it :doc:`to a specific website <../website/configuration/multi_website>` by
-     selecting it in the :guilabel:`Website` field.
-   - Use the :guilabel:`Availability` tab to define :ref:`conditions
-     <inventory/shipping_receiving/availability>` for the delivery method based on the order's
-     content or destination.
-   - Enable the :ref:`Cash on Delivery <payment_providers/inperson_payments/cash_on_delivery>`
-     option so customers can pay when their order is delivered.
-   - Add a :guilabel:`Tracking Link` to allow customer to track their order via the customer portal.
+- Use the :guilabel:`Availability` tab to define :ref:`conditions
+  <inventory/shipping_receiving/availability>` for the delivery method based on the order's content
+  or destination.
+- Enable the :ref:`Cash on Delivery <payment_providers/inperson_payments/cash_on_delivery>` option
+  so customers can pay upon delivery.
+- Add a :guilabel:`Tracking Link` to allow customer to track their order via the customer portal.
+- Use the :guilabel:`eCommerce` tab to:
+
+  - Restrict it :doc:`to a specific website <../website/configuration/multi_website>` by selecting
+    it in the :guilabel:`Website` field.
+  - Define an :guilabel:`Estimated Delivery` date to indicate when the order is planned to be
+    delivered. To do so:
+
+    - Select the number of :guilabel:`working days` to set a fixed duration for order processing and
+      delivery.
+    - Fill in the :guilabel:`Allow selection up to` field to let customers choose the delivery date.
+      This might be especially useful for :ref:`ecommerce/shipping/instore-pickup` orders.
+    - Select the :doc:`working schedule </applications/hr/payroll/working_schedules>` in the
+      :guilabel:`Based on` field.
+
+    .. example::
+       Your expected delivery period is 5 working days. You allow the customer to choose up to
+       2 additional working days.
+       If the customer orders on *06/17/2026*, the expected delivery date is *06/24/2026*. Since
+       customers can select up to 2 additional days, they can choose a delivery date between
+       *06/24/2026*, *06/25/2026*, and *06/26/2026*.
+
+       .. image:: shipping/estimated-deliver-date.png
+          :alt: Estimated delivery date at checkout.
+          :scale: 70%
 
 .. _ecommerce/shipping/instore-pickup:
 
