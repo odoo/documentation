@@ -203,6 +203,8 @@ addresses are identical), and click :guilabel:`Confirm` to proceed to the next s
    - When the :ref:`Pick up in store <ecommerce/shipping/instore-pickup>` delivery method is
      selected, the customer can :guilabel:`Choose a pick-up point` and, if applicable, filter them
      by country, provided several pick-up points are available.
+   - When the :ref:`Expected Delivery <ecommerce/shipping/custom-method>` option is configured,
+     the customer views the expected delivery date or can select a desired delivery date.
 
 .. _ecommerce/checkout/address-validation:
 
