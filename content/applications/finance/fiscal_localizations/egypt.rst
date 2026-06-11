@@ -203,8 +203,12 @@ Install Odoo's Windows virtual IoT
 The :doc:`Windows virtual IoT <../../general/iot/windows_iot>` acts as a bridge between your
 computer and your Odoo database hosted online.
 
-Follow the :ref:`installation instructions for the Windows virtual IoT
-<iot/windows-iot/installation>`. Once installed:
+Follow the :doc:`installation instructions for the Windows virtual IoT
+<../../general/iot/windows_iot>`. Once installed:
+
+.. important::
+   Make sure to follow all the steps of the Windows virtual IoT installation, including connecting
+   the Windows virtual IoT to your Odoo database.
 
 #. Open the :ref:`virtual IoT homepage <iot/windows-iot/homepage>`
 #. Click the :icon:`fa-cogs` (:guilabel:`cogs`) button then :guilabel:`Credentials`.
