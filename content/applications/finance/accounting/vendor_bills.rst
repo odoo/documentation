@@ -92,8 +92,7 @@ appropriately completed:
 
 In the :guilabel:`Invoice Lines` tab:
 
-- To access the product catalog, click :doc:`Catalog
-  </applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/product_catalog>`.
+- To access the product catalog, click :doc:`Catalog </applications/essentials/product_catalog>`.
 - Select the products and quantities, then click :guilabel:`Back to Bill` to return to the vendor
   bill; the selected catalog items will appear in the vendor bill lines.
 - Update the :guilabel:`Quantity`, :guilabel:`Price`, and :doc:`Taxes <taxes>` fields if needed.
