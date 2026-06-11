@@ -378,6 +378,6 @@ drop the taxes in the :ref:`order they should be computed <taxes/base-subsequent
    taxes/retention
    taxes/vat_verification
    taxes/fiscal_positions
-   taxes/avatax
+   taxes/avalara
    taxes/eu_distance_selling
    taxes/B2B_B2C
