@@ -241,7 +241,7 @@ The Philippines check print layout adheres to the **New Check Design Standards a
 (CICS OM No. 23-040).
 
 To use check payments, :ref:`activate the check payment option
-<accounting/pay-checks/activate-methods>`, then, in the :guilabel:`Check Layout` field, select
+<accounting/pay-checks/configuration>`, then, in the :guilabel:`Check Layout` field, select
 :guilabel:`Print Check - PH`.
 
 When :ref:`paying a vendor bill by check <accounting/pay-checks/pay-bill-check>`, enter the check
