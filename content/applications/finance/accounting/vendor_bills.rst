@@ -103,9 +103,9 @@ In the :guilabel:`Invoice Lines` tab:
    linking it to a product.
 
 To access the product catalog and view all items in an organized display, click :doc:`Catalog
-</applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/product_catalog>`.
-When the products and quantities are selected, click :guilabel:`Back to Bill` to return to the
-vendor bill; the selected catalog items will appear in the vendor bill lines.
+</applications/essentials/product_catalog>`. When the products and quantities are selected, click
+:guilabel:`Back to Bill` to return to the vendor bill; the selected catalog items will appear in the
+vendor bill lines.
 
 .. note::
    Multiple bills for the same purchase order may be issued if the vendor is on back-order and sends
