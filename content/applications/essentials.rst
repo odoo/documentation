@@ -14,3 +14,4 @@ Odoo essentials
    essentials/in_app_purchase
    essentials/keyboard_shortcuts
    essentials/property_fields
+   essentials/product_catalog
