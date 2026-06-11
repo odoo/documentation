@@ -17,7 +17,7 @@ product form or use :doc:`fiscal positions
 
 .. seealso::
    - :doc:`/applications/finance/accounting/taxes`
-   - :doc:`/applications/finance/accounting/taxes/avatax`
+   - :doc:`/applications/finance/accounting/taxes/avalara`
 
 .. _ecommerce-price-management-tax-display:
 
