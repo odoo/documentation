@@ -14,7 +14,7 @@ tax exemption management, and tax return resources.
 
 To access the console, first, navigate to either Avalara's `sandbox
 <https://sandbox.admin.avalara.com/>`_ or `production <https://admin.avalara.com/>`_ environment.
-This will depend on which type of account was set in the :doc:`integration <../avatax>`. Log in to
+This will depend on which type of account was set in the :doc:`integration <../avalara>`. Log in to
 the management console.
 
 .. image:: avalara_portal/avalara-portal.png
@@ -193,7 +193,7 @@ Add more jurisdictions
 Additional jurisdictions (tax locations) can be added in the Avalara management console. Navigate to
 either Avalara's `sandbox <https://sandbox.admin.avalara.com/>`_ or `production
 <https://admin.avalara.com/>`_ environment. This will depend on which type of account was set in the
-:doc:`integration <../avatax>`.
+:doc:`integration <../avalara>`.
 
 Next, navigate to :menuselection:`Settings --> Where you collect tax`. Choose between the three
 different tabs, depending on the business need. The first tab is :guilabel:`Sales and use tax`,
@@ -253,7 +253,7 @@ Avalara documentation: `About Managed Returns
    management console.
 
 .. seealso::
-   - :doc:`../avatax`
+   - :doc:`../avalara`
    - :doc:`avatax_use`
    - `US Tax Compliance: Avatax elearning video
      <https://www.odoo.com/slides/slide/us-tax-compliance-avatax-2858?fullscreen=1>`_

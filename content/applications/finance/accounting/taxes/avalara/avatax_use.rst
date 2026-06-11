@@ -3,7 +3,7 @@ AvaTax use
 ==========
 
 AvaTax is a tax calculation software that can be integrated with Odoo in the United States and
-Canada. Once the :doc:`integration setup <../avatax>` is complete, the calculated tax is simple and
+Canada. Once the :doc:`integration setup <../avalara>` is complete, the calculated tax is simple and
 automatic.
 
 .. _accounting/avatax/tax-calculation:
@@ -160,7 +160,7 @@ creation (or adjustment) of the transaction.
    current pricing plan. See this documentation: :doc:`../../../../studio`.
 
 .. seealso::
-   - :doc:`../avatax`
+   - :doc:`../avalara`
    - :doc:`avalara_portal`
    - `US Tax Compliance: Avatax elearning video
      <https://www.odoo.com/slides/slide/us-tax-compliance-avatax-2858?fullscreen=1>`_
