@@ -5,18 +5,8 @@ Margins
 A *sales margin* is the profit gained from the sale of a product or service after all the costs
 related to it have been accounted for.
 
-In the Odoo **Sales** app, it is possible to show sales margins on quotations and sales orders
-(SOs). Salespeople can use the feature for better management and monitoring of profitability.
-
 Configuration
 =============
-
-To activate the *Margins* feature, go to the :menuselection:`Sales app --> Configuration -->
-Settings`. In the :guilabel:`Pricing` section, enable the :guilabel:`Margins` checkbox. Then click
-:guilabel:`Save`.
-
-.. image:: margin/margins-checkbox.png
-   :alt: Margins checkbox.
 
 .. _sales_quotations/margin/configure-price-and-cost:
 
