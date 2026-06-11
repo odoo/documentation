@@ -59,10 +59,11 @@ the plugin.
 Connect an Odoo database
 ========================
 
-To open the plugin, on the Odoo icon in the right-hand side panel. The plugin panel opens between
-the inbox and the right-hand side panel. Click :guilabel:`Login`. Enter the Odoo database URL and
-click :guilabel:`Login`, or click :guilabel:`Sign Up` to create an Odoo account, and a pop-up window
-opens. Click :guilabel:`Allow` in the pop-up window to let the Gmail plugin connect to the database.
+To open the plugin, click on the Odoo icon in the right-hand side panel. The plugin panel opens
+between the inbox and the right-hand side panel. Click :guilabel:`Login`. Enter the Odoo database
+URL and click :guilabel:`Login`, or click :guilabel:`Sign Up` to create an Odoo account, and a
+pop-up window opens. Click :guilabel:`Allow` in the pop-up window to let the Gmail plugin connect to
+the database.
 
 .. note::
    Use the general URL for the database, not the URL of a specific page in the database. For
