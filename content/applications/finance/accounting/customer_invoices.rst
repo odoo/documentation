@@ -55,9 +55,9 @@ In the :guilabel:`Invoice Lines` tab:
 - :doc:`Taxes <taxes>` (if applicable)
 
 To access the product catalog and view all items in an organized display, click :doc:`Catalog
-</applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/product_catalog>`.
-When the products and quantities are selected, click :guilabel:`Back to Invoice` to return to the
-invoice; the selected catalog items will appear in the invoice lines.
+</applications/essentials/product_catalog>`. When the products and quantities are selected, click
+:guilabel:`Back to Invoice` to return to the invoice; the selected catalog items will appear in the
+invoice lines.
 
 .. tip::
    To display the total amount of the invoice in words, go to :menuselection:`Accounting -->
