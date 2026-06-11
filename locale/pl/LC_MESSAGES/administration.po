@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-05 19:21+0000\n"
-"PO-Revision-Date: 2026-06-09 23:25+0000\n"
+"PO-Revision-Date: 2026-06-11 11:00+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Polish <https://translate.odoo.com/projects/odoo-19-doc/"
 "administration/pl/>\n"
@@ -6576,10 +6576,12 @@ msgid ""
 "If you are setting up a public server, be sure to check our :ref:`security` "
 "recommendations!"
 msgstr ""
+"Pokud nastavujete veřejný server, nezapomeňte zkontrolovat naše doporučení "
+":ref:`security`!"
 
 #: ../../content/administration/on_premise/deploy.rst:15
 msgid "dbfilter"
-msgstr ""
+msgstr "dbfilter"
 
 #: ../../content/administration/on_premise/deploy.rst:17
 msgid ""
@@ -6588,6 +6590,9 @@ msgid ""
 "customizations (starting from the modules being loaded) depending on the "
 "\"current database\"."
 msgstr ""
+"Odoo je vícenájemní systém: jediný systém Odoo může provozovat a obsluhovat "
+"několik instancí databází. Je také vysoce přizpůsobitelný, přičemž "
+"přizpůsobení (počínaje načítanými moduly) závisí na \"aktuální databázi\"."
 
 #: ../../content/administration/on_premise/deploy.rst:21
 msgid ""
@@ -6595,6 +6600,9 @@ msgid ""
 "in company user: the database can be selected when logging in, and "
 "customizations loaded afterwards."
 msgstr ""
+"Toto není problém při práci s backendem (webovým klientem) jako přihlášený "
+"firemní uživatel: databázi lze vybrat při přihlášení a přizpůsobení načíst "
+"poté."
 
 #: ../../content/administration/on_premise/deploy.rst:25
 msgid ""
@@ -6605,6 +6613,12 @@ msgid ""
 "multiple databases accessible Odoo needs a rule to know which one it should "
 "use."
 msgstr ""
+"Je to však problém pro nepřihlášené uživatele (portál, webové stránky), "
+"kteří nejsou vázáni na databázi: Odoo potřebuje vědět, kterou databázi "
+"použít k načtení webové stránky nebo provedení operace. Pokud není používána "
+"vícenájemnost, není to problém, existuje pouze jedna databáze k použití, ale "
+"pokud je přístupných více databází, Odoo potřebuje pravidlo, které určí, "
+"kterou má použít."
 
 #: ../../content/administration/on_premise/deploy.rst:31
 msgid ""
@@ -6614,6 +6628,11 @@ msgid ""
 "possibly including the dynamically injected hostname (``%h``) or the first "
 "subdomain (``%d``) through which the system is being accessed."
 msgstr ""
+"To je jeden z účelů :option:`--db-filter <odoo-bin --db-filter>`: určuje, "
+"jak má být databáze vybrána na základě názvu hostitele (domény), který je "
+"požadován. Hodnotou je `regulární výraz`_, případně včetně dynamicky "
+"vloženého názvu hostitele (``%h``) nebo první subdomény (``%d``), přes "
+"kterou je systém přístupný."
 
 #: ../../content/administration/on_premise/deploy.rst:37
 msgid ""
@@ -6621,14 +6640,17 @@ msgid ""
 "``website`` is used, dbfilter **must** be set, otherwise a number of "
 "features will not work correctly."
 msgstr ""
+"Pro servery hostující více databází v produkci, zejména pokud je používána "
+"``webová stránka``, **musí** být nastaven dbfilter, jinak nebude řada funkcí "
+"fungovat správně."
 
 #: ../../content/administration/on_premise/deploy.rst:42
 msgid "Configuration samples"
-msgstr ""
+msgstr "Ukázky konfigurace"
 
 #: ../../content/administration/on_premise/deploy.rst:44
 msgid "Show only databases with names beginning with 'mycompany'"
-msgstr ""
+msgstr "Zobrazit pouze databáze s názvy začínajícími na 'mycompany'"
 
 #: ../../content/administration/on_premise/deploy.rst:46
 #: ../../content/administration/on_premise/deploy.rst:58
@@ -6636,6 +6658,7 @@ msgstr ""
 #: ../../content/administration/on_premise/deploy.rst:280
 msgid "in :ref:`the configuration file <reference/cmdline/config_file>` set:"
 msgstr ""
+"v :ref:`konfiguračním souboru <reference/cmdline/config_file>` nastavte:"
 
 #: ../../content/administration/on_premise/deploy.rst:53
 msgid ""
@@ -6644,6 +6667,10 @@ msgid ""
 "``www.mycompany.com`` or ``mycompany.co.uk``, but not for "
 "``www2.mycompany.com`` or ``helpdesk.mycompany.com``."
 msgstr ""
+"Zobrazit pouze databáze odpovídající první subdoméně po ``www``: například "
+"databáze \"mycompany\" bude zobrazena, pokud byl příchozí požadavek odeslán "
+"na ``www.mycompany.com`` nebo ``mycompany.co.uk``, ale ne pro "
+"``www2.mycompany.com`` nebo ``helpdesk.mycompany.com``."
 
 #: ../../content/administration/on_premise/deploy.rst:67
 msgid ""
@@ -6654,6 +6681,12 @@ msgid ""
 "list`` startup parameter to prevent listing your databases, and to block "
 "access to the database management screens. See also security_."
 msgstr ""
+"Nastavení správného :option:`--db-filter <odoo-bin --db-filter>` je "
+"důležitou součástí zabezpečení vašeho nasazení. Jakmile správně funguje a "
+"odpovídá pouze jedné databázi na jeden název hostitele, důrazně se "
+"doporučuje zablokovat přístup k obrazovkám správce databází a použít "
+"spouštěcí parametr ``--no-database-list`` k zabránění výpisu vašich databází "
+"a zablokování přístupu k obrazovkám správy databází. Viz také security_."
 
 #: ../../content/administration/on_premise/deploy.rst:76
 #: ../../content/administration/on_premise/source.rst:193
@@ -6666,6 +6699,9 @@ msgid ""
 "connections (from \"localhost\", the same machine the PostgreSQL server is "
 "installed on)."
 msgstr ""
+"Ve výchozím nastavení PostgreSQL povoluje připojení pouze přes UNIX sockety "
+"a zpětné smyčky (z \"localhost\", stejného stroje, na kterém je nainstalován "
+"server PostgreSQL)."
 
 #: ../../content/administration/on_premise/deploy.rst:82
 msgid ""
@@ -6674,6 +6710,11 @@ msgid ""
 "and PostgreSQL to execute on different machines [#different-machines]_ it "
 "will need to `listen to network interfaces`_ [#remote-socket]_, either:"
 msgstr ""
+"UNIX socket je v pořádku, pokud chcete, aby Odoo a PostgreSQL běžely na "
+"stejném stroji, a je to výchozí nastavení, pokud není zadán žádný hostitel, "
+"ale pokud chcete, aby Odoo a PostgreSQL běžely na různých strojích "
+"[#different-machines]_, bude muset `naslouchat na síťových rozhraních`_ "
+"[#remote-socket]_, buď:"
 
 #: ../../content/administration/on_premise/deploy.rst:87
 msgid ""
@@ -6681,6 +6722,9 @@ msgid ""
 "machine on which Odoo runs and the one on which PostgreSQL runs, then "
 "configure Odoo to connect to its end of the tunnel"
 msgstr ""
+"Přijímat pouze připojení zpětné smyčky a `použít SSH tunel`_ mezi strojem, "
+"na kterém běží Odoo, a tím, na kterém běží PostgreSQL, poté nakonfigurovat "
+"Odoo pro připojení ke svému konci tunelu"
 
 #: ../../content/administration/on_premise/deploy.rst:90
 msgid ""
@@ -6688,25 +6732,29 @@ msgid ""
 "ssl (see `PostgreSQL connection settings`_ for details), then configure Odoo "
 "to connect over the network"
 msgstr ""
+"Přijímat připojení ke stroji, na kterém je nainstalováno Odoo, případně přes "
+"ssl (podrobnosti viz `PostgreSQL connection settings`_), poté nakonfigurovat "
+"Odoo pro připojení přes síť"
 
 #: ../../content/administration/on_premise/deploy.rst:95
 #: ../../content/administration/on_premise/deploy.rst:145
 #: ../../content/administration/on_premise/deploy.rst:235
 #: ../../content/administration/on_premise/deploy.rst:275
 msgid "Configuration sample"
-msgstr ""
+msgstr "Ukázka konfigurace"
 
 #: ../../content/administration/on_premise/deploy.rst:97
 msgid "Allow tcp connection on localhost"
-msgstr ""
+msgstr "Povolit tcp připojení na localhost"
 
 #: ../../content/administration/on_premise/deploy.rst:98
 msgid "Allow tcp connection from 192.168.1.x network"
-msgstr ""
+msgstr "Povolit tcp připojení ze sítě 192.168.1.x"
 
 #: ../../content/administration/on_premise/deploy.rst:100
 msgid "in ``/etc/postgresql/<YOUR POSTGRESQL VERSION>/main/pg_hba.conf`` set:"
 msgstr ""
+"v ``/etc/postgresql/<VAŠE VERZE POSTGRESQL>/main/pg_hba.conf`` nastavte:"
 
 #: ../../content/administration/on_premise/deploy.rst:108
 msgid ""

@@ -35,7 +35,7 @@ msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-05 19:21+0000\n"
-"PO-Revision-Date: 2026-06-10 01:10+0000\n"
+"PO-Revision-Date: 2026-06-11 10:51+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: French <https://translate.odoo.com/projects/odoo-19-doc/"
 "inventory_and_mrp/fr/>\n"
@@ -15489,6 +15489,10 @@ msgid ""
 "used, the destination is whatever is specified in the :guilabel:`Store to` "
 "field."
 msgstr ""
+":guilabel:`Dernière utilisation` : le dernier emplacement associé à un "
+"mouvement pour ce produit ou cette catégorie de produits est utilisé. S'il "
+"n'y a pas de dernier emplacement utilisé, la destination est celle spécifiée "
+"dans le champ :guilabel:`Stocker dans`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:76
 msgid ""
@@ -15496,6 +15500,9 @@ msgid ""
 "category are used. A storage category is mandatory in the :guilabel:`Having "
 "Category` field."
 msgstr ""
+":guilabel:`Emplacement le plus proche` : les emplacements spécifiés dans le "
+"cadre d'une catégorie de stockage sont utilisés. Une catégorie de stockage "
+"est obligatoire dans le champ :guilabel:`Ayant la catégorie`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:79
 msgid ""
@@ -15504,6 +15511,10 @@ msgid ""
 "products are stored in the location specified in the :guilabel:`Store to` "
 "field."
 msgstr ""
+"Pour appliquer une règle de rangement à *tous* les produits, créer une règle "
+"de rangement vide sans :guilabel:`Produit` ni :guilabel:`Catégorie de "
+"produits` spécifié. Tous les produits sont stockés dans l'emplacement "
+"spécifié dans le champ :guilabel:`Stocker dans`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:84
 msgid ""
@@ -15511,38 +15522,49 @@ msgid ""
 "used` :guilabel:`Sublocation`. Specifying :guilabel:`Last used` ensures that "
 "Odoo suggests the last location used to store a product."
 msgstr ""
+"Une bonne pratique pour une règle de rangement vide consiste à spécifier le "
+":guilabel:`Sous-emplacement` :guilabel:`Dernière utilisation`. Spécifier "
+":guilabel:`Dernière utilisation` garantit qu'Odoo suggère le dernier "
+"emplacement utilisé pour stocker un produit."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:89
 msgid "Putaway rule priority"
-msgstr ""
+msgstr "Priorité des règles de rangement"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:91
 msgid ""
 "Odoo selects a putaway rule based on the following priority list (from "
 "highest to lowest) until a match is found:"
 msgstr ""
+"Odoo sélectionne une règle de rangement en fonction de la liste de priorités "
+"suivante (de la plus élevée à la plus basse) jusqu'à ce qu'une "
+"correspondance soit trouvée :"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:94
 msgid "Package type and product"
-msgstr ""
+msgstr "Type de colis et produit"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:95
 msgid "Package type and product category"
-msgstr ""
+msgstr "Type de colis et catégorie de produits"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:98
 msgid "Product category"
-msgstr ""
+msgstr "Catégorie de produits"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:101
 msgid "The product `Lemonade can` has the following putaway rules configured:"
 msgstr ""
+"Le produit `Canette de limonade` a les règles de rangement suivantes "
+"configurées :"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:103
 msgid ""
 "When receiving a `Pallet` (:guilabel:`Package Type`) of `Lemonade cans`, it "
 "is redirected to `WH/Stock/Pallets/PAL1`."
 msgstr ""
+"Lors de la réception d'une `Palette` (:guilabel:`Type de colis`) de "
+"`Canettes de limonade`, elle est redirigée vers `WH/Stock/Palettes/PAL1`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:105
 msgid ""
@@ -15550,20 +15572,25 @@ msgid ""
 "receiving a `Box` of any item in this product category, items are redirected "
 "to `WH/Stock/Shelf 1`."
 msgstr ""
+"La :guilabel:`Catégorie de produits` de `Canette de limonade` est `Tous/"
+"boissons`, et lors de la réception d'une `Boîte` de tout article de cette "
+"catégorie de produits, les articles sont redirigés vers `WH/Stock/Étagère 1`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:107
 msgid "Any product on a `Pallet` is redirected to `WH/Stock/Pallets`"
-msgstr ""
+msgstr "Tout produit sur une `Palette` est redirigé vers `WH/Stock/Palettes`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:108
 msgid "The product `Lemonade can` is redirected to `WH/Stock/Shelf 2`"
-msgstr ""
+msgstr "Le produit `Canette de limonade` est redirigé vers `WH/Stock/Étagère 2`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:109
 msgid ""
 "Items in the `All/drinks` product category are redirected to `WH/Stock/Small "
 "Refrigerator`."
 msgstr ""
+"Les articles de la catégorie de produits `Tous/boissons` sont redirigés vers "
+"`WH/Stock/Petit réfrigérateur`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:0
 msgid "Some examples of putaway rules."
@@ -15571,7 +15598,7 @@ msgstr "Quelques exemples de stratégies de rangement."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:3
 msgid "One-step receipt and delivery"
-msgstr ""
+msgstr "Réception et livraison en une étape"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:9
 msgid ""
@@ -15580,6 +15607,10 @@ msgid ""
 "directly into stock, and deliveries will be moved directly from stock to "
 "customers."
 msgstr ""
+"Dans Odoo *Inventaire*, les expéditions entrantes et sortantes sont "
+"configurées par défaut pour être traitées en une étape. Cela signifie que "
+"les achats seront reçus directement dans le stock et que les livraisons "
+"seront déplacées directement du stock vers les clients."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:14
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:28
@@ -15587,6 +15618,8 @@ msgid ""
 "Incoming and outgoing shipments do **not** need to be configured with the "
 "same amount of steps."
 msgstr ""
+"Les expéditions entrantes et sortantes n'ont **pas** besoin d'être "
+"configurées avec le même nombre d'étapes."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:16
 msgid ""
@@ -15594,6 +15627,9 @@ msgid ""
 "received directly in one step, and delivered in three steps (pick + pack + "
 "ship)."
 msgstr ""
+"Par exemple, les paramètres d'un entrepôt peuvent être configurés de sorte "
+"que les produits puissent être reçus directement en une étape et livrés en "
+"trois étapes (prélever + emballer + expédier)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:22
 msgid ""
@@ -15601,6 +15637,9 @@ msgid ""
 "to :menuselection:`Inventory app --> Configuration --> Warehouses`, and "
 "select a warehouse to edit."
 msgstr ""
+"Pour configurer les réceptions et livraisons en une étape pour un entrepôt, "
+"aller à :menuselection:`Application Inventaire --> Configuration --> "
+"Entrepôts` et sélectionner un entrepôt à modifier."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:25
 msgid ""
@@ -25456,7 +25495,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:28
 msgid "Add shipping method"
-msgstr ""
+msgstr "Ajouter une méthode d'expédition"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:30
 msgid ""
@@ -25465,12 +25504,20 @@ msgid ""
 "click the :guilabel:`Create` button. Doing so opens a form to provide "
 "details about the shipping provider, including:"
 msgstr ""
+"Ensuite, configurer le prix de chaque méthode de livraison en allant dans "
+":menuselection:`Application Inventaire --> Configuration --> Méthodes "
+"d'expédition` et cliquer sur le bouton :guilabel:`Créer`. Cela ouvre un "
+"formulaire pour fournir des détails sur le prestataire d'expédition, "
+"notamment :"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:34
 msgid ""
 ":guilabel:`Shipping Method` (*required*) the name of the delivery method "
 "(e.g. `flat-rate shipping`, `same day delivery`, etc.)."
 msgstr ""
+":guilabel:`Méthode d'expédition` (*requis*) : le nom de la méthode de "
+"livraison (par exemple `expédition à tarif fixe`, `livraison le jour même`, "
+"etc.)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:36
 msgid ""
@@ -25479,12 +25526,16 @@ msgid ""
 "carrier is properly installed and select the provider from the drop-down "
 "menu."
 msgstr ""
+":guilabel:`Prestataire` (*requis*) : choisir le service de livraison, comme "
+"FedEx, si un transporteur tiers est utilisé. S'assurer que l'intégration "
+"avec le transporteur est correctement installée et sélectionner le "
+"prestataire dans le menu déroulant."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:41
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:122
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:27
 msgid ":doc:`../setup_configuration/third_party_shipper`"
-msgstr ""
+msgstr ":doc:`../setup_configuration/third_party_shipper`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:43
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:133
@@ -25493,6 +25544,9 @@ msgid ""
 "company, select it from the drop-down menu. Leave the field blank to apply "
 "the method to all companies."
 msgstr ""
+":guilabel:`Société` : si la méthode d'expédition doit s'appliquer à une "
+"société spécifique, la sélectionner dans le menu déroulant. Laisser le champ "
+"vide pour appliquer la méthode à toutes les sociétés."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:46
 msgid ""
@@ -25500,6 +25554,9 @@ msgid ""
 "Select the applicable website from the drop-down menu, or leave it blank to "
 "apply the method to all web pages."
 msgstr ""
+":guilabel:`Site Web` : configurer les méthodes d'expédition pour une page e-"
+"commerce. Sélectionner le site web applicable dans le menu déroulant, ou "
+"laisser vide pour appliquer la méthode à toutes les pages web."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:49
 msgid ""
@@ -25507,6 +25564,9 @@ msgid ""
 "the :ref:`sales order line <inventory/shipping/invoice-on-so>` as the "
 "delivery charge."
 msgstr ""
+":guilabel:`Article de livraison` (*requis*) : l'article affiché sur la "
+":ref:`ligne de commande client <inventory/shipping/invoice-on-so>` comme "
+"frais de livraison."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:51
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:58
@@ -25514,38 +25574,54 @@ msgid ""
 ":guilabel:`Free if order amount is above`: checking this box enables free "
 "shipping if the customer spends above the specified amount."
 msgstr ""
+":guilabel:`Gratuit si le montant de la commande dépasse` : cocher cette case "
+"active la livraison gratuite si le client dépense au-delà du montant "
+"spécifié."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:57
 msgid "Invoice cost on sales order"
-msgstr ""
+msgstr "Facturer le coût sur la commande client"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:59
 msgid ""
 "To invoice shipping costs on the sales order, before the item is delivered, "
 "go to the :menuselection:`Sales app` and select the desired sales order."
 msgstr ""
+"Pour facturer les frais d'expédition sur la commande client, avant que "
+"l'article ne soit livré, aller dans l':menuselection:`Application Ventes` et "
+"sélectionner la commande client souhaitée."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:62
 msgid ""
 "On the sales order, click the :guilabel:`Add Shipping` button at the bottom-"
 "right corner."
 msgstr ""
+"Sur la commande client, cliquer sur le bouton :guilabel:`Ajouter "
+"l'expédition` en bas à droite."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:None
 msgid "Click \"Add Shipping\" button at the bottom right, near the total."
 msgstr ""
+"Cliquer sur le bouton « Ajouter l'expédition » en bas à droite, près du "
+"total."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:68
 msgid ""
 "In the :guilabel:`Add a shipping method` pop-up window, choose the intended "
 "carrier in the :guilabel:`Shipping Method` field."
 msgstr ""
+"Dans la fenêtre contextuelle :guilabel:`Ajouter une méthode d'expédition`, "
+"choisir le transporteur souhaité dans le champ :guilabel:`Méthode "
+"d'expédition`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:71
 msgid ""
 "Then, click the :guilabel:`Get Rate` button to the calculate shipping price "
 "based on real-time shipping data Odoo's shipping carrier integration."
 msgstr ""
+"Ensuite, cliquer sur le bouton :guilabel:`Obtenir le tarif` pour calculer le "
+"prix d'expédition basé sur les données d'expédition en temps réel de "
+"l'intégration du transporteur d'Odoo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:74
 msgid ""
@@ -25553,10 +25629,13 @@ msgid ""
 "items in the order. Finally, click the :guilabel:`Add` button to close the "
 "window."
 msgstr ""
+"Le :guilabel:`Coût` est automatiquement calculé en utilisant le poids des "
+"articles dans la commande. Enfin, cliquer sur le bouton :guilabel:`Ajouter` "
+"pour fermer la fenêtre."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:None
 msgid "Calculate shipping by selecting a shipping method."
-msgstr ""
+msgstr "Calculer l'expédition en sélectionnant une méthode d'expédition."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:83
 msgid ""
@@ -25564,10 +25643,14 @@ msgid ""
 "Lines` tab, with the :guilabel:`Unit Price` set as the shipping cost "
 "calculated in the :guilabel:`Add a shipping method` pop-up window."
 msgstr ""
+"Sur la commande client, l'article de livraison apparaît dans l'onglet "
+":guilabel:`Lignes de commande`, avec le :guilabel:`Prix unitaire` défini "
+"comme le coût d'expédition calculé dans la fenêtre contextuelle "
+":guilabel:`Ajouter une méthode d'expédition`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:None
 msgid "Show delivery product on the sales order line."
-msgstr ""
+msgstr "Afficher l'article de livraison sur la ligne de commande client."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:91
 msgid ""
@@ -25575,6 +25658,9 @@ msgid ""
 "invoice` button, and an invoice is created that includes the shipping cost "
 "that was added earlier."
 msgstr ""
+"Enfin, après la livraison du produit, cliquer sur le bouton :guilabel:`Créer "
+"une facture`, et une facture est créée qui inclut le coût d'expédition "
+"ajouté précédemment."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:None
 msgid "Show \"Create Invoice\" button."
@@ -42432,16 +42518,21 @@ msgid ""
 "to order, navigate to :menuselection:`Sales app --> Create` to create a new "
 "quotation."
 msgstr ""
+"Pour vendre et fabriquer des variantes de produits avec :abbr:`nomenclature "
+"(liste de composants)` sur commande, allez dans :menuselection:`Application "
+"Ventes --> Créer` pour créer un nouveau devis."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/product_variants.rst:137
 msgid "Sell variant of BoM product"
-msgstr ""
+msgstr "Vendre une variante de produit avec nomenclature"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/product_variants.rst:139
 msgid ""
 "Once on the blank :guilabel:`Quotation` form, click the drop-down next to "
 "the :guilabel:`Customer` field to add a customer."
 msgstr ""
+"Une fois sur le formulaire de :guilabel:`Devis` vierge, cliquez sur le menu "
+"déroulant à côté du champ :guilabel:`Client` pour ajouter un client."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/product_variants.rst:142
 msgid ""
@@ -42450,6 +42541,11 @@ msgid ""
 "product with variants from the drop-down menu. Doing so reveals "
 "a :guilabel:`Configure a product` pop-up."
 msgstr ""
+"Ensuite, sous l'onglet :guilabel:`Lignes de commande`, cliquez sur "
+":guilabel:`Ajouter un produit`, et sélectionnez le produit avec "
+":abbr:`nomenclature (liste de composants)` et variantes créé précédemment "
+"dans le menu déroulant. Cela fait apparaître une fenêtre contextuelle "
+":guilabel:`Configurer un produit`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/product_variants.rst:146
 msgid ""
@@ -42458,10 +42554,16 @@ msgid ""
 "green :guilabel:`+` or :guilabel:`-` icons next to the `1` to change the "
 "quantity to sell and manufacture, if desired."
 msgstr ""
+"Dans la fenêtre contextuelle, cliquez sur les options d'attributs souhaitées "
+"pour configurer la variante correcte du produit à fabriquer. Ensuite, "
+"cliquez sur les icônes vertes :guilabel:`+` ou :guilabel:`-` à côté du `1` "
+"pour modifier la quantité à vendre et fabriquer, si nécessaire."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/product_variants.rst:None
 msgid "Configure a product pop-up for choosing variant attributes."
 msgstr ""
+"Fenêtre contextuelle Configurer un produit pour choisir les attributs de "
+"variante."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/product_variants.rst:154
 msgid ""
@@ -42470,10 +42572,16 @@ msgid ""
 "available optional products will appear, if they have been created "
 "previously."
 msgstr ""
+"Une fois toutes les spécifications choisies, cliquez sur "
+":guilabel:`Ajouter`. Cela transforme la fenêtre contextuelle en une seconde "
+"fenêtre :guilabel:`Configurer`, où les produits optionnels disponibles "
+"apparaîtront, s'ils ont été créés précédemment."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/product_variants.rst:158
 msgid "Once ready, click :guilabel:`Confirm` to close the pop-up."
 msgstr ""
+"Une fois prêt, cliquez sur :guilabel:`Confirmer` pour fermer la fenêtre "
+"contextuelle."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/product_variants.rst:160
 msgid ""
@@ -42481,10 +42589,13 @@ msgid ""
 "click :guilabel:`Confirm` at the top of the :guilabel:`Quotation` form to "
 "create and confirm a new sales order (SO)."
 msgstr ""
+"Ensuite, cliquez sur :guilabel:`Enregistrer` pour sauvegarder toutes les "
+"modifications, et cliquez sur :guilabel:`Confirmer` en haut du formulaire de "
+":guilabel:`Devis` pour créer et confirmer une nouvelle commande client."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/product_variants.rst:164
 msgid "Manufacture variant of BoM product"
-msgstr ""
+msgstr "Fabriquer une variante de produit avec nomenclature"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/product_variants.rst:166
 msgid ""
@@ -42493,6 +42604,10 @@ msgid ""
 "the :guilabel:`Manufacturing` smart button to open "
 "the :guilabel:`Manufacturing Order` form."
 msgstr ""
+"Une fois la :abbr:`commande client` confirmée, un bouton intelligent "
+":guilabel:`Fabrication` apparaît en haut du formulaire de :abbr:`commande "
+"client`. Cliquez sur le bouton intelligent :guilabel:`Fabrication` pour "
+"ouvrir le formulaire d':guilabel:`Ordre de fabrication`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/product_variants.rst:170
 msgid ""
@@ -42501,34 +42616,48 @@ msgid ""
 "different components will be listed. To see any mandatory or "
 "optional :guilabel:`Operation` steps, click the :guilabel:`Work Orders` tab."
 msgstr ""
+"Sur ce formulaire, sous l'onglet :guilabel:`Composants`, les composants "
+"appropriés pour la variante choisie sont répertoriés. Et, selon la variante, "
+"différents composants seront listés. Pour voir les étapes obligatoires ou "
+"optionnelles d':guilabel:`Opération`, cliquez sur l'onglet :guilabel:`Ordres "
+"de travail`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/product_variants.rst:174
 msgid ""
 "To enter the tablet view work order screen, click the :guilabel:`tablet "
 "icon` to the right of the row for the desired operation to be completed."
 msgstr ""
+"Pour accéder à l'écran d'ordre de travail en vue tablette, cliquez sur "
+"l':guilabel:`icône tablette` à droite de la ligne de l'opération souhaitée à "
+"effectuer."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/product_variants.rst:177
 msgid ""
 "From the tablet view, click :guilabel:`Mark as Done` as the operation "
 "progresses to complete the operation steps."
 msgstr ""
+"Depuis la vue tablette, cliquez sur :guilabel:`Marquer comme fait` au fur et "
+"à mesure que l'opération progresse pour terminer les étapes de l'opération."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/product_variants.rst:180
 msgid ""
 "Alternatively, click the :guilabel:`Mark as Done` button at the top of the "
 "manufacturing order form to complete the order."
 msgstr ""
+"Alternativement, cliquez sur le bouton :guilabel:`Marquer comme fait` en "
+"haut du formulaire d'ordre de fabrication pour terminer la commande."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/product_variants.rst:None
 msgid "Manufacturing order for variant of BoM product."
-msgstr ""
+msgstr "Ordre de fabrication pour variante de produit avec nomenclature."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/product_variants.rst:187
 msgid ""
 "Then, navigate back to the :abbr:`SO (sales order)` via the breadcrumbs at "
 "the top of the page."
 msgstr ""
+"Ensuite, retournez à la :abbr:`commande client` via le fil d'Ariane en haut "
+"de la page."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/product_variants.rst:189
 msgid ""
@@ -42537,6 +42666,10 @@ msgid ""
 "the :guilabel:`Delivery Order` form, click :guilabel:`Validate`, then "
 "click :guilabel:`Apply` to deliver the product."
 msgstr ""
+"Maintenant que le produit a été fabriqué, cliquez sur le bouton intelligent "
+":guilabel:`Livraison` pour livrer le produit au client. Depuis le formulaire "
+"de :guilabel:`Bon de livraison`, cliquez sur :guilabel:`Valider`, puis "
+"cliquez sur :guilabel:`Appliquer` pour livrer le produit."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/product_variants.rst:193
 msgid ""
@@ -42545,10 +42678,14 @@ msgid ""
 "click :guilabel:`Create Invoice` followed by :guilabel:`Create Invoice` "
 "again to invoice the customer for the order."
 msgstr ""
+"Pour finaliser la vente, retournez à la :abbr:`commande client` via le "
+":guilabel:`fil d'Ariane` en haut de la page à nouveau. Ensuite, cliquez sur "
+":guilabel:`Créer une facture` suivi de :guilabel:`Créer une facture` à "
+"nouveau pour facturer le client pour la commande."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:3
 msgid "Multilevel BoMs"
-msgstr ""
+msgstr "Nomenclatures multiniveaux"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:9
 msgid ""
@@ -63728,28 +63865,37 @@ msgid ""
 ":ref:`Process return order for damaged product <repairs/repair_orders/return-"
 "order>`"
 msgstr ""
+":ref:`Traiter la commande de retour pour un produit endommagé <repairs/"
+"repair_orders/return-order>`"
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:19
 msgid ""
 ":ref:`Create repair order for returned product <repairs/repair_orders/"
 "repair>`"
 msgstr ""
+":ref:`Créer un ordre de réparation pour un produit retourné <repairs/"
+"repair_orders/repair>`"
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:20
 msgid ""
 ":ref:`Return repaired product to customer <repairs/repair_orders/return-"
 "customer>`"
 msgstr ""
+":ref:`Retourner le produit réparé au client <repairs/repair_orders/return-"
+"customer>`"
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:25
 msgid "Return order"
-msgstr ""
+msgstr "Commande de retour"
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:27
 msgid ""
 "Returns can be processed in Odoo via *reverse transfers*, created directly "
 "from a sales order (SO) once products have been delivered to a customer."
 msgstr ""
+"Les retours peuvent être traités dans Odoo via des *transferts inversés*, "
+"créés directement depuis une commande client (CC) une fois que les produits "
+"ont été livrés au client."
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:30
 msgid ""
@@ -63758,16 +63904,24 @@ msgid ""
 "form, click the :guilabel:`Delivery` smart button. Doing so opens the "
 "delivery order (DO) form."
 msgstr ""
+"Pour créer un retour, accéder à :menuselection:`l'application Ventes`, et "
+"cliquer sur une |SO| depuis laquelle un produit doit être retourné. Ensuite, "
+"depuis le formulaire de |SO|, cliquer sur le bouton intelligent "
+":guilabel:`Livraison`. Cela ouvre le formulaire du bon de livraison (BL)."
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:34
 msgid ""
 "From this form, click :guilabel:`Return`. This opens a :guilabel:`Reverse "
 "Transfer` pop-up window."
 msgstr ""
+"Depuis ce formulaire, cliquer sur :guilabel:`Retourner`. Cela ouvre une "
+"fenêtre contextuelle :guilabel:`Transfert inversé`."
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:None
 msgid "Reverse transfer pop-up window on delivery order form."
 msgstr ""
+"Fenêtre contextuelle de transfert inversé sur le formulaire du bon de "
+"livraison."
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:39
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:196
@@ -63776,6 +63930,9 @@ msgid ""
 "the :guilabel:`Quantity` delivered to the customer, and the :guilabel:`Unit "
 "of Measure` the product was in."
 msgstr ""
+"Cette fenêtre contextuelle liste le :guilabel:`Produit` inclus dans la "
+"commande, la :guilabel:`Quantité` livrée au client, et l':guilabel:`Unité de "
+"mesure` dans laquelle se trouvait le produit."
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:42
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:199
@@ -63783,6 +63940,8 @@ msgid ""
 "Click the value in the :guilabel:`Quantity` field to change the quantity of "
 "the product to be returned, if necessary."
 msgstr ""
+"Cliquer sur la valeur dans le champ :guilabel:`Quantité` pour modifier la "
+"quantité du produit à retourner, si nécessaire."
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:45
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:202
@@ -63790,12 +63949,16 @@ msgid ""
 "Click the :guilabel:`🗑️ (trash)` icon at the far-right of the product line to "
 "remove it from the return, if necessary."
 msgstr ""
+"Cliquer sur l'icône :guilabel:`🗑️ (corbeille)` à l'extrême droite de la "
+"ligne du produit pour le retirer du retour, si nécessaire."
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:48
 msgid ""
 "Once ready, click :guilabel:`Return` to confirm the return. This creates a "
 "new receipt for the returned products."
 msgstr ""
+"Une fois prêt, cliquer sur :guilabel:`Retourner` pour confirmer le retour. "
+"Cela crée une nouvelle réception pour les produits retournés."
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:51
 msgid ""
@@ -63803,6 +63966,9 @@ msgid ""
 "can be registered in the database by clicking :guilabel:`Validate` from the "
 "reverse transfer form."
 msgstr ""
+"Une fois que le produit a été retourné à l'entrepôt, la réception du retour "
+"peut être enregistrée dans la base de données en cliquant sur "
+":guilabel:`Valider` depuis le formulaire du transfert inversé."
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:55
 msgid ""
@@ -63811,34 +63977,43 @@ msgid ""
 "difference between the original :guilabel:`Quantity` ordered, and "
 "the :guilabel:`Quantity` returned by the customer."
 msgstr ""
+"Une fois qu'un transfert inversé pour un retour est validé, la valeur dans "
+"la colonne :guilabel:`Livré` sur la |SO| d'origine se met à jour pour "
+"refléter la différence entre la :guilabel:`Quantité` initialement commandée "
+"et la :guilabel:`Quantité` retournée par le client."
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:0
 msgid "Delivered and Quantity columns on sales order after return."
-msgstr ""
+msgstr "Colonnes Livré et Quantité sur la commande client après retour."
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:65
 msgid "Create repair order"
-msgstr ""
+msgstr "Créer un ordre de réparation"
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:67
 msgid ""
 "Once products have been returned, their repairs can be tracked by creating a "
 "repair order (RO)."
 msgstr ""
+"Une fois que les produits ont été retournés, leurs réparations peuvent être "
+"suivies en créant un ordre de réparation (OR)."
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:70
 msgid "Repair form configuration"
-msgstr ""
+msgstr "Configuration du formulaire de réparation"
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:72
 msgid ""
 "To create a new |RO|, navigate to :menuselection:`Repairs app`, and "
 "click :guilabel:`New`. This opens a blank |RO| form."
 msgstr ""
+"Pour créer un nouveau |RO|, accéder à :menuselection:`l'application "
+"Réparations`, et cliquer sur :guilabel:`Nouveau`. Cela ouvre un formulaire "
+"|RO| vierge."
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:None
 msgid "Repair order form in Odoo Repairs."
-msgstr ""
+msgstr "Formulaire d'ordre de réparation dans Odoo Réparations."
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:78
 msgid ""

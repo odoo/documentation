@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-05 19:21+0000\n"
-"PO-Revision-Date: 2026-06-10 01:11+0000\n"
+"PO-Revision-Date: 2026-06-11 10:58+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Italian <https://translate.odoo.com/projects/odoo-19-doc/"
 "administration/it/>\n"
@@ -1119,6 +1119,10 @@ msgid ""
 "method of the `odoo.database` model via an :doc:`external JSON-2 API <../"
 "developer/reference/external_api>` call."
 msgstr ""
+"Per recuperare un elenco di tutti i database visualizzati sotto il `gestore "
+"database <https://www.odoo.com/my/databases>`_ in modo programmatico, "
+"chiamare il metodo `list` del modello `odoo.database` tramite una chiamata "
+":doc:`API JSON-2 esterna <../developer/reference/external_api>`."
 
 #: ../../content/administration/odoo_sh.rst:6
 #: ../../content/administration/standard_extended_support.rst:29
@@ -1178,6 +1182,14 @@ msgid ""
 "concrete example, check out the `requirements.txt file of Odoo <https://"
 "github.com/odoo/odoo/blob/19.0/requirements.txt>`_."
 msgstr ""
+"Se il tuo progetto richiede dipendenze Python aggiuntive o versioni più "
+"recenti, puoi definire un file :file:`requirements.txt` nella radice dei "
+"tuoi rami elencandole. La piattaforma si occuperà di installare queste "
+"dipendenze nei tuoi container. La documentazione `The pip requirements "
+"specifiers <https://pip.pypa.io/en/stable/reference/pip_install/#requirement-"
+"specifiers>`_ può aiutarti a scrivere un file :file:`requirements.txt`. Per "
+"un esempio concreto, consulta il `file requirements.txt di Odoo <https://"
+"github.com/odoo/odoo/blob/19.0/requirements.txt>`_."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:22
 msgid ""
@@ -2956,6 +2968,8 @@ msgid ""
 "Databases created for staging branches are automatically deleted after one "
 "month. To use the branch again, you must rebuild it."
 msgstr ""
+"I database creati per i rami di staging vengono automaticamente eliminati "
+"dopo un mese. Per utilizzare nuovamente il ramo, è necessario ricostruirlo."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:122
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:509
@@ -7497,6 +7511,14 @@ msgid ""
 "bin --x-sendfile>` CLI flag (this unique flag is used for both X-Sendfile "
 "and X-Accel)."
 msgstr ""
+"Tuttavia, una volta che il file è stato localizzato e i diritti di accesso "
+"verificati da Odoo, è consigliabile servire il file utilizzando il server "
+"web statico invece di Odoo. Affinché Odoo deleghi il servizio dei file al "
+"server web statico, le estensioni `X-Sendfile <https://tn123.org/"
+"mod_xsendfile/>`_ (apache) o X-Accel (nginx) devono essere abilitate e "
+"configurate sul server web statico. Una volta configurato, avviare Odoo con "
+"il flag CLI :option:`--x-sendfile <odoo-bin --x-sendfile>` (questo flag "
+"unico viene utilizzato sia per X-Sendfile che per X-Accel)."
 
 #: ../../content/administration/on_premise/deploy.rst:526
 msgid ""
@@ -8695,13 +8717,15 @@ msgstr ""
 
 #: ../../content/administration/on_premise/packages.rst:100
 msgid "Ubuntu"
-msgstr ""
+msgstr "Ubuntu"
 
 #: ../../content/administration/on_premise/packages.rst:103
 msgid ""
 "Odoo 19 'deb' package currently supports `Ubuntu Noble (24.04LTS) <https://"
 "releases.ubuntu.com/noble>`_."
 msgstr ""
+"Il pacchetto 'deb' di Odoo 19 supporta attualmente `Ubuntu Noble (24.04LTS) "
+"<https://releases.ubuntu.com/noble>`_."
 
 #: ../../content/administration/on_premise/packages.rst:106
 msgid ""
@@ -8715,7 +8739,7 @@ msgstr ""
 
 #: ../../content/administration/on_premise/packages.rst:117
 msgid "Odoo 19 'rpm' package supports Fedora 42."
-msgstr ""
+msgstr "Il pacchetto 'rpm' di Odoo 19 supporta Fedora 42."
 
 #: ../../content/administration/on_premise/packages.rst:119
 msgid ""
@@ -8994,25 +9018,32 @@ msgstr "Odoo utilizza PostgreSQL come sistema di gestione dei database."
 
 #: ../../content/administration/on_premise/source.rst:197
 msgid "Minimum requirement updated from PostgreSQL 12 to PostgreSQL 13."
-msgstr ""
+msgstr "Requisito minimo aggiornato da PostgreSQL 12 a PostgreSQL 13."
 
 #: ../../content/administration/on_premise/source.rst:204
 msgid ""
 "Use a package manager to download and install PostgreSQL (supported "
 "versions: 13.0 or above). It can be achieved by executing the following:"
 msgstr ""
+"Utilizzare un gestore di pacchetti per scaricare e installare PostgreSQL "
+"(versioni supportate: 13.0 o superiore). Può essere eseguito nel modo "
+"seguente:"
 
 #: ../../content/administration/on_premise/source.rst:213
 msgid ""
 "`Download PostgreSQL <https://www.postgresql.org/download/windows>`_ "
 "(supported versions: 13.0 or above) and install it."
 msgstr ""
+"`Scaricare PostgreSQL <https://www.postgresql.org/download/windows>`_ "
+"(versioni supportate: 13.0 o superiore) e installarlo."
 
 #: ../../content/administration/on_premise/source.rst:218
 msgid ""
 "Use `Postgres.app <https://postgresapp.com>`_ to download and install "
 "PostgreSQL (supported version: 13.0 or above)."
 msgstr ""
+"Utilizzare `Postgres.app <https://postgresapp.com>`_ per scaricare e "
+"installare PostgreSQL (versione supportata: 13.0 o superiore)."
 
 #: ../../content/administration/on_premise/source.rst:222
 msgid ""
@@ -9092,17 +9123,21 @@ msgid ""
 "If you want to use **Odoo's AI features**, the `pg-vector` PostgreSQL "
 "extension is required."
 msgstr ""
+"Se vuoi utilizzare le **funzionalità AI di Odoo**, è richiesta l'estensione "
+"PostgreSQL `pg-vector`."
 
 #: ../../content/administration/on_premise/source.rst:270
 msgid ""
 "Note that `pg-vector` is available only for PostgreSQL version 15 and up."
 msgstr ""
+"Nota che `pg-vector` è disponibile solo per PostgreSQL versione 15 e "
+"successive."
 
 #: ../../content/administration/on_premise/source.rst:276
 #: ../../content/administration/on_premise/source.rst:311
 #: ../../content/administration/on_premise/source.rst:346
 msgid "Navigate to your temporary folder"
-msgstr ""
+msgstr "Navigare nella cartella temporanea"
 
 #: ../../content/administration/on_premise/source.rst:282
 #: ../../content/administration/on_premise/source.rst:317
@@ -9111,6 +9146,8 @@ msgid ""
 "Clone the `pg-vector` `GitHub repository <https://github.com/pgvector/"
 "pgvector>`_:"
 msgstr ""
+"Clonare il `repository GitHub <https://github.com/pgvector/pgvector>`_ di "
+"`pg-vector`:"
 
 #: ../../content/administration/on_premise/source.rst:288
 #: ../../content/administration/on_premise/source.rst:323
@@ -9190,6 +9227,9 @@ msgid ""
 "github.com/odoo/odoo/blob/19.0/debian/control>`_ file and install the found "
 "packages."
 msgstr ""
+"Lo script `setup/debinstall.sh` analizzerà il file `debian/control <https://"
+"github.com/odoo/odoo/blob/19.0/debian/control>`_ e installerà i pacchetti "
+"trovati."
 
 #: ../../content/administration/on_premise/source.rst:414
 msgid "Install with pip"
@@ -9840,6 +9880,9 @@ msgid ""
 "additional fee and includes helpdesk support and bug fixes (depending on "
 "feasibility)."
 msgstr ""
+"Oltre questi tre anni, il **supporto esteso** è soggetto a un costo "
+"aggiuntivo obbligatorio e include supporto helpdesk e correzioni di bug (a "
+"seconda della fattibilità)."
 
 #: ../../content/administration/standard_extended_support.rst:17
 msgid ""
@@ -9875,7 +9918,7 @@ msgstr "Fine del supporto standard"
 
 #: ../../content/administration/standard_extended_support.rst:33
 msgid "Odoo SaaS 19.3"
-msgstr ""
+msgstr "Odoo SaaS 19.3"
 
 #: ../../content/administration/standard_extended_support.rst:35
 #: ../../content/administration/standard_extended_support.rst:36
@@ -9894,7 +9937,7 @@ msgstr "N/D"
 
 #: ../../content/administration/standard_extended_support.rst:37
 msgid "May 2026"
-msgstr ""
+msgstr "Maggio 2026"
 
 #: ../../content/administration/standard_extended_support.rst:39
 msgid "Odoo SaaS 19.2"
@@ -10024,7 +10067,7 @@ msgstr "|green| : supporto standard"
 
 #: ../../content/administration/standard_extended_support.rst:116
 msgid "|orange| : Extended support (mandatory extra fee)"
-msgstr ""
+msgstr "|orange| : Supporto esteso (costo aggiuntivo obbligatorio)"
 
 #: ../../content/administration/standard_extended_support.rst:118
 msgid "|red| : Not supported"

@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-05 19:21+0000\n"
-"PO-Revision-Date: 2026-06-09 23:25+0000\n"
+"PO-Revision-Date: 2026-06-11 11:05+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-19-doc/"
 "inventory_and_mrp/da/>\n"
@@ -44741,7 +44741,7 @@ msgstr "Startknappen for en arbejdsordre på en produktionsordre."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:None
 msgid "The Done button for a work order on a manufacturing order."
-msgstr ""
+msgstr "Knappen Udført for en arbejdsordre på en produktionsordre."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/work_in_progress.rst:3
 msgid "Work-in-progress costs"
@@ -45074,7 +45074,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:3
 msgid "Allocation reports"
-msgstr ""
+msgstr "Allokeringsrapporter"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:11
 msgid ""
@@ -45084,6 +45084,11 @@ msgid ""
 "every |SO| or |MO|, ensuring that products and components are reserved for "
 "priority orders is essential."
 msgstr ""
+"Når salgsordrer (SO'er) opfyldes, eller komponenter til produktionsordrer "
+"(PO'er) indkøbes, er det nogle gange nødvendigt at prioritere én |SO| eller "
+"|MO| over en anden. I situationer, hvor der ikke er tilstrækkelig "
+"lagerbeholdning til at opfylde hver |SO| eller |MO|, er det essentielt at "
+"sikre, at produkter og komponenter er reserveret til prioriterede ordrer."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:16
 msgid ""
@@ -45092,6 +45097,10 @@ msgid ""
 "This ensures the products or components are available for those orders, and "
 "are not used by mistake."
 msgstr ""
+"I Odoo *Produktion* anvendes allokeringsrapporter på |MOs| til at tildele "
+"produkter til specifikke salgsordrer |SOs|, eller komponenter til specifikke "
+"|MOs|. Dette sikrer, at produkterne eller komponenterne er tilgængelige til "
+"disse ordrer, og ikke anvendes ved en fejl."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:23
 msgid ""
@@ -45101,6 +45110,11 @@ msgid ""
 "tick the checkbox next to :guilabel:`Allocation Report for Manufacturing "
 "Orders`. Then, click :guilabel:`Save`."
 msgstr ""
+"For at bruge allokeringsrapporter **skal** funktionen *Allokeringsrapport "
+"for produktionsordrer* være aktiveret. For at gøre dette skal du navigere "
+"til :menuselection:`Produktion-app --> Konfiguration --> Indstillinger`, og "
+"sætte flueben ud for :guilabel:`Allokeringsrapport for produktionsordrer`. "
+"Klik derefter på :guilabel:`Gem`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:28
 msgid ""
@@ -45110,10 +45124,15 @@ msgid ""
 "product. Under the :guilabel:`Product Name` field on the product form, make "
 "sure that the :guilabel:`Can Be Sold` checkbox is ticked."
 msgstr ""
+"For produkter, der sælges, er det også nødvendigt at konfigurere dem, så de "
+"kan inkluderes i |SOs|. For at gøre dette skal du begynde med at navigere "
+"til :menuselection:`Lager --> Produkter --> Produkter`, og vælge et produkt. "
+"Under feltet :guilabel:`Produktnavn` på produktformularen skal du sikre, at "
+"afkrydsningsfeltet :guilabel:`Kan sælges` er markeret."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:34
 msgid "Allocate products"
-msgstr ""
+msgstr "Alloker produkter"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:36
 msgid ""
@@ -45122,6 +45141,10 @@ msgid ""
 "Operations --> Manufacturing Orders`. Click :guilabel:`New` to create a new |"
 "MO|."
 msgstr ""
+"For at allokere produkter eller komponenter fra en |MO| til en |SO|, eller "
+"til en anden |MO|, skal du begynde med at navigere til "
+":menuselection:`Produktion-app --> Operationer --> Produktionsordrer`. Klik "
+"på :guilabel:`Ny` for at oprette en ny |MO|."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:40
 msgid ""
@@ -45129,6 +45152,9 @@ msgid ""
 "specify the quantity to be produced in the :guilabel:`Quantity` field. "
 "Finally, click :guilabel:`Confirm` to confirm the |MO|."
 msgstr ""
+"På |MO|-formularen skal du vælge et produkt i feltet :guilabel:`Produkt`, og "
+"angive mængden, der skal produceres, i feltet :guilabel:`Mængde`. Klik til "
+"sidst på :guilabel:`Bekræft` for at bekræfte |MO|."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:43
 msgid ""
@@ -45136,6 +45162,9 @@ msgid ""
 "of the product being manufactured, and whether or not there are any |SOs| or "
 "|MOs| which require the product, but have not already been allocated units."
 msgstr ""
+"Resten af allokeringsarbejdsgangen afhænger af den aktuelle lagerbeholdning "
+"af det produkt, der fremstilles, og hvorvidt der er nogen |SOs| eller |MOs|, "
+"som kræver produktet, men som endnu ikke har fået allokeret enheder."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:47
 msgid ""
@@ -45144,6 +45173,10 @@ msgid ""
 "an :icon:`fa-list` :guilabel:`Allocation` smart button appears at the top of "
 "the page as soon as the |MO| is confirmed."
 msgstr ""
+"Hvis der **er** eksisterende |SOs| og |MOs|, der kræver produktet, **og** "
+"der er for få enheder af produktet på lager til at opfylde disse ordrer, "
+"vises der en :icon:`fa-list` :guilabel:`Allokering`-smartknap øverst på "
+"siden, så snart |MO| er bekræftet."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:51
 msgid ""
@@ -45153,10 +45186,15 @@ msgid ""
 "top of the page once the |MO| has been marked as done, by "
 "clicking :guilabel:`Produce All`."
 msgstr ""
+"Hvis der **er** eksisterende |SOs| og |MOs|, der kræver produktet, **og** "
+"der er nok enheder af produktet på lager til at opfylde disse ordrer, vises "
+":icon:`fa-list` :guilabel:`Allokering`-smartknappen først øverst på siden, "
+"når |MO| er blevet markeret som udført ved at klikke på :guilabel:`Producer "
+"alle`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:None
 msgid "The Allocation smart button at the top of an MO."
-msgstr ""
+msgstr "Smartknappen Allokering øverst på en PO."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:61
 msgid ""
@@ -45164,6 +45202,9 @@ msgid ""
 "the :icon:`fa-list` :guilabel:`Allocation` smart button does not appear, "
 "even when the |MO| has been marked as done."
 msgstr ""
+"Hvis der **ikke** er nogen eksisterende |SOs| og |MOs|, der kræver "
+"produktet, vises :icon:`fa-list` :guilabel:`Allokering`-smartknappen ikke, "
+"selv når |MO| er blevet markeret som udført."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:64
 msgid ""
@@ -45172,16 +45213,23 @@ msgid ""
 "delivery orders or |MOs|, depending on the type of product produced in the "
 "original |MO|."
 msgstr ""
+"Klik på :icon:`fa-list` :guilabel:`Allokering`-smartknappen for at åbne "
+":guilabel:`MRP-modtagelsesrapport` for |MO|. Denne rapport viser åbne "
+"leveringsordrer eller |MOs|, afhængigt af typen af produkt, der produceres i "
+"den oprindelige |MO|."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:69
 msgid "Allocate to delivery order"
-msgstr ""
+msgstr "Alloker til leveringsordre"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:71
 msgid ""
 "If the |MO| contains a finished product, the report lists any open delivery "
 "orders for which quantities of the product have yet to be reserved."
 msgstr ""
+"Hvis |MO| indeholder et færdigt produkt, viser rapporten eventuelle åbne "
+"leveringsordrer, for hvilke mængder af produktet endnu ikke er blevet "
+"reserveret."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:75
 msgid ""
@@ -45190,12 +45238,18 @@ msgid ""
 "report that lists open delivery orders that require one or more rocking "
 "chairs."
 msgstr ""
+"Der oprettes en |MO| til at producere tre enheder af en *gyngestol*. Når du "
+"klikker på :guilabel:`Allokering`-smartknappen på |MO|, åbnes en "
+"allokeringsrapport, der viser åbne leveringsordrer, der kræver en eller "
+"flere gyngestole."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:79
 msgid ""
 "Click the :guilabel:`Assign All` button to the right of a specific order to "
 "assign products for each quantity required to fulfill that order."
 msgstr ""
+"Klik på knappen :guilabel:`Tildel alle` til højre for en specifik ordre for "
+"at tildele produkter til hver mængde, der kræves for at opfylde den ordre."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:83
 msgid ""
@@ -45203,6 +45257,9 @@ msgid ""
 "quantity of one unit of the product, clicking :guilabel:`Assign All` assigns "
 "five units of the product to fulfill both quantities."
 msgstr ""
+"Hvis en ordre kræver én mængde på fire enheder af produktet og én mængde på "
+"én enhed af produktet, tildeler klik på :guilabel:`Tildel alle` fem enheder "
+"af produktet for at opfylde begge mængder."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:87
 msgid ""

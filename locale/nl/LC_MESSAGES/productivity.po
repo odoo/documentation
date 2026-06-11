@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-15 17:30+0000\n"
-"PO-Revision-Date: 2026-06-10 01:04+0000\n"
+"PO-Revision-Date: 2026-06-11 10:53+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Dutch <https://translate.odoo.com/projects/odoo-19-doc/"
 "productivity/nl/>\n"
@@ -971,29 +971,31 @@ msgstr ""
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:3
 msgid "AI default prompts"
-msgstr ""
+msgstr "AI-standaardprompts"
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:7
 msgid ""
 "*Default prompts* define how |AI| behaves when a user opens a conversation "
 "from a specific model in Odoo. They allow users to:"
 msgstr ""
+"*Standaardprompts* bepalen hoe |AI| zich gedraagt wanneer je een conversatie "
+"opent vanuit een specifiek model in Odoo. Ze stellen je in staat om:"
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:10
 msgid "Automatically call a specific |AI| agent"
-msgstr ""
+msgstr "Automatisch een specifieke |AI|-agent aan te roepen"
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:11
 msgid "Apply contextual instructions"
-msgstr ""
+msgstr "Contextuele instructies toepassen"
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:12
 msgid "Display predefined action buttons"
-msgstr ""
+msgstr "Voorgedefinieerde actieknoppen weergeven"
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:13
 msgid "Adapt |AI| behavior depending on the model"
-msgstr ""
+msgstr "Het gedrag van |AI| aanpassen afhankelijk van het model"
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:15
 msgid ""
@@ -1001,6 +1003,9 @@ msgid ""
 "models. This means the |AI| can behave differently depending on where it is "
 "launched in the system."
 msgstr ""
+"Standaardprompts zijn modelspecifiek, hoewel ze op alle modellen toegepast "
+"kunnen worden. Dit betekent dat de |AI| zich anders kan gedragen afhankelijk "
+"van waar deze in het systeem wordt gestart."
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:18
 msgid ""
@@ -1008,6 +1013,9 @@ msgid ""
 "context of that record to the |AI| agent. This includes field values and "
 "relevant metadata."
 msgstr ""
+"Wanneer je een |AI|-conversatie opent vanuit een record, geeft Odoo de "
+"volledige context van dat record door aan de |AI|-agent. Dit omvat "
+"veldwaarden en relevante metadata."
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:21
 msgid ""
@@ -1016,6 +1024,10 @@ msgid ""
 "receives accounting context. The conversation is isolated and reset once "
 "closed."
 msgstr ""
+"Elke conversatie is contextgebonden. Wanneer geopend vanuit een lead, "
+"ontvangt de |AI| informatie over die lead. Wanneer geopend vanuit een "
+"factuur, ontvangt de |AI| boekhoudkundige context. De conversatie is "
+"geïsoleerd en wordt gereset zodra deze gesloten wordt."
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:26
 #: ../../content/applications/productivity/ai/document_sort.rst:16
@@ -1035,6 +1047,8 @@ msgid ""
 "Before configuring a default prompt, create or configure the |"
 "AI| :ref:`agent <ai/create-agent>` in the **AI** application."
 msgstr ""
+"Voordat je een standaardprompt configureert, maak of configureer je de "
+"|AI|:ref:`agent <ai/create-agent>` in de **AI**-applicatie."
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:32
 msgid ""
@@ -1042,6 +1056,9 @@ msgid ""
 "prompts. These vary based on the other applications installed on the "
 "database."
 msgstr ""
+"De **AI**-applicatie wordt geleverd met vooraf geconfigureerde agents en "
+"standaardprompts. Deze variëren op basis van de andere applicaties die op de "
+"database geïnstalleerd zijn."
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:35
 msgid ""
@@ -1049,6 +1066,10 @@ msgid ""
 "and click :guilabel:`New`. Create a :guilabel:`Rule Name`, then select an "
 "action in the :guilabel:`When users need to` field."
 msgstr ""
+"Navigeer naar :menuselection:`AI-app --> Configuratie --> Standaardprompts` "
+"en klik op :guilabel:`Nieuw`. Maak een :guilabel:`Regelnaam` aan en "
+"selecteer vervolgens een actie in het veld :guilabel:`Wanneer gebruikers "
+"moeten`."
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:38
 msgid ""
@@ -1058,12 +1079,21 @@ msgid ""
 "Multiple selections can be made in this field. To allow this rule to be used "
 "by any model, leave the field blank."
 msgstr ""
+"Selecteer vervolgens een model in het veld :guilabel:`Op het model`. Dit "
+"bepaalt op welke records deze regel van toepassing is. Als de regel "
+"bijvoorbeeld specifiek is voor *Helpdesk*-tickets, selecteer dan *Helpdesk-"
+"tickets* uit het vervolgkeuzemenu. Er kunnen meerdere selecties gemaakt "
+"worden in dit veld. Laat het veld leeg om deze regel voor elk model te laten "
+"gebruiken."
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:43
 msgid ""
 "In the :guilabel:`Call the Agent` field, select which agent this rule should "
 "apply to. Next, add the :guilabel:`Instructions` for the rule."
 msgstr ""
+"Selecteer in het veld :guilabel:`Roep de agent aan` op welke agent deze "
+"regel moet toepassen. Voeg vervolgens de :guilabel:`Instructies` voor de "
+"regel toe."
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:47
 msgid ""
@@ -1072,10 +1102,14 @@ msgid ""
 "context of the current model. See :ref:`Understanding AI prompt structure "
 "<ai/prompt-structure>` below for additional information."
 msgstr ""
+"Hoewel de agent mogelijk al een bestaande prompt heeft die hun gedrag "
+"definieert, definiëren de instructies in de standaardprompt de acties in de "
+"context van het huidige model. Zie :ref:`AI-promptstructuur begrijpen <ai/"
+"prompt-structure>` hieronder voor aanvullende informatie."
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:None
 msgid "A default prompt rule record in the AI app."
-msgstr ""
+msgstr "Een standaardpromptregel-record in de AI-app."
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:55
 #: ../../content/applications/productivity/whatsapp.rst:664
@@ -1088,17 +1122,24 @@ msgid ""
 "prompts. While users have the option to write out a prompt, they can also "
 "click one of the buttons to begin the conversation."
 msgstr ""
+"Binnen elke standaardprompt kunnen knoppen geconfigureerd worden met "
+"voorgedefinieerde prompts. Hoewel je de optie hebt om een prompt uit te "
+"schrijven, kun je ook op een van de knoppen klikken om de conversatie te "
+"beginnen."
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:60
 msgid ""
 "On the *Buttons* tab, click :guilabel:`Add a line`, then enter a prompt in "
 "the :guilabel:`AI Prompt` field."
 msgstr ""
+"Klik op het tabblad *Knoppen* op :guilabel:`Voeg een regel toe` en voer "
+"vervolgens een prompt in het veld :guilabel:`AI-prompt` in."
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:63
 msgid ""
 "These prompts are then available for a user to select in a conversation."
 msgstr ""
+"Deze prompts zijn vervolgens beschikbaar om te selecteren in een conversatie."
 
 #: ../../content/applications/productivity/ai/default_prompts.rst:None
 msgid "AI prompts configured as buttons in a conversation with an agent."
@@ -18407,6 +18448,11 @@ msgid ""
 "reachable on a mobile device at all times, an app, like Zoiper, should be "
 "used. Apps like that stay connected in the background at all times."
 msgstr ""
+"Hoewel uitgaande oproepen geplaatst kunnen worden met Odoo op een mobiel "
+"apparaat, gaat de Odoo **Telefoon**-app **niet** over bij inkomende "
+"oproepen. Als je op een mobiel apparaat te allen tijde bereikbaar moet zijn, "
+"gebruik dan een app zoals Zoiper. Dergelijke apps blijven altijd op de "
+"achtergrond verbonden."
 
 #: ../../content/applications/productivity/phone/devices_integrations.rst:52
 msgid "For more information, see :ref:`the Zoiper Lite section <voip/zoiper>`."
@@ -29643,17 +29689,19 @@ msgstr "Maak een nieuwe spreadsheet"
 
 #: ../../content/applications/productivity/spreadsheet/get_started.rst:10
 msgid "To create a new spreadsheet:"
-msgstr ""
+msgstr "Nieuwe spreadsheet maken:"
 
 #: ../../content/applications/productivity/spreadsheet/get_started.rst:12
 msgid ""
 "Open Odoo Documents and navigate to the section or folder in which the "
 "spreadsheet should be created."
 msgstr ""
+"Open Documenten en navigeer naar de sectie of map waar de spreadsheet moet "
+"worden aangemaakt."
 
 #: ../../content/applications/productivity/spreadsheet/get_started.rst:14
 msgid "Click :guilabel:`New` and select :guilabel:`Spreadsheet`."
-msgstr ""
+msgstr "Klik op :guilabel:`Nieuw` en selecteer :guilabel:`Spreadsheet`."
 
 #: ../../content/applications/productivity/spreadsheet/get_started.rst:17
 msgid ""
@@ -29661,6 +29709,9 @@ msgid ""
 "click :guilabel:`New` and select :guilabel:`Spreadsheet`, then select in "
 "which :guilabel:`Folder` the spreadsheet should be created."
 msgstr ""
+"Als alternatief kun je vanuit de :icon:`fa-folder-o` :guilabel:`Alles`-map "
+"klikken op :guilabel:`Nieuw` en :guilabel:`Spreadsheet` selecteren, en "
+"daarna kiezen in welke :guilabel:`Map` de spreadsheet moet worden aangemaakt."
 
 #: ../../content/applications/productivity/spreadsheet/get_started.rst:21
 msgid ""
@@ -29675,23 +29726,27 @@ msgstr ""
 #: ../../content/applications/productivity/spreadsheet/get_started.rst:23
 #: ../../content/applications/productivity/spreadsheet/get_started.rst:258
 msgid "Click :guilabel:`Create`."
-msgstr ""
+msgstr "Klik op :guilabel:`Aanmaken`."
 
 #: ../../content/applications/productivity/spreadsheet/get_started.rst:24
 msgid ""
 "Click on `Untitled spreadsheet` at the top of the screen to edit the name of "
 "the spreadsheet."
 msgstr ""
+"Klik op `Naamloze spreadsheet` bovenaan het scherm om de naam van de "
+"spreadsheet te bewerken."
 
 #: ../../content/applications/productivity/spreadsheet/get_started.rst:27
 msgid "It is also possible to create a new spreadsheet by:"
-msgstr ""
+msgstr "Je kunt ook een nieuwe spreadsheet maken door:"
 
 #: ../../content/applications/productivity/spreadsheet/get_started.rst:29
 msgid ""
 "clicking :menuselection:`File -->` :icon:`os-clear-and-"
 "reload` :menuselection:`New` from the menu bar of an open spreadsheet; or"
 msgstr ""
+"te klikken op :menuselection:`Bestand -->` :icon:`os-clear-and-reload` "
+":menuselection:`Nieuw` in de menubalk van een geopende spreadsheet; of"
 
 #: ../../content/applications/productivity/spreadsheet/get_started.rst:31
 msgid ""
@@ -29706,6 +29761,8 @@ msgid ""
 "In these cases, the new spreadsheet is saved in Odoo Documents in "
 "the :icon:`fa-hdd-o` :guilabel:`My Drive` personal folder."
 msgstr ""
+"In deze gevallen wordt de nieuwe spreadsheet opgeslagen in Documenten in de "
+"persoonlijke map :icon:`fa-hdd-o` :guilabel:`Mijn Drive`."
 
 #: ../../content/applications/productivity/spreadsheet/get_started.rst:42
 msgid ""
@@ -29847,31 +29904,37 @@ msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/get_started.rst:111
 msgid "Upload files"
-msgstr ""
+msgstr "Bestanden uploaden"
 
 #: ../../content/applications/productivity/spreadsheet/get_started.rst:113
 msgid ""
 "Files in `.xlsx` or `.csv` format can be uploaded into Odoo Documents and "
 "opened with Odoo Spreadsheet. To do so:"
 msgstr ""
+"Bestanden in `.xlsx`- of `.csv`-formaat kunnen worden geüpload naar "
+"Documenten en geopend met Spreadsheet. Ga als volgt te werk:"
 
 #: ../../content/applications/productivity/spreadsheet/get_started.rst:116
 msgid ""
 "Open Odoo Documents and navigate to the section or folder where the "
 "spreadsheet should be saved."
 msgstr ""
+"Open Documenten en navigeer naar de sectie of map waar de spreadsheet moet "
+"worden opgeslagen."
 
 #: ../../content/applications/productivity/spreadsheet/get_started.rst:117
 msgid "Click :guilabel:`New` and select :guilabel:`Upload`."
-msgstr ""
+msgstr "Klik op :guilabel:`Nieuw` en selecteer :guilabel:`Upload`."
 
 #: ../../content/applications/productivity/spreadsheet/get_started.rst:118
 msgid "Select the relevant `.xlsx` or `.csv` file and click :guilabel:`Open`."
 msgstr ""
+"Selecteer het relevante `.xlsx`- of `.csv`-bestand en klik op "
+":guilabel:`Openen`."
 
 #: ../../content/applications/productivity/spreadsheet/get_started.rst:119
 msgid "Click on the uploaded file."
-msgstr ""
+msgstr "Klik op het geüploade bestand."
 
 #: ../../content/applications/productivity/spreadsheet/get_started.rst:120
 msgid ""
@@ -29879,24 +29942,30 @@ msgid ""
 "Spreadsheet. To preserve the original file in the same folder in Odoo "
 "Documents, disable :guilabel:`Send source file to trash`."
 msgstr ""
+"Standaard wordt het originele bestand verwijderd wanneer het wordt geopend "
+"met Spreadsheet. Om het originele bestand in dezelfde map in Documenten te "
+"behouden, schakel je :guilabel:`Bronbestand naar prullenbak sturen` uit."
 
 #: ../../content/applications/productivity/spreadsheet/get_started.rst:123
 msgid "Click :guilabel:`Open with Odoo Spreadsheet`."
-msgstr ""
+msgstr "Klik op :guilabel:`Openen met Odoo Spreadsheet`."
 
 #: ../../content/applications/productivity/spreadsheet/get_started.rst:125
 msgid "The file can now be fully edited in Odoo Spreadsheet."
-msgstr ""
+msgstr "Het bestand kan nu volledig worden bewerkt in Spreadsheet."
 
 #: ../../content/applications/productivity/spreadsheet/get_started.rst:130
 msgid "Manage spreadsheets"
-msgstr ""
+msgstr "Spreadsheets beheren"
 
 #: ../../content/applications/productivity/spreadsheet/get_started.rst:132
 msgid ""
 "Users with :guilabel:`Editor` rights to a specific spreadsheet have various "
 "options for managing the spreadsheet via the :guilabel:`File` menu:"
 msgstr ""
+"Gebruikers met :guilabel:`Bewerker`-rechten voor een specifieke spreadsheet "
+"hebben verschillende opties om de spreadsheet te beheren via het "
+":guilabel:`Bestand`-menu:"
 
 #: ../../content/applications/productivity/spreadsheet/get_started.rst:135
 msgid ""
@@ -30016,6 +30085,9 @@ msgid ""
 "the :ref:`locale <spreadsheet/get-started/manage-spreadsheets-locale>` of "
 "the current spreadsheet."
 msgstr ""
+":icon:`os-cog` :guilabel:`Instellingen`: hiermee kun je de :ref:`locale "
+"<spreadsheet/get-started/manage-spreadsheets-locale>` van de huidige "
+"spreadsheet bekijken en wijzigen."
 
 #: ../../content/applications/productivity/spreadsheet/get_started.rst:181
 msgid ""
@@ -30360,6 +30432,10 @@ msgid ""
 "the same conditions to establish the initial list, pivot table, or chart in "
 "your database."
 msgstr ""
+"Als je van plan bent om :doc:`globale filters <work_with_data/global_filters>"
+"` te gebruiken om Odoo-gegevens dynamisch te filteren in een spreadsheet of "
+"dashboard, gebruik dan niet dezelfde voorwaarden om de initiële lijst, "
+"draaitabel of grafiek in je database op te stellen."
 
 #: ../../content/applications/productivity/spreadsheet/insert.rst:35
 msgid ""
@@ -30376,6 +30452,9 @@ msgid ""
 "Odoo database using Odoo-specific spreadsheet :doc:`functions "
 "<work_with_data/functions>`"
 msgstr ""
+":ref:`Financiële gegevens invoegen <spreadsheet/insert/financial-data>` uit "
+"je Odoo-database met behulp van Odoo-specifieke spreadsheet :doc:`functies "
+"<work_with_data/functions>`"
 
 #: ../../content/applications/productivity/spreadsheet/insert.rst:39
 msgid ""
@@ -30470,6 +30549,9 @@ msgid ""
 "panel to allow another panel, such as the :doc:`global filters "
 "<work_with_data/global_filters>` panel, to open beside it."
 msgstr ""
+"Klik op :icon:`fa-thumb-tack` :guilabel:`(vastspelden)` bovenaan het "
+"eigenschappenpaneel om een ander paneel, zoals het :doc:`globale filters "
+"<work_with_data/global_filters>` paneel, ernaast te openen."
 
 #: ../../content/applications/productivity/spreadsheet/insert.rst:77
 msgid ""
@@ -30757,6 +30839,9 @@ msgid ""
 "<work_with_data/functions>` are used to retrieve the header and field "
 "values, respectively:"
 msgstr ""
+"Wanneer een lijst in een spreadsheet wordt ingevoegd, worden de volgende "
+":doc:`functies <work_with_data/functions>` gebruikt om respectievelijk de "
+"header- en veldwaarden op te halen:"
 
 #: ../../content/applications/productivity/spreadsheet/insert.rst:195
 #: ../../content/applications/productivity/spreadsheet/work_with_data/dynamic_pivot_tables.rst:78
@@ -30880,6 +30965,9 @@ msgid ""
 "domain is combined with the selected values of the global filter before the "
 "data is loaded into the spreadsheet."
 msgstr ""
+"Wanneer :doc:`globale filters <work_with_data/global_filters>` worden "
+"gebruikt, wordt dit domein gecombineerd met de geselecteerde waarden van het "
+"globale filter voordat de gegevens in de spreadsheet worden geladen."
 
 #: ../../content/applications/productivity/spreadsheet/insert.rst:237
 msgid ""
@@ -31227,6 +31315,13 @@ msgid ""
 "possible to insert a basic pivot table with minimal configuration, convert "
 "it to a dynamic pivot table, then refine it directly in the spreadsheet."
 msgstr ""
+"Het converteren van een ingevoegde draaitabel naar een :doc:`dynamische "
+"draaitabel <work_with_data/dynamic_pivot_tables>` stelt je in staat om "
+"dimensies (d.w.z. kolommen en rijen) en metingen toe te voegen, te "
+"verwijderen en te manipuleren. Het is daarom mogelijk om een basisdraaitabel "
+"met minimale configuratie in te voegen, deze te converteren naar een "
+"dynamische draaitabel en deze vervolgens direct in de spreadsheet te "
+"verfijnen."
 
 #: ../../content/applications/productivity/spreadsheet/insert.rst:375
 msgid "To insert a pivot table:"
@@ -31327,6 +31422,10 @@ msgid ""
 "following :doc:`functions <work_with_data/functions>` to retrieve the header "
 "and field values, respectively:"
 msgstr ""
+"Een ingevoegde draaitabel die niet is geconverteerd naar een "
+":doc:`dynamische draaitabel <work_with_data/dynamic_pivot_tables>` gebruikt "
+"de volgende :doc:`functies <work_with_data/functions>` om respectievelijk de "
+"header- en veldwaarden op te halen:"
 
 #: ../../content/applications/productivity/spreadsheet/insert.rst:423
 msgid "The arguments of the functions are as follows:"
@@ -31547,6 +31646,11 @@ msgid ""
 "and create pivot tables that compare the current period's data with a "
 "previous period."
 msgstr ""
+"Je kunt bijvoorbeeld dezelfde gegevens bekijken die zijn geaggregeerd per "
+"verschillende dimensies of :doc:`globale filters <work_with_data/"
+"global_filters>` gebruiken om de datum te offsetten en draaitabellen te "
+"maken die de gegevens van de huidige periode vergelijken met een vorige "
+"periode."
 
 #: ../../content/applications/productivity/spreadsheet/insert.rst:514
 msgid "To duplicate a pivot table, perform the following steps:"
@@ -31607,6 +31711,8 @@ msgid ""
 "When a pivot table is duplicated, the new pivot table is by default "
 "a :doc:`dynamic pivot table <work_with_data/dynamic_pivot_tables>`."
 msgstr ""
+"Wanneer een draaitabel wordt gedupliceerd, is de nieuwe draaitabel standaard "
+"een :doc:`dynamische draaitabel <work_with_data/dynamic_pivot_tables>`."
 
 #: ../../content/applications/productivity/spreadsheet/insert.rst:537
 msgid "Delete a pivot table"
@@ -31681,10 +31787,14 @@ msgid ""
 "visualize/customize-charts>`, where various aspects of the chart's "
 "configuration and design can be modified."
 msgstr ""
+"Grafieken worden ingevoegd op het eerste werkblad van de spreadsheet. Een "
+"paneel aan de rechterkant van het scherm toont de :ref:`grafiekeigenschappen "
+"<spreadsheet/visualize/customize-charts>`, waar verschillende aspecten van "
+"de configuratie en het ontwerp van de grafiek kunnen worden aangepast."
 
 #: ../../content/applications/productivity/spreadsheet/insert.rst:572
 msgid ":ref:`Manage charts <spreadsheet/visualize/manage-charts>`"
-msgstr ""
+msgstr ":ref:`Grafieken beheren <spreadsheet/visualize/manage-charts>`"
 
 #: ../../content/applications/productivity/spreadsheet/insert.rst:575
 msgid ""
@@ -31893,7 +32003,7 @@ msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/share_collaborate.rst:3
 msgid "Share and collaborate"
-msgstr ""
+msgstr "Delen en samenwerken"
 
 #: ../../content/applications/productivity/spreadsheet/share_collaborate.rst:5
 msgid ""
@@ -31901,27 +32011,35 @@ msgid ""
 "collaboration while ensuring the appropriate level of control and "
 "traceability, including:"
 msgstr ""
+"Odoo Spreadsheet biedt verschillende functies die efficiënte realtime "
+"samenwerking mogelijk maken en tegelijkertijd het juiste niveau van controle "
+"en traceerbaarheid garanderen, waaronder:"
 
 #: ../../content/applications/productivity/spreadsheet/share_collaborate.rst:8
 msgid ""
 ":ref:`permission-based sharing <spreadsheet/collaboration/access-sharing>`"
 msgstr ""
+":ref:`Delen op basis van rechten <spreadsheet/collaboration/access-sharing>`"
 
 #: ../../content/applications/productivity/spreadsheet/share_collaborate.rst:9
 msgid ""
 ":ref:`version history <spreadsheet/get-started/manage-spreadsheets-"
 "versioning>`"
 msgstr ""
+":ref:`Versiegeschiedenis <spreadsheet/get-started/manage-spreadsheets-"
+"versioning>`"
 
 #: ../../content/applications/productivity/spreadsheet/share_collaborate.rst:10
 msgid ""
 "discussions via :ref:`comments and the spreadsheet's chatter thread "
 "<spreadsheet/collaboration/chatter>`"
 msgstr ""
+"discussies via :ref:`opmerkingen en de chatter-thread van de spreadsheet "
+"<spreadsheet/collaboration/chatter>`"
 
 #: ../../content/applications/productivity/spreadsheet/share_collaborate.rst:16
 msgid "Access and sharing"
-msgstr ""
+msgstr "Toegang en delen"
 
 #: ../../content/applications/productivity/spreadsheet/share_collaborate.rst:18
 msgid ""
@@ -31931,6 +32049,11 @@ msgid ""
 "permissions>` are either inherited from the folder a spreadsheet is saved in "
 "or controlled at the level of the spreadsheet itself."
 msgstr ""
+"In principe worden de rechten voor toegang tot Odoo-spreadsheets afgehandeld "
+"zoals :ref:`elk ander bestand in de Documenten-app <documents/access-rights>"
+"`. :ref:`Rollen en rechten <spreadsheet/collaboration/roles-permissions>` "
+"worden ofwel geërfd van de map waarin een spreadsheet is opgeslagen, ofwel "
+"gecontroleerd op het niveau van de spreadsheet zelf."
 
 #: ../../content/applications/productivity/spreadsheet/share_collaborate.rst:23
 msgid ""
@@ -31940,6 +32063,11 @@ msgid ""
 "dynamic Odoo data <spreadsheet/collaboration/dynamic-spreadsheet>`, in terms "
 "of both access and data visibility."
 msgstr ""
+"Er zijn echter belangrijke verschillen waarmee rekening moet worden gehouden "
+"tussen :ref:`spreadsheets die alleen statische gegevens bevatten "
+"<spreadsheet/collaboration/static-spreadsheet>` en :ref:`spreadsheets die "
+"dynamische Odoo-gegevens bevatten <spreadsheet/collaboration/dynamic-"
+"spreadsheet>`, zowel wat betreft toegang als zichtbaarheid van gegevens."
 
 #: ../../content/applications/productivity/spreadsheet/share_collaborate.rst:30
 msgid ""
@@ -34113,17 +34241,19 @@ msgstr ""
 #: ../../content/applications/productivity/spreadsheet/work_with_data/dynamic_pivot_tables.rst:146
 #: ../../content/applications/productivity/spreadsheet/work_with_data/dynamic_pivot_tables.rst:169
 msgid "You can:"
-msgstr ""
+msgstr "Je kunt:"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/dynamic_pivot_tables.rst:148
 msgid "add new dimensions by clicking :guilabel:`Add`"
-msgstr ""
+msgstr "nieuwe dimensies toevoegen door te klikken op :guilabel:`Toevoegen`"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/dynamic_pivot_tables.rst:149
 msgid ""
 "delete existing dimensions by clicking the :icon:`fa-"
 "trash` :guilabel:`(delete)` icon on the relevant dimension"
 msgstr ""
+"bestaande dimensies verwijderen door te klikken op het :icon:`fa-trash` "
+":guilabel:`(verwijderen)` icoon bij de betreffende dimensie"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/dynamic_pivot_tables.rst:151
 msgid ""
@@ -34131,12 +34261,18 @@ msgid ""
 "or :guilabel:`Rows` by clicking then dragging the dimension to the desired "
 "position within its respective section"
 msgstr ""
+"de volgorde wijzigen waarin dimensies worden weergegeven in "
+":guilabel:`Kolommen` of :guilabel:`Rijen` door te klikken en de dimensie te "
+"slepen naar de gewenste positie binnen de betreffende sectie"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/dynamic_pivot_tables.rst:153
 msgid ""
 "change the axis on which a dimension is shown by clicking then dragging the "
 "dimension from :guilabel:`Columns` to :guilabel:`Rows` or vice versa"
 msgstr ""
+"de as wijzigen waarop een dimensie wordt weergegeven door te klikken en de "
+"dimensie te slepen van :guilabel:`Kolommen` naar :guilabel:`Rijen` of "
+"omgekeerd"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/dynamic_pivot_tables.rst:155
 msgid ""
@@ -34144,12 +34280,17 @@ msgid ""
 "selecting :guilabel:`Ascending`, :guilabel:`Descending`, "
 "or :guilabel:`Unsorted` in the :guilabel:`Order by` field"
 msgstr ""
+"wijzigen hoe de waarden van een dimensie worden gesorteerd door "
+":guilabel:`Oplopend`, :guilabel:`Aflopend` of :guilabel:`Ongesorteerd` te "
+"selecteren in het veld :guilabel:`Sorteren op`"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/dynamic_pivot_tables.rst:157
 msgid ""
 "for date- or time-based dimensions, select the "
 "desired :guilabel:`Granularity` from the options in the dropdown menu"
 msgstr ""
+"voor datum- of tijdgebaseerde dimensies de gewenste "
+":guilabel:`Granulariteit` selecteren uit de opties in het dropdownmenu"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/dynamic_pivot_tables.rst:163
 msgid "Measures"
@@ -34161,6 +34302,9 @@ msgid ""
 "analyzing, based on the dimensions you have chosen, are listed in the order "
 "they appeared in the pivot view in your database."
 msgstr ""
+"De maten van je draaitabel, d.w.z. wat je meet of analyseert op basis van de "
+"dimensies die je hebt gekozen, worden weergegeven in de volgorde waarin ze "
+"verschenen in de draaitabelweergave in je database."
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/dynamic_pivot_tables.rst:171
 msgid ""
@@ -34168,22 +34312,30 @@ msgid ""
 "pivot-tables/manipulate-measures-calculated-measures>`, by "
 "clicking :guilabel:`Add`"
 msgstr ""
+"nieuwe maten toevoegen, inclusief :ref:`berekende maten <spreadsheet/dynamic-"
+"pivot-tables/manipulate-measures-calculated-measures>`, door te klikken op "
+":guilabel:`Toevoegen`"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/dynamic_pivot_tables.rst:174
 msgid ""
 "hide (:icon:`fa-eye`), show (:icon:`fa-eye-slash`), or delete (:icon:`fa-"
 "trash`) existing measures"
 msgstr ""
+"bestaande maten verbergen (:icon:`fa-eye`), tonen (:icon:`fa-eye-slash`) of "
+"verwijderen (:icon:`fa-trash`)"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/dynamic_pivot_tables.rst:175
 msgid "edit the name of existing measures by clicking on the measure's name"
 msgstr ""
+"de naam van bestaande maten bewerken door op de naam van de maat te klikken"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/dynamic_pivot_tables.rst:176
 msgid ""
 "change the order in which measures are displayed by clicking then dragging "
 "the measure to the desired position"
 msgstr ""
+"de volgorde wijzigen waarin maten worden weergegeven door te klikken en de "
+"maat te slepen naar de gewenste positie"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/dynamic_pivot_tables.rst:178
 msgid ""
@@ -34193,12 +34345,19 @@ msgid ""
 "smallest to largest`. The pivot table data updates dynamically as different "
 "options are selected."
 msgstr ""
+"wijzigen hoe maten worden weergegeven door te klikken op het :icon:`fa-cog` "
+":guilabel:`(tandwiel)` icoon en vervolgens de gewenste optie te selecteren "
+"uit het dropdownmenu, bv. :guilabel:`% van eindtotaal` of "
+":guilabel:`Rangschikken van kleinste naar grootste`. De draaitabelgegevens "
+"worden dynamisch bijgewerkt wanneer verschillende opties worden geselecteerd."
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/dynamic_pivot_tables.rst:182
 msgid ""
 "choose how measures are aggregated, e.g., "
 "by :guilabel:`Sum`, :guilabel:`Average`, :guilabel:`Minimum`"
 msgstr ""
+"kiezen hoe maten worden geaggregeerd, bv. door :guilabel:`Som`, "
+":guilabel:`Gemiddelde`, :guilabel:`Minimum`"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/dynamic_pivot_tables.rst:186
 msgid ""
@@ -34208,10 +34367,16 @@ msgid ""
 "or :guilabel:`Descending` from the dropdown. To return to the default order, "
 "follow the same steps then select :guilabel:`No sorting` from the dropdown."
 msgstr ""
+"Om de waarden van een dynamische draaitabel te sorteren op maat voor een "
+"specifieke dimensie, klik je met de rechtermuisknop op een draaitabelwaarde, "
+"klik je vervolgens op :icon:`os-sort-range` :guilabel:`Draaitabel sorteren` "
+"en selecteer je :guilabel:`Oplopend` of :guilabel:`Aflopend` uit het "
+"dropdownmenu. Om terug te keren naar de standaardvolgorde, volg je dezelfde "
+"stappen en selecteer je :guilabel:`Geen sortering` uit het dropdownmenu."
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/dynamic_pivot_tables.rst:194
 msgid "Calculated measures"
-msgstr ""
+msgstr "Berekende maten"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/dynamic_pivot_tables.rst:196
 msgid ""
@@ -34219,22 +34384,30 @@ msgid ""
 "exist in the original pivot view. For example, a calculated measure could be "
 "added to show the average revenue per order or the profit margin per product."
 msgstr ""
+"Het is mogelijk om berekende maten toe te voegen als de gewenste maat niet "
+"bestond in de oorspronkelijke draaitabelweergave. Een berekende maat kan "
+"bijvoorbeeld worden toegevoegd om de gemiddelde omzet per order of de "
+"winstmarge per product weer te geven."
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/dynamic_pivot_tables.rst:200
 msgid "To add a calculated measure:"
-msgstr ""
+msgstr "Een berekende maat toevoegen:"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/dynamic_pivot_tables.rst:202
 msgid ""
 "From the :guilabel:`Measures` section of the pivot table properties, "
 "click :guilabel:`Add`."
 msgstr ""
+"Klik in de sectie :guilabel:`Maten` van de draaitabeleigenschappen op "
+":guilabel:`Toevoegen`."
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/dynamic_pivot_tables.rst:203
 msgid ""
 "Below the scrollable list, click :icon:`os-formula` :guilabel:`Add "
 "calculated measure`."
 msgstr ""
+"Klik onder de scrollbare lijst op :icon:`os-formula` :guilabel:`Berekende "
+"maat toevoegen`."
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/dynamic_pivot_tables.rst:204
 msgid "Rename the calculated measure by clicking on the name and typing."
@@ -35595,6 +35768,8 @@ msgid ""
 "`Excel MDURATION article <https://support.microsoft.com/office/mduration-"
 "function-b3786a69-4f20-469a-94ad-33e5b90a763c>`_"
 msgstr ""
+"`Excel MDURATION artikel <https://support.microsoft.com/office/mduration-"
+"function-b3786a69-4f20-469a-94ad-33e5b90a763c>`_"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:291
 msgid "MIRR(cashflow_amounts, financing_rate, reinvestment_return_rate)"
@@ -35607,6 +35782,8 @@ msgid ""
 "`Excel MIRR article <https://support.microsoft.com/office/mirr-function-"
 "b020f038-7492-4fb4-93c1-35c345b53524>`_"
 msgstr ""
+"`Excel MIRR artikel <https://support.microsoft.com/office/mirr-function-"
+"b020f038-7492-4fb4-93c1-35c345b53524>`_"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:293
 msgid "NOMINAL(effective_rate, periods_per_year)"
@@ -35637,13 +35814,15 @@ msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:297
 msgid "NPV(discount, cashflow1, [cashflow2, ...])"
-msgstr ""
+msgstr "NPV(korting, kasstroom1, [kasstroom2, ...])"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:298
 msgid ""
 "`Excel NPV article <https://support.microsoft.com/office/npv-"
 "function-8672cb67-2576-4d07-b67b-ac28acf2a568>`_"
 msgstr ""
+"`Excel NPV artikel <https://support.microsoft.com/office/npv-function-"
+"8672cb67-2576-4d07-b67b-ac28acf2a568>`_"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:299
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:920
@@ -35714,7 +35893,7 @@ msgstr ""
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:308
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:929
 msgid "ODOO.CURRENCY.RATE(currency_from, currency_to, [date])"
-msgstr ""
+msgstr "ODOO.CURRENCY.RATE(valuta_van, valuta_naar, [datum])"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:309
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:930
@@ -35809,7 +35988,7 @@ msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:326
 msgid "PDURATION(rate, present_value, future_value)"
-msgstr ""
+msgstr "PDURATION(tarief, huidige_waarde, toekomstige_waarde)"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:327
 msgid ""
@@ -35824,6 +36003,8 @@ msgid ""
 "PMT(rate, number_of_periods, present_value, [future_value], "
 "[end_or_beginning])"
 msgstr ""
+"PMT(tarief, aantal_periodes, huidige_waarde, [toekomstige_waarde], "
+"[einde_of_begin])"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:329
 msgid ""
@@ -35838,12 +36019,16 @@ msgid ""
 "PPMT(rate, period, number_of_periods, present_value, [future_value], "
 "[end_or_beginning])"
 msgstr ""
+"PPMT(tarief, periode, aantal_periodes, huidige_waarde, [toekomstige_waarde], "
+"[einde_of_begin])"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:331
 msgid ""
 "`Excel PPMT article <https://support.microsoft.com/office/ppmt-function-"
 "c370d9e3-7749-4ca4-beea-b06c6ac95e1b>`_"
 msgstr ""
+"`Excel PPMT artikel <https://support.microsoft.com/office/ppmt-function-"
+"c370d9e3-7749-4ca4-beea-b06c6ac95e1b>`_"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:332
 msgid ""
@@ -35879,6 +36064,8 @@ msgstr ""
 msgid ""
 "PRICEMAT(settlement, maturity, issue, rate, yield, [day_count_convention])"
 msgstr ""
+"PRICEMAT(afwikkeling, vervaldatum, uitgifte, tarief, opbrengst, "
+"[dagtelconventie])"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:337
 msgid ""
@@ -35909,6 +36096,8 @@ msgid ""
 "RATE(number_of_periods, payment_per_period, present_value, [future_value], "
 "[end_or_beginning], [rate_guess])"
 msgstr ""
+"RATE(aantal_periodes, betaling_per_periode, huidige_waarde, "
+"[toekomstige_waarde], [einde_of_begin], [tarief_schatting])"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:342
 msgid ""
@@ -35954,6 +36143,8 @@ msgid ""
 "`Excel SLN article <https://support.microsoft.com/office/sln-function-"
 "cdb666e5-c1c6-40a7-806a-e695edc2f1c8>`_"
 msgstr ""
+"`Excel SLN artikel <https://support.microsoft.com/office/sln-function-"
+"cdb666e5-c1c6-40a7-806a-e695edc2f1c8>`_"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:349
 msgid "SYD(cost, salvage, life, period)"
@@ -35969,13 +36160,15 @@ msgstr ""
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:351
 msgid "TBILLEQ(settlement, maturity, discount)"
-msgstr ""
+msgstr "TBILLEQ(afwikkeling, vervaldatum, korting)"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:352
 msgid ""
 "`Excel TBILLEQ article <https://support.microsoft.com/office/tbilleq-"
 "function-2ab72d90-9b4d-4efe-9fc2-0f81f2c19c8c>`_"
 msgstr ""
+"`Excel TBILLEQ artikel <https://support.microsoft.com/office/tbilleq-"
+"function-2ab72d90-9b4d-4efe-9fc2-0f81f2c19c8c>`_"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:353
 msgid "TBILLPRICE(settlement, maturity, discount)"
@@ -35986,6 +36179,8 @@ msgid ""
 "`Excel TBILLPRICE article <https://support.microsoft.com/office/tbillprice-"
 "function-eacca992-c29d-425a-9eb8-0513fe6035a2>`_"
 msgstr ""
+"`Excel TBILLPRICE artikel <https://support.microsoft.com/office/tbillprice-"
+"function-eacca992-c29d-425a-9eb8-0513fe6035a2>`_"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:355
 msgid "TBILLYIELD(settlement, maturity, price)"
@@ -36021,6 +36216,8 @@ msgid ""
 "`Excel XIRR article <https://support.microsoft.com/office/xirr-function-"
 "de1242ec-6477-445b-b11b-a303ad9adc9d>`_"
 msgstr ""
+"`Excel XIRR artikel <https://support.microsoft.com/office/xirr-function-"
+"de1242ec-6477-445b-b11b-a303ad9adc9d>`_"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:361
 msgid "XNPV(discount, cashflow_amounts, cashflow_dates)"
@@ -36068,6 +36265,8 @@ msgstr ""
 msgid ""
 "YIELDMAT(settlement, maturity, issue, rate, price, [day_count_convention])"
 msgstr ""
+"YIELDMAT(afwikkeling, vervaldatum, uitgifte, tarief, prijs, "
+"[dagtelconventie])"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:368
 msgid ""
@@ -36083,13 +36282,15 @@ msgstr "Info"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:381
 msgid "CELL(info_type, reference)"
-msgstr ""
+msgstr "CELL(info_type, referentie)"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:382
 msgid ""
 "`Excel CELL article <https://support.microsoft.com/office/cell-"
 "function-51bd39a5-f338-4dbe-a33f-955d67c2b2cf>`_"
 msgstr ""
+"`Excel CELL artikel <https://support.microsoft.com/office/cell-function-"
+"51bd39a5-f338-4dbe-a33f-955d67c2b2cf>`_"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:383
 msgid "ISBLANK(value)"
@@ -36107,6 +36308,8 @@ msgid ""
 "`Excel IS article <https://support.microsoft.com/office/is-"
 "functions-0f2d7971-6019-40a0-a171-f2d869135665>`_"
 msgstr ""
+"`Excel IS artikel <https://support.microsoft.com/office/is-functions-"
+"0f2d7971-6019-40a0-a171-f2d869135665>`_"
 
 #: ../../content/applications/productivity/spreadsheet/work_with_data/functions.rst:385
 msgid "ISERR(value)"
