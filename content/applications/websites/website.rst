@@ -13,6 +13,12 @@ with other Odoo apps to expand your website's functionality.
 
 .. cards::
 
+   .. card:: Website creation
+      :target: website/website_creation
+      :large:
+
+      Create a new website with the website builder or import an existing one using the import tool.
+
    .. card:: Web design
       :target: website/web_design
       :large:
@@ -34,11 +40,13 @@ with other Odoo apps to expand your website's functionality.
 
    .. card:: Reporting
       :target: website/reporting
+      :large:
 
       Monitor your website's traffic with website analytics and set up link trackers.
 
    .. card:: Mail groups
       :target: website/mail_groups
+      :large:
 
       Configure mail groups to allow website visitors to participate in public discussions via
       email.
@@ -55,6 +63,7 @@ with other Odoo apps to expand your website's functionality.
 .. toctree::
    :titlesonly:
 
+   website/website_creation
    website/web_design
    website/structure
    website/configuration
