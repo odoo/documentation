@@ -49,6 +49,8 @@ Below are the available modules in Odoo for accounting use in the United States.
       :align: center
       :alt: The Generic Chart Template comes pre-configured for the US localization.
 
+.. _l10n_us/optional-modules:
+
 Modules installation
 --------------------
 
@@ -413,11 +415,9 @@ Writing checks
 Using checks is still a common payment practice in the US. Be sure the *US Checks Layout*
 (`l10n_us_check_printing`) module for the US localization is :ref:`installed <general/install>`.
 
-To enable check printing from Odoo, navigate to :menuselection:`Accounting --> Configuration -->
-Settings` and find the :guilabel:`Vendor Payments` section. From here, tick the :guilabel:`Checks`
-checkbox to reveal several fields for check configuration.
-
-Select a pre-printed or blank :guilabel:`Check Layout` from the drop-down menu:
+To print checks in Odoo, :doc:`enable and configure checks <../accounting/payments/pay_checks>`.
+In the :guilabel:`Check Layout` field, select one of the available pre-printed or blank check
+layouts from the drop-down menu:
 
 - :guilabel:`Print Check (Top) - US`
 - :guilabel:`Print Check (Middle) - US`
@@ -426,21 +426,14 @@ Select a pre-printed or blank :guilabel:`Check Layout` from the drop-down menu:
 - :guilabel:`Print Blank Check (Middle) - US`
 - :guilabel:`Print Blank Check (Bottom) - US`
 
-Next, choose whether or not to enable the :guilabel:`Multi-Pages Check Stub` checkbox.
-
-Optionally set a :guilabel:`Check Top Margin` and :guilabel:`Check Left Margin`, if required.
-
-Once all check configurations are complete, :guilabel:`Save` the settings.
-
 .. tip::
-   Pre-printed check formats (non-blank checks) require pre-printed paper from a third-party vendor.
-   `Pre-printed checks from checkdepot.net <https://checkdepot.net/collections/odoo-checks>`_ are
-   recommended.
+   It's recommended to use the `Pre-printed checks from checkdepot.net
+   <https://checkdepot.net/collections/odoo-checks>`_.
 
 .. important::
    Use one of the blank check formats to print the information of the check ad-hoc when needed. This
    requires the use of both :abbr:`MICR (Magnetic Ink Character Recognition)` ink or toner complying
-   with the standards for check printing, as well as `check quality paper
+   with the standards for check printing, as well as `check-quality paper
    <https://checkdepot.net/collections/blank-check-paper/products/top-format-blank-check-paper-cdt164>`_.
    Other information, such as the company name, bank account, and check number, is printed when
    creating the blank check.
