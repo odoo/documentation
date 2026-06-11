@@ -2,61 +2,71 @@
 Pay by checks
 =============
 
-Once you decide to pay a supplier bill, you can select to pay by check. You can then print all the
-payments registered by check. Finally, the bank reconciliation process will match the checks you
-sent to suppliers with actual bank statements.
+When paying a vendor bill, checks can be selected as a payment method and can be printed. Then the
+check and bank statement can be reconciled.
+
+.. _accounting/pay-checks/configuration:
 
 Configuration
 =============
 
-Activate checks payment methods
--------------------------------
-
 To activate the checks payment method, go to :menuselection:`Accounting --> Configuration -->
-Settings`, and scroll down to the :guilabel:`Vendor Payments` section. There, you can activate the
-payment method as well as set up the :guilabel:`Check Layout`.
+Settings`, scroll down to the :guilabel:`Vendor Payments` section, enable :guilabel:`Checks`, then
+click :guilabel:`Save`. Next, select a :guilabel:`Check Layout`, then :guilabel:`Save`.
 
 .. note::
-   - Once the :guilabel:`Checks` setting is activated, the **Checks** payment method is
-     automatically set up in the :guilabel:`Outgoing Payments` tabs of **bank** journals.
-   - Some countries require specific modules to print checks; such modules may be installed by
-     default. For instance, the :guilabel:`U.S. Checks Layout` module is required to print U.S.
-     checks.
+   Some countries use specific check layouts, which sometimes require installing a dedicated module.
 
-Compatible check stationery for printing checks
-===============================================
+Several configuration options are available:
 
-United States
--------------
+- :guilabel:`Multi-Pages Check Stub`: enable the check stub to span multiple pages when the number
+  of invoices or payments associated with a single check exceeds the available space on a single
+  page.
+- :guilabel:`Check Top Margin`: define the top margin used when printing checks.
+- :guilabel:`Check Left Margin`: define the left margin used when printing checks.
 
-For the United States, Odoo supports by default the check formats of:
+.. note::
+   - Once activated, the :guilabel:`Checks` payment method is automatically set up in the
+     :guilabel:`Outgoing Payments` tab of bank journals.
+   - Some localizations have blank paper formats. They can be used to print the information on the
+     check as needed. This requires the use of both :abbr:`MICR (Magnetic Ink Character
+     Recognition)` ink or toner that complies with check-printing standards and check-quality paper.
+     Other information, such as the company name, bank account, and check number, is printed when
+     creating the blank check.
+   - Pre-printed check formats (non-blank checks) require pre-printed paper from a third-party
+     vendor.
 
-- **Quickbooks & Quicken**: check on top, stubs in the middle and bottom;
-- **Peachtree**: check in the middle, stubs on top and bottom;
-- **ADP**: check in the bottom, and stubs on the top.
+.. _accounting/pay-checks/pay-bill-check:
 
-Pay a supplier bill with a check
-================================
+Pay a vendor bill
+=================
 
-Paying a supplier with a check is done in three steps:
+To pay a vendor bill with a check, follow these steps:
 
-1. registering a payment
-2. printing checks in batch for all registered payments
-3. reconciling bank statements
+#. Register the payment by going to :menuselection:`Accounting --> Vendors --> Bills` and opening
+   the relevant vendor bill. Once it is confirmed, click :guilabel:`Pay`, set the :guilabel:`Payment
+   Method` to :guilabel:`Checks`, and click :guilabel:`Create Payment`.
+#. Click the :guilabel:`Payments` smart button to access the check payment, and click
+   :guilabel:`Print Check`. In the pop-up, specify the pre-printed check number to ensure the
+   corresponding check number is recorded on the payment.
+#. Create a transaction in the bank journal, and :ref:`reconcile
+   <accounting/reconciliation/reconcile>` it with the related vendor bill or related check to mark
+   the vendor bill as :guilabel:`Paid`.
 
-Register a payment by check
----------------------------
+.. note::
+   Once printed, several options are available:
 
-To register a payment, open any supplier bill from the menu :menuselection:`Purchases --> Vendor
-Bills`.
-Once the supplier bill is validated, you can register a payment. Set the :guilabel:`Payment Method`
-to :guilabel:`Checks` and validate the payment.
+   - :guilabel:`Void Check`: click to cancel the check payment.
+   - :guilabel:`Validate`: click to mark the payment as :guilabel:`Paid`.
+   - :guilabel:`Reject`: click if the check was rejected. The payment status is then set to
+     :guilabel:`Rejected`, and the related bill is no longer marked as :guilabel:`Paid`.
 
-Print checks
-------------
+.. tip::
+   - Alternatively, from the :guilabel:`Accounting Dashboard`, click :guilabel:`Checks to print`
+     under the :guilabel:`Bank` journal card. Then, open the relevant check and click
+     :guilabel:`Print Check`.
+   - To print multiple checks in batch, select the check payments from the list view, click the
+     :icon:`fa-cog` :guilabel:`(Actions)` icon and click :guilabel:`Print`.
 
-On your :guilabel:`Accounting Dashboard` in the :guilabel:`Bank` Journal, you can see the
-number of checks registered. By clicking on :guilabel:`Checks to print` you have got the possibility
-to print the reconciled checks.
-
-To print all checks in batch, select all payments from the list view and click on :guilabel:`Print`.
+.. seealso::
+   :ref:`Registering payments from an invoice or bill <accounting/payments/from-invoice-bill>`
