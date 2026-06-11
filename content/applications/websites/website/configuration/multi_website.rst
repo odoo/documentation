@@ -2,9 +2,9 @@
 Multiple websites
 =================
 
-Odoo allows you to create multiple websites from the same database. This can be useful, for example,
-if you have multiple brands operating under your organization, or if you want to create separate
-websites for different products/services or audiences.
+Odoo allows you to :doc:`create <../website_creation>` multiple websites from the same database.
+This can be useful, for example, if you have multiple brands operating under your organization, or
+if you want to create separate websites for different products/services or audiences.
 
 Creating another website
 ========================
@@ -26,14 +26,9 @@ Different alternatives exist, but before creating another website, you should ei
   - :ref:`Register a domain name for free with Odoo <domain-name/register>`.
 
 Once it is time to :ref:`map your second domain name's address to your second Odoo website
-<domain-name/existing/website-map>`, you can create and map it directly by:
-
-#. Going to :menuselection:`Website --> Configuration --> Settings` and clicking :guilabel:`+ New
-   Website`.
-#. Choosing a :guilabel:`Website Name` and entering the second website's address in the
-   :guilabel:`Website Domain` field (e.g., `https://www.yourseconddomain.com` or
-   `https://subdomain.yourdomain.com`).
-#. Clicking the :guilabel:`Create` button.
+<domain-name/existing/website-map>`, you can `create <../../website_creation>` it and map it
+directly by entering the second website's address in the :guilabel:`Website Domain` field (e.g.,
+`https://www.yourseconddomain.com` or `https://subdomain.yourdomain.com`).
 
 .. tip::
    To switch from one website's frontend to another, click the website selection drop-down in the
