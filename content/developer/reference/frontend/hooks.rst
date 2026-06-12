@@ -353,5 +353,5 @@ API
      - Description
    * - `refName`
      - string
-     - this is a `useRef reference <{OWL_PATH}/doc/reference/hooks.md#useref>`_ for the element that will be
+     - this is a `useRef reference <{OWL_PATH}/doc/v2/reference/hooks.md#useref>`_ for the element that will be
        spellcheck enabled.
