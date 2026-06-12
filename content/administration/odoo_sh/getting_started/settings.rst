@@ -9,9 +9,9 @@ The :guilabel:`Settings` view allow you to manage the configuration of your proj
 Project name
 ============
 
-The name of your project defines the address used to access your production database. The addresses
-of your staging and development builds are automatically derived from this name. If you change the
-project name, only future builds will use the new name.
+The project name defines your production database address, as well as the derived URLs for staging
+and development. Upon saving, the new name is applied directly to the production branch. However,
+for staging and development URLs, the change will only reflect after a rebuild.
 
 .. image:: settings/project-name.png
    :alt: The project name setting
