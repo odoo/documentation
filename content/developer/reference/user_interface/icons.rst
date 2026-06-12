@@ -595,7 +595,7 @@ Odoo Spreadsheet icons
 
 The `Odoo Spreadsheet <{GITHUB_PATH}/addons/spreadsheet/static/src/o_spreadsheet>`_ icons are
 defined as `<svg>` elements and rendered using QWeb `templates
-<{OWL_PATH}/doc/reference/templates.md>`_.
+<{OWL_PATH}/doc/v2/reference/templates.md>`_.
 
 .. example::
 
