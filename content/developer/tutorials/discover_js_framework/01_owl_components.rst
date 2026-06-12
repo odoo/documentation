@@ -4,7 +4,7 @@ Chapter 1: Owl components
 
 This chapter introduces the `Owl framework <https://github.com/odoo/owl>`_, a tailor-made component
 system for Odoo. The main building blocks of OWL are `components
-<{OWL_PATH}/doc/reference/component.md>`_ and `templates <{OWL_PATH}/doc/reference/templates.md>`_.
+<{OWL_PATH}/doc/v2/reference/component.md>`_ and `templates <{OWL_PATH}/doc/v2/reference/templates.md>`_.
 
 In Owl, every part of user interface is managed by a component: they hold the logic and define the
 templates that are used to render the user interface. In practice, a component is represented by a
@@ -80,13 +80,13 @@ As a first exercise, let us modify the `Playground` component located in
 
 #. Modify :file:`playground.js` so that it acts as a counter like in the example above.
    Keep `Playground` for the class name. You will need to use the `useState hook
-   <{OWL_PATH}/doc/reference/hooks.md#usestate>`_ so that the component is re-rendered
+   <{OWL_PATH}/doc/v2/reference/hooks.md#usestate>`_ so that the component is re-rendered
    whenever any part of the state object that has been read by this component is modified.
 #. In the same component, create an `increment` method.
 #. Modify the template in :file:`playground.xml` so that it displays your counter variable. Use
-   `t-esc <{OWL_PATH}/doc/reference/templates.md#outputting-data>`_ to output the data.
+   `t-esc <{OWL_PATH}/doc/v2/reference/templates.md#outputting-data>`_ to output the data.
 #. Add a button in the template and specify a `t-on-click
-   <{OWL_PATH}/doc/reference/event_handling.md#event-handling>`_ attribute in the button to
+   <{OWL_PATH}/doc/v2/reference/event_handling.md#event-handling>`_ attribute in the button to
    trigger the `increment` method whenever the button is clicked.
 
 .. tip::
@@ -94,7 +94,7 @@ As a first exercise, let us modify the `Playground` component located in
    easier when the files are not minified. Switch to :ref:`debug mode with assets
    <developer-mode/activation>` so that the files are not minified.
 
-This exercise showcases an important feature of Owl: the `reactivity system <{OWL_PATH}/doc/reference/reactivity.md>`_.
+This exercise showcases an important feature of Owl: the `reactivity system <{OWL_PATH}/doc/v2/reference/reactivity.md>`_.
 The `useState` function wraps a value in a proxy so Owl can keep track of which component
 needs which part of the state, so it can be updated whenever a value has been changed. Try
 removing the `useState` function and see what happens.
@@ -103,7 +103,7 @@ removing the `useState` function and see what happens.
 =======================================
 
 For now we have the logic of a counter in the `Playground` component, but it is not reusable. Let us
-see how to create a `sub-component <{OWL_PATH}/doc/reference/component.md#sub-components>`_ from it:
+see how to create a `sub-component <{OWL_PATH}/doc/v2/reference/component.md#sub-components>`_ from it:
 
 #. Extract the counter code from the `Playground` component into a new `Counter` component.
 #. You can do it in the same file first, but once it's done, update your code to move the
@@ -128,7 +128,7 @@ see how to create a `sub-component <{OWL_PATH}/doc/reference/component.md#sub-co
 Components are really the most natural way to divide a complicated user interface into multiple
 reusable pieces. But to make them truly useful, it is necessary to be able to communicate
 some information between them. Let us see how a parent component can provide information to a
-sub component by using attributes (most commonly known as `props <{OWL_PATH}/doc/reference/props.md>`_).
+sub component by using attributes (most commonly known as `props <{OWL_PATH}/doc/v2/reference/props.md>`_).
 
 The goal of this exercise is to create a `Card` component, that takes two props: `title` and `content`.
 For example, here is how it could be used:
@@ -166,7 +166,7 @@ the resulting output will simply display the html as a string.
 
 In this case, since the `Card` component may be used to display any kind of content, it makes sense
 to allow the user to display some html. This is done with the
-`t-out directive <{OWL_PATH}/doc/reference/templates.md#outputting-data>`_.
+`t-out directive <{OWL_PATH}/doc/v2/reference/templates.md#outputting-data>`_.
 
 However, displaying arbitrary content as html is dangerous, it could be used to inject malicious code, so
 by default, Owl will always escape a string unless it has been explicitely marked as safe with the `markup`
@@ -189,13 +189,13 @@ function.
 The `Card` component has an implicit API. It expects to receive two strings in its props: the `title`
 and the `content`. Let us make that API more
 explicit. We can add a props definition that will let Owl perform a validation step in `dev mode
-<{OWL_PATH}/doc/reference/app.md#dev-mode>`_. You can activate the dev mode in the `App
-configuration <{OWL_PATH}/doc/reference/app.md#configuration>`_ (but it is activated by default
+<{OWL_PATH}/doc/v2/reference/app.md#dev-mode>`_. You can activate the dev mode in the `App
+configuration <{OWL_PATH}/doc/v2/reference/app.md#configuration>`_ (but it is activated by default
 on the `awesome_owl` playground).
 
 It is a good practice to do props validation for every component.
 
-#. Add `props validation <{OWL_PATH}/doc/reference/props.md#props-validation>`_ to the `Card`
+#. Add `props validation <{OWL_PATH}/doc/v2/reference/props.md#props-validation>`_ to the `Card`
    component.
 #. Rename the `title` props into something else in the playground template, then check in the
    :guilabel:`Console` tab of your browser's dev tools that you can see an error.
@@ -209,7 +209,7 @@ direction: in this exercise, we want to display two `Counter` components, and be
 their values. So, the parent component (`Playground`) need to be informed whenever one of
 the `Counter` value is changed.
 
-This can be done by using a `callback prop <{OWL_PATH}/doc/reference/props.md#binding-function-props>`_:
+This can be done by using a `callback prop <{OWL_PATH}/doc/v2/reference/props.md#binding-function-props>`_:
 a prop that is a function meant to be called back. The child component can choose to call
 that function with any argument. In our case, we will simply add an optional `onChange` prop that will
 be called whenever the `Counter` component is incremented.
@@ -229,7 +229,7 @@ be called whenever the `Counter` component is incremented.
 .. important::
 
    There is a subtlety with callback props: they usually should be defined with the `.bind`
-   suffix. See the `documentation <{OWL_PATH}/doc/reference/props.md#binding-function-props>`_.
+   suffix. See the `documentation <{OWL_PATH}/doc/v2/reference/props.md#binding-function-props>`_.
 
 7. A todo list
 ==============
@@ -254,7 +254,7 @@ For this tutorial, a `todo` is an object that contains three values: an `id` (nu
       // in TodoList
       this.todos = useState([{ id: 3, description: "buy milk", isCompleted: false }]);
 
-#. Use `t-foreach <{OWL_PATH}/doc/reference/templates.md#loops>`_ to display each todo in a `TodoItem`.
+#. Use `t-foreach <{OWL_PATH}/doc/v2/reference/templates.md#loops>`_ to display each todo in a `TodoItem`.
 #. Display a `TodoList` in the playground.
 #. Add props validation to `TodoItem`.
 
@@ -273,7 +273,7 @@ For this tutorial, a `todo` is an object that contains three values: an `id` (nu
 =========================
 
 For now, the `TodoItem` component does not visually show if the `todo` is completed. Let us do that by
-using a `dynamic attributes <{OWL_PATH}/doc/reference/templates.md#dynamic-attributes>`_.
+using a `dynamic attributes <{OWL_PATH}/doc/v2/reference/templates.md#dynamic-attributes>`_.
 
 #. Add the Bootstrap classes `text-muted` and `text-decoration-line-through` on the `TodoItem` root element
    if it is completed.
@@ -293,7 +293,7 @@ html properties such as the `value` of an input).
 
       <div class="a" t-att-class="someExpression"/>
 
-   See also: `Owl: Dynamic class attributes <{OWL_PATH}/doc/reference/templates.md#dynamic-class-attribute>`_
+   See also: `Owl: Dynamic class attributes <{OWL_PATH}/doc/v2/reference/templates.md#dynamic-class-attribute>`_
 
 9. Adding a todo
 ================
@@ -308,7 +308,7 @@ a todo to the list.
       this.todos = useState([]);
 
 #. Add an input above the task list with placeholder *Enter a new task*.
-#. Add an `event handler <{OWL_PATH}/doc/reference/event_handling.md>`_ on the `keyup` event
+#. Add an `event handler <{OWL_PATH}/doc/v2/reference/event_handling.md>`_ on the `keyup` event
    named `addTodo`.
 #. Implement `addTodo` to check if enter was pressed (:code:`ev.keyCode === 13`), and in that
    case, create a new todo with the current content of the input as the description and clear the
@@ -321,12 +321,12 @@ a todo to the list.
    :align: center
 
 .. seealso::
-   `Owl: Reactivity <{OWL_PATH}/doc/reference/reactivity.md>`_
+   `Owl: Reactivity <{OWL_PATH}/doc/v2/reference/reactivity.md>`_
 
 Theory: Component lifecycle and hooks
 =====================================
 
-So far, we have seen one example of a hook function: `useState`. A `hook <{OWL_PATH}/doc/reference/hooks.md>`_
+So far, we have seen one example of a hook function: `useState`. A `hook <{OWL_PATH}/doc/v2/reference/hooks.md>`_
 is a special function that *hook into* the internals of the component. In the case of
 `useState`, it generates a proxy object linked to the current component. This is why
 hook functions have to be called in the `setup` method, and no later!
@@ -377,11 +377,11 @@ hook functions have to be called in the `setup` method, and no later!
 
 
 An Owl component goes through a lot of phases: it can be instantiated, rendered,
-mounted, updated, detached, destroyed... This is the `component lifecycle <{OWL_PATH}/doc/reference/component.md#lifecycle>`_.
+mounted, updated, detached, destroyed... This is the `component lifecycle <{OWL_PATH}/doc/v2/reference/component.md#lifecycle>`_.
 The figure above show the most important events in the life of a component (hooks are shown in purple).
 Roughly speaking, a component is created, then updated (potentially many times), then is destroyed.
 
-Owl provides a variety of built-in `hooks functions <{OWL_PATH}/doc/reference/hooks.md>`_. All of them have to be called in
+Owl provides a variety of built-in `hooks functions <{OWL_PATH}/doc/v2/reference/hooks.md>`_. All of them have to be called in
 the `setup` function. For example, if you want to execute some code when your component is mounted, you can use the `onMounted`
 hook:
 
@@ -401,15 +401,15 @@ hook:
 10. Focusing the input
 ======================
 
-Let's see how we can access the DOM with `t-ref <{OWL_PATH}/doc/reference/refs.md>`_ and `useRef
-<{OWL_PATH}/doc/reference/hooks.md#useref>`_. The main idea is that you need to mark
+Let's see how we can access the DOM with `t-ref <{OWL_PATH}/doc/v2/reference/refs.md>`_ and `useRef
+<{OWL_PATH}/doc/v2/reference/hooks.md#useref>`_. The main idea is that you need to mark
 the target element in the component template with a `t-ref`:
 
 .. code-block:: xml
 
    <div t-ref="some_name">hello</div>
 
-Then you can access it in the JS with the `useRef hook <{OWL_PATH}/doc/reference/hooks.md#useref>`_.
+Then you can access it in the JS with the `useRef hook <{OWL_PATH}/doc/v2/reference/hooks.md#useref>`_.
 However, there is a problem if you think about it: the actual html element for a
 component does not exist when the component is created. It only exists when the
 component is mounted. But hooks have to be called in the `setup` method. So, `useRef`
@@ -428,7 +428,7 @@ component is mounted.
 
 #. Focus the `input` from the previous exercise. This this should be done from the
    `TodoList` component (note that there is a `focus` method on the input html element).
-#. Bonus point: extract the code into a specialized `hook <{OWL_PATH}/doc/reference/hooks.md>`_
+#. Bonus point: extract the code into a specialized `hook <{OWL_PATH}/doc/v2/reference/hooks.md>`_
    `useAutofocus` in a new :file:`awesome_owl/utils.js` file.
 
 .. image:: 01_owl_components/autofocus.png
@@ -449,7 +449,7 @@ Now, let's add a new feature: mark a todo as completed. This is actually trickie
 think. The owner of the state is not the same as the component that displays it. So, the `TodoItem`
 component needs to communicate to its parent that the todo state needs to be toggled. One classic
 way to do this is by adding a `callback prop
-<{OWL_PATH}/doc/reference/props.md#binding-function-props>`_ `toggleState`.
+<{OWL_PATH}/doc/v2/reference/props.md#binding-function-props>`_ `toggleState`.
 
 #. Add an input with the attribute :code:`type="checkbox"` before the id of the task, which must
    be checked if the state `isCompleted` is true.
@@ -503,7 +503,7 @@ to display some arbitrary content inside a card, such as a sub-component? Well,
 it does not work, since the content of the card is described by a string. It would
 however be very convenient if we could describe the content as a piece of template.
 
-This is exactly what Owl's `slot <{OWL_PATH}/doc/reference/slots.md>`_ system is designed
+This is exactly what Owl's `slot <{OWL_PATH}/doc/v2/reference/slots.md>`_ system is designed
 for: allowing to write generic components.
 
 Let us modify the `Card` component to use slots:
