@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-15 17:30+0000\n"
+"POT-Creation-Date: 2026-06-12 17:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -335,7 +335,7 @@ msgid "Customize the ordering and checkout process to fit your business needs."
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce.rst:35
-#: ../../content/applications/websites/ecommerce/order_handling.rst:93
+#: ../../content/applications/websites/ecommerce/order_handling.rst:121
 msgid "Delivery"
 msgstr ""
 
@@ -867,8 +867,8 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/configuration/categories_variants.rst:20
 #: ../../content/applications/websites/ecommerce/configuration/prices.rst:54
-#: ../../content/applications/websites/ecommerce/order_handling.rst:72
-#: ../../content/applications/websites/ecommerce/order_handling.rst:185
+#: ../../content/applications/websites/ecommerce/order_handling.rst:100
+#: ../../content/applications/websites/ecommerce/order_handling.rst:213
 #: ../../content/applications/websites/ecommerce/shipping.rst:33
 #: ../../content/applications/websites/ecommerce/shipping.rst:92
 #: ../../content/applications/websites/website/configuration/multi_website.rst:85
@@ -1805,55 +1805,59 @@ msgid ":doc:`Website languages and translations </applications/websites/website/
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce/configuration/products.rst:259
-#: ../../content/applications/websites/ecommerce/order_handling.rst:130
+#: ../../content/applications/websites/ecommerce/order_handling.rst:158
 msgid "Stock management"
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/configuration/products.rst:262
-msgid "The :doc:`Inventory app </applications/inventory_and_mrp/inventory>` must be installed to handle stock-related settings and operations."
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/configuration/products.rst:265
+#: ../../content/applications/websites/ecommerce/configuration/products.rst:261
 msgid "To configure stock-related e-commerce options, go to :menuselection:`Website --> Configuration --> Settings`, scroll down to the :guilabel:`eCommerce` section, then to the :guilabel:`Inventory Defaults` subsection. The following settings are available:"
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/configuration/products.rst:269
+#: ../../content/applications/websites/ecommerce/configuration/products.rst:265
 msgid "If multiple :doc:`warehouses </applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses>` exist, select the relevant one from the :guilabel:`Warehouse` dropdown menu to set it as the default."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/configuration/products.rst:273
+#: ../../content/applications/websites/ecommerce/configuration/products.rst:269
 msgid "Next to :guilabel:`Out-of-Stock`, enable :guilabel:`Continue Selling` to allow customers to place orders even when the product is out of stock. Keep this option disabled to prevent customers from ordering products that are out of stock."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/configuration/products.rst:276
+#: ../../content/applications/websites/ecommerce/configuration/products.rst:272
 msgid "Enable the :guilabel:`Show Available Quantity` option to display the remaining available quantity on the product page when it drops below a defined threshold. The available quantity is calculated based on the :guilabel:`On hand` quantity minus the quantity already :doc:`reserved </applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods>` for outgoing transfers."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/configuration/products.rst:282
-msgid "These settings apply to *all* products, but can be adapted for individual products if needed. To do so, go to the product form and make sure the :ref:`Track Inventory option <inventory/product_management/tracking-inventory>` is enabled. Then, navigate to the :guilabel:`eCommerce` tab and, in the :guilabel:`Inventory` section, enable or disable the relevant :guilabel:`Sell when Out-of-Stock` and :guilabel:`Show Available Qty` options. You can also compose a custom :guilabel:`Out-of-Stock Message`. If the field is left empty, the default message `Out of Stock` is displayed on the product page when the item is no longer in stock."
+#: ../../content/applications/websites/ecommerce/configuration/products.rst:278
+msgid "These settings apply to *all* products, but can be adapted for individual products if needed. To do so, go to the product form and ensure the :ref:`Track inventory option <inventory/product_management/tracking-inventory>` is enabled."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/configuration/products.rst:291
+#: ../../content/applications/websites/ecommerce/configuration/products.rst:283
+msgid "When the :doc:`Inventory app </applications/inventory_and_mrp/inventory>` is installed, and :ref:`lots and serial numbers are enabled <inventory/product_management/enable-lot-serial>`, select an option from the :guilabel:`Tracking` dropdown menu."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/configuration/products.rst:287
+msgid "Then, navigate to the :guilabel:`eCommerce` tab and, in the :guilabel:`Inventory` section, enable or disable the relevant :guilabel:`Sell when Out-of-Stock` and :guilabel:`Show Available Qty` options. You can also compose a custom :guilabel:`Out-of-Stock Message`. If the field is left empty, the default message `Out of Stock` is displayed on the product page when the item is no longer in stock."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/configuration/products.rst:293
 msgid "Modifying the general :guilabel:`Inventory Defaults` settings does not automatically modify the related option(s) on the product form for existing products; it only affects products created after the feature is enabled/disabled."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/configuration/products.rst:294
+#: ../../content/applications/websites/ecommerce/configuration/products.rst:296
 msgid "To display the stock level on the product page, the :guilabel:`Product Type` field on the :ref:`product form <ecommerce/products/product-form>` must be set to :guilabel:`Goods` or :guilabel:`Combo`."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/configuration/products.rst:297
+#: ../../content/applications/websites/ecommerce/configuration/products.rst:299
 msgid "A :icon:`fa-envelope-o` (:guilabel:`envelope`) :guilabel:`Get notified when back in stock` button appears on the product page when an item is out of stock. Customers can click the link to enter their email address and receive a notification once the item is back in stock."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/configuration/products.rst:301
+#: ../../content/applications/websites/ecommerce/configuration/products.rst:303
 msgid "You can also add an :ref:`out-of-stock ribbon or badge <ecommerce/products/additional_features/product-highlight>` in the :guilabel:`Shop` section of the :guilabel:`eCommerce` tab on the :ref:`product form <ecommerce/products/product-form>`."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/configuration/products.rst:304
+#: ../../content/applications/websites/ecommerce/configuration/products.rst:306
 msgid "If the :ref:`Click & Collect <ecommerce/shipping/instore-pickup>` feature is enabled, the product availability is displayed on the product page based on the stock in the warehouse defined on the related :doc:`delivery method </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method>` form."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/configuration/products.rst:311
+#: ../../content/applications/websites/ecommerce/configuration/products.rst:313
 msgid "Currently, the `Boko Chair` is not available in any warehouses. However, customers can click the :icon:`fa-envelope-o` (:guilabel:`envelope`) :guilabel:`Get notified when back in stock` link to receive a notification as soon as the product becomes available again. A custom :guilabel:`Out-of-Stock Message` can also be added to inform customers that the item will be replenished."
 msgstr ""
 
@@ -1861,15 +1865,15 @@ msgstr ""
 msgid "Example of a product that is out of stock, but which will be available again."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/configuration/products.rst:321
+#: ../../content/applications/websites/ecommerce/configuration/products.rst:323
 msgid "If a unique reference is needed for inventory management, install the :doc:`Manufacturing app </applications/inventory_and_mrp/manufacturing>` and create :doc:`kit bills of materials </applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping>`. Each kit links its published \"virtual\" products to the main reference tracked in Inventory. This ensures that any item sold on the website is converted into the corresponding stocked item in the delivery order."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/configuration/products.rst:331
+#: ../../content/applications/websites/ecommerce/configuration/products.rst:333
 msgid "Packagings"
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/configuration/products.rst:333
+#: ../../content/applications/websites/ecommerce/configuration/products.rst:335
 msgid "To offer different product pack sizes to customers on the e-commerce, configure product :doc:`packagings </applications/inventory_and_mrp/inventory/product_management/configure/packaging>`. Then go to the :ref:`product form <ecommerce/products/product-form>` and navigate to the :guilabel:`Sales` tab. Under :guilabel:`Upsell & cross-sell`, add as many package types as needed in the :guilabel:`Packagings` field. The available package types are displayed on the e-commerce :doc:`product page <../ecommerce_design/product_page>`."
 msgstr ""
 
@@ -1877,7 +1881,7 @@ msgstr ""
 msgid "Product packages on the e-commerce page."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/configuration/products.rst:345
+#: ../../content/applications/websites/ecommerce/configuration/products.rst:347
 msgid "It is also possible to add packagings to a specific :ref:`product variant <ecommerce/categories_variants/product-variants>`. To do so, go to the product form, click the :icon:`fa-sitemap` :guilabel:`Variants` :ref:`smart button <products/variants/variants-smart-button>`, and select the relevant product variant. Under :guilabel:`Sales`, add as many package types as needed in the :guilabel:`Packagings` field."
 msgstr ""
 
@@ -2667,7 +2671,7 @@ msgid ":doc:`/applications/sales/sales/amazon_connector`"
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce/order_handling.rst:5
-msgid "In Odoo's e-commerce workflow, an online purchase typically goes through three main steps: :ref:`sale <ecommerce/handling/sales>`, :ref:`delivery <ecommerce/handling/delivery>`, and :ref:`invoicing <ecommerce/handling/invoices>`. Each step generates key documents, including sales orders upon order confirmation, delivery orders to manage :doc:`picking </applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods>`, :doc:`packing </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack>`, and :doc:`shipping <shipping>`, and invoices. Odoo eCommerce also offers additional tools to send :ref:`abandoned cart emails <ecommerce/handling/abandoned_cart>`, ensure :ref:`stock availability <ecommerce/handling/stock-management>`, and handle product :ref:`returns and refunds <ecommerce/handling/returns>`."
+msgid "In Odoo's e-commerce workflow, an online purchase typically goes through three main steps: :ref:`sale <ecommerce/handling/sales>`, :ref:`delivery <ecommerce/handling/delivery>`, and :ref:`invoicing <ecommerce/handling/invoices>`. Each step generates key documents, including sales orders upon order confirmation, delivery orders to manage :doc:`picking </applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods>`, :doc:`packing </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack>`, and :doc:`shipping <shipping>`, and invoices. Odoo eCommerce also offers additional tools for sending :ref:`abandoned cart emails <ecommerce/handling/abandoned_cart>`, ensuring :ref:`stock availability <ecommerce/handling/stock-management>`, and handling product :ref:`returns and refunds <ecommerce/handling/returns>`."
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce/order_handling.rst:20
@@ -2675,126 +2679,146 @@ msgid "Sale"
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce/order_handling.rst:22
-msgid "To view all quotations and orders, navigate to :menuselection:`Website --> eCommerce --> Orders`, and select one to open it. The status bar at the top of the order shows its current status:"
+msgid "To view all quotations and orders, navigate to :menuselection:`Website --> eCommerce --> Orders`. By default, the :guilabel:`Confirmed` filter is enabled. Remove this filter to display all records."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:25
+#: ../../content/applications/websites/ecommerce/order_handling.rst:28
+msgid "The dashboard at the top of the :guilabel:`Orders` page provides a summary of the orders and includes the following filter buttons:"
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:31
+msgid ":guilabel:`To Fulfill`: confirmed and paid orders (i.e., :ref:`sales orders <ecommerce/handling/sales-sales-order>`)"
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:33
+msgid ":guilabel:`To Confirm`: unpaid and unconfirmed orders (i.e., :ref:`sent but unconfirmed quotations <ecommerce/handling/sales-quotation-sent>`)"
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:35
+msgid ":guilabel:`To Invoice`: confirmed orders that are ready for invoicing but have not necessarily been fulfilled (i.e., :ref:`sales orders <ecommerce/handling/sales-sales-order>`)"
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:38
+msgid "The number of :guilabel:`Visitors`, :guilabel:`Orders`, and the :guilabel:`Sales` amount for a given period is displayed on the right side of the :guilabel:`Orders` page dashboard."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:None
+msgid "Orders dashboard."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:44
+msgid "To view the details of a specific order, select it from the list. The status bar at the top of the order form shows its current status in the sales flow:"
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:49
 msgid ":guilabel:`Quotation`: A product has been :ref:`added to the cart <ecommerce/checkout/add-to-cart>`, but the customer has not yet completed the :ref:`checkout process <ecommerce/checkout/steps>`. If the customer is not logged in, the quotation is assigned to the default *Public User* contact."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:29
-msgid ":guilabel:`Quotation Sent`: The customer has completed the :ref:`checkout process <ecommerce/checkout/steps>` and confirmed the order, but the :ref:`payment <ecommerce/checkout/payment>` has not yet been confirmed."
+#: ../../content/applications/websites/ecommerce/order_handling.rst:56
+msgid ":guilabel:`Quotation Sent`: The customer has completed the :ref:`checkout process <ecommerce/checkout/steps>`, but the :ref:`payment <ecommerce/checkout/payment>` has not yet been confirmed (orders with this status are displayed when the :guilabel:`To Confirm` :ref:`dashboard button <ecommerce/handling/sales-dashboard>` is selected)."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:32
-msgid ":guilabel:`Sales Order`: The customer has completed the :ref:`checkout process <ecommerce/checkout/steps>`, confirmed the order, and the :ref:`payment <ecommerce/checkout/payment>` has been successfully received."
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:37
-msgid "The :guilabel:`Confirmed` filter is enabled by default in the :guilabel:`Orders` list. To view *all* quotations and orders, remove the filter."
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:39
-msgid "To view only orders in the :guilabel:`Quotation Sent` stage, go to :menuselection:`Website --> eCommerce --> Orders` and remove the :guilabel:`Confirmed` filter. Then, open the :icon:`fa-caret-down` dropdown menu and, under :guilabel:`Filters`, select :guilabel:`Unpaid`."
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:42
-msgid "E-commerce orders can be automatically assigned to a specific sales team or salesperson. To do so, go to :menuselection:`Website --> Configuration --> Settings`. In the :guilabel:`eCommerce` section, under :guilabel:`Orders Assignment`, select the relevant :guilabel:`Sales Team` or :guilabel:`Salesperson`."
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:48
-msgid "This three-step process is not visible to customers. However, they can view their orders and check their status through the customer :doc:`portal </applications/general/users/user_portals>`."
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:51
-msgid "If the customer pays via :ref:`wire transfer <payment_providers/bank_payments/wire_transfer>`, the quotation is *not* automatically confirmed. In this case, the customer receives a notification on the :guilabel:`My account` page of their :doc:`customer account <configuration/customer_accounts>` to review and pay for the order. After the payment is received, the order must be manually confirmed in the backend."
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:58
-msgid ":doc:`checkout`"
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:59
-msgid ":doc:`/applications/finance/payment_providers`"
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:64
-msgid "Abandoned carts"
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:66
-msgid "An abandoned cart is created when a customer adds products to the cart but does not go through the :ref:`checkout process <ecommerce/checkout/steps>` or leaves the website before completing it. It is possible to automatically send an email reminder to the customer for these pending orders."
+#: ../../content/applications/websites/ecommerce/order_handling.rst:63
+msgid ":guilabel:`Sales Order`: The customer has completed the :ref:`checkout process <ecommerce/checkout/steps>`, and the :ref:`payment <ecommerce/checkout/payment>` has been successfully received (orders with this status are displayed when the :guilabel:`To Fulfill` or :guilabel:`To Invoice` :ref:`dashboard buttons <ecommerce/handling/sales-dashboard>` are selected, depending on the configured workflow)."
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce/order_handling.rst:70
-msgid "To enable abandoned cart reminders:"
+msgid "This three-step process is not visible to customers. However, they can view their orders and check their status through the customer :doc:`portal </applications/general/users/user_portals>`."
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce/order_handling.rst:73
-msgid "In the :guilabel:`eCommerce` section, enable :guilabel:`Follow up abandoned carts`."
+msgid "If the customer pays via :ref:`wire transfer <payment_providers/bank_payments/wire_transfer>`, the quotation is *not* automatically confirmed. In this case, the customer receives a notification on the :guilabel:`My account` page of their :doc:`customer account <configuration/customer_accounts>` to review and pay for the order. After the payment is received, the order must be manually confirmed in the backend."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:74
-msgid "Set the time delay after which the reminder email is sent in the :guilabel:`Send after` field, then click :guilabel:`Save`."
+#: ../../content/applications/websites/ecommerce/order_handling.rst:80
+msgid "E-commerce orders can be automatically assigned to a specific sales team or salesperson. To do so, go to :menuselection:`Website --> Configuration --> Settings`. In the :guilabel:`eCommerce` section, under :guilabel:`Orders Assignment`, select the relevant :guilabel:`Sales Team` or :guilabel:`Salesperson`."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:76
-msgid "If needed, click the :icon:`fa-arrow-right` :guilabel:`Customize Abandoned Email Template` link to customize the :doc:`email template </applications/general/companies/email_template>`."
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:79
-msgid "To view all abandoned carts, go to :menuselection:`Website --> eCommerce --> Orders` and remove the :guilabel:`Confirmed` filter. Open the :icon:`fa-caret-down` dropdown menu and, under :guilabel:`Filters`, select :guilabel:`Abandoned`."
-msgstr ""
-
-#: ../../content/applications/websites/ecommerce/order_handling.rst:84
-msgid "To receive reminders, customers must have entered their contact details during checkout or be logged in when adding items to the cart. Without the customer details, it remains a :ref:`quotation <ecommerce/handling/sales>` with no follow-up."
+#: ../../content/applications/websites/ecommerce/order_handling.rst:86
+msgid ":doc:`checkout`"
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce/order_handling.rst:87
-msgid "Abandoned cart reminders are only sent for carts created after the feature is enabled. Existing abandoned carts are not affected."
+msgid ":doc:`/applications/finance/payment_providers`"
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:96
-msgid "The :doc:`Inventory app </applications/inventory_and_mrp/inventory>` must be installed to process deliveries."
+#: ../../content/applications/websites/ecommerce/order_handling.rst:92
+msgid "Abandoned carts"
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:94
+msgid "An abandoned cart is created when a customer adds products to the cart but does not go through the :ref:`checkout process <ecommerce/checkout/steps>` or leaves the website before completing it. It is possible to automatically send an email reminder to the customer for these pending orders."
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce/order_handling.rst:98
-msgid "Delivery orders are not generated for :guilabel:`Service` or :doc:`subscription </applications/sales/subscriptions>` products."
+msgid "To enable abandoned cart reminders:"
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce/order_handling.rst:101
-msgid "Once a sales order is confirmed, a delivery order is automatically created. To access it, click the :icon:`fa-truck` :guilabel:`Delivery` smart button on the sales order."
+msgid "In the :guilabel:`eCommerce` section, enable :guilabel:`Follow up abandoned carts`."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:102
+msgid "Set the time delay after which the reminder email is sent in the :guilabel:`Send after` field, then click :guilabel:`Save`."
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce/order_handling.rst:104
-msgid "The next step is preparing e-commerce orders in the warehouse. Depending on order volume, refill and stock management strategies, or available resources, different :doc:`stock handling flows for receipts and deliveries </applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations>` can be implemented. These flows may involve manually receiving, :doc:`picking </applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods>`, and :doc:`packing </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack>` products, printing :doc:`shipping labels </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels>`, and :doc:`shipping  <shipping>` orders to customers, or handling these processes through :doc:`dropshipping </applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/dropshipping>` or :doc:`consignment flows </applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock>`."
+msgid "If needed, click the :icon:`fa-arrow-right` :guilabel:`Customize Abandoned Email Template` link to customize the :doc:`email template </applications/general/companies/email_template>`."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:119
-msgid "After completing the warehouse operations, return to the delivery order and click :guilabel:`Validate` once the order has been shipped."
+#: ../../content/applications/websites/ecommerce/order_handling.rst:107
+msgid "To view all abandoned carts, go to :menuselection:`Website --> eCommerce --> Orders` and remove the :guilabel:`Confirmed` filter. Open the :icon:`fa-caret-down` dropdown menu and, under :guilabel:`Filters`, select :guilabel:`Abandoned`."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:123
-msgid "To enable automatic confirmation emails for completed delivery orders (:guilabel:`Done` status), go to :menuselection:`Inventory --> Configuration --> Settings`, scroll to the :guilabel:`Shipping` section, and enable :guilabel:`Confirmation Email`."
+#: ../../content/applications/websites/ecommerce/order_handling.rst:112
+msgid "To receive reminders, customers must have entered their contact details during checkout or be logged in when adding items to the cart. Without the customer details, it remains a :ref:`quotation <ecommerce/handling/sales>` with no follow-up."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:115
+msgid "Abandoned cart reminders are only sent for carts created after the feature is enabled. Existing abandoned carts are not affected."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:124
+msgid "The :doc:`Inventory app </applications/inventory_and_mrp/inventory>` must be installed to process deliveries."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:126
+msgid "Delivery orders are not generated for :guilabel:`Service` or :doc:`subscription </applications/sales/subscriptions>` products."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:129
+msgid "Once a sales order is confirmed, a delivery order is automatically created. To access it, click the :icon:`fa-truck` :guilabel:`Delivery` smart button on the sales order."
 msgstr ""
 
 #: ../../content/applications/websites/ecommerce/order_handling.rst:132
+msgid "The next step is preparing e-commerce orders in the warehouse. Depending on order volume, refill and stock management strategies, or available resources, different :doc:`stock handling flows for receipts and deliveries </applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations>` can be implemented. These flows may involve manually receiving, :doc:`picking </applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods>`, and :doc:`packing </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack>` products, printing :doc:`shipping labels </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels>`, and :doc:`shipping  <shipping>` orders to customers, or handling these processes through :doc:`dropshipping </applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/dropshipping>` or :doc:`consignment flows </applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock>`."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:147
+msgid "After completing the warehouse operations, return to the delivery order and click :guilabel:`Validate` once the order has been shipped."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:151
+msgid "To enable automatic confirmation emails for completed delivery orders (:guilabel:`Done` status), go to :menuselection:`Inventory --> Configuration --> Settings`, scroll to the :guilabel:`Shipping` section, and enable :guilabel:`Confirmation Email`."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/order_handling.rst:160
 msgid "To ensure that products ordered by customers are reserved in stock, go to :menuselection:`Inventory --> Configuration --> Operation Types`, click the :guilabel:`Delivery Orders` operation type, and set the :guilabel:`Reservation Method` field to :doc:`At Confirmation </applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation>`. When enabled, product quantities are automatically reserved once the order is confirmed, preventing items from becoming unavailable after the order is placed."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:140
+#: ../../content/applications/websites/ecommerce/order_handling.rst:168
 msgid "If the customer pays by :ref:`wire transfer <payment_providers/bank_payments/wire_transfer>`, products are not reserved in stock until the payment is received and the order is manually confirmed."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:145
+#: ../../content/applications/websites/ecommerce/order_handling.rst:173
 msgid ":doc:`shipping`"
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:150
+#: ../../content/applications/websites/ecommerce/order_handling.rst:178
 msgid "Returns and refunds"
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:152
+#: ../../content/applications/websites/ecommerce/order_handling.rst:180
 msgid "Customers can :doc:`return </applications/sales/sales/products_prices/returns>` products through the :doc:`customer portal </applications/general/users/user_portals>` by navigating to the :guilabel:`Your Orders` section, selecting the relevant order, and clicking the :guilabel:`Return` button. A return document is automatically generated."
 msgstr ""
 
@@ -2802,67 +2826,67 @@ msgstr ""
 msgid "Return button in the portal."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:160
+#: ../../content/applications/websites/ecommerce/order_handling.rst:188
 msgid "Once the returned items are received, initiate the :doc:`return and refund process </applications/sales/sales/products_prices/returns>` in the backend."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:164
+#: ../../content/applications/websites/ecommerce/order_handling.rst:192
 msgid ":doc:`Returning </applications/sales/sales/products_prices/returns>` products may not be possible depending on the :doc:`product type </applications/inventory_and_mrp/inventory/product_management/configure/type>`."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:167
+#: ../../content/applications/websites/ecommerce/order_handling.rst:195
 msgid "To issue :doc:`refunds </applications/finance/accounting/customer_invoices/credit_notes>`, the payment must have been made through a :ref:`refund-compatible payment provider <payment_providers/supported_providers>`."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:172
+#: ../../content/applications/websites/ecommerce/order_handling.rst:200
 msgid ":doc:`/applications/services/helpdesk/advanced/after_sales`"
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:177
+#: ../../content/applications/websites/ecommerce/order_handling.rst:205
 msgid "Invoicing"
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:179
+#: ../../content/applications/websites/ecommerce/order_handling.rst:207
 msgid "The final step of an e-commerce order is generating and sending the :doc:`customer invoice </applications/finance/accounting/customer_invoices>`. Depending on your needs, invoices can be generated manually or automatically."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:183
+#: ../../content/applications/websites/ecommerce/order_handling.rst:211
 msgid "To automate invoicing:"
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:186
+#: ../../content/applications/websites/ecommerce/order_handling.rst:214
 msgid "In the :guilabel:`eCommerce` section, enable :guilabel:`Automatic Invoice`."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:187
+#: ../../content/applications/websites/ecommerce/order_handling.rst:215
 msgid "Select the relevant :guilabel:`Email Template`, then click :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:188
-msgid "If needed, click the :icon:`fa-arrow-right` icon next to the template name to customize the :doc:`email template </applications/general/companies/email_template>`."
+#: ../../content/applications/websites/ecommerce/order_handling.rst:216
+msgid "If needed, click the :icon:`fa-arrow-right` (:guilabel:`Internal link`) icon next to the template name to customize the :doc:`email template </applications/general/companies/email_template>`."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:192
+#: ../../content/applications/websites/ecommerce/order_handling.rst:220
 msgid "Customers can view their invoices under :guilabel:`Your Invoices` in the :doc:`portal </applications/general/users/user_portals>`."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:194
+#: ../../content/applications/websites/ecommerce/order_handling.rst:222
 msgid "Invoices are only sent automatically if (and when) the :doc:`payment </applications/finance/payment_providers>` is registered."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:196
-msgid "When automatic invoicing is disabled and invoices are created manually, they appear as :doc:`pro-forma invoices </applications/sales/sales/invoicing/proforma>` in the customer portal until they are manually :ref:`sent to the customer <accounting/invoice/sending>`."
+#: ../../content/applications/websites/ecommerce/order_handling.rst:224
+msgid "When automatic invoicing is disabled, and invoices are created manually, they appear as :doc:`pro-forma invoices </applications/sales/sales/invoicing/proforma>` in the customer portal until they are manually :ref:`sent to the customer <accounting/invoice/sending>`."
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:201
+#: ../../content/applications/websites/ecommerce/order_handling.rst:229
 msgid ":doc:`/applications/finance/accounting/payments`"
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:202
+#: ../../content/applications/websites/ecommerce/order_handling.rst:230
 msgid ":doc:`/applications/sales/sales/invoicing/invoicing_policy`"
 msgstr ""
 
-#: ../../content/applications/websites/ecommerce/order_handling.rst:203
+#: ../../content/applications/websites/ecommerce/order_handling.rst:231
 msgid "`Create a customer invoice from a sales order <https://www.youtube.com/watch?v=14AIEJ_B7rA>`_"
 msgstr ""
 
