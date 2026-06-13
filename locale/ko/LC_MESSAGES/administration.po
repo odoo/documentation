@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-05 19:24+0000\n"
-"PO-Revision-Date: 2026-06-06 12:33+0000\n"
+"PO-Revision-Date: 2026-06-13 10:52+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-17-doc/"
 "administration/ko/>\n"
@@ -4420,6 +4420,8 @@ msgid ""
 "A build is considered **failed** if errors occur during its creation. Failed "
 "builds are highlighted in **red**."
 msgstr ""
+"빌드 생성 중 오류가 발생하면\\ **실패**\\ 한 것으로 간주됩니다. 실패한 "
+"빌드는\\ **빨간색**\\ 으로 강조 표시됩니다."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:36
 msgid ""
@@ -4428,6 +4430,9 @@ msgid ""
 "server with your new revision and tries to load the current production "
 "database on it."
 msgstr ""
+"빌드가 항상 처음부터 데이터베이스를 생성하는 것은 아닙니다. 예를 들어 "
+"프로덕션 브랜치에 변경 사항을 푸시하면 생성된 빌드는 새 리비전으로 서버를 "
+"시작하고 현재 프로덕션 데이터베이스를 로드하려고 시도합니다."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:50
 msgid ""
@@ -4435,18 +4440,25 @@ msgid ""
 "this build is successful, this database will become the production database "
 "of your project."
 msgstr ""
+"프로덕션 브랜치의 첫 번째 빌드는 처음부터 데이터베이스를 생성합니다. 이 "
+"빌드가 성공하면 해당 데이터베이스가\\ 프로젝트의\\ 프로덕션 데이터베이스가 "
+"됩니다."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:53
 msgid ""
 "From then on, pushes to the production branch will create new builds that "
 "attempt to load the database using a server running the new revision."
 msgstr ""
+"그 이후부터 프로덕션 브랜치에 푸시하면 새 리비전을 실행하는 서버를 사용하여 "
+"데이터베이스를 로드하려는 새 빌드가 생성됩니다."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:56
 msgid ""
 "If the build is successful or almost successful, the production database "
 "will run with this build and its associated revision."
 msgstr ""
+"빌드가 성공하거나 거의 성공하면 프로덕션 데이터베이스가 이 빌드 및 관련 "
+"리비전과 함께 실행됩니다."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:59
 msgid ""
@@ -4454,6 +4466,9 @@ msgid ""
 "build is reused to load the database. In that case, the database continues "
 "to run using the previous successful revision."
 msgstr ""
+"빌드가 데이터베이스를 로드하거나 업데이트하지 못하면 이전에 성공한 빌드를 "
+"재사용하여 데이터베이스를 로드합니다. 이 경우 데이터베이스는 이전에 성공한 "
+"리비전을 사용하여 계속 실행됩니다."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:63
 msgid ""
@@ -4461,12 +4476,17 @@ msgid ""
 "builds list. If a build fails, it is placed after the build currently "
 "running the production database."
 msgstr ""
+"프로덕션 데이터베이스를 실행하는 데 사용되는 빌드는 항상 빌드 목록에서 첫 "
+"번째입니다. 빌드가 실패하면 현재 프로덕션 데이터베이스를 실행 중인 빌드 "
+"다음에 배치됩니다."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:71
 msgid ""
 "Staging builds duplicate the production database and attempt to load this "
 "copy using the revisions of the staging branches."
 msgstr ""
+"스테이징 빌드는 프로덕션 데이터베이스를 복제하고 스테이징 브랜치의 리비전을 "
+"사용하여 이 복사본을 로드하려고 시도합니다."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:74
 msgid ""
@@ -4474,18 +4494,25 @@ msgid ""
 "uses a fresh copy of the production database. Databases are not reused "
 "between builds of the same branch. This ensures that:"
 msgstr ""
+"스테이징 브랜치에 새 리비전을 푸시할 때마다 결과 빌드는 프로덕션 "
+"데이터베이스의 새로운 복사본을 사용합니다. 데이터베이스는 동일한 브랜치의 "
+"빌드 간에 재사용되지 않습니다. 이를 통해 다음을 보장합니다."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:77
 msgid ""
 "Staging builds use databases that closely match the current production "
 "state, so your tests are not performed on outdated data."
 msgstr ""
+"스테이징 빌드는 현재 프로덕션 상태와 밀접하게 일치하는 데이터베이스를 "
+"사용하므로 테스트가 오래된 데이터에서 수행되지 않습니다."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:79
 msgid ""
 "You can freely experiment within a staging database. When you want to start "
 "over with a new copy of the production database, you can request a rebuild."
 msgstr ""
+"스테이징 데이터베이스 내에서 자유롭게 실험할 수 있습니다. 프로덕션 "
+"데이터베이스의 새 복사본으로 다시 시작하려면 재빌드를 요청할 수 있습니다."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:82
 msgid ""
@@ -4493,23 +4520,32 @@ msgid ""
 "database and do not apply them in production, those changes will not be "
 "present in the next build of the same staging branch."
 msgstr ""
+"그러나 이는 스테이징 데이터베이스에서 구성을 변경하고 프로덕션에 적용하지 "
+"않으면 동일한 스테이징 브랜치의 다음 빌드에 해당 변경 사항이 없다는 "
+"의미이기도 합니다."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:91
 msgid ""
 "Development builds create new databases, load the demo data, and run the "
 "unit tests."
 msgstr ""
+"개발 빌드는 새 데이터베이스를 생성하고 데모 데이터를 로드한 다음 단위 "
+"테스트를 실행합니다."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:93
 msgid ""
 "A build will be considered failed if tests fail during installation, as they "
 "are designed to raise errors when something is wrong."
 msgstr ""
+"설치 중 테스트가 실패하면 빌드가 실패한 것으로 간주됩니다. 테스트는 문제가 "
+"있을 때 오류를 발생시키도록 설계되어 있기 때문입니다."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:96
 msgid ""
 "If all tests pass and no errors occur, the build is considered successful."
 msgstr ""
+"모든 테스트를 통과하고 오류가 발생하지 않으면 빌드가 성공한 것으로 "
+"간주됩니다."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:99
 msgid ""
@@ -4517,6 +4553,8 @@ msgid ""
 "can take up to one hour to be ready. This is due to the large number of "
 "tests included in the default Odoo module suite."
 msgstr ""
+"설치 및 테스트할 모듈 목록에 따라 개발 빌드를 준비하는 데 최대 1시간이 걸릴 "
+"수 있습니다. 기본 Odoo 모듈 제품군에 포함된 테스트 수가 많기 때문입니다."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:105
 msgid "Features"
@@ -4528,6 +4566,9 @@ msgid ""
 "the time of their last created build. The stage highlighted in purple "
 "corresponds to the stage selected in the :guilabel:`Branches` menu."
 msgstr ""
+"프로덕션 브랜치는 항상 먼저 표시됩니다. 다른 브랜치는 마지막으로 생성된 "
+"빌드의 시간순으로 정렬됩니다. 보라색으로 강조 표시된 스테이지는\\ "
+":guilabel:`브랜치`\\ 메뉴에서 선택한 스테이지에 해당합니다."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:112
 msgid "You can filter branches using the search bar."
@@ -4555,6 +4596,9 @@ msgid ""
 "revision of the branch (it is not available if a build is already in "
 "progress for that branch)."
 msgstr ""
+":guilabel:`재빌드`\\ 를 클릭하여 새 빌드를 생성합니다. 브랜치의 최신 "
+"리비전을 사용합니다(해당 브랜치에 대해 빌드가 이미 진행 중인 경우 사용할 수 "
+"없음)."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:124
 msgid "For each build, you can:"
@@ -4575,6 +4619,10 @@ msgid ""
 "caret-down` (:guilabel:`More Actions`) button next to :guilabel:`Connect` "
 "and selecting :guilabel:`Connect as`."
 msgstr ""
+":guilabel:`연결`\\ 을 클릭하여 관리자로 빌드의 데이터베이스에 액세스하거나\\ "
+":icon:`fa-caret-down`(:guilabel:`추가 작업`)\\ 버튼을\\ :guilabel:`연결`\\ "
+"옆에서 클릭하고\\ :guilabel:`다음으로 연결`\\ 을 선택하여 다른 사용자로 "
+"액세스합니다."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:130
 msgid ""
@@ -4585,6 +4633,11 @@ msgid ""
 "and development stages), :guilabel:`Monitoring`, and :guilabel:`Download DB "
 "dump` (for the production and staging stages)."
 msgstr ""
+":icon:`fa-caret-down`(:guilabel:`추가 작업`)\\ 버튼을\\ :guilabel:`연결`\\ "
+"옆에서 클릭하고\\ :guilabel:`로그`,\\ :guilabel:`웹 셸`,\\ "
+":guilabel:`편집기`,\\ :guilabel:`발신 이메일`(스테이징 및 개발 스테이지용),\\"
+" :guilabel:`모니터링`,\\ :guilabel:`DB 덤프 다운로드`(프로덕션 및 스테이징 "
+"스테이지용)를 선택하여 브랜치 보기와 동일한 도구에 액세스합니다."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:None
 msgid "A build's options"
