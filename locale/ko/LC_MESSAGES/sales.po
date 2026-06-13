@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-05 19:23+0000\n"
+"POT-Creation-Date: 2026-06-12 17:30+0000\n"
 "PO-Revision-Date: 2026-06-09 23:11+0000\n"
 "Last-Translator: \"Kwanghee Park (kwpa)\" <kwpa@odoo.com>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-18-doc/sales/"
@@ -20813,11 +20813,11 @@ msgid ""
 "be created by clicking the :guilabel:`New` button."
 msgstr ""
 "수정할 청구서로 이동하려면 :menuselection:`판매 앱 --> 주문서 --> 주문서` 로 "
-"이동합니다. 주문서를 열고 :guilabel:`청구서` 스마트 버튼을 클릭합니다. "
-"청구서를 열고 :guilabel:`계정` 열 항목의 드롭다운 화살표를 클릭한 후 "
-":guilabel:`추가 검색...` 을 클릭하면 :guilabel:`검색: 계정` 양식이 "
-"표시됩니다. 이 양식을 통해 기존 계정 목록에 있는 다른 계정을 선택할 수 "
-"있습니다. 새로은 계정을 생성하려면 :guilabel:`새로 만들기` 버튼을 클릭합니다."
+"이동합니다. 주문서를 열고 :guilabel:`청구서` 스마트 버튼을 클릭합니다. 청구서"
+"를 열고 :guilabel:`계정` 열 항목의 드롭다운 화살표를 클릭한 후 :guilabel:`추"
+"가 검색...` 을 클릭하면 :guilabel:`검색: 계정` 양식이 표시됩니다. 이 양식을 "
+"통해 기존 계정 목록에 있는 다른 계정을 선택할 수 있습니다. 새로은 계정을 생성"
+"하려면 :guilabel:`새로 만들기` 버튼을 클릭합니다."
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
 msgid ""
@@ -27657,6 +27657,103 @@ msgstr ":doc:`pdf_quote_builder`"
 msgid ":doc:`../invoicing/proforma`"
 msgstr ":doc:`../invoicing/proforma`"
 
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:3
+msgid "Custom email signatures"
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:5
+msgid ""
+"Some business workflows require email template signatures to be updated so "
+"outgoing communications display the appropriate contact information for "
+"customer follow-up and correspondence."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:8
+msgid ""
+"This is particularly important when responsibility for a customer "
+"opportunity is shared between team members. In these cases, the employee "
+"responsible for managing quotes and customer communications may differ from "
+"the employee associated with the sales order for commission purposes."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:12
+msgid ""
+"Email templates default to the signature of the employee assigned to the "
+"record; therefore the template should be modified to display the contact "
+"information of the employee responsible for customer follow-up. This ensures "
+"customers know who to contact with questions, approvals, and other "
+"correspondence."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:18
+msgid ""
+"The `Sales: Order Confirmation` email template is used as the example "
+"throughout this article to demonstrate how email signatures can be "
+"customized."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:22
+msgid "Open the email template"
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:24
+msgid ""
+"To modify an email template, first :ref:`activate developer mode <developer-"
+"mode/activation>`, then navigate to :menuselection:`Settings app --> "
+"Technical --> Email Templates`. Click on the email template being modified, "
+"in this case, the `Sales: Order Confirmation` template."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:29
+msgid "Update from field"
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:31
+msgid ""
+"On the email template, open the *Email Configuration* tab. Delete the "
+"default text in the :guilabel:`From` field and replace it with: "
+"`{{ (user.email_formatted) }}`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:None
+msgid "The from field updated with the correct text."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:38
+msgid "Modify the code"
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:40
+msgid ""
+"Click the *Content* tab, and highlight some text so the toolbar is visible. "
+"Click the :guilabel:`</> (Code view)` button and the text changes to code."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:43
+msgid ""
+"Search the code for `signature` to find the two instances of the code "
+"`object.user_id.signature`. Replace both `object.user_id.signature` "
+"instances with `User.signature`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:None
+msgid ""
+"The two 'object.user_id.signature' fields replaced with 'User.signature'."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:50
+msgid ""
+"If a user has not set up their email signature, instead of having the "
+"default `Mitchell Admin` populate the signature, the company name can be "
+"displayed instead."
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:53
+msgid ""
+"To do this, search for `Mitchell Admin` in the code, and replace it with the "
+"company name."
+msgstr ""
+
 #: ../../content/applications/sales/sales/sales_quotations/deadline.rst:3
 msgid "Quotation deadlines"
 msgstr "견적 마감일"
@@ -28533,14 +28630,14 @@ msgid ""
 "Type the name of the desired product or click :guilabel:`Search More...` to "
 "find additional products."
 msgstr ""
-"각각의 견적서에 품목을 추가하려면 :menuselection:`판매 --> 주문서 --> "
-"견적서` 로 이동하여 기존 견적서를 선택하거나 :doc:`새 견적서를 생성하세요 "
-"<create_quotations>`. 그런 다음 :guilabel:`추가 품목` 탭을 엽니다. 그러면 "
-":guilabel:`품목` 열에 빈 필드가 나타납니다. :guilabel:`품목 추가하기` 를 "
-"클릭하여 품목을 추가합니다. 클릭하면 데이터베이스의 품목 목록이 드롭다운 "
-"메뉴로 표시됩니다. 드롭다운 메뉴에서 원하는 품목을 선택하여 옵션 품목으로 "
-"추가합니다. 필요한 품목명을 직접 입력하거나 :guilabel:`더 보기...` 클릭하여 "
-"추가 품목을 검색할 수 있습니다."
+"각각의 견적서에 품목을 추가하려면 :menuselection:`판매 --> 주문서 --> 견적서"
+"` 로 이동하여 기존 견적서를 선택하거나 :doc:`새 견적서를 생성하세요 "
+"<create_quotations>`. 그런 다음 :guilabel:`추가 품목` 탭을 엽니다. 그러"
+"면 :guilabel:`품목` 열에 빈 필드가 나타납니다. :guilabel:`품목 추가하기` 를 "
+"클릭하여 품목을 추가합니다. 클릭하면 데이터베이스의 품목 목록이 드롭다운 메뉴"
+"로 표시됩니다. 드롭다운 메뉴에서 원하는 품목을 선택하여 옵션 품목으로 추가합"
+"니다. 필요한 품목명을 직접 입력하거나 :guilabel:`더 보기...` 클릭하여 추가 품"
+"목을 검색할 수 있습니다."
 
 #: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:65
 msgid ""
@@ -29297,13 +29394,13 @@ msgid ""
 "variants documents, a *Variant* badge is to be displayed in the corner as "
 "well."
 msgstr ""
-":menuselection:`판매 앱 --> 품목 --> 품목` 으로 이동하여 품목을 선택합니다. "
-":guilabel:`문서` 스마트 버튼을 클릭하면 :guilabel:`문서` 페이지가 열리며 "
-"여기에서 해당 품목에 대한 템플릿 및 세부 옵션에 대한 모든 문서를 확인할 수 "
-"있습니다. 파일과 URL 카드는 왼쪽 상단에 표시되는 이미지로 구분합니다. PDF "
-"문서는 썸네일 형태로 표시되고 URL 링크는 :icon:`fa-link` :guilabel:`링크` "
-"아이콘으로 나타납니다. 품목 세부 옵션과 관련된 문서의 경우 페이지 구석에 "
-"*세부 옵션* 배지가 함께 표시됩니다."
+":menuselection:`판매 앱 --> 품목 --> 품목` 으로 이동하여 품목을 선택합니"
+"다. :guilabel:`문서` 스마트 버튼을 클릭하면 :guilabel:`문서` 페이지가 열리며 "
+"여기에서 해당 품목에 대한 템플릿 및 세부 옵션에 대한 모든 문서를 확인할 수 있"
+"습니다. 파일과 URL 카드는 왼쪽 상단에 표시되는 이미지로 구분합니다. PDF 문서"
+"는 썸네일 형태로 표시되고 URL 링크는 :icon:`fa-link` :guilabel:`링크` 아이콘"
+"으로 나타납니다. 품목 세부 옵션과 관련된 문서의 경우 페이지 구석에 *세부 옵션"
+"* 배지가 함께 표시됩니다."
 
 #: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:None
 msgid ""
@@ -29542,8 +29639,8 @@ msgstr ""
 msgid ""
 "Find :ref:`sales/pdf_quote_builder/dynamic_text/common-dynamic-text-values`."
 msgstr ""
-":ref:`sales/pdf_quote_builder/dynamic_text/common-dynamic-text-values` 를 "
-"검색합니다."
+":ref:`sales/pdf_quote_builder/dynamic_text/common-dynamic-text-values` 를 검"
+"색합니다."
 
 #: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/dynamic_text.rst:60
 msgid ":ref:`sales/pdf_quote_builder/dynamic_text/Odoo-field-path`."
