@@ -4346,23 +4346,52 @@ take the following attributes:
   comma-separated list of allowed scales for this view. By default, all scales
   are allowed. For possible scale values to use in this list, see ``default_scale``.
 
-``templates``
-  defines the :ref:`reference/qweb` template ``gantt-popover`` which is used
-  when the user hovers over one of the records in the gantt view.
+``card_id``
+  The ID of the :ref:`card view <reference/view_architectures/card>` to use as the body of the
+  popover displayed when hovering over a record. The ``templates`` element can still be used
+  alongside ``card_id`` to define a ``popover-header`` and/or a ``popover-footer``.
 
-  The gantt view uses mostly-standard :ref:`javascript qweb
-  <reference/qweb/javascript>` and provides the following context variables:
+``templates``
+  Defines the :ref:`QWeb <reference/qweb>` templates used to render the popover displayed when
+  hovering over a record. Those templates can be defined:
 
   .. rst-class:: o-definition-list
 
-  ``widget``
-    the current :js:class:`GanttRow`, can be used to fetch some
-    meta-information. The ``getColor`` method to convert in a color integer is
-    also available directly in the template context without using ``widget``.
+  ``popover-header``
+    If defined, rendered as the popover header. By default, no header is displayed.
 
-  ``on_create``
-    If specified when clicking the add button on the view, instead of opening a generic dialog, launch a client action.
-    this should hold the xmlid of the action (eg: ``on_create="%(my_module.my_wizard)d"``
+  ``popover-body``
+    The main content of the popover, equivalent to the ``card`` template in a
+    :ref:`card view <reference/view_architectures/card>`. If omitted, defaults to showing the
+    start and stop date fields. Can be replaced by a ``card_id`` attribute instead.
+
+  ``popover-footer``
+    If defined, replaces the default footer, which contains a single :guilabel:`Edit` or
+    :guilabel:`View` button (the label depends on the user's access rights). Set
+    ``replace="0"`` on the ``<t t-name="popover-footer">`` node to keep the default button
+    and append the custom content after it.
+
+  The templates use the same API as :ref:`card view templates
+  <reference/view_architectures/card/templates>`: ``<field>`` nodes, widgets, dynamic
+  attributes, ``t-if``, etc. The rendering context is identical to that of card views.
+
+  .. example::
+     .. code-block:: xml
+
+        <gantt date_start="start" date_stop="stop">
+            <templates>
+                <t t-name="popover-header">
+                    <field name="display_name"/>
+                </t>
+                <t t-name="popover-body">
+                    <field name="user_id"/>
+                    <field name="stage_id"/>
+                </t>
+                <t t-name="popover-footer" replace="0">
+                    <button name="action_custom" type="object" string="Custom Action"/>
+                </t>
+            </templates>
+        </gantt>
 
 ``form_view_id``
   view to open when the user create or edit a record. Note that if this attribute
