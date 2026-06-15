@@ -8,7 +8,7 @@ The Odoo Javascript framework uses a custom component framework called Owl. It
 is a declarative component system, loosely inspired by Vue and React. Components
 are defined using :doc:`QWeb templates <qweb>`, enriched with some Owl
 specific directives. The official
-`Owl documentation <https://github.com/odoo/owl/blob/master/doc/readme.md>`_
+`Owl documentation <https://github.com/odoo/owl/blob/master/doc/v2/readme.md>`_
 contains a complete reference and a tutorial.
 
 .. important::
@@ -551,7 +551,7 @@ The rendered DOM is structured like this:
    </div>
 
 To properly use a `<Dropdown/>` component, you need to populate two
-`OWL slots <https://github.com/odoo/owl/blob/master/doc/reference/slots.md>`_ :
+`OWL slots <https://github.com/odoo/owl/blob/master/doc/v2/reference/slots.md>`_ :
 
 
 - `toggler` slot: it contains the *toggler* elements of your dropdown and is

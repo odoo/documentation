@@ -200,7 +200,7 @@ is hardcoded in the controller.
    and `GalleryRenderer`. Pass `Model` and `Renderer` as props to the controller.
 #. Remove the hardcoded import in the controller and get them from the props.
 #. Use `t-component
-   <https://github.com/odoo/owl/blob/master/doc/reference/component.md#dynamic-sub-components>`_ to
+   <https://github.com/odoo/owl/blob/master/doc/v2/reference/component.md#dynamic-sub-components>`_ to
    have dynamic sub component.
 
 .. note::
@@ -459,4 +459,4 @@ template for it ?
 
    - `Example: useTooltip used in Kaban <https://github.com/odoo/odoo/blob/0e6481f359e2e4dd4f5b5147a1754bb3cca57311/addons/web/static/src/views/kanban/kanban_record.js#L189-L192>`_
    - `Example: visitXML usage <https://github.com/odoo/odoo/blob/48ef812a635f70571b395f82ffdb2969ce99da9e/addons/web/static/src/views/list/list_arch_parser.js#L19>`_
-   - `Owl: Inline templates with xml helper function <https://github.com/odoo/owl/blob/master/doc/reference/templates.md#inline-templates>`_
+   - `Owl: Inline templates with xml helper function <https://github.com/odoo/owl/blob/master/doc/v2/reference/templates.md#inline-templates>`_
