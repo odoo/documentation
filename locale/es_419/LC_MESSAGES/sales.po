@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-12 17:30+0000\n"
-"PO-Revision-Date: 2026-06-13 03:57+0000\n"
+"PO-Revision-Date: 2026-06-15 23:16+0000\n"
 "Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-18-doc/sales/es_419/>\n"
@@ -31655,7 +31655,7 @@ msgstr ":doc:`../invoicing/proforma`"
 
 #: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:3
 msgid "Custom email signatures"
-msgstr ""
+msgstr "Firmas de correo electrónico personalizadas"
 
 #: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:5
 msgid ""
@@ -31663,6 +31663,10 @@ msgid ""
 "outgoing communications display the appropriate contact information for "
 "customer follow-up and correspondence."
 msgstr ""
+"Algunos flujos de trabajo empresariales requieren que actualices las firmas "
+"de las plantillas de correo electrónico para que las comunicaciones "
+"salientes muestren la información de contacto adecuada para el seguimiento y "
+"la correspondencia con los clientes."
 
 #: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:8
 msgid ""
@@ -31671,6 +31675,11 @@ msgid ""
 "responsible for managing quotes and customer communications may differ from "
 "the employee associated with the sales order for commission purposes."
 msgstr ""
+"Esto es muy importante cuando varios miembros del equipo comparten la "
+"responsabilidad de una oportunidad. En estos casos, el empleado responsable "
+"de gestionar las cotizaciones y las comunicaciones con los clientes puede "
+"ser distinto del empleado asociado con la orden de venta a efectos de "
+"comisiones."
 
 #: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:12
 msgid ""
@@ -31680,6 +31689,12 @@ msgid ""
 "customers know who to contact with questions, approvals, and other "
 "correspondence."
 msgstr ""
+"De forma predeterminada, las plantillas de correo electrónico usan la firma "
+"del empleado asignado al registro; por lo tanto, debes modificar la "
+"plantilla para que muestre la información de contacto del empleado "
+"responsable de realizar el seguimiento de los clientes. Esto garantiza que "
+"los clientes sepan con quién comunicarse para realizar preguntas, solicitar "
+"y dar aprobaciones y todo lo que esté relacionado con otra correspondencia."
 
 #: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:18
 msgid ""
@@ -31687,10 +31702,13 @@ msgid ""
 "throughout this article to demonstrate how email signatures can be "
 "customized."
 msgstr ""
+"La plantilla de correo electrónico `Ventas: Confirmación de la orden` se usa "
+"como ejemplo en todo este artículo para mostrar cómo puedes personalizar las "
+"firmas de correo electrónico."
 
 #: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:22
 msgid "Open the email template"
-msgstr ""
+msgstr "Abrir la plantilla de correo electrónico"
 
 #: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:24
 msgid ""
@@ -31699,10 +31717,15 @@ msgid ""
 "Technical --> Email Templates`. Click on the email template being modified, "
 "in this case, the `Sales: Order Confirmation` template."
 msgstr ""
+"Para modificar una plantilla de correo electrónico, primero :ref:`activa el "
+"modo de desarrollador <developer-mode/activation>` y luego ve a "
+":menuselection:`Ajustes --> Técnico --> Plantillas de correo electrónico`. "
+"Haz clic en la plantilla de correo electrónico que quieres modificar que en "
+"este caso es la plantilla `Ventas: Confirmación de la orden`."
 
 #: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:29
 msgid "Update from field"
-msgstr ""
+msgstr "Actualizar el campo de remitente"
 
 #: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:31
 msgid ""
@@ -31710,20 +31733,26 @@ msgid ""
 "default text in the :guilabel:`From` field and replace it with: "
 "`{{ (user.email_formatted) }}`."
 msgstr ""
+"En la plantilla de correo electrónico, abre la pestaña *Configuración del "
+"correo electrónico*. Elimina el texto predeterminado del campo "
+":guilabel:`De` y reemplázalo por: `{{ (user.email_formatted) }}`."
 
 #: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:None
 msgid "The from field updated with the correct text."
-msgstr ""
+msgstr "El campo de remitente actualizado con el texto correcto."
 
 #: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:38
 msgid "Modify the code"
-msgstr ""
+msgstr "Modificar el código"
 
 #: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:40
 msgid ""
 "Click the *Content* tab, and highlight some text so the toolbar is visible. "
 "Click the :guilabel:`</> (Code view)` button and the text changes to code."
 msgstr ""
+"Haz clic en la pestaña *Contenido* y resalta parte del texto para que la "
+"barra de herramientas aparezca. Haz clic en el botón :guilabel:`</> (Vista "
+"de código)` y el texto cambiará a código."
 
 #: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:43
 msgid ""
@@ -31731,11 +31760,16 @@ msgid ""
 "`object.user_id.signature`. Replace both `object.user_id.signature` "
 "instances with `User.signature`."
 msgstr ""
+"Busca `signature` en el código para encontrar las dos apariciones de "
+"`object.user_id.signature`. Reemplaza ambas apariciones de "
+"`object.user_id.signature` por `User.signature`."
 
 #: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:None
 msgid ""
 "The two 'object.user_id.signature' fields replaced with 'User.signature'."
 msgstr ""
+"Los dos campos \"object.user_id.signature\" reemplazados por "
+"\"User.signature\"."
 
 #: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:50
 msgid ""
@@ -31743,12 +31777,17 @@ msgid ""
 "default `Mitchell Admin` populate the signature, the company name can be "
 "displayed instead."
 msgstr ""
+"Si un usuario no configuró su firma de correo electrónico, es posible "
+"mostrar el nombre de la empresa en lugar de que aparezca la firma "
+"predeterminada `Mitchell Admin`."
 
 #: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:53
 msgid ""
 "To do this, search for `Mitchell Admin` in the code, and replace it with the "
 "company name."
 msgstr ""
+"Para hacerlo, busca `Mitchell Admin` en el código y reemplázalo por el "
+"nombre de la empresa."
 
 #: ../../content/applications/sales/sales/sales_quotations/deadline.rst:3
 msgid "Quotation deadlines"
