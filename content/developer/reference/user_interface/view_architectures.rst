@@ -2608,7 +2608,9 @@ Optional attributes can be added to the root element `kanban` to customize the v
 .. attribute:: records_draggable
    :noindex:
 
-   Whether records can be dragged when the kanban view is grouped.
+   Whether records can be dragged when the kanban view is grouped. To allow reordering records
+   by drag and drop using a specific field as sequence, use the `handle` widget on that field
+   inside the card templates.
 
    :requirement: Optional
    :type: bool
@@ -2669,10 +2671,48 @@ Optional attributes can be added to the root element `kanban` to customize the v
 .. attribute:: highlight_color
    :noindex:
 
-   Name of the integer field used to color the left border of the kanban cards.
+   Name of the integer field used to color the left border of the kanban cards. Combined with
+   the `kanban_color_picker` widget on a field in the card templates, allows users to edit the
+   color directly from the card.
 
    :requirement: Optional
    :type: str
+
+.. attribute:: card_id
+   :noindex:
+
+   The ID of the :ref:`card view <reference/view_architectures/card>` whose templates are used to
+   render the kanban cards. When set, the kanban view's own ``templates`` element is not needed.
+   This allows sharing a single card definition across multiple views.
+
+   .. example::
+      .. code-block:: xml
+
+         <record id="my_model_card" model="ir.ui.view">
+             <field name="name">my.model.card</field>
+             <field name="model">my.model</field>
+             <field name="arch" type="xml">
+                 <card>
+                     <templates>
+                         <t t-name="card">
+                             <field name="name"/>
+                         </t>
+                     </templates>
+                 </card>
+             </field>
+         </record>
+
+         <record id="my_model_kanban" model="ir.ui.view">
+             <field name="name">my.model.kanban</field>
+             <field name="model">my.model</field>
+             <field name="arch" type="xml">
+                 <kanban card_id="%(my_module.my_model_card)d"/>
+             </field>
+         </record>
+
+   :requirement: Optional
+   :type: int (view id)
+   :default: `''`
 
 .. include:: view_architectures/root_attribute_sample.rst
 
@@ -2693,152 +2733,34 @@ Kanban views accept the following children elements: :ref:`templates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The `templates` element is used to define the :ref:`QWeb templates <reference/qweb>` that structure
-the kanban cards.
+the kanban cards. Alternatively, an external :ref:`card view <reference/view_architectures/card>` can
+be referenced via the `card_id` root attribute, which allows to share the same card view
+definition across multiple views.
 
-The definition of a card's structure can be split into multiple templates for clarity, but at least
-one root `card` template must be defined.
+When using inline templates, at least one root `card` template must be defined. An additional `menu`
+template can be defined and is rendered as a dropdown accessible via the :icon:`oi-ellipsis-v` button
+on the card.
 
-An additional template can be defined: `menu`. If defined, it is rendered inside a dropdown
-that can be toggled with a vertical ellipsis (:guilabel:`⋮`) on the top right of the card.
+.. example::
+   .. code-block:: xml
 
-The templates are written in :ref:`JavaScript QWeb <reference/qweb/javascript>`.
+      <kanban>
+         <templates>
+            <t t-name="card">
+               <field name="name"/>
+            </t>
+            <t t-name="menu">
+               <a t-if="widget.editable" role="menuitem" type="open" class="dropdown-item">Edit</a>
+               <a t-if="widget.deletable" role="menuitem" type="delete" class="dropdown-item">Delete</a>
+            </t>
+         </templates>
+      </kanban>
 
-.. code-block:: xml
+See the :ref:`card view <reference/view_architectures/card>` for the complete documentation of
+the template structure, rendering context, available variables, buttons, widgets, and layouts.
 
-   <kanban>
-      <templates>
-         <t t-name="card">
-            <field name="name"/>
-         </t>
-      </templates>
-   </kanban>
-
-.. warning::
-
-   These are QWeb templates, not `Owl <https://github.com/odoo/owl>`_ templates, meaning that
-   directives like `t-on-click` aren't available.
-
-Fields
-******
-
-Inside those templates, the `field` element allows to render a field. It can have the following
-attributes:
-
-.. include:: view_architectures/field_attribute_name.rst
-
-By default, field nodes are replaced by a `span` containing their formatted value, unless the
-`widget` attribute is specified, in which case their rendering and behavior depends on the
-corresponding widget. The `widget` attribute can have different values including:
-
-   .. attribute:: handle
-     :noindex:
-
-     Allows reordering records with a drag and drop, using the corresponding field as order.
-
-   .. attribute:: kanban_color_picker
-     :noindex:
-
-     Allows editing a color (integer) field. Combined with the root attribute `highlight_color`,
-     allows editing the color of the cards.
-
-See the :ref:`Field section <reference/js/widgets>` to discover
-various widgets and their options.
-
-Rendering Context
-*****************
-
-Kanban templates being rendered with the :ref:`QWeb engine <reference/qweb/javascript>`, they have
-a *rendering context*, a set of variables available in the templates, containing useful information
-and tools. Here're the available variables:
-
-.. attribute:: record
-   :noindex:
-
-   An object with all the fields defined in the view. Each field has two attributes: `value`
-   and `raw_value`. The former is formatted according to current user parameters, while the latter
-   is the raw value (e.g. the `id` for a many2one field). This object is useful for instance, for
-   using field values inside `t-if` conditions. For display purposes, we recommend using the
-   `<field>` tag.
-
-   .. example::
-      .. code-block:: xml
-
-         <kanban>
-            <templates>
-               <field name="is_company"/>
-               <t t-name="card">
-                  <field name="name"/>
-                  <field t-if="!record.is_company.raw_value" name="parent_id">
-               </t>
-            </templates>
-         </kanban>
-
-.. attribute:: widget
-   :noindex:
-
-   An object with 2 keys defining the available actions for the user:
-
-   - `editable`: true if the user can edit records, false otherwise;
-   - `deletable`: true if the user can delete records, false otherwise.
-
-   This is useful to conditionally display elements requiring specific access rights.
-
-   .. example::
-      .. code-block:: xml
-
-         <kanban>
-            <templates>
-               <t t-name="card">
-                  <field name="name"/>
-               </t>
-               <t t-name="menu">
-                  <a t-if="widget.deletable" role="menuitem" type="delete" class="dropdown-item">Delete</a>
-               </t>
-            </templates>
-         </kanban>
-
-.. attribute:: context
-   :noindex:
-
-   The current context propagated from either the action that opens the kanban view, or the one2many
-   or many2many field that embeds the kanban view in a form view.
-
-.. attribute:: read_only_mode
-   :noindex:
-
-   Indicates that the view is readonly.
-
-   :type: bool
-
-.. attribute:: selection_mode
-   :noindex:
-
-   Whether the kanban view is opened when selecting a many2one or many2many field (in mobile
-   environment).
-
-   :type: bool
-
-.. attribute:: luxon
-   :noindex:
-
-   The `luxon <https://moment.github.io/luxon/api-docs/index.html>`_ object, allowing to
-   manipulate date and datetime field values.
-
-.. attribute:: JSON
-   :noindex:
-
-   The Javascript `JSON <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON>`_
-   namespace object containing a `parse` method allowing to parse json field values into Javascript
-   Objects.
-
-Buttons and links
-*****************
-
-While most of the kanban templates are standard :ref:`QWeb templates <reference/qweb>`, the kanban
-view processes `button` and `a` elements is a special way. Buttons and links with a `type` attribute
-perform different operations than their standard HTML function. The `type` attribute can have the
-values `action` and `object` of :ref:`regular buttons <reference/view_architectures/list/button>`,
-or the following values:
+In addition to the `action` and `object` button types supported by all card-based views, kanban
+templates support the following `type` values on `button` and `a` elements:
 
   .. attribute:: open
      :noindex:
@@ -2865,105 +2787,21 @@ or the following values:
 
      Clicking the element allows to select an image to set as cover image of the record.
 
-Widgets
-*******
-
-The `widget` element allows to insert dynamically generated (in Javascript) html inside the cards. It
-has a mandatory `name` attribute, referring to a Javascript implementation (an Owl component)
-registered to the `view_widgets` registry.
-
-.. todo: document view_widgets registry and standard widgets
-
-See the :ref:`Widget section <reference/javascript_reference/view_widgets>` to discover various
-widgets and their options.
-
-Layouts
-*******
-
-Several card layouts can be easily obtained using standard html elements and `Bootstrap utility
-classes <https://getbootstrap.com/docs/5.0/utilities/api/>`_. By default, the card is a `flexbox
-container <https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox>`_
-with `column` direction.
-
-.. example::
-   .. code-block:: xml
-
-      <kanban>
-         <templates>
-            <t t-name="card">
-               <field class="fw-bold fs-5" name="display_name"/>
-               <field class="text-muted" name="parent_id"/>
-               <field name="tag_ids" widget="many2many_tags"/>
-            </t>
-         </templates>
-      </kanban>
-
-The `footer` html element is styled to stick to the bottom of the card, and is as a flexbox
-container with `row` direction, allowing to easily display several fields on the same line.
-
-.. example::
-   .. code-block:: xml
-
-      <kanban>
-         <templates>
-            <t t-name="card">
-               <field class="fw-bold fs-5" name="display_name"/>
-               <field class="text-muted" name="parent_id"/>
-               <field name="tag_ids" widget="many2many_tags"/>
-               <footer>
-                  <field name="priority" widget="priority"/> <!-- bottom left corner -->
-                  <field class="ms-auto" name="activity_ids" widget="kanban_activity"/> <!-- bottom right corner -->
-               </footer>
-            </t>
-         </templates>
-      </kanban>
-
-To display some content, like an image, on the side of the card, one can use `aside` and `main` html
-elements, with the `flex-row` classname on the card. The `main` node is a flexbox container like the
-card is when there's no `aside`.
-
-.. example::
-   .. code-block:: xml
-
-      <kanban>
-         <templates>
-            <t t-name="card" class="flex-row">
-               <aside>
-                  <field name="avatar_128" widget="image" alt="Avatar"/>
-               </aside>
-               <main class="ms-2">
-                  <field class="fw-bold fs-5" name="display_name"/>
-                  <field class="text-muted" name="parent_id"/>
-                  <field name="tag_ids" widget="many2many_tags"/>
-                  <footer>
-                     <field name="priority" widget="priority"/>
-                     <field class="ms-auto" name="activity_ids" widget="kanban_activity"/>
-                  </footer>
-               </main>
-            </t>
-         </templates>
-      </kanban>
-
-.. tip::
-   The classname `o_kanban_aside_full` set on the `aside` element removes the padding so that the
-   image spreads to the borders of the card.
-
 .. _reference/view_architectures/kanban/field:
 
 `field`: declare more fields to fetch
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The `field` element can also be used *outside* the kanban :ref:`templates
-<reference/view_architectures/kanban/templates>`. In that case, it allows to declare fields that are
-not displayed in the card, but still need to be fetched, for instance because their value is used
-in a `t-if` condition.
+The `field` element can also be used *outside* the `t-name` templates but still inside the
+`templates` element. In that case, it declares fields that are not displayed in the card but still
+need to be fetched, for instance because their value is used in a `t-if` condition.
 
 .. example::
    .. code-block:: xml
 
       <kanban>
+         <field name="is_company"/>
          <templates>
-            <field name="is_company"/>
             <t t-name="card">
                <field name="name"/>
                <field t-if="!record.is_company.raw_value" name="parent_id">
@@ -3099,6 +2937,295 @@ Like for :ref:`list views <reference/view_architectures/list/control>`.
 .. todo::
   - kanban-specific CSS
   - kanban structures/widgets (vignette, details, ...)
+
+.. _reference/view_architectures/card:
+
+Card
+====
+
+Card views define the structure used to render individual records as cards. They are standalone
+view records that can be referenced from :ref:`kanban <reference/view_architectures/kanban>` and
+other views via a ``card_id`` attribute, allowing the same card template to be reused across
+multiple contexts (e.g. a kanban board, a gantt popover, or a calendar event).
+
+The root element of card views is ``card``.
+
+.. code-block:: xml
+
+   <card>
+      <templates>
+         <t t-name="card">
+            ...
+         </t>
+      </templates>
+   </card>
+
+.. _reference/view_architectures/card/root:
+
+Root attributes
+---------------
+
+Optional attributes can be added to the root element ``card`` to customize the view.
+
+.. include:: view_architectures/root_attribute_create.rst
+
+.. include:: view_architectures/root_attribute_edit.rst
+
+.. include:: view_architectures/root_attribute_delete.rst
+
+.. _reference/view_architectures/card/components:
+
+Components
+----------
+
+Card views accept the following children elements: :ref:`templates
+<reference/view_architectures/card/templates>`, :ref:`field
+<reference/view_architectures/card/field>`.
+
+.. _reference/view_architectures/card/templates:
+
+`templates`: define the card structure
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The `templates` element is used to define the :ref:`QWeb templates <reference/qweb>` that structure
+the cards.
+
+The definition of a card's structure can be split into multiple templates for clarity, but at least
+one root `card` template must be defined.
+
+The templates are written in :ref:`JavaScript QWeb <reference/qweb/javascript>`.
+
+.. code-block:: xml
+
+   <card>
+      <templates>
+         <t t-name="card">
+            <field name="name"/>
+         </t>
+      </templates>
+   </card>
+
+.. warning::
+
+   These are QWeb templates, not `Owl <https://github.com/odoo/owl>`_ templates, meaning that
+   directives like `t-on-click` aren't available.
+
+Fields
+******
+
+Inside those templates, the `field` element allows to render a field. It can have the following
+attributes:
+
+.. include:: view_architectures/field_attribute_name.rst
+
+By default, field nodes are replaced by a `span` containing their formatted value, unless the
+`widget` attribute is specified, in which case their rendering and behavior depends on the
+corresponding widget.
+
+See the :ref:`Field section <reference/js/widgets>` to discover
+various widgets and their options.
+
+Rendering Context
+*****************
+
+Card templates being rendered with the :ref:`QWeb engine <reference/qweb/javascript>`, they have
+a *rendering context*, a set of variables available in the templates, containing useful information
+and tools. Here're the available variables:
+
+.. attribute:: record
+   :noindex:
+
+   An object with all the fields defined in the view. Each field has two attributes: `value`
+   and `raw_value`. The former is formatted according to current user parameters, while the latter
+   is the raw value (e.g. the `id` for a many2one field). This object is useful for instance, for
+   using field values inside `t-if` conditions. For display purposes, we recommend using the
+   `<field>` tag.
+
+   .. example::
+      .. code-block:: xml
+
+         <card>
+            <field name="is_company"/>
+            <templates>
+               <t t-name="card">
+                  <field name="name"/>
+                  <field t-if="!record.is_company.raw_value" name="parent_id">
+               </t>
+            </templates>
+         </card>
+
+.. attribute:: widget
+   :noindex:
+
+   An object with 2 keys defining the available actions for the user:
+
+   - `editable`: true if the user can edit records, false otherwise;
+   - `deletable`: true if the user can delete records, false otherwise.
+
+   This is useful to conditionally display elements requiring specific access rights.
+
+   .. example::
+      .. code-block:: xml
+
+         <card>
+            <templates>
+               <t t-name="card">
+                  <field name="name"/>
+               </t>
+               <t t-name="menu">
+                  <a t-if="widget.deletable" role="menuitem" type="delete" class="dropdown-item">Delete</a>
+               </t>
+            </templates>
+         </card>
+
+.. attribute:: context
+   :noindex:
+
+   The current context propagated from either the action that opens the view, or the one2many
+   or many2many field that embeds it in a form view.
+
+.. attribute:: read_only_mode
+   :noindex:
+
+   Indicates that the view is readonly.
+
+   :type: bool
+
+.. attribute:: selection_mode
+   :noindex:
+
+   Whether the view is opened when selecting a many2one or many2many field (in mobile environment).
+
+   :type: bool
+
+.. attribute:: luxon
+   :noindex:
+
+   The `luxon <https://moment.github.io/luxon/api-docs/index.html>`_ object, allowing to
+   manipulate date and datetime field values.
+
+.. attribute:: JSON
+   :noindex:
+
+   The Javascript `JSON <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON>`_
+   namespace object containing a `parse` method allowing to parse json field values into Javascript
+   Objects.
+
+Buttons and links
+*****************
+
+While most of the card templates are standard :ref:`QWeb templates <reference/qweb>`, the card
+view processes `button` and `a` elements in a special way. Buttons and links with a `type` attribute
+perform different operations than their standard HTML function. The `type` attribute can have the
+values `action` and `object` of :ref:`regular buttons <reference/view_architectures/list/button>`.
+
+Some views that embed card templates (e.g. :ref:`kanban <reference/view_architectures/kanban>`) may
+support additional `type` values.
+
+Widgets
+*******
+
+The `widget` element allows to insert dynamically generated (in Javascript) html inside the cards. It
+has a mandatory `name` attribute, referring to a Javascript implementation (an Owl component)
+registered to the `view_widgets` registry.
+
+.. todo: document view_widgets registry and standard widgets
+
+See the :ref:`Widget section <reference/javascript_reference/view_widgets>` to discover various
+widgets and their options.
+
+Layouts
+*******
+
+Several card layouts can be easily obtained using standard html elements and `Bootstrap utility
+classes <https://getbootstrap.com/docs/5.0/utilities/api/>`_. By default, the card is a `flexbox
+container <https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox>`_
+with `column` direction.
+
+.. example::
+   .. code-block:: xml
+
+      <card>
+         <templates>
+            <t t-name="card">
+               <field class="fw-bold fs-5" name="display_name"/>
+               <field class="text-muted" name="parent_id"/>
+               <field name="tag_ids" widget="many2many_tags"/>
+            </t>
+         </templates>
+      </card>
+
+The `footer` html element is styled to stick to the bottom of the card, and is as a flexbox
+container with `row` direction, allowing to easily display several fields on the same line.
+
+.. example::
+   .. code-block:: xml
+
+      <card>
+         <templates>
+            <t t-name="card">
+               <field class="fw-bold fs-5" name="display_name"/>
+               <field class="text-muted" name="parent_id"/>
+               <field name="tag_ids" widget="many2many_tags"/>
+               <footer>
+                  <field name="priority" widget="priority"/> <!-- bottom left corner -->
+                  <field class="ms-auto" name="activity_ids" widget="kanban_activity"/> <!-- bottom right corner -->
+               </footer>
+            </t>
+         </templates>
+      </card>
+
+To display some content, like an image, on the side of the card, one can use `aside` and `main` html
+elements, with the `flex-row` classname on the card. The `main` node is a flexbox container like the
+card is when there's no `aside`.
+
+.. example::
+   .. code-block:: xml
+
+      <card>
+         <templates>
+            <t t-name="card" class="flex-row">
+               <aside>
+                  <field name="avatar_128" widget="image" alt="Avatar"/>
+               </aside>
+               <main class="ms-2">
+                  <field class="fw-bold fs-5" name="display_name"/>
+                  <field class="text-muted" name="parent_id"/>
+                  <field name="tag_ids" widget="many2many_tags"/>
+                  <footer>
+                     <field name="priority" widget="priority"/>
+                     <field class="ms-auto" name="activity_ids" widget="kanban_activity"/>
+                  </footer>
+               </main>
+            </t>
+         </templates>
+      </card>
+
+.. tip::
+   The classname `o_card_aside_full` set on the `aside` element removes the padding so that the
+   image spreads to the borders of the card.
+
+.. _reference/view_architectures/card/field:
+
+`field`: declare more fields to fetch
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The `field` element can also be used *outside* the `templates` element. In that case, it allows to
+declare fields that are not displayed in the card, but still need to be fetched, for instance because
+their value is used in a `t-if` condition.
+
+.. example::
+   .. code-block:: xml
+
+      <card>
+         <field name="is_company"/>
+         <templates>
+            <t t-name="card">
+               <field name="name"/>
+               <field t-if="!record.is_company.raw_value" name="parent_id">
+            </t>
+         </templates>
+      </card>
 
 .. ALL VIEWS BELOW HAVE NOT YET BEEN CONVERTED TO THE NEW REFERENCE DOCUMENTATION FORMAT
 

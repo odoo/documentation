@@ -41,6 +41,8 @@ View types
   Apply filters and perform searches. The results are displayed in the current list, kanban... view.
 :ref:`Kanban <reference/view_architectures/kanban>`
   Display records as "cards", configurable as a small template.
+:ref:`Card <reference/view_architectures/card>`
+  Define reusable card templates for use in kanban and other views.
 :ref:`Qweb <reference/view_architectures/qweb>`
   Templating of reporting, website...
 :ref:`Graph <reference/view_architectures/graph>`
