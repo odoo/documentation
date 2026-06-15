@@ -199,10 +199,10 @@ Components and Hooks
 --------------------
 
 :ref:`Components <frontend/components>` and :ref:`hooks <frontend/hooks>` are ideas coming from the
-`Owl component system <https://github.com/odoo/owl/blob/master/doc/readme.md>`_.
+`Owl component system <https://github.com/odoo/owl/blob/master/doc/v2/readme.md>`_.
 Odoo components are simply owl components that are part of the web client.
 
-`Hooks <https://github.com/odoo/owl/blob/master/doc/reference/hooks.md>`_ are a
+`Hooks <https://github.com/odoo/owl/blob/master/doc/v2/reference/hooks.md>`_ are a
 way to factorize code, even if it depends on lifecycle. This is a
 composable/functional way to inject a feature in a component. They can be seen
 as a kind of mixin.
@@ -503,7 +503,7 @@ Bus
 The web client :ref:`environment <frontend/framework/environment>` object contains an event
 bus, named `bus`. Its purpose is to allow various parts of the system to properly
 coordinate themselves, without coupling them. The `env.bus` is an owl
-`EventBus <https://github.com/odoo/owl/blob/master/doc/reference/event_bus.md>`_,
+`EventBus <https://github.com/odoo/owl/blob/master/doc/v2/reference/event_bus.md>`_,
 that should be used for global events of interest.
 
 
