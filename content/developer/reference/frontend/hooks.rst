@@ -4,10 +4,10 @@
 Hooks
 =====
 
-`Owl hooks <https://github.com/odoo/owl/blob/master/doc/reference/hooks.md>`_ are a
+`Owl hooks <https://github.com/odoo/owl/blob/master/doc/v2/reference/hooks.md>`_ are a
 way to factorize code, even if it depends on some component lifecycle. Most hooks
 provided by Owl are related to the lifecycle of a component, but some of them (such as
-`useComponent <https://github.com/odoo/owl/blob/master/doc/reference/hooks.md#usecomponent>`_)
+`useComponent <https://github.com/odoo/owl/blob/master/doc/v2/reference/hooks.md#usecomponent>`_)
 provide a way to build specific hooks.
 
 Using these hooks, it is possible to build many customized hooks that help solve
@@ -209,7 +209,7 @@ the window is resized/scrolled.
     }
 
 .. important::
-   You should indicate your `popper` element using a `t-ref directive <https://github.com/odoo/owl/blob/master/doc/reference/hooks.md#useref>`_.
+   You should indicate your `popper` element using a `t-ref directive <https://github.com/odoo/owl/blob/master/v2/doc/reference/hooks.md#useref>`_.
 
 API
 ---
@@ -229,7 +229,7 @@ API
      - Description
    * - `popper`
      - string
-     - this is a `useRef reference <https://github.com/odoo/owl/blob/master/doc/reference/hooks.md#useref>`_ for the element that will get positioned.
+     - this is a `useRef reference <https://github.com/odoo/owl/blob/master/doc/v2/reference/hooks.md#useref>`_ for the element that will get positioned.
        Default is `"popper"`.
    * - `container`
      - HTMLElement
