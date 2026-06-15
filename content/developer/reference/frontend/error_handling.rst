@@ -218,7 +218,7 @@ is not handled by any of them, Owl destroys the application as it is likely in a
 corrupted state.
 
 .. seealso::
-  `Error handling in the Owl documentation <https://github.com/odoo/owl/blob/master/doc/reference/error_handling.md>`_
+  `Error handling in the Owl documentation <https://github.com/odoo/owl/blob/master/doc/v2/reference/error_handling.md>`_
 
 Inside Odoo, there are some places where we do not want the entire application to
 crash in case of error, and so the framework has a few places where it uses the
