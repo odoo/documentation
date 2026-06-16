@@ -214,6 +214,7 @@ Next, enter the company's :guilabel:`MoL Establishment ID`. This ID number is pr
 Arabia's Ministry of Labor.
 
 Finally, select the :doc:`time off type <../../time_off/time_off_types>` that is used to calculate
+Finally, select the :doc:`time off type <../../time_off/time_off_types>` that is used to calculate
 the :guilabel:`Annual Leave Balance` set in the :ref:`employee's profile
 <payroll/saudi_payroll_info>`.
 
@@ -322,6 +323,36 @@ correct, click :guilabel:`Validate`.
 
 .. image:: saudi_arabia/check-payslips-sa.png
    :alt: The worked days tab of a payslip.
+
+Annual leave provision calculation
+----------------------------------
+
+Annual leave provisions are used for calculating the annual leave provision accumulated each month.
+It does not affect the total amount paid to the employee, it is for internal use by the company.
+
+It is calculated by dividing the employee's monthly salary (Monthly Salary = Wage + Allowances) by
+30 to get the daily salary.
+
+The monthly provision is then calculated as:
+
+.. math::
+   :class: overflow-scroll
+
+   \text{Monthly Provision} = \left(\text{Daily Salary} \times \text{Eligible Leave Days}\right) \div 12
+
+When the employee takes a leave, the payout for that leave is taken from the already provisioned
+amount and a payout line is automatically calculated and added in the payslip lines.
+
+Employer other costs
+--------------------
+
+Other than the employee's salary, there are additional employer costs that need to be accounted for.
+These include medical insurance, work permits, and employee's Iqama.
+
+These costs are defined as yearly values on the employee's record under the *Payroll* tab, and are
+recognized on a monthly basis as other employer expenses. They are computed on the employee's
+payslip, but do not affect the net payable to the employee and do not appear on the payslip PDF
+shared with the employee.
 
 Employee net cost
 -----------------
@@ -517,8 +548,25 @@ The provision is always computed using the scenario that results in the highest 
 which is when the reason is `End of Contract`.
 
 In cases where the actual termination reason results in a lower entitlement, an adjustment line is
-automatically added on the paysliplines to account for the difference between the provisioned amount
-and the actual amount due.
+automatically added on the payslip lines to account for the difference between the provisioned
+amount and the actual amount due.
+
+Advanced leave pay
+==================
+
+Employees can request an advance payment of their salary when going on paid leave, especially when
+the leave spans multiple months.
+
+The advance payslip includes the employee's salary for the days worked in the current month, and the
+salary for the leave period. When the leave extends beyond the current month, the system
+automatically calculates the additional days needed to be compensated and adds them as extra inputs
+on the payslip.
+
+In the following month, any amount already paid in advance is automatically deducted from the
+employee's salary through a salary input line to avoid double payment.
+
+To generate an advance leave payslip, go to the approved employee's time off request for the time
+off type `Annual Leave`, then click :guilabel:`Create Advance Leave Pay`.
 
 Employee loans and advances
 ===========================
@@ -688,8 +736,8 @@ Once the module **Saudi Arabia Payroll - Attendance** is installed, the HR manag
 grace period from the payroll settings. This grace period defines the amount of time an employee is
 allowed to be late without triggering the late attendance rules.
 
-If the grace period is not set or it is exceeded, the system tracks how many minutes the employee
-was late, and the HR manager's approval will be required to confirm the lateness.
+If the grace period is not set or is exceeded, the system tracks how many minutes the employee was
+late, and the HR manager's approval will be required to confirm the lateness.
 
 Once confirmed, on the next payslip, the number of late hours is reflected on the payslip under the
 *Salary Inputs* tab, and a deduction is applied to the employee according to the following formula:
@@ -742,6 +790,23 @@ obtained from the |GOSI| portal:
    employee's contribution is displayed on the final PDF shared with the employee.
 
 .. _payroll/reports_saudi:
+
+Nationalization % report
+========================
+
+Tracking the nationalization percentage is required to comply with the nationalization regulations
+set by the Ministry of Human Resources under the Nitaqat program.
+
+The tracking must be done at both company and department level and is based on the minimum wage
+defined for each department, which can be configured on the :doc:`department
+<../../employees/departments>` record.
+
+The nationalization report can be accessed by navigating to :menuselection:`Employees --> Reporting
+--> Nationalization Report`.
+
+The report includes filters such as the department and reference date. Based on these filters, it
+displays the resulting nationalization percentage along with a link to the employees that satisfy
+those chosen filters.
 
 WPS reports
 ===========
