@@ -121,7 +121,6 @@ be compatible with Odoo:
 
 - Epson TM-T20 family (incompatible ePOS software)
 - Epson TM-T88 family (incompatible ePOS software)
-- Epson TM-U220 family (incompatible ePOS software)
 
 .. _pos/epos-printers/troubleshooting:
 
