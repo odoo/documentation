@@ -7,6 +7,9 @@ Changelog
 Odoo Online version 19.3
 ========================
 
+- Field updates and inverse execution are now consistently ordered by
+  ``(field.write_sequence, field_index)`` in both ``create()`` and ``write()``.
+  See `#265469 <https://github.com/odoo/odoo/pull/265469>`_.
 - The type of Binary fields is now a BinaryValue. We no longer encode using
   base64 all over the data flow, just use the new object.
   See `#244421 <https://github.com/odoo/odoo/pull/244421>`_.
