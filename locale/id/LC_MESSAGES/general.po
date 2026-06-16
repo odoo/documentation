@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-05 19:24+0000\n"
-"PO-Revision-Date: 2026-06-06 23:07+0000\n"
+"PO-Revision-Date: 2026-06-16 23:06+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Indonesian <https://translate.odoo.com/projects/odoo-17-doc/"
 "general/id/>\n"
@@ -3344,6 +3344,10 @@ msgid ""
 "complying with these protocols will greatly reduce chances of your emails to "
 "reach their destination."
 msgstr ""
+"Dokumentasi ini menyajikan tiga protokol autentikasi yang saling melengkapi "
+"(SPF, DKIM, dan DMARC) yang digunakan untuk membuktikan legitimasi pengirim "
+"email. Tidak mematuhi protokol-protokol ini akan sangat mengurangi peluang "
+"email Anda untuk sampai ke tujuan."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:12
 msgid ""
@@ -3351,6 +3355,10 @@ msgid ""
 "address** (e.g., `\\@company-name.odoo.com`) are pre-configured to **send "
 "authenticated emails** compliant with the SPF, DKIM, and DMARC protocols."
 msgstr ""
+"Database **Odoo Online** dan **Odoo.sh** yang menggunakan **alamat subdomain "
+"Odoo default** (misalnya, `\\@nama-perusahaan.odoo.com`) telah dikonfigurasi "
+"sebelumnya untuk **mengirim email terautentikasi** yang sesuai dengan "
+"protokol SPF, DKIM, dan DMARC."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:16
 msgid ""
@@ -3358,6 +3366,9 @@ msgid ""
 "records correctly is essential** to prevent emails from being quarantined as "
 "spam or not being delivered to recipients."
 msgstr ""
+"Jika memilih untuk menggunakan **domain kustom**, **mengonfigurasi record "
+"SPF dan DKIM dengan benar sangat penting** untuk mencegah email dikarantina "
+"sebagai spam atau tidak terkirim ke penerima."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:19
 msgid ""
@@ -3367,16 +3378,24 @@ msgid ""
 "is required to use the SPF and DKIM records specific to that email service "
 "and a custom domain."
 msgstr ""
+"Jika menggunakan :ref:`server email Odoo default untuk mengirim email dari "
+"domain kustom <email-outbound-custom-domain-odoo-server>`, record SPF dan "
+"DKIM harus dikonfigurasi seperti yang disajikan di bawah ini. Jika "
+"menggunakan server email keluar, diperlukan penggunaan record SPF dan DKIM "
+"yang spesifik untuk layanan email tersebut dan domain kustom."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:25
 msgid ""
 "Email service providers apply different rules to incoming emails. An email "
 "may be classified as spam even if it passes the SPF and DKIM checks."
 msgstr ""
+"Penyedia layanan email menerapkan aturan yang berbeda untuk email masuk. "
+"Email dapat diklasifikasikan sebagai spam meskipun lulus pemeriksaan SPF dan "
+"DKIM."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:31
 msgid "SPF (Sender Policy Framework)"
-msgstr ""
+msgstr "SPF (Sender Policy Framework)"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:33
 msgid ""
@@ -3386,6 +3405,11 @@ msgid ""
 "sending server is on the list of allowed IPs according to the "
 "sender's :abbr:`SPF (Sender Policy Framework)` record."
 msgstr ""
+"Protokol Sender Policy Framework (SPF) memungkinkan pemilik nama domain "
+"untuk menentukan server mana yang diizinkan mengirim email dari domain "
+"tersebut. Ketika server menerima email masuk, server tersebut memeriksa "
+"apakah alamat IP server pengirim ada dalam daftar IP yang diizinkan menurut "
+"record :abbr:`SPF (Sender Policy Framework)` pengirim."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:38
 msgid ""
@@ -3395,6 +3419,10 @@ msgid ""
 "as :guilabel:`Alias Domain`, it is necessary to configure it to be SPF-"
 "compliant."
 msgstr ""
+"Di Odoo, **pengujian SPF dilakukan pada alamat bounce** yang ditentukan di "
+"bawah field :guilabel:`Alias Domain` yang ditemukan di bawah "
+":guilabel:`General Settings` database. Jika menggunakan domain kustom "
+"sebagai :guilabel:`Alias Domain`, perlu dikonfigurasi agar sesuai dengan SPF."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:42
 msgid ""
@@ -3402,12 +3430,17 @@ msgid ""
 "modify this record depends on the provider hosting the :abbr:`DNS (Domain "
 "Name System)` zone of the domain name."
 msgstr ""
+"Kebijakan SPF dari sebuah domain diatur menggunakan record TXT. Cara membuat "
+"atau memodifikasi record ini tergantung pada penyedia yang meng-hosting zona "
+":abbr:`DNS (Domain Name System)` dari nama domain."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:45
 msgid ""
 "If the domain name does not yet have an SPF record, create one using the "
 "following input:"
 msgstr ""
+"Jika nama domain belum memiliki record SPF, buat satu menggunakan input "
+"berikut:"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:51
 msgid ""
@@ -3415,6 +3448,9 @@ msgid ""
 "updated**. Do not create a new one, as a domain must have only one SPF "
 "record."
 msgstr ""
+"Jika nama domain **sudah memiliki record SPF, record tersebut harus "
+"diperbarui**. Jangan membuat yang baru, karena sebuah domain harus hanya "
+"memiliki satu record SPF."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:55
 msgid ""
@@ -3422,6 +3458,9 @@ msgid ""
 "`include:_spf.odoo.com`: `v=spf1 include:_spf.odoo.com "
 "include:_spf.google.com ~all`"
 msgstr ""
+"Jika record TXT adalah `v=spf1 include:_spf.google.com ~all`, edit untuk "
+"menambahkan `include:_spf.odoo.com`: `v=spf1 include:_spf.odoo.com "
+"include:_spf.google.com ~all`"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:58
 msgid ""
@@ -3431,16 +3470,23 @@ msgid ""
 "The :ref:`most common providers <email-domain-providers-documentation>` and "
 "their documentation are listed below."
 msgstr ""
+"Periksa record SPF menggunakan alat seperti `MXToolbox SPF Record Check "
+"<https://mxtoolbox.com/spf.aspx>`_. Proses untuk membuat atau memodifikasi "
+"record SPF tergantung pada penyedia yang meng-hosting zona DNS dari nama "
+"domain. :ref:`Penyedia paling umum <email-domain-providers-documentation>` "
+"dan dokumentasinya tercantum di bawah ini."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:66
 msgid "DKIM (DomainKeys Identified Mail)"
-msgstr ""
+msgstr "DKIM (DomainKeys Identified Mail)"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:68
 msgid ""
 "The DomainKeys Identified Mail (DKIM) allows a user to authenticate emails "
 "with a digital signature."
 msgstr ""
+"DomainKeys Identified Mail (DKIM) memungkinkan user untuk mengautentikasi "
+"email dengan tanda tangan digital."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:70
 msgid ""
@@ -3461,6 +3507,8 @@ msgid ""
 "Enabling DKIM is **required** when sending emails **from a custom domain** "
 "using the Odoo email server."
 msgstr ""
+"Mengaktifkan DKIM **diperlukan** saat mengirim email **dari domain kustom** "
+"menggunakan server email Odoo."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:79
 msgid "Add a CNAME record for domain"
@@ -3601,6 +3649,9 @@ msgid ""
 "the DNS zone of the domain name. The :ref:`most common providers <email-"
 "domain-providers-documentation>` and their documentation are listed below."
 msgstr ""
+"Cara membuat atau memodifikasi record CNAME tergantung pada penyedia yang "
+"meng-hosting zona DNS dari nama domain. :ref:`Penyedia paling umum <email-"
+"domain-providers-documentation>` dan dokumentasinya tercantum di bawah ini."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:170
 msgid ""
@@ -3616,7 +3667,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_domain.rst:177
 msgid "DMARC (Domain-based Message Authentication, Reporting and Conformance)"
-msgstr ""
+msgstr "DMARC (Domain-based Message Authentication, Reporting and Conformance)"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:179
 msgid ""
@@ -3626,6 +3677,12 @@ msgid ""
 "contained in the DMARC record of a domain name tell the destination server "
 "what to do with an incoming email that fails the SPF and/or DKIM check."
 msgstr ""
+"Record :abbr:`DMARC (Domain-based Message Authentication, Reporting, & "
+"Conformance)` adalah protokol yang menyatukan :abbr:`SPF (Sender Policy "
+"Framework)` dan :abbr:`DKIM (DomainKeys Identified Mail)`. Instruksi yang "
+"terkandung dalam record DMARC dari sebuah nama domain memberitahu server "
+"tujuan apa yang harus dilakukan dengan email masuk yang gagal dalam "
+"pemeriksaan SPF dan/atau DKIM."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:185
 msgid ""
@@ -3634,6 +3691,10 @@ msgid ""
 "creating a DMARC record. Refer to a resource like `DMARC.org <https://"
 "dmarc.org/>`_ to set the DMARC record."
 msgstr ""
+"Tujuan dokumentasi ini adalah untuk membantu **memahami dampak DMARC "
+"terhadap kemampuan pengiriman email**, bukan memberikan instruksi yang tepat "
+"untuk membuat record DMARC. Rujuk ke sumber daya seperti `DMARC.org <https://"
+"dmarc.org/>`_ untuk mengatur record DMARC."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:189
 msgid "There are three DMARC policies:"
@@ -4401,6 +4462,10 @@ msgid ""
 "custom subdomain to the Odoo subdomain of your database, e.g., from "
 "`mail.mydomain.com` to `dbname.odoo.com`."
 msgstr ""
+"Konfigurasi ini hanya berfungsi dengan subdomain di infrastruktur Odoo "
+"Online atau Odoo.sh (misalnya, `@mail.mydomain.com`). Arahkan catatan MX "
+"dari subdomain khusus ke subdomain Odoo dari database Anda, misalnya, dari "
+"`mail.mydomain.com` ke `dbname.odoo.com`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:278
 msgid "Below are presented some specifications depending on the hosting type:"
@@ -10076,19 +10141,25 @@ msgstr "Format struk menggunakan konvensi penamaan: EpsonTMU220B__IMC_LDV__."
 msgid ""
 "Receipt format using naming convention: EpsonTMU220B__IMC_LDV_SCALE75__."
 msgstr ""
+"Format tanda terima menggunakan konvensi penamaan: "
+"EpsonTMU220B__IMC_LDV_SCALE75__."
 
 #: ../../content/applications/general/iot/devices/printer.rst:0
 msgid "Receipt format using naming convention: EpsonTMU220B__IMC_LDV_LDH__."
 msgstr ""
+"Format tanda terima menggunakan konvensi penamaan: "
+"EpsonTMU220B__IMC_LDV_LDH__."
 
 #: ../../content/applications/general/iot/devices/printer.rst:0
 msgid ""
 "Receipt format using naming convention: EpsonTMU220B__IMC_LDV_LDH_SCALE35__."
 msgstr ""
+"Format tanda terima menggunakan konvensi penamaan: "
+"EpsonTMU220B__IMC_LDV_LDH_SCALE35__."
 
 #: ../../content/applications/general/iot/devices/printer.rst:344
 msgid "DYMO LabelWriter print issue"
-msgstr ""
+msgstr "Masalah cetak DYMO LabelWriter"
 
 #: ../../content/applications/general/iot/devices/printer.rst:346
 msgid ""
@@ -10098,12 +10169,19 @@ msgid ""
 "and Model` needs to be set to reference the correct driver when using the "
 "device."
 msgstr ""
+"DYMO LabelWriter memiliki masalah yang diketahui dalam pencetakan dengan "
+"sistem IoT. Server OpenPrinting CUPS menginstal printer menggunakan driver "
+":guilabel:`Local RAW Printer`. Untuk mencetak apa pun, :guilabel:`Make and "
+"Model` yang benar perlu diatur untuk mereferensikan driver yang tepat saat "
+"menggunakan perangkat."
 
 #: ../../content/applications/general/iot/devices/printer.rst:351
 msgid ""
 "Additionally, a new printer needs to be added to reduce the print delay that "
 "occurs after updating the driver."
 msgstr ""
+"Selain itu, printer baru perlu ditambahkan untuk mengurangi penundaan cetak "
+"yang terjadi setelah memperbarui driver."
 
 #: ../../content/applications/general/iot/devices/printer.rst:355
 msgid ""
@@ -10115,14 +10193,21 @@ msgid ""
 "processes outline configuration steps for the DYMO LabelWriter 450 DUO Label "
 "(en) model. Adjust the model selections as needed."
 msgstr ""
+"Printer DYMO LabelWriter 450 DUO adalah printer DYMO yang direkomendasikan "
+"untuk digunakan dengan Odoo dan sistem IoT. Perangkat ini menggabungkan dua "
+"printer: printer label dan printer pita. Saat mengonfigurasi proses berikut, "
+"penting untuk memilih model yang benar (baik DYMO LabelWriter 450 DUO Label "
+"(en) atau DYMO LabelWriter 450 DUO Tape (en)). Untuk konsistensi, proses "
+"berikut menguraikan langkah-langkah konfigurasi untuk model DYMO LabelWriter "
+"450 DUO Label (en). Sesuaikan pilihan model sesuai kebutuhan."
 
 #: ../../content/applications/general/iot/devices/printer.rst:365
 msgid "DYMO LabelWriter not printing"
-msgstr ""
+msgstr "DYMO LabelWriter tidak mencetak"
 
 #: ../../content/applications/general/iot/devices/printer.rst:367
 msgid "If the DYMO LabelWriter fails to print, install a new driver:"
-msgstr ""
+msgstr "Jika DYMO LabelWriter gagal mencetak, instal driver baru:"
 
 #: ../../content/applications/general/iot/devices/printer.rst:369
 #: ../../content/applications/general/iot/devices/printer.rst:405
@@ -10130,20 +10215,23 @@ msgid ""
 "Access the IoT system's homepage and click :menuselection:`Printer server` "
 "to open the OpenPrinting CUPS console."
 msgstr ""
+"Akses beranda sistem IoT dan klik :menuselection:`Printer server` untuk "
+"membuka konsol OpenPrinting CUPS."
 
 #: ../../content/applications/general/iot/devices/printer.rst:371
 msgid ""
 "Click :menuselection:`Printers` in the top menu, then click the printer in "
 "the list."
 msgstr ""
+"Klik :menuselection:`Printers` di menu atas, lalu klik printer dalam daftar."
 
 #: ../../content/applications/general/iot/devices/printer.rst:372
 msgid "Select :guilabel:`Maintenance` in the first dropdown menu."
-msgstr ""
+msgstr "Pilih :guilabel:`Maintenance` di menu dropdown pertama."
 
 #: ../../content/applications/general/iot/devices/printer.rst:373
 msgid "Select :guilabel:`Modify Printer` in the second dropdown menu."
-msgstr ""
+msgstr "Pilih :guilabel:`Modify Printer` di menu dropdown kedua."
 
 #: ../../content/applications/general/iot/devices/printer.rst:0
 msgid ""
@@ -10151,18 +10239,24 @@ msgid ""
 "dropdown\n"
 "menus highlighted."
 msgstr ""
+"Ubah make dan model DYMO LabelWriter. Menu dropdown Maintenance dan Modify "
+"disorot."
 
 #: ../../content/applications/general/iot/devices/printer.rst:379
 msgid ""
 "Select the specific network connection/printer on which the modification "
 "should be made and click :guilabel:`Continue`."
 msgstr ""
+"Pilih koneksi jaringan/printer spesifik yang akan dimodifikasi dan klik "
+":guilabel:`Continue`."
 
 #: ../../content/applications/general/iot/devices/printer.rst:381
 msgid ""
 "On the next page, click :guilabel:`Continue`, then select :guilabel:`DYMO` "
 "from the :guilabel:`Make` dropdown list."
 msgstr ""
+"Pada halaman berikutnya, klik :guilabel:`Continue`, lalu pilih "
+":guilabel:`DYMO` dari daftar dropdown :guilabel:`Make`."
 
 #: ../../content/applications/general/iot/devices/printer.rst:383
 msgid ""
@@ -10170,12 +10264,17 @@ msgid ""
 "to :guilabel:`DYMO LabelWriter 450 DUO Label (en)` (or whichever DYMO "
 "printer model is being used)."
 msgstr ""
+"Klik :guilabel:`Continue` dan atur :guilabel:`Model` ke :guilabel:`DYMO "
+"LabelWriter 450 DUO Label (en)` (atau model printer DYMO mana pun yang "
+"digunakan)."
 
 #: ../../content/applications/general/iot/devices/printer.rst:385
 msgid ""
 "Click :guilabel:`Modify Printer` to set the new driver; a confirmation page "
 "appears."
 msgstr ""
+"Klik :guilabel:`Modify Printer` untuk mengatur driver baru; halaman "
+"konfirmasi muncul."
 
 #: ../../content/applications/general/iot/devices/printer.rst:386
 msgid ""
@@ -10184,6 +10283,10 @@ msgid ""
 "updated :guilabel:`DYMO LabelWriter 450 DUO Label` (or whichever DYMO "
 "printer model is being used)."
 msgstr ""
+"Klik :menuselection:`Printers` di menu atas; semua printer yang diinstal "
+"pada server OpenPrinting CUPS muncul, termasuk :guilabel:`DYMO LabelWriter "
+"450 DUO Label` yang baru diperbarui (atau model printer DYMO mana pun yang "
+"digunakan)."
 
 #: ../../content/applications/general/iot/devices/printer.rst:389
 msgid ""
@@ -10192,6 +10295,10 @@ msgid ""
 "The test label is printed after a few seconds if the driver update was "
 "successful."
 msgstr ""
+"Klik printer yang baru diperbarui, lalu klik menu dropdown "
+":guilabel:`Maintenance` dan pilih :guilabel:`Print Test Page` untuk mencetak "
+"label uji. Label uji dicetak setelah beberapa detik jika pembaruan driver "
+"berhasil."
 
 #: ../../content/applications/general/iot/devices/printer.rst:393
 msgid "To reduce this delay, add a new printer using the steps below."
@@ -10519,10 +10626,12 @@ msgid ""
 "Scroll down to the :guilabel:`Connected Devices` section and "
 "enable :guilabel:`IoT Box`."
 msgstr ""
+"Gulir ke bawah ke bagian :guilabel:`Connected Devices` dan aktifkan "
+":guilabel:`IoT Box`."
 
 #: ../../content/applications/general/iot/devices/scale.rst:32
 msgid "Select the scale in the :guilabel:`Electronic Scale` field."
-msgstr ""
+msgstr "Pilih timbangan pada kolom :guilabel:`Electronic Scale`."
 
 #: ../../content/applications/general/iot/devices/scale.rst:33
 msgid "Click :guilabel:`Save`."

@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-05 19:24+0000\n"
-"PO-Revision-Date: 2026-06-06 23:12+0000\n"
+"PO-Revision-Date: 2026-06-16 23:06+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-17-doc/"
 "general/sl/>\n"
@@ -3212,6 +3212,10 @@ msgid ""
 "to have access rights to settings in order to establish a connection to the "
 "email server."
 msgstr ""
+"Ta konfiguracija je zahtevnejša od dveh konfiguracij Microsoft Azure, saj "
+"zahteva, da imajo vsi uporabniki, konfigurirani z e-poštnimi strežniki, "
+"pravice dostopa do nastavitev, da lahko vzpostavijo povezavo z e-poštnim "
+"strežnikom."
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:241
 msgid "Setup"
@@ -3224,6 +3228,11 @@ msgid ""
 "server. In other words, only a user with an email address that matches the "
 "set :guilabel:`FROM Filtering` is able to use this server."
 msgstr ""
+"Vsak uporabnik mora imeti nastavljen ločen e-poštni strežnik. "
+":guilabel:`Filtriranje POŠILJATELJ` naj bo nastavljeno tako, da se z tega "
+"strežnika pošilja samo uporabnikova e-pošta. Z drugimi besedami, samo "
+"uporabnik z e-poštnim naslovom, ki se ujema z nastavljenim "
+":guilabel:`Filtriranjem POŠILJATELJ`, lahko uporablja ta strežnik."
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:251
 msgid ""
@@ -3232,6 +3241,10 @@ msgid ""
 "for this server should have the value of the `{mail.default.from}"
 "@{mail.catchall.domain}`."
 msgstr ""
+"Nastaviti je treba :ref:`nadomestni strežnik <azure_oauth/notifications>`, "
+"ki omogoča pošiljanje :guilabel:`obvestil`. :guilabel:`Filtriranje "
+"POŠILJATELJ` za ta strežnik naj ima vrednost `{mail.default.from}@"
+"{mail.catchall.domain}`."
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:260
 msgid ""
@@ -3240,55 +3253,74 @@ msgid ""
 "mass-mailing email server can remain empty, but it's require to be added in "
 "the settings of the *Email Marketing* application."
 msgstr ""
+"Konfiguracija za ta transakcijski e-poštni strežnik lahko deluje skupaj z "
+"odhodnim e-poštnim strežnikom za množično pošiljanje. :guilabel:`Filtriranje "
+"POŠILJATELJ` za e-poštni strežnik za množično pošiljanje lahko ostane "
+"prazno, vendar ga je treba dodati v nastavitvah aplikacije *E-poštno "
+"trženje*."
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:265
 msgid ""
 "For more information on setting the mass-mailing email server "
 "visit :ref:`email-outbound-custom-domain-smtp-server`."
 msgstr ""
+"Za več informacij o nastavitvi e-poštnega strežnika za množično pošiljanje "
+"obiščite :ref:`email-outbound-custom-domain-smtp-server`."
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:269
 msgid "Multiple user outgoing mail server configuration:"
-msgstr ""
+msgstr "Konfiguracija odhodnega e-poštnega strežnika za več uporabnikov:"
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:272
 msgid "User #1 mailbox"
-msgstr ""
+msgstr "Poštni predal uporabnika #1"
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:272
 msgid "Outgoing mail server #1 **username** (login) = `john@example.com`"
 msgstr ""
+"Odhodni e-poštni strežnik #1 **uporabniško ime** (prijava) = "
+"`john@example.com`"
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:273
 msgid "Outgoing mail server #1 :guilabel:`FROM Filtering` = `john@example.com`"
 msgstr ""
+"Odhodni e-poštni strežnik #1 :guilabel:`Filtriranje POŠILJATELJ` = "
+"`john@example.com`"
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:275
 msgid "User #2 mailbox"
-msgstr ""
+msgstr "Poštni predal uporabnika #2"
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:275
 msgid "Outgoing mail server #2 **username** (login) = `jane@example.com`"
 msgstr ""
+"Odhodni e-poštni strežnik #2 **uporabniško ime** (prijava) = "
+"`jane@example.com`"
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:276
 msgid "Outgoing mail server #2 :guilabel:`FROM Filtering` = `jane@example.com`"
 msgstr ""
+"Odhodni e-poštni strežnik #2 :guilabel:`Filtriranje POŠILJATELJ` = "
+"`jane@example.com`"
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:278
 msgid "Notifications mailbox"
-msgstr ""
+msgstr "Poštni predal za obvestila"
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:278
 msgid ""
 "Outgoing mail server #3 **username** (login) = `notifications@example.com`"
 msgstr ""
+"Odhodni e-poštni strežnik #3 **uporabniško ime** (prijava) = "
+"`notifications@example.com`"
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:279
 msgid ""
 "Outgoing mail server #3 :guilabel:`FROM Filtering` = "
 "`notifications@example.com`"
 msgstr ""
+"Odhodni e-poštni strežnik #3 :guilabel:`Filtriranje POŠILJATELJ` = "
+"`notifications@example.com`"
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:281
 msgid "System Parameters"
@@ -3296,7 +3328,7 @@ msgstr "Sistemski parametri"
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:285
 msgid "Configure incoming email server"
-msgstr ""
+msgstr "Konfiguracija dohodnega e-poštnega strežnika"
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:287
 msgid ""
@@ -3309,10 +3341,19 @@ msgid ""
 "state: :guilabel:`Outlook Token Valid` Now :guilabel:`Test and Confirm` the "
 "account. The account should be ready to receive email to the Odoo database."
 msgstr ""
+"Dohodni račun naj bo konfiguriran na podoben način kot odhodni e-poštni "
+"račun. Pojdite na :guilabel:`Dohodni e-poštni strežniki` v "
+":guilabel:`Tehničnem meniju` in :guilabel:`Ustvarite` novo konfiguracijo. "
+"Označite ali izberite gumb poleg :guilabel:`Outlook Oauth avtentikacija` in "
+"vnesite :guilabel:`Microsoft Outlook uporabniško ime`. Kliknite na "
+":guilabel:`Povežite svoj Outlook račun`. Odoo bo prikazal: "
+":guilabel:`Outlook žeton veljaven`. Zdaj :guilabel:`Testirajte in potrdite` "
+"račun. Račun naj bi bil pripravljen za prejemanje e-pošte v podatkovno bazo "
+"Odoo."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:6
 msgid "Configure DNS records to send emails in Odoo"
-msgstr ""
+msgstr "Konfiguracija DNS zapisov za pošiljanje e-pošte v Odoo"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:8
 msgid ""
@@ -3321,6 +3362,10 @@ msgid ""
 "complying with these protocols will greatly reduce chances of your emails to "
 "reach their destination."
 msgstr ""
+"Ta dokumentacija predstavlja tri dopolnilne avtentikacijske protokole (SPF, "
+"DKIM in DMARC), ki se uporabljajo za dokazovanje legitimnosti pošiljatelja e-"
+"pošte. Neskladnost s temi protokoli bo močno zmanjšala možnosti, da vaša e-"
+"pošta doseže svoj cilj."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:12
 msgid ""
@@ -3328,6 +3373,10 @@ msgid ""
 "address** (e.g., `\\@company-name.odoo.com`) are pre-configured to **send "
 "authenticated emails** compliant with the SPF, DKIM, and DMARC protocols."
 msgstr ""
+"Podatkovne baze **Odoo Online** in **Odoo.sh**, ki uporabljajo **privzeti "
+"naslov Odoo poddomene** (npr. `\\@podjetje-ime.odoo.com`), so vnaprej "
+"konfigurirane za **pošiljanje overjene e-pošte** v skladu s protokoli SPF, "
+"DKIM in DMARC."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:16
 msgid ""
@@ -3463,6 +3512,11 @@ msgid ""
 "the key contained in the record match, it proves the message is authentic "
 "and has not been altered during transport."
 msgstr ""
+"Ko pošilja e-poštno sporočilo, strežnik e-pošte Odoo vključi edinstven "
+"podpis DKIM v glave. Strežnik prejemnika dešifrira ta podpis s pomočjo "
+"zapisa DKIM v domenskem imenu zbirke podatkov. Če se podpis in ključ v "
+"zapisu ujemata, to dokazuje, da je sporočilo pristno in ni bilo spremenjeno "
+"med prenosom."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:75
 msgid ""
@@ -3474,13 +3528,15 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_domain.rst:79
 msgid "Add a CNAME record for domain"
-msgstr ""
+msgstr "Dodajte zapis CNAME za domeno"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:81
 msgid ""
 "To enable DKIM, add a canonical name (CNAME) record to the domain name "
 "system (DNS) zone of the domain name:"
 msgstr ""
+"Za omogočanje DKIM dodajte kanonično ime (CNAME) zapisa v sistem domenskih "
+"imen (DNS) cono domenskega imena:"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:89
 msgid ""
@@ -3489,10 +3545,14 @@ msgid ""
 "the canonical name (value/content) is `odoo._domainkey.odoo.com.`. For "
 "example, note the differences between each key/value in italics\\:"
 msgstr ""
+"Če je domensko ime *company-name.com*, se prepričajte, da ustvarite zapis "
+"CNAME, kjer je zapis CNAME (ključ/ime) `odoo._domainkey.company-name.com`, "
+"kanonično ime (vrednost/vsebina) pa `odoo._domainkey.odoo.com.`. Na primer, "
+"upoštevajte razlike med posameznim ključem/vrednostjo v ležečem tisku:"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:93
 msgid "Example CNAME record"
-msgstr ""
+msgstr "Primer zapisa CNAME"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:98
 #: ../../content/applications/general/email_communication/email_domain.rst:119
@@ -3502,7 +3562,7 @@ msgstr "Ključ"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:100
 msgid "odoo.\\_domainkey"
-msgstr ""
+msgstr "odoo.\\_domainkey"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:102
 #: ../../content/applications/general/email_communication/email_domain.rst:123
@@ -3514,7 +3574,7 @@ msgstr "Vrednost"
 #: ../../content/applications/general/email_communication/email_domain.rst:125
 #: ../../content/applications/general/email_communication/email_domain.rst:156
 msgid "odoo.\\_domainkey.\\ *odoo.com.* |nbsp|"
-msgstr ""
+msgstr "odoo.\\_domainkey.\\ *odoo.com.* |nbsp|"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:107
 #: ../../content/applications/general/email_communication/email_domain.rst:128
@@ -3527,13 +3587,13 @@ msgstr "ALI"
 #: ../../content/applications/general/email_communication/email_domain.rst:129
 #: ../../content/applications/general/email_communication/email_domain.rst:160
 msgid "odoo.\\_domainkey.\\ *dbname*\\ .odoo.com."
-msgstr ""
+msgstr "odoo.\\_domainkey.\\ *dbname*\\ .odoo.com."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:109
 #: ../../content/applications/general/email_communication/email_domain.rst:130
 #: ../../content/applications/general/email_communication/email_domain.rst:161
 msgid "... where *dbname* is the name of the Odoo database."
-msgstr ""
+msgstr "... kjer je *dbname* ime zbirke podatkov Odoo."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:111
 msgid ""
@@ -3541,14 +3601,17 @@ msgid ""
 "*company-name.com*) by default. In this case, the key looks different while "
 "the value remains the same:"
 msgstr ""
+"Na večini platform DNS ponudnik DNS privzeto doda domeno po meri (npr. "
+"*company-name.com*). V tem primeru je videti ključ drugače, medtem ko "
+"vrednost ostane enaka:"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:114
 msgid "Example CNAME record with custom domain"
-msgstr ""
+msgstr "Primer zapisa CNAME z domeno po meri"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:121
 msgid "odoo.\\_domainkey.\\ *company-name.com* |nbsp|"
-msgstr ""
+msgstr "odoo.\\_domainkey.\\ *company-name.com* |nbsp|"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:122
 #: ../../content/applications/general/email_communication/email_domain.rst:153
@@ -3655,17 +3718,19 @@ msgstr "`p=none`"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:192
 msgid "`p=quarantine`"
-msgstr ""
+msgstr "`p=quarantine`"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:193
 msgid "`p=reject`"
-msgstr ""
+msgstr "`p=reject`"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:195
 msgid ""
 "`p=quarantine` and `p=reject` instruct the server that receives an email to "
 "quarantine that email or ignore it if the SPF or DKIM check fails."
 msgstr ""
+"`p=quarantine` in `p=reject` naročita strežniku, ki prejme e-pošto, naj jo "
+"da v karanteno ali prezre, če preverjanje SPF ali DKIM ne uspe."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:199
 msgid ""
@@ -3673,6 +3738,9 @@ msgid ""
 "domains must be in alignment. If the hosting type is Odoo Online, DKIM "
 "configuration on the sending domain is required to pass the DMARC."
 msgstr ""
+"**Zato da DMARC uspe, mora uspeti preverjanje DKIM ali SPF** in domene "
+"morajo biti usklajene. Če je vrsta gostovanja Odoo Online, je za uspešen "
+"DMARC potrebna konfiguracija DKIM na pošiljateljski domeni."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:203
 msgid ""
@@ -3680,12 +3748,17 @@ msgid ""
 "However, it's important to note that **other factors like spam filters can "
 "still reject or quarantine a message**."
 msgstr ""
+"Uspešen DMARC na splošno pomeni, da bo e-pošta uspešno dostavljana. Vendar "
+"je pomembno opozoriti, da **drugi dejavniki, kot so filtri neželene pošte, "
+"lahko sporočilo še vedno zavrnejo ali dajo v karanteno**."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:206
 msgid ""
 "`p=none` is used for the domain owner to receive reports about entities "
 "using their domain. It should not impact the deliverability."
 msgstr ""
+"`p=none` se uporablja, da lastnik domene prejema poročila o entitetah, ki "
+"uporabljajo njegovo domeno. To ne bi smelo vplivati na dostavljanje."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:210
 msgid ""
@@ -3693,21 +3766,27 @@ msgid ""
 "rua=mailto:postmaster@example.com”` means that aggregate DMARC reports will "
 "be sent to `postmaster\\@example.com`."
 msgstr ""
+":literal:`_dmarc IN TXT “v=DMARC1; p=none; rua=mailto:postmaster@example.com"
+"”` pomeni, da bodo agregirana poročila DMARC poslana na `postmaster\\"
+"@example.com`."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:217
 msgid "SPF, DKIM and DMARC documentation of common providers"
-msgstr ""
+msgstr "Dokumentacija SPF, DKIM in DMARC pogostih ponudnikov"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:219
 msgid ""
 "`OVH DNS <https://docs.ovh.com/us/en/domains/"
 "web_hosting_how_to_edit_my_dns_zone/>`_"
 msgstr ""
+"`OVH DNS <https://docs.ovh.com/us/en/domains/"
+"web_hosting_how_to_edit_my_dns_zone/>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:220
 msgid ""
 "`GoDaddy TXT record <https://www.godaddy.com/help/add-a-txt-record-19232>`_"
 msgstr ""
+"`GoDaddy TXT zapis <https://www.godaddy.com/help/add-a-txt-record-19232>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:221
 msgid ""
@@ -3722,24 +3801,32 @@ msgid ""
 "`NameCheap <https://www.namecheap.com/support/knowledgebase/article.aspx/"
 "317/2237/how-do-i-add-txtspfdkimdmarc-records-for-my-domain/>`_"
 msgstr ""
+"`NameCheap <https://www.namecheap.com/support/knowledgebase/article.aspx/317/"
+"2237/how-do-i-add-txtspfdkimdmarc-records-for-my-domain/>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:225
 msgid ""
 "`CloudFlare DNS <https://support.cloudflare.com/hc/en-us/articles/"
 "360019093151>`_"
 msgstr ""
+"`CloudFlare DNS <https://support.cloudflare.com/hc/en-us/articles/"
+"360019093151>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:226
 msgid ""
 "`Squarespace DNS records <https://support.squarespace.com/hc/en-us/articles/"
 "360002101888-Adding-custom-DNS-records-to-your-Squarespace-managed-domain>`_"
 msgstr ""
+"`Squarespace DNS zapisi <https://support.squarespace.com/hc/en-us/articles/"
+"360002101888-Adding-custom-DNS-records-to-your-Squarespace-managed-domain>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:228
 msgid ""
 "`Azure DNS <https://docs.microsoft.com/en-us/azure/dns/dns-getstarted-"
 "portal>`_"
 msgstr ""
+"`Azure DNS <https://docs.microsoft.com/en-us/azure/dns/dns-getstarted-portal>"
+"`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:230
 msgid ""
@@ -3748,22 +3835,30 @@ msgid ""
 "configuration in one sent email. Mail-Tester can also be used to configure "
 "records for other, lesser-known providers."
 msgstr ""
+"Za popolno preskušanje konfiguracije uporabite orodje `Mail-Tester <https://"
+"www.mail-tester.com/>`_, ki ponuja popoln pregled vsebine in konfiguracije v "
+"enem poslanem e-sporočilu. Mail-Tester lahko uporabite tudi za konfiguracijo "
+"zapisov za druge, manj znane ponudnike."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:235
 msgid ""
 "`Using Mail-Tester to set SPF Records for specific carriers <https://"
 "www.mail-tester.com/spf/>`_"
 msgstr ""
+"`Uporaba Mail-Tester za nastavitev SPF zapisov za določene ponudnike "
+"<https://www.mail-tester.com/spf/>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:237
 msgid ""
 "`Magic Sheet - SPF, DKIM and DMARC configuration [PDF] <https://"
 "drive.google.com/drive/folders/1TJIXQpdR0VN8UQx5JP7q7vFuAr3e1Q3r>`_"
 msgstr ""
+"`Čarobni list - konfiguracija SPF, DKIM in DMARC [PDF] <https://"
+"drive.google.com/drive/folders/1TJIXQpdR0VN8UQx5JP7q7vFuAr3e1Q3r>`_"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:3
 msgid "Manage inbound messages"
-msgstr ""
+msgstr "Upravljanje dohodnih sporočil"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:5
 msgid ""
@@ -3771,10 +3866,14 @@ msgid ""
 "send an email to an email alias created in the database or reply to an email "
 "that was previously sent from the database based on the *reply-to* header."
 msgstr ""
+"Dohodno sporočilo je e-pošta, dostavljana v podatkovno bazo Odoo. Kdorkoli "
+"lahko pošlje e-pošto na e-poštni vzdevek, ustvarjen v podatkovni bazi, ali "
+"odgovori na e-pošto, ki je bila prej poslana iz podatkovne baze na podlagi "
+"glave *reply-to*."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:12
 msgid "Email aliases"
-msgstr ""
+msgstr "E-poštni vzdevki"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:17
 msgid "Model specific aliases"
@@ -4377,6 +4476,10 @@ msgid ""
 "custom subdomain to the Odoo subdomain of your database, e.g., from "
 "`mail.mydomain.com` to `dbname.odoo.com`."
 msgstr ""
+"Ta konfiguracija deluje samo s podomeno na infrastrukturi Odoo Online ali "
+"Odoo.sh (npr. `@mail.mydomain.com`). Usmerite zapis MX iz podomene po meri "
+"na podomeno Odoo vaše baze podatkov, npr. iz `mail.mydomain.com` na "
+"`dbname.odoo.com`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:278
 msgid "Below are presented some specifications depending on the hosting type:"
@@ -6508,11 +6611,11 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:None
 msgid "Client ID and Client Secret for Google OAuth."
-msgstr ""
+msgstr "ID odjemalca in skrivnost odjemalca za Google OAuth."
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:114
 msgid "Enter Google Credentials"
-msgstr ""
+msgstr "Vnesi poverilnice Google"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:116
 msgid ""
@@ -6520,6 +6623,9 @@ msgid ""
 "the :guilabel:`Apps` filter from the search bar and type in `Google`. "
 "Install the module called :guilabel:`Google Gmail`."
 msgstr ""
+"Najprej odpri Odoo in se premakni na modul :guilabel:`Aplikacije`. Nato "
+"odstrani filter :guilabel:`Aplikacije` iz iskalne vrstice in vnesi `Google`. "
+"Namesti modul z imenom :guilabel:`Google Gmail`."
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:120
 msgid ""
@@ -6531,6 +6637,13 @@ msgid ""
 "into the :guilabel:`Client ID` and :guilabel:`Client Secret` fields "
 "and :guilabel:`Save` the settings."
 msgstr ""
+"Nato se premakni na :menuselection:`Nastavitve --> Splošne nastavitve` in v "
+"razdelku :guilabel:`Discuss` preveri, da je potrditveno polje za "
+":guilabel:`Strežnike e-pošte po meri` ali :guilabel:`Zunanje strežnike e-"
+"pošte` označeno. To prikaže novo možnost za :guilabel:`Poverilnice Gmail` "
+"ali :guilabel:`Uporabi strežnik Gmail`. Nato kopiraj in prilepi ustrezne "
+"vrednosti v polji :guilabel:`ID odjemalca` in :guilabel:`Skrivnost "
+"odjemalca` ter :guilabel:`Shrani` nastavitve."
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:129
 msgid ""
@@ -6538,10 +6651,13 @@ msgid ""
 "the :guilabel:`Custom Email Servers` setting and then click "
 "the :guilabel:`Outgoing Email Servers` link."
 msgstr ""
+"Za konfiguracijo zunanjega računa Gmail se vrni na vrh nastavitve "
+":guilabel:`Strežniki e-pošte po meri` in nato klikni na povezavo "
+":guilabel:`Odhodni strežniki e-pošte`."
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:None
 msgid "Configure Outgoing Email Servers in Odoo."
-msgstr ""
+msgstr "Konfiguriraj odhodne strežnike e-pošte v Odoo."
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:136
 msgid ""
@@ -6549,6 +6665,9 @@ msgid ""
 "server, and fill in the :guilabel:`Name`, :guilabel:`Description`, and the "
 "email :guilabel:`Username` (if required)."
 msgstr ""
+"Nato klikni na :guilabel:`Novo` ali :guilabel:`Ustvari`, da ustvariš nov e-"
+"poštni strežnik, in izpolni :guilabel:`Ime`, :guilabel:`Opis` ter e-poštno "
+":guilabel:`Uporabniško ime` (če je potrebno)."
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:139
 msgid ""
@@ -6556,6 +6675,10 @@ msgid ""
 "(under the :guilabel:`Authenticate with` or :guilabel:`Connection` section). "
 "Finally, click on :guilabel:`Connect your Gmail Account`."
 msgstr ""
+"Nato klikni na :guilabel:`Preverjanje pristnosti Gmail OAuth` ali "
+":guilabel:`Gmail` (v razdelku :guilabel:`Preveri pristnost z` ali "
+":guilabel:`Povezava`). Na koncu klikni na :guilabel:`Poveži svoj račun "
+"Gmail`."
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:143
 msgid ""
@@ -6563,6 +6686,8 @@ msgid ""
 "process. Select the appropriate email address that is being configured in "
 "Odoo."
 msgstr ""
+"Odpre se novo okno z oznako :guilabel:`Google`, kjer dokončaš postopek "
+"avtorizacije. Izberi ustrezen e-poštni naslov, ki se konfigurira v Odoo."
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:146
 msgid ""
@@ -6570,6 +6695,8 @@ msgid ""
 "click :guilabel:`Continue` to allow the verification and connect the Gmail "
 "account to Odoo."
 msgstr ""
+"Če je e-poštni naslov osebni račun, se prikaže dodaten korak, zato klikni "
+":guilabel:`Nadaljuj`, da odobriš preverjanje in povežeš račun Gmail z Odoo."
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:149
 msgid ""
@@ -6579,6 +6706,10 @@ msgid ""
 "configuration automatically loads the token in Odoo, and a tag "
 "stating :guilabel:`Gmail Token Valid` appears in green."
 msgstr ""
+"Nato dovoli Odoo dostop do računa Google s klikom na :guilabel:`Nadaljuj` "
+"ali :guilabel:`Dovoli`. Nato se stran preusmeri nazaj na novo konfigurirani "
+"odhodni strežnik e-pošte v Odoo. Konfiguracija samodejno naloži žeton v Odoo "
+"in prikaže se zelena oznaka :guilabel:`Žeton Gmail je veljaven`."
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:158
 msgid ""
@@ -6586,24 +6717,29 @@ msgid ""
 "appear. The Odoo database can now send safe, secure emails through Google "
 "using OAuth authentication."
 msgstr ""
+"Na koncu :guilabel:`Preizkusi povezavo`. Prikazati bi se moralo potrditveno "
+"sporočilo. Podatkovna baza Odoo lahko sedaj pošilja varna e-poštna sporočila "
+"prek Googla z uporabo preverjanja pristnosti OAuth."
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:162
 msgid "Google OAuth FAQ"
-msgstr ""
+msgstr "Pogosto zastavljena vprašanja o Google OAuth"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:165
 msgid "Production VS Testing Publishing Status"
-msgstr ""
+msgstr "Status objave: proizvodnja proti testiranju"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:167
 msgid ""
 "Choosing :guilabel:`Production` as the :guilabel:`Publishing Status` "
 "(instead of :guilabel:`Testing`) will display the following warning message:"
 msgstr ""
+"Če izbereš :guilabel:`Proizvodnja` kot :guilabel:`Status objave` (namesto "
+":guilabel:`Testiranje`), se prikaže naslednje opozorilo:"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:None
 msgid "OAuth is Limited to 100 Sensitive Scope Logins."
-msgstr ""
+msgstr "OAuth je omejen na 100 prijav z občutljivim obsegom."
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:174
 msgid ""
@@ -6612,20 +6748,26 @@ msgid ""
 "the :guilabel:`Publishing status` is :guilabel:`In Production`, "
 "click :guilabel:`Back to Testing` to correct the issue."
 msgstr ""
+"Za popravek tega opozorila se premakni na `Google API Platform <https://"
+"console.cloud.google.com/apis/credentials/consent>`_. Če je "
+":guilabel:`Status objave` nastavljen na :guilabel:`V proizvodnji`, klikni "
+":guilabel:`Nazaj na testiranje`, da popraviš težavo."
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:179
 msgid "No Test Users Added"
-msgstr ""
+msgstr "Ni dodanih testnih uporabnikov"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:181
 msgid ""
 "If no test users are added to the OAuth consent screen, then a 403 access "
 "denied error will populate."
 msgstr ""
+"Če na zaslon za privolitev OAuth niso dodani testni uporabniki, se prikaže "
+"napaka 403 dostop zavrnjen."
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:None
 msgid "403 Access Denied Error."
-msgstr ""
+msgstr "Napaka 403 dostop zavrnjen."
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:188
 msgid ""
@@ -6992,11 +7134,11 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:None
 msgid "The TXT record information to input on the domain's DNS."
-msgstr ""
+msgstr "Informacije o zapisu TXT, ki jih je treba vnesti v DNS domene."
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:129
 msgid "Setup in the domain's DNS"
-msgstr ""
+msgstr "Nastavitev v DNS domene"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:131
 msgid ""
@@ -7007,10 +7149,16 @@ msgid ""
 "consists of the :guilabel:`Host` and :guilabel:`Value`. Paste these into the "
 "corresponding fields in the TXT record."
 msgstr ""
+"Po pridobitvi informacij o zapisu TXT iz računa Mailjet dodajte zapis TXT v "
+":abbr:`DNS (Domain Name System)` domene. Ta postopek se razlikuje glede na "
+"ponudnika :abbr:`DNS (Domain Name System)`. Za določene postopke "
+"konfiguracije se obrnite na ponudnika. Informacije o zapisu TXT sestavljajo "
+":guilabel:`Host` in :guilabel:`Value`. Prilepite jih v ustrezna polja v "
+"zapisu TXT."
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:138
 msgid "Return to Mailjet account information"
-msgstr ""
+msgstr "Vrnite se k informacijam o računu Mailjet"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:140
 msgid ""
@@ -7020,6 +7168,10 @@ msgid ""
 "click the gear icon next to :guilabel:`Domain`, and "
 "select :guilabel:`Validate`."
 msgstr ""
+"Po dodajanju zapisa TXT v :abbr:`DNS (Domain Name System)` domene se vrnite "
+"v račun Mailjet. Nato se pomaknite na :menuselection:`Account "
+"Information --> Add a Sender Domain or Address`, kliknite ikono zobnika "
+"poleg :guilabel:`Domain` in izberite :guilabel:`Validate`."
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:144
 msgid ""
@@ -7027,6 +7179,9 @@ msgid ""
 "<https://app.mailjet.com/ account/sender>`_ page on the Mailjet account "
 "information and clicking on :guilabel:`Manage`."
 msgstr ""
+"To dejanje lahko izvedete tudi tako, da obiščete stran `Sender domains & "
+"addresses <https://app.mailjet.com/ account/sender>`_ z informacijami o "
+"računu Mailjet in kliknete na :guilabel:`Manage`."
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:147
 msgid ""
@@ -7034,10 +7189,12 @@ msgid ""
 "on the domain. A success screen will appear if the domain is configured "
 "correctly."
 msgstr ""
+"Nato kliknite :guilabel:`Check Now`, da potrdite zapis TXT, ki je bil dodan "
+"v domeni. Če je domena pravilno konfigurirana, se prikaže zaslon z uspehom."
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:None
 msgid "Check DNS record in Mailjet."
-msgstr ""
+msgstr "Preverite zapis DNS v Mailjet."
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:153
 msgid ""
@@ -7047,20 +7204,26 @@ msgid ""
 "Identified Mail) records to input into the :abbr:`DNS (Domain Name System)` "
 "provider."
 msgstr ""
+"Po uspešni nastavitvi domene obstaja možnost :guilabel:`Authenticate this "
+"domain (SPF/DKIM)`. Ta gumb zapolni zapise :abbr:`SPF (Sender Policy "
+"Framework)` in :abbr:`DKIM (DomainKeys Identified Mail) za vnos v ponudnika "
+":abbr:`DNS (Domain Name System)`."
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:158
 msgid ""
 "`Mailjet's SPF/DKIM/DMARC documentation <https://documentation.mailjet.com/"
 "hc/articles/ 360042412734-Authenticating-Domains-with-SPF-DKIM>`_"
 msgstr ""
+"`Mailjet's SPF/DKIM/DMARC documentation <https://documentation.mailjet.com/"
+"hc/articles/ 360042412734-Authenticating-Domains-with-SPF-DKIM>`_"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:None
 msgid "Authenticate the domain with SPF/DKIM records in Mailjet."
-msgstr ""
+msgstr "Overite domeno z zapisi SPF/DKIM v Mailjet."
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:167
 msgid "Set up in Odoo"
-msgstr ""
+msgstr "Nastavitev v Odoo"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:169
 msgid ""
@@ -7070,6 +7233,11 @@ msgid ""
 "Then, create a new outgoing server configuration by clicking on "
 "the :guilabel:`Create` button."
 msgstr ""
+"Za dokončanje nastavitve se pomaknite v bazo podatkov Odoo in pojdite v "
+":guilabel:`Settings`. Z vklopljenim :ref:`developer-mode` pojdite na "
+":menuselection:`Technical Menu --> Email --> Outgoing Mail Servers`. Nato "
+"ustvarite novo konfiguracijo odhodnega strežnika s klikom na gumb "
+":guilabel:`Create`."
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:174
 msgid ""
@@ -7080,6 +7248,11 @@ msgid ""
 "Layer)`/:abbr:`TLS (Transport Layer Security)` even though Mailjet may not "
 "require it."
 msgstr ""
+"Nato vnesite `SMTP server` (in-v3.mailjet.com), `port number` (587 ali 465) "
+"in `Security (SSL/TLS)`, ki ste jih predhodno kopirali iz računa Mailjet. "
+"Najdete jih lahko tudi `here <https://app.mailjet.com/account/setup>`_. "
+"Priporočljivo je uporabiti :abbr:`SSL (Secure Sockets Layer)`/:abbr:`TLS "
+"(Transport Layer Security)`, čeprav Mailjet tega morda ne zahteva."
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:179
 msgid ""
@@ -7089,6 +7262,10 @@ msgid ""
 "on :menuselection:`Mailjet -->  Account Settings --> SMTP and SEND API "
 "Settings`."
 msgstr ""
+"Za :guilabel:`Username` vnesite :guilabel:`API KEY`. Za :guilabel:`Password` "
+"vnesite :guilabel:`SECRET KEY`, ki ste ga predhodno kopirali iz računa "
+"Mailjet v beležnico. Te nastavitve najdete v :menuselection:`Mailjet -->  "
+"Account Settings --> SMTP and SEND API Settings`."
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:184
 msgid ""
@@ -7096,10 +7273,14 @@ msgid ""
 "the :guilabel:`Priority` value higher than that of any transactional email "
 "server(s). Finally, save the settings and :guilabel:`Test the Connection`."
 msgstr ""
+"Nato, če se strežnik Mailjet uporablja za množično pošiljanje e-pošte, "
+"nastavite vrednost :guilabel:`Priority` višje od vrednosti katerega koli "
+"transakcijskega e-poštnega strežnika. Nazadnje shranite nastavitve in "
+":guilabel:`Test the Connection`."
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:None
 msgid "Odoo outgoing email server settings."
-msgstr ""
+msgstr "Nastavitve odhodnega e-poštnega strežnika Odoo."
 
 #: ../../content/applications/general/integrations.rst:3
 msgid "Integrations"
@@ -9681,66 +9862,80 @@ msgstr "Pravilno oblikovanje imena:"
 
 #: ../../content/applications/general/iot/devices/printer.rst:220
 msgid "`EPSONTMm30II__IMC__`"
-msgstr ""
+msgstr "`EPSONTMm30II__IMC__`"
 
 #: ../../content/applications/general/iot/devices/printer.rst:221
 msgid "`EPSON_TM_U220__IMC_LDV_LDH_SCALE80__`"
-msgstr ""
+msgstr "`EPSON_TM_U220__IMC_LDV_LDH_SCALE80__`"
 
 #: ../../content/applications/general/iot/devices/printer.rst:223
 msgid ""
 "Improper name formatting (this will not prevent printing, but the result "
 "might not have the expected printed output):"
 msgstr ""
+"Nepravilno oblikovanje imena (to ne bo preprečilo tiskanja, vendar rezultat "
+"morda ne bo imel pričakovanega natisnjenega izhoda):"
 
 #: ../../content/applications/general/iot/devices/printer.rst:226
 msgid "`EPSON TMm 30II`: The name cannot contain spaces."
-msgstr ""
+msgstr "`EPSON TMm 30II`: Ime ne sme vsebovati presledkov."
 
 #: ../../content/applications/general/iot/devices/printer.rst:227
 msgid ""
 "`EPSONTMm30II`: The name itself is correct, but it will not use `ESC *`."
 msgstr ""
+"`EPSONTMm30II`: Ime samo po sebi je pravilno, vendar ne bo uporabljalo `ESC "
+"*`."
 
 #: ../../content/applications/general/iot/devices/printer.rst:228
 msgid "`EPSONTMm30II__IMC`: This name is missing the end `__`."
-msgstr ""
+msgstr "`EPSONTMm30II__IMC`: Temu imenu manjka končni `__`."
 
 #: ../../content/applications/general/iot/devices/printer.rst:229
 msgid ""
 "`EPSONTMm30II__IMC_XDV__`: The parameter `XDV` does not match any existing "
 "parameters."
 msgstr ""
+"`EPSONTMm30II__IMC_XDV__`: Parameter `XDV` se ne ujema z nobenim obstoječim "
+"parametrom."
 
 #: ../../content/applications/general/iot/devices/printer.rst:230
 msgid ""
 "`EPSONTMm30II__IMC_SCALE__`: The parameter `SCALE` is missing the scale "
 "value."
-msgstr ""
+msgstr "`EPSONTMm30II__IMC_SCALE__`: Parametru `SCALE` manjka vrednost merila."
 
 #: ../../content/applications/general/iot/devices/printer.rst:232
 msgid ""
 "Once the printer's name has been defined using the appropriate naming "
 "convention, click :guilabel:`Continue`."
 msgstr ""
+"Ko je ime tiskalnika določeno z ustrezno konvencijo poimenovanja, kliknite "
+":guilabel:`Nadaljuj`."
 
 #: ../../content/applications/general/iot/devices/printer.rst:234
 msgid ""
 "Set the :guilabel:`Make` value to :guilabel:`Raw` and the :guilabel:`Model` "
 "value to :guilabel:`Raw Queue (en)`."
 msgstr ""
+"Nastavite vrednost :guilabel:`Znamka` na :guilabel:`Raw` in vrednost "
+":guilabel:`Model` na :guilabel:`Raw Queue (en)`."
 
 #: ../../content/applications/general/iot/devices/printer.rst:236
 msgid ""
 "Click :guilabel:`Add Printer`. If everything was done correctly, the page "
 "should redirect to the :guilabel:`Banners` page."
 msgstr ""
+"Kliknite :guilabel:`Dodaj tiskalnik`. Če je bilo vse narejeno pravilno, bi "
+"se morala stran preusmeriti na stran :guilabel:`Pasice`."
 
 #: ../../content/applications/general/iot/devices/printer.rst:238
 msgid ""
 "Wait a few minutes for the IoT system to detect the printer and sync to "
 "Odoo's server."
 msgstr ""
+"Počakajte nekaj minut, da sistem IoT zazna tiskalnik in se sinhronizira s "
+"strežnikom Odoo."
 
 #: ../../content/applications/general/iot/devices/printer.rst:239
 msgid ""
@@ -9758,6 +9953,11 @@ msgid ""
 "modified via the printer's name in CUPS. Instead, configure a new printer "
 "from scratch with modified parameters, following the steps above."
 msgstr ""
+"Če je bil tiskalnik nastavljen nepravilno (npr. še naprej tiska naključno "
+"besedilo ali je natisnjeni račun prevelik ali premajhen), ga ni mogoče "
+"spremeniti prek imena tiskalnika v CUPS. Namesto tega konfigurirajte nov "
+"tiskalnik od začetka s spremenjenimi parametri, pri čemer sledite zgornjim "
+"korakom."
 
 #: ../../content/applications/general/iot/devices/printer.rst:253
 msgid ""
@@ -9766,10 +9966,13 @@ msgid ""
 "example of a receipt that is printing correctly due to proper formatting (in "
 "theory):"
 msgstr ""
+"Naslednje je primer postopka odpravljanja težav za model tiskalnika TM-U220B "
+"z uporabo ukaza `ESC *`. Spodaj prikazani račun je primer računa, ki se "
+"tiska pravilno zaradi ustreznega oblikovanja (v teoriji):"
 
 #: ../../content/applications/general/iot/devices/printer.rst:0
 msgid "Properly formatted receipt picture from a demo database."
-msgstr ""
+msgstr "Slika pravilno oblikovanega računa iz predstavitvene podatkovne zbirke."
 
 #: ../../content/applications/general/iot/devices/printer.rst:261
 msgid ""
@@ -9777,16 +9980,21 @@ msgid ""
 "as the TM-U220B printer model does not support the `GS v 0` command. "
 "Instead, random characters will be printed:"
 msgstr ""
+"Neposredno tiskanje tega računa brez ustreznega oblikovanja ne bo delovalo, "
+"saj model tiskalnika TM-U220B ne podpira ukaza `GS v 0`. Namesto tega bodo "
+"natisnjeni naključni znaki:"
 
 #: ../../content/applications/general/iot/devices/printer.rst:0
 msgid "Printer paper with seemingly random characters."
-msgstr ""
+msgstr "Tiskalniški papir z navidezno naključnimi znaki."
 
 #: ../../content/applications/general/iot/devices/printer.rst:268
 msgid ""
 "To properly configure formatting for the Epson TM-U220B printer model, "
 "follow these steps:"
 msgstr ""
+"Za pravilno konfiguracijo oblikovanja za model tiskalnika Epson TM-U220B "
+"sledite tem korakom:"
 
 #: ../../content/applications/general/iot/devices/printer.rst:270
 msgid ""
@@ -9796,10 +10004,15 @@ msgid ""
 "reference_en/escpos/esc_asterisk.html>`_ commands, the TM-U220B printer is "
 "indeed incompatible with `GS v 0` but supports `ESC *`."
 msgstr ""
+"Po preverjanju Epsonove spletne strani glede združljivosti z ukazoma `GS v 0 "
+"<https://download4.epson.biz/sec_pubs/pos/reference_en/escpos/gs_lv_0.html>"
+"`_ in `ESC * <https://download4.epson.biz/sec_pubs/pos/reference_en/escpos/"
+"esc_asterisk.html>`_ je tiskalnik TM-U220B res nekompatibilen z `GS v 0`, "
+"vendar podpira `ESC *`."
 
 #: ../../content/applications/general/iot/devices/printer.rst:0
 msgid "Epson compatibility evaluation from Epson website."
-msgstr ""
+msgstr "Ocena združljivosti Epson s spletne strani Epson."
 
 #: ../../content/applications/general/iot/devices/printer.rst:278
 msgid "When adding the printer, CUPS displays the list of available printers:"
@@ -10413,10 +10626,12 @@ msgid ""
 "Scroll down to the :guilabel:`Connected Devices` section and "
 "enable :guilabel:`IoT Box`."
 msgstr ""
+"Pomaknite se navzdol do razdelka :guilabel:`Povezane naprave` in omogočite "
+":guilabel:`IoT Box`."
 
 #: ../../content/applications/general/iot/devices/scale.rst:32
 msgid "Select the scale in the :guilabel:`Electronic Scale` field."
-msgstr ""
+msgstr "Izberite tehtnico v polju :guilabel:`Elektronska tehtnica`."
 
 #: ../../content/applications/general/iot/devices/scale.rst:33
 msgid "Click :guilabel:`Save`."
@@ -13069,6 +13284,7 @@ msgstr ""
 msgid ""
 "Finally, towards the bottom of the menu, click :guilabel:`Become Superuser`."
 msgstr ""
+"Na koncu, proti dnu menija, kliknite :guilabel:`Postani nadprivilegiran`."
 
 #: ../../content/applications/general/users/access_rights.rst:169
 msgid ""
@@ -13076,12 +13292,17 @@ msgid ""
 "*Access Rights* (in their user profile) are allowed to log in to *Superuser "
 "mode*."
 msgstr ""
+"Le uporabniki z dostopom *Nastavitve* za razdelek *Administracija* v "
+"*Pravicah dostopa* (v svojem uporabniškem profilu) se lahko prijavijo v "
+"*nadprivilegirani način*."
 
 #: ../../content/applications/general/users/access_rights.rst:173
 msgid ""
 "*Superuser mode* allows for circumvention of record rules and access rights, "
 "and therefore, should be exercised with extreme caution."
 msgstr ""
+"*Nadprivilegirani način* omogoča izogibanje pravilom zapisov in pravicam "
+"dostopa, zato ga je treba izvajati z izjemno previdnostjo."
 
 #: ../../content/applications/general/users/access_rights.rst:176
 msgid ""
@@ -13089,6 +13310,10 @@ msgid ""
 "to changes that were made. This can cause *impotent admin*, or an "
 "administrator without the ability to change access rights/settings."
 msgstr ""
+"Po izhodu iz *nadprivilegiranega načina* so lahko uporabniki izključeni iz "
+"zbirke podatkov zaradi sprememb, ki so bile narejene. To lahko povzroči "
+"*onemogočenega skrbnika* ali skrbnika brez možnosti spreminjanja pravic "
+"dostopa/nastavitev."
 
 #: ../../content/applications/general/users/access_rights.rst:180
 msgid ""
@@ -13096,6 +13321,9 @@ msgid ""
 "www.odoo.com/help>`_. The support team is able to restore access using a "
 "support login."
 msgstr ""
+"V tem primeru se obrnite na podporo Odoo tukaj: `nov zahtevek za pomoč "
+"<https://www.odoo.com/help>`_. Ekipa za podporo lahko obnovi dostop z "
+"uporabo prijave za podporo."
 
 #: ../../content/applications/general/users/access_rights.rst:183
 msgid ""
@@ -13103,6 +13331,9 @@ msgid ""
 "upper-right corner, and clicking on the :guilabel:`OdooBot` username. Then, "
 "select the :guilabel:`Log out` option."
 msgstr ""
+"Če želite zapustiti *nadprivilegirani način*, se odjavite iz računa tako, da "
+"se pomaknete v zgornji desni kot in kliknete na uporabniško ime "
+":guilabel:`OdooBot`. Nato izberite možnost :guilabel:`Odjava`."
 
 #: ../../content/applications/general/users/access_rights.rst:187
 msgid ""
@@ -13115,10 +13346,12 @@ msgstr ""
 msgid ""
 "Instead of clicking :guilabel:`Login`, click :guilabel:`Log in as superuser`."
 msgstr ""
+"Namesto da kliknete :guilabel:`Prijava`, kliknite :guilabel:`Prijavi se kot "
+"nadprivilegiran`."
 
 #: ../../content/applications/general/users/azure.rst:3
 msgid "Microsoft Azure sign-in authentication"
-msgstr ""
+msgstr "Preverjanje pristnosti prijave Microsoft Azure"
 
 #: ../../content/applications/general/users/azure.rst:5
 msgid ""
@@ -13126,6 +13359,9 @@ msgid ""
 "allows Odoo users to sign in to their database with their Microsoft Azure "
 "account."
 msgstr ""
+"Preverjanje pristnosti prijave Microsoft Azure OAuth je uporabna funkcija, "
+"ki uporabnikom Odoo omogoča, da se prijavijo v svojo zbirko podatkov s "
+"svojim računom Microsoft Azure."
 
 #: ../../content/applications/general/users/azure.rst:8
 msgid ""
@@ -13133,6 +13369,9 @@ msgid ""
 "wants employees within the organization to connect to Odoo using their "
 "Microsoft Accounts."
 msgstr ""
+"To je še posebej koristno, če organizacija uporablja Azure Workspace in "
+"želi, da se zaposleni v organizaciji povežejo z Odoo z uporabo svojih "
+"računov Microsoft."
 
 #: ../../content/applications/general/users/azure.rst:12
 msgid ""
@@ -13142,30 +13381,39 @@ msgid ""
 "longer be able to be duplicated, renamed, or otherwise managed from the "
 "Odoo.com portal."
 msgstr ""
+"Zbirke podatkov, gostovane na Odoo.com, ne smejo uporabljati prijave OAuth "
+"za lastnika ali skrbnika zbirke podatkov, saj bi to prekinilo povezavo "
+"zbirke podatkov z njihovim računom Odoo.com. Če je OAuth nastavljen za tega "
+"uporabnika, zbirke podatkov ne bo več mogoče podvojiti, preimenovati ali "
+"kako drugače upravljati s portala Odoo.com."
 
 #: ../../content/applications/general/users/azure.rst:18
 msgid ":doc:`../../productivity/calendar/outlook`"
-msgstr ""
+msgstr ":doc:`../../productivity/calendar/outlook`"
 
 #: ../../content/applications/general/users/azure.rst:19
 msgid ":doc:`../email_communication/azure_oauth`"
-msgstr ""
+msgstr ":doc:`../email_communication/azure_oauth`"
 
 #: ../../content/applications/general/users/azure.rst:24
 msgid ""
 "Integrating the Microsoft sign-in function requires configuration on "
 "Microsoft and Odoo."
 msgstr ""
+"Integracija funkcije prijave Microsoft zahteva konfiguracijo v Microsoftu in "
+"Odoo."
 
 #: ../../content/applications/general/users/azure.rst:27
 msgid "Odoo System Parameter"
-msgstr ""
+msgstr "Sistemski parameter Odoo"
 
 #: ../../content/applications/general/users/azure.rst:29
 msgid ""
 "First activate the :ref:`developer mode <developer-mode>`, and then go "
 "to :menuselection:`Settings --> Technical --> System Parameters`."
 msgstr ""
+"Najprej aktivirajte :ref:`razvijalski način <developer-mode>`, nato pa "
+"pojdite na :menuselection:`Nastavitve --> Tehnično --> Sistemski parametri`."
 
 #: ../../content/applications/general/users/azure.rst:32
 msgid ""
@@ -13177,7 +13425,7 @@ msgstr ""
 
 #: ../../content/applications/general/users/azure.rst:37
 msgid "Microsoft Azure dashboard"
-msgstr ""
+msgstr "Nadzorna plošča Microsoft Azure"
 
 #: ../../content/applications/general/users/azure.rst:42
 msgid ""
@@ -13188,12 +13436,19 @@ msgid ""
 "365` account if there is one, otherwise, log in with a "
 "personal :guilabel:`Microsoft account`."
 msgstr ""
+"Zdaj ko so sistemski parametri v Odoo nastavljeni, je čas, da ustvarite "
+"ustrezno aplikacijo v Microsoft Azure. Če želite začeti ustvarjati novo "
+"aplikacijo, pojdite na `Microsoftov portal Azure <https://portal.azure.com/>"
+"`_. Prijavite se z računom :guilabel:`Microsoft Outlook Office 365`, če ga "
+"imate, sicer se prijavite z osebnim :guilabel:`računom Microsoft`."
 
 #: ../../content/applications/general/users/azure.rst:49
 msgid ""
 "A user with administrative access to the *Azure Settings* must connect and "
 "perform the following configuration steps below."
 msgstr ""
+"Uporabnik z upraviteljskim dostopom do *nastavitev Azure* se mora povezati "
+"in izvesti spodnje konfiguracijske korake."
 
 #: ../../content/applications/general/users/azure.rst:52
 msgid ""

@@ -28,8 +28,8 @@ msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-05 19:24+0000\n"
-"PO-Revision-Date: 2026-06-09 23:05+0000\n"
-"Last-Translator: Saara Hakanen <sahak@odoo.com>\n"
+"PO-Revision-Date: 2026-06-16 23:06+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Finnish <https://translate.odoo.com/projects/odoo-17-doc/"
 "general/fi/>\n"
 "Language: fi\n"
@@ -4524,6 +4524,10 @@ msgid ""
 "custom subdomain to the Odoo subdomain of your database, e.g., from "
 "`mail.mydomain.com` to `dbname.odoo.com`."
 msgstr ""
+"Tämä kokoonpano toimii vain aliverkkotunnuksella Odoo Online- tai Odoo.sh-"
+"infrastruktuurissa (esim. `@mail.mydomain.com`). Ohjaa MX-tietue "
+"mukautetusta aliverkkotunnuksesta tietokantasi Odoo-aliverkkotunnukseen, "
+"esim. osoitteesta `mail.mydomain.com` osoitteeseen `dbname.odoo.com`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:278
 msgid "Below are presented some specifications depending on the hosting type:"
@@ -4608,6 +4612,9 @@ msgid ""
 "the :guilabel:`Key` and choose a number of minutes as the :guilabel:`Value` "
 "(`120` is the default behavior)."
 msgstr ""
+"Ensimmäiseksi parametriksi syötä `mail.gateway.loop.minutes` "
+":guilabel:`Avaimeksi` ja valitse minuuttimääräksi :guilabel:`Arvo` (`120` on "
+"oletuskäyttäytyminen)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:315
 msgid ""
@@ -4615,6 +4622,9 @@ msgid ""
 "the :guilabel:`Key` and choose a number of emails as the :guilabel:`Value` "
 "(`20` is the default behavior)."
 msgstr ""
+"Toiseksi parametriksi syötä `mail.gateway.loop.threshold` "
+":guilabel:`Avaimeksi` ja valitse sähköpostien lukumääräksi :guilabel:`Arvo` "
+"(`20` on oletuskäyttäytyminen)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:319
 msgid ""
@@ -4624,7 +4634,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:323
 msgid "Allow alias domain system parameter"
-msgstr ""
+msgstr "Aliasverkkotunnusjärjestelmän parametrin salliminen"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:325
 msgid ""
@@ -4633,6 +4643,11 @@ msgid ""
 "the :ref:`developer mode <developer-mode>`. Then, go "
 "to :menuselection:`Settings app --> Technical --> Aliases`."
 msgstr ""
+"Saapuvat aliakset asetetaan Odoo-tietokannassa luomaan tietueita "
+"vastaanottamalla saapuvia sähköposteja. Nähdäksesi Odoo-tietokannassa "
+"asetetut aliakset, aktivoi ensin :ref:`kehittäjätila <developer-mode>`. "
+"Siirry sitten kohtaan :menuselection:`Asetukset-sovellus --> Tekniset --> "
+"Aliakset`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:329
 msgid ""
@@ -4642,6 +4657,12 @@ msgid ""
 "create a ticket, lead, opportunity, etc., eliminates false positives where "
 "email addresses with only the prefix alias, not the domain, are present."
 msgstr ""
+"Seuraava järjestelmäparametri, `mail.catchall.domain.allowed`, joka on "
+"asetettu sallituilla aliasverkkotunnusarvoilla pilkuilla erotettuna, "
+"suodattaa oikein osoitetut sähköpostit aliaksille. Verkkotunnusten "
+"asettaminen, joille alias voi luoda tikettejä, liidit, mahdollisuuksia jne., "
+"eliminoi väärät positiiviset tulokset, joissa on vain aliaksen etuliite, ei "
+"verkkotunnusta."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:334
 msgid ""
@@ -4650,6 +4671,10 @@ msgid ""
 "incoming email address. This is true in the sender, recipient, and :abbr:`CC "
 "(Carbon Copy)` email addresses of an incoming email."
 msgstr ""
+"Joissakin tapauksissa Odoo-tietokannassa on tehty osumia, kun vastaanotetaan "
+"sähköposti, jossa on sama aliaksen etuliite ja eri verkkotunnus saapuvassa "
+"sähköpostiosoitteessa. Tämä pätee lähettäjään, vastaanottajaan ja :abbr:`CC "
+"(hiilikopio)` -sähköpostiosoitteisiin saapuvassa sähköpostissa."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:339
 msgid ""
@@ -4659,6 +4684,11 @@ msgid ""
 "`commercial` alias, with a different domain, and therefore, creates a ticket/"
 "lead/opportunity/etc."
 msgstr ""
+"Kun Odoo vastaanottaa sähköposteja, joissa on `commercial`-etuliitealias "
+"lähettäjässä, vastaanottajassa tai :abbr:`CC (hiilikopio)` -"
+"sähköpostiosoitteissa (esim. commercial\\@example.com), tietokanta "
+"käsittelee virheellisesti sähköpostin täytenä `commercial`-aliaksena, jossa "
+"on eri verkkotunnus, ja luo siksi tiketin/liidin/mahdollisuuden/jne."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:344
 msgid ""
@@ -4668,6 +4698,11 @@ msgid ""
 "Click :guilabel:`New`. Then, type in `mail.catchall.domain.allowed` for "
 "the :guilabel:`Key` field."
 msgstr ""
+"Lisätäksesi `mail.catchall.domain.allowed` -järjestelmäparametrin, aktivoi "
+"ensin :ref:`kehittäjätila <developer-mode>`. Siirry sitten kohtaan "
+":menuselection:`Asetukset-sovellus --> Tekniset --> Järjestelmäparametrit`. "
+"Napsauta :guilabel:`Uusi`. Kirjoita sitten `mail.catchall.domain.allowed` "
+":guilabel:`Avain`-kenttään."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:348
 msgid ""
@@ -4675,10 +4710,13 @@ msgid ""
 "Manually :icon:`fa-cloud-upload` :guilabel:`(Save)`, and the system "
 "parameter takes immediate effect."
 msgstr ""
+"Seuraavaksi lisää :guilabel:`Arvo`-kenttään verkkotunnukset pilkuilla "
+"erotettuna. Tallenna manuaalisesti :icon:`fa-cloud-upload` :guilabel:`"
+"(Tallenna)`, ja järjestelmäparametri tulee voimaan välittömästi."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:None
 msgid "mail.catchall.domain.allowed system parameter set."
-msgstr ""
+msgstr "mail.catchall.domain.allowed -järjestelmäparametri asetettu."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:355
 msgid "Local-part based incoming detection"
@@ -4691,20 +4729,27 @@ msgid ""
 "part to match for routing an incoming email. If this feature is turned off, "
 "Odoo requires the whole email address to match for routing an incoming email."
 msgstr ""
+"Uutta aliasta luotaessa on mahdollista ottaa käyttöön "
+":guilabel:`Paikallisosaan perustuva saapuvan tunnistus`. Jos tämä on "
+"käytössä, Odoo vaatii vain paikallisosan täsmäämisen saapuvan sähköpostin "
+"reitityksessä. Jos tämä ominaisuus on pois päältä, Odoo vaatii koko "
+"sähköpostiosoitteen täsmäämisen saapuvan sähköpostin reitityksessä."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:3
 msgid "Manage outbound messages"
-msgstr ""
+msgstr "Lähtevien viestien hallinta"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:8
 msgid "Sending emails with Odoo's default configuration"
-msgstr ""
+msgstr "Sähköpostien lähettäminen Odoon oletuskonfiguraatiolla"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:10
 msgid ""
 "On **Odoo Online** and **Odoo.sh**, sending and receiving emails works out "
 "of the box. No configuration is required."
 msgstr ""
+"**Odoo Onlinessa** ja **Odoo.sh:ssa** sähköpostien lähettäminen ja "
+"vastaanottaminen toimii heti. Konfigurointia ei tarvita."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:13
 msgid ""
@@ -4712,6 +4757,9 @@ msgid ""
 "send and receive emails. The deliverability is optimized for this subdomain "
 "as it uses Odoo’s DNS configuration."
 msgstr ""
+"Kun tietokanta luodaan, aliverkkotunnusta `company-name.odoo.com` käytetään "
+"sähköpostien lähettämiseen ja vastaanottamiseen. Toimitettavuus on optimoitu "
+"tälle aliverkkotunnukselle, koska se käyttää Odoon DNS-konfiguraatiota."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:17
 msgid ""
@@ -4719,6 +4767,9 @@ msgid ""
 "configurations are the default ones, all emails will be sent from "
 "`notifications@company-name.odoo.com`."
 msgstr ""
+"Jos tietokannan aliverkkotunnus on `company-name.odoo.com` ja kaikki "
+"sähköpostikonfiguraatiot ovat oletusarvoisia, kaikki sähköpostit lähetetään "
+"osoitteesta `notifications@company-name.odoo.com`."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:22
 msgid ""
@@ -4732,10 +4783,19 @@ msgid ""
 "the :ref:`FROM filtering <email-outbound-different-servers-personalized-from-"
 "filtering>` of the mail server."
 msgstr ""
+"Tätä konfiguraatiota hallitaan järjestelmäparametrilla "
+"`mail.default.from_filter`. Siinä tapauksessa, että lähettäjän verkkotunnus "
+"ei täsmää tämän parametrin arvoon, käytetään sen sijaan ilmoitusosoitetta. "
+"Tässä järjestelmäparametrissa voidaan määritellä useita arvoja: pilkuilla "
+"erotetut verkkotunnukset tai täydelliset sähköpostiosoitteet ovat kaikki "
+"sallittuja. Kun :ref:`lähtevä sähköpostipalvelin on konfiguroitu <email-"
+"outbound-different-servers-personalized>`, järjestelmäparametria ei enää "
+"oteta huomioon ja käytetty arvo on sähköpostipalvelimen :ref:`FROM-suodatus "
+"<email-outbound-different-servers-personalized-from-filtering>`."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:None
 msgid "Odoo’s default outbound messages configuration."
-msgstr ""
+msgstr "Odoon lähtevien viestien oletuskonfiguraatio."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:33
 msgid ""
@@ -4743,6 +4803,9 @@ msgid ""
 "address. In addition, delivery errors are sent to `bounce@company-"
 "name.odoo.com`."
 msgstr ""
+"Sähköpostit lähetetään osoitteella `catchall@company-name.odoo.com` *vastaa "
+"osoitteeseen* -osoitteena. Lisäksi toimitusvirheet lähetetään osoitteeseen "
+"`bounce@company-name.odoo.com`."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:37
 msgid ""
@@ -4751,6 +4814,10 @@ msgid ""
 "Emails sent to an alias are automatically routed and will reply to an "
 "existing and linked record or will create a new one in the database."
 msgstr ""
+"Catchall-, bounce- ja ilmoitusosoitteet eivät toimi kuten muut aliakset. "
+"Niiden tarkoituksena ei ole luoda tietueita tietokantaan. Aliakselle "
+"lähetetyt sähköpostit reititetään automaattisesti ja ne joko vastaavat "
+"olemassa olevaan ja linkitettyyn tietueeseen tai luovat uuden tietokannan."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:44
 msgid "Using a custom domain to send emails"
@@ -6676,6 +6743,9 @@ msgid ""
 "(under the :guilabel:`Authenticate with` or :guilabel:`Connection` section). "
 "Finally, click on :guilabel:`Connect your Gmail Account`."
 msgstr ""
+"Klikkaa seuraavaksi :guilabel:`Gmail OAuth Authentication` tai "
+":guilabel:`Gmail` (:guilabel:`Authenticate with`- tai :guilabel:`Connection`-"
+"osiossa). Klikkaa lopuksi :guilabel:`Connect your Gmail Account`."
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:143
 msgid ""
@@ -6683,6 +6753,8 @@ msgid ""
 "process. Select the appropriate email address that is being configured in "
 "Odoo."
 msgstr ""
+"Avautuu uusi :guilabel:`Google`-ikkuna valtuutusprosessin suorittamiseksi. "
+"Valitse sopiva sähköpostiosoite, jota määritetään Odossa."
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:146
 msgid ""
@@ -6690,6 +6762,9 @@ msgid ""
 "click :guilabel:`Continue` to allow the verification and connect the Gmail "
 "account to Odoo."
 msgstr ""
+"Jos sähköpostiosoite on henkilökohtainen tili, näyttöön tulee lisävaihe. "
+"Klikkaa :guilabel:`Continue` salliaksesi vahvistuksen ja yhdistääksesi Gmail-"
+"tilin Odoon."
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:149
 msgid ""
@@ -6699,6 +6774,11 @@ msgid ""
 "configuration automatically loads the token in Odoo, and a tag "
 "stating :guilabel:`Gmail Token Valid` appears in green."
 msgstr ""
+"Salli sitten Odoon pääsy Google-tilille klikkaamalla :guilabel:`Continue` "
+"tai :guilabel:`Allow`. Tämän jälkeen sivu palaa takaisin juuri määritettyyn "
+"lähtevän sähköpostin palvelimeen Odossa. Määritys lataa tokenin "
+"automaattisesti Odoon ja vihreä :guilabel:`Gmail Token Valid`-tunniste "
+"ilmestyy näkyviin."
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:158
 msgid ""
@@ -6706,6 +6786,9 @@ msgid ""
 "appear. The Odoo database can now send safe, secure emails through Google "
 "using OAuth authentication."
 msgstr ""
+"Lopuksi :guilabel:`Test the Connection`. Vahvistusviesti pitäisi ilmestyä. "
+"Odoo-tietokanta voi nyt lähettää turvallisia, suojattuja sähköposteja "
+"Googlen kautta käyttäen OAuth-todennusta."
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:162
 msgid "Google OAuth FAQ"
@@ -6713,17 +6796,20 @@ msgstr "Google OAuth UKK"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:165
 msgid "Production VS Testing Publishing Status"
-msgstr ""
+msgstr "Tuotanto vs. testaus julkaisutila"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:167
 msgid ""
 "Choosing :guilabel:`Production` as the :guilabel:`Publishing Status` "
 "(instead of :guilabel:`Testing`) will display the following warning message:"
 msgstr ""
+"Jos valitset :guilabel:`Production` :guilabel:`Publishing Status` -"
+"asetukseksi (:guilabel:`Testing` -asetuksen sijaan), näyttöön tulee seuraava "
+"varoitusviesti:"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:None
 msgid "OAuth is Limited to 100 Sensitive Scope Logins."
-msgstr ""
+msgstr "OAuth on rajoitettu 100 arkaluonteiseen käyttöaluekirjautumiseen."
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:174
 msgid ""
@@ -6732,16 +6818,22 @@ msgid ""
 "the :guilabel:`Publishing status` is :guilabel:`In Production`, "
 "click :guilabel:`Back to Testing` to correct the issue."
 msgstr ""
+"Korjaa tämä varoitus siirtymällä `Google API Platform <https://"
+"console.cloud.google.com/apis/credentials/consent>`_. Jos "
+":guilabel:`Publishing status` on :guilabel:`In Production`, klikkaa "
+":guilabel:`Back to Testing` korjataksesi ongelman."
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:179
 msgid "No Test Users Added"
-msgstr ""
+msgstr "Testikäyttäjiä ei ole lisätty"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:181
 msgid ""
 "If no test users are added to the OAuth consent screen, then a 403 access "
 "denied error will populate."
 msgstr ""
+"Jos OAuth-suostumusnäyttöön ei ole lisätty testikäyttäjiä, tulee näyttöön "
+"403 access denied -virhe."
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:None
 msgid "403 Access Denied Error."
@@ -6753,21 +6845,27 @@ msgid ""
 "under :guilabel:`APIs & Services` and add test user(s) to the app. Add the "
 "email that you are configuring in Odoo."
 msgstr ""
+"Korjaa tämä virhe palaamalla :guilabel:`OAuth consent screen` -kohtaan "
+":guilabel:`APIs & Services` -osiossa ja lisää sovellukseen testikäyttäjiä. "
+"Lisää sähköpostiosoite, jota määrität Odossa."
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:192
 msgid "Gmail Module not updated"
-msgstr ""
+msgstr "Gmail-moduulia ei ole päivitetty"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:194
 msgid ""
 "If the *Google Gmail* module in Odoo has not been updated to the latest "
 "version, then a :guilabel:`Forbidden` error message populates."
 msgstr ""
+"Jos *Google Gmail* -moduulia Odossa ei ole päivitetty uusimpaan versioon, "
+"näyttöön tulee :guilabel:`Forbidden` -virheilmoitus."
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:None
 msgid ""
 "Forbidden you don't have the permission to access the requested resource."
 msgstr ""
+"Forbidden you don't have the permission to access the requested resource."
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:201
 msgid ""
@@ -6776,6 +6874,10 @@ msgid ""
 "the :guilabel:`Google Gmail` module. Finally, click on the three dots on the "
 "upper right of the module and select :guilabel:`Upgrade`."
 msgstr ""
+"Korjaa tämä virhe siirtymällä :menuselection:`Apps` -moduuliin ja tyhjennä "
+"hakuehdot. Hae sitten `Gmail` tai `Google` ja päivitä :guilabel:`Google "
+"Gmail` -moduuli. Klikkaa lopuksi kolmea pistettä moduulin oikeassa "
+"yläkulmassa ja valitse :guilabel:`Upgrade`."
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:206
 msgid "Application Type"
@@ -6787,6 +6889,9 @@ msgid ""
 "if :guilabel:`Desktop App` is selected for the :guilabel:`Application Type`, "
 "an :guilabel:`Authorization Error` appears."
 msgstr ""
+"Kun luot tunnistetietoja (OAuth *Client ID* ja *Client Secret*), jos "
+":guilabel:`Desktop App` valitaan :guilabel:`Application Type` -asetukseksi, "
+"näyttöön tulee :guilabel:`Authorization Error`."
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:None
 msgid "Error 400 Redirect URI Mismatch."
@@ -8248,7 +8353,7 @@ msgstr ""
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:None
 msgid "Allowing the Outlook Plugin to connect to a database"
-msgstr ""
+msgstr "Outlook-laajennuksen salliminen muodostaa yhteys tietokantaan"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:137
 msgid "Add a shortcut to the plugin"
@@ -8301,29 +8406,35 @@ msgstr ""
 
 #: ../../content/applications/general/integrations/unsplash.rst:3
 msgid "Unsplash"
-msgstr ""
+msgstr "Unsplash"
 
 #: ../../content/applications/general/integrations/unsplash.rst:5
 msgid ""
 "**Unsplash** is a recognized stock photography library integrated with Odoo."
-msgstr ""
+msgstr "**Unsplash** on tunnettu kuvapankki, joka on integroitu Odoon."
 
 #: ../../content/applications/general/integrations/unsplash.rst:7
 msgid ""
 "If your database is hosted on **Odoo Online**, you can access Unsplash "
 "pictures without configuration."
 msgstr ""
+"Jos tietokantasi sijaitsee **Odoo Onlinessa**, voit käyttää Unsplashin kuvia "
+"ilman määrityksiä."
 
 #: ../../content/applications/general/integrations/unsplash.rst:10
 msgid ""
 "If your database is hosted on **Odoo.sh or on-premise**, proceed as follows:"
 msgstr ""
+"Jos tietokantasi sijaitsee **Odoo.shssa tai paikallisella palvelimella**, "
+"toimi seuraavasti:"
 
 #: ../../content/applications/general/integrations/unsplash.rst:12
 msgid ""
 "To **generate an Unsplash access key**, create or sign in to an `Unsplash "
 "account <https://unsplash.com>`_."
 msgstr ""
+"**Unsplash-pääsyavaimen luomiseksi** luo `Unsplash-tili <https://"
+"unsplash.com>`_ tai kirjaudu sisään."
 
 #: ../../content/applications/general/integrations/unsplash.rst:15
 msgid ""
@@ -8331,6 +8442,9 @@ msgid ""
 "applications>`_, click :guilabel:`New Application`, select all checkboxes, "
 "and click :guilabel:`Accept terms`."
 msgstr ""
+"Siirry `sovelluskoontinäyttöösi <https://unsplash.com/oauth/applications>`_, "
+"napsauta :guilabel:`Uusi sovellus`, valitse kaikki valintaruudut ja napsauta "
+":guilabel:`Hyväksy ehdot`."
 
 #: ../../content/applications/general/integrations/unsplash.rst:18
 msgid ""
@@ -8339,12 +8453,18 @@ msgid ""
 "an Odoo instance. Then, add a :guilabel:`Description` and "
 "click :guilabel:`Create application`."
 msgstr ""
+"Avautuvassa ikkunassa anna :guilabel:`Sovelluksen nimi`, joka alkaa "
+"etuliitteellä `Odoo:` (esim. `Odoo: yhteys`), jotta Unsplash tunnistaa sen "
+"Odoo-instanssiksi. Lisää sitten :guilabel:`Kuvaus` ja napsauta "
+":guilabel:`Luo sovellus`."
 
 #: ../../content/applications/general/integrations/unsplash.rst:22
 msgid ""
 "On the application details page, scroll down to the :guilabel:`Keys` section "
 "and copy the :guilabel:`Access Key` and :guilabel:`Application ID`."
 msgstr ""
+"Sovelluksen tietosivulla vieritä alas :guilabel:`Avaimet`-osioon ja kopioi "
+":guilabel:`Pääsyavain` ja :guilabel:`Sovellustunnus`."
 
 #: ../../content/applications/general/integrations/unsplash.rst:25
 msgid ""
@@ -8352,12 +8472,17 @@ msgid ""
 "the :guilabel:`Unsplash Image Library` feature. Then, enter the "
 "Unsplash :guilabel:`Access Key` and :guilabel:`Application ID`."
 msgstr ""
+"Siirry Odossa kohtaan :menuselection:`Yleiset asetukset` ja ota käyttöön "
+":guilabel:`Unsplash-kuvapankki`-ominaisuus. Anna sitten Unsplashin "
+":guilabel:`Pääsyavain` ja :guilabel:`Sovellustunnus`."
 
 #: ../../content/applications/general/integrations/unsplash.rst:29
 msgid ""
 "As a non-Odoo Online user, you are limited to a test key with a maximum of "
 "50 Unsplash requests per hour."
 msgstr ""
+"Muuna kuin Odoo Online -käyttäjänä olet rajoitettu testinavaimeen, jolla on "
+"enintään 50 Unsplash-pyyntöä tunnissa."
 
 #: ../../content/applications/general/iot.rst:7
 msgid "Internet of Things (IoT)"
@@ -8369,22 +8494,29 @@ msgid ""
 "barcode scanners, receipt printers, payment terminals, measurement tools, "
 "etc. to an Odoo database using an IoT system."
 msgstr ""
+"Odoo Internet of Things (IoT) mahdollistaa fyysisten laitteiden, kuten "
+"viivakoodilukijoiden, kuittitulostimien, maksupäätteiden, mittaustyökalujen "
+"jne., yhdistämisen Odoo-tietokantaan käyttämällä IoT-järjestelmää."
 
 #: ../../content/applications/general/iot.rst:12
 msgid "The following IoT systems are supported:"
-msgstr ""
+msgstr "Seuraavat IoT-järjestelmät ovat tuettuja:"
 
 #: ../../content/applications/general/iot.rst:14
 msgid ""
 ":doc:`IoT box <iot/iot_box>`: micro-computer, plug-and-play device (i.e., "
 "the Odoo IoT program is pre-installed);"
 msgstr ""
+":doc:`IoT-laite <iot/iot_box>`: mikrotietokone, plug-and-play-laite (eli "
+"Odoo IoT -ohjelma on esiasennettu);"
 
 #: ../../content/applications/general/iot.rst:16
 msgid ""
 ":doc:`Windows virtual IoT <iot/windows_iot>`: Odoo IoT program for Windows "
 "that can be installed on a Windows computer."
 msgstr ""
+":doc:`Windows virtual IoT <iot/windows_iot>`: Odoo IoT -ohjelma Windowsille, "
+"joka voidaan asentaa Windows-tietokoneelle."
 
 #: ../../content/applications/general/iot.rst:20
 #: ../../content/applications/general/iot/windows_iot.rst:25
@@ -8392,10 +8524,12 @@ msgid ""
 ":abbr:`MRP (Material Requirement Planning)` devices, including cameras and "
 "measurement tools, are not compatible with Windows virtual IoT."
 msgstr ""
+":abbr:`MRP (tuotantotarpeiden suunnittelu)`-laitteet, mukaan lukien kamerat "
+"ja mittaustyökalut, eivät ole yhteensopivia Windows virtual IoT:n kanssa."
 
 #: ../../content/applications/general/iot.rst:22
 msgid "Multiple IoT systems can be used at the same time."
-msgstr ""
+msgstr "Useita IoT-järjestelmiä voidaan käyttää samanaikaisesti."
 
 #: ../../content/applications/general/iot.rst:23
 #: ../../content/applications/general/iot/windows_iot.rst:27
@@ -8404,10 +8538,12 @@ msgid ""
 "computer. However, this option is not supported by Odoo, and no "
 "troubleshooting assistance will be provided."
 msgstr ""
+"On myös mahdollista luoda Windowsin virtuaalikone MacOS/Linux-tietokoneelle. "
+"Odoo ei kuitenkaan tue tätä vaihtoehtoa, eikä vianmääritykseen anneta apua."
 
 #: ../../content/applications/general/iot.rst:29
 msgid "IoT box subscription"
-msgstr ""
+msgstr "IoT-laitteen tilaus"
 
 #: ../../content/applications/general/iot.rst:31
 msgid ""
@@ -8426,6 +8562,7 @@ msgstr ""
 msgid ""
 "`Odoo's compatible IoT devices <https://www.odoo.com/app/iot-hardware>`_"
 msgstr ""
+"`Odoon yhteensopivat IoT-laitteet <https://www.odoo.com/app/iot-hardware>`_"
 
 #: ../../content/applications/general/iot.rst:40
 msgid ""
