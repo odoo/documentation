@@ -60,7 +60,7 @@ the intentional clicks on the main counter should still count more.
 
 .. seealso::
 
-   - `Owl documentation on useExternalListener <https://github.com/odoo/owl/blob/master/doc/reference/hooks.md#useexternallistener>`_
+   - `Owl documentation on useExternalListener <https://github.com/odoo/owl/blob/master/doc/v2/reference/hooks.md#useexternallistener>`_
    - `MDN page on event capture <https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_capture>`_
 
 
@@ -146,7 +146,7 @@ Right now, every part of the code that will need to use our clicker service will
 
 .. seealso::
 
-   - `Documentation on hooks: <https://github.com/odoo/owl/blob/master/doc/reference/hooks.md>`_
+   - `Documentation on hooks: <https://github.com/odoo/owl/blob/master/doc/v2/reference/hooks.md>`_
 
 6. Humanize the displayed value
 ===============================
@@ -242,7 +242,7 @@ for communication: event buses.
 
 .. seealso::
 
-   - `Owl documentation on event bus <https://github.com/odoo/owl/blob/master/doc/reference/utils.md#eventbus>`_
+   - `Owl documentation on event bus <https://github.com/odoo/owl/blob/master/doc/v2/reference/utils.md#eventbus>`_
    - :ref:`Documentation on effect service <frontend/services/effect>`
 
 11. Add BigBots
@@ -260,7 +260,7 @@ which are just more powerful: they provide with 100 clicks each 10s, but they co
 
    If you need to use `<` or `>` in a template as a javascript expression, be careful since it might class with
    the xml parser. To solve that, you can use one of the special aliases: `gt, gte, lt` or `lte`. See the
-   `Owl documentation page on template expressions <https://github.com/odoo/owl/blob/master/doc/reference/templates.md#expression-evaluation>`_.
+   `Owl documentation page on template expressions <https://github.com/odoo/owl/blob/master/doc/v2/reference/templates.md#expression-evaluation>`_.
 
 .. image:: 01_build_clicker_game/bigbot.png
    :align: center
@@ -405,7 +405,7 @@ and features in various tabs, with the `Notebook` component:
 .. seealso::
 
    - :ref:`Odoo: Documentation on Notebook component <frontend/owl/notebook>`
-   - `Owl: Documentation on slots <https://github.com/odoo/owl/blob/master/doc/reference/slots.md>`_
+   - `Owl: Documentation on slots <https://github.com/odoo/owl/blob/master/doc/v2/reference/slots.md>`_
    - `Tests of Notebook component <https://github.com/odoo/odoo/blob/c638913df191dfcc5547f90b8b899e7738c386f1/addons/web/static/tests/core/notebook_tests.js#L27>`_
 
 19.  Persist the game state
