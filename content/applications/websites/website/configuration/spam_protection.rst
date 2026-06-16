@@ -18,7 +18,7 @@ challenges based on telemetry and visitor behavior.
 
 .. seealso::
    - `Cloudflare Turnstile's documentation <https://developers.cloudflare.com/turnstile/>`_
-   - `Google's reCAPTCHA v3 guide <https://developers.google.com/recaptcha/docs/v3>`_
+   - `Google's reCAPTCHA overview <https://docs.cloud.google.com/recaptcha/docs/overview>`_
 
 .. _website/spam_protection/cloudflare-turnstile:
 
