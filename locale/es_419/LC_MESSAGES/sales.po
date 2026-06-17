@@ -33,9 +33,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-05 19:21+0000\n"
-"PO-Revision-Date: 2026-06-10 01:34+0000\n"
-"Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
+"POT-Creation-Date: 2026-06-12 17:31+0000\n"
+"PO-Revision-Date: 2026-06-17 23:20+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-19-doc/sales/es_419/>\n"
 "Language: es_419\n"
@@ -114,7 +114,6 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:13
 #: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:9
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:13
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:20
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:15
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:12
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:14
@@ -122,7 +121,7 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/tyro.rst:14
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:90
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:425
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:40
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:123
 #: ../../content/applications/sales/point_of_sale/shop.rst:60
 #: ../../content/applications/sales/point_of_sale/use/receipts.rst:25
 #: ../../content/applications/sales/rental/rental_orders/manage_deposits.rst:14
@@ -8104,6 +8103,11 @@ msgid ""
 "the resellers' designated *level* and location. Reseller partners may also "
 "take assigned leads and convert them into opportunities in the user portal."
 msgstr ""
+"Dentro de la aplicación **CRM** de Odoo, puedes reenviar los leads a los "
+"distribuidores (o contactos). Puedes asignar leads de forma manual o "
+"automática según el *nivel* y la ubicación definidos para los "
+"distribuidores. Los contactos distribuidores también pueden tomar los leads "
+"asignados y convertirlos en oportunidades desde el portal de usuario."
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:12
 msgid ""
@@ -8112,6 +8116,10 @@ msgid ""
 "the :guilabel:`Apps` filter from the search bar. Then, search for "
 "`Resellers`."
 msgstr ""
+"Para usar las funciones para distribuidores, primero debes instalar el "
+"módulo *Distribuidores*. Ve a :guilabel:`Aplicaciones`. elimina el "
+"filtro :guilabel:`Aplicaciones` de la barra de búsqueda y después busca "
+"`Distribuidores`."
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:None
 msgid "The resellers module in Odoo."
@@ -8122,6 +8130,9 @@ msgid ""
 "Click :guilabel:`Activate` on the :guilabel:`Resellers` module card that "
 "appears. Doing so installs the module and returns to the main Odoo dashboard."
 msgstr ""
+"Haz clic en :guilabel:`Activar` en la tarjeta del "
+"módulo :guilabel:`Distribuidores` que aparece. Esta acción instala el módulo "
+"y te regresa al tablero principal de Odoo."
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:22
 msgid ""
@@ -8131,6 +8142,11 @@ msgid ""
 "Activations`. There may be additional options depending on the apps and "
 "modules that are installed in the database."
 msgstr ""
+"Después de instalar el módulo, ve a :menuselection:`CRM --> Configuración`. "
+"Verás una nueva sección llamada :guilabel:`Distribuidores` con dos "
+"opciones: :guilabel:`Niveles` y :guilabel:`Activaciones de contacto`. Es "
+"posible que aparezcan otras opciones según las aplicaciones y módulos que "
+"tengas instalados en la base de datos."
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:30
 #: ../../content/applications/sales/sales/commissions.rst:78
@@ -8144,6 +8160,10 @@ msgid ""
 "> Levels`. On the :guilabel:`Levels` page that appears, there are three "
 "default levels:"
 msgstr ""
+"Los *niveles* permiten diferenciar a los distintos distribuidores. Para ver "
+"los niveles, ve a :menuselection:`CRM --> Configuración --> Miembros --> "
+"Niveles`. En la página :guilabel:`Niveles` que aparece, encontrarás tres "
+"niveles predeterminados:"
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:36
 msgid ":guilabel:`Gold`"
@@ -8162,6 +8182,8 @@ msgid ""
 "New levels can be added as needed by clicking :guilabel:`New` and filling "
 "out the resulting level form."
 msgstr ""
+"Puedes agregar nuevos niveles según lo necesites. Para hacerlo, haz clic "
+"en :guilabel:`Nuevo` y completa el formulario del nivel que aparece."
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:43
 msgid ""
@@ -8169,6 +8191,9 @@ msgid ""
 "level, select it from the list and make any desired changes on the level "
 "form page that appears."
 msgstr ""
+"También puedes editar y cambiar el nombre de los niveles existentes. Para "
+"modificar un nivel, selecciónalo de la lista y realiza los cambios que "
+"desees en la página del formulario del nivel."
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:46
 msgid ""
@@ -8177,6 +8202,10 @@ msgid ""
 "than zero) to the :guilabel:`Level Weight` field. If the weight is zero, no "
 "leads are assigned."
 msgstr ""
+"La importancia del nivel define la probabilidad de que un contacto reciba la "
+"asignación de un lead o una oportunidad. En el formulario del nivel, asigna "
+"un valor numérico (mayor que cero) al campo :guilabel:`Importancia del "
+"nivel`. El sistema no asignará leads si el valor es cero."
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:51
 msgid ""
@@ -8184,6 +8213,10 @@ msgid ""
 "weight assigned to the individual record overrides the default weight set in "
 "the level configuration form."
 msgstr ""
+"También puedes asignar una *importancia del nivel* en un registro de "
+"contacto individual. La importancia asignada al registro individual "
+"reemplaza la importancia predeterminada definida en el formulario de "
+"configuración del nivel."
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:57
 msgid "Partner activations"
@@ -8196,6 +8229,10 @@ msgid ""
 "filter the *Partnership Analysis* report (:menuselection:`CRM app --> "
 "Reporting --> Partnerships`)."
 msgstr ""
+"Las *activaciones* de contacto permiten determinar el estado de un contacto "
+"o socio. Las activaciones se asignan en un registro de contacto individual y "
+"puedes usarlas para agrupar o filtrar el reporte *Análisis de asociación* "
+"(:menuselection:`CRM --> Reportes --> Asociaciones`)."
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:63
 msgid ""
@@ -8228,6 +8265,10 @@ msgid ""
 "and entering a :guilabel:`Name` on the new line that appears. Then, select "
 "the desired status in the :guilabel:`Active` column."
 msgstr ""
+"Puedes agregar nuevas activaciones de contacto según lo necesites. Haz clic "
+"en :guilabel:`Nuevo` e introduce un :guilabel:`nombre` en la nueva línea que "
+"aparece. Después, selecciona el estado deseado en la "
+"columna :guilabel:`Activo`."
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:76
 msgid ""
@@ -8235,6 +8276,9 @@ msgid ""
 "rename a status, click the :guilabel:`Name` field of a desired level and "
 "enter a new name."
 msgstr ""
+"También puedes editar y cambiar el nombre de las activaciones de contacto "
+"existentes. Para cambiar el nombre de un estado, haz clic en el "
+"campo :guilabel:`Nombre` del nivel deseado e introduce un nuevo nombre."
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:79
 msgid ""
@@ -8260,6 +8304,9 @@ msgid ""
 "partner-activations>` are configured, partners may be assigned to handle "
 "specific customers."
 msgstr ""
+"Después de configurar los :ref:`niveles <crm/partner-levels>` y "
+"las :ref:`activaciones de contacto <crm/partner-activations>`, puedes "
+"asignar contactos para que gestionen clientes específicos."
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:91
 msgid ""
@@ -8280,6 +8327,13 @@ msgid ""
 "list, if desired. Then, click the :guilabel:`Level Weight` field to assign a "
 "different level weight, if necessary."
 msgstr ""
+"Haz clic en el campo :guilabel:`Nivel de contacto` y selecciona una opción "
+"del menú desplegable para asignar un nivel. Haz clic en la "
+"pestaña :guilabel:`Asignación de contacto` y luego en el "
+"campo :guilabel:`Activación` dentro del encabezado :guilabel:`Activación de "
+"contacto`. Si lo deseas, selecciona un tipo de activación de contacto de la "
+"lista desplegable. Después, haz clic en el campo :guilabel:`Importancia del "
+"nivel` para asignar una diferente en caso de que sea necesario."
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:101
 msgid "Publish partners"
@@ -8291,6 +8345,9 @@ msgid ""
 "webpage (`/partners`) is created to display a list of all active partners "
 "from the **CRM** app."
 msgstr ""
+"Con la aplicación **Sitio web** de Odoo y el módulo *Distribuidores* "
+"instalados, el sistema creará una nueva página web (`/partners`) que muestra "
+"una lista de todos los contactos activos de la aplicación **CRM**."
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:106
 msgid ""
@@ -8312,6 +8369,10 @@ msgid ""
 "building_blocks>` to add any additional design elements or information about "
 "the partner."
 msgstr ""
+"Luego, haz clic en :guilabel:`Editar` en la esquina superior derecha de la "
+"página del contacto y usa los :doc:`bloques de creación <../../../websites/"
+"website/web_design/building_blocks>` para agregar otros elementos de diseño "
+"o información sobre el contacto."
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:115
 msgid "A company summary is a useful addition to this page."
@@ -8342,7 +8403,7 @@ msgstr ""
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:126
 msgid "Partners and the user portal"
-msgstr ""
+msgstr "Contactos y el portal de usuario"
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:128
 msgid ""
@@ -8352,15 +8413,22 @@ msgid ""
 "opportunities assigned to that partner. Individual leads and opportunities "
 "can be clicked for more details."
 msgstr ""
+"Los contactos o socios distribuidores a los que se les asignan leads y "
+"oportunidades pueden verlos en sus portales de usuario. Al hacer clic en el "
+"botón :guilabel:`Leads` u :guilabel:`Oportunidades`, aparecerá una lista con "
+"todos los leads u oportunidades asignados a ese contacto. Puedes hacer clic "
+"en cada lead u oportunidad para ver más detalles."
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:None
 msgid ""
 "An example of the partners' user portal and the lead and opportunity buttons."
 msgstr ""
+"Ejemplo del portal de usuario de los contactos y de los botones de leads y "
+"oportunidades."
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:137
 msgid "Partner leads"
-msgstr ""
+msgstr "Leads de contactos"
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:139
 msgid ""
@@ -8369,16 +8437,17 @@ msgid ""
 "the :guilabel:`I'm interested` or :guilabel:`I'm not interested` buttons. "
 "Clicking either button brings up the :guilabel:`Lead Feedback` form."
 msgstr ""
-"Los prospectos vistos a través del portal de usuario de un socio contienen "
-"la misma información que el prospecto visto a través de la aplicación "
-"**CRM**. Los socios revendedores pueden hacer clic en los botones "
-":guilabel:`Estoy interesado` o :guilabel:`No estoy interesado`. Hacer clic "
-"en cualquiera de los botones abre el formulario :guilabel:`Comentarios del "
-"prospecto`."
+"Los leads que se visualizan desde el portal de usuario de un contacto "
+"contienen la misma información que los leads de la aplicación **CRM**. Los "
+"contactos distribuidores pueden hacer clic en los botones :guilabel:`Me "
+"interesa` o :guilabel:`No me interesa`. Cualquiera de las dos opciones abre "
+"el formulario :guilabel:`Comentarios sobre el lead`."
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:None
 msgid "The lead page as seen in a reseller's user portal."
-msgstr "La página del prospecto vista en el portal de usuario de un revendedor."
+msgstr ""
+"La página del lead tal como aparece en el portal de usuario de un "
+"distribuidor."
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:146
 msgid ""
@@ -8389,19 +8458,19 @@ msgid ""
 "Failing to fill out the form **prevents** the lead from converting to an "
 "opportunity."
 msgstr ""
-"Si el socio ha expresado interés, el formulario le pide que ingrese su "
-"próxima acción planeada y el ingreso esperado para el prospecto, y que "
-"confirme que ha contactado al cliente. Ingresar esta información y hacer "
-"clic en el botón :guilabel:`Confirmar` convierte el prospecto en una "
-"oportunidad. No completar el formulario **impide** que el prospecto se "
-"convierta en una oportunidad."
+"Si el contacto expresa interés, el formulario le solicita que introduzca la "
+"siguiente acción planificada y los ingresos esperados del lead, además de "
+"confirmar que ya contactó al cliente. Si introduce esta información y hace "
+"clic en el botón :guilabel:`Confirmar`, el sistema convierte el lead en una "
+"oportunidad. Si no completa el formulario, el sistema **impide** que el lead "
+"se convierta en una oportunidad."
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:None
 msgid ""
 "The Lead Feedback form brought up by clicking the \"I'm interested\" button."
 msgstr ""
-"El formulario Comentarios del prospecto que aparece al hacer clic en el "
-"botón \"Estoy interesado\"."
+"El formulario Comentarios sobre el lead que aparece al hacer clic en el "
+"botón \"Me interesa\"."
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:154
 msgid ""
@@ -8411,23 +8480,23 @@ msgid ""
 "lead is spam. This version of the :guilabel:`Lead Feedback` form does not "
 "need to be completed by the partner to be confirmed."
 msgstr ""
-"Si el socio no está interesado en la oportunidad, el formulario "
-":guilabel:`Comentarios del prospecto` le pide al socio que ingrese por qué "
-"no está interesado en el prospecto, si ha contactado al cliente y si cree "
-"que el prospecto es spam. Esta versión del formulario :guilabel:`Comentarios "
-"del prospecto` no necesita ser completada por el socio para ser confirmada."
+"Si el contacto no está interesado en la oportunidad, el "
+"formulario :guilabel:`Comentarios sobre el lead` le solicita que indique por "
+"qué no tiene interés en el lead, si contactó al cliente y si considera que "
+"el lead es spam. El contacto no necesita completar esta versión del "
+"formulario :guilabel:`Comentarios sobre el lead` para confirmarla."
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:None
 msgid ""
 "The Lead Feedback form brought up by clicking the \"I'm not interested\" "
 "button."
 msgstr ""
-"El formulario Comentarios del prospecto que aparece al hacer clic en el "
-"botón \"No estoy interesado\"."
+"El formulario Comentarios sobre el lead que aparece al hacer clic en el "
+"botón \"No me interesa\"."
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:163
 msgid "Partner opportunities"
-msgstr "Oportunidades de socios"
+msgstr "Oportunidades de contactos"
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:165
 msgid ""
@@ -8436,10 +8505,10 @@ msgid ""
 "but in a view designed for the user portal. From an opportunity's page, the "
 "reseller may:"
 msgstr ""
-"Los prospectos aceptados por el socio se convierten en *oportunidades*. "
-"Hacer clic en una oportunidad revela la misma información mostrada en la "
-"aplicación **CRM**, pero en una vista diseñada para el portal de usuario. "
-"Desde la página de una oportunidad, el revendedor puede:"
+"Los leads que acepta el contacto se convierten en *oportunidades*. Al hacer "
+"clic en una oportunidad, aparece la misma información que en la aplicación "
+"**CRM**, pero en una vista diseñada para el portal de usuario. Desde la "
+"página de una oportunidad, el distribuidor puede:"
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:169
 msgid "Change the opportunity's stage."
@@ -8467,14 +8536,14 @@ msgid ""
 "granted to them by a database administrator. See the :doc:`access rights "
 "<../../../general/users/access_rights>` documentation for more details."
 msgstr ""
-"La capacidad del revendedor para cambiar estas configuraciones depende del "
-"acceso que le otorgue un administrador de la base de datos. Consulta la "
-"documentación de :doc:`derechos de acceso <../../../general/users/"
-"access_rights>` para más detalles."
+"La capacidad del distribuidor para cambiar estos ajustes depende del acceso "
+"que le otorgue un administrador de la base de datos. Consulta la "
+"documentación sobre :doc:`permisos de acceso <../../../general/users/"
+"access_rights>` para obtener más información."
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:None
 msgid "An opportunity's page as viewed within the user portal."
-msgstr "La página de una oportunidad vista dentro del portal de usuario."
+msgstr "La página de una oportunidad vista desde el portal de usuario."
 
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:183
 msgid ":doc:`../../../general/users/user_portals`"
@@ -8842,7 +8911,7 @@ msgid ":doc:`Activities <../../../essentials/activities>`"
 msgstr ":doc:`Actividades <../../../essentials/activities>`"
 
 #: ../../content/applications/sales/point_of_sale.rst:5
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:82
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:165
 msgid "Point of Sale"
 msgstr "Punto de venta"
 
@@ -8884,7 +8953,7 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale.rst:23
 #: ../../content/applications/sales/point_of_sale/products.rst:5
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:122
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:205
 msgid "Products"
 msgstr "Productos"
 
@@ -10039,11 +10108,12 @@ msgstr ""
 "un PdV:"
 
 #: ../../content/applications/sales/point_of_sale/extra/presets.rst:32
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:17
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:63
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/tyro.rst:60
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:72
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:86
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:158
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:155
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:169
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:241
 msgid "Go to the :ref:`POS settings <pos/use/settings>`."
 msgstr "Ve a los :ref:`ajustes del PdV <pos/use/settings>`."
 
@@ -10475,8 +10545,10 @@ msgid ":doc:`preparation`"
 msgstr ":doc:`preparation`"
 
 #: ../../content/applications/sales/point_of_sale/extra/presets.rst:184
-msgid ":doc:`../restaurant/online_food_delivery`"
-msgstr ":doc:`../restaurant/online_food_delivery`"
+msgid ""
+":doc:`UrbanPiper order management for food delivery <../restaurant/"
+"urban_piper>`"
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/pricing.rst:8
 #: ../../content/applications/sales/sales/products_prices/prices/discounts.rst:3
@@ -14289,7 +14361,6 @@ msgstr ""
 "para automatizar las transacciones en efectivo del punto de venta."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods.rst:67
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:39
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:118
 msgid "Save."
 msgstr "Guarda."
@@ -14297,14 +14368,10 @@ msgstr "Guarda."
 #: ../../content/applications/sales/point_of_sale/payment_methods.rst:70
 msgid ""
 "The :guilabel:`Delivery Payment` option links a payment method to online "
-"orders placed through :doc:`Urban Piper <restaurant/online_food_delivery>`. "
-"Select the appropriate :guilabel:`Delivery Provider` to associate with the "
-"payment method."
+"orders placed through :doc:`Urban Piper <restaurant/urban_piper>`. Select "
+"the appropriate :guilabel:`Delivery Provider` to associate with the payment "
+"method."
 msgstr ""
-"La opción :guilabel:`Pago de entrega` vincula un método de pago a las "
-"órdenes en línea realizadas a través de :doc:`UrbanPiper <restaurant/"
-"online_food_delivery>`. Selecciona el :guilabel:`proveedor de entrega` "
-"adecuado para asociarlo con el método de pago."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods.rst:73
 msgid ""
@@ -14341,11 +14408,19 @@ msgstr ""
 "Al :ref:`configurar una terminal de pago <pos/terminals/configuration>` "
 "siempre configura el :guilabel:`diario` como :guilabel:`banco`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods.rst:86
+#: ../../content/applications/sales/point_of_sale/payment_methods.rst:84
+msgid ""
+"You can manage all configured payment methods linked to a POS in "
+"the :ref:`POS settings <pos/use/settings>` by navigating to "
+"the :guilabel:`Payment` section and adding or removing them via the dropdown "
+"under :guilabel:`Payment Methods`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods.rst:89
 msgid "One-click payment"
 msgstr "Pago con un clic"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods.rst:88
+#: ../../content/applications/sales/point_of_sale/payment_methods.rst:91
 msgid ""
 "The one-click payment feature allows you to bypass the payment screen for a "
 "faster checkout. To activate this setting, navigate to the :ref:`POS "
@@ -14360,7 +14435,7 @@ msgstr ""
 "selecciona uno o varios métodos de pago en el campo :guilabel:`Métodos de "
 "pago`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods.rst:93
+#: ../../content/applications/sales/point_of_sale/payment_methods.rst:96
 msgid ""
 "Once activated and configured, :ref:`open the POS register <pos/use/open-"
 "register>` and add products to the cart. The previously selected payment "
@@ -14375,7 +14450,7 @@ msgstr ""
 "el sistema validará la orden de inmediato y te llevará a la pantalla del "
 "recibo."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods.rst:99
+#: ../../content/applications/sales/point_of_sale/payment_methods.rst:102
 msgid ""
 "While cash payments are supported, the one-click payment feature assumes the "
 "amount received is exact. If the customer requires change, use the "
@@ -14386,7 +14461,7 @@ msgstr ""
 "botón estándar :guilabel:`Pago` para introducir el importe entregado de "
 "forma manual."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods.rst:104
+#: ../../content/applications/sales/point_of_sale/payment_methods.rst:107
 msgid ""
 "The feature is unavailable for online, delivery, terminal, or ID-verified "
 "payment methods."
@@ -14442,7 +14517,6 @@ msgstr ""
 "luego sigue las instrucciones de la máquina."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines.rst:30
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:51
 msgid ""
 "Once the transaction is successful, the payment is automatically validated "
 "in Point of Sale."
@@ -14459,7 +14533,6 @@ msgstr ""
 "sistema cancelará la transacción."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines.rst:34
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:55
 msgid "To cancel the payment request, click :guilabel:`Cancel`."
 msgstr "Haga clic en :guilabel:`Cancelar` para cancelar la solicitud de pago. "
 
@@ -14604,6 +14677,7 @@ msgstr ""
 "durante el proceso."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:51
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:167
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:38
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:35
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:61
@@ -14681,6 +14755,7 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:72
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:134
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:191
 msgid ":doc:`../../payment_methods`"
 msgstr ":doc:`../../payment_methods`"
 
@@ -15313,7 +15388,7 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:105
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:399
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:453
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:457
 #: ../../content/applications/sales/point_of_sale/use.rst:125
 msgid "Click :guilabel:`Validate`."
 msgstr "Haz clic en :guilabel:`Validar`."
@@ -15674,126 +15749,151 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:7
 msgid ""
-"Connect and integrate a payment terminal to a :ref:`POS system <pos/use/open-"
-"register>` to accept multiple payment options, including credit and debit "
+"Connect and integrate a payment terminal with a :ref:`POS system <pos/use/"
+"create-pos>` to accept multiple payment options, including credit and debit "
 "cards."
 msgstr ""
-"Conecta e integra una terminal de pago al :ref:`sistema de PdV <pos/use/open-"
-"register>` para aceptar varias opciones de pago, incluyendo tarjetas de "
-"débito y crédito."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:15
 msgid ""
-"To activate a payment terminal and allow processing payments with it, follow "
-"these steps:"
+"To activate a payment terminal and allow payments to be processed through "
+"it, follow these steps:"
 msgstr ""
-"Sigue estos pasos para activar una terminal de pago y permitir procesar "
-"pagos con ella:"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:17
-msgid ""
-"Go to :menuselection:`Point of Sale --> Configuration --> Settings` and "
-"scroll down to the :guilabel:`Payment Terminals` section."
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:18
+msgid "Scroll down to the :guilabel:`Payment Terminals` section."
 msgstr ""
-"Ve a :menuselection:`Punto de venta --> Configuración --> Ajustes` y "
-"dirígete a la sección :guilabel:`Terminales de pago`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:19
-msgid "Enable the relevant terminal."
-msgstr "Activa la terminal correspondiente."
+msgid "Activate the relevant payment terminal."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:21
 msgid ""
-"Go to :menuselection:`Point of Sale --> Configuration --> Payment Methods` "
-"and :doc:`create the corresponding payment method <../payment_methods>`."
+"Click :icon:`fa-arrow-right` :guilabel:`Payment method` below the selected "
+"terminal to :doc:`configure the related payment method <../payment_methods>`."
 msgstr ""
-"Ve a :menuselection:`Punto de venta --> Configuración --> Métodos de pago` "
-"y :doc:`crea el método de pago correspondiente <../payment_methods>`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:23
-msgid ""
-"Set the :guilabel:`Integration` field to :guilabel:`Terminal`, select the "
-"relevant terminal, and complete the terminal-specific configuration:"
+msgid "On the payment method form:"
 msgstr ""
-"Selecciona :guilabel:`Terminal` en el campo :guilabel:`Integración`, elige "
-"la terminal correcta y completa la configuración específica:"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:25
+msgid "Ensure the :guilabel:`Journal` type is set to :guilabel:`Bank`."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:26
+msgid ""
+"In the :guilabel:`Integration` field, select :guilabel:`Terminal` from "
+"the :icon:`fa-caret-down` dropdown menu."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:28
+msgid ""
+"In the :guilabel:`Integrate with` field, select one of the activated "
+"terminals from the :icon:`fa-caret-down` dropdown menu, or "
+"click :guilabel:`Setup` on the terminal's card."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:32
+msgid ""
+"It is also possible to :guilabel:`Activate` a new terminal directly from the "
+"terminal card."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:34
+msgid ""
+"Complete the terminal-specific configuration for one of the following "
+"providers:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:36
 msgid ":doc:`Adyen <terminals/adyen>`"
 msgstr ":doc:`Adyen <terminals/adyen>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:27
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:37
 msgid ":doc:`Dpopay <terminals/dpo>`"
 msgstr ":doc:`DPO Pay <terminals/dpo>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:28
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:38
 msgid ":doc:`Ingenico <terminals/ingenico>`"
 msgstr ":doc:`Ingenico <terminals/ingenico>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:29
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:39
 msgid ":doc:`Mercado Pago <terminals/mercado_pago>`"
 msgstr ":doc:`Mercado Pago <terminals/mercado_pago>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:30
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:40
 msgid ":doc:`Mollie <terminals/mollie>`"
 msgstr ":doc:`Mollie <terminals/mollie>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:31
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:41
 msgid ":doc:`Pine Labs <terminals/pine_labs>`"
 msgstr ":doc:`Pine Labs <terminals/pine_labs>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:32
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:42
 msgid ":doc:`QFPay <terminals/qfpay>`"
 msgstr ":doc:`QFPay <terminals/qfpay>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:33
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:43
 msgid ":doc:`Razorpay <terminals/razorpay>`"
 msgstr ":doc:`Razorpay <terminals/razorpay>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:34
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:44
 msgid ":doc:`SIX <terminals/six>`"
 msgstr ":doc:`SIX <terminals/six>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:35
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:45
 msgid ":doc:`Stripe <terminals/stripe>`"
 msgstr ":doc:`Stripe <terminals/stripe>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:36
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:46
 msgid ":doc:`Tyro <terminals/tyro>`"
 msgstr ":doc:`Tyro <terminals/tyro>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:37
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:47
 msgid ":doc:`Viva.com <terminals/viva_com>`"
 msgstr ":doc:`Viva.com <terminals/viva_com>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:38
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:48
 msgid ":doc:`Worldline <terminals/worldline>`"
 msgstr ":doc:`Worldline <terminals/worldline>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:44
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:53
 msgid "Terminal use"
 msgstr "Uso de la terminal"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:46
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:55
 msgid ""
-"To process a :ref:`payment <pos/use/sell>` with a :ref:`configured terminal "
-"<pos/terminals/configuration>` for an order, select the "
-"terminal's :doc:`payment method <../payment_methods>` on "
-"the :guilabel:`Payment` screen, then follow the instructions on the terminal "
-"device."
+"To process an order :ref:`payment <pos/use/sell>` using a :ref:`configured "
+"terminal <pos/terminals/configuration>` in the :ref:`POS register <pos/use/"
+"open-register>`, select the terminal's :doc:`payment method <../"
+"payment_methods>` on the :guilabel:`Payment` screen, then follow the "
+"instructions displayed on the terminal screen."
 msgstr ""
-"Para procesar un :ref:`pago <pos/use/sell>` con una :ref:`terminal "
-"configurada <pos/terminals/configuration>` en una orden, selecciona "
-"el :doc:`método de pago <../payment_methods>` de la terminal en la pantalla "
-"de :guilabel:`pago` y sigue las instrucciones que aparecen en el dispositivo."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:54
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:60
 msgid ""
-"Connection issues between Odoo and the payment terminal result in "
-"transaction cancellation."
+"Once the transaction is successful, the payment is automatically validated "
+"in the POS register."
 msgstr ""
-"Los problemas de conexión entre Odoo y la terminal de pago provocan la "
-"cancelación de la transacción."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:63
+msgid ""
+"If a connection issue occurs between Odoo and the payment terminal, the "
+"transaction is automatically canceled."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:65
+msgid ""
+"You can also manually abort and validate the order by "
+"clicking :guilabel:`Force done` in the POS register."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:67
+msgid ""
+"To cancel the payment request, click :guilabel:`Cancel` in the POS register."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:3
 msgid "Adyen"
@@ -15801,11 +15901,10 @@ msgstr "Adyen"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:5
 msgid ""
-"Connecting an **Adyen payment terminal** allows you to offer a fluid payment "
-"flow to your customers and ease the work of your cashiers."
+"Connecting an Adyen payment terminal to **Odoo Point of Sale** allows you to "
+"offer customers a smooth payment experience while simplifying the work of "
+"cashiers."
 msgstr ""
-"Si conecta su **terminal de pago Adyen** podrá ofrecer a sus clientes un "
-"flujo de pago eficaz y facilitar el trabajo a sus cajeros."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:9
 msgid ""
@@ -15818,8 +15917,8 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:10
 msgid ""
 "Adyen terminals can be used in many countries, but not worldwide. Check the "
-"`List of countries supported by Adyen <https://docs.adyen.com/point-of-sale/"
-"what-we-support/supported-languages/>`_."
+"`list of countries supported by Adyen <https://docs.adyen.com/point-of-sale/"
+"what-we-support/supported-languages/#supported-countries>`_."
 msgstr ""
 "Las terminales Adyen se pueden utilizar en muchos países, pero no en todo el "
 "mundo. Consulte la `lista de países compatibles con Adyen <https://"
@@ -15827,13 +15926,17 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:12
 msgid ""
-"Adyen works only with businesses processing more than **$10 million "
-"annually** or invoicing a minimum of **1,000 transactions per month**."
+"Adyen is more focused on enterprise customers and may require a minimum "
+"number of transactions and a minimum processed volume."
 msgstr ""
-"Adyen funciona solo con empresas que procesan más de **10 millones anuales** "
-"o que facturan mínimo **1000 transacciones al mes**."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:16
+msgid ""
+":doc:`Online payments with Adyen </applications/finance/payment_providers/"
+"adyen>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:17
 msgid ""
 "`List of payment methods supported by Adyen <https://docs.adyen.com/point-of-"
 "sale/what-we-support/payment-methods/>`_"
@@ -15841,7 +15944,7 @@ msgstr ""
 "`Lista de métodos de pago compatibles con Adyen <https://docs.adyen.com/"
 "point-of-sale/what-we-support/payment-methods/>`_"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:17
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:18
 msgid ""
 "`List of Adyen terminals <https://docs.adyen.com/point-of-sale/what-we-"
 "support/select-your-terminals/>`_"
@@ -15849,17 +15952,49 @@ msgstr ""
 "`Lista de terminales Adyen <https://docs.adyen.com/point-of-sale/what-we-"
 "support/select-your-terminals/>`_"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:22
-msgid ""
-"Start by creating your Adyen account on `Adyen's website <https://"
-"www.adyen.com/>`_. Then, board your terminal following the steps described "
-"on your terminal's screen."
-msgstr ""
-"Primero cree su cuenta de Adyen en el `sitio web de Adyen <https://"
-"www.adyen.com/>`_. Después, siga los pasos que se muestran en la pantalla de "
-"su terminal para activarla."
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:23
+msgid "Adyen configuration"
+msgstr "Configuración de Adyen"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:26
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:27
+msgid ""
+"Start by creating an `Adyen account <https://docs.adyen.com/get-started-with-"
+"adyen>`_ and ordering a terminal through the `Adyen Customer Area <adyen-"
+"customer-area_>`_. Once you receive the terminal, set up the physical device "
+"by following the instructions displayed on the terminal screen."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:32
+msgid "To connect the Adyen terminal to Odoo, you need to:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:34
+msgid ":ref:`adyen/api`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:35
+msgid ":ref:`adyen/identifier`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:36
+msgid ":ref:`adyen/merchant-account`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:37
+msgid ":ref:`adyen/event-urls`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:40
+msgid ""
+"Log in to your **Test account** to try the integration without charging "
+"customers. Switch to your **Live account** once you are ready to accept "
+"payments."
+msgstr ""
+"Inicia sesión en tu **cuenta de prueba** para probar la integración sin "
+"cobrarle a los clientes. Cambia a tu **cuenta activa** una vez que tengas "
+"todo listo para aceptar pagos."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:44
 msgid ""
 "`Adyen Docs - Payment terminal quickstart guides <https://docs.adyen.com/"
 "point-of-sale/user-manuals>`_"
@@ -15867,215 +16002,288 @@ msgstr ""
 "`Documentación de Adyen - Guías de inicio rápido para las terminales de pago "
 "<https://docs.adyen.com/point-of-sale/user-manuals>`_"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:31
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:45
+msgid ""
+"`Odoo Point of Sale: Adyen tutorial <https://www.youtube.com/watch?"
+"v=g5h3rcVjlpw>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:50
 msgid "Generate an Adyen API key"
 msgstr "Generar una clave API de Adyen"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:33
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:52
 msgid ""
-"The **Adyen API key** is used to authenticate requests from your Adyen "
-"terminal. To generate an API key, go to your :menuselection:`Adyen account --"
-"> Developers --> API credentials`, and **create** new credentials or select "
-"**existing** ones. Click :guilabel:`Generate an API key` and save the key to "
-"paste it into the Odoo :guilabel:`Adyen API key` field at :ref:`the payment "
-"method creation <adyen/method-creation>`."
+"The Adyen API key is used to authenticate requests from the Adyen terminal. "
+"To generate an API key:"
 msgstr ""
-"La **clave API de Adyen** se utiliza para autenticar las solicitudes de su "
-"terminal de Adyen. Para generar una clave API, vaya a "
-"su :menuselection:`cuenta de Adyen --> Desarrolladores --> Credenciales de "
-"API` y **cree** nuevas credenciales o seleccione las que ya **existen**. "
-"Haga clic en :guilabel:`Generar una clave API` y guarde la clave para "
-"pegarla en el campo :guilabel:`Clave API de Adyen` de Odoo al :ref:`crear el "
-"método de pago <adyen/method-creation>`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:40
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:54
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:84
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:115
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:134
+msgid "Go to your `Adyen Customer Area <adyen-customer-area_>`_."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:55
+msgid ""
+"Navigate to :menuselection:`Developers --> API credentials` in the left menu."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:56
+msgid "Select existing credentials or create new ones:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:58
+msgid "Click :icon:`fa-plus-circle` :guilabel:`Create new credential`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:59
+msgid ""
+"In the :guilabel:`Create API credential` pop-up window, "
+"select :guilabel:`Web service user` as :guilabel:`Credential type`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:61
+msgid "Optionally, enter a :guilabel:`Description`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:62
+msgid "Click :guilabel:`Create credential`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:64
+msgid ""
+"In the :guilabel:`Server settings` section of the :guilabel:`Configure API "
+"credential` page, click :guilabel:`Generate API key` next to "
+"the :guilabel:`API key` field."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:66
+msgid ""
+"Click the :icon:`fa-copy` (:guilabel:`Copy API key`) icon and save the value "
+"for the :ref:`adyen/method-creation` step."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:68
+msgid "Click :guilabel:`Save changes`."
+msgstr "Haga clic en :guilabel:`Guardar cambios`."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:71
 msgid ""
 "`Adyen Docs - API credentials <https://docs.adyen.com/development-resources/"
-"api-credentials#generate-api-key>`_."
+"api-credentials#generate-api-key>`_"
 msgstr ""
 "`Documentos de Adyen - Credenciales API <https://docs.adyen.com/development-"
 "resources/api-credentials#generate-api-key>`_."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:46
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:77
 msgid "Locate the Adyen terminal identifier"
 msgstr "Ubicar el identificador de terminal Adyen"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:48
-msgid ""
-"The **Adyen Terminal Identifier** is the terminal's serial number, which is "
-"used to identify the hardware."
-msgstr ""
-"El **identificador de terminal de Adyen** es el número de serie de la "
-"terminal y se utiliza para identificar el hardware."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:51
-msgid ""
-"To find this number, go to your :menuselection:`Adyen account --> Point of "
-"Sale --> Terminals`, select the terminal to link with, and save its serial "
-"number to paste it into the Odoo :guilabel:`Adyen Terminal Identifier` field "
-"at :ref:`the payment method creation <adyen/method-creation>`."
-msgstr ""
-"Para encontrar este número, vaya a su :menuselection:`cuenta de Adyen --> "
-"Punto de Venta --> Terminales`, seleccione la terminal que vinculará y "
-"guarde su número de serie, después lo pegará en el "
-"campo :guilabel:`Identificador de terminal de Adyen` de Odoo al :ref:`crear "
-"el método de pago <adyen/method-creation>`."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:57
-msgid "Set the Event URLs"
-msgstr "Configurar las URL del evento"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:59
-msgid ""
-"For Odoo to know when a payment is made, you must configure the terminal "
-"**Event URLs**. To do so,"
-msgstr ""
-"Para que Odoo sepa cuándo se realizó un pago, debe configurar las **URL de "
-"eventos** de la terminal. Para ello:"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:61
-msgid "Log in to `Adyen's website <https://www.adyen.com/>`_;"
-msgstr "Inicia sesión en el `sitio web de Adyen <https://www.adyen.com/>`_."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:62
-msgid ""
-"Go to :menuselection:`Adyen's dashboard --> Point of Sale --> Terminals` and "
-"select the connected terminal;"
-msgstr ""
-"Vaya al :menuselection:`tablero de Adyen --> Punto de venta --> Terminales` "
-"y seleccione la terminal conectada."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:64
-msgid "From the terminal settings, click :guilabel:`Integrations`;"
-msgstr ""
-"Desde los ajustes de la terminal, haga clic en :guilabel:`Integraciones`."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:65
-msgid ""
-"Set the :guilabel:`Switch to decrypted mode to edit this setting` field "
-"as :guilabel:`Decrypted`;"
-msgstr ""
-"Establezca el campo :guilabel:`Cambiar a modo descifrado para editar esta "
-"configuración` en :guilabel:`Descifrado`."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:66
-msgid ""
-"Click the **pencil icon** button and enter your server address, followed by "
-"`/pos_adyen/notification` in the :guilabel:`Event URLs` field;"
-msgstr ""
-"Haga clic en el **icono de lápiz** y escriba la dirección de su servidor, "
-"seguida por `/pos_adyen/notification` en el campo :guilabel:`URL de eventos`."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:68
-msgid "Click :guilabel:`Save` at the bottom of the screen to save changes."
-msgstr ""
-"Haga clic en :guilabel:`Guardar` en la parte inferior de la pantalla para "
-"guardar los cambios."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:73
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:41
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:42
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:30
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:30
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:22
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/tyro.rst:34
-msgid "Configure the payment method"
-msgstr "Configure el método de pago"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:75
-msgid ""
-"Enable the payment terminal :ref:`in the application settings <pos/use/"
-"settings>` and :doc:`create the related payment method <../../"
-"payment_methods>`. Set the journal type as :guilabel:`Bank` and "
-"select :guilabel:`Adyen` in the :guilabel:`Use a Payment Terminal` field."
-msgstr ""
-"Activa la terminal de pago en :ref:`los ajustes <pos/use/settings>` "
-"y :doc:`crea el método de pago relacionado <../../payment_methods>`. "
-"Establece el tipo de diario como :guilabel:`Banco` y "
-"selecciona :guilabel:`Adyen` en el campo :guilabel:`Usar una terminal de "
-"pago`."
-
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:79
 msgid ""
-"Finally, fill in the mandatory fields with your :ref:`Adyen API key <adyen/"
-"api>`, :ref:`Adyen Terminal Identifier <adyen/identifier>`, "
-"and :guilabel:`Adyen Merchant Account`."
+"The Adyen terminal identifier, also known as the **POIID**, is the "
+"terminal's unique string used to identify the physical payment terminal."
 msgstr ""
-"Por último, complete los campos obligatorios con su :ref:`clave API de Adyen "
-"<adyen/api>`, :ref:`identificador de terminal de Adyen <adyen/identifier>` "
-"y :guilabel:`cuenta de comerciante de Adyen`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:84
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:51
-msgid ""
-"Once the payment method is created, you can select it in your POS settings. "
-"To do so, go to the :ref:`POS' settings <pos/use/settings>`, "
-"click :guilabel:`Edit`, and add the payment method under "
-"the :guilabel:`Payments` section."
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:82
+msgid "To locate this identifier:"
 msgstr ""
-"Una vez que se cree el método de pago, puedes seleccionarlo en tus ajustes "
-"del PdV. Para hacerlo, ve a los :ref:`ajustes de PdV <pos/use/settings>`, "
-"haz clic en :guilabel:`Editar` y agrega el método de pago en la "
-"sección :guilabel:`Pagos`."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:85
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:116
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:135
+msgid ""
+"Navigate to :menuselection:`In-person payments --> Payment devices` to view "
+"a list of all your devices."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:89
+msgid ""
+"Active devices are marked with a :icon:`os-green-dot` :guilabel:`(green "
+"dot)` icon."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:91
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:422
-msgid "Tips"
-msgstr "Consejos"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:93
-msgid ""
-"Odoo Point of Sale allows tipping with an Adyen terminal. To configure this "
-"option, go to the :ref:`POS settings <pos/use/settings>`, enable "
-"the :ref:`Tips <pos/restaurant/tips>` and the :guilabel:`Add tip through "
-"payment terminal (Adyen)` settings, then click :guilabel:`Save`."
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:118
+msgid "Select the terminal to connect."
 msgstr ""
-"El Punto de venta de Odoo permite dejar propina con la terminal de pago "
-"Adyen. Para configurar esta opción, ve a los :ref:`ajustes del PdV <pos/use/"
-"settings>`, habilita las opciones de :ref:`propinas <pos/restaurant/tips>` "
-"y :guilabel:`Agregar propina a través de la terminal de pago (Adyen)` y, "
-"luego, haz clic en :guilabel:`Guardar`."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:94
+msgid ""
+"If you have multiple devices, identify your terminal using the serial number "
+"printed on the back of the device."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:97
-msgid "To process tips with an Adyen terminal, follow these steps:"
-msgstr "Sigue estos pasos para procesar propinas con una terminal de Adyen:"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:99
 msgid ""
-"Go to the relevant POS and :ref:`process an order <pos/restaurant/orders>`."
+"On the :guilabel:`Settings` page, click the terminal identifier to copy it "
+"to the clipboard and save the value for the :ref:`adyen/method-creation` "
+"step."
 msgstr ""
-"Ve al punto de venta correspondiente y :ref:`procesa una orden <pos/"
-"restaurant/orders>`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:100
-msgid ""
-"Click :ref:`Payment <pos/restaurant/bills/payment>` and select "
-"the :ref:`relevant payment method <adyen/method-creation>`. "
-"The :guilabel:`Adyen` terminal displays the transaction and suggests adding "
-"tips."
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:0
+msgid "Clicking the identifier's name to copy it to clipboard."
 msgstr ""
-"Haz clic en :ref:`Pago <pos/restaurant/bills/payment>` y selecciona "
-"el :ref:`método de pago correspondiente <adyen/method-creation>`. La "
-"terminal de :guilabel:`Adyen` mostrará la transacción y sugerirá agregar la "
-"propina."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:103
-msgid "Add a tip amount on the terminal and validate."
-msgstr "Agrega el monto de la propina en la terminal y valida."
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:152
+msgid "Info"
+msgstr "Información"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:104
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:105
 msgid ""
-"In Odoo POS, click :icon:`fa-heart` :guilabel:`Tip`, enter the tip amount, "
-"and click :guilabel:`Ok`."
+"The terminal identifier combines the device model and serial number, e.g., "
+"`S1F2L-000158215112256`."
 msgstr ""
-"En la aplicación Punto de venta de Odoo, haz clic en :icon:`fa-"
-"heart` :guilabel:`Propina`, ingresa el monto y haz clic en :guilabel:`De "
-"acuerdo`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:106
-msgid "Click :guilabel:`Close Tab` to validate the payment and the tip."
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:111
+msgid "Locate the merchant account name"
 msgstr ""
-"Haz clic en :guilabel:`Cerrar cuenta` para validar el pago y la propina."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:113
+msgid "To locate the merchant account name:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:119
+msgid ""
+"In the :ref:`terminal's <adyen/identifier>` settings, click "
+"the :guilabel:`Merchant` name."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:120
+msgid ""
+"Click the merchant account name to copy it to the clipboard and save the "
+"value for the :ref:`adyen/method-creation` step."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:0
+msgid "Clicking the merchant account name to copy it to clipboard."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:129
+msgid "Set the event URLs"
+msgstr "Configurar las URL del evento"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:131
+msgid ""
+"To allow Odoo to receive payment notifications, you must configure the "
+"terminal :guilabel:`Event URLs`. To do so,"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:137
+msgid "Select the :ref:`terminal <adyen/identifier>` to connect."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:138
+msgid ""
+"In the terminal settings, select :guilabel:`Integrations` from the left menu."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:141
+msgid ""
+"Ensure you are configuring the :guilabel:`Terminal level terminal settings`, "
+"*not* the :guilabel:`Merchant level terminal settings`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:0
+msgid "Terminal level terminal settings."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:147
+msgid ""
+"Set the :guilabel:`Switch to decrypted mode to edit this setting` field "
+"to :guilabel:`Decrypted`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:148
+msgid ""
+"Click :guilabel:`Add new` or edit an existing URL by clicking the :icon:`fa-"
+"pencil` pencil icon."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:149
+msgid ""
+"On the :guilabel:`Add URL` or :guilabel:`Edit URL` pop-up window, paste "
+"the :guilabel:`Event URL` from Odoo's :ref:`payment method form <adyen/"
+"method-creation>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:154
+msgid ""
+"The :guilabel:`Event URL` is composed of the server address, followed by `/"
+"pos_adyen/notification`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:157
+msgid ""
+"If needed, enter a :guilabel:`Username (optional)` and :guilabel:`Password "
+"(optional)`, define if the URL is :guilabel:`Public` or :guilabel:`Local`, "
+"and toggle :guilabel:`Enable encryption` on/off."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:160
+msgid ""
+"Click :guilabel:`Add URL`, or when editing an existing URL, :guilabel:`Edit "
+"URL`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:161
+msgid "Click :guilabel:`Save` at the bottom of the page."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:162
+msgid "Switch to :guilabel:`Encrypted` mode."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:169
+msgid ""
+"To configure Adyen for Odoo, you first need to :ref:`enable Adyen and create "
+"the payment method <pos/terminals/configuration>`. Then, configure the Adyen-"
+"specific settings on the payment method form:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:173
+msgid "Paste the following values into their corresponding fields:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:175
+msgid ""
+"The :ref:`generated API key <adyen/api>` into the :guilabel:`Adyen API key` "
+"field."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:176
+msgid ""
+"The :ref:`located terminal identifier <adyen/identifier>` into "
+"the :guilabel:`Adyen Terminal Identifier` field."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:178
+msgid ""
+"The :ref:`merchant account name <adyen/merchant-account>` into "
+"the :guilabel:`Adyen Merchant Account` field."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:181
+msgid ""
+"Copy the :guilabel:`Event URL` to the clipboard by clicking the :icon:`fa-"
+"clipboard` :guilabel:`(copy)` icon, then paste it into your :ref:`Adyen "
+"account <adyen/event-urls>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:183
+msgid ""
+"Enable :guilabel:`Adyen Test Mode` if you are still testing the integration."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:186
+msgid ""
+"It is possible to let customers add a :ref:`tip <pos/restaurant/tips>` "
+"directly on the Adyen card terminal, as well as :ref:`after payment in a "
+"restaurant point of sale <pos/restaurant/tips-after-payment>`."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:3
 msgid "DPO Pay"
@@ -16161,6 +16369,15 @@ msgstr "ID de la terminal"
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:33
 msgid "Chain ID"
 msgstr "ID de la cadena"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:41
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:42
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:30
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:30
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:22
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/tyro.rst:34
+msgid "Configure the payment method"
+msgstr "Configure el método de pago"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:43
 msgid ""
@@ -16361,6 +16578,18 @@ msgstr ""
 "selecciona :guilabel:`Ingenico` en el campo :guilabel:`Usar una terminal de "
 "pago`. Luego, selecciona el dispositivo de tu terminal en el "
 "campo :guilabel:`Dispositivo de terminal de pago`."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:51
+msgid ""
+"Once the payment method is created, you can select it in your POS settings. "
+"To do so, go to the :ref:`POS' settings <pos/use/settings>`, "
+"click :guilabel:`Edit`, and add the payment method under "
+"the :guilabel:`Payments` section."
+msgstr ""
+"Una vez que se cree el método de pago, puedes seleccionarlo en tus ajustes "
+"del PdV. Para hacerlo, ve a los :ref:`ajustes de PdV <pos/use/settings>`, "
+"haz clic en :guilabel:`Editar` y agrega el método de pago en la "
+"sección :guilabel:`Pagos`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:3
 msgid "Mercado Pago"
@@ -17357,7 +17586,7 @@ msgstr ""
 "por Worldline son incompatibles con esta integración."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:17
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:43
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:126
 #: ../../content/applications/sales/sales/lazada_connector/setup.rst:10
 msgid "Prerequisites"
 msgstr "Prerrequisitos"
@@ -18992,7 +19221,6 @@ msgstr ""
 "floors/booking>` en la interfaz principal para ver y gestionar reservas."
 
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:35
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:3
 msgid "Online food delivery"
 msgstr "Reparto de comida en línea"
 
@@ -19583,8 +19811,9 @@ msgid ":doc:`extra/preparation`"
 msgstr ":doc:`extra/preparation`"
 
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:267
-msgid ":doc:`restaurant/online_food_delivery`"
-msgstr ":doc:`restaurant/online_food_delivery`"
+msgid ""
+":doc:`UrbanPiper order management for food delivery <restaurant/urban_piper>`"
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:272
 msgid "Order transfer"
@@ -19968,6 +20197,10 @@ msgstr ""
 msgid ":doc:`/applications/sales/point_of_sale/use/pos_invoices`"
 msgstr ":doc:`/applications/sales/point_of_sale/use/pos_invoices`"
 
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:422
+msgid "Tips"
+msgstr "Consejos"
+
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:427
 msgid ""
 "To allow tipping in a POS, go to the :ref:`POS settings <pos/use/settings>`, "
@@ -19980,25 +20213,25 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:431
 msgid ""
-"The :guilabel:`Add tip after payment` setting only works for a POS in the "
-"United States of America with an :doc:`Adyen <payment_methods/terminals/"
-"adyen>` or a :doc:`Stripe <payment_methods/terminals/stripe>` :ref:`payment "
-"terminal <pos/terminals/configuration>`."
+"Depending on your hardware setup and geographical location, enable the "
+"following options as relevant:"
 msgstr ""
-"La función :guilabel:`Agregar propina después del pago` solo funciona para "
-"los PdV en Estados Unidos con una terminal de pago de :doc:`Adyen "
-"<payment_methods/terminals/adyen>` o :doc:`Stripe <payment_methods/terminals/"
-"stripe>` :ref:`configurada <pos/terminals/configuration>`."
 
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:434
 msgid ""
-"The :guilabel:`Add tip through payment terminal (Adyen)` setting only works "
-"with an :ref:`Adyen <adyen/tips>` terminal."
+":guilabel:`Add tip through payment terminal (Adyen)`: Only works with "
+"an :doc:`Adyen <payment_methods/terminals/adyen>` card terminal."
 msgstr ""
-"La función :guilabel:`Agregar propina a través de la terminal de pago "
-"(Adyen)` solo funciona con una terminal de :ref:`Adyen <adyen/tips>`."
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:438
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:436
+msgid ""
+":ref:`Add tip after payment <pos/restaurant/tips-after-payment>`: Only works "
+"for a POS in the United States of America with an :doc:`Adyen "
+"<payment_methods/terminals/adyen>` or a :doc:`Stripe <payment_methods/"
+"terminals/stripe>` :ref:`payment terminal <pos/terminals/configuration>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:442
 msgid ""
 "Saving the :guilabel:`Tips` setting automatically fills the :guilabel:`Tip "
 "product` field with the preconfigured :guilabel:`[TIPS] Tips` product, which "
@@ -20013,15 +20246,15 @@ msgstr ""
 "propina`, ese producto dejará de estar disponible en la :ref:`caja del PdV "
 "<pos/restaurant/orders>`."
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:442
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:446
 msgid "Choose only one tip product per POS."
 msgstr "Elige solo un producto de propina por PdV."
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:447
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:451
 msgid "Tip and payment"
 msgstr "Propina y pagos"
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:449
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:453
 msgid ""
 "To process a tip during :ref:`payment <pos/restaurant/bills/payment>`, "
 "follow these steps:"
@@ -20029,7 +20262,7 @@ msgstr ""
 "Sigue estos pasos para procesar una propina durante el :ref:`pago <pos/"
 "restaurant/bills/payment>`:"
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:451
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:455
 msgid ""
 "Click :icon:`fa-heart` :guilabel:`Tip`, add the amount, then "
 "click :guilabel:`Ok`."
@@ -20037,14 +20270,14 @@ msgstr ""
 "Haz clic en :icon:`fa-heart` :guilabel:`Propina`, agrega el monto y haz clic "
 "en :guilabel:`De acuerdo`."
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:452
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:456
 msgid ""
 "Select a :doc:`payment method <payment_methods>` for the order and the tip."
 msgstr ""
 "Selecciona un :doc:`método de pago <payment_methods>` para la orden y la "
 "propina."
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:456
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:460
 msgid ""
 "If the order and the tip are paid using different payment methods, select "
 "a :doc:`payment method <payment_methods>` for the order first. Then, select "
@@ -20059,11 +20292,11 @@ msgstr ""
 "en :guilabel:`Aceptar`. Por último, haz clic en :guilabel:`Validar` para "
 "confirmar el pago."
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:462
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:468
 msgid "Tip after payment (US only)"
 msgstr "Propina después del pago (solo en EE. UU.)"
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:464
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:470
 msgid ""
 "To allow tipping after payment for a POS in the United States of America, "
 "ensure the :guilabel:`Add tip after payment` setting is enabled in "
@@ -20075,7 +20308,7 @@ msgstr ""
 "pago` esté activa en los :ref:`ajustes del PdV <pos/use/settings>`. Sigue "
 "estos pasos para procesar propinas después del pago:"
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:468
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:474
 msgid ""
 "On the :guilabel:`Payment` screen, select a :guilabel:`Card` payment method "
 "linked to a :doc:`Stripe <payment_methods/terminals/stripe>` or :doc:`Adyen "
@@ -20086,7 +20319,7 @@ msgstr ""
 "<payment_methods/terminals/stripe>` o :doc:`Adyen <payment_methods/terminals/"
 "adyen>`."
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:471
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:477
 msgid ""
 "Click :guilabel:`Close Tab` and select the relevant option in "
 "the :guilabel:`Add a tip` screen:"
@@ -20094,7 +20327,7 @@ msgstr ""
 "Haz clic en :guilabel:`Cerrar cuenta` y selecciona la opción correspondiente "
 "en la pantalla :guilabel:`Agregar una propina`:"
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:473
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:479
 msgid ""
 ":guilabel:`15%`, :guilabel:`20%`, or :guilabel:`25%`: Tip rates based on "
 "order total."
@@ -20102,19 +20335,23 @@ msgstr ""
 ":guilabel:`15%`, :guilabel:`20%` o :guilabel:`25%`: Tasas de propina basadas "
 "en el total de la orden."
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:474
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:480
 msgid ":guilabel:`No Tip`."
 msgstr ":guilabel:`Sin propina`."
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:475
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:481
 msgid ":guilabel:`Tip Amount`: Enter the relevant amount in the field."
 msgstr ":guilabel:`Monto de la propina`: Escribe el monto en el campo."
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:476
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:482
 msgid "Click :guilabel:`Settle` to validate."
 msgstr "Haz clic en :guilabel:`Pagado` para validar."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:5
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:3
+msgid "UrbanPiper"
+msgstr "UrbanPiper"
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:5
 msgid ""
 "**UrbanPiper** is an order management system that integrates with multiple "
 "food delivery platforms. It consolidates orders from all connected platforms "
@@ -20125,111 +20362,266 @@ msgstr ""
 "plataformas conectadas en una sola interfaz para simplificar el proceso de "
 "entrega."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:9
-msgid "Supported providers:"
-msgstr "Proveedores compatibles:"
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:9
+msgid "Supported providers and locations:"
+msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:11
-msgid "`Careem <https://www.careem.com>`_"
-msgstr "`Careem <https://www.careem.com>`_"
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:13
+msgid "Global and multi-region providers"
+msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:12
-msgid "`Cari <https://getcari.com/>`_"
-msgstr "`Cari <https://getcari.com/>`_"
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:21
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:59
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:82
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:113
+msgid "Providers"
+msgstr "Proveedores"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:13
-msgid "`ChowNow <https://www.chownow.com>`_"
-msgstr "`ChowNow <https://www.chownow.com>`_"
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:22
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:60
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:83
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:114
+msgid "Locations"
+msgstr "Ubicaciones"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:14
-msgid "`Deliveroo <https://deliveroo.co.uk/>`_"
-msgstr "`Deliveroo <https://deliveroo.co.uk/>`_"
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:23
+msgid "`Deliveroo <https://deliveroo.co>`_"
+msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:15
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:24
+msgid ""
+"Belgium, France, Ireland, Italy, Kuwait, United Arab Emirates, United Kingdom"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:25
 msgid "`DoorDash <https://www.doordash.com>`_"
 msgstr "`DoorDash <https://www.doordash.com>`_"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:16
-msgid "`EatEasy <https://www.eateasy.ae/dubai>`_"
-msgstr "`EatEasy <https://www.eateasy.ae/dubai>`_"
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:26
+msgid "Australia, Canada, United States"
+msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:17
-msgid "`Glovo <https://glovoapp.com>`_"
-msgstr "`Glovo <https://glovoapp.com>`_"
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:27
+msgid "`Glovo <https://glovoapp.com/en>`_"
+msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:18
-msgid "`Grubhub <https://www.grubhub.com>`_"
-msgstr "`Grubhub <https://www.grubhub.com>`_"
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:28
+msgid ""
+"Armenia, Bosnia and Herzegovina, Bulgaria, Croatia, Côte d'Ivoire, Georgia, "
+"Italy, Kazakhstan, Kenya, Kyrgyzstan, Moldova, Montenegro, Morocco, Nigeria, "
+"Poland, Portugal, Romania, Serbia, Spain, Tunisia, Uganda, Ukraine"
+msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:19
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:31
 msgid "`HungryPanda <https://www.hungrypanda.co>`_"
 msgstr "`HungryPanda <https://www.hungrypanda.co>`_"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:20
-msgid "`HungerStation <https://hungerstation.com>`_"
-msgstr "`HungerStation <https://hungerstation.com>`_"
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:32
+msgid ""
+"Australia, Canada, France, Italy, Japan, New Zealand, Singapore, South "
+"Korea, United Kingdom, United States"
+msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:21
-msgid "`Jahez <https://www.jahez.net/>`_"
-msgstr "`Jahez <https://www.jahez.net/>`_"
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:34
+msgid "`Just Eat <https://www.just-eat.com>`_"
+msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:22
-msgid "`Just Eat <https://www.just-eat.ie/>`_"
-msgstr "`Just Eat <https://www.just-eat.ie/>`_"
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:35
+msgid ""
+"Austria, Belgium, Bulgaria, Canada, Denmark, Germany, Ireland, Israel, "
+"Italy, Luxembourg, Poland, Slovakia, Spain, Switzerland, Netherlands, United "
+"Kingdom"
+msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:23
-msgid "`Keeta <https://www.keeta-global.com/SA/en>`_"
-msgstr "`Keeta <https://www.keeta-global.com/SA/en>`_"
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:37
+msgid "`Keeta <https://www.keeta-global.com/AE/en>`_"
+msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:24
-msgid "`Mrsool <https://mrsool.co>`_"
-msgstr "`Mrsool <https://mrsool.co>`_"
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:38
+msgid ""
+"Bahrain, Brazil, Hong Kong (China), Kuwait, Qatar, Saudi Arabia, United Arab "
+"Emirates"
+msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:25
-msgid "`Ninja <https://ananinja.com/>`_"
-msgstr "`Ninja <https://ananinja.com/>`_"
-
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:26
-msgid "`NoonFood <https://www.noon.com>`_"
-msgstr "`NoonFood <https://www.noon.com>`_"
-
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:27
-msgid "`Postmates <https://www.postmates.com>`_"
-msgstr "`Postmates <https://www.postmates.com>`_"
-
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:28
-msgid "`Rafeeq <https://www.gorafeeq.com/en>`_"
-msgstr "`Rafeeq <https://www.gorafeeq.com/en>`_"
-
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:29
-msgid "`Rappi <https://about.rappi.com/>`_"
-msgstr "`Rappi <https://about.rappi.com/>`_"
-
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:30
-msgid "`SkipTheDishes <https://www.skipthedishes.com/>`_"
-msgstr "`SkipTheDishes <https://www.skipthedishes.com/>`_"
-
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:31
-msgid "`Swiggy <https://www.swiggy.com>`_"
-msgstr "`Swiggy <https://www.swiggy.com>`_"
-
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:32
-msgid "`Talabat <https://www.talabat.com>`_"
-msgstr "`Talabat <https://www.talabat.com>`_"
-
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:33
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:39
 msgid "`UberEats <https://www.ubereats.com>`_"
 msgstr "`UberEats <https://www.ubereats.com>`_"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:34
-msgid "`Wolt <https://wolt.com/>`_"
-msgstr "`Wolt <https://wolt.com/>`_"
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:40
+msgid ""
+"Argentina, Australia, Belgium, Canada, Chile, Costa Rica, Denmark, Dominican "
+"Republic, Ecuador, El Salvador, Finland, France, Germany, Guatemala, "
+"Ireland, Italy, Japan, Kenya, Luxembourg, Mexico, Netherlands, New Zealand, "
+"Norway, Panama, Poland, Portugal, South Africa, Spain, Sri Lanka, Sweden, "
+"Switzerland, Taiwan (ROC), United Kingdom, United States"
+msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:35
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:45
+msgid "`Wolt <https://wolt.com>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:46
+msgid ""
+"Albania, Austria, Azerbaijan, Bulgaria, Croatia, Cyprus, Czech Republic, "
+"Denmark, Estonia, Finland, Georgia, Germany, Greece, Hungary, Iceland, "
+"Israel, Japan, Kazakhstan, Kosovo, Latvia, Lithuania, Luxembourg, Malta, "
+"North Macedonia, Norway, Poland, Romania, Serbia, Slovakia, Slovenia, "
+"Sweden, Uzbekistan"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:51
+msgid "Regional and national providers: Americas"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:61
+msgid "`Grubhub <https://www.grubhub.com>`_"
+msgstr "`Grubhub <https://www.grubhub.com>`_"
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:62
+msgid "United States"
+msgstr "Estados Unidos"
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:63
+msgid "`Postmates <https://www.postmates.com>`_"
+msgstr "`Postmates <https://www.postmates.com>`_"
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:64
+msgid "Puerto Rico, United States"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:65
+msgid "`ChowNow <https://get.chownow.com>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:66
+msgid "Canada, United States"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:67
+msgid "`Rappi <https://www.rappi.com>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:68
+msgid ""
+"Argentina, Brazil, Chile, Colombia, Costa Rica, Ecuador, Mexico, Peru, "
+"Uruguay"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:69
+msgid "`SkipTheDishes <https://www.skipthedishes.com/en>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:70
+msgid ""
+"Canada (Alberta, British Columbia, Manitoba, New Brunswick, Newfoundland and "
+"Labrador, Northwest Territories, Nova Scotia, Ontario, Prince Edward Island, "
+"Quebec, Saskatchewan, Yukon)"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:74
+msgid "Regional and national providers: Middle East and North Africa"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:84
+msgid "`Careem <https://www.careem.com/en-AE>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:85
+msgid "Egypt, Kuwait, Morocco, United Arab Emirates"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:86
+msgid "`Cari <https://www.cariapp.com>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:87
+msgid "Kuwait, Saudi Arabia, United Arab Emirates"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:88
+msgid "`EatEasy <https://www.eateasy.ae>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:89
+msgid "United Arab Emirates"
+msgstr "Emiratos Árabes Unidos"
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:90
+msgid "`HungerStation <https://hungerstation.com/sa-en>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:91
+msgid "Saudi Arabia (115+ regions)"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:92
+msgid "`Jahez <https://www.jahez.net/index-en.html>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:93
+msgid "Bahrain, Kuwait, Saudi Arabia"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:94
+msgid "`Mrsool <https://mrsool.co>`_"
+msgstr "`Mrsool <https://mrsool.co>`_"
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:95
+msgid "Bahrain, Egypt, Saudi Arabia"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:96
+msgid "`Ninja <https://ananinja.com/sa/en>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:97
+msgid "Bahrain, Kuwait, Qatar"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:98
+msgid "`NoonFood <https://food.noon.com/uae-en>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:99
+msgid "Saudi Arabia, United Arab Emirates"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:100
+msgid "`Rafeeq <https://www.gorafeeq.com/en>`_"
+msgstr "`Rafeeq <https://www.gorafeeq.com/en>`_"
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:101
+msgid "Qatar"
+msgstr "Catar"
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:102
+msgid "`Talabat <https://www.talabat.com/uae>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:103
+msgid ""
+"Bahrain, Egypt, Iraq, Jordan, Kuwait, Oman, Qatar, Saudi Arabia, United Arab "
+"Emirates"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:105
+msgid "Regional and national providers: Asia and Oceania"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:115
+msgid "`Swiggy <https://www.swiggy.com>`_"
+msgstr "`Swiggy <https://www.swiggy.com>`_"
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:116
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:118
+msgid "India"
+msgstr "India"
+
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:117
 msgid "`Zomato <https://www.zomato.com>`_"
 msgstr "`Zomato <https://www.zomato.com>`_"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:45
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:128
 msgid ""
 "To use the UrbanPiper integration in a live production environment, ensure "
 "the following requirements are satisfied:"
@@ -20237,14 +20629,14 @@ msgstr ""
 "Asegúrese de cumplir los siguientes requisitos para utilizar la integración "
 "de UrbanPiper en un entorno de producción activo:"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:48
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:131
 msgid ""
 "**UrbanPiper subscription:** A valid UrbanPiper subscription is mandatory."
 msgstr ""
 "**Suscripción a UrbanPiper**: Es obligatorio que cuente con una suscripción "
 "válida a UrbanPiper."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:51
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:134
 msgid ""
 "For any concerns or queries regarding your UrbanPiper subscription, please "
 "reach out to the account manager linked to your Odoo database."
@@ -20252,11 +20644,11 @@ msgstr ""
 "Comuníquese con el gerente de cuentas de su base de datos de Odoo si tiene "
 "dudas o preguntas relacionadas con su suscripción a UrbanPiper."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:54
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:137
 msgid "**Odoo requirements:**"
 msgstr "**Requisitos de Odoo:**"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:56
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:139
 msgid ""
 "**Odoo subscription:** An active Odoo Enterprise subscription is required. "
 "Odoo Community does not support this integration."
@@ -20264,11 +20656,11 @@ msgstr ""
 "**Suscripción a Odoo**: Necesita una suscripción activa a Odoo Enterprise. "
 "La edición Community no es compatible con esta integración."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:58
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:141
 msgid "**Odoo version:** Odoo Enterprise version 18.0 or above."
 msgstr "**Versión de Odoo:** Odoo Enterprise versión 18.0 o superior."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:59
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:142
 msgid ""
 "**Odoo platform:** All Odoo platforms are supported, including Odoo Online, "
 "Odoo.sh, and On-Premise installations."
@@ -20276,7 +20668,7 @@ msgstr ""
 "**Plataforma de Odoo**: Todas las plataformas de Odoo son compatibles, "
 "incluidas Odoo en línea, Odoo.sh y local."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:62
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:145
 msgid ""
 "**Delivery platform reseller account:** A registered reseller account is "
 "required with each delivery platform to be integrated (e.g., Uber Eats, "
@@ -20286,20 +20678,20 @@ msgstr ""
 "distribuidor registrada para cada plataforma de entrega a integrar (por "
 "ejemplo, Uber Eats, DoorDash, Careem, Deliveroo, Zomato)."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:68
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:151
 msgid "UrbanPiper credentials"
 msgstr "Credenciales de UrbanPiper"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:70
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:153
 msgid "Get your Atlas credentials:"
 msgstr "Obtenga sus credenciales de Atlas:"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:73
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:87
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:156
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:170
 msgid "Scroll down to the :guilabel:`Food Delivery Connector` section."
 msgstr "Diríjase a la sección :guilabel:`Conector de reparto de comida`."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:74
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:157
 msgid ""
 "Click :guilabel:`Fill this form to get Username & Api key` and fill out the "
 "survey."
@@ -20307,7 +20699,7 @@ msgstr ""
 "Haga clic en :guilabel:`Complete este formulario para obtener el nombre de "
 "usuario y la clave API` y complételo."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:75
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:158
 msgid ""
 "`Go to your Atlas account <https://atlas.urbanpiper.com>`_ and retrieve your "
 "API key and username by navigating to :menuselection:`Settings --> API "
@@ -20316,31 +20708,29 @@ msgstr ""
 "`Vaya a su cuenta de Atlas <https://atlas.urbanpiper.com>`_ y obtenga su "
 "clave API y nombre de usuario desde :menuselection:`Ajustes --> Acceso API`."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:None
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:None
 msgid "Atlas API access"
 msgstr "Acceso a la API de Atlas."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:84
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:167
 msgid "Enable the :guilabel:`Urban Piper` setting:"
 msgstr "Active la función :guilabel:`UrbanPiper`:"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:88
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:171
 msgid "Check the :guilabel:`Urban Piper` setting."
 msgstr "Seleccione la función :guilabel:`UrbanPiper`."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:90
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:173
 msgid "Set up UrbanPiper:"
 msgstr "Configure UrbanPiper:"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:92
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:175
 msgid ""
 "Fill in the :guilabel:`Username` and :guilabel:`Api Key` fields with "
-"your :ref:`UrbanPiper credentials <online_food_delivery/credentials>`."
+"your :ref:`UrbanPiper credentials <pos/urban_piper/credentials>`."
 msgstr ""
-"Complete los campos :guilabel:`Nombre de usuario` y :guilabel:`Clave API` "
-"con sus :ref:`credenciales de UrbanPiper <online_food_delivery/credentials>`."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:94
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:177
 msgid ""
 "Select the desired delivery providers in the :guilabel:`Food Delivery "
 "Platforms` field under the :guilabel:`Urban Piper Location` section (i.e., "
@@ -20350,11 +20740,11 @@ msgstr ""
 "campo :guilabel:`Plataformas de entrega de comida` en la "
 "sección :guilabel:`Ubicación de UrbanPiper` (por ejemplo, Zomato, Uber Eats)."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:96
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:179
 msgid "Save the settings."
 msgstr "Guarde los ajustes."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:97
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:180
 msgid ""
 "Click the :guilabel:`+ Create Store` button. Doing so creates a new location "
 "on the UrbanPiper Atlas platform."
@@ -20362,7 +20752,7 @@ msgstr ""
 "Haga clic en el botón :guilabel:`+ Crear tienda`, esto creará una nueva "
 "ubicación en la plataforma UrbanPiper de Atlas."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:101
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:184
 msgid ""
 "The :guilabel:`Pricelist` and :guilabel:`Fiscal Position` fields are "
 "automatically selected after saving."
@@ -20370,11 +20760,11 @@ msgstr ""
 "Los campos :guilabel:`Lista de precios` y :guilabel:`Posición fiscal` se "
 "seleccionan de manera automática después de guardar."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:103
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:186
 msgid "A successful store creation triggers a notification."
 msgstr "Si creó la tienda de forma exitosa aparecerá una notificación."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:104
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:187
 msgid ""
 "The store creation process may take 2–3 minutes to reflect changes on the "
 "UrbanPiper Atlas platform."
@@ -20382,19 +20772,19 @@ msgstr ""
 "El proceso de creación de la tienda puede tardar entre 2 y 3 minutos en "
 "reflejar los cambios en la plataforma UrbanPiper de Atlas."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:106
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:189
 msgid "The store is automatically named after your point of sale name."
 msgstr "La tienda tendrá el nombre de su punto de venta de forma automática."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:None
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:None
 msgid "Food delivery connector settings"
 msgstr "Ajustes del conector de reparto de comida"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:112
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:195
 msgid "Store timings"
 msgstr "Horario de la tienda"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:114
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:197
 msgid ""
 "Configure the store timings to define when the delivery services are "
 "available:"
@@ -20402,7 +20792,7 @@ msgstr ""
 "Configura los horarios de la tienda para definir cuándo están disponibles "
 "los servicios de entrega:"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:116
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:199
 msgid ""
 "Navigate to :menuselection:`Point of Sale --> Configuration --> Store "
 "Timings`."
@@ -20410,7 +20800,7 @@ msgstr ""
 "Ve a :menuselection:`Punto de venta --> Configuración --> Horario de la "
 "tienda`."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:117
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:200
 msgid ""
 "Add a new timing record by clicking :guilabel:`New` to add a line, or edit "
 "an existing line."
@@ -20418,7 +20808,7 @@ msgstr ""
 "Agrega un nuevo registro de horario al hacer clic en :guilabel:`Nuevo` para "
 "agregar una línea o edita una línea existente."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:118
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:201
 msgid ""
 "Fill in the :guilabel:`Week Day`, :guilabel:`Starting "
 "Hour`, :guilabel:`Ending Hour`, and :guilabel:`Point of Sale associated with "
@@ -20428,37 +20818,37 @@ msgstr ""
 "inicio`, :guilabel:`Hora de finalización` y :guilabel:`Punto de venta "
 "asociado a este horario`."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:124
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:207
 msgid "To make products available individually,"
 msgstr ""
 "Siga estos pasos para que los productos estén disponibles de forma "
 "individual:"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:126
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:140
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:209
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:223
 msgid "Go to :menuselection:`Point of Sale --> Products --> Products`."
 msgstr "Vaya a :menuselection:`Punto de venta --> Productos --> Productos`."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:127
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:210
 msgid "Select any product to open its product form."
 msgstr "Seleccione cualquier producto para abrir su formulario de producto."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:128
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:211
 msgid "Go to the :guilabel:`Point of Sale` tab."
 msgstr "Vaya a la pestaña :guilabel:`Punto de venta`."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:129
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:212
 msgid "Complete the :guilabel:`Urban Piper` section:"
 msgstr "Complete la sección :guilabel:`UrbanPiper`:"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:131
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:214
 msgid ""
 "Fill in the :guilabel:`Available on Food Delivery` with the desired POS."
 msgstr ""
 "Complete el campo :guilabel:`Disponible para entrega de comida` con el PdV "
 "deseado."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:132
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:215
 msgid ""
 "Optionally, set up the :guilabel:`Meal Type` field and enable "
 "the :guilabel:`Is Recommended` and :guilabel:`Is Alcoholic` buttons."
@@ -20466,42 +20856,42 @@ msgstr ""
 "Si lo desea, configure el campo :guilabel:`Tipo de comida` y active los "
 "botones :guilabel:`Está recomendado` y :guilabel:`Es un producto alcohólico`."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:None
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:None
 msgid "where to make a single product available for delivery"
 msgstr "Dónde seleccionar que un producto esté disponible para entrega."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:138
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:221
 msgid "To make multiple products available for food delivery at once,"
 msgstr ""
 "Siga estos pasos para que varios productos estén disponibles de forma "
 "simultánea:"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:141
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:224
 msgid "Click the list icon (:icon:`oi-view-list`) to switch to the list view."
 msgstr ""
 "Haga clic en el icono de lista (:icon:`oi-view-list`) para cambiar a la "
 "vista de lista."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:142
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:225
 msgid "Select the products."
 msgstr "Seleccione los productos."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:143
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:226
 msgid ""
 "Enter the desired POS in the :guilabel:`Available on Food Delivery` column."
 msgstr ""
 "Seleccione el PdV deseado en la columna :guilabel:`Disponible para entrega "
 "de comida`."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:None
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:None
 msgid "Product list"
 msgstr "Lista de productos."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:149
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:232
 msgid "Currently, UrbanPiper does not support combo products."
 msgstr "Por ahora, UbanPiper no es compatible con productos de tipo combo."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:150
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:233
 msgid ""
 "As a workaround, create a product and define combo choices "
 "as :doc:`Attributes & Variants <../../sales/products_prices/products/"
@@ -20511,11 +20901,11 @@ msgstr ""
 "como :doc:`atributos y variantes <../../sales/products_prices/products/"
 "variants>`."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:154
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:237
 msgid "Synchronization"
 msgstr "Sincronización"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:156
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:239
 msgid ""
 "To make products available on food delivery platforms, synchronize with your "
 "UrbanPiper account:"
@@ -20523,15 +20913,15 @@ msgstr ""
 "Sincronice los productos con su cuenta de UrbanPiper para que estén "
 "disponibles en las plataformas de entrega de comida:"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:159
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:242
 msgid "Scroll down the :guilabel:`Food Delivery Connector` section."
 msgstr "Diríjase a la sección :guilabel:`Conector de reparto de comida`."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:160
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:243
 msgid "Click the :guilabel:`Sync Menu` button."
 msgstr "Haga clic en el botón :guilabel:`Sincronizar menú`."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:162
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:245
 msgid ""
 "The :guilabel:`Last Sync on` timestamp below the :guilabel:`Create Store` "
 "and :guilabel:`Sync Menu` buttons updates."
@@ -20540,11 +20930,11 @@ msgstr ""
 "abajo de los botones :guilabel:`Crear tienda` y :guilabel:`Sincronizar menú` "
 "se actualizará."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:166
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:249
 msgid "A successful synchronization triggers a notification."
 msgstr "Si la sincronización fue exitosa aparecerá una notificación."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:167
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:250
 msgid ""
 "The synchronization process may take 2–3 minutes to reflect changes on the "
 "UrbanPiper Atlas platform."
@@ -20552,12 +20942,12 @@ msgstr ""
 "El proceso de sincronización puede tardar entre 2 y 3 minutos en reflejar "
 "los cambios en la plataforma UrbanPiper de Atlas."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:171
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:254
 msgid "Go live"
 msgstr "Activación"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:173
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:196
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:256
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:279
 msgid ""
 "`Go to the Locations tab <https://atlas.urbanpiper.com/locations>`_ of your "
 "Atlas account."
@@ -20565,30 +20955,30 @@ msgstr ""
 "`Vaya a la pestaña Ubicaciones <https://atlas.urbanpiper.com/locations>`_ de "
 "su cuenta de Atlas."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:174
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:257
 msgid ""
 "Select the location to activate, then click :guilabel:`Request to go Live`."
 msgstr ""
 "Seleccione la ubicación que desea activar y luego haga clic "
 "en :guilabel:`Solicitar activación`."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:0
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:0
 msgid "Request to go live button in the locations tab of the Atlas account"
 msgstr ""
 "Botón de solicitud de activación en la pestaña Ubicaciones de la cuenta de "
 "Atlas."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:179
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:262
 msgid "In the popup window:"
 msgstr "En la ventana emergente:"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:181
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:264
 msgid "Select the platform(s) to activate and click :guilabel:`Next`."
 msgstr ""
 "Seleccione las plataformas que desea activar y haga clic "
 "en :guilabel:`Siguiente`."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:182
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:265
 msgid ""
 "Enter the :guilabel:`Platform ID` and :guilabel:`Platform URL` in the "
 "corresponding fields to establish the connection between the platform and "
@@ -20598,36 +20988,36 @@ msgstr ""
 "en los campos correspondientes para establecer la conexión entre la "
 "plataforma y UrbanPiper."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:184
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:267
 msgid "Click the :guilabel:`Request to Go Live` button."
 msgstr "Haga clic en el botón :guilabel:`Solicitar activación`."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:0
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:0
 msgid "Go live parameters"
 msgstr "Parámetros de activación"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:190
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:273
 msgid ""
 "To find the location's :guilabel:`Platform ID` and :guilabel:`Platform URL`,"
 msgstr ""
 "Para encontrar el :guilabel:`ID de plataforma` y la :guilabel:`URL de "
 "plataforma` de la ubicación:"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:192
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:275
 msgid "Click the location to open its setup form."
 msgstr "Haga clic en la ubicación para abrir su formulario de configuración."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:193
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:276
 msgid "The location's parameters are available in the :guilabel:`HUB` tab."
 msgstr ""
 "Los parámetros de la ubicación están disponibles en la "
 "pestaña :guilabel:`CENTRO DE TRABAJO`."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:194
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:277
 msgid "Verify that your location is live:"
 msgstr "Verifique que su ubicación está activa:"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:197
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:280
 msgid ""
 "Select any provider in the :guilabel:`Assoc. platform(s)` column to review "
 "the status of that platform for this location."
@@ -20635,11 +21025,11 @@ msgstr ""
 "Seleccione cualquier proveedor en la columna :guilabel:`Plataformas "
 "asociadas` para revisar el estado de esa plataforma para esta ubicación."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:201
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:284
 msgid "Order flow"
 msgstr "Flujo de órdenes"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:203
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:286
 msgid ""
 "An order placed via the configured delivery platform triggers a "
 "notification. To manage these orders, open the orders' list view by:"
@@ -20648,23 +21038,23 @@ msgstr ""
 "configurada aparecerá una notificación. Abra la vista de lista de las "
 "órdenes para gestionarlas y siga los pasos descritos a continuación:"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:206
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:289
 msgid "Clicking :guilabel:`Review Orders` on the notification popup."
 msgstr ""
 "Haga clic en :guilabel:`Revisar órdenes` en la ventana emergente de "
 "notificación."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:207
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:290
 msgid "Clicking the bag-shaped icon for online orders and :guilabel:`New`."
 msgstr ""
 "Haga clic en el icono en forma de bolsa para órdenes en línea y "
 "en :guilabel:`Nuevo`."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:0
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:0
 msgid "Cart button"
 msgstr "Botón de carrito"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:213
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:296
 msgid ""
 "Clicking this icon displays the number of orders at each "
 "stage: :guilabel:`New`, :guilabel:`Ongoing`, and :guilabel:`Done`."
@@ -20672,7 +21062,7 @@ msgstr ""
 "Al hacer clic en este icono aparece el número de órdenes en cada "
 "etapa: :guilabel:`Nuevo`, :guilabel:`En curso` y :guilabel:`Hecho`."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:215
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:298
 msgid ""
 "The :guilabel:`New` button indicates newly placed "
 "orders, :guilabel:`Ongoing` is for accepted orders, and :guilabel:`Done` is "
@@ -20682,20 +21072,20 @@ msgstr ""
 "realizadas, :guilabel:`En curso` es para las órdenes aceptadas "
 "y :guilabel:`Hecho` es para las órdenes listas para su entrega."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:218
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:301
 msgid "Then,"
 msgstr "Después:"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:220
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:239
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:303
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:322
 msgid "Select the desired order."
 msgstr "Seleccione la orden deseada."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:221
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:304
 msgid "Click the :guilabel:`Accept` button."
 msgstr "Haga clic en el botón :guilabel:`Aceptar`."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:222
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:305
 msgid ""
 "When an order is accepted, its :guilabel:`Order Status` switches "
 "from :guilabel:`Placed` to :guilabel:`Acknowledged` and is automatically "
@@ -20705,19 +21095,19 @@ msgstr ""
 "de :guilabel:`Realizada` a :guilabel:`Aceptada` y aparecerá en la pantalla "
 "de preparación de manera automática."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:225
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:308
 msgid "When the order is ready,"
 msgstr "Cuando la orden esté lista:"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:227
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:310
 msgid "Open the orders' list view."
 msgstr "Abra la vista de lista de las órdenes."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:228
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:311
 msgid "Select the order."
 msgstr "Seleccione la orden."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:229
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:312
 msgid ""
 "Click the :guilabel:`Mark as ready` button. Its :guilabel:`Order Status` "
 "switches from :guilabel:`Acknowledged` to :guilabel:`Food Ready`, and "
@@ -20727,11 +21117,11 @@ msgstr ""
 "la orden` cambiará de :guilabel:`Aceptada` a :guilabel:`Comida lista` y "
 "su :guilabel:`estado` pasará de :guilabel:`En curso` a :guilabel:`Pagado`."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:234
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:317
 msgid "Order rejection"
 msgstr "Rechazar órdenes"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:236
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:319
 msgid ""
 "Sometimes, the shop or restaurant may want to **reject** an order. In this "
 "case, open the orders' list view,"
@@ -20739,19 +21129,19 @@ msgstr ""
 "A veces, las tiendas o restaurantes querrán **rechazar** las órdenes. En "
 "este caso, abra la vista de lista de las órdenes y siga estos pasos:"
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:240
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:323
 msgid "Click the :guilabel:`Reject` button."
 msgstr "Haga clic en el botón :guilabel:`Rechazar`."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:241
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:324
 msgid "Select one of the reasons from the popup window."
 msgstr "Seleccione uno de los motivos en la ventana emergente."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:None
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:None
 msgid "Reject order pop-up"
 msgstr "Ventana emergente para rechazar órdenes."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/online_food_delivery.rst:247
+#: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:330
 msgid ""
 "**Swiggy** orders cannot be directly rejected. Attempting to reject one "
 "prompts Swiggy customer support to contact the restaurant. Similarly, "
@@ -21706,10 +22096,8 @@ msgstr ":guilabel:`Pagado`: Órdenes pagadas."
 #: ../../content/applications/sales/point_of_sale/use.rst:207
 msgid ""
 ":guilabel:`Cancelled`: Orders cancelled on online platforms "
-"through :ref:`UrbanPiper <pos/online_food_delivery/configuration>`."
+"through :ref:`UrbanPiper <pos/urban_piper/configuration>`."
 msgstr ""
-":guilabel:`Cancelada`: Las órdenes canceladas en plataformas en línea "
-"mediante :ref:`UrbanPiper <pos/online_food_delivery/configuration>`."
 
 #: ../../content/applications/sales/point_of_sale/use.rst:210
 msgid ""
@@ -23551,9 +23939,9 @@ msgid ""
 msgstr ""
 "Ve a :menuselection:`Aplicación Alquiler --> Configuración --> Ajustes`, "
 "configura los :guilabel:`Costos de retraso predeterminados` en la sección "
-"*Alquiler* para cargos por retraso. Opcionalmente, configura el "
-":guilabel:`Tiempo de margen predeterminado` para hacer que los alquileres no "
-"estén disponibles para reserva. Consulta la sección :ref:`rental/products/"
+"*Alquiler* para cargos por retraso. Opcionalmente, configura "
+"el :guilabel:`Tiempo de margen predeterminado` para hacer que los alquileres "
+"no estén disponibles para reserva. Consulta la sección :ref:`rental/products/"
 "rental-transfer-feature` para conocer qué hace y cómo configurarlo."
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:25
@@ -23597,10 +23985,10 @@ msgid ""
 "app --> Products`, then click :guilabel:`New`. On the rental product form, "
 "fill out each tab accordingly:"
 msgstr ""
-"Para configurar un nuevo producto de alquiler físico, ve a "
-":menuselection:`Aplicación Alquiler --> Productos`, luego haz clic en "
-":guilabel:`Nuevo`. En el formulario del producto de alquiler, completa cada "
-"pestaña en consecuencia:"
+"Para configurar un nuevo producto de alquiler físico, ve "
+"a :menuselection:`Aplicación Alquiler --> Productos`, luego haz clic "
+"en :guilabel:`Nuevo`. En el formulario del producto de alquiler, completa "
+"cada pestaña en consecuencia:"
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:47
 msgid "General Information tab"
@@ -23612,8 +24000,8 @@ msgid ""
 "by default. Select the :guilabel:`Product Type` as :guilabel:`Goods`."
 msgstr ""
 "En la ventana de nuevo producto, la casilla :guilabel:`Alquiler` ya está "
-"marcada por defecto. Selecciona el :guilabel:`Tipo de producto` como "
-":guilabel:`Bienes`."
+"marcada por defecto. Selecciona el :guilabel:`Tipo de producto` "
+"como :guilabel:`Bienes`."
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:52
 msgid ""
@@ -23682,8 +24070,8 @@ msgid ""
 "click :guilabel:`Save`. The new pricing period automatically applies."
 msgstr ""
 "Crear un nuevo período de precios abre una ventana emergente *Crear "
-"período*. Completa el :guilabel:`Nombre`, :guilabel:`Duración` y "
-":guilabel:`Unidad`, y haz clic en :guilabel:`Guardar`. El nuevo período de "
+"período*. Completa el :guilabel:`Nombre`, :guilabel:`Duración` "
+"y :guilabel:`Unidad`, y haz clic en :guilabel:`Guardar`. El nuevo período de "
 "precios se aplica automáticamente."
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:0
@@ -23749,8 +24137,8 @@ msgid ""
 "period for `2` hours."
 msgstr ""
 "Crea un nuevo período de precios navegando a :menuselection:`Aplicación "
-"Alquiler --> Configuración --> Períodos de alquiler`. Haz clic en "
-":guilabel:`Nuevo`, luego configura el período para `2` horas."
+"Alquiler --> Configuración --> Períodos de alquiler`. Haz clic "
+"en :guilabel:`Nuevo`, luego configura el período para `2` horas."
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:107
 msgid ""
@@ -23791,8 +24179,8 @@ msgid ""
 "checkbox is already ticked by default."
 msgstr ""
 "Ve a la :menuselection:`Aplicación Alquiler --> Productos`, luego haz clic "
-"en :guilabel:`Nuevo`. En la ventana de nuevo producto, la casilla "
-":guilabel:`Alquiler` ya está marcada por defecto."
+"en :guilabel:`Nuevo`. En la ventana de nuevo producto, la "
+"casilla :guilabel:`Alquiler` ya está marcada por defecto."
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:126
 msgid ""
@@ -23801,8 +24189,8 @@ msgid ""
 "Lots` or :guilabel:`By Unique Serial Number` from the drop-down menu."
 msgstr ""
 "Selecciona el :guilabel:`Tipo de producto` como :guilabel:`Bienes`. Marca la "
-"casilla :guilabel:`Rastrear inventario` y selecciona :guilabel:`Por lotes` o "
-":guilabel:`Por número de serie único` del menú desplegable."
+"casilla :guilabel:`Rastrear inventario` y selecciona :guilabel:`Por lotes` "
+"o :guilabel:`Por número de serie único` del menú desplegable."
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:130
 msgid ""
@@ -23815,8 +24203,9 @@ msgstr ""
 "Para el campo :guilabel:`Categoría`, selecciona :guilabel:`Bienes` del menú "
 "desplegable o crea una nueva categoría escribiendo el nombre y haciendo clic "
 "en :guilabel:`Crear`. Configura las tarifas de alquiler en la :ref:`rental/"
-"products/rental-prices-tab`. Haz clic en el icono :icon:`fa-cloud-upload` "
-":guilabel:`(Guardar manualmente)` cerca de la parte superior para guardar."
+"products/rental-prices-tab`. Haz clic en el icono :icon:`fa-cloud-"
+"upload` :guilabel:`(Guardar manualmente)` cerca de la parte superior para "
+"guardar."
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:138
 msgid "Rental Transfers feature"
@@ -23858,8 +24247,8 @@ msgid ""
 "the :menuselection:`Rental app --> Configuration --> Settings` and in the "
 "*Rental* section, tick the :guilabel:`Rental Transfers` checkbox."
 msgstr ""
-"Para habilitar la función :guilabel:`Transferencias de alquiler`, navega a "
-":menuselection:`Aplicación Alquiler --> Configuración --> Ajustes` y en la "
+"Para habilitar la función :guilabel:`Transferencias de alquiler`, navega "
+"a :menuselection:`Aplicación Alquiler --> Configuración --> Ajustes` y en la "
 "sección *Alquiler*, marca la casilla :guilabel:`Transferencias de alquiler`."
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:None
@@ -24058,9 +24447,9 @@ msgid ""
 "the :guilabel:`Quantity` column. If any of the products have serial numbers, "
 "enter them into the :guilabel:`Serial Numbers` column."
 msgstr ""
-"Ingresa el mismo número de productos que el cliente devolvió en la columna "
-":guilabel:`Cantidad`. Si alguno de los productos tiene números de serie, "
-"ingrésalos en la columna :guilabel:`Números de serie`."
+"Ingresa el mismo número de productos que el cliente devolvió en la "
+"columna :guilabel:`Cantidad`. Si alguno de los productos tiene números de "
+"serie, ingrésalos en la columna :guilabel:`Números de serie`."
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:None
 msgid "Sample of the Return page in the Rental app."
@@ -24126,8 +24515,8 @@ msgid ""
 "`Tutorial: Your First Rental Product <https://youtu.be/CE-SahTUC9A?"
 "si=kWfYEOTd2nT_ASp9>`_"
 msgstr ""
-"`Tutorial: Tu primer producto de alquiler <https://youtu.be/CE-"
-"SahTUC9A?si=kWfYEOTd2nT_ASp9>`_"
+"`Tutorial: Tu primer producto de alquiler <https://youtu.be/CE-SahTUC9A?"
+"si=kWfYEOTd2nT_ASp9>`_"
 
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:3
 msgid "Service rental products"
@@ -36509,6 +36898,142 @@ msgstr ":doc:`pdf_quote_builder`"
 msgid ":doc:`../invoicing/proforma`"
 msgstr ":doc:`../invoicing/proforma`"
 
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:3
+msgid "Custom email signatures"
+msgstr "Firmas de correo electrónico personalizadas"
+
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:5
+msgid ""
+"Some business workflows require email template signatures to be updated so "
+"outgoing communications display the appropriate contact information for "
+"customer follow-up and correspondence."
+msgstr ""
+"Algunos flujos de trabajo empresariales requieren que actualices las firmas "
+"de las plantillas de correo electrónico para que las comunicaciones "
+"salientes muestren la información de contacto adecuada para el seguimiento y "
+"la correspondencia con los clientes."
+
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:8
+msgid ""
+"This is particularly important when responsibility for a customer "
+"opportunity is shared between team members. In these cases, the employee "
+"responsible for managing quotes and customer communications may differ from "
+"the employee associated with the sales order for commission purposes."
+msgstr ""
+"Esto es muy importante cuando varios miembros del equipo comparten la "
+"responsabilidad de una oportunidad. En estos casos, el empleado responsable "
+"de gestionar las cotizaciones y las comunicaciones con los clientes puede "
+"ser distinto del empleado asociado con la orden de venta a efectos de "
+"comisiones."
+
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:12
+msgid ""
+"Email templates default to the signature of the employee assigned to the "
+"record; therefore the template should be modified to display the contact "
+"information of the employee responsible for customer follow-up. This ensures "
+"customers know who to contact with questions, approvals, and other "
+"correspondence."
+msgstr ""
+"De forma predeterminada, las plantillas de correo electrónico usan la firma "
+"del empleado asignado al registro; por lo tanto, debes modificar la "
+"plantilla para que muestre la información de contacto del empleado "
+"responsable de realizar el seguimiento de los clientes. Esto garantiza que "
+"los clientes sepan con quién comunicarse para realizar preguntas, solicitar "
+"y dar aprobaciones y todo lo que esté relacionado con otra correspondencia."
+
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:18
+msgid ""
+"The `Sales: Order Confirmation` email template is used as the example "
+"throughout this article to demonstrate how email signatures can be "
+"customized."
+msgstr ""
+"La plantilla de correo electrónico `Ventas: Confirmación de la orden` se usa "
+"como ejemplo en todo este artículo para mostrar cómo puedes personalizar las "
+"firmas de correo electrónico."
+
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:22
+msgid "Open the email template"
+msgstr "Abrir la plantilla de correo electrónico"
+
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:24
+msgid ""
+"To modify an email template, first :ref:`activate developer mode <developer-"
+"mode/activation>`, then navigate to :menuselection:`Settings app --> "
+"Technical --> Email Templates`. Click on the email template being modified, "
+"in this case, the `Sales: Order Confirmation` template."
+msgstr ""
+"Para modificar una plantilla de correo electrónico, primero :ref:`activa el "
+"modo de desarrollador <developer-mode/activation>` y luego ve a "
+":menuselection:`Ajustes --> Técnico --> Plantillas de correo electrónico`. "
+"Haz clic en la plantilla de correo electrónico que quieres modificar que en "
+"este caso es la plantilla `Ventas: Confirmación de la orden`."
+
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:29
+msgid "Update from field"
+msgstr "Actualizar el campo de remitente"
+
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:31
+msgid ""
+"On the email template, open the *Email Configuration* tab. Delete the "
+"default text in the :guilabel:`From` field and replace it with: "
+"`{{ (user.email_formatted) }}`."
+msgstr ""
+"En la plantilla de correo electrónico, abre la pestaña *Configuración del "
+"correo electrónico*. Elimina el texto predeterminado del campo "
+":guilabel:`De` y reemplázalo por: `{{ (user.email_formatted) }}`."
+
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:None
+msgid "The from field updated with the correct text."
+msgstr "El campo de remitente actualizado con el texto correcto."
+
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:38
+msgid "Modify the code"
+msgstr "Modificar el código"
+
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:40
+msgid ""
+"Click the *Content* tab, and highlight some text so the toolbar is visible. "
+"Click the :guilabel:`</> (Code view)` button and the text changes to code."
+msgstr ""
+"Haz clic en la pestaña *Contenido* y resalta parte del texto para que la "
+"barra de herramientas aparezca. Haz clic en el botón :guilabel:`</> (Vista "
+"de código)` y el texto cambiará a código."
+
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:43
+msgid ""
+"Search the code for `signature` to find the two instances of the code "
+"`object.user_id.signature`. Replace both `object.user_id.signature` "
+"instances with `User.signature`."
+msgstr ""
+"Busca `signature` en el código para encontrar las dos apariciones de "
+"`object.user_id.signature`. Reemplaza ambas apariciones de "
+"`object.user_id.signature` por `User.signature`."
+
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:None
+msgid ""
+"The two 'object.user_id.signature' fields replaced with 'User.signature'."
+msgstr ""
+"Los dos campos \"object.user_id.signature\" reemplazados por "
+"\"User.signature\"."
+
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:50
+msgid ""
+"If a user has not set up their email signature, instead of having the "
+"default `Mitchell Admin` populate the signature, the company name can be "
+"displayed instead."
+msgstr ""
+"Si un usuario no configuró su firma de correo electrónico, es posible "
+"mostrar el nombre de la empresa en lugar de que aparezca la firma "
+"predeterminada `Mitchell Admin`."
+
+#: ../../content/applications/sales/sales/sales_quotations/custom_signatures.rst:53
+msgid ""
+"To do this, search for `Mitchell Admin` in the code, and replace it with the "
+"company name."
+msgstr ""
+"Para hacerlo, busca `Mitchell Admin` en el código y reemplázalo por el "
+"nombre de la empresa."
+
 #: ../../content/applications/sales/sales/sales_quotations/deadline.rst:3
 msgid "Quotation deadlines"
 msgstr "Fecha límite de las cotizaciones"
@@ -43508,6 +44033,357 @@ msgstr ""
 #: ../../content/applications/sales/subscriptions/upselling.rst:80
 msgid ":doc:`../sales/products_prices/prices/discounts`"
 msgstr ":doc:`../sales/products_prices/prices/discounts`"
+
+#~ msgid ":doc:`../restaurant/online_food_delivery`"
+#~ msgstr ":doc:`../restaurant/online_food_delivery`"
+
+#~ msgid ""
+#~ "The :guilabel:`Delivery Payment` option links a payment method to online "
+#~ "orders placed through :doc:`Urban Piper <restaurant/"
+#~ "online_food_delivery>`. Select the appropriate :guilabel:`Delivery "
+#~ "Provider` to associate with the payment method."
+#~ msgstr ""
+#~ "La opción :guilabel:`Pago de entrega` vincula un método de pago a las "
+#~ "órdenes en línea realizadas a través de :doc:`UrbanPiper <restaurant/"
+#~ "online_food_delivery>`. Selecciona el :guilabel:`proveedor de entrega` "
+#~ "adecuado para asociarlo con el método de pago."
+
+#~ msgid ""
+#~ "Connect and integrate a payment terminal to a :ref:`POS system <pos/use/"
+#~ "open-register>` to accept multiple payment options, including credit and "
+#~ "debit cards."
+#~ msgstr ""
+#~ "Conecta e integra una terminal de pago al :ref:`sistema de PdV <pos/use/"
+#~ "open-register>` para aceptar varias opciones de pago, incluyendo tarjetas "
+#~ "de débito y crédito."
+
+#~ msgid ""
+#~ "To activate a payment terminal and allow processing payments with it, "
+#~ "follow these steps:"
+#~ msgstr ""
+#~ "Sigue estos pasos para activar una terminal de pago y permitir procesar "
+#~ "pagos con ella:"
+
+#~ msgid ""
+#~ "Go to :menuselection:`Point of Sale --> Configuration --> Settings` and "
+#~ "scroll down to the :guilabel:`Payment Terminals` section."
+#~ msgstr ""
+#~ "Ve a :menuselection:`Punto de venta --> Configuración --> Ajustes` y "
+#~ "dirígete a la sección :guilabel:`Terminales de pago`."
+
+#~ msgid "Enable the relevant terminal."
+#~ msgstr "Activa la terminal correspondiente."
+
+#~ msgid ""
+#~ "Go to :menuselection:`Point of Sale --> Configuration --> Payment "
+#~ "Methods` and :doc:`create the corresponding payment method <../"
+#~ "payment_methods>`."
+#~ msgstr ""
+#~ "Ve a :menuselection:`Punto de venta --> Configuración --> Métodos de "
+#~ "pago` y :doc:`crea el método de pago correspondiente <../"
+#~ "payment_methods>`."
+
+#~ msgid ""
+#~ "Set the :guilabel:`Integration` field to :guilabel:`Terminal`, select the "
+#~ "relevant terminal, and complete the terminal-specific configuration:"
+#~ msgstr ""
+#~ "Selecciona :guilabel:`Terminal` en el campo :guilabel:`Integración`, "
+#~ "elige la terminal correcta y completa la configuración específica:"
+
+#~ msgid ""
+#~ "To process a :ref:`payment <pos/use/sell>` with a :ref:`configured "
+#~ "terminal <pos/terminals/configuration>` for an order, select the "
+#~ "terminal's :doc:`payment method <../payment_methods>` on "
+#~ "the :guilabel:`Payment` screen, then follow the instructions on the "
+#~ "terminal device."
+#~ msgstr ""
+#~ "Para procesar un :ref:`pago <pos/use/sell>` con una :ref:`terminal "
+#~ "configurada <pos/terminals/configuration>` en una orden, selecciona "
+#~ "el :doc:`método de pago <../payment_methods>` de la terminal en la "
+#~ "pantalla de :guilabel:`pago` y sigue las instrucciones que aparecen en el "
+#~ "dispositivo."
+
+#~ msgid ""
+#~ "Connection issues between Odoo and the payment terminal result in "
+#~ "transaction cancellation."
+#~ msgstr ""
+#~ "Los problemas de conexión entre Odoo y la terminal de pago provocan la "
+#~ "cancelación de la transacción."
+
+#~ msgid ""
+#~ "Connecting an **Adyen payment terminal** allows you to offer a fluid "
+#~ "payment flow to your customers and ease the work of your cashiers."
+#~ msgstr ""
+#~ "Si conecta su **terminal de pago Adyen** podrá ofrecer a sus clientes un "
+#~ "flujo de pago eficaz y facilitar el trabajo a sus cajeros."
+
+#~ msgid ""
+#~ "Adyen terminals can be used in many countries, but not worldwide. Check "
+#~ "the `List of countries supported by Adyen <https://docs.adyen.com/point-"
+#~ "of-sale/what-we-support/supported-languages/>`_."
+#~ msgstr ""
+#~ "Las terminales Adyen se pueden utilizar en muchos países, pero no en todo "
+#~ "el mundo. Consulte la `lista de países compatibles con Adyen <https://"
+#~ "docs.adyen.com/point-of-sale/what-we-support/supported-languages/>`_."
+
+#~ msgid ""
+#~ "Adyen works only with businesses processing more than **$10 million "
+#~ "annually** or invoicing a minimum of **1,000 transactions per month**."
+#~ msgstr ""
+#~ "Adyen funciona solo con empresas que procesan más de **10 millones "
+#~ "anuales** o que facturan mínimo **1000 transacciones al mes**."
+
+#~ msgid ""
+#~ "Start by creating your Adyen account on `Adyen's website <https://"
+#~ "www.adyen.com/>`_. Then, board your terminal following the steps "
+#~ "described on your terminal's screen."
+#~ msgstr ""
+#~ "Primero cree su cuenta de Adyen en el `sitio web de Adyen <https://"
+#~ "www.adyen.com/>`_. Después, siga los pasos que se muestran en la pantalla "
+#~ "de su terminal para activarla."
+
+#~ msgid ""
+#~ "The **Adyen API key** is used to authenticate requests from your Adyen "
+#~ "terminal. To generate an API key, go to your :menuselection:`Adyen "
+#~ "account --> Developers --> API credentials`, and **create** new "
+#~ "credentials or select **existing** ones. Click :guilabel:`Generate an API "
+#~ "key` and save the key to paste it into the Odoo :guilabel:`Adyen API key` "
+#~ "field at :ref:`the payment method creation <adyen/method-creation>`."
+#~ msgstr ""
+#~ "La **clave API de Adyen** se utiliza para autenticar las solicitudes de "
+#~ "su terminal de Adyen. Para generar una clave API, vaya a "
+#~ "su :menuselection:`cuenta de Adyen --> Desarrolladores --> Credenciales "
+#~ "de API` y **cree** nuevas credenciales o seleccione las que ya "
+#~ "**existen**. Haga clic en :guilabel:`Generar una clave API` y guarde la "
+#~ "clave para pegarla en el campo :guilabel:`Clave API de Adyen` de Odoo "
+#~ "al :ref:`crear el método de pago <adyen/method-creation>`."
+
+#~ msgid ""
+#~ "`Adyen Docs - API credentials <https://docs.adyen.com/development-"
+#~ "resources/api-credentials#generate-api-key>`_."
+#~ msgstr ""
+#~ "`Documentos de Adyen - Credenciales API <https://docs.adyen.com/"
+#~ "development-resources/api-credentials#generate-api-key>`_."
+
+#~ msgid ""
+#~ "The **Adyen Terminal Identifier** is the terminal's serial number, which "
+#~ "is used to identify the hardware."
+#~ msgstr ""
+#~ "El **identificador de terminal de Adyen** es el número de serie de la "
+#~ "terminal y se utiliza para identificar el hardware."
+
+#~ msgid ""
+#~ "To find this number, go to your :menuselection:`Adyen account --> Point "
+#~ "of Sale --> Terminals`, select the terminal to link with, and save its "
+#~ "serial number to paste it into the Odoo :guilabel:`Adyen Terminal "
+#~ "Identifier` field at :ref:`the payment method creation <adyen/method-"
+#~ "creation>`."
+#~ msgstr ""
+#~ "Para encontrar este número, vaya a su :menuselection:`cuenta de Adyen --> "
+#~ "Punto de Venta --> Terminales`, seleccione la terminal que vinculará y "
+#~ "guarde su número de serie, después lo pegará en el "
+#~ "campo :guilabel:`Identificador de terminal de Adyen` de Odoo "
+#~ "al :ref:`crear el método de pago <adyen/method-creation>`."
+
+#~ msgid "Set the Event URLs"
+#~ msgstr "Configurar las URL del evento"
+
+#~ msgid ""
+#~ "For Odoo to know when a payment is made, you must configure the terminal "
+#~ "**Event URLs**. To do so,"
+#~ msgstr ""
+#~ "Para que Odoo sepa cuándo se realizó un pago, debe configurar las **URL "
+#~ "de eventos** de la terminal. Para ello:"
+
+#~ msgid "Log in to `Adyen's website <https://www.adyen.com/>`_;"
+#~ msgstr "Inicia sesión en el `sitio web de Adyen <https://www.adyen.com/>`_."
+
+#~ msgid ""
+#~ "Go to :menuselection:`Adyen's dashboard --> Point of Sale --> Terminals` "
+#~ "and select the connected terminal;"
+#~ msgstr ""
+#~ "Vaya al :menuselection:`tablero de Adyen --> Punto de venta --> "
+#~ "Terminales` y seleccione la terminal conectada."
+
+#~ msgid "From the terminal settings, click :guilabel:`Integrations`;"
+#~ msgstr ""
+#~ "Desde los ajustes de la terminal, haga clic en :guilabel:`Integraciones`."
+
+#~ msgid ""
+#~ "Set the :guilabel:`Switch to decrypted mode to edit this setting` field "
+#~ "as :guilabel:`Decrypted`;"
+#~ msgstr ""
+#~ "Establezca el campo :guilabel:`Cambiar a modo descifrado para editar esta "
+#~ "configuración` en :guilabel:`Descifrado`."
+
+#~ msgid ""
+#~ "Click the **pencil icon** button and enter your server address, followed "
+#~ "by `/pos_adyen/notification` in the :guilabel:`Event URLs` field;"
+#~ msgstr ""
+#~ "Haga clic en el **icono de lápiz** y escriba la dirección de su servidor, "
+#~ "seguida por `/pos_adyen/notification` en el campo :guilabel:`URL de "
+#~ "eventos`."
+
+#~ msgid "Click :guilabel:`Save` at the bottom of the screen to save changes."
+#~ msgstr ""
+#~ "Haga clic en :guilabel:`Guardar` en la parte inferior de la pantalla para "
+#~ "guardar los cambios."
+
+#~ msgid ""
+#~ "Enable the payment terminal :ref:`in the application settings <pos/use/"
+#~ "settings>` and :doc:`create the related payment method <../../"
+#~ "payment_methods>`. Set the journal type as :guilabel:`Bank` and "
+#~ "select :guilabel:`Adyen` in the :guilabel:`Use a Payment Terminal` field."
+#~ msgstr ""
+#~ "Activa la terminal de pago en :ref:`los ajustes <pos/use/settings>` "
+#~ "y :doc:`crea el método de pago relacionado <../../payment_methods>`. "
+#~ "Establece el tipo de diario como :guilabel:`Banco` y "
+#~ "selecciona :guilabel:`Adyen` en el campo :guilabel:`Usar una terminal de "
+#~ "pago`."
+
+#~ msgid ""
+#~ "Finally, fill in the mandatory fields with your :ref:`Adyen API key "
+#~ "<adyen/api>`, :ref:`Adyen Terminal Identifier <adyen/identifier>`, "
+#~ "and :guilabel:`Adyen Merchant Account`."
+#~ msgstr ""
+#~ "Por último, complete los campos obligatorios con su :ref:`clave API de "
+#~ "Adyen <adyen/api>`, :ref:`identificador de terminal de Adyen <adyen/"
+#~ "identifier>` y :guilabel:`cuenta de comerciante de Adyen`."
+
+#~ msgid ""
+#~ "Odoo Point of Sale allows tipping with an Adyen terminal. To configure "
+#~ "this option, go to the :ref:`POS settings <pos/use/settings>`, enable "
+#~ "the :ref:`Tips <pos/restaurant/tips>` and the :guilabel:`Add tip through "
+#~ "payment terminal (Adyen)` settings, then click :guilabel:`Save`."
+#~ msgstr ""
+#~ "El Punto de venta de Odoo permite dejar propina con la terminal de pago "
+#~ "Adyen. Para configurar esta opción, ve a los :ref:`ajustes del PdV <pos/"
+#~ "use/settings>`, habilita las opciones de :ref:`propinas <pos/restaurant/"
+#~ "tips>` y :guilabel:`Agregar propina a través de la terminal de pago "
+#~ "(Adyen)` y, luego, haz clic en :guilabel:`Guardar`."
+
+#~ msgid "To process tips with an Adyen terminal, follow these steps:"
+#~ msgstr "Sigue estos pasos para procesar propinas con una terminal de Adyen:"
+
+#~ msgid ""
+#~ "Go to the relevant POS and :ref:`process an order <pos/restaurant/"
+#~ "orders>`."
+#~ msgstr ""
+#~ "Ve al punto de venta correspondiente y :ref:`procesa una orden <pos/"
+#~ "restaurant/orders>`."
+
+#~ msgid ""
+#~ "Click :ref:`Payment <pos/restaurant/bills/payment>` and select "
+#~ "the :ref:`relevant payment method <adyen/method-creation>`. "
+#~ "The :guilabel:`Adyen` terminal displays the transaction and suggests "
+#~ "adding tips."
+#~ msgstr ""
+#~ "Haz clic en :ref:`Pago <pos/restaurant/bills/payment>` y selecciona "
+#~ "el :ref:`método de pago correspondiente <adyen/method-creation>`. La "
+#~ "terminal de :guilabel:`Adyen` mostrará la transacción y sugerirá agregar "
+#~ "la propina."
+
+#~ msgid "Add a tip amount on the terminal and validate."
+#~ msgstr "Agrega el monto de la propina en la terminal y valida."
+
+#~ msgid ""
+#~ "In Odoo POS, click :icon:`fa-heart` :guilabel:`Tip`, enter the tip "
+#~ "amount, and click :guilabel:`Ok`."
+#~ msgstr ""
+#~ "En la aplicación Punto de venta de Odoo, haz clic en :icon:`fa-"
+#~ "heart` :guilabel:`Propina`, ingresa el monto y haz clic en :guilabel:`De "
+#~ "acuerdo`."
+
+#~ msgid "Click :guilabel:`Close Tab` to validate the payment and the tip."
+#~ msgstr ""
+#~ "Haz clic en :guilabel:`Cerrar cuenta` para validar el pago y la propina."
+
+#~ msgid ":doc:`restaurant/online_food_delivery`"
+#~ msgstr ":doc:`restaurant/online_food_delivery`"
+
+#~ msgid ""
+#~ "The :guilabel:`Add tip after payment` setting only works for a POS in the "
+#~ "United States of America with an :doc:`Adyen <payment_methods/terminals/"
+#~ "adyen>` or a :doc:`Stripe <payment_methods/terminals/"
+#~ "stripe>` :ref:`payment terminal <pos/terminals/configuration>`."
+#~ msgstr ""
+#~ "La función :guilabel:`Agregar propina después del pago` solo funciona "
+#~ "para los PdV en Estados Unidos con una terminal de pago de :doc:`Adyen "
+#~ "<payment_methods/terminals/adyen>` o :doc:`Stripe <payment_methods/"
+#~ "terminals/stripe>` :ref:`configurada <pos/terminals/configuration>`."
+
+#~ msgid ""
+#~ "The :guilabel:`Add tip through payment terminal (Adyen)` setting only "
+#~ "works with an :ref:`Adyen <adyen/tips>` terminal."
+#~ msgstr ""
+#~ "La función :guilabel:`Agregar propina a través de la terminal de pago "
+#~ "(Adyen)` solo funciona con una terminal de :ref:`Adyen <adyen/tips>`."
+
+#~ msgid "Supported providers:"
+#~ msgstr "Proveedores compatibles:"
+
+#~ msgid "`Careem <https://www.careem.com>`_"
+#~ msgstr "`Careem <https://www.careem.com>`_"
+
+#~ msgid "`Cari <https://getcari.com/>`_"
+#~ msgstr "`Cari <https://getcari.com/>`_"
+
+#~ msgid "`ChowNow <https://www.chownow.com>`_"
+#~ msgstr "`ChowNow <https://www.chownow.com>`_"
+
+#~ msgid "`Deliveroo <https://deliveroo.co.uk/>`_"
+#~ msgstr "`Deliveroo <https://deliveroo.co.uk/>`_"
+
+#~ msgid "`EatEasy <https://www.eateasy.ae/dubai>`_"
+#~ msgstr "`EatEasy <https://www.eateasy.ae/dubai>`_"
+
+#~ msgid "`Glovo <https://glovoapp.com>`_"
+#~ msgstr "`Glovo <https://glovoapp.com>`_"
+
+#~ msgid "`HungerStation <https://hungerstation.com>`_"
+#~ msgstr "`HungerStation <https://hungerstation.com>`_"
+
+#~ msgid "`Jahez <https://www.jahez.net/>`_"
+#~ msgstr "`Jahez <https://www.jahez.net/>`_"
+
+#~ msgid "`Just Eat <https://www.just-eat.ie/>`_"
+#~ msgstr "`Just Eat <https://www.just-eat.ie/>`_"
+
+#~ msgid "`Keeta <https://www.keeta-global.com/SA/en>`_"
+#~ msgstr "`Keeta <https://www.keeta-global.com/SA/en>`_"
+
+#~ msgid "`Ninja <https://ananinja.com/>`_"
+#~ msgstr "`Ninja <https://ananinja.com/>`_"
+
+#~ msgid "`NoonFood <https://www.noon.com>`_"
+#~ msgstr "`NoonFood <https://www.noon.com>`_"
+
+#~ msgid "`Rappi <https://about.rappi.com/>`_"
+#~ msgstr "`Rappi <https://about.rappi.com/>`_"
+
+#~ msgid "`SkipTheDishes <https://www.skipthedishes.com/>`_"
+#~ msgstr "`SkipTheDishes <https://www.skipthedishes.com/>`_"
+
+#~ msgid "`Talabat <https://www.talabat.com>`_"
+#~ msgstr "`Talabat <https://www.talabat.com>`_"
+
+#~ msgid "`Wolt <https://wolt.com/>`_"
+#~ msgstr "`Wolt <https://wolt.com/>`_"
+
+#~ msgid ""
+#~ "Fill in the :guilabel:`Username` and :guilabel:`Api Key` fields with "
+#~ "your :ref:`UrbanPiper credentials <online_food_delivery/credentials>`."
+#~ msgstr ""
+#~ "Complete los campos :guilabel:`Nombre de usuario` y :guilabel:`Clave API` "
+#~ "con sus :ref:`credenciales de UrbanPiper <online_food_delivery/"
+#~ "credentials>`."
+
+#~ msgid ""
+#~ ":guilabel:`Cancelled`: Orders cancelled on online platforms "
+#~ "through :ref:`UrbanPiper <pos/online_food_delivery/configuration>`."
+#~ msgstr ""
+#~ ":guilabel:`Cancelada`: Las órdenes canceladas en plataformas en línea "
+#~ "mediante :ref:`UrbanPiper <pos/online_food_delivery/configuration>`."
 
 #~ msgid ""
 #~ "Within Odoo's **CRM** app, leads can be forwarded to resellers (or "
