@@ -8,7 +8,7 @@ The Odoo Javascript framework uses a custom component framework called Owl. It
 is a declarative component system, loosely inspired by Vue and React. Components
 are defined using :doc:`QWeb templates <qweb>`, enriched with some Owl
 specific directives. The official
-`Owl documentation <https://github.com/odoo/owl/blob/master/doc/readme.md>`_
+`Owl documentation <https://github.com/odoo/owl/blob/master/doc/v2/readme.md>`_
 contains a complete reference and a tutorial.
 
 .. important::
@@ -442,7 +442,7 @@ provide is as follow:
 - Direct siblings dropdowns: when one is open, toggle others on hover
 
 To properly use a `<Dropdown/>` component, you need to populate two
-`OWL slots <https://github.com/odoo/owl/blob/master/doc/reference/slots.md>`_ :
+`OWL slots <https://github.com/odoo/owl/blob/master/doc/v2/reference/slots.md>`_ :
 
 - `default` slot: it contains the *toggle* elements of your dropdown. By default, click events will
   be attached to this element to open and close the dropdown.
@@ -524,7 +524,7 @@ DropdownItem Props
       - Description
     * - `class`
       - `String` or `Object`
-      - Optional value added to the root span classname (supports both strings and `OWL classname object notation <https://github.com/odoo/owl/blob/master/doc/reference/templates.md#dynamic-class-attribute>`_).
+      - Optional value added to the root span classname (supports both strings and `OWL classname object notation <https://github.com/odoo/owl/blob/master/doc/v2/reference/templates.md#dynamic-class-attribute>`_).
     * - `onSelected`
       - `Function`
       - Optional function called when the dropdown item is selected.
