@@ -176,7 +176,7 @@ displayed customers, according to their name.
 
 To solve the previous two exercises, it is likely that you used an event listener on the inputs. Let
 us see how we could do it in a more declarative way, with the `t-model
-<{OWL_PATH}/doc/reference/input_bindings.md>`_ directive.
+<{OWL_PATH}/doc/v2/reference/input_bindings.md>`_ directive.
 
 #. Make sure you have a reactive object that represents the fact that the filter is active
    (something like
