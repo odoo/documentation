@@ -329,7 +329,7 @@ server actions:
 * ``env`` Odoo Environment
 * ``datetime``, ``dateutil``, ``time``, ``timezone`` corresponding Python modules
 * ``log: log(message, level='info')`` logging function to record debug information in ir.logging table
-* ``Warning`` constructor for the ``Warning`` exception
+* ``UserError`` constructor for the ``UserError`` exception
 
 .. _reference/actions/report:
 
