@@ -40,6 +40,7 @@ your customer’s address is set correctly, including the country, before sendin
      <snailmail/snailmail-template.pdf>` for more details).
    - Pingen (Odoo Snailmail service provider) scans the area to process the address, so if something
      gets written outside the area, it is not counted as part of the address.
+   - The document must not contain more than 8 physical pages.
 
 Pricing
 =======
