@@ -114,7 +114,7 @@ Set a base rental period and price
 ----------------------------------
 
 Set up a base rental rate by entering the lowest rental price in the :guilabel:`Sales Price` field.
-Next, click the :guilabel:`Sales` tab, then  in the *Rental* section, select the
+Next, click the :guilabel:`Sales` tab, then in the *Rental* section, select the
 :guilabel:`Periodicity` (:dfn:`the unit of duration of the rental`) from the dropdown menu.
 
 Then enter the :guilabel:`Padding Time` to make the product unavailable for pick up for the

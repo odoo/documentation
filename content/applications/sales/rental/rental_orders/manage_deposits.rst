@@ -76,8 +76,8 @@ deposit, select the desired product or create one. On the product's form, click 
 Products` field in the *Upsell & Cross-sell* section.
 
 .. note::
-   If :ref:`creating a new product <rental/physical-products>`, be sure to configure the rental
-   product's prices on the :guilabel:`Prices` tab.
+   If :ref:`creating a new product <rental/products/physical-products>`, be sure to configure the
+   rental product's prices on the :guilabel:`Prices` tab.
 
 .. image:: manage_deposits/sales-tab-optional-product.png
    :alt: A Digital Camera rental product form with an Optional Product field configured to
