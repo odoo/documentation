@@ -14,17 +14,23 @@ such as a hotel room, work station, or storage unit.
 The following sections detail basic settings and app integration configurations for goods and
 services.
 
+.. _rental/product_type/configuration:
+
 Configuration
 =============
 
 .. important::
-   For the :guilabel:`Rental Transfers` setting, the **Inventory** app must be installed. For the
-   *Rent Online* section settings, the **eCommerce** module must be installed.
+   The *Configuration* menu changes if the **Inventory** app or **Sales** module is
+   installed.
+
+   - For the :guilabel:`Rental Transfers` setting, the **Inventory** app must be installed.
+   - For the :guilabel:`PDF Quote Builder` and :guilabel:`Quotation templates` settings, the
+     **Sales** app must be installed.
 
 To configure default settings on rental products, navigate to :menuselection:`Rental app -->
 Configuration --> Settings`.
 
-.. image:: product_type/rental-settings-with-inventory.png
+.. image:: product_type/config-settings-inventory-sales.png
    :alt: A configured Setting page with the Inventory section displayed for the Rental app.
 
 In the *Pick up & Returns* section, the :guilabel:`Unavailability days` limit what days of the week
