@@ -131,6 +131,22 @@ The chart of accounts for Peru is based on the most updated version of the :abbr
 Contable General Empresarial)`, which is grouped in several categories and is compatible with NIIF
 accounting.
 
+.. _peru/configuration-ple:
+
+PLE reports
+~~~~~~~~~~~
+
+ .. important::
+    For the generation of :ref:`PLE reports <peru/reports-ple>`, the type of chart of accounts is
+    not set by default, and must be set manually.
+
+To set the appropriate type of chart of accounts for the generation of PLE reports, open the
+**Accounting** app, go to :menuselection:`Configuration --> Settings`, and scroll down to the
+:guilabel:`Peruvian Electronic Invoicing` section.
+
+In the :guilabel:`PLE Type of CoA` field, select the required chart of accounts from the dropdown,
+and click :guilabel:`Save`.
+
 .. _peru-accounting-settings:
 
 Accounting Settings
@@ -963,6 +979,10 @@ Reports
 
 Permanent inventory reports: |PLE| 12.1 and |PLE| 13.1
 ------------------------------------------------------
+
+.. note::
+   Make sure to :ref:`set <peru/configuration-ple>` the appropriate type of chart of accounts for
+   your PLE reports.
 
 Odoo can produce two permanent inventory reports as `.txt` files for Peruvian accounting: |PLE| 12.1
 and |PLE| 13.1. All inventory transactions made need to be reported.
