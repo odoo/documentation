@@ -38,6 +38,7 @@ set. Click :guilabel:`Send`, select :guilabel:`by Post`, then :guilabel:`Send` t
      <snailmail/snailmail-template.pdf>` for details).
    - Pingen (Odoo's snailmail service provider) scans the **address area** to obtain the address.
      Any text outside the address area is not considered part of the address.
+   - The document must not contain more than 8 physical pages.
 
 Pricing
 =======
