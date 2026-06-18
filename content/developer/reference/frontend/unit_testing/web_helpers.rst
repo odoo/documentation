@@ -183,5 +183,5 @@ ignored by `contains`.
     Most helpers in Hoot are available as methods of a `contains` instance, with
     (generally) the same shape and API.
 
-.. _Component: https://github.com/odoo/owl/blob/master/doc/reference/component.md
+.. _Component: https://github.com/odoo/owl/blob/master/doc/v2/reference/component.md
 .. _View: {GITHUB_PATH}/addons/web/static/src/views/view.js
