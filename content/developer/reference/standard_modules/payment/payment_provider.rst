@@ -10,9 +10,12 @@ Payment Provider
    .. automethod:: _build_request_headers
    .. automethod:: _build_request_url
    .. automethod:: _compute_feature_support_fields
+   .. automethod:: _find_available_payment_methods
+   .. automethod:: _find_available_providers
+   .. automethod:: _find_available_tokens
    .. automethod:: _get_code
-   .. automethod:: _get_compatible_providers
    .. automethod:: _get_default_payment_method_codes
+   .. automethod:: _get_pm_from_code
    .. automethod:: _get_redirect_form_view
    .. automethod:: _get_provider_domain
    .. automethod:: _get_removal_values
