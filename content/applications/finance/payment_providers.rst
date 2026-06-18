@@ -22,6 +22,7 @@ Online payments
    payment_providers/nuvei
    payment_providers/paymob
    payment_providers/paypal
+   payment_providers/payu
    payment_providers/razorpay
    payment_providers/redsys
    payment_providers/stripe
@@ -153,6 +154,12 @@ Online payment providers
      -
    * - :doc:`PayPal <payment_providers/paypal>`
      - Odoo
+     -
+     -
+     -
+     -
+   * - :doc:`PayU <payment_providers/payu>`
+     - The provider's website
      -
      -
      -
