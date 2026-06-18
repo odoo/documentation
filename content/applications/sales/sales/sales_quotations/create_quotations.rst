@@ -163,6 +163,7 @@ Beneath the product lines, there are buttons that can be clicked to apply any of
    - :doc:`../products_prices/ewallets_giftcards`
    - :doc:`../products_prices/loyalty_discount`
    - :doc:`../products_prices/prices/pricing`
+   - :doc:`../../../essentials/product_catalog`
 
 Optional Products tab
 ---------------------
