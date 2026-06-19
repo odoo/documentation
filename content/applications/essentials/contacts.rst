@@ -171,6 +171,8 @@ recieving goods from this contact. Finally, use the :guilabel:`Subcontractor Loc
 idenfy a location used as both a source and destination when sending goods to this contact during a
 subcontracting process.
 
+.. _contacts/accounting-tab:
+
 Accounting tab
 --------------
 
