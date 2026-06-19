@@ -156,6 +156,8 @@ Select one or more :guilabel:`Website Tags` to assist in filtering published cus
 `/customers` website page. Select an :guilabel:`Industry` for this contact from the drop-down menu.
 Use the :guilabel:`SLA Policies` field to assign a *Helpdesk* SLA policy to this contact.
 
+.. _contacts/accounting-tab:
+
 Accounting tab
 --------------
 
