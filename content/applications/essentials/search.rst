@@ -238,3 +238,29 @@ the list of favorites.
 In the :guilabel:`Shared with` field, select the relevant users from the drop-down menu, then click
 :icon:`fa-cloud-upload` :guilabel:`(Save manually)`. The favorite is now visible for all selected
 users under :icon:`fa-star` :guilabel:`Favorites`.
+
+.. note::
+   Differences in access rights may mean that users of a shared search do not see the same results
+   as the user who created the favorited search.
+
+Share search results
+====================
+
+To copy a link to the current view that preserves any applied filters or groupings, open the command
+palette by pressing `CTRL + K` (or `Cmd ⌘ + K`), type `Share`, then select the :guilabel:`Share`
+command.
+
+The link is automatically copied to the clipboard and can be shared with internal users via the
+desired channel.
+
+.. tip::
+   To copy the link directly to the clipboard without first opening the control panel, press
+   `ALT + SHIFT + H` (or `CTRL + SHIFT + H`).
+
+.. note::
+   - When the link is opened, any original filters or groupings are automatically applied. Any
+     groupings appear in the search bar, while clicking the :icon:`fa-filter` :guilabel:`(filter)`
+     icon beside :guilabel:`Shared` in the search bar reveals the filters in the :guilabel:`Custom
+     Filter` window.
+   - Differences in access rights may mean that a user opening a shared link does not see the same
+     results as the user who created the link.
