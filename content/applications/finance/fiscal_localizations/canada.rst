@@ -18,16 +18,12 @@ provide in-depth looks at some specific use cases.
      <https://www.odoo.com/slides/accounting-and-invoicing-19>`_
    - `Odoo SmartClass: Accounting <https://www.odoo.com/slides/smartclass-accounting-121>`_
 
-Configuration
-=============
+.. _localizations/canada/modules:
 
-Below are the available modules in Odoo for accounting use in Canada.
+Modules
+=======
 
-Modules installation
---------------------
-
-:ref:`Install <general/install>` the following modules to get all the features of the Canadian
-localization:
+The following modules are installed automatically with the Canadian localization:
 
 .. list-table::
    :header-rows: 1
@@ -55,14 +51,39 @@ localization:
        - `Check on bottom: ADP standard
          <https://checkdepot.net/collections/computer-checks/odoo+Bottom-Check>`_
 
-.. _l10n_ca/coa:
+.. note::
+   In some cases, such as when upgrading to a version with additional modules, it is possible that
+   modules may not be installed automatically. Any missing modules can be manually :doc:`installed
+   <../../general/apps_modules>`.
+
+.. _localizations/canada/loc-overview:
+
+Localization overview
+=====================
+
+The Canadian localization package ensures compliance with Canadian fiscal and accounting
+regulations. It includes tools for managing taxes, fiscal positions, reporting, and a predefined
+chart of accounts tailored to Canada’s standards.
+
+The Canadian localization package provides the following key features to ensure compliance with
+local fiscal and accounting regulations:
+
+- :ref:`Chart of accounts <localizations/canada/coa>`: a predefined structure tailored to Canadian
+  accounting standards
+- :ref:`Fiscal position <localizations/canada/fiscal-positions>`: automated tax adjustments based on
+  customer or supplier registration status
+- :ref:`Taxes <localizations/canada/taxes>`: pre-configured tax rates, including standard VAT,
+  zero-rated, and exempt options
+- :ref:`Reporting <localizations/canada/reports>`
+
+.. _localizations/canada/coa:
 
 Chart of accounts
-=================
+-----------------
 
 The :doc:`chart of accounts (COA) <../accounting/get_started/chart_of_accounts>` for the Canadian
-localization, in Odoo, has accounts grouped into seven main categories, with corresponding numeric
-values that prefix individual journal entries:
+localization, has accounts grouped into seven main categories, with corresponding numeric values
+that prefix individual journal entries:
 
 - **Receivable**: the balance of money (or credit) due to the business for goods or services
   delivered or used, but not yet paid for by customers. |AR| is indicated by the journal code
@@ -123,13 +144,12 @@ values that prefix individual journal entries:
         - :guilabel:`Account Payable`
 
 .. seealso::
-   - :doc:`../accounting/get_started/chart_of_accounts`
-   - :doc:`../accounting/get_started/cheat_sheet`
+   :doc:`../accounting/get_started/cheat_sheet`
 
-.. _l10n_ca/fiscal-positions:
+.. _localizations/canada/fiscal-positions:
 
 Fiscal positions
-================
+----------------
 
 Canadian tax rates and taxable items vary by province and territory. Default fiscal positions are
 automatically created when the Odoo **Accounting** application is installed. To manage or configure
@@ -174,20 +194,20 @@ The following fiscal positions are available by default:
 .. seealso::
    :doc:`../accounting/taxes/fiscal_positions`
 
-.. _l10n_ca/taxes:
+.. _localizations/canada/taxes:
 
 Taxes
-=====
+-----
 
 In Canada, tax rates and what is considered taxable vary by province and territory. Default *Sales*
 and *Purchases* taxes are created automatically when the Odoo **Accounting** application is
 installed. To manage existing or configure additional taxes, navigate to :menuselection:`Accounting
 --> Configuration --> Taxes`.
 
-.. _l10n_ca/taxes-avatax:
+.. _localizations/canada/taxes-avatax:
 
 AvaTax
-------
+~~~~~~
 
 **Avalara AvaTax** is a cloud-based tax calculation and compliance software that integrates with
 Odoo for several localizations, including Canada. Integrating AvaTax with Odoo provides real-time
@@ -208,10 +228,10 @@ and region-specific tax calculations when items are sold, purchased, and invoice
    - Avalara's support documents: `About AvaTax
      <https://community.avalara.com/support/s/document-item?language=en_US&bundleId=dqa1657870670369_dqa1657870670369&topicId=About_AvaTax.html&_LANG=enus>`_
 
-.. _l10n_ca/reports:
+.. _localizations/canada/reports:
 
 Reports
-=======
+-------
 
 A number of :doc:`report selections <../accounting/reporting>` are readily available for the
 Canadian localization, under the :menuselection:`Accounting app --> Reporting` drop-down menu:
@@ -251,19 +271,26 @@ Canadian localization, under the :menuselection:`Accounting app --> Reporting` d
    - :doc:`Accounting reporting <../accounting/reporting>`
    - :doc:`../../essentials/search`
 
-.. _l10n_ca/cash-discount:
+.. _localizations/canada/accounting:
+
+Accounting
+==========
+
+.. _localizations/canada/cash-discount:
 
 Cash discount
-=============
+-------------
 
-Cash discounts can be configured from :menuselection:`Accounting app --> Payment Terms`. Each
-payment term can be set up with a cash discount and reduced tax.
+Cash discounts can be configured from :menuselection:`Accounting --> Configuration --> Payment
+Terms`. Each payment term can be set up with a cash discount and reduced tax.
 
 .. seealso::
    :doc:`../accounting/customer_invoices/cash_discounts`
 
+.. _localizations/canada/writing-checks:
+
 Writing checks
-==============
+--------------
 
 The Canadian localization allows users to print checks for vendor payments. Be sure the *Canadian
 Checks Layout* (`l10n_ca_check_printing`) module for the CA localization is :ref:`installed
@@ -295,3 +322,91 @@ Once all check configurations are complete, :guilabel:`Save` the settings.
 
 .. seealso::
    :doc:`../accounting/payments/pay_checks`
+
+.. _localizations/canada/eft:
+
+EFT - electronic transfers
+--------------------------
+
+In Canada, Electronic Funds Transfer (EFT) refers to the digital transfer of funds between different
+bank accounts, largely replacing traditional paper-based transactions. :abbr:`EFT (Electronic Funds
+Transfers)` is the primary system used by businesses to automate payroll, pay suppliers, and collect
+recurring payments.
+
+.. _localizations/canada/cpa005:
+
+CPA005 file
+~~~~~~~~~~~
+
+CPA005 is a standardized file format used by Canadian banks to process batched financial
+transactions, primarily for :abbr:`EFT (Electronic Funds Transfers)`.
+
+.. note::
+   Make sure to :ref:`install <general/install>` the :guilabel:`CPA005 Payments`
+   (`l10n_ca_payment_cpa005`) module.
+
+.. _localizations/canada/cpa005-configuration:
+
+Configuration
+*************
+
+The following configurations are required:
+
+#. Make sure to fill in the necessary fields on the :doc:`company record
+   </applications/general/companies>`:
+
+   - :guilabel:`Country`: Canada.
+   - :guilabel:`Short Name used in Canadian EFT`: Enter a short version of the :guilabel:`Company
+     Name`, limited to a maximum of 15 characters.
+
+     .. note::
+        - Most banks require this value to be all uppercase letters.
+        - Both the :guilabel:`Company Name` and the short name appear in the CPA005 file.
+
+#. Set up the CPA005 information in the :ref:`Bank journal <accounting/journals/bank>`:
+
+   .. note::
+      Make sure to have the appropriate :doc:`access rights <../../general/users/access_rights>` in
+      the :guilabel:`Accounting` section to validate bank accounts.
+
+   #. Go to :menuselection:`Accounting --> Configuration --> Journals` and access the relevant
+      :guilabel:`Bank` journal.
+   #. In  the :guilabel:`Journal Entries` tab, enter the bank :ref:`Account Number and Bank
+      <accounting/journals/bank>` details.
+   #. In the :guilabel:`Outgoing Payments` tab, make sure the :guilabel:`Canadian EFT` Payment
+      Method is set. Then, complete the following fields in the :guilabel:`Canadian EFT/CPA
+      configuration` section:
+
+      - :guilabel:`Destination Data Center`: Enter the 5-digit ID provided by your bank.
+      - :guilabel:`Originator ID`: Enter the 10-digit code provided by your bank.
+      - :guilabel:`Next File Creation Number (FCN)`: Enter a sequence between `1` and `9,999` that
+        will appear on the CPA005 file.
+
+#. Make sure the :guilabel:`Bank Account` information is properly set up in the :ref:`Accounting
+   tab <contacts/accounting-tab>` for the relevant vendor.
+
+.. _localizations/canada/cpa005-payments:
+
+CPA005 EFT payments
+*******************
+
+.. note::
+   Make sure that :ref:`batch payments are enabled <accounting/batch/configuration>`.
+
+To pay vendor bills using an :abbr:`EFT (Electronic Funds Transfer)` via the CPA005 file format,
+follow these steps:
+
+#. When :ref:`registering payments for vendor bills <accounting/payments/group-payments>`, select
+   the :guilabel:`Canadian EFT` payment method.
+#. Go to :menuselection:`Accounting --> Vendor --> Payments`, access the relevant payments, and
+   select the :guilabel:`EFT/CPA transaction code` for each payment.
+#. In the :guilabel:`Vendor Payments` list view, select the relevant payments and click
+   :guilabel:`Create Batch`.
+#. Verify the information, such as the :guilabel:`Date` and :guilabel:`File Creation Number`, before
+   validating the batch payment, as modifications can be more complex once validated.
+#. Click :guilabel:`Validate`.
+
+The generated CPA005 TXT file is available in the chatter for download and bank import.
+
+.. important::
+   After importing the file into your banking system, payment processing may take up to 48 hours.
