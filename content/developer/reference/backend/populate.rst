@@ -144,6 +144,10 @@ records to create (or update).
 ``ref``
     For ``write`` blocks: reference to a previously created batch (its ``id``).
 
+``domain``
+    For ``write`` blocks: ORM domain selecting the target records. ``create`` blocks cannot define
+    a top-level ``domain`` because they create records instead of targeting existing ones.
+
 ``scale``
     ``True`` (default) or ``False``. Whether the :option:`--scale` factor applies to this
     block's ``count``.
@@ -1064,24 +1068,56 @@ Virtual fields are also useful for **correlating** persisted fields:
 Write jobs
 ----------
 
-Use ``type="write"`` to update records that were created earlier in the same blueprint,
-referenced by their ``id`` / ``ref``:
+Use ``type="write"`` to update existing records. The target records can be selected with
+``ref``, with a top-level ``domain``, or with both.
 
 .. example::
 
    .. code-block:: xml
 
-      <!-- Create partners -->
+      <!-- Create partners and tag them with the "customers" reference -->
       <model name="res.partner" count="500" id="customers">
           <field name="name" generator="fake.company"/>
+          <field name="active" values="{'True': 9, 'False': 1}"/>
+          <field name="customer_rank" start="0" end="5"/>
       </model>
 
-      <!-- Update those same partners -->
+      <!-- Update all partners created under the "customers" reference -->
       <model name="res.partner" type="write" ref="customers">
           <field name="phone" generator="fake.phone_number"/>
       </model>
 
-A ``write`` block without ``ref`` updates **all** existing records of that model.
+      <!-- Update all active customers, even if they were not created by this blueprint -->
+      <model name="res.partner" type="write"
+             domain="[('customer_rank', '&gt;', 0), ('active', '=', True)]">
+          <field name="mobile" generator="fake.phone_number"/>
+      </model>
+
+      <!-- Update only active customers created under the "customers" reference -->
+      <model name="res.partner" type="write" ref="customers"
+             domain="[('customer_rank', '&gt;', 0), ('active', '=', True)]">
+          <field name="email" generator="fake.company_email"/>
+      </model>
+
+The targeting rules are:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Attributes
+     - Target records
+   * - ``ref`` only
+     - Records created under that populate reference.
+   * - ``domain`` only
+     - Existing records of the job model matching the domain.
+   * - ``ref`` and ``domain``
+     - Referenced records that also match the domain.
+   * - Neither
+     - All existing records of the job model.
+
+Domains on ``write`` jobs are evaluated once to select the target records; they are not dynamic per
+generated record. ``create`` jobs cannot define a top-level ``domain`` because they create new
+records instead of targeting existing ones.
 
 .. _reference/populate/advanced/inheritance:
 
