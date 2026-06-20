@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-12 17:31+0000\n"
+"POT-Creation-Date: 2026-06-19 17:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -64,7 +64,7 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:20
 #: ../../content/applications/sales/point_of_sale/payment_methods.rst:39
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines.rst:13
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:20
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:21
 #: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:13
 #: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:9
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:13
@@ -83,7 +83,7 @@ msgstr ""
 #: ../../content/applications/sales/sales/gelato.rst:15
 #: ../../content/applications/sales/sales/invoicing/proforma.rst:14
 #: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:16
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:34
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:36
 #: ../../content/applications/sales/sales/sales_quotations/margin.rst:12
 #: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:53
 #: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:11
@@ -640,7 +640,7 @@ msgid ":doc:`convert`"
 msgstr ""
 
 #: ../../content/applications/sales/crm/acquire_leads/opportunities_form.rst:117
-#: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:117
+#: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:130
 msgid ":doc:`../track_leads/lead_scoring`"
 msgstr ""
 
@@ -2678,7 +2678,7 @@ msgid "For databases with multiple companies, select a :guilabel:`Company` from 
 msgstr ""
 
 #: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:27
-msgid "If *Leads* have been enabled in the **CRM** app's Configuration settings, two checkboxes will appear that determine whether leads assigned to the sales team should go directly into the pipeline or be set as leads first."
+msgid "If *Leads* have been enabled in the **CRM** app's Configuration settings, two checkboxes appear that determine whether leads assigned to the sales team should go directly into the pipeline or be set as leads first."
 msgstr ""
 
 #: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:None
@@ -2705,7 +2705,15 @@ msgstr ""
 msgid "To add team members with rules-based assignment enabled, click the :guilabel:`Add Sales Team Members` link under the :guilabel:`Members` tab. This opens the :guilabel:`Create Sales Team Members` pop-up window. Assign a salesperson in the :guilabel:`Salesperson` field and adjust their lead assignment rules if desired under the :guilabel:`Lead Assignment` tab. Click the :guilabel:`Save & Close` button to finish, or click :guilabel:`Save & New` to open a blank form and keep adding sales team members."
 msgstr ""
 
-#: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:58
+#: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:59
+msgid "When using rules-based assignment, Odoo automatically limits the maximum number of leads an individual team member can be assigned in a day. This limit is determined by the number in the :guilabel:`Capacity` field and is equal to that number divided by 30 (for the number of days in the period). **This may result in leads going unassigned if all sales team members' daily capacity has been met.**"
+msgstr ""
+
+#: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:66
+msgid "Sales team member John Doe has a :guilabel:`Capacity` maximum of 120 leads in a 30-day period. This means that the database automatically assigns John a maximum of 4 leads per day. If John were the only member of the sales team and 10 leads were created in a single day, only 4 would be assigned to him. The other 6 would go unassigned."
+msgstr ""
+
+#: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:71
 msgid "If it's necessary to prevent this salesperson from being automatically assigned leads, tick the :guilabel:`Pause assignment` checkbox. If auto assignment is paused, the salesperson can still be assigned leads manually."
 msgstr ""
 
@@ -2713,19 +2721,19 @@ msgstr ""
 msgid "The Create Sales Team Members pop-up window with Maggie Davidson about to be added."
 msgstr ""
 
-#: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:65
+#: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:78
 msgid "The :guilabel:`Leads (30 days)` graphic on the sales team members' cards tracks how many leads a salesperson has been assigned in the past thirty days for this team relative to the maximum number that they should be assigned. A sales team member's maximum number of leads may be set on their :guilabel:`Open: Sales Team Members` form."
 msgstr ""
 
-#: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:71
+#: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:84
 msgid ":doc:`Assignment rules <../track_leads/lead_scoring>` can be configured for individual salespeople using the :guilabel:`Domain` section."
 msgstr ""
 
-#: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:75
+#: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:88
 msgid "Without rules-based assignment"
 msgstr ""
 
-#: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:77
+#: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:90
 msgid "To add team members without rules-based assignment enabled, click the :guilabel:`Add Salespersons` link under the :guilabel:`Members` tab. This opens the :guilabel:`Add: Salespersons` pop-up window. Tick the checkbox to the left of the salesperson to be added to the team, then click :guilabel:`Select`. New salespersons can be created from this window by clicking the :guilabel:`New` button, as well."
 msgstr ""
 
@@ -2733,15 +2741,15 @@ msgstr ""
 msgid "The Add: Salespersons pop-up window on a new sales team with Mitchell Admin selected."
 msgstr ""
 
-#: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:86
+#: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:99
 msgid "If creating a new salesperson, click :guilabel:`Save & Close` when finished, or :guilabel:`Save & New` to add additional members."
 msgstr ""
 
-#: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:90
+#: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:103
 msgid "Enable multi teams"
 msgstr ""
 
-#: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:92
+#: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:105
 msgid "To allow salespeople to be assigned to more than one sales team, the *Multi Teams* setting needs to be enabled. First, navigate to :menuselection:`CRM app --> Configuration --> Settings`. Under the :guilabel:`CRM` section, tick the checkbox labeled :guilabel:`Multi Teams`. Then, click :guilabel:`Save` at the top-left of the page."
 msgstr ""
 
@@ -2749,11 +2757,11 @@ msgstr ""
 msgid "The settings page of the CRM app with the Multi Teams setting enabled."
 msgstr ""
 
-#: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:103
+#: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:116
 msgid "Sales team dashboard"
 msgstr ""
 
-#: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:105
+#: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:118
 msgid "To view the sales team dashboard, go to :menuselection:`CRM app --> Sales --> Teams`. Any team the user is a member of appears in the dashboard."
 msgstr ""
 
@@ -2761,11 +2769,11 @@ msgstr ""
 msgid "The sales team dashboard in the CRM app."
 msgstr ""
 
-#: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:111
+#: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:124
 msgid "Click on the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon in the top-right corner of team's card to open a drop-down menu. Then, to view or edit the team's settings, click :guilabel:`Configuration`."
 msgstr ""
 
-#: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:116
+#: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:129
 msgid ":doc:`../optimize/utilize_activities`"
 msgstr ""
 
@@ -4197,7 +4205,7 @@ msgid "Set up a POS, manage basic settings, and handle daily operations."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale.rst:23
-#: ../../content/applications/sales/point_of_sale/products.rst:5
+#: ../../content/applications/sales/point_of_sale/products.rst:3
 #: ../../content/applications/sales/point_of_sale/restaurant/urban_piper.rst:205
 msgid "Products"
 msgstr ""
@@ -4498,7 +4506,7 @@ msgid "An employee with advanced POS rights who is not a database user cannot ac
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/employee_login.rst:103
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:189
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:191
 msgid "Usage guidelines"
 msgstr ""
 
@@ -5006,6 +5014,7 @@ msgid "Presets are available in both the :ref:`POS register <pos/restaurant/orde
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/presets.rst:103
+#: ../../content/applications/sales/point_of_sale/products.rst:224
 #: ../../content/applications/sales/point_of_sale/use.rst:None
 msgid "POS register"
 msgstr ""
@@ -5059,8 +5068,8 @@ msgid "Enter the number of guests in the POS register."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/presets.rst:150
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:48
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:208
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:50
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:210
 msgid "Kiosk"
 msgstr ""
 
@@ -5450,24 +5459,24 @@ msgstr ""
 msgid "The self-ordering feature allows customers to browse your menu or product catalog, place an order, and complete payment using their mobile device or a self-ordering kiosk."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:12
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:14
 msgid "Feature activation"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:14
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:16
 msgid "To enable this feature and select a self-ordering type, access the :ref:`POS settings <pos/use/settings>`, scroll down to the :guilabel:`Mobile self-order & Kiosk` section, and select a :guilabel:`Self Ordering` type under the :guilabel:`QR menu & Kiosk activation` section."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:18
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:20
 msgid "You can choose from:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:22
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:193
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:24
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:195
 msgid "QR menu"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:24
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:26
 msgid "Select :guilabel:`QR menu` or :guilabel:`QR menu + Ordering` to give customers access to your menu or product catalog by scanning a QR code on their personal device. The latter also allows them to place an order and make a payment."
 msgstr ""
 
@@ -5476,314 +5485,314 @@ msgstr ""
 msgid "QR menu and kiosk setting activation"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:31
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:33
 msgid "Click :icon:`fa-arrow-right` :guilabel:`Print QR Codes` to download a .pdf document with the generated QR codes."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:33
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:35
 msgid "Click :icon:`fa-arrow-right` :guilabel:`Download QR Codes` to download a compressed file with the generated QR codes."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:37
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:39
 msgid "In :ref:`restaurants <pos/restaurant/floors>`, printing or downloading QR codes generates as many QR codes as the number of available tables. In **shops**, it generates only one generic QR code."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:42
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:44
 msgid "To customize QR codes,"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:44
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:46
 msgid "Scan the relevant QR code to acquire its URL."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:45
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:47
 msgid "Use a QR code generator (e.g., `QR code monkey <https://www.qrcode-monkey.com>`_ or `QR code generator <https://www.qr-code-generator.com>`_) to create a custom QR code."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:50
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:52
 msgid "When :guilabel:`Kiosk` is selected, customers can access the menu or product catalog, place orders, and pay from a self-ordering kiosk."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:56
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:58
 msgid "Once a self-ordering type is selected, the :ref:`additional settings <pos/self_order/add-settings>` update to fit the selected type's needs."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:62
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:64
 msgid "Additional settings"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:66
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:68
 msgid "Home buttons"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:68
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:70
 msgid "The :guilabel:`Home buttons` are displayed on the kiosk or mobile device interfaces when customers are self-ordering. To set them up, click :icon:`fa-arrow-right` :guilabel:`Home buttons`. Then,"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:72
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:74
 msgid "Click :guilabel:`New` to add a new button."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:73
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:75
 msgid "Set the :guilabel:`Label`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:74
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:76
 msgid "Enter a :guilabel:`URL` preceded by `https://` to redirect customers to a specific URL when clicking the button. For instance, you might want to redirect them to a campaign video for a new product or to a contest page."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:77
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:79
 msgid "In the same :guilabel:`URL` column, enter `/products` to create a button that redirects customers to the product catalog."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:79
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:81
 msgid "Select the :guilabel:`Points of Sale` to ensure this button only appears on the selected POS' self-ordering interface."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:81
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:83
 msgid "Select a predefined :guilabel:`Style` from the dropdown menu."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:84
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:86
 msgid "Leaving the :guilabel:`Points of Sale` field empty shares the button with all POS."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:85
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:87
 msgid "The :guilabel:`Preview` column automatically updates, giving you a glimpse of the button's appearance based on its configuration."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:88
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:90
 msgid "Service location and payment options"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:90
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:92
 msgid "Set where the service occurs by selecting :guilabel:`Table` or :guilabel:`Pickup zone` under the :guilabel:`Service` field."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:94
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:96
 msgid "Service zones can also be defined for :doc:`presets <presets>` used for self-ordering."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:96
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:98
 msgid "Define when and how customers pay in the :guilabel:`Pay after` field. Customers can pay after :guilabel:`Each meal` or for :guilabel:`Each order`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:98
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:100
 msgid "The service location and payment options available depend on the type of self-ordering service and POS:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:101
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:103
 msgid "**QR menu + Ordering**:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:103
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:105
 msgid "**Restaurants**: Customers can be served at their table or the pickup zone."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:105
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:107
 msgid "When served at their table, they can pay after each meal or each order."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:106
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:108
 msgid "When served at the pickup zone, they can only pay after each order."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:107
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:109
 msgid "**Shops**: Customers can only be served at the pickup zone and pay after each order."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:108
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:110
 msgid "Regardless of the type of POS, customers can pay :doc:`online </applications/finance/payment_providers>` or using any configured :doc:`payment method <../payment_methods>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:112
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:114
 msgid "**Kiosk**:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:114
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:116
 msgid "Regardless of the type of POS, customers can either be served at their table or in the pickup zone, but they must pay after each order."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:116
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:118
 msgid "The kiosk self-ordering only works with :doc:`Adyen <../payment_methods/terminals/adyen>` and :doc:`Stripe <../payment_methods/terminals/stripe>` terminals."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:118
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:120
 msgid "The :guilabel:`Online Payment` feature is not supported."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:121
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:123
 msgid ":doc:`/applications/finance/payment_providers`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:122
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:124
 msgid ":doc:`../payment_methods`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:124
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:126
 msgid "Language"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:126
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:128
 msgid "This option allows you to enable multiple languages for the self-ordering interface. The suggested languages are those already installed in Odoo. To expand the selection, add more languages:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:130
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:132
 msgid "Click :icon:`fa-arrow-right` :guilabel:`Add Languages`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:131
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:133
 msgid "Add as many languages as needed to the :guilabel:`Languages` field."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:132
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:134
 msgid "Click :guilabel:`Add`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:133
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:135
 msgid "Add those languages to the :guilabel:`Available` field."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:136
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:138
 msgid ":doc:`/applications/general/users/language`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:138
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:140
 msgid "Splash screens"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:140
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:142
 msgid "Splash screens are introductory screens displayed when the self-ordering interface or kiosk is launched. They typically contain branding, welcome messages, or usage instructions."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:143
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:145
 msgid "To add a splash screen image, click :icon:`fa-paperclip` :guilabel:`Add images`, select and open an image."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:145
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:147
 msgid "To remove a splash screen image, hover over the image and click :icon:`fa-times` (:guilabel:`Delete`)."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:149
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:151
 msgid "You can add multiple splash screen images at once."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:151
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:153
 msgid "Eat in/ Take out"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:153
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:155
 msgid "Activate this setting to :ref:`adjust the tax rate <pos/pricing/taxes>` based on whether customers dine in or take their order to go. Then,"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:156
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:158
 msgid "Fill in the field with an existing :guilabel:`Alternative Fiscal Position`;"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:157
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:159
 msgid "Create and set up a new fiscal position by filling in the field and clicking :guilabel:`Create & Edit`; or"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:159
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:161
 msgid "Create and set up a new fiscal position by clicking :icon:`fa-arrow-right` :guilabel:`Fiscal Positions`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:163
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:165
 msgid ":ref:`pos/pricing/taxes`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:164
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:166
 msgid ":doc:`/applications/finance/accounting/taxes/fiscal_positions`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:166
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:168
 msgid "Launch on IoT Box"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:167
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:169
 msgid "This option allows for using an :doc:`IoT Box </applications/general/iot/iot_box>` connected to a touchscreen as a self-ordering kiosk."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:170
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:172
 msgid ":doc:`Connect an IoT Box </applications/general/iot/connect>` to your Odoo database."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:171
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:173
 msgid "Ensure a touchscreen :doc:`display </applications/general/iot/devices/screen>` is connected"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:172
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:174
 msgid "Select the IoT Box from the :guilabel:`Launch on` field."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:175
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:177
 msgid "Once connected to the IoT box, the touchscreen display appears as two separate devices in the IoT box's list of devices: a display and a keyboard input device."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:179
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:181
 msgid "Preview"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:181
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:183
 msgid "Review the interface before making the self-ordering feature available to customers to ensure all settings are applied correctly. Click :icon:`fa-arrow-right` :guilabel:`Preview Web interface` under the :guilabel:`Self  Ordering` field to ensure all :ref:`additional settings <pos/self_order/add-settings>` are correctly applied."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:195
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:197
 msgid "On the POS user's end, access the self-ordering interface by"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:197
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:199
 msgid "Scanning a downloaded or printed QR code; or"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:198
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:200
 msgid "Clicking the :icon:`fa-ellipsis-v` (:guilabel:`vertical ellipsis`) icon on the POS card, then :guilabel:`Mobile Menu`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:201
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:222
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:203
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:224
 msgid "On the customers' end,"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:203
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:205
 msgid "Access the self-ordering interface by scanning a downloaded or printed QR code."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:204
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:206
 msgid "Click the :ref:`home button <pos/self_order/add-settings>` to reach the menu or catalog."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:205
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:226
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:207
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:228
 msgid "Select the items and click :guilabel:`Order` to place an order."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:206
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:227
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:208
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:229
 msgid "Follow the instructions on-screen to assign a table and pay for the order."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:210
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:212
 msgid "On the POS user's end, click :guilabel:`Start Kiosk`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:213
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:215
 msgid "If an IoT Box is configured as a kiosk, the self-ordering interface opens directly on the connected touchscreen. Otherwise, it opens in a new browser tab on the device used to access it."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:216
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:218
 msgid "Once the register is open, :guilabel:`Start Kiosk` switches to :guilabel:`Open Kiosk` on the POS card."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:218
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:220
 msgid "Click :guilabel:`Open Kiosk` on the POS card to reopen the self-ordering interface in a new tab or to refresh the kiosk's IoT Box touchscreen display if it is already running."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:220
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:222
 msgid "Configure :doc:`presets <presets>` to streamline the ordering process."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:224
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:226
 msgid "Click the :ref:`home button <pos/self_order/add-settings>` from a self-ordering kiosk to reach the menu or product catalog."
 msgstr ""
 
@@ -5791,11 +5800,11 @@ msgstr ""
 msgid "kiosk end-screen for customers"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:234
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:236
 msgid ":ref:`The POS register must be open <pos/use/open-register>` for customers to place an order."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:235
+#: ../../content/applications/sales/point_of_sale/extra/self_order.rst:237
 msgid "Once an order is placed, it is automatically sent to :doc:`the preparation screen <preparation>` and added to the list of POS orders."
 msgstr ""
 
@@ -5842,6 +5851,7 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/hardware_network.rst:39
 #: ../../content/applications/sales/point_of_sale/hardware_network/customer_display.rst:3
 #: ../../content/applications/sales/point_of_sale/hardware_network/pos_iot.rst:31
+#: ../../content/applications/sales/point_of_sale/products.rst:225
 msgid "Customer display"
 msgstr ""
 
@@ -6186,6 +6196,10 @@ msgid "Now that you have a product associated with a Pricer tag, we can send its
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/electronic_labels.rst:119
+#: ../../content/applications/sales/point_of_sale/products.rst:129
+#: ../../content/applications/sales/point_of_sale/products.rst:168
+#: ../../content/applications/sales/point_of_sale/products.rst:198
+#: ../../content/applications/sales/point_of_sale/products.rst:279
 #: ../../content/applications/sales/point_of_sale/shop.rst:78
 msgid "Practical application"
 msgstr ""
@@ -7064,36 +7078,32 @@ msgstr ""
 msgid "Epson TM-T88 family (incompatible ePOS software)"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:124
-msgid "Epson TM-U220 family (incompatible ePOS software)"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:129
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:128
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:93
 msgid "Troubleshooting"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:131
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:130
 msgid "To resolve common hardware issues, including connectivity failures, configuration errors, and physical maintenance, follow the instructions below:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:134
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:133
 msgid "If Google Chrome denies access to local devices, printers and IoT boxes will fail to connect. :ref:`Grant the necessary browser permissions <pos/lna/browser-permission>` to restore the connection."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:137
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:136
 msgid "Check the printer's blinking lights to help identify the source of a problem."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:138
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:137
 msgid "If the printer does not print the first automatic ticket with the IP address, check the network cable or Wi-Fi connection."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:140
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:139
 msgid "If the receipt comes out blank, the paper roll may be upside down; try flipping it."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:141
+#: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:140
 msgid "If the POS cannot connect to the printer, make sure the printer's IP address entered in Odoo matches the one on the first automatically printed ticket. Also, ensure the router assigns the printer a static IP address."
 msgstr ""
 
@@ -7139,6 +7149,7 @@ msgid "Alternatively, click the :icon:`fa-ellipsis-v` (:guilabel:`Dropdown menu`
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/scale.rst:35
+#: ../../content/applications/sales/point_of_sale/products.rst:80
 #: ../../content/applications/sales/sales/sales_quotations/orders_and_variants.rst:37
 msgid "Product configuration"
 msgstr ""
@@ -7373,37 +7384,37 @@ msgid "Connecting and integrating a cash machine with a POS system automates cas
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines.rst:15
-msgid "Configure the cash machine itself before setting it up in Odoo. Currently, Odoo supports :doc:`Glory <cash_machines/glory>` and :doc:`Cashdro<cash_machines/cashdro>` cash machines. Once the cash machine is fully set up:"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines.rst:18
-msgid "Create the associated :doc:`payment method <../payment_methods>`."
+msgid "Configure the cash machine itself before setting it up in Odoo. Currently, Odoo supports :doc:`Cashdro <cash_machines/cashdro>`, :doc:`Cashmatic <cash_machines/cashmatic>`, and :doc:`Glory <cash_machines/glory>` cash machines. Once the cash machine is fully set up:"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines.rst:19
+msgid "Create the associated :doc:`payment method <../payment_methods>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines.rst:20
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:64
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/tyro.rst:61
 msgid "Select the POS in the :guilabel:`Point of Sale` field."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines.rst:24
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines.rst:25
 #: ../../content/applications/sales/point_of_sale/shop.rst:162
 msgid "Use"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines.rst:26
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines.rst:27
 msgid "To process a :ref:`payment <pos/use/sell>` with a :ref:`configured cash machine <pos/cash_machines/configuration>`, select the machine's :doc:`payment method <../payment_methods>` on the **payment screen**, then follow the instructions on the machine."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines.rst:30
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines.rst:31
 msgid "Once the transaction is successful, the payment is automatically validated in Point of Sale."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines.rst:33
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines.rst:34
 msgid "Connection issues between Odoo and the cash machine result in transaction cancellation."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines.rst:34
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines.rst:35
 msgid "To cancel the payment request, click :guilabel:`Cancel`."
 msgstr ""
 
@@ -7412,71 +7423,73 @@ msgid "Cashdro"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:5
-msgid "**Cashdro** :doc:`cash machines <../cash_machines>` enable the automation of cash transactions."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:8
-msgid "The integration with the Cashdro cash machine only supports payments and refunds."
+msgid "`Cashdro <https://www.cashdro.com/be>`_ :doc:`cash machines <../cash_machines>` enable the automation of cash transactions."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:9
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:14
+msgid "The integration with the Cashdro cash machine only supports payments and refunds."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:10
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:15
 msgid "Tasks like filling and emptying the machine must be performed directly through the cash machine interface."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:15
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:16
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:21
 msgid "Cash machine configuration"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:18
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:19
 msgid "Setting up the Cashdro machine requires the hardware administrator password and technical knowledge. Contact your Cashdro integration partner for configuration support if assistance is needed."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:21
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:22
 msgid "The Cashdro machine must be assigned a static IP address to ensure stable operation."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:22
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:23
 msgid "The Cashdro machine must be on the same local network as the device running Odoo Point of Sale."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:24
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:25
 msgid "Configuring the Cashdro machine as a :ref:`payment method in Odoo <pos/cashdro/odoo_configuration>` requires locating its IP address and enabling HTTP on the cash machine to use :doc:`Local Network Access (LNA) <../../hardware_network/pos_lna>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:28
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:29
 msgid "To locate the Cashdro machine's IP address, remove one of the devices inside the machine. For example, remove the bill device on the left side of the machine by unlatching it from the bottom and sliding it out. On the error screen that appears, click the :icon:`fa-info` (:guilabel:`info`) icon in the top-right. This action displays a diagnostics screen with the IP address, which is required for the :ref:`payment method configuration process <pos/cashdro/odoo_configuration>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:34
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:35
 msgid "To enable the HTTP setting on the Cashdro machine, follow the next steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:36
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:37
 msgid "Navigate to `https://<cashdro-ip>/Cashdro3Web/#/login`, replacing `<cashdro-ip>` with the Cashdro machine's IP address."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:38
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:39
 msgid "Log in as the administrator."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:39
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:40
 msgid "Go to :menuselection:`Configuration --> General parameters`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:40
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:41
 msgid "In the :guilabel:`Web Integration` section, ensure :guilabel:`Enable HTTP` is enabled."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:41
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:42
 msgid "Restart the machine by going to `https://<cashdro-ip>/Cashdro3Web/#/diagnosis/false`, replacing `<cashdro-ip>` with the Cashdro machine's IP address, and clicking :guilabel:`Options`, then :guilabel:`Reset machine`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:46
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:47
 msgid "Make sure to reconnect any device that was disconnected during the process."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:51
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:52
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:95
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:167
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:38
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:35
@@ -7484,52 +7497,188 @@ msgstr ""
 msgid "Odoo configuration"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:53
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:54
 msgid "To connect the Cashdro machine to Odoo, follow the next steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:55
-msgid ":ref:`Install <general/install>` the :guilabel:`POS Cashdro Cash Machines` module."
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:56
+msgid ":ref:`Install <general/install>` the :guilabel:`POS Cashdro Cash Machines` (`pos_cashdro`) module."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:56
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:58
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:101
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:48
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/tyro.rst:39
 msgid "Go to :menuselection:`Point of Sale --> Configuration --> Payment Methods` and click :guilabel:`New`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:58
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:60
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:103
 msgid "Set the :guilabel:`Journal` field to :guilabel:`Cash`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:59
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:61
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:104
 msgid "Select the relevant POS in the :guilabel:`Point of Sale` field."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:60
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:62
 msgid "Set the :guilabel:`Integration` field to :guilabel:`Cash Machine (Cashdro)`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:61
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:63
 msgid "In the :guilabel:`Cashdro Settings` tab, enter the Cashdro machine's IP address in the :guilabel:`Cashdro IP` field."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:63
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:65
 msgid "Enter your Cashdro user credentials in the :guilabel:`Cashdro Username` and :guilabel:`Cashdro Password` fields."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:65
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:67
 msgid "Enable :guilabel:`Cashdro Local Network Access`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:68
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:70
 msgid "It is highly recommended to use :doc:`Local Network Access <../../hardware_network/pos_lna>`, as it bypasses the need for an :doc:`SSL certificate <../../hardware_network/epos_ssc>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:72
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:134
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:74
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:113
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:136
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:191
 msgid ":doc:`../../payment_methods`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:3
+msgid "Cashmatic"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:5
+msgid "`Cashmatic <https://cashmatic.eu/>`_ :doc:`cash machines <../cash_machines>` automate cash transactions by accepting cash and dispensing change. When integrated with Odoo Point of Sale, payments are processed directly through the machine from the :ref:`POS register <pos/use/open-register>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:11
+msgid "The integration with the Cashmatic cash machine only supports payments and refunds."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:12
+msgid "Tasks such as filling and emptying the machine must be performed directly through the cash machine interface or via the MyCashmatic app (available on `Android <https://play.google.com/store/apps/details?id=com.cashmatic.app&pcampaignid=web_share>`_ or `iOS <https://apps.apple.com/us/app/mycashmatic/id1661294811>`_) or `website <https://cashmatic.be/my-cashmatic/login>`_."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:24
+msgid "Two separate sets of credentials are provided with the machine: one for the cash machine, required to :ref:`configure it in Odoo <pos/cashmatic/odoo_configuration>`, and one for the **MyCashmatic** app or website, required to configure the cash machine itself."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:27
+msgid "The Cashmatic machine must be on the same local network as the device running Odoo Point of Sale and must be assigned a static IP address to ensure stable operation."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:29
+msgid "Setting up the Cashmatic machine requires the hardware administrator's password and technical knowledge. Contact your Cashmatic integration partner for configuration support if assistance is needed."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:33
+msgid "Configuring the Cashmatic machine as a :ref:`payment method in Odoo <pos/cashmatic/odoo_configuration>` requires locating the machine's :ref:`IP address <pos/cashmatic/ip-address>` and preparing for connection over :ref:`HTTPS <pos/cashmatic/https>` or :ref:`HTTP <pos/cashmatic/http>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:39
+msgid "HTTPS provides a more secure connection and requires additional configuration, including installing a valid certificate. HTTP allows communication through :doc:`../../hardware_network/pos_lna` and is recommended as it is simpler to set up."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:46
+msgid "Locate the IP address"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:48
+msgid "To locate the Cashmatic IP address, use one of the following methods:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:50
+msgid "On the Cashmatic machine, log in with the provided credentials, then go to :menuselection:`Settings --> IP address`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:52
+msgid "In the MyCashmatic app or on the website, sign in to your account, then go to :menuselection:`Settings --> Network`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:55
+msgid "Note the IP address displayed on the machine's or the device's screen, as it is needed for the :ref:`Odoo configuration step <pos/cashmatic/odoo_configuration>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:61
+msgid "Connection over HTTPS"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:63
+msgid "To connect the Cashmatic machine over HTTPS, a valid certificate is required. To generate and download the certificate, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:66
+msgid "Open a web browser and type the IP address in the address bar to access the Cashmatic web interface."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:68
+msgid "In the interface's side menu, go to :menuselection:`Settings --> Device`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:69
+msgid "Scroll down to the :guilabel:`Use Cashmatic CA` option and enable it."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:70
+msgid "Click :guilabel:`Save` and refresh the page. A :guilabel:`Download HTTPS Certificate` link appears at the bottom left of the side menu."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:72
+msgid "Click the :guilabel:`Download HTTPS Certificate` link."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:74
+msgid "To install the certificate on the device running Odoo Point of Sale, contact your integration partner, as the process depends on the device's operating system."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:80
+msgid "Connection over HTTP"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:82
+msgid "To connect the Cashmatic machine over HTTP, use one of the following methods:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:84
+msgid "On the Cashmatic machine, log in, go to :menuselection:`Settings --> Trusted mode`, then click :guilabel:`Yes`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:86
+msgid "In the MyCashmatic app or on the website, sign in to your account, go to :menuselection:`Settings --> System`, then enable :guilabel:`Unsecured APIs`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:90
+msgid "`Cashmatic user manual <https://cashmatic.it/wp-content/uploads/2026/02/EN-6.pdf>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:97
+msgid "To connect the Cashmatic machine to Odoo, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:99
+msgid ":ref:`Install <general/install>` the :guilabel:`POS Cashmatic Cash Machines` (`pos_cashmatic`) module."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:105
+msgid "Set the :guilabel:`Integration` field to :guilabel:`Cash Machine (Cashmatic)`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:106
+msgid "In the :guilabel:`Cashmatic Settings` tab, enter the Cashmatic machine's :ref:`IP address <pos/cashmatic/ip-address>` in the :guilabel:`Cashmatic IP` field."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:108
+msgid "Enter the provided Cashmatic credentials in the :guilabel:`Cashmatic Username` and :guilabel:`Cashmatic Password` fields."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:110
+msgid "Optionally, enable :guilabel:`Cashmatic Local Network Access` to connect the machine over `HTTP`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:3
@@ -7537,204 +7686,204 @@ msgid "Glory"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:5
-msgid "**Glory** :doc:`cash machines <../cash_machines>` enable the automation of cash transactions."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:8
-msgid "Odoo supports the Glory CI-5, CI-10, and CI-10X models."
+msgid "`Glory <https://www.glory-global.com/en-us>`_ :doc:`cash machines <../cash_machines>` enable the automation of cash transactions."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:9
+msgid "Odoo supports the Glory CI-5, CI-10, and CI-10X models."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:10
 msgid "The Glory machine must run firmware version ISP-K05H/B v18.40 or later. Any version starting with ISP-K35 is **not supported**."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:12
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:13
 msgid "The integration with the Glory cash machine only supports basic functions, such as cash transactions and cash count checks."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:23
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:24
 msgid "Cash machine settings"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:25
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:26
 msgid "Power on the cash machine, which briefly displays its IP address at the bottom of the screen. Note it down for later."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:29
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:30
 msgid "The IP address should be formatted as `###.###.#.##` (e.g., `192.168.0.25`)."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:31
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:32
 msgid "Navigate to the cash machine's homepage by entering its IP address as the URL in `HTTPS` (e.g., `https://192.168.0.25`), and log in with your Glory credentials."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:33
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:34
 msgid "As long as the certificate is not imported, a warning page appears when trying to access the machine's homepage. Bypass it by clicking :guilabel:`Advanced` and then :guilabel:`Proceed to [IP address] (unsafe)`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:36
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:37
 msgid "From the Glory homepage, go to :guilabel:`Host Configuration` and ensure the :guilabel:`Network` setting is set to :guilabel:`MANUAL`, meaning the IP address is static."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:38
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:39
 msgid "Then, navigate to :guilabel:`SSL Configuration` and scroll down to the :guilabel:`HTTPS Server Setting` section."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:41
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:42
 msgid "In parallel, open the terminal and verify that *OpenSSL* is installed. Type `openssl` and press enter. If installed, this command displays a `help` menu listing all available OpenSSL commands. If nothing happens, `install it <https://openssl-library.org/source/>`_."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:44
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:45
 msgid "Then, paste the following command and press `Enter` to generate and download the certificate and private key. Ensure that you replace the demo IP address with the cash machine’s actual IP address."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:53
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:54
 msgid "The self-signed SSL certificate and key pair must use the same static IP address as the cash machine."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:56
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:57
 msgid "Once the files are generated, from the :guilabel:`HTTPS Server Setting` section, upload `cert.pem` as the :guilabel:`Certificate` and `key.pem` as the :guilabel:`Private Key`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:58
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:59
 msgid "Go to :guilabel:`WebApp Configuration` and ensure the :guilabel:`Interface` setting from the :guilabel:`A: Nodejs Setting` section is set to :guilabel:`Enable`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:60
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:61
 msgid "Then, adjust the following settings depending on the POS setup:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:62
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:63
 msgid "If **multiple POS** are connected to the same cash machine, go to :guilabel:`App Configuration`, scroll down to the :guilabel:`SOAP IF Setting`, and ensure :guilabel:`Session mode` and :guilabel:`Occupy mode` are both set to :guilabel:`Enable`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:65
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:66
 msgid "If **a dedicated user** has been set up on the cash machine for Odoo, which is recommended, go to :guilabel:`App Configuration`, scroll down to the :guilabel:`SOAP IF Setting` section, and :guilabel:`Enable` the :guilabel:`User check` setting."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:68
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:69
 msgid "Restart the cash machine to apply the new settings."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:71
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:72
 msgid "As this setup is complex and may involve advanced knowledge of Glory hardware, it is advisable to consult the Glory integration partner for configuration if there is any uncertainty."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:75
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:76
 msgid "Import self-signed certificates"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:77
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:78
 msgid "For a long-term solution, the generated certificates must be imported into the device running the POS. The import process is heavily dependent on the :abbr:`OS (Operating System)` and the browser."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:82
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:83
 msgid "Windows OS"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:84
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:85
 msgid "Windows manages certificates, which means that self-signed certificates must be imported from the certification files rather than the browser. To do so,"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:87
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:88
 msgid "Open the Windows File Explorer and locate the downloaded certification files."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:88
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:89
 msgid "Right-click on the certification files and select :guilabel:`Install Certificate`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:89
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:90
 msgid "Specify the certificate location and select the installation scope: either the :guilabel:`Current User` only or all users (:guilabel:`Local Machine`). Then, click :guilabel:`Next`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:92
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:93
 msgid "On the `Certificate Store` screen, tick :guilabel:`Place all certificates in the following store`, click :guilabel:`Browse...`, and select :guilabel:`Trusted Root Certification Authorities`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:95
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:96
 msgid "Click :guilabel:`Finish` and accept the pop-up security window."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:96
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:97
 msgid "Restart the computer to make sure that the changes are applied."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:98
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:99
 msgid "Linux OS"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:100
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:101
 msgid "When using **Google Chrome**,"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:102
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:112
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:103
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:113
 msgid "Open the web browser."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:103
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:104
 msgid "Navigate to :menuselection:`Settings --> Privacy and security --> Security --> Manage certificates`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:105
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:106
 msgid "Go to the :guilabel:`Authorities` tab, click :guilabel:`Import`, and select the exported certification files."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:107
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:108
 msgid "Accept all warnings and click :guilabel:`ok`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:108
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:117
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:109
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:118
 msgid "Restart the web browser."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:110
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:111
 msgid "When using **Mozilla Firefox**,"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:113
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:114
 msgid "Navigate to :menuselection:`Settings --> Privacy & Security --> Security --> View Certificates... --> Import`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:115
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:116
 msgid "Select the exported certification files."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:116
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:117
 msgid "Tick the checkboxes and validate."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:120
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:121
 msgid "Payment method"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:122
-msgid ":ref:`Install <general/install>` the POS Glory Cash Machines module."
-msgstr ""
-
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:123
-msgid ":doc:`Associate a cash payment method <../../payment_methods>`:"
+msgid ":ref:`Install <general/install>` the :guilabel:`POS Glory Cash Machines` (`pos_glory_cash`) module."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:125
-msgid "Go to :menuselection:`Point of Sale --> Configuration --> Payment Methods`. Create a new :guilabel:`Cash` payment method or update an existing payment method."
+msgid ":doc:`Associate a cash payment method <../../payment_methods>`:"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:127
-msgid "Select the associated POS in the :guilabel:`Point of Sale` field."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:128
-msgid "Select :guilabel:`Cash Machine (Glory)` in the :guilabel:`Integration` field."
+msgid "Go to :menuselection:`Point of Sale --> Configuration --> Payment Methods`. Create a new :guilabel:`Cash` payment method or update an existing payment method."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:129
-msgid "Fill in the :guilabel:`Cash Machine IP` field with the IP address of the cash machine."
+msgid "Select the associated POS in the :guilabel:`Point of Sale` field."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:130
+msgid "Select :guilabel:`Cash Machine (Glory)` in the :guilabel:`Integration` field."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:131
+msgid "Fill in the :guilabel:`Cash Machine IP` field with the IP address of the cash machine."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:132
 msgid "If the cash machine was configured to use :guilabel:`User check` in the previous section, fill in the :guilabel:`Cash Machine Username` and :guilabel:`Cash Machine Password`."
 msgstr ""
 
@@ -9822,247 +9971,547 @@ msgstr ""
 msgid "To prevent connection loss, set a fixed IP address on the IoT Box’s router or :ref:`restart the virtual IoT server <iot/windows_iot/restart>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:7
-msgid "Products can be created from the backend or the POS interface. To manage products from the backend, go to :menuselection:`Point of Sale --> Products --> Products`. Click :guilabel:`New` to create a product, or open an existing one to edit it. Update the fields as needed and ensure the :guilabel:`Point of Sale` checkbox is enabled at the top of the form."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/products.rst:12
-msgid "To create products from the POS interface, access the POS register, click the :icon:`fa-bars` (:guilabel:`hamburger menu`) icon, then :guilabel:`Create Product`. Enter the product details in the pop-up window and click :guilabel:`Save`. The product is immediately available in the register."
+#: ../../content/applications/sales/point_of_sale/products.rst:5
+msgid "Odoo Point of Sale allows you to :ref:`create products <pos/products/creation>` and :ref:`manage product information <pos/products/information-display>` from the backend or in the POS register. Products can be :ref:`configured <pos/products/configuration>` in various ways, including creating :ref:`variants <pos/products/variants>`, :ref:`product combinations <pos/products/combos>`, and :ref:`POS-specific product categories <pos/products/categories>`, and adding :ref:`tags <pos/products/tags>` and :ref:`images <pos/products/images>`. You can also group products by :ref:`units <pos/products/units>` and :ref:`manage stock <pos/products/sn>`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/products.rst:16
-msgid "To update an existing product from the POS register, long-click a product to open the information pop-up, and click :guilabel:`Edit`. Change the necessary product details and click :guilabel:`Save` to return to the POS register."
+msgid "Product creation"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:21
-msgid "`Product creation (video tutorial) <https://youtu.be/b5eVusXHEvg?si=Xn3EBMmRfJ35mqyu>`_"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/products.rst:26
-msgid "POS product categories"
+#: ../../content/applications/sales/point_of_sale/products.rst:18
+msgid "To create products from the backend, go to :menuselection:`Point of Sale --> Products --> Products`, and click :guilabel:`New` to create a product, or select an existing one to edit it. Ensure the :guilabel:`Point of Sale` checkbox is enabled at the top of the form, then :doc:`configure the product's general information </applications/inventory_and_mrp/inventory/product_management/configure>`, such as defining the :doc:`product type </applications/inventory_and_mrp/inventory/product_management/configure/type>`, setting a :ref:`tracking strategy <pos/products/sn>`, or adding a product image, as needed. Configure advanced, POS-specific :ref:`product details <pos/products/configuration>` as needed."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/products.rst:28
-msgid "POS product categories are used to organize products in the POS register."
+msgid "It is also possible to create a product from the POS interface. To do so, open the :ref:`POS register <pos/use/open-register>`, click the :icon:`fa-bars` (:guilabel:`hamburger menu`) icon, then select :guilabel:`Create Product`. Enter the product details in the popover and click :guilabel:`Save`. The product is immediately available in the POS register. Existing products can also be updated directly from the POS register through the :ref:`product information popover <pos/products/information-display>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:30
-msgid "To manage POS categories, follow these steps:"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/products.rst:32
-msgid "Navigate to :menuselection:`Point of Sale --> Configuration --> PoS Product Categories`."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/products.rst:33
-msgid "Click :guilabel:`New` to create a category or click an existing one to update it."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/products.rst:34
-msgid "Classify and build a hierarchy between categories: Associate a category with a parent category by filling in the :guilabel:`Parent Category` field. A parent category groups one or more child categories (e.g., use `Drinks` to group `Hot beverages` and `Soft drinks`)."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/products.rst:38
-msgid "Once POS product categories are created, assign them to specific products:"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/products.rst:40
-msgid "Go to :menuselection:`Point of Sale --> Products --> Products` and open a product form."
+#: ../../content/applications/sales/point_of_sale/products.rst:36
+msgid "When using :ref:`POS product categories <pos/products/categories>`, each product must be assigned to a :guilabel:`POS Category`; otherwise, the product will not be displayed or available for selection."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/products.rst:41
-msgid "Navigate to the :guilabel:`Point of Sale` tab and fill in the :guilabel:`Category` field with one or multiple POS categories."
+msgid "`Product creation (video tutorial) <https://youtu.be/b5eVusXHEvg?si=Xn3EBMmRfJ35mqyu>`_"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:44
-msgid "To limit the categories displayed on the POS register, navigate to the :ref:`POS settings <pos/use/settings>` and select the relevant categories in the :guilabel:`Restrict Categories` field under the :guilabel:`Product & PoS categories` section."
+#: ../../content/applications/sales/point_of_sale/products.rst:46
+msgid "Product information display in the POS register"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:48
+msgid "To view and edit product information from the POS register, click and hold the product to access the following details:"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/products.rst:51
-msgid "Product combos"
+msgid "the :doc:`available </applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products>` and :doc:`forecasted </applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast>` stock, including :doc:`warehouse </applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses>` information,"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:53
-msgid "A product combo is a bundle of multiple products sold together as a unit. Each product combo consists of multiple categories, known as :ref:`combo choices <pos/products/combo-choices>`, and each combo choice contains several items. When purchasing a product combo, customers can select one or more items from each combo choice."
+#: ../../content/applications/sales/point_of_sale/products.rst:58
+msgid ":doc:`replenishment periods </applications/inventory_and_mrp/inventory/warehouses_storage/replenishment>`,"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:59
-msgid "A burger menu is offered as a product combo including three combo choices: one burger, one drink, and one portion of fries. For each combo choice, customers select one item from the available options (e.g., cheeseburger or chicken burger; soda or water; regular or large fries)."
+#: ../../content/applications/sales/point_of_sale/products.rst:60
+msgid ":doc:`optional products <../sales/sales_quotations/optional_products>`,"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:61
+msgid "financial information, such as :doc:`prices <extra/pricing>`, :ref:`taxes <pos/pricing/taxes>`, costs, and :doc:`margins <../sales/sales_quotations/margin>`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/products.rst:64
-msgid "`Product combos (video tutorial) <https://youtu.be/H8e2CakLhaQ?si=yjPbvYkj00K7OP3q>`_"
+msgid "You can also access and edit the product information of a product that has already been :ref:`added to the cart <pos/use/sell>` by selecting the product, clicking the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon, then the :icon:`fa-info` :guilabel:`Info` button."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:69
-msgid "Combo choice creation"
+#: ../../content/applications/sales/point_of_sale/products.rst:None
+msgid "Example of product information window."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:71
-msgid "To create the combo choices that will be added to the :ref:`product combo <pos/products/combo-creation>`, follow the next steps:"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/products.rst:74
-msgid "Go to :menuselection:`Point of Sale --> Products --> Combo Choices` and click :guilabel:`New`."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/products.rst:75
-msgid "Enter a name for the :guilabel:`Combo Choice`."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/products.rst:76
-msgid "Set the maximum selectable items for the combo choice using the :guilabel:`Maximum items` field."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/products.rst:77
-msgid "Set the number of items included in the combo choice using the :guilabel:`Includes items` field."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/products.rst:78
-msgid "Click :guilabel:`Add a line` under the :guilabel:`Options` section to add the products that constitute the :guilabel:`Combo Choices`."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/products.rst:80
-msgid "If needed, click a product to add an :guilabel:`Extra Price`."
+#: ../../content/applications/sales/point_of_sale/products.rst:73
+msgid "To display margins and costs in the product information window, go to the :ref:`POS settings <pos/use/settings>`, navigate to the :guilabel:`Product & PoS categories` section, and enable :guilabel:`Show margins & costs`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/products.rst:82
-msgid "Combo Price vs. Extra Price"
+msgid "Once the product is :ref:`created <pos/products/creation>`, navigate to the :guilabel:`Point of Sale` tab on the product form to configure the following POS-specific options:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:84
-msgid "The :guilabel:`Combo Price` field shows the price applied to any additional product a customer might select (i.e., when the :guilabel:`Maximum items` field is set to `2` or higher). This price is automatically calculated based on the price of the least expensive product defined in the :guilabel:`Combo Choice`."
+#: ../../content/applications/sales/point_of_sale/products.rst:85
+msgid "Enable the :guilabel:`To Weigh With Scale` option if the product must be weighed. Configure a connected :doc:`scale <hardware_network/scale>` for this purpose."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:87
+msgid "Select POS-specific :ref:`categories <pos/products/categories>`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/products.rst:88
-msgid "The :guilabel:`Extra Price` field is used to set an additional charge for a specific product in the combo choice, e.g., to cover higher costs or encourage upselling. This extra price is applied each time a customer selects that product within the combo choice."
+msgid "Define a :guilabel:`Color` to highlight the product in the :ref:`POS register <pos/use/open-register>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:95
-msgid "Product combo creation"
+#: ../../content/applications/sales/point_of_sale/products.rst:90
+msgid "Enable :guilabel:`Available in Self Order` if the product can be ordered in :doc:`self-ordering mode <extra/self_order>`. This option only appears once the self-ordering mode is :ref:`enabled <pos/self-order/activation>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:97
-msgid "To create a specific product that contains :ref:`combo choices <pos/products/combo-choices>`, follow the next steps:"
+#: ../../content/applications/sales/point_of_sale/products.rst:93
+msgid "Write a :guilabel:`Description` to display in the :ref:`product information window in the POS register <pos/products/information-display>` and in :doc:`self-ordering mode <extra/self_order>` when clicking the :icon:`fa-info-circle` :ref:`info button <pos/products/tag-application>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:100
-msgid "Go to :menuselection:`Point of Sale --> Products --> Products` and click :guilabel:`New`."
+#: ../../content/applications/sales/point_of_sale/products.rst:96
+msgid "In the :guilabel:`Upsell & cross-sell` section, enable :guilabel:`POS Optional Products` to suggest :doc:`optional products <../sales/sales_quotations/optional_products>` when :ref:`adding items to the cart <pos/use/sell>` in the POS register."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:101
-msgid "Enter a product name."
+#: ../../content/applications/sales/point_of_sale/products.rst:99
+msgid "If applicable, configure :doc:`Urpan Piper <restaurant/urban_piper>` and/or decide if the product is :guilabel:`Available for Platform Orders`, such as GrabFood or GoFood."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/products.rst:102
-msgid "Set the :guilabel:`Product Type` to :guilabel:`Combo` and select the relevant :ref:`Combo Choices <pos/products/combo-choices>`."
+msgid "Above that, you can configure additional options, such as :ref:`product variants <pos/products/variants>`, :ref:`product tags <pos/products/tags>`, :ref:`product and category images display <pos/products/images>`, and :ref:`units of measure <pos/products/units>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:104
-msgid "Add a :guilabel:`Sales Price`."
+#: ../../content/applications/sales/point_of_sale/products.rst:109
+#: ../../content/applications/sales/sales/gelato.rst:136
+#: ../../content/applications/sales/sales/products_prices/products/import.rst:164
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:3
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:219
+msgid "Product variants"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:105
-msgid "Optionally, click the :guilabel:`Point of Sale` tab to select the preferred :guilabel:`Category`."
+#: ../../content/applications/sales/point_of_sale/products.rst:111
+msgid "To allow the use of different product variants, go to :menuselection:`Inventory --> Configuration --> Settings`, scroll down to the :guilabel:`Products`, enable :guilabel:`Variants`, and :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:108
-msgid ":doc:`/applications/sales/sales/products_prices/products/variants`"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/products.rst:113
-msgid "Combo application"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/products.rst:115
-msgid "To apply combos, follow these steps:"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/products.rst:117
-msgid "Open the :ref:`POS register <pos/use/open-register>`."
+#: ../../content/applications/sales/point_of_sale/products.rst:116
+msgid "The **Inventory** app is automatically installed when using the **Point of Sale** app."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/products.rst:118
-msgid "Click the desired product combo, and select the preferred items for each combo choice."
+msgid "Then, navigate to :menuselection:`Point of Sale --> Products --> Products`, select a product, and configure :ref:`attributes <products/variants/attributes>` and their :ref:`values <products/variants/attributes-values>` to create :ref:`variants <products/variants/variants>` in the :guilabel:`Attributes & Variants` tab. On the value's form, enable :guilabel:`Available on Food Delivery` for values available through delivery platforms, if applicable."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:119
-msgid "Click :guilabel:`Add to order`."
+#: ../../content/applications/sales/point_of_sale/products.rst:125
+msgid "Navigate to :menuselection:`Point of Sale --> Configuration --> Attributes` to manage all configured attributes, or to :menuselection:`Point of Sale --> Products --> Product Variants` to view all variants."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:120
-msgid "Continue with the order process."
+#: ../../content/applications/sales/point_of_sale/products.rst:131
+msgid "Users in the :ref:`POS register <pos/use/open-register>` and customers in :doc:`self-ordering mode <extra/self_order>` can select product variants when :ref:`adding items to the cart <pos/use/sell>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:123
-msgid "The total price of the product combo, as displayed in the :ref:`POS register <pos/use/open-register>`, is based on the :guilabel:`Sales Price` defined on the :ref:`product combo's form <pos/products/combo-creation>`. Selecting several products in the combo choices and selecting a product with an :guilabel:`Extra Price` influences the total price."
+#: ../../content/applications/sales/point_of_sale/products.rst:0
+msgid "Example of product variants in self-ordering mode."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:129
-msgid "The :guilabel:`Office Combo` has a :guilabel:`Sales Price` of **300** € and offers a selection of chairs and desks. The combo choice for chairs includes a conference chair, an office chair, and an armchair with a maximum selectable amount set to 2. The :guilabel:`Combo Price` for the chair combo choice is **35** € per added item because the conference chair is the least expensive product. The armchair has an :guilabel:`Extra Price` of **100** € because it is made of leather. Selecting the conference chair with the armchair increases the price of the :guilabel:`Office Combo` to **435** €. Thus, selecting the armchair adds **35** € (:guilabel:`Combo Price`) + **100** € (:guilabel:`Extra Price`)."
+#: ../../content/applications/sales/point_of_sale/products.rst:142
+msgid "Product Tags"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/products.rst:144
-msgid "Serial numbers and lots"
+msgid "Product tags help highlight specific features in :doc:`self-ordering mode <extra/self_order>`. To create product tags, go to :menuselection:`Point of Sale --> Configuration --> Product Tags`. On the :guilabel:`Product Tags` page, click :guilabel:`New` or select an existing tag."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:146
-msgid "Using **lots** and **serial numbers** allows you to track product movements throughout their lifecycle. When traceability is enabled, Odoo identifies a product's location based on its last recorded movement."
+#: ../../content/applications/sales/point_of_sale/products.rst:149
+msgid "On the product tag form:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:150
-msgid "To track products by lots or serial numbers:"
+#: ../../content/applications/sales/point_of_sale/products.rst:151
+msgid "Enter a :guilabel:`Tag` label."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/products.rst:152
-msgid ":ref:`Enable the Lots & Serial Numbers setting <inventory/product_management/traceability-setting>`."
+msgid "Enable/disable :guilabel:`Visible to customers` to control whether the tag is visible to customers in :doc:`self-ordering mode <extra/self_order>`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/products.rst:154
-msgid ":ref:`Configure your products and assign tracking numbers <inventory/product_management/assign-sn>`."
+msgid "Optionally, choose a :guilabel:`Color` or add an image. If both are configured, the image replaces the tag's color."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:156
+msgid "In the :guilabel:`Point of sale` section, write a description to be shown in self-ordering mode."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/products.rst:158
-msgid "Selling tracked product"
+msgid "To add tags to a product, navigate to the product form, go to the :guilabel:`Sales` tab, and, in the :guilabel:`Extra info` section, add as many :guilabel:`Tags` as needed."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:160
-msgid "Adding a tracked product to the cart from the POS register imports its serial number or lot number automatically."
+#: ../../content/applications/sales/point_of_sale/products.rst:162
+msgid "If the **eCommerce** app is installed, :ref:`tags <ecommerce/catalog/filters>` are used in both apps, and need to be added in the :guilabel:`Ecommerce shop` section of the :guilabel:`Sales` tab."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:163
-msgid "When you :ref:`load a quotation/SO <pos/shop/so>` containing tracked products, a pop-up window asks to confirm if the numbers linked to the :abbr:`SO (sales order)` should be imported. Click :guilabel:`Ok` to proceed. Once imported, the tracking numbers appear in the cart below the corresponding products, next to the :icon:`fa-list` (:guilabel:`Valid product lot`) icon."
+#: ../../content/applications/sales/point_of_sale/products.rst:170
+msgid "Tags are displayed only in :doc:`self-ordering mode <extra/self_order>`, *not* in the :ref:`POS register <pos/use/open-register>`. Customers can view the tags and tag descriptions by clicking the :icon:`fa-info` :guilabel:`(info)` icon next to the product name."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:169
-msgid "Tracking status and manual changes"
+#: ../../content/applications/sales/point_of_sale/products.rst:0
+msgid "Example of product tags in self-ordering mode."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:171
-msgid "Tracking numbers can be monitored and modified using the :icon:`fa-list` (:guilabel:`product lot`) icon:"
+#: ../../content/applications/sales/point_of_sale/products.rst:181
+msgid "Product units"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:174
+#: ../../content/applications/sales/point_of_sale/products.rst:183
+msgid "Products can be grouped by :doc:`unit of measure </applications/inventory_and_mrp/inventory/product_management/configure/uom>` in the :ref:`POS register <pos/use/open-register>` and on the :doc:`customer display <hardware_network/customer_display>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:188
+msgid "To do so, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:190
+msgid "Enable :ref:`Units of Measure & Packagings <inventory/product_replenishment/configuration>` in the Inventory app settings."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:192
+msgid "Click the :icon:`fa-arrow-right` :guilabel:`Units & Packagings` link to view all configured units."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:194
+msgid "Select a unit."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:195
+msgid "Activate :ref:`developer mode <developer-mode>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:196
+msgid "Enable :guilabel:`Group Products in POS`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:200
+msgid "When a customer orders multiple units of the same product, the products are grouped into a single line rather than appearing individually. The unit price is displayed below the product, and the total amount appears next to it."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:0
+msgid "Customer display with merged row per unit."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:210
+msgid "Product and category images"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:212
+msgid "Images can be added for :ref:`products <pos/products/creation>`, :ref:`product tags <pos/products/tags>`, :ref:`variants <pos/products/variants>`, and :ref:`categories <pos/products/categories>`. They can be displayed in the :ref:`POS register <pos/use/open-register>`, on the :doc:`customer display <hardware_network/customer_display>`, and/or in :doc:`self-ordering mode <extra/self_order>`, as follows:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:226
+msgid "Self-ordering mode"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:227
+msgid "Product image"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:228
+#: ../../content/applications/sales/point_of_sale/products.rst:229
+#: ../../content/applications/sales/point_of_sale/products.rst:238
+#: ../../content/applications/sales/point_of_sale/products.rst:241
+msgid ":icon:`fa-check`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:230
+#: ../../content/applications/sales/point_of_sale/products.rst:239
+msgid ":icon:`fa-check` on the :guilabel:`Your Order` page"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:231
+msgid "Product tag image"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:232
+#: ../../content/applications/sales/point_of_sale/products.rst:233
+#: ../../content/applications/sales/point_of_sale/products.rst:237
+#: ../../content/applications/sales/point_of_sale/products.rst:242
+#: ../../content/applications/sales/point_of_sale/products.rst:243
+msgid ":icon:`oi-close`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:234
+msgid ":icon:`fa-check` when clicking the :icon:`fa-info-circle` :ref:`Info button <pos/products/tag-application>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:236
+msgid "Product variant image"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:240
+msgid "Category image"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:245
+msgid "Once you have added images to products or categories, configure their visibility *in the POS register*. To do so, navigate to the :ref:`POS settings <pos/use/settings>`, scroll down to the :guilabel:`POS interface` section, and under :guilabel:`Hide pictures in POS`, enable/disable :guilabel:`Show product images` and/or :guilabel:`Show category images`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:253
+msgid "POS product categories"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:255
+msgid "POS product categories are used to group products in the POS register to aid navigation."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:257
+msgid "To manage POS categories, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:259
+msgid "Navigate to :menuselection:`Point of Sale --> Configuration --> PoS Product Categories`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:260
+msgid "Click :guilabel:`New` to create a category or select an existing one to update it."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:261
+msgid "On the category form:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:263
+msgid "Enter or edit the label for the category."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:264
+msgid "Select a :guilabel:`Parent Category` to build a hierarchy of categories. A parent category groups one or more child categories (e.g., use `Drinks` to group `Hot beverages` and `Soft drinks`)."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:267
+msgid "Define a :guilabel:`Color` for display in the POS register."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:268
+msgid "Add an image if needed."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:269
+msgid "If :doc:`online food delivery platforms <restaurant/urban_piper>` are configured in your database, indicate their :guilabel:`Service Hours`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:272
+msgid "After creating POS product categories, assign them to specific products on the :ref:`product form <pos/products/creation>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:275
+msgid "To only display specific categories in the POS register, go to the :ref:`POS settings <pos/use/settings>`, navigate to the :guilabel:`Product & PoS categories` section, then, in the :guilabel:`Restrict Categories` field, select the categories that should be available."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:281
+msgid "Product categories are displayed in the :ref:`POS register <pos/use/open-register>` and in :doc:`self-ordering mode <extra/self_order>`. Subcategories appear after selecting a parent category."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:0
+msgid "Categories and subcategories in kiosk mode."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:289
+msgid "If no category is selected in the POS register, all products are displayed. To organize products by category in this view, navigate to the :ref:`POS settings <pos/use/settings>`, scroll down to the :guilabel:`PoS Interface` section, and enable :guilabel:`Group products by categories`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:294
+msgid "In this POS register, two categories are configured, :guilabel:`Food` and :guilabel:`Drinks`, but neither of them is currently selected. The overview shows all products in both categories, grouped by category on separate rows."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:0
+msgid "Group products by categories."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:304
+msgid "Product combos"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:306
+msgid "A product combo is a bundle of multiple products sold together as a single unit. Each product combo consists of multiple categories, known as :ref:`combo choices <pos/products/combo-choices>`, and each combo choice contains several items. When purchasing a product combo, customers can select one or more items from each combo choice."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:312
+msgid "A burger menu is offered as a product combo including three combo choices: one burger, one drink, and one portion of fries. For each combo choice, customers select one item from the available options (e.g., cheese burger or bacon burger; water or soda; large or regular fries)."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:0
+msgid "Combo selection in the POS register."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:321
+msgid "To change the selection after :ref:`adding a product combo to the cart <pos/use/sell>`, click and hold the combo item in the cart to reopen the selection popover."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:325
+msgid "`Product combos (video tutorial) <https://youtu.be/H8e2CakLhaQ?si=yjPbvYkj00K7OP3q>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:330
+msgid "Combo choice creation"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:332
+msgid "To create the combo choices that will be added to the :ref:`product combo <pos/products/combo-creation>`, follow the next steps:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:335
+msgid "Go to :menuselection:`Point of Sale --> Products --> Combo Choices` and click :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:336
+msgid "Enter a name for the :guilabel:`Combo Choice`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:337
+msgid "Set the maximum selectable items for the combo choice using the :guilabel:`Maximum items` field."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:338
+msgid "Set the number of items included in the combo choice using the :guilabel:`Includes items` field."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:339
+msgid "If you are in a :doc:`multi-company </applications/general/companies/multi_company>` environment, choose the relevant :guilabel:`Company`. Leave the field empty to make it available for *all* companies."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:342
+msgid "Click :guilabel:`Add a line` under the :guilabel:`Options` section to add the products that constitute the :guilabel:`Combo Choices`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:344
+msgid "If needed, click a product to add an :guilabel:`Extra Price`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:346
+msgid "Combo Price vs. Extra Price"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:348
+msgid "The :guilabel:`Combo Price` field shows the price applied to any additional product a customer might select (i.e., when the :guilabel:`Maximum items` field is set to `2` or higher). This price is automatically calculated based on the price of the least expensive product defined in the :guilabel:`Combo Choice`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:352
+msgid "The :guilabel:`Extra Price` field is used to set an additional charge for a specific product in the combo choice, e.g., to cover higher costs or encourage upselling. This extra price is applied each time a customer selects that product within the combo choice."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:359
+msgid "Product combo creation"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:361
+msgid "To create a specific product that contains :ref:`combo choices <pos/products/combo-choices>`, follow the next steps:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:364
+msgid "Go to :menuselection:`Point of Sale --> Products --> Products` and click :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:365
+msgid "Enter a product name."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:366
+msgid "Set the :guilabel:`Product Type` to :guilabel:`Combo` and select the relevant :ref:`Combo Choices <pos/products/combo-choices>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:368
+msgid "Add a :guilabel:`Sales Price`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:369
+msgid "Optionally, click the :guilabel:`Point of Sale` tab to select the preferred :guilabel:`Category`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:372
+msgid "The total price of the product combo displayed in the :ref:`POS register <pos/use/open-register>` is based on the :guilabel:`Sales Price` defined on the :ref:`product combo's form <pos/products/combo-creation>`. Selecting several products in the combo choices and selecting a product with an :guilabel:`Extra Price` influences the total price."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:378
+msgid "The :guilabel:`Office Combo` has a :guilabel:`Sales Price` of **300** € and offers a selection of chairs and desks. The combo choice for chairs includes a conference chair, an office chair, and an armchair, with a maximum selectable amount set to 2. For each additional chair a customer selects, a :guilabel:`Combo Price` of **35** € is added. The armchair has an :guilabel:`Extra Price` of **100** € because it is made of leather. Selecting both the conference chair and the armchair increases the price of the :guilabel:`Office Combo` to **435** €, i.e., :guilabel:`Sales Price` + **35** € (:guilabel:`Combo Price`) for adding a second chair + **100** € (:guilabel:`Extra Price`) for the leather armchair."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:393
+msgid "Stock management"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:395
+msgid "To track stock for POS products, the :ref:`product type <inventory/product_management/goods-or-services>` must be set to :guilabel:`Goods` or :guilabel:`Combo`, and the :ref:`track inventory option <inventory/product_management/tracking-inventory>` must be enabled. Products can be tracked by quantity, :ref:`by lot, or by serial number <pos/products/sn>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:402
+msgid "When adding tracked items to the :ref:`cart <pos/use/sell>`, the number of :guilabel:`Free To Use` units is displayed in the POS configuration popover."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:0
+msgid "Free-to-use stock displayed in POS register."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:412
+msgid "Serial numbers and lots"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:414
+msgid "Using **lots** and **serial numbers** allows product movements to be tracked throughout a product's lifecycle. When traceability is enabled, Odoo identifies a product's location based on its last recorded movement."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:418
+msgid "To track products by lots or serial numbers:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:420
+msgid ":ref:`Enable the Lots & Serial Numbers setting <inventory/product_management/traceability-setting>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:422
+msgid ":ref:`Configure products <pos/products/creation>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:423
+msgid ":ref:`Assign tracking numbers <inventory/product_management/assign-sn>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:426
+msgid ":doc:`Expiration dates </applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates>` can also be configured for products tracked by lot or serial number."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:433
+msgid "Selling tracked products"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:435
+msgid "Adding a tracked product to the cart from the POS register automatically imports its serial number or lot number. If no tracking number exists, a popover appears to create and assign one."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:None
+msgid "Popover to create and assign a serial number."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:442
+msgid "When you :ref:`load a quotation or sales order <pos/shop/so>` containing tracked products, a popover asks whether the numbers linked to the quotation or sales order should be imported. Click :guilabel:`Ok` to proceed."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:446
+msgid "Once tracking numbers are assigned or imported, they appear in the cart below the corresponding products, next to the :icon:`fa-list` (:guilabel:`Valid product lot`) icon. The icon's color highlights if the tracking has been assigned:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:450
 msgid "**Green** :icon:`fa-list` (:guilabel:`Valid product lot`) **icon**: The tracking number was successfully imported or assigned."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:176
+#: ../../content/applications/sales/point_of_sale/products.rst:452
 msgid "**Red** :icon:`fa-list` (:guilabel:`Invalid product lot`) **icon**: The tracking number is missing or incorrect."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:178
-msgid "**Modification:** To change a tracking number, click the :icon:`fa-list` (:guilabel:`Valid product lot`) icon and select a different lot or serial number from the pop-up window."
+#: ../../content/applications/sales/point_of_sale/products.rst:455
+msgid "To change a tracking number, click the :icon:`fa-list` (:guilabel:`Valid product lot`) icon, select a different lot or serial number from the popover, and click :guilabel:`Apply`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:182
-msgid "An invalid or missing tracking number does not block a sale. However, it triggers a warning pop-up that must be acknowledged before proceeding to the payment screen."
+#: ../../content/applications/sales/point_of_sale/products.rst:459
+msgid "The icon appears in green for the :guilabel:`Casual T-shirt` as the serial number `123456` has been assigned. On the other hand, the icon is red for the :guilabel:`Cozy sweater` because no serial number has been assigned."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:186
+#: ../../content/applications/sales/point_of_sale/products.rst:0
+msgid "Serial number assignment in POS register."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:467
+msgid "Missing or invalid tracking numbers do not block the sale, but a warning popover must be acknowledged before proceeding to payment."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/products.rst:471
 msgid ":doc:`/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/products.rst:187
+#: ../../content/applications/sales/point_of_sale/products.rst:472
 msgid ":doc:`/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots`"
 msgstr ""
 
@@ -11415,7 +11864,7 @@ msgid "Select a sales order or quotation"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/shop.rst:18
-msgid "From the POS register, click the :icon:`oi-ellipsis-v` (:guilabel:`vertical ellipsis`) icon and :icon:`fa-link` :guilabel:`Quotation/Order` to open the list of quotations and sales orders created from the sales application. When imported, the sales order reference number is displayed under the ordered products, next to the :icon:`fa-shopping-basket` (:guilabel:`shopping basket`) icon."
+msgid "From the POS register, click the :icon:`oi-ellipsis-v` (:guilabel:`vertical ellipsis`) icon and :icon:`fa-link` :guilabel:`Quotation/Order` to open the list of quotations and sales orders created from the sales application. When loaded, the sales order reference number is displayed under the ordered products, next to the :icon:`fa-shopping-basket` (:guilabel:`shopping basket`) icon."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/shop.rst:24
@@ -14801,13 +15250,6 @@ msgstr ""
 msgid "The :guilabel:`Print Images` field *must* be configured on all Gelato products and their respective product variations before they can be ordered."
 msgstr ""
 
-#: ../../content/applications/sales/sales/gelato.rst:136
-#: ../../content/applications/sales/sales/products_prices/products/import.rst:164
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:3
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:213
-msgid "Product variants"
-msgstr ""
-
 #: ../../content/applications/sales/sales/gelato.rst:138
 msgid "To view and edit the newly synchronized product variants, navigate to the :guilabel:`Attributes & Variants` tab, which will have the variants pulled from the Gelato product configuration. Click the :guilabel:`Configure` button to edit and configure the variant images, delivery methods, additional pricing, etc."
 msgstr ""
@@ -17908,23 +18350,23 @@ msgstr ""
 msgid ":ref:`Product variants in the eCommerce <ecommerce/categories_variants/product-variants>`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:36
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:38
 msgid "To use product variants, go to :menuselection:`Sales --> Configuration --> Settings`, then enable the :guilabel:`Variants` feature in the :guilabel:`Product Catalog` section, and click :guilabel:`Save` at the top of the :guilabel:`Settings` page."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:43
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:45
 msgid "Attributes"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:45
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:47
 msgid "Before product variants can be set up, attributes **must** be created. To create, manage, and modify attributes, navigate to :menuselection:`Sales app --> Configuration --> Attributes`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:49
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:51
 msgid "The order of attributes on the :guilabel:`Attributes` page dictates how they appear on the *Product Configurator*, *Point of Sale* dashboard, and *eCommerce* pages."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:52
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:54
 msgid "To create a new attribute from the :guilabel:`Attributes` page, click :guilabel:`New`. Doing so reveals a blank attributes form that can be customized and configured in a number of ways."
 msgstr ""
 
@@ -17932,23 +18374,23 @@ msgstr ""
 msgid "A blank attribute creation form in the Odoo Sales application."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:58
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:60
 msgid "First, create an :guilabel:`Attribute Name`, such as `Color` or `Size`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:60
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:62
 msgid "Next, select one of the options from the :guilabel:`Display Type` field. The :guilabel:`Display Type` determines how this product is shown on the online store, *Point of Sale* dashboard, and *Product Configurator*."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:64
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:66
 msgid "The following :guilabel:`Display Type` options are available:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:68
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:70
 msgid "Pills"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:70
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:72
 msgid "Options appear as selectable buttons."
 msgstr ""
 
@@ -17956,11 +18398,11 @@ msgstr ""
 msgid "Pills display type"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:75
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:77
 msgid "Color"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:77
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:79
 msgid "Options appear as small, colored circles; the colors can be defined using any HTML color code."
 msgstr ""
 
@@ -17968,11 +18410,11 @@ msgstr ""
 msgid "Color display type"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:82
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:84
 msgid "Radio"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:84
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:86
 msgid "Options appear as radio buttons."
 msgstr ""
 
@@ -17980,11 +18422,11 @@ msgstr ""
 msgid "Radio display type"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:89
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:91
 msgid "Select"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:91
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:93
 msgid "Options appear in a drop-down menu."
 msgstr ""
 
@@ -17992,11 +18434,11 @@ msgstr ""
 msgid "Select display type"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:96
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:98
 msgid "Image"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:98
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:100
 msgid "Options appear as images."
 msgstr ""
 
@@ -18004,11 +18446,11 @@ msgstr ""
 msgid "Image display type"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:103
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:105
 msgid "Multi-checkbox"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:105
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:107
 msgid "Options appear as selectable checkboxes. This allows customers to choose multiple options, e.g., to add extras to food orders or highly customizable products."
 msgstr ""
 
@@ -18016,47 +18458,47 @@ msgstr ""
 msgid "Multi-checkbox display type"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:111
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:113
 msgid "The :guilabel:`Variant Creation` field determines if/when a new variant is automatically created once an attribute is added to a product."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:115
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:117
 msgid "If the attribute's :guilabel:`Display Type` is :guilabel:`Multi-checkbox`, you **must** set the :guilabel:`Variant Creation` field to :guilabel:`Never`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:118
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:120
 msgid ":guilabel:`Instantly`: Creates all possible variants as soon as attributes and values are added to a product template."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:120
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:122
 msgid ":guilabel:`Dynamically`: Creates variants **only** when corresponding attributes and values are added to a sales order."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:122
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:124
 msgid ":guilabel:`Never`: Prevents the automatic creation of purchaseable variants with this tag. Instead, this tag is treated as being informational. If more than one value is assigned to an attribute with this tag, all values are loaded when the product displays, since the creation of discrete variants is prevented."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:128
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:130
 msgid "Once added to a product, an attribute's :guilabel:`Variants Creation` mode cannot be edited."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:130
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:132
 msgid "The :guilabel:`eCommerce Filter Visibility` field determines whether or not these attribute options are visible to the customer on the front-end, as they shop on the online store."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:133
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:135
 msgid ":guilabel:`Visible`: the attribute values are visible to customers on the front-end."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:134
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:136
 msgid ":guilabel:`Hidden`: the attribute values are hidden from customers on the front-end."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:136
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:138
 msgid "Lastly, in the optional :guilabel:`eCommerce Category` field, select a category from a drop-down menu to group similar attributes under the same section for added specificity and organization."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:140
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:142
 msgid "To view the details related to the attribute category selected, click the internal link :icon:`fa-arrow-right` :guilabel:`(right arrow)` icon to the far-right of the :guilabel:`eCommerce Category` field, once an option has been selected. Doing so reveals that attribute category's detail form."
 msgstr ""
 
@@ -18064,43 +18506,43 @@ msgstr ""
 msgid "A standard attribute category detail page accessible via its internal link arrow icon."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:148
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:150
 msgid "Here, the :guilabel:`Category Name` and :guilabel:`Sequence` are displayed at the top. Followed by :guilabel:`Related Attributes` associated with the category. These attributes can be dragged and dropped into a desired priority order."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:152
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:154
 msgid "Attributes can be directly added to the category, as well, by clicking :guilabel:`Add a line`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:155
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:157
 msgid "To create an attribute category directly from this field, start typing the name of the new category, then select either :guilabel:`Create` or :guilabel:`Create and edit...` from the drop-down menu that appears."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:159
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:161
 msgid "Clicking :guilabel:`Create` creates the category, which can be modified later. Clicking :guilabel:`Create and edit...` creates the category and reveals a :guilabel:`Create Category` pop-up window, in which the new attribute category can be configured and customized."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:164
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:168
 msgid "Attribute values"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:166
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:170
 msgid "Attribute values should be added to the :guilabel:`Attribute Values` tab. Values can be added to an attribute at any time, if needed."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:169
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:173
 msgid "To add a value, click :guilabel:`Add a line` in the :guilabel:`Attribute Values` tab."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:171
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:175
 msgid "Then, enter the name of the value in the :guilabel:`Value` column. Next, check the box in the :guilabel:`Is custom value` column if the value is custom (i.e., the customer gets to provide unique specifications that are specific to this particular value)."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:176
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:180
 msgid "Colors"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:178
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:182
 msgid "Next to :guilabel:`Display Type`, select the :guilabel:`Color` option. Go to the :guilabel:`Attribute Values` tab to modify the value settings."
 msgstr ""
 
@@ -18108,7 +18550,7 @@ msgstr ""
 msgid "Add an image of the pattern to an attribute."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:184
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:188
 msgid "To choose a color, click the blank circle in the :guilabel:`Color` column, which reveals an HTML color selector pop-up window."
 msgstr ""
 
@@ -18116,15 +18558,15 @@ msgstr ""
 msgid "Selecting a color from the HTML color pop-up window that appears on attribute form."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:190
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:194
 msgid "In this pop-up window, select a specific color by dragging the color slider to a particular hue and clicking on the color portion directly on the color gradient window."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:193
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:197
 msgid "Or, choose a specific color by clicking the *dropper* icon and selecting a desired color that's currently clickable on the screen."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:196
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:200
 msgid "If you sell products with specific patterns, you can also add an image to display the pattern of the product. To do so, click the :icon:`fa-camera` :guilabel:`(camera)` icon, then click the :icon:`fa-pencil` :guilabel:`(pencil)` icon and select an image from your local drive. This pattern will appear as a color option on the eCommerce product page."
 msgstr ""
 
@@ -18132,19 +18574,19 @@ msgstr ""
 msgid "Pattern as color option."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:205
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:209
 msgid "Attributes can also be created directly from the product template by adding a new line and typing the name into the :guilabel:`Variants` tab."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:208
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:212
 msgid "Once an attribute is added to a product, that product is listed and accessible via the attribute's :guilabel:`Related Products` smart button. That button lists every product in the database currently using that attribute."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:215
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:221
 msgid "Once an attribute is created, use the attribute (and its values) to create a product variant. To do that, go to :menuselection:`Sales app --> Products --> Products`, and select an existing product to view that desired product's form. Or, click :guilabel:`Create` to create a new product, to which a product variant can be added."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:220
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:226
 msgid "On the product form, click the :guilabel:`Attributes \\& Variants` tab to view, manage, and modify attributes and values for the product."
 msgstr ""
 
@@ -18152,35 +18594,35 @@ msgstr ""
 msgid "The attributes and values tab on a typical product form in Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:226
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:232
 msgid "To add an attribute to a product and subsequent attribute values, click :guilabel:`Add a line` in the :guilabel:`Attributes \\& Variants` tab. Then, choose the desired attribute from the drop-down menu that appears."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:231
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:237
 msgid "Attributes can be created directly from the :guilabel:`Attributes \\& Variants` tab of a product form. To do that, start typing the name of the new attribute in the blank field, and select either :guilabel:`Create` or :guilabel:`Create and edit...` from the mini drop-down menu that appears."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:236
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:242
 msgid "Clicking :guilabel:`Create` creates the attribute, which can be customized later. Clicking :guilabel:`Create and edit...` creates the attribute, and a :guilabel:`Create Attribute` pop-up form appears. In the pop-up form, proceed to modify the attribute in a number of ways."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:240
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:246
 msgid "Once an attribute is selected in the :guilabel:`Attribute` column, proceed to select the specific attribute values to apply to the product, via the drop-down menu available in the :guilabel:`Values` column."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:245
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:251
 msgid "There is no limit to how many values can be added."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:248
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:254
 msgid "Similar product variant creation processes are accessible through the Purchase, Inventory, and eCommerce applications."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:254
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:260
 msgid "Configure variants"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:256
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:262
 msgid "To the far-right of the attribute line is a :guilabel:`Configure` button. When clicked, Odoo reveals a separate page showcasing those specific :guilabel:`Product Variant Values`."
 msgstr ""
 
@@ -18188,15 +18630,15 @@ msgstr ""
 msgid "The Product Variant Values page accessible via the Configure button on a product form."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:262
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:268
 msgid "Here, the specific :guilabel:`Value` name, :guilabel:`HTML Color Index` (if applicable), and :guilabel:`Value Price Extra` are viewable."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:266
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:272
 msgid "The :guilabel:`Value Price Extra` represents the increase in the sales price if the attribute is selected."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:269
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:275
 msgid "When a value is clicked on the :guilabel:`Product Variant Values` page, Odoo reveals a separate page, detailing that value's related details."
 msgstr ""
 
@@ -18204,19 +18646,19 @@ msgstr ""
 msgid "A Product Variant Values page accessible via the Product Variants Values general page."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:275
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:281
 msgid "On the specific product variant detail page, the :guilabel:`Value` and :guilabel:`Value Price Extra` fields can be found, along with an :guilabel:`Exclude for` field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:278
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:284
 msgid "In the :guilabel:`Exclude for` field, different :guilabel:`Product Templates` and specific :guilabel:`Attribute Values` can be added. When added, this specific attribute value will be excluded from those specific products."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:285
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:291
 msgid "Variants smart button"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:287
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:293
 msgid "When a product has attributes and variants configured in its :guilabel:`Attributes \\& Variants` tab, a :guilabel:`Variants` smart button appears at the top of the product form. The :guilabel:`Variants` smart button indicates how many variants are currently configured for that specific product."
 msgstr ""
 
@@ -18224,7 +18666,7 @@ msgstr ""
 msgid "The variants smart button at the top of the product form in Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:294
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:300
 msgid "When the :guilabel:`Variants` smart button is clicked, Odoo reveals a separate page showcasing all the specific product variant combinations configured for that specific product."
 msgstr ""
 
@@ -18232,99 +18674,99 @@ msgstr ""
 msgid "The variants page accessible via the variants smart button on the product form in Odoo."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:301
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:307
 msgid "Impact of variants"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:303
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:309
 msgid "In addition to offering more detailed product options to customers, product variants have their own impacts that can be taken advantage of throughout the Odoo database."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:306
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:312
 msgid ":guilabel:`Barcode`: barcodes are associated with each variant, instead of the product template. Each individual variant can have its own unique barcode/SKU."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:308
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:314
 msgid ":guilabel:`Price`: every product variant has its own public price, which is the sum of the product template price *and* any extra charges for particular attributes."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:312
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:318
 msgid "A red shirt's sales price is $23 -- because the shirt's template price is $20, plus an additional $3 for the red color variant. Pricelist rules can be configured to apply to the product template or to the variant."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:316
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:322
 msgid ":guilabel:`Inventory`: Inventory is counted for each individual product variant. On the product template form, the inventory reflects the sum of all variants, but the actual inventory is computed by individual variants."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:321
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:327
 msgid ":guilabel:`Manufacturing`: a single BoM can be used for multiple variants of the same product."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:320
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:326
 msgid "Refer to :doc:`../../../../inventory_and_mrp/manufacturing/advanced_configuration/product_variants` documentation for more information."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:323
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:329
 msgid ":guilabel:`Picture`: each product variant can have its own specific picture."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:326
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:332
 msgid "Changes to the product template automatically apply to every variant of that product."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:329
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:335
 msgid "Adding and deleting attributes from product variants"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:331
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:337
 msgid "When attributes are added or deleted from products, variants that have already been created are affected. Depending on whether or not these variants have been used in orders, they are archived or deleted and recreated."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:335
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:341
 msgid "Variants that have not been used in an order are deleted and recreated with the new attributes. This may result in the deletion of additional customizations, depending on how the variants were configured."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:338
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:344
 msgid "Variants that have been previously used in one or more orders are archived and removed from the product catalog instead of being deleted."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:342
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:348
 msgid "A business offers leather motorcycle jackets with the following attributes and values for a total of 27 product variants:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:345
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:351
 msgid "Size: Small, Medium, Large"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:346
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:352
 msgid "Color: Black, Brown, Natural"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:347
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:353
 msgid "Material: Leather, Vegan Leather, Premium Leather"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:349
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:355
 msgid "Due to rising costs, the business makes the decision to stop offering different leathers and removes the \"Material\" attribute from the product form. This has the following effects:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:352
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:358
 msgid "Any leather jacket variants that have been sold will be archived"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:353
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:359
 msgid "Any leather jacket variants that have not been sold will be deleted"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:354
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:360
 msgid "A new set of variants using just Size and Color attributes will be created, for a total of 9 product variants"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:357
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:363
 msgid "The business owner can find archived product variants by navigating to :menuselection:`Sales app --> Products --> Product Variants`, clicking the drop-down in the search bar, and finally clicking the :guilabel:`Archived filter`. Any deleted variants and their customizations will be lost."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/products/variants.rst:363
+#: ../../content/applications/sales/sales/products_prices/products/variants.rst:369
 msgid ":doc:`import`"
 msgstr ""
 
