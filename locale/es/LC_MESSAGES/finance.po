@@ -39,8 +39,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-12 17:30+0000\n"
-"PO-Revision-Date: 2026-06-15 23:10+0000\n"
+"POT-Creation-Date: 2026-06-19 17:30+0000\n"
+"PO-Revision-Date: 2026-06-20 23:15+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Spanish <https://translate.odoo.com/projects/odoo-17-doc/"
 "finance/es/>\n"
@@ -895,6 +895,7 @@ msgid ":doc:`bank/bank_synchronization`"
 msgstr ":doc:`bank/bank_synchronization`"
 
 #: ../../content/applications/finance/accounting/bank.rst:42
+#: ../../content/applications/finance/accounting/payments/batch.rst:162
 msgid "Create a bank account"
 msgstr "Crear una cuenta bancaria"
 
@@ -1002,13 +1003,14 @@ msgstr ""
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:38
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst:15
 #: ../../content/applications/finance/accounting/get_started/tax_units.rst:22
-#: ../../content/applications/finance/accounting/payments/batch.rst:13
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:26
+#: ../../content/applications/finance/accounting/payments/batch.rst:28
+#: ../../content/applications/finance/accounting/payments/batch.rst:136
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:14
 #: ../../content/applications/finance/accounting/payments/internal_transfers.rst:12
 #: ../../content/applications/finance/accounting/payments/online.rst:17
 #: ../../content/applications/finance/accounting/payments/pay_checks.rst:10
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:46
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:44
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:184
 #: ../../content/applications/finance/accounting/reporting/budget.rst:11
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:11
 #: ../../content/applications/finance/accounting/taxes.rst:51
@@ -2572,7 +2574,7 @@ msgstr ""
 "Reporte de ganancias/pérdidas de cambio no realizadas una vez ajustado."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:3
-#: ../../content/applications/finance/accounting/payments/batch.rst:49
+#: ../../content/applications/finance/accounting/payments/batch.rst:100
 msgid "Bank reconciliation"
 msgstr "Conciliación bancaria"
 
@@ -3869,7 +3871,7 @@ msgid ":doc:`payment_terms`"
 msgstr ":doc:`payment_terms`"
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:22
-#: ../../content/applications/finance/accounting/payments/batch.rst:63
+#: ../../content/applications/finance/accounting/payments/batch.rst:23
 msgid ":doc:`../payments`"
 msgstr ":doc:`../payments`"
 
@@ -11023,8 +11025,8 @@ msgid ""
 "Batch payments allow grouping payments from multiple customers to "
 "ease :doc:`reconciliation <bank/reconciliation>`. They are also useful when "
 "depositing :doc:`checks <payments/checks>` or cash payments to the bank or "
-"for generating bank payment files such as :doc:`SEPA <payments/pay_sepa>` "
-"or :ref:`NACHA <l10n_us/nacha>`."
+"for generating bank payment files such as :doc:`SEPA <payments/"
+"sepa_payments>` or :ref:`NACHA <l10n_us/nacha>`."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments.rst:161
@@ -11093,36 +11095,83 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/batch.rst:5
 msgid ""
-"Batch payments allow grouping payments from multiple customers or vendors "
-"into a single batch and generating a detailed deposit slip or payment file "
-"with a batch reference. This reference can be used "
-"during :doc:`reconciliation <../bank/reconciliation>` to match bank "
-"transactions with the corresponding payments. This feature is particularly "
-"useful for submitting :doc:`SEPA Direct Debit payments <batch_sdd>`, "
-"depositing cash payments or :doc:`checks <checks>`, or generating outgoing "
-"payment files, such as :doc:`SEPA <pay_sepa>` or :ref:`NACHA <l10n_us/"
-"nacha>`."
+"Batch payments act as an organizational tool that groups multiple individual "
+"customer or vendor payments into a single file. Rather than managing "
+"transactions one by one, you can consolidate them to generate a detailed "
+"deposit slip or a single electronic payment file. This significantly "
+"simplifies :doc:`bank reconciliation <../bank/reconciliation>`: when a bulk "
+"sum appears on your bank statement, Odoo uses the batch reference to "
+"automatically match and reconcile all underlying payments in a single step."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/batch.rst:15
+#: ../../content/applications/finance/accounting/payments/batch.rst:12
 msgid ""
-"To enable batch payments, go to :menuselection:`Accounting --> Configuration "
-"--> Settings`, scroll down to the :guilabel:`Customer Payments` section, and "
-"enable :guilabel:`Batch Payments`."
+"For customer payments, the feature supports both physical payments, such "
+"as :doc:`checks <checks>` and cash, and electronic transfers. Group incoming "
+"cash or check payments into batches to print bank deposit slips to ensure "
+"your internal records mirror the lump-sum deposit on your bank statement. On "
+"the vendor side, batch payments streamline bulk electronic transfers. "
+"Instead of processing supplier invoices manually, select multiple bills and "
+"generate a single outgoing payment file to upload directly to your banking "
+"portal. Because these file formats are region-specific (e.g., :doc:`SEPA "
+"<sepa_payments>` in Europe, :ref:`NACHA <l10n_us/nacha>` in the U.S., or the "
+"global :ref:`ISO 20022 <accounting/sepa_payments/iso20022>` standard), "
+"consult your country's :doc:`fiscal localization <../../"
+"fiscal_localizations>` documentation to verify supported formats."
 msgstr ""
-"Para habilitar los pagos por lotes, ve a :menuselection:`Contabilidad --> "
-"Configuración --> Ajustes`, desplázate hacia abajo hasta la "
-"sección :guilabel:`Pagos de cliente` y habilita :guilabel:`Pagos por lotes`."
 
-#: ../../content/applications/finance/accounting/payments/batch.rst:21
+#: ../../content/applications/finance/accounting/payments/batch.rst:30
+msgid ""
+"Make sure batch payments are enabled by opening the **Accounting** app, "
+"going to :menuselection:`Configuration --> Settings`, scrolling down to "
+"the :guilabel:`Customer Payments` section, and enabling :guilabel:`Batch "
+"Payments`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:35
+msgid "This enables both customer *and* vendor batch payments."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:38
+msgid ""
+"According to your needs, check that the following apps are installed in the "
+"**Apps** app:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:40
+msgid ":doc:`SEPA Credit Transfer <sepa_payments>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:41
+msgid ":doc:`SEPA Direct Debit <sepa_payments>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:42
+msgid ":doc:`SEPA Payments for Payroll <../../../hr/payroll>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:43
+msgid ""
+":doc:`Payment Provider: Sepa Direct Debit <../../payment_providers/sdd>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:44
+#: ../../content/applications/finance/fiscal_localizations/united_states.rst:84
+msgid ":ref:`NACHA Payments <l10n_us/nacha>`"
+msgstr ":ref:`Pagos NACHA <l10n_us/nacha>`"
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:49
 msgid "Batch creation"
 msgstr "Creación de lotes"
 
-#: ../../content/applications/finance/accounting/payments/batch.rst:23
-msgid "To create a batch payment, follow these steps:"
-msgstr "Para crear un pago por lotes, sigue estos pasos:"
+#: ../../content/applications/finance/accounting/payments/batch.rst:51
+msgid ""
+"To create customer or vendor batch payments and add existing payments to "
+"them, follow these steps:"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/batch.rst:25
+#: ../../content/applications/finance/accounting/payments/batch.rst:53
+#: ../../content/applications/finance/accounting/payments/batch.rst:73
 msgid ""
 "Make sure all payments to be included in the batch have "
 "been :ref:`registered <accounting/payments/from-invoice-bill>`."
@@ -11130,70 +11179,115 @@ msgstr ""
 "Asegúrate de que todos los pagos que se incluirán en el lote hayan "
 "sido :ref:`registrados <accounting/payments/from-invoice-bill>`."
 
-#: ../../content/applications/finance/accounting/payments/batch.rst:27
-msgid "Go to :menuselection:`Accounting --> Customers --> Payments`."
-msgstr "Ve a :menuselection:`Contabilidad --> Clientes --> Pagos`."
-
-#: ../../content/applications/finance/accounting/payments/batch.rst:28
-msgid "Select the payments to include in the batch."
-msgstr "Selecciona los pagos que se incluirán en el lote."
-
-#: ../../content/applications/finance/accounting/payments/batch.rst:31
+#: ../../content/applications/finance/accounting/payments/batch.rst:55
 msgid ""
-"All payments in the batch must use the same payment method. If needed, "
-"payments can be grouped using the :guilabel:`Payment Method Line`."
+"Open the **Accounting** app and go to :menuselection:`Customers --> Batch "
+"Payments` or :menuselection:`Vendors --> Batch payments` according to the "
+"nature of the payment and click :guilabel:`New`."
 msgstr ""
-"Todos los pagos en el lote deben usar el mismo método de pago. Si es "
-"necesario, los pagos se pueden agrupar usando la :guilabel:`Línea de método "
-"de pago`."
 
-#: ../../content/applications/finance/accounting/payments/batch.rst:34
-msgid ""
-"Click :guilabel:`Create batch` or click :icon:`fa-cog` :guilabel:`Actions` "
-"and select :guilabel:`Create batch payment`."
+#: ../../content/applications/finance/accounting/payments/batch.rst:58
+msgid "Next, configure the batch payment:"
 msgstr ""
-"Haz clic en :guilabel:`Crear lote` o haz clic en :icon:`fa-"
-"cog` :guilabel:`Acciones` y selecciona :guilabel:`Crear pago por lotes`."
 
-#: ../../content/applications/finance/accounting/payments/batch.rst:36
+#: ../../content/applications/finance/accounting/payments/batch.rst:60
 msgid ""
-"In the batch payment form, review the selected payments. If any individual "
-"payments were missed, click :guilabel:`Add a line` and select the missing "
-"payments to be included in the batch."
+":guilabel:`Batch Type`: select whether the money is being transferred to "
+"your account (:guilabel:`Inbound`) or to someone else's account "
+"(:guilabel:`Outbound`)."
 msgstr ""
-"En el formulario de pago por lotes, revisa los pagos seleccionados. Si falta "
-"algún pago individual, haz clic en :guilabel:`Añadir una línea` y selecciona "
-"los pagos faltantes que se incluirán en el lote."
 
-#: ../../content/applications/finance/accounting/payments/batch.rst:38
+#: ../../content/applications/finance/accounting/payments/batch.rst:62
+msgid ":guilabel:`Bank`: the bank journal to use for this batch."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:63
 msgid ""
-"Once all relevant payments are included, click :guilabel:`Validate` to "
+":guilabel:`Payment Method`: the payment method used for the invoices' "
+"payments. Only payments matching the payment method selected will appear."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:65
+msgid ":guilabel:`Date`: the batch's creation date."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:66
+msgid ""
+":guilabel:`Reference`: the reference of the batch. Leave it empty to "
+"generate it automatically."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:67
+msgid ""
+":guilabel:`Add a line`: click it to select the payments to include in the "
+"batch."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:69
+#: ../../content/applications/finance/accounting/payments/batch.rst:81
+msgid ""
+"Once all desired payments are included, click :guilabel:`Validate` to "
 "finalize the batch."
 msgstr ""
-"Una vez que todos los pagos relevantes estén incluidos, haz clic "
-"en :guilabel:`Validar` para finalizar el lote."
 
-#: ../../content/applications/finance/accounting/payments/batch.rst:41
-msgid "Once validated, no additional payments can be added to a batch."
-msgstr "Una vez validado, no se pueden añadir pagos adicionales a un lote."
-
-#: ../../content/applications/finance/accounting/payments/batch.rst:44
-msgid "Click :guilabel:`Print` to download a list of the included payments."
-msgstr ""
-"Haz clic en :guilabel:`Imprimir` para descargar una lista de los pagos "
-"incluidos."
-
-#: ../../content/applications/finance/accounting/payments/batch.rst:45
+#: ../../content/applications/finance/accounting/payments/batch.rst:71
 msgid ""
-"To view existing batch payments, go to :menuselection:`Accounting --> "
-"Customers --> Batch Payments`."
+"Alternatively, you can select the relevant payments and create a batch "
+"payment directly from them:"
 msgstr ""
-"Para ver los pagos por lotes existentes, ve a :menuselection:`Contabilidad --"
-"> Clientes --> Pagos por lotes`."
 
-#: ../../content/applications/finance/accounting/payments/batch.rst:51
+#: ../../content/applications/finance/accounting/payments/batch.rst:75
 msgid ""
-"Once the bank transactions :doc:`have been created <../bank/transactions>` "
+"Open the **Accounting** app and go to :menuselection:`Customers --> "
+"Payments` or :menuselection:`Vendors --> Payments` and select all payments "
+"to include in the batch."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:77
+msgid ""
+"Click :guilabel:`Create Batch`, *or* :icon:`fa-cog` :guilabel:`(Actions)`, "
+"and select :guilabel:`Create batch payment`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:79
+msgid ""
+"In the view form, review the selected payments. If any individual payments "
+"are missing, click :guilabel:`Add a line`, then select the missing payments "
+"to include in the batch."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:83
+msgid ""
+"To view existing batch payments, go to :menuselection:`Customers --> Batch "
+"Payments` or :menuselection:`Vendors --> Batch Payments`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:87
+msgid "All payments in a batch *must* use the same payment method."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:88
+msgid ""
+"Once validated, no additional payments can be added to a batch. You can "
+"delete the batch if necessary by clicking :icon:`fa-"
+"cog` :guilabel:`(Actions)` and then :icon:`fa-trash-o` :guilabel:`(Delete)`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:93
+msgid ""
+"Click :icon:`fa-print` :guilabel:`Print` to download a list of the included "
+"payments."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:94
+msgid ""
+"To filter payments by payment method, click on the :guilabel:`Payment "
+"Method` column header during the batch payment creation step."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:102
+msgid ""
+"Once the :doc:`bank transactions <../bank/transactions>` have been created "
 "in your database, you can :ref:`reconcile them with the batch payment "
 "<reconciliation/batch-payments>`."
 msgstr ""
@@ -11202,420 +11296,234 @@ msgstr ""
 msgid "Reconciling the batch payment with all its transactions"
 msgstr "Conciliación del pago por lote con todas las transacciones"
 
-#: ../../content/applications/finance/accounting/payments/batch.rst:58
+#: ../../content/applications/finance/accounting/payments/batch.rst:109
 msgid ""
 "If a specific payment could not be processed by the bank or is missing, "
-"remove the related line from the resulting entry section of the "
-"reconciliation view using the :icon:`fa-trash` (:guilabel:`delete`) button "
-"before validating the reconciliation."
+"remove the line corresponding to that payment by using the :icon:`fa-trash-"
+"o` (:guilabel:`Delete`) button before validating the reconciliation of the "
+"batch payment."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/batch.rst:64
-msgid ":doc:`batch_sdd`"
-msgstr ":doc:`batch_sdd`"
+#: ../../content/applications/finance/accounting/payments/batch.rst:116
+msgid "Bank accounts"
+msgstr "Cuentas bancarias"
 
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:3
-msgid "SEPA Direct Debit (SDD) customer payments"
-msgstr "Pagos de clientes por domiciliación SEPA (SDD)"
-
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:7
+#: ../../content/applications/finance/accounting/payments/batch.rst:118
 msgid ""
-"SEPA (Single Euro Payments Area) is a payment-integration initiative of the "
-"European Union that facilitates standardized and simplified electronic "
-"payments in euros across participating countries. With **SEPA Direct Debit** "
-"(SDD), customers sign a mandate that authorizes you to collect future "
-"payments from their bank accounts. This is particularly useful for recurring "
-"payments based on a :doc:`subscription </applications/sales/subscriptions>`."
+"Odoo distinguishes between :guilabel:`Banks` (the financial institution "
+"issuing the account) and :guilabel:`Bank Accounts` (the specific account "
+"number and routing details)."
 msgstr ""
-"SEPA (Zona Única de Pagos en Euros) es una iniciativa de integración de "
-"pagos de la Unión Europea que facilita pagos electrónicos estandarizados y "
-"simplificados en euros entre los países participantes. Con la "
-"**domiciliación SEPA** (SDD), los clientes firman un mandato que te autoriza "
-"a cobrar futuros pagos desde sus cuentas bancarias. Esto es especialmente "
-"útil para pagos recurrentes basados en una :doc:`suscripción </applications/"
-"sales/subscriptions>`."
 
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:13
+#: ../../content/applications/finance/accounting/payments/batch.rst:121
 msgid ""
-"You can record customer |sdd| mandates in Odoo and generate XML files "
-"listing payments to be collected with the mandates. :ref:`Uploading these "
-"files to your bank <accounting/batch_sdd/XML>` instructs them to collect "
-"these payments from your customers."
+"You can store banking details for both your own company and "
+"your :doc:`contacts <../../../essentials/contacts>`. Odoo automatically uses "
+"this information when needed, such as when generating batch payment files."
 msgstr ""
-"Puedes registrar los mandatos |sdd| de clientes en Odoo y generar archivos "
-"XML que listen los pagos a cobrar con los mandatos. :ref:`Subir estos "
-"archivos a tu banco <accounting/batch_sdd/XML>` le indica que cobre estos "
-"pagos de tus clientes."
 
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:18
+#: ../../content/applications/finance/accounting/payments/batch.rst:125
 msgid ""
-"|sdd| is supported by all SEPA countries, which includes the 27 member "
-"states of the European Union as well as additional countries."
+"To protect your business against :ref:`phishing scams <accounting/batch/"
+"phishing>`, Odoo configures all new bank accounts as \"untrusted\" by "
+"default, preventing outgoing wire transfers until you :ref:`manually verify "
+"and trust <accounting/batch/link-account-contact>` the account."
 msgstr ""
-"|sdd| es compatible con todos los países SEPA, lo que incluye los 27 estados "
-"miembros de la Unión Europea, así como países adicionales."
 
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:20
+#: ../../content/applications/finance/accounting/payments/batch.rst:130
+msgid ":doc:`sepa_payments` :ref:`NACHA <l10n_us/nacha>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:139
 msgid ""
-"`List of all SEPA countries <https://www.europeanpaymentscouncil.eu/document-"
-"library/other/epc-list-sepa-scheme-countries>`_."
+"The **Contacts** app can be :ref:`installed <general/install>` from the "
+"**Apps** dashboard."
 msgstr ""
-"`Lista de todos los países SEPA <https://www.europeanpaymentscouncil.eu/"
-"document-library/other/epc-list-sepa-scheme-countries>`_."
 
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:29
-msgid "Creditor identifier"
-msgstr "Identificador de acreedor"
-
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:31
+#: ../../content/applications/finance/accounting/payments/batch.rst:141
 msgid ""
-"To enable |sdd| for customer payments, go to :menuselection:`Accounting --> "
-"Configuration --> Settings`, scroll to the :guilabel:`Customer Payments` "
-"section, enable :guilabel:`SEPA Direct Debit (SDD)`, and "
-"click :guilabel:`Save`. Then, scroll to the :guilabel:`Customer Payments` "
-"section again, set the company's :guilabel:`Creditor Identifier`, and "
-"click :guilabel:`Save`."
+"To configure your banking information, open the **Contacts** app and go "
+"to :guilabel:`Configuration`. From here, you can manage :guilabel:`Banks` "
+"and :guilabel:`Bank Accounts`."
 msgstr ""
-"Para habilitar |sdd| para pagos de clientes, ve "
-"a :menuselection:`Contabilidad --> Configuración --> Ajustes`, desplázate "
-"hasta la sección :guilabel:`Pagos de clientes`, "
-"habilita :guilabel:`Domiciliación SEPA (SDD)` y haz clic "
-"en :guilabel:`Guardar`. Luego, desplázate nuevamente hasta la "
-"sección :guilabel:`Pagos de clientes`, establece el :guilabel:`Identificador "
-"de acreedor` de la empresa y haz clic en :guilabel:`Guardar`."
 
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:37
+#: ../../content/applications/finance/accounting/payments/batch.rst:148
+msgid "Create a bank"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:150
 msgid ""
-"The creditor identifier is provided by your bank or the authority "
-"responsible for delivering them in your country. For testing purposes, you "
-"can use the test creditor identifier `DE98ZZZ09999999999`."
+"Go to :menuselection:`Configuration --> Banks` and click :guilabel:`New`. "
+"Fill in the following fields:"
 msgstr ""
-"El identificador de acreedor lo proporciona tu banco o la autoridad "
-"responsable de emitirlos en tu país. Para fines de prueba, puedes usar el "
-"identificador de acreedor de prueba `DE98ZZZ09999999999`."
 
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:42
-msgid "PAIN file version"
-msgstr "Versión del archivo PAIN"
+#: ../../content/applications/finance/accounting/payments/batch.rst:153
+msgid ":guilabel:`Name`: The name of the bank."
+msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:44
+#: ../../content/applications/finance/accounting/payments/batch.rst:154
+msgid ":guilabel:`Bank Identifier Code`: The bank's SWIFT or BIC code."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:155
 msgid ""
-"By default, the :ref:`SEPA-compliant XML files <accounting/batch_sdd/XML>` "
-"generated by Odoo use the |sdd| **PAIN.008.001.02** format. If your bank "
-"requires the updated 2023 version, go to :menuselection:`Accounting --> "
-"Configuration --> Journals`. Then, in the :guilabel:`Incoming Payments` tab, "
-"set the :guilabel:`SEPA Pain version` field to :guilabel:`Updated 2023 (Pain "
-"008.001.08)`."
+":guilabel:`Bank Address`: Enter the :guilabel:`Country`. "
+"The :guilabel:`Street`, :guilabel:`City`, :guilabel:`State`, "
+"and :guilabel:`Zip` fields are optional."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:53
-msgid "SEPA Direct Debit Mandates"
-msgstr "Mandatos de adeudos directos SEPA"
+#: ../../content/applications/finance/accounting/payments/batch.rst:157
+msgid ":guilabel:`Phone` and :guilabel:`Email`: Optional contact details."
+msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:55
+#: ../../content/applications/finance/accounting/payments/batch.rst:165
 msgid ""
-"An |sdd| mandate is a legal document authorizing a company to debit funds "
-"from a customer's bank account. It includes key information, such as the "
-"customer's name and IBAN, the mandate's start and end date, and the "
-"mandate's unique identifier. The mandate form must be filled in and signed "
-"by the customer."
+"**Prerequisite:** A bank account must be linked to a specific bank record. "
+"Ensure you have created the required bank using the steps above before "
+"setting up a bank account."
 msgstr ""
-"Un mandato |sdd| es un documento legal que autoriza a una empresa a debitar "
-"fondos de la cuenta bancaria de un cliente. Incluye información clave, como "
-"el nombre del cliente y su IBAN, la fecha de inicio y finalización del "
-"mandato, y el identificador único del mandato. El formulario del mandato "
-"debe ser completado y firmado por el cliente."
 
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:61
-msgid "Creating mandates"
-msgstr "Crear mandatos"
-
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:63
-msgid "To create an |sdd| mandate:"
-msgstr "Para crear un mandato |sdd|:"
-
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:65
+#: ../../content/applications/finance/accounting/payments/batch.rst:168
 msgid ""
-"Go to :menuselection:`Accounting --> Customers --> Direct Debit Mandates`."
+"Go to :menuselection:`Configuration --> Bank Accounts` and "
+"click :guilabel:`New`. Enter the following details:"
 msgstr ""
-"Ve a :menuselection:`Contabilidad --> Clientes --> Mandatos de "
-"domiciliación`."
 
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:66
-msgid "Click :guilabel:`New` and fill out the fields."
-msgstr "Haz clic en :guilabel:`Nuevo` y completa los campos."
-
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:67
+#: ../../content/applications/finance/accounting/payments/batch.rst:171
 msgid ""
-"Click :guilabel:`Print` to generate a PDF of the mandate form, then send it "
-"to the customer for signature."
+":guilabel:`Account Number`: The unique identification number for the bank "
+"account."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:69
-msgid "Click :guilabel:`Validate` to activate the mandate."
-msgstr "Haz clic en :guilabel:`Validar` para activar el mandato."
+#: ../../content/applications/finance/accounting/payments/batch.rst:172
+msgid ":guilabel:`Bank`: Select the associated bank from the drop-down menu."
+msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:72
+#: ../../content/applications/finance/accounting/payments/batch.rst:173
 msgid ""
-"A valid IBAN must be defined in the :guilabel:`Account Number` field of "
-"the :doc:`bank journal <../bank>` used to receive |sdd| payments for the "
-"mandate."
+":guilabel:`ABA/Routing`: The American Bankers Association routing number (if "
+"applicable)."
 msgstr ""
-"Debe definirse un IBAN válido en el campo :guilabel:`Número de cuenta` "
-"del :doc:`diario bancario <../bank>` utilizado para recibir pagos |sdd| del "
-"mandato."
 
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:76
+#: ../../content/applications/finance/accounting/payments/batch.rst:174
+msgid ":guilabel:`Account Holder Name`: The full name of the account holder."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:175
 msgid ""
-"To print the mandate form after the mandate has been validated, click "
-"the :icon:`fa-cog` (:guilabel:`gear`) icon, then select :guilabel:`Mandate "
-"form`."
+":guilabel:`Account Holder`: Select the holder's :doc:`contact <../../../"
+"essentials/contacts>` from the drop-down menu. If the contact does not exist "
+"yet, you can link it later by following the next steps."
 msgstr ""
-"Para imprimir el formulario de mandato después de que se haya validado, haz "
-"clic en el icono :icon:`fa-cog` (:guilabel:`engranaje`) y "
-"selecciona :guilabel:`Formulario de mandato`."
 
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:78
+#: ../../content/applications/finance/accounting/payments/batch.rst:178
 msgid ""
-"The :guilabel:`SDD Scheme` depends on the type of customer: "
-"Select :guilabel:`CORE` for B2C customers and :guilabel:`B2B` for B2B "
-"customers."
+"Toggle :guilabel:`Send Money` to mark the account as :guilabel:`Trusted`. "
+"Marking the account as :guilabel:`Trusted` will enable you to send money to "
+"this account, so only do this when you are certain the information is "
+"correctly entered and was not provided by a :ref:`phishing attack "
+"<accounting/batch/phishing>`."
 msgstr ""
-"El :guilabel:`Esquema SDD` depende del tipo de cliente: "
-"selecciona :guilabel:`CORE` para clientes B2C y :guilabel:`B2B` para "
-"clientes B2B."
 
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:80
+#: ../../content/applications/finance/accounting/payments/batch.rst:186
+msgid "Link a bank account to a contact"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:188
+msgid "If you need to link an existing bank account to a contact:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:190
 msgid ""
-"|sdd| mandates are created automatically for :doc:`online payments made with "
-"SDD <../../payment_providers/sdd>`."
+"Open an app with contact access (such as **Accounting** or **Contacts**)."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:83
+#: ../../content/applications/finance/accounting/payments/batch.rst:191
+msgid "Select a contact and open the :guilabel:`Accounting` tab."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:192
 msgid ""
-"Once an |sdd| mandate is active, subsequent |sdd| payments can be generated "
-"via Odoo and :ref:`uploaded to your online banking interface <accounting/"
-"batch_sdd/XML>`. Customers with an active |sdd| mandate can also use this "
-"payment method for :doc:`online purchases <../../payment_providers/sdd>`."
+"In the :guilabel:`Bank Accounts` section, click :guilabel:`Add a line` and "
+"provide the:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:91
-msgid "Closing or revoking a mandate"
-msgstr "Cerrar o revocar un mandato"
+#: ../../content/applications/finance/accounting/payments/batch.rst:194
+msgid ":guilabel:`Account Number`,"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:93
+#: ../../content/applications/finance/accounting/payments/batch.rst:195
+msgid ":guilabel:`Bank`,"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:196
+msgid ":guilabel:`Account Holder Name`,"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:197
+msgid ":guilabel:`Account Holder`,"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:198
+msgid ":guilabel:`Company` and :guilabel:`Currency` (if applicable)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:200
 msgid ""
-"|sdd| mandates are closed automatically after their :guilabel:`End Date`. If "
-"this field is left empty, the mandate remains active until it is closed or "
-"revoked. To close or revoke a mandate, go to :menuselection:`Accounting --> "
-"Customers --> Direct Debit Mandates`, select the relevant mandate, and "
-"click :guilabel:`Close` or :guilabel:`Revoke`."
+"Toggle :guilabel:`Send Money` to mark the account as :guilabel:`Trusted`."
 msgstr ""
-"Los mandatos |sdd| se cierran automáticamente después de su :guilabel:`Fecha "
-"de finalización`. Si este campo se deja vacío, el mandato permanece activo "
-"hasta que se cierra o revoca. Para cerrar o revocar un mandato, ve "
-"a :menuselection:`Contabilidad --> Clientes --> Mandatos de débito directo`, "
-"selecciona el mandato correspondiente y haz clic en :guilabel:`Cerrar` "
-"o :guilabel:`Revocar`."
 
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:98
+#: ../../content/applications/finance/accounting/payments/batch.rst:205
+msgid "Phishing attacks"
+msgstr "Ataques de phishing"
+
+#: ../../content/applications/finance/accounting/payments/batch.rst:207
 msgid ""
-"**Closing** a mandate updates the mandate's end day to the current day. "
-"Invoices issued after the present day will not be processed with an |sdd| "
-"payment. **Revoking** a mandate disables the mandate immediately. No |sdd| "
-"payment can be registered anymore, regardless of the invoice's date. "
-"However, payments that have already been registered are still included in "
-"the next :ref:`SDD XML file <accounting/batch_sdd/XML>`."
+"A **phishing attack** is an online scam designed to trick individuals or "
+"companies into giving away sensitive information or money by sending out "
+"fraudulent communication. Fraudsters pretend to be legitimate companies and "
+"may use partial information to give credibility to their requests."
 msgstr ""
+"Un **ataque de phishing** es una estafa en línea que se realiza mediante el "
+"envío de comunicaciones fraudulentas y está diseñada para engañar a "
+"individuos o empresas con la finalidad de que proporcionen información "
+"confidencial o envíen dinero. Los estafadores se hacen pasar por empresas "
+"legítimas y pueden utilizar alguna información parcial cierta para que sus "
+"solicitudes se vuelvan más creíbles."
 
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:105
+#: ../../content/applications/finance/accounting/payments/batch.rst:211
 msgid ""
-"Mandates are automatically closed 36 months after the date of the last "
-"collection."
+"There are several types of phishing attacks, including **invoice fraud**. In "
+"this case, the fraudster pretends to be a genuine supplier following up on "
+"unpaid bills or sending a new invoice, but with different payment "
+"information than usual and with fake contact details."
 msgstr ""
-"Los mandatos se cierran automáticamente 36 meses después de la fecha del "
-"último cobro."
+"Hay varios tipos de ataques de phishing, entre los que se encuentra la "
+"**estafa de facturas**. En este caso, el estafador finge ser un proveedor "
+"verdadero que le da seguimiento a las facturas que no se han pagado o envía "
+"una nueva factura, pero con información de pago diferente a la habitual y "
+"datos de contacto falsos."
 
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:106
-msgid "Closed or revoked mandates cannot be reactivated."
-msgstr "Los mandatos cerrados o revocados no se pueden reactivar."
-
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:111
-msgid "Processing |sdd| payments"
-msgstr "Procesar pagos |sdd|"
-
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:113
+#: ../../content/applications/finance/accounting/payments/batch.rst:215
 msgid ""
-"All registered |sdd| payments can be processed at once by uploading an XML "
-"file containing a batch of all posted |sdd| payments to your online banking "
-"interface. To do so, follow these steps:"
+"To protect yourself from these types of phishing attacks, remain vigilant "
+"when you receive unexpected invoices or payment requests."
 msgstr ""
-"Todos los pagos |sdd| registrados se pueden procesar a la vez cargando un "
-"archivo XML que contenga un lote de todos los pagos |sdd| contabilizados en "
-"tu interfaz de banca en línea. Para hacerlo, sigue estos pasos:"
+"Para protegerse de estos tipos de ataques de phishing, preste mucha atención "
+"si es que recibe facturas o solicitudes de pago inesperadas."
 
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:116
+#: ../../content/applications/finance/accounting/payments/batch.rst:219
 msgid ""
-":ref:`Create a batch payment <accounting/batch/creation>` and include the |"
-"sdd| payments to collect."
+"In case of doubt, **we recommend contacting the vendor by phone**. Make sure "
+"to call an official phone number by searching yourself, as the URLs, email "
+"addresses, and phone numbers written in the communication you received may "
+"be fake."
 msgstr ""
-":ref:`Crea un pago por lotes <accounting/batch/creation>` e incluye los "
-"pagos |sdd| a cobrar."
-
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:120
-msgid ""
-"You can filter payments by SDD scheme using the :guilabel:`SDD CORE` "
-"and :guilabel:`SDD B2B` filters."
-msgstr ""
-"Puedes filtrar los pagos por esquema SDD usando los filtros :guilabel:`SDD "
-"CORE` y :guilabel:`SDD B2B`."
-
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:123
-msgid ""
-":guilabel:`Validate` the batch payment. The XML file is generated "
-"automatically and available for download in the chatter."
-msgstr ""
-":guilabel:`Valida` el pago por lotes. El archivo XML se genera "
-"automáticamente y está disponible para descargar en el chatter."
-
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:125
-msgid ""
-"Download the XML file and upload it to your online banking interface to "
-"process the payments."
-msgstr ""
-"Descarga el archivo XML y cárgalo en tu interfaz de banca en línea para "
-"procesar los pagos."
-
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:126
-msgid ""
-"Once the |sdd| batch payment has been received, :doc:`reconcile the "
-"transaction <../bank/reconciliation>` with the batch payment to mark the "
-"related invoices as :guilabel:`Paid`."
-msgstr ""
-"Una vez que se haya recibido el pago por lotes |sdd|, :doc:`concilia la "
-"transacción <../bank/reconciliation>` con el pago por lotes para marcar las "
-"facturas relacionadas como :guilabel:`Pagadas`."
-
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:131
-msgid ""
-"To view the payments and invoices linked to a specific |sdd| mandate, click "
-"the :guilabel:`Collections` and :guilabel:`Invoices Paid` smart button on "
-"the :ref:`Direct Debit Mandate <accounting/batch_sdd/sdd_mandates>` form."
-msgstr ""
-"Para ver los pagos y facturas vinculados a un mandato |sdd| específico, haz "
-"clic en los botones inteligentes :guilabel:`Cobros` y :guilabel:`Facturas "
-"pagadas` en el formulario de :ref:`Mandato de débito directo <accounting/"
-"batch_sdd/sdd_mandates>`."
-
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:136
-msgid ""
-"The files generated by Odoo follow the SEPA Direct Debit **PAIN.008.001.02** "
-"specifications, as required by the SEPA customer-to-bank `implementation "
-"guidelines <https://www.europeanpaymentscouncil.eu/document-library/"
-"implementation-guidelines/sepa-credit-transfer-customer-psp-"
-"implementation>`_, which ensures compatibility with the banks."
-msgstr ""
-"Los archivos que Odoo generan siguen las especificaciones de domiciliación "
-"bancaria SEPA **PAIN.008.001.02**, como lo requieren las `reglas de "
-"implementación <https://www.europeanpaymentscouncil.eu/document-library/"
-"implementation-guidelines/sepa-credit-transfer-customer-psp-"
-"implementation>`_, de esta forma nos aseguramos de que sea compatible con "
-"otros bancos."
-
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:142
-msgid ":doc:`batch`"
-msgstr ":doc:`batch`"
-
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:143
-msgid ""
-":doc:`SEPA Direct Debit for online payments <../../payment_providers/sdd>`"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:144
-msgid ""
-"`SEPA guidelines <https://www.europeanpaymentscouncil.eu/document-library/"
-"implementation-guidelines/sepa-credit-transfer-inter-psp-implementation-"
-"guidelines>`_"
-msgstr ""
-"`Guías SEPA <https://www.europeanpaymentscouncil.eu/document-library/"
-"implementation-guidelines/sepa-credit-transfer-inter-psp-implementation-"
-"guidelines>`_"
-
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:148
-msgid "|sdd| rejections"
-msgstr "Rechazos |sdd|"
-
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:150
-msgid ""
-"|sdd| rejections can occur for several reasons, the most common being "
-"insufficient funds in the customer's account. With |sdd|, the recipient's "
-"account is credited before the funds are actually debited from the "
-"customer's account. As a result, if an |sdd| payment is later rejected, the "
-"bank automatically withdraws the amount of that payment from the recipient's "
-"account, and a new transaction for a negative amount is created to reflect "
-"the |sdd| rejection."
-msgstr ""
-"Los rechazos de |sdd| pueden ocurrir por varias razones, siendo la más común "
-"la insuficiencia de fondos en la cuenta del cliente. Con |sdd|, la cuenta "
-"del destinatario se acredita antes de que los fondos se debiten realmente de "
-"la cuenta del cliente. Como resultado, si un pago |sdd| es rechazado "
-"posteriormente, el banco retira automáticamente el importe de ese pago de la "
-"cuenta del destinatario, y se crea una nueva transacción por un importe "
-"negativo para reflejar el rechazo de |sdd|."
-
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:156
-msgid ""
-"In this case, you must reverse the journal entry associated with the "
-"rejected payment and reconcile the reversal of the journal entry with the "
-"transaction for the |sdd| rejection. To do so, follow these steps:"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:160
-msgid "Access the invoice linked to the rejected |sdd| payment."
-msgstr "Accede a la factura vinculada al pago |sdd| rechazado."
-
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:161
-msgid ""
-"Click the :icon:`fa-info-circle` :guilabel:`(information)` icon in the "
-"footer of the :guilabel:`Invoice Lines` tab, then click :guilabel:`View` to "
-"access the payment associated with the invoice."
-msgstr ""
-"Haz clic en el icono :icon:`fa-info-circle` :guilabel:`(información)` en el "
-"pie de página de la pestaña :guilabel:`Líneas de factura`, luego haz clic "
-"en :guilabel:`Ver` para acceder al pago asociado con la factura."
-
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:164
-msgid ""
-"Click the :guilabel:`Journal entry` smart button to access the related "
-"journal entry."
-msgstr ""
-"Haz clic en el botón inteligente :guilabel:`Asiento contable` para acceder "
-"al asiento contable relacionado."
-
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:165
-msgid ""
-"Click :guilabel:`Reverse entry`, optionally edit the fields in the popup, "
-"then click :guilabel:`Reverse`. A reversal entry is created with "
-"a :guilabel:`Reference` mentioning the initial journal entry. As a result, "
-"the invoice is marked as :guilabel:`Not paid`."
-msgstr ""
-"Haz clic en :guilabel:`Revertir asiento`, edita opcionalmente los campos en "
-"la ventana emergente y luego haz clic en :guilabel:`Revertir`. Se crea un "
-"asiento de reversión con una :guilabel:`Referencia` que menciona el asiento "
-"contable inicial. Como resultado, la factura se marca como :guilabel:`No "
-"pagada`."
-
-#: ../../content/applications/finance/accounting/payments/batch_sdd.rst:168
-msgid ""
-":ref:`Access the bank journal's reconciliation view <accounting/"
-"reconciliation/access>` and :ref:`reconcile <accounting/reconciliation/"
-"reconcile>` the transaction created for the |sdd| rejection with the "
-"reversal of the entry related to the payment."
-msgstr ""
-":ref:`Accede a la vista de conciliación del diario bancario <accounting/"
-"reconciliation/access>` y :ref:`concilia <accounting/reconciliation/"
-"reconcile>` la transacción creada para el rechazo de |sdd| con la reversión "
-"del asiento relacionado con el pago."
+"**Le recomendamos contactar por teléfono al proveedor** en caso de que tenga "
+"alguna duda. Asegúrese de llamar al número telefónico oficial que usted "
+"conozca o haya investigado por su cuenta, ya que las URL, direcciones de "
+"correo electrónico y números de teléfono proporcionados en el mensaje que "
+"recibió podrían ser falsos."
 
 #: ../../content/applications/finance/accounting/payments/checks.rst:3
 msgid "Checks"
@@ -12135,131 +12043,6 @@ msgstr ":doc:`/applications/marketing/sms_marketing/pricing_and_faq`"
 msgid ":doc:`../customer_invoices/snailmail`"
 msgstr ":doc:`../customer_invoices/snailmail`"
 
-#: ../../content/applications/finance/accounting/payments/forecast.rst:3
-msgid "Forecast future bills to pay"
-msgstr "Pronóstico de futuras facturas por pagar"
-
-#: ../../content/applications/finance/accounting/payments/forecast.rst:5
-msgid ""
-"In Odoo, you can manage payments by setting automatic **Payments Terms** and "
-"**follow-ups**."
-msgstr ""
-"En Odoo, puede configurar **Términos de pago** y **seguimientos** "
-"automáticos para gestionar los pagos."
-
-#: ../../content/applications/finance/accounting/payments/forecast.rst:8
-msgid "Configuration: payment terms"
-msgstr "Configuración: términos de pago"
-
-#: ../../content/applications/finance/accounting/payments/forecast.rst:10
-msgid ""
-"In order to track vendor conditions, we use **Payment Terms** in Odoo. They "
-"allow keeping track of due dates on invoices. Examples of **Payment Terms** "
-"are:"
-msgstr ""
-"Odoo usa los **términos de pago** para gestionar las condiciones de los "
-"proveedores. Estas permiten llevar seguimiento de las fechas de vencimiento "
-"de las facturas. Algunos ejemplos de **términos de pago** son:"
-
-#: ../../content/applications/finance/accounting/payments/forecast.rst:13
-msgid "50% within 30 days"
-msgstr "50% dentro de 30 días"
-
-#: ../../content/applications/finance/accounting/payments/forecast.rst:14
-msgid "50% within 45 days"
-msgstr "50% dentro de 45 días"
-
-#: ../../content/applications/finance/accounting/payments/forecast.rst:16
-msgid ""
-"To create them, go to :menuselection:`Accounting --> Configuration --> "
-"Invoicing: Payment Terms` and click on :guilabel:`Create` to add new terms "
-"or click existing ones to modify them."
-msgstr ""
-"Para crearlos, vaya a :menuselection:`Contabilidad --> Configuración --> "
-"Facturación: términos de pago` y haga clic en :guilabel:`Crear` para agregar "
-"nuevos términos. Para modificar los términos existentes solo haga clic en "
-"ellos."
-
-#: ../../content/applications/finance/accounting/payments/forecast.rst:20
-msgid ""
-"`Odoo Tutorials: Payment Terms <https://www.odoo.com/slides/slide/payment-"
-"terms-terms-and-conditions-6852>`_"
-msgstr ""
-"`Tutoriales de Odoo: Plazos de pago <https://www.odoo.com/slides/slide/"
-"payment-terms-terms-and-conditions-6852>`_"
-
-#: ../../content/applications/finance/accounting/payments/forecast.rst:23
-msgid ""
-"Once **Payment Terms** are defined, you can assign them to your vendor by "
-"default. To do so, go to :menuselection:`Vendors --> Vendors`, select a "
-"vendor, click the :guilabel:`Sales & Purchase` tab, and select a specific "
-"**Payment Term**. This way, every time you purchase from this vendor, Odoo "
-"automatically proposes the chosen Payment Term."
-msgstr ""
-"Una vez que haya definido los **términos de pago** podrá asignarlos a un "
-"proveedor para usarlos de forma predeterminada. Para ello, vaya "
-"a :menuselection:`Proveedores --> Proveedores`, seleccione uno, haga clic en "
-"la pestaña :guilabel:`Ventas y compra` y elija un **término de pago** "
-"específico. De esta manera, cada vez que le compre a este proveedor, Odoo "
-"propondrá el término de pago seleccionado en automático."
-
-#: ../../content/applications/finance/accounting/payments/forecast.rst:29
-msgid ""
-"If you do not set a specific Payment Term on a vendor, you can still set one "
-"on the vendor bill."
-msgstr ""
-"Si no configura un término de pago específico en un proveedor, todavía puede "
-"configurar una en la factura de un proveedor."
-
-#: ../../content/applications/finance/accounting/payments/forecast.rst:32
-msgid "Forecast bills to pay with the aged payable report"
-msgstr ""
-"Pronóstico de las facturas a pagar con el reporte de cuentas antiguas por "
-"pagar"
-
-#: ../../content/applications/finance/accounting/payments/forecast.rst:34
-msgid ""
-"To track amounts to be paid to the vendors, use the **Aged Payable** report. "
-"To access it, go to :menuselection:`Accounting --> Reporting --> Partner "
-"Reports: Aged Payable`. This report gives you a summary per vendor of the "
-"amounts to pay, compared to their due date (the due date being computed on "
-"each bill using the terms). This report tells you how much you will have to "
-"pay within the following months."
-msgstr ""
-"Para rastrear las cantidades que se le deben de pagar a los proveedores, use "
-"el reporte **Cuenta antigua por pagar**. Para acceder a él vaya "
-"a :menuselection:`Contabilidad  --> Reportes --> Reportes de contactos: "
-"Cuenta antigua por pagar`. Este reporte le brindará un resumen pro proveedor "
-"de las cantidades por pagar, comparadas a la fecha límite (que se calcula en "
-"cada factura usando los términos). Este reporte le indica cuánto tendrá que "
-"pagar en los siguientes meses."
-
-#: ../../content/applications/finance/accounting/payments/forecast.rst:41
-msgid "Select bills to pay"
-msgstr "Seleccionar facturas por pagar"
-
-#: ../../content/applications/finance/accounting/payments/forecast.rst:43
-msgid ""
-"You can get a list of all your vendor bills by going "
-"to :menuselection:`Vendors --> Bills`. To view only the bills that you need "
-"to pay, click :menuselection:`Filters --> Bills to Pay`. To view only "
-"overdue payments, select the :guilabel:`Overdue` filter instead."
-msgstr ""
-"Puede obtener una lista de sus facturas de proveedor "
-"en :menuselection:`Proveedores --> Facturas`. Para ver solo las facturas que "
-"necesita pagar, haga clic en :menuselection:`Filtros --> Facturas por "
-"pagar`. Para ver solo los pagos que no se han realizado, seleccione el "
-"filtro :guilabel:`Atrasado`."
-
-#: ../../content/applications/finance/accounting/payments/forecast.rst:47
-msgid ""
-"You can also group bills by their due date by clicking :menuselection:`Group "
-"By --> Due Date` and selecting a time period."
-msgstr ""
-"También puede agrupar facturas dependiendo de la fecha límite, para hacerlo "
-"haga clic en :menuselection:`Agrupar por --> Fecha de vencimiento` y "
-"seleccione un periodo."
-
 #: ../../content/applications/finance/accounting/payments/internal_transfers.rst:3
 msgid "Internal transfers"
 msgstr "Transferencias internas"
@@ -12621,219 +12404,396 @@ msgstr ""
 "Para imprimir todos los cheques por lote, seleccione todos los pagos desde "
 "la vista de lista y haga clic en :guilabel:`Imprimir`."
 
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:3
-msgid "Pay with SEPA"
-msgstr "Pagos con SEPA"
-
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:5
-msgid ""
-"SEPA, the Single Euro Payments Area, is a payment-integration initiative of "
-"the European Union to simplify bank transfers denominated in euros. SEPA "
-"allows you to send payment orders to your bank to automate bank wire "
-"transfers."
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:3
+msgid "SEPA payments"
 msgstr ""
-"La Zona Única de Pagos en Euros, o SEPA, es una iniciativa de integración de "
-"pagos de la Unión Europea que busca simplificar las transferencias bancarias "
-"en euros. Con SEPA podrá enviar órdenes de pago a su banco para automatizar "
-"las transferencias bancarias."
 
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:9
-msgid "SEPA is supported by the banks of the 27 EU member states, as well as:"
-msgstr "Los bancos de los 27 estados miembro de la UE aceptan SEPA, así como:"
-
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:11
-msgid "EFTA countries:"
-msgstr "Países en la Asociación Europea de Libre Comercio:"
-
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:13
-msgid "Iceland;"
-msgstr "Islandia,"
-
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:14
-msgid "Liechtenstein;"
-msgstr "Liechtenstein,"
-
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:15
-msgid "Norway;"
-msgstr "Noruega,"
-
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:16
-msgid "Switzerland."
-msgstr "Suiza."
-
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:18
-msgid "Non-EEA SEPA countries:"
-msgstr "Países en la SEPA que no pertenecen al Espacio Económico Europeo:"
-
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:20
-msgid "Andorra;"
-msgstr "Andorra,"
-
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:21
-msgid "Monaco;"
-msgstr "Monaco,"
-
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:22
-msgid "San Marino;"
-msgstr "San Marino,"
-
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:23
-msgid "United Kingdom;"
-msgstr "Reino Unido,"
-
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:24
-msgid "Vatican City State."
-msgstr "Estado de la Ciudad del Vaticano."
-
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:26
-msgid "Non-EEA territories:"
-msgstr "Territorios fuera del Espacio Económico Europeo:"
-
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:28
-msgid "Saint-Pierre-et-Miquelon;"
-msgstr "San Pedro y Miquelón,"
-
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:29
-msgid "Guernsey;"
-msgstr "Guernsey,"
-
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:30
-msgid "Jersey;"
-msgstr "Jersey,"
-
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:31
-msgid "Isle of Man."
-msgstr "Isla de Man."
-
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:33
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:5
 msgid ""
-"When paying a bill in Odoo, you can select SEPA mandates as a payment "
-"option. At the end of the day, you can generate the SEPA file containing all "
-"bank wire transfers and upload it to your online banking interface to "
-"process the payments."
+":abbr:`SEPA (Single Euro Payments Area)` is a payment integration initiative "
+"of the European Union that facilitates standardized, simplified electronic "
+"payments in **euro** across SEPA countries."
 msgstr ""
-"Al pagar una factura en Odoo puede seleccionar los mandatos SEPA como opción "
-"de pago. Después, puede generar un archivo SEPA que incluya todas las "
-"transferencias bancarias y subirlo a la interfaz de su banca en línea para "
-"procesar los pagos."
 
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:37
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:8
 msgid ""
-"By default, the file follows the SEPA Credit Transfer **'pain.001.001.03'** "
-"specifications. This is a well-defined standard among banks. However, for "
-"Swiss and German companies, other formats are used "
-"**'pain.001.001.03.ch.02'** for Switzerland and **'pain.001.003.03'** for "
-"Germany."
+"With :ref:`SEPA Direct Debit (SDD) <accounting/sepa_payments/sdd>`, "
+"customers sign a mandate that authorizes you to collect future payments from "
+"their bank accounts. This is particularly useful for "
+"recurring :doc:`subscription <../../../sales/subscriptions>` payments. You "
+"can keep records of these mandates in Odoo and :ref:`generate XML files "
+"<accounting/sepa_payments/XML>` indicating to the bank which payments to "
+"collect from customers."
 msgstr ""
-"De forma predeterminada, el archivo sigue las especificaciones de la "
-"transferencia de crédito SEPA **'pain.001.001.03'**, que es una práctica "
-"estándar definida entre los bancos. Sin embargo, para empresas en Suiza o "
-"Alemania, se usan otros formatos. Para Suiza se usa "
-"**'pain.001.001.03.ch.02'** y para Alemania se usa **'pain.001.003.03'**. "
 
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:41
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:14
 msgid ""
-"Once the payments are processed by your bank, you can directly import the "
-"account statement in Odoo. The bank reconciliation process will seamlessly "
-"match the SEPA orders you sent to your bank with actual bank statements."
+"Unlike :abbr:`SDD (SEPA Direct Debit)`, :ref:`SEPA Credit Transfer (SCT) "
+"<accounting/sepa_payments/sct>` is an outgoing payment method where you "
+"\"push\" funds to a recipient. It is the standard for handling vendor bills, "
+"employee salaries, and one-off transfers. These payments can also be grouped "
+"into a :ref:`single XML file <accounting/sepa_payments/XML>` to upload to "
+"your bank."
 msgstr ""
-"Una vez que su banco haya procesado los pagos, puede importar el estado de "
-"cuenta directo a Odoo. El proceso de conciliación bancaria vinculará las "
-"órdenes SEPA que envió a su banco con los respectivos estados de cuenta."
 
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:49
-msgid "Activate SEPA Credit Transfer (SCT)"
-msgstr "Activar la transferencia de crédito SEPA (SCT)"
-
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:51
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:21
 msgid ""
-"To pay suppliers with SEPA, you must activate the **SEPA Credit Transfer** "
-"setting. To do so, go to :menuselection:`Accounting --> Configuration --> "
-"Settings --> Vendor Payments: SEPA Credit Transfer (SCT)`. By activating the "
-"setting and filling out your company data, you will be able to use the SCT "
-"option when paying your vendor."
+"`List of all SEPA countries <https://www.europeanpaymentscouncil.eu/document-"
+"library/other/epc-list-sepa-scheme-countries>`_."
 msgstr ""
-"Para pagarle a sus proveedores con SEPA, debe activar la **Transferencia de "
-"Crédito SEPA**. Para hacerlo vaya a :menuselection:`Contabilidad --> "
-"Configuración --> Ajustes --> Pagos de proveedor: Transferencia SEPA de "
-"crédito (SCT)`. Al activar esta función y llenar los datos de su empresa, "
-"podrá usar la opción SCT al pagarle a su proveedor."
+"`Lista de todos los países SEPA <https://www.europeanpaymentscouncil.eu/"
+"document-library/other/epc-list-sepa-scheme-countries>`_."
 
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:57
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:23
 msgid ""
-"According to the localization package installed, the **SEPA Direct Debit** "
+"Depending on the localization package installed, the **SEPA Direct Debit** "
 "and **SEPA Credit Transfer** modules may be installed by default. If not, "
 "they need to be :ref:`installed <general/install>`."
 msgstr ""
-"Es posible que los módulos **Domiciliación bancaria SEPA** y "
-"**Transferencias de crédito SEPA** ya estén instalados dependiendo del "
-"paquete de localización que se instaló. Si no es así, "
-"necesita :ref:`instalarlos <general/install>`."
 
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:61
-msgid "Activate SEPA payment methods on banks"
-msgstr "Activar métodos de pago SEPA en bancos"
-
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:63
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:28
 msgid ""
-"From the accounting dashboard, click on the drop-down menu (:guilabel:`⋮`) "
-"on your bank journal and select :guilabel:`Configuration`. Click "
-"the :guilabel:`Outgoing Payments` tab, and, if not already present, "
-"add :guilabel:`SEPA Credit Transfer` under :guilabel:`Payment Method`."
+"SDD and SCT payment methods are **only valid for transactions in EUR "
+"currency**. If your company is located in the :abbr:`EFTA (European Free "
+"Trade Assocation)` region, a :abbr:`non-EEA (non-European Economic Area)` "
+"SEPA country, or a :abbr:`non-EEA (non-European Economic Area)` SEPA "
+"territory, consult the :ref:`ISO20022 <accounting/sepa_payments/iso20022>` "
+"section."
 msgstr ""
-"Desde el tablero de contabilidad, haga clic en el menú desplegable "
-"(:guilabel:`⋮`) en su diario contable y "
-"seleccione :guilabel:`Configuración`. Haga clic en la "
-"pestaña :guilabel:`Pagos salientes` y agregue :guilabel:`Transferencia de "
-"crédito SEPA` en :guilabel:`Método de pago`."
 
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:67
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:34
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:148
+msgid ":doc:`batch`"
+msgstr ":doc:`batch`"
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:39
+#: ../../content/applications/finance/payment_providers/sdd.rst:3
+msgid "SEPA Direct Debit"
+msgstr "Domiciliación bancaria SEPA"
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:46
 msgid ""
-"Make sure to specify the IBAN account number (domestic account numbers do "
-"not work with SEPA) and the BIC (bank identifier code) in "
-"the :guilabel:`Journal Entries` tab."
+"To enable SDD for customer payments, go to :menuselection:`Accounting --> "
+"Configuration --> Settings`, scroll to the :guilabel:`Customer Payments` "
+"section, enable :guilabel:`SEPA Direct Debit (SDD)`, and "
+"click :guilabel:`Save`. Then, scroll to the :guilabel:`Customer Payments` "
+"section again, set the company's :guilabel:`Creditor Identifier`, and "
+"click :guilabel:`Save`."
 msgstr ""
-"Asegúrese de especificar el número IBAN de la cuenta (los números de cuenta "
-"locales no funcionan con SEPA) y el BIC (código de identificación bancaria) "
-"en la pestaña :guilabel:`Asientos contables`."
 
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:71
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:52
+msgid ""
+"The creditor identifier is provided by your bank or the authority "
+"responsible for delivering it in your country. For testing purposes, you can "
+"use the test creditor identifier `DE98ZZZ09999999999`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:59
+msgid "Mandates"
+msgstr "Mandatos"
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:61
+msgid ""
+"An SDD mandate is a legal document authorizing a company to debit funds from "
+"a customer's bank account. It includes key information, such as the "
+"customer's name and IBAN, the mandate's start and end date, and the "
+"mandate's unique identifier. The mandate form must be filled in and signed "
+"by the customer."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:67
+msgid "Creating mandates"
+msgstr "Crear mandatos"
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:69
+msgid ""
+"In the **Accounting** app, go to :menuselection:`Customers --> Direct Debit "
+"Mandates`, and click :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:72
+msgid "Fill out:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:74
+msgid ""
+":guilabel:`Account Number`: a valid IBAN must be defined in the :doc:`bank "
+"journal <../bank>` used to receive SDD payments for the mandate."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:76
+msgid ""
+":guilabel:`SDD Scheme` depends on the type of customer. "
+"Select :guilabel:`CORE` for B2C customers and :guilabel:`B2B` for B2B "
+"customers."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:78
+msgid ""
+":guilabel:`End Date`: select a date after which the mandate is closed "
+"automatically. If this is left empty, the mandate remains active until it "
+"closed or revoked."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:82
+msgid ""
+"The B2B scheme is an optional scheme, offered exclusively to business "
+"payers. Some banks or businesses might not accept B2B SDD."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:85
+msgid ""
+"Click :guilabel:`Print` to generate a PDF of the mandate form, then send it "
+"to the customer for signature."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:87
+msgid "Click :guilabel:`Validate` to activate the mandate."
+msgstr "Haz clic en :guilabel:`Validar` para activar el mandato."
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:90
+msgid ""
+"To print the mandate form after the mandate has been validated, click "
+"the :icon:`fa-cog` (:guilabel:`gear`) icon, then select :guilabel:`Mandate "
+"form`."
+msgstr ""
+"Para imprimir el formulario de mandato después de que se haya validado, haz "
+"clic en el icono :icon:`fa-cog` (:guilabel:`engranaje`) y "
+"selecciona :guilabel:`Formulario de mandato`."
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:93
+msgid ""
+"Once an SDD mandate is active, subsequent SDD payments can be generated via "
+"Odoo and :ref:`uploaded to your online banking interface <accounting/"
+"sepa_payments/XML>`. Customers with an active SDD mandate can also use this "
+"payment method for :doc:`online purchases <../../payment_providers/sdd>`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:100
+msgid "Closing or revoking a mandate"
+msgstr "Cerrar o revocar un mandato"
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:102
+msgid ""
+"To close or revoke a mandate, go to :menuselection:`Accounting --> Customers "
+"--> Direct Debit Mandates`, select the relevant mandate, and "
+"click :guilabel:`Close` or :guilabel:`Revoke`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:105
+msgid ""
+"**Closing** a mandate updates the mandate's end day to the current day. "
+"Invoices issued after the present day will not be processed with an SDD "
+"payment. **Revoking** a mandate immediately disables it. No SDD payment can "
+"be registered anymore, regardless of the invoice's date. However, payments "
+"that have already been registered are still included in the next :ref:`SDD "
+"XML file <accounting/sepa_payments/XML>`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:112
+msgid ""
+"Mandates are automatically closed 36 months after the date of the last "
+"collection."
+msgstr ""
+"Los mandatos se cierran automáticamente 36 meses después de la fecha del "
+"último cobro."
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:113
+msgid "Closed or revoked mandates cannot be reactivated."
+msgstr "Los mandatos cerrados o revocados no se pueden reactivar."
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:118
+msgid "Processing SDD payments"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:120
+msgid ""
+"All registered SDD payments can be processed at once by uploading an XML "
+"file containing a batch of all posted SDD payments to your online banking "
+"interface. To do so, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:123
+msgid ""
+":ref:`Create a batch payment <accounting/batch/creation>` and include the "
+"SDD payments to collect."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:127
+msgid ""
+"You can filter payments by SDD scheme using the :guilabel:`SDD CORE` "
+"and :guilabel:`SDD B2B` filters."
+msgstr ""
+"Puedes filtrar los pagos por esquema SDD usando los filtros :guilabel:`SDD "
+"CORE` y :guilabel:`SDD B2B`."
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:130
+msgid ""
+":guilabel:`Validate` the batch payment. The XML file is generated "
+"automatically and available for download in the chatter."
+msgstr ""
+":guilabel:`Valida` el pago por lotes. El archivo XML se genera "
+"automáticamente y está disponible para descargar en el chatter."
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:132
+msgid ""
+"Download the XML file and upload it to your online banking interface to "
+"process the payments."
+msgstr ""
+"Descarga el archivo XML y cárgalo en tu interfaz de banca en línea para "
+"procesar los pagos."
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:133
+msgid ""
+"Once the SDD batch payment has been received, :doc:`reconcile the "
+"transaction <../bank/reconciliation>` with the batch payment to mark the "
+"related invoices as :guilabel:`Paid`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:138
+msgid ""
+"To view the payments and invoices linked to a specific SDD mandate, click "
+"the :guilabel:`Collections` and :guilabel:`Invoices Paid` smart button on "
+"the :ref:`Direct Debit Mandate <accounting/sepa_payments/sdd>` form."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:143
+msgid ""
+"The files generated by Odoo comply with the SDD **PAIN.008.001.02** "
+"specifications, as required by the SEPA customer-to-bank `implementation "
+"guidelines <https://www.europeanpaymentscouncil.eu/document-library/"
+"implementation-guidelines/sepa-credit-transfer-customer-psp-"
+"implementation>`_, which ensures compatibility with banks."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:149
+msgid ""
+":doc:`SEPA Direct Debit for online payments <../../payment_providers/sdd>`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:152
+msgid "SDD rejections"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:154
+msgid ""
+"SDD rejections can occur for several reasons, the most common being "
+"insufficient funds in the customer's account. With SDD, the recipient's "
+"account is credited before the funds are actually debited from the "
+"customer's account. As a result, if an SDD payment is later rejected, the "
+"bank automatically withdraws the amount of that payment from the recipient's "
+"account, and a new transaction for a negative amount is created to reflect "
+"the SDD rejection."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:160
+msgid ""
+"In this case, you must reverse the journal entry associated with the "
+"rejected payment and reconcile the reversal of the journal entry with the "
+"transaction for the SDD rejection. To do so, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:164
+msgid "Access the invoice linked to the rejected SDD payment."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:165
+msgid ""
+"Click the :icon:`fa-info-circle` :guilabel:`(information)` icon in the "
+"footer of the :guilabel:`Invoice Lines` tab, then click :guilabel:`View` to "
+"access the payment associated with the invoice."
+msgstr ""
+"Haz clic en el icono :icon:`fa-info-circle` :guilabel:`(información)` en el "
+"pie de página de la pestaña :guilabel:`Líneas de factura`, luego haz clic "
+"en :guilabel:`Ver` para acceder al pago asociado con la factura."
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:168
+msgid ""
+"Click the :guilabel:`Journal entry` smart button to access the related "
+"journal entry."
+msgstr ""
+"Haz clic en el botón inteligente :guilabel:`Asiento contable` para acceder "
+"al asiento contable relacionado."
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:169
+msgid ""
+"Click :guilabel:`Reverse entry`, optionally edit the fields in the popup, "
+"then click :guilabel:`Reverse`. A reversal entry is created with "
+"a :guilabel:`Reference` mentioning the initial journal entry. As a result, "
+"the invoice is marked as :guilabel:`Not paid`."
+msgstr ""
+"Haz clic en :guilabel:`Revertir asiento`, edita opcionalmente los campos en "
+"la ventana emergente y luego haz clic en :guilabel:`Revertir`. Se crea un "
+"asiento de reversión con una :guilabel:`Referencia` que menciona el asiento "
+"contable inicial. Como resultado, la factura se marca como :guilabel:`No "
+"pagada`."
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:172
+msgid ""
+":ref:`Access the bank journal's reconciliation view <accounting/"
+"reconciliation/access>` and :ref:`reconcile <accounting/reconciliation/"
+"reconcile>` the transaction created for the SDD rejection with the reversal "
+"of the entry related to the payment."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:179
+msgid "SEPA Credit Transfer"
+msgstr "Transferencias de crédito SEPA"
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:186
+msgid ""
+"To pay suppliers with SCT, from the **Accounting** app, go "
+"to :menuselection:`Configuration --> Settings. Under :guilabel:`Vendor "
+"Payments`, activate :guilabel:`SEPA Credit Transfer (SCT)`. Next, fill out "
+"your company data:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:190
+msgid ":guilabel:`Your Company`: The name of the company to use SCT."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:191
+msgid ":guilabel:`Name Identification`: The tax ID of the related company."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:192
+msgid ":guilabel:`Issuer`: The name of the entity that issued the tax ID."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:194
+msgid ""
+"After activating SEPA, go to :menuselection:`Configuration --> Journals` and "
+"open your :guilabel:`Bank` journal. Under :guilabel:`Outgoing Payments`, "
+"add :guilabel:`SEPA Credit Transfer` as a :guilabel:`Payment Method` if it's "
+"not there. This allows Odoo to use this bank account to generate XML payment "
+"files."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:200
 msgid "Registering payments"
 msgstr "Registro de pagos"
 
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:73
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:202
 msgid ""
-"You can register any vendor payments made with SEPA. To do so, go "
-"to :menuselection:`Accounting --> Vendors --> Payments`. When creating your "
-"payment, select :guilabel:`SEPA Credit Transfer` as the :guilabel:`Payment "
-"Method`."
+"To register vendor payments made with SCT, first verify that "
+"an :guilabel:`Account Number` and :guilabel:`Bank` are indicated on the "
+"vendor's :doc:`contact form <../../../essentials/contacts>`, under "
+"the :guilabel:`Accounting` tab. Odoo automatically verifies if the IBAN "
+"format is respected."
 msgstr ""
-"Puede registrar los pagos que ha realizado a sus proveedores mediante SEPA. "
-"Para ello, vaya a :menuselection:`Contabilidad --> Proveedores --> Pagos` y "
-"al crear el pago seleccione :guilabel:`Transferencia de crédito SEPA` "
-"como :guilabel:`método de pago`."
 
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:77
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:206
 msgid ""
-"The first time you pay a vendor with SEPA, you have to fill in "
-"the :guilabel:`Recipient Bank Account` field with the bank name, IBAN, and "
-"BIC (Bank Identifier Code). Odoo automatically verifies if the IBAN format "
-"is respected."
+"Then, go to :menuselection:`Vendors --> Payments`, and "
+"click :guilabel:`New`. When creating your payment, select :guilabel:`SEPA "
+"Credit Transfer` as the :guilabel:`Payment Method`. The :guilabel:`Vendor "
+"Bank Account` is automatically populated based on the :guilabel:`Vendor` "
+"selected. For future payments to this vendor, Odoo will automatically "
+"suggest the bank account, but it remains possible to select a new one from "
+"the dropdown menu by clicking the :guilabel:`Vendor Bank Account` field."
 msgstr ""
-"La primera vez que le pague a un proveedor con SEPA deberá completar el "
-"campo :guilabel:`Cuenta bancaria receptora` con el nombre del banco, el IBAN "
-"y el BIC (el código de identificación bancaria). Odoo verifica en automático "
-"si se respeta el formato IBAN."
 
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:81
-msgid ""
-"For future payments to this vendor, Odoo will automatically suggest you the "
-"bank account, but it remains possible to select a new one."
-msgstr ""
-"Para pagos futuros a este proveedor, Odoo le sugerirá de manera automática "
-"la cuenta del banco, pero todavía puede elegir una nueva."
-
-#: ../../content/applications/finance/accounting/payments/pay_sepa.rst:84
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:213
 msgid ""
 "Once your payment is registered, do not forget to confirm it. You can also "
 "pay vendor bills from the bill directly using the :guilabel:`Register "
@@ -12847,177 +12807,104 @@ msgstr ""
 "factura. El formulario es el mismo, pero el pago está ligado a la factura y "
 "se conciliará de manera automática."
 
-#: ../../content/applications/finance/accounting/payments/trusted_accounts.rst:3
-msgid "Trusted accounts (send money)"
-msgstr "Cuentas confiables (enviar dinero)"
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:221
+#: ../../content/applications/finance/fiscal_localizations/switzerland.rst:148
+msgid "ISO 20022"
+msgstr "ISO 20022"
 
-#: ../../content/applications/finance/accounting/payments/trusted_accounts.rst:5
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:223
 msgid ""
-"To protect users from sending money to scammers, vendor bank account numbers "
-"must be marked as trusted before you can use them to make an outgoing "
-"payment."
+"ISO 20022 is a global standard for the exchange of payment data between "
+"banks. It uses a format that lets payment details and related documents move "
+"together as a single package. This means information such as invoice "
+"numbers, tax details, and who sent the payment is stored in fields that "
+"computers can automatically read. Unlike SEPA, the ISO 20022 standard can be "
+"used with any currency worldwide."
 msgstr ""
-"Para proteger a los usuarios y evitar que envíen dinero a estafadores, deben "
-"indicar que los números de las cuentas bancarias de sus proveedores son "
-"confiables antes de poder utilizarlos para realizar un pago."
 
-#: ../../content/applications/finance/accounting/payments/trusted_accounts.rst:8
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:228
 msgid ""
-"To do so, open the vendor bank account and click on the :guilabel:`Send "
-"Money` toggle switch button."
+"In Odoo, the SEPA Payments module acts as the underlying engine for all ISO "
+"20022 transactions (both domestic SEPA payments in euros and non-euro global "
+"transfers are supported by the module)."
 msgstr ""
-"Abra la cuenta bancaria del proveedor correspondiente y haga clic sobre el "
-"interruptor junto al texto :guilabel:`Enviar dinero`."
 
-#: ../../content/applications/finance/accounting/payments/trusted_accounts.rst:None
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:231
 msgid ""
-"Example of a vendor bank account with the \"Send Money\" toggle button "
-"switched to \"trusted.\""
+":doc:`Some countries and regions <sepa_payments>` may use a localized, "
+"country-specific version of ISO 20022, which requires additional "
+"configuration. In these cases, we strongly recommend reading the :ref:`PAIN "
+"version <accounting/sepa_payments/pain>` section of this page."
 msgstr ""
-"Ejemplo de una cuenta bancaria perteneciente a un proveedor con el botón "
-"\"Enviar dinero\" con la opción \"confiable\" habilitada."
 
-#: ../../content/applications/finance/accounting/payments/trusted_accounts.rst:15
-msgid "All accounts are initially marked as untrusted."
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:238
+msgid "PAIN version"
 msgstr ""
-"De forma predeterminada, al inicio todas las cuentas se establecen como no "
-"confiable."
 
-#: ../../content/applications/finance/accounting/payments/trusted_accounts.rst:18
-msgid "Phishing attacks"
-msgstr "Ataques de phishing"
-
-#: ../../content/applications/finance/accounting/payments/trusted_accounts.rst:20
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:241
 msgid ""
-"A **phishing attack** is an online scam designed to trick individuals or "
-"companies into giving away sensitive information or money by sending out "
-"fraudulent communication. Fraudsters pretend to be legitimate companies and "
-"may use partial information to give credibility to their requests."
+":abbr:`PAIN (PAyment INitiation)` is the specific message protocol within "
+"ISO 20022 used to send transfer instructions from Odoo to your bank."
 msgstr ""
-"Un **ataque de phishing** es una estafa en línea que se realiza mediante el "
-"envío de comunicaciones fraudulentas y está diseñada para engañar a "
-"individuos o empresas con la finalidad de que proporcionen información "
-"confidencial o envíen dinero. Los estafadores se hacen pasar por empresas "
-"legítimas y pueden utilizar alguna información parcial cierta para que sus "
-"solicitudes se vuelvan más creíbles."
 
-#: ../../content/applications/finance/accounting/payments/trusted_accounts.rst:24
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:243
 msgid ""
-"There are several types of phishing attacks, including **invoice fraud**. In "
-"this case, the fraudster pretends to be a genuine supplier following up on "
-"unpaid bills or sending a new invoice, but with different payment "
-"information than usual and with fake contact details."
+"To enable a country-specific PAIN version, first check that you have "
+"the :doc:`fiscal localization <../../../finance/fiscal_localizations>` for "
+"your country installed in your database."
 msgstr ""
-"Hay varios tipos de ataques de phishing, entre los que se encuentra la "
-"**estafa de facturas**. En este caso, el estafador finge ser un proveedor "
-"verdadero que le da seguimiento a las facturas que no se han pagado o envía "
-"una nueva factura, pero con información de pago diferente a la habitual y "
-"datos de contacto falsos."
 
-#: ../../content/applications/finance/accounting/payments/trusted_accounts.rst:28
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:248
 msgid ""
-"To protect yourself from these types of phishing attacks, remain vigilant "
-"when you receive unexpected invoices or payment requests."
+"ISO 20022 **PAIN.001.001.03** is being deprecated in November 2026. Make "
+"sure to use the newer **PAIN.001.001.09** version or the one required in "
+"your country."
 msgstr ""
-"Para protegerse de estos tipos de ataques de phishing, preste mucha atención "
-"si es que recibe facturas o solicitudes de pago inesperadas."
 
-#: ../../content/applications/finance/accounting/payments/trusted_accounts.rst:32
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:251
 msgid ""
-"In case of doubt, **we recommend contacting the vendor by phone**. Make sure "
-"to call an official phone number by searching yourself, as the URLs, email "
-"addresses, and phone numbers written in the communication you received may "
-"be fake."
+"To select a specific PAIN version, open the **Accounting** app, go "
+"to :menuselection:`Configuration --> Journals`, and open "
+"your :guilabel:`Bank` journal. Click the :guilabel:`Outgoing Payments` tab, "
+"and select the :guilabel:`SEPA Pain Version` that suits your needs."
 msgstr ""
-"**Le recomendamos contactar por teléfono al proveedor** en caso de que tenga "
-"alguna duda. Asegúrese de llamar al número telefónico oficial que usted "
-"conozca o haya investigado por su cuenta, ya que las URL, direcciones de "
-"correo electrónico y números de teléfono proporcionados en el mensaje que "
-"recibió podrían ser falsos."
 
-#: ../../content/applications/finance/accounting/payments/trusted_accounts.rst:37
-msgid "Elements to check"
-msgstr "Elementos a verificar"
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:255
+msgid "Reminder"
+msgstr "Recordatorio"
 
-#: ../../content/applications/finance/accounting/payments/trusted_accounts.rst:39
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:257
 msgid ""
-"There are several elements you can check by yourself when you receive an "
-"outgoing payment request to a new account:"
+"The SEPA payments module covers both SEPA payments *and* ISO 20022 payments."
 msgstr ""
-"Hay varios elementos que puede comprobar al recibir una solicitud de pago a "
-"una nueva cuenta:"
 
-#: ../../content/applications/finance/accounting/payments/trusted_accounts.rst:46
-msgid "Communication style"
-msgstr "Estilo de la comunicación"
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:262
+#: ../../content/applications/finance/fiscal_localizations/switzerland.rst:160
+msgid "Export XML files"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/payments/trusted_accounts.rst:43
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:264
+#: ../../content/applications/finance/fiscal_localizations/switzerland.rst:162
 msgid ""
-"Fraudulent emails and invoices often use a different communication style, "
-"such as **different wording**, and may include **spelling and grammatical "
-"mistakes**. Examine and **compare** them with previous ones that you know to "
-"be authentic (e.g., payment instructions, language, company logo, etc.).*"
+"To generate a daily XML payment file for upload to the online banking "
+"interface, :ref:`create a batch payment <accounting/batch/creation>`. The "
+"XML file is then displayed in the chatter, where it can be downloaded and "
+"submitted to the bank for processing."
 msgstr ""
-"Por lo general, los correos electrónicos o facturas que no son reales usan "
-"un estilo de comunicación diferente, como una **redacción distinta** y "
-"pueden incluir **errores ortográficos y gramaticales**. Examine y "
-"**compare** con mensajes anteriores que sabe que son auténticos (por "
-"ejemplo, instrucciones de pago, idioma, logotipo de la empresa, etc.)."
 
-#: ../../content/applications/finance/accounting/payments/trusted_accounts.rst:50
-msgid "Urgency"
-msgstr "Urgencia"
-
-#: ../../content/applications/finance/accounting/payments/trusted_accounts.rst:49
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:268
 msgid ""
-"Invoice frauds often use **urgent or threatening language** and change the "
-"**payment deadline**. Check if you really received a late payment reminder "
-"previously."
+"By default, the :ref:`SEPA-compliant XML files <accounting/sepa_payments/"
+"XML>` generated by Odoo use the **PAIN.008.001.02** format. If your bank "
+"requires the updated 2023 version, go to :menuselection:`Accounting --> "
+"Configuration --> Journals`. Open your :guilabel:`Bank` journal, and in "
+"the :guilabel:`Incoming Payments` tab, set the :guilabel:`SEPA Pain version` "
+"field to :guilabel:`Updated 2023 (Pain 008.001.08)`."
 msgstr ""
-"Es común que en la estafa de facturas se utilice un **lenguaje urgente o "
-"amenazante** y que cambien la **fecha límite de pago**. Verifique que en "
-"verdad haya recibido un recordatorio sobre un pago atrasado con anterioridad."
 
-#: ../../content/applications/finance/accounting/payments/trusted_accounts.rst:53
-msgid "Type of account"
-msgstr "Tipo de cuenta"
-
-#: ../../content/applications/finance/accounting/payments/trusted_accounts.rst:53
-msgid ""
-"A company is unlikely to replace a bank account with a **money transfer "
-"service**."
+#: ../../content/applications/finance/accounting/payments/sepa_payments.rst:275
+msgid ":doc:`../bank/bank_synchronization`"
 msgstr ""
-"Es poco probable que una empresa sustituya una cuenta bancaria por un "
-"**servicio de transferencia de dinero**."
-
-#: ../../content/applications/finance/accounting/payments/trusted_accounts.rst:60
-msgid "Email and links domain names"
-msgstr "Nombres de dominio en correos electrónicos y enlaces"
-
-#: ../../content/applications/finance/accounting/payments/trusted_accounts.rst:56
-msgid ""
-"Double-check the **email address domain** (`example@domain.com`). However, "
-"be wary that fraudsters can make their email addresses look genuine or even "
-"hack email addresses from your vendor's employees or even someone within "
-"your own organization."
-msgstr ""
-"Verifique cuidadosamente el **dominio de la dirección de correo "
-"electrónico** (`ejemplo@dominio.com`). Sin embargo, tenga cuidado, los "
-"estafadores pueden hacer que sus direcciones de correo electrónico parezcan "
-"reales. También existe la posibilidad de que hayan accedido de forma ilegal "
-"a las direcciones de correo electrónico que pertenecen a los empleados de "
-"sus proveedores o incluso de alguien dentro de su propia empresa."
-
-#: ../../content/applications/finance/accounting/payments/trusted_accounts.rst:60
-msgid ""
-"Hover over the links in your email and check that the URLs they redirect to "
-"are genuine. Your internet browser usually displays the link's target at the "
-"bottom left of the window."
-msgstr ""
-"Pase el cursor por encima de los enlaces en su correo electrónico y "
-"verifique que las URL a las que redirigen sean auténticas. Por lo general, "
-"su navegador de internet muestra la dirección del enlace en la parte "
-"inferior izquierda de la ventana."
 
 #: ../../content/applications/finance/accounting/reporting.rst:7
 msgid ""
@@ -13090,8 +12977,8 @@ msgid ""
 msgstr ""
 "Para exportar informes en formato PDF o XLSX, haz clic en :guilabel:`PDF` en "
 "la parte superior o haz clic en el icono :icon:`fa-caret-down` "
-"(:guilabel:`flecha hacia abajo`) junto al botón :guilabel:`PDF` y selecciona "
-":guilabel:`XLSX`."
+"(:guilabel:`flecha hacia abajo`) junto al botón :guilabel:`PDF` y "
+"selecciona :guilabel:`XLSX`."
 
 #: ../../content/applications/finance/accounting/reporting.rst:32
 msgid ""
@@ -20823,12 +20710,8 @@ msgid ""
 ":guilabel:`Recipient Bank`: Indicates the account number to which the "
 "payment will be made. This field is required when paying via batch payment "
 "files (such as :ref:`NACHA <l10n_us/ach-electronic-transfers>` "
-"and :doc:`SEPA <payments/pay_sepa>`)."
+"and :doc:`SEPA Direct Debit <payments/sepa_payments>`)."
 msgstr ""
-":guilabel:`Cuenta bancaria destinataria`: Indica el número de cuenta al que "
-"se realizará el pago. Este campo es obligatorio cuando se paga mediante "
-"archivos de pago por lotes (como :ref:`NACHA <l10n_us/ach-electronic-"
-"transfers>` y :doc:`SEPA <payments/pay_sepa>`)."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:79
 msgid ""
@@ -41893,8 +41776,8 @@ msgid ""
 "The account type is then flagged as :guilabel:`payable` "
 "and :guilabel:`reconcilable` based on the account template."
 msgstr ""
-"El tipo de cuenta se marca entonces como :guilabel:`por pagar` y "
-":guilabel:`conciliable` según la plantilla de cuenta."
+"El tipo de cuenta se marca entonces como :guilabel:`por pagar` "
+"y :guilabel:`conciliable` según la plantilla de cuenta."
 
 #: ../../content/applications/finance/fiscal_localizations/france.rst:354
 msgid ""
@@ -42014,8 +41897,8 @@ msgid ""
 "Suppose we are analyzing the moves that share a "
 "certain :guilabel:`journal_id`."
 msgstr ""
-"Supongamos que estamos analizando los movimientos que comparten un cierto "
-":guilabel:`journal_id`."
+"Supongamos que estamos analizando los movimientos que comparten un "
+"cierto :guilabel:`journal_id`."
 
 #: ../../content/applications/finance/fiscal_localizations/france.rst:397
 #: ../../content/applications/finance/fiscal_localizations/france.rst:427
@@ -42083,8 +41966,8 @@ msgid ""
 "Each contact keeps its :guilabel:`Reference` from the :guilabel:`CompAuxNum` "
 "field."
 msgstr ""
-"Cada contacto mantiene su :guilabel:`Referencia` del campo "
-":guilabel:`CompAuxNum`."
+"Cada contacto mantiene su :guilabel:`Referencia` del "
+"campo :guilabel:`CompAuxNum`."
 
 #: ../../content/applications/finance/fiscal_localizations/france.rst:419
 msgid ""
@@ -56010,9 +55893,9 @@ msgid ""
 "Product` of the shipping method to prevent errors when validating the "
 "invoice with |SUNAT|."
 msgstr ""
-"Asegúrate de definir un :guilabel:`Precio de venta` en el "
-":guilabel:`Producto de entrega` del método de envío para evitar errores al "
-"validar la factura con |SUNAT|."
+"Asegúrate de definir un :guilabel:`Precio de venta` en "
+"el :guilabel:`Producto de entrega` del método de envío para evitar errores "
+"al validar la factura con |SUNAT|."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:938
 msgid ""
@@ -56151,8 +56034,8 @@ msgid ""
 "product record's :guilabel:`Accounting` tab and select the :guilabel:`Type "
 "of Existence` according to |SUNAT|'s table 5 for inventory reporting."
 msgstr ""
-"**Tipo de existencia**: Para todos los productos que requieren informes "
-"|PLE|, ve a la pestaña :guilabel:`Contabilidad` del registro del producto y "
+"**Tipo de existencia**: Para todos los productos que requieren informes |"
+"PLE|, ve a la pestaña :guilabel:`Contabilidad` del registro del producto y "
 "selecciona el :guilabel:`Tipo de existencia` según la tabla 5 de |SUNAT| "
 "para informes de inventario."
 
@@ -58673,6 +58556,38 @@ msgstr ""
 "superior), no hay nada que hacer. De otra forma, también tendrá que "
 "actualizar sus posiciones fiscales en conformidad."
 
+#: ../../content/applications/finance/fiscal_localizations/switzerland.rst:150
+msgid ""
+"Switzerland uses a specific, localized version of the :ref:`ISO 20022 XML "
+"global standard <accounting/sepa_payments/pain>`. To select the appropriate "
+"Swiss version for your company, open the **Accounting** app, and navigate "
+"to :menuselection:`Configuration --> Journals`. Then, open the relevant "
+"**Bank** journal, and in the :guilabel:`Outgoing Payments`, "
+"select :guilabel:`Swiss` from the :guilabel:`SEPA Pain Version` field."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/switzerland.rst:157
+msgid "The **SEPA Module** in Odoo covers both SEPA *and* ISO 20022 payments."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/switzerland.rst:166
+msgid ""
+"By default, the XML files for outgoing payments generated by Odoo use the "
+"Swiss-specific **PAIN.001.001.03.ch.02** format. If your bank requires the "
+"newer **PAIN.001.001.09** version, open the **Accounting** and go "
+"to :menuselection:`Configuration --> Journals`. Open the relevant **Bank**, "
+"and in the :guilabel:`Outgoing Payments` tab, set the :guilabel:`SEPA Pain "
+"version` field to :guilabel:`New generic version (09)`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/switzerland.rst:173
+msgid ":doc:`../accounting/bank/bank_synchronization`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/switzerland.rst:174
+msgid ":ref:`ISO 20022 <accounting/sepa_payments/iso20022>`"
+msgstr ""
+
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst:3
 msgid "Thailand"
 msgstr "Tailandia"
@@ -60138,10 +60053,6 @@ msgstr ""
 "cheques vinculados de `checkdepot.net <https://checkdepot.net/collections/"
 "computer-checks/Odoo>`_."
 
-#: ../../content/applications/finance/fiscal_localizations/united_states.rst:84
-msgid ":ref:`NACHA Payments <l10n_us/nacha>`"
-msgstr ":ref:`Pagos NACHA <l10n_us/nacha>`"
-
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:85
 msgid "`l10n_us_payment_nacha`"
 msgstr "`l10n_us_payment_nacha`"
@@ -61564,9 +61475,8 @@ msgstr ""
 "nuevo archivo |NACHA| |ACH|."
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:745
-msgid ":doc:`Europe's direct debiting <../accounting/payments/batch_sdd>`"
+msgid ":doc:`Europe's direct debiting <../accounting/payments/sepa_payments>`"
 msgstr ""
-":doc:`Domiciliación bancaria en Europa <../accounting/payments/batch_sdd>`"
 
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:3
 msgid "Uruguay"
@@ -61831,8 +61741,8 @@ msgid ""
 "Locate the Uruware credentials settings by navigating to "
 "the :menuselection:`Accounting --> Configuration --> Settings`."
 msgstr ""
-"Localiza la configuración de credenciales de Uruware navegando a "
-":menuselection:`Contabilidad --> Configuración --> Ajustes`."
+"Localiza la configuración de credenciales de Uruware navegando "
+"a :menuselection:`Contabilidad --> Configuración --> Ajustes`."
 
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:113
 msgid ""
@@ -62208,8 +62118,8 @@ msgid ""
 "To generate and confirm an electronic document that will be validated by |"
 "DGI|, the sales journal needs to be configured with the following:"
 msgstr ""
-"Para generar y confirmar un documento electrónico que será validado por "
-"|DGI|, el diario de ventas debe configurarse con lo siguiente:"
+"Para generar y confirmar un documento electrónico que será validado por |"
+"DGI|, el diario de ventas debe configurarse con lo siguiente:"
 
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:276
 msgid ""
@@ -62219,8 +62129,8 @@ msgid ""
 "is for open invoices previously stamped in another system, for example, in "
 "the |DGI|."
 msgstr ""
-":guilabel:`Tipo de facturación`: por defecto está configurada la opción "
-":guilabel:`Electrónica`. Esto es necesario para enviar documentos "
+":guilabel:`Tipo de facturación`: por defecto está configurada la "
+"opción :guilabel:`Electrónica`. Esto es necesario para enviar documentos "
 "electrónicos vía servicio web al gobierno uruguayo a través de Uruware. La "
 "otra opción, :guilabel:`Manual`, es para facturas abiertas previamente "
 "timbradas en otro sistema, por ejemplo, en |DGI|."
@@ -62386,9 +62296,9 @@ msgid ""
 msgstr ""
 "Las *addendas* y *divulgaciones* son notas y comentarios adicionales "
 "añadidos a un documento electrónico que pueden ser obligatorios u "
-"opcionales. Para crear una nueva addenda, ve a "
-":menuselection:`Contabilidad --> Configuración --> Addendas y divulgaciones` "
-"y haz clic en :guilabel:`Nuevo`."
+"opcionales. Para crear una nueva addenda, ve a :menuselection:`Contabilidad "
+"--> Configuración --> Addendas y divulgaciones` y haz clic "
+"en :guilabel:`Nuevo`."
 
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:355
 msgid "Enter the following information:"
@@ -66307,10 +66217,6 @@ msgstr ""
 "Las transacciones que permanecen sin capturar durante más de **cinco días** "
 "se **anulan** automáticamente."
 
-#: ../../content/applications/finance/payment_providers/sdd.rst:3
-msgid "SEPA Direct Debit"
-msgstr "Domiciliación bancaria SEPA"
-
 #: ../../content/applications/finance/payment_providers/sdd.rst:7
 msgid ""
 "SEPA (Single Euro Payments Area) is a payment-integration initiative of the "
@@ -66325,24 +66231,16 @@ msgstr ""
 msgid ""
 "SEPA Direct Debit (SDD) is a payment provider that allows future payments to "
 "be collected from customers' bank accounts based on a signed :ref:`SEPA "
-"Direct Debit mandate <accounting/batch_sdd/sdd_mandates>`. This is "
-"particularly useful for recurring payments based on a :doc:`subscription </"
-"applications/sales/subscriptions>`."
+"Direct Debit mandate <accounting/sepa_payments/sdd>`. This is particularly "
+"useful for recurring payments based on a :doc:`subscription </applications/"
+"sales/subscriptions>`."
 msgstr ""
-"La domiciliación bancaria SEPA es un proveedor de pagos que permite cobrar "
-"futuros pagos de las cuentas bancarias de los clientes basándose en "
-"un :ref:`mandato de domiciliación bancaria SEPA <accounting/batch_sdd/"
-"sdd_mandates>` firmado. Esto es particularmente útil para pagos recurrentes "
-"basados en una :doc:`suscripción </applications/sales/subscriptions>`."
 
 #: ../../content/applications/finance/payment_providers/sdd.rst:16
 msgid ""
 "To use the SEPA Direct Debit (SDD) payment provider and create :ref:`SEPA "
-"Direct Debit mandates <accounting/batch_sdd/sdd_mandates>`:"
+"Direct Debit mandates <accounting/sepa_payments/sdd>`:"
 msgstr ""
-"Para utilizar el proveedor de pagos de domiciliación bancaria SEPA y "
-"crear :ref:`mandatos de domiciliación bancaria SEPA <accounting/batch_sdd/"
-"sdd_mandates>`:"
 
 #: ../../content/applications/finance/payment_providers/sdd.rst:19
 msgid "The invoice being paid must be for an amount in euros."
@@ -66352,13 +66250,9 @@ msgstr "La factura que se paga debe ser por un importe en euros."
 msgid ""
 "The :guilabel:`SEPA Direct Deposit (SDD)` feature must be enabled, and the "
 "company's :guilabel:`Creditor Identifier` must be defined in "
-"the :ref:`Accounting or Invoicing settings <accounting/batch_sdd/sepa-"
-"configuration>`."
+"the :ref:`Accounting or Invoicing settings <accounting/sepa_payments/"
+"sdd_configuration>`."
 msgstr ""
-"La función :guilabel:`Domiciliación bancaria SEPA` debe estar habilitada, y "
-"el :guilabel:`Identificador de acreedor` de la empresa debe estar definido "
-"en la :ref:`configuración de Contabilidad o Facturación <accounting/"
-"batch_sdd/sepa-configuration>`."
 
 #: ../../content/applications/finance/payment_providers/sdd.rst:29
 msgid "To configure **SEPA Direct Debit**, follow these steps:"
@@ -66457,12 +66351,9 @@ msgstr "Pagos en línea con |sdd|"
 #: ../../content/applications/finance/payment_providers/sdd.rst:63
 msgid ""
 "Customers selecting |sdd| as a payment method are prompted to enter their "
-"IBAN to complete the :ref:`SEPA Direct Debit mandate <accounting/batch_sdd/"
-"sdd_mandates>`."
+"IBAN to complete the :ref:`SEPA Direct Debit mandate <accounting/"
+"sepa_payments/sdd_mandates>`."
 msgstr ""
-"Los clientes que seleccionen |sdd| como método de pago deberán introducir su "
-"IBAN para completar el :ref:`mandato de domiciliación bancaria SEPA "
-"<accounting/batch_sdd/sdd_mandates>`."
 
 #: ../../content/applications/finance/payment_providers/sdd.rst:66
 msgid ""
@@ -66476,32 +66367,18 @@ msgid ""
 "the :guilabel:`Active` status. Once a mandate is active, it is reused for "
 "all subsequent payments made with the |sdd| payment method. You can then "
 "collect them by :ref:`uploading them to your online banking interface "
-"<accounting/batch_sdd/XML>`."
+"<accounting/sepa_payments/XML>`."
 msgstr ""
-"El mandato |sdd| se crea entonces automáticamente en :guilabel:`Borrador` "
-"basándose en el IBAN proporcionado. Para validar la información, los "
-"clientes deben confirmar cada nuevo mandato con una transferencia bancaria "
-"exitosa del importe esperado **utilizando la referencia de pago especificada "
-"(comunicación)** definida en el :ref:`formulario del proveedor de pagos de "
-"domiciliación bancaria SEPA <sdd/configuration>`. Una vez que se recibe este "
-"pago inicial y se :doc:`concilia <../accounting/bank/reconciliation>`, el "
-"mandato se valida automáticamente y se actualiza al "
-"estado :guilabel:`Activo`. Una vez que un mandato está activo, se reutiliza "
-"para todos los pagos posteriores realizados con el método de pago |sdd|. "
-"Luego puedes cobrarlos :ref:`subiéndolos a tu interfaz de banca en línea "
-"<accounting/batch_sdd/XML>`."
 
 #: ../../content/applications/finance/payment_providers/sdd.rst:76
-msgid ":doc:`../accounting/payments/batch_sdd`"
-msgstr ":doc:`../accounting/payments/batch_sdd`"
+msgid ":doc:`../accounting/payments/sepa_payments`"
+msgstr ""
 
 #: ../../content/applications/finance/payment_providers/sdd.rst:79
 msgid ""
-"Mandates are automatically :ref:`closed <accounting/batch_sdd/close-revoke-"
-"mandate>` 36 months after the date of the last collection."
+"Mandates are automatically :ref:`closed <accounting/sepa_payments/close-"
+"revoke-mandate>` 36 months after the date of the last collection."
 msgstr ""
-"Los mandatos se :ref:`cierran <accounting/batch_sdd/close-revoke-mandate>` "
-"automáticamente 36 meses después de la fecha del último cobro."
 
 #: ../../content/applications/finance/payment_providers/sdd.rst:81
 msgid ""
@@ -67229,6 +67106,795 @@ msgstr ""
 "Complete los campos :guilabel:`Clave secreta` y :guilabel:`Token de webhook` "
 "con la información que almacenó en el paso de :ref:`payment_providers/xendit/"
 "configure_dashboard`."
+
+#~ msgid ""
+#~ "To enable batch payments, go to :menuselection:`Accounting --> "
+#~ "Configuration --> Settings`, scroll down to the :guilabel:`Customer "
+#~ "Payments` section, and enable :guilabel:`Batch Payments`."
+#~ msgstr ""
+#~ "Para habilitar los pagos por lotes, ve a :menuselection:`Contabilidad --> "
+#~ "Configuración --> Ajustes`, desplázate hacia abajo hasta la "
+#~ "sección :guilabel:`Pagos de cliente` y habilita :guilabel:`Pagos por "
+#~ "lotes`."
+
+#~ msgid "To create a batch payment, follow these steps:"
+#~ msgstr "Para crear un pago por lotes, sigue estos pasos:"
+
+#~ msgid "Go to :menuselection:`Accounting --> Customers --> Payments`."
+#~ msgstr "Ve a :menuselection:`Contabilidad --> Clientes --> Pagos`."
+
+#~ msgid "Select the payments to include in the batch."
+#~ msgstr "Selecciona los pagos que se incluirán en el lote."
+
+#~ msgid ""
+#~ "All payments in the batch must use the same payment method. If needed, "
+#~ "payments can be grouped using the :guilabel:`Payment Method Line`."
+#~ msgstr ""
+#~ "Todos los pagos en el lote deben usar el mismo método de pago. Si es "
+#~ "necesario, los pagos se pueden agrupar usando la :guilabel:`Línea de "
+#~ "método de pago`."
+
+#~ msgid ""
+#~ "Click :guilabel:`Create batch` or click :icon:`fa-"
+#~ "cog` :guilabel:`Actions` and select :guilabel:`Create batch payment`."
+#~ msgstr ""
+#~ "Haz clic en :guilabel:`Crear lote` o haz clic en :icon:`fa-"
+#~ "cog` :guilabel:`Acciones` y selecciona :guilabel:`Crear pago por lotes`."
+
+#~ msgid ""
+#~ "In the batch payment form, review the selected payments. If any "
+#~ "individual payments were missed, click :guilabel:`Add a line` and select "
+#~ "the missing payments to be included in the batch."
+#~ msgstr ""
+#~ "En el formulario de pago por lotes, revisa los pagos seleccionados. Si "
+#~ "falta algún pago individual, haz clic en :guilabel:`Añadir una línea` y "
+#~ "selecciona los pagos faltantes que se incluirán en el lote."
+
+#~ msgid ""
+#~ "Once all relevant payments are included, click :guilabel:`Validate` to "
+#~ "finalize the batch."
+#~ msgstr ""
+#~ "Una vez que todos los pagos relevantes estén incluidos, haz clic "
+#~ "en :guilabel:`Validar` para finalizar el lote."
+
+#~ msgid "Once validated, no additional payments can be added to a batch."
+#~ msgstr "Una vez validado, no se pueden añadir pagos adicionales a un lote."
+
+#~ msgid "Click :guilabel:`Print` to download a list of the included payments."
+#~ msgstr ""
+#~ "Haz clic en :guilabel:`Imprimir` para descargar una lista de los pagos "
+#~ "incluidos."
+
+#~ msgid ""
+#~ "To view existing batch payments, go to :menuselection:`Accounting --> "
+#~ "Customers --> Batch Payments`."
+#~ msgstr ""
+#~ "Para ver los pagos por lotes existentes, ve "
+#~ "a :menuselection:`Contabilidad --> Clientes --> Pagos por lotes`."
+
+#~ msgid ":doc:`batch_sdd`"
+#~ msgstr ":doc:`batch_sdd`"
+
+#~ msgid "SEPA Direct Debit (SDD) customer payments"
+#~ msgstr "Pagos de clientes por domiciliación SEPA (SDD)"
+
+#~ msgid ""
+#~ "SEPA (Single Euro Payments Area) is a payment-integration initiative of "
+#~ "the European Union that facilitates standardized and simplified "
+#~ "electronic payments in euros across participating countries. With **SEPA "
+#~ "Direct Debit** (SDD), customers sign a mandate that authorizes you to "
+#~ "collect future payments from their bank accounts. This is particularly "
+#~ "useful for recurring payments based on a :doc:`subscription </"
+#~ "applications/sales/subscriptions>`."
+#~ msgstr ""
+#~ "SEPA (Zona Única de Pagos en Euros) es una iniciativa de integración de "
+#~ "pagos de la Unión Europea que facilita pagos electrónicos estandarizados "
+#~ "y simplificados en euros entre los países participantes. Con la "
+#~ "**domiciliación SEPA** (SDD), los clientes firman un mandato que te "
+#~ "autoriza a cobrar futuros pagos desde sus cuentas bancarias. Esto es "
+#~ "especialmente útil para pagos recurrentes basados en "
+#~ "una :doc:`suscripción </applications/sales/subscriptions>`."
+
+#~ msgid ""
+#~ "You can record customer |sdd| mandates in Odoo and generate XML files "
+#~ "listing payments to be collected with the mandates. :ref:`Uploading these "
+#~ "files to your bank <accounting/batch_sdd/XML>` instructs them to collect "
+#~ "these payments from your customers."
+#~ msgstr ""
+#~ "Puedes registrar los mandatos |sdd| de clientes en Odoo y generar "
+#~ "archivos XML que listen los pagos a cobrar con los mandatos. :ref:`Subir "
+#~ "estos archivos a tu banco <accounting/batch_sdd/XML>` le indica que cobre "
+#~ "estos pagos de tus clientes."
+
+#~ msgid ""
+#~ "|sdd| is supported by all SEPA countries, which includes the 27 member "
+#~ "states of the European Union as well as additional countries."
+#~ msgstr ""
+#~ "|sdd| es compatible con todos los países SEPA, lo que incluye los 27 "
+#~ "estados miembros de la Unión Europea, así como países adicionales."
+
+#~ msgid "Creditor identifier"
+#~ msgstr "Identificador de acreedor"
+
+#~ msgid ""
+#~ "To enable |sdd| for customer payments, go to :menuselection:`Accounting --"
+#~ "> Configuration --> Settings`, scroll to the :guilabel:`Customer "
+#~ "Payments` section, enable :guilabel:`SEPA Direct Debit (SDD)`, and "
+#~ "click :guilabel:`Save`. Then, scroll to the :guilabel:`Customer Payments` "
+#~ "section again, set the company's :guilabel:`Creditor Identifier`, and "
+#~ "click :guilabel:`Save`."
+#~ msgstr ""
+#~ "Para habilitar |sdd| para pagos de clientes, ve "
+#~ "a :menuselection:`Contabilidad --> Configuración --> Ajustes`, desplázate "
+#~ "hasta la sección :guilabel:`Pagos de clientes`, "
+#~ "habilita :guilabel:`Domiciliación SEPA (SDD)` y haz clic "
+#~ "en :guilabel:`Guardar`. Luego, desplázate nuevamente hasta la "
+#~ "sección :guilabel:`Pagos de clientes`, establece "
+#~ "el :guilabel:`Identificador de acreedor` de la empresa y haz clic "
+#~ "en :guilabel:`Guardar`."
+
+#~ msgid ""
+#~ "The creditor identifier is provided by your bank or the authority "
+#~ "responsible for delivering them in your country. For testing purposes, "
+#~ "you can use the test creditor identifier `DE98ZZZ09999999999`."
+#~ msgstr ""
+#~ "El identificador de acreedor lo proporciona tu banco o la autoridad "
+#~ "responsable de emitirlos en tu país. Para fines de prueba, puedes usar el "
+#~ "identificador de acreedor de prueba `DE98ZZZ09999999999`."
+
+#~ msgid "PAIN file version"
+#~ msgstr "Versión del archivo PAIN"
+
+#~ msgid "SEPA Direct Debit Mandates"
+#~ msgstr "Mandatos de adeudos directos SEPA"
+
+#~ msgid ""
+#~ "An |sdd| mandate is a legal document authorizing a company to debit funds "
+#~ "from a customer's bank account. It includes key information, such as the "
+#~ "customer's name and IBAN, the mandate's start and end date, and the "
+#~ "mandate's unique identifier. The mandate form must be filled in and "
+#~ "signed by the customer."
+#~ msgstr ""
+#~ "Un mandato |sdd| es un documento legal que autoriza a una empresa a "
+#~ "debitar fondos de la cuenta bancaria de un cliente. Incluye información "
+#~ "clave, como el nombre del cliente y su IBAN, la fecha de inicio y "
+#~ "finalización del mandato, y el identificador único del mandato. El "
+#~ "formulario del mandato debe ser completado y firmado por el cliente."
+
+#~ msgid "To create an |sdd| mandate:"
+#~ msgstr "Para crear un mandato |sdd|:"
+
+#~ msgid ""
+#~ "Go to :menuselection:`Accounting --> Customers --> Direct Debit Mandates`."
+#~ msgstr ""
+#~ "Ve a :menuselection:`Contabilidad --> Clientes --> Mandatos de "
+#~ "domiciliación`."
+
+#~ msgid "Click :guilabel:`New` and fill out the fields."
+#~ msgstr "Haz clic en :guilabel:`Nuevo` y completa los campos."
+
+#~ msgid ""
+#~ "A valid IBAN must be defined in the :guilabel:`Account Number` field of "
+#~ "the :doc:`bank journal <../bank>` used to receive |sdd| payments for the "
+#~ "mandate."
+#~ msgstr ""
+#~ "Debe definirse un IBAN válido en el campo :guilabel:`Número de cuenta` "
+#~ "del :doc:`diario bancario <../bank>` utilizado para recibir pagos |sdd| "
+#~ "del mandato."
+
+#~ msgid ""
+#~ "The :guilabel:`SDD Scheme` depends on the type of customer: "
+#~ "Select :guilabel:`CORE` for B2C customers and :guilabel:`B2B` for B2B "
+#~ "customers."
+#~ msgstr ""
+#~ "El :guilabel:`Esquema SDD` depende del tipo de cliente: "
+#~ "selecciona :guilabel:`CORE` para clientes B2C y :guilabel:`B2B` para "
+#~ "clientes B2B."
+
+#~ msgid ""
+#~ "|sdd| mandates are closed automatically after their :guilabel:`End Date`. "
+#~ "If this field is left empty, the mandate remains active until it is "
+#~ "closed or revoked. To close or revoke a mandate, go "
+#~ "to :menuselection:`Accounting --> Customers --> Direct Debit Mandates`, "
+#~ "select the relevant mandate, and click :guilabel:`Close` "
+#~ "or :guilabel:`Revoke`."
+#~ msgstr ""
+#~ "Los mandatos |sdd| se cierran automáticamente después de "
+#~ "su :guilabel:`Fecha de finalización`. Si este campo se deja vacío, el "
+#~ "mandato permanece activo hasta que se cierra o revoca. Para cerrar o "
+#~ "revocar un mandato, ve a :menuselection:`Contabilidad --> Clientes --> "
+#~ "Mandatos de débito directo`, selecciona el mandato correspondiente y haz "
+#~ "clic en :guilabel:`Cerrar` o :guilabel:`Revocar`."
+
+#~ msgid "Processing |sdd| payments"
+#~ msgstr "Procesar pagos |sdd|"
+
+#~ msgid ""
+#~ "All registered |sdd| payments can be processed at once by uploading an "
+#~ "XML file containing a batch of all posted |sdd| payments to your online "
+#~ "banking interface. To do so, follow these steps:"
+#~ msgstr ""
+#~ "Todos los pagos |sdd| registrados se pueden procesar a la vez cargando un "
+#~ "archivo XML que contenga un lote de todos los pagos |sdd| contabilizados "
+#~ "en tu interfaz de banca en línea. Para hacerlo, sigue estos pasos:"
+
+#~ msgid ""
+#~ ":ref:`Create a batch payment <accounting/batch/creation>` and include the "
+#~ "|sdd| payments to collect."
+#~ msgstr ""
+#~ ":ref:`Crea un pago por lotes <accounting/batch/creation>` e incluye los "
+#~ "pagos |sdd| a cobrar."
+
+#~ msgid ""
+#~ "Once the |sdd| batch payment has been received, :doc:`reconcile the "
+#~ "transaction <../bank/reconciliation>` with the batch payment to mark the "
+#~ "related invoices as :guilabel:`Paid`."
+#~ msgstr ""
+#~ "Una vez que se haya recibido el pago por lotes |sdd|, :doc:`concilia la "
+#~ "transacción <../bank/reconciliation>` con el pago por lotes para marcar "
+#~ "las facturas relacionadas como :guilabel:`Pagadas`."
+
+#~ msgid ""
+#~ "To view the payments and invoices linked to a specific |sdd| mandate, "
+#~ "click the :guilabel:`Collections` and :guilabel:`Invoices Paid` smart "
+#~ "button on the :ref:`Direct Debit Mandate <accounting/batch_sdd/"
+#~ "sdd_mandates>` form."
+#~ msgstr ""
+#~ "Para ver los pagos y facturas vinculados a un mandato |sdd| específico, "
+#~ "haz clic en los botones inteligentes :guilabel:`Cobros` "
+#~ "y :guilabel:`Facturas pagadas` en el formulario de :ref:`Mandato de "
+#~ "débito directo <accounting/batch_sdd/sdd_mandates>`."
+
+#~ msgid ""
+#~ "The files generated by Odoo follow the SEPA Direct Debit "
+#~ "**PAIN.008.001.02** specifications, as required by the SEPA customer-to-"
+#~ "bank `implementation guidelines <https://www.europeanpaymentscouncil.eu/"
+#~ "document-library/implementation-guidelines/sepa-credit-transfer-customer-"
+#~ "psp-implementation>`_, which ensures compatibility with the banks."
+#~ msgstr ""
+#~ "Los archivos que Odoo generan siguen las especificaciones de "
+#~ "domiciliación bancaria SEPA **PAIN.008.001.02**, como lo requieren las "
+#~ "`reglas de implementación <https://www.europeanpaymentscouncil.eu/"
+#~ "document-library/implementation-guidelines/sepa-credit-transfer-customer-"
+#~ "psp-implementation>`_, de esta forma nos aseguramos de que sea compatible "
+#~ "con otros bancos."
+
+#~ msgid ""
+#~ "`SEPA guidelines <https://www.europeanpaymentscouncil.eu/document-library/"
+#~ "implementation-guidelines/sepa-credit-transfer-inter-psp-implementation-"
+#~ "guidelines>`_"
+#~ msgstr ""
+#~ "`Guías SEPA <https://www.europeanpaymentscouncil.eu/document-library/"
+#~ "implementation-guidelines/sepa-credit-transfer-inter-psp-implementation-"
+#~ "guidelines>`_"
+
+#~ msgid "|sdd| rejections"
+#~ msgstr "Rechazos |sdd|"
+
+#~ msgid ""
+#~ "|sdd| rejections can occur for several reasons, the most common being "
+#~ "insufficient funds in the customer's account. With |sdd|, the recipient's "
+#~ "account is credited before the funds are actually debited from the "
+#~ "customer's account. As a result, if an |sdd| payment is later rejected, "
+#~ "the bank automatically withdraws the amount of that payment from the "
+#~ "recipient's account, and a new transaction for a negative amount is "
+#~ "created to reflect the |sdd| rejection."
+#~ msgstr ""
+#~ "Los rechazos de |sdd| pueden ocurrir por varias razones, siendo la más "
+#~ "común la insuficiencia de fondos en la cuenta del cliente. Con |sdd|, la "
+#~ "cuenta del destinatario se acredita antes de que los fondos se debiten "
+#~ "realmente de la cuenta del cliente. Como resultado, si un pago |sdd| es "
+#~ "rechazado posteriormente, el banco retira automáticamente el importe de "
+#~ "ese pago de la cuenta del destinatario, y se crea una nueva transacción "
+#~ "por un importe negativo para reflejar el rechazo de |sdd|."
+
+#~ msgid "Access the invoice linked to the rejected |sdd| payment."
+#~ msgstr "Accede a la factura vinculada al pago |sdd| rechazado."
+
+#~ msgid ""
+#~ ":ref:`Access the bank journal's reconciliation view <accounting/"
+#~ "reconciliation/access>` and :ref:`reconcile <accounting/reconciliation/"
+#~ "reconcile>` the transaction created for the |sdd| rejection with the "
+#~ "reversal of the entry related to the payment."
+#~ msgstr ""
+#~ ":ref:`Accede a la vista de conciliación del diario bancario <accounting/"
+#~ "reconciliation/access>` y :ref:`concilia <accounting/reconciliation/"
+#~ "reconcile>` la transacción creada para el rechazo de |sdd| con la "
+#~ "reversión del asiento relacionado con el pago."
+
+#~ msgid "Forecast future bills to pay"
+#~ msgstr "Pronóstico de futuras facturas por pagar"
+
+#~ msgid ""
+#~ "In Odoo, you can manage payments by setting automatic **Payments Terms** "
+#~ "and **follow-ups**."
+#~ msgstr ""
+#~ "En Odoo, puede configurar **Términos de pago** y **seguimientos** "
+#~ "automáticos para gestionar los pagos."
+
+#~ msgid "Configuration: payment terms"
+#~ msgstr "Configuración: términos de pago"
+
+#~ msgid ""
+#~ "In order to track vendor conditions, we use **Payment Terms** in Odoo. "
+#~ "They allow keeping track of due dates on invoices. Examples of **Payment "
+#~ "Terms** are:"
+#~ msgstr ""
+#~ "Odoo usa los **términos de pago** para gestionar las condiciones de los "
+#~ "proveedores. Estas permiten llevar seguimiento de las fechas de "
+#~ "vencimiento de las facturas. Algunos ejemplos de **términos de pago** son:"
+
+#~ msgid "50% within 30 days"
+#~ msgstr "50% dentro de 30 días"
+
+#~ msgid "50% within 45 days"
+#~ msgstr "50% dentro de 45 días"
+
+#~ msgid ""
+#~ "To create them, go to :menuselection:`Accounting --> Configuration --> "
+#~ "Invoicing: Payment Terms` and click on :guilabel:`Create` to add new "
+#~ "terms or click existing ones to modify them."
+#~ msgstr ""
+#~ "Para crearlos, vaya a :menuselection:`Contabilidad --> Configuración --> "
+#~ "Facturación: términos de pago` y haga clic en :guilabel:`Crear` para "
+#~ "agregar nuevos términos. Para modificar los términos existentes solo haga "
+#~ "clic en ellos."
+
+#~ msgid ""
+#~ "`Odoo Tutorials: Payment Terms <https://www.odoo.com/slides/slide/payment-"
+#~ "terms-terms-and-conditions-6852>`_"
+#~ msgstr ""
+#~ "`Tutoriales de Odoo: Plazos de pago <https://www.odoo.com/slides/slide/"
+#~ "payment-terms-terms-and-conditions-6852>`_"
+
+#~ msgid ""
+#~ "Once **Payment Terms** are defined, you can assign them to your vendor by "
+#~ "default. To do so, go to :menuselection:`Vendors --> Vendors`, select a "
+#~ "vendor, click the :guilabel:`Sales & Purchase` tab, and select a specific "
+#~ "**Payment Term**. This way, every time you purchase from this vendor, "
+#~ "Odoo automatically proposes the chosen Payment Term."
+#~ msgstr ""
+#~ "Una vez que haya definido los **términos de pago** podrá asignarlos a un "
+#~ "proveedor para usarlos de forma predeterminada. Para ello, vaya "
+#~ "a :menuselection:`Proveedores --> Proveedores`, seleccione uno, haga clic "
+#~ "en la pestaña :guilabel:`Ventas y compra` y elija un **término de pago** "
+#~ "específico. De esta manera, cada vez que le compre a este proveedor, Odoo "
+#~ "propondrá el término de pago seleccionado en automático."
+
+#~ msgid ""
+#~ "If you do not set a specific Payment Term on a vendor, you can still set "
+#~ "one on the vendor bill."
+#~ msgstr ""
+#~ "Si no configura un término de pago específico en un proveedor, todavía "
+#~ "puede configurar una en la factura de un proveedor."
+
+#~ msgid "Forecast bills to pay with the aged payable report"
+#~ msgstr ""
+#~ "Pronóstico de las facturas a pagar con el reporte de cuentas antiguas por "
+#~ "pagar"
+
+#~ msgid ""
+#~ "To track amounts to be paid to the vendors, use the **Aged Payable** "
+#~ "report. To access it, go to :menuselection:`Accounting --> Reporting --> "
+#~ "Partner Reports: Aged Payable`. This report gives you a summary per "
+#~ "vendor of the amounts to pay, compared to their due date (the due date "
+#~ "being computed on each bill using the terms). This report tells you how "
+#~ "much you will have to pay within the following months."
+#~ msgstr ""
+#~ "Para rastrear las cantidades que se le deben de pagar a los proveedores, "
+#~ "use el reporte **Cuenta antigua por pagar**. Para acceder a él vaya "
+#~ "a :menuselection:`Contabilidad  --> Reportes --> Reportes de contactos: "
+#~ "Cuenta antigua por pagar`. Este reporte le brindará un resumen pro "
+#~ "proveedor de las cantidades por pagar, comparadas a la fecha límite (que "
+#~ "se calcula en cada factura usando los términos). Este reporte le indica "
+#~ "cuánto tendrá que pagar en los siguientes meses."
+
+#~ msgid "Select bills to pay"
+#~ msgstr "Seleccionar facturas por pagar"
+
+#~ msgid ""
+#~ "You can get a list of all your vendor bills by going "
+#~ "to :menuselection:`Vendors --> Bills`. To view only the bills that you "
+#~ "need to pay, click :menuselection:`Filters --> Bills to Pay`. To view "
+#~ "only overdue payments, select the :guilabel:`Overdue` filter instead."
+#~ msgstr ""
+#~ "Puede obtener una lista de sus facturas de proveedor "
+#~ "en :menuselection:`Proveedores --> Facturas`. Para ver solo las facturas "
+#~ "que necesita pagar, haga clic en :menuselection:`Filtros --> Facturas por "
+#~ "pagar`. Para ver solo los pagos que no se han realizado, seleccione el "
+#~ "filtro :guilabel:`Atrasado`."
+
+#~ msgid ""
+#~ "You can also group bills by their due date by "
+#~ "clicking :menuselection:`Group By --> Due Date` and selecting a time "
+#~ "period."
+#~ msgstr ""
+#~ "También puede agrupar facturas dependiendo de la fecha límite, para "
+#~ "hacerlo haga clic en :menuselection:`Agrupar por --> Fecha de "
+#~ "vencimiento` y seleccione un periodo."
+
+#~ msgid "Pay with SEPA"
+#~ msgstr "Pagos con SEPA"
+
+#~ msgid ""
+#~ "SEPA, the Single Euro Payments Area, is a payment-integration initiative "
+#~ "of the European Union to simplify bank transfers denominated in euros. "
+#~ "SEPA allows you to send payment orders to your bank to automate bank wire "
+#~ "transfers."
+#~ msgstr ""
+#~ "La Zona Única de Pagos en Euros, o SEPA, es una iniciativa de integración "
+#~ "de pagos de la Unión Europea que busca simplificar las transferencias "
+#~ "bancarias en euros. Con SEPA podrá enviar órdenes de pago a su banco para "
+#~ "automatizar las transferencias bancarias."
+
+#~ msgid ""
+#~ "SEPA is supported by the banks of the 27 EU member states, as well as:"
+#~ msgstr ""
+#~ "Los bancos de los 27 estados miembro de la UE aceptan SEPA, así como:"
+
+#~ msgid "EFTA countries:"
+#~ msgstr "Países en la Asociación Europea de Libre Comercio:"
+
+#~ msgid "Iceland;"
+#~ msgstr "Islandia,"
+
+#~ msgid "Liechtenstein;"
+#~ msgstr "Liechtenstein,"
+
+#~ msgid "Norway;"
+#~ msgstr "Noruega,"
+
+#~ msgid "Switzerland."
+#~ msgstr "Suiza."
+
+#~ msgid "Non-EEA SEPA countries:"
+#~ msgstr "Países en la SEPA que no pertenecen al Espacio Económico Europeo:"
+
+#~ msgid "Andorra;"
+#~ msgstr "Andorra,"
+
+#~ msgid "Monaco;"
+#~ msgstr "Monaco,"
+
+#~ msgid "San Marino;"
+#~ msgstr "San Marino,"
+
+#~ msgid "United Kingdom;"
+#~ msgstr "Reino Unido,"
+
+#~ msgid "Vatican City State."
+#~ msgstr "Estado de la Ciudad del Vaticano."
+
+#~ msgid "Non-EEA territories:"
+#~ msgstr "Territorios fuera del Espacio Económico Europeo:"
+
+#~ msgid "Saint-Pierre-et-Miquelon;"
+#~ msgstr "San Pedro y Miquelón,"
+
+#~ msgid "Guernsey;"
+#~ msgstr "Guernsey,"
+
+#~ msgid "Jersey;"
+#~ msgstr "Jersey,"
+
+#~ msgid "Isle of Man."
+#~ msgstr "Isla de Man."
+
+#~ msgid ""
+#~ "When paying a bill in Odoo, you can select SEPA mandates as a payment "
+#~ "option. At the end of the day, you can generate the SEPA file containing "
+#~ "all bank wire transfers and upload it to your online banking interface to "
+#~ "process the payments."
+#~ msgstr ""
+#~ "Al pagar una factura en Odoo puede seleccionar los mandatos SEPA como "
+#~ "opción de pago. Después, puede generar un archivo SEPA que incluya todas "
+#~ "las transferencias bancarias y subirlo a la interfaz de su banca en línea "
+#~ "para procesar los pagos."
+
+#~ msgid ""
+#~ "By default, the file follows the SEPA Credit Transfer "
+#~ "**'pain.001.001.03'** specifications. This is a well-defined standard "
+#~ "among banks. However, for Swiss and German companies, other formats are "
+#~ "used **'pain.001.001.03.ch.02'** for Switzerland and "
+#~ "**'pain.001.003.03'** for Germany."
+#~ msgstr ""
+#~ "De forma predeterminada, el archivo sigue las especificaciones de la "
+#~ "transferencia de crédito SEPA **'pain.001.001.03'**, que es una práctica "
+#~ "estándar definida entre los bancos. Sin embargo, para empresas en Suiza o "
+#~ "Alemania, se usan otros formatos. Para Suiza se usa "
+#~ "**'pain.001.001.03.ch.02'** y para Alemania se usa **'pain.001.003.03'**. "
+
+#~ msgid ""
+#~ "Once the payments are processed by your bank, you can directly import the "
+#~ "account statement in Odoo. The bank reconciliation process will "
+#~ "seamlessly match the SEPA orders you sent to your bank with actual bank "
+#~ "statements."
+#~ msgstr ""
+#~ "Una vez que su banco haya procesado los pagos, puede importar el estado "
+#~ "de cuenta directo a Odoo. El proceso de conciliación bancaria vinculará "
+#~ "las órdenes SEPA que envió a su banco con los respectivos estados de "
+#~ "cuenta."
+
+#~ msgid "Activate SEPA Credit Transfer (SCT)"
+#~ msgstr "Activar la transferencia de crédito SEPA (SCT)"
+
+#~ msgid ""
+#~ "To pay suppliers with SEPA, you must activate the **SEPA Credit "
+#~ "Transfer** setting. To do so, go to :menuselection:`Accounting --> "
+#~ "Configuration --> Settings --> Vendor Payments: SEPA Credit Transfer "
+#~ "(SCT)`. By activating the setting and filling out your company data, you "
+#~ "will be able to use the SCT option when paying your vendor."
+#~ msgstr ""
+#~ "Para pagarle a sus proveedores con SEPA, debe activar la **Transferencia "
+#~ "de Crédito SEPA**. Para hacerlo vaya a :menuselection:`Contabilidad --> "
+#~ "Configuración --> Ajustes --> Pagos de proveedor: Transferencia SEPA de "
+#~ "crédito (SCT)`. Al activar esta función y llenar los datos de su empresa, "
+#~ "podrá usar la opción SCT al pagarle a su proveedor."
+
+#~ msgid ""
+#~ "According to the localization package installed, the **SEPA Direct "
+#~ "Debit** and **SEPA Credit Transfer** modules may be installed by default. "
+#~ "If not, they need to be :ref:`installed <general/install>`."
+#~ msgstr ""
+#~ "Es posible que los módulos **Domiciliación bancaria SEPA** y "
+#~ "**Transferencias de crédito SEPA** ya estén instalados dependiendo del "
+#~ "paquete de localización que se instaló. Si no es así, "
+#~ "necesita :ref:`instalarlos <general/install>`."
+
+#~ msgid "Activate SEPA payment methods on banks"
+#~ msgstr "Activar métodos de pago SEPA en bancos"
+
+#~ msgid ""
+#~ "From the accounting dashboard, click on the drop-down menu "
+#~ "(:guilabel:`⋮`) on your bank journal and "
+#~ "select :guilabel:`Configuration`. Click the :guilabel:`Outgoing Payments` "
+#~ "tab, and, if not already present, add :guilabel:`SEPA Credit Transfer` "
+#~ "under :guilabel:`Payment Method`."
+#~ msgstr ""
+#~ "Desde el tablero de contabilidad, haga clic en el menú desplegable "
+#~ "(:guilabel:`⋮`) en su diario contable y "
+#~ "seleccione :guilabel:`Configuración`. Haga clic en la "
+#~ "pestaña :guilabel:`Pagos salientes` y agregue :guilabel:`Transferencia de "
+#~ "crédito SEPA` en :guilabel:`Método de pago`."
+
+#~ msgid ""
+#~ "Make sure to specify the IBAN account number (domestic account numbers do "
+#~ "not work with SEPA) and the BIC (bank identifier code) in "
+#~ "the :guilabel:`Journal Entries` tab."
+#~ msgstr ""
+#~ "Asegúrese de especificar el número IBAN de la cuenta (los números de "
+#~ "cuenta locales no funcionan con SEPA) y el BIC (código de identificación "
+#~ "bancaria) en la pestaña :guilabel:`Asientos contables`."
+
+#~ msgid ""
+#~ "You can register any vendor payments made with SEPA. To do so, go "
+#~ "to :menuselection:`Accounting --> Vendors --> Payments`. When creating "
+#~ "your payment, select :guilabel:`SEPA Credit Transfer` as "
+#~ "the :guilabel:`Payment Method`."
+#~ msgstr ""
+#~ "Puede registrar los pagos que ha realizado a sus proveedores mediante "
+#~ "SEPA. Para ello, vaya a :menuselection:`Contabilidad --> Proveedores --> "
+#~ "Pagos` y al crear el pago seleccione :guilabel:`Transferencia de crédito "
+#~ "SEPA` como :guilabel:`método de pago`."
+
+#~ msgid ""
+#~ "The first time you pay a vendor with SEPA, you have to fill in "
+#~ "the :guilabel:`Recipient Bank Account` field with the bank name, IBAN, "
+#~ "and BIC (Bank Identifier Code). Odoo automatically verifies if the IBAN "
+#~ "format is respected."
+#~ msgstr ""
+#~ "La primera vez que le pague a un proveedor con SEPA deberá completar el "
+#~ "campo :guilabel:`Cuenta bancaria receptora` con el nombre del banco, el "
+#~ "IBAN y el BIC (el código de identificación bancaria). Odoo verifica en "
+#~ "automático si se respeta el formato IBAN."
+
+#~ msgid ""
+#~ "For future payments to this vendor, Odoo will automatically suggest you "
+#~ "the bank account, but it remains possible to select a new one."
+#~ msgstr ""
+#~ "Para pagos futuros a este proveedor, Odoo le sugerirá de manera "
+#~ "automática la cuenta del banco, pero todavía puede elegir una nueva."
+
+#~ msgid "Trusted accounts (send money)"
+#~ msgstr "Cuentas confiables (enviar dinero)"
+
+#~ msgid ""
+#~ "To protect users from sending money to scammers, vendor bank account "
+#~ "numbers must be marked as trusted before you can use them to make an "
+#~ "outgoing payment."
+#~ msgstr ""
+#~ "Para proteger a los usuarios y evitar que envíen dinero a estafadores, "
+#~ "deben indicar que los números de las cuentas bancarias de sus proveedores "
+#~ "son confiables antes de poder utilizarlos para realizar un pago."
+
+#~ msgid ""
+#~ "To do so, open the vendor bank account and click on the :guilabel:`Send "
+#~ "Money` toggle switch button."
+#~ msgstr ""
+#~ "Abra la cuenta bancaria del proveedor correspondiente y haga clic sobre "
+#~ "el interruptor junto al texto :guilabel:`Enviar dinero`."
+
+#~ msgid ""
+#~ "Example of a vendor bank account with the \"Send Money\" toggle button "
+#~ "switched to \"trusted.\""
+#~ msgstr ""
+#~ "Ejemplo de una cuenta bancaria perteneciente a un proveedor con el botón "
+#~ "\"Enviar dinero\" con la opción \"confiable\" habilitada."
+
+#~ msgid "All accounts are initially marked as untrusted."
+#~ msgstr ""
+#~ "De forma predeterminada, al inicio todas las cuentas se establecen como "
+#~ "no confiable."
+
+#~ msgid "Elements to check"
+#~ msgstr "Elementos a verificar"
+
+#~ msgid ""
+#~ "There are several elements you can check by yourself when you receive an "
+#~ "outgoing payment request to a new account:"
+#~ msgstr ""
+#~ "Hay varios elementos que puede comprobar al recibir una solicitud de pago "
+#~ "a una nueva cuenta:"
+
+#~ msgid "Communication style"
+#~ msgstr "Estilo de la comunicación"
+
+#~ msgid ""
+#~ "Fraudulent emails and invoices often use a different communication style, "
+#~ "such as **different wording**, and may include **spelling and grammatical "
+#~ "mistakes**. Examine and **compare** them with previous ones that you know "
+#~ "to be authentic (e.g., payment instructions, language, company logo, "
+#~ "etc.).*"
+#~ msgstr ""
+#~ "Por lo general, los correos electrónicos o facturas que no son reales "
+#~ "usan un estilo de comunicación diferente, como una **redacción distinta** "
+#~ "y pueden incluir **errores ortográficos y gramaticales**. Examine y "
+#~ "**compare** con mensajes anteriores que sabe que son auténticos (por "
+#~ "ejemplo, instrucciones de pago, idioma, logotipo de la empresa, etc.)."
+
+#~ msgid "Urgency"
+#~ msgstr "Urgencia"
+
+#~ msgid ""
+#~ "Invoice frauds often use **urgent or threatening language** and change "
+#~ "the **payment deadline**. Check if you really received a late payment "
+#~ "reminder previously."
+#~ msgstr ""
+#~ "Es común que en la estafa de facturas se utilice un **lenguaje urgente o "
+#~ "amenazante** y que cambien la **fecha límite de pago**. Verifique que en "
+#~ "verdad haya recibido un recordatorio sobre un pago atrasado con "
+#~ "anterioridad."
+
+#~ msgid "Type of account"
+#~ msgstr "Tipo de cuenta"
+
+#~ msgid ""
+#~ "A company is unlikely to replace a bank account with a **money transfer "
+#~ "service**."
+#~ msgstr ""
+#~ "Es poco probable que una empresa sustituya una cuenta bancaria por un "
+#~ "**servicio de transferencia de dinero**."
+
+#~ msgid "Email and links domain names"
+#~ msgstr "Nombres de dominio en correos electrónicos y enlaces"
+
+#~ msgid ""
+#~ "Double-check the **email address domain** (`example@domain.com`). "
+#~ "However, be wary that fraudsters can make their email addresses look "
+#~ "genuine or even hack email addresses from your vendor's employees or even "
+#~ "someone within your own organization."
+#~ msgstr ""
+#~ "Verifique cuidadosamente el **dominio de la dirección de correo "
+#~ "electrónico** (`ejemplo@dominio.com`). Sin embargo, tenga cuidado, los "
+#~ "estafadores pueden hacer que sus direcciones de correo electrónico "
+#~ "parezcan reales. También existe la posibilidad de que hayan accedido de "
+#~ "forma ilegal a las direcciones de correo electrónico que pertenecen a los "
+#~ "empleados de sus proveedores o incluso de alguien dentro de su propia "
+#~ "empresa."
+
+#~ msgid ""
+#~ "Hover over the links in your email and check that the URLs they redirect "
+#~ "to are genuine. Your internet browser usually displays the link's target "
+#~ "at the bottom left of the window."
+#~ msgstr ""
+#~ "Pase el cursor por encima de los enlaces en su correo electrónico y "
+#~ "verifique que las URL a las que redirigen sean auténticas. Por lo "
+#~ "general, su navegador de internet muestra la dirección del enlace en la "
+#~ "parte inferior izquierda de la ventana."
+
+#~ msgid ""
+#~ ":guilabel:`Recipient Bank`: Indicates the account number to which the "
+#~ "payment will be made. This field is required when paying via batch "
+#~ "payment files (such as :ref:`NACHA <l10n_us/ach-electronic-transfers>` "
+#~ "and :doc:`SEPA <payments/pay_sepa>`)."
+#~ msgstr ""
+#~ ":guilabel:`Cuenta bancaria destinataria`: Indica el número de cuenta al "
+#~ "que se realizará el pago. Este campo es obligatorio cuando se paga "
+#~ "mediante archivos de pago por lotes (como :ref:`NACHA <l10n_us/ach-"
+#~ "electronic-transfers>` y :doc:`SEPA <payments/pay_sepa>`)."
+
+#~ msgid ":doc:`Europe's direct debiting <../accounting/payments/batch_sdd>`"
+#~ msgstr ""
+#~ ":doc:`Domiciliación bancaria en Europa <../accounting/payments/batch_sdd>`"
+
+#~ msgid ""
+#~ "SEPA Direct Debit (SDD) is a payment provider that allows future payments "
+#~ "to be collected from customers' bank accounts based on a "
+#~ "signed :ref:`SEPA Direct Debit mandate <accounting/batch_sdd/"
+#~ "sdd_mandates>`. This is particularly useful for recurring payments based "
+#~ "on a :doc:`subscription </applications/sales/subscriptions>`."
+#~ msgstr ""
+#~ "La domiciliación bancaria SEPA es un proveedor de pagos que permite "
+#~ "cobrar futuros pagos de las cuentas bancarias de los clientes basándose "
+#~ "en un :ref:`mandato de domiciliación bancaria SEPA <accounting/batch_sdd/"
+#~ "sdd_mandates>` firmado. Esto es particularmente útil para pagos "
+#~ "recurrentes basados en una :doc:`suscripción </applications/sales/"
+#~ "subscriptions>`."
+
+#~ msgid ""
+#~ "To use the SEPA Direct Debit (SDD) payment provider and create :ref:`SEPA "
+#~ "Direct Debit mandates <accounting/batch_sdd/sdd_mandates>`:"
+#~ msgstr ""
+#~ "Para utilizar el proveedor de pagos de domiciliación bancaria SEPA y "
+#~ "crear :ref:`mandatos de domiciliación bancaria SEPA <accounting/batch_sdd/"
+#~ "sdd_mandates>`:"
+
+#~ msgid ""
+#~ "The :guilabel:`SEPA Direct Deposit (SDD)` feature must be enabled, and "
+#~ "the company's :guilabel:`Creditor Identifier` must be defined in "
+#~ "the :ref:`Accounting or Invoicing settings <accounting/batch_sdd/sepa-"
+#~ "configuration>`."
+#~ msgstr ""
+#~ "La función :guilabel:`Domiciliación bancaria SEPA` debe estar habilitada, "
+#~ "y el :guilabel:`Identificador de acreedor` de la empresa debe estar "
+#~ "definido en la :ref:`configuración de Contabilidad o Facturación "
+#~ "<accounting/batch_sdd/sepa-configuration>`."
+
+#~ msgid ""
+#~ "Customers selecting |sdd| as a payment method are prompted to enter their "
+#~ "IBAN to complete the :ref:`SEPA Direct Debit mandate <accounting/"
+#~ "batch_sdd/sdd_mandates>`."
+#~ msgstr ""
+#~ "Los clientes que seleccionen |sdd| como método de pago deberán introducir "
+#~ "su IBAN para completar el :ref:`mandato de domiciliación bancaria SEPA "
+#~ "<accounting/batch_sdd/sdd_mandates>`."
+
+#~ msgid ""
+#~ "The |sdd| mandate is then automatically created in :guilabel:`Draft` "
+#~ "based on the provided IBAN. To validate the information, customers must "
+#~ "confirm each new mandate with a successful bank transfer of the expected "
+#~ "amount **using the specified payment reference (communication)** defined "
+#~ "in the :ref:`SEPA Direct Debit payment provider's form <sdd/"
+#~ "configuration>`. Once this initial payment is received "
+#~ "and :doc:`reconciled <../accounting/bank/reconciliation>`, the mandate is "
+#~ "automatically validated and updated to the :guilabel:`Active` status. "
+#~ "Once a mandate is active, it is reused for all subsequent payments made "
+#~ "with the |sdd| payment method. You can then collect them "
+#~ "by :ref:`uploading them to your online banking interface <accounting/"
+#~ "batch_sdd/XML>`."
+#~ msgstr ""
+#~ "El mandato |sdd| se crea entonces automáticamente en :guilabel:`Borrador` "
+#~ "basándose en el IBAN proporcionado. Para validar la información, los "
+#~ "clientes deben confirmar cada nuevo mandato con una transferencia "
+#~ "bancaria exitosa del importe esperado **utilizando la referencia de pago "
+#~ "especificada (comunicación)** definida en el :ref:`formulario del "
+#~ "proveedor de pagos de domiciliación bancaria SEPA <sdd/configuration>`. "
+#~ "Una vez que se recibe este pago inicial y se :doc:`concilia <../"
+#~ "accounting/bank/reconciliation>`, el mandato se valida automáticamente y "
+#~ "se actualiza al estado :guilabel:`Activo`. Una vez que un mandato está "
+#~ "activo, se reutiliza para todos los pagos posteriores realizados con el "
+#~ "método de pago |sdd|. Luego puedes cobrarlos :ref:`subiéndolos a tu "
+#~ "interfaz de banca en línea <accounting/batch_sdd/XML>`."
+
+#~ msgid ":doc:`../accounting/payments/batch_sdd`"
+#~ msgstr ":doc:`../accounting/payments/batch_sdd`"
+
+#~ msgid ""
+#~ "Mandates are automatically :ref:`closed <accounting/batch_sdd/close-"
+#~ "revoke-mandate>` 36 months after the date of the last collection."
+#~ msgstr ""
+#~ "Los mandatos se :ref:`cierran <accounting/batch_sdd/close-revoke-"
+#~ "mandate>` automáticamente 36 meses después de la fecha del último cobro."
 
 #~ msgid ""
 #~ "Install the 🇪🇸 **Spanish** :doc:`fiscal localization package <../"
