@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-12 17:30+0000\n"
+"POT-Creation-Date: 2026-06-19 17:31+0000\n"
 "PO-Revision-Date: 2026-04-30 23:11+0000\n"
 "Last-Translator: \"Larissa Manderfeld (lman)\" <lman@odoo.com>\n"
 "Language-Team: German <https://translate.odoo.com/projects/odoo-18-doc/sales/"
@@ -23022,8 +23022,8 @@ msgid ""
 "of a sales transaction. With a down payment, the buyer pays a portion of the "
 "total amount owed while agreeing to pay the remaining amount at a later "
 "date. In turn, the seller provides goods or services to the buyer upon or "
-"after accepting the down payment, trusting that the remaining amount will be "
-"paid later on."
+"after accepting the down payment, trusting that the remaining amount is paid "
+"later on."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:10
@@ -23035,10 +23035,19 @@ msgstr ""
 "Verkaufstransaktion angepasst werden."
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:14
+msgid ""
+"Down payment invoices are **not** the same as payment terms or installment "
+"plans. If a single invoice issued for a sales order requires multiple "
+"payment installments, that invoice uses a :doc:`payment term with an "
+"installment plan <../../../finance/accounting/customer_invoices/"
+"payment_terms>`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:20
 msgid "Create invoices"
 msgstr "Rechnungen erstellen"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:16
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:22
 msgid ""
 "When a sales order is confirmed, the option to create an invoice becomes "
 "available via the :guilabel:`Create Invoice` button. When clicked, "
@@ -23049,37 +23058,37 @@ msgstr ""
 msgid "Create invoice(s) pop-up form that appears in Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:23
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:29
 msgid ""
 "Invoices are automatically created as drafts so they can be reviewed before "
 "validation."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:25
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:31
 msgid ""
-"On the :guilabel:`Create invoice(s)` pop-up, there are 3 options to choose "
-"from in the :guilabel:`Create Invoice` field:"
+"On the :guilabel:`Create invoice(s)` pop-up, there are three options to "
+"choose from in the :guilabel:`Create Invoice` field:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:28
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:34
 msgid ":guilabel:`Regular invoice`"
 msgstr ":guilabel:`Reguläre Rechnung`"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:29
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:37
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:35
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:43
 msgid ":guilabel:`Down payment (percentage)`"
 msgstr ":guilabel:`Anzahlung (Prozent)`"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:30
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:38
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:36
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:44
 msgid ":guilabel:`Down payment (fixed amount)`"
 msgstr ":guilabel:`Anzahlung (fester Betrag)`"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:33
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:39
 msgid "Initial down payment request"
 msgstr "Anfängliche Anzahlungsanfrage"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:35
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:41
 msgid ""
 "On the :guilabel:`Create invoice(s)` pop-up window, the down payment options "
 "are:"
@@ -23087,13 +23096,13 @@ msgstr ""
 "Auf dem Pop-up-Formular :guilabel:`Rechnung(en) erstellen` sind die Optionen "
 "für Anzahlungen:"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:40
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:46
 msgid ""
 "Select a down payment option and set the desired payment, either as a "
 "percentage or a fixed amount, in the :guilabel:`Down Payment Amount` field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:43
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:49
 msgid ""
 "Once all fields are filled in, click the :guilabel:`Create Draft` button. "
 "Upon clicking this button, Odoo reveals the :guilabel:`Customer Invoice "
@@ -23103,7 +23112,7 @@ msgstr ""
 "Schaltfläche :guilabel:`Entwurf erstellen`. Wenn Sie auf diese Schaltfläche "
 "klicken, zeigt Odoo den :guilabel:`Entwurf der Kundenrechnung` an."
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:47
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:53
 msgid ""
 "If an :guilabel:`Invalid Operation` error appears, double-check that "
 "the :doc:`invoicing policy <invoicing_policy>` is configured correctly. In "
@@ -23111,40 +23120,77 @@ msgid ""
 "delivery before sending an invoice."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:51
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:57
 msgid ""
 "In the :guilabel:`Invoice Lines` tab of the :guilabel:`Customer Invoice "
-"Draft`, the down payment that was just configured in the :guilabel:`Create "
-"invoice(s)` pop-up form appears under a new :guilabel:`Down Payments` "
-"section."
+"Draft`, the down payment that was configured in the *Create invoice(s)* pop-"
+"up form appears under a new :guilabel:`Down Payments` section."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:58
-msgid "Example: requesting a 50% down payment"
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:64
+msgid "Types of down payments"
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:61
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:66
 msgid ""
-"The following example involves a 50% amount down payment on a "
-"(:guilabel:`Cabinet with Doors`) with :guilabel:`Ordered quantities` as "
-"the :guilabel:`Invoicing Policy`."
+"Odoo offers both fixed amounts and partial down payments (such as 30% of an "
+"order's total)."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:0
-msgid "Cabinet with doors product form showcasing various details and fields."
-msgstr ""
-"Produktformular für Schränke mit Türen, das verschiedene Details und Felder "
-"zeigt."
-
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:67
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:68
 msgid ""
-"Navigate to :menuselection:`Sales app --> New`, and add "
-"a :guilabel:`Customer` to the quotation. Then, click :guilabel:`Add a "
-"product` in the :guilabel:`Order Lines` tab, and select "
-"the :guilabel:`Cabinet with Doors` product. When the order is confirmed (via "
+"A 100% down payment is possible and differs from a full payment of the sales "
+"order. A sales order paid through the regular invoice process does not allow "
+"any additional invoices to be generated and does not display "
+"the :guilabel:`Create Invoice` button on the sales order."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:72
+msgid ""
+"With a 100% down payment, the :guilabel:`Create Invoice` button is still "
+"displayed on the sales Order because the system expects another invoice to "
+"be created after the down payment to complete payment of the sales order."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:76
+msgid "The following are two examples of down payment amounts:"
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:78
+msgid ""
+":ref:`Example 1: 50% down payment <sales/invoicing/50-percent-down-payments>`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:79
+msgid ""
+":ref:`Example 2: 100% down payment <sales/invoicing/100-percent-down-"
+"payments>`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:84
+msgid "Example 1: 50% down payment"
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:87
+msgid ""
+"This flow is also possible with the :guilabel:`Down payment (fixed amount)` "
+"option."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:89
+msgid ""
+"A customer is buying a luxury cabinet from a furniture store. The furniture "
+"store has configured the cabinet with an *Invoicing Policy* of *Ordered "
+"quantities*. The store requires a 50% down payment on all of its furniture "
+"products."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:93
+msgid ""
+"Navigate to :menuselection:`Sales app --> New`, and :ref:`create a quotation "
+"<sales/create-quotation>` for the cabinet. Once the order is confirmed (via "
 "the :guilabel:`Confirm` button), the quotation turns into a sales order. "
-"Once this occurs, create and view the invoice by clicking :guilabel:`Create "
-"Invoice`."
+"Create an invoice by clicking :guilabel:`Create Invoice`."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
@@ -23155,14 +23201,14 @@ msgstr ""
 "Verkaufsauftrag für Scharnk mit Türen, der in der Odoo-Verkaufsapp bestätigt "
 "wurde."
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:76
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:101
 msgid ""
-"Next, on the :guilabel:`Create invoice(s)` pop-up window that appears, "
+"On the :guilabel:`Create invoice(s)` pop-up window that appears, "
 "select :guilabel:`Down payment (percentage)`, and type `50` in "
 "the :guilabel:`Down Payment` field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:80
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:105
 msgid ""
 "The :guilabel:`Income Account` attached to the :guilabel:`Down payment` can "
 "be changed. For more information, check out the documentation "
@@ -23172,40 +23218,36 @@ msgid ""
 "down payments."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:85
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:110
 msgid ""
-"Lastly, click :guilabel:`Create Draft Invoice` to create and view the "
-"invoice draft, which includes the down payment under the :guilabel:`Down "
-"Payments` section of the :guilabel:`Invoice Lines` tab. From there, the "
-"invoice can be confirmed and posted by clicking :guilabel:`Confirm`. "
-"Confirming the invoice changes the status from :guilabel:`Draft` "
-"to :guilabel:`Posted`. It also reveals a new series of buttons at the top of "
-"the page."
+"Lastly, click :guilabel:`Create Draft` to create and view the invoice draft, "
+"which includes the down payment under the :guilabel:`Down Payments` section "
+"of the :guilabel:`Invoice Lines` tab. Click :guilabel:`Confirm` and the "
+"invoice's status changes from :guilabel:`Draft` to :guilabel:`Posted`. It "
+"also reveals a new series of buttons at the top of the page."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
 msgid "A sample draft invoice with down payment mentioned in Odoo Sales."
 msgstr "Ein Beispiel für einen Rechnungsentwurf mit Anzahlung in Odoo Verkauf."
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:94
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:118
 msgid ""
-"From those buttons, the payment can be registered by "
-"clicking :guilabel:`Pay`. Doing so reveals a :guilabel:`Pay` pop-up form, "
-"which is auto-populated with the necessary information. Confirm the "
-"information provided is correct, and make any necessary adjustments. When "
-"ready, click the :guilabel:`Create Payment` button."
+"To begin the payment process, click :guilabel:`Pay`. A :guilabel:`Pay` pop-"
+"up form displays with auto-populated information. Confirm the information "
+"provided is correct and make any necessary adjustments. When ready, click "
+"the :guilabel:`Create Payment` button."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
 msgid "Showcase of the Pay pop-up window with create payment button."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:102
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:125
 msgid ""
-"After clicking :guilabel:`Create Payment`, Odoo reveals the customer "
-"invoice, now with a green :guilabel:`In Payment` or :guilabel:`Paid` banner "
-"in the upper-right corner, depending on how the database has configured and "
-"if manual confirmation of payments is required."
+"The customer invoice changes status with a green :guilabel:`In Payment` "
+"or :guilabel:`Paid` banner in the upper-right corner, depending on how the "
+"database is configured and if manual confirmation of payments is required."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
@@ -23213,7 +23255,7 @@ msgid ""
 "Customer Invoice with a green Paid banner located in the upper-right corner."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:109
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:132
 msgid ""
 "On the sales order, a new :guilabel:`Down Payments` section is present in "
 "the :guilabel:`Order Lines` tab, along with the down payment that was just "
@@ -23227,11 +23269,11 @@ msgstr ""
 "Der Abschnitt „Anzahlungen“ im Reiter „Auftragspositionen“ eines "
 "Verkaufsauftrags."
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:116
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:139
 msgid ""
-"Next, click the :guilabel:`Create Invoice` button. On the :guilabel:`Create "
-"invoice(s)` pop-up window that appears, there is a new "
-"field: :guilabel:`Already invoiced` and :guilabel:`Amount to invoice`."
+"Click the :guilabel:`Create Invoice` button. On the :guilabel:`Create "
+"invoice(s)` pop-up window, there is a new field: :guilabel:`Already "
+"invoiced` and :guilabel:`Amount to invoice`."
 msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
@@ -23239,28 +23281,22 @@ msgid ""
 "The deduct down payment option on the Create invoice(s) pop up in Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:123
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:145
 msgid ""
-"If the remaining amount is ready to be paid, select the :guilabel:`Regular "
-"Invoice` option. Odoo will create an invoice for the exact amount needed to "
-"complete the total payment, as indicated in the :guilabel:`Amount to "
-"invoice` field."
-msgstr ""
-"Wenn der verbleibende Betrag zur Zahlung bereit ist, wählen Sie die "
-"Option :guilabel:`Reguläre Rechnung`. Odoo erstellt dann eine Rechnung über "
-"den genauen Betrag, der für die gesamte Zahlung erforderlich ist, wie im "
-"Feld :guilabel:`Rechnungsbetrag` angegeben."
-
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:127
-msgid ""
-"Once ready, click :guilabel:`Create Draft Invoice`. Doing so reveals "
-"another :guilabel:`Customer Invoice Draft` page, listing all the invoices "
-"for that specific sales order in the :guilabel:`Invoice Lines` tab. Each "
-"invoice line item displays all the necessary information related to each "
-"invoice."
+"Select the :guilabel:`Regular Invoice` option. Odoo creates an invoice for "
+"the exact amount needed to complete the total payment, as shown in "
+"the :guilabel:`Amount to invoice` field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:132
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:148
+msgid ""
+"Click :guilabel:`Create Draft` to create a :guilabel:`Customer Invoice "
+"Draft` page. The draft lists all the invoices for that specific sales order "
+"in the :guilabel:`Invoice Lines` tab. Each invoice line item displays all "
+"the necessary information related to each invoice."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:152
 msgid ""
 "To complete the flow, click :guilabel:`Confirm` to change the status of the "
 "invoice from :guilabel:`Draft` to :guilabel:`Posted`. Then, "
@@ -23273,7 +23309,7 @@ msgstr ""
 msgid "The second Pay pop-up form in Odoo sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:140
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:160
 msgid ""
 "After confirming that information, click :guilabel:`Create Payment`. Doing "
 "so reveals the final :guilabel:`Customer Invoice` with a green :guilabel:`In "
@@ -23287,68 +23323,53 @@ msgstr ""
 msgid "The second down payment invoice with Paid banner in Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:149
-msgid ""
-"At this point, the flow is now complete. This flow is also possible with "
-"the :guilabel:`Fixed amount` down payment option."
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:169
+msgid "At this point, the flow is complete."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:153
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:172
 msgid ""
 "If a down payment is used with a product that has a :guilabel:`Delivered "
 "quantities` invoicing policy, and the cost of the product exceeds the 50% "
 "down payment, a regular invoice is created. However, for products that cost "
 "less than the 50% down payment, the down payments will not be able to be "
-"deducted when it comes time to invoice the customer. This is because the "
-"product(s) would have to be delivered *before* creating the final invoice "
-"due to Odoo not allowing negative totals for invoices. If nothing has been "
-"delivered, a :guilabel:`Credit Note` is created, which cancels the draft "
-"invoice that was created after the down payment."
+"deducted when it comes time to invoice the customer."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:161
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:177
+msgid ""
+"This is because the product(s) would have to be delivered *before* creating "
+"the final invoice due to Odoo not allowing negative totals for invoices. If "
+"nothing has been delivered, a :guilabel:`Credit Note` is created, which "
+"cancels the draft invoice that was created after the down payment."
+msgstr ""
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:182
 msgid ""
 "To utilize the :guilabel:`Credit Note` option, the **Inventory** application "
 "must be installed in order to confirm the delivery. Otherwise, the delivered "
 "quantity can be entered manually directly on the sales order."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:168
-msgid "Example: requesting a 100% down payment"
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:189
+msgid "Example 2: 100% down payment"
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:170
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:191
 msgid ""
-"Requesting a 100% down payment is similar to requesting a :ref:`50% down "
-"payment <sales/invoicing/50-percent-down-payments>`, but with fewer steps."
+"A solar panel company sells an installation service for residential homes. "
+"All installation services require a 100% down payment to cover labor costs. "
+"The company prefers down payments as customers often require customization "
+"add-ons for the service."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:174
-msgid ""
-"A 100% down payment is not the same as a full payment of the sales order. A "
-"sales order paid through the regular invoice process will not allow any "
-"additional invoices to be generated and will not display "
-"the :guilabel:`Create Invoice` button on the Sales Order. Instead, following "
-"this example will cause the :guilabel:`Create Invoice` button to be "
-"displayed on the Sales Order. This is because the system expects another "
-"invoice to be created after the down payment to complete payment of the "
-"sales order."
-msgstr ""
-
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:181
-msgid "The *Solar Panel Installation* product is being used in this example."
-msgstr ""
-"Das Produkt *Installation von Solarmodulen* wird für dieses Beispiel "
-"verwendet."
-
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:183
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:195
 msgid ""
 "To configure a 100% down payment, navigate to :menuselection:`Sales app --> "
-"New` and add a :guilabel:`Customer` to the quote. Next, click :guilabel:`Add "
-"a product` in the :guilabel:`Order Lines` tab, and select the `Solar Panel "
-"Installation` product. Upon clicking the :guilabel:`Confirm` button, the "
-"quotation turns into a sales order. At that point, an invoice can now be "
-"created by clicking :guilabel:`Create Invoice` in the top-left corner. On "
+"New`, and :ref:`create a quotation <sales/create-quotation>` for the "
+"product. Upon clicking the :guilabel:`Confirm` button, the quotation turns "
+"into a sales order. At that point, an invoice can now be created by "
+"clicking :guilabel:`Create Invoice` in the top-left corner. On "
 "the :guilabel:`Create invoice(s)` pop-up window that appears, "
 "select :guilabel:`Down payment (percentage)`, and type `100` in "
 "the :guilabel:`Down Payment` field."
@@ -23360,18 +23381,18 @@ msgid ""
 "Payment."
 msgstr "Die ausgewählte Option „Anzahlung (Prozent)“ mit 100 % Anzahlung."
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:194
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:205
 msgid ""
-"Next, click :guilabel:`Create Draft Invoice` to create an invoice draft. "
-"This will also bring the draft invoice into view, which includes "
-"the :guilabel:`Down payment` under the :guilabel:`Down Payments` section of "
+"Next, click :guilabel:`Create Draft` to create an invoice draft. This will "
+"also bring the draft invoice into view, which includes the :guilabel:`Down "
+"payment` under the :guilabel:`Down Payments` section of "
 "the :guilabel:`Invoice Lines` tab. The invoice can now be confirmed and "
 "posted by clicking :guilabel:`Confirm`. Confirming the invoice changes the "
 "status from :guilabel:`Draft` to :guilabel:`Posted`. It also reveals a new "
 "series of buttons at the top of the page."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:200
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:211
 msgid ""
 "The payment can be registered by clicking the :guilabel:`Pay` button. This "
 "brings up the :guilabel:`Pay` pop-up form, which is auto-populated with the "
@@ -23379,7 +23400,7 @@ msgid ""
 "button."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:204
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:215
 msgid ""
 "After clicking :guilabel:`Create Payment`, Odoo reveals the customer "
 "invoice, now with a green :guilabel:`In Payment` or :guilabel:`Paid` banner "
@@ -23388,18 +23409,18 @@ msgid ""
 "and the 100% down payment has been successfully applied."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:212
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:223
 msgid "Income account modification on down payments"
 msgstr "Änderung des Ertragskontos auf Anzahlungen"
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:215
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:226
 msgid ""
 "To change or adjust the income account attached to down payments, the "
 "**Accounting** app must be installed. With the **Accounting** app installed, "
 "the :guilabel:`Accounting` column becomes available on the draft invoice."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:219
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:230
 msgid ""
 "Navigate to the invoice to be modified by going to :menuselection:`Sales app "
 "--> Orders --> Orders`. Open an order, then click the :guilabel:`Invoices` "
@@ -23417,12 +23438,16 @@ msgid ""
 "account."
 msgstr ""
 
-#: ../../content/applications/sales/sales/invoicing/down_payment.rst:231
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:242
 #: ../../content/applications/sales/sales/invoicing/milestone.rst:238
 #: ../../content/applications/sales/sales/invoicing/proforma.rst:71
 #: ../../content/applications/sales/sales/invoicing/time_materials.rst:166
 msgid ":doc:`invoicing_policy`"
 msgstr ":doc:`invoicing_policy`"
+
+#: ../../content/applications/sales/sales/invoicing/down_payment.rst:243
+msgid ":doc:`../../../finance/accounting/customer_invoices/payment_terms`"
+msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:3
 msgid "Invoicing policies"
@@ -30622,12 +30647,16 @@ msgstr ":doc:`../products_prices/loyalty_discount`"
 msgid ":doc:`../products_prices/prices/pricing`"
 msgstr ":doc:`../products_prices/prices/pricing`"
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:169
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:167
+msgid ":doc:`../../../essentials/product_catalog`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:170
 #: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:148
 msgid "Optional Products tab"
 msgstr "Reiter „Optionale Produkte“"
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:171
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:172
 msgid ""
 "Open the :guilabel:`Optional Products` tab to select related products that "
 "can be presented to the customer, which may result in an increased sale."
@@ -30636,7 +30665,7 @@ msgstr ""
 "auszuwählen, die dem Kunden präsentiert werden können, was zu einem erhöhten "
 "Verkauf führen kann."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:174
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:175
 msgid ""
 "For example, if the customer wants to buy a car, an optional product that "
 "could be offered is a *Trailer Hitch*."
@@ -30644,15 +30673,15 @@ msgstr ""
 "Wenn der Kunde z. B. ein Auto kaufen möchte, könnte ein optionales Produkt "
 "wie eine *Anhängerkupplung* angeboten werden."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:178
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:179
 msgid ":doc:`optional_products`"
 msgstr ":doc:`optional_products`"
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:181
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:182
 msgid "Other Info tab"
 msgstr "Reiter „Weitere Informationen“"
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:183
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:184
 msgid ""
 "In the :guilabel:`Other Info` tab, there are various quotation-related "
 "configurations separated into four different "
@@ -30664,7 +30693,7 @@ msgstr ""
 "sind: :guilabel:`Verkauf`, :guilabel:`Lieferung`, :guilabel:`Rechnungsstellung` "
 "und :guilabel:`Nachverfolgung`."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:188
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:189
 msgid ""
 "Some fields **only** appear if specific settings and options have been "
 "configured."
@@ -30672,12 +30701,12 @@ msgstr ""
 "Einige Felder erscheinen **nur**, wenn bestimmte Einstellungen und Optionen "
 "konfiguriert sind."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:191
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:192
 #: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder/add_pdf_products.rst:92
 msgid "Sales section"
 msgstr "Bereich „Verkauf“"
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:193
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:194
 msgid ""
 "In the :guilabel:`Sales` section of the :guilabel:`Other Info` tab, there "
 "are sales specific fields that can be configured."
@@ -30693,7 +30722,7 @@ msgstr ""
 "Der Abschnitt „Verkauf“ im Reiter „Weitere Informationen“ eines "
 "Angebotsformulars in Odoo Verkauf."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:200
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:201
 msgid ""
 ":guilabel:`Salesperson`: Assign a salesperson from the drop-down menu to be "
 "associated with this quotation. The user who originally created the "
@@ -30704,7 +30733,7 @@ msgstr ""
 "Benutzer, der das Angebot ursprünglich erstellt hat, ist in diesem Feld "
 "standardmäßig ausgewählt."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:202
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:203
 msgid ""
 ":guilabel:`Sales Team`: Assign a specific sales team to this quotation. If "
 "the selected :guilabel:`Salesperson` is a member of a sales team, that team "
@@ -30715,7 +30744,7 @@ msgstr ""
 "Mitglied eines Verkaufsteams ist, wird dieses Team automatisch in das Feld "
 "eingetragen."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:204
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:205
 msgid ""
 ":guilabel:`Company`: Select a company from the drop-down menu this quotation "
 "should be associated with. This field only appears when working in a multi-"
@@ -30725,7 +30754,7 @@ msgstr ""
 "aus, mit dem dieses Angebot verbunden werden sollte. Dieses Feld erscheint "
 "nur in einer Umgebung mit mehreren Unternehmen."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:206
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:207
 msgid ""
 ":guilabel:`Online signature`: Tick this checkbox to request an online "
 "signature from the customer to confirm the order. This field only appears if "
@@ -30735,7 +30764,7 @@ msgstr ""
 "Online-Signatur des Kunden zur Auftragsbestätigung anzufordern. Dieses Feld "
 "erscheint nur, wenn die Einstellung *Online-Signatur* aktiviert wurde."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:208
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:209
 msgid ""
 ":guilabel:`Online payment`: Tick this checkbox, and enter a desired "
 "percentage in the adjacent field, to request an online payment from the "
@@ -30749,7 +30778,7 @@ msgstr ""
 "Prozentsatz des Gesamtbetrags). Dieses Feld erscheint nur, wenn die "
 "Einstellung *Online-Zahlung* aktiviert wurde."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:212
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:213
 msgid ""
 ":guilabel:`Customer Reference`: Enter a custom reference ID for this "
 "customer. The entered reference ID can contain letters, numbers, or a mix of "
@@ -30759,7 +30788,7 @@ msgstr ""
 "für diesen Kunden ein. Die eingegebene Referenz-ID kann Buchstaben, Zahlen "
 "oder eine Mischung aus beidem enthalten."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:214
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:215
 msgid ""
 ":guilabel:`Tags`: Add specific tags to the quotation for added organization "
 "and enhanced searchability in the Odoo **Sales** application. Multiple tags "
@@ -30769,11 +30798,11 @@ msgstr ""
 "hinzu, um die Organisation und die Suchbarkeit in Odoo **Verkauf** zu "
 "verbessern. Bei Bedarf können mehrere Stichwörter hinzugefügt werden."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:218
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:219
 msgid "Delivery section"
 msgstr "Abschnitt „Lieferung“"
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:220
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:221
 msgid ""
 "In the :guilabel:`Delivery` section of the :guilabel:`Other Info` tab, there "
 "are delivery-specific fields that can be configured."
@@ -30789,7 +30818,7 @@ msgstr ""
 "Der Abschnitt „Lieferung“ im Reiter „Weitere Informationen“ eines "
 "Angebotsformulars in Odoo Verkauf."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:227
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:228
 msgid ""
 ":guilabel:`Shipping Weight`: Displays the weight of the items being shipped. "
 "This field is not modifiable. Product weight is configured on individual "
@@ -30799,7 +30828,7 @@ msgstr ""
 "an. Dieses Feld ist nicht änderbar. Das Produktgewicht wird auf den "
 "einzelnen Produktformularen konfiguriert."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:229
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:230
 msgid ""
 ":guilabel:`Incoterm`: Select an Incoterm (International Commerical Term) to "
 "use as predefined commerical terms for international transactions."
@@ -30808,7 +30837,7 @@ msgstr ""
 "Term) aus, der als vordefinierter Handelsbegriff für internationale "
 "Transaktionen verwendet werden soll."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:231
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:232
 msgid ""
 ":guilabel:`Incoterm Location`: If an Incoterm is being used, enter the "
 "international location in this field."
@@ -30816,7 +30845,7 @@ msgstr ""
 ":guilabel:`Incoterm-Standort`: Wenn ein Incoterm verwendet wird, geben Sie "
 "in diesem Feld den internationalen Standort an."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:233
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:234
 msgid ""
 ":guilabel:`Shipping Policy`: Select a desired shipping policy from the drop-"
 "down menu. If all products are delivered at once, the delivery order is "
@@ -30831,7 +30860,7 @@ msgstr ""
 "Optionen sind: :guilabel:`Sobald wie möglich` oder :guilabel:`Wenn alle "
 "Produkte bereit sind`."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:237
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:238
 msgid ""
 ":guilabel:`Delivery Date`: Click into the empty field to reveal a calendar "
 "popover, from which a customer delivery date can be selected. If no custom "
@@ -30843,11 +30872,11 @@ msgstr ""
 "kein benutzerdefiniertes Datum erforderlich ist, beziehen Sie sich auf "
 "das :guilabel:`Erwartete` Datum, das rechts neben diesem Feld aufgeführt ist."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:242
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:243
 msgid "Invoicing section"
 msgstr "Abschnitt „Rechnungsstellung“"
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:244
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:245
 msgid ""
 "In the :guilabel:`Invoicing` section of the :guilabel:`Other Info` tab, "
 "there are invoicing specific fields that can be configured."
@@ -30864,7 +30893,7 @@ msgstr ""
 "Der Abschnitt „Rechnungsstellung“ im Reiter „Weitere Informationen“ eines "
 "Angebotsformulars in Odoo Verkauf."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:251
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:252
 msgid ""
 ":guilabel:`Fiscal Position`: Select a fiscal position to be used to adapt "
 "taxes and accounts for particular customers or sales orders/invoices. The "
@@ -30881,7 +30910,7 @@ msgstr ""
 "die Steuern für diesen besonderen Kunden und das Angebot aktualisiert. "
 "Außerdem wird ein Bestätigungsfenster angezeigt."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:256
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:257
 msgid ""
 ":guilabel:`Analytic Account`: Select an analytic account to apply to this "
 "customer/quotation."
@@ -30889,11 +30918,11 @@ msgstr ""
 ":guilabel:`Kostenstelle`: Wählen Sie eine Kostenstelle aus, die für diesen "
 "Kunden bzw. dieses Angebot gilt."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:259
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:260
 msgid "Tracking section"
 msgstr "Abschnitt „Nachverfolgung“"
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:261
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:262
 msgid ""
 "In the :guilabel:`Tracking` section of the :guilabel:`Other Info` tab, there "
 "are tracking specific fields that can be configured."
@@ -30909,7 +30938,7 @@ msgstr ""
 "Der Abschnitt „Nachverfolgung“ im Reiter „Weitere Informationen“ eines "
 "Angebotsformulars in Odoo Verkauf."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:268
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:269
 msgid ""
 ":guilabel:`Source Document`: Enter the reference of the document that "
 "generated the quotation/sales order, if applicable."
@@ -30917,7 +30946,7 @@ msgstr ""
 ":guilabel:`Referenzbeleg`: Geben Sie die Referenz des Dokuments ein, das "
 "dieses Angebot bzw. diesen Verkaufsauftrag generiert hat (falls zutreffend)."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:270
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:271
 msgid ""
 ":guilabel:`Opportunity`: Select the specific opportunity (from the **CRM** "
 "app) related to this quotation, if applicable."
@@ -30925,7 +30954,7 @@ msgstr ""
 ":guilabel:`Verkaufschance`: Wählen Sie die spezifische Verkaufschance (über "
 "die **CRM**-App), die mit diesem Angebot verbunden ist (falls zutreffend)."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:272
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:273
 msgid ""
 ":guilabel:`Campaign`: Select the marketing campaign related to this "
 "quotation, if applicable."
@@ -30933,7 +30962,7 @@ msgstr ""
 ":guilabel:`Kampagne`: Wählen Sie die spezifische Marketingkampagne, die mit "
 "diesem Angebot verbunden ist (falls zutreffend)."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:273
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:274
 msgid ""
 ":guilabel:`Medium`: Select the method by which this quotation originated "
 "(e.g. *Email*), if applicable."
@@ -30941,7 +30970,7 @@ msgstr ""
 ":guilabel:`Medium`: Wählen Sie gegebenenfalls die Methode aus, über die "
 "dieses Angebot erstellt wurde (z. B. *E-Mail*)."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:275
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:276
 msgid ""
 ":guilabel:`Source`: Select the source of the link used to generate this "
 "quotation (e.g. *Facebook*), if applicable."
@@ -30949,15 +30978,15 @@ msgstr ""
 ":guilabel:`Quelle`: Wählen Sie die Quelle des Links aus, der zur Generierung "
 "dieses Angebots verwendet wurde (z. B. *Facebook*), falls zutreffend."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:279
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:280
 msgid ":doc:`../../../websites/website/reporting/link_tracker`"
 msgstr ":doc:`../../../websites/website/reporting/link_tracker`"
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:282
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:283
 msgid "Notes tab"
 msgstr "Reiter „Notizen“"
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:284
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:285
 msgid ""
 "In the :guilabel:`Notes` tab of the quotation form, enter any specific "
 "internal notes about the quotation and/or customer, if desired."
@@ -30965,11 +30994,11 @@ msgstr ""
 "Geben Sie im Reiter :guilabel:`Notizen` des Angebotsformulars gegebenenfalls "
 "spezifische interne Notizen zum Angebot und/oder Kunden ein."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:290
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:291
 msgid "Sending and confirming quotations"
 msgstr "Angebote senden und bestätigen"
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:292
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:293
 msgid ""
 "Once all the necessary fields and tabs have been configured, it is time to "
 "send the quotation to the customer for confirmation. Upon confirmation, the "
@@ -30979,11 +31008,11 @@ msgstr ""
 "der Zeit, das Angebot zur Bestätigung an den Kunden zu senden. Nach der "
 "Bestätigung wird das Angebot zu einem offiziellen Verkaufsauftrag."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:295
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:296
 msgid "At the top of the form, there is a series of buttons:"
 msgstr "Oben auf dem Formular stehen einige Schaltflächen zur Verfügung:"
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:297
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:298
 msgid ""
 ":guilabel:`Send by Email`: When clicked, a pop-up window appears with the "
 "customer's name and email address in the :guilabel:`Recipients` field, the "
@@ -30996,8 +31025,8 @@ msgstr ""
 "Feld :guilabel:`Betreff` und einer kurzen Standardnachricht im Text der E-"
 "Mail, die bei Bedarf geändert werden kann."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:302
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:310
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:303
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:311
 msgid ""
 "Below that, a PDF copy of the quotation is attached. When ready, "
 "click :guilabel:`Send` to send the quotation, via email, to the customer, so "
@@ -31007,7 +31036,7 @@ msgstr ""
 "klicken Sie auf :guilabel:`Senden`, um das Angebot per E-Mail an den Kunden "
 "zu senden, damit er es überprüfen und bestätigen kann."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:304
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:305
 msgid ""
 ":guilabel:`Send PRO-FORMA Invoice`: This button **only** appears if the *Pro-"
 "Forma Invoice* setting has been enabled. When clicked, a pop-up window "
@@ -31023,7 +31052,7 @@ msgstr ""
 "(und der Referenz-ID) im Feld :guilabel:`Betreff` und einer kurzen "
 "Standardnachricht im Text der E-Mail, die bei Bedarf geändert werden kann."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:312
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:313
 msgid ""
 ":guilabel:`Confirm`: When clicked, the quotation is confirmed, and the "
 "status changes to :guilabel:`Sales Order`."
@@ -31031,7 +31060,7 @@ msgstr ""
 ":guilabel:`Bestätigen`: Wenn Sie darauf klicken, wird das Angebot bestätigt "
 "und der Status ändert auf :guilabel:`Verkaufsauftrag`."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:314
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:315
 msgid ""
 ":guilabel:`Preview`: When clicked, Odoo reveals a preview of the quotation "
 "the customer sees when they log into their customer portal. Click "
@@ -31044,12 +31073,12 @@ msgstr ""
 "Bearbeitungsmodus` oben auf der Vorschausseite im blauen Banner, um zum "
 "Angebotsformular zurückzukehren."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:317
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:318
 msgid ":guilabel:`Cancel`: When clicked, the quotation is canceled."
 msgstr ""
 ":guilabel:`Stornieren`: Wenn Sie darauf klicken, wird das Angebot storniert."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:320
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:321
 msgid ""
 "If the *Lock Confirmed Sales* setting is enabled, the sales order "
 "becomes :guilabel:`Locked`, and is indicated as such on the sales order form."
@@ -31058,7 +31087,7 @@ msgstr ""
 "Verkaufsauftrag als :guilabel:`Gesperrt` auf dem Verkaufsauftragsformular "
 "angezeigt."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:323
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:324
 msgid ""
 "At this point, the quotation has been confirmed, turned into a sales order, "
 "and is now ready to be invoiced and paid for."
@@ -31066,7 +31095,7 @@ msgstr ""
 "Zu diesem Zeitpunkt wurde das Angebot bestätigt, in einen Verkaufsauftrag "
 "umgewandelt und ist nun bereit, in Rechnung gestellt und bezahlt zu werden."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:326
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:327
 msgid ""
 "For more information about invoicing, refer to the :doc:`Invoice based on "
 "delivered or ordered quantities <../invoicing/invoicing_policy>`"
@@ -31075,7 +31104,7 @@ msgstr ""
 "basierend auf gelieferten oder bestellten Mengen <../invoicing/"
 "invoicing_policy>`."
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:330
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:331
 #: ../../content/applications/sales/sales/sales_quotations/deadline.rst:56
 #: ../../content/applications/sales/sales/sales_quotations/get_paid_to_validate.rst:89
 #: ../../content/applications/sales/sales/sales_quotations/get_signature_to_validate.rst:85
@@ -31083,27 +31112,27 @@ msgstr ""
 msgid ":doc:`quote_template`"
 msgstr ":doc:`quote_template`"
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:331
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:332
 msgid ":doc:`deadline`"
 msgstr ":doc:`deadline`"
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:332
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:333
 #: ../../content/applications/sales/sales/sales_quotations/get_paid_to_validate.rst:90
 #: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:248
 msgid ":doc:`get_signature_to_validate`"
 msgstr ":doc:`get_signature_to_validate`"
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:333
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:334
 #: ../../content/applications/sales/sales/sales_quotations/get_signature_to_validate.rst:86
 #: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:249
 msgid ":doc:`get_paid_to_validate`"
 msgstr ":doc:`get_paid_to_validate`"
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:334
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:335
 msgid ":doc:`pdf_quote_builder`"
 msgstr ":doc:`pdf_quote_builder`"
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:335
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:336
 msgid ":doc:`../invoicing/proforma`"
 msgstr ":doc:`../invoicing/proforma`"
 
@@ -36421,7 +36450,7 @@ msgstr ""
 #: ../../content/applications/sales/subscriptions/closing.rst:103
 #: ../../content/applications/sales/subscriptions/renewals.rst:56
 #: ../../content/applications/sales/subscriptions/reports.rst:403
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:195
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:186
 #: ../../content/applications/sales/subscriptions/upselling.rst:107
 msgid ":doc:`../subscriptions`"
 msgstr ":doc:`../subscriptions`"
@@ -38017,37 +38046,30 @@ msgstr ""
 msgid ""
 "In Odoo, some scheduled actions are active, by default, to ensure that "
 "certain functions are triggered automatically, however there are *also* many "
-"scheduled action options that appear in the database that are **not** "
-"activated by default."
+"scheduled action options that appear in the In Odoo, some scheduled actions "
+"are active by default to ensure that certain functions are triggered "
+"automatically. However, there are *also* many scheduled action options that "
+"appear in the database that are **not** activated by default."
 msgstr ""
-"In Odoo sind einige geplante Aktionen standardmäßig aktiv, um "
-"sicherzustellen, dass bestimmte Funktionen automatisch ausgelöst werden, "
-"obwohl es *auch* viele geplante Aktionsoptionen in der Datenbank gibt, die "
-"**nicht** standardmäßig aktiviert sind."
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:13
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:15
 msgid ""
-"In Odoo *Subscriptions*, there are two scheduled actions that initiate the "
+"In Odoo **Subscriptions**, there are two scheduled actions that initiate the "
 "billing process for active recurring subscriptions, as well as when billing "
 "should stop due to subscription expiration."
 msgstr ""
-"In Odoo *Abonnements* gibt es zwei geplante Aktionen, die den "
-"Rechnungsstellungsprozess für aktive wiederkehrende Abonnements starten und "
-"die Rechnungsstellung bei Abonnementauslauf stoppen."
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:16
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:18
 msgid ""
-"They are turned on, by default and can be deactivated at any time in order "
-"to manage subscriptions manually."
+"They are turned on by default and can be deactivated at any time in order to "
+"manage subscriptions manually."
 msgstr ""
-"Sie sind standardmäßig aktiviert und können jederzeit deaktiviert werden, um "
-"Abonnements manuell zu verwalten"
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:20
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:22
 msgid "Access scheduled actions"
 msgstr "Geplante Aktionen aufrufen"
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:23
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:25
 msgid ""
 "In order to access scheduled actions, :ref:`developer mode <developer-mode>` "
 "**must** be activated."
@@ -38055,7 +38077,7 @@ msgstr ""
 "Um auf geplante Aktionen zuzugreifen, **muss** der :ref:`Entwicklermodus "
 "<developer-mode>` aktiviert sein."
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:26
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:28
 msgid ""
 "With developer mode activated, navigate to :menuselection:`Settings app --> "
 "Technical --> Scheduled Actions`."
@@ -38070,7 +38092,7 @@ msgid ""
 msgstr ""
 "Die Option „Geplante Aktionen“ im „Technisch“-Menü in den Odoo-Einstellungen."
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:33
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:34
 msgid ""
 "Doing so reveals a dedicated :guilabel:`Scheduled Actions` dashboard. On "
 "this page, there is a complete list of scheduled actions for the entire "
@@ -38080,25 +38102,27 @@ msgstr ""
 "Auf dieser Seite finden Sie eine vollständige Liste der geplanten Aktionen "
 "für die gesamte Datenbank."
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:36
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:37
 msgid ""
-"From here, enter `Subscription` in the search bar. Doing so provides three "
+"From here, enter `Subscription` in the search bar. Doing so provides four "
 "subscription-specific results. The following documentation focuses on the "
-"last two results in the list:"
+"last three results in the list:"
 msgstr ""
-"Geben Sie hier `Abonnement` in die Suchleiste ein. Auf diese Weise erhalten "
-"Sie drei abonnementspezifische Ergebnisse. Die folgende Dokumentation "
-"konzentriert sich auf die letzten beiden Ergebnisse in der Liste:"
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:39
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:40
 msgid ":guilabel:`Sale Subscription: generate recurring invoices and payments`"
 msgstr ""
 ":guilabel:`Verkaufsabonnement: wiederkehrende Rechnungen und Zahlungen "
 "erstellen`"
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:40
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:41
 msgid ":guilabel:`Sale Subscription: subscriptions expiration`"
 msgstr ":guilabel:`Verkaufsabonnement: Ablauf des Abonnements`"
+
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:42
+msgid ""
+":guilabel:`Sale Subscription: send reminder for subscriptions with no token`"
+msgstr ""
 
 #: ../../content/applications/sales/subscriptions/scheduled_actions.rst:None
 msgid ""
@@ -38108,44 +38132,31 @@ msgstr ""
 "Die abonnementbezogenen Ergebnisse auf der Seite der geplanten Aktionen in "
 "Odoo Einstellungen."
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:46
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:47
 msgid ""
 "Determine if a scheduled action is active by looking under "
 "the :guilabel:`Active` column, in the corresponding row on "
-"the :guilabel:`Scheduled Actions` dashboard, for a ticked checkbox; if the "
+"the :guilabel:`Scheduled Actions` dashboard, for a selected checkbox; if the "
 "checkbox is green with a check mark, the scheduled action is active."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:50
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:51
 msgid ""
 "If a scheduled action needs to be activated, click into the desired "
-"scheduled action from the list."
+"scheduled action from the list. Then, from the scheduled action form, toggle "
+"the switch in the :guilabel:`Active` field to the right. Doing so turns the "
+"switch green, indicating that the scheduled action is now `Active`."
 msgstr ""
-"Wenn eine geplante Aktion aktiviert werden muss, klicken Sie auf die "
-"gewünschte geplante Aktion aus der Liste."
 
 #: ../../content/applications/sales/subscriptions/scheduled_actions.rst:None
 msgid "The scheduled action form in the Odoo Settings application."
 msgstr "Das Formular „Geplante Aktionen“ in den Odoo-Einstellungen."
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:55
-msgid ""
-"Then, from the scheduled action form, toggle the switch in "
-"the :guilabel:`Active` field to the right. Doing so turns the switch green, "
-"indicating that the scheduled action is now `Active`."
-msgstr ""
-"Schieben Sie dann im Formular für die geplante Aktion den Schalter im "
-"Feld :guilabel:`Aktiv` nach rechts. Dadurch wird der Schalter grün und zeigt "
-"an, dass die geplante Aktion jetzt `Aktiv` ist."
-
 #: ../../content/applications/sales/subscriptions/scheduled_actions.rst:58
 msgid ""
 "The ability to set up how often the scheduled action runs is also available "
-"on the scheduled action form, in the :guilabel:`Execute Every` field."
+"on the scheduled action form in the :guilabel:`Execute Every` field."
 msgstr ""
-"Die Möglichkeit, festzulegen, wie oft die geplante Aktion ausgeführt werden "
-"soll, ist auch im Formular für geplante Aktionen im "
-"Feld :guilabel:`Ausführen alle` verfügbar."
 
 #: ../../content/applications/sales/subscriptions/scheduled_actions.rst:62
 msgid ""
@@ -38203,7 +38214,7 @@ msgstr ""
 "Die notwendigen Einstellungen für ein späteres Konto auf der "
 "Einstellungsseite der Odoo-Buchhaltungsapp."
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:84
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:83
 msgid ""
 "Once the correct accounts are entered in the :guilabel:`Deferred Expense` "
 "and :guilabel:`Deferred Revenue` drop-down menu fields, "
@@ -38213,11 +38224,11 @@ msgstr ""
 "Rechnungsabgrenzung` und :guilabel:`Passive Rechnungsabgrenzung` eingegeben "
 "haben, klicken Sie auf :guilabel:`Speichern` in der oberen linken Ecke."
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:88
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:87
 msgid "Create invoice"
 msgstr "Rechnung erstellen"
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:90
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:89
 msgid ""
 "Elements related to the :guilabel:`Sale Subscription: generate recurring "
 "invoices and payments` scheduled action can be found on confirmed "
@@ -38227,7 +38238,7 @@ msgstr ""
 "wiederkehrende Rechnungen und Zahlungen generieren` verbunden sind, finden "
 "Sie auf bestätigten Abo-Verkaufsaufträgen."
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:93
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:92
 msgid ""
 "To examine these elements, open any confirmed sales order in the "
 "*Subscriptions* application to reveal the subscription sales order form."
@@ -38236,29 +38247,24 @@ msgstr ""
 "der *Abonnements*-App, um das Verkaufsauftragsformular des Abonnements zu "
 "öffnen."
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:96
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:95
 msgid ""
 "On a confirmed subscription sales order form, focus on "
-"the :guilabel:`Recurring Plan` and :guilabel:`Date of Next Invoice` fields."
+"the :guilabel:`Recurring Plan` and :guilabel:`Next Invoice` fields."
 msgstr ""
-"Konzentrieren Sie sich in einem Formular für bestätigte Abonnementaufträge "
-"auf die Felder :guilabel:`Wiederkehrender Plan` und :guilabel:`Datum der "
-"nächsten Rechnung`."
 
 #: ../../content/applications/sales/subscriptions/scheduled_actions.rst:None
 msgid ""
 "A confirmed subscription sales order in the Odoo Subscriptions application."
 msgstr "Ein Verkaufsauftrag eines bestätigten Abonnements in Odoo Abonnements."
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:103
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:101
 msgid ""
 "The scheduled action creates an invoice when today's date is the same date "
-"as the :guilabel:`Date of Next Invoice`."
+"as the :guilabel:`Next Invoice`."
 msgstr ""
-"Die geplante Aktion erstellt eine Rechnung, wenn das heutige Datum "
-"das :guilabel:`Datum der nächsten Rechnung` ist."
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:106
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:104
 msgid ""
 "Odoo uses the information in the :guilabel:`Recurring Plan` field to update "
 "the next invoice date accordingly."
@@ -38266,7 +38272,7 @@ msgstr ""
 "Odoo verwendet die Information im Feld :guilabel:`Wiederkehrender Plan`, um "
 "das nächste Rechnungsdatum entsprechend zu aktualisieren."
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:110
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:108
 msgid ""
 "If the product invoicing policy is set to *Based on Delivered Quantities "
 "(Manual)*, and the delivered quantity is `0`, Odoo does **not** create an "
@@ -38276,7 +38282,7 @@ msgstr ""
 "Mengen (manuell)* eingestellt ist und die gelieferte Menge `0` ist, erstellt "
 "Odoo **keine** Rechnung und der Kunde wird nicht belastet."
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:113
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:111
 msgid ""
 "Instead, the subscription is processed as a free recurring product, and is "
 "reflected as such in the *chatter* of the subscription sales order."
@@ -38284,7 +38290,7 @@ msgstr ""
 "Stattdessen wird das Abonnement als kostenloses, wiederkehrendes Produkt "
 "verarbeitet und als solches im *Chatter* des Abonnementauftrags angezeigt."
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:116
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:114
 msgid ""
 "When this occurs, the following message appears: `Automatic renewal "
 "succeeded. Free subscription. Next invoice:[date]. No email sent.`"
@@ -38293,7 +38299,7 @@ msgstr ""
 "erfolgreich. Kostenloses Abonnement. Nächste Rechnung:[date]. Keine E-Mail "
 "gesendet.`"
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:119
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:117
 msgid ""
 "Once the invoice for the subscription sales order is created, the invoice "
 "can be viewed by clicking the :guilabel:`Invoices` smart button that appears "
@@ -38304,7 +38310,7 @@ msgstr ""
 "Schaltfläche :guilabel:`Rechnungen` klicken, die oben auf dem "
 "Abonnementauftrag erscheint."
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:122
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:120
 msgid ""
 "An email is sent to the customer notifying them of the recurring "
 "subscription charge, *if* there is a :guilabel:`Payment Token` on the "
@@ -38314,24 +38320,21 @@ msgstr ""
 "Abonnementgebühr informiert wird, *wenn* ein :guilabel:`Zahlungstoken` auf "
 "dem Konto vorhanden ist."
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:125
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:123
 msgid ""
 "To check if there is a :guilabel:`Payment Token`, open the :guilabel:`Other "
-"Info` tab, and look at the :guilabel:`Payment Token` field, under "
-"the :guilabel:`Subscription` section."
+"Info` tab of the subscription form, and check the :guilabel:`Payment Token` "
+"field, under the :guilabel:`Subscription` section."
 msgstr ""
-"Um zu überprüfen, ob ein :guilabel:`Zahlungstoken` vorhanden ist, öffnen Sie "
-"den Reiter :guilabel:`Weitere Informationen` und sehen Sie sich das "
-"Feld :guilabel:`Zahlungstoken` unter dem Abschnitt :guilabel:`Abonnement` an."
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:128
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:127
 msgid ""
-"If there is no :guilabel:`Payment Token`, the invoice is created, and sent "
-"to the customer. The payment **must** be registered manually in this case."
+"If there is no :guilabel:`Payment Token`, the system uses "
+"the :guilabel:`Sale Subscription: send reminder for subscriptions with no "
+"token` scheduled action to send a payment reminder email to the subscriber. "
+"After the subscriber has manually made a payment, an invoice is generated "
+"for the subscription."
 msgstr ""
-"Wenn es kein :guilabel:`Zahlungstoken` gibt, wird die Rechnung erstellt und "
-"an den Kunden gesendet. In diesem Fall **muss** die Zahlung manuell "
-"registriert werden."
 
 #: ../../content/applications/sales/subscriptions/scheduled_actions.rst:None
 msgid ""
@@ -38343,10 +38346,11 @@ msgstr ""
 
 #: ../../content/applications/sales/subscriptions/scheduled_actions.rst:136
 msgid ""
-"If the :guilabel:`Online payment` checkbox is ticked on the :guilabel:`Other "
-"Info` tab, invoices are **not** automatically generated by the scheduled "
-"action on the date of the next invoice. Instead, invoices are generated when "
-"the client completes the manual payments for the subscription."
+"If the :guilabel:`Online payment` checkbox is selected on "
+"the :guilabel:`Other Info` tab, invoices are **not** automatically generated "
+"by the scheduled action on the date of the next invoice. Instead, invoices "
+"are generated when the client completes the manual payments for the "
+"subscription."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/scheduled_actions.rst:141
@@ -38429,7 +38433,7 @@ msgid ""
 "The expiration date on a subscription sales order in Odoo Subscriptions."
 msgstr "Das Ablaufdatum auf einem Abo-Verkaufsauftrags mit Odoo Abonnements."
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:172
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:171
 msgid ""
 "Then, the :guilabel:`Sale Subscription: subscriptions expiration` scheduled "
 "action checks if the invoice has not been paid within the payment terms "
@@ -38439,55 +38443,25 @@ msgstr ""
 "Abonnements`, ob die Rechnung nicht innerhalb der Zahlungsfrist bezahlt "
 "wurde."
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:175
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:174
 msgid ""
-"To access the invoices attached to a subscription, access the sales order "
-"for the subscription product, and click the :guilabel:`Invoices` smart "
-"button. Then, look at the :guilabel:`Invoice Date` column."
+"To access the invoices attached to a subscription that's been invoiced "
+"multiple times, go to the sales order for the subscription and click "
+"the :guilabel:`Invoices` smart button. Then, look at the :guilabel:`Invoice "
+"Date` column. Unpaid subscriptions with an :guilabel:`Invoice Date` that are "
+"past the determined number of days in the :guilabel:`Automatic Closing` "
+"field of a :guilabel:`Recurring Plan` are automatically closed by "
+"the :guilabel:`Sale Subscription: subscriptions expiration` scheduled action."
 msgstr ""
-"Um auf die einem Abonnement angehängten Rechnungen zuzugreifen, rufen Sie "
-"den Verkaufsauftrag für das Abonnementprodukt auf und klicken auf die "
-"intelligente Schaltfläche :guilabel:`Rechnungen`. Sehen Sie sich dann die "
-"Spalte :guilabel:`Rechnungsdatum` an."
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:None
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:182
 msgid ""
-"The Invoice Date column on subscriptions invoice page in Odoo Subscriptions "
-"app."
+"If the next invoice date is July 1st, and the :guilabel:`Automatic Closing` "
+"is set to '30 Days', the scheduled action would close the subscription on "
+"August 1st."
 msgstr ""
-"Die Spalte „Rechnungsdatum“ auf der Abo-Rechnungsseite in Odoo Abonnement."
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:183
-msgid ""
-"Unpaid subscriptions with an :guilabel:`Invoice Date` that are past the "
-"determined number of days in the :guilabel:`Automatic Closing` field of "
-"a :guilabel:`Recurring Plan` are automatically closed by the :guilabel:`Sale "
-"Subscription: subscriptions expiration` scheduled action."
-msgstr ""
-"Unbezahlte Abonnements mit einem :guilabel:`Rechnungsdatum`, die die im "
-"Feld :guilabel:`Automatische Schließung` eines :guilabel:`Wiederkehrenden "
-"Plans` festgelegte Anzahl von Tagen überschritten haben, werden automatisch "
-"durch die geplante Aktion :guilabel:`Verkaufsabonnement: Ablauf der "
-"Abonnements` geschlossen."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:None
-msgid ""
-"The Automatic Closing field on a Recurring Plan form in Odoo Subscriptions."
-msgstr ""
-"Das Feld „Automatische Schließung“ auf einem Formular für einen "
-"wiederkehrenden Plan in Odoo Abonnement."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:191
-msgid ""
-"For example, if the next invoice date is July 1st, and "
-"the :guilabel:`Automatic Closing` is set to '30 Days', the scheduled action "
-"would close the subscription on August 1st."
-msgstr ""
-"Wenn zum Beispiel das nächste Rechnungsdatum der 1. Juli ist und "
-"die :guilabel:`Automatische Schließung` auf „30 Tage“ eingestellt ist, würde "
-"die geplante Aktion das Abonnement am 1. August schließen."
-
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:196
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:187
 msgid ":doc:`automatic_alerts`"
 msgstr ":doc:`automatic_alerts`"
 
@@ -38754,6 +38728,171 @@ msgid ""
 msgstr ""
 "Der zugehörige Verkaufsauftrag, der über die intelligente Schaltfläche "
 "„Verkaufshistorie“ in Odoo Abonnements angezeigt wird."
+
+#~ msgid ""
+#~ "Cabinet with doors product form showcasing various details and fields."
+#~ msgstr ""
+#~ "Produktformular für Schränke mit Türen, das verschiedene Details und "
+#~ "Felder zeigt."
+
+#~ msgid ""
+#~ "If the remaining amount is ready to be paid, select "
+#~ "the :guilabel:`Regular Invoice` option. Odoo will create an invoice for "
+#~ "the exact amount needed to complete the total payment, as indicated in "
+#~ "the :guilabel:`Amount to invoice` field."
+#~ msgstr ""
+#~ "Wenn der verbleibende Betrag zur Zahlung bereit ist, wählen Sie die "
+#~ "Option :guilabel:`Reguläre Rechnung`. Odoo erstellt dann eine Rechnung "
+#~ "über den genauen Betrag, der für die gesamte Zahlung erforderlich ist, "
+#~ "wie im Feld :guilabel:`Rechnungsbetrag` angegeben."
+
+#~ msgid ""
+#~ "The *Solar Panel Installation* product is being used in this example."
+#~ msgstr ""
+#~ "Das Produkt *Installation von Solarmodulen* wird für dieses Beispiel "
+#~ "verwendet."
+
+#~ msgid ""
+#~ "In Odoo, some scheduled actions are active, by default, to ensure that "
+#~ "certain functions are triggered automatically, however there are *also* "
+#~ "many scheduled action options that appear in the database that are "
+#~ "**not** activated by default."
+#~ msgstr ""
+#~ "In Odoo sind einige geplante Aktionen standardmäßig aktiv, um "
+#~ "sicherzustellen, dass bestimmte Funktionen automatisch ausgelöst werden, "
+#~ "obwohl es *auch* viele geplante Aktionsoptionen in der Datenbank gibt, "
+#~ "die **nicht** standardmäßig aktiviert sind."
+
+#~ msgid ""
+#~ "In Odoo *Subscriptions*, there are two scheduled actions that initiate "
+#~ "the billing process for active recurring subscriptions, as well as when "
+#~ "billing should stop due to subscription expiration."
+#~ msgstr ""
+#~ "In Odoo *Abonnements* gibt es zwei geplante Aktionen, die den "
+#~ "Rechnungsstellungsprozess für aktive wiederkehrende Abonnements starten "
+#~ "und die Rechnungsstellung bei Abonnementauslauf stoppen."
+
+#~ msgid ""
+#~ "They are turned on, by default and can be deactivated at any time in "
+#~ "order to manage subscriptions manually."
+#~ msgstr ""
+#~ "Sie sind standardmäßig aktiviert und können jederzeit deaktiviert werden, "
+#~ "um Abonnements manuell zu verwalten"
+
+#~ msgid ""
+#~ "From here, enter `Subscription` in the search bar. Doing so provides "
+#~ "three subscription-specific results. The following documentation focuses "
+#~ "on the last two results in the list:"
+#~ msgstr ""
+#~ "Geben Sie hier `Abonnement` in die Suchleiste ein. Auf diese Weise "
+#~ "erhalten Sie drei abonnementspezifische Ergebnisse. Die folgende "
+#~ "Dokumentation konzentriert sich auf die letzten beiden Ergebnisse in der "
+#~ "Liste:"
+
+#~ msgid ""
+#~ "If a scheduled action needs to be activated, click into the desired "
+#~ "scheduled action from the list."
+#~ msgstr ""
+#~ "Wenn eine geplante Aktion aktiviert werden muss, klicken Sie auf die "
+#~ "gewünschte geplante Aktion aus der Liste."
+
+#~ msgid ""
+#~ "Then, from the scheduled action form, toggle the switch in "
+#~ "the :guilabel:`Active` field to the right. Doing so turns the switch "
+#~ "green, indicating that the scheduled action is now `Active`."
+#~ msgstr ""
+#~ "Schieben Sie dann im Formular für die geplante Aktion den Schalter im "
+#~ "Feld :guilabel:`Aktiv` nach rechts. Dadurch wird der Schalter grün und "
+#~ "zeigt an, dass die geplante Aktion jetzt `Aktiv` ist."
+
+#~ msgid ""
+#~ "The ability to set up how often the scheduled action runs is also "
+#~ "available on the scheduled action form, in the :guilabel:`Execute Every` "
+#~ "field."
+#~ msgstr ""
+#~ "Die Möglichkeit, festzulegen, wie oft die geplante Aktion ausgeführt "
+#~ "werden soll, ist auch im Formular für geplante Aktionen im "
+#~ "Feld :guilabel:`Ausführen alle` verfügbar."
+
+#~ msgid ""
+#~ "On a confirmed subscription sales order form, focus on "
+#~ "the :guilabel:`Recurring Plan` and :guilabel:`Date of Next Invoice` "
+#~ "fields."
+#~ msgstr ""
+#~ "Konzentrieren Sie sich in einem Formular für bestätigte "
+#~ "Abonnementaufträge auf die Felder :guilabel:`Wiederkehrender Plan` "
+#~ "und :guilabel:`Datum der nächsten Rechnung`."
+
+#~ msgid ""
+#~ "The scheduled action creates an invoice when today's date is the same "
+#~ "date as the :guilabel:`Date of Next Invoice`."
+#~ msgstr ""
+#~ "Die geplante Aktion erstellt eine Rechnung, wenn das heutige Datum "
+#~ "das :guilabel:`Datum der nächsten Rechnung` ist."
+
+#~ msgid ""
+#~ "To check if there is a :guilabel:`Payment Token`, open "
+#~ "the :guilabel:`Other Info` tab, and look at the :guilabel:`Payment Token` "
+#~ "field, under the :guilabel:`Subscription` section."
+#~ msgstr ""
+#~ "Um zu überprüfen, ob ein :guilabel:`Zahlungstoken` vorhanden ist, öffnen "
+#~ "Sie den Reiter :guilabel:`Weitere Informationen` und sehen Sie sich das "
+#~ "Feld :guilabel:`Zahlungstoken` unter dem Abschnitt :guilabel:`Abonnement` "
+#~ "an."
+
+#~ msgid ""
+#~ "If there is no :guilabel:`Payment Token`, the invoice is created, and "
+#~ "sent to the customer. The payment **must** be registered manually in this "
+#~ "case."
+#~ msgstr ""
+#~ "Wenn es kein :guilabel:`Zahlungstoken` gibt, wird die Rechnung erstellt "
+#~ "und an den Kunden gesendet. In diesem Fall **muss** die Zahlung manuell "
+#~ "registriert werden."
+
+#~ msgid ""
+#~ "To access the invoices attached to a subscription, access the sales order "
+#~ "for the subscription product, and click the :guilabel:`Invoices` smart "
+#~ "button. Then, look at the :guilabel:`Invoice Date` column."
+#~ msgstr ""
+#~ "Um auf die einem Abonnement angehängten Rechnungen zuzugreifen, rufen Sie "
+#~ "den Verkaufsauftrag für das Abonnementprodukt auf und klicken auf die "
+#~ "intelligente Schaltfläche :guilabel:`Rechnungen`. Sehen Sie sich dann die "
+#~ "Spalte :guilabel:`Rechnungsdatum` an."
+
+#~ msgid ""
+#~ "The Invoice Date column on subscriptions invoice page in Odoo "
+#~ "Subscriptions app."
+#~ msgstr ""
+#~ "Die Spalte „Rechnungsdatum“ auf der Abo-Rechnungsseite in Odoo Abonnement."
+
+#~ msgid ""
+#~ "Unpaid subscriptions with an :guilabel:`Invoice Date` that are past the "
+#~ "determined number of days in the :guilabel:`Automatic Closing` field of "
+#~ "a :guilabel:`Recurring Plan` are automatically closed by "
+#~ "the :guilabel:`Sale Subscription: subscriptions expiration` scheduled "
+#~ "action."
+#~ msgstr ""
+#~ "Unbezahlte Abonnements mit einem :guilabel:`Rechnungsdatum`, die die im "
+#~ "Feld :guilabel:`Automatische Schließung` eines :guilabel:`Wiederkehrenden "
+#~ "Plans` festgelegte Anzahl von Tagen überschritten haben, werden "
+#~ "automatisch durch die geplante Aktion :guilabel:`Verkaufsabonnement: "
+#~ "Ablauf der Abonnements` geschlossen."
+
+#~ msgid ""
+#~ "The Automatic Closing field on a Recurring Plan form in Odoo "
+#~ "Subscriptions."
+#~ msgstr ""
+#~ "Das Feld „Automatische Schließung“ auf einem Formular für einen "
+#~ "wiederkehrenden Plan in Odoo Abonnement."
+
+#~ msgid ""
+#~ "For example, if the next invoice date is July 1st, and "
+#~ "the :guilabel:`Automatic Closing` is set to '30 Days', the scheduled "
+#~ "action would close the subscription on August 1st."
+#~ msgstr ""
+#~ "Wenn zum Beispiel das nächste Rechnungsdatum der 1. Juli ist und "
+#~ "die :guilabel:`Automatische Schließung` auf „30 Tage“ eingestellt ist, "
+#~ "würde die geplante Aktion das Abonnement am 1. August schließen."
 
 #~ msgid ""
 #~ "Within Odoo's *CRM* app, leads can be forwarded to resellers (or "
