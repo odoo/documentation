@@ -276,12 +276,6 @@ The :guilabel:`Tax Type` determines the tax application, which also restricts wh
    You can use :guilabel:`None` for taxes that you want to include in a :ref:`Group of Taxes
    <taxes/computation>` but that you do not want to list along with other sales or purchase taxes.
 
-Tax scope
-~~~~~~~~~
-
-The :guilabel:`Tax Scope` restricts the use of taxes to a type of product, either **goods** or
-**services**.
-
 .. _taxes/definition-tab:
 
 Definition tab
