@@ -18,7 +18,7 @@ Every |BOM| version is stored in an *engineering change order* (ECO) for organiz
 improvements without disrupting normal manufacturing operations.
 
 .. seealso::
-   :ref:`Engineering change order <plm/eco>`
+   :doc:`engineering_change_orders`
 
 Current BoM version
 ===================
@@ -77,7 +77,7 @@ Click each |ECO| to view the past components, operations, and design files assoc
 
 .. tip::
    A workaround for checking when the |BOM| went live is by navigating to the chatter, and hovering
-   over the time the |ECO| was moved to the :ref:`closing stage <plm/eco/stage-config>`.
+   over the time the |ECO| was moved to the :ref:`closing stage <plm/eco_type/stage-config>`.
 
 Design files
 ============
@@ -110,7 +110,7 @@ and choose the desired |ECO|. Next, open the :guilabel:`Attachments` page by cli
 Hover over each attachment to reveal the :guilabel:`︙ (three vertical dots)` icon. From there,
 choose whether to :guilabel:`Edit`, :guilabel:`Remove`, or :guilabel:`Download` the file. Any
 changes made to these files are contained within the |ECO|, and will only apply to the production
-|BOM| once the :ref:`changes are applied <plm/eco/apply-changes>`.
+|BOM| once the :ref:`changes are applied <plm/engineering_change_orders/apply-changes>`.
 
 .. example::
    In the `Create 60% keyboard` |ECO|, the design files are from the original `100% keyboard` |BOM|.

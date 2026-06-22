@@ -29,6 +29,8 @@ collaborators and stakeholders only view and assist with relevant |BOM| improvem
    .. image:: eco_type/eco-type-example.png
       :alt: Example of several custom ECO types.
 
+.. _plm/eco_type/create-type:
+
 Create an ECO type
 ------------------
 
@@ -59,7 +61,7 @@ Configuration --> ECO Types` page. There, click on the desired |ECO| type from t
 
 On the form for each |ECO| type, edit the :guilabel:`Name` or :guilabel:`Email Alias` fields.
 
-.. _plm/eco/stage-config:
+.. _plm/eco_type/stage-config:
 
 Stages
 ======
