@@ -133,8 +133,8 @@ PLM
 
 Once |BoM| changes have gone through the proper review process, they can be approved, and the
 updated |BoM| put into use. This is accomplished by configuring one of the |ECO| review stages to
-:ref:`apply the changes <plm/eco/apply-changes>` made to the |BoM|, at which point the updated |BoM|
-becomes available for new |MOs|.
+:ref:`apply the changes <plm/engineering_change_orders/apply-changes>` made to the |BoM|, at which
+point the updated |BoM| becomes available for new |MOs|.
 
 Product |BoMs| can continue to be updated, as needed. The :doc:`version control
 <../../plm/manage_changes/version_control>` features of the |PLM| app allow for easy management of
@@ -148,9 +148,8 @@ products produced using the new |BoM|. If a defective product has already been s
 it may be necessary to repair (or update) that product.
 
 In such a case, the *Field Service* app can be used to schedule :doc:`onsite interventions
-<../../../services/field_service/creating_tasks>`. These interventions allow service
-technicians (or other employees) to be sent to a customer's location to address an issue with a
-product.
+<../../../services/field_service/creating_tasks>`. These interventions allow service technicians (or
+other employees) to be sent to a customer's location to address an issue with a product.
 
 .. _manufacturing/workflows/ci-review:
 
