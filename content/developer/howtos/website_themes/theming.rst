@@ -824,17 +824,21 @@ This is a non-exhaustive list of the frequently used bundles for a website:
    * - Bundle
      - Description
    * - web._assets_primary_variables
-     - Mainly used for the `primary_variables.scss` file
+     - Defines the primary SCSS variables (colors, fonts, spacing, etc) used as the main theming
+       layer across all bundles. Mainly used for the :file:`primary_variables.scss` file.
    * - web._assets_secondary_variables
-     - Mainly used for the `secondary_variables.scss` file
+     - Defines secondary SCSS variables that depend on and extend the primary variables. Mainly
+       used for the :file:`secondary_variables.scss` file.
    * - web._assets_frontend_helpers
-     - Mainly used for the `bootstrap_overridden.scss` file
+     - Provides frontend-specific Bootstrap overrides to be included before any frontend SCSS
+       compilation. Mainly used for the :file:`bootstrap_overridden.scss` file.
    * - web.assets_frontend
-     - You can add all your custom SCSS, JS or QWeb JS files
+     - Provides the base assets required to render and interact with Odoo's frontend. You can add
+       all your custom SCSS, JS or client-side QWeb templates.
    * - website.assets_wysiwyg
-     - Add your JS files related to the Website Builder options behaviors (for instance, a custom
-       method for your custom building block)
-   * - web._assets_bootstrap_frontend
+     - Provides the assets loaded into the web editor context, including edit-mode styles, custom
+       method for a custom building block, etc).
+   * - web._assets_bootstrap
      - If you need to extend Boostrap through the Bootstrap Utilities API, for example
 
 .. _theming/assets/styles:
