@@ -202,7 +202,7 @@ Tax name
 The :guilabel:`Tax Name` appears for backend users in the :guilabel:`Taxes` field in :doc:`sales
 orders <../../sales/sales>`, :doc:`invoices <customer_invoices>`, product forms, etc.
 
-.. _taxes/scope:
+.. _taxes/type:
 
 Tax type
 ~~~~~~~~
@@ -216,12 +216,6 @@ The :guilabel:`Tax Type` determines where the tax is available to be selected.
 .. tip::
    Use :guilabel:`None` for taxes that you want to include in a :ref:`Group of Taxes
    <taxes/computation>` but that you do not want to list along with other sales or purchase taxes.
-
-Tax scope
-~~~~~~~~~
-
-The :guilabel:`Tax Scope` restricts the use of taxes to a type of product, either **goods** or
-**services**.
 
 Description
 ~~~~~~~~~~~
