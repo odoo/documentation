@@ -7,13 +7,13 @@ Approvals
 
 .. _plm/approvals:
 
-Notify stakeholders and managers automatically by assigning approvers to stages of :ref:`engineering
-change orders <plm/eco>` (ECOs) under review. Changes can only be applied after the assigned
-approver accepts them. Approvals ensure reviews by team members, which prevents mistakes and
-premature actions.
+Notify stakeholders and managers automatically by assigning approvers to stages of :doc:`engineering
+change orders <../manage_changes/engineering_change_orders>` (ECOs) under review. Changes can only be
+applied after the assigned approver accepts them. Approvals ensure reviews by team members, which
+prevents mistakes and premature actions.
 
 .. seealso::
-   :ref:`Stage configuration <plm/eco/stage-config>`
+   :ref:`Stage configuration <plm/eco_type/stage-config>`
 
 Add approvers
 =============
@@ -29,7 +29,7 @@ On the :guilabel:`Engineering Change Orders` page, hover over the intended stage
    before the final *closing* stage which applies the |ECO| and updates the :abbr:`BoM (Bill of
    Materials)`. This allows stakeholders to control how and when changes are made.
 
-   See the documentation about :ref:`stage types <plm/eco/stage-config>` for more information.
+   See the documentation about :ref:`stage types <plm/eco_type/stage-config>` for more information.
 
 In the :guilabel:`Edit` stage pop-up window, click the :guilabel:`Add a line` button, located under
 :guilabel:`Approvals`. Then, type in the position or title of the approver under :guilabel:`Role`
