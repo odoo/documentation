@@ -521,12 +521,24 @@ logging to other destinations and to customize the verbosity.
     <https://docs.python.org/3/library/logging.handlers.html#watchedfilehandler>`_
     and will automatically be reopened when replaced
 
+.. option:: --log-config <file>
+
+    configures the logging system using a :func:`~logging.config.dictConfig`,
+    stored in a `JSON <https://en.wikipedia.org/wiki/JSON>`_ or
+    `TOML <https://en.wikipedia.org/wiki/TOML>`_ file.
+
+    By default, if this is used all logging options and built-in configurations
+    are ignored; ``keep_odoo_default`` can be set to true at the root of the
+    ``dictConfig`` to also process log options normally afterward.
+
 .. option:: --syslog
 
     logs to the system's event logger: `syslog on unices <https://docs.python.org/3/library/logging.handlers.html#sysloghandler>`_
     and `the Event Log on Windows <https://docs.python.org/3/library/logging.handlers.html#nteventloghandler>`_.
 
     Neither is configurable
+
+    .. deprecated:: 20.0  use :option:`--log-config` instead.
 
 .. option:: --log-db <dbname>
 
