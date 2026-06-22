@@ -332,10 +332,17 @@ or more items from each combo choice.
        - When all products that belong to a predefined combo are added to the cart individually,
          Odoo automatically detects the combo and displays a suggestion for it above the keypad. To
          apply the combo pricing, click :guilabel:`Apply`.
+         If multiple combos are detected, click :guilabel:`Choose`, then :guilabel:`Apply` the
+         appropriate combo.
 
          .. image:: products/auto-detect-combo.png
             :alt: Combo automatically detected in the POS register.
             :scale: 70%
+
+       - To split a combo into its individual products, select the combo, click the
+         :icon:`fa-ellipsis-v` (:guilabel:`vertical ellipsis`) button, and select :icon:`fa-outdent`
+         :guilabel:`Break Combo`. The price of each product is adjusted according to its standard
+         :guilabel:`Sales Price`.
 
 .. seealso::
    `Product combos (video tutorial) <https://youtu.be/H8e2CakLhaQ?si=yjPbvYkj00K7OP3q>`_
