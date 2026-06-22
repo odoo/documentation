@@ -325,12 +325,14 @@ Refer to the following pages for detailed, country-specific information:
 - :doc:`Colombia <electronic_invoicing/colombia>`
 - :doc:`Croatia <electronic_invoicing/croatia>`
 - :doc:`Ecuador <electronic_invoicing/ecuador>`
+- :doc:`Egypt <electronic_invoicing/egypt>`
 - :doc:`Estonia <electronic_invoicing/estonia>`
 - :doc:`Finland <electronic_invoicing/finland>`
 - :doc:`Guatemala <electronic_invoicing/guatemala>`
 - :doc:`Hungary <electronic_invoicing/hungary>`
 - :doc:`Ireland <electronic_invoicing/ireland>`
 - :doc:`Italy <electronic_invoicing/italy>`
+- :doc:`Jordan <electronic_invoicing/jordan>`
 - :doc:`Latvia <electronic_invoicing/latvia>`
 - :doc:`Lithuania <electronic_invoicing/lithuania>`
 - :doc:`Luxembourg <electronic_invoicing/luxembourg>`
@@ -339,6 +341,8 @@ Refer to the following pages for detailed, country-specific information:
 - :doc:`Norway <electronic_invoicing/norway>`
 - :doc:`Peru <electronic_invoicing/peru>`
 - :doc:`Romania <electronic_invoicing/romania>`
+- :doc:`Saudi Arabia <electronic_invoicing/saudi_arabia>`
 - :doc:`Spain <electronic_invoicing/spain>`
 - :doc:`Spain - Basque Country <electronic_invoicing/basque_country>`
+- :doc:`Türkiye <electronic_invoicing/turkiye>`
 - :doc:`Uruguay <electronic_invoicing/uruguay>`
