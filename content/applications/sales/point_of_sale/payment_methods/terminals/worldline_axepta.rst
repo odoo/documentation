@@ -10,9 +10,8 @@ offer payment solutions through :doc:`payment terminals<../terminals>` to handle
      :doc:`IoT system </applications/general/iot/connect>`.
    - Both Worldline and Axepta BNP Paribas are only available in **Belgium**, **the Netherlands**,
      and **Luxembourg** with Odoo.
-   - Odoo is compatible with Worldline terminals that use the CTEP protocol (e.g., the **Yomani XR**
-     and **Yoximo** terminals). Contact the payment provider to confirm the terminal's
-     compatibility if necessary.
+   - Odoo is compatible with terminals that use the CTEP protocol (e.g., the **Yomani XR**,
+      **Yoximo**, **AXIUM5000**, and **AXIUM8000** terminals). Contact the payment provider to confirm the terminal's compatibility if necessary.
    - The configuration of Axepta BNP Paribas payment terminals is identical to that of Worldline terminals.
 
 .. _pos/worldline/configuration:
@@ -20,44 +19,16 @@ offer payment solutions through :doc:`payment terminals<../terminals>` to handle
 Worldline/Axepta BNP Paribas configuration
 ==========================================
 
-First, enable the Worldline or the Axepta BNP Paribas payment terminal in the :ref:`POS settings
-<pos/use/settings>` under :guilabel:`Payment Terminals`. Then :doc:`connect the IoT system to Odoo
-</applications/general/iot/connect>` and follow these steps on the terminal:
+First, go to :menuselection:`Point of Sale --> Configuration --> Settings`,
+scroll down to the :guilabel:`Payment Terminals` section, and enable the Worldline or the Axepta BNP Paribas payment terminal.
+Then :doc:`connect the IoT system to Odoo </applications/general/iot/connect>`.
 
-#. **Configure the ECR protocol**:
+To configure the terminal, follow the next steps:
 
-   #. Press :menuselection:`"." --> 3 --> Stop --> 3 --> 0 --> 9`.
-   #. Enter the technician password **1235789** and press **OK**.
-   #. Press :menuselection:`4 --> 2 --> CTEP (ECR protocol)`. Press **OK** to confirm each of the
-      following checks: **CTEP ticket ECR**, **ECR ticket width**, and **Character set**.
-   #. Press **Stop** three times; the terminal restarts automatically.
-#. **Set the hostname**:
-
-   #. Press :menuselection:`"." --> 3 --> Stop --> 3 --> 0 --> 9`.
-   #. Enter the technician password **1235789** and press **OK**.
-   #. Press :menuselection:`4 --> 9 --> TCP/IP (ECR physical conf.)` and **OK** twice.
-   #. Enter the :ref:`IoT's IP address <iot/connect/IoT-form>` on the **Hostname** screen by
-      confirming each number with **OK** until the colon symbol, then confirm the step with **OK**.
-      For example, if the IP address is `10.30.19.4:8069`, press :menuselection:`10 --> OK --> 30
-      --> OK --> 19 --> OK --> 4 --> OK --> OK`.
-#. **Set the port number**:
-
-   #. Enter **9001** (if using an :doc:`IoT box </applications/general/iot/iot_box>`) or **9050**
-      (if using a :doc:`Windows virtual IoT </applications/general/iot/windows_iot>`) on the
-      **Network domain name** screen and press **OK** twice.
-   #. Press **Stop** three times; the terminal restarts automatically.
-
-The terminal is now active and displays the **Read card** screen.
-
-.. important::
-   The `9050` port must be added as a :ref:`Windows Firewall exception <iot/windows-iot/firewall>`
-   for the :doc:`Windows virtual IoT </applications/general/iot>`.
-
-.. tip::
-   To check the terminal's connection status, open the IoT app and click the :ref:`IoT system's
-   card <iot/connect/IoT-form>`.
-
-.. _pos/worldline/odoo-configuration:
+   #. Configure the CTEP protocol.
+   #. Set the hostname to the :ref:`IoT's IP address <iot/connect/IoT-form>`.
+   #. Enter port number **9001** (if using an :doc:`IoT box </applications/general/iot/iot_box>`) or **9050** (if using a :doc:`Windows virtual IoT </applications/general/iot/windows_iot>`).
+   #. Reboot the terminal to apply the settings.
 
 Odoo configuration
 ==================
@@ -81,3 +52,5 @@ To connect the Worldline terminal with Odoo Point of Sale, follow these steps:
      <pos/worldline/configuration>` the cashier terminal first.
    - To prevent connection loss, set a fixed IP address on the IoT Box’s router or :ref:`restart
      the virtual IoT server <iot/windows_iot/restart>`.
+   - Only one terminal can be connected to an IoT Box.
+   - For the configuration of the **AXIUM5000** and **AXIUM8000** terminals, contact your payment provider.
