@@ -107,7 +107,7 @@ Formule d'Abonnement
 ===================
 
 Le Client peut utiliser le Logiciel hébergé sur la Plate-forme Cloud, ou choisir l'option de l'Auto-Hébergement.
-La Plate-forme Cloud est hébergée et entièrement gérée par Odoo SA, and accédée à distance par le Client.
+La Plate-forme Cloud est hébergée et entièrement gérée par Odoo SA, et accédée à distance par le Client.
 En cas d'Auto-Hébergement, le Client héberge lui-même le Logiciel sur un système informatique de
 son choix, hors du contrôle d'Odoo SA.
 
@@ -121,7 +121,7 @@ Edition et recueille des statistiques à cet effet, y compris mais sans s'y limi
 du Logiciel, le nombre d'Utilisateurs, les Apps installées et le nombre de lignes de code des
 Modules Supplémentaires Couverts.
 
-Odoo SA s'engage à ne pas divulguer à une tierce partie d'informations chiffrées personnelles ou
+Odoo SA s'engage à ne pas divulguer à une tierce partie des informations chiffrées personnelles ou
 spécifiques sans le consentement du Client, et à traiter toutes les données recueillies en
 respectant sa politique officielle de confidentialité, telle que publiée sur
 https://www.odoo.com/privacy.
@@ -365,7 +365,7 @@ percevoir les Taxes dont le client est responsable.
 6.1 Obligations du Client
 -------------------------
 
-Le Client accepte de / d':
+Le Client accepte de/d' :
 
 - Payer à Odoo SA les frais applicables pour les Services en vertu du présent Contrat,
   conformément aux conditions de paiement spécifiées à la souscription du présent Contrat ;
