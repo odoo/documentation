@@ -10,6 +10,10 @@ applicant a contract.
    Refer to the :doc:`recruitment <../recruitment>` documentation for details on the various stages
    of the recruitment process.
 
+.. important::
+   The *Salary Configurator* module **must** be :ref:`installed <general/install>` to send an offer
+   using the :guilabel:`Generate Offer` button.
+
 Contract proposal
 =================
 
@@ -30,7 +34,7 @@ for (applicant's email)` page.
 .. important::
    If the applicant does not have an email address listed on their applicant card, an
    :guilabel:`Invalid Operation` pop-up window warning appears, stating: :guilabel:`Offer link can
-   not be send. The applicant needs to have a name and email.`
+   not be sent. The applicant needs to have a name and email.`
 
    Click :guilabel:`Close`, then enter an email on the applicant's card. Once an email is entered,
    click the :guilabel:`Generate Offer` button, and the :guilabel:`Offer for (applicant's email)`
