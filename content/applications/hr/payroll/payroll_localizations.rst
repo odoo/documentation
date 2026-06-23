@@ -72,25 +72,26 @@ Payroll localization modules are available for the countries listed below.
 
 - :doc:`Australia <payroll_localizations/australia>`
 - :doc:`Belgium <payroll_localizations/belgium>`
-- Bangladesh
+- :doc:`Bangladesh <payroll_localizations/bangladesh>`
 - :doc:`Egypt <payroll_localizations/egypt>`
 - :doc:`Hong Kong <payroll_localizations/hong_kong>`
 - :doc:`India <payroll_localizations/india>`
-- Indonesia
+- :doc:`Indonesia <payroll_localizations/indonesia>`
+- :doc:`Iraq <payroll_localizations/iraq>`
 - :doc:`Jordan <payroll_localizations/jordan>`
-- Kenya
-- Lithuania
-- Luxembourg
-- Malaysia
+- :doc:`Kenya <payroll_localizations/kenya>`
+- :doc:`Lithuania <payroll_localizations/lithuania>`
+- :doc:`Luxembourg <payroll_localizations/luxembourg>`
+- :doc:`Malaysia <payroll_localizations/malaysia>`
 - :doc:`Mexico <payroll_localizations/mexico>`
-- Morocco
-- Netherlands
-- Pakistan
-- Poland
-- Romania
+- :doc:`Morocco <payroll_localizations/morocco>`
+- :doc:`Netherlands <payroll_localizations/netherlands>`
+- :doc:`Pakistan <payroll_localizations/pakistan>`
+- :doc:`Poland <payroll_localizations/poland>`
+- :doc:`Romania <payroll_localizations/romania>`
 - :doc:`Saudi Arabia <payroll_localizations/saudi_arabia>`
-- Slovakia
-- Switzerland
+- :doc:`Slovakia <payroll_localizations/slovakia>`
+- :doc:`Switzerland <payroll_localizations/switzerland>`
 - :doc:`Türkiye <payroll_localizations/turkey>`
 - :doc:`United Arab Emirates <payroll_localizations/united_arab_emirates>`
 - :doc:`United States <payroll_localizations/united_states>`
@@ -99,13 +100,27 @@ Payroll localization modules are available for the countries listed below.
    :titlesonly:
 
    payroll_localizations/australia
+   payroll_localizations/bangladesh
    payroll_localizations/belgium
    payroll_localizations/egypt
    payroll_localizations/hong_kong
    payroll_localizations/india
+   payroll_localizations/indonesia
+   payroll_localizations/iraq
    payroll_localizations/jordan
+   payroll_localizations/kenya
+   payroll_localizations/lithuania
+   payroll_localizations/luxembourg
+   payroll_localizations/malaysia
    payroll_localizations/mexico
+   payroll_localizations/morocco
+   payroll_localizations/netherlands
+   payroll_localizations/pakistan
+   payroll_localizations/poland
+   payroll_localizations/romania
    payroll_localizations/saudi_arabia
+   payroll_localizations/slovakia
+   payroll_localizations/switzerland
    payroll_localizations/turkey
    payroll_localizations/united_arab_emirates
    payroll_localizations/united_states
