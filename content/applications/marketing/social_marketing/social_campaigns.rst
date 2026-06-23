@@ -7,51 +7,26 @@ are helpful when introducing a new product to customers, explaining the value of
 service, or when advertising an upcoming event or product release.
 
 The most effective social marketing campaigns typically involve multiple channels to maximize
-content distribution, and Odoo's *Social Marketing* application acts as a singular control center to
+content distribution. Odoo's **Social Marketing** application acts as a singular control center to
 monitor, plan, post, track, and analyze all of the various content and content channels within a
 single dashboard.
 
-Campaigns page
-==============
+Campaigns dashboard
+===================
 
-To access a complete overview of all social marketing campaigns, open the :menuselection:`Social
-Marketing` application, and click :menuselection:`Campaigns` from the header menu. Doing so reveals
-a separate page with every campaign in a default kanban view.
-
-.. image:: social_campaigns/campaigns-page.png
-   :align: center
-   :alt: View of the campaigns page in the Odoo Social Marketing application.
-
-Each *stage* in the kanban view can be edited, by clicking the :guilabel:`gear icon` to the left of
-the :guilabel:`+ (plus sign)` - located to the right of the stage title.
+To access a complete overview of all social marketing campaigns, navigate to :menuselection:`Social
+Marketing app --> Campaigns`, and the :guilabel:`Campaigns` dashboard loads. All campaigns are
+listed in a default Kanban view, organized by stage.
 
 .. note::
-   The **gear icon** *only* appears when the cursor hovers to the left of the **+ (plus sign)**.
-   When the gear icon is clicked, a drop-down menu reveals the options: :guilabel:`Fold`,
-   :guilabel:`Edit Stage`, and :guilabel:`Delete`.
+   There is only one default stages in the :guilabel:`Campaigns` dashboard, :guilabel:`New`. All
+   other stages must be configured to suit the company's needs.
 
-.. image:: social_campaigns/campaign-stage-dropdown.png
-   :align: center
-   :alt: View of the campaigns page in the Odoo Social Marketing application.
+   In this example of a :guilabel:`Campaigns` dashboard, the followig stages are congifured:
+   :guilabel:`New`, :guilabel:`Schedule`, :guilabel:`Design`, and :guilabel:`Sent`
 
-Clicking :guilabel:`Fold` minimizes that specific stage's column. The stage column can be restored
-by clicking the folded version of it on the main :guilabel:`Campaigns` dashboard in the default
-kanban view.
-
-Selecting :guilabel:`Edit Stage` reveals a pop-up window, in which the name and the sequence of the
-stage can be modified. If changes are made, be sure to click :guilabel:`Save`.
-
-Clicking :guilabel:`Delete` removes the stage entirely.
-
-.. note::
-   To add a new stage to the pipeline, side-scroll to the right on the :guilabel:`Campaigns`
-   dashboard, click :guilabel:`Add a Column`, enter in the desired information, and click
-   :guilabel:`Add`.
-
-.. tip::
-   The same social marketing campaign information on the :guilabel:`Campaigns` dashboard can also be
-   viewed as a list, by selecting the :guilabel:`List` option, located under the search bar, in the
-   upper-right corner.
+  .. image:: social_campaigns/campaigns-dashboard.png
+     :alt: View of the campaigns page in the Odoo Social Marketing application.
 
 Create social marketing campaigns
 =================================
@@ -61,14 +36,13 @@ the header menu.
 
 On the :guilabel:`Campaigns` dashboard, a new campaign can be created by clicking the quick add
 :guilabel:`+ (plus sign)` located in the top-right corner of each stage in the pipeline, visible in
-the kanban view. Campaigns can also be created by clicking :guilabel:`Create` in the upper-left
+the Kanban view. Campaigns can also be created by clicking :guilabel:`Create` in the upper-left
 corner of the :guilabel:`Campaigns` dashboard.
 
 Both options reveal a new campaign detail window directly on the :guilabel:`Campaigns` dashboard
 when clicked.
 
 .. image:: social_campaigns/quick-add-campaign.png
-   :align: center
    :alt: View of the quick add option for campaigns in Odoo Social Marketing.
 
 Here, the :guilabel:`Campaign Name`, :guilabel:`Responsible`, and :guilabel:`Tags` can be entered.
@@ -83,9 +57,9 @@ There are multiple ways to access a template page for a campaign.
 
 - After entering the pertinent information in the :guilabel:`Quick Add` campaign drop-down, click
   :guilabel:`Edit`.
-- Simply select the desired campaign from the :guilabel:`Campaigns` dashboard in list or kanban
+- Simply select the desired campaign from the :guilabel:`Campaigns` dashboard in list or Kanban
   view.
-- On the :guilabel:`Campaigns` dashboard in the kanban view, select the :guilabel:`⋮ (three dots)`
+- On the :guilabel:`Campaigns` dashboard in the Kanban view, select the :guilabel:`⋮ (three dots)`
   drop-down menu on the desired campaign, and select :guilabel:`Edit`.
 
 Any of the above routes will reveal the *Campaign Template* page for that specific campaign.
@@ -98,7 +72,6 @@ communications can be created, modified, and sent or scheduled. Below is a sampl
 campaign template.
 
 .. image:: social_campaigns/create-campaign.png
-   :align: center
    :alt: View of a sample campaign template page in Odoo Social Marketing.
 
 .. important::
@@ -144,5 +117,5 @@ page dedicated to that particular element of the campaign, allowing for quicker,
 analysis.
 
 .. note::
-   The Odoo *Social Marketing* app is integrated with other Odoo applications, such as *Sales*,
-   *Invoicing*, *CRM*, and *Website*.
+   The Odoo **Social Marketing** app is integrated with other Odoo applications, such as **Sales**,
+   **Invoicing**, **CRM**, and **Website**.
