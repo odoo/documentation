@@ -59,18 +59,12 @@ This generates a :guilabel:`Security Control` pop-up window that requires passwo
 continue. Enter the appropriate password, then click :guilabel:`Confirm Password`. Next, a
 :guilabel:`Two-Factor Authentication Activation` pop-up window appears, with a |QR|.
 
-.. figure:: 2fa/qr-code.png
+.. figure:: 2fa/qr-code.webp
    :alt: The 2fa authentication QR code in Odoo.
 
    Using the desired authenticator application, scan the |QR| when prompted.
-
-.. tip::
    If scanning the screen is not possible (e.g., the setup is being completed on the *same* device
-   as the authenticator application), click the provided :guilabel:`Cannot scan it?` link, or
-   copying the code to set up the authenticator manually, is an alternative.
-
-   .. image:: 2fa/secret-visible.png
-      :alt: A 2fa secret code on an authentication popup.
+   as the authenticator application), copy the code and set up the authenticator manually.
 
 Afterwards, the authenticator should display a *verification code*.
 
