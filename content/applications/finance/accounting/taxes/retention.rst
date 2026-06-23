@@ -7,6 +7,8 @@ deduct a tax from the payment and remit it to the government. Typically, a tax i
 subtotal to calculate the total amount paid, while withholding taxes are directly subtracted from
 the payment.
 
+.. _accounting/withholding-taxes/configuration:
+
 Configuration
 =============
 
