@@ -253,3 +253,33 @@ spreadsheet into a dashboard that is then accessible via
    - After a spreadsheet has been converted to a dashboard, it is deleted from Odoo Documents. Any
      subsequent :ref:`modifications <build_and_customize_dashboards/customize>` need to be made via
      Odoo Dashboards.
+
+.. _spreadsheet/get-started/specs-limits:
+
+Sheet specifications and limits
+===============================
+
+.. important::
+   The number of columns and rows per sheet can affect spreadsheet performance. However, the main
+   factor is often the nature of the formulas used and the ranges they need to scan. In particular,
+   formulas that create quadratic behavior, where formulas copied down many rows each scan a large
+   range, can severely impact performance in large datasets.
+
+A new sheet in an Odoo spreadsheet contains 26 columns (i.e., columns A-Z) and 100 rows by default.
+Additional columns and rows can be added according to your needs, keeping the following points in
+mind:
+
+- **Columns**: While there is no technical limit on the number of columns that can be *displayed* in
+  a sheet, formulas in Odoo Spreadsheet only support 3-letter column references, which means that a
+  formula referencing, e.g., column AAAA, will result in an error.
+
+  The practical limit on the number of columns per sheet is therefore 18,278 columns (i.e., up to
+  column ZZZ).
+- **Rows**: There is no fixed limit on the number of rows a sheet can contain.
+
+  .. tip::
+     To quickly add a maximum of 10,000 rows to the bottom of the sheet in one go, scroll to the
+     bottom of the sheet, enter the desired number of rows, then click :guilabel:`Add`.
+
+- **Cells and characters per cell**: There is no fixed limit on the number of cells a sheet can
+  contain, nor on the number of characters within a cell.
