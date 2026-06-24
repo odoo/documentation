@@ -127,6 +127,8 @@ This section determines how allocation requests are handled for this time off ty
 .. image:: time_off_types/allocation-section.png
    :alt: The allocation section all filled out for  a new time off type.
 
+.. _time_off/time-off-config:
+
 Configuration section
 ---------------------
 
