@@ -879,8 +879,8 @@ This is a non-exhaustive list of the frequently used bundles for a website:
    * - web.assets_frontend
      - Provides the base assets required to render and interact with Odoo's frontend. You can add
        all your custom SCSS, JS or client-side QWeb templates.
-   * - website.assets_wysiwyg
-     - Provides the assets loaded into the web editor context, including edit-mode styles, custom
+   * - website.website_builder_assets
+     - Provides the assets loaded into the Website Builder context, including edit-mode styles, custom
        method for a custom building block, etc).
    * - web._assets_bootstrap
      - If you need to extend Boostrap through the Bootstrap Utilities API, for example
