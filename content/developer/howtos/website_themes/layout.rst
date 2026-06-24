@@ -432,7 +432,7 @@ Enable one of the header default templates.
             <field name="active" eval="False" />
          </record>
 
-Explicitly set the desired template in the `primary_variables.scss` file.
+Explicitly set the desired template in the :file:`primary_variables.scss` file.
 
 .. code-block:: scss
    :caption: ``/website_airproof/static/src/scss/primary_variables.scss``
@@ -510,14 +510,14 @@ Use the following code to add an option for your new custom header on the Websit
    * - views
      - The template(s) to enable
    * - vars
-     - The name given to the variable (same as used into `primary_variables.scss`)
+     - The name given to the variable (same as used into :file:`primary_variables.scss`)
    * - checkVars
      - Determine if `vars` are compared to set the option status.
    * - src (in `Img`)
      - The thumbnail of the custom template shown in the templates selection on the Website Builder
 
-Now you have to explicitly define that you want to use your custom template in the Odoo SASS
-variables.
+Now add this file to your :file:`__manifest__.py` in the bundle `website.website_builder_assets` and
+define explicitly the custom template as the header template in the Odoo SASS variables.
 
 .. code-block:: scss
    :caption: ``/website_airproof/static/src/scss/primary_variables.scss``
@@ -739,9 +739,11 @@ active footer template first.
    * - view
      - Template that is enabled.
    * - varName
-     - Value used in `primary_variables.scss` under `footer-template`.
+     - Value used in :file:`primary_variables.scss` under `footer-template`.
    * - imgSrc
      - The thumbnail of the custom template shown in the templates selection on the Website Builder
+
+Add it to your :file:`__manifest__.py` in the bundle `website.website_builder_assets`.
 
 **Declaration**
 
