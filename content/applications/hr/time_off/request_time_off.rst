@@ -3,76 +3,88 @@ Request time off
 ================
 
 When employees wish to take time off, they first submit a time off request through the **Time Off**
-application. Once their request has been submitted, it is then reviewed by either the employee's
-manager or their time off officer (depending on who the employee's :ref:`time off approver is
-<employees/approvers>`).
+application.
 
-.. note::
-   If the time off type the employee is requesting :ref:`does not require approval
-   <time_off/time-off-requests>`, the time off is automatically approved, and does not need to be
-   reviewed.
+If the :ref:`Time Off Type <time_off/time-off-requests>` does not require any approvals, the time
+off request is automatically approved. If approval is needed, the request is then reviewed by either
+the employee's manager or their time off officer, depending on who the employee's :ref:`time off
+approver is <employees/approvers>`.
 
 Submit time off request
 =======================
 
-To request time off, click the :guilabel:`New` button in the top-left corner of the **Time Off** app
-dashboard, and a :guilabel:`New Time Off` pop-up form loads.
+Time off can be requested through the main :ref:`Time Off app dashboard <time_off/request-dash>`, or
+the :ref:`My Time Off dashboard <time_off/request-my-dash>`.
 
-Fill out the :ref:`fields on the form <time_off/fields>`, and then click :guilabel:`Save & Close` to
-submit the request.
+.. _time_off/request-dash:
 
-.. tip::
-   Requesting time off can be done either form the main **Time Off** app dashboard, or by navigating
-   to :menuselection:`Time Off --> My Time --> My Time Off`, and clicking :guilabel:`New`.
+Time off dashboard
+------------------
 
-.. image:: request_time_off/new-time-off.png
-   :alt: A time off request for three hours of vacation time off.
+To request time off, open the **Time Off** app. Click the :guilabel:`New` button and a *New Time
+Off* pop-up form loads.
+
+Fill out the :ref:`fields on the form <time_off/fields>`, and then click the :guilabel:`Submit
+Request` button to submit the time off request.
+
+.. _time_off/request-my-dash:
+
+My time off dashboard
+---------------------
+
+To request time off from the *My Time Off* dashboard, navigate to :menuselection:`Time Off app -->
+My Time --> My Time Off`. Click the :guilabel:`New` button and a time off request page loads.
+
+Fill out the various :ref:`fields on the form <time_off/fields>`. Once completed, the form
+automatically saves and is sent to the corresponding manager and time off officer, and appears in
+their :ref:`for approval <time_off/manage-time-off>` dashboard.
 
 .. _time_off/fields:
 
-Time off fields
----------------
+Time off request fields
+=======================
 
-Enter the following information on the :guilabel:`New Time Off` request form:
+Enter the following information on the time off request form:
 
+- :guilabel:`Employee`: When requesting time off from the main **Time Off** app dashboard, this
+  field appears. The signed-in employee populates this field by default, and cannot be modified
+  unless the user has the necessary :ref:`access rights for the time off type
+  <time_off/time-off-requests>`.
 - :guilabel:`Time Off Type`: Using the drop-down menu, select the type of time off being requested.
-- :guilabel:`Dates`: Enter the dates that the time off falls under. There are two fields to
-  populate: the start and end dates. Click on either date field and a popover calendar appears.
+- :guilabel:`Date`: Enter the dates that the time off falls under. There are two fields to populate:
+  the start and end dates. Click either date field to open a popover calendar.
 
-  Click on the start date, then click on the end date. The selected start and end dates are circled,
-  and the dates between them are highlighted (if applicable).
+  Click on the start date, then click on the end date. When requesting time off for a single day,
+  click on the start date, then click the same date again for the end date.
 
-  If only requesting time off for a single day, click on the start date, then click the same date
-  again for the end date.
+  The selected dates now populate the two portions of the :guilabel:`Date` field.
 
-  When the correct dates are selected, click the :guilabel:`Apply` button.
+  If the selected :guilabel:`Time Off Type` is configured to have the time off taken in whole days,
+  no more fields are necessary to configure.
 
-  The selected dates now populate the two portions of the :guilabel:`Dates` field.
+  If the selected :guilabel:`Time Off Type` is configured to have the time off taken in half days,
+  the following fields appear:
+
+  - :guilabel:`Day Period`: Select either :guilabel:`Morning` or :guilabel:`Afternoon` to indicate
+    which half of the day is being requested off. To only request a half day, ensure both fields are
+    set to the same selection.
 
   If the selected :guilabel:`Time Off Type` is configured to have the time off taken in hours, the
-  following two fields also appear:
+  following fields appear:
 
-  - :guilabel:`Half Day`: If the time off request is for a half day, tick this checkbox. When this
-    is selected, the second date field disappears, and is replaced with a drop-down menu. From that
-    drop-down menu, select either :guilabel:`Morning` or :guilabel:`Afternoon` to indicate which
-    half of the day is being requested off.
-  - :guilabel:`Custom Hours`: If the time off requested is not a whole or half day, tick this
-    checkbox. If selected, a :guilabel:`From` and :guilabel:`To` field appears beneath this option.
-    Using the drop-down menu, select the start and end time for the time off request.
+  - :guilabel:`Hours`: Using the drop-down menu, select both the start time and end time for the
+    time off request in the two fields.
 
-- :guilabel:`Requested (Days/Hours)`: This field updates automatically once the :guilabel:`Date`
-  section is completed. If the :guilabel:`Date` section is modified, this section automatically
-  updates to reflect the total time off requested. This field is in either hours or days, depending
-  on how the selected :doc:`Time Off Type <../time_off/time_off_types>` is configured.
 - :guilabel:`Description`: Enter a description for the time off request. This should include any
   details that managers and approvers may need to approve the request.
-- :guilabel:`Supporting Document`: This field **only** appears if the :doc:`Time Off Type
-  <../time_off/time_off_types>` selected allows for the attachment of documents. Click the
-  :icon:`fa-paperclip` :guilabel:`Attach File` button, and a file explorer window appears.
+- :icon:`fa-paperclip` :guilabel:`Attach File`: This field **only** appears if the :guilabel:`Time
+  Off Type` selected is :ref:`configured to require documentation <time_off/time-off-config>`. Click
+  the :icon:`fa-paperclip` :guilabel:`Attach File` button, and a file explorer window appears.
 
-  Navigate to the desired files that should be attached, select them, then click The
-  :guilabel:`Open` button. The files then appear on the time off request form. Multiple documents
-  can be attached, if necessary.
+  Navigate to the desired files to be attached, select them, then click the :guilabel:`Open` button.
+  The files then appear on the time off request form. Multiple documents can be attached, if
+  necessary.
 
-.. image:: request_time_off/time-off-request.png
-   :alt: A time off request form filled out for an employee home sick with the flu.
+.. image:: request_time_off/sick-request.png
+   :alt: A time off request form filled out for an employee home sick, with a doctor's note
+         attached.
