@@ -17,3 +17,4 @@ Productivity
     productivity/whatsapp
     productivity/voip
     productivity/to_do
+    productivity/dashboards
