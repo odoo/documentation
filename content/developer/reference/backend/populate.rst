@@ -80,6 +80,10 @@ CLI command
    Resume an interrupted session. Without an argument, resumes the most recent unfinished
    session. With a session ID, resumes that specific session.
 
+.. option:: --profile
+
+   Save profiler traces for each executable populate job in this run.
+
 .. example::
 
    .. code-block:: console
@@ -95,6 +99,31 @@ CLI command
 
       # Resume a specific session by ID
       $ odoo-bin populate -d mydb --resume 7
+
+      # Save profiler traces for the generated workload
+      $ odoo-bin populate -d mydb -b project.fake_project_demo --profile
+
+.. _reference/populate/profiling:
+
+Profiling populate runs
+-----------------------
+
+Use :option:`--profile` to measure the runtime cost of a populate run. The command creates
+``ir.profile`` entries grouped under one profiler session named after the populate session and
+blueprint.
+
+The option only applies to the current command invocation, so the same interrupted session can be
+resumed later with or without profiling:
+
+.. code-block:: console
+
+   $ odoo-bin populate -d mydb --resume 7 --profile
+
+Profiling works in both single-worker and multi-worker mode. Each executable job creates its own
+profile entry, including subjobs created when a large job is split for parallel execution. Planner
+jobs, which only coordinate split subjobs and do not create or update records themselves, are not
+profiled. Failed executable job attempts also create profile entries, so their traces remain
+available for failure analysis.
 
 .. _reference/populate/blueprints:
 

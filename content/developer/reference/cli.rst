@@ -1338,6 +1338,10 @@ Generate synthetic data from a blueprint stored in ``populate.blueprint``.
 
    Resume the most recent unfinished session, or the specified session.
 
+.. option:: --profile
+
+   Save profiler traces for each executable populate job in this run.
+
 .. _reference/cmdline/cloc:
 
 `cloc` - Count Lines of Code
