@@ -39,7 +39,7 @@ with :doc:`elements <../website/web_design/elements>`, and display or hide build
       Display or hide building blocks based on several criteria.
 
 .. seealso::
-   `Odoo Tutorials: Website <https://www.odoo.com/slides/website-25>`_
+   `Odoo Tutorials: Website & eCommerce <https://www.odoo.com/slides/website-ecommerce-25>`_
 
 .. toctree::
    :titlesonly:

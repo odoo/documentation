@@ -64,8 +64,7 @@ ordering and checkout processes, set up delivery methods, handle orders, and ana
 
 .. seealso::
    - :doc:`Website Documentation <website>`
-   - `Odoo Tutorials: Website <https://www.odoo.com/slides/website-25>`_
-   - `Odoo Tutorials: eCommerce <https://www.odoo.com/slides/ecommerce-26>`_
+   - `Odoo Tutorials: Website & eCommerce <https://www.odoo.com/slides/website-ecommerce-25>`_
 
 .. toctree::
    :titlesonly:
