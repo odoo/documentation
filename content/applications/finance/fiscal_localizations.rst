@@ -23,7 +23,10 @@ country when the related app is installed. The rest can be manually :ref:`instal
 view the currently supported countries and access their specific documentation.
 
 .. note::
-   Each company in a multi-company environment can use different fiscal localization modules.
+   In a :doc:`multi-company <../general/companies/multi_company>` environment, each company can use
+   different fiscal localization modules. However, :ref:`branches <accounting/branches>` always
+   follow the parent company's localization. Therefore, entities operating in different countries
+   should be set up as companies, not branches.
 
 Verify the right package of modules is installed by going to :menuselection:`Accounting -->
 Configuration --> Settings` and checking the :guilabel:`Package` field under the :guilabel:`Fiscal
