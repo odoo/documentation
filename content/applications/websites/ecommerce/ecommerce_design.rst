@@ -35,7 +35,7 @@ customer's shopping experience.
       products using ribbons.
 
 .. seealso::
-   `Odoo Tutorials: eCommerce <https://www.odoo.com/slides/ecommerce-26>`_
+   `Odoo Tutorials: Website & eCommerce <https://www.odoo.com/slides/website-ecommerce-25>`_
 
 .. toctree::
    :titlesonly:
