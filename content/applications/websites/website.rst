@@ -49,8 +49,7 @@ with other Odoo apps to expand your website's functionality.
    rather than the default `example.odoo.com`.
 
 .. seealso::
-   - `Odoo Tutorials: Website <https://www.odoo.com/slides/website-25>`_
-   - `Odoo Tutorials: eCommerce <https://www.odoo.com/slides/ecommerce-26>`_
+   - `Odoo Tutorials: Website & eCommerce <https://www.odoo.com/slides/website-ecommerce-25>`_
    - :doc:`../general/integrations/unsplash`
 
 .. toctree::
