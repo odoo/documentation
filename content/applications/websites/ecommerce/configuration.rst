@@ -46,7 +46,7 @@ manages customer accounts and access, supporting both B2B and B2C business model
       to meet the specific needs of each business model.
 
 .. seealso::
-   `Odoo Tutorials: eCommerce <https://www.odoo.com/slides/ecommerce-26>`_
+   `Odoo Tutorials: Website & eCommerce <https://www.odoo.com/slides/website-ecommerce-25>`_
 
 .. toctree::
    :titlesonly:
