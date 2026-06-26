@@ -34,7 +34,7 @@ optimize your online presence with :doc:`Search Engine Optimization (SEO) <../we
       Improve your website’s visibility and ranking in search engine results.
 
 .. seealso::
-   `Odoo Tutorials: Website <https://www.odoo.com/slides/website-25>`_
+   `Odoo Tutorials: Website & eCommerce <https://www.odoo.com/slides/website-ecommerce-25>`_
 
 .. toctree::
    :titlesonly:
