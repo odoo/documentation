@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-19 17:30+0000\n"
+"POT-Creation-Date: 2026-06-26 17:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -6923,47 +6923,127 @@ msgid "Offline mode"
 msgstr ""
 
 #: ../../content/applications/general/offline_mode.rst:6
-msgid "Odoo’s offline mode is not intended to offer full or long-term offline capabilities, but rather to provide a solution for short-term interruptions."
+msgid "Odoo’s offline mode provides a solution for short-term interruptions; it is not intended to offer full or long-term offline capabilities."
 msgstr ""
 
 #: ../../content/applications/general/offline_mode.rst:9
-msgid "To ensure business continuity when connectivity is unreliable or unavailable, such as when commuting or while working in locations with poor or no coverage, Odoo makes certain data and functionality available offline for logged-in users."
+msgid "To ensure business continuity when connectivity is unreliable or unavailable, such as while commuting or when working in locations with poor or no coverage, Odoo makes certain functionality available offline for logged-in users."
 msgstr ""
 
 #: ../../content/applications/general/offline_mode.rst:13
-msgid "As soon as the internet connection is no longer active, a :guilabel:`Working offline` button appears in the database header. Views or records that were previously opened while online can be re-opened, regardless of whether they were active in the browser at the moment connectivity was lost. Previously opened records can be viewed but not modified while offline."
+msgid "As soon as the internet connection is no longer active, a :guilabel:`Working offline` button appears in the database header. Views or records that were previously opened while online can be reopened, regardless of whether they were active in the browser at the moment connectivity was lost. Records can be :ref:`edited, deleted, archived, unarchived, or created <general/offline-mode/records-create-udpate>`, provided certain conditions are met. Previously performed :ref:`search queries <general/offline-mode/search>` can be run again."
 msgstr ""
 
-#: ../../content/applications/general/offline_mode.rst:18
-msgid "Elements that are *not* available offline, such as menu items, views, buttons, or other records, are automatically grayed out."
+#: ../../content/applications/general/offline_mode.rst:20
+msgid "Items that are not available offline are grayed out."
 msgstr ""
 
 #: ../../content/applications/general/offline_mode.rst:None
 msgid "Elements not available offline are grayed out"
 msgstr ""
 
-#: ../../content/applications/general/offline_mode.rst:24
-msgid "In addition, search queries that were previously performed while online are also available offline. To repeat a previously performed search, click in the search bar, then choose from the available searches."
+#: ../../content/applications/general/offline_mode.rst:25
+msgid "Any changes made offline are :ref:`queued locally <general/offline-mode/manage-changes>`; when connectivity is restored, changes are synced automatically and reflected in your database."
 msgstr ""
 
-#: ../../content/applications/general/offline_mode.rst:None
-msgid "Previous executed searches available via search bar"
-msgstr ""
-
-#: ../../content/applications/general/offline_mode.rst:32
+#: ../../content/applications/general/offline_mode.rst:29
 msgid "If you foresee connectivity issues, briefly open any views or records you expect to need, and perform any searches so they can still be accessed if/when connectivity is lost."
 msgstr ""
 
-#: ../../content/applications/general/offline_mode.rst:36
+#: ../../content/applications/general/offline_mode.rst:33
 msgid "Odoo supports offline access for apps and modules built using :doc:`standard Odoo framework components </developer/reference/frontend/framework_overview>`."
 msgstr ""
 
-#: ../../content/applications/general/offline_mode.rst:38
+#: ../../content/applications/general/offline_mode.rst:35
 msgid "For performance reasons, Odoo allocates a maximum of 2 GB for offline data. When this limit is reached, the oldest data is removed to make room for the most recent activity."
 msgstr ""
 
-#: ../../content/applications/general/offline_mode.rst:40
+#: ../../content/applications/general/offline_mode.rst:37
 msgid "Performing a hard refresh using `Ctrl + F5` or `Cmd + Shift + R`, e.g., for troubleshooting reasons, removes all locally stored data. This impacts the availability of views and records in offline mode."
+msgstr ""
+
+#: ../../content/applications/general/offline_mode.rst:44
+msgid "Create and update records"
+msgstr ""
+
+#: ../../content/applications/general/offline_mode.rst:46
+msgid "When offline, records can be:"
+msgstr ""
+
+#: ../../content/applications/general/offline_mode.rst:48
+msgid "created, provided a record of the same type was previously created while you were online"
+msgstr ""
+
+#: ../../content/applications/general/offline_mode.rst:49
+msgid "edited, deleted, archived, or unarchived, provided they were previously opened while you were online"
+msgstr ""
+
+#: ../../content/applications/general/offline_mode.rst:53
+msgid "Attachments and images can be opened while offline, but cannot be uploaded or deleted."
+msgstr ""
+
+#: ../../content/applications/general/offline_mode.rst:58
+msgid "Perform searches"
+msgstr ""
+
+#: ../../content/applications/general/offline_mode.rst:60
+msgid "Search queries that were previously performed while online can be repeated offline. To repeat a previously performed search, click in the search bar, then choose from the available searches."
+msgstr ""
+
+#: ../../content/applications/general/offline_mode.rst:0
+msgid "Previous executed searches available via search bar"
+msgstr ""
+
+#: ../../content/applications/general/offline_mode.rst:70
+msgid "Manage offline changes"
+msgstr ""
+
+#: ../../content/applications/general/offline_mode.rst:72
+msgid "When you create or update a record offline, the changes are stored locally in a temporary queue until the internet connection is restored."
+msgstr ""
+
+#: ../../content/applications/general/offline_mode.rst:75
+msgid "To view pending changes while still offline, click the :guilabel:`Working offline` button; modified records are listed, with a tag showing whether the record was :guilabel:`Created`, :guilabel:`Edited`, :guilabel:`Archived`, or :guilabel:`Unarchived`."
+msgstr ""
+
+#: ../../content/applications/general/offline_mode.rst:79
+msgid "Hovering over an :guilabel:`Edited` tag reveals the changes made."
+msgstr ""
+
+#: ../../content/applications/general/offline_mode.rst:82
+msgid "In the example, the :guilabel:`Office Design and Architecture` opportunity was edited to change the :guilabel:`Salesperson` (technical field name :guilabel:`user_id`) from `Mitchell Admin` to `Marc Demo` and the :guilabel:`Expected Revenue` from `9000` to `15000`."
+msgstr ""
+
+#: ../../content/applications/general/offline_mode.rst:0
+msgid "Dropdown on Working offline button showing list of changes made offline"
+msgstr ""
+
+#: ../../content/applications/general/offline_mode.rst:90
+msgid "To make further changes to an edited record while still offline, click the record to open it locally. To discard pending changes while still offline, for example, if changes were made in error or in the wrong order, click the :icon:`fa-trash` :guilabel:`(Discard offline changes)` icon."
+msgstr ""
+
+#: ../../content/applications/general/offline_mode.rst:97
+msgid "Disable offline mode for specific views"
+msgstr ""
+
+#: ../../content/applications/general/offline_mode.rst:99
+msgid "In some cases, for example, for reporting views, displaying outdated or cached information may not be appropriate. To disable data caching for a specific view and, as a result, make the view unavailable offline, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/general/offline_mode.rst:103
+msgid "Open the view in question."
+msgstr ""
+
+#: ../../content/applications/general/offline_mode.rst:104
+msgid "Activate :ref:`developer mode <developer-mode>`."
+msgstr ""
+
+#: ../../content/applications/general/offline_mode.rst:105
+msgid "Click the :icon:`fa-bug` :guilabel:`(bug)` icon in the database header, then select :guilabel:`Action`."
+msgstr ""
+
+#: ../../content/applications/general/offline_mode.rst:107
+msgid "Disable :guilabel:`Data caching`."
 msgstr ""
 
 #: ../../content/applications/general/users.rst:7
