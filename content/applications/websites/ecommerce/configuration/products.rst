@@ -18,24 +18,27 @@ Product creation
 ================
 
 To create a product from the frontend, go to the Website app, click :guilabel:`New`
-:icon:`fa-caret-down` in the top-right corner, then select :guilabel:`Product`. Enter the
-:guilabel:`Product Name`, and other relevant details such as the :guilabel:`Barcode`,
-:guilabel:`Sales Price`, default :guilabel:`Sales Taxes`, and a :ref:`Website Category
-<ecommerce/categories_variants/categories>`, then add an image. Once you click :guilabel:`Save`, you
-are redirected to the product page where you can :ref:`customize it
-<ecommerce_design/product_page/customization>` using the :doc:`website editor
+:icon:`fa-caret-down` in the top-right corner, then select :guilabel:`Product`. Enter the product
+name and other relevant details, such as the :guilabel:`Barcode`, :guilabel:`Sales Price`, default
+:guilabel:`Sales Taxes`, and a :ref:`Website Category <ecommerce/categories_variants/categories>`,
+then add an image. Once you click :guilabel:`Save`, you are redirected to the product page where you
+can :ref:`customize it <ecommerce_design/product_page/customization>` using the :doc:`website editor
 </applications/websites/website/web_design>`. Once you are finished, click :guilabel:`Save`. To
 configure additional advanced :ref:`product details <ecommerce/products/product-configuration>`,
 click :guilabel:`Product` in the top-right corner to access the backend product form.
 
 .. tip::
-   It is also possible to create a product from the backend by navigating to
-   :menuselection:`Website --> eCommerce --> Products`. Then:
+   It is also possible to create a product from the backend by navigating to :menuselection:`Website
+   --> eCommerce --> Products`. Then:
 
    - Configure a new product by clicking :guilabel:`New`, or
-   - :doc:`Import product data </applications/sales/sales/products_prices/products/import>`
-     using XLSX or CSV files by clicking the :icon:`fa-cog` (:guilabel:`gear`) icon next to
-     :guilabel:`Products`, then :ref:`Import records <essentials/export_import_data/import-data>`.
+   - :doc:`Import product data </applications/sales/sales/products_prices/products/import>` by
+     clicking the :icon:`fa-cog` (:guilabel:`gear`) icon next to :guilabel:`Products`. Then:
+
+     - Select :icon:`fa-download` :ref:`Import <essentials/export_import_data/import-data>`, then
+       click :guilabel:`Upload` to import an XLSX or CSV file from your device; or
+     - Click :icon:`fa-globe` :ref:`Import from website <website_creation/import>` to import the
+       product catalog from an existing external website.
 
 .. seealso::
    - :doc:`Create new products using the Barcode Lookup database
@@ -56,7 +59,8 @@ To publish a product, access the product page on the website and switch the togg
      :guilabel:`Go to Website` smart button.
    - To publish products from the backend, navigate to the :guilabel:`eCommerce` tab of the
      :ref:`product form <ecommerce/products/product-form>`, then go to the :guilabel:`Shop` section
-     and toggle the :guilabel:`Published` switch on.
+     and toggle the :guilabel:`Published` switch on or choose a date from the :guilabel:`Publish on`
+     field to automatically publish the product on the given date and time.
 
 To publish multiple products at once, follow these steps:
 
@@ -199,6 +203,12 @@ corresponding :guilabel:`Optional Products`, :guilabel:`Accessory Products`, and
          <../../website/web_design/elements>` if necessary. Go to the :guilabel:`Style` tab, scroll
          to the :guilabel:`Alternative Products` section, and modify the options as needed.
 
+.. tip::
+   To automatically add optional, accessory, and alternative products in the :guilabel:`Sales` tab,
+   go to :menuselection:`Website --> Configuration --> Settings`, scroll down to the
+   :guilabel:`eCommerce` section, and enable :guilabel:`Automate suggested products`. Suggested
+   products are assigned to each product based on its :ref:`e-commerce category
+   <ecommerce/categories_variants/categories>`.
 
 .. _ecommerce/products/digital-files:
 
@@ -344,8 +354,12 @@ in the :guilabel:`Packagings` field. The available package types are displayed o
    :alt: Product packages on the e-commerce page.
 
 .. tip::
-   It is also possible to add packagings to a specific :ref:`product variant
-   <ecommerce/categories_variants/product-variants>`. To do so, go to the product form, click the
-   :icon:`fa-sitemap` :guilabel:`Variants` :ref:`smart button
-   <products/variants/variants-smart-button>`, and select the relevant product variant. Under
-   :guilabel:`Sales`, add as many package types as needed in the :guilabel:`Packagings` field.
+   - It is also possible to add packagings to a specific :ref:`product variant
+     <ecommerce/categories_variants/product-variants>`. To do so, go to the product form, click the
+     :icon:`fa-sitemap` :guilabel:`Variants` :ref:`smart button
+     <products/variants/variants-smart-button>`, and select the relevant product variant. Under
+     :guilabel:`Sales`, add as many package types as needed in the :guilabel:`Packagings` field.
+   - To prevent selected packaging units from being sold on the e-commerce, go to
+     :menuselection:`Website --> Configuration --> Settings`, and scroll down to the
+     :guilabel:`eCommerce` section. Then, under :guilabel:`Restrict Packagings`, select the units
+     that should not be available for sale.
