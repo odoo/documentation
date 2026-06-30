@@ -361,12 +361,14 @@ Additionally, a new printer needs to be added to reduce the print delay that occ
 the driver.
 
 .. important::
-   The DYMO LabelWriter 450 DUO printer is the recommended DYMO printer for use with Odoo and IoT
-   systems. This device combines two printers: a label printer and a tape printer. When configuring
-   the following processes, it is essential to select the correct model (either DYMO LabelWriter 450
-   DUO Label (en) or DYMO LabelWriter 450 DUO Tape (en)). For consistency, the following processes
-   outline configuration steps for the DYMO LabelWriter 450 DUO Label (en) model. Adjust the model
-   selections as needed.
+   - The DYMO LabelWriter 450 DUO printer is the recommended DYMO printer for use with Odoo and IoT
+     systems. This device combines two printers: a label printer and a tape printer. When
+     configuring the following processes, it is essential to select the correct model (either DYMO
+     LabelWriter 450 DUO Label (en) or DYMO LabelWriter 450 DUO Tape (en)). For consistency, the
+     following processes outline configuration steps for the DYMO LabelWriter 450 DUO Label (en)
+     model. Adjust the model selections as needed.
+   - DYMO Series 5 printers are not compatible with the :doc:`IoT box <../iot_box>` and
+     require pairing with a :doc:`Windows virtual IoT <../windows_iot>`.
 
 .. _printer/dymo/update_drivers:
 
