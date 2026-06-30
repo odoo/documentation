@@ -2,18 +2,17 @@
 Visibility
 ==========
 
-You can choose to display or hide building blocks based on a visitor's:
+:doc:`Building blocks <building_blocks>` can be displayed or hidden based on a visitor's
+:ref:`device type (mobile or desktop) <website/visibility/mobile-and-computer>` or :ref:`specific
+conditions <website/visibility/conditions>`.
 
-- device type (mobile or computer),
-- country (IP-based geolocation),
-- website language,
-- :doc:`UTM parameters <../reporting/link_tracker>`, and
-- login state.
+To configure a building block’s visibility, open the website editor and select a building block.
+In the :guilabel:`Style` tab, under the block's customization options, go to :guilabel:`Visibility`.
 
 .. _website/visibility/mobile-and-computer:
 
-Mobile/computer
-===============
+Mobile/desktop
+==============
 
 .. role:: raw-html(raw)
    :format: html
@@ -22,70 +21,72 @@ Mobile/computer
 
 .. |mobile icon| replace:: :raw-html:`<svg viewBox="0 0 566.93 566.93" xmlns="http://www.w3.org/2000/svg" width="18" height="18"><rect transform="translate(283.46 -117.41) rotate(45)" x="255.56" y="-16.93" width="55.81" height="600.8" rx="25.61"></rect><path d="m395.46 399.46a12 12 0 0 1-12 12h-128.4l-115.68 115.69a47.8 47.8 0 0 0 32.08 12.31h224a48 48 0 0 0 48-48v-268.4l-48 48zm-112 108a32 32 0 1 1 32-32 32 32 0 0 1-32 32z"></path><path d="m171.46 87.46a12 12 0 0 1 12-12h200a11.89 11.89 0 0 1 6.48 1.93l37.61-37.61a47.82 47.82 0 0 0-32.09-12.32h-224a48 48 0 0 0-48 48v268.41l48-48z"></path></svg>`
 
-To toggle the visibility of a building block based on the visitor's device type:
+To control the visibility of a building block based on the visitor's device type:
 
-- Open the website editor and select a block.
-- In the :guilabel:`Customize` tab, under the block's customization options, look for
-  :guilabel:`Visibility`.
+- Click the |desktop icon| (:guilabel:`Show/Hide on Desktop`) button to hide the block for visitors
+  using a desktop or laptop computer.
+- Click the |mobile icon| (:guilabel:`Show/Hide on Mobile`) button to hide the block for visitors
+  using a mobile device.
 
-  - Click the |desktop icon| (:guilabel:`Show/Hide on Desktop`) button to hide
-    the block for users visiting your website from a computer.
-  - Click the |mobile icon| (:guilabel:`Show/Hide on Mobile`) button to hide the block
-    for users visiting your website from a mobile device.
+Then, click :guilabel:`Save` to apply the changes.
 
-- Click :guilabel:`Save` to apply the changes.
-
-It is also sometimes possible to hide elements within blocks. It is mostly used to hide specific
-elements inside blocks that may be too wide to be correctly displayed on mobile devices. To see if
-the option is available, select an element within a block and look for the :guilabel:`Visibility`
-option under the element's customization option.
+Some :doc:`elements <elements>` within building blocks can also be hidden individually.
+This is particularly useful for elements that are too wide to display properly on smaller screens.
+To check whether this option is available, select an element within a building block and look for
+the :guilabel:`Visibility` option in the element's customization options.
 
 .. example::
-   The selected image is hidden on mobile devices.
+   The red |mobile icon| (:guilabel:`Show/Hide on Mobile`) button indicates that the selected image
+   is hidden on mobile devices.
 
-   .. image:: visibility/element-visibility.png
-      :alt: Example of an column element hidden on mobile devices
+   .. image:: visibility/visibility-for-element.png
+      :alt: Example of a column element hidden on mobile devices.
+
+.. tip::
+   It is also possible to :ref:`align the header menu based on the device type
+   <website/header_footer/menu-item-design>`.
 
 .. _website/visibility/conditions:
 
 Conditions
 ==========
 
-To access the country, website language, UTM parameters, and login state conditions:
+Set one or more conditions to control whether visitors can see a :doc:`building block
+<building_blocks>` or :doc:`element <elements>` based on their country (IP geolocation), website
+:ref:`language <translate/language-selector>`, :ref:`UTM parameters
+<website/link_tracker/create-urls>`, or :doc:`login status
+<../../ecommerce/configuration/customer_accounts>`.
 
-- Open the website editor and select a building block.
-- In the :guilabel:`Customize` tab, look for :guilabel:`Visibility`.
-- Click :guilabel:`No condition` and select :guilabel:`Conditionally` instead to display the
-  different options:
+To define conditions, click the :guilabel:`No condition` :icon:`fa-caret-down` field in the
+:guilabel:`Visibility` options and select :guilabel:`Conditionally` instead to display the available
+options:
 
-  - :guilabel:`Country`: the country of the visitor's IP address.
-  - :guilabel:`Languages`: the website language used by the visitor.
+- :guilabel:`Country`: The visitor’s country, determined from their IP address.
+- :guilabel:`Languages`: The website language selected by the visitor.
 
-    .. note::
-       This option is only available if more than one :doc:`language is installed
-       <../configuration/translate>`.
+  .. note::
+     This option is only available if multiple :doc:`languages are defined for the website
+     <../configuration/translate>`.
 
-  - :guilabel:`UTM Campaign`: the selected campaign.
-  - :guilabel:`UTM Medium`: the selected medium of any campaign.
-  - :guilabel:`UTM Source`: the selected source of any campaign.
-  - :guilabel:`Users`: select whether the visitor should be :guilabel:`Logged In` or
-    :guilabel:`Logged Out` to view the block. By default, the option is set to :guilabel:`Visible
-    for Everyone`.
+- :guilabel:`UTM Campaign`: The selected campaign.
+- :guilabel:`UTM Medium`: The selected medium of any campaign.
+- :guilabel:`UTM Source`: The selected source of any campaign.
+- :guilabel:`Users`: Select whether the block should be :guilabel:`Visible for Logged In` or
+  :guilabel:`Visible for Logged Out` users. By default, the option is set to :guilabel:`Visible
+  for Everyone`.
 
-- For one or more of the first five options, choose if the block should be :guilabel:`Visible for`
-  or :guilabel:`Hidden for`, then click :guilabel:`Choose a record...` and select it.
+For any of the first five conditions, choose whether the block should be :guilabel:`Visible for`
+or :guilabel:`Hidden for`, then click :guilabel:`Choose a record...` and select one or multiple
+options. Click the :icon:`fa-minus` (:guilabel:`remove`) button to remove an option.
 
-.. tip::
-   - You can select multiple records for each option by clicking :guilabel:`Choose a record...`
-     again.
-   - Click the :icon:`fa-minus` (:guilabel:`remove`) button to remove an option.
-
-Click :guilabel:`Save` to apply the changes.
+Then, click :guilabel:`Save` to apply the changes.
 
 .. example::
-   A block with the following configuration will only be displayed to visitors with a Belgian IP
-   address, for which the website is displayed in French, unless they visit the page using the
-   `Sales` campaign tracked URL.
+   A building block configured with the following conditions is displayed only to visitors:
+
+   - whose IP address is located in Belgium,
+   - who are viewing the website in French, and
+   - who did *not* access the page through a tracked `Sales` campaign URL.
 
    .. image:: visibility/visibility-conditions.png
       :alt: Example of a block configured with several visibility conditions
@@ -96,9 +97,16 @@ Invisible elements
 ==================
 
 Blocks and elements with custom visibility settings are listed at the bottom of the website editor
-sidebar. You can preview how the page would look like by clicking the :icon:`fa-eye`
-(:guilabel:`visible`) button to hide a block or element, or the :icon:`fa-eye-slash`
-(:guilabel:`hidden`) to show it in the website editor.
+sidebar. Click a block or an element in the :guilabel:`Invisible Elements` section to preview the
+page with or without it.
 
 .. image:: visibility/invisible-elements.png
-   :alt: Blocks and elements with custom visibility settings displayed at the bottom of the editor
+   :alt: Blocks and elements with custom visibility settings displayed at the bottom of the editor.
+
+.. tip::
+   You can also :guilabel:`Show/Hide Elements` in the :ref:`header or footer
+   <website/header_footer/design>`.
+
+.. seealso::
+   - :ref:`Manage the visibility of dynamic pages <website/header_footer/hide-menu-item>`
+   - :ref:`Manage the visibility of static pages <website/pages/page_properties>`
