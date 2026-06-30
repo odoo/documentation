@@ -15,15 +15,15 @@ Packages are commonly used for the following purposes:
    and ensuring compliance with carrier shipping specifications.
 #. Storing items in bulk.
 
-:guilabel:`Package Use` is a field on the package form in Odoo that is only visible by enabling the
-:guilabel:`Batch, Wave & Cluster Transfers` and :guilabel:`Packages` features
+:guilabel:`Package Use` is a field on the package type form in Odoo that is only visible by enabling
+the :guilabel:`Batch, Wave & Cluster Transfers` and :guilabel:`Packages` features
 (:menuselection:`Inventory app --> Configuration --> Settings`).
 
-By default, the :guilabel:`Package Use` field on a packages form is set to :guilabel:`Disposable
-Box`. Change this field to :guilabel:`Reusable Box` **only** when configuring packages for
+By default, the :guilabel:`Package Use` field on a package type form is set to :guilabel:`Disposable
+Box`. **Only** change this field to :guilabel:`Reusable Box` when configuring packages for
 :ref:`cluster pickings <inventory/warehouses_storage/cluster-pack>`.
 
-:guilabel:`Package Type` is an optional feature used for :doc:`calculating shipping cost
+:guilabel:`Package Type` is a feature most often used for :doc:`calculating shipping cost
 <../../shipping_receiving/setup_configuration>`, based on real shipping weight. Create package types
 to include the weight of the package itself (e.g. boxes, pallets, other shipping containers) in
 shipping cost calculations.
@@ -31,7 +31,7 @@ shipping cost calculations.
 .. note::
    While packages are commonly used in the :doc:`three-step delivery route
    <../../shipping_receiving/daily_operations/delivery_three_steps>`, they can be used in any
-   workflow involving storable products.
+   workflow involving products tracked by quantity, lots, or serial numbers.
 
 .. _inventory/warehouses_storage/enable-package:
 
@@ -132,28 +132,64 @@ calculate package weights for shipping costs.
    - :doc:`Shipping carriers <../../shipping_receiving/setup_configuration/third_party_shipper>`
    - :doc:`../../shipping_receiving/setup_configuration`
 
-On the :guilabel:`Package Types` list, clicking :guilabel:`New` opens a blank package type form. The
-fields of the form are as follows:
+On the :guilabel:`Package Types` list, clicking :guilabel:`New` opens a blank package type form.
 
-- :guilabel:`Package Type` (required): define the package type's name.
-- :guilabel:`Size`: define the dimensions of the package in millimeters (mm). The fields, from left
-  to right, define the :guilabel:`Length`, :guilabel:`Width`, and :guilabel:`Height`.
-- :guilabel:`Weight`: weight of an empty package (e.g. an empty box, pallet).
+Define the :guilabel:`Package Type` name.
 
-.. note::
-   Odoo calculates the package's weight by adding the weight of the empty package plus the weight of
-   the item(s), which can be found in the :guilabel:`Weight` field, in the :guilabel:`Inventory`
-   tab, of each product form.
+Configuration tab
+-----------------
 
-- :guilabel:`Max Weight`: maximum shipping weight allowed in the package.
+The following fields are available in the *Configuration* tab of a package type form:
+
 - :guilabel:`Barcode`: Define a barcode to identify the package type from a scan.
+- :guilabel:`Sequence prefix`: Specify the prefix to use when creating new packages of this type.
+
+  .. example::
+     Stealthy Wood wants to create a package type for cluster packs. They specify `CLU` as the
+     sequence prefix.
+
+- :guilabel:`Routes`: Specify the routes for which this package type can be used.
 - :guilabel:`Company`: Specify a company to make the package type available **only** at the selected
   company. Leave the field blank if it is available at all companies.
+- :guilabel:`Package Use`: Choose :guilabel:`Reusable Box (totes)` for packages used for moving
+  products within the warehouse. Choose :guilabel:`Disposable Box` for packages used to ship
+  products to customers.
 - :guilabel:`Carrier`: Specify the intended shipping carrier for this package type.
 - :guilabel:`Carrier Code`: Define a code that is linked to the package type.
 
-.. image:: package/package-type.png
-   :alt: Package type for FedEx's 25 kilogram box.
+.. image:: package/package-type-config.png
+   :alt: Configuration tab for reusable cluster pack box with sequence prefix.
+
+Dimensions tab
+--------------
+
+Use the *Dimensions* tab to specify package dimensions:
+
+- :guilabel:`Size`: Define the dimensions of the package in millimeters (mm). The fields, from left
+  to right, define the :guilabel:`Length`, :guilabel:`Width`, and :guilabel:`Height`.
+- :guilabel:`Weight`: Define the weight of an empty package (e.g. an empty box, pallet).
+
+.. note::
+   Odoo calculates the package's weight by adding the weight of the empty package plus the weight of
+   the items, which can be found in the :guilabel:`Weight` field in the :guilabel:`Inventory` tab of
+   each product form.
+
+- :guilabel:`Max Weight`: Specify the maximum shipping weight allowed in the package.
+
+.. image:: package/package-type-dimensions.png
+   :alt: Dimensions tab for FedEx 25 kilogram box package type.
+
+Capacity tab
+------------
+
+This tab can only be configured if :guilabel:`Multi-Step Routes` is also enabled in
+:menuselection:`Inventory app --> Configuration --> Settings`.
+
+Select or create a :guilabel:`Storage Category` and :guilabel:`Quantity` by clicking :guilabel:`Add
+a line`.
+
+.. seealso::
+   :doc:`../../shipping_receiving/daily_operations/storage_category`
 
 .. _inventory/warehouses_storage/cluster-pack:
 
@@ -162,8 +198,7 @@ Cluster packages
 
 To use *cluster packages*, first navigate to :menuselection:`Inventory app --> Configuration -->
 Settings`, and activate the :guilabel:`Batch, Wave & Cluster Transfers` feature, located in the
-:guilabel:`Operations` section. Doing so makes the *Package Use* field become visible on a package
-form.
+:guilabel:`Operations` section.
 
 .. image:: package/enable-batch.png
    :alt: Activate the Batch, Wave & Cluster Transfers feature in Inventory Settings.
@@ -172,25 +207,27 @@ Add new packages by going to :menuselection:`Inventory app --> Products --> Pack
 :guilabel:`New`, or select an existing package. Doing so opens the package form, which contains the
 following fields:
 
-- :guilabel:`Package Reference` (required): name of the package.
-- :guilabel:`Package Type`: used for :ref:`configuring shipping boxes to ship to the customer
-  <inventory/warehouses_storage/package-type>`.
+- :guilabel:`Package Reference` (required): Define the name of the package.
+- :guilabel:`Package Type`: Specify the :ref:`package type
+  <inventory/warehouses_storage/package-type>` to use.
 
   .. note::
-     :guilabel:`Package Type` is unnecessary for configuring packages for cluster pickings.
+     Setting a :guilabel:`Package Type` is unnecessary for configuring packages for cluster
+     pickings.
 
-- :guilabel:`Shipping Weight`: used to input the weight of the package after measuring it on a
+- :guilabel:`Location`: Define the current location of the package.
+- :guilabel:`Container`: If the package is contained within another package, define the container
+  package.
+- :guilabel:`Shipping Weight`: Used to input the weight of the package after measuring it on a
   scale.
-- :guilabel:`Company`: Specify a company to make the package available **only** at the selected
-  company. Leave the field blank if the package is available at all companies.
-- :guilabel:`Location`: current location of the package.
-- :guilabel:`Pack Date`: the date the package was created.
-- :guilabel:`Package Use`: Choose :guilabel:`Reusable Box` for packages used for moving products
-  within the warehouse. Choose :guilabel:`Disposable Box` for packages used to ship products to
-  customers.
+- :guilabel:`Company`: The company that can use this package is defined.
+- :guilabel:`Pack Date`: Specify the date the package was created.
 
-.. image:: package/package.png
-   :alt: Display package form to create a cluster pack.
+Below the package definition fields is the *Content* section. Use this field to learn more about the
+contents of the package.
+
+.. image:: package/cluster-package.png
+   :alt: A package form to create a cluster pack.
 
 .. seealso::
    :doc:`Using cluster packages <../../shipping_receiving/picking_methods/cluster>`
@@ -199,7 +236,7 @@ View packages
 =============
 
 To view all packages, go to :menuselection:`Inventory app --> Products --> Packages`. By default,
-packages are shown in Kanban view.
+packages are shown in list view.
 
-.. image:: package/packages-kanban.png
+.. image:: package/packages-list.png
    :alt: Packages dashboard.
