@@ -321,8 +321,9 @@ of notes: :ref:`internal notes <pos/use/internal-notes>` and :ref:`customer note
    column.
 
 .. note::
-   Any customer notes added to a product from the :ref:`POS register <pos/use/open-register>` are
-   displayed on the :doc:`customer display <../point_of_sale/hardware_network/customer_display>`.
+   Any notes added to a product from the :ref:`POS register <pos/use/open-register>` are displayed
+   on both the :doc:`customer display <../point_of_sale/hardware_network/customer_display>` and the
+   :doc:`preparation display <extra/preparation>`.
 
 .. _pos/use/internal-notes:
 
