@@ -20,11 +20,11 @@ bank transactions directly into its database.
 Configuration
 =============
 
-Basiq account creation
-----------------------
+Basiq account
+-------------
 
-To create a Basiq account, go to the `Basiq website <https://dashboard.basiq.io/register>`_ and
-follow the registration instructions.
+A Basiq account is not required to synchronize your bank accounts with Odoo. Simply follow the
+connection :ref:`steps <bank-synchronization/basiq/odoo-connection>` to start the synchronization.
 
 .. _bank-synchronization/basiq/payments:
 
@@ -32,9 +32,9 @@ Business banking data sharing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Under Australia's Consumer Data Right (CDR) regime, sharing business banking data requires an
-explicit **opt-in**. Consequently, setting up a business account with Basiq may require additional
-configuration steps compared to a standard personal account. For detailed setup instructions, refer
-to Basiq's `online documentation <https://api.basiq.io/docs/connecting-business-accounts-via-cdr>`_.
+explicit **opt-in**. You can ask your bank to enable this opt-in, but the steps vary by bank. Refer
+to Basiq's `CDR documentation <https://api.basiq.io/docs/connecting-business-accounts-via-cdr>`_
+for more information.
 
 .. note::
    To see how Odoo manages your financial data and how to access, update, or delete it, read the
