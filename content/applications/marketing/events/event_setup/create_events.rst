@@ -25,18 +25,18 @@ Each event card displays the name of the event, its scheduled date, location, nu
 manager.
 
 The default stages in the :guilabel:`Kanban` view are :guilabel:`New`, :guilabel:`Booked`,
-:guilabel:`Announced`, :guilabel:`Ended`, and :guilabel:`Cancelled`. The cards can be
-dragged-and-dropped into any stage in the pipeline.
+:guilabel:`Announced`, and :guilabel:`Ended`. The cards can be dragged and dropped into any stage in
+the pipeline.
 
 .. note::
-   The :guilabel:`Ended` and :guilabel:`Cancelled` stages are folded by default and located to the
-   right of the other stages.
+   The :guilabel:`Ended` stage is folded by default and located to the right of the other stages.
 
 .. image:: create_events/kanban-dashboard.png
    :alt: Overview of Events dashboard with the Kanban view in Odoo Events.
 
 To add a new stage, click the :icon:`fa-plus` :guilabel:`Add Stage` button on the right, enter a
-name for the stage, then click :guilabel:`Add`.
+name for the stage, then click :icon:`fa-check` :guilabel:`(Add)` to add the stage or
+:icon:`fa-times` :guilabel:`(Remove)` to cancel.
 
 .. _events/event-form:
 
@@ -54,7 +54,7 @@ dashboard to open up a new event form.
 At the top of the event form are a series of smart buttons related to various event metrics. These
 auto-populate with data once attendees begin to register, when booths and sponsors sign on for the
 event, when the event takes place, and so on. These smart buttons can be clicked to navigate to the
-event's related pages to modify any details and/or perform any desired actions.
+event's related pages to modify any details and perform any desired actions.
 
 Beneath the smart buttons is the event form, which contains various fields and clickable tabs to
 configure the necessary details of the event.
@@ -98,18 +98,9 @@ fields:
   <../../../websites/website/configuration/multi_website>` documentation.
 - :guilabel:`Venue`: The event venue location. This field pulls information from the **Contacts**
   application. Alternatively, the information can be entered manually.
-- :guilabel:`Exhibition Map`: The image of the event venue map. Click the :guilabel:`Upload your
-  file` button to upload an image of the event venue map.
 
 To limit the number of registrations for the event, check the :guilabel:`Limit Registrations` and
 enter the maximum number of attendees allowed in the resulting field.
-
-Optionally, to create event badges for attendees, fill in the following fields:
-
-- :guilabel:`Badge Dimension`: The desired paper format dimension for the badges. The options are
-  :guilabel:`A4 foldable`, :guilabel:`A6`, or :guilabel:`4 per sheet`.
-- :guilabel:`Badge Background`: The custom background image for the badges. Click the
-  :guilabel:`Upload your file` button to upload an image.
 
 Additional event configurations
 ===============================
@@ -169,7 +160,7 @@ deleted.
    :icon:`oi-settings-adjust` :guilabel:`(additional options)` drop-down menu, located to the
    far-right of the column titles.
 
-   Then, tick the checkbox beside :guilabel:`Description` from the resulting drop-down menu.
+   Then, select the checkbox beside :guilabel:`Description` from the resulting drop-down menu.
 
    When added, the option to add brief descriptions for each event ticket appears, which can be used
    to inform attendees of any perks or amenities that may coincide with specific ticket purchases.
@@ -192,8 +183,8 @@ can be scheduled to be sent at specific intervals leading up to and following th
    up to the event to remind the recipient of the upcoming event.
 
 To add a communication in the :guilabel:`Communication` tab, click :guilabel:`Add a line`. Then,
-select the desired type of communication from the first drop-down menu on the :guilabel:`Template`
-field. The options are: :guilabel:`Mail`, :guilabel:`SMS`, :guilabel:`Social Post`, or
+select the desired type of communication from the first drop-down menu in the :guilabel:`Template`
+column. The options are: :guilabel:`Mail`, :guilabel:`SMS`, :guilabel:`Social Post`, or
 :guilabel:`WhatsApp`.
 
 .. important::
@@ -211,14 +202,19 @@ letting Odoo know when the communication should be sent. The :guilabel:`Unit` op
 :guilabel:`Immediately`, :guilabel:`Hours`, :guilabel:`Days`, :guilabel:`Weeks`, and
 :guilabel:`Months`.
 
-Then, select an option from the :guilabel:`Trigger` drop-down menu. The options are:
-:guilabel:`After each registration`, :guilabel:`Before the event`, and :guilabel:`After the event`.
+Then, select one of the following options from the :guilabel:`Trigger` drop-down menu:
 
-The :guilabel:`Sent` column populates with the number of sent communications. Next to the number are
-different icons that appear, depending on the status of that particular communication. The *Running*
-status is represented by a :icon:`fa-cogs` :guilabel:`(three gears)` icon. The *Sent* status is
-represented by a :icon:`fa-check` :guilabel:`(checkmark)` icon. And, the *Scheduled* status is
-represented by an :icon:`fa-hourglass-half` :guilabel:`(hourglass)` icon.
+- :guilabel:`After each registration`
+- :guilabel:`Before the event starts`
+- :guilabel:`After the event started`
+- :guilabel:`After the event ended`
+- :guilabel:`Before the event ends`
+
+The :guilabel:`(#) Sent` column populates with the number of sent communications. Next to the number
+are different icons that appear, depending on the status of that particular communication. The
+*Running* status is represented by a :icon:`fa-cogs` :guilabel:`(three gears)` icon. The *Sent*
+status is represented by a :icon:`fa-check` :guilabel:`(checkmark)` icon. Finally, the *Scheduled*
+status is represented by an :icon:`fa-hourglass-half` :guilabel:`(hourglass)` icon.
 
 Any number of communications can be added in the :guilabel:`Communication` tab of an event form.
 
@@ -238,48 +234,38 @@ Any number of communications can be added in the :guilabel:`Communication` tab o
 
    To view and manage all email templates, activate :ref:`developer-mode` and navigate to
    :menuselection:`Settings --> Technical --> Email: Email Templates`. Modify with caution as email
-   templates effect all communications where the template is used.
+   templates affect all communications where the template is used.
 
 .. _events/event-questions:
 
 Questions tab
 -------------
 
-In the :guilabel:`Questions` tab of an event form, users can create brief questionnaires for
-registrants to interact with, and respond to, after they register for the event.
-
-These questions can be focused on gathering basic information about the attendee, learning about
-their preferences, expectations, and other things of that nature. This information can also be used
-to create more detailed reporting metrics, in addition to being utilized to create specific lead
-generation rules.
+In the :guilabel:`Questions` tab of an event form, users can create questionnaires to gather
+information from attendees when registering for the event.
 
 .. image:: create_events/questions-tab.png
    :alt: Typical questions tab on an event form in the Odoo Events application.
 
 .. note::
    By default, Odoo provides three questions in the :guilabel:`Questions` tab for every event form.
-   The default questions require one or more registrants to provide their :guilabel:`Name`,
-   :guilabel:`Email`, and an optional :guilabel:`Phone` number as well.
+   The default questions require registrants to provide their :guilabel:`Name`, :guilabel:`Email`,
+   and an optional :guilabel:`Phone` number.
 
    The information gathered from the :guilabel:`Questions` tab can be found on the
    :guilabel:`Attendees` dashboard, accessible via the :icon:`fa-users` :guilabel:`Attendees` smart
    button. Odoo populates individual records that contain basic information about the registrants,
    as well as their preferences.
 
-To add a question in the :guilabel:`Questions` tab, click :guilabel:`Add a line`. Doing so reveals a
-:guilabel:`Create Question` pop-up window. From here, users can create and configure their question.
+To add a question in the :guilabel:`Questions` tab, click :guilabel:`Add a line`. Doing so reveals
+an *Add: Question* pop-up window. From here, users can select previously configured questions or
+click :guilabel:`New` to create a new one. Doing so opens a new *Create Question* pop-up window.
 
 .. image:: create_events/create-question-popup.png
    :alt: The Create Question pop-up window that appears in the Odoo Events application.
 
-First, enter the question in the field at the top of the form. Then, decide if the question should
-require a :guilabel:`Mandatory Answer` and/or if Odoo should :guilabel:`Ask once per order`, by
-ticking their respective boxes, if desired.
-
-If the :guilabel:`Ask once per order` checkbox is ticked, the question will only be asked once, and
-its value is applied to every attendee in the order (if multiple tickets are purchased at once). If
-the checkbox is **not** ticked for this setting, Odoo presents the question for every attendee that
-is connected to that registration.
+First, enter the question in the field at the top of the form. Then, specify if the question
+requires a :guilabel:`Mandatory Answer`.
 
 Next, select a :guilabel:`Question Type` option:
 
@@ -293,47 +279,56 @@ Next, select a :guilabel:`Question Type` option:
 - :guilabel:`Company`: Provides registrants with a field for them to enter a company they are
   associated with.
 
-Once all the desired configurations have been entered, either click :guilabel:`Save & Close` to save
-the question, and return to the :guilabel:`Questions` tab on the event form, or click
-:guilabel:`Save & New` to save the question and immediately create a new question on a new
-:guilabel:`Create Question` pop-up window.
+Additionally, select one or more of the following options to configure the question's visibility and
+extendability:
 
-As questions are added to the :guilabel:`Questions` tab, the informative columns showcase the
-configurations of each question.
+- :guilabel:`Ask once per order`: Ask this question only once for each registration, applying the
+  answer to every attendee in the order (if multiple tickets are purchased at once).
+- :guilabel:`Default question`: Automatically add this question for all new events.
+- :guilabel:`Is Reusable`: Allow this question to be reusable for all new events. If
+  :guilabel:`Default question` is selected, this option is automatically enabled.
 
-The informative columns are the following:
+If :guilabel:`Selection` was chosen as the :guilabel:`Question Type`, an *Answers* tab appears. Add
+any answers to the question under this tab by clicking :guilabel:`Add a line`.
 
-- :guilabel:`Title`
-- :guilabel:`Mandatory`
-- :guilabel:`Once per Order`
-- :guilabel:`Type`
-- :guilabel:`Answers` (if applicable)
+Once all the desired configurations have been entered, click :guilabel:`Save & Close` to save the
+question and return to the :guilabel:`Questions` tab on the event form. Or, click :guilabel:`Save &
+New` to save the question and configure another. To cancel, click :guilabel:`Discard`.
 
-For :guilabel:`Selection` and :guilabel:`Text Input` types, a :icon:`fa-bar-chart` :guilabel:`Stats`
-button appears on the right side of the question line. When clicked, Odoo reveals a separate page,
-showcasing the response metrics to that specific question.
+Users can add as many questions in the :guilabel:`Questions` tab as needed.
 
-To delete any question from the :guilabel:`Questions` tab, click the :icon:`fa-trash-o`
-:guilabel:`(trash can)` icon on the corresponding question line.
-
-Any number of questions can be added in the :guilabel:`Questions` tab of an event form.
+.. tip::
+   For :guilabel:`Selection` and :guilabel:`Text Input` types, a :icon:`fa-bar-chart`
+   :guilabel:`Stats` button appears on the right side of the question line. When clicked, Odoo
+   reveals a separate page, showcasing the response metrics to that specific question.
 
 .. _events/event-notes:
 
-Notes tab
----------
+Notes & Documents tab
+---------------------
 
-In the :guilabel:`Notes` tab of an event form, users can leave detailed internal notes and/or
-event-related instructions/information for attendees.
+In the :guilabel:`Notes & Documents` tab of an event form, users can leave detailed internal notes
+and event-related instructions or information for attendees.
 
 .. image:: create_events/notes-tab.png
    :alt: Typical notes tab on an event form in the Odoo Events application.
 
-In the :guilabel:`Note` field of the :guilabel:`Notes` tab, users can leave internal notes for other
-event employees, like "to-do" lists, contact information, instructions, and so on.
+For in-person events, users can specify the venue map and attendee badge details in the following
+fields:
 
-In the :guilabel:`Ticket Instructions` field of the :guilabel:`Notes` tab, users can leave specific
-instructions for people attending the event that appear on the attendees ticket.
+- :guilabel:`Exhibition Map`: Upload an image of the event venue map. Do so by clicking
+  :guilabel:`Upload your file`.
+- :guilabel:`Badge Dimension`: Select the desired paper format dimension for attendees' event
+  badges. The options are :guilabel:`A4 foldable`, :guilabel:`A6`, :guilabel:`4 per sheet`, and
+  :guilabel:`96x82mm (Badge Printer)`.
+- :guilabel:`Badge Background`: Upload an image of the custom background image for the badge. Do so
+  by clicking :guilabel:`Upload your file`.
+
+In the :guilabel:`Ticket Instructions` field, users can leave specific instructions for attendees
+and display them on attendees' tickets.
+
+In the :guilabel:`Note` field, users can leave internal notes for other event employees, such as
+"to-do" lists, contact information, instructions, and so on.
 
 Publish events
 ==============
@@ -352,7 +347,7 @@ To learn more about website design functionality and options, consult the :doc:`
 
 Once the event website is ready to be shared, click the red :guilabel:`Unpublished` toggle switch in
 the header menu, changing it to a green :guilabel:`Published` switch. At this point, the event web
-page is published and viewable/accessible by all website visitors.
+page is published and accessible by all website visitors.
 
 Send event invites
 ==================
