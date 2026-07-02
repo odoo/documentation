@@ -374,6 +374,10 @@ if needed.
    - If no fiscal position is configured, the tax defined in the product's :guilabel:`Sales Taxes`
      field is applied.
 
+.. tip::
+   Use :doc:`presets <presets>` to define specific fiscal positions based on whether customers dine
+   in, take their order to go, or have it delivered.
+
 Apply fiscal positions
 ----------------------
 

@@ -11,7 +11,7 @@ Odoo Point of Sale provides various features to manage a restaurant or a bar:
 - :ref:`Notifying the kitchen or bar through the POS <pos/restaurant/orders-printing>`;
 - :ref:`Printing and splitting bills <pos/restaurant/bills>`;
 - :ref:`Collecting tips <pos/restaurant/tips>`;
-- :ref:`Setting different taxes for takeout orders <pos/pricing/taxes>`.
+- :ref:`Setting different taxes for eat-in/take-out orders <pos/pricing/taxes>`.
 
 Three main buttons in the POS interface allow for navigating between tables, the register, and
 orders:
@@ -30,14 +30,8 @@ orders:
    :ref:`Booking <pos/restaurant/floors/booking>` button appears on the main interface for viewing
    and managing bookings.
 
-.. cards::
-
-   .. card:: Online food delivery
-      :target: restaurant/urban_piper
-      :large:
-
-      Integrate third-party delivery platforms via UrbanPiper to centralize and manage external
-      orders directly within the POS.
+.. seealso::
+   :doc:`restaurant/urban_piper`
 
 .. _pos/restaurant/default:
 
