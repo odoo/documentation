@@ -9,7 +9,7 @@ Odoo Point of Sale provides various features to manage a restaurant or a bar:
 - :ref:`Notifying the kitchen or bar through the POS <pos/restaurant/orders-printing>`;
 - :ref:`Printing and splitting bills <pos/restaurant/bills>`;
 - :ref:`Collecting tips <pos/restaurant/tips>`;
-- :doc:`Setting different taxes for takeout orders <pricing/fiscal_position>`.
+- :doc:`Setting different taxes for eat-in/take-out orders <pricing/fiscal_position>`.
 
 Three main buttons in the POS interface allow for navigating between tables, the register, and
 orders:
