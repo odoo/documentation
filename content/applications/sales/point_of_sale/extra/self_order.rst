@@ -2,66 +2,62 @@
 Self-ordering
 =============
 
-The self-ordering feature allows customers to browse your menu or product catalog, place an order,
+The self-ordering mode allows customers to browse the menu or product catalog, place an order,
 and complete payment using their mobile device or a self-ordering kiosk.
+
+.. _pos/self_order/configuration:
 
 Configuration
 =============
 
-.. _pos/self-order/activation:
+To enable the self-ordering mode, access the :ref:`POS settings <pos/use/settings>`, scroll
+down to the :guilabel:`Mobile self-order & Kiosk` section, and, in
+the :guilabel:`QR menu & Kiosk activation` section, select a :guilabel:`Self Ordering` type from the
+dropdown list.
 
-Feature activation
-------------------
-
-To enable this feature and select a self-ordering type, access the :ref:`POS settings
-<pos/use/settings>`, scroll down to the :guilabel:`Mobile self-order & Kiosk` section, and select a
-:guilabel:`Self Ordering` type under the :guilabel:`QR menu & Kiosk activation` section.
-
-You can choose from:
+You can choose between :guilabel:`QR menu`, :guilabel:`QR menu + Ordering`, and :guilabel:`Kiosk`.
 
 .. tabs::
 
    .. group-tab:: QR menu
 
-      Select :guilabel:`QR menu` or :guilabel:`QR menu + Ordering` to give customers access to your
+      Select :guilabel:`QR menu` or :guilabel:`QR menu + Ordering` to give customers access to the
       menu or product catalog by scanning a QR code on their personal device. The latter also
-      allows them to place an order and make a payment.
-
-      .. image:: self_order/qr-activation.png
-         :alt: QR menu and kiosk setting activation
+      allows them to place an order and make a payment. Then:
 
       - Click :icon:`fa-arrow-right` :guilabel:`Print QR Codes` to download a .pdf document with the
         generated QR codes.
       - Click :icon:`fa-arrow-right` :guilabel:`Download QR Codes` to download a compressed file
         with the generated QR codes.
+      - Click :icon:`fa-arrow-right` :guilabel:`Free Metal / Wood Stands` to `order QR code stands
+        from Odoo <https://www.odoo.com/app/point-of-sale-restaurant-qr-code>`_.
 
       .. note::
          In :ref:`restaurants <pos/restaurant/floors>`, printing or downloading QR codes generates
          as many QR codes as the number of available tables. In **shops**, it generates only one
          generic QR code.
 
-      .. tip::
-         To customize QR codes,
-
-         #. Scan the relevant QR code to acquire its URL.
-         #. Use a QR code generator (e.g., `QR code monkey <https://www.qrcode-monkey.com>`_ or `QR
-            code generator <https://www.qr-code-generator.com>`_) to create a custom QR code.
+      To customize QR codes, scan the relevant QR code to acquire its URL, then use a QR code
+      generator (e.g., `QR code monkey <https://www.qrcode-monkey.com>`_, `QR code generator
+      <https://www.qr-code-generator.com>`_, or `JustMakeTheQRCode.com
+      <https://justmaketheqrcode.com/>`_) to create a custom QR code.
 
    .. group-tab:: Kiosk
 
-      When :guilabel:`Kiosk` is selected, customers can access the menu or product catalog, place
-      orders, and pay from a self-ordering kiosk.
+      Select :guilabel:`Kiosk` to let customers browse the menu or product catalog, place orders,
+      and pay directly at a self-ordering kiosk.
 
-      .. image:: self_order/kiosk-activation.png
-         :alt: QR menu and kiosk setting activation
+Once a self-ordering type is selected, click :icon:`fa-arrow-right` :guilabel:`Preview Web
+interface` under the :guilabel:`Self Ordering` field to ensure all :ref:`additional settings
+<pos/self_order/additional-settings>` are correctly applied.
 
-Once a self-ordering type is selected, the :ref:`additional settings <pos/self_order/add-settings>`
-update to fit the selected type's needs.
-
-.. _pos/self_order/add-settings:
+.. _pos/self_order/additional-settings:
 
 Additional settings
 -------------------
+
+To further configure the self-ordering options, use the settings in the :guilabel:`Mobile self-order
+& Kiosk` section.
 
 .. tabs::
 
@@ -79,55 +75,86 @@ Additional settings
       #. In the same :guilabel:`URL` column, enter `/products` to create a button that redirects
          customers to the product catalog.
       #. Select the :guilabel:`Points of Sale` to ensure this button only appears on the selected
-         POS' self-ordering interface.
+         POS's self-ordering interface.
       #. Select a predefined :guilabel:`Style` from the dropdown menu.
 
       .. note::
          - Leaving the :guilabel:`Points of Sale` field empty shares the button with all POS.
-         - The :guilabel:`Preview` column automatically updates, giving you a glimpse of the
-           button's appearance based on its configuration.
+         - The :guilabel:`Preview` column automatically updates to show the button's appearance for
+           the selected :guilabel:`Style`.
 
    .. tab:: Service location and payment options
 
-      - Set where the service occurs by selecting :guilabel:`Table` or :guilabel:`Pickup zone`
-        under the :guilabel:`Service` field.
+      In the :guilabel:`Service at` field, specify where the service takes place by selecting
+      :guilabel:`Table` or :guilabel:`Pickup zone`. Then, in the :guilabel:`Pay after` field, define
+      when customers pay. Depending on the self-ordering type, service location, and POS type,
+      customers can pay after their :guilabel:`Meal` or after :guilabel:`Each order` and choose from
+      different payment options.
 
-        .. note::
-           Service zones can also be defined for :doc:`presets <presets>` used for self-ordering.
+      .. note::
+         Service zones can also be defined for :doc:`presets <presets>` used for self-ordering.
 
-      - Define when and how customers pay in the :guilabel:`Pay after` field. Customers can pay
-        after :guilabel:`Each meal` or for :guilabel:`Each order`.
-      - The service location and payment options available depend on the type of self-ordering
-        service and POS:
+      .. tabs::
 
-        - **QR menu + Ordering**:
+         .. group-tab:: QR menu
 
-          - **Restaurants**: Customers can be served at their table or the pickup zone.
+            - **Restaurants**: Customers can be served at their :guilabel:`Table` or at the
+              :guilabel:`Pickup zone`.
 
-            - When served at their table, they can pay after each meal or each order.
-            - When served at the pickup zone, they can only pay after each order.
-          - **Shops**: Customers can only be served at the pickup zone and pay after each order.
-          - Regardless of the type of POS, customers can pay :doc:`online
-            </applications/finance/payment_providers>` or using any configured :doc:`payment
-            method <../payment_methods>`.
+              - For :guilabel:`Table` service, they can pay after their :guilabel:`Meal` or after
+                :guilabel:`Each order`.
+              - For :guilabel:`Pickup zone` service, they can only pay after :guilabel:`Each order`.
 
-        - **Kiosk**:
+            - **Shops**: Customers can only be served at the :guilabel:`Pickup zone` and pay after
+              :guilabel:`Each order`.
+            - Customers can pay :doc:`online </applications/finance/payment_providers>` or using any
+              configured :doc:`payment method <../payment_methods>`. If the :guilabel:`Online
+              Payment` field is left empty, customers pay at the cashier.
 
-          - Regardless of the type of POS, customers can either be served at their table or in the
-            pickup zone, but they must pay after each order.
-          - The kiosk self-ordering only works with :doc:`Adyen <../payment_methods/terminals/adyen>`
-            and :doc:`Stripe <../payment_methods/terminals/stripe>` terminals.
-          - The :guilabel:`Online Payment` feature is not supported.
+         .. group-tab:: Kiosk
+
+            - Customers can be served at their :guilabel:`Table` or at the :guilabel:`Pickup zone`,
+              but they must pay after :guilabel:`Each order`.
+            - Payment via a terminal is only possible with :doc:`Adyen
+              <../payment_methods/terminals/adyen>`, :doc:`Stripe
+              <../payment_methods/terminals/stripe>`, or :doc:`Viva.com
+              <../payment_methods/terminals/viva_com>` terminals.
+            - To pay :doc:`online </applications/finance/payment_providers>`, customers must scan
+              the displayed QR code.
+            - :guilabel:`Cash` payments are not supported.
+
+      .. note::
+         Regardless of the self-ordering configuration, only one :guilabel:`Online Payment` method
+         can be added.
+
+      .. tip::
+         Click :icon:`fa-arrow-right` :guilabel:`Payment Methods` to :doc:`create or edit payment
+         methods <../payment_methods>`.
 
       .. seealso::
          - :doc:`/applications/finance/payment_providers`
          - :doc:`../payment_methods`
 
+   .. tab:: Launch on IoT Box
+
+      This option allows for using an :doc:`IoT Box </applications/general/iot/iot_box>` connected
+      to a touchscreen as a self-ordering kiosk.
+
+      #. :doc:`Connect an IoT Box </applications/general/iot/connect>` to your Odoo database.
+      #. Ensure a touchscreen :doc:`display </applications/general/iot/devices/screen>` is
+         connected.
+      #. Select the IoT Box from the :guilabel:`Launch on` field.
+
+      .. note::
+         Once connected to the IoT box, the touchscreen display appears as two separate
+         devices in the IoT box's list of devices: a display and a keyboard input device.
+
    .. tab:: Language
 
-      This option allows you to enable multiple languages for the self-ordering interface. The
-      suggested languages are those already installed in Odoo. To expand the selection, add more
-      languages:
+      Enable multiple languages for the self-ordering interface. The suggested languages are those
+      already installed in Odoo. When several languages are installed, select a :guilabel:`Default`
+      language and, if desired, additional :guilabel:`Available` languages. To add more languages,
+      follow these steps:
 
       #. Click :icon:`fa-arrow-right` :guilabel:`Add Languages`.
       #. Add as many languages as needed to the :guilabel:`Languages` field.
@@ -142,7 +169,7 @@ Additional settings
       Splash screens are introductory screens displayed when the self-ordering interface or kiosk is
       launched. They typically contain branding, welcome messages, or usage instructions.
 
-      - To add a splash screen image, click :icon:`fa-paperclip` :guilabel:`Add images`, select and
+      - To add a splash screen image, click :icon:`fa-paperclip` :guilabel:`Add Media`, select and
         open an image.
       - To remove a splash screen image, hover over the image and click :icon:`fa-times`
         (:guilabel:`Delete`).
@@ -150,45 +177,30 @@ Additional settings
       .. note::
          You can add multiple splash screen images at once.
 
-   .. tab:: Eat in/ Take out
+   .. tab:: Background
 
-      Activate this setting to :ref:`adjust the tax rate <pos/pricing/taxes>` based on whether
-      customers dine in or take their order to go. Then,
+      Add a custom image to the self-ordering interface to match your business's style. To do so, go
+      to the :guilabel:`Background` section and click :icon:`fa-paperclip` :guilabel:`Set background
+      image`.
 
-      - Fill in the field with an existing :guilabel:`Alternative Fiscal Position`;
-      - Create and set up a new fiscal position by filling in the field and clicking
-        :guilabel:`Create & Edit`; or
-      - Create and set up a new fiscal position by clicking :icon:`fa-arrow-right` :guilabel:`Fiscal
-        Positions`.
+      If necessary, click the default :guilabel:`Color` to change it and define a color scheme for
+      buttons and backgrounds.
 
-      .. seealso::
-         - :ref:`pos/pricing/taxes`
-         - :doc:`/applications/finance/accounting/taxes/fiscal_positions`
+.. tip::
+   Use :doc:`presets <presets>` in self-ordering mode to define :doc:`fiscal positions
+   </applications/finance/accounting/taxes/fiscal_positions>` to :ref:`adjust the tax rate
+   <pos/pricing/taxes>` based on whether customers dine in or take their order to go.
 
-   .. tab:: Launch on IoT Box
-        This option allows for using an :doc:`IoT Box </applications/general/iot/iot_box>` connected to a
-        touchscreen as a self-ordering kiosk.
+.. _pos/self_order/use:
 
-        #. :doc:`Connect an IoT Box </applications/general/iot/connect>` to your Odoo database.
-        #. Ensure a touchscreen :doc:`display </applications/general/iot/devices/screen>` is connected
-        #. Select the IoT Box from the :guilabel:`Launch on` field.
+Using the self-ordering mode
+============================
 
-        .. note::
-            Once connected to the IoT box, the touchscreen display appears as two separate
-            devices in the IoT box's list of devices: a display and a keyboard input device.
+Once the self-ordering mode configuration is completed, make it accessible to customers by either
+displaying printed QR codes or installing a self-service kiosk.
 
-Preview
--------
-
-Review the interface before making the self-ordering feature available to customers to ensure all
-settings are applied correctly. Click :icon:`fa-arrow-right` :guilabel:`Preview Web interface`
-under the :guilabel:`Self  Ordering` field to ensure all :ref:`additional settings
-<pos/self_order/add-settings>` are correctly applied.
-
-.. _extra/self_order/usage-guidelines:
-
-Usage guidelines
-================
+.. important::
+   :ref:`The POS register must be open <pos/use/open-register>` for customers to place an order.
 
 .. tabs::
 
@@ -197,42 +209,43 @@ Usage guidelines
       On the POS user's end, access the self-ordering interface by
 
       - Scanning a downloaded or printed QR code; or
-      - Clicking the :icon:`fa-ellipsis-v` (:guilabel:`vertical ellipsis`) icon on the POS card,
-        then :guilabel:`Mobile Menu`.
+      - Clicking the :guilabel:`Mobile Menu` button on the POS card.
 
       On the customers' end,
 
       #. Access the self-ordering interface by scanning a downloaded or printed QR code.
-      #. Click the :ref:`home button <pos/self_order/add-settings>` to reach the menu or catalog.
-      #. Select the items and click :guilabel:`Order` to place an order.
+      #. Click the :ref:`home button <pos/self_order/additional-settings>` to reach the menu or
+         catalog.
+      #. Select the items, then click :guilabel:`Order` to place an order.
       #. Follow the instructions on-screen to assign a table and pay for the order.
+
+      .. tip::
+         On the :guilabel:`Your Order` page, customers can click the :icon:`fa-plus` icon next to
+         :guilabel:`Add an order note` to enter additional information or special requests, such as
+         `Burger without onions, please`, and click :guilabel:`Apply`. These notes are then
+         displayed on the :doc:`preparation display <preparation>`.
 
    .. group-tab:: Kiosk
 
-      On the POS user's end, click :guilabel:`Start Kiosk`.
+      On the POS user's end, click the :guilabel:`Start Kiosk` button on the POS card.
 
       .. note::
          - If an IoT Box is configured as a kiosk, the self-ordering interface opens directly on
            the connected touchscreen. Otherwise, it opens in a new browser tab on the device used
            to access it.
-         - Once the register is open, :guilabel:`Start Kiosk` switches to :guilabel:`Open Kiosk` on the
-           POS card.
-         - Click :guilabel:`Open Kiosk` on the POS card to reopen the self-ordering interface in a new
-           tab or to refresh the kiosk's IoT Box touchscreen display if it is already running.
+         - Once the register is open, :guilabel:`Start Kiosk` switches to :guilabel:`Open Kiosk` on
+           the POS card.
+         - Click :guilabel:`Open Kiosk` on the POS card to reopen the self-ordering interface in a
+           new tab or to refresh the kiosk's IoT Box touchscreen display if it is already running.
          - Configure :doc:`presets <presets>` to streamline the ordering process.
 
       On the customers' end,
 
-      #. Click the :ref:`home button <pos/self_order/add-settings>` from a self-ordering kiosk to
-         reach the menu or product catalog.
-      #. Select the items and click :guilabel:`Order` to place an order.
-      #. Follow the instructions on-screen to assign a table and pay for the order.
+      #. Click the :ref:`home button <pos/self_order/additional-settings>` from a self-ordering
+         kiosk to open the menu or product catalog.
+      #. Select the items, then click :guilabel:`Order` to place an order.
+      #. Follow the instructions on-screen to assign a table, if relevant, and pay for the order.
 
-      .. image:: self_order/kiosk-endscreen.png
-         :alt: kiosk end-screen for customers
-         :scale: 65 %
-
-.. important::
-   - :ref:`The POS register must be open <pos/use/open-register>` for customers to place an order.
-   - Once an order is placed, it is automatically sent to :doc:`the preparation screen
-     <preparation>` and added to the list of POS orders.
+.. note::
+   Once an order is placed, it is automatically sent to :doc:`the preparation screen <preparation>`
+   and added to the list of POS orders.
