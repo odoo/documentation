@@ -61,6 +61,8 @@ page from the following table to set them up.
      - `account_qr_code_sepa`
      - This module adds support for SEPA Credit Transfer QR-code generation.
 
+.. _pos/qr_code_payment/create-method:
+
 Create the payment method
 -------------------------
 
