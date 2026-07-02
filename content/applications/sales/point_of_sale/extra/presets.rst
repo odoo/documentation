@@ -150,7 +150,7 @@ Presets are available in both the :ref:`POS register <pos/restaurant/orders>` an
    .. tab:: Kiosk
 
       Presets can be used in the :ref:`kiosk of the self-ordering mode
-      <extra/self_order/usage-guidelines>`. Once the customer taps the :guilabel:`Order Now` button,
+      <pos/self_order/use>`. Once the customer taps the :guilabel:`Order Now` button,
       all available preset options, along with their respective images, are displayed.
 
       .. image:: presets/kiosk-presets.png

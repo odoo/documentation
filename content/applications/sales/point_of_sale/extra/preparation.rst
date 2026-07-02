@@ -149,6 +149,7 @@ Order cards represent individual orders and display the following information:
 - Stages, i.e., the status such as `To prepare`, `Ready`, etc., highlighted in the defined color
   (only shown when :guilabel:`All` orders are displayed).
 - Waiting time, with visual indicators, if the elapsed time exceeds the predefined alert time.
+- Added :ref:`notes <pos/use/notes>`.
 
 To update order progress from the order card, click individual items to cross them off individually
 or click the order card itself to mark all items at once. Once all items are completed, the order

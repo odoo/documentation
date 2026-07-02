@@ -97,7 +97,7 @@ Sale` tab on the product form to configure the following POS-specific options:
   <pos/use/open-register>`.
 - Enable :guilabel:`Available in Self Order` if the product can be ordered in :doc:`self-ordering
   mode <extra/self_order>`. This option only appears once the self-ordering mode is :ref:`enabled
-  <pos/self-order/activation>`.
+  <pos/self_order/configuration>`.
 - Write a :guilabel:`Description` to display in the :ref:`product information window in the POS
   register <pos/products/information-display>` and in :doc:`self-ordering mode <extra/self_order>`
   when clicking the :icon:`fa-info-circle` :ref:`info button <pos/products/tag-application>`.
