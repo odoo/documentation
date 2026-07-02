@@ -2,6 +2,7 @@
 # Copyright (C) Odoo S.A.
 # This file is distributed under the same license as the Odoo package.
 # "Junko Augias (juau)" <juau@odoo.com>, 2025, 2026.
+# "Dylan Kiss (dyki)" <dyki@odoo.com>, 2026.
 #
 # Translators:
 # Tiffany Chang, 2024
@@ -13,8 +14,8 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-06-19 17:31+0000\n"
-"PO-Revision-Date: 2026-06-15 23:16+0000\n"
-"Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
+"PO-Revision-Date: 2026-07-02 10:17+0000\n"
+"Last-Translator: \"Dylan Kiss (dyki)\" <dyki@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-18-doc/"
 "administration/ja/>\n"
 "Language: ja\n"
@@ -679,7 +680,6 @@ msgid "Odoo.com account"
 msgstr "Odoo.comアカウント"
 
 #: ../../content/administration/odoo_accounts.rst:5
-#, fuzzy
 msgid ""
 "Open the `Connection & Security page <https://www.odoo.com/my/security>`_ on "
 "your Odoo.com account portal to:"
@@ -2604,6 +2604,8 @@ msgid ""
 "branches are automatically set back to the development stage after **30 "
 "days**."
 msgstr ""
+"**トライアルプロジェクト**を使用する場合、本番ブランチとすべての"
+"ステージングブランチは**30日後**に自動的に開発ステージに戻されます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:72
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:506
@@ -2618,14 +2620,17 @@ msgid ""
 "without compromising the actual production database with test records. They "
 "create neutralized duplicates of the production database."
 msgstr ""
+"ステージングブランチは、テストレコードで実際の本番データベースを危険にさらす"
+"ことなく、本番データを使用して新機能をテストすることを目的としています。本番"
+"データベースの無害化された複製を作成します。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:78
 msgid "The neutralization disables:"
-msgstr ""
+msgstr "無害化により以下が無効になります:"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:80
 msgid "Scheduled actions"
-msgstr ""
+msgstr "スケジュール済のアクション"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:83
 msgid ""
@@ -2633,10 +2638,13 @@ msgid ""
 "platform will trigger them less often if no one is using the database in "
 "order to save resources."
 msgstr ""
+"テストするには、手動でトリガーするか、再度有効にしてください。リソースを節約"
+"するため、データベースを使用している人がいない場合、プラットフォームはそれら"
+"のトリガー頻度を減らすことに注意してください。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:86
 msgid "Outgoing emails"
-msgstr ""
+msgstr "送信メール"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:89
 msgid ""
@@ -2645,18 +2653,22 @@ msgid ""
 "provided in your Odoo.sh project. That way, no emails are sent to your "
 "contacts."
 msgstr ""
+"代わりに、メールキャッチャーを使用して傍受されます。データベースから送信され"
+"たメールを表示する:ref:`インターフェース <odoo-sh/branches/tabs/mails>`が"
+"Odoo.shプロジェクトで提供されます。これにより、連絡先にメールが送信されること"
+"はありません。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:93
 msgid "IAP services"
-msgstr ""
+msgstr "IAPサービス"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:95
 msgid "Payment providers and shipping connectors"
-msgstr ""
+msgstr "支払いプロバイダーと配送コネクタ"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:98
 msgid "They are put into test mode."
-msgstr ""
+msgstr "テストモードに設定されます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:100
 msgid ""
@@ -2666,6 +2678,11 @@ msgid ""
 "default configuration or views. Check the :ref:`first module documentation "
 "<odoo-sh/module/add>` to view examples."
 msgstr ""
+"ステージングデータベースで設定を変更または表示する場合は、必ず記録してくださ"
+"い（ステップごとにメモを取る、本番環境で再現するなど）。または、XML"
+"データファイルを使用してデフォルト設定やビューを上書きし、ブランチの"
+"モジュールに直接記述してください。例を確認するには、:ref:`最初のモジュールの"
+"ドキュメント <odoo-sh/module/add>`をご覧ください。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:106
 msgid ""
@@ -2674,6 +2691,10 @@ msgid ""
 "the units without demo data, Odoo.sh will then consider running the tests on "
 "staging databases."
 msgstr ""
+"ユニットテストは実行されません。ユニットテストはデモデータに依存していますが"
+"、デモデータは本番環境およびステージング環境のデータベースには読み込まれませ"
+"ん。Odoroがデモデータなしでユニットテストの実行をサポートするようになれば、"
+"Odoo.shはステージングデータベースでのテスト実行を検討します。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:110
 msgid ""
@@ -2683,12 +2704,18 @@ msgid ""
 "the production database. It is possible to create manual backups of staging "
 "databases."
 msgstr ""
+"ステージングデータベースは自動的にバックアップされません。ただし、テスト目的"
+"や本番データベースから誤って削除されたデータを手動で復元するために、本番"
+"データベースのバックアップをステージングブランチに復元することができます。"
+"ステージングデータベースの手動バックアップを作成することは可能です。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:116
 msgid ""
 "Databases created for staging branches are automatically deleted after one "
 "month. To use the branch again, you must rebuild it."
 msgstr ""
+"ステージングブランチ用に作成されたデータベースは、1か月後に自動的に削除されま"
+"す。ブランチを再度使用するには、再構築する必要があります。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:122
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:509
@@ -2704,6 +2731,10 @@ msgid ""
 "change this list of modules to install in the :doc:`project settings "
 "<settings>`."
 msgstr ""
+"開発ブランチでは、ユニットテストを実行するためにデモデータを使用して新しい"
+"データベースが作成されます。インストールされるモジュールは、ブランチに含まれ"
+"るモジュールです。インストールするモジュールのリストは、:doc:`プロジェクト設"
+"定 <settings>`で変更できます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:128
 msgid ""
@@ -2714,6 +2745,12 @@ msgid ""
 "tests or allow specific tests to be run with custom tags by going to "
 "the :ref:`branch's settings <odoo-sh/branches/tabs/settings>`."
 msgstr ""
+"開発ブランチにコミットをプッシュすると、新しいサーバーが起動し、ゼロから作成"
+"されたデータベースでブランチが更新されます。デモデータが読み込まれ、変更が"
+"テスト対象の機能を破壊しないことを検証するため、デフォルトでユニットテストが"
+"実行されます。テストを無効にしたり、カスタムタグで特定のテストを実行したりす"
+"るには、:ref:`ブランチの設定 <odoo-sh/branches/tabs/settings>`にアクセスして"
+"ください。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:134
 msgid ""
@@ -2721,12 +2758,15 @@ msgid ""
 "mail catcher, and scheduled actions are not triggered as long as the "
 "database is not in use."
 msgstr ""
+"ステージングブランチと同様に、メールは送信されずメールキャッチャーによって傍"
+"受され、データベースが使用されていない限りスケジュール済アクションはトリガー"
+"されません。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:137
 msgid ""
 "Development databases are not automatically backed up, and manual backups "
 "are not possible."
-msgstr ""
+msgstr "開発データベースは自動的にバックアップされず、手動バックアップもできません。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:140
 msgid ""
@@ -2734,51 +2774,62 @@ msgid ""
 "approximately three days. After that, they can be automatically garbage-"
 "collected to make room for new databases without prior notice."
 msgstr ""
+"開発ブランチ用に作成されたデータベースは、約3日間保持されることを想定していま"
+"す。その後、予告なく自動的にガベージコレクションされ、新しいデータベース用の"
+"スペースが確保される可能性があります。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:147
 msgid "Merging branches"
-msgstr ""
+msgstr "ブランチの統合"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:149
 msgid ""
 "You can merge your branches by dragging and dropping them into each other."
-msgstr ""
+msgstr "ブランチをドラッグ&ドロップして相互に統合できます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:None
 msgid "Merging branches into each other"
-msgstr ""
+msgstr "ブランチを相互に統合"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:154
 msgid ""
 "To test the changes of development branches with the production data, you "
 "can either:"
 msgstr ""
+"開発ブランチの変更を本番環境データでテストするには、次のいずれかの方法を使用"
+"できます:"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:156
 msgid ""
 "Merge the development branch into a staging branch by dragging and dropping "
 "it onto the desired branch; or"
 msgstr ""
+"開発ブランチを目的のブランチにドラッグ&ドロップしてステージングブランチに統合"
+"する、または"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:0
 msgid "Merging a development branch into a staging branch"
-msgstr ""
+msgstr "開発ブランチをステージングブランチに統合"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:162
 msgid ""
 "Drag and drop the development branch under the :guilabel:`Staging` section "
 "to make it a staging branch."
 msgstr ""
+"開発ブランチを:guilabel:`ステージング`セクションの下にドラッグ&ドロップして、"
+"ステージングブランチにします。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:0
 msgid "Moving a development branch under staging"
-msgstr ""
+msgstr "開発ブランチをステージングの下に移動"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:168
 msgid ""
 "When the changes are ready for production, drag and drop the staging branch "
 "into the production branch to merge and deploy them."
 msgstr ""
+"変更が本番環境に対応できる状態になったら、ステージングブランチを本番環境"
+"ブランチにドラッグ&ドロップして統合およびデプロイします。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:172
 msgid ""
@@ -2787,18 +2838,23 @@ msgid ""
 "staging branch, so there is a higher risk of encountering issues in the "
 "production database."
 msgstr ""
+"開発ブランチを本番環境ブランチに直接統合することもできます。ただし、"
+"ステージングブランチを経由して本番環境データで変更が検証されないため、本番環"
+"境データベースで問題が発生するリスクが高くなります。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:175
 msgid ""
 "You can merge development branches into each other, and staging branches "
 "into each other."
-msgstr ""
+msgstr "開発ブランチ同士、およびステージングブランチ同士を統合できます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:176
 msgid ""
 "You can also use `git merge` directly on your workstation to merge your "
 "branches. Odoo.sh is notified when new revisions are pushed to your branches."
 msgstr ""
+"ワークステーションで直接`git merge`を使用してブランチを統合することもできます"
+"。Odoo.shは、ブランチに新しい変更履歴がプッシュされると通知を受け取ります。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:179
 msgid ""
@@ -2807,12 +2863,18 @@ msgid ""
 "production database. However, if you modify the code in the repository, it "
 "will be passed to the production branch when merging."
 msgstr ""
+"ステージングブランチをプロダクションブランチにマージすると、ソースコードのみ"
+"がマージされます。ステージングデータベースに加えられた変更は、"
+"プロダクションデータベースには渡されません。ただし、リポジトリ内のコードを変"
+"更した場合、マージ時にプロダクションブランチに渡されます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:183
 msgid ""
 "If you test configuration changes in staging branches, and want them to be "
 "applied to the production branch, you have to, either:"
 msgstr ""
+"ステージングブランチで設定変更をテストし、それらをプロダクションブランチに適"
+"用したい場合は、次のいずれかを行う必要があります。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:186
 msgid ""
@@ -2821,6 +2883,10 @@ msgid ""
 "module in its manifest (:file:`__manifest__.py`) to trigger the module "
 "update when merging the staging branch in the production branch."
 msgstr ""
+"設定変更をXMLデータファイルに記述してブランチのデフォルト設定やビューを上書き"
+"し、マニフェスト(:file:`__manifest__.py`)でモジュールのバージョンを上げて、"
+"ステージングブランチをプロダクションブランチにマージする際にモジュールの更新"
+"をトリガーします。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:191
 msgid ""
@@ -2828,12 +2894,16 @@ msgid ""
 "you will use the Git versioning features for all configuration changes, "
 "thereby ensuring traceability of your changes."
 msgstr ""
+"この方法は、すべての設定変更にGitのバージョン管理機能を使用することで変更の追"
+"跡可能性を確保し、開発のスケーラビリティを向上させるため推奨されます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:195
 msgid ""
 "Pass them manually from the staging database to the production one by "
 "copying and pasting them."
 msgstr ""
+"ステージングデータベースからプロダクションデータベースへ、コピー&ペーストで手"
+"動で渡します。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:200
 msgid "Tabs"
@@ -2845,21 +2915,23 @@ msgstr "履歴"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:207
 msgid "The :guilabel:`History` tab gives an overview of the branch history:"
-msgstr ""
+msgstr ":guilabel:`履歴`タブには、ブランチの履歴の概要が表示されます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:209
 msgid "The commit messages and their authors"
-msgstr ""
+msgstr "コミットメッセージとその作成者"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:210
 msgid ""
 "The various events linked to the platform, such as stage changes, database "
 "imports, and backup restores"
 msgstr ""
+"ステージ変更、データベースインポート、バックアップ復元など、プラットフォーム"
+"に関連するさまざまなイベント"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:None
 msgid "The branches' history tab"
-msgstr ""
+msgstr "ブランチの履歴タブ"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:216
 msgid ""
@@ -2869,6 +2941,10 @@ msgid ""
 "successful, a :guilabel:`Connect` button appears, allowing you to access the "
 "database."
 msgstr ""
+"各イベントの右上隅にあるステータスは、データベースで現在実行中の操作"
+"(インストール、更新、バックアップインポートなど)またはその結果"
+"(テストフィードバック、バックアップインポート成功など)を示します。操作が成功"
+"すると、:guilabel:`接続`ボタンが表示され、データベースにアクセスできます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:224
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:400
@@ -2880,6 +2956,8 @@ msgid ""
 "The :guilabel:`Mails` tab contains the mail catcher, which provides an "
 "overview of emails sent by the database."
 msgstr ""
+":guilabel:`メール`タブには、データベースから送信されたメールの概要を提供する"
+"メールキャッチャーが含まれています。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:230
 msgid ""
@@ -2887,10 +2965,13 @@ msgid ""
 "from the production database are actually sent and are not intercepted by "
 "the mail catcher."
 msgstr ""
+"メールキャッチャーは、開発ブランチとステージングブランチで利用できます。"
+"プロダクションデータベースからのメールは実際に送信され、メールキャッチャーに"
+"は捕捉されません。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:None
 msgid "The branches' mails tab"
-msgstr ""
+msgstr "ブランチのメールタブ"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:239
 msgid "Shell"
@@ -2898,7 +2979,7 @@ msgstr "シェル"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:241
 msgid "The :guilabel:`Shell` tab provides shell access to the container."
-msgstr ""
+msgstr ":guilabel:`シェル`タブは、コンテナへのシェルアクセスを提供します。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:243
 msgid ""
@@ -2906,16 +2987,19 @@ msgid ""
 "Linux commands (`ls`, `top`). You can open a shell on the database by "
 "running `psql`."
 msgstr ""
+":guilabel:`シェル`をクリックすると新しいブラウザタブが開き、基本的なLinux"
+"コマンド(`ls`、`top`)を実行できます。`psql`を実行することで、データベースで"
+"シェルを開くことができます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:None
 msgid "The branches' shell tab"
-msgstr ""
+msgstr "ブランチのシェルタブ"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:250
 msgid ""
 "You can open multiple shell tabs at once and arrange their layout by "
 "dragging and dropping them."
-msgstr ""
+msgstr "複数のシェルタブを同時に開き、ドラッグ&ドロップでレイアウトを調整できます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:253
 msgid ""
@@ -2923,63 +3007,72 @@ msgid ""
 "manipulating production instances directly, while staging/development "
 "instance shells are highlighted in yellow."
 msgstr ""
+"プロダクションインスタンスのシェルは、プロダクションインスタンスを直接操作す"
+"る危険性を強調するために赤色で表示され、ステージング/開発インスタンスのシェル"
+"は黄色で表示されます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:256
 msgid ""
 "Long-running shell instances/idle shell sessions can be terminated at any "
 "time to free up resources."
 msgstr ""
+"長時間実行されているシェルインスタンス/アイドル状態のシェルセッションは、"
+"リソースを解放するためにいつでも終了できます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:262
 msgid "Commands"
-msgstr ""
+msgstr "コマンド"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:264
 msgid ""
 "Here is an overview of useful commands that you can run an Odoo.sh database "
 "terminal:"
-msgstr ""
+msgstr "Odoo.shデータベース端末で実行できる便利なコマンドの概要は次のとおりです:"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:266
 msgid "`odoo-bin shell`: to open an Odoo shell"
-msgstr ""
+msgstr "`odoo-bin shell`: Odooシェルを開く"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:267
 msgid "`odoo-update`: to update modules in the database"
-msgstr ""
+msgstr "`odoo-update`: データベース内のモジュールを更新する"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:268
 msgid "`odoosh-restart`: to restart Odoo.sh services (http or cron)"
-msgstr ""
+msgstr "`odoosh-restart`: Odoo.shサービス (httpまたはcron) を再起動する"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:269
 msgid ""
 "`odoosh-storage`: to check the storage usage of your instance's container "
 "filesystem"
 msgstr ""
+"`odoosh-storage`: インスタンスのコンテナファイルシステムのストレージ使用量を"
+"確認する"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:270
 msgid "`psql`: to open a database shell"
-msgstr ""
+msgstr "`psql`: データベースシェルを開く"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:271
 msgid ""
 "`mutt`: to check how emails appear on text clients (staging and development "
 "instances)"
 msgstr ""
+"`mutt`: テキストクライアントで電子メールがどのように表示されるかを確認する "
+"(ステージングおよび開発インスタンス)"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:272
 msgid ""
 "`lnav ~/logs/odoo.log`: to navigate in your instance's :file:`odoo.log` file"
-msgstr ""
+msgstr "`lnav ~/logs/odoo.log`: インスタンスの:file:`odoo.log`ファイル内を移動する"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:273
 msgid "`ncdu`: to launch the disk usage analyzer with an interactive interface"
-msgstr ""
+msgstr "`ncdu`: 対話型インターフェースでディスク使用量アナライザーを起動する"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:274
 msgid "`grep`: to filter and find information in log or configuration files"
-msgstr ""
+msgstr "`grep`: ログまたは設定ファイル内の情報をフィルターして検索する"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:279
 msgid "Editor"
@@ -2991,40 +3084,47 @@ msgid ""
 "integrated development environment (IDE) to edit the source code. You can "
 "also open terminals, Python consoles, and Odoo shell consoles."
 msgstr ""
+":guilabel:`エディター`をクリックすると、新しいブラウザタブが開き、"
+"ソースコードを編集するためのオンライン統合開発環境 (IDE) にアクセスできます。"
+"ターミナル、Pythonコンソール、Odooシェルコンソールを開くこともできます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:None
 msgid "The branches' editor tab"
-msgstr ""
+msgstr "ブランチのエディタータブ"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:288
 msgid ""
 "You can open multiple tabs and drag and drop them to arrange the layout as "
 "you wish."
-msgstr ""
+msgstr "複数のタブを開いて、ドラッグ&ドロップでレイアウトを自由に配置できます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:291
 msgid ":doc:`Online editor documentation <online_editor>`."
-msgstr ""
+msgstr ":doc:`オンラインエディタのドキュメント <online_editor>`。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:296
 msgid "Monitor"
-msgstr ""
+msgstr "監視"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:298
 msgid ""
 "The :guilabel:`Monitor` tab displays various performance monitoring metrics "
 "of the current build."
 msgstr ""
+":guilabel:`監視`タブには、現在のビルドのさまざまなパフォーマンス監視"
+"メトリックが表示されます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:300
 msgid ""
 "Zoom in with your cursor to adjust the time range or select it manually from "
 "the time range selector. It is also possible to change the time zone."
 msgstr ""
+"カーソルでズームインして時間範囲を調整するか、時間範囲セレクターから手動で選"
+"択します。タイムゾーンを変更することも可能です。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:None
 msgid "The time range selector in the branches monitor tab"
-msgstr ""
+msgstr "ブランチ監視タブの時間範囲セレクター"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:307
 msgid ""
@@ -3032,6 +3132,9 @@ msgid ""
 "analyze these logs together with your monitoring metrics, ensure :abbr:`UTC "
 "(Coordinated Universal Time)` is selected in the monitoring tool."
 msgstr ""
+"技術ログは常に:abbr:`UTC (協定世界時)`を使用します。これらのログを監視"
+"メトリックと一緒に分析するには、監視ツールで:abbr:`UTC (協定世界時)`が選択さ"
+"れていることを確認してください。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:310
 msgid ""
@@ -3039,6 +3142,9 @@ msgid ""
 "is based on :abbr:`UTC (Coordinated Universal Time)`, as Odoo uses this time "
 "zone to investigate performance issues."
 msgstr ""
+"同様に、サポートチケットを送信する際は、共有する情報が:abbr:`UTC (協定世界時)"
+"`に基づいていることを確認してください。Odooはこのタイムゾーンを使用して"
+"パフォーマンスの問題を調査します。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:314
 msgid ""
@@ -3049,16 +3155,23 @@ msgid ""
 "tool, it is recommended to focus on recent events to get the most detailed "
 "information possible."
 msgstr ""
+"情報は定期的に集約されます。この場合、青い点線が:guilabel:`集約日`タグととも"
+"に表示されます。これは、この日付より前のデータがこの日付より後のデータと比較"
+"して平坦化されて表示されることを意味します。そのため、監視ツールを使用する際"
+"は、最も詳細な情報を得るために最近のイベントに焦点を当てることをお勧めします"
+"。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:320
 msgid ""
 "Dotted Lines of other colors help you relate to other changes on the build "
 "(database import, git push, etc.)."
 msgstr ""
+"他の色の点線は、ビルドに関する他の変更（データベースインポート、gitプッシュな"
+"ど）との関連を示します。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:None
 msgid "CPU monitoring aggregated data"
-msgstr ""
+msgstr "CPU監視の集約データ"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:327
 msgid ""
@@ -3066,114 +3179,128 @@ msgid ""
 "left corner. Hover your mouse over it to get more details about what the "
 "graph represents."
 msgstr ""
+"各グラフの左上隅に 𝕚（:guilabel:`情報`）アイコンが表示されます。マウスをその"
+"上に置くと、グラフが何を表しているかの詳細が表示されます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:333
 msgid "Metrics"
-msgstr ""
+msgstr "メトリクス"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:338
 msgid "System"
-msgstr ""
+msgstr "システム"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:340
 msgid ""
 "The :guilabel:`Memory` graph displays information about memory consumption:"
-msgstr ""
+msgstr ":guilabel:`メモリ`グラフは、メモリ消費に関する情報を表示します："
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:342
 msgid ""
 ":guilabel:`Memory container` represents Odoo workers and container processes."
-msgstr ""
+msgstr ":guilabel:`メモリコンテナ`は、Odooワーカーとコンテナプロセスを表します。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:343
 msgid ":guilabel:`Memory postgresql` represents the database."
-msgstr ""
+msgstr ":guilabel:`メモリpostgresql`は、データベースを表します。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:None
 msgid "The memory graph in the monitor tab"
-msgstr ""
+msgstr "監視タブのメモリグラフ"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:348
 msgid "The :guilabel:`CPU` graph displays information about CPU consumption:"
-msgstr ""
+msgstr ":guilabel:`CPU`グラフは、CPU消費に関する情報を表示します："
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:350
 msgid ":guilabel:`CPU http` represents Odoo workers."
-msgstr ""
+msgstr ":guilabel:`CPU http`は、Odooワーカーを表します。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:351
 msgid ""
 ":guilabel:`CPU cron/mail` represents scheduled actions and incoming emails."
-msgstr ""
+msgstr ":guilabel:`CPU cron/mail`は、スケジュール済アクションと受信メールを表します。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:352
 msgid ":guilabel:`CPU postgresql` (database processes)"
-msgstr ""
+msgstr ":guilabel:`CPU postgresql`（データベースプロセス）"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:353
 msgid ":guilabel:`CPU other` represents webshells, the editor, etc."
-msgstr ""
+msgstr ":guilabel:`CPU other`は、Webシェル、エディタなどを表します。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:None
 msgid "The cpu graph in the monitor tab"
-msgstr ""
+msgstr "監視タブのCPUグラフ"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:358
 msgid ""
 "The :guilabel:`Storage` graph displays information about the storage used:"
 msgstr ""
+":guilabel:`ストレージ`グラフは、使用されているストレージに関する情報を表示し"
+"ます："
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:360
 msgid ""
 ":guilabel:`Container` represents the filestore, log files, and user files."
 msgstr ""
+":guilabel:`コンテナ`は、ファイルストア、ログファイル、ユーザファイルを表しま"
+"す。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:361
 msgid ":guilabel:`Postgresql` represents the database and indexes."
-msgstr ""
+msgstr ":guilabel:`Postgresql`は、データベースとインデックスを表します。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:None
 msgid "The storage graph in the monitor tab"
-msgstr ""
+msgstr "監視タブのストレージグラフ"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:369
 msgid "HTTP"
-msgstr ""
+msgstr "HTTP"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:371
 msgid ""
 "The :guilabel:`Requests` graph displays information about the number of HTTP "
 "requests per second:"
 msgstr ""
+":guilabel:`リクエスト`グラフには、1秒あたりのHTTPリクエスト数に関する情報が表"
+"示されます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:373
 msgid ":guilabel:`HTTP successes` represents successful requests."
-msgstr ""
+msgstr ":guilabel:`HTTP成功`は、成功したリクエストを表します。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:374
 msgid ""
 ":guilabel:`HTTP errors` represents failed requests (check :file:`odoo.log`)."
 msgstr ""
+":guilabel:`HTTPエラー`は、失敗したリクエストを表します（:file:`odoo.log`を確"
+"認してください）。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:375
 msgid ""
 ":guilabel:`HTTP rate limited` represents declined requests, possibly due to "
 "lack of workers."
 msgstr ""
+":guilabel:`HTTPレート制限`は、拒否されたリクエストを表します。ワーカー不足が"
+"原因の可能性があります。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:None
 msgid "The requests graph in the monitor tab"
-msgstr ""
+msgstr "監視タブのリクエストグラフ"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:380
 msgid ""
 "The :guilabel:`Concurrent requests (max)` graph displays the maximum number "
 "of concurrent HTTP requests per second."
 msgstr ""
+":guilabel:`同時リクエスト（最大）`グラフには、1秒あたりの同時HTTPリクエストの"
+"最大数が表示されます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:None
 msgid "The concurrent rquests graph in the monitor tab"
-msgstr ""
+msgstr "監視タブの同時リクエストグラフ"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:387
 msgid ""
@@ -3182,54 +3309,64 @@ msgid ""
 "incoming requests as they arrive. However, having additional workers beyond "
 "this does not improve the speed at which requests are processed."
 msgstr ""
+"データベースワーカーは、同時に処理できる並行リクエストの数を決定します。到着"
+"するすべてのリクエストを処理するために十分なワーカーを確保することが重要です"
+"。ただし、これを超えて追加のワーカーを用意しても、リクエストの処理速度は向上"
+"しません。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:391
 msgid ""
 "The :guilabel:`Average Response time` displays the average response time to "
 "HTTP requests (in milliseconds)."
 msgstr ""
+":guilabel:`平均応答時間`には、HTTPリクエストに対する平均応答時間（ミリ秒）が"
+"表示されます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:None
 msgid "The average response time graph in the monitor tab"
-msgstr ""
+msgstr "監視タブの平均応答時間グラフ"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:402
 msgid ""
 "The :guilabel:`Incoming` graph displays data about the daily number of "
 "incoming emails:"
 msgstr ""
+":guilabel:`受信`グラフには、1日あたりの受信メール数に関するデータが表示されま"
+"す。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:404
 msgid ":guilabel:`Received Emails` represents emails successfuly received."
-msgstr ""
+msgstr ":guilabel:`受信メール`は、正常に受信されたメールを表します。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:405
 msgid ""
 ":guilabel:`Received Emails bounced` represents emails unsuccessfully "
 "received."
-msgstr ""
+msgstr ":guilabel:`受信メールバウンス`は、受信に失敗したメールを表します。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:None
 msgid "The incoming graph in the monitor tab"
-msgstr ""
+msgstr "監視タブの受信グラフ"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:410
 msgid ""
 "The :guilabel:`Outgoing` graph displays data about the daily number of "
 "outgoing emails:"
 msgstr ""
+":guilabel:`送信`グラフには、1日あたりの送信メール数に関するデータが表示されま"
+"す。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:412
 msgid ":guilabel:`Sent Emails` represents emails successfully sent."
-msgstr ""
+msgstr ":guilabel:`送信メール`は、正常に送信されたメールを表します。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:413
 msgid ":guilabel:`Sent Emails bounced` represents emails unsuccessfully sent."
-msgstr ""
+msgstr ":guilabel:`送信メールバウンス`は、送信に失敗したメールを表します。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:None
 msgid "The outgoing graph in the monitor tab"
-msgstr ""
+msgstr "監視タブの送信グラフ"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:421
 msgid "Logs"
@@ -3237,11 +3374,11 @@ msgstr "ログ"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:423
 msgid "The :guilabel:`Logs` tab offers a real-time view of your server's logs."
-msgstr ""
+msgstr ":guilabel:`ログ`タブでは、サーバのログをリアルタイムで表示できます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:None
 msgid "The branches log tab"
-msgstr ""
+msgstr "ブランチログタブ"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:428
 msgid "Different logs are available:"
@@ -3249,45 +3386,45 @@ msgstr "さまざまなログが利用可能です:"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:430
 msgid "`pip.log`: the Python dependencies installation"
-msgstr ""
+msgstr "`pip.log`: Python依存関係のインストール"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:431
 msgid ""
 "`install.log`: the database installation (for development branches, tests "
 "are included)"
-msgstr ""
+msgstr "`install.log`: データベースのインストール（開発ブランチの場合、テストを含む）"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:432
 msgid "`odoosh-import-database.log`: the last imported dump process"
-msgstr ""
+msgstr "`odoosh-import-database.log`: 直近のダンプインポートプロセス"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:433
 msgid "`odoo.log`: the running server"
-msgstr ""
+msgstr "`odoo.log`: 実施中のサーバ"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:434
 msgid "`update.log`: the database updates"
-msgstr ""
+msgstr "`update.log`: データベースの更新"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:435
 msgid "`pg_slow_queries.log`: psql queries that take an unusual amount of time"
-msgstr ""
+msgstr "`pg_slow_queries.log`: 通常より時間がかかるpsqlクエリ"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:436
 msgid "`sh_webshell.log`:  the actions taken in the webshell"
-msgstr ""
+msgstr "`sh_webshell.log`: webshellで実行されたアクション"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:437
 msgid "`sh_editor.log`: the actions taken in the editor"
-msgstr ""
+msgstr "`sh_editor.log`: エディタで実行されたアクション"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:438
 msgid "`neutralize.log`: the neutralization of the database (only staging)"
-msgstr ""
+msgstr "`neutralize.log`: データベースの無効化（ステージング環境のみ）"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:None
 msgid "Logs scrolling automatically"
-msgstr ""
+msgstr "ログの自動スクロール"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:443
 msgid ""
@@ -3295,6 +3432,8 @@ msgid ""
 "you scroll to the bottom, the browser scrolls automatically each time a new "
 "line is added."
 msgstr ""
+"新しい行がログに追加されると、自動的に表示されます。下部までスクロールしてい"
+"る場合、新しい行が追加されるたびにブラウザが自動的にスクロールします。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:446
 msgid ""
@@ -3303,6 +3442,9 @@ msgid ""
 "stops after five minutes. You can restart it by clicking the :icon:`fa-play` "
 "(:guilabel:`play`) button."
 msgstr ""
+"右上隅の:icon:`fa-pause`（:guilabel:`一時停止`）ボタンをクリックすると、ログ"
+"取得プロセスを一時停止できます。それ以外の場合、プロセスは5分後に停止します"
+"。:icon:`fa-play`（:guilabel:`再生`）ボタンをクリックすると再開できます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:453
 msgid "Backups"
@@ -3313,10 +3455,12 @@ msgid ""
 "The :guilabel:`Backups` tab lists the available backups to download and "
 "restore, lets you perform a manual backup and import a database."
 msgstr ""
+":guilabel:`バックアップ`タブには、ダウンロードおよび復元可能なバックアップが"
+"一覧表示され、手動バックアップの実行とデータベースのインポートが可能です。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:None
 msgid "The branches backups tab"
-msgstr ""
+msgstr "ブランチバックアップタブ"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:461
 msgid ""
@@ -3325,6 +3469,10 @@ msgid ""
 "database dump, the filestore (attachments and binary fields), logs, and "
 "sessions."
 msgstr ""
+"本番データベースは毎日自動的にバックアップされます。7日分の日次バックアップ、"
+"4週分の週次バックアップ、3か月分の月次バックアップが保持されます。各"
+"バックアップには、データベースダンプ、ファイルストア（添付ファイルと"
+"バイナリフィールド）、ログ、セッションが含まれます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:466
 msgid ""
@@ -3335,6 +3483,10 @@ msgid ""
 "understanding of how the system works. This file is updated daily, taking "
 "the current day as the departure point."
 msgstr ""
+"`自動バックアップの予定スケジュール<https://docs.google.com/spreadsheets/d/e/"
+"2PACX-1vSJpyyyQ7kr5WSutkrDE3ybgpYySogseN7x2Og6fIbpPYABHe0q8xq0y0xh7P-"
+"QSHkX3RTTVqKMIExy/pubhtml?gid=0&single=true>`_を参照すると、システムの仕組み"
+"をより深く理解できます。このファイルは毎日更新され、当日を起点としています。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:470
 msgid ""
@@ -3343,6 +3495,10 @@ msgid ""
 "branches, for testing purposes, or manually recover data that has been "
 "accidentally deleted from the production database."
 msgstr ""
+"ステージング環境と開発環境のデータベースは自動的にバックアップされません。た"
+"だし、テスト目的でステージングブランチに本番データベースのバックアップを復元"
+"したり、本番データベースから誤って削除されたデータを手動で復旧したりできます"
+"。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:474
 msgid ""
@@ -3350,6 +3506,9 @@ msgid ""
 "database. This server only keeps one month of backups: seven daily and four "
 "weekly backups."
 msgstr ""
+"リストには、本番データベースのサーバに保持されているバックアップが含まれてい"
+"ます。このサーバには1か月分のバックアップのみが保持されます：7日分の日次"
+"バックアップと4週分の週次バックアップです。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:477
 msgid ""
@@ -3357,6 +3516,9 @@ msgid ""
 "monthly backups. To restore or download one of these monthly backups, "
 "contact `Odoo Support <https://www.odoo.com/help>`_."
 msgstr ""
+"専用バックアップサーバには、同じバックアップと3か月分の追加の月次バックアップ"
+"が保持されます。これらの月次バックアップのいずれかを復元またはダウンロードす"
+"る場合は、`Odoサポート<https://www.odoo.com/help>`_にお問い合わせください。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:481
 msgid ""
@@ -3368,6 +3530,13 @@ msgid ""
 "will be changed with the module update triggered afterwards. In these two "
 "cases, a backup is triggered as it may break something."
 msgstr ""
+"1つまたは複数のモジュールのバージョンを更新するコミット"
+"（:file:`__manifest__.py`内）、または関連するPython依存関係を更新するコミット"
+"（:file:`requirements.txt`内）をマージすると、Odoo.shは自動バックアップを実行"
+"します（リスト内で`Update`タイプのフラグが付けられます）。これは、新しいpip"
+"パッケージのインストールによってコンテナが変更されるか、その後にトリガーされ"
+"るモジュール更新によってデータベース自体が変更されるためです。これらの2つの"
+"ケースでは、何かが壊れる可能性があるためバックアップがトリガーされます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:487
 msgid ""
@@ -3377,6 +3546,11 @@ msgid ""
 "this safe enough. As an extra precaution, you can make a manual backup "
 "before modifiyng production sources."
 msgstr ""
+"マージされたコミットがモジュールまたはリンクされた依存関係のバージョンを更新"
+"しない場合、Odoo.shによるバックアップはトリガーされません。コンテナも"
+"データベースも変更されないためです。そのため、プラットフォームはこれを十分安"
+"全と見なします。念のため、本番環境のソースを変更する前に手動バックアップを作"
+"成できます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:492
 msgid ""
@@ -3384,60 +3558,71 @@ msgid ""
 "or staging databases (not available for development). These remain available "
 "for seven days. However, there is a limit of five daily manual backups."
 msgstr ""
+"手動バックアップの目的は、本番環境またはステージング環境のデータベースの特定"
+"のスナップショットを作成することです(開発環境では利用不可)。これらは7日間利用"
+"可能です。ただし、1日あたり5回の手動バックアップという制限があります。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:500
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:49
 msgid "Stage"
-msgstr ""
+msgstr "ステージ"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:501
 msgid "Automatic backup"
-msgstr ""
+msgstr "自動バックアップ"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:502
 msgid "Manual backup"
-msgstr ""
+msgstr "手動バックアップ"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:504
 msgid "Yes (up to 3 months)"
-msgstr ""
+msgstr "対応可能(最大3か月)"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:505
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:508
 msgid "Yes (3 days)"
-msgstr ""
+msgstr "対応可能(3日間)"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:507
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:510
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:511
 msgid "No"
-msgstr ""
+msgstr "利用不可"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:513
 msgid "The :guilabel:`Import Database` feature accepts database archives from:"
 msgstr ""
+":guilabel:`データベースのインポート`機能は、以下からのデータベースアーカイブ"
+"を受け入れます:"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:515
 msgid ""
 "the standard Odoo database manager (available for on-premise Odoo servers "
 "under `/web/database/manager`)"
 msgstr ""
+"標準のOdooデータベースマネージャー(オンプレミスのOdooサーバで`/web/database/"
+"manager`から利用可能)"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:517
 msgid "the Odoo Online databases manager"
-msgstr ""
+msgstr "Odoo Onlineデータベースマネージャー"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:518
 msgid ""
 "the Odoo.sh :guilabel:`Backups` tab (using the :icon:`fa-download` "
 "(:guilabel:`Download Options`) button)"
 msgstr ""
+"Odoo.shの:guilabel:`バックアップ`タブ(:icon:`fa-download`"
+"(:guilabel:`ダウンロードオプション`)ボタンを使用)"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:520
 msgid ""
 "the Odoo.sh :doc:`Builds <builds>` view (by clicking :guilabel:`Download DB "
 "dump`)"
 msgstr ""
+"Odoo.shの:doc:`ビルド <builds>`ビュー(:guilabel:`DBダンプをダウンロード`を"
+"クリック)"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:527
 msgid ""
@@ -3445,14 +3630,18 @@ msgid ""
 "branches of valid projects. For more information about the upgrade process, "
 "refer to the :doc:`Upgrade documentation <../../upgrade>`."
 msgstr ""
+":guilabel:`アップグレード`タブは、有効なプロジェクトの本番環境および"
+"ステージング環境のブランチをアップグレードするために使用できます。"
+"アップグレードプロセスの詳細については、:doc:`アップグレードドキュメント <../"
+"../upgrade>`を参照してください。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:None
 msgid "The branches upgrade tab"
-msgstr ""
+msgstr "ブランチのアップグレードタブ"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:537
 msgid "Tools"
-msgstr ""
+msgstr "ツール"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:539
 msgid ""
@@ -3462,22 +3651,32 @@ msgid ""
 "session earlier, as running the tool for a shorter duration reduces the "
 "amount of noise in the report."
 msgstr ""
+":guilabel:`ツール`タブには、コードプロファイラーが含まれています。これは、"
+"プロファイリングセッションを開始し、インスタンスで実行されているOdooワーカー"
+"のアクティビティを最大5分間記録するために使用されます。レポート内のノイズ量を"
+"減らすため、より短い時間でツールを実行することで、セッションを早めに終了する"
+"こともできます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:None
 msgid "Using the code profiler"
-msgstr ""
+msgstr "コードプロファイラーの使用"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:547
 msgid ""
 "After each session, an interactive flame graph is created to help you "
 "visualize how the Odoo workers allocate their time."
 msgstr ""
+"各セッションの後、インタラクティブなフレームグラフが作成され、Odooワーカーが"
+"時間をどのように割り当てているかを視覚化するのに役立ちます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:551
 msgid ""
 "Running the profiler consumes a lot of server resources, so avoid letting it "
 "run for too long. The goal is to record a specific action in your database."
 msgstr ""
+"プロファイラーの実行は多くのサーバリソースを消費するため、長時間実行しないよ"
+"うにしてください。目的は、データベース内の特定のアクションを記録することです"
+"。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:557
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:3
@@ -3489,20 +3688,24 @@ msgid ""
 "The :guilabel:`Settings` tab lists the configuration options available for "
 "the currently selected branch. The options vary for each stage."
 msgstr ""
+":guilabel:`設定`タブには、現在選択されているブランチで利用可能な設定"
+"オプションが一覧表示されます。オプションは各ステージによって異なります。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:None
 msgid "The branches settings tab"
-msgstr ""
+msgstr "ブランチ設定タブ"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:568
 msgid "Behavior upon new commits"
-msgstr ""
+msgstr "新しいコミット時の動作"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:570
 msgid ""
 "You can change the branch's behavior upon receiving a new commit for "
 "**development** and **staging** branches."
 msgstr ""
+"**開発**ブランチと**ステージング**ブランチでは、新しいコミットを受信した際の"
+"ブランチの動作を変更できます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:573
 msgid ""
@@ -3511,32 +3714,39 @@ msgid ""
 "working on requires a specific configuration, as you would not need to "
 "manually configure it again after every commit."
 msgstr ""
+"デフォルトでは、**開発**ブランチは新しいビルドを作成し、ステージングブランチ"
+"は以前のビルドを更新します。これは、作業中の機能に特定の設定が必要な場合に便"
+"利です。コミットごとに手動で再設定する必要がなくなります。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:577
 msgid ""
 "If you select :guilabel:`New build` for a **staging** branch, a fresh copy "
 "of the production build is created every time a commit is pushed."
 msgstr ""
+"**ステージング**ブランチで:guilabel:`新しいビルド`を選択すると、コミットが"
+"プッシュされるたびに本番ビルドの新しいコピーが作成されます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:580
 msgid ""
 "A branch that is moved from **staging** to **development** is set "
 "automatically to :guilabel:`Do nothing`."
 msgstr ""
+"**ステージング**から**開発**に移動されたブランチは、自動的に:guilabel:`何もし"
+"ない`に設定されます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:586
 msgid "Module installation"
-msgstr ""
+msgstr "モジュールのインストール"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:588
 msgid ""
 "You can choose which modules should be installed automatically for "
 "**development** branches."
-msgstr ""
+msgstr "**開発**ブランチで自動的にインストールするモジュールを選択できます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:None
 msgid "The settings tab module installation"
-msgstr ""
+msgstr "設定タブのモジュールインストール"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:593
 msgid ""
@@ -3544,6 +3754,9 @@ msgid ""
 "under :guilabel:`Development build behavior` and select one of the following "
 "options under :guilabel:`Module Installation`:"
 msgstr ""
+"デフォルトの動作を変更するには、:guilabel:`デフォルトを使用`の:guilabel:`開発"
+"ビルドの動作`のチェックを外し、:guilabel:`モジュールのインストール`で次のいず"
+"れかのオプションを選択します:"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:597
 msgid ""
@@ -3551,6 +3764,9 @@ msgid ""
 "installs the branch's modules, excluding :doc:`submodules <../advanced/"
 "submodules>`. This is the default option."
 msgstr ""
+":guilabel:`自分のモジュールのみインストール(サブモジュールを含まない)`: "
+":doc:`サブモジュール <../advanced/submodules>`を除く、ブランチのモジュールの"
+"みをインストールします。これがデフォルトオプションです。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:599
 msgid ""
@@ -3558,6 +3774,9 @@ msgid ""
 "modules, submodules, and all standard Odoo modules. When running the full "
 "installation, the test suite is disabled."
 msgstr ""
+":guilabel:`完全インストール(テストスイートなし)`: ブランチのモジュール、"
+"サブモジュール、およびすべての標準Odooモジュールをインストールします。完全"
+"インストールを実行する場合、テストスイートは無効になります。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:601
 msgid ""
@@ -3565,16 +3784,21 @@ msgid ""
 "so, enter their technical name, and separate them using commas (e.g., "
 "`sale_management,website,accountant`)."
 msgstr ""
+":guilabel:`モジュールのリストをインストール`: 指定されたモジュールを"
+"インストールします。技術名を入力し、カンマで区切ります(例: "
+"`sale_management,website,accountant`)。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:605
 msgid ""
 "If the test suite is enabled, installing all standard Odoo modules can take "
 "up to one hour."
 msgstr ""
+"テストスイートが有効な場合、すべての標準Odooモジュールのインストールには最大1"
+"時間かかることがあります。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:610
 msgid "Test suite"
-msgstr ""
+msgstr "テストスイート"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:612
 msgid ""
@@ -3583,16 +3807,22 @@ msgid ""
 "reference/testing/selection>` and separating them using commas (e.g., "
 "`custom_tags,at_install,post_install`)."
 msgstr ""
+"デフォルトでは、**開発**ブランチのテストスイートは有効になっています"
+"。:ref:`テストタグ <developer/reference/testing/selection>`を入力し、カンマで"
+"区切ることで、実行するテストを制限できます(例: "
+"`custom_tags,at_install,post_install`)。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:616
 msgid ""
 "To disable the test suite entirely, untick :guilabel:`Validate the test "
 "suite on new builds`."
 msgstr ""
+"テストスイートを完全に無効にするには、:guilabel:`新しいビルドでテストスイート"
+"を検証`のチェックを外します。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:621
 msgid "Odoo version"
-msgstr ""
+msgstr "Odooバージョン"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:623
 msgid ""
@@ -3601,6 +3831,10 @@ msgid ""
 "database is in the process of being upgraded to a newer version, by "
 "selecting another :guilabel:`Version`."
 msgstr ""
+":guilabel:`バージョン`を選択することで、**開発**ブランチのOdooバージョンを変"
+"更できます。例えば、アップグレードされたコードをテストしたり、本番"
+"データベースが新しいバージョンへのアップグレード中に機能を開発したりする場合"
+"に便利です。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:627
 msgid ""
@@ -3608,12 +3842,17 @@ msgid ""
 "the sources of your Odoo server are updated weekly automatically to benefit "
 "from the latest bug, security, and performance fixes."
 msgstr ""
+"デフォルトでは、:guilabel:`最新`が:guilabel:`変更履歴`として選択されており、"
+"Odooサーバのソースは毎週自動的に更新され、最新のバグ、セキュリティ、"
+"パフォーマンスの修正が適用されます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:631
 msgid ""
 "To choose a specific revision instead, select it using "
 "the :guilabel:`Revision` field."
 msgstr ""
+"特定の変更履歴を選択する場合は、:guilabel:`変更履歴`フィールドで選択してくだ"
+"さい。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:634
 msgid ""
@@ -3622,10 +3861,13 @@ msgid ""
 "it expires, the :guilabel:`Revision` field is automatically set back "
 "to :guilabel:`Latest`."
 msgstr ""
+"変更履歴は3か月後に期限切れになります。変更履歴の有効期限が近づくとメールで通"
+"知されます。期限切れ時に何も対応しなかった場合、:guilabel:`変更履"
+"歴`フィールドは自動的に:guilabel:`最新`に戻されます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:None
 msgid "The settings tab revisions"
-msgstr ""
+msgstr "設定タブの変更履歴"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:644
 msgid "Custom domains"
@@ -3636,20 +3878,24 @@ msgid ""
 "You can configure additional `<name>.odoo.com` domains or your own custom "
 "domains for all branch types."
 msgstr ""
+"すべてのブランチタイプに対して、追加の`<name>.odoo.com`ドメインまたは独自の"
+"カスタムドメインを設定できます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:649
 msgid "To use your own custom domain, it is necessary to:"
-msgstr ""
+msgstr "独自のカスタムドメインを使用するには、次の作業が必要です:"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:651
 msgid "Own or purchase the domain name."
-msgstr ""
+msgstr "ドメイン名を所有または購入する。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:652
 msgid ""
 "Enter the domain name under :guilabel:`Custom domains` (e.g., "
 "`www.mycompany.com`), then click :guilabel:`Add domain`."
 msgstr ""
+":guilabel:`カスタムドメイン`にドメイン名(例:`www.mycompany.com`)を入力し"
+"、:guilabel:`ドメインを追加`をクリックします。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:654
 msgid ""
@@ -3657,6 +3903,9 @@ msgid ""
 "domain name manager with a **CNAME** record value set to your production "
 "database domain name (e.g., `mycompany.odoo.com`)."
 msgstr ""
+"レジストラのドメイン名マネージャを使用して、ドメイン名"
+"(例:`www.mycompany.com`)を**CNAME**レコードで設定し、値を本番データベースの"
+"ドメイン名(例:`mycompany.odoo.com`)に設定します。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:659
 msgid ""
@@ -3666,6 +3915,11 @@ msgid ""
 "address of a database can change (e.g., following an upgrade, a hardware "
 "failure, a change of database hosting location)."
 msgstr ""
+"ベアドメイン(例:`mycompany.com`)は使用できません。ベアドメインは値としてIP"
+"アドレスのみを受け付ける**A**レコードでしか設定できません。そのため、"
+"データベースのIPアドレスが変更されると(例:アップグレード、ハードウェア障害、"
+"データベースのホスティング場所の変更など)、ベアドメインが突然機能しなくなる可"
+"能性があります。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:664
 msgid ""
@@ -3674,10 +3928,14 @@ msgid ""
 "domain to the *www* domain. .com. Most domain managers provide a way to "
 "configure this redirection, commonly referred to as a web redirection."
 msgstr ""
+"ベアドメイン(例:`mycompany.com`)と*www*ドメイン(例:`www.mycompany.com`)の両方"
+"を機能させるには、ベアドメインを*www*ドメインにリダイレクトする必要があります"
+"。ほとんどのドメインマネージャは、一般的にウェブリダイレクトと呼ばれるこの"
+"リダイレクトを設定する方法を提供しています。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:671
 msgid "HTTPS/SSL"
-msgstr ""
+msgstr "HTTPS/SSL"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:673
 msgid ""
@@ -3685,10 +3943,13 @@ msgid ""
 "generated using `Let's Encrypt <https://letsencrypt.org/about>`_ within the "
 "hour, meaning your domain will be accessible through HTTPS."
 msgstr ""
+"リダイレクトが正しく設定されている場合、1時間以内に`Let's Encrypt <https://"
+"letsencrypt.org/about>`_を使用してSSL証明書が自動的に生成され、ドメインは"
+"HTTPS経由でアクセス可能になります。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:680
 msgid "SPF and DKIM compliance"
-msgstr ""
+msgstr "SPFおよびDKIMへの準拠"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:682
 msgid ""
@@ -3700,12 +3961,20 @@ msgid ""
 "documentation <../../../applications/general/email_communication/"
 "email_domain>`."
 msgstr ""
+"メールアドレスのドメインが:abbr:`SPF(Sender Policy Framework)`また"
+"は:abbr:`DKIM(DomainKeys Identified Mail)`認証プロトコルを使用している場合、"
+"送信メールの配信可能性を高めるために、ドメイン名設定でOdooを送信ホストとして"
+"承認する必要があります。詳細については、:doc:`OdooでメールするためのDNS"
+"レコードの設定ドキュメント <../../../applications/general/"
+"email_communication/email_domain>`を参照してください。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:689
 msgid ""
 "If Odoo is not authorized as a sending host, your outgoing emails may be "
 "flagged as spam."
 msgstr ""
+"Odooが送信ホストとして承認されていない場合、送信メールがスパムとしてフラグ付"
+"けされる可能性があります。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:694
 msgid "Shell commands"
@@ -3718,10 +3987,13 @@ msgid ""
 "terminal. In addition, some of them can be used directly from Odoo.sh's "
 "interface."
 msgstr ""
+"ビューの右上隅に、いくつかのシェルコマンドが表示されます。これらのコマンドは"
+"クリップボードボタンを使用してコピーし、ターミナルで使用できます。さらに、一"
+"部のコマンドはOdoo.shのインターフェースから直接使用できます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:None
 msgid "The branches shell commands shortcuts"
-msgstr ""
+msgstr "ブランチシェルコマンドのショートカット"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:706
 msgid "Clone"
@@ -3730,23 +4002,27 @@ msgstr "クロン"
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:708
 msgid ""
 "The clone command is used to create a local copy of your Git repository."
-msgstr ""
+msgstr "cloneコマンドは、Gitリポジトリのローカルコピーを作成するために使用されます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:715
 msgid "`--recurse-submodules` to download the submodules of your repository"
-msgstr ""
+msgstr "`--recurse-submodules`は、リポジトリのサブモジュールをダウンロードします"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:716
 msgid ""
 "`--branch main` to check out to a specific branch of the repository (e.g., "
 "`development`)"
 msgstr ""
+"リポジトリの特定のブランチ（例：`development`）にチェックアウトするには`--"
+"branch main`を使用"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:719
 msgid ""
 "The run button is not available as the command is used to create a local "
 "copy on your machine."
 msgstr ""
+"このコマンドはマシン上にローカルコピーを作成するために使用されるため、実行"
+"ボタンは利用できません。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:724
 msgid "Fork"
@@ -3756,18 +4032,24 @@ msgstr "フォーク"
 msgid ""
 "The fork command is used to create a new branch based on the current one."
 msgstr ""
+"forkコマンドは、現在のブランチを基準に新しいブランチを作成するために使用され"
+"ます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:733
 msgid ""
 "`git checkout -b main-1 main` a command to create a new branch (e.g., "
 "`development-1`) based on the current branch (e.g., `development`)"
 msgstr ""
+"`git checkout -b main-1 main` 現在のブランチ(例:`development`)を基準に新しい"
+"ブランチ(例:`development-1`)を作成するコマンド"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:735
 msgid ""
 "`git push -u origin development-1` a command to upload the new branch (e.g., "
 "`development-1`) to the remote repository"
 msgstr ""
+"`git push -u origin development-1` 新しいブランチ(例:`development-1`)を"
+"リモートリポジトリにアップロードするコマンド"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:741
 msgid "Merge"
@@ -3778,18 +4060,24 @@ msgid ""
 "The merge command is used to combine changes on one branch into another "
 "branch."
 msgstr ""
+"mergeコマンドは、あるブランチの変更を別のブランチに統合するために使用されます"
+"。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:750
 msgid ""
 "`git merge staging-1` a command to merge the changes of the current branch "
 "into another branch (e.g., `staging-1`)"
 msgstr ""
+"`git merge staging-1` 現在のブランチの変更を別のブランチ(例:`staging-1`)に統"
+"合するコマンド"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:752
 msgid ""
 "`git push -u origin staging` a command to upload the merged changes to the "
 "remote repository branch (e.g., `staging`)"
 msgstr ""
+"`git push -u origin staging` 統合された変更をリモートリポジトリのブランチ"
+"(例:`staging`)にアップロードするコマンド"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:758
 msgid "SSH"
@@ -3797,12 +4085,12 @@ msgstr "SSH"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:760
 msgid "The SSH command is used to connect to a build using SSH."
-msgstr ""
+msgstr "SSHコマンドは、SSHを使用してビルドに接続するために使用されます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:762
 msgid ""
 "To use the SSH command, it is necessary to set up an SSH key first. To do so:"
-msgstr ""
+msgstr "SSHコマンドを使用するには、最初にSSHキーを設定する必要があります。設定方法："
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:764
 msgid ""
@@ -3810,6 +4098,9 @@ msgid ""
 "connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-"
 "ssh-agent#generating-a-new-ssh-key>`_."
 msgstr ""
+"`新しいSSHキーを生成する <https://docs.github.com/en/authentication/"
+"connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-"
+"ssh-agent#generating-a-new-ssh-key>`_。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:765
 msgid ""
@@ -3817,48 +4108,59 @@ msgid ""
 "authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-"
 "github-account#adding-a-new-ssh-key-to-your-account>`_."
 msgstr ""
+"SSHキーをクリップボードにコピーする <https://docs.github.com/en/"
+"authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-"
+"github-account#adding-a-new-ssh-key-to-your-account>`_。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:766
 msgid ""
 "On Odoo.sh, click your GitHub user in the top-right corner and "
 "select :guilabel:`Profile`."
-msgstr ""
+msgstr "Odoo.shで、右上のGitHubユーザをクリックし、:guilabel:`Profile`を選択します。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:0
 msgid "Accessing a user's profile"
-msgstr ""
+msgstr "ユーザのプロファイルへのアクセス"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:771
 msgid ""
 "Paste the SSH key under the :guilabel:`Add a key manually` field and "
 "click :guilabel:`Add`."
 msgstr ""
+":guilabel:`Add a key manually`フィールドにSSHキーを貼り付け"
+"、:guilabel:`Add`をクリックします。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:0
 msgid "Adding an SSH key manually"
-msgstr ""
+msgstr "SSHキーの手動追加"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:781
 msgid "`25004381` the build ID"
-msgstr ""
+msgstr "`25004381` ビルドID"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:782
 msgid ""
 "`my-user-my-repository-staging-25004381.dev.odoo.com` the domain used to "
 "connect to the build"
 msgstr ""
+"`my-user-my-repository-staging-25004381.dev.odoo.com` ビルドへの接続に使用さ"
+"れるドメイン"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:784
 msgid ""
 "Provided you have the necessary :ref:`access rights <odoo-sh/settings/"
 "collaborators>` on the project, you will be granted SSH access to the build."
 msgstr ""
+"プロジェクトに必要な:ref:`アクセス権 <odoo-sh/settings/collaborators>`がある"
+"場合、ビルドへのSSHアクセスが付与されます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:788
 msgid ""
 "Long-running SSH connections are not guaranteed. Idle connections can be "
 "disconnected to free up resources."
 msgstr ""
+"長時間実行されるSSH接続は保証されません。アイドル状態の接続はリソースを解放す"
+"るために切断される場合があります。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:794
 msgid "Submodule"
@@ -3869,10 +4171,12 @@ msgid ""
 "The submodule command is used to add a branch from another repository to "
 "your current branch as a submodule."
 msgstr ""
+"submoduleコマンドは、別のリポジトリのブランチをサブモジュールとして現在の"
+"ブランチに追加するために使用されます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:800
 msgid ":doc:`Submodules documentation <../advanced/submodules>`"
-msgstr ""
+msgstr ":doc:`サブモジュールのドキュメント <../advanced/submodules>`"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:807
 msgid ""
@@ -3880,20 +4184,25 @@ msgid ""
 "branch (e.g., `master`) of a repository (`<URL>`) as a submodule under the "
 "specified path (`<PATH>`) in your current branch."
 msgstr ""
+"`git submodule add -b master <URL> <PATH>` リポジトリ(`<URL>`)の特定の"
+"ブランチ(例:`master`)を、現在のブランチ内の指定されたパス(`<PATH>`)の下に"
+"サブモジュールとして追加するコマンド"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:810
 msgid "`git commit -a` a command to commit all current changes"
-msgstr ""
+msgstr "`git commit -a` 現在のすべての変更をコミットするコマンド"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:811
 msgid ""
 "`git push -u origin staging` a command to upload the changes of the current "
 "branch (e.g., `staging`) to the remote repository."
 msgstr ""
+"`git push -u origin staging` 現在のブランチ(例:`staging`)の変更を"
+"リモートリポジトリにアップロードするコマンド"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:819
 msgid "The delete command is used to delete a branch from your repository."
-msgstr ""
+msgstr "deleteコマンドは、リポジトリからブランチを削除するために使用されます。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:822
 msgid ""
@@ -3901,18 +4210,25 @@ msgid ""
 "exists. Staging branches are not automatically backed up, but can be "
 "manually. Development branches cannot be backed up."
 msgstr ""
+"ブランチを削除すると、バックアップが存在しない限り、それを復元する方法はあり"
+"ません。ステージングブランチは自動的にバックアップされませんが、手動で"
+"バックアップできます。開発ブランチはバックアップできません。"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:830
 msgid ""
 "`git push origin :staging` a command to delete a specific branch (e.g., "
 "`staging`) on the remote repository"
 msgstr ""
+"`git push origin :staging` リモートリポジトリ上の特定のブランチ(例:`staging`)"
+"を削除するコマンド"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:832
 msgid ""
 "`git branch -D staging` a command to delete the specific branch on your "
 "local copy of the repository"
 msgstr ""
+"`git branch -D staging` リポジトリのローカルコピー上の特定のブランチを削除す"
+"るコマンド"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:836
 msgid ""
@@ -3920,6 +4236,9 @@ msgid ""
 "branches/tabs/backups>` to better understand how they work and when you "
 "should create a manual backup."
 msgstr ""
+"ブランチを削除する前に、:ref:`バックアップセクション <odoo-sh/branches/tabs/"
+"backups>`を参照して、バックアップの仕組みと手動バックアップを作成すべき"
+"タイミングをよく理解してください。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:3
 msgid "Builds"
@@ -3934,16 +4253,23 @@ msgid ""
 "behavior of the server, the database, and the features associated with that "
 "revision."
 msgstr ""
+"Odoo.shでは、ビルドは、コンテナ化された環境でプロジェクトリポジトリの特定の"
+"リビジョンで実行されているOdooサーバー(`odoo/odoo <https://github.com/odoo/"
+"odoo>`_および`odoo/enterprise <https://github.com/odoo/enterprise>`_)によって"
+"読み込まれたデータベースです。その目的は、そのリビジョンに関連するサーバー、"
+"データベース、および機能の適切な動作をテストすることです。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:None
 msgid "Overiew of the builds"
-msgstr ""
+msgstr "ビルドの概要"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:19
 msgid ""
 "In the :guilabel:`Builds` view, a row represents a branch, and a cell within "
 "that row represents a build of that branch."
 msgstr ""
+":guilabel:`ビルド`ビューでは、行はブランチを表し、その行内のセルはその"
+"ブランチのビルドを表します。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:22
 msgid ""
@@ -3951,28 +4277,37 @@ msgid ""
 "They can also be created through other operations, such as importing a "
 "database on Odoo.sh or requesting a rebuild for a branch in your project."
 msgstr ""
+"ほとんどのビルドは、GitHubリポジトリブランチへのプッシュ後に作成されます。ま"
+"た、Odoo.shへのデータベースのインポートやプロジェクトのブランチの再ビルドの"
+"リクエストなど、他の操作を通じても作成できます。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:26
 msgid "Builds can have three possible statuses:"
-msgstr ""
+msgstr "ビルドには3つのステータスがあります:"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:28
 msgid ""
 "A build is considered **successful** if no errors or warnings occur during "
 "its creation. Successful builds are highlighted in **green**."
 msgstr ""
+"ビルドの作成中にエラーや警告が発生しなかった場合、**成功**と見なされます。成"
+"功したビルドは**緑色**でハイライトされます。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:30
 msgid ""
 "A build is considered **almost successful** if warnings occur, but there are "
 "no errors. Almost successful builds are highlighted in **yellow**."
 msgstr ""
+"警告は発生したがエラーがない場合、ビルドは**ほぼ成功**と見なされます。ほぼ成"
+"功したビルドは**黄色**でハイライトされます。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:32
 msgid ""
 "A build is considered **failed** if errors occur during its creation. Failed "
 "builds are highlighted in **red**."
 msgstr ""
+"ビルドの作成中にエラーが発生した場合、**失敗**と見なされます。失敗したビルド"
+"は**赤色**でハイライトされます。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:36
 msgid ""
@@ -3981,6 +4316,9 @@ msgid ""
 "server with your new revision and tries to load the current production "
 "database on it."
 msgstr ""
+"ビルドは常にデータベースをゼロから作成するわけではありません。たとえば、本番"
+"ブランチに変更をプッシュすると、作成されたビルドは新しい変更履歴でサーバを起"
+"動し、現在の本番データベースを読み込もうとします。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:50
 msgid ""
@@ -3988,18 +4326,24 @@ msgid ""
 "this build is successful, this database will become the production database "
 "of your project."
 msgstr ""
+"本番ブランチの最初のビルドは、データベースをゼロから作成します。このビルドが"
+"成功すると、このデータベースがプロジェクトの本番データベースになります。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:53
 msgid ""
 "From then on, pushes to the production branch will create new builds that "
 "attempt to load the database using a server running the new revision."
 msgstr ""
+"それ以降、本番ブランチへのプッシュは、新しい変更履歴を実行するサーバを使用し"
+"てデータベースを読み込もうとする新しいビルドを作成します。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:56
 msgid ""
 "If the build is successful or almost successful, the production database "
 "will run with this build and its associated revision."
 msgstr ""
+"ビルドが成功またはほぼ成功の場合、本番データベースはこのビルドと関連する変更"
+"履歴で実行されます。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:59
 msgid ""
@@ -4007,6 +4351,9 @@ msgid ""
 "build is reused to load the database. In that case, the database continues "
 "to run using the previous successful revision."
 msgstr ""
+"ビルドがデータベースの読み込みまたは更新に失敗した場合、前回成功したビルドが"
+"再利用されてデータベースが読み込まれます。この場合、データベースは前回成功し"
+"た変更履歴を使用して実行し続けます。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:63
 msgid ""
@@ -4014,12 +4361,17 @@ msgid ""
 "builds list. If a build fails, it is placed after the build currently "
 "running the production database."
 msgstr ""
+"本番データベースの実行に使用されるビルドは、常にビルドリストの最初に表示され"
+"ます。ビルドが失敗した場合、現在本番データベースを実行しているビルドの後に配"
+"置されます。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:71
 msgid ""
 "Staging builds duplicate the production database and attempt to load this "
 "copy using the revisions of the staging branches."
 msgstr ""
+"ステージングビルドは本番データベースを複製し、ステージングブランチの変更履歴"
+"を使用してこのコピーを読み込もうとします。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:74
 msgid ""
@@ -4027,18 +4379,25 @@ msgid ""
 "uses a fresh copy of the production database. Databases are not reused "
 "between builds of the same branch. This ensures that:"
 msgstr ""
+"ステージングブランチに新しい変更履歴をプッシュするたびに、生成されたビルドは"
+"本番データベースの新しいコピーを使用します。データベースは同じブランチの"
+"ビルド間で再利用されません。これにより以下が保証されます:"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:77
 msgid ""
 "Staging builds use databases that closely match the current production "
 "state, so your tests are not performed on outdated data."
 msgstr ""
+"ステージングビルドは現在の本番状態に近いデータベースを使用するため、古い"
+"データでテストが実行されることはありません。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:79
 msgid ""
 "You can freely experiment within a staging database. When you want to start "
 "over with a new copy of the production database, you can request a rebuild."
 msgstr ""
+"ステージングデータベース内で自由に実験できます。本番データベースの新しい"
+"コピーで最初からやり直したい場合は、再ビルドをリクエストできます。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:82
 msgid ""
@@ -4046,23 +4405,32 @@ msgid ""
 "database and do not apply them in production, those changes will not be "
 "present in the next build of the same staging branch."
 msgstr ""
+"ただし、これはステージングデータベースで設定変更を行い、本番環境に適用しなか"
+"った場合、それらの変更は同じステージングブランチの次のビルドには存在しないこ"
+"とを意味します。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:91
 msgid ""
 "Development builds create new databases, load the demo data, and run the "
 "unit tests."
 msgstr ""
+"開発ビルドは新しいデータベースを作成し、デモデータを読み込み、ユニットテスト"
+"を実行します。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:93
 msgid ""
 "A build will be considered failed if tests fail during installation, as they "
 "are designed to raise errors when something is wrong."
 msgstr ""
+"インストール中にテストが失敗した場合、ビルドは失敗と見なされます。これは、何"
+"か問題がある場合にエラーを発生させるように設計されているためです。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:96
 msgid ""
 "If all tests pass and no errors occur, the build is considered successful."
 msgstr ""
+"すべてのテストに合格し、エラーが発生しなかった場合、ビルドは成功と見なされま"
+"す。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:99
 msgid ""
@@ -4070,6 +4438,9 @@ msgid ""
 "can take up to one hour to be ready. This is due to the large number of "
 "tests included in the default Odoo module suite."
 msgstr ""
+"インストールおよびテストするモジュールのリストによっては、開発ビルドの準備に"
+"最大1時間かかる場合があります。これは、デフォルトのOdooモジュールスイートに含"
+"まれる大量のテストによるものです。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:105
 msgid "Features"
@@ -4081,26 +4452,31 @@ msgid ""
 "the time of their last created build. The stage highlighted in purple "
 "corresponds to the stage selected in the :guilabel:`Branches` menu."
 msgstr ""
+"本番ブランチは常に最初に表示されます。その他のブランチは、最後に作成された"
+"ビルドの時刻順に並べられます。紫色でハイライトされたステージは"
+"、:guilabel:`ブランチ`メニューで選択されたステージに対応します。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:112
 msgid "You can filter branches using the search bar."
-msgstr ""
+msgstr "検索バーを使用してブランチをフィルタリングできます。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:None
 msgid "The branches menu"
-msgstr ""
+msgstr "ブランチメニュー"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:117
 msgid "For each branch, you can:"
-msgstr ""
+msgstr "各ブランチでは、次のことができます。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:119
 msgid "Access the latest build's database by clicking :guilabel:`Connect`."
 msgstr ""
+":guilabel:`Connect`をクリックして、最新のビルドのデータベースにアクセスします"
+"。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:120
 msgid "Jump to the branch's code by clicking :guilabel:`Github`."
-msgstr ""
+msgstr ":guilabel:`Github`をクリックして、ブランチのコードに移動します。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:121
 msgid ""
@@ -4108,16 +4484,21 @@ msgid ""
 "revision of the branch (it is not available if a build is already in "
 "progress for that branch)."
 msgstr ""
+":guilabel:`Rebuild`をクリックして、新しいビルドを作成します。ブランチの最新"
+"リビジョンが使用されます（そのブランチのビルドがすでに進行中の場合は利用でき"
+"ません）。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:124
 msgid "For each build, you can:"
-msgstr ""
+msgstr "各ビルドでは、次のことができます。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:126
 msgid ""
 "View the revision changes by clicking the :icon:`fa-github` "
 "(:guilabel:`GitHub`) icon."
 msgstr ""
+":icon:`fa-github`（:guilabel:`GitHub`）アイコンをクリックして、リビジョンの変"
+"更を表示します。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:127
 msgid ""
@@ -4126,6 +4507,10 @@ msgid ""
 "caret-down` (:guilabel:`More Actions`) button next to :guilabel:`Connect` "
 "and selecting :guilabel:`Connect as`."
 msgstr ""
+":guilabel:`Connect`をクリックして管理者としてビルドのデータベースにアクセスす"
+"るか、:guilabel:`Connect`の横にある:icon:`fa-caret-down`（:guilabel:`More "
+"Actions`）ボタンをクリックして:guilabel:`Connect as`を選択し、別のユーザーと"
+"してアクセスします。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:130
 msgid ""
@@ -4136,83 +4521,95 @@ msgid ""
 "and development stages), :guilabel:`Monitoring`, and :guilabel:`Download DB "
 "dump` (for the production and staging stages)."
 msgstr ""
+":guilabel:`Connect`の横にある:icon:`fa-caret-down`（:guilabel:`More "
+"Actions`）ボタンをクリックして、:guilabel:`Logs`、:guilabel:`Web "
+"Shell`、:guilabel:`Editor`、:guilabel:`Outgoing e-mails`（ステージングおよび"
+"開発ステージ用）、:guilabel:`Monitoring`、:guilabel:`Download DB dump`（本番"
+"およびステージングステージ用）を選択することで、ブランチビューと同じツールに"
+"アクセスします。"
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:None
 msgid "A build's options"
-msgstr ""
+msgstr "ビルドのオプション"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:3
 msgid "Create a project"
-msgstr ""
+msgstr "プロジェクトを作成"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:6
 msgid "Deploy a platform"
-msgstr ""
+msgstr "プラットフォームをデプロイ"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:8
 msgid ""
 "Visit `Odoo.sh <https://www.odoo.sh>`_ and click :guilabel:`Deploy your "
 "platform`."
 msgstr ""
+"`Odoo.sh <https://www.odoo.sh>`_ にアクセスし、:guilabel:`Deploy your "
+"platform` をクリックします。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:0
 msgid "The Deploy your platform button on Odoo.sh"
-msgstr ""
+msgstr "Odoo.shの「Deploy your platform」ボタン"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:13
 msgid "Sign in with a `GitHub <https://github.com>`_ account."
-msgstr ""
+msgstr "`GitHub <https://github.com>`_ アカウントでサインインします。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:0
 msgid "Signing in to GitHub"
-msgstr ""
+msgstr "GitHubへのサインイン"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:18
 msgid "Authorize Odoo.sh by clicking :guilabel:`Authorize odoo` twice."
-msgstr ""
+msgstr ":guilabel:`Authorize odoo` を2回クリックして、Odoo.shを承認します。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:0
 msgid ""
 "Granting Odoo.sh permissions to perform actions and access data on GitHub"
-msgstr ""
+msgstr "GitHubでOdoo.shがアクションを実行しデータにアクセスする権限を付与"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:0
 msgid ""
 "Granting Odoo.sh additional permissions to perform actions and access data "
 "on GitHub"
-msgstr ""
+msgstr "GitHubでOdoo.shが追加のアクションを実行しデータにアクセスする権限を付与"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:27
 msgid "Odoo.sh requests GitHub to:"
-msgstr ""
+msgstr "Odoo.shがGitHubに要求する権限:"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:29
 msgid "Access your GitHub login and email."
-msgstr ""
+msgstr "GitHubログインとメールアドレスへのアクセス。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:30
 msgid "Create a new repository, in case you start from scratch."
-msgstr ""
+msgstr "新規リポジトリの作成(ゼロから始める場合)。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:31
 msgid ""
 "Access existing repositories, including organization ones, in case you start "
 "from an existing repository."
 msgstr ""
+"既存のリポジトリ(組織のリポジトリを含む)へのアクセス(既存のリポジトリから始め"
+"る場合)。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:33
 msgid "Create a webhook to notify you each time changes are pushed."
-msgstr ""
+msgstr "変更がプッシュされるたびに通知を受け取るためのWebhookの作成。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:34
 msgid "Commit changes for easier deployment."
-msgstr ""
+msgstr "デプロイを容易にするための変更のコミット。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:36
 msgid ""
 "Fill in the :guilabel:`Deploy your platform` form and "
 "click :guilabel:`Deploy`:"
 msgstr ""
+":guilabel:`Deploy your platform` フォームに入力し、:guilabel:`Deploy` を"
+"クリックします:"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:38
 msgid ""
@@ -4220,11 +4617,15 @@ msgid ""
 "choose :guilabel:`New repository` and enter a name; to use an existing one, "
 "choose :guilabel:`Existing repository` and select it."
 msgstr ""
+":guilabel:`Github repository`: 新しいリポジトリを作成するには"
+"、:guilabel:`New repository` を選択して名前を入力します。既存のリポジトリを使"
+"用するには、:guilabel:`Existing repository` を選択してリポジトリを選択します"
+"。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:40
 msgid ""
 ":guilabel:`Odoo Version`: select the major version of Odoo you want to use."
-msgstr ""
+msgstr ":guilabel:`Odoo Version`: 使用するOdooのメジャーバージョンを選択します。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:43
 msgid ""
@@ -4232,6 +4633,9 @@ msgid ""
 "If you are planning to import an existing database or applications, it might "
 "be required that their versions match."
 msgstr ""
+"新しいリポジトリを作成する場合は、Odooの最新メジャーバージョンを使用してくだ"
+"さい。既存のデータベースまたはアプリケーションをインポートする予定がある場合"
+"は、バージョンを一致させる必要がある場合があります。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:46
 msgid ""
@@ -4240,6 +4644,9 @@ msgid ""
 "lts>`_ to ensure compatibility, as minor versions are not supported by "
 "Odoo.sh."
 msgstr ""
+"Odoo Onlineで開始し、後でOdoo.shに移行する予定がある場合は、`odoo.com/start-"
+"lts <https://www.odoo.com/start-lts>`_ を使用してデータベースを作成し、互換性"
+"を確保してください。Odoo.shではマイナーバージョンはサポートされていません。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:50
 msgid ""
@@ -4247,6 +4654,9 @@ msgid ""
 "that includes Odoo.sh. It is also sometimes called the *subscription "
 "referral*, *contract number*, or *activation code*."
 msgstr ""
+":guilabel:`サブスクリプションコード`: Odoo.shを含むOdoo Enterprise"
+"サブスクリプションコードを入力します。*サブスクリプション参照*、*契約番号*、"
+"または*アクティベーションコード*と呼ばれることもあります。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:55
 msgid ""
@@ -4255,20 +4665,26 @@ msgid ""
 "a project, they must subscribe to an Odoo Enterprise plan that includes "
 "Odoo.sh hosting and use their subscription code."
 msgstr ""
+"パートナーは、パートナーシップコードを使用してトライアルを開始できます"
+"(トライアルビルドはストレージ1GB、ステージング環境2つに制限されます)。"
+"クライアントがプロジェクトを開始する場合は、Odoo.shホスティングを含むOdoo "
+"Enterpriseプランに登録し、サブスクリプションコードを使用する必要があります。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:59
 msgid ""
 ":guilabel:`Hosting location`: select the region where your platform will be "
 "hosted."
 msgstr ""
+":guilabel:`ホスティング場所`: プラットフォームがホストされるリージョンを選択"
+"します。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:0
 msgid "The Deploy your platform form"
-msgstr ""
+msgstr "プラットフォームのデプロイフォーム"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:67
 msgid "Import a database"
-msgstr ""
+msgstr "データベースをインポート"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:69
 msgid ""
@@ -4276,6 +4692,9 @@ msgid ""
 "project, provided it uses a :doc:`supported version <../../"
 "standard_extended_support>` of Odoo."
 msgstr ""
+"プラットフォームがデプロイされたら、Odooの:doc:`サポート対象バージョン <../"
+"../standard_extended_support>`を使用している場合に限り、Odoo.shプロジェクトに"
+"データベースをインポートできます。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:73
 msgid ""
@@ -4285,26 +4704,37 @@ msgid ""
 "available space. We recommend allocating **more than four times×** the dump "
 "size temporarily, then reducing storage after the import is complete."
 msgstr ""
+"`Odooのバックアップポリシー <https://www.odoo.com/cloud-sla>`_により、"
+"インポートプロセスではデータベースダンプのサイズの**4倍**の利用可能な"
+"ストレージが必要です。たとえば、10GBのダンプファイルには少なくとも40GBの利用"
+"可能なスペースが必要です。ダンプサイズの**4倍以上**を一時的に割り当て、"
+"インポート完了後にストレージを削減することをお勧めします。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:78
 msgid ""
 "If your project is a trial created with a partnership code, you can only "
 "import database dumps up to **1 GB** in size."
 msgstr ""
+"プロジェクトがパートナーシップコードで作成されたトライアルの場合、インポート"
+"できるデータベースダンプのサイズは**1GB**までです。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:82
 msgid "Push modules in production"
-msgstr ""
+msgstr "本番環境にモジュールをプッシュ"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:84
 msgid ""
 "If you are using community or custom modules, add them to a branch in your "
 "GitHub repository."
 msgstr ""
+"コミュニティモジュールまたはカスタムモジュールを使用している場合は、GitHub"
+"リポジトリのブランチに追加します。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:87
 msgid "Databases hosted on Odoo Online do not support custom modules."
 msgstr ""
+"Odoo Onlineでホストされているデータベースは、カスタムモジュールをサポートして"
+"いません。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:89
 msgid ""
@@ -4313,12 +4743,17 @@ msgid ""
 "in the root directory of your repository or group them by category (e.g., "
 "`accounting`, `project`, etc.)."
 msgstr ""
+"Odoo.shは、Odooモジュールを含むフォルダを自動的に検出します。任意の方法で整理"
+"できます。たとえば、リポジトリのルートディレクトリに直接配置したり、カテゴリ"
+"別にグループ化したりできます(`accounting`、`project`など)。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:93
 msgid ""
 "For publicly available community modules, you may also consider "
 "using :doc:`submodules <../advanced/submodules>`."
 msgstr ""
+"公開されているコミュニティモジュールの場合は、:doc:`サブモジュール <../"
+"advanced/submodules>`の使用も検討してください。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:101
 #: ../../content/administration/on_premise.rst:5
@@ -4334,25 +4769,31 @@ msgid ""
 "Go to `/web/database/manager` on your on-premise Odoo instance and "
 "click :icon:`fa-floppy-o` :guilabel:`Backup`."
 msgstr ""
+"オンプレミスのOdooインスタンスで`/web/database/manager`にアクセスし"
+"、:icon:`fa-floppy-o` :guilabel:`バックアップ`をクリックします。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:0
 msgid "The on-premise web manager interface"
-msgstr ""
+msgstr "オンプレミスのウェブマネージャインターフェイス"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:109
 msgid ""
 "Select :guilabel:`zip (includes filestore)` as the :guilabel:`Backup Format`."
 msgstr ""
+":guilabel:`バックアップ形式`として:guilabel:`zip(ファイルストアを含む)`を選択"
+"します。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:0
 msgid "Downloading an on-premise database backup"
-msgstr ""
+msgstr "オンプレミスデータベースバックアップのダウンロード"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:115
 msgid ""
 "You will need the :guilabel:`Master Password` of your Odoo server. If you do "
 "not have it, contact your system administrator."
 msgstr ""
+"Odooサーバの:guilabel:`マスターパスワード`が必要です。マスターパスワードがわ"
+"からない場合は、システム管理者に問い合わせてください。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:117
 msgid ""
@@ -4360,6 +4801,9 @@ msgid ""
 "system administrator. Refer to the :ref:`database manager security "
 "documentation <db_manager_security>`."
 msgstr ""
+"データベースマネージャにアクセスできない場合は、システム管理者によって無効化"
+"されている可能性があります。:ref:`データベースマネージャの"
+"セキュリティドキュメント <db_manager_security>`を参照してください。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:123
 msgid ""
@@ -4368,14 +4812,18 @@ msgid ""
 "the :icon:`fa-gear` (:guilabel:`gear`) icon, then :icon:`fa-cloud-"
 "download` :guilabel:`Download`."
 msgstr ""
+"ポータルアカウントにログインし、`マイデータベースページ <https://"
+"www.odoo.com/my/databases>`_に移動し、:icon:`fa-gear`(:guilabel:`歯車`)"
+"アイコンをクリックしてから:icon:`fa-cloud-download` "
+":guilabel:`ダウンロード`をクリックしてバックアップをダウンロードします。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:0
 msgid "Downloading an Odoo Online database backup"
-msgstr ""
+msgstr "Odoo Onlineデータベースバックアップのダウンロード"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:131
 msgid "Only major versions of Odoo are compatible with Odoo.sh."
-msgstr ""
+msgstr "Odoo.shと互換性があるのは、Odooのメジャーバージョンのみです。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:134
 msgid "Upload the backup"
@@ -4387,16 +4835,21 @@ msgid ""
 "your :guilabel:`Production` branch, and click :guilabel:`Import Database` to "
 "upload the backup you previously downloaded."
 msgstr ""
+"Odoo.shプロジェクトで、:guilabel:`Production`ブランチ"
+"の:guilabel:`Backups`タブに移動し、:guilabel:`Import Database`をクリックして"
+"、事前にダウンロードしたバックアップをアップロードします。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:None
 msgid "Importing a database backup on Odoo.sh"
-msgstr ""
+msgstr "Odoo.shへのデータベースバックアップのインポート"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:142
 msgid ""
 "Once the import is complete, you can access the database using "
 "the :guilabel:`Connect` button in the branch's :guilabel:`History` tab."
 msgstr ""
+"インポートが完了したら、ブランチの:guilabel:`History`タブにあ"
+"る:guilabel:`Connect`ボタンを使用してデータベースにアクセスできます。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:146
 msgid ""
@@ -4404,10 +4857,13 @@ msgid ""
 "downloading a manual backup beforehand if you want to preserve the existing "
 "data."
 msgstr ""
+"バックアップをインポートすると、ブランチ内の現在のデータが**すべて上書き**さ"
+"れます。既存のデータを保持する場合は、事前に手動バックアップをダウンロードす"
+"ることを検討してください。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:150
 msgid "Check outgoing email servers"
-msgstr ""
+msgstr "送信メールサーバを確認"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:152
 msgid ""
@@ -4416,22 +4872,30 @@ msgid ""
 "enabling :ref:`developer mode <developer-mode>` and navigating "
 "to :menuselection:`Settings --> Technical --> Email: Outgoing Mail Servers`"
 msgstr ""
+"Odoo.shはデフォルトのメールサーバを提供しています。これを使用するには"
+"、:ref:`開発者モード <developer-mode>`を有効にし、:menuselection:`設定 --> 技"
+"術 --> メール: 送信メールサーバ`に移動して、データベースで**送信メールサーバ"
+"が有効になっていないこと**を確認してください。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:156
 msgid ""
 "After importing your database, all configured outgoing mail servers are "
 "**disabled**, and the default Odoo.sh server is used."
 msgstr ""
+"データベースをインポートすると、設定されているすべての送信メールサーバが**無"
+"効化**され、デフォルトのOdoo.shサーバが使用されます。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:160
 msgid ""
 "Port **25** is and will remain closed. If connecting to an external SMTP "
 "server, use port **465** or **587**."
 msgstr ""
+"ポート**25**は閉じられており、今後も閉じたままです。外部SMTPサーバに接続する"
+"場合は、ポート**465**または**587**を使用してください。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:164
 msgid "Check scheduled actions"
-msgstr ""
+msgstr "スケジュール済アクションを確認"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:166
 msgid ""
@@ -4439,18 +4903,21 @@ msgid ""
 "This prevents your newly imported database from performing potentially "
 "disruptive operations such as:"
 msgstr ""
+"データベースをインポートした後、スケジュール済アクションは**デフォルトで無"
+"効**になります。これにより、新しくインポートされたデータベースが次のような破"
+"壊的な操作を実行するのを防ぎます:"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:169
 msgid "sending queued emails,"
-msgstr ""
+msgstr "キューに入っているメールの送信、"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:170
 msgid "triggering mass mailings, or"
-msgstr ""
+msgstr "メール一斉送信のトリガー、または"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:171
 msgid "syncing with third-party services (e.g., calendars, cloud storage)."
-msgstr ""
+msgstr "サードパーティサービス(カレンダー、クラウドストレージなど)との同期。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:173
 msgid ""
@@ -4459,43 +4926,51 @@ msgid ""
 "<developer-mode>` and going to :menuselection:`Settings --> Technical --> "
 "Automation: Scheduled Actions`."
 msgstr ""
+"インポートしたデータベースを本番環境で使用する場合は、:ref:`開発者モード "
+"<developer-mode>`を有効にし、:menuselection:`設定 --> 技術 --> 自動化: "
+"スケジュール済アクション`に移動して、必要なスケジュール済アクションのみを**再"
+"度有効化**してください。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:178
 msgid "Register the subscription"
-msgstr ""
+msgstr "サブスクリプションを登録"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:180
 msgid ""
 "After import, the database is considered a **duplicate** and will be "
 "unlinked from your enterprise subscription."
 msgstr ""
+"インポート後、データベースは**複製**とみなされ、"
+"エンタープライズサブスクリプションからリンク解除されます。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:184
 msgid "You are allowed only one active database per subscription."
-msgstr ""
+msgstr "サブスクリプションごとに許可される稼働中のデータベースは1つのみです。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:186
 msgid ""
 "If you intend to make the imported database your production environment:"
-msgstr ""
+msgstr "インポートしたデータベースを本番環境にする場合:"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:188
 msgid "Unlink your previous database from the subscription."
-msgstr ""
+msgstr "以前のデータベースをサブスクリプションからリンク解除してください。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:189
 msgid "Register the new one."
-msgstr ""
+msgstr "新しいものを登録します。"
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:191
 msgid ""
 "Refer to the :doc:`database registration documentation <../../on_premise>` "
 "for step-by-step instructions."
 msgstr ""
+"ステップバイステップの手順については、:doc:`データベース登録のドキュメント "
+"<../../on_premise>`を参照してください。"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:3
 msgid "Online editor"
-msgstr ""
+msgstr "オンラインエディタ"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:5
 msgid ""
@@ -4504,10 +4979,14 @@ msgid ""
 "terminals, Python consoles, Odoo shell consoles, and `Jupyter Notebooks "
 "<https://jupyterlab.readthedocs.io/en/stable/user/notebook.html>`_."
 msgstr ""
+":guilabel:`オンラインエディタ`ビューでは、ウェブブラウザからビルドの"
+"ソースコードを編集できます。また、ターミナル、Pythonコンソール、Odoo shell"
+"コンソール、および`Jupyter Notebooks <https://jupyterlab.readthedocs.io/en/"
+"stable/user/notebook.html>`_を開くこともできます。"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:None
 msgid "Overview of the online editor"
-msgstr ""
+msgstr "オンラインエディタの概要"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:12
 msgid ""
@@ -4516,14 +4995,18 @@ msgid ""
 "features>`, or by adding `/odoo-sh/editor` to the build's URL (e.g., "
 "`https://odoo-addons-master-1.dev.odoo.com/odoo-sh/editor`)."
 msgstr ""
+"エディタには、:ref:`ブランチタブ <odoo-sh/branches/tabs>"
+"`、:ref:`ビルドドロップダウンメニュー <odoo-sh/builds/stages/features>`から"
+"アクセスするか、ビルドのURLに `/odoo-sh/editor` を追加してアクセスできます（"
+"例: `https://odoo-addons-master-1.dev.odoo.com/odoo-sh/editor`）。"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:19
 msgid "Editing the source code"
-msgstr ""
+msgstr "ソースコードの編集"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:21
 msgid "The working directory is composed of the following:"
-msgstr ""
+msgstr "作業ディレクトリは以下で構成されています:"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:43
 msgid ""
@@ -4531,6 +5014,9 @@ msgid ""
 "builds. For production builds, the source code is read-only, because "
 "applying local changes on a production server is not a good practice."
 msgstr ""
+"開発ビルドとステージングビルドのソースコード（`/src` 配下のファイル）を編集で"
+"きます。本番ビルドの場合、ソースコードは読み取り専用です。本番サーバで直接変"
+"更を適用することは推奨されないためです。"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:48
 msgid ""
@@ -4538,26 +5024,28 @@ msgid ""
 "to :ref:`commit them to the source code <odoo-sh/editor/commit>` if you want "
 "them to persist."
 msgstr ""
+"変更は新しいビルドには引き継がれません。変更を永続化するには"
+"、:ref:`ソースコードにコミット <odoo-sh/editor/commit>`する必要があります。"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:50
 msgid "The source code of your GitHub repository is located under `/src/user`."
-msgstr ""
+msgstr "GitHubリポジトリのソースコードは `/src/user` 配下にあります。"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:51
 msgid "The source code of Odoo is located under:"
-msgstr ""
+msgstr "Odoのソースコードは以下の場所にあります:"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:53
 msgid "`/src/odoo` (`<https://github.com/odoo/odoo>`_)"
-msgstr ""
+msgstr "`/src/odoo`（<https://github.com/odoo/odoo>`_）"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:54
 msgid "`/src/enterprise` (`<https://github.com/odoo/enterprise>`_)"
-msgstr ""
+msgstr "`/src/enterprise`（<https://github.com/odoo/enterprise>`_）"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:55
 msgid "`/src/themes` (`<https://github.com/odoo/design-themes>`_)"
-msgstr ""
+msgstr "`/src/themes`（<https://github.com/odoo/design-themes>`_）"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:57
 msgid ""
@@ -4565,6 +5053,10 @@ msgid ""
 "can then edit the file. To save your changes, go to :menuselection:`File --> "
 "Save` or use the :kbd:`Ctrl+S` keyboard shortcut."
 msgstr ""
+"エディタでファイルを開くには、ファイルブラウザパネルでファイルを"
+"ダブルクリックします。その後、ファイルを編集できます。変更を保存するには"
+"、:menuselection:`ファイル --> 保存`を選択するか"
+"、:kbd:`Ctrl+S`キーボードショートカットを使用します。"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:61
 msgid ""
@@ -4572,10 +5064,12 @@ msgid ""
 "detect it and reload automatically, meaning your changes are immediately "
 "visible."
 msgstr ""
+"Odoサーバのアドオンパス内のPythonファイルを保存すると、Odoが検知して自動的に"
+"リロードするため、変更は即座に反映されます。"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:None
 msgid "Change to a Python file being immediately visible"
-msgstr ""
+msgstr "Pythonファイルへの変更が即座に反映される様子"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:67
 msgid ""
@@ -4584,61 +5078,69 @@ msgid ""
 "changes. To update the module of the currently1 open file, go "
 "to :menuselection:`Odoo --> Update current module`."
 msgstr ""
+"ただし、フィールドのラベルやビューなど、変更がデータベースに保存される場合は"
+"、変更を適用するために関連モジュールを更新する必要があります。現在開いている"
+"ファイルのモジュールを更新するには、:menuselection:`Odoo --> 現在のモジュール"
+"を更新`を選択します。"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:None
 msgid "Using the editor to update the current module"
-msgstr ""
+msgstr "エディタを使用して現在のモジュールを更新する様子"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:75
 msgid ""
 "You can also execute the following command in a terminal to update a module:"
-msgstr ""
+msgstr "ターミナルで以下のコマンドを実行してモジュールを更新することもできます:"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:84
 msgid "Committing and pushing changes"
-msgstr ""
+msgstr "変更のコミットとプッシュ"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:86
 msgid "To commit and push changes to your GitHub repository:"
-msgstr ""
+msgstr "GitHubリポジトリに変更をコミットしてプッシュするには:"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:88
 msgid "Open a terminal by going to :menuselection:`File --> New --> Terminal`."
 msgstr ""
+":menuselection:`ファイル --> 新規 --> ターミナル`を選択してターミナルを開きま"
+"す。"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:89
 msgid "Change the directory to `~/src/user`."
-msgstr ""
+msgstr "ディレクトリを`~/src/user`に変更してください。"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:95
 msgid "State your identity."
-msgstr ""
+msgstr "自分の身元を明らかにしてください。"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:101
 msgid "Stage your changes."
-msgstr ""
+msgstr "変更をステージしてください。"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:107
 msgid "Commit your changes."
-msgstr ""
+msgstr "変更をコミットしてください。"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:113
 msgid "Push your changes."
-msgstr ""
+msgstr "変更をプッシュしてください。"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:119
 msgid "In this command:"
-msgstr ""
+msgstr "このコマンドでは:"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:121
 msgid ""
 "`https` is the name of your *HTTPS* GitHub remote repository (e.g., `https://"
 "github.com/username/repository.git`)."
 msgstr ""
+"`https`は*HTTPS* GitHubリモートリポジトリの名前です(例:`https://github.com/"
+"username/repository.git`)。"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:123
 msgid "`HEAD` is the reference to the latest revision you committed."
-msgstr ""
+msgstr "`HEAD`はコミットした最新の変更履歴への参照です。"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:124
 msgid ""
@@ -4646,16 +5148,20 @@ msgid ""
 "push the changes, most likely the current branch if you work on a "
 "development build."
 msgstr ""
+"`<branch>`は変更をプッシュしたいブランチの名前に置き換える必要があります。開"
+"発ビルドで作業している場合は、おそらく現在のブランチになります。"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:127
 msgid ""
 "You will be prompted to input your GitHub username and password. After "
 "inputting your credentials, press enter."
 msgstr ""
+"GitHubのユーザ名とパスワードの入力を求められます。認証情報を入力した後、Enter"
+"キーを押してください。"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:None
 msgid "The commands to commit and push changes"
-msgstr ""
+msgstr "変更をコミットおよびプッシュするコマンド"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:134
 msgid ""
@@ -4668,6 +5174,13 @@ msgid ""
 "access-and-collaboration/inviting-collaborators-to-a-personal-repository>`_ "
 "suffices."
 msgstr ""
+"GitHubアカウントで二要素認証を有効にしている場合は、`個人アクセストークン "
+"<https://docs.github.com/en/authentication/keeping-your-account-and-data-"
+"secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-"
+"access-token>`_を作成してパスワードとして使用できます。`repoパーミッションを"
+"付与する <https://docs.github.com/en/repositories/managing-your-repositorys-"
+"settings-and-features/repository-access-and-collaboration/inviting-"
+"collaborators-to-a-personal-repository>`_だけで十分です。"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:140
 msgid ""
@@ -4676,6 +5189,9 @@ msgid ""
 "forwarded through an SSH agent, as you access the editor through a web "
 "browser."
 msgstr ""
+"セキュリティ上の理由から、プライベートSSHキーはビルドコンテナでホストされてお"
+"らず、ウェブブラウザ経由でエディタにアクセスするため、SSHエージェント経由で転"
+"送されることもないため、SSHを使用して認証することはできません。"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:143
 msgid ""
@@ -4684,6 +5200,10 @@ msgid ""
 "rather than branches, meaning you can have multiple builds on the same "
 "branch, but on different revisions."
 msgstr ""
+"ソースフォルダ`~/src/user`はブランチではなく、切り離された変更履歴で"
+"チェックアウトされています。これは、ビルドがブランチではなく特定の変更履歴で"
+"動作するためです。つまり、同じブランチ上でも異なる変更履歴で複数のビルドを持"
+"つことができます。"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:147
 msgid ""
@@ -4693,6 +5213,11 @@ msgid ""
 "revision as the new build that was created. However, always make sure to be "
 "in the editor of a build using the latest revision of your branch."
 msgstr ""
+"変更がプッシュされると、:ref:`ブランチプッシュ動作 <odoo-sh/branches/tabs/"
+"settings>`に応じて、新しいビルドが作成される場合があります。プッシュ元の"
+"エディタは、作成された新しいビルドと同じ変更履歴を持つため、引き続き作業でき"
+"ます。ただし、必ずブランチの最新変更履歴を使用しているビルドのエディタで作業"
+"してください。"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:155
 msgid "Consoles"
@@ -4706,36 +5231,43 @@ msgid ""
 "utilize their `rich display capabilities <https://ipython.readthedocs.io/en/"
 "stable/config/integrating.html#rich-display>`_ to display objects in HTML."
 msgstr ""
+"Pythonコンソールを開くことができます。これらは`IPythonインタラクティブシェル "
+"<https://ipython.readthedocs.io/en/stable/interactive/tutorial.html>`_です。"
+"これらのPythonコンソール(ターミナル内のIPythonシェルではなく)を使用すると"
+"、`リッチディスプレイ機能 <https://ipython.readthedocs.io/en/stable/config/"
+"integrating.html#rich-display>`_を利用してオブジェクトをHTMLで表示できます。"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:164
 msgid "The :code:`Pretty` class displays lists in a legible way."
-msgstr ""
+msgstr ":code:`Pretty`クラスは、リストを読みやすい形で表示します。"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:0
 msgid "Pretty class example"
-msgstr ""
+msgstr "Prettyクラスの例"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:170
 msgid ""
 "Using `pandas <https://pandas.pydata.org/pandas-docs/stable/getting_started/"
 "tutorials.html>`_ you can display:"
 msgstr ""
+"`pandas <https://pandas.pydata.org/pandas-docs/stable/getting_started/"
+"tutorials.html>`_を使用すると、次を表示できます:"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:173
 msgid "Cells of a CSV file"
-msgstr ""
+msgstr "CSVファイルのセル"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:0
 msgid "pandas CSV example"
-msgstr ""
+msgstr "pandas CSV の例"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:178
 msgid "Graphs"
-msgstr ""
+msgstr "グラフ"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:0
 msgid "pandas graph example"
-msgstr ""
+msgstr "pandas グラフの例"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:183
 msgid ""
@@ -4743,6 +5275,8 @@ msgid ""
 "model methods of your database. You can also read or write directly on your "
 "records."
 msgstr ""
+"Odoo シェルコンソールを開いて、データベースの Odoo レジストリとモデルメソッド"
+"を試すことができます。レコードに直接読み書きすることもできます。"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:187
 msgid ""
@@ -4751,18 +5285,24 @@ msgid ""
 "if you change a user's name, it will be updated in your database as well. "
 "Therefore, use Odoo shell consoles carefully on production databases."
 msgstr ""
+"Odoo シェルコンソールでは、トランザクションが自動的にコミットされます。つまり"
+"、レコードに加えた変更がデータベースに適用されます。たとえば、ユーザの名前を"
+"変更すると、データベースでも更新されます。そのため、本番データベースでは "
+"Odoo シェルコンソールを慎重に使用してください。"
 
 #: ../../content/administration/odoo_sh/getting_started/online_editor.rst:192
 msgid ""
 "You can use `env` to invoke models of your database registry, "
 "e.g., :code:`env['res.users']`."
 msgstr ""
+"`env` を使用してデータベースレジストリのモデルを呼び出すことができます。例: "
+":code:`env['res.users']`"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:5
 msgid ""
 "The :guilabel:`Settings` view allow you to manage the configuration of your "
 "project."
-msgstr ""
+msgstr ":guilabel:`管理設定`ビューでは、プロジェクトの構成を管理できます。"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:10
 msgid "Project name"
@@ -4778,7 +5318,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:None
 msgid "The project name setting"
-msgstr ""
+msgstr "プロジェクト名設定"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:22
 msgid "Collaborators"
@@ -4791,6 +5331,9 @@ msgid ""
 "the :guilabel:`Developer` role. Click the dropdown menu to select another "
 "one:"
 msgstr ""
+"GitHubユーザにアクセス権を付与するには、ユーザ名を入力して:guilabel:`追加`を"
+"クリックします。デフォルトでは、ユーザには:guilabel:`開発者`ロールが付与され"
+"ます。ドロップダウンメニューをクリックして別のロールを選択します:"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:27
 msgid ""
@@ -4798,6 +5341,9 @@ msgid ""
 "is dedicated to project management and has exclusive access to the project's "
 "settings."
 msgstr ""
+":guilabel:`管理者`: すべてのOdoo.sh機能とツールへのフルアクセス。このロールは"
+"プロジェクト管理専用であり、プロジェクトの管理設定への排他的なアクセス権を持"
+"ちます。"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:29
 msgid ""
@@ -4806,6 +5352,10 @@ msgid ""
 "(UAT). Testers can work with copies of production data, but they cannot "
 "access the production database through Odoo.sh's tools."
 msgstr ""
+":guilabel:`テスター`: ステージングデータベースと開発データベース、およびそれ"
+"らのツールへのアクセス。このロールは、ユーザ受け入れテスト(UAT)を実行する"
+"ユーザを対象としています。テスターは本番データのコピーを使用して作業できます"
+"が、Odoo.shのツールを通じて本番データベースにアクセスすることはできません。"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:32
 msgid ""
@@ -4814,18 +5364,22 @@ msgid ""
 "production data. Developers cannot connect to the production or staging "
 "databases and do not have access to the web shell or server logs."
 msgstr ""
+":guilabel:`開発者`: 本番データベースとステージングデータベースへのアクセス権"
+"なし。このロールは、コードを変更するが本番データにアクセスすべきでないユーザ"
+"を対象としています。開発者は本番データベースまたはステージングデータベースに"
+"接続できず、ウェブシェルまたはサーバログへのアクセス権もありません。"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:None
 msgid "The collaborators setting"
-msgstr ""
+msgstr "コラボレーター設定"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:42
 msgid "Feature access by stage and role"
-msgstr ""
+msgstr "ステージとロール別の機能アクセス"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:50
 msgid "Feature"
-msgstr ""
+msgstr "機能"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:51
 msgid "Developer"
@@ -4843,7 +5397,7 @@ msgstr "管理者"
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:100
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:150
 msgid "Connect + / Connect as"
-msgstr ""
+msgstr "接続 + / 次のユーザとして接続"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:56
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:57
@@ -4927,42 +5481,42 @@ msgstr "緑"
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:105
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:155
 msgid ":ref:`History <odoo-sh/branches/tabs/history>`"
-msgstr ""
+msgstr ":ref:`履歴 <odoo-sh/branches/tabs/history>`"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:65
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:110
 msgid ":ref:`Mails <odoo-sh/branches/tabs/mails>`"
-msgstr ""
+msgstr ":ref:`メール <odoo-sh/branches/tabs/mails>`"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:70
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:120
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:165
 msgid ":ref:`Editor <odoo-sh/branches/tabs/editor>`"
-msgstr ""
+msgstr ":ref:`エディタ <odoo-sh/branches/tabs/editor>`"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:75
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:125
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:170
 msgid ":ref:`Monitor <odoo-sh/branches/tabs/monitor>`"
-msgstr ""
+msgstr ":ref:`モニター <odoo-sh/branches/tabs/monitor>`"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:80
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:130
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:175
 msgid ":ref:`Logs <odoo-sh/branches/tabs/logs>`"
-msgstr ""
+msgstr ":ref:`ログ <odoo-sh/branches/tabs/logs>`"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:85
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:135
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:185
 msgid ":ref:`Upgrade <odoo-sh/branches/tabs/upgrade>`"
-msgstr ""
+msgstr ":ref:`アップグレード <odoo-sh/branches/tabs/upgrade>`"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:90
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:140
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:190
 msgid ":ref:`Settings <odoo-sh/branches/tabs/settings>`"
-msgstr ""
+msgstr ":ref:`管理設定 <odoo-sh/branches/tabs/settings>`"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:95
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:145
@@ -5008,11 +5562,11 @@ msgstr "|red|"
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:115
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:160
 msgid ":ref:`Shell <odoo-sh/branches/tabs/shell>`"
-msgstr ""
+msgstr ":ref:`シェル <odoo-sh/branches/tabs/shell>`"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:180
 msgid ":ref:`Backups <odoo-sh/branches/tabs/backups>`"
-msgstr ""
+msgstr ":ref:`バックアップ <odoo-sh/branches/tabs/backups>`"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:200
 #: ../../content/administration/standard_extended_support.rst:114
@@ -5021,25 +5575,27 @@ msgstr "凡例"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:202
 msgid "|green| : Available"
-msgstr ""
+msgstr "|green| : 対応可能"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:204
 msgid "|red| : Not available"
-msgstr ""
+msgstr "|red| : 利用不可"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:215
 msgid "Only admins can access the audit logs and the project settings."
-msgstr ""
+msgstr "監査ログとプロジェクト設定にアクセスできるのは管理者のみです。"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:216
 msgid ""
 "All roles can access the :doc:`builds page <builds>`, but the features "
 "available are specific to each role."
 msgstr ""
+"すべてのロールが:doc:`ビルドページ <builds>`にアクセスできますが、利用可能な"
+"機能は各ロールに固有のものです。"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:222
 msgid "Public access"
-msgstr ""
+msgstr "パブリックアクセス"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:224
 msgid ""
@@ -5050,10 +5606,16 @@ msgid ""
 "<odoo-sh/branches/tabs/mails>` for development builds. Production and "
 "staging builds remain private; visitors can only view their status."
 msgstr ""
+":guilabel:`パブリックアクセスを許可`を有効にすると、:doc:`ビルドページ "
+"<builds>`が一般公開され、訪問者が開発ビルドに接続できるようになります。訪問者"
+"は開発ビルドの:ref:`ログ <odoo-sh/branches/tabs/logs>`、:ref:`シェル <odoo-"
+"sh/branches/tabs/shell>`、:ref:`メール <odoo-sh/branches/tabs/mails>`にも"
+"アクセスできます。本番ビルドとステージングビルドは非公開のままで、訪問者はそ"
+"れらのステータスのみを表示できます。"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:None
 msgid "The public access setting"
-msgstr ""
+msgstr "パブリックアクセス設定"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:236
 msgid "GitHub commit statuses"
@@ -5065,10 +5627,13 @@ msgid ""
 "GitHub. The token must have the *commit statuses (write)* repository "
 "permission."
 msgstr ""
+"GitHubトークンを追加して、Odoo.shがコミットステータスをGitHubにプッシュバック"
+"できるようにすることができます。トークンには*コミットステータス(書き込み)"
+"*リポジトリ権限が必要です。"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:None
 msgid "The GitHub commit statuses setting"
-msgstr ""
+msgstr "GitHubコミットステータス設定"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:245
 msgid ""
@@ -5076,10 +5641,13 @@ msgid ""
 "tokens <https://docs.github.com/en/authentication/keeping-your-account-and-"
 "data-secure/managing-your-personal-access-tokens>`_."
 msgstr ""
+"詳細については、`GitHubのアクセストークン管理に関するドキュメント<https://"
+"docs.github.com/en/authentication/keeping-your-account-and-data-secure/"
+"managing-your-personal-access-tokens>`_を参照してください。"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:250
 msgid "GitHub key and webhook"
-msgstr ""
+msgstr "GitHubキーとWebhook"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:252
 msgid ""
@@ -5089,14 +5657,18 @@ msgid ""
 "the :guilabel:`Verify Deploy Key` and :guilabel:`Verify Webhook` buttons "
 "below to verify their configuration."
 msgstr ""
+"Odoo.shがコードを取得してコミット通知を受信できるように、GitHubリポジトリに"
+"デプロイキーとWebhookが自動的に作成されます。これらは誤って変更または削除され"
+"る可能性があるため、以下の:guilabel:`デプロイキーを検証`およ"
+"び:guilabel:`Webhookを検証`ボタンを使用して設定を検証できます。"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:None
 msgid "The GitHub key and webhook setting"
-msgstr ""
+msgstr "GitHubキーとWebhook設定"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:261
 msgid "Administrative rights on the GitHub repository are necessary."
-msgstr ""
+msgstr "GitHubリポジトリの管理者権限が必要です。"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:268
 msgid ""
@@ -5104,10 +5676,13 @@ msgid ""
 "<https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ into your codebase "
 "without copying the code directly."
 msgstr ""
+"`git submodule`コマンドを使用すると、コードを直接コピーすることなく、`他のGit"
+"プロジェクトをコードベースに統合<https://git-scm.com/book/en/v2/Git-Tools-"
+"Submodules>`_できます。"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:None
 msgid "The submodules setting"
-msgstr ""
+msgstr "サブモジュール設定"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:277
 msgid ""
@@ -5115,10 +5690,13 @@ msgid ""
 "Store <https://apps.odoo.com/apps>`_ or `community modules <https://"
 "github.com/OCA>`_, is necessary."
 msgstr ""
+"`Odoo Appsストア<https://apps.odoo.com/apps>"
+"`_や`コミュニティモジュール<https://github.com/OCA>`_など、Odooモジュールを含"
+"むGitリポジトリが必要です。"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:280
 msgid "Private repositories"
-msgstr ""
+msgstr "プライベートリポジトリ"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:282
 msgid ""
@@ -5126,50 +5704,62 @@ msgid ""
 "making-a-public-repository-private/>`_ as a submodule, it is necessary to "
 "add a deploy key:"
 msgstr ""
+"`プライベートGitHubリポジトリ<https://help.github.com/articles/making-a-"
+"public-repository-private/>`_をサブモジュールとして追加する前に、デプロイキー"
+"を追加する必要があります。"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:286
 msgid ""
 "Paste the SSH URL of the sub-repository (e.g., `git@github.com:USERNAME/"
 "REPOSITORY.git`) and click :guilabel:`Add`."
 msgstr ""
+"サブリポジトリのSSH URL(例:`git@github.com:USERNAME/REPOSITORY.git`)を貼り付"
+"けて、:guilabel:`追加`をクリックします。"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:288
 msgid "Copy the generated :guilabel:`Public Key`."
-msgstr ""
+msgstr "生成された:guilabel:`公開鍵`をコピーします。"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:289
 msgid ""
 "On the sub-repository's GitHub, go to :menuselection:`Settings --> Deploy "
 "keys`."
 msgstr ""
+"サブリポジトリのGitHubで、:menuselection:`Settings --> Deploy keys`に移動しま"
+"す。"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:290
 msgid ""
 "Click :menuselection:`Add deploy key`, enter a :guilabel:`Title`, paste the "
 "public key into the :guilabel:`Key` field, and click :guilabel:`Add key`."
 msgstr ""
+":menuselection:`デプロイキーを追加`をクリックし、:guilabel:`タイトル`を入力し"
+"、:guilabel:`キー`フィールドに公開鍵を貼り付けて、:guilabel:`キーを追加`を"
+"クリックします。"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:293
 msgid ""
 "To add a public repository or private repository with a deploy key as a "
 "submodule:"
 msgstr ""
+"公開リポジトリまたはデプロイキーを持つプライベートリポジトリをサブモジュール"
+"として追加するには:"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:295
 msgid "Add the submodule to your project."
-msgstr ""
+msgstr "サブモジュールをプロジェクトに追加します。"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:301
 msgid "Commit and push the change."
-msgstr ""
+msgstr "変更をコミットしてプッシュします。"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:307
 msgid "Wait for Odoo.sh to rebuild the project."
-msgstr ""
+msgstr "Odoo.shがプロジェクトを再ビルドするまで待ちます。"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:312
 msgid "Production database size"
-msgstr ""
+msgstr "本番データベースサイズ"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:314
 msgid ""
@@ -5179,36 +5769,47 @@ msgid ""
 "storage included in your subscription, the plan will be automatically "
 "adjusted."
 msgstr ""
+"このセクションには、プロジェクトが使用しているストレージの合計が表示されます"
+"。PostgreSQLデータベースサイズとコンテナ内のディスクファイル"
+"(データベースファイルストア、セッションストレージなど)が含まれます。本番"
+"データベースがサブスクリプションに含まれるストレージを超えた場合、プランは自"
+"動的に調整されます。"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:None
 msgid "The production database size setting"
-msgstr ""
+msgstr "本番データベースサイズの管理設定"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:322
 msgid ""
 "To analyze disk usage, run the `Ncdu tool <https://dev.yorhel.nl/ncdu/man>`_ "
 "in the :ref:`web shell <odoo-sh/branches/tabs/shell>`."
 msgstr ""
+"ディスク使用量を分析するには、:ref:`ウェブシェル <odoo-sh/branches/tabs/"
+"shell>`で`Ncduツール<https://dev.yorhel.nl/ncdu/man>`_を実行します。"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:328
 msgid "Database workers"
-msgstr ""
+msgstr "データベースワーカー"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:330
 msgid ""
 "Additional database workers can be configured to allow your production "
 "database to handle higher concurrent loads."
 msgstr ""
+"追加のデータベースワーカーを設定して、本番データベースがより高い同時負荷を処"
+"理できるようにすることができます。"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:None
 msgid "The database workers setting"
-msgstr ""
+msgstr "データベースワーカーの管理設定"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:336
 msgid ""
 "To add more workers, contact your account manager. After payment, the new "
 "worker(s) will be added to your project."
 msgstr ""
+"ワーカーを追加するには、アカウントマネジャーに連絡してください。支払い後、新"
+"しいワーカーがプロジェクトに追加されます。"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:340
 msgid ""
@@ -5218,10 +5819,14 @@ msgid ""
 "due to your customizations, contact `Odoo Support <https://www.odoo.com/"
 "help>`_."
 msgstr ""
+"ワーカーを追加しても、パフォーマンスの問題が自動的に解決されるわけではありま"
+"せん。サーバーが処理できる同時接続数が増えるだけです。一部の操作が遅いままの"
+"場合、問題はコード関連である可能性があります。カスタマイズが原因でない場合は"
+"、`Odoサポート<https://www.odoo.com/help>`_に連絡してください。"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:348
 msgid "Staging branches"
-msgstr ""
+msgstr "ステージングブランチ"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:350
 msgid ""
@@ -5232,10 +5837,15 @@ msgid ""
 "with Odoo.sh will occur automatically, and the number of available staging "
 "branches will be updated."
 msgstr ""
+"追加のステージングブランチを使用すると、複数の機能を同時に開発およびテストで"
+"きます。ステージングブランチを追加するには、Odoo.shプロジェクトから直接"
+"プロダクト追加をリクエストしてください。ウィジェットが"
+"サブスクリプションポータルに誘導し、購入を完了します。支払い後、Odoo.shとの同"
+"期が自動的に行われ、利用可能なステージングブランチ数が更新されます。"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:None
 msgid "The staging branches setting"
-msgstr ""
+msgstr "ステージングブランチの管理設定"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:361
 msgid "Activation"
@@ -5247,27 +5857,32 @@ msgid ""
 "activation code if necessary, provided the new code is not already assigned "
 "to another project."
 msgstr ""
+"このセクションには、プロジェクトのアクティベーション状態が表示されます。必要"
+"に応じてアクティベーションコードを変更できますが、新しいコードが既に別の"
+"プロジェクトに割り当てられていないことが条件です。"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:370
 msgid "You cannot change the activation code to:"
-msgstr ""
+msgstr "アクティベーションコードを次のものに変更することはできません:"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:372
 msgid "A code already used in another project"
-msgstr ""
+msgstr "別のプロジェクトですでに使用されているコード"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:373
 msgid "A trial code (downgrading from paid to trial is not allowed)"
-msgstr ""
+msgstr "トライアルコード（有料からトライアルへのダウングレードは許可されていません）"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:374
 msgid "An invalid code (not linked to an Odoo.sh custom plan)"
-msgstr ""
+msgstr "無効なコード（Odoo.shカスタムプランにリンクされていません）"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:376
 msgid ""
 "For any other issue, contact `Odoo Support <https://www.odoo.com/help>`_."
 msgstr ""
+"その他の問題については、`Odoo サポート <https://www.odoo.com/help>`_ にお問い"
+"合わせください。"
 
 #: ../../content/administration/on_premise.rst:8
 msgid "Register a database"
@@ -6454,6 +7069,13 @@ msgid ""
 "bin --x-sendfile>` CLI flag (this unique flag is used for both X-Sendfile "
 "and X-Accel)."
 msgstr ""
+"ただし、Odoo がファイルを特定しアクセス権を確認した後は、Odoo ではなく静的"
+"ウェブサーバを使用してファイルを提供することをお勧めします。Odoo がファイルの"
+"提供を静的ウェブサーバに委任するには、静的ウェブサーバで `X-Sendfile "
+"<https://tn123.org/mod_xsendfile/>`_ (apache) または X-Accel (nginx) 拡張機能"
+"を有効にして設定する必要があります。設定が完了したら、:option:`--x-sendfile "
+"<odoo-bin --x-sendfile>` CLI フラグを使用して Odoo を起動します(この単一の"
+"フラグは X-Sendfile と X-Accel の両方に使用されます)。"
 
 #: ../../content/administration/on_premise/deploy.rst:526
 msgid ""
@@ -6921,7 +7543,7 @@ msgstr ""
 
 #: ../../content/administration/on_premise/deploy.rst:754
 msgid ":doc:`../odoo_accounts`"
-msgstr ""
+msgstr ":doc:`../odoo_accounts`"
 
 #: ../../content/administration/on_premise/deploy.rst:756
 msgid ""
@@ -8658,7 +9280,7 @@ msgstr ""
 
 #: ../../content/administration/standard_extended_support.rst:3
 msgid "Standard and extended support"
-msgstr ""
+msgstr "標準サポートと延長サポート"
 
 #: ../../content/administration/standard_extended_support.rst:6
 msgid ""
@@ -8667,12 +9289,19 @@ msgid ""
 "legal/terms/enterprise>`. In the event of any inconsistency or conflict, the "
 "Subscription Agreement shall govern."
 msgstr ""
+"このページに記載されている情報は、:doc:`Odoo Enterprise サブスクリプション契"
+"約 <../legal/terms/enterprise>`の条項を修正、変更、または置き換えることを意図"
+"したものではありません。不一致または矛盾が生じた場合は、サブスクリプション契"
+"約が優先されます。"
 
 #: ../../content/administration/standard_extended_support.rst:10
 msgid ""
 "Odoo provides **standard support** for all major versions for three years. "
 "It includes helpdesk support, bug fixing, and security updates."
 msgstr ""
+"Odooは、すべてのメジャーバージョンに対して3年間の**標準サポート**を提供してい"
+"ます。これには、ヘルプデスクサポート、バグ修正、セキュリティアップデートが含"
+"まれます。"
 
 #: ../../content/administration/standard_extended_support.rst:13
 msgid ""
@@ -8680,6 +9309,8 @@ msgid ""
 "additional fee and includes helpdesk support and bug fixes (depending on "
 "feasibility)."
 msgstr ""
+"この3年を超えると、**延長サポート**には必須の追加料金が必要となり、"
+"ヘルプデスクサポートとバグ修正(実現可能性に応じて)が含まれます。"
 
 #: ../../content/administration/standard_extended_support.rst:17
 msgid ""
@@ -8687,6 +9318,9 @@ msgid ""
 "two to three months. These versions are only available on Odoo Online and "
 "are not eligible for extended support."
 msgstr ""
+"Odooは、オンラインバージョンまたはSaaSバージョンと呼ばれる中間バージョンを2~3"
+"か月ごとにリリースしています。これらのバージョンはOdoo Onlineでのみ利用可能で"
+"、延長サポートの対象外です。"
 
 #: ../../content/administration/standard_extended_support.rst:19
 msgid ""
@@ -8694,12 +9328,18 @@ msgid ""
 "supported versions** only. The last unsupported version can still be used as "
 "an upgrade target for up to six months following its end-of-life date."
 msgstr ""
+"サポートされているバージョン\\ **へのみ**\\ 、任意のバージョンから\\ "
+"`アップグレード<https://upgrade.odoo.com>`_\\ できます。サポート終了日から最"
+"大6か月間は、最後のサポート対象外バージョンもアップグレード先として使用できま"
+"す。"
 
 #: ../../content/administration/standard_extended_support.rst:23
 msgid ""
 "The table below shows the support status of every version. Major releases "
 "are highlighted in bold."
 msgstr ""
+"下の表は、各バージョンのサポート状況を示しています。メジャーリリースは太字で"
+"強調表示されています。"
 
 #: ../../content/administration/standard_extended_support.rst:33
 msgid "Release date"
@@ -8707,11 +9347,11 @@ msgstr "リリース日"
 
 #: ../../content/administration/standard_extended_support.rst:34
 msgid "End of standard support"
-msgstr ""
+msgstr "標準サポート終了"
 
 #: ../../content/administration/standard_extended_support.rst:35
 msgid "Odoo SaaS 19.3"
-msgstr ""
+msgstr "Odoo SaaS 19.3"
 
 #: ../../content/administration/standard_extended_support.rst:37
 #: ../../content/administration/standard_extended_support.rst:38
@@ -8730,48 +9370,46 @@ msgstr "N/A"
 
 #: ../../content/administration/standard_extended_support.rst:39
 msgid "May 2026"
-msgstr ""
+msgstr "2026年5月"
 
 #: ../../content/administration/standard_extended_support.rst:41
-#, fuzzy
 msgid "Odoo SaaS 19.2"
-msgstr "Odoo SaaS 18.2"
+msgstr "Odoo SaaS 19.2"
 
 #: ../../content/administration/standard_extended_support.rst:45
 msgid "March 2026"
-msgstr ""
+msgstr "2026年3月"
 
 #: ../../content/administration/standard_extended_support.rst:47
 msgid "Odoo SaaS 19.1"
-msgstr ""
+msgstr "Odoo SaaS 19.1"
 
 #: ../../content/administration/standard_extended_support.rst:51
 msgid "January 2026"
-msgstr ""
+msgstr "2026年1月"
 
 #: ../../content/administration/standard_extended_support.rst:53
 msgid "**Odoo 19.0**"
-msgstr ""
+msgstr "**Odoo 19.0**"
 
 #: ../../content/administration/standard_extended_support.rst:57
 #: ../../content/administration/standard_extended_support.rst:94
 msgid "September 2025"
-msgstr ""
+msgstr "2025年9月"
 
 #: ../../content/administration/standard_extended_support.rst:58
 msgid "September 2028 (planned)"
-msgstr ""
+msgstr "2028年9月（予定）"
 
 #: ../../content/administration/standard_extended_support.rst:59
 msgid "Odoo SaaS 18.4"
-msgstr ""
+msgstr "Odoo SaaS 18.4"
 
 #: ../../content/administration/standard_extended_support.rst:63
 msgid "July 2025"
-msgstr ""
+msgstr "2025年7月"
 
 #: ../../content/administration/standard_extended_support.rst:65
-#, fuzzy
 msgid "Odoo SaaS 18.3"
 msgstr "Odoo SaaS 18.3"
 
@@ -8780,7 +9418,6 @@ msgid "May 2025"
 msgstr "2025年5月"
 
 #: ../../content/administration/standard_extended_support.rst:71
-#, fuzzy
 msgid "Odoo SaaS 18.2"
 msgstr "Odoo SaaS 18.2"
 
@@ -8799,7 +9436,7 @@ msgstr "2024年10月"
 
 #: ../../content/administration/standard_extended_support.rst:82
 msgid "September 2027 (planned)"
-msgstr ""
+msgstr "2027年9月（予定）"
 
 #: ../../content/administration/standard_extended_support.rst:83
 msgid "**Odoo 17.0**"
@@ -8811,7 +9448,7 @@ msgstr "2023年11月"
 
 #: ../../content/administration/standard_extended_support.rst:88
 msgid "September 2026 (planned)"
-msgstr ""
+msgstr "2026年9月（予定）"
 
 #: ../../content/administration/standard_extended_support.rst:89
 msgid "**Odoo 16.0**"
@@ -8825,7 +9462,7 @@ msgstr "**Odoo 16.0**"
 #: ../../content/administration/standard_extended_support.rst:104
 #: ../../content/administration/standard_extended_support.rst:110
 msgid "|orange|"
-msgstr ""
+msgstr "|orange|"
 
 #: ../../content/administration/standard_extended_support.rst:93
 msgid "October 2022"
@@ -8841,7 +9478,7 @@ msgstr "2021年10月"
 
 #: ../../content/administration/standard_extended_support.rst:101
 msgid "**Odoo 14.0**"
-msgstr ""
+msgstr "**Odoo 14.0**"
 
 #: ../../content/administration/standard_extended_support.rst:105
 #: ../../content/administration/standard_extended_support.rst:111
@@ -8859,19 +9496,19 @@ msgstr "旧バージョン"
 
 #: ../../content/administration/standard_extended_support.rst:116
 msgid "|green| : Standard support"
-msgstr ""
+msgstr "|green| : 標準サポート"
 
 #: ../../content/administration/standard_extended_support.rst:118
 msgid "|orange| : Extended support (mandatory extra fee)"
-msgstr ""
+msgstr "|orange|: 延長サポート(必須の追加料金)"
 
 #: ../../content/administration/standard_extended_support.rst:120
 msgid "|red| : Not supported"
-msgstr ""
+msgstr "|red|: サポート対象外"
 
 #: ../../content/administration/standard_extended_support.rst:122
 msgid "N/A : Never released for this platform"
-msgstr ""
+msgstr "N/A : このプラットフォーム向けにリリースされていません"
 
 #: ../../content/administration/upgrade.rst:5
 msgid ""
@@ -8881,6 +9518,12 @@ msgid ""
 "patches. Using a :doc:`supported version <standard_extended_support>` is "
 "strongly recommended. Each major version is supported for three years."
 msgstr ""
+"アップグレードとは、データベースを古いバージョンから新しいサポート対象"
+"バージョンに移行することです（例: Odoo 16.0からOdoo 18.0へ）。各バージョンに"
+"は新機能、バグ修正、セキュリティパッチが含まれているため、定期的な"
+"アップグレードは非常に重要です。:doc:`サポート対象バージョン "
+"<standard_extended_support>`の使用を強くお勧めします。各メジャーバージョンは3"
+"年間サポートされます。"
 
 #: ../../content/administration/upgrade.rst:10
 msgid ""
@@ -9120,45 +9763,51 @@ msgstr ""
 
 #: ../../content/administration/upgrade.rst:111
 msgid "To upgrade an Odoo Online database:"
-msgstr ""
+msgstr "Odoo Onlineデータベースをアップグレードするには、次の手順を実行します。"
 
 #: ../../content/administration/upgrade.rst:113
 msgid "Open the `database manager <https://www.odoo.com/my/databases>`_."
-msgstr ""
+msgstr "`データベースマネージャー<https://www.odoo.com/my/databases>`_を開きます。"
 
 #: ../../content/administration/upgrade.rst:114
 msgid "Select the database and click :icon:`fa-gears` :guilabel:`Manage`."
-msgstr ""
+msgstr "データベースを選択し、:icon:`fa-gears` :guilabel:`Manage`をクリックします。"
 
 #: ../../content/administration/upgrade.rst:115
 msgid "Click :guilabel:`Upgrade` in the :guilabel:`Database` section."
-msgstr ""
+msgstr ":guilabel:`Database`セクションで:guilabel:`Upgrade`をクリックします。"
 
 #: ../../content/administration/upgrade.rst:116
 msgid "In the popup:"
-msgstr ""
+msgstr "ポップアップで次の操作を行います。"
 
 #: ../../content/administration/upgrade.rst:118
 msgid ""
 "Select the **version** of Odoo you want to upgrade to, usually the latest "
 "version."
 msgstr ""
+"アップグレード先のOdooの**バージョン**を選択します。通常は最新バージョンです"
+"。"
 
 #: ../../content/administration/upgrade.rst:119
 msgid ""
 "Enter the :guilabel:`Email to notify`, which will receive a link to the "
 "upgraded database."
 msgstr ""
+":guilabel:`Email to notify`を入力します。このメールアドレスには、"
+"アップグレードされたデータベースへのリンクが送信されます。"
 
 #: ../../content/administration/upgrade.rst:121
 msgid ""
 "Select the :guilabel:`Purpose` of the upgrade, which is automatically set "
 "to :guilabel:`Test` for your first upgrade request."
 msgstr ""
+"アップグレードの:guilabel:`Purpose`を選択します。最初の"
+"アップグレードリクエストでは、自動的に:guilabel:`Test`に設定されます。"
 
 #: ../../content/administration/upgrade.rst:123
 msgid "Click :guilabel:`Upgrade`."
-msgstr ""
+msgstr ":guilabel:`アップグレード`をクリックします。"
 
 #: ../../content/administration/upgrade.rst:125
 msgid ""
@@ -9170,6 +9819,13 @@ msgid ""
 "(:guilabel:`caret down`) button before the database name to display the test "
 "database, then clicking :guilabel:`Connect`."
 msgstr ""
+"データベースマネージャーでは、:guilabel:`接続`ボタンは完了するまでクリックで"
+"きない:guilabel:`アップグレード中...`ボタンに置き換わります。プロセスが正常に"
+"完了すると、アップグレードされたテストデータベースへのリンクを含むメールが入"
+"力されたアドレスに送信されます。テストデータベースには、"
+"データベースマネージャーからもアクセスできます。データベース名の前にあ"
+"る:icon:`fa-caret-down`(:guilabel:`下向きキャレット`)ボタンをクリックして"
+"テストデータベースを表示し、:guilabel:`接続`をクリックします。"
 
 #: ../../content/administration/upgrade.rst:134
 msgid ""
@@ -9919,7 +10575,7 @@ msgstr ":doc:`Odoo.shドキュメント <odoo_sh>`"
 
 #: ../../content/administration/upgrade.rst:432
 msgid ":doc:`Supported Odoo versions <standard_extended_support>`"
-msgstr ""
+msgstr ":doc:`サポート対象のOdooバージョン <standard_extended_support>`"
 
 #~ msgid ""
 #~ "the **URL** you want to use for the database (e.g., `company.odoo.com`), "
