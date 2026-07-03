@@ -3,7 +3,7 @@ Paymob
 ======
 
 `Paymob <https://paymob.com/>`_ is an Egypt-based payment service provider operating in Egypt, Oman,
-Pakistan, Saudi Arabia, and the United Arab Emirates. It allows businesses to accept online payments
+Saudi Arabia, and the United Arab Emirates. It allows businesses to accept online payments
 through credit and debit cards, as well as several local payment methods.
 
 .. _payment_providers/paymob/configure_dashboard:
@@ -15,7 +15,6 @@ Configuration on the Paymob dashboard
 
    - `Paymob dashboard for Egypt <https://accept.paymob.com/portal2/en/login>`_
    - `Paymob dashboard for Oman <https://oman.paymob.com/portal2/en/login>`_
-   - `Paymob dashboard for Pakistan <https://pakistan.paymob.com/portal2/en/login>`_
    - `Paymob dashboard for Saudi Arabia <https://ksa.paymob.com/portal2/en/login>`_
    - `Paymob dashboard for the United Arab Emirates <https://uae.paymob.com/portal2/en/login>`_
 
@@ -57,6 +56,10 @@ Configuration on Odoo
         :guilabel:`Synchronize with Paymob` again to make it available in Odoo.
 
 #. Configure the remaining options as needed.
+
+.. note::
+   Paymob stopped supporting Pakistan according to their `list of available domains
+   <https://developers.paymob.com/paymob-docs/getting-started/overview#Not-sure-where-to-start:~:text=go%2Dlive%20approval-,Not%20sure%20where%20to%20start%3F,-Use%20this%20quick>`_.
 
 .. seealso::
    :doc:`../payment_providers`
