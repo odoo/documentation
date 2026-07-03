@@ -176,8 +176,8 @@ Resource sharing
 
    - :guilabel:`Allowed origins`: `*`
    - :guilabel:`Allowed methods`: `GET`
-   - :guilabel:`Allowed headers`: `Content-Type`
-   - :guilabel:`Exposed headers`: `Content-Type`
+   - :guilabel:`Allowed headers`: `Content-Type, Content-Disposition`
+   - :guilabel:`Exposed headers`: `Content-Type, Content-Disposition`
    - :guilabel:`Max age`: `0`
 
 #. Create a second CORS blob service rule and click :guilabel:`Save`:
