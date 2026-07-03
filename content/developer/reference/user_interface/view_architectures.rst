@@ -3680,13 +3680,18 @@ Their root element is ``<calendar>``. Available attributes on the root node are:
 Components
 ----------
 
-Calendar views accept a single type of child elements: ``<field>``. Those fields
-are displayed in a popover, in the given order, which opens when a record
-(a calendar event) is clicked.
+Calendar views accept two kinds of child elements: ``<field>`` and :ref:`popover
+<reference/view_architectures/calendar/popover>`.
 
-.. note:: Fields in the popover are readonly. If the `edit` action is available,
-   an `Edit` button is displayed in the popover, to open a form view where fields
-   can be edited.
+When a record (a calendar event) is clicked, a popover opens to display some of its fields. When the
+view doesn't define a :ref:`popover <reference/view_architectures/calendar/popover>` element, those
+fields are the ``<field>`` elements declared directly under the ``<calendar>`` root element; they
+are displayed in the popover, in the given order.
+
+.. note:: By default, fields in the popover are readonly, unless the corresponding record can be
+   edited (see the `edit` root attribute), in which case they can be edited directly from the
+   popover. If the `edit` action is available, an `Edit` button is also displayed in the popover,
+   to open a form view where fields can be edited.
 
 Field nodes can have the following attributes:
 
@@ -3775,6 +3780,66 @@ available for that matter:
 
    :requirement: Optional
    :type: str
+
+.. _reference/view_architectures/calendar/popover:
+
+`popover`: customize the record's popover
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For full control over the popover's structure, a single ``<popover>`` element can be added as a
+direct child of the ``<calendar>`` root element, instead of relying on the automatically
+generated popover described above.
+
+.. example::
+   .. code-block:: xml
+
+      <calendar date_start="start" date_stop="stop">
+          <popover>
+              <templates>
+                  <t t-name="popover-header">
+                      <field name="name"/>
+                  </t>
+                  <t t-name="popover-body">
+                      <field name="partner_id"/>
+                  </t>
+                  <t t-name="popover-footer">
+                      <button class="btn btn-secondary" type="object" name="my_method" string="Do something"/>
+                  </t>
+              </templates>
+          </popover>
+      </calendar>
+
+Those templates can be defined to customize the popover:
+
+  .. rst-class:: o-definition-list
+
+  ``popover-header``
+    If defined, rendered as the popover header. By default, no header is displayed.
+
+  ``popover-body``
+    The main content of the popover, equivalent to the ``card`` template in a
+    :ref:`card view <reference/view_architectures/card>`.
+
+  ``popover-footer``
+    If defined, replaces the default footer, which contains a single :guilabel:`Edit` or
+    :guilabel:`View` button (the label depends on the user's access rights). Set
+    ``replace="0"`` on the ``<t t-name="popover-footer">`` node to keep the default button
+    and append the custom content after it.
+
+  The templates use the same API as :ref:`card view templates
+  <reference/view_architectures/card/templates>`: ``<field>`` nodes, widgets, dynamic
+  attributes, ``t-if``, etc. The rendering context is identical to that of card views.
+
+Moreover, the ``<popover>`` element accepts the following attribute:
+
+.. attribute:: card_id
+   :noindex:
+
+   Id of a `card` view to use to render the popover, as an alternative (or in addition) to the
+   ``templates`` element described below. When provided, this card is used as template body.
+
+   :requirement: Optional
+   :type: int
 
 .. _reference/view_architectures/activity:
 
