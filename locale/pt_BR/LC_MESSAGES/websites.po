@@ -6,6 +6,7 @@
 # Wil Odoo, 2025
 # Weblate <noreply-mt-weblate@weblate.org>, 2025.
 # "Dylan Kiss (dyki)" <dyki@odoo.com>, 2026.
+# Anthropic <noreply-mt-anthropic@weblate.org>, 2026.
 #
 # Translators:
 # Paulo Gomes, 2024
@@ -16,8 +17,8 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-17 18:30+0000\n"
-"PO-Revision-Date: 2026-07-02 16:26+0000\n"
-"Last-Translator: \"Dylan Kiss (dyki)\" <dyki@odoo.com>\n"
+"PO-Revision-Date: 2026-07-06 13:52+0000\n"
+"Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate.odoo.com/projects/odoo-"
 "18-doc/websites/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -436,6 +437,11 @@ msgid ""
 "and :ref:`customize the website <ecommerce/b2b_b2c/multiple-websites>` to "
 "support B2B, B2C, or both business models."
 msgstr ""
+"O e-Commerce da Odoo foi projetado para atender às necessidades de empresas "
+"B2B e B2C. Ele permite que você configure :doc:`preços <products/prices>`, "
+"gerencie :doc:`acesso <customer_accounts>` para clientes específicos e "
+":ref:`personalize o site <ecommerce/b2b_b2c/multiple-websites>` para "
+"suportar modelos de negócios B2B, B2C ou ambos."
 
 #: ../../content/applications/websites/ecommerce/b2b_b2c.rst:13
 #: ../../content/applications/websites/ecommerce/products/prices.rst:3
@@ -452,6 +458,14 @@ msgid ""
 "Excluded <ecommerce/prices/taxes>` option is enabled, and complete the "
 "configuration to :ref:`hide the pricing <ecommerce/prices/hide-prices>`."
 msgstr ""
+"Enquanto empresas B2C vendem diretamente ao consumidor final com um preço "
+":ref:`com impostos incluídos <ecommerce-price-management-tax-display>`, "
+"empresas B2B geralmente :ref:`excluem impostos <ecommerce-price-management-"
+"tax-display>` e podem até preferir ocultar os preços completamente, "
+"apresentando apenas seus produtos. Para configurar uma loja de e-commerce "
+"específica para B2B, certifique-se de que a opção :ref:`Impostos Excluídos "
+"<ecommerce/prices/taxes>` esteja ativada e conclua a configuração para "
+":ref:`ocultar os preços <ecommerce/prices/hide-prices>`."
 
 #: ../../content/applications/websites/ecommerce/b2b_b2c.rst:24
 msgid ""
@@ -506,6 +520,16 @@ msgid ""
 "<website/building_blocks/form>`, customize it, and in the :guilabel:`Action` "
 "field, select :guilabel:`Create a customer`."
 msgstr ""
+"Ao administrar um negócio B2B, você geralmente :ref:`oculta os preços "
+"<ecommerce/b2b_b2c/prices>` na loja virtual e os disponibiliza apenas para "
+":ref:`usuários logados <ecommerce/customer_accounts/shop-access>`. Para "
+"evitar que qualquer pessoa se inscreva livremente, defina a opção de "
+"configuração :ref:`Conta de Cliente <ecommerce/customer_accounts/account-"
+"creation>` como :guilabel:`Mediante convite`. Para criar uma página onde os "
+"clientes solicitam acesso, abra o :doc:`editor do site <../website/"
+"web_design>`, :ref:`crie um formulário <website/building_blocks/form>`, "
+"personalize-o e, no campo :guilabel:`Ação`, selecione :guilabel:`Criar um "
+"cliente`."
 
 #: ../../content/applications/websites/ecommerce/b2b_b2c.rst:51
 msgid ""
@@ -518,6 +542,15 @@ msgid ""
 "when a customer fills in the form and set the field's :guilabel:`Visibility` "
 "to :guilabel:`Hidden`."
 msgstr ""
+"Você pode atribuir etiquetas criadas em um formulário de contato em "
+":menuselection:`Site --> Configuração --> Clientes` para identificar que "
+"tipo de clientes enviaram o formulário. Para fazer isso, selecione um campo "
+"no formulário enquanto estiver no modo :guilabel:`Editar`, clique no botão "
+":guilabel:`+ Campo` na aba :guilabel:`Personalizar` e defina o "
+":guilabel:`Tipo` do campo como :guilabel:`Etiquetas`. Alterne as etiquetas "
+"que devem ser atribuídas automaticamente quando um cliente preencher o "
+"formulário e defina a :guilabel:`Visibilidade` do campo como "
+":guilabel:`Oculto`."
 
 #: ../../content/applications/websites/ecommerce/b2b_b2c.rst:58
 msgid ""
@@ -621,6 +654,14 @@ msgid ""
 "pricelists>` to customers, and deactivate the :ref:`Selectable <ecommerce/"
 "prices/selectable-pricelists>` option."
 msgstr ""
+"Se você administra um negócio B2B e B2C, recomendamos *fortemente* criar "
+"dois :doc:`sites separados <../website/configuration/multi_website>` e "
+"atribuir uma :ref:`lista de preços com preço zero <ecommerce/b2b_b2c/prices>"
+"` ao site B2B e uma lista de preços regular ao site B2C. Caso prefira usar "
+"um único site, configure-o usando :ref:`grupos de países <ecommerce/prices/"
+"country-groups>` e atribuindo :ref:`listas de preços <ecommerce/prices/"
+"pricelists>` aos clientes, e desative a opção :ref:`Selecionável <ecommerce/"
+"prices/selectable-pricelists>`."
 
 #: ../../content/applications/websites/ecommerce/b2b_b2c.rst:106
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:258
@@ -641,6 +682,13 @@ msgid ""
 "this feature has not been enabled, the customer only receives an order "
 "confirmation."
 msgstr ""
+"Dependendo do tipo de negócio (B2B ou B2C), você pode querer emitir uma "
+"fatura. Uma fatura pode ser gerada automaticamente (para B2B) ou sob demanda "
+"do cliente (para B2C). Esse processo pode ser automatizado se (e quando) o "
+"pagamento online for :ref:`confirmado <handling/sales>`. Para automatizar o "
+"faturamento, ative a configuração :ref:`Fatura Automática <handling/legal>`. "
+"Se esse recurso não tiver sido ativado, o cliente recebe apenas uma "
+"confirmação de pedido."
 
 #: ../../content/applications/websites/ecommerce/b2b_b2c.rst:120
 msgid "B2B fields at checkout"
@@ -653,6 +701,10 @@ msgid ""
 "like :guilabel:`VAT` or :guilabel:`Company Name` during the :ref:`delivery "
 "<ecommerce/checkout/delivery>` step."
 msgstr ""
+"Use a opção :guilabel:`Mostrar campos B2B` no :doc:`editor do site <../"
+"website/web_design>` para exibir campos adicionais específicos de B2B, como "
+":guilabel:`CNPJ` ou :guilabel:`Nome da Empresa` durante a etapa de "
+":ref:`entrega <ecommerce/checkout/delivery>`."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:3
 msgid "Ordering and checkout"
@@ -666,6 +718,12 @@ msgid ""
 "checkout/steps>`, some of which support additional features. The related "
 "buttons and checkout pages can be customized using the website editor."
 msgstr ""
+"O e-Commerce da Odoo oferece várias opções para organizar o processo de "
+"pedido e finalização de compra. Ele oferece diferentes opções de :ref:`botão "
+"de pedido <ecommerce/checkout/order-buttons>` e :ref:`etapas de finalização "
+"<ecommerce/checkout/steps>` sequenciais, algumas das quais suportam recursos "
+"adicionais. Os botões relacionados e as páginas de finalização podem ser "
+"personalizados usando o editor de site."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:13
 msgid "Order buttons"
@@ -681,21 +739,27 @@ msgid ""
 "change the :ref:`Add to Cart <ecommerce/checkout/add-to-cart>` button's "
 "behavior,"
 msgstr ""
+"alterar o comportamento do botão :ref:`Adicionar ao Carrinho <ecommerce/"
+"checkout/add-to-cart>`,"
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:18
 msgid ""
 "replace it with a :ref:`customized <ecommerce/checkout/prevent-sale>` button,"
 msgstr ""
+"substituí-lo por um botão :ref:`personalizado <ecommerce/checkout/prevent-"
+"sale>`,"
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:19
 msgid "add a :ref:`Buy now <ecommerce/checkout/buy-now>` button, and"
-msgstr ""
+msgstr "adicionar um botão :ref:`Comprar agora <ecommerce/checkout/buy-now>`, e"
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:20
 msgid ""
 "add an :ref:`Order again <ecommerce/checkout/re-order>` button to the "
 "customer portal."
 msgstr ""
+"adicionar um botão :ref:`Pedir novamente <ecommerce/checkout/re-order>` ao "
+"portal do cliente."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:25
 msgid "Add to cart options"
@@ -712,16 +776,25 @@ msgid ""
 "Configuration --> Settings`, scroll down to the :guilabel:`Shop - Checkout "
 "Process` section, and select one of the following options:"
 msgstr ""
+"Ao clicar no botão :guilabel:`Adicionar ao carrinho`, diferentes ações podem "
+"ser acionadas. Para configurá-las, vá para :menuselection:`Site --> "
+"Configuração --> Configurações`, role para baixo até a seção "
+":guilabel:`Loja - Processo de Finalização` e selecione uma das seguintes "
+"opções:"
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:34
 msgid ""
 ":guilabel:`Stay on Product Page`: The customer remains on the product's page."
 msgstr ""
+":guilabel:`Permanecer na Página do Produto`: O cliente permanece na página "
+"do produto."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:35
 msgid ""
 ":guilabel:`Go to cart`: The customer is immediately redirected to the cart."
 msgstr ""
+":guilabel:`Ir para o carrinho`: O cliente é imediatamente redirecionado para "
+"o carrinho."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:36
 msgid ""
@@ -729,12 +802,17 @@ msgid ""
 "want to go to the cart (:guilabel:`Proceed to Checkout`) or if they prefer "
 "to stay on the product page (:guilabel:`Continue Shopping`)."
 msgstr ""
+":guilabel:`Deixar o usuário decidir (diálogo)`: O cliente pode escolher se "
+"deseja ir para o carrinho (:guilabel:`Ir para Finalização`) ou se prefere "
+"permanecer na página do produto (:guilabel:`Continuar Comprando`)."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:41
 msgid ""
 "This dialog box always appears regardless of the configuration to "
 "suggest :doc:`optional products <products/cross_upselling>`, if any."
 msgstr ""
+"Esta caixa de diálogo sempre aparece, independentemente da configuração, "
+"para sugerir :doc:`produtos opcionais <products/cross_upselling>`, se houver."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:47
 msgid "Button customization"
@@ -766,6 +844,9 @@ msgid ""
 "Available For Sale` , you need to :ref:`hide your prices <ecommerce/prices/"
 "hide-prices>` on your product page."
 msgstr ""
+"Para exibir o botão :guilabel:`Fale conosco` e uma nota dizendo `Não "
+"disponível para venda`, você precisa :ref:`ocultar seus preços <ecommerce/"
+"prices/hide-prices>` na página do produto."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:None
 msgid "Contact us button on product page"
@@ -777,6 +858,9 @@ msgid ""
 "Sale* text beneath the product title and description can be modified on the "
 "product's page while in :guilabel:`Edit` mode."
 msgstr ""
+"O rótulo do botão :guilabel:`Fale Conosco`, a URL e o texto *Não Disponível "
+"para Venda* abaixo do título e descrição do produto podem ser modificados na "
+"página do produto enquanto no modo :guilabel:`Editar`."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:68
 msgid "Additional add to cart buttons"
@@ -787,6 +871,8 @@ msgid ""
 "You can add additional :guilabel:`Add to Cart` buttons and link them to "
 "specific products on any website page."
 msgstr ""
+"Você pode adicionar botões :guilabel:`Adicionar ao Carrinho` adicionais e "
+"vinculá-los a produtos específicos em qualquer página do site."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:73
 msgid ""
@@ -794,6 +880,10 @@ msgid ""
 "Button` inner content building block. Once placed, click the button, scroll "
 "to the :guilabel:`Add to Cart Button` section, and configure the following:"
 msgstr ""
+"Para adicioná-los, abra o editor do site e coloque o bloco de conteúdo "
+"interno :guilabel:`Botão Adicionar ao Carrinho`. Depois de colocado, clique "
+"no botão, role até a seção :guilabel:`Botão Adicionar ao Carrinho` e "
+"configure o seguinte:"
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:77
 msgid ":guilabel:`Product`: Select the product to link the button with."
@@ -804,6 +894,8 @@ msgid ""
 ":guilabel:`Action`: Choose if it should be an :guilabel:`Add to Cart` "
 "or :ref:`Buy Now <ecommerce/checkout/buy-now>` button."
 msgstr ""
+":guilabel:`Ação`: Escolha se deve ser um botão :guilabel:`Adicionar ao "
+"Carrinho` ou :ref:`Comprar Agora <ecommerce/checkout/buy-now>`."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:82
 msgid ""
@@ -812,12 +904,18 @@ msgid ""
 "variant and then to :guilabel:`Proceed to Checkout` or :guilabel:`Continue "
 "Shopping`."
 msgstr ""
+"Se o produto tiver variantes, escolha uma ou deixe a opção em "
+":guilabel:`Escolha do Visitante`, que solicita ao cliente que selecione uma "
+"variante e depois :guilabel:`Ir para Finalização` ou :guilabel:`Continuar "
+"Comprando`."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:85
 msgid ""
 "The default :guilabel:`Add to Cart` button does not offer those options, but "
 "its label can be changed."
 msgstr ""
+"O botão padrão :guilabel:`Adicionar ao Carrinho` não oferece essas opções, "
+"mas seu rótulo pode ser alterado."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:89
 msgid ""
@@ -827,6 +925,11 @@ msgid ""
 "button next to the :guilabel:`Show Empty` option under "
 "the :guilabel:`Customize` tab."
 msgstr ""
+"Enquanto no modo :guilabel:`Editar`, também é possível mostrar ou ocultar o "
+"ícone :icon:`fa-shopping-cart` (:guilabel:`carrinho`) no cabeçalho da "
+"página. Clique no cabeçalho e depois no botão :icon:`fa-shopping-cart` "
+"(:guilabel:`carrinho`) ao lado da opção :guilabel:`Mostrar Vazio` na aba "
+":guilabel:`Personalizar`."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:97
 msgid "Buy now"
@@ -840,6 +943,12 @@ msgid ""
 "Settings`. Under the :guilabel:`Shop - Checkout Process` section, tick "
 "the :guilabel:`Buy Now` feature."
 msgstr ""
+"Para permitir que os clientes escolham ir diretamente para a etapa de "
+":ref:`revisão do pedido <ecommerce/checkout/review_order>`, você pode "
+"adicionar um botão adicional :guilabel:`Comprar agora`. Para fazer isso, vá "
+"para :menuselection:`Site --> Configuração --> Configurações`. Na seção "
+":guilabel:`Loja - Processo de Finalização`, marque o recurso "
+":guilabel:`Comprar Agora`."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:105
 msgid ""
@@ -848,6 +957,10 @@ msgid ""
 "the :icon:`fa-bolt` :guilabel:`Buy Now` button next to the :guilabel:`Cart` "
 "options."
 msgstr ""
+"Alternativamente, habilite o recurso indo para a página de qualquer produto "
+"enquanto no modo :guilabel:`Editar` e, na aba :guilabel:`Personalizar`, "
+"clicando no botão :icon:`fa-bolt` :guilabel:`Comprar Agora` ao lado das "
+"opções :guilabel:`Carrinho`."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:None
 msgid "Buy now button"
@@ -865,6 +978,12 @@ msgid ""
 "the :guilabel:`Shop - Checkout Process` section, tick the :guilabel:`Re-"
 "order From Portal` feature."
 msgstr ""
+"Você pode permitir que os clientes façam novos pedidos de itens de pedidos "
+"de venda anteriores a partir do portal do cliente usando o botão "
+":guilabel:`Pedir Novamente`. Para adicioná-lo, vá para "
+":menuselection:`Site --> Configuração --> Configurações`. Na seção "
+":guilabel:`Loja - Processo de Finalização`, marque o recurso "
+":guilabel:`Pedir Novamente do Portal`."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:None
 msgid "Re-order button"
@@ -908,6 +1027,10 @@ msgid ""
 "adding :doc:`building blocks <../website/web_design/building_blocks>` or "
 "opening the :guilabel:`Customize` tab to enable various checkout options."
 msgstr ""
+"Cada etapa pode ser personalizada usando o editor do site, adicionando "
+":doc:`blocos de construção <../website/web_design/building_blocks>` ou "
+"abrindo a aba :guilabel:`Personalizar` para habilitar várias opções de "
+"finalização de compra."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:145
 msgid "Content added through building blocks is **specific** to each step."
@@ -921,6 +1044,10 @@ msgid ""
 "and :ref:`checkout <ecommerce/customer_accounts/checkout-access>` for "
 "specific customers, e.g., in a :doc:`B2B <b2b_b2c>` business setup."
 msgstr ""
+"Restrinja o acesso à :ref:`loja <ecommerce/customer_accounts/shop-access>` e "
+"à :ref:`finalização <ecommerce/customer_accounts/checkout-access>` para "
+"clientes específicos, por exemplo, em uma configuração de negócio :doc:`B2B "
+"<b2b_b2c>`."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:155
 msgid "Review order"
@@ -963,6 +1090,9 @@ msgid ""
 "<ewallet_gift/gift-cards>` or apply :doc:`discount codes <../../sales/sales/"
 "products_prices/loyalty_discount>`;"
 msgstr ""
+":guilabel:`Código promocional`: para permitir que os clientes resgatem "
+":ref:`cartões-presente <ewallet_gift/gift-cards>` ou apliquem :doc:`códigos "
+"de desconto <../../sales/sales/products_prices/loyalty_discount>`;"
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:169
 msgid ""
@@ -970,6 +1100,10 @@ msgid ""
 "wishlists>` to allow signed-in users to remove a product from their cart and "
 "add it to their wishlist using the :guilabel:`Save for later` option."
 msgstr ""
+":guilabel:`Adicionar à Lista de Desejos`: :ref:`Habilite listas de desejos "
+"<ecommerce/products/wishlists>` para permitir que usuários conectados "
+"removam um produto do carrinho e adicionem-no à lista de desejos usando a "
+"opção :guilabel:`Salvar para depois`."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:174
 msgid ""
@@ -1050,6 +1184,11 @@ msgid ""
 "Settings`. Under the :guilabel:`Shop - Checkout Process` section, enable "
 "the :guilabel:`Newsletter` feature and select a :guilabel:`Newsletter List`."
 msgstr ""
+"Você pode adicionar uma caixa de seleção para que usuários sem uma conta se "
+"inscrevam em uma newsletter. Para fazer isso, vá para "
+":menuselection:`Site --> Configuração --> Configurações`. Na seção "
+":guilabel:`Loja - Processo de finalização de compra`, habilite o recurso "
+":guilabel:`Newsletter` e selecione uma :guilabel:`Lista de newsletter`."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:207
 msgid "Extra info"
@@ -1064,6 +1203,13 @@ msgid ""
 "Step` option in the website editor. The form can be :ref:`customized "
 "<website/building_blocks/form>` as needed."
 msgstr ""
+"Você pode adicionar uma etapa de :guilabel:`Informações extras` no processo "
+"de finalização de compra para coletar informações adicionais do cliente por "
+"meio de um formulário online, que é então incluído no :ref:`pedido de venda "
+"<handling/sales>`. Para fazer isso, :ref:`habilite <ecommerce/checkout/"
+"customize_steps>` a opção :guilabel:`Etapa extra` no editor do site. O "
+"formulário pode ser :ref:`personalizado <website/building_blocks/form>` "
+"conforme necessário."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:216
 msgid ""
@@ -1072,6 +1218,11 @@ msgid ""
 "enable :guilabel:`Extra Step During Checkout`, and click :guilabel:`Save`. "
 "Click :icon:`fa-arrow-right` :guilabel:`Configure Form` to customize it."
 msgstr ""
+"Como alternativa, vá para :menuselection:`Site --> Configuração --> "
+"Configurações`, role até a seção :guilabel:`Loja - Processo de finalização "
+"de compra`, habilite :guilabel:`Etapa extra durante a finalização de compra` "
+"e clique em :guilabel:`Salvar`. Clique em :icon:`fa-arrow-right` "
+":guilabel:`Configurar formulário` para personalizá-lo."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:223
 msgid "Payment"
@@ -1093,6 +1244,11 @@ msgid ""
 "To :ref:`enable <ecommerce/checkout/customize_steps>` this option, go to the "
 "website editor and toggle the :guilabel:`Accept Terms & Conditions` feature."
 msgstr ""
+"Você pode exigir que os clientes concordem com seus :doc:`termos e condições "
+"<../../finance/accounting/customer_invoices/terms_conditions>` antes do "
+"pagamento. Para :ref:`habilitar <ecommerce/checkout/customize_steps>` esta "
+"opção, vá para o editor do site e ative o recurso :guilabel:`Aceitar termos "
+"e condições`."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:234
 msgid ""
@@ -1102,6 +1258,11 @@ msgid ""
 "methods, which helps diagnose potential availability issues on the payment "
 "form."
 msgstr ""
+"Habilite o :ref:`modo de desenvolvedor <developer-mode>` e clique no ícone "
+":icon:`fa-bug` (:guilabel:`bug`) para exibir um relatório de "
+":ref:`disponibilidade <payment_providers/availability>` para provedores de "
+"pagamento e métodos de pagamento, o que ajuda a diagnosticar possíveis "
+"problemas de disponibilidade no formulário de pagamento."
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:242
 msgid "Order confirmation"
@@ -1117,7 +1278,7 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:248
 msgid ":doc:`Order handling documentation <order_handling>`"
-msgstr ""
+msgstr ":doc:`Documentação sobre processamento de pedidos <order_handling>`"
 
 #: ../../content/applications/websites/ecommerce/customer_accounts.rst:3
 #: ../../content/applications/websites/website/configuration/multi_website.rst:124
@@ -1133,6 +1294,12 @@ msgid ""
 "the :ref:`customer portal <portal/access>`, and support both :doc:`B2B and "
 "B2C operations <b2b_b2c>`."
 msgstr ""
+"Usar contas de cliente para uma loja de e-commerce permite que você "
+":ref:`gerencie clientes <ecommerce/customer_accounts/account-creation>`, "
+"controle o acesso à :ref:`loja <ecommerce/customer_accounts/shop-access>`, à "
+":ref:`finalização <ecommerce/customer_accounts/checkout-access>` ou ao "
+":ref:`portal do cliente <portal/access>`, e suporte :doc:`operações B2B e "
+"B2C <b2b_b2c>`."
 
 #: ../../content/applications/websites/ecommerce/customer_accounts.rst:11
 msgid ""
@@ -1142,6 +1309,11 @@ msgid ""
 "all their documents in one place, such as quotations, orders, invoices, and "
 "more."
 msgstr ""
+"Após fazer login, os clientes podem acessar seu :doc:`portal do cliente <../"
+"../general/users/portal>` clicando em seu nome de usuário no canto superior "
+"direito da tela e selecionando :guilabel:`Minha Conta`. De lá, eles podem "
+"visualizar todos os seus documentos em um só lugar, como cotações, pedidos, "
+"faturas e muito mais."
 
 #: ../../content/applications/websites/ecommerce/customer_accounts.rst:None
 msgid "Customer account access"
@@ -1152,6 +1324,9 @@ msgid ""
 "The customer account page can be customized with building blocks and other "
 "features through the :doc:`website builder <../website/web_design>`."
 msgstr ""
+"A página da conta do cliente pode ser personalizada com blocos de construção "
+"e outros recursos através do :doc:`construtor de sites <../website/"
+"web_design>`."
 
 #: ../../content/applications/websites/ecommerce/customer_accounts.rst:26
 msgid "Customer account creation"
@@ -1165,6 +1340,11 @@ msgid ""
 "to the :guilabel:`Privacy` section. Under :guilabel:`Customer Account`, "
 "select one of the following options:"
 msgstr ""
+"Você pode escolher se as contas de cliente e o acesso a documentos estão "
+"disponíveis para todos ou restritos apenas a usuários convidados. Para fazer "
+"isso, vá para :menuselection:`Site --> Configuração --> Configurações`, role "
+"para baixo até a seção :guilabel:`Privacidade`. Em :guilabel:`Conta de "
+"Cliente`, selecione uma das seguintes opções:"
 
 #: ../../content/applications/websites/ecommerce/customer_accounts.rst:33
 msgid ""
@@ -1180,6 +1360,9 @@ msgid ""
 "sign in. They will get access to the :doc:`portal <../../general/users/"
 "portal>` by default."
 msgstr ""
+":guilabel:`Cadastro gratuito`: Todos os visitantes do site podem criar uma "
+"conta e fazer login. Eles terão acesso ao :doc:`portal <../../general/users/"
+"portal>` por padrão."
 
 #: ../../content/applications/websites/ecommerce/customer_accounts.rst:40
 msgid "To send an email invitation to a customer:"
@@ -1281,6 +1464,8 @@ msgid ""
 ":ref:`Revoke access or re-invite a customer <portal/access>` using the "
 "related buttons in the :guilabel:`Portal Access Management` pop-up."
 msgstr ""
+":ref:`Revogar acesso ou reconvidar um cliente <portal/access>` usando os "
+"botões relacionados no pop-up :guilabel:`Gerenciamento de Acesso ao Portal`."
 
 #: ../../content/applications/websites/ecommerce/customer_accounts.rst:78
 msgid ""
@@ -1304,6 +1489,11 @@ msgid ""
 "web_design>`. On the :guilabel:`Customize` tab, enable or disable access to "
 "specific documents as needed."
 msgstr ""
+"Também é possível definir os tipos de documentos aos quais os clientes têm "
+"acesso. Para fazer isso, clique no seu nome de usuário no canto superior "
+"direito do site, selecione :guilabel:`Minha Conta` e abra o :doc:`construtor "
+"de sites <../website/web_design>`. Na aba :guilabel:`Personalizar`, habilite "
+"ou desabilite o acesso a documentos específicos conforme necessário."
 
 #: ../../content/applications/websites/ecommerce/customer_accounts.rst:91
 msgid "Shop access"
@@ -1317,6 +1507,11 @@ msgid ""
 "select :guilabel:`Logged in users`. Select :guilabel:`All users` if the shop "
 "should be visible to every website visitor."
 msgstr ""
+"Para restringir o acesso a toda a loja online para usuários que não estão "
+"logados, vá para :menuselection:`Site --> Configuração --> Configurações`, "
+"role até :guilabel:`Privacidade` e em :guilabel:`Acesso ao e-Commerce`, "
+"selecione :guilabel:`Usuários logados`. Selecione :guilabel:`Todos os "
+"usuários` se a loja deve estar visível para todos os visitantes do site."
 
 #: ../../content/applications/websites/ecommerce/customer_accounts.rst:99
 msgid ""
@@ -1388,6 +1583,9 @@ msgid ""
 "To use the :ref:`wishlist <ecommerce/products/wishlists>` feature, customers "
 "must create an account to save their favorite items for later."
 msgstr ""
+"Para usar o recurso de :ref:`lista de desejos <ecommerce/products/wishlists>"
+"`, os clientes devem criar uma conta para salvar seus itens favoritos para "
+"depois."
 
 #: ../../content/applications/websites/ecommerce/customer_accounts.rst:127
 msgid "Multi-website account"
@@ -1401,6 +1599,11 @@ msgid ""
 "Settings`, in the :guilabel:`Privacy` section, enable the :guilabel:`Shared "
 "Customer Accounts` option."
 msgstr ""
+"Ao gerenciar múltiplos sites, é possível disponibilizar contas de clientes "
+"em *todos* os sites, permitindo que cada cliente use uma única conta. Para "
+"fazer isso, vá para :menuselection:`Site --> Configuração --> "
+"Configurações`, na seção :guilabel:`Privacidade`, habilite a opção "
+":guilabel:`Contas de Clientes Compartilhadas`."
 
 #: ../../content/applications/websites/ecommerce/customer_accounts.rst:135
 msgid ""
@@ -1656,6 +1859,11 @@ msgid ""
 "automatically or on demand of the customer. This process can be automated if "
 "(and when) the online payment is :ref:`confirmed <handling/sales>`."
 msgstr ""
+"A etapa final de um pedido de e-commerce é gerar a fatura e enviá-la ao "
+"cliente. Dependendo das suas necessidades, uma fatura pode ser gerada "
+"automaticamente ou sob demanda do cliente. Este processo pode ser "
+"automatizado se (e quando) o pagamento online for :ref:`confirmado <handling/"
+"sales>`."
 
 #: ../../content/applications/websites/ecommerce/order_handling.rst:111
 msgid ""
@@ -2008,6 +2216,11 @@ msgid ""
 "button to access the product page, then toggle the switch "
 "from :guilabel:`Unpublished` to :guilabel:`Published`."
 msgstr ""
+"Produtos criados pelo frontend são automaticamente :ref:`publicados <website/"
+"pages/un-publish-page>`, enquanto produtos criados pelo backend não são. "
+"Para publicar um produto, clique no botão inteligente :guilabel:`Ir para o "
+"site` para acessar a página do produto e, em seguida, alterne o botão de "
+":guilabel:`Não publicado` para :guilabel:`Publicado`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:40
 msgid ""
@@ -2028,6 +2241,11 @@ msgid ""
 "Products`, click the :icon:`fa-cog` (:guilabel:`gear`) icon, "
 "then :ref:`Import records <essentials/export_import_data/import-data>`."
 msgstr ""
+"Para :ref:`importar dados de produtos <essentials/export_import_data/import-"
+"data>` usando arquivos XLSX ou CSV, vá para :menuselection:`Site --> e-"
+"Commerce --> Produtos`, clique no ícone :icon:`fa-cog` "
+"(:guilabel:`engrenagem`) e depois em :ref:`Importar registros <essentials/"
+"export_import_data/import-data>`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:53
 msgid "To publish **large batches** of products, follow these steps:"
@@ -2075,7 +2293,7 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/products.rst:68
 msgid "Product page customization"
-msgstr ""
+msgstr "Personalização da página de produto"
 
 #: ../../content/applications/websites/ecommerce/products.rst:73
 msgid "Product information"
@@ -2090,6 +2308,12 @@ msgid ""
 "documents <ecommerce/products/digital-files>`, or :ref:`translating "
 "<ecommerce/products/translation>` content."
 msgstr ""
+"Para adicionar informações gerais sobre um produto, navegue até "
+":menuselection:`Site --> e-Commerce --> Produtos` e selecione o produto. "
+"Você pode configurar a página do produto no formulário adicionando "
+":ref:`variantes <ecommerce/products/product-variants>`, :ref:`documentos "
+"digitais <ecommerce/products/digital-files>` ou :ref:`traduzindo <ecommerce/"
+"products/translation>` o conteúdo."
 
 #: ../../content/applications/websites/ecommerce/products.rst:81
 msgid ""
@@ -2099,6 +2323,12 @@ msgid ""
 "description` section, and add a description. Use Odoo's :doc:`rich-text "
 "editor <../../essentials/html_editor>` features to personalize the content."
 msgstr ""
+"Você também pode adicionar uma descrição de produto específica para e-"
+"commerce a ser exibida abaixo do nome do produto na página do produto. Para "
+"fazer isso, vá para a aba :guilabel:`Vendas`, role até a seção "
+":guilabel:`Descrição para e-commerce` e adicione uma descrição. Use os "
+"recursos do :doc:`editor de rich text <../../essentials/html_editor>` do "
+"Odoo para personalizar o conteúdo."
 
 #: ../../content/applications/websites/ecommerce/products.rst:87
 msgid ""
@@ -2110,7 +2340,7 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/products.rst:92
 msgid "Product presentation"
-msgstr ""
+msgstr "Apresentação do produto"
 
 #: ../../content/applications/websites/ecommerce/products.rst:94
 msgid ""
@@ -2120,6 +2350,12 @@ msgid ""
 "its images <ecommerce/products/image-customization>` or add :doc:`building "
 "blocks <../../websites/website/web_design/building_blocks>`."
 msgstr ""
+"Para personalizar a apresentação do produto no site, vá para a "
+":guilabel:`Loja` e clique no produto. Clique em :guilabel:`Editar` para "
+":ref:`personalizar <ecommerce/products/customization>` a página, "
+":ref:`editar suas imagens <ecommerce/products/image-customization>` ou "
+"adicionar :doc:`blocos de construção <../../websites/website/web_design/"
+"building_blocks>`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:100
 msgid ""
@@ -2143,6 +2379,8 @@ msgstr ""
 msgid ""
 "Use the :guilabel:`Customize` tab to modify the page layout or add features:"
 msgstr ""
+"Use a aba :guilabel:`Personalizar` para modificar o layout da página ou "
+"adicionar recursos:"
 
 #: ../../content/applications/websites/ecommerce/products.rst:106
 msgid ""
@@ -2199,6 +2437,8 @@ msgid ""
 ":guilabel:`Tax Indication`: Toggle the switch to indicate if the price "
 "is :ref:`VAT included or excluded <ecommerce/prices/taxes>`."
 msgstr ""
+":guilabel:`Indicação de imposto`: alterne o botão para indicar se o preço é "
+":ref:`com IVA incluído ou excluído <ecommerce/prices/taxes>`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:127
 msgid ""
@@ -2307,6 +2547,14 @@ msgid ""
 "the :guilabel:`Videos` tab, paste a video URL or embed code. Once done, "
 "click :guilabel:`Add`."
 msgstr ""
+"Para adicionar mais itens de mídia, como imagens e vídeos, navegue até o "
+":ref:`formulário de produto <ecommerce/products/product-form>`, vá para a "
+"aba :guilabel:`Vendas` e clique em :guilabel:`Adicionar mídia` na seção "
+":guilabel:`Mídia de e-commerce`. Na janela pop-up :guilabel:`Selecionar uma "
+"mídia`, vá para a aba :guilabel:`Imagens`, selecione uma imagem, clique em "
+":guilabel:`Carregar uma imagem` ou :guilabel:`Adicionar URL`. Ou navegue até "
+"a aba :guilabel:`Vídeos`, cole uma URL de vídeo ou código de incorporação. "
+"Quando terminar, clique em :guilabel:`Adicionar`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:170
 msgid ""
@@ -2379,10 +2627,12 @@ msgid ""
 "Images must be in PNG or JPG format, with at least one dimension (height or "
 "width) greater than 1024 pixels to trigger the zoom."
 msgstr ""
+"As imagens devem estar no formato PNG ou JPG, com pelo menos uma dimensão "
+"(altura ou largura) maior que 1024 pixels para acionar o zoom."
 
 #: ../../content/applications/websites/ecommerce/products.rst:193
 msgid "Products block"
-msgstr ""
+msgstr "Bloco de produtos"
 
 #: ../../content/applications/websites/ecommerce/products.rst:195
 msgid ""
@@ -2390,6 +2640,9 @@ msgid ""
 "building_blocks>` is used to display a selection of products sold on your "
 "website."
 msgstr ""
+"O :guilabel:`Produtos` :doc:`bloco de construção <../website/web_design/"
+"building_blocks>` é usado para exibir uma seleção de produtos vendidos no "
+"seu site."
 
 #: ../../content/applications/websites/ecommerce/products.rst:None
 msgid "Example of a products block"
@@ -2403,12 +2656,19 @@ msgid ""
 "to :guilabel:`Recently Sold Products` or :guilabel:`Recently Viewed "
 "Products`."
 msgstr ""
+"Por padrão, o bloco exibe os :guilabel:`Produtos mais recentes`. Para "
+"alterar quais produtos são exibidos, vá para a seção :guilabel:`Produtos` da "
+"aba :guilabel:`Personalizar` e defina o campo :guilabel:`Filtro` como "
+":guilabel:`Produtos vendidos recentemente` ou :guilabel:`Produtos "
+"visualizados recentemente`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:205
 msgid ""
 "In addition, it is possible to display products from a specific category "
 "only using the :guilabel:`Category` field."
 msgstr ""
+"Além disso, é possível exibir produtos de uma categoria específica apenas "
+"usando o campo :guilabel:`Categoria`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:208
 msgid ""
@@ -2416,6 +2676,9 @@ msgid ""
 "include :guilabel:`Variants`, and adjust the display by selecting a "
 "different :guilabel:`Template`."
 msgstr ""
+"Você também pode filtrar produtos por :guilabel:`Tags`, incluir "
+":guilabel:`Variantes` e ajustar a exibição selecionando um "
+":guilabel:`Modelo` diferente."
 
 #: ../../content/applications/websites/ecommerce/products.rst:214
 msgid "Product variants"
@@ -2483,6 +2746,9 @@ msgid ""
 "catalog>`, set the :guilabel:`Attributes` feature to :guilabel:`Left` using "
 "the website editor."
 msgstr ""
+"Para exibir os atributos do produto no :doc:`catálogo de produtos <products/"
+"catalog>`, defina o recurso :guilabel:`Atributos` como :guilabel:`Esquerda` "
+"usando o editor do site."
 
 #: ../../content/applications/websites/ecommerce/products.rst:237
 msgid ""
@@ -2806,10 +3072,17 @@ msgid ""
 "and can be disabled in the :ref:`website editor <ecommerce/products/product-"
 "page>` if needed."
 msgstr ""
+"O botão :icon:`fa-heart-o` :guilabel:`Adicionar à lista de desejos` permite "
+"que os clientes adicionem produtos à sua lista de desejos, ou seja, salvem-"
+"nos para depois. Para habilitá-lo, vá para :menuselection:`Site --> "
+"Configuração --> Configurações`, role para baixo até a seção "
+":guilabel:`Loja - Produtos` e habilite :guilabel:`Listas de Desejos`. O "
+"botão está disponível em cada página de produto e pode ser desabilitado no "
+":ref:`editor do site <ecommerce/products/product-page>` se necessário."
 
 #: ../../content/applications/websites/ecommerce/products.rst:None
 msgid "Add to wishlist button"
-msgstr ""
+msgstr "Botão adicionar à lista de desejos"
 
 #: ../../content/applications/websites/ecommerce/products.rst:388
 msgid ""
@@ -2817,6 +3090,9 @@ msgid ""
 "hovering the mouse over the product on the :ref:`shop page <ecommerce/"
 "catalog/additional-features>`."
 msgstr ""
+"Você também pode exibir um botão :icon:`fa-heart-o` (:guilabel:`Lista de "
+"Desejos`) ao passar o mouse sobre o produto na :ref:`página da loja "
+"<ecommerce/catalog/additional-features>`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:390
 msgid ""
@@ -2824,6 +3100,9 @@ msgid ""
 "the :guilabel:`Save for later` button in the :guilabel:`Order "
 "overview` :ref:`checkout step <ecommerce/checkout/review_order>`."
 msgstr ""
+"Os clientes podem mover produtos do carrinho para a lista de desejos "
+"clicando no botão :guilabel:`Salvar para depois` na :guilabel:`Revisão do "
+"pedido` :ref:`etapa de finalização <ecommerce/checkout/review_order>`."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:3
 msgid "Catalog"
@@ -2836,6 +3115,10 @@ msgid ""
 "navigation paths. Essentially, the eCommerce catalog is the shop page of "
 "your website."
 msgstr ""
+"O catálogo de e-Commerce exibe produtos para os clientes navegarem. Ele é "
+"organizado usando categorias de produtos, opções disponíveis, classificação "
+"e caminhos de navegação. Essencialmente, o catálogo de e-Commerce é a página "
+"da loja do seu site."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:9
 msgid ""
@@ -2847,6 +3130,13 @@ msgid ""
 "use :ref:`additional features <ecommerce/catalog/additional-features>` "
 "according to your needs."
 msgstr ""
+"O catálogo de produtos inclui uma :ref:`barra superior <ecommerce/catalog/"
+"top-bar>`, um :ref:`painel lateral <ecommerce/catalog/side-panel>` e uma "
+":ref:`área de listagem de produtos <ecommerce/catalog/product-listing>`. Com "
+"o Odoo, você pode :ref:`personalizar o layout <ecommerce/catalog/customize-"
+"layout>`, filtrar por :ref:`categorias e atributos <ecommerce/catalog/"
+"categories>` e usar :ref:`recursos adicionais <ecommerce/catalog/additional-"
+"features>` de acordo com suas necessidades."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:16
 msgid ""
@@ -2854,6 +3144,9 @@ msgid ""
 "to the shop page, click :guilabel:`Edit` in the upper-right corner, and "
 "navigate to the :guilabel:`Customize` tab."
 msgstr ""
+"Você pode personalizar a página da loja usando o editor do site. Para acessá-"
+"lo, vá para a página da loja, clique em :guilabel:`Editar` no canto superior "
+"direito e navegue até a aba :guilabel:`Personalizar`."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:22
 msgid "Top bar"
@@ -2865,10 +3158,14 @@ msgid ""
 "display options <ecommerce/catalog/sort-by-and-display-option>`, "
 "and :ref:`category quick access <ecommerce/catalog/categories>`."
 msgstr ""
+"A barra superior pode incluir uma barra de pesquisa, um seletor de moeda, "
+":ref:`opções de classificação e exibição <ecommerce/catalog/sort-by-and-"
+"display-option>` e :ref:`acesso rápido a categorias <ecommerce/catalog/"
+"categories>`."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:31
 msgid "Sort-by search and display options"
-msgstr ""
+msgstr "Opções de pesquisa de classificação e exibição"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:33
 msgid ""
@@ -2878,42 +3175,51 @@ msgid ""
 "the :ref:`Layout <ecommerce/catalog/layout>` buttons in the :guilabel:`Top "
 "Bar`."
 msgstr ""
+"Você pode alternar a :guilabel:`Barra de Pesquisa`, exibir :ref:`categorias "
+"<ecommerce/catalog/categories>` e/ou :ref:`atributos <ecommerce/catalog/"
+"attributes>` e habilitar ou desabilitar o :guilabel:`Classificar por` assim "
+"como os botões de :ref:`Layout <ecommerce/catalog/layout>` na "
+":guilabel:`Barra Superior`."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:38
 msgid ""
 "The :guilabel:`Sort-by` button is toggled by default, and customers can "
 "choose between the following :guilabel:`Default Sort` options:"
 msgstr ""
+"O botão :guilabel:`Classificar por` é habilitado por padrão e os clientes "
+"podem escolher entre as seguintes opções de :guilabel:`Classificação Padrão`:"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:41
 msgid ":guilabel:`None`"
-msgstr ""
+msgstr ":guilabel:`Nenhum`"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:42
 msgid ":guilabel:`Featured`"
-msgstr ""
+msgstr ":guilabel:`Destaque`"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:43
 msgid ":guilabel:`Newest Arrivals`"
-msgstr ""
+msgstr ":guilabel:`Novidades`"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:44
 msgid ":guilabel:`Name (A-Z)`"
-msgstr ""
+msgstr ":guilabel:`Nome (A-Z)`"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:45
 msgid ":guilabel:`Price - Low to High`"
-msgstr ""
+msgstr ":guilabel:`Preço - Menor para Maior`"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:46
 msgid ":guilabel:`Price - High to Low`"
-msgstr ""
+msgstr ":guilabel:`Preço - Maior para Menor`"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:48
 msgid ""
 "The default sort applies to *all* :ref:`categories <ecommerce/catalog/"
 "categories>`."
 msgstr ""
+"A ordenação padrão se aplica a *todas* as :ref:`categorias <ecommerce/"
+"catalog/categories>`."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:51
 msgid ""
@@ -2921,6 +3227,9 @@ msgid ""
 "catalog/side-panel>`, you can disable all related options in the website "
 "editor."
 msgstr ""
+"Se você não quiser exibir uma barra superior ou :ref:`painel lateral "
+"<ecommerce/catalog/side-panel>`, você pode desativar todas as opções "
+"relacionadas no editor do site."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:57
 msgid "Side panel"
@@ -2933,6 +3242,10 @@ msgid ""
 "shop page, you can activate various filters, such as the :ref:`attribute "
 "<ecommerce/catalog/attributes>` filter."
 msgstr ""
+"O painel lateral fornece ferramentas avançadas de filtragem para organizar "
+"suas categorias de produtos. Para :ref:`categorizar <ecommerce/catalog/"
+"categories>` ainda mais a página da loja, você pode ativar vários filtros, "
+"como o filtro de :ref:`atributo <ecommerce/catalog/attributes>`."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:63
 msgid ""
@@ -2941,28 +3254,38 @@ msgid ""
 "period. The :doc:`Rental app <../../../sales/rental>` must be installed to "
 "use this feature."
 msgstr ""
+"Você também pode adicionar uma opção :guilabel:`Seletor de data` para exibir "
+"um calendário de intervalo de datas para verificar a disponibilidade de "
+"produtos de locação em um período específico. O :doc:`aplicativo Locação <../"
+"../../sales/rental>` deve estar instalado para usar este recurso."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:67
 msgid ""
 "It is also possible to toggle the :guilabel:`Collapsible sidebar` switch to "
 "make the side panel manually collapsible."
 msgstr ""
+"Também é possível alternar a opção :guilabel:`Barra lateral recolável` para "
+"tornar o painel lateral manualmente recolável."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:71
 msgid ""
 "To use a price range or tags filter, you have to enable :ref:`attributes "
 "<ecommerce/catalog/attributes>` first."
 msgstr ""
+"Para usar um filtro de faixa de preço ou tags, você deve habilitar os "
+":ref:`atributos <ecommerce/catalog/attributes>` primeiro."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:77
 msgid "Product categorization in catalog"
-msgstr ""
+msgstr "Categorização de produtos no catálogo"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:79
 msgid ""
 "eCommerce categories are used to organize products into groups, making it "
 "easier for customers to browse the online store."
 msgstr ""
+"As categorias de e-Commerce são usadas para organizar produtos em grupos, "
+"facilitando a navegação dos clientes na loja online."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:82
 msgid ""
@@ -2971,6 +3294,11 @@ msgid ""
 "add a :guilabel:`Name`, optionally enter a :guilabel:`Parent Category`, and "
 "write a :guilabel:`Category Description`, if needed."
 msgstr ""
+"Para criar categorias de e-Commerce, acesse :menuselection:`Site --> e-"
+"Commerce --> Categorias de e-Commerce` e clique em :guilabel:`Novo`. No "
+"formulário de categoria, adicione um :guilabel:`Nome`, opcionalmente insira "
+"uma :guilabel:`Categoria superior` e escreva uma :guilabel:`Descrição da "
+"categoria`, se necessário."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:87
 msgid ""
@@ -2979,10 +3307,14 @@ msgid ""
 "the :guilabel:`Sales` tab, navigate to the :guilabel:`Ecommerce shop` "
 "section, and select the :guilabel:`Categories` it belongs to."
 msgstr ""
+"Para usar as categorias de e-Commerce, acesse :menuselection:`Site --> e-"
+"Commerce --> Produtos`, selecione o produto que deseja modificar, vá para a "
+"aba :guilabel:`Vendas`, navegue até a seção :guilabel:`Loja e-Commerce` e "
+"selecione as :guilabel:`Categorias` às quais ele pertence."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:92
 msgid "A single product can belong to multiple eCommerce categories."
-msgstr ""
+msgstr "Um único produto pode pertencer a várias categorias de e-Commerce."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:94
 msgid ""
@@ -2995,6 +3327,14 @@ msgid ""
 "option :guilabel:`Collapsible Category Recursive` appears, allowing you to "
 "collapse the category in the side panel."
 msgstr ""
+"Depois que as categorias forem configuradas e atribuídas aos produtos "
+"relevantes, acesse a página principal da loja e abra o editor do site. Na "
+"opção :guilabel:`Categorias`, você pode habilitar um menu à "
+":guilabel:`Esquerda`, ou seja, no :ref:`painel lateral <ecommerce/catalog/"
+"side-panel>`, ou no :guilabel:`Topo`, ou seja, na :ref:`barra superior "
+"<ecommerce/catalog/top-bar>`, ou ambos. Se você selecionar a categoria à "
+":guilabel:`Esquerda`, a opção :guilabel:`Categoria recursiva recolável` "
+"aparece, permitindo recolher a categoria no painel lateral."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:None
 msgid "Categories options for your eCommerce website"
@@ -3016,6 +3356,11 @@ msgid ""
 "eCommerce --> Products`, select a product, and click "
 "the :guilabel:`Attributes & Variants` tab. Add as many attributes as desired."
 msgstr ""
+"Atributos referem-se a características de um produto, como cor ou material, "
+"enquanto variantes são as diferentes combinações de atributos. Para "
+"configurar atributos e variantes, acesse :menuselection:`Site --> e-"
+"Commerce --> Produtos`, selecione um produto e clique na aba "
+":guilabel:`Atributos e variantes`. Adicione quantos atributos desejar."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:118
 msgid ":doc:`../../../sales/sales/products_prices/products/variants`"
@@ -3032,16 +3377,23 @@ msgid ""
 "(:ref:`side panel <ecommerce/catalog/side-panel>`) and/or :guilabel:`Top` "
 "(:ref:`top bar <ecommerce/catalog/top-bar>`)."
 msgstr ""
+"Para habilitar a filtragem por atributo, acesse a página principal da sua "
+"loja, abra o editor do site e defina o campo :guilabel:`Atributos` como "
+":guilabel:`Esquerda` (:ref:`painel lateral <ecommerce/catalog/side-panel>`) "
+"e/ou :guilabel:`Topo` (:ref:`barra superior <ecommerce/catalog/top-bar>`)."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:129
 msgid ""
 "When attribute filtering is enabled in the top bar, customers must click "
 "the :icon:`fa-sliders` (:guilabel:`dropdown toggle`) button to access it."
 msgstr ""
+"Quando a filtragem por atributo estiver habilitada na barra superior, os "
+"clientes devem clicar no botão :icon:`fa-sliders` (:guilabel:`alternar lista "
+"suspensa`) para acessá-la."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:132
 msgid "When enabling :guilabel:`Attributes`, more options become available:"
-msgstr ""
+msgstr "Ao habilitar :guilabel:`Atributos`, mais opções ficam disponíveis:"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:134
 msgid ""
@@ -3061,6 +3413,10 @@ msgid ""
 "products using those tags by going to the :guilabel:`Tags` section in "
 "the :ref:`side panel <ecommerce/catalog/side-panel>`."
 msgstr ""
+":guilabel:`Filtro de tags de produto`: Alterne a opção para exibir as "
+":guilabel:`Tags de produto` na página da loja e permitir que os clientes "
+"filtrem produtos usando essas tags acessando a seção :guilabel:`Tags` no "
+":ref:`painel lateral <ecommerce/catalog/side-panel>`."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:142
 msgid ""
@@ -3071,12 +3427,21 @@ msgid ""
 "Variants` tab and view a summary of all selected products in "
 "the :guilabel:`All Products` tab."
 msgstr ""
+"Se você quiser usar tags em seu e-Commerce, vá para :menuselection:`e-"
+"Commerce --> Tags de produtos` e clique em :guilabel:`Novo`. Na aba "
+":guilabel:`Modelos de produto` do formulário de tags de produtos, adicione "
+"os produtos a serem vinculados à tag fornecida. Você também pode adicionar "
+"variantes de produtos na aba :guilabel:`Variantes de produto` e visualizar "
+"um resumo de todos os produtos selecionados na aba :guilabel:`Todos os "
+"produtos`."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:147
 msgid ""
 "Price filtering works independently from attributes and, therefore, can be "
 "enabled on its own, if desired."
 msgstr ""
+"A filtragem de preços funciona independentemente dos atributos e, portanto, "
+"pode ser habilitada sozinha, se desejado."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:153
 msgid "Product listing area"
@@ -3087,12 +3452,17 @@ msgid ""
 "You can customize the layout of the entire shop page, as well as that "
 "of :ref:`individual category pages <ecommerce/catalog/customize-layout>`."
 msgstr ""
+"Você pode personalizar o layout de toda a página da loja, bem como o de "
+":ref:`páginas de categorias individuais <ecommerce/catalog/customize-layout>"
+"`."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:159
 msgid ""
 "It is also possible to customize individual :ref:`product pages <ecommerce/"
 "products/product-form>`."
 msgstr ""
+"Também é possível personalizar :ref:`páginas de produtos <ecommerce/products/"
+"product-form>` individuais."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:163
 msgid ""
@@ -3100,10 +3470,13 @@ msgid ""
 "and-display-option>`, and set the default layout to either :guilabel:`Grid` "
 "or :guilabel:`List` view."
 msgstr ""
+"No editor do site, escolha o :ref:`layout <ecommerce/catalog/sort-by-and-"
+"display-option>` e defina o layout padrão como visualização "
+":guilabel:`Grade` ou :guilabel:`Lista`."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:166
 msgid "Use the following options to further adjust the layout:"
-msgstr ""
+msgstr "Use as seguintes opções para ajustar ainda mais o layout:"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:168
 msgid ""
@@ -3113,7 +3486,7 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:169
 msgid ":guilabel:`Gap`: Define the gap between the products."
-msgstr ""
+msgstr ":guilabel:`Espaçamento`: Defina o espaçamento entre os produtos."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:170
 msgid ""
@@ -3133,12 +3506,19 @@ msgid ""
 "also adjust the display by changing the :guilabel:`Fill` options to fit your "
 "design preferences best."
 msgstr ""
+":guilabel:`Tamanho da imagem`: Escolha a proporção de aspecto para as "
+"imagens dos produtos: :guilabel:`Paisagem (4/3)`, :guilabel:`Padrão (1/1)`, "
+":guilabel:`Retrato (4/5)` ou :guilabel:`Vertical (2/3)`. Você também pode "
+"ajustar a exibição alterando as opções de :guilabel:`Preenchimento` para "
+"melhor atender às suas preferências de design."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:177
 msgid ""
 "Toggle the :guilabel:`Prod. Desc.` switch to display the product description "
 "below the product's name."
 msgstr ""
+"Alterne a opção :guilabel:`Descrição do prod.` para exibir a descrição do "
+"produto abaixo do nome do produto."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:181
 msgid ""
@@ -3158,6 +3538,12 @@ msgid ""
 "extreme left or right, and `<` `>` allow to move it one row to the left or "
 "right."
 msgstr ""
+"Além disso, você pode alterar manualmente a posição de um produto na página "
+"da loja. Para fazer isso, vá para a página principal da loja, clique no "
+"produto e abra o editor do site. Na seção :guilabel:`Produto`, você pode "
+"reordenar os produtos usando as setas. Os botões `<<` `>>` permitem mover o "
+"produto para a extrema esquerda ou direita, e `<` `>` permitem movê-lo uma "
+"linha para a esquerda ou direita."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:190
 msgid ""
@@ -3183,6 +3569,13 @@ msgid ""
 "as :guilabel:`Sale`, :guilabel:`Sold out`, :guilabel:`Out of stock` "
 "or :guilabel:`New!`."
 msgstr ""
+"Você pode destacar produtos para torná-los mais visíveis na página da loja. "
+"Para fazer isso, vá para o editor do site e clique no produto a ser "
+"destacado. Na seção :guilabel:`Produto`, você pode escolher o tamanho da "
+"imagem do produto clicando na grade e também pode adicionar uma "
+":guilabel:`Faixa`. Isso exibe um banner sobre a imagem do produto, como "
+":guilabel:`Promoção`, :guilabel:`Esgotado`, :guilabel:`Fora de estoque` ou "
+":guilabel:`Novo!`."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:None
 msgid "Ribbon highlight"
@@ -3196,24 +3589,32 @@ msgid ""
 "and a :guilabel:`Text` label. To edit the ribbon, click the :icon:`fa-pencil-"
 "square-o` (:guilabel:`Edit`) icon next to the :guilabel:`Ribbon` label."
 msgstr ""
+"Para criar uma nova faixa, clique no ícone verde :icon:`fa-plus` "
+"(:guilabel:`Criar`) ao lado do campo :guilabel:`Faixa`. Em seguida, adicione "
+"um :guilabel:`Nome da faixa`, defina sua :guilabel:`Posição` e escolha um "
+":guilabel:`Plano de fundo` e um rótulo de :guilabel:`Texto`. Para editar a "
+"faixa, clique no ícone :icon:`fa-pencil-square-o` (:guilabel:`Editar`) ao "
+"lado do rótulo :guilabel:`Faixa`."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:None
 msgid "Create a new ribbon."
-msgstr ""
+msgstr "Criar uma nova faixa."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:214
 msgid "The ribbon is now available for all the eCommerce products."
-msgstr ""
+msgstr "A faixa agora está disponível para todos os produtos de e-Commerce."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:217
 msgid "There are other ways to create a new ribbon:"
-msgstr ""
+msgstr "Existem outras maneiras de criar uma nova faixa:"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:219
 msgid ""
 "Go to :menuselection:`Website --> eCommerce --> Product Ribbons` and "
 "click :guilabel:`New`."
 msgstr ""
+"Vá para :menuselection:`Site --> e-Commerce --> Faixas de produtos` e clique "
+"em :guilabel:`Novo`."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:220
 msgid ""
@@ -3221,6 +3622,9 @@ msgid ""
 "the product form, and under the :guilabel:`Sales` tab, change or create the "
 "ribbon in the :guilabel:`Ribbon` field."
 msgstr ""
+"Ative o :doc:`modo de desenvolvedor <../../../general/developer_mode>`, "
+"acesse o formulário do produto e, na aba :guilabel:`Vendas`, altere ou crie "
+"a faixa no campo :guilabel:`Faixa`."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:224
 msgid ""
@@ -3231,6 +3635,12 @@ msgid ""
 "ribbon in the :guilabel:`Variant Ribbon` field of the :guilabel:`Sales` "
 "section."
 msgstr ""
+"Também é possível adicionar faixas para :ref:`variantes de produtos "
+"<ecommerce/products/product-variants>` específicas. Para fazer isso, vá para "
+":menuselection:`Site --> e-Commerce --> Produtos` e selecione um produto. "
+"Clique no botão inteligente :guilabel:`Variantes`, escolha uma variante e "
+"adicione uma faixa no campo :guilabel:`Faixa da variante` da seção "
+":guilabel:`Vendas`."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:233
 msgid "Shop and category page design"
@@ -3241,6 +3651,8 @@ msgid ""
 "Use :doc:`building blocks <../../website/web_design/building_blocks>` to add "
 "content on the shop and/or category page."
 msgstr ""
+"Use :doc:`blocos de construção <../../website/web_design/building_blocks>` "
+"para adicionar conteúdo na página da loja e/ou de categoria."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:238
 msgid ""
@@ -3251,6 +3663,13 @@ msgid ""
 "page or to the area below the category's name at the top or beneath the "
 "product list to display it only when filtering by that specific category."
 msgstr ""
+"Você pode personalizar a seção superior e/ou inferior do catálogo, seja para "
+"toda a página da loja ou para uma categoria específica. Neste último caso, o "
+"bloco aparece *somente* ao filtrar por essa categoria. Para fazer isso, mova "
+"o bloco para a seção superior ou inferior extrema para exibi-lo na página "
+"geral da loja ou para a área abaixo do nome da categoria no topo ou abaixo "
+"da lista de produtos para exibi-lo somente ao filtrar por essa categoria "
+"específica."
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:0
 msgid "Place building block in the header or footer."
@@ -3452,6 +3871,10 @@ msgid ""
 "unit>`, offer :ref:`discounts <ecommerce/prices/discounts>`, and set "
 "up :ref:`pricelists <ecommerce/prices/pricelists>`."
 msgstr ""
+"O Odoo oferece várias opções para configurar preços no e-Commerce. Por "
+"exemplo, você pode aplicar :ref:`preços por unidade <ecommerce/prices/price-"
+"per-unit>`, oferecer :ref:`descontos <ecommerce/prices/discounts>` e "
+"configurar :ref:`listas de preços <ecommerce/prices/pricelists>`."
 
 #: ../../content/applications/websites/ecommerce/products/prices.rst:12
 msgid "Taxes"
@@ -3486,6 +3909,12 @@ msgid ""
 "Products` section, and under :guilabel:`Display Product Prices` select "
 "between:"
 msgstr ""
+"Escolher o preço exibido com impostos geralmente depende das regulamentações "
+"de um país ou do tipo de clientes (:doc:`B2B vs. B2C <../b2b_b2c>`). Para "
+"selecionar o tipo de preço exibido, vá para :menuselection:`Site --> "
+"Configuração --> Configurações`, selecione o site, role para baixo até a "
+"seção :guilabel:`Loja - Produtos` e em :guilabel:`Exibir Preços de Produtos` "
+"selecione entre:"
 
 #: ../../content/applications/websites/ecommerce/products/prices.rst:29
 msgid ""
@@ -3493,6 +3922,9 @@ msgid ""
 "excluded, and the tax is computed at the :ref:`order review <ecommerce/"
 "checkout/review_order>` step;"
 msgstr ""
+":guilabel:`Imposto excluído`: o preço exibido no site é sem impostos, e o "
+"imposto é calculado na etapa de :ref:`revisão do pedido <ecommerce/checkout/"
+"review_order>`;"
 
 #: ../../content/applications/websites/ecommerce/products/prices.rst:31
 msgid ""
@@ -3514,6 +3946,9 @@ msgid ""
 "toggle on in the website editor to explicitly indicate if the price is `Tax "
 "excluded` or `Tax included` on the product page."
 msgstr ""
+"Ative a opção :ref:`Indicação de imposto <ecommerce/products/product-"
+"presentation>` no editor do site para indicar explicitamente se o preço é "
+"`Imposto excluído` ou `Imposto incluído` na página do produto."
 
 #: ../../content/applications/websites/ecommerce/products/prices.rst:41
 msgid ""
@@ -3545,17 +3980,23 @@ msgid ""
 "the :guilabel:`Shop - Products` section, and enable :guilabel:`Product "
 "Reference Price`."
 msgstr ""
+"Acesse :menuselection:`Site --> Configuração --> Configurações`, role até a "
+"seção :guilabel:`Loja - Produtos` e habilite :guilabel:`Preço de referência "
+"do produto`."
 
 #: ../../content/applications/websites/ecommerce/products/prices.rst:56
 msgid ""
 ":ref:`Navigate to the product form <ecommerce/products/create-products>`."
 msgstr ""
+":ref:`Acesse o formulário do produto <ecommerce/products/create-products>`."
 
 #: ../../content/applications/websites/ecommerce/products/prices.rst:57
 msgid ""
 "Set the product's :guilabel:`Sales price` and select the unit "
 "(e.g., :guilabel:`Units`)."
 msgstr ""
+"Defina o :guilabel:`Preço de venda` do produto e selecione a unidade (ex.: "
+":guilabel:`Unidades`)."
 
 #: ../../content/applications/websites/ecommerce/products/prices.rst:58
 msgid ""
@@ -3617,6 +4058,16 @@ msgid ""
 "to :menuselection:`Website --> eCommerce --> Pricelists` and :ref:`configure "
 "<sales/products/pricelist-configuration>` the relevant pricelists."
 msgstr ""
+"As listas de preços no Odoo permitem gerenciar regras de preços flexíveis e "
+"oferecer diferentes preços e descontos com base em moedas, períodos de "
+"tempo, volumes de compra, :ref:`localização dos clientes <ecommerce/prices/"
+"geoip>` e/ou tipo de cliente. Para habilitar listas de preços para e-"
+"Commerce, acesse :menuselection:`Site --> Configuração --> Configurações`, "
+"role até a seção :guilabel:`Loja - Produtos`, habilite :guilabel:`Listas de "
+"preços` e clique em :guilabel:`Salvar`. Em seguida, clique em "
+":guilabel:`Listas de preços` ou acesse :menuselection:`Site --> e-"
+"Commerce --> Listas de preços` e :ref:`configure <sales/products/pricelist-"
+"configuration>` as listas de preços relevantes."
 
 #: ../../content/applications/websites/ecommerce/products/prices.rst:93
 msgid ""
@@ -3693,10 +4144,15 @@ msgid ""
 "catalog's pricelist selector located next to the :ref:`search bar <ecommerce/"
 "catalog/top-bar>`."
 msgstr ""
+"Listas de preços selecionáveis são úteis, por exemplo, ao vender produtos em "
+":doc:`várias moedas </applications/sales/sales/products_prices/prices/"
+"currencies>` e permitem que os clientes escolham uma lista de preços usando "
+"o seletor de lista de preços do catálogo, localizado ao lado da :ref:`barra "
+"de pesquisa <ecommerce/catalog/top-bar>`."
 
 #: ../../content/applications/websites/ecommerce/products/prices.rst:None
 msgid "Pricelist selector on the ecommerce."
-msgstr ""
+msgstr "Seletor de lista de preços no e-Commerce."
 
 #: ../../content/applications/websites/ecommerce/products/prices.rst:130
 msgid "To make a pricelist selectable, enable :guilabel:`Selectable`."
@@ -3737,6 +4193,11 @@ msgid ""
 "It is strongly recommended to disable the :guilabel:`Selectable` option when "
 "using pricelists with country groups on the ecommerce."
 msgstr ""
+"Existem várias listas de preços selecionáveis, mas apenas aquelas que "
+"correspondem ao :ref:`grupo de países <ecommerce/prices/country-groups>` do "
+"cliente são exibidas. É altamente recomendável desabilitar a opção "
+":guilabel:`Selecionável` ao usar listas de preços com grupos de países no e-"
+"Commerce."
 
 #: ../../content/applications/websites/ecommerce/products/prices.rst:145
 msgid ":ref:`sales/products/currencies/currency-specific-pricelists`"
@@ -3796,7 +4257,7 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/products/prices.rst:172
 msgid "`Country Group` + `is not in` + `European Union`"
-msgstr ""
+msgstr "`Grupo de países` + `não está em` + `União Europeia`"
 
 #: ../../content/applications/websites/ecommerce/products/prices.rst:0
 msgid "Filter for country group creation."
@@ -3807,6 +4268,8 @@ msgid ""
 "When using GeoIP to determine the appropriate pricelist, **all** pricelists "
 "used on the ecommerce must have a country group assigned."
 msgstr ""
+"Ao usar GeoIP para determinar a lista de preços apropriada, **todas** as "
+"listas de preços usadas no e-Commerce devem ter um grupo de países atribuído."
 
 #: ../../content/applications/websites/ecommerce/products/prices.rst:180
 msgid ""
@@ -3874,6 +4337,16 @@ msgid ""
 "applied (i.e., the first available pricelist assigned to the website and "
 "without a country group, following the sequence order)."
 msgstr ""
+"No e-Commerce, a lista de preços *padrão* é selecionada automaticamente para "
+"usuários públicos não logados quando nenhum grupo de países está atribuído. "
+"Se :ref:`GeoIP e grupos de países <ecommerce/prices/geoip>` forem usados, "
+"usuários públicos veem a lista de preços de seu grupo de países por padrão. "
+"Usuários logados com :ref:`listas de preços atribuídas <sales/products/"
+"customer-pricelist-application>` veem a lista de preços atribuída por padrão "
+"**se ela estiver atribuída ao site** que estão visitando. Caso contrário, a "
+"lista de preços padrão do site é aplicada (ou seja, a primeira lista de "
+"preços disponível atribuída ao site e sem um grupo de países, seguindo a "
+"ordem de sequência)."
 
 #: ../../content/applications/websites/ecommerce/products/prices.rst:211
 msgid ""
@@ -3924,6 +4397,11 @@ msgid ""
 "Configuration --> Settings`, scroll down to the :guilabel:`Shop - Products` "
 "section, and enable the :guilabel:`Discounts, Loyalty & Gift Card` feature."
 msgstr ""
+"Para habilitar :doc:`programas de desconto </applications/sales/sales/"
+"products_prices/loyalty_discount>` para seu e-Commerce, acesse "
+":menuselection:`Site --> Configuração --> Configurações`, role até a seção "
+":guilabel:`Loja - Produtos` e habilite o recurso :guilabel:`Descontos, "
+"fidelidade e vale-presente`."
 
 #: ../../content/applications/websites/ecommerce/products/prices.rst:239
 msgid ""
@@ -3965,6 +4443,13 @@ msgid ""
 "the :guilabel:`Sales Price` field and the original one (strikethrough) in "
 "the :guilabel:`Compare to Price` field."
 msgstr ""
+"Para exibir um preço com desconto permanente, navegue até "
+":menuselection:`Site --> Configuração --> Configurações`, role para baixo "
+"até :guilabel:`Loja - Produtos`, ative a opção :guilabel:`Preço de "
+"Comparação` e clique em :guilabel:`Salvar`. Em seguida, :ref:`acesse o "
+"formulário do produto <ecommerce/products/create-products>`, insira o novo "
+"preço (com desconto) no campo :guilabel:`Preço de Venda` e o preço original "
+"(riscado) no campo :guilabel:`Comparar com Preço`."
 
 #: ../../content/applications/websites/ecommerce/products/prices.rst:263
 msgid ""
@@ -4040,6 +4525,16 @@ msgid ""
 "the :ref:`checkout process <ecommerce/checkout/review_order>`, this discount "
 "is granted according to the :guilabel:`Price Rules` configuration."
 msgstr ""
+"Para oferecer uma lista de preços com desconto para clientes com um código "
+"de desconto específico, acesse o :ref:`formulário de lista de preços "
+"<ecommerce/prices/pricelists>` relevante, vá para a aba :guilabel:`E-"
+"commerce` e adicione um :guilabel:`Código Promocional de E-commerce`, por "
+"exemplo, `SUMMERSALE10%`. Em seguida, vá para a aba :guilabel:`Regras de "
+"Preço`, clique em :guilabel:`Adicionar uma linha` e :ref:`configure o "
+"desconto <sales/products/price-rules>`. Quando um cliente inserir o código "
+"durante o :ref:`processo de finalização <ecommerce/checkout/review_order>`, "
+"esse desconto é concedido de acordo com a configuração de :guilabel:`Regras "
+"de Preço`."
 
 #: ../../content/applications/websites/ecommerce/products/prices.rst:301
 msgid ""
@@ -4077,6 +4572,14 @@ msgid ""
 "on the product page is then replaced by a :guilabel:`Contact us` button, "
 "which can be :ref:`customized <ecommerce/checkout/prevent-sale>` if needed."
 msgstr ""
+"Para ocultar os preços dos produtos no e-commerce, vá para "
+":menuselection:`Site --> Configuração --> Configurações`, ative "
+":guilabel:`Impedir Venda de Produto com Preço Zero` na seção "
+":guilabel:`Loja - Produtos` e insira uma URL de redirecionamento no campo "
+":guilabel:`URL do Botão`. O botão :guilabel:`Adicionar ao Carrinho` na "
+"página do produto é então substituído por um botão :guilabel:`Entre em "
+"contato`, que pode ser :ref:`personalizado <ecommerce/checkout/prevent-sale>"
+"` se necessário."
 
 #: ../../content/applications/websites/ecommerce/products/prices.rst:320
 msgid ""
@@ -4097,6 +4600,9 @@ msgid ""
 "as :guilabel:`Selectable` to prevent accidentally displaying the zero-priced "
 "pricelist."
 msgstr ""
+"Certifique-se de que nenhuma lista de preços usada no e-commerce foi marcada "
+"como :guilabel:`Selecionável` para evitar a exibição acidental da lista de "
+"preços com preço zero."
 
 #: ../../content/applications/websites/ecommerce/products/prices.rst:327
 msgid ""
@@ -4106,10 +4612,15 @@ msgid ""
 "a regular pricelist (with actual prices) to customers with :ref:`portal "
 "access <portal/access>`."
 msgstr ""
+"Para ocultar preços de visitantes públicos, mantendo-os visíveis para "
+"clientes logados, crie uma lista de preços com preço zero para ser usada por "
+"clientes não logados e :ref:`atribua <sales/products/customer-pricelist-"
+"application>` uma lista de preços regular (com preços reais) aos clientes "
+"com :ref:`acesso ao portal <portal/access>`."
 
 #: ../../content/applications/websites/ecommerce/products/prices.rst:333
 msgid ":doc:`../customer_accounts`"
-msgstr ""
+msgstr ":doc:`../customer_accounts`"
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:5
 msgid ""
@@ -4123,6 +4634,15 @@ msgid ""
 "shipping/rules>`, and :ref:`in-store pickup <ecommerce/shipping/instore-"
 "pickup>`."
 msgstr ""
+"O e-Commerce do Odoo permite configurar vários métodos de entrega, "
+"permitindo que os clientes escolham sua opção preferida no :doc:`checkout "
+"<checkout>`. Esses métodos incluem :ref:`provedores externos <ecommerce/"
+"shipping/external-provider>`, :ref:`opções personalizadas <ecommerce/"
+"shipping/custom-method>` como taxa fixa ou frete grátis, transportadoras "
+"locais via :doc:`Sendcloud </applications/inventory_and_mrp/inventory/"
+"shipping_receiving/setup_configuration/sendcloud_shipping>` ou :ref:`Baseado "
+"em Regras <inventory/shipping/rules>`, e :ref:`retirada na loja <ecommerce/"
+"shipping/instore-pickup>`."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:16
 msgid "External provider integration"
@@ -4185,7 +4705,7 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:37
 msgid ":doc:`Gelato </applications/sales/sales/gelato>`"
-msgstr ""
+msgstr ":doc:`Gelato </applications/sales/sales/gelato>`"
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:40
 msgid ""
@@ -7570,6 +8090,10 @@ msgid ""
 "reasons. He would then set his :guilabel:`Online Chat Name` to include only "
 "his first name, Mitchell."
 msgstr ""
+"Mitchell Admin tem seu nome completo como :guilabel:`Nome de Usuário`, mas "
+"ele não quer incluir seu sobrenome em uma conversa de chat ao vivo por "
+"motivos de privacidade. Ele então definiria seu :guilabel:`Nome do Chat "
+"Online` para incluir apenas seu primeiro nome, Mitchell."
 
 #: ../../content/applications/websites/livechat/participate.rst:0
 msgid "View of user profile in Odoo, emphasizing the Online Chat name field."
@@ -7677,6 +8201,10 @@ msgid ""
 "allows them to access other pages and apps, while still participating in the "
 "conversation."
 msgstr ""
+"Quando um operador está ativo em um canal, as janelas de chat abrem no canto "
+"inferior direito da tela, não importa em qual página ele esteja no Odoo. "
+"Isso permite que eles acessem outras páginas e aplicativos enquanto ainda "
+"participam da conversa."
 
 #: ../../content/applications/websites/livechat/participate.rst:75
 msgid ""
@@ -7702,6 +8230,9 @@ msgid ""
 "operator can participate in the chat the same as they would in the normal "
 "chat window."
 msgstr ""
+"Clique em uma conversa no painel esquerdo para abri-la. Nesta visualização, "
+"um operador pode participar do chat da mesma forma que faria na janela de "
+"chat normal."
 
 #: ../../content/applications/websites/livechat/participate.rst:85
 msgid ""
@@ -9391,6 +9922,14 @@ msgid ""
 "list` to include other external websites. These services remain blocked on "
 "your website until visitors accept optional cookies."
 msgstr ""
+"Para adicionar uma barra de cookies no seu site, vá para "
+":menuselection:`Site --> Configuração --> Configurações` e habilite "
+":guilabel:`Barra de Cookies` na seção :guilabel:`Privacidade`. Isso ativa "
+":guilabel:`Bloquear serviços de rastreamento de terceiros` por padrão, "
+"incluindo mídias sociais, plataformas de hospedagem de vídeo e serviços do "
+"Google. Clique em :guilabel:`Adicionar domínios à lista de bloqueio` para "
+"incluir outros sites externos. Esses serviços permanecem bloqueados no seu "
+"site até que os visitantes aceitem cookies opcionais."
 
 #: ../../content/applications/websites/website/configuration/cookies_bar.rst:31
 msgid ""
@@ -10136,31 +10675,42 @@ msgid ""
 "issues, it is strongly recommended to follow these five steps, in the "
 "specified order:"
 msgstr ""
+"Para evitar possíveis problemas de :ref:`validação de certificado SSL "
+"<domain-name/ssl>`, é altamente recomendável seguir estas cinco etapas, na "
+"ordem especificada:"
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:215
 msgid ""
 "Set up :ref:`URL redirections <website/pages/URL-redirection>` before "
 "transferring the domain name to preserve the website's SEO."
 msgstr ""
+"Configure :ref:`redirecionamentos de URL <website/pages/URL-redirection>` "
+"antes de transferir o nome de domínio para preservar o SEO do site."
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:217
 msgid ":ref:`Add a CNAME record. <domain-name/cname>`"
-msgstr ""
+msgstr ":ref:`Adicione um registro CNAME. <domain-name/cname>`"
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:218
 msgid ""
 ":ref:`Redirect your naked domain name. <domain-name/naked>` (This step is "
 "optional, but recommended.)"
 msgstr ""
+":ref:`Redirecione seu nome de domínio raiz. <domain-name/naked>` (Esta etapa "
+"é opcional, mas recomendada.)"
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:220
 msgid ":ref:`Map your domain name to your Odoo database. <domain-name/db-map>`"
 msgstr ""
+":ref:`Mapeie seu nome de domínio para seu banco de dados Odoo. <domain-name/"
+"db-map>`"
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:221
 msgid ""
 ":ref:`Map your domain name to your Odoo website. <domain-name/website-map>`"
 msgstr ""
+":ref:`Mapeie seu nome de domínio para seu site Odoo. <domain-name/website-"
+"map>`"
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:226
 msgid "Add a CNAME record"
@@ -11314,6 +11864,9 @@ msgid ""
 "using :ref:`pricelists <ecommerce/prices/selectable-pricelists>`. The "
 "following configuration is required:"
 msgstr ""
+"Os produtos podem ter preços diferentes com base no site usando :ref:`listas "
+"de preços <ecommerce/prices/selectable-pricelists>`. A seguinte configuração "
+"é necessária:"
 
 #: ../../content/applications/websites/website/configuration/multi_website.rst:137
 msgid ""
@@ -11397,6 +11950,9 @@ msgid ""
 "All pages using the :guilabel:`Form`, :guilabel:`Newsletter Block`, "
 "or :guilabel:`Newsletter Popup` snippets are protected by both tools."
 msgstr ""
+"Todas as páginas que usam os snippets :guilabel:`Formulário`, "
+":guilabel:`Bloco de Newsletter` ou :guilabel:`Pop-up de Newsletter` são "
+"protegidas por ambas as ferramentas."
 
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:19
 msgid ""
@@ -11641,6 +12197,8 @@ msgid ""
 "Under :guilabel:`Integrations`, navigate to the :guilabel:`reCAPTCHA` "
 "section."
 msgstr ""
+"No painel do banco de dados, abra o aplicativo **Configurações**. Em "
+":guilabel:`Integrações`, navegue até a seção :guilabel:`reCAPTCHA`."
 
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:111
 msgid ""
@@ -11695,6 +12253,11 @@ msgid ""
 "tab, and, in the :guilabel:`Form` section, enable :guilabel:`Show ReCAPTCHA "
 "Policy`."
 msgstr ""
+"Você pode notificar os visitantes de que o reCAPTCHA protege um "
+":ref:`formulário <website/building_blocks/form>`. Para fazer isso, navegue "
+"até o formulário e abra o editor do site. Em seguida, clique em algum lugar "
+"do formulário, vá para a aba :guilabel:`Personalizar` e, na seção "
+":guilabel:`Formulário`, ative :guilabel:`Mostrar Política do ReCAPTCHA`."
 
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:None
 msgid "reCAPTCHA policy message displayed on a form"
@@ -12363,6 +12926,8 @@ msgid ""
 "The Plausible Analytics dashboard is also integrated into Odoo and can be "
 "accessed via :menuselection:`Website --> Reporting --> Analytics`."
 msgstr ""
+"O painel do Plausible Analytics também está integrado ao Odoo e pode ser "
+"acessado por meio de :menuselection:`Site --> Relatórios --> Análises`."
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:18
 msgid "Plausible.io"
@@ -12375,6 +12940,11 @@ msgid ""
 "domain. Odoo automatically creates and sets up your account. Start using it "
 "by going to :menuselection:`Website --> Reporting --> Analytics`."
 msgstr ""
+"O Odoo hospeda seu próprio servidor Plausible.io e fornece uma solução "
+"Plausible.io gratuita e pronta para uso para bancos de dados **Odoo Online** "
+"que usam o domínio odoo.com. O Odoo cria e configura automaticamente sua "
+"conta. Comece a usá-la acessando :menuselection:`Site --> Relatórios --> "
+"Análises`."
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:26
 msgid ""
@@ -12382,6 +12952,9 @@ msgid ""
 "(e.g., `example.com`), you need to create your own Plausible.io account and "
 "subscription."
 msgstr ""
+"Se você usar um :doc:`nome de domínio <../configuration/domain_names>` "
+"personalizado (por exemplo, `example.com`), você precisa criar sua própria "
+"conta e assinatura do Plausible.io."
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:28
 msgid ""
@@ -12459,6 +13032,8 @@ msgid ""
 "Create or sign in to a Plausible.io account using the following link: "
 "`<https://plausible.io/register>`_."
 msgstr ""
+"Crie ou faça login em uma conta do Plausible.io usando o seguinte link: "
+"`<https://plausible.io/register>`_."
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:56
 msgid ""
@@ -12470,6 +13045,13 @@ msgid ""
 "Ignore the :guilabel:`Manual installation` instructions and "
 "click :guilabel:`Start collecting data`."
 msgstr ""
+"Se você estiver criando uma nova conta, siga as etapas de registro e "
+"ativação. Na página :guilabel:`Adicionar informações do site`, adicione o "
+":guilabel:`Domínio` do seu site sem incluir `www` (por exemplo, "
+"`example.odoo.com`) e altere o :guilabel:`Fuso horário de relatório`, se "
+"necessário. Clique em :guilabel:`Instalar Plausible` para prosseguir para a "
+"próxima etapa. Ignore as instruções de :guilabel:`Instalação manual` e "
+"clique em :guilabel:`Começar a coletar dados`."
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:61
 msgid ""
@@ -12478,6 +13060,11 @@ msgid ""
 "the :icon:`fa-ellipsis-v` (:guilabel:`ellipsis`) icon next to the website "
 "and select :icon:`fa-cog` :guilabel:`Settings` from the drop-down menu."
 msgstr ""
+"Depois de concluído, clique no logotipo do Plausible.io na parte superior "
+"esquerda da página para acessar sua `lista de sites <https://plausible.io/"
+"sites>`_ e clique no ícone :icon:`fa-ellipsis-v` (:guilabel:`reticências`) "
+"ao lado do site e selecione :icon:`fa-cog` :guilabel:`Configurações` no menu "
+"suspenso."
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:0
 msgid "Click the gear icon in the list of websites."
@@ -12497,6 +13084,10 @@ msgid ""
 "empty, as the Plausible analytics dashboard integration in Odoo does not "
 "support it, then click :guilabel:`Create shared link`."
 msgstr ""
+"Insira um :guilabel:`Nome`, deixe o campo :guilabel:`Senha (opcional)` "
+"vazio, pois a integração do painel de análises do Plausible no Odoo não "
+"oferece suporte a ele, em seguida clique em :guilabel:`Criar link "
+"compartilhado`."
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:74
 msgid "Copy the shared link."
@@ -12516,6 +13107,8 @@ msgid ""
 "In the :guilabel:`SEO` section, enable :guilabel:`Plausible Analytics`, then "
 "paste the :guilabel:`Shared Link Auth` and click :guilabel:`Save`."
 msgstr ""
+"Na seção :guilabel:`SEO`, ative :guilabel:`Plausible Analytics`, cole o "
+":guilabel:`Shared Link Auth` e clique em :guilabel:`Salvar`."
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:84
 msgid ""
@@ -12526,6 +13119,11 @@ msgid ""
 "the :guilabel:`Settings of Website` field at the top of the page before "
 "pasting the :guilabel:`Shared link`."
 msgstr ""
+"Se você tiver :doc:`vários sites <../configuration/multi_website>`, adicione "
+"seus sites à sua conta Plausible.io acessando `<https://plausible.io/sites>"
+"`_ e clicando em :guilabel:`+ Add Website`. No Odoo, nas **Configurações do "
+"site**, certifique-se de selecionar o site no campo :guilabel:`Configurações "
+"do site` no topo da página antes de colar o :guilabel:`Link compartilhado`."
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:91
 msgid ""
@@ -12569,6 +13167,10 @@ msgid ""
 "**Admin** page. Then, click :guilabel:`+ Create` and "
 "select :guilabel:`Property` from the drop-down menu."
 msgstr ""
+"Se você já possui uma conta do Google Analytics, faça login e clique no "
+"ícone :icon:`fa-cog` no canto inferior esquerdo da página para acessar a "
+"página **Admin**. Em seguida, clique em :guilabel:`+ Criar` e selecione "
+":guilabel:`Propriedade` no menu suspenso."
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:110
 msgid ""
@@ -12628,6 +13230,13 @@ msgid ""
 "the :guilabel:`Settings of Website` field at the top of the page before "
 "pasting the :guilabel:`Measurement ID`."
 msgstr ""
+"Se você tiver :doc:`vários sites <../configuration/multi_website>` com "
+"domínios separados, é recomendável criar `uma propriedade <https://"
+"support.google.com/analytics/answer/9304153?hl=en/"
+"&visit_id=638278591144564289-3612494643&rd=2#property>`_ por domínio. No "
+"Odoo, nas **Configurações do site**, certifique-se de selecionar o site no "
+"campo :guilabel:`Configurações do site` no topo da página antes de colar o "
+":guilabel:`ID de medição`."
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:136
 msgid ""
@@ -12659,6 +13268,11 @@ msgid ""
 "Analytics to provide more detailed insights. In order to use GTM properly, "
 "it is recommended to configure Google Analytics as well."
 msgstr ""
+":abbr:`GTM (Google Tag Manager)` não é uma ferramenta de análise e não "
+"oferece recursos de relatórios; é usado para coletar dados e funciona em "
+"conjunto com o Google Analytics para fornecer insights mais detalhados. Para "
+"usar o GTM adequadamente, é recomendável configurar o Google Analytics "
+"também."
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:153
 msgid ""
@@ -12732,6 +13346,11 @@ msgid ""
 "and :guilabel:`</body>` next to :guilabel:`Code Injection` to paste the "
 "codes."
 msgstr ""
+"Copie os códigos `<head>` e `<body>` da janela pop-up. Em seguida, acesse "
+"seu site, clique em :guilabel:`Editar`, vá para a aba :guilabel:`Tema`, role "
+"para baixo até a seção :guilabel:`Avançado`, depois clique em "
+":guilabel:`<head>` e :guilabel:`</body>` ao lado de :guilabel:`Injeção de "
+"código` para colar os códigos."
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:0
 msgid "Install Google Tag Manager"
@@ -12853,6 +13472,9 @@ msgid ""
 "building blocks using the :abbr:`UTM (Urchin Tracking Module)` parameters, "
 "amongst other conditions."
 msgstr ""
+"Você pode personalizar a :ref:`visibilidade <website/visibility/conditions>` "
+"dos blocos de construção usando os parâmetros :abbr:`UTM (Urchin Tracking "
+"Module)`, entre outras condições."
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:46
 msgid "Tracked links overview"
@@ -13269,6 +13891,13 @@ msgid ""
 "products/catalog>` in the menu while still making all menu items visible at "
 "once."
 msgstr ""
+"Mega menus são semelhantes a menus suspensos, mas em vez de uma simples "
+"lista de submenus, eles exibem um painel dividido em grupos de opções de "
+"navegação. Isso os torna adequados para sites com grandes quantidades de "
+"conteúdo ou :doc:`sites de e-Commerce <../../ecommerce>`, pois podem ajudar "
+"a incluir todas as suas páginas da web ou :doc:`categorias de e-Commerce <../"
+"../ecommerce/products/catalog>` no menu, mantendo todos os itens do menu "
+"visíveis de uma só vez."
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:None
 msgid "Mega menu in the navigation bar."
@@ -13406,6 +14035,8 @@ msgid ""
 "To hide the `Shop` menu item, :doc:`restrict ecommerce access to logged-in "
 "users <../../ecommerce/customer_accounts>`."
 msgstr ""
+"Para ocultar o item de menu `Loja`, :doc:`restrinja o acesso ao e-commerce "
+"para usuários logados <../../ecommerce/customer_accounts>`."
 
 #: ../../content/applications/websites/website/structure/header_footer.rst:178
 msgid "Footer design"
@@ -13481,6 +14112,15 @@ msgid ""
 "module (e.g., `/shop` or `/blog`) or publish a new product or :doc:`blog "
 "post <../../blog>`, are dynamic pages and are therefore managed differently."
 msgstr ""
+"Páginas **estáticas**, como a página inicial ou qualquer :ref:`criada "
+"personalmente <website/pages/page_creation>`, contêm conteúdo fixo que não "
+"muda dinamicamente. Você pode criar essas páginas manualmente, definir suas "
+"URLs e adaptar suas :ref:`propriedades <website/pages/page_management>` "
+"conforme necessário. Páginas **dinâmicas**, por outro lado, são geradas "
+"dinamicamente. Todas as páginas geradas automaticamente pelo Odoo, por "
+"exemplo, quando você instala um aplicativo ou módulo (ex.: `/shop` ou `/"
+"blog`) ou publica um novo produto ou :doc:`post de blog <../../blog>`, são "
+"páginas dinâmicas e, portanto, são gerenciadas de forma diferente."
 
 #: ../../content/applications/websites/website/structure/pages.rst:22
 msgid "Page creation"
@@ -13515,6 +14155,8 @@ msgid ""
 "In the :guilabel:`New Page` selection menu, click on a template. They are "
 "sorted by type:"
 msgstr ""
+"No menu de seleção :guilabel:`Nova Página`, clique em um modelo. Eles são "
+"classificados por tipo:"
 
 #: ../../content/applications/websites/website/structure/pages.rst:32
 msgid ""
@@ -13526,11 +14168,12 @@ msgstr ""
 
 #: ../../content/applications/websites/website/structure/pages.rst:33
 msgid ":guilabel:`About`: Information about your brand."
-msgstr ""
+msgstr ":guilabel:`Sobre`: Informações sobre sua marca."
 
 #: ../../content/applications/websites/website/structure/pages.rst:34
 msgid ":guilabel:`Landing Pages`: Summary of company content and info."
 msgstr ""
+":guilabel:`Páginas de destino`: Resumo do conteúdo e informações da empresa."
 
 #: ../../content/applications/websites/website/structure/pages.rst:35
 msgid ":guilabel:`Gallery`: Photos and media showcase."
@@ -13538,15 +14181,15 @@ msgstr ":guilabel:`Galeria`: Exibição de fotos e mídia."
 
 #: ../../content/applications/websites/website/structure/pages.rst:36
 msgid ":guilabel:`Services`: Focus on what you're selling and contact."
-msgstr ""
+msgstr ":guilabel:`Serviços`: Foco no que você está vendendo e contato."
 
 #: ../../content/applications/websites/website/structure/pages.rst:37
 msgid ":guilabel:`Pricing Plans`: Highlight on subscription and prices."
-msgstr ""
+msgstr ":guilabel:`Planos de preços`: Destaque em assinatura e preços."
 
 #: ../../content/applications/websites/website/structure/pages.rst:38
 msgid ":guilabel:`Team`: The people behind your company."
-msgstr ""
+msgstr ":guilabel:`Equipe`: As pessoas por trás da sua empresa."
 
 #: ../../content/applications/websites/website/structure/pages.rst:39
 msgid ""
@@ -13556,6 +14199,12 @@ msgid ""
 "Title`, :ref:`edit the page's properties <website/pages/page_properties>`, "
 "enable :guilabel:`Is a template`, and click :guilabel:`Save`."
 msgstr ""
+":guilabel:`Personalizado`: Para selecionar um modelo personalizado. Para "
+"adicionar um modelo a esta categoria, abra a página que você deseja salvar "
+"como modelo, depois vá para :menuselection:`Site --> Propriedades`, insira o "
+":guilabel:`Título da Página`, :ref:`edite as propriedades da página <website/"
+"pages/page_properties>`, habilite :guilabel:`É um modelo` e clique em "
+":guilabel:`Salvar`."
 
 #: ../../content/applications/websites/website/structure/pages.rst:45
 msgid ""
@@ -13570,6 +14219,8 @@ msgid ""
 "If needed, :doc:`customize the page's content and appearance <../"
 "web_design>` using the website editor, then click :guilabel:`Save`."
 msgstr ""
+"Se necessário, :doc:`personalize o conteúdo e a aparência da página <../"
+"web_design>` usando o editor do site e clique em :guilabel:`Salvar`."
 
 #: ../../content/applications/websites/website/structure/pages.rst:49
 msgid ":ref:`Publish <website/pages/un-publish-page>` the page."
@@ -13616,6 +14267,9 @@ msgid ""
 "page_properties>`, where you can define a publishing date and/or restrict "
 "the page's visibility if needed;"
 msgstr ""
+"Publicar/despublicar uma página a partir das :ref:`propriedades da página "
+"<website/pages/page_properties>`, onde você pode definir uma data de "
+"publicação e/ou restringir a visibilidade da página, se necessário;"
 
 #: ../../content/applications/websites/website/structure/pages.rst:76
 msgid ""
@@ -13623,6 +14277,10 @@ msgid ""
 "Site --> Pages`, select the pages, then click :guilabel:`Action` and "
 "select :guilabel:`Publish` or :guilabel:`Unpublish`."
 msgstr ""
+"Publicar/despublicar várias páginas de uma vez: vá para "
+":menuselection:`Site --> Site --> Páginas`, selecione as páginas, depois "
+"clique em :guilabel:`Ação` e selecione :guilabel:`Publicar` ou "
+":guilabel:`Despublicar`."
 
 #: ../../content/applications/websites/website/structure/pages.rst:81
 msgid ""
@@ -13631,6 +14289,10 @@ msgid ""
 "> Properties`. Select the :guilabel:`Publish` tab and enable :guilabel:`Use "
 "as Homepage`."
 msgstr ""
+"Alternativamente, você pode definir qualquer :ref:`página estática <website/"
+"pages/page_type>` como sua página inicial indo para :menuselection:`Site --> "
+"Site --> Propriedades`. Selecione a aba :guilabel:`Publicar` e habilite "
+":guilabel:`Usar como Página Inicial`."
 
 #: ../../content/applications/websites/website/structure/pages.rst:88
 msgid "Page properties"
@@ -13642,6 +14304,10 @@ msgid ""
 "access the page you wish to modify, then go to :menuselection:`Site --> "
 "Properties`, where you can change the following properties:"
 msgstr ""
+"Para modificar as propriedades de uma :ref:`página estática <website/pages/"
+"page_type>`, acesse a página que você deseja modificar, depois vá para "
+":menuselection:`Site --> Propriedades`, onde você pode alterar as seguintes "
+"propriedades:"
 
 #: ../../content/applications/websites/website/structure/pages.rst:94
 msgid ""
@@ -13650,6 +14316,10 @@ msgid ""
 "enable :guilabel:`Redirect old URL`, then select the :guilabel:`Type` "
 "of :ref:`redirection <website/pages/URL-redirection>`:"
 msgstr ""
+":guilabel:`URL da Página`: Modifique a URL da página no campo. Neste caso, "
+"você pode redirecionar a URL antiga para a nova, se necessário. Para fazer "
+"isso, habilite :guilabel:`Redirecionar URL antiga`, depois selecione o "
+":guilabel:`Tipo` de :ref:`redirecionamento <website/pages/URL-redirection>`:"
 
 #: ../../content/applications/websites/website/structure/pages.rst:98
 msgid ":guilabel:`301 Moved permanently`: to redirect the page permanently."
@@ -13672,16 +14342,20 @@ msgid ""
 ":guilabel:`In Menu`: Disable if you don't want the page to appear in the "
 "menu."
 msgstr ""
+":guilabel:`No Menu`: Desabilite se você não quiser que a página apareça no "
+"menu."
 
 #: ../../content/applications/websites/website/structure/pages.rst:105
 msgid ""
 ":guilabel:`Is Homepage`: Enable if you want the page to be the homepage of "
 "your website."
 msgstr ""
+":guilabel:`É a página inicial`: Ative se você deseja que a página seja a "
+"página inicial do seu site."
 
 #: ../../content/applications/websites/website/structure/pages.rst:106
 msgid ":guilabel:`Published`: Enable to publish the page."
-msgstr ""
+msgstr ":guilabel:`Publicado`: Ative para publicar a página."
 
 #: ../../content/applications/websites/website/structure/pages.rst:107
 msgid ""
@@ -13689,12 +14363,17 @@ msgid ""
 "time, click the field, set the date and time, then press **Enter** or "
 "click :guilabel:`Apply` to validate your selection."
 msgstr ""
+":guilabel:`Data de publicação`: Para publicar a página em uma data e hora "
+"específicas, clique no campo, defina a data e a hora, em seguida pressione "
+"**Enter** ou clique em :guilabel:`Aplicar` para validar sua seleção."
 
 #: ../../content/applications/websites/website/structure/pages.rst:109
 msgid ""
 ":guilabel:`Indexed`: Disable if you don't want the page to appear in search "
 "engine results."
 msgstr ""
+":guilabel:`Indexado`: Desative se você não deseja que a página apareça nos "
+"resultados de mecanismos de busca."
 
 #: ../../content/applications/websites/website/structure/pages.rst:110
 msgid ":guilabel:`Visibility`: Select who can access the page:"
@@ -13732,12 +14411,16 @@ msgid ""
 ":guilabel:`Is a template`: Toggle the switch to save the page as a template "
 "and add it to the :guilabel:`Custom`  category."
 msgstr ""
+":guilabel:`É um modelo`: Alterne o botão para salvar a página como um modelo "
+"e adicioná-la à categoria :guilabel:`Personalizado`."
 
 #: ../../content/applications/websites/website/structure/pages.rst:123
 msgid ""
 "*Some* of these properties can also be modified in batch "
 "from :menuselection:`Website --> Site --> Pages`."
 msgstr ""
+"*Algumas* dessas propriedades também podem ser modificadas em lote em "
+":menuselection:`Site --> Site --> Páginas`."
 
 #: ../../content/applications/websites/website/structure/pages.rst:129
 msgid "Duplicating pages"
@@ -13751,6 +14434,12 @@ msgid ""
 "the duplicated page in the menu, but you can remove it from the menu or "
 "change its position using the :doc:`menu editor <header_footer>`."
 msgstr ""
+"Para duplicar uma página, acesse a página, depois vá para "
+":menuselection:`Site --> Propriedades` e clique em :guilabel:`Duplicar "
+"página`. Insira um :guilabel:`Nome da página` e clique em :guilabel:`OK`. "
+"Por padrão, a nova página é adicionada após a página duplicada no menu, mas "
+"você pode removê-la do menu ou alterar sua posição usando o :doc:`editor de "
+"menu <header_footer>`."
 
 #: ../../content/applications/websites/website/structure/pages.rst:139
 msgid "Deleting pages"
@@ -13777,6 +14466,13 @@ msgid ""
 "window. Alternatively, you can set up a :ref:`redirection <website/pages/URL-"
 "redirection>` for the deleted page."
 msgstr ""
+"Uma janela pop-up mostra todos os links que fazem referência à página que "
+"você deseja excluir, organizados por categoria. Para garantir que os "
+"visitantes do site não cheguem a uma página de erro, você deve atualizar "
+"todos os links no seu site que fazem referência à página. Para fazer isso, "
+"expanda uma categoria e clique em um link para abri-lo em uma nova janela. "
+"Como alternativa, você pode configurar um :ref:`redirecionamento <website/"
+"pages/URL-redirection>` para a página excluída."
 
 #: ../../content/applications/websites/website/structure/pages.rst:149
 msgid ""
@@ -13784,6 +14480,9 @@ msgid ""
 "pages/URL-redirection>`), tick the :guilabel:`I am sure about this` check "
 "box, then click :guilabel:`OK`."
 msgstr ""
+"Depois de atualizar os links (ou configurar um :ref:`redirecionamento "
+"<website/pages/URL-redirection>`), marque a caixa de seleção "
+":guilabel:`Tenho certeza sobre isso` e clique em :guilabel:`OK`."
 
 #: ../../content/applications/websites/website/structure/pages.rst:155
 msgid "URL redirect mapping"
@@ -13798,6 +14497,13 @@ msgid ""
 "or migrate your site from another platform to an Odoo :doc:`domain <../"
 "configuration/domain_names>`. It can also be used to improve :doc:`seo`."
 msgstr ""
+"O mapeamento de redirecionamento de URL consiste em enviar visitantes e "
+"mecanismos de busca para uma URL diferente daquela que eles solicitaram "
+"inicialmente. Essa técnica é usada, por exemplo, para evitar links quebrados "
+"quando você :ref:`exclui uma página <website/pages/delete-page>`, "
+":ref:`modifica sua URL <website/pages/page_properties>` ou migra seu site de "
+"outra plataforma para um :doc:`domínio <../configuration/domain_names>` "
+"Odoo. Também pode ser usada para melhorar :doc:`seo`."
 
 #: ../../content/applications/websites/website/structure/pages.rst:163
 msgid ""
@@ -13825,6 +14531,8 @@ msgid ""
 "You can set up redirections for :ref:`static and dynamic pages <website/"
 "pages/page_type>`."
 msgstr ""
+"Você pode configurar redirecionamentos para :ref:`páginas estáticas e "
+"dinâmicas <website/pages/page_type>`."
 
 #: ../../content/applications/websites/website/structure/pages.rst:172
 msgid ""
@@ -13857,6 +14565,10 @@ msgid ""
 "or deleted :ref:`static pages <website/pages/page_type>`. The new URL is "
 "shown in search engine results, and the redirect is cached by browsers."
 msgstr ""
+":guilabel:`301 Movido permanentemente`: para redirecionamentos permanentes "
+"de :ref:`páginas estáticas <website/pages/page_type>` não publicadas ou "
+"excluídas. A nova URL é mostrada nos resultados de mecanismos de busca e o "
+"redirecionamento é armazenado em cache pelos navegadores."
 
 #: ../../content/applications/websites/website/structure/pages.rst:182
 msgid ""
@@ -13877,6 +14589,12 @@ msgid ""
 "Use this redirect type to rename a dynamic page, for example, if you wish to "
 "rename `/shop` into `/market`."
 msgstr ""
+":guilabel:`308 Redirecionar/Reescrever`: para redirecionamentos permanentes "
+"de :ref:`páginas dinâmicas <website/pages/page_type>` existentes. A URL é "
+"renomeada; o novo nome é mostrado nos resultados de mecanismos de busca e é "
+"armazenado em cache pelos navegadores. Use este tipo de redirecionamento "
+"para renomear uma página dinâmica, por exemplo, se você deseja renomear `/"
+"shop` para `/market`."
 
 #: ../../content/applications/websites/website/structure/pages.rst:190
 msgid ""
@@ -13925,6 +14643,11 @@ msgid ""
 "<website/pages/delete-page>` pages to *new* pages, while the 308 redirect is "
 "used for *permanent* redirections of *existing* pages."
 msgstr ""
+"Os redirecionamentos 404, 301 e 302 destinam-se a migrar o tráfego de "
+"páginas :ref:`não publicadas <website/pages/un-publish-page>` ou "
+":ref:`excluídas <website/pages/delete-page>` para páginas *novas*, enquanto "
+"o redirecionamento 308 é usado para redirecionamentos *permanentes* de "
+"páginas *existentes*."
 
 #: ../../content/applications/websites/website/structure/pages.rst:207
 msgid ""
@@ -14005,10 +14728,14 @@ msgid ""
 "as Odoo creates a :ref:`301 redirect <website/pages/URL-redirection>`, "
 "maintaining the SEO."
 msgstr ""
+"Se você alterar o título de uma postagem de blog ou o nome de um produto, o "
+"link para a página da web relacionada é atualizado automaticamente. O link "
+"antigo ainda funciona, pois o Odoo cria um :ref:`redirecionamento 301 "
+"<website/pages/URL-redirection>`, mantendo o SEO."
 
 #: ../../content/applications/websites/website/structure/seo.rst:37
 msgid "Keywords and Meta tags"
-msgstr ""
+msgstr "Palavras-chave e Meta tags"
 
 #: ../../content/applications/websites/website/structure/seo.rst:39
 msgid "There are two types of keywords in SEO, which serve different purposes."
@@ -14050,6 +14777,12 @@ msgid ""
 "the :guilabel:`optimize SEO` pop-up. There are two types of meta tags in "
 "Odoo:"
 msgstr ""
+"**Meta tags** são elementos HTML que fornecem informações sobre uma página "
+"da web para mecanismos de busca e visitantes do site. Elas desempenham um "
+"papel crucial no SEO ao ajudar os mecanismos de busca a entender o conteúdo "
+"e o contexto de uma página da web e atrair visitantes com conteúdo atraente. "
+"Elas podem ser editadas no pop-up :guilabel:`otimizar SEO`. Existem dois "
+"tipos de meta tags no Odoo:"
 
 #: ../../content/applications/websites/website/structure/seo.rst:59
 msgid ""
@@ -14184,6 +14917,11 @@ msgid ""
 "general/integrations/unsplash>` or upload any other image by clicking "
 "the :icon:`fa-upload` :guilabel:`(upload)` button."
 msgstr ""
+"Quando você compartilha sua página nas mídias sociais, o logotipo do seu "
+"site é selecionado por padrão, mas você pode pesquisar na :doc:`biblioteca "
+"de imagens Unsplash <../../../general/integrations/unsplash>` ou fazer "
+"upload de qualquer outra imagem clicando no botão :icon:`fa-upload` "
+":guilabel:`(upload)`."
 
 #: ../../content/applications/websites/website/structure/seo.rst:113
 msgid ""
@@ -14191,6 +14929,10 @@ msgid ""
 "Configuration --> Settings` in the :guilabel:`SEO` section and tick "
 "the :guilabel:`Default Social Share Image` checkbox."
 msgstr ""
+"Você pode definir uma imagem padrão para compartilhamento social. Acesse "
+":menuselection:`Site --> Configuração --> Configurações` na seção "
+":guilabel:`SEO` e marque a caixa de seleção :guilabel:`Imagem Padrão de "
+"Compartilhamento Social`."
 
 #: ../../content/applications/websites/website/structure/seo.rst:117
 msgid ""
@@ -14259,10 +15001,14 @@ msgid ""
 "no platform can guarantee that rankings will remain unchanged, follow these "
 "best practices to significantly reduce the risk."
 msgstr ""
+"Na maioria dos casos, migrar para o Odoo não impactará negativamente seu "
+"SEO. Embora nenhuma plataforma possa garantir que as classificações "
+"permanecerão inalteradas, siga estas práticas recomendadas para reduzir "
+"significativamente o risco."
 
 #: ../../content/applications/websites/website/structure/seo.rst:147
 msgid "Keep your existing content."
-msgstr ""
+msgstr "Mantenha seu conteúdo existente."
 
 #: ../../content/applications/websites/website/structure/seo.rst:149
 msgid ""
@@ -14285,6 +15031,8 @@ msgid ""
 "By doing this, you help search engines reindex your site and maintain your "
 "visibility in search results."
 msgstr ""
+"Ao fazer isso, você ajuda os mecanismos de busca a reindexar seu site e "
+"manter sua visibilidade nos resultados de pesquisa."
 
 #: ../../content/applications/websites/website/structure/seo.rst:157
 msgid "It is normal to experience a traffic decrease in the first days."
@@ -14738,12 +15486,16 @@ msgid ""
 "When clicking on a category block, a popup appears, allowing you to select "
 "between multiple templates for each category."
 msgstr ""
+"Ao clicar em um bloco de categoria, um pop-up aparece, permitindo que você "
+"selecione entre vários modelos para cada categoria."
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:28
 msgid ""
 "You can also search for a specific block in the :guilabel:`Insert a block` "
 "popup using the search bar."
 msgstr ""
+"Você também pode pesquisar um bloco específico no pop-up :guilabel:`Inserir "
+"um bloco` usando a barra de pesquisa."
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:0
 msgid "Pop-up block selection"
@@ -14766,6 +15518,8 @@ msgid ""
 "Access to certain blocks requires the installation of their respective "
 "application or module (e.g., eCommerce for the :guilabel:`Products` block)."
 msgstr ""
+"O acesso a certos blocos requer a instalação de seu respectivo aplicativo ou "
+"módulo (por exemplo, e-Commerce para o bloco :guilabel:`Produtos`)."
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:43
 msgid ""
@@ -14792,6 +15546,11 @@ msgid ""
 "to a website page, drag and drop the :guilabel:`Contact & Forms` category, "
 "then select the :guilabel:`Form block`."
 msgstr ""
+"O bloco :guilabel:`Formulário` é usado para coletar informações de "
+"visitantes do site e criar registros no seu banco de dados, se aplicável. "
+"Para adicionar um formulário a uma página do site, arraste e solte da "
+"categoria :guilabel:`Contato e Formulários` e selecione o :guilabel:`bloco "
+"Formulário`."
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:None
 msgid "Example of a form block"
@@ -14810,6 +15569,12 @@ msgid ""
 "click :guilabel:`Edit`, click the form, navigate to "
 "the :guilabel:`Customize` tab, and select the desired :guilabel:`Action`:"
 msgstr ""
+"Por padrão, quando o formulário é enviado, um e-mail contendo as informações "
+"inseridas pelo visitante é enviado automaticamente. Dependendo dos "
+"aplicativos instalados no seu banco de dados, ações adicionais que podem "
+"criar registros automaticamente podem ficar disponíveis. Para escolher uma "
+"ação diferente, clique em :guilabel:`Editar`, clique no formulário, navegue "
+"até a aba :guilabel:`Personalizar` e selecione a :guilabel:`Ação` desejada:"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:72
 msgid ""
@@ -14883,6 +15648,12 @@ msgid ""
 "the :guilabel:`Field` section of the :guilabel:`Customize` tab. For example, "
 "you can:"
 msgstr ""
+"Para adicionar um novo campo ao formulário, navegue até a :guilabel:`aba "
+"Personalizar` e clique no botão :guilabel:`+ Campo` ao lado da seção "
+":guilabel:`Formulário` ou :guilabel:`Campo`. Para modificar o novo campo (ou "
+"qualquer outro) no formulário, selecione o campo e use as opções disponíveis "
+"na seção :guilabel:`Campo` da aba :guilabel:`Personalizar`. Por exemplo, "
+"você pode:"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:95
 msgid "Change the field :guilabel:`Type`."
@@ -14920,6 +15691,8 @@ msgid ""
 "Enable a field :guilabel:`Description`. Click the default description on the "
 "form to modify it."
 msgstr ""
+"Ativar uma :guilabel:`Descrição` do campo. Clique na descrição padrão no "
+"formulário para modificá-la."
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:111
 msgid "Add a :guilabel:`Placeholder` or :guilabel:`Default value`."
@@ -15014,6 +15787,9 @@ msgid ""
 "the :guilabel:`Customize` tab and click :guilabel:`Edit`. Replace the "
 "placeholder code with your custom embed code."
 msgstr ""
+"Após adicionar o bloco a uma página, clique no bloco, vá para a aba "
+":guilabel:`Personalizar` e clique em :guilabel:`Editar`. Substitua o código "
+"de espaço reservado pelo seu código de incorporação personalizado."
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:None
 msgid "Add the link to the embedded code you want to point to"
@@ -15030,7 +15806,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:172
 msgid "Move, switch, or delete a building block"
-msgstr ""
+msgstr "Mover, trocar ou excluir um bloco de construção"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:174
 msgid ""
@@ -15072,6 +15848,8 @@ msgid ""
 "Quickly change the block category by clicking :icon:`fa-exchange` "
 "(:guilabel:`exchange`)."
 msgstr ""
+"Altere rapidamente a categoria do bloco clicando em :icon:`fa-exchange` "
+"(:guilabel:`trocar`)."
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:194
 msgid "Edit a building block"
@@ -15083,6 +15861,9 @@ msgid ""
 "the :guilabel:`Customize` tab. Available customization options vary "
 "depending on the type of block selected."
 msgstr ""
+"Para editar o conteúdo de um bloco de construção, clique nele e vá para a "
+"aba :guilabel:`Personalizar`. As opções de personalização disponíveis variam "
+"dependendo do tipo de bloco selecionado."
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:200
 msgid ":doc:`Web design elements <elements>`"
@@ -15104,6 +15885,11 @@ msgid ""
 "an image, video, and/or shape. Once you've selected a shape, new fields "
 "appear to allow you to customize the shape."
 msgstr ""
+"Para modificar o plano de fundo de um bloco de construção, selecione o "
+"bloco, vá para a aba :guilabel:`Personalizar` e clique no ponto de cor ou em "
+"outra opção de :guilabel:`Plano de fundo`. Você pode alterar a cor e/ou "
+"adicionar uma imagem, vídeo e/ou forma. Depois de selecionar uma forma, "
+"novos campos aparecem para permitir que você personalize a forma."
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:212
 msgid ""
@@ -15146,6 +15932,11 @@ msgid ""
 "the block, go to the :guilabel:`Customize` tab, and set "
 "the :guilabel:`Layout` field to :guilabel:`Grid` or :guilabel:`Cols`."
 msgstr ""
+"Para a maioria dos blocos de construção, você pode escolher entre dois "
+"estilos de layout: :ref:`grade <website/building_blocks/grid>` ou "
+":ref:`colunas (cols) <website/building_blocks/cols>`. Para alterar o estilo "
+"de layout padrão, clique no bloco, vá para a aba :guilabel:`Personalizar` e "
+"defina o campo :guilabel:`Layout` como :guilabel:`Grade` ou :guilabel:`Cols`."
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:237
 msgid "Grid"
@@ -15184,6 +15975,12 @@ msgid ""
 "number. You can then modify a specific column's settings using the options "
 "in the :guilabel:`Column` section of the :guilabel:`Customize` tab."
 msgstr ""
+"Escolher o layout :guilabel:`Cols` permite determinar o número de elementos "
+"por linha dentro do bloco. Para fazer isso, selecione o bloco a ser "
+"modificado, clique no menu suspenso ao lado do campo :guilabel:`Cols` e "
+"ajuste o número. Você pode então modificar as configurações de uma coluna "
+"específica usando as opções na seção :guilabel:`Coluna` da aba "
+":guilabel:`Personalizar`."
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:257
 msgid ""
@@ -15202,7 +15999,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:265
 msgid "Duplicate a building block"
-msgstr ""
+msgstr "Duplicar um bloco de construção"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:267
 msgid ""
@@ -15210,6 +16007,9 @@ msgid ""
 "(:guilabel:`duplicate`) icon at the top of the :guilabel:`Customize` tab. "
 "Once duplicated, the new block appears on the page beneath the original one."
 msgstr ""
+"Para duplicar um bloco de construção, clique no ícone :icon:`fa-clone` "
+"(:guilabel:`duplicar`) no topo da aba :guilabel:`Personalizar`. Uma vez "
+"duplicado, o novo bloco aparece na página abaixo do original."
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:274
 msgid "Save a custom building block"
@@ -15223,6 +16023,11 @@ msgid ""
 "the :guilabel:`Save and reload` button in the popup to confirm saving your "
 "custom block."
 msgstr ""
+"Você pode salvar um bloco de construção personalizado para reutilizá-lo em "
+"outro lugar. Para fazer isso, selecione-o, navegue até a aba "
+":guilabel:`Personalizar` e clique no ícone :icon:`fa-floppy-o` "
+"(:guilabel:`disquete`). Clique no botão :guilabel:`Salvar e recarregar` no "
+"pop-up para confirmar o salvamento do seu bloco personalizado."
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:280
 msgid ""
@@ -15270,6 +16075,8 @@ msgid ""
 "Click :icon:`fa-link` (:guilabel:`link`) at the top of "
 "the :guilabel:`Customize` tab."
 msgstr ""
+"Clique em :icon:`fa-link` (:guilabel:`link`) no topo da aba "
+":guilabel:`Personalizar`."
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:298
 msgid ""
