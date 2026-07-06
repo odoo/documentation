@@ -180,7 +180,7 @@ the :ref:`company and customers have been properly configured
 
 When an invoice is sent to JoFotara, Odoo does the following:
 
-- generates the invoice in the required format (UBL 1.2)
+- generates the invoice in the required format (UBL 2.1)
 - submits the invoice to JoFotara for validation
 - receives the QR code from JoFotara on the invoice's PDF
 
