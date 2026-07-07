@@ -57,7 +57,7 @@ tab. Then:
 
 - Click the color you want to change, then select a predefined :guilabel:`Solid` color or click
   :guilabel:`Custom` to pick a specific color tone manually (or add its #HEX or RGBA code). Click
-  :icon:`fa-trash` (:guilabel:`Delete`) to remove the color selection.
+  :icon:`fa-trash` (:guilabel:`Reset`) to remove the color selection.
 - Click the paint palette icon and choose a color palette. As a result, all color customizations
   are reset.
 
@@ -111,13 +111,12 @@ Odoo allows you to customize the font family and font size of website elements, 
   :guilabel:`Input Fields` sections, use the :guilabel:`Font Size` field to set a default size.
   Click the :icon:`fa-caret-right` (:guilabel:`Toggle more options`) icon to expand the section and
   define custom sizes (e.g., based on the heading level, button size, etc.).
+- :guilabel:`Font Family`: In the :guilabel:`Paragraph`, :guilabel:`Headings`, and
+  :guilabel:`Button` sections, select a font from the dropdown menu.
 
   .. note::
      When :guilabel:`System Fonts` is selected, Odoo uses the native fonts already installed on the
      visitor's operating system. For example, Android uses **Roboto** as its default system font.
-
-- :guilabel:`Font Family`: In the :guilabel:`Paragraph`, :guilabel:`Headings`, and
-  :guilabel:`Button` sections, select a font from the dropdown menu.
 
 Custom fonts
 ------------
