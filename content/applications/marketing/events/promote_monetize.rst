@@ -9,5 +9,6 @@ Promote and monetize
    :titlesonly:
 
    promote_monetize/sell_tickets.rst
+   promote_monetize/lead_generation.rst
    promote_monetize/event_sponsors.rst
    promote_monetize/event_booths.rst
