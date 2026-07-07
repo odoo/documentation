@@ -81,7 +81,7 @@ products added to the order, and the numpad for order actions. Once the POS is f
    - Once the register is open, the :guilabel:`Open Register` button is replaced by the
      :guilabel:`Continue Selling` button on the :guilabel:`Dashboard's` POS card.
    - It is possible to switch between :doc:`multiple users <extra/employee_login>` from an open POS
-     register, provided :ref:`multi-employee management is enabled <pos/employee_login/use>`.
+     register, provided :ref:`multi-employee management is enabled <pos/employee-login/user-login>`.
 
 From the POS interface header:
 
@@ -96,7 +96,7 @@ From the POS interface header:
 - Click the :icon:`fa-barcode` (:guilabel:`barcode`) icon to activate the device's webcam and use it
   as a barcode scanner.
 - Click the user's avatar to switch between employees, provided :ref:`multi-employee management is
-  enabled <pos/employee_login/use>`.
+  enabled <pos/employee-login/user-login>`.
 - Click the :icon:`fa-bars` (:guilabel:`hamburger menu`) icon to access more advanced options, as
   well as to :ref:`close the register <pos/use/register-close>`.
 
