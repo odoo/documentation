@@ -8,8 +8,8 @@ include:
 - **Load building**: Group products for specific carriers, assign those :doc:`batches
   <../picking_methods/batch>` to loading docks, and manage vehicle assignments based on fleet
   capacity. This ensures the right products are packed into the appropriate trucks for delivery.
-- :doc:`Fleet management <../../../../hr/fleet>`: Track and manage the capacity of in-house
-  delivery vehicles.
+- :doc:`Fleet management <../../../../hr/fleet>`: Track and manage the capacity of in-house delivery
+  vehicles.
 
 Configuration
 =============
@@ -17,14 +17,69 @@ Configuration
 To use the dispatch management system, the following setup must be completed:
 
 #. :ref:`Install <general/install>` the **Fleet** application.
-#. Configure vehicle :ref:`capacity (volume and weight)
-   <inventory/shipping_receiving/vehicle-capacity>`.
-#. Enter vehicle :doc:`car model(s) <../../../../hr/fleet/models>`.
 #. Enable :ref:`necessary features <inventory/shipping_receiving/inventory-features>` in the
    **Inventory** app.
+#. Enable and configure the :ref:`Mapbox integration
+   <inventory/shipping_receiving/mapbox-integration>`.
+#. Configure vehicle :ref:`capacity (volume and weight)
+   <inventory/shipping_receiving/vehicle-capacity>`.
+#. Enter vehicle :doc:`car models <../../../../hr/fleet/models>`.
 #. Set up :ref:`vehicles as delivery methods
    <inventory/shipping_receiving/delivery-method-for-carrier>`.
 #. Create :ref:`dock locations <inventory/shipping_receiving/docks>`.
+
+.. important::
+   Dispatch management can evaluate capacity on a vehicle **only** if a weight and volume are
+   assigned to a product on the *Inventory* tab of its product form.
+
+.. _inventory/shipping_receiving/inventory-features:
+
+Inventory settings
+------------------
+
+To set the required inventory settings, navigate to :menuselection:`Inventory app --> Configuration
+--> Settings`.
+
+In the *Operations* section, select the :guilabel:`Batch, Wave & Cluster Transfers` checkbox to
+prepare batches of orders for delivery.
+
+In the *Shipping* section, select the :guilabel:`Delivery Methods` and :guilabel:`Dispatch
+Management System` checkboxes. Doing so allows specific vehicles to be :ref:`set as carriers
+<inventory/shipping_receiving/delivery-method-for-carrier>`.
+
+In the *Warehouse* section, select the :guilabel:`Storage Locations` checkbox to assign specific
+locations in the warehouse as loading zones for delivery trucks.
+
+Then, once all the configurations are complete, be sure to click :guilabel:`Save`.
+
+.. _inventory/shipping_receiving/mapbox-integration:
+
+Mapbox integration
+------------------
+
+Next, configure the `Mapbox <https://www.mapbox.com/>`_ integration.
+
+First, `create a Mapbox account <https://account.mapbox.com/auth/signup/>`_. If you already have a
+MapBox account, `log in <https://account.mapbox.com/auth/signin/>`_. Upon login, the *Account
+overview* page displays.
+
+Then, `create an access token <https://docs.mapbox.com/help/dive-deeper/access-tokens/>`_.
+
+After the token is created, copy it to the clipboard.
+
+.. important::
+   If you have created a secret token, Mapbox does not display secret tokens again after leaving the
+   *Access tokens* page. Make a copy of this token now.
+
+.. seealso::
+   - `How to use Mapbox securely: Access tokens
+     <https://docs.mapbox.com/help/dive-deeper/how-to-use-mapbox-securely/#access-tokens>`_
+   - `URL restrictions <https://docs.mapbox.com/accounts/guides/tokens/#url-restrictions>`_
+
+In Odoo, navigate to the :menuselection:`Settings` app. In the *Integrations* section, locate the
+:guilabel:`Map Routes` setting. Paste the token in the :guilabel:`Token` field.
+
+Be sure to click :guilabel:`Save` to save the settings.
 
 .. _inventory/shipping_receiving/vehicle-capacity:
 
@@ -70,33 +125,12 @@ vehicle category.
 .. seealso::
    :doc:`Create car model <../../../../hr/fleet/models>`
 
-
-.. _inventory/shipping_receiving/inventory-features:
-
-Inventory settings
-------------------
-
-Next, go to :menuselection:`Inventory app --> Configuration --> Settings`, and enable the required
-features for dispatch management.
-
-In the :guilabel:`Operations` section, tick the :guilabel:`Batch, Wave & Cluster Transfers`
-checkbox to prepare batches of orders for delivery.
-
-In the :guilabel:`Shipping` section, tick the :guilabel:`Delivery Methods` and :guilabel:`Dispatch
-Management System` checkboxes. Doing so allows specific vehicles to be :ref:`set as carriers
-<inventory/shipping_receiving/delivery-method-for-carrier>`.
-
-In the :guilabel:`Warehouse` section, tick the :guilabel:`Storage Locations` checkbox to assign
-specific locations in the warehouse as loading zones for delivery trucks.
-
-Then, once all the configurations are complete, be sure to click :guilabel:`Save`.
-
 .. _inventory/shipping_receiving/delivery-method-for-carrier:
 
 Delivery method
 ---------------
 
-Next, assign each delivery vehicle as a *Carrier* by configuring a delivery method.
+Optionally, delivery vehicles can be assigned as a delivery method *carrier*.
 
 To configure delivery methods, go to :menuselection:`Inventory app --> Configuration --> Delivery
 Methods`. Select an existing delivery method, or click :guilabel:`New`.
@@ -118,31 +152,36 @@ Next, set a :guilabel:`Delivery Product`, which is the product that shows up as 
 Optionally, in the :guilabel:`Availability` tab, set the :guilabel:`Countries`, :guilabel:`States`,
 or :guilabel:`Zip Prefixes` to limit the range of local delivery.
 
-.. figure:: dispatch/delivery-method.png
-   :alt: Delivery method form.
-
-   Example delivery method, with the :guilabel:`Zip Prefixes` set to San Francisco's zip code.
+.. image:: dispatch/delivery-method.png
+   :alt: Example delivery method with the Zip Prefixes set to San Francisco's zip code.
 
 .. _inventory/shipping_receiving/docks:
 
 Dock locations
 --------------
 
-Each loading dock must have a dedicated location. To create or configure dock locations, go to
-:menuselection:`Inventory app --> Configuration --> Locations`.
+Each loading dock must have a dedicated location. To create dock locations, go to
+:menuselection:`Inventory app --> Configuration --> Locations` and click :guilabel:`New`.
 
-Click the desired location, which opens the :guilabel:`Location` form. In the :guilabel:`Additional
-Information` section, tick the :guilabel:`Is a Dock Location` checkbox.
+After dock locations are set up in Odoo, configure them in the operation type. Navigate to
+:menuselection:`Inventory app --> Configuration --> Operations Types` and open an existing delivery
+operation type, or click :guilabel:`New` to create a new one.
 
-.. figure:: dispatch/dock-location.png
+After defining the other fields in the operation type form, scroll to the *Batch & wave transfers*
+section and select the :guilabel:`Dispatch Management` checkbox. The :guilabel:`Dock locations`
+field appears. Define the dock locations for this operation type.
+
+.. image:: dispatch/dock-location.png
    :alt: Location configuration.
 
-   Location configuration page with :guilabel:`Is a Dock Location` checkbox ticked.
+.. seealso::
+   - :doc:`../../warehouses_storage/inventory_management/use_locations`
+   - :doc:`../../warehouses_storage/inventory_management/operation_type`
 
 Build loads
 ===========
 
-Once setup is complete, :ref:`assign orders to a carrier
+After setup is complete, optionally :ref:`assign orders to a carrier
 <inventory/shipping_receiving/assign-carrier>` and :ref:`group them into batches
 <inventory/shipping_receiving/create-batch>`. Then, :ref:`configure the batch form
 <inventory/shipping_receiving/batch-form>`, as needed.
@@ -151,13 +190,12 @@ To group products, go to the :menuselection:`Inventory app --> Operations --> De
 reveals a list of outgoing deliveries.
 
 .. seealso::
-   Since this article is about a specific use case, explore details about each picking method in
+   Because this article is about a specific use case, explore details about each picking method in
    their dedicated articles.
 
    - :doc:`../picking_methods/batch`
    - :doc:`Wave picking <../picking_methods/wave>`
    - :doc:`../picking_methods/cluster`
-
 
 .. _inventory/shipping_receiving/assign-carrier:
 
@@ -165,15 +203,15 @@ Carrier assignment
 ------------------
 
 Reveal the *Carrier* column, if it is not visible by default, by clicking the
-:icon:`oi-settings-adjust` :guilabel:`(settings)` icon in the top-right corner, and ticking the
+:icon:`oi-settings-adjust` :guilabel:`(settings)` icon in the top-right corner, and selecting the
 :guilabel:`Carrier` checkbox.
 
 .. tip::
    Other useful columns to enable can be :guilabel:`Zip` code, :guilabel:`Shipping Weight`, and
    :guilabel:`Shipping Volume`.
 
-Select the delivery orders for the batch by ticking the checkboxes on the left. Next, click into the
-line's :guilabel:`Carrier` fields. In the resulting drop-down menu, choose the desired vehicle's
+Select the delivery orders for the batch by selecting the checkboxes on the left. Next, click into
+the line's :guilabel:`Carrier` fields. In the resulting drop-down menu, choose the desired vehicle's
 :ref:`delivery method <inventory/shipping_receiving/delivery-method-for-carrier>`. A
 :guilabel:`Confirmation` pop-up window appears, indicating the number of orders being added to the
 batch. Click :guilabel:`Confirm`, and the carrier is updated for all the selected records.
@@ -207,8 +245,8 @@ Alternative batch creation method
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Another place to create batches is by going to the :menuselection:`Inventory` app, and in the
-:guilabel:`Delivery Orders` card, click the :icon:`fa-ellipsis-v` :guilabel:`(three dots)` icon. In
-the resulting drop-down menu, click :guilabel:`Prepare batch`.
+:guilabel:`Delivery Orders` card, click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)`
+icon. In the resulting drop-down menu, click :guilabel:`Prepare batch`.
 
 .. note::
    The :guilabel:`Transport Management` drop-down menu contains other tools for fleet management:
@@ -229,19 +267,19 @@ Batch form
 
 On the batch transfer form, fill the following fields out accordingly:
 
-- :guilabel:`Responsible`: employee assigned to the picking. Leave blank if *any* worker can fulfill
-  this picking.
-- :guilabel:`Operation Type`: from the drop-down menu, select the operation type under which the
+- :guilabel:`Responsible`: Assign an employee to the picking. Leave blank if *any* worker can
+  fulfill this picking.
+- :guilabel:`Operation Type`: From the drop-down menu, select the operation type under which the
   picking is categorized.
-- :guilabel:`Scheduled Date`: specifies the date by which the :guilabel:`Responsible` person should
+- :guilabel:`Scheduled Date`: Specify the date by which the :guilabel:`Responsible` person should
   complete the transfer to the output location.
-- :guilabel:`Dock Location`: select the loading location.
-- :guilabel:`Vehicle`: select the vehicle, which will auto-fill :guilabel:`Vehicle Category`.
-- :guilabel:`Vehicle Category`: show if the order exceeds the :ref:`vehicle's capacity limits
+- :guilabel:`Dock Location`: Select the loading location.
+- :guilabel:`Vehicle`: Select the vehicle, which will auto-fill the :guilabel:`Vehicle Category`.
+- :guilabel:`Vehicle Category`: Determine if the order exceeds the :ref:`vehicle's capacity limits
   <inventory/shipping_receiving/vehicle-capacity>`
 
 .. example::
-   The :guilabel:`Volume` bar is grayed out because the capacity has been reached.
+   The :guilabel:`Volume` bar indicates that the transport truck is nearing capacity.
 
    .. image:: dispatch/batch-form.png
       :alt: Show batch form.
