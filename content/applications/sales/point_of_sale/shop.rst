@@ -109,7 +109,7 @@ You can also assign barcodes automatically  using the :doc:`barcode lookup featu
 </applications/inventory_and_mrp/barcode/setup/barcodelookup>`.
 
 .. note::
-   Employees can :ref:`log into the POS by scanning a badge <pos/employee_login/badge>`. To
+   Employees can :ref:`log into the POS by scanning a badge <pos/employee-login/user-login>`. To
    configure this feature, open the **Employees** app, select an employee, then, in the
    :guilabel:`HR Settings` tab, fill in the :guilabel:`PIN Code` or :guilabel:`Badge ID`.
 
