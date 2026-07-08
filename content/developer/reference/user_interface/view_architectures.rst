@@ -2041,74 +2041,6 @@ The `filter` element can have the following attributes:
    :type: str
    :default: `''`
 
-.. attribute:: start_month
-   :noindex:
-
-   The earliest month that will show up in the dropdown of a date filter, as an offset relative to the current month.
-
-   .. example::
-      .. code-block:: xml
-
-         <filter string="Creation Date" name="filter_create_date" date="create_date" start_month="-3"/>
-
-      If the current month is February, the earliest month selectable in the dropdown will be November.
-
-   :requirement: Optional
-   :type: int
-   :default: `-2`
-   :scope: Filters with a non-empty `date` attribute
-
-.. attribute:: end_month
-   :noindex:
-
-   The latest month that will show up in the dropdown of a date filter, as an offset relative to the current month.
-
-   .. example::
-      .. code-block:: xml
-
-         <filter string="Creation Date" name="filter_create_date" date="create_date" end_month="2"/>
-
-      If the current month is February, the latest month selectable in the dropdown will be March.
-
-   :requirement: Optional
-   :type: int
-   :default: `0`
-   :scope: Filters with a non-empty `date` attribute
-
-.. attribute:: start_year
-   :noindex:
-
-   The earliest year that will show up in the dropdown of a date filter, as an offset relative to the current year.
-
-   .. example::
-      .. code-block:: xml
-
-         <filter string="Creation Date" name="filter_create_date" date="create_date" start_year="-3"/>
-
-      If the current year is 2024, the earliest year selectable in the dropdown will be 2021.
-
-   :requirement: Optional
-   :type: int
-   :default: `-2`
-   :scope: Filters with a non-empty `date` attribute
-
-.. attribute:: end_year
-   :noindex:
-
-   The latest year that will show up in the dropdown of a date filter, as an offset relative to the current year.
-
-   .. example::
-      .. code-block:: xml
-
-         <filter string="Creation Date" name="filter_create_date" date="create_date" end_year="2"/>
-
-      If the current year is 2024, the latest year selectable in the dropdown will be 2025.
-
-   :requirement: Optional
-   :type: int
-   :default: `0`
-   :scope: Filters with a non-empty `date` attribute
-
 .. attribute:: default_period
    :noindex:
 
@@ -2118,8 +2050,8 @@ The `filter` element can have the following attributes:
    Valid filter ids include the following:
 
    - `first_quarter`, `second_quarter`, `third_quarter` and `fourth_quarter`.
-   - One of `month`, `month-x` and `month+x`, where `x` is a non-zero integer value between `start_month` and `end_month`.
-   - One of `year`, `year-x` and `year+x`, where `x` is a non-zero integer value between `start_year` and `end_year`.
+   - One of `month`, `month-1` and `month-2`.
+   - One of `year`, `year-1` and `year-2`.
    - The `name` of any custom filter defined within the filter, prepended with `custom_`.
 
    The filter must be in the default set of filters activated at the view initialization.
@@ -2138,7 +2070,7 @@ The `filter` element can have the following attributes:
 
    :requirement: Optional
    :type: str
-   :default: `month`, or the closest value to the current month if unavailable
+   :default: `month`
    :scope: Filters with a non-empty `date` attribute
 
 .. include:: view_architectures/generic_attribute_invisible.rst
