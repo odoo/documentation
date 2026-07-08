@@ -31,7 +31,7 @@ information on the top half of the form:
     100%).
 
     .. example::
-       Two overtime rates are cteated, one for 150% and the other for 120%. The :guilabel:`Sum of
+       Two overtime rates are created, one for 150% and the other for 120%. The :guilabel:`Sum of
        all rates` option is selected. The overtime rate applied is 170%.
 
        The calculation used to determine this rate is: 100% (baseline) + (150-100)% + (120-100)% =
