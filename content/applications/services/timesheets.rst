@@ -13,6 +13,10 @@ they are essential for invoicing clients.
    Timesheets are also :ref:`integrated into Project and Helpdesk
    <timesheets/timesheets/project-helpdesk>`.
 
+   When an employee is scheduled to work but has not started their timesheet session, a
+   :doc:`reminder popup </applications/hr/attendances/reminders>` appears after 15 minutes
+   of activity on the platform.
+
 Configuration
 =============
 
