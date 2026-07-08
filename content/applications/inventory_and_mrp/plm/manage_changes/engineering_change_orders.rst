@@ -56,8 +56,8 @@ On the |ECO| form, fill in the following fields accordingly:
   specific company, or leave blank if the change applies to all companies.
 
    .. note::
-      The :guilabel:`Company` field is only available when multiple companies are enabled.
-      See :doc:`../../../general/companies/multi_company`.
+      The :guilabel:`Company` field is only available when multiple companies are enabled. See
+      :doc:`../../../general/companies/multi_company`.
 
 - :guilabel:`Responsible`: Assign a user to be in charge of this |ECO|. (Optional)
 - :guilabel:`Effective Date`: Specify when the |ECO| becomes live. If nothing is entered in this
@@ -72,16 +72,14 @@ On the |ECO| form, fill in the following fields accordingly:
 After completing the |ECO| form, click the :guilabel:`Start Revision` button to begin implementing
 the changes.
 
-When clicking :guilabel:`Start Revision`, four actions occur:
+When clicking :guilabel:`Start Revision`, three actions occur:
 
 #. The :icon:`fa-file-text-o` :guilabel:`Documents` smart button appears, storing the relevant files
    of the |BOM|.
 #. A copy of the production |BOM| is stored in the :icon:`fa-flask` :guilabel:`Revision` smart
    button of the |ECO|. The next available version number (e.g., `V2`, `V3`, ...) is also assigned
    to keep track of all |BOM| versions.
-#. The :icon:`fa-exchange` :guilabel:`Review Changes` button appears, where all changes made to the
-   |ECO| can be reviewed.
-#. The stages of the |ECO| :guilabel:`Type` display at the top of the |ECO|.
+#. The stages of the |ECO| :guilabel:`Type` are displayed at the top of the |ECO|.
 
 .. note::
    The :guilabel:`Revision` smart button is available **only** when the :guilabel:`Bill of
@@ -181,15 +179,15 @@ To compare a revised |BOM| to the previous version, navigate to the |ECO| for th
 of these ways:
 
 #. From the revised |BOM|, click the |ECO| name (for example, `ECO0005: Improve...`) in the
-   breadcrumbs located in the top-left corner. Then, click the :icon:`fa-exchange` :guilabel:`Review
-   Changes` smart button.
+   breadcrumbs located in the top-left corner. Then, click the :icon:`fa-exchange`
+   :guilabel:`Review` smart button. This smart button only appears after changes are made to the
+   |BOM|.
 #. From the :guilabel:`PLM Overview`, click the :guilabel:`# Engineering Changes` button on the
    :guilabel:`BOM Updates` Kanban card. Click the Kanban card for the appropriate |ECO| to open it,
-   then click the :icon:`fa-exchange` :guilabel:`Review Changes` smart button at the top of the
-   |ECO| form.
+   then click the :icon:`fa-exchange` :guilabel:`Review` smart button at the top of the |ECO| form.
 
-Clicking the :icon:`fa-exchange` :guilabel:`Review Changes` smart button on the |ECO| form opens the
-*ECO Changes Summary* report. On this page, all changes are displayed. The changes are color-coded:
+Clicking the :icon:`fa-exchange` :guilabel:`Review` smart button on the |ECO| form opens the *ECO
+Changes Summary* report. On this page, all changes are displayed. The changes are color-coded:
 
 - **Green** text indicates the component or operation was added to the |BOM|.
 - **Red** text indicates the component or operation was removed from the |BOM|.
@@ -204,7 +202,7 @@ center form. Costs are listed in the :guilabel:`BoM Cost` field for each change.
 
 The list of component changes appears first in the report:
 
-- :guilabel:`Component`: Lists the name of the component.
+- :guilabel:`Components`: Lists the name of the component.
 - :guilabel:`Description`: Displays a description of the product if one is included on the product
   form.
 - :guilabel:`Quantity`: Displays the quantity and unit of measure being changed.
@@ -218,11 +216,11 @@ than the previous |BOM|, the cost change appears in **green**. If the total cost
 the previous |BOM|, the cost change appears in **red**.
 
 .. example::
-   View the summary of the differences between the current and revised keyboard |BOMs| in the *ECO
+   View the summary of the differences between the current and revised table |BOMs| in the *ECO
    Changes Summary* report of the |ECO|.
 
    .. image:: engineering_change_orders/bom-changes.png
-      :alt: View summary of component changes in the BoM Changes tab.
+      :alt: View summary of component changes in the ECO Changes Summary report.
 
 .. _plm/engineering_change_orders/apply-changes:
 
@@ -282,7 +280,7 @@ view the suggestion, select an |ECO| in the `New` stage.
 On the |ECO|, view a summary of the proposed changes in two ways:
 
 - From the :icon:`fa-flask` :guilabel:`Revision` smart button
-- From the :icon:`fa-exchange` :guilabel:`Review Changes` smart button
+- From the :icon:`fa-exchange` :guilabel:`Review` smart button
 
 .. example::
    An operator suggested verifying the angle of the table legs after they had been installed by
@@ -299,10 +297,13 @@ On the |ECO|, view a summary of the proposed changes in two ways:
    .. image:: engineering_change_orders/view-bom-change.png
       :alt: Find the new ECO in the "BOM Changes" ECO type, in the "New" stage.
 
-On the revised |BOM|, switch to the :guilabel:`Operations` tab and select the operation. Doing so
-opens a list of :guilabel:`Steps` to perform the operation, with the newest instruction titled `New
-Step Suggestion:`, followed by the user-entered title. Click the line item to view the suggested
-changes.
+On the revised |BOM|, switch to the :guilabel:`Operations` tab and select the operation.
 
-.. image:: engineering_change_orders/show-instructions.png
-   :alt: "Show Instructions" icon in the *Operations* tab of a BoM.
+.. example::
+   Continuing the previous example, after the responsible engineer opens the *Operations* tab, a
+   list of *Instructions* to perform the operation displays. The newest instruction is titled `New
+   Step Suggestion:`, followed by the user-entered title. Click the line item to view the suggested
+   changes.
+
+   .. image:: engineering_change_orders/show-instructions.png
+      :alt: Open the operation from the list to view its instructions.
