@@ -16,7 +16,6 @@ for use at a later date:
 
 .. seealso::
    - :doc:`Internal transfers <bank/internal_transfers>`
-   - :doc:`bank/reconciliation`
    - `Odoo Tutorials: Bank Configuration
      <https://www.odoo.com/slides/slide/bank-configuration-6832>`_
 
@@ -26,7 +25,7 @@ Payment methods
 ===============
 
 Several payment methods are available in Odoo to allow different configurations for different types
-of payments. Examples of payment methods include manual payments (such as cash), :doc:`checks
+of payments. Payment methods include manual payments (such as cash), :doc:`checks
 <payments/pay_checks>`, and batch payment files (such as :ref:`NACHA
 <l10n_us/ach-electronic-transfers>` and :doc:`SEPA <payments/sepa_payments>`). Payment methods can
 be configured in the :guilabel:`Incoming Payments` and :guilabel:`Outgoing Payments` tabs of a bank
@@ -40,15 +39,15 @@ or cash journal.
 Preferred payment method
 ------------------------
 
-A contact's preferred payment method can be set so that when a payment is created for that contact,
-the payment method is automatically selected by default. Invoices and bills can be filtered by
+A preferred payment method can be defined on a contact so that it is automatically selected when a
+payment is created for that contact. From the search bar, invoices and bills can be grouped by
 :guilabel:`Payment Method` to simplify :ref:`group <accounting/payments/group-payments>` payments.
 
 To set a preferred :guilabel:`Payment Method` for a customer or a vendor, go to
 :menuselection:`Accounting --> Customers --> Customers` or :menuselection:`Accounting --> Vendors
 --> Vendors` and select the customer or vendor. In the :guilabel:`Sales & Purchase` tab of the
 contact form, select the preferred :guilabel:`Payment Method` in the :guilabel:`Sales` section for
-invoice payments or for vendor bill payments in the :guilabel:`Purchase` section.
+invoice payments or in the :guilabel:`Purchase` section for vendor bill payments.
 
 .. tip::
    Access a full list of all contacts from the :guilabel:`Customers` or :guilabel:`Vendors` list
@@ -101,7 +100,7 @@ To register a payment for an invoice or a bill, follow these steps:
 #. Click :guilabel:`Pay` on a customer invoice or vendor bill. In the :guilabel:`Pay` window, select
    the :guilabel:`Journal` and the :guilabel:`Payment Date`.
 #. If previously set, the contact's preferred :guilabel:`Payment Method` is automatically selected
-   by default but can be updated if necessary.
+   but can be updated if necessary.
 #. If using :doc:`payment terms <customer_invoices/payment_terms>`, the :guilabel:`Amount` is
    automatically set based on the installment amounts defined by the payment term. To pay the full
    amount instead, click :guilabel:`full amount`.
@@ -115,14 +114,17 @@ After the payment is registered, the customer invoice or vendor bill is marked a
 
    .. group-tab:: Without outstanding accounts
 
-      If no :ref:`outstanding accounts <accounting/journals/outstanding-accounts>` are configured,
-      no journal entry is created. To display more information about the payment, click the
-      :guilabel:`Payments` smart button.
+      If no :ref:`outstanding accounts <accounting/journals/outstanding-accounts>` are configured:
 
-      When the invoice or vendor bill is :doc:`reconciled <bank/reconciliation>` with a bank
-      transaction, its status is updated to :guilabel:`Paid`.
+      - No journal entry is created.
+      - The :guilabel:`Amount Due` is not updated.
+      - After the invoice/bill is :doc:`reconciled <bank/reconciliation>` with a bank transaction,
+        the invoice/bill is marked as :guilabel:`Paid`.
+
+      More payment information is accessible by clicking the :guilabel:`Payments` smart button.
 
       .. note::
+
          - If a bank transaction is reconciled in a different currency, a journal entry is
            automatically created to post the currency exchange gains/loss amount.
          - When a bank transaction is reconciled with an invoice with cash-basis, a journal entry is
@@ -130,25 +132,25 @@ After the payment is registered, the customer invoice or vendor bill is marked a
 
    .. group-tab:: Using outstanding accounts
 
-      By default, payments in Odoo do not create journal entries, but they can easily be configured
-      to create journal entries using :ref:`outstanding accounts
-      <accounting/journals/outstanding-accounts>`.
+      If :ref:`outstanding accounts <accounting/journals/outstanding-accounts>` are configured:
 
-      Registering a payment on a customer invoice or vendor bill generates a new journal entry and
-      reduces the :guilabel:`Amount Due` based on the payment amount. The counterpart is
-      reflected in an :ref:`outstanding <accounting/journals/outstanding-accounts>` **receipts** or
-      **payments** account. At this point, the customer invoice or vendor bill is marked as
-      :guilabel:`In payment`. Then, when the payment is :doc:`reconciled <bank/reconciliation>` with
-      a bank transaction, the invoice or vendor bill status changes to :guilabel:`Paid`.
+      - A journal entry is created.
+      - The counterpart is reflected in an
+        :ref:`outstanding receipts or payments account <accounting/journals/outstanding-accounts>`.
+      - The :guilabel:`Amount Due` is reduced based on the payment amount.
+      - After the payment is :doc:`reconciled <bank/reconciliation>` with a bank transaction, the
+        invoice/bill is marked as :guilabel:`Paid`.
 
-      The :icon:`fa-info-circle` information icon next to the payment line displays more
-      information about the payment. To access additional information, such as the related journal,
-      click :guilabel:`View`.
+      More payment information is also accessible by clicking the :icon:`fa-info-circle`
+      :guilabel:`(information icon)` and clicking :guilabel:`view`.
 
-      .. image:: payments/information-icon.png
-         :alt: See detailed information of a payment.
+      .. tip::
+         If the main bank account is set as the outstanding account on the bank journal's payment
+         method, registering the full payment on an invoice or bill moves the invoice/bill directly
+         to the :guilabel:`Paid` status without requiring bank reconciliation.
 
       .. note::
+
          - Unreconciling a payment unlinks it from the invoice or bill but does not delete the
            payment.
          - If a payment is (un)reconciled in a different currency, a journal entry is automatically
@@ -156,35 +158,92 @@ After the payment is registered, the customer invoice or vendor bill is marked a
          - If a payment is (un)reconciled on an invoice with cash-basis taxes, a journal entry is
            automatically created to post the cash-basis tax (reversal) amount.
 
-      .. tip::
-         If the main bank account is set as the outstanding account on the bank journal's payment
-         method, registering the full payment on an invoice or bill moves the invoice/bill directly
-         to the :guilabel:`Paid` status without requiring bank reconciliation.
+.. _accounting/payments/online:
+
+Online payments
+---------------
+
+To make invoice payment more convenient, the :guilabel:`Invoice Online Payment` feature can be
+enabled, adding a :guilabel:`Pay Now` button to the customer portal. This allows customers to view
+invoices online and pay directly using their preferred payment method, simplifying the payment
+process.
+
+To activate the online payment, go to :menuselection:`Accounting --> Configuration --> Settings`,
+scroll down to the :guilabel:`Customer Payments` section to enable
+:guilabel:`Invoice Online Payment`, and click :guilabel:`Save`.
+
+After creating the invoice, click :guilabel:`Send` to email it to the customer, who receives an
+email with a link to view the invoice on their customer portal. From there, they can click
+:guilabel:`Pay Now` to select a :ref:`Payment Provider <payment_providers/online_providers>`.
+
+.. note::
+   - Make sure :ref:`payment providers <payment_providers/supported_providers>` are configured
+     correctly.
+   - By default, :ref:`Wire Transfer <payment_providers/bank_payments/wire_transfer>` is the only
+     enabled payment provider, but payment details must still be entered.
+
+.. seealso::
+   :doc:`/applications/finance/payment_providers`
+
+As soon as the customer has paid, a payment for the invoice is registered, and the invoice is marked
+as :guilabel:`In payment`.
+
+.. tabs::
+
+   .. group-tab:: Without outstanding accounts
+
+      If the payment method configured in the payment provider has no :ref:`outstanding accounts
+      <accounting/journals/outstanding-accounts>`:
+
+      - No journal entry created.
+      - The :guilabel:`Amount Due` is not updated.
+      - After the invoice is :doc:`reconciled <bank/reconciliation>` with a bank transaction, the
+        invoice is marked as :guilabel:`Paid`.
+
+   .. group-tab:: Using outstanding accounts
+
+      If the payment method configured in the payment provider has :ref:`outstanding accounts
+      <accounting/journals/outstanding-accounts>`:
+
+      - A journal entry is created.
+      - The counterpart is reflected in an
+        :ref:`outstanding receipts or payments account <accounting/journals/outstanding-accounts>`.
+      - The :guilabel:`Amount Due` is reduced based on the payment amount.
+      - After :doc:`reconciliation <bank/reconciliation>` between the payment and the bank
+        transaction, the invoice is marked as :guilabel:`Paid`.
 
 .. _accounting/payments/not-tied:
 
 Registering payments not tied to an invoice or bill
 ===================================================
 
-When a new payment is registered via :menuselection:`Customers / Vendors --> Payments`, it is not
-directly linked to an invoice or bill.
+When a new payment is registered via :menuselection:`Accounting --> Customers --> Payments` or
+:menuselection:`Accounting --> Vendor --> Payments`, it is not directly linked to an invoice or
+bill.
 
 .. tabs::
 
    .. group-tab:: Without outstanding accounts
 
-      Payments that are not linked to an invoice or bill should not be registered without using
-      :ref:`outstanding accounts <accounting/journals/outstanding-accounts>`, as there is no way to
-      associate the payment with the invoice or bill since no journal entry is created for the
-      payment. The amount paid or received is not reflected in the accounting and the
-      :guilabel:`Amount Due` is not updated based on the payment amount.
+      Stand-alone payments should not be registered without using
+      :ref:`outstanding accounts <accounting/journals/outstanding-accounts>` as:
+
+      - No journal entries are created.
+      - The payment cannot be linked to the invoice/bill.
+      - The amount paid or received is not reflected in the accounting.
+      - The :guilabel:`Amount Due` is not updated based on the payment amount.
 
    .. group-tab:: Using outstanding accounts
+      For stand-alone payments using :ref:`outstanding accounts
+      <accounting/journals/outstanding-accounts>`:
 
-      Instead, the payment's journal entry matches the :guilabel:`outstanding account` with the
-      account receivable or the account payable until the payment is manually matched with its
-      related invoice or bill. Then, :doc:`reconciling <bank/reconciliation>` the payment with the
-      bank transaction completes the payment workflow.
+      - A journal entry is created for the payment
+      - The payment's journal entry matches the :ref:`outstanding accounts
+        <accounting/journals/outstanding-accounts>` with the account receivable or the account
+        payable until the payment is manually matched with its related invoice or bill.
+
+      Then, :ref:`reconciling <accounting/reconciliation/access>` the payment with the bank
+      transaction completes the payment workflow.
 
 .. _accounting/payments/payments-matching:
 
@@ -210,9 +269,10 @@ For a single invoice or bill
 
    .. group-tab:: Using outstanding accounts
 
-      A blue banner appears when validating a new invoice/bill and an **outstanding payment** exists
-      for this specific customer or vendor. To match it with the invoice or bill, click
-      :guilabel:`Add` under :guilabel:`Outstanding Credits` or :guilabel:`Outstanding Debits`.
+      A blue banner appears on top of the invoice/bill when validating it, and an outstanding
+      payment exists for this specific customer or vendor. To match it with the invoice
+      or bill, click :guilabel:`Add` under :guilabel:`Outstanding Credits` or
+      :guilabel:`Outstanding Debits`.
 
       .. image:: payments/add-option.png
          :alt: Shows the Add option to reconcile an invoice or a bill with a payment.
@@ -237,9 +297,12 @@ For multiple invoices or bills
 
       The :guilabel:`Payments matching` or :guilabel:`Auto-reconcile` tool allows reconciling
       journal items with each other (i.e., payments with customer invoices or vendor bills) either
-      individually or in batches. Access the :guilabel:`Accounting Dashboard`, click the
-      :icon:`fa-ellipsis-v` (:guilabel:`ellipsis`) button from the :guilabel:`Customer
-      Invoices` or :guilabel:`Vendor Bills` journals, and select :guilabel:`Payments Matching`.
+      individually or in batches:
+
+      #. Access the :guilabel:`Accounting Dashboard`.
+      #. Click the :icon:`fa-ellipsis-v` (:guilabel:`ellipsis`) button from the :guilabel:`Customer
+         Invoices` or :guilabel:`Vendor Bills` journals, and select :guilabel:`Payments Matching`.
+
       Alternatively, go to :menuselection:`Accounting --> Accounting --> Reconcile`.
 
       To manually :guilabel:`Reconcile` journal items, select the individual items from the list
@@ -334,13 +397,11 @@ Payments matching
 -----------------
 
 The :guilabel:`Payments matching` tool opens all unreconciled journal items and allows them to be
-processed individually, matching all payments and journal items. Go to the
-:guilabel:`Accounting Dashboard`, go to :menuselection:`Accounting --> Accounting --> Reconcile` or
-click the :icon:`fa-ellipsis-v` (:guilabel:`ellipsis`) button from the :guilabel:`Customer
-Invoices` or :guilabel:`Vendor Bills` journals, and select :guilabel:`Payments Matching`.
-
-.. image:: payments/payments-journal.png
-   :alt: Payments matching menu in the drop-down menu.
+processed individually, matching all payments and journal items. Go to
+:menuselection:`Accounting --> Accounting --> Reconcile` or go to the
+:guilabel:`Accounting Dashboard`, click the :icon:`fa-ellipsis-v` (:guilabel:`ellipsis`) button from
+the :guilabel:`Sales` or :guilabel:`Purchases` journals, and select
+:guilabel:`Payments Matching`.
 
 .. note::
    During the :doc:`reconciliation <bank/reconciliation>`, if the sum of the debits and credits does
@@ -374,9 +435,6 @@ To register a partial payment, click on :guilabel:`Pay` from the related invoice
         field and change the :guilabel:`Label` if needed. A journal entry will be created to balance
         the accounts payable or receivable with the selected account.
 
-      .. image:: payments/partial-payment.png
-         :alt: register a partial payment
-
 .. _accounting/payments/reconciling-payments:
 
 Reconciling payments with bank transactions
@@ -401,7 +459,6 @@ Reconciling payments with bank transactions
 .. toctree::
    :titlesonly:
 
-   payments/online
    payments/batch
    payments/sepa_payments
    payments/follow_up

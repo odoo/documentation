@@ -292,7 +292,7 @@ quotation, set the checkboxes next to either (or both) of these labels in the :g
 tab, under the :guilabel:`SALES` section.
 
 .. seealso::
-   - :doc:`/applications/finance/accounting/payments/online`
+   - :ref:`Online Payments <accounting/payments/online>`
    - :doc:`Payment providers and payment methods </applications/finance/payment_providers>`
 
 .. toctree::
