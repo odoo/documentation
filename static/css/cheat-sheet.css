@@ -1,0 +1,92 @@
+/* Styles shared by the accounting and valuation cheat sheets */
+
+/* Highlighting of the selected options and of the related cells */
+label:hover {
+    background-color: hsl(0, 0%, 94%);
+    cursor: pointer;
+}
+.related {
+    background-color: hsl(317deg 16% 90%) !important;
+    border: 1px solid #000000 !important;
+    transition: background-color .3s, border-color .3s, color .3s;
+}
+.secondary {
+    background-color: hsl(180deg 67% 94%) !important;
+    transition: .3s;
+}
+.highlight-op {
+    background-color: hsl(317deg 16% 90%) !important;
+    transition: .3s;
+}
+
+/* Controls of the dynamic examples */
+.chart-controls label,
+.entries-control label,
+.valuation-controls label,
+.alternatives-controls label {
+    display: block;
+}
+
+/* Tables of values: first column left-aligned, the others right-aligned */
+.values-table tr > * {
+    text-align: right;
+}
+.values-table tr > :first-child {
+    text-align: left;
+}
+
+/* 3-column (thing, debit, credit) tables */
+/* Amount columns right-aligned and only as wide as their content, the 1st one takes the rest */
+.d-c-table {
+    width: 100%;
+}
+.d-c-table tr > :nth-child(n + 2) {
+    width: 1%;
+    white-space: nowrap;
+    text-align: right;
+}
+
+/* Charts of accounts (accounting and valuation): categories in bold, accounts indented */
+.chart-of-accounts.container, .chart-of-accounts.doc-aside {
+    padding: 0 !important;
+    overflow-x: auto;
+}
+.chart-of-accounts table {
+    width: 100%;
+}
+.chart-of-accounts td:not(:first-child) {
+    white-space: nowrap;
+}
+.chart-of-accounts p {
+    margin: 0;
+    padding: 0;
+}
+.chart-of-accounts :is(.account-1, .account-2, .account-3, .account-4, .account-5, .category) {
+    font-weight: 700;
+}
+.chart-of-accounts td:first-child p:not(.account-1, .account-2, .account-3, .account-4, .account-5, .category) {
+    padding-left: 1rem;
+}
+@media (min-width: 992px) {
+    .chart-of-accounts .highlight-op {
+        background-color: #030035;
+        border-bottom: 1px solid #000000 !important;
+    }
+}
+
+/* Journal entries: explanation and configuration listings */
+.entries-listing {
+    padding: .5rem;
+}
+.journal-entries :is(th, td, li) p {
+    margin: 0;
+    padding: 0;
+}
+.journal-entries .entries-listing > .rubric {
+    margin: 0 0 .5rem;
+    padding: 0;
+    font-style: normal;
+}
+.journal-entries .entries-listing > p:not(.rubric) {
+    font-style: italic;
+}
