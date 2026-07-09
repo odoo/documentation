@@ -4494,7 +4494,13 @@ The view's root element is ``<map>``. It can have the following attributes:
 ``limit``
     Maximum number of records to fetch (default: ``80``). It must be a positive integer.
 
-The ``<map>`` element can contain multiple ``<field>`` elements. Each ``<field>`` element is interpreted as a line in the pin's popup. The field's attributes are the following:
+The ``<map>`` element accepts two kinds of child elements: ``<field>`` and :ref:`popover
+<reference/view_architectures/map/popover>`.
+
+When a record's pin is clicked, a popover opens to display some of its fields. When the view doesn't
+define a :ref:`popover <reference/view_architectures/map/popover>` element, those fields are the
+``<field>`` elements declared directly under the ``<map>`` root element; each ``<field>`` is
+interpreted as a line in the popover, in the given order. The field's attributes are the following:
 
 .. rst-class:: o-definition-list
 
@@ -4504,11 +4510,73 @@ The ``<map>`` element can contain multiple ``<field>`` elements. Each ``<field>`
     String to display before the field's content. It can be used as a description.
 
 For example here is a map:
-    .. code-block:: xml
+
+.. example::
+   .. code-block:: xml
 
         <map res_partner="partner_id" default_order="date_begin" routing="ordered" hide_name="1">
             <field name="partner_id" string="Customer Name"/>
         </map>
+
+.. _reference/view_architectures/map/popover:
+
+`popover`: customize the record's popover
+-----------------------------------------
+
+For full control over the popover's structure, a single ``<popover>`` element can be added as a
+direct child of the ``<map>`` root element, instead of relying on the automatically generated
+popover described above.
+
+.. example::
+   .. code-block:: xml
+
+    <map res_partner="partner_id">
+        <popover>
+            <templates>
+                <t t-name="popover-header">
+                    <field name="name"/>
+                </t>
+                <t t-name="popover-body">
+                    <field name="partner_id"/>
+                </t>
+                <t t-name="popover-footer">
+                    <button class="btn btn-secondary" type="object" name="my_method" string="Do something"/>
+                </t>
+            </templates>
+        </popover>
+    </map>
+
+Those templates can be defined to customize the popover:
+
+  .. rst-class:: o-definition-list
+
+  ``popover-header``
+    If defined, rendered as the popover header. By default, no header is displayed.
+
+  ``popover-body``
+    The main content of the popover, equivalent to the ``card`` template in a
+    :ref:`card view <reference/view_architectures/card>`.
+
+  ``popover-footer``
+    If defined, replaces the default footer, which contains a single :guilabel:`Edit` or
+    :guilabel:`View` button (the label depends on the user's access rights). Set
+    ``replace="0"`` on the ``<t t-name="popover-footer">`` node to keep the default button
+    and append the custom content after it.
+
+  The templates use the same API as :ref:`card view templates
+  <reference/view_architectures/card/templates>`: ``<field>`` nodes, widgets, dynamic
+  attributes, ``t-if``, etc. The rendering context is identical to that of card views.
+
+Moreover, the ``<popover>`` element accepts the following attribute:
+
+.. attribute:: card_id
+   :noindex:
+
+   Id of a `card` view to use to render the popover, as an alternative (or in addition) to the
+   ``templates`` element described above. When provided, this card is used as template body.
+
+   :requirement: Optional
+   :type: int
 
 .. _`accesskey`: https://www.w3.org/TR/html5/editing.html#the-accesskey-attribute
 .. _`bootstrap contextual color`: https://getbootstrap.com/docs/3.3/components/#available-variations
