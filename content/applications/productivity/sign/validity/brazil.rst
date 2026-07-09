@@ -10,10 +10,15 @@ electronic signatures in Brazil.
 Legal framework for electronic signatures in Brazil
 ===================================================
 
-In Brazil, electronic signatures are regulated under the `Brazilian Civil Code <https://webfiles-sc1.blackbaud.com/files/support/helpfiles/npoconnect-qa/content/resources/attachments/brazil-law-civil-code-13.777-2018.pdf>`_
-and the Provisional Executive Act 2.200-2 (EA 2200) regulations. The law governs transactions
-performed through electronic means and the use of electronic signatures. The key points of the law
-include:
+In Brazil, electronic signatures are regulated under the `Medida Provisória 2.200-2/2001 (ICP-Brasil) <https://www.planalto.gov.br/ccivil_03/mpv/antigas_2001/2200-2.htm>`_,
+the `Lei 14.063/2020 (tiered e-signature framework) <https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14063.htm>`_,
+and the `Lei 14.129/2021 (Digital Government Act) <https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14129.htm>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures. ICP-Brasil
+provides the national PKI for digital certificates, and recent statutes set tiered requirements for
+public-sector transactions.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -74,4 +79,5 @@ not be suitable or legally recognized in Brazil:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 19, 2024*
+*Last updated: June 4, 2026*
+

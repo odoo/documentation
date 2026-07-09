@@ -10,11 +10,11 @@ electronic signatures in Australia.
 Legal framework for electronic signatures in Australia
 ======================================================
 
-In Australia, electronic signatures are regulated under the `Electronic Transactions Act (ETA)
-<https://www.legislation.gov.au/C2004A00553/latest/text>`_, the `Electronic Transactions Regulations
-(ETR) <https://www.legislation.wa.gov.au/legislation/prod/filestore.nsf/FileURL/mrdoc_23907.pdf/$FILE/Electronic%20Transactions%20Regulations%202012%20-%20%5B00-a0-04%5D.pdf?OpenElement>`_
-and local regulations in each state. The law governs transactions performed through electronic means
-and the use of electronic signatures. The key points of the law include:
+In Australia, electronic signatures are regulated under the `Electronic Transactions Act 1999 <https://www.legislation.gov.au/C2004A00887>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -69,4 +69,4 @@ not be suitable or legally recognized in Australia:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 19, 2024*
+*Last updated: June 4, 2026*

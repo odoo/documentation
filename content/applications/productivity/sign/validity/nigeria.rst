@@ -10,10 +10,15 @@ electronic signatures in Nigeria.
 Legal framework for electronic signatures in Nigeria
 ====================================================
 
-In Nigeria, electronic signatures are regulated under the `Nigerian Evidence Act
-<https://www.refworld.org/legal/legislation/natlegbod/2011/en/104226>`_. The law governs
-transactions performed through electronic means and the use of digital signatures. The key points of
-the law include:
+In Nigeria, electronic signatures are regulated under the
+`Cybercrimes (Prohibition, Prevention, etc.) Act 2015
+<https://www.nassnig.org/document/download/8967>`_
+and the `Evidence Act 2011 (as amended 2023)
+<https://www.nassnig.org/document/download/9019>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -68,4 +73,4 @@ not be suitable or legally recognized in Nigeria:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*

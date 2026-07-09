@@ -10,10 +10,17 @@ electronic signatures in Morocco.
 Legal framework for electronic signatures in Morocco
 ====================================================
 
-In Morocco, electronic signatures are regulated under the `Law No. 53-05 on Digital Signature
-<https://tahseen.ae/media/3036/law-on-electronic-exchange-of-legal-data.pdf>`_. The law establishes
-the legal basis for acknowledging electronic records, contracts, and digital signatures. The key
-points of the law include:
+In Morocco, electronic signatures are regulated under the
+`Loi 53-05 sur l'échange électronique (ANRT)
+<https://www.anrt.ma/fr/loi-n%C2%B0-53-05-relative-%C3%A0-l%C3%A9change-%C3%A9lectronique-de-donn%C3%A9es-juridiques>`_
+and the `Loi 43-20 sur les Services de Confiance (ANRT)
+<https://www.anrt.ma/fr/loi-n-43-20-relative-aux-services-de-confiance>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures. The
+framework defines multiple signature categories with different legal effects depending on the
+document and context.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -70,4 +77,5 @@ not be suitable or legally recognized in Morocco:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*
+

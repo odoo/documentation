@@ -10,12 +10,13 @@ electronic signatures in Russia.
 Legal framework for electronic signatures in Russia
 ===================================================
 
-In Russia, electronic signatures are regulated under the `Federal Law No. 63-FZ as of 6 April 2011
-"On electronic signature" <https://afyonluoglu.org/PublicWebFiles/e-imza/int-legislation/Russia-Federal%20Law%20on%20e-Signatures.pdf>`_
-and the `Civil Code of the Russian Federation
-<https://www.wto.org/english/thewto_e/acc_e/rus_e/wtaccrus58_leg_360.pdf>`_. The law provides the
-foundation for the use and legal recognition of electronic signatures. The key points of the law
-include:
+In Russia, electronic signatures are regulated under the
+`Federal Law No. 63-FZ on Electronic Signatures
+<https://pravo.gov.ru/proxy/ips/?docbody=&nd=102145937>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -74,4 +75,4 @@ not be suitable or legally recognized in Russia:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 19, 2024*
+*Last updated: June 4, 2026*

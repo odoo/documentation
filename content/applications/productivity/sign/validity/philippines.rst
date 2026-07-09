@@ -11,9 +11,11 @@ Legal framework for electronic signatures in the Philippines
 ============================================================
 
 In the Philippines, electronic signatures are regulated under the `Republic Act No. 8792
-<https://www.bsp.gov.ph/PaymentAndSettlement/RA8792.pdf>`_ and the `Electronic Commerce Act
-<https://pdf.usaid.gov/pdf_docs/pnacn440.pdf>`_. The law governs the use of electronic records and
-signatures. The key points of the law include:
+<https://www.officialgazette.gov.ph/2000/06/14/republic-act-no-8792/>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -72,4 +74,4 @@ not be suitable or legally recognized in the Philippines:
    use cases meet all legal requirements. Compliance with additional industry-specific regulations
    may also be necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*
