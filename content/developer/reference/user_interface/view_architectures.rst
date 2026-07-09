@@ -4346,53 +4346,6 @@ take the following attributes:
   comma-separated list of allowed scales for this view. By default, all scales
   are allowed. For possible scale values to use in this list, see ``default_scale``.
 
-``card_id``
-  The ID of the :ref:`card view <reference/view_architectures/card>` to use as the body of the
-  popover displayed when hovering over a record. The ``templates`` element can still be used
-  alongside ``card_id`` to define a ``popover-header`` and/or a ``popover-footer``.
-
-``templates``
-  Defines the :ref:`QWeb <reference/qweb>` templates used to render the popover displayed when
-  hovering over a record. Those templates can be defined:
-
-  .. rst-class:: o-definition-list
-
-  ``popover-header``
-    If defined, rendered as the popover header. By default, no header is displayed.
-
-  ``popover-body``
-    The main content of the popover, equivalent to the ``card`` template in a
-    :ref:`card view <reference/view_architectures/card>`. If omitted, defaults to showing the
-    start and stop date fields. Can be replaced by a ``card_id`` attribute instead.
-
-  ``popover-footer``
-    If defined, replaces the default footer, which contains a single :guilabel:`Edit` or
-    :guilabel:`View` button (the label depends on the user's access rights). Set
-    ``replace="0"`` on the ``<t t-name="popover-footer">`` node to keep the default button
-    and append the custom content after it.
-
-  The templates use the same API as :ref:`card view templates
-  <reference/view_architectures/card/templates>`: ``<field>`` nodes, widgets, dynamic
-  attributes, ``t-if``, etc. The rendering context is identical to that of card views.
-
-  .. example::
-     .. code-block:: xml
-
-        <gantt date_start="start" date_stop="stop">
-            <templates>
-                <t t-name="popover-header">
-                    <field name="display_name"/>
-                </t>
-                <t t-name="popover-body">
-                    <field name="user_id"/>
-                    <field name="stage_id"/>
-                </t>
-                <t t-name="popover-footer" replace="0">
-                    <button name="action_custom" type="object" string="Custom Action"/>
-                </t>
-            </templates>
-        </gantt>
-
 ``form_view_id``
   view to open when the user create or edit a record. Note that if this attribute
   is not set, the gantt view will fall back to the id of the form view in the
@@ -4445,6 +4398,74 @@ take the following attributes:
    :default: `False`
 
 .. include:: view_architectures/root_attribute_sample.rst
+
+Components
+----------
+
+.. _reference/view_architectures/gantt/popover:
+
+``popover``
+  For full control over the popover displayed when hovering over a record, a single
+  ``<popover>`` element can be added as a direct child of the ``<gantt>`` root element. If no
+  ``<popover>`` element is defined, the popover displays the start and stop date fields.
+
+  .. example::
+      .. code-block:: xml
+
+         <gantt date_start="start" date_stop="stop">
+               <popover>
+                  <templates>
+                     <t t-name="popover-header">
+                           <field name="display_name"/>
+                     </t>
+                     <t t-name="popover-body">
+                           <field name="user_id"/>
+                           <field name="stage_id"/>
+                     </t>
+                     <t t-name="popover-footer" replace="0">
+                           <button name="action_custom" type="object" string="Custom Action"/>
+                     </t>
+                  </templates>
+               </popover>
+         </gantt>
+
+  The ``<popover>`` element accepts the following attribute:
+
+  .. rst-class:: o-definition-list
+  .. attribute:: card_id
+     :noindex:
+
+     Id of a :ref:`card view <reference/view_architectures/card>` to use to render the popover,
+     as an alternative (or in addition) to the ``templates`` element described below. When
+     provided, this card is used as the popover's body.
+
+     :requirement: Optional
+     :type: int
+
+  The ``<popover>`` element contains a ``templates`` element, defining the
+  :ref:`QWeb <reference/qweb>` templates used to render the popover. Those templates can be
+  defined:
+
+  .. rst-class:: o-definition-list
+
+  ``popover-header``
+   If defined, rendered as the popover header. By default, no header is displayed.
+
+  ``popover-body``
+   The main content of the popover, equivalent to the ``card`` template in a
+   :ref:`card view <reference/view_architectures/card>`. If omitted, defaults to showing the
+   start and stop date fields, unless a ``card_id`` is provided, in which case the referenced
+   card's body is used instead.
+
+  ``popover-footer``
+   If defined, replaces the default footer, which contains a single :guilabel:`Edit` or
+   :guilabel:`View` button (the label depends on the user's access rights). Set
+   ``replace="0"`` on the ``<t t-name="popover-footer">`` node to keep the default button
+   and append the custom content after it.
+
+  The templates use the same API as :ref:`card view templates
+  <reference/view_architectures/card/templates>`: ``<field>`` nodes, widgets, dynamic
+  attributes, ``t-if``, etc. The rendering context is identical to that of card views.
 
 .. _reference/view_architectures/map:
 
