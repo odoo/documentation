@@ -8,46 +8,51 @@ the work of your cashiers.
 .. important::
    - Ingenico payment terminals require an :doc:`IoT system </applications/general/iot>`.
    - Ingenico is currently only available in Belgium, the Netherlands and Luxembourg.
-   - Odoo works with the Ingenico Lane/, Desk/, and Move/ payment terminals as they support the TLV
-     communication protocol through TCP/IP.
+   - Odoo works with Ingenico's `Lane/5000
+     <https://ingenico.com/en/products-services/payment-terminals/tetra/lane5000-le>`_, `Desk/5000
+     <https://ingenico.com/en/products-services/payment-terminals/tetra/desk5000>`_, `Move/5000
+     <https://ingenico.com/en/products-services/payment-terminals/tetra/move5000>`_ payment
+     terminals, as they support the TLV communication protocol through TCP/IP.
 
-Configuration
-=============
+.. _pos/ingenico/terminal-configuration:
 
-Connect an IoT system
----------------------
+Ingenico terminal configuration
+===============================
 
-Connecting an Ingenico payment terminal to Odoo is a feature that requires an IoT system. For more
-information on how to connect an IoT system to your database, please refer to the :doc:`IoT
-documentation </applications/general/iot>`.
+To configure the Lane/5000, Desk/5000, or Move/5000, follow these steps:
 
-Configure the Lane/Desk/Move 5000 terminals for Ingenico BENELUX
-----------------------------------------------------------------
+#. Press the function button (:guilabel:`F` on the Lane/5000 terminal, :guilabel:`⦿` on the
+   Desk/5000 and Move/5000 terminals).
+#. Go to :menuselection:`Kassa Menu --> Settings Menu`, enter the settings password (default:
+   `2009`), and press :guilabel:`OK`.
+#. Select :guilabel:`Protocol` and press :guilabel:`OK`.
+#. Select :guilabel:`CTEP` and press :guilabel:`OK`.
+#. Select :guilabel:`Change Connection` and press :guilabel:`OK`.
+#. Select :guilabel:`TCP/IP` and press :guilabel:`OK`. Then, select :guilabel:`IP-address` and press
+   :guilabel:`OK`.
+#. Enter the IoT system's IP address and press :guilabel:`OK`.
+#. Enter port number `9001` if using an IoT box or `9050` if using the Windows virtual IoT.
+#. Select :guilabel:`No SSL` and press :guilabel:`OK`.
 
-#. Press the function button (:guilabel:`F` on Lane/5000, :guilabel:`⦿` on Desk/5000 and
-   Move/5000).
-#. Go to :menuselection:`Kassa menu --> Settings Menu` and enter the settings password (default:
-   `2009`).
-#. Select :guilabel:`Change Connection` and press :guilabel:`OK` on the next screen.
-#. Select :guilabel:`TCP/IP` and :guilabel:`IP-address`.
-#. On the next screen, enter the IP address of your IoT system.
-#. Enter `9000` as port number and press :guilabel:`OK` on the next screen.
-
-At this point, the terminal restarts and should be displayed on the IoT system's form in Odoo.
+The terminal restarts and should be displayed on the IoT system's form in Odoo.
 
 .. image:: ingenico/payment_terminal_02.png
    :align: center
 
-Configure the payment method
-----------------------------
+.. _pos/ingenico/payment-method:
 
-Enable the payment terminal :ref:`in the application settings <pos/use/settings>` and :doc:`create
-the related payment method <../../payment_methods>`. Set the journal type as :guilabel:`Bank` and
-select :guilabel:`Ingenico` in the :guilabel:`Use a Payment Terminal` field. Then, select your
-terminal device in the :guilabel:`Payment Terminal Device` field.
+Odoo configuration
+==================
 
-.. image:: ingenico/payment-method.png
+The configuration of an Ingenico terminal with Odoo requires to first :doc:`connect the IoT system
+to Odoo </applications/general/iot/connect>`, then to enable the :guilabel:`Worldline` terminal in
+the :ref:`POS settings <pos/use/settings>` under the :guilabel:`Payment Terminals` section.
 
-Once the payment method is created, you can select it in your POS settings. To do so, go to the
-:ref:`POS' settings <pos/use/settings>`, click :guilabel:`Edit`, and add the payment method under
-the :guilabel:`Payments` section.
+To connect the Ingenico terminal with Odoo Point of Sale, follow these steps:
+
+#. Go to :menuselection:`Point of Sale --> Configuration --> Payment Methods` and :doc:`create a
+   payment method <../../payment_methods>`.
+#. Set the :guilabel:`Journal` field to :guilabel:`Bank`.
+#. Set the :guilabel:`Point of Sale` field to the desired point of sale.
+#. Set the :guilabel:`Integration` field to :guilabel:`Terminal`.
+#. Select the Worldline terminal number in the :guilabel:`Payment Terminal Device` field, then save.
