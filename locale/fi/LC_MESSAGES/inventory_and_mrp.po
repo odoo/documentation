@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-03 17:31+0000\n"
+"POT-Creation-Date: 2026-07-10 17:30+0000\n"
 "PO-Revision-Date: 2026-07-05 00:08+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Finnish <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -8221,6 +8221,7 @@ msgstr "Mittayksikkö"
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:304
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:102
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:159
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:80
 msgid "Packages"
 msgstr "Pakkaukset"
 
@@ -8698,7 +8699,6 @@ msgstr ""
 "laskemiseen toimituskuluja varten."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:46
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:135
 msgid ""
 "On the :guilabel:`Package Types` list, clicking :guilabel:`New` opens a "
 "blank package type form. The fields of the form are as follows:"
@@ -8736,12 +8736,11 @@ msgstr ""
 "tuotelomakkeen :guilabel:`Varastointi` -välilehdellä."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:59
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:148
 msgid ":guilabel:`Max Weight`: maximum shipping weight allowed in the package."
 msgstr ":guilabel:`Enimmäispaino`: paketissa sallittu enimmäistoimituspaino."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:60
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:149
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:144
 msgid ""
 ":guilabel:`Barcode`: Define a barcode to identify the package type from a "
 "scan."
@@ -8776,7 +8775,7 @@ msgstr ""
 "yrityksissä."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:69
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:152
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:157
 msgid ""
 ":guilabel:`Carrier`: Specify the intended shipping carrier for this package "
 "type."
@@ -8785,7 +8784,7 @@ msgstr ""
 "toimituskuljettaja."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:70
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:153
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:158
 msgid ""
 ":guilabel:`Carrier Code`: Define a code that is linked to the package type."
 msgstr ""
@@ -9063,53 +9062,36 @@ msgstr "Tuotteiden säilyttäminen irtotavarana."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:18
 msgid ""
-":guilabel:`Package Use` is a field on the package form in Odoo that is only "
-"visible by enabling the :guilabel:`Batch, Wave & Cluster Transfers` "
+":guilabel:`Package Use` is a field on the package type form in Odoo that is "
+"only visible by enabling the :guilabel:`Batch, Wave & Cluster Transfers` "
 "and :guilabel:`Packages` features (:menuselection:`Inventory app --> "
 "Configuration --> Settings`)."
 msgstr ""
-":guilabel:`Paketin käyttö` on kenttä paketin lomakkeessa Odoo-"
-"järjestelmässä, joka näkyy vain ottamalla käyttöön :guilabel:`Erä-, aalto- "
-"ja klusterisiirrot`- ja :guilabel:`Paketit`-ominaisuudet "
-"(:menuselection:`Varastointi-sovellus --> Asetukset --> Asetukset`)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:22
 msgid ""
-"By default, the :guilabel:`Package Use` field on a packages form is set "
-"to :guilabel:`Disposable Box`. Change this field to :guilabel:`Reusable Box` "
-"**only** when configuring packages for :ref:`cluster pickings <inventory/"
-"warehouses_storage/cluster-pack>`."
+"By default, the :guilabel:`Package Use` field on a package type form is set "
+"to :guilabel:`Disposable Box`. **Only** change this field "
+"to :guilabel:`Reusable Box` when configuring packages for :ref:`cluster "
+"pickings <inventory/warehouses_storage/cluster-pack>`."
 msgstr ""
-"Oletusarvoisesti paketin lomakkeen :guilabel:`Paketin käyttö`-kenttä on "
-"asetettu tilaan :guilabel:`Kertakäyttöinen laatikko`. Muuta tämä kenttä "
-"tilaan :guilabel:`Uudelleenkäytettävä laatikko` **vain** määritettäessä "
-"paketteja :ref:`klusterikeräilyihin <inventory/warehouses_storage/cluster-"
-"pack>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:26
 msgid ""
-":guilabel:`Package Type` is an optional feature used for :doc:`calculating "
+":guilabel:`Package Type` is a feature most often used for :doc:`calculating "
 "shipping cost <../../shipping_receiving/setup_configuration>`, based on real "
 "shipping weight. Create package types to include the weight of the package "
 "itself (e.g. boxes, pallets, other shipping containers) in shipping cost "
 "calculations."
 msgstr ""
-":guilabel:`Pakkaustyyppi` on valinnainen ominaisuus, jota "
-"käytetään :doc:`toimituskulujen laskemiseen <../../shipping_receiving/"
-"setup_configuration>` todellisen toimituspainon perusteella. Luo "
-"pakkaustyyppit sisällyttääksesi pakkauksen itsensä painon (esim. laatikot, "
-"kuormalavat, muut toimitusastiat) toimituskulujen laskelmiin."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:32
 msgid ""
 "While packages are commonly used in the :doc:`three-step delivery route "
 "<../../shipping_receiving/daily_operations/delivery_three_steps>`, they can "
-"be used in any workflow involving storable products."
+"be used in any workflow involving products tracked by quantity, lots, or "
+"serial numbers."
 msgstr ""
-"Vaikka pakkauksia käytetään yleisesti :doc:`kolmivaiheisessa "
-"toimitusreitissä <../../shipping_receiving/daily_operations/"
-"delivery_three_steps>`, niitä voidaan käyttää missä tahansa työnkulussa, "
-"joka sisältää varastoitavia tuotteita."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:41
 msgid ""
@@ -9301,38 +9283,45 @@ msgstr ""
 msgid ":doc:`../../shipping_receiving/setup_configuration`"
 msgstr ":doc:`../../shipping_receiving/setup_configuration`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:138
-msgid ":guilabel:`Package Type` (required): define the package type's name."
-msgstr ":guilabel:`Pakettityyppi` (pakollinen): määritä pakettityypin nimi."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:139
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:135
 msgid ""
-":guilabel:`Size`: define the dimensions of the package in millimeters (mm). "
-"The fields, from left to right, define "
-"the :guilabel:`Length`, :guilabel:`Width`, and :guilabel:`Height`."
+"On the :guilabel:`Package Types` list, clicking :guilabel:`New` opens a "
+"blank package type form."
 msgstr ""
-":guilabel:`Koko`: määritä paketin mitat millimetreinä (mm). Kentät "
-"määrittelevät vasemmalta oikealle :guilabel:`Pituuden`, :guilabel:`Leveyden` "
-"ja :guilabel:`Korkeuden`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:141
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:137
+msgid "Define the :guilabel:`Package Type` name."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:140
+msgid "Configuration tab"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:142
 msgid ""
-":guilabel:`Weight`: weight of an empty package (e.g. an empty box, pallet)."
+"The following fields are available in the *Configuration* tab of a package "
+"type form:"
 msgstr ""
-":guilabel:`Paino`: tyhjän paketin paino (esim. tyhjä laatikko tai lava)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:144
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:145
 msgid ""
-"Odoo calculates the package's weight by adding the weight of the empty "
-"package plus the weight of the item(s), which can be found in "
-"the :guilabel:`Weight` field, in the :guilabel:`Inventory` tab, of each "
-"product form."
+":guilabel:`Sequence prefix`: Specify the prefix to use when creating new "
+"packages of this type."
 msgstr ""
-"Odoo laskee paketin painon lisäämällä tyhjän paketin painon ja tuotteiden "
-"painon yhteen. Tuotteiden paino löytyy kunkin "
-"tuotelomakkeen :guilabel:`Varastointi`-välilehden :guilabel:`Paino`-kentästä."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:150
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:148
+msgid ""
+"Stealthy Wood wants to create a package type for cluster packs. They specify "
+"`CLU` as the sequence prefix."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:151
+msgid ""
+":guilabel:`Routes`: Specify the routes for which this package type can be "
+"used."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:152
 msgid ""
 ":guilabel:`Company`: Specify a company to make the package type available "
 "**only** at the selected company. Leave the field blank if it is available "
@@ -9342,26 +9331,87 @@ msgstr ""
 "**vain** valitussa yrityksessä. Jätä kenttä tyhjäksi, jos se on saatavilla "
 "kaikissa yrityksissä."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:None
-msgid "Package type for FedEx's 25 kilogram box."
-msgstr "Pakettityyppi FedExin 25 kilogramman laatikossa."
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:154
+msgid ""
+":guilabel:`Package Use`: Choose :guilabel:`Reusable Box (totes)` for "
+"packages used for moving products within the warehouse. "
+"Choose :guilabel:`Disposable Box` for packages used to ship products to "
+"customers."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:161
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:None
+msgid "Configuration tab for reusable cluster pack box with sequence prefix."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:164
+msgid "Dimensions tab"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:166
+msgid "Use the *Dimensions* tab to specify package dimensions:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:168
+msgid ""
+":guilabel:`Size`: Define the dimensions of the package in millimeters (mm). "
+"The fields, from left to right, define "
+"the :guilabel:`Length`, :guilabel:`Width`, and :guilabel:`Height`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:170
+msgid ""
+":guilabel:`Weight`: Define the weight of an empty package (e.g. an empty "
+"box, pallet)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:173
+msgid ""
+"Odoo calculates the package's weight by adding the weight of the empty "
+"package plus the weight of the items, which can be found in "
+"the :guilabel:`Weight` field in the :guilabel:`Inventory` tab of each "
+"product form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:177
+msgid ""
+":guilabel:`Max Weight`: Specify the maximum shipping weight allowed in the "
+"package."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:None
+msgid "Dimensions tab for FedEx 25 kilogram box package type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:183
+msgid "Capacity tab"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:185
+msgid ""
+"This tab can only be configured if :guilabel:`Multi-Step Routes` is also "
+"enabled in :menuselection:`Inventory app --> Configuration --> Settings`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:188
+msgid ""
+"Select or create a :guilabel:`Storage Category` and :guilabel:`Quantity` by "
+"clicking :guilabel:`Add a line`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:192
+msgid ":doc:`../../shipping_receiving/daily_operations/storage_category`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:197
 msgid "Cluster packages"
 msgstr "Klusteripakkaukset"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:163
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:199
 msgid ""
 "To use *cluster packages*, first navigate to :menuselection:`Inventory app --"
 "> Configuration --> Settings`, and activate the :guilabel:`Batch, Wave & "
-"Cluster Transfers` feature, located in the :guilabel:`Operations` section. "
-"Doing so makes the *Package Use* field become visible on a package form."
+"Cluster Transfers` feature, located in the :guilabel:`Operations` section."
 msgstr ""
-"Käyttääksesi *klusteripaketteja* siirry ensin "
-"kohtaan :menuselection:`Varastointi-sovellus --> Asetukset --> Asetukset` ja "
-"aktivoi :guilabel:`Erä-, aalto- ja klusterisiirrot`-ominaisuus, joka "
-"sijaitsee :guilabel:`Toiminnot`-osiossa. Tämä tekee *Paketin käyttö* -kentän "
-"näkyväksi paketin lomakkeessa."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:None
 msgid ""
@@ -9369,7 +9419,7 @@ msgid ""
 msgstr ""
 "Aktivoi Erä-, aalto- ja klusterisiirrot -ominaisuus Varastoinnin asetuksissa."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:171
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:206
 msgid ""
 "Add new packages by going to :menuselection:`Inventory app --> Products --> "
 "Packages`. Then, click :guilabel:`New`, or select an existing package. Doing "
@@ -9380,68 +9430,58 @@ msgstr ""
 "olemassa oleva paketti. Tämä avaa pakettilomakkeen, joka sisältää seuraavat "
 "kentät:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:175
-msgid ":guilabel:`Package Reference` (required): name of the package."
-msgstr ":guilabel:`Pakettiviite` (pakollinen): paketin nimi."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:176
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:210
 msgid ""
-":guilabel:`Package Type`: used for :ref:`configuring shipping boxes to ship "
-"to the customer <inventory/warehouses_storage/package-type>`."
+":guilabel:`Package Reference` (required): Define the name of the package."
 msgstr ""
-":guilabel:`Pakettityyppi`: käytetään :ref:`lähetyslaatikoiden määrittämiseen "
-"asiakkaalle toimitettavaksi <inventory/warehouses_storage/package-type>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:180
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:211
 msgid ""
-":guilabel:`Package Type` is unnecessary for configuring packages for cluster "
-"pickings."
+":guilabel:`Package Type`: Specify the :ref:`package type <inventory/"
+"warehouses_storage/package-type>` to use."
 msgstr ""
-":guilabel:`Pakettityyppi` ei ole tarpeellinen klusterikerääyksen pakettien "
-"määrittämisessä."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:182
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:215
 msgid ""
-":guilabel:`Shipping Weight`: used to input the weight of the package after "
+"Setting a :guilabel:`Package Type` is unnecessary for configuring packages "
+"for cluster pickings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:218
+msgid ":guilabel:`Location`: Define the current location of the package."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:219
+msgid ""
+":guilabel:`Container`: If the package is contained within another package, "
+"define the container package."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:221
+msgid ""
+":guilabel:`Shipping Weight`: Used to input the weight of the package after "
 "measuring it on a scale."
 msgstr ""
-":guilabel:`Lähetyspaino`: käytetään paketin painon syöttämiseen sen jälkeen, "
-"kun se on mitattu vaa'alla."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:184
-msgid ""
-":guilabel:`Company`: Specify a company to make the package available "
-"**only** at the selected company. Leave the field blank if the package is "
-"available at all companies."
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:223
+msgid ":guilabel:`Company`: The company that can use this package is defined."
 msgstr ""
-":guilabel:`Yritys`: Määritä yritys, jotta pakkaus on käytettävissä **vain** "
-"valitussa yrityksessä. Jätä kenttä tyhjäksi, jos pakkaus on käytettävissä "
-"kaikissa yrityksissä."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:186
-msgid ":guilabel:`Location`: current location of the package."
-msgstr ":guilabel:`Sijainti`: paketin nykyinen sijainti."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:187
-msgid ":guilabel:`Pack Date`: the date the package was created."
-msgstr ":guilabel:`Pakkauspäivä`: päivä, jolloin paketti luotiin."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:188
-msgid ""
-":guilabel:`Package Use`: Choose :guilabel:`Reusable Box` for packages used "
-"for moving products within the warehouse. Choose :guilabel:`Disposable Box` "
-"for packages used to ship products to customers."
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:224
+msgid ":guilabel:`Pack Date`: Specify the date the package was created."
 msgstr ""
-":guilabel:`Pakkauksen käyttö`: Valitse :guilabel:`Uudelleenkäytettävä "
-"laatikko` pakkauksille, joita käytetään tuotteiden siirtämiseen varaston "
-"sisällä. Valitse :guilabel:`Kertakäyttölaatikko` pakkauksille, joita "
-"käytetään tuotteiden lähettämiseen asiakkaille."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:226
+msgid ""
+"Below the package definition fields is the *Content* section. Use this field "
+"to learn more about the contents of the package."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:None
-msgid "Display package form to create a cluster pack."
-msgstr "Näytä pakettilomake klusteripaketin luomiseksi."
+msgid "A package form to create a cluster pack."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:196
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:233
 msgid ""
 ":doc:`Using cluster packages <../../shipping_receiving/picking_methods/"
 "cluster>`"
@@ -9449,18 +9489,15 @@ msgstr ""
 ":doc:`Klusteripakettien käyttäminen <../../shipping_receiving/"
 "picking_methods/cluster>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:199
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:236
 msgid "View packages"
 msgstr "Näytä paketit"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:201
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:238
 msgid ""
 "To view all packages, go to :menuselection:`Inventory app --> Products --> "
-"Packages`. By default, packages are shown in Kanban view."
+"Packages`. By default, packages are shown in list view."
 msgstr ""
-"Voit tarkastella kaikkia pakkauksia valitsemalla :menuselection:`Varastointi "
-"--> Tuotteet --> Pakkaukset`. Oletuksena pakkaukset näytetään Kanban-"
-"näkymässä."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:None
 msgid "Packages dashboard."
@@ -30775,6 +30812,7 @@ msgstr ""
 "resupply_warehouses>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:31
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:64
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:3
 msgid "Locations"
 msgstr "Paikat"
@@ -32249,8 +32287,286 @@ msgid ":doc:`count_products`"
 msgstr ":doc:`count_products`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:132
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:77
 msgid ":doc:`use_locations`"
 msgstr ":doc:`use_locations`"
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:3
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:13
+msgid "Operation types"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:5
+msgid ""
+"Odoo **Inventory** tracks stock by warehouse and location, and then records "
+"what happens to products (receiving, putaway and internal transfers, and "
+"picking and delivery) as structured stock moves. These movements are called "
+"*operations*. Operations can also help keep what the system shows current "
+"using counts and adjustments."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:10
+msgid "Each operation belongs to a specific *operation type*."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:15
+msgid ""
+"To add or edit operation types, navigate to :menuselection:`Inventory app --"
+"> Configuration --> Operations Types`. A list of operation types displays."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:18
+msgid ""
+"Open an existing operation type, or click :guilabel:`New` to create a new "
+"operation type. Next, complete the fields of the operation type form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:24
+msgid "General tab"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:26
+msgid "Use the *General* tab to specify basic settings for the operation type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:28
+msgid "The following fields are available in the *General* tab:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:30
+msgid ":guilabel:`Type of Operation`: Specify the type of operation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:31
+msgid ""
+":guilabel:`Sequence Prefix`: Specify a short prefix Odoo will use to name "
+"transfers."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:32
+msgid ""
+":guilabel:`Barcode`: Define the barcode to be used when transferring "
+"products between locations."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:33
+msgid ""
+":guilabel:`Company`: Specify the company that can use this operation type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:34
+msgid ""
+":guilabel:`Returns Type`: Define which operation can create returns for this "
+"operation type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:35
+msgid ""
+":guilabel:`Create Backorder`: Define when back orders for unfulfilled "
+"products can be created upon validation for this operation type. "
+"Select :guilabel:`Ask` if Odoo should ask whether to create a back order. "
+"Select :guilabel:`Always` to always generate a back order. "
+"Select :guilabel:`Never` to specify that the remaining products should be "
+"canceled."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:39
+msgid ""
+":guilabel:`Analytic Costs`: Select this checkbox to ensure analytic entries "
+"are created in a project when stock moves are validated. It tracks the total "
+"cost of products included in stock moves (deliveries and receipts) that have "
+"been validated for the project. This ensures that the product's cost is "
+"tracked during the stock move."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:43
+msgid ""
+":guilabel:`Card Color`: Select a color to use for the operation type card on "
+"the :menuselection:`Overview` page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:47
+msgid "Lots/serial numbers"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:49
+msgid ""
+"This section only appears if :guilabel:`Lots & Serial Numbers` is enabled "
+"in :menuselection:`Inventory app --> Configuration --> Settings`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:52
+msgid "The following fields are available:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:54
+msgid ""
+":guilabel:`Create New`: Select this checkbox to specify that lots and serial "
+"numbers can be created from this operation type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:56
+msgid ""
+":guilabel:`Use Existing ones`: If this checkbox is selected, the lot or "
+"serial number can be selected when creating transfers for this operation "
+"type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:60
+msgid ":doc:`../../product_management/product_tracking/lots`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:61
+msgid ":doc:`../../product_management/product_tracking/serial_numbers`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:66
+msgid ""
+"This section only appears if :guilabel:`Storage Locations` is enabled "
+"in :menuselection:`Inventory app --> Configuration --> Settings`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:69
+msgid "Specify the following locations for the operation type:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:71
+msgid ""
+":guilabel:`Source Location`: Select a default source location when "
+"operations of this type are created."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:73
+msgid ""
+":guilabel:`Destination Location`: Select a default destination location when "
+"operations of this type are created."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:82
+msgid ""
+"This section only appears if :guilabel:`Packages` is enabled "
+"in :menuselection:`Inventory app --> Configuration --> Settings`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:85
+msgid ""
+"If :guilabel:`Set Package Type` is selected, a package or package type can "
+"be selected when the :guilabel:`Put in Pack` button is clicked on an "
+"operation's order form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:89
+msgid "Batch & wave transfers"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:91
+msgid ""
+"This section appears only if :guilabel:`Batch, Wave & Cluster Transfers` is "
+"enabled in :menuselection:`Inventory app --> Configuration --> Settings`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:94
+msgid ""
+"Select the :guilabel:`Dispatch Management` checkbox to show dispatch-"
+"management-related details on the batch or wave form and the *Inventory "
+"Overview* page. Then, select a location or vehicle."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:None
+msgid ""
+"The vertical ellipsis menu shows Transport Management options on the "
+"Inventory Overview."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:100
+msgid ""
+"Select the :guilabel:`Automatic Batches` checkbox to specify that pickings "
+"should be automatically batched as they are confirmed when possible."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:104
+msgid ":doc:`../../shipping_receiving/picking_methods/wave`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:105
+msgid ":doc:`../../shipping_receiving/picking_methods/batch`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:106
+msgid ":doc:`../../shipping_receiving/picking_methods/cluster`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:111
+msgid "Hardware tab"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:113
+msgid ""
+"Use the *Hardware* tab to specify settings for connected devices and how "
+"they should interact with operations of this operation type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:116
+msgid ""
+"In the *Print on validation* or *Print when done* section, specify what "
+"should be printed automatically when an operation is validated."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:119
+msgid ""
+"In the *Print on \"Put in Pack\"* section, specify what should be printed "
+"when the :guilabel:`Put in Pack` button is clicked on an operation "
+"form. :guilabel:`Packages` must be enabled in :menuselection:`Inventory --> "
+"Configuration --> Settings` for this option to show."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:123
+msgid ""
+"In the *Scales* section, specify a scale to use in conjunction with "
+"operations of this operation type in the :guilabel:`Connect Scale` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:126
+msgid ""
+"For manufacturing operation types, in the *Print when \"Create new lot/SN\"* "
+"section, select what should be printed when a lot or serial number is "
+"generated on an operation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:130
+msgid ":doc:`../../../../general/iot/devices/printer`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:131
+msgid ":doc:`../../../../general/iot/devices/scale`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:136
+msgid "Barcode App tab"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:138
+msgid ""
+"Use the *Barcode App* tab to specify how this operation type integrates with "
+"the **Barcode** app. Specify when barcodes must be scanned or how often, "
+"whether to group products, or when to validate an operation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:142
+msgid ""
+"To display reserved lots or serial numbers on an operation in the "
+"**Barcode** app, select the :guilabel:`Show reserved lots/SN` checkbox."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:145
+msgid ""
+"To show the packages that must be moved during a **Barcode** operation, "
+"select :guilabel:`Move Entire Packages`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:149
+msgid ":doc:`../../../barcode`"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:3
 msgid "Scrap inventory"
@@ -34485,11 +34801,11 @@ msgid ""
 "Order (MTO)`. Click :guilabel:`Save` to confirm the setting."
 msgstr ""
 "Jotta |MTO|-reittiä voidaan käyttää, :guilabel:`Täydennys tilauksesta (MTO)`-"
-"asetus on otettava käyttöön. Navigoi :menuselection:`Varastointi-"
-"sovellus --> Asetukset --> Asetukset`. Siirry sivun lopussa olevaan "
-":guilabel:`Logistiikka`-osioon ja valitse valintaruutu :guilabel:`Täydennys "
-"tilauksesta (MTO)`-kohdan vierestä. Vahvista asetus napsauttamalla "
-":guilabel:`Tallenna`."
+"asetus on otettava käyttöön. Navigoi :menuselection:`Varastointi-sovellus --"
+"> Asetukset --> Asetukset`. Siirry sivun lopussa "
+"olevaan :guilabel:`Logistiikka`-osioon ja valitse "
+"valintaruutu :guilabel:`Täydennys tilauksesta (MTO)`-kohdan vierestä. "
+"Vahvista asetus napsauttamalla :guilabel:`Tallenna`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:None
 msgid "Select the Replenish on Order (MTO) checkbox."
@@ -34507,8 +34823,8 @@ msgid ""
 "click :guilabel:`New` to configure a new product."
 msgstr ""
 "Kun |MTO|-reitti on käytössä, tuotteet voidaan nyt määrittää täydentymään "
-"tilauksesta. Aloita siirtymällä kohtaan :menuselection:`Varastointi-"
-"sovellus --> Tuotteet --> Tuotteet`. Valitse sitten olemassa oleva tuote tai "
+"tilauksesta. Aloita siirtymällä kohtaan :menuselection:`Varastointi-sovellus "
+"--> Tuotteet --> Tuotteet`. Valitse sitten olemassa oleva tuote tai "
 "napsauta :guilabel:`Uusi` määrittääksesi uuden tuotteen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:58
@@ -34575,17 +34891,17 @@ msgid ""
 "the :guilabel:`Purchase` checkbox is enabled under the product name. This "
 "displays the *Purchase* tab below."
 msgstr ""
-"Jos tuote ostetaan toimittajalta |SOs|:n täyttämiseksi, varmista, että "
-":guilabel:`Ostot`-valintaruutu on käytössä tuotteen nimen alla. Tämä näyttää "
-"*Ostot*-välilehden alla."
+"Jos tuote ostetaan toimittajalta |SOs|:n täyttämiseksi, varmista, "
+"että :guilabel:`Ostot`-valintaruutu on käytössä tuotteen nimen alla. Tämä "
+"näyttää *Ostot*-välilehden alla."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:87
 msgid ""
 "Then, click the *Purchase* tab and specify a :guilabel:`Vendor` and "
 "a :guilabel:`Unit Price` for the product."
 msgstr ""
-"Napsauta sitten *Ostot*-välilehteä ja määritä tuotteelle "
-":guilabel:`Toimittaja` ja :guilabel:`Yksikköhinta`."
+"Napsauta sitten *Ostot*-välilehteä ja määritä "
+"tuotteelle :guilabel:`Toimittaja` ja :guilabel:`Yksikköhinta`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:91
 msgid ""
@@ -34609,12 +34925,12 @@ msgid ""
 "the :guilabel:`Bill of Materials` page to configure a new |BOM| for the "
 "product."
 msgstr ""
-"Jos tuote valmistetaan, varmista, että sille on määritetty "
-":doc:`materiaaliluettelo <../../../manufacturing/basic_setup/"
-"bill_configuration>`. Napsauta lomakkeen yläosassa olevaa :icon:`fa-flask` "
-":guilabel:`Materiaaliluettelo`-älypainiketta. Napsauta sitten "
-":guilabel:`Materiaaliluettelo`-sivulla :guilabel:`Uusi` määrittääksesi "
-"tuotteelle uuden |BOM|:n."
+"Jos tuote valmistetaan, varmista, että sille on "
+"määritetty :doc:`materiaaliluettelo <../../../manufacturing/basic_setup/"
+"bill_configuration>`. Napsauta lomakkeen yläosassa olevaa :icon:`fa-"
+"flask` :guilabel:`Materiaaliluettelo`-älypainiketta. Napsauta "
+"sitten :guilabel:`Materiaaliluettelo`-sivulla :guilabel:`Uusi` "
+"määrittääksesi tuotteelle uuden |BOM|:n."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:105
 msgid ""
@@ -34667,8 +34983,8 @@ msgid ""
 "MTO|. Click :guilabel:`Confirm` to turn the quotation into an |SO|."
 msgstr ""
 "Lisää lomakkeelle :guilabel:`Asiakas`. Napsauta sitten :guilabel:`Lisää "
-"tuote` *Tilausrivit*-välilehdellä ja syötä tuote, joka on määritetty "
-"|MTO|:lle. Napsauta :guilabel:`Vahvista` muuttaaksesi tarjouksen |SO|:ksi."
+"tuote` *Tilausrivit*-välilehdellä ja syötä tuote, joka on määritetty |"
+"MTO|:lle. Napsauta :guilabel:`Vahvista` muuttaaksesi tarjouksen |SO|:ksi."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:136
 msgid "Validate replenishment order"
@@ -34696,10 +35012,10 @@ msgid ""
 "if :ref:`manufactured <inventory/mto/replenish-mto-product/validate-order/"
 "manufactured>`."
 msgstr ""
-":icon:`fa-credit-card` :guilabel:`Osto`-tilaus, jos |SO|:n tuote on "
-":ref:`ostettu <inventory/mto/replenish-mto-product/validate-order/purchased>"
-"` **tai** :icon:`fa-wrench` :guilabel:`Tuotanto`-tilaus, jos se on "
-":ref:`valmistettu <inventory/mto/replenish-mto-product/validate-order/"
+":icon:`fa-credit-card` :guilabel:`Osto`-tilaus, jos |SO|:n tuote "
+"on :ref:`ostettu <inventory/mto/replenish-mto-product/validate-order/"
+"purchased>` **tai** :icon:`fa-wrench` :guilabel:`Tuotanto`-tilaus, jos se "
+"on :ref:`valmistettu <inventory/mto/replenish-mto-product/validate-order/"
 "manufactured>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:152
@@ -34708,9 +35024,9 @@ msgid ""
 "smart button appears at the top of the page. Click it to open the |RFQ| "
 "associated with the |SO|."
 msgstr ""
-"Jos tuote ostetaan, sivun yläosaan ilmestyy :icon:`fa-credit-card` "
-":guilabel:`Osto`-älypainike. Napsauta sitä avataksesi |RFQ|:n, joka liittyy "
-"|SO|:een."
+"Jos tuote ostetaan, sivun yläosaan ilmestyy :icon:`fa-credit-"
+"card` :guilabel:`Osto`-älypainike. Napsauta sitä avataksesi |RFQ|:n, joka "
+"liittyy |SO|:een."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:155
 msgid ""
@@ -34718,9 +35034,10 @@ msgid ""
 "the :guilabel:`Expected Date`, click :guilabel:`Confirm Order` to turn the |"
 "RFQ| into a confirmed |PO|."
 msgstr ""
-"Kun olet varmistanut, että toimittaja pystyy täyttämään kysynnän "
-":guilabel:`Odotettu päivämäärä`-kenttään mennessä, napsauta "
-":guilabel:`Vahvista tilaus` muuttaaksesi |RFQ|:n vahvistetuksi |PO|:ksi."
+"Kun olet varmistanut, että toimittaja pystyy täyttämään "
+"kysynnän :guilabel:`Odotettu päivämäärä`-kenttään mennessä, "
+"napsauta :guilabel:`Vahvista tilaus` muuttaaksesi |RFQ|:n vahvistetuksi |"
+"PO|:ksi."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:158
 msgid ""
@@ -34737,9 +35054,10 @@ msgid ""
 "page. Click it to open the |MO| associated with the |SO|. By default, the |"
 "MO| is confirmed immediately upon confirming the |SO|."
 msgstr ""
-"Jos tuote valmistetaan, sivun yläosaan ilmestyy :icon:`fa-wrench` "
-":guilabel:`Tuotanto`-älypainike. Napsauta sitä avataksesi |MO|, joka liittyy "
-"|SO|:een. Oletusarvoisesti |MO| vahvistetaan heti, kun |SO| vahvistetaan."
+"Jos tuote valmistetaan, sivun yläosaan ilmestyy :icon:`fa-"
+"wrench` :guilabel:`Tuotanto`-älypainike. Napsauta sitä avataksesi |MO|, joka "
+"liittyy |SO|:een. Oletusarvoisesti |MO| vahvistetaan heti, kun |SO| "
+"vahvistetaan."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:170
 msgid ""
@@ -34760,9 +35078,9 @@ msgid ""
 "Return to the |SO| via the breadcrumbs at the top, or by navigating "
 "to :menuselection:`Sales app --> Orders --> Orders` and selecting the |SO|."
 msgstr ""
-"Palaa |SO|:een yläosan linkkipolun kautta tai siirtymällä kohtaan "
-":menuselection:`Myynti-sovellus --> Tilaukset --> Tilaukset` ja valitsemalla "
-"|SO|."
+"Palaa |SO|:een yläosan linkkipolun kautta tai siirtymällä "
+"kohtaan :menuselection:`Myynti-sovellus --> Tilaukset --> Tilaukset` ja "
+"valitsemalla |SO|."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:179
 msgid ""
@@ -34770,8 +35088,8 @@ msgid ""
 "top of the order to open the delivery order. Once the products have been "
 "shipped to the customer, click :guilabel:`Validate` to confirm the delivery."
 msgstr ""
-"Lopuksi napsauta tilauksen yläosassa olevaa :icon:`fa-truck` "
-":guilabel:`Toimitus`-älypainiketta avataksesi toimitustilauksen. Kun "
+"Lopuksi napsauta tilauksen yläosassa olevaa :icon:`fa-"
+"truck` :guilabel:`Toimitus`-älypainiketta avataksesi toimitustilauksen. Kun "
 "tuotteet on lähetetty asiakkaalle, napsauta :guilabel:`Vahvista` "
 "vahvistaaksesi toimituksen."
 
@@ -41510,8 +41828,8 @@ msgid ""
 "create and confirm a new sales order (SO)."
 msgstr ""
 "Tallenna kaikki muutokset napsauttamalla :guilabel:`Tallenna` ja luo ja "
-"vahvista uusi myyntitilaus (MT) napsauttamalla :guilabel:`Vahvista` "
-":guilabel:`Tarjous`-lomakkeen yläosassa."
+"vahvista uusi myyntitilaus (MT) "
+"napsauttamalla :guilabel:`Vahvista` :guilabel:`Tarjous`-lomakkeen yläosassa."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/product_variants.rst:164
 msgid "Manufacture variant of BoM product"
@@ -41525,8 +41843,8 @@ msgid ""
 "the :guilabel:`Manufacturing Order` form."
 msgstr ""
 "Kun :abbr:`MT (myyntitilaus)` on vahvistettu, :abbr:`MT (myyntitilaus)`-"
-"lomakkeen yläosaan ilmestyy :guilabel:`Tuotanto`-älypainike. Avaa "
-":guilabel:`Tuotantotilaus`-lomake napsauttamalla :guilabel:`Tuotanto`-"
+"lomakkeen yläosaan ilmestyy :guilabel:`Tuotanto`-älypainike. "
+"Avaa :guilabel:`Tuotantotilaus`-lomake napsauttamalla :guilabel:`Tuotanto`-"
 "älypainiketta."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/product_variants.rst:170
@@ -41546,9 +41864,9 @@ msgid ""
 "To enter the tablet view work order screen, click the :guilabel:`tablet "
 "icon` to the right of the row for the desired operation to be completed."
 msgstr ""
-"Siirry tabletin näkymän työtilaukseen napsauttamalla "
-":guilabel:`tablettikuvaketta` suoritettavan työvaiheen rivin oikealla "
-"puolella."
+"Siirry tabletin näkymän työtilaukseen "
+"napsauttamalla :guilabel:`tablettikuvaketta` suoritettavan työvaiheen rivin "
+"oikealla puolella."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/product_variants.rst:177
 msgid ""
@@ -44890,10 +45208,10 @@ msgid ""
 "in the :guilabel:`Units` field, and then click :guilabel:`Validate` to "
 "register that number."
 msgstr ""
-"Jos on syötettävä eri määrä, avaa ponnahdusikkuna napsauttamalla "
-":guilabel:`Rekisteröi tuotanto`-vaihetta. Syötä tuotettujen yksiköiden määrä "
-":guilabel:`Yksiköt`-kenttään ja rekisteröi se määrä napsauttamalla "
-":guilabel:`Vahvista`."
+"Jos on syötettävä eri määrä, avaa ponnahdusikkuna "
+"napsauttamalla :guilabel:`Rekisteröi tuotanto`-vaihetta. Syötä tuotettujen "
+"yksiköiden määrä :guilabel:`Yksiköt`-kenttään ja rekisteröi se määrä "
+"napsauttamalla :guilabel:`Vahvista`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:128
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:149
@@ -48317,9 +48635,9 @@ msgid ""
 "a :ref:`subcontracting-type BoM <manufacturing/workflows/"
 "subcontracting_basic/bom-config>`."
 msgstr ""
-"Käyttääksesi alihankintaa yrityksen on ensin määritettävä tuotteille "
-":ref:`toimittajan hinnasto <purchase/products/pricelist>` sekä "
-":ref:`alihankinta-tyyppinen materiaaliluettelo <manufacturing/workflows/"
+"Käyttääksesi alihankintaa yrityksen on ensin määritettävä "
+"tuotteille :ref:`toimittajan hinnasto <purchase/products/pricelist>` "
+"sekä :ref:`alihankinta-tyyppinen materiaaliluettelo <manufacturing/workflows/"
 "subcontracting_basic/bom-config>`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:29
@@ -48356,8 +48674,8 @@ msgid ""
 "subcontractor using the :guilabel:`Vendor` drop-down menu."
 msgstr ""
 "Klikkaa tuotelomakkeella *Ostot*-välilehteä ja lisää tuotteen alihankkija "
-"toimittajaksi klikkaamalla :guilabel:`Lisää rivi`. Valitse alihankkija "
-":guilabel:`Toimittaja` -pudotusvalikosta."
+"toimittajaksi klikkaamalla :guilabel:`Lisää rivi`. Valitse "
+"alihankkija :guilabel:`Toimittaja` -pudotusvalikosta."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:44
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:61
@@ -48405,8 +48723,8 @@ msgid ""
 "form. Then, select the desired |BoM| or :ref:`create a new one "
 "<manufacturing/basic_setup/bom-setup>`."
 msgstr ""
-"Toimittajan määrittämisen jälkeen määritä tuotteelle alihankinta-tyyppinen "
-"|BoM|. Klikkaa :guilabel:`Materiaaliluettelot` -älypainiketta "
+"Toimittajan määrittämisen jälkeen määritä tuotteelle alihankinta-tyyppinen |"
+"BoM|. Klikkaa :guilabel:`Materiaaliluettelot` -älypainiketta "
 "tuotelomakkeella. Valitse sen jälkeen haluttu |BoM| tai :ref:`luo uusi "
 "<manufacturing/basic_setup/bom-setup>`."
 
@@ -48548,10 +48866,10 @@ msgid ""
 "smart button at the top of the page. Then, click :guilabel:`Validate` to "
 "enter the incoming shipment into inventory."
 msgstr ""
-"Vastaanottaaksesi valmiin tuotteen alihankkijalta klikkaa "
-":guilabel:`Vastaanota` -painiketta |PO|:ssa tai klikkaa "
-":guilabel:`Vastaanotto` -älypainiketta sivun yläosassa. Klikkaa sitten "
-":guilabel:`Vahvista` kirjataksesi saapuvan lähetyksen varastoon."
+"Vastaanottaaksesi valmiin tuotteen alihankkijalta "
+"klikkaa :guilabel:`Vastaanota` -painiketta |PO|:ssa tai "
+"klikkaa :guilabel:`Vastaanotto` -älypainiketta sivun yläosassa. Klikkaa "
+"sitten :guilabel:`Vahvista` kirjataksesi saapuvan lähetyksen varastoon."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:129
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:229
@@ -48583,8 +48901,9 @@ msgstr ""
 "Vastaanoton vahvistamisen jälkeen Odoo luo automaattisesti varastosiirtoja "
 "seuratakseen alihankittujen tuotteiden liikettä :doc:`sijaintien <../../"
 "inventory/warehouses_storage/inventory_management/use_locations>` välillä. "
-"Tarkastellaksesi näitä varastosiirtoja siirry kohtaan "
-":menuselection:`Varastointi-sovellus --> Raportointi --> Siirtohistoria`."
+"Tarkastellaksesi näitä varastosiirtoja siirry "
+"kohtaan :menuselection:`Varastointi-sovellus --> Raportointi --> "
+"Siirtohistoria`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:142
 msgid ""
@@ -48675,12 +48994,11 @@ msgid ""
 "component in order to be properly sent from the dropshipping vendor to the "
 "subcontractor."
 msgstr ""
-"Hinnasto mahdollistaa tuotteen ostamisen toimittajalta (alihankkijalta) "
-"|PO|:n kautta. |BoM| mahdollistaa tuotteen ulkoisen valmistuksen "
-"alihankkijan toimesta. :doc:`Reitit <../../inventory/shipping_receiving/"
-"daily_operations/use_routes>` otetaan käyttöön jokaiselle komponentille, "
-"jotta ne voidaan lähettää asianmukaisesti suoratoimitustoimittajalta "
-"alihankkijalle."
+"Hinnasto mahdollistaa tuotteen ostamisen toimittajalta (alihankkijalta) |"
+"PO|:n kautta. |BoM| mahdollistaa tuotteen ulkoisen valmistuksen alihankkijan "
+"toimesta. :doc:`Reitit <../../inventory/shipping_receiving/daily_operations/"
+"use_routes>` otetaan käyttöön jokaiselle komponentille, jotta ne voidaan "
+"lähettää asianmukaisesti suoratoimitustoimittajalta alihankkijalle."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:42
 msgid ""
@@ -48707,10 +49025,10 @@ msgid ""
 "product, or :doc:`create a new one <../../inventory/product_management/"
 "configure/type>`."
 msgstr ""
-"Määrittääksesi tuotteen toimittajan suoratoimitusalihankintaa varten siirry "
-":menuselection:`Varastointi-sovellus --> Tuotteet --> Tuotteet` ja valitse "
-"tuote tai :doc:`luo uusi <../../inventory/product_management/configure/type>"
-"`."
+"Määrittääksesi tuotteen toimittajan suoratoimitusalihankintaa varten "
+"siirry :menuselection:`Varastointi-sovellus --> Tuotteet --> Tuotteet` ja "
+"valitse tuote tai :doc:`luo uusi <../../inventory/product_management/"
+"configure/type>`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:58
 msgid ""
@@ -49160,9 +49478,9 @@ msgid ""
 "required :guilabel:`Quantity` in the corresponding field."
 msgstr ""
 "Lisää lopuksi kaikki tarvittavat komponentit *Komponentit*-välilehdelle. "
-"Lisää uusi komponentti napsauttamalla :guilabel:`Lisää rivi`. Valitse sitten "
-":guilabel:`Komponentti` avattavasta valikosta ja määritä vaadittu "
-":guilabel:`Määrä` vastaavaan kenttään."
+"Lisää uusi komponentti napsauttamalla :guilabel:`Lisää rivi`. Valitse "
+"sitten :guilabel:`Komponentti` avattavasta valikosta ja määritä "
+"vaadittu :guilabel:`Määrä` vastaavaan kenttään."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:None
 msgid "BoM for a resupply subcontracting product."
@@ -49207,8 +49525,8 @@ msgid ""
 "the company's stock (4, 5)."
 msgstr ""
 "Kun tuote on valmistettu ja vastaanotettu, yritys :ref:`vahvistaa "
-"vastaanoton <manufacturing/subcontracting_resupply/workflow/process-receipt>"
-"` (6), joka käynnistää :ref:`varastosiirrot <manufacturing/"
+"vastaanoton <manufacturing/subcontracting_resupply/workflow/process-"
+"receipt>` (6), joka käynnistää :ref:`varastosiirrot <manufacturing/"
 "subcontracting_resupply/workflow/track-inventory>` alihankkijalta yrityksen "
 "varastoon (4, 5)."
 
@@ -49231,8 +49549,8 @@ msgid ""
 "Begin filling out the |PO| by selecting a subcontractor from "
 "the :guilabel:`Vendor` drop-down menu."
 msgstr ""
-"Aloita |PO| täyttäminen valitsemalla alihankkija :guilabel:`Toimittaja` -"
-"pudotusvalikosta."
+"Aloita |PO| täyttäminen valitsemalla alihankkija :guilabel:`Toimittaja` "
+"-pudotusvalikosta."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:116
 msgid ""
@@ -49262,9 +49580,9 @@ msgid ""
 msgstr ""
 "Vahvista lopuksi |PO| napsauttamalla :guilabel:`Vahvista tilaus`. "
 "Vastaanotto ja täydennystilaus luodaan automaattisesti, ja ne ovat "
-"käytettävissä lomakkeen yläosassa olevien :icon:`fa-truck` "
-":guilabel:`Vastaanotto` ja :icon:`fa-truck` :guilabel:`Täydennys` -"
-"älypainikkeiden kautta."
+"käytettävissä lomakkeen yläosassa olevien :icon:`fa-"
+"truck` :guilabel:`Vastaanotto` ja :icon:`fa-truck` :guilabel:`Täydennys` "
+"-älypainikkeiden kautta."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:129
 msgid "Validate resupply order"
@@ -49287,10 +49605,10 @@ msgid ""
 "relevant resupply order, then click :guilabel:`Validate` to confirm that the "
 "components have been sent to the subcontractor."
 msgstr ""
-"Vaihtoehtoisesti avaa **Varastointi**-sovellus ja napsauta "
-":guilabel:`Täydennä alihankkija` -kortissa :guilabel:`(#) Käsiteltävää` -"
-"painiketta. Valitse asianmukainen täydennystilaus ja napsauta sitten "
-":guilabel:`Vahvista` vahvistaaksesi, että komponentit on lähetetty "
+"Vaihtoehtoisesti avaa **Varastointi**-sovellus ja "
+"napsauta :guilabel:`Täydennä alihankkija` -kortissa :guilabel:`(#) "
+"Käsiteltävää` -painiketta. Valitse asianmukainen täydennystilaus ja napsauta "
+"sitten :guilabel:`Vahvista` vahvistaaksesi, että komponentit on lähetetty "
 "alihankkijalle."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:144
@@ -49308,10 +49626,11 @@ msgid ""
 "truck` :guilabel:`Receipt` smart button at the top of the page. Then, "
 "click :guilabel:`Validate` to enter the incoming shipment into inventory."
 msgstr ""
-"Vastaanottaaksesi valmiin tuotteen alihankkijalta napsauta "
-":guilabel:`Vastaanota tuotteet` -painiketta |PO|, tai napsauta :icon:`fa-"
-"truck` :guilabel:`Vastaanotto` -älypainiketta sivun yläosassa. Napsauta "
-"sitten :guilabel:`Vahvista` kirjataksesi saapuvan lähetyksen varastoon."
+"Vastaanottaaksesi valmiin tuotteen alihankkijalta "
+"napsauta :guilabel:`Vastaanota tuotteet` -painiketta |PO|, tai "
+"napsauta :icon:`fa-truck` :guilabel:`Vastaanotto` -älypainiketta sivun "
+"yläosassa. Napsauta sitten :guilabel:`Vahvista` kirjataksesi saapuvan "
+"lähetyksen varastoon."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:160
 msgid ""
@@ -52385,8 +52704,9 @@ msgid ""
 "click :guilabel:`Install` on the :guilabel:`Product Lifecycle Management "
 "(PLM)` card."
 msgstr ""
-"Asentaaksesi **PLM**:n avaa **Sovellukset**-sovellus. Hae `PLM` ja napsauta "
-":guilabel:`Asenna` :guilabel:`Tuotteen elinkaaren hallinta (PLM)` -kortissa."
+"Asentaaksesi **PLM**:n avaa **Sovellukset**-sovellus. Hae `PLM` ja "
+"napsauta :guilabel:`Asenna` :guilabel:`Tuotteen elinkaaren hallinta (PLM)` "
+"-kortissa."
 
 #: ../../content/applications/inventory_and_mrp/plm.rst:27
 msgid ""
@@ -62762,6 +63082,160 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:212
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ ":guilabel:`Package Use` is a field on the package form in Odoo that is "
+#~ "only visible by enabling the :guilabel:`Batch, Wave & Cluster Transfers` "
+#~ "and :guilabel:`Packages` features (:menuselection:`Inventory app --> "
+#~ "Configuration --> Settings`)."
+#~ msgstr ""
+#~ ":guilabel:`Paketin käyttö` on kenttä paketin lomakkeessa Odoo-"
+#~ "järjestelmässä, joka näkyy vain ottamalla käyttöön :guilabel:`Erä-, "
+#~ "aalto- ja klusterisiirrot`- ja :guilabel:`Paketit`-ominaisuudet "
+#~ "(:menuselection:`Varastointi-sovellus --> Asetukset --> Asetukset`)."
+
+#~ msgid ""
+#~ "By default, the :guilabel:`Package Use` field on a packages form is set "
+#~ "to :guilabel:`Disposable Box`. Change this field to :guilabel:`Reusable "
+#~ "Box` **only** when configuring packages for :ref:`cluster pickings "
+#~ "<inventory/warehouses_storage/cluster-pack>`."
+#~ msgstr ""
+#~ "Oletusarvoisesti paketin lomakkeen :guilabel:`Paketin käyttö`-kenttä on "
+#~ "asetettu tilaan :guilabel:`Kertakäyttöinen laatikko`. Muuta tämä kenttä "
+#~ "tilaan :guilabel:`Uudelleenkäytettävä laatikko` **vain** määritettäessä "
+#~ "paketteja :ref:`klusterikeräilyihin <inventory/warehouses_storage/cluster-"
+#~ "pack>`."
+
+#~ msgid ""
+#~ ":guilabel:`Package Type` is an optional feature used "
+#~ "for :doc:`calculating shipping cost <../../shipping_receiving/"
+#~ "setup_configuration>`, based on real shipping weight. Create package "
+#~ "types to include the weight of the package itself (e.g. boxes, pallets, "
+#~ "other shipping containers) in shipping cost calculations."
+#~ msgstr ""
+#~ ":guilabel:`Pakkaustyyppi` on valinnainen ominaisuus, jota "
+#~ "käytetään :doc:`toimituskulujen laskemiseen <../../shipping_receiving/"
+#~ "setup_configuration>` todellisen toimituspainon perusteella. Luo "
+#~ "pakkaustyyppit sisällyttääksesi pakkauksen itsensä painon (esim. "
+#~ "laatikot, kuormalavat, muut toimitusastiat) toimituskulujen laskelmiin."
+
+#~ msgid ""
+#~ "While packages are commonly used in the :doc:`three-step delivery route "
+#~ "<../../shipping_receiving/daily_operations/delivery_three_steps>`, they "
+#~ "can be used in any workflow involving storable products."
+#~ msgstr ""
+#~ "Vaikka pakkauksia käytetään yleisesti :doc:`kolmivaiheisessa "
+#~ "toimitusreitissä <../../shipping_receiving/daily_operations/"
+#~ "delivery_three_steps>`, niitä voidaan käyttää missä tahansa työnkulussa, "
+#~ "joka sisältää varastoitavia tuotteita."
+
+#~ msgid ":guilabel:`Package Type` (required): define the package type's name."
+#~ msgstr ":guilabel:`Pakettityyppi` (pakollinen): määritä pakettityypin nimi."
+
+#~ msgid ""
+#~ ":guilabel:`Size`: define the dimensions of the package in millimeters "
+#~ "(mm). The fields, from left to right, define "
+#~ "the :guilabel:`Length`, :guilabel:`Width`, and :guilabel:`Height`."
+#~ msgstr ""
+#~ ":guilabel:`Koko`: määritä paketin mitat millimetreinä (mm). Kentät "
+#~ "määrittelevät vasemmalta "
+#~ "oikealle :guilabel:`Pituuden`, :guilabel:`Leveyden` "
+#~ "ja :guilabel:`Korkeuden`."
+
+#~ msgid ""
+#~ ":guilabel:`Weight`: weight of an empty package (e.g. an empty box, "
+#~ "pallet)."
+#~ msgstr ""
+#~ ":guilabel:`Paino`: tyhjän paketin paino (esim. tyhjä laatikko tai lava)."
+
+#~ msgid ""
+#~ "Odoo calculates the package's weight by adding the weight of the empty "
+#~ "package plus the weight of the item(s), which can be found in "
+#~ "the :guilabel:`Weight` field, in the :guilabel:`Inventory` tab, of each "
+#~ "product form."
+#~ msgstr ""
+#~ "Odoo laskee paketin painon lisäämällä tyhjän paketin painon ja tuotteiden "
+#~ "painon yhteen. Tuotteiden paino löytyy kunkin "
+#~ "tuotelomakkeen :guilabel:`Varastointi`-välilehden :guilabel:`Paino`-"
+#~ "kentästä."
+
+#~ msgid "Package type for FedEx's 25 kilogram box."
+#~ msgstr "Pakettityyppi FedExin 25 kilogramman laatikossa."
+
+#~ msgid ""
+#~ "To use *cluster packages*, first navigate to :menuselection:`Inventory "
+#~ "app --> Configuration --> Settings`, and activate the :guilabel:`Batch, "
+#~ "Wave & Cluster Transfers` feature, located in the :guilabel:`Operations` "
+#~ "section. Doing so makes the *Package Use* field become visible on a "
+#~ "package form."
+#~ msgstr ""
+#~ "Käyttääksesi *klusteripaketteja* siirry ensin "
+#~ "kohtaan :menuselection:`Varastointi-sovellus --> Asetukset --> Asetukset` "
+#~ "ja aktivoi :guilabel:`Erä-, aalto- ja klusterisiirrot`-ominaisuus, joka "
+#~ "sijaitsee :guilabel:`Toiminnot`-osiossa. Tämä tekee *Paketin käyttö* "
+#~ "-kentän näkyväksi paketin lomakkeessa."
+
+#~ msgid ":guilabel:`Package Reference` (required): name of the package."
+#~ msgstr ":guilabel:`Pakettiviite` (pakollinen): paketin nimi."
+
+#~ msgid ""
+#~ ":guilabel:`Package Type`: used for :ref:`configuring shipping boxes to "
+#~ "ship to the customer <inventory/warehouses_storage/package-type>`."
+#~ msgstr ""
+#~ ":guilabel:`Pakettityyppi`: käytetään :ref:`lähetyslaatikoiden "
+#~ "määrittämiseen asiakkaalle toimitettavaksi <inventory/warehouses_storage/"
+#~ "package-type>`."
+
+#~ msgid ""
+#~ ":guilabel:`Package Type` is unnecessary for configuring packages for "
+#~ "cluster pickings."
+#~ msgstr ""
+#~ ":guilabel:`Pakettityyppi` ei ole tarpeellinen klusterikerääyksen "
+#~ "pakettien määrittämisessä."
+
+#~ msgid ""
+#~ ":guilabel:`Shipping Weight`: used to input the weight of the package "
+#~ "after measuring it on a scale."
+#~ msgstr ""
+#~ ":guilabel:`Lähetyspaino`: käytetään paketin painon syöttämiseen sen "
+#~ "jälkeen, kun se on mitattu vaa'alla."
+
+#~ msgid ""
+#~ ":guilabel:`Company`: Specify a company to make the package available "
+#~ "**only** at the selected company. Leave the field blank if the package is "
+#~ "available at all companies."
+#~ msgstr ""
+#~ ":guilabel:`Yritys`: Määritä yritys, jotta pakkaus on käytettävissä "
+#~ "**vain** valitussa yrityksessä. Jätä kenttä tyhjäksi, jos pakkaus on "
+#~ "käytettävissä kaikissa yrityksissä."
+
+#~ msgid ":guilabel:`Location`: current location of the package."
+#~ msgstr ":guilabel:`Sijainti`: paketin nykyinen sijainti."
+
+#~ msgid ":guilabel:`Pack Date`: the date the package was created."
+#~ msgstr ":guilabel:`Pakkauspäivä`: päivä, jolloin paketti luotiin."
+
+#~ msgid ""
+#~ ":guilabel:`Package Use`: Choose :guilabel:`Reusable Box` for packages "
+#~ "used for moving products within the warehouse. "
+#~ "Choose :guilabel:`Disposable Box` for packages used to ship products to "
+#~ "customers."
+#~ msgstr ""
+#~ ":guilabel:`Pakkauksen käyttö`: Valitse :guilabel:`Uudelleenkäytettävä "
+#~ "laatikko` pakkauksille, joita käytetään tuotteiden siirtämiseen varaston "
+#~ "sisällä. Valitse :guilabel:`Kertakäyttölaatikko` pakkauksille, joita "
+#~ "käytetään tuotteiden lähettämiseen asiakkaille."
+
+#~ msgid "Display package form to create a cluster pack."
+#~ msgstr "Näytä pakettilomake klusteripaketin luomiseksi."
+
+#~ msgid ""
+#~ "To view all packages, go to :menuselection:`Inventory app --> Products --"
+#~ "> Packages`. By default, packages are shown in Kanban view."
+#~ msgstr ""
+#~ "Voit tarkastella kaikkia pakkauksia "
+#~ "valitsemalla :menuselection:`Varastointi --> Tuotteet --> Pakkaukset`. "
+#~ "Oletuksena pakkaukset näytetään Kanban-näkymässä."
 
 #~ msgid "Product catalog"
 #~ msgstr "Tuotekuvasto"

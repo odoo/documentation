@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-03 17:31+0000\n"
+"POT-Creation-Date: 2026-07-10 17:30+0000\n"
 "PO-Revision-Date: 2026-07-05 00:22+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Russian <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -101,7 +101,6 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines.rst:13
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:21
 #: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:13
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:9
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:13
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:15
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:12
@@ -5629,9 +5628,9 @@ msgid ""
 msgstr ""
 "При использовании назначения на основе правил Odoo автоматически "
 "ограничивает максимальное количество лидов, которое может быть назначено "
-"отдельному члену команды в день. Этот лимит определяется числом в поле "
-":guilabel:`Вместимость` и равен этому числу, делённому на 30 (по количеству "
-"дней в периоде). **Это может привести к тому, что лиды останутся "
+"отдельному члену команды в день. Этот лимит определяется числом в "
+"поле :guilabel:`Вместимость` и равен этому числу, делённому на 30 (по "
+"количеству дней в периоде). **Это может привести к тому, что лиды останутся "
 "неназначенными, если дневная вместимость всех членов отдела продаж будет "
 "исчерпана.**"
 
@@ -13157,6 +13156,7 @@ msgstr ""
 "недоступным. Статический IP следует настроить через маршрутизатор."
 
 #: ../../content/applications/sales/point_of_sale/hardware_network/pos_lna.rst:24
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:11
 msgid "Activation"
 msgstr "Активация"
 
@@ -14404,6 +14404,7 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashdro.rst:58
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:101
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:37
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:48
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/tyro.rst:39
 msgid ""
@@ -14478,10 +14479,10 @@ msgid ""
 "integrated with Odoo Point of Sale, payments are processed directly through "
 "the machine from the :ref:`POS register <pos/use/open-register>`."
 msgstr ""
-":doc:`Кассовые автоматы <../cash_machines>` `Cashmatic <https://"
-"cashmatic.eu/>`_ автоматизируют операции с наличными, принимая наличные и "
-"выдавая сдачу. При интеграции с Odoo Point of Sale платежи обрабатываются "
-"непосредственно через автомат из :ref:`кассы POS <pos/use/open-register>`."
+":doc:`Кассовые автоматы <../cash_machines>` `Cashmatic <https://cashmatic.eu/"
+">`_ автоматизируют операции с наличными, принимая наличные и выдавая сдачу. "
+"При интеграции с Odoo Point of Sale платежи обрабатываются непосредственно "
+"через автомат из :ref:`кассы POS <pos/use/open-register>`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:11
 msgid ""
@@ -14595,8 +14596,8 @@ msgid ""
 "odoo_configuration>`."
 msgstr ""
 "Запишите IP-адрес, отображаемый на экране автомата или устройства, так как "
-"он необходим для :ref:`шага настройки Odoo <pos/cashmatic/odoo_configuration>"
-"`."
+"он необходим для :ref:`шага настройки Odoo <pos/cashmatic/"
+"odoo_configuration>`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:61
 msgid "Connection over HTTPS"
@@ -14668,8 +14669,8 @@ msgid ""
 "On the Cashmatic machine, log in, go to :menuselection:`Settings --> Trusted "
 "mode`, then click :guilabel:`Yes`."
 msgstr ""
-"На устройстве Cashmatic войдите в систему, перейдите в "
-":menuselection:`Settings --> Trusted mode`, затем нажмите :guilabel:`Yes`."
+"На устройстве Cashmatic войдите в систему, перейдите "
+"в :menuselection:`Settings --> Trusted mode`, затем нажмите :guilabel:`Yes`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:86
 msgid ""
@@ -14678,8 +14679,8 @@ msgid ""
 "APIs`."
 msgstr ""
 "В приложении MyCashmatic или на веб-сайте войдите в свою учетную запись, "
-"перейдите в :menuselection:`Settings --> System`, затем включите "
-":guilabel:`Unsecured APIs`."
+"перейдите в :menuselection:`Settings --> System`, затем "
+"включите :guilabel:`Unsecured APIs`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:90
 msgid ""
@@ -15380,335 +15381,113 @@ msgstr ""
 "могут отсканировать с помощью мобильного банковского приложения для "
 "инициирования банковского перевода или мгновенной оплаты."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:12
-msgid "Activate and set up QR code payments"
-msgstr "Активация и настройка платежей по QR-коду"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:14
-msgid "Go to :menuselection:`Accounting --> Configuration --> Settings`, and"
-msgstr ""
-"Перейдите в :menuselection:`Бухгалтерский учёт --> Настройка --> Настройки` и"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:16
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:13
 msgid ""
-"Activate or upgrade your country's fiscal localization package under "
-"the :guilabel:`Fiscal Localization` section to access all country-specific "
-"accounting features."
+"To allow payments by scanning a QR code, go to :menuselection:`Invoicing --> "
+"Configuration --> Settings`, scroll down to the :guilabel:`Customer "
+"Payments` section, and enable the :guilabel:`QR Codes` setting."
 msgstr ""
-"Активируйте или обновите пакет фискальной локализации вашей страны в "
-"разделе :guilabel:`Фискальная локализация`, чтобы получить доступ ко всем "
-"специфическим для страны функциям бухгалтерского учёта."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:18
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:17
 msgid ""
-"Activate :guilabel:`QR codes` under the :guilabel:`Customer Payments` "
-"section."
+"QR code types vary by country. Refer to the corresponding documentation for "
+"the configuration required for each type:"
 msgstr ""
-"Активируйте :guilabel:`QR-коды` в разделе :guilabel:`Платежи клиентов`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:20
-msgid ""
-"Then, as the QR code type differs depending on your country, follow the "
-"corresponding documentation page from the following table to set them up."
+msgid ":doc:`Pix (Brazil) <../../../finance/fiscal_localizations/brazil>`"
 msgstr ""
-"Затем, поскольку тип QR-кода различается в зависимости от вашей страны, "
-"следуйте соответствующей странице документации из следующей таблицы для их "
-"настройки."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:21
+msgid ":ref:`FPS (Hong Kong) <localization/hong-kong/fps>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:22
+msgid ":ref:`QRIS (Indonesia) <localizations/indonesia/qris>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:23
+msgid ":ref:`PayNow (Singapore) <localization/singapore/paynow>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:24
+msgid ""
+":doc:`QR-bill (Switzerland) <../../../finance/fiscal_localizations/"
+"switzerland>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:25
+msgid ":ref:`PromptPay (Thailand) <localization/thailand/promptpay>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:26
+msgid ":ref:`VietQR (Vietnam) <localizations/vietnam/qrcode>`"
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:27
-msgid "QR code types"
-msgstr "Типы QR-кодов"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:28
-msgid "Module name"
-msgstr "Название модуля"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:29
-msgid "Technical name"
-msgstr "Техническое название"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:30
-msgid "Description"
-msgstr "Описание"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:31
-msgid "Pix"
-msgstr "Pix"
+msgid ":ref:`EPC (SEPA) <accounting/customer-invoices/epc>`"
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:32
-msgid ""
-":doc:`Brazilian - Accounting<../../../finance/fiscal_localizations/brazil>`"
+msgid "QR code payment method"
 msgstr ""
-":doc:`Бразилия — бухгалтерский учёт<../../../finance/fiscal_localizations/"
-"brazil>`"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:33
-msgid "`l10n_br`"
-msgstr "`l10n_br`"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:34
 msgid ""
-"The base module to manage the accounting chart and localization for Brazil."
+"To create a QR code :doc:`payment method <../payment_methods>` that allows "
+"customers to scan the code and pay, follow these steps:"
 msgstr ""
-"Базовый модуль для управления планом счетов и локализацией для Бразилии."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:35
-msgid "FPS"
-msgstr "FPS"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:36
-msgid ""
-":doc:`Hong Kong - Accounting<../../../finance/fiscal_localizations/"
-"hong_kong>`"
-msgstr ""
-":doc:`Гонконг — бухгалтерский учёт<../../../finance/fiscal_localizations/"
-"hong_kong>`"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:37
-msgid "`l10n_hk`"
-msgstr "`l10n_hk`"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:38
-msgid ""
-"The base module to manage the accounting chart and localization for Hong "
-"Kong."
-msgstr ""
-"Базовый модуль для управления планом счетов и локализацией для Гонконга."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:39
-msgid "QRIS"
-msgstr "QRIS"
+msgid "Enter a name and set the :guilabel:`Journal` field to :guilabel:`Bank`."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:40
-msgid ""
-":doc:`Indonesian - Accounting<../../../finance/fiscal_localizations/"
-"indonesia>`"
+msgid "Set the :guilabel:`Point of Sale` field to the relevant point of sale."
 msgstr ""
-":doc:`Индонезия — бухгалтерский учёт<../../../finance/fiscal_localizations/"
-"indonesia>`"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:41
-msgid "`l10n_id`"
-msgstr "`l10n_id`"
+msgid ""
+"Set the :guilabel:`Integration` field to :guilabel:`Bank App (QR Code)`."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:42
-msgid ""
-"The base module to manage the accounting chart and localization for "
-"Indonesia."
-msgstr ""
-"Базовый модуль для управления планом счетов и локализацией для Индонезии."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:43
-msgid "PayNow"
-msgstr "PayNow"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:44
-msgid ""
-":doc:`Singapore - Accounting<../../../finance/fiscal_localizations/"
-"singapore>`"
-msgstr ""
-":doc:`Сингапур — бухгалтерский учёт<../../../finance/fiscal_localizations/"
-"singapore>`"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:45
-msgid "`l10n_sg`"
-msgstr "`l10n_sg`"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:46
-msgid ""
-"The base module to manage the accounting chart and localization for "
-"Singapore."
-msgstr ""
-"Базовый модуль для управления планом счетов и локализацией для Сингапура."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:47
-msgid "QR-bill"
-msgstr "QR-счёт"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:48
-msgid ""
-":doc:`Switzerland - Accounting<../../../finance/fiscal_localizations/"
-"switzerland>`"
-msgstr ""
-":doc:`Швейцария - Бухгалтерский учёт<../../../finance/fiscal_localizations/"
-"switzerland>`"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:49
-msgid "`l10n_ch`"
-msgstr "`l10n_ch`"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:50
-msgid ""
-"The base module to manage the accounting chart and localization for "
-"Switzerland."
-msgstr ""
-"Базовый модуль для управления планом счетов и локализацией для Швейцарии."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:51
-msgid "PromptPay"
-msgstr "PromptPay"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:52
-msgid ""
-":doc:`Thailand - Accounting<../../../finance/fiscal_localizations/thailand>`"
-msgstr ""
-":doc:`Таиланд - Бухгалтерский учёт<../../../finance/fiscal_localizations/"
-"thailand>`"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:53
-msgid "`l10n_th`"
-msgstr "`l10n_th`"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:54
-msgid ""
-"The base module to manage the accounting chart and localization for Thailand."
-msgstr ""
-"Базовый модуль для управления планом счетов и локализацией для Таиланда."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:55
-msgid "VietQR"
-msgstr "VietQR"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:56
-msgid ""
-":doc:`Vietnam - Accounting<../../../finance/fiscal_localizations/vietnam>`"
-msgstr ""
-":doc:`Вьетнам - Бухгалтерский учёт<../../../finance/fiscal_localizations/"
-"vietnam>`"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:57
-msgid "`l10n_vn`"
-msgstr "`l10n_vn`"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:58
-msgid ""
-"The base module to manage the accounting chart and localization for Vietnam."
-msgstr ""
-"Базовый модуль для управления планом счетов и локализацией для Вьетнама."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:59
-msgid "EPC"
-msgstr "EPC"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:60
-msgid ""
-":doc:`Account SEPA QR Code<../../../finance/accounting/customer_invoices/"
-"epc_qr_code>`"
-msgstr ""
-":doc:`Account SEPA QR Code<../../../finance/accounting/customer_invoices/"
-"epc_qr_code>`"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:61
-msgid "`account_qr_code_sepa`"
-msgstr "`account_qr_code_sepa`"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:62
-msgid "This module adds support for SEPA Credit Transfer QR-code generation."
-msgstr ""
-"Этот модуль добавляет поддержку генерации QR-кода для кредитового перевода "
-"SEPA."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:65
-msgid "Create the payment method"
-msgstr "Создайте способ оплаты"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:67
-msgid "Open the Point of Sale application."
-msgstr "Откройте приложение POS."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:68
-msgid ""
-"Go to :menuselection:`Configuration --> Payment Methods` and create a "
-"payment method."
-msgstr ""
-"Перейдите в :menuselection:`Настройка --> Способы оплаты` и создайте способ "
-"оплаты."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:69
-msgid "Set a bank-type journal."
-msgstr "Установите журнал типа \"банк\"."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:70
-msgid ""
-"Select :guilabel:`Bank App (QR Code)` under the :guilabel:`Integration` "
-"section."
-msgstr ""
-"Выберите :guilabel:`Банковское приложение (QR-код)` в "
-"разделе :guilabel:`Интеграция`."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:71
 msgid "Select the :guilabel:`QR Code Format` from the dropdown menu."
 msgstr "Выберите :guilabel:`Формат QR-кода` из выпадающего меню."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:73
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:44
 msgid ""
-"Select :guilabel:`SEPA Credit Transfer QR` if you are part of the Single "
-"Euro Payments Area (SEPA)."
+"Select :guilabel:`SEPA Credit Transfer QR` if your company is part of the "
+"Single Euro Payments Area (SEPA)."
 msgstr ""
-"Выберите :guilabel:`SEPA Credit Transfer QR`, если вы являетесь участником "
-"Единой зоны платежей в евро (SEPA)."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:75
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:46
 msgid ""
 "Select :guilabel:`EMV Merchant-Presented QR-code` for other QR code types."
 msgstr ""
 "Выберите :guilabel:`EMV Merchant-Presented QR-code` для других типов QR-"
 "кодов."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:None
-msgid "QR code payment method configuration"
-msgstr "Настройка способа оплаты с помощью QR-кода"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:82
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:49
 msgid ""
-"At least one bank account must be defined in the journal to allow QR code "
-"payments to be registered with bank apps."
+"The :ref:`journal <accounting/journals/bank>` selected in the payment method "
+"must be linked to a specific bank account to allow QR code payments to be "
+"registered with bank apps."
 msgstr ""
-"В журнале должен быть определен хотя бы один банковский счет, чтобы платежи "
-"по QR-коду можно было регистрировать с помощью банковских приложений."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:85
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:55
+msgid "QR code payments registration"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:57
 msgid ""
-"Once the payment method is created, go to the :ref:`POS' settings <pos/use/"
-"settings>` and add the payment method to your POS under "
-"the :guilabel:`Payment` section."
+"To accept a QR code payment, select the relevant :ref:`payment method <pos/"
+"qrcode/payment-method>` on the :ref:`payment screen <pos/use/sell>`, then "
+"click :guilabel:`Validate`. A QR code is generated and displayed on the "
+"payment screen for customers to scan with their mobile banking app and "
+"complete the payment. The payment is validated in Odoo once processed in the "
+"mobile banking app."
 msgstr ""
-"После создания способа оплаты перейдите в :ref:`настройки POS <pos/use/"
-"settings>` и добавьте способ оплаты в свою POS в разделе :guilabel:`Payment`."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:None
-msgid "Enable QR code payment method"
-msgstr "Активация способа оплаты с помощью QR-кода"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:93
-msgid "Register payments using QR codes"
-msgstr "Регистрация платежей с помощью QR-кодов"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:95
-msgid ""
-"When processing a payment, select the payment method for QR code payments. A "
-"QR code is generated and displayed on the screen for the customer to scan "
-"and pay with their mobile banking app."
-msgstr ""
-"При обработке платежа выберите способ оплаты для платежей по QR-коду. На "
-"экране создается и отображается QR-код, который клиент сканирует и "
-"оплачивает с помощью мобильного банковского приложения."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:None
-msgid "QR code payment example"
-msgstr "Пример оплаты по QR-коду"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:102
-msgid "Hit :guilabel:`Confirm Payment` to validate the transaction."
-msgstr "Нажмите :guilabel:`Подтвердить платеж`, чтобы подтвердить транзакцию."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:105
-msgid ""
-"Odoo does **not** check the bank payment. It is recommended that users "
-"verify payments for validity before confirming them on the POS register."
-msgstr ""
-"Odoo **не** проверяет банковский платеж. Рекомендуется пользователям "
-"проверять платежи на действительность перед их подтверждением на кассе POS."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:7
 msgid ""
@@ -18575,16 +18354,16 @@ msgid ""
 "by :ref:`units <pos/products/units>` and :ref:`manage stock <pos/products/"
 "sn>`."
 msgstr ""
-"Odoo POS позволяет :ref:`создавать продукты <pos/products/creation>` и "
-":ref:`управлять информацией о продуктах <pos/products/information-display>` "
-"из бэкенда или в кассе POS. Продукты можно :ref:`настраивать <pos/products/"
-"configuration>` различными способами, включая создание :ref:`вариантов <pos/"
-"products/variants>`, :ref:`комбинаций продуктов <pos/products/combos>` и "
-":ref:`категорий продуктов для POS <pos/products/categories>`, а также "
-"добавление :ref:`тегов <pos/products/tags>` и :ref:`изображений <pos/"
-"products/images>`. Вы также можете группировать продукты по :ref:`единицам "
-"измерения <pos/products/units>` и :ref:`управлять запасами <pos/products/sn>"
-"`."
+"Odoo POS позволяет :ref:`создавать продукты <pos/products/creation>` "
+"и :ref:`управлять информацией о продуктах <pos/products/information-"
+"display>` из бэкенда или в кассе POS. Продукты можно :ref:`настраивать <pos/"
+"products/configuration>` различными способами, включая "
+"создание :ref:`вариантов <pos/products/variants>`, :ref:`комбинаций "
+"продуктов <pos/products/combos>` и :ref:`категорий продуктов для POS <pos/"
+"products/categories>`, а также добавление :ref:`тегов <pos/products/tags>` "
+"и :ref:`изображений <pos/products/images>`. Вы также можете группировать "
+"продукты по :ref:`единицам измерения <pos/products/units>` и :ref:`управлять "
+"запасами <pos/products/sn>`."
 
 #: ../../content/applications/sales/point_of_sale/products.rst:16
 msgid "Product creation"
@@ -18605,13 +18384,13 @@ msgid ""
 msgstr ""
 "Чтобы создать продукты из бэкенда, перейдите в :menuselection:`POS --> "
 "Продукты --> Продукты` и нажмите :guilabel:`Создать`, чтобы создать продукт, "
-"или выберите существующий для его редактирования. Убедитесь, что флажок "
-":guilabel:`POS` включен в верхней части формы, затем :doc:`настройте общую "
-"информацию о продукте </applications/inventory_and_mrp/inventory/"
+"или выберите существующий для его редактирования. Убедитесь, что "
+"флажок :guilabel:`POS` включен в верхней части формы, затем :doc:`настройте "
+"общую информацию о продукте </applications/inventory_and_mrp/inventory/"
 "product_management/configure>`, например, определив :doc:`тип продукта </"
-"applications/inventory_and_mrp/inventory/product_management/configure/type>"
-"`, установив :ref:`стратегию отслеживания <pos/products/sn>` или добавив "
-"изображение продукта по мере необходимости. Настройте расширенные, "
+"applications/inventory_and_mrp/inventory/product_management/configure/"
+"type>`, установив :ref:`стратегию отслеживания <pos/products/sn>` или "
+"добавив изображение продукта по мере необходимости. Настройте расширенные, "
 "специфичные для POS :ref:`детали продукта <pos/products/configuration>` по "
 "мере необходимости."
 
@@ -18626,13 +18405,14 @@ msgid ""
 "register through the :ref:`product information popover <pos/products/"
 "information-display>`."
 msgstr ""
-"Также можно создать продукт из интерфейса POS. Для этого откройте "
-":ref:`кассу POS <pos/use/open-register>`, нажмите значок :icon:`fa-bars` "
-"(:guilabel:`меню-гамбургер`), затем выберите :guilabel:`Создать продукт`. "
-"Введите данные продукта во всплывающем окне и нажмите :guilabel:`Сохранить`. "
-"Продукт сразу становится доступным в кассе POS. Существующие продукты также "
-"можно обновлять непосредственно из кассы POS через :ref:`всплывающее окно "
-"информации о продукте <pos/products/information-display>`."
+"Также можно создать продукт из интерфейса POS. Для этого "
+"откройте :ref:`кассу POS <pos/use/open-register>`, нажмите значок :icon:`fa-"
+"bars` (:guilabel:`меню-гамбургер`), затем выберите :guilabel:`Создать "
+"продукт`. Введите данные продукта во всплывающем окне и "
+"нажмите :guilabel:`Сохранить`. Продукт сразу становится доступным в кассе "
+"POS. Существующие продукты также можно обновлять непосредственно из кассы "
+"POS через :ref:`всплывающее окно информации о продукте <pos/products/"
+"information-display>`."
 
 #: ../../content/applications/sales/point_of_sale/products.rst:36
 msgid ""
@@ -18674,10 +18454,10 @@ msgid ""
 "inventory_management/warehouses>` information,"
 msgstr ""
 ":doc:`доступные </applications/inventory_and_mrp/inventory/"
-"warehouses_storage/inventory_management/count_products>` и "
-":doc:`прогнозируемые </applications/inventory_and_mrp/inventory/"
-"warehouses_storage/reporting/forecast>` запасы, включая информацию о "
-":doc:`складе </applications/inventory_and_mrp/inventory/warehouses_storage/"
+"warehouses_storage/inventory_management/count_products>` "
+"и :doc:`прогнозируемые </applications/inventory_and_mrp/inventory/"
+"warehouses_storage/reporting/forecast>` запасы, включая информацию "
+"о :doc:`складе </applications/inventory_and_mrp/inventory/warehouses_storage/"
 "inventory_management/warehouses>`,"
 
 #: ../../content/applications/sales/point_of_sale/products.rst:58
@@ -18726,9 +18506,10 @@ msgid ""
 "the :guilabel:`Product & PoS categories` section, and enable :guilabel:`Show "
 "margins & costs`."
 msgstr ""
-"Чтобы отображать маржу и затраты в окне информации о продукте, перейдите в "
-":ref:`настройки POS <pos/use/settings>`, откройте раздел :guilabel:`Продукты "
-"и категории POS` и включите :guilabel:`Показывать маржу и затраты`."
+"Чтобы отображать маржу и затраты в окне информации о продукте, перейдите "
+"в :ref:`настройки POS <pos/use/settings>`, откройте "
+"раздел :guilabel:`Продукты и категории POS` и включите :guilabel:`Показывать "
+"маржу и затраты`."
 
 #: ../../content/applications/sales/point_of_sale/products.rst:82
 msgid ""
@@ -18736,9 +18517,9 @@ msgid ""
 "the :guilabel:`Point of Sale` tab on the product form to configure the "
 "following POS-specific options:"
 msgstr ""
-"После :ref:`создания <pos/products/creation>` продукта перейдите на вкладку "
-":guilabel:`POS` в форме продукта, чтобы настроить следующие специфичные для "
-"POS параметры:"
+"После :ref:`создания <pos/products/creation>` продукта перейдите на "
+"вкладку :guilabel:`POS` в форме продукта, чтобы настроить следующие "
+"специфичные для POS параметры:"
 
 #: ../../content/applications/sales/point_of_sale/products.rst:85
 msgid ""
@@ -18782,9 +18563,9 @@ msgid ""
 "info-circle` :ref:`info button <pos/products/tag-application>`."
 msgstr ""
 "Напишите :guilabel:`Description`, которое будет отображаться в :ref:`окне "
-"информации о продукте в POS-кассе <pos/products/information-display>` и в "
-":doc:`режиме самостоятельного заказа <extra/self_order>` при нажатии на "
-":icon:`fa-info-circle` :ref:`информационную кнопку <pos/products/tag-"
+"информации о продукте в POS-кассе <pos/products/information-display>` и "
+"в :doc:`режиме самостоятельного заказа <extra/self_order>` при нажатии "
+"на :icon:`fa-info-circle` :ref:`информационную кнопку <pos/products/tag-"
 "application>`."
 
 #: ../../content/applications/sales/point_of_sale/products.rst:96
@@ -18816,10 +18597,10 @@ msgid ""
 "tags>`, :ref:`product and category images display <pos/products/images>`, "
 "and :ref:`units of measure <pos/products/units>`."
 msgstr ""
-"Выше этого вы можете настроить дополнительные опции, такие как "
-":ref:`варианты продукта <pos/products/variants>`, :ref:`теги продукта <pos/"
-"products/tags>`, :ref:`отображение изображений продуктов и категорий <pos/"
-"products/images>` и :ref:`единицы измерения <pos/products/units>`."
+"Выше этого вы можете настроить дополнительные опции, такие "
+"как :ref:`варианты продукта <pos/products/variants>`, :ref:`теги продукта "
+"<pos/products/tags>`, :ref:`отображение изображений продуктов и категорий "
+"<pos/products/images>` и :ref:`единицы измерения <pos/products/units>`."
 
 #: ../../content/applications/sales/point_of_sale/products.rst:109
 #: ../../content/applications/sales/sales/gelato.rst:136
@@ -18835,10 +18616,10 @@ msgid ""
 "to :menuselection:`Inventory --> Configuration --> Settings`, scroll down to "
 "the :guilabel:`Products`, enable :guilabel:`Variants`, and :guilabel:`Save`."
 msgstr ""
-"Чтобы разрешить использование различных вариантов продукта, перейдите в "
-":menuselection:`Склад --> Конфигурация --> Настройки`, прокрутите вниз до "
-":guilabel:`Products`, включите :guilabel:`Variants` и нажмите "
-":guilabel:`Save`."
+"Чтобы разрешить использование различных вариантов продукта, перейдите "
+"в :menuselection:`Склад --> Конфигурация --> Настройки`, прокрутите вниз "
+"до :guilabel:`Products`, включите :guilabel:`Variants` и "
+"нажмите :guilabel:`Save`."
 
 #: ../../content/applications/sales/point_of_sale/products.rst:116
 msgid ""
@@ -18859,12 +18640,12 @@ msgid ""
 "delivery platforms, if applicable."
 msgstr ""
 "Затем перейдите в :menuselection:`POS --> Продукты --> Продукты`, выберите "
-"продукт и настройте :ref:`атрибуты <products/variants/attributes>` и их "
-":ref:`значения <products/variants/attributes-values>`, чтобы создать "
-":ref:`варианты <products/variants/variants>` на вкладке "
-":guilabel:`Attributes & Variants`. В форме значения включите "
-":guilabel:`Available on Food Delivery` для значений, доступных через "
-"платформы доставки, если применимо."
+"продукт и настройте :ref:`атрибуты <products/variants/attributes>` и "
+"их :ref:`значения <products/variants/attributes-values>`, чтобы "
+"создать :ref:`варианты <products/variants/variants>` на "
+"вкладке :guilabel:`Attributes & Variants`. В форме значения "
+"включите :guilabel:`Available on Food Delivery` для значений, доступных "
+"через платформы доставки, если применимо."
 
 #: ../../content/applications/sales/point_of_sale/products.rst:125
 msgid ""
@@ -18882,8 +18663,8 @@ msgid ""
 "in :doc:`self-ordering mode <extra/self_order>` can select product variants "
 "when :ref:`adding items to the cart <pos/use/sell>`."
 msgstr ""
-"Пользователи в :ref:`POS-кассе <pos/use/open-register>` и клиенты в "
-":doc:`режиме самостоятельного заказа <extra/self_order>` могут выбирать "
+"Пользователи в :ref:`POS-кассе <pos/use/open-register>` и клиенты "
+"в :doc:`режиме самостоятельного заказа <extra/self_order>` могут выбирать "
 "варианты продуктов при :ref:`добавлении товаров в корзину <pos/use/sell>`."
 
 #: ../../content/applications/sales/point_of_sale/products.rst:0
@@ -18946,9 +18727,9 @@ msgid ""
 "the :guilabel:`Sales` tab, and, in the :guilabel:`Extra info` section, add "
 "as many :guilabel:`Tags` as needed."
 msgstr ""
-"Чтобы добавить теги к продукту, перейдите в форму продукта, откройте вкладку "
-":guilabel:`Sales` и в разделе :guilabel:`Extra info` добавьте столько "
-":guilabel:`Tags`, сколько необходимо."
+"Чтобы добавить теги к продукту, перейдите в форму продукта, откройте "
+"вкладку :guilabel:`Sales` и в разделе :guilabel:`Extra info` добавьте "
+"столько :guilabel:`Tags`, сколько необходимо."
 
 #: ../../content/applications/sales/point_of_sale/products.rst:162
 msgid ""
@@ -18969,8 +18750,8 @@ msgid ""
 msgstr ""
 "Теги отображаются только в :doc:`режиме самостоятельного заказа <extra/"
 "self_order>`, *не* в :ref:`кассе POS <pos/use/open-register>`. Клиенты могут "
-"просмотреть теги и их описания, нажав на значок :icon:`fa-info` :guilabel:`"
-"(информация)` рядом с названием продукта."
+"просмотреть теги и их описания, нажав на значок :icon:`fa-"
+"info` :guilabel:`(информация)` рядом с названием продукта."
 
 #: ../../content/applications/sales/point_of_sale/products.rst:0
 msgid "Example of product tags in self-ordering mode."
@@ -19052,9 +18833,9 @@ msgid ""
 "the :doc:`customer display <hardware_network/customer_display>`, and/or "
 "in :doc:`self-ordering mode <extra/self_order>`, as follows:"
 msgstr ""
-"Изображения можно добавить для :ref:`продуктов <pos/products/creation>`, "
-":ref:`тегов продуктов <pos/products/tags>`, :ref:`вариантов <pos/products/"
-"variants>` и :ref:`категорий <pos/products/categories>`. Они могут "
+"Изображения можно добавить для :ref:`продуктов <pos/products/"
+"creation>`, :ref:`тегов продуктов <pos/products/tags>`, :ref:`вариантов <pos/"
+"products/variants>` и :ref:`категорий <pos/products/categories>`. Они могут "
 "отображаться в :ref:`кассе POS <pos/use/open-register>`, на :doc:`дисплее "
 "клиента <hardware_network/customer_display>` и/или в :doc:`режиме "
 "самостоятельного заказа <extra/self_order>` следующим образом:"
@@ -19096,8 +18877,8 @@ msgid ""
 ":icon:`fa-check` when clicking the :icon:`fa-info-circle` :ref:`Info button "
 "<pos/products/tag-application>`"
 msgstr ""
-":icon:`fa-check` при нажатии на кнопку :icon:`fa-info-circle` "
-":ref:`Информация <pos/products/tag-application>`"
+":icon:`fa-check` при нажатии на кнопку :icon:`fa-info-"
+"circle` :ref:`Информация <pos/products/tag-application>`"
 
 #: ../../content/applications/sales/point_of_sale/products.rst:236
 msgid "Product variant image"
@@ -19117,11 +18898,11 @@ msgid ""
 "images`."
 msgstr ""
 "После добавления изображений к товарам или категориям настройте их видимость "
-"*в POS-кассе*. Для этого перейдите в :ref:`настройки POS <pos/use/settings>"
-"`, прокрутите вниз до раздела :guilabel:`Интерфейс POS` и в пункте "
-":guilabel:`Скрыть изображения в POS` включите/отключите "
-":guilabel:`Показывать изображения товаров` и/или :guilabel:`Показывать "
-"изображения категорий`."
+"*в POS-кассе*. Для этого перейдите в :ref:`настройки POS <pos/use/"
+"settings>`, прокрутите вниз до раздела :guilabel:`Интерфейс POS` и в "
+"пункте :guilabel:`Скрыть изображения в POS` включите/"
+"отключите :guilabel:`Показывать изображения товаров` и/"
+"или :guilabel:`Показывать изображения категорий`."
 
 #: ../../content/applications/sales/point_of_sale/products.rst:253
 msgid "POS product categories"
@@ -19195,8 +18976,8 @@ msgid ""
 "After creating POS product categories, assign them to specific products on "
 "the :ref:`product form <pos/products/creation>`."
 msgstr ""
-"После создания категорий товаров POS назначьте их конкретным товарам в "
-":ref:`форме товара <pos/products/creation>`."
+"После создания категорий товаров POS назначьте их конкретным товарам "
+"в :ref:`форме товара <pos/products/creation>`."
 
 #: ../../content/applications/sales/point_of_sale/products.rst:275
 msgid ""
@@ -19205,9 +18986,9 @@ msgid ""
 "categories` section, then, in the :guilabel:`Restrict Categories` field, "
 "select the categories that should be available."
 msgstr ""
-"Чтобы отображать только определённые категории в POS-кассе, перейдите в "
-":ref:`настройки POS <pos/use/settings>`, откройте раздел :guilabel:`Товары и "
-"категории PoS`, затем в поле :guilabel:`Ограничить категории` выберите "
+"Чтобы отображать только определённые категории в POS-кассе, перейдите "
+"в :ref:`настройки POS <pos/use/settings>`, откройте раздел :guilabel:`Товары "
+"и категории PoS`, затем в поле :guilabel:`Ограничить категории` выберите "
 "категории, которые должны быть доступны."
 
 #: ../../content/applications/sales/point_of_sale/products.rst:281
@@ -19232,10 +19013,10 @@ msgid ""
 "section, and enable :guilabel:`Group products by categories`."
 msgstr ""
 "Если в POS-кассе не выбрана ни одна категория, отображаются все товары. "
-"Чтобы организовать товары по категориям в этом виде, перейдите в "
-":ref:`настройки POS <pos/use/settings>`, прокрутите вниз до раздела "
-":guilabel:`Интерфейс PoS` и включите :guilabel:`Группировать товары по "
-"категориям`."
+"Чтобы организовать товары по категориям в этом виде, перейдите "
+"в :ref:`настройки POS <pos/use/settings>`, прокрутите вниз до "
+"раздела :guilabel:`Интерфейс PoS` и включите :guilabel:`Группировать товары "
+"по категориям`."
 
 #: ../../content/applications/sales/point_of_sale/products.rst:294
 msgid ""
@@ -19244,8 +19025,8 @@ msgid ""
 "overview shows all products in both categories, grouped by category on "
 "separate rows."
 msgstr ""
-"В этой POS-кассе настроены две категории, :guilabel:`Еда` и "
-":guilabel:`Напитки`, но ни одна из них не выбрана. В обзоре показаны все "
+"В этой POS-кассе настроены две категории, :guilabel:`Еда` "
+"и :guilabel:`Напитки`, но ни одна из них не выбрана. В обзоре показаны все "
 "товары обеих категорий, сгруппированные по категориям в отдельных строках."
 
 #: ../../content/applications/sales/point_of_sale/products.rst:0
@@ -19265,10 +19046,10 @@ msgid ""
 "select one or more items from each combo choice."
 msgstr ""
 "Комбо-товар — это набор из нескольких товаров, продаваемых вместе как единое "
-"целое. Каждый комбо-товар состоит из нескольких категорий, известных как "
-":ref:`варианты комбо <pos/products/combo-choices>`, и каждый вариант комбо "
-"содержит несколько элементов. При покупке комбо-товара клиенты могут выбрать "
-"один или несколько элементов из каждого варианта комбо."
+"целое. Каждый комбо-товар состоит из нескольких категорий, известных "
+"как :ref:`варианты комбо <pos/products/combo-choices>`, и каждый вариант "
+"комбо содержит несколько элементов. При покупке комбо-товара клиенты могут "
+"выбрать один или несколько элементов из каждого варианта комбо."
 
 #: ../../content/applications/sales/point_of_sale/products.rst:312
 msgid ""
@@ -19473,9 +19254,9 @@ msgstr ""
 "предлагает выбор стульев и столов. Вариант комбо для стульев включает "
 "конференц-стул, офисный стул и кресло, при этом максимальное количество "
 "выбираемых позиций установлено на 2. За каждый дополнительный стул, который "
-"выбирает клиент, добавляется :guilabel:`Цена комбо` в **35** €. Кресло имеет "
-":guilabel:`Дополнительную цену` в **100** €, поскольку оно изготовлено из "
-"кожи. Выбор конференц-стула и кресла увеличивает цену :guilabel:`Офисного "
+"выбирает клиент, добавляется :guilabel:`Цена комбо` в **35** €. Кресло "
+"имеет :guilabel:`Дополнительную цену` в **100** €, поскольку оно изготовлено "
+"из кожи. Выбор конференц-стула и кресла увеличивает цену :guilabel:`Офисного "
 "комбо` до **435** €, то есть :guilabel:`Цена продажи` + **35** € "
 "(:guilabel:`Цена комбо`) за добавление второго стула + **100** € "
 "(:guilabel:`Дополнительная цена`) за кожаное кресло."
@@ -19493,11 +19274,11 @@ msgid ""
 "tracked by quantity, :ref:`by lot, or by serial number <pos/products/sn>`."
 msgstr ""
 "Чтобы отслеживать запасы для товаров POS, :ref:`тип товара <inventory/"
-"product_management/goods-or-services>` должен быть установлен на "
-":guilabel:`Товары` или :guilabel:`Комбо`, и должна быть включена :ref:`опция "
-"отслеживания запасов <inventory/product_management/tracking-inventory>`. "
-"Товары могут отслеживаться по количеству, :ref:`по партиям или по серийным "
-"номерам <pos/products/sn>`."
+"product_management/goods-or-services>` должен быть установлен "
+"на :guilabel:`Товары` или :guilabel:`Комбо`, и должна быть "
+"включена :ref:`опция отслеживания запасов <inventory/product_management/"
+"tracking-inventory>`. Товары могут отслеживаться по количеству, :ref:`по "
+"партиям или по серийным номерам <pos/products/sn>`."
 
 #: ../../content/applications/sales/point_of_sale/products.rst:402
 msgid ""
@@ -19548,8 +19329,8 @@ msgstr ":ref:`Настройте товары <pos/products/creation>`."
 msgid ""
 ":ref:`Assign tracking numbers <inventory/product_management/assign-sn>`."
 msgstr ""
-":ref:`Назначьте номера отслеживания <inventory/product_management/assign-sn>"
-"`."
+":ref:`Назначьте номера отслеживания <inventory/product_management/assign-"
+"sn>`."
 
 #: ../../content/applications/sales/point_of_sale/products.rst:426
 msgid ""
@@ -19635,8 +19416,8 @@ msgid ""
 "the :guilabel:`Cozy sweater` because no serial number has been assigned."
 msgstr ""
 "Значок отображается зелёным для :guilabel:`Casual T-shirt`, поскольку "
-"присвоен серийный номер `123456`. С другой стороны, значок красный для "
-":guilabel:`Cozy sweater`, так как серийный номер не присвоен."
+"присвоен серийный номер `123456`. С другой стороны, значок красный "
+"для :guilabel:`Cozy sweater`, так как серийный номер не присвоен."
 
 #: ../../content/applications/sales/point_of_sale/products.rst:0
 msgid "Serial number assignment in POS register."
@@ -28534,8 +28315,8 @@ msgid ""
 "up form appears under a new :guilabel:`Down Payments` section."
 msgstr ""
 "На вкладке :guilabel:`Invoice Lines` в :guilabel:`Customer Invoice Draft` "
-"авансовый платёж, который был настроен во всплывающей форме *Create invoice"
-"(s)*, отображается в новом разделе :guilabel:`Down Payments`."
+"авансовый платёж, который был настроен во всплывающей форме *Create "
+"invoice(s)*, отображается в новом разделе :guilabel:`Down Payments`."
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:64
 msgid "Types of down payments"
@@ -28558,8 +28339,8 @@ msgid ""
 msgstr ""
 "100% авансовый платёж возможен и отличается от полной оплаты заказа на "
 "продажу. Заказ на продажу, оплаченный через обычный процесс выставления "
-"счетов, не позволяет создавать дополнительные счета и не отображает кнопку "
-":guilabel:`Create Invoice` в заказе на продажу."
+"счетов, не позволяет создавать дополнительные счета и не отображает "
+"кнопку :guilabel:`Create Invoice` в заказе на продажу."
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:72
 msgid ""
@@ -28639,8 +28420,8 @@ msgid ""
 "the :guilabel:`Down Payment` field."
 msgstr ""
 "Во всплывающем окне :guilabel:`Create invoice(s)`, которое появляется, "
-"выберите :guilabel:`Down payment (percentage)` и введите `50` в поле "
-":guilabel:`Down Payment`."
+"выберите :guilabel:`Down payment (percentage)` и введите `50` в "
+"поле :guilabel:`Down Payment`."
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:105
 msgid ""
@@ -28667,11 +28448,11 @@ msgid ""
 "also reveals a new series of buttons at the top of the page."
 msgstr ""
 "Наконец, нажмите :guilabel:`Создать черновик`, чтобы создать и просмотреть "
-"черновик счёта, который включает авансовый платёж в разделе "
-":guilabel:`Авансовые платежи` вкладки :guilabel:`Строки счёта`. Нажмите "
-":guilabel:`Подтвердить`, и статус счёта изменится с :guilabel:`Черновик` на "
-":guilabel:`Проведён`. Также в верхней части страницы появится новая серия "
-"кнопок."
+"черновик счёта, который включает авансовый платёж в "
+"разделе :guilabel:`Авансовые платежи` вкладки :guilabel:`Строки счёта`. "
+"Нажмите :guilabel:`Подтвердить`, и статус счёта изменится "
+"с :guilabel:`Черновик` на :guilabel:`Проведён`. Также в верхней части "
+"страницы появится новая серия кнопок."
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
 msgid "A sample draft invoice with down payment mentioned in Odoo Sales."
@@ -28688,8 +28469,8 @@ msgstr ""
 "Чтобы начать процесс оплаты, нажмите :guilabel:`Оплатить`. Откроется "
 "всплывающая форма :guilabel:`Оплатить` с автоматически заполненной "
 "информацией. Убедитесь, что предоставленная информация верна, и при "
-"необходимости внесите изменения. Когда всё готово, нажмите кнопку "
-":guilabel:`Создать платёж`."
+"необходимости внесите изменения. Когда всё готово, нажмите "
+"кнопку :guilabel:`Создать платёж`."
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
 msgid "Showcase of the Pay pop-up window with create payment button."
@@ -28733,9 +28514,9 @@ msgid ""
 "invoice(s)` pop-up window, there is a new field: :guilabel:`Already "
 "invoiced` and :guilabel:`Amount to invoice`."
 msgstr ""
-"Нажмите кнопку :guilabel:`Создать счёт`. Во всплывающем окне "
-":guilabel:`Создать счёт(а)` появятся новые поля: :guilabel:`Уже выставлено` "
-"и :guilabel:`Сумма к выставлению`."
+"Нажмите кнопку :guilabel:`Создать счёт`. Во всплывающем "
+"окне :guilabel:`Создать счёт(а)` появятся новые поля: :guilabel:`Уже "
+"выставлено` и :guilabel:`Сумма к выставлению`."
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
 msgid ""
@@ -28751,8 +28532,8 @@ msgid ""
 "the :guilabel:`Amount to invoice` field."
 msgstr ""
 "Выберите опцию :guilabel:`Обычный счёт`. Odoo создаст счёт на точную сумму, "
-"необходимую для завершения полной оплаты, как показано в поле "
-":guilabel:`Сумма к выставлению`."
+"необходимую для завершения полной оплаты, как показано в "
+"поле :guilabel:`Сумма к выставлению`."
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:148
 msgid ""
@@ -28761,11 +28542,11 @@ msgid ""
 "in the :guilabel:`Invoice Lines` tab. Each invoice line item displays all "
 "the necessary information related to each invoice."
 msgstr ""
-"Нажмите :guilabel:`Создать черновик`, чтобы создать страницу "
-":guilabel:`Черновик счёта клиента`. В черновике перечислены все счета для "
-"этого конкретного заказа на продажу на вкладке :guilabel:`Строки счёта`. "
-"Каждая строка счёта отображает всю необходимую информацию, относящуюся к "
-"каждому счёту."
+"Нажмите :guilabel:`Создать черновик`, чтобы создать "
+"страницу :guilabel:`Черновик счёта клиента`. В черновике перечислены все "
+"счета для этого конкретного заказа на продажу на вкладке :guilabel:`Строки "
+"счёта`. Каждая строка счёта отображает всю необходимую информацию, "
+"относящуюся к каждому счёту."
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:152
 msgid ""
@@ -28832,9 +28613,9 @@ msgid ""
 msgstr ""
 "Это связано с тем, что продукт(ы) должны быть поставлены *до* создания "
 "окончательного счёта, поскольку Odoo не разрешает отрицательные итоговые "
-"суммы для счетов. Если ничего не было поставлено, создаётся "
-":guilabel:`Кредит-нота`, которая отменяет черновик счёта, созданный после "
-"авансового платежа."
+"суммы для счетов. Если ничего не было поставлено, "
+"создаётся :guilabel:`Кредит-нота`, которая отменяет черновик счёта, "
+"созданный после авансового платежа."
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:182
 msgid ""
@@ -28874,14 +28655,14 @@ msgid ""
 "select :guilabel:`Down payment (percentage)`, and type `100` in "
 "the :guilabel:`Down Payment` field."
 msgstr ""
-"Чтобы настроить 100% авансовый платёж, перейдите в "
-":menuselection:`Приложение Продажи --> Создать` и :ref:`создайте "
+"Чтобы настроить 100% авансовый платёж, перейдите "
+"в :menuselection:`Приложение Продажи --> Создать` и :ref:`создайте "
 "коммерческое предложение <sales/create-quotation>` для продукта. После "
 "нажатия кнопки :guilabel:`Подтвердить` коммерческое предложение превращается "
-"в заказ на продажу. На этом этапе теперь можно создать счёт, нажав "
-":guilabel:`Создать счёт` в левом верхнем углу. Во всплывающем окне "
-":guilabel:`Создать счёт(а)` выберите :guilabel:`Авансовый платёж (процент)` "
-"и введите `100` в поле :guilabel:`Авансовый платёж`."
+"в заказ на продажу. На этом этапе теперь можно создать счёт, "
+"нажав :guilabel:`Создать счёт` в левом верхнем углу. Во всплывающем "
+"окне :guilabel:`Создать счёт(а)` выберите :guilabel:`Авансовый платёж "
+"(процент)` и введите `100` в поле :guilabel:`Авансовый платёж`."
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:None
 msgid ""
@@ -28902,12 +28683,12 @@ msgid ""
 "series of buttons at the top of the page."
 msgstr ""
 "Затем нажмите :guilabel:`Создать черновик`, чтобы создать черновик счёта. "
-"Это также откроет черновик счёта для просмотра, который включает "
-":guilabel:`Авансовый платёж` в разделе :guilabel:`Авансовые платежи` вкладки "
-":guilabel:`Строки счёта`. Теперь счёт можно подтвердить и провести, нажав "
-":guilabel:`Подтвердить`. Подтверждение счёта изменяет статус с "
-":guilabel:`Черновик` на :guilabel:`Проведён`. Также в верхней части страницы "
-"появится новая серия кнопок."
+"Это также откроет черновик счёта для просмотра, который "
+"включает :guilabel:`Авансовый платёж` в разделе :guilabel:`Авансовые "
+"платежи` вкладки :guilabel:`Строки счёта`. Теперь счёт можно подтвердить и "
+"провести, нажав :guilabel:`Подтвердить`. Подтверждение счёта изменяет статус "
+"с :guilabel:`Черновик` на :guilabel:`Проведён`. Также в верхней части "
+"страницы появится новая серия кнопок."
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:211
 msgid ""
@@ -42592,8 +42373,8 @@ msgstr ""
 "разделе :guilabel:`ПРОДАЖИ`."
 
 #: ../../content/applications/sales/subscriptions.rst:295
-msgid ":doc:`/applications/finance/accounting/payments/online`"
-msgstr ":doc:`/applications/finance/accounting/payments/online`"
+msgid ":ref:`Online Payments <accounting/payments/online>`"
+msgstr ""
 
 #: ../../content/applications/sales/subscriptions.rst:296
 msgid ""
@@ -44180,6 +43961,284 @@ msgstr ""
 #: ../../content/applications/sales/subscriptions/upselling.rst:80
 msgid ":doc:`../sales/products_prices/prices/discounts`"
 msgstr ":doc:`../sales/products_prices/prices/discounts`"
+
+#~ msgid "Activate and set up QR code payments"
+#~ msgstr "Активация и настройка платежей по QR-коду"
+
+#~ msgid ""
+#~ "Go to :menuselection:`Accounting --> Configuration --> Settings`, and"
+#~ msgstr ""
+#~ "Перейдите в :menuselection:`Бухгалтерский учёт --> Настройка --> "
+#~ "Настройки` и"
+
+#~ msgid ""
+#~ "Activate or upgrade your country's fiscal localization package under "
+#~ "the :guilabel:`Fiscal Localization` section to access all country-"
+#~ "specific accounting features."
+#~ msgstr ""
+#~ "Активируйте или обновите пакет фискальной локализации вашей страны в "
+#~ "разделе :guilabel:`Фискальная локализация`, чтобы получить доступ ко всем "
+#~ "специфическим для страны функциям бухгалтерского учёта."
+
+#~ msgid ""
+#~ "Activate :guilabel:`QR codes` under the :guilabel:`Customer Payments` "
+#~ "section."
+#~ msgstr ""
+#~ "Активируйте :guilabel:`QR-коды` в разделе :guilabel:`Платежи клиентов`."
+
+#~ msgid ""
+#~ "Then, as the QR code type differs depending on your country, follow the "
+#~ "corresponding documentation page from the following table to set them up."
+#~ msgstr ""
+#~ "Затем, поскольку тип QR-кода различается в зависимости от вашей страны, "
+#~ "следуйте соответствующей странице документации из следующей таблицы для "
+#~ "их настройки."
+
+#~ msgid "QR code types"
+#~ msgstr "Типы QR-кодов"
+
+#~ msgid "Module name"
+#~ msgstr "Название модуля"
+
+#~ msgid "Technical name"
+#~ msgstr "Техническое название"
+
+#~ msgid "Description"
+#~ msgstr "Описание"
+
+#~ msgid "Pix"
+#~ msgstr "Pix"
+
+#~ msgid ""
+#~ ":doc:`Brazilian - Accounting<../../../finance/fiscal_localizations/"
+#~ "brazil>`"
+#~ msgstr ""
+#~ ":doc:`Бразилия — бухгалтерский учёт<../../../finance/fiscal_localizations/"
+#~ "brazil>`"
+
+#~ msgid "`l10n_br`"
+#~ msgstr "`l10n_br`"
+
+#~ msgid ""
+#~ "The base module to manage the accounting chart and localization for "
+#~ "Brazil."
+#~ msgstr ""
+#~ "Базовый модуль для управления планом счетов и локализацией для Бразилии."
+
+#~ msgid "FPS"
+#~ msgstr "FPS"
+
+#~ msgid ""
+#~ ":doc:`Hong Kong - Accounting<../../../finance/fiscal_localizations/"
+#~ "hong_kong>`"
+#~ msgstr ""
+#~ ":doc:`Гонконг — бухгалтерский учёт<../../../finance/fiscal_localizations/"
+#~ "hong_kong>`"
+
+#~ msgid "`l10n_hk`"
+#~ msgstr "`l10n_hk`"
+
+#~ msgid ""
+#~ "The base module to manage the accounting chart and localization for Hong "
+#~ "Kong."
+#~ msgstr ""
+#~ "Базовый модуль для управления планом счетов и локализацией для Гонконга."
+
+#~ msgid "QRIS"
+#~ msgstr "QRIS"
+
+#~ msgid ""
+#~ ":doc:`Indonesian - Accounting<../../../finance/fiscal_localizations/"
+#~ "indonesia>`"
+#~ msgstr ""
+#~ ":doc:`Индонезия — бухгалтерский учёт<../../../finance/"
+#~ "fiscal_localizations/indonesia>`"
+
+#~ msgid "`l10n_id`"
+#~ msgstr "`l10n_id`"
+
+#~ msgid ""
+#~ "The base module to manage the accounting chart and localization for "
+#~ "Indonesia."
+#~ msgstr ""
+#~ "Базовый модуль для управления планом счетов и локализацией для Индонезии."
+
+#~ msgid "PayNow"
+#~ msgstr "PayNow"
+
+#~ msgid ""
+#~ ":doc:`Singapore - Accounting<../../../finance/fiscal_localizations/"
+#~ "singapore>`"
+#~ msgstr ""
+#~ ":doc:`Сингапур — бухгалтерский учёт<../../../finance/fiscal_localizations/"
+#~ "singapore>`"
+
+#~ msgid "`l10n_sg`"
+#~ msgstr "`l10n_sg`"
+
+#~ msgid ""
+#~ "The base module to manage the accounting chart and localization for "
+#~ "Singapore."
+#~ msgstr ""
+#~ "Базовый модуль для управления планом счетов и локализацией для Сингапура."
+
+#~ msgid "QR-bill"
+#~ msgstr "QR-счёт"
+
+#~ msgid ""
+#~ ":doc:`Switzerland - Accounting<../../../finance/fiscal_localizations/"
+#~ "switzerland>`"
+#~ msgstr ""
+#~ ":doc:`Швейцария - Бухгалтерский учёт<../../../finance/"
+#~ "fiscal_localizations/switzerland>`"
+
+#~ msgid "`l10n_ch`"
+#~ msgstr "`l10n_ch`"
+
+#~ msgid ""
+#~ "The base module to manage the accounting chart and localization for "
+#~ "Switzerland."
+#~ msgstr ""
+#~ "Базовый модуль для управления планом счетов и локализацией для Швейцарии."
+
+#~ msgid "PromptPay"
+#~ msgstr "PromptPay"
+
+#~ msgid ""
+#~ ":doc:`Thailand - Accounting<../../../finance/fiscal_localizations/"
+#~ "thailand>`"
+#~ msgstr ""
+#~ ":doc:`Таиланд - Бухгалтерский учёт<../../../finance/fiscal_localizations/"
+#~ "thailand>`"
+
+#~ msgid "`l10n_th`"
+#~ msgstr "`l10n_th`"
+
+#~ msgid ""
+#~ "The base module to manage the accounting chart and localization for "
+#~ "Thailand."
+#~ msgstr ""
+#~ "Базовый модуль для управления планом счетов и локализацией для Таиланда."
+
+#~ msgid "VietQR"
+#~ msgstr "VietQR"
+
+#~ msgid ""
+#~ ":doc:`Vietnam - Accounting<../../../finance/fiscal_localizations/vietnam>`"
+#~ msgstr ""
+#~ ":doc:`Вьетнам - Бухгалтерский учёт<../../../finance/fiscal_localizations/"
+#~ "vietnam>`"
+
+#~ msgid "`l10n_vn`"
+#~ msgstr "`l10n_vn`"
+
+#~ msgid ""
+#~ "The base module to manage the accounting chart and localization for "
+#~ "Vietnam."
+#~ msgstr ""
+#~ "Базовый модуль для управления планом счетов и локализацией для Вьетнама."
+
+#~ msgid "EPC"
+#~ msgstr "EPC"
+
+#~ msgid ""
+#~ ":doc:`Account SEPA QR Code<../../../finance/accounting/customer_invoices/"
+#~ "epc_qr_code>`"
+#~ msgstr ""
+#~ ":doc:`Account SEPA QR Code<../../../finance/accounting/customer_invoices/"
+#~ "epc_qr_code>`"
+
+#~ msgid "`account_qr_code_sepa`"
+#~ msgstr "`account_qr_code_sepa`"
+
+#~ msgid ""
+#~ "This module adds support for SEPA Credit Transfer QR-code generation."
+#~ msgstr ""
+#~ "Этот модуль добавляет поддержку генерации QR-кода для кредитового "
+#~ "перевода SEPA."
+
+#~ msgid "Create the payment method"
+#~ msgstr "Создайте способ оплаты"
+
+#~ msgid "Open the Point of Sale application."
+#~ msgstr "Откройте приложение POS."
+
+#~ msgid ""
+#~ "Go to :menuselection:`Configuration --> Payment Methods` and create a "
+#~ "payment method."
+#~ msgstr ""
+#~ "Перейдите в :menuselection:`Настройка --> Способы оплаты` и создайте "
+#~ "способ оплаты."
+
+#~ msgid "Set a bank-type journal."
+#~ msgstr "Установите журнал типа \"банк\"."
+
+#~ msgid ""
+#~ "Select :guilabel:`Bank App (QR Code)` under the :guilabel:`Integration` "
+#~ "section."
+#~ msgstr ""
+#~ "Выберите :guilabel:`Банковское приложение (QR-код)` в "
+#~ "разделе :guilabel:`Интеграция`."
+
+#~ msgid ""
+#~ "Select :guilabel:`SEPA Credit Transfer QR` if you are part of the Single "
+#~ "Euro Payments Area (SEPA)."
+#~ msgstr ""
+#~ "Выберите :guilabel:`SEPA Credit Transfer QR`, если вы являетесь "
+#~ "участником Единой зоны платежей в евро (SEPA)."
+
+#~ msgid "QR code payment method configuration"
+#~ msgstr "Настройка способа оплаты с помощью QR-кода"
+
+#~ msgid ""
+#~ "At least one bank account must be defined in the journal to allow QR code "
+#~ "payments to be registered with bank apps."
+#~ msgstr ""
+#~ "В журнале должен быть определен хотя бы один банковский счет, чтобы "
+#~ "платежи по QR-коду можно было регистрировать с помощью банковских "
+#~ "приложений."
+
+#~ msgid ""
+#~ "Once the payment method is created, go to the :ref:`POS' settings <pos/"
+#~ "use/settings>` and add the payment method to your POS under "
+#~ "the :guilabel:`Payment` section."
+#~ msgstr ""
+#~ "После создания способа оплаты перейдите в :ref:`настройки POS <pos/use/"
+#~ "settings>` и добавьте способ оплаты в свою POS в "
+#~ "разделе :guilabel:`Payment`."
+
+#~ msgid "Enable QR code payment method"
+#~ msgstr "Активация способа оплаты с помощью QR-кода"
+
+#~ msgid "Register payments using QR codes"
+#~ msgstr "Регистрация платежей с помощью QR-кодов"
+
+#~ msgid ""
+#~ "When processing a payment, select the payment method for QR code "
+#~ "payments. A QR code is generated and displayed on the screen for the "
+#~ "customer to scan and pay with their mobile banking app."
+#~ msgstr ""
+#~ "При обработке платежа выберите способ оплаты для платежей по QR-коду. На "
+#~ "экране создается и отображается QR-код, который клиент сканирует и "
+#~ "оплачивает с помощью мобильного банковского приложения."
+
+#~ msgid "QR code payment example"
+#~ msgstr "Пример оплаты по QR-коду"
+
+#~ msgid "Hit :guilabel:`Confirm Payment` to validate the transaction."
+#~ msgstr ""
+#~ "Нажмите :guilabel:`Подтвердить платеж`, чтобы подтвердить транзакцию."
+
+#~ msgid ""
+#~ "Odoo does **not** check the bank payment. It is recommended that users "
+#~ "verify payments for validity before confirming them on the POS register."
+#~ msgstr ""
+#~ "Odoo **не** проверяет банковский платеж. Рекомендуется пользователям "
+#~ "проверять платежи на действительность перед их подтверждением на кассе "
+#~ "POS."
+
+#~ msgid ":doc:`/applications/finance/accounting/payments/online`"
+#~ msgstr ":doc:`/applications/finance/accounting/payments/online`"
 
 #~ msgid ""
 #~ "If *Leads* have been enabled in the **CRM** app's Configuration settings, "

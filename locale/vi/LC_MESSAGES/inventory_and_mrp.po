@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-03 17:31+0000\n"
+"POT-Creation-Date: 2026-07-10 17:30+0000\n"
 "PO-Revision-Date: 2026-07-04 23:59+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Vietnamese <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -8056,6 +8056,7 @@ msgstr "Đơn vị tính"
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:304
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:102
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:159
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:80
 msgid "Packages"
 msgstr "Kiện hàng"
 
@@ -8537,7 +8538,6 @@ msgstr ""
 "xác định phí vận chuyển."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:46
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:135
 msgid ""
 "On the :guilabel:`Package Types` list, clicking :guilabel:`New` opens a "
 "blank package type form. The fields of the form are as follows:"
@@ -8577,14 +8577,13 @@ msgstr ""
 "mẫu sản phẩm."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:59
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:148
 msgid ":guilabel:`Max Weight`: maximum shipping weight allowed in the package."
 msgstr ""
 ":guilabel:`Khối lượng tối đa`: khối lượng vận chuyển tối đa được phép trong "
 "kiện hàng."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:60
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:149
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:144
 msgid ""
 ":guilabel:`Barcode`: Define a barcode to identify the package type from a "
 "scan."
@@ -8617,7 +8616,7 @@ msgstr ""
 "công ty đó. Để trống trường này nếu nó khả dụng ở tất cả các công ty."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:69
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:152
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:157
 msgid ""
 ":guilabel:`Carrier`: Specify the intended shipping carrier for this package "
 "type."
@@ -8626,7 +8625,7 @@ msgstr ""
 "kiện hàng này."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/pack_in_pack.rst:70
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:153
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:158
 msgid ""
 ":guilabel:`Carrier Code`: Define a code that is linked to the package type."
 msgstr ""
@@ -8900,52 +8899,36 @@ msgstr "Lưu trữ hàng hoá với số lượng lớn."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:18
 msgid ""
-":guilabel:`Package Use` is a field on the package form in Odoo that is only "
-"visible by enabling the :guilabel:`Batch, Wave & Cluster Transfers` "
+":guilabel:`Package Use` is a field on the package type form in Odoo that is "
+"only visible by enabling the :guilabel:`Batch, Wave & Cluster Transfers` "
 "and :guilabel:`Packages` features (:menuselection:`Inventory app --> "
 "Configuration --> Settings`)."
 msgstr ""
-":guilabel:`Sử dụng kiện hàng` là một trường trên biểu mẫu kiện hàng trong "
-"Odoo, chỉ hiển thị khi bật các tính năng :guilabel:`Lệnh chuyển hàng theo "
-"cụm, đợt & theo lô` và :guilabel:`Kiện hàng` (:menuselection:`Ứng dụng Tồn "
-"kho --> Cấu hình --> Cài đặt`)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:22
 msgid ""
-"By default, the :guilabel:`Package Use` field on a packages form is set "
-"to :guilabel:`Disposable Box`. Change this field to :guilabel:`Reusable Box` "
-"**only** when configuring packages for :ref:`cluster pickings <inventory/"
-"warehouses_storage/cluster-pack>`."
+"By default, the :guilabel:`Package Use` field on a package type form is set "
+"to :guilabel:`Disposable Box`. **Only** change this field "
+"to :guilabel:`Reusable Box` when configuring packages for :ref:`cluster "
+"pickings <inventory/warehouses_storage/cluster-pack>`."
 msgstr ""
-"Theo mặc định, trường :guilabel:`Sử dụng kiện hàng` trên biểu mẫu kiện hàng "
-"được đặt là :guilabel:`Hộp dùng một lần`. **Chỉ** thay đổi trường này "
-"thành :guilabel:`Hộp tái sử dụng` khi cấu hình kiện hàng cho :ref:`xuất kho "
-"theo cụm <inventory/warehouses_storage/cluster-pack>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:26
 msgid ""
-":guilabel:`Package Type` is an optional feature used for :doc:`calculating "
+":guilabel:`Package Type` is a feature most often used for :doc:`calculating "
 "shipping cost <../../shipping_receiving/setup_configuration>`, based on real "
 "shipping weight. Create package types to include the weight of the package "
 "itself (e.g. boxes, pallets, other shipping containers) in shipping cost "
 "calculations."
 msgstr ""
-":guilabel:`Loại kiện hàng` là một tính năng tùy chọn được sử dụng "
-"để :doc:`tính chi phí vận chuyển <../../shipping_receiving/"
-"setup_configuration>` dựa trên khối lượng vận chuyển thực tế. Tạo các loại "
-"kiện hàng để bao gồm cả khối lượng của kiện hàng (ví dụ: hộp, pallet, các "
-"container vận chuyển khác) trong việc tính chi phí vận chuyển."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:32
 msgid ""
 "While packages are commonly used in the :doc:`three-step delivery route "
 "<../../shipping_receiving/daily_operations/delivery_three_steps>`, they can "
-"be used in any workflow involving storable products."
+"be used in any workflow involving products tracked by quantity, lots, or "
+"serial numbers."
 msgstr ""
-"Mặc dù kiện hàng thường được sử dụng trong :doc:`tuyến giao hàng ba bước "
-"<../../shipping_receiving/daily_operations/delivery_three_steps>`, nhưng "
-"chúng có thể được sử dụng trong mọi quy trình liên quan đến các sản phẩm lưu "
-"kho."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:41
 msgid ""
@@ -9136,40 +9119,45 @@ msgstr ""
 msgid ":doc:`../../shipping_receiving/setup_configuration`"
 msgstr ":doc:`../../shipping_receiving/setup_configuration`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:138
-msgid ":guilabel:`Package Type` (required): define the package type's name."
-msgstr ":guilabel:`Loại kiện hàng` (bắt buộc): xác định tên loại kiện hàng."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:139
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:135
 msgid ""
-":guilabel:`Size`: define the dimensions of the package in millimeters (mm). "
-"The fields, from left to right, define "
-"the :guilabel:`Length`, :guilabel:`Width`, and :guilabel:`Height`."
+"On the :guilabel:`Package Types` list, clicking :guilabel:`New` opens a "
+"blank package type form."
 msgstr ""
-":guilabel:`Kích thước`: xác định kích thước của kiện hàng theo milimet (mm). "
-"Các trường, từ trái sang phải, xác định :guilabel:`Chiều "
-"dài`, :guilabel:`Chiều rộng` và :guilabel:`Chiều cao`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:141
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:137
+msgid "Define the :guilabel:`Package Type` name."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:140
+msgid "Configuration tab"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:142
 msgid ""
-":guilabel:`Weight`: weight of an empty package (e.g. an empty box, pallet)."
+"The following fields are available in the *Configuration* tab of a package "
+"type form:"
 msgstr ""
-":guilabel:`Khối lượng`: khối lượng của một kiện hàng rỗng (VD: hộp rỗng, "
-"pallet)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:144
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:145
 msgid ""
-"Odoo calculates the package's weight by adding the weight of the empty "
-"package plus the weight of the item(s), which can be found in "
-"the :guilabel:`Weight` field, in the :guilabel:`Inventory` tab, of each "
-"product form."
+":guilabel:`Sequence prefix`: Specify the prefix to use when creating new "
+"packages of this type."
 msgstr ""
-"Odoo tính toán khối lượng kiện hàng bằng cách cộng khối lượng của kiện hàng "
-"rỗng với khối lượng của hàng hoá, có thể tìm thấy trong "
-"trường :guilabel:`Khối lượng`, trong tab :guilabel:`Tồn kho`, của mỗi biểu "
-"mẫu sản phẩm."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:150
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:148
+msgid ""
+"Stealthy Wood wants to create a package type for cluster packs. They specify "
+"`CLU` as the sequence prefix."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:151
+msgid ""
+":guilabel:`Routes`: Specify the routes for which this package type can be "
+"used."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:152
 msgid ""
 ":guilabel:`Company`: Specify a company to make the package type available "
 "**only** at the selected company. Leave the field blank if it is available "
@@ -9179,26 +9167,87 @@ msgstr ""
 "tại công ty được chọn. Để trống nếu muốn loại kiện khả dụng ở tất cả các "
 "công ty."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:None
-msgid "Package type for FedEx's 25 kilogram box."
-msgstr "Loại kiện hàng dành cho hộp FedEx 25kg."
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:154
+msgid ""
+":guilabel:`Package Use`: Choose :guilabel:`Reusable Box (totes)` for "
+"packages used for moving products within the warehouse. "
+"Choose :guilabel:`Disposable Box` for packages used to ship products to "
+"customers."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:161
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:None
+msgid "Configuration tab for reusable cluster pack box with sequence prefix."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:164
+msgid "Dimensions tab"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:166
+msgid "Use the *Dimensions* tab to specify package dimensions:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:168
+msgid ""
+":guilabel:`Size`: Define the dimensions of the package in millimeters (mm). "
+"The fields, from left to right, define "
+"the :guilabel:`Length`, :guilabel:`Width`, and :guilabel:`Height`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:170
+msgid ""
+":guilabel:`Weight`: Define the weight of an empty package (e.g. an empty "
+"box, pallet)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:173
+msgid ""
+"Odoo calculates the package's weight by adding the weight of the empty "
+"package plus the weight of the items, which can be found in "
+"the :guilabel:`Weight` field in the :guilabel:`Inventory` tab of each "
+"product form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:177
+msgid ""
+":guilabel:`Max Weight`: Specify the maximum shipping weight allowed in the "
+"package."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:None
+msgid "Dimensions tab for FedEx 25 kilogram box package type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:183
+msgid "Capacity tab"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:185
+msgid ""
+"This tab can only be configured if :guilabel:`Multi-Step Routes` is also "
+"enabled in :menuselection:`Inventory app --> Configuration --> Settings`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:188
+msgid ""
+"Select or create a :guilabel:`Storage Category` and :guilabel:`Quantity` by "
+"clicking :guilabel:`Add a line`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:192
+msgid ":doc:`../../shipping_receiving/daily_operations/storage_category`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:197
 msgid "Cluster packages"
 msgstr "Kiện hàng theo cụm"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:163
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:199
 msgid ""
 "To use *cluster packages*, first navigate to :menuselection:`Inventory app --"
 "> Configuration --> Settings`, and activate the :guilabel:`Batch, Wave & "
-"Cluster Transfers` feature, located in the :guilabel:`Operations` section. "
-"Doing so makes the *Package Use* field become visible on a package form."
+"Cluster Transfers` feature, located in the :guilabel:`Operations` section."
 msgstr ""
-"Để sử dụng *kiện hàng theo cụm*, trước tiên hãy truy cập :menuselection:`Ứng "
-"dụng Tồn kho --> Cấu hình --> Cài đặt`, và kích hoạt tính "
-"năng :guilabel:`Lệnh chuyển hàng theo cụm, đợt & theo lô`, nằm trong "
-"phần :guilabel:`Hoạt động`. Thao tác này sẽ làm cho trường *Sử dụng kiện "
-"hàng* xuất hiện trên biểu mẫu kiện hàng."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:None
 msgid ""
@@ -9207,7 +9256,7 @@ msgstr ""
 "Kích hoạt tính năng Lệnh chuyển hàng theo cụm, đợt & theo lô trong cài đặt "
 "Tồn kho."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:171
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:206
 msgid ""
 "Add new packages by going to :menuselection:`Inventory app --> Products --> "
 "Packages`. Then, click :guilabel:`New`, or select an existing package. Doing "
@@ -9217,66 +9266,58 @@ msgstr ""
 "Sản phẩm --> Kiện hàng`. Sau đó, nhấp vào :guilabel:`Mới` hoặc chọn một kiện "
 "hàng hiện có. Thao tác này sẽ mở biểu mẫu kiện hàng chứa các trường sau:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:175
-msgid ":guilabel:`Package Reference` (required): name of the package."
-msgstr ":guilabel:`Tham chiếu kiện hàng` (bắt buộc): tên của kiện hàng."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:176
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:210
 msgid ""
-":guilabel:`Package Type`: used for :ref:`configuring shipping boxes to ship "
-"to the customer <inventory/warehouses_storage/package-type>`."
+":guilabel:`Package Reference` (required): Define the name of the package."
 msgstr ""
-":guilabel:`Loại kiện hàng`: được sử dụng khi :ref:`cấu hình hộp vận chuyển "
-"để vận chuyển đến khách hàng <inventory/warehouses_storage/package-type>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:180
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:211
 msgid ""
-":guilabel:`Package Type` is unnecessary for configuring packages for cluster "
-"pickings."
+":guilabel:`Package Type`: Specify the :ref:`package type <inventory/"
+"warehouses_storage/package-type>` to use."
 msgstr ""
-":guilabel:`Loại kiện hàng` không cần thiết cho cấu hình kiện hàng khi lấy "
-"hàng theo cụm."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:182
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:215
 msgid ""
-":guilabel:`Shipping Weight`: used to input the weight of the package after "
+"Setting a :guilabel:`Package Type` is unnecessary for configuring packages "
+"for cluster pickings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:218
+msgid ":guilabel:`Location`: Define the current location of the package."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:219
+msgid ""
+":guilabel:`Container`: If the package is contained within another package, "
+"define the container package."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:221
+msgid ""
+":guilabel:`Shipping Weight`: Used to input the weight of the package after "
 "measuring it on a scale."
 msgstr ""
-":guilabel:`Khối lượng vận chuyển`: dùng để nhập khối lượng của kiện hàng sau "
-"khi cân bằng cân."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:184
-msgid ""
-":guilabel:`Company`: Specify a company to make the package available "
-"**only** at the selected company. Leave the field blank if the package is "
-"available at all companies."
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:223
+msgid ":guilabel:`Company`: The company that can use this package is defined."
 msgstr ""
-":guilabel:`Công ty`: Chỉ định một công ty để kiện chỉ khả dụng **tại** công "
-"ty được chọn. Để trống nếu kiện hàng khả dụng ở tất cả công ty."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:186
-msgid ":guilabel:`Location`: current location of the package."
-msgstr ":guilabel:`Vị trí`: vị trí hiện tại của kiện hàng."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:187
-msgid ":guilabel:`Pack Date`: the date the package was created."
-msgstr ":guilabel:`Ngày đóng hàng`: ngày kiện hàng được tạo."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:188
-msgid ""
-":guilabel:`Package Use`: Choose :guilabel:`Reusable Box` for packages used "
-"for moving products within the warehouse. Choose :guilabel:`Disposable Box` "
-"for packages used to ship products to customers."
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:224
+msgid ":guilabel:`Pack Date`: Specify the date the package was created."
 msgstr ""
-":guilabel:`Sử dụng kiện hàng`: Chọn :guilabel:`Hộp tái sử dụng` cho các kiện "
-"hàng dùng để di chuyển sản phẩm trong kho. Chọn :guilabel:`Hộp dùng một lần` "
-"cho các kiện dùng để gửi sản phẩm đến khách hàng."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:226
+msgid ""
+"Below the package definition fields is the *Content* section. Use this field "
+"to learn more about the contents of the package."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:None
-msgid "Display package form to create a cluster pack."
-msgstr "Hiển thị biểu mẫu kiện hàng để tạo kiện hàng theo cụm."
+msgid "A package form to create a cluster pack."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:196
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:233
 msgid ""
 ":doc:`Using cluster packages <../../shipping_receiving/picking_methods/"
 "cluster>`"
@@ -9284,17 +9325,15 @@ msgstr ""
 ":doc:`Sử dụng kiện hàng theo cụm <../../shipping_receiving/picking_methods/"
 "cluster>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:199
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:236
 msgid "View packages"
 msgstr "Xem kiện hàng"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:201
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:238
 msgid ""
 "To view all packages, go to :menuselection:`Inventory app --> Products --> "
-"Packages`. By default, packages are shown in Kanban view."
+"Packages`. By default, packages are shown in list view."
 msgstr ""
-"Để xem tất cả kiện hàng, truy cập :menuselection:`Ứng dụng Tồn kho --> Sản "
-"phẩm --> Kiện hàng`. Theo mặc định, các kiện được hiển thị ở dạng Kanban."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:None
 msgid "Packages dashboard."
@@ -30288,6 +30327,7 @@ msgstr ""
 "<replenishment/resupply_warehouses>` với nhau."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:31
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:64
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:3
 msgid "Locations"
 msgstr "Vị trí"
@@ -31737,8 +31777,286 @@ msgid ":doc:`count_products`"
 msgstr ":doc:`count_products`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:132
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:77
 msgid ":doc:`use_locations`"
 msgstr ":doc:`use_locations`"
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:3
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:13
+msgid "Operation types"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:5
+msgid ""
+"Odoo **Inventory** tracks stock by warehouse and location, and then records "
+"what happens to products (receiving, putaway and internal transfers, and "
+"picking and delivery) as structured stock moves. These movements are called "
+"*operations*. Operations can also help keep what the system shows current "
+"using counts and adjustments."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:10
+msgid "Each operation belongs to a specific *operation type*."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:15
+msgid ""
+"To add or edit operation types, navigate to :menuselection:`Inventory app --"
+"> Configuration --> Operations Types`. A list of operation types displays."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:18
+msgid ""
+"Open an existing operation type, or click :guilabel:`New` to create a new "
+"operation type. Next, complete the fields of the operation type form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:24
+msgid "General tab"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:26
+msgid "Use the *General* tab to specify basic settings for the operation type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:28
+msgid "The following fields are available in the *General* tab:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:30
+msgid ":guilabel:`Type of Operation`: Specify the type of operation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:31
+msgid ""
+":guilabel:`Sequence Prefix`: Specify a short prefix Odoo will use to name "
+"transfers."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:32
+msgid ""
+":guilabel:`Barcode`: Define the barcode to be used when transferring "
+"products between locations."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:33
+msgid ""
+":guilabel:`Company`: Specify the company that can use this operation type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:34
+msgid ""
+":guilabel:`Returns Type`: Define which operation can create returns for this "
+"operation type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:35
+msgid ""
+":guilabel:`Create Backorder`: Define when back orders for unfulfilled "
+"products can be created upon validation for this operation type. "
+"Select :guilabel:`Ask` if Odoo should ask whether to create a back order. "
+"Select :guilabel:`Always` to always generate a back order. "
+"Select :guilabel:`Never` to specify that the remaining products should be "
+"canceled."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:39
+msgid ""
+":guilabel:`Analytic Costs`: Select this checkbox to ensure analytic entries "
+"are created in a project when stock moves are validated. It tracks the total "
+"cost of products included in stock moves (deliveries and receipts) that have "
+"been validated for the project. This ensures that the product's cost is "
+"tracked during the stock move."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:43
+msgid ""
+":guilabel:`Card Color`: Select a color to use for the operation type card on "
+"the :menuselection:`Overview` page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:47
+msgid "Lots/serial numbers"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:49
+msgid ""
+"This section only appears if :guilabel:`Lots & Serial Numbers` is enabled "
+"in :menuselection:`Inventory app --> Configuration --> Settings`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:52
+msgid "The following fields are available:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:54
+msgid ""
+":guilabel:`Create New`: Select this checkbox to specify that lots and serial "
+"numbers can be created from this operation type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:56
+msgid ""
+":guilabel:`Use Existing ones`: If this checkbox is selected, the lot or "
+"serial number can be selected when creating transfers for this operation "
+"type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:60
+msgid ":doc:`../../product_management/product_tracking/lots`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:61
+msgid ":doc:`../../product_management/product_tracking/serial_numbers`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:66
+msgid ""
+"This section only appears if :guilabel:`Storage Locations` is enabled "
+"in :menuselection:`Inventory app --> Configuration --> Settings`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:69
+msgid "Specify the following locations for the operation type:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:71
+msgid ""
+":guilabel:`Source Location`: Select a default source location when "
+"operations of this type are created."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:73
+msgid ""
+":guilabel:`Destination Location`: Select a default destination location when "
+"operations of this type are created."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:82
+msgid ""
+"This section only appears if :guilabel:`Packages` is enabled "
+"in :menuselection:`Inventory app --> Configuration --> Settings`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:85
+msgid ""
+"If :guilabel:`Set Package Type` is selected, a package or package type can "
+"be selected when the :guilabel:`Put in Pack` button is clicked on an "
+"operation's order form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:89
+msgid "Batch & wave transfers"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:91
+msgid ""
+"This section appears only if :guilabel:`Batch, Wave & Cluster Transfers` is "
+"enabled in :menuselection:`Inventory app --> Configuration --> Settings`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:94
+msgid ""
+"Select the :guilabel:`Dispatch Management` checkbox to show dispatch-"
+"management-related details on the batch or wave form and the *Inventory "
+"Overview* page. Then, select a location or vehicle."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:None
+msgid ""
+"The vertical ellipsis menu shows Transport Management options on the "
+"Inventory Overview."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:100
+msgid ""
+"Select the :guilabel:`Automatic Batches` checkbox to specify that pickings "
+"should be automatically batched as they are confirmed when possible."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:104
+msgid ":doc:`../../shipping_receiving/picking_methods/wave`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:105
+msgid ":doc:`../../shipping_receiving/picking_methods/batch`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:106
+msgid ":doc:`../../shipping_receiving/picking_methods/cluster`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:111
+msgid "Hardware tab"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:113
+msgid ""
+"Use the *Hardware* tab to specify settings for connected devices and how "
+"they should interact with operations of this operation type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:116
+msgid ""
+"In the *Print on validation* or *Print when done* section, specify what "
+"should be printed automatically when an operation is validated."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:119
+msgid ""
+"In the *Print on \"Put in Pack\"* section, specify what should be printed "
+"when the :guilabel:`Put in Pack` button is clicked on an operation "
+"form. :guilabel:`Packages` must be enabled in :menuselection:`Inventory --> "
+"Configuration --> Settings` for this option to show."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:123
+msgid ""
+"In the *Scales* section, specify a scale to use in conjunction with "
+"operations of this operation type in the :guilabel:`Connect Scale` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:126
+msgid ""
+"For manufacturing operation types, in the *Print when \"Create new lot/SN\"* "
+"section, select what should be printed when a lot or serial number is "
+"generated on an operation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:130
+msgid ":doc:`../../../../general/iot/devices/printer`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:131
+msgid ":doc:`../../../../general/iot/devices/scale`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:136
+msgid "Barcode App tab"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:138
+msgid ""
+"Use the *Barcode App* tab to specify how this operation type integrates with "
+"the **Barcode** app. Specify when barcodes must be scanned or how often, "
+"whether to group products, or when to validate an operation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:142
+msgid ""
+"To display reserved lots or serial numbers on an operation in the "
+"**Barcode** app, select the :guilabel:`Show reserved lots/SN` checkbox."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:145
+msgid ""
+"To show the packages that must be moved during a **Barcode** operation, "
+"select :guilabel:`Move Entire Packages`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:149
+msgid ":doc:`../../../barcode`"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:3
 msgid "Scrap inventory"
@@ -33954,8 +34272,8 @@ msgstr ""
 "Để sử dụng tuyến |MTO|, cài đặt :guilabel:`Bổ sung theo Đơn hàng (MTO)` phải "
 "được kích hoạt. Để thực hiện, điều hướng đến :menuselection:`ứng dụng Tồn "
 "kho --> Cấu hình --> Cài đặt`. Đi đến phần :guilabel:`Hậu cần` ở cuối trang "
-"và chọn hộp kiểm bên cạnh :guilabel:`Bổ sung theo Đơn hàng (MTO)`. Nhấp "
-":guilabel:`Lưu` để xác nhận cài đặt."
+"và chọn hộp kiểm bên cạnh :guilabel:`Bổ sung theo Đơn hàng (MTO)`. "
+"Nhấp :guilabel:`Lưu` để xác nhận cài đặt."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:None
 msgid "Select the Replenish on Order (MTO) checkbox."
@@ -33973,9 +34291,9 @@ msgid ""
 "click :guilabel:`New` to configure a new product."
 msgstr ""
 "Với tuyến |MTO| được kích hoạt, sản phẩm giờ đây có thể được cấu hình để bổ "
-"sung theo đơn hàng. Để thực hiện, bắt đầu bằng cách đi đến "
-":menuselection:`ứng dụng Tồn kho --> Sản phẩm --> Sản phẩm`. Sau đó, chọn "
-"một sản phẩm hiện có hoặc nhấp :guilabel:`Mới` để cấu hình sản phẩm mới."
+"sung theo đơn hàng. Để thực hiện, bắt đầu bằng cách đi "
+"đến :menuselection:`ứng dụng Tồn kho --> Sản phẩm --> Sản phẩm`. Sau đó, "
+"chọn một sản phẩm hiện có hoặc nhấp :guilabel:`Mới` để cấu hình sản phẩm mới."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:58
 msgid ""
@@ -34010,10 +34328,10 @@ msgid ""
 "automatically applied on purchased and manufactured products depending on "
 "their respective configurations provided below in this section."
 msgstr ""
-"Kể từ Odoo 19.0, các tuyến *Mua* và *Sản xuất* được ẩn khỏi trường "
-":guilabel:`Tuyến` trong tab *Operations* theo mặc định. Chúng được tự động "
-"áp dụng cho các sản phẩm được mua và sản xuất tùy thuộc vào cấu hình tương "
-"ứng được cung cấp bên dưới trong phần này."
+"Kể từ Odoo 19.0, các tuyến *Mua* và *Sản xuất* được ẩn khỏi "
+"trường :guilabel:`Tuyến` trong tab *Operations* theo mặc định. Chúng được tự "
+"động áp dụng cho các sản phẩm được mua và sản xuất tùy thuộc vào cấu hình "
+"tương ứng được cung cấp bên dưới trong phần này."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:74
 msgid ""
@@ -34024,10 +34342,10 @@ msgid ""
 "On the route page, click the checkbox next to :guilabel:`Products` under the "
 "*Applicable On* section."
 msgstr ""
-"Để kích hoạt thủ công các tuyến này trên biểu mẫu sản phẩm, điều hướng đến "
-":menuselection:`ứng dụng Tồn kho --> Cấu hình --> Cài đặt` và đảm bảo rằng "
-":guilabel:`Tuyến Đa bước` được kích hoạt. Sau đó, điều hướng đến "
-":menuselection:`Cấu hình --> Tuyến` và chọn tuyến mong muốn. Trên trang "
+"Để kích hoạt thủ công các tuyến này trên biểu mẫu sản phẩm, điều hướng "
+"đến :menuselection:`ứng dụng Tồn kho --> Cấu hình --> Cài đặt` và đảm bảo "
+"rằng :guilabel:`Tuyến Đa bước` được kích hoạt. Sau đó, điều hướng "
+"đến :menuselection:`Cấu hình --> Tuyến` và chọn tuyến mong muốn. Trên trang "
 "tuyến, nhấp vào hộp kiểm bên cạnh :guilabel:`Sản phẩm` trong phần *Áp dụng "
 "Cho*."
 
@@ -34042,17 +34360,17 @@ msgid ""
 "the :guilabel:`Purchase` checkbox is enabled under the product name. This "
 "displays the *Purchase* tab below."
 msgstr ""
-"Nếu sản phẩm được mua từ nhà cung cấp để đáp ứng |SOs|, hãy đảm bảo hộp kiểm "
-":guilabel:`Mua hàng` được kích hoạt bên dưới tên sản phẩm. Điều này hiển thị "
-"tab *Mua hàng* bên dưới."
+"Nếu sản phẩm được mua từ nhà cung cấp để đáp ứng |SOs|, hãy đảm bảo hộp "
+"kiểm :guilabel:`Mua hàng` được kích hoạt bên dưới tên sản phẩm. Điều này "
+"hiển thị tab *Mua hàng* bên dưới."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:87
 msgid ""
 "Then, click the *Purchase* tab and specify a :guilabel:`Vendor` and "
 "a :guilabel:`Unit Price` for the product."
 msgstr ""
-"Sau đó, nhấp vào tab *Mua hàng* và chỉ định :guilabel:`Nhà cung cấp` và "
-":guilabel:`Đơn giá` cho sản phẩm."
+"Sau đó, nhấp vào tab *Mua hàng* và chỉ định :guilabel:`Nhà cung cấp` "
+"và :guilabel:`Đơn giá` cho sản phẩm."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:91
 msgid ""
@@ -34079,8 +34397,8 @@ msgstr ""
 "Nếu sản phẩm được sản xuất, hãy đảm bảo nó có :doc:`bảng kê nguyên vật liệu "
 "<../../../manufacturing/basic_setup/bill_configuration>` (BoM) được cấu "
 "hình. Để thực hiện, nhấp vào nút thông minh :icon:`fa-flask` :guilabel:`Bảng "
-"kê Nguyên vật liệu` ở đầu biểu mẫu. Sau đó, nhấp :guilabel:`Mới` trên trang "
-":guilabel:`Bảng kê Nguyên vật liệu` để cấu hình |BOM| mới cho sản phẩm."
+"kê Nguyên vật liệu` ở đầu biểu mẫu. Sau đó, nhấp :guilabel:`Mới` trên "
+"trang :guilabel:`Bảng kê Nguyên vật liệu` để cấu hình |BOM| mới cho sản phẩm."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:105
 msgid ""
@@ -34102,8 +34420,8 @@ msgid ""
 "if manufactured."
 msgstr ""
 "Sau khi cấu hình sản phẩm để sử dụng tuyến |MTO|, đơn hàng bổ sung được tạo "
-"bất cứ khi nào |SO| bao gồm sản phẩm được xác nhận. Đơn hàng bổ sung này là "
-"|PO| nếu sản phẩm được mua hoặc |MO| nếu được sản xuất."
+"bất cứ khi nào |SO| bao gồm sản phẩm được xác nhận. Đơn hàng bổ sung này là |"
+"PO| nếu sản phẩm được mua hoặc |MO| nếu được sản xuất."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:118
 msgid ""
@@ -34161,9 +34479,9 @@ msgid ""
 "manufactured>`."
 msgstr ""
 "Đơn hàng :icon:`fa-credit-card` :guilabel:`Mua hàng` nếu sản phẩm trên |SO| "
-"được :ref:`mua <inventory/mto/replenish-mto-product/validate-order/purchased>"
-"` **hoặc** đơn hàng :icon:`fa-wrench` :guilabel:`Sản xuất` nếu được "
-":ref:`sản xuất <inventory/mto/replenish-mto-product/validate-order/"
+"được :ref:`mua <inventory/mto/replenish-mto-product/validate-order/"
+"purchased>` **hoặc** đơn hàng :icon:`fa-wrench` :guilabel:`Sản xuất` nếu "
+"được :ref:`sản xuất <inventory/mto/replenish-mto-product/validate-order/"
 "manufactured>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:152
@@ -34181,17 +34499,17 @@ msgid ""
 "the :guilabel:`Expected Date`, click :guilabel:`Confirm Order` to turn the |"
 "RFQ| into a confirmed |PO|."
 msgstr ""
-"Sau khi xác minh rằng nhà cung cấp có thể đáp ứng nhu cầu theo "
-":guilabel:`Ngày dự kiến`, nhấp :guilabel:`Xác nhận đơn hàng` để chuyển |RFQ| "
-"thành |PO| đã xác nhận."
+"Sau khi xác minh rằng nhà cung cấp có thể đáp ứng nhu cầu "
+"theo :guilabel:`Ngày dự kiến`, nhấp :guilabel:`Xác nhận đơn hàng` để chuyển |"
+"RFQ| thành |PO| đã xác nhận."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:158
 msgid ""
 "Once the products are received, click :guilabel:`Receive` to open the "
 "receipt, and click :guilabel:`Validate` to enter the products into inventory."
 msgstr ""
-"Sau khi nhận được sản phẩm, nhấp :guilabel:`Nhận` để mở phiếu nhận, và nhấp "
-":guilabel:`Xác thực` để nhập sản phẩm vào tồn kho."
+"Sau khi nhận được sản phẩm, nhấp :guilabel:`Nhận` để mở phiếu nhận, và "
+"nhấp :guilabel:`Xác thực` để nhập sản phẩm vào tồn kho."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:166
 msgid ""
@@ -34223,8 +34541,9 @@ msgid ""
 "Return to the |SO| via the breadcrumbs at the top, or by navigating "
 "to :menuselection:`Sales app --> Orders --> Orders` and selecting the |SO|."
 msgstr ""
-"Quay lại |SO| qua đường dẫn ở đầu trang, hoặc bằng cách điều hướng đến "
-":menuselection:`Ứng dụng Bán hàng --> Đơn hàng --> Đơn hàng` và chọn |SO|."
+"Quay lại |SO| qua đường dẫn ở đầu trang, hoặc bằng cách điều hướng "
+"đến :menuselection:`Ứng dụng Bán hàng --> Đơn hàng --> Đơn hàng` và chọn |"
+"SO|."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:179
 msgid ""
@@ -47649,10 +47968,10 @@ msgid ""
 "a :ref:`subcontracting-type BoM <manufacturing/workflows/"
 "subcontracting_basic/bom-config>`."
 msgstr ""
-"Để sử dụng gia công phụ, công ty trước tiên phải cấu hình sản phẩm với "
-":ref:`bảng giá nhà cung cấp <purchase/products/pricelist>` cũng như "
-":ref:`BoM loại gia công phụ <manufacturing/workflows/subcontracting_basic/"
-"bom-config>`."
+"Để sử dụng gia công phụ, công ty trước tiên phải cấu hình sản phẩm "
+"với :ref:`bảng giá nhà cung cấp <purchase/products/pricelist>` cũng "
+"như :ref:`BoM loại gia công phụ <manufacturing/workflows/"
+"subcontracting_basic/bom-config>`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:29
 msgid ""
@@ -47910,8 +48229,8 @@ msgstr ""
 "Sau khi xác thực phiếu nhận, Odoo tự động tạo các di chuyển tồn kho để theo "
 "dõi di chuyển của sản phẩm gia công phụ giữa các :doc:`vị trí <../../"
 "inventory/warehouses_storage/inventory_management/use_locations>`. Để xem "
-"các di chuyển tồn kho này, điều hướng đến :menuselection:`ứng dụng Tồn "
-"kho --> Báo cáo --> Lịch sử di chuyển`."
+"các di chuyển tồn kho này, điều hướng đến :menuselection:`ứng dụng Tồn kho --"
+"> Báo cáo --> Lịch sử di chuyển`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:142
 msgid ""
@@ -48474,8 +48793,8 @@ msgid ""
 "Begin filling out the |PO| by selecting a subcontractor from "
 "the :guilabel:`Vendor` drop-down menu."
 msgstr ""
-"Bắt đầu điền vào |PO| bằng cách chọn nhà thầu phụ từ menu thả xuống "
-":guilabel:`Nhà cung cấp`."
+"Bắt đầu điền vào |PO| bằng cách chọn nhà thầu phụ từ menu thả "
+"xuống :guilabel:`Nhà cung cấp`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:116
 msgid ""
@@ -48505,8 +48824,8 @@ msgid ""
 msgstr ""
 "Cuối cùng, nhấp vào :guilabel:`Xác nhận đơn hàng` để xác nhận |PO|. Phiếu "
 "nhận và đơn hàng cung ứng lại được tự động tạo ra, có thể truy cập qua các "
-"nút thông minh :icon:`fa-truck` :guilabel:`Phiếu nhận` và :icon:`fa-truck` "
-":guilabel:`Cung ứng lại` ở đầu biểu mẫu."
+"nút thông minh :icon:`fa-truck` :guilabel:`Phiếu nhận` và :icon:`fa-"
+"truck` :guilabel:`Cung ứng lại` ở đầu biểu mẫu."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:129
 msgid "Validate resupply order"
@@ -48550,9 +48869,9 @@ msgid ""
 "click :guilabel:`Validate` to enter the incoming shipment into inventory."
 msgstr ""
 "Để nhận sản phẩm hoàn thiện từ nhà thầu phụ, nhấp vào nút :guilabel:`Nhận "
-"sản phẩm` trên |PO|, hoặc nhấp vào nút thông minh :icon:`fa-truck` "
-":guilabel:`Phiếu nhận` ở đầu trang. Sau đó, nhấp vào :guilabel:`Xác nhận` để "
-"nhập lô hàng đến vào tồn kho."
+"sản phẩm` trên |PO|, hoặc nhấp vào nút thông minh :icon:`fa-"
+"truck` :guilabel:`Phiếu nhận` ở đầu trang. Sau đó, nhấp vào :guilabel:`Xác "
+"nhận` để nhập lô hàng đến vào tồn kho."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:160
 msgid ""
@@ -61793,6 +62112,157 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:212
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ ":guilabel:`Package Use` is a field on the package form in Odoo that is "
+#~ "only visible by enabling the :guilabel:`Batch, Wave & Cluster Transfers` "
+#~ "and :guilabel:`Packages` features (:menuselection:`Inventory app --> "
+#~ "Configuration --> Settings`)."
+#~ msgstr ""
+#~ ":guilabel:`Sử dụng kiện hàng` là một trường trên biểu mẫu kiện hàng trong "
+#~ "Odoo, chỉ hiển thị khi bật các tính năng :guilabel:`Lệnh chuyển hàng theo "
+#~ "cụm, đợt & theo lô` và :guilabel:`Kiện hàng` (:menuselection:`Ứng dụng "
+#~ "Tồn kho --> Cấu hình --> Cài đặt`)."
+
+#~ msgid ""
+#~ "By default, the :guilabel:`Package Use` field on a packages form is set "
+#~ "to :guilabel:`Disposable Box`. Change this field to :guilabel:`Reusable "
+#~ "Box` **only** when configuring packages for :ref:`cluster pickings "
+#~ "<inventory/warehouses_storage/cluster-pack>`."
+#~ msgstr ""
+#~ "Theo mặc định, trường :guilabel:`Sử dụng kiện hàng` trên biểu mẫu kiện "
+#~ "hàng được đặt là :guilabel:`Hộp dùng một lần`. **Chỉ** thay đổi trường "
+#~ "này thành :guilabel:`Hộp tái sử dụng` khi cấu hình kiện hàng "
+#~ "cho :ref:`xuất kho theo cụm <inventory/warehouses_storage/cluster-pack>`."
+
+#~ msgid ""
+#~ ":guilabel:`Package Type` is an optional feature used "
+#~ "for :doc:`calculating shipping cost <../../shipping_receiving/"
+#~ "setup_configuration>`, based on real shipping weight. Create package "
+#~ "types to include the weight of the package itself (e.g. boxes, pallets, "
+#~ "other shipping containers) in shipping cost calculations."
+#~ msgstr ""
+#~ ":guilabel:`Loại kiện hàng` là một tính năng tùy chọn được sử dụng "
+#~ "để :doc:`tính chi phí vận chuyển <../../shipping_receiving/"
+#~ "setup_configuration>` dựa trên khối lượng vận chuyển thực tế. Tạo các "
+#~ "loại kiện hàng để bao gồm cả khối lượng của kiện hàng (ví dụ: hộp, "
+#~ "pallet, các container vận chuyển khác) trong việc tính chi phí vận chuyển."
+
+#~ msgid ""
+#~ "While packages are commonly used in the :doc:`three-step delivery route "
+#~ "<../../shipping_receiving/daily_operations/delivery_three_steps>`, they "
+#~ "can be used in any workflow involving storable products."
+#~ msgstr ""
+#~ "Mặc dù kiện hàng thường được sử dụng trong :doc:`tuyến giao hàng ba bước "
+#~ "<../../shipping_receiving/daily_operations/delivery_three_steps>`, nhưng "
+#~ "chúng có thể được sử dụng trong mọi quy trình liên quan đến các sản phẩm "
+#~ "lưu kho."
+
+#~ msgid ":guilabel:`Package Type` (required): define the package type's name."
+#~ msgstr ":guilabel:`Loại kiện hàng` (bắt buộc): xác định tên loại kiện hàng."
+
+#~ msgid ""
+#~ ":guilabel:`Size`: define the dimensions of the package in millimeters "
+#~ "(mm). The fields, from left to right, define "
+#~ "the :guilabel:`Length`, :guilabel:`Width`, and :guilabel:`Height`."
+#~ msgstr ""
+#~ ":guilabel:`Kích thước`: xác định kích thước của kiện hàng theo milimet "
+#~ "(mm). Các trường, từ trái sang phải, xác định :guilabel:`Chiều "
+#~ "dài`, :guilabel:`Chiều rộng` và :guilabel:`Chiều cao`."
+
+#~ msgid ""
+#~ ":guilabel:`Weight`: weight of an empty package (e.g. an empty box, "
+#~ "pallet)."
+#~ msgstr ""
+#~ ":guilabel:`Khối lượng`: khối lượng của một kiện hàng rỗng (VD: hộp rỗng, "
+#~ "pallet)."
+
+#~ msgid ""
+#~ "Odoo calculates the package's weight by adding the weight of the empty "
+#~ "package plus the weight of the item(s), which can be found in "
+#~ "the :guilabel:`Weight` field, in the :guilabel:`Inventory` tab, of each "
+#~ "product form."
+#~ msgstr ""
+#~ "Odoo tính toán khối lượng kiện hàng bằng cách cộng khối lượng của kiện "
+#~ "hàng rỗng với khối lượng của hàng hoá, có thể tìm thấy trong "
+#~ "trường :guilabel:`Khối lượng`, trong tab :guilabel:`Tồn kho`, của mỗi "
+#~ "biểu mẫu sản phẩm."
+
+#~ msgid "Package type for FedEx's 25 kilogram box."
+#~ msgstr "Loại kiện hàng dành cho hộp FedEx 25kg."
+
+#~ msgid ""
+#~ "To use *cluster packages*, first navigate to :menuselection:`Inventory "
+#~ "app --> Configuration --> Settings`, and activate the :guilabel:`Batch, "
+#~ "Wave & Cluster Transfers` feature, located in the :guilabel:`Operations` "
+#~ "section. Doing so makes the *Package Use* field become visible on a "
+#~ "package form."
+#~ msgstr ""
+#~ "Để sử dụng *kiện hàng theo cụm*, trước tiên hãy truy "
+#~ "cập :menuselection:`Ứng dụng Tồn kho --> Cấu hình --> Cài đặt`, và kích "
+#~ "hoạt tính năng :guilabel:`Lệnh chuyển hàng theo cụm, đợt & theo lô`, nằm "
+#~ "trong phần :guilabel:`Hoạt động`. Thao tác này sẽ làm cho trường *Sử dụng "
+#~ "kiện hàng* xuất hiện trên biểu mẫu kiện hàng."
+
+#~ msgid ":guilabel:`Package Reference` (required): name of the package."
+#~ msgstr ":guilabel:`Tham chiếu kiện hàng` (bắt buộc): tên của kiện hàng."
+
+#~ msgid ""
+#~ ":guilabel:`Package Type`: used for :ref:`configuring shipping boxes to "
+#~ "ship to the customer <inventory/warehouses_storage/package-type>`."
+#~ msgstr ""
+#~ ":guilabel:`Loại kiện hàng`: được sử dụng khi :ref:`cấu hình hộp vận "
+#~ "chuyển để vận chuyển đến khách hàng <inventory/warehouses_storage/package-"
+#~ "type>`."
+
+#~ msgid ""
+#~ ":guilabel:`Package Type` is unnecessary for configuring packages for "
+#~ "cluster pickings."
+#~ msgstr ""
+#~ ":guilabel:`Loại kiện hàng` không cần thiết cho cấu hình kiện hàng khi lấy "
+#~ "hàng theo cụm."
+
+#~ msgid ""
+#~ ":guilabel:`Shipping Weight`: used to input the weight of the package "
+#~ "after measuring it on a scale."
+#~ msgstr ""
+#~ ":guilabel:`Khối lượng vận chuyển`: dùng để nhập khối lượng của kiện hàng "
+#~ "sau khi cân bằng cân."
+
+#~ msgid ""
+#~ ":guilabel:`Company`: Specify a company to make the package available "
+#~ "**only** at the selected company. Leave the field blank if the package is "
+#~ "available at all companies."
+#~ msgstr ""
+#~ ":guilabel:`Công ty`: Chỉ định một công ty để kiện chỉ khả dụng **tại** "
+#~ "công ty được chọn. Để trống nếu kiện hàng khả dụng ở tất cả công ty."
+
+#~ msgid ":guilabel:`Location`: current location of the package."
+#~ msgstr ":guilabel:`Vị trí`: vị trí hiện tại của kiện hàng."
+
+#~ msgid ":guilabel:`Pack Date`: the date the package was created."
+#~ msgstr ":guilabel:`Ngày đóng hàng`: ngày kiện hàng được tạo."
+
+#~ msgid ""
+#~ ":guilabel:`Package Use`: Choose :guilabel:`Reusable Box` for packages "
+#~ "used for moving products within the warehouse. "
+#~ "Choose :guilabel:`Disposable Box` for packages used to ship products to "
+#~ "customers."
+#~ msgstr ""
+#~ ":guilabel:`Sử dụng kiện hàng`: Chọn :guilabel:`Hộp tái sử dụng` cho các "
+#~ "kiện hàng dùng để di chuyển sản phẩm trong kho. Chọn :guilabel:`Hộp dùng "
+#~ "một lần` cho các kiện dùng để gửi sản phẩm đến khách hàng."
+
+#~ msgid "Display package form to create a cluster pack."
+#~ msgstr "Hiển thị biểu mẫu kiện hàng để tạo kiện hàng theo cụm."
+
+#~ msgid ""
+#~ "To view all packages, go to :menuselection:`Inventory app --> Products --"
+#~ "> Packages`. By default, packages are shown in Kanban view."
+#~ msgstr ""
+#~ "Để xem tất cả kiện hàng, truy cập :menuselection:`Ứng dụng Tồn kho --> "
+#~ "Sản phẩm --> Kiện hàng`. Theo mặc định, các kiện được hiển thị ở dạng "
+#~ "Kanban."
 
 #~ msgid "Product catalog"
 #~ msgstr "Danh mục sản phẩm"
