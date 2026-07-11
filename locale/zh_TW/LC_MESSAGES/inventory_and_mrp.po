@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-03 17:30+0000\n"
+"POT-Creation-Date: 2026-07-10 17:31+0000\n"
 "PO-Revision-Date: 2026-07-02 13:49+0000\n"
 "Last-Translator: \"Dylan Kiss (dyki)\" <dyki@odoo.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://translate.odoo.com/"
@@ -26768,6 +26768,7 @@ msgstr ""
 "動 <replenishment/resupply_warehouses>`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:31
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:70
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:3
 msgid "Locations"
 msgstr "位置"
@@ -27895,8 +27896,268 @@ msgid ":doc:`count_products`"
 msgstr ":doc:`count_products`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:125
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:87
 msgid ":doc:`use_locations`"
 msgstr ":doc:`use_locations`"
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:3
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:13
+msgid "Operation types"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:5
+msgid ""
+"Odoo **Inventory** tracks stock by warehouse and location, and then records "
+"what happens to products (receiving, putaway and internal transfers, and "
+"picking and delivery) as structured stock moves. These movements are called "
+"*operations*. Operations can also help keep what the system shows current "
+"using counts and adjustments."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:10
+msgid "Each operation belongs to a specific *operation type*."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:15
+msgid ""
+"To add or edit operation types, navigate to :menuselection:`Inventory app --"
+"> Configuration --> Operations Types`. A list of operation types displays."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:18
+msgid ""
+"Open an existing operation type, or click :guilabel:`New` to create a new "
+"operation type. Next, complete the fields of the operation type form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:24
+msgid "General tab"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:26
+msgid "The following fields are available in the *General* tab:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:28
+msgid ":guilabel:`Type of Operation`: Specify the type of operation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:29
+msgid ""
+":guilabel:`Sequence Prefix`: Specify a short prefix Odoo will use to name "
+"transfers."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:30
+msgid ""
+":guilabel:`Barcode`: Define the barcode to be used when transferring "
+"products between locations."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:31
+msgid ""
+":guilabel:`Reservation Method`: Select how products that are being "
+"transferred during operations should be reserved. To automatically reserve "
+"products when operations of this type are confirmed, select :guilabel:`At "
+"Confirmation`. To manually reserve products for operations, "
+"select :guilabel:`Manually`. To reserve products before a specified maximum "
+"number of days before an operation completes, select :guilabel:`Beforfe "
+"scheduled date`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:36
+msgid ""
+":guilabel:`Company`: Specify the company that can use this operation type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:37
+msgid ""
+":guilabel:`Returns Type`: Define which operation can create returns for this "
+"operation type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:38
+msgid ""
+":guilabel:`Create Backorder`: Define when back orders for unfulfilled "
+"products can be created upon validation for this operation type. "
+"Select :guilabel:`Ask` if Odoo should ask whether to create a back order. "
+"Select :guilabel:`Always` to always generate a back order. "
+"Select :guilabel:`Never` to specify that the remaining products should be "
+"canceled."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:42
+msgid ""
+":guilabel:`Analytic Costs`: Select this checkbox to ensure analytic entries "
+"are created in a project when stock moves are validated. It tracks the total "
+"cost of products included in stock moves (deliveries and receipts) that have "
+"been validated for the project. This ensures that the product's cost is "
+"tracked during the stock move."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:48
+msgid ":doc:`../../shipping_receiving/reservation_methods/at_confirmation`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:49
+msgid ":doc:`../../shipping_receiving/reservation_methods/manually`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:50
+msgid ""
+":doc:`../../shipping_receiving/reservation_methods/before_scheduled_date`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:53
+msgid "Lots/serial numbers"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:55
+msgid ""
+"This section only appears if :guilabel:`Lots & Serial Numbers` is enabled "
+"in :menuselection:`Inventory app --> Configuration --> Settings`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:58
+msgid "The following fields are available:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:60
+msgid ""
+":guilabel:`Create New`: Select this checkbox to specify that lots and serial "
+"numbers can be created from this operation type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:62
+msgid ""
+":guilabel:`Use Existing ones`: If this checkbox is selected, the lot or "
+"serial number can be selected when creating transfers for this operation "
+"type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:66
+msgid ":doc:`../../product_management/product_tracking/lots`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:67
+msgid ":doc:`../../product_management/product_tracking/serial_numbers`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:72
+msgid ""
+"This section only appears if :guilabel:`Storage Locations` is enabled "
+"in :menuselection:`Inventory app --> Configuration --> Settings`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:75
+msgid "Specify the following locations for the operation type:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:77
+msgid ""
+":guilabel:`Source Location`: Select a default source location when "
+"operations of this type are created."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:79
+msgid ""
+":guilabel:`Destination Location`: Select a default destination location when "
+"operations of this type are created."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:83
+msgid ""
+"The :guilabel:`Source Location` and :guilabel:`Destination Location` can be "
+"changed on operation forms."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:90
+#: ../../content/applications/inventory_and_mrp/repairs.rst:8
+msgid "Repairs"
+msgstr "維修"
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:92
+msgid "This section appears only if the **Repairs** app is installed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:94
+msgid ""
+"To create repair orders from returns for this operation type, select "
+"the :guilabel:`Create Repair Orders from Returns` checkbox."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:98
+msgid "Batch & wave transfers"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:100
+msgid ""
+"This section appears only if :guilabel:`Batch, Wave & Cluster Transfers` is "
+"enabled in :menuselection:`Inventory app --> Configuration --> Settings`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:103
+msgid ""
+"Select the :guilabel:`Automatic Batches` checkbox to specify that pickings "
+"should be automatically batched as they are confirmed when possible."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:107
+msgid ":doc:`../../shipping_receiving/picking_methods/wave`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:108
+msgid ":doc:`../../shipping_receiving/picking_methods/batch`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:109
+msgid ":doc:`../../shipping_receiving/picking_methods/cluster`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:114
+msgid "Hardware tab"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:116
+msgid ""
+"In the *Print on validation* or *Print when done* section, specify what "
+"should be printed automatically when an operation is validated or complete."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:119
+msgid ""
+"In the *Scales* section, specify a scale to use in conjunction with "
+"operations of this operation type in the :guilabel:`Connect Scale` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:123
+msgid ":doc:`../../../../general/iot/devices/printer`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:124
+msgid ":doc:`../../../../general/iot/devices/scale`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:129
+msgid "Barcode App tab"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:131
+msgid ""
+"Use the *Barcode App* tab to specify how this operation type integrates with "
+"the **Barcode** app. Specify when barcodes must be scanned or how often, "
+"whether to group products, or when to validate an operation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:135
+msgid ""
+"To display reserved lots or serial numbers on an operation in the "
+"**Barcode** app, select the :guilabel:`Show reserved lots/SN` checkbox."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/operation_type.rst:139
+msgid ":doc:`../../../barcode`"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:3
 msgid "Scrap inventory"
@@ -53391,10 +53652,6 @@ msgstr ""
 msgid ""
 "A QCP configured to create Pass - Fail checks for a work order operation."
 msgstr "配置為對工作訂單作業建立通過 - 失敗檢查的品質控制點。"
-
-#: ../../content/applications/inventory_and_mrp/repairs.rst:8
-msgid "Repairs"
-msgstr "維修"
 
 #: ../../content/applications/inventory_and_mrp/repairs.rst:10
 msgid ""
