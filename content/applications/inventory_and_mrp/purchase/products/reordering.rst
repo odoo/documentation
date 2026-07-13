@@ -28,11 +28,11 @@ Starting from the :menuselection:`Inventory`, :menuselection:`Manufacturing`,
 Products` and then click :guilabel:`New` to make a new product. Alternatively, find a product that
 already exists in the database and click into it's product form.
 
-Next, on the product form, enable reordering by ticking the :guilabel:`Purchase` checkbox
-underneath the :guilabel:`Product` name field. Then, under the :guilabel:`General Information` tab,
-set the :guilabel:`Product Type` to :guilabel:`Goods`. Finally, tick the checkbox labeled
-:guilabel:`Track Inventory`, and select an :doc:`option
-<../../inventory/product_management/product_tracking>` from the drop-down.
+Next, on the product form, enable reordering by ticking the :guilabel:`Purchase` checkbox underneath
+the :guilabel:`Product` name field. Then, under the :guilabel:`General Information` tab, set the
+:guilabel:`Product Type` to :guilabel:`Goods`. Finally, tick the checkbox labeled :guilabel:`Track
+Inventory`, and select an :doc:`option <../../inventory/product_management/product_tracking>` from
+the drop-down.
 
 .. image:: reordering/product-configured-for-reordering.png
    :alt: Configure a product for reordering in Odoo.
@@ -65,11 +65,6 @@ defining the following fields:
   certain quantity. Depending on the number entered, this can result in the creation of a purchase
   order that would put the resulting stock on hand above what is specified in the :guilabel:`Max
   Quantity` field.
-
-   .. example::
-      If :guilabel:`Max Quantity` is set to `100` but :guilabel:`Multiple Quantity` is set to order
-      the product in batches of `200`, a purchase order is then created for 200 units of the
-      product.
 
 - :guilabel:`Unit` specifies the unit of measurement by which the quantity is to be ordered. For
   discrete products, this should be set to `Units`. However, it can also be set to units of
