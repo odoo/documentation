@@ -4,7 +4,7 @@ Packaging
 
 .. |adjust| replace:: :icon:`oi-settings-adjust` :guilabel:`(additional options)`
 
-In Odoo *Inventory*, *packaging* refers to disposable containers holding multiple units of a
+In Odoo **Inventory**, *packaging* refers to disposable containers holding multiple units of a
 specific product.
 
 For example, different packages for cans of soda, such as a 6-pack, a 12-pack, or a case of 36,
@@ -24,7 +24,6 @@ under the :guilabel:`Products` heading, enable the :guilabel:`Units of Measure &
 feature, and click :guilabel:`Save`.
 
 .. image:: packaging/enable-packagings.png
-   :align: center
    :alt: Enable packagings by selecting Units of Measure & Packagings.
 
 .. _inventory/product_management/packaging-setup:
@@ -41,35 +40,50 @@ From product form
 Create packagings on a product form by going to :menuselection:`Inventory app --> Products -->
 Products`, and select the desired product.
 
-To specify a sales packaging, open the :guilabel:`Sales` tab, then specify :guilabel:`Packagings` in
-the :guilabel:`Upsell & Cross-Sell` section. Specify existing packagings or create new ones by
-clicking :guilabel:`Create and edit`. When :guilabel:`Create and edit` is clicked, a
-:guilabel:`Create Packagings` box opens, where information about the packaging can be specified:
+To specify a sales packaging, open the *Sales* tab, then specify :guilabel:`Packagings` in the
+:guilabel:`Upsell & Cross-Sell` section. Specify existing packagings or create new ones by clicking
+:guilabel:`Create and edit`. When :guilabel:`Create and edit` is clicked, a *Create Packagings*
+window opens, where information about the packaging can be specified:
 
-- :guilabel:`Unit Name` (required): name of packaging that appears on sales/purchase orders as a
-  packaging option for the product.
-- :guilabel:`Quantity` (required): amount of product in the packaging.
-- :guilabel:`Reference Unit` (required): measurement unit for quantifying the product.
-- :guilabel:`Package Type`: package type used to set custom dimensions and limits. See
+- :guilabel:`Unit Name` (required): Specify the name of the packaging that appears on sales/purchase
+  orders as a packaging option for the product.
+- :guilabel:`Quantity` (required): Specify the amount of product in the packaging.
+- :guilabel:`Reference Unit` (required): Define the measurement unit for quantifying the product.
+- :guilabel:`Package Type`: Specify the package type used to set custom dimensions and limits. See
   :ref:`package type <inventory/warehouses_storage/package-type>` to learn more.
-- :guilabel:`Barcodes`: identifier for tracing packaging in stock moves or pickings, using the
-  :ref:`Barcode app <barcode/operations/intro>`. Leave blank if not in use.
+- :guilabel:`Barcodes`: Enter an identifier for tracing packaging in stock moves or pickings using
+  the :ref:`Barcode app <barcode/operations/intro>`. Leave blank if not in use.
 
 .. image:: packaging/create-sales-packagings.png
    :alt: Create a new packaging in the Create Packagings box.
 
-To specify a purchase packaging for a vendor, open the :guilabel:`Purchase` tab, then add a vendor.
-Update the :guilabel:`Unit` field to specify a purchase packaging for that vendor. Specify existing
-packagings here, or create new ones by clicking :guilabel:`Create and edit`. When :guilabel:`Create
-and edit` is clicked, the :guilabel:`Create Unit` box opens. The fields in this box are the same as
-for the :guilabel:`Create Packagings` box above.
+To update barcodes for all defined packagings of a product, click the :icon:`oi-arrow-right`
+:guilabel:`Barcodes` link under the :guilabel:`Packagings` field. The *Packaging Barcodes* page
+opens.
+
+The following fields are available on the *Packaging Barcodes* page:
+
+- :guilabel:`Product`: Select the product (and variant, if applicable) to which the packaging
+  applies.
+- :guilabel:`Barcode`: Specify the barcode for the specified product.
+- :guilabel:`Unit`: Select the packaging. This packaging must be defined already in the
+  :guilabel:`Packagings` field in the *Sales* tab of the product form.
+
+ .. image:: packaging/packaging-barcodes.png
+    :alt: Add barcodes for packagings and any variants on the Packaging Barcodes page.
+
+To specify a purchase packaging for a vendor, open the *Purchase* tab, then add a vendor. Update the
+:guilabel:`Unit` field to specify a purchase packaging for that vendor. Specify existing packagings
+here, or create new ones by clicking :guilabel:`Create and edit`. When :guilabel:`Create and edit`
+is clicked, the *Create Unit* window opens. The fields in this box are the same as for the *Create
+Packagings* window above.
 
 .. example::
    To create a purchase packaging type for six units of the product, `Grape Soda`, begin by clicking
-   :guilabel:`Add a line` in the :guilabel:`Purchase` tab. Specify a :guilabel:`Vendor`. Specify
-   `6-pack` in the :guilabel:`Unit` field, then click :guilabel:`Create and edit`. In the
-   :guilabel:`Create Unit` box, specify a quantity and reference unit (in this case, `6` `Units`),
-   then click :guilabel:`Save`. Repeat this process for additional packagings.
+   :guilabel:`Add a line` in the *Purchase* tab. Specify a :guilabel:`Vendor`. Specify `6-pack` in
+   the :guilabel:`Unit` field, then click :guilabel:`Create and edit`. In the *Create Unit* window,
+   specify a quantity and reference unit (in this case, `6` `Units`), then click :guilabel:`Save`.
+   Repeat this process for additional packagings.
 
    .. image:: packaging/create-purchase-packagings.png
       :alt: Create purchase packagings for product.
@@ -78,8 +92,8 @@ From units & packagings page
 ----------------------------
 
 To view all packagings that have been created, go to :menuselection:`Inventory app --> Configuration
---> Units & Packagings`. Doing so reveals the :guilabel:`Units & Packagings` page with a complete
-list of all packagings that have been created for all products. Create new packagings by clicking
+--> Units & Packagings`. Doing so reveals the *Units & Packagings* page with a complete list of all
+packagings that have been created for all products. Create new packagings by clicking
 :guilabel:`New`.
 
 .. example::
@@ -89,6 +103,16 @@ list of all packagings that have been created for all products. Create new packa
 
    .. image:: packaging/packagings.png
       :alt: List of different packagings for products.
+
+To define barcodes for packagings, click the :icon:`fa-barcode` :guilabel:`Packaging Barcodes` smart
+button in the packaging form. The *Packaging Barcodes* page opens, with the following fields
+available:
+
+- :guilabel:`Product`: Select the product (and variant, if applicable) to which the packaging
+  applies.
+- :guilabel:`Barcode`: Specify the barcode for the specified product.
+- :guilabel:`Unit`: Select the packaging. This packaging must be defined already in the
+  :guilabel:`Packagings` field in the *Sales* tab of the product form.
 
 Partial reservation
 -------------------
@@ -111,15 +135,14 @@ can be set to :guilabel:`Reserve Only Full Packagings` or :guilabel:`Reserve Par
    :guilabel:`Product Packagings` checkbox, and click :guilabel:`Save`.
 
 .. image:: packaging/reserve-packaging.png
-   :align: center
    :alt: Show Reserve Packagings field on the product categories page.
 
 .. example::
    To better evaluate the options based on business needs, consider the following example:
 
-   - a product is sold in twelve units per packaging.
-   - an order demands two packagings.
-   - there are only twenty-two units in stock.
+   - A product is sold in twelve units per packaging.
+   - An order demands two packagings.
+   - There are only twenty-two units in stock.
 
    When :guilabel:`Reserve Only Full Packagings` is selected, only twelve units are reserved for the
    order.
