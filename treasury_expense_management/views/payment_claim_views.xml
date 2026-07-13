@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Payment Claim Form View -->
+    <record id="view_payment_claim_form" model="ir.ui.view">
+        <field name="name">treasury.payment.claim.form</field>
+        <field name="model">treasury.payment.claim</field>
+        <field name="arch" type="xml">
+            <form string="مطالبة السداد">
+                <header>
+                    <button name="action_submit" string="تقديم للاعتماد" type="object"
+                            class="btn-primary" invisible="state != 'draft'"/>
+                    <button name="action_approve" string="اعتماد" type="object"
+                            class="btn-success" invisible="state != 'submitted'"
+                            groups="treasury_expense_management.group_treasury_manager"/>
+                    <button name="action_reject" string="رفض" type="object"
+                            class="btn-danger" invisible="state != 'submitted'"
+                            groups="treasury_expense_management.group_treasury_manager"/>
+                    <button name="action_create_payment" string="إنشاء سند صرف" type="object"
+                            class="btn-info" invisible="state not in ('approved', 'partial')"/>
+                    <button name="action_cancel" string="إلغاء" type="object"
+                            invisible="state in ('paid', 'cancelled')"/>
+                    <button name="action_reset_draft" string="إعادة للمسودة" type="object"
+                            invisible="state not in ('submitted', 'rejected', 'cancelled')"/>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,submitted,approved,partial,paid"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_payments" type="object"
+                                class="oe_stat_button" icon="fa-money"
+                                invisible="payment_count == 0">
+                            <field name="payment_count" widget="statinfo" string="سندات الصرف"/>
+                        </button>
+                    </div>
+                    <widget name="web_ribbon" title="مرفوضة" bg_color="bg-danger"
+                            invisible="state != 'rejected'"/>
+                    <widget name="web_ribbon" title="ملغية" bg_color="bg-secondary"
+                            invisible="state != 'cancelled'"/>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group string="بيانات المطالبة">
+                            <field name="claim_type" readonly="state != 'draft'" widget="radio"/>
+                            <field name="date" readonly="state != 'draft'"/>
+                            <field name="due_date" readonly="state != 'draft'"/>
+                            <field name="priority" widget="priority"/>
+                        </group>
+                        <group string="المورد / الموظف">
+                            <field name="partner_id" readonly="state != 'draft'"
+                                   invisible="claim_type != 'vendor'"/>
+                            <field name="vendor_bill_id" readonly="state != 'draft'"
+                                   invisible="claim_type != 'vendor'"/>
+                            <field name="vendor_ref" readonly="state != 'draft'"
+                                   invisible="claim_type != 'vendor'"/>
+                            <field name="employee_id" readonly="state != 'draft'"
+                                   invisible="claim_type != 'expense'"/>
+                            <field name="department_id"
+                                   invisible="claim_type != 'expense'"/>
+                        </group>
+                    </group>
+
+                    <group>
+                        <field name="description" placeholder="وصف المطالبة..." readonly="state != 'draft'"/>
+                    </group>
+
+                    <!-- Claim Lines -->
+                    <notebook>
+                        <page string="بنود المطالبة" name="lines">
+                            <field name="line_ids" readonly="state != 'draft'">
+                                <list editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="description"/>
+                                    <field name="account_id"/>
+                                    <field name="analytic_account_id" optional="hide"/>
+                                    <field name="quantity"/>
+                                    <field name="unit_price"/>
+                                    <field name="discount" optional="hide"/>
+                                    <field name="tax_ids" widget="many2many_tags" optional="hide"/>
+                                    <field name="subtotal"/>
+                                    <field name="notes" optional="hide"/>
+                                </list>
+                            </field>
+                            <group class="oe_subtotal_footer">
+                                <field name="subtotal" readonly="1"/>
+                                <field name="tax_amount" readonly="1"/>
+                                <field name="total_amount" readonly="1" class="oe_subtotal_footer_separator"/>
+                            </group>
+                        </page>
+                        <page string="المدفوعات" name="payments">
+                            <group>
+                                <field name="paid_amount" readonly="1"/>
+                                <field name="residual_amount" readonly="1"/>
+                            </group>
+                            <field name="payment_ids" readonly="1">
+                                <list>
+                                    <field name="name"/>
+                                    <field name="date"/>
+                                    <field name="treasury_id"/>
+                                    <field name="payment_method"/>
+                                    <field name="amount"/>
+                                    <field name="state" widget="badge"
+                                           decoration-success="state == 'done'"
+                                           decoration-warning="state == 'confirmed'"
+                                           decoration-info="state == 'draft'"
+                                           decoration-danger="state == 'cancelled'"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="معلومات الاعتماد / الرفض" name="approval"
+                              invisible="state not in ('approved', 'rejected', 'partial', 'paid')">
+                            <group invisible="state not in ('approved', 'partial', 'paid')">
+                                <field name="approved_by" readonly="1"/>
+                                <field name="approved_date" readonly="1"/>
+                            </group>
+                            <group invisible="state != 'rejected'">
+                                <field name="rejected_reason" readonly="1"/>
+                            </group>
+                        </page>
+                        <page string="المستندات" name="attachments">
+                            <field name="attachment_ids" widget="many2many_binary"/>
+                        </page>
+                        <page string="ملاحظات" name="notes">
+                            <field name="notes" placeholder="ملاحظات داخلية..."/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Payment Claim List View -->
+    <record id="view_payment_claim_list" model="ir.ui.view">
+        <field name="name">treasury.payment.claim.list</field>
+        <field name="model">treasury.payment.claim</field>
+        <field name="arch" type="xml">
+            <list string="مطالبات السداد"
+                  decoration-danger="state == 'rejected'"
+                  decoration-muted="state == 'cancelled'"
+                  decoration-success="state == 'paid'">
+                <field name="name"/>
+                <field name="claim_type" widget="badge"
+                       decoration-info="claim_type == 'vendor'"
+                       decoration-warning="claim_type == 'expense'"/>
+                <field name="date"/>
+                <field name="due_date"/>
+                <field name="partner_id" optional="show"/>
+                <field name="employee_id" optional="show"/>
+                <field name="description"/>
+                <field name="total_amount"/>
+                <field name="paid_amount"/>
+                <field name="residual_amount"/>
+                <field name="priority" widget="priority"/>
+                <field name="state" widget="badge"
+                       decoration-info="state == 'draft'"
+                       decoration-primary="state == 'submitted'"
+                       decoration-success="state in ('approved', 'paid')"
+                       decoration-warning="state == 'partial'"
+                       decoration-danger="state in ('rejected', 'cancelled')"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Payment Claim Search View -->
+    <record id="view_payment_claim_search" model="ir.ui.view">
+        <field name="name">treasury.payment.claim.search</field>
+        <field name="model">treasury.payment.claim</field>
+        <field name="arch" type="xml">
+            <search string="بحث في المطالبات">
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="employee_id"/>
+                <field name="description"/>
+                <filter string="مطالبات موردين" name="vendor" domain="[('claim_type', '=', 'vendor')]"/>
+                <filter string="مطالبات مصاريف" name="expense" domain="[('claim_type', '=', 'expense')]"/>
+                <separator/>
+                <filter string="مسودة" name="draft" domain="[('state', '=', 'draft')]"/>
+                <filter string="مقدمة للاعتماد" name="submitted" domain="[('state', '=', 'submitted')]"/>
+                <filter string="معتمدة" name="approved" domain="[('state', 'in', ('approved', 'partial'))]"/>
+                <filter string="مدفوعة" name="paid" domain="[('state', '=', 'paid')]"/>
+                <filter string="مرفوضة" name="rejected" domain="[('state', '=', 'rejected')]"/>
+                <separator/>
+                <filter string="عاجلة" name="urgent" domain="[('priority', 'in', ('2', '3'))]"/>
+                <group expand="0" string="تجميع حسب">
+                    <filter string="النوع" name="group_type" context="{'group_by': 'claim_type'}"/>
+                    <filter string="المورد" name="group_partner" context="{'group_by': 'partner_id'}"/>
+                    <filter string="الموظف" name="group_employee" context="{'group_by': 'employee_id'}"/>
+                    <filter string="الشهر" name="group_month" context="{'group_by': 'date:month'}"/>
+                    <filter string="الحالة" name="group_state" context="{'group_by': 'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Actions -->
+    <record id="action_payment_claim_vendor" model="ir.actions.act_window">
+        <field name="name">مطالبات الموردين</field>
+        <field name="res_model">treasury.payment.claim</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('claim_type', '=', 'vendor')]</field>
+        <field name="context">{'default_claim_type': 'vendor'}</field>
+    </record>
+
+    <record id="action_payment_claim_expense" model="ir.actions.act_window">
+        <field name="name">مطالبات المصاريف</field>
+        <field name="res_model">treasury.payment.claim</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('claim_type', '=', 'expense')]</field>
+        <field name="context">{'default_claim_type': 'expense'}</field>
+    </record>
+
+    <record id="action_payment_claim_all" model="ir.actions.act_window">
+        <field name="name">كل المطالبات</field>
+        <field name="res_model">treasury.payment.claim</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Reject Wizard View -->
+    <record id="view_claim_reject_wizard_form" model="ir.ui.view">
+        <field name="name">treasury.claim.reject.wizard.form</field>
+        <field name="model">treasury.claim.reject.wizard</field>
+        <field name="arch" type="xml">
+            <form string="رفض المطالبة">
+                <group>
+                    <field name="claim_ids" widget="many2many_tags" readonly="1"/>
+                    <field name="reason" placeholder="سبب الرفض..." required="1"/>
+                </group>
+                <footer>
+                    <button name="action_reject" string="تأكيد الرفض" type="object" class="btn-danger"/>
+                    <button string="إلغاء" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

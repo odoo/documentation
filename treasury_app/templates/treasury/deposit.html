@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% block title %}إيداع في {{ treasury.name }} - نظام إدارة الخزينة{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h4 class="mb-0">
+        <i class="bi bi-cash-stack me-2"></i>إيداع في الخزينة: {{ treasury.name }}
+    </h4>
+    <a href="{{ url_for('treasury.show', id=treasury.id) }}" class="btn btn-outline-secondary">
+        <i class="bi bi-arrow-right me-1"></i>العودة
+    </a>
+</div>
+
+<!-- Treasury Balance Info -->
+<div class="alert alert-info d-flex align-items-center mb-3">
+    <i class="bi bi-info-circle-fill me-2 fs-5"></i>
+    <div>
+        الرصيد الحالي للخزينة:
+        <strong class="ms-1 {% if treasury.balance < 0 %}text-danger{% else %}text-success{% endif %}">
+            {{ treasury.balance | currency }}
+        </strong>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-md-7">
+        <div class="card shadow-sm">
+            <div class="card-header bg-success text-white fw-semibold">
+                <i class="bi bi-arrow-down-circle me-2"></i>بيانات الإيداع
+            </div>
+            <div class="card-body">
+                <form method="POST" action="{{ url_for('treasury.deposit', id=treasury.id) }}" novalidate>
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+                    <div class="row g-3">
+                        <!-- Date -->
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold" for="date">
+                                التاريخ <span class="text-danger">*</span>
+                            </label>
+                            <input type="date" class="form-control" id="date" name="date"
+                                   value="{{ today }}" required>
+                            <div class="invalid-feedback">يرجى تحديد التاريخ.</div>
+                        </div>
+
+                        <!-- Amount -->
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold" for="amount">
+                                المبلغ <span class="text-danger">*</span>
+                            </label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="amount" name="amount"
+                                       step="0.01" min="0.01" required placeholder="0.00">
+                                <span class="input-group-text">{{ treasury.currency }}</span>
+                            </div>
+                            <div class="invalid-feedback">يرجى إدخال مبلغ صحيح.</div>
+                        </div>
+
+                        <!-- Beneficiary -->
+                        <div class="col-12">
+                            <label class="form-label fw-semibold" for="beneficiary">المودِع / الجهة</label>
+                            <input type="text" class="form-control" id="beneficiary" name="beneficiary"
+                                   placeholder="اسم الشخص أو الجهة المودِعة">
+                        </div>
+
+                        <!-- Payment Method -->
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold" for="payment_method">طريقة الإيداع</label>
+                            <select class="form-select" id="payment_method" name="payment_method">
+                                <option value="cash">نقداً</option>
+                                <option value="check">شيك</option>
+                                <option value="transfer">تحويل بنكي</option>
+                            </select>
+                        </div>
+
+                        <!-- Reference -->
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold" for="reference">رقم المرجع</label>
+                            <input type="text" class="form-control" id="reference" name="reference"
+                                   placeholder="رقم الشيك أو التحويل">
+                        </div>
+
+                        <!-- Description -->
+                        <div class="col-12">
+                            <label class="form-label fw-semibold" for="description">
+                                الوصف / البيان <span class="text-danger">*</span>
+                            </label>
+                            <textarea class="form-control" id="description" name="description"
+                                      rows="3" required placeholder="وصف عملية الإيداع..."></textarea>
+                            <div class="invalid-feedback">يرجى إدخال وصف للعملية.</div>
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <div class="d-flex gap-2 justify-content-end">
+                        <a href="{{ url_for('treasury.show', id=treasury.id) }}" class="btn btn-outline-secondary">
+                            <i class="bi bi-x-circle me-1"></i>إلغاء
+                        </a>
+                        <button type="submit" class="btn btn-success">
+                            <i class="bi bi-cash-stack me-1"></i>تأكيد الإيداع
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+(function () {
+    'use strict';
+    var forms = document.querySelectorAll('form[novalidate]');
+    Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        }, false);
+    });
+})();
+</script>
+{% endblock %}

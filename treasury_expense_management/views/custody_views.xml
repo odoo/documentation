@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Custody Form View -->
+    <record id="view_custody_form" model="ir.ui.view">
+        <field name="name">treasury.custody.form</field>
+        <field name="model">treasury.custody</field>
+        <field name="arch" type="xml">
+            <form string="العهدة">
+                <header>
+                    <button name="action_confirm" string="اعتماد" type="object"
+                            class="btn-primary" invisible="state != 'draft'"/>
+                    <button name="action_pay" string="صرف العهدة" type="object"
+                            class="btn-success" invisible="state != 'confirmed'"/>
+                    <button name="action_clear" string="تسوية العهدة" type="object"
+                            class="btn-info" invisible="state != 'paid'"/>
+                    <button name="action_cancel" string="إلغاء" type="object"
+                            class="btn-danger" invisible="state in ('paid', 'cleared', 'cancelled')"/>
+                    <button name="action_reset_draft" string="إعادة للمسودة" type="object"
+                            invisible="state not in ('confirmed', 'cancelled')"/>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,confirmed,paid,cleared"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group string="بيانات العهدة">
+                            <field name="employee_id" readonly="state != 'draft'"/>
+                            <field name="department_id"/>
+                            <field name="treasury_id" readonly="state != 'draft'"/>
+                            <field name="date" readonly="state != 'draft'"/>
+                            <field name="due_date" readonly="state != 'draft'"/>
+                        </group>
+                        <group string="المبالغ">
+                            <field name="amount" readonly="state != 'draft'"/>
+                            <field name="total_expenses"/>
+                            <field name="remaining_amount"/>
+                            <field name="refund_amount"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="purpose" readonly="state != 'draft'"
+                               placeholder="غرض العهدة..."/>
+                    </group>
+
+                    <!-- Expense Lines -->
+                    <notebook>
+                        <page string="المصروفات" name="expenses">
+                            <field name="expense_ids" readonly="state not in ('paid',)">
+                                <list editable="bottom">
+                                    <field name="date"/>
+                                    <field name="description"/>
+                                    <field name="account_id"/>
+                                    <field name="amount"/>
+                                    <field name="notes"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="ملاحظات" name="notes">
+                            <field name="notes" placeholder="ملاحظات..."/>
+                        </page>
+                        <page string="معلومات التسوية" name="clearance"
+                              invisible="state not in ('cleared',)">
+                            <group>
+                                <field name="clearance_date" readonly="1"/>
+                                <field name="clearance_user_id" readonly="1"/>
+                                <field name="payment_id" readonly="1"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Custody List View -->
+    <record id="view_custody_list" model="ir.ui.view">
+        <field name="name">treasury.custody.list</field>
+        <field name="model">treasury.custody</field>
+        <field name="arch" type="xml">
+            <list string="العهد"
+                  decoration-warning="state == 'confirmed' and due_date and due_date &lt; context_today()"
+                  decoration-muted="state in ('cleared', 'cancelled')">
+                <field name="name"/>
+                <field name="employee_id"/>
+                <field name="department_id"/>
+                <field name="date"/>
+                <field name="due_date"/>
+                <field name="treasury_id"/>
+                <field name="amount"/>
+                <field name="total_expenses"/>
+                <field name="remaining_amount"/>
+                <field name="purpose"/>
+                <field name="state" widget="badge"
+                       decoration-info="state == 'draft'"
+                       decoration-primary="state == 'confirmed'"
+                       decoration-warning="state == 'paid'"
+                       decoration-success="state == 'cleared'"
+                       decoration-danger="state == 'cancelled'"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Custody Search View -->
+    <record id="view_custody_search" model="ir.ui.view">
+        <field name="name">treasury.custody.search</field>
+        <field name="model">treasury.custody</field>
+        <field name="arch" type="xml">
+            <search string="بحث في العهد">
+                <field name="name"/>
+                <field name="employee_id"/>
+                <field name="treasury_id"/>
+                <field name="purpose"/>
+                <filter string="مسودة" name="draft" domain="[('state', '=', 'draft')]"/>
+                <filter string="معتمدة" name="confirmed" domain="[('state', '=', 'confirmed')]"/>
+                <filter string="مصروفة" name="paid" domain="[('state', '=', 'paid')]"/>
+                <filter string="مسواة" name="cleared" domain="[('state', '=', 'cleared')]"/>
+                <separator/>
+                <filter string="متأخرة" name="overdue"
+                        domain="[('state', '=', 'confirmed'), ('due_date', '&lt;', context_today().strftime('%Y-%m-%d'))]"/>
+                <group expand="0" string="تجميع حسب">
+                    <filter string="الموظف" name="group_employee" context="{'group_by': 'employee_id'}"/>
+                    <filter string="القسم" name="group_dept" context="{'group_by': 'department_id'}"/>
+                    <filter string="الخزينة" name="group_treasury" context="{'group_by': 'treasury_id'}"/>
+                    <filter string="الحالة" name="group_state" context="{'group_by': 'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Custody Action -->
+    <record id="action_custody" model="ir.actions.act_window">
+        <field name="name">العهد</field>
+        <field name="res_model">treasury.custody</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Custody Pay Wizard View -->
+    <record id="view_custody_pay_wizard_form" model="ir.ui.view">
+        <field name="name">treasury.custody.pay.wizard.form</field>
+        <field name="model">treasury.custody.pay.wizard</field>
+        <field name="arch" type="xml">
+            <form string="صرف العهدة">
+                <group>
+                    <field name="custody_id" readonly="1"/>
+                    <field name="treasury_id" readonly="1"/>
+                    <field name="amount" readonly="1"/>
+                    <field name="date"/>
+                    <field name="payment_method"/>
+                    <field name="description"/>
+                    <field name="notes"/>
+                </group>
+                <footer>
+                    <button name="action_pay" string="تأكيد الصرف" type="object" class="btn-primary"/>
+                    <button string="إلغاء" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Custody Clear Wizard View -->
+    <record id="view_custody_clear_wizard_form" model="ir.ui.view">
+        <field name="name">treasury.custody.clear.wizard.form</field>
+        <field name="model">treasury.custody.clear.wizard</field>
+        <field name="arch" type="xml">
+            <form string="تسوية العهدة">
+                <group>
+                    <field name="custody_id" readonly="1"/>
+                    <field name="employee_id" readonly="1"/>
+                    <field name="amount" readonly="1"/>
+                    <field name="total_expenses" readonly="1"/>
+                    <field name="remaining_amount" readonly="1"/>
+                    <field name="action_type" readonly="1" widget="badge"
+                           decoration-success="action_type == 'return'"
+                           decoration-warning="action_type == 'additional'"
+                           decoration-info="action_type == 'writeoff'"/>
+                    <field name="clearance_date"/>
+                    <field name="notes"/>
+                </group>
+                <footer>
+                    <button name="action_clear" string="تأكيد التسوية" type="object" class="btn-primary"/>
+                    <button string="إلغاء" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,187 @@
+{% extends 'base.html' %}
+{% block title %}{{ treasury.name }} - تفاصيل الخزينة{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h4 class="mb-0">
+        <i class="bi bi-bank me-2"></i>{{ treasury.name }}
+    </h4>
+    <div class="d-flex gap-2">
+        <a href="{{ url_for('treasury.index') }}" class="btn btn-outline-secondary">
+            <i class="bi bi-arrow-right me-1"></i>القائمة
+        </a>
+        <a href="{{ url_for('treasury.edit', id=treasury.id) }}" class="btn btn-outline-primary">
+            <i class="bi bi-pencil me-1"></i>تعديل
+        </a>
+        {% if treasury.state == 'open' %}
+        <a href="{{ url_for('treasury.deposit', id=treasury.id) }}" class="btn btn-success">
+            <i class="bi bi-cash-stack me-1"></i>إيداع
+        </a>
+        <form method="POST" action="{{ url_for('treasury.close', id=treasury.id) }}" class="d-inline"
+              onsubmit="return confirm('هل أنت متأكد من إغلاق هذه الخزينة؟')">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <button type="submit" class="btn btn-danger">
+                <i class="bi bi-lock-fill me-1"></i>إغلاق
+            </button>
+        </form>
+        {% else %}
+        <form method="POST" action="{{ url_for('treasury.open', id=treasury.id) }}" class="d-inline"
+              onsubmit="return confirm('هل أنت متأكد من إعادة فتح هذه الخزينة؟')">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <button type="submit" class="btn btn-success">
+                <i class="bi bi-unlock-fill me-1"></i>فتح
+            </button>
+        </form>
+        {% endif %}
+    </div>
+</div>
+
+<!-- Info Cards Row -->
+<div class="row g-3 mb-4">
+    <!-- Main Info -->
+    <div class="col-md-8">
+        <div class="card shadow-sm h-100">
+            <div class="card-header bg-light fw-semibold">
+                <i class="bi bi-info-circle me-2"></i>بيانات الخزينة
+            </div>
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <small class="text-muted d-block">الاسم</small>
+                        <span class="fw-semibold">{{ treasury.name }}</span>
+                    </div>
+                    <div class="col-sm-6">
+                        <small class="text-muted d-block">الكود</small>
+                        <code class="fs-6">{{ treasury.code }}</code>
+                    </div>
+                    <div class="col-sm-6">
+                        <small class="text-muted d-block">النوع</small>
+                        {% if treasury.treasury_type == 'cash' %}
+                            <i class="bi bi-cash-coin text-success me-1"></i>نقدي
+                        {% else %}
+                            <i class="bi bi-building text-info me-1"></i>بنكي
+                        {% endif %}
+                    </div>
+                    <div class="col-sm-6">
+                        <small class="text-muted d-block">العملة</small>
+                        <span>{{ treasury.currency }}</span>
+                    </div>
+                    <div class="col-sm-6">
+                        <small class="text-muted d-block">المسؤول</small>
+                        <span>{{ treasury.responsible or '-' }}</span>
+                    </div>
+                    <div class="col-sm-6">
+                        <small class="text-muted d-block">الحد الأقصى</small>
+                        <span>{{ treasury.max_amount | currency if treasury.max_amount else 'غير محدد' }}</span>
+                    </div>
+                    {% if treasury.notes %}
+                    <div class="col-12">
+                        <small class="text-muted d-block">ملاحظات</small>
+                        <span class="text-muted">{{ treasury.notes }}</span>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Balance Card -->
+    <div class="col-md-4">
+        <div class="card shadow-sm h-100 text-center">
+            <div class="card-header bg-light fw-semibold">
+                <i class="bi bi-wallet2 me-2"></i>الرصيد الحالي
+            </div>
+            <div class="card-body d-flex flex-column justify-content-center">
+                <div class="display-5 fw-bold mb-2
+                    {% if treasury.balance < 0 %}text-danger
+                    {% elif treasury.balance > 0 %}text-success
+                    {% else %}text-muted{% endif %}">
+                    {{ treasury.balance | currency }}
+                </div>
+                <div class="mb-3">
+                    {% if treasury.state == 'open' %}
+                        <span class="badge bg-success fs-6 px-3 py-2">
+                            <i class="bi bi-unlock-fill me-1"></i>مفتوحة
+                        </span>
+                    {% else %}
+                        <span class="badge bg-danger fs-6 px-3 py-2">
+                            <i class="bi bi-lock-fill me-1"></i>مغلقة
+                        </span>
+                    {% endif %}
+                </div>
+                {% if treasury.max_amount and treasury.max_amount > 0 %}
+                <div>
+                    <small class="text-muted">
+                        {{ ((treasury.balance / treasury.max_amount) * 100) | round(1) }}% من الحد الأقصى
+                    </small>
+                    <div class="progress mt-1" style="height: 8px;">
+                        <div class="progress-bar
+                            {% if treasury.balance < 0 %}bg-danger
+                            {% elif (treasury.balance / treasury.max_amount) > 0.8 %}bg-warning
+                            {% else %}bg-success{% endif %}"
+                             style="width: {{ [((treasury.balance / treasury.max_amount) * 100), 100] | min | max(0) }}%">
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Transactions Table -->
+<div class="card shadow-sm">
+    <div class="card-header bg-light d-flex justify-content-between align-items-center">
+        <span class="fw-semibold"><i class="bi bi-list-ul me-2"></i>آخر الحركات</span>
+        <span class="badge bg-secondary">{{ transactions | length }} حركة</span>
+    </div>
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0 table-sm">
+                <thead class="table-light">
+                    <tr>
+                        <th>التاريخ</th>
+                        <th>الوصف</th>
+                        <th>المرجع</th>
+                        <th class="text-center">النوع</th>
+                        <th class="text-end">المبلغ</th>
+                        <th class="text-end">الرصيد بعدها</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for tx in transactions %}
+                    <tr>
+                        <td class="text-nowrap">{{ tx.date | ar_date }}</td>
+                        <td>{{ tx.description }}</td>
+                        <td><code class="small">{{ tx.reference or '-' }}</code></td>
+                        <td class="text-center">
+                            {% if tx.type == 'in' %}
+                                <span class="badge bg-success"><i class="bi bi-arrow-down-circle me-1"></i>وارد</span>
+                            {% else %}
+                                <span class="badge bg-danger"><i class="bi bi-arrow-up-circle me-1"></i>صادر</span>
+                            {% endif %}
+                        </td>
+                        <td class="text-end fw-bold
+                            {% if tx.type == 'in' %}text-success{% else %}text-danger{% endif %}">
+                            {% if tx.type == 'out' %}-{% endif %}{{ tx.amount | currency }}
+                        </td>
+                        <td class="text-end
+                            {% if tx.balance_after < 0 %}text-danger{% else %}text-muted{% endif %}">
+                            {{ tx.balance_after | currency }}
+                        </td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="6" class="text-center text-muted py-4">
+                            <i class="bi bi-inbox fs-4 d-block mb-2"></i>
+                            لا توجد حركات مسجلة لهذه الخزينة.
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
