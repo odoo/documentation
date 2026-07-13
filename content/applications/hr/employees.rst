@@ -64,11 +64,6 @@ planning, and compliance reporting.
 
       Take care of employee records when collaboration ends.
 
-   .. card:: Employee retention report
-      :target: employees/retention_report
-
-      Gain insight into a company's retention rate.
-
 .. _employees/settings:
 
 Settings
@@ -152,4 +147,3 @@ This field only appears if the **Salary Configurator** module is installed.
    employees/badges
    employees/equipment
    employees/offboarding
-   employees/retention_report
