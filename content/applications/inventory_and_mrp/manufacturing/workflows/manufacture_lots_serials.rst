@@ -98,17 +98,8 @@ Manufacture multiple units
 
 .. important::
    When manufacturing a product tracked using serial numbers, an |MO| can be created for multiple
-   units. However, when serial numbers are assigned to each unit, either at the end of production or
-   before, the |MO| is split into multiple |MOs|, each containing one unit of the product.
-
-   Each of the split |MOs| is identified by a numerical tag added to the end of the original |MO|
-   number.
-
-   .. example::
-      |MO| `WH/MO/00109` contains two units of a `Chair`, a product tracked using serial numbers. A
-      serial number is assigned to each unit of the chair. This causes the |MO| to be split into two
-      |MOs|, each containing one unit of the chair. The |MOs| are titled `WH/MO/00109-001` and
-      `WH/MO/00109-002`.
+   units, and when the |MO| will be marked as Done then that |MO| will be linked to multiple Serial
+   Numbers.
 
 To assign serial numbers to each unit of an |MO|, click :guilabel:`Produce All` to open the
 :guilabel:`Batch Production` pop-up window.
