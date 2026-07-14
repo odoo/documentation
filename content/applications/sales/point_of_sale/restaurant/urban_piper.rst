@@ -35,13 +35,14 @@ Supported providers and locations:
            - Austria, Belgium, Bulgaria, Canada, Denmark, Germany, Ireland, Israel, Italy,
              Luxembourg, Poland, Slovakia, Spain, Switzerland, Netherlands, United Kingdom
          * - `Keeta <https://www.keeta-global.com/AE/en>`_
-           - Bahrain, Brazil, Hong Kong (China), Kuwait, Qatar, Saudi Arabia, United Arab Emirates
-         * - `UberEats <https://www.ubereats.com>`_
-           - Argentina, Australia, Belgium, Canada, Chile, Costa Rica, Denmark, Dominican Republic,
-             Ecuador, El Salvador, Finland, France, Germany, Guatemala, Ireland, Italy, Japan,
-             Kenya, Luxembourg, Mexico, Netherlands, New Zealand, Norway, Panama, Poland, Portugal,
-             South Africa, Spain, Sri Lanka, Sweden, Switzerland, Taiwan (ROC), United Kingdom,
-             United States
+           - Bahrain, Brazil, Hong Kong (China), Kuwait, Qatar, Saudi Arabia,
+             United Arab Emirates
+         * - `Uber Eats <https://www.ubereats.com>`_
+           - Australia, Belgium, Canada, Chile, Costa Rica, Dominican Republic,
+             Ecuador, El Salvador, France, Germany, Guatemala, Ireland, Italy,
+             Japan, Kenya, Luxembourg, Mexico, Netherlands, New Zealand, Panama,
+             Poland, Portugal, South Africa, Spain, Sri Lanka, Sweden,
+             Switzerland, Taiwan, United Kingdom, United States
          * - `Wolt <https://wolt.com>`_
            - Albania, Austria, Azerbaijan, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark,
              Estonia, Finland, Georgia, Germany, Greece, Hungary, Iceland, Israel, Japan, Kazakhstan,
@@ -58,18 +59,21 @@ Supported providers and locations:
 
          * - Providers
            - Locations
-         * - `Grubhub <https://www.grubhub.com>`_
-           - United States
-         * - `Postmates <https://www.postmates.com>`_
-           - Puerto Rico, United States
          * - `ChowNow <https://get.chownow.com>`_
            - Canada, United States
+         * - `DiDi Food <https://www.didi-food.com/>`_
+           - Colombia, Costa Rica, Dominican Republic, Mexico, Peru
+         * - `Grubhub <https://www.grubhub.com>`_
+           - Australia, Austria, Belgium, Bulgaria, Canada, Switzerland, Germany,
+             Denmark, Spain, France, Ireland, Israel, Italy, Luxembourg,
+             Netherlands, New Zealand, Norway, Poland, Portugal, Romania, United
+             Kingdom, United States
+         * - `Postmates <https://www.postmates.com>`_
+           - United States
          * - `Rappi <https://www.rappi.com>`_
            - Argentina, Brazil, Chile, Colombia, Costa Rica, Ecuador, Mexico, Peru, Uruguay
          * - `SkipTheDishes <https://www.skipthedishes.com/en>`_
-           - Canada (Alberta, British Columbia, Manitoba, New Brunswick, Newfoundland and Labrador,
-             Northwest Territories, Nova Scotia, Ontario, Prince Edward Island, Quebec,
-             Saskatchewan, Yukon)
+           - Canada, United States
 
    .. tab:: Regional and national providers: Middle East and North Africa
 
@@ -87,21 +91,44 @@ Supported providers and locations:
            - Kuwait, Saudi Arabia, United Arab Emirates
          * - `EatEasy <https://www.eateasy.ae>`_
            - United Arab Emirates
+         * - `Enqueue <https://enqueue.tech>`_
+           - Saudi Arabia
+         * - `FoodZapp <https://spryntz.com>`_
+           - United Arab Emirates
          * - `HungerStation <https://hungerstation.com/sa-en>`_
            - Saudi Arabia (115+ regions)
+         * - `InstaShop <http://instashop.com>`_
+           - Egypt, United Arab Emirates
          * - `Jahez <https://www.jahez.net/index-en.html>`_
            - Bahrain, Kuwait, Saudi Arabia
+         * - `Mr Mandoob <https://mrmandoob.com>`_
+           - Saudi Arabia
          * - `Mrsool <https://mrsool.co>`_
-           - Bahrain, Egypt, Saudi Arabia
+           - Egypt, Saudi Arabia
          * - `Ninja <https://ananinja.com/sa/en>`_
-           - Bahrain, Kuwait, Qatar
+           - Bahrain, Kuwait, Qatar, Saudi Arabia, United Arab Emirates
          * - `NoonFood <https://food.noon.com/uae-en>`_
            - Saudi Arabia, United Arab Emirates
+         * - `Radyes <https://lyveglobal.com/>`_
+           - Bahrain, Egypt, India, Jordan, Kuwait, Oman, Qatar, Saudi Arabia,
+             United Arab Emirates
          * - `Rafeeq <https://www.gorafeeq.com/en>`_
            - Qatar
+         * - `Smiles <https://smiles.ae>`_
+           - United Arab Emirates
+         * - `Snoonu <https://www.snoonu.com>`_
+           - Kuwait, Oman, Qatar
+         * - `Talabna <https://talabnapp.com/>`_
+           - United Arab Emirates
          * - `Talabat <https://www.talabat.com/uae>`_
            - Bahrain, Egypt, Iraq, Jordan, Kuwait, Oman, Qatar, Saudi Arabia, United Arab Emirates
-
+         * - `The Chefz <https://thechefz.co>`_
+           - Saudi Arabia
+         * - `ToYou <https://toyou.io>`_
+           - Saudi Arabia
+         * - `Zyda <https://zyda.com>`_
+           - Bahrain, Egypt, Jordan, Kuwait, Oman, Qatar, Saudi Arabia,
+             United Arab Emirates
    .. tab:: Regional and national providers: Asia and Oceania
 
       .. list-table::
@@ -161,45 +188,60 @@ UrbanPiper credentials
 .. image:: urban_piper/urban-piper-api.png
    :alt: Atlas API access
 
-Point of Sale
--------------
+UrbanPiper store
+----------------
 
-#. Enable the :guilabel:`Urban Piper` setting:
+Each point of sale is linked to a dedicated UrbanPiper store record that centralizes credentials,
+aggregators, pricing, and schedule-related settings.
 
-   #. Go to the :ref:`POS settings <pos/use/settings>`.
-   #. Scroll down to the :guilabel:`Food Delivery Connector` section.
-   #. Check the :guilabel:`Urban Piper` setting.
+#. Go to :menuselection:`Point of Sale --> Configuration --> UrbanPiper --> Stores`.
+#. Click :guilabel:`New`.
+#. On the store form:
 
-#. Set up UrbanPiper:
+   #. Enter a :guilabel:`Name`.
+   #. Select the :guilabel:`Point of Sale` that will receive online orders.
+   #. Keep the generated :guilabel:`POS Store ID`, unless UrbanPiper instructs you to use a
+      specific value.
+   #. Select a :guilabel:`Preset`.
+   #. Set the :guilabel:`Preparation Time`.
+   #. Optionally upload an :guilabel:`Order Notification Sound` in `.mp3` format.
+   #. If the company is based in India, choose the appropriate :guilabel:`Tax Type`.
+#. Open the :guilabel:`Credentials` tab and enter your :ref:`UrbanPiper credentials
+   <pos/urban_piper/credentials>`.
+#. Open the :guilabel:`Aggregators` tab and add one line per delivery platform.
 
-   #. Fill in the :guilabel:`Username` and :guilabel:`Api Key` fields with your :ref:`UrbanPiper
-      credentials <pos/urban_piper/credentials>`.
-   #. Select the desired delivery providers in the :guilabel:`Food Delivery Platforms` field under
-      the :guilabel:`Urban Piper Location` section (i.e., Zomato, Uber Eats).
-#. Save the settings.
-#. Click the :guilabel:`+ Create Store` button. Doing so creates a new location on the UrbanPiper
-   Atlas platform.
+   - Use :guilabel:`Pricelist` to apply platform-specific pricing during menu synchronization.
+   - Disable :guilabel:`Create Customer` if Odoo should not create customer records for orders
+     coming from that aggregator.
+
+#. Open the :guilabel:`Store Info` tab and confirm the :guilabel:`City`.
+#. Save, then click :guilabel:`Create Store`.
 
 .. note::
-   - The :guilabel:`Pricelist` and :guilabel:`Fiscal Position` fields are automatically selected
-     after saving.
-   - A successful store creation triggers a notification.
-   - The store creation process may take 2–3 minutes to reflect changes on the UrbanPiper Atlas
-     platform.
-   - The store is automatically named after your point of sale name.
+   - A point of sale can only be linked to one UrbanPiper store.
+   - After the store is created in Atlas, the :guilabel:`Create Store` button becomes
+     :guilabel:`Update Store`.
+   - Store creation may take 2 to 3 minutes to appear in UrbanPiper Atlas.
 
 .. image:: urban_piper/create-store.png
-   :alt: Food delivery connector settings
+   :alt: UrbanPiper store configuration in Point of Sale settings
 
-Store timings
--------------
+Preset
+------
 
-Configure the store timings to define when the delivery services are available:
+The store's :guilabel:`Preset` controls the default settings applied to incoming online orders. It
+also replaces the old store-timings configuration.
 
-#. Navigate to :menuselection:`Point of Sale --> Configuration --> Store Timings`.
-#. Add a new timing record by clicking :guilabel:`New` to add a line, or edit an existing line.
-#. Fill in the :guilabel:`Week Day`, :guilabel:`Starting Hour`, :guilabel:`Ending Hour`,
-   and :guilabel:`Point of Sale associated with this timing` columns.
+#. Open the store record or go to :menuselection:`Point of Sale --> Configuration --> Presets`.
+#. Select or create a preset dedicated to online food delivery.
+#. Configure the preset as needed:
+
+   - Set the default :guilabel:`Pricelist`.
+   - Set the default :guilabel:`Fiscal Position`.
+   - If needed, enable :guilabel:`Manage orders by time` and configure the :guilabel:`Schedule`.
+
+.. tip::
+   Restaurant databases include an :guilabel:`Online Delivery` preset by default.
 
 Products
 --------
@@ -209,9 +251,10 @@ To make products available individually,
 #. Go to :menuselection:`Point of Sale --> Products --> Products`.
 #. Select any product to open its product form.
 #. Go to the :guilabel:`Point of Sale` tab.
-#. Complete the :guilabel:`Urban Piper` section:
+#. Complete the :guilabel:`UrbanPiper` section:
 
-   - Fill in the :guilabel:`Available on Food Delivery` with the desired POS.
+   - Select one or more :guilabel:`UrbanPiper Stores`.
+   - Can limit it to specific :guilabel:`Aggregators`.
    - Optionally, set up the :guilabel:`Meal Type` field and enable the :guilabel:`Is Recommended`
      and :guilabel:`Is Alcoholic` buttons.
 
@@ -223,7 +266,7 @@ To make multiple products available for food delivery at once,
 #. Go to :menuselection:`Point of Sale --> Products --> Products`.
 #. Click the list icon (:icon:`oi-view-list`) to switch to the list view.
 #. Select the products.
-#. Enter the desired POS in the :guilabel:`Available on Food Delivery` column.
+#. Enter the desired Stores in the :guilabel:`UrbanPiper Stores` column.
 
 .. image:: urban_piper/product-list.png
    :alt: Product list
@@ -238,12 +281,10 @@ Synchronization
 
 To make products available on food delivery platforms, synchronize with your UrbanPiper account:
 
-#. Go to the :ref:`POS settings <pos/use/settings>`.
-#. Scroll down the :guilabel:`Food Delivery Connector` section.
-#. Click the :guilabel:`Sync Menu` button.
+#. Open the UrbanPiper store.
+#. Click :guilabel:`Sync Menu`.
 
-   - The :guilabel:`Last Sync on` timestamp below the :guilabel:`Create Store` and :guilabel:`Sync
-     Menu` buttons updates.
+   - The Chatter Note will be appears stating :guilabel:`Store menu successfully synced on UrbanPiper`
 
 .. note::
    - A successful synchronization triggers a notification.
