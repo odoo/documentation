@@ -45,10 +45,10 @@ Compute margins on sales orders
 ===============================
 
 To calculate the margins on a :abbr:`SO (sales order)`, navigate to :menuselection:`Sales app -->
-Orders --> Quotations` and :ref:`create a new quotation
-<sales_quotations/create_quotations/create-quotation>`. While adding products to the quotation, a
-new field, :guilabel:`Margin`, automatically appears at the bottom of the to the quotation. This
-field displays the order's total margin in the configured currency as well as the percentage.
+Orders --> Quotations` and :ref:`create a new quotation <sales/create_quotations/create-quotation>`.
+While adding products to the quotation, a new field, :guilabel:`Margin`, automatically appears at
+the bottom of the to the quotation. This field displays the order's total margin in the configured
+currency as well as the percentage.
 
 .. image:: margin/sales-order-margin.png
    :alt: Sales order with Margin field on the bottom.
@@ -88,7 +88,7 @@ product. Follow these steps:
    rule <sales/products/price-rules>`.
 #. Configure the pricelist and click :guilabel:`Save & Close` button.
 #. Go to :menuselection:`Sales app --> Orders --> Quotations` and :ref:`create a quotation
-   <sales_quotations/create_quotations/create-quotation>`.
+   <sales/create_quotations/create-quotation>`.
 #. In the :guilabel:`Pricelist` field, select the newly made pricelist.
 #. Click on :guilabel:`Update Prices` to refresh the product price and margin.
 
