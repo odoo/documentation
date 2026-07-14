@@ -202,7 +202,7 @@ Enter the name of the template in :guilabel:`Template` field and set the :guilab
    template.
 
 To create a section template from a sales quote, navigate to :menuselection:`Sales app --> Orders
---> Quotations` and :ref:`create a new quote <sales_quotations/create_quotations/create-quotation>`
+--> Quotations` and :ref:`create a new quote <sales/create_quotations/create-quotation>`
 or select an existing one.
 
 Add section and any products in the :guilabel:`Order Lines` tab, then click the
@@ -224,7 +224,7 @@ the search bar, delete the :guilabel:`Quotation Templates filter` to display all
 Use templates
 =============
 
-When :ref:`creating a quote <sales_quotations/create_quotations/create-quotation>`
+When :ref:`creating a quote <sales/create_quotations/create-quotation>`
 (:menuselection:`Sales app --> New`), choose a preconfigured template in the :guilabel:`Quotation
 Template` field.
 
