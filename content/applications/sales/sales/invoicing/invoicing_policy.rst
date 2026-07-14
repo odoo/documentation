@@ -64,7 +64,7 @@ Invoice ordered quantity workflow
 
 Confirm that the product's invoicing policy is set to :guilabel:`Ordered quantities` in the product
 form. :ref:`Create a quotation and sales order
-<sales_quotations/create_quotations/create-quotation>` as normal. After the sales order has been
+<sales/create_quotations/create-quotation>` as normal. After the sales order has been
 confirmed, create an invoice by clicking the :guilabel:`Create Invoice` button on the sales order
 form. Choose the type of invoice to be sent, click :guilabel:`Create Draft Invoice`, confirm the
 invoice when ready, and proceed with the payment flow as normal.
@@ -106,7 +106,7 @@ Invoice delivered quantity workflow
 
 Confirm that the product's invoicing policy is set to :guilabel:`Delivered quantities` in the
 product form. :ref:`Create a quotation and sales order
-<sales_quotations/create_quotations/create-quotation>` as normal. After the sales order has been
+<sales/create_quotations/create-quotation>` as normal. After the sales order has been
 confirmed, the product must be delivered before an invoice can be created.
 
 Once the product has been shipped and delivery has been confirmed, click the :icon:`fa-building-o`
