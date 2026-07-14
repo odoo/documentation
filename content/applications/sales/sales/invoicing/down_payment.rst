@@ -91,7 +91,7 @@ cabinet with an *Invoicing Policy* of *Ordered quantities*. The store requires a
 all of its furniture products.
 
 Navigate to :menuselection:`Sales app --> New`, and :ref:`create a quotation
-<sales_quotations/create_quotations/create-quotation>` for the cabinet. Once the order is confirmed
+<sales/create_quotations/create-quotation>` for the cabinet. Once the order is confirmed
 (via the :guilabel:`Confirm` button), the quotation turns into a sales order. Create an invoice by
 clicking :guilabel:`Create Invoice`.
 
@@ -193,7 +193,7 @@ require a 100% down payment to cover labor costs. The company prefers down payme
 often require customization add-ons for the service.
 
 To configure a 100% down payment, navigate to :menuselection:`Sales app --> New`, and :ref:`create a
-quotation <sales_quotations/create_quotations/create-quotation>` for the product. Upon clicking the
+quotation <sales/create_quotations/create-quotation>` for the product. Upon clicking the
 :guilabel:`Confirm` button, the quotation turns into a sales order. At that point, an invoice can
 now be created by clicking :guilabel:`Create Invoice` in the top-left corner. On the
 :guilabel:`Create invoice(s)` pop-up window that appears, select :guilabel:`Down payment
