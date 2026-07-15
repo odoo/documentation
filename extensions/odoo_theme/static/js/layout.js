@@ -6,7 +6,12 @@
         let imageModalId = 0;
         content.querySelectorAll('img').forEach(image => {
             // Enforce the presence of the `img-fluid` class on all images.
-            image.classList.add('img-fluid', 'img-thumbnail');
+            image.classList.add('img-fluid');
+            // Card images use Bootstrap's card-img-top styling; img-thumbnail adds unwanted
+            // border and padding that breaks the edge-to-edge card layout.
+            if (!image.classList.contains('card-img-top')) {
+                image.classList.add('img-thumbnail');
+            }
 
             // Add a modal to each image that does not explicitly block it and has no target.
             if (!image.classList.contains('o-no-modal') && image.parentElement.tagName !== 'A') {
