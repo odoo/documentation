@@ -121,12 +121,6 @@ After selecting the appropriate user to be archived, click the :icon:`fa-cog` :g
 icon, and select :guilabel:`Archive` from the resulting drop-down menu. Then, click :guilabel:`OK`
 from the :guilabel:`Confirmation` pop-up window that appears.
 
-.. danger::
-   **Never** deactivate the main/administrator user (admin). Making changes to admin users can have
-   a detrimental impact on the database. This includes *impotent admin*, which means that no user in
-   the database can make changes to the access rights. For this reason, Odoo recommends contacting
-   an Odoo Business Analyst, or our Support Team, before making changes.
-
 Error: too many users
 ---------------------
 
