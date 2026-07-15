@@ -946,8 +946,7 @@ Link button (`link_button`)
 
 Image File (`image`)
     This widget is used to represent a binary value as an image. In some cases,
-    the server returns a `bin_size` instead of the real image (a `bin_size` is a
-    string representing a file size, such as `"6.5kb"`).  In that case, the widget
+    the server does not include `content` of the image.  In that case, the widget
     will make an image with a source attribute corresponding to an image on the
     server.
 
@@ -955,7 +954,7 @@ Image File (`image`)
 
     Options:
 
-    - `preview_image`: if the image is only loaded as a `bin_size`, then this
+    - `preview_image`: if the image content is not available, this
       option is useful to inform the web client that the default field name is
       not the name of the current field, but the name of another field.
 
