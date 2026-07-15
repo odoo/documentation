@@ -1,134 +1,150 @@
-=======================
-Service rental products
-=======================
+================================
+Physical service rental products
+================================
 
-The **Rental** app is a comprehensive tool that enables users to customize scheduling, pricing, and
-inventory for both physical rental products and non-physical goods (services) within a single
-platform. This flexibility allows for combining products and services like bike rentals with guided
-tours, or booking a studio with a photographer.
+There are two types of service products in the **Rental** app that require different configurations:
+physical and non-physical (labor). This document focuses on the configuration of physical rental
+service products. A physical rental service product is a physical product that doesn't require any
+stock movements. Some examples are:
 
-This document covers how to configure a rental service to automatically sync with staff shifts,
-track time sheet hours, and create project tasks based on a rental order.
+- Hotel rooms
+- Conference rooms
+- Work stations
+- Storage units
 
-.. _rental/service_products/settings:
+.. _rental/service_products/configuration:
 
-Settings
-========
+Configuration
+=============
 
-To configure default settings on rental products, navigate to :menuselection:`Rental app -->
-Configuration --> Settings`.
+Depending on the type of service product, the requirements differ. To learn more about the default
+settings for rental products, refer to the :ref:`Configuration <rental/product_type/configuration>`
+section on the Rental product types page.
 
-.. image:: service_products/rental-settings.png
-   :alt: Sample of Rental app configuration settings.
+To access the Rental app's settings, navigate to :menuselection:`Rental app --> Configuration -->
+Settings`.
 
-In the :guilabel:`Rental` section, enable :guilabel:`Rental Transfers`. In the :guilabel:`Rent
-Online` section, designate :guilabel:`Unavailability days`.
+The following configurations assume the **Rental**, **Planning**, and **Sales** apps are installed.
 
-Click :guilabel:`Save` to apply the changes.
+Configure materials and a role for the physical product
+=======================================================
 
-.. _rental/service_products/app-integration-config:
+Before creating a service product in the **Rental** app, configure :ref:`materials
+<planning/materials>` and :ref:`create a role <planning/roles>` in the **Planning** app for the
+physical rental products (such as storage units or conference rooms).
 
-App integration configuration
-=============================
+This allows the **Planning** app to create and assign shifts for the physical rental product, and
+the *Role* links the rental materials to the rental service. Whenever the service is added to a
+rental order, the **Rental** app syncs with the **Planning** app to check and update the material
+shift availability.
 
-The following apps are essential for workflow efficiency and automation when creating a service
-product and rental order:
+.. tip::
+   It's recommended to name the role after the service.
 
- - **Sales** app: Enables the *Prices* tab, the use of pricelists, online payments, and quotation
-   templates within the **Rental** app.
- - **Sign** app: Allows for the upload and customization of different rental and service agreements.
-   These documents are used to facilitate the *Request Signature* feature.
- - **Project** app: Enables the automation of creating projects and tasks whenever a rental order is
-   confirmed through the configuration on the rental product form.
- - **Planning** app: Enables the automation of matching rental orders with services with employee
-   shifts based on availability.
- - **Timesheet** app: Allows employees to log time worked on tasks that are automatically created
-   when confirming a rental order.
- - **eCommerce** app: Allows rental products and services to be rented directly from the website.
+.. example::
+   Shady Grove needs to add a new room tier to the **Rental** app, the *Deluxe Room*. There are
+   seven rooms that belong in this tier. Create a new *Role* by navigating to the
+   :menuselection:`Planning app --> Configuration --> Roles`. Click :guilabel:`New` and create the
+   :guilabel:`Deluxe Room Role`.
 
-.. seealso::
-   - :doc:`../../sales/sales_quotations/quote_template`
-   - :doc:`../../sales/sales_quotations/get_paid_to_validate`
-   - :doc:`../../../services/project/project_management`
-   - :doc:`../../../services/planning`
-   - :doc:`../../../productivity/sign`
-   - :doc:`../../../services/timesheets`
-   - :doc:`../../../websites/ecommerce`
+   .. image:: service_products/example-planning-role.png
+      :alt: Example of configured role for the Deluxe Room.
 
-.. _rental/service_products/service:
+   To add the seven rooms as a resource for the *Role*, navigate to :menuselection:`Configuration
+   --> Materials`. Click :guilabel:`New`, enter the room number, and :guilabel:`Deluxe Room` for the
+   :guilabel:`Role` column. Repeat that process for all seven rooms.
 
-View rental services
-====================
+   .. image:: service_products/example-planning-materials.png
+      :alt: Example of configured materials for the Deluxe Room.
 
-To view all products that can be rented in the database, navigate to :menuselection:`Rentals app -->
-Products`. By default, the :guilabel:`Rental` filter appears in the search bar, and the view is
-Kanban. Remove the filter, then click the search bar. From the preset filters, select
-:guilabel:`Services`. All the configured services appear.
+   Create the :guilabel:`Deluxe Room` as a new *Service* product type by navigating to
+   :menuselection:`Rental app --> Products`. Click :guilabel:`New`, then configure the Deluxe Room
+   as a :guilabel:`Service` type product with the :guilabel:`Plan Services` checkbox enabled and the
+   :guilabel:`Deluxe Room` role assigned.
 
-Each service product Kanban card displays the service name, rental rate, and product image (if
-applicable).
+   .. image:: service_products/plan-services-field.png
+      :alt: Example of the Plan Services field configured to the Deluxe Room role.
 
 .. _rental/service_products/new-service:
 
 Create a new service product
 ============================
 
-.. important::
-   The **Project**, **Planning**, and **Sales** apps *must* be installed for the following options
-   to be available on the product form:
-
-   - :guilabel:`Create on Order`
-   - :guilabel:`Project Template`
-   - :guilabel:`Invoicing Policy`
-   - :guilabel:`Project & Task`
-   - :guilabel:`Planning Services`
-
-   The :guilabel:`Sales` checkbox enables the :guilabel:`Create on Order` and :guilabel:`Invoicing
-   Policy` fields and also the :guilabel:`Prices` tab.
-
 To set up a new rental service, go to the :menuselection:`Rental app --> Products --> Products` and
-then click :guilabel:`New`. In the new product window, the :guilabel:`Sales` checkbox is enabled by
-default.
+then click :guilabel:`New`. The new product form displays with the :guilabel:`General Information`
+tab open as default.
 
-Set the :guilabel:`Product Type` as :guilabel:`Service`. In the :guilabel:`Create on Order`
-drop-down menu, select :guilabel:`Project & Task`, then select a template for the :guilabel:`Project
-Template` field. In the :guilabel:`Invoicing Policy` drop-down menu, select :guilabel:`Based on
-Timesheets`.
+Initial product configuration
+-----------------------------
 
-Tick the :guilabel:`Plan Services` checkbox and either create a new role or select a pre-existing
-one. To create a new role, type in the name of the role in the blank field and click
-:guilabel:`Create and edit` that appears.
+.. important::
+   The **Sales** and **Planning** apps must be installed for the *Prepaid/Fixed Price* option of the
+   *Invoicing Policy* and *Plan Services* fields to be available. Enabling the *Sales* checkbox
+   displays the *Invoicing Policy*.
 
-.. image:: service_products/service-product.png
-   :alt: Sample of a configured service product in the Rental app.
+In the new product window, the :guilabel:`Sales` checkbox is already enabled by default. Select the
+:guilabel:`Product Type` as :guilabel:`Service`. In the :guilabel:`Invoicing Policy` drop-down menu,
+select :guilabel:`Prepaid/Fixed Price`. Enable the :guilabel:`Plan Services` checkbox and either
+:ref:`create a new role <planning/roles>` or select a pre-existing one.
 
-In the *Create Planning Role* pop-up window, enter the role's name. Select an option for the
-:guilabel:`Services` and :guilabel:`Resources`, and click :guilabel:`Save`.
+.. image:: service_products/physical-service-product-form.png
+   :alt: Example of a configured physical service product in the Rental app.
 
-.. image:: service_products/create-planning-role-window.png
-   :alt: Sample of the Create Planning Role window for a service product in the Rental app.
+Click the :icon:`oi-arrow-right` :guilabel:`(Internal link)` icon to open the product's *Role* page.
+Enable the :guilabel:`Sync Shifts and Rental Orders` checkbox.
+
+.. image:: service_products/rental-role-page.png
+   :alt: Example of a configured Role page for the Deluxe Room in the Rental app.
+
+.. tip::
+   Assign a :guilabel:`Category` for room booking. It separates rooms from other services and can be
+   used for reports on room occupancy.
 
 .. _rental/service_products/rental-periods-pricing:
 
 Set a base rental period and price
 ----------------------------------
 
-Set up a base rental rate by entering the lowest rental price in the :guilabel:`Sales Price` field.
-Next, click the :guilabel:`Sales` tab, then in the *Rental* section, select the
-:guilabel:`Periodicity` (:dfn:`the unit of duration of the rental`) from the dropdown menu.
+To set the base rental price for a rental product, open the *General Information* tab and enter the
+lowest rental price in the :guilabel:`Sales Price` field. Next, click the :guilabel:`Sales` tab,
+then configure the following *Rental* section fields where applicable:
 
-Then enter the :guilabel:`Padding Time` to make the product unavailable for pick up for the
-configured duration.
+- :guilabel:`Periodicity`: The unit of time the product will use for rental prices.
+- :guilabel:`Padding Time`: Blocks a rental product from being available for reservations. The
+  setting is set to an hourly unit. This is available only if :guilabel:`Hours` is selected in the
+  :guilabel:`Periodicity` field and the **Inventory app** is installed.
+- :guilabel:`Pickup`: The earliest time the customer can pick up the product to begin the rental
+  period.
+- :guilabel:`Return`: The latest time the customer can return the product.
+
+Optional: specify rental variants
+---------------------------------
 
 .. important::
-   To set a pricelist for additional rental rates, the **Sales** app must be installed, and
-   :guilabel:`Pricelists` must be enabled. Otherwise, the :guilabel:`Prices` tab is not available.
+   The *Variants* feature must be enabled for this tab to display.
 
-.. image:: service_products/rental-periodicity.png
-   :alt: Sample of the Rental product's Periodicity field in the Sales tab.
+Click :guilabel:`Add a line`, then select any room amenity or room item from the
+:guilabel:`Attribute` drop-down menu. To create a new one, enter the name and click
+:guilabel:`Create and edit…` to configure the attribute and values.
 
-Set additional rental periods and pricing
------------------------------------------
+.. example::
+   Shady Grove has a list of amenities it wants to configure for their Deluxe Room. The room has two
+   types of bed configurations: two double beds or one king bed. The maximum occupancy per room is
+   two adults or two adults and a child.
+
+   Navigate to the :menuselection:`Rental app --> Products` and click :guilabel:`New` to create a
+   new product. On the :guilabel:`Attributes & Variants` tab, click :guilabel:`Add a line` and
+   select the :guilabel:`Bed` as an :guilabel:`Attribute`. In the :guilabel:`Values` column, add
+   :guilabel:`2 Double` and :guilabel:`1 King`. Repeat these steps until all amenities have been
+   configured.
+
+   .. image:: service_products/example-room-variants.png
+      :alt: Example of the Attribute & Variants tab configured for a hotel room.
+
+.. _rental/service_products/additional-pricing:
+
+Add multiple rental prices
+--------------------------
 
 There are two ways to configure additional rental rates in the **Rental** app: :ref:`Pricelists
 <rental/service_products/pricelist-method>` and the :ref:`Prices tab
@@ -139,20 +155,13 @@ There are two ways to configure additional rental rates in the **Rental** app: :
 Using the Pricelists method
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Creating a new :guilabel:`Pricelist` allows for better customization when applying rental rates to
-specific time periods, products, or customers by using :guilabel:`Pricelist Rules`. To set up
-additional rental rates, go to :menuselection:`Rental app --> Products --> Pricelists` and click
-:guilabel:`New` to :ref:`create a new pricelist <sales/products/create-edit-pricelists>`. A *Create
-Pricelist Rules* window displays.
+Creating a :ref:`new pricelist <sales/products/create-edit-pricelists>` allows for better
+customization when applying rental rates to specific time periods, products, or customers by using
+:guilabel:`Pricelist Rules`. It is a separate form that users can apply to quotations or select on
+the rental product form to add new price rules to.
 
-.. tip::
-   It is recommended to create a new :guilabel:`Pricelist` first, then select the customized
-   :guilabel:`Pricelist` in the :guilabel:`Prices` tab instead of using the :guilabel:`Default`
-   pricelist. Keeping the :guilabel:`Default` pricelist blank ensures there is a clean pricelist for
-   the base rental rate.
-
-.. image:: service_products/create-pricelist-rules-window.png
-      :alt: Sample of a filled out Create Price Rules window in the Rental app.
+To create a new pricelist, go to :menuselection:`Rental app --> Products --> Pricelists` and click
+:guilabel:`New`.
 
 .. _rental/service_products/pricelists-example:
 
@@ -181,16 +190,30 @@ Pricelist Rules* window displays.
 Using the Prices tab method
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Prices can also be configured directly on the product using the :guilabel:`Prices` tab. Navigate to
-:menuselection:`Products --> Products`, then click the desired product.
+.. important::
+   The :ref:`Pricelists <sales/products/pricelist-configuration>` feature must be enabled for this
+   tab to display.
 
-Click the :guilabel:`Prices` tab and click :guilabel:`Add a price`. Select the desired
-:guilabel:`Pricelist`, then enter the minimum time required for the price change to trigger in the
-:guilabel:`Min. Quantity` column. The :guilabel:`Min. Quantity` column is based on the *Periodicity*
-field in the :guilabel:`Sales` tab.
+Rental rates can also be configured as a new price rule for an existing pricelist using the
+:guilabel:`Prices` tab on the product form. If no pricelist is configured beforehand, the *Default*
+pricelist is selected.
+
+It is recommended to create a new pricelist first instead of using the *Default* pricelist. Keeping
+the *Default* pricelist blank ensures there is a clean pricelist for the base rental rate.
+
+Navigate to :menuselection:`Products --> Products`, then click the desired product. Click the
+:guilabel:`Prices` tab and click :guilabel:`Add a price`.
+
+Select the desired :guilabel:`Pricelist`, then enter the minimum time required for the price change
+to trigger in the :guilabel:`Min. Quantity` column. The :guilabel:`Min. Quantity` column is based on
+the *Periodicity* field in the :guilabel:`Sales` tab.
 
 Lastly, enter the :guilabel:`Price` rate. Click the :icon:`fa-cloud-upload` :guilabel:`(Save
 manually)` icon near the top to save.
+
+.. tip::
+   Add a date range in the :guilabel:`Validity` column. To add a :guilabel:`Validity` column, click
+   the :icon:`oi-settings-adjust` :guilabel:`(Settings)` icon and enable :guilabel:`Validity`.
 
 .. example::
    **Part 2**
@@ -202,6 +225,21 @@ manually)` icon near the top to save.
 
    .. image:: service_products/example-prices-tab.png
       :alt: Sample of the Prices tab of service product in the Rental app.
+
+eCommerce features
+------------------
+
+.. important::
+   This tab is only available if the :guilabel:`eCommerce` module is installed.
+
+The :guilabel:`eCommerce` tab configures the product page on the website. Refer to the :ref:`Product
+visibility <ecommerce/products/publish-products>` and :ref:`Product configuration
+<ecommerce/products/product-configuration>` sections for the **eCommerce** module for configuration
+instructions.
+
+Any selected days in the *Unavailability days* section in the :ref:`Rental app's settings
+<rental/product_type/configuration>` are only applied to online booking. If the product isn't
+published to the website then the setting does not go into effect.
 
 .. _rental/service_products/pickup:
 
@@ -253,3 +291,6 @@ Doing so places a :guilabel:`Returned` status banner on the rental order.
    .. image:: service_products/return-form-example-product-service.png
       :alt: Sample of a Validate a return form with a rental product and service listed.
 
+.. seealso::
+   - :doc:`../../../services/planning`
+   - :doc:`../../sales/products_prices/prices/pricing`
