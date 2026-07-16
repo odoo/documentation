@@ -7,22 +7,51 @@ employer payroll taxes. It accounts for federal and state regulations.
 
 The states included in this localization are:
 
-- California (CA)
-- New York (NY)
-- Texas (TX)
-- Florida (FL)
-- Colorado (CO)
-- Alabama (AL)
-- Washington (WA)
-- Nevada (NV)
-- Vermont (VT)
-- Illinois (IL)
-- Virginia (VA)
-- Washington, D.C (DC)
-- Arizona (AZ)
-- Idaho (ID)
-- Oregon (OR)
-- North Carolina (NC)
+.. list-table::
+   :header-rows: 1
+
+   * - State
+     - Abbreviation
+   * - Alabama
+     - (AL)
+   * - Arizona
+     - (AZ)
+   * - California
+     - (CA)
+   * - Colorado
+     - (CO)
+   * - Florida
+     - (FL)
+   * - Georgia
+     - (GA)
+   * - Idaho
+     - (ID)
+   * - Illinois
+     - (IL)
+   * - Iowa
+     - (IA)
+   * - Mississippi
+     - (MS)
+   * - Nevada
+     - (NV)
+   * - New Jersey
+     - (NJ)
+   * - New York
+     - (NY)
+   * - North Carolina
+     - (NC)
+   * - Oregon
+     - (OR)
+   * - Texas
+     - (TX)
+   * - Vermont
+     - (VT)
+   * - Virginia
+     - (VA)
+   * - Washington
+     - (WA)
+   * - Washington, D.C.
+     - \(DC)
 
 .. note::
    Federal taxes (Income, :abbr:`FICA (Federal Insurance Contributions Act)`, and Unemployment) for
