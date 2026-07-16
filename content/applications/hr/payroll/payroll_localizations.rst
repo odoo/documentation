@@ -18,6 +18,62 @@ Localization also includes integrating country-specific payroll elements such as
 termination rules, and reporting requirements, helping businesses avoid legal risks while ensuring
 employees receive their correct compensation.
 
+.. _payroll_localizations/countries-list:
+
+List of countries
+=================
+
+Payroll localization modules are available for the countries listed below.
+
+.. note::
+   New countries are frequently added to this list, as Odoo keeps expanding and improving existing
+   localizations and related documentation.
+
+.. cards::
+
+   .. card:: Australia
+      :target: payroll_localizations/australia
+
+      .. image:: au.png
+         :alt: Australia
+
+   .. card:: Belgium
+      :target: payroll_localizations/belgium
+
+      .. image:: be.png
+         :alt: Belgium
+
+   .. card:: Egypt
+      :target: payroll_localizations/egypt
+
+      .. image:: eg.png
+         :alt: Egypt
+
+- :doc:`Australia <payroll_localizations/australia>`
+- :doc:`Belgium <payroll_localizations/belgium>`
+- Bangladesh
+- :doc:`Egypt <payroll_localizations/egypt>`
+- :doc:`Hong Kong <payroll_localizations/hong_kong>`
+- :doc:`India <payroll_localizations/india>`
+- Indonesia
+- :doc:`Jordan <payroll_localizations/jordan>`
+- :doc:`Kenya <payroll_localizations/kenya>`
+- Lithuania
+- Luxembourg
+- Malaysia
+- :doc:`Mexico <payroll_localizations/mexico>`
+- Morocco
+- Netherlands
+- Pakistan
+- Poland
+- Romania
+- :doc:`Saudi Arabia <payroll_localizations/saudi_arabia>`
+- Slovakia
+- Switzerland
+- :doc:`Türkiye <payroll_localizations/turkey>`
+- :doc:`United Arab Emirates <payroll_localizations/united_arab_emirates>`
+- :doc:`United States <payroll_localizations/united_states>`
+
 Install localization package
 ============================
 
@@ -58,42 +114,6 @@ country into the search bar. All available modules for that country are presente
 
    For more information on companies, refer to the :doc:`Companies <../../general/companies>`
    documentation, which covers how to set up companies.
-
-.. _payroll_localizations/countries-list:
-
-List of countries
-=================
-
-Payroll localization modules are available for the countries listed below.
-
-.. note::
-   New countries are frequently added to this list, as Odoo keeps expanding and improving existing
-   localizations and related documentation.
-
-- :doc:`Australia <payroll_localizations/australia>`
-- :doc:`Belgium <payroll_localizations/belgium>`
-- Bangladesh
-- :doc:`Egypt <payroll_localizations/egypt>`
-- :doc:`Hong Kong <payroll_localizations/hong_kong>`
-- :doc:`India <payroll_localizations/india>`
-- Indonesia
-- :doc:`Jordan <payroll_localizations/jordan>`
-- :doc:`Kenya <payroll_localizations/kenya>`
-- Lithuania
-- Luxembourg
-- Malaysia
-- :doc:`Mexico <payroll_localizations/mexico>`
-- Morocco
-- Netherlands
-- Pakistan
-- Poland
-- Romania
-- :doc:`Saudi Arabia <payroll_localizations/saudi_arabia>`
-- Slovakia
-- Switzerland
-- :doc:`Türkiye <payroll_localizations/turkey>`
-- :doc:`United Arab Emirates <payroll_localizations/united_arab_emirates>`
-- :doc:`United States <payroll_localizations/united_states>`
 
 .. toctree::
    :titlesonly:
