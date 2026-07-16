@@ -2,11 +2,13 @@
 Thailand
 ========
 
-Configuration
-=============
+.. _localizations/thailand/modules:
 
-:ref:`Install <general/install>` the :guilabel:`🇹🇭 Thailand` localization package to get all the
-features of the Thai localization:
+Modules
+=======
+
+:ref:`Install <general/install>` the following modules to get all the features of the Thai
+localization:
 
 .. list-table::
    :header-rows: 1
@@ -16,151 +18,216 @@ features of the Thai localization:
      - Description
    * - :guilabel:`Thailand - Accounting`
      - `l10n_th`
-     - Default :ref:`fiscal localization package <fiscal_localizations/packages>`
+     - This module includes the default
+       :ref:`fiscal localization package <fiscal_localizations/packages>`.
    * - :guilabel:`Thailand - Accounting Reports`
      - `l10n_th_reports`
-     - Country-specific accounting reports
+     - This module includes the accounting reports for Thailand.
 
-.. image:: thailand/modules.png
-   :alt: Thailand localization modules
+.. _localizations/thailand/specifics:
 
-Chart of accounts and taxes
-===========================
+Localization overview
+=====================
 
-Odoo's fiscal localization package for Thailand includes the following taxes:
+The Thai localization package ensures compliance with Thailand's fiscal and accounting regulations.
+It includes tools for managing taxes, withholding taxes, reporting, and a predefined chart of
+accounts tailored to Thai standards.
 
-- VAT 7%
-- VAT-exempted
-- Withholding tax
-- Withholding income tax
+.. _localizations/thailand/taxes:
 
-Tax report
-==========
+Taxes
+-----
 
-Odoo allows users to generate Excel files to submit their VAT to the **Revenue Department** of
-Thailand.
+Installing the :guilabel:`Thailand - Accounting` (`l10n_th`) and :guilabel:`Thailand - Accounting
+Reports` (`l10n_th_reports`) modules automatically creates default :doc:`taxes
+<../accounting/taxes>` for :ref:`tax reports <localizations/thailand/tax_reports>` generation.
+The package includes the following taxes:
 
-Sales and purchase tax report
------------------------------
+- **VAT 7%**: For goods where VAT is recognized upon invoicing.
+- **VAT 7% S**: For services where VAT is recognized upon payment.
+- **VAT 0%**: For taxable goods or services charged at a zero rate, usually exports.
+- **VAT-exempted**: For specific goods or services completely exempted from collection or payment
+  of VAT.
+- :doc:`../../finance/accounting/taxes/retention`: For payments where tax must be deducted at the source by the payer.
 
-To generate a sales and purchase tax report, go to :menuselection:`Accounting --> Reporting --> Tax
-Report`. Select a specific time or time range on the tax report, and click
-:guilabel:`VAT-202-01 (xlsx)` for purchase tax and :guilabel:`VAT-202-02 (xlsx)` for sales tax.
+.. _localizations/thailand/income_tax_type:
 
-.. image:: thailand/tax-report.png
-   :alt: Thai purchase and sales taxes reports
+Income tax type (Under section 40)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Withholding PND tax report
---------------------------
+Income tax types are essential for generating **Withholding tax certificates (50 Tawi)** and
+**P.N.D. 3 & 53** reports and ensuring compliance with regulatory requirements.
 
-PND report data displays the summarized amounts of the applicable **withholding corporate income
-tax returns (domestic)** from vendor bills under the :guilabel:`PND53 (TH)` and
-:guilabel:`PND3 (TH)` tax reports. It is installed by default with the Thai localization.
+To configure income tax types, go to :menuselection:`Accounting --> Configuration --> Taxes`. For
+taxes with the :guilabel:`Purchase` tax type and :guilabel:`Withhold On Payment` enabled, select
+the appropriate :guilabel:`Income Tax Type`.
 
-.. image:: thailand/pnd-report.png
-   :alt: PND tax reports
+.. _localizations/thailand/tax_reports:
+
+Tax reports
+-----------
+
+The relevant VAT and WHT reports can be generated and exported as `CSV` files compatible with RD
+Prep(:dfn:`Thai Revenue Department's official software used to format tax data for e-Filing.`).
+
+.. _localizations/thailand/reports/pp30:
+
+P.P. 30 - VAT report
+~~~~~~~~~~~~~~~~~~~~
+
+The **P.P. 30** is a monthly value-added tax (VAT) return report required by the Revenue
+Department of Thailand. It summarizes the output and input VAT for the period.
+
+The P.P. 30 report can be exported in `CSV` format, compatible with the **RD Prep**. To do so,
+follow these steps:
+
+#. Navigate to :menuselection:`Accounting --> Reporting --> Tax Report`, click :icon:`fa-book`
+   :guilabel:`Report`, and select :guilabel:`P.P.30 - VAT Report`.
+#. Make sure to filter by the appropriate date or date range.
+#. On the report page, click the :icon:`fa-cog` :guilabel:`(gear)` icon and select
+   :guilabel:`Export for RD Prep (CSV)`.
+
+.. _localizations/thailand/reports/sales_purchase:
+
+Sales and purchase tax reports
+******************************
+
+The sales and purchase tax reports detail all input and output VAT transactions for a specific
+period, serving as mandatory compliance document that VAT-registered businesses must maintain for
+record-keeping and present to the Revenue Department during tax audits.
+
+The sales and purchase tax reports can be exported as `XLSX` files. To do so, follow these steps:
+
+#. Make sure to filter by the appropriate month.
+#. Click the :icon:`fa-cog` :guilabel:`(gear)` icon and select :guilabel:`Sales Tax Report (xlsx)`
+   or :guilabel:`Purchase Tax Report (xlsx)`.
+
+.. _localizations/thailand/reports/pnd:
+
+P.N.D. 3 & 53 - WHT report
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The **P.N.D. 3** and **P.N.D. 53** reports list all the transactions within the period subject to
+the withholding of income tax from vendor bills. This applies when a company makes payments for
+services received (such as rental, hiring, transportation, insurance, management fees, or
+consulting) and is required to withhold "Personal (PND3)" or "Corporate (PND53)" income tax.
+
+To access them, navigate to :menuselection:`Accounting --> Reporting --> Tax Report`, click
+:icon:`fa-book` :guilabel:`Report`, and select :guilabel:`P.N.D. 3 & 53 - WHT Report (TH)`.
+
+Both P.N.D. 3 and P.N.D. 53 reports can be exported in `CSV` format, which is compatible with
+the **RD Prep** application. To do so, follow these steps:
+
+#. Make sure to filter by the appropriate month.
+#. On the report page, click the :icon:`fa-cog` :guilabel:`(gear)` icon and select :guilabel:`PND3
+   - Export for RD Prep (CSV)` or :guilabel:`PND 53 - Export for RD Prep (CSV)`.
+
+This generates the :file:`Tax Report PND 3.csv` and :file:`Tax Report PND 53.csv` files that list
+all the vendor bill lines with the applicable withholding tax.
+
+.. _localizations/thailand/reports/50tawi:
+
+Withholding tax certificate (50 Tawi)
+-------------------------------------
+
+The **50 Tawi**, or *Withholding Tax Certificate*, is a certificate issued by a payer to a payee
+as official proof that tax has been withheld from a payment for remittance to the Revenue
+Department.
+
+To generate a `PDF` file of a withholding tax certificate:
+
+#. Go to :menuselection:`Accounting --> Vendors --> Payments` and select the payment subject to
+   withholding tax.
+#. Click the :guilabel:`Print 50 Tawi` button.
+
+.. _localizations/thailand/contacts:
+
+Contacts
+========
+
+The Thai localization utilizes specific fields on
+:doc:`../../../applications/essentials/contacts` to generate Revenue Department reports and
+files used for submission.
+
+.. _localizations/thailand/company:
+
+Branch number
+-------------
+
+You can specify a company's branch number directly in the **Contacts** app. Open the company's
+contact form, and click the :icon:`fa-plus` :guilabel:`(plus)` icon next to the :guilabel:`Tax ID`
+field to add the :guilabel:`Branch Code`:
+
+- If the contact is identified as a branch, input the Branch number in the :guilabel:`Branch Code`
+  field.
+- If the contact is a Headquarters, leave the :guilabel:`Branch Code` field blank.
 
 .. note::
-   Withholding corporate income tax returns (domestic) is the tax used in case the company has
-   withheld the tax from “**Personal (PND3)**” or “**Corporate (PND53)**” services provided such as
-   rental, hiring, transportation, insurance, management fee, consulting, etc.
+   Only companies set in :guilabel:`Thailand` feature the :guilabel:`Branch Code` field.
 
-The PND tax report allows users to generate a CSV file for bills to upload on the
-`RDprep for Thailand e-Filling application <https://efiling.rd.go.th/rd-cms/>`_.
+.. _localizations/thailand/accounting:
 
-To generate a PND CSV file, go to :menuselection:`Accounting --> Reporting --> Tax Report`, select a
-specific time or time range on the tax report, and click :guilabel:`PND3` or :guilabel:`PND53`.
+Accounting
+==========
 
-This generates the :file:`Tax Report PND3.csv` and :file:`Tax Report PND53.csv` files that lists all
-the vendor bill lines with the applicable withholding tax.
-
-.. image:: thailand/pnd3-pnd53.png
-   :alt: PND3 and PND53 CSV files
-
-.. warning::
-   Odoo cannot generate the PND or PDF report or **withholding tax certificate** directly. The
-   generated :file:`Tax Report PND3.csv` and :file:`Tax Report PND53.csv` files must be exported
-   to an external tool to convert them into a **withholding PND** report or a **PDF** file.
+.. _localizations/thailand/tax_invoice:
 
 Tax invoice
-===========
+-----------
 
-The **tax invoice PDF** report can be generated from Odoo through the **Invoicing** module. Users
-have the  option to print PDF reports for normal invoices and tax invoices. To print out
-**tax invoices**, users can click on :guilabel:`Print Invoices` in Odoo. Regular invoices can be
-printed as **commercial invoices** by clicking on :menuselection:`Cog button (⚙️) --> Print -->
-Commercial Invoice`.
+To print a tax invoice, follow the steps to :ref:`create an invoice
+<accounting/invoice/creation>` and click :guilabel:`Print` to download the PDF tax invoice.
 
-.. image:: thailand/tax-invoice.png
-   :alt: Commercial invoice printing
+To print commercial invoices, click the :icon:`fa-cog` :guilabel:`(gear)` icon, click
+:guilabel:`Print`, and then select :guilabel:`Commercial Invoice`.
 
-Headquarter/Branch number settings
-----------------------------------
-
-You can inform a company's **Headquarters** and **Branch number** in the **Contacts** app. Once
-in the app, open the **contact form** of the company and under the :guilabel:`Sales & Purchase` tab:
-
-- If the contact is identified as a branch, input the **Branch number** in the
-  :guilabel:`Company ID` field.
-- If the contact is a **Headquarters**, leave the :guilabel:`Company ID` field **blank**.
-
-.. image:: thailand/contact.png
-   :alt: Company Headquarter/Branch number
-
-.. tip::
-   This information is used in the **tax invoice** PDF report and PND **tax report** export.
+.. _localizations/thailand/promptpay:
 
 PromptPay QR code on invoices
-=============================
+-----------------------------
 
-The **PromptPay QR code** is a QR code that can be added to invoices to allow customers to pay their
-bills using the PromptPay-supported bank mobile application. The QR code is generated based on the
-**invoice amount** and one of the following **merchant information**:
+The PromptPay QR code can be added to invoices to allow customers to pay their bills using the
+PromptPay-supported bank mobile application. The QR code is generated based on the invoice amount
+and one of the following merchant information:
 
 - Ewallet ID
 - Merchant Tax ID
 - Mobile Number
 
-Activate QR codes
------------------
+To activate PromptPay QR codes on invoices, go to :menuselection:`Accounting --> Configuration -->
+Settings` and enable the :guilabel:`Add QR-code Link on PDF` feature under the :guilabel:`Invoice
+Online Payment` option.
 
-Go to :menuselection:`Accounting --> Configuration --> Settings`. Under the :guilabel:`Customer
-Payments` section, activate the :guilabel:`QR Codes` feature.
+.. _localizations/thailand/configureqr:
 
-PromptPay QR bank account configuration
----------------------------------------
+Bank account configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Go to :menuselection:`Contacts --> Configuration --> Bank Accounts` and select the bank account for
-which you want to activate PromptPay QR. Set the :guilabel:`Proxy Type` and fill in the
-:guilabel:`Proxy Value` field depending on the chosen type.
+To configure the bank account for PromptPay QR codes, go to :menuselection:`Accounting -->
+Configuration --> Journals`, and open the journal linked to the relevant bank account.
 
-.. important::
-   - The account holder's city is mandatory.
-   - The :guilabel:`Include Reference` checkbox doesn't work for PromptPay QR codes.
+Under :guilabel:`Journal Entries` tab, fill in the bank account number:
+
+- For an existing account: Hover over the account number and click the :icon:`oi-arrow-right` icon.
+- For a new account: Type the account number and click :guilabel:`Create`.
+
+In the bank account form view, go to the :guilabel:`EMV QR Settings` tab. Select the relevant
+:guilabel:`Proxy Type` and enter the corresponding :guilabel:`Proxy Value`.
+
 
 .. image:: thailand/qr-promptpay-bank.png
    :alt: PromptPay bank account configuration
 
 .. seealso::
-   :doc:`../accounting/bank`
+   :doc:`../../finance/accounting/bank`
 
-Bank journal configuration
---------------------------
-
-Go to :menuselection:`Accounting --> Configuration --> Journals`, open the bank journal, then fill
-in the :guilabel:`Account Number` and :guilabel:`Bank` under the :guilabel:`Journal Entries` tab.
-
-.. image:: thailand/qr-bank-journal.png
-   :alt: Bank Account's journal configuration
+.. _localizations/thailand/issueqrinvoice:
 
 Issue invoices with PromptPay QR code
--------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When creating a new invoice, open the :guilabel:`Other Info` tab and set the :guilabel:`Payment
-QR-code` option to :guilabel:`EMV Merchant-Presented QR-code`.
+When creating a new invoice, open the :guilabel:`Other Info` tab and select :guilabel:`Recipient
+Bank` with the account that has :ref:`PromptPay QR configured <localizations/thailand/configureqr>`.
 
 .. image:: thailand/qr-code-invoice-emv.png
    :alt: Select EMV Merchant-Presented QR-code option
-
-Ensure that the :guilabel:`Recipient Bank` is the one you configured, as Odoo uses this field to
-generate the PromptPay QR code.
