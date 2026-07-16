@@ -21,21 +21,29 @@ The following documentation covers how to configure a subcontracted product and 
 Configuration
 =============
 
-To use the *Dropship to Subcontractor* workflow, contractors must first configure subcontracted
-products with a :ref:`vendor pricelist <purchase/products/pricelist>` and a
-:ref:`subcontracting-type BoM <manufacturing/subcontracting_dropship/config/bom-config>`. Each
-component must then be configured with the appropriate :doc:`route
-<../../inventory/shipping_receiving/daily_operations/use_routes>`.
+In order to use the *Dropship to Subcontractor* :ref:`workflow
+<manufacturing/subcontracting-dropship/workflow>`, users must first follow the configuration process
+below:
 
-The pricelist allows the contracting company to purchase the product from the vendor (subcontractor)
-through a |PO|, while the |BoM| allows the product to be manufactured externally by the
-subcontractor. Routes are applied to each component in order to be properly sent from the
-dropshipping vendor to the subcontractor.
+#. :ref:`Specify the subcontractor <manufacturing/subcontracting_dropship/config/product-config>` as
+   a vendor on the subcontracted product.
+#. :ref:`Create a subcontracting-type bill of materials (BoM)
+   <manufacturing/subcontracting_dropship/config/bom-config>` for the product and add the necessary
+   components.
+#. For each dropshipped component, open its product form and :ref:`set its dropship vendor and its
+   Dropship Subcontractor on Order route
+   <manufacturing/subcontracting_dropship/config/component-config>`.
+
+Specifying the subcontractor as a vendor on the product form allows the contracting company to
+properly purchase the product from the subcontractor through a purchase order (PO). The |BoM| allows
+the product to be manufactured externally by the subcontractor. The *Dropship Subcontractor on
+Order* route is applied to each component in order to be properly sent from the dropshipping vendor
+to the subcontractor.
 
 .. _manufacturing/subcontracting_dropship/config/product-config:
 
-Configure product vendor
-------------------------
+Specify product vendor
+----------------------
 
 To configure a product's vendor for subcontractor dropshipping, navigate to
 :menuselection:`Inventory app --> Products --> Products`, and select a product, or :doc:`create a
@@ -58,8 +66,8 @@ subcontractor to receive components, produce the product, and deliver the finish
 
 .. _manufacturing/subcontracting_dropship/config/bom-config:
 
-Configure BoM
--------------
+Configure |BoM|
+---------------
 
 After specifying the vendor, configure a subcontracting-type |BoM| for the product. To start, click
 the :icon:`fa-flask` :guilabel:`Bill of Materials` smart button on the product's page. Then, select
@@ -111,32 +119,38 @@ Repeat the process for every component dropshipped to the subcontractor.
 Workflow
 ========
 
-The *Dropship to Subcontractor* workflow begins by :ref:`creating a PO
-<manufacturing/subcontracting-dropship/workflow/create-po>` to purchase the product from the
-subcontractor (1).
+The *Dropship to Subcontractor* workflow can be summarized in the following steps:
 
-The contractor (Your Company) then confirms the *subcontractor* |PO| (2). This creates an |RfQ| to
-purchase the components from the vendor, as well as a receipt to transfer the final product.
-
-Next, the contractor :ref:`confirms the RfQ
-<manufacturing/subcontracting-dropship/workflow/confirm-rfq>`, turning it into a *vendor* |PO| and
-creating a dropship order to send the components from the vendor to the subcontractor (3). Once the
-contractor :ref:`validates the dropship
-<manufacturing/subcontracting-dropship/workflow/validate-dropship>` order, the subcontractor begins
-to manufacture the final product with the components and ships it to the contractor when done.
-
-Once the product has been produced and received, the contractor :ref:`validates the receipt
-<manufacturing/subcontracting-dropship/workflow/process-receipt>` (6) to trigger :ref:`inventory
-moves <manufacturing/subcontracting-dropship/workflow/track-inventory>` from the subcontractor to
-the company's stock (4, 5).
+#. :ref:`Create and confirm a subcontractor PO
+   <manufacturing/subcontracting-dropship/workflow/create-po>`.
+#. Open and :ref:`confirm the dropship vendor request for quotation (RfQ)
+   <manufacturing/subcontracting-dropship/workflow/confirm-rfq>`.
+#. :ref:`Validate the dropship order
+   <manufacturing/subcontracting-dropship/workflow/validate-dropship>` to send the components.
+#. :ref:`Validate the receipt <manufacturing/subcontracting-dropship/workflow/process-receipt>` to
+   receive the final product.
 
 .. image:: subcontracting_dropship/dropship-subcontracting.png
    :alt: Diagram of dropship to subcontractor workflow.
 
+The workflow begins by creating a |PO| to purchase the product from the subcontractor (1).
+
+The contractor (Your Company) then confirms the *subcontractor* |PO| (2). This creates an |RfQ| to
+purchase the components from the vendor, as well as a receipt to transfer the final product.
+
+Next, the contractor confirms the |RfQ|, turning it into a *vendor* |PO| and creating a dropship
+order to send the components from the vendor to the subcontractor (3). Once the contractor validates
+the dropship order, the subcontractor begins to manufacture the final product with the components
+and ships it to the contractor when done.
+
+Once the product has been produced and received, the contractor validates the receipt (6) to trigger
+:ref:`inventory moves <manufacturing/subcontracting-dropship/workflow/track-inventory>` from the
+subcontractor to the company's stock (4, 5).
+
 .. _manufacturing/subcontracting-dropship/workflow/create-po:
 
-Create and confirm subcontractor PO
------------------------------------
+Create and confirm subcontractor |PO|
+-------------------------------------
 
 To create a |PO| for the subcontracted product, navigate to :menuselection:`Purchase app --> Orders
 --> Purchase Orders`, and click :guilabel:`New`.
