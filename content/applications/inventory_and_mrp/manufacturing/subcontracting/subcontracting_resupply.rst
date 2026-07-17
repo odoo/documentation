@@ -2,9 +2,7 @@
 Resupply subcontracting
 =======================
 
-.. |SO| replace:: :abbr:`SO (Sales Order)`
 .. |PO| replace:: :abbr:`PO (Purchase Order)`
-.. |POs| replace:: :abbr:`PO (Purchase Orders)`
 .. |BoM| replace:: :abbr:`BoM (Bill of Materials)`
 
 In resupply subcontracting, a company supplies the components of its product to a subcontractor, who
@@ -23,18 +21,26 @@ subcontracting process.
 Configuration
 =============
 
-To use the resupply subcontractor workflow, companies must first configure products with a
-:ref:`vendor pricelist <purchase/products/pricelist>` and a subcontracting-type |BoM| specifying the
-product's components.
+In order to use the resupply subcontractor :ref:`workflow
+<manufacturing/subcontracting_resupply/workflow>`, users must follow the configuration process
+below:
 
-The pricelist allows the company to purchase the product from the subcontractor through a |PO|. The
-|BoM| allows the product to be manufactured externally by the subcontractor and automatically
-configures the components to be resupplied by the company.
+#. :ref:`Specify the subcontractor <manufacturing/subcontracting_resupply/config/product-config>` as
+   a vendor on the subcontracted product.
+#. :ref:`Create a subcontracting-type BoM <manufacturing/subcontracting_resupply/config/bom-config>`
+   for the product and add the necessary components.
+#. For each component, open its product form and set its *Resupply Subcontractor on Order* route.
+
+Specifying the subcontractor as a vendor on the product form allows the contracting company to
+properly purchase the product from the subcontractor through a purchase order (PO). The bill of
+materials (BoM) allows the product to be manufactured externally by the subcontractor. The *Resupply
+Subcontractor on Order* route is applied to each component in order for them to be properly sent
+from the contractor to the subcontractor.
 
 .. _manufacturing/subcontracting_resupply/config/product-config:
 
-Configure product vendor
-------------------------
+Specify product vendor
+----------------------
 
 To configure a product's vendor for resupply subcontracting, navigate to :menuselection:`Inventory
 app --> Products --> Products`, and select a product, or create a new one.
@@ -58,8 +64,8 @@ receive components, produce the product, and deliver the finished good.
 
 .. _manufacturing/subcontracting_resupply/config/bom-config:
 
-Configure BoM
--------------
+Configure |BoM|
+---------------
 
 After specifying the vendor, configure a subcontracting-type |BoM| for the product. To start, click
 the :guilabel:`Bill of Materials` smart button on the product's page. Then, select the desired |BoM|
@@ -84,29 +90,34 @@ specify the required :guilabel:`Quantity` in the corresponding field.
 Workflow
 ========
 
-The resupply subcontracting workflow begins by :ref:`creating a PO
-<manufacturing/subcontracting_resupply/workflow/create-po>` to purchase the product from the
-subcontractor (1).
+The resupply subcontracting workflow can be summarized in the following steps:
 
-The company then confirms the |PO|, which creates both a resupply order to transfer the components
-and a receipt to receive the final product (2) from the subcontractor.
-
-Next, the company :ref:`validates the transfer
-<manufacturing/subcontracting_resupply/workflow/validate-resupply>` of components to the
-subcontractor (3). The subcontractor begins producing the product.
-
-Once the product has been produced and received, the company :ref:`validates the receipt
-<manufacturing/subcontracting_resupply/workflow/process-receipt>` (6) to trigger :ref:`inventory
-moves <manufacturing/subcontracting_resupply/workflow/track-inventory>` from the subcontractor to
-the company's stock (4, 5).
+#. :ref:`Create and confirm a subcontractor PO
+   <manufacturing/subcontracting_resupply/workflow/create-po>`.
+#. :ref:`Validate the resupply order
+   <manufacturing/subcontracting_resupply/workflow/validate-resupply>` to send the components.
+#. :ref:`Validate the receipt <manufacturing/subcontracting_resupply/workflow/process-receipt>` to
+   receive the final product.
 
 .. image:: subcontracting_resupply/resupply-subcontracting.png
    :alt: Diagram of resupply subcontracting workflow in Odoo MRP Subcontracting.
 
+The workflow begins by creating a |PO| to purchase the product from the subcontractor (1).
+
+The company then confirms the |PO|, which creates both a resupply order to transfer the components
+and a receipt to receive the final product (2) from the subcontractor.
+
+Next, the contractor validates the transfer of components to the subcontractor (3). The
+subcontractor begins producing the product.
+
+Once the product has been produced and received, the contractor validates the receipt (6) to trigger
+:ref:`inventory moves <manufacturing/subcontracting_resupply/workflow/track-inventory>` from the
+subcontractor to the company's stock (4, 5).
+
 .. _manufacturing/subcontracting_resupply/workflow/create-po:
 
-Create and confirm PO
----------------------
+Create and confirm subcontractor |PO|
+-------------------------------------
 
 To create a |PO| for the subcontracted product, navigate to :menuselection:`Purchase app --> Orders
 --> Purchase Orders` and click :guilabel:`New`.
