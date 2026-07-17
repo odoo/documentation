@@ -68,7 +68,6 @@ Finally, return to the |MO| by clicking the :guilabel:`WH/MO/XXXXX` breadcrumb a
 page.
 
 .. image:: three_step_manufacturing/mo-bread-crumb.png
-   :align: center
    :alt: The manufacturing order bread crumb on a pick components transfer.
 
 Process manufacturing order
@@ -88,18 +87,16 @@ that needs to be completed, click the :guilabel:`Start` button for that work ord
 *Manufacturing* then starts a timer that keeps track of how long the work order takes to complete.
 
 .. image:: three_step_manufacturing/start-button-2.png
-   :align: center
    :alt: The Start button for a work order on a manufacturing order.
 
 When the work order is completed, click the :guilabel:`Done` button for that work order. Repeat the
 same process for each work order listed on the :guilabel:`Work Orders` tab.
 
 .. image:: three_step_manufacturing/done-button.png
-   :align: center
    :alt: The Done button for an work order on a manufacturing order.
 
-After completing all of the work orders, click :guilabel:`Produce All` at the top of the screen to
-mark the |MO| as :guilabel:`Done`, and register the manufactured product(s) into inventory.
+After completing all of the work orders, click :guilabel:`Produce` at the top of the screen to mark
+the |MO| as :guilabel:`Done`, and register the manufactured products into inventory.
 
 Shop Floor workflow
 -------------------
@@ -116,7 +113,6 @@ On the pop-up window, select the :guilabel:`Open Shop Floor` button at the top-l
 open the *Shop Floor* module.
 
 .. image:: three_step_manufacturing/shop-floor-button.png
-   :align: center
    :alt: The Open Shop Floor button for a work order on a manufacturing order.
 
 When accessed directly from a specific work order within an |MO|, *Shop Floor* defaults to the page
@@ -125,7 +121,6 @@ the work order that displays the |MO| number, the product and number of units to
 the steps required to complete the work order.
 
 .. image:: three_step_manufacturing/work-order-card.png
-   :align: center
    :alt: A work order card on a work center page in the Shop Floor module.
 
 A work order is processed by completing each step listed on its card. This can be done by clicking
