@@ -26,7 +26,6 @@ so, navigate to :menuselection:`Manufacturing app --> Configuration --> Settings
 :guilabel:`Save` to apply the change.
 
 .. image:: byproducts/byproducts-setting.png
-   :align: center
    :alt: The By-Products setting on the Manufacturing app settings page.
 
 With the :guilabel:`By-Products` setting enabled, a :guilabel:`By-products` tab appears on product
@@ -48,7 +47,6 @@ produced during an *Assemble* operation, select that operation in the :guilabel:
 Operation` field.
 
 .. image:: byproducts/byproducts-tab.png
-   :align: center
    :alt: The By-Products tab on a BoM, configured with a "Scrap Wood" by-product.
 
 Manufacture by-product
@@ -62,9 +60,9 @@ In the :guilabel:`Bill of Material` field, select a |BoM| on which by-products h
 After doing so, the :guilabel:`Product` field auto-populates with the corresponding product. Click
 :guilabel:`Confirm` to confirm the |MO|.
 
-When manufacturing is completed, click the :guilabel:`Produce All` button at the top of the |MO|.
-After doing so, inventory counts update to reflect the quantity of by-product(s) produced, as well
-as the quantity of the product.
+When manufacturing is completed, click the :guilabel:`Produce` button at the top of the |MO|. After
+doing so, inventory counts update to reflect the quantity of by-products produced, as well as the
+quantity of the product.
 
 Click the :guilabel:`Product Moves` smart button at the top of the |MO| page to see the movements of
 components and products. Each by-product is listed on the resulting :guilabel:`Inventory Moves`
@@ -72,5 +70,4 @@ page, with the :guilabel:`From` column displaying the virtual production locatio
 :guilabel:`To` column displaying the location where the by-product is stored.
 
 .. image:: byproducts/product-moves.png
-   :align: center
    :alt: The Product Moves page for an MO with by-products.
