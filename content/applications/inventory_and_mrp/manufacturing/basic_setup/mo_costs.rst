@@ -166,11 +166,10 @@ used than was listed on the |MO|, the duration of a work order is different than
 hourly cost of the employee performing a work order differs from the employee cost set on the work
 center.
 
-Once the |MO| has been completed by clicking :guilabel:`Produce All`, the values in the
-:guilabel:`MO Cost` column update to match those displayed in the :guilabel:`Real Cost` column.
+Once the |MO| has been completed by clicking :guilabel:`Produce`, the values in the :guilabel:`MO
+Cost` column update to match those displayed in the :guilabel:`Real Cost` column.
 
 .. image:: mo_costs/overview.png
-   :align: center
    :alt: The MO Overview page.
 
 .. _manufacturing/mo-costs/average-manufacturing-cost:
