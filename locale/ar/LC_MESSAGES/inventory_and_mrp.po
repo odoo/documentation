@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-10 17:31+0000\n"
+"POT-Creation-Date: 2026-07-17 17:31+0000\n"
 "PO-Revision-Date: 2026-07-06 12:18+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Arabic <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -9150,7 +9150,7 @@ msgstr "عرض حقل **حساب النفقات**، وأيقونة الرابط 
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:372
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:391
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:268
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:272
 msgid "Manual"
 msgstr "يدوي "
 
@@ -32945,12 +32945,12 @@ msgstr ""
 ":ref:`إعداد قواعد إعادة الطلب <inventory/warehouses_storage/configure-rr>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:33
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:135
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:139
 msgid ":ref:`Trigger <inventory/warehouses_storage/trigger>`"
 msgstr ":ref:`المحفز <inventory/warehouses_storage/trigger>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:34
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:136
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:140
 msgid ":ref:`Preferred route <inventory/warehouses_storage/route>`"
 msgstr ":ref:`المسار المفضل <inventory/warehouses_storage/route>`"
 
@@ -32964,7 +32964,7 @@ msgstr ""
 ":ref:`منطق التوقيت المناسب <inventory/warehouses_storage/just-in-time>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:39
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:140
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:144
 msgid ":ref:`Visibility days <inventory/warehouses_storage/visibility-days>`"
 msgstr ":ref:`أيام الرؤية <inventory/warehouses_storage/visibility-days>`"
 
@@ -33140,20 +33140,24 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:115
 msgid ""
-":guilabel:`Multiple Quantity`: If the product should be ordered in specific "
-"quantities, enter the number that should be ordered. For example, if "
-"the :guilabel:`Multiple Quantity` is set to `5`, and only 3 are needed, 5 "
-"products are replenished."
+":guilabel:`Multiple Quantity`: Ensures products are replenished in fixed "
+"multiples, rounding the ordered quantity up to the nearest multiple that "
+"remains below or equal to the :guilabel:`Max` quantity."
 msgstr ""
-":guilabel:`الكمية المضاعفة`: إذا كان يجب طلب المنتج بكميات محددة، أدخل الرقم "
-"الذي يجب طلبه. على سبيل المثال، إذا تم تعيين :guilabel:`الكمية المضاعفة` على "
-"`5`، ولم تكن هناك حاجة إلا لـ 3، يتم تجديد 5 منتجات."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:122
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:119
+msgid ""
+"For example, if :guilabel:`Multiple Quantity` is set to `3`, Odoo orders in "
+"multiples of three (3, 6, 9, ...). If the :guilabel:`Max` is `20` and the "
+"forecasted quantity is `7`, the required quantity is `13`. Because `13` is "
+"not a multiple of three, Odoo rounds down and orders `12`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:126
 msgid "The form for creating a new reordering rule."
 msgstr "استمارة إنشاء قاعدة إعادة طلب جديدة. "
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:125
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:129
 msgid ""
 "Reordering rules can also be created from the :guilabel:`Reordering Rules` "
 "smart button on the product form."
@@ -33161,7 +33165,7 @@ msgstr ""
 "يمكن أيضاً إنشاء قواعد إعادة الطلب من الزر الذكي :guilabel:`قواعد إعادة "
 "الطلب` في نموذج المنتج."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:133
 msgid ""
 "To learn how the :guilabel:`On Hand`, :guilabel:`Forecast`, "
 "and :guilabel:`To Order` fields are calculated using on-hand quantities and "
@@ -33173,23 +33177,23 @@ msgstr ""
 "راجع قسم :ref:`منطق التوقيت المناسب <inventory/warehouses_storage/just-in-"
 "time>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:133
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:137
 msgid "For advanced usage, learn about the following reordering rule fields:"
 msgstr "للاستخدام المتقدم، تعرف على حقول قاعدة إعادة الطلب التالية:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:137
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:141
 msgid ":ref:`Vendor <inventory/warehouses_storage/set-vendor>`"
 msgstr ":ref:`المورد <inventory/warehouses_storage/set-vendor>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:138
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:142
 msgid ":ref:`Bill of materials <inventory/warehouses_storage/set-bom-field>`"
 msgstr ":ref:`قائمة المواد <inventory/warehouses_storage/set-bom-field>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:139
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:143
 msgid ":ref:`Procurement group <inventory/warehouses_storage/procurement-grp>`"
 msgstr ":ref:`مجموعة الشراء <inventory/warehouses_storage/procurement-grp>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:143
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:147
 msgid ""
 "The fields above are not available by default, and must be enabled by "
 "selecting the |adjust| in the far-right corner and selecting the desired "
@@ -33198,11 +33202,11 @@ msgstr ""
 "الحقول أعلاه غير متاحة افتراضياً، ويجب تمكينها بتحديد |adjust| في الزاوية "
 "اليمنى القصوى واختيار العمود المطلوب من القائمة المنسدلة."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:149
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:153
 msgid "0/0/1 reordering rule"
 msgstr "قاعدة إعادة الطلب 0/0/1"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:151
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:155
 msgid ""
 "The *0/0/1* reordering rule is a specialty rule used to replenish a product "
 "that is not kept on-hand, each time a sales order (SO) is confirmed for that "
@@ -33211,7 +33215,7 @@ msgstr ""
 "قاعدة إعادة الطلب *0/0/1* هي قاعدة متخصصة تُستخدم لتجديد منتج غير محتفظ به في "
 "المخزون، في كل مرة يتم فيها تأكيد أمر بيع لذلك المنتج."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:155
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:159
 msgid ""
 "The 0/0/1 reordering rule is similar to the *Replenish on Order (MTO)* "
 "route, in that both workflows are used to replenish a product upon "
@@ -33220,7 +33224,7 @@ msgstr ""
 "قاعدة إعادة الطلب 0/0/1 مشابهة لمسار *التجديد عند الطلب (MTO)*، حيث يُستخدم "
 "كلا سير العمل لتجديد منتج عند تأكيد |SO|."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:158
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:162
 msgid ""
 "The main difference between the two methods is that the *Replenish on Order* "
 "route automatically reserves the product for the |SO| that caused it to be "
@@ -33230,7 +33234,7 @@ msgstr ""
 "تلقائيًا لـ |SO| الذي تسبب في تجديده. وهذا يعني أنه **لا يمكن** استخدام "
 "المنتج لـ |SO| مختلف."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:162
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:166
 msgid ""
 "The 0/0/1 reordering rule does not have this limitation. A product "
 "replenished using the rule is not reserved for any specific |SO|, and can be "
@@ -33239,7 +33243,7 @@ msgstr ""
 "قاعدة إعادة الطلب 0/0/1 ليس لديها هذا القيد. المنتج الذي يتم تجديده باستخدام "
 "القاعدة غير محجوز لأي |SO| محدد، ويمكن استخدامه حسب الحاجة."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:165
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:169
 msgid ""
 "Another key difference is that replenishment orders created by the "
 "*Replenish on Order* route are linked to the original |SO| by a smart button "
@@ -33250,7 +33254,7 @@ msgstr ""
 "الطلب* مرتبطة بـ |SO| الأصلي بواسطة زر ذكي في أعلى الطلب. عند استخدام قاعدة "
 "إعادة الطلب 0/0/1، يتم إنشاء أمر تجديد، ولكنه غير مرتبط بـ |SO| الأصلي."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:169
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:173
 msgid ""
 "See the :doc:`Replenish on Order (MTO) <mto>` documentation for a full "
 "overview of the MTO route."
@@ -33258,7 +33262,7 @@ msgstr ""
 "راجع وثائق :doc:`التجديد عند الطلب (MTO) <mto>` للحصول على نظرة عامة كاملة "
 "على مسار MTO."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:171
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:175
 msgid ""
 "To create a 0/0/1 reordering rule, navigate to :menuselection:`Inventory app "
 "--> Products --> Products`, and select a product."
@@ -33266,7 +33270,7 @@ msgstr ""
 "لإنشاء قاعدة إعادة طلب 0/0/1، انتقل إلى :menuselection:`تطبيق المخزون --> "
 "المنتجات --> المنتجات`، واختر منتجًا."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:174
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:178
 msgid ""
 "At the top of the product's page, click the :icon:`fa-"
 "refresh` :guilabel:`Reordering Rules` smart button to open "
@@ -33277,7 +33281,7 @@ msgstr ""
 "إعادة الطلب` لفتح صفحة :guilabel:`قواعد إعادة الطلب` للمنتج. في الصفحة "
 "الناتجة، انقر على :guilabel:`جديد` لبدء تكوين قاعدة إعادة طلب جديدة."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:178
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:182
 msgid ""
 "In the :guilabel:`Location` field of the new reordering rule, select the "
 "location in which replenished products should be stored. By default, this "
@@ -33287,7 +33291,7 @@ msgstr ""
 "تخزين المنتجات المجددة فيه. بشكل افتراضي، يتم تعيين هذا الموقع "
 "على :guilabel:`WH/Stock`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:181
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:185
 msgid ""
 "In the :guilabel:`Route` field, select the route the rule should use to "
 "replenish the item. For example, if the product should be purchased from a "
@@ -33297,7 +33301,7 @@ msgstr ""
 "العنصر. على سبيل المثال، إذا كان يجب شراء المنتج من مورد، فحدد "
 "مسار :guilabel:`الشراء`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:184
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:188
 msgid ""
 "In the :guilabel:`Min` field and :guilabel:`Max` field, leave the values set "
 "to `0.00`. In the :guilabel:`To Order` field, enter a value of `1.00`."
@@ -33309,7 +33313,7 @@ msgstr ""
 msgid "A 0/0/1 reordering rule."
 msgstr "قاعدة إعادة طلب 0/0/1."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:190
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:194
 msgid ""
 "With the reordering rule configured using these values, each time an |SO| "
 "causes the forecasted quantity of the product to fall below "
@@ -33322,7 +33326,7 @@ msgstr ""
 "استخدام :guilabel:`المسار` المحدد لتجديد المنتج بزيادات من وحدة واحدة، وصولاً "
 "إلى :guilabel:`الحد الأقصى` البالغ `0.00`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:195
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:199
 msgid ""
 "An item is configured with a 0/0/1 reordering rule that uses the *Buy* "
 "route. Zero units are kept on-hand at any given time."
@@ -33330,7 +33334,7 @@ msgstr ""
 "تم تكوين عنصر بقاعدة إعادة طلب 0/0/1 التي تستخدم مسار *الشراء*. يتم الاحتفاظ "
 "بصفر وحدات في المخزون في أي وقت."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:198
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:202
 msgid ""
 "A |SO| is confirmed for one unit, which causes the forecasted quantity to "
 "drop to `-1.00`. This triggers the reordering rule, which automatically "
@@ -33339,7 +33343,7 @@ msgstr ""
 "يتم تأكيد |SO| لوحدة واحدة، مما يؤدي إلى انخفاض الكمية المتوقعة إلى `-1.00`. "
 "وهذا يؤدي إلى تفعيل قاعدة إعادة الطلب، والتي تنشئ تلقائيًا |PO| لوحدة واحدة."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:201
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:205
 msgid ""
 "Once the product is received from the vendor, the forecasted quantity "
 "returns to `0.00`. There is now one unit on-hand, but it is not reserved for "
@@ -33350,11 +33354,11 @@ msgstr ""
 "وحدة واحدة في المخزون، ولكنها غير محجوزة لـ |SO| الذي أدى إلى شرائها. يمكن "
 "استخدامها لتنفيذ ذلك |SO|، أو حجزها لطلب مختلف."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:208
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:212
 msgid "Trigger"
 msgstr "المشغّل "
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:210
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:214
 msgid ""
 "A reordering rule's *trigger* can be set to *automatic* or *manual*. While "
 "both function the same way, the difference between the two types of "
@@ -33364,7 +33368,7 @@ msgstr ""
 "كلاهما بنفس الطريقة، فإن الفرق بين نوعي قواعد إعادة الطلب هو كيفية تشغيل "
 "القاعدة:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:213
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:217
 msgid ""
 ":ref:`Auto <inventory/warehouses_storage/auto-rr>`: A purchase or "
 "manufacturing order is automatically created when the forecasted stock falls "
@@ -33375,7 +33379,7 @@ msgstr ""
 "تصنيع تلقائيًا عندما ينخفض المخزون المتوقع عن الحد الأدنى لكمية قاعدة إعادة "
 "الطلب. بشكل افتراضي، يتم تحديد مشغل :guilabel:`تلقائي`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:216
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:220
 msgid ""
 ":ref:`Manual <inventory/warehouses_storage/manual-rr>`: "
 "The :doc:`Replenishment report <report>` lists products needing "
@@ -33387,7 +33391,7 @@ msgstr ""
 "المتوقع وأوقات التسليم وتواريخ الوصول. يمكن للمستخدمين مراجعة التوقعات قبل "
 "النقر على *الطلب*."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:220
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:224
 msgid ""
 "To enable the :guilabel:`Trigger` field, go to :menuselection:`Inventory app "
 "--> Operations --> Replenishment`. Then, click the |adjust|, located to the "
@@ -33397,7 +33401,7 @@ msgstr ""
 "العمليات --> التجديد`. ثم، انقر على |adjust|، الموجود في أقصى يمين عناوين "
 "الأعمدة، وحدد خانة الاختيار :guilabel:`المشغل`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:224
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:228
 msgid ""
 "In the :guilabel:`Trigger` column, select :guilabel:`Auto` "
 "or :guilabel:`Manual`. Refer to the sections below to learn about the "
@@ -33407,11 +33411,11 @@ msgstr ""
 "أو :guilabel:`يدوي`. استعن بالأقسام أدناه للتعرف على الأنواع المختلفة لقواعد "
 "إعادة الطلب. "
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:230
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:234
 msgid "Auto"
 msgstr "تلقائي"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:232
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:236
 msgid ""
 "*Automatic reordering rules*, enabled by setting the reordering "
 "rule's :guilabel:`Trigger` field to :guilabel:`Auto`, generate purchase or "
@@ -33421,19 +33425,19 @@ msgstr ""
 "حقل :guilabel:`المشغل` لقاعدة إعادة الطلب على :guilabel:`تلقائي`، تنشئ أوامر "
 "شراء أو تصنيع عندما:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:235
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:239
 msgid ""
 "The scheduler runs, and the *Forecasted* quantity is below the minimum, or"
 msgstr "يعمل المجدول، وتكون الكمية *المتوقعة* أقل من الحد الأدنى، أو"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:236
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:240
 msgid ""
 "A |SO| is confirmed, and lowers the *Forecasted* quantity of the product "
 "below the minimum."
 msgstr ""
 "يتم تأكيد |SO|، مما يخفض الكمية *المتوقعة* للمنتج إلى ما دون الحد الأدنى."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:238
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:242
 msgid ""
 "If the :guilabel:`Buy` route is selected, then an |RFQ| is generated. To "
 "view and manage |RFQs|, navigate to :menuselection:`Purchase app --> Orders "
@@ -33442,7 +33446,7 @@ msgstr ""
 "إذا تم تحديد مسار :guilabel:`الشراء`، فسيتم إنشاء |RFQ|. لعرض وإدارة |RFQs|، "
 "انتقل إلى :menuselection:`تطبيق الشراء --> الطلبات --> طلبات عروض الأسعار`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:241
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:245
 msgid ""
 "If the :guilabel:`Manufacture` route is selected, then an |MO| is generated. "
 "To view and manage |MOs|, navigate to :menuselection:`Manufacturing app --> "
@@ -33451,7 +33455,7 @@ msgstr ""
 "إذا تم تحديد مسار :guilabel:`التصنيع`، فسيتم إنشاء |MO|. لعرض وإدارة |MOs|، "
 "انتقل إلى :menuselection:`تطبيق التصنيع --> العمليات --> أوامر التصنيع`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:244
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:248
 msgid ""
 "When no route is selected, Odoo selects the :guilabel:`Route` specified in "
 "the :guilabel:`Inventory` tab of the product form."
@@ -33459,11 +33463,11 @@ msgstr ""
 "عندما لا يكون هناك مسار محدد، يقوم أودو بتحديد :guilabel:`المسار` المحدد في "
 "علامة تبويب :guilabel:`المخزون` في استمارة المنتج. "
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:248
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:252
 msgid "The scheduler is set to run once a day, by default."
 msgstr "يتم إعداد أداة الجدولة ليتم تشغيلها مرة في اليوم بشكل افتراضي. "
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:250
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:254
 msgid ""
 "To manually trigger a reordering rule before the scheduler runs, "
 "ensure :ref:`developer mode <developer-mode>` is enabled, and "
@@ -33476,11 +33480,11 @@ msgstr ""
 "--> تشغيل المجدول`. ثم انقر فوق الزر الأرجواني :guilabel:`تشغيل المجدول` في "
 "النافذة المنبثقة التي تظهر."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:255
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:259
 msgid "Be aware that this also triggers any other scheduled actions."
 msgstr "انتبه إلى أن هذا يؤدي أيضًا إلى تشغيل أي إجراءات مجدولة أخرى."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:258
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:262
 msgid ""
 "The product, `Office Lamp`, has an automatic reordering rule set to trigger "
 "when the forecasted quantity falls below the :guilabel:`Min Quantity` of "
@@ -33496,7 +33500,7 @@ msgstr ""
 msgid "Show automatic reordering rule from the Reordering Rule page."
 msgstr "إظهار قاعدة إعادة الطلب التلقائية من صفحة قاعدة إعادة الطلب. "
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:270
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:274
 msgid ""
 "*Manual reordering rules*, configured by setting the reordering "
 "rule's :guilabel:`Trigger` field to :guilabel:`Manual`, list a product on "
@@ -33511,7 +33515,7 @@ msgstr ""
 "أدنى محدد. تسمى المنتجات في هذه اللوحة *احتياجات*، لأنها مطلوبة لتلبية |SOs| "
 "القادمة، والتي لا تكفيها الكمية المتوقعة."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:275
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:279
 msgid ""
 "The replenishment dashboard, accessible by navigating "
 "to :menuselection:`Inventory app --> Operations --> Replenishment`, "
@@ -33525,7 +33529,7 @@ msgstr ""
 "الاحتياجات **فقط** عندما يحين وقت إعادة طلب الأصناف، وذلك بفضل عامل "
 "التصفية :guilabel:`المطلوب إعادة طلبها`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:280
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:284
 msgid ""
 "When a product appears on the replenishment dashboard, clicking "
 "the :guilabel:`Order` button generates the purchase or manufacturing order "
@@ -33539,11 +33543,11 @@ msgid ""
 "Click the Order button on the replenishment dashboard to replenish stock."
 msgstr "انقر فوق الزر \"طلب\" في لوحة بيانات التجديد لتجديد المخزون."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:289
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:293
 msgid "Route"
 msgstr "المسار "
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:291
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:295
 msgid ""
 "Odoo allows for multiple routes to be selected as replenishment methods "
 "under the :guilabel:`Inventory` tab on each product form. For instance, it "
@@ -33555,13 +33559,13 @@ msgstr ""
 "تحديد كل من :guilabel:`الشراء` و :guilabel:`التصنيع`، مما يشير إلى Odoo أنه "
 "يمكن شراء المنتج أو تصنيعه."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:297
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:301
 msgid ""
 ":ref:`Set route on product form <inventory/warehouses_storage/set-method>`"
 msgstr ""
 ":ref:`تعيين المسار في نموذج المنتج <inventory/warehouses_storage/set-method>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:299
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:303
 msgid ""
 "Odoo also enables users to set a preferred route for a product's reordering "
 "rule. This is the replenishment method (e.g., buying or manufacturing) that "
@@ -33571,7 +33575,7 @@ msgstr ""
 "طريقة التجديد (على سبيل المثال، الشراء أو التصنيع) التي تُستخدم افتراضيًا "
 "للقاعدة، في حالة توفر طرق متعددة."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:303
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:307
 msgid ""
 "To specify a preferred route, begin by navigating "
 "to :menuselection:`Inventory app --> Operations --> Replenishment`."
@@ -33579,7 +33583,7 @@ msgstr ""
 "لتحديد مسار مفضل، ابدأ بالانتقال إلى :menuselection:`تطبيق المخزون --> "
 "العمليات --> التجديد`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:306
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:310
 msgid ""
 "By default, the :guilabel:`Route` column is hidden. To reveal it, select the "
 "|adjust| to the far-right of the column titles, and "
@@ -33589,7 +33593,7 @@ msgstr ""
 "أقصى يمين عناوين الأعمدة، ثم ضع علامة على :guilabel:`المسار` من القائمة "
 "المنسدلة التي تظهر."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:309
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:313
 msgid ""
 "Click inside of the column on the row of a reordering rule, and a drop-down "
 "menu shows all available routes for that rule. Select one to set it as the "
@@ -33602,7 +33606,7 @@ msgstr ""
 msgid "Select a preferred route from the drop-down."
 msgstr "قم بتحديد المسار المفضل من القائمة المنسدلة. "
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:316
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:320
 msgid ""
 "If multiple routes are enabled for a product but no preferred route is set "
 "for its reordering rule, the product is reordered using the *Buy* route, "
@@ -33612,11 +33616,11 @@ msgstr ""
 "إعادة الطلب الخاصة به، فسيتم إعادة طلب المنتج باستخدام مسار *الشراء*، ثم "
 "*التصنيع*."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:320
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:324
 msgid "Advanced uses"
 msgstr "الاستخدامات المتقدمة"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:322
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:326
 msgid ""
 "Pairing :guilabel:`Route` with one of the following fields on the "
 "replenishment report unlocks advanced configurations of reordering rules. "
@@ -33625,7 +33629,7 @@ msgstr ""
 "يؤدي إقران :guilabel:`المسار` مع أحد الحقول التالية في تقرير التجديد إلى "
 "إتاحة تكوينات متقدمة لقواعد إعادة الطلب. ضع في الاعتبار ما يلي:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:327
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:331
 msgid ""
 ":guilabel:`Vendor`: When the selected :guilabel:`Route` is :guilabel:`Buy`, "
 "setting the :guilabel:`Vendor` field to one of the multiple vendors on the "
@@ -33638,7 +33642,7 @@ msgstr ""
 "المتعددين في قائمة أسعار المورد يشير إلى Odoo أن المورد يتم ملؤه تلقائيًا في |"
 "RFQs| عندما تؤدي قاعدة إعادة الطلب إلى إنشاء أمر شراء."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:334
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:338
 msgid ""
 ":guilabel:`Bill of Materials`: When the :guilabel:`Route` is set "
 "to :guilabel:`Manufacture`, and there are multiple |BoMs| in use, specifying "
@@ -33649,7 +33653,7 @@ msgstr ""
 "على :guilabel:`التصنيع`، وتوجد |BoMs| متعددة قيد الاستخدام، فإن تحديد |BoM| "
 "المطلوبة في تقرير التجديد ينشئ أوامر تصنيع مسودة مع استخدام |BoM| هذه."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:340
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:344
 msgid ""
 ":guilabel:`Procurement Group`: This is a way to group related |POs| or |MOs| "
 "that are tied to fulfilling a specific demand, like an |SO| or a project. It "
@@ -33659,7 +33663,7 @@ msgstr ""
 "المرتبطة بتلبية طلب محدد، مثل |SO| أو مشروع. تساعد في تنظيم وتتبع الطلبات "
 "المرتبطة بطلب معين."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:345
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:349
 msgid ""
 "Procurement groups link replenishment methods to demand, making smart "
 "buttons to appear — similar to how smart buttons appear when using "
@@ -33672,17 +33676,17 @@ msgstr ""
 msgid "Showing smart button to PO."
 msgstr "إظهار الزر الذكي لأمر الشراء."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:351
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:355
 msgid ""
 "Sales order (demand) with a smart button linking to the related purchase "
 "order (replenishment method)."
 msgstr "أمر بيع (طلب) مع زر ذكي يربط بأمر الشراء ذي الصلة (طريقة التجديد)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:354
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:358
 msgid "In the context of reordering rules:"
 msgstr "في سياق قواعد إعادة الطلب:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:356
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:360
 msgid ""
 "Reordering rules do not automatically assign a procurement group, which is "
 "why there are no smart buttons that link |SOs| to |POs|, unlike "
@@ -33691,7 +33695,7 @@ msgstr ""
 "قواعد إعادة الطلب لا تعين تلقائيًا مجموعة شراء، ولهذا السبب لا توجد أزرار "
 "ذكية تربط |SOs| بـ |POs|، على عكس مسار :abbr:`MTO (الإنتاج حسب الطلب)`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:358
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:362
 msgid ""
 "To enable smart buttons for products replenished by reordering rules "
 "(not :abbr:`MTO (Make to Order)`), with specific quantities linked to "
@@ -33701,7 +33705,7 @@ msgstr ""
 "(وليس :abbr:`MTO (الإنتاج حسب الطلب)`)، مع ربط كميات محددة بطلبات محددة (مثل "
 "|SOs|)، قم بتعيين مجموعة شراء."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:361
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:365
 msgid ""
 "Without a procurement group, demands for the same product can be combined "
 "into a single |RFQ|, even if the reordering rule is executed multiple times "
@@ -33712,7 +33716,7 @@ msgstr ""
 "تنفيذ قاعدة إعادة الطلب عدة مرات لتلك الطلبات. يتيح ذلك شراءً أكثر كفاءة من "
 "خلال دمج الطلبات في عدد أقل من الأوامر."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:365
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:369
 msgid ""
 "Selecting a procurement group in the :guilabel:`Procurement Group` field on "
 "the replenishment report ensures that all linked orders are grouped under "
@@ -33721,7 +33725,7 @@ msgstr ""
 "يضمن تحديد مجموعة شراء في حقل :guilabel:`مجموعة الشراء` في تقرير التجديد أن "
 "جميع الطلبات المرتبطة مجمعة تحت نفس الطلب، بناءً على المسار المحدد."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:370
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:374
 msgid ""
 "How can you set the *Procurement Group*, *Vendor*, and *Route* fields on the "
 "replenishment report to generate a single |RFQ| for five different products "
@@ -33733,7 +33737,7 @@ msgstr ""
 "تشترك في نفس المورد، Azure Interior، وضمان التعامل مع الطلبات الأخرى لهذه "
 "المنتجات بشكل منفصل؟"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:377
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:381
 msgid ""
 "Set the :guilabel:`Procurement Group` to `SO35`, in the reordering rule for "
 "all five products. This groups the demands for `SO35` in the same |RFQ| or |"
@@ -33742,7 +33746,7 @@ msgstr ""
 "عيّن :guilabel:`مجموعة الشراء` إلى `SO35`، في قاعدة إعادة الطلب لجميع "
 "المنتجات الخمسة. يؤدي هذا إلى تجميع طلبات `SO35` في نفس |RFQ| أو |MO|."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:379
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:383
 msgid ""
 "Set the :guilabel:`Vendor` to `Azure Interior` to ensure the |RFQ| is "
 "created for the same supplier."
@@ -33750,11 +33754,11 @@ msgstr ""
 "عيّن :guilabel:`المورد` إلى `Azure Interior` للتأكد من إنشاء |RFQ| لنفس "
 "المورد."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:381
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:385
 msgid "Set the :guilabel:`Route` to :guilabel:`Buy` to generate an |RFQ|."
 msgstr "عيّن :guilabel:`المسار` إلى :guilabel:`شراء` لإنشاء |RFQ|."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:382
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:386
 msgid ""
 "Click the :guilabel:`Order` button to generate a single |RFQ| for the five "
 "products tied to `SO35`."
@@ -33773,11 +33777,11 @@ msgstr ""
 "الطلب الخاصة بالمنتجات الخمسة. يضمن ذلك إدارة الطلبات المستقبلية لهذه "
 "المنتجات بشكل منفصل وتعيينها لـ |RFQs| مختلفة (السلوك المعتاد)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:392
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:396
 msgid "Just-in-time logic"
 msgstr "منطق التوقيت المناسب"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:394
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:398
 msgid ""
 "*Just-in-time logic* in Odoo minimizes storage costs by placing orders "
 "precisely to meet deadlines. This is achieved using the :ref:`forecasted "
@@ -33789,7 +33793,7 @@ msgstr ""
 "<inventory/warehouses_storage/forecasted-date>`، الذي يحدد متى يكون التجديد "
 "ضروريًا لتجنب الإفراط في التخزين."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:398
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:402
 msgid ""
 "The forecasted date is the **earliest possible date** to receive a product "
 "if the replenishment process starts immediately. It is calculated by summing "
@@ -33806,7 +33810,7 @@ msgstr ""
 "للمشتريات، أو :ref:`المهل الزمنية للتصنيع <inventory/warehouses_storage/"
 "manuf-lt>` للإنتاج. تعمل قواعد إعادة الطلب التلقائية واليدوية بهذه الطريقة."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:406
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:410
 msgid ""
 "For a product with a 5-day total lead time and a sales order delivery date "
 "in 10 days, Odoo waits 5 days to place the order, ensuring it arrives just "
@@ -33816,11 +33820,11 @@ msgstr ""
 "غضون 10 أيام، ينتظر Odoo 5 أيام لتقديم الطلب، مما يضمن وصوله في الوقت "
 "المناسب للتسليم."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:409
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:413
 msgid "Important considerations:"
 msgstr "اعتبارات مهمة:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:411
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:415
 msgid ""
 "**If this feels risky**, consider adding buffer time or :doc:`adjusting lead "
 "times <lead_times>` for more flexibility."
@@ -33828,7 +33832,7 @@ msgstr ""
 "**إذا كان هذا يبدو محفوفًا بالمخاطر**، ففكر في إضافة وقت احتياطي "
 "أو :doc:`تعديل المهل الزمنية <lead_times>` لمزيد من المرونة."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:413
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:417
 msgid ""
 "While lead times and just-in-time logic provide additional control, "
 "**reordering rules work perfectly fine without them**. Keeping delivery "
@@ -33839,11 +33843,11 @@ msgstr ""
 "إعادة الطلب بشكل مثالي بدونها**. إن الحفاظ على تواريخ التسليم في أوامر البيع "
 "كـ*تاريخ إنشائها* يضمن تفعيل المشتريات على الفور عند الحاجة"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:420
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:424
 msgid "Forecasted date and To Order quantity"
 msgstr "التاريخ المتوقع وكمية الطلب"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:422
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:426
 msgid ""
 "The *forecasted date* is the earliest receipt date for a product, if it is "
 "ordered right now. It is calculated by summing the lead times linked to the "
@@ -33854,7 +33858,7 @@ msgstr ""
 "المهل الزمنية المرتبطة بعملية تجديد المنتج. مجموع هذه المهل الزمنية، مضافًا "
 "إلى التاريخ الحالي، يحدد متى يتحقق Odoo من المخزون المطلوب."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:426
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:430
 msgid ""
 "To view the forecasted date go to the replenishment report and click "
 "the :icon:`fa-info-circle` :guilabel:`(info)` icon for the desired "
@@ -33866,27 +33870,27 @@ msgstr ""
 "نافذة :guilabel:`معلومات التجديد` المنبثقة :guilabel:`التاريخ المتوقع` "
 "والمهل الزمنية المختلفة."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:431
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:435
 msgid ""
 "A manual reordering rule is set up with no minimum or maximum quantities."
 msgstr "تم إعداد قاعدة إعادة طلب يدوية بدون حد أدنى أو أقصى للكميات."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:433
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:437
 msgid ""
 "Vendor lead time is 4 days, the purchase security lead time is 1 day, and "
 "the days to purchase is 2 days."
 msgstr ""
 "المهلة الزمنية للمورد 4 أيام، ومهلة أمان الشراء يوم واحد، وأيام الشراء يومان."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:435
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:439
 msgid "Today's date is November 26."
 msgstr "تاريخ اليوم هو 26 نوفمبر."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:436
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:440
 msgid "These add up to 7 days, making the forecasted date, December 3rd."
 msgstr "يبلغ مجموع هذه الأيام 7 أيام، مما يجعل التاريخ المتوقع 3 ديسمبر."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:438
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:442
 msgid ""
 "A confirmed |SO| for 5 units has a delivery date of December 3rd (7 days "
 "from today). This demand will appear on the replenishment report today, in "
@@ -33895,7 +33899,7 @@ msgstr ""
 "|SO| مؤكد لـ 5 وحدات لديه تاريخ تسليم في 3 ديسمبر (7 أيام من اليوم). سيظهر "
 "هذا الطلب في تقرير التجديد اليوم، في حقل **للطلب**."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:441
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:445
 msgid ""
 "However, if the delivery date were later than December 3rd, it would not yet "
 "appear on the report. Odoo only displays quantities to replenish when they "
@@ -33910,7 +33914,7 @@ msgstr ""
 msgid "Show forecasted date in Odoo."
 msgstr "إظهار التاريخ المتوقع في Odoo."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:448
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:452
 msgid ""
 "The *just-in-time* logic ensures replenishment happens only when it's "
 "necessary for the forecasted date's demand, helping avoid overstocking."
@@ -33918,11 +33922,11 @@ msgstr ""
 "يضمن منطق *just-in-time* أن التجديد يحدث فقط عندما يكون ضروريًا لتلبية الطلب "
 "في التاريخ المتوقع، مما يساعد على تجنب التخزين الزائد."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:451
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:455
 msgid "For example:"
 msgstr "على سبيل المثال: "
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:453
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:457
 msgid ""
 "If the forecasted quantity drops below the minimum **on** the forecasted "
 "date, replenishment must begin immediately to avoid shortages."
@@ -33930,7 +33934,7 @@ msgstr ""
 "إذا انخفضت الكمية المتوقعة إلى أقل من الحد الأدنى **في** التاريخ المتوقع، "
 "يجب أن يبدأ التجديد فورًا لتجنب النقص."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:455
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:459
 msgid ""
 "If the quantity drops below the minimum **after** the forecasted date, "
 "replenishment can wait."
@@ -33938,11 +33942,11 @@ msgstr ""
 "إذا انخفضت الكمية إلى أقل من الحد الأدنى **بعد** التاريخ المتوقع، يمكن أن "
 "ينتظر التجديد."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:457
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:461
 msgid "The **To Order** quantity is the total demand on the forecasted date."
 msgstr "كمية **المطلوب طلبه** هي إجمالي الطلب في التاريخ المتوقع."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:459
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:463
 msgid ""
 "By timing purchase orders based on the combined lead times, Odoo optimizes "
 "stock levels, keeping inventory minimal while ensuring future requirements "
@@ -33953,11 +33957,11 @@ msgstr ""
 "تحسين مستويات المخزون، مع الحفاظ على المخزون عند الحد الأدنى مع ضمان طلب "
 "المتطلبات المستقبلية في اللحظة الأخيرة الممكنة—مماطلة استراتيجية بدون ضغط!"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:464
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:468
 msgid "Common confusion about forecasted quantities"
 msgstr "الارتباك الشائع حول الكميات المتوقعة"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:466
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:470
 msgid ""
 "|SOs| due **after** the :guilabel:`Forecasted Date` are not accounted for in "
 "the :guilabel:`Forecast` quantities of the reordering rule."
@@ -33965,7 +33969,7 @@ msgstr ""
 "|SOs| المستحقة **بعد** :guilabel:`التاريخ المتوقع` لا يتم احتسابها في "
 "كميات :guilabel:`التوقع` الخاصة بقاعدة إعادة الطلب."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:469
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:473
 msgid ""
 "They are, however, accounted for on the forecasted report that is opened by "
 "clicking the :icon:`fa-area-chart` :guilabel:`(graph)` icon on the "
@@ -33980,7 +33984,7 @@ msgstr ""
 msgid "Forecast and To Order quantities is zero."
 msgstr "كمية التوقع والمطلوب طلبه هي صفر."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:478
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:482
 msgid ""
 "Continuing the above example, when the sales order's deadline is adjusted to "
 "December 4th, the :guilabel:`Forecast` and :guilabel:`To Order` quantities "
@@ -33993,7 +33997,7 @@ msgstr ""
 msgid "Show forecasted report."
 msgstr "عرض تقرير التوقع."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:484
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:488
 msgid ""
 "Opening the :guilabel:`Forecasted Report` shows the :guilabel:`Forecasted` "
 "units is `5.00`."
@@ -34001,11 +34005,11 @@ msgstr ""
 "عند فتح :guilabel:`تقرير التوقع`، يظهر أن الوحدات :guilabel:`المتوقعة` هي "
 "`5.00`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:489
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:493
 msgid "Visibility days"
 msgstr "أيام الظهور "
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:491
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:495
 msgid ""
 "*Visibility days* enable the ability to determine if additional quantities "
 "should be added to the planned replenishment. Odoo checks if forecasted "
@@ -34018,7 +34022,7 @@ msgstr ""
 "سينخفض إلى أقل من الحد الأدنى في قاعدة إعادة الطلب. **فقط إذا** حان وقت "
 "إعادة الطلب، تتحقق أيام الرؤية من الطلب المستقبلي الإضافي لعدد الأيام المحدد."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:496
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:500
 msgid ""
 "This feature helps consolidate orders by grouping immediate and near-future "
 "needs, reducing transport costs and enabling supplier discounts for larger "
@@ -34028,7 +34032,7 @@ msgstr ""
 "القريبة، مما يقلل من تكاليف النقل ويمكّن من الحصول على خصومات الموردين "
 "للطلبات الأكبر."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:499
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:503
 msgid ""
 "To set visibility days to incorporate orders for a specified number of days "
 "in the future, navigate to :menuselection:`Inventory app --> Operations --> "
@@ -34039,7 +34043,7 @@ msgstr ""
 "إلى :menuselection:`تطبيق المخزون --> العمليات --> التجديد`، أو بالنقر على "
 "زر *قواعد إعادة الطلب* الذكي من نموذج المنتج."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:503
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:507
 msgid ""
 "Next, enable the :guilabel:`Visibility Days` field by clicking the |adjust| "
 "to the far right and choosing the feature from the drop-down menu. Then, "
@@ -34048,7 +34052,7 @@ msgstr ""
 "بعد ذلك، قم بتفعيل حقل :guilabel:`أيام الرؤية` بالنقر على |adjust| في أقصى "
 "اليمين واختيار الميزة من القائمة المنسدلة. ثم أدخل أيام الرؤية المطلوبة."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:507
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:511
 msgid ""
 "The forecasted date is never pushed forward or extended; Odoo only checks "
 "the extra visibility days if the stock falls below the minimum threshold on "
@@ -34057,11 +34061,11 @@ msgstr ""
 "لا يتم تأجيل أو تمديد التاريخ المتوقع أبدًا؛ يتحقق Odoo فقط من أيام الرؤية "
 "الإضافية إذا انخفض المخزون إلى أقل من الحد الأدنى في التاريخ المتوقع."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:511
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:515
 msgid "Example where visibility days is triggered"
 msgstr "مثال حيث يتم تفعيل أيام الرؤية"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:513
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:517
 msgid ""
 "A product shipped from Asia has a combined vendor lead time of 30 days and a "
 "shipping cost of $100 (including :doc:`landed costs <../../"
@@ -34071,12 +34075,12 @@ msgstr ""
 "دولار (بما في ذلك :doc:`التكاليف الإضافية <../../product_management/"
 "inventory_valuation/landed_costs>` والرسوم الجمركية)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:517
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:521
 msgid ""
 "November 4: Current date. The forecasted date is December 4 (30 days later)."
 msgstr "4 نوفمبر: التاريخ الحالي. التاريخ المتوقع هو 4 ديسمبر (بعد 30 يومًا)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:518
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:522
 msgid ""
 "|SO| 1: Requires the product by Dec 4. Odoo places the order today, costing "
 "$100."
@@ -34084,7 +34088,7 @@ msgstr ""
 "|SO| 1: يتطلب المنتج بحلول 4 ديسمبر. يقوم Odoo بتقديم الطلب اليوم، بتكلفة "
 "100 دولار."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:519
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:523
 msgid ""
 "|SO| 2: Requires the product by Dec 19. Normally, Odoo would order on Nov "
 "19, costing an additional $100."
@@ -34092,7 +34096,7 @@ msgstr ""
 "|SO| 2: يتطلب المنتج بحلول 19 ديسمبر. عادةً، سيقوم Odoo بالطلب في 19 نوفمبر، "
 "بتكلفة إضافية قدرها 100 دولار."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:521
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:525
 msgid ""
 "|SO| 3: Requires the product by Dec 25. Normally, Odoo would order on Nov "
 "25, costing another $100."
@@ -34100,7 +34104,7 @@ msgstr ""
 "|SO| 3: يتطلب المنتج بحلول 25 ديسمبر. عادةً، سيقوم Odoo بالطلب في 25 نوفمبر، "
 "بتكلفة إضافية قدرها 100 دولار."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:524
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:528
 msgid ""
 "Ordering separately for these sales orders totals $300 in shipping costs."
 msgstr ""
@@ -34110,7 +34114,7 @@ msgstr ""
 msgid "Show forecasted date visualization."
 msgstr "عرض تصور التاريخ المتوقع."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:529
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:533
 msgid ""
 "Setting :guilabel:`Visibility Days` to `20.0` allows Odoo to \"look ahead\" "
 "20 days from December 4 (|SO| 1's forecasted date) to December 24."
@@ -34118,14 +34122,14 @@ msgstr ""
 "تعيين :guilabel:`أيام الرؤية` إلى `20.0` يسمح لـ Odoo بـ\"النظر إلى الأمام\" "
 "20 يومًا من 4 ديسمبر (التاريخ المتوقع لـ |SO| 1) إلى 24 ديسمبر."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:532
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:536
 msgid ""
 "It groups |SO| 2's order with |SO| 1, reducing shipping costs by "
 "consolidating orders."
 msgstr ""
 "يقوم بتجميع طلب |SO| 2 مع |SO| 1، مما يقلل تكاليف الشحن من خلال دمج الطلبات."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:533
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:537
 msgid ""
 "|SO| 3, which is due on Dec 25, is one day late and is not grouped with the "
 "other two orders."
@@ -34133,26 +34137,26 @@ msgstr ""
 "|SO| 3، المستحق في 25 ديسمبر، متأخر بيوم واحد ولا يتم تجميعه مع الطلبين "
 "الآخرين."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:536
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:540
 msgid "Counterexample where visibility days is not triggered"
 msgstr "مثال مضاد حيث لا يتم تشغيل أيام الرؤية"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:538
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:542
 msgid "Considering the example above, if |SO| 1 does not exist, then:"
 msgstr "بالنظر إلى المثال أعلاه، إذا لم يكن |SO| 1 موجودًا، فإن:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:540
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:544
 msgid ""
 "**November 4**: Current date. The forecasted date is December 4 (30 days "
 "later)."
 msgstr ""
 "**4 نوفمبر**: التاريخ الحالي. التاريخ المتوقع هو 4 ديسمبر (بعد 30 يومًا)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:541
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:545
 msgid "**November 5**: The forecasted date shifts to December 5."
 msgstr "**5 نوفمبر**: ينتقل التاريخ المتوقع إلى 5 ديسمبر."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:542
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:546
 msgid ""
 "|SO| 2: Requires the product by December 19. Odoo will only trigger the "
 "order on November 19, meaning the user will not see a replenishment "
@@ -34161,7 +34165,7 @@ msgstr ""
 "|SO| 2: يتطلب المنتج بحلول 19 ديسمبر. سيقوم Odoo بتشغيل الطلب فقط في 19 "
 "نوفمبر، مما يعني أن المستخدم لن يرى إشعار التجديد حتى ذلك الحين."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:545
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:549
 msgid ""
 "This shows that visibility days complement just-in-time logic by optimizing "
 "it to balance replenishment costs more effectively."
@@ -34173,12 +34177,12 @@ msgstr ""
 msgid "Example where the visibility days does not trigger."
 msgstr "مثال حيث لا يتم تشغيل أيام الرؤية."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:552
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:556
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:67
 msgid "Horizon days"
 msgstr "أيام الأفق"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:554
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:558
 msgid ""
 "*Horizon days* determine how many days ahead Odoo checks if the forecasted "
 "quantity will drop below reordering rule's minimum. The feature is meant to "
@@ -34190,7 +34194,7 @@ msgstr ""
 "الميزة إلى مساعدة المستخدمين على تخطيط التجديد مسبقًا، من خلال "
 "زيادة :ref:`التاريخ المتوقع <inventory/warehouses_storage/forecasted-date>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:558
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:562
 msgid ""
 "\\text{Forecasted date} = \\text{Current date} + \\text{Vendor Lead Time} + "
 "\\text{Horizon Days}"
@@ -34198,7 +34202,7 @@ msgstr ""
 "\\text{التاريخ المتوقع} = \\text{التاريخ الحالي} + \\text{مهلة المورد} + "
 "\\text{أيام الأفق}"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:564
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:568
 msgid ""
 "Since horizon days are only meant to be used with manual reordering rules, "
 "find details about the feature in the :doc:`Replenishment report article "
@@ -58995,6 +58999,16 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ ":guilabel:`Multiple Quantity`: If the product should be ordered in "
+#~ "specific quantities, enter the number that should be ordered. For "
+#~ "example, if the :guilabel:`Multiple Quantity` is set to `5`, and only 3 "
+#~ "are needed, 5 products are replenished."
+#~ msgstr ""
+#~ ":guilabel:`الكمية المضاعفة`: إذا كان يجب طلب المنتج بكميات محددة، أدخل "
+#~ "الرقم الذي يجب طلبه. على سبيل المثال، إذا تم تعيين :guilabel:`الكمية "
+#~ "المضاعفة` على `5`، ولم تكن هناك حاجة إلا لـ 3، يتم تجديد 5 منتجات."
 
 #~ msgid ""
 #~ "Odoo *Product Lifecycle Management* (*PLM*) offers a systematic approach "

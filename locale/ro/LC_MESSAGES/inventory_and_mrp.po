@@ -25,7 +25,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-10 17:31+0000\n"
+"POT-Creation-Date: 2026-07-17 17:31+0000\n"
 "PO-Revision-Date: 2026-07-06 19:27+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Romanian <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -9720,7 +9720,7 @@ msgstr "Afișați câmpul **Cont de cheltuieli** și pictograma linkului extern.
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:372
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:391
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:268
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:272
 msgid "Manual"
 msgstr "Manual"
 
@@ -35167,12 +35167,12 @@ msgstr ""
 "configure-rr>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:33
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:135
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:139
 msgid ":ref:`Trigger <inventory/warehouses_storage/trigger>`"
 msgstr ":ref:`Declanșator <inventory/warehouses_storage/trigger>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:34
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:136
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:140
 msgid ":ref:`Preferred route <inventory/warehouses_storage/route>`"
 msgstr ":ref:`Rută preferată <inventory/warehouses_storage/route>`"
 
@@ -35187,7 +35187,7 @@ msgid ":ref:`Just-in-time logic <inventory/warehouses_storage/just-in-time>`"
 msgstr ":ref:`Logica just-in-time <inventory/warehouses_storage/just-in-time>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:39
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:140
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:144
 msgid ":ref:`Visibility days <inventory/warehouses_storage/visibility-days>`"
 msgstr ""
 ":ref:`Zile de vizibilitate <inventory/warehouses_storage/visibility-days>`"
@@ -35377,21 +35377,24 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:115
 msgid ""
-":guilabel:`Multiple Quantity`: If the product should be ordered in specific "
-"quantities, enter the number that should be ordered. For example, if "
-"the :guilabel:`Multiple Quantity` is set to `5`, and only 3 are needed, 5 "
-"products are replenished."
+":guilabel:`Multiple Quantity`: Ensures products are replenished in fixed "
+"multiples, rounding the ordered quantity up to the nearest multiple that "
+"remains below or equal to the :guilabel:`Max` quantity."
 msgstr ""
-":guilabel:`Cantitate multiplă`: Dacă produsul trebuie comandat în cantități "
-"specifice, introduceți numărul care trebuie comandat. De exemplu, "
-"dacă :guilabel:`Cantitate multiplă` este setată la `5` și sunt necesare doar "
-"3, se vor reaproviziona 5 produse."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:122
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:119
+msgid ""
+"For example, if :guilabel:`Multiple Quantity` is set to `3`, Odoo orders in "
+"multiples of three (3, 6, 9, ...). If the :guilabel:`Max` is `20` and the "
+"forecasted quantity is `7`, the required quantity is `13`. Because `13` is "
+"not a multiple of three, Odoo rounds down and orders `12`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:126
 msgid "The form for creating a new reordering rule."
 msgstr "Formularul pentru crearea unei noi reguli de reordonare."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:125
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:129
 msgid ""
 "Reordering rules can also be created from the :guilabel:`Reordering Rules` "
 "smart button on the product form."
@@ -35399,7 +35402,7 @@ msgstr ""
 "Regulile de reaprovizionare pot fi create și din butonul "
 "inteligent :guilabel:`Reguli de reaprovizionare` de pe formularul produsului."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:133
 msgid ""
 "To learn how the :guilabel:`On Hand`, :guilabel:`Forecast`, "
 "and :guilabel:`To Order` fields are calculated using on-hand quantities and "
@@ -35411,26 +35414,26 @@ msgstr ""
 "disponibile și cererea viitoare, consultați secțiunea :ref:`Logica just-in-"
 "time <inventory/warehouses_storage/just-in-time>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:133
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:137
 msgid "For advanced usage, learn about the following reordering rule fields:"
 msgstr ""
 "Pentru utilizare avansată, aflați despre următoarele câmpuri ale regulilor "
 "de reaprovizionare:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:137
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:141
 msgid ":ref:`Vendor <inventory/warehouses_storage/set-vendor>`"
 msgstr ":ref:`Furnizor <inventory/warehouses_storage/set-vendor>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:138
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:142
 msgid ":ref:`Bill of materials <inventory/warehouses_storage/set-bom-field>`"
 msgstr ":ref:`Listă de materiale <inventory/warehouses_storage/set-bom-field>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:139
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:143
 msgid ":ref:`Procurement group <inventory/warehouses_storage/procurement-grp>`"
 msgstr ""
 ":ref:`Grup de achiziții <inventory/warehouses_storage/procurement-grp>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:143
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:147
 msgid ""
 "The fields above are not available by default, and must be enabled by "
 "selecting the |adjust| in the far-right corner and selecting the desired "
@@ -35440,11 +35443,11 @@ msgstr ""
 "selectând |adjust| în colțul din dreapta sus și alegând coloana dorită din "
 "meniul derulant."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:149
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:153
 msgid "0/0/1 reordering rule"
 msgstr "Regula de reordonare 0/0/1"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:151
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:155
 msgid ""
 "The *0/0/1* reordering rule is a specialty rule used to replenish a product "
 "that is not kept on-hand, each time a sales order (SO) is confirmed for that "
@@ -35454,7 +35457,7 @@ msgstr ""
 "reumple un produs care nu este păstrat la îndemână, de fiecare dată când o "
 "comandă de vânzare (SO) este confirmată pentru acel produs."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:155
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:159
 msgid ""
 "The 0/0/1 reordering rule is similar to the *Replenish on Order (MTO)* "
 "route, in that both workflows are used to replenish a product upon "
@@ -35464,7 +35467,7 @@ msgstr ""
 "(MTO)*, prin aceea că ambele fluxuri de lucru sunt folosite pentru a reumple "
 "un produs la confirmarea unui |SO|."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:158
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:162
 msgid ""
 "The main difference between the two methods is that the *Replenish on Order* "
 "route automatically reserves the product for the |SO| that caused it to be "
@@ -35474,7 +35477,7 @@ msgstr ""
 "Order* rezervă automat produsul pentru |SO| care a făcut să fie completat. "
 "Aceasta înseamnă că produsul **nu poate fi utilizat** pentru un |SO| diferit."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:162
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:166
 msgid ""
 "The 0/0/1 reordering rule does not have this limitation. A product "
 "replenished using the rule is not reserved for any specific |SO|, and can be "
@@ -35484,7 +35487,7 @@ msgstr ""
 "folosind regula nu este rezervat pentru niciun |SO| specific și poate fi "
 "utilizat după cum este necesar."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:165
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:169
 msgid ""
 "Another key difference is that replenishment orders created by the "
 "*Replenish on Order* route are linked to the original |SO| by a smart button "
@@ -35497,7 +35500,7 @@ msgstr ""
 "este creată o comandă de reaprovizionare, dar nu este legată de |SO|ul "
 "original."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:169
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:173
 msgid ""
 "See the :doc:`Replenish on Order (MTO) <mto>` documentation for a full "
 "overview of the MTO route."
@@ -35505,7 +35508,7 @@ msgstr ""
 "Consultați documentația :doc:`Replenish on Order (MTO) <mto>` pentru o "
 "prezentare completă a rutei MTO."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:171
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:175
 msgid ""
 "To create a 0/0/1 reordering rule, navigate to :menuselection:`Inventory app "
 "--> Products --> Products`, and select a product."
@@ -35514,7 +35517,7 @@ msgstr ""
 "la :menuselection:`Inventory app --> Products --> Products` și selectați un "
 "produs."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:174
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:178
 msgid ""
 "At the top of the product's page, click the :icon:`fa-"
 "refresh` :guilabel:`Reordering Rules` smart button to open "
@@ -35527,7 +35530,7 @@ msgstr ""
 "rezultată, faceți clic pe :guilabel:`Nou` pentru a începe configurarea unei "
 "noi reguli de reordonare."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:178
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:182
 msgid ""
 "In the :guilabel:`Location` field of the new reordering rule, select the "
 "location in which replenished products should be stored. By default, this "
@@ -35537,7 +35540,7 @@ msgstr ""
 "locația în care ar trebui să fie stocate produsele alimentate. În mod "
 "implicit, această locație este setată la :guilabel:`WH/Stock`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:181
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:185
 msgid ""
 "In the :guilabel:`Route` field, select the route the rule should use to "
 "replenish the item. For example, if the product should be purchased from a "
@@ -35547,7 +35550,7 @@ msgstr ""
 "folosească pentru a reumple elementul. De exemplu, dacă produsul ar trebui "
 "achiziționat de la un furnizor, selectați ruta :guilabel:`Cumpărați`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:184
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:188
 msgid ""
 "In the :guilabel:`Min` field and :guilabel:`Max` field, leave the values set "
 "to `0.00`. In the :guilabel:`To Order` field, enter a value of `1.00`."
@@ -35559,7 +35562,7 @@ msgstr ""
 msgid "A 0/0/1 reordering rule."
 msgstr "O regulă de reordonare 0/0/1."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:190
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:194
 msgid ""
 "With the reordering rule configured using these values, each time an |SO| "
 "causes the forecasted quantity of the product to fall below "
@@ -35573,7 +35576,7 @@ msgstr ""
 "folosită pentru a reaproviziona produsul în pași de câte o unitate, până "
 "la :guilabel:`Max` de `0.00`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:195
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:199
 msgid ""
 "An item is configured with a 0/0/1 reordering rule that uses the *Buy* "
 "route. Zero units are kept on-hand at any given time."
@@ -35581,7 +35584,7 @@ msgstr ""
 "Un articol este configurat cu o regulă de reaprovizionare 0/0/1 care "
 "folosește ruta *Buy*. Zero unități sunt păstrate pe stoc în orice moment."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:198
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:202
 msgid ""
 "A |SO| is confirmed for one unit, which causes the forecasted quantity to "
 "drop to `-1.00`. This triggers the reordering rule, which automatically "
@@ -35591,7 +35594,7 @@ msgstr ""
 "să scadă la `-1.00`. Aceasta declanșează regula de reaprovizionare, care "
 "creează automat un |PO| pentru o unitate."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:201
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:205
 msgid ""
 "Once the product is received from the vendor, the forecasted quantity "
 "returns to `0.00`. There is now one unit on-hand, but it is not reserved for "
@@ -35603,11 +35606,11 @@ msgstr ""
 "pentru |SO| care a declanșat achiziția. Poate fi folosită pentru a onora "
 "acel |SO| sau rezervată pentru o altă comandă."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:208
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:212
 msgid "Trigger"
 msgstr "Declanșator"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:210
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:214
 msgid ""
 "A reordering rule's *trigger* can be set to *automatic* or *manual*. While "
 "both function the same way, the difference between the two types of "
@@ -35617,7 +35620,7 @@ msgstr ""
 "*automatic* sau *manual*. Deși ambele funcționează la fel, diferența dintre "
 "cele două tipuri de reguli constă în modul de lansare a regulii:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:213
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:217
 msgid ""
 ":ref:`Auto <inventory/warehouses_storage/auto-rr>`: A purchase or "
 "manufacturing order is automatically created when the forecasted stock falls "
@@ -35629,7 +35632,7 @@ msgstr ""
 "cantitatea minimă a regulii de reaprovizionare. Implicit, este selectat "
 "declanșatorul :guilabel:`Auto`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:216
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:220
 msgid ""
 ":ref:`Manual <inventory/warehouses_storage/manual-rr>`: "
 "The :doc:`Replenishment report <report>` lists products needing "
@@ -35641,7 +35644,7 @@ msgstr ""
 "stocul curent/estimat, timpii de livrare și datele de sosire. Utilizatorii "
 "pot revizui previziunile înainte de a apăsa *Order*."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:220
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:224
 msgid ""
 "To enable the :guilabel:`Trigger` field, go to :menuselection:`Inventory app "
 "--> Operations --> Replenishment`. Then, click the |adjust|, located to the "
@@ -35652,7 +35655,7 @@ msgstr ""
 "Apoi, faceți clic pe |adjust| din dreapta titlurilor de coloană și bifați "
 "caseta :guilabel:`Trigger`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:224
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:228
 msgid ""
 "In the :guilabel:`Trigger` column, select :guilabel:`Auto` "
 "or :guilabel:`Manual`. Refer to the sections below to learn about the "
@@ -35662,11 +35665,11 @@ msgstr ""
 "sau :guilabel:`Manual`. Consultați secțiunile de mai jos pentru a afla "
 "despre diferitele tipuri de reguli de reordonare."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:230
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:234
 msgid "Auto"
 msgstr "Auto"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:232
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:236
 msgid ""
 "*Automatic reordering rules*, enabled by setting the reordering "
 "rule's :guilabel:`Trigger` field to :guilabel:`Auto`, generate purchase or "
@@ -35676,13 +35679,13 @@ msgstr ""
 "câmpului :guilabel:`Trigger` la :guilabel:`Auto`, generează comenzi de "
 "achiziție sau producție atunci când:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:235
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:239
 msgid ""
 "The scheduler runs, and the *Forecasted* quantity is below the minimum, or"
 msgstr ""
 "Planificatorul rulează, iar cantitatea *Forecasted* este sub minim, sau"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:236
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:240
 msgid ""
 "A |SO| is confirmed, and lowers the *Forecasted* quantity of the product "
 "below the minimum."
@@ -35690,7 +35693,7 @@ msgstr ""
 "Un |SO| este confirmat și scade cantitatea *Forecasted* a produsului sub "
 "minim."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:238
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:242
 msgid ""
 "If the :guilabel:`Buy` route is selected, then an |RFQ| is generated. To "
 "view and manage |RFQs|, navigate to :menuselection:`Purchase app --> Orders "
@@ -35700,7 +35703,7 @@ msgstr ""
 "vizualiza și gestiona |RFQ|-urile, accesați :menuselection:`Purchase app --> "
 "Orders --> Requests for Quotation`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:241
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:245
 msgid ""
 "If the :guilabel:`Manufacture` route is selected, then an |MO| is generated. "
 "To view and manage |MOs|, navigate to :menuselection:`Manufacturing app --> "
@@ -35711,7 +35714,7 @@ msgstr ""
 "accesați :menuselection:`Manufacturing app --> Operations --> Manufacturing "
 "Orders`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:244
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:248
 msgid ""
 "When no route is selected, Odoo selects the :guilabel:`Route` specified in "
 "the :guilabel:`Inventory` tab of the product form."
@@ -35719,11 +35722,11 @@ msgstr ""
 "Când nu este selectată nicio rută, Odoo selectează :guilabel:`Ruta` "
 "specificată în fila :guilabel:`Inventar` din formularul de produs."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:248
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:252
 msgid "The scheduler is set to run once a day, by default."
 msgstr "Planificatorul este setat să ruleze o dată pe zi, în mod implicit."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:250
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:254
 msgid ""
 "To manually trigger a reordering rule before the scheduler runs, "
 "ensure :ref:`developer mode <developer-mode>` is enabled, and "
@@ -35737,11 +35740,11 @@ msgstr ""
 "Executare programator`. Apoi, faceți clic pe butonul violet :guilabel:`Run "
 "Scheduler` din fereastra pop-up care apare."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:255
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:259
 msgid "Be aware that this also triggers any other scheduled actions."
 msgstr "Rețineți că acest lucru declanșează și orice alte acțiuni programate."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:258
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:262
 msgid ""
 "The product, `Office Lamp`, has an automatic reordering rule set to trigger "
 "when the forecasted quantity falls below the :guilabel:`Min Quantity` of "
@@ -35757,7 +35760,7 @@ msgstr ""
 msgid "Show automatic reordering rule from the Reordering Rule page."
 msgstr "Afișați regula de reordonare automată din pagina Reguli de reordonare."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:270
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:274
 msgid ""
 "*Manual reordering rules*, configured by setting the reordering "
 "rule's :guilabel:`Trigger` field to :guilabel:`Manual`, list a product on "
@@ -35773,7 +35776,7 @@ msgstr ""
 "*needs*, deoarece sunt necesare pentru a onora viitoarele |SO|-uri pentru "
 "care cantitatea estimată nu este suficientă."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:275
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:279
 msgid ""
 "The replenishment dashboard, accessible by navigating "
 "to :menuselection:`Inventory app --> Operations --> Replenishment`, "
@@ -35787,7 +35790,7 @@ msgstr ""
 "*needs* **doar** când este momentul să reaprovizionați articolele, datorită "
 "filtrului :guilabel:`To Reorder`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:280
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:284
 msgid ""
 "When a product appears on the replenishment dashboard, clicking "
 "the :guilabel:`Order` button generates the purchase or manufacturing order "
@@ -35804,11 +35807,11 @@ msgstr ""
 "Apăsați butonul Order pe tabloul de bord de reaprovizionare pentru a "
 "reaproviziona stocul."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:289
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:293
 msgid "Route"
 msgstr "Rută"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:291
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:295
 msgid ""
 "Odoo allows for multiple routes to be selected as replenishment methods "
 "under the :guilabel:`Inventory` tab on each product form. For instance, it "
@@ -35820,14 +35823,14 @@ msgstr ""
 "pot selecta atât :guilabel:`Buy`, cât și :guilabel:`Manufacture`, indicând "
 "Odoo că produsul poate fi cumpărat sau fabricat."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:297
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:301
 msgid ""
 ":ref:`Set route on product form <inventory/warehouses_storage/set-method>`"
 msgstr ""
 ":ref:`Setează ruta în formularul de produs <inventory/warehouses_storage/set-"
 "method>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:299
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:303
 msgid ""
 "Odoo also enables users to set a preferred route for a product's reordering "
 "rule. This is the replenishment method (e.g., buying or manufacturing) that "
@@ -35838,7 +35841,7 @@ msgstr ""
 "exemplu, cumpărare sau producție) pe care regula o folosește implicit, dacă "
 "sunt disponibile mai multe."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:303
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:307
 msgid ""
 "To specify a preferred route, begin by navigating "
 "to :menuselection:`Inventory app --> Operations --> Replenishment`."
@@ -35846,7 +35849,7 @@ msgstr ""
 "Pentru a specifica o rută preferată, accesați :menuselection:`Inventory app "
 "--> Operations --> Replenishment`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:306
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:310
 msgid ""
 "By default, the :guilabel:`Route` column is hidden. To reveal it, select the "
 "|adjust| to the far-right of the column titles, and "
@@ -35856,7 +35859,7 @@ msgstr ""
 "selectați |adjust| din dreapta titlurilor de coloană și "
 "bifați :guilabel:`Route` din meniul derulant care apare."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:309
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:313
 msgid ""
 "Click inside of the column on the row of a reordering rule, and a drop-down "
 "menu shows all available routes for that rule. Select one to set it as the "
@@ -35870,7 +35873,7 @@ msgstr ""
 msgid "Select a preferred route from the drop-down."
 msgstr "Selectați o rută preferată din meniul drop-down."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:316
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:320
 msgid ""
 "If multiple routes are enabled for a product but no preferred route is set "
 "for its reordering rule, the product is reordered using the *Buy* route, "
@@ -35880,11 +35883,11 @@ msgstr ""
 "rută preferată pentru regula de reaprovizionare, produsul va fi "
 "reaprovizionat folosind mai întâi ruta *Buy*, apoi *Manufacture*."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:320
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:324
 msgid "Advanced uses"
 msgstr "Utilizări avansate"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:322
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:326
 msgid ""
 "Pairing :guilabel:`Route` with one of the following fields on the "
 "replenishment report unlocks advanced configurations of reordering rules. "
@@ -35894,7 +35897,7 @@ msgstr ""
 "de reaprovizionare deblochează configurări avansate ale regulilor de "
 "reaprovizionare. Luați în considerare următoarele:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:327
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:331
 msgid ""
 ":guilabel:`Vendor`: When the selected :guilabel:`Route` is :guilabel:`Buy`, "
 "setting the :guilabel:`Vendor` field to one of the multiple vendors on the "
@@ -35907,7 +35910,7 @@ msgstr ""
 "indică Odoo să completeze automat furnizorul pe |RFQ| atunci când o regulă "
 "de reaprovizionare declanșează crearea unei comenzi de achiziție."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:334
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:338
 msgid ""
 ":guilabel:`Bill of Materials`: When the :guilabel:`Route` is set "
 "to :guilabel:`Manufacture`, and there are multiple |BoMs| in use, specifying "
@@ -35919,7 +35922,7 @@ msgstr ""
 "BoM| dorit în raportul de reaprovizionare va face ca ordinele de producție "
 "să fie create cu acest |BoM|."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:340
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:344
 msgid ""
 ":guilabel:`Procurement Group`: This is a way to group related |POs| or |MOs| "
 "that are tied to fulfilling a specific demand, like an |SO| or a project. It "
@@ -35930,7 +35933,7 @@ msgstr ""
 "proiect. Ajută la organizarea și urmărirea comenzilor legate de o anumită "
 "cerere."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:345
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:349
 msgid ""
 "Procurement groups link replenishment methods to demand, making smart "
 "buttons to appear — similar to how smart buttons appear when using "
@@ -35944,7 +35947,7 @@ msgstr ""
 msgid "Showing smart button to PO."
 msgstr "Afișarea butonului inteligent către PO."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:351
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:355
 msgid ""
 "Sales order (demand) with a smart button linking to the related purchase "
 "order (replenishment method)."
@@ -35952,11 +35955,11 @@ msgstr ""
 "Comandă de vânzare (cerere) cu un buton inteligent care face legătura cu "
 "comanda de achiziție aferentă (metoda de reaprovizionare)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:354
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:358
 msgid "In the context of reordering rules:"
 msgstr "În contextul regulilor de reaprovizionare:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:356
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:360
 msgid ""
 "Reordering rules do not automatically assign a procurement group, which is "
 "why there are no smart buttons that link |SOs| to |POs|, unlike "
@@ -35966,7 +35969,7 @@ msgstr ""
 "motiv pentru care nu există butoane inteligente care să lege |SO| de |PO|, "
 "spre deosebire de ruta :abbr:`MTO (Make to Order)`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:358
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:362
 msgid ""
 "To enable smart buttons for products replenished by reordering rules "
 "(not :abbr:`MTO (Make to Order)`), with specific quantities linked to "
@@ -35977,7 +35980,7 @@ msgstr ""
 "specifice legate de cereri specifice (ex. |SO|), atribuiți un grup de "
 "aprovizionare."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:361
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:365
 msgid ""
 "Without a procurement group, demands for the same product can be combined "
 "into a single |RFQ|, even if the reordering rule is executed multiple times "
@@ -35990,7 +35993,7 @@ msgstr ""
 "aprovizionare mai eficientă prin consolidarea cererilor în mai puține "
 "comenzi."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:365
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:369
 msgid ""
 "Selecting a procurement group in the :guilabel:`Procurement Group` field on "
 "the replenishment report ensures that all linked orders are grouped under "
@@ -36000,7 +36003,7 @@ msgstr ""
 "Group` din raportul de reaprovizionare asigură că toate comenzile legate "
 "sunt grupate sub aceeași cerere, pe baza rutei definite."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:370
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:374
 msgid ""
 "How can you set the *Procurement Group*, *Vendor*, and *Route* fields on the "
 "replenishment report to generate a single |RFQ| for five different products "
@@ -36013,7 +36016,7 @@ msgstr ""
 "Interior, și pentru a vă asigura că alte cereri pentru aceste produse sunt "
 "gestionate separat?"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:377
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:381
 msgid ""
 "Set the :guilabel:`Procurement Group` to `SO35`, in the reordering rule for "
 "all five products. This groups the demands for `SO35` in the same |RFQ| or |"
@@ -36023,7 +36026,7 @@ msgstr ""
 "pentru toate cele cinci produse. Acest lucru grupează cererile pentru `SO35` "
 "în același |RFQ| sau |MO|."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:379
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:383
 msgid ""
 "Set the :guilabel:`Vendor` to `Azure Interior` to ensure the |RFQ| is "
 "created for the same supplier."
@@ -36031,11 +36034,11 @@ msgstr ""
 "Setați :guilabel:`Vendor` la `Azure Interior` pentru a vă asigura că |RFQ| "
 "este creat pentru același furnizor."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:381
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:385
 msgid "Set the :guilabel:`Route` to :guilabel:`Buy` to generate an |RFQ|."
 msgstr "Setați :guilabel:`Route` la :guilabel:`Buy` pentru a genera un |RFQ|."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:382
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:386
 msgid ""
 "Click the :guilabel:`Order` button to generate a single |RFQ| for the five "
 "products tied to `SO35`."
@@ -36055,11 +36058,11 @@ msgstr ""
 "lucru asigură că cererile viitoare pentru aceste produse sunt gestionate "
 "separat și atribuite unor |RFQ| diferite (comportamentul obișnuit)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:392
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:396
 msgid "Just-in-time logic"
 msgstr "Logica just-in-time"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:394
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:398
 msgid ""
 "*Just-in-time logic* in Odoo minimizes storage costs by placing orders "
 "precisely to meet deadlines. This is achieved using the :ref:`forecasted "
@@ -36072,7 +36075,7 @@ msgstr ""
 "date>`, care determină când este necesară reaprovizionarea pentru a evita "
 "suprastocarea."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:398
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:402
 msgid ""
 "The forecasted date is the **earliest possible date** to receive a product "
 "if the replenishment process starts immediately. It is calculated by summing "
@@ -36091,7 +36094,7 @@ msgstr ""
 "warehouses_storage/manuf-lt>` pentru producție. Atât regulile automate, cât "
 "și cele manuale de reaprovizionare funcționează astfel."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:406
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:410
 msgid ""
 "For a product with a 5-day total lead time and a sales order delivery date "
 "in 10 days, Odoo waits 5 days to place the order, ensuring it arrives just "
@@ -36101,11 +36104,11 @@ msgstr ""
 "a comenzii de vânzare peste 10 zile, Odoo așteaptă 5 zile pentru a plasa "
 "comanda, asigurându-se că aceasta ajunge exact la timp pentru livrare."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:409
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:413
 msgid "Important considerations:"
 msgstr "Considerații importante:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:411
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:415
 msgid ""
 "**If this feels risky**, consider adding buffer time or :doc:`adjusting lead "
 "times <lead_times>` for more flexibility."
@@ -36114,7 +36117,7 @@ msgstr ""
 "tampon sau :doc:`ajustarea timpilor de livrare <lead_times>` pentru mai "
 "multă flexibilitate."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:413
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:417
 msgid ""
 "While lead times and just-in-time logic provide additional control, "
 "**reordering rules work perfectly fine without them**. Keeping delivery "
@@ -36126,11 +36129,11 @@ msgstr ""
 "Menținerea datelor de livrare pe comenzile de vânzare ca *dată de creare* "
 "asigură declanșarea imediată a achizițiilor atunci când este nevoie."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:420
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:424
 msgid "Forecasted date and To Order quantity"
 msgstr "Data estimată și cantitatea de comandat"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:422
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:426
 msgid ""
 "The *forecasted date* is the earliest receipt date for a product, if it is "
 "ordered right now. It is calculated by summing the lead times linked to the "
@@ -36142,7 +36145,7 @@ msgstr ""
 "asociați procesului de reaprovizionare al produsului. Totalul acestor timpi, "
 "adăugat la data curentă, determină când Odoo verifică stocul solicitat."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:426
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:430
 msgid ""
 "To view the forecasted date go to the replenishment report and click "
 "the :icon:`fa-info-circle` :guilabel:`(info)` icon for the desired "
@@ -36155,14 +36158,14 @@ msgstr ""
 "Information` afișează :guilabel:`Forecasted Date` și diferiți timpi de "
 "livrare."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:431
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:435
 msgid ""
 "A manual reordering rule is set up with no minimum or maximum quantities."
 msgstr ""
 "O regulă de reaprovizionare manuală este configurată fără cantități minime "
 "sau maxime."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:433
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:437
 msgid ""
 "Vendor lead time is 4 days, the purchase security lead time is 1 day, and "
 "the days to purchase is 2 days."
@@ -36170,16 +36173,16 @@ msgstr ""
 "Timpul de livrare al furnizorului este de 4 zile, timpul de siguranță pentru "
 "achiziție este de 1 zi, iar zilele pentru achiziție sunt 2 zile."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:435
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:439
 msgid "Today's date is November 26."
 msgstr "Data de astăzi este 26 noiembrie."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:436
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:440
 msgid "These add up to 7 days, making the forecasted date, December 3rd."
 msgstr ""
 "Acestea însumează 7 zile, ceea ce face ca data estimată să fie 3 decembrie."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:438
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:442
 msgid ""
 "A confirmed |SO| for 5 units has a delivery date of December 3rd (7 days "
 "from today). This demand will appear on the replenishment report today, in "
@@ -36189,7 +36192,7 @@ msgstr ""
 "pe 3 decembrie (7 zile de azi). Această cerere va apărea astăzi în raportul "
 "de reaprovizionare, în câmpul **To Order**."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:441
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:445
 msgid ""
 "However, if the delivery date were later than December 3rd, it would not yet "
 "appear on the report. Odoo only displays quantities to replenish when they "
@@ -36205,7 +36208,7 @@ msgstr ""
 msgid "Show forecasted date in Odoo."
 msgstr "Afișează data estimată în Odoo."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:448
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:452
 msgid ""
 "The *just-in-time* logic ensures replenishment happens only when it's "
 "necessary for the forecasted date's demand, helping avoid overstocking."
@@ -36214,11 +36217,11 @@ msgstr ""
 "necesar pentru cererea de la data estimată, ajutând la evitarea "
 "suprastocării."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:451
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:455
 msgid "For example:"
 msgstr "De exemplu:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:453
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:457
 msgid ""
 "If the forecasted quantity drops below the minimum **on** the forecasted "
 "date, replenishment must begin immediately to avoid shortages."
@@ -36226,7 +36229,7 @@ msgstr ""
 "Dacă cantitatea estimată scade sub minim **în** data estimată, "
 "reaprovizionarea trebuie să înceapă imediat pentru a evita lipsurile."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:455
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:459
 msgid ""
 "If the quantity drops below the minimum **after** the forecasted date, "
 "replenishment can wait."
@@ -36234,11 +36237,11 @@ msgstr ""
 "Dacă cantitatea scade sub minim **după** data estimată, reaprovizionarea "
 "poate aștepta."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:457
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:461
 msgid "The **To Order** quantity is the total demand on the forecasted date."
 msgstr "Cantitatea **To Order** este cererea totală la data estimată."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:459
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:463
 msgid ""
 "By timing purchase orders based on the combined lead times, Odoo optimizes "
 "stock levels, keeping inventory minimal while ensuring future requirements "
@@ -36250,11 +36253,11 @@ msgstr ""
 "și asigurând că cerințele viitoare sunt comandate la ultimul moment posibil "
 "— procrastinare strategică fără stres!"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:464
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:468
 msgid "Common confusion about forecasted quantities"
 msgstr "Confuzii frecvente despre cantitățile estimate"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:466
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:470
 msgid ""
 "|SOs| due **after** the :guilabel:`Forecasted Date` are not accounted for in "
 "the :guilabel:`Forecast` quantities of the reordering rule."
@@ -36262,7 +36265,7 @@ msgstr ""
 "|SO| scadente **după** :guilabel:`Forecasted Date` nu sunt luate în calcul "
 "în cantitățile :guilabel:`Forecast` ale regulii de reaprovizionare."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:469
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:473
 msgid ""
 "They are, however, accounted for on the forecasted report that is opened by "
 "clicking the :icon:`fa-area-chart` :guilabel:`(graph)` icon on the "
@@ -36278,7 +36281,7 @@ msgstr ""
 msgid "Forecast and To Order quantities is zero."
 msgstr "Cantitățile Forecast și To Order sunt zero."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:478
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:482
 msgid ""
 "Continuing the above example, when the sales order's deadline is adjusted to "
 "December 4th, the :guilabel:`Forecast` and :guilabel:`To Order` quantities "
@@ -36292,7 +36295,7 @@ msgstr ""
 msgid "Show forecasted report."
 msgstr "Afișează raportul de prognoză."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:484
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:488
 msgid ""
 "Opening the :guilabel:`Forecasted Report` shows the :guilabel:`Forecasted` "
 "units is `5.00`."
@@ -36300,11 +36303,11 @@ msgstr ""
 "Deschiderea :guilabel:`Forecasted Report` arată că "
 "unitățile :guilabel:`Forecasted` sunt `5.00`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:489
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:493
 msgid "Visibility days"
 msgstr "Zile de vizibilitate"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:491
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:495
 msgid ""
 "*Visibility days* enable the ability to determine if additional quantities "
 "should be added to the planned replenishment. Odoo checks if forecasted "
@@ -36319,7 +36322,7 @@ msgstr ""
 "vizibilitate verifică cererea suplimentară viitoare pentru numărul "
 "specificat de zile."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:496
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:500
 msgid ""
 "This feature helps consolidate orders by grouping immediate and near-future "
 "needs, reducing transport costs and enabling supplier discounts for larger "
@@ -36329,7 +36332,7 @@ msgstr ""
 "imediate și viitoare apropiate, reducând costurile de transport și permițând "
 "reduceri de la furnizori pentru comenzi mai mari."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:499
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:503
 msgid ""
 "To set visibility days to incorporate orders for a specified number of days "
 "in the future, navigate to :menuselection:`Inventory app --> Operations --> "
@@ -36341,7 +36344,7 @@ msgstr ""
 "> Operations --> Replenishment` sau faceți clic pe butonul inteligent "
 "*Reordering Rules* din formularul produsului."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:503
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:507
 msgid ""
 "Next, enable the :guilabel:`Visibility Days` field by clicking the |adjust| "
 "to the far right and choosing the feature from the drop-down menu. Then, "
@@ -36351,7 +36354,7 @@ msgstr ""
 "dreapta și alegând funcția din meniul derulant. Introduceți apoi numărul "
 "dorit de zile de vizibilitate."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:507
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:511
 msgid ""
 "The forecasted date is never pushed forward or extended; Odoo only checks "
 "the extra visibility days if the stock falls below the minimum threshold on "
@@ -36361,11 +36364,11 @@ msgstr ""
 "zilele suplimentare de vizibilitate doar dacă stocul scade sub pragul minim "
 "la data estimată."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:511
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:515
 msgid "Example where visibility days is triggered"
 msgstr "Exemplu în care zilele de vizibilitate sunt declanșate"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:513
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:517
 msgid ""
 "A product shipped from Asia has a combined vendor lead time of 30 days and a "
 "shipping cost of $100 (including :doc:`landed costs <../../"
@@ -36376,13 +36379,13 @@ msgstr ""
 "livrare <../../product_management/inventory_valuation/landed_costs>` și "
 "tarife)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:517
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:521
 msgid ""
 "November 4: Current date. The forecasted date is December 4 (30 days later)."
 msgstr ""
 "4 noiembrie: Data curentă. Data estimată este 4 decembrie (peste 30 de zile)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:518
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:522
 msgid ""
 "|SO| 1: Requires the product by Dec 4. Odoo places the order today, costing "
 "$100."
@@ -36390,7 +36393,7 @@ msgstr ""
 "|SO| 1: Necesită produsul până pe 4 decembrie. Odoo plasează comanda astăzi, "
 "costând 100$."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:519
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:523
 msgid ""
 "|SO| 2: Requires the product by Dec 19. Normally, Odoo would order on Nov "
 "19, costing an additional $100."
@@ -36398,7 +36401,7 @@ msgstr ""
 "|SO| 2: Necesită produsul până pe 19 decembrie. În mod normal, Odoo ar "
 "comanda pe 19 noiembrie, costând încă 100$."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:521
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:525
 msgid ""
 "|SO| 3: Requires the product by Dec 25. Normally, Odoo would order on Nov "
 "25, costing another $100."
@@ -36406,7 +36409,7 @@ msgstr ""
 "|SO| 3: Necesită produsul până pe 25 decembrie. În mod normal, Odoo ar "
 "comanda pe 25 noiembrie, costând încă 100$."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:524
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:528
 msgid ""
 "Ordering separately for these sales orders totals $300 in shipping costs."
 msgstr ""
@@ -36417,7 +36420,7 @@ msgstr ""
 msgid "Show forecasted date visualization."
 msgstr "Afișează vizualizarea datei estimate."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:529
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:533
 msgid ""
 "Setting :guilabel:`Visibility Days` to `20.0` allows Odoo to \"look ahead\" "
 "20 days from December 4 (|SO| 1's forecasted date) to December 24."
@@ -36426,7 +36429,7 @@ msgstr ""
 "înainte\" cu 20 de zile de la 4 decembrie (data estimată a |SO| 1) până la "
 "24 decembrie."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:532
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:536
 msgid ""
 "It groups |SO| 2's order with |SO| 1, reducing shipping costs by "
 "consolidating orders."
@@ -36434,7 +36437,7 @@ msgstr ""
 "Grupează comanda lui |SO| 2 cu cea a lui |SO| 1, reducând costurile de "
 "transport prin consolidarea comenzilor."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:533
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:537
 msgid ""
 "|SO| 3, which is due on Dec 25, is one day late and is not grouped with the "
 "other two orders."
@@ -36442,16 +36445,16 @@ msgstr ""
 "|SO| 3, care are termenul pe 25 decembrie, este cu o zi întârziat și nu este "
 "grupat cu celelalte două comenzi."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:536
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:540
 msgid "Counterexample where visibility days is not triggered"
 msgstr "Contraexemplu în care zilele de vizibilitate nu sunt declanșate"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:538
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:542
 msgid "Considering the example above, if |SO| 1 does not exist, then:"
 msgstr ""
 "Luând în considerare exemplul de mai sus, dacă |SO| 1 nu există, atunci:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:540
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:544
 msgid ""
 "**November 4**: Current date. The forecasted date is December 4 (30 days "
 "later)."
@@ -36459,11 +36462,11 @@ msgstr ""
 "**4 noiembrie**: Data curentă. Data estimată este 4 decembrie (peste 30 de "
 "zile)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:541
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:545
 msgid "**November 5**: The forecasted date shifts to December 5."
 msgstr "**5 noiembrie**: Data estimată se mută la 5 decembrie."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:542
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:546
 msgid ""
 "|SO| 2: Requires the product by December 19. Odoo will only trigger the "
 "order on November 19, meaning the user will not see a replenishment "
@@ -36473,7 +36476,7 @@ msgstr ""
 "doar pe 19 noiembrie, ceea ce înseamnă că utilizatorul nu va vedea o "
 "notificare de reaprovizionare până atunci."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:545
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:549
 msgid ""
 "This shows that visibility days complement just-in-time logic by optimizing "
 "it to balance replenishment costs more effectively."
@@ -36485,12 +36488,12 @@ msgstr ""
 msgid "Example where the visibility days does not trigger."
 msgstr "Exemplu în care zilele de vizibilitate nu se declanșează."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:552
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:556
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:67
 msgid "Horizon days"
 msgstr "Zile orizont"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:554
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:558
 msgid ""
 "*Horizon days* determine how many days ahead Odoo checks if the forecasted "
 "quantity will drop below reordering rule's minimum. The feature is meant to "
@@ -36503,7 +36506,7 @@ msgstr ""
 "avans, prin creșterea :ref:`forecasted date <inventory/warehouses_storage/"
 "forecasted-date>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:558
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:562
 msgid ""
 "\\text{Forecasted date} = \\text{Current date} + \\text{Vendor Lead Time} + "
 "\\text{Horizon Days}"
@@ -36511,7 +36514,7 @@ msgstr ""
 "\\text{Data estimată} = \\text{Data curentă} + \\text{Vendor Lead Time} + "
 "\\text{Horizon Days}"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:564
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:568
 msgid ""
 "Since horizon days are only meant to be used with manual reordering rules, "
 "find details about the feature in the :doc:`Replenishment report article "
@@ -63206,6 +63209,17 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ ":guilabel:`Multiple Quantity`: If the product should be ordered in "
+#~ "specific quantities, enter the number that should be ordered. For "
+#~ "example, if the :guilabel:`Multiple Quantity` is set to `5`, and only 3 "
+#~ "are needed, 5 products are replenished."
+#~ msgstr ""
+#~ ":guilabel:`Cantitate multiplă`: Dacă produsul trebuie comandat în "
+#~ "cantități specifice, introduceți numărul care trebuie comandat. De "
+#~ "exemplu, dacă :guilabel:`Cantitate multiplă` este setată la `5` și sunt "
+#~ "necesare doar 3, se vor reaproviziona 5 produse."
 
 #~ msgid ""
 #~ "Odoo *Product Lifecycle Management* (*PLM*) offers a systematic approach "
