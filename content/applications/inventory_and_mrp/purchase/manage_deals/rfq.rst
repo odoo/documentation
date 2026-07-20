@@ -24,7 +24,7 @@ To auto-populate product information and prices on an |RFQ|, configure products 
 one by selecting :guilabel:`New`. Doing so opens the product form, where sales and purchasing data
 can be configured.
 
-To configure purchasable products, tick the :guilabel:`Purchase` checkbox, under the product name.
+To configure purchasable products, enable the :guilabel:`Purchase` checkbox, under the product name.
 Next, go to the :guilabel:`Inventory` tab, and enable the :guilabel:`Buy` route.
 
 .. important::
@@ -87,9 +87,10 @@ times, and number of |RFQs| sent.
 
 Additionally, the dashboard includes buttons for:
 
-- :guilabel:`To Send`: orders in the |RFQ| stage that have not been sent to the vendor.
-- :guilabel:`Waiting`: |RFQs| that have been sent by email, and are waiting on vendor confirmation.
-- :guilabel:`Late`: |RFQs| or |POs| where the :guilabel:`Order Deadline` has passed.
+- :guilabel:`RFQ Sent`: orders in the |RFQ| stage that have been sent to the vendor.
+- :guilabel:`Late RFQ`: |RFQs| or |POs| where the :guilabel:`Order Deadline` has passed.
+- :guilabel:`Not Acknowledged`: |RFQs| or |POs| where the vendor has not responded.
+- :guilabel:`Late Receipt`: |RFQs| or |POs| where the :guilabel:`Expected Arrival` has passed.
 
 .. image:: rfq/rfq-dashboard.png
    :alt: RFQ dashboard with orders and order statuses.
@@ -114,15 +115,22 @@ The :guilabel:`Vendor Reference` field points to the sales and delivery order nu
 vendor. This comes in handy once products are received, and the |PO| needs to be matched to the
 delivery order.
 
-With the :doc:`Purchase Agreements feature <blanket_orders>` activated, the :guilabel:`Blanket
-Order` field appears, referring to long-term purchase agreements on recurring orders with set
-pricing. To view and configure blanket orders, head to :menuselection:`Purchase app --> Orders -->
-Purchase agreements`.
+.. note::
+   When a :guilabel:`Vendor Reference` is added to a |PO|, it is later added to the
+   :guilabel:`Source Document` field on the *Receipt* for the |PO|.
+
+   .. image:: rfq/source-document.png
+      :alt: A receipt with the vendor reference added in the Source Document field.
+
+With the :doc:`Purchase Agreements feature <blanket_orders>` activated, the :guilabel:`Agreement`
+field appears, referring to long-term purchase agreements on recurring orders with set pricing. To
+view and configure blanket orders, head to :menuselection:`Purchase app --> Orders --> Purchase
+agreements`.
 
 .. important::
    The :guilabel:`Purchase agreements` view only appears if the :guilabel:`Blanket Order` setting is
    enabled. To do so, navigate to :menuselection:`Purchase app --> Configuration --> Settings`, then
-   tick the :guilabel:`Blanket Orders` checkbox.
+   enable the :guilabel:`Blanket Orders` checkbox.
 
 Next, configure an :guilabel:`Order Deadline`, which is the date by which the vendor must confirm
 their agreement to supply the products.
@@ -132,7 +140,7 @@ their agreement to supply the products.
    can still be ordered.
 
 :guilabel:`Expected Arrival` is automatically calculated based on the :guilabel:`Order Deadline` and
-vendor lead time. Tick the checkbox for :guilabel:`Ask confirmation` to ask the vendor to confirm
+vendor lead time. Enable the checkbox for :guilabel:`Ask confirmation` to ask the vendor to confirm
 the shipping date by email.
 
 With the :doc:`Storage Locations feature
@@ -148,7 +156,7 @@ order is to be shipped directly to the end customer. When :guilabel:`Dropship` i
 .. important::
    The :guilabel:`Dropship` options only appear if the :guilabel:`Dropshipping` setting is enabled
    in the **Inventory** app. To do so, navigate to :menuselection:`Inventory app --> Configuration
-   --> Settings`, then tick the :guilabel:`Dropshipping` checkbox.
+   --> Settings`, then enable the :guilabel:`Dropshipping` checkbox.
 
 .. tip::
    To create |RFQs| using different currencies, each currency needs to be enabled in the
