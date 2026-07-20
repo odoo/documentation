@@ -8,14 +8,14 @@ Units of measure
 .. |RFQ| replace:: :abbr:`RFQ (Request for Quotation)`
 .. |SO| replace:: :abbr:`SO (Sales Order)`
 
-In some cases, handling products in different units of measure is necessary. For example, a business
-can buy products from a country that uses the metric system, and then sell those products in a
-country that uses the imperial system. In that case, the business needs to convert the units.
+In some cases, handling products in different *units of measure* (UoM) is necessary. For example, a
+business can buy products from a country that uses the metric system, and then sell those products
+in a country that uses the imperial system. In that case, the business needs to convert the units.
 
 Another case for unit conversion is when a business buys products in a big pack from a supplier, and
 then sells those products in individual units.
 
-Odoo can be set up to use different *units of measure (UoM)* for one product.
+Odoo can be set up to use different units of measure for one product.
 
 Configuration
 =============
@@ -23,10 +23,6 @@ Configuration
 To use different units of measure in Odoo, first go to :menuselection:`Inventory app -->
 Configuration --> Settings`, and under the :guilabel:`Products` section, activate the
 :guilabel:`Units of Measure` setting. Then, click :guilabel:`Save`.
-
-.. image:: uom/uom-enable-setting.png
-   :align: center
-   :alt: Enable Units of Measure in the Inventory settings.
 
 Units of measure categories
 ===========================
@@ -37,12 +33,11 @@ unit conversion; Odoo can convert a product's units from one unit to another **o
 belong to the same category.
 
 .. image:: uom/category.png
-   :align: center
    :alt: Set units of measure categories.
 
-Each units of measure category has a reference unit. The reference unit is highlighted in blue in
-the :guilabel:`Uom` column of the :guilabel:`Units of Measure Categories` page. Odoo uses the
-reference unit as a base for any new units.
+Each unit of measure category has a reference unit. The reference unit is highlighted in blue in the
+:guilabel:`Uom` column of the :guilabel:`Units of Measure Categories` page. Odoo uses the reference
+unit as a base for any new units.
 
 To create a new unit, first select the correct category from the :guilabel:`Units of Measure
 Categories` page. For example, to sell a product in a box of six units, click the :guilabel:`Unit`
@@ -55,11 +50,10 @@ If applicable, enter a :guilabel:`UNSPSC Category`, which is a globally recogniz
 GS1 <https://www.unspsc.org/>`_, that **must** be purchased in order to use.
 
 In the :guilabel:`Ratio` field, enter how many individual units are in the new |UOM|, such as
-`6.00000` when using the example of the `6-Pack` (since a box of six is six times *bigger* than the
-reference unit, `1.00000`).
+`100.00000` when using the example of the `centimeter` (since a centimeter is 100 times *smaller*
+than the reference unit, `1.00000`).
 
 .. image:: uom/convert-products-by-unit.png
-   :align: center
    :alt: Convert products from one unit to another as long as they belong to the same category.
 
 Specify a product's units of measure
@@ -99,29 +93,27 @@ This occurs in various scenarios, including:
 Buy products in the purchase UoM
 --------------------------------
 
-When creating a new request for quotation (RFQ) in the *Purchase* app, Odoo automatically uses the
+When creating a new request for quotation (RFQ) in the **Purchase** app, Odoo automatically uses the
 product's specified purchase unit of measure. If needed, manually edit the :guilabel:`UoM` value on
 the |RFQ|.
 
 After the |RFQ| is confirmed into a |PO|, click the :guilabel:`Receipt` smart button at the top of
 the |PO|.
 
-Odoo automatically converts the purchase unit of measure into the product's sales/inventory unit of
-measure, so the :guilabel:`Demand` column of the delivery receipt shows the converted quantity.
+Odoo automatically converts the purchase unit of measure into the product's sales and inventory unit
+of measure, so the :guilabel:`Demand` column of the delivery receipt shows the converted quantity.
 
 .. example::
-   When the product's purchase :guilabel:`UoM` is `Box of 6`, and its sales/inventory unit of
-   measure is `Units`, the |PO| shows the quantity in boxes of six, and the receipt (and other
+   When the product's purchase :guilabel:`UoM` is `Dozens`, and its sales and inventory unit of
+   measure is `Units`, the |PO| shows the quantity in cartons of 12, and the receipt (and other
    internal warehouse documents) shows the quantity in units.
 
    .. figure:: uom/on-po.png
-      :align: center
       :alt: Image of a purchase order that is using the purchase unit of measure.
 
-      An order of three quantities is placed using the purchase "UoM": `Box of 6`.
+      An order of three quantities is placed using the purchase "UoM": `Dozens`.
 
    .. figure:: uom/on-receipt.png
-      :align: center
       :alt: Image of receipt displaying the unit of measure.
 
       Upon warehouse receipt, the recorded quantities are in the internal "Unit of Measure":
@@ -132,8 +124,8 @@ measure, so the :guilabel:`Demand` column of the delivery receipt shows the conv
 Replenishment
 -------------
 
-A request for quotation for a product can also be generated directly from the product form using
-the :guilabel:`Replenish` button.
+A request for quotation for a product can also be generated directly from the product form using the
+:guilabel:`Replenish` button.
 
 After clicking :guilabel:`Replenish`, a replenish assistant box pops up. The purchase unit of
 measure can be manually edited in the :guilabel:`Quantity` field, if needed. Then, click
@@ -144,7 +136,6 @@ measure can be manually edited in the :guilabel:`Quantity` field, if needed. The
    product form's :guilabel:`Purchase` tab.
 
 .. image:: uom/replenish.png
-   :align: center
    :alt: Click Replenish button to manually replenish.
 
 Navigate to the created |PO| by clicking the :guilabel:`Forecasted` smart button on the product
@@ -157,14 +148,43 @@ purchase |UOM| can be edited directly on the |PO|.
 Sell in a different UoM
 -----------------------
 
-When creating a new quotation in the *Sales* app, Odoo automatically uses the product's specified
+When creating a new quotation in the **Sales** app, Odoo automatically uses the product's specified
 unit of measure. If needed, the :guilabel:`UoM` can be manually edited on the quotation.
+
+.. image:: uom/on-so.png
+   :alt: Two dozen eggs are being sold in a sales order.
 
 After the quotation is sent to the customer, and confirmed into a sales order (SO), click the
 :guilabel:`Delivery` smart button at the top of the |SO|. Odoo automatically converts the unit of
 measure into the product's inventory unit of measure, so the :guilabel:`Demand` column of the
 delivery shows the converted quantity.
 
-For example, if the product's |UOM| on the |SO| was changed to `Box of 6`, but its inventory unit of
-measure is `Units`, the |SO| shows the quantity in boxes of six, and the delivery shows the quantity
-in units.
+For example, if the product's |UOM| on the |SO| was changed to `Dozens`, but its inventory unit of
+measure is `Units`, the |SO| shows the quantity in dozens, and the delivery shows the quantity in
+units.
+
+.. image:: uom/on-delivery.png
+   :alt: 24 eggs are delivered from the SO with two dozen eggs.
+
+Group units of measure in the POS app
+=====================================
+
+When a customer orders multiple units of the same product at a POS register, the register and the
+:doc:`customer display <../../../../sales/point_of_sale/shop/customer_display>` may become
+cluttered.
+
+Products can be grouped by unit of measure in the POS register and on the customer display.
+
+To do so, follow these steps:
+
+#. Enable :doc:`developer mode <../../../../general/developer_mode>`.
+#. Open the *Units of Measure Categories* page by navigating to :menuselection:`Inventory app -->
+   Configuration --> UoM Categories`.
+#. Select a unit of measure category.
+#. Enable :guilabel:`Group Products in POS`.
+
+After this setting is enabled, items are grouped in the POS register. The number of that unit of
+measure and the price are displayed.
+
+.. image:: uom/pos-grouped-products.png
+   :alt: 12 eggs are grouped in the POS app.
