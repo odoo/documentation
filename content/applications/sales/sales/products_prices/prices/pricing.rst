@@ -10,263 +10,501 @@ periods, etc., and is useful for creating pricing strategies and optimizing sale
 Odoo **Sales** has a useful pricelist feature that can be tailored to fit any unique pricing
 strategy. Pricelists suggest certain prices, but they can always be overridden on the sales order.
 
+.. seealso::
+   - :doc:`/applications/sales/sales/products_prices/prices/currencies`
+   - :doc:`/applications/websites/ecommerce/configuration/prices`
+   - :doc:`../../../subscriptions`
+
 .. _sales/products/pricelist-configuration:
 
 Configuration
 =============
 
 To enable pricelists in the Odoo **Sales** app, first navigate to :menuselection:`Sales app -->
-Configuration --> Settings`. In the :guilabel:`Pricing` section, tick the checkbox next to the
+Configuration --> Settings`. In the *Pricing* section, enable the checkbox next to the
 :guilabel:`Pricelists` feature, and click :guilabel:`Save` to save all changes.
 
 .. image:: pricing/pricelist-feature-setting.png
    :alt: How the pricelist feature setting looks in Odoo Sales.
 
-After activating and saving the :guilabel:`Pricelists` feature, the :guilabel:`Settings` page
-reloads. From here, either select the :icon:`oi-arrow-right` :guilabel:`Pricelists` link (beneath
-the :guilabel:`Pricelists` feature on the :guilabel:`Settings` page), or navigate to
+Access the *Pricelists* page by either clicking the :icon:`oi-arrow-right` :guilabel:`Pricelists`
+link (beneath the :guilabel:`Pricelists` feature on the *Settings* page), or navigating to
 :menuselection:`Sales app --> Products --> Pricelists`.
 
-Either option reveals the :guilabel:`Pricelists` page, in which pricelists can be created and/or
-modified at any time.
-
-.. image:: pricing/18-sales-pricelist-page.png
-   :alt: How the pricelists page looks in Odoo Sales.
+Either option reveals the *Pricelists* page, in which pricelists can be created and modified at any
+time.
 
 .. important::
    If there is no specific pricelist configured on a sales quotation, the :guilabel:`Default`
    pricelist is applied. The :guilabel:`Default` pricelist is the first pricelist found in
    :menuselection:`Sales app --> Products --> Pricelists` without an assigned :guilabel:`Country
-   Group`. Odoo will read the :guilabel:`Pricelist Name` column from top to bottom to determine the
+   Group`. Odoo reads the :guilabel:`Pricelist Name` column from top to bottom to determine the
    :guilabel:`Default` pricelist.
 
 .. note::
    The :guilabel:`Selectable` column is only applicable to Odoo **eCommerce**. This option allows
-   website visitors to choose a pricelist when shopping in your **eCommerce** website.
+   website visitors to choose a pricelist when shopping in the **eCommerce** website.
+
+.. image:: pricing/sales-pricelist-page.png
+   :alt: Example of the pricelists page in Odoo Sales.
 
 .. _sales/products/create-edit-pricelists:
 
 Creating and editing pricelists
 -------------------------------
 
-From the :guilabel:`Pricelists` page, either select the pricelist to edit, or click :guilabel:`New`
-to create a new pricelist, which reveals a blank pricelist form that can be configured in a number
-of different ways.
+From the *Pricelists* page, either select the pricelist to edit or click :guilabel:`New` to create a
+new pricelist, which reveals a blank pricelist form that can be configured to suit the business's
+needs.
 
-.. image:: pricing/18-sales-new-pricelist-form.png
-   :alt: How the pricelist detail form looks in Odoo Sales.
-
-When creating a new pricelist, start by adding a name for the pricelist at the blank field at top of
-the form. Next, select which :guilabel:`Currency` should be used.
+When creating a new pricelist, add the name for the pricelist by clicking in the blank field at the
+top of the form. Next, select the type of :guilabel:`Currency` the pricelist uses by clicking in the
+field to access the drop-down menu and selecting an option.
 
 If working in a multi-company environment, select which company this pricelist should apply to in
 the :guilabel:`Company` field. If this field is left blank, the pricelist is automatically applied
 to all companies in the database.
 
-If working in a multinational company, select the countries where this pricelist will apply under
-the :guilabel:`Country Groups` column.
+If working in a multinational company, select the countries where this pricelist applies under the
+:guilabel:`Country Groups` field.
+
+.. image:: pricing/sales-new-pricelist-form.png
+   :alt: How the pricelist detail form looks in Odoo Sales.
 
 .. _sales/products/price-rules:
 
-Price Rules tab
----------------
+Adding price rules
+------------------
 
-In the :guilabel:`Price Rules` tab, each line creates a new record that will implement customized
-pricing to the sales order where the pricelist is applied. This can be used to create complex
-pricing structures, such as progressive discounts when greater quantities of a product are
-purchased.
+In the *Rules* tab, each line creates specific pricing rules. When the pricelist is used on a sales
+order, Odoo applies those rules to calculate the prices. This can be used to create complex pricing
+structures, such as progressive discounts when greater quantities of a product are purchased.
 
-To create a new price rule, click on :guilabel:`Add a line`, which opens a new pricelist rules form.
-Then, select whether to apply this set of rules to a :guilabel:`Product` or :guilabel:`Category`.
+To create a new price rule, click :guilabel:`Add a line`, which opens a *Create Pricelist Rules*
+pop-up form.
 
-From here, there are several configuration options:
+In the :guilabel:`Apply To` field, select whether the price rule applies to a specific
+:guilabel:`Product` or a product :guilabel:`Category`. Depending on the selection, the next field is
+either :guilabel:`Product` or :guilabel:`Category`. Specify the product or category the pricelist
+applies to, or leave the field blank to apply to all products or categories.
 
-- :guilabel:`Product`: If selected in the :guilabel:`Apply To` field, use this field to choose one
-  or more products to which this pricelist will apply.
-- :guilabel:`Category`: Select one or more product categories to which this pricelist will apply.
-- :guilabel:`Price Type`: Select whether the specialized pricing will fall under
-  :guilabel:`Discount`, :guilabel:`Formula`, or :guilabel:`Fixed Price`. Depending on the price
-  type, there will be additional configurations on how to apply the pricelist.
+.. important::
+   If a product doesn't have an assigned category then it is not included in the :guilabel:`All
+   categories` option.
 
-  - :guilabel:`Discount`: Enter the percentage to be discounted. A mark-up can be configured by
-    using a negative value in this field.
+For :guilabel:`Price Type`, select how the prices are adjusted, either applying a :ref:`Discount
+<sales/pricing/discount>`, using a specific :ref:`Formula <sales/pricing/formula>`, or applying a
+:ref:`Fixed Price <sales/pricing/fixed-price>`.
 
-    .. important::
-       If a pricelist is applied to a sales quotation with the discount :guilabel:`Price Type` set
-       as :guilabel:`Discount`, the discount will visible to the customer.
+.. important::
+   If a price rule is set for a specific product, and another one for its product category, Odoo
+   prioritizes the *product* rule and applies it.
 
-       .. image:: pricing/sales-pricelist-pricerule-discount.png
-          :alt: A pricelist rule using Price Type: Discount to create a discount.
+If the price rule is part of a subscription, in the :guilabel:`Recurring Plan` field drop-down menu,
+select a recurrence period. The default selections are :guilabel:`Monthly`, :guilabel:`6 Months`, or
+:guilabel:`Weekly`. New recurrence periods can also be created from this field by clicking
+:guilabel:`Search more` and clicking :guilabel:`Create New`.
 
-       .. image:: pricing/sales-pricelist-pricerule-discount-customer.png
-          :alt: How a pricelist rule using Price Type: Discount appears on customer preview.
+If the discount is only applied when a specific number of a product is ordered, enter the amount in
+the :guilabel:`Min Qty` field.
 
-  - :guilabel:`Formula`: Calculate the pricelist rules based the following configuration:
+If a product has the *Packagings* field configured on its product form, users can create pricing for
+individual packing options. The packaging field appears next to the :guilabel:`Min Qty` field, but
+is not labeled. Clicking the field displays a drop-down menu of configured packaging options.
 
-    - :guilabel:`Discount`: Percentage discount to be applied. Negative values can be entered to
-      increase prices.
+The field defaults to the assigned :abbr:`UoM (Unit of Measure)` configured on the selected product.
+The packaging field only displays when the price rule is configured for *Products*.
 
-    .. important::
-       If a pricelist is applied to a sales quotation with the discount :guilabel:`Price Type` set
-       as :guilabel:`Formula`, the discount will *not* be visible to the customer.
+If the discount is only valid on specific dates, such as a limited-time sale, enter the start and
+end dates in the :guilabel:`Validity Period` field during which this pricelist can be applied to
+quotations.
 
-    - :guilabel:`Round off to`: Numerical value to act as round-off multiple, to be applied after
-      discount. The rounding method sets the price so that it is a multiple of the value in this
-      field.
+Once all configurations are complete, either click :guilabel:`Save & Close` to save the pricelist
+rule, or click :guilabel:`Save & New` to immediately create another pricelist rule on a fresh form.
 
-      .. note::
-         Rounding is applied *after* the discount and *before* the extra fee.
+.. seealso::
+   :doc:`/applications/sales/subscriptions`
 
-         - :guilabel:`Extra Fee`: Fixed amount to be added or subtracted once :guilabel:`Discount`
-           and :guilabel:`Round off to` have been applied.
-         - :guilabel:`Fixed Price`: Enter fixed price for this pricelist. When applied, all product
-           lines in the quotation form will be updated to this price.
+.. _sales/pricing/price-types:
 
-- :guilabel:`Min Qty`: Specify the minimum quantity of selected products for this pricelist to
-  apply.
-- :guilabel:`Validity Period`: Specify the start and end date during which this pricelist can be
-  applied to quotations.
+Configuring price types
+-----------------------
 
-.. example::
-   To formulate a 100% markup (or two times the price of the product), with a $5 minimum margin, set
-   the :guilabel:`Based price` field to :guilabel:`Sales Price` and the :guilabel:`Discount` to
-   `-100`. This is often seen in retail situations.
+The *Create Pricelist Rules* pop-up form offers three different price types to offer discounts or
+price increases.
 
-   .. image:: pricing/formula-markup-cost-example.png
-      :alt: How it looks to formulate a markup cost with 5 dollar minimum margin in Odoo Sales.
+- :ref:`Discount <sales/pricing/discount>`: Applies a percentage discount to all products or a
+  product category.
+- :ref:`Formula <sales/pricing/formula>`: Applies a customizable discount using multiple values, for
+  more control over the calculation.
+- :ref:`Fixed Price <sales/pricing/fixed-price>`: Sets a flat sales price for all products or a
+  product category.
 
-.. example::
-   To apply 20% discounts, with prices rounded up to 9.99, set the :guilabel:`Based on` field to
-   :guilabel:`Sales Price`, the :guilabel:`Discount` field to `20`, the :guilabel:`Extra Fee` field
-   to `-0.01`, and the :guilabel:`Rounding Method` field to `10`.
+.. _sales/pricing/discount:
 
-   .. image:: pricing/formula-discount-example.png
-      :alt: Example of a 20% discount with prices rounded to 9.99 in Odoo Sales.
+Configuring a discount
+~~~~~~~~~~~~~~~~~~~~~~
+
+To configure a discount using a percentage as the computation, select :guilabel:`Discount` for
+:guilabel:`Price Type` and enter the percentage to be discounted. A mark-up can be configured by
+using a negative value in this field.
+
+Next, select the base price Odoo uses to calculate with the discount percentage. The default is
+:guilabel:`sales price`, which refers to the *Sales price* field on the product form. Other
+pricelists can be selected for the base price from the drop-down menu. New pricelists can also be
+created from this menu by clicking :guilabel:`Search more` and clicking :guilabel:`Create New`.
+
+.. image:: pricing/sales-pricelist-pricerule-discount.png
+   :alt: A pricelist rule using Price Type as Discount to create a discount.
+
+.. important::
+   If a pricelist is applied to a sales quotation with the :guilabel:`Price Type` set as
+   :guilabel:`Discount`, the discount is visible to the customer.
+
+.. _sales/pricing/formula:
+
+Configuring a formula
+~~~~~~~~~~~~~~~~~~~~~
+
+.. important::
+   If a pricelist is applied to a sales quotation with the discount :guilabel:`Price Type` set as
+   :guilabel:`Formula`, the discount will *not* be visible to the customer.
+
+The :guilabel:`Formula` option calculates pricelist rules using these settings:
+
+- :guilabel:`Based price`: Choose the base value for the calculation — :guilabel:`Sales price`,
+  :guilabel:`Cost` (both pulled from the product form), or :guilabel:`Other Pricelist` (uses another
+  pricelist as the base).
+- :guilabel:`Discount`: The discount percentage to apply. Enter a negative number to increase the
+  price instead.
+- :guilabel:`Round off to`: Rounds the price to the nearest multiple of this value. Applied *after*
+  the discount but *before* the :guilabel:`Extra Fee`.
+- :guilabel:`Extra Fee`: Fixed amount added or subtracted after :guilabel:`Discount` and
+  :guilabel:`Round off to` are applied.
 
 .. tip::
-   To have prices that end in 9.99, set the :guilabel:`Rounding Method` to `10` and the
+   To have prices that end in 9.99, set the :guilabel:`Round off to` to `10` and the
    :guilabel:`Extra Fee` to `-0.01`.
 
-Recurring Prices tab
---------------------
+.. _sales/pricing/fixed-price:
 
-Time-based rules are used specifically with subscription products. Be sure to check out the Odoo
-:doc:`Subscriptions </applications/sales/subscriptions>` documentation for more information.
+Configuring a fixed price
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In the :guilabel:`Recurring Prices` tab, pricelists are configured with the same options as in the
-:guilabel:`Price Rules` tab, with additional columns for :guilabel:`Product Variants` and
-:guilabel:`Recurring Plan`.
+To configure a :guilabel:`Fixed Price`, enter the new value that overrides the configured *Sales
+Price* on a product form. The :guilabel:`Fixed Price` value is applied per unit. When applied on a
+quotation, the *Unit Price* for each order line uses the :guilabel:`Fixed Price` value.
 
-:guilabel:`Product Variants` are configured under products that have one or more values, such as
-color, size, etc. Once a product has been selected under the :guilabel:`Products Tab`, if
-applicable, select the desired product variants to be included in the price rule.
+Company settings
+~~~~~~~~~~~~~~~~
 
-Then, select the blank field in the :guilabel:`Recurring Plan` column to reveal a drop-down menu of
-pre-designated recurrence periods (e.g. `Monthly`, `Quarterly`, `Weekly`, etc.).
+When in :ref:`Developer Mode <developer-mode/activation>`, the *Create Pricelist Rules* pop-up form
+displays a *Company Settings* section. The section has the following configuration options:
 
-.. image:: pricing/sales-pricelist-recurringprices.png
-   :alt: The recurring prices tab in a pricelist configuration form.
-
-New recurrence periods can also be created from this column. To do so, type in the name for the new
-:guilabel:`Recurring Plan`, then select :guilabel:`Create` from the resulting drop-down menu to
-create the time period, which can be edited later. Alternatively, select :guilabel:`Create and
-edit...` to reveal a :guilabel:`Create Recurring Plan` pop-up form. From this pop-up form, the new
-recurrence period can be configured, with specific :guilabel:`Details`, :guilabel:`Self-Service`,
-and :guilabel:`Pricing` options. When the configurations are complete, click the :guilabel:`Save &
-Close` button.
-
-.. image:: pricing/time-period-popup.png
-   :alt: Custom time period pop-up form in Odoo Sales.
-
-Lastly, add the desired price for this recurring price rule in the :guilabel:`Recurring Price`
-column.
-
-.. seealso::
-   :doc:`../../../subscriptions`
-
-Rental rules tab
-----------------
-
-Price rules can be configured for :doc:`rental products <../../../rental>` under the
-:guilabel:`Rental rules` tab, using the same methodology as the :guilabel:`Price Rules` and
-:guilabel:`Recurring Prices` tabs.
-
-To add a rental rule, click :guilabel:`Add a line`, and select a desired product in the
-:guilabel:`Products` column. Then, select any specific :guilabel:`Variants`, if necessary.
-
-Next, designate a :guilabel:`Period` of time for the rental rule (e.g. `Daily`, `Hourly`, etc.).
-
-Lastly, configure a :guilabel:`Price` for the rental rule in the respective column.
-
-.. image:: pricing/sales-pricelist-rental.png
-   :alt: The rental tab in a pricelist configuration form.
-
-.. seealso::
-   :doc:`Ecommerce price configuration </applications/websites/ecommerce/configuration/prices>`
-
-.. _sales/products/customer-pricelist-application:
-
-Customer pricelist application
-==============================
-
-While the default pricelist applied to any customer is the :guilabel:`Public Pricelist`, Odoo
-provides the opportunity to directly apply a different pricelist to customers on their contact form.
-
-To do that, open the desired customer's contact form, either by navigating to :menuselection:`Sales
-app --> Orders --> Customers` and selecting the customer from the main :guilabel:`Customers` page,
-or by clicking on the customer's name on a sales order.
-
-.. image:: pricing/customer-detail-form.png
-   :alt: Sample customer detail form in Odoo Sales.
-
-On the desired customer's contact form, under the :guilabel:`Sales & Purchase` tab, in the
-:guilabel:`Sales` section, designate what pricelist should be applied to this specific customer from
-the drop-down menu in the :guilabel:`Pricelist` field.
-
-.. image:: pricing/customer-form-pricelist-field.png
-   :alt: The pricelist field in a customer detail form in Odoo Sales.
-
-.. note::
-   When a customer is added to the database, the default pricelist is automatically applied to them.
-   There is **no way** to have a blank *Pricelist* field on a contact form. Even if that field is
-   left blank, the default pricelist appears when that contact form is opened again.
-
-   However, when that contact is added to a quotation, and the *Pricelist* field is auto-populated
-   (based on the information from their contact form), that predetermined pricelist can be removed
-   from the *Pricelist* field, and the quotation can still be confirmed, and subsequently, turned
-   into a sales order.
-
-Conditions
-----------
-
-At the bottom of the :guilabel:`Create Pricelist Rules` pop-up form is the :guilabel:`Conditions`
-section.
-
-Here, start by selecting one of the options in the :guilabel:`Apply On` field:
-
-- :guilabel:`All Products`: the advanced pricelist rule will be applied to all products.
-- :guilabel:`Product Category`: the advanced pricelist rule will be applied to a specific category
-  of products.
-- :guilabel:`Product`: the advanced pricelist rule will be applied to a specific product.
-- :guilabel:`Product Variant`: the advanced pricelist rule will be applied to a specific product
-  variant.
-
-If any of those options, apart from :guilabel:`All Products`, are selected, a new option-specific
-field appears, in which the specific :guilabel:`Product Category`, :guilabel:`Product`, or
-:guilabel:`Product Variant` must be chosen.
-
-Then, select a minimum quantity to be applied to the advanced pricelist rule in the :guilabel:`Min.
-Quantity` field. Lastly, select a range of dates for the pricelist item validation in the
-:guilabel:`Validity` field.
+- :guilabel:`Currency`: Assign a currency for the individual price rule.
+- :guilabel:`Company`: Assign a company for the individual price rule.
 
 Once all configurations are complete, either click :guilabel:`Save & Close` to save the advanced
 pricelist rule, or click :guilabel:`Save & New` to immediately create another advanced pricelist
 rule on a fresh form.
 
-.. note::
-   If a price rule is set for a particular product, and another one for its product category, Odoo
-   takes the rule of the product itself.
+Pricelist rule logic
+====================
+
+Odoo assigns the top pricelist on the *Pricelist* page as default to a quotation as long as there is
+no assigned Pricelist and the pricelist's values are true. This means based on the quotation form
+information, Odoo applies the pricelist that best meets the quotation conditions starting from the
+top of the *Pricelist* page.
+
+When multiple pricelist rules apply to the same product on the same pricelist, Odoo determines
+priority using this order:
+
+1. :ref:`Most specific to least specific <sales/pricing/most-to-least-specific>`: More specific
+   rules take priority over general ones.
+#. :ref:`Minimum quantity (largest first) <sales/pricing/minimum-quantity>`: The higher quantity
+   thresholds take priority over lower ones.
+#. :ref:`Category order <sales/pricing/category-order>`: Manually configured category hierarchy
+   breaks remaining ties where the subcategory takes priority over the parent category.
+#. :ref:`Creation date (newest first) <sales/pricing/creation-date>`: The most recently created rule
+   takes priority if all else is equal.
+
+.. _sales/pricing/most-to-least-specific:
+
+1. Most specific to least specific
+----------------------------------
+
+A rule on a specific variant always takes priority over a broader rule, so a special price for one
+variant overrides a general category discount.
+
+1. Product variant: Applies to the selected variant of the product.
+#. Product: Applies to all variants of a product.
+#. Subcategory: Applies to all products within the subcategory.
+#. Parent category: Applies to all products in the parent category.
+#. All products: Applies to all products within the database.
+#. All categories: Applies to all products with an assigned category. This doesn't include
+   uncategorized products.
+
+.. _sales/pricing/minimum-quantity:
+
+2. Minimum quantity (largest first)
+-----------------------------------
+
+If the product specificity is the same, then rules with a higher minimum quantity take priority over
+rules with a lower (or no) minimum. This keeps bulk-pricing rules (e.g., 10 units) from being
+overridden by a generic rule that also matches.
+
+.. _sales/pricing/category-order:
+
+3. Category order
+-----------------
+
+If rules have the same specificity and same minimum quantity, Odoo uses the manually configured
+category hierarchy, meaning the sequence is set on the categories themselves.
+
+.. _sales/pricing/creation-date:
+
+4. Creation date (newest first)
+-------------------------------
+
+If everything else is equal, the most recently created rule takes priority. This allows newer rules
+to override older ones with identical conditions, which is useful when rules are updated or replaced
+without deleting the old one immediately.
+
+.. _sales/pricing/customer-pricelist-application:
+
+Customer specific pricelists
+============================
+
+When a customer is added to the database, the *Default* pricelist is automatically applied to the
+*Pricelist* field on a contact form. Even if the field is left blank during :ref:`contact creation
+<contacts/contact-form>`, the *Default* pricelist is automatically assigned when that contact form
+is opened again.
+
+To set a specific pricelist for a customer, go to :menuselection:`Sales app --> Orders -->
+Customers` and select the customer from the *Customers* page, or click the customer's name on a
+sales order.
+
+On the customer's contact form, click the :guilabel:`Sales & Purchase` tab, in the *Sales* section,
+select a pricelist using the :guilabel:`Pricelist` field drop-down menu.
+
+.. image:: pricing/customer-form-pricelist-field.png
+   :alt: The pricelist field in a customer detail form in Odoo Sales.
+
+When the customer is added to a quotation, the *Pricelist* field is auto-populated based on the
+information from their contact form. Users can manually change the Pricelist using the *Pricelist*
+field on the quotation.
+
+.. _sales/pricing/price-type-use-cases:
+
+Price type use cases
+====================
+
+- :ref:`sales/pricing/discount-use-cases`
+- :ref:`sales/pricing/formula-use-cases`
+- :ref:`sales/pricing/fixed-price-use-cases`
+
+.. _sales/pricing/discount-use-cases:
+
+Discount use cases
+------------------
+
+The *Discount* price type is used when doing simple discount calculations on a product's sales price
+or when using another pricelist as the base value.
+
+Seasonal discount pricelist
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A retail store holds a yearly summer sale. The sale is 25% off all summer dresses.
+
+Navigate to :menuselection:`Sales app --> Products --> Pricelist` and select an existing pricelist
+or click :guilabel:`New` to create a new one.
+
+On the pricelist form, click :guilabel:`Add a line` to open the *Create Pricelist Rules* pop-up
+window.
+
+Configure the form using the following settings:
+
+- :guilabel:`Apply To`: Select :guilabel:`Category`.
+- :guilabel:`Category`: Select *Summer dresses* from the drop-down menu.
+- :guilabel:`Price Type`: Select :guilabel:`Discount`.
+- :guilabel:`Discount`: Enter `25` and leave the default :guilabel:`sales price`.
+- :guilabel:`Min Qty`: Leave at `0`.
+- :guilabel:`Validity`: Select :guilabel:`Range` and set the date range to `July 1` to `Aug 31`.
+
+Click :guilabel:`Save & close` to add the pricelist rule to the pricelist.
+
+.. image:: pricing/example-summer-dress-25-discount.png
+   :alt: Example of 25% discount pricelist rule configuration.
+
+Applying a 10% markup
+~~~~~~~~~~~~~~~~~~~~~
+
+A shoe store has increased sales targets for the year, and the company decided to add an additional
+10% to the sales price of their rain boots. The wholesale price for the rain boots is $40.
+
+Navigate to :menuselection:`Sales app --> Products --> Pricelist` and select an existing pricelist
+or click :guilabel:`New` to create a new one.
+
+On the *Create Pricelist Rules* pop-up window, follow these settings:
+
+- :guilabel:`Apply To`: Select :guilabel:`Product`.
+- :guilabel:`Product`: Select *Rain boots* from the drop-down menu.
+- :guilabel:`Price Type`: Select :guilabel:`Discount`.
+- :guilabel:`Discount`: Enter `-10` and leave the default :guilabel:`sales price`.
+
+Click :guilabel:`Save & close` to add the pricelist rule to the pricelist.
+
+.. image:: pricing/example-rain-boots-discount.png
+   :alt: Example of 10% markup pricelist rule configuration.
+
+.. _sales/pricing/formula-use-cases:
+
+Formula use cases
+-----------------
+
+The *Formula* price type is useful for complex pricing requirements, such as dynamic pricing values
+based on margin cost, or pricing values that require both a discount and a flat rate to be added or
+removed.
+
+Dynamic pricing based on cost
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+It's approaching winter break, and the most in-demand item is a jacket worn by a popular actress. A
+clothing retail store stocks the jacket, but its inventory is running low. The store decides to sell
+the jacket at a 100% markup with a $5 minimum margin during the winter season while the demand is
+still high. The wholesale price of the jacket is $75 and the cost is $70.
+
+First, navigate to :menuselection:`Sales app --> Products --> Pricelist` and select an existing
+pricelist or click :guilabel:`New` to create a new one.
+
+On the *Create Pricelist Rules* pop-up window, follow these settings:
+
+- :guilabel:`Apply To`: Select :guilabel:`Product`.
+- :guilabel:`Product`: Select *Classic Brown Jacket* from the drop-down menu.
+- :guilabel:`Price Type`: Select :guilabel:`Formula`.
+- :guilabel:`Base price`: Select :guilabel:`Cost` from the drop-down menu.
+- :guilabel:`Markup`: Enter `100`.
+- :guilabel:`Validity`: Select :guilabel:`Range` and select `Nov 1` to `Dec 31`.
+
+Click :guilabel:`Save & Close` to add the pricelist rule to the pricelist.
+
+.. image:: pricing/example-jacket-formula.png
+   :alt: Formula example for a markup cost with 5 dollar minimum margin in Odoo Sales.
+
+Then create a quotation for the jacket, select desired pricelist from the :guilabel:`Pricelist`
+drop-down menu and :ref:`set up the Margin and Margin (%) columns
+<sales/margin/margin-sale-order-line>` to show what the values are.
+
+.. image:: pricing/example-formula-markup-with-margins.png
+   :alt: Example of a quotation with a pricelist applied and margins enabled.
 
 .. seealso::
-   - :doc:`/applications/sales/sales/products_prices/prices/currencies`
-   - :doc:`/applications/websites/ecommerce/configuration/prices`
+   :doc:`../../sales_quotations/margin`
+
+20% discounts with prices rounded up to $9.99
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A grocery store is having a flash sale on their chicken products in the butcher section. All the
+chicken meat products are on sale for 20% and rounded to 9.99.
+
+Navigate to :menuselection:`Sales app --> Products --> Pricelist` and select an existing pricelist
+or click :guilabel:`New` to create a new one.
+
+On the *Create Pricelist Rules* pop-up window, follow these settings:
+
+- :guilabel:`Apply To`: Select :guilabel:`Category`.
+- :guilabel:`Category`: Select *Meat/Chicken* from the drop-down menu.
+- :guilabel:`Price Type`: Select :guilabel:`Formula`.
+- :guilabel:`Base price`: Select :guilabel:`Cost` from the drop-down menu.
+- :guilabel:`Markup`: Enter `20`.
+- :guilabel:`Round off to`: Enter `10`.
+- :guilabel:`Extra Fee`: Enter `-0.01`.
+
+Click :guilabel:`Save & Close` to add the pricelist rule to the pricelist.
+
+
+.. image:: pricing/example-chicken-formula.png
+   :alt: Example of a 20% discount with prices rounded to 9.99 in Odoo Sales.
+
+.. _sales/pricing/fixed-price-use-cases:
+
+Fixed price use cases
+---------------------
+
+The *Fixed Price* price type is useful when applying flat rate pricing. The following are scenarios
+where flat rate pricing is applicable:
+
+- Store wide clearance sales.
+- Configuring pricing for different units of packaging.
+
+
+Flat sales price for a subcategory
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A sports store is having a sale on all their fishing lures. All the lures are only $9.99 during the
+sale.
+
+Navigate to :menuselection:`Sales app --> Products --> Pricelist` and select an existing pricelist
+or click :guilabel:`New` to create a new one.
+
+On the *Create Pricelist Rules* pop-up window, follow these settings:
+
+- :guilabel:`Apply To`: Select :guilabel:`Category`.
+- :guilabel:`Category`: Select *Fishing/Lures* from the drop-down menu.
+- :guilabel:`Price Type`: Select :guilabel:`Fixed Price`.
+- :guilabel:`Fixed Price`: Enter `9.99`.
+
+Click :guilabel:`Save & Close` to add the pricelist rule to the pricelist.
+
+.. image:: pricing/example-fishing-lures-fixed-price.png
+   :alt: Example of fixed price pricelist rule configuration.
+
+Set different product packaging prices
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A wine and liquor store sells a can of beer for $4. Next month, it will sell the beer in three
+different packagings: four-pack, six-pack, and twelve-pack.
+
+The store intends to offer discounts based on volumetric pricing, with prices for each pack being
+the following:
+
+- Four-pack is $12
+- Six-pack is $15
+- Twelve-pack is $24
+
+Navigate to :menuselection:`Sales app --> Products --> Pricelist` and select an existing pricelist
+or click :guilabel:`New` to create a new one.
+
+On the *Create Pricelist Rules* pop-up window, follow these settings:
+
+- :guilabel:`Apply To`: Select :guilabel:`Product`.
+- :guilabel:`Product`: Select *Beer* from the drop-down menu.
+- :guilabel:`Price Type`: Select :guilabel:`Fixed Price`.
+- :guilabel:`Fixed Price`: Enter `3`.
+
+To set the packaging, select :guilabel:`Pack of 4` from the :guilabel:`Units` drop-down menu. Click
+:guilabel:`Save & New` to add the pricelist rule to the pricelist and start a new one.
+
+.. image:: pricing/example-beer-packaging-fixed-price.png
+   :alt: Example of Fixed Price configuration for product packaging type.
+
+For the second pricelist rule, select the same options except for:
+
+- :guilabel:`Fixed Price`: Enter `2.50`.
+- The packaging field: Select :guilabel:`Pack of 6` from the drop-down menu.
+
+Click :guilabel:`Save & New` to add the pricelist rule to the pricelist and in the last pricelist
+rule form, repeat the same options except for:
+
+- :guilabel:`Fixed Price`: Enter `2`.
+- The packaging field: Select :guilabel:`Pack of 12` from the drop-down menu.
+
+Click :guilabel:`Save & Close` to add the pricelist rule to the pricelist. The pricelist should now
+have three pricelist rules for all the package types.
+
+.. image:: pricing/example-beer-package-pricelist.png
+   :alt: Example of a pricelist for product packaging types.
+
+.. seealso::
+   - :doc:`../../sales_quotations/margin`
+   - :doc:`discounts`
