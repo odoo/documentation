@@ -32,6 +32,8 @@ finished products into stock.
    - :doc:`two_step_manufacturing`
    - :doc:`three_step_manufacturing`
 
+.. _manufacturing/manufacturing-orders/create-mo:
+
 Create a manufacturing order
 ============================
 
@@ -55,19 +57,24 @@ and operations specified on the |BoM|. If additional components or operations ar
 
 Finally, click :guilabel:`Confirm` to confirm the |MO|.
 
+.. _manufacturing/basic_setup/process-mo:
+
 Process manufacturing order
 ===========================
 
 An |MO| is processed by completing all of the work orders listed under its *Work Orders* tab. This
 can be done on the |MO| itself or from the *Shop Floor* module.
 
+.. _manufacturing/basic_setup/process-mo-from-mo:
+
 Basic workflow
 --------------
 
-Work orders can be completed from the :ref:`Work Orders tab <manufacturing/basic_setup/wo-from-mo>`
-or a :ref:`work order form <manufacturing/basic_setup/wo-from-wo>`.
+Work orders can be completed from the :ref:`Work Orders tab
+<manufacturing/basic_setup/process-wo-from-mo>` or a :ref:`work order form
+<manufacturing/basic_setup/process-wo-from-wo>`.
 
-.. _manufacturing/basic_setup/wo-from-mo:
+.. _manufacturing/basic_setup/process-wo-from-mo:
 
 Work Orders tab
 ~~~~~~~~~~~~~~~
@@ -91,7 +98,7 @@ order. Repeat the same process for each work order listed in the :guilabel:`Work
 
 After all work orders are complete, :ref:`complete the MO <manufacturing/basic_setup/complete-mo>`.
 
-.. _manufacturing/basic_setup/wo-from-wo:
+.. _manufacturing/basic_setup/process-wo-from-wo:
 
 Work order form
 ~~~~~~~~~~~~~~~
@@ -130,9 +137,34 @@ After all work orders for the |MO| are complete, :ref:`complete the MO
 Complete the MO
 ~~~~~~~~~~~~~~~
 
-Back in the |MO| form, after completing all work orders, click :guilabel:`Produce All` at the top of
-the screen to mark the |MO| as :guilabel:`Done` and register the manufactured products into
-inventory.
+Back in the |MO| form, after completing all work orders, click :guilabel:`Produce` at the top of the
+screen to mark the |MO| as :guilabel:`Done` and register the manufactured products into inventory.
+
+.. _manufacturing/basic_setup/partially-complete-mo:
+
+Partially complete the MO
+*************************
+
+To produce a partial quantity of the manufacturing order, enter the number in the
+:guilabel:`Quantity` field at the top of the manufacturing order, then click :guilabel:`Produce`. If
+the quantity of consumed materials does not match the quantity of products produced, a
+:guilabel:`Consumption Warning` pop-up window appears. Click :guilabel:`Confirm` to keep the
+existing quantity of consumed materials, or click :guilabel:`Update Quantities & Validate` to match
+the consumed quantities to the partial MO quantity of products produced.
+
+Click :guilabel:`Close Production` in the :guilabel:`You produced less than the initial demand`
+pop-up window, and a second :guilabel:`Consumption Warning` pop-up window appears. Click
+:guilabel:`Confirm` to keep the existing quantity of consumed materials, or click :guilabel:`Update
+Quantities & Validate` to match the consumed quantities to the full MO quantity of products
+produced.
+
+The |MO| is marked as :guilabel:`Done` and the manufactured products are registered into inventory.
+
+.. seealso::
+   To create a backorder for the remaining quantity, see :ref:`Manufacturing backorders
+   <manufacturing/manufacturing-backorders/create-backorder-manufacturing-app>`.
+
+.. _manufacturing/basic_setup/process-mo-from-shop-floor:
 
 Shop Floor workflow
 -------------------
@@ -140,12 +172,16 @@ Shop Floor workflow
 To complete the work orders for an |MO| using the *Shop Floor* module, begin by navigating to
 :menuselection:`Manufacturing app --> Operations --> Manufacturing Orders`, and then select an |MO|.
 
-Shop Floor can be opened in two ways for manufacturing orders:
+Manufacturing orders can be opened in the Shop Floor module from two different locations:
 
-- :ref:`From the MO form <manufacturing/basic_setup/shop-floor-mo>`
-- :ref:`From the main Odoo dashboard <manufacturing/basic_setup/shop-floor-open>`
+- :ref:`From the MO form <manufacturing/basic_setup/shop-floor-from-mo>`
+- :ref:`From the main Odoo dashboard <manufacturing/basic_setup/shop-floor-from-dashboard>`
 
-.. _manufacturing/basic_setup/shop-floor-mo:
+.. note::
+   To partially complete the MO, see :ref:`Partially complete the MO
+   <manufacturing/basic_setup/partially-complete-mo>`.
+
+.. _manufacturing/basic_setup/shop-floor-from-mo:
 
 MO form
 ~~~~~~~
@@ -163,10 +199,10 @@ the number of units to be produced, and the next work order required for the |MO
 .. image:: manufacturing_work_orders/mo-link-shop-floor.png
    :alt: Tap the work order to open its work orders.
 
-Click the work order in the *Overview* to open it in its work center, then :ref:`process it in
-Shop Floor <manufacturing/basic_setup/complete-wo>`.
+Click the work order in the *Overview* to open it in its work center, then :ref:`process it in Shop
+Floor <manufacturing/basic_setup/complete-wo>`.
 
-.. _manufacturing/basic_setup/shop-floor-open:
+.. _manufacturing/basic_setup/shop-floor-from-dashboard:
 
 Shop Floor module
 ~~~~~~~~~~~~~~~~~
@@ -205,6 +241,8 @@ Clicking :guilabel:`Close Production` causes the work order card to disappear. T
    more in-depth explanation of the module and all of its features, please see the
    :doc:`../shop_floor/shop_floor_overview` documentation.
 
+.. _manufacturing/basic_setup/wo-components:
+
 Adding or editing work order components
 =======================================
 
@@ -220,6 +258,8 @@ Mark components as :guilabel:`Consumed` by selecting the checkbox for them on th
 Add components by clicking the :guilabel:`Add component` link and adding them from the *Products*
 form. After all additional components are added, return to the work order form by clicking
 :guilabel:`Back to Order`.
+
+.. _manufacturing/basic_setup/wo-properties:
 
 Work order properties
 =====================
@@ -253,9 +293,9 @@ Lot/serial number tracking
 are used to assign unique numbers to individual products, while lot numbers are used to assign a
 single number to multiple units of a specific product.
 
-When manufacturing products tracked using lots or serial numbers, Odoo requires the lot or serial
-number to be assigned to each product before manufacturing can be completed. This ensures that each
-product is properly tracked from the moment it enters inventory.
+When manufacturing products are tracked using lots or serial numbers, Odoo requires the lot or
+serial number to be assigned to each product before manufacturing can be completed. This ensures
+that each product is properly tracked from the moment it enters inventory.
 
 Configure products for tracking
 -------------------------------
@@ -317,13 +357,13 @@ or manually enter a new lot number and click :guilabel:`Create "#"`  in the drop
 
 Either of these methods assigns a lot number to the products in the |MO| before production is
 finished. It is also possible to complete production and close the |MO| by clicking
-:guilabel:`Produce All` without assigning a lot number. Doing so automatically generates and assigns
-a lot using the next available number.
+:guilabel:`Produce` without assigning a lot number. Doing so automatically generates and assigns a
+lot using the next available number.
 
 Serial number manufacturing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Clicking the :guilabel:`Produce All` button closes the |MO| and automatically generates and assigns
+Clicking the :guilabel:`Produce` button closes the |MO| and automatically generates and assigns
 serial numbers for the quantity of the products being produced.
 
 For single-unit |MOs|, enter a number manually in the :guilabel:`Lot/Serial Number` field and click
@@ -347,7 +387,7 @@ the |MO|. Keep this number or enter a number manually into the field, then click
 .. image:: manufacturing_work_orders/assign-sns.png
    :alt: Complete the fields of the Assign Serial Numbers window to generate serial numbers.
 
-On the |MO|, click :guilabel:`Produce All` to mark the products as produced and mark the |MO| as
+On the |MO|, click :guilabel:`Produce` to mark the products as produced and mark the |MO| as
 :guilabel:`Done`.
 
 .. seealso::

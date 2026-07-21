@@ -260,7 +260,8 @@ before orders which are scheduled further out.
 To specify the scheduled date on an |MO|, begin by navigating to :menuselection:`Manufacturing app
 --> Operations --> Manufacturing Orders`, and click :guilabel:`New` to create a new |MO|.
 
-To learn more about the fields on the |MO| form, see :ref:`manufacturing/basic_setup/create-mo`.
+To learn more about the fields on the |MO| form, see
+:ref:`manufacturing/manufacturing-orders/create-mo`.
 
 Click on the :guilabel:`Scheduled Date` field to open a calendar popover window. By default, the
 :guilabel:`Scheduled Date` field and its corresponding pop-up window show the current date and time.
