@@ -8,14 +8,14 @@ Units of measure
 .. |RFQ| replace:: :abbr:`RFQ (Request for Quotation)`
 .. |SO| replace:: :abbr:`SO (Sales Order)`
 
-In some cases, handling products in different units of measure is necessary. For example, a business
-can buy products from a country that uses the metric system, and then sell those products in a
-country that uses the imperial system. In that case, the business needs to convert the units.
+In some cases, handling products in different *units of measure* (UoM) is necessary. For example, a
+business can buy products from a country that uses the metric system, and then sell those products
+in a country that uses the imperial system. In that case, the business needs to convert the units.
 
 Another case for unit conversion is when a business buys products in a big pack from a supplier, and
 then sells those products in individual units.
 
-Odoo can be set up to use different *units of measure (UoM)* for one product.
+Odoo can be set up to use different units of measure for one product.
 
 .. _inventory/product_replenishment/configuration:
 
@@ -56,12 +56,12 @@ Sales unit of measure (packagings)
 ----------------------------------
 
 Units of measure that the product is sold in are considered packagings. To define these packagings,
-open the :guilabel:`Sales` tab of the product, and then in the :guilabel:`Upsell & Cross-Sell`
-section, add a packaging to the :guilabel:`Packagings` field. Multiple packagings can be specified
-for each product.
+open the *Sales* tab of the product, and then in the :guilabel:`Upsell & Cross-Sell` section, add a
+packaging to the :guilabel:`Packagings` field. Multiple packagings can be specified for each
+product.
 
 .. image:: uom/sales-uom.png
-   :alt: Add a packaging to the "Sales" tab of the product.
+   :alt: Add a packaging to the Sales tab of the product.
 
 .. seealso::
    :doc:`Packaging <packaging>`
@@ -69,13 +69,12 @@ for each product.
 Purchase unit of measure
 ------------------------
 
-Units of measure that the product is purchased in are defined in the :guilabel:`Purchase` tab of the
-product. Purchase orders can be created in these units of measure after they are defined in the
-vendor price list. Purchase units of measure must be in the same category as the default unit of
-measure.
+Units of measure that the product is purchased in are defined in the *Purchase* tab of the product.
+Purchase orders can be created in these units of measure after they are defined in the vendor
+pricelist. Purchase units of measure must be in the same category as the default unit of measure.
 
 .. image:: uom/purchase-uom.png
-   :alt: Specify a purchase unit of measure in the "Purchase" tab.
+   :alt: Specify a purchase unit of measure in the Purchase tab.
 
 .. _inventory/product_replenishment/unit-conversion:
 
@@ -102,9 +101,9 @@ Buy products in the purchase UoM
 --------------------------------
 
 When creating a new request for quotation (RFQ) in the *Purchase* app, Odoo pulls the unit that the
-vendor prefers to use, defined in the :guilabel:`Unit` field of the vendor line in the
-:guilabel:`Purchase` tab of the product. The unit the vendor prefers **can** be different from the
-unit your company prefers to use. If needed, manually edit the :guilabel:`Unit` value on the |RFQ|.
+vendor prefers to use, defined in the :guilabel:`Unit` field of the vendor line in the *Purchase*
+tab of the product. The unit the vendor prefers **can** be different from the unit a company prefers
+to use. If needed, manually edit the :guilabel:`Unit` value on the |RFQ|.
 
 After the |RFQ| is confirmed into a |PO|, click the :guilabel:`Receipt` smart button at the top of
 the |PO|.
@@ -142,7 +141,7 @@ of measure can be manually edited in the :guilabel:`Quantity` field, if needed. 
 
 .. important::
    A |PO| can **only** be automatically generated if at least **one** vendor is listed in the
-   product form's :guilabel:`Purchase` tab.
+   product form's *Purchase* tab.
 
 .. image:: uom/replenish.png
    :alt: Click the Confirm button to manually replenish.
@@ -196,4 +195,30 @@ enter a :guilabel:`UNSPSC Category`, which is a globally recognized `code manage
    `0.9144` of its reference unit, `m`, in the :guilabel:`Quantity` field.
 
    .. figure:: uom/custom-uom.png
-      :alt: Specify a reference unit in the "Quantity" field.
+      :alt: Specify a reference unit in the Quantity field.
+
+Group units of measure in the POS app
+=====================================
+
+When a customer orders multiple units of the same product at a POS register, the register and the
+:doc:`customer display <../../../../sales/point_of_sale/hardware_network/customer_display>` may
+become cluttered.
+
+Products can be grouped by unit of measure on the POS register and on the customer display.
+
+To do so, follow these steps:
+
+#. Enable :doc:`developer mode <../../../../general/developer_mode>`.
+#. Open the *Units & Packagings* page by navigating to :menuselection:`Inventory app -->
+   Configuration --> Units & Packagings`.
+#. Select a unit of measure.
+#. Enable :guilabel:`Group Products in POS`.
+
+After this setting is enabled, items are grouped on the POS register. The number of that unit of
+measure and the price are displayed.
+
+.. image:: uom/pos-grouped-products.png
+   :alt: 12 eggs are grouped in the POS app.
+
+.. seealso::
+   :doc:`../../../../sales/point_of_sale/products`
