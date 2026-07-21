@@ -18,15 +18,15 @@ them to and from inventory is not tracked.
    warehouse, begin by navigating to :menuselection:`Inventory --> Configuration --> Warehouses`,
    and then select a warehouse from the :guilabel:`Warehouses` screen.
 
-   On the :guilabel:`Warehouse Configuration` tab, find the :guilabel:`Manufacture` radio input
-   field, and select one of the three options: :guilabel:`Manufacture (1 step)`, :guilabel:`Pick
-   components and then manufacture (2 steps)`, or :guilabel:`Pick components, manufacture and then
-   store products (3 steps)`.
+   On the *Warehouse Configuration* tab, find the :guilabel:`Manufacture` radio input field, and
+   select one of the three options: :guilabel:`Manufacture (1 step)`, :guilabel:`Pick components and
+   then manufacture (2 steps)`, or :guilabel:`Pick components, manufacture and then store products
+   (3 steps)`.
 
    .. image:: one_step_manufacturing/manufacturing-type.png
       :alt: The Manufacture radio input field on a warehouse configuration page.
 
-.. _manufacturing/basic_setup/create-mo:
+.. _manufacturing/one-step/create-mo:
 
 Create manufacturing order
 ==========================
@@ -42,10 +42,10 @@ If a product has more than one |BOM| configured for it, the specific |BOM| can b
 :guilabel:`Bill of Material` field, and the :guilabel:`Product` field auto-populates with the
 associated product.
 
-After a |BOM| has been selected, the :guilabel:`Components` and :guilabel:`Work Orders` tabs
-auto-populate with the components and operations specified on the |BOM|. If additional components or
-operations are required for the |MO| being configured, add them to the :guilabel:`Components` and
-:guilabel:`Work Orders` tabs by clicking :guilabel:`Add a line`.
+After a |BOM| has been selected, the *Components* and *Work Orders* tabs auto-populate with the
+components and operations specified on the |BOM|. If additional components or operations are
+required for the |MO| being configured, add them to the *Components* and *Work Orders* tabs by
+clicking :guilabel:`Add a line`.
 
 Finally, click :guilabel:`Confirm` to confirm the |MO|.
 
@@ -61,15 +61,15 @@ Basic workflow
 To complete work orders from the |MO| itself, begin by navigating to :menuselection:`Manufacturing
 --> Operations --> Manufacturing Orders`, and then select an |MO|.
 
-On the |MO| page, select the :guilabel:`Work Orders` tab. Once work begins on the first work order
-that needs to be completed, click the :guilabel:`Start` button for that work order. Odoo
-*Manufacturing* then starts a timer that keeps track of how long the work order takes to complete.
+On the |MO| page, select the *Work Orders* tab. Once work begins on the first work order that needs
+to be completed, click the :guilabel:`Start` button for that work order. Odoo **Manufacturing** then
+starts a timer that keeps track of how long the work order takes to complete.
 
 .. image:: one_step_manufacturing/start-button.png
    :alt: The Start button for an operation on a manufacturing order.
 
 When the work order is completed, click the :guilabel:`Done` button for that work order. Repeat the
-same process for each work order listed on the :guilabel:`Work Orders` tab.
+same process for each work order listed on the *Work Orders* tab.
 
 .. image:: one_step_manufacturing/done-button.png
    :alt: The Done button for an operation on a manufacturing order.
@@ -83,10 +83,9 @@ Shop Floor workflow
 To complete the work orders for an |MO| using the *Shop Floor* module, begin by navigating to
 :menuselection:`Manufacturing --> Operations --> Manufacturing Orders`, and then select an |MO|.
 
-On the |MO|, click on the :guilabel:`Work Orders` tab, and then select the :guilabel:`↗️ (square
-with arrow coming out of it)` button on the line of the first work order to be processed. Doing so
-opens a :guilabel:`Work Orders` pop-up window, with details and processing options for the work
-order.
+On the |MO|, click on the *Work Orders* tab, and then click the first work order to be processed.
+Doing so opens a :guilabel:`Work Orders` pop-up window, with details and processing options for the
+work order.
 
 On the pop-up window, select the :guilabel:`Open Shop Floor` button at the top-left of the window to
 open the *Shop Floor* module.

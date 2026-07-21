@@ -18,7 +18,7 @@ Access Shop Floor
 
 - Click the :guilabel:`Shop Floor` module icon from the main Odoo dashboard.
 - Click the :icon:`oi-view-kanban` :guilabel:`Shop Floor` smart button on a manufacturing order.
-  This will open the manufacturing order in the *Shop Floor* module.
+  This opens the manufacturing order in the *Shop Floor* module.
 
 Activating work centers
 =======================
@@ -47,8 +47,8 @@ First, open the *Shop Floor* app from either the main Odoo dashboard or from the
 :icon:`oi-view-kanban` :guilabel:`Shop Floor` smart button on a manufacturing order.
 
 Click the :icon:`fa-navicon` :guilabel:`(menu)` icon, then click :icon:`fa-arrow-circle-down`
-:guilabel:`Install App`. A new window will open. Click the :guilabel:`Install` button to install the
-app in the workstation's browser.
+:guilabel:`Install App`. A new window opens. Click the :guilabel:`Install` button to install the app
+in the workstation's browser.
 
 Navigation
 ==========
@@ -57,8 +57,8 @@ Navigation
 the top of the module:
 
 - :guilabel:`Overview`: *Shop Floor*'s main dashboard and displays information cards for |MOs|.
-  Learn more about the Overview in the :ref:`manufacturing/shop_floor/overview`
-  documentation.
+  Learn more about the Overview in the :ref:`manufacturing/shop_floor/overview` Learn more about the
+  Overview in the :ref:`manufacturing/shop_floor/overview` documentation.
 - :guilabel:`My WO`: shows information cards for all work orders assigned to the employee whose
   profile is currently active in the operator panel on the left side of the module. This view
   functions largely the same as the views for each work center, but it only shows work orders
@@ -132,14 +132,14 @@ which opens an *Options* pop-up window with additional options for the |MO|:
   work order, then click the :guilabel:`Back to ShopFloor` button.
 
   .. note::
-   Additional components are consumed in the *Shop Floor* module, but their stock moves will not be
-   validated until the |MO| is closed.
+     Additional components are consumed in the *Shop Floor* module, but their stock moves are not
+     validated until the |MO| is closed.
 
-- :guilabel:`Add By-product`: Add a product that will be created as a byproduct of this work order.
-  This displays when the :guilabel:`By-Products` setting is enabled in the *Manufacturing* app.
-- :guilabel:`Open Manufacturing Order`: opens the |MO| in the *Manufacturing* app.
-- :guilabel:`Log Note`: Enter a note that will be visible in the *Shop Floor* module and throughout
-  all steps on the shop floor.
+- :guilabel:`Add By-product`: Add a product that is created as a byproduct of this work order. This
+  displays when the :guilabel:`By-Products` setting is enabled in the **Manufacturing** app.
+- :guilabel:`Open Manufacturing Order`: opens the |MO| in the **Manufacturing** app.
+- :guilabel:`Log Note`: Enter a note that is visible in the *Shop Floor* module and throughout all
+  steps on the shop floor.
 
 .. image:: shop_floor_overview/mo-card.png
    :alt: An information card for an MO on the Overview of the Shop Floor module.
@@ -184,19 +184,14 @@ Work order steps can be completed by clicking the button for the line, then foll
 instructions on the pop-up window that appears.
 
 If the work order being processed is the final work order for the |MO|, a :guilabel:`Close
-Production` button appears on the footer of the work order card. Clicking :guilabel:`Close
-Production` closes both the work order and the |MO|, unless a quality check is required for the
 Production` button appears on the footer of the work order card. Click the :guilabel:`Close
 Production` to close both the work order and the |MO|, unless a quality check is required for the
 |MO|. In this case, the quality check must be completed from the |MO| card before the |MO| can be
 closed.
 
 Alternatively, if the |MO| requires the completion of additional work orders, a :guilabel:`Mark as
-Done` button appears instead. Clicking :guilabel:`Mark as Done` marks the current work order as
-completed, and causes the next work order to appear on the view for the work center it is assigned
 Done` button appears instead. Click :guilabel:`Mark as Done` to mark the current work order as
-completed, and the next work order appears on the view for the work center it is assigned
-to.
+completed, and the next work order appears on the view for the work center it is assigned to.
 
 After clicking :guilabel:`Close Production` or :guilabel:`Mark as Done`, the work order card fades
 away. When the work order card disappears completely, the work order is marked as
@@ -227,8 +222,9 @@ which opens a pop-up window with additional options for the work order:
 Operator panel
 --------------
 
-The operator panel is used to manage the employees who are signed in to the *Shop Floor* module.
-The panel displays the name and profile picture of every employee currently signed in across all
+The operator panel is used to manage the employees who are signed in to the *Shop Floor* module. The
+operator panel is used to manage the employees who are signed in to the *Shop Floor* module. The
+panel displays the name and profile picture of every employee currently signed in across all
 database instances.
 
 To interact with *Shop Floor* as a specific employee, click the employee's name to activate their
@@ -260,7 +256,8 @@ before orders which are scheduled further out.
 To specify the scheduled date on an |MO|, begin by navigating to :menuselection:`Manufacturing app
 --> Operations --> Manufacturing Orders`, and click :guilabel:`New` to create a new |MO|.
 
-To learn more about the fields on the |MO| form, see :ref:`manufacturing/basic_setup/create-mo`.
+To learn more about the fields on the |MO| form, see
+:ref:`manufacturing/manufacturing-orders/create-mo`.
 
 Click on the :guilabel:`Scheduled Date` field to open a calendar popover window. By default, the
 :guilabel:`Scheduled Date` field and its corresponding pop-up window show the current date and time.
