@@ -56,6 +56,14 @@ requested :guilabel:`Product` and :guilabel:`Quantity`. Confirm the quotations, 
 |SOs|. This generates a delivery order for each |SO|, accessible via the :icon:`fa-truck`
 :guilabel:`Delivery` smart button.
 
+.. important::
+   To ensure Odoo can properly create allocations, confirm that the selected product has the
+   following configurations:
+
+   - :guilabel:`Purchase` checkbox is selected
+   - :guilabel:`Product Type` is set to :guilabel:`Goods`
+   - :guilabel:`Track Inventory` option is selected
+
 .. _inventory/reception-report/workflow/confirm-po:
 
 Create and confirm |PO|
@@ -65,11 +73,6 @@ The user then creates a new |RfQ| to replenish the demanded stock by navigating 
 app and clicking :guilabel:`New`. On the form, add the products in demand on the customers' |SOs| by
 clicking :guilabel:`Add a product` in the *Products* tab and specifying the required
 :guilabel:`Quantity`.
-
-.. important::
-   To ensure Odoo can properly create allocations, confirm that the selected product has the
-   :guilabel:`Can be Purchased` option selected and its :guilabel:`Product Type` set to
-   :guilabel:`Storable Product`.
 
 After adding the products, click :guilabel:`Confirm Order` to turn the |RfQ| into a |PO|.
 
