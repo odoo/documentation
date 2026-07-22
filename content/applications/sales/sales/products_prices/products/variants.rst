@@ -5,9 +5,9 @@ Product variants
 Product variants are used to give single products a variety of different characteristics and options
 for customers to choose from, such as size, style, or color, just to name a few.
 
-Product variants can be managed via their individual product template, or by navigating to either
-the :guilabel:`Product Variants` or :guilabel:`Attributes` page. All of these options are located
-within the Odoo *Sales* application.
+Product variants can be managed by navigating to :menuselection:`Sales app --> Products -->
+Products`, clicking a product with variants, and clicking the :icon:`fa-sitemap`
+:guilabel:`Variants` smart button.
 
 .. example::
    An apparel company has the following variant breakdown for one of its best-selling t-shirts:
@@ -36,8 +36,8 @@ Configuration
 =============
 
 To use product variants, go to :menuselection:`Sales --> Configuration --> Settings`, then enable
-the :guilabel:`Variants` feature in the :guilabel:`Product Catalog` section, and click
-:guilabel:`Save` at the top of the :guilabel:`Settings` page.
+the :guilabel:`Variants` feature in the *Product Catalog* section, and click :guilabel:`Save` at the
+top of the :guilabel:`Settings` page.
 
 .. _products/variants/attributes:
 
@@ -45,7 +45,7 @@ Attributes
 ==========
 
 Before product variants can be set up, attributes **must** be created. To create, manage, and modify
-attributes, navigate to :menuselection:`Sales app --> Configuration --> Attributes`.
+attributes, navigate to :menuselection:`Sales app --> Products --> Attributes`.
 
 .. note::
    The order of attributes on the :guilabel:`Attributes` page dictates how they appear on the
@@ -67,26 +67,19 @@ The following :guilabel:`Display Type` options are available:
 
 .. tabs::
 
-   .. group-tab:: Pills
-
-      Options appear as selectable buttons.
-
-      .. image:: variants/pills-display-type.png
-         :alt: Pills display type
-
-   .. group-tab:: Color
-
-      Options appear as small, colored circles; the colors can be defined using any HTML color code.
-
-      .. image:: variants/color-display-type.png
-         :alt: Color display type
-
    .. group-tab:: Radio
 
       Options appear as radio buttons.
 
       .. image:: variants/radio-display-type.png
          :alt: Radio display type
+
+   .. group-tab:: Pills
+
+      Options appear as selectable buttons.
+
+      .. image:: variants/pills-display-type.png
+         :alt: Pills display type
 
    .. group-tab:: Select
 
@@ -95,12 +88,12 @@ The following :guilabel:`Display Type` options are available:
       .. image:: variants/select-display-type.png
          :alt: Select display type
 
-   .. group-tab:: Image
+   .. group-tab:: Color
 
-      Options appear as images.
+      Options appear as small, colored circles; the colors can be defined using any HTML color code.
 
-      .. image:: variants/image-display-type.png
-         :alt: Image display type
+      .. image:: variants/color-display-type.png
+         :alt: Color display type
 
    .. group-tab:: Multi-checkbox
 
@@ -110,12 +103,16 @@ The following :guilabel:`Display Type` options are available:
       .. image:: variants/multi-checkbox-display-type.png
          :alt: Multi-checkbox display type
 
-The :guilabel:`Variant Creation` field determines if/when a new variant is automatically created
-once an attribute is added to a product.
+   .. group-tab:: Image
 
-.. important::
-   If the attribute's :guilabel:`Display Type` is :guilabel:`Multi-checkbox`, you **must** set the
-   :guilabel:`Variant Creation` field to :guilabel:`Never`.
+      Options appear as images.
+
+      .. image:: variants/image-display-type.png
+         :alt: Image display type
+
+The :guilabel:`Variant Creation` field determines when new variants are automatically created
+once an attribute is added to a product. Once added to a product, an attribute's :guilabel:`Variants
+Creation` mode cannot be edited.
 
 - :guilabel:`Instantly`: Creates all possible variants as soon as attributes and values are added to
   a product template.
@@ -126,23 +123,24 @@ once an attribute is added to a product.
   attribute with this tag, all values are loaded when the product displays, since the creation of
   discrete variants is prevented.
 
-.. warning::
-   Once added to a product, an attribute's :guilabel:`Variants Creation` mode cannot be edited.
+.. important::
+   If the attribute's :guilabel:`Display Type` is :guilabel:`Multi-checkbox`, you **must** set the
+   :guilabel:`Variant Creation` field to :guilabel:`Never`.
 
-The :guilabel:`eCommerce Filter Visibility` field determines whether or not these attribute options
-are visible to the customer on the front-end, as they shop on the online store.
+In the *eCommerce* tab, the :guilabel:`Category`, :guilabel:`Filter`, :guilabel:`On Product Cards`,
+and :guilabel:`Show Thumbnails` fields can be found.
 
-- :guilabel:`Visible`: the attribute values are visible to customers on the front-end.
-- :guilabel:`Hidden`: the attribute values are hidden from customers on the front-end.
+- :guilabel:`Category`: Sets the category to regroup similar attributes under for comparison
+  purposes.
+- :guilabel:`Filter`: Determines whether these attribute options are visible to customers as they
+  shop online.
+- :guilabel:`On Product Cards`: Makes variants available for selection from the shop's pages. This
+  option is only available if :guilabel:`Variant Creation` is set to *Instantly*.
+- :guilabel:`Show Thumbnails`: Uses product variant images in place of the attribute value text.
+  This option is only available if :guilabel:`Variant Creation` is set to *Instantly*.
 
-Lastly, in the optional :guilabel:`eCommerce Category` field, select a category from a drop-down
-menu to group similar attributes under the same section for added specificity and organization.
-
-.. note::
-   To view the details related to the attribute category selected, click the internal link
-   :icon:`fa-arrow-right` :guilabel:`(right arrow)` icon to the far-right of the
-   :guilabel:`eCommerce Category` field, once an option has been selected. Doing so reveals that
-   attribute category's detail form.
+To view the details related to an attribute category selected, simply click the category's list
+entry.
 
    .. image:: variants/attribute-category-internal-link.png
       :alt: A standard attribute category detail page accessible via its internal link arrow icon.
@@ -167,51 +165,9 @@ menu to group similar attributes under the same section for added specificity an
 Attribute values
 ----------------
 
-Attribute values should be added to the :guilabel:`Attribute Values` tab. Values can be added to an
-attribute at any time, if needed.
-
-To add a value, click :guilabel:`Add a line` in the :guilabel:`Attribute Values` tab.
-
-Then, enter the name of the value in the :guilabel:`Value` column. Next, check the box in the
-:guilabel:`Is custom value` column if the value is custom (i.e., the customer gets to provide unique
-specifications that are specific to this particular value).
-
-Colors
-~~~~~~
-
-Next to :guilabel:`Display Type`, select the :guilabel:`Color` option. Go to the
-:guilabel:`Attribute Values` tab to modify the value settings.
-
-.. image:: variants/attribute-value-add-image.png
-   :alt: Add an image of the pattern to an attribute.
-
-To choose a color, click the blank circle in the :guilabel:`Color` column, which reveals an HTML
-color selector pop-up window.
-
-.. image:: variants/picking-a-color.png
-   :alt: Selecting a color from the HTML color pop-up window that appears on attribute form.
-
-In this pop-up window, select a specific color by dragging the color slider to a particular hue and
-clicking on the color portion directly on the color gradient window.
-
-Or, choose a specific color by clicking the *dropper* icon and selecting a desired color that's
-currently clickable on the screen.
-
-If you sell products with specific patterns, you can also add an image to display the pattern of the
-product. To do so, click the :icon:`fa-camera` :guilabel:`(camera)` icon, then click the
-:icon:`fa-pencil` :guilabel:`(pencil)` icon and select an image from your local drive. This pattern
-will appear as a color option on the eCommerce product page.
-
-.. image:: variants/pattern-display.png
-   :alt: Pattern as color option.
-
-.. tip::
-   Attributes can also be created directly from the product template by adding a new line and typing
-   the name into the :guilabel:`Variants` tab.
-
-Once an attribute is added to a product, that product is listed and accessible via the attribute's
-:guilabel:`Related Products` smart button. That button lists every product in the database currently
-using that attribute.
+Attribute values should be added in the *Attribute Values* tab. Values can be added to an attribute
+at any time. To add a value, click :guilabel:`Add a line` and enter the name of the value in the
+:guilabel:`Value` column.
 
 .. _products/variants/variants:
 
@@ -223,21 +179,20 @@ that, go to :menuselection:`Sales app --> Products --> Products`, and select an 
 view that desired product's form. Or, click :guilabel:`Create` to create a new product, to which a
 product variant can be added.
 
-On the product form, click the :guilabel:`Attributes \& Variants` tab to view, manage, and modify
-attributes and values for the product.
+On the product form, click the *Attributes \& Variants* tab to view, manage, and modify attributes
+and values for the product.
 
 .. image:: variants/attributes-values-tab.png
    :alt: The attributes and values tab on a typical product form in Odoo Sales.
 
 To add an attribute to a product and subsequent attribute values, click :guilabel:`Add a line` in
-the :guilabel:`Attributes \& Variants` tab. Then, choose the desired attribute from the drop-down
-menu that appears.
+the *Attributes \& Variants* tab. Then, choose the desired attribute from the drop-down menu that
+appears.
 
 .. tip::
-   Attributes can be created directly from the :guilabel:`Attributes \& Variants` tab of a product
-   form. To do that, start typing the name of the new attribute in the blank field, and select
-   either :guilabel:`Create` or :guilabel:`Create and edit...` from the mini drop-down menu that
-   appears.
+   Attributes can be created directly from the *Attributes \& Variants* tab of a product form. To do
+   that, start typing the name of the new attribute in the blank field, and select either
+   :guilabel:`Create` or :guilabel:`Create and edit...` from the mini drop-down menu that appears.
 
    Clicking :guilabel:`Create` creates the attribute, which can be customized later. Clicking
    :guilabel:`Create and edit...` creates the attribute, and a :guilabel:`Create Attribute` pop-up
@@ -259,46 +214,29 @@ column.
 Configure variants
 ------------------
 
-To the far-right of the attribute line is a :guilabel:`Configure` button. When clicked, Odoo reveals
-a separate page showcasing those specific :guilabel:`Product Variant Values`.
+On the attribute line is a :guilabel:`Configure` button. When clicked, Odoo opens a separate page
+with that product's specific product variant :guilabel:`Values`. The layout of this page may differ
+slightly from what is pictured based on the apps, modules, and prior configurations of the database.
 
 .. image:: variants/product-variant-values.png
    :alt: The Product Variant Values page accessible via the Configure button on a product form.
-
-Here, the specific :guilabel:`Value` name, :guilabel:`HTML Color Index` (if applicable), and
-:guilabel:`Value Price Extra` are viewable.
-
-.. note::
-   The :guilabel:`Value Price Extra` represents the increase in the sales price if the attribute is
-   selected.
-
-When a value is clicked on the :guilabel:`Product Variant Values` page, Odoo reveals a separate
-page, detailing that value's related details.
-
-.. image:: variants/product-variant-value-page.png
-   :alt: A Product Variant Values page accessible via the Product Variants Values general page.
-
-On the specific product variant detail page, the :guilabel:`Value` and :guilabel:`Value Price Extra`
-fields can be found, along with an :guilabel:`Exclude for` field.
-
-In the :guilabel:`Exclude for` field, different :guilabel:`Product Templates` and specific
-:guilabel:`Attribute Values` can be added. When added, this specific attribute value will be
-excluded from those specific products.
 
 .. _products/variants/variants-smart-button:
 
 Variants smart button
 ---------------------
 
-When a product has attributes and variants configured in its :guilabel:`Attributes \& Variants` tab,
-a :guilabel:`Variants` smart button appears at the top of the product form. The :guilabel:`Variants`
-smart button indicates how many variants are currently configured for that specific product.
+When a product has attributes and variants configured in its *Attributes \& Variants* tab, a
+:icon:`fa-sitemap` :guilabel:`Variants` smart button appears at the top of its product form. The
+:icon:`fa-sitemap` :guilabel:`Variants` smart button indicates how many variants are currently
+configured for that specific product. Using the smart button is the primary way to access variants
+for products.
 
 .. image:: variants/variants-smart-button.png
    :alt: The variants smart button at the top of the product form in Odoo Sales.
 
-When the :guilabel:`Variants` smart button is clicked, Odoo reveals a separate page showcasing all
-the specific product variant combinations configured for that specific product.
+When the :icon:`fa-sitemap` :guilabel:`Variants` smart button is clicked, Odoo reveals a separate
+page showcasing all the specific product variant combinations configured for that specific product.
 
 .. image:: variants/variants-page.png
    :alt: The variants page accessible via the variants smart button on the product form in Odoo.
@@ -360,10 +298,10 @@ deleted and recreated.
     - A new set of variants using just Size and Color attributes will be created, for a total of 9
       product variants
 
-   The business owner can find archived product variants by navigating to :menuselection:`Sales app
-   --> Products --> Product Variants`, clicking the drop-down in the search bar, and finally
-   clicking the :guilabel:`Archived filter`. Any deleted variants and their customizations will be
-   lost.
+   The business owner can find archived product variants by navigating to the product's form,
+   clicking the :icon:`fa-sitemap` :guilabel:`Variants` smart button, clicking the drop-down in the
+   search bar, and finally clicking the :guilabel:`Archived` tag in the :icon:`fa-filter`
+   :guilabel:`Variants`. Any deleted variants and their customizations will be lost.
 
 .. seealso::
    :doc:`import`
