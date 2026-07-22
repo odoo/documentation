@@ -71,6 +71,7 @@ To configure global filters in a spreadsheet:
    matching <spreadsheet/global-filters/field-matching>` section is correctly configured.
 
 .. note::
+   - Fields are presorted by type to simplify global filter creation.
    - Depending on the data source(s) connected to the spreadsheet, suggested global filters may be
      automatically proposed in the :guilabel:`Suggestions` section of the :guilabel:`Filters` panel.
      While these filters are pre-configured for immediate use, it is still possible to add a default
@@ -339,14 +340,17 @@ matching` section of the :guilabel:`Filter properties` allows you to determine, 
 filter should match against.
 
 .. note::
-   If a selected matching field is not one of the allowed field types for the :ref:`type of global
-   filter <spreadsheet/global-filters/create-types>`, the field name is shown in red on a red
-   background to indicate an error. A global filter cannot be saved if a disallowed matching field
-   is selected.
+   - Potential matching fields are presorted by :ref:`field type <studio/fields/field-types>`, based
+     on the :ref:`type of filter <spreadsheet/global-filters/create-types>` being created. For
+     example, when creating a date filter, the model's date fields are presented first.
+   - If a selected matching field is not one of the allowed field types for the :ref:`type of global
+     filter <spreadsheet/global-filters/create-types>`, the field name is shown in red on a red
+     background to indicate an error. A global filter cannot be saved if a disallowed matching field
+     is selected.
 
-   .. image:: global_filters/field-matching-error.png
-      :alt: Incorrect matching field shown in red on red background
-      :scale: 80%
+     .. image:: global_filters/field-matching-error.png
+        :alt: Incorrect matching field shown in red on red background
+        :scale: 80%
 
 .. _spreadsheet/global-filters/manage:
 
