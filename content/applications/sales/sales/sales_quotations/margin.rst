@@ -18,7 +18,7 @@ Settings`. In the :guilabel:`Pricing` section, enable the :guilabel:`Margins` ch
 .. image:: margin/margins-checkbox.png
    :alt: Margins checkbox.
 
-.. _sales_quotations/margin/configure-price-and-cost:
+.. _sales/margin/configure-price-and-cost:
 
 Configure price and cost
 ------------------------
@@ -46,7 +46,7 @@ Compute margins on sales orders
 
 To calculate the margins on a :abbr:`SO (sales order)`, navigate to :menuselection:`Sales app -->
 Orders --> Quotations` and :ref:`create a new quotation
-<sales_quotations/create_quotations/create-quotation>`. While adding products to the quotation, a
+<sales/create_quotations/create-quotation>`. While adding products to the quotation, a
 new field, :guilabel:`Margin`, automatically appears at the bottom of the to the quotation. This
 field displays the order's total margin in the configured currency as well as the percentage.
 
@@ -74,7 +74,7 @@ until an invoice is created.
 .. note::
    The :guilabel:`Margin (%)` column becomes read-only when the line item cost is `0`. To change the
    calculations for :guilabel:`Margin` and :guilabel:`Margin (%)` columns on the product form, refer
-   to the :ref:`sales_quotations/margin/configure-price-and-cost` section for more information.
+   to the :ref:`sales/margin/configure-price-and-cost` section for more information.
 
 Margin calculation with a pricelist
 ===================================
@@ -88,7 +88,7 @@ product. Follow these steps:
    rule <sales/products/price-rules>`.
 #. Configure the pricelist and click :guilabel:`Save & Close` button.
 #. Go to :menuselection:`Sales app --> Orders --> Quotations` and :ref:`create a quotation
-   <sales_quotations/create_quotations/create-quotation>`.
+   <sales/create_quotations/create-quotation>`.
 #. In the :guilabel:`Pricelist` field, select the newly made pricelist.
 #. Click on :guilabel:`Update Prices` to refresh the product price and margin.
 
