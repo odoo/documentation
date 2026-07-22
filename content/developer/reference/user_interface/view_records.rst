@@ -306,9 +306,7 @@ specifies how the matched node should be modified.
       .. code-block:: xml
 
          <xpath expr="//field[@name='x_field']" position="replace">
-             <div class="wrapper">
-                 $0
-             </div>
+             <div class="wrapper">$0</div>
          </xpath>
 
 .. attribute:: attributes
