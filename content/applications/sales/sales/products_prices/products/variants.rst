@@ -5,9 +5,8 @@ Product variants
 Product variants are used to give single products a variety of different characteristics and options
 for customers to choose from, such as size, style, or color, just to name a few.
 
-Product variants can be managed via their individual product template, or by navigating to either
-the :guilabel:`Product Variants` or :guilabel:`Attributes` page. All of these options are located
-within the Odoo *Sales* application.
+Product variants can be managed via their individual product template, or by navigating to
+:menuselection:`Sales app --> Products --> Product Variants`.
 
 .. example::
    An apparel company has the following variant breakdown for one of its best-selling t-shirts:
