@@ -468,7 +468,7 @@ Relational field types are:
 
         print(foo.other_id.name)
 
-    .. seealso:: `foreign keys <http://www.postgresql.org/docs/12/static/tutorial-fk.html>`_
+    .. seealso:: `foreign keys <http://www.postgresql.org/docs/15/tutorial-fk.html>`_
 
 :class:`One2many(other_model, related_field) <odoo.fields.One2many>`
     A virtual relationship, inverse of a :class:`~odoo.fields.Many2one`.
@@ -1368,7 +1368,7 @@ Dashboards
 .. _POEdit: https://poedit.net
 .. _PostgreSQL's documentation:
 .. _table_constraint:
-    https://www.postgresql.org/docs/12/static/ddl-constraints.html
+    https://www.postgresql.org/docs/15/ddl-constraints.html
 .. _python: https://python.org
 .. _XPath: https://w3.org/TR/xpath
 .. _twitter bootstrap: https://getbootstrap.com
