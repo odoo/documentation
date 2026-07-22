@@ -64,6 +64,11 @@ planning, and compliance reporting.
 
       Take care of employee records when collaboration ends.
 
+   .. card:: Training attendances
+      :target: employees/training_attendances
+
+      See what training each employee has completed.
+
 .. _employees/settings:
 
 Settings
@@ -147,3 +152,4 @@ This field only appears if the **Salary Configurator** module is installed.
    employees/badges
    employees/equipment
    employees/offboarding
+   employees/training_attendances
