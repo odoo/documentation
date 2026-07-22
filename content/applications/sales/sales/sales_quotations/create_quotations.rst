@@ -39,7 +39,7 @@ Settings`, and scroll to the :guilabel:`Quotations & Orders` section.
 To activate any of these settings, tick the checkbox beside the desired options. Then, click
 :guilabel:`Save`.
 
-.. _sales_quotations/create_quotations/quotations-dashboard:
+.. _sales/create_quotations/quotations-dashboard:
 
 Quotations dashboard
 ====================
@@ -66,7 +66,7 @@ To view or modify any listed quotation from the :guilabel:`Quotations` dashboard
 desired quotation line from the list, and Odoo reveals the specific form for that selected
 quotation.
 
-.. _sales_quotations/create_quotations/create-quotation:
+.. _sales/create_quotations/create-quotation:
 
 Create a quotation
 ==================
@@ -150,7 +150,7 @@ If multiple items should be presented in a more organized way on the quotation, 
 a section`, enter a name for the section, and drag-and-drop that section heading in the desired
 location amongst the items in the :guilabel:`Order Lines` tab. The section heading appears in bold
 and a sub-total for all products in a section is displayed. Then, if desired, :ref:`add a Section
-Template <sales_quotations/quote_template/section-templates>` to this quotation.
+Template <sales/quote_template/section-templates>` to this quotation.
 
 If needed, click :guilabel:`Add a note` beneath a certain product line to add a custom note about
 that specific product. The note appears in italics. Then, if needed, proceed to drag-and-drop the
@@ -280,7 +280,7 @@ Notes tab
 In the :guilabel:`Notes` tab of the quotation form, enter any specific internal notes about the
 quotation and customer, if desired.
 
-.. _sales_quotations/create_quotations/send-and-confirm:
+.. _sales/create_quotations/send-and-confirm:
 
 Send and confirm a quotation
 ============================
