@@ -295,3 +295,26 @@ mind:
 
 - **Cells and characters per cell**: There is no fixed limit on the number of cells a sheet can
   contain, nor on the number of characters within a cell.
+
+.. _spreadsheet/get-started/spreadsheet-performance:
+
+Spreadsheet performance
+=======================
+
+The :ref:`number of columns and rows per sheet <spreadsheet/get-started/specs-limits>` can affect
+spreadsheet performance. However, the main factor is often the nature of the formulas used and the
+ranges they need to scan. In particular, formulas that create quadratic behavior, where formulas
+copied down many rows each scan a large range, can severely impact performance in large datasets.
+
+.. _spreadsheet/get-started/performance-analysis:
+
+Performance analysis
+--------------------
+
+
+.. _spreadsheet/get-started/manual-recalculation:
+
+Manual recalculation
+--------------------
+
+
