@@ -155,6 +155,8 @@ To enable auto-completion for a Sign field:
    e.g., *Contact*.
 #. Click beside :guilabel:`Field`, then use the field selector to select the relevant field, e.g.,
    *Email*.
+#. Check the :guilabel:`Update Field` field so that the value entered when signing is written back
+   to the corresponding field using the sender's permissions.
 
 .. example::
    In the example, the :icon:`fa-envelope` :guilabel:`Email` field in the Sign app is linked to the
