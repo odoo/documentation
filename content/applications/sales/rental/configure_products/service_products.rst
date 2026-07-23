@@ -3,9 +3,9 @@ Physical service rental products
 ================================
 
 There are two types of service products in the **Rental** app that require different configurations:
-physical and non-physical (labor). This document focuses on the configuration of physical rental
-service products. A physical rental service product is a physical product that doesn't require any
-stock movements. Some examples are:
+physical and :doc:`non-physical (labor) <labor_service_products>`. This document focuses on the
+configuration of physical rental service products. A physical rental service product is a physical
+product that doesn't require any stock movements. Some examples are:
 
 - Hotel rooms
 - Conference rooms
@@ -45,7 +45,7 @@ shift availability.
    Shady Grove needs to add a new room tier to the **Rental** app, the *Deluxe Room*. There are
    seven rooms that belong in this tier. Create a new *Role* by navigating to the
    :menuselection:`Planning app --> Configuration --> Roles`. Click :guilabel:`New` and create the
-   :guilabel:`Deluxe Room Role`.
+   :guilabel:`Deluxe Room` role.
 
    .. image:: service_products/example-planning-role.png
       :alt: Example of configured role for the Deluxe Room.
@@ -58,9 +58,9 @@ shift availability.
       :alt: Example of configured materials for the Deluxe Room.
 
    Create the :guilabel:`Deluxe Room` as a new *Service* product type by navigating to
-   :menuselection:`Rental app --> Products`. Click :guilabel:`New`, then configure the Deluxe Room
-   as a :guilabel:`Service` type product with the :guilabel:`Plan Services` checkbox enabled and the
-   :guilabel:`Deluxe Room` role assigned.
+   :menuselection:`Rental app --> Products --> Products`. Click :guilabel:`New`, then configure the
+   Deluxe Room as a :guilabel:`Service` type product with the :guilabel:`Plan Services` checkbox
+   enabled and the :guilabel:`Deluxe Room` role assigned.
 
    .. image:: service_products/plan-services-field.png
       :alt: Example of the Plan Services field configured to the Deluxe Room role.
@@ -97,8 +97,8 @@ Enable the :guilabel:`Sync Shifts and Rental Orders` checkbox.
    :alt: Example of a configured Role page for the Deluxe Room in the Rental app.
 
 .. tip::
-   Assign a :guilabel:`Category` for room booking. It separates rooms from other services and can be
-   used for reports on room occupancy.
+   Create *Category* for room bookings that is separate from :guilabel:`Service`. This keeps rooms
+   distinct from other services and can be used to generate reports on room occupancy.
 
 .. _rental/service_products/rental-periods-pricing:
 
@@ -109,7 +109,7 @@ To set the base rental price for a rental product, open the *General Information
 lowest rental price in the :guilabel:`Sales Price` field. Next, click the :guilabel:`Sales` tab,
 then configure the following *Rental* section fields where applicable:
 
-- :guilabel:`Periodicity`: The unit of time the product will use for rental prices.
+- :guilabel:`Periodicity`: The unit of time the product uses for rental prices.
 - :guilabel:`Padding Time`: Blocks a rental product from being available for reservations. The
   setting is set to an hourly unit. This is available only if :guilabel:`Hours` is selected in the
   :guilabel:`Periodicity` field and the **Inventory app** is installed.
@@ -123,9 +123,10 @@ Optional: specify rental variants
 .. important::
    The *Variants* feature must be enabled for this tab to display.
 
-Click :guilabel:`Add a line`, then select any room amenity or room item from the
-:guilabel:`Attribute` drop-down menu. To create a new one, enter the name and click
-:guilabel:`Create and edit…` to configure the attribute and values.
+In the *Attributes & Variants* tab, click :guilabel:`Add a line`, then select any room amenity or
+room item from the :guilabel:`Attribute` drop-down menu. To create a new one, enter the name and
+click :guilabel:`Create and edit…` to :ref:`configure the attribute and values
+<products/variants/attributes>`.
 
 .. example::
    Shady Grove has a list of amenities it wants to configure for their Deluxe Room. The room has two
@@ -170,17 +171,25 @@ To create a new pricelist, go to :menuselection:`Rental app --> Products --> Pri
 
    A photography studio rents out its photographers on an hourly and daily basis. The hourly rate is
    $30, but the studio offers a 20% discount for all-day sessions (eight hours or more). All
-   reservations require a 24-hour notice to reserve a photographer. Navigate to
-   :menuselection:`Rental app --> Products --> Products` and click the desired product.
+   reservations require a 24-hour notice to reserve a photographer.
+
+   To configure the prices rate for the Photographer service, navigate to :menuselection:`Rental app
+   --> Products --> Products` and click the desired product.
 
    Enter the :guilabel:`Sales Price` and then click the :guilabel:`Sales` tab to configure the
-   :guilabel:`Periodicity` and the :guilabel:`Padding Time`.
+   :guilabel:`Periodicity` as :guilabel:`Hours` and enter `24` for the :guilabel:`Padding Time`.
 
    .. image:: service_products/rental-sales-tab-rental-section.png
       :alt: Sample of the Rental section of the Sales tab of a service product.
 
    Using the Pricelist method, navigate to :menuselection:`Rental app --> Products --> Pricelists`
-   and click :guilabel:`New`. Configure :guilabel:`Pricelist Rules` for the daily rate.
+   and click :guilabel:`New`. Configure :guilabel:`Pricelist Rules` for the daily rate with the
+   following settings:
+
+    - :guilabel:`Apply To`: Select :guilabel:`Product`
+    - :guilabel:`Product`: Select :guilabel:`Photographer`
+    - :guilabel:`Price Type`: Select :guilabel:`Discount`
+    - :guilabel:`Min Qty`: Enter `8`
 
    .. image:: service_products/example-pricelist-rules.png
       :alt: Sample of the customized Pricelist of service product in the Rental app.
@@ -221,7 +230,9 @@ manually)` icon near the top to save.
    Using the same scenario in the :ref:`Pricelists method example
    <rental/service_products/pricelists-example>`, use the :guilabel:`Prices` tab method by
    navigating to :menuselection:`Rental app --> Products --> Products` and click the desired product
-   to configure. Click the :guilabel:`Prices` tab and configure a new daily rate.
+   to configure. Click the :guilabel:`Prices` tab and select the :guilabel:`Photographer Rental`
+   option for the :guilabel:`Pricelist column`. Enter `8` in the :guilabel:`Min. Quantity` column
+   and enter `24` for the :guilabel:`Price` column.
 
    .. image:: service_products/example-prices-tab.png
       :alt: Sample of the Prices tab of service product in the Rental app.
@@ -292,5 +303,7 @@ Doing so places a :guilabel:`Returned` status banner on the rental order.
       :alt: Sample of a Validate a return form with a rental product and service listed.
 
 .. seealso::
+   - :doc:`labor_service_products`
    - :doc:`../../../services/planning`
    - :doc:`../../sales/products_prices/prices/pricing`
+   - :doc:`../../sales/products_prices/products/variants`
