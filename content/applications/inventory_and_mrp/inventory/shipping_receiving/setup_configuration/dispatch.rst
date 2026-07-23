@@ -2,6 +2,11 @@
 Dispatch management system
 ==========================
 
+.. |CMR| replace:: :abbr:`CMR (Convention on the Contract for the International Carriage of Goods by
+   Road)`
+.. |CMRs| replace:: :abbr:`CMRs (Convention on the Contract for the International Carriage of Goods
+   by Road)`
+
 The *dispatch management system* feature in Odoo is used to plan and build shipments. Key features
 include:
 
@@ -43,9 +48,12 @@ To set the required inventory settings, navigate to :menuselection:`Inventory ap
 In the *Operations* section, select the :guilabel:`Batch, Wave & Cluster Transfers` checkbox to
 prepare batches of orders for delivery.
 
-In the *Shipping* section, select the :guilabel:`Delivery Methods` and :guilabel:`Dispatch
-Management System` checkboxes. Doing so allows specific vehicles to be :ref:`set as carriers
+In the *Shipping* section, select the :guilabel:`Delivery Methods` and :guilabel:`Transport
+Management` checkboxes. Doing so allows specific vehicles to be :ref:`set as carriers
 <inventory/shipping_receiving/delivery-method-for-carrier>`.
+
+.. image:: dispatch/inventory-settings.png
+   :alt: Set delivery and transport settings in the Inventory configuration.
 
 In the *Warehouse* section, select the :guilabel:`Storage Locations` checkbox to assign specific
 locations in the warehouse as loading zones for delivery trucks.
@@ -77,7 +85,7 @@ After the token is created, copy it to the clipboard.
    - `URL restrictions <https://docs.mapbox.com/accounts/guides/tokens/#url-restrictions>`_
 
 In Odoo, navigate to the :menuselection:`Settings` app. In the *Integrations* section, locate the
-:guilabel:`Map Routes` setting. Paste the token in the :guilabel:`Token` field.
+:guilabel:`Mapbox` setting. Paste the token in the :guilabel:`Token` field.
 
 Be sure to click :guilabel:`Save` to save the settings.
 
@@ -302,3 +310,43 @@ to the delivery points.
 .. image:: dispatch/google-map.png
    :alt: Show Google Map route.
 
+Prepare consignment note (CMR)
+==============================
+
+The CMR convention (Convention on the Contract for the International Carriage of Goods by Road)
+governs the transportation of cargo by road. The majority of European states have ratified the
+convention.
+
+A standard waybill or transport document was developed to aid in this treaty. This is called a
+consignment note (also known as a |CMR| waybill). Senders are required to produce these forms. A
+waybill consists of four parts:
+
+#. Sender's copy (in red)
+#. Receiver's copy (in blue)
+#. Carrier's copy (in green)
+#. Second carrier's copy (in black)
+
+Odoo completes these forms using the information it has; any additional information must be added
+manually.
+
+Single-delivery |CMR|
+---------------------
+
+Print a |CMR| for a delivery order by navigating to :menuselection:`Inventory app --> Operations -->
+Deliveries`. Open the delivery order that requires a consignment note.
+
+Click the :icon:`fa-cog` :guilabel:`(Actions)` icon, then select :icon:`fa-print`
+:menuselection:`Print --> Consignment Note (CMR)`. A consignment note is generated.
+
+.. image:: dispatch/cmr-note.png
+   :alt: A CMR note for a shipment of produce, going to Belgium.
+
+Batch delivery |CMR|
+--------------------
+
+Print |CMRs| for a batch order by navigating to :menuselection:`Inventory app --> Operations -->
+Batch Transfers`. Open the batch transfer that requires consignment notes.
+
+Click the :icon:`fa-cog` :guilabel:`(Actions)` icon, then select :icon:`fa-print`
+:menuselection:`Print --> Consignment Note (CMR)`. A consignment note is generated for each delivery
+in the batch transfer.
