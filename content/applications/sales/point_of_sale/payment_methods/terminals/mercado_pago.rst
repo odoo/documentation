@@ -11,8 +11,7 @@ customer transactions.
      <https://www.mercadopago.com.ar/herramientas-para-vender/lectores-point>`_, `Brazil
      <https://www.mercadopago.com.br/ferramentas-para-vender/maquininhas-point>`_, and `Mexico
      <https://www.mercadopago.com.mx/herramientas-para-vender/lectores-point>`_.
-   - Mercado Pago payment terminals do not require an :doc:`IoT Box </applications/general/iot>` to
-     operate.
+   - Mercado Pago payment terminals do not require an IoT Box to operate.
 
 .. seealso::
    - :doc:`Mercado Pago online payments </applications/finance/payment_providers/mercado_pago>`
@@ -27,6 +26,11 @@ The Mercado Pago configuration requires creating an account, if needed, and :ref
 to your payment terminal and store <pos/mercado-pago/terminal>`. Then, create a :ref:`Point Smart
 application <pos/mercado-pago/point-smart>` for technical setup and acquiring :ref:`credentials
 <pos/mercado-pago/credentials>` to complete the integration.
+
+.. important::
+   For the Mercado Pago terminal to work correctly, make sure to enable :ref:`Mercado Pago
+   <payment_providers/mercado_pago/odoo-configuration>` as a :ref:`payment provider
+   <payment_providers/add_new>` and add the associated account credentials.
 
 .. _pos/mercado-pago/terminal:
 
@@ -73,6 +77,9 @@ Point Smart application
 Credentials generation
 ----------------------
 
+.. warning::
+   Odoo does not support the :guilabel:`Standalone` operation mode.
+
 There are three credentials to generate and collect from the `Mercado Pago Developer dashboard
 <https://www.mercadopago.com/developers>`_: a **webhook secret key**, an **access token**, and the
 **terminal serial number**.
@@ -96,9 +103,6 @@ There are three credentials to generate and collect from the `Mercado Pago Devel
 
 Once the Mercado Pago configuration is complete, log in to your Odoo database to create a
 :ref:`payment method <pos/mercado-pago/payment-method>` using the collected credentials.
-
-.. warning::
-   Odoo does not support the :guilabel:`Standalone` operation mode.
 
 .. note::
    All terminals purchased with your Mercado Pago account are automatically displayed on the

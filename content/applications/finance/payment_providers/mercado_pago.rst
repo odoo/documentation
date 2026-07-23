@@ -31,6 +31,8 @@ Configuration on Mercado Pago dashboard
    The testing environment is not supported; all transactions are generated in the production
    environment.
 
+.. _payment_providers/mercado_pago/odoo-configuration:
+
 Odoo configuration
 ==================
 
