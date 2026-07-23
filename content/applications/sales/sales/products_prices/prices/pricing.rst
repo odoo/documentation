@@ -21,13 +21,13 @@ Configuration
 =============
 
 To enable pricelists in the Odoo **Sales** app, first navigate to :menuselection:`Sales app -->
-Configuration --> Settings`. In the :guilabel:`Pricing` section, enable the checkbox next to the
+Configuration --> Settings`. In the *Pricing* section, enable the checkbox next to the
 :guilabel:`Pricelists` feature, and click :guilabel:`Save` to save all changes.
 
 .. image:: pricing/pricelist-feature-setting.png
    :alt: How the pricelist feature setting looks in Odoo Sales.
 
-Access the *Pricelists* page by either selecting the :icon:`oi-arrow-right` :guilabel:`Pricelists`
+Access the *Pricelists* page by either clicking the :icon:`oi-arrow-right` :guilabel:`Pricelists`
 link (beneath the :guilabel:`Pricelists` feature on the *Settings* page), or navigating to
 :menuselection:`Sales app --> Products --> Pricelists`.
 
@@ -53,9 +53,8 @@ time.
 Creating and editing pricelists
 -------------------------------
 
-From the *Pricelists* page, either select the pricelist to edit, or click :guilabel:`New` to create
-a new pricelist, which reveals a blank pricelist form that can be configured in a number of
-different ways.
+From the *Pricelists* page, either select the pricelist to edit or click :guilabel:`New` to create
+a new pricelist, which reveals a blank pricelist form that can be configured to suit the business's needs.
 
 When creating a new pricelist, start by adding a name for the pricelist in the blank field at the
 top of the form. Next, select which :guilabel:`Currency` should be used.
@@ -64,7 +63,7 @@ If working in a multi-company environment, select which company this pricelist s
 the :guilabel:`Company` field. If this field is left blank, the pricelist is automatically applied
 to all companies in the database.
 
-If working in a multinational company, select the countries where this pricelist will apply under
+If working in a multinational company, select the countries where this pricelist applies to under
 the :guilabel:`Country Groups` field.
 
 .. image:: pricing/19-4-sales-new-pricelist-form.png
@@ -75,41 +74,37 @@ the :guilabel:`Country Groups` field.
 Adding price rules
 ------------------
 
-In the :guilabel:`Rules` tab, each line creates a new record that implements customized pricing to
-the sales order where the pricelist is applied. This can be used to create complex pricing
+In the *Rules* tab, each line creates specific pricing rules. When the pricelist is used on a sales order, Odoo applies those rules to calculate the prices.This can be used to create complex pricing
 structures, such as progressive discounts when greater quantities of a product are purchased.
 
-To create a new price rule, click on :guilabel:`Add a line`, which opens the *Create Pricelist
+To create a new price rule, click :guilabel:`Add a line`, which opens a *Create Pricelist
 Rules* pop-up form.
 
-In the :guilabel:`Apply To` field, select whether the price rule applies to a :guilabel:`Product` or
+In the :guilabel:`Apply To` field, select whether the price rule applies to a specific :guilabel:`Product` or a product
 :guilabel:`Category`. Depending on the selection, the next field is either :guilabel:`Product` or
-:guilabel:`Category`. Specify a product or category the pricelist applies to or leave the default
+:guilabel:`Category`. Specify the product or category the pricelist applies to, or leave the field blank to apply to all products or categories.
 selection, :guilabel:`All products` or :guilabel:`All categories` respectively.
 
-For :guilabel:`Price Type`, select if the specialized pricing falls under one of the following:
-:ref:`Discount <sales/pricing/discount>`, :ref:`Formula <sales/pricing/formula>`, or :ref:`Fixed
-Price <sales/pricing/fixed-price>`. Refer to the :ref:`sales/pricing/price-types` section for
-additional configuration instructions on how to set up the price types.
+For :guilabel:`Price Type`, select how the prices are adjusted, either applying a :ref:`Discount <sales/pricing/discount>`, using a specific :ref:`Formula <sales/pricing/formula>`, or  applying a  :ref:`Fixed
+Price <sales/pricing/fixed-price>`. 
 
-.. note::
+.. important::
    If a price rule is set for a particular product, and another one for its product category, Odoo
-   takes the rule of the product itself.
+   prioritizes the *product* rule and applies it.
 
-If the price rule is part of an subscription, in the :guilabel:`Recurring Plan` field drop-down menu
-select a recurrence period (e.g., Monthly, Quarterly, Weekly, etc.). New recurrence periods can also
+If the price rule is part of a subscription, in the :guilabel:`Recurring Plan` field drop-down menu
+select a recurrence period. The default selections are :guilabel:`Monthly`,:guilabel:`6 Months`, or :guilabel:`Weekly`. New recurrence periods can also
 be created from this field by clicking :guilabel:`Search more` and clicking :guilabel:`Create New`.
 
 Refer to the Odoo :doc:`/applications/sales/subscriptions` documentation for more information.
 
-If the discount applies based off the number of products ordered, enter the minimum quantity of
-selected products in the :guilabel:`Min Qty` for this pricelist to apply.
+If the discount is only applied when a specific number of a product is ordered, enter the amount in the :guilabel:`Min Qty` field.
 
-The :guilabel:`Packaging` field has no name and is next to the :guilabel:`Min Qty` field. This field
+The packaging field appers next to the :guilabel:`Min Qty` field, but is not labeled. This field
 defaults to the assigned :abbr:`UoM (Unit of Measure)` configured on the selected product. This
 field only displays when the price rule is configured for *Products*.
 
-If the discount is only valid on specific dates, enter the start and end date in the
+If the discount is only valid on specific dates, such as a limited time sale, enter the start and end date in the
 :guilabel:`Validity Period` field during which this pricelist can be applied to quotations.
 
 Once all configurations are complete, either click :guilabel:`Save & Close` to save the pricelist
@@ -162,17 +157,14 @@ Configuring a formula
 
 The :guilabel:`Formula` option computes the pricelist rules based the following configuration:
 
-- :guilabel:`Base price`: Select either the :guilabel:`Sales price`, :guilabel:`Cost Price`, or
+- :guilabel:`Based price`: Select either the :guilabel:`Sales price`, :guilabel:`Cost`, or
   :guilabel:`Other Pricelist` to use as the base price for the computation. The :guilabel:`Sales
-  Price` and :guilabel:`Cost Price` are based on the same fields on the product form. The
+  Price` and :guilabel:`Cost` are based on the corresponding fields on the product form. The
   :guilabel:`Other Pricelist` uses a pricelist as its base price.
-- :guilabel:`Discount`: Percentage discount to be applied. Negative values can be entered to
+- :guilabel:`Discount`: The applied discount percentage. Negative values can be entered to
   increase prices.
 - :guilabel:`Round off to`: Numerical value to act as round-off multiple, to be applied after
-  discount. The rounding method sets the price so that it is a multiple of the value in this field.
-
-   .. note::
-      Rounding is applied *after* the discount and *before* the extra fee.
+  discount. The rounding method sets the price so that it is a multiple of the value in this field. This is applied *after* the discount but *before* the extra fee.
 
 - :guilabel:`Extra Fee`: Fixed amount to be added or subtracted once :guilabel:`Discount` and
   :guilabel:`Round off to` have been applied.
@@ -220,13 +212,14 @@ rule on a fresh form.
 
 .. _sales/products/customer-pricelist-application:
 
-Customer pricelist application
+Customer specific pricelists
 ==============================
 
 While the default pricelist applied to any customer is the :guilabel:`Public Pricelist`, Odoo
-provides the opportunity to directly apply a different pricelist to customers on their contact form.
+While the default pricelist applied to any customer is the :guilabel:`Public Pricelist`, Odoo
+provides the opportunity to directly apply a different pricelist to customers. This is done on the cusotmer's contact form.
 
-To do that, open the desired customer's contact form, either by navigating to :menuselection:`Sales
+To set a specific pricelist for a customer, open the desired customer's contact form, either by navigating to :menuselection:`Sales
 app --> Orders --> Customers` and selecting the customer from the main :guilabel:`Customers` page,
 or by clicking on the customer's name on a sales order.
 
@@ -235,7 +228,7 @@ or by clicking on the customer's name on a sales order.
 
 On the desired customer's contact form, under the :guilabel:`Sales & Purchase` tab, in the
 :guilabel:`Sales` section, designate what pricelist should be applied to this specific customer from
-the drop-down menu in the :guilabel:`Pricelist` field.
+In the *Sales & Purchase* tab of the desired customer's contact form, designate which pricelist should be applied using the drop-down menu in the :guilabel:`Pricelist` field.
 
 .. image:: pricing/customer-form-pricelist-field.png
    :alt: The pricelist field in a customer detail form in Odoo Sales.
