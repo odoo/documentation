@@ -63,22 +63,19 @@ necessary, define any :ref:`manufacturing operations <manufacturing/basic_setup/
 Components
 ----------
 
-In the *Components* tab of a |BOM|, specify components used to manufacture the product by
-clicking :guilabel:`Add a line`. From the :guilabel:`Component` drop-down menu, select from
-existing products or create a new product by typing the name and selecting either the
-:guilabel:`Create "(component)"` option to quickly add the line item, or the :guilabel:`Create and
-edit` option to add the component and continue to its configuration form.
+In the *Components* tab of a |BOM|, specify components used to manufacture the product by clicking
+:guilabel:`Add a line`. From the :guilabel:`Component` drop-down menu, select from existing products
+or create a new product by typing the name and selecting either the :guilabel:`Create "(component)"`
+option to quickly add the line item, or the :guilabel:`Create and edit` option to add the component
+and continue to its configuration form.
 
 Optionally, access additional fields by clicking the :icon:`oi-settings-adjust` :guilabel:`(settings
-adjust)` icon at the end of the :guilabel:`Components` tab. Select the checkboxes for the following
-features to enable these columns:
+adjust)` icon at the end of the *Components* tab. Select the checkboxes for the following features
+to enable these columns:
 
 - :guilabel:`Apply on Variants`: Specify which :doc:`product variant
   <../advanced_configuration/product_variants>` each component is used in. When the field is left
   blank, the component is used in all product variants.
-
-.. _manufacturing/basic_setup/consumed-in-operation:
-
 - :guilabel:`Consumed in Operation`: Specify the operation using the component. Useful for
   determining :ref:`manufacturing readiness <manufacturing/basic_setup/manufacturing-readiness>`.
 
@@ -89,41 +86,40 @@ Operations
 
 Add an *operation* to a |BOM| to specify production instructions and register time spent on an
 operation. To use this feature, first enable the *Work Orders* feature by going to
-:menuselection:`Manufacturing app --> Configuration --> Settings`. In the :guilabel:`Operations`
-section, select the :guilabel:`Work Orders` checkbox to enable the feature.
+:menuselection:`Manufacturing app --> Configuration --> Settings`. In the *Operations* section,
+select the :guilabel:`Work Orders` checkbox to enable the feature.
 
 .. seealso::
    :doc:`../advanced_configuration/work_order_dependencies`
 
 Next, navigate to the |BOM| by going to :menuselection:`Manufacturing app --> Products --> Bill of
-Materials` and selecting the desired |BOM|. To add a new operation, go to the :guilabel:`Operations`
-tab and click :guilabel:`Add Operation` (if no operations exist) or :guilabel:`Add a line` (if
-operations already exist).
+Materials` and selecting the desired |BOM|. To add a new operation, go to the *Operations* tab and
+click :guilabel:`Add Operation` (if no operations exist) or :guilabel:`Add a line` (if operations
+already exist).
 
-Doing so opens the *Open: Operations* pop-up window, where the various fields of the operation are
-configured:
+Doing so opens a new operation form, where the various fields of the operation are configured:
 
 - :guilabel:`Operation`: Enter the name of the operation.
 - :guilabel:`Work Center`: Select an existing location to perform the operation, or create a new
   work center by typing the name and selecting the :guilabel:`Create "(work center)"` option.
-- :guilabel:`Cost based on`: Specify whether the cost for the operation is based on
-  :guilabel:`Actual time` (tracked time and real employee costs) or :guilabel:`Theoretical time`
-  (estimated time and costs).
 - :guilabel:`Apply on Variants`: Specify if this operation is only available for certain product
   variants. If the operation applies to all product variants, leave this field blank.
 
   .. seealso::
      :doc:`Configuring BoMs for product variants <../advanced_configuration/product_variants>`
 
+- :guilabel:`Cost based on`: Specify whether the cost for the operation is based on
+  :guilabel:`Actual time` (tracked time and real employee costs) or :guilabel:`Theoretical time`
+  (estimated time and costs).
 - :guilabel:`Duration Computation`: Choose how time spent on the operation is tracked. Opt for
   :guilabel:`Fixed` if operators can record and modify time themselves, which allows a
-  :guilabel:`Default Duration` to be specified. Alternatively, choose :guilabel:`Computed` to
-  use the operation's time tracker, which enables the :guilabel:`last (#) work orders` field. This
-  ensures the time to complete will be estimated based on a specified number of the previous
+  :guilabel:`Default Duration` to be specified. Alternatively, choose :guilabel:`Computed` to use
+  the operation's time tracker, which enables the :guilabel:`last (#) work orders` field. This
+  ensures the estimated time to completion is based on a specified number of the previous
   operations.
 - :guilabel:`Company`: Specify the company for which the |BOM| is available.
 
-Include operation details in the :guilabel:`Instructions` tab.
+Finally, click :icon:`fa-cloud-upload` :guilabel:`(Save manually)` to save the operation.
 
 Instructions
 ~~~~~~~~~~~~
@@ -173,12 +169,12 @@ Use the *Instructions* tab to specify the step's instructions.
    .. image:: bill_configuration/description.png
       :alt: Google Gemini feature to generate instructions for a work order.
 
-Use the *Worksheet* tab to upload a supplementary PDF that will display when the operator
-completes that step.
+Use the *Attachment* tab to upload a supplementary PDF that displays when the operator completes
+that step.
 
 If the :guilabel:`Type` is set to :guilabel:`Pass - Fail`, :guilabel:`Measure`, :guilabel:`Register
-Production`, :guilabel:`Worksheet`, or :guilabel:`Spreadsheet`, the *Message if Failure*
-tab appears. Use this tab to include instructions for what to do if the quality check fails. For
+Production`, :guilabel:`Worksheet`, or :guilabel:`Spreadsheet`, the *Message If Failure* tab
+appears. Use this tab to include instructions for what to do if the quality check fails. For
 example, instruct the employee processing the step to create a quality alert.
 
 Click :guilabel:`Save` to save the step.
@@ -190,7 +186,8 @@ After all instructions are added, click :guilabel:`Save & Close` to close the po
 more steps, click :guilabel:`Save & New`, then repeat the same steps above to configure another
 operation.
 
-Finally, in the *Open: Operations* window, click :guilabel:`Save` to save the operation.
+Finally, in the operation form, click :icon:`fa-cloud-upload` :guilabel:`(Save manually)` to save
+the operation.
 
 .. note::
    Each operation is unique, as it is always exclusively linked to one |BOM|.
@@ -206,8 +203,7 @@ Finally, in the *Open: Operations* window, click :guilabel:`Save` to save the op
 Miscellaneous
 -------------
 
-The :guilabel:`Miscellaneous` tab contains more |BoM| configurations to customize the following
-fields:
+The *Miscellaneous* tab contains more |BoM| configurations to customize the following fields:
 
 - :guilabel:`Manufacturing Lead Time`: The number of days required to manufacture the product
 - :guilabel:`Days to prepare`: The number of days in advance that |MOs| should be created to allow
@@ -260,16 +256,24 @@ Bill of Materials page
 To begin, navigate to :menuselection:`Manufacturing app --> Products --> Bills of Materials`. All
 |BOMs| are listed on this page.
 
-To locate all |BOMs| that use the affected component, click into the search bar and filter
-using a :guilabel:`Custom Filter`. Select :menuselection:`BoM Lines --> Component`. Set
-:guilabel:`is equal to`, and select the component that you want to filter by. Click
-:guilabel:`Search`. |BOMs| with the matching component display.
+To locate all |BOMs| that use the affected component, click into the search bar and filter using a
+:guilabel:`Custom Filter`. Select :menuselection:`BoM Lines --> Component`. Set :guilabel:`is equal
+to`, and select the component to filter by. Click :guilabel:`Search`. |BOMs| with the matching
+component display.
 
 .. image:: bill_configuration/bom-match-component.png
    :alt: The Bills of Materials page filtered by the Bolt component.
 
-Then, select the |BOMs| to update and click :icon:`fa-cog` :menuselection:`(Actions) --> Show BoM
-Lines`. The component lines display on the *BoM Lines* page.
+Then, select the checkmarks next to the |BOMs| to update and click :icon:`fa-cog`
+:menuselection:`(Actions) --> Compare BoMs`. This opens the *BoM Lines* page.
+
+.. note::
+   By default, the page opens in the :icon:`oi-view-pivot` :guilabel:`(Pivot)` view, allowing users
+   to compare multiple |BOMs| simultaneously based on the quantities of their components.
+   Alternatively, see a list of component lines by clicking the :icon:`oi-view-list`
+   :guilabel:`(List)` view.
+
+To continue, click the :icon:`oi-view-list` :guilabel:`(List)` view to open the component lines.
 
 .. image:: bill_configuration/show-bom-lines.png
    :alt: The BoM Lines page filtered to all BoMs that use the Bolt component.
@@ -282,9 +286,10 @@ the search bar and selecting :guilabel:`Custom Filter`. Filter by :guilabel:`Com
 .. image:: bill_configuration/bom-lines.png
    :alt: The BoM lines matching the Bolt component display.
 
-Select the lines to update, then update the :guilabel:`Component` field for one of the lines. When
-clicking away from the :guilabel:`Component` field, a *Confirmation* window opens to verify that
-multiple components will be updated. Click :guilabel:`Update` to verify the changes.
+Select the checkmark next to the lines to update, then update the :guilabel:`Component` field for
+one of the lines. When clicking away from the :guilabel:`Component` field, a *Confirmation* window
+opens to verify that multiple components will be updated. Click :guilabel:`Update` to verify the
+changes.
 
 .. _manufacturing/basic-setup/component-replace:
 
@@ -310,9 +315,8 @@ To add by-products to a |BOM|, first enable the *By-Products* feature in
 :menuselection:`Manufacturing app --> Configuration --> Settings`. In the :guilabel:`Operations`
 section, select the checkbox for :guilabel:`By-Products` to enable the feature.
 
-Once the feature is enabled, add by-products to a |BOM| by clicking the :guilabel:`By-products` tab.
-Once the feature is enabled, add by-products to a |BOM| by clicking the *By-products* tab.
-Click :guilabel:`Add a line`, and fill in the :guilabel:`By-product`, :guilabel:`Quantity`, and
+Once the feature is enabled, add by-products to a |BOM| by clicking the *By-products* tab. Click
+:guilabel:`Add a line`, and fill in the :guilabel:`By-product`, :guilabel:`Quantity`, and
 :guilabel:`Unit`. Optionally, specify a :guilabel:`Produced in Operation` for the by-product.
 
 Optionally, the :guilabel:`Cost Share` percentage of a by-product can also be specified at this
@@ -324,6 +328,8 @@ the quantity produced. The total of all by-products' cost share must be less tha
 
    .. image:: bill_configuration/add-by-product.png
       :alt: Show sample by-product in the BoM.
+
+.. _manufacturing/basic-setup/bom-overview:
 
 BOM Overview
 ============
@@ -357,7 +363,9 @@ By default, the following columns are listed in the *BOM Overview*:
   a component, expand the row using the :icon:`fa-caret-right` :guilabel:`(Fold)` icon. If an
   operation is required to manufacture the component or product, it is listed under the
   :guilabel:`Operations` section.
-- :guilabel:`Quantity`: The number of units required to manufacture the product is listed.
+- :guilabel:`Quantity`: The number of units required to manufacture the product is listed. This
+  quantity can be adjusted by specifying a number in the :guilabel:`(# Units)` next to the
+  :guilabel:`Quantity` field at the top of the page.
 - :guilabel:`Total Cost`: This is the total cost of the unit, including price, labor, and other
   factors. Costs displayed in grey are read directly from the component's product record (the
   :guilabel:`Cost` field), while costs in regular text are computed by the report. The *BOM
@@ -374,14 +382,24 @@ The following columns are available in the *BOM Overview* when :guilabel:`Foreca
 
 - :guilabel:`Free to Use/On Hand`: This shows how many units can be reserved for an order out of the
   total number of units available to the company.
+- :guilabel:`Subcontractor Stock`: This column only appears if the :guilabel:`BoM Type` is set to
+  :guilabel:`Subcontracting`. It displays how many units can be reserved for an order out of the
+  total number of units available at the subcontracting location.
 - :guilabel:`Status`: This column specifies whether a component is :guilabel:`Available` or
   :guilabel:`Not Available`, or if it needs to be purchased (:guilabel:`# To Buy`). If the product
   or component needs to be manufactured, the :guilabel:`Estimated` date of completion is listed,
-  taking into account the :guilabel:`Lead Time` listed in the next column.
+  taking into account the :guilabel:`Lead Time` listed in the next column. If the product or
+  component is subcontracted, this status is determined by the combined free-to-use quantities of
+  the company and the subcontractor.
 - :guilabel:`Lead Time`: The number of days required to manufacture or purchase a component or
   product is listed.
 - :guilabel:`Route`: If a product or component is replenished via a specific :doc:`route
   <../../inventory/shipping_receiving/daily_operations/use_routes>`, it is listed in this column.
+
+.. note::
+   The :guilabel:`Subcontractor Stock` column only displays values for a product or component if the
+   free-to-use quantity is above `0`. This quantity can be added by directly :ref:`adjusting
+   inventory <inventory/create-adjustment>` at the subcontracting location.
 
 Click the :guilabel:`Manufacture` button to create a new manufacturing order for the selected
 product.
@@ -389,5 +407,6 @@ product.
 Click the :guilabel:`Print` button to generate a PDF of the report. To include all lines in the PDF,
 expand them using the :icon:`fa-caret-right` :guilabel:`(Fold)` icon.
 
-To expand all lines in the report at once, click the :guilabel:`Unfold` button. To collapse the
-lines again, click the :guilabel:`Fold` button.
+For :doc:`multilevel BoMs <../advanced_configuration/sub_assemblies>`, some component lines may be
+automatically collapsed. To expand all lines in the report at once, click the :guilabel:`Unfold`
+button. To collapse the lines again, click the :guilabel:`Fold` button.
