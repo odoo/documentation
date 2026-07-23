@@ -1262,6 +1262,14 @@ Cards
 
              List of technical guidelines to observe when writing with reStructuredText.
 
+          .. card:: Card with image
+             :target: ../documentation
+             :large:
+             :image: placeholder-image.png
+             :alt: Placeholder card image
+
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
    * - .. code-block:: text
 
           .. cards::
@@ -1282,6 +1290,14 @@ Cards
                 :target: rst_guidelines
 
                 List of technical guidelines to observe when writing with reStructuredText.
+
+             .. card:: Card with image
+                :target: ../documentation
+                :large:
+                :image: placeholder-image.png
+                :alt: Placeholder card image
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 .. _contributing/rst/toctree:
 
