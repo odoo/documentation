@@ -14,6 +14,8 @@ such as a hotel room, work station, or storage unit.
 The following sections detail basic settings and app integration configurations for goods and
 services.
 
+.. _rental/product_type/configuration:
+
 Configuration
 =============
 
