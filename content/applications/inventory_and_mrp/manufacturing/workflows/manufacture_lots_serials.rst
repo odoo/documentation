@@ -58,10 +58,10 @@ or manually enter a new lot number and click :guilabel:`Create "#"` in the drop-
 .. image:: manufacture_lots_serials/lot-sn-field.png
    :alt: The "Lot/Serial Number" field on an MO.
 
-Either of these methods assign the product(s) in the |MO| a lot number before production is
-finished. It is also possible to complete production and close the |MO| by clicking
-:guilabel:`Produce All`, without assigning a lot number. Doing so automatically generates and
-assigns a lot, using the next available number.
+Either of these methods assign the products in the |MO| a lot number before production is finished.
+It is also possible to complete production and close the |MO| by clicking :guilabel:`Produce`,
+without assigning a lot number. Doing so automatically generates and assigns a lot, using the next
+available number.
 
 Serial number manufacturing
 ===========================
@@ -81,8 +81,8 @@ The rest of the manufacturing process depends on how many units the |MO| contain
 Manufacture single unit
 -----------------------
 
-If a single unit of the product is being manufactured, clicking :guilabel:`Produce All` closes the
-|MO|, and automatically generates and assigns the next available serial number, which appears in the
+If a single unit of the product is being manufactured, clicking :guilabel:`Produce` closes the |MO|,
+and automatically generates and assigns the next available serial number, which appears in the
 :guilabel:`Lot/Serial Number` field.
 
 To assign a serial number without closing the |MO|, enter a number manually in the
@@ -110,7 +110,7 @@ Manufacture multiple units
       |MOs|, each containing one unit of the chair. The |MOs| are titled `WH/MO/00109-001` and
       `WH/MO/00109-002`.
 
-To assign serial numbers to each unit of an |MO|, click :guilabel:`Produce All` to open the
+To assign serial numbers to each unit of an |MO|, click :guilabel:`Produce` to open the
 :guilabel:`Batch Production` pop-up window.
 
 The :guilabel:`First Lot/SN` field of the pop-up window is auto-filled with the next available
