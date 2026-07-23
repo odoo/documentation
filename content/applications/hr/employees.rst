@@ -39,11 +39,6 @@ planning, and compliance reporting.
 
       Create and manage virtual and in-person employee training.
 
-   .. card:: Contracts
-      :target: payroll/contracts
-
-      Manage and create employee contracts.
-
    .. card:: Certifications
       :target: employees/certifications
 
