@@ -27,7 +27,7 @@ them to and from inventory is not tracked.
       :align: center
       :alt: The Manufacture radio input field on a warehouse configuration page.
 
-.. _manufacturing/basic_setup/create-mo:
+.. _manufacturing/one-step/create-mo:
 
 Create manufacturing order
 ==========================
