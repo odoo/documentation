@@ -293,9 +293,7 @@ gives the condition in which the property applies. For example:
         <field name="description" invisible="not is_partner"/>
     </form>
 
-This means that the ``description`` field is invisible when ``is_partner`` is ``False``. It is
-important to note that a field used in ``invisible`` **must** be present in the view. If it
-should not be displayed to the user, we can use the ``invisible`` attribute to hide it.
+This means that the ``description`` field is invisible when ``is_partner`` is ``False``.
 
 .. exercise:: Use ``invisible``.
 
