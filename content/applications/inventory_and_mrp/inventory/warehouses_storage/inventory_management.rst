@@ -88,8 +88,8 @@ field, there are:
   <../../manufacturing>` are created.
 
 - :guilabel:`Transit`: used for inter-company or inter-warehouse operations to track products
-  shipped between different addresses, such as :ref:`Physical Locations/Inter-warehouse
-  transit <inventory/warehouses_storage/interwarehouse-transit>`.
+  shipped between different addresses, such as :ref:`Physical Locations/Inter-warehouse transit
+  <inventory/warehouses_storage/interwarehouse-transit>`.
 
 .. image:: inventory_management/locations.png
    :alt: List of locations in Odoo.
@@ -137,5 +137,4 @@ provide helpful context, and distinguish between internal and external locations
    inventory_management/count_products
    inventory_management/cycle_counts
    inventory_management/scrap_inventory
-   inventory_management/reception_report
 
