@@ -162,14 +162,17 @@ Configure a physical rental product for product tracking
    To configure a physical rental product for product tracking, the **Inventory** app must be
    installed, and :guilabel:`Lots & Serial Numbers` must be enabled.
 
+   For rental products, only :guilabel:`By Unique Serial Number` tracking can be used. Selecting
+   :guilabel:`By Lots` instead results in an error message, since that setting doesn't apply to
+   rentals.
+
 Go to the :menuselection:`Rental app --> Products --> Products`, then click :guilabel:`New`. In the
 new product window, the :guilabel:`Sales` checkbox is already selected by default. Select
 :guilabel:`Goods` as the :guilabel:`Product Type`, then select the :guilabel:`Track Inventory`
 checkbox. The :guilabel:`Tracking` and :guilabel:`Quantity On Hand` fields display.
 
-Click into the :guilabel:`Tracking` field and select either :guilabel:`By Lots` or :guilabel:`By
-Unique Serial Number`. Enter the number of products available to rent in the :guilabel:`Quantity On
-Hand` field.
+Click into the :guilabel:`Tracking` field and select :guilabel:`By Unique Serial Number`. Enter the
+number of products available to rent in the :guilabel:`Quantity On Hand` field.
 
 For the :guilabel:`Category` field, select :guilabel:`Goods` from the drop-down menu or create a new
 category by typing in the name and clicking :guilabel:`Create`. Configure :ref:`basic rental rate
