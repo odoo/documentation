@@ -655,10 +655,15 @@ To apply the right tax amount and report it correctly in your VAT return, set th
 .. seealso::
    :doc:`../accounting/customer_invoices/cash_discounts`
 
+.. _belgium/point-of-sale:
+
+Point of Sale
+=============
+
 .. _belgium/pos-restaurant-certification:
 
 Fiscal certification: POS restaurant
-====================================
+------------------------------------
 
 In Belgium, the owner of a cooking business such as a restaurant or food truck is required by law to
 use a government-certified **Cash Register System** for their receipts. This applies if their yearly
@@ -675,7 +680,7 @@ This government-certified system entails the use of a :ref:`certified POS system
 .. _belgium/certified-pos:
 
 Certified POS system
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 The Odoo POS system is certified for databases hosted on **Odoo Online**, **Odoo.sh**, and
 **On-Premise**.
@@ -717,7 +722,7 @@ POS.
 .. _belgium/fdm:
 
 Fiscal Data Module (FDM)
-------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 An FDM, or **black box**, is a government-certified device that works together with the Point of
 Sale application and saves your POS orders information. Concretely, a **hash** (:dfn:`unique code`)
@@ -731,7 +736,7 @@ all revenue is declared.
    order one.
 
 Configuration
-~~~~~~~~~~~~~
+*************
 
 Before setting up your database to work with an FDM, ensure you have the following hardware:
 
@@ -744,7 +749,7 @@ Before setting up your database to work with an FDM, ensure you have the followi
 .. _belgium/blackbox:
 
 Black box module
-****************
+^^^^^^^^^^^^^^^^
 
 As a pre-requisite, :ref:`activate <general/install>` the `Belgian Registered Cash Register` module
 (technical name: `pos_blackbox_be`).
@@ -772,7 +777,7 @@ settings tab --> Attendance/Point of Sale`, and fill in the :guilabel:`INSZ or B
 .. _belgium/iotbox:
 
 IoT Box
-*******
+^^^^^^^
 
 In order to use an :abbr:`FDM (Fiscal Data Module)`, you need a registered IoT Box. To register your
 IoT box, you must contact us through our `support contact form <https://www.odoo.com/help>`_ and
@@ -799,8 +804,91 @@ Point of Sale`, select your POS, scroll down to the :guilabel:`Connected Device`
 .. _belgium/vat:
 
 VAT signing card
-----------------
+~~~~~~~~~~~~~~~~
 
 When you open the POS register and make your initial transaction, you are prompted to enter the PIN
 provided with your :abbr:`VSC (VAT signing card)`. The card is delivered by the :abbr:`FPS (Service
 Public Federal Finances)` upon `registration <https://www.systemedecaisseenregistreuse.be/fr/enregistrement>`_.
+
+.. _belgium/pos/bancontact-pay:
+
+Bancontact Pay
+--------------
+
+`Bancontact Pay <https://www.bancontact.com/en/consumer/bancontact-pay-app>`_ is a mobile app that
+allows users to make payments through the Bancontact network by scanning a QR code.
+
+`Bancontact Pro <https://www.bancontact.com/en/professional/what-is-bancontact-pro>`_ is the
+merchant solution that provides a merchant portal and allows professionals to view and manage
+real-time transactions, create shops, add products, and manage user accounts.
+
+.. important::
+   - Bancontact only supports Belgian banking apps, and the Bancontact Pay app.
+   - Only the Euro (EUR) currency is supported with Odoo.
+
+To create and configure a Bancontact Pro merchant account, go to the `portal guide
+<https://www.bancontact.com/en/professional/our-solutions/integrated-solution>`_, click
+:guilabel:`Log in`, and follow the website instructions. The API key and PPID needed for the
+:ref:`payment method configuration in Odoo <belgium/pos/bancontact-method>` are automatically
+generated and available in the portal's :guilabel:`Shops and products` section. The portal's
+:guilabel:`QR codes` section allows professionals to choose the desired solution for QR code
+generation:
+
+   - :guilabel:`Display`: `Generate a unique QR code
+     <https://docs.bancontactpro.com/guides/instore/ondisplay052025v4>`_ for each transaction
+     and display it on the cashier's screen and, if available, on the :ref:`customer display
+     <pos/hardware_network/display-configuration>`.
+   - :guilabel:`Static QR Code`: `Link the QR code to the payment method
+     <https://docs.bancontactpro.com/guides/instore/staticqr052025v4>`_, and download the
+     sticker, print it, and place it near the register. Use a separate sticker per register, as a
+     simultaneous payment from another register would overwrite the previous one before it is even
+     scanned.
+
+.. seealso::
+   :doc:`/applications/sales/point_of_sale/payment_methods/qr_code_payment`
+
+.. _belgium/pos/bancontact-method:
+
+Odoo configuration
+~~~~~~~~~~~~~~~~~~
+
+To create a Bancontact Pay QR code :doc:`payment method
+</applications/sales/point_of_sale/payment_methods>`, first :ref:`install the POS Bancontact Pay
+Wero <general/install>` (`pos_bancontact_pay`) module. Then, follow these steps:
+
+#. Go to :menuselection:`Point of Sale --> Configuration --> Payment Methods` and click
+   :guilabel:`New`.
+#. Type a name for the payment method.
+#. Set the :guilabel:`Journal` field to :guilabel:`Bank`.
+#. Set the :guilabel:`Point of Sale` field to the relevant point of sale.
+#. Set the :guilabel:`Integration` field to :guilabel:`Quick Pay (QR Code)`.
+#. Set the :guilabel:`Integrate with` field to :guilabel:`Bancontact Pay`.
+#. Paste the :guilabel:`API Key` and :guilabel:`PPID` under the :guilabel:`Bancontact Pay` tab.
+#. Set the desired :guilabel:`QR Usage` field to :guilabel:`On-Screen Display` or :guilabel:`Static
+   Sticker`.
+
+.. _belgium/pos/bancontact-payment:
+
+Bancontact payment process
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To request a payment by generating a QR code, follow these steps:
+
+#. Take an order and click :guilabel:`Payment`.
+#. Select the :ref:`configured payment method <belgium/pos/bancontact-method>`. The QR code is
+   automatically displayed on the payment screen and/or on the :ref:`customer display
+   <pos/hardware_network/open-display>`.
+#. Let customers scan the QR code and confirm the payment using the Bancontact Pay app or their
+   mobile banking app.
+
+.. tip::
+   - If the QR code is not automatically displayed after selecting the payment method, click
+     :guilabel:`Send` under the :guilabel:`Payment request pending` notification.
+   - If the payment fails, the payment line is canceled. Click :guilabel:`Retry` to reset the
+     payment.
+
+.. note::
+   - Customers can cancel the transaction from their app, which notifies Odoo and automatically
+     cancels the payment.
+   - Use the :guilabel:`Force Cancel` and :guilabel:`Force Done` buttons with caution, as they do
+     not verify the actual payment status with Bancontact Pay.
