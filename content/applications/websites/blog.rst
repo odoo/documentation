@@ -30,7 +30,6 @@ To customize the layout of all blog posts, open one and click :menuselection:`Ed
 Under the :guilabel:`Blog page` section, different options can be used to customize the posts:
 
 - :guilabel:`Layout`: display the title inside or above the cover.
-- :guilabel:`Increase Readability`: adjust or not the posts' formatting for better reading comfort.
 - :guilabel:`Sidebar`: display or hide a sidebar that can contain several elements:
 
   - :guilabel:`Archive`: allow visitors to view all posts from a specific month by selecting it.
