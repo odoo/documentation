@@ -28,6 +28,9 @@ The following modules are installed automatically with the Turkish localization:
    * - :guilabel:`Türkiye - e-Irsaliye (e-Dispatch)`
      - `l10n_tr_nilvera_edispatch`
      - Enables the generation and upload of e-Dispatch files
+   * - British Intrastat Declaration
+     - l10n_uk_intrastat
+     - **[insert description]**
 
 Additionally, the following modules must be manually :ref:`installed <general/install>` in order to
 use the :ref:`localizations/turkiye/nilvera` for managing electronic documents:
