@@ -140,15 +140,15 @@ Product |BoMs| can continue to be updated, as needed. The :doc:`version control
 <../../plm/manage_changes/version_control>` features of the |PLM| app allow for easy management of
 all versions of a given |BoM|.
 
-Field Service
+Field service
 -------------
 
 The |PLM| app is a great way to make changes to product |BoMs|. However, these changes only affect
 products produced using the new |BoM|. If a defective product has already been sold to a customer,
 it may be necessary to repair (or update) that product.
 
-In such a case, the *Field Service* app can be used to schedule :doc:`onsite interventions
-<../../../services/field_service/creating_tasks>`. These interventions allow service
+In such a case, the Planning app can be used to schedule :doc:`onsite interventions
+</applications/services/planning/field_service>`. These interventions allow service
 technicians (or other employees) to be sent to a customer's location to address an issue with a
 product.
 

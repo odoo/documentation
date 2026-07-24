@@ -12,6 +12,8 @@ vendors, suppliers, and so on.
 The Odoo *Sales* app can invoice for time and various other expenses (e.g. transport, lodging), as
 well as purchases needed to fulfill an order.
 
+.. _sales/time-materials/configuration:
+
 App and settings configuration
 ==============================
 
@@ -46,7 +48,7 @@ Then, click :guilabel:`Save` to save all changes.
    :align: center
    :alt: What the Timesheets feature looks like on the Odoo Project settings page.
 
-.. _sales/invoicing/configured-service-product:
+.. _sales/time-materials/configuration-product:
 
 Service product configuration
 =============================
@@ -89,7 +91,7 @@ Order* options, it is possible to add time spent to a sales order.
 To see that in action, navigate to :menuselection:`Sales app --> New` to open a blank quotation
 form. Then, proceed to add a :guilabel:`Customer`, and in the :guilabel:`Order Lines` tab, click
 :guilabel:`Add a product`, and select the properly :ref:`configured service product
-<sales/invoicing/configured-service-product>` from the drop-down menu.
+<sales/time-materials/configuration-product>` from the drop-down menu.
 
 Next, click :guilabel:`Confirm` to confirm the order.
 

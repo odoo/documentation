@@ -105,6 +105,8 @@ total time logged for the period:
 - **Orange**: Total time exceeds the expected amount for the period.
 - **Red**: Total time is less than the expected amount for the period.
 
+.. _timesheets/log:
+
 Logging timesheets
 ==================
 

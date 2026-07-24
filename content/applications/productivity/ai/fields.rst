@@ -87,7 +87,7 @@ the :guilabel:`AI` checkbox, confirm the field should be |AI|-enabled, then foll
    :alt: The edit properties pop-up on a form view.
 
 .. note::
-   :ref:`Property fields <property_field/add>` can only be added to form views.
+   :ref:`Property fields <essentials/property-fields/add>` can only be added to form views.
 
 Computing AI fields
 ===================
