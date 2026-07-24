@@ -314,23 +314,76 @@ the target table in the :ref:`Floor plan <pos/restaurant/floors>` view:
 Courses
 -------
 
-The :guilabel:`Course` button allows for splitting orders into multiple courses, sending each course
-to the kitchen sequentially.
+The **courses** feature allows restaurants to organize orders into distinct serving phases (such as
+starters, mains, and desserts) and manage when they are sent to the kitchen.
 
-To split an order into courses from the :ref:`register <pos/restaurant/orders>`, click
-:guilabel:`Course` and add products. Repeat the action as many times as needed, then click
-:guilabel:`Send` to send the order to the kitchen, which also fires the first course.
+Manual course allocation
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-When ready for the second course, retrieve the order from the :ref:`Floor plan
-<pos/restaurant/floors>` view or the :guilabel:`Orders` overview, and click :guilabel:`Fire Course
-2`. Repeat the action as many times as needed.
+To split an order into courses directly from the :ref:`register <pos/restaurant/orders>`:
+
+- Click the :guilabel:`Course` button, then add the products for that course. Repeat this process as
+  needed.
+- Alternatively, click :guilabel:`Course` multiple times to generate the desired number of courses
+  in the cart first. Then, click each course individually to select it, and add its respective
+  products.
+
+Automatic course allocation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The automatic course allocation feature automatically sorts products by course depending on their
+:ref:`POS product category <pos/products/categories>`.
+
+To activate the feature, go to :menuselection:`Point of Sale --> Configuration --> Settings`, scroll
+down to the :guilabel:`Preparation` section, enable :guilabel:`Automatic course allocation`, then
+click :guilabel:`Save`.
+
+To configure courses and assign them to POS product categories, follow these steps:
+
+#. Go to :menuselection:`Point of Sale --> Configuration --> POS Product Categories` and select a
+   product category (e.g., *Burgers*).
+#. In the :guilabel:`Course` field, select an existing course or type a new one (e.g., *Main*) and
+   click :guilabel:`Create`.
+
+Once configured, adding a product from the *Burgers* category to an order automatically assigns it
+to the *Main* course.
+
+.. note::
+   - A single course can be assigned to multiple POS product categories. For example, the *Main*
+     course can be used for the *Burgers*, *Pizzas*, and *Meat* categories.
+   - You can create as many courses as necessary.
 
 .. tip::
-   - Alternatively, click :guilabel:`Course` as often as needed to display the desired number of
-     courses in the cart. Then, click each course, add products, and click :guilabel:`Send`.
-   - To transfer a product or an entire course into another course, select it in the cart, click
-     the :icon:`fa-ellipsis-v` (:guilabel:`Actions`) icon, then :icon:`fa-arrow-down`
-     :guilabel:`Transfer course`, and select the preferred course.
+   By default, courses appear in the cart in the order they were created. To rearrange the course
+   order to reflect your service flow, activate the :ref:`developer mode
+   <developer-mode/activation>`, go to :menuselection:`Point of Sale --> Configuration --> Courses`,
+   then use the :icon:`oi-draggable` :guilabel:`(draggable)` icon to move courses to the desired
+   position.
+
+Fire courses
+~~~~~~~~~~~~
+
+Once an order is complete, click :guilabel:`Send` at the bottom left of the register to transmit it
+to the kitchen. The first course appears on the :doc:`preparation display <extra/preparation>`
+without a label, indicating it is waiting to be prepared. Subsequent courses are labeled as
+:guilabel:`Pending` until they are ready to be fired.
+
+.. note::
+   The text on the :guilabel:`Send` button dynamically includes the POS categories of the items
+   being sent to the kitchen. If there are too many categories, the word *Send* is hidden, and
+   the button displays only the POS categories themselves.
+
+To fire a pending course, open the order from either the :ref:`Floor plan <pos/restaurant/floors>`
+or the :guilabel:`Orders` overview (select an order and click :guilabel:`Load Order`), then click
+the :guilabel:`Fire [Course]` button for the next sequence. Repeat this process as each course
+becomes ready for preparation.
+
+Transfer courses
+~~~~~~~~~~~~~~~~
+
+To move items to a different course, select either a single product or the entire course header in
+the cart. Click the :icon:`fa-ellipsis-v` (:guilabel:`Actions`) icon, select :icon:`fa-arrow-down`
+:guilabel:`Transfer course`, and choose the destination course.
 
 .. seealso::
    `Courses (video tutorial) <https://youtu.be/5W2S9HwSrDQ?si=Pauk9gyuypl4NU-M>`_
