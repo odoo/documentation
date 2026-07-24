@@ -160,16 +160,37 @@ Configure a physical rental product for product tracking
 
 .. important::
    To configure a physical rental product for product tracking, the **Inventory** app must be
+<<<<<<< 07b2b1ae585384f753fb65ac111b18513faaf118
    installed, and :guilabel:`Lots & Serial Numbers` must be enabled.
+||||||| b995eb9719cddc23497849e67470809a259b2b6f
+   installed, and :doc:`Lots & Serial Numbers must be enabled
+   <../../../inventory_and_mrp/inventory/product_management/product_tracking>`.
+=======
+   installed, and :guilabel:`Lots & Serial Numbers` must be enabled.
+
+   For rental products, only :guilabel:`By Unique Serial Number` tracking can be used. Selecting
+   :guilabel:`By Lots` instead results in an error message, since that setting doesn't apply to
+   rentals.
+>>>>>>> e040bc2bb5bce19e5b1058b957391265761c975d
 
 Go to the :menuselection:`Rental app --> Products --> Products`, then click :guilabel:`New`. In the
 new product window, the :guilabel:`Sales` checkbox is already selected by default. Select
 :guilabel:`Goods` as the :guilabel:`Product Type`, then select the :guilabel:`Track Inventory`
 checkbox. The :guilabel:`Tracking` and :guilabel:`Quantity On Hand` fields display.
 
+<<<<<<< 07b2b1ae585384f753fb65ac111b18513faaf118
 Click into the :guilabel:`Tracking` field and select either :guilabel:`By Lots` or :guilabel:`By
 Unique Serial Number`. Enter the number of products available to rent in the :guilabel:`Quantity On
 Hand` field.
+||||||| b995eb9719cddc23497849e67470809a259b2b6f
+Select the :guilabel:`Product Type` as :guilabel:`Goods`. Tick the :guilabel:`Track Inventory`
+checkbox and select either :guilabel:`By Lots` or :guilabel:`By Unique Serial Number` from the
+drop-down menu.
+=======
+Select the :guilabel:`Product Type` as :guilabel:`Goods`. Tick the :guilabel:`Track Inventory`
+checkbox and select :guilabel:`By Unique Serial Number` from the
+drop-down menu.
+>>>>>>> e040bc2bb5bce19e5b1058b957391265761c975d
 
 For the :guilabel:`Category` field, select :guilabel:`Goods` from the drop-down menu or create a new
 category by typing in the name and clicking :guilabel:`Create`. Configure :ref:`basic rental rate
