@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-17 18:30+0000\n"
-"PO-Revision-Date: 2026-07-07 01:19+0000\n"
+"PO-Revision-Date: 2026-07-24 14:13+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Spanish <https://translate.odoo.com/projects/odoo-17-doc/"
 "studio/es/>\n"
@@ -836,6 +836,10 @@ msgid ""
 "by :guilabel:`Adding`, :guilabel:`Removing`, or :guilabel:`Setting it to` "
 "the selected value or by :guilabel:`Clearing it`."
 msgstr ""
+"Si seleccionaste un :ref:`campo many2many <studio/fields/relational-fields-"
+"many2many>`, elige si el campo debe actualizarse :guilabel:`Añadiendo`, "
+":guilabel:`Eliminando`, o :guilabel:`Estableciéndolo en` el valor "
+"seleccionado o :guilabel:`Limpiándolo`."
 
 #: ../../content/applications/studio/automated_actions.rst:217
 msgid ""
@@ -863,6 +867,15 @@ msgid ""
 "trigger :guilabel:`Priority is set to` to `High` and define "
 "the :guilabel:`Update Record` action as follows:"
 msgstr ""
+"Alternativamente, también puedes establecer el campo de un registro "
+"dinámicamente usando código Python. Para hacerlo, selecciona "
+":guilabel:`Calcular` en lugar de :guilabel:`Actualizar`, luego introduce el "
+"código a usar para calcular el valor del campo. Por ejemplo, si quieres que "
+"la regla de automatización calcule un :ref:`campo datetime <studio/fields/"
+"simple-fields-date-time>` personalizado cuando la prioridad de una tarea se "
+"establece en `Alta` (marcando la tarea con estrella), puedes definir el "
+"disparador :guilabel:`La prioridad se establece en` `Alta` y definir la "
+"acción :guilabel:`Actualizar registro` como sigue:"
 
 #: ../../content/applications/studio/automated_actions.rst:0
 msgid "Compute a custom datetime field using a Python expression"
@@ -1030,6 +1043,11 @@ msgid ""
 "existing on the current model that are linked to a :ref:`many2one field "
 "<studio/fields/relational-fields-many2one>` on the target model."
 msgstr ""
+"La lista desplegable relacionada con el campo :guilabel:`Campo de enlace` "
+"solo contiene :ref:`campos one2many <studio/fields/relational-fields-"
+"one2many>` existentes en el modelo actual que están vinculados a un "
+":ref:`campo many2one <studio/fields/relational-fields-many2one>` en el "
+"modelo de destino."
 
 #: ../../content/applications/studio/automated_actions.rst:297
 msgid ""
@@ -1180,10 +1198,16 @@ msgid ""
 "stored within them. The way in which a field's data is presented and "
 "formatted on the :abbr:`UI (User Interface)` is controlled by its widget."
 msgstr ""
+"Los campos estructuran los :doc:`modelos <models_modules_apps>` de una base "
+"de datos. Si piensas en un modelo como una tabla u hoja de cálculo, los "
+"campos son las columnas y los registros son las filas individuales. Los "
+"campos también definen el tipo de datos que se almacena dentro de ellos. La "
+"forma en que los datos de un campo se presentan y formatean en la :abbr:`IU "
+"(Interfaz de Usuario)` está controlada por su widget."
 
 #: ../../content/applications/studio/fields.rst:10
 msgid "With Studio, it is possible to:"
-msgstr ""
+msgstr "Con Studio, es posible:"
 
 #: ../../content/applications/studio/fields.rst:12
 msgid ""
@@ -1193,20 +1217,27 @@ msgid ""
 "some field types are available more than once with a different default "
 "widget;"
 msgstr ""
+":ref:`agregar nuevos campos <studio/fields/add-new>` a tu base de datos. "
+"Desde un punto de vista técnico, hay 15 :ref:`tipos de campo <studio/fields/"
+"field-types>` en Odoo. Sin embargo, puedes elegir entre 20 tipos de campo en "
+"Studio, ya que algunos tipos de campo están disponibles más de una vez con "
+"un widget predeterminado diferente;"
 
 #: ../../content/applications/studio/fields.rst:16
 msgid ""
 ":ref:`add existing fields, <studio/fields/add-existing>` i.e., fields that "
 "already exists on a model, to any view of that model;"
 msgstr ""
+":ref:`añadir campos existentes, <studio/fields/add-existing>` es decir, "
+"campos que ya existen en un modelo, a cualquier vista de ese modelo;"
 
 #: ../../content/applications/studio/fields.rst:18
 msgid ":ref:`modify a field's properties <studio/fields/modify>`; or"
-msgstr ""
+msgstr ":ref:`modificar las propiedades de un campo <studio/fields/modify>`; o"
 
 #: ../../content/applications/studio/fields.rst:19
 msgid ":ref:`remove a field from a view <studio/fields/remove>`."
-msgstr ""
+msgstr ":ref:`eliminar un campo de una vista <studio/fields/remove>`."
 
 #: ../../content/applications/studio/fields.rst:24
 msgid "Field types"
@@ -1214,19 +1245,23 @@ msgstr "Tipos de campo"
 
 #: ../../content/applications/studio/fields.rst:26
 msgid "Fields can be broadly divided into two categories:"
-msgstr ""
+msgstr "Los campos se pueden dividir en dos categorías:"
 
 #: ../../content/applications/studio/fields.rst:28
 msgid ""
 ":ref:`Simple fields <studio/fields/simple-fields>`, which contain basic "
 "values, such as text, numbers, files, etc."
 msgstr ""
+":ref:`Campos simples <studio/fields/simple-fields>`, que contienen valores "
+"básicos, como texto, números, archivos, etc."
 
 #: ../../content/applications/studio/fields.rst:30
 msgid ""
 ":ref:`Relational fields <studio/fields/relational-fields>`, which are used "
 "to link and display the data from records on another model."
 msgstr ""
+":ref:`Campos relacionales <studio/fields/relational-fields>`, que se "
+"utilizan para vincular y mostrar los datos de registros de otro modelo."
 
 #: ../../content/applications/studio/fields.rst:36
 msgid "Simple fields"
@@ -1413,6 +1448,9 @@ msgid ""
 "<studio/fields/simple-fields-monetary>`. It is recommended to use the latter "
 "as it offers more functionalities."
 msgstr ""
+":guilabel:`Monetario`: es similar a usar el :ref:`campo Monetario <studio/"
+"fields/simple-fields-monetary>`. Se recomienda usar este último ya que "
+"ofrece más funcionalidades."
 
 #: ../../content/applications/studio/fields.rst:127
 msgid ""
@@ -1508,6 +1546,9 @@ msgid ""
 "date is displayed (e.g., *In 5 days*), based on the current date. This field "
 "should be set to :guilabel:`Read only`."
 msgstr ""
+":guilabel:`Días restantes`: se muestra el número de días restantes antes de "
+"la fecha seleccionada (p. ej., *En 5 días*), según la fecha actual. Este "
+"campo debe establecerse como :guilabel:`Solo lectura`."
 
 #: ../../content/applications/studio/fields.rst:0
 msgid "Examples of Date fields with different widgets"
@@ -1534,10 +1575,15 @@ msgid ""
 "available for :guilabel:`Date & Time` fields that have the :guilabel:`Date & "
 "Time` or :guilabel:`Date Range` widget set."
 msgstr ""
+"Además de las :ref:`propiedades generales <studio/fields/properties>`, "
+"algunas :ref:`propiedades específicas <studio/fields/properties-date-"
+"datetime>` están disponibles para los campos :guilabel:`Fecha y hora` que "
+"tienen configurado el widget :guilabel:`Fecha y hora` o :guilabel:`Rango de "
+"fechas`."
 
 #: ../../content/applications/studio/fields.rst:201
 msgid "Date Range (`daterange`)"
-msgstr ""
+msgstr "Rango de fechas (`daterange`)"
 
 #: ../../content/applications/studio/fields.rst:203
 msgid ""
@@ -1547,6 +1593,12 @@ msgid ""
 "an optional start or end date, e.g., for a field service intervention or a "
 "project task."
 msgstr ""
+"El widget :guilabel:`Rango de fechas` se utiliza para mostrar un período de "
+"tiempo definido por una fecha de inicio y una fecha de finalización en una "
+"sola línea. Un rango de fechas puede tener una fecha de inicio y "
+"finalización obligatorias, por ejemplo, para un evento de varios días, o "
+"permitir una fecha de inicio o finalización opcional, por ejemplo, para una "
+"intervención de servicio de campo o una tarea de proyecto."
 
 #: ../../content/applications/studio/fields.rst:208
 msgid ""
@@ -1556,10 +1608,16 @@ msgid ""
 "existing :ref:`Date <studio/fields/simple-fields-date>` or :guilabel:`Date & "
 "Time` field, or one created specifically for this purpose."
 msgstr ""
+"Agregar un rango de fechas requiere dos campos: un campo :guilabel:`Fecha y "
+"hora` con el widget :guilabel:`Rango de fechas` configurado y otro campo que "
+"se selecciona como fecha de inicio *o* fecha de finalización. Este campo "
+"subyacente puede ser un campo :ref:`Fecha <studio/fields/simple-fields-date>"
+"` o :guilabel:`Fecha y hora` existente, o uno creado específicamente para "
+"este propósito."
 
 #: ../../content/applications/studio/fields.rst:213
 msgid "To add a date range:"
-msgstr ""
+msgstr "Para agregar un rango de fechas:"
 
 #: ../../content/applications/studio/fields.rst:215
 msgid ""
@@ -1567,18 +1625,26 @@ msgid ""
 "can be used as the underlying start/end date field, or add a new one. If the "
 "date range:"
 msgstr ""
+"Identifica un campo :guilabel:`Fecha` o :guilabel:`Fecha y hora` existente "
+"que pueda usarse como campo de fecha de inicio/finalización subyacente, o "
+"agrega uno nuevo. Si el rango de fechas:"
 
 #: ../../content/applications/studio/fields.rst:218
 msgid ""
 "has a mandatory start date and end date, this field can be either the start "
 "date or end date; the outcome is the same."
 msgstr ""
+"tiene una fecha de inicio y finalización obligatorias, este campo puede ser "
+"tanto la fecha de inicio como la fecha de finalización; el resultado es el "
+"mismo."
 
 #: ../../content/applications/studio/fields.rst:220
 msgid ""
 "allows an optional start or end date, this field is the start date or end "
 "date, respectively."
 msgstr ""
+"permite una fecha de inicio o fin opcional; este campo es la fecha de inicio "
+"o la fecha de fin, respectivamente."
 
 #: ../../content/applications/studio/fields.rst:223
 msgid ""
@@ -1586,28 +1652,38 @@ msgid ""
 "date field can be made invisible by enabling :guilabel:`Invisible` or "
 "removed from the view by clicking :guilabel:`Remove from view`."
 msgstr ""
+"Para evitar mostrar la misma información dos veces, el campo subyacente de "
+"fecha de inicio/fin puede hacerse invisible activando :guilabel:`Invisible` "
+"o eliminarse de la vista haciendo clic en :guilabel:`Eliminar de la vista`."
 
 #: ../../content/applications/studio/fields.rst:227
 msgid ""
 "Add a :guilabel:`Date & Time` field and set the :guilabel:`Widget` field "
 "to :guilabel:`Date Range`."
 msgstr ""
+"Añade un campo :guilabel:`Fecha y hora` y establece el campo "
+":guilabel:`Widget` en :guilabel:`Rango de fechas`."
 
 #: ../../content/applications/studio/fields.rst:229
 msgid "Enter an appropriate :guilabel:`Label`."
-msgstr ""
+msgstr "Introduce una :guilabel:`Etiqueta` adecuada."
 
 #: ../../content/applications/studio/fields.rst:230
 msgid ""
 "Select the underlying start/end date field from the :guilabel:`Start date "
 "field` or :guilabel:`End date field` dropdown, as relevant."
 msgstr ""
+"Selecciona el campo subyacente de fecha de inicio/fin en el menú desplegable "
+":guilabel:`Campo de fecha de inicio` o :guilabel:`Campo de fecha de fin`, "
+"según corresponda."
 
 #: ../../content/applications/studio/fields.rst:232
 msgid ""
 "If the date range should have a mandatory start and end date, "
 "enable :guilabel:`Always range`."
 msgstr ""
+"Si el rango de fechas debe tener una fecha de inicio y fin obligatoria, "
+"activa :guilabel:`Siempre rango`."
 
 #: ../../content/applications/studio/fields.rst:233
 msgid ""
@@ -1616,6 +1692,10 @@ msgid ""
 "date-datetime>` as needed, then click :guilabel:`Close` in the upper right "
 "corner of the screen."
 msgstr ""
+"Actualiza cualquier otra :ref:`propiedad general <studio/fields/properties>` "
+"o :ref:`propiedades específicas para campos de Fecha y Hora <studio/fields/"
+"properties-date-datetime>` según sea necesario y luego haz clic en "
+":guilabel:`Cerrar` en la esquina superior derecha de la pantalla."
 
 #: ../../content/applications/studio/fields.rst:0
 msgid "Examples of Date & Time fields with different widgets"
@@ -1623,7 +1703,7 @@ msgstr "Ejemplos de los campos de fecha y hora con diferentes widgets"
 
 #: ../../content/applications/studio/fields.rst:243
 msgid "Remaining Days (`remaining_days`)"
-msgstr ""
+msgstr "Días restantes (`remaining_days`)"
 
 #: ../../content/applications/studio/fields.rst:245
 msgid ""
@@ -1631,6 +1711,10 @@ msgid ""
 "before the selected date (e.g., *In 5 days*), based on the current date and "
 "time. This field should be set to :guilabel:`Read only`."
 msgstr ""
+"El widget :guilabel:`Días restantes` muestra el número de días restantes "
+"antes de la fecha seleccionada (por ejemplo, *En 5 días*), basándose en la "
+"fecha y hora actuales. Este campo debe establecerse como :guilabel:`Solo "
+"lectura`."
 
 #: ../../content/applications/studio/fields.rst:252
 msgid "Checkbox (`boolean`)"
@@ -1692,6 +1776,11 @@ msgid ""
 "fields-priority>`, although, for the latter, four priority values are "
 "already predefined."
 msgstr ""
+":guilabel:`Prioridad`: muestra símbolos de estrellas en lugar de valores, "
+"que pueden usarse para indicar un nivel de importancia o satisfacción, por "
+"ejemplo. Esto tiene el mismo efecto que seleccionar el :ref:`campo Prioridad "
+"<studio/fields/simple-fields-priority>`, aunque, para este último, ya están "
+"predefinidos cuatro valores de prioridad."
 
 #: ../../content/applications/studio/fields.rst:281
 #: ../../content/applications/studio/fields.rst:407
@@ -1707,18 +1796,26 @@ msgid ""
 "By default, radio buttons are organized vertically. "
 "Enable :guilabel:`Display horizontally` to switch the way they are displayed."
 msgstr ""
+"De forma predeterminada, los botones de opción se organizan verticalmente. "
+"Activa :guilabel:`Mostrar horizontalmente` para cambiar la forma en que se "
+"muestran."
 
 #: ../../content/applications/studio/fields.rst:287
 msgid ""
 ":guilabel:`Status Bar`: displays all selectable values at the same time as "
 "an arrow progress bar."
 msgstr ""
+":guilabel:`Barra de estado`: muestra todos los valores seleccionables al "
+"mismo tiempo como una barra de progreso en forma de flecha."
 
 #: ../../content/applications/studio/fields.rst:290
 msgid ""
 "By default, values on the status bar are selectable. "
 "Disable :guilabel:`Clickable` to prevent the value being edited on the UI."
 msgstr ""
+"De forma predeterminada, los valores en la barra de estado son "
+"seleccionables. Desactiva :guilabel:`Clicable` para evitar que el valor se "
+"edite en la interfaz."
 
 #: ../../content/applications/studio/fields.rst:0
 msgid "Examples of Selection fields with different widgets"
@@ -1739,6 +1836,15 @@ msgid ""
 "and :guilabel:`Selection` widgets have the same effects as described "
 "under :ref:`Selection <studio/fields/simple-fields-selection>`."
 msgstr ""
+"El campo :guilabel:`Prioridad` se usa para mostrar un sistema de "
+"calificación de tres estrellas, que puede utilizarse para indicar un nivel "
+"de importancia o satisfacción. Este tipo de campo es un :ref:`campo de "
+"Selección <studio/fields/simple-fields-selection>` con el widget "
+":guilabel:`Prioridad` seleccionado por defecto y cuatro valores de prioridad "
+"predefinidos. En consecuencia, los widgets :guilabel:`Insignia`, "
+":guilabel:`Insignias`, :guilabel:`Radio` y :guilabel:`Selección` tienen los "
+"mismos efectos que los descritos en :ref:`Selección <studio/fields/simple-"
+"fields-selection>`."
 
 #: ../../content/applications/studio/fields.rst:311
 msgid ""
@@ -1775,6 +1881,10 @@ msgid ""
 "in :ref:`Form view <studio/views/general/form>`. This has the same effect as "
 "using the :ref:`Image field <studio/fields/simple-fields-image>`."
 msgstr ""
+":guilabel:`Imagen`: los usuarios pueden subir un archivo de imagen, que "
+"luego se muestra en la :ref:`Vista de formulario <studio/views/general/form>"
+"`. Esto tiene el mismo efecto que usar el :ref:`campo Imagen <studio/fields/"
+"simple-fields-image>`."
 
 #: ../../content/applications/studio/fields.rst:331
 msgid ""
@@ -1789,6 +1899,9 @@ msgid ""
 ":guilabel:`Sign`: users can electronically sign the form. This has the same "
 "effect as selecting the :ref:`Sign field <studio/fields/simple-fields-sign>`."
 msgstr ""
+":guilabel:`Firma electrónica`: los usuarios pueden firmar el formulario "
+"electrónicamente. Esto tiene el mismo efecto que seleccionar el :ref:`campo "
+"Firma electrónica <studio/fields/simple-fields-sign>`."
 
 #: ../../content/applications/studio/fields.rst:0
 msgid "Examples of File fields with different widgets"
@@ -1808,6 +1921,13 @@ msgid ""
 "have the same effects as described under :ref:`File <studio/fields/simple-"
 "fields-file>`."
 msgstr ""
+"El campo :guilabel:`Imagen` se usa para subir una imagen y mostrarla en la "
+":ref:`Vista de formulario <studio/views/general/form>`. Este tipo de campo "
+"es un :ref:`campo Archivo <studio/fields/simple-fields-file>` con el widget "
+":guilabel:`Imagen` seleccionado por defecto. En consecuencia, los widgets "
+":guilabel:`Archivo`, :guilabel:`Visor PDF` y :guilabel:`Firma electrónica` "
+"tienen los mismos efectos que los descritos en :ref:`Archivo <studio/fields/"
+"simple-fields-file>`."
 
 #: ../../content/applications/studio/fields.rst:353
 msgid ""
@@ -1832,6 +1952,12 @@ msgid ""
 "have the same effects as described under :ref:`File <studio/fields/simple-"
 "fields-file>`."
 msgstr ""
+"El campo :guilabel:`Firma electrónica` se usa para firmar el formulario "
+"electrónicamente. Este tipo de campo es un :ref:`campo Archivo <studio/"
+"fields/simple-fields-file>` con el widget :guilabel:`Firma electrónica` "
+"seleccionado por defecto. En consecuencia, los widgets :guilabel:`Archivo`, "
+":guilabel:`Imagen` y :guilabel:`Visor PDF` tienen los mismos efectos que los "
+"descritos en :ref:`Archivo <studio/fields/simple-fields-file>`."
 
 #: ../../content/applications/studio/fields.rst:367
 msgid ""
@@ -1842,6 +1968,12 @@ msgid ""
 "relational-fields-related-field>` on the model only). The signature is "
 "automatically generated using the data from the selected field."
 msgstr ""
+"Para dar a los usuarios la opción :guilabel:`Auto` al tener que dibujar su "
+"firma, selecciona uno de los campos :guilabel:`Autocompletar con` "
+"disponibles (:ref:`Texto <studio/fields/simple-fields-text>`, :ref:`Many2One "
+"<studio/fields/relational-fields-many2one>` y :ref:`Campo relacionado "
+"<studio/fields/relational-fields-related-field>` solo en el modelo). La "
+"firma se genera automáticamente usando los datos del campo seleccionado."
 
 #: ../../content/applications/studio/fields.rst:376
 msgid "Relational fields"
@@ -1954,6 +2086,11 @@ msgid ""
 "many2one>`. One2Many relations do not exist independently: a reverse-search "
 "of existing Many2One relations is performed."
 msgstr ""
+"Para usar un campo :guilabel:`One2Many`, los dos modelos deben haber sido "
+"vinculados previamente usando un :ref:`campo Many2One <studio/fields/"
+"relational-fields-many2one>`. Las relaciones One2Many no existen de forma "
+"independiente: se realiza una búsqueda inversa de las relaciones Many2One "
+"existentes."
 
 #: ../../content/applications/studio/fields.rst:432
 msgid "Lines (`one2many`)"
@@ -1995,6 +2132,11 @@ msgid ""
 "opening`, :guilabel:`Domain`, just like :ref:`Many2One fields <studio/fields/"
 "relational-fields-many2one>`."
 msgstr ""
+"El campo :guilabel:`Many2Many` se usa para vincular múltiples registros de "
+"otro modelo a múltiples registros del modelo actual. Los campos Many2Many "
+"pueden usar :guilabel:`Deshabilitar creación`, :guilabel:`Deshabilitar "
+"apertura`, :guilabel:`Dominio`, igual que los :ref:`campos Many2One <studio/"
+"fields/relational-fields-many2one>`."
 
 #: ../../content/applications/studio/fields.rst:458
 msgid ""
@@ -2025,6 +2167,10 @@ msgid ""
 "shapes, also known as *tags*. This has the same effect as selecting "
 "the :ref:`Tags field <studio/fields/relational-fields-tags>`."
 msgstr ""
+":guilabel:`Etiquetas`: los usuarios pueden seleccionar varios valores que "
+"aparecen en formas redondeadas, también conocidas como *etiquetas*. Esto "
+"tiene el mismo efecto que seleccionar el :ref:`campo Etiquetas <studio/"
+"fields/relational-fields-tags>`."
 
 #: ../../content/applications/studio/fields.rst:473
 msgid "Tags (`many2many`)"
@@ -2040,6 +2186,13 @@ msgid ""
 "effects as described under :ref:`Many2Many <studio/fields/relational-fields-"
 "many2many>`."
 msgstr ""
+"El campo :guilabel:`Etiquetas` se usa para mostrar varios valores de otro "
+"modelo que aparecen en formas redondeadas, también conocidas como "
+"*etiquetas*. Este tipo de campo es un :ref:`campo Many2Many <studio/fields/"
+"relational-fields-many2many>` con el widget :guilabel:`Etiquetas` "
+"seleccionado por defecto. En consecuencia, los widgets :guilabel:`Casillas "
+"de verificación` y :guilabel:`Many2Many` tienen los mismos efectos que los "
+"descritos en :ref:`Many2Many <studio/fields/relational-fields-many2many>`."
 
 #: ../../content/applications/studio/fields.rst:482
 msgid ""
@@ -2080,11 +2233,11 @@ msgstr ""
 
 #: ../../content/applications/studio/fields.rst:504
 msgid "Add a field to a view"
-msgstr ""
+msgstr "Añadir un campo a una vista"
 
 #: ../../content/applications/studio/fields.rst:506
 msgid "With Studio, it is possible to add:"
-msgstr ""
+msgstr "Con Studio, es posible añadir:"
 
 #: ../../content/applications/studio/fields.rst:508
 msgid ""
@@ -2092,6 +2245,9 @@ msgid ""
 "general/form>` or :ref:`list view <studio/views/multiple-records/list>` of a "
 "model"
 msgstr ""
+":ref:`un nuevo campo <studio/fields/add-new>` a una vista de "
+":ref:`formulario <studio/views/general/form>` o :ref:`lista <studio/views/"
+"multiple-records/list>` de un modelo"
 
 #: ../../content/applications/studio/fields.rst:510
 msgid ""
@@ -2099,26 +2255,35 @@ msgid ""
 "already exists on the :doc:`model <models_modules_apps>` in question, to "
 "*any* view of that model"
 msgstr ""
+":ref:`un campo existente <studio/fields/add-existing>`, es decir, un campo "
+"que ya existe en el :doc:`modelo <models_modules_apps>` en cuestión, a "
+"*cualquier* vista de ese modelo"
 
 #: ../../content/applications/studio/fields.rst:514
 msgid ""
 "Add a new field to a form or list view to save it to the model and make it "
 "available as an existing field in other views of the same model."
 msgstr ""
+"Añade un nuevo campo a una vista de formulario o lista para guardarlo en el "
+"modelo y que esté disponible como campo existente en otras vistas del mismo "
+"modelo."
 
 #: ../../content/applications/studio/fields.rst:520
 msgid "Add a new field"
-msgstr ""
+msgstr "Añadir un nuevo campo"
 
 #: ../../content/applications/studio/fields.rst:523
 msgid ""
 "Activate :ref:`developer mode <developer-mode>` *before* adding a new field "
 "to see, and be able to edit, the field's technical name during configuration."
 msgstr ""
+"Activa el :ref:`modo de desarrollador <developer-mode>` *antes* de añadir un "
+"nuevo campo para ver, y poder editar, el nombre técnico del campo durante la "
+"configuración."
 
 #: ../../content/applications/studio/fields.rst:526
 msgid "To add a new field, follow these steps:"
-msgstr ""
+msgstr "Para añadir un nuevo campo, sigue estos pasos:"
 
 #: ../../content/applications/studio/fields.rst:528
 msgid ""
@@ -2127,6 +2292,11 @@ msgid ""
 "with any app open, click the :icon:`oi-studio` (:guilabel:`Toggle Studio`) "
 "icon, then navigate to the relevant form or list view."
 msgstr ""
+"Ve a la vista de formulario o lista correspondiente y haz clic en el icono "
+":icon:`oi-studio` (:guilabel:`Activar Studio`) en la esquina superior "
+"derecha. Alternativamente, con cualquier aplicación abierta, haz clic en el "
+"icono :icon:`oi-studio` (:guilabel:`Activar Studio`) y luego ve a la vista "
+"de formulario o lista correspondiente."
 
 #: ../../content/applications/studio/fields.rst:533
 msgid ""
@@ -2136,24 +2306,37 @@ msgid ""
 "field <studio/fields/relational-fields>`, select the relevant reciprocal "
 "field, model, or related field in the pop-up."
 msgstr ""
+"En la pestaña :icon:`fa-plus` :guilabel:`Añadir`, arrastra el :ref:`tipo de "
+"campo <studio/fields/field-types>` correspondiente desde la sección "
+":guilabel:`Campos nuevos` y suéltalo en la posición deseada. Si el nuevo "
+"campo es un :ref:`campo relacional <studio/fields/relational-fields>`, "
+"selecciona el campo recíproco, modelo o campo relacionado correspondiente en "
+"la ventana emergente."
 
 #: ../../content/applications/studio/fields.rst:538
 msgid ""
 "In the :icon:`fa-server` :guilabel:`Properties` tab, configure the "
 "field's :ref:`properties <studio/fields/properties>`:"
 msgstr ""
+"En la pestaña :icon:`fa-server` :guilabel:`Propiedades`, configura las "
+":ref:`propiedades <studio/fields/properties>` del campo:"
 
 #: ../../content/applications/studio/fields.rst:541
 msgid ""
 "Enter the :guilabel:`Label` to be displayed as the field name on the UI; "
 "this is also used to generate the default technical name of the field."
 msgstr ""
+"Introduce la :guilabel:`Etiqueta` que se mostrará como nombre del campo en "
+"la interfaz; también se utiliza para generar el nombre técnico "
+"predeterminado del campo."
 
 #: ../../content/applications/studio/fields.rst:543
 msgid ""
 "Click anywhere outside the :guilabel:`Label` field to see "
 "the :guilabel:`Technical Name` updated with the default technical name."
 msgstr ""
+"Haz clic en cualquier lugar fuera del campo :guilabel:`Etiqueta` para ver el "
+":guilabel:`Nombre técnico` actualizado con el nombre técnico predeterminado."
 
 #: ../../content/applications/studio/fields.rst:547
 msgid ""
@@ -2162,12 +2345,19 @@ msgid ""
 "only be :ref:`modified via the technical settings of the database <studio/"
 "fields/properties-technical-name-change>`."
 msgstr ""
+"El :guilabel:`Nombre técnico` de un campo nuevo puede editarse en Studio "
+"durante el proceso de configuración. En cualquier otro momento, el nombre "
+"técnico de un campo solo puede :ref:`modificarse a través de la "
+"configuración técnica de la base de datos <studio/fields/properties-"
+"technical-name-change>`."
 
 #: ../../content/applications/studio/fields.rst:551
 msgid ""
 "The technical name of a new field added using Studio is by default prefixed "
 "by `x_studio_`."
 msgstr ""
+"El nombre técnico de un campo nuevo añadido usando Studio tiene por defecto "
+"el prefijo `x_studio_`."
 
 #: ../../content/applications/studio/fields.rst:554
 msgid ""
@@ -2175,28 +2365,37 @@ msgid ""
 "default widget for the :ref:`field type <studio/fields/field-types>` is "
 "selected by default."
 msgstr ""
+"Opcionalmente, selecciona un :guilabel:`Widget` diferente mediante el menú "
+"desplegable; el widget predeterminado para el :ref:`tipo de campo <studio/"
+"fields/field-types>` está seleccionado por defecto."
 
 #: ../../content/applications/studio/fields.rst:556
 msgid ""
 "Optionally, configure any other :ref:`field properties <studio/fields/"
 "properties>`."
 msgstr ""
+"Opcionalmente, configura cualquier otra :ref:`propiedad del campo <studio/"
+"fields/properties>`."
 
 #: ../../content/applications/studio/fields.rst:558
 #: ../../content/applications/studio/fields.rst:584
 #: ../../content/applications/studio/fields.rst:697
 msgid "Click :guilabel:`Close` in the top-right corner to close Studio."
 msgstr ""
+"Haz clic en :guilabel:`Cerrar` en la esquina superior derecha para cerrar "
+"Studio."
 
 #: ../../content/applications/studio/fields.rst:563
 msgid "Add an existing field"
-msgstr ""
+msgstr "Añadir un campo existente"
 
 #: ../../content/applications/studio/fields.rst:565
 msgid ""
 "To add a field that exists on the model but that is not present on the "
 "current view, follow these steps:"
 msgstr ""
+"Para añadir un campo que existe en el modelo pero que no está presente en la "
+"vista actual, sigue estos pasos:"
 
 #: ../../content/applications/studio/fields.rst:568
 #: ../../content/applications/studio/fields.rst:684
@@ -2207,6 +2406,11 @@ msgid ""
 "with any app open, click the :icon:`oi-studio` (:guilabel:`Toggle Studio`) "
 "icon, then navigate to the relevant view."
 msgstr ""
+"Ve a la vista relevante y haz clic en el icono :icon:`oi-studio` "
+"(:guilabel:`Activar Studio`) en la esquina superior derecha. "
+"Alternativamente, con cualquier aplicación abierta, haz clic en el icono "
+":icon:`oi-studio` (:guilabel:`Activar Studio`) y luego ve a la vista "
+"relevante."
 
 #: ../../content/applications/studio/fields.rst:571
 msgid ""
@@ -2214,10 +2418,14 @@ msgid ""
 "click :guilabel:`Existing Fields` :icon:`fa-caret-right` to reveal a list of "
 "all the model's fields that are not currently present in the view."
 msgstr ""
+"En la pestaña :icon:`fa-plus` :guilabel:`Añadir`, en el panel izquierdo, haz "
+"clic en :guilabel:`Campos existentes` :icon:`fa-caret-right` para revelar "
+"una lista de todos los campos del modelo que no están presentemente en la "
+"vista."
 
 #: ../../content/applications/studio/fields.rst:574
 msgid "Drag the relevant field and drop it in the desired position."
-msgstr ""
+msgstr "Arrastra el campo relevante y suéltalo en la posición deseada."
 
 #: ../../content/applications/studio/fields.rst:575
 msgid ""
@@ -2225,6 +2433,9 @@ msgid ""
 "relevant :ref:`properties <studio/fields/properties>` for the field in the "
 "current view."
 msgstr ""
+"En la pestaña :icon:`fa-server` :guilabel:`Propiedades`, configura las "
+":ref:`propiedades <studio/fields/properties>` relevantes para el campo en la "
+"vista actual."
 
 #: ../../content/applications/studio/fields.rst:579
 msgid ""
@@ -2234,10 +2445,15 @@ msgid ""
 "the field is :guilabel:`Invisible`, :guilabel:`Required`, "
 "or :guilabel:`Readonly`."
 msgstr ""
+"Varias propiedades pueden configurarse independientemente para diferentes "
+"vistas, si es necesario, como la :guilabel:`Etiqueta`, el "
+":guilabel:`Widget`, la visibilidad del campo para ciertos grupos de "
+"usuarios, así como si el campo es :guilabel:`Invisible`, "
+":guilabel:`Obligatorio` o :guilabel:`Solo lectura`."
 
 #: ../../content/applications/studio/fields.rst:589
 msgid "Field properties"
-msgstr ""
+msgstr "Propiedades del campo"
 
 #: ../../content/applications/studio/fields.rst:591
 msgid ""
@@ -2249,10 +2465,18 @@ msgid ""
 "widget have various :ref:`specific properties <studio/fields/properties-date-"
 "datetime>` that can be configured."
 msgstr ""
+"Una serie de :ref:`propiedades generales <studio/fields/properties-general>` "
+"pueden configurarse para la mayoría de las combinaciones de :ref:`tipo de "
+"campo y widget <studio/fields/field-types>`. Propiedades adicionales están "
+"disponibles dependiendo del tipo de campo y widget específicos "
+"seleccionados. Por ejemplo, los campos :guilabel:`Fecha y hora` que usan el "
+"widget :guilabel:`Fecha y hora` o :guilabel:`Rango de fechas` tienen varias "
+":ref:`propiedades específicas <studio/fields/properties-date-datetime>` que "
+"pueden configurarse."
 
 #: ../../content/applications/studio/fields.rst:600
 msgid "General properties"
-msgstr ""
+msgstr "Propiedades generales"
 
 #: ../../content/applications/studio/fields.rst:602
 msgid ""
@@ -2260,18 +2484,25 @@ msgid ""
 "users to view a field on the UI. This helps declutter the UI by only showing "
 "the essential fields depending on a specific situation."
 msgstr ""
+":guilabel:`Invisible`: habilita esta propiedad cuando no es necesario que "
+"los usuarios vean un campo en la interfaz. Esto ayuda a ordenar la interfaz "
+"mostrando solo los campos esenciales según una situación específica."
 
 #: ../../content/applications/studio/fields.rst:606
 msgid ""
 ":guilabel:`Required`: Enable this property if a field should always be "
 "completed by the user before being able to proceed."
 msgstr ""
+":guilabel:`Obligatorio`: habilita esta propiedad si un campo debe ser "
+"completado siempre por el usuario antes de poder continuar."
 
 #: ../../content/applications/studio/fields.rst:609
 msgid ""
 ":guilabel:`Readonly`: Enable this property if users should not be able to "
 "modify a field."
 msgstr ""
+":guilabel:`Solo lectura`: habilita esta propiedad si los usuarios no deben "
+"poder modificar un campo."
 
 #: ../../content/applications/studio/fields.rst:612
 msgid ""
@@ -2279,6 +2510,9 @@ msgid ""
 "hidden fields in Studio, click on a view's :guilabel:`View` tab and "
 "enable :guilabel:`Show Invisible Elements`."
 msgstr ""
+"La propiedad :guilabel:`Invisible` también se aplica dentro de Studio. Para "
+"ver los campos ocultos en Studio, haz clic en la pestaña :guilabel:`Vista` "
+"de una vista y activa :guilabel:`Mostrar elementos invisibles`."
 
 #: ../../content/applications/studio/fields.rst:614
 msgid ""
@@ -2286,6 +2520,9 @@ msgid ""
 "properties can be enabled for specific records only by clicking "
 "on :guilabel:`Conditional` and creating a filter."
 msgstr ""
+"Las propiedades :guilabel:`Invisible`, :guilabel:`Obligatorio` y "
+":guilabel:`Solo lectura` pueden activarse solo para registros específicos "
+"haciendo clic en :guilabel:`Condicional` y creando un filtro."
 
 #: ../../content/applications/studio/fields.rst:618
 msgid ""
@@ -2293,12 +2530,17 @@ msgid ""
 "appears when :guilabel:`Individual` is selected, as that field would not be "
 "helpful for a :guilabel:`Company` contact."
 msgstr ""
+"En la vista de formulario del modelo *Contacto*, el campo :guilabel:`Título` "
+"solo aparece cuando se selecciona :guilabel:`Individual`, ya que ese campo "
+"no sería útil para un contacto de :guilabel:`Empresa`."
 
 #: ../../content/applications/studio/fields.rst:622
 msgid ""
 ":guilabel:`Label`: This is the field name on the UI; the label is used to "
 "generate the technical name of the field."
 msgstr ""
+":guilabel:`Etiqueta`: Este es el nombre del campo en la interfaz de usuario; "
+"la etiqueta se usa para generar el nombre técnico del campo."
 
 #: ../../content/applications/studio/fields.rst:625
 msgid ""
@@ -2306,6 +2548,10 @@ msgid ""
 "description. The text is displayed inside a tooltip box when hovering with "
 "your mouse over the question mark beside the field's label."
 msgstr ""
+":guilabel:`Información sobre herramientas de ayuda`: para explicar el "
+"propósito de un campo, añade una descripción. El texto se muestra dentro de "
+"un cuadro de información sobre herramientas al pasar el ratón sobre el signo "
+"de interrogación junto a la etiqueta del campo."
 
 #: ../../content/applications/studio/fields.rst:629
 msgid ""
@@ -2313,6 +2559,9 @@ msgid ""
 "during the configuration of a new field, edit it if desired), "
 "activate :ref:`developer mode <developer-mode>`."
 msgstr ""
+":guilabel:`Nombre técnico`: Para ver el nombre técnico de un campo en Studio "
+"(y, durante la configuración de un nuevo campo, editarlo si lo deseas), "
+"activa el :ref:`modo de desarrollador <developer-mode>`."
 
 #: ../../content/applications/studio/fields.rst:634
 msgid ""
@@ -2320,6 +2569,10 @@ msgid ""
 "technical name can be :ref:`modified via the technical settings of the "
 "database <studio/fields/properties-technical-name-change>`."
 msgstr ""
+"Si este campo necesita ser actualizado pero ya no es editable a través de "
+"Studio, el nombre técnico puede :ref:`modificarse a través de la "
+"configuración técnica de la base de datos <studio/fields/properties-"
+"technical-name-change>`."
 
 #: ../../content/applications/studio/fields.rst:638
 msgid ""
@@ -2341,12 +2594,17 @@ msgid ""
 ":guilabel:`Default value`: To display a default value in a field when a "
 "record is created, add a value."
 msgstr ""
+":guilabel:`Valor predeterminado`: para mostrar un valor predeterminado en un "
+"campo cuando se crea un registro, añade un valor."
 
 #: ../../content/applications/studio/fields.rst:647
 msgid ""
 ":guilabel:`Allow visibility to groups`: To limit which users can view the "
 "field, select one or more user access :ref:`groups <access-rights/groups>`."
 msgstr ""
+":guilabel:`Permitir visibilidad a grupos`: para limitar qué usuarios pueden "
+"ver el campo, selecciona uno o más :ref:`grupos <access-rights/groups>` de "
+"acceso de usuario."
 
 #: ../../content/applications/studio/fields.rst:649
 msgid ""
@@ -2354,10 +2612,13 @@ msgid ""
 "seeing the field, select one or more user access :ref:`groups <access-rights/"
 "groups>`."
 msgstr ""
+":guilabel:`Prohibir visibilidad a grupos`: para evitar que ciertos usuarios "
+"vean el campo, selecciona uno o más :ref:`grupos <access-rights/groups>` de "
+"acceso de usuario."
 
 #: ../../content/applications/studio/fields.rst:655
 msgid "Properties for Date & Time fields"
-msgstr ""
+msgstr "Propiedades para campos de fecha y hora"
 
 #: ../../content/applications/studio/fields.rst:657
 msgid ""
@@ -2371,12 +2632,18 @@ msgid ""
 "shown in the time selector. For example, enter 15 to allow quarter-hour "
 "intervals. The default value is set to 5 minutes."
 msgstr ""
+":guilabel:`Intervalo de tiempo`: introduce un valor para determinar los "
+"intervalos de minutos mostrados en el selector de hora. Por ejemplo, "
+"introduce 15 para permitir intervalos de cuarto de hora. El valor "
+"predeterminado está configurado en 5 minutos."
 
 #: ../../content/applications/studio/fields.rst:663
 msgid ""
 ":guilabel:`Warning for future dates`: Enable this property to display a "
 "warning icon if a future date is selected."
 msgstr ""
+":guilabel:`Advertencia para fechas futuras`: habilita esta propiedad para "
+"mostrar un icono de advertencia si se selecciona una fecha futura."
 
 #: ../../content/applications/studio/fields.rst:665
 msgid ""
@@ -2385,6 +2652,10 @@ msgid ""
 "property to show only the date. This can keep a list view less cluttered, "
 "for example."
 msgstr ""
+":guilabel:`Mostrar hora`: esta propiedad está habilitada por defecto para "
+"los campos :guilabel:`Fecha y hora`. En un campo de solo lectura, "
+"deshabilita la propiedad para mostrar solo la fecha. Esto puede mantener una "
+"vista de lista menos desordenada, por ejemplo."
 
 #: ../../content/applications/studio/fields.rst:668
 msgid ""
@@ -2393,6 +2664,11 @@ msgid ""
 "current date is always the earliest accepted date, enter `today`. On the "
 "date selector, dates prior to the earliest accepted date are grayed out."
 msgstr ""
+":guilabel:`Fecha más temprana aceptada`: introduce la fecha más temprana que "
+"se puede seleccionar en el selector de fecha en formato ISO, es decir, `YYYY-"
+"MM-DD`. Si la fecha actual es siempre la fecha más temprana aceptada, "
+"introduce `today`. En el selector de fecha, las fechas anteriores a la fecha "
+"más temprana aceptada aparecen en gris."
 
 #: ../../content/applications/studio/fields.rst:672
 msgid ""
@@ -2401,25 +2677,32 @@ msgid ""
 "is always the latest accepted date, enter `today`. On the date selector, "
 "dates later than the latest accepted date are grayed out."
 msgstr ""
+":guilabel:`Fecha más tardía aceptada`: introduce la fecha más tardía que se "
+"puede seleccionar en el selector de fecha en formato ISO, es decir, `YYYY-MM-"
+"DD`. Si la fecha actual es siempre la fecha más tardía aceptada, introduce "
+"`today`. En el selector de fecha, las fechas posteriores a la fecha más "
+"tardía aceptada aparecen en gris."
 
 #: ../../content/applications/studio/fields.rst:680
 msgid "Modify a field's properties"
-msgstr ""
+msgstr "Modificar las propiedades de un campo"
 
 #: ../../content/applications/studio/fields.rst:682
 msgid "To modify the properties of a field, follow these steps:"
-msgstr ""
+msgstr "Para modificar las propiedades de un campo, sigue estos pasos:"
 
 #: ../../content/applications/studio/fields.rst:687
 #: ../../content/applications/studio/fields.rst:737
 msgid "Click on the relevant field."
-msgstr ""
+msgstr "Haz clic en el campo correspondiente."
 
 #: ../../content/applications/studio/fields.rst:688
 msgid ""
 "In the :icon:`fa-server` :guilabel:`Properties` tab, make any desired "
 "changes to the :ref:`field properties <studio/fields/properties>`."
 msgstr ""
+"En la pestaña :icon:`fa-server` :guilabel:`Propiedades`, realiza los cambios "
+"deseados en las :ref:`propiedades del campo <studio/fields/properties>`."
 
 #: ../../content/applications/studio/fields.rst:692
 msgid ""
@@ -2428,6 +2711,10 @@ msgid ""
 "field for certain user groups, as well as whether or not the field "
 "is :guilabel:`Invisible`, :guilabel:`Required`, or :guilabel:`Readonly`."
 msgstr ""
+"Varias propiedades pueden configurarse de forma independiente para "
+"diferentes vistas, como la :guilabel:`Etiqueta`, el :guilabel:`Widget`, la "
+"visibilidad del campo para ciertos grupos de usuarios, así como si el campo "
+"es :guilabel:`Invisible`, :guilabel:`Requerido` o :guilabel:`Solo lectura`."
 
 #: ../../content/applications/studio/fields.rst:700
 msgid ""
@@ -2436,40 +2723,50 @@ msgid ""
 "Studio; this can be done :ref:`via the technical settings of the database "
 "<studio/fields/properties-technical-name-change>`."
 msgstr ""
+"El :guilabel:`Nombre técnico` de un campo (visible en Studio con el "
+":ref:`modo de desarrollador <developer-mode>` activado) no puede modificarse "
+"en Studio; esto puede hacerse :ref:`a través de la configuración técnica de "
+"la base de datos <studio/fields/properties-technical-name-change>`."
 
 #: ../../content/applications/studio/fields.rst:707
 msgid "Modify a field's technical name"
-msgstr ""
+msgstr "Modificar el nombre técnico de un campo"
 
 #: ../../content/applications/studio/fields.rst:709
 msgid ""
 "To modify the technical name of a field, activate :ref:`developer mode "
 "<developer-mode>`, then follow these steps:"
 msgstr ""
+"Para modificar el nombre técnico de un campo, activa el :ref:`modo de "
+"desarrollador <developer-mode>` y luego sigue estos pasos:"
 
 #: ../../content/applications/studio/fields.rst:712
 msgid "With the field open in Studio, copy the technical name of the field."
-msgstr ""
+msgstr "Con el campo abierto en Studio, copia el nombre técnico del campo."
 
 #: ../../content/applications/studio/fields.rst:713
 msgid ""
 ":ref:`Remove the field <studio/fields/remove>` from *all* views in Studio, "
 "then click :guilabel:`Close` to close Studio."
 msgstr ""
+":ref:`Elimina el campo <studio/fields/remove>` de *todas* las vistas en "
+"Studio, luego haz clic en :guilabel:`Cerrar` para cerrar Studio."
 
 #: ../../content/applications/studio/fields.rst:715
 msgid "Navigate to :menuselection:`Settings app --> Technical --> Fields`."
-msgstr ""
+msgstr "Ve a :menuselection:`Aplicación Ajustes --> Técnico --> Campos`."
 
 #: ../../content/applications/studio/fields.rst:716
 msgid ""
 "Paste the copied technical name into the search bar, then open the relevant "
 "field."
 msgstr ""
+"Pega el nombre técnico copiado en la barra de búsqueda y luego abre el campo "
+"correspondiente."
 
 #: ../../content/applications/studio/fields.rst:717
 msgid "Modify the :guilabel:`Field Name` as needed."
-msgstr ""
+msgstr "Modifica el :guilabel:`Nombre del campo` según sea necesario."
 
 #: ../../content/applications/studio/fields.rst:719
 msgid ""
@@ -2477,6 +2774,9 @@ msgid ""
 "be :ref:`added (back) to the relevant view(s) <studio/fields/add-existing>` "
 "from the list of existing fields."
 msgstr ""
+"Una vez actualizado el nombre técnico del campo, el campo puede "
+":ref:`agregarse (de nuevo) a la(s) vista(s) relevante(s) <studio/fields/add-"
+"existing>` desde la lista de campos existentes."
 
 #: ../../content/applications/studio/fields.rst:723
 msgid ""
@@ -2485,30 +2785,38 @@ msgid ""
 "using Studio, keep the `x_studio_` prefix to allow such fields to be more "
 "easily identified."
 msgstr ""
+"Al actualizar el nombre técnico de un campo, asegúrate de mantener al menos "
+"el prefijo `x_`, que es obligatorio para cualquier campo personalizado; para "
+"campos creados con Studio, mantén el prefijo `x_studio_` para permitir que "
+"dichos campos se identifiquen más fácilmente."
 
 #: ../../content/applications/studio/fields.rst:730
 msgid "Remove a field from a view"
-msgstr ""
+msgstr "Eliminar un campo de una vista"
 
 #: ../../content/applications/studio/fields.rst:732
 msgid "To remove a field from a view, follow these steps:"
-msgstr ""
+msgstr "Para eliminar un campo de una vista, sigue estos pasos:"
 
 #: ../../content/applications/studio/fields.rst:738
 msgid ""
 "Scroll to the bottom of the :guilabel:`Properties` tab, then "
 "click :guilabel:`Remove from view`."
 msgstr ""
+"Desplázate hasta la parte inferior de la pestaña :guilabel:`Propiedades`, "
+"luego haz clic en :guilabel:`Eliminar de la vista`."
 
 #: ../../content/applications/studio/fields.rst:739
 msgid "Click :guilabel:`Ok` to confirm the action."
-msgstr ""
+msgstr "Haz clic en :guilabel:`Aceptar` para confirmar la acción."
 
 #: ../../content/applications/studio/fields.rst:742
 msgid ""
 "A removed field can be easily :ref:`added back to the view <studio/fields/"
 "add-existing>` at a later stage, if needed."
 msgstr ""
+"Un campo eliminado puede :ref:`agregarse de nuevo a la vista <studio/fields/"
+"add-existing>` fácilmente en una etapa posterior, si es necesario."
 
 #: ../../content/applications/studio/fields.rst:744
 msgid ""
@@ -2516,6 +2824,9 @@ msgid ""
 "to :ref:`modify a field <studio/fields/modify>` and make "
 "it :guilabel:`Invisible` on the view in question."
 msgstr ""
+"Si la intención es ordenar la vista, también es posible :ref:`modificar un "
+"campo <studio/fields/modify>` y hacerlo :guilabel:`Invisible` en la vista en "
+"cuestión."
 
 #: ../../content/applications/studio/models_modules_apps.rst:3
 msgid "Models, modules, and apps"
@@ -2606,6 +2917,14 @@ msgid ""
 "the :ref:`List view <studio/views/multiple-records/list>`, and the :ref:`Map "
 "view <studio/views/multiple-records/map>` is activated."
 msgstr ""
+"Al seleccionar :guilabel:`Detalles de contacto` se añade a la :ref:`vista de "
+"formulario <studio/views/general/form>` un :ref:`campo Many2One <studio/"
+"fields/relational-fields-many2one>` vinculado al modelo *Contacto* y dos de "
+"sus :ref:`campos relacionados <studio/fields/relational-fields-related-field>"
+"`: :guilabel:`Teléfono` y :guilabel:`Correo electrónico`. El campo "
+":guilabel:`Contacto` también se añade a la :ref:`vista de lista <studio/"
+"views/multiple-records/list>`, y se activa la :ref:`vista de mapa <studio/"
+"views/multiple-records/map>`."
 
 #: ../../content/applications/studio/models_modules_apps.rst:0
 msgid "Contact details feature on the Form view"
@@ -2626,6 +2945,14 @@ msgid ""
 "avatar. The :guilabel:`Responsible` field is also added to the :ref:`List "
 "view <studio/views/multiple-records/list>`."
 msgstr ""
+"Al seleccionar :guilabel:`Asignación de usuario` se añade a la :ref:`vista "
+"de formulario <studio/views/general/form>` un :ref:`campo Many2One <studio/"
+"fields/relational-fields-many2one>` vinculado al modelo *Contacto*, con el "
+"siguiente :guilabel:`Dominio`: `Usuario compartido no está establecido` para "
+"permitir solo la selección de *usuarios internos*. Además, se usa el widget "
+":guilabel:`many2one_avatar_user` para mostrar el avatar del usuario. El "
+"campo :guilabel:`Responsable` también se añade a la :ref:`vista de lista "
+"<studio/views/multiple-records/list>`."
 
 #: ../../content/applications/studio/models_modules_apps.rst:0
 msgid "User assignment feature on the Form view"
@@ -2641,6 +2968,10 @@ msgid ""
 "views/general/form>` a :ref:`Date field <studio/fields/simple-fields-date>` "
 "and activates the :ref:`Calendar view <studio/views/timeline/calendar>`."
 msgstr ""
+"Al seleccionar :guilabel:`Fecha y calendario` se añade a la :ref:`vista de "
+"formulario <studio/views/general/form>` un :ref:`campo de fecha <studio/"
+"fields/simple-fields-date>` y se activa la :ref:`vista de calendario <studio/"
+"views/timeline/calendar>`."
 
 #: ../../content/applications/studio/models_modules_apps.rst:84
 msgid "Date range & Gantt"
@@ -2654,6 +2985,12 @@ msgid ""
 "date, using the :guilabel:`daterange` widget, and activates the :ref:`Gantt "
 "view <studio/views/timeline/gantt>`."
 msgstr ""
+"Seleccionar :guilabel:`Rango de fechas y Gantt` agrega a la :ref:`vista de "
+"formulario <studio/views/general/form>` dos :ref:`campos de fecha <studio/"
+"fields/simple-fields-date>` uno junto al otro: uno para establecer una fecha "
+"de inicio y otro para establecer una fecha de fin, usando el widget "
+":guilabel:`daterange`, y activa la :ref:`vista Gantt <studio/views/timeline/"
+"gantt>`."
 
 #: ../../content/applications/studio/models_modules_apps.rst:94
 msgid "Pipeline stages"
@@ -2671,6 +3008,14 @@ msgid ""
 "The :guilabel:`Color` field is added to the :ref:`List view <studio/views/"
 "multiple-records/list>`."
 msgstr ""
+"Seleccionar :guilabel:`Etapas de pipeline` activa la :ref:`vista Kanban "
+"<studio/views/multiple-records/kanban>`, agrega varios campos como "
+":ref:`Prioridad <studio/fields/simple-fields-priority>` y :guilabel:`Estado "
+"Kanban`, y tres etapas: :guilabel:`Nuevo`, :guilabel:`En progreso` y "
+":guilabel:`Hecho`. La :guilabel:`barra de estado del pipeline` y el campo "
+":guilabel:`Estado Kanban` se agregan a la :ref:`vista de formulario <studio/"
+"views/general/form>`. El campo :guilabel:`Color` se agrega a la :ref:`vista "
+"de lista <studio/views/multiple-records/list>`."
 
 #: ../../content/applications/studio/models_modules_apps.rst:105
 msgid "The :guilabel:`Pipeline stages` feature can be added at a later stage."
@@ -2687,6 +3032,10 @@ msgid ""
 "<studio/fields/relational-fields-tags>`, creating a *Tag* model with "
 "preconfigured access rights in the process."
 msgstr ""
+"Seleccionar :guilabel:`Etiquetas` agrega a las vistas :ref:`studio/views/"
+"general/form` y :ref:`studio/views/multiple-records/list` un :ref:`campo de "
+"etiquetas <studio/fields/relational-fields-tags>`, creando un modelo de "
+"*Etiqueta* con derechos de acceso preconfigurados en el proceso."
 
 #: ../../content/applications/studio/models_modules_apps.rst:120
 msgid "Picture"
@@ -2698,6 +3047,9 @@ msgid ""
 "<studio/views/general/form>` an :ref:`Image field <studio/fields/simple-"
 "fields-image>`."
 msgstr ""
+"Seleccionar :guilabel:`Imagen` agrega en la parte superior derecha de la "
+":ref:`vista de formulario <studio/views/general/form>` un :ref:`campo de "
+"imagen <studio/fields/simple-fields-image>`."
 
 #: ../../content/applications/studio/models_modules_apps.rst:126
 msgid "The :guilabel:`Picture` feature can be added at a later stage."
@@ -2713,6 +3065,9 @@ msgid ""
 "general/form>` a :ref:`Lines field <studio/fields/relational-fields-lines>` "
 "inside a :guilabel:`Tab` component."
 msgstr ""
+"Seleccionar :guilabel:`Líneas`: agrega a la :ref:`vista de formulario "
+"<studio/views/general/form>` un :ref:`campo de líneas <studio/fields/"
+"relational-fields-lines>` dentro de un componente :guilabel:`Pestaña`."
 
 #: ../../content/applications/studio/models_modules_apps.rst:139
 msgid "Notes"
@@ -2724,6 +3079,9 @@ msgid ""
 "general/form>` an :ref:`Html field <studio/fields/simple-fields-html>` using "
 "the full width of the form."
 msgstr ""
+"Seleccionar :guilabel:`Notas` agrega a la :ref:`vista de formulario <studio/"
+"views/general/form>` un :ref:`campo Html <studio/fields/simple-fields-html>` "
+"usando el ancho completo del formulario."
 
 #: ../../content/applications/studio/models_modules_apps.rst:147
 msgid "Monetary value"
@@ -2737,6 +3095,11 @@ msgid ""
 "reporting/graph` and :ref:`studio/views/reporting/pivot` views are also "
 "activated."
 msgstr ""
+"Seleccionar :guilabel:`Valor monetario` agrega a las vistas :ref:`studio/"
+"views/general/form` y :ref:`studio/views/multiple-records/list` un "
+":ref:`campo monetario <studio/fields/simple-fields-monetary>`. Las vistas "
+":ref:`studio/views/reporting/graph` y :ref:`studio/views/reporting/pivot` "
+"también se activan."
 
 #: ../../content/applications/studio/models_modules_apps.rst:155
 msgid "A *Currency* field is added and hidden from the view."
@@ -2752,6 +3115,10 @@ msgid ""
 "and :ref:`studio/views/multiple-records/list` views a :ref:`Many2One field "
 "<studio/fields/relational-fields-many2one>` linked to the *Company* model."
 msgstr ""
+"Seleccionar :guilabel:`Compañía` agrega a las vistas :ref:`studio/views/"
+"general/form` y :ref:`studio/views/multiple-records/list` un :ref:`campo "
+"Many2One <studio/fields/relational-fields-many2one>` vinculado al modelo "
+"*Compañía*."
 
 #: ../../content/applications/studio/models_modules_apps.rst:167
 msgid "This is only useful if you work in a multi-company environment."
@@ -3907,6 +4274,10 @@ msgid ""
 "an :guilabel:`Icon`, and select a :ref:`related field <studio/fields/"
 "relational-fields-related-field>`."
 msgstr ""
+"Para añadir un botón inteligente, haz clic en el icono :icon:`fa-plus-"
+"square` (:guilabel:`más`) en la esquina superior derecha del formulario. "
+"Introduce una :guilabel:`Etiqueta`, elige un :guilabel:`Icono` y selecciona "
+"un :ref:`campo relacionado <studio/fields/relational-fields-related-field>`."
 
 #: ../../content/applications/studio/views.rst:0
 msgid "Sales order model's Form view"
@@ -4085,6 +4456,9 @@ msgid ""
 "records manually, add an :ref:`Integer field <studio/fields/simple-fields-"
 "integer>` with the :guilabel:`Handle` widget."
 msgstr ""
+"Para añadir un icono :icon:`oi-draggable` (:guilabel:`asa de arrastre`) para "
+"reordenar registros manualmente, añade un :ref:`campo Entero <studio/fields/"
+"simple-fields-integer>` con el widget :guilabel:`Asa`."
 
 #: ../../content/applications/studio/views.rst:0
 msgid "Drag handle icon enabling to sort records manually in List view"
@@ -4117,6 +4491,9 @@ msgid ""
 "the *Contact* model is required to activate the view, as the contact address "
 "is used to position records on the map."
 msgstr ""
+"Se requiere un :ref:`campo Many2One <studio/fields/relational-fields-"
+"many2one>` vinculado al modelo *Contacto* para activar la vista, ya que la "
+"dirección del contacto se usa para posicionar los registros en el mapa."
 
 #: ../../content/applications/studio/views.rst:181
 msgid ""
@@ -4169,6 +4546,12 @@ msgid ""
 "view. You can modify the :guilabel:`Start Date Field` and :guilabel:`Stop "
 "Date Field` after activating the view."
 msgstr ""
+"Cuando activas por primera vez una de las vistas de cronología, necesitas "
+"seleccionar qué campos :ref:`Fecha <studio/fields/simple-fields-date>` o "
+":ref:`Fecha y hora <studio/fields/simple-fields-date-time>` de tu modelo "
+"deben usarse para definir cuándo empiezan y terminan los registros para "
+"mostrarlos en la vista. Puedes modificar el :guilabel:`Campo de fecha de "
+"inicio` y el :guilabel:`Campo de fecha de fin` después de activar la vista."
 
 #: ../../content/applications/studio/views.rst:211
 msgid "Calendar"
@@ -4227,6 +4610,9 @@ msgid ""
 "a :ref:`Checkbox field <studio/fields/simple-fields-checkbox>` that "
 "specifies if the event lasts the whole day."
 msgstr ""
+"Para mostrar eventos que duran todo el día en la parte superior del "
+"calendario, selecciona un campo :ref:`Casilla de verificación <studio/fields/"
+"simple-fields-checkbox>` que especifique si el evento dura todo el día."
 
 #: ../../content/applications/studio/views.rst:234
 msgid ""
@@ -4247,6 +4633,12 @@ msgid ""
 "an :guilabel:`End Date Field`, the :guilabel:`Delay Field` will not be taken "
 "into account."
 msgstr ""
+"También puedes usar un campo :guilabel:`Delay Field` para mostrar la "
+"duración del evento en horas seleccionando un campo :ref:`Decimal <studio/"
+"fields/simple-fields-decimal>` o :ref:`Entero <studio/fields/simple-fields-"
+"integer>` en el modelo que especifique la duración del evento. Sin embargo, "
+"si estableces un campo :guilabel:`End Date Field`, el campo :guilabel:`Delay "
+"Field` no se tendrá en cuenta."
 
 #: ../../content/applications/studio/views.rst:0
 msgid "Calendar Event model's Calendar view"
