@@ -63,11 +63,11 @@ Invoice ordered quantity workflow
 ---------------------------------
 
 Confirm that the product's invoicing policy is set to :guilabel:`Ordered quantities` in the product
-form. :ref:`Create a quotation and sales order
-<sales/create_quotations/create-quotation>` as normal. After the sales order has been
-confirmed, create an invoice by clicking the :guilabel:`Create Invoice` button on the sales order
-form. Choose the type of invoice to be sent, click :guilabel:`Create Draft Invoice`, confirm the
-invoice when ready, and proceed with the payment flow as normal.
+form. :ref:`Create a quotation and sales order <sales/create_quotations/create-quotation>` as
+normal. After the sales order has been confirmed, create an invoice by clicking the
+:guilabel:`Create Invoice` button on the sales order form. Choose the type of invoice to be sent,
+click :guilabel:`Create Draft Invoice`, confirm the invoice when ready, and proceed with the payment
+flow as normal.
 
 .. example::
    An independent artisan with a small business sells handmade jewelry nationwide online. Because
@@ -101,15 +101,22 @@ product needs to be manually entered on the sales order.
 .. image:: invoicing_policy/invoicing-policy-order-lines.png
    :alt: How to see delivered and invoiced quantities on Odoo Sales.
 
+.. note::
+   If a greater quantity of a product or service is being delivered than what has been invoiced, the
+   overage appears in red, and the option to invoice any overages is enabled by default.
+
+   .. image:: invoicing_policy/create-invoices-popup-form.png
+      :alt: Create invoice(s) pop-up form that appears in Odoo Sales.
+
 Invoice delivered quantity workflow
 -----------------------------------
 
 Confirm that the product's invoicing policy is set to :guilabel:`Delivered quantities` in the
-product form. :ref:`Create a quotation and sales order
-<sales/create_quotations/create-quotation>` as normal. After the sales order has been
-confirmed, the product must be delivered before an invoice can be created.
+product form. :ref:`Create a quotation and sales order <sales/create_quotations/create-quotation>`
+as normal. After the sales order is confirmed, the product must be delivered before an invoice can
+be created.
 
-Once the product has been shipped and delivery has been confirmed, click the :icon:`fa-building-o`
+Once the product has been shipped and delivery has been confirmed, click the :icon:`fa-truck`
 :guilabel:`Delivery` smart button on the sales order screen and click :guilabel:`Validate` to
 validate the delivery order. Once at least a partial delivery has been confirmed, return to the
 sales order form. The :guilabel:`Create Invoice` button is now purple to indicate that an invoice
