@@ -419,6 +419,11 @@ configuration when they are added to a document:
 
 .. _sign/request-signatures/add-fields-edit:
 
+Custom fields can be created directly from the document using the :icon:`oi-plus`
+:guilabel:`Add Field` button from the left panel. Then, they can be dragged and dropped into the
+document. If necessary, they can be further :ref:`edited <sign/configuration/create-edit-fields>`
+from the :guilabel:`Configuration` drop-down menu.
+
 Once a field has been added, it is possible to:
 
 - **Reposition the field**: Hover over the field until the :icon:`fa-hand-paper-o`
