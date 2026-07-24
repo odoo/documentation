@@ -2,108 +2,108 @@
 Stripe
 ======
 
-Connecting a payment terminal allows you to offer a fluid payment flow to your customers and ease
-the work of your cashiers.
+`Stripe <https://stripe.com/>`_ is available `globally for terminal setups
+<https://support.stripe.com/questions/global-availability-for-stripe-terminal>`_ and supports both
+online and in-person payment processing. For point-of-sale setups, Stripe offers a selection of
+first-party and third-party `terminals <https://stripe.com/terminal/devices>`_. Additionally, it
+integrates with Tap to Pay to accept contactless payments directly on compatible Android and iOS
+devices.
 
 .. important::
-   - Stripe payment terminals do not require an :doc:`IoT Box </applications/general/iot>`
-   - Stripe terminals can be used in many countries, but not worldwide. Check the `global
-     availability for Stripe Terminal <https://support.stripe.com/questions/global-availability-for-stripe-terminal>`_.
-   - Stripe's integration works with `Stripe Terminal smart readers <https://docs.stripe.com/terminal/smart-readers>`_
+   Stripe payment terminals do not require an Odoo :doc:`IoT system </applications/general/iot>`.
 
 .. seealso::
-   - :doc:`Stripe as payment provider <../../../../finance/payment_providers/stripe>`
+   - :doc:`Stripe as a payment provider <../../../../finance/payment_providers/stripe>`
    - `List of payment methods supported by Stripe <https://stripe.com/payments/payment-methods>`_
 
 Configuration
 =============
 
+To use a Stripe terminal with Odoo, you need:
+
+- :ref:`A payment method directly connected to the physical device. <pos/stripe/method>`
+- :ref:`A Stripe account connected to your Odoo database using the API keys.
+  <pos/stripe/stripe_config>`
+- :ref:`A physical device connected to your Stripe account. <pos/stripe/stripe_terminal>`
+
+.. _pos/stripe/method:
+
 Configure the payment method
 ----------------------------
 
-Activate **Stripe** in the settings by going to :menuselection:`Point of Sale --> Configuration -->
-Settings --> Payment Terminals` and enabling :guilabel:`Stripe`.
+To configure Stripe for Odoo, :ref:`enable Stripe <pos/terminals/configuration>`, and :doc:`create a
+new payment method <../../payment_methods>` integrated with a terminal.
 
-Then, create the payment method:
-
-- Go to :menuselection:`Point of Sale --> Configuration --> Payment Methods`, click
-  :guilabel:`Create`, and complete the :guilabel:`Method` field with your payment method's name;
-- Set the :guilabel:`Journal` field as :guilabel:`Bank` and the :guilabel:`Use a Payment Terminal`
-  field as :guilabel:`Stripe`;
-- Enter your payment terminal serial number in the :guilabel:`Stripe Serial Number` field;
-- Click :guilabel:`Don't forget to complete Stripe connect before using this payment method.`
-
-.. image:: stripe/create-method-stripe.png
-   :align: center
-   :alt: payment method creation form
+Next, enter your payment terminal's serial number in the :guilabel:`Stripe Serial Number` field and
+click :icon:`oi-arrow-right` :guilabel:`Don't forget to complete Stripe connect before using this
+payment method.` to access the Stripe configuration form.
 
 .. note::
-   - Click :guilabel:`Identify Customer` to allow this payment method **exclusively** for identified
-     customers. For any unidentified customers to be able to pay with Stripe, leave the
-     :guilabel:`Identify Customer` field unchecked.
-   - The :guilabel:`Outstanding Account` and the :guilabel:`Intermediary Account` can stay empty to
-     use the default accounts.
-   - Find your payment terminal serial number under the device or on `Stripe's dashboard
-     <https://dashboard.stripe.com>`_.
+   The payment terminal serial number can be found on the back of the physical device or on the
+   Stripe dashboard.
+
+.. _pos/stripe/stripe_config:
 
 Connect Stripe to Odoo
 ----------------------
 
-Click :guilabel:`Connect Stripe`. Doing so redirects you automatically to a configuration page.
-Fill in all the information to create your Stripe account and link it with Odoo. Once the forms are
-completed, the API keys (:guilabel:`Publishable Key` and :guilabel:`Secret Key`) can be retrieved on
-**Stripe's** website. To do so, click :guilabel:`Get your Secret and Publishable keys`,
-click the keys to copy them, and paste them into the corresponding fields in Odoo. Your terminal is
-ready to be configured in a POS.
+From the Stripe configuration form,
 
-.. image:: stripe/stripe-connect.png
-   :align: center
-   :alt: stripe connection form
+#. Click the :guilabel:`Connect Stripe` button, and fill in the form to create your Stripe account.
+#. Once the form is complete, you are automatically redirected back to the Stripe configuration
+   form.
+#. Click :guilabel:`Get your Secret and Publishable keys` to be redirected to the Stripe dashboard.
+#. Click on the :guilabel:`Publishable key` and :guilabel:`Secret key` under the :guilabel:`Token`
+   column to copy the keys.
+#. Return to the Stripe configuration form and paste them into the appropriate fields.
+#. Change the :guilabel:`State` to :guilabel:`Enabled` once you are ready to go.
 
-.. note::
-   - When you use **Stripe** exclusively in Point of Sale, you only need the **Secret Key** to use
-     your terminal.
-   - When you use Stripe as **payment provider**, the :guilabel:`State` can stay set as
-     :guilabel:`Disabled`.
-   - For databases hosted **On-Premise**, the :guilabel:`Connect Stripe` button does not work. To
-     retrieve the API keys manually, log in to your `Stripe dashboard
-     <https://dashboard.stripe.com>`_, type `API` in the search bar, and click
-     :guilabel:`Developers > API`.
+Alternatively, if you already have a Stripe account or if your database is hosted **On-Premise**,
+you can retrieve the API keys manually from the `Stripe dashboard <https://dashboard.stripe.com/>`_:
+
+#. Navigate to :menuselection:`Stripe dashboard --> Developers --> API keys`.
+#. Click on the :guilabel:`Publishable key` and :guilabel:`Secret key` under the :guilabel:`Token`
+   column to copy the keys.
+#. Return to the Stripe configuration form and paste them into the appropriate fields.
+#. Change the :guilabel:`State` to :guilabel:`Enabled` once you are ready to go.
+
+.. tip::
+   Set the :guilabel:`State` to :guilabel:`Test Mode` to test transaction processes with a device.
+
+.. _pos/stripe/stripe_terminal:
 
 Configure the payment terminal
 ------------------------------
 
-Swipe right on your payment terminal, click :guilabel:`Settings`, enter the admin PIN code, validate
-and select your network.
+Start by adding the physical location of your store to your Stripe account:
+
+#. Log in to the Stripe dashboard and navigate to :menuselection:`Payments --> Terminal -->
+   Locations`.
+#. Click the :guilabel:`+ Create Location` button to add a new location, or select an existing one.
+#. Fill in the form with the store address and click :guilabel:`Done`. You are redirected back to
+   the list of locations.
+#. Select your location, click :guilabel:`+ Register reader`, and choose one of the three pairing
+   methods:
+
+   - :guilabel:`Pairing code`: Swipe right on your terminal screen, tap :guilabel:`Settings`, enter
+     the admin PIN code (by default: `07139`), and tap :guilabel:`Generate pairing code`. Then,
+     enter the generated code in the :guilabel:`Enter a pairing code` field, and click
+     :guilabel:`Next`.
+   - :guilabel:`Serial number`: Locate the number printed on the back of the physical terminal.
+     Enter the number in the :guilabel:`Enter serial numbers` field, and click :guilabel:`Next`.
+   - :guilabel:`Order number`: Go to the Stripe dashboard and navigate to :menuselection:`Payments
+     --> Terminal --> Hardware orders`. Locate a hardware order marked as :guilabel:`Shipped` or
+     :guilabel:`Delivered`, click the action menu at the end of the line, and select
+     :guilabel:`Register`.
+
+Once the reader is paired, all Point of Sale transactions appear in your Stripe dashboard. To view
+them, go to :menuselection:`Stripe Dashboard --> Payments --> Terminal --> Readers`, select the
+reader, and scroll down to the :guilabel:`Recent payments` section. Click :guilabel:`View all` to
+see the full list, or select any transaction to view its details.
 
 .. note::
    - The user's device and the terminal must share the same network.
    - In case of a Wi-Fi connection, the network must be secured.
-   - You must enter the admin PIN code to access your payment terminal settings. By default, this
-     code is `07139`.
 
-Link the payment method to a POS
---------------------------------
-
-To add a **payment method** to your point of sale, go to :menuselection:`Point of Sale -->
-Configuration --> Settings`. Select the POS, scroll down to the :guilabel:`Payments` section, and
-add your payment method for **Stripe** in the :guilabel:`Payment Methods` field.
-
-Troubleshooting
-===============
-
-Payment terminal unavailable in your Stripe account
----------------------------------------------------
-
-If the payment terminal is unavailable in your Stripe account, you must add it manually:
-
-#. Log into your `Stripe's dashboard <https://dashboard.stripe.com>`_ and go to
-   :menuselection:`Stripe dashboard --> Payments --> Readers --> Locations`;
-#. Add a location by clicking the :guilabel:`+ New` button or selecting an already created location;
-#. Click the :guilabel:`+ New` button in the :guilabel:`Readers` box and fill in the required
-   information.
-
-.. note::
-   You must provide a **registration code**. To retrieve that code, swipe right on your device,
-   enter the admin PIN code (by default: `07139`), validate, and click :guilabel:`Generate a
-   registration code`.
+.. seealso::
+   `Stripe documentation on how to connect a terminal <https://docs.stripe.com/terminal/payments/connect-reader?terminal-sdk-platform=server-driven&reader-type=internet>`_
