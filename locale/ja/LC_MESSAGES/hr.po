@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-10 17:30+0000\n"
+"POT-Creation-Date: 2026-07-24 17:32+0000\n"
 "PO-Revision-Date: 2026-07-05 00:18+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-19-doc/hr/"
@@ -3176,6 +3176,10 @@ msgstr ":doc:`attendances/hardware`"
 msgid ":doc:`attendances/attendance_reporting`"
 msgstr ":doc:`attendances/attendance_reporting`"
 
+#: ../../content/applications/hr/attendances.rst:158
+msgid ":doc:`attendances/time_off_ledger`"
+msgstr ""
+
 #: ../../content/applications/hr/attendances/attendance_logs.rst:3
 msgid "Attendance logs"
 msgstr "勤怠ログ"
@@ -4020,18 +4024,13 @@ msgstr "レポートを表示"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:13
 msgid ""
-"To view the attendance report, click :guilabel:`Reporting` in the top menu. "
+"To view the attendances report, click :guilabel:`Reporting` in the top menu. "
 "The default report displays attendance information for current employees "
 "over the past three months, in a default :icon:`oi-view-"
 "pivot` :guilabel:`Pivot table`. The rows are populated by employee, while "
 "the columns are populated by the various attendance records. All entries are "
 "grouped by month."
 msgstr ""
-"勤怠レポートを表示するには、上部メニューの\\ :guilabel:`レポーティング`\\ を"
-"クリックします。デフォルトのレポートは、過去3か月間の現従業員の勤怠情報を、デ"
-"フォルトの\\ :icon:`oi-view-pivot`\\ :guilabel:`ピボットテーブル`\\ で表示し"
-"ます。行は従業員ごとに、列はさまざまな勤怠記録ごとに入力されます。すべてのエ"
-"ントリは月ごとにグループ化されます。"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:18
 msgid "The columns presented are:"
@@ -5915,8 +5914,164 @@ msgstr ""
 "合、:guilabel:`150%`のレートで支払われ、勤怠ログに:guilabel:`残業時間`として"
 "記録されます。"
 
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:3
+msgid "Time off ledger"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:5
+msgid ""
+"The *Time Off Ledger* report in the **Attendances** app helps managers by "
+"flagging missing hours on employee attendance records. This allows managers "
+"to determine if employees are forgetting to sign in or out, decide if time "
+"off needs to be approved, and potentially flag patterns."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:10
+msgid "View time off ledger report"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:12
+msgid ""
+"To view the *Time Off Ledger* report, navigate "
+"to :menuselection:`Attendances app --> Reporting --> Time Off Ledger`. The "
+"report displays a nested list of missing attendance hours from the last two "
+"months. All entries are grouped by month, then employee. Click the :icon:`fa-"
+"caret-right` :guilabel:`(triangle)` icon to display the list of employees, "
+"then click the :icon:`fa-caret-right` :guilabel:`(triangle)` icon on the "
+"individual employee to view all the detailed attendance records."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:18
+msgid ""
+"When expanded, each individual record displays the following information:"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:20
+msgid ":guilabel:`Employee`: The employee with missing hours."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:21
+msgid ":guilabel:`Date`: The date the missing hours are from."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:22
+msgid ""
+":guilabel:`Expected Hours`: The number of hours the employee should have "
+"worked that day, calculated from their :ref:`working schedule <employees/"
+"schedule>`, configured on their employee record."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:25
+msgid ""
+":guilabel:`Worked Hours`: The total logged time the employee worked that day."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:26
+msgid ""
+":guilabel:`Approved Time Off`: The approved hours of time off for that day."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:27
+msgid ""
+":guilabel:`Difference`: The difference between the :guilabel:`Expected "
+"Hours` and the :guilabel:`Worked Hours` for the employee that day."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:None
+msgid ""
+"The time off report, expanded to show the missing records for Anita Oliver "
+"from July 2026."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:34
+msgid "Resolve conflicts"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:36
+msgid ""
+"When missing hours appear on the report, the entries should be investigated "
+"to determine the issue. The common reasons for missing attendance records "
+"are:"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:39
+msgid ":ref:`Forgot to log in to work that day. <attendances/forgot-log>`"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:40
+msgid ""
+":ref:`Forgot to request time off that day. <attendances/forgot-request>`"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:41
+msgid ""
+":ref:`Their time off request was not approved for that day. <attendances/"
+"unapproved-time-off>`"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:42
+msgid ""
+":ref:`They requested time off for part of their workday, but did not log any "
+"attendance records for the remainder of the time. <attendances/forgot-"
+"partial-log>`"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:45
+msgid ""
+"Once the reason for the missing entry is determined, the required records "
+"can be updated. Once updated, the related entries are no longer displayed in "
+"the *Time Off Ledger* report."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:51
+msgid "Forgot to log in to work"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:53
+msgid ""
+"Occasionally, employees forget to log in and out of the **Attendances** app. "
+"When this occurs, the employee's manager must :ref:`create the attendance "
+"records <attendances/create-records>` retroactively in the **Attendances** "
+"app."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:60
+msgid "Forgot to request time off"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:62
+msgid ""
+"If the employee did not request time off, the employee's manager or time off "
+"officer must :ref:`create the missing time off request <time_off/missing>` "
+"retroactively in the **Time Off** app."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:68
+msgid "Time off request was unapproved"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:70
+msgid ""
+"If the employee requested time off and the employee's manager or time off "
+"officer did not approve the request in time, the :ref:`request must be "
+"approved <time_off/manage-time-off>` in the **Time Off** app."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:77
+msgid "Partial time off day missing attendance records"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:79
+msgid ""
+"Occasionally, employees request time off for part of the workday, and are "
+"expected to work the remainder of the day. When employees forget to log in "
+"and out for the partial workday, the employee's manager must :ref:`create "
+"the attendance record <attendances/create-records>` retroactively in the "
+"**Attendances** app."
+msgstr ""
+
 #: ../../content/applications/hr/employees.rst:5
-#: ../../content/applications/hr/employees.rst:81
+#: ../../content/applications/hr/employees.rst:76
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:210
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:91
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:67
@@ -5924,7 +6079,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:69
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:58
 #: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:35
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:97
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:126
 msgid "Employees"
 msgstr "従業員"
 
@@ -6035,16 +6190,7 @@ msgstr "オフボーディング"
 msgid "Take care of employee records when collaboration ends."
 msgstr "協力関係が終了する際に従業員記録を処理します。"
 
-#: ../../content/applications/hr/employees.rst:67
-#: ../../content/applications/hr/employees/retention_report.rst:3
-msgid "Employee retention report"
-msgstr "従業員定着率レポート"
-
-#: ../../content/applications/hr/employees.rst:67
-msgid "Gain insight into a company's retention rate."
-msgstr "企業の定着率に関する洞察を得ます。"
-
-#: ../../content/applications/hr/employees.rst:75
+#: ../../content/applications/hr/employees.rst:70
 #: ../../content/applications/hr/fleet/new_vehicle.rst:16
 #: ../../content/applications/hr/lunch.rst:19
 #: ../../content/applications/hr/payroll.rst:38
@@ -6053,7 +6199,7 @@ msgstr "企業の定着率に関する洞察を得ます。"
 msgid "Settings"
 msgstr "管理設定"
 
-#: ../../content/applications/hr/employees.rst:77
+#: ../../content/applications/hr/employees.rst:72
 msgid ""
 "To view and configure the available settings, navigate "
 "to :menuselection:`Employees app --> Configuration --> Settings`."
@@ -6061,7 +6207,7 @@ msgstr ""
 "利用可能な設定を表示および構成するには、:menuselection:`従業員アプリ --> 設"
 "定 --> 設定`\\ に移動します。"
 
-#: ../../content/applications/hr/employees.rst:83
+#: ../../content/applications/hr/employees.rst:78
 msgid ""
 ":guilabel:`Presence Display`: Select how the employee's availability status "
 "is calculated."
@@ -6069,7 +6215,7 @@ msgstr ""
 "\\ :guilabel:`プレゼンス表示`\\ ：従業員の利用可能ステータスの計算方法を選択"
 "します。"
 
-#: ../../content/applications/hr/employees.rst:85
+#: ../../content/applications/hr/employees.rst:80
 msgid ""
 ":guilabel:`Based on attendances`: Employees are marked available "
 "when :ref:`checked into <attendances/check-in>` the **Attendances** app."
@@ -6077,7 +6223,7 @@ msgstr ""
 "\\ :guilabel:`勤怠に基づく`\\ ：\\ **勤怠**\\ アプリに\\ :ref:`出勤した "
 "<attendances/check-in>`\\ ときに従業員が対応可能とマークされます。"
 
-#: ../../content/applications/hr/employees.rst:87
+#: ../../content/applications/hr/employees.rst:82
 msgid ""
 ":guilabel:`Based on user status in system`: Employees are marked available "
 "when they :doc:`log in to Odoo <attendances/check_in_check_out>`."
@@ -6086,7 +6232,7 @@ msgstr ""
 "にログイン <attendances/check_in_check_out>`\\ したときに対応可能とマークされ"
 "ます。"
 
-#: ../../content/applications/hr/employees.rst:90
+#: ../../content/applications/hr/employees.rst:85
 msgid ""
 ":guilabel:`Advanced Presence Control`: When enabled, presence status can be "
 "calculated from operational signals rather than check-ins or logins:"
@@ -6094,7 +6240,7 @@ msgstr ""
 "\\ :guilabel:`高度なプレゼンス制御`\\ ：有効にすると、出勤やログインではな"
 "く、業務上のシグナルからプレゼンスステータスを計算できます。"
 
-#: ../../content/applications/hr/employees.rst:93
+#: ../../content/applications/hr/employees.rst:88
 msgid ""
 ":guilabel:`Based on number of emails sent`: An employee is marked present if "
 "they send at least # emails per hour; otherwise, they are marked absent. "
@@ -6105,7 +6251,7 @@ msgstr ""
 "を送信した場合は在席、そうでない場合は不在とマークされます。\\ :guilabel:`送"
 "信メール数`\\ フィールドに送信する必要がある最低メール数を入力します。"
 
-#: ../../content/applications/hr/employees.rst:96
+#: ../../content/applications/hr/employees.rst:91
 msgid ""
 ":guilabel:`Based on IP Address`: An employee is marked present only when "
 "connected from one of the specified corporate IP addresses. Enter the IP "
@@ -6116,7 +6262,7 @@ msgstr ""
 "ら接続している場合にのみ、従業員が在席とマークされます。\\ :guilabel:`IPアド"
 "レス`\\ フィールドに各アドレスをカンマで区切って入力します。"
 
-#: ../../content/applications/hr/employees.rst:100
+#: ../../content/applications/hr/employees.rst:95
 msgid ""
 ":guilabel:`Skills Management`: Enable this option to display "
 "the :ref:`resumé tab <employees/resume>` on employee profiles. This allows "
@@ -6128,11 +6274,11 @@ msgstr ""
 "\\ :ref:`職歴 <employees/resume>`\\ 、\\ :ref:`スキル <employees/"
 "skills>`\\ 、\\ :doc:`認定資格 <employees/certifications>`\\ を表示できます。"
 
-#: ../../content/applications/hr/employees.rst:106
+#: ../../content/applications/hr/employees.rst:101
 msgid "Work organization"
 msgstr "業務編成"
 
-#: ../../content/applications/hr/employees.rst:108
+#: ../../content/applications/hr/employees.rst:103
 msgid ""
 "Using the drop-down menu, select the default :guilabel:`Company Working "
 "Hours`. The default options are a :guilabel:`Standard 40 hours/week` or "
@@ -6142,7 +6288,7 @@ msgstr ""
 "`\\ を選択します。デフォルトのオプションは、\\ :guilabel:`標準40時間/週`\\ ま"
 "たは\\ :guilabel:`予約リソースのデフォルトカレンダー`\\ です。"
 
-#: ../../content/applications/hr/employees.rst:111
+#: ../../content/applications/hr/employees.rst:106
 msgid ""
 "The available working hours listed are the same as the "
 "configured :doc:`working schedules <payroll/working_schedules>` in the "
@@ -6153,12 +6299,12 @@ msgstr ""
 "時間 <payroll/working_schedules>`\\ と同じです。勤務時間は、**給与**アプリと"
 "**従業員**アプリの両方から作成および変更できます。"
 
-#: ../../content/applications/hr/employees.rst:116
+#: ../../content/applications/hr/employees.rst:111
 #: ../../content/applications/hr/fleet/new_vehicle.rst:230
 msgid "Contract"
 msgstr "契約"
 
-#: ../../content/applications/hr/employees.rst:118
+#: ../../content/applications/hr/employees.rst:113
 msgid ""
 "Define the number of days in advance that a manager is notified about an "
 "upcoming contract or work permit expiration in the "
@@ -6169,11 +6315,11 @@ msgstr ""
 "を、それぞれ\\ :guilabel:`契約満了通知期間`\\ および\\ :guilabel:`就労許可証"
 "満了通知期間`\\ フィールドに定義します。"
 
-#: ../../content/applications/hr/employees.rst:123
+#: ../../content/applications/hr/employees.rst:118
 msgid "Salary configurator"
 msgstr "給与コンフィギュレーター"
 
-#: ../../content/applications/hr/employees.rst:125
+#: ../../content/applications/hr/employees.rst:120
 msgid ""
 "Define how long an offer remains valid when extending a job offer or "
 "changing a salary. Enter the duration, in days, in the :guilabel:`Salary "
@@ -6183,19 +6329,19 @@ msgstr ""
 "ます。\\ :guilabel:`給与パッケージコンフィギュレーター`\\ フィールドに日数で"
 "期間を入力します。"
 
-#: ../../content/applications/hr/employees.rst:128
-#: ../../content/applications/hr/employees.rst:141
+#: ../../content/applications/hr/employees.rst:123
+#: ../../content/applications/hr/employees.rst:136
 msgid ""
 "This field only appears if the **Salary Configurator** module is installed."
 msgstr ""
 "このフィールドは\\ :guilabel:`給与設定`\\ モジュールがインストールされている"
 "場合にのみ表示されます。"
 
-#: ../../content/applications/hr/employees.rst:131
+#: ../../content/applications/hr/employees.rst:126
 msgid "Extra time off allocation"
 msgstr "追加休暇割当"
 
-#: ../../content/applications/hr/employees.rst:133
+#: ../../content/applications/hr/employees.rst:128
 msgid ""
 "During salary package negotiations, enable the checkbox in this section if "
 "additional time off requests are allowed. When enabled, select "
@@ -6207,7 +6353,7 @@ msgstr ""
 "用して、追加日数用に作成された:doc:`休暇タイプ <time_off/time_off_types>`を選"
 "択します。"
 
-#: ../../content/applications/hr/employees.rst:137
+#: ../../content/applications/hr/employees.rst:132
 msgid ""
 "The default available options are :guilabel:`Paid Time "
 "Off`, :guilabel:`Compensatory Days`, and :guilabel:`Extra Time Off`. If "
@@ -7783,7 +7929,7 @@ msgstr "新しい従業員フォームの上半分、すべて入力済み。"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:95
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:78
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:67
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:106
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:135
 msgid "Work tab"
 msgstr "勤務先タブ"
 
@@ -8502,7 +8648,7 @@ msgstr "C/C++ Advanced認定用にすべて設定された認定ポップアッ�
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:105
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:84
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:73
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:116
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:145
 msgid "Personal tab"
 msgstr "個人タブ"
 
@@ -9059,7 +9205,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:131
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:103
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:83
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:133
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:162
 msgid "Payroll tab"
 msgstr "給与タブ"
 
@@ -10700,252 +10846,6 @@ msgstr ""
 "オンボーディングは、データベースの\\ :doc:`ユーザ <../../general/users>`\\ に"
 "対してのみ開始できます。従業員のプロファイルに不足している情報がある場合、必"
 "要な情報を示す警告が表示されます。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:5
-msgid ""
-"It is possible to determine the retention rate for a company by modifying an "
-"existing report."
-msgstr "既存のレポートを変更することで、会社の定着率を判断することができます。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:7
-msgid ""
-"First, navigate to :menuselection:`Employees app --> Reporting --> "
-"Contracts` to open the :guilabel:`Employee Analysis` report. This report "
-"shows the number of all employees for the :guilabel:`Last 365 Days`, in a "
-"default :icon:`fa-line-chart` :guilabel:`Line Chart`."
-msgstr ""
-"まず、:menuselection:`従業員アプリ --> レポーティング --> 契約`\\ に移動して"
-"\\ :guilabel:`従業員分析`\\ レポートを開きます。このレポートは、デフォルトの"
-"\\ :icon:`fa-line-chart` :guilabel:`折れ線グラフ`\\ で\\ :guilabel:`直近365日"
-"`\\ のすべての従業員の数を表示します。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:None
-msgid "The default Employees Analysis report."
-msgstr "デフォルトの従業員分析レポート。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:15
-msgid ""
-"Next, click the :guilabel:`Measures` :icon:`fa-caret-down` button in the "
-"upper-left corner, revealing a drop-down menu. Click :guilabel:`# Departure "
-"Employee` in the list, then click away from the drop-down menu to close it. "
-"Now, the report shows all the employees who were archived for "
-"the :guilabel:`Last 365 Days`."
-msgstr ""
-"次に、左上隅の\\ :guilabel:`指標` :icon:`fa-caret-down`\\ ボタンをクリックす"
-"ると、ドロップダウンメニューが表示されます。リストの\\ :guilabel:`# 退職従業"
-"員`\\ をクリックし、ドロップダウンメニューの外側をクリックして閉じます。これ"
-"で、レポートには\\ :guilabel:`直近365日`\\ にアーカイブされたすべての従業員が"
-"表示されます。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:20
-msgid ""
-"To view this information in an easier format, click the :icon:`oi-view-"
-"pivot` :guilabel:`(Pivot)` icon in the upper-right corner, and the data is "
-"presented in a pivot table."
-msgstr ""
-"この情報をより見やすい形式で表示するには、右上隅の\\ :icon:`oi-view-"
-"pivot` :guilabel:`(ピボット)`\\ アイコンをクリックすると、データがピボット"
-"テーブルで表示されます。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:23
-msgid ""
-"The various employees, organized by department, populate the rows. The "
-"columns display the following totals: the monthly :guilabel:`Wage`, "
-"the :guilabel:`Fuel Card` budget, total :guilabel:`Annual Employee Budget` "
-"(also referred to as the *annual salary*), the number of :guilabel:`New "
-"Employees`, as well as the number of :guilabel:`Departure Employees` "
-"(employees who left)."
-msgstr ""
-"部門別に整理されたさまざまな従業員が行に表示されます。列には次の合計が表示さ"
-"れます: 月次\\ :guilabel:`賃金`、:guilabel:`燃料カード`\\ 予算、合計"
-"\\ :guilabel:`年次従業員予算`\\ (*年間給与*\\ とも呼ばれます)、:guilabel:`新"
-"規従業員`\\ の数、および\\ :guilabel:`退職従業員`\\ (退職した従業員)の数。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:None
-msgid ""
-"The Employees Analysis report, modified to show departed employees only."
-msgstr "退職した従業員のみを表示するように変更された従業員分析レポート。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:33
-msgid "Employee retention rate comparison report"
-msgstr "従業員定着率比較レポート"
-
-#: ../../content/applications/hr/employees/retention_report.rst:35
-msgid ""
-"It is possible to compare data only for employees who left, compared to the "
-"total current employees, between two separate time periods. This is commonly "
-"referred to as the *employee retention rate*."
-msgstr ""
-"2つの異なる期間で、退職した従業員のみのデータを現在の従業員総数と比較すること"
-"ができます。これは一般的に*従業員定着率*と呼ばれます。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:38
-msgid ""
-"To view these metrics, first open the :guilabel:`Employee Analysis` report "
-"by navigating to :menuselection:`Employees app --> Reporting --> Contracts`. "
-"Click the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon in the upper-right "
-"corner to view the information in a pivot table."
-msgstr ""
-"これらの指標を表示するには、まず\\ :menuselection:`従業員アプリ --> レポー"
-"ティング --> 契約`\\ に移動して\\ :guilabel:`従業員分析`\\ レポートを開きま"
-"す。右上隅の\\ :icon:`oi-view-pivot` :guilabel:`(ピボット)`\\ アイコンをク"
-"リックして、情報をピボットテーブルで表示します。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:42
-msgid ""
-"Next, click the :guilabel:`Measures` :icon:`fa-caret-down` button in the "
-"upper-left corner, revealing a drop-down menu. Click :guilabel:`# New "
-"Employees`, :guilabel:`Annual Employee Budget`, :guilabel:`Fuel Card`, "
-"and :guilabel:`Wage` in the list, to deselect these metrics and hide them in "
-"the table. Then, click :guilabel:`Count` at the bottom of the list to enable "
-"that metric."
-msgstr ""
-"次に、左上隅の\\ :guilabel:`指標` :icon:`fa-caret-down`\\ ボタンをクリックす"
-"ると、ドロップダウンメニューが表示されます。リストの\\ :guilabel:`# 新規従業"
-"員`、:guilabel:`年次従業員予算`、:guilabel:`燃料カード`、:guilabel:`賃金`\\ "
-"をクリックして、これらの指標の選択を解除し、テーブルで非表示にします。次に、"
-"リストの下部にある\\ :guilabel:`カウント`\\ をクリックして、その指標を有効に"
-"します。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:47
-msgid ""
-"Click away from the drop-down menu to close it. Now, the report shows all "
-"the employees who left the company (:guilabel:`# Departure Employee`), as "
-"well as the total number of employees (:guilabel:`Count`), for "
-"the :guilabel:`Last 365 Days`."
-msgstr ""
-"ドロップダウンメニューの外側をクリックして閉じます。これで、レポートには"
-"\\ :guilabel:`直近365日`\\ に会社を退職したすべての従業員(\\ :guilabel:`# 退"
-"職従業員`\\ )と従業員の総数(\\ :guilabel:`カウント`\\ )が表示されます。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:51
-msgid ""
-"To compare the data for the current year with the previous year, click "
-"the :icon:`fa-caret-down` :guilabel:`(down arrow)` in the search bar, "
-"revealing multiple filter and grouping options. Click :guilabel:`Last 365 "
-"Days` in the :icon:`fa-filter` :guilabel:`Filters` column, to turn off that "
-"filter. Then, click :guilabel:`Date`, and click the current year (in this "
-"example, :guilabel:`2024`) from the resulting drop-down menu."
-msgstr ""
-"現在の年のデータを前年と比較するには、検索バーの\\ :icon:`fa-caret-"
-"down` :guilabel:`(下矢印)`\\ をクリックすると、複数のフィルターとグループ化オ"
-"プションが表示されます。:icon:`fa-filter` :guilabel:`フィルター`\\ 列の"
-"\\ :guilabel:`直近365日`\\ をクリックして、そのフィルターをオフにします。次"
-"に、:guilabel:`日付`\\ をクリックし、表示されるドロップダウンメニューから現在"
-"の年(この例では\\ :guilabel:`2024`\\ )をクリックします。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:57
-msgid ""
-"Once a selection is made beneath :guilabel:`Date` in the :icon:`fa-"
-"filter` :guilabel:`Filters` column, a :icon:`fa-"
-"adjust` :guilabel:`Comparison` column appears. Click :guilabel:`Date: "
-"Previous Year` in the new column, then click off of the drop-down menu to "
-"close it."
-msgstr ""
-":icon:`fa-filter` :guilabel:`フィルター`\\ 列の\\ :guilabel:`日付`\\ の下で選"
-"択を行うと、:icon:`fa-adjust` :guilabel:`比較`\\ 列が表示されます。新しい列の"
-"\\ :guilabel:`日付: 前年`\\ をクリックし、ドロップダウンメニューの外側をク"
-"リックして閉じます。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:62
-msgid ""
-"In Odoo, in order to access the :icon:`fa-adjust` :guilabel:`Comparison` "
-"column, a specific time *other than* :guilabel:`Last 365 Days` **must** be "
-"selected. If not, the :icon:`fa-adjust` :guilabel:`Comparison` column is "
-"**not** visible."
-msgstr ""
-"Odooでは、:icon:`fa-adjust` :guilabel:`比較`\\ 列にアクセスするに"
-"は、:guilabel:`直近365日`\\ *以外*\\ の特定の時間を選択する**必要があります"
-"**。そうしないと、:icon:`fa-adjust` :guilabel:`比較`\\ 列は表示**されません"
-"**。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:66
-msgid ""
-"Now, the pivot table displays the total number of employees who left the "
-"company (:guilabel:`# Departure Employee`), as well as the total number of "
-"employees (:guilabel:`Count`) in the columns. These are further divided by "
-"the two different years, and also displays the :guilabel:`Variation` between "
-"the two."
-msgstr ""
-"これで、ピボットテーブルには、会社を退職した従業員の総数（\\ :guilabel:`# "
-"Departure Employee`\\ ）と従業員の総数（\\ :guilabel:`Count`\\ ）が列に表示さ"
-"れます。これらはさらに2つの異なる年で分類され、\\ :guilabel:`Variation`\\ も"
-"表示されます。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:71
-msgid ""
-"The rows display the departments, and lists each individual employee for "
-"each department, in the rows."
-msgstr "行には部門が表示され、各部門の個々の従業員が行にリストされます。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:74
-msgid ""
-"For a more concise view of this report, click :icon:`fa-minus-square-"
-"o` :guilabel:`Total` above the top row of the departments and employees, to "
-"collapse the rows. Now, the table presents the total number of employees who "
-"left the company for both years, compared to the total number of employees "
-"for both years, including the difference, in a percentage."
-msgstr ""
-"このレポートのより簡潔な表示にするには、部門と従業員の最上行の上にある"
-"\\ :icon:`fa-minus-square-o`\\ :guilabel:`Total`\\ をクリックして、行を折りた"
-"たみます。これで、テーブルには両年で会社を退職した従業員の総数と両年の従業員"
-"の総数が比較され、パーセンテージでの差が表示されます。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:80
-msgid ""
-"In this example, :guilabel:`3` employees out of :guilabel:`83` left in 2023, "
-"and :guilabel:`8` employees out of :guilabel:`202` left in 2024. There was "
-"a :guilabel:`166.67%` increase in the employees who left in 2024 as compared "
-"to 2023. Additionally, there was a :guilabel:`143.37%` increase in the total "
-"number of employees in 2024 as compared to 2023."
-msgstr ""
-"この例では、2023年には\\ :guilabel:`83`\\ 人の従業員のうち\\ :guilabel:`3`\\ "
-"人が退職し、2024年には\\ :guilabel:`202`\\ 人の従業員のうち"
-"\\ :guilabel:`8`\\ 人が退職しました。2023年と比較して2024年に退職した従業員は"
-"\\ :guilabel:`166.67%`\\ 増加しました。さらに、2023年と比較して2024年の従業員"
-"総数は\\ :guilabel:`143.37%`\\ 増加しました。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:0
-msgid ""
-"The report modified to show the difference between two years of employees "
-"who left."
-msgstr "退職した従業員の2年間の差を示すように変更されたレポート。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:89
-msgid ""
-"To view more detailed rates for each department, click :icon:`fa-plus-"
-"square` :guilabel:`Total` in the single row, revealing a drop-down menu, and "
-"click :guilabel:`Department`. Click away from the drop-down to close it, and "
-"now the pivot table displays the total number of employees who left "
-"(:guilabel:`# Departure Employee`), the total number of employees "
-"(:guilabel:`Count`), and the :guilabel:`Variation` (in a percentage) for "
-"both 2023 and 2024, organized by department."
-msgstr ""
-"各部門のより詳細な率を表示するには、単一行の\\ :icon:`fa-plus-"
-"square`\\ :guilabel:`Total`\\ をクリックしてドロップダウンメニューを表示し、"
-"\\ :guilabel:`Department`\\ をクリックします。ドロップダウンの外側をクリック"
-"して閉じると、ピボットテーブルには部門ごとに整理された、2023年と2024年の両方"
-"について、退職した従業員の総数（\\ :guilabel:`# Departure Employee`\\ ）、従"
-"業員の総数（\\ :guilabel:`Count`\\ ）、および\\ :guilabel:`Variation`\\ "
-"（パーセンテージ）が表示されます。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:96
-msgid ""
-"In this example, it can be determined that the :guilabel:`Management` "
-"department had the best retention rate in 2024 as compared to 2023, with "
-"a :guilabel:`Variation` rate of :guilabel:`-100%`. Additionally, it can be "
-"determined that the :guilabel:`Management / Research & Development` "
-"department had the most turnover, with a :guilabel:`Variation` "
-"of :guilabel:`300%`."
-msgstr ""
-"この例では、\\ :guilabel:`Management`\\ 部門が2023年と比較して2024年に最高の"
-"定着率を示し、\\ :guilabel:`Variation`\\ 率は\\ :guilabel:`-100%`\\ でした。"
-"さらに、\\ :guilabel:`Management / Research & Development`\\ 部門が最も離職率"
-"が高く、\\ :guilabel:`Variation`\\ は\\ :guilabel:`300%`\\ でした。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:0
-msgid "The expanded employee retention report by department."
-msgstr "部門別に展開された従業員定着率レポート。"
 
 #: ../../content/applications/hr/fleet.rst:5
 msgid "Fleet"
@@ -17758,7 +17658,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:134
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:106
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:88
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:136
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:165
 msgid "Contract overview section"
 msgstr "契約概要セクション"
 
@@ -18010,7 +17910,7 @@ msgstr "\\ :guilabel:`署名時の賃金`：フィールドに月給を入力し
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:167
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:134
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:121
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:168
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:197
 msgid "Schedule section"
 msgstr "スケジュールセクション"
 
@@ -19297,7 +19197,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:20
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:20
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:15
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:39
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:68
 msgid "Apps & modules"
 msgstr "アプリ & モジュール"
 
@@ -19319,7 +19219,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:28
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:23
 #: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:20
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:47
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:76
 msgid "Name"
 msgstr "名前"
 
@@ -19333,7 +19233,7 @@ msgstr "名前"
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:29
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:24
 #: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:21
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:48
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:77
 msgid "Technical name"
 msgstr "技術名"
 
@@ -19342,7 +19242,7 @@ msgstr "技術名"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:30
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:30
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:25
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:49
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:78
 msgid "Dependencies"
 msgstr "依存関係"
 
@@ -19356,7 +19256,7 @@ msgstr "依存関係"
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:31
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:26
 #: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:22
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:50
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:79
 msgid "Description"
 msgstr "説明"
 
@@ -19373,14 +19273,14 @@ msgstr "`l10n_au_hr_payroll`"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:34
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:34
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:29
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:53
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:82
 msgid "hr_payroll"
 msgstr "hr_payroll"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:49
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:35
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:36
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:55
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:84
 msgid "hr_work_entry_holidays"
 msgstr "hr_work_entry_holidays"
 
@@ -19388,7 +19288,7 @@ msgstr "hr_work_entry_holidays"
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:28
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:36
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:37
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:56
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:85
 msgid "hr_payroll_holidays"
 msgstr "hr_payroll_holidays"
 
@@ -19421,7 +19321,7 @@ msgstr "l10n_au_hr_payroll"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:45
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:41
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:34
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:61
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:90
 msgid "hr_payroll_account"
 msgstr "hr_payroll_account"
 
@@ -19436,7 +19336,7 @@ msgstr "l10n_au_aba"
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:60
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:44
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:37
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:64
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:93
 msgid ""
 "Links payroll and accounting by creating journal entries (per payslip if "
 "needed) to record payroll in the company's books."
@@ -19487,7 +19387,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:47
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:52
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:41
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:72
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:101
 msgid "General configurations"
 msgstr "一般設定"
 
@@ -19508,7 +19408,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:65
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:58
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:47
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:78
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:107
 msgid ":guilabel:`Company Name`: Enter the business name in this field."
 msgstr "\\ :guilabel:`会社名`\\ : このフィールドに事業名を入力します。"
 
@@ -19516,7 +19416,7 @@ msgstr "\\ :guilabel:`会社名`\\ : このフィールドに事業名を入力�
 #: ../../content/applications/hr/payroll/payroll_localizations/hong_kong.rst:67
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:66
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:59
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:79
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:108
 msgid ""
 ":guilabel:`Address`: Complete the full address, including "
 "the :guilabel:`City`, :guilabel:`State`, :guilabel:`Zip Code`, "
@@ -19592,7 +19492,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:79
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:65
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:54
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:90
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:119
 msgid ":guilabel:`Phone`: Enter the company phone number."
 msgstr "\\ :guilabel:`電話`\\ : 会社の電話番号を入力します。"
 
@@ -19602,7 +19502,7 @@ msgstr "\\ :guilabel:`電話`\\ : 会社の電話番号を入力します。"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:80
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:66
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:55
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:91
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:120
 msgid ""
 ":guilabel:`Email`: Enter the email used for general contact information."
 msgstr ""
@@ -20053,7 +19953,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:148
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:120
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:101
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:150
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:179
 msgid ""
 "Set a default :guilabel:`Wage Type` in the salary :ref:`Structure Type "
 "<payroll/structure-types>` to configure employees in bulk. If needed, the "
@@ -20101,7 +20001,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:141
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:136
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:123
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:170
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:199
 msgid ""
 ":guilabel:`Work Entry Source`: Defines how :doc:`work entries <../"
 "work_entries>` are generated for payroll during the specified pay period. "
@@ -20115,7 +20015,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:144
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:139
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:126
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:173
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:202
 msgid ""
 ":guilabel:`Working Schedule`: Based on the employee's assigned :ref:`working "
 "schedule <employees/schedule>` (e.g., 40 hours per week)."
@@ -20127,7 +20027,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:146
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:141
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:128
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:175
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:204
 msgid ""
 ":guilabel:`Attendances`: Based on :doc:`approved checked-in hours <../../"
 "attendances/management>` in the **Attendances** app."
@@ -20139,7 +20039,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:148
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:143
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:130
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:177
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:206
 msgid ""
 ":guilabel:`Planning`: Based on :ref:`scheduled shifts <planning/shifts>` in "
 "the **Planning** app."
@@ -20660,7 +20560,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:296
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:192
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:138
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:309
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:338
 msgid "Payroll configuration"
 msgstr "給与設定"
 
@@ -20677,7 +20577,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:328
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:220
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:144
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:315
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:344
 msgid "Salary structures & structure types"
 msgstr "給与体系と体系タイプ"
 
@@ -20714,7 +20614,7 @@ msgstr "給与体系リスト内のオーストラリア給与体系。"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:345
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:236
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:159
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:330
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:359
 #: ../../content/applications/hr/payroll/salaries.rst:176
 msgid "Salary rules"
 msgstr "給与規則"
@@ -20743,7 +20643,7 @@ msgstr "オーストラリア給与ルールの上部。"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:359
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:250
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:175
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:405
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:434
 #: ../../content/applications/hr/payroll/salaries.rst:421
 msgid "Rule parameters"
 msgstr "ルールパラメーター"
@@ -20752,7 +20652,7 @@ msgstr "ルールパラメーター"
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:373
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:252
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:177
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:407
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:436
 msgid ""
 "Some calculations require specific rates associated with them, or wage caps. "
 "*Rules Parameters* are capable of listing a value, either a percentage or a "
@@ -20766,7 +20666,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:380
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:365
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:255
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:414
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:443
 msgid ""
 "Most rules pull information stored in the parameters module to get the rate "
 "of the rule (a percentage) and the cap (a dollar amount)."
@@ -20779,7 +20679,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:368
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:258
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:183
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:417
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:446
 msgid ""
 "To view rule parameters, navigate to :menuselection:`Payroll app --> "
 "Configuration --> Rule Parameters`. Here, all rule parameters are displayed "
@@ -21013,7 +20913,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:413
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:289
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:343
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:441
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:470
 msgid ""
 "Work entries sync based on the employee's :doc:`contract <../contracts>` "
 "configuration. Odoo pulls from the assigned working schedule, attendance "
@@ -22354,7 +22254,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:537
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:398
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:418
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:539
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:568
 msgid "Close Payroll"
 msgstr "給与計算を締める"
 
@@ -22364,14 +22264,14 @@ msgstr "給与計算を締める"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:539
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:400
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:420
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:541
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:570
 msgid "If there are no errors, payroll is completed for the pay period."
 msgstr "エラーがない場合、給与計算期間の給与計算が完了します。"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:1154
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:511
 #: ../../content/applications/hr/payroll/payroll_localizations/kenya.rst:152
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:544
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:573
 msgid "Reports"
 msgstr "レポート"
 
@@ -32187,7 +32087,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:451
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:326
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:380
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:478
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:507
 msgid "Accounting check"
 msgstr "会計チェック"
 
@@ -32206,7 +32106,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:459
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:334
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:388
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:486
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:515
 msgid "Journal entry creation"
 msgstr "仕訳作成"
 
@@ -33129,7 +33029,7 @@ msgstr "一般設定"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:61
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:54
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:43
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:74
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:103
 msgid ""
 "First, the company must be configured. Navigate to :menuselection:`Settings "
 "app --> Users & Companies --> Companies`. From the list, select the desired "
@@ -33818,7 +33718,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:426
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:302
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:356
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:454
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:483
 msgid ""
 "To cut down on the payroll officer's time, it is typical to process payslips "
 "in batches, either by wage type (fixed salary vs hourly), pay schedule "
@@ -33832,7 +33732,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:366
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:418
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:360
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:458
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:487
 msgid ""
 "The process of running payroll includes different actions that need to be "
 "executed to ensure that the amount withheld from payroll taxes is correct, "
@@ -33850,7 +33750,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:435
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:311
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:365
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:463
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:492
 msgid ""
 "When running a payroll batch, check that the period, company, and employees "
 "included are correct *before* starting to analyze or validate the data."
@@ -33862,7 +33762,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:426
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:314
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:368
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:466
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:495
 msgid ""
 "Once the payslips are drafted, review them for accuracy. Check "
 "the :guilabel:`Worked Days & Inputs` tab, and ensure the listed worked time "
@@ -33877,7 +33777,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:378
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:430
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:372
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:470
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:499
 msgid ""
 "Next, check the various totals (gross pay, employee taxes, benefits, "
 "employer taxes, net salaries), then click :guilabel:`Compute Sheet` to "
@@ -33912,7 +33812,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:461
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:336
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:390
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:488
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:517
 msgid ""
 "After payslips are confirmed and validated, journal entries are posted "
 "either individually, or in a batch. The journal entry is created first as a "
@@ -33926,7 +33826,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:465
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:340
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:394
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:492
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:521
 msgid ""
 "It must be decided if journal entries are done individually or in batches "
 "*before* running payroll."
@@ -34042,7 +33942,7 @@ msgstr "転記された仕訳。"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:512
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:383
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:403
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:524
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:553
 msgid "Register Payments"
 msgstr "支払いの登録"
 
@@ -34058,7 +33958,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:500
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:392
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:412
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:533
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:562
 msgid ""
 "Payments can be :guilabel:`Grouped by Partner` if there is a partner "
 "associated with a salary rule."
@@ -34461,7 +34361,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:91
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:74
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:63
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:102
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:131
 msgid ""
 "To update an employee form, open the :menuselection:`Employees` app and "
 "click on the desired employee record. On the employee form, configure the "
@@ -34475,7 +34375,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:97
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:80
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:69
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:108
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:137
 msgid ""
 "Enter the :guilabel:`Work Address` for the employee in "
 "the :guilabel:`Location` section of the :guilabel:`Work` tab."
@@ -34487,7 +34387,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:107
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:89
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:75
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:118
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:147
 msgid ""
 "Ensure the employee has a minimum of one :ref:`trusted bank account "
 "<employees/private-contact>` listed in the :guilabel:`Bank Accounts` field "
@@ -34543,7 +34443,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:136
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:108
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:90
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:138
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:167
 msgid ""
 "This section holds information that drives salary calculations. Ensure the "
 "following fields are configured:"
@@ -34565,7 +34465,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:141
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:113
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:94
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:143
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:172
 msgid ":guilabel:`Wage Type`: Select how the employee is paid."
 msgstr ":guilabel:`賃金種別`: 従業員への支払い方法を選択します。"
 
@@ -34573,7 +34473,7 @@ msgstr ":guilabel:`賃金種別`: 従業員への支払い方法を選択しま�
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:143
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:115
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:96
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:145
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:174
 msgid ""
 "Select :guilabel:`Fixed Wage` for salaried employees who receive the same "
 "amount each pay period."
@@ -34585,7 +34485,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:145
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:117
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:98
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:147
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:176
 msgid ""
 "Select :guilabel:`Hourly Wage` for employees paid based on hours worked."
 msgstr ""
@@ -34637,7 +34537,7 @@ msgstr "給与タブの従業員フォームの契約概要セクション。"
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:151
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:177
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:146
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:180
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:209
 msgid ""
 ":guilabel:`Extra Hours`: Tick the checkbox to allow the **Attendances** app "
 "to add any extra work entries logged by the employee."
@@ -35129,7 +35029,7 @@ msgstr "ヨルダンの給与を実施"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:404
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:416
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:444
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:473
 msgid ""
 "Any :ref:`discrepencies or conflicts <payroll/conflicts>` must be resolved, "
 "then the work entries can be :ref:`regenerated <payroll/regenerate-work-"
@@ -35142,7 +35042,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:419
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:295
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:349
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:447
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:476
 msgid ""
 "Once everything is correct, draft payslips can be :ref:`created individually "
 "<payroll/process>` or in :doc:`groups <../pay_runs>`, referred to in the "
@@ -35283,14 +35183,14 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:488
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:504
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:375
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:516
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:545
 msgid ""
 "If everything seems correct on the journal entry draft, post the journal "
 "entries."
 msgstr "仕訳ドラフトのすべてが正しいと思われる場合は、仕訳を転記します。"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:498
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:526
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:555
 msgid ""
 "After the :ref:`journal entries <payroll/journal>` are validated, Odoo can "
 "generate payments."
@@ -36056,7 +35956,7 @@ msgid "Company configurations"
 msgstr "会社の設定"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:70
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:83
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:112
 msgid ""
 "The state selected in the company's address is associated as the *work "
 "address* by default for the employee, and the one used to calculate payroll "
@@ -36109,7 +36009,7 @@ msgstr ""
 "と、追加フィールドが表示されます。"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:101
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:112
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:141
 msgid ""
 "The state selected in this address determines which salary rules Odoo "
 "applies when calculating taxes."
@@ -36237,7 +36137,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:179
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:148
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:133
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:182
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:211
 msgid ""
 ":guilabel:`Working Hours`: Using the drop-down menu, select the default work "
 "schedule. This is particularly important for employees available to receive "
@@ -37001,7 +36901,7 @@ msgid "`l10n_sa_hr_payroll`"
 msgstr "`l10n_sa_hr_payroll`"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:35
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:54
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:83
 msgid "hr_contract_reports"
 msgstr "hr_contract_reports"
 
@@ -37098,7 +36998,7 @@ msgstr ""
 "生します。"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:111
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:141
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:170
 msgid ""
 ":guilabel:`Contract`: The Validity of the compensation conditions can be "
 "updated depending on the needs."
@@ -37276,7 +37176,7 @@ msgstr ""
 "\\ :guilabel:`SA給与前払いおよびローン体系`\\ の2つが含まれます。"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:227
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:321
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:350
 msgid ""
 "The :guilabel:`Salary Structure` contains all the individual :ref:`salary "
 "rules <payroll/usa_apps>` that informs the **Payroll** app how to calculate "
@@ -39710,71 +39610,175 @@ msgstr ""
 msgid "The states included in this localization are:"
 msgstr "このローカライゼーションに含まれる州は次のとおりです："
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:10
-msgid "California (CA)"
-msgstr "カリフォルニア州（CA）"
-
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:11
-msgid "New York (NY)"
-msgstr "New York (NY)"
-
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:12
-msgid "Texas (TX)"
-msgstr "Texas (TX)"
-
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:13
-msgid "Florida (FL)"
-msgstr "Florida (FL)"
+msgid "State"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:14
-msgid "Colorado (CO)"
-msgstr "Colorado (CO)"
+msgid "Abbreviation"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:15
-msgid "Alabama (AL)"
-msgstr "Alabama (AL)"
+msgid "Alabama"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:16
-msgid "Washington (WA)"
-msgstr "Washington (WA)"
+msgid "(AL)"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:17
-msgid "Nevada (NV)"
-msgstr "Nevada (NV)"
+msgid "Arizona"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:18
-msgid "Vermont (VT)"
-msgstr "バーモント州 (VT)"
+msgid "(AZ)"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:19
-msgid "Illinois (IL)"
-msgstr "イリノイ州 (IL)"
+msgid "California"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:20
-msgid "Virginia (VA)"
-msgstr "バージニア州(VA)"
+msgid "(CA)"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:21
-msgid "Washington, D.C (DC)"
-msgstr "ワシントンD.C.(DC)"
+msgid "Colorado"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:22
-msgid "Arizona (AZ)"
-msgstr "アリゾナ州(AZ)"
+msgid "(CO)"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:23
-msgid "Idaho (ID)"
-msgstr "アイダホ州(ID)"
+msgid "Florida"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:24
-msgid "Oregon (OR)"
-msgstr "オレゴン州(OR)"
+msgid "(FL)"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:25
-msgid "North Carolina (NC)"
-msgstr "ノースカロライナ州(NC)"
+msgid "Georgia"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:26
+msgid "(GA)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:27
+msgid "Idaho"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:28
+msgid "(ID)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:29
+msgid "Illinois"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:30
+msgid "(IL)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:31
+msgid "Iowa"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:32
+msgid "(IA)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:33
+msgid "Mississippi"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:34
+msgid "(MS)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:35
+msgid "Nevada"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:36
+msgid "(NV)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:37
+msgid "New Jersey"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:38
+msgid "(NJ)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:39
+msgid "New York"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:40
+msgid "(NY)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:41
+msgid "North Carolina"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:42
+msgid "(NC)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:43
+msgid "Oregon"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:44
+msgid "(OR)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:45
+msgid "Texas"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:46
+msgid "(TX)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:47
+msgid "Vermont"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:48
+msgid "(VT)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:49
+msgid "Virginia"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:50
+msgid "(VA)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:51
+msgid "Washington"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:52
+msgid "(WA)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:53
+msgid "Washington, D.C."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:54
+msgid "\\(DC)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:57
 msgid ""
 "Federal taxes (Income, :abbr:`FICA (Federal Insurance Contributions Act)`, "
 "and Unemployment) for both employees and employers are covered by default in "
@@ -39786,7 +39790,7 @@ msgstr ""
 "フォルトでカバーされています。追加の州は時間をかけて追加されるため、更新を確"
 "認してください。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:32
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:61
 msgid ""
 "Before configuring the United States localization, refer to the "
 "general :doc:`payroll <../../payroll>` documentation, which includes the "
@@ -39797,7 +39801,7 @@ msgstr ""
 "payroll>`\\ ドキュメントを参照してください。これには、すべてのローカライゼー"
 "ションの基本情報と、すべての共通設定とフィールドが含まれています。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:41
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:70
 msgid ""
 ":ref:`Install <general/install>` the following modules to get all the "
 "features of the United States payroll localization:"
@@ -39805,15 +39809,15 @@ msgstr ""
 "米国給与ローカライゼーションのすべての機能を取得するには、以下のモジュールを"
 "\\ :ref:`インストール <general/install>`\\ してください:"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:51
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:80
 msgid ":guilabel:`United States - Payroll`"
 msgstr ":guilabel:`United States - Payroll`"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:52
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:81
 msgid "`l10n_us_hr_payroll`"
 msgstr "`l10n_us_hr_payroll`"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:57
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:86
 msgid ""
 "Provides U.S. payroll basics, including employee tax details, salary "
 "structures (Basic/Gross/Net), tax rules, and W-2/3PA reporting."
@@ -39821,23 +39825,23 @@ msgstr ""
 "米国給与の基本機能を提供します (従業員の税務詳細、給与構造 (基本/総額/純額)、"
 "税務ルール、W-2/3PA レポーティングを含む)。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:59
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:88
 msgid ":guilabel:`United States - Payroll with Accounting`"
 msgstr ":guilabel:`United States - Payroll with Accounting`"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:60
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:89
 msgid "`l10n_us_hr_payroll_account`"
 msgstr "`l10n_us_hr_payroll_account`"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:62
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:91
 msgid "l10n_us"
 msgstr "l10n_us"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:63
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:92
 msgid "l10n_us_hr_payroll"
 msgstr "l10n_us_hr_payroll"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:68
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:97
 msgid ""
 ":doc:`Configure the United States fiscal localization <../../../finance/"
 "fiscal_localizations/united_states>`"
@@ -39845,7 +39849,7 @@ msgstr ""
 "\\ :doc:`米国の会計ローカライゼーションを設定 <../../../finance/"
 "fiscal_localizations/united_states>`"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:86
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:115
 msgid ""
 ":guilabel:`Tax ID`: Enter the company's :abbr:`EIN (Employer Identification "
 "Number)`."
@@ -39853,11 +39857,11 @@ msgstr ""
 "\\ :guilabel:`税ID`\\ : 会社の\\ :abbr:`EIN (Employer Identification "
 "Number)`\\ を入力します。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:87
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:116
 msgid ":guilabel:`Company ID` : Enter the business's state ID number."
 msgstr "\\ :guilabel:`会社ID`\\ : 事業の州ID番号を入力します。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:88
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:117
 msgid ""
 ":guilabel:`Currency`: By default, :abbr:`USD (US Dollars)` is selected. If "
 "not, select :guilabel:`USD` from the drop-down menu."
@@ -39866,12 +39870,12 @@ msgstr ""
 "ています。選択されていない場合は、ドロップダウンメニューから"
 "\\ :guilabel:`USD`\\ を選択します。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:94
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:123
 msgid "Ensure the information is accurate, as it is used when creating W-2s."
 msgstr ""
 "W-2を作成する際に使用されるため、情報が正確であることを確認してください。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:99
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:128
 msgid ""
 "Every employee being paid must have their employee profiles configured for "
 "the United States payroll localization. Additional fields are present after "
@@ -39881,7 +39885,7 @@ msgstr ""
 "プロファイルを設定する必要があります。米国用にデータベースを設定すると、追加"
 "のフィールドが表示されます。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:121
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:150
 msgid ""
 "These accounts are used to pay the employee, via an automation through a "
 "NACHA payment file. Payroll **cannot** be processed for employees without a "
@@ -39895,7 +39899,7 @@ msgstr ""
 "**給与**ダッシュボードに警告が表示され、給与処理を実行しようとするとエラーが"
 "発生します。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:126
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:155
 msgid ""
 "Ensure there is a valid :guilabel:`SSN No` entered in "
 "the :guilabel:`Citizenship` section . The last four digits of the :abbr:`SSN "
@@ -39905,7 +39909,7 @@ msgstr ""
 "いることを確認してください。:abbr:`SSN(社会保障番号)`\\ の下4桁が従業員の給与"
 "明細に表示されます。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:154
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:183
 msgid ""
 ":guilabel:`Contract Type`: Determines how the employee is paid and "
 "classified, such as :guilabel:`Salary-exempt`, :guilabel:`Salary-"
@@ -39914,7 +39918,7 @@ msgstr ""
 ":guilabel:`契約種別`: 従業員の支払方法と分類を決定します。例えば、:guilabel:`"
 "給与-免除`、:guilabel:`給与-非免除`、:guilabel:`時給`\\ などです。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:158
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:187
 msgid ""
 "This field is visible on payslips. Some states require payslips to state if "
 "the employee is exempt or non-exempt from overtime. Ensure the selection "
@@ -39924,7 +39928,7 @@ msgstr ""
 "除かを給与明細に記載することが義務付けられています。選択が州法に従っているこ"
 "とを確認してください。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:161
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:190
 msgid ""
 ":guilabel:`Pay Category`: Select :guilabel:`United States: Employee` for "
 "this field. This defines when the employee is paid, their default working "
@@ -39934,11 +39938,11 @@ msgstr ""
 "択します。これにより、従業員の支払時期、デフォルトの勤務スケジュール、および"
 "適用される勤務記録タイプが定義されます。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:187
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:216
 msgid "W-2 form section"
 msgstr "W-2フォームセクション"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:189
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:218
 msgid ""
 "A W-2 is an annual tax form that reports an employee's wages, taxes, and "
 "benefits. Employees use it to file their tax returns. The options below "
@@ -39950,7 +39954,7 @@ msgstr ""
 "13*\\ のチェックボックスに対応しています。従業員に該当するものをすべて選択し"
 "てください。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:193
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:222
 msgid ""
 ":guilabel:`Statutory Employee`: Tick this box if the employee is exempt from "
 "income tax, but subject to :abbr:`FICA (Federal Insurance Contributions "
@@ -39960,7 +39964,7 @@ msgstr ""
 "\\ :abbr:`FICA (Federal Insurance Contributions Act)`\\ 税の対象である場合"
 "は、このボックスにチェックを入れます。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:195
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:224
 msgid ""
 ":guilabel:`Retirement Plan`: Tick this box if the employee is an active "
 "contributor to an employer-sponsored retirement plan."
@@ -39968,7 +39972,7 @@ msgstr ""
 "\\ :guilabel:`退職金制度`\\ ：従業員が雇用主が提供する退職金制度に稼働中の拠"
 "出者である場合は、このボックスにチェックを入れます。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:197
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:226
 msgid ""
 ":guilabel:`Third-Party Sick Pay`: Tick this box if the employee is covered "
 "under a plan where sick pay benefits may be provided by a third party (e.g., "
@@ -39978,11 +39982,11 @@ msgstr ""
 "ど）によって傷病手当が支給される可能性のある制度の対象である場合は、このボッ"
 "クスにチェックを入れます。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:201
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:230
 msgid "W-4 form section"
 msgstr "W-4フォームセクション"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:203
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:232
 msgid ""
 "A W-4 is an :abbr:`IRS (Internal Revenue Services)` form that determines an "
 "employee's federal tax withholding, which the employer remits directly to "
@@ -39992,15 +39996,15 @@ msgstr ""
 "Services)`\\ フォームであり、雇用主が\\ :abbr:`IRS (Internal Revenue "
 "Services)`\\ に直接送金します。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:206
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:235
 msgid "Configure any relevant fields for the employee in this section."
 msgstr "このセクションで従業員に関連するフィールドを設定します。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:209
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:238
 msgid "State filing section"
 msgstr "州申告セクション"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:211
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:240
 msgid ""
 "An employee's marital status impacts their payroll taxes. Configure the "
 "following fields regarding their status and withholdings."
@@ -40008,7 +40012,7 @@ msgstr ""
 "従業員の婚姻状況は給与税に影響します。従業員のステータスと源泉徴収に関する以"
 "下のフィールドを設定します。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:214
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:243
 msgid ""
 ":guilabel:`Status`: Using the drop-down menu, select the employee's "
 "*federal* filing status. The options "
@@ -40024,7 +40028,7 @@ msgstr ""
 "\\ :guilabel:`Qualifying surviving spouse/RDP with child`\\ です。これは通"
 "常、従業員のW-4フォームから取得されます。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:218
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:247
 msgid ""
 ":guilabel:`Tax Status`: Using the drop-down menu, select the employee's "
 "*state* filing status, if applicable."
@@ -40032,11 +40036,11 @@ msgstr ""
 "\\ :guilabel:`税務ステータス`\\ ：ドロップダウンメニューを使用して、該当する"
 "場合は従業員の\\ *州*\\ 申告ステータスを選択します。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:222
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:251
 msgid "The federal and state statuses do **not** need to match."
 msgstr "連邦と州のステータスは一致する必要は\\ **ありません**\\ 。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:225
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:254
 msgid ""
 "As of 2025, these states do **not** collect state income tax: Alaska, "
 "Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, "
@@ -40050,7 +40054,7 @@ msgstr ""
 "\\ :guilabel:`税務ステータス`\\ フィールドに対応する州オプションは\\ **ありま"
 "せん**\\ 。空白のままにしてください。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:230
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:259
 msgid ""
 ":guilabel:`Withholding Allowance`: Enter the total annual amount to be "
 "withheld from the employee's pay for the year, for state taxes. Only fill "
@@ -40060,7 +40064,7 @@ msgstr ""
 "される年間総額を入力します。従業員が州所得税のある州に住んでいる場合にのみ入"
 "力してください。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:233
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:262
 msgid ""
 ":guilabel:`Extra Withholding`: Enter the total *extra* annual amount (not "
 "including the :guilabel:`Withholding Allowance` amount) to be withheld from "
@@ -40075,11 +40079,11 @@ msgstr ""
 msgid "The state filing section of the employee form, filled out."
 msgstr "記入された従業員フォームの州申告セクション。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:241
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:270
 msgid "Common benefits"
 msgstr "一般的な福利厚生"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:243
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:272
 msgid ""
 "The following sections of benefits are considered common ones offered by US "
 "employers. This information needs to be populated with the information "
@@ -40088,7 +40092,7 @@ msgstr ""
 "以下の福利厚生セクションは、米国の雇用主が提供する一般的なものと見なされま"
 "す。この情報は、従業員が選択した情報を入力済みである必要があります。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:247
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:276
 msgid ""
 "The benefits listed in this section are considered the most commonly offered "
 "by companies. If other employee benefits exist that require regular paycheck "
@@ -40098,11 +40102,11 @@ msgstr ""
 "と見なされます。定期的な給与控除が必要な他の従業員福利厚生が存在する場合は、*"
 "入力*として追加できます。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:252
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:281
 msgid "Pre-tax deductions"
 msgstr "税引前控除"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:254
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:283
 msgid ""
 "Pre-tax benefits lower the employee's gross wage, which decreases the base "
 "amount for tax calculations. These are displayed at the beginning of the "
@@ -40111,11 +40115,11 @@ msgstr ""
 "税引前福利厚生は従業員の総支給額を下げ、税金計算の課税標準を減少させます。こ"
 "れらは給与明細の冒頭、総支給額が規定される前に表示されます。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:259
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:288
 msgid "Retirement plans section"
 msgstr "退職金制度セクション"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:261
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:290
 msgid ""
 "This section is where the employee and employer 401(k) contributions are "
 "configured. Fill out the following fields:"
@@ -40123,7 +40127,7 @@ msgstr ""
 "このセクションでは、従業員と雇用主の401(k)拠出金を設定します。以下のフィール"
 "ドに入力してください:"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:264
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:293
 msgid ""
 ":guilabel:`401(k)`: Enter the amount of money taken out of the employee's "
 "payslip each pay period. This can be entered either as a percentage (%) of "
@@ -40133,7 +40137,7 @@ msgstr ""
 "力します。これは給与明細金額のパーセンテージ(%)、または給与明細ごとの特定のド"
 "ル金額($/slip)として入力できます。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:267
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:296
 msgid ""
 ":guilabel:`Matching Amount`: Enter the matching amount the employer "
 "contributes to the employee's 401(k), as compared to the employee's "
@@ -40144,7 +40148,7 @@ msgstr ""
 "る一致金額を入力します。このフィールドも、従業員の拠出金のパーセンテージ(%)、"
 "または特定のドル金額($/slip)として設定できます。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:270
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:299
 msgid ""
 ":guilabel:`Matching Yearly Cap`: If there is a limit to the employer's "
 "contribution, enter it as a percentage of the employee's annual salary."
@@ -40152,7 +40156,7 @@ msgstr ""
 "\\ :guilabel:`Matching Yearly Cap`\\ :雇用主の拠出金に上限がある場合は、従業"
 "員の年間給与のパーセンテージとして入力します。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:274
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:303
 msgid ""
 "A company allows employees to contribute to a 401(k) retirement plan, and "
 "matches 50% of the employee's contributions, up to $5,000 USD a year. The "
@@ -40163,7 +40167,7 @@ msgstr ""
 "間5,000米ドルまで一致させます。従業員は年間50,000米ドルを稼ぎ、給与の20%を"
 "401(k)に拠出しており、これは10,000米ドルです。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:278
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:307
 msgid ""
 "To configure this, enter `20.00` in the :guilabel:`401(k)` field, `50.00` in "
 "the :guilabel:`Matching Amount` field, and `20.00` in "
@@ -40177,11 +40181,11 @@ msgstr ""
 msgid "An employee's retirement configurations."
 msgstr "従業員の退職金設定。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:285
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:314
 msgid "Health benefits section"
 msgstr "健康福利厚生セクション"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:287
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:316
 msgid ""
 "This section is where the employee's health contributions are configured. "
 "Populate each of the fields with the corresponding amount deducted from "
@@ -40196,11 +40200,11 @@ msgid ""
 "deductions."
 msgstr "給与明細控除が入力された従業員の健康福利厚生セクション。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:294
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:323
 msgid "Other benefits section"
 msgstr "その他の福利厚生セクション"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:296
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:325
 msgid ""
 "This section currently only houses a :guilabel:`Commuter` benefit field. "
 "Enter the amount being deducted per paycheck, for applicable commuter "
@@ -40210,11 +40214,11 @@ msgstr ""
 "まれています。該当する通勤福利厚生について、給与ごとに控除される金額を入力し"
 "ます。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:300
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:329
 msgid "Post-tax deductions section"
 msgstr "税引後控除セクション"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:302
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:331
 msgid ""
 "These types of benefits count as deductions *after* taxes are calculated. "
 "They appear towards the end of the payslip before the net amount is "
@@ -40230,7 +40234,7 @@ msgstr ""
 "のパーセンテージ(%)、または給与明細ごとの特定のドル金額($/slip)として入力しま"
 "す。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:311
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:340
 msgid ""
 "Several sections within the **Payroll** app installs a Salary Structure, "
 "Structure Type, Rules, and Parameters specific to the United States."
@@ -40238,7 +40242,7 @@ msgstr ""
 "\\ **給与**\\ アプリ内のいくつかのセクションでは、米国固有の給与構造、構造タ"
 "イプ、ルール、およびパラメータがインストールされます。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:317
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:346
 msgid ""
 "When the **l10n_us_hr_payroll** module is :ref:`installed <payroll/"
 "usa_apps>`, a new :guilabel:`Salary Structure` gets "
@@ -40250,7 +40254,7 @@ msgstr ""
 "（:guilabel:`米国：通常給与`）。この体系には1つの\\ :guilabel:`体系タイプ`\\ "
 "（:guilabel:`米国：通常給与`）が含まれます。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:332
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:361
 msgid ""
 "To view the salary rules that inform the salary structure what to do, "
 "navigate to :menuselection:`Payroll app --> Configuration --> Structures` "
@@ -40264,7 +40268,7 @@ msgstr ""
 "展開して\\ :guilabel:`米国：通常給与`\\ 体系タイプを表示します。:guilabel:`米"
 "国：通常給与`\\ をクリックして詳細な給与ルールを表示します。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:340
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:369
 msgid ""
 "Each rule defines how pay is calculated, taking into account factors such as "
 "commissions, bonuses, taxes, and insurance. The *logic* behind "
@@ -40274,7 +40278,7 @@ msgstr ""
 "算方法を定義します。:guilabel:`米国：通常給与`\\ ルールの*ロジック*は次のとお"
 "りです："
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:344
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:373
 msgid ""
 "The first four rules listed reflects all sources of income, including the "
 "basic wage listed on the contract (:guilabel:`Basic Salary`), plus any "
@@ -40289,7 +40293,7 @@ msgstr ""
 msgid "The basic salary rules for the US localization."
 msgstr "米国ローカライゼーションの基本給与ルール。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:351
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:380
 msgid ""
 "Adding up these inputs is how the gross salary (:guilabel:`Gross Pay`) is "
 "calculated. This amount is the base amount used to calculate payroll taxes."
@@ -40297,7 +40301,7 @@ msgstr ""
 "これらの入力を合計することで、総支給額（:guilabel:`総支給`）が計算されます。"
 "この金額は、給与税を計算するための基準額となります。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:354
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:383
 msgid ""
 "The next set of rules are the various pre-tax benefits and taxable income, "
 "such as :guilabel:`Medical` insurance contributions and :guilabel:`Commuter "
@@ -40314,7 +40318,7 @@ msgstr ""
 msgid "The pre-tax rules for the US localization."
 msgstr "米国ローカライゼーションの税引前ルール。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:362
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:391
 msgid ""
 "Next, all the various tax rules are listed where both federal and state "
 "payroll withholdings are outlined. First, federal tax rules are listed, then "
@@ -40327,7 +40331,7 @@ msgstr ""
 msgid "The federal tax rules for the US localization."
 msgstr "米国ローカライゼーションの連邦税ルール。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:369
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:398
 msgid ""
 "The rule for federal withholdings for `Worker's Compensation` appears "
 "*after* several state-specific withholdings are listed, and does **not** "
@@ -40337,7 +40341,7 @@ msgstr ""
 "後*に表示され、上記の画像には表示されて**いません**が、ルールにはリストされて"
 "います。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:373
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:402
 msgid "The last rules listed are the post-tax employee deductions."
 msgstr "最後にリストされるルールは、税引後の従業員控除です。"
 
@@ -40345,7 +40349,7 @@ msgstr "最後にリストされるルールは、税引後の従業員控除で
 msgid "The post-tax rules for the US localization."
 msgstr "米国ローカライゼーションの税引後ルール。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:378
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:407
 msgid ""
 "The :guilabel:`Other Inputs` tab contains anything else affecting payroll. "
 "This includes items to be added to the payslip, such as :guilabel:`Tips`, "
@@ -40359,7 +40363,7 @@ msgstr ""
 msgid "The other inputs for the US localization."
 msgstr "米国ローカライゼーションのその他の入力。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:385
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:414
 msgid ""
 "The employee's net salary is the amount the employee receives from the "
 "employer. The formula to calculate the net salary is:"
@@ -40367,13 +40371,13 @@ msgstr ""
 "従業員の純給与は、従業員が雇用主から受け取る金額です。純給与を計算する数式は"
 "次のとおりです："
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:388
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:417
 msgid ""
 "\\text{Gross Salary} + \\text{Allowances} - \\text{Payroll Taxes} - "
 "\\text{General Deductions}"
 msgstr "\\text{総給与額} + \\text{手当} - \\text{給与税} - \\text{一般控除}"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:392
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:421
 msgid ""
 "Additionally, an extra section exists in payroll calculation for the US "
 "called `Employer Deductions`, and it breaks down the payments the employer "
@@ -40387,7 +40391,7 @@ msgstr ""
 msgid "The employer deduction rules for the US localization."
 msgstr "米国ローカライゼーション用の事業主控除ルール。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:400
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:429
 msgid ""
 "The rule for employer deductions for `Worker's Compensation` appears *after* "
 "several state-specific employer deductions are listed, and does **not** "
@@ -40397,7 +40401,7 @@ msgstr ""
 "主控除がリストされた\\ *後に*\\ 表示され、上の画像には表示されません\\ **が"
 "**\\ 、ルールにはリストされています。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:411
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:440
 msgid ""
 "The wage base for Social Security tax calculations has a cap for 2025, "
 "accounted for in the `US: FICA OASDI Cap` parameter."
@@ -40405,7 +40409,7 @@ msgstr ""
 "社会保障税計算の賃金基準には2025年の上限があり、\\ :guilabel:`US: FICA OASDI "
 "Cap`\\ パラメーターで考慮されています。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:423
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:452
 msgid ""
 "The Unemployment tax of a company is different from the one added by default "
 "in Odoo. To update this, navigate to :menuselection:`Payroll app --> "
@@ -40418,7 +40422,7 @@ msgstr ""
 "し、:abbr:`FUTA(連邦失業税法)`または編集が必要な州名で結果を絞り込み、リスト"
 "から該当する率を編集します。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:429
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:458
 msgid ""
 "Odoo adds updated rule parameters for the current calendar year. It is "
 "**not** recommended to edit rule parameters **unless a federal or state "
@@ -40432,11 +40436,11 @@ msgstr ""
 "**\\ 。ルールパラメーターを変更する\\ *前に*\\ 、すべての地方および国の規制を"
 "確認してください。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:435
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:464
 msgid "Run US payroll"
 msgstr "米国の給与を実行"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:437
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:466
 msgid ""
 "Before running paypoll, the payroll officer must validate "
 "employee :doc:`work entries <../work_entries>` to confirm pay accuracy and "
@@ -40448,7 +40452,7 @@ msgstr ""
 "は、すべての休暇が承認されていること、および残業時間が適切であることの確認が"
 "含まれます。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:480
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:509
 msgid ""
 "The accounting process when running payroll has two "
 "components: :ref:`creating journal entries <payroll/journal>`, "
@@ -40458,7 +40462,7 @@ msgstr ""
 "journal>`\\ と\\ :ref:`支払いの登録 <payroll/register>`\\ の2つの構成品があり"
 "ます。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:498
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:527
 msgid ""
 "Four accounts from the US :abbr:`CoA (Chart of Accounts)` are included with "
 "the payroll localization:"
@@ -40466,7 +40470,7 @@ msgstr ""
 "給与ローカライゼーションには、米国の\\ :abbr:`CoA（勘定科目表）`\\ から4つの"
 "分析勘定が含まれています："
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:501
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:530
 msgid ""
 "`611000 Salaries & Wages`: Records gross salary and the employer's portion "
 "of payroll expenses. Also groups values from rules without specific accounts "
@@ -40475,7 +40479,7 @@ msgstr ""
 "`611000 給与および賃金`：総給与と雇用主負担の給与経費を記録します。また、特定"
 "の勘定がないルールからの値（例：会社固有の手当）をまとめます。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:503
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:532
 msgid ""
 "`230100 Employee Payroll Taxes`: Withheld taxes from employees, which the "
 "employer must file and pay. The partner and label columns of the journal "
@@ -40484,7 +40488,7 @@ msgstr ""
 "`230100 従業員給与税`：従業員から源泉徴収された税金で、雇用主が申告・納付する"
 "必要があります。仕訳の取引先と摘要欄に具体的な税金が示されます。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:505
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:534
 msgid ""
 "`230200 Employer Payroll Taxes`: Employer portion of payroll taxes to be "
 "filed and paid. The partner and label columns of the journal entry indicate "
@@ -40493,11 +40497,11 @@ msgstr ""
 "`230200 雇用主給与税`：申告・納付する必要がある雇用主負担の給与税。仕訳の取引"
 "先と摘要欄に具体的な税金が示されます。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:507
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:536
 msgid "`230000 Salary Payable`: Net salary owed to the employee."
 msgstr "`230000 未払給与`：従業員に支払うべき純給与。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:510
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:539
 msgid ""
 "The :abbr:`CoA (Chart of Accounts)` configuration is done by default when a "
 "company is located in the US. The account codes and names can be edited to "
@@ -40511,7 +40515,7 @@ msgstr ""
 "（給与体系で使用）に関連付けられた\\ :abbr:`CoA（勘定科目表）`\\ の勘定がない"
 "場合、Odooは仕訳の性質に関係なく`給与経費`勘定を使用して仕訳を作成します。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:529
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:558
 msgid ""
 "To generate payments from payslips,employee's **must** have a *trusted* bank "
 "account. If the employee's bank account is *not* marked as `trusted`, NACHA "
@@ -40521,7 +40525,7 @@ msgstr ""
 "**です。従業員の銀行アカウントが`信頼済み`とマークされて*いない*場合、NACHA"
 "ファイルはOdooを通じて生成**できません**。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:546
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:575
 msgid ""
 "The US localization contains several reports unique to the US, which provide "
 "tax information for employees, as well as the ability to integrate with "
@@ -40531,11 +40535,11 @@ msgstr ""
 "業員の税務情報を提供するとともに、ADP などの外部組織と統合する機能がありま"
 "す。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:550
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:579
 msgid "W2 Report"
 msgstr "W2 レポート"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:552
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:581
 msgid ""
 "The *W2 Report* provides a CSV file that allows employees to e-file their W2 "
 "report with third-party software. To access this report, navigate "
@@ -40546,7 +40550,7 @@ msgstr ""
 "は、:menuselection:`給与計算 -> レポーティング -> United States -> W2`\\ に移"
 "動します。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:556
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:585
 msgid ""
 "To create a W2 form, click :guilabel:`New`, and a blank :guilabel:`Create W2 "
 "Form` page loads. Set the :guilabel:`Start Date` and :guilabel:`End Date` "
@@ -40558,9 +40562,9 @@ msgstr ""
 "`\\ と\\ :guilabel:`終了日`\\ (通常は暦年) を設定し、マルチカンパニーデータ"
 "ベースの場合は\\ :guilabel:`会社`\\ を選択します。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:560
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:582
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:604
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:589
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:611
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:633
 msgid ""
 "All pay runs for the time period appear in a list view. To add any missing "
 "pay runs, click :guilabel:`Add a line` at the bottom of the list, and select "
@@ -40570,7 +40574,7 @@ msgstr ""
 "加するには、リストの下部にある\\ :guilabel:`明細追加`\\ をクリックして、未設"
 "定のファイルを選択します。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:563
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:592
 msgid ""
 "When done, click the :guilabel:`Generate` button to create a CSV file with a "
 "summary of all payroll related payments made during the specified time "
@@ -40583,11 +40587,11 @@ msgstr ""
 msgid "The W2 report screen, with the file to download in the top half."
 msgstr "W2 レポート画面、上半分にダウンロードするファイルが表示されています。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:570
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:599
 msgid "Form 941"
 msgstr "フォーム 941"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:572
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:601
 msgid ""
 "The *Form 941* report is meant to inform the government of the amount of "
 "federal income tax, :abbr:`FICA (Federal Insurance Contributions Act)` taxes "
@@ -40598,7 +40602,7 @@ msgstr ""
 "税、:abbr:`FICA (連邦保険拠出法)`\\ 税 (メディケアと社会保障) の金額を政府に"
 "報告するためのものです。また、従業員側の税金も報告します。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:576
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:605
 msgid ""
 "To create this report, navigate to :menuselection:`Payroll -> Reporting -> "
 "United States -> Form 941`. Click the :guilabel:`New` button, and a "
@@ -40616,7 +40620,7 @@ msgstr ""
 "`\\ (IRS への送金方法)、:guilabel:`預金スケジュールと納税義務`\\ (IRS への支"
 "払い頻度) が含まれます。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:585
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:614
 msgid ""
 "When done, click :guilabel:`Generate`, and the report is created as a CSV "
 "file, and appears on the :guilabel:`Form 941` report dashboard. Companies "
@@ -40631,11 +40635,11 @@ msgstr ""
 msgid "The 941 report screen, with the file to download in the top half."
 msgstr "941 レポート画面、上半分にダウンロードするファイルが表示されています。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:593
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:622
 msgid "Form 940"
 msgstr "フォーム 940"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:595
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:624
 msgid ""
 "The *Form 940* report details the annual :abbr:`FUTA (Federal Unemployment "
 "Tax Act)` withheld for payroll."
@@ -40643,7 +40647,7 @@ msgstr ""
 "*フォーム 940*\\ レポートは、給与計算のために源泉徴収された年次"
 "\\ :abbr:`FUTA (連邦失業税法)`\\ の詳細を示します。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:598
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:627
 msgid ""
 "To create this report, navigate to :menuselection:`Payroll -> Reporting -> "
 "United States -> Form 940`. Click the :guilabel:`New` button, and a "
@@ -40661,7 +40665,7 @@ msgstr ""
 "`、:guilabel:`クレジット削減州で支払済`、:guilabel:`IRS 支払いオプション`\\ "
 "(IRS への送金方法) が含まれます。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:607
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:636
 msgid ""
 "When done, click :guilabel:`Generate`, and the report is created as a CSV "
 "file, and appears on the :guilabel:`Form 940` report dashboard. Companies "
@@ -40676,11 +40680,11 @@ msgstr ""
 msgid "The 940 report screen, with the file to download in the top half."
 msgstr "940 レポート画面、上半分にダウンロードするファイルが表示されています。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:615
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:644
 msgid "Export data to third-party apps"
 msgstr "サードパーティアプリへのデータエクスポート"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:617
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:646
 msgid ""
 "The *ADP Export* report generates a CSV file that can be submitted to ADP, "
 "which then makes payments to the employees."
@@ -40688,7 +40692,7 @@ msgstr ""
 "*ADP Export*\\ レポートは、ADPに送信できるCSVファイルを生成し、従業員への支払"
 "いを実行します。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:620
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:649
 msgid ""
 "The CSV file summarizes the employee's worked hours during a specified time "
 "period, correlating to their salary or hourly wage. The report is generated "
@@ -40698,7 +40702,7 @@ msgstr ""
 "給に対応します。このレポートは、休暇が確定した\\ *後*\\ に\\ :doc:`勤務記録 "
 "<../work_entries>`\\ から生成されます。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:624
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:653
 msgid ""
 "The export format is meant to match with the ADP format. Since companies can "
 "customize their portal and may require some changes, the data is there to be "
@@ -40708,7 +40712,7 @@ msgstr ""
 "タマイズでき、変更が必要な場合もあるため、データはADPに供給して給与処理を実行"
 "できるようになっています。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:628
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:657
 msgid ""
 "To access the ADP Export report, the `United States - Payroll - Export to "
 "ADP` module **must** be :ref:`installed <general/install>`."
@@ -53396,7 +53400,7 @@ msgstr ""
 "`、および\\ :guilabel:`二次承認`\\ のみです。"
 
 #: ../../content/applications/hr/time_off/management.rst:41
-#: ../../content/applications/hr/time_off/management.rst:110
+#: ../../content/applications/hr/time_off/management.rst:138
 msgid ""
 "The various departments the user is a member of, and manages employees "
 "under, also appear on the left side of the page, under :icon:`fa-"
@@ -53423,7 +53427,7 @@ msgstr ""
 "すべてのステータスが表示されます。"
 
 #: ../../content/applications/hr/time_off/management.rst:50
-#: ../../content/applications/hr/time_off/management.rst:120
+#: ../../content/applications/hr/time_off/management.rst:148
 msgid ""
 "If no requests fall under one of the status options or departments, that "
 "status or department is **not** visible on the left-side menu."
@@ -53480,7 +53484,7 @@ msgstr ""
 "す。"
 
 #: ../../content/applications/hr/time_off/management.rst:72
-#: ../../content/applications/hr/time_off/management.rst:138
+#: ../../content/applications/hr/time_off/management.rst:166
 msgid ""
 "Depending on the rights of the user, changes can be made. To modify the "
 "request, make any desired changes to the form. All changes are automatically "
@@ -53490,7 +53494,7 @@ msgstr ""
 "フォームに必要な変更を加えます。すべての変更は自動的に保存されます。"
 
 #: ../../content/applications/hr/time_off/management.rst:75
-#: ../../content/applications/hr/time_off/management.rst:141
+#: ../../content/applications/hr/time_off/management.rst:169
 msgid ""
 "It is also possible to approve, validate, or refuse the request from this "
 "form. Click the :guilabel:`Approve` button to approve, "
@@ -53504,25 +53508,85 @@ msgstr ""
 
 #: ../../content/applications/hr/time_off/management.rst:79
 msgid ""
-"Once a request has been approved, validated, or refused, the Kanban card "
-"disappears from the default :guilabel:`All Time Off` page. To view *all* "
-"requests, including approved and refused requests, clear the default filters "
-"in the search bar."
+":guilabel:`All Time Off` page. To view *all* requests, including approved "
+"and refused requests, clear the default filters in the search bar."
 msgstr ""
-"申請が承認、確認、または却下されると、かんばんカードはデフォルトの"
-"\\ :guilabel:`すべての休暇`\\ ページから消えます。承認済みおよび却下済みの申"
-"請を含む\\ *すべて*\\ の申請を表示するには、検索バーのデフォルトのフィルター"
-"をクリアします。"
 
 #: ../../content/applications/hr/time_off/management.rst:None
 msgid "The detailed time off request form for the employee George Davis."
 msgstr "従業員George Davisの詳細な休暇申請フォーム。"
 
-#: ../../content/applications/hr/time_off/management.rst:89
+#: ../../content/applications/hr/time_off/management.rst:88
+msgid "Add missing time off requests"
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:90
+msgid ""
+"If an employee forgets to request time off for days they did not work, a "
+"time off record must be created retroactively. To create missing time off "
+"requests, navigate to :menuselection:`Time Off app --> Management --> Time "
+"Off`, and click :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:94
+msgid "On the time off request form, configure the following fields:"
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:96
+msgid ""
+":guilabel:`Employee`: Using the drop-down menu, select the employee missing "
+"the time off request."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:97
+msgid ""
+":guilabel:`Time Off Type`: Using the drop-down menu, select the :doc:`type "
+"of time off <time_off_types>` for the request."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:99
+msgid ""
+":guilabel:`Payslip State`: Using the drop-down menu, select when the paid "
+"time off is given to the employee. The options are: :guilabel:`To compute in "
+"next payslip`, :guilabel:`To compute in current payslip`, and :guilabel:`To "
+"defer to next payslip`."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:102
+msgid ""
+":guilabel:`Dates`: Using the calendar selector, configure the start and end "
+"dates for the time off request."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:104
+msgid ""
+":guilabel:`Description`: In the field below. enter any information regarding "
+"the request. For example, `Forgot to request the time off.` or `Could not "
+"request time off as they were sick.`"
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:106
+msgid ""
+":icon:`fa-paperclip` :guilabel:`Attach File`: If there is relevant "
+"documentation for the request, click this button, navigate to the desired "
+"file, then click :guilabel:`Open`."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:109
+msgid ""
+"Once the form is filled out, click :guilabel:`Approve` to approve the "
+"request."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:None
+msgid "A time off form for missing time off."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:117
 msgid "View allocation requests"
 msgstr "配分申請を表示"
 
-#: ../../content/applications/hr/time_off/management.rst:91
+#: ../../content/applications/hr/time_off/management.rst:119
 msgid ""
 "To view allocation requests waiting for approval, navigate "
 "to :menuselection:`Time Off app --> Management --> Allocations`. Doing so "
@@ -53533,7 +53597,7 @@ msgstr ""
 "配分`\\ に移動します。これにより\\ :guilabel:`配分`\\ ページが表示されます。"
 "すべての配分申請はデフォルトのかんばんビューで表示されます。"
 
-#: ../../content/applications/hr/time_off/management.rst:95
+#: ../../content/applications/hr/time_off/management.rst:123
 msgid ""
 "The only allocation requests that are visible on this page belong to "
 "employees the user either has :guilabel:`Time Off Officer` "
@@ -53544,7 +53608,7 @@ msgstr ""
 "\\ :guilabel:`休暇担当者`\\ または\\ :guilabel:`管理者`\\ のアクセス権を持つ"
 "従業員に属するもののみです。"
 
-#: ../../content/applications/hr/time_off/management.rst:99
+#: ../../content/applications/hr/time_off/management.rst:127
 msgid ""
 "The default filters on the :guilabel:`Allocations` page are :icon:`fa-"
 "filter` :guilabel:`First Approval` and :icon:`fa-filter` :guilabel:`My "
@@ -53557,7 +53621,7 @@ msgstr ""
 "イチーム`\\ です。これらのフィルターは、ユーザのチームの現在の従業員につい"
 "て、承認または確認を待っている、承認が必要な配分申請のみを表示します。"
 
-#: ../../content/applications/hr/time_off/management.rst:103
+#: ../../content/applications/hr/time_off/management.rst:131
 msgid ""
 "On the left side of the :guilabel:`Allocations` page, there are various "
 "grouping options that can be used to narrow down the presented allocation "
@@ -53569,7 +53633,7 @@ msgstr ""
 "ステータス`\\ および\\ :icon:`fa-users`\\ :guilabel:`部門`\\ の見出しの下にあ"
 "ります。"
 
-#: ../../content/applications/hr/time_off/management.rst:107
+#: ../../content/applications/hr/time_off/management.rst:135
 msgid ""
 "Since only allocation requests that need to be approved are shown, the "
 "only :icon:`fa-folder` :guilabel:`Status` options "
@@ -53579,7 +53643,7 @@ msgstr ""
 "テータス`\\ の選択肢は\\ :guilabel:`すべて`、:guilabel:`承認待ち"
 "`、:guilabel:`承認済み`\\ のみとなります。"
 
-#: ../../content/applications/hr/time_off/management.rst:113
+#: ../../content/applications/hr/time_off/management.rst:141
 msgid ""
 "To only display allocation requests for specific departments, click on "
 "the :guilabel:`Department` on the left-hand side of the page. Only requests "
@@ -53588,7 +53652,7 @@ msgstr ""
 "特定の部門の付与申請のみを表示するには、ページ左側の\\ :guilabel:`部門`\\ を"
 "クリックします。選択した部門内の申請のみが表示されます。"
 
-#: ../../content/applications/hr/time_off/management.rst:116
+#: ../../content/applications/hr/time_off/management.rst:144
 msgid ""
 "If the :icon:`fa-filter` :guilabel:`First Approval` and :icon:`fa-"
 "filter` :guilabel:`My Team` filters are removed, all statuses appear."
@@ -53601,11 +53665,11 @@ msgstr ""
 msgid "Allocations dashboard showing unapproved allocation requests."
 msgstr "未承認の付与申請を表示している付与ダッシュボード。"
 
-#: ../../content/applications/hr/time_off/management.rst:127
+#: ../../content/applications/hr/time_off/management.rst:155
 msgid "Approve or refuse allocation requests"
 msgstr "付与申請の承認または却下"
 
-#: ../../content/applications/hr/time_off/management.rst:129
+#: ../../content/applications/hr/time_off/management.rst:157
 msgid ""
 "To approve or refuse an allocation request, navigate to :menuselection:`Time "
 "Off app --> Management --> Allocations`. At the end of each allocation "
@@ -53618,7 +53682,7 @@ msgstr ""
 "て\\ :guilabel:`承認`\\ または\\ :guilabel:`確認`\\ ボタンと、:guilabel:`却下"
 "`\\ ボタンの2つが表示されます。"
 
-#: ../../content/applications/hr/time_off/management.rst:134
+#: ../../content/applications/hr/time_off/management.rst:162
 msgid ""
 "If more information is needed before approving an allocation request, click "
 "anywhere on the Kanban card (except for "
@@ -53629,7 +53693,7 @@ msgstr ""
 "(:guilabel:`承認`、:guilabel:`確認`、:guilabel:`却下`\\ ボタンを除く)をクリッ"
 "クします。これにより、詳細な付与申請フォームが読み込まれます。"
 
-#: ../../content/applications/hr/time_off/management.rst:145
+#: ../../content/applications/hr/time_off/management.rst:173
 msgid ""
 "Once a request has been approved, validtaed, or refused, the Kanban card "
 "disappears from the default :guilabel:`Allocations` page. To view *all* "
@@ -55120,6 +55184,312 @@ msgstr ""
 msgid ""
 "The lower half of the time off type form, with the color and icon selected."
 msgstr "休暇タイプフォームの下半分で、色とアイコンが選択されています。"
+
+#~ msgid ""
+#~ "To view the attendance report, click :guilabel:`Reporting` in the top "
+#~ "menu. The default report displays attendance information for current "
+#~ "employees over the past three months, in a default :icon:`oi-view-"
+#~ "pivot` :guilabel:`Pivot table`. The rows are populated by employee, while "
+#~ "the columns are populated by the various attendance records. All entries "
+#~ "are grouped by month."
+#~ msgstr ""
+#~ "勤怠レポートを表示するには、上部メニューの\\ :guilabel:`レポーティング`\\ "
+#~ "をクリックします。デフォルトのレポートは、過去3か月間の現従業員の勤怠情報"
+#~ "を、デフォルトの\\ :icon:`oi-view-pivot`\\ :guilabel:`ピボットテーブル`\\ "
+#~ "で表示します。行は従業員ごとに、列はさまざまな勤怠記録ごとに入力されます。"
+#~ "すべてのエントリは月ごとにグループ化されます。"
+
+#~ msgid "Employee retention report"
+#~ msgstr "従業員定着率レポート"
+
+#~ msgid "Gain insight into a company's retention rate."
+#~ msgstr "企業の定着率に関する洞察を得ます。"
+
+#~ msgid ""
+#~ "It is possible to determine the retention rate for a company by modifying "
+#~ "an existing report."
+#~ msgstr ""
+#~ "既存のレポートを変更することで、会社の定着率を判断することができます。"
+
+#~ msgid ""
+#~ "First, navigate to :menuselection:`Employees app --> Reporting --> "
+#~ "Contracts` to open the :guilabel:`Employee Analysis` report. This report "
+#~ "shows the number of all employees for the :guilabel:`Last 365 Days`, in a "
+#~ "default :icon:`fa-line-chart` :guilabel:`Line Chart`."
+#~ msgstr ""
+#~ "まず、:menuselection:`従業員アプリ --> レポーティング --> 契約`\\ に移動し"
+#~ "て\\ :guilabel:`従業員分析`\\ レポートを開きます。このレポートは、デフォル"
+#~ "トの\\ :icon:`fa-line-chart` :guilabel:`折れ線グラフ`\\ で\\ :guilabel:`直"
+#~ "近365日`\\ のすべての従業員の数を表示します。"
+
+#~ msgid "The default Employees Analysis report."
+#~ msgstr "デフォルトの従業員分析レポート。"
+
+#~ msgid ""
+#~ "Next, click the :guilabel:`Measures` :icon:`fa-caret-down` button in the "
+#~ "upper-left corner, revealing a drop-down menu. Click :guilabel:`# "
+#~ "Departure Employee` in the list, then click away from the drop-down menu "
+#~ "to close it. Now, the report shows all the employees who were archived "
+#~ "for the :guilabel:`Last 365 Days`."
+#~ msgstr ""
+#~ "次に、左上隅の\\ :guilabel:`指標` :icon:`fa-caret-down`\\ ボタンをクリック"
+#~ "すると、ドロップダウンメニューが表示されます。リストの\\ :guilabel:`# 退職"
+#~ "従業員`\\ をクリックし、ドロップダウンメニューの外側をクリックして閉じま"
+#~ "す。これで、レポートには\\ :guilabel:`直近365日`\\ にアーカイブされたすべ"
+#~ "ての従業員が表示されます。"
+
+#~ msgid ""
+#~ "To view this information in an easier format, click the :icon:`oi-view-"
+#~ "pivot` :guilabel:`(Pivot)` icon in the upper-right corner, and the data "
+#~ "is presented in a pivot table."
+#~ msgstr ""
+#~ "この情報をより見やすい形式で表示するには、右上隅の\\ :icon:`oi-view-"
+#~ "pivot` :guilabel:`(ピボット)`\\ アイコンをクリックすると、データがピボット"
+#~ "テーブルで表示されます。"
+
+#~ msgid ""
+#~ "The various employees, organized by department, populate the rows. The "
+#~ "columns display the following totals: the monthly :guilabel:`Wage`, "
+#~ "the :guilabel:`Fuel Card` budget, total :guilabel:`Annual Employee "
+#~ "Budget` (also referred to as the *annual salary*), the number "
+#~ "of :guilabel:`New Employees`, as well as the number "
+#~ "of :guilabel:`Departure Employees` (employees who left)."
+#~ msgstr ""
+#~ "部門別に整理されたさまざまな従業員が行に表示されます。列には次の合計が表示"
+#~ "されます: 月次\\ :guilabel:`賃金`、:guilabel:`燃料カード`\\ 予算、合計"
+#~ "\\ :guilabel:`年次従業員予算`\\ (*年間給与*\\ とも呼ばれます)、:guilabel:`"
+#~ "新規従業員`\\ の数、および\\ :guilabel:`退職従業員`\\ (退職した従業員)の"
+#~ "数。"
+
+#~ msgid ""
+#~ "The Employees Analysis report, modified to show departed employees only."
+#~ msgstr "退職した従業員のみを表示するように変更された従業員分析レポート。"
+
+#~ msgid "Employee retention rate comparison report"
+#~ msgstr "従業員定着率比較レポート"
+
+#~ msgid ""
+#~ "It is possible to compare data only for employees who left, compared to "
+#~ "the total current employees, between two separate time periods. This is "
+#~ "commonly referred to as the *employee retention rate*."
+#~ msgstr ""
+#~ "2つの異なる期間で、退職した従業員のみのデータを現在の従業員総数と比較する"
+#~ "ことができます。これは一般的に*従業員定着率*と呼ばれます。"
+
+#~ msgid ""
+#~ "To view these metrics, first open the :guilabel:`Employee Analysis` "
+#~ "report by navigating to :menuselection:`Employees app --> Reporting --> "
+#~ "Contracts`. Click the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon in "
+#~ "the upper-right corner to view the information in a pivot table."
+#~ msgstr ""
+#~ "これらの指標を表示するには、まず\\ :menuselection:`従業員アプリ --> レポー"
+#~ "ティング --> 契約`\\ に移動して\\ :guilabel:`従業員分析`\\ レポートを開き"
+#~ "ます。右上隅の\\ :icon:`oi-view-pivot` :guilabel:`(ピボット)`\\ アイコンを"
+#~ "クリックして、情報をピボットテーブルで表示します。"
+
+#~ msgid ""
+#~ "Next, click the :guilabel:`Measures` :icon:`fa-caret-down` button in the "
+#~ "upper-left corner, revealing a drop-down menu. Click :guilabel:`# New "
+#~ "Employees`, :guilabel:`Annual Employee Budget`, :guilabel:`Fuel Card`, "
+#~ "and :guilabel:`Wage` in the list, to deselect these metrics and hide them "
+#~ "in the table. Then, click :guilabel:`Count` at the bottom of the list to "
+#~ "enable that metric."
+#~ msgstr ""
+#~ "次に、左上隅の\\ :guilabel:`指標` :icon:`fa-caret-down`\\ ボタンをクリック"
+#~ "すると、ドロップダウンメニューが表示されます。リストの\\ :guilabel:`# 新規"
+#~ "従業員`、:guilabel:`年次従業員予算`、:guilabel:`燃料カード`、:guilabel:`賃"
+#~ "金`\\ をクリックして、これらの指標の選択を解除し、テーブルで非表示にしま"
+#~ "す。次に、リストの下部にある\\ :guilabel:`カウント`\\ をクリックして、その"
+#~ "指標を有効にします。"
+
+#~ msgid ""
+#~ "Click away from the drop-down menu to close it. Now, the report shows all "
+#~ "the employees who left the company (:guilabel:`# Departure Employee`), as "
+#~ "well as the total number of employees (:guilabel:`Count`), for "
+#~ "the :guilabel:`Last 365 Days`."
+#~ msgstr ""
+#~ "ドロップダウンメニューの外側をクリックして閉じます。これで、レポートには"
+#~ "\\ :guilabel:`直近365日`\\ に会社を退職したすべての従業員(\\ :guilabel:`# "
+#~ "退職従業員`\\ )と従業員の総数(\\ :guilabel:`カウント`\\ )が表示されます。"
+
+#~ msgid ""
+#~ "To compare the data for the current year with the previous year, click "
+#~ "the :icon:`fa-caret-down` :guilabel:`(down arrow)` in the search bar, "
+#~ "revealing multiple filter and grouping options. Click :guilabel:`Last 365 "
+#~ "Days` in the :icon:`fa-filter` :guilabel:`Filters` column, to turn off "
+#~ "that filter. Then, click :guilabel:`Date`, and click the current year (in "
+#~ "this example, :guilabel:`2024`) from the resulting drop-down menu."
+#~ msgstr ""
+#~ "現在の年のデータを前年と比較するには、検索バーの\\ :icon:`fa-caret-"
+#~ "down` :guilabel:`(下矢印)`\\ をクリックすると、複数のフィルターとグループ"
+#~ "化オプションが表示されます。:icon:`fa-filter` :guilabel:`フィルター`\\ 列"
+#~ "の\\ :guilabel:`直近365日`\\ をクリックして、そのフィルターをオフにしま"
+#~ "す。次に、:guilabel:`日付`\\ をクリックし、表示されるドロップダウンメ"
+#~ "ニューから現在の年(この例では\\ :guilabel:`2024`\\ )をクリックします。"
+
+#~ msgid ""
+#~ "Once a selection is made beneath :guilabel:`Date` in the :icon:`fa-"
+#~ "filter` :guilabel:`Filters` column, a :icon:`fa-"
+#~ "adjust` :guilabel:`Comparison` column appears. Click :guilabel:`Date: "
+#~ "Previous Year` in the new column, then click off of the drop-down menu to "
+#~ "close it."
+#~ msgstr ""
+#~ ":icon:`fa-filter` :guilabel:`フィルター`\\ 列の\\ :guilabel:`日付`\\ の下"
+#~ "で選択を行うと、:icon:`fa-adjust` :guilabel:`比較`\\ 列が表示されます。新"
+#~ "しい列の\\ :guilabel:`日付: 前年`\\ をクリックし、ドロップダウンメニューの"
+#~ "外側をクリックして閉じます。"
+
+#~ msgid ""
+#~ "In Odoo, in order to access the :icon:`fa-adjust` :guilabel:`Comparison` "
+#~ "column, a specific time *other than* :guilabel:`Last 365 Days` **must** "
+#~ "be selected. If not, the :icon:`fa-adjust` :guilabel:`Comparison` column "
+#~ "is **not** visible."
+#~ msgstr ""
+#~ "Odooでは、:icon:`fa-adjust` :guilabel:`比較`\\ 列にアクセスするに"
+#~ "は、:guilabel:`直近365日`\\ *以外*\\ の特定の時間を選択する**必要がありま"
+#~ "す**。そうしないと、:icon:`fa-adjust` :guilabel:`比較`\\ 列は表示**されま"
+#~ "せん**。"
+
+#~ msgid ""
+#~ "Now, the pivot table displays the total number of employees who left the "
+#~ "company (:guilabel:`# Departure Employee`), as well as the total number "
+#~ "of employees (:guilabel:`Count`) in the columns. These are further "
+#~ "divided by the two different years, and also displays "
+#~ "the :guilabel:`Variation` between the two."
+#~ msgstr ""
+#~ "これで、ピボットテーブルには、会社を退職した従業員の総数（\\ :guilabel:`# "
+#~ "Departure Employee`\\ ）と従業員の総数（\\ :guilabel:`Count`\\ ）が列に表"
+#~ "示されます。これらはさらに2つの異なる年で分類され、"
+#~ "\\ :guilabel:`Variation`\\ も表示されます。"
+
+#~ msgid ""
+#~ "The rows display the departments, and lists each individual employee for "
+#~ "each department, in the rows."
+#~ msgstr "行には部門が表示され、各部門の個々の従業員が行にリストされます。"
+
+#~ msgid ""
+#~ "For a more concise view of this report, click :icon:`fa-minus-square-"
+#~ "o` :guilabel:`Total` above the top row of the departments and employees, "
+#~ "to collapse the rows. Now, the table presents the total number of "
+#~ "employees who left the company for both years, compared to the total "
+#~ "number of employees for both years, including the difference, in a "
+#~ "percentage."
+#~ msgstr ""
+#~ "このレポートのより簡潔な表示にするには、部門と従業員の最上行の上にある"
+#~ "\\ :icon:`fa-minus-square-o`\\ :guilabel:`Total`\\ をクリックして、行を折"
+#~ "りたたみます。これで、テーブルには両年で会社を退職した従業員の総数と両年の"
+#~ "従業員の総数が比較され、パーセンテージでの差が表示されます。"
+
+#~ msgid ""
+#~ "In this example, :guilabel:`3` employees out of :guilabel:`83` left in "
+#~ "2023, and :guilabel:`8` employees out of :guilabel:`202` left in 2024. "
+#~ "There was a :guilabel:`166.67%` increase in the employees who left in "
+#~ "2024 as compared to 2023. Additionally, there was a :guilabel:`143.37%` "
+#~ "increase in the total number of employees in 2024 as compared to 2023."
+#~ msgstr ""
+#~ "この例では、2023年には\\ :guilabel:`83`\\ 人の従業員のうち"
+#~ "\\ :guilabel:`3`\\ 人が退職し、2024年には\\ :guilabel:`202`\\ 人の従業員の"
+#~ "うち\\ :guilabel:`8`\\ 人が退職しました。2023年と比較して2024年に退職した"
+#~ "従業員は\\ :guilabel:`166.67%`\\ 増加しました。さらに、2023年と比較して"
+#~ "2024年の従業員総数は\\ :guilabel:`143.37%`\\ 増加しました。"
+
+#~ msgid ""
+#~ "The report modified to show the difference between two years of employees "
+#~ "who left."
+#~ msgstr "退職した従業員の2年間の差を示すように変更されたレポート。"
+
+#~ msgid ""
+#~ "To view more detailed rates for each department, click :icon:`fa-plus-"
+#~ "square` :guilabel:`Total` in the single row, revealing a drop-down menu, "
+#~ "and click :guilabel:`Department`. Click away from the drop-down to close "
+#~ "it, and now the pivot table displays the total number of employees who "
+#~ "left (:guilabel:`# Departure Employee`), the total number of employees "
+#~ "(:guilabel:`Count`), and the :guilabel:`Variation` (in a percentage) for "
+#~ "both 2023 and 2024, organized by department."
+#~ msgstr ""
+#~ "各部門のより詳細な率を表示するには、単一行の\\ :icon:`fa-plus-"
+#~ "square`\\ :guilabel:`Total`\\ をクリックしてドロップダウンメニューを表示"
+#~ "し、\\ :guilabel:`Department`\\ をクリックします。ドロップダウンの外側をク"
+#~ "リックして閉じると、ピボットテーブルには部門ごとに整理された、2023年と2024"
+#~ "年の両方について、退職した従業員の総数（\\ :guilabel:`# Departure "
+#~ "Employee`\\ ）、従業員の総数（\\ :guilabel:`Count`\\ ）、および"
+#~ "\\ :guilabel:`Variation`\\ （パーセンテージ）が表示されます。"
+
+#~ msgid ""
+#~ "In this example, it can be determined that the :guilabel:`Management` "
+#~ "department had the best retention rate in 2024 as compared to 2023, with "
+#~ "a :guilabel:`Variation` rate of :guilabel:`-100%`. Additionally, it can "
+#~ "be determined that the :guilabel:`Management / Research & Development` "
+#~ "department had the most turnover, with a :guilabel:`Variation` "
+#~ "of :guilabel:`300%`."
+#~ msgstr ""
+#~ "この例では、\\ :guilabel:`Management`\\ 部門が2023年と比較して2024年に最高"
+#~ "の定着率を示し、\\ :guilabel:`Variation`\\ 率は\\ :guilabel:`-100%`\\ でし"
+#~ "た。さらに、\\ :guilabel:`Management / Research & Development`\\ 部門が最"
+#~ "も離職率が高く、\\ :guilabel:`Variation`\\ は\\ :guilabel:`300%`\\ でし"
+#~ "た。"
+
+#~ msgid "The expanded employee retention report by department."
+#~ msgstr "部門別に展開された従業員定着率レポート。"
+
+#~ msgid "California (CA)"
+#~ msgstr "カリフォルニア州（CA）"
+
+#~ msgid "New York (NY)"
+#~ msgstr "New York (NY)"
+
+#~ msgid "Texas (TX)"
+#~ msgstr "Texas (TX)"
+
+#~ msgid "Florida (FL)"
+#~ msgstr "Florida (FL)"
+
+#~ msgid "Colorado (CO)"
+#~ msgstr "Colorado (CO)"
+
+#~ msgid "Alabama (AL)"
+#~ msgstr "Alabama (AL)"
+
+#~ msgid "Washington (WA)"
+#~ msgstr "Washington (WA)"
+
+#~ msgid "Nevada (NV)"
+#~ msgstr "Nevada (NV)"
+
+#~ msgid "Vermont (VT)"
+#~ msgstr "バーモント州 (VT)"
+
+#~ msgid "Illinois (IL)"
+#~ msgstr "イリノイ州 (IL)"
+
+#~ msgid "Virginia (VA)"
+#~ msgstr "バージニア州(VA)"
+
+#~ msgid "Washington, D.C (DC)"
+#~ msgstr "ワシントンD.C.(DC)"
+
+#~ msgid "Arizona (AZ)"
+#~ msgstr "アリゾナ州(AZ)"
+
+#~ msgid "Idaho (ID)"
+#~ msgstr "アイダホ州(ID)"
+
+#~ msgid "Oregon (OR)"
+#~ msgstr "オレゴン州(OR)"
+
+#~ msgid "North Carolina (NC)"
+#~ msgstr "ノースカロライナ州(NC)"
+
+#~ msgid ""
+#~ "Once a request has been approved, validated, or refused, the Kanban card "
+#~ "disappears from the default :guilabel:`All Time Off` page. To view *all* "
+#~ "requests, including approved and refused requests, clear the default "
+#~ "filters in the search bar."
+#~ msgstr ""
+#~ "申請が承認、確認、または却下されると、かんばんカードはデフォルトの"
+#~ "\\ :guilabel:`すべての休暇`\\ ページから消えます。承認済みおよび却下済みの"
+#~ "申請を含む\\ *すべて*\\ の申請を表示するには、検索バーのデフォルトのフィル"
+#~ "ターをクリアします。"
 
 #~ msgid ""
 #~ "Two overtime rates are cteated, one for 150% and the other for 120%. "

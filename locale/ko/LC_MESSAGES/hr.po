@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-10 17:30+0000\n"
+"POT-Creation-Date: 2026-07-24 17:32+0000\n"
 "PO-Revision-Date: 2026-07-05 01:17+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-19-doc/hr/ko/"
@@ -3145,6 +3145,10 @@ msgstr ":doc:`근태/하드웨어`"
 msgid ":doc:`attendances/attendance_reporting`"
 msgstr ":doc:`attendances/attendance_reporting`"
 
+#: ../../content/applications/hr/attendances.rst:158
+msgid ":doc:`attendances/time_off_ledger`"
+msgstr ""
+
 #: ../../content/applications/hr/attendances/attendance_logs.rst:3
 msgid "Attendance logs"
 msgstr "근태 기록"
@@ -3977,17 +3981,13 @@ msgstr "보고서 보기"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:13
 msgid ""
-"To view the attendance report, click :guilabel:`Reporting` in the top menu. "
+"To view the attendances report, click :guilabel:`Reporting` in the top menu. "
 "The default report displays attendance information for current employees "
 "over the past three months, in a default :icon:`oi-view-"
 "pivot` :guilabel:`Pivot table`. The rows are populated by employee, while "
 "the columns are populated by the various attendance records. All entries are "
 "grouped by month."
 msgstr ""
-"참석 보고서를 확인하려면 상단 메뉴에서 :guilabel:`보고서` 를 클릭합니다. 기"
-"본 보고서는 지난 3개월 동안 현재 직원의 근태 정보를 기본 :icon:`oi-view-"
-"pivot` :guilabel:`피벗 테이블` 로 표시합니다. 행에는 직원이 나타나며, 열에는 "
-"여러 가지 근태 정보가 입력됩니다. 모든 항목은 월별 그룹으로 분류됩니다."
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:18
 msgid "The columns presented are:"
@@ -5850,8 +5850,164 @@ msgstr ""
 "\\ :guilabel:`150%`\\ 의 비율로 급여를 받고 근태 기록에\\ :guilabel:`초과 근"
 "무 시간`\\ 으로 기록됩니다."
 
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:3
+msgid "Time off ledger"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:5
+msgid ""
+"The *Time Off Ledger* report in the **Attendances** app helps managers by "
+"flagging missing hours on employee attendance records. This allows managers "
+"to determine if employees are forgetting to sign in or out, decide if time "
+"off needs to be approved, and potentially flag patterns."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:10
+msgid "View time off ledger report"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:12
+msgid ""
+"To view the *Time Off Ledger* report, navigate "
+"to :menuselection:`Attendances app --> Reporting --> Time Off Ledger`. The "
+"report displays a nested list of missing attendance hours from the last two "
+"months. All entries are grouped by month, then employee. Click the :icon:`fa-"
+"caret-right` :guilabel:`(triangle)` icon to display the list of employees, "
+"then click the :icon:`fa-caret-right` :guilabel:`(triangle)` icon on the "
+"individual employee to view all the detailed attendance records."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:18
+msgid ""
+"When expanded, each individual record displays the following information:"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:20
+msgid ":guilabel:`Employee`: The employee with missing hours."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:21
+msgid ":guilabel:`Date`: The date the missing hours are from."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:22
+msgid ""
+":guilabel:`Expected Hours`: The number of hours the employee should have "
+"worked that day, calculated from their :ref:`working schedule <employees/"
+"schedule>`, configured on their employee record."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:25
+msgid ""
+":guilabel:`Worked Hours`: The total logged time the employee worked that day."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:26
+msgid ""
+":guilabel:`Approved Time Off`: The approved hours of time off for that day."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:27
+msgid ""
+":guilabel:`Difference`: The difference between the :guilabel:`Expected "
+"Hours` and the :guilabel:`Worked Hours` for the employee that day."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:None
+msgid ""
+"The time off report, expanded to show the missing records for Anita Oliver "
+"from July 2026."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:34
+msgid "Resolve conflicts"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:36
+msgid ""
+"When missing hours appear on the report, the entries should be investigated "
+"to determine the issue. The common reasons for missing attendance records "
+"are:"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:39
+msgid ":ref:`Forgot to log in to work that day. <attendances/forgot-log>`"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:40
+msgid ""
+":ref:`Forgot to request time off that day. <attendances/forgot-request>`"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:41
+msgid ""
+":ref:`Their time off request was not approved for that day. <attendances/"
+"unapproved-time-off>`"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:42
+msgid ""
+":ref:`They requested time off for part of their workday, but did not log any "
+"attendance records for the remainder of the time. <attendances/forgot-"
+"partial-log>`"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:45
+msgid ""
+"Once the reason for the missing entry is determined, the required records "
+"can be updated. Once updated, the related entries are no longer displayed in "
+"the *Time Off Ledger* report."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:51
+msgid "Forgot to log in to work"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:53
+msgid ""
+"Occasionally, employees forget to log in and out of the **Attendances** app. "
+"When this occurs, the employee's manager must :ref:`create the attendance "
+"records <attendances/create-records>` retroactively in the **Attendances** "
+"app."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:60
+msgid "Forgot to request time off"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:62
+msgid ""
+"If the employee did not request time off, the employee's manager or time off "
+"officer must :ref:`create the missing time off request <time_off/missing>` "
+"retroactively in the **Time Off** app."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:68
+msgid "Time off request was unapproved"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:70
+msgid ""
+"If the employee requested time off and the employee's manager or time off "
+"officer did not approve the request in time, the :ref:`request must be "
+"approved <time_off/manage-time-off>` in the **Time Off** app."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:77
+msgid "Partial time off day missing attendance records"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:79
+msgid ""
+"Occasionally, employees request time off for part of the workday, and are "
+"expected to work the remainder of the day. When employees forget to log in "
+"and out for the partial workday, the employee's manager must :ref:`create "
+"the attendance record <attendances/create-records>` retroactively in the "
+"**Attendances** app."
+msgstr ""
+
 #: ../../content/applications/hr/employees.rst:5
-#: ../../content/applications/hr/employees.rst:81
+#: ../../content/applications/hr/employees.rst:76
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:210
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:91
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:67
@@ -5859,7 +6015,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:69
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:58
 #: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:35
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:97
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:126
 msgid "Employees"
 msgstr "임직원 관리"
 
@@ -5969,16 +6125,7 @@ msgstr "오프보딩"
 msgid "Take care of employee records when collaboration ends."
 msgstr "협업 종료 후 직원 레코드를 관리합니다."
 
-#: ../../content/applications/hr/employees.rst:67
-#: ../../content/applications/hr/employees/retention_report.rst:3
-msgid "Employee retention report"
-msgstr "직원 유지율 보고서"
-
-#: ../../content/applications/hr/employees.rst:67
-msgid "Gain insight into a company's retention rate."
-msgstr "회사의 유지율에 대한 통찰력을 얻습니다."
-
-#: ../../content/applications/hr/employees.rst:75
+#: ../../content/applications/hr/employees.rst:70
 #: ../../content/applications/hr/fleet/new_vehicle.rst:16
 #: ../../content/applications/hr/lunch.rst:19
 #: ../../content/applications/hr/payroll.rst:38
@@ -5987,7 +6134,7 @@ msgstr "회사의 유지율에 대한 통찰력을 얻습니다."
 msgid "Settings"
 msgstr "설정"
 
-#: ../../content/applications/hr/employees.rst:77
+#: ../../content/applications/hr/employees.rst:72
 msgid ""
 "To view and configure the available settings, navigate "
 "to :menuselection:`Employees app --> Configuration --> Settings`."
@@ -5995,7 +6142,7 @@ msgstr ""
 "사용 가능한 설정을 확인하고 구성하려면\\ :menuselection:`임직원 관리 앱 --> "
 "환경설정 --> 설정`\\ 으로 이동하세요."
 
-#: ../../content/applications/hr/employees.rst:83
+#: ../../content/applications/hr/employees.rst:78
 msgid ""
 ":guilabel:`Presence Display`: Select how the employee's availability status "
 "is calculated."
@@ -6003,7 +6150,7 @@ msgstr ""
 ":guilabel:`근무 상태 표시`: 직원의 근무 상태를 어떤 방식으로 계산할지 선택합"
 "니다."
 
-#: ../../content/applications/hr/employees.rst:85
+#: ../../content/applications/hr/employees.rst:80
 msgid ""
 ":guilabel:`Based on attendances`: Employees are marked available "
 "when :ref:`checked into <attendances/check-in>` the **Attendances** app."
@@ -6011,7 +6158,7 @@ msgstr ""
 "\\ :guilabel:`출석 기반`\\ : 직원이\\ **근태 관리**\\ 앱에\\ :ref:`체크인 "
 "<attendances/check-in>`\\ 하면 근무 가능으로 표시됩니다."
 
-#: ../../content/applications/hr/employees.rst:87
+#: ../../content/applications/hr/employees.rst:82
 msgid ""
 ":guilabel:`Based on user status in system`: Employees are marked available "
 "when they :doc:`log in to Odoo <attendances/check_in_check_out>`."
@@ -6019,7 +6166,7 @@ msgstr ""
 "\\ :guilabel:`시스템 사용자 상태 기반`\\ : 직원이\\ :doc:`Odoo에 로그인 "
 "<attendances/check_in_check_out>`\\ 하면 근무 가능으로 표시됩니다."
 
-#: ../../content/applications/hr/employees.rst:90
+#: ../../content/applications/hr/employees.rst:85
 msgid ""
 ":guilabel:`Advanced Presence Control`: When enabled, presence status can be "
 "calculated from operational signals rather than check-ins or logins:"
@@ -6027,7 +6174,7 @@ msgstr ""
 "\\ :guilabel:`고급 근무 상태 제어`\\ : 활성화하면 체크인이나 로그인이 아닌 운"
 "영 신호를 통해 근무 상태를 계산할 수 있습니다:"
 
-#: ../../content/applications/hr/employees.rst:93
+#: ../../content/applications/hr/employees.rst:88
 msgid ""
 ":guilabel:`Based on number of emails sent`: An employee is marked present if "
 "they send at least # emails per hour; otherwise, they are marked absent. "
@@ -6039,7 +6186,7 @@ msgstr ""
 "\\ :guilabel:`전송한 이메일`\\ 필드에 전송해야 하는 최소 이메일 수를 입력합니"
 "다."
 
-#: ../../content/applications/hr/employees.rst:96
+#: ../../content/applications/hr/employees.rst:91
 msgid ""
 ":guilabel:`Based on IP Address`: An employee is marked present only when "
 "connected from one of the specified corporate IP addresses. Enter the IP "
@@ -6050,7 +6197,7 @@ msgstr ""
 "된 경우에만 근무 중으로 표시됩니다.\\ :guilabel:`IP 주소`\\ 필드에 각 주소를 "
 "쉼표로 구분하여 IP 주소를 입력합니다."
 
-#: ../../content/applications/hr/employees.rst:100
+#: ../../content/applications/hr/employees.rst:95
 msgid ""
 ":guilabel:`Skills Management`: Enable this option to display "
 "the :ref:`resumé tab <employees/resume>` on employee profiles. This allows "
@@ -6062,11 +6209,11 @@ msgstr ""
 "resume>`\\ ,\\ :ref:`기술 <employees/skills>`\\ ,\\ :doc:`인증 <employees/"
 "certifications>`\\ 을 표시할 수 있습니다."
 
-#: ../../content/applications/hr/employees.rst:106
+#: ../../content/applications/hr/employees.rst:101
 msgid "Work organization"
 msgstr "근무 조직"
 
-#: ../../content/applications/hr/employees.rst:108
+#: ../../content/applications/hr/employees.rst:103
 msgid ""
 "Using the drop-down menu, select the default :guilabel:`Company Working "
 "Hours`. The default options are a :guilabel:`Standard 40 hours/week` or "
@@ -6076,7 +6223,7 @@ msgstr ""
 "기본 옵션은\\ :guilabel:`표준 주당 40시간`\\ 또는\\ :guilabel:`약속 리소스 기"
 "본 캘린더`\\ 입니다."
 
-#: ../../content/applications/hr/employees.rst:111
+#: ../../content/applications/hr/employees.rst:106
 msgid ""
 "The available working hours listed are the same as the "
 "configured :doc:`working schedules <payroll/working_schedules>` in the "
@@ -6087,12 +6234,12 @@ msgstr ""
 "<payroll/working_schedules>`\\ 과 동일합니다. 근무 시간은 **급여** 및 **임직"
 "원 관리** 앱 모두에서 생성 및 수정할 수 있습니다."
 
-#: ../../content/applications/hr/employees.rst:116
+#: ../../content/applications/hr/employees.rst:111
 #: ../../content/applications/hr/fleet/new_vehicle.rst:230
 msgid "Contract"
 msgstr "근로 계약"
 
-#: ../../content/applications/hr/employees.rst:118
+#: ../../content/applications/hr/employees.rst:113
 msgid ""
 "Define the number of days in advance that a manager is notified about an "
 "upcoming contract or work permit expiration in the "
@@ -6103,11 +6250,11 @@ msgstr ""
 "림 기간`\\ 필드에서 관리자에게 다가오는 계약 또는 취업 허가 만료를 며칠 전에 "
 "알릴지 정의합니다."
 
-#: ../../content/applications/hr/employees.rst:123
+#: ../../content/applications/hr/employees.rst:118
 msgid "Salary configurator"
 msgstr "급여 패키지 설정"
 
-#: ../../content/applications/hr/employees.rst:125
+#: ../../content/applications/hr/employees.rst:120
 msgid ""
 "Define how long an offer remains valid when extending a job offer or "
 "changing a salary. Enter the duration, in days, in the :guilabel:`Salary "
@@ -6116,17 +6263,17 @@ msgstr ""
 "채용 제안을 연장하거나 급여를 변경할 때 제안이 유효한 기간을 정의합니다."
 "\\ :guilabel:`급여 패키지 구성기`\\ 필드에 기간을 일 단위로 입력합니다."
 
-#: ../../content/applications/hr/employees.rst:128
-#: ../../content/applications/hr/employees.rst:141
+#: ../../content/applications/hr/employees.rst:123
+#: ../../content/applications/hr/employees.rst:136
 msgid ""
 "This field only appears if the **Salary Configurator** module is installed."
 msgstr "이 필드는\\ **급여 구성기**\\ 모듈이 설치된 경우에만 표시됩니다."
 
-#: ../../content/applications/hr/employees.rst:131
+#: ../../content/applications/hr/employees.rst:126
 msgid "Extra time off allocation"
 msgstr "추가 연차 배정"
 
-#: ../../content/applications/hr/employees.rst:133
+#: ../../content/applications/hr/employees.rst:128
 msgid ""
 "During salary package negotiations, enable the checkbox in this section if "
 "additional time off requests are allowed. When enabled, select "
@@ -6138,7 +6285,7 @@ msgstr ""
 "여\\ 추가\\ 일수에\\ 대해\\ 생성된\\ :doc:`휴가\\ 유형 <time_off/"
 "time_off_types>`\\ 을\\ 선택합니다."
 
-#: ../../content/applications/hr/employees.rst:137
+#: ../../content/applications/hr/employees.rst:132
 msgid ""
 "The default available options are :guilabel:`Paid Time "
 "Off`, :guilabel:`Compensatory Days`, and :guilabel:`Extra Time Off`. If "
@@ -7684,7 +7831,7 @@ msgstr "새 임직원 양식의 상단 절반이 모두 작성되었습니다."
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:95
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:78
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:67
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:106
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:135
 msgid "Work tab"
 msgstr "작업 탭"
 
@@ -8385,7 +8532,7 @@ msgstr "C/C++ 고급 인증에 대해 모든 것이 구성된 인증 팝업."
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:105
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:84
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:73
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:116
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:145
 msgid "Personal tab"
 msgstr "개인 탭"
 
@@ -8932,7 +9079,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:131
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:103
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:83
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:133
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:162
 msgid "Payroll tab"
 msgstr "급여 탭"
 
@@ -10536,247 +10683,6 @@ msgstr ""
 "온보딩은 데이터베이스의\\ :doc:`사용자 <../../general/users>`\\ 에 대해서만 "
 "시작할 수 있습니다. 임직원 프로필에 누락된 정보가 있으면 필요한 정보를 나열하"
 "는 경고가 표시됩니다."
-
-#: ../../content/applications/hr/employees/retention_report.rst:5
-msgid ""
-"It is possible to determine the retention rate for a company by modifying an "
-"existing report."
-msgstr "기존 보고서를 수정하여 회사의 유지율을 지정할 수 있습니다."
-
-#: ../../content/applications/hr/employees/retention_report.rst:7
-msgid ""
-"First, navigate to :menuselection:`Employees app --> Reporting --> "
-"Contracts` to open the :guilabel:`Employee Analysis` report. This report "
-"shows the number of all employees for the :guilabel:`Last 365 Days`, in a "
-"default :icon:`fa-line-chart` :guilabel:`Line Chart`."
-msgstr ""
-"먼저 :menuselection:`직원 앱 --> 보고 --> 계약서` 로 이동하여 :guilabel:`직"
-"원 분석` 보고서를 엽니다. 이 보고서에는 :guilabel:`지난 365일` 에 대한 모든 "
-"직원 수가 기본 :icon:`fa-line-chart` :guilabel:`꺾은선 그래프` 로 나타나 있습"
-"니다."
-
-#: ../../content/applications/hr/employees/retention_report.rst:None
-msgid "The default Employees Analysis report."
-msgstr "기본값인 직원 분석 보고서입니다."
-
-#: ../../content/applications/hr/employees/retention_report.rst:15
-msgid ""
-"Next, click the :guilabel:`Measures` :icon:`fa-caret-down` button in the "
-"upper-left corner, revealing a drop-down menu. Click :guilabel:`# Departure "
-"Employee` in the list, then click away from the drop-down menu to close it. "
-"Now, the report shows all the employees who were archived for "
-"the :guilabel:`Last 365 Days`."
-msgstr ""
-"다음으로 왼쪽 상단에 있는 :guilabel:`측정값` :icon:`fa-caret-down` 버튼을 클"
-"릭하면 드롭다운 메뉴가 나타납니다. 목록에서 :guilabel:`퇴사 직원 수` 를 클릭"
-"한 다음 드롭다운 메뉴 바깥쪽 부분을 클릭하여 닫습니다. 이제 보고서에"
-"는 :guilabel:`지난 365일` 동안 보관된 모든 직원이 표시됩니다."
-
-#: ../../content/applications/hr/employees/retention_report.rst:20
-msgid ""
-"To view this information in an easier format, click the :icon:`oi-view-"
-"pivot` :guilabel:`(Pivot)` icon in the upper-right corner, and the data is "
-"presented in a pivot table."
-msgstr ""
-"이 내용을 더 간단한 형식으로 보려면 오른쪽 상단에 있는 :icon:`oi-view-"
-"pivot` :guilabel:`(피벗)` 아이콘을 클릭합니다. 그러면 데이터가 피벗 테이블로 "
-"표시됩니다."
-
-#: ../../content/applications/hr/employees/retention_report.rst:23
-msgid ""
-"The various employees, organized by department, populate the rows. The "
-"columns display the following totals: the monthly :guilabel:`Wage`, "
-"the :guilabel:`Fuel Card` budget, total :guilabel:`Annual Employee Budget` "
-"(also referred to as the *annual salary*), the number of :guilabel:`New "
-"Employees`, as well as the number of :guilabel:`Departure Employees` "
-"(employees who left)."
-msgstr ""
-"다양한 직원을 부서별로 체계화하여 행에 입력됩니다. 열에는 월별 :guilabel:`임"
-"금`, :guilabel:`유류비 카드` 예산, 총 :guilabel:`연간 직원 예산` (*연봉* 으로"
-"도 지칭), :guilabel:`신입 직원` 수, :guilabel:`퇴사 직원` 수 (퇴사한 직원) 항"
-"목 합계가 표시됩니다."
-
-#: ../../content/applications/hr/employees/retention_report.rst:None
-msgid ""
-"The Employees Analysis report, modified to show departed employees only."
-msgstr "직원 분석 보고서로, 퇴사한 직원만 표시되도록 수정되었습니다."
-
-#: ../../content/applications/hr/employees/retention_report.rst:33
-msgid "Employee retention rate comparison report"
-msgstr "직원 유지율 비교 보고서"
-
-#: ../../content/applications/hr/employees/retention_report.rst:35
-msgid ""
-"It is possible to compare data only for employees who left, compared to the "
-"total current employees, between two separate time periods. This is commonly "
-"referred to as the *employee retention rate*."
-msgstr ""
-"퇴사한 직원에 대해서만 데이터를 비교하는 것도 가능하며, 현재 총 직원과 대비하"
-"여 별도의 두 기간으로 비교할 수 있습니다. 이를 보통 *직원 유지율* 이라고 합니"
-"다."
-
-#: ../../content/applications/hr/employees/retention_report.rst:38
-msgid ""
-"To view these metrics, first open the :guilabel:`Employee Analysis` report "
-"by navigating to :menuselection:`Employees app --> Reporting --> Contracts`. "
-"Click the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon in the upper-right "
-"corner to view the information in a pivot table."
-msgstr ""
-"이와 같은 지표를 확인하려면 먼저 :guilabel:`직원 분석` 보고서"
-"를 :menuselection:`임직원 관리 앱 --> 보고 --> 계약서` 로 이동하여 엽니다. 오"
-"른쪽 상단에 있는 :icon:`oi-view-pivot` :guilabel:`(피벗)` 아이콘을 클릭하면 "
-"피벗 테이블에서 정보를 확인할 수 있습니다."
-
-#: ../../content/applications/hr/employees/retention_report.rst:42
-msgid ""
-"Next, click the :guilabel:`Measures` :icon:`fa-caret-down` button in the "
-"upper-left corner, revealing a drop-down menu. Click :guilabel:`# New "
-"Employees`, :guilabel:`Annual Employee Budget`, :guilabel:`Fuel Card`, "
-"and :guilabel:`Wage` in the list, to deselect these metrics and hide them in "
-"the table. Then, click :guilabel:`Count` at the bottom of the list to enable "
-"that metric."
-msgstr ""
-"다음으로 왼쪽 상단에 있는 :guilabel:`측정값` :icon:`fa-caret-down` 버튼을 클"
-"릭하면 드롭다운 메뉴가 나타납니다. 목록에서 :guilabel:`신규 직원 수"
-"`, :guilabel:`연간 직원 예산`, :guilabel:`유류비 카드`, :guilabel:`임금` 을 "
-"클릭하여 해당 지표를 선택 해제하고 표에서 숨깁니다. 그런 다음 목록 하단에 있"
-"는 :guilabel:`개수` 를 클릭하여 해당 지표를 활성화합니다."
-
-#: ../../content/applications/hr/employees/retention_report.rst:47
-msgid ""
-"Click away from the drop-down menu to close it. Now, the report shows all "
-"the employees who left the company (:guilabel:`# Departure Employee`), as "
-"well as the total number of employees (:guilabel:`Count`), for "
-"the :guilabel:`Last 365 Days`."
-msgstr ""
-"드롭다운 메뉴 바깥쪽을 클릭하여 닫습니다. 이제 보고서에는 회사에서 퇴사한 모"
-"든 직원 (:guilabel:`# Departure Employee`) 및 :guilabel:`지난 365일` 동안의 "
-"총 직원 수 (:guilabel:`개수`)가 표시됩니다."
-
-#: ../../content/applications/hr/employees/retention_report.rst:51
-msgid ""
-"To compare the data for the current year with the previous year, click "
-"the :icon:`fa-caret-down` :guilabel:`(down arrow)` in the search bar, "
-"revealing multiple filter and grouping options. Click :guilabel:`Last 365 "
-"Days` in the :icon:`fa-filter` :guilabel:`Filters` column, to turn off that "
-"filter. Then, click :guilabel:`Date`, and click the current year (in this "
-"example, :guilabel:`2024`) from the resulting drop-down menu."
-msgstr ""
-"현재 연도의 데이터를 이전 연도와 비교하려면 검색 창에서 :icon:`fa-caret-"
-"down` :guilabel:`(아래쪽 화살표)` 를 클릭하여 여러 가지 필터 및 그룹 항목을 "
-"표시합니다. :icon:`fa-filter` :guilabel:`필터` 열에서 :guilabel:`지난 365일` "
-"을 클릭하여 해당 필터를 해제합니다. 그런 다음 :guilabel:`날짜` 를 클릭하여 드"
-"롭다운 메뉴가 나타나면 현재 연도 (이 예에서는 :guilabel:`2024`)를 클릭합니다."
-
-#: ../../content/applications/hr/employees/retention_report.rst:57
-msgid ""
-"Once a selection is made beneath :guilabel:`Date` in the :icon:`fa-"
-"filter` :guilabel:`Filters` column, a :icon:`fa-"
-"adjust` :guilabel:`Comparison` column appears. Click :guilabel:`Date: "
-"Previous Year` in the new column, then click off of the drop-down menu to "
-"close it."
-msgstr ""
-":guilabel:`날짜` 아래에 있는 :icon:`fa-filter` :guilabel:`필터` 열을 선택하"
-"면 :icon:`fa-adjust` :guilabel:`비교` 열이 나타납니다. 새로운 열에"
-"서 :guilabel:`날짜: 이전 연도` 를 클릭한 다음 드롭다운 메뉴를 클릭하여 닫습니"
-"다."
-
-#: ../../content/applications/hr/employees/retention_report.rst:62
-msgid ""
-"In Odoo, in order to access the :icon:`fa-adjust` :guilabel:`Comparison` "
-"column, a specific time *other than* :guilabel:`Last 365 Days` **must** be "
-"selected. If not, the :icon:`fa-adjust` :guilabel:`Comparison` column is "
-"**not** visible."
-msgstr ""
-"Odoo에서 :icon:`fa-adjust` :guilabel:`비교` 열에 액세스하려면, :guilabel:`지"
-"난 365일` *이외의* 특정 기간을 **반드시** 선택해야 합니다. 선택하지 않을 경"
-"우 :icon:`fa-adjust` :guilabel:`비교` 열이 **표시되지 않습니다.**"
-
-#: ../../content/applications/hr/employees/retention_report.rst:66
-msgid ""
-"Now, the pivot table displays the total number of employees who left the "
-"company (:guilabel:`# Departure Employee`), as well as the total number of "
-"employees (:guilabel:`Count`) in the columns. These are further divided by "
-"the two different years, and also displays the :guilabel:`Variation` between "
-"the two."
-msgstr ""
-"이제 피벗 테이블에서 총 퇴사자 수 (:guilabel:`퇴사 직원 수`)를 확인할 수 있으"
-"며 열에는 총 직원 수 (:guilabel:`개수`)가 표시됩니다. 이 항목들은 다시 다른 2"
-"개 연도로 세분화되며 두 연도 사이의 :guilabel:`변동` 도 표시됩니다."
-
-#: ../../content/applications/hr/employees/retention_report.rst:71
-msgid ""
-"The rows display the departments, and lists each individual employee for "
-"each department, in the rows."
-msgstr "행에는 부서가 표시되고 각 부서에 소속된 개별 직원이 행에 표시됩니다."
-
-#: ../../content/applications/hr/employees/retention_report.rst:74
-msgid ""
-"For a more concise view of this report, click :icon:`fa-minus-square-"
-"o` :guilabel:`Total` above the top row of the departments and employees, to "
-"collapse the rows. Now, the table presents the total number of employees who "
-"left the company for both years, compared to the total number of employees "
-"for both years, including the difference, in a percentage."
-msgstr ""
-"이 보고서를 더 간단하게 보려면 부서 및 직원 행의 맨 위에 있는 :icon:`fa-"
-"minus-square-o` :guilabel:`총계` 를 클릭하여 행을 접습니다. 이제 표에는 두 "
-"해 동안 퇴사한 직원의 총 수를 두 해 동안의 직원 총 수가 두 항목의 차이와 함"
-"께 백분율로 표시됩니다."
-
-#: ../../content/applications/hr/employees/retention_report.rst:80
-msgid ""
-"In this example, :guilabel:`3` employees out of :guilabel:`83` left in 2023, "
-"and :guilabel:`8` employees out of :guilabel:`202` left in 2024. There was "
-"a :guilabel:`166.67%` increase in the employees who left in 2024 as compared "
-"to 2023. Additionally, there was a :guilabel:`143.37%` increase in the total "
-"number of employees in 2024 as compared to 2023."
-msgstr ""
-"이 예시에서 2023년에는 :guilabel:`83명` 중 :guilabel:`3명` 의 직원이 퇴사했"
-"고, 2024년에는 :guilabel:`202명` 중 퇴사자 수는 :guilabel:`8명` 입니다. 2023"
-"년에 비해 2024년의 퇴사자 수가 :guilabel:`166.67%` 증가했습니다. 또한 2023년"
-"에 비해 2024년의 총 직원 수는 :guilabel:`143.37%` 증가했습니다."
-
-#: ../../content/applications/hr/employees/retention_report.rst:0
-msgid ""
-"The report modified to show the difference between two years of employees "
-"who left."
-msgstr ""
-"퇴사한 직원과 관련된 2년 간의 차액이 표시되도록 보고서가 수정되었습니다."
-
-#: ../../content/applications/hr/employees/retention_report.rst:89
-msgid ""
-"To view more detailed rates for each department, click :icon:`fa-plus-"
-"square` :guilabel:`Total` in the single row, revealing a drop-down menu, and "
-"click :guilabel:`Department`. Click away from the drop-down to close it, and "
-"now the pivot table displays the total number of employees who left "
-"(:guilabel:`# Departure Employee`), the total number of employees "
-"(:guilabel:`Count`), and the :guilabel:`Variation` (in a percentage) for "
-"both 2023 and 2024, organized by department."
-msgstr ""
-"각 부서별로 자세히 요금을 확인하려면 단일 행에서 :icon:`fa-plus-"
-"square` :guilabel:`총계` 를 클릭하여 드롭다운 메뉴가 표시되면 :guilabel:`부서"
-"` 를 클릭합니다. 드롭다운 바깥 쪽을 클릭하여 메뉴가 닫히면 피벗 테이블에는 떠"
-"난 2023년과 2024년의 2개년도 대해 퇴사한 총 직원 수 (:guilabel:`# Departure "
-"Employee`), 전체 직원 수 (:guilabel:`Count`) 및 :guilabel:`변동` (백분율) 사"
-"항이 부서별로 표시됩니다."
-
-#: ../../content/applications/hr/employees/retention_report.rst:96
-msgid ""
-"In this example, it can be determined that the :guilabel:`Management` "
-"department had the best retention rate in 2024 as compared to 2023, with "
-"a :guilabel:`Variation` rate of :guilabel:`-100%`. Additionally, it can be "
-"determined that the :guilabel:`Management / Research & Development` "
-"department had the most turnover, with a :guilabel:`Variation` "
-"of :guilabel:`300%`."
-msgstr ""
-"이 예시에서는 2023년과 비교하여 2024년에 가장 유지율을 높았던 것"
-"은 :guilabel:`경영` 부서로 :guilabel:`변동` 비율이 :guilabel:`-100%` 임을 알 "
-"수 있습니다. 또한 이직률이 가장 많은 높았던 것은 :guilabel:`경영/연구개발` 부"
-"서로 :guilabel:`변동` 비율이 :guilabel:`300%` 임을 알 수 있습니다."
-
-#: ../../content/applications/hr/employees/retention_report.rst:0
-msgid "The expanded employee retention report by department."
-msgstr "부서별로 확장되어 있는 직원 유지 보고서입니다."
 
 #: ../../content/applications/hr/fleet.rst:5
 msgid "Fleet"
@@ -17422,7 +17328,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:134
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:106
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:88
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:136
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:165
 msgid "Contract overview section"
 msgstr "계약서 전체보기 섹션"
 
@@ -17666,7 +17572,7 @@ msgstr ":guilabel:`서명 시 임금`\\ : 필드에 월 임금을 입력합니�
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:167
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:134
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:121
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:168
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:197
 msgid "Schedule section"
 msgstr "스케줄 섹션"
 
@@ -18945,7 +18851,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:20
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:20
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:15
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:39
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:68
 msgid "Apps & modules"
 msgstr "Odoo 앱 및 관련 모듈"
 
@@ -18967,7 +18873,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:28
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:23
 #: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:20
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:47
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:76
 msgid "Name"
 msgstr "이름"
 
@@ -18981,7 +18887,7 @@ msgstr "이름"
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:29
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:24
 #: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:21
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:48
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:77
 msgid "Technical name"
 msgstr "기술적 명칭"
 
@@ -18990,7 +18896,7 @@ msgstr "기술적 명칭"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:30
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:30
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:25
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:49
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:78
 msgid "Dependencies"
 msgstr "종속성"
 
@@ -19004,7 +18910,7 @@ msgstr "종속성"
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:31
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:26
 #: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:22
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:50
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:79
 msgid "Description"
 msgstr "내용"
 
@@ -19021,14 +18927,14 @@ msgstr "`l10n_au_hr_payroll`"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:34
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:34
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:29
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:53
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:82
 msgid "hr_payroll"
 msgstr "hr_payroll"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:49
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:35
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:36
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:55
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:84
 msgid "hr_work_entry_holidays"
 msgstr "hr_work_entry_holidays"
 
@@ -19036,7 +18942,7 @@ msgstr "hr_work_entry_holidays"
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:28
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:36
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:37
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:56
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:85
 msgid "hr_payroll_holidays"
 msgstr "hr_payroll_holidays"
 
@@ -19069,7 +18975,7 @@ msgstr "l10n_au_hr_payroll"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:45
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:41
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:34
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:61
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:90
 msgid "hr_payroll_account"
 msgstr "hr_payroll_account"
 
@@ -19084,7 +18990,7 @@ msgstr "l10n_au_aba"
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:60
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:44
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:37
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:64
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:93
 msgid ""
 "Links payroll and accounting by creating journal entries (per payslip if "
 "needed) to record payroll in the company's books."
@@ -19134,7 +19040,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:47
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:52
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:41
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:72
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:101
 msgid "General configurations"
 msgstr "일반 환경설정"
 
@@ -19155,7 +19061,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:65
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:58
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:47
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:78
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:107
 msgid ":guilabel:`Company Name`: Enter the business name in this field."
 msgstr ":guilabel:`회사명`: 이 필드에 사업체 이름을 입력합니다."
 
@@ -19163,7 +19069,7 @@ msgstr ":guilabel:`회사명`: 이 필드에 사업체 이름을 입력합니다
 #: ../../content/applications/hr/payroll/payroll_localizations/hong_kong.rst:67
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:66
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:59
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:79
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:108
 msgid ""
 ":guilabel:`Address`: Complete the full address, including "
 "the :guilabel:`City`, :guilabel:`State`, :guilabel:`Zip Code`, "
@@ -19235,7 +19141,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:79
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:65
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:54
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:90
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:119
 msgid ":guilabel:`Phone`: Enter the company phone number."
 msgstr ":guilabel:`전화번호`: 회사 전화번호를 입력합니다."
 
@@ -19245,7 +19151,7 @@ msgstr ":guilabel:`전화번호`: 회사 전화번호를 입력합니다."
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:80
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:66
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:55
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:91
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:120
 msgid ""
 ":guilabel:`Email`: Enter the email used for general contact information."
 msgstr ":guilabel:`이메일`: 일반 연락처 정보로 기재할 이메일을 입력합니다."
@@ -19690,7 +19596,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:148
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:120
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:101
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:150
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:179
 msgid ""
 "Set a default :guilabel:`Wage Type` in the salary :ref:`Structure Type "
 "<payroll/structure-types>` to configure employees in bulk. If needed, the "
@@ -19749,7 +19655,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:141
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:136
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:123
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:170
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:199
 msgid ""
 ":guilabel:`Work Entry Source`: Defines how :doc:`work entries <../"
 "work_entries>` are generated for payroll during the specified pay period. "
@@ -19763,7 +19669,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:144
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:139
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:126
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:173
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:202
 msgid ""
 ":guilabel:`Working Schedule`: Based on the employee's assigned :ref:`working "
 "schedule <employees/schedule>` (e.g., 40 hours per week)."
@@ -19775,7 +19681,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:146
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:141
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:128
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:175
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:204
 msgid ""
 ":guilabel:`Attendances`: Based on :doc:`approved checked-in hours <../../"
 "attendances/management>` in the **Attendances** app."
@@ -19787,7 +19693,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:148
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:143
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:130
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:177
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:206
 msgid ""
 ":guilabel:`Planning`: Based on :ref:`scheduled shifts <planning/shifts>` in "
 "the **Planning** app."
@@ -20323,7 +20229,7 @@ msgstr "Odoo는 이 계좌에서 직접 인출하여 임직원의 퇴직연금�
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:296
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:192
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:138
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:309
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:338
 msgid "Payroll configuration"
 msgstr "급여 환경설정"
 
@@ -20340,7 +20246,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:328
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:220
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:144
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:315
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:344
 msgid "Salary structures & structure types"
 msgstr "급여 구조 및 구조 유형"
 
@@ -20376,7 +20282,7 @@ msgstr "급여 구조 목록의 호주 급여 구조입니다."
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:345
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:236
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:159
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:330
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:359
 #: ../../content/applications/hr/payroll/salaries.rst:176
 msgid "Salary rules"
 msgstr "급여 규칙"
@@ -20405,7 +20311,7 @@ msgstr "호주 급여 규칙의 상단 부분입니다."
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:359
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:250
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:175
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:405
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:434
 #: ../../content/applications/hr/payroll/salaries.rst:421
 msgid "Rule parameters"
 msgstr "규칙 매개변수"
@@ -20414,7 +20320,7 @@ msgstr "규칙 매개변수"
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:373
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:252
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:177
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:407
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:436
 msgid ""
 "Some calculations require specific rates associated with them, or wage caps. "
 "*Rules Parameters* are capable of listing a value, either a percentage or a "
@@ -20427,7 +20333,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:380
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:365
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:255
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:414
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:443
 msgid ""
 "Most rules pull information stored in the parameters module to get the rate "
 "of the rule (a percentage) and the cap (a dollar amount)."
@@ -20440,7 +20346,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:368
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:258
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:183
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:417
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:446
 msgid ""
 "To view rule parameters, navigate to :menuselection:`Payroll app --> "
 "Configuration --> Rule Parameters`. Here, all rule parameters are displayed "
@@ -20675,7 +20581,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:413
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:289
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:343
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:441
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:470
 msgid ""
 "Work entries sync based on the employee's :doc:`contract <../contracts>` "
 "configuration. Odoo pulls from the assigned working schedule, attendance "
@@ -21990,7 +21896,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:537
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:398
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:418
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:539
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:568
 msgid "Close Payroll"
 msgstr "급여 마감"
 
@@ -22000,14 +21906,14 @@ msgstr "급여 마감"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:539
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:400
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:420
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:541
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:570
 msgid "If there are no errors, payroll is completed for the pay period."
 msgstr "오류가 없으면 해당 급여 기간의 급여 처리가 완료됩니다."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:1154
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:511
 #: ../../content/applications/hr/payroll/payroll_localizations/kenya.rst:152
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:544
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:573
 msgid "Reports"
 msgstr "리포트 기능"
 
@@ -31811,7 +31717,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:451
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:326
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:380
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:478
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:507
 msgid "Accounting check"
 msgstr "회계 체크"
 
@@ -31831,7 +31737,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:459
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:334
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:388
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:486
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:515
 msgid "Journal entry creation"
 msgstr "전표 항목 생성"
 
@@ -32754,7 +32660,7 @@ msgstr "일반 환경설정"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:61
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:54
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:43
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:74
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:103
 msgid ""
 "First, the company must be configured. Navigate to :menuselection:`Settings "
 "app --> Users & Companies --> Companies`. From the list, select the desired "
@@ -33445,7 +33351,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:426
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:302
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:356
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:454
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:483
 msgid ""
 "To cut down on the payroll officer's time, it is typical to process payslips "
 "in batches, either by wage type (fixed salary vs hourly), pay schedule "
@@ -33460,7 +33366,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:366
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:418
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:360
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:458
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:487
 msgid ""
 "The process of running payroll includes different actions that need to be "
 "executed to ensure that the amount withheld from payroll taxes is correct, "
@@ -33478,7 +33384,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:435
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:311
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:365
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:463
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:492
 msgid ""
 "When running a payroll batch, check that the period, company, and employees "
 "included are correct *before* starting to analyze or validate the data."
@@ -33490,7 +33396,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:426
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:314
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:368
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:466
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:495
 msgid ""
 "Once the payslips are drafted, review them for accuracy. Check "
 "the :guilabel:`Worked Days & Inputs` tab, and ensure the listed worked time "
@@ -33505,7 +33411,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:378
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:430
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:372
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:470
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:499
 msgid ""
 "Next, check the various totals (gross pay, employee taxes, benefits, "
 "employer taxes, net salaries), then click :guilabel:`Compute Sheet` to "
@@ -33540,7 +33446,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:461
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:336
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:390
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:488
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:517
 msgid ""
 "After payslips are confirmed and validated, journal entries are posted "
 "either individually, or in a batch. The journal entry is created first as a "
@@ -33554,7 +33460,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:465
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:340
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:394
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:492
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:521
 msgid ""
 "It must be decided if journal entries are done individually or in batches "
 "*before* running payroll."
@@ -33669,7 +33575,7 @@ msgstr "전표 항목을 게시합니다."
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:512
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:383
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:403
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:524
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:553
 msgid "Register Payments"
 msgstr "결제 등록"
 
@@ -33685,7 +33591,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:500
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:392
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:412
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:533
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:562
 msgid ""
 "Payments can be :guilabel:`Grouped by Partner` if there is a partner "
 "associated with a salary rule."
@@ -34084,7 +33990,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:91
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:74
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:63
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:102
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:131
 msgid ""
 "To update an employee form, open the :menuselection:`Employees` app and "
 "click on the desired employee record. On the employee form, configure the "
@@ -34098,7 +34004,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:97
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:80
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:69
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:108
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:137
 msgid ""
 "Enter the :guilabel:`Work Address` for the employee in "
 "the :guilabel:`Location` section of the :guilabel:`Work` tab."
@@ -34110,7 +34016,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:107
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:89
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:75
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:118
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:147
 msgid ""
 "Ensure the employee has a minimum of one :ref:`trusted bank account "
 "<employees/private-contact>` listed in the :guilabel:`Bank Accounts` field "
@@ -34164,7 +34070,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:136
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:108
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:90
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:138
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:167
 msgid ""
 "This section holds information that drives salary calculations. Ensure the "
 "following fields are configured:"
@@ -34186,7 +34092,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:141
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:113
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:94
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:143
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:172
 msgid ":guilabel:`Wage Type`: Select how the employee is paid."
 msgstr ":guilabel:`임금 유형`: 직원의 급여 지급 방식을 선택합니다."
 
@@ -34194,7 +34100,7 @@ msgstr ":guilabel:`임금 유형`: 직원의 급여 지급 방식을 선택합�
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:143
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:115
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:96
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:145
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:174
 msgid ""
 "Select :guilabel:`Fixed Wage` for salaried employees who receive the same "
 "amount each pay period."
@@ -34206,7 +34112,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:145
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:117
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:98
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:147
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:176
 msgid ""
 "Select :guilabel:`Hourly Wage` for employees paid based on hours worked."
 msgstr ""
@@ -34258,7 +34164,7 @@ msgstr "급여 탭의 임직원 양식 중 계약 개요 섹션."
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:151
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:177
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:146
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:180
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:209
 msgid ""
 ":guilabel:`Extra Hours`: Tick the checkbox to allow the **Attendances** app "
 "to add any extra work entries logged by the employee."
@@ -34750,7 +34656,7 @@ msgstr "요르단 급여 지급"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:404
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:416
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:444
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:473
 msgid ""
 "Any :ref:`discrepencies or conflicts <payroll/conflicts>` must be resolved, "
 "then the work entries can be :ref:`regenerated <payroll/regenerate-work-"
@@ -34764,7 +34670,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:419
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:295
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:349
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:447
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:476
 msgid ""
 "Once everything is correct, draft payslips can be :ref:`created individually "
 "<payroll/process>` or in :doc:`groups <../pay_runs>`, referred to in the "
@@ -34902,7 +34808,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:488
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:504
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:375
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:516
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:545
 msgid ""
 "If everything seems correct on the journal entry draft, post the journal "
 "entries."
@@ -34911,7 +34817,7 @@ msgstr ""
 "합니다."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:498
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:526
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:555
 msgid ""
 "After the :ref:`journal entries <payroll/journal>` are validated, Odoo can "
 "generate payments."
@@ -35675,7 +35581,7 @@ msgid "Company configurations"
 msgstr "회사 환경설정"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:70
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:83
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:112
 msgid ""
 "The state selected in the company's address is associated as the *work "
 "address* by default for the employee, and the one used to calculate payroll "
@@ -35725,7 +35631,7 @@ msgstr ""
 "됩니다."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:101
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:112
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:141
 msgid ""
 "The state selected in this address determines which salary rules Odoo "
 "applies when calculating taxes."
@@ -35850,7 +35756,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:179
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:148
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:133
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:182
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:211
 msgid ""
 ":guilabel:`Working Hours`: Using the drop-down menu, select the default work "
 "schedule. This is particularly important for employees available to receive "
@@ -36603,7 +36509,7 @@ msgid "`l10n_sa_hr_payroll`"
 msgstr "`l10n_sa_hr_payroll`"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:35
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:54
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:83
 msgid "hr_contract_reports"
 msgstr "hr_contract_reports"
 
@@ -36700,7 +36606,7 @@ msgstr ""
 "류가 발생합니다."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:111
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:141
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:170
 msgid ""
 ":guilabel:`Contract`: The Validity of the compensation conditions can be "
 "updated depending on the needs."
@@ -36876,7 +36782,7 @@ msgstr ""
 "함됩니다."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:227
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:321
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:350
 msgid ""
 "The :guilabel:`Salary Structure` contains all the individual :ref:`salary "
 "rules <payroll/usa_apps>` that informs the **Payroll** app how to calculate "
@@ -39324,71 +39230,175 @@ msgstr ""
 msgid "The states included in this localization are:"
 msgstr "이 현지화 작업에 포함되어 있는 지역(주)은 다음과 같습니다:"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:10
-msgid "California (CA)"
-msgstr "California (CA)"
-
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:11
-msgid "New York (NY)"
-msgstr "New York (NY)"
-
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:12
-msgid "Texas (TX)"
-msgstr "Texas (TX)"
-
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:13
-msgid "Florida (FL)"
-msgstr "Florida (FL)"
+msgid "State"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:14
-msgid "Colorado (CO)"
-msgstr "Colorado (CO)"
+msgid "Abbreviation"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:15
-msgid "Alabama (AL)"
-msgstr "Alabama (AL)"
+msgid "Alabama"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:16
-msgid "Washington (WA)"
-msgstr "Washington (WA)"
+msgid "(AL)"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:17
-msgid "Nevada (NV)"
-msgstr "Nevada (NV)"
+msgid "Arizona"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:18
-msgid "Vermont (VT)"
-msgstr "Vermont (VT)"
+msgid "(AZ)"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:19
-msgid "Illinois (IL)"
-msgstr "Illinois (IL)"
+msgid "California"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:20
-msgid "Virginia (VA)"
-msgstr "Virginia (VA)"
+msgid "(CA)"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:21
-msgid "Washington, D.C (DC)"
-msgstr "Washington, D.C (DC)"
+msgid "Colorado"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:22
-msgid "Arizona (AZ)"
-msgstr "Arizona (AZ)"
+msgid "(CO)"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:23
-msgid "Idaho (ID)"
-msgstr "Idaho (ID)"
+msgid "Florida"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:24
-msgid "Oregon (OR)"
-msgstr "Oregon (OR)"
+msgid "(FL)"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:25
-msgid "North Carolina (NC)"
-msgstr "North Carolina (NC)"
+msgid "Georgia"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:26
+msgid "(GA)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:27
+msgid "Idaho"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:28
+msgid "(ID)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:29
+msgid "Illinois"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:30
+msgid "(IL)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:31
+msgid "Iowa"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:32
+msgid "(IA)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:33
+msgid "Mississippi"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:34
+msgid "(MS)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:35
+msgid "Nevada"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:36
+msgid "(NV)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:37
+msgid "New Jersey"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:38
+msgid "(NJ)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:39
+msgid "New York"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:40
+msgid "(NY)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:41
+msgid "North Carolina"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:42
+msgid "(NC)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:43
+msgid "Oregon"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:44
+msgid "(OR)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:45
+msgid "Texas"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:46
+msgid "(TX)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:47
+msgid "Vermont"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:48
+msgid "(VT)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:49
+msgid "Virginia"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:50
+msgid "(VA)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:51
+msgid "Washington"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:52
+msgid "(WA)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:53
+msgid "Washington, D.C."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:54
+msgid "\\(DC)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:57
 msgid ""
 "Federal taxes (Income, :abbr:`FICA (Federal Insurance Contributions Act)`, "
 "and Unemployment) for both employees and employers are covered by default in "
@@ -39400,7 +39410,7 @@ msgstr ""
 "급여\\ 현지화에\\ 포함됩니다.\\ 추가\\ 주가\\ 시간이\\ 지남에\\ 따라\\ 추가될"
 "\\ 예정이므로\\ 업데이트를\\ 확인하십시오."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:32
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:61
 msgid ""
 "Before configuring the United States localization, refer to the "
 "general :doc:`payroll <../../payroll>` documentation, which includes the "
@@ -39411,7 +39421,7 @@ msgstr ""
 "모든\\ 범용\\ 설정\\ 및\\ 필드를\\ 포함하는\\ 일반\\ :doc:`급여 <../../"
 "payroll>`\\ 문서를\\ 참조하십시오."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:41
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:70
 msgid ""
 ":ref:`Install <general/install>` the following modules to get all the "
 "features of the United States payroll localization:"
@@ -39419,15 +39429,15 @@ msgstr ""
 "미국\\ 급여\\ 현지화의\\ 모든\\ 기능을\\ 사용하려면\\ 다음\\ 모듈을\\ :ref:`"
 "설치 <general/install>`\\ 하십시오:"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:51
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:80
 msgid ":guilabel:`United States - Payroll`"
 msgstr ":guilabel:`미국 - 급여`"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:52
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:81
 msgid "`l10n_us_hr_payroll`"
 msgstr "`l10n_us_hr_payroll`"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:57
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:86
 msgid ""
 "Provides U.S. payroll basics, including employee tax details, salary "
 "structures (Basic/Gross/Net), tax rules, and W-2/3PA reporting."
@@ -39435,23 +39445,23 @@ msgstr ""
 "임직원\\ 세금\\ 세부\\ 정보,\\ 급여\\ 구조(기본/총액/순액),\\ 세금\\ 규칙\\ "
 "및\\ W-2/3PA\\ 보고를\\ 포함한\\ 미국\\ 급여\\ 기본\\ 사항을\\ 제공합니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:59
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:88
 msgid ":guilabel:`United States - Payroll with Accounting`"
 msgstr ":guilabel:`미국 - 회계와 통합된 급여`"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:60
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:89
 msgid "`l10n_us_hr_payroll_account`"
 msgstr "`l10n_us_hr_payroll_account`"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:62
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:91
 msgid "l10n_us"
 msgstr "l10n_us"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:63
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:92
 msgid "l10n_us_hr_payroll"
 msgstr "l10n_us_hr_payroll"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:68
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:97
 msgid ""
 ":doc:`Configure the United States fiscal localization <../../../finance/"
 "fiscal_localizations/united_states>`"
@@ -39459,18 +39469,18 @@ msgstr ""
 ":doc:`미국 재정 현지화 환경설정 <../../../finance/fiscal_localizations/"
 "united_states>`"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:86
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:115
 msgid ""
 ":guilabel:`Tax ID`: Enter the company's :abbr:`EIN (Employer Identification "
 "Number)`."
 msgstr ""
 ":guilabel:`세금 ID`: 회사의 :abbr:`EIN(고용주 식별 번호)` 을 입력합니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:87
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:116
 msgid ":guilabel:`Company ID` : Enter the business's state ID number."
 msgstr ":guilabel:`회사 ID`: 사업체의 지역 ID 번호를 입력합니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:88
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:117
 msgid ""
 ":guilabel:`Currency`: By default, :abbr:`USD (US Dollars)` is selected. If "
 "not, select :guilabel:`USD` from the drop-down menu."
@@ -39479,11 +39489,11 @@ msgstr ""
 "\\ 그렇지\\ 않은\\ 경우\\ 드롭다운\\ 메뉴에서\\ :guilabel:`USD`\\ 를\\ 선택합"
 "니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:94
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:123
 msgid "Ensure the information is accurate, as it is used when creating W-2s."
 msgstr "W-2\\ 작성\\ 시\\ 사용되므로\\ 정보가\\ 정확한지\\ 확인하십시오."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:99
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:128
 msgid ""
 "Every employee being paid must have their employee profiles configured for "
 "the United States payroll localization. Additional fields are present after "
@@ -39493,7 +39503,7 @@ msgstr ""
 "로필을\\ 구성해야\\ 합니다.\\ 미국에\\ 대해\\ 데이터베이스를\\ 구성한\\ 후\\ "
 "추가\\ 필드가\\ 표시됩니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:121
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:150
 msgid ""
 "These accounts are used to pay the employee, via an automation through a "
 "NACHA payment file. Payroll **cannot** be processed for employees without a "
@@ -39507,7 +39517,7 @@ msgstr ""
 "수 있는 은행 계좌가 설정되지 않은 경우 **급여** 현황판에 경고가 표시되며 급"
 "여 실행 시 오류가 발생합니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:126
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:155
 msgid ""
 "Ensure there is a valid :guilabel:`SSN No` entered in "
 "the :guilabel:`Citizenship` section . The last four digits of the :abbr:`SSN "
@@ -39517,7 +39527,7 @@ msgstr ""
 "확인하세요.\\ :abbr:`SSN (Social Security Number)`\\ 번호의 마지막 네 자리가 "
 "임직원의 급여 명세서에 표시됩니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:154
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:183
 msgid ""
 ":guilabel:`Contract Type`: Determines how the employee is paid and "
 "classified, such as :guilabel:`Salary-exempt`, :guilabel:`Salary-"
@@ -39526,7 +39536,7 @@ msgstr ""
 ":guilabel:`계약 유형`: 임직원이 급여를 받고 분류되는 방식을 결정합니다 (예:"
 "\\ :guilabel:`급여-면제`,\\ :guilabel:`급여-비면제`,\\ :guilabel:`시간당`)."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:158
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:187
 msgid ""
 "This field is visible on payslips. Some states require payslips to state if "
 "the employee is exempt or non-exempt from overtime. Ensure the selection "
@@ -39536,7 +39546,7 @@ msgstr ""
 "과 근무 면제 대상인지 비면제 대상인지 명시하도록 요구합니다. 해당 주의 법률"
 "을 준수하는 항목을 선택하세요."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:161
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:190
 msgid ""
 ":guilabel:`Pay Category`: Select :guilabel:`United States: Employee` for "
 "this field. This defines when the employee is paid, their default working "
@@ -39546,11 +39556,11 @@ msgstr ""
 "를 선택하세요. 이는 임직원이 급여를 받는 시기, 기본 근무 일정 및 적용되는 근"
 "무 입력 유형을 정의합니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:187
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:216
 msgid "W-2 form section"
 msgstr "W-2 양식 섹션"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:189
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:218
 msgid ""
 "A W-2 is an annual tax form that reports an employee's wages, taxes, and "
 "benefits. Employees use it to file their tax returns. The options below "
@@ -39561,7 +39571,7 @@ msgstr ""
 "은 이를 사용하여 세금 신고서를 제출합니다. 아래 옵션은 W-2 양식의 *13번 박스"
 "* 확인란에 해당합니다. 임직원에게 해당하는 항목을 선택하세요."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:193
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:222
 msgid ""
 ":guilabel:`Statutory Employee`: Tick this box if the employee is exempt from "
 "income tax, but subject to :abbr:`FICA (Federal Insurance Contributions "
@@ -39570,7 +39580,7 @@ msgstr ""
 ":guilabel:`법정 임직원`: 임직원이 소득세는 면제되지만\\ :abbr:`FICA (Federal "
 "Insurance Contributions Act)`\\ 세금은 적용받는 경우 이 확인란을 선택하세요."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:195
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:224
 msgid ""
 ":guilabel:`Retirement Plan`: Tick this box if the employee is an active "
 "contributor to an employer-sponsored retirement plan."
@@ -39578,7 +39588,7 @@ msgstr ""
 ":guilabel:`퇴직 연금 계획`: 임직원이 고용주 후원 퇴직 연금 계획에 적극적으로 "
 "기여하는 경우 이 확인란을 선택하세요."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:197
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:226
 msgid ""
 ":guilabel:`Third-Party Sick Pay`: Tick this box if the employee is covered "
 "under a plan where sick pay benefits may be provided by a third party (e.g., "
@@ -39587,11 +39597,11 @@ msgstr ""
 ":guilabel:`제3자 병가 수당`\\ : 해당 연도에 제3자(예: 보험회사)가 병가 수당"
 "을 제공할 수 있는 플랜에 임직원이 가입되어 있는 경우 이 확인란을 선택하세요."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:201
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:230
 msgid "W-4 form section"
 msgstr "W-4 양식 섹션"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:203
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:232
 msgid ""
 "A W-4 is an :abbr:`IRS (Internal Revenue Services)` form that determines an "
 "employee's federal tax withholding, which the employer remits directly to "
@@ -39600,15 +39610,15 @@ msgstr ""
 "W-4는\\ :abbr:`IRS(국세청)`\\ 양식으로, 임직원의 연방세 원천징수를 결정하며, "
 "고용주가\\ :abbr:`IRS(국세청)`\\ 에 직접 납부합니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:206
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:235
 msgid "Configure any relevant fields for the employee in this section."
 msgstr "직원과 관련된 모든 필드를 이 섹션에서 설정합니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:209
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:238
 msgid "State filing section"
 msgstr "주정부 신고 섹션"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:211
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:240
 msgid ""
 "An employee's marital status impacts their payroll taxes. Configure the "
 "following fields regarding their status and withholdings."
@@ -39616,7 +39626,7 @@ msgstr ""
 "임직원의 혼인 상태는 급여세에 영향을 미칩니다. 상태 및 원천징수와 관련하여 다"
 "음 필드를 구성하세요."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:214
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:243
 msgid ""
 ":guilabel:`Status`: Using the drop-down menu, select the employee's "
 "*federal* filing status. The options "
@@ -39631,7 +39641,7 @@ msgstr ""
 "자녀가 있는 적격 생존 배우자/RDP`\\ 입니다. 이는 일반적으로 임직원의 W-4 양식"
 "에서 가져옵니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:218
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:247
 msgid ""
 ":guilabel:`Tax Status`: Using the drop-down menu, select the employee's "
 "*state* filing status, if applicable."
@@ -39639,11 +39649,11 @@ msgstr ""
 ":guilabel:`세금 상태`\\ : 드롭다운 메뉴를 사용하여 해당되는 경우 임직원의 *주"
 "* 신고 상태를 선택하세요."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:222
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:251
 msgid "The federal and state statuses do **not** need to match."
 msgstr "연방 및 주 상태는 **일치하지 않아도 됩니다**."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:225
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:254
 msgid ""
 "As of 2025, these states do **not** collect state income tax: Alaska, "
 "Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, "
@@ -39656,7 +39666,7 @@ msgstr ""
 "러한 주에 대한 급여 현지화가 존재하는 경우\\ :guilabel:`세금 상태`\\ 필드에 "
 "해당 주 옵션이 **없습니다**. 비워 두세요."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:230
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:259
 msgid ""
 ":guilabel:`Withholding Allowance`: Enter the total annual amount to be "
 "withheld from the employee's pay for the year, for state taxes. Only fill "
@@ -39666,7 +39676,7 @@ msgstr ""
 "징수할 총 연간 금액을 입력하세요. 임직원이 주 소득세가 있는 주에 거주하는 경"
 "우에만 작성하세요."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:233
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:262
 msgid ""
 ":guilabel:`Extra Withholding`: Enter the total *extra* annual amount (not "
 "including the :guilabel:`Withholding Allowance` amount) to be withheld from "
@@ -39681,11 +39691,11 @@ msgstr ""
 msgid "The state filing section of the employee form, filled out."
 msgstr "직원 양식의 주 신고 섹션에 입력이 되어 있는 모습입니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:241
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:270
 msgid "Common benefits"
 msgstr "일반 복리후생"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:243
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:272
 msgid ""
 "The following sections of benefits are considered common ones offered by US "
 "employers. This information needs to be populated with the information "
@@ -39694,7 +39704,7 @@ msgstr ""
 "다음 복리후생 섹션은 미국 고용주가 제공하는 일반적인 복리후생으로 간주됩니"
 "다. 이 정보는 임직원이 선택한 정보로 채워져야 합니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:247
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:276
 msgid ""
 "The benefits listed in this section are considered the most commonly offered "
 "by companies. If other employee benefits exist that require regular paycheck "
@@ -39704,11 +39714,11 @@ msgstr ""
 "다. 정기적인 급여 공제가 필요한 다른 임직원 복리후생이 있는 경우 *입력*으로 "
 "추가할 수 있습니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:252
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:281
 msgid "Pre-tax deductions"
 msgstr "세전 공제"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:254
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:283
 msgid ""
 "Pre-tax benefits lower the employee's gross wage, which decreases the base "
 "amount for tax calculations. These are displayed at the beginning of the "
@@ -39717,11 +39727,11 @@ msgstr ""
 "세전 복리후생은 임직원의 총 급여를 낮춰 세금 계산의 기준 금액을 줄입니다. 이"
 "는 총 급여가 명시되기 전 급여 명세서의 시작 부분에 표시됩니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:259
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:288
 msgid "Retirement plans section"
 msgstr "퇴직 계획 섹션"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:261
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:290
 msgid ""
 "This section is where the employee and employer 401(k) contributions are "
 "configured. Fill out the following fields:"
@@ -39729,7 +39739,7 @@ msgstr ""
 "이 섹션에서는 임직원 및 고용주의 401(k) 기여금을 구성합니다. 다음 필드를 작성"
 "하세요:"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:264
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:293
 msgid ""
 ":guilabel:`401(k)`: Enter the amount of money taken out of the employee's "
 "payslip each pay period. This can be entered either as a percentage (%) of "
@@ -39739,7 +39749,7 @@ msgstr ""
 "액을 입력하세요. 급여 명세서 금액의 백분율(%) 또는 급여 명세서당 특정 달러 금"
 "액($/slip)으로 입력할 수 있습니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:267
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:296
 msgid ""
 ":guilabel:`Matching Amount`: Enter the matching amount the employer "
 "contributes to the employee's 401(k), as compared to the employee's "
@@ -39750,7 +39760,7 @@ msgstr ""
 "에 기여하는 매칭 금액을 입력하세요. 이 필드는 임직원 기여금의 백분율(%) 또는 "
 "특정 달러 금액($/slip)으로 구성할 수도 있습니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:270
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:299
 msgid ""
 ":guilabel:`Matching Yearly Cap`: If there is a limit to the employer's "
 "contribution, enter it as a percentage of the employee's annual salary."
@@ -39758,7 +39768,7 @@ msgstr ""
 ":guilabel:`매칭 연간 한도`\\ : 고용주의 기여금에 한도가 있는 경우 임직원 연봉"
 "의 백분율로 입력하세요."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:274
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:303
 msgid ""
 "A company allows employees to contribute to a 401(k) retirement plan, and "
 "matches 50% of the employee's contributions, up to $5,000 USD a year. The "
@@ -39769,7 +39779,7 @@ msgstr ""
 "$5,000 USD까지 임직원 기여금의 50%를 매칭합니다. 임직원은 연간 $50,000 USD를 "
 "벌고 급여의 20%인 $10,000 USD를 401(k)에 기여합니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:278
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:307
 msgid ""
 "To configure this, enter `20.00` in the :guilabel:`401(k)` field, `50.00` in "
 "the :guilabel:`Matching Amount` field, and `20.00` in "
@@ -39783,11 +39793,11 @@ msgstr ""
 msgid "An employee's retirement configurations."
 msgstr "직원 퇴직 항목에 대한 환경설정을 합니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:285
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:314
 msgid "Health benefits section"
 msgstr "건강 관련 복지 섹션"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:287
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:316
 msgid ""
 "This section is where the employee's health contributions are configured. "
 "Populate each of the fields with the corresponding amount deducted from "
@@ -39802,11 +39812,11 @@ msgid ""
 "deductions."
 msgstr "급여 명세서 공제 내역이 작성된 임직원의 건강 복리후생 섹션."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:294
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:323
 msgid "Other benefits section"
 msgstr "기타 복지 섹션"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:296
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:325
 msgid ""
 "This section currently only houses a :guilabel:`Commuter` benefit field. "
 "Enter the amount being deducted per paycheck, for applicable commuter "
@@ -39815,11 +39825,11 @@ msgstr ""
 "이 섹션에는 현재\\ :guilabel:`통근`\\ 복리후생 필드만 있습니다. 해당 통근 복"
 "리후생에 대해 급여당 공제되는 금액을 입력하세요."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:300
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:329
 msgid "Post-tax deductions section"
 msgstr "세후 공제 섹션"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:302
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:331
 msgid ""
 "These types of benefits count as deductions *after* taxes are calculated. "
 "They appear towards the end of the payslip before the net amount is "
@@ -39834,7 +39844,7 @@ msgstr ""
 "정 달러 금액($/slip)을 입력하면 임직원 급여에서 공제되어 ROTH 401(k) 계좌에 "
 "입금됩니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:311
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:340
 msgid ""
 "Several sections within the **Payroll** app installs a Salary Structure, "
 "Structure Type, Rules, and Parameters specific to the United States."
@@ -39842,7 +39852,7 @@ msgstr ""
 "**급여**\\ 앱 내 여러 섹션은 미국에 특정한 급여 구조, 구조 유형, 규칙 및 매개"
 "변수를 설치합니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:317
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:346
 msgid ""
 "When the **l10n_us_hr_payroll** module is :ref:`installed <payroll/"
 "usa_apps>`, a new :guilabel:`Salary Structure` gets "
@@ -39854,7 +39864,7 @@ msgstr ""
 "설치됩니다. 이 구조에는 하나의\\ :guilabel:`구조 유형`\\ 인"
 "\\ :guilabel:`United States: Regular Pay`\\ 가 포함됩니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:332
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:361
 msgid ""
 "To view the salary rules that inform the salary structure what to do, "
 "navigate to :menuselection:`Payroll app --> Configuration --> Structures` "
@@ -39869,7 +39879,7 @@ msgstr ""
 "니다. :guilabel:`United States: Regular Pay`\\ 를 클릭하여 상세 급여 규칙을 "
 "확인하세요."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:340
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:369
 msgid ""
 "Each rule defines how pay is calculated, taking into account factors such as "
 "commissions, bonuses, taxes, and insurance. The *logic* behind "
@@ -39879,7 +39889,7 @@ msgstr ""
 "을 정의합니다. :guilabel:`United States: Regular Pay`\\ 규칙의\\ *로직*\\ 은 "
 "다음과 같습니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:344
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:373
 msgid ""
 "The first four rules listed reflects all sources of income, including the "
 "basic wage listed on the contract (:guilabel:`Basic Salary`), plus any "
@@ -39894,7 +39904,7 @@ msgstr ""
 msgid "The basic salary rules for the US localization."
 msgstr "미국 현지화용 연방 세금 규칙."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:351
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:380
 msgid ""
 "Adding up these inputs is how the gross salary (:guilabel:`Gross Pay`) is "
 "calculated. This amount is the base amount used to calculate payroll taxes."
@@ -39902,7 +39912,7 @@ msgstr ""
 "이러한 입력값을 합산하여 총 급여(:guilabel:`총 지급액`)가 계산됩니다. 이 금액"
 "은 급여세 계산에 사용되는 기준 금액입니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:354
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:383
 msgid ""
 "The next set of rules are the various pre-tax benefits and taxable income, "
 "such as :guilabel:`Medical` insurance contributions and :guilabel:`Commuter "
@@ -39919,7 +39929,7 @@ msgstr ""
 msgid "The pre-tax rules for the US localization."
 msgstr "미국 현지화에 있는 세전 규칙입니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:362
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:391
 msgid ""
 "Next, all the various tax rules are listed where both federal and state "
 "payroll withholdings are outlined. First, federal tax rules are listed, then "
@@ -39932,7 +39942,7 @@ msgstr ""
 msgid "The federal tax rules for the US localization."
 msgstr "미국 현지화용 고용주 공제 규칙."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:369
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:398
 msgid ""
 "The rule for federal withholdings for `Worker's Compensation` appears "
 "*after* several state-specific withholdings are listed, and does **not** "
@@ -39942,7 +39952,7 @@ msgstr ""
 "후*\\ 에 나타나며 위 이미지에는 표시되지\\ **않지만**\\ 규칙에는 나열되어 있"
 "습니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:373
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:402
 msgid "The last rules listed are the post-tax employee deductions."
 msgstr "마지막에 표시된 규칙은 세후 직원 공제 항목입니다."
 
@@ -39950,7 +39960,7 @@ msgstr "마지막에 표시된 규칙은 세후 직원 공제 항목입니다."
 msgid "The post-tax rules for the US localization."
 msgstr "미국 현지화에 있는 세후 규칙입니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:378
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:407
 msgid ""
 "The :guilabel:`Other Inputs` tab contains anything else affecting payroll. "
 "This includes items to be added to the payslip, such as :guilabel:`Tips`, "
@@ -39964,7 +39974,7 @@ msgstr ""
 msgid "The other inputs for the US localization."
 msgstr "미국 현지화에 있는 기타 입력 항목입니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:385
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:414
 msgid ""
 "The employee's net salary is the amount the employee receives from the "
 "employer. The formula to calculate the net salary is:"
@@ -39972,13 +39982,13 @@ msgstr ""
 "임직원의 순 급여는 임직원이 고용주로부터 받는 금액입니다. 순 급여 계산 공식"
 "은 다음과 같습니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:388
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:417
 msgid ""
 "\\text{Gross Salary} + \\text{Allowances} - \\text{Payroll Taxes} - "
 "\\text{General Deductions}"
 msgstr "\\text{총 급여} + \\text{수당} - \\text{급여세} - \\text{일반 공제액}"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:392
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:421
 msgid ""
 "Additionally, an extra section exists in payroll calculation for the US "
 "called `Employer Deductions`, and it breaks down the payments the employer "
@@ -39991,7 +40001,7 @@ msgstr ""
 msgid "The employer deduction rules for the US localization."
 msgstr "미국 현지화용 고용주 공제 규칙입니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:400
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:429
 msgid ""
 "The rule for employer deductions for `Worker's Compensation` appears *after* "
 "several state-specific employer deductions are listed, and does **not** "
@@ -40001,7 +40011,7 @@ msgstr ""
 "*후*\\ 에 나타나며 위 이미지에는 표시되지\\ **않지만**\\ 규칙에는 나열되어 있"
 "습니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:411
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:440
 msgid ""
 "The wage base for Social Security tax calculations has a cap for 2025, "
 "accounted for in the `US: FICA OASDI Cap` parameter."
@@ -40009,7 +40019,7 @@ msgstr ""
 "사회보장세 계산을 위한 임금 기준은 2025년에 상한이 있으며 `US: FICA OASDI "
 "Cap` 매개변수에 반영되어 있습니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:423
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:452
 msgid ""
 "The Unemployment tax of a company is different from the one added by default "
 "in Odoo. To update this, navigate to :menuselection:`Payroll app --> "
@@ -40022,7 +40032,7 @@ msgstr ""
 "\\ :abbr:`FUTA(연방 실업세법)`\\ 또는 편집이 필요한 주 이름으로 결과를 필터링"
 "하고 목록에서 해당 요율을 편집하세요."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:429
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:458
 msgid ""
 "Odoo adds updated rule parameters for the current calendar year. It is "
 "**not** recommended to edit rule parameters **unless a federal or state "
@@ -40036,11 +40046,11 @@ msgstr ""
 "\\ 것은\\ **권장되지\\ 않습니다**.\\ 규칙\\ 매개변수를\\ 변경하기\\ *전에*\\ "
 "모든\\ 지역\\ 및\\ 국가\\ 규정을\\ 확인하십시오."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:435
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:464
 msgid "Run US payroll"
 msgstr "미국 급여 작업 진행"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:437
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:466
 msgid ""
 "Before running paypoll, the payroll officer must validate "
 "employee :doc:`work entries <../work_entries>` to confirm pay accuracy and "
@@ -40052,7 +40062,7 @@ msgstr ""
 "\\ 합니다.\\ 여기에는\\ 모든\\ 휴가가\\ 승인되었는지,\\ 초과\\ 근무가\\ 적절"
 "한지\\ 확인하는\\ 것이\\ 포함됩니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:480
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:509
 msgid ""
 "The accounting process when running payroll has two "
 "components: :ref:`creating journal entries <payroll/journal>`, "
@@ -40062,7 +40072,7 @@ msgstr ""
 "다:\\ :ref:`분개\\ 항목\\ 생성 <payroll/journal>`\\ 및\\ :ref:`지급\\ 등록 "
 "<payroll/register>`."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:498
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:527
 msgid ""
 "Four accounts from the US :abbr:`CoA (Chart of Accounts)` are included with "
 "the payroll localization:"
@@ -40070,7 +40080,7 @@ msgstr ""
 "미국\\ :abbr:`계정과목표`의\\ 네\\ 가지\\ 계정이\\ 급여\\ 현지화에\\ 포함되어"
 "\\ 있습니다:"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:501
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:530
 msgid ""
 "`611000 Salaries & Wages`: Records gross salary and the employer's portion "
 "of payroll expenses. Also groups values from rules without specific accounts "
@@ -40080,7 +40090,7 @@ msgstr ""
 "\\ 기록합니다.\\ 또한\\ 특정\\ 계정이\\ 없는\\ 규칙의\\ 값을\\ 그룹화합니다"
 "(예:\\ 회사별\\ 복리후생)."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:503
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:532
 msgid ""
 "`230100 Employee Payroll Taxes`: Withheld taxes from employees, which the "
 "employer must file and pay. The partner and label columns of the journal "
@@ -40090,7 +40100,7 @@ msgstr ""
 "로부터\\ 원천징수된\\ 세금입니다.\\ 분개\\ 항목의\\ 파트너\\ 및\\ 레이블\\ 열"
 "은\\ 특정\\ 세금을\\ 나타냅니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:505
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:534
 msgid ""
 "`230200 Employer Payroll Taxes`: Employer portion of payroll taxes to be "
 "filed and paid. The partner and label columns of the journal entry indicate "
@@ -40100,11 +40110,11 @@ msgstr ""
 "부분입니다.\\ 분개\\ 항목의\\ 파트너\\ 및\\ 레이블\\ 열은\\ 특정\\ 세금을\\ "
 "나타냅니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:507
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:536
 msgid "`230000 Salary Payable`: Net salary owed to the employee."
 msgstr "`230000 급여 미지급액`: 직원에게 지급해야 할 순 급여액입니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:510
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:539
 msgid ""
 "The :abbr:`CoA (Chart of Accounts)` configuration is done by default when a "
 "company is located in the US. The account codes and names can be edited to "
@@ -40119,7 +40129,7 @@ msgstr ""
 "이 연결되어 있지 않은 경우, Odoo에서는 이동 유형과 관계없이 `급여 비용` 계정"
 "으로 전표가 생성됩니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:529
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:558
 msgid ""
 "To generate payments from payslips,employee's **must** have a *trusted* bank "
 "account. If the employee's bank account is *not* marked as `trusted`, NACHA "
@@ -40130,7 +40140,7 @@ msgstr ""
 "뢰할\\ 수\\ 있음`으로\\ 표시되지\\ *않은*\\ 경우\\ Odoo를\\ 통해\\ NACHA\\ 파"
 "일을\\ 생성할\\ **수\\ 없습니다**."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:546
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:575
 msgid ""
 "The US localization contains several reports unique to the US, which provide "
 "tax information for employees, as well as the ability to integrate with "
@@ -40139,11 +40149,11 @@ msgstr ""
 "미국 현지화에는 미국 고유의 여러 보고서가 포함되어 있으며, 이는 임직원에게 세"
 "금 정보를 제공하고 ADP와 같은 외부 조직과 통합할 수 있는 기능을 제공합니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:550
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:579
 msgid "W2 Report"
 msgstr "W2 신고서"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:552
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:581
 msgid ""
 "The *W2 Report* provides a CSV file that allows employees to e-file their W2 "
 "report with third-party software. To access this report, navigate "
@@ -40153,7 +40163,7 @@ msgstr ""
 "할 수 있도록 하는 CSV 파일을 제공합니다. 이 보고서에 액세스하려면"
 "\\ :menuselection:`급여 -> 보고 -> United States -> W2`\\ 로 이동하십시오."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:556
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:585
 msgid ""
 "To create a W2 form, click :guilabel:`New`, and a blank :guilabel:`Create W2 "
 "Form` page loads. Set the :guilabel:`Start Date` and :guilabel:`End Date` "
@@ -40165,9 +40175,9 @@ msgstr ""
 "\\ :guilabel:`End Date`\\ 를 설정하고(일반적으로 역년), 다중 회사 데이터베이"
 "스인 경우\\ :guilabel:`Company`\\ 를 선택하십시오."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:560
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:582
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:604
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:589
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:611
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:633
 msgid ""
 "All pay runs for the time period appear in a list view. To add any missing "
 "pay runs, click :guilabel:`Add a line` at the bottom of the list, and select "
@@ -40177,7 +40187,7 @@ msgstr ""
 "하려면 목록 하단의\\ :guilabel:`Add a line`\\ 을 클릭하고 누락된 파일을 선택"
 "하십시오."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:563
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:592
 msgid ""
 "When done, click the :guilabel:`Generate` button to create a CSV file with a "
 "summary of all payroll related payments made during the specified time "
@@ -40190,11 +40200,11 @@ msgstr ""
 msgid "The W2 report screen, with the file to download in the top half."
 msgstr "상단에 다운로드할 파일이 있는 W2 보고서 화면."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:570
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:599
 msgid "Form 941"
 msgstr "941 양식"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:572
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:601
 msgid ""
 "The *Form 941* report is meant to inform the government of the amount of "
 "federal income tax, :abbr:`FICA (Federal Insurance Contributions Act)` taxes "
@@ -40205,7 +40215,7 @@ msgstr ""
 "금(메디케어 및 사회 보장)이 임직원 급여에서 원천징수된 금액을 정부에 알리기 "
 "위한 것입니다. 또한 임직원 측의 세금도 보고합니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:576
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:605
 msgid ""
 "To create this report, navigate to :menuselection:`Payroll -> Reporting -> "
 "United States -> Form 941`. Click the :guilabel:`New` button, and a "
@@ -40222,7 +40232,7 @@ msgstr ""
 "`, :guilabel:`IRS 납부 옵션`(IRS로 자금이 송금되는 방식) 및 :guilabel:`예치 "
 "일정 및 세금 납부 의무`(IRS에 납부하는 빈도) 등의 내용을 설정합니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:585
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:614
 msgid ""
 "When done, click :guilabel:`Generate`, and the report is created as a CSV "
 "file, and appears on the :guilabel:`Form 941` report dashboard. Companies "
@@ -40236,11 +40246,11 @@ msgstr ""
 msgid "The 941 report screen, with the file to download in the top half."
 msgstr "상단에 다운로드할 파일이 있는 941 보고서 화면."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:593
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:622
 msgid "Form 940"
 msgstr "940 양식"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:595
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:624
 msgid ""
 "The *Form 940* report details the annual :abbr:`FUTA (Federal Unemployment "
 "Tax Act)` withheld for payroll."
@@ -40248,7 +40258,7 @@ msgstr ""
 "\\ *Form 940*\\ 보고서는 급여에 대해 원천징수된 연간\\ :abbr:`FUTA (연방 실업"
 "세법)`\\ 를 자세히 설명합니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:598
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:627
 msgid ""
 "To create this report, navigate to :menuselection:`Payroll -> Reporting -> "
 "United States -> Form 940`. Click the :guilabel:`New` button, and a "
@@ -40265,7 +40275,7 @@ msgstr ""
 "용주`, :guilabel:`세금 공제 대상 주에서 지급` 및 :guilabel:`IRS 납부 옵션"
 "`(IRS로 자금이 송금되는 방식) 등의 항목을 입력합니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:607
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:636
 msgid ""
 "When done, click :guilabel:`Generate`, and the report is created as a CSV "
 "file, and appears on the :guilabel:`Form 940` report dashboard. Companies "
@@ -40279,11 +40289,11 @@ msgstr ""
 msgid "The 940 report screen, with the file to download in the top half."
 msgstr "상단에 다운로드할 파일이 있는 940 보고서 화면."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:615
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:644
 msgid "Export data to third-party apps"
 msgstr "데이터를 외부 앱으로 내보내기"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:617
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:646
 msgid ""
 "The *ADP Export* report generates a CSV file that can be submitted to ADP, "
 "which then makes payments to the employees."
@@ -40291,7 +40301,7 @@ msgstr ""
 "\\ *ADP 내보내기*\\ 보고서는 ADP에 제출할 수 있는 CSV 파일을 생성하며, ADP는 "
 "이를 통해 임직원에게 지급합니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:620
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:649
 msgid ""
 "The CSV file summarizes the employee's worked hours during a specified time "
 "period, correlating to their salary or hourly wage. The report is generated "
@@ -40301,7 +40311,7 @@ msgstr ""
 "간을 요약합니다. 보고서는 휴가가 확정된\\ *후*\\ :doc:`근무 입력 <../"
 "work_entries>`\\ 에서 생성됩니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:624
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:653
 msgid ""
 "The export format is meant to match with the ADP format. Since companies can "
 "customize their portal and may require some changes, the data is there to be "
@@ -40311,7 +40321,7 @@ msgstr ""
 "정할 수 있고 일부 변경이 필요할 수 있으므로, 데이터는 ADP에 제공되어 급여를 "
 "실행하는 데 사용됩니다."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:628
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:657
 msgid ""
 "To access the ADP Export report, the `United States - Payroll - Export to "
 "ADP` module **must** be :ref:`installed <general/install>`."
@@ -52762,7 +52772,7 @@ msgstr ""
 "`\\ 뿐입니다."
 
 #: ../../content/applications/hr/time_off/management.rst:41
-#: ../../content/applications/hr/time_off/management.rst:110
+#: ../../content/applications/hr/time_off/management.rst:138
 msgid ""
 "The various departments the user is a member of, and manages employees "
 "under, also appear on the left side of the page, under :icon:`fa-"
@@ -52789,7 +52799,7 @@ msgstr ""
 "가 표시됩니다."
 
 #: ../../content/applications/hr/time_off/management.rst:50
-#: ../../content/applications/hr/time_off/management.rst:120
+#: ../../content/applications/hr/time_off/management.rst:148
 msgid ""
 "If no requests fall under one of the status options or departments, that "
 "status or department is **not** visible on the left-side menu."
@@ -52843,7 +52853,7 @@ msgstr ""
 "무 곳이나 클릭하세요. 그러면 상세한 휴가 요청 양식이 로드됩니다."
 
 #: ../../content/applications/hr/time_off/management.rst:72
-#: ../../content/applications/hr/time_off/management.rst:138
+#: ../../content/applications/hr/time_off/management.rst:166
 msgid ""
 "Depending on the rights of the user, changes can be made. To modify the "
 "request, make any desired changes to the form. All changes are automatically "
@@ -52853,7 +52863,7 @@ msgstr ""
 "변경하세요. 모든 변경 사항은 자동으로 저장됩니다."
 
 #: ../../content/applications/hr/time_off/management.rst:75
-#: ../../content/applications/hr/time_off/management.rst:141
+#: ../../content/applications/hr/time_off/management.rst:169
 msgid ""
 "It is also possible to approve, validate, or refuse the request from this "
 "form. Click the :guilabel:`Approve` button to approve, "
@@ -52866,24 +52876,85 @@ msgstr ""
 
 #: ../../content/applications/hr/time_off/management.rst:79
 msgid ""
-"Once a request has been approved, validated, or refused, the Kanban card "
-"disappears from the default :guilabel:`All Time Off` page. To view *all* "
-"requests, including approved and refused requests, clear the default filters "
-"in the search bar."
+":guilabel:`All Time Off` page. To view *all* requests, including approved "
+"and refused requests, clear the default filters in the search bar."
 msgstr ""
-"요청이 승인, 확인 또는 거부되면 기본\\ :guilabel:`모든 휴가`\\ 페이지에서 칸"
-"반 카드가 사라집니다. 승인 및 거부된 요청을 포함하여 *모든* 요청을 보려면 검"
-"색창의 기본 필터를 지우세요."
 
 #: ../../content/applications/hr/time_off/management.rst:None
 msgid "The detailed time off request form for the employee George Davis."
 msgstr "임직원 George Davis의 상세한 휴가 요청 양식입니다."
 
-#: ../../content/applications/hr/time_off/management.rst:89
+#: ../../content/applications/hr/time_off/management.rst:88
+msgid "Add missing time off requests"
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:90
+msgid ""
+"If an employee forgets to request time off for days they did not work, a "
+"time off record must be created retroactively. To create missing time off "
+"requests, navigate to :menuselection:`Time Off app --> Management --> Time "
+"Off`, and click :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:94
+msgid "On the time off request form, configure the following fields:"
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:96
+msgid ""
+":guilabel:`Employee`: Using the drop-down menu, select the employee missing "
+"the time off request."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:97
+msgid ""
+":guilabel:`Time Off Type`: Using the drop-down menu, select the :doc:`type "
+"of time off <time_off_types>` for the request."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:99
+msgid ""
+":guilabel:`Payslip State`: Using the drop-down menu, select when the paid "
+"time off is given to the employee. The options are: :guilabel:`To compute in "
+"next payslip`, :guilabel:`To compute in current payslip`, and :guilabel:`To "
+"defer to next payslip`."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:102
+msgid ""
+":guilabel:`Dates`: Using the calendar selector, configure the start and end "
+"dates for the time off request."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:104
+msgid ""
+":guilabel:`Description`: In the field below. enter any information regarding "
+"the request. For example, `Forgot to request the time off.` or `Could not "
+"request time off as they were sick.`"
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:106
+msgid ""
+":icon:`fa-paperclip` :guilabel:`Attach File`: If there is relevant "
+"documentation for the request, click this button, navigate to the desired "
+"file, then click :guilabel:`Open`."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:109
+msgid ""
+"Once the form is filled out, click :guilabel:`Approve` to approve the "
+"request."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:None
+msgid "A time off form for missing time off."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:117
 msgid "View allocation requests"
 msgstr "배정 요청 보기"
 
-#: ../../content/applications/hr/time_off/management.rst:91
+#: ../../content/applications/hr/time_off/management.rst:119
 msgid ""
 "To view allocation requests waiting for approval, navigate "
 "to :menuselection:`Time Off app --> Management --> Allocations`. Doing so "
@@ -52894,7 +52965,7 @@ msgstr ""
 "`\\ 으로 이동하세요.\\ :guilabel:`배정`\\ 페이지가 나타납니다. 모든 배정 요청"
 "은 기본 칸반 보기에 표시됩니다."
 
-#: ../../content/applications/hr/time_off/management.rst:95
+#: ../../content/applications/hr/time_off/management.rst:123
 msgid ""
 "The only allocation requests that are visible on this page belong to "
 "employees the user either has :guilabel:`Time Off Officer` "
@@ -52905,7 +52976,7 @@ msgstr ""
 "\\ :guilabel:`휴가 담당자`\\ 또는\\ :guilabel:`관리자`\\ 액세스 권한을 가진 "
 "임직원에 속한 것만 해당됩니다."
 
-#: ../../content/applications/hr/time_off/management.rst:99
+#: ../../content/applications/hr/time_off/management.rst:127
 msgid ""
 "The default filters on the :guilabel:`Allocations` page are :icon:`fa-"
 "filter` :guilabel:`First Approval` and :icon:`fa-filter` :guilabel:`My "
@@ -52918,7 +52989,7 @@ msgstr ""
 "확인을 기다리는 사용자 팀의 현재 임직원에 대해 승인이 필요한 배정 요청만 표시"
 "합니다."
 
-#: ../../content/applications/hr/time_off/management.rst:103
+#: ../../content/applications/hr/time_off/management.rst:131
 msgid ""
 "On the left side of the :guilabel:`Allocations` page, there are various "
 "grouping options that can be used to narrow down the presented allocation "
@@ -52929,7 +53000,7 @@ msgstr ""
 "\\ :icon:`fa-users` :guilabel:`부서`\\ 제목 아래에 표시되는 배정 요청을 좁히"
 "는 데 사용할 수 있는 다양한 그룹화 옵션이 있습니다."
 
-#: ../../content/applications/hr/time_off/management.rst:107
+#: ../../content/applications/hr/time_off/management.rst:135
 msgid ""
 "Since only allocation requests that need to be approved are shown, the "
 "only :icon:`fa-folder` :guilabel:`Status` options "
@@ -52939,7 +53010,7 @@ msgstr ""
 "옵션은\\ :guilabel:`전체`,\\ :guilabel:`승인 대기`\\ 및\\ :guilabel:`승인됨"
 "`\\ 뿐입니다."
 
-#: ../../content/applications/hr/time_off/management.rst:113
+#: ../../content/applications/hr/time_off/management.rst:141
 msgid ""
 "To only display allocation requests for specific departments, click on "
 "the :guilabel:`Department` on the left-hand side of the page. Only requests "
@@ -52948,7 +53019,7 @@ msgstr ""
 "특정 부서의 배정 요청만 표시하려면 페이지 왼쪽의\\ :guilabel:`부서`\\ 를 클릭"
 "하세요. 선택한 부서 내 요청만 표시됩니다."
 
-#: ../../content/applications/hr/time_off/management.rst:116
+#: ../../content/applications/hr/time_off/management.rst:144
 msgid ""
 "If the :icon:`fa-filter` :guilabel:`First Approval` and :icon:`fa-"
 "filter` :guilabel:`My Team` filters are removed, all statuses appear."
@@ -52960,11 +53031,11 @@ msgstr ""
 msgid "Allocations dashboard showing unapproved allocation requests."
 msgstr "승인되지 않은 할당 요청을 표시하는 할당 현황판."
 
-#: ../../content/applications/hr/time_off/management.rst:127
+#: ../../content/applications/hr/time_off/management.rst:155
 msgid "Approve or refuse allocation requests"
 msgstr "할당 요청 승인 또는 거부"
 
-#: ../../content/applications/hr/time_off/management.rst:129
+#: ../../content/applications/hr/time_off/management.rst:157
 msgid ""
 "To approve or refuse an allocation request, navigate to :menuselection:`Time "
 "Off app --> Management --> Allocations`. At the end of each allocation "
@@ -52977,7 +53048,7 @@ msgstr ""
 "다: 요청 상태에 따라\\ :guilabel:`승인`\\ 또는\\ :guilabel:`확인`\\ 버튼과"
 "\\ :guilabel:`거부`\\ 버튼입니다."
 
-#: ../../content/applications/hr/time_off/management.rst:134
+#: ../../content/applications/hr/time_off/management.rst:162
 msgid ""
 "If more information is needed before approving an allocation request, click "
 "anywhere on the Kanban card (except for "
@@ -52988,7 +53059,7 @@ msgstr ""
 "클릭하십시오(:guilabel:`승인`, :guilabel:`확인`\\ 또는\\ :guilabel:`거부`\\ "
 "버튼 제외). 이렇게 하면 자세한 할당 요청 양식이 로드됩니다."
 
-#: ../../content/applications/hr/time_off/management.rst:145
+#: ../../content/applications/hr/time_off/management.rst:173
 msgid ""
 "Once a request has been approved, validtaed, or refused, the Kanban card "
 "disappears from the default :guilabel:`Allocations` page. To view *all* "
@@ -54460,6 +54531,305 @@ msgstr ""
 msgid ""
 "The lower half of the time off type form, with the color and icon selected."
 msgstr "색상과 아이콘이 선택된 휴가 유형 양식의 하단 부분."
+
+#~ msgid ""
+#~ "To view the attendance report, click :guilabel:`Reporting` in the top "
+#~ "menu. The default report displays attendance information for current "
+#~ "employees over the past three months, in a default :icon:`oi-view-"
+#~ "pivot` :guilabel:`Pivot table`. The rows are populated by employee, while "
+#~ "the columns are populated by the various attendance records. All entries "
+#~ "are grouped by month."
+#~ msgstr ""
+#~ "참석 보고서를 확인하려면 상단 메뉴에서 :guilabel:`보고서` 를 클릭합니다. "
+#~ "기본 보고서는 지난 3개월 동안 현재 직원의 근태 정보를 기본 :icon:`oi-view-"
+#~ "pivot` :guilabel:`피벗 테이블` 로 표시합니다. 행에는 직원이 나타나며, 열에"
+#~ "는 여러 가지 근태 정보가 입력됩니다. 모든 항목은 월별 그룹으로 분류됩니다."
+
+#~ msgid "Employee retention report"
+#~ msgstr "직원 유지율 보고서"
+
+#~ msgid "Gain insight into a company's retention rate."
+#~ msgstr "회사의 유지율에 대한 통찰력을 얻습니다."
+
+#~ msgid ""
+#~ "It is possible to determine the retention rate for a company by modifying "
+#~ "an existing report."
+#~ msgstr "기존 보고서를 수정하여 회사의 유지율을 지정할 수 있습니다."
+
+#~ msgid ""
+#~ "First, navigate to :menuselection:`Employees app --> Reporting --> "
+#~ "Contracts` to open the :guilabel:`Employee Analysis` report. This report "
+#~ "shows the number of all employees for the :guilabel:`Last 365 Days`, in a "
+#~ "default :icon:`fa-line-chart` :guilabel:`Line Chart`."
+#~ msgstr ""
+#~ "먼저 :menuselection:`직원 앱 --> 보고 --> 계약서` 로 이동하여 :guilabel:`"
+#~ "직원 분석` 보고서를 엽니다. 이 보고서에는 :guilabel:`지난 365일` 에 대한 "
+#~ "모든 직원 수가 기본 :icon:`fa-line-chart` :guilabel:`꺾은선 그래프` 로 나"
+#~ "타나 있습니다."
+
+#~ msgid "The default Employees Analysis report."
+#~ msgstr "기본값인 직원 분석 보고서입니다."
+
+#~ msgid ""
+#~ "Next, click the :guilabel:`Measures` :icon:`fa-caret-down` button in the "
+#~ "upper-left corner, revealing a drop-down menu. Click :guilabel:`# "
+#~ "Departure Employee` in the list, then click away from the drop-down menu "
+#~ "to close it. Now, the report shows all the employees who were archived "
+#~ "for the :guilabel:`Last 365 Days`."
+#~ msgstr ""
+#~ "다음으로 왼쪽 상단에 있는 :guilabel:`측정값` :icon:`fa-caret-down` 버튼을 "
+#~ "클릭하면 드롭다운 메뉴가 나타납니다. 목록에서 :guilabel:`퇴사 직원 수` 를 "
+#~ "클릭한 다음 드롭다운 메뉴 바깥쪽 부분을 클릭하여 닫습니다. 이제 보고서에"
+#~ "는 :guilabel:`지난 365일` 동안 보관된 모든 직원이 표시됩니다."
+
+#~ msgid ""
+#~ "To view this information in an easier format, click the :icon:`oi-view-"
+#~ "pivot` :guilabel:`(Pivot)` icon in the upper-right corner, and the data "
+#~ "is presented in a pivot table."
+#~ msgstr ""
+#~ "이 내용을 더 간단한 형식으로 보려면 오른쪽 상단에 있는 :icon:`oi-view-"
+#~ "pivot` :guilabel:`(피벗)` 아이콘을 클릭합니다. 그러면 데이터가 피벗 테이블"
+#~ "로 표시됩니다."
+
+#~ msgid ""
+#~ "The various employees, organized by department, populate the rows. The "
+#~ "columns display the following totals: the monthly :guilabel:`Wage`, "
+#~ "the :guilabel:`Fuel Card` budget, total :guilabel:`Annual Employee "
+#~ "Budget` (also referred to as the *annual salary*), the number "
+#~ "of :guilabel:`New Employees`, as well as the number "
+#~ "of :guilabel:`Departure Employees` (employees who left)."
+#~ msgstr ""
+#~ "다양한 직원을 부서별로 체계화하여 행에 입력됩니다. 열에는 월별 :guilabel:`"
+#~ "임금`, :guilabel:`유류비 카드` 예산, 총 :guilabel:`연간 직원 예산` (*연봉"
+#~ "* 으로도 지칭), :guilabel:`신입 직원` 수, :guilabel:`퇴사 직원` 수 (퇴사"
+#~ "한 직원) 항목 합계가 표시됩니다."
+
+#~ msgid ""
+#~ "The Employees Analysis report, modified to show departed employees only."
+#~ msgstr "직원 분석 보고서로, 퇴사한 직원만 표시되도록 수정되었습니다."
+
+#~ msgid "Employee retention rate comparison report"
+#~ msgstr "직원 유지율 비교 보고서"
+
+#~ msgid ""
+#~ "It is possible to compare data only for employees who left, compared to "
+#~ "the total current employees, between two separate time periods. This is "
+#~ "commonly referred to as the *employee retention rate*."
+#~ msgstr ""
+#~ "퇴사한 직원에 대해서만 데이터를 비교하는 것도 가능하며, 현재 총 직원과 대"
+#~ "비하여 별도의 두 기간으로 비교할 수 있습니다. 이를 보통 *직원 유지율* 이라"
+#~ "고 합니다."
+
+#~ msgid ""
+#~ "To view these metrics, first open the :guilabel:`Employee Analysis` "
+#~ "report by navigating to :menuselection:`Employees app --> Reporting --> "
+#~ "Contracts`. Click the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon in "
+#~ "the upper-right corner to view the information in a pivot table."
+#~ msgstr ""
+#~ "이와 같은 지표를 확인하려면 먼저 :guilabel:`직원 분석` 보고서"
+#~ "를 :menuselection:`임직원 관리 앱 --> 보고 --> 계약서` 로 이동하여 엽니"
+#~ "다. 오른쪽 상단에 있는 :icon:`oi-view-pivot` :guilabel:`(피벗)` 아이콘을 "
+#~ "클릭하면 피벗 테이블에서 정보를 확인할 수 있습니다."
+
+#~ msgid ""
+#~ "Next, click the :guilabel:`Measures` :icon:`fa-caret-down` button in the "
+#~ "upper-left corner, revealing a drop-down menu. Click :guilabel:`# New "
+#~ "Employees`, :guilabel:`Annual Employee Budget`, :guilabel:`Fuel Card`, "
+#~ "and :guilabel:`Wage` in the list, to deselect these metrics and hide them "
+#~ "in the table. Then, click :guilabel:`Count` at the bottom of the list to "
+#~ "enable that metric."
+#~ msgstr ""
+#~ "다음으로 왼쪽 상단에 있는 :guilabel:`측정값` :icon:`fa-caret-down` 버튼을 "
+#~ "클릭하면 드롭다운 메뉴가 나타납니다. 목록에서 :guilabel:`신규 직원 수"
+#~ "`, :guilabel:`연간 직원 예산`, :guilabel:`유류비 카드`, :guilabel:`임금` "
+#~ "을 클릭하여 해당 지표를 선택 해제하고 표에서 숨깁니다. 그런 다음 목록 하단"
+#~ "에 있는 :guilabel:`개수` 를 클릭하여 해당 지표를 활성화합니다."
+
+#~ msgid ""
+#~ "Click away from the drop-down menu to close it. Now, the report shows all "
+#~ "the employees who left the company (:guilabel:`# Departure Employee`), as "
+#~ "well as the total number of employees (:guilabel:`Count`), for "
+#~ "the :guilabel:`Last 365 Days`."
+#~ msgstr ""
+#~ "드롭다운 메뉴 바깥쪽을 클릭하여 닫습니다. 이제 보고서에는 회사에서 퇴사한 "
+#~ "모든 직원 (:guilabel:`# Departure Employee`) 및 :guilabel:`지난 365일` 동"
+#~ "안의 총 직원 수 (:guilabel:`개수`)가 표시됩니다."
+
+#~ msgid ""
+#~ "To compare the data for the current year with the previous year, click "
+#~ "the :icon:`fa-caret-down` :guilabel:`(down arrow)` in the search bar, "
+#~ "revealing multiple filter and grouping options. Click :guilabel:`Last 365 "
+#~ "Days` in the :icon:`fa-filter` :guilabel:`Filters` column, to turn off "
+#~ "that filter. Then, click :guilabel:`Date`, and click the current year (in "
+#~ "this example, :guilabel:`2024`) from the resulting drop-down menu."
+#~ msgstr ""
+#~ "현재 연도의 데이터를 이전 연도와 비교하려면 검색 창에서 :icon:`fa-caret-"
+#~ "down` :guilabel:`(아래쪽 화살표)` 를 클릭하여 여러 가지 필터 및 그룹 항목"
+#~ "을 표시합니다. :icon:`fa-filter` :guilabel:`필터` 열에서 :guilabel:`지난 "
+#~ "365일` 을 클릭하여 해당 필터를 해제합니다. 그런 다음 :guilabel:`날짜` 를 "
+#~ "클릭하여 드롭다운 메뉴가 나타나면 현재 연도 (이 예에서는 :guilabel:`2024`)"
+#~ "를 클릭합니다."
+
+#~ msgid ""
+#~ "Once a selection is made beneath :guilabel:`Date` in the :icon:`fa-"
+#~ "filter` :guilabel:`Filters` column, a :icon:`fa-"
+#~ "adjust` :guilabel:`Comparison` column appears. Click :guilabel:`Date: "
+#~ "Previous Year` in the new column, then click off of the drop-down menu to "
+#~ "close it."
+#~ msgstr ""
+#~ ":guilabel:`날짜` 아래에 있는 :icon:`fa-filter` :guilabel:`필터` 열을 선택"
+#~ "하면 :icon:`fa-adjust` :guilabel:`비교` 열이 나타납니다. 새로운 열에"
+#~ "서 :guilabel:`날짜: 이전 연도` 를 클릭한 다음 드롭다운 메뉴를 클릭하여 닫"
+#~ "습니다."
+
+#~ msgid ""
+#~ "In Odoo, in order to access the :icon:`fa-adjust` :guilabel:`Comparison` "
+#~ "column, a specific time *other than* :guilabel:`Last 365 Days` **must** "
+#~ "be selected. If not, the :icon:`fa-adjust` :guilabel:`Comparison` column "
+#~ "is **not** visible."
+#~ msgstr ""
+#~ "Odoo에서 :icon:`fa-adjust` :guilabel:`비교` 열에 액세스하려면, :guilabel:`"
+#~ "지난 365일` *이외의* 특정 기간을 **반드시** 선택해야 합니다. 선택하지 않"
+#~ "을 경우 :icon:`fa-adjust` :guilabel:`비교` 열이 **표시되지 않습니다.**"
+
+#~ msgid ""
+#~ "Now, the pivot table displays the total number of employees who left the "
+#~ "company (:guilabel:`# Departure Employee`), as well as the total number "
+#~ "of employees (:guilabel:`Count`) in the columns. These are further "
+#~ "divided by the two different years, and also displays "
+#~ "the :guilabel:`Variation` between the two."
+#~ msgstr ""
+#~ "이제 피벗 테이블에서 총 퇴사자 수 (:guilabel:`퇴사 직원 수`)를 확인할 수 "
+#~ "있으며 열에는 총 직원 수 (:guilabel:`개수`)가 표시됩니다. 이 항목들은 다"
+#~ "시 다른 2개 연도로 세분화되며 두 연도 사이의 :guilabel:`변동` 도 표시됩니"
+#~ "다."
+
+#~ msgid ""
+#~ "The rows display the departments, and lists each individual employee for "
+#~ "each department, in the rows."
+#~ msgstr ""
+#~ "행에는 부서가 표시되고 각 부서에 소속된 개별 직원이 행에 표시됩니다."
+
+#~ msgid ""
+#~ "For a more concise view of this report, click :icon:`fa-minus-square-"
+#~ "o` :guilabel:`Total` above the top row of the departments and employees, "
+#~ "to collapse the rows. Now, the table presents the total number of "
+#~ "employees who left the company for both years, compared to the total "
+#~ "number of employees for both years, including the difference, in a "
+#~ "percentage."
+#~ msgstr ""
+#~ "이 보고서를 더 간단하게 보려면 부서 및 직원 행의 맨 위에 있는 :icon:`fa-"
+#~ "minus-square-o` :guilabel:`총계` 를 클릭하여 행을 접습니다. 이제 표에는 "
+#~ "두 해 동안 퇴사한 직원의 총 수를 두 해 동안의 직원 총 수가 두 항목의 차이"
+#~ "와 함께 백분율로 표시됩니다."
+
+#~ msgid ""
+#~ "In this example, :guilabel:`3` employees out of :guilabel:`83` left in "
+#~ "2023, and :guilabel:`8` employees out of :guilabel:`202` left in 2024. "
+#~ "There was a :guilabel:`166.67%` increase in the employees who left in "
+#~ "2024 as compared to 2023. Additionally, there was a :guilabel:`143.37%` "
+#~ "increase in the total number of employees in 2024 as compared to 2023."
+#~ msgstr ""
+#~ "이 예시에서 2023년에는 :guilabel:`83명` 중 :guilabel:`3명` 의 직원이 퇴사"
+#~ "했고, 2024년에는 :guilabel:`202명` 중 퇴사자 수는 :guilabel:`8명` 입니다. "
+#~ "2023년에 비해 2024년의 퇴사자 수가 :guilabel:`166.67%` 증가했습니다. 또한 "
+#~ "2023년에 비해 2024년의 총 직원 수는 :guilabel:`143.37%` 증가했습니다."
+
+#~ msgid ""
+#~ "The report modified to show the difference between two years of employees "
+#~ "who left."
+#~ msgstr ""
+#~ "퇴사한 직원과 관련된 2년 간의 차액이 표시되도록 보고서가 수정되었습니다."
+
+#~ msgid ""
+#~ "To view more detailed rates for each department, click :icon:`fa-plus-"
+#~ "square` :guilabel:`Total` in the single row, revealing a drop-down menu, "
+#~ "and click :guilabel:`Department`. Click away from the drop-down to close "
+#~ "it, and now the pivot table displays the total number of employees who "
+#~ "left (:guilabel:`# Departure Employee`), the total number of employees "
+#~ "(:guilabel:`Count`), and the :guilabel:`Variation` (in a percentage) for "
+#~ "both 2023 and 2024, organized by department."
+#~ msgstr ""
+#~ "각 부서별로 자세히 요금을 확인하려면 단일 행에서 :icon:`fa-plus-"
+#~ "square` :guilabel:`총계` 를 클릭하여 드롭다운 메뉴가 표시되면 :guilabel:`"
+#~ "부서` 를 클릭합니다. 드롭다운 바깥 쪽을 클릭하여 메뉴가 닫히면 피벗 테이블"
+#~ "에는 떠난 2023년과 2024년의 2개년도 대해 퇴사한 총 직원 수 (:guilabel:`# "
+#~ "Departure Employee`), 전체 직원 수 (:guilabel:`Count`) 및 :guilabel:`변동"
+#~ "` (백분율) 사항이 부서별로 표시됩니다."
+
+#~ msgid ""
+#~ "In this example, it can be determined that the :guilabel:`Management` "
+#~ "department had the best retention rate in 2024 as compared to 2023, with "
+#~ "a :guilabel:`Variation` rate of :guilabel:`-100%`. Additionally, it can "
+#~ "be determined that the :guilabel:`Management / Research & Development` "
+#~ "department had the most turnover, with a :guilabel:`Variation` "
+#~ "of :guilabel:`300%`."
+#~ msgstr ""
+#~ "이 예시에서는 2023년과 비교하여 2024년에 가장 유지율을 높았던 것"
+#~ "은 :guilabel:`경영` 부서로 :guilabel:`변동` 비율이 :guilabel:`-100%` 임을 "
+#~ "알 수 있습니다. 또한 이직률이 가장 많은 높았던 것은 :guilabel:`경영/연구개"
+#~ "발` 부서로 :guilabel:`변동` 비율이 :guilabel:`300%` 임을 알 수 있습니다."
+
+#~ msgid "The expanded employee retention report by department."
+#~ msgstr "부서별로 확장되어 있는 직원 유지 보고서입니다."
+
+#~ msgid "California (CA)"
+#~ msgstr "California (CA)"
+
+#~ msgid "New York (NY)"
+#~ msgstr "New York (NY)"
+
+#~ msgid "Texas (TX)"
+#~ msgstr "Texas (TX)"
+
+#~ msgid "Florida (FL)"
+#~ msgstr "Florida (FL)"
+
+#~ msgid "Colorado (CO)"
+#~ msgstr "Colorado (CO)"
+
+#~ msgid "Alabama (AL)"
+#~ msgstr "Alabama (AL)"
+
+#~ msgid "Washington (WA)"
+#~ msgstr "Washington (WA)"
+
+#~ msgid "Nevada (NV)"
+#~ msgstr "Nevada (NV)"
+
+#~ msgid "Vermont (VT)"
+#~ msgstr "Vermont (VT)"
+
+#~ msgid "Illinois (IL)"
+#~ msgstr "Illinois (IL)"
+
+#~ msgid "Virginia (VA)"
+#~ msgstr "Virginia (VA)"
+
+#~ msgid "Washington, D.C (DC)"
+#~ msgstr "Washington, D.C (DC)"
+
+#~ msgid "Arizona (AZ)"
+#~ msgstr "Arizona (AZ)"
+
+#~ msgid "Idaho (ID)"
+#~ msgstr "Idaho (ID)"
+
+#~ msgid "Oregon (OR)"
+#~ msgstr "Oregon (OR)"
+
+#~ msgid "North Carolina (NC)"
+#~ msgstr "North Carolina (NC)"
+
+#~ msgid ""
+#~ "Once a request has been approved, validated, or refused, the Kanban card "
+#~ "disappears from the default :guilabel:`All Time Off` page. To view *all* "
+#~ "requests, including approved and refused requests, clear the default "
+#~ "filters in the search bar."
+#~ msgstr ""
+#~ "요청이 승인, 확인 또는 거부되면 기본\\ :guilabel:`모든 휴가`\\ 페이지에서 "
+#~ "칸반 카드가 사라집니다. 승인 및 거부된 요청을 포함하여 *모든* 요청을 보려"
+#~ "면 검색창의 기본 필터를 지우세요."
 
 #~ msgid ""
 #~ "Two overtime rates are cteated, one for 150% and the other for 120%. "

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-10 17:30+0000\n"
+"POT-Creation-Date: 2026-07-24 17:32+0000\n"
 "PO-Revision-Date: 2026-07-23 09:09+0000\n"
 "Last-Translator: Saara Hakanen <sahak@odoo.com>\n"
 "Language-Team: Finnish <https://translate.odoo.com/projects/odoo-19-doc/hr/"
@@ -3302,6 +3302,10 @@ msgstr ":doc:`attendances/hardware`"
 msgid ":doc:`attendances/attendance_reporting`"
 msgstr ":doc:`attendances/attendance_reporting`"
 
+#: ../../content/applications/hr/attendances.rst:158
+msgid ":doc:`attendances/time_off_ledger`"
+msgstr ""
+
 #: ../../content/applications/hr/attendances/attendance_logs.rst:3
 msgid "Attendance logs"
 msgstr "Läsnäolotietueet"
@@ -4176,18 +4180,13 @@ msgstr "Näytä raportti"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:13
 msgid ""
-"To view the attendance report, click :guilabel:`Reporting` in the top menu. "
+"To view the attendances report, click :guilabel:`Reporting` in the top menu. "
 "The default report displays attendance information for current employees "
 "over the past three months, in a default :icon:`oi-view-"
 "pivot` :guilabel:`Pivot table`. The rows are populated by employee, while "
 "the columns are populated by the various attendance records. All entries are "
 "grouped by month."
 msgstr ""
-"Nähdäksesi läsnäoloraportin, klikkaa :guilabel:`Raportointi` ylävalikossa. "
-"Oletusraportti näyttää nykyisten työntekijöiden läsnäolotiedot viimeisten "
-"kolmen kuukauden ajalta :icon:`oi-view-pivot` :guilabel:`Pivot-taulukossa`. "
-"Rivit sisältävät työntekijät, kun taas sarakkeet sisältävät erilaiset "
-"läsnäolotietueet. Kaikki merkinnät on ryhmitelty kuukausittain."
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:18
 msgid "The columns presented are:"
@@ -6148,8 +6147,164 @@ msgstr ""
 "maksetaan :guilabel:`150 %` -korvauksella, ja aika "
 "kirjataan :guilabel:`ylityötunteina` heidän läsnäololokiinsa."
 
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:3
+msgid "Time off ledger"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:5
+msgid ""
+"The *Time Off Ledger* report in the **Attendances** app helps managers by "
+"flagging missing hours on employee attendance records. This allows managers "
+"to determine if employees are forgetting to sign in or out, decide if time "
+"off needs to be approved, and potentially flag patterns."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:10
+msgid "View time off ledger report"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:12
+msgid ""
+"To view the *Time Off Ledger* report, navigate "
+"to :menuselection:`Attendances app --> Reporting --> Time Off Ledger`. The "
+"report displays a nested list of missing attendance hours from the last two "
+"months. All entries are grouped by month, then employee. Click the :icon:`fa-"
+"caret-right` :guilabel:`(triangle)` icon to display the list of employees, "
+"then click the :icon:`fa-caret-right` :guilabel:`(triangle)` icon on the "
+"individual employee to view all the detailed attendance records."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:18
+msgid ""
+"When expanded, each individual record displays the following information:"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:20
+msgid ":guilabel:`Employee`: The employee with missing hours."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:21
+msgid ":guilabel:`Date`: The date the missing hours are from."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:22
+msgid ""
+":guilabel:`Expected Hours`: The number of hours the employee should have "
+"worked that day, calculated from their :ref:`working schedule <employees/"
+"schedule>`, configured on their employee record."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:25
+msgid ""
+":guilabel:`Worked Hours`: The total logged time the employee worked that day."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:26
+msgid ""
+":guilabel:`Approved Time Off`: The approved hours of time off for that day."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:27
+msgid ""
+":guilabel:`Difference`: The difference between the :guilabel:`Expected "
+"Hours` and the :guilabel:`Worked Hours` for the employee that day."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:None
+msgid ""
+"The time off report, expanded to show the missing records for Anita Oliver "
+"from July 2026."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:34
+msgid "Resolve conflicts"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:36
+msgid ""
+"When missing hours appear on the report, the entries should be investigated "
+"to determine the issue. The common reasons for missing attendance records "
+"are:"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:39
+msgid ":ref:`Forgot to log in to work that day. <attendances/forgot-log>`"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:40
+msgid ""
+":ref:`Forgot to request time off that day. <attendances/forgot-request>`"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:41
+msgid ""
+":ref:`Their time off request was not approved for that day. <attendances/"
+"unapproved-time-off>`"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:42
+msgid ""
+":ref:`They requested time off for part of their workday, but did not log any "
+"attendance records for the remainder of the time. <attendances/forgot-"
+"partial-log>`"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:45
+msgid ""
+"Once the reason for the missing entry is determined, the required records "
+"can be updated. Once updated, the related entries are no longer displayed in "
+"the *Time Off Ledger* report."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:51
+msgid "Forgot to log in to work"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:53
+msgid ""
+"Occasionally, employees forget to log in and out of the **Attendances** app. "
+"When this occurs, the employee's manager must :ref:`create the attendance "
+"records <attendances/create-records>` retroactively in the **Attendances** "
+"app."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:60
+msgid "Forgot to request time off"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:62
+msgid ""
+"If the employee did not request time off, the employee's manager or time off "
+"officer must :ref:`create the missing time off request <time_off/missing>` "
+"retroactively in the **Time Off** app."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:68
+msgid "Time off request was unapproved"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:70
+msgid ""
+"If the employee requested time off and the employee's manager or time off "
+"officer did not approve the request in time, the :ref:`request must be "
+"approved <time_off/manage-time-off>` in the **Time Off** app."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:77
+msgid "Partial time off day missing attendance records"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:79
+msgid ""
+"Occasionally, employees request time off for part of the workday, and are "
+"expected to work the remainder of the day. When employees forget to log in "
+"and out for the partial workday, the employee's manager must :ref:`create "
+"the attendance record <attendances/create-records>` retroactively in the "
+"**Attendances** app."
+msgstr ""
+
 #: ../../content/applications/hr/employees.rst:5
-#: ../../content/applications/hr/employees.rst:81
+#: ../../content/applications/hr/employees.rst:76
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:210
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:91
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:67
@@ -6157,7 +6312,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:69
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:58
 #: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:35
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:97
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:126
 msgid "Employees"
 msgstr "Työntekijät"
 
@@ -6274,16 +6429,7 @@ msgstr "Uloskirjoittaminen"
 msgid "Take care of employee records when collaboration ends."
 msgstr "Huolehdi työntekijätiedoista, kun yhteistyö päättyy."
 
-#: ../../content/applications/hr/employees.rst:67
-#: ../../content/applications/hr/employees/retention_report.rst:3
-msgid "Employee retention report"
-msgstr "Työntekijöiden pysyvyysraportti"
-
-#: ../../content/applications/hr/employees.rst:67
-msgid "Gain insight into a company's retention rate."
-msgstr "Saa käsitys yrityksen säilyttämisasteesta."
-
-#: ../../content/applications/hr/employees.rst:75
+#: ../../content/applications/hr/employees.rst:70
 #: ../../content/applications/hr/fleet/new_vehicle.rst:16
 #: ../../content/applications/hr/lunch.rst:19
 #: ../../content/applications/hr/payroll.rst:38
@@ -6292,7 +6438,7 @@ msgstr "Saa käsitys yrityksen säilyttämisasteesta."
 msgid "Settings"
 msgstr "Asetukset"
 
-#: ../../content/applications/hr/employees.rst:77
+#: ../../content/applications/hr/employees.rst:72
 msgid ""
 "To view and configure the available settings, navigate "
 "to :menuselection:`Employees app --> Configuration --> Settings`."
@@ -6300,7 +6446,7 @@ msgstr ""
 "Tarkastellaksesi ja määrittääksesi saatavilla olevat asetukset siirry "
 "kohtaan :menuselection:`Työntekijät-sovellus --> Asetukset --> Asetukset`."
 
-#: ../../content/applications/hr/employees.rst:83
+#: ../../content/applications/hr/employees.rst:78
 msgid ""
 ":guilabel:`Presence Display`: Select how the employee's availability status "
 "is calculated."
@@ -6308,7 +6454,7 @@ msgstr ""
 ":guilabel:`Läsnäolon näyttö`: Valitse, miten työntekijän saatavuustila "
 "lasketaan."
 
-#: ../../content/applications/hr/employees.rst:85
+#: ../../content/applications/hr/employees.rst:80
 msgid ""
 ":guilabel:`Based on attendances`: Employees are marked available "
 "when :ref:`checked into <attendances/check-in>` the **Attendances** app."
@@ -6317,7 +6463,7 @@ msgstr ""
 "he :ref:`kirjautuvat sisään <attendances/check-in>` **Läsnäolot**-"
 "sovellukseen."
 
-#: ../../content/applications/hr/employees.rst:87
+#: ../../content/applications/hr/employees.rst:82
 msgid ""
 ":guilabel:`Based on user status in system`: Employees are marked available "
 "when they :doc:`log in to Odoo <attendances/check_in_check_out>`."
@@ -6326,7 +6472,7 @@ msgstr ""
 "merkitään saataville, kun he :doc:`kirjautuvat sisään Odoo-järjestelmään "
 "<attendances/check_in_check_out>`."
 
-#: ../../content/applications/hr/employees.rst:90
+#: ../../content/applications/hr/employees.rst:85
 msgid ""
 ":guilabel:`Advanced Presence Control`: When enabled, presence status can be "
 "calculated from operational signals rather than check-ins or logins:"
@@ -6335,7 +6481,7 @@ msgstr ""
 "voidaan laskea operatiivisten signaalien perusteella sisäänkirjautumisten "
 "tai kirjautumisten sijaan:"
 
-#: ../../content/applications/hr/employees.rst:93
+#: ../../content/applications/hr/employees.rst:88
 msgid ""
 ":guilabel:`Based on number of emails sent`: An employee is marked present if "
 "they send at least # emails per hour; otherwise, they are marked absent. "
@@ -6347,7 +6493,7 @@ msgstr ""
 "muuten hänet merkitään poissaolevaksi. Syötä vähimmäismäärä lähetettäviä "
 "sähköposteja :guilabel:`Lähetetyt sähköpostit` -kenttään."
 
-#: ../../content/applications/hr/employees.rst:96
+#: ../../content/applications/hr/employees.rst:91
 msgid ""
 ":guilabel:`Based on IP Address`: An employee is marked present only when "
 "connected from one of the specified corporate IP addresses. Enter the IP "
@@ -6359,7 +6505,7 @@ msgstr ""
 "Syötä IP-osoitteet :guilabel:`IP-osoitteet` -kenttään erottamalla jokainen "
 "osoite pilkulla."
 
-#: ../../content/applications/hr/employees.rst:100
+#: ../../content/applications/hr/employees.rst:95
 msgid ""
 ":guilabel:`Skills Management`: Enable this option to display "
 "the :ref:`resumé tab <employees/resume>` on employee profiles. This allows "
@@ -6372,11 +6518,11 @@ msgstr ""
 "resume>`, :ref:`taitojen <employees/skills>` ja :doc:`sertifikaattien "
 "<employees/certifications>` näyttämisen."
 
-#: ../../content/applications/hr/employees.rst:106
+#: ../../content/applications/hr/employees.rst:101
 msgid "Work organization"
 msgstr "Työn organisointi"
 
-#: ../../content/applications/hr/employees.rst:108
+#: ../../content/applications/hr/employees.rst:103
 msgid ""
 "Using the drop-down menu, select the default :guilabel:`Company Working "
 "Hours`. The default options are a :guilabel:`Standard 40 hours/week` or "
@@ -6386,7 +6532,7 @@ msgstr ""
 "Oletusvaihtoehdot ovat :guilabel:`Vakio 40 tuntia/viikko` "
 "tai :guilabel:`tapaamisen resurssin oletuskalenteri`."
 
-#: ../../content/applications/hr/employees.rst:111
+#: ../../content/applications/hr/employees.rst:106
 msgid ""
 "The available working hours listed are the same as the "
 "configured :doc:`working schedules <payroll/working_schedules>` in the "
@@ -6398,12 +6544,12 @@ msgstr ""
 "working_schedules>`. Työaikoja voidaan luoda ja muokata sekä "
 "**Palkkahallinto**- että **Työntekijät**-sovelluksista."
 
-#: ../../content/applications/hr/employees.rst:116
+#: ../../content/applications/hr/employees.rst:111
 #: ../../content/applications/hr/fleet/new_vehicle.rst:230
 msgid "Contract"
 msgstr "Sopimus"
 
-#: ../../content/applications/hr/employees.rst:118
+#: ../../content/applications/hr/employees.rst:113
 msgid ""
 "Define the number of days in advance that a manager is notified about an "
 "upcoming contract or work permit expiration in the "
@@ -6414,11 +6560,11 @@ msgstr ""
 "sopimuksen tai työluvan vanhenemisesta :guilabel:`Sopimuksen vanhenemisen "
 "ilmoitusaika` ja :guilabel:`Työluvan vanhenemisen ilmoitusaika` -kentissä."
 
-#: ../../content/applications/hr/employees.rst:123
+#: ../../content/applications/hr/employees.rst:118
 msgid "Salary configurator"
 msgstr "Palkkalaskuri"
 
-#: ../../content/applications/hr/employees.rst:125
+#: ../../content/applications/hr/employees.rst:120
 msgid ""
 "Define how long an offer remains valid when extending a job offer or "
 "changing a salary. Enter the duration, in days, in the :guilabel:`Salary "
@@ -6428,17 +6574,17 @@ msgstr ""
 "muutettaessa. Syötä kesto päivinä :guilabel:`Palkkapaketin määrittäjä` "
 "-kenttään."
 
-#: ../../content/applications/hr/employees.rst:128
-#: ../../content/applications/hr/employees.rst:141
+#: ../../content/applications/hr/employees.rst:123
+#: ../../content/applications/hr/employees.rst:136
 msgid ""
 "This field only appears if the **Salary Configurator** module is installed."
 msgstr "Tämä kenttä näkyy vain, jos **Palkkalaskuri**-moduuli on asennettu."
 
-#: ../../content/applications/hr/employees.rst:131
+#: ../../content/applications/hr/employees.rst:126
 msgid "Extra time off allocation"
 msgstr "Ylimääräinen vapaa-aikavaraus"
 
-#: ../../content/applications/hr/employees.rst:133
+#: ../../content/applications/hr/employees.rst:128
 msgid ""
 "During salary package negotiations, enable the checkbox in this section if "
 "additional time off requests are allowed. When enabled, select "
@@ -6450,7 +6596,7 @@ msgstr ""
 "avattavasta valikosta :doc:`Vapaan tyyppi <time_off/time_off_types>`, joka "
 "on luotu lisäpäiviä varten."
 
-#: ../../content/applications/hr/employees.rst:137
+#: ../../content/applications/hr/employees.rst:132
 msgid ""
 "The default available options are :guilabel:`Paid Time "
 "Off`, :guilabel:`Compensatory Days`, and :guilabel:`Extra Time Off`. If "
@@ -8087,7 +8233,7 @@ msgstr "Uuden työntekijälomakkeen yläpuoli kokonaan täytettynä."
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:95
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:78
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:67
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:106
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:135
 msgid "Work tab"
 msgstr "Työ-välilehti"
 
@@ -8820,7 +8966,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:105
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:84
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:73
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:116
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:145
 msgid "Personal tab"
 msgstr "Henkilökohtaiset tiedot -välilehti"
 
@@ -9384,7 +9530,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:131
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:103
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:83
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:133
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:162
 msgid "Payroll tab"
 msgstr "Palkkahallinto-välilehti"
 
@@ -11073,266 +11219,6 @@ msgstr ""
 "Perehdytys voidaan käynnistää vain tietokannan :doc:`käyttäjille <../../"
 "general/users>`. Jos työntekijän profiilista puuttuu tietoja, näkyviin tulee "
 "varoitus, jossa luetellaan tarvittavat tiedot."
-
-#: ../../content/applications/hr/employees/retention_report.rst:5
-msgid ""
-"It is possible to determine the retention rate for a company by modifying an "
-"existing report."
-msgstr ""
-"On mahdollista määrittää yrityksen pysyvyysaste muokkaamalla olemassa olevaa "
-"raporttia."
-
-#: ../../content/applications/hr/employees/retention_report.rst:7
-msgid ""
-"First, navigate to :menuselection:`Employees app --> Reporting --> "
-"Contracts` to open the :guilabel:`Employee Analysis` report. This report "
-"shows the number of all employees for the :guilabel:`Last 365 Days`, in a "
-"default :icon:`fa-line-chart` :guilabel:`Line Chart`."
-msgstr ""
-"Siirry ensin kohtaan :menuselection:`Employees app --> Reporting --> "
-"Contracts` avataksesi :guilabel:`Employee Analysis` -raportin. Tämä raportti "
-"näyttää kaikkien työntekijöiden määrän :guilabel:`Last 365 Days` -ajalta "
-"oletusarvoisena :icon:`fa-line-chart`:guilabel:`Line Chart` -kaaviona."
-
-#: ../../content/applications/hr/employees/retention_report.rst:None
-msgid "The default Employees Analysis report."
-msgstr "Oletusraportti työntekijöiden analyysistä."
-
-#: ../../content/applications/hr/employees/retention_report.rst:15
-msgid ""
-"Next, click the :guilabel:`Measures` :icon:`fa-caret-down` button in the "
-"upper-left corner, revealing a drop-down menu. Click :guilabel:`# Departure "
-"Employee` in the list, then click away from the drop-down menu to close it. "
-"Now, the report shows all the employees who were archived for "
-"the :guilabel:`Last 365 Days`."
-msgstr ""
-"Klikkaa seuraavaksi :guilabel:`Mittarit` :icon:`fa-caret-down` -painiketta "
-"vasemmassa yläkulmassa, jolloin avautuu pudotusvalikko. Klikkaa "
-"listasta :guilabel:`# Departure Employee` ja klikkaa sitten pudotusvalikon "
-"ulkopuolelle sulkeaksesi sen. Nyt raportti näyttää kaikki työntekijät, jotka "
-"on arkistoitu ajanjaksolla :guilabel:`Last 365 Days`."
-
-#: ../../content/applications/hr/employees/retention_report.rst:20
-msgid ""
-"To view this information in an easier format, click the :icon:`oi-view-"
-"pivot` :guilabel:`(Pivot)` icon in the upper-right corner, and the data is "
-"presented in a pivot table."
-msgstr ""
-"Voit tarkastella tietoja helpommin klikkaamalla :icon:`oi-view-"
-"pivot` :guilabel:`(Pivot)` -kuvaketta oikeassa yläkulmassa, jolloin tiedot "
-"esitetään pivot-taulukkona."
-
-#: ../../content/applications/hr/employees/retention_report.rst:23
-msgid ""
-"The various employees, organized by department, populate the rows. The "
-"columns display the following totals: the monthly :guilabel:`Wage`, "
-"the :guilabel:`Fuel Card` budget, total :guilabel:`Annual Employee Budget` "
-"(also referred to as the *annual salary*), the number of :guilabel:`New "
-"Employees`, as well as the number of :guilabel:`Departure Employees` "
-"(employees who left)."
-msgstr ""
-"Eri työntekijät on järjestetty osastoittain riveille. Sarakkeet näyttävät "
-"seuraavat summat: kuukausittaisen :guilabel:`Wage`, :guilabel:`Fuel Card` "
-"-budjetin, kokonais :guilabel:`Annual Employee Budget` (jota kutsutaan myös "
-"*vuosipalkaksi*), :guilabel:`New Employees` -määrän "
-"sekä :guilabel:`Departure Employees` -määrän (lähteneet työntekijät)."
-
-#: ../../content/applications/hr/employees/retention_report.rst:None
-msgid ""
-"The Employees Analysis report, modified to show departed employees only."
-msgstr ""
-"Työntekijöiden analyysiraportti, joka on muokattu näyttämään vain lähteneet "
-"työntekijät."
-
-#: ../../content/applications/hr/employees/retention_report.rst:33
-msgid "Employee retention rate comparison report"
-msgstr "Työntekijöiden säilyvyysasteen vertailuraportti"
-
-#: ../../content/applications/hr/employees/retention_report.rst:35
-msgid ""
-"It is possible to compare data only for employees who left, compared to the "
-"total current employees, between two separate time periods. This is commonly "
-"referred to as the *employee retention rate*."
-msgstr ""
-"On mahdollista verrata vain lähteneiden työntekijöiden tietoja verrattuna "
-"nykyisten työntekijöiden kokonaismäärään kahden erillisen ajanjakson "
-"välillä. Tätä kutsutaan yleisesti *työntekijöiden säilyvyysasteeksi*."
-
-#: ../../content/applications/hr/employees/retention_report.rst:38
-msgid ""
-"To view these metrics, first open the :guilabel:`Employee Analysis` report "
-"by navigating to :menuselection:`Employees app --> Reporting --> Contracts`. "
-"Click the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon in the upper-right "
-"corner to view the information in a pivot table."
-msgstr ""
-"Voit tarkastella näitä mittareita avaamalla ensin :guilabel:`Employee "
-"Analysis` -raportin siirtymällä kohtaan :menuselection:`Työntekijät-sovellus "
-"--> Raportointi --> Sopimukset`. Klikkaa :icon:`oi-view-"
-"pivot` :guilabel:`(Pivot)` -kuvaketta oikeassa yläkulmassa tarkastellaksesi "
-"tietoja pivot-taulukkona."
-
-#: ../../content/applications/hr/employees/retention_report.rst:42
-msgid ""
-"Next, click the :guilabel:`Measures` :icon:`fa-caret-down` button in the "
-"upper-left corner, revealing a drop-down menu. Click :guilabel:`# New "
-"Employees`, :guilabel:`Annual Employee Budget`, :guilabel:`Fuel Card`, "
-"and :guilabel:`Wage` in the list, to deselect these metrics and hide them in "
-"the table. Then, click :guilabel:`Count` at the bottom of the list to enable "
-"that metric."
-msgstr ""
-"Klikkaa seuraavaksi :guilabel:`Mittarit` :icon:`fa-caret-down` -painiketta "
-"vasemmassa yläkulmassa, jolloin avautuu pudotusvalikko. Klikkaa "
-"listasta :guilabel:`# New Employees`, :guilabel:`Annual Employee "
-"Budget`, :guilabel:`Fuel Card` ja :guilabel:`Wage`, poistaaksesi nämä "
-"mittarit valinnasta ja piilottaaksesi ne taulukosta. Klikkaa sitten listan "
-"alareunassa :guilabel:`Count`, ottaaksesi mittarin käyttöön."
-
-#: ../../content/applications/hr/employees/retention_report.rst:47
-msgid ""
-"Click away from the drop-down menu to close it. Now, the report shows all "
-"the employees who left the company (:guilabel:`# Departure Employee`), as "
-"well as the total number of employees (:guilabel:`Count`), for "
-"the :guilabel:`Last 365 Days`."
-msgstr ""
-"Klikkaa pudotusvalikon ulkopuolelle sulkeaksesi sen. Nyt raportti näyttää "
-"kaikki yrityksen jättäneet työntekijät (:guilabel:`# Departure Employee`) "
-"sekä työntekijöiden kokonaismäärän (:guilabel:`Count`) "
-"ajanjaksolta :guilabel:`Last 365 Days`."
-
-#: ../../content/applications/hr/employees/retention_report.rst:51
-msgid ""
-"To compare the data for the current year with the previous year, click "
-"the :icon:`fa-caret-down` :guilabel:`(down arrow)` in the search bar, "
-"revealing multiple filter and grouping options. Click :guilabel:`Last 365 "
-"Days` in the :icon:`fa-filter` :guilabel:`Filters` column, to turn off that "
-"filter. Then, click :guilabel:`Date`, and click the current year (in this "
-"example, :guilabel:`2024`) from the resulting drop-down menu."
-msgstr ""
-"Voit verrata kuluvan vuoden tietoja edellisen vuoden tietoihin "
-"klikkaamalla :icon:`fa-caret-down` :guilabel:`(alanuoli)` hakupalkissa, "
-"jolloin näkyviin tulee useita suodatus- ja ryhmittelyasetuksia. "
-"Klikkaa :guilabel:`Last 365 Days` :icon:`fa-filter` :guilabel:`Suodattimet` "
-"-sarakkeessa poistaaksesi suodattimen käytöstä. Klikkaa "
-"sitten :guilabel:`Date` ja valitse avautuvasta pudotusvalikosta kuluva vuosi "
-"(tässä esimerkissä :guilabel:`2024`)."
-
-#: ../../content/applications/hr/employees/retention_report.rst:57
-msgid ""
-"Once a selection is made beneath :guilabel:`Date` in the :icon:`fa-"
-"filter` :guilabel:`Filters` column, a :icon:`fa-"
-"adjust` :guilabel:`Comparison` column appears. Click :guilabel:`Date: "
-"Previous Year` in the new column, then click off of the drop-down menu to "
-"close it."
-msgstr ""
-"Kun valinta on tehty :guilabel:`Date` -kohdassa :icon:`fa-"
-"filter` :guilabel:`Suodattimet` -sarakkeessa, näkyviin tulee :icon:`fa-"
-"adjust` :guilabel:`Vertailu` -sarake. Klikkaa uudessa "
-"sarakkeessa :guilabel:`Date: Previous Year` ja klikkaa sitten pudotusvalikon "
-"ulkopuolelle sulkeaksesi sen."
-
-#: ../../content/applications/hr/employees/retention_report.rst:62
-msgid ""
-"In Odoo, in order to access the :icon:`fa-adjust` :guilabel:`Comparison` "
-"column, a specific time *other than* :guilabel:`Last 365 Days` **must** be "
-"selected. If not, the :icon:`fa-adjust` :guilabel:`Comparison` column is "
-"**not** visible."
-msgstr ""
-"Odoossa :icon:`fa-adjust` :guilabel:`Vertailu` -sarakkeen "
-"käyttöönottamiseksi on valittava jokin *muu* ajankohta kuin :guilabel:`Last "
-"365 Days`. Muutoin :icon:`fa-adjust` :guilabel:`Vertailu` -sarake **ei** ole "
-"näkyvissä."
-
-#: ../../content/applications/hr/employees/retention_report.rst:66
-msgid ""
-"Now, the pivot table displays the total number of employees who left the "
-"company (:guilabel:`# Departure Employee`), as well as the total number of "
-"employees (:guilabel:`Count`) in the columns. These are further divided by "
-"the two different years, and also displays the :guilabel:`Variation` between "
-"the two."
-msgstr ""
-"Nyt pivot-taulukko näyttää sarakkeissa yrityksen jättäneiden työntekijöiden "
-"kokonaismäärän (:guilabel:`# Departure Employee`) sekä työntekijöiden "
-"kokonaismäärän (:guilabel:`Count`). Nämä on jaettu kahteen eri vuoteen, ja "
-"lisäksi näkyy niiden välinen :guilabel:`Variation`."
-
-#: ../../content/applications/hr/employees/retention_report.rst:71
-msgid ""
-"The rows display the departments, and lists each individual employee for "
-"each department, in the rows."
-msgstr "Riveillä näkyvät osastot ja kunkin osaston yksittäiset työntekijät."
-
-#: ../../content/applications/hr/employees/retention_report.rst:74
-msgid ""
-"For a more concise view of this report, click :icon:`fa-minus-square-"
-"o` :guilabel:`Total` above the top row of the departments and employees, to "
-"collapse the rows. Now, the table presents the total number of employees who "
-"left the company for both years, compared to the total number of employees "
-"for both years, including the difference, in a percentage."
-msgstr ""
-"Saat tiiviimmän näkymän raportista klikkaamalla :icon:`fa-minus-square-"
-"o` :guilabel:`Total` osastojen ja työntekijöiden ylimmän rivin yläpuolella "
-"rivien pienentämiseksi. Nyt taulukko esittää molempien vuosien aikana "
-"yrityksen jättäneiden työntekijöiden kokonaismäärän verrattuna molempien "
-"vuosien työntekijöiden kokonaismäärään, mukaan lukien ero prosentteina."
-
-#: ../../content/applications/hr/employees/retention_report.rst:80
-msgid ""
-"In this example, :guilabel:`3` employees out of :guilabel:`83` left in 2023, "
-"and :guilabel:`8` employees out of :guilabel:`202` left in 2024. There was "
-"a :guilabel:`166.67%` increase in the employees who left in 2024 as compared "
-"to 2023. Additionally, there was a :guilabel:`143.37%` increase in the total "
-"number of employees in 2024 as compared to 2023."
-msgstr ""
-"Tässä esimerkissä :guilabel:`3` työntekijää :guilabel:`83`:sta lähti vuonna "
-"2023 ja :guilabel:`8` työntekijää :guilabel:`202`:sta lähti vuonna 2024. "
-"Vuonna 2024 lähteneiden työntekijöiden määrä kasvoi :guilabel:`166,67 %` "
-"verrattuna vuoteen 2023. Lisäksi työntekijöiden kokonaismäärä "
-"kasvoi :guilabel:`143,37 %` vuonna 2024 verrattuna vuoteen 2023."
-
-#: ../../content/applications/hr/employees/retention_report.rst:0
-msgid ""
-"The report modified to show the difference between two years of employees "
-"who left."
-msgstr ""
-"Muokattu raportti, joka näyttää kahden vuoden välisen eron lähteneiden "
-"työntekijöiden osalta."
-
-#: ../../content/applications/hr/employees/retention_report.rst:89
-msgid ""
-"To view more detailed rates for each department, click :icon:`fa-plus-"
-"square` :guilabel:`Total` in the single row, revealing a drop-down menu, and "
-"click :guilabel:`Department`. Click away from the drop-down to close it, and "
-"now the pivot table displays the total number of employees who left "
-"(:guilabel:`# Departure Employee`), the total number of employees "
-"(:guilabel:`Count`), and the :guilabel:`Variation` (in a percentage) for "
-"both 2023 and 2024, organized by department."
-msgstr ""
-"Voit tarkastella kunkin osaston tarkempia lukuja klikkaamalla :icon:`fa-plus-"
-"square` :guilabel:`Total` yksittäisellä rivillä, jolloin avautuu "
-"pudotusvalikko, ja klikkaamalla :guilabel:`Osasto`. Klikkaa pudotusvalikon "
-"ulkopuolelle sulkeaksesi sen, ja nyt pivot-taulukko näyttää lähteneiden "
-"työntekijöiden kokonaismäärän (:guilabel:`# Departure Employee`), "
-"työntekijöiden kokonaismäärän (:guilabel:`Count`) ja :guilabel:`Variation` "
-"(prosentteina) sekä vuodelle 2023 että 2024 osastoittain järjestettynä."
-
-#: ../../content/applications/hr/employees/retention_report.rst:96
-msgid ""
-"In this example, it can be determined that the :guilabel:`Management` "
-"department had the best retention rate in 2024 as compared to 2023, with "
-"a :guilabel:`Variation` rate of :guilabel:`-100%`. Additionally, it can be "
-"determined that the :guilabel:`Management / Research & Development` "
-"department had the most turnover, with a :guilabel:`Variation` "
-"of :guilabel:`300%`."
-msgstr ""
-"Tästä esimerkistä voidaan päätellä, että :guilabel:`Management` -osastolla "
-"oli paras säilyvyysaste vuonna 2024 verrattuna vuoteen 2023, "
-"kun :guilabel:`Variation` oli :guilabel:`-100 %`. Lisäksi voidaan päätellä, "
-"että :guilabel:`Management / Research & Development` -osastolla oli eniten "
-"vaihtuvuutta, kun :guilabel:`Variation` oli :guilabel:`300 %`."
-
-#: ../../content/applications/hr/employees/retention_report.rst:0
-msgid "The expanded employee retention report by department."
-msgstr "Laajennettu työntekijöiden pysyvyysraportti osastoittain."
 
 #: ../../content/applications/hr/fleet.rst:5
 msgid "Fleet"
@@ -18334,7 +18220,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:134
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:106
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:88
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:136
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:165
 msgid "Contract overview section"
 msgstr "Sopimuksen yhteenveto -osio"
 
@@ -18591,7 +18477,7 @@ msgstr ":guilabel:`Palkka allekirjoituksessa`: Syötä kuukausipalkka kenttään
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:167
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:134
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:121
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:168
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:197
 msgid "Schedule section"
 msgstr "Aikatauluosio"
 
@@ -19944,7 +19830,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:20
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:20
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:15
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:39
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:68
 msgid "Apps & modules"
 msgstr "Sovellukset ja moduulit"
 
@@ -19966,7 +19852,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:28
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:23
 #: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:20
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:47
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:76
 msgid "Name"
 msgstr "Nimi"
 
@@ -19980,7 +19866,7 @@ msgstr "Nimi"
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:29
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:24
 #: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:21
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:48
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:77
 msgid "Technical name"
 msgstr "Tekninen nimi"
 
@@ -19989,7 +19875,7 @@ msgstr "Tekninen nimi"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:30
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:30
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:25
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:49
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:78
 msgid "Dependencies"
 msgstr "Riippuvuudet"
 
@@ -20003,7 +19889,7 @@ msgstr "Riippuvuudet"
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:31
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:26
 #: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:22
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:50
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:79
 msgid "Description"
 msgstr "Kuvaus"
 
@@ -20020,14 +19906,14 @@ msgstr "`l10n_au_hr_payroll`"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:34
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:34
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:29
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:53
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:82
 msgid "hr_payroll"
 msgstr "hr_payroll"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:49
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:35
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:36
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:55
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:84
 msgid "hr_work_entry_holidays"
 msgstr "hr_work_entry_holidays"
 
@@ -20035,7 +19921,7 @@ msgstr "hr_work_entry_holidays"
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:28
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:36
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:37
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:56
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:85
 msgid "hr_payroll_holidays"
 msgstr "hr_payroll_holidays"
 
@@ -20068,7 +19954,7 @@ msgstr "l10n_au_hr_payroll"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:45
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:41
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:34
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:61
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:90
 msgid "hr_payroll_account"
 msgstr "hr_payroll_account"
 
@@ -20083,7 +19969,7 @@ msgstr "l10n_au_aba"
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:60
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:44
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:37
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:64
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:93
 msgid ""
 "Links payroll and accounting by creating journal entries (per payslip if "
 "needed) to record payroll in the company's books."
@@ -20135,7 +20021,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:47
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:52
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:41
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:72
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:101
 msgid "General configurations"
 msgstr "Yleiset määritykset"
 
@@ -20156,7 +20042,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:65
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:58
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:47
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:78
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:107
 msgid ":guilabel:`Company Name`: Enter the business name in this field."
 msgstr ":guilabel:`Yrityksen nimi`: Syötä yrityksen nimi tähän kenttään."
 
@@ -20164,7 +20050,7 @@ msgstr ":guilabel:`Yrityksen nimi`: Syötä yrityksen nimi tähän kenttään."
 #: ../../content/applications/hr/payroll/payroll_localizations/hong_kong.rst:67
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:66
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:59
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:79
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:108
 msgid ""
 ":guilabel:`Address`: Complete the full address, including "
 "the :guilabel:`City`, :guilabel:`State`, :guilabel:`Zip Code`, "
@@ -20241,7 +20127,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:79
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:65
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:54
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:90
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:119
 msgid ":guilabel:`Phone`: Enter the company phone number."
 msgstr ":guilabel:`Puhelin`: Syötä yrityksen puhelinnumero."
 
@@ -20251,7 +20137,7 @@ msgstr ":guilabel:`Puhelin`: Syötä yrityksen puhelinnumero."
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:80
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:66
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:55
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:91
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:120
 msgid ""
 ":guilabel:`Email`: Enter the email used for general contact information."
 msgstr ""
@@ -20719,7 +20605,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:148
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:120
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:101
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:150
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:179
 msgid ""
 "Set a default :guilabel:`Wage Type` in the salary :ref:`Structure Type "
 "<payroll/structure-types>` to configure employees in bulk. If needed, the "
@@ -20781,7 +20667,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:141
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:136
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:123
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:170
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:199
 msgid ""
 ":guilabel:`Work Entry Source`: Defines how :doc:`work entries <../"
 "work_entries>` are generated for payroll during the specified pay period. "
@@ -20795,7 +20681,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:144
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:139
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:126
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:173
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:202
 msgid ""
 ":guilabel:`Working Schedule`: Based on the employee's assigned :ref:`working "
 "schedule <employees/schedule>` (e.g., 40 hours per week)."
@@ -20808,7 +20694,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:146
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:141
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:128
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:175
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:204
 msgid ""
 ":guilabel:`Attendances`: Based on :doc:`approved checked-in hours <../../"
 "attendances/management>` in the **Attendances** app."
@@ -20820,7 +20706,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:148
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:143
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:130
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:177
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:206
 msgid ""
 ":guilabel:`Planning`: Based on :ref:`scheduled shifts <planning/shifts>` in "
 "the **Planning** app."
@@ -21373,7 +21259,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:296
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:192
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:138
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:309
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:338
 msgid "Payroll configuration"
 msgstr "Palkkahallinnon määritys"
 
@@ -21390,7 +21276,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:328
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:220
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:144
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:315
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:344
 msgid "Salary structures & structure types"
 msgstr "Palkkarakenteet ja rakennetyypit"
 
@@ -21426,7 +21312,7 @@ msgstr "Australian palkkarakenne palkkarakenteiden luettelossa."
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:345
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:236
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:159
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:330
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:359
 #: ../../content/applications/hr/payroll/salaries.rst:176
 msgid "Salary rules"
 msgstr "Palkkasäännöt"
@@ -21456,7 +21342,7 @@ msgstr "Australian palkkasääntöjen yläosa."
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:359
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:250
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:175
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:405
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:434
 #: ../../content/applications/hr/payroll/salaries.rst:421
 msgid "Rule parameters"
 msgstr "Sääntöjen parametrit"
@@ -21465,7 +21351,7 @@ msgstr "Sääntöjen parametrit"
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:373
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:252
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:177
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:407
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:436
 msgid ""
 "Some calculations require specific rates associated with them, or wage caps. "
 "*Rules Parameters* are capable of listing a value, either a percentage or a "
@@ -21480,7 +21366,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:380
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:365
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:255
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:414
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:443
 msgid ""
 "Most rules pull information stored in the parameters module to get the rate "
 "of the rule (a percentage) and the cap (a dollar amount)."
@@ -21493,7 +21379,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:368
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:258
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:183
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:417
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:446
 msgid ""
 "To view rule parameters, navigate to :menuselection:`Payroll app --> "
 "Configuration --> Rule Parameters`. Here, all rule parameters are displayed "
@@ -21739,7 +21625,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:413
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:289
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:343
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:441
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:470
 msgid ""
 "Work entries sync based on the employee's :doc:`contract <../contracts>` "
 "configuration. Odoo pulls from the assigned working schedule, attendance "
@@ -23139,7 +23025,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:537
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:398
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:418
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:539
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:568
 msgid "Close Payroll"
 msgstr "Sulje palkkahallinto"
 
@@ -23149,14 +23035,14 @@ msgstr "Sulje palkkahallinto"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:539
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:400
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:420
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:541
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:570
 msgid "If there are no errors, payroll is completed for the pay period."
 msgstr "Jos virheitä ei ole, palkkahallinto on valmis maksukaudelle."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:1154
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:511
 #: ../../content/applications/hr/payroll/payroll_localizations/kenya.rst:152
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:544
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:573
 msgid "Reports"
 msgstr "Raportit"
 
@@ -33481,7 +33367,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:451
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:326
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:380
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:478
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:507
 msgid "Accounting check"
 msgstr "Kirjanpidon tarkistus"
 
@@ -33501,7 +33387,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:459
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:334
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:388
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:486
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:515
 msgid "Journal entry creation"
 msgstr "Päiväkirjavientin luominen"
 
@@ -34485,7 +34371,7 @@ msgstr "Yleiset määritykset"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:61
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:54
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:43
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:74
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:103
 msgid ""
 "First, the company must be configured. Navigate to :menuselection:`Settings "
 "app --> Users & Companies --> Companies`. From the list, select the desired "
@@ -35220,7 +35106,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:426
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:302
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:356
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:454
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:483
 msgid ""
 "To cut down on the payroll officer's time, it is typical to process payslips "
 "in batches, either by wage type (fixed salary vs hourly), pay schedule "
@@ -35236,7 +35122,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:366
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:418
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:360
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:458
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:487
 msgid ""
 "The process of running payroll includes different actions that need to be "
 "executed to ensure that the amount withheld from payroll taxes is correct, "
@@ -35254,7 +35140,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:435
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:311
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:365
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:463
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:492
 msgid ""
 "When running a payroll batch, check that the period, company, and employees "
 "included are correct *before* starting to analyze or validate the data."
@@ -35267,7 +35153,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:426
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:314
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:368
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:466
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:495
 msgid ""
 "Once the payslips are drafted, review them for accuracy. Check "
 "the :guilabel:`Worked Days & Inputs` tab, and ensure the listed worked time "
@@ -35282,7 +35168,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:378
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:430
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:372
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:470
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:499
 msgid ""
 "Next, check the various totals (gross pay, employee taxes, benefits, "
 "employer taxes, net salaries), then click :guilabel:`Compute Sheet` to "
@@ -35318,7 +35204,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:461
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:336
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:390
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:488
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:517
 msgid ""
 "After payslips are confirmed and validated, journal entries are posted "
 "either individually, or in a batch. The journal entry is created first as a "
@@ -35332,7 +35218,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:465
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:340
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:394
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:492
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:521
 msgid ""
 "It must be decided if journal entries are done individually or in batches "
 "*before* running payroll."
@@ -35457,7 +35343,7 @@ msgstr "Kirjauskohteet kirjattu."
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:512
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:383
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:403
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:524
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:553
 msgid "Register Payments"
 msgstr "Rekisteröi maksut"
 
@@ -35473,7 +35359,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:500
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:392
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:412
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:533
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:562
 msgid ""
 "Payments can be :guilabel:`Grouped by Partner` if there is a partner "
 "associated with a salary rule."
@@ -35889,7 +35775,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:91
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:74
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:63
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:102
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:131
 msgid ""
 "To update an employee form, open the :menuselection:`Employees` app and "
 "click on the desired employee record. On the employee form, configure the "
@@ -35903,7 +35789,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:97
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:80
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:69
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:108
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:137
 msgid ""
 "Enter the :guilabel:`Work Address` for the employee in "
 "the :guilabel:`Location` section of the :guilabel:`Work` tab."
@@ -35915,7 +35801,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:107
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:89
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:75
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:118
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:147
 msgid ""
 "Ensure the employee has a minimum of one :ref:`trusted bank account "
 "<employees/private-contact>` listed in the :guilabel:`Bank Accounts` field "
@@ -35971,7 +35857,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:136
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:108
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:90
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:138
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:167
 msgid ""
 "This section holds information that drives salary calculations. Ensure the "
 "following fields are configured:"
@@ -35993,7 +35879,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:141
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:113
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:94
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:143
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:172
 msgid ":guilabel:`Wage Type`: Select how the employee is paid."
 msgstr ":guilabel:`Palkkatyyppi`: Valitse, miten työntekijälle maksetaan."
 
@@ -36001,7 +35887,7 @@ msgstr ":guilabel:`Palkkatyyppi`: Valitse, miten työntekijälle maksetaan."
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:143
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:115
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:96
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:145
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:174
 msgid ""
 "Select :guilabel:`Fixed Wage` for salaried employees who receive the same "
 "amount each pay period."
@@ -36013,7 +35899,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:145
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:117
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:98
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:147
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:176
 msgid ""
 "Select :guilabel:`Hourly Wage` for employees paid based on hours worked."
 msgstr ""
@@ -36068,7 +35954,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:151
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:177
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:146
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:180
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:209
 msgid ""
 ":guilabel:`Extra Hours`: Tick the checkbox to allow the **Attendances** app "
 "to add any extra work entries logged by the employee."
@@ -36585,7 +36471,7 @@ msgstr "Suorita Jordanian palkkahallinto"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:404
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:416
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:444
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:473
 msgid ""
 "Any :ref:`discrepencies or conflicts <payroll/conflicts>` must be resolved, "
 "then the work entries can be :ref:`regenerated <payroll/regenerate-work-"
@@ -36599,7 +36485,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:419
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:295
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:349
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:447
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:476
 msgid ""
 "Once everything is correct, draft payslips can be :ref:`created individually "
 "<payroll/process>` or in :doc:`groups <../pay_runs>`, referred to in the "
@@ -36741,7 +36627,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:488
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:504
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:375
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:516
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:545
 msgid ""
 "If everything seems correct on the journal entry draft, post the journal "
 "entries."
@@ -36749,7 +36635,7 @@ msgstr ""
 "Jos kaikki näyttää oikealta kirjauskohtaluonnoksessa, kirjaa kirjauskohteet."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:498
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:526
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:555
 msgid ""
 "After the :ref:`journal entries <payroll/journal>` are validated, Odoo can "
 "generate payments."
@@ -37558,7 +37444,7 @@ msgid "Company configurations"
 msgstr "Yrityskonfiguraatiot"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:70
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:83
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:112
 msgid ""
 "The state selected in the company's address is associated as the *work "
 "address* by default for the employee, and the one used to calculate payroll "
@@ -37610,7 +37496,7 @@ msgstr ""
 "jälkeen, kun tietokanta on määritetty Meksikoa varten."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:101
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:112
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:141
 msgid ""
 "The state selected in this address determines which salary rules Odoo "
 "applies when calculating taxes."
@@ -37738,7 +37624,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:179
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:148
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:133
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:182
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:211
 msgid ""
 ":guilabel:`Working Hours`: Using the drop-down menu, select the default work "
 "schedule. This is particularly important for employees available to receive "
@@ -38516,7 +38402,7 @@ msgid "`l10n_sa_hr_payroll`"
 msgstr "`l10n_sa_hr_payroll`"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:35
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:54
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:83
 msgid "hr_contract_reports"
 msgstr "hr_contract_reports"
 
@@ -38613,7 +38499,7 @@ msgstr ""
 "koontinäytössä ja virhe tapahtuu yritettäessä ajaa palkkahallintoa."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:111
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:141
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:170
 msgid ""
 ":guilabel:`Contract`: The Validity of the compensation conditions can be "
 "updated depending on the needs."
@@ -38796,7 +38682,7 @@ msgstr ""
 "Arabia: Monthly Pay` ja :guilabel:`SA Salary Advance And Loan Structure`."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:227
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:321
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:350
 msgid ""
 "The :guilabel:`Salary Structure` contains all the individual :ref:`salary "
 "rules <payroll/usa_apps>` that informs the **Payroll** app how to calculate "
@@ -41341,71 +41227,175 @@ msgstr ""
 msgid "The states included in this localization are:"
 msgstr "Tähän lokalisointiin sisältyvät osavaltiot ovat:"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:10
-msgid "California (CA)"
-msgstr "Kalifornia (CA)"
-
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:11
-msgid "New York (NY)"
-msgstr "New York (NY)"
-
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:12
-msgid "Texas (TX)"
-msgstr "Texas (TX)"
-
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:13
-msgid "Florida (FL)"
-msgstr "Florida (FL)"
+msgid "State"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:14
-msgid "Colorado (CO)"
-msgstr "Colorado (CO)"
+msgid "Abbreviation"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:15
-msgid "Alabama (AL)"
-msgstr "Alabama (AL)"
+msgid "Alabama"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:16
-msgid "Washington (WA)"
-msgstr "Washington (WA)"
+msgid "(AL)"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:17
-msgid "Nevada (NV)"
-msgstr "Nevada (NV)"
+msgid "Arizona"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:18
-msgid "Vermont (VT)"
-msgstr "Vermont (VT)"
+msgid "(AZ)"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:19
-msgid "Illinois (IL)"
-msgstr "Illinois (IL)"
+msgid "California"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:20
-msgid "Virginia (VA)"
-msgstr "Virginia (VA)"
+msgid "(CA)"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:21
-msgid "Washington, D.C (DC)"
-msgstr "Washington, D.C (DC)"
+msgid "Colorado"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:22
-msgid "Arizona (AZ)"
-msgstr "Arizona (AZ)"
+msgid "(CO)"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:23
-msgid "Idaho (ID)"
-msgstr "Idaho (ID)"
+msgid "Florida"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:24
-msgid "Oregon (OR)"
-msgstr "Oregon (OR)"
+msgid "(FL)"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:25
-msgid "North Carolina (NC)"
-msgstr "Pohjois-Carolina (NC)"
+msgid "Georgia"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:26
+msgid "(GA)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:27
+msgid "Idaho"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:28
+msgid "(ID)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:29
+msgid "Illinois"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:30
+msgid "(IL)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:31
+msgid "Iowa"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:32
+msgid "(IA)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:33
+msgid "Mississippi"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:34
+msgid "(MS)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:35
+msgid "Nevada"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:36
+msgid "(NV)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:37
+msgid "New Jersey"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:38
+msgid "(NJ)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:39
+msgid "New York"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:40
+msgid "(NY)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:41
+msgid "North Carolina"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:42
+msgid "(NC)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:43
+msgid "Oregon"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:44
+msgid "(OR)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:45
+msgid "Texas"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:46
+msgid "(TX)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:47
+msgid "Vermont"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:48
+msgid "(VT)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:49
+msgid "Virginia"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:50
+msgid "(VA)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:51
+msgid "Washington"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:52
+msgid "(WA)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:53
+msgid "Washington, D.C."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:54
+msgid "\\(DC)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:57
 msgid ""
 "Federal taxes (Income, :abbr:`FICA (Federal Insurance Contributions Act)`, "
 "and Unemployment) for both employees and employers are covered by default in "
@@ -41417,7 +41407,7 @@ msgstr ""
 "oletuksena Odoon Yhdysvaltojen palkkahallinnon lokalisoinnissa. Lisää "
 "osavaltioita lisätään ajan myötä, joten tarkista päivitykset."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:32
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:61
 msgid ""
 "Before configuring the United States localization, refer to the "
 "general :doc:`payroll <../../payroll>` documentation, which includes the "
@@ -41429,7 +41419,7 @@ msgstr ""
 "sisältää perustiedot kaikille lokalisoinneille sekä kaikki yleiset asetukset "
 "ja kentät."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:41
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:70
 msgid ""
 ":ref:`Install <general/install>` the following modules to get all the "
 "features of the United States payroll localization:"
@@ -41437,15 +41427,15 @@ msgstr ""
 ":ref:`Asenna <general/install>` seuraavat moduulit saadaksesi kaikki "
 "Yhdysvaltojen palkkahallinnon lokalisoinnin ominaisuudet:"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:51
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:80
 msgid ":guilabel:`United States - Payroll`"
 msgstr ":guilabel:`Yhdysvallat - Palkkahallinto`"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:52
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:81
 msgid "`l10n_us_hr_payroll`"
 msgstr "`l10n_us_hr_payroll`"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:57
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:86
 msgid ""
 "Provides U.S. payroll basics, including employee tax details, salary "
 "structures (Basic/Gross/Net), tax rules, and W-2/3PA reporting."
@@ -41454,23 +41444,23 @@ msgstr ""
 "verotiedot, palkkarakenteet (perus/brutto/netto), verosäännöt ja W-2/3PA-"
 "raportointi."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:59
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:88
 msgid ":guilabel:`United States - Payroll with Accounting`"
 msgstr ":guilabel:`Yhdysvallat - Palkkahallinto ja kirjanpito`"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:60
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:89
 msgid "`l10n_us_hr_payroll_account`"
 msgstr "`l10n_us_hr_payroll_account`"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:62
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:91
 msgid "l10n_us"
 msgstr "l10n_us"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:63
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:92
 msgid "l10n_us_hr_payroll"
 msgstr "l10n_us_hr_payroll"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:68
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:97
 msgid ""
 ":doc:`Configure the United States fiscal localization <../../../finance/"
 "fiscal_localizations/united_states>`"
@@ -41478,7 +41468,7 @@ msgstr ""
 ":doc:`Yhdysvaltain veropaikallistamisen määrittäminen <../../../finance/"
 "fiscal_localizations/united_states>`"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:86
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:115
 msgid ""
 ":guilabel:`Tax ID`: Enter the company's :abbr:`EIN (Employer Identification "
 "Number)`."
@@ -41486,11 +41476,11 @@ msgstr ""
 ":guilabel:`Verotunnus`: Syötä yrityksen :abbr:`EIN (Employer Identification "
 "Number)`."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:87
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:116
 msgid ":guilabel:`Company ID` : Enter the business's state ID number."
 msgstr ":guilabel:`Yritystunnus`: Syötä yrityksen osavaltion tunnusnumero."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:88
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:117
 msgid ""
 ":guilabel:`Currency`: By default, :abbr:`USD (US Dollars)` is selected. If "
 "not, select :guilabel:`USD` from the drop-down menu."
@@ -41498,13 +41488,13 @@ msgstr ""
 ":guilabel:`Valuutta`: Oletuksena on valittuna :abbr:`USD (Yhdysvaltain "
 "dollari)`. Jos ei ole, valitse :guilabel:`USD` avattavasta valikosta."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:94
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:123
 msgid "Ensure the information is accurate, as it is used when creating W-2s."
 msgstr ""
 "Varmista, että tiedot ovat oikein, sillä niitä käytetään W-2-lomakkeita "
 "luotaessa."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:99
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:128
 msgid ""
 "Every employee being paid must have their employee profiles configured for "
 "the United States payroll localization. Additional fields are present after "
@@ -41514,7 +41504,7 @@ msgstr ""
 "palkkahallintolokalisaatiota varten. Lisäkenttiä on käytettävissä "
 "tietokannan Yhdysvaltain määrittämisen jälkeen."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:121
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:150
 msgid ""
 "These accounts are used to pay the employee, via an automation through a "
 "NACHA payment file. Payroll **cannot** be processed for employees without a "
@@ -41528,7 +41518,7 @@ msgstr ""
 "Jos luotettua pankkitiliä ei ole asetettu, **Palkkahallinto**-koontinäytössä "
 "näkyy varoitus ja virhe tapahtuu yritettäessä suorittaa palkkahallintoa."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:126
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:155
 msgid ""
 "Ensure there is a valid :guilabel:`SSN No` entered in "
 "the :guilabel:`Citizenship` section . The last four digits of the :abbr:`SSN "
@@ -41538,7 +41528,7 @@ msgstr ""
 "kelvollinen :guilabel:`SSN-numero`. Työntekijän palkkalaskelmissa "
 "näkyy :abbr:`SSN (sosiaaliturvatunnus)` -numeron neljä viimeistä numeroa."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:154
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:183
 msgid ""
 ":guilabel:`Contract Type`: Determines how the employee is paid and "
 "classified, such as :guilabel:`Salary-exempt`, :guilabel:`Salary-"
@@ -41548,7 +41538,7 @@ msgstr ""
 "hänet luokitellaan, kuten :guilabel:`Salary-exempt`, :guilabel:`Salary-"
 "nonexempt`, :guilabel:`Hourly`."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:158
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:187
 msgid ""
 "This field is visible on payslips. Some states require payslips to state if "
 "the employee is exempt or non-exempt from overtime. Ensure the selection "
@@ -41558,7 +41548,7 @@ msgstr ""
 "palkkalaskelmassa mainitaan, onko työntekijä vapautettu ylityökorvauksesta "
 "vai ei. Varmista, että valinta noudattaa osavaltion lakeja."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:161
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:190
 msgid ""
 ":guilabel:`Pay Category`: Select :guilabel:`United States: Employee` for "
 "this field. This defines when the employee is paid, their default working "
@@ -41568,11 +41558,11 @@ msgstr ""
 "Employee`. Tämä määrittää, milloin työntekijälle maksetaan, hänen "
 "oletustyöaikansa sekä työmerkintätyypin, johon sitä sovelletaan."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:187
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:216
 msgid "W-2 form section"
 msgstr "W-2-lomakeosio"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:189
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:218
 msgid ""
 "A W-2 is an annual tax form that reports an employee's wages, taxes, and "
 "benefits. Employees use it to file their tax returns. The options below "
@@ -41584,7 +41574,7 @@ msgstr ""
 "olevat vaihtoehdot vastaavat valintaruutuja W-2-lomakkeen *kohdassa 13*. "
 "Valitse kaikki työntekijään sovellettavat."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:193
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:222
 msgid ""
 ":guilabel:`Statutory Employee`: Tick this box if the employee is exempt from "
 "income tax, but subject to :abbr:`FICA (Federal Insurance Contributions "
@@ -41594,7 +41584,7 @@ msgstr ""
 "vapautettu tuloverosta, mutta on :abbr:`FICA (Federal Insurance "
 "Contributions Act)` -verojen alainen."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:195
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:224
 msgid ""
 ":guilabel:`Retirement Plan`: Tick this box if the employee is an active "
 "contributor to an employer-sponsored retirement plan."
@@ -41602,7 +41592,7 @@ msgstr ""
 ":guilabel:`Retirement Plan`: Valitse tämä ruutu, jos työntekijä osallistuu "
 "aktiivisesti työnantajan tukemaan eläkejärjestelmään."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:197
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:226
 msgid ""
 ":guilabel:`Third-Party Sick Pay`: Tick this box if the employee is covered "
 "under a plan where sick pay benefits may be provided by a third party (e.g., "
@@ -41612,11 +41602,11 @@ msgstr ""
 "sovelletaan järjestelmää, jossa sairausajan etuuksia voi tarjota kolmas "
 "osapuoli (esim. vakuutusyhtiö) vuoden aikana."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:201
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:230
 msgid "W-4 form section"
 msgstr "W-4-lomakeosio"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:203
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:232
 msgid ""
 "A W-4 is an :abbr:`IRS (Internal Revenue Services)` form that determines an "
 "employee's federal tax withholding, which the employer remits directly to "
@@ -41626,15 +41616,15 @@ msgstr ""
 "työntekijän liittovaltion ennakonpidätyksen, jonka työnantaja tilittää "
 "suoraan :abbr:`IRS (Internal Revenue Services)` -viranomaiselle."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:206
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:235
 msgid "Configure any relevant fields for the employee in this section."
 msgstr "Määritä kaikki asiaankuuluvat kentät työntekijälle tässä osiossa."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:209
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:238
 msgid "State filing section"
 msgstr "Osavaltion ilmoitusosio"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:211
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:240
 msgid ""
 "An employee's marital status impacts their payroll taxes. Configure the "
 "following fields regarding their status and withholdings."
@@ -41642,7 +41632,7 @@ msgstr ""
 "Työntekijän siviilisääty vaikuttaa heidän palkkaveroonsa. Määritä seuraavat "
 "kentät heidän statuksensa ja ennakonpidätyksensä osalta."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:214
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:243
 msgid ""
 ":guilabel:`Status`: Using the drop-down menu, select the employee's "
 "*federal* filing status. The options "
@@ -41657,7 +41647,7 @@ msgstr ""
 "of household` tai :guilabel:`Qualifying surviving spouse/RDP with child`. "
 "Tämä tulee yleensä työntekijän W-4-lomakkeesta."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:218
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:247
 msgid ""
 ":guilabel:`Tax Status`: Using the drop-down menu, select the employee's "
 "*state* filing status, if applicable."
@@ -41665,11 +41655,11 @@ msgstr ""
 ":guilabel:`Tax Status`: Valitse pudotusvalikosta työntekijän *osavaltion* "
 "ilmoitusstatus, jos sovellettavissa."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:222
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:251
 msgid "The federal and state statuses do **not** need to match."
 msgstr "Liittovaltion ja osavaltion statusten **ei** tarvitse täsmätä."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:225
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:254
 msgid ""
 "As of 2025, these states do **not** collect state income tax: Alaska, "
 "Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, "
@@ -41683,7 +41673,7 @@ msgstr ""
 "lokalisointi, :guilabel:`Tax Status` -kentässä **ei** ole vastaavia "
 "osavaltion vaihtoehtoja. Jätä se tyhjäksi."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:230
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:259
 msgid ""
 ":guilabel:`Withholding Allowance`: Enter the total annual amount to be "
 "withheld from the employee's pay for the year, for state taxes. Only fill "
@@ -41693,7 +41683,7 @@ msgstr ""
 "työntekijän palkasta vuoden aikana osavaltion veroja varten. Täytä tämä "
 "vain, jos työntekijä asuu osavaltiossa, jossa on osavaltion tulovero."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:233
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:262
 msgid ""
 ":guilabel:`Extra Withholding`: Enter the total *extra* annual amount (not "
 "including the :guilabel:`Withholding Allowance` amount) to be withheld from "
@@ -41709,11 +41699,11 @@ msgstr ""
 msgid "The state filing section of the employee form, filled out."
 msgstr "Työntekijälomakkeen osavaltion ilmoitusosio täytettynä."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:241
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:270
 msgid "Common benefits"
 msgstr "Yleiset edut"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:243
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:272
 msgid ""
 "The following sections of benefits are considered common ones offered by US "
 "employers. This information needs to be populated with the information "
@@ -41722,7 +41712,7 @@ msgstr ""
 "Seuraavia etujen osioita pidetään yhdysvaltalaisten työnantajien yleisesti "
 "tarjoamina. Nämä tiedot on täytettävä työntekijän valitsemilla tiedoilla."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:247
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:276
 msgid ""
 "The benefits listed in this section are considered the most commonly offered "
 "by companies. If other employee benefits exist that require regular paycheck "
@@ -41732,11 +41722,11 @@ msgstr ""
 "työntekijäetuja on olemassa, jotka vaativat säännöllisiä palkkavähennyksiä, "
 "ne voidaan lisätä *syötteinä*."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:252
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:281
 msgid "Pre-tax deductions"
 msgstr "Verotusta edeltävät vähennykset"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:254
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:283
 msgid ""
 "Pre-tax benefits lower the employee's gross wage, which decreases the base "
 "amount for tax calculations. These are displayed at the beginning of the "
@@ -41746,11 +41736,11 @@ msgstr ""
 "verolaskelmien perusmäärää. Nämä näytetään palkkalaskelman alussa ennen "
 "bruttopalkan ilmoittamista."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:259
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:288
 msgid "Retirement plans section"
 msgstr "Eläkejärjestelyjen osio"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:261
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:290
 msgid ""
 "This section is where the employee and employer 401(k) contributions are "
 "configured. Fill out the following fields:"
@@ -41758,7 +41748,7 @@ msgstr ""
 "Tässä osiossa määritetään työntekijän ja työnantajan 401(k)-maksut. Täytä "
 "seuraavat kentät:"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:264
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:293
 msgid ""
 ":guilabel:`401(k)`: Enter the amount of money taken out of the employee's "
 "payslip each pay period. This can be entered either as a percentage (%) of "
@@ -41769,7 +41759,7 @@ msgstr ""
 "prosenttiosuutena (%) palkkalaskelman määrästä tai tiettyä dollarimäärää "
 "palkkaa kohden ($/slip)."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:267
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:296
 msgid ""
 ":guilabel:`Matching Amount`: Enter the matching amount the employer "
 "contributes to the employee's 401(k), as compared to the employee's "
@@ -41781,7 +41771,7 @@ msgstr ""
 "myös määrittää joko prosenttiosuutena (%) työntekijän maksusta tai tiettyä "
 "dollarimäärää ($/slip)."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:270
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:299
 msgid ""
 ":guilabel:`Matching Yearly Cap`: If there is a limit to the employer's "
 "contribution, enter it as a percentage of the employee's annual salary."
@@ -41789,7 +41779,7 @@ msgstr ""
 ":guilabel:`Matching Yearly Cap`: Jos työnantajan maksulle on raja, syötä se "
 "prosenttiosuutena työntekijän vuosipalkasta."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:274
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:303
 msgid ""
 "A company allows employees to contribute to a 401(k) retirement plan, and "
 "matches 50% of the employee's contributions, up to $5,000 USD a year. The "
@@ -41800,7 +41790,7 @@ msgstr ""
 "50 % työntekijän maksuista enintään 5 000 USD vuodessa. Työntekijä ansaitsee "
 "50 000 USD vuodessa ja maksaa 20 % palkastaan 401(k):hon, mikä on 10 000 USD."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:278
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:307
 msgid ""
 "To configure this, enter `20.00` in the :guilabel:`401(k)` field, `50.00` in "
 "the :guilabel:`Matching Amount` field, and `20.00` in "
@@ -41814,11 +41804,11 @@ msgstr ""
 msgid "An employee's retirement configurations."
 msgstr "Työntekijän eläkemääritykset."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:285
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:314
 msgid "Health benefits section"
 msgstr "Terveysedut-osio"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:287
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:316
 msgid ""
 "This section is where the employee's health contributions are configured. "
 "Populate each of the fields with the corresponding amount deducted from "
@@ -41834,11 +41824,11 @@ msgid ""
 "deductions."
 msgstr "Työntekijän terveysedut-osio täytettynä palkkalaskelman vähennyksillä."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:294
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:323
 msgid "Other benefits section"
 msgstr "Muut edut -osio"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:296
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:325
 msgid ""
 "This section currently only houses a :guilabel:`Commuter` benefit field. "
 "Enter the amount being deducted per paycheck, for applicable commuter "
@@ -41848,11 +41838,11 @@ msgstr ""
 "kentän. Syötä palkkalaskelmaa kohti vähennettävä summa sovellettaville "
 "työmatkaliikenteen eduille."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:300
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:329
 msgid "Post-tax deductions section"
 msgstr "Verojen jälkeiset vähennykset -osio"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:302
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:331
 msgid ""
 "These types of benefits count as deductions *after* taxes are calculated. "
 "They appear towards the end of the payslip before the net amount is "
@@ -41868,7 +41858,7 @@ msgstr ""
 "dollarimäärä palkkalaskelmaa kohti ($/lasku), joka vähennetään työntekijän "
 "palkasta ja talletetaan ROTH 401(k) -tilille."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:311
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:340
 msgid ""
 "Several sections within the **Payroll** app installs a Salary Structure, "
 "Structure Type, Rules, and Parameters specific to the United States."
@@ -41876,7 +41866,7 @@ msgstr ""
 "Useat osiot **Palkkahallinto**-sovelluksessa asentavat Yhdysvalloille "
 "ominaisen palkkarakenteen, rakennetyypin, säännöt ja parametrit."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:317
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:346
 msgid ""
 "When the **l10n_us_hr_payroll** module is :ref:`installed <payroll/"
 "usa_apps>`, a new :guilabel:`Salary Structure` gets "
@@ -41889,7 +41879,7 @@ msgstr ""
 "yhden :guilabel:`rakennetyypin`, :guilabel:`Yhdysvallat: Säännöllinen "
 "palkka`."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:332
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:361
 msgid ""
 "To view the salary rules that inform the salary structure what to do, "
 "navigate to :menuselection:`Payroll app --> Configuration --> Structures` "
@@ -41905,7 +41895,7 @@ msgstr ""
 "Napsauta :guilabel:`Yhdysvallat: Säännöllinen palkka` nähdäksesi "
 "yksityiskohtaiset palkkasäännöt."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:340
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:369
 msgid ""
 "Each rule defines how pay is calculated, taking into account factors such as "
 "commissions, bonuses, taxes, and insurance. The *logic* behind "
@@ -41915,7 +41905,7 @@ msgstr ""
 "kuten provisiot, bonukset, verot ja vakuutukset. :guilabel:`Yhdysvallat: "
 "Säännöllinen palkka` -sääntöjen *logiikka* on seuraava:"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:344
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:373
 msgid ""
 "The first four rules listed reflects all sources of income, including the "
 "basic wage listed on the contract (:guilabel:`Basic Salary`), plus any "
@@ -41931,7 +41921,7 @@ msgstr ""
 msgid "The basic salary rules for the US localization."
 msgstr "Yhdysvaltain lokalisoinnin peruspalkkalaskentasäännöt."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:351
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:380
 msgid ""
 "Adding up these inputs is how the gross salary (:guilabel:`Gross Pay`) is "
 "calculated. This amount is the base amount used to calculate payroll taxes."
@@ -41940,7 +41930,7 @@ msgstr ""
 "(:guilabel:`Gross Pay`). Tämä summa on peruste, jota käytetään palkkaverojen "
 "laskemiseen."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:354
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:383
 msgid ""
 "The next set of rules are the various pre-tax benefits and taxable income, "
 "such as :guilabel:`Medical` insurance contributions and :guilabel:`Commuter "
@@ -41958,7 +41948,7 @@ msgstr ""
 msgid "The pre-tax rules for the US localization."
 msgstr "Yhdysvaltain lokalisoinnin ennen veroja tehtävät vähennykset."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:362
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:391
 msgid ""
 "Next, all the various tax rules are listed where both federal and state "
 "payroll withholdings are outlined. First, federal tax rules are listed, then "
@@ -41972,7 +41962,7 @@ msgstr ""
 msgid "The federal tax rules for the US localization."
 msgstr "Yhdysvaltain lokalisoinnin liittovaltion verosäännöt."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:369
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:398
 msgid ""
 "The rule for federal withholdings for `Worker's Compensation` appears "
 "*after* several state-specific withholdings are listed, and does **not** "
@@ -41982,7 +41972,7 @@ msgstr ""
 "*useiden* osavaltiokohtaisten ennakonpidätysten jälkeen, eikä sitä näy yllä "
 "olevassa kuvassa, mutta se on listattu säännöissä."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:373
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:402
 msgid "The last rules listed are the post-tax employee deductions."
 msgstr "Viimeisenä luetellaan työntekijän verojen jälkeiset vähennykset."
 
@@ -41990,7 +41980,7 @@ msgstr "Viimeisenä luetellaan työntekijän verojen jälkeiset vähennykset."
 msgid "The post-tax rules for the US localization."
 msgstr "Yhdysvaltain lokalisoinnin verojen jälkeiset säännöt."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:378
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:407
 msgid ""
 "The :guilabel:`Other Inputs` tab contains anything else affecting payroll. "
 "This includes items to be added to the payslip, such as :guilabel:`Tips`, "
@@ -42004,7 +41994,7 @@ msgstr ""
 msgid "The other inputs for the US localization."
 msgstr "Yhdysvaltain lokalisoinnin muut syötteet."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:385
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:414
 msgid ""
 "The employee's net salary is the amount the employee receives from the "
 "employer. The formula to calculate the net salary is:"
@@ -42012,7 +42002,7 @@ msgstr ""
 "Työntekijän nettopalkka on summa, jonka työntekijä saa työnantajalta. "
 "Nettopalkan laskentakaava on:"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:388
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:417
 msgid ""
 "\\text{Gross Salary} + \\text{Allowances} - \\text{Payroll Taxes} - "
 "\\text{General Deductions}"
@@ -42020,7 +42010,7 @@ msgstr ""
 "\\text{Gross Salary} + \\text{Allowances} - \\text{Payroll Taxes} - "
 "\\text{General Deductions}"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:392
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:421
 msgid ""
 "Additionally, an extra section exists in payroll calculation for the US "
 "called `Employer Deductions`, and it breaks down the payments the employer "
@@ -42034,7 +42024,7 @@ msgstr ""
 msgid "The employer deduction rules for the US localization."
 msgstr "Yhdysvaltain lokalisoinnin työnantajan vähennysten säännöt."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:400
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:429
 msgid ""
 "The rule for employer deductions for `Worker's Compensation` appears *after* "
 "several state-specific employer deductions are listed, and does **not** "
@@ -42044,7 +42034,7 @@ msgstr ""
 "*useiden* osavaltiokohtaisten työnantajan vähennysten jälkeen, eikä sitä näy "
 "yllä olevassa kuvassa, mutta se on listattu säännöissä."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:411
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:440
 msgid ""
 "The wage base for Social Security tax calculations has a cap for 2025, "
 "accounted for in the `US: FICA OASDI Cap` parameter."
@@ -42052,7 +42042,7 @@ msgstr ""
 "Sosiaaliturvaveron laskennassa käytettävällä palkkaperustalla on yläraja "
 "vuodelle 2025, joka on huomioitu parametrissa `US: FICA OASDI Cap`."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:423
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:452
 msgid ""
 "The Unemployment tax of a company is different from the one added by default "
 "in Odoo. To update this, navigate to :menuselection:`Payroll app --> "
@@ -42066,7 +42056,7 @@ msgstr ""
 "hakusanalla :abbr:`FUTA (Federal Unemployment Tax Act)` tai muokattavan "
 "osavaltion nimellä ja muokkaa vastaavaa prosenttiosuutta luettelosta."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:429
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:458
 msgid ""
 "Odoo adds updated rule parameters for the current calendar year. It is "
 "**not** recommended to edit rule parameters **unless a federal or state "
@@ -42080,11 +42070,11 @@ msgstr ""
 "sääntöparametreista. Tarkista kaikki paikalliset ja kansalliset säädökset "
 "*ennen* kuin teet muutoksia sääntöparametreihin."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:435
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:464
 msgid "Run US payroll"
 msgstr "Yhdysvaltain palkanlaskennan suorittaminen"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:437
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:466
 msgid ""
 "Before running paypoll, the payroll officer must validate "
 "employee :doc:`work entries <../work_entries>` to confirm pay accuracy and "
@@ -42096,7 +42086,7 @@ msgstr ""
 "oikeellisuuden ja havaitakseen virheet. Tähän sisältyy kaiken vapaan "
 "hyväksymisen tarkistaminen ja ylityön asianmukaisuuden varmistaminen."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:480
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:509
 msgid ""
 "The accounting process when running payroll has two "
 "components: :ref:`creating journal entries <payroll/journal>`, "
@@ -42105,7 +42095,7 @@ msgstr ""
 "Palkanlaskennan kirjanpitoprosessilla on kaksi osaa: :ref:`creating journal "
 "entries <payroll/journal>` ja :ref:`registering payments <payroll/register>`."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:498
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:527
 msgid ""
 "Four accounts from the US :abbr:`CoA (Chart of Accounts)` are included with "
 "the payroll localization:"
@@ -42113,7 +42103,7 @@ msgstr ""
 "Yhdysvaltain :abbr:`tilikartan (Chart of Accounts)` mukana tulee neljä tiliä "
 "palkkahallinnon lokalisoinnin yhteydessä:"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:501
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:530
 msgid ""
 "`611000 Salaries & Wages`: Records gross salary and the employer's portion "
 "of payroll expenses. Also groups values from rules without specific accounts "
@@ -42123,7 +42113,7 @@ msgstr ""
 "palkkakustannuksista. Ryhmittelee myös arvot säännöistä, joilla ei ole "
 "erityisiä tilejä (esim. yrityskohtaiset etuudet)."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:503
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:532
 msgid ""
 "`230100 Employee Payroll Taxes`: Withheld taxes from employees, which the "
 "employer must file and pay. The partner and label columns of the journal "
@@ -42133,7 +42123,7 @@ msgstr ""
 "työnantajan on ilmoitettava ja maksettava. Kirjauskohdan kumppani- ja "
 "nimikesarakkeet ilmaisevat tietyn veron."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:505
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:534
 msgid ""
 "`230200 Employer Payroll Taxes`: Employer portion of payroll taxes to be "
 "filed and paid. The partner and label columns of the journal entry indicate "
@@ -42143,11 +42133,11 @@ msgstr ""
 "ilmoitettava ja maksettava. Kirjauskohdan kumppani- ja nimikesarakkeet "
 "ilmaisevat tietyn veron."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:507
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:536
 msgid "`230000 Salary Payable`: Net salary owed to the employee."
 msgstr "`230000 Salary Payable`: Työntekijälle maksettava nettopalkka."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:510
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:539
 msgid ""
 "The :abbr:`CoA (Chart of Accounts)` configuration is done by default when a "
 "company is located in the US. The account codes and names can be edited to "
@@ -42163,7 +42153,7 @@ msgstr ""
 "tiliä, Odoo käyttää tiliä `Salary Expenses` kirjauskohdan luomiseen "
 "tapahtuman luonteesta riippumatta."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:529
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:558
 msgid ""
 "To generate payments from payslips,employee's **must** have a *trusted* bank "
 "account. If the employee's bank account is *not* marked as `trusted`, NACHA "
@@ -42173,7 +42163,7 @@ msgstr ""
 "pankkitili. Jos työntekijän pankkitiliä *ei ole* merkitty `luotetuksi`, "
 "NACHA-tiedostoja **ei voida** luoda Odoon kautta."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:546
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:575
 msgid ""
 "The US localization contains several reports unique to the US, which provide "
 "tax information for employees, as well as the ability to integrate with "
@@ -42183,11 +42173,11 @@ msgstr ""
 "raportteja, jotka tarjoavat verotietoja työntekijöille sekä mahdollisuuden "
 "integroitua ulkopuolisten organisaatioiden, kuten ADP:n, kanssa."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:550
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:579
 msgid "W2 Report"
 msgstr "W2-raportti"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:552
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:581
 msgid ""
 "The *W2 Report* provides a CSV file that allows employees to e-file their W2 "
 "report with third-party software. To access this report, navigate "
@@ -42198,7 +42188,7 @@ msgstr ""
 "raportin saa avattua siirtymällä kohtaan :menuselection:`Palkkahallinto -> "
 "Raportointi -> Yhdysvallat -> W2`."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:556
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:585
 msgid ""
 "To create a W2 form, click :guilabel:`New`, and a blank :guilabel:`Create W2 "
 "Form` page loads. Set the :guilabel:`Start Date` and :guilabel:`End Date` "
@@ -42211,9 +42201,9 @@ msgstr ""
 "kalenterivuosi) ja valitse :guilabel:`Yritys`, jos käytössä on monen "
 "yrityksen tietokanta."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:560
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:582
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:604
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:589
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:611
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:633
 msgid ""
 "All pay runs for the time period appear in a list view. To add any missing "
 "pay runs, click :guilabel:`Add a line` at the bottom of the list, and select "
@@ -42223,7 +42213,7 @@ msgstr ""
 "ajojen lisäämiseksi napsauta luettelon alalaidassa :guilabel:`Lisää rivi` ja "
 "valitse puuttuvat tiedostot."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:563
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:592
 msgid ""
 "When done, click the :guilabel:`Generate` button to create a CSV file with a "
 "summary of all payroll related payments made during the specified time "
@@ -42237,11 +42227,11 @@ msgstr ""
 msgid "The W2 report screen, with the file to download in the top half."
 msgstr "W2-raporttinäyttö, jossa tiedosto ladattavaksi ylemmällä puoliskolla."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:570
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:599
 msgid "Form 941"
 msgstr "Lomake 941"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:572
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:601
 msgid ""
 "The *Form 941* report is meant to inform the government of the amount of "
 "federal income tax, :abbr:`FICA (Federal Insurance Contributions Act)` taxes "
@@ -42253,7 +42243,7 @@ msgstr ""
 "(Medicare ja sosiaaliturva) määrä, jotka on pidätetty työntekijöiden "
 "palkoista. Se raportoi myös työntekijän osuuden veroista."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:576
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:605
 msgid ""
 "To create this report, navigate to :menuselection:`Payroll -> Reporting -> "
 "United States -> Form 941`. Click the :guilabel:`New` button, and a "
@@ -42272,7 +42262,7 @@ msgstr ""
 "ja :guilabel:`Talletusaikataulu ja verovelka` (kuinka usein maksut "
 "suoritetaan IRS:lle)."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:585
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:614
 msgid ""
 "When done, click :guilabel:`Generate`, and the report is created as a CSV "
 "file, and appears on the :guilabel:`Form 941` report dashboard. Companies "
@@ -42287,11 +42277,11 @@ msgstr ""
 msgid "The 941 report screen, with the file to download in the top half."
 msgstr "941-raporttinäyttö, jossa tiedosto ladattavaksi ylemmällä puoliskolla."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:593
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:622
 msgid "Form 940"
 msgstr "Lomake 940"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:595
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:624
 msgid ""
 "The *Form 940* report details the annual :abbr:`FUTA (Federal Unemployment "
 "Tax Act)` withheld for payroll."
@@ -42300,7 +42290,7 @@ msgstr ""
 "vuosittaisesta :abbr:`FUTA (Federal Unemployment Tax Act)` -pidätyksestä "
 "palkanlaskentaa varten."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:598
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:627
 msgid ""
 "To create this report, navigate to :menuselection:`Payroll -> Reporting -> "
 "United States -> Form 940`. Click the :guilabel:`New` button, and a "
@@ -42320,7 +42310,7 @@ msgstr ""
 "hyvityksen alennusvaltiossa` ja :guilabel:`IRS-maksuvaihtoehto` (miten rahat "
 "lähetetään IRS:lle)."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:607
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:636
 msgid ""
 "When done, click :guilabel:`Generate`, and the report is created as a CSV "
 "file, and appears on the :guilabel:`Form 940` report dashboard. Companies "
@@ -42335,11 +42325,11 @@ msgstr ""
 msgid "The 940 report screen, with the file to download in the top half."
 msgstr "940-raporttinäyttö, jossa tiedosto ladattavaksi ylemmällä puoliskolla."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:615
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:644
 msgid "Export data to third-party apps"
 msgstr "Tietojen vieminen kolmannen osapuolen sovelluksiin"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:617
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:646
 msgid ""
 "The *ADP Export* report generates a CSV file that can be submitted to ADP, "
 "which then makes payments to the employees."
@@ -42347,7 +42337,7 @@ msgstr ""
 "*ADP Export* -raportti luo CSV-tiedoston, joka voidaan lähettää ADP:lle, "
 "joka sitten suorittaa maksut työntekijöille."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:620
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:649
 msgid ""
 "The CSV file summarizes the employee's worked hours during a specified time "
 "period, correlating to their salary or hourly wage. The report is generated "
@@ -42358,7 +42348,7 @@ msgstr ""
 "luodaan :doc:`työkirjauksista <../work_entries>` *sen jälkeen*, kun vapaat "
 "on vahvistettu."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:624
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:653
 msgid ""
 "The export format is meant to match with the ADP format. Since companies can "
 "customize their portal and may require some changes, the data is there to be "
@@ -42368,7 +42358,7 @@ msgstr ""
 "mukauttaa portaaliaan ja saattavat vaatia joitakin muutoksia, tiedot ovat "
 "siellä syötettäviksi ADP:hen palkanlaskennan suorittamiseksi siinä."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:628
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:657
 msgid ""
 "To access the ADP Export report, the `United States - Payroll - Export to "
 "ADP` module **must** be :ref:`installed <general/install>`."
@@ -55444,7 +55434,7 @@ msgstr ""
 "hyväksyntä`."
 
 #: ../../content/applications/hr/time_off/management.rst:41
-#: ../../content/applications/hr/time_off/management.rst:110
+#: ../../content/applications/hr/time_off/management.rst:138
 msgid ""
 "The various departments the user is a member of, and manages employees "
 "under, also appear on the left side of the page, under :icon:`fa-"
@@ -55473,7 +55463,7 @@ msgstr ""
 "tilat näkyvät."
 
 #: ../../content/applications/hr/time_off/management.rst:50
-#: ../../content/applications/hr/time_off/management.rst:120
+#: ../../content/applications/hr/time_off/management.rst:148
 msgid ""
 "If no requests fall under one of the status options or departments, that "
 "status or department is **not** visible on the left-side menu."
@@ -55531,7 +55521,7 @@ msgstr ""
 "painikkeilla). Tämä lataa yksityiskohtaisen vapaa-aikahakemuslomakkeen."
 
 #: ../../content/applications/hr/time_off/management.rst:72
-#: ../../content/applications/hr/time_off/management.rst:138
+#: ../../content/applications/hr/time_off/management.rst:166
 msgid ""
 "Depending on the rights of the user, changes can be made. To modify the "
 "request, make any desired changes to the form. All changes are automatically "
@@ -55542,7 +55532,7 @@ msgstr ""
 "tallennetaan automaattisesti."
 
 #: ../../content/applications/hr/time_off/management.rst:75
-#: ../../content/applications/hr/time_off/management.rst:141
+#: ../../content/applications/hr/time_off/management.rst:169
 msgid ""
 "It is also possible to approve, validate, or refuse the request from this "
 "form. Click the :guilabel:`Approve` button to approve, "
@@ -55556,25 +55546,85 @@ msgstr ""
 
 #: ../../content/applications/hr/time_off/management.rst:79
 msgid ""
-"Once a request has been approved, validated, or refused, the Kanban card "
-"disappears from the default :guilabel:`All Time Off` page. To view *all* "
-"requests, including approved and refused requests, clear the default filters "
-"in the search bar."
+":guilabel:`All Time Off` page. To view *all* requests, including approved "
+"and refused requests, clear the default filters in the search bar."
 msgstr ""
-"Kun hakemus on hyväksytty, vahvistettu tai hylätty, Kanban-kortti katoaa "
-"oletusnäkymän :guilabel:`Kaikki vapaat` -sivulta. Nähdäksesi *kaikki* "
-"hakemukset, mukaan lukien hyväksytyt ja hylätyt hakemukset, tyhjennä "
-"oletussuodattimet hakupalkista."
 
 #: ../../content/applications/hr/time_off/management.rst:None
 msgid "The detailed time off request form for the employee George Davis."
 msgstr "Työntekijä George Davisin yksityiskohtainen vapaa-aikahakemuslomake."
 
-#: ../../content/applications/hr/time_off/management.rst:89
+#: ../../content/applications/hr/time_off/management.rst:88
+msgid "Add missing time off requests"
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:90
+msgid ""
+"If an employee forgets to request time off for days they did not work, a "
+"time off record must be created retroactively. To create missing time off "
+"requests, navigate to :menuselection:`Time Off app --> Management --> Time "
+"Off`, and click :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:94
+msgid "On the time off request form, configure the following fields:"
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:96
+msgid ""
+":guilabel:`Employee`: Using the drop-down menu, select the employee missing "
+"the time off request."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:97
+msgid ""
+":guilabel:`Time Off Type`: Using the drop-down menu, select the :doc:`type "
+"of time off <time_off_types>` for the request."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:99
+msgid ""
+":guilabel:`Payslip State`: Using the drop-down menu, select when the paid "
+"time off is given to the employee. The options are: :guilabel:`To compute in "
+"next payslip`, :guilabel:`To compute in current payslip`, and :guilabel:`To "
+"defer to next payslip`."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:102
+msgid ""
+":guilabel:`Dates`: Using the calendar selector, configure the start and end "
+"dates for the time off request."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:104
+msgid ""
+":guilabel:`Description`: In the field below. enter any information regarding "
+"the request. For example, `Forgot to request the time off.` or `Could not "
+"request time off as they were sick.`"
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:106
+msgid ""
+":icon:`fa-paperclip` :guilabel:`Attach File`: If there is relevant "
+"documentation for the request, click this button, navigate to the desired "
+"file, then click :guilabel:`Open`."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:109
+msgid ""
+"Once the form is filled out, click :guilabel:`Approve` to approve the "
+"request."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:None
+msgid "A time off form for missing time off."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:117
 msgid "View allocation requests"
 msgstr "Näytä vapaajako-hakemukset"
 
-#: ../../content/applications/hr/time_off/management.rst:91
+#: ../../content/applications/hr/time_off/management.rst:119
 msgid ""
 "To view allocation requests waiting for approval, navigate "
 "to :menuselection:`Time Off app --> Management --> Allocations`. Doing so "
@@ -55586,7 +55636,7 @@ msgstr ""
 "avaa :guilabel:`Vapaajako` -sivun. Kaikki vapaajako-hakemukset näkyvät "
 "oletusnäkymässä Kanban-näkymänä."
 
-#: ../../content/applications/hr/time_off/management.rst:95
+#: ../../content/applications/hr/time_off/management.rst:123
 msgid ""
 "The only allocation requests that are visible on this page belong to "
 "employees the user either has :guilabel:`Time Off Officer` "
@@ -55598,7 +55648,7 @@ msgstr ""
 "virkailija`- tai :guilabel:`Järjestelmänvalvoja`-käyttöoikeudet **Vapaa**-"
 "sovelluksessa."
 
-#: ../../content/applications/hr/time_off/management.rst:99
+#: ../../content/applications/hr/time_off/management.rst:127
 msgid ""
 "The default filters on the :guilabel:`Allocations` page are :icon:`fa-"
 "filter` :guilabel:`First Approval` and :icon:`fa-filter` :guilabel:`My "
@@ -55612,7 +55662,7 @@ msgstr ""
 "hakemukset, jotka tarvitsevat hyväksynnän nykyisille työntekijöille "
 "käyttäjän tiimissä ja odottavat hyväksyntää tai vahvistusta."
 
-#: ../../content/applications/hr/time_off/management.rst:103
+#: ../../content/applications/hr/time_off/management.rst:131
 msgid ""
 "On the left side of the :guilabel:`Allocations` page, there are various "
 "grouping options that can be used to narrow down the presented allocation "
@@ -55624,7 +55674,7 @@ msgstr ""
 "hakemusten rajaamiseen. Ne sijaitsevat otsikoiden :icon:`fa-"
 "folder` :guilabel:`Tila` ja :icon:`fa-users` :guilabel:`Osasto` alla."
 
-#: ../../content/applications/hr/time_off/management.rst:107
+#: ../../content/applications/hr/time_off/management.rst:135
 msgid ""
 "Since only allocation requests that need to be approved are shown, the "
 "only :icon:`fa-folder` :guilabel:`Status` options "
@@ -55634,7 +55684,7 @@ msgstr ""
 "ainoat :icon:`fa-folder` :guilabel:`Tila` -vaihtoehdot "
 "ovat :guilabel:`Kaikki`, :guilabel:`Hyväksyttävä` ja :guilabel:`Hyväksytty`."
 
-#: ../../content/applications/hr/time_off/management.rst:113
+#: ../../content/applications/hr/time_off/management.rst:141
 msgid ""
 "To only display allocation requests for specific departments, click on "
 "the :guilabel:`Department` on the left-hand side of the page. Only requests "
@@ -55644,7 +55694,7 @@ msgstr ""
 "vasemmalla puolella olevaa :guilabel:`Osasto`-kohtaa. Vain valitun osaston "
 "hakemukset esitetään tämän jälkeen."
 
-#: ../../content/applications/hr/time_off/management.rst:116
+#: ../../content/applications/hr/time_off/management.rst:144
 msgid ""
 "If the :icon:`fa-filter` :guilabel:`First Approval` and :icon:`fa-"
 "filter` :guilabel:`My Team` filters are removed, all statuses appear."
@@ -55656,11 +55706,11 @@ msgstr ""
 msgid "Allocations dashboard showing unapproved allocation requests."
 msgstr "Koontinäyttö, jossa näkyvät hyväksymättömät kohdentamispyynnöt."
 
-#: ../../content/applications/hr/time_off/management.rst:127
+#: ../../content/applications/hr/time_off/management.rst:155
 msgid "Approve or refuse allocation requests"
 msgstr "Hyväksy tai hylkää kohdentamispyynnöt"
 
-#: ../../content/applications/hr/time_off/management.rst:129
+#: ../../content/applications/hr/time_off/management.rst:157
 msgid ""
 "To approve or refuse an allocation request, navigate to :menuselection:`Time "
 "Off app --> Management --> Allocations`. At the end of each allocation "
@@ -55674,7 +55724,7 @@ msgstr ""
 "painiketta: :guilabel:`Hyväksy` tai :guilabel:`Vahvista` -painike pyynnön "
 "tilasta riippuen sekä :guilabel:`Hylkää` -painike."
 
-#: ../../content/applications/hr/time_off/management.rst:134
+#: ../../content/applications/hr/time_off/management.rst:162
 msgid ""
 "If more information is needed before approving an allocation request, click "
 "anywhere on the Kanban card (except for "
@@ -55686,7 +55736,7 @@ msgstr ""
 "(paitsi :guilabel:`Hyväksy`-, :guilabel:`Vahvista`- tai :guilabel:`Hylkää` "
 "-painikkeita). Tämä lataa yksityiskohtaisen kohdentamispyynnön lomakkeen."
 
-#: ../../content/applications/hr/time_off/management.rst:145
+#: ../../content/applications/hr/time_off/management.rst:173
 msgid ""
 "Once a request has been approved, validtaed, or refused, the Kanban card "
 "disappears from the default :guilabel:`Allocations` page. To view *all* "
@@ -57235,6 +57285,328 @@ msgstr ""
 msgid ""
 "The lower half of the time off type form, with the color and icon selected."
 msgstr "Vapaa-aikalajilomakkeen alaosa, jossa väri ja kuvake on valittu."
+
+#~ msgid ""
+#~ "To view the attendance report, click :guilabel:`Reporting` in the top "
+#~ "menu. The default report displays attendance information for current "
+#~ "employees over the past three months, in a default :icon:`oi-view-"
+#~ "pivot` :guilabel:`Pivot table`. The rows are populated by employee, while "
+#~ "the columns are populated by the various attendance records. All entries "
+#~ "are grouped by month."
+#~ msgstr ""
+#~ "Nähdäksesi läsnäoloraportin, klikkaa :guilabel:`Raportointi` "
+#~ "ylävalikossa. Oletusraportti näyttää nykyisten työntekijöiden "
+#~ "läsnäolotiedot viimeisten kolmen kuukauden ajalta :icon:`oi-view-"
+#~ "pivot` :guilabel:`Pivot-taulukossa`. Rivit sisältävät työntekijät, kun "
+#~ "taas sarakkeet sisältävät erilaiset läsnäolotietueet. Kaikki merkinnät on "
+#~ "ryhmitelty kuukausittain."
+
+#~ msgid "Employee retention report"
+#~ msgstr "Työntekijöiden pysyvyysraportti"
+
+#~ msgid "Gain insight into a company's retention rate."
+#~ msgstr "Saa käsitys yrityksen säilyttämisasteesta."
+
+#~ msgid ""
+#~ "It is possible to determine the retention rate for a company by modifying "
+#~ "an existing report."
+#~ msgstr ""
+#~ "On mahdollista määrittää yrityksen pysyvyysaste muokkaamalla olemassa "
+#~ "olevaa raporttia."
+
+#~ msgid ""
+#~ "First, navigate to :menuselection:`Employees app --> Reporting --> "
+#~ "Contracts` to open the :guilabel:`Employee Analysis` report. This report "
+#~ "shows the number of all employees for the :guilabel:`Last 365 Days`, in a "
+#~ "default :icon:`fa-line-chart` :guilabel:`Line Chart`."
+#~ msgstr ""
+#~ "Siirry ensin kohtaan :menuselection:`Employees app --> Reporting --> "
+#~ "Contracts` avataksesi :guilabel:`Employee Analysis` -raportin. Tämä "
+#~ "raportti näyttää kaikkien työntekijöiden määrän :guilabel:`Last 365 Days` "
+#~ "-ajalta oletusarvoisena :icon:`fa-line-chart`:guilabel:`Line Chart` "
+#~ "-kaaviona."
+
+#~ msgid "The default Employees Analysis report."
+#~ msgstr "Oletusraportti työntekijöiden analyysistä."
+
+#~ msgid ""
+#~ "Next, click the :guilabel:`Measures` :icon:`fa-caret-down` button in the "
+#~ "upper-left corner, revealing a drop-down menu. Click :guilabel:`# "
+#~ "Departure Employee` in the list, then click away from the drop-down menu "
+#~ "to close it. Now, the report shows all the employees who were archived "
+#~ "for the :guilabel:`Last 365 Days`."
+#~ msgstr ""
+#~ "Klikkaa seuraavaksi :guilabel:`Mittarit` :icon:`fa-caret-down` "
+#~ "-painiketta vasemmassa yläkulmassa, jolloin avautuu pudotusvalikko. "
+#~ "Klikkaa listasta :guilabel:`# Departure Employee` ja klikkaa sitten "
+#~ "pudotusvalikon ulkopuolelle sulkeaksesi sen. Nyt raportti näyttää kaikki "
+#~ "työntekijät, jotka on arkistoitu ajanjaksolla :guilabel:`Last 365 Days`."
+
+#~ msgid ""
+#~ "To view this information in an easier format, click the :icon:`oi-view-"
+#~ "pivot` :guilabel:`(Pivot)` icon in the upper-right corner, and the data "
+#~ "is presented in a pivot table."
+#~ msgstr ""
+#~ "Voit tarkastella tietoja helpommin klikkaamalla :icon:`oi-view-"
+#~ "pivot` :guilabel:`(Pivot)` -kuvaketta oikeassa yläkulmassa, jolloin "
+#~ "tiedot esitetään pivot-taulukkona."
+
+#~ msgid ""
+#~ "The various employees, organized by department, populate the rows. The "
+#~ "columns display the following totals: the monthly :guilabel:`Wage`, "
+#~ "the :guilabel:`Fuel Card` budget, total :guilabel:`Annual Employee "
+#~ "Budget` (also referred to as the *annual salary*), the number "
+#~ "of :guilabel:`New Employees`, as well as the number "
+#~ "of :guilabel:`Departure Employees` (employees who left)."
+#~ msgstr ""
+#~ "Eri työntekijät on järjestetty osastoittain riveille. Sarakkeet näyttävät "
+#~ "seuraavat summat: kuukausittaisen :guilabel:`Wage`, :guilabel:`Fuel Card` "
+#~ "-budjetin, kokonais :guilabel:`Annual Employee Budget` (jota kutsutaan "
+#~ "myös *vuosipalkaksi*), :guilabel:`New Employees` -määrän "
+#~ "sekä :guilabel:`Departure Employees` -määrän (lähteneet työntekijät)."
+
+#~ msgid ""
+#~ "The Employees Analysis report, modified to show departed employees only."
+#~ msgstr ""
+#~ "Työntekijöiden analyysiraportti, joka on muokattu näyttämään vain "
+#~ "lähteneet työntekijät."
+
+#~ msgid "Employee retention rate comparison report"
+#~ msgstr "Työntekijöiden säilyvyysasteen vertailuraportti"
+
+#~ msgid ""
+#~ "It is possible to compare data only for employees who left, compared to "
+#~ "the total current employees, between two separate time periods. This is "
+#~ "commonly referred to as the *employee retention rate*."
+#~ msgstr ""
+#~ "On mahdollista verrata vain lähteneiden työntekijöiden tietoja verrattuna "
+#~ "nykyisten työntekijöiden kokonaismäärään kahden erillisen ajanjakson "
+#~ "välillä. Tätä kutsutaan yleisesti *työntekijöiden säilyvyysasteeksi*."
+
+#~ msgid ""
+#~ "To view these metrics, first open the :guilabel:`Employee Analysis` "
+#~ "report by navigating to :menuselection:`Employees app --> Reporting --> "
+#~ "Contracts`. Click the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon in "
+#~ "the upper-right corner to view the information in a pivot table."
+#~ msgstr ""
+#~ "Voit tarkastella näitä mittareita avaamalla ensin :guilabel:`Employee "
+#~ "Analysis` -raportin siirtymällä kohtaan :menuselection:`Työntekijät-"
+#~ "sovellus --> Raportointi --> Sopimukset`. Klikkaa :icon:`oi-view-"
+#~ "pivot` :guilabel:`(Pivot)` -kuvaketta oikeassa yläkulmassa "
+#~ "tarkastellaksesi tietoja pivot-taulukkona."
+
+#~ msgid ""
+#~ "Next, click the :guilabel:`Measures` :icon:`fa-caret-down` button in the "
+#~ "upper-left corner, revealing a drop-down menu. Click :guilabel:`# New "
+#~ "Employees`, :guilabel:`Annual Employee Budget`, :guilabel:`Fuel Card`, "
+#~ "and :guilabel:`Wage` in the list, to deselect these metrics and hide them "
+#~ "in the table. Then, click :guilabel:`Count` at the bottom of the list to "
+#~ "enable that metric."
+#~ msgstr ""
+#~ "Klikkaa seuraavaksi :guilabel:`Mittarit` :icon:`fa-caret-down` "
+#~ "-painiketta vasemmassa yläkulmassa, jolloin avautuu pudotusvalikko. "
+#~ "Klikkaa listasta :guilabel:`# New Employees`, :guilabel:`Annual Employee "
+#~ "Budget`, :guilabel:`Fuel Card` ja :guilabel:`Wage`, poistaaksesi nämä "
+#~ "mittarit valinnasta ja piilottaaksesi ne taulukosta. Klikkaa sitten "
+#~ "listan alareunassa :guilabel:`Count`, ottaaksesi mittarin käyttöön."
+
+#~ msgid ""
+#~ "Click away from the drop-down menu to close it. Now, the report shows all "
+#~ "the employees who left the company (:guilabel:`# Departure Employee`), as "
+#~ "well as the total number of employees (:guilabel:`Count`), for "
+#~ "the :guilabel:`Last 365 Days`."
+#~ msgstr ""
+#~ "Klikkaa pudotusvalikon ulkopuolelle sulkeaksesi sen. Nyt raportti näyttää "
+#~ "kaikki yrityksen jättäneet työntekijät (:guilabel:`# Departure Employee`) "
+#~ "sekä työntekijöiden kokonaismäärän (:guilabel:`Count`) "
+#~ "ajanjaksolta :guilabel:`Last 365 Days`."
+
+#~ msgid ""
+#~ "To compare the data for the current year with the previous year, click "
+#~ "the :icon:`fa-caret-down` :guilabel:`(down arrow)` in the search bar, "
+#~ "revealing multiple filter and grouping options. Click :guilabel:`Last 365 "
+#~ "Days` in the :icon:`fa-filter` :guilabel:`Filters` column, to turn off "
+#~ "that filter. Then, click :guilabel:`Date`, and click the current year (in "
+#~ "this example, :guilabel:`2024`) from the resulting drop-down menu."
+#~ msgstr ""
+#~ "Voit verrata kuluvan vuoden tietoja edellisen vuoden tietoihin "
+#~ "klikkaamalla :icon:`fa-caret-down` :guilabel:`(alanuoli)` hakupalkissa, "
+#~ "jolloin näkyviin tulee useita suodatus- ja ryhmittelyasetuksia. "
+#~ "Klikkaa :guilabel:`Last 365 Days` :icon:`fa-"
+#~ "filter` :guilabel:`Suodattimet` -sarakkeessa poistaaksesi suodattimen "
+#~ "käytöstä. Klikkaa sitten :guilabel:`Date` ja valitse avautuvasta "
+#~ "pudotusvalikosta kuluva vuosi (tässä esimerkissä :guilabel:`2024`)."
+
+#~ msgid ""
+#~ "Once a selection is made beneath :guilabel:`Date` in the :icon:`fa-"
+#~ "filter` :guilabel:`Filters` column, a :icon:`fa-"
+#~ "adjust` :guilabel:`Comparison` column appears. Click :guilabel:`Date: "
+#~ "Previous Year` in the new column, then click off of the drop-down menu to "
+#~ "close it."
+#~ msgstr ""
+#~ "Kun valinta on tehty :guilabel:`Date` -kohdassa :icon:`fa-"
+#~ "filter` :guilabel:`Suodattimet` -sarakkeessa, näkyviin tulee :icon:`fa-"
+#~ "adjust` :guilabel:`Vertailu` -sarake. Klikkaa uudessa "
+#~ "sarakkeessa :guilabel:`Date: Previous Year` ja klikkaa sitten "
+#~ "pudotusvalikon ulkopuolelle sulkeaksesi sen."
+
+#~ msgid ""
+#~ "In Odoo, in order to access the :icon:`fa-adjust` :guilabel:`Comparison` "
+#~ "column, a specific time *other than* :guilabel:`Last 365 Days` **must** "
+#~ "be selected. If not, the :icon:`fa-adjust` :guilabel:`Comparison` column "
+#~ "is **not** visible."
+#~ msgstr ""
+#~ "Odoossa :icon:`fa-adjust` :guilabel:`Vertailu` -sarakkeen "
+#~ "käyttöönottamiseksi on valittava jokin *muu* ajankohta "
+#~ "kuin :guilabel:`Last 365 Days`. Muutoin :icon:`fa-"
+#~ "adjust` :guilabel:`Vertailu` -sarake **ei** ole näkyvissä."
+
+#~ msgid ""
+#~ "Now, the pivot table displays the total number of employees who left the "
+#~ "company (:guilabel:`# Departure Employee`), as well as the total number "
+#~ "of employees (:guilabel:`Count`) in the columns. These are further "
+#~ "divided by the two different years, and also displays "
+#~ "the :guilabel:`Variation` between the two."
+#~ msgstr ""
+#~ "Nyt pivot-taulukko näyttää sarakkeissa yrityksen jättäneiden "
+#~ "työntekijöiden kokonaismäärän (:guilabel:`# Departure Employee`) sekä "
+#~ "työntekijöiden kokonaismäärän (:guilabel:`Count`). Nämä on jaettu kahteen "
+#~ "eri vuoteen, ja lisäksi näkyy niiden välinen :guilabel:`Variation`."
+
+#~ msgid ""
+#~ "The rows display the departments, and lists each individual employee for "
+#~ "each department, in the rows."
+#~ msgstr "Riveillä näkyvät osastot ja kunkin osaston yksittäiset työntekijät."
+
+#~ msgid ""
+#~ "For a more concise view of this report, click :icon:`fa-minus-square-"
+#~ "o` :guilabel:`Total` above the top row of the departments and employees, "
+#~ "to collapse the rows. Now, the table presents the total number of "
+#~ "employees who left the company for both years, compared to the total "
+#~ "number of employees for both years, including the difference, in a "
+#~ "percentage."
+#~ msgstr ""
+#~ "Saat tiiviimmän näkymän raportista klikkaamalla :icon:`fa-minus-square-"
+#~ "o` :guilabel:`Total` osastojen ja työntekijöiden ylimmän rivin "
+#~ "yläpuolella rivien pienentämiseksi. Nyt taulukko esittää molempien "
+#~ "vuosien aikana yrityksen jättäneiden työntekijöiden kokonaismäärän "
+#~ "verrattuna molempien vuosien työntekijöiden kokonaismäärään, mukaan "
+#~ "lukien ero prosentteina."
+
+#~ msgid ""
+#~ "In this example, :guilabel:`3` employees out of :guilabel:`83` left in "
+#~ "2023, and :guilabel:`8` employees out of :guilabel:`202` left in 2024. "
+#~ "There was a :guilabel:`166.67%` increase in the employees who left in "
+#~ "2024 as compared to 2023. Additionally, there was a :guilabel:`143.37%` "
+#~ "increase in the total number of employees in 2024 as compared to 2023."
+#~ msgstr ""
+#~ "Tässä esimerkissä :guilabel:`3` työntekijää :guilabel:`83`:sta lähti "
+#~ "vuonna 2023 ja :guilabel:`8` työntekijää :guilabel:`202`:sta lähti vuonna "
+#~ "2024. Vuonna 2024 lähteneiden työntekijöiden määrä "
+#~ "kasvoi :guilabel:`166,67 %` verrattuna vuoteen 2023. Lisäksi "
+#~ "työntekijöiden kokonaismäärä kasvoi :guilabel:`143,37 %` vuonna 2024 "
+#~ "verrattuna vuoteen 2023."
+
+#~ msgid ""
+#~ "The report modified to show the difference between two years of employees "
+#~ "who left."
+#~ msgstr ""
+#~ "Muokattu raportti, joka näyttää kahden vuoden välisen eron lähteneiden "
+#~ "työntekijöiden osalta."
+
+#~ msgid ""
+#~ "To view more detailed rates for each department, click :icon:`fa-plus-"
+#~ "square` :guilabel:`Total` in the single row, revealing a drop-down menu, "
+#~ "and click :guilabel:`Department`. Click away from the drop-down to close "
+#~ "it, and now the pivot table displays the total number of employees who "
+#~ "left (:guilabel:`# Departure Employee`), the total number of employees "
+#~ "(:guilabel:`Count`), and the :guilabel:`Variation` (in a percentage) for "
+#~ "both 2023 and 2024, organized by department."
+#~ msgstr ""
+#~ "Voit tarkastella kunkin osaston tarkempia lukuja klikkaamalla :icon:`fa-"
+#~ "plus-square` :guilabel:`Total` yksittäisellä rivillä, jolloin avautuu "
+#~ "pudotusvalikko, ja klikkaamalla :guilabel:`Osasto`. Klikkaa "
+#~ "pudotusvalikon ulkopuolelle sulkeaksesi sen, ja nyt pivot-taulukko "
+#~ "näyttää lähteneiden työntekijöiden kokonaismäärän (:guilabel:`# Departure "
+#~ "Employee`), työntekijöiden kokonaismäärän (:guilabel:`Count`) "
+#~ "ja :guilabel:`Variation` (prosentteina) sekä vuodelle 2023 että 2024 "
+#~ "osastoittain järjestettynä."
+
+#~ msgid ""
+#~ "In this example, it can be determined that the :guilabel:`Management` "
+#~ "department had the best retention rate in 2024 as compared to 2023, with "
+#~ "a :guilabel:`Variation` rate of :guilabel:`-100%`. Additionally, it can "
+#~ "be determined that the :guilabel:`Management / Research & Development` "
+#~ "department had the most turnover, with a :guilabel:`Variation` "
+#~ "of :guilabel:`300%`."
+#~ msgstr ""
+#~ "Tästä esimerkistä voidaan päätellä, että :guilabel:`Management` "
+#~ "-osastolla oli paras säilyvyysaste vuonna 2024 verrattuna vuoteen 2023, "
+#~ "kun :guilabel:`Variation` oli :guilabel:`-100 %`. Lisäksi voidaan "
+#~ "päätellä, että :guilabel:`Management / Research & Development` -osastolla "
+#~ "oli eniten vaihtuvuutta, kun :guilabel:`Variation` oli :guilabel:`300 %`."
+
+#~ msgid "The expanded employee retention report by department."
+#~ msgstr "Laajennettu työntekijöiden pysyvyysraportti osastoittain."
+
+#~ msgid "California (CA)"
+#~ msgstr "Kalifornia (CA)"
+
+#~ msgid "New York (NY)"
+#~ msgstr "New York (NY)"
+
+#~ msgid "Texas (TX)"
+#~ msgstr "Texas (TX)"
+
+#~ msgid "Florida (FL)"
+#~ msgstr "Florida (FL)"
+
+#~ msgid "Colorado (CO)"
+#~ msgstr "Colorado (CO)"
+
+#~ msgid "Alabama (AL)"
+#~ msgstr "Alabama (AL)"
+
+#~ msgid "Washington (WA)"
+#~ msgstr "Washington (WA)"
+
+#~ msgid "Nevada (NV)"
+#~ msgstr "Nevada (NV)"
+
+#~ msgid "Vermont (VT)"
+#~ msgstr "Vermont (VT)"
+
+#~ msgid "Illinois (IL)"
+#~ msgstr "Illinois (IL)"
+
+#~ msgid "Virginia (VA)"
+#~ msgstr "Virginia (VA)"
+
+#~ msgid "Washington, D.C (DC)"
+#~ msgstr "Washington, D.C (DC)"
+
+#~ msgid "Arizona (AZ)"
+#~ msgstr "Arizona (AZ)"
+
+#~ msgid "Idaho (ID)"
+#~ msgstr "Idaho (ID)"
+
+#~ msgid "Oregon (OR)"
+#~ msgstr "Oregon (OR)"
+
+#~ msgid "North Carolina (NC)"
+#~ msgstr "Pohjois-Carolina (NC)"
+
+#~ msgid ""
+#~ "Once a request has been approved, validated, or refused, the Kanban card "
+#~ "disappears from the default :guilabel:`All Time Off` page. To view *all* "
+#~ "requests, including approved and refused requests, clear the default "
+#~ "filters in the search bar."
+#~ msgstr ""
+#~ "Kun hakemus on hyväksytty, vahvistettu tai hylätty, Kanban-kortti katoaa "
+#~ "oletusnäkymän :guilabel:`Kaikki vapaat` -sivulta. Nähdäksesi *kaikki* "
+#~ "hakemukset, mukaan lukien hyväksytyt ja hylätyt hakemukset, tyhjennä "
+#~ "oletussuodattimet hakupalkista."
 
 #~ msgid ""
 #~ "Two overtime rates are cteated, one for 150% and the other for 120%. "

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-10 17:30+0000\n"
+"POT-Creation-Date: 2026-07-24 17:32+0000\n"
 "PO-Revision-Date: 2026-07-05 01:11+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Romanian <https://translate.odoo.com/projects/odoo-19-doc/hr/"
@@ -3372,6 +3372,10 @@ msgstr ":doc:`attendances/hardware`"
 msgid ":doc:`attendances/attendance_reporting`"
 msgstr ":doc:`attendances/attendance_reporting`"
 
+#: ../../content/applications/hr/attendances.rst:158
+msgid ":doc:`attendances/time_off_ledger`"
+msgstr ""
+
 #: ../../content/applications/hr/attendances/attendance_logs.rst:3
 msgid "Attendance logs"
 msgstr "Jurnale de prezență"
@@ -4265,19 +4269,13 @@ msgstr "Vezi raportul"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:13
 msgid ""
-"To view the attendance report, click :guilabel:`Reporting` in the top menu. "
+"To view the attendances report, click :guilabel:`Reporting` in the top menu. "
 "The default report displays attendance information for current employees "
 "over the past three months, in a default :icon:`oi-view-"
 "pivot` :guilabel:`Pivot table`. The rows are populated by employee, while "
 "the columns are populated by the various attendance records. All entries are "
 "grouped by month."
 msgstr ""
-"Pentru a vizualiza raportul de prezență, faceți clic "
-"pe :guilabel:`Raportare` în meniul de sus. Raportul implicit afișează "
-"informații de prezență pentru angajații actuali din ultimele trei luni, într-"
-"un :icon:`oi-view-pivot` :guilabel:`Tabel pivot` implicit. Rândurile sunt "
-"populate cu angajați, iar coloanele cu diversele înregistrări de prezență. "
-"Toate înregistrările sunt grupate pe lună."
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:18
 msgid "The columns presented are:"
@@ -6283,8 +6281,164 @@ msgstr ""
 "la o rată de :guilabel:`150%`, iar timpul este înregistrat ca :guilabel:`Ore "
 "suplimentare` în jurnalul de prezență."
 
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:3
+msgid "Time off ledger"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:5
+msgid ""
+"The *Time Off Ledger* report in the **Attendances** app helps managers by "
+"flagging missing hours on employee attendance records. This allows managers "
+"to determine if employees are forgetting to sign in or out, decide if time "
+"off needs to be approved, and potentially flag patterns."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:10
+msgid "View time off ledger report"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:12
+msgid ""
+"To view the *Time Off Ledger* report, navigate "
+"to :menuselection:`Attendances app --> Reporting --> Time Off Ledger`. The "
+"report displays a nested list of missing attendance hours from the last two "
+"months. All entries are grouped by month, then employee. Click the :icon:`fa-"
+"caret-right` :guilabel:`(triangle)` icon to display the list of employees, "
+"then click the :icon:`fa-caret-right` :guilabel:`(triangle)` icon on the "
+"individual employee to view all the detailed attendance records."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:18
+msgid ""
+"When expanded, each individual record displays the following information:"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:20
+msgid ":guilabel:`Employee`: The employee with missing hours."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:21
+msgid ":guilabel:`Date`: The date the missing hours are from."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:22
+msgid ""
+":guilabel:`Expected Hours`: The number of hours the employee should have "
+"worked that day, calculated from their :ref:`working schedule <employees/"
+"schedule>`, configured on their employee record."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:25
+msgid ""
+":guilabel:`Worked Hours`: The total logged time the employee worked that day."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:26
+msgid ""
+":guilabel:`Approved Time Off`: The approved hours of time off for that day."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:27
+msgid ""
+":guilabel:`Difference`: The difference between the :guilabel:`Expected "
+"Hours` and the :guilabel:`Worked Hours` for the employee that day."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:None
+msgid ""
+"The time off report, expanded to show the missing records for Anita Oliver "
+"from July 2026."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:34
+msgid "Resolve conflicts"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:36
+msgid ""
+"When missing hours appear on the report, the entries should be investigated "
+"to determine the issue. The common reasons for missing attendance records "
+"are:"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:39
+msgid ":ref:`Forgot to log in to work that day. <attendances/forgot-log>`"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:40
+msgid ""
+":ref:`Forgot to request time off that day. <attendances/forgot-request>`"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:41
+msgid ""
+":ref:`Their time off request was not approved for that day. <attendances/"
+"unapproved-time-off>`"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:42
+msgid ""
+":ref:`They requested time off for part of their workday, but did not log any "
+"attendance records for the remainder of the time. <attendances/forgot-"
+"partial-log>`"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:45
+msgid ""
+"Once the reason for the missing entry is determined, the required records "
+"can be updated. Once updated, the related entries are no longer displayed in "
+"the *Time Off Ledger* report."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:51
+msgid "Forgot to log in to work"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:53
+msgid ""
+"Occasionally, employees forget to log in and out of the **Attendances** app. "
+"When this occurs, the employee's manager must :ref:`create the attendance "
+"records <attendances/create-records>` retroactively in the **Attendances** "
+"app."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:60
+msgid "Forgot to request time off"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:62
+msgid ""
+"If the employee did not request time off, the employee's manager or time off "
+"officer must :ref:`create the missing time off request <time_off/missing>` "
+"retroactively in the **Time Off** app."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:68
+msgid "Time off request was unapproved"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:70
+msgid ""
+"If the employee requested time off and the employee's manager or time off "
+"officer did not approve the request in time, the :ref:`request must be "
+"approved <time_off/manage-time-off>` in the **Time Off** app."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:77
+msgid "Partial time off day missing attendance records"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:79
+msgid ""
+"Occasionally, employees request time off for part of the workday, and are "
+"expected to work the remainder of the day. When employees forget to log in "
+"and out for the partial workday, the employee's manager must :ref:`create "
+"the attendance record <attendances/create-records>` retroactively in the "
+"**Attendances** app."
+msgstr ""
+
 #: ../../content/applications/hr/employees.rst:5
-#: ../../content/applications/hr/employees.rst:81
+#: ../../content/applications/hr/employees.rst:76
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:210
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:91
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:67
@@ -6292,7 +6446,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:69
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:58
 #: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:35
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:97
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:126
 msgid "Employees"
 msgstr "Angajați"
 
@@ -6406,16 +6560,7 @@ msgstr "Ieșire din organizație"
 msgid "Take care of employee records when collaboration ends."
 msgstr "Gestionați fișele angajaților când colaborarea ia sfârșit."
 
-#: ../../content/applications/hr/employees.rst:67
-#: ../../content/applications/hr/employees/retention_report.rst:3
-msgid "Employee retention report"
-msgstr "Raport de retenție a angajaților"
-
-#: ../../content/applications/hr/employees.rst:67
-msgid "Gain insight into a company's retention rate."
-msgstr "Obțineți o perspectivă asupra ratei de retenție a unei companii."
-
-#: ../../content/applications/hr/employees.rst:75
+#: ../../content/applications/hr/employees.rst:70
 #: ../../content/applications/hr/fleet/new_vehicle.rst:16
 #: ../../content/applications/hr/lunch.rst:19
 #: ../../content/applications/hr/payroll.rst:38
@@ -6424,7 +6569,7 @@ msgstr "Obțineți o perspectivă asupra ratei de retenție a unei companii."
 msgid "Settings"
 msgstr "Setări"
 
-#: ../../content/applications/hr/employees.rst:77
+#: ../../content/applications/hr/employees.rst:72
 msgid ""
 "To view and configure the available settings, navigate "
 "to :menuselection:`Employees app --> Configuration --> Settings`."
@@ -6432,7 +6577,7 @@ msgstr ""
 "Pentru a vizualiza și configura setările disponibile, "
 "accesați :menuselection:`Aplicația Angajați --> Configurare --> Setări`."
 
-#: ../../content/applications/hr/employees.rst:83
+#: ../../content/applications/hr/employees.rst:78
 msgid ""
 ":guilabel:`Presence Display`: Select how the employee's availability status "
 "is calculated."
@@ -6440,7 +6585,7 @@ msgstr ""
 ":guilabel:`Afișare prezență`: Selectați modul în care este calculat statul "
 "de disponibilitate al angajatului."
 
-#: ../../content/applications/hr/employees.rst:85
+#: ../../content/applications/hr/employees.rst:80
 msgid ""
 ":guilabel:`Based on attendances`: Employees are marked available "
 "when :ref:`checked into <attendances/check-in>` the **Attendances** app."
@@ -6449,7 +6594,7 @@ msgstr ""
 "atunci când :ref:`se înregistrează <attendances/check-in>` în aplicația "
 "**Prezențe**."
 
-#: ../../content/applications/hr/employees.rst:87
+#: ../../content/applications/hr/employees.rst:82
 msgid ""
 ":guilabel:`Based on user status in system`: Employees are marked available "
 "when they :doc:`log in to Odoo <attendances/check_in_check_out>`."
@@ -6458,7 +6603,7 @@ msgstr ""
 "marcați ca disponibili atunci când :doc:`se autentifică în Odoo <attendances/"
 "check_in_check_out>`."
 
-#: ../../content/applications/hr/employees.rst:90
+#: ../../content/applications/hr/employees.rst:85
 msgid ""
 ":guilabel:`Advanced Presence Control`: When enabled, presence status can be "
 "calculated from operational signals rather than check-ins or logins:"
@@ -6467,7 +6612,7 @@ msgstr ""
 "prezență poate fi calculat din semnale operaționale, nu din înregistrări sau "
 "autentificări:"
 
-#: ../../content/applications/hr/employees.rst:93
+#: ../../content/applications/hr/employees.rst:88
 msgid ""
 ":guilabel:`Based on number of emails sent`: An employee is marked present if "
 "they send at least # emails per hour; otherwise, they are marked absent. "
@@ -6479,7 +6624,7 @@ msgstr ""
 "marcat absent. Introduceți numărul minim de e-mailuri care trebuie trimise "
 "în câmpul :guilabel:`E-mailuri trimise`."
 
-#: ../../content/applications/hr/employees.rst:96
+#: ../../content/applications/hr/employees.rst:91
 msgid ""
 ":guilabel:`Based on IP Address`: An employee is marked present only when "
 "connected from one of the specified corporate IP addresses. Enter the IP "
@@ -6491,7 +6636,7 @@ msgstr ""
 "Introduceți adresele IP în câmpul :guilabel:`Adrese IP`, separând fiecare "
 "adresă cu o virgulă."
 
-#: ../../content/applications/hr/employees.rst:100
+#: ../../content/applications/hr/employees.rst:95
 msgid ""
 ":guilabel:`Skills Management`: Enable this option to display "
 "the :ref:`resumé tab <employees/resume>` on employee profiles. This allows "
@@ -6504,11 +6649,11 @@ msgstr ""
 "resume>`, :ref:`competențelor <employees/skills>` și :doc:`certificărilor "
 "<employees/certifications>`."
 
-#: ../../content/applications/hr/employees.rst:106
+#: ../../content/applications/hr/employees.rst:101
 msgid "Work organization"
 msgstr "Organizarea muncii"
 
-#: ../../content/applications/hr/employees.rst:108
+#: ../../content/applications/hr/employees.rst:103
 msgid ""
 "Using the drop-down menu, select the default :guilabel:`Company Working "
 "Hours`. The default options are a :guilabel:`Standard 40 hours/week` or "
@@ -6518,7 +6663,7 @@ msgstr ""
 "companiei` implicit. Opțiunile implicite sunt :guilabel:`Standard 40 ore/"
 "săptămână` sau un :guilabel:`Calendar implicit pentru resursă de programare`."
 
-#: ../../content/applications/hr/employees.rst:111
+#: ../../content/applications/hr/employees.rst:106
 msgid ""
 "The available working hours listed are the same as the "
 "configured :doc:`working schedules <payroll/working_schedules>` in the "
@@ -6530,12 +6675,12 @@ msgstr ""
 "plată**. Orele de lucru pot fi create și modificate atât din aplicațiile "
 "**Stat de plată**, cât și **Angajați**."
 
-#: ../../content/applications/hr/employees.rst:116
+#: ../../content/applications/hr/employees.rst:111
 #: ../../content/applications/hr/fleet/new_vehicle.rst:230
 msgid "Contract"
 msgstr "Contract"
 
-#: ../../content/applications/hr/employees.rst:118
+#: ../../content/applications/hr/employees.rst:113
 msgid ""
 "Define the number of days in advance that a manager is notified about an "
 "upcoming contract or work permit expiration in the "
@@ -6547,11 +6692,11 @@ msgstr ""
 "respective :guilabel:`Perioada de notificare pentru expirarea contractului` "
 "și :guilabel:`Perioada de notificare pentru expirarea permisului de muncă`."
 
-#: ../../content/applications/hr/employees.rst:123
+#: ../../content/applications/hr/employees.rst:118
 msgid "Salary configurator"
 msgstr "Configurator salarial"
 
-#: ../../content/applications/hr/employees.rst:125
+#: ../../content/applications/hr/employees.rst:120
 msgid ""
 "Define how long an offer remains valid when extending a job offer or "
 "changing a salary. Enter the duration, in days, in the :guilabel:`Salary "
@@ -6561,18 +6706,18 @@ msgstr ""
 "de angajare sau se modifică un salariu. Introduceți durata, în zile, în "
 "câmpul :guilabel:`Configurator pachet salarial`."
 
-#: ../../content/applications/hr/employees.rst:128
-#: ../../content/applications/hr/employees.rst:141
+#: ../../content/applications/hr/employees.rst:123
+#: ../../content/applications/hr/employees.rst:136
 msgid ""
 "This field only appears if the **Salary Configurator** module is installed."
 msgstr ""
 "Acest câmp apare doar dacă modulul **Configurator salarial** este instalat."
 
-#: ../../content/applications/hr/employees.rst:131
+#: ../../content/applications/hr/employees.rst:126
 msgid "Extra time off allocation"
 msgstr "Alocare suplimentară de timp liber"
 
-#: ../../content/applications/hr/employees.rst:133
+#: ../../content/applications/hr/employees.rst:128
 msgid ""
 "During salary package negotiations, enable the checkbox in this section if "
 "additional time off requests are allowed. When enabled, select "
@@ -6584,7 +6729,7 @@ msgstr ""
 "liber. Când este activată, selectați :doc:`tipul de timp liber <time_off/"
 "time_off_types>` creat pentru zilele suplimentare utilizând meniul drop-down."
 
-#: ../../content/applications/hr/employees.rst:137
+#: ../../content/applications/hr/employees.rst:132
 msgid ""
 "The default available options are :guilabel:`Paid Time "
 "Off`, :guilabel:`Compensatory Days`, and :guilabel:`Extra Time Off`. If "
@@ -8239,7 +8384,7 @@ msgstr "Jumătatea de sus a unui formular nou de angajat, complet completat."
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:95
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:78
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:67
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:106
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:135
 msgid "Work tab"
 msgstr "Fila Lucru"
 
@@ -8999,7 +9144,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:105
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:84
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:73
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:116
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:145
 msgid "Personal tab"
 msgstr "Fila Personal"
 
@@ -9580,7 +9725,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:131
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:103
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:83
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:133
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:162
 msgid "Payroll tab"
 msgstr "Fila Salarizare"
 
@@ -11282,268 +11427,6 @@ msgstr ""
 "Integrarea poate fi lansată doar pentru :doc:`utilizatorii <../../general/"
 "users>` bazei de date. Dacă lipsește orice informație din profilul "
 "angajatului, apare un avertisment care listează informațiile necesare."
-
-#: ../../content/applications/hr/employees/retention_report.rst:5
-msgid ""
-"It is possible to determine the retention rate for a company by modifying an "
-"existing report."
-msgstr ""
-"Este posibil să determini rata de retenție pentru o companie modificând un "
-"raport existent."
-
-#: ../../content/applications/hr/employees/retention_report.rst:7
-msgid ""
-"First, navigate to :menuselection:`Employees app --> Reporting --> "
-"Contracts` to open the :guilabel:`Employee Analysis` report. This report "
-"shows the number of all employees for the :guilabel:`Last 365 Days`, in a "
-"default :icon:`fa-line-chart` :guilabel:`Line Chart`."
-msgstr ""
-"Mai întâi, accesează :menuselection:`Aplicația Angajați --> Raportare --> "
-"Contracte` pentru a deschide raportul :guilabel:`Analiză angajați`. Acest "
-"raport arată numărul tuturor angajaților pentru :guilabel:`Ultimele 365 de "
-"zile`, într-un :icon:`fa-line-chart` :guilabel:`Grafic liniar` implicit."
-
-#: ../../content/applications/hr/employees/retention_report.rst:None
-msgid "The default Employees Analysis report."
-msgstr "Raportul implicit de analiză a angajaților."
-
-#: ../../content/applications/hr/employees/retention_report.rst:15
-msgid ""
-"Next, click the :guilabel:`Measures` :icon:`fa-caret-down` button in the "
-"upper-left corner, revealing a drop-down menu. Click :guilabel:`# Departure "
-"Employee` in the list, then click away from the drop-down menu to close it. "
-"Now, the report shows all the employees who were archived for "
-"the :guilabel:`Last 365 Days`."
-msgstr ""
-"Apoi, apasă butonul :guilabel:`Măsuri` :icon:`fa-caret-down` din colțul "
-"stânga sus, pentru a deschide un meniu derulant. Selectează :guilabel:`# "
-"Angajați plecați` din listă, apoi fă clic în afara meniului pentru a-l "
-"închide. Acum, raportul va afișa toți angajații care au fost arhivați "
-"în :guilabel:`Ultimele 365 de zile`."
-
-#: ../../content/applications/hr/employees/retention_report.rst:20
-msgid ""
-"To view this information in an easier format, click the :icon:`oi-view-"
-"pivot` :guilabel:`(Pivot)` icon in the upper-right corner, and the data is "
-"presented in a pivot table."
-msgstr ""
-"Pentru a vizualiza aceste informații într-un format mai ușor, apasă pe "
-"pictograma :icon:`oi-view-pivot` :guilabel:`(Pivot)` din colțul dreapta sus, "
-"iar datele vor fi prezentate într-un tabel pivot."
-
-#: ../../content/applications/hr/employees/retention_report.rst:23
-msgid ""
-"The various employees, organized by department, populate the rows. The "
-"columns display the following totals: the monthly :guilabel:`Wage`, "
-"the :guilabel:`Fuel Card` budget, total :guilabel:`Annual Employee Budget` "
-"(also referred to as the *annual salary*), the number of :guilabel:`New "
-"Employees`, as well as the number of :guilabel:`Departure Employees` "
-"(employees who left)."
-msgstr ""
-"Diversii angajați, organizați pe departamente, populează rândurile. "
-"Coloanele afișează următoarele totaluri: :guilabel:`Salariul` lunar, bugetul "
-"pentru :guilabel:`Card combustibil`, :guilabel:`Bugetul anual al "
-"angajatului` (numit și *salariu anual*), numărul de :guilabel:`Angajați "
-"noi`, precum și numărul de :guilabel:`Angajați plecați`."
-
-#: ../../content/applications/hr/employees/retention_report.rst:None
-msgid ""
-"The Employees Analysis report, modified to show departed employees only."
-msgstr ""
-"Raportul de analiză a angajaților, modificat pentru a afișa doar angajații "
-"plecați."
-
-#: ../../content/applications/hr/employees/retention_report.rst:33
-msgid "Employee retention rate comparison report"
-msgstr "Raport comparativ al ratei de retenție a angajaților"
-
-#: ../../content/applications/hr/employees/retention_report.rst:35
-msgid ""
-"It is possible to compare data only for employees who left, compared to the "
-"total current employees, between two separate time periods. This is commonly "
-"referred to as the *employee retention rate*."
-msgstr ""
-"Este posibil să compari datele doar pentru angajații care au plecat, față de "
-"totalul angajaților actuali, între două perioade de timp diferite. Acest "
-"lucru este cunoscut sub denumirea de *rată de retenție a angajaților*."
-
-#: ../../content/applications/hr/employees/retention_report.rst:38
-msgid ""
-"To view these metrics, first open the :guilabel:`Employee Analysis` report "
-"by navigating to :menuselection:`Employees app --> Reporting --> Contracts`. "
-"Click the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon in the upper-right "
-"corner to view the information in a pivot table."
-msgstr ""
-"Pentru a vizualiza aceste valori, deschide mai întâi "
-"raportul :guilabel:`Analiză angajați` accesând :menuselection:`Aplicația "
-"Angajați --> Raportare --> Contracte`. Apasă pe pictograma :icon:`oi-view-"
-"pivot` :guilabel:`(Pivot)` din colțul dreapta sus pentru a vedea "
-"informațiile într-un tabel pivot."
-
-#: ../../content/applications/hr/employees/retention_report.rst:42
-msgid ""
-"Next, click the :guilabel:`Measures` :icon:`fa-caret-down` button in the "
-"upper-left corner, revealing a drop-down menu. Click :guilabel:`# New "
-"Employees`, :guilabel:`Annual Employee Budget`, :guilabel:`Fuel Card`, "
-"and :guilabel:`Wage` in the list, to deselect these metrics and hide them in "
-"the table. Then, click :guilabel:`Count` at the bottom of the list to enable "
-"that metric."
-msgstr ""
-"Apoi, apasă butonul :guilabel:`Măsuri` :icon:`fa-caret-down` din colțul "
-"stânga sus pentru a deschide un meniu derulant. Selectează :guilabel:`# "
-"Angajați noi`, :guilabel:`Buget anual angajat`, :guilabel:`Card combustibil` "
-"și :guilabel:`Salariu` din listă pentru a deselecta aceste valori și a le "
-"ascunde din tabel. Apoi, apasă pe :guilabel:`Număr` la finalul listei pentru "
-"a activa această valoare."
-
-#: ../../content/applications/hr/employees/retention_report.rst:47
-msgid ""
-"Click away from the drop-down menu to close it. Now, the report shows all "
-"the employees who left the company (:guilabel:`# Departure Employee`), as "
-"well as the total number of employees (:guilabel:`Count`), for "
-"the :guilabel:`Last 365 Days`."
-msgstr ""
-"Fă clic în afara meniului derulant pentru a-l închide. Acum, raportul va "
-"afișa toți angajații care au părăsit compania (:guilabel:`# Angajați "
-"plecați`), precum și numărul total de angajați (:guilabel:`Număr`), "
-"pentru :guilabel:`Ultimele 365 de zile`."
-
-#: ../../content/applications/hr/employees/retention_report.rst:51
-msgid ""
-"To compare the data for the current year with the previous year, click "
-"the :icon:`fa-caret-down` :guilabel:`(down arrow)` in the search bar, "
-"revealing multiple filter and grouping options. Click :guilabel:`Last 365 "
-"Days` in the :icon:`fa-filter` :guilabel:`Filters` column, to turn off that "
-"filter. Then, click :guilabel:`Date`, and click the current year (in this "
-"example, :guilabel:`2024`) from the resulting drop-down menu."
-msgstr ""
-"Pentru a compara datele pentru anul curent cu anul precedent, apasă "
-"pe :icon:`fa-caret-down` :guilabel:`(săgeată în jos)` din bara de căutare "
-"pentru a afișa mai multe opțiuni de filtrare și grupare. Apasă "
-"pe :guilabel:`Ultimele 365 de zile` din coloana :icon:`fa-"
-"filter` :guilabel:`Filtre` pentru a dezactiva acest filtru. Apoi, apasă "
-"pe :guilabel:`Dată` și selectează anul curent (de exemplu, :guilabel:`2024`) "
-"din meniul derulant."
-
-#: ../../content/applications/hr/employees/retention_report.rst:57
-msgid ""
-"Once a selection is made beneath :guilabel:`Date` in the :icon:`fa-"
-"filter` :guilabel:`Filters` column, a :icon:`fa-"
-"adjust` :guilabel:`Comparison` column appears. Click :guilabel:`Date: "
-"Previous Year` in the new column, then click off of the drop-down menu to "
-"close it."
-msgstr ""
-"După ce ai făcut o selecție sub :guilabel:`Dată` în coloana :icon:`fa-"
-"filter` :guilabel:`Filtre`, va apărea o coloană :icon:`fa-"
-"adjust` :guilabel:`Comparație`. Apasă pe :guilabel:`Dată: Anul precedent` în "
-"noua coloană, apoi fă clic în afara meniului pentru a-l închide."
-
-#: ../../content/applications/hr/employees/retention_report.rst:62
-msgid ""
-"In Odoo, in order to access the :icon:`fa-adjust` :guilabel:`Comparison` "
-"column, a specific time *other than* :guilabel:`Last 365 Days` **must** be "
-"selected. If not, the :icon:`fa-adjust` :guilabel:`Comparison` column is "
-"**not** visible."
-msgstr ""
-"În Odoo, pentru a accesa coloana :icon:`fa-adjust` :guilabel:`Comparație`, "
-"trebuie selectată o perioadă de timp *diferită* de :guilabel:`Ultimele 365 "
-"de zile`. În caz contrar, coloana :icon:`fa-adjust` :guilabel:`Comparație` "
-"**nu** va fi vizibilă."
-
-#: ../../content/applications/hr/employees/retention_report.rst:66
-msgid ""
-"Now, the pivot table displays the total number of employees who left the "
-"company (:guilabel:`# Departure Employee`), as well as the total number of "
-"employees (:guilabel:`Count`) in the columns. These are further divided by "
-"the two different years, and also displays the :guilabel:`Variation` between "
-"the two."
-msgstr ""
-"Acum, tabelul pivot afișează numărul total de angajați care au părăsit "
-"compania (:guilabel:`# Angajați plecați`), precum și numărul total de "
-"angajați (:guilabel:`Număr`) în coloane. Acestea sunt împărțite pe cei doi "
-"ani diferiți și afișează și :guilabel:`Variația` dintre ele."
-
-#: ../../content/applications/hr/employees/retention_report.rst:71
-msgid ""
-"The rows display the departments, and lists each individual employee for "
-"each department, in the rows."
-msgstr ""
-"Rândurile afișează departamentele și listează fiecare angajat individual "
-"pentru fiecare departament, în rânduri."
-
-#: ../../content/applications/hr/employees/retention_report.rst:74
-msgid ""
-"For a more concise view of this report, click :icon:`fa-minus-square-"
-"o` :guilabel:`Total` above the top row of the departments and employees, to "
-"collapse the rows. Now, the table presents the total number of employees who "
-"left the company for both years, compared to the total number of employees "
-"for both years, including the difference, in a percentage."
-msgstr ""
-"Pentru o vizualizare mai concisă a acestui raport, apasă pe :icon:`fa-minus-"
-"square-o` :guilabel:`Total` deasupra primului rând al departamentelor și "
-"angajaților pentru a restrânge rândurile. Acum, tabelul prezintă numărul "
-"total de angajați care au părăsit compania pentru ambii ani, comparativ cu "
-"numărul total de angajați pentru ambii ani, inclusiv diferența, exprimată "
-"procentual."
-
-#: ../../content/applications/hr/employees/retention_report.rst:80
-msgid ""
-"In this example, :guilabel:`3` employees out of :guilabel:`83` left in 2023, "
-"and :guilabel:`8` employees out of :guilabel:`202` left in 2024. There was "
-"a :guilabel:`166.67%` increase in the employees who left in 2024 as compared "
-"to 2023. Additionally, there was a :guilabel:`143.37%` increase in the total "
-"number of employees in 2024 as compared to 2023."
-msgstr ""
-"În acest exemplu, :guilabel:`3` angajați din :guilabel:`83` au plecat în "
-"2023, iar :guilabel:`8` angajați din :guilabel:`202` au plecat în 2024. A "
-"existat o creștere de :guilabel:`166,67%` a angajaților care au plecat în "
-"2024 față de 2023. De asemenea, a existat o creștere de :guilabel:`143,37%` "
-"a numărului total de angajați în 2024 față de 2023."
-
-#: ../../content/applications/hr/employees/retention_report.rst:0
-msgid ""
-"The report modified to show the difference between two years of employees "
-"who left."
-msgstr ""
-"Raportul modificat pentru a arăta diferența dintre doi ani privind angajații "
-"care au plecat."
-
-#: ../../content/applications/hr/employees/retention_report.rst:89
-msgid ""
-"To view more detailed rates for each department, click :icon:`fa-plus-"
-"square` :guilabel:`Total` in the single row, revealing a drop-down menu, and "
-"click :guilabel:`Department`. Click away from the drop-down to close it, and "
-"now the pivot table displays the total number of employees who left "
-"(:guilabel:`# Departure Employee`), the total number of employees "
-"(:guilabel:`Count`), and the :guilabel:`Variation` (in a percentage) for "
-"both 2023 and 2024, organized by department."
-msgstr ""
-"Pentru a vedea rate mai detaliate pentru fiecare departament, apasă "
-"pe :icon:`fa-plus-square` :guilabel:`Total` din rândul unic, pentru a "
-"deschide un meniu derulant, și selectează :guilabel:`Departament`. Fă clic "
-"în afara meniului pentru a-l închide, iar tabelul pivot va afișa numărul "
-"total de angajați care au plecat (:guilabel:`# Angajați plecați`), numărul "
-"total de angajați (:guilabel:`Număr`) și :guilabel:`Variația` (procentual) "
-"pentru 2023 și 2024, organizat pe departamente."
-
-#: ../../content/applications/hr/employees/retention_report.rst:96
-msgid ""
-"In this example, it can be determined that the :guilabel:`Management` "
-"department had the best retention rate in 2024 as compared to 2023, with "
-"a :guilabel:`Variation` rate of :guilabel:`-100%`. Additionally, it can be "
-"determined that the :guilabel:`Management / Research & Development` "
-"department had the most turnover, with a :guilabel:`Variation` "
-"of :guilabel:`300%`."
-msgstr ""
-"În acest exemplu, se poate determina că departamentul :guilabel:`Management` "
-"a avut cea mai bună rată de retenție în 2024 comparativ cu 2023, cu "
-"o :guilabel:`Variație` de :guilabel:`-100%`. De asemenea, se poate determina "
-"că departamentul :guilabel:`Management / Cercetare & Dezvoltare` a avut cea "
-"mai mare fluctuație, cu o :guilabel:`Variație` de :guilabel:`300%`."
-
-#: ../../content/applications/hr/employees/retention_report.rst:0
-msgid "The expanded employee retention report by department."
-msgstr "Raportul extins de retenție a angajaților pe departamente."
 
 #: ../../content/applications/hr/fleet.rst:5
 msgid "Fleet"
@@ -18633,7 +18516,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:134
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:106
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:88
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:136
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:165
 msgid "Contract overview section"
 msgstr "Secțiunea Prezentare generală contract"
 
@@ -18894,7 +18777,7 @@ msgstr ":guilabel:`Salariu la semnare`: Introduceți salariul lunar în câmp."
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:167
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:134
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:121
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:168
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:197
 msgid "Schedule section"
 msgstr "Secțiunea Program"
 
@@ -20264,7 +20147,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:20
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:20
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:15
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:39
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:68
 msgid "Apps & modules"
 msgstr "Aplicații și module"
 
@@ -20286,7 +20169,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:28
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:23
 #: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:20
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:47
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:76
 msgid "Name"
 msgstr "Nume"
 
@@ -20300,7 +20183,7 @@ msgstr "Nume"
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:29
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:24
 #: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:21
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:48
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:77
 msgid "Technical name"
 msgstr "Nume tehnic"
 
@@ -20309,7 +20192,7 @@ msgstr "Nume tehnic"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:30
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:30
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:25
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:49
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:78
 msgid "Dependencies"
 msgstr "Dependențe"
 
@@ -20323,7 +20206,7 @@ msgstr "Dependențe"
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:31
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:26
 #: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:22
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:50
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:79
 msgid "Description"
 msgstr "Descriere"
 
@@ -20340,14 +20223,14 @@ msgstr "`l10n_au_hr_payroll`"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:34
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:34
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:29
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:53
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:82
 msgid "hr_payroll"
 msgstr "hr_payroll"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:49
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:35
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:36
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:55
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:84
 msgid "hr_work_entry_holidays"
 msgstr "hr_work_entry_holidays"
 
@@ -20355,7 +20238,7 @@ msgstr "hr_work_entry_holidays"
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:28
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:36
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:37
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:56
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:85
 msgid "hr_payroll_holidays"
 msgstr "hr_payroll_holidays"
 
@@ -20389,7 +20272,7 @@ msgstr "l10n_au_hr_payroll"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:45
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:41
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:34
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:61
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:90
 msgid "hr_payroll_account"
 msgstr "hr_payroll_account"
 
@@ -20404,7 +20287,7 @@ msgstr "l10n_au_aba"
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:60
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:44
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:37
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:64
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:93
 msgid ""
 "Links payroll and accounting by creating journal entries (per payslip if "
 "needed) to record payroll in the company's books."
@@ -20456,7 +20339,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:47
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:52
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:41
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:72
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:101
 msgid "General configurations"
 msgstr "Configurări generale"
 
@@ -20478,7 +20361,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:65
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:58
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:47
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:78
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:107
 msgid ":guilabel:`Company Name`: Enter the business name in this field."
 msgstr ":guilabel:`Nume companie`: Introduceți numele firmei în acest câmp."
 
@@ -20486,7 +20369,7 @@ msgstr ":guilabel:`Nume companie`: Introduceți numele firmei în acest câmp."
 #: ../../content/applications/hr/payroll/payroll_localizations/hong_kong.rst:67
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:66
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:59
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:79
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:108
 msgid ""
 ":guilabel:`Address`: Complete the full address, including "
 "the :guilabel:`City`, :guilabel:`State`, :guilabel:`Zip Code`, "
@@ -20563,7 +20446,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:79
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:65
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:54
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:90
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:119
 msgid ":guilabel:`Phone`: Enter the company phone number."
 msgstr ":guilabel:`Telefon`: Introduceți numărul de telefon al companiei."
 
@@ -20573,7 +20456,7 @@ msgstr ":guilabel:`Telefon`: Introduceți numărul de telefon al companiei."
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:80
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:66
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:55
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:91
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:120
 msgid ""
 ":guilabel:`Email`: Enter the email used for general contact information."
 msgstr ""
@@ -20985,7 +20868,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:148
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:120
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:101
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:150
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:179
 msgid ""
 "Set a default :guilabel:`Wage Type` in the salary :ref:`Structure Type "
 "<payroll/structure-types>` to configure employees in bulk. If needed, the "
@@ -21048,7 +20931,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:141
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:136
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:123
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:170
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:199
 msgid ""
 ":guilabel:`Work Entry Source`: Defines how :doc:`work entries <../"
 "work_entries>` are generated for payroll during the specified pay period. "
@@ -21062,7 +20945,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:144
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:139
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:126
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:173
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:202
 msgid ""
 ":guilabel:`Working Schedule`: Based on the employee's assigned :ref:`working "
 "schedule <employees/schedule>` (e.g., 40 hours per week)."
@@ -21074,7 +20957,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:146
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:141
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:128
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:175
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:204
 msgid ""
 ":guilabel:`Attendances`: Based on :doc:`approved checked-in hours <../../"
 "attendances/management>` in the **Attendances** app."
@@ -21086,7 +20969,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:148
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:143
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:130
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:177
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:206
 msgid ""
 ":guilabel:`Planning`: Based on :ref:`scheduled shifts <planning/shifts>` in "
 "the **Planning** app."
@@ -21656,7 +21539,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:296
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:192
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:138
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:309
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:338
 msgid "Payroll configuration"
 msgstr "Configurarea statelor de plată"
 
@@ -21674,7 +21557,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:328
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:220
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:144
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:315
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:344
 msgid "Salary structures & structure types"
 msgstr "Structuri salariale și tipuri de structuri"
 
@@ -21710,7 +21593,7 @@ msgstr "Structura salarială australiană în lista de structuri salariale."
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:345
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:236
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:159
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:330
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:359
 #: ../../content/applications/hr/payroll/salaries.rst:176
 msgid "Salary rules"
 msgstr "Reguli salariale"
@@ -21740,7 +21623,7 @@ msgstr "Partea de sus a regulilor salariale australiene."
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:359
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:250
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:175
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:405
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:434
 #: ../../content/applications/hr/payroll/salaries.rst:421
 msgid "Rule parameters"
 msgstr "Parametrii regulii"
@@ -21749,7 +21632,7 @@ msgstr "Parametrii regulii"
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:373
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:252
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:177
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:407
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:436
 msgid ""
 "Some calculations require specific rates associated with them, or wage caps. "
 "*Rules Parameters* are capable of listing a value, either a percentage or a "
@@ -21763,7 +21646,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:380
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:365
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:255
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:414
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:443
 msgid ""
 "Most rules pull information stored in the parameters module to get the rate "
 "of the rule (a percentage) and the cap (a dollar amount)."
@@ -21776,7 +21659,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:368
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:258
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:183
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:417
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:446
 msgid ""
 "To view rule parameters, navigate to :menuselection:`Payroll app --> "
 "Configuration --> Rule Parameters`. Here, all rule parameters are displayed "
@@ -22022,7 +21905,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:413
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:289
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:343
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:441
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:470
 msgid ""
 "Work entries sync based on the employee's :doc:`contract <../contracts>` "
 "configuration. Odoo pulls from the assigned working schedule, attendance "
@@ -23491,7 +23374,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:537
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:398
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:418
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:539
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:568
 msgid "Close Payroll"
 msgstr "Închide stat de plată"
 
@@ -23501,7 +23384,7 @@ msgstr "Închide stat de plată"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:539
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:400
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:420
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:541
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:570
 msgid "If there are no errors, payroll is completed for the pay period."
 msgstr ""
 "Dacă nu există erori, stati de plată este finalizat pentru perioada de plată."
@@ -23509,7 +23392,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:1154
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:511
 #: ../../content/applications/hr/payroll/payroll_localizations/kenya.rst:152
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:544
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:573
 msgid "Reports"
 msgstr "Rapoarte"
 
@@ -33971,7 +33854,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:451
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:326
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:380
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:478
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:507
 msgid "Accounting check"
 msgstr "Verificare contabilă"
 
@@ -33991,7 +33874,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:459
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:334
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:388
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:486
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:515
 msgid "Journal entry creation"
 msgstr "Crearea înregistrării în jurnal"
 
@@ -34989,7 +34872,7 @@ msgstr "Configurări generale"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:61
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:54
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:43
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:74
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:103
 msgid ""
 "First, the company must be configured. Navigate to :menuselection:`Settings "
 "app --> Users & Companies --> Companies`. From the list, select the desired "
@@ -35736,7 +35619,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:426
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:302
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:356
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:454
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:483
 msgid ""
 "To cut down on the payroll officer's time, it is typical to process payslips "
 "in batches, either by wage type (fixed salary vs hourly), pay schedule "
@@ -35752,7 +35635,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:366
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:418
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:360
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:458
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:487
 msgid ""
 "The process of running payroll includes different actions that need to be "
 "executed to ensure that the amount withheld from payroll taxes is correct, "
@@ -35771,7 +35654,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:435
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:311
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:365
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:463
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:492
 msgid ""
 "When running a payroll batch, check that the period, company, and employees "
 "included are correct *before* starting to analyze or validate the data."
@@ -35784,7 +35667,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:426
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:314
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:368
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:466
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:495
 msgid ""
 "Once the payslips are drafted, review them for accuracy. Check "
 "the :guilabel:`Worked Days & Inputs` tab, and ensure the listed worked time "
@@ -35800,7 +35683,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:378
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:430
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:372
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:470
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:499
 msgid ""
 "Next, check the various totals (gross pay, employee taxes, benefits, "
 "employer taxes, net salaries), then click :guilabel:`Compute Sheet` to "
@@ -35836,7 +35719,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:461
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:336
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:390
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:488
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:517
 msgid ""
 "After payslips are confirmed and validated, journal entries are posted "
 "either individually, or in a batch. The journal entry is created first as a "
@@ -35851,7 +35734,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:465
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:340
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:394
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:492
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:521
 msgid ""
 "It must be decided if journal entries are done individually or in batches "
 "*before* running payroll."
@@ -35977,7 +35860,7 @@ msgstr "Înregistrări din jurnal contabilizate."
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:512
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:383
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:403
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:524
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:553
 msgid "Register Payments"
 msgstr "Înregistrează plăți"
 
@@ -35993,7 +35876,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:500
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:392
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:412
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:533
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:562
 msgid ""
 "Payments can be :guilabel:`Grouped by Partner` if there is a partner "
 "associated with a salary rule."
@@ -36416,7 +36299,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:91
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:74
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:63
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:102
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:131
 msgid ""
 "To update an employee form, open the :menuselection:`Employees` app and "
 "click on the desired employee record. On the employee form, configure the "
@@ -36431,7 +36314,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:97
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:80
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:69
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:108
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:137
 msgid ""
 "Enter the :guilabel:`Work Address` for the employee in "
 "the :guilabel:`Location` section of the :guilabel:`Work` tab."
@@ -36443,7 +36326,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:107
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:89
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:75
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:118
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:147
 msgid ""
 "Ensure the employee has a minimum of one :ref:`trusted bank account "
 "<employees/private-contact>` listed in the :guilabel:`Bank Accounts` field "
@@ -36500,7 +36383,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:136
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:108
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:90
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:138
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:167
 msgid ""
 "This section holds information that drives salary calculations. Ensure the "
 "following fields are configured:"
@@ -36522,7 +36405,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:141
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:113
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:94
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:143
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:172
 msgid ":guilabel:`Wage Type`: Select how the employee is paid."
 msgstr ""
 ":guilabel:`Tip salariu`: Selectați modul în care angajatul este plătit."
@@ -36531,7 +36414,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:143
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:115
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:96
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:145
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:174
 msgid ""
 "Select :guilabel:`Fixed Wage` for salaried employees who receive the same "
 "amount each pay period."
@@ -36543,7 +36426,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:145
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:117
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:98
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:147
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:176
 msgid ""
 "Select :guilabel:`Hourly Wage` for employees paid based on hours worked."
 msgstr ""
@@ -36599,7 +36482,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:151
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:177
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:146
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:180
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:209
 msgid ""
 ":guilabel:`Extra Hours`: Tick the checkbox to allow the **Attendances** app "
 "to add any extra work entries logged by the employee."
@@ -37128,7 +37011,7 @@ msgstr "Rularea statului de plată din Iordania"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:404
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:416
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:444
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:473
 msgid ""
 "Any :ref:`discrepencies or conflicts <payroll/conflicts>` must be resolved, "
 "then the work entries can be :ref:`regenerated <payroll/regenerate-work-"
@@ -37142,7 +37025,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:419
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:295
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:349
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:447
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:476
 msgid ""
 "Once everything is correct, draft payslips can be :ref:`created individually "
 "<payroll/process>` or in :doc:`groups <../pay_runs>`, referred to in the "
@@ -37289,7 +37172,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:488
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:504
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:375
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:516
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:545
 msgid ""
 "If everything seems correct on the journal entry draft, post the journal "
 "entries."
@@ -37298,7 +37181,7 @@ msgstr ""
 "înregistrările din jurnal."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:498
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:526
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:555
 msgid ""
 "After the :ref:`journal entries <payroll/journal>` are validated, Odoo can "
 "generate payments."
@@ -38116,7 +37999,7 @@ msgid "Company configurations"
 msgstr "Configurări companie"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:70
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:83
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:112
 msgid ""
 "The state selected in the company's address is associated as the *work "
 "address* by default for the employee, and the one used to calculate payroll "
@@ -38169,7 +38052,7 @@ msgstr ""
 "suplimentare sunt prezente după configurarea bazei de date pentru Mexic."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:101
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:112
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:141
 msgid ""
 "The state selected in this address determines which salary rules Odoo "
 "applies when calculating taxes."
@@ -38300,7 +38183,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:179
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:148
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:133
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:182
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:211
 msgid ""
 ":guilabel:`Working Hours`: Using the drop-down menu, select the default work "
 "schedule. This is particularly important for employees available to receive "
@@ -39092,7 +38975,7 @@ msgid "`l10n_sa_hr_payroll`"
 msgstr "`l10n_sa_hr_payroll`"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:35
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:54
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:83
 msgid "hr_contract_reports"
 msgstr "hr_contract_reports"
 
@@ -39190,7 +39073,7 @@ msgstr ""
 "plată** și apare o eroare la încercarea de a rula statul de plată."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:111
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:141
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:170
 msgid ""
 ":guilabel:`Contract`: The Validity of the compensation conditions can be "
 "updated depending on the needs."
@@ -39378,7 +39261,7 @@ msgstr ""
 "lunară` și :guilabel:`Structură avans salarial și împrumut AS`."
 
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:227
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:321
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:350
 msgid ""
 "The :guilabel:`Salary Structure` contains all the individual :ref:`salary "
 "rules <payroll/usa_apps>` that informs the **Payroll** app how to calculate "
@@ -41947,71 +41830,175 @@ msgstr ""
 msgid "The states included in this localization are:"
 msgstr "Statele incluse în această localizare sunt:"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:10
-msgid "California (CA)"
-msgstr "California (CA)"
-
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:11
-msgid "New York (NY)"
-msgstr "New York (NY)"
-
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:12
-msgid "Texas (TX)"
-msgstr "Texas (TX)"
-
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:13
-msgid "Florida (FL)"
-msgstr "Florida (FL)"
+msgid "State"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:14
-msgid "Colorado (CO)"
-msgstr "Colorado (CO)"
+msgid "Abbreviation"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:15
-msgid "Alabama (AL)"
-msgstr "Alabama (AL)"
+msgid "Alabama"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:16
-msgid "Washington (WA)"
-msgstr "Washington (WA)"
+msgid "(AL)"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:17
-msgid "Nevada (NV)"
-msgstr "Nevada (NV)"
+msgid "Arizona"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:18
-msgid "Vermont (VT)"
-msgstr "Vermont (VT)"
+msgid "(AZ)"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:19
-msgid "Illinois (IL)"
-msgstr "Illinois (IL)"
+msgid "California"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:20
-msgid "Virginia (VA)"
-msgstr "Virginia (VA)"
+msgid "(CA)"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:21
-msgid "Washington, D.C (DC)"
-msgstr "Washington, D.C (DC)"
+msgid "Colorado"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:22
-msgid "Arizona (AZ)"
-msgstr "Arizona (AZ)"
+msgid "(CO)"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:23
-msgid "Idaho (ID)"
-msgstr "Idaho (ID)"
+msgid "Florida"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:24
-msgid "Oregon (OR)"
-msgstr "Oregon (OR)"
+msgid "(FL)"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:25
-msgid "North Carolina (NC)"
-msgstr "Carolina de Nord (NC)"
+msgid "Georgia"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:26
+msgid "(GA)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:27
+msgid "Idaho"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:28
+msgid "(ID)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:29
+msgid "Illinois"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:30
+msgid "(IL)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:31
+msgid "Iowa"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:32
+msgid "(IA)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:33
+msgid "Mississippi"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:34
+msgid "(MS)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:35
+msgid "Nevada"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:36
+msgid "(NV)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:37
+msgid "New Jersey"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:38
+msgid "(NJ)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:39
+msgid "New York"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:40
+msgid "(NY)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:41
+msgid "North Carolina"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:42
+msgid "(NC)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:43
+msgid "Oregon"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:44
+msgid "(OR)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:45
+msgid "Texas"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:46
+msgid "(TX)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:47
+msgid "Vermont"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:48
+msgid "(VT)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:49
+msgid "Virginia"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:50
+msgid "(VA)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:51
+msgid "Washington"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:52
+msgid "(WA)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:53
+msgid "Washington, D.C."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:54
+msgid "\\(DC)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:57
 msgid ""
 "Federal taxes (Income, :abbr:`FICA (Federal Insurance Contributions Act)`, "
 "and Unemployment) for both employees and employers are covered by default in "
@@ -42023,7 +42010,7 @@ msgstr ""
 "implicit în localizarea Odoo U.S. Payroll. State suplimentare vor fi "
 "adăugate în timp, așa că verificați pentru actualizări."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:32
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:61
 msgid ""
 "Before configuring the United States localization, refer to the "
 "general :doc:`payroll <../../payroll>` documentation, which includes the "
@@ -42035,7 +42022,7 @@ msgstr ""
 "informațiile de bază pentru toate localizările, precum și toate setările și "
 "câmpurile universale."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:41
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:70
 msgid ""
 ":ref:`Install <general/install>` the following modules to get all the "
 "features of the United States payroll localization:"
@@ -42043,15 +42030,15 @@ msgstr ""
 ":ref:`Instalați <general/install>` următoarele module pentru a obține toate "
 "caracteristicile localizării stat de plată din Statele Unite:"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:51
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:80
 msgid ":guilabel:`United States - Payroll`"
 msgstr ":guilabel:`Statele Unite - Stat de plată`"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:52
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:81
 msgid "`l10n_us_hr_payroll`"
 msgstr "`l10n_us_hr_payroll`"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:57
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:86
 msgid ""
 "Provides U.S. payroll basics, including employee tax details, salary "
 "structures (Basic/Gross/Net), tax rules, and W-2/3PA reporting."
@@ -42060,23 +42047,23 @@ msgstr ""
 "fiscale pentru angajați, structuri salariale (de bază/brut/net), reguli "
 "fiscale și raportare W-2/3PA."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:59
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:88
 msgid ":guilabel:`United States - Payroll with Accounting`"
 msgstr ":guilabel:`Statele Unite - Stat de plată cu contabilitate`"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:60
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:89
 msgid "`l10n_us_hr_payroll_account`"
 msgstr "`l10n_us_hr_payroll_account`"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:62
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:91
 msgid "l10n_us"
 msgstr "l10n_us"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:63
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:92
 msgid "l10n_us_hr_payroll"
 msgstr "l10n_us_hr_payroll"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:68
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:97
 msgid ""
 ":doc:`Configure the United States fiscal localization <../../../finance/"
 "fiscal_localizations/united_states>`"
@@ -42084,7 +42071,7 @@ msgstr ""
 ":doc:`Configurați localizarea fiscală pentru Statele Unite <../../../finance/"
 "fiscal_localizations/united_states>`"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:86
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:115
 msgid ""
 ":guilabel:`Tax ID`: Enter the company's :abbr:`EIN (Employer Identification "
 "Number)`."
@@ -42092,13 +42079,13 @@ msgstr ""
 ":guilabel:`Cod fiscal`: Introduceți :abbr:`EIN (numărul de identificare al "
 "angajatorului)` al companiei."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:87
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:116
 msgid ":guilabel:`Company ID` : Enter the business's state ID number."
 msgstr ""
 ":guilabel:`ID companie`: Introduceți numărul de identificare de stat al "
 "firmei."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:88
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:117
 msgid ""
 ":guilabel:`Currency`: By default, :abbr:`USD (US Dollars)` is selected. If "
 "not, select :guilabel:`USD` from the drop-down menu."
@@ -42106,13 +42093,13 @@ msgstr ""
 ":guilabel:`Monedă`: Implicit, este selectat :abbr:`USD (dolari americani)`. "
 "Dacă nu, selectați :guilabel:`USD` din meniul derulant."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:94
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:123
 msgid "Ensure the information is accurate, as it is used when creating W-2s."
 msgstr ""
 "Asigurați-vă că informațiile sunt corecte, deoarece sunt utilizate la "
 "crearea formularelor W-2."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:99
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:128
 msgid ""
 "Every employee being paid must have their employee profiles configured for "
 "the United States payroll localization. Additional fields are present after "
@@ -42123,7 +42110,7 @@ msgstr ""
 "suplimentare sunt prezente după configurarea bazei de date pentru Statele "
 "Unite."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:121
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:150
 msgid ""
 "These accounts are used to pay the employee, via an automation through a "
 "NACHA payment file. Payroll **cannot** be processed for employees without a "
@@ -42138,7 +42125,7 @@ msgstr ""
 "încredere, apare o avertizare pe tabloul de bord **Stat de plată** și apare "
 "o eroare la încercarea de a rula statul de plată."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:126
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:155
 msgid ""
 "Ensure there is a valid :guilabel:`SSN No` entered in "
 "the :guilabel:`Citizenship` section . The last four digits of the :abbr:`SSN "
@@ -42149,7 +42136,7 @@ msgstr ""
 "numărului :abbr:`SSN (numărul de securitate socială)` apar pe fluturaşii de "
 "salariu ai angajatului."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:154
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:183
 msgid ""
 ":guilabel:`Contract Type`: Determines how the employee is paid and "
 "classified, such as :guilabel:`Salary-exempt`, :guilabel:`Salary-"
@@ -42159,7 +42146,7 @@ msgstr ""
 "clasificat, cum ar fi :guilabel:`Salariu-scutit`, :guilabel:`Salariu-"
 "nescutit`, :guilabel:`Orar`."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:158
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:187
 msgid ""
 "This field is visible on payslips. Some states require payslips to state if "
 "the employee is exempt or non-exempt from overtime. Ensure the selection "
@@ -42169,7 +42156,7 @@ msgstr ""
 "plată să menționeze dacă angajatul este scutit sau nu de orele suplimentare. "
 "Asigurați-vă că selecția respectă legile statului."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:161
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:190
 msgid ""
 ":guilabel:`Pay Category`: Select :guilabel:`United States: Employee` for "
 "this field. This defines when the employee is paid, their default working "
@@ -42179,11 +42166,11 @@ msgstr ""
 "pentru acest câmp. Aceasta definește când este plătit angajatul, programul "
 "său de lucru implicit și tipul de intrare de lucru la care se aplică."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:187
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:216
 msgid "W-2 form section"
 msgstr "Secțiunea formular W-2"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:189
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:218
 msgid ""
 "A W-2 is an annual tax form that reports an employee's wages, taxes, and "
 "benefits. Employees use it to file their tax returns. The options below "
@@ -42195,7 +42182,7 @@ msgstr ""
 "declarațiile fiscale. Opțiunile de mai jos corespund casetelor de selectare "
 "din *caseta 13* a formularului W-2. Selectați orice se aplică angajatului."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:193
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:222
 msgid ""
 ":guilabel:`Statutory Employee`: Tick this box if the employee is exempt from "
 "income tax, but subject to :abbr:`FICA (Federal Insurance Contributions "
@@ -42205,7 +42192,7 @@ msgstr ""
 "scutit de impozitul pe venit, dar supus impozitelor :abbr:`FICA (Federal "
 "Insurance Contributions Act)`."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:195
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:224
 msgid ""
 ":guilabel:`Retirement Plan`: Tick this box if the employee is an active "
 "contributor to an employer-sponsored retirement plan."
@@ -42213,7 +42200,7 @@ msgstr ""
 ":guilabel:`Plan de pensionare`: Bifați această casetă dacă angajatul "
 "contribuie activ la un plan de pensionare sponsorizat de angajator."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:197
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:226
 msgid ""
 ":guilabel:`Third-Party Sick Pay`: Tick this box if the employee is covered "
 "under a plan where sick pay benefits may be provided by a third party (e.g., "
@@ -42224,11 +42211,11 @@ msgstr ""
 "fi acordate de o terță parte (de exemplu, o companie de asigurări) în cursul "
 "anului."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:201
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:230
 msgid "W-4 form section"
 msgstr "Secțiunea formularului W-4"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:203
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:232
 msgid ""
 "A W-4 is an :abbr:`IRS (Internal Revenue Services)` form that determines an "
 "employee's federal tax withholding, which the employer remits directly to "
@@ -42238,16 +42225,16 @@ msgstr ""
 "determină reținerea fiscală federală a unui angajat, pe care angajatorul o "
 "remite direct către :abbr:`IRS (Internal Revenue Services)`."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:206
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:235
 msgid "Configure any relevant fields for the employee in this section."
 msgstr ""
 "Configurați orice câmpuri relevante pentru angajat în această secțiune."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:209
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:238
 msgid "State filing section"
 msgstr "Secțiunea de declarare pe stat"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:211
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:240
 msgid ""
 "An employee's marital status impacts their payroll taxes. Configure the "
 "following fields regarding their status and withholdings."
@@ -42255,7 +42242,7 @@ msgstr ""
 "Starea civilă a unui angajat influențează impozitele pe salarii. Configurați "
 "următoarele câmpuri privind statutul și reținerea lor."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:214
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:243
 msgid ""
 ":guilabel:`Status`: Using the drop-down menu, select the employee's "
 "*federal* filing status. The options "
@@ -42272,7 +42259,7 @@ msgstr ""
 "partener RDP supraviețuitor eligibil cu copil`. Acestea provin de obicei din "
 "formularul W-4 al angajatului."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:218
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:247
 msgid ""
 ":guilabel:`Tax Status`: Using the drop-down menu, select the employee's "
 "*state* filing status, if applicable."
@@ -42280,11 +42267,11 @@ msgstr ""
 ":guilabel:`Stare fiscală`: Utilizând meniul derulant, selectați statutul de "
 "declarare pe *stat* al angajatului, dacă este cazul."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:222
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:251
 msgid "The federal and state statuses do **not** need to match."
 msgstr "Staturile federal și pe stat **nu** trebuie să se potrivească."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:225
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:254
 msgid ""
 "As of 2025, these states do **not** collect state income tax: Alaska, "
 "Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, "
@@ -42298,7 +42285,7 @@ msgstr ""
 "aceste state, **nu** există opțiuni de stat corespunzătoare în "
 "câmpul :guilabel:`Stare fiscală`. Lăsați-l gol."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:230
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:259
 msgid ""
 ":guilabel:`Withholding Allowance`: Enter the total annual amount to be "
 "withheld from the employee's pay for the year, for state taxes. Only fill "
@@ -42309,7 +42296,7 @@ msgstr ""
 "de stat. Completați acest câmp numai dacă angajatul locuiește într-un stat "
 "cu impozit pe venit de stat."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:233
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:262
 msgid ""
 ":guilabel:`Extra Withholding`: Enter the total *extra* annual amount (not "
 "including the :guilabel:`Withholding Allowance` amount) to be withheld from "
@@ -42326,11 +42313,11 @@ msgstr ""
 msgid "The state filing section of the employee form, filled out."
 msgstr "Secțiunea de declarare pe stat din formularul angajatului, completată."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:241
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:270
 msgid "Common benefits"
 msgstr "Beneficii comune"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:243
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:272
 msgid ""
 "The following sections of benefits are considered common ones offered by US "
 "employers. This information needs to be populated with the information "
@@ -42340,7 +42327,7 @@ msgstr ""
 "oferite de angajatorii din SUA. Aceste informații trebuie completate cu "
 "datele selectate de angajat."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:247
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:276
 msgid ""
 "The benefits listed in this section are considered the most commonly offered "
 "by companies. If other employee benefits exist that require regular paycheck "
@@ -42350,11 +42337,11 @@ msgstr ""
 "oferite de companii. Dacă există alte beneficii pentru angajați care "
 "necesită deduceri regulate din salariu, acestea pot fi adăugate ca *intrări*."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:252
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:281
 msgid "Pre-tax deductions"
 msgstr "Deduceri pre-taxare"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:254
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:283
 msgid ""
 "Pre-tax benefits lower the employee's gross wage, which decreases the base "
 "amount for tax calculations. These are displayed at the beginning of the "
@@ -42364,11 +42351,11 @@ msgstr ""
 "baza de calcul pentru impozite. Acestea sunt afișate la începutul foii de "
 "salarii înainte de stabilirea salariului brut."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:259
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:288
 msgid "Retirement plans section"
 msgstr "Secțiunea planuri de pensionare"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:261
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:290
 msgid ""
 "This section is where the employee and employer 401(k) contributions are "
 "configured. Fill out the following fields:"
@@ -42376,7 +42363,7 @@ msgstr ""
 "Această secțiune este locul în care se configurează contribuțiile "
 "angajatului și angajatorului la 401(k). Completați următoarele câmpuri:"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:264
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:293
 msgid ""
 ":guilabel:`401(k)`: Enter the amount of money taken out of the employee's "
 "payslip each pay period. This can be entered either as a percentage (%) of "
@@ -42387,7 +42374,7 @@ msgstr ""
 "procent (%) din suma statului de plată, fie ca o sumă specifică în dolari "
 "per stat de plată ($/slip)."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:267
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:296
 msgid ""
 ":guilabel:`Matching Amount`: Enter the matching amount the employer "
 "contributes to the employee's 401(k), as compared to the employee's "
@@ -42399,7 +42386,7 @@ msgstr ""
 "angajatului. Acest câmp poate fi, de asemenea, configurat fie ca procent (%) "
 "din contribuția angajatului, fie ca o sumă specifică în dolari ($/slip)."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:270
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:299
 msgid ""
 ":guilabel:`Matching Yearly Cap`: If there is a limit to the employer's "
 "contribution, enter it as a percentage of the employee's annual salary."
@@ -42407,7 +42394,7 @@ msgstr ""
 ":guilabel:`Plafon anual de egalare`: Dacă există o limită pentru contribuția "
 "angajatorului, introduceți-o ca procent din salariul anual al angajatului."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:274
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:303
 msgid ""
 "A company allows employees to contribute to a 401(k) retirement plan, and "
 "matches 50% of the employee's contributions, up to $5,000 USD a year. The "
@@ -42419,7 +42406,7 @@ msgstr ""
 "Angajatul câștigă 50.000 USD pe an și contribuie cu 20% din salariul său la "
 "401(k), ceea ce înseamnă 10.000 USD."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:278
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:307
 msgid ""
 "To configure this, enter `20.00` in the :guilabel:`401(k)` field, `50.00` in "
 "the :guilabel:`Matching Amount` field, and `20.00` in "
@@ -42433,11 +42420,11 @@ msgstr ""
 msgid "An employee's retirement configurations."
 msgstr "Configurările de pensionare ale unui angajat."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:285
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:314
 msgid "Health benefits section"
 msgstr "Secțiunea beneficii de sănătate"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:287
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:316
 msgid ""
 "This section is where the employee's health contributions are configured. "
 "Populate each of the fields with the corresponding amount deducted from "
@@ -42455,11 +42442,11 @@ msgstr ""
 "Secțiunea beneficii de sănătate pentru un angajat, completată cu deduceri "
 "din statele de plată."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:294
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:323
 msgid "Other benefits section"
 msgstr "Secțiunea alte beneficii"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:296
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:325
 msgid ""
 "This section currently only houses a :guilabel:`Commuter` benefit field. "
 "Enter the amount being deducted per paycheck, for applicable commuter "
@@ -42469,11 +42456,11 @@ msgstr ""
 "beneficii :guilabel:`Navetă`. Introduceți suma dedusă per stat de plată, "
 "pentru beneficiile de navetă aplicabile."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:300
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:329
 msgid "Post-tax deductions section"
 msgstr "Secțiunea deduceri post-taxare"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:302
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:331
 msgid ""
 "These types of benefits count as deductions *after* taxes are calculated. "
 "They appear towards the end of the payslip before the net amount is "
@@ -42489,7 +42476,7 @@ msgstr ""
 "fie o sumă specifică în dolari per stat de plată ($/slip) care se deduce din "
 "salariul angajatului și se depune într-un cont ROTH 401(k)."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:311
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:340
 msgid ""
 "Several sections within the **Payroll** app installs a Salary Structure, "
 "Structure Type, Rules, and Parameters specific to the United States."
@@ -42497,7 +42484,7 @@ msgstr ""
 "Mai multe secțiuni din aplicația **Stat de plată** instalează o structură "
 "salarială, un tip de structură, reguli și parametri specifici Statelor Unite."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:317
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:346
 msgid ""
 "When the **l10n_us_hr_payroll** module is :ref:`installed <payroll/"
 "usa_apps>`, a new :guilabel:`Salary Structure` gets "
@@ -42509,7 +42496,7 @@ msgstr ""
 "Unite: Plată regulată`. Această structură include un :guilabel:`Tip de "
 "structură`, :guilabel:`Statele Unite: Plată regulată`."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:332
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:361
 msgid ""
 "To view the salary rules that inform the salary structure what to do, "
 "navigate to :menuselection:`Payroll app --> Configuration --> Structures` "
@@ -42525,7 +42512,7 @@ msgstr ""
 "Unite: Plată regulată`. Faceți clic pe :guilabel:`Statele Unite: Plată "
 "regulată` pentru a vizualiza regulile salariale detaliate."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:340
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:369
 msgid ""
 "Each rule defines how pay is calculated, taking into account factors such as "
 "commissions, bonuses, taxes, and insurance. The *logic* behind "
@@ -42536,7 +42523,7 @@ msgstr ""
 "din spatele regulilor :guilabel:`Statele Unite: Plată regulată` este după "
 "cum urmează:"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:344
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:373
 msgid ""
 "The first four rules listed reflects all sources of income, including the "
 "basic wage listed on the contract (:guilabel:`Basic Salary`), plus any "
@@ -42552,7 +42539,7 @@ msgstr ""
 msgid "The basic salary rules for the US localization."
 msgstr "Regulile salariului de bază pentru localizarea SUA."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:351
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:380
 msgid ""
 "Adding up these inputs is how the gross salary (:guilabel:`Gross Pay`) is "
 "calculated. This amount is the base amount used to calculate payroll taxes."
@@ -42561,7 +42548,7 @@ msgstr ""
 "brut (:guilabel:`Plată brută`). Această sumă este suma de bază utilizată "
 "pentru a calcula taxele pe salarii."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:354
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:383
 msgid ""
 "The next set of rules are the various pre-tax benefits and taxable income, "
 "such as :guilabel:`Medical` insurance contributions and :guilabel:`Commuter "
@@ -42580,7 +42567,7 @@ msgstr ""
 msgid "The pre-tax rules for the US localization."
 msgstr "Regulile înainte de impozitare pentru localizarea SUA."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:362
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:391
 msgid ""
 "Next, all the various tax rules are listed where both federal and state "
 "payroll withholdings are outlined. First, federal tax rules are listed, then "
@@ -42595,7 +42582,7 @@ msgstr ""
 msgid "The federal tax rules for the US localization."
 msgstr "Regulile fiscale federale pentru localizarea SUA."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:369
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:398
 msgid ""
 "The rule for federal withholdings for `Worker's Compensation` appears "
 "*after* several state-specific withholdings are listed, and does **not** "
@@ -42605,7 +42592,7 @@ msgstr ""
 "*după* ce sunt enumerate mai multe rețineri specifice statelor și **nu** "
 "apare în imaginea de mai sus, dar sunt enumerate în reguli."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:373
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:402
 msgid "The last rules listed are the post-tax employee deductions."
 msgstr "Ultimele reguli enumerate sunt deducerile angajaților după impozitare."
 
@@ -42613,7 +42600,7 @@ msgstr "Ultimele reguli enumerate sunt deducerile angajaților după impozitare.
 msgid "The post-tax rules for the US localization."
 msgstr "Regulile după impozitare pentru localizarea SUA."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:378
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:407
 msgid ""
 "The :guilabel:`Other Inputs` tab contains anything else affecting payroll. "
 "This includes items to be added to the payslip, such as :guilabel:`Tips`, "
@@ -42628,7 +42615,7 @@ msgstr ""
 msgid "The other inputs for the US localization."
 msgstr "Celelalte intrări pentru localizarea SUA."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:385
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:414
 msgid ""
 "The employee's net salary is the amount the employee receives from the "
 "employer. The formula to calculate the net salary is:"
@@ -42636,7 +42623,7 @@ msgstr ""
 "Salariul net al angajatului este suma pe care angajatul o primește de la "
 "angajator. Formula pentru a calcula salariul net este:"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:388
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:417
 msgid ""
 "\\text{Gross Salary} + \\text{Allowances} - \\text{Payroll Taxes} - "
 "\\text{General Deductions}"
@@ -42644,7 +42631,7 @@ msgstr ""
 "\\text{Salariu brut} + \\text{Indemnizații} - \\text{Taxe pe salarii} - "
 "\\text{Deduceri generale}"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:392
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:421
 msgid ""
 "Additionally, an extra section exists in payroll calculation for the US "
 "called `Employer Deductions`, and it breaks down the payments the employer "
@@ -42658,7 +42645,7 @@ msgstr ""
 msgid "The employer deduction rules for the US localization."
 msgstr "Regulile de deduceri ale angajatorului pentru localizarea SUA."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:400
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:429
 msgid ""
 "The rule for employer deductions for `Worker's Compensation` appears *after* "
 "several state-specific employer deductions are listed, and does **not** "
@@ -42669,7 +42656,7 @@ msgstr ""
 "specifice statelor și **nu** apare în imaginea de mai sus, dar sunt "
 "enumerate în reguli."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:411
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:440
 msgid ""
 "The wage base for Social Security tax calculations has a cap for 2025, "
 "accounted for in the `US: FICA OASDI Cap` parameter."
@@ -42677,7 +42664,7 @@ msgstr ""
 "Baza salarială pentru calculele taxei de Securitate Socială are o limită "
 "pentru 2025, luată în considerare în parametrul `US: FICA OASDI Cap`."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:423
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:452
 msgid ""
 "The Unemployment tax of a company is different from the one added by default "
 "in Odoo. To update this, navigate to :menuselection:`Payroll app --> "
@@ -42692,7 +42679,7 @@ msgstr ""
 "numele statului care necesită editare și modificați rata corespunzătoare din "
 "listă."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:429
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:458
 msgid ""
 "Odoo adds updated rule parameters for the current calendar year. It is "
 "**not** recommended to edit rule parameters **unless a federal or state "
@@ -42707,11 +42694,11 @@ msgstr ""
 "și naționale *înainte* de a efectua orice modificări ale parametrilor "
 "regulilor."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:435
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:464
 msgid "Run US payroll"
 msgstr "Rularea statului de plată pentru SUA"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:437
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:466
 msgid ""
 "Before running paypoll, the payroll officer must validate "
 "employee :doc:`work entries <../work_entries>` to confirm pay accuracy and "
@@ -42724,7 +42711,7 @@ msgstr ""
 "verificarea faptului că tot timpul liber este aprobat și că orice ore "
 "suplimentare sunt adecvate."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:480
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:509
 msgid ""
 "The accounting process when running payroll has two "
 "components: :ref:`creating journal entries <payroll/journal>`, "
@@ -42734,7 +42721,7 @@ msgstr ""
 "componente: :ref:`crearea înregistrărilor în jurnal <payroll/journal>` "
 "și :ref:`înregistrarea plăților <payroll/register>`."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:498
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:527
 msgid ""
 "Four accounts from the US :abbr:`CoA (Chart of Accounts)` are included with "
 "the payroll localization:"
@@ -42742,7 +42729,7 @@ msgstr ""
 "Patru conturi din :abbr:`CoA (Plan de conturi)` SUA sunt incluse cu "
 "localizarea pentru stat de plată:"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:501
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:530
 msgid ""
 "`611000 Salaries & Wages`: Records gross salary and the employer's portion "
 "of payroll expenses. Also groups values from rules without specific accounts "
@@ -42753,7 +42740,7 @@ msgstr ""
 "asemenea, valori din reguli fără conturi specifice (de ex., beneficii "
 "specifice companiei)."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:503
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:532
 msgid ""
 "`230100 Employee Payroll Taxes`: Withheld taxes from employees, which the "
 "employer must file and pay. The partner and label columns of the journal "
@@ -42764,7 +42751,7 @@ msgstr ""
 "Coloanele partener și etichetă din înregistrarea din jurnal indică taxa "
 "specifică."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:505
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:534
 msgid ""
 "`230200 Employer Payroll Taxes`: Employer portion of payroll taxes to be "
 "filed and paid. The partner and label columns of the journal entry indicate "
@@ -42774,12 +42761,12 @@ msgstr ""
 "din taxele pe stat de plată care trebuie depuse și plătite. Coloanele "
 "partener și etichetă din înregistrarea din jurnal indică taxa specifică."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:507
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:536
 msgid "`230000 Salary Payable`: Net salary owed to the employee."
 msgstr ""
 "`:guilabel:`230000 Salariu de plată`: Salariul net datorat angajatului."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:510
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:539
 msgid ""
 "The :abbr:`CoA (Chart of Accounts)` configuration is done by default when a "
 "company is located in the US. The account codes and names can be edited to "
@@ -42795,7 +42782,7 @@ msgstr ""
 "într-o structură salarială), Odoo utilizează contul `Cheltuieli salariale` "
 "pentru a crea înregistrarea din jurnal, indiferent de natura mișcării."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:529
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:558
 msgid ""
 "To generate payments from payslips,employee's **must** have a *trusted* bank "
 "account. If the employee's bank account is *not* marked as `trusted`, NACHA "
@@ -42806,7 +42793,7 @@ msgstr ""
 "este marcat ca `de încredere`, fișierele NACHA **nu pot** fi generate prin "
 "Odoo."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:546
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:575
 msgid ""
 "The US localization contains several reports unique to the US, which provide "
 "tax information for employees, as well as the ability to integrate with "
@@ -42816,11 +42803,11 @@ msgstr ""
 "furnizează informații fiscale pentru angajați, precum și posibilitatea de "
 "integrare cu organizații externe precum ADP."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:550
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:579
 msgid "W2 Report"
 msgstr "Raport W2"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:552
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:581
 msgid ""
 "The *W2 Report* provides a CSV file that allows employees to e-file their W2 "
 "report with third-party software. To access this report, navigate "
@@ -42831,7 +42818,7 @@ msgstr ""
 "raport, navigați la :menuselection:`Stat de plată -> Raportare -> Statele "
 "Unite -> W2`."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:556
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:585
 msgid ""
 "To create a W2 form, click :guilabel:`New`, and a blank :guilabel:`Create W2 "
 "Form` page loads. Set the :guilabel:`Start Date` and :guilabel:`End Date` "
@@ -42844,9 +42831,9 @@ msgstr ""
 "și selectați :guilabel:`Compania`, dacă vă aflați într-o bază de date cu mai "
 "multe companii."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:560
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:582
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:604
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:589
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:611
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:633
 msgid ""
 "All pay runs for the time period appear in a list view. To add any missing "
 "pay runs, click :guilabel:`Add a line` at the bottom of the list, and select "
@@ -42856,7 +42843,7 @@ msgstr ""
 "Pentru a adăuga orice procesări lipsă, faceți clic pe :guilabel:`Adăugați o "
 "linie` în partea de jos a listei și selectați fișierele lipsă."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:563
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:592
 msgid ""
 "When done, click the :guilabel:`Generate` button to create a CSV file with a "
 "summary of all payroll related payments made during the specified time "
@@ -42870,11 +42857,11 @@ msgstr ""
 msgid "The W2 report screen, with the file to download in the top half."
 msgstr "Ecranul raportului W2, cu fișierul de descărcat în jumătatea de sus."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:570
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:599
 msgid "Form 941"
 msgstr "Formularul 941"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:572
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:601
 msgid ""
 "The *Form 941* report is meant to inform the government of the amount of "
 "federal income tax, :abbr:`FICA (Federal Insurance Contributions Act)` taxes "
@@ -42887,7 +42874,7 @@ msgstr ""
 "reținute din cecurile de salariu ale angajaților. Raportează, de asemenea, "
 "partea de impozite a angajatului."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:576
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:605
 msgid ""
 "To create this report, navigate to :menuselection:`Payroll -> Reporting -> "
 "United States -> Form 941`. Click the :guilabel:`New` button, and a "
@@ -42906,7 +42893,7 @@ msgstr ""
 "trimise banii către IRS) și :guilabel:`Programul de depunere și datoria "
 "fiscală` (cât de des sunt efectuate plățile către IRS)."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:585
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:614
 msgid ""
 "When done, click :guilabel:`Generate`, and the report is created as a CSV "
 "file, and appears on the :guilabel:`Form 941` report dashboard. Companies "
@@ -42921,11 +42908,11 @@ msgstr ""
 msgid "The 941 report screen, with the file to download in the top half."
 msgstr "Ecranul raportului 941, cu fișierul de descărcat în jumătatea de sus."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:593
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:622
 msgid "Form 940"
 msgstr "Formularul 940"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:595
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:624
 msgid ""
 "The *Form 940* report details the annual :abbr:`FUTA (Federal Unemployment "
 "Tax Act)` withheld for payroll."
@@ -42933,7 +42920,7 @@ msgstr ""
 "Raportul *Formularul 940* detaliază :abbr:`FUTA (Legea impozitului federal "
 "pe șomaj)` anual reținut pentru stat de plată."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:598
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:627
 msgid ""
 "To create this report, navigate to :menuselection:`Payroll -> Reporting -> "
 "United States -> Form 940`. Click the :guilabel:`New` button, and a "
@@ -42952,7 +42939,7 @@ msgstr ""
 "mai multe state`, :guilabel:`Plătit în statul de reducere a creditului` "
 "și :guilabel:`Opțiunea de plată IRS` (cum sunt trimise banii către IRS)."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:607
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:636
 msgid ""
 "When done, click :guilabel:`Generate`, and the report is created as a CSV "
 "file, and appears on the :guilabel:`Form 940` report dashboard. Companies "
@@ -42967,11 +42954,11 @@ msgstr ""
 msgid "The 940 report screen, with the file to download in the top half."
 msgstr "Ecranul raportului 940, cu fișierul de descărcat în jumătatea de sus."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:615
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:644
 msgid "Export data to third-party apps"
 msgstr "Exportați date către aplicații terțe"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:617
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:646
 msgid ""
 "The *ADP Export* report generates a CSV file that can be submitted to ADP, "
 "which then makes payments to the employees."
@@ -42979,7 +42966,7 @@ msgstr ""
 "Raportul *Export ADP* generează un fișier CSV care poate fi trimis către "
 "ADP, care apoi efectuează plățile către angajați."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:620
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:649
 msgid ""
 "The CSV file summarizes the employee's worked hours during a specified time "
 "period, correlating to their salary or hourly wage. The report is generated "
@@ -42990,7 +42977,7 @@ msgstr ""
 "din :doc:`înregistrarea de lucru <../work_entries>` *după* confirmarea "
 "oricărui concediu."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:624
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:653
 msgid ""
 "The export format is meant to match with the ADP format. Since companies can "
 "customize their portal and may require some changes, the data is there to be "
@@ -43001,7 +42988,7 @@ msgstr ""
 "modificări, datele sunt disponibile pentru a fi introduse în ADP pentru a "
 "rula statele de plată în acesta."
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:628
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:657
 msgid ""
 "To access the ADP Export report, the `United States - Payroll - Export to "
 "ADP` module **must** be :ref:`installed <general/install>`."
@@ -56226,7 +56213,7 @@ msgstr ""
 "sunt :guilabel:`All`, :guilabel:`To Approve` și :guilabel:`Second Approval`."
 
 #: ../../content/applications/hr/time_off/management.rst:41
-#: ../../content/applications/hr/time_off/management.rst:110
+#: ../../content/applications/hr/time_off/management.rst:138
 msgid ""
 "The various departments the user is a member of, and manages employees "
 "under, also appear on the left side of the page, under :icon:`fa-"
@@ -56255,7 +56242,7 @@ msgstr ""
 "toate statutele apar."
 
 #: ../../content/applications/hr/time_off/management.rst:50
-#: ../../content/applications/hr/time_off/management.rst:120
+#: ../../content/applications/hr/time_off/management.rst:148
 msgid ""
 "If no requests fall under one of the status options or departments, that "
 "status or department is **not** visible on the left-side menu."
@@ -56317,7 +56304,7 @@ msgstr ""
 "de timp liber."
 
 #: ../../content/applications/hr/time_off/management.rst:72
-#: ../../content/applications/hr/time_off/management.rst:138
+#: ../../content/applications/hr/time_off/management.rst:166
 msgid ""
 "Depending on the rights of the user, changes can be made. To modify the "
 "request, make any desired changes to the form. All changes are automatically "
@@ -56328,7 +56315,7 @@ msgstr ""
 "modificările sunt salvate automat."
 
 #: ../../content/applications/hr/time_off/management.rst:75
-#: ../../content/applications/hr/time_off/management.rst:141
+#: ../../content/applications/hr/time_off/management.rst:169
 msgid ""
 "It is also possible to approve, validate, or refuse the request from this "
 "form. Click the :guilabel:`Approve` button to approve, "
@@ -56342,15 +56329,9 @@ msgstr ""
 
 #: ../../content/applications/hr/time_off/management.rst:79
 msgid ""
-"Once a request has been approved, validated, or refused, the Kanban card "
-"disappears from the default :guilabel:`All Time Off` page. To view *all* "
-"requests, including approved and refused requests, clear the default filters "
-"in the search bar."
+":guilabel:`All Time Off` page. To view *all* requests, including approved "
+"and refused requests, clear the default filters in the search bar."
 msgstr ""
-"Odată ce o solicitare a fost aprobată, validată sau refuzată, fișa Kanban "
-"dispare de pe pagina implicită :guilabel:`All Time Off`. Pentru a vizualiza "
-"*toate* solicitările, inclusiv solicitările aprobate și refuzate, eliminați "
-"filtrele implicite din bara de căutare."
 
 #: ../../content/applications/hr/time_off/management.rst:None
 msgid "The detailed time off request form for the employee George Davis."
@@ -56358,11 +56339,77 @@ msgstr ""
 "Formularul detaliat de solicitare de timp liber pentru angajatul George "
 "Davis."
 
-#: ../../content/applications/hr/time_off/management.rst:89
+#: ../../content/applications/hr/time_off/management.rst:88
+msgid "Add missing time off requests"
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:90
+msgid ""
+"If an employee forgets to request time off for days they did not work, a "
+"time off record must be created retroactively. To create missing time off "
+"requests, navigate to :menuselection:`Time Off app --> Management --> Time "
+"Off`, and click :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:94
+msgid "On the time off request form, configure the following fields:"
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:96
+msgid ""
+":guilabel:`Employee`: Using the drop-down menu, select the employee missing "
+"the time off request."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:97
+msgid ""
+":guilabel:`Time Off Type`: Using the drop-down menu, select the :doc:`type "
+"of time off <time_off_types>` for the request."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:99
+msgid ""
+":guilabel:`Payslip State`: Using the drop-down menu, select when the paid "
+"time off is given to the employee. The options are: :guilabel:`To compute in "
+"next payslip`, :guilabel:`To compute in current payslip`, and :guilabel:`To "
+"defer to next payslip`."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:102
+msgid ""
+":guilabel:`Dates`: Using the calendar selector, configure the start and end "
+"dates for the time off request."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:104
+msgid ""
+":guilabel:`Description`: In the field below. enter any information regarding "
+"the request. For example, `Forgot to request the time off.` or `Could not "
+"request time off as they were sick.`"
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:106
+msgid ""
+":icon:`fa-paperclip` :guilabel:`Attach File`: If there is relevant "
+"documentation for the request, click this button, navigate to the desired "
+"file, then click :guilabel:`Open`."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:109
+msgid ""
+"Once the form is filled out, click :guilabel:`Approve` to approve the "
+"request."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:None
+msgid "A time off form for missing time off."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:117
 msgid "View allocation requests"
 msgstr "Vizualizare solicitări de alocare"
 
-#: ../../content/applications/hr/time_off/management.rst:91
+#: ../../content/applications/hr/time_off/management.rst:119
 msgid ""
 "To view allocation requests waiting for approval, navigate "
 "to :menuselection:`Time Off app --> Management --> Allocations`. Doing so "
@@ -56374,7 +56421,7 @@ msgstr ""
 "deschide pagina :guilabel:`Allocations`. Toate solicitările de alocare apar "
 "într-o vizualizare Kanban implicită."
 
-#: ../../content/applications/hr/time_off/management.rst:95
+#: ../../content/applications/hr/time_off/management.rst:123
 msgid ""
 "The only allocation requests that are visible on this page belong to "
 "employees the user either has :guilabel:`Time Off Officer` "
@@ -56385,7 +56432,7 @@ msgstr ""
 "angajaților pentru care utilizatorul are drepturi de acces :guilabel:`Time "
 "Off Officer` sau :guilabel:`Administrator` în aplicația **Time Off**."
 
-#: ../../content/applications/hr/time_off/management.rst:99
+#: ../../content/applications/hr/time_off/management.rst:127
 msgid ""
 "The default filters on the :guilabel:`Allocations` page are :icon:`fa-"
 "filter` :guilabel:`First Approval` and :icon:`fa-filter` :guilabel:`My "
@@ -56399,7 +56446,7 @@ msgstr ""
 "pentru angajații actuali din echipa utilizatorului, care așteaptă aprobarea "
 "sau validarea."
 
-#: ../../content/applications/hr/time_off/management.rst:103
+#: ../../content/applications/hr/time_off/management.rst:131
 msgid ""
 "On the left side of the :guilabel:`Allocations` page, there are various "
 "grouping options that can be used to narrow down the presented allocation "
@@ -56411,7 +56458,7 @@ msgstr ""
 "prezentate, situate sub titlurile :icon:`fa-folder` :guilabel:`Status` "
 "și :icon:`fa-users` :guilabel:`Departament`."
 
-#: ../../content/applications/hr/time_off/management.rst:107
+#: ../../content/applications/hr/time_off/management.rst:135
 msgid ""
 "Since only allocation requests that need to be approved are shown, the "
 "only :icon:`fa-folder` :guilabel:`Status` options "
@@ -56421,7 +56468,7 @@ msgstr ""
 "singurele opțiuni :icon:`fa-folder` :guilabel:`Status` "
 "sunt :guilabel:`All`, :guilabel:`To Approve` și :guilabel:`Approved`."
 
-#: ../../content/applications/hr/time_off/management.rst:113
+#: ../../content/applications/hr/time_off/management.rst:141
 msgid ""
 "To only display allocation requests for specific departments, click on "
 "the :guilabel:`Department` on the left-hand side of the page. Only requests "
@@ -56431,7 +56478,7 @@ msgstr ""
 "faceți clic pe :guilabel:`Departament` în partea stângă a paginii. Astfel "
 "sunt prezentate doar solicitările din departamentul selectat."
 
-#: ../../content/applications/hr/time_off/management.rst:116
+#: ../../content/applications/hr/time_off/management.rst:144
 msgid ""
 "If the :icon:`fa-filter` :guilabel:`First Approval` and :icon:`fa-"
 "filter` :guilabel:`My Team` filters are removed, all statuses appear."
@@ -56443,11 +56490,11 @@ msgstr ""
 msgid "Allocations dashboard showing unapproved allocation requests."
 msgstr "Tablou de bord alocări afișând solicitările de alocare neaprobate."
 
-#: ../../content/applications/hr/time_off/management.rst:127
+#: ../../content/applications/hr/time_off/management.rst:155
 msgid "Approve or refuse allocation requests"
 msgstr "Aprobați sau refuzați solicitările de alocare"
 
-#: ../../content/applications/hr/time_off/management.rst:129
+#: ../../content/applications/hr/time_off/management.rst:157
 msgid ""
 "To approve or refuse an allocation request, navigate to :menuselection:`Time "
 "Off app --> Management --> Allocations`. At the end of each allocation "
@@ -56461,7 +56508,7 @@ msgstr ""
 "butoane: un buton :guilabel:`Aprobă` sau :guilabel:`Validează`, în funcție "
 "de statusul solicitării, și un buton :guilabel:`Refuză`."
 
-#: ../../content/applications/hr/time_off/management.rst:134
+#: ../../content/applications/hr/time_off/management.rst:162
 msgid ""
 "If more information is needed before approving an allocation request, click "
 "anywhere on the Kanban card (except for "
@@ -56474,7 +56521,7 @@ msgstr ""
 "sau :guilabel:`Refuză`). Astfel se încarcă formularul detaliat al "
 "solicitării de alocare."
 
-#: ../../content/applications/hr/time_off/management.rst:145
+#: ../../content/applications/hr/time_off/management.rst:173
 msgid ""
 "Once a request has been approved, validtaed, or refused, the Kanban card "
 "disappears from the default :guilabel:`Allocations` page. To view *all* "
@@ -58060,6 +58107,330 @@ msgid ""
 msgstr ""
 "Jumătatea inferioară a formularului de tip de concediu, cu culoarea și "
 "pictograma selectate."
+
+#~ msgid ""
+#~ "To view the attendance report, click :guilabel:`Reporting` in the top "
+#~ "menu. The default report displays attendance information for current "
+#~ "employees over the past three months, in a default :icon:`oi-view-"
+#~ "pivot` :guilabel:`Pivot table`. The rows are populated by employee, while "
+#~ "the columns are populated by the various attendance records. All entries "
+#~ "are grouped by month."
+#~ msgstr ""
+#~ "Pentru a vizualiza raportul de prezență, faceți clic "
+#~ "pe :guilabel:`Raportare` în meniul de sus. Raportul implicit afișează "
+#~ "informații de prezență pentru angajații actuali din ultimele trei luni, "
+#~ "într-un :icon:`oi-view-pivot` :guilabel:`Tabel pivot` implicit. Rândurile "
+#~ "sunt populate cu angajați, iar coloanele cu diversele înregistrări de "
+#~ "prezență. Toate înregistrările sunt grupate pe lună."
+
+#~ msgid "Employee retention report"
+#~ msgstr "Raport de retenție a angajaților"
+
+#~ msgid "Gain insight into a company's retention rate."
+#~ msgstr "Obțineți o perspectivă asupra ratei de retenție a unei companii."
+
+#~ msgid ""
+#~ "It is possible to determine the retention rate for a company by modifying "
+#~ "an existing report."
+#~ msgstr ""
+#~ "Este posibil să determini rata de retenție pentru o companie modificând "
+#~ "un raport existent."
+
+#~ msgid ""
+#~ "First, navigate to :menuselection:`Employees app --> Reporting --> "
+#~ "Contracts` to open the :guilabel:`Employee Analysis` report. This report "
+#~ "shows the number of all employees for the :guilabel:`Last 365 Days`, in a "
+#~ "default :icon:`fa-line-chart` :guilabel:`Line Chart`."
+#~ msgstr ""
+#~ "Mai întâi, accesează :menuselection:`Aplicația Angajați --> Raportare --> "
+#~ "Contracte` pentru a deschide raportul :guilabel:`Analiză angajați`. Acest "
+#~ "raport arată numărul tuturor angajaților pentru :guilabel:`Ultimele 365 "
+#~ "de zile`, într-un :icon:`fa-line-chart` :guilabel:`Grafic liniar` "
+#~ "implicit."
+
+#~ msgid "The default Employees Analysis report."
+#~ msgstr "Raportul implicit de analiză a angajaților."
+
+#~ msgid ""
+#~ "Next, click the :guilabel:`Measures` :icon:`fa-caret-down` button in the "
+#~ "upper-left corner, revealing a drop-down menu. Click :guilabel:`# "
+#~ "Departure Employee` in the list, then click away from the drop-down menu "
+#~ "to close it. Now, the report shows all the employees who were archived "
+#~ "for the :guilabel:`Last 365 Days`."
+#~ msgstr ""
+#~ "Apoi, apasă butonul :guilabel:`Măsuri` :icon:`fa-caret-down` din colțul "
+#~ "stânga sus, pentru a deschide un meniu derulant. Selectează :guilabel:`# "
+#~ "Angajați plecați` din listă, apoi fă clic în afara meniului pentru a-l "
+#~ "închide. Acum, raportul va afișa toți angajații care au fost arhivați "
+#~ "în :guilabel:`Ultimele 365 de zile`."
+
+#~ msgid ""
+#~ "To view this information in an easier format, click the :icon:`oi-view-"
+#~ "pivot` :guilabel:`(Pivot)` icon in the upper-right corner, and the data "
+#~ "is presented in a pivot table."
+#~ msgstr ""
+#~ "Pentru a vizualiza aceste informații într-un format mai ușor, apasă pe "
+#~ "pictograma :icon:`oi-view-pivot` :guilabel:`(Pivot)` din colțul dreapta "
+#~ "sus, iar datele vor fi prezentate într-un tabel pivot."
+
+#~ msgid ""
+#~ "The various employees, organized by department, populate the rows. The "
+#~ "columns display the following totals: the monthly :guilabel:`Wage`, "
+#~ "the :guilabel:`Fuel Card` budget, total :guilabel:`Annual Employee "
+#~ "Budget` (also referred to as the *annual salary*), the number "
+#~ "of :guilabel:`New Employees`, as well as the number "
+#~ "of :guilabel:`Departure Employees` (employees who left)."
+#~ msgstr ""
+#~ "Diversii angajați, organizați pe departamente, populează rândurile. "
+#~ "Coloanele afișează următoarele totaluri: :guilabel:`Salariul` lunar, "
+#~ "bugetul pentru :guilabel:`Card combustibil`, :guilabel:`Bugetul anual al "
+#~ "angajatului` (numit și *salariu anual*), numărul de :guilabel:`Angajați "
+#~ "noi`, precum și numărul de :guilabel:`Angajați plecați`."
+
+#~ msgid ""
+#~ "The Employees Analysis report, modified to show departed employees only."
+#~ msgstr ""
+#~ "Raportul de analiză a angajaților, modificat pentru a afișa doar "
+#~ "angajații plecați."
+
+#~ msgid "Employee retention rate comparison report"
+#~ msgstr "Raport comparativ al ratei de retenție a angajaților"
+
+#~ msgid ""
+#~ "It is possible to compare data only for employees who left, compared to "
+#~ "the total current employees, between two separate time periods. This is "
+#~ "commonly referred to as the *employee retention rate*."
+#~ msgstr ""
+#~ "Este posibil să compari datele doar pentru angajații care au plecat, față "
+#~ "de totalul angajaților actuali, între două perioade de timp diferite. "
+#~ "Acest lucru este cunoscut sub denumirea de *rată de retenție a "
+#~ "angajaților*."
+
+#~ msgid ""
+#~ "To view these metrics, first open the :guilabel:`Employee Analysis` "
+#~ "report by navigating to :menuselection:`Employees app --> Reporting --> "
+#~ "Contracts`. Click the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon in "
+#~ "the upper-right corner to view the information in a pivot table."
+#~ msgstr ""
+#~ "Pentru a vizualiza aceste valori, deschide mai întâi "
+#~ "raportul :guilabel:`Analiză angajați` accesând :menuselection:`Aplicația "
+#~ "Angajați --> Raportare --> Contracte`. Apasă pe pictograma :icon:`oi-view-"
+#~ "pivot` :guilabel:`(Pivot)` din colțul dreapta sus pentru a vedea "
+#~ "informațiile într-un tabel pivot."
+
+#~ msgid ""
+#~ "Next, click the :guilabel:`Measures` :icon:`fa-caret-down` button in the "
+#~ "upper-left corner, revealing a drop-down menu. Click :guilabel:`# New "
+#~ "Employees`, :guilabel:`Annual Employee Budget`, :guilabel:`Fuel Card`, "
+#~ "and :guilabel:`Wage` in the list, to deselect these metrics and hide them "
+#~ "in the table. Then, click :guilabel:`Count` at the bottom of the list to "
+#~ "enable that metric."
+#~ msgstr ""
+#~ "Apoi, apasă butonul :guilabel:`Măsuri` :icon:`fa-caret-down` din colțul "
+#~ "stânga sus pentru a deschide un meniu derulant. Selectează :guilabel:`# "
+#~ "Angajați noi`, :guilabel:`Buget anual angajat`, :guilabel:`Card "
+#~ "combustibil` și :guilabel:`Salariu` din listă pentru a deselecta aceste "
+#~ "valori și a le ascunde din tabel. Apoi, apasă pe :guilabel:`Număr` la "
+#~ "finalul listei pentru a activa această valoare."
+
+#~ msgid ""
+#~ "Click away from the drop-down menu to close it. Now, the report shows all "
+#~ "the employees who left the company (:guilabel:`# Departure Employee`), as "
+#~ "well as the total number of employees (:guilabel:`Count`), for "
+#~ "the :guilabel:`Last 365 Days`."
+#~ msgstr ""
+#~ "Fă clic în afara meniului derulant pentru a-l închide. Acum, raportul va "
+#~ "afișa toți angajații care au părăsit compania (:guilabel:`# Angajați "
+#~ "plecați`), precum și numărul total de angajați (:guilabel:`Număr`), "
+#~ "pentru :guilabel:`Ultimele 365 de zile`."
+
+#~ msgid ""
+#~ "To compare the data for the current year with the previous year, click "
+#~ "the :icon:`fa-caret-down` :guilabel:`(down arrow)` in the search bar, "
+#~ "revealing multiple filter and grouping options. Click :guilabel:`Last 365 "
+#~ "Days` in the :icon:`fa-filter` :guilabel:`Filters` column, to turn off "
+#~ "that filter. Then, click :guilabel:`Date`, and click the current year (in "
+#~ "this example, :guilabel:`2024`) from the resulting drop-down menu."
+#~ msgstr ""
+#~ "Pentru a compara datele pentru anul curent cu anul precedent, apasă "
+#~ "pe :icon:`fa-caret-down` :guilabel:`(săgeată în jos)` din bara de căutare "
+#~ "pentru a afișa mai multe opțiuni de filtrare și grupare. Apasă "
+#~ "pe :guilabel:`Ultimele 365 de zile` din coloana :icon:`fa-"
+#~ "filter` :guilabel:`Filtre` pentru a dezactiva acest filtru. Apoi, apasă "
+#~ "pe :guilabel:`Dată` și selectează anul curent (de "
+#~ "exemplu, :guilabel:`2024`) din meniul derulant."
+
+#~ msgid ""
+#~ "Once a selection is made beneath :guilabel:`Date` in the :icon:`fa-"
+#~ "filter` :guilabel:`Filters` column, a :icon:`fa-"
+#~ "adjust` :guilabel:`Comparison` column appears. Click :guilabel:`Date: "
+#~ "Previous Year` in the new column, then click off of the drop-down menu to "
+#~ "close it."
+#~ msgstr ""
+#~ "După ce ai făcut o selecție sub :guilabel:`Dată` în coloana :icon:`fa-"
+#~ "filter` :guilabel:`Filtre`, va apărea o coloană :icon:`fa-"
+#~ "adjust` :guilabel:`Comparație`. Apasă pe :guilabel:`Dată: Anul precedent` "
+#~ "în noua coloană, apoi fă clic în afara meniului pentru a-l închide."
+
+#~ msgid ""
+#~ "In Odoo, in order to access the :icon:`fa-adjust` :guilabel:`Comparison` "
+#~ "column, a specific time *other than* :guilabel:`Last 365 Days` **must** "
+#~ "be selected. If not, the :icon:`fa-adjust` :guilabel:`Comparison` column "
+#~ "is **not** visible."
+#~ msgstr ""
+#~ "În Odoo, pentru a accesa coloana :icon:`fa-"
+#~ "adjust` :guilabel:`Comparație`, trebuie selectată o perioadă de timp "
+#~ "*diferită* de :guilabel:`Ultimele 365 de zile`. În caz contrar, "
+#~ "coloana :icon:`fa-adjust` :guilabel:`Comparație` **nu** va fi vizibilă."
+
+#~ msgid ""
+#~ "Now, the pivot table displays the total number of employees who left the "
+#~ "company (:guilabel:`# Departure Employee`), as well as the total number "
+#~ "of employees (:guilabel:`Count`) in the columns. These are further "
+#~ "divided by the two different years, and also displays "
+#~ "the :guilabel:`Variation` between the two."
+#~ msgstr ""
+#~ "Acum, tabelul pivot afișează numărul total de angajați care au părăsit "
+#~ "compania (:guilabel:`# Angajați plecați`), precum și numărul total de "
+#~ "angajați (:guilabel:`Număr`) în coloane. Acestea sunt împărțite pe cei "
+#~ "doi ani diferiți și afișează și :guilabel:`Variația` dintre ele."
+
+#~ msgid ""
+#~ "The rows display the departments, and lists each individual employee for "
+#~ "each department, in the rows."
+#~ msgstr ""
+#~ "Rândurile afișează departamentele și listează fiecare angajat individual "
+#~ "pentru fiecare departament, în rânduri."
+
+#~ msgid ""
+#~ "For a more concise view of this report, click :icon:`fa-minus-square-"
+#~ "o` :guilabel:`Total` above the top row of the departments and employees, "
+#~ "to collapse the rows. Now, the table presents the total number of "
+#~ "employees who left the company for both years, compared to the total "
+#~ "number of employees for both years, including the difference, in a "
+#~ "percentage."
+#~ msgstr ""
+#~ "Pentru o vizualizare mai concisă a acestui raport, apasă pe :icon:`fa-"
+#~ "minus-square-o` :guilabel:`Total` deasupra primului rând al "
+#~ "departamentelor și angajaților pentru a restrânge rândurile. Acum, "
+#~ "tabelul prezintă numărul total de angajați care au părăsit compania "
+#~ "pentru ambii ani, comparativ cu numărul total de angajați pentru ambii "
+#~ "ani, inclusiv diferența, exprimată procentual."
+
+#~ msgid ""
+#~ "In this example, :guilabel:`3` employees out of :guilabel:`83` left in "
+#~ "2023, and :guilabel:`8` employees out of :guilabel:`202` left in 2024. "
+#~ "There was a :guilabel:`166.67%` increase in the employees who left in "
+#~ "2024 as compared to 2023. Additionally, there was a :guilabel:`143.37%` "
+#~ "increase in the total number of employees in 2024 as compared to 2023."
+#~ msgstr ""
+#~ "În acest exemplu, :guilabel:`3` angajați din :guilabel:`83` au plecat în "
+#~ "2023, iar :guilabel:`8` angajați din :guilabel:`202` au plecat în 2024. A "
+#~ "existat o creștere de :guilabel:`166,67%` a angajaților care au plecat în "
+#~ "2024 față de 2023. De asemenea, a existat o creștere "
+#~ "de :guilabel:`143,37%` a numărului total de angajați în 2024 față de 2023."
+
+#~ msgid ""
+#~ "The report modified to show the difference between two years of employees "
+#~ "who left."
+#~ msgstr ""
+#~ "Raportul modificat pentru a arăta diferența dintre doi ani privind "
+#~ "angajații care au plecat."
+
+#~ msgid ""
+#~ "To view more detailed rates for each department, click :icon:`fa-plus-"
+#~ "square` :guilabel:`Total` in the single row, revealing a drop-down menu, "
+#~ "and click :guilabel:`Department`. Click away from the drop-down to close "
+#~ "it, and now the pivot table displays the total number of employees who "
+#~ "left (:guilabel:`# Departure Employee`), the total number of employees "
+#~ "(:guilabel:`Count`), and the :guilabel:`Variation` (in a percentage) for "
+#~ "both 2023 and 2024, organized by department."
+#~ msgstr ""
+#~ "Pentru a vedea rate mai detaliate pentru fiecare departament, apasă "
+#~ "pe :icon:`fa-plus-square` :guilabel:`Total` din rândul unic, pentru a "
+#~ "deschide un meniu derulant, și selectează :guilabel:`Departament`. Fă "
+#~ "clic în afara meniului pentru a-l închide, iar tabelul pivot va afișa "
+#~ "numărul total de angajați care au plecat (:guilabel:`# Angajați "
+#~ "plecați`), numărul total de angajați (:guilabel:`Număr`) "
+#~ "și :guilabel:`Variația` (procentual) pentru 2023 și 2024, organizat pe "
+#~ "departamente."
+
+#~ msgid ""
+#~ "In this example, it can be determined that the :guilabel:`Management` "
+#~ "department had the best retention rate in 2024 as compared to 2023, with "
+#~ "a :guilabel:`Variation` rate of :guilabel:`-100%`. Additionally, it can "
+#~ "be determined that the :guilabel:`Management / Research & Development` "
+#~ "department had the most turnover, with a :guilabel:`Variation` "
+#~ "of :guilabel:`300%`."
+#~ msgstr ""
+#~ "În acest exemplu, se poate determina că "
+#~ "departamentul :guilabel:`Management` a avut cea mai bună rată de retenție "
+#~ "în 2024 comparativ cu 2023, cu o :guilabel:`Variație` "
+#~ "de :guilabel:`-100%`. De asemenea, se poate determina că "
+#~ "departamentul :guilabel:`Management / Cercetare & Dezvoltare` a avut cea "
+#~ "mai mare fluctuație, cu o :guilabel:`Variație` de :guilabel:`300%`."
+
+#~ msgid "The expanded employee retention report by department."
+#~ msgstr "Raportul extins de retenție a angajaților pe departamente."
+
+#~ msgid "California (CA)"
+#~ msgstr "California (CA)"
+
+#~ msgid "New York (NY)"
+#~ msgstr "New York (NY)"
+
+#~ msgid "Texas (TX)"
+#~ msgstr "Texas (TX)"
+
+#~ msgid "Florida (FL)"
+#~ msgstr "Florida (FL)"
+
+#~ msgid "Colorado (CO)"
+#~ msgstr "Colorado (CO)"
+
+#~ msgid "Alabama (AL)"
+#~ msgstr "Alabama (AL)"
+
+#~ msgid "Washington (WA)"
+#~ msgstr "Washington (WA)"
+
+#~ msgid "Nevada (NV)"
+#~ msgstr "Nevada (NV)"
+
+#~ msgid "Vermont (VT)"
+#~ msgstr "Vermont (VT)"
+
+#~ msgid "Illinois (IL)"
+#~ msgstr "Illinois (IL)"
+
+#~ msgid "Virginia (VA)"
+#~ msgstr "Virginia (VA)"
+
+#~ msgid "Washington, D.C (DC)"
+#~ msgstr "Washington, D.C (DC)"
+
+#~ msgid "Arizona (AZ)"
+#~ msgstr "Arizona (AZ)"
+
+#~ msgid "Idaho (ID)"
+#~ msgstr "Idaho (ID)"
+
+#~ msgid "Oregon (OR)"
+#~ msgstr "Oregon (OR)"
+
+#~ msgid "North Carolina (NC)"
+#~ msgstr "Carolina de Nord (NC)"
+
+#~ msgid ""
+#~ "Once a request has been approved, validated, or refused, the Kanban card "
+#~ "disappears from the default :guilabel:`All Time Off` page. To view *all* "
+#~ "requests, including approved and refused requests, clear the default "
+#~ "filters in the search bar."
+#~ msgstr ""
+#~ "Odată ce o solicitare a fost aprobată, validată sau refuzată, fișa Kanban "
+#~ "dispare de pe pagina implicită :guilabel:`All Time Off`. Pentru a "
+#~ "vizualiza *toate* solicitările, inclusiv solicitările aprobate și "
+#~ "refuzate, eliminați filtrele implicite din bara de căutare."
 
 #~ msgid ""
 #~ "Two overtime rates are cteated, one for 150% and the other for 120%. "

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-10 17:30+0000\n"
+"POT-Creation-Date: 2026-07-24 17:32+0000\n"
 "PO-Revision-Date: 2026-07-05 01:22+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Chinese (Traditional Han script) <https://translate.odoo.com/"
@@ -2988,6 +2988,10 @@ msgstr ":doc:`attendances/hardware`"
 msgid ":doc:`attendances/attendance_reporting`"
 msgstr ":doc:`attendances/attendance_reporting`"
 
+#: ../../content/applications/hr/attendances.rst:158
+msgid ":doc:`attendances/time_off_ledger`"
+msgstr ""
+
 #: ../../content/applications/hr/attendances/attendance_logs.rst:3
 msgid "Attendance logs"
 msgstr "考勤記錄"
@@ -3765,17 +3769,13 @@ msgstr "檢視報表"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:13
 msgid ""
-"To view the attendance report, click :guilabel:`Reporting` in the top menu. "
+"To view the attendances report, click :guilabel:`Reporting` in the top menu. "
 "The default report displays attendance information for current employees "
 "over the past three months, in a default :icon:`oi-view-"
 "pivot` :guilabel:`Pivot table`. The rows are populated by employee, while "
 "the columns are populated by the various attendance records. All entries are "
 "grouped by month."
 msgstr ""
-"若要檢視考勤報表，請按一下頂部選單中的\\ :guilabel:`報表`\\ 。預設報表會以預"
-"設的\\ :icon:`oi-view-pivot`\\ :guilabel:`樞紐分析表`\\ 顯示過去三個月內現職"
-"員工的考勤資訊。資料列按員工填入，而欄位則按各種考勤記錄填入。所有記項均按月"
-"份分組。"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:18
 msgid "The columns presented are:"
@@ -5545,8 +5545,164 @@ msgstr ""
 "差。如果員工加班,則以\\ :guilabel:`150%`\\ 的費率支付，並在其出勤記錄中將時間"
 "記錄為\\ :guilabel:`加班時數`。"
 
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:3
+msgid "Time off ledger"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:5
+msgid ""
+"The *Time Off Ledger* report in the **Attendances** app helps managers by "
+"flagging missing hours on employee attendance records. This allows managers "
+"to determine if employees are forgetting to sign in or out, decide if time "
+"off needs to be approved, and potentially flag patterns."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:10
+msgid "View time off ledger report"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:12
+msgid ""
+"To view the *Time Off Ledger* report, navigate "
+"to :menuselection:`Attendances app --> Reporting --> Time Off Ledger`. The "
+"report displays a nested list of missing attendance hours from the last two "
+"months. All entries are grouped by month, then employee. Click the :icon:`fa-"
+"caret-right` :guilabel:`(triangle)` icon to display the list of employees, "
+"then click the :icon:`fa-caret-right` :guilabel:`(triangle)` icon on the "
+"individual employee to view all the detailed attendance records."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:18
+msgid ""
+"When expanded, each individual record displays the following information:"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:20
+msgid ":guilabel:`Employee`: The employee with missing hours."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:21
+msgid ":guilabel:`Date`: The date the missing hours are from."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:22
+msgid ""
+":guilabel:`Expected Hours`: The number of hours the employee should have "
+"worked that day, calculated from their :ref:`working schedule <employees/"
+"schedule>`, configured on their employee record."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:25
+msgid ""
+":guilabel:`Worked Hours`: The total logged time the employee worked that day."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:26
+msgid ""
+":guilabel:`Approved Time Off`: The approved hours of time off for that day."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:27
+msgid ""
+":guilabel:`Difference`: The difference between the :guilabel:`Expected "
+"Hours` and the :guilabel:`Worked Hours` for the employee that day."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:None
+msgid ""
+"The time off report, expanded to show the missing records for Anita Oliver "
+"from July 2026."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:34
+msgid "Resolve conflicts"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:36
+msgid ""
+"When missing hours appear on the report, the entries should be investigated "
+"to determine the issue. The common reasons for missing attendance records "
+"are:"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:39
+msgid ":ref:`Forgot to log in to work that day. <attendances/forgot-log>`"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:40
+msgid ""
+":ref:`Forgot to request time off that day. <attendances/forgot-request>`"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:41
+msgid ""
+":ref:`Their time off request was not approved for that day. <attendances/"
+"unapproved-time-off>`"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:42
+msgid ""
+":ref:`They requested time off for part of their workday, but did not log any "
+"attendance records for the remainder of the time. <attendances/forgot-"
+"partial-log>`"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:45
+msgid ""
+"Once the reason for the missing entry is determined, the required records "
+"can be updated. Once updated, the related entries are no longer displayed in "
+"the *Time Off Ledger* report."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:51
+msgid "Forgot to log in to work"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:53
+msgid ""
+"Occasionally, employees forget to log in and out of the **Attendances** app. "
+"When this occurs, the employee's manager must :ref:`create the attendance "
+"records <attendances/create-records>` retroactively in the **Attendances** "
+"app."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:60
+msgid "Forgot to request time off"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:62
+msgid ""
+"If the employee did not request time off, the employee's manager or time off "
+"officer must :ref:`create the missing time off request <time_off/missing>` "
+"retroactively in the **Time Off** app."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:68
+msgid "Time off request was unapproved"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:70
+msgid ""
+"If the employee requested time off and the employee's manager or time off "
+"officer did not approve the request in time, the :ref:`request must be "
+"approved <time_off/manage-time-off>` in the **Time Off** app."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:77
+msgid "Partial time off day missing attendance records"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/time_off_ledger.rst:79
+msgid ""
+"Occasionally, employees request time off for part of the workday, and are "
+"expected to work the remainder of the day. When employees forget to log in "
+"and out for the partial workday, the employee's manager must :ref:`create "
+"the attendance record <attendances/create-records>` retroactively in the "
+"**Attendances** app."
+msgstr ""
+
 #: ../../content/applications/hr/employees.rst:5
-#: ../../content/applications/hr/employees.rst:81
+#: ../../content/applications/hr/employees.rst:76
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:210
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:91
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:67
@@ -5554,7 +5710,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:69
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:58
 #: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:35
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:97
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:126
 msgid "Employees"
 msgstr "員工"
 
@@ -5661,16 +5817,7 @@ msgstr "離開手續"
 msgid "Take care of employee records when collaboration ends."
 msgstr "在協作結束時處理員工記錄。"
 
-#: ../../content/applications/hr/employees.rst:67
-#: ../../content/applications/hr/employees/retention_report.rst:3
-msgid "Employee retention report"
-msgstr "員工留任報告"
-
-#: ../../content/applications/hr/employees.rst:67
-msgid "Gain insight into a company's retention rate."
-msgstr "深入了解公司的留任率。"
-
-#: ../../content/applications/hr/employees.rst:75
+#: ../../content/applications/hr/employees.rst:70
 #: ../../content/applications/hr/fleet/new_vehicle.rst:16
 #: ../../content/applications/hr/lunch.rst:19
 #: ../../content/applications/hr/payroll.rst:38
@@ -5679,7 +5826,7 @@ msgstr "深入了解公司的留任率。"
 msgid "Settings"
 msgstr "設定"
 
-#: ../../content/applications/hr/employees.rst:77
+#: ../../content/applications/hr/employees.rst:72
 msgid ""
 "To view and configure the available settings, navigate "
 "to :menuselection:`Employees app --> Configuration --> Settings`."
@@ -5687,13 +5834,13 @@ msgstr ""
 "若要檢視並配置可用設定，請前往\\ :menuselection:`員工應用程式 --> 配置 --> 設"
 "定`\\ 。"
 
-#: ../../content/applications/hr/employees.rst:83
+#: ../../content/applications/hr/employees.rst:78
 msgid ""
 ":guilabel:`Presence Display`: Select how the employee's availability status "
 "is calculated."
 msgstr ":guilabel:`出席狀態顯示`：選擇如何計算員工的可用狀態。"
 
-#: ../../content/applications/hr/employees.rst:85
+#: ../../content/applications/hr/employees.rst:80
 msgid ""
 ":guilabel:`Based on attendances`: Employees are marked available "
 "when :ref:`checked into <attendances/check-in>` the **Attendances** app."
@@ -5701,7 +5848,7 @@ msgstr ""
 ":guilabel:`基於出勤記錄`：當員工在\\ **考勤**\\ 應用程式中\\ :ref:`打卡簽到 "
 "<attendances/check-in>`\\ 時，會標示為可用。"
 
-#: ../../content/applications/hr/employees.rst:87
+#: ../../content/applications/hr/employees.rst:82
 msgid ""
 ":guilabel:`Based on user status in system`: Employees are marked available "
 "when they :doc:`log in to Odoo <attendances/check_in_check_out>`."
@@ -5709,14 +5856,14 @@ msgstr ""
 ":guilabel:`基於系統中的使用者狀態`：當員工\\ :doc:`登入 Odoo <attendances/"
 "check_in_check_out>`\\ 時，會標示為可用。"
 
-#: ../../content/applications/hr/employees.rst:90
+#: ../../content/applications/hr/employees.rst:85
 msgid ""
 ":guilabel:`Advanced Presence Control`: When enabled, presence status can be "
 "calculated from operational signals rather than check-ins or logins:"
 msgstr ""
 ":guilabel:`進階出席控制`：啟用時，出席狀態可從操作訊號計算，而非簽到或登入："
 
-#: ../../content/applications/hr/employees.rst:93
+#: ../../content/applications/hr/employees.rst:88
 msgid ""
 ":guilabel:`Based on number of emails sent`: An employee is marked present if "
 "they send at least # emails per hour; otherwise, they are marked absent. "
@@ -5727,7 +5874,7 @@ msgstr ""
 "示為出席；否則標示為缺席。請在\\ :guilabel:`傳送電子郵件`\\ 欄位中輸入必須傳"
 "送的最少電子郵件數量。"
 
-#: ../../content/applications/hr/employees.rst:96
+#: ../../content/applications/hr/employees.rst:91
 msgid ""
 ":guilabel:`Based on IP Address`: An employee is marked present only when "
 "connected from one of the specified corporate IP addresses. Enter the IP "
@@ -5738,7 +5885,7 @@ msgstr ""
 "為出席。請在\\ :guilabel:`IP 位址`\\ 欄位中輸入 IP 位址，每個位址之間以逗號分"
 "隔。"
 
-#: ../../content/applications/hr/employees.rst:100
+#: ../../content/applications/hr/employees.rst:95
 msgid ""
 ":guilabel:`Skills Management`: Enable this option to display "
 "the :ref:`resumé tab <employees/resume>` on employee profiles. This allows "
@@ -5750,11 +5897,11 @@ msgstr ""
 "resume>`\\ 、:ref:`技能 <employees/skills>`\\ 及\\ :doc:`認證 <employees/"
 "certifications>`\\ 。"
 
-#: ../../content/applications/hr/employees.rst:106
+#: ../../content/applications/hr/employees.rst:101
 msgid "Work organization"
 msgstr "工作組織"
 
-#: ../../content/applications/hr/employees.rst:108
+#: ../../content/applications/hr/employees.rst:103
 msgid ""
 "Using the drop-down menu, select the default :guilabel:`Company Working "
 "Hours`. The default options are a :guilabel:`Standard 40 hours/week` or "
@@ -5763,7 +5910,7 @@ msgstr ""
 "使用下拉式選單選擇預設的\\ :guilabel:`公司工作時數`\\ 。預設選項為"
 "\\ :guilabel:`標準 40 小時/週`\\ 或\\ :guilabel:`預約資源預設日曆`\\ 。"
 
-#: ../../content/applications/hr/employees.rst:111
+#: ../../content/applications/hr/employees.rst:106
 msgid ""
 "The available working hours listed are the same as the "
 "configured :doc:`working schedules <payroll/working_schedules>` in the "
@@ -5774,12 +5921,12 @@ msgstr ""
 "<payroll/working_schedules>`\\ 相同。工作時數可以從\\ **薪酬管理**\\ 和\\ **"
 "員工**\\ 應用程式建立和修改。"
 
-#: ../../content/applications/hr/employees.rst:116
+#: ../../content/applications/hr/employees.rst:111
 #: ../../content/applications/hr/fleet/new_vehicle.rst:230
 msgid "Contract"
 msgstr "合約"
 
-#: ../../content/applications/hr/employees.rst:118
+#: ../../content/applications/hr/employees.rst:113
 msgid ""
 "Define the number of days in advance that a manager is notified about an "
 "upcoming contract or work permit expiration in the "
@@ -5789,11 +5936,11 @@ msgstr ""
 "在各自的\\ :guilabel:`合約到期通知期限`\\ 及\\ :guilabel:`工作許可到期通知期"
 "限`\\ 欄位中定義主管在合約或工作許可即將到期前多少天收到通知。"
 
-#: ../../content/applications/hr/employees.rst:123
+#: ../../content/applications/hr/employees.rst:118
 msgid "Salary configurator"
 msgstr "薪資設定工具"
 
-#: ../../content/applications/hr/employees.rst:125
+#: ../../content/applications/hr/employees.rst:120
 msgid ""
 "Define how long an offer remains valid when extending a job offer or "
 "changing a salary. Enter the duration, in days, in the :guilabel:`Salary "
@@ -5802,17 +5949,17 @@ msgstr ""
 "定義在提供工作機會或變更薪資時，報價的有效期限。請在\\ :guilabel:`薪資套件設"
 "定工具`\\ 欄位中輸入天數。"
 
-#: ../../content/applications/hr/employees.rst:128
-#: ../../content/applications/hr/employees.rst:141
+#: ../../content/applications/hr/employees.rst:123
+#: ../../content/applications/hr/employees.rst:136
 msgid ""
 "This field only appears if the **Salary Configurator** module is installed."
 msgstr "此欄位僅在安裝\\ **薪資設定工具**\\ 模組時顯示。"
 
-#: ../../content/applications/hr/employees.rst:131
+#: ../../content/applications/hr/employees.rst:126
 msgid "Extra time off allocation"
 msgstr "額外休假分配"
 
-#: ../../content/applications/hr/employees.rst:133
+#: ../../content/applications/hr/employees.rst:128
 msgid ""
 "During salary package negotiations, enable the checkbox in this section if "
 "additional time off requests are allowed. When enabled, select "
@@ -5823,7 +5970,7 @@ msgstr ""
 "使用下拉選單選擇為額外天數建立的\\ :doc:`Time Off Type <time_off/"
 "time_off_types>`。"
 
-#: ../../content/applications/hr/employees.rst:137
+#: ../../content/applications/hr/employees.rst:132
 msgid ""
 "The default available options are :guilabel:`Paid Time "
 "Off`, :guilabel:`Compensatory Days`, and :guilabel:`Extra Time Off`. If "
@@ -7302,7 +7449,7 @@ msgstr "新員工表單的上半部，已全部填寫完成。"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:95
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:78
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:67
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:106
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:135
 msgid "Work tab"
 msgstr "工作分頁"
 
@@ -7964,7 +8111,7 @@ msgstr "認證快顯視窗，其中包含 C/C++ 進階認證的所有配置。"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:105
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:84
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:73
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:116
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:145
 msgid "Personal tab"
 msgstr "個人分頁"
 
@@ -8471,7 +8618,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:131
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:103
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:83
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:133
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:162
 msgid "Payroll tab"
 msgstr "薪酬分頁"
 
@@ -9966,241 +10113,6 @@ msgid ""
 msgstr ""
 "入職只能為資料庫的\\ :doc:`使用者 <../../general/users>`\\ 啟動。如果員工檔案"
 "上缺少任何資訊，會出現列出所需資訊的警告。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:5
-msgid ""
-"It is possible to determine the retention rate for a company by modifying an "
-"existing report."
-msgstr "可以透過修改現有報告來確定公司的留任率。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:7
-msgid ""
-"First, navigate to :menuselection:`Employees app --> Reporting --> "
-"Contracts` to open the :guilabel:`Employee Analysis` report. This report "
-"shows the number of all employees for the :guilabel:`Last 365 Days`, in a "
-"default :icon:`fa-line-chart` :guilabel:`Line Chart`."
-msgstr ""
-"首先，導覽至\\ :menuselection:`員工應用程式 --> 報表 --> 合約`\\ 以開啟"
-"\\ :guilabel:`員工分析`\\ 報告。此報告以預設\\ :icon:`fa-line-"
-"chart`\\ :guilabel:`折線圖`\\ 顯示\\ :guilabel:`最近 365 天`\\ 的所有員工數"
-"量。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:None
-msgid "The default Employees Analysis report."
-msgstr "預設的員工分析報告。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:15
-msgid ""
-"Next, click the :guilabel:`Measures` :icon:`fa-caret-down` button in the "
-"upper-left corner, revealing a drop-down menu. Click :guilabel:`# Departure "
-"Employee` in the list, then click away from the drop-down menu to close it. "
-"Now, the report shows all the employees who were archived for "
-"the :guilabel:`Last 365 Days`."
-msgstr ""
-"接下來，按一下左上角的\\ :guilabel:`測量值`\\ :icon:`fa-caret-down`\\ 按鈕，"
-"會顯示一個下拉選單。在列表中按一下\\ :guilabel:`# 離職員工`\\ ，然後按一下下"
-"拉選單以外的區域以關閉它。現在，報告顯示\\ :guilabel:`最近 365 天`\\ 內所有已"
-"歸檔的員工。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:20
-msgid ""
-"To view this information in an easier format, click the :icon:`oi-view-"
-"pivot` :guilabel:`(Pivot)` icon in the upper-right corner, and the data is "
-"presented in a pivot table."
-msgstr ""
-"若要以更易於閱讀的格式檢視此資訊，請按一下右上角的\\ :icon:`oi-view-"
-"pivot`\\ :guilabel:`（樞紐分析）`\\ 圖示，資料將以樞紐分析表形式呈現。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:23
-msgid ""
-"The various employees, organized by department, populate the rows. The "
-"columns display the following totals: the monthly :guilabel:`Wage`, "
-"the :guilabel:`Fuel Card` budget, total :guilabel:`Annual Employee Budget` "
-"(also referred to as the *annual salary*), the number of :guilabel:`New "
-"Employees`, as well as the number of :guilabel:`Departure Employees` "
-"(employees who left)."
-msgstr ""
-"各個員工按部門組織，填入資料列。資料欄顯示以下總計：每月\\ :guilabel:`薪資"
-"`\\ 、:guilabel:`燃料卡`\\ 預算、總\\ :guilabel:`年度員工預算`\\ （也稱為*年"
-"薪*）、:guilabel:`新進員工`\\ 數量，以及\\ :guilabel:`離職員工`\\ （離職的員"
-"工）數量。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:None
-msgid ""
-"The Employees Analysis report, modified to show departed employees only."
-msgstr "員工分析報告，已修改為僅顯示離職員工。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:33
-msgid "Employee retention rate comparison report"
-msgstr "員工留任率比較報告"
-
-#: ../../content/applications/hr/employees/retention_report.rst:35
-msgid ""
-"It is possible to compare data only for employees who left, compared to the "
-"total current employees, between two separate time periods. This is commonly "
-"referred to as the *employee retention rate*."
-msgstr ""
-"可以僅針對離職的員工與目前員工總數，在兩個不同的時間段之間進行資料比較。這通"
-"常稱為*員工留任率*。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:38
-msgid ""
-"To view these metrics, first open the :guilabel:`Employee Analysis` report "
-"by navigating to :menuselection:`Employees app --> Reporting --> Contracts`. "
-"Click the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon in the upper-right "
-"corner to view the information in a pivot table."
-msgstr ""
-"若要檢視這些指標，首先透過導覽至\\ :menuselection:`員工應用程式 --> 報表 --> "
-"合約`\\ 開啟\\ :guilabel:`員工分析`\\ 報告。按一下右上角的\\ :icon:`oi-view-"
-"pivot`\\ :guilabel:`（樞紐分析）`\\ 圖示，以樞紐分析表形式檢視資訊。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:42
-msgid ""
-"Next, click the :guilabel:`Measures` :icon:`fa-caret-down` button in the "
-"upper-left corner, revealing a drop-down menu. Click :guilabel:`# New "
-"Employees`, :guilabel:`Annual Employee Budget`, :guilabel:`Fuel Card`, "
-"and :guilabel:`Wage` in the list, to deselect these metrics and hide them in "
-"the table. Then, click :guilabel:`Count` at the bottom of the list to enable "
-"that metric."
-msgstr ""
-"接下來，按一下左上角的\\ :guilabel:`測量值`\\ :icon:`fa-caret-down`\\ 按鈕，"
-"會顯示一個下拉選單。在列表中按一下\\ :guilabel:`# 新進員工`\\ 、:guilabel:`年"
-"度員工預算`\\ 、:guilabel:`燃料卡`\\ 和\\ :guilabel:`薪資`\\ ，以取消選擇這些"
-"指標並在表格中隱藏它們。然後，按一下列表底部的\\ :guilabel:`計數`\\ 以啟用該"
-"指標。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:47
-msgid ""
-"Click away from the drop-down menu to close it. Now, the report shows all "
-"the employees who left the company (:guilabel:`# Departure Employee`), as "
-"well as the total number of employees (:guilabel:`Count`), for "
-"the :guilabel:`Last 365 Days`."
-msgstr ""
-"按一下下拉選單以外的區域以關閉它。現在，報告顯示\\ :guilabel:`最近 365 天`\\ "
-"內所有離開公司的員工（:guilabel:`# 離職員工`\\ ），以及員工總數（:guilabel:`"
-"計數`\\ ）。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:51
-msgid ""
-"To compare the data for the current year with the previous year, click "
-"the :icon:`fa-caret-down` :guilabel:`(down arrow)` in the search bar, "
-"revealing multiple filter and grouping options. Click :guilabel:`Last 365 "
-"Days` in the :icon:`fa-filter` :guilabel:`Filters` column, to turn off that "
-"filter. Then, click :guilabel:`Date`, and click the current year (in this "
-"example, :guilabel:`2024`) from the resulting drop-down menu."
-msgstr ""
-"若要將目前年度的資料與上一年度進行比較，請按一下搜尋列中的\\ :icon:`fa-caret-"
-"down`\\ :guilabel:`（向下箭頭）`\\ ，會顯示多個篩選和分組選項。按一下"
-"\\ :icon:`fa-filter`\\ :guilabel:`篩選條件`\\ 欄中的\\ :guilabel:`最近 365 天"
-"`\\ ，以關閉該篩選條件。然後，按一下\\ :guilabel:`日期`\\ ，並從結果下拉選單"
-"中按一下目前年份（在此範例中為\\ :guilabel:`2024`\\ ）。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:57
-msgid ""
-"Once a selection is made beneath :guilabel:`Date` in the :icon:`fa-"
-"filter` :guilabel:`Filters` column, a :icon:`fa-"
-"adjust` :guilabel:`Comparison` column appears. Click :guilabel:`Date: "
-"Previous Year` in the new column, then click off of the drop-down menu to "
-"close it."
-msgstr ""
-"一旦在\\ :icon:`fa-filter`\\ :guilabel:`篩選條件`\\ 欄中的\\ :guilabel:`日期"
-"`\\ 下方進行選擇，就會出現一個\\ :icon:`fa-adjust`\\ :guilabel:`比較`\\ 欄。"
-"在新欄中按一下\\ :guilabel:`日期：上一年`\\ ，然後按一下下拉選單以外的區域以"
-"關閉它。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:62
-msgid ""
-"In Odoo, in order to access the :icon:`fa-adjust` :guilabel:`Comparison` "
-"column, a specific time *other than* :guilabel:`Last 365 Days` **must** be "
-"selected. If not, the :icon:`fa-adjust` :guilabel:`Comparison` column is "
-"**not** visible."
-msgstr ""
-"在 Odoo 中，若要存取\\ :icon:`fa-adjust`\\ :guilabel:`比較`\\ 欄，必須選擇\\ "
-"*除了*\\ :guilabel:`最近 365 天`\\ *以外*\\ 的特定時間。否則，:icon:`fa-"
-"adjust`\\ :guilabel:`比較`\\ 欄將\\ **不會**\\ 顯示。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:66
-msgid ""
-"Now, the pivot table displays the total number of employees who left the "
-"company (:guilabel:`# Departure Employee`), as well as the total number of "
-"employees (:guilabel:`Count`) in the columns. These are further divided by "
-"the two different years, and also displays the :guilabel:`Variation` between "
-"the two."
-msgstr ""
-"現在，樞紐分析表會在欄中顯示離開公司的員工總數（:guilabel:`# 離職員工`），以"
-"及員工總數（:guilabel:`計數`）。這些資料進一步按兩個不同年份劃分，並顯示兩者"
-"之間的\\ :guilabel:`變化`。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:71
-msgid ""
-"The rows display the departments, and lists each individual employee for "
-"each department, in the rows."
-msgstr "列中顯示各部門，並列出每個部門的各個員工。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:74
-msgid ""
-"For a more concise view of this report, click :icon:`fa-minus-square-"
-"o` :guilabel:`Total` above the top row of the departments and employees, to "
-"collapse the rows. Now, the table presents the total number of employees who "
-"left the company for both years, compared to the total number of employees "
-"for both years, including the difference, in a percentage."
-msgstr ""
-"若要以更簡潔的方式檢視此報表，請按一下部門和員工最上方列上方的\\ :icon:`fa-"
-"minus-square-o`\\ :guilabel:`總計`，以摺疊列。現在，表格會以百分比顯示兩年內"
-"離開公司的員工總數，與兩年內的員工總數相比較，包括差異。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:80
-msgid ""
-"In this example, :guilabel:`3` employees out of :guilabel:`83` left in 2023, "
-"and :guilabel:`8` employees out of :guilabel:`202` left in 2024. There was "
-"a :guilabel:`166.67%` increase in the employees who left in 2024 as compared "
-"to 2023. Additionally, there was a :guilabel:`143.37%` increase in the total "
-"number of employees in 2024 as compared to 2023."
-msgstr ""
-"在此範例中，2023 年有\\ :guilabel:`3`\\ 名員工（共\\ :guilabel:`83`\\ 名）離"
-"職，2024 年有\\ :guilabel:`8`\\ 名員工（共\\ :guilabel:`202`\\ 名）離職。與 "
-"2023 年相比，2024 年離職員工增加了\\ :guilabel:`166.67%`。此外，與 2023 年相"
-"比，2024 年員工總數增加了\\ :guilabel:`143.37%`。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:0
-msgid ""
-"The report modified to show the difference between two years of employees "
-"who left."
-msgstr "修改後的報表顯示兩年內離職員工的差異。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:89
-msgid ""
-"To view more detailed rates for each department, click :icon:`fa-plus-"
-"square` :guilabel:`Total` in the single row, revealing a drop-down menu, and "
-"click :guilabel:`Department`. Click away from the drop-down to close it, and "
-"now the pivot table displays the total number of employees who left "
-"(:guilabel:`# Departure Employee`), the total number of employees "
-"(:guilabel:`Count`), and the :guilabel:`Variation` (in a percentage) for "
-"both 2023 and 2024, organized by department."
-msgstr ""
-"若要檢視各部門更詳細的比率，請按一下單列中的\\ :icon:`fa-plus-"
-"square`\\ :guilabel:`總計`，顯示下拉式選單，然後按一下\\ :guilabel:`部門`。按"
-"一下選單外的區域以關閉它，現在樞紐分析表會按部門顯示離職員工總數"
-"（:guilabel:`# 離職員工`）、員工總數（:guilabel:`計數`），以及 2023 年和 "
-"2024 年的\\ :guilabel:`變化`（以百分比表示）。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:96
-msgid ""
-"In this example, it can be determined that the :guilabel:`Management` "
-"department had the best retention rate in 2024 as compared to 2023, with "
-"a :guilabel:`Variation` rate of :guilabel:`-100%`. Additionally, it can be "
-"determined that the :guilabel:`Management / Research & Development` "
-"department had the most turnover, with a :guilabel:`Variation` "
-"of :guilabel:`300%`."
-msgstr ""
-"在此範例中，可以確定\\ :guilabel:`管理`\\ 部門在 2024 年相較於 2023 年擁有最"
-"佳的留任率，:guilabel:`變化`\\ 率為\\ :guilabel:`-100%`。此外，可以確定"
-"\\ :guilabel:`管理 / 研發`\\ 部門的人員流動率最高，:guilabel:`變化`\\ 為"
-"\\ :guilabel:`300%`。"
-
-#: ../../content/applications/hr/employees/retention_report.rst:0
-msgid "The expanded employee retention report by department."
-msgstr "按部門展開的員工留任報表。"
 
 #: ../../content/applications/hr/fleet.rst:5
 msgid "Fleet"
@@ -16499,7 +16411,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:134
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:106
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:88
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:136
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:165
 msgid "Contract overview section"
 msgstr "合約概覽部份"
 
@@ -16734,7 +16646,7 @@ msgstr ":guilabel:`簽署時薪資`：在欄位中輸入月薪。"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:167
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:134
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:121
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:168
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:197
 msgid "Schedule section"
 msgstr "排程部份"
 
@@ -17951,7 +17863,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:20
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:20
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:15
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:39
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:68
 msgid "Apps & modules"
 msgstr "應用程式及模組"
 
@@ -17972,7 +17884,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:28
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:23
 #: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:20
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:47
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:76
 msgid "Name"
 msgstr "名稱"
 
@@ -17986,7 +17898,7 @@ msgstr "名稱"
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:29
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:24
 #: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:21
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:48
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:77
 msgid "Technical name"
 msgstr "技術名稱"
 
@@ -17995,7 +17907,7 @@ msgstr "技術名稱"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:30
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:30
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:25
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:49
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:78
 msgid "Dependencies"
 msgstr "依賴項目"
 
@@ -18009,7 +17921,7 @@ msgstr "依賴項目"
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:31
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:26
 #: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:22
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:50
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:79
 msgid "Description"
 msgstr "描述"
 
@@ -18026,14 +17938,14 @@ msgstr "`l10n_au_hr_payroll`"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:34
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:34
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:29
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:53
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:82
 msgid "hr_payroll"
 msgstr "hr_payroll"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:49
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:35
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:36
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:55
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:84
 msgid "hr_work_entry_holidays"
 msgstr "hr_work_entry_holidays"
 
@@ -18041,7 +17953,7 @@ msgstr "hr_work_entry_holidays"
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:28
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:36
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:37
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:56
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:85
 msgid "hr_payroll_holidays"
 msgstr "hr_payroll_holidays"
 
@@ -18074,7 +17986,7 @@ msgstr "l10n_au_hr_payroll"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:45
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:41
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:34
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:61
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:90
 msgid "hr_payroll_account"
 msgstr "hr_payroll_account"
 
@@ -18089,7 +18001,7 @@ msgstr "l10n_au_aba"
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:60
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:44
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:37
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:64
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:93
 msgid ""
 "Links payroll and accounting by creating journal entries (per payslip if "
 "needed) to record payroll in the company's books."
@@ -18138,7 +18050,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:47
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:52
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:41
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:72
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:101
 msgid "General configurations"
 msgstr "一般設定"
 
@@ -18158,7 +18070,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:65
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:58
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:47
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:78
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:107
 msgid ":guilabel:`Company Name`: Enter the business name in this field."
 msgstr ":guilabel:`公司名稱`：請在此欄位輸入公司或業務的名稱。"
 
@@ -18166,7 +18078,7 @@ msgstr ":guilabel:`公司名稱`：請在此欄位輸入公司或業務的名稱
 #: ../../content/applications/hr/payroll/payroll_localizations/hong_kong.rst:67
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:66
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:59
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:79
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:108
 msgid ""
 ":guilabel:`Address`: Complete the full address, including "
 "the :guilabel:`City`, :guilabel:`State`, :guilabel:`Zip Code`, "
@@ -18236,7 +18148,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:79
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:65
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:54
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:90
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:119
 msgid ":guilabel:`Phone`: Enter the company phone number."
 msgstr ":guilabel:`電話`：請輸入公司的電話號碼。"
 
@@ -18246,7 +18158,7 @@ msgstr ":guilabel:`電話`：請輸入公司的電話號碼。"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:80
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:66
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:55
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:91
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:120
 msgid ""
 ":guilabel:`Email`: Enter the email used for general contact information."
 msgstr ":guilabel:`電郵`：請輸入用作一般聯絡用途的電子郵件地址。"
@@ -18670,7 +18582,7 @@ msgstr "為臨時工選擇\\ :guilabel:`時薪`\\ 。這允許加入「臨時工
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:148
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:120
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:101
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:150
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:179
 msgid ""
 "Set a default :guilabel:`Wage Type` in the salary :ref:`Structure Type "
 "<payroll/structure-types>` to configure employees in bulk. If needed, the "
@@ -18727,7 +18639,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:141
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:136
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:123
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:170
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:199
 msgid ""
 ":guilabel:`Work Entry Source`: Defines how :doc:`work entries <../"
 "work_entries>` are generated for payroll during the specified pay period. "
@@ -18740,7 +18652,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:144
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:139
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:126
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:173
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:202
 msgid ""
 ":guilabel:`Working Schedule`: Based on the employee's assigned :ref:`working "
 "schedule <employees/schedule>` (e.g., 40 hours per week)."
@@ -18752,7 +18664,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:146
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:141
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:128
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:175
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:204
 msgid ""
 ":guilabel:`Attendances`: Based on :doc:`approved checked-in hours <../../"
 "attendances/management>` in the **Attendances** app."
@@ -18764,7 +18676,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:148
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:143
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:130
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:177
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:206
 msgid ""
 ":guilabel:`Planning`: Based on :ref:`scheduled shifts <planning/shifts>` in "
 "the **Planning** app."
@@ -19266,7 +19178,7 @@ msgstr "Odoo 從此帳戶直接扣款以支付員工的退休金。"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:296
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:192
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:138
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:309
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:338
 msgid "Payroll configuration"
 msgstr "薪酬配置"
 
@@ -19283,7 +19195,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:328
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:220
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:144
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:315
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:344
 msgid "Salary structures & structure types"
 msgstr "薪資結構與結構類型"
 
@@ -19317,7 +19229,7 @@ msgstr "薪資結構清單中的澳洲薪資結構。"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:345
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:236
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:159
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:330
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:359
 #: ../../content/applications/hr/payroll/salaries.rst:176
 msgid "Salary rules"
 msgstr "薪資規則"
@@ -19345,7 +19257,7 @@ msgstr "澳洲薪資規則的頂部。"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:359
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:250
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:175
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:405
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:434
 #: ../../content/applications/hr/payroll/salaries.rst:421
 msgid "Rule parameters"
 msgstr "規則參數"
@@ -19354,7 +19266,7 @@ msgstr "規則參數"
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:373
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:252
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:177
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:407
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:436
 msgid ""
 "Some calculations require specific rates associated with them, or wage caps. "
 "*Rules Parameters* are capable of listing a value, either a percentage or a "
@@ -19367,7 +19279,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:380
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:365
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:255
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:414
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:443
 msgid ""
 "Most rules pull information stored in the parameters module to get the rate "
 "of the rule (a percentage) and the cap (a dollar amount)."
@@ -19380,7 +19292,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:368
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:258
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:183
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:417
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:446
 msgid ""
 "To view rule parameters, navigate to :menuselection:`Payroll app --> "
 "Configuration --> Rule Parameters`. Here, all rule parameters are displayed "
@@ -19613,7 +19525,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:413
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:289
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:343
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:441
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:470
 msgid ""
 "Work entries sync based on the employee's :doc:`contract <../contracts>` "
 "configuration. Odoo pulls from the assigned working schedule, attendance "
@@ -20874,7 +20786,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:537
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:398
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:418
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:539
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:568
 msgid "Close Payroll"
 msgstr "關閉薪資管理"
 
@@ -20884,14 +20796,14 @@ msgstr "關閉薪資管理"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:539
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:400
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:420
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:541
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:570
 msgid "If there are no errors, payroll is completed for the pay period."
 msgstr "如果沒有錯誤，該薪資期間的薪資處理已完成。"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:1154
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:511
 #: ../../content/applications/hr/payroll/payroll_localizations/kenya.rst:152
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:544
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:573
 msgid "Reports"
 msgstr "報表"
 
@@ -30211,7 +30123,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:451
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:326
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:380
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:478
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:507
 msgid "Accounting check"
 msgstr "會計審查"
 
@@ -30230,7 +30142,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:459
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:334
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:388
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:486
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:515
 msgid "Journal entry creation"
 msgstr "建立日記賬記項"
 
@@ -31115,7 +31027,7 @@ msgstr "一般設定"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:61
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:54
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:43
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:74
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:103
 msgid ""
 "First, the company must be configured. Navigate to :menuselection:`Settings "
 "app --> Users & Companies --> Companies`. From the list, select the desired "
@@ -31760,7 +31672,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:426
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:302
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:356
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:454
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:483
 msgid ""
 "To cut down on the payroll officer's time, it is typical to process payslips "
 "in batches, either by wage type (fixed salary vs hourly), pay schedule "
@@ -31774,7 +31686,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:366
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:418
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:360
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:458
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:487
 msgid ""
 "The process of running payroll includes different actions that need to be "
 "executed to ensure that the amount withheld from payroll taxes is correct, "
@@ -31790,7 +31702,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:435
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:311
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:365
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:463
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:492
 msgid ""
 "When running a payroll batch, check that the period, company, and employees "
 "included are correct *before* starting to analyze or validate the data."
@@ -31802,7 +31714,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:426
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:314
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:368
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:466
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:495
 msgid ""
 "Once the payslips are drafted, review them for accuracy. Check "
 "the :guilabel:`Worked Days & Inputs` tab, and ensure the listed worked time "
@@ -31816,7 +31728,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/india.rst:378
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:430
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:372
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:470
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:499
 msgid ""
 "Next, check the various totals (gross pay, employee taxes, benefits, "
 "employer taxes, net salaries), then click :guilabel:`Compute Sheet` to "
@@ -31850,7 +31762,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:461
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:336
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:390
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:488
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:517
 msgid ""
 "After payslips are confirmed and validated, journal entries are posted "
 "either individually, or in a batch. The journal entry is created first as a "
@@ -31864,7 +31776,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:465
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:340
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:394
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:492
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:521
 msgid ""
 "It must be decided if journal entries are done individually or in batches "
 "*before* running payroll."
@@ -31972,7 +31884,7 @@ msgstr "日記帳記項已過帳。"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:512
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:383
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:403
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:524
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:553
 msgid "Register Payments"
 msgstr "登記付款"
 
@@ -31987,7 +31899,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:500
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:392
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:412
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:533
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:562
 msgid ""
 "Payments can be :guilabel:`Grouped by Partner` if there is a partner "
 "associated with a salary rule."
@@ -32367,7 +32279,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:91
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:74
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:63
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:102
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:131
 msgid ""
 "To update an employee form, open the :menuselection:`Employees` app and "
 "click on the desired employee record. On the employee form, configure the "
@@ -32380,7 +32292,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:97
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:80
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:69
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:108
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:137
 msgid ""
 "Enter the :guilabel:`Work Address` for the employee in "
 "the :guilabel:`Location` section of the :guilabel:`Work` tab."
@@ -32392,7 +32304,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:107
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:89
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:75
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:118
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:147
 msgid ""
 "Ensure the employee has a minimum of one :ref:`trusted bank account "
 "<employees/private-contact>` listed in the :guilabel:`Bank Accounts` field "
@@ -32444,7 +32356,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:136
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:108
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:90
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:138
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:167
 msgid ""
 "This section holds information that drives salary calculations. Ensure the "
 "following fields are configured:"
@@ -32463,7 +32375,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:141
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:113
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:94
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:143
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:172
 msgid ":guilabel:`Wage Type`: Select how the employee is paid."
 msgstr ":guilabel:`薪資類型`\\ ：選擇員工的付款方式。"
 
@@ -32471,7 +32383,7 @@ msgstr ":guilabel:`薪資類型`\\ ：選擇員工的付款方式。"
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:143
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:115
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:96
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:145
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:174
 msgid ""
 "Select :guilabel:`Fixed Wage` for salaried employees who receive the same "
 "amount each pay period."
@@ -32481,7 +32393,7 @@ msgstr "為每個付薪週期領取相同金額的受薪員工選擇\\ :guilabel
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:145
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:117
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:98
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:147
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:176
 msgid ""
 "Select :guilabel:`Hourly Wage` for employees paid based on hours worked."
 msgstr "為根據工作時數支付薪資的員工選擇\\ :guilabel:`時薪`\\ 。"
@@ -32530,7 +32442,7 @@ msgstr "薪資管理分頁中員工表單的合約概覽區段。"
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:151
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:177
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:146
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:180
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:209
 msgid ""
 ":guilabel:`Extra Hours`: Tick the checkbox to allow the **Attendances** app "
 "to add any extra work entries logged by the employee."
@@ -32992,7 +32904,7 @@ msgstr "執行約旦薪資"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:404
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:416
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:444
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:473
 msgid ""
 "Any :ref:`discrepencies or conflicts <payroll/conflicts>` must be resolved, "
 "then the work entries can be :ref:`regenerated <payroll/regenerate-work-"
@@ -33005,7 +32917,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:419
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:295
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:349
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:447
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:476
 msgid ""
 "Once everything is correct, draft payslips can be :ref:`created individually "
 "<payroll/process>` or in :doc:`groups <../pay_runs>`, referred to in the "
@@ -33130,14 +33042,14 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:488
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:504
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:375
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:516
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:545
 msgid ""
 "If everything seems correct on the journal entry draft, post the journal "
 "entries."
 msgstr "如果日記帳記項草稿一切正確，請過帳日記帳記項。"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:498
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:526
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:555
 msgid ""
 "After the :ref:`journal entries <payroll/journal>` are validated, Odoo can "
 "generate payments."
@@ -33827,7 +33739,7 @@ msgid "Company configurations"
 msgstr "公司配置"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:70
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:83
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:112
 msgid ""
 "The state selected in the company's address is associated as the *work "
 "address* by default for the employee, and the one used to calculate payroll "
@@ -33872,7 +33784,7 @@ msgstr ""
 "庫後，會顯示額外的欄位。"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:101
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:112
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:141
 msgid ""
 "The state selected in this address determines which salary rules Odoo "
 "applies when calculating taxes."
@@ -33985,7 +33897,7 @@ msgstr ""
 #: ../../content/applications/hr/payroll/payroll_localizations/mexico.rst:179
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:148
 #: ../../content/applications/hr/payroll/payroll_localizations/turkey.rst:133
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:182
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:211
 msgid ""
 ":guilabel:`Working Hours`: Using the drop-down menu, select the default work "
 "schedule. This is particularly important for employees available to receive "
@@ -34700,7 +34612,7 @@ msgid "`l10n_sa_hr_payroll`"
 msgstr "`l10n_sa_hr_payroll`"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:35
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:54
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:83
 msgid "hr_contract_reports"
 msgstr "hr_contract_reports"
 
@@ -34793,7 +34705,7 @@ msgstr ""
 "Dashboard 上會顯示警告，且嘗試執行薪酬管理時會發生錯誤。"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:111
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:141
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:170
 msgid ""
 ":guilabel:`Contract`: The Validity of the compensation conditions can be "
 "updated depending on the needs."
@@ -34956,7 +34868,7 @@ msgstr ""
 "And Loan Structure`\\ 。"
 
 #: ../../content/applications/hr/payroll/payroll_localizations/saudi_arabia.rst:227
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:321
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:350
 msgid ""
 "The :guilabel:`Salary Structure` contains all the individual :ref:`salary "
 "rules <payroll/usa_apps>` that informs the **Payroll** app how to calculate "
@@ -37237,71 +37149,175 @@ msgstr ""
 msgid "The states included in this localization are:"
 msgstr "此本地化包含的州有："
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:10
-msgid "California (CA)"
-msgstr "加利福尼亞州（CA）"
-
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:11
-msgid "New York (NY)"
-msgstr "紐約州（NY）"
-
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:12
-msgid "Texas (TX)"
-msgstr "德克薩斯州（TX）"
-
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:13
-msgid "Florida (FL)"
-msgstr "佛羅里達州（FL）"
+msgid "State"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:14
-msgid "Colorado (CO)"
-msgstr "科羅拉多州（CO）"
+msgid "Abbreviation"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:15
-msgid "Alabama (AL)"
-msgstr "阿拉巴馬州（AL）"
+msgid "Alabama"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:16
-msgid "Washington (WA)"
-msgstr "華盛頓州（WA）"
+msgid "(AL)"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:17
-msgid "Nevada (NV)"
-msgstr "內華達州（NV）"
+msgid "Arizona"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:18
-msgid "Vermont (VT)"
-msgstr "佛蒙特州（VT）"
+msgid "(AZ)"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:19
-msgid "Illinois (IL)"
-msgstr "伊利諾州（IL）"
+msgid "California"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:20
-msgid "Virginia (VA)"
-msgstr "維吉尼亞州（VA）"
+msgid "(CA)"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:21
-msgid "Washington, D.C (DC)"
-msgstr "華盛頓特區（DC）"
+msgid "Colorado"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:22
-msgid "Arizona (AZ)"
-msgstr "亞利桑那州（AZ）"
+msgid "(CO)"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:23
-msgid "Idaho (ID)"
-msgstr "Idaho (ID)"
+msgid "Florida"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:24
-msgid "Oregon (OR)"
-msgstr "Oregon (OR)"
+msgid "(FL)"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:25
-msgid "North Carolina (NC)"
-msgstr "North Carolina (NC)"
+msgid "Georgia"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:26
+msgid "(GA)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:27
+msgid "Idaho"
+msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:28
+msgid "(ID)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:29
+msgid "Illinois"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:30
+msgid "(IL)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:31
+msgid "Iowa"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:32
+msgid "(IA)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:33
+msgid "Mississippi"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:34
+msgid "(MS)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:35
+msgid "Nevada"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:36
+msgid "(NV)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:37
+msgid "New Jersey"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:38
+msgid "(NJ)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:39
+msgid "New York"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:40
+msgid "(NY)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:41
+msgid "North Carolina"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:42
+msgid "(NC)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:43
+msgid "Oregon"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:44
+msgid "(OR)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:45
+msgid "Texas"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:46
+msgid "(TX)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:47
+msgid "Vermont"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:48
+msgid "(VT)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:49
+msgid "Virginia"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:50
+msgid "(VA)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:51
+msgid "Washington"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:52
+msgid "(WA)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:53
+msgid "Washington, D.C."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:54
+msgid "\\(DC)"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:57
 msgid ""
 "Federal taxes (Income, :abbr:`FICA (Federal Insurance Contributions Act)`, "
 "and Unemployment) for both employees and employers are covered by default in "
@@ -37312,7 +37328,7 @@ msgstr ""
 "(Federal Insurance Contributions Act)`\\ 和失業稅）。隨著時間的推移，將會加入"
 "更多州，請隨時查看更新。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:32
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:61
 msgid ""
 "Before configuring the United States localization, refer to the "
 "general :doc:`payroll <../../payroll>` documentation, which includes the "
@@ -37322,22 +37338,22 @@ msgstr ""
 "在配置美國本地化之前，請參閱一般\\ :doc:`薪酬管理 <../../payroll>`\\ 使用說"
 "明，其中包含所有本地化的基本資訊，以及所有通用設定和欄位。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:41
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:70
 msgid ""
 ":ref:`Install <general/install>` the following modules to get all the "
 "features of the United States payroll localization:"
 msgstr ""
 ":ref:`安裝 <general/install>`\\ 以下模組以獲得美國薪酬管理本地化的所有功能："
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:51
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:80
 msgid ":guilabel:`United States - Payroll`"
 msgstr ":guilabel:`美國 - 薪酬管理`"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:52
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:81
 msgid "`l10n_us_hr_payroll`"
 msgstr "`l10n_us_hr_payroll`"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:57
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:86
 msgid ""
 "Provides U.S. payroll basics, including employee tax details, salary "
 "structures (Basic/Gross/Net), tax rules, and W-2/3PA reporting."
@@ -37345,23 +37361,23 @@ msgstr ""
 "提供美國薪酬管理基本功能，包括員工稅務詳情、薪資結構（基本/總額/淨額）、稅務"
 "規則及 W-2/3PA 報表。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:59
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:88
 msgid ":guilabel:`United States - Payroll with Accounting`"
 msgstr ":guilabel:`美國 - 薪酬管理與會計`"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:60
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:89
 msgid "`l10n_us_hr_payroll_account`"
 msgstr "`l10n_us_hr_payroll_account`"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:62
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:91
 msgid "l10n_us"
 msgstr "l10n_us"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:63
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:92
 msgid "l10n_us_hr_payroll"
 msgstr "l10n_us_hr_payroll"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:68
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:97
 msgid ""
 ":doc:`Configure the United States fiscal localization <../../../finance/"
 "fiscal_localizations/united_states>`"
@@ -37369,17 +37385,17 @@ msgstr ""
 ":doc:`配置美國財務本地化 <../../../finance/fiscal_localizations/"
 "united_states>`"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:86
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:115
 msgid ""
 ":guilabel:`Tax ID`: Enter the company's :abbr:`EIN (Employer Identification "
 "Number)`."
 msgstr ":guilabel:`稅務編號`\\ ：輸入公司的\\ :abbr:`EIN（雇主識別號碼）`\\ 。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:87
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:116
 msgid ":guilabel:`Company ID` : Enter the business's state ID number."
 msgstr ":guilabel:`公司編號`\\ ：輸入企業的州編號。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:88
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:117
 msgid ""
 ":guilabel:`Currency`: By default, :abbr:`USD (US Dollars)` is selected. If "
 "not, select :guilabel:`USD` from the drop-down menu."
@@ -37387,11 +37403,11 @@ msgstr ""
 ":guilabel:`貨幣`\\ ：預設選擇\\ :abbr:`USD（美元）`\\ 。如果未選擇，請從下拉"
 "式選單中選擇\\ :guilabel:`USD`\\ 。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:94
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:123
 msgid "Ensure the information is accurate, as it is used when creating W-2s."
 msgstr "確保資訊準確，因為建立 W-2 時會使用這些資訊。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:99
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:128
 msgid ""
 "Every employee being paid must have their employee profiles configured for "
 "the United States payroll localization. Additional fields are present after "
@@ -37400,7 +37416,7 @@ msgstr ""
 "每位需支付薪酬的員工都必須針對美國薪酬管理本地化配置其員工檔案。配置美國資料"
 "庫後會顯示額外的欄位。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:121
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:150
 msgid ""
 "These accounts are used to pay the employee, via an automation through a "
 "NACHA payment file. Payroll **cannot** be processed for employees without a "
@@ -37413,7 +37429,7 @@ msgstr ""
 "設定受信任的銀行帳戶，**薪資管理** Dashboard 上會顯示警告，且在嘗試執行薪資時"
 "會出現錯誤。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:126
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:155
 msgid ""
 "Ensure there is a valid :guilabel:`SSN No` entered in "
 "the :guilabel:`Citizenship` section . The last four digits of the :abbr:`SSN "
@@ -37422,7 +37438,7 @@ msgstr ""
 "請確保在\\ :guilabel:`公民身分`\\ 區段中輸入有效的\\ :guilabel:`SSN 編號"
 "`\\ 。員工工資單上會顯示\\ :abbr:`SSN（社會安全號碼）`\\ 的後四位數字。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:154
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:183
 msgid ""
 ":guilabel:`Contract Type`: Determines how the employee is paid and "
 "classified, such as :guilabel:`Salary-exempt`, :guilabel:`Salary-"
@@ -37431,7 +37447,7 @@ msgstr ""
 ":guilabel:`合約類型`\\ ：決定員工的付款和分類方式，例如\\ :guilabel:`薪資－豁"
 "免`\\ 、\\ :guilabel:`薪資－非豁免`\\ 、\\ :guilabel:`時薪`\\ 。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:158
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:187
 msgid ""
 "This field is visible on payslips. Some states require payslips to state if "
 "the employee is exempt or non-exempt from overtime. Ensure the selection "
@@ -37440,7 +37456,7 @@ msgstr ""
 "此欄位會顯示在工資單上。某些州要求工資單須註明員工是否豁免或不豁免加班。請確"
 "保選擇符合州法律的規定。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:161
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:190
 msgid ""
 ":guilabel:`Pay Category`: Select :guilabel:`United States: Employee` for "
 "this field. This defines when the employee is paid, their default working "
@@ -37449,11 +37465,11 @@ msgstr ""
 ":guilabel:`付薪類別`\\ ：此欄位請選擇\\ :guilabel:`美國：員工`\\ 。這會定義員"
 "工的付薪時間、其預設工作排程以及適用的工作記項類型。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:187
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:216
 msgid "W-2 form section"
 msgstr "W-2 表單部分"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:189
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:218
 msgid ""
 "A W-2 is an annual tax form that reports an employee's wages, taxes, and "
 "benefits. Employees use it to file their tax returns. The options below "
@@ -37464,7 +37480,7 @@ msgstr ""
 "列選項對應 W-2 表單\\ *第 13 欄*\\ 中的勾選方格。請選擇適用於該員工的任何選"
 "項。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:193
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:222
 msgid ""
 ":guilabel:`Statutory Employee`: Tick this box if the employee is exempt from "
 "income tax, but subject to :abbr:`FICA (Federal Insurance Contributions "
@@ -37473,7 +37489,7 @@ msgstr ""
 "\\ :guilabel:`法定員工`\\ ：如果員工免繳所得稅，但須繳納\\ :abbr:`FICA（聯邦"
 "保險供款法）`\\ 稅款，請勾選此方塊。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:195
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:224
 msgid ""
 ":guilabel:`Retirement Plan`: Tick this box if the employee is an active "
 "contributor to an employer-sponsored retirement plan."
@@ -37481,7 +37497,7 @@ msgstr ""
 "\\ :guilabel:`退休計畫`\\ ：如果員工正積極參與雇主贊助的退休計畫，請勾選此方"
 "塊。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:197
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:226
 msgid ""
 ":guilabel:`Third-Party Sick Pay`: Tick this box if the employee is covered "
 "under a plan where sick pay benefits may be provided by a third party (e.g., "
@@ -37490,11 +37506,11 @@ msgstr ""
 "\\ :guilabel:`第三方病假工資`\\ ：如果員工在年度內受保於由第三方（例如保險公"
 "司）提供病假工資福利的計畫，請勾選此方塊。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:201
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:230
 msgid "W-4 form section"
 msgstr "W-4 表單部分"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:203
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:232
 msgid ""
 "A W-4 is an :abbr:`IRS (Internal Revenue Services)` form that determines an "
 "employee's federal tax withholding, which the employer remits directly to "
@@ -37503,21 +37519,21 @@ msgstr ""
 "W-4 是\\ :abbr:`IRS（國稅局）`\\ 表單，用於確定員工的聯邦稅款預扣額，雇主會將"
 "其直接匯給\\ :abbr:`IRS（國稅局）`\\ 。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:206
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:235
 msgid "Configure any relevant fields for the employee in this section."
 msgstr "在此部分為員工配置任何相關欄位。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:209
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:238
 msgid "State filing section"
 msgstr "州申報部分"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:211
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:240
 msgid ""
 "An employee's marital status impacts their payroll taxes. Configure the "
 "following fields regarding their status and withholdings."
 msgstr "員工的婚姻狀況會影響其薪資稅。請配置以下有關其狀況和預扣額的欄位。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:214
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:243
 msgid ""
 ":guilabel:`Status`: Using the drop-down menu, select the employee's "
 "*federal* filing status. The options "
@@ -37531,7 +37547,7 @@ msgstr ""
 "婚/RDP 分開申報`\\ 、\\ :guilabel:`戶主`\\ 或\\ :guilabel:`有子女的合格未亡配"
 "偶/RDP`\\ 。這通常來自員工的 W-4 表單。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:218
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:247
 msgid ""
 ":guilabel:`Tax Status`: Using the drop-down menu, select the employee's "
 "*state* filing status, if applicable."
@@ -37539,11 +37555,11 @@ msgstr ""
 "\\ :guilabel:`稅務狀況`\\ ：使用下拉選單選擇員工的\\ *州*\\ 申報狀況（如適"
 "用）。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:222
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:251
 msgid "The federal and state statuses do **not** need to match."
 msgstr "聯邦和州的狀況\\ **不**\\ 需要一致。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:225
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:254
 msgid ""
 "As of 2025, these states do **not** collect state income tax: Alaska, "
 "Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, "
@@ -37556,7 +37572,7 @@ msgstr ""
 "設定，則\\ :guilabel:`稅務狀況`\\ 欄位中\\ **沒有**\\ 對應的州選項。請將其留"
 "空。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:230
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:259
 msgid ""
 ":guilabel:`Withholding Allowance`: Enter the total annual amount to be "
 "withheld from the employee's pay for the year, for state taxes. Only fill "
@@ -37565,7 +37581,7 @@ msgstr ""
 "\\ :guilabel:`預扣額`\\ ：輸入該年度從員工工資中預扣的州稅總額。僅當員工居住"
 "在有州所得稅的州時才填寫此項。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:233
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:262
 msgid ""
 ":guilabel:`Extra Withholding`: Enter the total *extra* annual amount (not "
 "including the :guilabel:`Withholding Allowance` amount) to be withheld from "
@@ -37579,11 +37595,11 @@ msgstr ""
 msgid "The state filing section of the employee form, filled out."
 msgstr "員工表單的州申報部分，已填寫完成。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:241
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:270
 msgid "Common benefits"
 msgstr "常見福利"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:243
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:272
 msgid ""
 "The following sections of benefits are considered common ones offered by US "
 "employers. This information needs to be populated with the information "
@@ -37591,7 +37607,7 @@ msgid ""
 msgstr ""
 "以下福利部分被視為美國雇主提供的常見福利。此資訊需要填入員工選擇的資訊。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:247
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:276
 msgid ""
 "The benefits listed in this section are considered the most commonly offered "
 "by companies. If other employee benefits exist that require regular paycheck "
@@ -37600,11 +37616,11 @@ msgstr ""
 "本節列出的福利被視為公司最常提供的福利。如果存在需要定期從薪資中扣除的其他員"
 "工福利，可以將其作為\\ *輸入*\\ 加入。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:252
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:281
 msgid "Pre-tax deductions"
 msgstr "稅前扣除"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:254
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:283
 msgid ""
 "Pre-tax benefits lower the employee's gross wage, which decreases the base "
 "amount for tax calculations. These are displayed at the beginning of the "
@@ -37613,17 +37629,17 @@ msgstr ""
 "稅前福利會降低員工的毛工資，從而降低稅款計算的基準金額。這些項目會顯示在工資"
 "單開頭，在規定毛工資之前。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:259
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:288
 msgid "Retirement plans section"
 msgstr "退休計畫部分"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:261
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:290
 msgid ""
 "This section is where the employee and employer 401(k) contributions are "
 "configured. Fill out the following fields:"
 msgstr "本節用於配置員工和雇主的 401(k) 供款。請填寫以下欄位："
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:264
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:293
 msgid ""
 ":guilabel:`401(k)`: Enter the amount of money taken out of the employee's "
 "payslip each pay period. This can be entered either as a percentage (%) of "
@@ -37632,7 +37648,7 @@ msgstr ""
 ":guilabel:`401(k)`：輸入每個薪資期間從員工工資單中扣除的金額。可以輸入為工資"
 "單金額的百分比 (%)，或每張工資單的特定美元金額 ($/slip)。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:267
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:296
 msgid ""
 ":guilabel:`Matching Amount`: Enter the matching amount the employer "
 "contributes to the employee's 401(k), as compared to the employee's "
@@ -37642,7 +37658,7 @@ msgstr ""
 ":guilabel:`配對金額`：輸入雇主為員工的 401(k) 供款的配對金額（與員工供款相"
 "比）。此欄位也可以配置為員工供款的百分比 (%)，或特定的美元金額 ($/slip)。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:270
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:299
 msgid ""
 ":guilabel:`Matching Yearly Cap`: If there is a limit to the employer's "
 "contribution, enter it as a percentage of the employee's annual salary."
@@ -37650,7 +37666,7 @@ msgstr ""
 ":guilabel:`配對年度上限`：如果雇主的供款有限額，請將其輸入為員工年薪的百分"
 "比。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:274
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:303
 msgid ""
 "A company allows employees to contribute to a 401(k) retirement plan, and "
 "matches 50% of the employee's contributions, up to $5,000 USD a year. The "
@@ -37661,7 +37677,7 @@ msgstr ""
 "美元。該員工年收入 50,000 美元，並將其薪資的 20% 供款到 401(k)，即 10,000 美"
 "元。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:278
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:307
 msgid ""
 "To configure this, enter `20.00` in the :guilabel:`401(k)` field, `50.00` in "
 "the :guilabel:`Matching Amount` field, and `20.00` in "
@@ -37675,11 +37691,11 @@ msgstr ""
 msgid "An employee's retirement configurations."
 msgstr "員工的退休配置。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:285
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:314
 msgid "Health benefits section"
 msgstr "健康福利部分"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:287
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:316
 msgid ""
 "This section is where the employee's health contributions are configured. "
 "Populate each of the fields with the corresponding amount deducted from "
@@ -37694,11 +37710,11 @@ msgid ""
 "deductions."
 msgstr "員工的健康福利部分，已填入工資單扣除額。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:294
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:323
 msgid "Other benefits section"
 msgstr "其他福利部分"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:296
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:325
 msgid ""
 "This section currently only houses a :guilabel:`Commuter` benefit field. "
 "Enter the amount being deducted per paycheck, for applicable commuter "
@@ -37707,11 +37723,11 @@ msgstr ""
 "本節目前僅包含一個\\ :guilabel:`通勤`\\ 福利欄位。請輸入適用通勤福利每張工資"
 "單扣除的金額。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:300
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:329
 msgid "Post-tax deductions section"
 msgstr "稅後扣除部分"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:302
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:331
 msgid ""
 "These types of benefits count as deductions *after* taxes are calculated. "
 "They appear towards the end of the payslip before the net amount is "
@@ -37725,7 +37741,7 @@ msgstr ""
 "薪資中扣除並存入 ROTH 401(k) 帳戶的工資單金額百分比 (%)，或每張工資單的特定美"
 "元金額 ($/slip)。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:311
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:340
 msgid ""
 "Several sections within the **Payroll** app installs a Salary Structure, "
 "Structure Type, Rules, and Parameters specific to the United States."
@@ -37733,7 +37749,7 @@ msgstr ""
 "**薪酬管理**\\ 應用程式中的多個部分會安裝特定於美國的薪資結構、結構類型、規則"
 "和參數。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:317
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:346
 msgid ""
 "When the **l10n_us_hr_payroll** module is :ref:`installed <payroll/"
 "usa_apps>`, a new :guilabel:`Salary Structure` gets "
@@ -37745,7 +37761,7 @@ msgstr ""
 "Pay`\\ 。此結構包含一個\\ :guilabel:`結構類型`\\ ，即\\ :guilabel:`United "
 "States: Regular Pay`\\ 。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:332
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:361
 msgid ""
 "To view the salary rules that inform the salary structure what to do, "
 "navigate to :menuselection:`Payroll app --> Configuration --> Structures` "
@@ -37759,7 +37775,7 @@ msgstr ""
 "以顯示\\ :guilabel:`United States: Regular Pay`\\ 結構類型。按一下"
 "\\ :guilabel:`United States: Regular Pay`\\ 以檢視詳細的薪資規則。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:340
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:369
 msgid ""
 "Each rule defines how pay is calculated, taking into account factors such as "
 "commissions, bonuses, taxes, and insurance. The *logic* behind "
@@ -37768,7 +37784,7 @@ msgstr ""
 "每條規則定義如何計算薪資，並考慮諸如佣金、獎金、稅金和保險等因"
 "素。:guilabel:`United States: Regular Pay`\\ 規則背後的*邏輯*如下："
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:344
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:373
 msgid ""
 "The first four rules listed reflects all sources of income, including the "
 "basic wage listed on the contract (:guilabel:`Basic Salary`), plus any "
@@ -37783,7 +37799,7 @@ msgstr ""
 msgid "The basic salary rules for the US localization."
 msgstr "美國本地化的基本薪資規則。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:351
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:380
 msgid ""
 "Adding up these inputs is how the gross salary (:guilabel:`Gross Pay`) is "
 "calculated. This amount is the base amount used to calculate payroll taxes."
@@ -37791,7 +37807,7 @@ msgstr ""
 "將這些輸入相加即可計算出總薪資（:guilabel:`總薪資`）。此金額是用於計算薪資稅"
 "的基本金額。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:354
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:383
 msgid ""
 "The next set of rules are the various pre-tax benefits and taxable income, "
 "such as :guilabel:`Medical` insurance contributions and :guilabel:`Commuter "
@@ -37807,7 +37823,7 @@ msgstr ""
 msgid "The pre-tax rules for the US localization."
 msgstr "美國本地化的稅前規則。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:362
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:391
 msgid ""
 "Next, all the various tax rules are listed where both federal and state "
 "payroll withholdings are outlined. First, federal tax rules are listed, then "
@@ -37820,7 +37836,7 @@ msgstr ""
 msgid "The federal tax rules for the US localization."
 msgstr "美國本地化的聯邦稅規則。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:369
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:398
 msgid ""
 "The rule for federal withholdings for `Worker's Compensation` appears "
 "*after* several state-specific withholdings are listed, and does **not** "
@@ -37829,7 +37845,7 @@ msgstr ""
 "「勞工補償」的聯邦預扣規則出現在幾個特定州的預扣之*後*，並**不**會出現在上圖"
 "中，但會列在規則中。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:373
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:402
 msgid "The last rules listed are the post-tax employee deductions."
 msgstr "最後列出的規則是稅後員工扣除項目。"
 
@@ -37837,7 +37853,7 @@ msgstr "最後列出的規則是稅後員工扣除項目。"
 msgid "The post-tax rules for the US localization."
 msgstr "美國本地化的稅後規則。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:378
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:407
 msgid ""
 "The :guilabel:`Other Inputs` tab contains anything else affecting payroll. "
 "This includes items to be added to the payslip, such as :guilabel:`Tips`, "
@@ -37851,13 +37867,13 @@ msgstr ""
 msgid "The other inputs for the US localization."
 msgstr "美國本地化的其他輸入。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:385
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:414
 msgid ""
 "The employee's net salary is the amount the employee receives from the "
 "employer. The formula to calculate the net salary is:"
 msgstr "員工的淨薪資是員工從雇主處獲得的金額。計算淨薪資的公式為："
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:388
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:417
 msgid ""
 "\\text{Gross Salary} + \\text{Allowances} - \\text{Payroll Taxes} - "
 "\\text{General Deductions}"
@@ -37865,7 +37881,7 @@ msgstr ""
 "\\text{Gross Salary} + \\text{Allowances} - \\text{Payroll Taxes} - "
 "\\text{General Deductions}"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:392
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:421
 msgid ""
 "Additionally, an extra section exists in payroll calculation for the US "
 "called `Employer Deductions`, and it breaks down the payments the employer "
@@ -37878,7 +37894,7 @@ msgstr ""
 msgid "The employer deduction rules for the US localization."
 msgstr "美國本地化的雇主扣除規則。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:400
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:429
 msgid ""
 "The rule for employer deductions for `Worker's Compensation` appears *after* "
 "several state-specific employer deductions are listed, and does **not** "
@@ -37887,7 +37903,7 @@ msgstr ""
 "`Worker's Compensation` 的雇主扣除規則出現在列出數個州特定雇主扣除規則\\ *之"
 "後*，並\\ **未**\\ 出現在上圖中，但已列於規則中。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:411
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:440
 msgid ""
 "The wage base for Social Security tax calculations has a cap for 2025, "
 "accounted for in the `US: FICA OASDI Cap` parameter."
@@ -37895,7 +37911,7 @@ msgstr ""
 "社會保障稅計算的工資基數在 2025 年有上限，這在\\ `US: FICA OASDI Cap`\\ 參數"
 "中已考慮在內。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:423
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:452
 msgid ""
 "The Unemployment tax of a company is different from the one added by default "
 "in Odoo. To update this, navigate to :menuselection:`Payroll app --> "
@@ -37908,7 +37924,7 @@ msgstr ""
 "\\ :abbr:`FUTA（聯邦失業稅法）`或需要編輯的州名進行篩選，並從清單中編輯相應的"
 "費率。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:429
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:458
 msgid ""
 "Odoo adds updated rule parameters for the current calendar year. It is "
 "**not** recommended to edit rule parameters **unless a federal or state "
@@ -37920,11 +37936,11 @@ msgstr ""
 "除非聯邦或州參數已變更**，並且與 Odoo 建立的規則參數不同。在對規則參數進行任"
 "何變更\\ *之前*，請檢查所有當地和國家法規。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:435
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:464
 msgid "Run US payroll"
 msgstr "執行美國薪酬管理"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:437
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:466
 msgid ""
 "Before running paypoll, the payroll officer must validate "
 "employee :doc:`work entries <../work_entries>` to confirm pay accuracy and "
@@ -37935,7 +37951,7 @@ msgstr ""
 "work_entries>`，以確認薪資準確性並發現錯誤。這包括檢查所有休假是否已核准以及"
 "任何加班是否適當。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:480
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:509
 msgid ""
 "The accounting process when running payroll has two "
 "components: :ref:`creating journal entries <payroll/journal>`, "
@@ -37944,7 +37960,7 @@ msgstr ""
 "執行薪資管理時的會計流程包含兩個部分：\\ :ref:`建立日記帳記項 <payroll/"
 "journal>`\\ 和\\ :ref:`登記付款 <payroll/register>`\\ 。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:498
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:527
 msgid ""
 "Four accounts from the US :abbr:`CoA (Chart of Accounts)` are included with "
 "the payroll localization:"
@@ -37952,7 +37968,7 @@ msgstr ""
 "美國\\ :abbr:`帳目總表（Chart of Accounts）`\\ 的四個帳戶包含在薪資管理本地化"
 "中："
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:501
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:530
 msgid ""
 "`611000 Salaries & Wages`: Records gross salary and the employer's portion "
 "of payroll expenses. Also groups values from rules without specific accounts "
@@ -37961,7 +37977,7 @@ msgstr ""
 "`611000 薪資與工資`：記錄總薪資和雇主的薪資支出部分。也彙總沒有特定帳戶的規則"
 "值（例如公司特定福利）。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:503
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:532
 msgid ""
 "`230100 Employee Payroll Taxes`: Withheld taxes from employees, which the "
 "employer must file and pay. The partner and label columns of the journal "
@@ -37970,7 +37986,7 @@ msgstr ""
 "`230100 員工薪資稅`：從員工扣繳的稅款，雇主必須申報並支付。日記帳記項的合作夥"
 "伴和標籤欄位會指出具體稅項。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:505
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:534
 msgid ""
 "`230200 Employer Payroll Taxes`: Employer portion of payroll taxes to be "
 "filed and paid. The partner and label columns of the journal entry indicate "
@@ -37979,11 +37995,11 @@ msgstr ""
 "`230200 雇主薪資稅`：雇主需申報並支付的薪資稅部分。日記帳記項的合作夥伴和標籤"
 "欄位會指出具體稅項。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:507
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:536
 msgid "`230000 Salary Payable`: Net salary owed to the employee."
 msgstr "`230000 應付薪資`：應付給員工的淨薪資。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:510
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:539
 msgid ""
 "The :abbr:`CoA (Chart of Accounts)` configuration is done by default when a "
 "company is located in the US. The account codes and names can be edited to "
@@ -37997,7 +38013,7 @@ msgstr ""
 "\\ :abbr:`帳目總表（Chart of Accounts）`\\ 帳戶，Odoo 會使用 `薪資開支` 帳戶"
 "建立日記帳記項，無論移動的性質為何。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:529
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:558
 msgid ""
 "To generate payments from payslips,employee's **must** have a *trusted* bank "
 "account. If the employee's bank account is *not* marked as `trusted`, NACHA "
@@ -38007,7 +38023,7 @@ msgstr ""
 "工的銀行帳戶\\ *未*\\ 標記為 `受信任`，則\\ **無法**\\ 透過 Odoo 產生 NACHA "
 "檔案。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:546
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:575
 msgid ""
 "The US localization contains several reports unique to the US, which provide "
 "tax information for employees, as well as the ability to integrate with "
@@ -38016,11 +38032,11 @@ msgstr ""
 "美國地區設定包含幾個美國特有的報表，可為員工提供稅務資訊，並且能與 ADP 等外部"
 "組織整合。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:550
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:579
 msgid "W2 Report"
 msgstr "W2 報表"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:552
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:581
 msgid ""
 "The *W2 Report* provides a CSV file that allows employees to e-file their W2 "
 "report with third-party software. To access this report, navigate "
@@ -38030,7 +38046,7 @@ msgstr ""
 "表。若要存取此報表，請導覽至\\ :menuselection:`薪資管理 -> 報表 -> United "
 "States -> W2`。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:556
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:585
 msgid ""
 "To create a W2 form, click :guilabel:`New`, and a blank :guilabel:`Create W2 "
 "Form` page loads. Set the :guilabel:`Start Date` and :guilabel:`End Date` "
@@ -38041,9 +38057,9 @@ msgstr ""
 "建立 W2 表格`\\ 頁面。設定\\ :guilabel:`開始日期`\\ 和\\ :guilabel:`結束日期`"
 "（通常是一個日曆年度），如果是在多公司資料庫中，請選擇\\ :guilabel:`公司`。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:560
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:582
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:604
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:589
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:611
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:633
 msgid ""
 "All pay runs for the time period appear in a list view. To add any missing "
 "pay runs, click :guilabel:`Add a line` at the bottom of the list, and select "
@@ -38052,7 +38068,7 @@ msgstr ""
 "該時間段的所有薪資執行會以列表檢視方式顯示。若要加入任何遺漏的薪資執行，請按"
 "一下列表底部的\\ :guilabel:`加入資料行`，然後選擇遺漏的檔案。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:563
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:592
 msgid ""
 "When done, click the :guilabel:`Generate` button to create a CSV file with a "
 "summary of all payroll related payments made during the specified time "
@@ -38065,11 +38081,11 @@ msgstr ""
 msgid "The W2 report screen, with the file to download in the top half."
 msgstr "W2 報表畫面，上半部顯示可下載的檔案。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:570
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:599
 msgid "Form 941"
 msgstr "表格 941"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:572
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:601
 msgid ""
 "The *Form 941* report is meant to inform the government of the amount of "
 "federal income tax, :abbr:`FICA (Federal Insurance Contributions Act)` taxes "
@@ -38079,7 +38095,7 @@ msgstr ""
 "*表格 941* 報表用於向政府通報從員工薪資中扣繳的聯邦所得稅、:abbr:`FICA（聯邦"
 "保險捐款法）`\\ 稅款（Medicare 與社會保險）金額，同時也報告員工負擔的稅款。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:576
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:605
 msgid ""
 "To create this report, navigate to :menuselection:`Payroll -> Reporting -> "
 "United States -> Form 941`. Click the :guilabel:`New` button, and a "
@@ -38095,7 +38111,7 @@ msgstr ""
 "`、:guilabel:`稅務年度`、:guilabel:`季度`、:guilabel:`IRS 付款選項`（資金傳送"
 "至 IRS 的方式），以及\\ :guilabel:`存款排程與稅務責任`（向 IRS 付款的頻率）。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:585
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:614
 msgid ""
 "When done, click :guilabel:`Generate`, and the report is created as a CSV "
 "file, and appears on the :guilabel:`Form 941` report dashboard. Companies "
@@ -38109,17 +38125,17 @@ msgstr ""
 msgid "The 941 report screen, with the file to download in the top half."
 msgstr "941 報表畫面，上半部顯示可下載的檔案。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:593
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:622
 msgid "Form 940"
 msgstr "表格 940"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:595
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:624
 msgid ""
 "The *Form 940* report details the annual :abbr:`FUTA (Federal Unemployment "
 "Tax Act)` withheld for payroll."
 msgstr "*表格 940* 報表詳細列出薪資扣繳的年度\\ :abbr:`FUTA（聯邦失業稅法）`。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:598
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:627
 msgid ""
 "To create this report, navigate to :menuselection:`Payroll -> Reporting -> "
 "United States -> Form 940`. Click the :guilabel:`New` button, and a "
@@ -38136,7 +38152,7 @@ msgstr ""
 "`、:guilabel:`於減免抵免州付款`，以及\\ :guilabel:`IRS 付款選項`（資金傳送至 "
 "IRS 的方式）。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:607
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:636
 msgid ""
 "When done, click :guilabel:`Generate`, and the report is created as a CSV "
 "file, and appears on the :guilabel:`Form 940` report dashboard. Companies "
@@ -38150,18 +38166,18 @@ msgstr ""
 msgid "The 940 report screen, with the file to download in the top half."
 msgstr "940 報表畫面，上半部顯示可下載的檔案。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:615
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:644
 msgid "Export data to third-party apps"
 msgstr "將資料匯出至第三方應用程式"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:617
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:646
 msgid ""
 "The *ADP Export* report generates a CSV file that can be submitted to ADP, "
 "which then makes payments to the employees."
 msgstr ""
 "*ADP 匯出*\\ 報表會產生一個可提交給 ADP 的 CSV 檔案，然後由 ADP 向員工付款。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:620
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:649
 msgid ""
 "The CSV file summarizes the employee's worked hours during a specified time "
 "period, correlating to their salary or hourly wage. The report is generated "
@@ -38171,7 +38187,7 @@ msgstr ""
 "\\ :doc:`工作記項 <../work_entries>`\\ 產生的，時間為任何休假被確認\\ *之後"
 "*。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:624
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:653
 msgid ""
 "The export format is meant to match with the ADP format. Since companies can "
 "customize their portal and may require some changes, the data is there to be "
@@ -38180,7 +38196,7 @@ msgstr ""
 "匯出格式旨在符合 ADP 格式。由於公司可以自訂其門戶網站且可能需要進行一些變更，"
 "因此這些資料可供輸入至 ADP 以執行薪酬管理。"
 
-#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:628
+#: ../../content/applications/hr/payroll/payroll_localizations/united_states.rst:657
 msgid ""
 "To access the ADP Export report, the `United States - Payroll - Export to "
 "ADP` module **must** be :ref:`installed <general/install>`."
@@ -49943,7 +49959,7 @@ msgstr ""
 "核准`。"
 
 #: ../../content/applications/hr/time_off/management.rst:41
-#: ../../content/applications/hr/time_off/management.rst:110
+#: ../../content/applications/hr/time_off/management.rst:138
 msgid ""
 "The various departments the user is a member of, and manages employees "
 "under, also appear on the left side of the page, under :icon:`fa-"
@@ -49970,7 +49986,7 @@ msgstr ""
 "狀態。"
 
 #: ../../content/applications/hr/time_off/management.rst:50
-#: ../../content/applications/hr/time_off/management.rst:120
+#: ../../content/applications/hr/time_off/management.rst:148
 msgid ""
 "If no requests fall under one of the status options or departments, that "
 "status or department is **not** visible on the left-side menu."
@@ -50024,7 +50040,7 @@ msgstr ""
 "這樣做會載入詳細的休假請求表單。"
 
 #: ../../content/applications/hr/time_off/management.rst:72
-#: ../../content/applications/hr/time_off/management.rst:138
+#: ../../content/applications/hr/time_off/management.rst:166
 msgid ""
 "Depending on the rights of the user, changes can be made. To modify the "
 "request, make any desired changes to the form. All changes are automatically "
@@ -50034,7 +50050,7 @@ msgstr ""
 "變更都會自動儲存。"
 
 #: ../../content/applications/hr/time_off/management.rst:75
-#: ../../content/applications/hr/time_off/management.rst:141
+#: ../../content/applications/hr/time_off/management.rst:169
 msgid ""
 "It is also possible to approve, validate, or refuse the request from this "
 "form. Click the :guilabel:`Approve` button to approve, "
@@ -50047,24 +50063,85 @@ msgstr ""
 
 #: ../../content/applications/hr/time_off/management.rst:79
 msgid ""
-"Once a request has been approved, validated, or refused, the Kanban card "
-"disappears from the default :guilabel:`All Time Off` page. To view *all* "
-"requests, including approved and refused requests, clear the default filters "
-"in the search bar."
+":guilabel:`All Time Off` page. To view *all* requests, including approved "
+"and refused requests, clear the default filters in the search bar."
 msgstr ""
-"一旦請求被核准、驗證或拒絕，看板卡就會從預設的\\ :guilabel:`所有休假`\\ 頁面"
-"中消失。要檢視\\ *所有*\\ 請求（包括已核准和已拒絕的請求），請清除搜尋列中的"
-"預設篩選條件。"
 
 #: ../../content/applications/hr/time_off/management.rst:None
 msgid "The detailed time off request form for the employee George Davis."
 msgstr "員工 George Davis 的詳細休假請求表單。"
 
-#: ../../content/applications/hr/time_off/management.rst:89
+#: ../../content/applications/hr/time_off/management.rst:88
+msgid "Add missing time off requests"
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:90
+msgid ""
+"If an employee forgets to request time off for days they did not work, a "
+"time off record must be created retroactively. To create missing time off "
+"requests, navigate to :menuselection:`Time Off app --> Management --> Time "
+"Off`, and click :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:94
+msgid "On the time off request form, configure the following fields:"
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:96
+msgid ""
+":guilabel:`Employee`: Using the drop-down menu, select the employee missing "
+"the time off request."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:97
+msgid ""
+":guilabel:`Time Off Type`: Using the drop-down menu, select the :doc:`type "
+"of time off <time_off_types>` for the request."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:99
+msgid ""
+":guilabel:`Payslip State`: Using the drop-down menu, select when the paid "
+"time off is given to the employee. The options are: :guilabel:`To compute in "
+"next payslip`, :guilabel:`To compute in current payslip`, and :guilabel:`To "
+"defer to next payslip`."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:102
+msgid ""
+":guilabel:`Dates`: Using the calendar selector, configure the start and end "
+"dates for the time off request."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:104
+msgid ""
+":guilabel:`Description`: In the field below. enter any information regarding "
+"the request. For example, `Forgot to request the time off.` or `Could not "
+"request time off as they were sick.`"
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:106
+msgid ""
+":icon:`fa-paperclip` :guilabel:`Attach File`: If there is relevant "
+"documentation for the request, click this button, navigate to the desired "
+"file, then click :guilabel:`Open`."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:109
+msgid ""
+"Once the form is filled out, click :guilabel:`Approve` to approve the "
+"request."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:None
+msgid "A time off form for missing time off."
+msgstr ""
+
+#: ../../content/applications/hr/time_off/management.rst:117
 msgid "View allocation requests"
 msgstr "檢視分配請求"
 
-#: ../../content/applications/hr/time_off/management.rst:91
+#: ../../content/applications/hr/time_off/management.rst:119
 msgid ""
 "To view allocation requests waiting for approval, navigate "
 "to :menuselection:`Time Off app --> Management --> Allocations`. Doing so "
@@ -50075,7 +50152,7 @@ msgstr ""
 "> 分配`。這樣做會顯示\\ :guilabel:`分配`\\ 頁面。所有分配請求均以預設看板檢視"
 "顯示。"
 
-#: ../../content/applications/hr/time_off/management.rst:95
+#: ../../content/applications/hr/time_off/management.rst:123
 msgid ""
 "The only allocation requests that are visible on this page belong to "
 "employees the user either has :guilabel:`Time Off Officer` "
@@ -50085,7 +50162,7 @@ msgstr ""
 "此頁面上可見的唯一分配請求屬於使用者在\\ **休假**\\ 應用程式中具有"
 "\\ :guilabel:`休假人員`\\ 或\\ :guilabel:`管理員`\\ 存取權限的員工。"
 
-#: ../../content/applications/hr/time_off/management.rst:99
+#: ../../content/applications/hr/time_off/management.rst:127
 msgid ""
 "The default filters on the :guilabel:`Allocations` page are :icon:`fa-"
 "filter` :guilabel:`First Approval` and :icon:`fa-filter` :guilabel:`My "
@@ -50097,7 +50174,7 @@ msgstr ""
 "一次核准`\\ 和\\ :icon:`fa-filter`\\ :guilabel:`我的團隊`。這些篩選條件僅顯示"
 "需要為使用者團隊中目前員工核准、等待核准或驗證的分配請求。"
 
-#: ../../content/applications/hr/time_off/management.rst:103
+#: ../../content/applications/hr/time_off/management.rst:131
 msgid ""
 "On the left side of the :guilabel:`Allocations` page, there are various "
 "grouping options that can be used to narrow down the presented allocation "
@@ -50108,7 +50185,7 @@ msgstr ""
 "圍，位於\\ :icon:`fa-folder`\\ :guilabel:`狀態`\\ 和\\ :icon:`fa-"
 "users`\\ :guilabel:`部門`\\ 標題下方。"
 
-#: ../../content/applications/hr/time_off/management.rst:107
+#: ../../content/applications/hr/time_off/management.rst:135
 msgid ""
 "Since only allocation requests that need to be approved are shown, the "
 "only :icon:`fa-folder` :guilabel:`Status` options "
@@ -50118,7 +50195,7 @@ msgstr ""
 "態`\\ 選項為\\ :guilabel:`全部`、:guilabel:`待核准`\\ 和\\ :guilabel:`已核准"
 "`。"
 
-#: ../../content/applications/hr/time_off/management.rst:113
+#: ../../content/applications/hr/time_off/management.rst:141
 msgid ""
 "To only display allocation requests for specific departments, click on "
 "the :guilabel:`Department` on the left-hand side of the page. Only requests "
@@ -50127,7 +50204,7 @@ msgstr ""
 "要僅顯示特定部門的分配請求，請按一下頁面左側的\\ :guilabel:`部門`。然後僅顯示"
 "所選部門內的請求。"
 
-#: ../../content/applications/hr/time_off/management.rst:116
+#: ../../content/applications/hr/time_off/management.rst:144
 msgid ""
 "If the :icon:`fa-filter` :guilabel:`First Approval` and :icon:`fa-"
 "filter` :guilabel:`My Team` filters are removed, all statuses appear."
@@ -50139,11 +50216,11 @@ msgstr ""
 msgid "Allocations dashboard showing unapproved allocation requests."
 msgstr "顯示未批准的分配請求的分配 Dashboard。"
 
-#: ../../content/applications/hr/time_off/management.rst:127
+#: ../../content/applications/hr/time_off/management.rst:155
 msgid "Approve or refuse allocation requests"
 msgstr "批准或拒絕分配請求"
 
-#: ../../content/applications/hr/time_off/management.rst:129
+#: ../../content/applications/hr/time_off/management.rst:157
 msgid ""
 "To approve or refuse an allocation request, navigate to :menuselection:`Time "
 "Off app --> Management --> Allocations`. At the end of each allocation "
@@ -50156,7 +50233,7 @@ msgstr ""
 "`\\ 或\\ :guilabel:`驗證`\\ 按鈕（取決於請求的狀態）以及一個\\ :guilabel:`拒"
 "絕`\\ 按鈕。"
 
-#: ../../content/applications/hr/time_off/management.rst:134
+#: ../../content/applications/hr/time_off/management.rst:162
 msgid ""
 "If more information is needed before approving an allocation request, click "
 "anywhere on the Kanban card (except for "
@@ -50167,7 +50244,7 @@ msgstr ""
 "\\ :guilabel:`批准`\\ 、\\ :guilabel:`驗證`\\ 或\\ :guilabel:`拒絕`\\ 按鈕以"
 "外）。這樣做會載入詳細的分配請求表單。"
 
-#: ../../content/applications/hr/time_off/management.rst:145
+#: ../../content/applications/hr/time_off/management.rst:173
 msgid ""
 "Once a request has been approved, validtaed, or refused, the Kanban card "
 "disappears from the default :guilabel:`Allocations` page. To view *all* "
@@ -51550,6 +51627,297 @@ msgstr ""
 msgid ""
 "The lower half of the time off type form, with the color and icon selected."
 msgstr "休假類型表單的下半部分，已選取顏色和圖示。"
+
+#~ msgid ""
+#~ "To view the attendance report, click :guilabel:`Reporting` in the top "
+#~ "menu. The default report displays attendance information for current "
+#~ "employees over the past three months, in a default :icon:`oi-view-"
+#~ "pivot` :guilabel:`Pivot table`. The rows are populated by employee, while "
+#~ "the columns are populated by the various attendance records. All entries "
+#~ "are grouped by month."
+#~ msgstr ""
+#~ "若要檢視考勤報表，請按一下頂部選單中的\\ :guilabel:`報表`\\ 。預設報表會以"
+#~ "預設的\\ :icon:`oi-view-pivot`\\ :guilabel:`樞紐分析表`\\ 顯示過去三個月內"
+#~ "現職員工的考勤資訊。資料列按員工填入，而欄位則按各種考勤記錄填入。所有記項"
+#~ "均按月份分組。"
+
+#~ msgid "Employee retention report"
+#~ msgstr "員工留任報告"
+
+#~ msgid "Gain insight into a company's retention rate."
+#~ msgstr "深入了解公司的留任率。"
+
+#~ msgid ""
+#~ "It is possible to determine the retention rate for a company by modifying "
+#~ "an existing report."
+#~ msgstr "可以透過修改現有報告來確定公司的留任率。"
+
+#~ msgid ""
+#~ "First, navigate to :menuselection:`Employees app --> Reporting --> "
+#~ "Contracts` to open the :guilabel:`Employee Analysis` report. This report "
+#~ "shows the number of all employees for the :guilabel:`Last 365 Days`, in a "
+#~ "default :icon:`fa-line-chart` :guilabel:`Line Chart`."
+#~ msgstr ""
+#~ "首先，導覽至\\ :menuselection:`員工應用程式 --> 報表 --> 合約`\\ 以開啟"
+#~ "\\ :guilabel:`員工分析`\\ 報告。此報告以預設\\ :icon:`fa-line-"
+#~ "chart`\\ :guilabel:`折線圖`\\ 顯示\\ :guilabel:`最近 365 天`\\ 的所有員工"
+#~ "數量。"
+
+#~ msgid "The default Employees Analysis report."
+#~ msgstr "預設的員工分析報告。"
+
+#~ msgid ""
+#~ "Next, click the :guilabel:`Measures` :icon:`fa-caret-down` button in the "
+#~ "upper-left corner, revealing a drop-down menu. Click :guilabel:`# "
+#~ "Departure Employee` in the list, then click away from the drop-down menu "
+#~ "to close it. Now, the report shows all the employees who were archived "
+#~ "for the :guilabel:`Last 365 Days`."
+#~ msgstr ""
+#~ "接下來，按一下左上角的\\ :guilabel:`測量值`\\ :icon:`fa-caret-down`\\ 按"
+#~ "鈕，會顯示一個下拉選單。在列表中按一下\\ :guilabel:`# 離職員工`\\ ，然後按"
+#~ "一下下拉選單以外的區域以關閉它。現在，報告顯示\\ :guilabel:`最近 365 天"
+#~ "`\\ 內所有已歸檔的員工。"
+
+#~ msgid ""
+#~ "To view this information in an easier format, click the :icon:`oi-view-"
+#~ "pivot` :guilabel:`(Pivot)` icon in the upper-right corner, and the data "
+#~ "is presented in a pivot table."
+#~ msgstr ""
+#~ "若要以更易於閱讀的格式檢視此資訊，請按一下右上角的\\ :icon:`oi-view-"
+#~ "pivot`\\ :guilabel:`（樞紐分析）`\\ 圖示，資料將以樞紐分析表形式呈現。"
+
+#~ msgid ""
+#~ "The various employees, organized by department, populate the rows. The "
+#~ "columns display the following totals: the monthly :guilabel:`Wage`, "
+#~ "the :guilabel:`Fuel Card` budget, total :guilabel:`Annual Employee "
+#~ "Budget` (also referred to as the *annual salary*), the number "
+#~ "of :guilabel:`New Employees`, as well as the number "
+#~ "of :guilabel:`Departure Employees` (employees who left)."
+#~ msgstr ""
+#~ "各個員工按部門組織，填入資料列。資料欄顯示以下總計：每月\\ :guilabel:`薪資"
+#~ "`\\ 、:guilabel:`燃料卡`\\ 預算、總\\ :guilabel:`年度員工預算`\\ （也稱為*"
+#~ "年薪*）、:guilabel:`新進員工`\\ 數量，以及\\ :guilabel:`離職員工`\\ （離職"
+#~ "的員工）數量。"
+
+#~ msgid ""
+#~ "The Employees Analysis report, modified to show departed employees only."
+#~ msgstr "員工分析報告，已修改為僅顯示離職員工。"
+
+#~ msgid "Employee retention rate comparison report"
+#~ msgstr "員工留任率比較報告"
+
+#~ msgid ""
+#~ "It is possible to compare data only for employees who left, compared to "
+#~ "the total current employees, between two separate time periods. This is "
+#~ "commonly referred to as the *employee retention rate*."
+#~ msgstr ""
+#~ "可以僅針對離職的員工與目前員工總數，在兩個不同的時間段之間進行資料比較。這"
+#~ "通常稱為*員工留任率*。"
+
+#~ msgid ""
+#~ "To view these metrics, first open the :guilabel:`Employee Analysis` "
+#~ "report by navigating to :menuselection:`Employees app --> Reporting --> "
+#~ "Contracts`. Click the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon in "
+#~ "the upper-right corner to view the information in a pivot table."
+#~ msgstr ""
+#~ "若要檢視這些指標，首先透過導覽至\\ :menuselection:`員工應用程式 --> 報表 "
+#~ "--> 合約`\\ 開啟\\ :guilabel:`員工分析`\\ 報告。按一下右上角的"
+#~ "\\ :icon:`oi-view-pivot`\\ :guilabel:`（樞紐分析）`\\ 圖示，以樞紐分析表形"
+#~ "式檢視資訊。"
+
+#~ msgid ""
+#~ "Next, click the :guilabel:`Measures` :icon:`fa-caret-down` button in the "
+#~ "upper-left corner, revealing a drop-down menu. Click :guilabel:`# New "
+#~ "Employees`, :guilabel:`Annual Employee Budget`, :guilabel:`Fuel Card`, "
+#~ "and :guilabel:`Wage` in the list, to deselect these metrics and hide them "
+#~ "in the table. Then, click :guilabel:`Count` at the bottom of the list to "
+#~ "enable that metric."
+#~ msgstr ""
+#~ "接下來，按一下左上角的\\ :guilabel:`測量值`\\ :icon:`fa-caret-down`\\ 按"
+#~ "鈕，會顯示一個下拉選單。在列表中按一下\\ :guilabel:`# 新進員工"
+#~ "`\\ 、:guilabel:`年度員工預算`\\ 、:guilabel:`燃料卡`\\ 和\\ :guilabel:`薪"
+#~ "資`\\ ，以取消選擇這些指標並在表格中隱藏它們。然後，按一下列表底部的"
+#~ "\\ :guilabel:`計數`\\ 以啟用該指標。"
+
+#~ msgid ""
+#~ "Click away from the drop-down menu to close it. Now, the report shows all "
+#~ "the employees who left the company (:guilabel:`# Departure Employee`), as "
+#~ "well as the total number of employees (:guilabel:`Count`), for "
+#~ "the :guilabel:`Last 365 Days`."
+#~ msgstr ""
+#~ "按一下下拉選單以外的區域以關閉它。現在，報告顯示\\ :guilabel:`最近 365 天"
+#~ "`\\ 內所有離開公司的員工（:guilabel:`# 離職員工`\\ ），以及員工總數"
+#~ "（:guilabel:`計數`\\ ）。"
+
+#~ msgid ""
+#~ "To compare the data for the current year with the previous year, click "
+#~ "the :icon:`fa-caret-down` :guilabel:`(down arrow)` in the search bar, "
+#~ "revealing multiple filter and grouping options. Click :guilabel:`Last 365 "
+#~ "Days` in the :icon:`fa-filter` :guilabel:`Filters` column, to turn off "
+#~ "that filter. Then, click :guilabel:`Date`, and click the current year (in "
+#~ "this example, :guilabel:`2024`) from the resulting drop-down menu."
+#~ msgstr ""
+#~ "若要將目前年度的資料與上一年度進行比較，請按一下搜尋列中的\\ :icon:`fa-"
+#~ "caret-down`\\ :guilabel:`（向下箭頭）`\\ ，會顯示多個篩選和分組選項。按一"
+#~ "下\\ :icon:`fa-filter`\\ :guilabel:`篩選條件`\\ 欄中的\\ :guilabel:`最近 "
+#~ "365 天`\\ ，以關閉該篩選條件。然後，按一下\\ :guilabel:`日期`\\ ，並從結果"
+#~ "下拉選單中按一下目前年份（在此範例中為\\ :guilabel:`2024`\\ ）。"
+
+#~ msgid ""
+#~ "Once a selection is made beneath :guilabel:`Date` in the :icon:`fa-"
+#~ "filter` :guilabel:`Filters` column, a :icon:`fa-"
+#~ "adjust` :guilabel:`Comparison` column appears. Click :guilabel:`Date: "
+#~ "Previous Year` in the new column, then click off of the drop-down menu to "
+#~ "close it."
+#~ msgstr ""
+#~ "一旦在\\ :icon:`fa-filter`\\ :guilabel:`篩選條件`\\ 欄中的\\ :guilabel:`日"
+#~ "期`\\ 下方進行選擇，就會出現一個\\ :icon:`fa-adjust`\\ :guilabel:`比較`\\ "
+#~ "欄。在新欄中按一下\\ :guilabel:`日期：上一年`\\ ，然後按一下下拉選單以外的"
+#~ "區域以關閉它。"
+
+#~ msgid ""
+#~ "In Odoo, in order to access the :icon:`fa-adjust` :guilabel:`Comparison` "
+#~ "column, a specific time *other than* :guilabel:`Last 365 Days` **must** "
+#~ "be selected. If not, the :icon:`fa-adjust` :guilabel:`Comparison` column "
+#~ "is **not** visible."
+#~ msgstr ""
+#~ "在 Odoo 中，若要存取\\ :icon:`fa-adjust`\\ :guilabel:`比較`\\ 欄，必須選擇"
+#~ "\\ *除了*\\ :guilabel:`最近 365 天`\\ *以外*\\ 的特定時間。否"
+#~ "則，:icon:`fa-adjust`\\ :guilabel:`比較`\\ 欄將\\ **不會**\\ 顯示。"
+
+#~ msgid ""
+#~ "Now, the pivot table displays the total number of employees who left the "
+#~ "company (:guilabel:`# Departure Employee`), as well as the total number "
+#~ "of employees (:guilabel:`Count`) in the columns. These are further "
+#~ "divided by the two different years, and also displays "
+#~ "the :guilabel:`Variation` between the two."
+#~ msgstr ""
+#~ "現在，樞紐分析表會在欄中顯示離開公司的員工總數（:guilabel:`# 離職員工`），"
+#~ "以及員工總數（:guilabel:`計數`）。這些資料進一步按兩個不同年份劃分，並顯示"
+#~ "兩者之間的\\ :guilabel:`變化`。"
+
+#~ msgid ""
+#~ "The rows display the departments, and lists each individual employee for "
+#~ "each department, in the rows."
+#~ msgstr "列中顯示各部門，並列出每個部門的各個員工。"
+
+#~ msgid ""
+#~ "For a more concise view of this report, click :icon:`fa-minus-square-"
+#~ "o` :guilabel:`Total` above the top row of the departments and employees, "
+#~ "to collapse the rows. Now, the table presents the total number of "
+#~ "employees who left the company for both years, compared to the total "
+#~ "number of employees for both years, including the difference, in a "
+#~ "percentage."
+#~ msgstr ""
+#~ "若要以更簡潔的方式檢視此報表，請按一下部門和員工最上方列上方的"
+#~ "\\ :icon:`fa-minus-square-o`\\ :guilabel:`總計`，以摺疊列。現在，表格會以"
+#~ "百分比顯示兩年內離開公司的員工總數，與兩年內的員工總數相比較，包括差異。"
+
+#~ msgid ""
+#~ "In this example, :guilabel:`3` employees out of :guilabel:`83` left in "
+#~ "2023, and :guilabel:`8` employees out of :guilabel:`202` left in 2024. "
+#~ "There was a :guilabel:`166.67%` increase in the employees who left in "
+#~ "2024 as compared to 2023. Additionally, there was a :guilabel:`143.37%` "
+#~ "increase in the total number of employees in 2024 as compared to 2023."
+#~ msgstr ""
+#~ "在此範例中，2023 年有\\ :guilabel:`3`\\ 名員工（共\\ :guilabel:`83`\\ 名）"
+#~ "離職，2024 年有\\ :guilabel:`8`\\ 名員工（共\\ :guilabel:`202`\\ 名）離"
+#~ "職。與 2023 年相比，2024 年離職員工增加了\\ :guilabel:`166.67%`。此外，與 "
+#~ "2023 年相比，2024 年員工總數增加了\\ :guilabel:`143.37%`。"
+
+#~ msgid ""
+#~ "The report modified to show the difference between two years of employees "
+#~ "who left."
+#~ msgstr "修改後的報表顯示兩年內離職員工的差異。"
+
+#~ msgid ""
+#~ "To view more detailed rates for each department, click :icon:`fa-plus-"
+#~ "square` :guilabel:`Total` in the single row, revealing a drop-down menu, "
+#~ "and click :guilabel:`Department`. Click away from the drop-down to close "
+#~ "it, and now the pivot table displays the total number of employees who "
+#~ "left (:guilabel:`# Departure Employee`), the total number of employees "
+#~ "(:guilabel:`Count`), and the :guilabel:`Variation` (in a percentage) for "
+#~ "both 2023 and 2024, organized by department."
+#~ msgstr ""
+#~ "若要檢視各部門更詳細的比率，請按一下單列中的\\ :icon:`fa-plus-"
+#~ "square`\\ :guilabel:`總計`，顯示下拉式選單，然後按一下\\ :guilabel:`部門"
+#~ "`。按一下選單外的區域以關閉它，現在樞紐分析表會按部門顯示離職員工總數"
+#~ "（:guilabel:`# 離職員工`）、員工總數（:guilabel:`計數`），以及 2023 年和 "
+#~ "2024 年的\\ :guilabel:`變化`（以百分比表示）。"
+
+#~ msgid ""
+#~ "In this example, it can be determined that the :guilabel:`Management` "
+#~ "department had the best retention rate in 2024 as compared to 2023, with "
+#~ "a :guilabel:`Variation` rate of :guilabel:`-100%`. Additionally, it can "
+#~ "be determined that the :guilabel:`Management / Research & Development` "
+#~ "department had the most turnover, with a :guilabel:`Variation` "
+#~ "of :guilabel:`300%`."
+#~ msgstr ""
+#~ "在此範例中，可以確定\\ :guilabel:`管理`\\ 部門在 2024 年相較於 2023 年擁有"
+#~ "最佳的留任率，:guilabel:`變化`\\ 率為\\ :guilabel:`-100%`。此外，可以確定"
+#~ "\\ :guilabel:`管理 / 研發`\\ 部門的人員流動率最高，:guilabel:`變化`\\ 為"
+#~ "\\ :guilabel:`300%`。"
+
+#~ msgid "The expanded employee retention report by department."
+#~ msgstr "按部門展開的員工留任報表。"
+
+#~ msgid "California (CA)"
+#~ msgstr "加利福尼亞州（CA）"
+
+#~ msgid "New York (NY)"
+#~ msgstr "紐約州（NY）"
+
+#~ msgid "Texas (TX)"
+#~ msgstr "德克薩斯州（TX）"
+
+#~ msgid "Florida (FL)"
+#~ msgstr "佛羅里達州（FL）"
+
+#~ msgid "Colorado (CO)"
+#~ msgstr "科羅拉多州（CO）"
+
+#~ msgid "Alabama (AL)"
+#~ msgstr "阿拉巴馬州（AL）"
+
+#~ msgid "Washington (WA)"
+#~ msgstr "華盛頓州（WA）"
+
+#~ msgid "Nevada (NV)"
+#~ msgstr "內華達州（NV）"
+
+#~ msgid "Vermont (VT)"
+#~ msgstr "佛蒙特州（VT）"
+
+#~ msgid "Illinois (IL)"
+#~ msgstr "伊利諾州（IL）"
+
+#~ msgid "Virginia (VA)"
+#~ msgstr "維吉尼亞州（VA）"
+
+#~ msgid "Washington, D.C (DC)"
+#~ msgstr "華盛頓特區（DC）"
+
+#~ msgid "Arizona (AZ)"
+#~ msgstr "亞利桑那州（AZ）"
+
+#~ msgid "Idaho (ID)"
+#~ msgstr "Idaho (ID)"
+
+#~ msgid "Oregon (OR)"
+#~ msgstr "Oregon (OR)"
+
+#~ msgid "North Carolina (NC)"
+#~ msgstr "North Carolina (NC)"
+
+#~ msgid ""
+#~ "Once a request has been approved, validated, or refused, the Kanban card "
+#~ "disappears from the default :guilabel:`All Time Off` page. To view *all* "
+#~ "requests, including approved and refused requests, clear the default "
+#~ "filters in the search bar."
+#~ msgstr ""
+#~ "一旦請求被核准、驗證或拒絕，看板卡就會從預設的\\ :guilabel:`所有休假`\\ 頁"
+#~ "面中消失。要檢視\\ *所有*\\ 請求（包括已核准和已拒絕的請求），請清除搜尋列"
+#~ "中的預設篩選條件。"
 
 #~ msgid ""
 #~ "Two overtime rates are cteated, one for 150% and the other for 120%. "
