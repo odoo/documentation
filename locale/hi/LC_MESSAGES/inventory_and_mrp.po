@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-17 17:31+0000\n"
+"POT-Creation-Date: 2026-07-24 17:31+0000\n"
 "PO-Revision-Date: 2026-07-06 14:29+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Hindi <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -190,6 +190,7 @@ msgstr "असाइन किए गए काउंट के साथ बा
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:13
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:59
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:14
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:19
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:10
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:13
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:22
@@ -198,7 +199,7 @@ msgstr "असाइन किए गए काउंट के साथ बा
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting.rst:52
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:18
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:22
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:19
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:17
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/byproducts.rst:21
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:17
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:26
@@ -14792,8 +14793,8 @@ msgstr "पुष्टि किए गए परचेज़ ऑर्डर �
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:80
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:111
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:114
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:203
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:159
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:217
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:170
 msgid "Process receipt"
 msgstr "रिसीप्ट प्रोसेस करें"
 
@@ -18527,8 +18528,9 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:30
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:79
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/manually.rst:37
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:112
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:103
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:28
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:120
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:109
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/edi.rst:54
 msgid "Workflow"
 msgstr "वर्कफ़्लो"
@@ -30622,6 +30624,322 @@ msgstr ""
 msgid ":doc:`../../../barcode`"
 msgstr ""
 
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:3
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:79
+msgid "Reception report"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:11
+msgid ""
+"In Odoo **Inventory**, users can use reception reports to allocate incoming "
+"stock from purchase orders (POs) to one or more sales orders (SOs). This "
+"allows users to directly assign units of the replenished stock to fulfill "
+"higher-priority orders or retain more control over their inventory "
+"reservations."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:21
+msgid ""
+"To use reception reports, enable the *Reception Report* feature by "
+"navigating to :menuselection:`Inventory app --> Configuration --> Settings`. "
+"Under the *Operations* section, select the checkbox next "
+"to :guilabel:`Reception Report`, then click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:30
+msgid ""
+"Reception reports are used to manage the allocation of replenished stock. "
+"This means that users must first confirm customer demand, then replenish the "
+"necessary stock through a |PO|. Only after confirming this replenishment "
+"order can users access the reception report and reserve units from the |PO| "
+"to fulfill specific customer orders."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:36
+msgid ""
+"|SOs| with products that can be fulfilled with existing on-hand stock do "
+"**not** appear in reception reports."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:39
+msgid ""
+"The following process outlines all necessary steps for allocating stock "
+"using reception reports:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:41
+msgid ""
+":ref:`Confirm SOs <inventory/reception-report/workflow/confirm-so>` for one "
+"or more customers."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:42
+msgid ""
+"Create and :ref:`confirm a PO <inventory/reception-report/workflow/confirm-"
+"po>` for the demanded products."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:44
+msgid ""
+"Open receipt and :ref:`access the reception report <inventory/reception-"
+"report/workflow/reception-report>` to allocate products."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:46
+msgid ""
+":ref:`Validate receipt <inventory/reception-report/workflow/validate-"
+"receipt>` on the |PO|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:47
+msgid ""
+":ref:`Validate delivery <inventory/reception-report/workflow/validate-"
+"delivery>` on the |SO|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:52
+msgid "Create and confirm |SOs|"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:54
+msgid ""
+"When using reception reports, a user begins by creating sales quotations for "
+"one or more customers' requested :guilabel:`Product` "
+"and :guilabel:`Quantity`. Confirm the quotations, turning them into |SOs|. "
+"This generates a delivery order for each |SO|, accessible via the :icon:`fa-"
+"truck` :guilabel:`Delivery` smart button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:62
+msgid "Create and confirm |PO|"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:64
+msgid ""
+"The user then creates a new |RfQ| to replenish the demanded stock by "
+"navigating to the *Purchase* app and clicking :guilabel:`New`. On the form, "
+"add the products in demand on the customers' |SOs| by "
+"clicking :guilabel:`Add a product` in the *Products* tab and specifying the "
+"required :guilabel:`Quantity`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:70
+msgid ""
+"To ensure Odoo can properly create allocations, confirm that the selected "
+"product has the :guilabel:`Can be Purchased` option selected and "
+"its :guilabel:`Product Type` set to :guilabel:`Storable Product`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:74
+msgid ""
+"After adding the products, click :guilabel:`Confirm Order` to turn the |RfQ| "
+"into a |PO|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:81
+msgid ""
+"After confirming the |PO|, open the reception report to allocate the "
+"products' units to the desired |SOs|. To do so, click the :icon:`fa-"
+"truck` :guilabel:`Receipt` smart button at the top of the |PO| to open the "
+"receipt for the incoming stock of the product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:86
+msgid ""
+"Alternatively, navigate to the **Inventory** app and click :guilabel:`(#) To "
+"Process` in the :guilabel:`Receipts` card. Then, select the appropriate "
+"receipt."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:89
+msgid ""
+"On the receipt, an :icon:`fa-list` :guilabel:`Allocations` smart button "
+"appears at the top, which opens the *Reception Report* page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:92
+msgid ""
+"The *Reception Report* page displays a list of products to which the units "
+"on this |PO| can be allocated, grouped by the |SOs| on which they appear. A "
+"link to each |SO| is included, along with its :guilabel:`Expected Delivery`, "
+"and an option to :ref:`assign <inventory/reception-report/workflow/reception-"
+"report/allocate>` all units of its products. Under each |SO| is a list of "
+"its products, including each product's name, quantity, and the option to "
+"assign the specified units individually."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:100
+msgid ""
+"|SOs| in the reception report are listed in order by the recency of their "
+"associated delivery (i.e., the |SO| with the oldest delivery order appears "
+"first). In other words, |SOs| are ordered by how recently they were "
+"confirmed, with the oldest confirmed |SO| appearing first."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:None
+msgid "The Reception Report Page in Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:110
+msgid "Allocate units"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:112
+msgid ""
+"To allocate units for a product in an |SO|, click :guilabel:`Assign` in the "
+"product's corresponding row. To undo allocation, click :guilabel:`Unassign`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:115
+msgid ""
+"Alternatively, to allocate all available units for all products in an |SO|, "
+"click :guilabel:`Assign All` in the corresponding row of the |SO|. To assign "
+"all available units across all |SOs|, click :guilabel:`Assign All` at the "
+"top."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:119
+msgid ""
+"The quantity of reservable units for each product is automatically "
+"calculated in order, starting from the oldest |SO|. This allows users to "
+"allocate as many units as available on the |PO| to fulfill the quantity "
+"specified on the |SO|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:124
+msgid ""
+"For example, |SO| A demands five *Chairs* and |SO| B demands five *Chairs*. "
+"A |PO| for eight units is created. On the reception report, |SO| A is listed "
+"first with five reservable units. The remaining three available units from "
+"this |PO| can be assigned to |SO| B, which will create a backorder due to "
+"insufficient supply."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:129
+msgid ""
+"|SOs| with allocated units are automatically linked to the |PO|. Users can "
+"access this |PO| directly from the |SO| via the :icon:`fa-credit-"
+"card` :guilabel:`Purchase` smart button. Similarly, the linked |SO| can also "
+"be accessed from the |PO| via the :icon:`fa-dollar` :guilabel:`Sale` smart "
+"button."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:137
+msgid "Validate receipt"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:139
+msgid ""
+"After allocating the desired units, receive the incoming stock. To do so, "
+"navigate to the |PO| and click :guilabel:`Receive Products` or the :icon:`fa-"
+"truck` :guilabel:`Receipt` to open the receipt. Then, "
+"click :guilabel:`Validate` to receive the products into stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:146
+msgid "Validate delivery"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:148
+msgid ""
+"After receiving the incoming stock, fulfill the delivery order for the "
+"customer's |SO|. To do so, navigate to the |SO|, then click :icon:`fa-"
+"truck` :guilabel:`Delivery` to open the delivery order. Note that the "
+"*Operations* tab is populated with a new line showing the "
+"allocated :guilabel:`Product` and its allocated :guilabel:`Quantity`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:153
+msgid ""
+"Finally, click :guilabel:`Validate` to confirm that the products have been "
+"delivered to the customer."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:None
+msgid "A delivery order for reserved products using reception report in Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:160
+msgid ""
+"The following example demonstrates how a reception report is used to "
+"allocate stock for a customer |SO| of higher priority."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:163
+msgid ""
+"Two |SOs| are created for separate customers. Customer A orders 75 units of "
+"a *Chair*. Customer B also orders 75 units of the same product but needs "
+"them as soon as possible."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:166
+msgid ""
+"No stock exists for the *Chair*, so the user creates and confirms a |PO| to "
+"replenish the product from Vendor A. This vendor can only provide 100 units "
+"of the *Chair* this week. So, the user creates and confirms another |PO| to "
+"replenish the remaining 50 units from Vendor B, which will be available next "
+"week."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:171
+msgid ""
+"After confirming the |POs|, the user opens the reception reports for each "
+"vendor's receipt. Vendor A's report lists the |SO| for Customer A with 75 "
+"reservable units, then Customer B's |SO| with 25 reservable units. Vendor "
+"B's report lists the |SO| for Customer A with 50 reservable units."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:176
+msgid ""
+"Because the user wants to prioritize Customer B's order, they want to ensure "
+"Customer B receives 75 units from Vendor A, which can guarantee faster "
+"delivery. To do so, they first open Vendor B's reception report and assign "
+"50 units to Customer A's |SO|. Odoo then recalculates Vendor A's reception "
+"report, updating Customer A's previous quantity of 75 units to 25 units and "
+"Customer B's quantity to 75 units."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:182
+msgid ""
+"The user can now assign all 75 units from Vendor A to fulfill Customer B's "
+"delivery."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:187
+#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:125
+msgid "Print labels"
+msgstr "लेबल प्रिंट करें"
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:189
+msgid ""
+"Users can print labels for allocated products to ensure that they are "
+"correctly designated to the appropriate customer."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:192
+msgid ""
+"After allocating the desired units, click :guilabel:`Print` at the top to "
+"download a PDF of the reception report for the allocated units. The report "
+"includes a scannable barcode at the top for the receipt order. Additional "
+"barcodes are also included for any delivery orders with allocated units."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:None
+msgid "A printed reception report of assigned units in Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:199
+msgid ""
+"If products are allocated, users can also click :guilabel:`Print Labels` to "
+"print an individual label for each unit of the allocated products. Each "
+"label displays the name of the product, its associated |SO| number, and its "
+"customer."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/reception_report.rst:None
+msgid "Printed labels for a reception report in Odoo."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:3
 msgid "Scrap inventory"
 msgstr "स्क्रैप इन्वेंट्री"
@@ -39807,7 +40125,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:90
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:159
-#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:82
+#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:77
 #: ../../content/applications/inventory_and_mrp/purchase/products/temporary_reordering.rst:27
 msgid ""
 ":doc:`../../inventory/warehouses_storage/replenishment/reordering_rules`"
@@ -43345,10 +43663,6 @@ msgstr ""
 "मात्रा से असाइन किए गए प्रॉडक्ट को अनरिज़र्व करने के लिए :guilabel:`Unassign` पर "
 "क्लिक करें, जिससे वे अन्य मात्राओं के लिए उपलब्ध हो जाएँ।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:125
-msgid "Print labels"
-msgstr "लेबल प्रिंट करें"
-
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:127
 msgid ""
 "After clicking :guilabel:`Assign All` or :guilabel:`Assign`, "
@@ -45795,8 +46109,6 @@ msgstr ""
 "करने की अनुमति देता है।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:30
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:38
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:33
 msgid "Configure product vendor"
 msgstr "प्रॉडक्ट वेंडर कॉन्फ़िगर करें"
 
@@ -45811,7 +46123,7 @@ msgstr ""
 "प्रॉडक्ट सेलेक्ट करें या नया बनाएं।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:35
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:38
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:44
 msgid ""
 "On the product form, click the :guilabel:`Purchase` tab and add the "
 "product's subcontractor as a vendor by clicking :guilabel:`Add a line`. "
@@ -45822,8 +46134,8 @@ msgstr ""
 "डाउन मेनू में सबकॉन्ट्रैक्टर चुनें।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:39
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:47
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:42
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:55
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:48
 msgid "Then, enter the price of the product in the :guilabel:`Price` field."
 msgstr "फिर, :guilabel:`Price` फ़ील्ड में प्रॉडक्ट की कीमत दर्ज करें।"
 
@@ -45853,8 +46165,6 @@ msgstr ""
 "सबकॉन्ट्रैक्टर के मैन्युफ़ैक्चरिंग और डिलीवरी समय दोनों को ध्यान में रखता है।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:54
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:62
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:58
 msgid "Configure BoM"
 msgstr "बीओएम कॉन्फ़िगर करें"
 
@@ -45869,8 +46179,8 @@ msgstr ""
 "सेलेक्ट करें या नया बनाएं।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:61
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:69
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:65
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:77
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:71
 msgid ""
 "Alternatively, navigate to :menuselection:`Manufacturing app --> Products --"
 "> Bills of Materials`, and select the |BoM| for the subcontracted product."
@@ -45940,12 +46250,11 @@ msgstr ""
 "inventory>` ट्रिगर हो।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:95
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:127
 msgid "Create and confirm PO"
 msgstr "पीओ बनाएं और पुष्टि करें"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:97
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:141
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:155
 msgid ""
 "To create a |PO| for the subcontracted product, navigate "
 "to :menuselection:`Purchase app --> Orders --> Purchase Orders`, and "
@@ -45955,8 +46264,8 @@ msgstr ""
 "ऑर्डर --> परचेज़ ऑर्डर` पर जाएं, और :guilabel:`नया` क्लिक करें।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:100
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:144
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:132
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:158
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:143
 msgid ""
 "Begin filling out the |PO| by selecting a subcontractor from "
 "the :guilabel:`Vendor` drop-down menu. In the :guilabel:`Products` tab, "
@@ -45970,7 +46279,7 @@ msgstr ""
 "और :guilabel:`क्वांटिटी` फ़ील्ड में मात्रा दर्ज करें।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:105
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:149
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:163
 msgid ""
 "After adding the product, the :guilabel:`Expected Arrival` field is updated "
 "with the finished product's expected delivery date, as configured earlier "
@@ -45998,7 +46307,7 @@ msgstr ""
 "कॉन्ट्रैक्टिंग कंपनी को वापस डिलीवर करता है।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:119
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:164
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:175
 msgid ""
 "To receive the finished product from the subcontractor, click "
 "the :guilabel:`Receive Products` button on the |PO|, or click "
@@ -46010,8 +46319,8 @@ msgstr ""
 "शिपमेंट को इन्वेंट्री में दर्ज करने के लिए :guilabel:`वैलिडेट` क्लिक करें।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:124
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:215
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:169
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:229
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:180
 msgid ""
 "If :doc:`multi-step inventory flows <../../inventory/shipping_receiving/"
 "daily_operations>` are enabled, additional transfers must be validated to "
@@ -46022,13 +46331,13 @@ msgstr ""
 "ट्रांसफर को वैलिडेट करना होगा।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:130
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:221
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:175
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:235
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:186
 msgid "Track inventory moves"
 msgstr "इन्वेंट्री मूव्स ट्रैक करें"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:132
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:223
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:237
 msgid ""
 "After validating a receipt, Odoo automatically generates inventory moves to "
 "track the movement of subcontracted products between locations. To view "
@@ -46088,34 +46397,47 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:24
 msgid ""
-"To use the *Dropship to Subcontractor* workflow, contractors must first "
-"configure subcontracted products with a :ref:`vendor pricelist <purchase/"
-"products/pricelist>` and a :ref:`subcontracting-type BoM <manufacturing/"
-"subcontracting_dropship/config/bom-config>`. Each component must then be "
-"configured with the appropriate :doc:`route <../../inventory/"
-"shipping_receiving/daily_operations/use_routes>`."
+"In order to use the *Dropship to Subcontractor* :ref:`workflow "
+"<manufacturing/subcontracting-dropship/workflow>`, users must first follow "
+"the configuration process below:"
 msgstr ""
-"*ड्रॉपशिप टू सबकॉन्ट्रैक्टर* वर्कफ़्लो इस्तेमाल करने के लिए, कॉन्ट्रैक्टर को पहले सबकॉन्ट्रैक्टेड "
-"प्रॉडक्ट को :ref:`वेंडर प्राइसलिस्ट <purchase/products/pricelist>` "
-"और :ref:`सबकॉन्ट्रैक्टिंग-टाइप बीओएम <manufacturing/subcontracting_dropship/"
-"config/bom-config>` के साथ कॉन्फ़िगर करना होगा। फिर प्रत्येक कॉम्पोनेंट को "
-"उचित :doc:`रूट <../../inventory/shipping_receiving/daily_operations/"
-"use_routes>` के साथ कॉन्फ़िगर करना होगा।"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:28
+msgid ""
+":ref:`Specify the subcontractor <manufacturing/subcontracting_dropship/"
+"config/product-config>` as a vendor on the subcontracted product."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:30
 msgid ""
-"The pricelist allows the contracting company to purchase the product from "
-"the vendor (subcontractor) through a |PO|, while the |BoM| allows the "
-"product to be manufactured externally by the subcontractor. Routes are "
-"applied to each component in order to be properly sent from the dropshipping "
-"vendor to the subcontractor."
+":ref:`Create a subcontracting-type bill of materials (BoM) <manufacturing/"
+"subcontracting_dropship/config/bom-config>` for the product and add the "
+"necessary components."
 msgstr ""
-"प्राइसलिस्ट कॉन्ट्रैक्टिंग कंपनी को |PO| के माध्यम से वेंडर (सबकॉन्ट्रैक्टर) से प्रॉडक्ट परचेज़ "
-"करने की अनुमति देती है, जबकि |BoM| प्रॉडक्ट को सबकॉन्ट्रैक्टर द्वारा बाहरी रूप से मैन्युफ़ैक्चर "
-"करने की अनुमति देता है। ड्रॉपशिपिंग वेंडर से सबकॉन्ट्रैक्टर तक ठीक से भेजने के लिए प्रत्येक "
-"कॉम्पोनेंट पर रूट अप्लाई किए जाते हैं।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:40
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:33
+msgid ""
+"For each dropshipped component, open its product form and :ref:`set its "
+"dropship vendor and its Dropship Subcontractor on Order route <manufacturing/"
+"subcontracting_dropship/config/component-config>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:37
+msgid ""
+"Specifying the subcontractor as a vendor on the product form allows the "
+"contracting company to properly purchase the product from the subcontractor "
+"through a purchase order (PO). The |BoM| allows the product to be "
+"manufactured externally by the subcontractor. The *Dropship Subcontractor on "
+"Order* route is applied to each component in order to be properly sent from "
+"the dropshipping vendor to the subcontractor."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:46
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:39
+msgid "Specify product vendor"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:48
 msgid ""
 "To configure a product's vendor for subcontractor dropshipping, navigate "
 "to :menuselection:`Inventory app --> Products --> Products`, and select a "
@@ -46127,7 +46449,7 @@ msgstr ""
 "प्रॉडक्ट सेलेक्ट करें, या :doc:`नया बनाएं <../../inventory/product_management/"
 "configure/type>`।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:44
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:52
 msgid ""
 "On the product form, click the *Purchase* tab and add the product's "
 "subcontractor as a vendor by clicking :guilabel:`Add a line`. Select the "
@@ -46136,8 +46458,8 @@ msgstr ""
 "प्रॉडक्ट फ़ॉर्म पर, *परचेज़* टैब क्लिक करें और :guilabel:`लाइन जोड़ें` क्लिक करके प्रॉडक्ट के "
 "सबकॉन्ट्रैक्टर को वेंडर के रूप में जोड़ें। :guilabel:`वेंडर` ड्रॉप-डाउन मेन्यू में सबकॉन्ट्रैक्टर चुनें।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:49
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:44
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:57
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:50
 msgid ""
 "Finally, set a :doc:`lead time <../../inventory/warehouses_storage/"
 "replenishment/lead_times>` for the product in the :guilabel:`Delivery Lead "
@@ -46149,7 +46471,7 @@ msgstr ""
 "सबकॉन्ट्रैक्टर को कॉम्पोनेंट प्राप्त करने, प्रॉडक्ट प्रोड्यूस करने और फ़िनिश्ड गुड डिलीवर करने के "
 "लिए दिनों की संख्या स्पेसिफ़ाई की जा सके।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:54
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:62
 msgid ""
 "Contractors do not need to configure manufacturing lead times on a |BoM|. "
 "Instead, provide only a single *Delivery Lead Time* on the vendor pricelist, "
@@ -46162,7 +46484,12 @@ msgstr ""
 "को ड्रॉपशिप वेंडर से कॉम्पोनेंट प्राप्त करने, प्रॉडक्ट मैन्युफ़ैक्चर करने और फ़िनिश्ड गुड को "
 "सबकॉन्ट्रैक्टर को वापस डिलीवर करने की अवधि शामिल हो।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:64
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:70
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:64
+msgid "Configure |BoM|"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:72
 msgid ""
 "After specifying the vendor, configure a subcontracting-type |BoM| for the "
 "product. To start, click the :icon:`fa-flask` :guilabel:`Bill of Materials` "
@@ -46173,7 +46500,7 @@ msgstr ""
 "करने के लिए, प्रॉडक्ट के पेज पर :icon:`fa-flask` :guilabel:`बिल ऑफ़ मैटेरियल` स्मार्ट "
 "बटन पर क्लिक करें। फिर, वांछित |BoM| चुनें या नया बनाएं।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:72
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:80
 msgid ""
 "In the :guilabel:`BoM Type` field, select the :guilabel:`Subcontracting` "
 "option. Then, add one or more subcontractors in "
@@ -46182,7 +46509,7 @@ msgstr ""
 ":guilabel:`बीओएम टाइप` फ़ील्ड में, :guilabel:`सबकॉन्ट्रैक्टिंग` ऑप्शन चुनें। "
 "फिर, :guilabel:`सबकॉन्ट्रैक्टर` फ़ील्ड में एक या ज़्यादा सबकॉन्ट्रैक्टर जोड़ें।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:75
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:83
 msgid ""
 "Finally, make sure that all necessary components are specified on "
 "the :guilabel:`Components` tab. To add a new component, click :guilabel:`Add "
@@ -46198,12 +46525,12 @@ msgstr ""
 msgid "The BoM of a product with components dropshipped to the subcontractor."
 msgstr "सबकॉन्ट्रैक्टर को कॉम्पोनेंट ड्रॉपशिप किए गए प्रॉडक्ट का बीओएम।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:85
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:81
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:93
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:87
 msgid "Configure components"
 msgstr "कॉम्पोनेंट कॉन्फ़िगर करें"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:87
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:95
 msgid ""
 "When dropshipping to subcontractors, each component of a product must have a "
 "specified vendor and have the *Dropship Subcontractor on Order* route "
@@ -46214,7 +46541,7 @@ msgstr ""
 "होना चाहिए और *ड्रॉपशिप सबकॉन्ट्रैक्टर ऑन ऑर्डर* रूट इनेबल होना चाहिए। यह कॉम्पोनेंट को "
 "वेंडर से सबकॉन्ट्रैक्टर तक ठीक से ड्रॉपशिप करने की अनुमति देता है।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:91
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:99
 msgid ""
 "To specify a component's vendor, select the component's name in "
 "the :guilabel:`Components` tab, and click the :icon:`oi-arrow-"
@@ -46223,7 +46550,7 @@ msgstr ""
 "कॉम्पोनेंट का वेंडर निर्दिष्ट करने के लिए, :guilabel:`कॉम्पोनेंट` टैब में कॉम्पोनेंट का नाम "
 "चुनें, और :icon:`oi-arrow-right` :guilabel:`(इंटरनल लिंक)` ऐरो पर क्लिक करें।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:95
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:103
 msgid ""
 "Alternatively, navigate to :menuselection:`Inventory app --> Products --> "
 "Products` and select the component."
@@ -46231,7 +46558,7 @@ msgstr ""
 "वैकल्पिक रूप से, :menuselection:`इन्वेंट्री ऐप्लिकेशन --> प्रॉडक्ट --> प्रॉडक्ट` पर जाएं और "
 "कॉम्पोनेंट चुनें।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:98
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:106
 msgid ""
 "On the component product form, click the :guilabel:`Purchase` tab. Add a "
 "vendor by clicking :guilabel:`Add a line`. Then, select the vendor in "
@@ -46240,7 +46567,7 @@ msgstr ""
 "कॉम्पोनेंट प्रॉडक्ट फ़ॉर्म पर, :guilabel:`परचेज़` टैब पर क्लिक करें। :guilabel:`लाइन जोड़ें` "
 "पर क्लिक करके वेंडर जोड़ें। फिर, :guilabel:`वेंडर` फ़ील्ड में वेंडर चुनें।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:101
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:109
 msgid ""
 "Next, to configure the route, click on the *Inventory* tab and select "
 "the :guilabel:`Dropship Subcontractor on Order` route in "
@@ -46249,7 +46576,7 @@ msgstr ""
 "अगला, रूट कॉन्फ़िगर करने के लिए, *इन्वेंट्री* टैब पर क्लिक करें और :guilabel:`रूट` सेक्शन "
 "में :guilabel:`ड्रॉपशिप सबकॉन्ट्रैक्टर ऑन ऑर्डर` रूट सेलेक्ट करें।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:104
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:112
 msgid ""
 "Repeat the process for every component dropshipped to the subcontractor."
 msgstr "सबकॉन्ट्रैक्टर को ड्रॉपशिप किए जाने वाले प्रत्येक कॉम्पोनेंट के लिए प्रक्रिया दोहराएं।"
@@ -46258,17 +46585,48 @@ msgstr "सबकॉन्ट्रैक्टर को ड्रॉपशि�
 msgid "Route for a component to be dropshipped to a subcontractor."
 msgstr "सबकॉन्ट्रैक्टर को ड्रॉपशिप किए जाने वाले कॉम्पोनेंट के लिए रूट।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:114
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:122
 msgid ""
-"The *Dropship to Subcontractor* workflow begins by :ref:`creating a PO "
-"<manufacturing/subcontracting-dropship/workflow/create-po>` to purchase the "
-"product from the subcontractor (1)."
+"The *Dropship to Subcontractor* workflow can be summarized in the following "
+"steps:"
 msgstr ""
-"*ड्रॉपशिप टू सबकॉन्ट्रैक्टर* वर्कफ़्लो सबकॉन्ट्रैक्टर से प्रॉडक्ट खरीदने के लिए :ref:`पीओ "
-"बनाकर <manufacturing/subcontracting-dropship/workflow/create-po>` शुरू होता है "
-"(1)।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:118
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:124
+msgid ""
+":ref:`Create and confirm a subcontractor PO <manufacturing/subcontracting-"
+"dropship/workflow/create-po>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:126
+msgid ""
+"Open and :ref:`confirm the dropship vendor request for quotation (RfQ) "
+"<manufacturing/subcontracting-dropship/workflow/confirm-rfq>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:128
+msgid ""
+":ref:`Validate the dropship order <manufacturing/subcontracting-dropship/"
+"workflow/validate-dropship>` to send the components."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:130
+msgid ""
+":ref:`Validate the receipt <manufacturing/subcontracting-dropship/workflow/"
+"process-receipt>` to receive the final product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:None
+msgid "Diagram of dropship to subcontractor workflow."
+msgstr "सबकॉन्ट्रैक्टर वर्कफ़्लो को ड्रॉपशिप करने का डॉयग्राम।"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:136
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:123
+msgid ""
+"The workflow begins by creating a |PO| to purchase the product from the "
+"subcontractor (1)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:138
 msgid ""
 "The contractor (Your Company) then confirms the *subcontractor* |PO| (2). "
 "This creates an |RfQ| to purchase the components from the vendor, as well as "
@@ -46278,45 +46636,29 @@ msgstr ""
 "कॉम्पोनेंट परचेज़ करने के लिए एक |RfQ| बनाता है, साथ ही फ़ाइनल प्रॉडक्ट ट्रांसफ़र करने के "
 "लिए रसीद भी बनाता है।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:121
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:141
 msgid ""
-"Next, the contractor :ref:`confirms the RfQ <manufacturing/subcontracting-"
-"dropship/workflow/confirm-rfq>`, turning it into a *vendor* |PO| and "
+"Next, the contractor confirms the |RfQ|, turning it into a *vendor* |PO| and "
 "creating a dropship order to send the components from the vendor to the "
-"subcontractor (3). Once the contractor :ref:`validates the dropship "
-"<manufacturing/subcontracting-dropship/workflow/validate-dropship>` order, "
-"the subcontractor begins to manufacture the final product with the "
-"components and ships it to the contractor when done."
+"subcontractor (3). Once the contractor validates the dropship order, the "
+"subcontractor begins to manufacture the final product with the components "
+"and ships it to the contractor when done."
 msgstr ""
-"अगला, कॉन्ट्रैक्टर :ref:`RfQ की पुष्टि करता है <manufacturing/subcontracting-"
-"dropship/workflow/confirm-rfq>`, जिससे यह एक *वेंडर* |PO| बन जाता है और वेंडर से "
-"सबकॉन्ट्रैक्टर (3) को कॉम्पोनेंट भेजने के लिए एक ड्रॉपशिप ऑर्डर बनता है। एक बार जब "
-"कॉन्ट्रैक्टर :ref:`ड्रॉपशिप को वैलिडेट कर देता है <manufacturing/subcontracting-"
-"dropship/workflow/validate-dropship>`, तो सबकॉन्ट्रैक्टर कॉम्पोनेंट के साथ फ़ाइनल "
-"प्रॉडक्ट का मैन्युफ़ैक्चर शुरू करता है और पूरा होने पर इसे कॉन्ट्रैक्टर को भेज देता है।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:128
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:146
 msgid ""
-"Once the product has been produced and received, the "
-"contractor :ref:`validates the receipt <manufacturing/subcontracting-"
-"dropship/workflow/process-receipt>` (6) to trigger :ref:`inventory moves "
-"<manufacturing/subcontracting-dropship/workflow/track-inventory>` from the "
-"subcontractor to the company's stock (4, 5)."
+"Once the product has been produced and received, the contractor validates "
+"the receipt (6) to trigger :ref:`inventory moves <manufacturing/"
+"subcontracting-dropship/workflow/track-inventory>` from the subcontractor to "
+"the company's stock (4, 5)."
 msgstr ""
-"एक बार जब प्रॉडक्ट प्रॉडक्शन और प्राप्त हो जाता है, तो कॉन्ट्रैक्टर :ref:`रसीद को वैलिडेट "
-"करता है <manufacturing/subcontracting-dropship/workflow/process-receipt>` (6) "
-"ताकि सबकॉन्ट्रैक्टर से कंपनी के स्टॉक (4, 5) में :ref:`इन्वेंट्री मूव <manufacturing/"
-"subcontracting-dropship/workflow/track-inventory>` शुरू हो सकें।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:None
-msgid "Diagram of dropship to subcontractor workflow."
-msgstr "सबकॉन्ट्रैक्टर वर्कफ़्लो को ड्रॉपशिप करने का डॉयग्राम।"
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:153
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:138
+msgid "Create and confirm subcontractor |PO|"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:139
-msgid "Create and confirm subcontractor PO"
-msgstr "सबकॉन्ट्रैक्टर पीओ बनाएं और पुष्टि करें"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:152
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:166
 msgid ""
 "Finally, click :guilabel:`Confirm Order` to confirm the |PO|. A receipt is "
 "automatically created, and a :icon:`fa-truck` :guilabel:`Receipt` smart "
@@ -46328,7 +46670,7 @@ msgstr ""
 "स्मार्ट बटन दिखाई देता है। इसके अलावा, ड्रॉपशिप वेंडर से कॉम्पोनेंट खरीदने के लिए एक अलग |"
 "RfQ| ऑटोमैटिकली बनाया जाता है।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:157
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:171
 msgid ""
 "This |RfQ| is **not** automatically linked to the |PO|. It is accessed "
 "separately on the *Requests for Quotation* page."
@@ -46336,11 +46678,11 @@ msgstr ""
 "यह |RfQ| ऑटोमैटिकली |PO| से लिंक **नहीं** है। इसे *Requests for Quotation* पेज पर "
 "अलग से ऐक्सेस किया जाता है।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:163
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:177
 msgid "Confirm vendor RfQ"
 msgstr "वेंडर RfQ की पुष्टि करें"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:165
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:179
 msgid ""
 "To confirm the vendor |RfQ|, navigate to :menuselection:`Purchase app --> "
 "Orders --> Requests for Quotation`. Select the newly-created |RfQ| for the "
@@ -46349,7 +46691,7 @@ msgstr ""
 "वेंडर |RfQ| की पुष्टि करने के लिए, :menuselection:`परचेज़ ऐप्लिकेशन --> ऑर्डर --> कोटेशन "
 "के लिए अनुरोध` पर जाएं। उपयुक्त वेंडर के लिए नव-निर्मित |RfQ| चुनें।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:168
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:182
 msgid ""
 "On the |RfQ|, the :guilabel:`Deliver To` field reads :guilabel:`Dropship "
 "Subcontractor`, and the :guilabel:`Dropship Address` field shows the name of "
@@ -46359,7 +46701,7 @@ msgstr ""
 "देता है, और :guilabel:`ड्रॉपशिप पता` फ़ील्ड में उस सबकॉन्ट्रैक्टर का नाम दिखाई देता है "
 "जिसे कॉम्पोनेंट ड्रॉपशिप किए जा रहे हैं।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:172
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:186
 msgid ""
 "Click :guilabel:`Confirm Order` to confirm the purchase of components from "
 "the vendor. Doing so turns the |RfQ| into a *vendor* |PO|. A :icon:`fa-"
@@ -46370,7 +46712,7 @@ msgstr ""
 "करें। ऐसा करने से |RfQ| *वेंडर* |PO| में बदल जाता है। वेंडर |PO| के शीर्ष पर :icon:`fa-"
 "truck` :guilabel:`ड्रॉपशिप` स्मार्ट बटन दिखाई देता है।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:177
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:191
 msgid ""
 "Simultaneously, a :icon:`fa-truck` :guilabel:`Resupply` smart button appears "
 "at the top of the *subcontractor* |PO| created earlier. In dropship "
@@ -46384,11 +46726,11 @@ msgstr ""
 msgid "Vendor RfQ for the dropshipped components of a subcontracted product."
 msgstr "सबकॉन्ट्रैक्टेड प्रॉडक्ट के ड्रॉपशिप किए गए कॉम्पोनेंट के लिए वेंडर RfQ।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:187
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:201
 msgid "Validate dropship order"
 msgstr "ड्रॉपशिप ऑर्डर वैलिडेट करें"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:189
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:203
 msgid ""
 "Once the components have been delivered to the subcontractor by the dropship "
 "vendor, click the :icon:`fa-truck` :guilabel:`Dropship` smart button on the "
@@ -46398,7 +46740,7 @@ msgstr ""
 "ड्रॉपशिप ऑर्डर खोलने के लिए वेंडर |PO| पर :icon:`fa-truck` :guilabel:`Dropship` "
 "स्मार्ट बटन क्लिक करें।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:193
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:207
 msgid ""
 "The dropship order can also be opened from the *subcontractor* |PO|. "
 "Navigate to :menuselection:`Purchase app --> Orders --> Purchase Orders`, "
@@ -46409,7 +46751,7 @@ msgstr ""
 "है। :menuselection:`Purchase app --> Orders --> Purchase Orders` पर जाएं, |PO| "
 "को सेलेक्ट करें, फिर :icon:`fa-truck` :guilabel:`Resupply` स्मार्ट बटन क्लिक करें।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:197
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:211
 msgid ""
 "Finally, click the :guilabel:`Validate` button at the top to confirm that "
 "the subcontractor has received the components. The subcontractor then begins "
@@ -46419,7 +46761,7 @@ msgstr ""
 "ऊपर :guilabel:`Validate` बटन क्लिक करें। सबकॉन्ट्रैक्टर फिर फाइनल प्रॉडक्ट का मैन्युफैक्चर "
 "शुरू करता है।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:205
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:219
 msgid ""
 "After the subcontractor completes production, the finished product is "
 "shipped to the contractor."
@@ -46427,7 +46769,7 @@ msgstr ""
 "सबकॉन्ट्रैक्टर द्वारा प्रॉडक्शन पूरा करने के बाद, फ़िनिश्ड प्रॉडक्ट को कॉन्ट्रैक्टर को भेज दिया "
 "जाता है।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:207
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:221
 msgid ""
 "To receive the product into stock, navigate to :menuselection:`Purchase app "
 "--> Orders --> Purchase Orders`, and select the *subcontractor* |PO|."
@@ -46435,7 +46777,7 @@ msgstr ""
 "प्रॉडक्ट को स्टॉक में रिसीव करने के लिए, :menuselection:`Purchase app --> Orders --"
 "> Purchase Orders` पर जाएं, और *सबकॉन्ट्रैक्टर* |PO| को सेलेक्ट करें।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:210
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:224
 msgid ""
 "At the top of the |PO|, click the :guilabel:`Receive Products` button, or "
 "click the :icon:`fa-truck` :guilabel:`Receipt` smart button. Then, "
@@ -46445,7 +46787,7 @@ msgstr ""
 "truck` :guilabel:`Receipt` स्मार्ट बटन क्लिक करें। फिर, इनकमिंग शिपमेंट को इन्वेंट्री में "
 "एंटर करने के लिए :guilabel:`Validate` क्लिक करें।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:227
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:241
 msgid ""
 "In the *Dropship to Subcontractor* workflow, product components are first "
 "sent from the vendors to a dedicated *Subcontracting Location*. "
@@ -46470,7 +46812,7 @@ msgstr "ड्रॉपशिप टू सबकॉन्ट्रैक्ट�
 msgid "Resupply subcontracting"
 msgstr "Resupply subcontracting"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:10
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:8
 msgid ""
 "In resupply subcontracting, a company supplies the components of its product "
 "to a subcontractor, who manufactures the product, then delivers the finished "
@@ -46480,7 +46822,7 @@ msgstr ""
 "करती है, जो प्रॉडक्ट को मैन्युफ़ैक्चर करता है, फिर फ़िनिश्ड प्रॉडक्ट को कॉन्ट्रैक्टिंग कंपनी के "
 "वेयरहाउस में डिलीवर करता है।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:13
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:11
 msgid ""
 "This article covers how to configure a subcontracted product and walk "
 "through the resupply subcontracting process."
@@ -46488,32 +46830,44 @@ msgstr ""
 "यह आर्टिकल कवर करता है कि सबकॉन्ट्रैक्टेड प्रॉडक्ट को कैसे कॉन्फ़िगर करें और रिसप्लाई "
 "सबकॉन्ट्रैक्टिंग प्रोसेस से कैसे गुजरें।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:21
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:19
 msgid ""
-"To use the resupply subcontractor workflow, contractors must first configure "
-"products with a :ref:`vendor pricelist <purchase/products/pricelist>` and a "
-"subcontracting-type |BoM|. Each component must then be configured with the "
-"appropriate route."
+"In order to use the resupply subcontractor :ref:`workflow <manufacturing/"
+"subcontracting_resupply/workflow>`, users must follow the configuration "
+"process below:"
 msgstr ""
-"रिसप्लाई सबकॉन्ट्रैक्टर वर्कफ़्लो का इस्तेमाल करने के लिए, कॉन्ट्रैक्टर को पहले :ref:`वेंडर "
-"प्राइसलिस्ट <purchase/products/pricelist>` और सबकॉन्ट्रैक्टिंग-टाइप |BoM| के साथ "
-"प्रॉडक्ट कॉन्फ़िगर करने चाहिए। फिर हर कॉम्पोनेंट को उपयुक्त रूट के साथ कॉन्फ़िगर किया जाना "
-"चाहिए।"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:23
+msgid ""
+":ref:`Specify the subcontractor <manufacturing/subcontracting_resupply/"
+"config/product-config>` as a vendor on the subcontracted product."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:25
 msgid ""
-"The pricelist allows the contracting company to purchase the product from "
-"the vendor (subcontractor) through a |PO|, while the |BoM| allows the "
-"product to be manufactured externally by the subcontractor. Routes are "
-"applied to each component in order to be properly sent from the contractor "
-"to the subcontractor."
+":ref:`Create a subcontracting-type BoM <manufacturing/"
+"subcontracting_resupply/config/bom-config>` for the product and add the "
+"necessary components."
 msgstr ""
-"प्राइसलिस्ट कॉन्ट्रैक्टिंग कंपनी को |PO| के माध्यम से वेंडर (सबकॉन्ट्रैक्टर) से प्रॉडक्ट खरीदने "
-"की अनुमति देती है, जबकि |BoM| प्रॉडक्ट को सबकॉन्ट्रैक्टर द्वारा बाहरी तौर पर मैन्युफ़ैक्चर "
-"करने की अनुमति देता है। हर कॉम्पोनेंट पर रूट लागू किए जाते हैं ताकि उन्हें कॉन्ट्रैक्टर से "
-"सबकॉन्ट्रैक्टर को सही ढंग से भेजा जा सके।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:35
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:27
+msgid ""
+"For each component, open its product form and :ref:`set its Resupply "
+"Subcontractor on Order route <manufacturing/subcontracting_resupply/config/"
+"component-config>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:30
+msgid ""
+"Specifying the subcontractor as a vendor on the product form allows the "
+"contracting company to properly purchase the product from the subcontractor "
+"through a purchase order (PO). The bill of materials (BoM) allows the "
+"product to be manufactured externally by the subcontractor. The *Resupply "
+"Subcontractor on Order* route is applied to each component in order for them "
+"to be properly sent from the contractor to the subcontractor."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:41
 msgid ""
 "To configure a product's vendor for resupply subcontracting, navigate "
 "to :menuselection:`Inventory app --> Products --> Products`, and select a "
@@ -46523,7 +46877,7 @@ msgstr ""
 "लिए, :menuselection:`Inventory app --> Products --> Products` पर जाएं, और एक "
 "प्रॉडक्ट सेलेक्ट करें, या नया बनाएं।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:49
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:55
 msgid ""
 "Since contractors are not responsible for manufacturing the final product, "
 "there is no need to configure manufacturing lead times on a |BoM|. Instead, "
@@ -46538,7 +46892,7 @@ msgstr ""
 "करने, प्रॉडक्ट मैन्युफ़ैक्चर करने और फ़िनिश्ड गुड को वापस कॉन्ट्रैक्टर को डिलीवर करने की अवधि "
 "को ध्यान में रखें।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:60
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:66
 msgid ""
 "After specifying the vendor, configure a subcontracting-type |BoM| for the "
 "product. To start, click the :guilabel:`Bill of Materials` smart button on "
@@ -46548,7 +46902,7 @@ msgstr ""
 "करने के लिए, प्रॉडक्ट के पेज पर :guilabel:`Bill of Materials` स्मार्ट बटन क्लिक करें। "
 "फिर, वांछित |BoM| सेलेक्ट करें या नया बनाएं।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:68
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:74
 msgid ""
 "In the :guilabel:`BoM Type` field, select the :guilabel:`Subcontracting` "
 "option. Then, add one or more subcontractors in "
@@ -46557,7 +46911,7 @@ msgstr ""
 ":guilabel:`BoM Type` फ़ील्ड में, :guilabel:`Subcontracting` ऑप्शन सेलेक्ट करें। फिर, "
 "नीचे :guilabel:`Subcontractors` फ़ील्ड में एक या अधिक सबकॉन्ट्रैक्टर जोड़ें।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:71
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:77
 msgid ""
 "Finally, add all necessary components in the :guilabel:`Components` tab. To "
 "add a new component, click :guilabel:`Add a line`. Then, select the "
@@ -46572,7 +46926,7 @@ msgstr ""
 msgid "BoM for a resupply subcontracting product."
 msgstr "रीसप्लाई सबकॉन्ट्रैक्टिंग प्रॉडक्ट के लिए बीओएम।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:83
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:89
 msgid ""
 "In resupply subcontracting, each component must be individually configured "
 "with the *Resupply Subcontractor on Order* route. This allows the components "
@@ -46583,7 +46937,7 @@ msgstr ""
 "साथ अलग से कॉन्फ़िगर किया जाना चाहिए। यह कॉम्पोनेंट को कॉन्ट्रैक्टर से सबकॉन्ट्रैक्टर में "
 "ट्रांसफ़र करने की अनुमति देता है जब सबकॉन्ट्रैक्टेड प्रॉडक्ट के लिए |PO| बनाया जाता है।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:87
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:93
 msgid ""
 "To configure a component's route, select the component's name in "
 "the :guilabel:`Components` tab, and click the :icon:`oi-arrow-"
@@ -46596,7 +46950,7 @@ msgstr ""
 "क्लिक करें। वैकल्पिक रूप से, :menuselection:`Inventory app --> Products --> "
 "Products` पर जाएं, और कॉम्पोनेंट को सेलेक्ट करें।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:91
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:97
 msgid ""
 "On the component product form, click on the :guilabel:`Inventory` tab. Then, "
 "in the :guilabel:`Routes` section, select the :guilabel:`Resupply "
@@ -46606,7 +46960,7 @@ msgstr ""
 "फिर, :guilabel:`Routes` सेक्शन में, :guilabel:`Resupply Subcontractor on Order` "
 "रूट को सेलेक्ट करें।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:95
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:101
 msgid ""
 "Repeat the process for every component that must be sent to the "
 "subcontractor."
@@ -46616,21 +46970,35 @@ msgstr "सबकॉन्ट्रैक्टर को भेजे जान
 msgid "Inventory routes for a resupply subcontracting component."
 msgstr "रिसप्लाई सबकॉन्ट्रैक्टिंग कॉम्पोनेंट के लिए इन्वेंट्री रूट।"
 
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:111
+msgid ""
+"The resupply subcontracting workflow can be summarized in the following "
+"steps:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:113
+msgid ""
+":ref:`Create and confirm a subcontractor PO <manufacturing/"
+"subcontracting_resupply/workflow/create-po>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:115
+msgid ""
+":ref:`Validate the resupply order <manufacturing/subcontracting_resupply/"
+"workflow/validate-resupply>` to send the components."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:117
+msgid ""
+":ref:`Validate the receipt <manufacturing/subcontracting_resupply/workflow/"
+"process-receipt>` to receive the final product."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:None
 msgid "Diagram of resupply subcontracting workflow in Odoo MRP Subcontracting."
 msgstr "Odoo MRP Subcontracting में रीसप्लाई सबकॉन्ट्रैक्टिंग वर्कफ़्लो का डॉयग्राम।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:108
-msgid ""
-"The resupply subcontracting workflow begins by :ref:`creating a PO "
-"<manufacturing/subcontracting_resupply/workflow/create-po>` to purchase the "
-"product from the subcontractor (1)."
-msgstr ""
-"रीसप्लाई सबकॉन्ट्रैक्टिंग वर्कफ़्लो सबकॉन्ट्रैक्टर से प्रॉडक्ट खरीदने के लिए :ref:`creating a "
-"PO <manufacturing/subcontracting_resupply/workflow/create-po>` से शुरू होता है "
-"(1)।"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:112
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:125
 msgid ""
 "The contractor (YourCompany) then confirms the |PO|, which creates both a "
 "resupply order to transfer the components and a receipt to receive the final "
@@ -46640,31 +47008,21 @@ msgstr ""
 "लिए एक रिसप्लाई ऑर्डर और सबकॉन्ट्रैक्टर से फ़ाइनल प्रॉडक्ट (2) प्राप्त करने के लिए एक रसीद "
 "दोनों बनाता है।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:115
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:128
 msgid ""
-"Next, the contractor :ref:`validates the transfer <manufacturing/"
-"subcontracting_resupply/workflow/validate-resupply>` of components to the "
+"Next, the contractor validates the transfer of components to the "
 "subcontractor (3). The subcontractor begins producing the product."
 msgstr ""
-"अगला, कॉन्ट्रैक्टर :ref:`सबकॉन्ट्रैक्टर को कॉम्पोनेंट के ट्रांसफ़र को वैलिडेट करता है "
-"<manufacturing/subcontracting_resupply/workflow/validate-resupply>` (3)। "
-"सबकॉन्ट्रैक्टर प्रॉडक्ट का प्रॉडक्शन शुरू करता है।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:119
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:131
 msgid ""
-"Once the product has been produced and received, the "
-"contractor :ref:`validates the receipt <manufacturing/"
-"subcontracting_resupply/workflow/process-receipt>` (6) to "
-"trigger :ref:`inventory moves <manufacturing/subcontracting_resupply/"
-"workflow/track-inventory>` from the subcontractor to the company's stock (4, "
-"5)."
+"Once the product has been produced and received, the contractor validates "
+"the receipt (6) to trigger :ref:`inventory moves <manufacturing/"
+"subcontracting_resupply/workflow/track-inventory>` from the subcontractor to "
+"the company's stock (4, 5)."
 msgstr ""
-"एक बार प्रॉडक्ट का उत्पादन और प्राप्ति हो जाने के बाद, कॉन्ट्रैक्टर :ref:`रसीद को मान्य "
-"करता है <manufacturing/subcontracting_resupply/workflow/process-receipt>` (6) "
-"ताकि सबकॉन्ट्रैक्टर से कंपनी के स्टॉक (4, 5) में :ref:`इन्वेंट्री मूव्स <manufacturing/"
-"subcontracting_resupply/workflow/track-inventory>` को ट्रिगर किया जा सके।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:129
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:140
 msgid ""
 "To create a |PO| for the subcontracted product, navigate "
 "to :menuselection:`Purchase app --> Orders --> Purchase Orders` and "
@@ -46673,7 +47031,7 @@ msgstr ""
 "सबकॉन्ट्रैक्ट किए गए प्रॉडक्ट के लिए |PO| बनाने के लिए, :menuselection:`Purchase app "
 "--> Orders --> Purchase Orders` पर जाएं और :guilabel:`New` क्लिक करें।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:137
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:148
 msgid ""
 "After adding the product, the :guilabel:`Expected Arrival` field is updated "
 "with the finished product's expected delivery date, as configured earlier "
@@ -46683,7 +47041,7 @@ msgstr ""
 "डिलीवरी तारीख के साथ अपडेट हो जाता है, जैसा कि पहले वेंडर *Delivery Lead Time* के "
 "साथ कॉन्फ़िगर किया गया था।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:140
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:151
 msgid ""
 "Finally, click :guilabel:`Confirm Order` to confirm the |PO|. A receipt and "
 "a resupply order are automatically created, accessible via "
@@ -46695,11 +47053,11 @@ msgstr ""
 "पर :guilabel:`Receipt` और :guilabel:`Resupply` स्मार्ट बटन के ज़रिए ऐक्सेस किए जा "
 "सकते हैं।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:147
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:158
 msgid "Validate resupply order"
 msgstr "रीसप्लाई ऑर्डर मान्य करें"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:149
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:160
 msgid ""
 "Click the :guilabel:`Resupply` smart button at the top of the |PO| to open "
 "the resupply order, and click :guilabel:`Validate` to confirm that the "
@@ -46709,7 +47067,7 @@ msgstr ""
 "खोलने के लिए, और :guilabel:`Validate` पर क्लिक करें ताकि पुष्टि हो सके कि कॉम्पोनेंट "
 "सबकॉन्ट्रैक्टर को भेज दिए गए हैं।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:152
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:163
 msgid ""
 "Alternatively, navigate to the :menuselection:`Inventory` app, click "
 "the :guilabel:`(#) To Process` button on the :guilabel:`Resupply "
@@ -46722,7 +47080,7 @@ msgstr ""
 "resupply ऑर्डर को सिलेक्ट करें। फिर, :guilabel:`Validate` पर क्लिक करें ताकि पुष्टि हो "
 "सके कि कॉम्पोनेंट सबकॉन्ट्रैक्टर को भेज दिए गए हैं।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:161
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:172
 msgid ""
 "After the resupply order is confirmed, the subcontractor manufactures the "
 "product and delivers the finished good back to the contracting company."
@@ -46730,7 +47088,7 @@ msgstr ""
 "resupply ऑर्डर की पुष्टि के बाद, सबकॉन्ट्रैक्टर प्रॉडक्ट को मैन्युफैक्चर करता है और तैयार माल "
 "को वापस कॉन्ट्रैक्टिंग कंपनी को डिलीवर करता है।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:177
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:188
 msgid ""
 "After validating the receipt, Odoo automatically generates inventory moves "
 "to track the movement of subcontracted products between locations. To view "
@@ -46741,7 +47099,7 @@ msgstr ""
 "सबकॉन्ट्रैक्टेड प्रॉडक्ट की जगहों के बीच मूवमेंट को ट्रैक किया जा सके। इन इन्वेंट्री मूव्स को देखने "
 "के लिए, :menuselection:`इन्वेंट्री ऐप्लिकेशन --> रिपोर्टिंग --> Moves History` पर जाएं।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:181
+#: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:192
 msgid ""
 "In resupply subcontracting, Odoo first transfers any product components to a "
 "dedicated *Subcontracting Location*. A :ref:`virtual location <inventory/"
@@ -55624,17 +55982,7 @@ msgstr ""
 "ऑर्डर बन सकता है जो परिणामी स्टॉक ऑन हैंड को :guilabel:`मैक्स क्वांटिटी` फ़ील्ड में दी गई "
 "मात्रा से ऊपर ले जाएगा।"
 
-#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:70
-msgid ""
-"If :guilabel:`Max Quantity` is set to `100` but :guilabel:`Multiple "
-"Quantity` is set to order the product in batches of `200`, a purchase order "
-"is then created for 200 units of the product."
-msgstr ""
-"अगर :guilabel:`मैक्स क्वांटिटी` `100` पर सेट है लेकिन :guilabel:`मल्टिपल क्वांटिटी` को "
-"प्रॉडक्ट को `200` के बैच में ऑर्डर करने के लिए सेट किया गया है, तो प्रॉडक्ट की 200 यूनिट के "
-"लिए एक परचेज़ ऑर्डर बनाया जाता है।"
-
-#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:74
+#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:69
 msgid ""
 ":guilabel:`Unit` specifies the unit of measurement by which the quantity is "
 "to be ordered. For discrete products, this should be set to `Units`. "
@@ -55650,11 +55998,11 @@ msgstr ""
 msgid "Configure the reordering rule in Odoo."
 msgstr "Odoo में रीऑर्डरिंग रूल को कॉन्फ़िगर करें।"
 
-#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:85
+#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:80
 msgid "Manually trigger reordering rules using the scheduler"
 msgstr "शेड्यूलर का उपयोग करके रीऑर्डरिंग रूल को मैन्युअली ट्रिगर करें"
 
-#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:87
+#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:82
 msgid ""
 "Reordering rules are automatically triggered by the scheduler, which runs "
 "once a day by default. To trigger reordering rules manually, turn on "
@@ -55667,17 +56015,17 @@ msgstr ""
 "करें, :menuselection:`इन्वेंट्री ऐप्लिकेशन --> ऑपरेशन --> प्रोक्युरमन्ट: रन शेड्यूलर` पर "
 "जाएं। पॉप-अप विंडो पर, :guilabel:`रन शेड्यूलर` पर क्लिक करके मैन्युअल ऐक्शन की पुष्टि करें।"
 
-#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:93
+#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:88
 msgid ""
 "Manually triggering reordering rules will also trigger any other scheduled "
 "actions."
 msgstr "रीऑर्डरिंग रूल को मैन्युअली ट्रिगर करने से कोई भी अन्य शेड्यूल्ड ऐक्शन भी ट्रिगर होंगे।"
 
-#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:96
+#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:91
 msgid "Manage reordering rules"
 msgstr "रीऑर्डरिंग रूल को मैनेज करें"
 
-#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:98
+#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:93
 msgid ""
 "To manage the reordering rules for a single product, navigate to that "
 "product page's form and select the :guilabel:`Reordering Rules` smart button "
@@ -55686,7 +56034,7 @@ msgstr ""
 "एक प्रॉडक्ट के लिए रीऑर्डरिंग रूल को मैनेज करने के लिए, उस प्रॉडक्ट पेज के फ़ॉर्म पर जाएं और "
 "फ़ॉर्म के ऊपर :guilabel:`रीऑर्डरिंग रूल` स्मार्ट बटन को सेलेक्ट करें।"
 
-#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:101
+#: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:96
 msgid ""
 "To manage all reordering rules for every product, go "
 "to :menuselection:`Inventory app --> Operations --> Replenishment`. From "
@@ -59163,6 +59511,138 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "To use the *Dropship to Subcontractor* workflow, contractors must first "
+#~ "configure subcontracted products with a :ref:`vendor pricelist <purchase/"
+#~ "products/pricelist>` and a :ref:`subcontracting-type BoM <manufacturing/"
+#~ "subcontracting_dropship/config/bom-config>`. Each component must then be "
+#~ "configured with the appropriate :doc:`route <../../inventory/"
+#~ "shipping_receiving/daily_operations/use_routes>`."
+#~ msgstr ""
+#~ "*ड्रॉपशिप टू सबकॉन्ट्रैक्टर* वर्कफ़्लो इस्तेमाल करने के लिए, कॉन्ट्रैक्टर को पहले "
+#~ "सबकॉन्ट्रैक्टेड प्रॉडक्ट को :ref:`वेंडर प्राइसलिस्ट <purchase/products/pricelist>` "
+#~ "और :ref:`सबकॉन्ट्रैक्टिंग-टाइप बीओएम <manufacturing/subcontracting_dropship/"
+#~ "config/bom-config>` के साथ कॉन्फ़िगर करना होगा। फिर प्रत्येक कॉम्पोनेंट को "
+#~ "उचित :doc:`रूट <../../inventory/shipping_receiving/daily_operations/"
+#~ "use_routes>` के साथ कॉन्फ़िगर करना होगा।"
+
+#~ msgid ""
+#~ "The pricelist allows the contracting company to purchase the product from "
+#~ "the vendor (subcontractor) through a |PO|, while the |BoM| allows the "
+#~ "product to be manufactured externally by the subcontractor. Routes are "
+#~ "applied to each component in order to be properly sent from the "
+#~ "dropshipping vendor to the subcontractor."
+#~ msgstr ""
+#~ "प्राइसलिस्ट कॉन्ट्रैक्टिंग कंपनी को |PO| के माध्यम से वेंडर (सबकॉन्ट्रैक्टर) से प्रॉडक्ट परचेज़ "
+#~ "करने की अनुमति देती है, जबकि |BoM| प्रॉडक्ट को सबकॉन्ट्रैक्टर द्वारा बाहरी रूप से "
+#~ "मैन्युफ़ैक्चर करने की अनुमति देता है। ड्रॉपशिपिंग वेंडर से सबकॉन्ट्रैक्टर तक ठीक से भेजने के लिए "
+#~ "प्रत्येक कॉम्पोनेंट पर रूट अप्लाई किए जाते हैं।"
+
+#~ msgid ""
+#~ "The *Dropship to Subcontractor* workflow begins by :ref:`creating a PO "
+#~ "<manufacturing/subcontracting-dropship/workflow/create-po>` to purchase "
+#~ "the product from the subcontractor (1)."
+#~ msgstr ""
+#~ "*ड्रॉपशिप टू सबकॉन्ट्रैक्टर* वर्कफ़्लो सबकॉन्ट्रैक्टर से प्रॉडक्ट खरीदने के लिए :ref:`पीओ "
+#~ "बनाकर <manufacturing/subcontracting-dropship/workflow/create-po>` शुरू होता "
+#~ "है (1)।"
+
+#~ msgid ""
+#~ "Next, the contractor :ref:`confirms the RfQ <manufacturing/subcontracting-"
+#~ "dropship/workflow/confirm-rfq>`, turning it into a *vendor* |PO| and "
+#~ "creating a dropship order to send the components from the vendor to the "
+#~ "subcontractor (3). Once the contractor :ref:`validates the dropship "
+#~ "<manufacturing/subcontracting-dropship/workflow/validate-dropship>` "
+#~ "order, the subcontractor begins to manufacture the final product with the "
+#~ "components and ships it to the contractor when done."
+#~ msgstr ""
+#~ "अगला, कॉन्ट्रैक्टर :ref:`RfQ की पुष्टि करता है <manufacturing/subcontracting-"
+#~ "dropship/workflow/confirm-rfq>`, जिससे यह एक *वेंडर* |PO| बन जाता है और वेंडर से "
+#~ "सबकॉन्ट्रैक्टर (3) को कॉम्पोनेंट भेजने के लिए एक ड्रॉपशिप ऑर्डर बनता है। एक बार जब "
+#~ "कॉन्ट्रैक्टर :ref:`ड्रॉपशिप को वैलिडेट कर देता है <manufacturing/subcontracting-"
+#~ "dropship/workflow/validate-dropship>`, तो सबकॉन्ट्रैक्टर कॉम्पोनेंट के साथ फ़ाइनल "
+#~ "प्रॉडक्ट का मैन्युफ़ैक्चर शुरू करता है और पूरा होने पर इसे कॉन्ट्रैक्टर को भेज देता है।"
+
+#~ msgid ""
+#~ "Once the product has been produced and received, the "
+#~ "contractor :ref:`validates the receipt <manufacturing/subcontracting-"
+#~ "dropship/workflow/process-receipt>` (6) to trigger :ref:`inventory moves "
+#~ "<manufacturing/subcontracting-dropship/workflow/track-inventory>` from "
+#~ "the subcontractor to the company's stock (4, 5)."
+#~ msgstr ""
+#~ "एक बार जब प्रॉडक्ट प्रॉडक्शन और प्राप्त हो जाता है, तो कॉन्ट्रैक्टर :ref:`रसीद को "
+#~ "वैलिडेट करता है <manufacturing/subcontracting-dropship/workflow/process-"
+#~ "receipt>` (6) ताकि सबकॉन्ट्रैक्टर से कंपनी के स्टॉक (4, 5) में :ref:`इन्वेंट्री मूव "
+#~ "<manufacturing/subcontracting-dropship/workflow/track-inventory>` शुरू हो "
+#~ "सकें।"
+
+#~ msgid "Create and confirm subcontractor PO"
+#~ msgstr "सबकॉन्ट्रैक्टर पीओ बनाएं और पुष्टि करें"
+
+#~ msgid ""
+#~ "To use the resupply subcontractor workflow, contractors must first "
+#~ "configure products with a :ref:`vendor pricelist <purchase/products/"
+#~ "pricelist>` and a subcontracting-type |BoM|. Each component must then be "
+#~ "configured with the appropriate route."
+#~ msgstr ""
+#~ "रिसप्लाई सबकॉन्ट्रैक्टर वर्कफ़्लो का इस्तेमाल करने के लिए, कॉन्ट्रैक्टर को पहले :ref:`वेंडर "
+#~ "प्राइसलिस्ट <purchase/products/pricelist>` और सबकॉन्ट्रैक्टिंग-टाइप |BoM| के साथ "
+#~ "प्रॉडक्ट कॉन्फ़िगर करने चाहिए। फिर हर कॉम्पोनेंट को उपयुक्त रूट के साथ कॉन्फ़िगर किया "
+#~ "जाना चाहिए।"
+
+#~ msgid ""
+#~ "The pricelist allows the contracting company to purchase the product from "
+#~ "the vendor (subcontractor) through a |PO|, while the |BoM| allows the "
+#~ "product to be manufactured externally by the subcontractor. Routes are "
+#~ "applied to each component in order to be properly sent from the "
+#~ "contractor to the subcontractor."
+#~ msgstr ""
+#~ "प्राइसलिस्ट कॉन्ट्रैक्टिंग कंपनी को |PO| के माध्यम से वेंडर (सबकॉन्ट्रैक्टर) से प्रॉडक्ट "
+#~ "खरीदने की अनुमति देती है, जबकि |BoM| प्रॉडक्ट को सबकॉन्ट्रैक्टर द्वारा बाहरी तौर पर "
+#~ "मैन्युफ़ैक्चर करने की अनुमति देता है। हर कॉम्पोनेंट पर रूट लागू किए जाते हैं ताकि उन्हें "
+#~ "कॉन्ट्रैक्टर से सबकॉन्ट्रैक्टर को सही ढंग से भेजा जा सके।"
+
+#~ msgid ""
+#~ "The resupply subcontracting workflow begins by :ref:`creating a PO "
+#~ "<manufacturing/subcontracting_resupply/workflow/create-po>` to purchase "
+#~ "the product from the subcontractor (1)."
+#~ msgstr ""
+#~ "रीसप्लाई सबकॉन्ट्रैक्टिंग वर्कफ़्लो सबकॉन्ट्रैक्टर से प्रॉडक्ट खरीदने के लिए :ref:`creating "
+#~ "a PO <manufacturing/subcontracting_resupply/workflow/create-po>` से शुरू "
+#~ "होता है (1)।"
+
+#~ msgid ""
+#~ "Next, the contractor :ref:`validates the transfer <manufacturing/"
+#~ "subcontracting_resupply/workflow/validate-resupply>` of components to the "
+#~ "subcontractor (3). The subcontractor begins producing the product."
+#~ msgstr ""
+#~ "अगला, कॉन्ट्रैक्टर :ref:`सबकॉन्ट्रैक्टर को कॉम्पोनेंट के ट्रांसफ़र को वैलिडेट करता है "
+#~ "<manufacturing/subcontracting_resupply/workflow/validate-resupply>` (3)। "
+#~ "सबकॉन्ट्रैक्टर प्रॉडक्ट का प्रॉडक्शन शुरू करता है।"
+
+#~ msgid ""
+#~ "Once the product has been produced and received, the "
+#~ "contractor :ref:`validates the receipt <manufacturing/"
+#~ "subcontracting_resupply/workflow/process-receipt>` (6) to "
+#~ "trigger :ref:`inventory moves <manufacturing/subcontracting_resupply/"
+#~ "workflow/track-inventory>` from the subcontractor to the company's stock "
+#~ "(4, 5)."
+#~ msgstr ""
+#~ "एक बार प्रॉडक्ट का उत्पादन और प्राप्ति हो जाने के बाद, कॉन्ट्रैक्टर :ref:`रसीद को "
+#~ "मान्य करता है <manufacturing/subcontracting_resupply/workflow/process-"
+#~ "receipt>` (6) ताकि सबकॉन्ट्रैक्टर से कंपनी के स्टॉक (4, 5) में :ref:`इन्वेंट्री मूव्स "
+#~ "<manufacturing/subcontracting_resupply/workflow/track-inventory>` को "
+#~ "ट्रिगर किया जा सके।"
+
+#~ msgid ""
+#~ "If :guilabel:`Max Quantity` is set to `100` but :guilabel:`Multiple "
+#~ "Quantity` is set to order the product in batches of `200`, a purchase "
+#~ "order is then created for 200 units of the product."
+#~ msgstr ""
+#~ "अगर :guilabel:`मैक्स क्वांटिटी` `100` पर सेट है लेकिन :guilabel:`मल्टिपल क्वांटिटी` "
+#~ "को प्रॉडक्ट को `200` के बैच में ऑर्डर करने के लिए सेट किया गया है, तो प्रॉडक्ट की 200 "
+#~ "यूनिट के लिए एक परचेज़ ऑर्डर बनाया जाता है।"
 
 #~ msgid ""
 #~ "Odoo *Product Lifecycle Management* (*PLM*) offers a systematic approach "
