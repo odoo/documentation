@@ -9,8 +9,9 @@ customer transactions.
    - Odoo is compatible with Point Smart 1 or Point Smart 2 payment terminals, which can be
      purchased on the Mercado Pago website in `Argentina
      <https://www.mercadopago.com.ar/herramientas-para-vender/lectores-point>`_, `Brazil
-     <https://www.mercadopago.com.br/ferramentas-para-vender/maquininhas-point>`_, and `Mexico
-     <https://www.mercadopago.com.mx/herramientas-para-vender/lectores-point>`_.
+     <https://www.mercadopago.com.br/ferramentas-para-vender/maquininhas-point>`_, `Mexico
+     <https://www.mercadopago.com.mx/herramientas-para-vender/lectores-point>`_, and `Chile
+     <https://www.mercadopago.cl/herramientas-para-vender/lectores-point>`_.
    - Mercado Pago payment terminals do not require an :doc:`IoT Box </applications/general/iot>` to
      operate.
 
@@ -38,6 +39,7 @@ Terminal and store connection
    - `Mercado Pago for Mexico <https://www.mercadopago.com.mx/>`_
    - `Mercado Pago for Argentina <https://www.mercadopago.com.ar/>`_
    - `Mercado Pago for Brazil <https://www.mercadopago.com.br/>`_
+   - `Mercado Pago for Chile <https://www.mercadopago.cl/>`_
 #. Turn on the Point Smart terminal. Follow the on-screen instructions until prompted to link the
    terminal with your Mercado Pago account.
 #. Click :guilabel:`Soy responsable del negocio` to get a pairing QR code.
@@ -83,6 +85,7 @@ There are three credentials to generate and collect from the `Mercado Pago Devel
       :guilabel:`Modo productivo`.
    #. Paste your Odoo database's URL followed by `/pos_mercado_pago/notification`. For example:
       `https://mycompany.odoo.com/pos_mercado_pago/notification`.
+   #. Enable the :guilabel:`Order (MercadoPago)` checbox.
    #. Copy the generated webhook secret key and save it for the
       :ref:`pos/mercado-pago/payment-method` step.
 #. Generate the access token:
