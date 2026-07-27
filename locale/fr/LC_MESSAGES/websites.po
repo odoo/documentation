@@ -21,8 +21,8 @@ msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-17 18:30+0000\n"
-"PO-Revision-Date: 2026-07-07 00:29+0000\n"
-"Last-Translator: \"Manon Rondou (ronm)\" <ronm@odoo.com>\n"
+"PO-Revision-Date: 2026-07-26 17:31+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: French <https://translate.odoo.com/projects/odoo-17-doc/"
 "websites/fr/>\n"
 "Language: fr\n"
@@ -906,7 +906,7 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:110
 msgid ":doc:`customer_accounts`"
-msgstr ""
+msgstr ":doc:`customer_accounts`"
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:111
 #: ../../content/applications/websites/ecommerce/customer_accounts.rst:24
@@ -1238,18 +1238,24 @@ msgid ""
 ":doc:`../../inventory_and_mrp/inventory/shipping_receiving/"
 "setup_configuration/invoicing`"
 msgstr ""
+":doc:`../../inventory_and_mrp/inventory/shipping_receiving/"
+"setup_configuration/invoicing`"
 
 #: ../../content/applications/websites/ecommerce/order_handling.rst:84
 msgid ""
 ":doc:`../../inventory_and_mrp/inventory/shipping_receiving/"
 "setup_configuration/labels`"
 msgstr ""
+":doc:`../../inventory_and_mrp/inventory/shipping_receiving/"
+"setup_configuration/labels`"
 
 #: ../../content/applications/websites/ecommerce/order_handling.rst:85
 msgid ""
 ":doc:`../../inventory_and_mrp/inventory/shipping_receiving/"
 "setup_configuration/multipack`"
 msgstr ""
+":doc:`../../inventory_and_mrp/inventory/shipping_receiving/"
+"setup_configuration/multipack`"
 
 #: ../../content/applications/websites/ecommerce/order_handling.rst:88
 msgid "Returns and refunds"
@@ -1428,7 +1434,7 @@ msgstr "Saisissez le code de la carte-cadeau pour procéder au paiement."
 
 #: ../../content/applications/websites/ecommerce/performance.rst:3
 msgid "Performance management"
-msgstr ""
+msgstr "Gestion des performances"
 
 #: ../../content/applications/websites/ecommerce/performance.rst:5
 msgid ""
@@ -1511,7 +1517,7 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/performance.rst:39
 msgid "Email queue optimization"
-msgstr ""
+msgstr "Optimisation de la file d'attente des emails"
 
 #: ../../content/applications/websites/ecommerce/performance.rst:41
 msgid ""
@@ -1520,6 +1526,11 @@ msgid ""
 "bottleneck, potentially slowing down the checkout process for other "
 "customers."
 msgstr ""
+"Pour les sites web gérant des ventes flash (ex. : vente de billets "
+"d'événements) ou connaissant des pics de trafic élevés, les emails de "
+"confirmation de commande peuvent devenir un goulot d'étranglement de "
+"performance, ralentissant potentiellement le processus de paiement pour les "
+"autres clients."
 
 #: ../../content/applications/websites/ecommerce/performance.rst:45
 msgid ""
@@ -1528,27 +1539,37 @@ msgid ""
 "Send pending emails` scheduled action, which sends queued emails as soon as "
 "possible."
 msgstr ""
+"Pour améliorer les performances, ces emails peuvent être mis en file "
+"d'attente et traités séparément du flux de confirmation de commande. Cela "
+"est géré par l'action planifiée :guilabel:`Ventes : Envoyer les emails en "
+"attente`, qui envoie les emails en file d'attente dès que possible."
 
 #: ../../content/applications/websites/ecommerce/performance.rst:49
 msgid "To enable asynchronous email sending:"
-msgstr ""
+msgstr "Pour activer l'envoi asynchrone des emails :"
 
 #: ../../content/applications/websites/ecommerce/performance.rst:51
 msgid ""
 "Enable the :doc:`developer mode </applications/general/developer_mode>`."
 msgstr ""
+"Activer le :doc:`mode développeur </applications/general/developer_mode>`."
 
 #: ../../content/applications/websites/ecommerce/performance.rst:52
 msgid ""
 "Go to :menuselection:`Apps`, remove the :guilabel:`Apps` filter, and install "
 "the :guilabel:`Sales - Async Emails` module."
 msgstr ""
+"Aller à :menuselection:`Applications`, retirer le filtre "
+":guilabel:`Applications`, et installer le module :guilabel:`Ventes - Emails "
+"asynchrones`."
 
 #: ../../content/applications/websites/ecommerce/performance.rst:54
 msgid ""
 "Go to :menuselection:`Settings --> Technical --> System Parameters` and set "
 "the :guilabel:`sale.async_emails` system parameter to `True`."
 msgstr ""
+"Aller à :menuselection:`Paramètres --> Technique --> Paramètres système` et "
+"définir le paramètre système :guilabel:`sale.async_emails` sur `True`."
 
 #: ../../content/applications/websites/ecommerce/performance.rst:56
 msgid ""
@@ -1556,6 +1577,9 @@ msgid ""
 "ensure that the :guilabel:`Sales: Send pending emails` scheduled action is "
 "enabled."
 msgstr ""
+"Aller à :menuselection:`Paramètres --> Technique --> Actions planifiées` et "
+"s'assurer que l'action planifiée :guilabel:`Ventes : Envoyer les emails en "
+"attente` est activée."
 
 #: ../../content/applications/websites/ecommerce/performance.rst:60
 msgid ""
@@ -1563,6 +1587,10 @@ msgid ""
 "few minutes. It is recommended only for high-traffic websites, as it can "
 "introduce unnecessary delays for e-commerce websites with moderate traffic."
 msgstr ""
+"Activer cette fonctionnalité peut retarder les emails de confirmation de "
+"commande et de facturation de quelques minutes. Elle est recommandée "
+"uniquement pour les sites Web à fort trafic, car elle peut introduire des "
+"retards inutiles pour les sites eCommerce à trafic modéré."
 
 #: ../../content/applications/websites/ecommerce/products.rst:5
 #: ../../content/applications/websites/website/web_design/building_blocks/dynamic_content.rst:76
@@ -1581,6 +1609,15 @@ msgid ""
 "and enabling :ref:`product comparisons <ecommerce/products/product-"
 "comparison>`."
 msgstr ""
+"**Odoo eCommerce** permet d':ref:`ajouter des produits <ecommerce/products/"
+"add-products>` et de gérer vos :ref:`pages produit <ecommerce/products/"
+"product-page>` directement depuis l'application Site Web. Il permet "
+"également d'ajouter des :ref:`variantes de produit <ecommerce/products/"
+"product-variants>` et des :ref:`fichiers numériques <ecommerce/products/"
+"digital-files>`, de :ref:`traduire <ecommerce/products/translation>` le "
+"contenu de la page produit, de :ref:`gérer le stock <ecommerce/products/"
+"stock-management>`, et d'activer les :ref:`comparaisons de produits "
+"<ecommerce/products/product-comparison>`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:18
 msgid "Add products"
@@ -1600,6 +1637,14 @@ msgid ""
 "customization>` the product page. When you :guilabel:`Save`, the product "
 "page is automatically published."
 msgstr ""
+"Pour créer un produit depuis le frontend, cliquer sur :guilabel:`+ Nouveau` "
+"dans le coin supérieur droit, puis sur :guilabel:`Produit`. Saisir le "
+":guilabel:`Nom du produit`, le :guilabel:`Prix de vente`, les "
+":guilabel:`Taxes clients` par défaut pour les transactions locales, et "
+":guilabel:`Enregistrer`. Vous pouvez ensuite mettre à jour les détails du "
+"produit, ajouter une image, et :ref:`personnaliser <ecommerce/products/"
+"customization>` la page produit. Lorsque vous :guilabel:`Enregistrez`, la "
+"page produit est automatiquement publiée."
 
 #: ../../content/applications/websites/ecommerce/products.rst:32
 msgid ""
@@ -1607,6 +1652,9 @@ msgid ""
 "to :menuselection:`Website --> eCommerce --> Products` and "
 "clicking :guilabel:`New`."
 msgstr ""
+"Vous pouvez également créer un produit depuis le backend en allant à "
+":menuselection:`Site Web --> eCommerce --> Produits` et en cliquant sur "
+":guilabel:`Nouveau`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:34
 msgid ""
@@ -1630,39 +1678,46 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/products.rst:49
 msgid "To publish **large batches** of products, follow these steps:"
-msgstr ""
+msgstr "Pour publier des **lots importants** de produits, suivre ces étapes :"
 
 #: ../../content/applications/websites/ecommerce/products.rst:51
 msgid "Go to :menuselection:`Website --> eCommerce --> Products`."
-msgstr ""
+msgstr "Aller à :menuselection:`Site Web --> eCommerce --> Produits`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:52
 msgid ""
 "Remove the :guilabel:`Published` filter and switch to the :guilabel:`List` "
 "view."
 msgstr ""
+"Retirer le filtre :guilabel:`Publié` et passer à la vue :guilabel:`Liste`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:53
 msgid ""
 "Click the :icon:`fa-sliders` (:guilabel:`dropdown toggle`) icon and "
 "enable :guilabel:`Is published`."
 msgstr ""
+"Cliquer sur l'icône :icon:`fa-sliders` (:guilabel:`bascule de liste "
+"déroulante`) et activer :guilabel:`Est publié`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:55
 msgid ""
 "Click the :guilabel:`Is Published` column to re-order it by **published** or "
 "**unpublished** products."
 msgstr ""
+"Cliquer sur la colonne :guilabel:`Est publié` pour la réordonner par "
+"produits **publiés** ou **non publiés**."
 
 #: ../../content/applications/websites/ecommerce/products.rst:57
 msgid "Select the products to publish by ticking their box."
-msgstr ""
+msgstr "Sélectionner les produits à publier en cochant leur case."
 
 #: ../../content/applications/websites/ecommerce/products.rst:58
 msgid ""
 "In the :guilabel:`Is Published` column, tick the box for any of the selected "
 "products, then :guilabel:`Confirm` to publish them."
 msgstr ""
+"Dans la colonne :guilabel:`Est publié`, cocher la case pour l'un des "
+"produits sélectionnés, puis :guilabel:`Confirmer` pour les publier."
 
 #: ../../content/applications/websites/ecommerce/products.rst:64
 msgid "Shop page"
@@ -1685,6 +1740,8 @@ msgstr ""
 msgid ""
 ":guilabel:`Size`: Set the number of products displayed per page and line."
 msgstr ""
+":guilabel:`Taille` : définir le nombre de produits affichés par page et par "
+"ligne."
 
 #: ../../content/applications/websites/ecommerce/products.rst:74
 msgid ""
@@ -1692,6 +1749,8 @@ msgid ""
 "Select :guilabel:`Default`, :guilabel:`Cards`, :guilabel:`Thumbnails`, "
 "or :guilabel:`Grid`."
 msgstr ""
+":guilabel:`Style` : sélectionner :guilabel:`Par défaut`, :guilabel:`Cartes`, "
+":guilabel:`Vignettes` ou :guilabel:`Grille`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:76
 msgid ""
@@ -1747,6 +1806,10 @@ msgid ""
 "Range` bar, which allows customers to filter products according to a "
 "specific price range by dragging adjustable handles."
 msgstr ""
+":guilabel:`Filtre de prix` : activer l'interrupteur pour afficher une barre "
+":guilabel:`Fourchette de prix`, qui permet aux clients de filtrer les "
+"produits selon une fourchette de prix spécifique en faisant glisser les "
+"poignées ajustables."
 
 #: ../../content/applications/websites/ecommerce/products.rst:102
 msgid ""
@@ -1831,6 +1894,8 @@ msgid ""
 "Click the :guilabel:`Go to Website` smart button to return to the frontend "
 "product's page."
 msgstr ""
+"Cliquer sur le bouton intelligent :guilabel:`Aller au site Web` pour "
+"retourner à la page produit du frontend."
 
 #: ../../content/applications/websites/ecommerce/products.rst:155
 #: ../../content/applications/websites/website/configuration/cookies_bar.rst:27
@@ -1850,12 +1915,17 @@ msgid ""
 "above or below the top or bottom blue lines makes it visible on all product "
 "pages."
 msgstr ""
+"Lors du glisser-déposer d'un bloc de construction sur la page produit, le "
+"placer au-dessus ou en dessous des lignes bleues supérieure ou inférieure le "
+"rend visible sur toutes les pages produit."
 
 #: ../../content/applications/websites/ecommerce/products.rst:163
 msgid ""
 "You can edit any text on your website by clicking on it while "
 "in :guilabel:`Edit` mode."
 msgstr ""
+"Vous pouvez modifier n'importe quel texte sur votre site Web en cliquant "
+"dessus en mode :guilabel:`Modifier`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:165
 msgid ""
@@ -1869,10 +1939,13 @@ msgid ""
 "your :doc:`terms and conditions <../../finance/accounting/customer_invoices/"
 "terms_conditions>` on the product page."
 msgstr ""
+":guilabel:`Conditions générales` : activer l'interrupteur pour afficher un "
+"lien vers vos :doc:`conditions générales <../../finance/accounting/"
+"customer_invoices/terms_conditions>` sur la page produit."
 
 #: ../../content/applications/websites/ecommerce/products.rst:171
 msgid ":guilabel:`Customers`:"
-msgstr ""
+msgstr ":guilabel:`Clients` :"
 
 #: ../../content/applications/websites/ecommerce/products.rst:173
 msgid ""
@@ -1884,18 +1957,30 @@ msgid ""
 "form's chatter. To restrict visibility to internal employees, toggle "
 "the :guilabel:`Public` switch next to the review comment."
 msgstr ""
+":guilabel:`Évaluation` : permettre aux utilisateurs du portail connectés de "
+"soumettre des avis produit en cliquant sur les étoiles sous le nom du "
+"produit et en partageant leur expérience dans la section :guilabel:`Avis "
+"clients` en bas. Les avis sont visibles depuis la page produit en utilisant "
+"l'icône :icon:`fa-plus` (:guilabel:`plus`) à côté du titre :guilabel:`Avis "
+"clients` ou depuis le chatter du formulaire produit. Pour restreindre la "
+"visibilité aux employés internes, activer l'interrupteur :guilabel:`Public` "
+"à côté du commentaire d'avis."
 
 #: ../../content/applications/websites/ecommerce/products.rst:179
 msgid ""
 ":guilabel:`Share`: Add social media and email icon buttons allowing "
 "customers to share the product through those channels."
 msgstr ""
+":guilabel:`Partager` : ajouter des boutons d'icônes de réseaux sociaux et "
+"d'e-mail permettant aux clients de partager le produit via ces canaux."
 
 #: ../../content/applications/websites/ecommerce/products.rst:182
 msgid ""
 ":guilabel:`Select Quantity`: Toggle the switch to allow customers to select "
 "the product quantity they want to purchase."
 msgstr ""
+":guilabel:`Sélectionner la quantité` : activer l'interrupteur pour permettre "
+"aux clients de sélectionner la quantité de produit qu'ils souhaitent acheter."
 
 #: ../../content/applications/websites/ecommerce/products.rst:185
 msgid ""
@@ -1910,6 +1995,10 @@ msgid ""
 "horizontally as selectable :guilabel:`Options` to compose the variant "
 "yourself."
 msgstr ""
+":guilabel:`Variantes` : afficher toutes les :ref:`variantes <ecommerce/"
+"products/product-variants>` de produit possibles verticalement sous forme de "
+":guilabel:`Liste de produits` ou horizontalement sous forme "
+"d':guilabel:`Options` sélectionnables pour composer vous-même la variante."
 
 #: ../../content/applications/websites/ecommerce/products.rst:192
 msgid ""
@@ -1917,22 +2006,31 @@ msgid ""
 "the :guilabel:`Product Template Tags` on the product page and allow "
 "customers to filter products using those tags."
 msgstr ""
+":guilabel:`Tags de produit` : activer l'interrupteur pour afficher les "
+":guilabel:`Tags de modèle de produit` sur la page produit et permettre aux "
+"clients de filtrer les produits en utilisant ces tags."
 
 #: ../../content/applications/websites/ecommerce/products.rst:195
 msgid ":guilabel:`Cart`:"
-msgstr ""
+msgstr ":guilabel:`Panier` :"
 
 #: ../../content/applications/websites/ecommerce/products.rst:197
 msgid ""
 ":guilabel:`Buy Now`: Add a :icon:`fa-bolt` :guilabel:`Buy Now` option to "
 "take the customer to the checkout page."
 msgstr ""
+":guilabel:`Acheter maintenant` : ajouter une option :icon:`fa-bolt` "
+":guilabel:`Acheter maintenant` pour diriger le client vers la page de "
+"paiement."
 
 #: ../../content/applications/websites/ecommerce/products.rst:199
 msgid ""
 ":guilabel:`Wishlist`: Add an :icon:`fa-heart-o` :guilabel:`Add to wishlist` "
 "option allowing logged-in customers to save products in a wishlist."
 msgstr ""
+":guilabel:`Liste de souhaits` : Ajouter une option :icon:`fa-heart-o` "
+":guilabel:`Ajouter à la liste de souhaits` permettant aux clients connectés "
+"d'enregistrer des produits dans une liste de souhaits."
 
 #: ../../content/applications/websites/ecommerce/products.rst:201
 msgid ""
@@ -1940,6 +2038,9 @@ msgid ""
 "allowing customers to :ref:`compare products <ecommerce/products/product-"
 "comparison>` based on their attributes."
 msgstr ""
+":guilabel:`Comparer` : Ajouter une option :icon:`fa-exchange` "
+":guilabel:`Comparer`, permettant aux clients de :ref:`comparer des produits "
+"<ecommerce/products/product-comparison>` en fonction de leurs attributs."
 
 #: ../../content/applications/websites/ecommerce/products.rst:204
 msgid ""
@@ -1949,6 +2050,12 @@ msgid ""
 "product-variants>` if the :ref:`Product comparison tool <ecommerce/products/"
 "product-comparison>` is enabled in the Website :guilabel:`Settings`."
 msgstr ""
+":guilabel:`Spécification` : Sélectionner :guilabel:`Bas de page` pour "
+"afficher une liste détaillée des attributs et de leurs valeurs disponibles "
+"pour le produit. Cette option ne fonctionne pour les produits avec "
+":ref:`variantes <ecommerce/products/product-variants>` que si l':ref:`Outil "
+"de comparaison de produits <ecommerce/products/product-comparison>` est "
+"activé dans les :guilabel:`Paramètres` du Site Web."
 
 #: ../../content/applications/websites/ecommerce/products.rst:211
 msgid ""
@@ -1957,20 +2064,27 @@ msgid ""
 "to :menuselection:`Website --> Configuration --> Settings`, in "
 "the :guilabel:`Shop - Products` section."
 msgstr ""
+"Les options :guilabel:`Variantes`, :icon:`fa-heart-o` :guilabel:`Liste de "
+"souhaits`, et :icon:`fa-exchange` :guilabel:`Comparer` doivent être activées "
+"en allant dans :menuselection:`Site Web --> Configuration --> Paramètres`, "
+"dans la section :guilabel:`Boutique - Produits`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:215
 msgid "Enabled functions apply to all product pages."
-msgstr ""
+msgstr "Les fonctions activées s'appliquent à toutes les pages de produits."
 
 #: ../../content/applications/websites/ecommerce/products.rst:216
 msgid ""
 "Products with single values for their attributes do not generate variants "
 "but are still displayed in the :guilabel:`Product Specifications`."
 msgstr ""
+"Les produits avec des valeurs uniques pour leurs attributs ne génèrent pas "
+"de variantes mais sont toujours affichés dans les :guilabel:`Spécifications "
+"du produit`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:222
 msgid "Product images and videos"
-msgstr ""
+msgstr "Images et vidéos de produits"
 
 #: ../../content/applications/websites/ecommerce/products.rst:224
 msgid ""
@@ -1990,12 +2104,18 @@ msgid ""
 "click :guilabel:`Edit` and select the relevant media. In "
 "the :guilabel:`Customize` tab, use the following features:"
 msgstr ""
+"Pour personnaliser les images ou les vidéos, aller sur la page du produit "
+"eCommerce, cliquer sur :guilabel:`Modifier` et sélectionner le média "
+"concerné. Dans l'onglet :guilabel:`Personnaliser`, utiliser les "
+"fonctionnalités suivantes :"
 
 #: ../../content/applications/websites/ecommerce/products.rst:234
 msgid ""
 ":guilabel:`Images Width`: Changes the width of the product images displayed "
 "on the page."
 msgstr ""
+":guilabel:`Largeur des images` : Modifier la largeur des images de produits "
+"affichées sur la page."
 
 #: ../../content/applications/websites/ecommerce/products.rst:235
 msgid ""
@@ -2005,6 +2125,11 @@ msgid ""
 "arrow`); whereas the :guilabel:`Grid` displays four images in a square "
 "layout."
 msgstr ""
+":guilabel:`Disposition` : La disposition :guilabel:`Carrousel` permet aux "
+"clients de naviguer d'une image à l'autre en utilisant le :icon:`fa-angle-"
+"left` (:guilabel:`flèche gauche`) ou le :icon:`fa-angle-right` "
+"(:guilabel:`flèche droite`) ; tandis que la :guilabel:`Grille` affiche "
+"quatre images dans une disposition carrée."
 
 #: ../../content/applications/websites/ecommerce/products.rst:238
 msgid ""
@@ -2012,24 +2137,35 @@ msgid ""
 "images: :guilabel:`Magnifier on hover` :guilabel:`Pop-up on "
 "Click`, :guilabel:`Both`, or :guilabel:`None`."
 msgstr ""
+":guilabel:`Zoom d'image` : Sélectionner l'effet de zoom pour les images de "
+"produits : :guilabel:`Loupe au survol`, :guilabel:`Pop-up au clic`, "
+":guilabel:`Les deux`, ou :guilabel:`Aucun`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:240
 msgid ""
 ":guilabel:`Thumbnails`: Align thumbnails on the :icon:`fa-long-arrow-left` "
 "(:guilabel:`Left`) or at the :icon:`fa-long-arrow-down` (:guilabel:`Bottom`)."
 msgstr ""
+":guilabel:`Vignettes` : Aligner les vignettes sur le :icon:`fa-long-arrow-"
+"left` (:guilabel:`Gauche`) ou en :icon:`fa-long-arrow-down` (:guilabel:`Bas`)"
+"."
 
 #: ../../content/applications/websites/ecommerce/products.rst:243
 msgid ""
 ":guilabel:`Main Image`: Click :guilabel:`Replace` to change the product's "
 "main image."
 msgstr ""
+":guilabel:`Image principale` : Cliquer sur :guilabel:`Remplacer` pour "
+"changer l'image principale du produit."
 
 #: ../../content/applications/websites/ecommerce/products.rst:244
 msgid ""
 ":guilabel:`Extra Images`: :guilabel:`Add` more extra images or videos "
 "(including via URL) or :guilabel:`Remove all`."
 msgstr ""
+":guilabel:`Images supplémentaires` : :guilabel:`Ajouter` davantage d'images "
+"ou de vidéos supplémentaires (y compris via URL) ou :guilabel:`Tout "
+"supprimer`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:248
 msgid ""
@@ -2047,10 +2183,14 @@ msgid ""
 "variants>` are different versions of the same product, such as various "
 "colors or materials, with potential differences in price and availability."
 msgstr ""
+":doc:`Variantes de produit <../../sales/sales/products_prices/products/"
+"variants>` sont différentes versions d'un même produit, comme diverses "
+"couleurs ou matériaux, avec des différences potentielles de prix et de "
+"disponibilité."
 
 #: ../../content/applications/websites/ecommerce/products.rst:259
 msgid "To configure product variants for a product:"
-msgstr ""
+msgstr "Pour configurer les variantes de produit pour un produit :"
 
 #: ../../content/applications/websites/ecommerce/products.rst:261
 #: ../../content/applications/websites/website/configuration/multi_website.rst:26
@@ -2063,6 +2203,8 @@ msgid ""
 "Scroll down to the :guilabel:`Shop - Products` section and enable "
 "the :guilabel:`Product Variants` feature."
 msgstr ""
+"Défiler jusqu'à la section :guilabel:`Boutique - Produits` et activer la "
+"fonctionnalité :guilabel:`Variantes de produit`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:264
 msgid ""
@@ -2072,6 +2214,11 @@ msgid ""
 "product page. For multiple attributes, you can combine them to create "
 "specific variants."
 msgstr ""
+"Accéder aux :ref:`formulaires de produit <ecommerce/products/product-form>` "
+"et aller dans l'onglet :guilabel:`Attributs & Variantes`, où vous pouvez "
+"ajouter des attributs et des valeurs, permettant aux clients de configurer "
+"et sélectionner des variantes de produit sur la page produit. Pour plusieurs "
+"attributs, vous pouvez les combiner pour créer des variantes spécifiques."
 
 #: ../../content/applications/websites/ecommerce/products.rst:269
 msgid ""
@@ -2080,6 +2227,11 @@ msgid ""
 "Attributes`, click on the attribute, and select :guilabel:`Visible` "
 "or :guilabel:`Hidden` in the :guilabel:`eCommerce Filter Visibility` field."
 msgstr ""
+"Pour afficher ou masquer un attribut sur la page :guilabel:`Boutique` et "
+"permettre aux visiteurs de les filtrer, aller dans :menuselection:`Site "
+"Web --> eCommerce --> Attributs`, cliquer sur l'attribut, et sélectionner "
+":guilabel:`Visible` ou :guilabel:`Masqué` dans le champ "
+":guilabel:`Visibilité du filtre eCommerce`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:274
 msgid ""
@@ -2095,15 +2247,22 @@ msgid ""
 "Category` field and either select an :doc:`existing category or create a new "
 "one <../../websites/ecommerce/products>`."
 msgstr ""
+"Pour regrouper les attributs sous la même section lors de la "
+":ref:`comparaison de produits <ecommerce/products/product-comparison>`, "
+"aller dans le champ :guilabel:`Catégorie eCommerce` et soit sélectionner une "
+":doc:`catégorie existante ou en créer une nouvelle <../../websites/ecommerce/"
+"products>`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:282
 msgid "Two attribute values are needed to make the filter visible."
-msgstr ""
+msgstr "Deux valeurs d'attribut sont nécessaires pour rendre le filtre visible."
 
 #: ../../content/applications/websites/ecommerce/products.rst:285
 msgid ""
 ":doc:`Product variants <../../sales/sales/products_prices/products/variants>`"
 msgstr ""
+":doc:`Variantes de produit <../../sales/sales/products_prices/products/"
+"variants>`"
 
 #: ../../content/applications/websites/ecommerce/products.rst:290
 msgid "Digital files"
@@ -2117,6 +2276,11 @@ msgid ""
 "customer portal :ref:`after checkout <ecommerce-products-digital-files-after-"
 "payment>`."
 msgstr ""
+"Vous pouvez lier des fichiers numériques tels que des certificats, des "
+"livres électroniques ou des manuels d'utilisation aux produits. Ces "
+"documents sont disponibles :ref:`avant le paiement <ecommerce-products-"
+"digital-files-before-payment>` sur la page produit ou dans le portail client "
+":ref:`après le paiement <ecommerce-products-digital-files-after-payment>`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:297
 msgid ""
@@ -2125,6 +2289,12 @@ msgid ""
 "Then, click :guilabel:`Upload` to upload a file directly, or for additional "
 "options, click :guilabel:`New`, then :guilabel:`Upload your file`."
 msgstr ""
+"Pour lier un fichier numérique à un produit, aller dans le :ref:`formulaire "
+"de produit <ecommerce/products/product-form>` et cliquer sur le bouton "
+"intelligent :guilabel:`Documents`. Ensuite, cliquer sur "
+":guilabel:`Téléverser` pour téléverser un fichier directement, ou pour des "
+"options supplémentaires, cliquer sur :guilabel:`Nouveau`, puis "
+":guilabel:`Téléverser votre fichier`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:302
 msgid ""
@@ -2132,6 +2302,9 @@ msgid ""
 "click :guilabel:`New`, go to the :guilabel:`Type` field, and "
 "select :guilabel:`URL`."
 msgstr ""
+"Vous pouvez lier une URL au lieu d'un fichier numérique. Pour ce faire, "
+"cliquer sur :guilabel:`Nouveau`, aller dans le champ :guilabel:`Type`, et "
+"sélectionner :guilabel:`URL`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:304
 msgid ""
@@ -2139,10 +2312,13 @@ msgid ""
 "(:guilabel:`dropdown menu`) in the top-right corner of the document card and "
 "click :guilabel:`Edit`."
 msgstr ""
+"Pour modifier un fichier existant, cliquer sur :icon:`fa-ellipsis-v` "
+"(:guilabel:`menu déroulant`) dans le coin supérieur droit de la carte du "
+"document et cliquer sur :guilabel:`Modifier`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:310
 msgid "Digital files available before payment"
-msgstr ""
+msgstr "Fichiers numériques disponibles avant le paiement"
 
 #: ../../content/applications/websites/ecommerce/products.rst:312
 msgid ""
@@ -2150,14 +2326,17 @@ msgid ""
 "the :guilabel:`Visibility` field blank and toggle the :guilabel:`Show on "
 "product page` switch."
 msgstr ""
+"Pour rendre le fichier disponible sur la page produit (avant le paiement), "
+"laisser le champ :guilabel:`Visibilité` vide et activer le bouton "
+":guilabel:`Afficher sur la page produit`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:None
 msgid "digital file available before payment on the  product page"
-msgstr ""
+msgstr "fichier numérique disponible avant le paiement sur la page produit"
 
 #: ../../content/applications/websites/ecommerce/products.rst:321
 msgid "Digital files available after payment"
-msgstr ""
+msgstr "Fichiers numériques disponibles après le paiement"
 
 #: ../../content/applications/websites/ecommerce/products.rst:323
 msgid ""
@@ -2165,6 +2344,9 @@ msgid ""
 "field to :guilabel:`Confirmed order` and turn off the :guilabel:`Show on "
 "product page` switch."
 msgstr ""
+"Pour rendre le fichier disponible (après le paiement), définir le champ "
+":guilabel:`Visibilité` sur :guilabel:`Commande confirmée` et désactiver le "
+"bouton :guilabel:`Afficher sur la page produit`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:329
 msgid "Translation"
@@ -2177,18 +2359,24 @@ msgid ""
 "product-form>`. Fields that support multiple languages are identifiable by "
 "their abbreviation language (e.g., EN) next to their field."
 msgstr ""
+"Si plusieurs langues sont disponibles sur votre site web, vous pouvez "
+"traduire les informations d'un produit directement sur le :ref:`formulaire "
+"de produit <ecommerce/products/product-form>`. Les champs prenant en charge "
+"plusieurs langues sont identifiables par leur abréviation de langue (par ex. "
+"EN) à côté de leur champ."
 
 #: ../../content/applications/websites/ecommerce/products.rst:335
 msgid "The eCommerce-related fields to translate are:"
-msgstr ""
+msgstr "Les champs liés à l'eCommerce à traduire sont :"
 
 #: ../../content/applications/websites/ecommerce/products.rst:337
 msgid ":guilabel:`Product name`."
-msgstr ""
+msgstr ":guilabel:`Nom du produit`."
 
 #: ../../content/applications/websites/ecommerce/products.rst:338
 msgid ":guilabel:`Out-of-Stock Message` (under the :guilabel:`Sales` tab)."
 msgstr ""
+":guilabel:`Message de rupture de stock` (sous l'onglet :guilabel:`Ventes`)."
 
 #: ../../content/applications/websites/ecommerce/products.rst:339
 msgid ":guilabel:`Sales Description` (under the :guilabel:`Sales` tab)."
@@ -2813,6 +3001,9 @@ msgid ""
 "Accessories` section during the :guilabel:`Review Order` step, just before "
 "proceeding to checkout."
 msgstr ""
+"Les **produits accessoires** sont présentés dans la section "
+":guilabel:`Accessoires suggérés` lors de l'étape :guilabel:`Vérifier la "
+"commande`, juste avant de procéder au paiement."
 
 #: ../../content/applications/websites/ecommerce/products/cross_upselling.rst:41
 msgid ""
@@ -2821,6 +3012,10 @@ msgid ""
 "and enter the products you wish to feature in the :guilabel:`Accessory "
 "Products` field."
 msgstr ""
+"Pour activer les **produits accessoires**, allez dans :menuselection:`Site "
+"Web --> eCommerce --> Produits`, sélectionnez un produit, allez dans "
+"l'onglet :guilabel:`Ventes`, et saisissez les produits que vous souhaitez "
+"présenter dans le champ :guilabel:`Produits accessoires`."
 
 #: ../../content/applications/websites/ecommerce/products/cross_upselling.rst:None
 msgid "Suggested accessories at checkout during cart review"
@@ -2838,6 +3033,10 @@ msgid ""
 "expensive variant or product than their initial choice by presenting "
 "appealing alternatives."
 msgstr ""
+"Vous pouvez afficher des **produits alternatifs** en bas de la page produit "
+"comme technique de montée en gamme, en encourageant les clients à considérer "
+"une variante ou un produit plus cher que leur choix initial en présentant "
+"des alternatives attrayantes."
 
 #: ../../content/applications/websites/ecommerce/products/cross_upselling.rst:None
 msgid "Alternative products on the product page"
@@ -2850,12 +3049,18 @@ msgid ""
 "the :guilabel:`Sales` tab. In the :guilabel:`Alternative Products` field, "
 "add the products you want to feature."
 msgstr ""
+"Pour activer les produits alternatifs, accédez à :menuselection:`Site "
+"Web --> eCommerce --> Produits`, sélectionnez le produit souhaité, et allez "
+"dans l'onglet :guilabel:`Ventes`. Dans le champ :guilabel:`Produits "
+"alternatifs`, ajoutez les produits que vous souhaitez présenter."
 
 #: ../../content/applications/websites/ecommerce/products/cross_upselling.rst:64
 msgid ""
 "Click :guilabel:`Go to Website` to view the alternative products displayed "
 "at the bottom of the product page."
 msgstr ""
+"Cliquer sur :guilabel:`Aller sur le site Web` pour voir les produits "
+"alternatifs affichés en bas de la page produit."
 
 #: ../../content/applications/websites/ecommerce/products/cross_upselling.rst:67
 msgid ""
@@ -2865,6 +3070,11 @@ msgid ""
 "Products` section and modify the settings as needed to tailor the display to "
 "your preferences."
 msgstr ""
+"Pour ajuster les paramètres, cliquer sur :guilabel:`Modifier` et "
+"sélectionner le :doc:`bloc de construction <../../website/web_design/"
+"building_blocks>` associé. Dans l'onglet :guilabel:`Personnaliser`, faire "
+"défiler jusqu'à la section :guilabel:`Produits alternatifs` et modifier les "
+"paramètres selon les besoins pour adapter l'affichage à vos préférences."
 
 #: ../../content/applications/websites/ecommerce/products/price_management.rst:3
 msgid "Price management"
@@ -3024,6 +3234,7 @@ msgstr ""
 msgid ""
 ":doc:`../../../inventory_and_mrp/inventory/product_management/configure/uom`"
 msgstr ""
+":doc:`../../../inventory_and_mrp/inventory/product_management/configure/uom`"
 
 #: ../../content/applications/websites/ecommerce/products/price_management.rst:84
 msgid "Price configuration: pricelists"
@@ -3164,7 +3375,7 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:16
 msgid "External provider integration"
-msgstr ""
+msgstr "Intégration de fournisseur externe"
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:18
 msgid ""
@@ -3180,6 +3391,17 @@ msgid ""
 "applications/inventory_and_mrp/inventory/shipping_receiving/"
 "setup_configuration/labels>` and shipping processes."
 msgstr ""
+"Pour gérer la livraison des produits, vous pouvez connecter votre base de "
+"données à des :doc:`transporteurs tiers </applications/inventory_and_mrp/"
+"inventory/shipping_receiving/setup_configuration/third_party_shipper>` tels "
+"que :doc:`FedEx </applications/inventory_and_mrp/inventory/"
+"shipping_receiving/setup_configuration/fedex>`, :doc:`UPS </applications/"
+"inventory_and_mrp/inventory/shipping_receiving/setup_configuration/"
+"ups_credentials>`, ou :doc:`DHL </applications/inventory_and_mrp/inventory/"
+"shipping_receiving/setup_configuration/dhl_credentials>`. Un connecteur de "
+"livraison se lie à ces prestataires, en automatisant les :doc:`étiquettes de "
+"suivi </applications/inventory_and_mrp/inventory/shipping_receiving/"
+"setup_configuration/labels>` et les processus d'expédition."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:27
 msgid ""
@@ -3200,6 +3422,8 @@ msgid ""
 ":doc:`Third-party shipping carriers </applications/inventory_and_mrp/"
 "inventory/shipping_receiving/setup_configuration/third_party_shipper>`"
 msgstr ""
+":doc:`Transporteurs tiers </applications/inventory_and_mrp/inventory/"
+"shipping_receiving/setup_configuration/third_party_shipper>`"
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:39
 msgid ""
@@ -3212,7 +3436,7 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:45
 msgid "Margin on delivery rate"
-msgstr ""
+msgstr "Marge sur le tarif de livraison"
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:47
 msgid ""
@@ -3222,6 +3446,12 @@ msgid ""
 "final price at checkout. Contact your carrier for further assistance with "
 "this configuration."
 msgstr ""
+"Pour ajouter des frais supplémentaires au tarif de livraison de base (par "
+"exemple, pour couvrir des coûts supplémentaires), se connecter à votre "
+"compte transporteur et définir les frais souhaités dans le champ associé. Le "
+"connecteur de livraison récupère ces frais et les inclut dans le prix final "
+"au moment du paiement. Contacter votre transporteur pour obtenir de l'aide "
+"supplémentaire sur cette configuration."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:52
 msgid ""
@@ -3232,12 +3462,21 @@ msgid ""
 "shipping costs and/or the :guilabel:`Additional margin` field to add a fixed "
 "amount."
 msgstr ""
+"Alternativement, saisir `0` dans votre compte de prestataire de livraison "
+"tiers, puis définir les frais dans Odoo. Pour ce faire, accéder au "
+":ref:`formulaire de la méthode de livraison <inventory/shipping_receiving/"
+"configure-delivery-method>` souhaité et saisir les frais dans le champ "
+":guilabel:`Marge sur tarif` pour ajouter un pourcentage aux frais de "
+"livraison et/ou le champ :guilabel:`Marge supplémentaire` pour ajouter un "
+"montant fixe."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:59
 msgid ""
 "The field used to define additional fees cannot be left empty in your third-"
 "party shipping provider account."
 msgstr ""
+"Le champ utilisé pour définir les frais supplémentaires ne peut pas être "
+"laissé vide dans votre compte de prestataire de livraison tiers."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:65
 msgid "Custom shipping method"
@@ -3259,6 +3498,9 @@ msgid ""
 "to configure specific rules (e.g., to offer free shipping for orders above a "
 "specific amount) for a specific provider;"
 msgstr ""
+"pour configurer des règles spécifiques (par exemple, pour offrir la "
+"livraison gratuite pour les commandes au-dessus d'un montant spécifique) "
+"pour un prestataire spécifique ;"
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:73
 msgid ""
@@ -3373,12 +3615,16 @@ msgid ""
 "To get an overview of all courses, go to :menuselection:`eLearning --> "
 "Courses --> Courses`."
 msgstr ""
+"Pour obtenir un aperçu de tous les cours, aller à "
+":menuselection:`eLearning --> Cours --> Cours`."
 
 #: ../../content/applications/websites/elearning.rst:25
 msgid ""
 "Click on a course card to edit the course on the back end. "
 "Click :guilabel:`View course` to access the course on the front end."
 msgstr ""
+"Cliquer sur une carte de cours pour éditer le cours en back-end. Cliquer sur "
+":guilabel:`Voir le cours` pour accéder au cours en front-end."
 
 #: ../../content/applications/websites/elearning.rst:31
 msgid "Course creation"
@@ -3393,6 +3639,13 @@ msgid ""
 "your mouse on the camera placeholder image and click on :icon:`fa-"
 "pencil` :guilabel:`(Edit)`."
 msgstr ""
+"Cliquer sur :guilabel:`Nouveau` pour créer un nouveau cours. Dans le "
+"formulaire qui s'ouvre, ajouter un :guilabel:`Titre du cours` et une ou "
+"plusieurs :guilabel:`Étiquettes` pour catégoriser le cours et "
+":ref:`permettre aux utilisateurs de filtrer les cours en fonction de leurs "
+"étiquettes <elearning/course-groups>`. Pour ajouter une image pour illustrer "
+"le cours, survoler l'image de l'espace réservé de la caméra et cliquer sur "
+":icon:`fa-pencil` :guilabel:`(Modifier)`."
 
 #: ../../content/applications/websites/elearning.rst:39
 msgid ""
@@ -3400,6 +3653,9 @@ msgid ""
 "content>`, :ref:`Description <elearning/description>`, :ref:`Options "
 "<elearning/options>`, and :ref:`Karma <elearning/karma>`."
 msgstr ""
+"Quatre onglets permettent d'éditer davantage le cours : :ref:`Contenu "
+"<elearning/content>`, :ref:`Description <elearning/description>`, "
+":ref:`Options <elearning/options>`, et :ref:`Karma <elearning/karma>`."
 
 #: ../../content/applications/websites/elearning.rst:None
 msgid "Create your elearning course."
@@ -3418,6 +3674,14 @@ msgid ""
 "understanding, certify their skills, and motivate them. **Certification** is "
 "part of the :doc:`Surveys <../marketing/surveys/create>` app."
 msgstr ""
+"Cet onglet permet de gérer le contenu du cours. Cliquer sur "
+":guilabel:`Ajouter une section` pour diviser le cours en différentes "
+"sections. Cliquer sur :guilabel:`Ajouter du contenu` pour créer des "
+":ref:`éléments de contenu <elearning/content-creation>`. Cliquer sur "
+":guilabel:`Ajouter une certification` pour évaluer le niveau de "
+"compréhension des participants, certifier leurs compétences et les motiver. "
+"La **Certification** fait partie de l'application :doc:`Sondages <../"
+"marketing/surveys/create>`."
 
 #: ../../content/applications/websites/elearning.rst:60
 #: ../../content/applications/websites/elearning.rst:266
@@ -3430,6 +3694,9 @@ msgid ""
 "the :guilabel:`Description` tab. It appears under the course title on your "
 "website."
 msgstr ""
+"Vous pouvez ajouter une courte description ou des informations relatives au "
+"cours dans l'onglet :guilabel:`Description`. Elle apparaît sous le titre du "
+"cours sur votre site web."
 
 #: ../../content/applications/websites/elearning.rst:None
 msgid "Add a description to your course."
@@ -3447,6 +3714,10 @@ msgid ""
 "<elearning/options-communication>`, :ref:`Access rights <elearning/options-"
 "access-rights>`, and :ref:`Display <elearning/options-display>`."
 msgstr ""
+"Dans l'onglet :guilabel:`Options`, différentes configurations sont "
+"disponibles : :ref:`Cours <elearning/options-course>`, :ref:`Communication "
+"<elearning/options-communication>`, :ref:`Droits d'accès <elearning/options-"
+"access-rights>`, et :ref:`Affichage <elearning/options-display>`."
 
 #: ../../content/applications/websites/elearning.rst:None
 msgid "Overview of the Options tab"
@@ -3462,6 +3733,9 @@ msgid ""
 "websites, use the :guilabel:`Website` field to display the course only on "
 "the selected website."
 msgstr ""
+"Attribuer un utilisateur :guilabel:`Responsable` pour le cours. Si vous avez "
+"plusieurs sites web, utiliser le champ :guilabel:`Site Web` pour afficher le "
+"cours uniquement sur le site web sélectionné."
 
 #: ../../content/applications/websites/elearning.rst:92
 msgid "Communication"
@@ -3472,6 +3746,9 @@ msgid ""
 ":guilabel:`Allow Reviews`: Enable this option to allow attendees to like, "
 "comment on, and submit reviews for the course content."
 msgstr ""
+":guilabel:`Autoriser les avis` : activer cette option pour permettre aux "
+"participants d'aimer, commenter et soumettre des avis sur le contenu du "
+"cours."
 
 #: ../../content/applications/websites/elearning.rst:96
 msgid ""
@@ -3479,6 +3756,9 @@ msgid ""
 "the :guilabel:`Forum` feature is enabled in the :ref:`eLearning settings "
 "<elearning/settings>`)."
 msgstr ""
+":guilabel:`Forum` : ajouter un forum dédié au cours (affiché uniquement si "
+"la fonctionnalité :guilabel:`Forum` est activée dans les :ref:`paramètres "
+"eLearning <elearning/settings>`)."
 
 #: ../../content/applications/websites/elearning.rst:98
 msgid ""
@@ -3486,6 +3766,10 @@ msgid ""
 "emails to attendees when you upload new content items. Click on :icon:`oi-"
 "arrow-right` :guilabel:`Internal link` to access the email template editor."
 msgstr ""
+":guilabel:`Notification de nouveau contenu` : sélectionner un modèle d'e-"
+"mail pour envoyer des e-mails aux participants lorsque vous téléchargez de "
+"nouveaux éléments de contenu. Cliquer sur :icon:`oi-arrow-right` "
+":guilabel:`Lien interne` pour accéder à l'éditeur de modèles d'e-mails."
 
 #: ../../content/applications/websites/elearning.rst:101
 msgid ""
@@ -3493,6 +3777,10 @@ msgid ""
 "to attendees once they reach the end of the course. Click on :icon:`oi-arrow-"
 "right` :guilabel:`Internal link` to access the email template editor."
 msgstr ""
+":guilabel:`Notification d'achèvement` : sélectionner un modèle d'e-mail pour "
+"envoyer des e-mails aux participants une fois qu'ils atteignent la fin du "
+"cours. Cliquer sur :icon:`oi-arrow-right` :guilabel:`Lien interne` pour "
+"accéder à l'éditeur de modèles d'e-mails."
 
 #: ../../content/applications/websites/elearning.rst:106
 msgid ""
@@ -3511,6 +3799,8 @@ msgid ""
 ":guilabel:`Prerequisites`: Set one or more other courses that users are "
 "advised to complete before accessing the course."
 msgstr ""
+":guilabel:`Prérequis` : définir un ou plusieurs autres cours que les "
+"utilisateurs sont invités à compléter avant d'accéder au cours."
 
 #: ../../content/applications/websites/elearning.rst:117
 msgid ""
@@ -3518,6 +3808,9 @@ msgid ""
 "prerequisite for one or more courses, this read-only field displays the "
 "course name(s)."
 msgstr ""
+":guilabel:`Prérequis de` : si le cours a été défini comme prérequis pour un "
+"ou plusieurs cours, ce champ en lecture seule affiche le ou les noms de "
+"cours."
 
 #: ../../content/applications/websites/elearning.rst:119
 msgid ""
@@ -3568,6 +3861,8 @@ msgid ""
 ":guilabel:`Training`: The course content appears as a training program, and "
 "the courses must be taken in the proposed order."
 msgstr ""
+":guilabel:`Formation` : le contenu du cours apparaît comme un programme de "
+"formation et les cours doivent être suivis dans l'ordre proposé."
 
 #: ../../content/applications/websites/elearning.rst:144
 msgid ""
@@ -3575,6 +3870,9 @@ msgid ""
 "the :guilabel:`Featured Content` field to define which content items are "
 "promoted on the course homepage."
 msgstr ""
+":guilabel:`Documentation` : le contenu est disponible dans n'importe quel "
+"ordre. Utiliser le champ :guilabel:`Contenu en vedette` pour définir quels "
+"éléments de contenu sont mis en avant sur la page d'accueil du cours."
 
 #: ../../content/applications/websites/elearning.rst:150
 msgid "Karma tab"
@@ -3591,6 +3889,9 @@ msgid ""
 "In the :guilabel:`Rewards` section, choose how many karma points you want to "
 "grant attendees when they :guilabel:`Review` or :guilabel:`Finish` a course."
 msgstr ""
+"Dans la section :guilabel:`Récompenses`, choisir combien de points de karma "
+"vous souhaitez attribuer aux participants lorsqu'ils :guilabel:`évaluent` ou "
+":guilabel:`terminent` un cours."
 
 #: ../../content/applications/websites/elearning.rst:157
 msgid ""
@@ -3598,6 +3899,9 @@ msgid ""
 "to :guilabel:`Add Review`, :guilabel:`Add Comment`, or :guilabel:`Vote` on "
 "the course."
 msgstr ""
+"Dans la section :guilabel:`Droits d'accès`, définir les points de karma "
+"nécessaires pour :guilabel:`Ajouter un avis`, :guilabel:`Ajouter un "
+"commentaire` ou :guilabel:`Voter` sur le cours."
 
 #: ../../content/applications/websites/elearning.rst:163
 msgid "Course groups"
@@ -3609,6 +3913,9 @@ msgid ""
 "dashboard on your website and find the course that meets their interests, "
 "needs, level, etc."
 msgstr ""
+"Les **groupes de cours** permettent aux utilisateurs de filtrer le tableau "
+"de bord :guilabel:`Tous les cours` sur votre site web et de trouver le cours "
+"qui répond à leurs intérêts, besoins, niveau, etc."
 
 #: ../../content/applications/websites/elearning.rst:168
 msgid ""
@@ -3619,6 +3926,13 @@ msgid ""
 "the :guilabel:`Tag Name` column. For each tag, you can select a "
 "corresponding color."
 msgstr ""
+"Pour les gérer, aller à :menuselection:`eLearning --> Configuration --> "
+"Groupes de cours`. Cliquer sur :guilabel:`Nouveau` pour créer un nouveau "
+"groupe de cours. Ajouter le :guilabel:`Nom du groupe de cours`, activer "
+":guilabel:`Entrée de menu` pour permettre aux utilisateurs de rechercher par "
+"groupe de cours sur le site web, et ajouter des étiquettes dans la colonne "
+":guilabel:`Nom de l'étiquette`. Pour chaque étiquette, vous pouvez "
+"sélectionner une couleur correspondante."
 
 #: ../../content/applications/websites/elearning.rst:176
 msgid "Settings"
@@ -3630,30 +3944,41 @@ msgid ""
 "to :menuselection:`eLearning --> Configuration --> Settings`, then enable "
 "the desired feature:"
 msgstr ""
+"Les options suivantes sont disponibles dans les paramètres eLearning. Aller "
+"à :menuselection:`eLearning --> Configuration --> Paramètres`, puis activer "
+"la fonctionnalité souhaitée :"
 
 #: ../../content/applications/websites/elearning.rst:181
 msgid ""
 ":guilabel:`Certifications`: Assess attendees' knowledge and provide official "
 "certification of their skills."
 msgstr ""
+":guilabel:`Certifications` : évaluer les connaissances des participants et "
+"fournir une certification officielle de leurs compétences."
 
 #: ../../content/applications/websites/elearning.rst:183
 msgid ""
 ":guilabel:`Paid Courses`: Sell course access directly through your website "
 "and track revenue."
 msgstr ""
+":guilabel:`Cours payants` : vendre l'accès aux cours directement via votre "
+"site web et suivre les revenus."
 
 #: ../../content/applications/websites/elearning.rst:184
 msgid ""
 ":guilabel:`Mailing`: Send mass mailings to keep all attendees informed and "
 "up to date."
 msgstr ""
+":guilabel:`Mailing` : envoyer des mailings de masse pour tenir tous les "
+"participants informés et à jour."
 
 #: ../../content/applications/websites/elearning.rst:185
 msgid ""
 ":guilabel:`Forum`: Build a community space where attendees can ask questions "
 "and help each other."
 msgstr ""
+":guilabel:`Forum` : créer un espace communautaire où les participants "
+"peuvent poser des questions et s'entraider."
 
 #: ../../content/applications/websites/elearning.rst:190
 msgid "Content"
@@ -3666,6 +3991,11 @@ msgid ""
 "the :guilabel:`Content Title` and any desired :ref:`Tags <elearning/content-"
 "tags>`, then fill in the required information in the different tabs."
 msgstr ""
+"Pour gérer le contenu des cours, aller à :menuselection:`eLearning --> "
+"Cours --> Contenus`. Cliquer sur :guilabel:`Nouveau` pour créer un élément "
+"de contenu. Ajouter le :guilabel:`Titre du contenu` et toutes les "
+":ref:`étiquettes <elearning/content-tags>` souhaitées, puis remplir les "
+"informations requises dans les différents onglets."
 
 #: ../../content/applications/websites/elearning.rst:None
 msgid "Create your content."
@@ -3678,6 +4008,10 @@ msgid ""
 "course card, then click :guilabel:`Add content` at the bottom of "
 "the :guilabel:`Content` tab."
 msgstr ""
+"Vous pouvez également créer du nouveau contenu depuis un cours. Aller à "
+":menuselection:`eLearning --> Cours --> Cours`, cliquer sur la fiche du "
+"cours concerné, puis cliquer sur :guilabel:`Ajouter du contenu` en bas de "
+"l'onglet :guilabel:`Contenu`."
 
 #: ../../content/applications/websites/elearning.rst:207
 msgid "Document tab"
@@ -3685,18 +4019,22 @@ msgstr "Onglet Document"
 
 #: ../../content/applications/websites/elearning.rst:209
 msgid "For each content type, provide the following information:"
-msgstr ""
+msgstr "Pour chaque type de contenu, fournir les informations suivantes :"
 
 #: ../../content/applications/websites/elearning.rst:211
 msgid ""
 ":guilabel:`Course`: Select the course to which the content item belongs."
 msgstr ""
+":guilabel:`Cours` : sélectionner le cours auquel appartient l'élément de "
+"contenu."
 
 #: ../../content/applications/websites/elearning.rst:212
 msgid ""
 ":guilabel:`Content Type`: Select the relevant :ref:`content type <elearning/"
 "content-type>` and provide the required information."
 msgstr ""
+":guilabel:`Type de contenu` : sélectionner le :ref:`type de contenu "
+"<elearning/content-type>` approprié et fournir les informations requises."
 
 #: ../../content/applications/websites/elearning.rst:214
 msgid ""
@@ -3704,33 +4042,45 @@ msgid ""
 "By default, this is the user who creates the course, but another user can be "
 "selected."
 msgstr ""
+":guilabel:`Responsable` : sélectionner l'utilisateur responsable de "
+"l'élément de contenu. Par défaut, il s'agit de l'utilisateur qui crée le "
+"cours, mais un autre utilisateur peut être sélectionné."
 
 #: ../../content/applications/websites/elearning.rst:216
 msgid ":guilabel:`Duration`: Enter the time required to complete the lesson."
-msgstr ""
+msgstr ":guilabel:`Durée` : saisir le temps nécessaire pour terminer la leçon."
 
 #: ../../content/applications/websites/elearning.rst:217
 msgid ""
 ":guilabel:`Allow Preview`: Enable this if the content should be accessible "
 "to anyone."
 msgstr ""
+":guilabel:`Autoriser l'aperçu` : activer cette option si le contenu doit "
+"être accessible à tous."
 
 #: ../../content/applications/websites/elearning.rst:220
 msgid ""
 "If the :ref:`Content Type <elearning/content-type>` is :guilabel:`Document`, "
 "enabling :guilabel:`Allow Download` allows users to download the content."
 msgstr ""
+"Si le :ref:`type de contenu <elearning/content-type>` est "
+":guilabel:`Document`, activer :guilabel:`Autoriser le téléchargement` permet "
+"aux utilisateurs de télécharger le contenu."
 
 #: ../../content/applications/websites/elearning.rst:223
 msgid ""
 "Two read-only fields provide data about how often the content item is viewed:"
 msgstr ""
+"Deux champs en lecture seule fournissent des données sur la fréquence de "
+"consultation de l'élément de contenu :"
 
 #: ../../content/applications/websites/elearning.rst:225
 msgid ""
 ":guilabel:`# of Public Views`: displays the number of views from non-"
 "enrolled participants."
 msgstr ""
+":guilabel:`Nombre de vues publiques` : affiche le nombre de vues des "
+"participants non inscrits."
 
 #: ../../content/applications/websites/elearning.rst:226
 msgid ""
@@ -3742,15 +4092,15 @@ msgstr ""
 
 #: ../../content/applications/websites/elearning.rst:None
 msgid "Provide information about the content."
-msgstr ""
+msgstr "Fournir des informations sur le contenu."
 
 #: ../../content/applications/websites/elearning.rst:235
 msgid "Content types"
-msgstr ""
+msgstr "Types de contenu"
 
 #: ../../content/applications/websites/elearning.rst:237
 msgid "You can add the following content types:"
-msgstr ""
+msgstr "Vous pouvez ajouter les types de contenu suivants :"
 
 #: ../../content/applications/websites/elearning.rst:239
 msgid ""
@@ -3759,6 +4109,11 @@ msgid ""
 "Supported formats include JPG, JPEG, PNG, SVG, GIF, and WEBP. The maximum "
 "file size is 25MB."
 msgstr ""
+":guilabel:`Image` : pour téléverser une image, sélectionner "
+":guilabel:`Téléverser depuis l'appareil`, cliquer sur :guilabel:`Téléverser "
+"votre fichier`, puis sélectionner le fichier concerné. Les formats pris en "
+"charge incluent JPG, JPEG, PNG, SVG, GIF et WEBP. La taille maximale du "
+"fichier est de 25 Mo."
 
 #: ../../content/applications/websites/elearning.rst:243
 msgid ""
@@ -3766,12 +4121,17 @@ msgid ""
 "select :guilabel:`Retrieve from Google Drive`, then add the Google Drive "
 "link to the image."
 msgstr ""
+"Sinon, pour ajouter une image enregistrée sur Google Drive, sélectionner "
+":guilabel:`Récupérer depuis Google Drive`, puis ajouter le lien Google Drive "
+"vers l'image."
 
 #: ../../content/applications/websites/elearning.rst:246
 msgid ""
 ":guilabel:`Article`: Articles are website pages that are customized using "
 "the website builder on your website's front end."
 msgstr ""
+":guilabel:`Article` : les articles sont des pages de site web personnalisées "
+"à l'aide du créateur de site web sur l'interface publique de votre site web."
 
 #: ../../content/applications/websites/elearning.rst:249
 msgid ""
@@ -3781,6 +4141,11 @@ msgid ""
 "the page using the website builder </applications/websites/website/"
 "web_design>`."
 msgstr ""
+"Avec le :guilabel:`cours` sélectionné, cliquer sur le bouton intelligent "
+":guilabel:`Aller au site web`, puis, en haut à droite de l'écran, cliquer "
+"sur :icon:`fa-pencil` :guilabel:`Modifier`. Rédiger le contenu de l'article "
+"et :doc:`personnaliser la page à l'aide du créateur de site web </"
+"applications/websites/website/web_design>`."
 
 #: ../../content/applications/websites/elearning.rst:253
 msgid ""
@@ -3788,6 +4153,10 @@ msgid ""
 "Device`, click :guilabel:`Upload your file`, then select the relevant file. "
 "Only PDF documents can be uploaded."
 msgstr ""
+":guilabel:`Document` : pour téléverser un document, sélectionner "
+":guilabel:`Téléverser depuis l'appareil`, cliquer sur :guilabel:`Téléverser "
+"votre fichier`, puis sélectionner le fichier concerné. Seuls les documents "
+"PDF peuvent être téléversés."
 
 #: ../../content/applications/websites/elearning.rst:256
 msgid ""
@@ -3795,23 +4164,32 @@ msgid ""
 "Google Sheets spreadsheet, click :guilabel:`Retrieve from Google Drive` and "
 "add the Google Drive link to the file."
 msgstr ""
+"Sinon, pour ajouter une présentation Google Slides, un document Google Docs "
+"ou une feuille de calcul Google Sheets, cliquer sur :guilabel:`Récupérer "
+"depuis Google Drive` et ajouter le lien Google Drive vers le fichier."
 
 #: ../../content/applications/websites/elearning.rst:260
 msgid ""
 ":guilabel:`Video`: Add the YouTube, Google Drive, or Vimeo link to the video."
 msgstr ""
+":guilabel:`Vidéo` : ajouter le lien YouTube, Google Drive ou Vimeo vers la "
+"vidéo."
 
 #: ../../content/applications/websites/elearning.rst:261
 msgid ""
 ":guilabel:`Quiz`: Open the :ref:`Quiz tab <elearning/content-quiz>` to "
 "create a quiz."
 msgstr ""
+":guilabel:`Quiz` : ouvrir l':ref:`onglet Quiz <elearning/content-quiz>` pour "
+"créer un quiz."
 
 #: ../../content/applications/websites/elearning.rst:268
 msgid ""
 "Add a description for the content. This text is displayed in "
 "the :guilabel:`About` section of the content item on your website."
 msgstr ""
+"Ajouter une description pour le contenu. Ce texte s'affiche dans la section "
+":guilabel:`À propos` de l'élément de contenu sur votre site web."
 
 #: ../../content/applications/websites/elearning.rst:274
 msgid "Additional Resources tab"
@@ -3823,6 +4201,9 @@ msgid ""
 "participants' learning. The resource appears in the course content on your "
 "website."
 msgstr ""
+"Cliquer sur :guilabel:`Ajouter une ligne` pour ajouter un lien ou un fichier "
+"qui soutient l'apprentissage des participants. La ressource apparaît dans le "
+"contenu du cours sur le site web."
 
 #: ../../content/applications/websites/elearning.rst:None
 msgid "Additional ressources"
@@ -3837,6 +4218,8 @@ msgid ""
 "From this tab, you can create a quiz to assess your students at the end of "
 "the course."
 msgstr ""
+"Depuis cet onglet, il est possible de créer un quiz pour évaluer les "
+"étudiants à la fin du cours."
 
 #: ../../content/applications/websites/elearning.rst:289
 msgid ""
@@ -3848,6 +4231,14 @@ msgid ""
 "the :guilabel:`Comment` field to provide additional information when an "
 "answer is selected."
 msgstr ""
+"La section :guilabel:`Récompenses en points` permet d'attribuer des points "
+"de karma en fonction du nombre de tentatives nécessaires pour répondre "
+"correctement. Pour créer une question, cliquer sur :guilabel:`Ajouter une "
+"ligne`, saisir le :guilabel:`Nom de la question` et ajouter les réponses "
+"possibles. Marquer la ou les bonnes réponses en sélectionnant :guilabel:`Est "
+"une réponse correcte`. Il est également possible d'utiliser le champ "
+":guilabel:`Commentaire` pour fournir des informations supplémentaires "
+"lorsqu'une réponse est sélectionnée."
 
 #: ../../content/applications/websites/elearning.rst:298
 msgid "Content Tags"
@@ -3859,16 +4250,23 @@ msgid ""
 "course on your website, and can help users identify the kind of content a "
 "particular lesson contains, e.g., theory, or exercises."
 msgstr ""
+"Les **étiquettes de contenu** sont visibles sur le tableau de bord "
+":guilabel:`Contenus` d'un cours sur le site web et peuvent aider les "
+"utilisateurs à identifier le type de contenu qu'une leçon particulière "
+"contient, par exemple de la théorie ou des exercices."
 
 #: ../../content/applications/websites/elearning.rst:303
 msgid ""
 "To manage content tags, go to :menuselection:`eLearning --> Configuration --"
 "> Content Tags`. Click :guilabel:`New` to create a new tag."
 msgstr ""
+"Pour gérer les étiquettes de contenu, aller à :menuselection:`eLearning --> "
+"Configuration --> Étiquettes de contenu`. Cliquer sur :guilabel:`Nouveau` "
+"pour créer une nouvelle étiquette."
 
 #: ../../content/applications/websites/elearning.rst:309
 msgid "Publish courses and content"
-msgstr ""
+msgstr "Publier les cours et le contenu"
 
 #: ../../content/applications/websites/elearning.rst:311
 msgid ""
@@ -3877,22 +4275,32 @@ msgid ""
 "to Website` smart button at the top of the course form or an individual "
 "content form."
 msgstr ""
+"Les cours et les éléments de contenu doivent être publiés depuis l'interface "
+"publique pour être disponibles pour le public. Pour accéder à l'interface "
+"publique, cliquer sur le bouton intelligent :guilabel:`Aller sur le site "
+"web` en haut du formulaire de cours ou d'un formulaire de contenu individuel."
 
 #: ../../content/applications/websites/elearning.rst:315
 msgid "A course and its content items are published separately:"
-msgstr ""
+msgstr "Un cours et ses éléments de contenu sont publiés séparément :"
 
 #: ../../content/applications/websites/elearning.rst:317
 msgid ""
 "To publish a course, access the main course page, then toggle the switch in "
 "the upper-right corner from :guilabel:`Unpublished` to :guilabel:`Published`."
 msgstr ""
+"Pour publier un cours, accéder à la page principale du cours, puis basculer "
+"l'interrupteur dans le coin supérieur droit de :guilabel:`Non publié` à "
+":guilabel:`Publié`."
 
 #: ../../content/applications/websites/elearning.rst:319
 msgid ""
 "To publish individual content items, click on an item to open it, then "
 "toggle the switch from :guilabel:`Unpublished` to :guilabel:`Published`."
 msgstr ""
+"Pour publier des éléments de contenu individuels, cliquer sur un élément "
+"pour l'ouvrir, puis basculer l'interrupteur de :guilabel:`Non publié` à "
+":guilabel:`Publié`."
 
 #: ../../content/applications/websites/elearning.rst:None
 msgid "Publish your content."
@@ -3904,6 +4312,9 @@ msgid ""
 "publishing the course itself. Published content is only available to your "
 "audience once the course it is part of is published."
 msgstr ""
+"Lors de la publication d'un nouveau cours, publier les éléments de contenu "
+"individuels avant de publier le cours lui-même. Le contenu publié n'est "
+"disponible pour le public qu'une fois le cours dont il fait partie publié."
 
 #: ../../content/applications/websites/elearning.rst:330
 msgid ""
@@ -3911,12 +4322,17 @@ msgid ""
 "item, then toggle the switch from :guilabel:`Published` "
 "to :guilabel:`Unpublished`."
 msgstr ""
+"Pour dépublier un cours ou un élément de contenu individuel, ouvrir le cours "
+"ou l'élément, puis basculer l'interrupteur de :guilabel:`Publié` à "
+":guilabel:`Non publié`."
 
 #: ../../content/applications/websites/elearning.rst:334
 msgid ""
 "Unpublishing a course renders the course *and* its content unavailable to "
 "your audience."
 msgstr ""
+"Dépublier un cours rend le cours *et* son contenu indisponibles pour le "
+"public."
 
 #: ../../content/applications/websites/forum.rst:3
 msgid "Forum"
@@ -4070,6 +4486,9 @@ msgid ""
 "interactions <elearning/karma>` and by :ref:`completing quizzes <elearning/"
 "content-quiz>`."
 msgstr ""
+"Les utilisateurs d'eLearning peuvent gagner des points de karma grâce à "
+"différentes :ref:`interactions de cours <elearning/karma>` et en "
+":ref:`complétant des quiz <elearning/content-quiz>`."
 
 #: ../../content/applications/websites/forum.rst:62
 msgid "Karma gains"
@@ -5035,7 +5454,7 @@ msgstr "Activer le Live Chat"
 
 #: ../../content/applications/websites/livechat.rst:15
 msgid "The **Live Chat** application can be installed multiple ways:"
-msgstr ""
+msgstr "L'application **Live Chat** peut être installée de plusieurs manières :"
 
 #: ../../content/applications/websites/livechat.rst:17
 msgid ""
@@ -5050,6 +5469,10 @@ msgid ""
 "checkbox next to :guilabel:`Live Chat`, under the :guilabel:`Channels` "
 "section."
 msgstr ""
+"Aller dans :menuselection:`l'application Assistance --> Configuration --> "
+"Équipes d'assistance`, sélectionner une équipe et, sur la page des "
+"paramètres de l'équipe, cocher la case à côté de :guilabel:`Live Chat`, dans "
+"la section :guilabel:`Canaux`."
 
 #: ../../content/applications/websites/livechat.rst:21
 msgid ""
@@ -5057,6 +5480,10 @@ msgid ""
 "Settings`, scroll to the :guilabel:`Email & Marketing` section, check the "
 "box next to :guilabel:`Livechat`, and click :guilabel:`Save`."
 msgstr ""
+"Dans l'application :menuselection:`Site Web`, aller à "
+":menuselection:`Configuration --> Paramètres`, faire défiler jusqu'à la "
+"section :guilabel:`E-mail et marketing`, cocher la case à côté de "
+":guilabel:`Livechat` et cliquer sur :guilabel:`Enregistrer`."
 
 #: ../../content/applications/websites/livechat.rst:0
 msgid "View of the settings page and the live chat feature for Odoo Live Chat."
@@ -5069,10 +5496,12 @@ msgid ""
 "After the **Live Chat** application is installed, a live chat *Channel* is "
 "created, by default."
 msgstr ""
+"Une fois l'application **Live Chat** installée, un *canal* de live chat est "
+"créé par défaut."
 
 #: ../../content/applications/websites/livechat.rst:33
 msgid "Create live chat channels"
-msgstr ""
+msgstr "Créer des canaux Live Chat"
 
 #: ../../content/applications/websites/livechat.rst:35
 msgid ""
@@ -5093,6 +5522,10 @@ msgid ""
 "tab>`, :ref:`Channel Rules <livechat/channel-rules-tab>`, and :ref:`Widget "
 "<livechat/widget-tab>`), follow the steps below."
 msgstr ""
+"Pour configurer les onglets restants du formulaire de détail du canal "
+"(:ref:`Opérateurs <livechat/operators-tab>`, :ref:`Options <livechat/options-"
+"tab>`, :ref:`Règles du canal <livechat/channel-rules-tab>` et :ref:`Widget "
+"<livechat/widget-tab>`), suivez les étapes ci-dessous."
 
 #: ../../content/applications/websites/livechat.rst:48
 msgid ""
@@ -5103,10 +5536,16 @@ msgid ""
 "v` :guilabel:`(vertical ellipsis)` icon to open the drop-down menu. "
 "Click :guilabel:`Configure Channel` to open the channel detail form."
 msgstr ""
+"Le formulaire de détail du canal pour n'importe quel canal est accessible en "
+"retournant au tableau de bord :guilabel:`Canaux Live Chat du site Web` via "
+"le fil d'Ariane. Trouvez la carte Kanban du canal Live Chat approprié, "
+"survolez-la, puis cliquez sur l'icône :icon:`fa-ellipsis-v` :guilabel:`"
+"(points de suspension verticaux)` pour ouvrir le menu déroulant. Cliquez sur "
+":guilabel:`Configurer le canal` pour ouvrir le formulaire de détail du canal."
 
 #: ../../content/applications/websites/livechat.rst:57
 msgid "Operators tab"
-msgstr ""
+msgstr "Onglet opérateurs"
 
 #: ../../content/applications/websites/livechat.rst:59
 msgid ""
@@ -5115,6 +5554,12 @@ msgid ""
 "channel, they can receive chats from website visitors wherever they are in "
 "the database. Chat windows open in the bottom-right corner of the screen."
 msgstr ""
+"Les *opérateurs* sont les utilisateurs qui agissent en tant qu'agents et "
+"répondent aux demandes Live Chat des clients. Lorsqu'un utilisateur est "
+"ajouté en tant qu'opérateur dans un canal Live Chat, il peut recevoir des "
+"discussions de visiteurs du site Web où qu'il se trouve dans la base de "
+"données. Les fenêtres de discussion s'ouvrent dans le coin inférieur droit "
+"de l'écran."
 
 #: ../../content/applications/websites/livechat.rst:None
 msgid "View of a live chat pop up window in an Odoo database."
@@ -5127,6 +5572,9 @@ msgid ""
 "who originally created the live chat channel has been added as an operator "
 "by default."
 msgstr ""
+"Dans le formulaire de détail du canal, cliquez sur l'onglet "
+":guilabel:`Opérateurs`. L'utilisateur qui a créé le canal Live Chat a été "
+"ajouté par défaut en tant qu'opérateur."
 
 #: ../../content/applications/websites/livechat.rst:71
 msgid ""
@@ -5141,6 +5589,8 @@ msgstr ""
 msgid ""
 "Click :guilabel:`Add` to reveal an :guilabel:`Add: Operators` pop-up window."
 msgstr ""
+"Cliquez sur :guilabel:`Ajouter` pour afficher une fenêtre contextuelle "
+":guilabel:`Ajouter : Opérateurs`."
 
 #: ../../content/applications/websites/livechat.rst:78
 msgid ""
@@ -5148,6 +5598,10 @@ msgid ""
 "in the search bar. Then, tick the checkbox next to the users to be added, "
 "and click :guilabel:`Select`."
 msgstr ""
+"Dans la fenêtre contextuelle, faites défiler pour trouver les utilisateurs "
+"souhaités, ou saisissez leur nom dans la barre de recherche. Ensuite, cochez "
+"la case à côté des utilisateurs à ajouter et cliquez sur "
+":guilabel:`Sélectionner`."
 
 #: ../../content/applications/websites/livechat.rst:81
 msgid ""
@@ -5157,6 +5611,12 @@ msgid ""
 "click :guilabel:`Save & Close`, or :guilabel:`Save & New` for multiple "
 "record creations."
 msgstr ""
+"De nouveaux opérateurs peuvent également être créés et ajoutés à la liste "
+"directement depuis cette fenêtre contextuelle en cliquant sur "
+":guilabel:`Nouveau` et en remplissant le formulaire :guilabel:`Créer des "
+"opérateurs`. Une fois le formulaire rempli, cliquez sur "
+":guilabel:`Enregistrer & fermer`, ou :guilabel:`Enregistrer & nouveau` pour "
+"créer plusieurs enregistrements."
 
 #: ../../content/applications/websites/livechat.rst:86
 msgid ""
@@ -5166,12 +5626,20 @@ msgid ""
 "them as an operator will **not** alter the subscription or billing rate for "
 "a database."
 msgstr ""
+"Créer un nouvel utilisateur peut impacter le statut d'un abonnement Odoo, "
+"car le nombre total d'utilisateurs dans une base de données compte pour le "
+"tarif de facturation. Procéder avec prudence avant de créer un nouvel "
+"utilisateur. Si un utilisateur existe déjà, l'ajouter en tant qu'opérateur "
+"ne modifiera **pas** l'abonnement ou le tarif de facturation de la base de "
+"données."
 
 #: ../../content/applications/websites/livechat.rst:96
 msgid ""
 "The :guilabel:`Options` tab on the live chat channel detail form contains "
 "the visual and text settings for the live chat window."
 msgstr ""
+"L'onglet :guilabel:`Options` du formulaire de détail du canal Live Chat "
+"contient les paramètres visuels et textuels de la fenêtre Live Chat."
 
 #: ../../content/applications/websites/livechat.rst:102
 msgid "Livechat button"
@@ -5182,6 +5650,8 @@ msgid ""
 "The *Livechat Button* is the icon that appears in the bottom-right corner of "
 "the website."
 msgstr ""
+"Le *bouton Live Chat* est l'icône qui apparaît dans le coin inférieur droit "
+"du site Web."
 
 #: ../../content/applications/websites/livechat.rst:None
 msgid "View of an Odoo website emphasizing the livechat button."
@@ -5193,6 +5663,9 @@ msgid ""
 "greeting displayed in the text bubble when the live chat button appears on "
 "the website."
 msgstr ""
+"Modifiez le texte dans le champ :guilabel:`Texte de notification` pour "
+"mettre à jour le message d'accueil affiché dans la bulle de texte lorsque le "
+"bouton Live Chat apparaît sur le site Web."
 
 #: ../../content/applications/websites/livechat.rst:113
 msgid ""
@@ -5203,6 +5676,13 @@ msgid ""
 "Click the :icon:`fa-refresh` :guilabel:`(refresh)` icon to the right of the "
 "color bubbles to reset the colors to the default selection."
 msgstr ""
+"La :guilabel:`Couleur du bouton Live Chat` modifie la couleur du bouton Live "
+"Chat tel qu'il apparaît sur le site Web. Pour changer la couleur, cliquez "
+"sur une bulle de couleur pour ouvrir la fenêtre de sélection des couleurs, "
+"puis cliquez et faites glisser le cercle le long du dégradé de couleurs. "
+"Cliquez en dehors de la fenêtre de sélection une fois terminé. Cliquez sur "
+"l'icône :icon:`fa-refresh` :guilabel:`(actualiser)` à droite des bulles de "
+"couleur pour réinitialiser les couleurs à la sélection par défaut."
 
 #: ../../content/applications/websites/livechat.rst:120
 msgid ""
@@ -5211,6 +5691,11 @@ msgid ""
 "selection window that appears when either of the color bubbles are clicked. "
 "Different options are available, depending on the operating system."
 msgstr ""
+"La sélection des couleurs, pour le bouton ou l'en-tête, peut être effectuée "
+"manuellement à l'aide d'un curseur ou via des entrées de codes couleur RVB, "
+"TSL ou HEX depuis la fenêtre contextuelle de sélection des couleurs qui "
+"apparaît lorsque l'une des bulles de couleur est cliquée. Différentes "
+"options sont disponibles selon le système d'exploitation."
 
 #: ../../content/applications/websites/livechat.rst:126
 msgid "Livechat Window"
@@ -5231,6 +5716,10 @@ msgid ""
 "by a live chat operator, and acts as both a greeting and an invitation to "
 "continue the conversation."
 msgstr ""
+"Modifier le :guilabel:`Message de bienvenue` pour changer le message qu'un "
+"visiteur voit lorsqu'il ouvre une nouvelle session de chat. Ce message "
+"apparaît comme s'il était envoyé par un opérateur de chat en direct et sert "
+"à la fois de salutation et d'invitation à poursuivre la conversation."
 
 #: ../../content/applications/websites/livechat.rst:135
 msgid ""
@@ -5238,6 +5727,9 @@ msgid ""
 "in the box where visitors type their replies. This message prompts the "
 "visitor to initiate the chat."
 msgstr ""
+"Modifier l':guilabel:`Espace réservé de saisie du chat` pour modifier le "
+"texte qui apparaît dans la zone où les visiteurs tapent leurs réponses. Ce "
+"message invite le visiteur à initier le chat."
 
 #: ../../content/applications/websites/livechat.rst:138
 msgid ""
@@ -5245,28 +5737,38 @@ msgid ""
 "The :guilabel:`Channel Header Color` can be changed following the same steps "
 "as the :ref:`Livechat button <livechat/livechat-button>`."
 msgstr ""
+"L'*en-tête du canal* est la barre colorée en haut de la fenêtre de chat. La "
+":guilabel:`Couleur de l'en-tête du canal` peut être modifiée en suivant les "
+"mêmes étapes que le :ref:`bouton Livechat <livechat/livechat-button>`."
 
 #: ../../content/applications/websites/livechat.rst:145
 msgid ""
 "The live chat window with a purple channel header and placeholder text that "
 "reads, \"Say Something...\""
 msgstr ""
+"La fenêtre de chat en direct avec un en-tête de canal violet et un texte "
+"d'espace réservé indiquant « Say Something... »"
 
 #: ../../content/applications/websites/livechat.rst:151
 msgid "Channel Rules tab"
-msgstr ""
+msgstr "Onglet Règles du canal"
 
 #: ../../content/applications/websites/livechat.rst:153
 msgid ""
 "To configure which website user actions open the live chat window, go to "
 "the :guilabel:`Channel Rules` tab on the live chat channel detail form."
 msgstr ""
+"Pour configurer quelles actions des utilisateurs du site web ouvrent la "
+"fenêtre de chat en direct, aller à l'onglet :guilabel:`Règles du canal` sur "
+"le formulaire de détail du canal de chat en direct."
 
 #: ../../content/applications/websites/livechat.rst:156
 msgid ""
 "To create a new channel rule, click :guilabel:`Add a line`. This opens "
 "the :guilabel:`Create Rules` pop-up window."
 msgstr ""
+"Pour créer une nouvelle règle de canal, cliquer sur :guilabel:`Ajouter une "
+"ligne`. Cela ouvre la fenêtre contextuelle :guilabel:`Créer des règles`."
 
 #: ../../content/applications/websites/livechat.rst:None
 msgid "View of a channel's rules form for Odoo Live Chat."
@@ -5281,6 +5783,8 @@ msgid ""
 "Fill out the fields on the :guilabel:`Create Rules` pop-up window as "
 "instructed below, then click :guilabel:`Save & Close`."
 msgstr ""
+"Remplir les champs de la fenêtre contextuelle :guilabel:`Créer des règles` "
+"comme indiqué ci-dessous, puis cliquer sur :guilabel:`Enregistrer et fermer`."
 
 #: ../../content/applications/websites/livechat.rst:171
 msgid "Live Chat Button"
@@ -5291,16 +5795,20 @@ msgid ""
 "The *Livechat Button* is the icon that appears in the bottom-right corner of "
 "the website. Select from one of the following display options:"
 msgstr ""
+"Le *bouton Livechat* est l'icône qui apparaît dans le coin inférieur droit "
+"du site web. Sélectionner l'une des options d'affichage suivantes :"
 
 #: ../../content/applications/websites/livechat.rst:176
 msgid ":guilabel:`Show`: displays the chat button on the page."
-msgstr ""
+msgstr ":guilabel:`Afficher` : affiche le bouton de chat sur la page."
 
 #: ../../content/applications/websites/livechat.rst:177
 msgid ""
 ":guilabel:`Show with notification`: displays the chat button, as well as a "
 "floating text bubble next to the button."
 msgstr ""
+":guilabel:`Afficher avec notification` : affiche le bouton de chat ainsi "
+"qu'une bulle de texte flottante à côté du bouton."
 
 #: ../../content/applications/websites/livechat.rst:179
 msgid ""
@@ -5309,10 +5817,14 @@ msgid ""
 "the :guilabel:`Open automatically timer` field, that appears when this "
 "option is selected)."
 msgstr ""
+":guilabel:`Ouvrir automatiquement` : affiche le bouton et ouvre "
+"automatiquement la fenêtre de chat après un laps de temps spécifié (désigné "
+"dans le champ :guilabel:`Minuteur d'ouverture automatique` qui apparaît "
+"lorsque cette option est sélectionnée)."
 
 #: ../../content/applications/websites/livechat.rst:182
 msgid ":guilabel:`Hide`: hides the chat button on the page."
-msgstr ""
+msgstr ":guilabel:`Masquer` : masque le bouton de chat sur la page."
 
 #: ../../content/applications/websites/livechat.rst:184
 msgid "Chatbot"
@@ -5325,12 +5837,18 @@ msgid ""
 "operators are active, check the box labeled :guilabel:`Enabled only if no "
 "operator`."
 msgstr ""
+"Pour inclure un :doc:`chatbot <livechat/chatbots>` sur ce canal, le "
+"sélectionner dans le menu déroulant. Si le chatbot ne doit être actif que "
+"lorsqu'aucun opérateur n'est actif, cocher la case :guilabel:`Activé "
+"uniquement si aucun opérateur`."
 
 #: ../../content/applications/websites/livechat.rst:190
 msgid ""
 "The :guilabel:`Enabled only if no operator` field is **only** visible if a "
 "chatbot is selected in the :guilabel:`Chatbot` field."
 msgstr ""
+"Le champ :guilabel:`Activé uniquement si aucun opérateur` est **uniquement** "
+"visible si un chatbot est sélectionné dans le champ :guilabel:`Chatbot`."
 
 #: ../../content/applications/websites/livechat.rst:193
 msgid "URL Regex"
@@ -5342,18 +5860,25 @@ msgid ""
 "In the :guilabel:`URL Regex` field, input the relative URL of the page where "
 "the chat button should appear."
 msgstr ""
+"L'*URL Regex* spécifie les pages web où cette règle doit être appliquée. "
+"Dans le champ :guilabel:`URL Regex`, saisir l'URL relative de la page où le "
+"bouton de chat doit apparaître."
 
 #: ../../content/applications/websites/livechat.rst:199
 msgid ""
 "For example, to apply the rule to the URL, `https://mydatabse.odoo.com/"
 "shop`, enter `/shop` to the :guilabel:`URL Regex` field."
 msgstr ""
+"Par exemple, pour appliquer la règle à l'URL `https://mydatabse.odoo.com/"
+"shop`, saisir `/shop` dans le champ :guilabel:`URL Regex`."
 
 #: ../../content/applications/websites/livechat.rst:202
 msgid ""
 "To apply the rule to *all* pages on the database, enter `/` in "
 "the :guilabel:`URL Regex` field."
 msgstr ""
+"Pour appliquer la règle à *toutes* les pages de la base de données, saisir `/"
+"` dans le champ :guilabel:`URL Regex`."
 
 #: ../../content/applications/websites/livechat.rst:205
 msgid "Open automatically timer"
@@ -5366,6 +5891,10 @@ msgid ""
 "the :guilabel:`Live Chat Button` for this rule is set to :guilabel:`Open "
 "automatically`."
 msgstr ""
+"Ce champ désigne le temps (en secondes) pendant lequel une page doit être "
+"ouverte avant que la fenêtre de chat ne s'ouvre. Ce champ apparaît "
+"**uniquement** si le :guilabel:`Bouton Live Chat` pour cette règle est "
+"défini sur :guilabel:`Ouvrir automatiquement`."
 
 #: ../../content/applications/websites/livechat.rst:211
 msgid "Country"
@@ -5377,6 +5906,10 @@ msgid ""
 "countries, add them to the :guilabel:`Country` field. If this field is left "
 "blank, the channel is available to all site visitors, regardless of location."
 msgstr ""
+"Si ce canal ne doit être disponible **que** pour les visiteurs du site dans "
+"des pays spécifiques, les ajouter au champ :guilabel:`Pays`. Si ce champ est "
+"laissé vide, le canal est disponible pour tous les visiteurs du site, quelle "
+"que soit leur localisation."
 
 #: ../../content/applications/websites/livechat.rst:218
 msgid ""
@@ -5385,10 +5918,15 @@ msgid ""
 "*Odoo Online* databases, *On-Premise* databases require "
 "additional :doc:`setup steps </administration/on_premise/geo_ip>`."
 msgstr ""
+"Pour suivre la localisation géographique des visiteurs, *GeoIP* **doit** "
+"être installé sur la base de données. Bien que cette fonctionnalité soit "
+"installée par défaut sur les bases de données *Odoo Online*, les bases de "
+"données *On-Premise* nécessitent des :doc:`étapes de configuration </"
+"administration/on_premise/geo_ip>` supplémentaires."
 
 #: ../../content/applications/websites/livechat.rst:225
 msgid "Widget tab"
-msgstr ""
+msgstr "Onglet Widget"
 
 #: ../../content/applications/websites/livechat.rst:227
 msgid ""
@@ -5405,6 +5943,11 @@ msgid ""
 "the :guilabel:`Channel` field, select the channel to add to the site. "
 "Click :guilabel:`Save` to apply."
 msgstr ""
+"Le widget live chat peut être ajouté aux sites web créés via Odoo en "
+"accédant à :menuselection:`Application Site Web --> Configuration --> "
+"Paramètres`. Ensuite, faire défiler jusqu'à la section :menuselection:`Email "
+"& Marketing`. Dans le champ :guilabel:`Canal`, sélectionner le canal à "
+"ajouter au site. Cliquer sur :guilabel:`Enregistrer` pour appliquer."
 
 #: ../../content/applications/websites/livechat.rst:236
 msgid ""
@@ -5427,7 +5970,7 @@ msgstr "Vue de l'onglet widget pour Odoo Live Chat."
 
 #: ../../content/applications/websites/livechat.rst:248
 msgid ":doc:`../productivity/discuss`"
-msgstr ""
+msgstr ":doc:`../productivity/discuss`"
 
 #: ../../content/applications/websites/livechat.rst:249
 msgid ":doc:`livechat/responses`"
@@ -5439,11 +5982,11 @@ msgstr ":doc:`livechat/ratings`"
 
 #: ../../content/applications/websites/livechat.rst:251
 msgid ":doc:`livechat/chatbots`"
-msgstr ""
+msgstr ":doc:`livechat/chatbots`"
 
 #: ../../content/applications/websites/livechat.rst:252
 msgid ":doc:`livechat/participate`"
-msgstr ""
+msgstr ":doc:`livechat/participate`"
 
 #: ../../content/applications/websites/livechat/chatbots.rst:3
 msgid "Chatbots"
@@ -5470,6 +6013,11 @@ msgid ""
 "can vary based on several criteria, including the webpage where it is "
 "located, and the information it captures."
 msgstr ""
+"Les chatbots peuvent être personnalisés pour remplir divers rôles, du "
+"support client à la création de pistes, en passant par la collecte "
+"d'informations de contact. L'objectif de chaque chatbot peut varier en "
+"fonction de plusieurs critères, notamment la page web où il se trouve et les "
+"informations qu'il capture."
 
 #: ../../content/applications/websites/livechat/chatbots.rst:None
 #: ../../content/applications/websites/livechat/responses.rst:0
@@ -5517,7 +6065,7 @@ msgstr ""
 
 #: ../../content/applications/websites/livechat/chatbots.rst:36
 msgid "*Welcome Bot* can be deleted or archived, if necessary."
-msgstr ""
+msgstr "*Welcome Bot* peut être supprimé ou archivé, si nécessaire."
 
 #: ../../content/applications/websites/livechat/chatbots.rst:0
 msgid "View of the Welcome Bot script in Odoo Live Chat."
@@ -5596,6 +6144,10 @@ msgid ""
 "Text steps can be used for greetings, to offer resources, such as "
 "documentation, or provide links to specific web pages."
 msgstr ""
+"Cette étape est utilisée pour les messages où aucune réponse n'est attendue "
+"ou nécessaire. Les étapes de texte peuvent être utilisées pour des "
+"salutations, pour proposer des ressources, telles que de la documentation, "
+"ou fournir des liens vers des pages web spécifiques."
 
 #: ../../content/applications/websites/livechat/chatbots.rst:78
 msgid ""
@@ -5625,6 +6177,9 @@ msgid ""
 "the :guilabel:`Answer` heading, click :guilabel:`Add a Line` to create a "
 "blank answer line."
 msgstr ""
+"Saisir la question dans le champ :guilabel:`Message`. Ensuite, sous l'en-"
+"tête :guilabel:`Réponse`, cliquer sur :guilabel:`Ajouter une ligne` pour "
+"créer une ligne de réponse vierge."
 
 #: ../../content/applications/websites/livechat/chatbots.rst:90
 msgid ""
@@ -5632,6 +6187,10 @@ msgid ""
 "answer into a link that redirects the visitor when selected, add the URL to "
 "the answer line under the :guilabel:`Optional Link` heading."
 msgstr ""
+"Saisir la réponse telle qu'elle devrait apparaître au visiteur. Pour "
+"transformer la réponse en lien qui redirige le visiteur lorsqu'elle est "
+"sélectionnée, ajouter l'URL à la ligne de réponse sous l'en-tête "
+":guilabel:`Lien optionnel`."
 
 #: ../../content/applications/websites/livechat/chatbots.rst:94
 msgid "Repeat these steps for every answer to be included for the question."
@@ -5640,6 +6199,8 @@ msgstr ""
 #: ../../content/applications/websites/livechat/chatbots.rst:96
 msgid "Click :guilabel:`Save & Close` or :guilabel:`Save & New`."
 msgstr ""
+"Cliquer sur :guilabel:`Enregistrer & Fermer` ou :guilabel:`Enregistrer & "
+"Nouveau`."
 
 #: ../../content/applications/websites/livechat/chatbots.rst:99
 msgid ""
@@ -5684,6 +6245,9 @@ msgid ""
 "number, which can be used to follow up with additional information, schedule "
 "demos, and more."
 msgstr ""
+"Similaire à l'e-mail, ce type d'étape invite le visiteur à saisir son numéro "
+"de téléphone, qui peut être utilisé pour effectuer un suivi avec des "
+"informations supplémentaires, planifier des démos, et plus encore."
 
 #: ../../content/applications/websites/livechat/chatbots.rst:124
 msgid ""
@@ -5704,6 +6268,12 @@ msgid ""
 "only saves time for all parties involved, it can also help qualify "
 "conversations before they reach live operators."
 msgstr ""
+"Cette étape transfère la conversation à un opérateur de live chat actif, "
+"afin qu'il puisse continuer à assister le visiteur. Comme la transcription "
+"de la conversation est transmise à l'opérateur, il peut reprendre là où le "
+"chatbot s'est arrêté. Cela permet non seulement de gagner du temps pour "
+"toutes les parties impliquées, mais peut également aider à qualifier les "
+"conversations avant qu'elles n'atteignent les opérateurs en direct."
 
 #: ../../content/applications/websites/livechat/chatbots.rst:136
 msgid ""
@@ -5715,6 +6285,14 @@ msgid ""
 "and continue the conversation (e.g. `Would you like to leave your email "
 "address?`)."
 msgstr ""
+"Si aucun opérateur actif n'est disponible sur le canal, le chatbot poursuit "
+"la conversation avec le visiteur. Par conséquent, des étapes supplémentaires "
+"doivent être ajoutées après celle-ci pour s'assurer qu'il n'y a pas de fin "
+"abrupte à la conversation. Les étapes supplémentaires peuvent à la fois "
+"informer les visiteurs de l'absence d'opérateurs disponibles (par ex. « "
+"Oups, il semble qu'aucun de nos opérateurs ne soit disponible ») et "
+"poursuivre la conversation (par ex. « Souhaitez-vous laisser votre adresse e-"
+"mail ? »)."
 
 #: ../../content/applications/websites/livechat/chatbots.rst:0
 msgid ""
@@ -5733,6 +6311,9 @@ msgid ""
 "providing pre-written responses. Information provided in these responses is "
 "stored in the chat transcripts."
 msgstr ""
+"L'étape *saisie libre* permet aux visiteurs de répondre à des questions sans "
+"fournir de réponses pré-écrites. Les informations fournies dans ces réponses "
+"sont stockées dans les transcriptions de chat."
 
 #: ../../content/applications/websites/livechat/chatbots.rst:152
 msgid ""
@@ -5740,6 +6321,9 @@ msgid ""
 "Line)` depending on the type and amount of information the visitor is asked "
 "to provide."
 msgstr ""
+"Choisir entre :guilabel:`Saisie libre` et :guilabel:`Saisie libre (Multi-"
+"ligne)` en fonction du type et de la quantité d'informations que le visiteur "
+"est invité à fournir."
 
 #: ../../content/applications/websites/livechat/chatbots.rst:156
 msgid "Create Lead"
@@ -5786,6 +6370,9 @@ msgid ""
 "presented to the visitor is determined by the answer provided to the "
 "previous question."
 msgstr ""
+"Les scripts de chatbot fonctionnent sur une base si/alors, ce qui signifie "
+"que la prochaine question présentée au visiteur est déterminée par la "
+"réponse fournie à la question précédente."
 
 #: ../../content/applications/websites/livechat/chatbots.rst:180
 msgid ""
@@ -5878,6 +6465,11 @@ msgid ""
 "tested to confirm there are no dead-ends, and to understand what the visitor "
 "sees when they interact with the chatbot."
 msgstr ""
+"Pour garantir que tous les visiteurs aient une expérience satisfaisante avec "
+"le chatbot, chaque message doit mener à une conclusion naturelle. Les "
+"scripts de chatbot doivent être testés pour confirmer qu'il n'y a pas "
+"d'impasses et pour comprendre ce que voit le visiteur lorsqu'il interagit "
+"avec le chatbot."
 
 #: ../../content/applications/websites/livechat/chatbots.rst:222
 msgid ""
@@ -5939,12 +6531,17 @@ msgid ""
 "and click :guilabel:`New`. See :doc:`Live Chat <../livechat>` for more "
 "information."
 msgstr ""
+"Pour créer un nouveau canal de discussion en direct, ouvrir "
+"l':menuselection:`application Live Chat` et cliquer sur :guilabel:`Nouveau`. "
+"Voir :doc:`Live Chat <../livechat>` pour plus d'informations."
 
 #: ../../content/applications/websites/livechat/chatbots.rst:248
 msgid ""
 "Click on the :guilabel:`Channel Rules` tab. Then, open an existing rule, or "
 "create a new one by clicking :guilabel:`Add a line`."
 msgstr ""
+"Cliquer sur l'onglet :guilabel:`Règles du canal`. Ouvrir une règle existante "
+"ou en créer une nouvelle en cliquant sur :guilabel:`Ajouter une ligne`."
 
 #: ../../content/applications/websites/livechat/chatbots.rst:251
 msgid ""
@@ -5968,7 +6565,7 @@ msgstr ":doc:`Règles de canal de live chat </applications/websites/livechat>`"
 
 #: ../../content/applications/websites/livechat/participate.rst:3
 msgid "Participate in live chat"
-msgstr ""
+msgstr "Participer à une discussion en direct"
 
 #: ../../content/applications/websites/livechat/participate.rst:5
 msgid ""
@@ -5976,6 +6573,11 @@ msgid ""
 "and website visitors. The information below outlines the necessary steps for "
 "operators participating in live chat conversations on an Odoo database."
 msgstr ""
+"Les *opérateurs* sont les utilisateurs qui répondent aux demandes de "
+"discussion en direct des clients et des visiteurs du site web. Les "
+"informations ci-dessous décrivent les étapes nécessaires pour que les "
+"opérateurs participent aux conversations de discussion en direct sur une "
+"base de données Odoo."
 
 #: ../../content/applications/websites/livechat/participate.rst:10
 msgid "Set an online chat name"
@@ -5987,6 +6589,9 @@ msgid ""
 "*Online Chat Name*. This is the name displayed to site visitors in the live "
 "chat conversation."
 msgstr ""
+"Avant de participer à une discussion en direct, les opérateurs peuvent "
+"choisir de mettre à jour leur *nom de discussion en ligne*. Il s'agit du nom "
+"affiché aux visiteurs du site dans la conversation de discussion en direct."
 
 #: ../../content/applications/websites/livechat/participate.rst:15
 msgid ""
@@ -5996,12 +6601,21 @@ msgid ""
 "the :guilabel:`Preferences` tab, locate the :guilabel:`Online Chat Name` "
 "field, and enter a preferred name."
 msgstr ""
+"Pour mettre à jour le *nom de discussion en ligne*, cliquer sur l'avatar de "
+"l'utilisateur en haut à droite de n'importe quelle page de la base de "
+"données. Sélectionner :guilabel:`Mon profil` dans le menu déroulant pour "
+"ouvrir la page de profil. Sur le côté droit de l'onglet "
+":guilabel:`Préférences`, localiser le champ :guilabel:`Nom de discussion en "
+"ligne` et saisir un nom préféré."
 
 #: ../../content/applications/websites/livechat/participate.rst:20
 msgid ""
 "If a user's :guilabel:`Online Chat Name` is not set, the name displayed "
 "defaults to the user's name that is designated on their profile page."
 msgstr ""
+"Si le :guilabel:`nom de chat en ligne` d'un utilisateur n'est pas défini, le "
+"nom affiché par défaut est le nom de l'utilisateur tel qu'il figure sur sa "
+"page de profil."
 
 #: ../../content/applications/websites/livechat/participate.rst:24
 msgid ""
@@ -6022,7 +6636,7 @@ msgstr ""
 
 #: ../../content/applications/websites/livechat/participate.rst:33
 msgid "Set online chat languages"
-msgstr ""
+msgstr "Définir les langues de chat en ligne"
 
 #: ../../content/applications/websites/livechat/participate.rst:35
 msgid ""
@@ -6031,6 +6645,11 @@ msgid ""
 "conversations the operator is assigned. A visitor's language is determined "
 "via their browser's language settings."
 msgstr ""
+"Si un opérateur parle plusieurs langues, il peut ajouter cette information à "
+"son profil utilisateur. Cette information peut ensuite être utilisée pour "
+"déterminer les conversations auxquelles l'opérateur est assigné. La langue "
+"d'un visiteur est déterminée via les paramètres linguistiques de son "
+"navigateur."
 
 #: ../../content/applications/websites/livechat/participate.rst:40
 msgid ""
@@ -6039,6 +6658,11 @@ msgid ""
 "operator's main language and additional languages are taken into "
 "consideration, they do **not** supersede all other criteria."
 msgstr ""
+"Les conversations sont assignées aux opérateurs selon plusieurs critères, "
+"notamment la disponibilité et le nombre de conversations en cours. Bien que "
+"la langue principale et les langues supplémentaires de l'opérateur soient "
+"prises en considération, elles ne remplacent **pas** tous les autres "
+"critères."
 
 #: ../../content/applications/websites/livechat/participate.rst:44
 msgid ""
@@ -6048,12 +6672,21 @@ msgid ""
 "the :guilabel:`Preferences` tab, click into the :guilabel:`Online Chat "
 "Language` field, and select one or more languages from the drop-down menu."
 msgstr ""
+"Pour ajouter des *langues de chat en ligne*, cliquer sur l'avatar "
+"utilisateur dans le coin supérieur droit de n'importe quelle page de la base "
+"de données. Sélectionner :guilabel:`Mon profil` dans le menu déroulant pour "
+"ouvrir la page de profil. Sur le côté droit de l'onglet "
+":guilabel:`Préférences`, cliquer dans le champ :guilabel:`langue de chat en "
+"ligne` et sélectionner une ou plusieurs langues dans le menu déroulant."
 
 #: ../../content/applications/websites/livechat/participate.rst:50
 msgid ""
 "Only :doc:`languages <../../general/users/language>` that are enabled on the "
 "database can be selected in the :guilabel:`Online Chat Language` field."
 msgstr ""
+"Seules les :doc:`langues <../../general/users/language>` activées sur la "
+"base de données peuvent être sélectionnées dans le champ :guilabel:`langue "
+"de chat en ligne`."
 
 #: ../../content/applications/websites/livechat/participate.rst:54
 msgid "Join or leave a channel"
@@ -6065,12 +6698,17 @@ msgid ""
 "Channels`, and click the :guilabel:`Join` button on the Kanban card for the "
 "appropriate channel."
 msgstr ""
+"Pour rejoindre un canal de chat en ligne, aller à "
+":menuselection:`application Live Chat --> Canaux` et cliquer sur le bouton "
+":guilabel:`Rejoindre` sur la carte Kanban du canal approprié."
 
 #: ../../content/applications/websites/livechat/participate.rst:59
 msgid ""
 "Any channel where the user is currently active shows a :guilabel:`Leave` "
 "button. Click this button to disconnect from the channel."
 msgstr ""
+"Tout canal où l'utilisateur est actuellement actif affiche un bouton "
+":guilabel:`Quitter`. Cliquer sur ce bouton pour se déconnecter du canal."
 
 #: ../../content/applications/websites/livechat/participate.rst:None
 msgid ""
@@ -6084,6 +6722,9 @@ msgid ""
 "Operators that do not show any activity in Odoo for more than thirty minutes "
 "are considered disconnected, and subsequently removed from the channel."
 msgstr ""
+"Les opérateurs qui ne montrent aucune activité dans Odoo pendant plus de "
+"trente minutes sont considérés comme déconnectés et sont ensuite retirés du "
+"canal."
 
 #: ../../content/applications/websites/livechat/participate.rst:71
 msgid "Manage live chat requests"
@@ -6096,16 +6737,24 @@ msgid ""
 "allows them to access other pages and apps, while still participating in the "
 "conversation."
 msgstr ""
+"Lorsqu'un opérateur est actif dans un canal, les fenêtres de chat s'ouvrent "
+"dans le coin inférieur droit de l'écran, peu importe où il se trouve dans la "
+"base de données. Cela lui permet d'accéder à d'autres pages et applications "
+"tout en participant à la conversation."
 
 #: ../../content/applications/websites/livechat/participate.rst:78
 msgid ""
 "Conversations can also be accessed by clicking the :icon:`fa-"
 "comments` :guilabel:`(messages)` icon in the menu bar."
 msgstr ""
+"Les conversations sont également accessibles en cliquant sur l'icône "
+":icon:`fa-comments` :guilabel:`(messages)` dans la barre de menu."
 
 #: ../../content/applications/websites/livechat/participate.rst:0
 msgid "View of the menu bar in Odoo emphasizing the comments icon."
 msgstr ""
+"Vue de la barre de menu dans Odoo mettant en évidence l'icône de "
+"commentaires."
 
 #: ../../content/applications/websites/livechat/participate.rst:85
 msgid ""
@@ -6128,18 +6777,21 @@ msgid ""
 "conversation. From this view, an operator can participate in the chat the "
 "same as they would in the normal chat window."
 msgstr ""
+"Cliquer sur une conversation dans le panneau de gauche pour la sélectionner. "
+"Cela ouvre la conversation. Depuis cette vue, un opérateur peut participer "
+"au chat de la même manière que dans la fenêtre de chat normale."
 
 #: ../../content/applications/websites/livechat/participate.rst:96
 msgid ":doc:`../../productivity/discuss`"
-msgstr ""
+msgstr ":doc:`../../productivity/discuss`"
 
 #: ../../content/applications/websites/livechat/participate.rst:97
 msgid ":doc:`../livechat`"
-msgstr ""
+msgstr ":doc:`../livechat`"
 
 #: ../../content/applications/websites/livechat/participate.rst:98
 msgid ":doc:`../livechat/responses`"
-msgstr ""
+msgstr ":doc:`../livechat/responses`"
 
 #: ../../content/applications/websites/livechat/ratings.rst:3
 msgid "Ratings"
@@ -6519,15 +7171,15 @@ msgstr ""
 
 #: ../../content/applications/websites/livechat/reports.rst:13
 msgid ":ref:`Sessions History <livechat/sessions-history>`"
-msgstr ""
+msgstr ":ref:`Historique des sessions <livechat/sessions-history>`"
 
 #: ../../content/applications/websites/livechat/reports.rst:14
 msgid ":ref:`Session Statistics <livechat/session-statistics>`"
-msgstr ""
+msgstr ":ref:`Statistiques de session <livechat/session-statistics>`"
 
 #: ../../content/applications/websites/livechat/reports.rst:15
 msgid ":ref:`Operator Analysis <livechat/operator-analysis>`"
-msgstr ""
+msgstr ":ref:`Analyse des opérateurs <livechat/operator-analysis>`"
 
 #: ../../content/applications/websites/livechat/reports.rst:18
 msgid ""
@@ -6542,6 +7194,8 @@ msgid ""
 "To access a drop-down menu of all the available reports, navigate "
 "to :menuselection:`Live Chat app --> Report`."
 msgstr ""
+"Pour accéder à un menu déroulant de tous les rapports disponibles, aller à "
+":menuselection:`Application Live Chat --> Rapport`."
 
 #: ../../content/applications/websites/livechat/reports.rst:28
 msgid "Sessions History"
@@ -6554,6 +7208,11 @@ msgid ""
 "number of messages, and the rating. It also provides access to the complete "
 "transcripts of live chat sessions."
 msgstr ""
+"Le rapport *Historique des sessions* affiche une vue d'ensemble des sessions "
+"de chat en direct, incluant les dates de session, le nom et le pays du "
+"participant, la durée de la session, le nombre de messages et l'évaluation. "
+"Il fournit également l'accès aux transcriptions complètes des sessions de "
+"chat en direct."
 
 #: ../../content/applications/websites/livechat/reports.rst:34
 msgid ""
@@ -6563,13 +7222,15 @@ msgstr ""
 
 #: ../../content/applications/websites/livechat/reports.rst:None
 msgid "Example of the Sessions History report from the Live Chat application."
-msgstr ""
+msgstr "Exemple du rapport Historique des sessions de l'application Live Chat."
 
 #: ../../content/applications/websites/livechat/reports.rst:40
 msgid ""
 "The information in this report can be exported, or inserted into a "
 "spreadsheet."
 msgstr ""
+"Les informations de ce rapport peuvent être exportées ou insérées dans une "
+"feuille de calcul."
 
 #: ../../content/applications/websites/livechat/reports.rst:42
 msgid ""
@@ -6583,6 +7244,10 @@ msgid ""
 "to a spreadsheet, or :guilabel:`Insert list in spreadsheet` to insert the "
 "information in a new, or existing, spreadsheet."
 msgstr ""
+"Dans le menu déroulant, cliquer sur :guilabel:`Tout exporter` pour exporter "
+"toutes les sessions vers une feuille de calcul, ou sur :guilabel:`Insérer la "
+"liste dans une feuille de calcul` pour insérer les informations dans une "
+"feuille de calcul nouvelle ou existante."
 
 #: ../../content/applications/websites/livechat/reports.rst:48
 msgid ""
@@ -6610,7 +7275,7 @@ msgstr ""
 
 #: ../../content/applications/websites/livechat/reports.rst:None
 msgid "View of the chat transcript in the Discuss application."
-msgstr ""
+msgstr "Vue de la transcription de chat dans l'application Discussion."
 
 #: ../../content/applications/websites/livechat/reports.rst:68
 msgid "Session Statistics"
@@ -6622,23 +7287,30 @@ msgid ""
 "sessions. The default view for this report displays sessions grouped by the "
 "date of creation."
 msgstr ""
+"Le rapport *Statistiques de session* fournit un aperçu statistique des "
+"sessions de chat en direct. La vue par défaut de ce rapport affiche les "
+"sessions regroupées par date de création."
 
 #: ../../content/applications/websites/livechat/reports.rst:73
 msgid ""
 "To access this report, navigate to :menuselection:`Live Chat app --> Reports "
 "--> Session Statistics`."
 msgstr ""
+"Pour accéder à ce rapport, aller à :menuselection:`Live Chat app --> "
+"Rapports --> Statistiques de session`."
 
 #: ../../content/applications/websites/livechat/reports.rst:80
 msgid ""
 "Example of the Sessions Statistics report from the Live Chat application."
-msgstr ""
+msgstr "Exemple du rapport Statistiques de session de l'application Live Chat."
 
 #: ../../content/applications/websites/livechat/reports.rst:80
 msgid ""
 "The stacked bar graph view of the *Session Statistics* report, with results "
 "grouped by Creation Date (hour), then by rating."
 msgstr ""
+"Vue en graphique à barres empilées du rapport *Statistiques de session*, "
+"avec les résultats regroupés par Date de création (heure), puis par note."
 
 #: ../../content/applications/websites/livechat/reports.rst:83
 #: ../../content/applications/websites/livechat/reports.rst:115
@@ -6647,52 +7319,71 @@ msgid ""
 "at the top-left of the report. The measures available for this report "
 "include:"
 msgstr ""
+"Pour afficher une mesure différente, cliquer sur le menu déroulant "
+":guilabel:`Mesures` en haut à gauche du rapport. Les mesures disponibles "
+"pour ce rapport incluent :"
 
 #: ../../content/applications/websites/livechat/reports.rst:86
 msgid ":guilabel:`# of speakers`: number of participants in the conversation."
 msgstr ""
+":guilabel:`Nombre d'interlocuteurs` : nombre de participants à la "
+"conversation."
 
 #: ../../content/applications/websites/livechat/reports.rst:87
 msgid ""
 ":guilabel:`Days of activity`: number of days since the operator's first "
 "session."
 msgstr ""
+":guilabel:`Jours d'activité` : nombre de jours depuis la première session de "
+"l'opérateur."
 
 #: ../../content/applications/websites/livechat/reports.rst:88
 msgid ""
 ":guilabel:`Duration of Session (min)`: the duration of a conversation, in "
 "minutes."
 msgstr ""
+":guilabel:`Durée de la session (min)` : la durée d'une conversation, en "
+"minutes."
 
 #: ../../content/applications/websites/livechat/reports.rst:89
 msgid ""
 ":guilabel:`Is visitor anonymous`: denotes whether the conversation "
 "participant is anonymous."
 msgstr ""
+":guilabel:`Le visiteur est-il anonyme` : indique si le participant à la "
+"conversation est anonyme."
 
 #: ../../content/applications/websites/livechat/reports.rst:90
 msgid ""
 ":guilabel:`Messages per session`: the total number of messages sent in a "
 "conversation. This measure is included in the default view."
 msgstr ""
+":guilabel:`Messages par session` : le nombre total de messages envoyés dans "
+"une conversation. Cette mesure est incluse dans la vue par défaut."
 
 #: ../../content/applications/websites/livechat/reports.rst:92
 msgid ""
 ":guilabel:`Rating`: the rating received by an operator at the end of a "
 "session, if one was provided."
 msgstr ""
+":guilabel:`Note` : la note reçue par un opérateur à la fin d'une session, si "
+"une note a été fournie."
 
 #: ../../content/applications/websites/livechat/reports.rst:94
 msgid ""
 ":guilabel:`Session not rated`: denotes if a session did **not** receive a "
 "rating at the end of the conversation."
 msgstr ""
+":guilabel:`Session non notée` : indique si une session n'a **pas** reçu de "
+"note à la fin de la conversation."
 
 #: ../../content/applications/websites/livechat/reports.rst:96
 msgid ""
 ":guilabel:`Time to answer (sec)`: the average time, in seconds, before an "
 "operator responds to a chat request."
 msgstr ""
+":guilabel:`Temps de réponse (sec)` : le temps moyen, en secondes, avant "
+"qu'un opérateur ne réponde à une demande de discussion."
 
 #: ../../content/applications/websites/livechat/reports.rst:98
 msgid ""
@@ -6700,11 +7391,14 @@ msgid ""
 "provided. If the visitor gave either a negative or neutral rating, they are "
 "considered *unhappy*."
 msgstr ""
+":guilabel:`Le visiteur est satisfait` : indique si une note positive a été "
+"fournie. Si le visiteur a donné une note négative ou neutre, il est "
+"considéré comme *insatisfait*."
 
 #: ../../content/applications/websites/livechat/reports.rst:100
 #: ../../content/applications/websites/livechat/reports.rst:124
 msgid ":guilabel:`Count`: the total number of sessions."
-msgstr ""
+msgstr ":guilabel:`Compteur` : le nombre total de sessions."
 
 #: ../../content/applications/websites/livechat/reports.rst:105
 msgid "Operator Analysis"
@@ -6715,12 +7409,16 @@ msgid ""
 "The *Operator Analysis* report is used to monitor the performance of "
 "individual live chat operators."
 msgstr ""
+"Le rapport *Analyse des opérateurs* est utilisé pour surveiller les "
+"performances des opérateurs de chat en direct individuels."
 
 #: ../../content/applications/websites/livechat/reports.rst:109
 msgid ""
 "To access the report, navigate to :menuselection:`Live Chat app --> Reports "
 "--> Operator Analysis`."
 msgstr ""
+"Pour accéder au rapport, aller à :menuselection:`Live Chat app --> "
+"Rapports --> Analyse des opérateurs`."
 
 #: ../../content/applications/websites/livechat/reports.rst:111
 msgid ""
@@ -6728,33 +7426,42 @@ msgid ""
 "conversations from the current month, as indicated by the :guilabel:`This "
 "Month` default search filter. Conversations are grouped by operator."
 msgstr ""
+"La vue par défaut de ce rapport est un graphique à barres qui affiche "
+"uniquement les conversations du mois en cours, comme indiqué par le filtre "
+"de recherche par défaut :guilabel:`Ce mois`. Les conversations sont "
+"regroupées par opérateur."
 
 #: ../../content/applications/websites/livechat/reports.rst:118
 msgid ""
 ":guilabel:`# of Sessions`: the number of sessions an operator participated "
 "in. This measure is included by default."
 msgstr ""
+":guilabel:`Nombre de sessions` : le nombre de sessions auxquelles un "
+"opérateur a participé. Cette mesure est incluse par défaut."
 
 #: ../../content/applications/websites/livechat/reports.rst:120
 msgid ""
 ":guilabel:`Average duration`: the average duration of a conversation, in "
 "seconds."
 msgstr ""
+":guilabel:`Durée moyenne` : la durée moyenne d'une conversation, en secondes."
 
 #: ../../content/applications/websites/livechat/reports.rst:121
 msgid ""
 ":guilabel:`Average rating`: the average rating received by the operator."
-msgstr ""
+msgstr ":guilabel:`Note moyenne` : la note moyenne reçue par l'opérateur."
 
 #: ../../content/applications/websites/livechat/reports.rst:122
 msgid ""
 ":guilabel:`Time to answer`: the average amount of time before the operator "
 "responds to a chat request, in seconds."
 msgstr ""
+":guilabel:`Temps de réponse` : le temps moyen en secondes avant que "
+"l'opérateur ne réponde à une demande de chat."
 
 #: ../../content/applications/websites/livechat/reports.rst:None
 msgid "Example of the Operator Analysis report from the Live Chat application."
-msgstr ""
+msgstr "Exemple du rapport Analyse des opérateurs de l'application Live Chat."
 
 #: ../../content/applications/websites/livechat/reports.rst:131
 msgid "View and filter options"
@@ -6898,6 +7605,13 @@ msgid ""
 "shortcut entries in place of longer, well-thought out responses to some of "
 "the most common questions and comments."
 msgstr ""
+"Dans l'application **Live Chat** Odoo, les *commandes* permettent à "
+"l'utilisateur d'effectuer des actions spécifiques à la fois dans la fenêtre "
+"de chat et via d'autres applications Odoo. L'application **Live Chat** "
+"inclut également des *réponses prédéfinies*. Il s'agit de substitutions "
+"personnalisées et préconfigurées qui permettent aux utilisateurs de "
+"remplacer des raccourcis par des réponses plus longues et réfléchies à "
+"certaines des questions et commentaires les plus courants."
 
 #: ../../content/applications/websites/livechat/responses.rst:11
 msgid ""
@@ -6919,6 +7633,10 @@ msgid ""
 "website visitor, they can execute a command by typing `/`, followed by the "
 "command."
 msgstr ""
+"Les *commandes* de chat en direct sont des mots-clés qui déclenchent des "
+"actions préconfigurées. Lorsqu'un *opérateur* de chat en direct participe à "
+"une conversation avec un client ou un visiteur du site web, il peut exécuter "
+"une commande en tapant `/`, suivi de la commande."
 
 #: ../../content/applications/websites/livechat/responses.rst:21
 msgid ""
@@ -6926,6 +7644,10 @@ msgid ""
 "window for the live chat operator. A customer does not see any commands that "
 "an operator uses in a conversation from their view of the chat."
 msgstr ""
+"Les commandes et les actions qui en résultent ne sont visibles que dans la "
+"fenêtre de conversation pour l'opérateur du chat en direct. Un client ne "
+"voit aucune commande utilisée par un opérateur dans une conversation depuis "
+"sa vue du chat."
 
 #: ../../content/applications/websites/livechat/responses.rst:26
 msgid ""
@@ -6936,6 +7658,12 @@ msgid ""
 "ticket, so the operator can go there directly to add any additional "
 "information, if necessary."
 msgstr ""
+"Durant une conversation avec un client, un opérateur de chat en direct "
+"exécute la commande pour :ref:`créer un ticket <live-chat/ticket>`. Après "
+"avoir saisi la commande `/ticket`, le système crée automatiquement un ticket "
+"avec les informations de la conversation. Il inclut également un lien vers "
+"le nouveau ticket, afin que l'opérateur puisse s'y rendre directement pour "
+"ajouter toute information supplémentaire si nécessaire."
 
 #: ../../content/applications/websites/livechat/responses.rst:35
 msgid "More information about each available command can be found below."
@@ -6987,7 +7715,7 @@ msgstr ":doc:`/applications/productivity/discuss/team_communication`"
 
 #: ../../content/applications/websites/livechat/responses.rst:53
 msgid "Ticket & search tickets"
-msgstr ""
+msgstr "Ticket & recherche de tickets"
 
 #: ../../content/applications/websites/livechat/responses.rst:55
 msgid ""
@@ -6995,6 +7723,9 @@ msgid ""
 "helpdesk tickets directly from a conversation, and search through existing "
 "tickets by keyword or ticket number."
 msgstr ""
+"Les commandes `/ticket` et `/search_tickets` permettent aux opérateurs de "
+"créer des tickets d'assistance directement depuis une conversation et de "
+"rechercher parmi les tickets existants par mot-clé ou numéro de ticket."
 
 #: ../../content/applications/websites/livechat/responses.rst:59
 msgid ""
@@ -7005,6 +7736,12 @@ msgid ""
 "the :guilabel:`Channels` section, and check the box labeled, :guilabel:`Live "
 "Chat`."
 msgstr ""
+"Les commandes `/ticket` et `/search_tickets` peuvent **uniquement** être "
+"utilisées si l'application **Assistance** a été installée et si le *Live "
+"Chat* a été activé sur une équipe *Assistance*. Pour activer le *Live Chat*, "
+"aller à :menuselection:`application Assistance --> Configuration --> Équipes "
+"d'assistance`, et sélectionner une équipe. Faire défiler jusqu'à la section "
+":guilabel:`Canaux` et cocher la case :guilabel:`Live Chat`."
 
 #: ../../content/applications/websites/livechat/responses.rst:67
 msgid "Create a ticket from a live chat"
@@ -7015,12 +7752,16 @@ msgid ""
 "If an operator types `/ticket` in the chat window, the conversation is used "
 "to create a *Helpdesk* ticket."
 msgstr ""
+"Si un opérateur tape `/ticket` dans la fenêtre de chat, la conversation est "
+"utilisée pour créer un ticket *Assistance*."
 
 #: ../../content/applications/websites/livechat/responses.rst:72
 msgid ""
 "After entering the `/ticket` command, type a title for the ticket into the "
 "chat window, then press `Enter`."
 msgstr ""
+"Après avoir saisi la commande `/ticket`, taper un titre pour le ticket dans "
+"la fenêtre de chat, puis appuyer sur `Entrée`."
 
 #: ../../content/applications/websites/livechat/responses.rst:None
 msgid "View of the results from a helpdesk search in a Live Chat conversation."
@@ -7052,6 +7793,9 @@ msgid ""
 "the :menuselection:`Helpdesk app` and click the :guilabel:`Tickets` button "
 "on the Kanban card for the appropriate team."
 msgstr ""
+"Pour accéder au nouveau ticket, cliquer sur le lien dans la fenêtre de chat, "
+"ou aller dans l':menuselection:`application Assistance` et cliquer sur le "
+"bouton :guilabel:`Tickets` sur la carte Kanban de l'équipe appropriée."
 
 #: ../../content/applications/websites/livechat/responses.rst:91
 msgid "Search for a ticket from a live chat"
@@ -7062,6 +7806,9 @@ msgid ""
 "If an operator types `/search_tickets` in the chat window, they can search "
 "through *Helpdesk* tickets, either by ticket number or keyword."
 msgstr ""
+"Si un opérateur tape `/search_tickets` dans la fenêtre de chat, il peut "
+"rechercher parmi les tickets *Assistance*, soit par numéro de ticket, soit "
+"par mot-clé."
 
 #: ../../content/applications/websites/livechat/responses.rst:96
 msgid ""
@@ -7069,6 +7816,10 @@ msgid ""
 "number, then press :kbd:`Enter`. If one or more related tickets are found, a "
 "list of links is generated in the conversation window."
 msgstr ""
+"Après avoir saisi la commande `/search_tickets`, taper un mot-clé ou un "
+"numéro de ticket, puis appuyer sur :kbd:`Entrée`. Si un ou plusieurs tickets "
+"liés sont trouvés, une liste de liens est générée dans la fenêtre de "
+"conversation."
 
 #: ../../content/applications/websites/livechat/responses.rst:105
 msgid ""
@@ -7087,6 +7838,9 @@ msgid ""
 "If an operator types `/history` in the chat window, it generates a list of "
 "the most recent pages the visitor has viewed on the website (up to 15)."
 msgstr ""
+"Si un opérateur tape `/history` dans la fenêtre de chat, cela génère une "
+"liste des pages les plus récentes que le visiteur a consultées sur le site "
+"web (jusqu'à 15)."
 
 #: ../../content/applications/websites/livechat/responses.rst:None
 msgid ""
@@ -7103,6 +7857,8 @@ msgid ""
 "By typing `/lead` in the chat window, an operator can create a *lead* in the "
 "**CRM** application."
 msgstr ""
+"En tapant `/lead` dans la fenêtre de chat, un opérateur peut créer une "
+"*piste* dans l'application **CRM**."
 
 #: ../../content/applications/websites/livechat/responses.rst:None
 msgid "View of the results from a /lead command in a Live Chat conversation."
@@ -7113,6 +7869,8 @@ msgstr ""
 msgid ""
 "The `/lead` command can only be used if the **CRM** app has been installed."
 msgstr ""
+"La commande `/lead` peut uniquement être utilisée si l'application **CRM** a "
+"été installée."
 
 #: ../../content/applications/websites/livechat/responses.rst:129
 msgid ""
@@ -7172,7 +7930,7 @@ msgstr ":doc:`/applications/sales/crm/acquire_leads`"
 
 #: ../../content/applications/websites/livechat/responses.rst:151
 msgid ":doc:`../../services/helpdesk`"
-msgstr ""
+msgstr ":doc:`../../services/helpdesk`"
 
 #: ../../content/applications/websites/livechat/responses.rst:156
 msgid "Canned responses"
@@ -7185,6 +7943,10 @@ msgid ""
 "automatically replaced by the expanded *substitution* response in the "
 "conversation."
 msgstr ""
+"Les *réponses prédéfinies* sont des saisies personnalisables où un "
+"*raccourci* remplace une réponse plus longue. Un opérateur saisit le "
+"raccourci, et celui-ci est automatiquement remplacé par la réponse de "
+"*substitution* développée dans la conversation."
 
 #: ../../content/applications/websites/livechat/responses.rst:163
 msgid "Create canned responses"
@@ -7205,6 +7967,9 @@ msgid ""
 "the :guilabel:`Substitution` field, and type the message that should replace "
 "the shortcut."
 msgstr ""
+"Taper une commande de raccourci dans le champ :guilabel:`Raccourci`. "
+"Ensuite, cliquer sur le champ :guilabel:`Substitution` et taper le message "
+"qui doit remplacer le raccourci."
 
 #: ../../content/applications/websites/livechat/responses.rst:172
 msgid ""
@@ -7212,6 +7977,9 @@ msgid ""
 "is for the operators to remember, the easier it is to use the canned "
 "responses in conversations."
 msgstr ""
+"Essayer de relier le raccourci au sujet de la substitution. Plus il est "
+"facile pour les opérateurs de s'en souvenir, plus il est facile d'utiliser "
+"les réponses préenregistrées dans les conversations."
 
 #: ../../content/applications/websites/livechat/responses.rst:176
 msgid "Use canned responses in a live chat conversation"
@@ -7272,6 +8040,12 @@ msgid ""
 "You can easily customize layouts, add multimedia content, and integrate with "
 "other Odoo apps to expand your website's functionality."
 msgstr ""
+"**Odoo Site Web** offre une plateforme conviviale pour créer et gérer un "
+"site web. Il comprend divers outils et fonctionnalités pour concevoir, "
+"publier et maintenir des pages web sans nécessiter de compétences techniques "
+"avancées. Personnaliser facilement les mises en page, ajouter du contenu "
+"multimédia et intégrer avec d'autres applications Odoo pour étendre les "
+"fonctionnalités du site web."
 
 #: ../../content/applications/websites/website.rst:16
 #: ../../content/applications/websites/website/web_design.rst:5
@@ -7281,6 +8055,8 @@ msgstr "Web design"
 #: ../../content/applications/websites/website.rst:16
 msgid "Design your website using building blocks and website themes."
 msgstr ""
+"Concevoir son site web à l'aide de blocs de construction et de thèmes de "
+"site web."
 
 #: ../../content/applications/websites/website.rst:22
 #: ../../content/applications/websites/website/pages.rst:5
@@ -7290,6 +8066,8 @@ msgstr "Pages"
 #: ../../content/applications/websites/website.rst:22
 msgid "Manage website pages, menus, and search engine optimization."
 msgstr ""
+"Gérer les pages du site web, les menus et l'optimisation pour les moteurs de "
+"recherche."
 
 #: ../../content/applications/websites/website.rst:28
 msgid ""
@@ -7297,6 +8075,10 @@ msgid ""
 "cookies bar, translations, multiple websites, form spam protection, content "
 "delivery network (CDN)."
 msgstr ""
+"Configurer les noms de domaine, la saisie automatique d'adresse, Google "
+"Search Console, la barre de cookies, les traductions, les sites web "
+"multiples, la protection anti-spam des formulaires, le réseau de diffusion "
+"de contenu (CDN)."
 
 #: ../../content/applications/websites/website.rst:35
 #: ../../content/applications/websites/website/configuration/multi_website.rst:144
@@ -7309,6 +8091,8 @@ msgid ""
 "Monitor your website's traffic with website analytics and set up link "
 "trackers."
 msgstr ""
+"Surveiller le trafic de son site web avec les analyses de site web et "
+"configurer des traceurs de liens."
 
 #: ../../content/applications/websites/website.rst:40
 #: ../../content/applications/websites/website/mail_groups.rst:3
@@ -7320,10 +8104,12 @@ msgid ""
 "Configure mail groups to allow website visitors to participate in public "
 "discussions via email."
 msgstr ""
+"Configurer des groupes de diffusion pour permettre aux visiteurs du site web "
+"de participer à des discussions publiques par e-mail."
 
 #: ../../content/applications/websites/website.rst:54
 msgid ":doc:`../general/integrations/unsplash`"
-msgstr ""
+msgstr ":doc:`../general/integrations/unsplash`"
 
 #: ../../content/applications/websites/website/configuration/address_autocomplete.rst:3
 msgid "Address autocomplete"
@@ -7770,6 +8556,10 @@ msgid ""
 "the cookies bar using :guilabel:`Block`, :guilabel:`Column` and/"
 "or :guilabel:`Inline Text` customization options."
 msgstr ""
+"Cliquer n'importe où dans le bloc de construction pour personnaliser "
+"davantage l'apparence de la barre de cookies à l'aide des options de "
+"personnalisation :guilabel:`Bloc`, :guilabel:`Colonne` et/ou "
+":guilabel:`Texte en ligne`."
 
 #: ../../content/applications/websites/website/configuration/cookies_bar.rst:38
 msgid ""
@@ -7781,7 +8571,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/configuration/cookies_bar.rst:44
 msgid "Cookies policy"
-msgstr ""
+msgstr "Politique de cookies"
 
 #: ../../content/applications/websites/website/configuration/cookies_bar.rst:46
 msgid ""
@@ -7797,11 +8587,15 @@ msgid ""
 "To adapt the content of the page according to your needs, click "
 "the :guilabel:`Edit` button."
 msgstr ""
+"Pour adapter le contenu de la page selon vos besoins, cliquer sur le bouton "
+":guilabel:`Modifier`."
 
 #: ../../content/applications/websites/website/configuration/cookies_bar.rst:54
 msgid ""
 "You could add a link to this page in your website's footer, for example."
 msgstr ""
+"Ajouter un lien vers cette page dans le pied de page du site web, par "
+"exemple."
 
 #: ../../content/applications/websites/website/configuration/cookies_bar.rst:57
 msgid ":doc:`Pages <../pages>`"
@@ -8985,6 +9779,10 @@ msgid ""
 "Console <https://search.google.com/search-console/welcome>`_. Then, select "
 "the property type :ref:`GSC-Domain` or :ref:`GSC-URL prefix`."
 msgstr ""
+"Pour activer Google Search Console pour votre site web, aller sur `Google "
+"Search Console <https://search.google.com/search-console/welcome>`_. "
+"Sélectionner ensuite le type de propriété :ref:`GSC-Domain` ou :ref:`GSC-URL "
+"prefix`."
 
 #: ../../content/applications/websites/website/configuration/google_search_console.rst:None
 msgid "Google Search Console domain or URL prefix"
@@ -8992,7 +9790,7 @@ msgstr "Préfixe du domaine ou de l'URL de la Console Google Search"
 
 #: ../../content/applications/websites/website/configuration/google_search_console.rst:20
 msgid "Domain property"
-msgstr ""
+msgstr "Propriété de domaine"
 
 #: ../../content/applications/websites/website/configuration/google_search_console.rst:22
 msgid ""
@@ -9002,6 +9800,12 @@ msgid ""
 "informed decisions to optimize its visibility. Enter the domain, e.g., "
 "`example.com` and click :guilabel:`Continue`."
 msgstr ""
+"Une propriété de domaine dans Search Console suit toutes les versions d'un "
+"site web, y compris les sous-domaines et les protocoles (http/https). Cette "
+"vue d'ensemble permet d'analyser les performances de recherche globales du "
+"site web et de prendre des décisions éclairées pour optimiser sa visibilité. "
+"Saisir le domaine, par exemple `example.com`, et cliquer sur "
+":guilabel:`Continuer`."
 
 #: ../../content/applications/websites/website/configuration/google_search_console.rst:28
 msgid ""
@@ -9009,16 +9813,22 @@ msgid ""
 "support.google.com/webmasters/answer/9008080?"
 "hl=en#domain_name_verification&zippy=%2Chtml-tag>`_."
 msgstr ""
+"Le type de propriété de domaine ne peut être vérifié que via "
+"`l'enregistrement DNS <https://support.google.com/webmasters/answer/"
+"9008080?hl=en#domain_name_verification&zippy=%2Chtml-tag>`_."
 
 #: ../../content/applications/websites/website/configuration/google_search_console.rst:30
 msgid ""
 "Google suggests creating at least one domain property to represent your "
 "site, as it is the most complete view of your website information."
 msgstr ""
+"Google suggère de créer au moins une propriété de domaine pour représenter "
+"votre site, car c'est la vue la plus complète des informations de votre site "
+"web."
 
 #: ../../content/applications/websites/website/configuration/google_search_console.rst:36
 msgid "URL prefix property"
-msgstr ""
+msgstr "Propriété de préfixe d'URL"
 
 #: ../../content/applications/websites/website/configuration/google_search_console.rst:38
 msgid ""
@@ -9033,7 +9843,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/configuration/google_search_console.rst:46
 msgid "Site ownership verification"
-msgstr ""
+msgstr "Vérification de la propriété du site"
 
 #: ../../content/applications/websites/website/configuration/google_search_console.rst:48
 msgid ""
@@ -9043,38 +9853,51 @@ msgid ""
 "access to sensitive data and that you have control over how your website is "
 "treated in Google Search."
 msgstr ""
+"Avant d'utiliser Google Search Console pour votre site Web, vous devez "
+"vérifier que vous en êtes le propriétaire. Ce processus de vérification est "
+"une mesure de sécurité qui vous protège, vous et Google. Il garantit que "
+"seuls les utilisateurs autorisés ont accès aux données sensibles et que vous "
+"contrôlez la manière dont votre site Web est traité dans Google Search."
 
 #: ../../content/applications/websites/website/configuration/google_search_console.rst:53
 msgid "Five methods are available to do this:"
-msgstr ""
+msgstr "Cinq méthodes sont disponibles pour cela :"
 
 #: ../../content/applications/websites/website/configuration/google_search_console.rst:57
 msgid ":ref:`GSC-HTML-file-upload`"
-msgstr ""
+msgstr ":ref:`GSC-HTML-file-upload`"
 
 #: ../../content/applications/websites/website/configuration/google_search_console.rst:58
 msgid ""
 "`DNS record <https://support.google.com/webmasters/answer/9008080?"
 "hl=en#domain_name_verification&zippy=%2Chtml-tag>`_"
 msgstr ""
+"`Enregistrement DNS <https://support.google.com/webmasters/answer/"
+"9008080?hl=en#domain_name_verification&zippy=%2Chtml-tag>`_"
 
 #: ../../content/applications/websites/website/configuration/google_search_console.rst:59
 msgid ""
 "`HTML tag <https://support.google.com/webmasters/answer/9008080?"
 "hl=en#meta_tag_verification&zippy=%2Chtml-tag>`_"
 msgstr ""
+"`Balise HTML <https://support.google.com/webmasters/answer/"
+"9008080?hl=en#meta_tag_verification&zippy=%2Chtml-tag>`_"
 
 #: ../../content/applications/websites/website/configuration/google_search_console.rst:60
 msgid ""
 "`Google Analytics tracking code <https://support.google.com/webmasters/"
 "answer/9008080?hl=en#google_analytics_verification>`_"
 msgstr ""
+"`Code de suivi Google Analytics <https://support.google.com/webmasters/"
+"answer/9008080?hl=en#google_analytics_verification>`_"
 
 #: ../../content/applications/websites/website/configuration/google_search_console.rst:61
 msgid ""
 "`Google Tag Manager container snippet <https://support.google.com/webmasters/"
 "answer/9008080?hl=en#google_tag_manager_verification>`_"
 msgstr ""
+"`Snippet de conteneur Google Tag Manager <https://support.google.com/"
+"webmasters/answer/9008080?hl=en#google_tag_manager_verification>`_"
 
 #: ../../content/applications/websites/website/configuration/google_search_console.rst:64
 msgid ""
@@ -9087,7 +9910,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/configuration/google_search_console.rst:72
 msgid "HTML file upload"
-msgstr ""
+msgstr "Téléchargement de fichier HTML"
 
 #: ../../content/applications/websites/website/configuration/google_search_console.rst:74
 msgid ""
@@ -9095,6 +9918,10 @@ msgid ""
 "the verification code you have to put in your Odoo's Website Settings. "
 "Google verifies ownership by checking for this code."
 msgstr ""
+"Cette méthode consiste à télécharger un fichier HTML fourni par Google "
+"contenant le code de vérification que vous devez placer dans les paramètres "
+"du Site Web de votre Odoo. Google vérifie la propriété en recherchant ce "
+"code."
 
 #: ../../content/applications/websites/website/configuration/google_search_console.rst:77
 msgid ""
@@ -9102,20 +9929,26 @@ msgid ""
 "clicked :guilabel:`continue`, expand the HTML file section where you find a "
 "download :icon:`fa-download` button."
 msgstr ""
+"Une fois que vous avez ajouté l'URL de votre site Web sous l'option de "
+"préfixe d'URL et cliqué sur :guilabel:`continuer`, développez la section du "
+"fichier HTML où vous trouverez un bouton de téléchargement :icon:`fa-"
+"download`."
 
 #: ../../content/applications/websites/website/configuration/google_search_console.rst:0
 msgid "HTML file download"
-msgstr ""
+msgstr "Téléchargement du fichier HTML"
 
 #: ../../content/applications/websites/website/configuration/google_search_console.rst:83
 msgid ""
 "Download your HTML verification file and copy the verification code (e.g., "
 "`google123abc.html`)."
 msgstr ""
+"Téléchargez votre fichier de vérification HTML et copiez le code de "
+"vérification (par exemple, `google123abc.html`)."
 
 #: ../../content/applications/websites/website/configuration/google_search_console.rst:0
 msgid "Open and copy html file"
-msgstr ""
+msgstr "Ouvrir et copier le fichier HTML"
 
 #: ../../content/applications/websites/website/configuration/google_search_console.rst:88
 msgid ""
@@ -9124,16 +9957,23 @@ msgid ""
 "the :guilabel:`SEO` section. Paste the verification code (e.g., "
 "`google123abc.html`) in the dedicated field."
 msgstr ""
+"Dans votre base de données Odoo, allez dans :menuselection:`Site Web --> "
+"Configuration --> Paramètres`, et activez :guilabel:`Google Search Console` "
+"dans la section :guilabel:`SEO`. Collez le code de vérification (par "
+"exemple, `google123abc.html`) dans le champ dédié."
 
 #: ../../content/applications/websites/website/configuration/google_search_console.rst:0
 msgid "Paste html code in Odoo"
-msgstr ""
+msgstr "Coller le code HTML dans Odoo"
 
 #: ../../content/applications/websites/website/configuration/google_search_console.rst:95
 msgid ""
 "In Google Search Console, click :guilabel:`Verify`. If you perform the steps "
 "above correctly, verification should be done immediately."
 msgstr ""
+"Dans Google Search Console, cliquez sur :guilabel:`Vérifier`. Si vous "
+"effectuez correctement les étapes ci-dessus, la vérification devrait être "
+"effectuée immédiatement."
 
 #: ../../content/applications/websites/website/configuration/google_search_console.rst:99
 msgid ":doc:`domain_names`"
@@ -9254,6 +10094,8 @@ msgid ""
 "When you switch websites, you are redirected to the homepage of the other "
 "website."
 msgstr ""
+"Lorsque vous changez de site web, vous êtes redirigé vers la page d'accueil "
+"de l'autre site web."
 
 #: ../../content/applications/websites/website/configuration/multi_website.rst:58
 msgid "Website-specific configuration"
@@ -9418,6 +10260,9 @@ msgid ""
 "customer_accounts>` on all of your websites by enabling "
 "the :guilabel:`Shared Customer Accounts` check box in the website settings."
 msgstr ""
+"Vous pouvez :doc:`permettre à vos clients d'utiliser le même compte <../../"
+"ecommerce/customer_accounts>` sur tous vos sites web en activant la case à "
+"cocher :guilabel:`Comptes clients partagés` dans les paramètres du site web."
 
 #: ../../content/applications/websites/website/configuration/multi_website.rst:131
 msgid "Pricing"
@@ -9499,18 +10344,30 @@ msgid ""
 "between human and bot submissions using non-interactive challenges based on "
 "telemetry and visitor behavior."
 msgstr ""
+":ref:`Cloudflare Turnstile <website/spam_protection/cloudflare-turnstile>` "
+"et :ref:`Google reCAPTCHA v3 <website/spam_protection/google-recaptcha>` "
+"protègent les formulaires du site web contre le spam et les abus. Ils "
+"tentent de distinguer les soumissions humaines des soumissions de robots en "
+"utilisant des défis non interactifs basés sur la télémétrie et le "
+"comportement des visiteurs."
 
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:11
 msgid ""
 "We recommend using **Cloudflare Turnstile**, as reCAPTCHA v3 may not be "
 "compliant with local data protection regulations."
 msgstr ""
+"Nous recommandons d'utiliser **Cloudflare Turnstile**, car reCAPTCHA v3 peut "
+"ne pas être conforme aux réglementations locales sur la protection des "
+"données."
 
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:15
 msgid ""
 "All pages using the :guilabel:`Form`, :guilabel:`Newsletter Block`, "
 "or :guilabel:`Newsletter Popup` snippets are protected by both tools."
 msgstr ""
+"Toutes les pages utilisant les snippets :guilabel:`Formulaire`, "
+":guilabel:`Bloc Newsletter`, ou :guilabel:`Pop-up Newsletter` sont protégées "
+"par les deux outils."
 
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:19
 msgid ""
@@ -9541,22 +10398,28 @@ msgid ""
 "`Create <https://dash.cloudflare.com/sign-up>`_ or `log in <https://"
 "dash.cloudflare.com/login>`_ to a Cloudflare account."
 msgstr ""
+"`Créer <https://dash.cloudflare.com/sign-up>`_ ou `se connecter <https://"
+"dash.cloudflare.com/login>`_ à un compte Cloudflare."
 
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:34
 msgid ""
 "In the dashboard's navigation sidebar, go to :menuselection:`Application "
 "security --> Turnstile`."
 msgstr ""
+"Dans la barre latérale de navigation du tableau de bord, aller à "
+":menuselection:`Sécurité des applications --> Turnstile`."
 
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:35
 msgid ""
 "On the :guilabel:`Overview` page, click :icon:`fa-plus` :guilabel:`Add "
 "widget`."
 msgstr ""
+"Sur la page :guilabel:`Aperçu`, cliquer sur :icon:`fa-plus` "
+":guilabel:`Ajouter un widget`."
 
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:36
 msgid "Add a :guilabel:`Widget name` to easily identify it."
-msgstr ""
+msgstr "Ajouter un :guilabel:`Nom du widget` pour l'identifier facilement."
 
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:37
 msgid ""
@@ -9564,6 +10427,9 @@ msgid ""
 "(e.g., *example.com* or *subdomain.example.com*), then click :guilabel:`Add` "
 "twice."
 msgstr ""
+"Cliquer sur :icon:`fa-plus` :guilabel:`Ajouter des noms d'hôtes`, saisir un "
+"nom d'hôte personnalisé (par exemple, *example.com* ou "
+"*subdomain.example.com*), puis cliquer deux fois sur :guilabel:`Ajouter`."
 
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:39
 msgid "Select a :guilabel:`Widget Mode`:"
@@ -9574,6 +10440,8 @@ msgid ""
 "The :guilabel:`Managed` mode is **recommended**, as it allows Turnstile to "
 "prompt visitors to confirm they are human when necessary."
 msgstr ""
+"Le mode :guilabel:`Géré` est **recommandé**, car il permet à Turnstile de "
+"demander aux visiteurs de confirmer qu'ils sont humains si nécessaire."
 
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:0
 msgid "Cloudflare Turnstile human verification widget"
@@ -9629,6 +10497,9 @@ msgid ""
 "Under :guilabel:`Integrations`, enable :guilabel:`Cloudflare Turnstile`, "
 "then click :guilabel:`Save`."
 msgstr ""
+"Depuis le tableau de bord de la base de données, ouvrir l'application "
+"**Paramètres**. Sous :guilabel:`Intégrations`, activer :guilabel:`Cloudflare "
+"Turnstile`, puis cliquer sur :guilabel:`Enregistrer`."
 
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:68
 msgid ""
@@ -9636,6 +10507,9 @@ msgid ""
 "page, copy the :guilabel:`Site Key`, and paste it into the :guilabel:`CF "
 "Site Key` field in Odoo."
 msgstr ""
+"Ouvrir la page :ref:`Cloudflare Turnstile <website/spam_protection/"
+"cloudflare>`, copier la :guilabel:`Clé de site` et la coller dans le champ "
+":guilabel:`Clé de site CF` dans Odoo."
 
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:70
 msgid ""
@@ -9657,6 +10531,9 @@ msgid ""
 "Cloudflare account to :guilabel:`View analytics` and access additional "
 "settings."
 msgstr ""
+"Naviguer vers :menuselection:`Sécurité des applications --> Turnstile` dans "
+"votre compte Cloudflare pour :guilabel:`Voir les analyses` et accéder aux "
+"paramètres supplémentaires."
 
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:81
 msgid "reCAPTCHA v3 configuration"
@@ -9678,21 +10555,28 @@ msgid ""
 "`Sign up <https://accounts.google.com/signup>`_ or `sign in <https://"
 "accounts.google.com/signin>`_ to a Google account."
 msgstr ""
+"`S'inscrire <https://accounts.google.com/signup>`_ ou `se connecter <https://"
+"accounts.google.com/signin>`_ à un compte Google."
 
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:91
 msgid ""
 "Open `the reCAPTCHA website registration page <https://www.google.com/"
 "recaptcha/admin/create>`_."
 msgstr ""
+"Ouvrir `la page d'enregistrement du site web reCAPTCHA <https://"
+"www.google.com/recaptcha/admin/create>`_."
 
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:92
 msgid "Enter a :guilabel:`Label` for the website, e.g., *example.com*."
 msgstr ""
+"Saisir un :guilabel:`Libellé` pour le site web, par exemple, *example.com*."
 
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:93
 msgid ""
 "Leave the :guilabel:`reCAPTCHA type` set to :guilabel:`Score based (v3)`."
 msgstr ""
+"Laisser le :guilabel:`Type reCAPTCHA` défini sur :guilabel:`Basé sur le "
+"score (v3)`."
 
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:94
 msgid ""
@@ -9709,6 +10593,10 @@ msgid ""
 "the field to select a project manually or rename the automatically created "
 "project."
 msgstr ""
+"Sous :guilabel:`Google Cloud Platform`, un projet est automatiquement créé "
+"ou sélectionné si un projet existe déjà pour le compte Google connecté. "
+"Cliquer sur le champ pour sélectionner un projet manuellement ou renommer le "
+"projet créé automatiquement."
 
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:98
 msgid "Agree to the terms of service."
@@ -9724,12 +10612,17 @@ msgid ""
 "Under :guilabel:`Integrations`, navigate to the :guilabel:`reCAPTCHA` "
 "section."
 msgstr ""
+"Depuis le tableau de bord de la base de données, ouvrez l'application "
+"**Paramètres**. Sous :guilabel:`Intégrations`, accédez à la section "
+":guilabel:`reCAPTCHA`."
 
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:111
 msgid ""
 "Do not uninstall the :guilabel:`Google reCAPTCHA integration` module, as it "
 "would also remove many other modules."
 msgstr ""
+"Ne pas désinstaller le module :guilabel:`Intégration Google reCAPTCHA`, car "
+"cela supprimerait également de nombreux autres modules."
 
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:114
 msgid ""
@@ -9737,12 +10630,17 @@ msgid ""
 "page, click :guilabel:`COPY SITE KEY`, and paste it into the :guilabel:`Site "
 "Key` field in Odoo."
 msgstr ""
+"Ouvrir la :ref:`page Google reCAPTCHA <website/spam_protection/google-"
+"recaptcha>`, cliquer sur :guilabel:`COPIER LA CLÉ DU SITE` et coller dans le "
+"champ :guilabel:`Clé du site` dans Odoo."
 
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:116
 msgid ""
 "Open the Google reCAPTCHA page, click :guilabel:`COPY SECRET KEY`, and paste "
 "it into the :guilabel:`Secret Key` field in Odoo."
 msgstr ""
+"Ouvrir la page Google reCAPTCHA, cliquer sur :guilabel:`COPIER LA CLÉ "
+"SECRÈTE` et coller dans le champ :guilabel:`Clé secrète` dans Odoo."
 
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:118
 msgid ""
@@ -9750,12 +10648,18 @@ msgid ""
 "value between `0.00` and `1.00`. The higher the threshold is, the harder it "
 "is to pass the reCAPTCHA, and vice versa."
 msgstr ""
+"Modifier le :guilabel:`Score minimum` par défaut (`0.70`) si nécessaire, en "
+"utilisant une valeur entre `0.00` et `1.00`. Plus le seuil est élevé, plus "
+"il est difficile de réussir le reCAPTCHA, et inversement."
 
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:124
 msgid ""
 "`Interpret reCAPTCHA scores - Google documentation <https://cloud.google.com/"
 "recaptcha/docs/interpret-assessment-website#interpret_scores>`_"
 msgstr ""
+"`Interpréter les scores reCAPTCHA - Documentation Google <https://"
+"cloud.google.com/recaptcha/docs/interpret-assessment-"
+"website#interpret_scores>`_"
 
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:126
 msgid ""
@@ -9807,6 +10711,12 @@ msgid ""
 "choose their preferred language using the :ref:`language selector <translate/"
 "language-selector>`."
 msgstr ""
+"Votre site web s'affiche dans la langue qui correspond au navigateur de "
+"votre visiteur. Si la langue du navigateur n'a pas été installée et ajoutée "
+"à votre site web, le contenu est affiché dans la :ref:`langue par défaut "
+"<translate/default-language>`. Lorsque des langues supplémentaires sont "
+"installées, les utilisateurs peuvent choisir leur langue préférée à l'aide "
+"du :ref:`sélecteur de langue <translate/language-selector>`."
 
 #: ../../content/applications/websites/website/configuration/translate.rst:10
 msgid ""
@@ -9814,6 +10724,9 @@ msgid ""
 "automatic translation of standard terms and provides a tool for manual "
 "content translation."
 msgstr ""
+"La fonctionnalité :ref:`Traduire <translate/translate>` de votre site web "
+"permet la traduction automatique des termes standard et fournit un outil "
+"pour la traduction manuelle du contenu."
 
 #: ../../content/applications/websites/website/configuration/translate.rst:14
 msgid "Install languages"
@@ -9829,6 +10742,14 @@ msgid ""
 "the :guilabel:`Languages` you want from the dropdown menu, tick the "
 "required :guilabel:`Websites to translate`, and click :guilabel:`Add`."
 msgstr ""
+"Pour permettre la traduction de votre site web, vous devez d'abord "
+":doc:`installer <../../../general/users/language>` les langues requises et "
+"les ajouter à votre site web. Pour ce faire, allez dans :menuselection:`Site "
+"Web --> Configuration --> Paramètres` et cliquez sur :icon:`fa-arrow-right` "
+":guilabel:`Installer des langues` dans la section :guilabel:`Informations du "
+"site web`. Dans la boîte de dialogue qui s'ouvre, sélectionnez les "
+":guilabel:`Langues` souhaitées dans le menu déroulant, cochez les "
+":guilabel:`Sites web à traduire` requis et cliquez sur :guilabel:`Ajouter`."
 
 #: ../../content/applications/websites/website/configuration/translate.rst:23
 msgid ""
@@ -9836,6 +10757,10 @@ msgid ""
 "Configuration -–> Settings` and add/remove the required languages in/from "
 "the :guilabel:`Languages` field in the :guilabel:`Website info` section."
 msgstr ""
+"Pour modifier les langues de votre site web, allez dans :menuselection:`Site "
+"Web --> Configuration --> Paramètres` et ajoutez/supprimez les langues "
+"requises dans/du champ :guilabel:`Langues` dans la section "
+":guilabel:`Informations du site web`."
 
 #: ../../content/applications/websites/website/configuration/translate.rst:28
 msgid ""
@@ -9843,6 +10768,9 @@ msgid ""
 "the :ref:`language selector <translate/language-selector>`. You might then "
 "need to refresh your page to see the new language."
 msgstr ""
+"Vous pouvez également ajouter les langues depuis le :ref:`sélecteur de "
+"langue <translate/language-selector>` une fois celles-ci installées. Il peut "
+"être nécessaire de rafraîchir votre page pour voir la nouvelle langue."
 
 #: ../../content/applications/websites/website/configuration/translate.rst:35
 msgid "Default language"
@@ -9855,16 +10783,23 @@ msgid ""
 "do so, go to :menuselection:`Website –-> Configuration -–> Settings`, and "
 "select a language in the :guilabel:`Default` field."
 msgstr ""
+"Lorsque plusieurs langues sont disponibles sur votre Site Web, vous pouvez "
+"définir une langue par défaut à utiliser si la langue du navigateur du "
+"visiteur n'est pas disponible. Pour ce faire, allez dans "
+":menuselection:`Site Web –-> Configuration -–> Paramètres`, et sélectionnez "
+"une langue dans le champ :guilabel:`Par défaut`."
 
 #: ../../content/applications/websites/website/configuration/translate.rst:42
 msgid ""
 "This field is only visible if multiple languages have been installed and "
 "added to your website."
 msgstr ""
+"Ce champ n'est visible que si plusieurs langues ont été installées et "
+"ajoutées à votre Site Web."
 
 #: ../../content/applications/websites/website/configuration/translate.rst:47
 msgid "Language selector"
-msgstr ""
+msgstr "Sélecteur de langue"
 
 #: ../../content/applications/websites/website/configuration/translate.rst:49
 msgid ""
@@ -9872,16 +10807,23 @@ msgid ""
 "available by default in the :guilabel:`Copyright` section at the bottom of "
 "the page. To edit the language selector menu:"
 msgstr ""
+"Les visiteurs de votre Site Web peuvent changer de langue en utilisant le "
+"sélecteur de langue, disponible par défaut dans la section "
+":guilabel:`Copyright` en bas de la page. Pour modifier le menu du sélecteur "
+"de langue :"
 
 #: ../../content/applications/websites/website/configuration/translate.rst:52
 msgid "Go to your website and click :guilabel:`Edit`;"
-msgstr ""
+msgstr "Accéder à votre Site Web et cliquer sur :guilabel:`Modifier` ;"
 
 #: ../../content/applications/websites/website/configuration/translate.rst:53
 msgid ""
 "Click the language selector available in the :guilabel:`Copyright` block and "
 "go to the :guilabel:`Copyright` section of the website builder;"
 msgstr ""
+"Cliquer sur le sélecteur de langue disponible dans le bloc "
+":guilabel:`Copyright` et aller dans la section :guilabel:`Copyright` du "
+"constructeur de Site Web ;"
 
 #: ../../content/applications/websites/website/configuration/translate.rst:55
 msgid ""
@@ -9889,6 +10831,9 @@ msgid ""
 "or :guilabel:`Inline`. Click :guilabel:`None` if you do not want to display "
 "the  :guilabel:`Language selector`;"
 msgstr ""
+"Définir le champ :guilabel:`Sélecteur de langue` sur :guilabel:`Liste "
+"déroulante` ou :guilabel:`En ligne`. Cliquer sur :guilabel:`Aucun` si vous "
+"ne souhaitez pas afficher le :guilabel:`Sélecteur de langue` ;"
 
 #: ../../content/applications/websites/website/configuration/translate.rst:0
 msgid "Add a language selector menu."
@@ -9900,10 +10845,14 @@ msgid ""
 "of your page. To do so, click the :guilabel:`Header` block and go to "
 "the :guilabel:`Navbar` section to edit the :guilabel:`Language Selector`."
 msgstr ""
+"Vous pouvez également ajouter le :guilabel:`Sélecteur de langue` à "
+"l':guilabel:`En-tête` de votre page. Pour ce faire, cliquer sur le bloc "
+":guilabel:`En-tête` et aller dans la section :guilabel:`Barre de navigation` "
+"pour modifier le :guilabel:`Sélecteur de langue`."
 
 #: ../../content/applications/websites/website/configuration/translate.rst:71
 msgid "Translate your website"
-msgstr ""
+msgstr "Traduire votre Site Web"
 
 #: ../../content/applications/websites/website/configuration/translate.rst:73
 msgid ""
@@ -9912,16 +10861,23 @@ msgid ""
 "right corner to manually activate the translation mode so that you can "
 "translate what has not been translated automatically by Odoo."
 msgstr ""
+"Sélectionner la langue souhaitée dans le sélecteur de langue pour voir votre "
+"contenu dans une autre langue. Ensuite, cliquer sur le bouton "
+":guilabel:`Traduire` dans le coin supérieur droit pour activer manuellement "
+"le mode de traduction afin de pouvoir traduire ce qui n'a pas été traduit "
+"automatiquement par Odoo."
 
 #: ../../content/applications/websites/website/configuration/translate.rst:77
 msgid ""
 "Translated text strings are highlighted in green; text strings that were not "
 "translated automatically are highlighted in yellow."
 msgstr ""
+"Les chaînes de texte traduites sont surlignées en vert ; les chaînes de "
+"texte qui n'ont pas été traduites automatiquement sont surlignées en jaune."
 
 #: ../../content/applications/websites/website/configuration/translate.rst:None
 msgid "Entering the translation mode"
-msgstr ""
+msgstr "Activer le mode de traduction"
 
 #: ../../content/applications/websites/website/configuration/translate.rst:83
 msgid ""
@@ -9930,12 +10886,19 @@ msgid ""
 "the database. Any changes made to the master page are automatically applied "
 "to all translated versions."
 msgstr ""
+"Dans ce mode, vous ne pouvez traduire que le texte. Pour modifier la "
+"structure de la page, vous devez modifier la page principale, c'est-à-dire "
+"la page dans la langue d'origine de la base de données. Toute modification "
+"apportée à la page principale est automatiquement appliquée à toutes les "
+"versions traduites."
 
 #: ../../content/applications/websites/website/configuration/translate.rst:87
 msgid ""
 "To replace the original text with the translation, click the block, edit its "
 "contents, and :guilabel:`Save`."
 msgstr ""
+"Pour remplacer le texte d'origine par la traduction, cliquer sur le bloc, "
+"modifier son contenu et :guilabel:`Enregistrer`."
 
 #: ../../content/applications/websites/website/configuration/translate.rst:91
 msgid ""
@@ -9948,6 +10911,14 @@ msgid ""
 "but the translated elements (e.g., product name) adapt to the selected "
 "language."
 msgstr ""
+"Lorsqu'un Site Web prend en charge plusieurs langues, la structure d'URL "
+"principale reste cohérente d'une langue à l'autre, tandis que des éléments "
+"spécifiques comme les noms de produits ou les catégories sont traduits. Par "
+"exemple, `https://www.monsite.com/shop/product/mon-produit-1` est la version "
+"anglaise d'une page produit, tandis que `https://www.monsite.com/fr/shop/"
+"product/mon-produit-1` est la version française de la même page. La "
+"structure (/shop/product/) reste inchangée, mais les éléments traduits (par "
+"exemple, le nom du produit) s'adaptent à la langue sélectionnée."
 
 #: ../../content/applications/websites/website/configuration/translate.rst:99
 msgid ""
@@ -9956,29 +10927,41 @@ msgid ""
 "the language code (e.g., :guilabel:`EN`) next to the text you want to "
 "translate and add the translation."
 msgstr ""
+"Une fois la langue souhaitée installée, vous pouvez traduire certains "
+"éléments depuis le backend (par exemple, le nom du produit dans le "
+"formulaire produit). Pour ce faire, cliquer sur le code de langue (par "
+"exemple, :guilabel:`FR`) à côté du texte que vous souhaitez traduire et "
+"ajouter la traduction."
 
 #: ../../content/applications/websites/website/configuration/translate.rst:104
 msgid "Content visibility by language"
-msgstr ""
+msgstr "Visibilité du contenu par langue"
 
 #: ../../content/applications/websites/website/configuration/translate.rst:106
 msgid ""
 "You can hide content (such as images or videos, for example) depending on "
 "the language. To do so:"
 msgstr ""
+"Vous pouvez masquer du contenu (comme des images ou des vidéos, par exemple) "
+"en fonction de la langue. Pour ce faire :"
 
 #: ../../content/applications/websites/website/configuration/translate.rst:108
 msgid "Click :guilabel:`Edit` and select an element of your website;"
 msgstr ""
+"Cliquer sur :guilabel:`Modifier` et sélectionner un élément de votre Site "
+"Web ;"
 
 #: ../../content/applications/websites/website/configuration/translate.rst:109
 msgid "Go to the :guilabel:`Text - Image` section and :guilabel:`Visibility`;"
 msgstr ""
+"Aller dans la section :guilabel:`Texte - Image` et :guilabel:`Visibilité` ;"
 
 #: ../../content/applications/websites/website/configuration/translate.rst:110
 msgid ""
 "Click :guilabel:`No condition` and select :guilabel:`Conditionally` instead;"
 msgstr ""
+"Cliquer sur :guilabel:`Aucune condition` et sélectionner "
+":guilabel:`Conditionnellement` à la place ;"
 
 #: ../../content/applications/websites/website/configuration/translate.rst:111
 msgid ""
@@ -9986,6 +10969,10 @@ msgid ""
 "selecting :guilabel:`Visible for` or :guilabel:`Hidden for`, and "
 "click :guilabel:`Choose a record` to decide which languages are impacted."
 msgstr ""
+"Aller dans :guilabel:`Langues` pour configurer la ou les condition(s) à "
+"appliquer en sélectionnant :guilabel:`Visible pour` ou :guilabel:`Masqué "
+"pour`, puis cliquer sur :guilabel:`Choisir un enregistrement` pour décider "
+"quelles langues sont impactées."
 
 #: ../../content/applications/websites/website/mail_groups.rst:5
 msgid ""
@@ -11141,6 +12128,10 @@ msgid ""
 "the device: desktop, tablet, or mobile, which positively impacts ranking in "
 "search engines."
 msgstr ""
+"Tous les :doc:`thèmes <../web_design/themes>` Odoo s'appuient sur le "
+"Framework CSS `Bootstrap <https://getbootstrap.com/>`_ pour s'afficher "
+"efficacement selon l'appareil : ordinateur, tablette ou mobile, ce qui "
+"impacte positivement le classement dans les moteurs de recherche."
 
 #: ../../content/applications/websites/website/pages/seo.rst:19
 msgid "Content optimization"
@@ -11320,6 +12311,13 @@ msgid ""
 "default. If you are using a third-party theme, it may provide images that "
 "are not compressed efficiently."
 msgstr ""
+"Odoo compresse automatiquement les images téléchargées et les convertit en "
+"`Webp`. Avec ce format de fichier, les photos sont plus petites, ce qui "
+"augmente la vitesse de chargement des pages et, par conséquent, améliore le "
+"classement SEO. Toutes les images utilisées dans les :doc:`thèmes <../"
+"web_design/themes>` officiels Odoo sont également compressées par défaut. Si "
+"vous utilisez un thème tiers, il peut fournir des images qui ne sont pas "
+"compressées efficacement."
 
 #: ../../content/applications/websites/website/pages/seo.rst:93
 msgid ""
@@ -11327,6 +12325,9 @@ msgid ""
 "click :guilabel:`Edit`, then go to the :guilabel:`Customize` tab, and adapt "
 "the :guilabel:`Format` in the :guilabel:`Image` section."
 msgstr ""
+"**Pour modifier une image** de votre Site Web, sélectionnez l'image, cliquez "
+"sur :guilabel:`Modifier`, puis accédez à l'onglet :guilabel:`Personnaliser` "
+"et adaptez le :guilabel:`Format` dans la section :guilabel:`Image`."
 
 #: ../../content/applications/websites/website/pages/seo.rst:None
 msgid "automated image compression"
@@ -11523,7 +12524,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/pages/seo.rst:174
 msgid "Hreflang HTML tags"
-msgstr ""
+msgstr "Balises HTML hreflang"
 
 #: ../../content/applications/websites/website/pages/seo.rst:176
 msgid ""
@@ -11532,6 +12533,10 @@ msgid ""
 "informing search engines about a specific page's language and geographical "
 "targeting."
 msgstr ""
+"Odoo inclut automatiquement les balises `hreflang` et `x-default` dans le "
+"code des pages multilingues de votre site Web. Ces attributs HTML sont "
+"essentiels pour informer les moteurs de recherche de la langue et du ciblage "
+"géographique d'une page spécifique."
 
 #: ../../content/applications/websites/website/pages/seo.rst:181
 msgid ":doc:`../configuration/translate`"
@@ -11547,6 +12552,10 @@ msgid ""
 "provides data on visitor demographics, behavior, and interactions, helping "
 "improve websites and marketing strategies."
 msgstr ""
+"L'analyse de site Web aide les propriétaires de sites à surveiller comment "
+"les visiteurs utilisent leur site. Elle fournit des données sur la "
+"démographie, le comportement et les interactions des visiteurs, aidant à "
+"améliorer les sites Web et les stratégies marketing."
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:8
 msgid ""
@@ -11554,6 +12563,10 @@ msgid ""
 "or :ref:`analytics/google-analytics`. We recommend using Plausible.io as it "
 "is privacy-friendly, lightweight, and easy to use."
 msgstr ""
+"Vous pouvez suivre le trafic de votre site Web Odoo en utilisant "
+":ref:`analytics/plausible` ou :ref:`analytics/google-analytics`. Nous "
+"recommandons d'utiliser Plausible.io car il respecte la confidentialité, est "
+"léger et facile à utiliser."
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:12
 msgid ""
@@ -11861,7 +12874,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:133
 msgid "Google Tag Manager"
-msgstr ""
+msgstr "Google Tag Manager"
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:135
 msgid ""
@@ -11877,12 +12890,18 @@ msgid ""
 "layers) to retrieve variables and send them to Google Analytics. Data layers "
 "are currently not managed in Odoo."
 msgstr ""
+"Certaines balises GTM utilisent des couches de données (par exemple, les "
+"couches de données de suivi eCommerce avancé) pour récupérer des variables "
+"et les envoyer à Google Analytics. Les couches de données ne sont "
+"actuellement pas gérées dans Odoo."
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:142
 msgid ""
 "Google Tag Manager may not be compliant with local data protection "
 "regulations."
 msgstr ""
+"Google Tag Manager peut ne pas être conforme aux réglementations locales sur "
+"la protection des données."
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:144
 msgid "To use GTM, proceed as follows:"
@@ -11893,6 +12912,8 @@ msgid ""
 "Create or sign in to a Google account by going to https://"
 "tagmanager.google.com/."
 msgstr ""
+"Créer ou se connecter à un compte Google en accédant à https://"
+"tagmanager.google.com/."
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:148
 msgid "In the :guilabel:`Accounts` tab, click :guilabel:`Create account`."
@@ -11903,16 +12924,21 @@ msgid ""
 "Enter an :guilabel:`Account Name` and select the "
 "account's :guilabel:`Country`."
 msgstr ""
+"Saisir un :guilabel:`Account Name` et sélectionner le :guilabel:`Country` du "
+"compte."
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:152
 msgid ""
 "Enter your website's URL in the :guilabel:`Container name` field and select "
 "the :guilabel:`Target platform`."
 msgstr ""
+"Saisir l'URL du site web dans le champ :guilabel:`Container name` et "
+"sélectionner la :guilabel:`Target platform`."
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:155
 msgid "Click :guilabel:`Create` and agree to the Terms of Service."
 msgstr ""
+"Cliquer sur :guilabel:`Create` et accepter les conditions d'utilisation."
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:157
 msgid ""
@@ -11924,13 +12950,16 @@ msgstr ""
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:0
 msgid "Install Google Tag Manager"
-msgstr ""
+msgstr "Installer Google Tag Manager"
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:166
 msgid ""
 "The data is collected in the marketing tools used to monitor the website "
 "(e.g., Google Analytics, Plausible, Facebook Pixel), not in Odoo."
 msgstr ""
+"Les données sont collectées dans les outils marketing utilisés pour "
+"surveiller le site web (par ex. Google Analytics, Plausible, Facebook Pixel)"
+", pas dans Odoo."
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:3
 msgid "Link tracker"
@@ -11942,6 +12971,9 @@ msgid ""
 "campaigns' effectiveness. They let you determine which channels bring you "
 "the most visitors and make informed decisions."
 msgstr ""
+"Le suivi de liens permet de créer des liens suivis pour mesurer l'efficacité "
+"de vos campagnes marketing. Ils permettent de déterminer quels canaux vous "
+"apportent le plus de visiteurs et de prendre des décisions éclairées."
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:12
 msgid ""
@@ -11951,10 +12983,15 @@ msgid ""
 "you can :doc:`install <../../../general/apps_modules>` the :guilabel:`Link "
 "Tracker` module itself or one of the marketing apps."
 msgstr ""
+"Le module :guilabel:`Suivi de liens` n'est pas installé par défaut. Activer "
+"l'option :guilabel:`E-mail Marketing` en accédant à :menuselection:`Site "
+"Web --> Configuration --> Paramètres.` Alternativement, :doc:`installer <../"
+"../../general/apps_modules>` le module :guilabel:`Suivi de liens` lui-même "
+"ou l'une des applications marketing."
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:18
 msgid "Create a traceable URL"
-msgstr ""
+msgstr "Créer une URL traçable"
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:20
 msgid ""
@@ -11962,18 +12999,25 @@ msgid ""
 "Site --> Link Tracker`. Fill in the following information and "
 "click :guilabel:`Get tracked link` to generate a tracking URL."
 msgstr ""
+"Pour créer et gérer des liens suivis, accéder à :menuselection:`Site Web --> "
+"Site --> Suivi de liens`. Remplir les informations suivantes et cliquer sur "
+":guilabel:`Obtenir le lien suivi` pour générer une URL de suivi."
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:23
 msgid ""
 ":guilabel:`URL`: The URL which is the target of the campaign. It is "
 "automatically populated with the URL from where you access the menu."
 msgstr ""
+":guilabel:`URL` : L'URL qui est la cible de la campagne. Elle est "
+"automatiquement renseignée avec l'URL depuis laquelle vous accédez au menu."
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:26
 msgid ""
 ":guilabel:`Campaign`: The specific campaign the link should be associated "
 "with. This parameter is used to distinguish the different campaigns."
 msgstr ""
+":guilabel:`Campaign` : La campagne spécifique à laquelle le lien doit être "
+"associé. Ce paramètre permet de distinguer les différentes campagnes."
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:29
 msgid ""
@@ -11981,6 +13025,9 @@ msgid ""
 "which the visitor arrives at your site, such as organic search, paid search, "
 "social media ad, email, etc."
 msgstr ""
+":guilabel:`Medium` : Le medium décrit la catégorie ou la méthode par "
+"laquelle le visiteur arrive sur le site, comme la recherche organique, la "
+"recherche payante, la publicité sur les réseaux sociaux, l'e-mail, etc."
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:32
 msgid ""
@@ -11988,10 +13035,13 @@ msgid ""
 "that referred the visitor, such as a search engine, a newsletter, or a "
 "website."
 msgstr ""
+":guilabel:`Source` : La source identifie la plateforme ou le site Web précis "
+"qui a redirigé le visiteur, tel qu'un moteur de recherche, une newsletter ou "
+"un site Web."
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:None
 msgid "Create a link tracker URL"
-msgstr ""
+msgstr "Créer une URL de suivi de lien"
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:38
 msgid ""
@@ -11999,6 +13049,9 @@ msgid ""
 "called :abbr:`UTM (Urchin Tracking Module)` parameters. They are "
 "incorporated in the tracked URL."
 msgstr ""
+"Les paramètres :guilabel:`Campagne`, :guilabel:`Support` et "
+":guilabel:`Source` sont appelés paramètres :abbr:`UTM (Urchin Tracking "
+"Module)`. Ils sont incorporés dans l'URL suivie."
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:42
 msgid "Website visibility"
@@ -12029,7 +13082,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:57
 msgid "Tracked links overview"
-msgstr ""
+msgstr "Aperçu des liens suivis"
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:59
 msgid ""
@@ -12037,10 +13090,13 @@ msgid ""
 "Site --> Link Tracker` and scroll down to :guilabel:`Your tracked links` "
 "section."
 msgstr ""
+"Pour obtenir un aperçu des liens suivis, aller à :menuselection:`Site "
+"Web --> Site --> Link Tracker` et faire défiler jusqu'à la section "
+":guilabel:`Your tracked links`."
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:None
 msgid "Get an overview of all the links you track."
-msgstr ""
+msgstr "Obtenir un aperçu de tous les liens suivis."
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:66
 msgid "Statistics"
@@ -12051,10 +13107,12 @@ msgid ""
 "To measure the performance of tracked links, click the :guilabel:`Stats` "
 "button."
 msgstr ""
+"Pour mesurer les performances des liens suivis, cliquer sur le bouton "
+":guilabel:`Stats`."
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:None
 msgid "View the statistics related to a specific tracked link."
-msgstr ""
+msgstr "Consulter les statistiques liées à un lien suivi spécifique."
 
 #: ../../content/applications/websites/website/reporting/link_tracker.rst:73
 msgid ""
@@ -12063,6 +13121,11 @@ msgid ""
 "specific period by clicking the :guilabel:`All Time`, :guilabel:`Last "
 "Month`, or :guilabel:`Last Week` options."
 msgstr ""
+"Faire défiler vers le bas jusqu'à la section :guilabel:`Statistiques` pour "
+"obtenir un aperçu du nombre de clics sur vos liens suivis. Afficher les "
+"informations pour une période spécifique en cliquant sur les options "
+":guilabel:`Tout le temps`, :guilabel:`Mois dernier` ou :guilabel:`Semaine "
+"dernière`."
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:5
 msgid "Building blocks"
@@ -12125,7 +13188,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:41
 msgid "Layout: grid and columns"
-msgstr ""
+msgstr "Disposition : grille et colonnes"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:43
 msgid ""
@@ -12151,6 +13214,8 @@ msgid ""
 "When the grid layout is selected, choose an image and drag and drop it where "
 "needed."
 msgstr ""
+"Lorsque la disposition en grille est sélectionnée, choisir une image et la "
+"glisser-déposer où nécessaire."
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:60
 msgid "Position images behind the text by using the above/below icons."
@@ -12289,7 +13354,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:151
 msgid "Invisible elements"
-msgstr ""
+msgstr "Éléments invisibles"
 
 #: ../../content/applications/websites/website/web_design/building_blocks.rst:153
 msgid ""
@@ -12361,7 +13426,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/web_design/building_blocks/dynamic_content.rst:None
 msgid "Example of a form block"
-msgstr ""
+msgstr "Exemple de bloc de formulaire"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/dynamic_content.rst:28
 msgid "Action"
@@ -12406,7 +13471,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/web_design/building_blocks/dynamic_content.rst:None
 msgid "Editing a form to change its action"
-msgstr ""
+msgstr "Modifier un formulaire pour changer son action"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/dynamic_content.rst:47
 msgid ""
@@ -12432,13 +13497,15 @@ msgstr ""
 
 #: ../../content/applications/websites/website/web_design/building_blocks/dynamic_content.rst:0
 msgid "All types of form fields"
-msgstr ""
+msgstr "Tous les types de champs de formulaire"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/dynamic_content.rst:65
 msgid ""
 "Some fields are visually similar, but the data entered must follow a "
 "specific format."
 msgstr ""
+"Certains champs sont visuellement similaires, mais les données saisies "
+"doivent suivre un format spécifique."
 
 #: ../../content/applications/websites/website/web_design/building_blocks/dynamic_content.rst:67
 msgid ""
@@ -12459,7 +13526,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/web_design/building_blocks/dynamic_content.rst:None
 msgid "Example of a products block"
-msgstr ""
+msgstr "Exemple d'un bloc de produits"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/dynamic_content.rst:84
 msgid ""
@@ -12486,10 +13553,13 @@ msgid ""
 "into a page, such as videos from YouTube, maps from Google Maps, social "
 "media posts from Instagram, etc."
 msgstr ""
+"Le code d'intégration permet d'intégrer du contenu provenant de services "
+"tiers dans une page, tels que des vidéos de YouTube, des cartes de Google "
+"Maps, des publications de réseaux sociaux d'Instagram, etc."
 
 #: ../../content/applications/websites/website/web_design/building_blocks/dynamic_content.rst:None
 msgid "Add the link to the embedded code you want to point to"
-msgstr ""
+msgstr "Ajouter le lien vers le code intégré que vous souhaitez pointer"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/dynamic_content.rst:102
 msgid ""
@@ -12713,6 +13783,9 @@ msgid ""
 "Changing a color preset automatically updates the colors of both the default "
 "preset and the building blocks where the preset is used."
 msgstr ""
+"Modifier un préréglage de couleurs met automatiquement à jour les couleurs "
+"du préréglage par défaut et des blocs de construction où le préréglage est "
+"utilisé."
 
 #: ../../content/applications/websites/website/web_design/themes.rst:31
 msgid ""
