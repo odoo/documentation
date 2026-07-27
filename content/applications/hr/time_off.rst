@@ -100,9 +100,10 @@ are displayed.
    :titlesonly:
 
    time_off/time_off_types
-   time_off/public_holidays
-   time_off/allocations
    time_off/accrual_plans
+   time_off/public_holidays
+   time_off/mandatory_days
+   time_off/allocations
    time_off/request_time_off
    time_off/my_time
    time_off/management
