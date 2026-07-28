@@ -18,7 +18,7 @@ as standard financial reports, bank reconciliation, budgets, asset management, a
       :target: accounting/get_started
       :large:
 
-      Basic concepts of accounting and initial setup of your accounting
+      Detailed instructions for the initial setup of your accounting
 
    .. card:: Taxes
       :target: accounting/taxes
