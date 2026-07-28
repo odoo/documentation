@@ -109,8 +109,26 @@ columns. Then, choose the desired values in the :guilabel:`Apply on Variants` co
    :align: center
    :alt: "Apply on Variants" option on the additional options menu.
 
-Each component can be assigned to multiple variants. Components with no variants specified are used
-in every variant of the product. The same principle applies when configuring operations and
+Each component can be assigned to multiple attribute values. When multiple values are selected,
+Odoo groups them by attribute. Values belonging to the same attribute are evaluated as **OR**
+conditions, while values belonging to different attributes are evaluated as **AND** conditions.
+
+.. example::
+   Consider a product with the following attributes and values:
+
+   - :guilabel:`Legs`: :guilabel:`Steel`, :guilabel:`Aluminium`, and
+     :guilabel:`Custom`
+   - :guilabel:`Color`: :guilabel:`White` and :guilabel:`Black`
+
+   Selecting :guilabel:`Legs: Steel`, :guilabel:`Legs: Aluminium`, and
+   :guilabel:`Color: White` applies the component to variants matching
+   ``(Legs = Steel OR Legs = Aluminium) AND Color = White``.
+
+   Selecting :guilabel:`Legs: Custom` and :guilabel:`Color: Black` applies the component only
+   to variants that have both the :guilabel:`Custom` legs and :guilabel:`Black` color values.
+
+Components with no values specified in the :guilabel:`Apply on Variants` field are used in every
+variant of the product. The same matching logic applies when configuring operations and
 by-products.
 
 When defining variant :abbr:`BoMs (bills of material)` by component assignment, the
