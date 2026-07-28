@@ -117,7 +117,7 @@ Invoice and register payments
 
 Due to TikTok Shop's policy of not sharing customer email addresses, invoices cannot be sent
 directly from Odoo. Instead, invoices can be generated in Odoo and manually uploaded to *TikTok
-Shop Partner Center*. :ref:`Register a bank journal <accounting-setup-bank>`
+Shop Partner Center*. :ref:`Register a bank journal <accounting/journals/bank-cash-cc>`
 (e.g., "TikTok Payments") with a suspense account. Since TikTok shop processes batch payments, all
 invoices linked to a payment in Odoo can be processed by
 :ref:`creating a batch payment <accounting/batch/creation>`.
