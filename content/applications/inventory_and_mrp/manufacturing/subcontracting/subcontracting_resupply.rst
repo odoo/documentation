@@ -29,13 +29,12 @@ below:
    a vendor on the subcontracted product.
 #. :ref:`Create a subcontracting-type BoM <manufacturing/subcontracting_resupply/config/bom-config>`
    for the product and add the necessary components.
-#. For each component, open its product form and set its *Resupply Subcontractor on Order* route.
 
 Specifying the subcontractor as a vendor on the product form allows the contracting company to
 properly purchase the product from the subcontractor through a purchase order (PO). The bill of
-materials (BoM) allows the product to be manufactured externally by the subcontractor. The *Resupply
-Subcontractor on Order* route is applied to each component in order for them to be properly sent
-from the contractor to the subcontractor.
+materials (BoM) allows the product to be manufactured externally by the subcontractor. By default,
+components specified on a subcontracting-type |BoM| are automatically configured to be sent from the
+contractor to the subcontractor.
 
 .. _manufacturing/subcontracting_resupply/config/product-config:
 
