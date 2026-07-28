@@ -35,14 +35,13 @@ below:
 #. :ref:`Create a subcontracting-type bill of materials (BoM)
    <manufacturing/subcontracting_dropship/config/bom-config>` for the product and add the necessary
    components.
-#. For each dropshipped component, open its product form, then set its dropship vendor and its
-   *Dropship Subcontractor on Order* route.
+#. For each dropshipped component, open its product form, then set its dropship vendor and the
+   *Dropship* route.
 
 Specifying the subcontractor as a vendor on the product form allows the contracting company to
 properly purchase the product from the subcontractor through a purchase order (PO). The |BoM| allows
-the product to be manufactured externally by the subcontractor. The *Dropship Subcontractor on
-Order* route is applied to each component in order to be properly sent from the dropshipping vendor
-to the subcontractor.
+the product to be manufactured externally by the subcontractor. The *Dropship* route is applied to
+each component in order to be properly sent from the dropshipping vendor to the subcontractor.
 
 .. important::
    In order to configure product components for dropshipping, make sure that the *Dropshipping*
