@@ -115,20 +115,19 @@ rule to organize and distinguish leads by specific identifiers/categories.
    :guilabel:`Add condition` button to reveal a new, modifiable condition line.
 
    Next, they click the first field and select :guilabel:`Ticket Type` from the popover. In the
-   second field, they select `=`. In the third field, they select the :guilabel:`General Admission`
-   ticket type.
+   second field, they select `is equal to`. In the third field, they select the :guilabel:`General
+   Admission` ticket type.
 
    Because the company wants to be even more specific about attendees who purchased a
    :guilabel:`General Admission` ticket, they add two more condition lines by clicking
-   :guilabel:`New Rule` or :icon:`fa-plus` :guilabel:`(Add New Rule)`.
+   :guilabel:`New Rule`.
 
-   In the second condition line, they select :guilabel:`Source` in the first field, choose `=` in
-   the second field, and add the corresponding :guilabel:`LinkedIn` social media outlet options in
-   the third field.
+   In the second condition line, they select :guilabel:`Source` in the first field, choose `is equal
+   to` in the second field, and add the corresponding :guilabel:`LinkedIn` social media outlet
+   options in the third field.
 
    In the final condition line, they select :guilabel:`Sales Order` :icon:`fa-angle-right`
-   :guilabel:`Online payment` in the first field. Then, they select :guilabel:`is` in the second
-   field and :guilabel:`set` in the third field.
+   :guilabel:`Online payment` in the first field. Then, they select `is set` in the second field.
 
    Finally, in the :guilabel:`Lead Default Values` section, they assign these leads to their
    *Website Sales* team in the :guilabel:`Sales Team` field. They also add *Matt* as the lead
@@ -164,9 +163,10 @@ by specific criteria in each view.
 Manually generate leads
 -----------------------
 
-Leads can also be manually generated from an event form by clicking the :guilabel:`Generate Leads`
-button. This allows users to generate (or re-generate) leads as needed (e.g., after modifying a
-rule) without duplicating existing leads.
+Leads can also be manually generated from an event form by clicking the :icon:`fa-cog`
+:guilabel:`(Actions)` button at the top, then selecting :guilabel:`Generate Leads`. This allows
+users to generate (or re-generate) leads as needed (e.g., after modifying a rule) without
+duplicating existing leads.
 
 .. image:: lead_generation/generate-leads-button.png
    :alt: Generate Leads button on an event form in Odoo Events.
