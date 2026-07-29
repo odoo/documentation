@@ -39,8 +39,8 @@ To request the signature of a one-off document or :ref:`document envelope
       import that document *before* :ref:`adding subsequent documents
       <sign/request-signatures/create-envelope>`.
 
-#. :ref:`Prepare the document(s) for signing <sign/request-signatures/prepare-document>` by
-   adding the relevant fields; add additional signers and/or documents, if relevant.
+#. :ref:`Prepare the document(s) for signing <sign/request-signatures/prepare-document>` by adding
+   the relevant fields; add additional signers and/or documents, if relevant.
 #. Click :guilabel:`Send`.
 #. Complete the relevant fields of the :ref:`New Signature Request
    <sign/request-signatures/configure-request>` window.
@@ -162,7 +162,7 @@ Edit the template:
   - Click :guilabel:`More options` to access and edit :ref:`advanced template settings
     <sign/request-signatures/template-form>`.
 
-.. tip::
+.. tip::highlight=request%20signature
    To replace a document in the template, such as with an updated version, while preserving the
    fields already added, click the :icon:`fa-ellipsis-v` (:guilabel:`vertical ellipsis`) icon next
    to the relevant document, select :guilabel:`Replace document`, choose the new document, then
@@ -205,7 +205,7 @@ To send a signature request using a template to one or more specific signers fro
 #. From the Kanban or list view, click :guilabel:`Send` on the line of the relevant template.
    Alternatively, from the Kanban view, click on a template to open it, then click :guilabel:`Send`.
 #. Complete the relevant fields of the :ref:`New Signature Request
-   <sign/request-signatures/configure-request>` window.
+   <sign/request-signatures/configure-request>` window.highlight=request%20signature
 #. If you are:
 
    - one of the signers and you are ready to sign the document directly, click :guilabel:`Sign Now`,
@@ -226,8 +226,9 @@ To copy a link to a templated document or document envelope:
 .. tip::
    - After a link has been shared, a :guilabel:`Shared` tag appears on the card of the relevant
      template in the :guilabel:`Templates` Kanban view.
-   - To stop sharing a link, from the :guilabel:`Templates` Kanban view, click
-     :guilabel:`Share` on the line of the relevant template, then click :guilabel:`Stop sharing`.
+   - To stop sharing a link, from the :guilabel:`Templahighlight=request%20signaturetes` Kanban view,
+     click :guilabel:`Share` on the line of the relevant template, then click
+     :guilabel:`Stop sharing`.
      Alternatively, hover over the relevant template, click the :icon:`fa-ellipsis-v`
      :guilabel:`(vertical ellipsis)` icon in the top-right corner of the card, then click
      :guilabel:`Stop sharing`.
@@ -418,6 +419,11 @@ configuration when they are added to a document:
   phrases to reject.
 
 .. _sign/request-signatures/add-fields-edit:
+
+Custom fields can be created directly from the document using the :icon:`oi-plus`
+:guilabel:`Add Field` button from the left panel. Then, they can be dragged and dropped into the
+document. If necessary, they can be further :ref:`edited <sign/configuration/create-edit-fields>`
+from the :guilabel:`Configuration` drop-down menu.
 
 Once a field has been added, it is possible to:
 
