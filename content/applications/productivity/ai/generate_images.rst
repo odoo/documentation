@@ -15,8 +15,8 @@ Generate an image
 =================
 
 To generate an image, navigate to the :menuselection:`AI app` and click on the :guilabel:`Odoo Image
-Generation Agent` to open a conversation. Enter a :ref:`prompt <ai/effective-prompts>` describing the
-desired image, then click enter.
+Generation Agent` to open a conversation. Enter a :ref:`prompt <ai/effective-prompts>` describing
+the desired image, then press Enter.
 
 The prompt can describe the subject, environment, lighting, perspective, style, or intended usage
 scenario. More detailed prompts generally produce more accurate and consistent results.
@@ -33,7 +33,7 @@ regenerated.
    If text, branding, or logos are required in the generated image, these elements must be
    **explicitly** included in the prompt. Otherwise, generated images exclude visible text by
    default, according to the rules defined in both the image generation agent and the *Generate
-   Images* topic.
+   Images* skill.
 
 Generate an image on a webpage
 ------------------------------
@@ -82,8 +82,8 @@ AI image generation in Odoo is powered by a dedicated AI agent called the *Odoo 
 Agent*. This agent interprets prompts, generates images, and applies the rules that guide image
 quality, consistency, and behavior.
 
-The image generation agent works together with a topic called *Generate Images*. The agent prompt
-defines the high-level behavior of the image generation workflow, while the topic instructions
+The image generation agent works together with a skill called *Generate Images*. The agent prompt
+defines the high-level behavior of the image generation workflow, while the skill instructions
 provide more detailed guidance regarding how images should be generated and refined.
 
 The agent prompt primarily controls how text and branding are handled in generated images. By
@@ -91,10 +91,10 @@ default, generated images do not contain visible text, labels, logos, signage, o
 these are explicitly requested in the prompt. This helps reduce unintended visual artifacts and
 improves overall image consistency.
 
-The *Generate Images* topic contains the detailed image-generation instructions used during the
+The *Generate Images* skill contains the detailed image-generation instructions used during the
 creation process. These instructions guide how the AI should preserve the identity of a subject, how
 new environments should be generated, and how each image variation should remain visually distinct
 from previous generations.
 
-Together, the agent and topic ensure that generated images remain both visually coherent and
+Together, the agent and skill ensure that generated images remain both visually coherent and
 contextually relevant while still allowing for creative variation.

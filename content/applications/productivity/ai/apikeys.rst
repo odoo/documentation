@@ -7,9 +7,9 @@ AI API keys
 
 Odoo's **AI** application settings contain options to control which |AI| provider the app utilizes,
 manage |API| credentials, and define the default prompts. Odoo supports both Gemini and OpenAI
-(ChatGPT) as providers in the  **AI** application.
+(ChatGPT) as providers in the **AI** application.
 
-Some |AI| features can be used without the  **AI** app installed. However, to use custom |API|
+Some |AI| features can be used without the  *AI** app installed. However, to use custom |API|
 credentials or to alter the |AI| provider used for a specific agent, the app **must** be installed.
 
 .. important::
@@ -63,8 +63,8 @@ key.
       :alt: The popup displaying the newly created OpenAI key.
 
 Return to Odoo, and navigate to :menuselection:`AI app --> Configuration --> Settings`. Under
-*Providers*, tick the checkbox for :guilabel:`Use your own ChatGPT account`, and paste the new key
-in the :guilabel:`Key` field. Click :guilabel:`Save` when finished.
+*AI Providers*, select the checkbox for :guilabel:`OpenAI ChatGPT account`, and paste the new key in
+the :guilabel:`Key` field. Click :guilabel:`Save` when finished.
 
 .. _ai/apikeys/gemini:
 
@@ -88,9 +88,9 @@ On the *API Keys* page, find the appropriate key and click the copy icon.
 .. image:: apikeys/copy-gemini-key.png
    :alt: The new Gemini key with the copy button highlighted.
 
-Return to Odoo, and navigate to :menuselection:`AI app --> Configuration --> Settings`. Under
-*Providers*, tick the checkbox for :guilabel:`Use your own Google Gemini account`, and paste the new
-key in the :guilabel:`Key` field. Click :guilabel:`Save` when finished.
+Return to Odoo, and navigate to :menuselection:`AI app --> Configuration --> Settings`. Under *AI
+Providers*, select the checkbox for :guilabel:`Google Gemini account`, and paste the new key in the
+:guilabel:`Key` field. Click :guilabel:`Save` when finished.
 
 Pricing
 =======
