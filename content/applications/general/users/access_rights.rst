@@ -28,6 +28,22 @@ should not have access to.
    Once complete, click :guilabel:`Save` to save the changes, and implement the user as an
    administrator.
 
+Manage roles
+============
+
+:ref:`Individual users <users/add-individual>` are assigned a *Role* when they are added to the
+database. Roles determine the level of access a user has, while the specific access rights
+associated with each role are defined by :ref:`groups <access-rights/groups>`.
+
+The four available roles are:
+
+- *Administrator*: An internal user with access to technical features, product creation, export, and
+  other advanced permissions.
+- *User*: An internal user that typically has access to the back end and can create and edit records
+  but has less overall access than an administrator.
+- *Portal*: A customer or supplier who accesses their own data through the portal.
+- *Public*: A website visitor or other external user. They generally have the least access.
+
 .. _access-rights/user-permissions:
 
 Manage user permissions
@@ -43,6 +59,10 @@ To make changes to a user's rights, click the desired user to edit their profile
 
 On the user's profile page, in the :guilabel:`Access Rights` tab, scroll down to view the current
 permissions.
+
+The permissions available on the *Access Rights* tab are determined by the groups associated with
+the user's role. Roles provide a predefined set of permissions, while groups define the specific
+access rights granted to users.
 
 For each app, use the drop-down menu to select what level of permission this user should have. The
 options vary for each section, yet the most common are: :guilabel:`Blank/None`, :guilabel:`User: Own
@@ -138,7 +158,7 @@ blank group form, select an :guilabel:`Application`, and complete the group form
 To modify an existing group, click an existing group from the list displayed on the
 :guilabel:`Groups` page, and edit the contents of the form.
 
-Enter a :guilabel:`Name` for the group and tick the checkbox next to :guilabel:`Share Group`, if
+Enter a :guilabel:`Name` for the group and select the checkbox next to :guilabel:`Share Group`, if
 this group was created to set access rights for sharing data with some users.
 
 .. important::
@@ -235,7 +255,7 @@ Inactivity timeout
 *Inactivity timeout* controls whether users are automatically logged out after a period of
 inactivity.
 
-To enable inactivity timeout, click the :guilabel:`Timeouts` tab and tick the :guilabel:`Inactivity`
+To enable inactivity timeout, click the *Timeouts* tab and select the :guilabel:`Inactivity`
 checkbox. Next, choose either :guilabel:`Screen lock` or :guilabel:`Screen lock with two-factor
 authentication` from the drop-down menu. This determines whether the user must to complete 2FA
 verification when logging back in.
@@ -249,10 +269,10 @@ Session timeout
 *Session timeout* controls whether users are logged out after a fixed session duration, regardless
 of activity.
 
-To enable session timeout, click on the :guilabel:`Timeouts` tab, and tick the :guilabel:`Session`
-checkbox. Next, choose either :guilabel:`Logout` or :guilabel:`Logout with two-factor
-authentication` from the drop-down menu. This determines whether the user must to complete 2FA
-verification when logging back in.
+To enable session timeout, click on the *Timeouts* tab, and select the :guilabel:`Session` checkbox.
+Next, choose either :guilabel:`Logout` or :guilabel:`Logout with two-factor authentication` from the
+drop-down menu. This determines whether the user must complete 2FA verification when logging back
+in.
 
 Then, enter the desired amount of time before the user is logged out, and select a unit of measure
 from the drop-down menu. Session timeouts can be measured in minutes, hours, or days.
