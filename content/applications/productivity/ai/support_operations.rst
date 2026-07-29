@@ -37,7 +37,7 @@ the current record context (such as a ticket), and its knowledge :ref:`sources <
 This allows the agent to provide responses grounded in internal documentation rather than generic
 language model output.
 
-Agents can be restricted to specific sources or granted permissions to perform actions using topics.
+Agents can be restricted to specific sources or granted permissions to perform actions using skills.
 This ensures that support assistants behave predictably and remain aligned with organizational
 rules.
 
@@ -84,8 +84,8 @@ sources directly impacts the quality of AI responses.
    Select :guilabel:`Restrict to Sources` to require the agent to **only** base their responses on
    the supplied resources.
 
-Users may also define *topics*, which grant the agent permission to perform specific actions.
-:ref:`Topics <ai/topics>` allow advanced scenarios such as record creation or automation triggers.
+Users may also define *skills*, which grant the agent permission to perform specific actions.
+:ref:`Skills <ai/topics>` allow advanced scenarios such as record creation or automation triggers.
 
 .. image:: support_operations/support-agent.png
    :alt: An example support AI agent.
