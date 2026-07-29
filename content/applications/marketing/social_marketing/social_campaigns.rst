@@ -53,6 +53,8 @@ Clicking :guilabel:`Delete` removes the stage entirely.
    viewed as a list, by selecting the :guilabel:`List` option, located under the search bar, in the
    upper-right corner.
 
+.. _marketing/social-campaigns/new-campaign:
+
 Create social marketing campaigns
 =================================
 

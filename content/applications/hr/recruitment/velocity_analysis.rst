@@ -3,9 +3,9 @@ Velocity analysis
 =================
 
 The *Velocity Analysis* report provides information on how long applicants stay in each stage of the
-recruitment process. This is important, as every job position has specific :ref:`process details
-<recruitment/new_job_position/edit>` that state the length of time applicants should expect to wait
-between specific stages.
+recruitment process. This is important, as every job position has specific :ref:`hiring process
+details <recruitment/new_job/hiring-process>` that state the length of time applicants should expect
+to wait between specific stages.
 
 Knowing how long applicants remain in each stage can help highlight possible bottlenecks. Analyzing
 this data allows the recruitment team to assess each stage, identify any issues, and pivot their
