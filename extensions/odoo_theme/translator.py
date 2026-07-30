@@ -109,7 +109,6 @@ class BootstrapTranslator(HTML5Translator):
     # admonition [name] -> alert-[name]
     # Enforce presence of [name]-title as class on the <p> containing the title
     def visit_admonition(self, node, name=''):
-        # type: (nodes.Node, unicode) -> None
         node_classes = ["alert"]
         if name:
             node_classes.append(ADMONITION_MAPPING[name])
@@ -121,7 +120,6 @@ class BootstrapTranslator(HTML5Translator):
     # overwritten
     # Appends alert-title class to <p> if parent is an Admonition.
     def visit_title(self, node):
-        # type: (nodes.Node) -> None
         if isinstance(node.parent, nodes.Admonition):
             self.body.append(self.starttag(node, 'p', CLASS='alert-title'))
         else:
@@ -147,7 +145,6 @@ class BootstrapTranslator(HTML5Translator):
     # overwritten
     # Ensure table class is present for tables
     def visit_table(self, node):
-        # type: (nodes.Node) -> None
         self.generate_targets_for_table(node)
 
         # c/p of https://github.com/pydata/pydata-sphinx-theme/pull/509/files
