@@ -75,7 +75,7 @@ updates the next invoice date of the subscription. Once the invoice is created, 
 :guilabel:`Other Info` tab, and untick the checkbox next to :guilabel:`Contract in exception`.
 Reload the sales order and confirm that the :guilabel:`Payment Failure` tag is gone.
 
-.. figure:: renewals/contract-in-exception.png
+.. figure:: automatic_payments/contract-in-exception.png
    :alt: The contract in exception option selected with the payment failure tag shown.
 
 The :guilabel:`Contract in exception` option selected with the :guilabel:`Payment Failure` tag
