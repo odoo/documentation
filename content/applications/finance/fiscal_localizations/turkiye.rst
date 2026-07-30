@@ -140,16 +140,17 @@ in your company's contact record:
 - :guilabel:`Address`: Complete legal address
 - :guilabel:`Country`: Registered country
 - :guilabel:`Tags`: Enter the Mersis number as a tag and set the :guilabel:`Category` to
-  :guilabel:`MERSISNO`.
+  :guilabel:`MERSISNO`
 - :guilabel:`eInvoice format`: Türkiye (UBL TR 1.2)
-- :guilabel:`Alias`: Alias acquired from Nilvera
+- :guilabel:`eInvoice Alias`: Acquired from Nilvera
+- :guilabel:`eDispatch Alias`: Acquired from Nilvera
 
 .. note::
    - The :guilabel:`eInvoice format` is set automatically based on the contact's country. To edit
      this field, enable :ref:`developer mode <developer-mode>` to display the field and then
      manually adjust it.
-   - The :guilabel:`Alias` field is only visible once the company's :guilabel:`Nilvera Status`
-     is :guilabel:`E-Invoice`.
+   - The :guilabel:`eInvoice Alias` and :guilabel:`eDispatch Alias` fields are only visible once the
+     company's :guilabel:`Nilvera Status` is :guilabel:`E-Invoice`.
 
 For each customer and vendor:
 
@@ -217,13 +218,27 @@ Supported document types
 
 - e-Invoice
 
-  - Basic scenario and public scenario
+  - Basic scenario
 
     - Sales
     - Withholding
     - Registered for export
     - Tax exempt
-  - Export scenario
+    - Return
+    - Withholding Return
+
+  - Public Scenario
+
+    - Sales
+    - Withholding
+    - Tax exempt
+
+  - Export Scenario
+  - Commercial Scenario
+    - Sales
+    - Withholding
+    - Registered for export
+    - Tax exempt
 
 - e-Archive invoice
 
@@ -231,7 +246,12 @@ Supported document types
   - Withholding
   - Registered for export
   - Tax exempt
+  - Return
+  - Withholding Return
 - e-Dispatch note
+
+.. note::
+   Return invoices can only be sent via credit notes.
 
 Configuration
 -------------
@@ -369,8 +389,9 @@ ensuring compliant and traceable delivery operations.
 #. Open an existing delivery order or create a new one.
 #. Once a :guilabel:`Delivery Address` is selected, fill in the necessary information in the
    :guilabel:`e-Dispatch` tab that appears.
-#. #. Once the delivery order is validated, click the :guilabel:`Generate GİB e-Dispatch (XML)`
-   button that appears to generate the XML file.
+#. Once the delivery order is validated, click the :guilabel:`Send GİB e-Dispatch (XML)` button that
+   appears to send the XML file. To generate the file without sending it, click the
+   :icon:`fa-cog` :guilabel:`(Actions)` icon, then click :guilabel:`Generate GIB e-Dispatch (XML)`.
 #. Download the generated file attached to the delivery order and upload it to Nilvera for
    processing.
 
@@ -380,6 +401,23 @@ Upload e-Dispatch files
 #. Download the received e-Dispatch XML from Nilvera.
 #. Navigate to :menuselection:`Inventory --> Operations --> Receipts`.
 #. Click the :guilabel:`Upload e-Receipt (XML)` button and select the downloaded file.
+
+Manage e-Receipt files
+----------------------
+
+Stock moves can be updated from their relative **Order Receipts** using the XML file. To do so:
+
+#. Open the **Inventory** app, and go to :menuselection:`Operations --> Receipts`.
+#. Open a receipt order, click the :guilabel:`e-Dispatch` tab, and select the XML corresponding to
+   the order receipt from the :guilabel:`e-Dispatch XML` field. Then, click
+   :guilabel:`Update from GIB e-Dispatch (XML)` to:
+   - Update your stock according to the stock moves stored in the XML file.
+   - Update both the :guilabel:`Operations` and :guilabel:`e-Dispatch` tab with info such as
+   :guilabel:`Product`, :guilabel:`Carrier`, :guilabel:`Delivery Notes`, etc.
+   - Log the corresponding e-Receipt PDF file in the chatter.
+
+.. note::
+   The system auto-fetches XML receipts through a CRON every 12 hours.
 
 Mandatory compliance information
 --------------------------------
@@ -391,46 +429,122 @@ via Nilvera.
 Document numbering structure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- All generated invoices and dispatch documents must follow a specific numbering structure: `three
-  alphanumeric characters` + `document year` + `sequential number`.
+All generated invoices and dispatch documents must follow a specific numbering structure: `three
+alphanumeric characters` + `document year` + `sequential number`.
 
-  .. example::
-     INV/2025/00001
+.. example::
+   INV/2025/00001
 
-- The numbering must be unique, sequential, and continuous. Each document must have a distinct
-  identifier.
-- Once a file has been submitted, even if it returns an error, the same sequence number cannot be
-  used; a new document must be created.
+The numbering must be unique, sequential, and continuous. Each document must have a distinct
+identifier.
+
+Once a file has been submitted, even if it returns an error, the same sequence number cannot be
+used; a new document must be created.
 
 .. seealso::
    - :doc:`../accounting/customer_invoices/sequence`
    - :doc:`../accounting/vendor_bills/sequence`
 
+e-Dispatch numbering structure
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To access the e-Dispatch numbering structure, navigate to :menuselection:`Inventory -->
+Configuration --> Operation Types`, then select an operation matching the :guilabel:`Delivery
+Orders` type.
+
+An arbitrary alphanumerical :guilabel:`Sequence Prefix` can be set. The system uses only the last
+three characters of that prefix. The prefix must contain at least three characters; any shorter
+prefix is automatically denied by the system.
+
+.. example::
+   In the sequence WH/OUT/948224, the system will only send **224**.
+
+.. tip::
+   You can preview the sequence by going to :menuselection:`Inventory --> Configuration -->
+   Operation Types --> Delivery Orders`. Once the sequencing is configured, the banner at the top
+   shows a preview:
+
+   .. image:: turkiye/banner-preview.png
+      :alt: Banner preview of sequencing of e-Dispatch.
+
 Sequential number gaps
 ~~~~~~~~~~~~~~~~~~~~~~
 
-- If a sequence number is skipped, the previous missing numbers must be issued within 7 days.
+If a sequence number is skipped, the previous missing numbers must be issued within 7 days.
 
-  .. example::
-     If INV/2025/00002 is issued before INV/2025/00001, INV/2025/00001 must be issued within 7
-     days.
+.. example::
+   If INV/2025/00002 is issued before INV/2025/00001, INV/2025/00001 must be issued within 7 days.
 
-- No sequence number can remain unissued beyond this period.
+No sequence number can remain unissued beyond this period.
 
 Discount rules
 ~~~~~~~~~~~~~~
 
-- Global discounts (discounts shown as a separate invoice line) cannot be issued.
-- All discounts must be applied at the product line level within the invoice.
+Global discounts (discounts shown as a separate invoice line) cannot be issued. All discounts must
+be applied at the product line level within the invoice.
 
 e-Ledger compliance
 ~~~~~~~~~~~~~~~~~~~
 
-- The first issued invoice must represent the opening balance for the accounting period.
-- All subsequent invoices must follow the sequential numbering pattern:
+The first issued invoice must represent the opening balance for the accounting period. All
+subsequent invoices must follow the sequential numbering pattern.
 
-  .. example::
-     INV/2025/00001, INV/2025/00002, INV/2025/00003, etc.
+.. example::
+   INV/2025/00001, INV/2025/00002, INV/2025/00003, etc.
 
-- Sequential numbering must be maintained consistently across the e-Ledger to ensure data integrity
-  and compliance.
+Sequential numbering must be maintained consistently across the e-Ledger to ensure data integrity
+and compliance.
+
+Nilvera e-Invoice subscriptions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note::
+   Turkish e-Invoice law permits only one date range per invoice, at the header level, not per
+   individual line item. Therefore, items with different subscription date ranges cannot be mixed on
+   the same invoice. However, an item with a subscription date range can be mixed with items that
+   that have no date range at all.
+
+If the invoice is generated from the subscription order in the
+:doc:`Subscriptions <../../sales/subscriptions>` app, the subscription order's date is used as the
+invoice's date, at the header level.
+
+Subscription dates must match across lines.
+
+Manage Commercial Invoices
+==========================
+
+Commercial invoice scenarios are managed in the **Accounting** app through :menuselection:`Customers
+--> Invoices` for outgoing invoices and :menuselection:`Vendors --> Bills` for incoming vendor
+bills.
+
+Outgoing commercial invoices
+----------------------------
+
+On a draft (non-posted) invoice, select a scenario from the :guilabel:`Invoice Scenario` field
+and specify the type in the :guilabel:`Is` field. Depending on the selection, the
+:guilabel:`Exemption Reason` field may become available. If applicable, enter an exemption reason.
+
+Once a commercial scenario invoice is confirmed and sent, its :guilabel:`Nilvera Status` changes to
+:guilabel:`Waiting`. The customer must then accept or reject the invoice on their end.
+
+If the customer rejects the invoice, the rejection reason is logged in the invoice chatter.
+
+.. note::
+   - |GİB| automatically accepts an invoice if the recipient does not accept or reject it within
+     **8 days** of reception.
+   - Accepted invoices display one of two statuses:
+     - **Accepted**: Manually accepted by the customer.
+     - **Accepted Automatically**: Automatically acknowledged by |GİB| under the 8-day rule.
+
+Incoming commercial bills
+-------------------------
+
+The system automatically fetches incoming commercial bills from Nilvera and creates corresponding
+draft bills in Odoo.
+
+A status banner appears at the top of fetched bills with options to :guilabel:`Accept` or
+:guilabel:`Reject`:
+
+- :guilabel:`Accept`: Validates the bill.
+- :guilabel:`Reject`: Opens a pop-up window requiring a rejection reason. After clicking
+  :guilabel:`Proceed`, the rejection response is sent to Nilvera. **This action cannot be undone.**
