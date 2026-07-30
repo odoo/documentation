@@ -432,7 +432,7 @@ component is mounted.
    }
 
 
-#. Focus the `input` from the previous exercise. This this should be done from the
+#. Focus the `input` from the previous exercise. This should be done from the
    `TodoList` component (note that there is a `focus` method on the input html element).
 #. Bonus point: extract the code into a specialized `hook <{OWL_PATH}/doc/v2/reference/hooks.md>`_
    `useAutofocus` in a new :file:`awesome_owl/utils.js` file.
