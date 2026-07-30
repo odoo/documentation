@@ -228,7 +228,7 @@ Let's see how we can access the DOM with `t-ref <{OWL_PATH}/doc/reference/refs.m
 .. exercise::
 
    #. Focus the `input` from the previous exercise when the dashboard is `mounted
-      <{OWL_PATH}/doc/reference/component.md#mounted>`_. This this should be done from the
+      <{OWL_PATH}/doc/reference/component.md#mounted>`_. This should be done from the
       `TodoList` component.
    #. Bonus point: extract the code into a specialized `hook <{OWL_PATH}/doc/reference/hooks.md>`_
       `useAutofocus` in a new :file:`owl_playground/utils.js` file.
