@@ -51,6 +51,11 @@ The invoice is automatically issued and downloaded. To simultaneously send the r
 invoice from the :ref:`Receipt <pos/configuration/receipts>` screen, click the
 :icon:`fa-paper-plane` (:guilabel:`send`) button next to the customer's email address.
 
+.. tip::
+   Alternatively, on the payment confirmation screen, click :icon:`fa-pencil-square-o`
+   :guilabel:`Edit`, add a customer in the dedicated field if needed, click :guilabel:`Invoice`,
+   then :guilabel:`Continue`.
+
 .. note::
    If the registered customer's :ref:`contact type <essentials/contacts/type>` is set to
    :guilabel:`Company`, the :icon:`fa-file-text-o` :guilabel:`Invoice` checkbox is automatically
