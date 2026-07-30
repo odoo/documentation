@@ -48,8 +48,31 @@ To create and issue an invoice to the customer upon :ref:`payment <pos/use/sell>
 <../payment_methods>`, then click :guilabel:`Validate`.
 
 The invoice is automatically issued and downloaded. To simultaneously send the receipt and the
+<<<<<<< 07b2b1ae585384f753fb65ac111b18513faaf118
 invoice from the :ref:`Feedback <pos/configuration/receipts>` screen, click :icon:`fa-paper-plane`
 :guilabel:`Send Receipt`.
+||||||| b4bb6ad7f631e68535fe6f4ca2a98c8ed896ea48
+invoice from the :ref:`Receipt <pos/configuration/receipts>` screen, click the
+:icon:`fa-paper-plane` (:guilabel:`send`) button next to the customer's email address.
+
+.. note::
+   If the registered customer's :ref:`contact type <essentials/contacts/type>` is set to
+   :guilabel:`Company`, the :icon:`fa-file-text-o` :guilabel:`Invoice` checkbox is automatically
+   enabled.
+=======
+invoice from the :ref:`Receipt <pos/configuration/receipts>` screen, click the
+:icon:`fa-paper-plane` (:guilabel:`send`) button next to the customer's email address.
+
+.. tip::
+   Alternatively, on the payment confirmation screen, click :icon:`fa-pencil-square-o`
+   :guilabel:`Edit`, add a customer in the dedicated field if needed, click :guilabel:`Invoice`,
+   then :guilabel:`Continue`.
+
+.. note::
+   If the registered customer's :ref:`contact type <essentials/contacts/type>` is set to
+   :guilabel:`Company`, the :icon:`fa-file-text-o` :guilabel:`Invoice` checkbox is automatically
+   enabled.
+>>>>>>> 7a6741a6809e84dc9e2f0fc8663629cbe15d64f7
 
 .. seealso::
    :doc:`receipts`
