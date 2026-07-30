@@ -48,8 +48,12 @@ To create and issue an invoice to the customer upon :ref:`payment <pos/use/sell>
 <../payment_methods>`, then click :guilabel:`Validate`.
 
 The invoice is automatically issued and downloaded. To simultaneously send the receipt and the
-invoice from the :ref:`Feedback <pos/configuration/receipts>` screen, click :icon:`fa-paper-plane`
-:guilabel:`Send Receipt`.
+invoice from the payment confirmation screen, click :icon:`fa-paper-plane` :guilabel:`Send Receipt`.
+
+.. tip::
+   Alternatively, on the payment confirmation screen, click :icon:`fa-pencil-square-o`
+   :guilabel:`Edit`, add a customer in the dedicated field if needed, click :guilabel:`Invoice`,
+   then :guilabel:`Continue`.
 
 .. seealso::
    :doc:`receipts`
