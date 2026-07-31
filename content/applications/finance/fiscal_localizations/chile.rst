@@ -63,6 +63,8 @@ localization.
    All features are only available if the company already completed the `SII Sistema de Facturación
    de Mercado <https://www.sii.cl/factura_electronica/factura_mercado/proceso_certificacion.htm>`_
    certification process.
+   For more details and contact information for local partners who can support the certification, refer
+   to the following `guide <https://www.odoo.com/knowledge/article/71240>`_.
 
 Company information
 ===================
