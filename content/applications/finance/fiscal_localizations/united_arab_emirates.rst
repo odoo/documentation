@@ -46,7 +46,7 @@ compliance with the Federal Tax Authority (FTA).
 The UAE localization package provides the following key features to ensure compliance with local
 fiscal and accounting regulations:
 
-- :ref:`Chart of accounts <localizations/uae/coa>`: a predefined structure aligned with UEA
+- :ref:`Chart of accounts <localizations/uae/coa>`: a predefined structure aligned with UAE
   accounting standards
 - :ref:`Taxes <localizations/uae/taxes>`: preconfigured tax groups and templates based on UAE VAT
   rules
