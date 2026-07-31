@@ -6,11 +6,11 @@ The *Gmail Plugin* integrates an Odoo database with a Gmail inbox, so users can 
 their work between Gmail and Odoo, without losing any information.
 
 .. important::
-   Make sure to check the database version in the :menuselection:`Settings app --> General Settings`, at
-   the bottom of the page.
+   Make sure to check the database version in the :menuselection:`Settings app --> General
+   Settings`, at the bottom of the page.
 
    For database versions 19.2 and later, see the `latest documentation
-   <https://www.odoo.com/documentation/master/applications/general/integrations/mail_plugins/outlook.html>`_
+   <https://www.odoo.com/documentation/master/applications/general/integrations/mail_plugins/gmail.html>`_
    for installation instructions.
 
 .. seealso::
@@ -32,35 +32,31 @@ From the Gmail inbox, click the plus sign icon on the right side panel to get ad
 panel is not visible, click on the arrow icon at the bottom right corner of the inbox to reveal it.
 
 .. image:: gmail/gmail-side-panel.png
-   :align: center
    :alt: Plus sign icon on the Gmail inbox side panel.
 
 Then, use the search bar to search for `Odoo` and locate the :guilabel:`Odoo Inbox Addin`.
 
 .. image:: gmail/google-workspace-marketplace.png
-   :align: center
    :alt: Odoo Inbox Addin on Google Workspace Marketplace.
 
 Or, go directly to the :guilabel:`Odoo Inbox Addin` page on the `Google Workspace Marketplace
 <https://workspace.google.com/marketplace/app/odoo_inbox_addin/873497133275>`_.
 
-Once the plugin is located, click :guilabel:`Install`. Then, click :guilabel:`Continue` to start
-the installation.
+Once the plugin is located, click :guilabel:`Install`. Then, click :guilabel:`Continue` to start the
+installation.
 
-Next, select which Gmail account the user wishes to connect to Odoo. Then click :guilabel:`Allow`
-to let Odoo access the Google account. Google will then show a pop-up window confirming that the
+Next, select which Gmail account the user wishes to connect to Odoo. Then click :guilabel:`Allow` to
+let Odoo access the Google account. Google will then show a pop-up window confirming that the
 installation was successful.
 
 Configure the Odoo database
 ---------------------------
 
 The :guilabel:`Mail Plugin` feature must be enabled in the Odoo database in order to use the Gmail
-Plugin. To enable the feature, go to :menuselection:`Settings --> General Settings`. Under the
-:guilabel:`Integrations` section, activate :guilabel:`Mail Plugin`, and then click
-:guilabel:`Save`.
+Plugin. To enable the feature, go to :menuselection:`Settings app --> General Settings`. Under the
+:guilabel:`Integrations` section, activate :guilabel:`Mail Plugin`, and then click :guilabel:`Save`.
 
 .. image:: gmail/mail-plugin-setting.png
-   :align: center
    :alt: The Mail Plugin feature in the Settings.
 
 Configure the Gmail inbox
@@ -71,7 +67,6 @@ icon to open up the Odoo plugin window. Then, click on any email in the inbox. C
 :guilabel:`Authorize Access` in the plugin window to grant Odoo access to the Gmail inbox.
 
 .. image:: gmail/authorize-access.png
-   :align: center
    :alt: The Authorize Access button in the right sidebar of the Odoo plugin panel.
 
 Next, click :guilabel:`Login`. Then, enter the URL of the Odoo database that the user wishes to
@@ -82,8 +77,8 @@ connect to the Gmail inbox, and log in to the database.
    example, use `https://mycompany.odoo.com`, not
    `https://mycompany.odoo.com/web#cids=1&action=menu`.
 
-Finally, click :guilabel:`Allow` to let Gmail access the Odoo database. The browser will then show
-a :guilabel:`Success!` message. After that, close the window. The Gmail inbox and Odoo database are
+Finally, click :guilabel:`Allow` to let Gmail access the Odoo database. The browser will then show a
+:guilabel:`Success!` message. After that, close the window. The Gmail inbox and Odoo database are
 now connected.
 
 Odoo On-Premise users
@@ -105,17 +100,16 @@ configure the Gmail Plugin.
 Install the Gmail Plugin
 ------------------------
 
-First, access the `GitHub repository <https://github.com/odoo/mail-client-extensions>`_ for the
-Odoo Mail Plugins. Next, click on the green :guilabel:`Code` button. Then, click
-:guilabel:`Download ZIP` to download the Mail Plugin files onto the user's computer.
+First, access the `GitHub repository <https://github.com/odoo/mail-client-extensions>`_ for the Odoo
+Mail Plugins. Next, click on the green :guilabel:`Code` button. Then, click :guilabel:`Download ZIP`
+to download the Mail Plugin files onto the user's computer.
 
 .. image:: gmail/gh-download-zip.png
-   :align: center
    :alt: Download the ZIP file from the Odoo GitHub repository for Mail Plugins.
 
 Open the ZIP file on the computer. Then, go to :menuselection:`mail-client-extensions-master -->
-gmail --> src --> views`, and open the :file:`login.ts` file using any text editor software,
-such as Notepad (Windows), TextEdit (Mac), or Visual Studio Code.
+gmail --> src --> views`, and open the :file:`login.ts` file using any text editor software, such as
+Notepad (Windows), TextEdit (Mac), or Visual Studio Code.
 
 Delete the following three lines of text from the :file:`login.ts` file:
 
@@ -146,11 +140,10 @@ Configure the Odoo database
 ---------------------------
 
 The :guilabel:`Mail Plugin` feature must be enabled in the Odoo database in order to use the Gmail
-Plugin. To enable the feature, go to :menuselection:`Settings --> General Settings`. Under the
+Plugin. To enable the feature, go to :menuselection:`Settings app --> General Settings`. Under the
 :guilabel:`Integrations` section, activate :guilabel:`Mail Plugin`, and then click :guilabel:`Save`.
 
 .. image:: gmail/mail-plugin-setting.png
-   :align: center
    :alt: The Mail Plugin feature in the Settings.
 
 Configure the Gmail inbox
@@ -161,7 +154,6 @@ icon to open up the Odoo plugin window. Then, click on any email in the inbox. C
 :guilabel:`Authorize Access` in the plugin window to grant Odoo access to the Gmail inbox.
 
 .. image:: gmail/authorize-access.png
-   :align: center
    :alt: The Authorize Access button in the right sidebar of the Odoo plugin panel.
 
 Next, click :guilabel:`Login`. Then, enter the URL of the Odoo database that the user wishes to
@@ -172,6 +164,28 @@ connect to the Gmail inbox, and log in to the database.
    example, use `https://mycompany.odoo.com`, not
    `https://mycompany.odoo.com/web#cids=1&action=menu`.
 
-Finally, click :guilabel:`Allow` to let Gmail access the Odoo database. The browser will then show
-a :guilabel:`Success!` message. After that, close the window. The Gmail inbox and Odoo database are
+Finally, click :guilabel:`Allow` to let Gmail access the Odoo database. The browser will then show a
+:guilabel:`Success!` message. After that, close the window. The Gmail inbox and Odoo database are
 now connected.
+
+Troubleshooting
+===============
+
+The legacy version of the *Odoo Inbox Addin* might display a generic error message after upgrading
+the connected database to version 19.0:
+
+`Add-on error: Something went wrong while executing add-on. For help, contact the add-on developer.`
+
+If standard troubleshooting (reinstalling, clearing cache, upgrading the backend Mail Plugin module)
+does not resolve the issue, manually refresh the Gmail plugin to sync with the upgraded database:
+
+#. In the Gmail inbox, click the :icon:`oi-odoo` :guilabel:`(Odoo)` icon in the side panel to open
+   the *Odoo Inbox Addin (Legacy)*.
+#. Click the :icon:`fa-ellipsis-v` :guilabel:`(More actions)` icon in the top corner of the plugin.
+#. Click :guilabel:`Refresh`.
+
+This forces the plugin to manually sync its connection with the newly upgraded database version,
+clearing the stalled script and resolving the execution error.
+
+.. image:: gmail/gmail-plugin-refresh-button.png
+   :alt: Refresh button in the Odoo Gmail plugin.
