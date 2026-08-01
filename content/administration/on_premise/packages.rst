@@ -81,7 +81,7 @@ the following commands:
 
       .. code-block:: console
 
-         $ sudo dnf config-manager --add-repo=https://nightly.odoo.com/{CURRENT_MAJOR_BRANCH}/nightly/rpm/odoo.repo
+         $ sudo dnf config-manager addrepo --from-repofile=https://nightly.odoo.com/{CURRENT_MAJOR_BRANCH}/nightly/rpm/odoo.repo
          $ sudo dnf install -y odoo
          $ sudo systemctl enable odoo
          $ sudo systemctl start odoo
@@ -120,7 +120,7 @@ be downloaded from the `Odoo download page <https://www.odoo.com/page/download>`
 
       .. code-block:: console
 
-         $ sudo dnf localinstall odoo_{CURRENT_MAJOR_BRANCH}.latest.noarch.rpm
+         $ sudo dnf install odoo_{CURRENT_MAJOR_BRANCH}.latest.noarch.rpm
          $ sudo systemctl enable odoo
          $ sudo systemctl start odoo
 
