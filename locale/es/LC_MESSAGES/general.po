@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-24 17:32+0000\n"
+"POT-Creation-Date: 2026-07-31 17:31+0000\n"
 "PO-Revision-Date: 2026-07-05 00:04+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Spanish <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -3722,11 +3722,11 @@ msgstr ""
 "que :guilabel:`confirmar y probar` la cuenta, que ya debería estar lista "
 "para recibir correos en la base de datos de Odoo."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:6
+#: ../../content/applications/general/email_communication/email_domain.rst:3
 msgid "Configure DNS records to send emails in Odoo"
 msgstr "Configurar registros DNS para enviar correos en Odoo"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:8
+#: ../../content/applications/general/email_communication/email_domain.rst:5
 msgid ""
 "This documentation presents three complementary authentication protocols "
 "(SPF, DKIM, and DMARC) used to prove the legitimacy of an email sender. Not "
@@ -3738,7 +3738,7 @@ msgstr ""
 "remitente de correos. El no cumplir con estos protocolos reduce bastante las "
 "posibilidades de que los destinatarios reciban sus correos electrónicos."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:12
+#: ../../content/applications/general/email_communication/email_domain.rst:9
 msgid ""
 "**Odoo Online** and **Odoo.sh** databases using the **default Odoo subdomain "
 "address** (e.g., `\\@company-name.odoo.com`) are pre-configured to **send "
@@ -3749,7 +3749,7 @@ msgstr ""
 "la-empresa.odoo.com`) están preconfiguradas para enviar correos electrónicos "
 "autenticados compatibles con los protocolos SPF, DKIM y DMARC."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:16
+#: ../../content/applications/general/email_communication/email_domain.rst:13
 msgid ""
 "If choosing to use a **custom domain** instead, **configuring SPF and DKIM "
 "records correctly is essential** to prevent emails from being quarantined as "
@@ -3759,7 +3759,7 @@ msgstr ""
 "los registros SPF y DKIM de forma correcta** para evitar que sus mensajes se "
 "almacenen en cuarentena como spam o que los destinatarios no los reciban."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:19
+#: ../../content/applications/general/email_communication/email_domain.rst:16
 msgid ""
 "If using :ref:`the default Odoo email server to send emails from a custom "
 "domain <email-outbound-custom-domain-odoo-server>`, the SPF and DKIM records "
@@ -3774,7 +3774,7 @@ msgstr ""
 "necesitará usar registros SPF y DKIM específicos para ese servicio de correo "
 "y un dominio personalizado."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:25
+#: ../../content/applications/general/email_communication/email_domain.rst:22
 msgid ""
 "Email service providers apply different rules to incoming emails. An email "
 "may be classified as spam even if it passes the SPF and DKIM checks."
@@ -3783,11 +3783,11 @@ msgstr ""
 "a los correos entrantes. Es posible que un correo electrónico sea "
 "clasificado como spam incluso si cumple con las comprobaciones SPF y DKIM."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:31
+#: ../../content/applications/general/email_communication/email_domain.rst:28
 msgid "SPF (Sender Policy Framework)"
 msgstr "SPF (Convenio de remitentes)"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:33
+#: ../../content/applications/general/email_communication/email_domain.rst:30
 msgid ""
 "The Sender Policy Framework (SPF) protocol allows the owner of a domain name "
 "to specify which servers are allowed to send emails from that domain. When a "
@@ -3802,7 +3802,7 @@ msgstr ""
 "permitidas según el registro :abbr:`SPF (Sender Policy Framework)` del "
 "remitente."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:38
+#: ../../content/applications/general/email_communication/email_domain.rst:35
 msgid ""
 "In Odoo, the **SPF test is performed on the bounce address** defined under "
 "the :guilabel:`Alias Domain` field found under the "
@@ -3816,7 +3816,7 @@ msgstr ""
 "personalizado como :guilabel:`dominio del seudónimo` deberá configurarlo "
 "para que cumpla con SPF."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:42
+#: ../../content/applications/general/email_communication/email_domain.rst:39
 msgid ""
 "The SPF policy of a domain is set using a TXT record. The way to create or "
 "modify this record depends on the provider hosting the :abbr:`DNS (Domain "
@@ -3826,7 +3826,7 @@ msgstr ""
 "creación o modificación del mismo depende del proveedor que aloja la "
 "zona :abbr:`DNS (Sistema de nombre de dominio)` de su nombre de dominio."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:45
+#: ../../content/applications/general/email_communication/email_domain.rst:42
 msgid ""
 "If the domain name does not yet have an SPF record, create one using the "
 "following input:"
@@ -3834,7 +3834,7 @@ msgstr ""
 "Si el nombre de dominio aún no cuenta con un registro SPF deberá crear uno "
 "con el siguiente comando:"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:51
+#: ../../content/applications/general/email_communication/email_domain.rst:48
 msgid ""
 "If the domain name **already has an SPF record, the record must be "
 "updated**. Do not create a new one, as a domain must have only one SPF "
@@ -3844,7 +3844,7 @@ msgstr ""
 "actualizar el mismo**. No cree uno nuevo, pues los dominios solo deben tener "
 "un registro SPF."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:55
+#: ../../content/applications/general/email_communication/email_domain.rst:52
 msgid ""
 "If the TXT record is `v=spf1 include:_spf.google.com ~all`, edit it to add "
 "`include:_spf.odoo.com`: `v=spf1 include:_spf.odoo.com "
@@ -3854,7 +3854,7 @@ msgstr ""
 "agregar `include:_spf.odoo.com`: `v=spf1 include:_spf.odoo.com "
 "include:_spf.google.com ~all`"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:58
+#: ../../content/applications/general/email_communication/email_domain.rst:55
 msgid ""
 "Check the SPF record using a tool like `MXToolbox SPF Record Check <https://"
 "mxtoolbox.com/spf.aspx>`_. The process to create or modify an SPF record "
@@ -3869,11 +3869,11 @@ msgstr ""
 "documentation>` y sus respectivos enlaces aparecen más adelante durante este "
 "documento."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:66
+#: ../../content/applications/general/email_communication/email_domain.rst:63
 msgid "DKIM (DomainKeys Identified Mail)"
 msgstr "DKIM (DomainKeys Identified Mail)"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:68
+#: ../../content/applications/general/email_communication/email_domain.rst:65
 msgid ""
 "The DomainKeys Identified Mail (DKIM) allows a user to authenticate emails "
 "with a digital signature."
@@ -3882,22 +3882,22 @@ msgstr ""
 "DomainKeys Identified Mail) permite que los usuarios autentiquen sus correos "
 "electrónicos con una firma digital."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:70
+#: ../../content/applications/general/email_communication/email_domain.rst:67
 msgid ""
-"When sending an email, the Odoo email server includes a unique DKIM "
-"signature in the headers. The recipient's server decrypts this signature "
-"using the DKIM record in the database's domain name. If the signature and "
-"the key contained in the record match, it proves the message is authentic "
-"and has not been altered during transport."
+"When sending an email, the Odoo email server includes a unique :abbr:`DKIM "
+"(DomainKeys Identified Mail)` signature in the headers. The recipient's "
+"server decrypts this signature using the DKIM record in the database's "
+"domain name. If the signature and the key contained in the record match, it "
+"proves the message is authentic and has not been altered during transport."
 msgstr ""
 "Al enviar un correo electrónico, el servidor de correo electrónico de Odoo "
-"incluye una firma DKIM única en los encabezados. El servidor del "
-"destinatario descifra esta firma utilizando el registro DKIM en el nombre de "
-"dominio de la base de datos. Si la firma y la clave contenida en el registro "
-"coinciden, demuestra que el mensaje es auténtico y no ha sido alterado "
-"durante el transporte."
+"incluye una firma :abbr:`DKIM (DomainKeys Identified Mail)` única en los "
+"encabezados. El servidor del destinatario descifra esta firma mediante el "
+"registro DKIM en el nombre de dominio de la base de datos. Si la firma y la "
+"clave en el registro coinciden, confirma que el mensaje es auténtico y que "
+"no se alteró durante el transporte."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:75
+#: ../../content/applications/general/email_communication/email_domain.rst:72
 msgid ""
 "Enabling DKIM is **required** when sending emails **from a custom domain** "
 "using the Odoo email server."
@@ -3905,141 +3905,25 @@ msgstr ""
 "Es **necesario** que habilite DKIM al enviar correos electrónicos **desde un "
 "dominio personalizado** con el servidor de correo electrónico de Odoo."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:79
-msgid "Add a CNAME record for domain"
-msgstr "Agregar un registro CNAME para el dominio"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:81
+#: ../../content/applications/general/email_communication/email_domain.rst:75
 msgid ""
-"To enable DKIM, add a canonical name (CNAME) record to the domain name "
-"system (DNS) zone of the domain name:"
+"To enable DKIM, add a :abbr:`CNAME (Canonical Name)` record to "
+"the :abbr:`DNS (Domain Name System)` zone of the domain name:"
 msgstr ""
-"Para habilitar DKIM, agrega un registro de nombre canónico (CNAME) a la zona "
-"del sistema de nombres de dominio (DNS) del nombre de dominio:"
+"Para habilitar el DKIM, agregue un registro :abbr:`CNAME (Nombre canónico)` "
+"en la zona :abbr:`DNS (Sistema de nombres de dominio)` del nombre de dominio:"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:89
+#: ../../content/applications/general/email_communication/email_domain.rst:83
 msgid ""
-"If the domain name is *company-name.com*, make sure to create a CNAME record "
-"where the CNAME record (key/name) is `odoo._domainkey.company-name.com`, and "
-"the canonical name (value/content) is `odoo._domainkey.odoo.com.`. For "
-"example, note the differences between each key/value in italics\\:"
+"If the domain name is `company-name.com`, make sure to create a subdomain "
+"`odoo._domainkey.company-name.com` whose canonical name is "
+"`odoo._domainkey.odoo.com.`."
 msgstr ""
-"Si el nombre de dominio es *nombre-empresa.com*, asegúrate de crear un "
-"registro CNAME donde el registro CNAME (clave/nombre) sea "
-"`odoo._domainkey.nombre-empresa.com` y el nombre canónico (valor/contenido) "
-"sea `odoo._domainkey.odoo.com.`. Por ejemplo, observa las diferencias entre "
-"cada clave/valor en cursiva\\:"
+"Si el nombre de dominio es `nombre-de-la-empresa.com` asegúrese de crear un "
+"subdominio `odoo._domainkey.nombre-de-la-empresa.com` con el nombre canónico "
+"`odoo._domainkey.odoo.com`."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:93
-msgid "Example CNAME record"
-msgstr "Ejemplo de registro CNAME"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:98
-#: ../../content/applications/general/email_communication/email_domain.rst:119
-#: ../../content/applications/general/email_communication/email_domain.rst:146
-msgid "Key"
-msgstr "Clave"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:100
-msgid "odoo.\\_domainkey"
-msgstr "odoo.\\_domainkey"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:102
-#: ../../content/applications/general/email_communication/email_domain.rst:123
-#: ../../content/applications/general/email_communication/email_domain.rst:154
-msgid "Value"
-msgstr "Valor"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:104
-#: ../../content/applications/general/email_communication/email_domain.rst:125
-#: ../../content/applications/general/email_communication/email_domain.rst:156
-msgid "odoo.\\_domainkey.\\ *odoo.com.* |nbsp|"
-msgstr "odoo.\\_domainkey.\\ *odoo.com.* |nbsp|"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:107
-#: ../../content/applications/general/email_communication/email_domain.rst:128
-#: ../../content/applications/general/email_communication/email_domain.rst:151
-#: ../../content/applications/general/email_communication/email_domain.rst:159
-msgid "OR"
-msgstr "O"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:108
-#: ../../content/applications/general/email_communication/email_domain.rst:129
-#: ../../content/applications/general/email_communication/email_domain.rst:160
-msgid "odoo.\\_domainkey.\\ *dbname*\\ .odoo.com."
-msgstr "odoo.\\_domainkey.\\ *nombrebd*\\ .odoo.com."
-
-#: ../../content/applications/general/email_communication/email_domain.rst:109
-#: ../../content/applications/general/email_communication/email_domain.rst:130
-#: ../../content/applications/general/email_communication/email_domain.rst:161
-msgid "... where *dbname* is the name of the Odoo database."
-msgstr "... donde *nombrebd* es el nombre de la base de datos de Odoo."
-
-#: ../../content/applications/general/email_communication/email_domain.rst:111
-msgid ""
-"On most DNS platforms, the DNS provider adds the custom domain (e.g., "
-"*company-name.com*) by default. In this case, the key looks different while "
-"the value remains the same:"
-msgstr ""
-"En la mayoría de las plataformas DNS, el proveedor DNS agrega el dominio "
-"personalizado (p. ej., *nombre-empresa.com*) de forma predeterminada. En "
-"este caso, la clave se ve diferente mientras que el valor permanece igual:"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:114
-msgid "Example CNAME record with custom domain"
-msgstr "Ejemplo de registro CNAME con dominio personalizado"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:121
-msgid "odoo.\\_domainkey.\\ *company-name.com* |nbsp|"
-msgstr "odoo.\\_domainkey.\\ *nombre-empresa.com* |nbsp|"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:122
-#: ../../content/applications/general/email_communication/email_domain.rst:153
-msgid "... where *company-name.com* is the custom domain."
-msgstr "... donde *nombre-empresa.com* es el dominio personalizado."
-
-#: ../../content/applications/general/email_communication/email_domain.rst:133
-msgid ""
-"If the DNS provider does not add the custom domain by default, make sure to "
-"include it."
-msgstr ""
-"Si el proveedor DNS no agrega el dominio personalizado de forma "
-"predeterminada, asegúrate de incluirlo."
-
-#: ../../content/applications/general/email_communication/email_domain.rst:136
-msgid "Add a CNAME record for subdomain"
-msgstr "Agregar un registro CNAME para el subdominio"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:138
-msgid ""
-"If there's a \\ *subdomain* (e.g., *marketing* in *marketing*\\ .company-"
-"name.com), add a CNAME record to include it for compliance as well:"
-msgstr ""
-"Si hay un *subdominio* (por ejemplo, *marketing* en *marketing*.nombre-"
-"empresa.com), agrega un registro CNAME para incluirlo también y cumplir con "
-"los requisitos:"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:141
-msgid "Example CNAME record with subdomain"
-msgstr "Ejemplo de registro CNAME con subdominio"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:148
-msgid "odoo.\\_domainkey.\\ *marketing* |nbsp|"
-msgstr "odoo.\\_domainkey.\\ *marketing* |nbsp|"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:149
-msgid "... where *marketing* is the subdomain."
-msgstr "... donde *marketing* es el subdominio."
-
-#: ../../content/applications/general/email_communication/email_domain.rst:152
-msgid "odoo.\\_domainkey.marketing.\\ *company-name.com*\\ |nbsp|"
-msgstr "odoo.\\_domainkey.marketing.\\ *nombre-empresa.com*\\ |nbsp|"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:164
-msgid "See DNS provider documentation"
-msgstr "Ver la documentación del proveedor DNS"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:166
+#: ../../content/applications/general/email_communication/email_domain.rst:86
 msgid ""
 "The way to create or modify a CNAME record depends on the provider hosting "
 "the DNS zone of the domain name. The :ref:`most common providers <email-"
@@ -4050,26 +3934,25 @@ msgstr ""
 "comunes <email-domain-providers-documentation>` y sus respectivos enlaces "
 "aparecen más adelante durante este documento."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:170
+#: ../../content/applications/general/email_communication/email_domain.rst:90
 msgid ""
 "Check if the DKIM record is valid using a tool like `MXToolbox DKIM Record "
 "Lookup <https://mxtoolbox.com/dkim.aspx>`_. Enter `example.com:odoo` in the "
-"DKIM lookup tool, specifying that the selector being tested is *odoo* for "
-"the custom domain *example.com*."
+"DKIM lookup tool, specifying that the selector being tested is `odoo` for "
+"the custom domain `example.com`."
 msgstr ""
-"Verifica si el registro DKIM es válido usando una herramienta como "
-"`MXToolbox DKIM Record Lookup <https://mxtoolbox.com/dkim.aspx>`_. Ingresa "
-"`ejemplo.com:odoo` en la herramienta de búsqueda DKIM, especificando que el "
-"selector que se está probando es *odoo* para el dominio personalizado "
-"*ejemplo.com*."
+"Verifique si el registro DKIM es válido con una herramienta como `MXToolbox "
+"DKIM Record Lookup <https://mxtoolbox.com/dkim.aspx>`_. Escriba "
+"`ejemplo.com:odoo` en la herramienta de búsqueda DKIM para especificar que "
+"el selector a probar es `odoo` para el dominio personalizado `ejemplo.com`."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:177
+#: ../../content/applications/general/email_communication/email_domain.rst:97
 msgid "DMARC (Domain-based Message Authentication, Reporting and Conformance)"
 msgstr ""
 "DMARC (Autenticación basada en dominios para mensajes, informes y "
 "conformidad)"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:179
+#: ../../content/applications/general/email_communication/email_domain.rst:99
 msgid ""
 "The :abbr:`DMARC (Domain-based Message Authentication, Reporting, & "
 "Conformance)` record is a protocol that unifies :abbr:`SPF (Sender Policy "
@@ -4084,7 +3967,7 @@ msgstr ""
 "servidor de destino lo que debe hacer con un correo entrante que no cumple "
 "con las verificaciones del SPF o el DKIM."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:185
+#: ../../content/applications/general/email_communication/email_domain.rst:105
 msgid ""
 "The aim of this documentation is to help **understand the impact DMARC has "
 "on the deliverability of emails**, rather than give precise instructions for "
@@ -4097,23 +3980,23 @@ msgstr ""
 "Consulte un recurso como `DMARC.org <https://dmarc.org/>`_ para configurar "
 "este registro."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:189
+#: ../../content/applications/general/email_communication/email_domain.rst:109
 msgid "There are three DMARC policies:"
 msgstr "Hay tres políticas DMARC:"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:191
+#: ../../content/applications/general/email_communication/email_domain.rst:111
 msgid "`p=none`"
 msgstr "`p=none`"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:192
+#: ../../content/applications/general/email_communication/email_domain.rst:112
 msgid "`p=quarantine`"
 msgstr "`p=quarantine`"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:193
+#: ../../content/applications/general/email_communication/email_domain.rst:113
 msgid "`p=reject`"
 msgstr "`p=reject`"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:195
+#: ../../content/applications/general/email_communication/email_domain.rst:115
 msgid ""
 "`p=quarantine` and `p=reject` instruct the server that receives an email to "
 "quarantine that email or ignore it if the SPF or DKIM check fails."
@@ -4122,7 +4005,7 @@ msgstr ""
 "electrónico que debe ponerlo en cuarentena o ignorarlo si no cumple con las "
 "verificaciones de SPF o DKIM."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:199
+#: ../../content/applications/general/email_communication/email_domain.rst:119
 msgid ""
 "**For the DMARC to pass, the DKIM or SPF check needs to pass** and the "
 "domains must be in alignment. If the hosting type is Odoo Online, DKIM "
@@ -4133,7 +4016,7 @@ msgstr ""
 "tipo de alojamiento es Odoo en línea, entonces la configuración DKIM en el "
 "dominio de envío es necesaria para pasar el DMARC."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:203
+#: ../../content/applications/general/email_communication/email_domain.rst:123
 msgid ""
 "Passing DMARC generally means that the email will be successfully delivered. "
 "However, it's important to note that **other factors like spam filters can "
@@ -4144,7 +4027,7 @@ msgstr ""
 "factores, como los filtros de spam, que pueden rechazar o poner en "
 "cuarentena un mensaje**."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:206
+#: ../../content/applications/general/email_communication/email_domain.rst:126
 msgid ""
 "`p=none` is used for the domain owner to receive reports about entities "
 "using their domain. It should not impact the deliverability."
@@ -4152,7 +4035,7 @@ msgstr ""
 "`p=none` se utiliza para que el propietario del dominio reciba informes "
 "sobre las entidades que usan su dominio y no debería afectar las entregas."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:210
+#: ../../content/applications/general/email_communication/email_domain.rst:130
 msgid ""
 ":literal:`_dmarc IN TXT “v=DMARC1; p=none; "
 "rua=mailto:postmaster@example.com”` means that aggregate DMARC reports will "
@@ -4162,11 +4045,11 @@ msgstr ""
 "rua=mailto:postmaster@example.com”` indica que enviará los informes DMARC "
 "agregados a `postmaster@example.com`."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:217
+#: ../../content/applications/general/email_communication/email_domain.rst:137
 msgid "SPF, DKIM and DMARC documentation of common providers"
 msgstr "Documentación de SPF, DKIM y DMARC de los proveedores más comunes"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:219
+#: ../../content/applications/general/email_communication/email_domain.rst:139
 msgid ""
 "`OVH DNS <https://docs.ovh.com/us/en/domains/"
 "web_hosting_how_to_edit_my_dns_zone/>`_"
@@ -4174,22 +4057,22 @@ msgstr ""
 "`OVH DNS <https://docs.ovh.com/us/en/domains/"
 "web_hosting_how_to_edit_my_dns_zone/>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:220
+#: ../../content/applications/general/email_communication/email_domain.rst:140
 msgid ""
 "`GoDaddy TXT record <https://www.godaddy.com/help/add-a-txt-record-19232>`_"
 msgstr ""
 "`GoDaddy: agregar un registro TXT <https://www.godaddy.com/help/add-a-txt-"
 "record-19232>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:221
+#: ../../content/applications/general/email_communication/email_domain.rst:141
 msgid ""
-"`GoDaddy SPF, DKIM, or DMARC records <https://www.godaddy.com/help/set-up-"
-"spf-dkim-or-dmarc-records-for-my-hosting-email-40810>`_"
+"`GoDaddy CNAME record <https://www.godaddy.com/help/add-a-cname-"
+"record-19236>`_"
 msgstr ""
-"`Registros SPF, DKIM o DMARC de GoDaddy <https://www.godaddy.com/help/set-up-"
-"spf-dkim-or-dmarc-records-for-my-hosting-email-40810>`_"
+"`GoDaddy: agregar un registro CNAME <https://www.godaddy.com/help/add-a-"
+"cname-record-19236>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:223
+#: ../../content/applications/general/email_communication/email_domain.rst:142
 msgid ""
 "`NameCheap <https://www.namecheap.com/support/knowledgebase/article.aspx/"
 "317/2237/how-do-i-add-txtspfdkimdmarc-records-for-my-domain/>`_"
@@ -4197,7 +4080,7 @@ msgstr ""
 "`NameCheap <https://www.namecheap.com/support/knowledgebase/article.aspx/"
 "317/2237/how-do-i-add-txtspfdkimdmarc-records-for-my-domain/>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:225
+#: ../../content/applications/general/email_communication/email_domain.rst:143
 msgid ""
 "`CloudFlare DNS <https://support.cloudflare.com/hc/en-us/articles/"
 "360019093151>`_"
@@ -4205,7 +4088,7 @@ msgstr ""
 "`CloudFlare DNS <https://support.cloudflare.com/hc/en-us/articles/"
 "360019093151>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:226
+#: ../../content/applications/general/email_communication/email_domain.rst:144
 msgid ""
 "`Squarespace DNS records <https://support.squarespace.com/hc/en-us/articles/"
 "360002101888-Adding-custom-DNS-records-to-your-Squarespace-managed-domain>`_"
@@ -4213,7 +4096,7 @@ msgstr ""
 "`Registros de DNS de Squarespace <https://support.squarespace.com/hc/es/"
 "articles/360002101888-Agregar-registros-de-DNS-a-tu-dominio>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:228
+#: ../../content/applications/general/email_communication/email_domain.rst:145
 msgid ""
 "`Azure DNS <https://docs.microsoft.com/en-us/azure/dns/dns-getstarted-"
 "portal>`_"
@@ -4221,7 +4104,7 @@ msgstr ""
 "`Azure DNS <https://docs.microsoft.com/en-us/azure/dns/dns-getstarted-"
 "portal>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:230
+#: ../../content/applications/general/email_communication/email_domain.rst:147
 msgid ""
 "To fully test the configuration, use the `Mail-Tester <https://www.mail-"
 "tester.com/>`_ tool, which gives a full overview of the content and "
@@ -4234,21 +4117,13 @@ msgstr ""
 "enviado. También puede utilizar Mail-Tester para configurar los registros de "
 "otros proveedores menos conocidos."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:235
+#: ../../content/applications/general/email_communication/email_domain.rst:152
 msgid ""
 "`Using Mail-Tester to set SPF Records for specific carriers <https://"
 "www.mail-tester.com/spf/>`_"
 msgstr ""
 "`Usar Mail-Tester para establecer registros SPF para proveedores "
 "determinados <https://www.mail-tester.com/spf/>`_"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:237
-msgid ""
-"`Magic Sheet - SPF, DKIM and DMARC configuration [PDF] <https://"
-"drive.google.com/drive/folders/1TJIXQpdR0VN8UQx5JP7q7vFuAr3e1Q3r>`_"
-msgstr ""
-"`Magic Sheet - Configuración SPF, DKIM y DMARC [PDF] <https://"
-"drive.google.com/drive/folders/1TJIXQpdR0VN8UQx5JP7q7vFuAr3e1Q3r>`_"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:3
 msgid "Manage inbound messages"
@@ -15302,11 +15177,51 @@ msgstr ""
 "Una vez que termine, haga clic en :guilabel:`Guardar` para guardar los "
 "cambios e implementar al usuario como administrador."
 
+#: ../../content/applications/general/users/access_rights.rst:32
+msgid "Manage roles"
+msgstr ""
+
 #: ../../content/applications/general/users/access_rights.rst:34
+msgid ""
+":ref:`Individual users <users/add-individual>` are assigned a *Role* when "
+"they are added to the database. Roles determine the level of access a user "
+"has, while the specific access rights associated with each role are defined "
+"by :ref:`groups <access-rights/groups>`."
+msgstr ""
+
+#: ../../content/applications/general/users/access_rights.rst:38
+msgid "The four available roles are:"
+msgstr ""
+
+#: ../../content/applications/general/users/access_rights.rst:40
+msgid ""
+"*Administrator*: An internal user with access to technical features, product "
+"creation, export, and other advanced permissions."
+msgstr ""
+
+#: ../../content/applications/general/users/access_rights.rst:42
+msgid ""
+"*User*: An internal user that typically has access to the back end and can "
+"create and edit records but has less overall access than an administrator."
+msgstr ""
+
+#: ../../content/applications/general/users/access_rights.rst:44
+msgid ""
+"*Portal*: A customer or supplier who accesses their own data through the "
+"portal."
+msgstr ""
+
+#: ../../content/applications/general/users/access_rights.rst:45
+msgid ""
+"*Public*: A website visitor or other external user. They generally have the "
+"least access."
+msgstr ""
+
+#: ../../content/applications/general/users/access_rights.rst:50
 msgid "Manage user permissions"
 msgstr "Gestionar permisos de usuario"
 
-#: ../../content/applications/general/users/access_rights.rst:36
+#: ../../content/applications/general/users/access_rights.rst:52
 msgid ""
 "The access rights for :ref:`individual users <users/add-individual>` are set "
 "when the user is added to the database, but they can be adjusted at any "
@@ -15316,7 +15231,7 @@ msgstr ""
 "individual>` se configuran cuando el usuario se agrega a la base de datos, "
 "pero se pueden ajustar en cualquier momento en el perfil del usuario."
 
-#: ../../content/applications/general/users/access_rights.rst:39
+#: ../../content/applications/general/users/access_rights.rst:55
 msgid ""
 "To make changes to a user's rights, click the desired user to edit their "
 "profile."
@@ -15331,7 +15246,7 @@ msgstr ""
 "Menú de los usuarios en la sección Usuarios y empresas de los Ajustes de "
 "Odoo."
 
-#: ../../content/applications/general/users/access_rights.rst:44
+#: ../../content/applications/general/users/access_rights.rst:60
 msgid ""
 "On the user's profile page, in the :guilabel:`Access Rights` tab, scroll "
 "down to view the current permissions."
@@ -15339,7 +15254,14 @@ msgstr ""
 "En la página de perfil del usuario, en la pestaña :guilabel:`Permisos de "
 "acceso` deslícese hacia abajo para ver los permisos actuales."
 
-#: ../../content/applications/general/users/access_rights.rst:47
+#: ../../content/applications/general/users/access_rights.rst:63
+msgid ""
+"The permissions available on the *Access Rights* tab are determined by the "
+"groups associated with the user's role. Roles provide a predefined set of "
+"permissions, while groups define the specific access rights granted to users."
+msgstr ""
+
+#: ../../content/applications/general/users/access_rights.rst:67
 msgid ""
 "For each app, use the drop-down menu to select what level of permission this "
 "user should have. The options vary for each section, yet the most common "
@@ -15352,7 +15274,7 @@ msgstr ""
 "solo mostrar documentos propios`, :guilabel:`Usuario: todos los documentos`, "
 "o :guilabel:`Administrador`."
 
-#: ../../content/applications/general/users/access_rights.rst:51
+#: ../../content/applications/general/users/access_rights.rst:71
 msgid ""
 "The :guilabel:`Administration` field in the :guilabel:`Access Rights` tab "
 "has the following options: :guilabel:`Settings` or :guilabel:`Access Rights`."
@@ -15367,11 +15289,11 @@ msgstr ""
 "El menú desplegable de la aplicación Venta para configurar el nivel de "
 "permisos de un usuario."
 
-#: ../../content/applications/general/users/access_rights.rst:60
+#: ../../content/applications/general/users/access_rights.rst:80
 msgid "Manage specific permissions"
 msgstr "Gestionar permisos específicos"
 
-#: ../../content/applications/general/users/access_rights.rst:62
+#: ../../content/applications/general/users/access_rights.rst:82
 msgid ""
 "While access rights are typically assigned in bundles under specific roles, "
 "they can also be set as explicit permissions."
@@ -15379,7 +15301,7 @@ msgstr ""
 "Aunque los derechos de acceso normalmente se asignan en conjunto bajo roles "
 "específicos, también se pueden establecer como permisos explícitos."
 
-#: ../../content/applications/general/users/access_rights.rst:66
+#: ../../content/applications/general/users/access_rights.rst:86
 msgid ""
 "When a user is assigned the :guilabel:`Administrator` permission for "
 "**Timesheets**, it gives them full access to that app. That user, while "
@@ -15394,7 +15316,7 @@ msgstr ""
 "un administrador de nómina asalariado que no necesita realizar un "
 "seguimiento del tiempo."
 
-#: ../../content/applications/general/users/access_rights.rst:71
+#: ../../content/applications/general/users/access_rights.rst:91
 msgid ""
 "To manage specific permissions, :ref:`developer mode <developer-mode>` must "
 "be enabled."
@@ -15402,7 +15324,7 @@ msgstr ""
 "Para gestionar permisos específicos, se debe habilitar el :ref:`modo de "
 "desarrollador <developer-mode>`."
 
-#: ../../content/applications/general/users/access_rights.rst:73
+#: ../../content/applications/general/users/access_rights.rst:93
 msgid ""
 "After that, navigate to the :menuselection:`Settings` app. Then "
 "click :guilabel:`Manage Users`, select a user, and go to "
@@ -15419,7 +15341,7 @@ msgstr ""
 "reflejarán las selecciones realizadas en la pestaña :guilabel:`Derechos de "
 "acceso`."
 
-#: ../../content/applications/general/users/access_rights.rst:79
+#: ../../content/applications/general/users/access_rights.rst:99
 msgid ""
 ":guilabel:`Selected groups`: a list of detailed access rights, set by "
 "choices made in the :guilabel:`Access Rights` tab."
@@ -15428,7 +15350,7 @@ msgstr ""
 "detallados, establecidos por las elecciones realizadas en la "
 "pestaña :guilabel:`Derechos de acceso`."
 
-#: ../../content/applications/general/users/access_rights.rst:81
+#: ../../content/applications/general/users/access_rights.rst:101
 msgid ""
 ":guilabel:`Groups added automatically`: *implied* permissions that are "
 "*inherited* with the explicit permissions already granted to the user. The "
@@ -15447,7 +15369,7 @@ msgid "The technical access rights tab opened up for a user profile."
 msgstr ""
 "La pestaña de derechos de acceso técnico abierta para un perfil de usuario."
 
-#: ../../content/applications/general/users/access_rights.rst:90
+#: ../../content/applications/general/users/access_rights.rst:110
 msgid ""
 "When the *Sales Administrator* permission set is assigned to a user, the "
 "*Canned Responses Administrator* permissions are inherited automatically. "
@@ -15461,7 +15383,7 @@ msgstr ""
 "enumerados en las tablas :guilabel:`Grupos seleccionados` "
 "y :guilabel:`Grupos agregados automáticamente`, respectivamente."
 
-#: ../../content/applications/general/users/access_rights.rst:95
+#: ../../content/applications/general/users/access_rights.rst:115
 msgid ""
 "To add a permission to this user profile, click :guilabel:`Add a line` in "
 "the :guilabel:`Selected groups` table, and then add permissions to this user "
@@ -15474,7 +15396,7 @@ msgstr ""
 "eliminar un permiso, haz clic en el icono :icon:`fa-"
 "times` :guilabel:`(cancelar)` al final de la fila de ese permiso."
 
-#: ../../content/applications/general/users/access_rights.rst:100
+#: ../../content/applications/general/users/access_rights.rst:120
 msgid ""
 "Removing permissions from the :guilabel:`Selected Groups` list can impact "
 "what permissions are listed in the :guilabel:`Groups added automatically` "
@@ -15486,7 +15408,7 @@ msgstr ""
 "automáticamente`, ya que los grupos de permisos seleccionados determinan qué "
 "grupos de permisos se añaden automáticamente."
 
-#: ../../content/applications/general/users/access_rights.rst:104
+#: ../../content/applications/general/users/access_rights.rst:124
 msgid ""
 "Clicking on the permission itself will open a group management form. Learn "
 "more about :ref:`managing groups <access-rights/groups>`."
@@ -15494,7 +15416,7 @@ msgstr ""
 "Hacer clic en el permiso en sí abrirá un formulario de gestión de grupo. "
 "Obtén más información sobre :ref:`gestionar grupos <access-rights/groups>`."
 
-#: ../../content/applications/general/users/access_rights.rst:107
+#: ../../content/applications/general/users/access_rights.rst:127
 msgid ""
 "Any permission in the :guilabel:`Groups added automatically` section is "
 "implied or required by the permission shown in the :guilabel:`Selected "
@@ -15508,7 +15430,7 @@ msgstr ""
 "se puede otorgar estos permisos a más usuarios haciendo clic en el permiso "
 "mismo y luego agregando al usuario al grupo de ese permiso."
 
-#: ../../content/applications/general/users/access_rights.rst:113
+#: ../../content/applications/general/users/access_rights.rst:133
 msgid ""
 "Any permission in green is already provided by another permission (for "
 "example, setting the :guilabel:`Website` app's permission "
@@ -15520,14 +15442,14 @@ msgstr ""
 "en :guilabel:`Editor and Designer` también otorgará a ese usuario el "
 "permiso :guilabel:`Restricted Editor`)."
 
-#: ../../content/applications/general/users/access_rights.rst:116
+#: ../../content/applications/general/users/access_rights.rst:136
 msgid ""
 "Any permissions in red are conflicting and cannot be active at the same time."
 msgstr ""
 "Los permisos en rojo están en conflicto y no pueden estar activos al mismo "
 "tiempo."
 
-#: ../../content/applications/general/users/access_rights.rst:117
+#: ../../content/applications/general/users/access_rights.rst:137
 msgid ""
 "Any permissions in *italics* are implied by a :guilabel:`Selected group` "
 "(these are usually found in the :guilabel:`Groups added automatically`)."
@@ -15536,11 +15458,11 @@ msgstr ""
 "seleccionado` (estos suelen encontrarse en los :guilabel:`Grupos agregados "
 "automáticamente`)."
 
-#: ../../content/applications/general/users/access_rights.rst:123
+#: ../../content/applications/general/users/access_rights.rst:143
 msgid "Create and modify groups"
 msgstr "Crear y modificar grupos"
 
-#: ../../content/applications/general/users/access_rights.rst:125
+#: ../../content/applications/general/users/access_rights.rst:145
 msgid ""
 "*Groups* are app-specific sets of permissions that are used to manage common "
 "access rights for a large amount of users. Administrators can modify the "
@@ -15552,7 +15474,7 @@ msgstr ""
 "pueden modificar los grupos existentes en Odoo, o crear nuevos para definir "
 "las reglas para modelos dentro de una aplicación."
 
-#: ../../content/applications/general/users/access_rights.rst:129
+#: ../../content/applications/general/users/access_rights.rst:149
 msgid ""
 "To access groups, first activate Odoo's :ref:`developer mode <developer-"
 "mode>`, then go to :menuselection:`Settings app --> Users & Companies --> "
@@ -15568,7 +15490,7 @@ msgid ""
 msgstr ""
 "Menú de los grupos en la sección Usuarios y empresas de los Ajustes de Odoo."
 
-#: ../../content/applications/general/users/access_rights.rst:135
+#: ../../content/applications/general/users/access_rights.rst:155
 msgid ""
 "To create a new group from the :guilabel:`Groups` page, "
 "click :guilabel:`Create`. Then, from the blank group form, select "
@@ -15579,7 +15501,7 @@ msgstr ""
 "seleccione una :guilabel:`Aplicación` y complete el formulario del grupo "
 "(como se detalla más adelante)."
 
-#: ../../content/applications/general/users/access_rights.rst:138
+#: ../../content/applications/general/users/access_rights.rst:158
 msgid ""
 "To modify an existing group, click an existing group from the list displayed "
 "on the :guilabel:`Groups` page, and edit the contents of the form."
@@ -15588,17 +15510,14 @@ msgstr ""
 "lista mostrada en la página :guilabel:`Grupos` y edita el contenido del "
 "formulario."
 
-#: ../../content/applications/general/users/access_rights.rst:141
+#: ../../content/applications/general/users/access_rights.rst:161
 msgid ""
-"Enter a :guilabel:`Name` for the group and tick the checkbox next "
+"Enter a :guilabel:`Name` for the group and select the checkbox next "
 "to :guilabel:`Share Group`, if this group was created to set access rights "
 "for sharing data with some users."
 msgstr ""
-"Escriba un :guilabel:`nombre` para el grupo y seleccione la casilla junto "
-"a :guilabel:`Compartir grupo` en caso de que haya creado el grupo para "
-"configurar permisos de acceso para compartir datos con otros usuarios."
 
-#: ../../content/applications/general/users/access_rights.rst:145
+#: ../../content/applications/general/users/access_rights.rst:165
 msgid ""
 "Always test the settings being changed to ensure they are being applied to "
 "the correct users."
@@ -15606,7 +15525,7 @@ msgstr ""
 "Siempre pruebe los ajustes que se están cambiando para asegurarse de que se "
 "están aplicando a los usuarios correctos."
 
-#: ../../content/applications/general/users/access_rights.rst:147
+#: ../../content/applications/general/users/access_rights.rst:167
 msgid ""
 "The group form contains multiple tabs for managing all elements of the "
 "group. In each tab, click :guilabel:`Add a line` to add a new row for users "
@@ -15623,7 +15542,7 @@ msgid "Tabs in the Groups form to modify the settings of the group."
 msgstr ""
 "Las pestañas en el formulario de grupos para modificar los ajustes del grupo."
 
-#: ../../content/applications/general/users/access_rights.rst:154
+#: ../../content/applications/general/users/access_rights.rst:174
 msgid ""
 ":guilabel:`Users` tab: lists the current users in the group. Users listed in "
 "black have administrative rights. Users without administrative access appear "
@@ -15635,7 +15554,7 @@ msgstr ""
 "administrador aparecerán en azul. Haga clic en :guilabel:`Agregar una línea` "
 "para agregar usuarios a este grupo."
 
-#: ../../content/applications/general/users/access_rights.rst:157
+#: ../../content/applications/general/users/access_rights.rst:177
 msgid ""
 ":guilabel:`Inherited` tab: Inherited means that users added to this group "
 "are automatically added to the groups listed on this tab. "
@@ -15645,7 +15564,7 @@ msgstr ""
 "a este grupo se añaden automáticamente a los grupos listados en esta "
 "pestaña. Haz clic en :guilabel:`Add a line` para añadir grupos heredados."
 
-#: ../../content/applications/general/users/access_rights.rst:161
+#: ../../content/applications/general/users/access_rights.rst:181
 msgid ""
 "For example, if the group *Sales/Administrator* lists the group *Website/"
 "Restricted Editor* in its :guilabel:`Inherited` tab, then any users added to "
@@ -15657,7 +15576,7 @@ msgstr ""
 "usuario que se agregue al grupo  *Ventas/Administrador* también recibirá "
 "acceso al grupo *Sitio web/Editor restringido* en automático."
 
-#: ../../content/applications/general/users/access_rights.rst:165
+#: ../../content/applications/general/users/access_rights.rst:185
 msgid ""
 ":guilabel:`Menus` tab: defines which models the group can have access to. "
 "Click :guilabel:`Add a line` to add a specific menu."
@@ -15665,7 +15584,7 @@ msgstr ""
 "Pestaña :guilabel:`Menus`: define a qué modelos puede acceder el grupo. Haz "
 "clic en :guilabel:`Add a line` para añadir un menú específico."
 
-#: ../../content/applications/general/users/access_rights.rst:167
+#: ../../content/applications/general/users/access_rights.rst:187
 msgid ""
 ":guilabel:`Views` tab: lists which views in Odoo the group has access to. "
 "Click :guilabel:`Add a line` to add a view to the group."
@@ -15674,7 +15593,7 @@ msgstr ""
 "grupo. Haga clic en :guilabel:`Agregar una línea` para agregar una vista al "
 "grupo."
 
-#: ../../content/applications/general/users/access_rights.rst:169
+#: ../../content/applications/general/users/access_rights.rst:189
 msgid ""
 ":guilabel:`Access Rights` tab: lists the first level of rights (models) that "
 "this group has. The :guilabel:`Name` column represents the name for the "
@@ -15685,7 +15604,7 @@ msgstr ""
 "nombre para el acceso del grupo actual al modelo seleccionado en la "
 "columna :guilabel:`Model`."
 
-#: ../../content/applications/general/users/access_rights.rst:173
+#: ../../content/applications/general/users/access_rights.rst:193
 msgid ""
 "To link a new access right to a group, click :guilabel:`Add a line`. Select "
 "the appropriate model from the :guilabel:`Model` drop-down, then enter a "
@@ -15698,27 +15617,27 @@ msgstr ""
 "acceso en la columna :guilabel:`Name`. Para cada modelo, activa las "
 "siguientes opciones según corresponda:"
 
-#: ../../content/applications/general/users/access_rights.rst:177
+#: ../../content/applications/general/users/access_rights.rst:197
 msgid ":guilabel:`Read`: Users can see the object's existing values."
 msgstr ""
 ":guilabel:`Read`: Los usuarios pueden ver los valores existentes del objeto."
 
-#: ../../content/applications/general/users/access_rights.rst:178
+#: ../../content/applications/general/users/access_rights.rst:198
 msgid ":guilabel:`Write`: Users can edit the object's existing values."
 msgstr ""
 ":guilabel:`Write`: Los usuarios pueden editar los valores existentes del "
 "objeto."
 
-#: ../../content/applications/general/users/access_rights.rst:179
+#: ../../content/applications/general/users/access_rights.rst:199
 msgid ":guilabel:`Create`: Users can create new values for the object."
 msgstr ""
 ":guilabel:`Create`: Los usuarios pueden crear nuevos valores para el objeto."
 
-#: ../../content/applications/general/users/access_rights.rst:180
+#: ../../content/applications/general/users/access_rights.rst:200
 msgid ":guilabel:`Delete`: Users can delete values for the object."
 msgstr ":guilabel:`Delete`: Los usuarios pueden eliminar valores del objeto."
 
-#: ../../content/applications/general/users/access_rights.rst:183
+#: ../../content/applications/general/users/access_rights.rst:203
 msgid ""
 "While there are no conventions for naming access rights, it is advisable to "
 "choose a name that identifies its purpose."
@@ -15726,7 +15645,7 @@ msgstr ""
 "Aunque no existen convenciones para nombrar los derechos de acceso, es "
 "recomendable elegir un nombre que identifique su propósito."
 
-#: ../../content/applications/general/users/access_rights.rst:186
+#: ../../content/applications/general/users/access_rights.rst:206
 msgid ""
 "For example, the access that purchase managers have to "
 "the :guilabel:`Contact` model could be named `res.partner.purchase.manager`. "
@@ -15742,7 +15661,7 @@ msgstr ""
 msgid "Name of access rights to a model."
 msgstr "Nombre de los derechos de acceso a un modelo."
 
-#: ../../content/applications/general/users/access_rights.rst:193
+#: ../../content/applications/general/users/access_rights.rst:213
 msgid ""
 "To find the model's technical name from the current view, first enter a "
 "placeholder text in the :guilabel:`Name` field, then click "
@@ -15754,7 +15673,7 @@ msgstr ""
 "en el nombre :guilabel:`Model`, y después en el icono :icon:`fa-arrow-"
 "right` :guilabel:`(Internal link)`."
 
-#: ../../content/applications/general/users/access_rights.rst:197
+#: ../../content/applications/general/users/access_rights.rst:217
 msgid ""
 ":guilabel:`Record Rules`: lists the second layer of editing and visibility "
 "rights. :guilabel:`Record Rules` overwrite, or refine, the group's access "
@@ -15767,23 +15686,23 @@ msgstr ""
 "en :guilabel:`Agregar una línea` para agregar una regla de registro a este "
 "grupo. Por cada regla, seleccione los valores para las siguientes opciones:"
 
-#: ../../content/applications/general/users/access_rights.rst:201
+#: ../../content/applications/general/users/access_rights.rst:221
 msgid ":guilabel:`Apply for Read`."
 msgstr ":guilabel:`Postúlate para lectura`."
 
-#: ../../content/applications/general/users/access_rights.rst:202
+#: ../../content/applications/general/users/access_rights.rst:222
 msgid ":guilabel:`Apply for Write`."
 msgstr ":guilabel:`Aplicar para edición`."
 
-#: ../../content/applications/general/users/access_rights.rst:203
+#: ../../content/applications/general/users/access_rights.rst:223
 msgid ":guilabel:`Apply for Create`."
 msgstr ":guilabel:`Aplicar para crear`."
 
-#: ../../content/applications/general/users/access_rights.rst:204
+#: ../../content/applications/general/users/access_rights.rst:224
 msgid ":guilabel:`Apply for Delete`."
 msgstr ":guilabel:`Aplicar para borrar`."
 
-#: ../../content/applications/general/users/access_rights.rst:207
+#: ../../content/applications/general/users/access_rights.rst:227
 msgid ""
 "Record rules are written using a *domain*, or conditions that filter data. A "
 "domain expression is a list of such conditions. For example:"
@@ -15792,7 +15711,7 @@ msgstr ""
 "filtran la información. Una expresión de dominio es una lista de estas "
 "condiciones, por ejemplo:"
 
-#: ../../content/applications/general/users/access_rights.rst:210
+#: ../../content/applications/general/users/access_rights.rst:230
 msgid ""
 "`[('mrp_production_ids', 'in', "
 "user.partner_id.commercial_partner_id.production_ids.ids)]`"
@@ -15800,14 +15719,14 @@ msgstr ""
 "`[('mrp_production_ids', 'in', "
 "user.partner_id.commercial_partner_id.production_ids.ids)]`"
 
-#: ../../content/applications/general/users/access_rights.rst:212
+#: ../../content/applications/general/users/access_rights.rst:232
 msgid ""
 "This record rule is to enable MRP consumption warnings for subcontractors."
 msgstr ""
 "Esta regla de registro existe ara activar las advertencias de consumo de MRP "
 "para subcontratistas."
 
-#: ../../content/applications/general/users/access_rights.rst:214
+#: ../../content/applications/general/users/access_rights.rst:234
 msgid ""
 "Odoo has a library of preconfigured record rules for ease of use. Users "
 "without knowledge of domains (and domain expressions) should consult an Odoo "
@@ -15818,11 +15737,11 @@ msgstr ""
 "deben ponerse en contacto con un consultor de Odoo o con el equipo de "
 "soporte de Odoo antes de hacer estos cambios."
 
-#: ../../content/applications/general/users/access_rights.rst:221
+#: ../../content/applications/general/users/access_rights.rst:241
 msgid "Session and inactivity timeouts"
 msgstr "Tiempos de espera de sesión e inactividad"
 
-#: ../../content/applications/general/users/access_rights.rst:223
+#: ../../content/applications/general/users/access_rights.rst:243
 msgid ""
 "When the `auth_timeout` module is installed, administrators can configure "
 "automatic logout rules for users assigned to a specific user group. This "
@@ -15835,7 +15754,7 @@ msgstr ""
 "automáticamente con ciertas localizaciones (por ejemplo, la localización de "
 "nómina australiana)."
 
-#: ../../content/applications/general/users/access_rights.rst:227
+#: ../../content/applications/general/users/access_rights.rst:247
 msgid ""
 "Once installed, a *Timeouts* tab appears on user group forms. This tab "
 "allows administrators to define how long users can remain logged in under "
@@ -15846,15 +15765,15 @@ msgstr ""
 "administradores definir cuánto tiempo pueden permanecer los usuarios con "
 "sesión iniciada bajo diferentes condiciones."
 
-#: ../../content/applications/general/users/access_rights.rst:230
+#: ../../content/applications/general/users/access_rights.rst:250
 msgid "Two types of timeouts can be configured:"
 msgstr "Se pueden configurar dos tipos de tiempos de espera:"
 
-#: ../../content/applications/general/users/access_rights.rst:233
+#: ../../content/applications/general/users/access_rights.rst:253
 msgid "Inactivity timeout"
 msgstr "Tiempo de espera por inactividad"
 
-#: ../../content/applications/general/users/access_rights.rst:235
+#: ../../content/applications/general/users/access_rights.rst:255
 msgid ""
 "*Inactivity timeout* controls whether users are automatically logged out "
 "after a period of inactivity."
@@ -15862,22 +15781,16 @@ msgstr ""
 "El *tiempo de espera por inactividad* controla si los usuarios cierran "
 "sesión automáticamente después de un período de inactividad."
 
-#: ../../content/applications/general/users/access_rights.rst:238
+#: ../../content/applications/general/users/access_rights.rst:258
 msgid ""
-"To enable inactivity timeout, click the :guilabel:`Timeouts` tab and tick "
+"To enable inactivity timeout, click the *Timeouts* tab and select "
 "the :guilabel:`Inactivity` checkbox. Next, choose either :guilabel:`Screen "
 "lock` or :guilabel:`Screen lock with two-factor authentication` from the "
 "drop-down menu. This determines whether the user must to complete 2FA "
 "verification when logging back in."
 msgstr ""
-"Para habilitar el tiempo de espera por inactividad, haz clic en la "
-"pestaña :guilabel:`Tiempos de espera` y marca la "
-"casilla :guilabel:`Inactividad`. A continuación, elige :guilabel:`Bloqueo de "
-"pantalla` o :guilabel:`Bloqueo de pantalla con autenticación de dos "
-"factores` en el menú desplegable. Esto determina si el usuario debe "
-"completar la verificación 2FA al volver a iniciar sesión."
 
-#: ../../content/applications/general/users/access_rights.rst:243
+#: ../../content/applications/general/users/access_rights.rst:263
 msgid ""
 "Then, enter the desired amount of time before enforcing screen lock, and "
 "select a unit of measure from the drop-down menu. Inactivity can be measured "
@@ -15887,11 +15800,11 @@ msgstr ""
 "pantalla y selecciona una unidad de medida en el menú desplegable. La "
 "inactividad puede medirse en minutos, horas o días."
 
-#: ../../content/applications/general/users/access_rights.rst:247
+#: ../../content/applications/general/users/access_rights.rst:267
 msgid "Session timeout"
 msgstr "Tiempo de espera de sesión"
 
-#: ../../content/applications/general/users/access_rights.rst:249
+#: ../../content/applications/general/users/access_rights.rst:269
 msgid ""
 "*Session timeout* controls whether users are logged out after a fixed "
 "session duration, regardless of activity."
@@ -15899,21 +15812,16 @@ msgstr ""
 "*Session timeout* controla si los usuarios son desconectados después de una "
 "duración de sesión fija, independientemente de la actividad."
 
-#: ../../content/applications/general/users/access_rights.rst:252
+#: ../../content/applications/general/users/access_rights.rst:272
 msgid ""
-"To enable session timeout, click on the :guilabel:`Timeouts` tab, and tick "
+"To enable session timeout, click on the *Timeouts* tab, and select "
 "the :guilabel:`Session` checkbox. Next, choose either :guilabel:`Logout` "
 "or :guilabel:`Logout with two-factor authentication` from the drop-down "
-"menu. This determines whether the user must to complete 2FA verification "
-"when logging back in."
+"menu. This determines whether the user must complete 2FA verification when "
+"logging back in."
 msgstr ""
-"Para habilitar el tiempo de espera de sesión, haz clic en la "
-"pestaña :guilabel:`Timeouts` y marca la casilla :guilabel:`Session`. A "
-"continuación, elige :guilabel:`Logout` o :guilabel:`Logout with two-factor "
-"authentication` del menú desplegable. Esto determina si el usuario debe "
-"completar la verificación 2FA al iniciar sesión nuevamente."
 
-#: ../../content/applications/general/users/access_rights.rst:257
+#: ../../content/applications/general/users/access_rights.rst:277
 msgid ""
 "Then, enter the desired amount of time before the user is logged out, and "
 "select a unit of measure from the drop-down menu. Session timeouts can be "
@@ -15923,11 +15831,11 @@ msgstr ""
 "desconectado y selecciona una unidad de medida del menú desplegable. Los "
 "tiempos de espera de sesión pueden medirse en minutos, horas o días."
 
-#: ../../content/applications/general/users/access_rights.rst:263
+#: ../../content/applications/general/users/access_rights.rst:283
 msgid "Superuser mode"
 msgstr "Modo de superusuario"
 
-#: ../../content/applications/general/users/access_rights.rst:265
+#: ../../content/applications/general/users/access_rights.rst:285
 msgid ""
 "*Superuser mode* allows the user to bypass record rules and access rights. "
 "To activate *Superuser mode*, first, activate :ref:`developer mode "
@@ -15940,14 +15848,14 @@ msgstr ""
 "representado por un icono :icon:`fa-bug` :guilabel:`(debug)`, ubicado en el "
 "banner superior."
 
-#: ../../content/applications/general/users/access_rights.rst:269
+#: ../../content/applications/general/users/access_rights.rst:289
 msgid ""
 "Finally, towards the bottom of the menu, click :guilabel:`Become Superuser`."
 msgstr ""
 "Finalmente, en la parte inferior del menú, haga clic "
 "en :guilabel:`Convertirse en superusuario`."
 
-#: ../../content/applications/general/users/access_rights.rst:272
+#: ../../content/applications/general/users/access_rights.rst:292
 msgid ""
 "Only users with *Settings* access for the *Administration* section of the "
 "*Access Rights* (in their user profile) are allowed to log in to *Superuser "
@@ -15957,7 +15865,7 @@ msgstr ""
 "*Administración* de los *Permisos de acceso* (en su perfil de usuario) "
 "tienen permitido ingresar al *modo de superusuario*."
 
-#: ../../content/applications/general/users/access_rights.rst:276
+#: ../../content/applications/general/users/access_rights.rst:296
 msgid ""
 "*Superuser mode* allows for circumvention of record rules and access rights, "
 "and therefore, should be exercised with extreme caution."
@@ -15965,7 +15873,7 @@ msgstr ""
 "*El modo de superusuario* permite saltarse las reglas de registro y los "
 "derechos de acceso, por lo que debe usarse con mucha precaución."
 
-#: ../../content/applications/general/users/access_rights.rst:279
+#: ../../content/applications/general/users/access_rights.rst:299
 msgid ""
 "Upon exiting *Superuser mode*, users may be locked out of the database, due "
 "to changes that were made. This can cause *impotent admin*, or an "
@@ -15976,7 +15884,7 @@ msgstr ""
 "causar un *admin impotente*, o un admin que no puede cambiar los permisos de "
 "acceso o los ajustes."
 
-#: ../../content/applications/general/users/access_rights.rst:283
+#: ../../content/applications/general/users/access_rights.rst:303
 msgid ""
 "In this case contact Odoo Support here: `new help ticket <https://"
 "www.odoo.com/help>`_. The support team is able to restore access using a "
@@ -15986,7 +15894,7 @@ msgstr ""
 "`nuevo ticket de ayuda <https://www.odoo.com/help>`_. El equipo de soporte "
 "puede restaurar el acceso con un inicio de sesión de soporte."
 
-#: ../../content/applications/general/users/access_rights.rst:286
+#: ../../content/applications/general/users/access_rights.rst:306
 msgid ""
 "To leave *Superuser mode*, log out of the account, by navigating to the "
 "upper-right corner, and clicking on the :guilabel:`OdooBot` username. Then, "
@@ -15997,7 +15905,7 @@ msgstr ""
 "esquina superior derecha. Después, seleccione la opción :guilabel:`Cerrar "
 "sesión`."
 
-#: ../../content/applications/general/users/access_rights.rst:290
+#: ../../content/applications/general/users/access_rights.rst:310
 msgid ""
 "An alternative way to activate *Superuser mode* is to log in as a superuser. "
 "To do that, navigate to the login screen, and enter the "
@@ -16007,7 +15915,7 @@ msgstr ""
 "como superusuario. Para hacerlo, ve a la pantalla de inicio de sesión e "
 "introduce el :guilabel:`Email` y la :guilabel:`Password` correspondientes."
 
-#: ../../content/applications/general/users/access_rights.rst:293
+#: ../../content/applications/general/users/access_rights.rst:313
 msgid ""
 "Instead of clicking :guilabel:`Login`, click :guilabel:`Log in as superuser`."
 msgstr ""
@@ -17907,6 +17815,180 @@ msgid ":doc:`Portal access documentation <portal_access>`"
 msgstr ":doc:`Documentación de acceso al portal <portal_access>`"
 
 #~ msgid ""
+#~ "When sending an email, the Odoo email server includes a unique DKIM "
+#~ "signature in the headers. The recipient's server decrypts this signature "
+#~ "using the DKIM record in the database's domain name. If the signature and "
+#~ "the key contained in the record match, it proves the message is authentic "
+#~ "and has not been altered during transport."
+#~ msgstr ""
+#~ "Al enviar un correo electrónico, el servidor de correo electrónico de "
+#~ "Odoo incluye una firma DKIM única en los encabezados. El servidor del "
+#~ "destinatario descifra esta firma utilizando el registro DKIM en el nombre "
+#~ "de dominio de la base de datos. Si la firma y la clave contenida en el "
+#~ "registro coinciden, demuestra que el mensaje es auténtico y no ha sido "
+#~ "alterado durante el transporte."
+
+#~ msgid "Add a CNAME record for domain"
+#~ msgstr "Agregar un registro CNAME para el dominio"
+
+#~ msgid ""
+#~ "To enable DKIM, add a canonical name (CNAME) record to the domain name "
+#~ "system (DNS) zone of the domain name:"
+#~ msgstr ""
+#~ "Para habilitar DKIM, agrega un registro de nombre canónico (CNAME) a la "
+#~ "zona del sistema de nombres de dominio (DNS) del nombre de dominio:"
+
+#~ msgid ""
+#~ "If the domain name is *company-name.com*, make sure to create a CNAME "
+#~ "record where the CNAME record (key/name) is `odoo._domainkey.company-"
+#~ "name.com`, and the canonical name (value/content) is "
+#~ "`odoo._domainkey.odoo.com.`. For example, note the differences between "
+#~ "each key/value in italics\\:"
+#~ msgstr ""
+#~ "Si el nombre de dominio es *nombre-empresa.com*, asegúrate de crear un "
+#~ "registro CNAME donde el registro CNAME (clave/nombre) sea "
+#~ "`odoo._domainkey.nombre-empresa.com` y el nombre canónico (valor/"
+#~ "contenido) sea `odoo._domainkey.odoo.com.`. Por ejemplo, observa las "
+#~ "diferencias entre cada clave/valor en cursiva\\:"
+
+#~ msgid "Example CNAME record"
+#~ msgstr "Ejemplo de registro CNAME"
+
+#~ msgid "Key"
+#~ msgstr "Clave"
+
+#~ msgid "odoo.\\_domainkey"
+#~ msgstr "odoo.\\_domainkey"
+
+#~ msgid "Value"
+#~ msgstr "Valor"
+
+#~ msgid "odoo.\\_domainkey.\\ *odoo.com.* |nbsp|"
+#~ msgstr "odoo.\\_domainkey.\\ *odoo.com.* |nbsp|"
+
+#~ msgid "OR"
+#~ msgstr "O"
+
+#~ msgid "odoo.\\_domainkey.\\ *dbname*\\ .odoo.com."
+#~ msgstr "odoo.\\_domainkey.\\ *nombrebd*\\ .odoo.com."
+
+#~ msgid "... where *dbname* is the name of the Odoo database."
+#~ msgstr "... donde *nombrebd* es el nombre de la base de datos de Odoo."
+
+#~ msgid ""
+#~ "On most DNS platforms, the DNS provider adds the custom domain (e.g., "
+#~ "*company-name.com*) by default. In this case, the key looks different "
+#~ "while the value remains the same:"
+#~ msgstr ""
+#~ "En la mayoría de las plataformas DNS, el proveedor DNS agrega el dominio "
+#~ "personalizado (p. ej., *nombre-empresa.com*) de forma predeterminada. En "
+#~ "este caso, la clave se ve diferente mientras que el valor permanece igual:"
+
+#~ msgid "Example CNAME record with custom domain"
+#~ msgstr "Ejemplo de registro CNAME con dominio personalizado"
+
+#~ msgid "odoo.\\_domainkey.\\ *company-name.com* |nbsp|"
+#~ msgstr "odoo.\\_domainkey.\\ *nombre-empresa.com* |nbsp|"
+
+#~ msgid "... where *company-name.com* is the custom domain."
+#~ msgstr "... donde *nombre-empresa.com* es el dominio personalizado."
+
+#~ msgid ""
+#~ "If the DNS provider does not add the custom domain by default, make sure "
+#~ "to include it."
+#~ msgstr ""
+#~ "Si el proveedor DNS no agrega el dominio personalizado de forma "
+#~ "predeterminada, asegúrate de incluirlo."
+
+#~ msgid "Add a CNAME record for subdomain"
+#~ msgstr "Agregar un registro CNAME para el subdominio"
+
+#~ msgid ""
+#~ "If there's a \\ *subdomain* (e.g., *marketing* in *marketing*\\ .company-"
+#~ "name.com), add a CNAME record to include it for compliance as well:"
+#~ msgstr ""
+#~ "Si hay un *subdominio* (por ejemplo, *marketing* en *marketing*.nombre-"
+#~ "empresa.com), agrega un registro CNAME para incluirlo también y cumplir "
+#~ "con los requisitos:"
+
+#~ msgid "Example CNAME record with subdomain"
+#~ msgstr "Ejemplo de registro CNAME con subdominio"
+
+#~ msgid "odoo.\\_domainkey.\\ *marketing* |nbsp|"
+#~ msgstr "odoo.\\_domainkey.\\ *marketing* |nbsp|"
+
+#~ msgid "... where *marketing* is the subdomain."
+#~ msgstr "... donde *marketing* es el subdominio."
+
+#~ msgid "odoo.\\_domainkey.marketing.\\ *company-name.com*\\ |nbsp|"
+#~ msgstr "odoo.\\_domainkey.marketing.\\ *nombre-empresa.com*\\ |nbsp|"
+
+#~ msgid "See DNS provider documentation"
+#~ msgstr "Ver la documentación del proveedor DNS"
+
+#~ msgid ""
+#~ "Check if the DKIM record is valid using a tool like `MXToolbox DKIM "
+#~ "Record Lookup <https://mxtoolbox.com/dkim.aspx>`_. Enter "
+#~ "`example.com:odoo` in the DKIM lookup tool, specifying that the selector "
+#~ "being tested is *odoo* for the custom domain *example.com*."
+#~ msgstr ""
+#~ "Verifica si el registro DKIM es válido usando una herramienta como "
+#~ "`MXToolbox DKIM Record Lookup <https://mxtoolbox.com/dkim.aspx>`_. "
+#~ "Ingresa `ejemplo.com:odoo` en la herramienta de búsqueda DKIM, "
+#~ "especificando que el selector que se está probando es *odoo* para el "
+#~ "dominio personalizado *ejemplo.com*."
+
+#~ msgid ""
+#~ "`GoDaddy SPF, DKIM, or DMARC records <https://www.godaddy.com/help/set-up-"
+#~ "spf-dkim-or-dmarc-records-for-my-hosting-email-40810>`_"
+#~ msgstr ""
+#~ "`Registros SPF, DKIM o DMARC de GoDaddy <https://www.godaddy.com/help/set-"
+#~ "up-spf-dkim-or-dmarc-records-for-my-hosting-email-40810>`_"
+
+#~ msgid ""
+#~ "`Magic Sheet - SPF, DKIM and DMARC configuration [PDF] <https://"
+#~ "drive.google.com/drive/folders/1TJIXQpdR0VN8UQx5JP7q7vFuAr3e1Q3r>`_"
+#~ msgstr ""
+#~ "`Magic Sheet - Configuración SPF, DKIM y DMARC [PDF] <https://"
+#~ "drive.google.com/drive/folders/1TJIXQpdR0VN8UQx5JP7q7vFuAr3e1Q3r>`_"
+
+#~ msgid ""
+#~ "Enter a :guilabel:`Name` for the group and tick the checkbox next "
+#~ "to :guilabel:`Share Group`, if this group was created to set access "
+#~ "rights for sharing data with some users."
+#~ msgstr ""
+#~ "Escriba un :guilabel:`nombre` para el grupo y seleccione la casilla junto "
+#~ "a :guilabel:`Compartir grupo` en caso de que haya creado el grupo para "
+#~ "configurar permisos de acceso para compartir datos con otros usuarios."
+
+#~ msgid ""
+#~ "To enable inactivity timeout, click the :guilabel:`Timeouts` tab and tick "
+#~ "the :guilabel:`Inactivity` checkbox. Next, choose "
+#~ "either :guilabel:`Screen lock` or :guilabel:`Screen lock with two-factor "
+#~ "authentication` from the drop-down menu. This determines whether the user "
+#~ "must to complete 2FA verification when logging back in."
+#~ msgstr ""
+#~ "Para habilitar el tiempo de espera por inactividad, haz clic en la "
+#~ "pestaña :guilabel:`Tiempos de espera` y marca la "
+#~ "casilla :guilabel:`Inactividad`. A continuación, elige :guilabel:`Bloqueo "
+#~ "de pantalla` o :guilabel:`Bloqueo de pantalla con autenticación de dos "
+#~ "factores` en el menú desplegable. Esto determina si el usuario debe "
+#~ "completar la verificación 2FA al volver a iniciar sesión."
+
+#~ msgid ""
+#~ "To enable session timeout, click on the :guilabel:`Timeouts` tab, and "
+#~ "tick the :guilabel:`Session` checkbox. Next, choose "
+#~ "either :guilabel:`Logout` or :guilabel:`Logout with two-factor "
+#~ "authentication` from the drop-down menu. This determines whether the user "
+#~ "must to complete 2FA verification when logging back in."
+#~ msgstr ""
+#~ "Para habilitar el tiempo de espera de sesión, haz clic en la "
+#~ "pestaña :guilabel:`Timeouts` y marca la casilla :guilabel:`Session`. A "
+#~ "continuación, elige :guilabel:`Logout` o :guilabel:`Logout with two-"
+#~ "factor authentication` del menú desplegable. Esto determina si el usuario "
+#~ "debe completar la verificación 2FA al iniciar sesión nuevamente."
+
+#~ msgid ""
 #~ "**Never** deactivate the main/administrator user (admin). Making changes "
 #~ "to admin users can have a detrimental impact on the database. This "
 #~ "includes *impotent admin*, which means that no user in the database can "
@@ -18889,50 +18971,6 @@ msgstr ":doc:`Documentación de acceso al portal <portal_access>`"
 #~ "en :guilabel:`EDITAR VISTA DE LISTA` o en :guilabel:`EDITAR LISTA DE "
 #~ "FORMULARIO` para modificar esta pestaña."
 
-#~ msgid ""
-#~ "When sending an email, the Odoo email server includes a "
-#~ "unique :abbr:`DKIM (DomainKeys Identified Mail)` signature in the "
-#~ "headers. The recipient's server decrypts this signature using the DKIM "
-#~ "record in the database's domain name. If the signature and the key "
-#~ "contained in the record match, it proves the message is authentic and has "
-#~ "not been altered during transport."
-#~ msgstr ""
-#~ "Al enviar un correo electrónico, el servidor de correo electrónico de "
-#~ "Odoo incluye una firma :abbr:`DKIM (DomainKeys Identified Mail)` única en "
-#~ "los encabezados. El servidor del destinatario descifra esta firma "
-#~ "mediante el registro DKIM en el nombre de dominio de la base de datos. Si "
-#~ "la firma y la clave en el registro coinciden, confirma que el mensaje es "
-#~ "auténtico y que no se alteró durante el transporte."
-
-#~ msgid ""
-#~ "To enable DKIM, add a :abbr:`CNAME (Canonical Name)` record to "
-#~ "the :abbr:`DNS (Domain Name System)` zone of the domain name:"
-#~ msgstr ""
-#~ "Para habilitar el DKIM, agregue un registro :abbr:`CNAME (Nombre "
-#~ "canónico)` en la zona :abbr:`DNS (Sistema de nombres de dominio)` del "
-#~ "nombre de dominio:"
-
-#~ msgid ""
-#~ "If the domain name is `company-name.com`, make sure to create a subdomain "
-#~ "`odoo._domainkey.company-name.com` whose canonical name is "
-#~ "`odoo._domainkey.odoo.com.`."
-#~ msgstr ""
-#~ "Si el nombre de dominio es `nombre-de-la-empresa.com` asegúrese de crear "
-#~ "un subdominio `odoo._domainkey.nombre-de-la-empresa.com` con el nombre "
-#~ "canónico `odoo._domainkey.odoo.com`."
-
-#~ msgid ""
-#~ "Check if the DKIM record is valid using a tool like `MXToolbox DKIM "
-#~ "Record Lookup <https://mxtoolbox.com/dkim.aspx>`_. Enter "
-#~ "`example.com:odoo` in the DKIM lookup tool, specifying that the selector "
-#~ "being tested is `odoo` for the custom domain `example.com`."
-#~ msgstr ""
-#~ "Verifique si el registro DKIM es válido con una herramienta como "
-#~ "`MXToolbox DKIM Record Lookup <https://mxtoolbox.com/dkim.aspx>`_. "
-#~ "Escriba `ejemplo.com:odoo` en la herramienta de búsqueda DKIM para "
-#~ "especificar que el selector a probar es `odoo` para el dominio "
-#~ "personalizado `ejemplo.com`."
-
 #~ msgid "Barcode Lookup"
 #~ msgstr "Barcode Lookup"
 
@@ -19208,13 +19246,6 @@ msgstr ":doc:`Documentación de acceso al portal <portal_access>`"
 #~ "Consulte la :ref:`documentación de registros de Odoo.sh <odoosh/logs>` "
 #~ "para obtener más información acerca de los registros y cómo acceder a "
 #~ "ellos a través del tablero de Odoo.sh."
-
-#~ msgid ""
-#~ "`GoDaddy CNAME record <https://www.godaddy.com/help/add-a-cname-"
-#~ "record-19236>`_"
-#~ msgstr ""
-#~ "`GoDaddy: agregar un registro CNAME <https://www.godaddy.com/help/add-a-"
-#~ "cname-record-19236>`_"
 
 #~ msgid "General"
 #~ msgstr "General"
