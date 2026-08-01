@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-24 17:31+0000\n"
+"POT-Creation-Date: 2026-07-31 17:31+0000\n"
 "PO-Revision-Date: 2026-07-06 12:36+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Ukrainian <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -3558,11 +3558,11 @@ msgstr ""
 "підтвердіть` обліковий запис. Обліковий запис має бути готовий до отримання "
 "електронної пошти в базу даних Odoo."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:6
+#: ../../content/applications/general/email_communication/email_domain.rst:3
 msgid "Configure DNS records to send emails in Odoo"
 msgstr "Налаштування DNS-записів для надсилання електронних листів в Odoo"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:8
+#: ../../content/applications/general/email_communication/email_domain.rst:5
 msgid ""
 "This documentation presents three complementary authentication protocols "
 "(SPF, DKIM, and DMARC) used to prove the legitimacy of an email sender. Not "
@@ -3574,7 +3574,7 @@ msgstr ""
 "відправника електронної пошти. Недотримання цих протоколів значно зменшить "
 "шанси доставки ваших листів до отримувачів."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:12
+#: ../../content/applications/general/email_communication/email_domain.rst:9
 msgid ""
 "**Odoo Online** and **Odoo.sh** databases using the **default Odoo subdomain "
 "address** (e.g., `\\@company-name.odoo.com`) are pre-configured to **send "
@@ -3585,7 +3585,7 @@ msgstr ""
 "налаштовані для **надсилання автентифікованих електронних листів**, які "
 "відповідають протоколам SPF, DKIM і DMARC."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:16
+#: ../../content/applications/general/email_communication/email_domain.rst:13
 msgid ""
 "If choosing to use a **custom domain** instead, **configuring SPF and DKIM "
 "records correctly is essential** to prevent emails from being quarantined as "
@@ -3595,7 +3595,7 @@ msgstr ""
 "записів SPF і DKIM є критично важливим**, щоб запобігти потраплянню листів у "
 "карантин як спаму або їх недоставці отримувачам."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:19
+#: ../../content/applications/general/email_communication/email_domain.rst:16
 msgid ""
 "If using :ref:`the default Odoo email server to send emails from a custom "
 "domain <email-outbound-custom-domain-odoo-server>`, the SPF and DKIM records "
@@ -3610,7 +3610,7 @@ msgstr ""
 "використовувати записи SPF і DKIM, специфічні для цієї поштової служби та "
 "власного домену."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:25
+#: ../../content/applications/general/email_communication/email_domain.rst:22
 msgid ""
 "Email service providers apply different rules to incoming emails. An email "
 "may be classified as spam even if it passes the SPF and DKIM checks."
@@ -3619,11 +3619,11 @@ msgstr ""
 "листів. Лист може бути класифікований як спам, навіть якщо він пройшов "
 "перевірки SPF і DKIM."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:31
+#: ../../content/applications/general/email_communication/email_domain.rst:28
 msgid "SPF (Sender Policy Framework)"
 msgstr "SPF (Sender Policy Framework)"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:33
+#: ../../content/applications/general/email_communication/email_domain.rst:30
 msgid ""
 "The Sender Policy Framework (SPF) protocol allows the owner of a domain name "
 "to specify which servers are allowed to send emails from that domain. When a "
@@ -3637,7 +3637,7 @@ msgstr ""
 "сервера-відправника є у списку дозволених IP-адрес відповідно до :abbr:`SPF "
 "(Sender Policy Framework)`-запису відправника."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:38
+#: ../../content/applications/general/email_communication/email_domain.rst:35
 msgid ""
 "In Odoo, the **SPF test is performed on the bounce address** defined under "
 "the :guilabel:`Alias Domain` field found under the "
@@ -3650,7 +3650,7 @@ msgstr ""
 "бази даних. Якщо використовується власний домен як :guilabel:`Alias Domain`, "
 "необхідно налаштувати його відповідно до вимог SPF."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:42
+#: ../../content/applications/general/email_communication/email_domain.rst:39
 msgid ""
 "The SPF policy of a domain is set using a TXT record. The way to create or "
 "modify this record depends on the provider hosting the :abbr:`DNS (Domain "
@@ -3660,7 +3660,7 @@ msgstr ""
 "або зміни цього запису залежить від провайдера, який обслуговує :abbr:`DNS "
 "(Domain Name System)`-зону доменного імені."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:45
+#: ../../content/applications/general/email_communication/email_domain.rst:42
 msgid ""
 "If the domain name does not yet have an SPF record, create one using the "
 "following input:"
@@ -3668,7 +3668,7 @@ msgstr ""
 "Якщо доменне ім'я ще не має SPF-запису, створіть його, використовуючи "
 "наступні дані:"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:51
+#: ../../content/applications/general/email_communication/email_domain.rst:48
 msgid ""
 "If the domain name **already has an SPF record, the record must be "
 "updated**. Do not create a new one, as a domain must have only one SPF "
@@ -3677,7 +3677,7 @@ msgstr ""
 "Якщо доменне ім'я **вже має SPF-запис, цей запис потрібно оновити**. Не "
 "створюйте новий запис, оскільки домен повинен мати лише один SPF-запис."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:55
+#: ../../content/applications/general/email_communication/email_domain.rst:52
 msgid ""
 "If the TXT record is `v=spf1 include:_spf.google.com ~all`, edit it to add "
 "`include:_spf.odoo.com`: `v=spf1 include:_spf.odoo.com "
@@ -3687,7 +3687,7 @@ msgstr ""
 "відредагуйте його, додавши `include:_spf.odoo.com`: `v=spf1 "
 "include:_spf.odoo.com include:_spf.google.com ~all`"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:58
+#: ../../content/applications/general/email_communication/email_domain.rst:55
 msgid ""
 "Check the SPF record using a tool like `MXToolbox SPF Record Check <https://"
 "mxtoolbox.com/spf.aspx>`_. The process to create or modify an SPF record "
@@ -3701,11 +3701,11 @@ msgstr ""
 "імені. :ref:`Найпоширеніші провайдери <email-domain-providers-"
 "documentation>` та їхня документація наведені нижче."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:66
+#: ../../content/applications/general/email_communication/email_domain.rst:63
 msgid "DKIM (DomainKeys Identified Mail)"
 msgstr "DKIM (DomainKeys Identified Mail)"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:68
+#: ../../content/applications/general/email_communication/email_domain.rst:65
 msgid ""
 "The DomainKeys Identified Mail (DKIM) allows a user to authenticate emails "
 "with a digital signature."
@@ -3713,21 +3713,16 @@ msgstr ""
 "DomainKeys Identified Mail (DKIM) дозволяє користувачу автентифікувати "
 "електронні листи за допомогою цифрового підпису."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:70
+#: ../../content/applications/general/email_communication/email_domain.rst:67
 msgid ""
-"When sending an email, the Odoo email server includes a unique DKIM "
-"signature in the headers. The recipient's server decrypts this signature "
-"using the DKIM record in the database's domain name. If the signature and "
-"the key contained in the record match, it proves the message is authentic "
-"and has not been altered during transport."
+"When sending an email, the Odoo email server includes a unique :abbr:`DKIM "
+"(DomainKeys Identified Mail)` signature in the headers. The recipient's "
+"server decrypts this signature using the DKIM record in the database's "
+"domain name. If the signature and the key contained in the record match, it "
+"proves the message is authentic and has not been altered during transport."
 msgstr ""
-"Під час надсилання електронного листа поштовий сервер Odoo включає "
-"унікальний підпис DKIM у заголовки. Сервер одержувача розшифровує цей підпис "
-"за допомогою запису DKIM у доменному імені бази даних. Якщо підпис і ключ, "
-"що міститься в записі, збігаються, це доводить, що повідомлення є "
-"автентичним і не було змінено під час передачі."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:75
+#: ../../content/applications/general/email_communication/email_domain.rst:72
 msgid ""
 "Enabling DKIM is **required** when sending emails **from a custom domain** "
 "using the Odoo email server."
@@ -3735,141 +3730,20 @@ msgstr ""
 "Увімкнення DKIM є **обов'язковим** під час надсилання електронних листів **з "
 "власного домену** через поштовий сервер Odoo."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:79
-msgid "Add a CNAME record for domain"
-msgstr "Додавання запису CNAME для домену"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:81
+#: ../../content/applications/general/email_communication/email_domain.rst:75
 msgid ""
-"To enable DKIM, add a canonical name (CNAME) record to the domain name "
-"system (DNS) zone of the domain name:"
+"To enable DKIM, add a :abbr:`CNAME (Canonical Name)` record to "
+"the :abbr:`DNS (Domain Name System)` zone of the domain name:"
 msgstr ""
-"Щоб увімкнути DKIM, додайте канонічний запис імені (CNAME) до системи "
-"доменних імен (DNS) зони доменного імені:"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:89
+#: ../../content/applications/general/email_communication/email_domain.rst:83
 msgid ""
-"If the domain name is *company-name.com*, make sure to create a CNAME record "
-"where the CNAME record (key/name) is `odoo._domainkey.company-name.com`, and "
-"the canonical name (value/content) is `odoo._domainkey.odoo.com.`. For "
-"example, note the differences between each key/value in italics\\:"
+"If the domain name is `company-name.com`, make sure to create a subdomain "
+"`odoo._domainkey.company-name.com` whose canonical name is "
+"`odoo._domainkey.odoo.com.`."
 msgstr ""
-"Якщо доменне ім'я *company-name.com*, переконайтеся, що створюєте запис "
-"CNAME, де запис CNAME (ключ/ім'я) є `odoo._domainkey.company-name.com`, а "
-"канонічне ім'я (значення/вміст) є `odoo._domainkey.odoo.com.`. Наприклад, "
-"зверніть увагу на відмінності між кожним ключем/значенням, виділеним "
-"курсивом:"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:93
-msgid "Example CNAME record"
-msgstr "Приклад запису CNAME"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:98
-#: ../../content/applications/general/email_communication/email_domain.rst:119
-#: ../../content/applications/general/email_communication/email_domain.rst:146
-msgid "Key"
-msgstr "Ключ"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:100
-msgid "odoo.\\_domainkey"
-msgstr "odoo.\\_domainkey"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:102
-#: ../../content/applications/general/email_communication/email_domain.rst:123
-#: ../../content/applications/general/email_communication/email_domain.rst:154
-msgid "Value"
-msgstr "Значення"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:104
-#: ../../content/applications/general/email_communication/email_domain.rst:125
-#: ../../content/applications/general/email_communication/email_domain.rst:156
-msgid "odoo.\\_domainkey.\\ *odoo.com.* |nbsp|"
-msgstr "odoo.\\_domainkey.\\ *odoo.com.* |nbsp|"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:107
-#: ../../content/applications/general/email_communication/email_domain.rst:128
-#: ../../content/applications/general/email_communication/email_domain.rst:151
-#: ../../content/applications/general/email_communication/email_domain.rst:159
-msgid "OR"
-msgstr "АБО"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:108
-#: ../../content/applications/general/email_communication/email_domain.rst:129
-#: ../../content/applications/general/email_communication/email_domain.rst:160
-msgid "odoo.\\_domainkey.\\ *dbname*\\ .odoo.com."
-msgstr "odoo.\\_domainkey.\\ *dbname*\\ .odoo.com."
-
-#: ../../content/applications/general/email_communication/email_domain.rst:109
-#: ../../content/applications/general/email_communication/email_domain.rst:130
-#: ../../content/applications/general/email_communication/email_domain.rst:161
-msgid "... where *dbname* is the name of the Odoo database."
-msgstr "... де *dbname* – назва бази даних Odoo."
-
-#: ../../content/applications/general/email_communication/email_domain.rst:111
-msgid ""
-"On most DNS platforms, the DNS provider adds the custom domain (e.g., "
-"*company-name.com*) by default. In this case, the key looks different while "
-"the value remains the same:"
-msgstr ""
-"На більшості DNS-платформ провайдер DNS додає власний домен (наприклад, "
-"*назва-компанії.com*) за замовчуванням. У цьому випадку ключ виглядає "
-"інакше, тоді як значення залишається тим самим:"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:114
-msgid "Example CNAME record with custom domain"
-msgstr "Приклад запису CNAME з власним доменом"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:121
-msgid "odoo.\\_domainkey.\\ *company-name.com* |nbsp|"
-msgstr "odoo.\\_domainkey.\\ *назва-компанії.com*|nbsp|"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:122
-#: ../../content/applications/general/email_communication/email_domain.rst:153
-msgid "... where *company-name.com* is the custom domain."
-msgstr "... де *назва-компанії.com* — це власний домен."
-
-#: ../../content/applications/general/email_communication/email_domain.rst:133
-msgid ""
-"If the DNS provider does not add the custom domain by default, make sure to "
-"include it."
-msgstr ""
-"Якщо провайдер DNS не додає власний домен за замовчуванням, обов'язково "
-"включіть його."
-
-#: ../../content/applications/general/email_communication/email_domain.rst:136
-msgid "Add a CNAME record for subdomain"
-msgstr "Додавання запису CNAME для субдомену"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:138
-msgid ""
-"If there's a \\ *subdomain* (e.g., *marketing* in *marketing*\\ .company-"
-"name.com), add a CNAME record to include it for compliance as well:"
-msgstr ""
-"Якщо є \\ *субдомен* (наприклад, *marketing* у *marketing*\\ .назва-"
-"компанії.com), додайте запис CNAME, щоб включити його також для "
-"відповідності вимогам:"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:141
-msgid "Example CNAME record with subdomain"
-msgstr "Приклад запису CNAME із субдоменом"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:148
-msgid "odoo.\\_domainkey.\\ *marketing* |nbsp|"
-msgstr "odoo.\\_domainkey.\\ *marketing*|nbsp|"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:149
-msgid "... where *marketing* is the subdomain."
-msgstr "... де *marketing* — це субдомен."
-
-#: ../../content/applications/general/email_communication/email_domain.rst:152
-msgid "odoo.\\_domainkey.marketing.\\ *company-name.com*\\ |nbsp|"
-msgstr "odoo.\\_domainkey.marketing.\\ *назва-компанії.com*\\|nbsp|"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:164
-msgid "See DNS provider documentation"
-msgstr "Див. документацію провайдера DNS"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:166
+#: ../../content/applications/general/email_communication/email_domain.rst:86
 msgid ""
 "The way to create or modify a CNAME record depends on the provider hosting "
 "the DNS zone of the domain name. The :ref:`most common providers <email-"
@@ -3879,23 +3753,19 @@ msgstr ""
 "обслуговує DNS-зону доменного імені. :ref:`Найпоширеніші провайдери <email-"
 "domain-providers-documentation>` та їхня документація наведені нижче."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:170
+#: ../../content/applications/general/email_communication/email_domain.rst:90
 msgid ""
 "Check if the DKIM record is valid using a tool like `MXToolbox DKIM Record "
 "Lookup <https://mxtoolbox.com/dkim.aspx>`_. Enter `example.com:odoo` in the "
-"DKIM lookup tool, specifying that the selector being tested is *odoo* for "
-"the custom domain *example.com*."
+"DKIM lookup tool, specifying that the selector being tested is `odoo` for "
+"the custom domain `example.com`."
 msgstr ""
-"Перевірте, чи є запис DKIM дійсним, використовуючи інструмент, як-от "
-"`MXToolbox DKIM Record Lookup <https://mxtoolbox.com/dkim.aspx>`_. Введіть "
-"`example.com:odoo` в інструмент пошуку DKIM, вказавши, що селектор, який "
-"тестується, — це *odoo* для власного домену *example.com*."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:177
+#: ../../content/applications/general/email_communication/email_domain.rst:97
 msgid "DMARC (Domain-based Message Authentication, Reporting and Conformance)"
 msgstr "DMARC (Domain-based Message Authentication, Reporting and Conformance)"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:179
+#: ../../content/applications/general/email_communication/email_domain.rst:99
 msgid ""
 "The :abbr:`DMARC (Domain-based Message Authentication, Reporting, & "
 "Conformance)` record is a protocol that unifies :abbr:`SPF (Sender Policy "
@@ -3910,7 +3780,7 @@ msgstr ""
 "робити з вхідним електронним листом, який не пройшов SPF та/або DKIM-"
 "перевірку."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:185
+#: ../../content/applications/general/email_communication/email_domain.rst:105
 msgid ""
 "The aim of this documentation is to help **understand the impact DMARC has "
 "on the deliverability of emails**, rather than give precise instructions for "
@@ -3922,23 +3792,23 @@ msgstr ""
 "запису. Зверніться до ресурсу на кшталт `DMARC.org <https://dmarc.org/>`_ "
 "для налаштування DMARC-запису."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:189
+#: ../../content/applications/general/email_communication/email_domain.rst:109
 msgid "There are three DMARC policies:"
 msgstr "Існують три DMARC-політики:"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:191
+#: ../../content/applications/general/email_communication/email_domain.rst:111
 msgid "`p=none`"
 msgstr "`p=none`"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:192
+#: ../../content/applications/general/email_communication/email_domain.rst:112
 msgid "`p=quarantine`"
 msgstr "`p=quarantine`"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:193
+#: ../../content/applications/general/email_communication/email_domain.rst:113
 msgid "`p=reject`"
 msgstr "`p=reject`"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:195
+#: ../../content/applications/general/email_communication/email_domain.rst:115
 msgid ""
 "`p=quarantine` and `p=reject` instruct the server that receives an email to "
 "quarantine that email or ignore it if the SPF or DKIM check fails."
@@ -3947,7 +3817,7 @@ msgstr ""
 "лист, помістити цей лист у карантин або ігнорувати його, якщо SPF або DKIM-"
 "перевірка не пройдена."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:199
+#: ../../content/applications/general/email_communication/email_domain.rst:119
 msgid ""
 "**For the DMARC to pass, the DKIM or SPF check needs to pass** and the "
 "domains must be in alignment. If the hosting type is Odoo Online, DKIM "
@@ -3957,7 +3827,7 @@ msgstr ""
 "домени мають бути узгоджені. Якщо тип хостингу — Odoo Online, для "
 "проходження DMARC потрібне налаштування DKIM на домені відправника."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:203
+#: ../../content/applications/general/email_communication/email_domain.rst:123
 msgid ""
 "Passing DMARC generally means that the email will be successfully delivered. "
 "However, it's important to note that **other factors like spam filters can "
@@ -3967,7 +3837,7 @@ msgstr ""
 "доставлено. Однак важливо зазначити, що **інші фактори, такі як спам-"
 "фільтри, все ще можуть відхилити або поміcтити повідомлення в карантин**."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:206
+#: ../../content/applications/general/email_communication/email_domain.rst:126
 msgid ""
 "`p=none` is used for the domain owner to receive reports about entities "
 "using their domain. It should not impact the deliverability."
@@ -3976,7 +3846,7 @@ msgstr ""
 "організації, які використовують його домен. Це не повинно впливати на "
 "доставку."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:210
+#: ../../content/applications/general/email_communication/email_domain.rst:130
 msgid ""
 ":literal:`_dmarc IN TXT “v=DMARC1; p=none; "
 "rua=mailto:postmaster@example.com”` means that aggregate DMARC reports will "
@@ -3986,11 +3856,11 @@ msgstr ""
 "rua=mailto:postmaster@example.com”` означає, що зведені звіти DMARC будуть "
 "надіслані на адресу `postmaster\\@example.com`."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:217
+#: ../../content/applications/general/email_communication/email_domain.rst:137
 msgid "SPF, DKIM and DMARC documentation of common providers"
 msgstr "Документація SPF, DKIM та DMARC для поширених провайдерів"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:219
+#: ../../content/applications/general/email_communication/email_domain.rst:139
 msgid ""
 "`OVH DNS <https://docs.ovh.com/us/en/domains/"
 "web_hosting_how_to_edit_my_dns_zone/>`_"
@@ -3998,21 +3868,19 @@ msgstr ""
 "`OVH DNS <https://docs.ovh.com/us/en/domains/"
 "web_hosting_how_to_edit_my_dns_zone/>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:220
+#: ../../content/applications/general/email_communication/email_domain.rst:140
 msgid ""
 "`GoDaddy TXT record <https://www.godaddy.com/help/add-a-txt-record-19232>`_"
 msgstr ""
 "`GoDaddy TXT-запис <https://www.godaddy.com/help/add-a-txt-record-19232>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:221
+#: ../../content/applications/general/email_communication/email_domain.rst:141
 msgid ""
-"`GoDaddy SPF, DKIM, or DMARC records <https://www.godaddy.com/help/set-up-"
-"spf-dkim-or-dmarc-records-for-my-hosting-email-40810>`_"
+"`GoDaddy CNAME record <https://www.godaddy.com/help/add-a-cname-"
+"record-19236>`_"
 msgstr ""
-"`Записи SPF, DKIM або DMARC для GoDaddy <https://www.godaddy.com/help/set-up-"
-"spf-dkim-or-dmarc-records-for-my-hosting-email-40810>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:223
+#: ../../content/applications/general/email_communication/email_domain.rst:142
 msgid ""
 "`NameCheap <https://www.namecheap.com/support/knowledgebase/article.aspx/"
 "317/2237/how-do-i-add-txtspfdkimdmarc-records-for-my-domain/>`_"
@@ -4020,7 +3888,7 @@ msgstr ""
 "`NameCheap <https://www.namecheap.com/support/knowledgebase/article.aspx/"
 "317/2237/how-do-i-add-txtspfdkimdmarc-records-for-my-domain/>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:225
+#: ../../content/applications/general/email_communication/email_domain.rst:143
 msgid ""
 "`CloudFlare DNS <https://support.cloudflare.com/hc/en-us/articles/"
 "360019093151>`_"
@@ -4028,7 +3896,7 @@ msgstr ""
 "`CloudFlare DNS <https://support.cloudflare.com/hc/en-us/articles/"
 "360019093151>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:226
+#: ../../content/applications/general/email_communication/email_domain.rst:144
 msgid ""
 "`Squarespace DNS records <https://support.squarespace.com/hc/en-us/articles/"
 "360002101888-Adding-custom-DNS-records-to-your-Squarespace-managed-domain>`_"
@@ -4036,7 +3904,7 @@ msgstr ""
 "`Squarespace DNS-записи <https://support.squarespace.com/hc/en-us/articles/"
 "360002101888-Adding-custom-DNS-records-to-your-Squarespace-managed-domain>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:228
+#: ../../content/applications/general/email_communication/email_domain.rst:145
 msgid ""
 "`Azure DNS <https://docs.microsoft.com/en-us/azure/dns/dns-getstarted-"
 "portal>`_"
@@ -4044,7 +3912,7 @@ msgstr ""
 "`Azure DNS <https://docs.microsoft.com/en-us/azure/dns/dns-getstarted-"
 "portal>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:230
+#: ../../content/applications/general/email_communication/email_domain.rst:147
 msgid ""
 "To fully test the configuration, use the `Mail-Tester <https://www.mail-"
 "tester.com/>`_ tool, which gives a full overview of the content and "
@@ -4057,21 +3925,13 @@ msgstr ""
 "можна використовувати для налаштування записів для інших, менш відомих "
 "провайдерів."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:235
+#: ../../content/applications/general/email_communication/email_domain.rst:152
 msgid ""
 "`Using Mail-Tester to set SPF Records for specific carriers <https://"
 "www.mail-tester.com/spf/>`_"
 msgstr ""
 "`Використання Mail-Tester для налаштування SPF-записів для конкретних "
 "провайдерів <https://www.mail-tester.com/spf/>`_"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:237
-msgid ""
-"`Magic Sheet - SPF, DKIM and DMARC configuration [PDF] <https://"
-"drive.google.com/drive/folders/1TJIXQpdR0VN8UQx5JP7q7vFuAr3e1Q3r>`_"
-msgstr ""
-"`Довідковий аркуш - конфігурація SPF, DKIM та DMARC [PDF] <https://"
-"drive.google.com/drive/folders/1TJIXQpdR0VN8UQx5JP7q7vFuAr3e1Q3r>`_"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:3
 msgid "Manage inbound messages"
@@ -16416,6 +16276,142 @@ msgstr ""
 "Якщо клієнт бажає керувати способами оплати, перейдіть "
 "до :guilabel:`Керувати способами оплати` в меню праворуч. Потім додайте нову "
 "платіжну інформацію та виберіть :guilabel:`Додати нову картку`."
+
+#~ msgid ""
+#~ "When sending an email, the Odoo email server includes a unique DKIM "
+#~ "signature in the headers. The recipient's server decrypts this signature "
+#~ "using the DKIM record in the database's domain name. If the signature and "
+#~ "the key contained in the record match, it proves the message is authentic "
+#~ "and has not been altered during transport."
+#~ msgstr ""
+#~ "Під час надсилання електронного листа поштовий сервер Odoo включає "
+#~ "унікальний підпис DKIM у заголовки. Сервер одержувача розшифровує цей "
+#~ "підпис за допомогою запису DKIM у доменному імені бази даних. Якщо підпис "
+#~ "і ключ, що міститься в записі, збігаються, це доводить, що повідомлення є "
+#~ "автентичним і не було змінено під час передачі."
+
+#~ msgid "Add a CNAME record for domain"
+#~ msgstr "Додавання запису CNAME для домену"
+
+#~ msgid ""
+#~ "To enable DKIM, add a canonical name (CNAME) record to the domain name "
+#~ "system (DNS) zone of the domain name:"
+#~ msgstr ""
+#~ "Щоб увімкнути DKIM, додайте канонічний запис імені (CNAME) до системи "
+#~ "доменних імен (DNS) зони доменного імені:"
+
+#~ msgid ""
+#~ "If the domain name is *company-name.com*, make sure to create a CNAME "
+#~ "record where the CNAME record (key/name) is `odoo._domainkey.company-"
+#~ "name.com`, and the canonical name (value/content) is "
+#~ "`odoo._domainkey.odoo.com.`. For example, note the differences between "
+#~ "each key/value in italics\\:"
+#~ msgstr ""
+#~ "Якщо доменне ім'я *company-name.com*, переконайтеся, що створюєте запис "
+#~ "CNAME, де запис CNAME (ключ/ім'я) є `odoo._domainkey.company-name.com`, а "
+#~ "канонічне ім'я (значення/вміст) є `odoo._domainkey.odoo.com.`. Наприклад, "
+#~ "зверніть увагу на відмінності між кожним ключем/значенням, виділеним "
+#~ "курсивом:"
+
+#~ msgid "Example CNAME record"
+#~ msgstr "Приклад запису CNAME"
+
+#~ msgid "Key"
+#~ msgstr "Ключ"
+
+#~ msgid "odoo.\\_domainkey"
+#~ msgstr "odoo.\\_domainkey"
+
+#~ msgid "Value"
+#~ msgstr "Значення"
+
+#~ msgid "odoo.\\_domainkey.\\ *odoo.com.* |nbsp|"
+#~ msgstr "odoo.\\_domainkey.\\ *odoo.com.* |nbsp|"
+
+#~ msgid "OR"
+#~ msgstr "АБО"
+
+#~ msgid "odoo.\\_domainkey.\\ *dbname*\\ .odoo.com."
+#~ msgstr "odoo.\\_domainkey.\\ *dbname*\\ .odoo.com."
+
+#~ msgid "... where *dbname* is the name of the Odoo database."
+#~ msgstr "... де *dbname* – назва бази даних Odoo."
+
+#~ msgid ""
+#~ "On most DNS platforms, the DNS provider adds the custom domain (e.g., "
+#~ "*company-name.com*) by default. In this case, the key looks different "
+#~ "while the value remains the same:"
+#~ msgstr ""
+#~ "На більшості DNS-платформ провайдер DNS додає власний домен (наприклад, "
+#~ "*назва-компанії.com*) за замовчуванням. У цьому випадку ключ виглядає "
+#~ "інакше, тоді як значення залишається тим самим:"
+
+#~ msgid "Example CNAME record with custom domain"
+#~ msgstr "Приклад запису CNAME з власним доменом"
+
+#~ msgid "odoo.\\_domainkey.\\ *company-name.com* |nbsp|"
+#~ msgstr "odoo.\\_domainkey.\\ *назва-компанії.com*|nbsp|"
+
+#~ msgid "... where *company-name.com* is the custom domain."
+#~ msgstr "... де *назва-компанії.com* — це власний домен."
+
+#~ msgid ""
+#~ "If the DNS provider does not add the custom domain by default, make sure "
+#~ "to include it."
+#~ msgstr ""
+#~ "Якщо провайдер DNS не додає власний домен за замовчуванням, обов'язково "
+#~ "включіть його."
+
+#~ msgid "Add a CNAME record for subdomain"
+#~ msgstr "Додавання запису CNAME для субдомену"
+
+#~ msgid ""
+#~ "If there's a \\ *subdomain* (e.g., *marketing* in *marketing*\\ .company-"
+#~ "name.com), add a CNAME record to include it for compliance as well:"
+#~ msgstr ""
+#~ "Якщо є \\ *субдомен* (наприклад, *marketing* у *marketing*\\ .назва-"
+#~ "компанії.com), додайте запис CNAME, щоб включити його також для "
+#~ "відповідності вимогам:"
+
+#~ msgid "Example CNAME record with subdomain"
+#~ msgstr "Приклад запису CNAME із субдоменом"
+
+#~ msgid "odoo.\\_domainkey.\\ *marketing* |nbsp|"
+#~ msgstr "odoo.\\_domainkey.\\ *marketing*|nbsp|"
+
+#~ msgid "... where *marketing* is the subdomain."
+#~ msgstr "... де *marketing* — це субдомен."
+
+#~ msgid "odoo.\\_domainkey.marketing.\\ *company-name.com*\\ |nbsp|"
+#~ msgstr "odoo.\\_domainkey.marketing.\\ *назва-компанії.com*\\|nbsp|"
+
+#~ msgid "See DNS provider documentation"
+#~ msgstr "Див. документацію провайдера DNS"
+
+#~ msgid ""
+#~ "Check if the DKIM record is valid using a tool like `MXToolbox DKIM "
+#~ "Record Lookup <https://mxtoolbox.com/dkim.aspx>`_. Enter "
+#~ "`example.com:odoo` in the DKIM lookup tool, specifying that the selector "
+#~ "being tested is *odoo* for the custom domain *example.com*."
+#~ msgstr ""
+#~ "Перевірте, чи є запис DKIM дійсним, використовуючи інструмент, як-от "
+#~ "`MXToolbox DKIM Record Lookup <https://mxtoolbox.com/dkim.aspx>`_. "
+#~ "Введіть `example.com:odoo` в інструмент пошуку DKIM, вказавши, що "
+#~ "селектор, який тестується, — це *odoo* для власного домену *example.com*."
+
+#~ msgid ""
+#~ "`GoDaddy SPF, DKIM, or DMARC records <https://www.godaddy.com/help/set-up-"
+#~ "spf-dkim-or-dmarc-records-for-my-hosting-email-40810>`_"
+#~ msgstr ""
+#~ "`Записи SPF, DKIM або DMARC для GoDaddy <https://www.godaddy.com/help/set-"
+#~ "up-spf-dkim-or-dmarc-records-for-my-hosting-email-40810>`_"
+
+#~ msgid ""
+#~ "`Magic Sheet - SPF, DKIM and DMARC configuration [PDF] <https://"
+#~ "drive.google.com/drive/folders/1TJIXQpdR0VN8UQx5JP7q7vFuAr3e1Q3r>`_"
+#~ msgstr ""
+#~ "`Довідковий аркуш - конфігурація SPF, DKIM та DMARC [PDF] <https://"
+#~ "drive.google.com/drive/folders/1TJIXQpdR0VN8UQx5JP7q7vFuAr3e1Q3r>`_"
 
 #~ msgid ""
 #~ "**Never** deactivate the main/administrator user (admin). Making changes "

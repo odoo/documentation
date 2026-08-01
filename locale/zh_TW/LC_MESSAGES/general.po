@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-24 17:31+0000\n"
+"POT-Creation-Date: 2026-07-31 17:31+0000\n"
 "PO-Revision-Date: 2026-07-06 12:36+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Chinese (Traditional Han script) <https://translate.odoo.com/"
@@ -3251,11 +3251,11 @@ msgstr ""
 "示：:guilabel:`Outlook 權杖有效`。現在:guilabel:`測試並確認`帳戶。該帳戶即可"
 "接收傳送至 Odoo 資料庫的電子郵件。"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:6
+#: ../../content/applications/general/email_communication/email_domain.rst:3
 msgid "Configure DNS records to send emails in Odoo"
 msgstr "配置 DNS 記錄以在 Odoo 中傳送電子郵件"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:8
+#: ../../content/applications/general/email_communication/email_domain.rst:5
 msgid ""
 "This documentation presents three complementary authentication protocols "
 "(SPF, DKIM, and DMARC) used to prove the legitimacy of an email sender. Not "
@@ -3265,7 +3265,7 @@ msgstr ""
 "本使用說明介紹三種互補的驗證協定（SPF、DKIM 和 DMARC），用於證明電子郵件寄件"
 "者的合法性。不遵守這些協定將大幅降低您的電子郵件送達目的地的機會。"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:12
+#: ../../content/applications/general/email_communication/email_domain.rst:9
 msgid ""
 "**Odoo Online** and **Odoo.sh** databases using the **default Odoo subdomain "
 "address** (e.g., `\\@company-name.odoo.com`) are pre-configured to **send "
@@ -3275,7 +3275,7 @@ msgstr ""
 "版**和 **Odoo.sh** 資料庫已預先配置為**傳送經驗證的電子郵件**，符合 SPF、"
 "DKIM 和 DMARC 協定。"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:16
+#: ../../content/applications/general/email_communication/email_domain.rst:13
 msgid ""
 "If choosing to use a **custom domain** instead, **configuring SPF and DKIM "
 "records correctly is essential** to prevent emails from being quarantined as "
@@ -3284,7 +3284,7 @@ msgstr ""
 "如果選擇使用**自訂網域**，**正確配置 SPF 和 DKIM 記錄至關重要**，以防止電子郵"
 "件被隔離為垃圾郵件或無法傳送給收件者。"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:19
+#: ../../content/applications/general/email_communication/email_domain.rst:16
 msgid ""
 "If using :ref:`the default Odoo email server to send emails from a custom "
 "domain <email-outbound-custom-domain-odoo-server>`, the SPF and DKIM records "
@@ -3297,7 +3297,7 @@ msgstr ""
 "用外寄電子郵件伺服器，則需要使用該電子郵件服務專屬的 SPF 和 DKIM 記錄以及自訂"
 "網域。"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:25
+#: ../../content/applications/general/email_communication/email_domain.rst:22
 msgid ""
 "Email service providers apply different rules to incoming emails. An email "
 "may be classified as spam even if it passes the SPF and DKIM checks."
@@ -3305,11 +3305,11 @@ msgstr ""
 "電子郵件服務提供商對內送電子郵件採用不同的規則。即使通過 SPF 和 DKIM 檢查，電"
 "子郵件仍可能被歸類為垃圾郵件。"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:31
+#: ../../content/applications/general/email_communication/email_domain.rst:28
 msgid "SPF (Sender Policy Framework)"
 msgstr "SPF（寄件者政策框架）"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:33
+#: ../../content/applications/general/email_communication/email_domain.rst:30
 msgid ""
 "The Sender Policy Framework (SPF) protocol allows the owner of a domain name "
 "to specify which servers are allowed to send emails from that domain. When a "
@@ -3321,7 +3321,7 @@ msgstr ""
 "電子郵件。當伺服器收到傳入的電子郵件時，它會根據寄件者的\\ :abbr:`SPF（寄件者"
 "政策框架）`\\ 記錄檢查傳送伺服器的 IP 位址是否在允許的 IP 清單中。"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:38
+#: ../../content/applications/general/email_communication/email_domain.rst:35
 msgid ""
 "In Odoo, the **SPF test is performed on the bounce address** defined under "
 "the :guilabel:`Alias Domain` field found under the "
@@ -3333,7 +3333,7 @@ msgstr ""
 "\\ :guilabel:`一般設定`\\ 下的\\ :guilabel:`別名網域`\\ 欄位中。如果使用自訂"
 "網域作為\\ :guilabel:`別名網域`，則必須將其配置為符合 SPF 規範。"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:42
+#: ../../content/applications/general/email_communication/email_domain.rst:39
 msgid ""
 "The SPF policy of a domain is set using a TXT record. The way to create or "
 "modify this record depends on the provider hosting the :abbr:`DNS (Domain "
@@ -3342,13 +3342,13 @@ msgstr ""
 "網域的 SPF 政策是使用 TXT 記錄設定的。建立或修改此記錄的方式取決於託管該網域"
 "名稱\\ :abbr:`DNS（網域名稱系統）`\\ 區域的提供者。"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:45
+#: ../../content/applications/general/email_communication/email_domain.rst:42
 msgid ""
 "If the domain name does not yet have an SPF record, create one using the "
 "following input:"
 msgstr "如果網域名稱尚未有 SPF 記錄，請使用以下輸入建立一個："
 
-#: ../../content/applications/general/email_communication/email_domain.rst:51
+#: ../../content/applications/general/email_communication/email_domain.rst:48
 msgid ""
 "If the domain name **already has an SPF record, the record must be "
 "updated**. Do not create a new one, as a domain must have only one SPF "
@@ -3357,7 +3357,7 @@ msgstr ""
 "如果網域名稱**已經有 SPF 記錄，則必須更新該記錄**。請勿建立新記錄，因為一個網"
 "域只能有一個 SPF 記錄。"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:55
+#: ../../content/applications/general/email_communication/email_domain.rst:52
 msgid ""
 "If the TXT record is `v=spf1 include:_spf.google.com ~all`, edit it to add "
 "`include:_spf.odoo.com`: `v=spf1 include:_spf.odoo.com "
@@ -3367,7 +3367,7 @@ msgstr ""
 "`include:_spf.odoo.com`：`v=spf1 include:_spf.odoo.com "
 "include:_spf.google.com ~all`"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:58
+#: ../../content/applications/general/email_communication/email_domain.rst:55
 msgid ""
 "Check the SPF record using a tool like `MXToolbox SPF Record Check <https://"
 "mxtoolbox.com/spf.aspx>`_. The process to create or modify an SPF record "
@@ -3380,164 +3380,46 @@ msgstr ""
 "者。以下列出了\\ :ref:`最常見的提供者 <email-domain-providers-"
 "documentation>`\\ 及其使用說明。"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:66
+#: ../../content/applications/general/email_communication/email_domain.rst:63
 msgid "DKIM (DomainKeys Identified Mail)"
 msgstr "DKIM（網域金鑰識別郵件）"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:68
+#: ../../content/applications/general/email_communication/email_domain.rst:65
 msgid ""
 "The DomainKeys Identified Mail (DKIM) allows a user to authenticate emails "
 "with a digital signature."
 msgstr "網域金鑰識別郵件（DKIM）允許使用者使用數位簽章驗證電子郵件。"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:70
+#: ../../content/applications/general/email_communication/email_domain.rst:67
 msgid ""
-"When sending an email, the Odoo email server includes a unique DKIM "
-"signature in the headers. The recipient's server decrypts this signature "
-"using the DKIM record in the database's domain name. If the signature and "
-"the key contained in the record match, it proves the message is authentic "
-"and has not been altered during transport."
+"When sending an email, the Odoo email server includes a unique :abbr:`DKIM "
+"(DomainKeys Identified Mail)` signature in the headers. The recipient's "
+"server decrypts this signature using the DKIM record in the database's "
+"domain name. If the signature and the key contained in the record match, it "
+"proves the message is authentic and has not been altered during transport."
 msgstr ""
-"傳送電子郵件時,Odoo 電子郵件伺服器會在標頭中包含一個唯一的 DKIM 簽章。收件者"
-"的伺服器使用資料庫網域名稱中的 DKIM 記錄來解密此簽章。如果簽章與記錄中包含的"
-"金鑰相符,則證明訊息是真實的,並且在傳輸過程中未被更改。"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:75
+#: ../../content/applications/general/email_communication/email_domain.rst:72
 msgid ""
 "Enabling DKIM is **required** when sending emails **from a custom domain** "
 "using the Odoo email server."
 msgstr ""
 "使用 Odoo 電子郵件伺服器**從自訂網域**傳送電子郵件時，**必須**啟用 DKIM。"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:79
-msgid "Add a CNAME record for domain"
-msgstr "為網域加入 CNAME 記錄"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:81
+#: ../../content/applications/general/email_communication/email_domain.rst:75
 msgid ""
-"To enable DKIM, add a canonical name (CNAME) record to the domain name "
-"system (DNS) zone of the domain name:"
+"To enable DKIM, add a :abbr:`CNAME (Canonical Name)` record to "
+"the :abbr:`DNS (Domain Name System)` zone of the domain name:"
 msgstr ""
-"要啟用 DKIM,請在網域名稱的網域名稱系統 (DNS) 區域中加入一個正式名稱 (CNAME) "
-"記錄:"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:89
+#: ../../content/applications/general/email_communication/email_domain.rst:83
 msgid ""
-"If the domain name is *company-name.com*, make sure to create a CNAME record "
-"where the CNAME record (key/name) is `odoo._domainkey.company-name.com`, and "
-"the canonical name (value/content) is `odoo._domainkey.odoo.com.`. For "
-"example, note the differences between each key/value in italics\\:"
+"If the domain name is `company-name.com`, make sure to create a subdomain "
+"`odoo._domainkey.company-name.com` whose canonical name is "
+"`odoo._domainkey.odoo.com.`."
 msgstr ""
-"如果網域名稱是 *company-name.com*，請確保建立一個 CNAME 記錄，其中 CNAME 記錄"
-"（鍵/名稱）為 `odoo._domainkey.company-name.com`，而規範名稱（值/內容）為 "
-"`odoo._domainkey.odoo.com.`。例如，請注意斜體中每個鍵/值之間的差異："
 
-#: ../../content/applications/general/email_communication/email_domain.rst:93
-msgid "Example CNAME record"
-msgstr "範例 CNAME 記錄"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:98
-#: ../../content/applications/general/email_communication/email_domain.rst:119
-#: ../../content/applications/general/email_communication/email_domain.rst:146
-msgid "Key"
-msgstr "鍵"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:100
-msgid "odoo.\\_domainkey"
-msgstr "odoo.\\_domainkey"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:102
-#: ../../content/applications/general/email_communication/email_domain.rst:123
-#: ../../content/applications/general/email_communication/email_domain.rst:154
-msgid "Value"
-msgstr "值"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:104
-#: ../../content/applications/general/email_communication/email_domain.rst:125
-#: ../../content/applications/general/email_communication/email_domain.rst:156
-msgid "odoo.\\_domainkey.\\ *odoo.com.* |nbsp|"
-msgstr "odoo.\\_domainkey.\\ *odoo.com.*|nbsp|"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:107
-#: ../../content/applications/general/email_communication/email_domain.rst:128
-#: ../../content/applications/general/email_communication/email_domain.rst:151
-#: ../../content/applications/general/email_communication/email_domain.rst:159
-msgid "OR"
-msgstr "或"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:108
-#: ../../content/applications/general/email_communication/email_domain.rst:129
-#: ../../content/applications/general/email_communication/email_domain.rst:160
-msgid "odoo.\\_domainkey.\\ *dbname*\\ .odoo.com."
-msgstr "odoo.\\_domainkey.\\ *dbname*\\ .odoo.com."
-
-#: ../../content/applications/general/email_communication/email_domain.rst:109
-#: ../../content/applications/general/email_communication/email_domain.rst:130
-#: ../../content/applications/general/email_communication/email_domain.rst:161
-msgid "... where *dbname* is the name of the Odoo database."
-msgstr "... 其中 *dbname* 是 Odoo 資料庫的名稱。"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:111
-msgid ""
-"On most DNS platforms, the DNS provider adds the custom domain (e.g., "
-"*company-name.com*) by default. In this case, the key looks different while "
-"the value remains the same:"
-msgstr ""
-"在大多數 DNS 平台上，DNS 提供商預設會加入自訂網域（例如 *company-"
-"name.com*）。在這種情況下，鍵看起來不同，但值保持不變："
-
-#: ../../content/applications/general/email_communication/email_domain.rst:114
-msgid "Example CNAME record with custom domain"
-msgstr "包含自訂網域的範例 CNAME 記錄"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:121
-msgid "odoo.\\_domainkey.\\ *company-name.com* |nbsp|"
-msgstr "odoo.\\_domainkey.\\ *company-name.com*|nbsp|"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:122
-#: ../../content/applications/general/email_communication/email_domain.rst:153
-msgid "... where *company-name.com* is the custom domain."
-msgstr "... 其中 *company-name.com* 是自訂網域。"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:133
-msgid ""
-"If the DNS provider does not add the custom domain by default, make sure to "
-"include it."
-msgstr "如果 DNS 提供商預設不加入自訂網域，請確保包含它。"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:136
-msgid "Add a CNAME record for subdomain"
-msgstr "為子網域加入 CNAME 記錄"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:138
-msgid ""
-"If there's a \\ *subdomain* (e.g., *marketing* in *marketing*\\ .company-"
-"name.com), add a CNAME record to include it for compliance as well:"
-msgstr ""
-"如果有\\ *子網域*（例如 *marketing*\\ .company-name.com 中的 *marketing*），"
-"請加入 CNAME 記錄以包含它以符合規範："
-
-#: ../../content/applications/general/email_communication/email_domain.rst:141
-msgid "Example CNAME record with subdomain"
-msgstr "包含子網域的範例 CNAME 記錄"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:148
-msgid "odoo.\\_domainkey.\\ *marketing* |nbsp|"
-msgstr "odoo.\\_domainkey.\\ *marketing*|nbsp|"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:149
-msgid "... where *marketing* is the subdomain."
-msgstr "... 其中 *marketing* 是子網域。"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:152
-msgid "odoo.\\_domainkey.marketing.\\ *company-name.com*\\ |nbsp|"
-msgstr "odoo.\\_domainkey.marketing.\\ *company-name.com*\\ |nbsp|"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:164
-msgid "See DNS provider documentation"
-msgstr "參閱 DNS 供應商使用說明"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:166
+#: ../../content/applications/general/email_communication/email_domain.rst:86
 msgid ""
 "The way to create or modify a CNAME record depends on the provider hosting "
 "the DNS zone of the domain name. The :ref:`most common providers <email-"
@@ -3547,22 +3429,19 @@ msgstr ""
 "\\ :ref:`最常見的提供者 <email-domain-providers-documentation>`\\ 及其使用說"
 "明。"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:170
+#: ../../content/applications/general/email_communication/email_domain.rst:90
 msgid ""
 "Check if the DKIM record is valid using a tool like `MXToolbox DKIM Record "
 "Lookup <https://mxtoolbox.com/dkim.aspx>`_. Enter `example.com:odoo` in the "
-"DKIM lookup tool, specifying that the selector being tested is *odoo* for "
-"the custom domain *example.com*."
+"DKIM lookup tool, specifying that the selector being tested is `odoo` for "
+"the custom domain `example.com`."
 msgstr ""
-"使用 `MXToolbox DKIM Record Lookup <https://mxtoolbox.com/dkim.aspx>`_ 等工具"
-"檢查 DKIM 記錄是否有效。在 DKIM 查詢工具中輸入 `example.com:odoo`，指定測試的"
-"選擇器為自訂網域 *example.com* 的 *odoo*。"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:177
+#: ../../content/applications/general/email_communication/email_domain.rst:97
 msgid "DMARC (Domain-based Message Authentication, Reporting and Conformance)"
 msgstr "DMARC（基於網域的訊息驗證、報告與一致性）"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:179
+#: ../../content/applications/general/email_communication/email_domain.rst:99
 msgid ""
 "The :abbr:`DMARC (Domain-based Message Authentication, Reporting, & "
 "Conformance)` record is a protocol that unifies :abbr:`SPF (Sender Policy "
@@ -3575,7 +3454,7 @@ msgstr ""
 "協定。網域名稱的 DMARC 記錄中包含的指示會告訴目的地伺服器如何處理 SPF 和/或 "
 "DKIM 檢查失敗的傳入電子郵件。"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:185
+#: ../../content/applications/general/email_communication/email_domain.rst:105
 msgid ""
 "The aim of this documentation is to help **understand the impact DMARC has "
 "on the deliverability of emails**, rather than give precise instructions for "
@@ -3586,23 +3465,23 @@ msgstr ""
 "立 DMARC 記錄的精確指示。請參閱\\ `DMARC.org <https://dmarc.org/>`_\\ 等資源"
 "來設定 DMARC 記錄。"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:189
+#: ../../content/applications/general/email_communication/email_domain.rst:109
 msgid "There are three DMARC policies:"
 msgstr "有三種 DMARC 政策："
 
-#: ../../content/applications/general/email_communication/email_domain.rst:191
+#: ../../content/applications/general/email_communication/email_domain.rst:111
 msgid "`p=none`"
 msgstr "`p=none`"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:192
+#: ../../content/applications/general/email_communication/email_domain.rst:112
 msgid "`p=quarantine`"
 msgstr "`p=quarantine`"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:193
+#: ../../content/applications/general/email_communication/email_domain.rst:113
 msgid "`p=reject`"
 msgstr "`p=reject`"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:195
+#: ../../content/applications/general/email_communication/email_domain.rst:115
 msgid ""
 "`p=quarantine` and `p=reject` instruct the server that receives an email to "
 "quarantine that email or ignore it if the SPF or DKIM check fails."
@@ -3610,7 +3489,7 @@ msgstr ""
 "`p=quarantine` 和 `p=reject` 會指示接收電子郵件的伺服器，如果 SPF 或 DKIM 檢"
 "查失敗，則將該電子郵件隔離或忽略它。"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:199
+#: ../../content/applications/general/email_communication/email_domain.rst:119
 msgid ""
 "**For the DMARC to pass, the DKIM or SPF check needs to pass** and the "
 "domains must be in alignment. If the hosting type is Odoo Online, DKIM "
@@ -3619,7 +3498,7 @@ msgstr ""
 "**要通過 DMARC，DKIM 或 SPF 檢查需要通過**，且網域必須一致。如果託管類型是 "
 "Odoo 雲端版，則需要在傳送網域上配置 DKIM 才能通過 DMARC。"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:203
+#: ../../content/applications/general/email_communication/email_domain.rst:123
 msgid ""
 "Passing DMARC generally means that the email will be successfully delivered. "
 "However, it's important to note that **other factors like spam filters can "
@@ -3628,14 +3507,14 @@ msgstr ""
 "通過 DMARC 通常意味著電子郵件將成功傳遞。然而，重要的是要注意**其他因素如垃圾"
 "郵件過濾器仍可能拒絕或隔離訊息**。"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:206
+#: ../../content/applications/general/email_communication/email_domain.rst:126
 msgid ""
 "`p=none` is used for the domain owner to receive reports about entities "
 "using their domain. It should not impact the deliverability."
 msgstr ""
 "`p=none` 用於網域擁有者接收有關使用其網域的實體的報告。它不應影響傳遞能力。"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:210
+#: ../../content/applications/general/email_communication/email_domain.rst:130
 msgid ""
 ":literal:`_dmarc IN TXT “v=DMARC1; p=none; "
 "rua=mailto:postmaster@example.com”` means that aggregate DMARC reports will "
@@ -3645,11 +3524,11 @@ msgstr ""
 "rua=mailto:postmaster@example.com”` 表示 DMARC 彙總報告將傳送至 "
 "`postmaster\\@example.com`。"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:217
+#: ../../content/applications/general/email_communication/email_domain.rst:137
 msgid "SPF, DKIM and DMARC documentation of common providers"
 msgstr "常見供應商的 SPF、DKIM 和 DMARC 使用說明"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:219
+#: ../../content/applications/general/email_communication/email_domain.rst:139
 msgid ""
 "`OVH DNS <https://docs.ovh.com/us/en/domains/"
 "web_hosting_how_to_edit_my_dns_zone/>`_"
@@ -3657,21 +3536,19 @@ msgstr ""
 "`OVH DNS <https://docs.ovh.com/us/en/domains/"
 "web_hosting_how_to_edit_my_dns_zone/>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:220
+#: ../../content/applications/general/email_communication/email_domain.rst:140
 msgid ""
 "`GoDaddy TXT record <https://www.godaddy.com/help/add-a-txt-record-19232>`_"
 msgstr ""
 "`GoDaddy TXT 記錄 <https://www.godaddy.com/help/add-a-txt-record-19232>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:221
+#: ../../content/applications/general/email_communication/email_domain.rst:141
 msgid ""
-"`GoDaddy SPF, DKIM, or DMARC records <https://www.godaddy.com/help/set-up-"
-"spf-dkim-or-dmarc-records-for-my-hosting-email-40810>`_"
+"`GoDaddy CNAME record <https://www.godaddy.com/help/add-a-cname-"
+"record-19236>`_"
 msgstr ""
-"`GoDaddy SPF、DKIM 或 DMARC 記錄<https://www.godaddy.com/help/set-up-spf-"
-"dkim-or-dmarc-records-for-my-hosting-email-40810>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:223
+#: ../../content/applications/general/email_communication/email_domain.rst:142
 msgid ""
 "`NameCheap <https://www.namecheap.com/support/knowledgebase/article.aspx/"
 "317/2237/how-do-i-add-txtspfdkimdmarc-records-for-my-domain/>`_"
@@ -3679,7 +3556,7 @@ msgstr ""
 "`NameCheap <https://www.namecheap.com/support/knowledgebase/article.aspx/"
 "317/2237/how-do-i-add-txtspfdkimdmarc-records-for-my-domain/>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:225
+#: ../../content/applications/general/email_communication/email_domain.rst:143
 msgid ""
 "`CloudFlare DNS <https://support.cloudflare.com/hc/en-us/articles/"
 "360019093151>`_"
@@ -3687,7 +3564,7 @@ msgstr ""
 "`CloudFlare DNS <https://support.cloudflare.com/hc/en-us/articles/"
 "360019093151>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:226
+#: ../../content/applications/general/email_communication/email_domain.rst:144
 msgid ""
 "`Squarespace DNS records <https://support.squarespace.com/hc/en-us/articles/"
 "360002101888-Adding-custom-DNS-records-to-your-Squarespace-managed-domain>`_"
@@ -3695,7 +3572,7 @@ msgstr ""
 "`Squarespace DNS 記錄 <https://support.squarespace.com/hc/en-us/articles/"
 "360002101888-Adding-custom-DNS-records-to-your-Squarespace-managed-domain>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:228
+#: ../../content/applications/general/email_communication/email_domain.rst:145
 msgid ""
 "`Azure DNS <https://docs.microsoft.com/en-us/azure/dns/dns-getstarted-"
 "portal>`_"
@@ -3703,7 +3580,7 @@ msgstr ""
 "`Azure DNS <https://docs.microsoft.com/en-us/azure/dns/dns-getstarted-"
 "portal>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:230
+#: ../../content/applications/general/email_communication/email_domain.rst:147
 msgid ""
 "To fully test the configuration, use the `Mail-Tester <https://www.mail-"
 "tester.com/>`_ tool, which gives a full overview of the content and "
@@ -3714,21 +3591,13 @@ msgstr ""
 "可在一封傳送的電子郵件中提供內容和配置的完整概覽。Mail-Tester 也可用於為其他"
 "較不知名的供應商配置記錄。"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:235
+#: ../../content/applications/general/email_communication/email_domain.rst:152
 msgid ""
 "`Using Mail-Tester to set SPF Records for specific carriers <https://"
 "www.mail-tester.com/spf/>`_"
 msgstr ""
 "`使用 Mail-Tester 為特定供應商設定 SPF 記錄 <https://www.mail-tester.com/spf/"
 ">`_"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:237
-msgid ""
-"`Magic Sheet - SPF, DKIM and DMARC configuration [PDF] <https://"
-"drive.google.com/drive/folders/1TJIXQpdR0VN8UQx5JP7q7vFuAr3e1Q3r>`_"
-msgstr ""
-"`精妙筆記 - SPF、DKIM 和 DMARC 配置 [PDF] <https://drive.google.com/drive/"
-"folders/1TJIXQpdR0VN8UQx5JP7q7vFuAr3e1Q3r>`_"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:3
 msgid "Manage inbound messages"
@@ -15038,6 +14907,134 @@ msgid ""
 msgstr ""
 "如果客戶想要管理付款選項，請瀏覽到右側選單中的\\ :guilabel:`管理付款方式"
 "`\\ 。然後加入新的付款資訊，並選擇\\ :guilabel:`加入新卡片`\\ 。"
+
+#~ msgid ""
+#~ "When sending an email, the Odoo email server includes a unique DKIM "
+#~ "signature in the headers. The recipient's server decrypts this signature "
+#~ "using the DKIM record in the database's domain name. If the signature and "
+#~ "the key contained in the record match, it proves the message is authentic "
+#~ "and has not been altered during transport."
+#~ msgstr ""
+#~ "傳送電子郵件時,Odoo 電子郵件伺服器會在標頭中包含一個唯一的 DKIM 簽章。收件"
+#~ "者的伺服器使用資料庫網域名稱中的 DKIM 記錄來解密此簽章。如果簽章與記錄中包"
+#~ "含的金鑰相符,則證明訊息是真實的,並且在傳輸過程中未被更改。"
+
+#~ msgid "Add a CNAME record for domain"
+#~ msgstr "為網域加入 CNAME 記錄"
+
+#~ msgid ""
+#~ "To enable DKIM, add a canonical name (CNAME) record to the domain name "
+#~ "system (DNS) zone of the domain name:"
+#~ msgstr ""
+#~ "要啟用 DKIM,請在網域名稱的網域名稱系統 (DNS) 區域中加入一個正式名稱 "
+#~ "(CNAME) 記錄:"
+
+#~ msgid ""
+#~ "If the domain name is *company-name.com*, make sure to create a CNAME "
+#~ "record where the CNAME record (key/name) is `odoo._domainkey.company-"
+#~ "name.com`, and the canonical name (value/content) is "
+#~ "`odoo._domainkey.odoo.com.`. For example, note the differences between "
+#~ "each key/value in italics\\:"
+#~ msgstr ""
+#~ "如果網域名稱是 *company-name.com*，請確保建立一個 CNAME 記錄，其中 CNAME "
+#~ "記錄（鍵/名稱）為 `odoo._domainkey.company-name.com`，而規範名稱（值/內"
+#~ "容）為 `odoo._domainkey.odoo.com.`。例如，請注意斜體中每個鍵/值之間的差"
+#~ "異："
+
+#~ msgid "Example CNAME record"
+#~ msgstr "範例 CNAME 記錄"
+
+#~ msgid "Key"
+#~ msgstr "鍵"
+
+#~ msgid "odoo.\\_domainkey"
+#~ msgstr "odoo.\\_domainkey"
+
+#~ msgid "Value"
+#~ msgstr "值"
+
+#~ msgid "odoo.\\_domainkey.\\ *odoo.com.* |nbsp|"
+#~ msgstr "odoo.\\_domainkey.\\ *odoo.com.*|nbsp|"
+
+#~ msgid "OR"
+#~ msgstr "或"
+
+#~ msgid "odoo.\\_domainkey.\\ *dbname*\\ .odoo.com."
+#~ msgstr "odoo.\\_domainkey.\\ *dbname*\\ .odoo.com."
+
+#~ msgid "... where *dbname* is the name of the Odoo database."
+#~ msgstr "... 其中 *dbname* 是 Odoo 資料庫的名稱。"
+
+#~ msgid ""
+#~ "On most DNS platforms, the DNS provider adds the custom domain (e.g., "
+#~ "*company-name.com*) by default. In this case, the key looks different "
+#~ "while the value remains the same:"
+#~ msgstr ""
+#~ "在大多數 DNS 平台上，DNS 提供商預設會加入自訂網域（例如 *company-"
+#~ "name.com*）。在這種情況下，鍵看起來不同，但值保持不變："
+
+#~ msgid "Example CNAME record with custom domain"
+#~ msgstr "包含自訂網域的範例 CNAME 記錄"
+
+#~ msgid "odoo.\\_domainkey.\\ *company-name.com* |nbsp|"
+#~ msgstr "odoo.\\_domainkey.\\ *company-name.com*|nbsp|"
+
+#~ msgid "... where *company-name.com* is the custom domain."
+#~ msgstr "... 其中 *company-name.com* 是自訂網域。"
+
+#~ msgid ""
+#~ "If the DNS provider does not add the custom domain by default, make sure "
+#~ "to include it."
+#~ msgstr "如果 DNS 提供商預設不加入自訂網域，請確保包含它。"
+
+#~ msgid "Add a CNAME record for subdomain"
+#~ msgstr "為子網域加入 CNAME 記錄"
+
+#~ msgid ""
+#~ "If there's a \\ *subdomain* (e.g., *marketing* in *marketing*\\ .company-"
+#~ "name.com), add a CNAME record to include it for compliance as well:"
+#~ msgstr ""
+#~ "如果有\\ *子網域*（例如 *marketing*\\ .company-name.com 中的 "
+#~ "*marketing*），請加入 CNAME 記錄以包含它以符合規範："
+
+#~ msgid "Example CNAME record with subdomain"
+#~ msgstr "包含子網域的範例 CNAME 記錄"
+
+#~ msgid "odoo.\\_domainkey.\\ *marketing* |nbsp|"
+#~ msgstr "odoo.\\_domainkey.\\ *marketing*|nbsp|"
+
+#~ msgid "... where *marketing* is the subdomain."
+#~ msgstr "... 其中 *marketing* 是子網域。"
+
+#~ msgid "odoo.\\_domainkey.marketing.\\ *company-name.com*\\ |nbsp|"
+#~ msgstr "odoo.\\_domainkey.marketing.\\ *company-name.com*\\ |nbsp|"
+
+#~ msgid "See DNS provider documentation"
+#~ msgstr "參閱 DNS 供應商使用說明"
+
+#~ msgid ""
+#~ "Check if the DKIM record is valid using a tool like `MXToolbox DKIM "
+#~ "Record Lookup <https://mxtoolbox.com/dkim.aspx>`_. Enter "
+#~ "`example.com:odoo` in the DKIM lookup tool, specifying that the selector "
+#~ "being tested is *odoo* for the custom domain *example.com*."
+#~ msgstr ""
+#~ "使用 `MXToolbox DKIM Record Lookup <https://mxtoolbox.com/dkim.aspx>`_ 等"
+#~ "工具檢查 DKIM 記錄是否有效。在 DKIM 查詢工具中輸入 `example.com:odoo`，指"
+#~ "定測試的選擇器為自訂網域 *example.com* 的 *odoo*。"
+
+#~ msgid ""
+#~ "`GoDaddy SPF, DKIM, or DMARC records <https://www.godaddy.com/help/set-up-"
+#~ "spf-dkim-or-dmarc-records-for-my-hosting-email-40810>`_"
+#~ msgstr ""
+#~ "`GoDaddy SPF、DKIM 或 DMARC 記錄<https://www.godaddy.com/help/set-up-spf-"
+#~ "dkim-or-dmarc-records-for-my-hosting-email-40810>`_"
+
+#~ msgid ""
+#~ "`Magic Sheet - SPF, DKIM and DMARC configuration [PDF] <https://"
+#~ "drive.google.com/drive/folders/1TJIXQpdR0VN8UQx5JP7q7vFuAr3e1Q3r>`_"
+#~ msgstr ""
+#~ "`精妙筆記 - SPF、DKIM 和 DMARC 配置 [PDF] <https://drive.google.com/drive/"
+#~ "folders/1TJIXQpdR0VN8UQx5JP7q7vFuAr3e1Q3r>`_"
 
 #~ msgid ""
 #~ "**Never** deactivate the main/administrator user (admin). Making changes "

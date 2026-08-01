@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-24 17:31+0000\n"
+"POT-Creation-Date: 2026-07-31 17:31+0000\n"
 "PO-Revision-Date: 2026-07-06 12:15+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -3516,11 +3516,11 @@ msgstr ""
 "potrdite` račun. Račun naj bi bil pripravljen za prejemanje e-pošte v "
 "podatkovno bazo Odoo."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:6
+#: ../../content/applications/general/email_communication/email_domain.rst:3
 msgid "Configure DNS records to send emails in Odoo"
 msgstr "Konfiguracija DNS zapisov za pošiljanje e-pošte v Odoo"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:8
+#: ../../content/applications/general/email_communication/email_domain.rst:5
 msgid ""
 "This documentation presents three complementary authentication protocols "
 "(SPF, DKIM, and DMARC) used to prove the legitimacy of an email sender. Not "
@@ -3532,7 +3532,7 @@ msgstr ""
 "pošte. Neskladnost s temi protokoli bo močno zmanjšala možnosti, da vaša e-"
 "pošta doseže svoj cilj."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:12
+#: ../../content/applications/general/email_communication/email_domain.rst:9
 msgid ""
 "**Odoo Online** and **Odoo.sh** databases using the **default Odoo subdomain "
 "address** (e.g., `\\@company-name.odoo.com`) are pre-configured to **send "
@@ -3543,7 +3543,7 @@ msgstr ""
 "konfigurirane za **pošiljanje overjene e-pošte** v skladu s protokoli SPF, "
 "DKIM in DMARC."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:16
+#: ../../content/applications/general/email_communication/email_domain.rst:13
 msgid ""
 "If choosing to use a **custom domain** instead, **configuring SPF and DKIM "
 "records correctly is essential** to prevent emails from being quarantined as "
@@ -3554,7 +3554,7 @@ msgstr ""
 "poštna sporočila označena kot neželena pošta ali ne bi bila dostavljena "
 "prejemnikom."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:19
+#: ../../content/applications/general/email_communication/email_domain.rst:16
 msgid ""
 "If using :ref:`the default Odoo email server to send emails from a custom "
 "domain <email-outbound-custom-domain-odoo-server>`, the SPF and DKIM records "
@@ -3568,7 +3568,7 @@ msgstr ""
 "odhodni e-poštni strežnik, morate uporabiti zapise SPF in DKIM, specifične "
 "za to e-poštno storitev in lastno domeno."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:25
+#: ../../content/applications/general/email_communication/email_domain.rst:22
 msgid ""
 "Email service providers apply different rules to incoming emails. An email "
 "may be classified as spam even if it passes the SPF and DKIM checks."
@@ -3577,11 +3577,11 @@ msgstr ""
 "pošto. E-poštno sporočilo je lahko označeno kot neželena pošta, tudi če "
 "prestane preverjanje SPF in DKIM."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:31
+#: ../../content/applications/general/email_communication/email_domain.rst:28
 msgid "SPF (Sender Policy Framework)"
 msgstr "SPF (Sender Policy Framework)"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:33
+#: ../../content/applications/general/email_communication/email_domain.rst:30
 msgid ""
 "The Sender Policy Framework (SPF) protocol allows the owner of a domain name "
 "to specify which servers are allowed to send emails from that domain. When a "
@@ -3595,7 +3595,7 @@ msgstr ""
 "seznamu dovoljenih naslovov IP v skladu z :abbr:`SPF (Sender Policy "
 "Framework)` zapisom pošiljatelja."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:38
+#: ../../content/applications/general/email_communication/email_domain.rst:35
 msgid ""
 "In Odoo, the **SPF test is performed on the bounce address** defined under "
 "the :guilabel:`Alias Domain` field found under the "
@@ -3608,7 +3608,7 @@ msgstr ""
 "podatkov. Če kot :guilabel:`Vzdevno domeno` uporabljate lastno domeno, jo "
 "morate konfigurirati tako, da ustreza zahtevam SPF."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:42
+#: ../../content/applications/general/email_communication/email_domain.rst:39
 msgid ""
 "The SPF policy of a domain is set using a TXT record. The way to create or "
 "modify this record depends on the provider hosting the :abbr:`DNS (Domain "
@@ -3618,13 +3618,13 @@ msgstr ""
 "spreminjanja tega zapisa je odvisen od ponudnika, ki gostuje :abbr:`DNS "
 "(Domain Name System)` cono imena domene."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:45
+#: ../../content/applications/general/email_communication/email_domain.rst:42
 msgid ""
 "If the domain name does not yet have an SPF record, create one using the "
 "following input:"
 msgstr "Če domena še nima zapisa SPF, ga ustvarite z naslednjim vnosom:"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:51
+#: ../../content/applications/general/email_communication/email_domain.rst:48
 msgid ""
 "If the domain name **already has an SPF record, the record must be "
 "updated**. Do not create a new one, as a domain must have only one SPF "
@@ -3633,7 +3633,7 @@ msgstr ""
 "Če domena **že ima zapis SPF, morate zapis posodobiti**. Ne ustvarite novega "
 "zapisa, saj mora imeti domena samo en zapis SPF."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:55
+#: ../../content/applications/general/email_communication/email_domain.rst:52
 msgid ""
 "If the TXT record is `v=spf1 include:_spf.google.com ~all`, edit it to add "
 "`include:_spf.odoo.com`: `v=spf1 include:_spf.odoo.com "
@@ -3643,7 +3643,7 @@ msgstr ""
 "`include:_spf.odoo.com`: `v=spf1 include:_spf.odoo.com "
 "include:_spf.google.com ~all`"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:58
+#: ../../content/applications/general/email_communication/email_domain.rst:55
 msgid ""
 "Check the SPF record using a tool like `MXToolbox SPF Record Check <https://"
 "mxtoolbox.com/spf.aspx>`_. The process to create or modify an SPF record "
@@ -3657,11 +3657,11 @@ msgstr ""
 "domene. :ref:`Najpogostejši ponudniki <email-domain-providers-"
 "documentation>` in njihova dokumentacija so navedeni spodaj."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:66
+#: ../../content/applications/general/email_communication/email_domain.rst:63
 msgid "DKIM (DomainKeys Identified Mail)"
 msgstr "DKIM (DomainKeys Identified Mail)"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:68
+#: ../../content/applications/general/email_communication/email_domain.rst:65
 msgid ""
 "The DomainKeys Identified Mail (DKIM) allows a user to authenticate emails "
 "with a digital signature."
@@ -3669,21 +3669,16 @@ msgstr ""
 "DomainKeys Identified Mail (DKIM) uporabniku omogoča overjanje e-pošte z "
 "digitalnim podpisom."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:70
+#: ../../content/applications/general/email_communication/email_domain.rst:67
 msgid ""
-"When sending an email, the Odoo email server includes a unique DKIM "
-"signature in the headers. The recipient's server decrypts this signature "
-"using the DKIM record in the database's domain name. If the signature and "
-"the key contained in the record match, it proves the message is authentic "
-"and has not been altered during transport."
+"When sending an email, the Odoo email server includes a unique :abbr:`DKIM "
+"(DomainKeys Identified Mail)` signature in the headers. The recipient's "
+"server decrypts this signature using the DKIM record in the database's "
+"domain name. If the signature and the key contained in the record match, it "
+"proves the message is authentic and has not been altered during transport."
 msgstr ""
-"Ko pošilja e-poštno sporočilo, strežnik e-pošte Odoo vključi edinstven "
-"podpis DKIM v glave. Strežnik prejemnika dešifrira ta podpis s pomočjo "
-"zapisa DKIM v domenskem imenu zbirke podatkov. Če se podpis in ključ v "
-"zapisu ujemata, to dokazuje, da je sporočilo pristno in ni bilo spremenjeno "
-"med prenosom."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:75
+#: ../../content/applications/general/email_communication/email_domain.rst:72
 msgid ""
 "Enabling DKIM is **required** when sending emails **from a custom domain** "
 "using the Odoo email server."
@@ -3691,137 +3686,20 @@ msgstr ""
 "Omogočanje DKIM je **obvezno** pri pošiljanju e-pošte **iz lastne domene** "
 "prek e-poštnega strežnika Odoo."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:79
-msgid "Add a CNAME record for domain"
-msgstr "Dodajte zapis CNAME za domeno"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:81
+#: ../../content/applications/general/email_communication/email_domain.rst:75
 msgid ""
-"To enable DKIM, add a canonical name (CNAME) record to the domain name "
-"system (DNS) zone of the domain name:"
+"To enable DKIM, add a :abbr:`CNAME (Canonical Name)` record to "
+"the :abbr:`DNS (Domain Name System)` zone of the domain name:"
 msgstr ""
-"Za omogočanje DKIM dodajte kanonično ime (CNAME) zapisa v sistem domenskih "
-"imen (DNS) cono domenskega imena:"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:89
+#: ../../content/applications/general/email_communication/email_domain.rst:83
 msgid ""
-"If the domain name is *company-name.com*, make sure to create a CNAME record "
-"where the CNAME record (key/name) is `odoo._domainkey.company-name.com`, and "
-"the canonical name (value/content) is `odoo._domainkey.odoo.com.`. For "
-"example, note the differences between each key/value in italics\\:"
+"If the domain name is `company-name.com`, make sure to create a subdomain "
+"`odoo._domainkey.company-name.com` whose canonical name is "
+"`odoo._domainkey.odoo.com.`."
 msgstr ""
-"Če je domensko ime *company-name.com*, se prepričajte, da ustvarite zapis "
-"CNAME, kjer je zapis CNAME (ključ/ime) `odoo._domainkey.company-name.com`, "
-"kanonično ime (vrednost/vsebina) pa `odoo._domainkey.odoo.com.`. Na primer, "
-"upoštevajte razlike med posameznim ključem/vrednostjo v ležečem tisku:"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:93
-msgid "Example CNAME record"
-msgstr "Primer zapisa CNAME"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:98
-#: ../../content/applications/general/email_communication/email_domain.rst:119
-#: ../../content/applications/general/email_communication/email_domain.rst:146
-msgid "Key"
-msgstr "Ključ"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:100
-msgid "odoo.\\_domainkey"
-msgstr "odoo.\\_domainkey"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:102
-#: ../../content/applications/general/email_communication/email_domain.rst:123
-#: ../../content/applications/general/email_communication/email_domain.rst:154
-msgid "Value"
-msgstr "Vrednost"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:104
-#: ../../content/applications/general/email_communication/email_domain.rst:125
-#: ../../content/applications/general/email_communication/email_domain.rst:156
-msgid "odoo.\\_domainkey.\\ *odoo.com.* |nbsp|"
-msgstr "odoo.\\_domainkey.\\ *odoo.com.* |nbsp|"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:107
-#: ../../content/applications/general/email_communication/email_domain.rst:128
-#: ../../content/applications/general/email_communication/email_domain.rst:151
-#: ../../content/applications/general/email_communication/email_domain.rst:159
-msgid "OR"
-msgstr "ALI"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:108
-#: ../../content/applications/general/email_communication/email_domain.rst:129
-#: ../../content/applications/general/email_communication/email_domain.rst:160
-msgid "odoo.\\_domainkey.\\ *dbname*\\ .odoo.com."
-msgstr "odoo.\\_domainkey.\\ *dbname*\\ .odoo.com."
-
-#: ../../content/applications/general/email_communication/email_domain.rst:109
-#: ../../content/applications/general/email_communication/email_domain.rst:130
-#: ../../content/applications/general/email_communication/email_domain.rst:161
-msgid "... where *dbname* is the name of the Odoo database."
-msgstr "... kjer je *dbname* ime zbirke podatkov Odoo."
-
-#: ../../content/applications/general/email_communication/email_domain.rst:111
-msgid ""
-"On most DNS platforms, the DNS provider adds the custom domain (e.g., "
-"*company-name.com*) by default. In this case, the key looks different while "
-"the value remains the same:"
-msgstr ""
-"Na večini platform DNS ponudnik DNS privzeto doda domeno po meri (npr. "
-"*company-name.com*). V tem primeru je videti ključ drugače, medtem ko "
-"vrednost ostane enaka:"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:114
-msgid "Example CNAME record with custom domain"
-msgstr "Primer zapisa CNAME z domeno po meri"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:121
-msgid "odoo.\\_domainkey.\\ *company-name.com* |nbsp|"
-msgstr "odoo.\\_domainkey.\\ *company-name.com* |nbsp|"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:122
-#: ../../content/applications/general/email_communication/email_domain.rst:153
-msgid "... where *company-name.com* is the custom domain."
-msgstr "... kjer je *company-name.com* domena po meri."
-
-#: ../../content/applications/general/email_communication/email_domain.rst:133
-msgid ""
-"If the DNS provider does not add the custom domain by default, make sure to "
-"include it."
-msgstr "Če ponudnik DNS domene po meri ne doda samodejno, jo poskrbite dodati."
-
-#: ../../content/applications/general/email_communication/email_domain.rst:136
-msgid "Add a CNAME record for subdomain"
-msgstr "Dodajte zapis CNAME za poddomena"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:138
-msgid ""
-"If there's a \\ *subdomain* (e.g., *marketing* in *marketing*\\ .company-"
-"name.com), add a CNAME record to include it for compliance as well:"
-msgstr ""
-"Če obstaja \\ *poddomena* (npr. *marketing* v *marketing*\\ .company-"
-"name.com), dodajte zapis CNAME, da jo vključite tudi za skladnost:"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:141
-msgid "Example CNAME record with subdomain"
-msgstr "Primer zapisa CNAME s poddomena"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:148
-msgid "odoo.\\_domainkey.\\ *marketing* |nbsp|"
-msgstr "odoo.\\_domainkey.\\ *marketing* |nbsp|"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:149
-msgid "... where *marketing* is the subdomain."
-msgstr "... kjer je *marketing* poddomena."
-
-#: ../../content/applications/general/email_communication/email_domain.rst:152
-msgid "odoo.\\_domainkey.marketing.\\ *company-name.com*\\ |nbsp|"
-msgstr "odoo.\\_domainkey.marketing.\\ *company-name.com*\\ |nbsp|"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:164
-msgid "See DNS provider documentation"
-msgstr "Glejte dokumentacijo ponudnika DNS"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:166
+#: ../../content/applications/general/email_communication/email_domain.rst:86
 msgid ""
 "The way to create or modify a CNAME record depends on the provider hosting "
 "the DNS zone of the domain name. The :ref:`most common providers <email-"
@@ -3831,23 +3709,19 @@ msgstr ""
 "gostuje cono DNS imena domene. :ref:`Najpogostejši ponudniki <email-domain-"
 "providers-documentation>` in njihova dokumentacija so navedeni spodaj."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:170
+#: ../../content/applications/general/email_communication/email_domain.rst:90
 msgid ""
 "Check if the DKIM record is valid using a tool like `MXToolbox DKIM Record "
 "Lookup <https://mxtoolbox.com/dkim.aspx>`_. Enter `example.com:odoo` in the "
-"DKIM lookup tool, specifying that the selector being tested is *odoo* for "
-"the custom domain *example.com*."
+"DKIM lookup tool, specifying that the selector being tested is `odoo` for "
+"the custom domain `example.com`."
 msgstr ""
-"Preverite, ali je zapis DKIM veljaven z orodjem, kot je `MXToolbox DKIM "
-"Record Lookup <https://mxtoolbox.com/dkim.aspx>`_. V orodje za iskanje DKIM "
-"vnesite `example.com:odoo`, pri čemer določite, da je izbirnik, ki se "
-"preizkuša, *odoo* za domeno po meri *example.com*."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:177
+#: ../../content/applications/general/email_communication/email_domain.rst:97
 msgid "DMARC (Domain-based Message Authentication, Reporting and Conformance)"
 msgstr "DMARC (Domain-based Message Authentication, Reporting and Conformance)"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:179
+#: ../../content/applications/general/email_communication/email_domain.rst:99
 msgid ""
 "The :abbr:`DMARC (Domain-based Message Authentication, Reporting, & "
 "Conformance)` record is a protocol that unifies :abbr:`SPF (Sender Policy "
@@ -3861,7 +3735,7 @@ msgstr ""
 "domene povedo ciljnemu strežniku, kaj storiti s prejeto e-pošto, ki ne "
 "prestane preverjanja SPF in/ali DKIM."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:185
+#: ../../content/applications/general/email_communication/email_domain.rst:105
 msgid ""
 "The aim of this documentation is to help **understand the impact DMARC has "
 "on the deliverability of emails**, rather than give precise instructions for "
@@ -3873,23 +3747,23 @@ msgstr ""
 "nastavitev zapisa DMARC se sklicujte na vir, kot je `DMARC.org <https://"
 "dmarc.org/>`_."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:189
+#: ../../content/applications/general/email_communication/email_domain.rst:109
 msgid "There are three DMARC policies:"
 msgstr "Obstajajo trije pravilniki DMARC:"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:191
+#: ../../content/applications/general/email_communication/email_domain.rst:111
 msgid "`p=none`"
 msgstr "`p=none`"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:192
+#: ../../content/applications/general/email_communication/email_domain.rst:112
 msgid "`p=quarantine`"
 msgstr "`p=quarantine`"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:193
+#: ../../content/applications/general/email_communication/email_domain.rst:113
 msgid "`p=reject`"
 msgstr "`p=reject`"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:195
+#: ../../content/applications/general/email_communication/email_domain.rst:115
 msgid ""
 "`p=quarantine` and `p=reject` instruct the server that receives an email to "
 "quarantine that email or ignore it if the SPF or DKIM check fails."
@@ -3897,7 +3771,7 @@ msgstr ""
 "`p=quarantine` in `p=reject` naročita strežniku, ki prejme e-pošto, naj jo "
 "da v karanteno ali prezre, če preverjanje SPF ali DKIM ne uspe."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:199
+#: ../../content/applications/general/email_communication/email_domain.rst:119
 msgid ""
 "**For the DMARC to pass, the DKIM or SPF check needs to pass** and the "
 "domains must be in alignment. If the hosting type is Odoo Online, DKIM "
@@ -3907,7 +3781,7 @@ msgstr ""
 "morajo biti usklajene. Če je vrsta gostovanja Odoo Online, je za uspešen "
 "DMARC potrebna konfiguracija DKIM na pošiljateljski domeni."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:203
+#: ../../content/applications/general/email_communication/email_domain.rst:123
 msgid ""
 "Passing DMARC generally means that the email will be successfully delivered. "
 "However, it's important to note that **other factors like spam filters can "
@@ -3917,7 +3791,7 @@ msgstr ""
 "je pomembno opozoriti, da **drugi dejavniki, kot so filtri neželene pošte, "
 "lahko sporočilo še vedno zavrnejo ali dajo v karanteno**."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:206
+#: ../../content/applications/general/email_communication/email_domain.rst:126
 msgid ""
 "`p=none` is used for the domain owner to receive reports about entities "
 "using their domain. It should not impact the deliverability."
@@ -3925,7 +3799,7 @@ msgstr ""
 "`p=none` se uporablja, da lastnik domene prejema poročila o entitetah, ki "
 "uporabljajo njegovo domeno. To ne bi smelo vplivati na dostavljanje."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:210
+#: ../../content/applications/general/email_communication/email_domain.rst:130
 msgid ""
 ":literal:`_dmarc IN TXT “v=DMARC1; p=none; "
 "rua=mailto:postmaster@example.com”` means that aggregate DMARC reports will "
@@ -3935,11 +3809,11 @@ msgstr ""
 "rua=mailto:postmaster@example.com”` pomeni, da bodo agregirana poročila "
 "DMARC poslana na `postmaster\\@example.com`."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:217
+#: ../../content/applications/general/email_communication/email_domain.rst:137
 msgid "SPF, DKIM and DMARC documentation of common providers"
 msgstr "Dokumentacija SPF, DKIM in DMARC pogostih ponudnikov"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:219
+#: ../../content/applications/general/email_communication/email_domain.rst:139
 msgid ""
 "`OVH DNS <https://docs.ovh.com/us/en/domains/"
 "web_hosting_how_to_edit_my_dns_zone/>`_"
@@ -3947,21 +3821,19 @@ msgstr ""
 "`OVH DNS <https://docs.ovh.com/us/en/domains/"
 "web_hosting_how_to_edit_my_dns_zone/>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:220
+#: ../../content/applications/general/email_communication/email_domain.rst:140
 msgid ""
 "`GoDaddy TXT record <https://www.godaddy.com/help/add-a-txt-record-19232>`_"
 msgstr ""
 "`GoDaddy TXT zapis <https://www.godaddy.com/help/add-a-txt-record-19232>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:221
+#: ../../content/applications/general/email_communication/email_domain.rst:141
 msgid ""
-"`GoDaddy SPF, DKIM, or DMARC records <https://www.godaddy.com/help/set-up-"
-"spf-dkim-or-dmarc-records-for-my-hosting-email-40810>`_"
+"`GoDaddy CNAME record <https://www.godaddy.com/help/add-a-cname-"
+"record-19236>`_"
 msgstr ""
-"`GoDaddy SPF, DKIM ali DMARC zapisi <https://www.godaddy.com/help/set-up-spf-"
-"dkim-or-dmarc-records-for-my-hosting-email-40810>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:223
+#: ../../content/applications/general/email_communication/email_domain.rst:142
 msgid ""
 "`NameCheap <https://www.namecheap.com/support/knowledgebase/article.aspx/"
 "317/2237/how-do-i-add-txtspfdkimdmarc-records-for-my-domain/>`_"
@@ -3969,7 +3841,7 @@ msgstr ""
 "`NameCheap <https://www.namecheap.com/support/knowledgebase/article.aspx/"
 "317/2237/how-do-i-add-txtspfdkimdmarc-records-for-my-domain/>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:225
+#: ../../content/applications/general/email_communication/email_domain.rst:143
 msgid ""
 "`CloudFlare DNS <https://support.cloudflare.com/hc/en-us/articles/"
 "360019093151>`_"
@@ -3977,7 +3849,7 @@ msgstr ""
 "`CloudFlare DNS <https://support.cloudflare.com/hc/en-us/articles/"
 "360019093151>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:226
+#: ../../content/applications/general/email_communication/email_domain.rst:144
 msgid ""
 "`Squarespace DNS records <https://support.squarespace.com/hc/en-us/articles/"
 "360002101888-Adding-custom-DNS-records-to-your-Squarespace-managed-domain>`_"
@@ -3985,7 +3857,7 @@ msgstr ""
 "`Squarespace DNS zapisi <https://support.squarespace.com/hc/en-us/articles/"
 "360002101888-Adding-custom-DNS-records-to-your-Squarespace-managed-domain>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:228
+#: ../../content/applications/general/email_communication/email_domain.rst:145
 msgid ""
 "`Azure DNS <https://docs.microsoft.com/en-us/azure/dns/dns-getstarted-"
 "portal>`_"
@@ -3993,7 +3865,7 @@ msgstr ""
 "`Azure DNS <https://docs.microsoft.com/en-us/azure/dns/dns-getstarted-"
 "portal>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:230
+#: ../../content/applications/general/email_communication/email_domain.rst:147
 msgid ""
 "To fully test the configuration, use the `Mail-Tester <https://www.mail-"
 "tester.com/>`_ tool, which gives a full overview of the content and "
@@ -4005,21 +3877,13 @@ msgstr ""
 "enem poslanem e-sporočilu. Mail-Tester lahko uporabite tudi za konfiguracijo "
 "zapisov za druge, manj znane ponudnike."
 
-#: ../../content/applications/general/email_communication/email_domain.rst:235
+#: ../../content/applications/general/email_communication/email_domain.rst:152
 msgid ""
 "`Using Mail-Tester to set SPF Records for specific carriers <https://"
 "www.mail-tester.com/spf/>`_"
 msgstr ""
 "`Uporaba Mail-Tester za nastavitev SPF zapisov za določene ponudnike "
 "<https://www.mail-tester.com/spf/>`_"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:237
-msgid ""
-"`Magic Sheet - SPF, DKIM and DMARC configuration [PDF] <https://"
-"drive.google.com/drive/folders/1TJIXQpdR0VN8UQx5JP7q7vFuAr3e1Q3r>`_"
-msgstr ""
-"`Čarobni list - konfiguracija SPF, DKIM in DMARC [PDF] <https://"
-"drive.google.com/drive/folders/1TJIXQpdR0VN8UQx5JP7q7vFuAr3e1Q3r>`_"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:3
 msgid "Manage inbound messages"
@@ -16262,6 +16126,140 @@ msgstr ""
 "Če želi stranka upravljati možnosti plačila, pojdite na :guilabel:`Upravljaj "
 "načine plačila` v meniju na desni. Nato dodajte nove podatke o plačilu in "
 "izberite :guilabel:`Dodaj novo kartico`."
+
+#~ msgid ""
+#~ "When sending an email, the Odoo email server includes a unique DKIM "
+#~ "signature in the headers. The recipient's server decrypts this signature "
+#~ "using the DKIM record in the database's domain name. If the signature and "
+#~ "the key contained in the record match, it proves the message is authentic "
+#~ "and has not been altered during transport."
+#~ msgstr ""
+#~ "Ko pošilja e-poštno sporočilo, strežnik e-pošte Odoo vključi edinstven "
+#~ "podpis DKIM v glave. Strežnik prejemnika dešifrira ta podpis s pomočjo "
+#~ "zapisa DKIM v domenskem imenu zbirke podatkov. Če se podpis in ključ v "
+#~ "zapisu ujemata, to dokazuje, da je sporočilo pristno in ni bilo "
+#~ "spremenjeno med prenosom."
+
+#~ msgid "Add a CNAME record for domain"
+#~ msgstr "Dodajte zapis CNAME za domeno"
+
+#~ msgid ""
+#~ "To enable DKIM, add a canonical name (CNAME) record to the domain name "
+#~ "system (DNS) zone of the domain name:"
+#~ msgstr ""
+#~ "Za omogočanje DKIM dodajte kanonično ime (CNAME) zapisa v sistem "
+#~ "domenskih imen (DNS) cono domenskega imena:"
+
+#~ msgid ""
+#~ "If the domain name is *company-name.com*, make sure to create a CNAME "
+#~ "record where the CNAME record (key/name) is `odoo._domainkey.company-"
+#~ "name.com`, and the canonical name (value/content) is "
+#~ "`odoo._domainkey.odoo.com.`. For example, note the differences between "
+#~ "each key/value in italics\\:"
+#~ msgstr ""
+#~ "Če je domensko ime *company-name.com*, se prepričajte, da ustvarite zapis "
+#~ "CNAME, kjer je zapis CNAME (ključ/ime) `odoo._domainkey.company-"
+#~ "name.com`, kanonično ime (vrednost/vsebina) pa "
+#~ "`odoo._domainkey.odoo.com.`. Na primer, upoštevajte razlike med "
+#~ "posameznim ključem/vrednostjo v ležečem tisku:"
+
+#~ msgid "Example CNAME record"
+#~ msgstr "Primer zapisa CNAME"
+
+#~ msgid "Key"
+#~ msgstr "Ključ"
+
+#~ msgid "odoo.\\_domainkey"
+#~ msgstr "odoo.\\_domainkey"
+
+#~ msgid "Value"
+#~ msgstr "Vrednost"
+
+#~ msgid "odoo.\\_domainkey.\\ *odoo.com.* |nbsp|"
+#~ msgstr "odoo.\\_domainkey.\\ *odoo.com.* |nbsp|"
+
+#~ msgid "OR"
+#~ msgstr "ALI"
+
+#~ msgid "odoo.\\_domainkey.\\ *dbname*\\ .odoo.com."
+#~ msgstr "odoo.\\_domainkey.\\ *dbname*\\ .odoo.com."
+
+#~ msgid "... where *dbname* is the name of the Odoo database."
+#~ msgstr "... kjer je *dbname* ime zbirke podatkov Odoo."
+
+#~ msgid ""
+#~ "On most DNS platforms, the DNS provider adds the custom domain (e.g., "
+#~ "*company-name.com*) by default. In this case, the key looks different "
+#~ "while the value remains the same:"
+#~ msgstr ""
+#~ "Na večini platform DNS ponudnik DNS privzeto doda domeno po meri (npr. "
+#~ "*company-name.com*). V tem primeru je videti ključ drugače, medtem ko "
+#~ "vrednost ostane enaka:"
+
+#~ msgid "Example CNAME record with custom domain"
+#~ msgstr "Primer zapisa CNAME z domeno po meri"
+
+#~ msgid "odoo.\\_domainkey.\\ *company-name.com* |nbsp|"
+#~ msgstr "odoo.\\_domainkey.\\ *company-name.com* |nbsp|"
+
+#~ msgid "... where *company-name.com* is the custom domain."
+#~ msgstr "... kjer je *company-name.com* domena po meri."
+
+#~ msgid ""
+#~ "If the DNS provider does not add the custom domain by default, make sure "
+#~ "to include it."
+#~ msgstr ""
+#~ "Če ponudnik DNS domene po meri ne doda samodejno, jo poskrbite dodati."
+
+#~ msgid "Add a CNAME record for subdomain"
+#~ msgstr "Dodajte zapis CNAME za poddomena"
+
+#~ msgid ""
+#~ "If there's a \\ *subdomain* (e.g., *marketing* in *marketing*\\ .company-"
+#~ "name.com), add a CNAME record to include it for compliance as well:"
+#~ msgstr ""
+#~ "Če obstaja \\ *poddomena* (npr. *marketing* v *marketing*\\ .company-"
+#~ "name.com), dodajte zapis CNAME, da jo vključite tudi za skladnost:"
+
+#~ msgid "Example CNAME record with subdomain"
+#~ msgstr "Primer zapisa CNAME s poddomena"
+
+#~ msgid "odoo.\\_domainkey.\\ *marketing* |nbsp|"
+#~ msgstr "odoo.\\_domainkey.\\ *marketing* |nbsp|"
+
+#~ msgid "... where *marketing* is the subdomain."
+#~ msgstr "... kjer je *marketing* poddomena."
+
+#~ msgid "odoo.\\_domainkey.marketing.\\ *company-name.com*\\ |nbsp|"
+#~ msgstr "odoo.\\_domainkey.marketing.\\ *company-name.com*\\ |nbsp|"
+
+#~ msgid "See DNS provider documentation"
+#~ msgstr "Glejte dokumentacijo ponudnika DNS"
+
+#~ msgid ""
+#~ "Check if the DKIM record is valid using a tool like `MXToolbox DKIM "
+#~ "Record Lookup <https://mxtoolbox.com/dkim.aspx>`_. Enter "
+#~ "`example.com:odoo` in the DKIM lookup tool, specifying that the selector "
+#~ "being tested is *odoo* for the custom domain *example.com*."
+#~ msgstr ""
+#~ "Preverite, ali je zapis DKIM veljaven z orodjem, kot je `MXToolbox DKIM "
+#~ "Record Lookup <https://mxtoolbox.com/dkim.aspx>`_. V orodje za iskanje "
+#~ "DKIM vnesite `example.com:odoo`, pri čemer določite, da je izbirnik, ki "
+#~ "se preizkuša, *odoo* za domeno po meri *example.com*."
+
+#~ msgid ""
+#~ "`GoDaddy SPF, DKIM, or DMARC records <https://www.godaddy.com/help/set-up-"
+#~ "spf-dkim-or-dmarc-records-for-my-hosting-email-40810>`_"
+#~ msgstr ""
+#~ "`GoDaddy SPF, DKIM ali DMARC zapisi <https://www.godaddy.com/help/set-up-"
+#~ "spf-dkim-or-dmarc-records-for-my-hosting-email-40810>`_"
+
+#~ msgid ""
+#~ "`Magic Sheet - SPF, DKIM and DMARC configuration [PDF] <https://"
+#~ "drive.google.com/drive/folders/1TJIXQpdR0VN8UQx5JP7q7vFuAr3e1Q3r>`_"
+#~ msgstr ""
+#~ "`Čarobni list - konfiguracija SPF, DKIM in DMARC [PDF] <https://"
+#~ "drive.google.com/drive/folders/1TJIXQpdR0VN8UQx5JP7q7vFuAr3e1Q3r>`_"
 
 #~ msgid ""
 #~ "**Never** deactivate the main/administrator user (admin). Making changes "
