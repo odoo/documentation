@@ -1,0 +1,169 @@
+{% extends 'base.html' %}
+{% block title %}المطالبات - نظام إدارة الخزينة{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h4 class="mb-0"><i class="bi bi-file-earmark-text me-2"></i>المطالبات</h4>
+    <div class="d-flex gap-2">
+        <a href="{{ url_for('claims.new', type='vendor') }}" class="btn btn-outline-primary">
+            <i class="bi bi-plus-circle me-1"></i>مطالبة مورد
+        </a>
+        <a href="{{ url_for('claims.new', type='expense') }}" class="btn btn-primary">
+            <i class="bi bi-plus-circle me-1"></i>مطالبة مصاريف
+        </a>
+    </div>
+</div>
+
+<!-- Filter Tabs -->
+<ul class="nav nav-tabs mb-3">
+    <li class="nav-item">
+        <a class="nav-link {% if not current_filter %}active{% endif %}"
+           href="{{ url_for('claims.index') }}">الكل</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {% if current_filter == 'vendor' %}active{% endif %}"
+           href="{{ url_for('claims.index', type='vendor') }}">
+            <i class="bi bi-shop me-1"></i>موردين
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {% if current_filter == 'expense' %}active{% endif %}"
+           href="{{ url_for('claims.index', type='expense') }}">
+            <i class="bi bi-receipt me-1"></i>مصاريف
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {% if current_filter == 'submitted' %}active{% endif %}"
+           href="{{ url_for('claims.index', state='submitted') }}">
+            <i class="bi bi-clock me-1"></i>بانتظار الاعتماد
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {% if current_filter == 'approved' %}active{% endif %}"
+           href="{{ url_for('claims.index', state='approved') }}">
+            <i class="bi bi-check-circle me-1"></i>معتمدة
+        </a>
+    </li>
+</ul>
+
+<!-- Claims Table -->
+<div class="card shadow-sm">
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>الرقم</th>
+                        <th class="text-center">النوع</th>
+                        <th>التاريخ</th>
+                        <th>المورد / الموظف</th>
+                        <th>الوصف</th>
+                        <th class="text-end">الإجمالي</th>
+                        <th class="text-end">المدفوع</th>
+                        <th class="text-end">المتبقي</th>
+                        <th class="text-center">الأولوية</th>
+                        <th class="text-center">الحالة</th>
+                        <th class="text-center">إجراءات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for claim in claims %}
+                    {% set residual = claim.total - (claim.paid or 0) %}
+                    <tr>
+                        <td>
+                            <a href="{{ url_for('claims.show', id=claim.id) }}"
+                               class="fw-semibold text-decoration-none">
+                                {{ claim.number }}
+                            </a>
+                        </td>
+                        <td class="text-center">
+                            {% if claim.claim_type == 'vendor' %}
+                                <span class="badge bg-info text-dark">
+                                    <i class="bi bi-shop me-1"></i>مورد
+                                </span>
+                            {% else %}
+                                <span class="badge bg-warning text-dark">
+                                    <i class="bi bi-receipt me-1"></i>مصاريف
+                                </span>
+                            {% endif %}
+                        </td>
+                        <td class="text-nowrap">{{ claim.date | ar_date }}</td>
+                        <td>
+                            {% if claim.claim_type == 'vendor' %}
+                                {{ claim.vendor or '-' }}
+                            {% else %}
+                                {{ claim.employee or '-' }}
+                            {% endif %}
+                        </td>
+                        <td class="text-muted small">{{ claim.description | truncate(50) }}</td>
+                        <td class="text-end fw-bold">{{ claim.total | currency }}</td>
+                        <td class="text-end text-success">{{ (claim.paid or 0) | currency }}</td>
+                        <td class="text-end fw-bold {% if residual > 0 %}text-danger{% else %}text-muted{% endif %}">
+                            {{ residual | currency }}
+                        </td>
+                        <td class="text-center">
+                            {% if claim.priority == 'high' %}
+                                <span class="badge bg-danger">عالية</span>
+                            {% elif claim.priority == 'medium' %}
+                                <span class="badge bg-warning text-dark">متوسطة</span>
+                            {% else %}
+                                <span class="badge bg-secondary">عادية</span>
+                            {% endif %}
+                        </td>
+                        <td class="text-center">
+                            {% if claim.state == 'draft' %}
+                                <span class="badge bg-secondary">مسودة</span>
+                            {% elif claim.state == 'submitted' %}
+                                <span class="badge bg-primary">مرسلة</span>
+                            {% elif claim.state == 'approved' %}
+                                <span class="badge bg-success">معتمدة</span>
+                            {% elif claim.state == 'partial' %}
+                                <span class="badge bg-warning text-dark">جزئي</span>
+                            {% elif claim.state == 'paid' %}
+                                <span class="badge bg-info text-dark">مدفوعة</span>
+                            {% elif claim.state == 'rejected' %}
+                                <span class="badge bg-danger">مرفوضة</span>
+                            {% elif claim.state == 'cancelled' %}
+                                <span class="badge bg-dark">ملغاة</span>
+                            {% endif %}
+                        </td>
+                        <td class="text-center">
+                            <a href="{{ url_for('claims.show', id=claim.id) }}"
+                               class="btn btn-sm btn-outline-primary" title="عرض">
+                                <i class="bi bi-eye"></i>
+                            </a>
+                            {% if claim.state == 'draft' %}
+                            <a href="{{ url_for('claims.edit', id=claim.id) }}"
+                               class="btn btn-sm btn-outline-secondary" title="تعديل">
+                                <i class="bi bi-pencil"></i>
+                            </a>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="11" class="text-center text-muted py-4">
+                            <i class="bi bi-inbox fs-4 d-block mb-2"></i>
+                            لا توجد مطالبات مسجلة.
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                {% if claims %}
+                <tfoot class="table-light fw-bold">
+                    <tr>
+                        <td colspan="5">الإجمالي ({{ claims | length }} مطالبة)</td>
+                        <td class="text-end">{{ claims | sum(attribute='total') | currency }}</td>
+                        <td class="text-end text-success">{{ claims | sum(attribute='paid') | currency }}</td>
+                        <td class="text-end text-danger">
+                            {{ (claims | sum(attribute='total') - claims | sum(attribute='paid')) | currency }}
+                        </td>
+                        <td colspan="3"></td>
+                    </tr>
+                </tfoot>
+                {% endif %}
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

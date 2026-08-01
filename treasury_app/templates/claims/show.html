@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% block title %}{{ claim.number }}{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <div>
+    <h5 class="mb-0">{{ claim.number }} — <span class="badge bg-{{ 'info' if claim.claim_type == 'vendor' else 'warning' }}">{{ claim.type_label }}</span> <span class="badge bg-{{ claim.state_color }}">{{ claim.state_label }}</span></h5>
+  </div>
+  <a href="{{ url_for('claims.index') }}" class="btn btn-outline-secondary btn-sm"><i class="bi bi-arrow-right me-1"></i>رجوع</a>
+</div>
+
+<!-- Action Buttons -->
+<div class="mb-3 d-flex flex-wrap gap-2">
+{% if claim.state == 'draft' %}
+  <form method="POST" action="{{ url_for('claims.submit', id=claim.id) }}" class="d-inline"><button class="btn btn-primary btn-sm"><i class="bi bi-send me-1"></i>تقديم للاعتماد</button></form>
+  <a href="{{ url_for('claims.edit', id=claim.id) }}" class="btn btn-outline-secondary btn-sm"><i class="bi bi-pencil me-1"></i>تعديل</a>
+  <form method="POST" action="{{ url_for('claims.cancel', id=claim.id) }}" class="d-inline"><button class="btn btn-outline-danger btn-sm" onclick="return confirm('تأكيد الإلغاء؟')">إلغاء</button></form>
+{% elif claim.state == 'submitted' %}
+  <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#approveModal"><i class="bi bi-check-lg me-1"></i>اعتماد</button>
+  <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#rejectModal"><i class="bi bi-x-lg me-1"></i>رفض</button>
+  <form method="POST" action="{{ url_for('claims.reset', id=claim.id) }}" class="d-inline"><button class="btn btn-outline-secondary btn-sm">إعادة للمسودة</button></form>
+{% elif claim.state in ('approved', 'partial') %}
+  <a href="{{ url_for('payments.new', claim_id=claim.id) }}" class="btn btn-success btn-sm"><i class="bi bi-cash me-1"></i>إنشاء سند صرف</a>
+  <form method="POST" action="{{ url_for('claims.cancel', id=claim.id) }}" class="d-inline"><button class="btn btn-outline-danger btn-sm" onclick="return confirm('تأكيد الإلغاء؟')">إلغاء</button></form>
+{% endif %}
+</div>
+
+<div class="row g-3">
+  <div class="col-lg-8">
+    <!-- Info -->
+    <div class="card border-0 shadow-sm mb-3">
+      <div class="card-body">
+        <div class="row g-3">
+          <div class="col-md-3"><div class="text-muted small">التاريخ</div><div class="fw-semibold">{{ claim.date | ar_date }}</div></div>
+          <div class="col-md-3"><div class="text-muted small">الاستحقاق</div><div class="fw-semibold">{{ claim.due_date | ar_date or '-' }}</div></div>
+          <div class="col-md-3"><div class="text-muted small">الأولوية</div><span class="badge bg-{{ claim.priority_color }}">{{ claim.priority_label }}</span></div>
+          <div class="col-md-3"><div class="text-muted small">{{ 'المورد' if claim.claim_type == 'vendor' else 'الموظف' }}</div><div class="fw-semibold">{{ claim.vendor or claim.employee or '-' }}</div></div>
+          {% if claim.vendor_ref %}<div class="col-md-3"><div class="text-muted small">رقم الفاتورة</div><div class="fw-semibold">{{ claim.vendor_ref }}</div></div>{% endif %}
+          {% if claim.department %}<div class="col-md-3"><div class="text-muted small">القسم</div><div class="fw-semibold">{{ claim.department }}</div></div>{% endif %}
+          <div class="col-12"><div class="text-muted small">البيان</div><div class="fw-semibold">{{ claim.description }}</div></div>
+        </div>
+      </div>
+    </div>
+    <!-- Lines -->
+    <div class="card border-0 shadow-sm mb-3">
+      <div class="card-header bg-white fw-bold">بنود المطالبة</div>
+      <div class="table-responsive">
+        <table class="table table-sm mb-0">
+          <thead class="table-light"><tr><th>البيان</th><th>الحساب</th><th class="text-center">الكمية</th><th class="text-end">السعر</th><th class="text-end">المجموع</th></tr></thead>
+          <tbody>
+            {% for line in claim.lines %}
+            <tr><td>{{ line.description }}</td><td>{{ line.account or '-' }}</td><td class="text-center">{{ line.quantity }}</td><td class="text-end">{{ line.unit_price | currency }}</td><td class="text-end fw-bold">{{ line.subtotal | currency }}</td></tr>
+            {% endfor %}
+          </tbody>
+          <tfoot class="table-light"><tr><td colspan="4" class="text-end fw-bold">الإجمالي:</td><td class="text-end fw-bold text-primary">{{ claim.total_amount | currency }}</td></tr></tfoot>
+        </table>
+      </div>
+    </div>
+    <!-- Payments -->
+    {% if claim.payments %}
+    <div class="card border-0 shadow-sm">
+      <div class="card-header bg-white fw-bold">سندات الصرف</div>
+      <div class="table-responsive">
+        <table class="table table-sm mb-0">
+          <thead class="table-light"><tr><th>الرقم</th><th>التاريخ</th><th>الخزينة</th><th class="text-end">المبلغ</th><th>الحالة</th></tr></thead>
+          <tbody>
+            {% for p in claim.payments %}
+            <tr><td><a href="{{ url_for('payments.show', id=p.id) }}">{{ p.number }}</a></td><td>{{ p.date | ar_date }}</td><td>{{ p.treasury.name if p.treasury else '-' }}</td><td class="text-end fw-bold">{{ p.amount | currency }}</td><td><span class="badge bg-{{ p.state_color }}">{{ p.state_label }}</span></td></tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="col-lg-4">
+    <div class="card border-0 shadow-sm mb-3">
+      <div class="card-body text-center">
+        <div class="text-muted small mb-1">إجمالي المطالبة</div>
+        <div class="fs-3 fw-bold text-primary">{{ claim.total_amount | currency }}</div>
+        {% if claim.paid_amount > 0 %}
+        <hr>
+        <div class="d-flex justify-content-between small">
+          <span class="text-muted">المسدد:</span><span class="fw-bold text-success">{{ claim.paid_amount | currency }}</span>
+        </div>
+        <div class="d-flex justify-content-between small">
+          <span class="text-muted">المتبقي:</span><span class="fw-bold text-danger">{{ claim.residual | currency }}</span>
+        </div>
+        <div class="progress mt-2" style="height:8px">
+          <div class="progress-bar bg-success" style="width:{{ [(claim.paid_amount / claim.total_amount * 100), 100] | min | int }}%"></div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% if claim.state in ('approved', 'rejected') %}
+    <div class="card border-0 shadow-sm mb-3">
+      <div class="card-body">
+        {% if claim.approved_by %}<div class="text-muted small">اعتمد بواسطة</div><div class="fw-semibold">{{ claim.approved_by }}</div><div class="text-muted small mt-1">{{ claim.approved_date | ar_date }}</div>{% endif %}
+        {% if claim.rejected_reason %}<div class="text-muted small mt-2">سبب الرفض</div><div class="text-danger">{{ claim.rejected_reason }}</div>{% endif %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+<!-- Approve Modal -->
+<div class="modal fade" id="approveModal" tabindex="-1">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header"><h6 class="modal-title">اعتماد المطالبة</h6><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+      <form method="POST" action="{{ url_for('claims.approve', id=claim.id) }}">
+        <div class="modal-body">
+          <label class="form-label">اسم المعتمِد</label>
+          <input type="text" name="approved_by" class="form-control" placeholder="المدير" required>
+        </div>
+        <div class="modal-footer"><button type="submit" class="btn btn-success btn-sm">تأكيد الاعتماد</button></div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Reject Modal -->
+<div class="modal fade" id="rejectModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"><h6 class="modal-title">رفض المطالبة</h6><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+      <form method="POST" action="{{ url_for('claims.reject', id=claim.id) }}">
+        <div class="modal-body">
+          <label class="form-label">سبب الرفض *</label>
+          <textarea name="reason" class="form-control" rows="3" required></textarea>
+        </div>
+        <div class="modal-footer"><button type="submit" class="btn btn-danger btn-sm">تأكيد الرفض</button></div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

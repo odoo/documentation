@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% block title %}{% if treasury %}تعديل الخزينة - {{ treasury.name }}{% else %}خزينة جديدة{% endif %} - نظام إدارة الخزينة{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h4 class="mb-0">
+        <i class="bi bi-bank me-2"></i>
+        {% if treasury %}تعديل الخزينة: {{ treasury.name }}{% else %}خزينة جديدة{% endif %}
+    </h4>
+    <a href="{{ url_for('treasury.index') }}" class="btn btn-outline-secondary">
+        <i class="bi bi-arrow-right me-1"></i>العودة للقائمة
+    </a>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+        <form method="POST" action="{% if treasury %}{{ url_for('treasury.edit', id=treasury.id) }}{% else %}{{ url_for('treasury.new') }}{% endif %}" novalidate>
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+            <div class="row g-3">
+                <!-- Name -->
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold" for="name">
+                        اسم الخزينة <span class="text-danger">*</span>
+                    </label>
+                    <input type="text" class="form-control" id="name" name="name"
+                           value="{{ treasury.name if treasury else '' }}"
+                           required placeholder="مثال: الخزينة الرئيسية">
+                    <div class="invalid-feedback">يرجى إدخال اسم الخزينة.</div>
+                </div>
+
+                <!-- Code -->
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold" for="code">
+                        الكود <span class="text-danger">*</span>
+                    </label>
+                    <input type="text" class="form-control" id="code" name="code"
+                           value="{{ treasury.code if treasury else '' }}"
+                           {% if treasury %}readonly{% endif %}
+                           required placeholder="مثال: CASH-001">
+                    {% if treasury %}
+                    <div class="form-text text-muted">
+                        <i class="bi bi-info-circle me-1"></i>لا يمكن تغيير الكود بعد الإنشاء.
+                    </div>
+                    {% endif %}
+                    <div class="invalid-feedback">يرجى إدخال كود الخزينة.</div>
+                </div>
+
+                <!-- Treasury Type -->
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold" for="treasury_type">نوع الخزينة</label>
+                    <select class="form-select" id="treasury_type" name="treasury_type">
+                        <option value="cash" {% if treasury and treasury.treasury_type == 'cash' %}selected{% endif %}>
+                            <i class="bi bi-cash-coin"></i> نقدي
+                        </option>
+                        <option value="bank" {% if treasury and treasury.treasury_type == 'bank' %}selected{% endif %}>
+                            بنكي
+                        </option>
+                    </select>
+                </div>
+
+                <!-- Currency -->
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold" for="currency">العملة</label>
+                    <select class="form-select" id="currency" name="currency">
+                        <option value="SAR" {% if not treasury or treasury.currency == 'SAR' %}selected{% endif %}>ريال سعودي (SAR)</option>
+                        <option value="USD" {% if treasury and treasury.currency == 'USD' %}selected{% endif %}>دولار أمريكي (USD)</option>
+                        <option value="EUR" {% if treasury and treasury.currency == 'EUR' %}selected{% endif %}>يورو (EUR)</option>
+                    </select>
+                </div>
+
+                <!-- Responsible -->
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold" for="responsible">المسؤول</label>
+                    <input type="text" class="form-control" id="responsible" name="responsible"
+                           value="{{ treasury.responsible if treasury else '' }}"
+                           placeholder="اسم أمين الخزينة">
+                </div>
+
+                <!-- Max Amount -->
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold" for="max_amount">الحد الأقصى للرصيد</label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="max_amount" name="max_amount"
+                               value="{{ treasury.max_amount if treasury else '' }}"
+                               step="0.01" min="0" placeholder="0.00">
+                        <span class="input-group-text">ر.س</span>
+                    </div>
+                    <div class="form-text text-muted">اتركه فارغاً إذا لم يكن هناك حد أقصى.</div>
+                </div>
+
+                <!-- Notes -->
+                <div class="col-12">
+                    <label class="form-label fw-semibold" for="notes">ملاحظات</label>
+                    <textarea class="form-control" id="notes" name="notes" rows="3"
+                              placeholder="أي ملاحظات إضافية...">{{ treasury.notes if treasury else '' }}</textarea>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="d-flex gap-2 justify-content-end">
+                <a href="{{ url_for('treasury.index') }}" class="btn btn-outline-secondary">
+                    <i class="bi bi-x-circle me-1"></i>إلغاء
+                </a>
+                <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-floppy me-1"></i>حفظ الخزينة
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Bootstrap validation
+(function () {
+    'use strict';
+    var forms = document.querySelectorAll('form[novalidate]');
+    Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        }, false);
+    });
+})();
+</script>
+{% endblock %}
