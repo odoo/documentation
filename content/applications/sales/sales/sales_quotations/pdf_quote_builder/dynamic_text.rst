@@ -24,11 +24,6 @@ form field* in mind. Use the following tips to avoid overlapping text and other 
 - **Add line breaks**: Place dynamic form fields, like *Customer Name*, on their own lines.
   Alternatively, put them at the end of phrases to avoid text breaking. Long names can push static
   text out of alignment.
-- **Leave whitespace**: Ensure there is enough room for dynamic data to expand without overlapping
-  logos or borders.
-- **Add line breaks**: Place dynamic form fields, like *Customer Name*, on their own lines.
-  Alternatively, put them at the end of phrases to avoid text breaking. Long names can push static
-  text out of alignment. text appearance when adding or editing content.
 
 Odoo recommends editing PDF forms with Adobe software. Form fields in header and footer templates
 are required to retrieve dynamic values in Odoo.
