@@ -58,6 +58,11 @@ repositories if their version matches the documentation's version.
   documentation for all available languages and versions.
 - The "Developer" documentation is only available in English.
 
+## License  
+
+This repository is licensed under the **LGPL-3.0 License**. See the [LICENSE](LICENSE) file for details.  
+
+
 ## Contribute to the documentation
 
 For contributions to the content of the documentation, see the
