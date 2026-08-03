@@ -16,7 +16,7 @@ specific settings are available. To learn more about the default setting for ren
 to the :ref:`Settings <rental/product_type/settings>` section of the *Rental product type* page. The
 following configurations assume the **Rental** and **Inventory** apps are installed.
 
-Navigate to :menuselection:`Rental app --> Configuration --> Settings`, configure the
+Navigate to :menuselection:`Rental app --> Configuration --> Settings`, and configure the
 :guilabel:`Default Delay Costs` in the *Rental* section for late fees. Optionally, configure the
 :guilabel:`Default Padding Time` to make rentals unavailable for booking. Refer to the
 :ref:`rental/products/rental-transfer-feature` section to learn what it does and how to configure
@@ -30,7 +30,7 @@ In the **Rental** section, under the :guilabel:`Default Delay Costs` subsection,
    :guilabel:`Per Day` fields on the product form. If the defaults apply to all products, leave the
    :guilabel:`Product` field blank.
 
-Click **Save** to apply the changes.
+Click :guilabel:`Save` to apply the changes.
 
 .. image:: products/settings-rental-section.png
    :alt: Example of configured Default Delay Cost and Padding settings in the Rental app.
@@ -43,33 +43,37 @@ Create a new physical product
 To set up a new physical rental product, go to the :menuselection:`Rental app --> Products`, then
 click :guilabel:`New`. On the rental product form, fill out each tab accordingly:
 
-General Information tab
------------------------
+Initial product configuration
+-----------------------------
 
-In the new product window, the :guilabel:`Rental` checkbox is already ticked by default. Select the
-:guilabel:`Product Type` as :guilabel:`Goods`.
+In the new product window, the :guilabel:`Rental` checkbox is already selected by default. Select
+the :guilabel:`Product Type` as :guilabel:`Goods`.
 
-Tick the :guilabel:`Track Inventory` checkbox and select :guilabel:`By Quantity` from the drop-down
-menu. For the :guilabel:`Category` field, select :guilabel:`Goods` from the drop-down menu or create
-a new category by typing in the name and clicking :guilabel:`Create`.
+Enable the :guilabel:`Track Inventory` checkbox and select :guilabel:`By Quantity` from the
+drop-down menu. For the :guilabel:`Category` field, select :guilabel:`Goods` from the drop-down menu
+or create a new category by typing in the name and clicking :guilabel:`Create`.
 
 .. image:: products/new-product.png
    :alt: The new product view in the Rental app.
 
-Attributes & Variants tab
--------------------------
+.. _rental/products/variants:
+
+Optional: specify rental variants
+---------------------------------
 
 .. important::
    The *Variant* feature in the **Inventory** app must be enabled for this tab to display.
 
-Click :guilabel:`Add a line`, then select a default option from the :guilabel:`Attribute` drop-down
-menu. To create a new one, enter the name, then click :guilabel:`Create and edit…` to
-:ref:`configure the attribute and its values <products/variants/attributes>`.
+In the :guilabel:`Attributes & Variants` tab, :ref:`add the appropriate attribute and its values
+<products/variants/attributes>` by clicking :guilabel:`Add a line`. Attributes and values are useful
+for keeping the product library manageable, tracking and differentiating the inventory, and
+providing more detailed reports. Examples of rental variants for a *Goods* product are size,
+brand, color, and material.
 
-.. _rental/products/rental-prices-tab:
+.. _rental/products/rental-periods-prices-reservations:
 
-Rental prices tab
------------------
+Set rental periods, prices, and reservations
+--------------------------------------------
 
 Click the :guilabel:`Rental prices` tab and in the :guilabel:`Pricing` section, click :guilabel:`Add
 a price` to enter a new rental rate. Choose a *pricing period* (:dfn:`the unit of duration of the
@@ -108,12 +112,12 @@ Click the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon near the top 
    period set at `$35`. Manually save to apply changes.
 
    .. image:: products/rental-prices-tab-with-rental-period.png
-       :alt: Sample of a rental product with the custom rental period applied.
+      :alt: Sample of a rental product with the custom rental period applied.
 
 .. _rental/products/configure-product-tracking:
 
-Configure a physical rental product for product tracking
-========================================================
+Configure product tracking
+==========================
 
 .. important::
    To configure a physical rental product for product tracking, the **Inventory** app must be
@@ -124,16 +128,15 @@ Configure a physical rental product for product tracking
    rentals.
 
 Go to the :menuselection:`Rental app --> Products`, then click :guilabel:`New`. In the new product
-window, the :guilabel:`Rental` checkbox is already ticked by default.
+window, the :guilabel:`Rental` checkbox is already selected by default.
 
-Select the :guilabel:`Product Type` as :guilabel:`Goods`. Tick the :guilabel:`Track Inventory`
-checkbox and select :guilabel:`By Unique Serial Number` from the
-drop-down menu.
+Select the :guilabel:`Product Type` as :guilabel:`Goods`. Enable the :guilabel:`Track Inventory`
+checkbox and select :guilabel:`By Unique Serial Number` from the drop-down menu.
 
 For the :guilabel:`Category` field, select :guilabel:`Goods` from the drop-down menu or create a new
 category by typing in the name and clicking :guilabel:`Create`. Configure rental rates on the
-:ref:`rental/products/rental-prices-tab`. Click the :icon:`fa-cloud-upload` :guilabel:`(Save
-manually)` icon near the top to save.
+:ref:`Rental prices <rental/products/rental-periods-prices-reservations>` tab. Click the
+:icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon near the top to save.
 
 .. _rental/products/rental-transfer-feature:
 
@@ -149,11 +152,13 @@ clean paper trail and has a variety of uses:
 - Tracking products between different store locations that allow pick up and returns.
 
 To enable the :guilabel:`Rental Transfers` feature, navigate to the :menuselection:`Rental app -->
-Configuration --> Settings` and in the *Rental* section, tick the :guilabel:`Rental Transfers`
+Configuration --> Settings` and in the *Rental* section, enable the :guilabel:`Rental Transfers`
 checkbox.
 
 .. image:: products/rental-transfers-checkbox.png
    :alt: Sample of the Rental settings with the Rental Transfers enabled.
+
+.. _rental/products/rental-transfers-note:
 
 .. note::
    The **Inventory** app automatically creates an internal default location once the *Rental
@@ -168,11 +173,8 @@ Multi-location management and transfers
 =======================================
 
 .. important::
-   The **Inventory** app must be installed to set up this configuration. The **Inventory** app
-   automatically creates an internal default location once the *Rental Transfers* feature is
-   enabled. Odoo uses the new default location, :guilabel:`Customer/Rental`, to track products
-   during the rental period (moving them from :guilabel:`Stock` to :guilabel:`Customer/Rental` upon
-   rental, and back upon return). Do **not** modify to avoid corrupting inventory tracking.
+   Refer to the :ref:`Rental Transfers note <rental/products/rental-transfers-note>` for information
+   about internal location configuration and inventory tracking.
 
 Tracking the location of high-value physical products between locations is essential. The **Rental**
 app helps with the *Rental Transfers* feature. Activating rental transfers means the system treats
@@ -180,12 +182,12 @@ rental movements similarly to sales, requiring a receipt and a delivery order ev
 product is rented or returned.
 
 For multi-location management and rental item transfer tracking, navigate to the
-:menuselection:`Rental app --> Configuration --> Settings` and in the :guilabel:`Rental` section,
-tick the :guilabel:`Rental Transfers` checkbox.
+:menuselection:`Rental app --> Configuration --> Settings` and in the *Rental* section, enable the
+:guilabel:`Rental Transfers` checkbox.
 
 Next, go to the :menuselection:`Inventory app --> Configuration --> Settings` and in the
-:guilabel:`Warehouse` section, tick the :guilabel:`Storage Locations` checkbox. Click
-:guilabel:`Save` to apply the changes.
+*Warehouse* section, enable the :guilabel:`Storage Locations` checkbox. Click :guilabel:`Save` to
+apply the changes.
 
 To configure new locations, navigate to :menuselection:`Inventory app --> Configuration -->
 Locations`. Click :guilabel:`New` to configure a new internal location.
@@ -200,10 +202,11 @@ manually` icon near the top to save.
    location.
 
    Ensure the **Rental** and **Inventory** apps are configured by enabling :guilabel:`Rental
-   Transfers` in the **Rental app** and :guilabel:`Storage Locations` in the **Inventory** app.
+   Transfers` in the **Rental** app and :guilabel:`Storage Locations` in the **Inventory** app.
 
    Next, go to the :menuselection:`Inventory app > Configuration > Locations`. Create a new location
-   for each storefront.
+   Next, go to the :menuselection:`Inventory app --> Configuration --> Locations`. Create a new
+   location for each storefront.
 
    .. image:: products/configured-locations.png
       :alt: Sample of internal inventory locations that represent different rental store locations.
@@ -262,4 +265,3 @@ items.
 .. seealso::
    - :doc:`../../../inventory_and_mrp/inventory`
    - `Tutorial: Your First Rental Product <https://youtu.be/CE-SahTUC9A?si=kWfYEOTd2nT_ASp9>`_
-
