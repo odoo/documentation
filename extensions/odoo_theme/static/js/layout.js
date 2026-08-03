@@ -3,6 +3,11 @@
     document.addEventListener('DOMContentLoaded', function () {
         const content = document.getElementById('o_content');
 
+        // Initialize Bootstrap tooltips
+        document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
+            new bootstrap.Tooltip(el);
+        });
+
         let imageModalId = 0;
         content.querySelectorAll('img').forEach(image => {
             // Enforce the presence of the `img-fluid` class on all images.
@@ -35,6 +40,7 @@
         content.querySelectorAll('a.external').forEach(externalLink => {
             externalLink.setAttribute('target', '_blank');
         });
+
 
         let canAccessAllL1Toctrees = true; // Whether all direct children have a ref.
         const toctreeWrapper = document.querySelector('.toctree-wrapper');
