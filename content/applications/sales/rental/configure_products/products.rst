@@ -27,8 +27,8 @@ Create a new physical product
 To set up a new physical rental product, go to the :menuselection:`Rental app --> Products`, then
 click :guilabel:`New`.
 
-General Information tab
------------------------
+Initial product configuration
+-----------------------------
 
 In the new product window, the :guilabel:`Sales` checkbox is already selected by default. Select the
 :guilabel:`Product Type` as :guilabel:`Goods`.
@@ -58,15 +58,16 @@ If the *eCommerce* module is installed, the :guilabel:`Pickup` and :guilabel:`Re
 displayed for every :guilabel:`Periodicity` field option except :guilabel:`Hours`. The
 :guilabel:`Pickup` and :guilabel:`Return` times only apply to online rental orders.
 
-All additional rental rates can be configured on the :ref:`rental/products/prices-tab`, but they are
-restricted to the configured :guilabel:`Periodicity` value selected in the *Sales* tab. In other
-words, a rental product can only have one :guilabel:`Periodicity` value configured at a time.
+All additional rental rates can be configured on the :ref:`Prices
+<rental/products/price-tab-method>` tab, but they are restricted to the configured
+:guilabel:`Periodicity` value selected in the *Sales* tab. In other words, a rental product can only
+have one :guilabel:`Periodicity` value configured at a time.
 
 .. image:: products/rental-periodicity.png
    :alt: Sample of the Rental product's Periodicity and Padding time in the Rental app.
 
-Attributes & Variants tab
--------------------------
+Optional: specify rental variants
+---------------------------------
 
 .. important::
    The :guilabel:`Variants` feature in the **Inventory** app must be enabled for this tab to
@@ -77,20 +78,20 @@ Add the appropriate :ref:`attribute and its values <products/variants/attributes
 tracking and differentiating the inventory, and providing more detailed reports. Examples of rental
 variants for a *Goods* product are: sizes, brand, color, and material.
 
-.. _rental/products/prices-tab:
+.. _rental/products/multiple-rental-prices:
 
-Prices tab
-----------
+Add multiple rental prices
+--------------------------
 
 .. important::
    The **Sales** app must be installed and the *Pricelist* feature enabled for this tab to display.
 
 There are two ways to configure additional rental rates in the **Rental** app: the :ref:`Pricelists
-method <rental/products/pricelist>` and the :ref:`Prices tab method <rental/products/price-tab>`.
-The **Rental** app follows specific conditions when using pricelists. Refer to the
-:ref:`rental/rental-pricelist-rules` section on the *Rental* page.
+method <rental/products/pricelist-method>` and the :ref:`Prices tab method
+<rental/products/price-tab-method>`. The **Rental** app follows specific conditions when using
+pricelists. Refer to the :ref:`rental/rental-pricelist-rules` section on the *Rental* page.
 
-.. _rental/products/pricelist:
+.. _rental/products/pricelist-method:
 
 Using the Pricelists method
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -110,14 +111,15 @@ Pricelist Rules* window displays.
 .. image:: products/create-pricelist-rules-window.png
    :alt: Sample of the Create Pricelist Rules window in the Odoo Rental application.
 
-.. _rental/products/price-tab:
+.. _rental/products/price-tab-method:
 
 Using the Prices tab method
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Rental rates can also be configured as a new price rule to an existing pricelist using the
+Rental rates can also be configured as a new price rule for an existing pricelist using the
 :guilabel:`Prices` tab on the product form. Navigate to :menuselection:`Rental app --> Products -->
-Products`, then click the desired product.
+*Prices* tab on the product form. Navigate to :menuselection:`Rental app --> Products --> Products`,
+then click the desired product.
 
 Click the :guilabel:`Prices` tab and click :guilabel:`Add a price`. Select the desired
 :guilabel:`Pricelist`, then enter the minimum time required for the price change to trigger in the
@@ -160,20 +162,22 @@ Configure product tracking
    To configure a physical rental product for product tracking, the **Inventory** app must be
    installed, and *Lots & Serial Numbers* must be enabled.
 
+   For rental products, only :guilabel:`By Unique Serial Number` tracking can be used. Selecting
+   :guilabel:`By Lots` instead results in an error message, because that setting doesn't apply to
+   rentals.
+
 Go to the :menuselection:`Rental app --> Products --> Products`, then click :guilabel:`New`. In the
 new product window, the :guilabel:`Sales` checkbox is already selected by default. Select
 :guilabel:`Goods` as the :guilabel:`Product Type`, then select the :guilabel:`Track Inventory`
 checkbox. The :guilabel:`Tracking` and :guilabel:`Quantity On Hand` fields display.
 
-Click into the :guilabel:`Tracking` field and select either :guilabel:`By Lots` or :guilabel:`By
-Unique Serial Number`. Enter the number of products available to rent in the :guilabel:`Quantity On
-Hand` field.
+Click into the :guilabel:`Tracking` field and select :guilabel:`By Unique Serial Number`. Enter the
+number of products available to rent in the :guilabel:`Quantity On Hand` field.
 
 For the :guilabel:`Category` field, select :guilabel:`Goods` from the drop-down menu or create a new
-category by typing in the name and clicking :guilabel:`Create`. Configure :ref:`basic rental rate
-<rental/products/base-rental-period-price>` and any :ref:`additional rates
-<rental/products/prices-tab>`. Click the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon
-near the top to save.
+category by typing in the name and clicking :guilabel:`Create`. Configure the :ref:`basic rental
+rate <rental/products/base-rental-period-price>` and any :ref:`additional rates
+<rental/products/price-tab-method>`.
 
 Rental Transfers feature
 ========================
@@ -193,6 +197,8 @@ checkbox.
 .. image:: products/rental-transfers-checkbox.png
    :alt: Sample of the Rental Settings with Rental Transfers enabled.
 
+.. _rental/products/rental-transfers-note:
+
 .. note::
    The **Inventory** app automatically creates an internal default location once the
    :guilabel:`Rental Transfers` feature is enabled. Odoo uses the new default location,
@@ -206,13 +212,8 @@ Multi-location management and transfers
 =======================================
 
 .. important::
-   The **Inventory** app must be installed to set up this configuration. The **Inventory** app
-   automatically creates an internal default location once the :guilabel:`Rental Transfers` feature
-   is enabled. Odoo uses the new default location, :guilabel:`Customer/Rental`, to track products
-   during the rental period (moving them from :guilabel:`Stock` to :guilabel:`Customer/Rental` upon
-   rental, and back upon return).
-
-   Do not modify :guilabel:`Customer/Rental` to avoid corrupting inventory tracking.
+   Refer to the :ref:`Rental Transfers note <rental/products/rental-transfers-note>` for information
+   about internal location configuration and inventory tracking.
 
 Tracking the location of high-value physical products between locations is essential. The **Rental**
 app helps with the :guilabel:`Rental Transfers` feature. Activating rental transfers means the
@@ -231,20 +232,18 @@ To configure new locations, navigate to :menuselection:`Inventory app --> Config
 Locations`. Click :guilabel:`New` to configure a new internal location.
 
 On the new location page, enter the :guilabel:`Location Name` and ensure the :guilabel:`Parent
-Location` field is set to :guilabel:`WH`. Click the :icon:`fa-cloud-upload` :guilabel:`(Save
-manually)` icon near the top to save.
+Location` field is set to :guilabel:`WH`.
 
 .. example::
    A bike rental business has two store locations within the same city. Both locations allow for
-   pickup and dropoff of their bikes. The company wants to track its bikes accurately at each
+   pick-up and drop-off of their bikes. The company wants to track its bikes accurately at each
    location.
 
    Ensure the **Rental** and **Inventory** apps are configured by enabling :guilabel:`Rental
-   Transfers` in the **Rental app** and :guilabel:`Storage Locations` in the **Inventory** app.
+   Transfers` in the **Rental** app and :guilabel:`Storage Locations` in the **Inventory** app.
 
    Next, go to the :menuselection:`Inventory app > Configuration > Locations`. Create a new location
-   Next, go to the :menuselection:`Inventory app --> Configuration --> Locations`. Create a new
-   location for each storefront.
+   for each storefront.
 
    .. image:: products/configured-locations.png
       :alt: Sample of internal inventory locations that represent different rental store locations.
@@ -288,7 +287,8 @@ Pickup and return receipts can be created and downloaded for customers when they
 rental products.
 
 To create a pickup or return receipt, navigate to the desired rental order, click the :icon:`fa-cog`
-:guilabel:`(Actions)` icon to reveal a drop-down menu.
+To create a pickup or return receipt, navigate to the desired rental order, and click the
+:icon:`fa-cog` :guilabel:`(Actions)` icon to reveal a drop-down menu.
 
 .. image:: products/print-pickup-return-receipt.png
    :alt: The pickup and return receipt print option in the Odoo Rental application.
@@ -302,4 +302,3 @@ Odoo downloads a PDF with the current status of the rented items.
    - :doc:`../../../inventory_and_mrp/inventory`
    - `Odoo Tutorials: Configuring a rental product
      <https://youtu.be/CE-SahTUC9A?si=APacZmYDIsVnHOnj>`_
-
