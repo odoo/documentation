@@ -72,6 +72,13 @@ beyond the scope of Odoo support services.
    - On some browsers, an error code mentioning the DNS (such as `DNS_PROBE_FINISHED_NXDOMAIN`) is
      displayed.
 
+.. _iot/troubleshooting/printing:
+
+The IoT system is connected and reports are assigned to a printer that cannot print
+-----------------------------------------------------------------------------------
+
+Verify that the browser is allowed to :ref:`access devices on the local network <pos/lna/browser-permission>`.
+
 .. _iot/troubleshooting/https_certificate:
 
 HTTPS certificate generation issues and errors
