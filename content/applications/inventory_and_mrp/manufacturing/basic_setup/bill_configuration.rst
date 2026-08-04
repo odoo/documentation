@@ -233,6 +233,8 @@ calculate costs, and define how components are consumed.
    :align: center
    :alt: Show the *Miscellaneous* tab of the BoM.
 
+.. _manufacturing/bill_configuration/by-products:
+
 Add by-products to BoMs
 =======================
 
