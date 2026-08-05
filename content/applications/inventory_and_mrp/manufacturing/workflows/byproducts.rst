@@ -31,6 +31,8 @@ so, navigate to :menuselection:`Manufacturing app --> Configuration --> Settings
 With the :guilabel:`By-Products` setting enabled, a :guilabel:`By-products` tab appears on product
 |BoMs|.
 
+.. _manufacturing/byproducts/add-to-bom:
+
 Add byproduct to BoM
 ====================
 
