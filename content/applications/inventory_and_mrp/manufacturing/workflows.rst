@@ -14,5 +14,6 @@ Workflows
    workflows/split_merge
    workflows/unbuild_orders
    workflows/byproducts
+   workflows/dismantle_products
    workflows/continuous_improvement
    workflows/manufacture_lots_serials
