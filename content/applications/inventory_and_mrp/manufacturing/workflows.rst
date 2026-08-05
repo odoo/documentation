@@ -8,6 +8,7 @@ Workflows
    :titlesonly:
 
    workflows/use_mps
+   workflows/continuous_production
    workflows/work_center_time_off
    workflows/scrap_manufacturing
    workflows/manufacturing_backorders
