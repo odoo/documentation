@@ -362,7 +362,8 @@ protocol.
 
 Odoo generates a separate SSL certificate for each domain :ref:`mapped to a database
 <domain-name/db-map>` using `Let's Encrypt's certificate authority and ACME protocol
-<https://letsencrypt.org/how-it-works/>`_.
+<https://letsencrypt.org/how-it-works/>`_. Any CAA records configured for the domain must `allow
+Let's Encrypt <https://letsencrypt.org/docs/caa/>`_, otherwise certificate generation may fail.
 
 .. note::
    - Certificate generation may take up to 24 hours.
