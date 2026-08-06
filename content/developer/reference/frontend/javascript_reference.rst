@@ -726,11 +726,15 @@ Date (`date`)
 
             <field name="datefield" options="{'min_date': 'today', 'max_date': '2023-12-31'}" />
 
-    - `warn_future`: displays a warning if the value is in the future (based on today).
+    - `warning`: specifies when to display a warning (`"none"` by default).
+
+        The available warning modes are: `"none"`, `"future"`, and `"past"`.
+        Displays a warning if the value is in the future or in the past (based on
+        today), depending on the selected mode.
 
         .. code-block:: xml
 
-            <field name="datefield" options="{'warn_future': true}" />
+            <field name="datefield" options="{'warning': 'future'}" />
 
     - `numeric`: when set to true, it shows the date in the format set on the current language.
       (default: `false`).
