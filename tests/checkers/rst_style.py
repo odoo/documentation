@@ -18,6 +18,37 @@ FORBIDDEN_HEADING_DELIMITER_RE = re.compile(
 GIT_CONFLICT_MARKERS = ['<' * 7, '>' * 7]
 ALLOWED_EARLY_BREAK_RE = re.compile(r'^\s*(\.\. |:\S+:\s+)', re.IGNORECASE)  # Contains markup.
 TOCTREE_DIRECTIVE_RE = re.compile(r'^\s*\.\.\s+toctree::\s*$', re.IGNORECASE)
+# sphinx-tabs: tab-like directives must be nested under .. tabs:: (see tests/main.py CUSTOM_RST_DIRECTIVES).
+TABS_DIRECTIVE_RE = re.compile(r'^(\s*)\.\.\s+tabs::\s*')
+TAB_CHILD_DIRECTIVE_RE = re.compile(
+    r'^(\s*)\.\.\s+(tab|group-tab|code-tab)::\s*'
+)
+
+
+@sphinxlint.checker('.rst')
+def check_tabs_directive_nesting(file, lines, options=None):
+    """ Check that .. tab:: / .. group-tab:: / .. code-tab:: are nested under .. tabs::. """
+    tabs_indent_stack = []
+
+    for lno, line in enumerate(lines):
+        stripped = line.strip()
+        if not stripped or stripped.startswith('#'):
+            continue
+
+        indent_match = re.match(r'^(\s*)', line)
+        indent = len(indent_match.group(1)) if indent_match else 0
+
+        while tabs_indent_stack and indent <= tabs_indent_stack[-1]:
+            tabs_indent_stack.pop()
+
+        if TABS_DIRECTIVE_RE.match(line):
+            tabs_indent_stack.append(indent)
+        elif TAB_CHILD_DIRECTIVE_RE.match(line):
+            if not tabs_indent_stack or indent <= tabs_indent_stack[-1]:
+                yield lno + 1, (
+                    "tab directive must be nested under .. tabs:: (indent it under a parent "
+                    ".. tabs:: block)"
+                )
 
 
 @sphinxlint.checker('.rst')
