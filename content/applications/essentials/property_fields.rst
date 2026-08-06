@@ -134,10 +134,10 @@ models. Once set, the property is shared by all records that are linked to the s
          - Model
          - Parent
        * - :guilabel:`Accounting`
-         - :ref:`Asset/Revenue Recognition <create-assets-entry>`
+         - :ref:`Asset/Revenue Recognition <accounting/assets/creation>`
 
            :doc:`Loan </applications/finance/accounting/bank/loans>`
-         - :ref:`Asset model <assets/asset-model>`
+         - :ref:`Asset model <accounting/assets/models>`
 
            :ref:`Journal <cheat_sheet/journals>`
        * - :guilabel:`Appraisals`
