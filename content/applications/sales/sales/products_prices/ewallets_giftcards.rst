@@ -9,6 +9,8 @@ To enable eWallets and gift cards for eCommerce and Point of Sale (PoS), first e
 Settings --> Pricing section`. Once enabled, go to :menuselection:`Sales app --> Products --> Gift
 cards & eWallet` and :guilabel:`Create` a new eWallet or gift card program.
 
+.. _sales/ewallets_giftcards/ewallets:
+
 eWallets
 ========
 
