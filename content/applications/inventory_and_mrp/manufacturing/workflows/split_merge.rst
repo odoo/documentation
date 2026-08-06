@@ -2,81 +2,122 @@
 Split and merge manufacturing orders
 ====================================
 
-In Odoo *Manufacturing*, it is possible to create manufacturing orders for a single unit of an item,
-or multiple units of the same item. In some cases, it may be necessary to split a manufacturing
-order that contains multiple units into two or more orders, or to merge two or more orders into a
-single order.
+.. |MO| replace:: :abbr:`MO (manufacturing order)`
+.. |MOs| replace:: :abbr:`MOs (manufacturing orders)`
+.. |BoM| replace:: :abbr:`BoM (bill of materials)`
+
+In Odoo **Manufacturing**, it is possible to create manufacturing orders (MOs) for a single unit of
+an item, or multiple units of the same item. A partially produced manufacturing order may be split
+to account for both completed units and remaining production requirements. This process ensures that
+the current |MO| reflects only the quantity actually finished, while supplementary |MOs| track the
+balance.
+
+An |MO| should be split if the remaining quantity cannot be completed immediately due to internal or
+external constraints.
+
+When a split is executed, the system updates the original |MO| to reflect the specific quantity that
+has been produced and is ready for closing. Then, new |MOs| are automatically generated for the
+difference between the original planned quantity and the actual produced quantity. This ensures that
+lead times, labor costs, and material consumption remain accurately allocated to the specific time
+frame in which the work occurred.
+
+Splits can be set up from the |MO| form or the *Manufacturing Orders* page.
 
 .. important::
-   A manufacturing order can only contain one unit of a product, or multiple units of a single
-   product that all use the same Bill of Materials (BoM). As a result, it is only possible to merge
-   manufacturing orders when every order contains the same product being manufactured with the same
-   BoM.
+   An |MO| can only contain one unit of a product, or multiple units of a single product that all
+   use the same bill of materials (BoM). As a result, it is only possible to merge |MOs| for the
+   same products with the same |BoM|.
 
 Split manufacturing orders
 ==========================
 
-To split a manufacturing order into multiple orders, begin by navigating to
-:menuselection:`Manufacturing --> Operations --> Manufacturing Orders`, then select a manufacturing
-order. At the top of the page, next to the :guilabel:`New` button, the manufacturing order's
-reference number appears with a :guilabel:`⚙️ (settings)` button next to it.
+|MOs| can be split in two ways:
 
-Click the :guilabel:`⚙️ (settings)` button to open the general settings for the manufacturing order,
-then select :guilabel:`Split`.
+- :ref:`manufacturing/split_merge/mo-page-split`
+- :ref:`manufacturing/split_merge/mo-actions-menu`
 
-.. image:: split_merge/settings-split.png
-   :align: center
-   :alt: The Settings and Split buttons on a manufacturing order.
+.. _manufacturing/split_merge/mo-page-split:
 
-After selecting :guilabel:`Split`, a :guilabel:`Split production` pop-up window appears. In the
-:guilabel:`Split #` field, enter the number of manufacturing orders that the original order should
-be split into, then click outside of the field. A table appears below, with a line for each new
-manufacturing order that will be created by the split. In the :guilabel:`Quantity To Produce`
-column, enter the number of units that will be assigned to each new manufacturing order. Finally,
-click :guilabel:`Split` to split the manufacturing order.
+From the Manufacturing Orders page
+----------------------------------
 
-.. image:: split_merge/split-production-window.png
-   :align: center
-   :alt: The Split production pop-up window for a manufacturing order.
+Navigate to :menuselection:`Manufacturing app --> Operations --> Manufacturing Orders`.
 
-After clicking :guilabel:`Split`, the original manufacturing order is split into the number of
-orders that was specified in the :guilabel:`Split #` field. The reference numbers for the new
-manufacturing orders are the reference number for the original order with *-###* tags added to the
-end.
+Select the checkbox next to the |MO| to be split. Click :icon:`fa-cog` :menuselection:`Actions -->
+Split`. A *Split production* pop-up window appears.
+
+In the :guilabel:`Max Batch Size` field, enter the number of units that each batch should be split
+into, then click outside of the field. The :guilabel:`# Splits` field updates with the total number
+of |MOs| that will be created. A table appears below, with a line for each new |MO| that will be
+created by the split. In the :guilabel:`Quantity To Produce` column, enter the number of units that
+will be assigned to each new |MO|. Finally, click :guilabel:`Split` to split the |MO|.
 
 .. example::
-   Manufacturing order *WH/MO/00012* is split into three separate orders. The reference numbers for
-   the new orders are *WH/MO/00012-001*, *WH/MO/00012-002*, and *WH/MO/00012-003*.
+   A work order for `5` units of the `Drawer` product are split with a :guilabel:`Max Batch Size` of
+   `2`. This creates 3 splits; two of the splits contain `2` units each, and the final split
+   contains a single unit.
+
+   .. image:: split_merge/split-production-window.png
+      :alt: The Split production pop-up window for a manufacturing order.
+
+After clicking :guilabel:`Split`, the original |MO| is split into the number of orders that was
+specified in the :guilabel:`# Split` field. The reference numbers for the new |MOs| are the
+reference number for the original order with `-###` tags added to the end.
+
+.. example::
+   |MO| `WH/MO/00012` is split into three separate orders. The reference numbers for the new orders
+   are:
+
+   - `WH/MO/00012-001`
+   - `WH/MO/00012-002`
+   - `WH/MO/00012-003`
+
+.. _manufacturing/split_merge/mo-actions-menu:
+
+From the actions menu of an |MO|
+--------------------------------
+
+To split an |MO| into multiple orders, begin by navigating to :menuselection:`Manufacturing app -->
+Operations --> Manufacturing Orders`, then select a confirmed |MO|. At the top of the page, next to
+the :guilabel:`New` button, the |MO|'s reference number appears with a :icon:`fa-cog`
+:guilabel:`(Actions)` icon next to it.
+
+Click the :icon:`fa-cog` :guilabel:`(Actions)` icon to reveal the drop-down menu for the |MO|, then
+select :guilabel:`Split`.
+
+.. image:: split_merge/settings-split.png
+   :alt: The Actions menu on a manufacturing order.
+
+After selecting :guilabel:`Split`, a *Split production* pop-up window appears. In the :guilabel:`Max
+Batch Size` field, enter the number of units that each batch should be split into, then click
+outside of the field. The :guilabel:`# Splits` field updates with the total number of |MOs| that
+will be created. A table appears below, with a line for each new |MO| that will be created by the
+split. In the :guilabel:`Quantity To Produce` column, enter the number of units that will be
+assigned to each new |MO|. Finally, click :guilabel:`Split` to split the |MO|.
+
+After clicking :guilabel:`Split`, the original |MO| is split into the number of orders that was
+specified in the :guilabel:`# Split` field. The reference numbers for the new |MOs| are the
+reference number for the original order with `-###` tags added to the end.
+
+To complete the |MOs|, complete all work orders, then click the :guilabel:`Produce All` button on
+the |MO| form.
 
 Merge manufacturing orders
 ==========================
 
-To merge two or more manufacturing orders into a single order, begin by navigating to
-:menuselection:`Manufacturing --> Operations --> Manufacturing Orders`. Select the manufacturing
-orders that will be merged by activating the checkbox to the left of the name of each order.
+To merge two or more |MOs| using the same |BoM| into a single order, begin by navigating to
+:menuselection:`Manufacturing app --> Operations --> Manufacturing Orders`. Select the |MOs| that
+will be merged by selecting the checkbox to the side of the name of each order.
 
 .. image:: split_merge/select-orders.png
-   :align: center
-   :alt: Select manufacturing orders that will be merged by clicking the checkbox for each.
+   :alt: Select at least two orders using the same BoM to merge.
 
-Once all manufacturing orders have been selected, click the :guilabel:`Actions` button at the top of
-the page, then select :guilabel:`Merge` from the drop-down menu.
+Once all |MOs| have been selected, click :icon:`fa-cog` :menuselection:`Actions --> Merge`.
 
-.. image:: split_merge/actions-merge.png
-   :align: center
-   :alt: The Actions and Merge buttons on the Manufacturing Orders page.
-
-The selected manufacturing orders are merged into a single order. The reference number for the new
-manufacturing order is the next sequential number that has *not* already been assigned to an order.
+The selected |MOs| are merged into a single order. The reference number for the new |MO| is the next
+sequential number that has *not* already been assigned to an order.
 
 .. example::
-   The last reference number used for a manufacturing order was *WH/MO/00012*. Two manufacturing
-   orders, *WH/MO/00008* and *WH/MO/00009*, are merged into a single order. The reference number for
-   the manufacturing order created by the merger is *WH/MO/00013*.
-
-In the :guilabel:`Source` field for the manufacturing order created by the merger, the reference
-numbers of the manufacturing orders that were merged are listed.
-
-.. example::
-   Manufacturing orders *WH/MO/00009* and *WH/MO/00010* are merged to create *WH/MO/00011*. The
-   source field for *WH/MO/00011* lists both *WH/MO/00009* and *WH/MO/00010*.
+   The last reference number used for an |MO| was `WH/MO/00012`. Two |MOs|, `WH/MO/00008` and
+   `WH/MO/00009`, are merged into a single order. The reference number for the |MO| created by the
+   merger is `WH/MO/00013`.
