@@ -34,18 +34,58 @@ Prerequisites
 Such transactions must be posted on an **Assets Account** rather than on the default
 expense account.
 
-Configure an Assets Account
----------------------------
+Assets account
+--------------
 
-To configure your account in the **Chart of Accounts**, go to :menuselection:`Accounting -->
-Configuration --> Chart of Accounts`, click on *Create*, and fill out the form.
+To create or configure an **assets** account, open the **Accounting** app and navigate to
+:menuselection:`Configuration --> Chart of Accounts`. Then, either click :guilabel:`New` to create a
+new account, or select an already existing account by clicking on it.
 
-.. image:: assets/assets01.png
-   :align: center
-   :alt: Configuration of an Assets Account in Odoo Accounting
+Fill out the following fields:
 
-.. note::
-   This account's type must be either *Fixed Assets* or *Non-current Assets*.
+- :guilabel:`Account Name`: Input a name for the account
+- :guilabel:`Code`: Enter a unique identifying code
+
+.. tabs::
+
+   .. tab:: Accounting
+
+      - :guilabel:`Type`: Select a type of account. Note that the account *must* be either of the
+        :guilabel:`Fixed Assets` or :guilabel:`Non-current Assets` type.
+      - :guilabel:`Default Taxes`: Choose a default tax for the account.
+      - :guilabel:`Tags`: Optional tags for custom reporting.
+      - :guilabel:`Variation Account`: Optional, select an account to register the inventory
+        variation of the period into a specific account. This field is only available if the account
+        type is :guilabel:`Current Assets`.
+      - :guilabel:`Currency`: Select a currency to force all journal items in this account to use
+        that currency. Leave it empty for no restriction.
+      - :guilabel:`Allow Reconciliation`: Check the box if the account allows invoices and payments
+        matching of journal items.
+      - :guilabel:`Active`: Activate or deactivate use of the account.
+      - :guilabel:`Companies`: Select the companies in which the account is available.
+
+   .. tab:: Automation
+
+      - :guilabel:`Automate Asset`: test
+
+        - :guilabel:`No`: The draft sheet is manually created by the user when validating a vendor
+          bill.
+        - :guilabel:`Create in draft`: Odoo automatically creates a depreciation board with draft
+          entries. You can verify the draft entries before validating them.
+        - :guilabel:`Create and validate`: The asset is created and posted. You can still reset the
+          posted entry to draft and modify it.
+      - :guilabel:`Manage Items`: If checked, the number of quantities on the invoice line
+        determines the number of assets created.
+      - :guilabel:`Asset Model`: You can link one model to this account, so the assets booked on
+        this account always follow the same structure.
+
+   .. tab:: Description
+
+      Optional, enter a description of the account.
+
+   .. tab:: Mapping
+
+      View all the companies having access to this account
 
 Post an expense to the right account
 ------------------------------------
