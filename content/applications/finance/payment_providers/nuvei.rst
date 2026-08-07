@@ -1,3 +1,5 @@
+:custom-css: payment_methods.css
+
 =====
 Nuvei
 =====
@@ -45,43 +47,82 @@ Configuration on Odoo
    You can also test Nuvei using the :ref:`test mode <payment_providers/test-mode>` and your Sandbox
    Dashboard values.
 
-.. _payment_providers/nuvei/services:
-
-Payment methods
-===============
-
-Most Nuvei payment methods are **region specific**. The supported payment methods and brands for
-each country are listed below:
-
-+---------------------------------+----------------------------------+
-| **Argentina**                   | **Uruguay**                      |
-|                                 |                                  |
-| - Boleto                        | - Card (AMEX, Mastercard, Visa)  |
-| - Card (AMEX, Mastercard, Visa) | - Local Payments (Abitab,        |
-|                                 |   RedPagos)                      |
-+---------------------------------+----------------------------------+
-| **Brazil**                      | **Mexico**                       |
-|                                 |                                  |
-| - Boleto                        | - Card (AMEX, Mastercard, Visa)  |
-| - Card (AMEX, Mastercard, Visa) | - SPEI                           |
-| - Pix                           | - Oxxo Pay                       |
-+---------------------------------+----------------------------------+
-| **Canada**                      | **Peru**                         |
-|                                 |                                  |
-| - Card (AMEX, Mastercard, Visa) | - Card (AMEX, Mastercard, Visa)  |
-|                                 | - Boleto                         |
-+---------------------------------+----------------------------------+
-| **Chile**                       | **United States**                |
-|                                 |                                  |
-| - Card (AMEX, Mastercard, Visa) | - Card (AMEX, Mastercard, Visa)  |
-| - WebPay                        |                                  |
-+---------------------------------+----------------------------------+
-| **Colombia**                    |                                  |
-|                                 |                                  |
-| - Card (AMEX, Mastercard, Visa) |                                  |
-| - PSE                           |                                  |
-|                                 |                                  |
-+---------------------------------+----------------------------------+
-
 .. seealso::
    :doc:`../payment_providers`
+
+Supported payment methods
+=========================
+
+.. container:: payment-methods d-grid gap-3 mx-1 my-0 p-0
+
+   .. figure:: payment_method_images/bank.png
+      :alt: Astropay TEF
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Astropay TEF
+
+   .. figure:: payment_method_images/boleto.png
+      :alt: Boleto
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Boleto
+
+   .. figure:: payment_method_images/card.png
+      :alt: Card
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Card
+
+   .. figure:: payment_method_images/bank.png
+      :alt: Local Payments
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Local Payments
+
+   .. figure:: payment_method_images/oxxopay.png
+      :alt: Oxxo Pay
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Oxxo Pay
+
+   .. figure:: payment_method_images/pix.png
+      :alt: Pix
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Pix
+
+   .. figure:: payment_method_images/card.png
+      :alt: PSE
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      PSE
+
+   .. figure:: payment_method_images/spei.png
+      :alt: SPEI
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      SPEI
+
+   .. figure:: payment_method_images/webpay.png
+      :alt: WebPay
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      WebPay

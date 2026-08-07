@@ -1,3 +1,5 @@
+:custom-css: payment_methods.css
+
 ======
 Stripe
 ======
@@ -112,3 +114,280 @@ the Stripe payment provider <payment_providers/supported_providers>`, then go to
 .. tip::
    Stripe allows to :ref:`manually capture <payment_providers/manual_capture>` and :ref:`refund
    <payment_providers/refunds>` payments either from Odoo or directly from the Stripe dashboard.
+
+Supported payment methods
+=========================
+
+.. container:: payment-methods d-grid gap-3 mx-1 my-0 p-0
+
+   .. figure:: payment_method_images/ach_direct_debit.png
+      :alt: ACH Direct Debit
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      ACH Direct Debit
+
+   .. figure:: payment_method_images/affirm.png
+      :alt: Affirm
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Affirm
+
+   .. figure:: payment_method_images/afterpay.png
+      :alt: Afterpay
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Afterpay
+
+   .. figure:: payment_method_images/alipay.png
+      :alt: Alipay
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Alipay
+
+   .. figure:: payment_method_images/alma.png
+      :alt: Alma
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Alma
+
+   .. figure:: payment_method_images/amazon_pay.png
+      :alt: Amazon Pay
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Amazon Pay
+
+   .. figure:: payment_method_images/bacs_direct_debit.png
+      :alt: BACS Direct Debit
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      BACS Direct Debit
+
+   .. figure:: payment_method_images/bancontact.png
+      :alt: Bancontact
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Bancontact
+
+   .. figure:: payment_method_images/becs_direct_debit.png
+      :alt: BECS Direct Debit
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      BECS Direct Debit
+
+   .. figure:: payment_method_images/boleto.png
+      :alt: Boleto
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Boleto
+
+   .. figure:: payment_method_images/card.png
+      :alt: Card
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Card
+
+   .. figure:: payment_method_images/cash_app_pay.png
+      :alt: Cash App Pay
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Cash App Pay
+
+   .. figure:: payment_method_images/clearpay.png
+      :alt: Clearpay
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Clearpay
+
+   .. figure:: payment_method_images/eps.png
+      :alt: EPS
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      EPS
+
+   .. figure:: payment_method_images/fpx.png
+      :alt: FPX
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      FPX
+
+   .. figure:: payment_method_images/grabpay.png
+      :alt: GrabPay
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      GrabPay
+
+   .. figure:: payment_method_images/ideal_wero.png
+      :alt: iDEAL
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      iDEAL
+
+   .. figure:: payment_method_images/klarna.png
+      :alt: Klarna
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Klarna
+
+   .. figure:: payment_method_images/mobile_pay.png
+      :alt: MobilePay
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      MobilePay
+
+   .. figure:: payment_method_images/multibanco.png
+      :alt: Multibanco
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Multibanco
+
+   .. figure:: payment_method_images/p24.png
+      :alt: P24
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      P24
+
+   .. figure:: payment_method_images/paynow.png
+      :alt: PayNow
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      PayNow
+
+   .. figure:: payment_method_images/paypal.png
+      :alt: Paypal
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Paypal
+
+   .. figure:: payment_method_images/pix.png
+      :alt: Pix
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Pix
+
+   .. figure:: payment_method_images/promptpay.png
+      :alt: Prompt Pay
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Prompt Pay
+
+   .. figure:: payment_method_images/revolut_pay.png
+      :alt: Revolut Pay
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Revolut Pay
+
+   .. figure:: payment_method_images/satispay.png
+      :alt: Satispay
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Satispay
+
+   .. figure:: payment_method_images/sepa.png
+      :alt: SEPA Direct Debit
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      SEPA Direct Debit
+
+   .. figure:: payment_method_images/swish.png
+      :alt: Swish
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Swish
+
+   .. figure:: payment_method_images/twint.png
+      :alt: Twint
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Twint
+
+   .. figure:: payment_method_images/upi.png
+      :alt: UPI
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      UPI
+
+   .. figure:: payment_method_images/unknown.png
+      :alt: Express Checkout
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Express Checkout
+
+   .. figure:: payment_method_images/wechat_pay.png
+      :alt: WeChat Pay
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      WeChat Pay
+
+   .. figure:: payment_method_images/zip.png
+      :alt: Zip
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Zip

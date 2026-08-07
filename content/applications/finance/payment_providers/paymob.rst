@@ -1,3 +1,5 @@
+:custom-css: payment_methods.css
+
 ======
 Paymob
 ======
@@ -63,3 +65,136 @@ Configuration on Odoo
 
 .. seealso::
    :doc:`../payment_providers`
+
+Supported payment methods
+=========================
+
+.. container:: payment-methods d-grid gap-3 mx-1 my-0 p-0
+
+   .. figure:: payment_method_images/aman.png
+      :alt: Aman
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Aman
+
+   .. figure:: payment_method_images/card.png
+      :alt: Card
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Card
+
+   .. figure:: payment_method_images/contact.png
+      :alt: Contact
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Contact
+
+   .. figure:: payment_method_images/forsa.png
+      :alt: Forsa
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Forsa
+
+   .. figure:: payment_method_images/halan.png
+      :alt: Halan
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Halan
+
+   .. figure:: payment_method_images/bank.png
+      :alt: Bank Installments
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Bank Installments
+
+   .. figure:: payment_method_images/kiosk.png
+      :alt: Kiosk
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Kiosk
+
+   .. figure:: payment_method_images/wallet.png
+      :alt: Mobile Wallets Egypt
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Mobile Wallets Egypt
+
+   .. figure:: payment_method_images/omannet.png
+      :alt: OmanNet
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      OmanNet
+
+   .. figure:: payment_method_images/premiumcard.png
+      :alt: Premium Card
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Premium Card
+
+   .. figure:: payment_method_images/souhoola.png
+      :alt: Souhoola
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Souhoola
+
+   .. figure:: payment_method_images/stcpay.png
+      :alt: STCPay
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      STCPay
+
+   .. figure:: payment_method_images/sympl.png
+      :alt: Sympl
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Sympl
+
+   .. figure:: payment_method_images/tabby.png
+      :alt: Tabby
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Tabby
+
+   .. figure:: payment_method_images/tamara.png
+      :alt: Tamara
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Tamara
+
+   .. figure:: payment_method_images/valu.png
+      :alt: ValU
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      ValU
