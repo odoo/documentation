@@ -173,6 +173,9 @@ extensions = [
     # Custom Odoo theme
     'odoo_theme',
 
+    # Custom Odoo dynamic examples
+    'odoo_dynamic_examples',
+
     # Youtube and Vimeo videos integration (youtube, vimeo directives)
     'embedded_video',
 
