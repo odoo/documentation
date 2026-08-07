@@ -138,17 +138,13 @@ service.
               [this.fieldToFetch]: {},
               [this.secondFieldToFetch]: {},
           },
-          context: {
-              bin_size: true,
-          }
       })
 
 #. Add a :code:`loadImages(domain) {...}` method to the `GalleryController`. It should perform a
    `webSearchRead` call from the orm service to fetch records corresponding to the domain, and
    use `imageField` received in props.
-#. If you didn't include `bin_size` in the context of the call, you will receive the image field
-   encoded in base64. Make sure to put `bin_size` in the context to receive the size of the image
-   field. We will display the image later.
+#. If you need to fetch data of binary fields in base64 encoding, you should set the context
+   `include_binary_content=True`. The content is sent automatically for records without an id.
 #. Modify the `setup` code to call that method in the `onWillStart` and `onWillUpdateProps`
    hooks.
 #. Modify the template to display the id and the size of each image inside the default slot of
