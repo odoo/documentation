@@ -229,6 +229,8 @@ assigned pricelist is linked to a different country group.
 Discounts
 =========
 
+.. _ecommerce/prices/discount-program:
+
 Discounts programs
 ------------------
 

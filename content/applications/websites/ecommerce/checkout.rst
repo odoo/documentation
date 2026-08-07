@@ -39,6 +39,25 @@ Cart` feature:
   redirected to the cart).
 - :guilabel:`Go to cart`: The customer is redirected to the cart immediately.
 
+.. tip::
+   When :doc:`loyalty programs </applications/sales/sales/products_prices/loyalty_discount>` with
+   the :guilabel:`Promotions` :ref:`program type <sales/pricing_management/program-types>` are
+   configured, a progress bar toward the :ref:`reward <sales/loyalty_discount/rewards>` is
+   displayed when an item is added to the cart.
+
+   .. example::
+
+      Offer customers free shipping when they place a larger order. To do so:
+
+      #. Create a loyalty program and set the :guilabel:`Program Type` field to
+         :guilabel:`Promotions`.
+      #. Set a :ref:`conditional rule <sales/loyalty_discount/conditional-rules>` with the minimum
+         order amount required to qualify for free shipping, e.g., `$ 1,000.00`.
+      #. Define a :guilabel:`Free shipping` reward.
+
+      .. image:: checkout/progress-bar.png
+         :alt: Progress bar for reward.
+
 .. _ecommerce/checkout/prevent-sale:
 
 Button customization
