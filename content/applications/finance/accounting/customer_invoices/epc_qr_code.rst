@@ -34,6 +34,8 @@ Number` column.
 .. image:: epc_qr_code/bank-journal.png
    :alt: Bank account number column in the bank journal
 
+.. _accounting/customer-invoices/epc:
+
 Issue invoices with EPC QR codes
 ================================
 
