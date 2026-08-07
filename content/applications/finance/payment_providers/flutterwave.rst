@@ -1,3 +1,5 @@
+:custom-css: payment_methods.css
+
 ===========
 Flutterwave
 ===========
@@ -42,3 +44,64 @@ Configuration on Odoo
 
 .. seealso::
    - :doc:`../payment_providers`
+
+Supported payment methods
+=========================
+
+.. container:: payment-methods d-grid gap-3 mx-1 my-0 p-0
+
+   .. figure:: payment_method_images/bank.png
+      :alt: Bank Account
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Bank Account
+
+   .. figure:: payment_method_images/bank.png
+      :alt: Bank Transfer
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Bank Transfer
+
+   .. figure:: payment_method_images/card.png
+      :alt: Card
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Card
+
+   .. figure:: payment_method_images/mtn-mobile-money.png
+      :alt: Mobile money
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Mobile money
+
+   .. figure:: payment_method_images/mpesa.png
+      :alt: M-Pesa
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      M-Pesa
+
+   .. figure:: payment_method_images/paypal.png
+      :alt: Paypal
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Paypal
+
+   .. figure:: payment_method_images/flutterwave.png
+      :alt: USSD
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      USSD

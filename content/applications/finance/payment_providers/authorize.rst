@@ -1,3 +1,5 @@
+:custom-css: payment_methods.css
+
 =============
 Authorize.net
 =============
@@ -60,6 +62,27 @@ Odoo configuration
    - The webhook is automatically configured with the correct URL and event types. To review
      webhook notifications on Authorize.net, log into the merchant portal, go to
      :menuselection:`Account --> Account and API Settings`, and click :guilabel:`Webhooks`.
+
+Supported payment methods
+=========================
+
+.. container:: payment-methods d-grid gap-3 mx-1 my-0 p-0
+
+   .. figure:: payment_method_images/ach_direct_debit.png
+      :alt: ACH Direct Debit
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      ACH Direct Debit
+
+   .. figure:: payment_method_images/card.png
+      :alt: Card
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Card
 
 Import an Authorize.Net statement
 =================================
