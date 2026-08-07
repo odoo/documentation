@@ -1,0 +1,45 @@
+/* Gallery of supported payment methods: a responsive grid of logos that wraps according to the page
+   width, each with its name centered below the logo */
+.payment-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+    gap: 1.5rem 1rem;
+    /* Overwrite Bootstrap's `.container` rules docutils adds alongside our class */
+    max-width: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.payment-methods figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Round the logo's own corners while stripping the `img-thumbnail` frame (border, padding,
+   background, shadow) that layout.js adds. The images are 240x160, so we size the element to the
+   logo (width only, height auto) instead of forcing a square box; otherwise `object-fit` would
+   letterbox the logo and the rounding would clip the transparent bands rather than the visible
+   tile. */
+.payment-methods figure img {
+    width: 64px;
+    height: auto;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    border-radius: .5rem;
+}
+
+.payment-methods figcaption {
+    margin-top: .5rem;
+    font-size: .8125rem;
+    line-height: 1.3;
+}
+
+/* Drop the anchor permalinks docutils appends after each caption */
+.payment-methods figcaption .headerlink {
+    display: none;
+}

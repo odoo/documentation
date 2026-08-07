@@ -1,3 +1,5 @@
+:custom-css: payment_methods.css
+
 =====
 Adyen
 =====
@@ -93,287 +95,346 @@ these steps:
 Supported payment methods
 =========================
 
-.. figure:: payment_images/ach_direct_debit.png
-   :width: 64px
+.. container:: payment-methods
 
-   ACH Direct Debit
+   .. figure:: payment_images/ach_direct_debit.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/affirm.png
-   :width: 64px
+      ACH Direct Debit
 
-   Affirm
+   .. figure:: payment_images/affirm.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/afterpay.png
-   :width: 64px
+      Affirm
 
-   Afterpay
+   .. figure:: payment_images/afterpay.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/alipay.png
-   :width: 64px
+      Afterpay
 
-   Alipay
+   .. figure:: payment_images/alipay.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/alipay_hk.png
-   :width: 64px
+      Alipay
 
-   AliPayHK
+   .. figure:: payment_images/alipay_hk.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/alma.png
-   :width: 64px
+      AliPayHK
 
-   Alma
+   .. figure:: payment_images/alma.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/bacs_direct_debit.png
-   :width: 64px
+      Alma
 
-   BACS Direct Debit
+   .. figure:: payment_images/bacs_direct_debit.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/bancontact.png
-   :width: 64px
+      BACS Direct Debit
 
-   Bancontact
+   .. figure:: payment_images/bancontact.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/benefit.png
-   :width: 64px
+      Bancontact
 
-   Benefit
+   .. figure:: payment_images/benefit.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/bizum.png
-   :width: 64px
+      Benefit
 
-   Bizum
+   .. figure:: payment_images/bizum.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/blik.png
-   :width: 64px
+      Bizum
 
-   BLIK
+   .. figure:: payment_images/blik.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/card.png
-   :width: 64px
+      BLIK
 
-   Card
+   .. figure:: payment_images/card.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/cash_app_pay.png
-   :width: 64px
+      Card
 
-   Cash App Pay
+   .. figure:: payment_images/cash_app_pay.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/clearpay.png
-   :width: 64px
+      Cash App Pay
 
-   Clearpay
+   .. figure:: payment_images/clearpay.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/dana.png
-   :width: 64px
+      Clearpay
 
-   Dana
+   .. figure:: payment_images/dana.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/duitnow.png
-   :width: 64px
+      Dana
 
-   DuitNow
+   .. figure:: payment_images/duitnow.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/eps.png
-   :width: 64px
+      DuitNow
 
-   EPS
+   .. figure:: payment_images/eps.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/fpx.png
-   :width: 64px
+      EPS
 
-   FPX
+   .. figure:: payment_images/fpx.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/gcash.png
-   :width: 64px
+      FPX
 
-   GCash
+   .. figure:: payment_images/gcash.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/gopay.png
-   :width: 64px
+      GCash
 
-   GoPay
+   .. figure:: payment_images/gopay.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/ideal_wero.png
-   :width: 64px
+      GoPay
 
-   iDEAL
+   .. figure:: payment_images/ideal_wero.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/kakaopay.png
-   :width: 64px
+      iDEAL
 
-   KakaoPay
+   .. figure:: payment_images/kakaopay.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/klarna.png
-   :width: 64px
+      KakaoPay
 
-   Klarna
+   .. figure:: payment_images/klarna.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/klarna.png
-   :width: 64px
+      Klarna
 
-   Klarna - Pay Now
+   .. figure:: payment_images/klarna.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/klarna.png
-   :width: 64px
+      Klarna - Pay Now
 
-   Klarna - Pay over time
+   .. figure:: payment_images/klarna.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/mbway.png
-   :width: 64px
+      Klarna - Pay over time
 
-   MB WAY
+   .. figure:: payment_images/mbway.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/mobile_pay.png
-   :width: 64px
+      MB WAY
 
-   MobilePay
+   .. figure:: payment_images/mobile_pay.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/momo.png
-   :width: 64px
+      MobilePay
 
-   MoMo
+   .. figure:: payment_images/momo.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/multibanco.png
-   :width: 64px
+      MoMo
 
-   Multibanco
+   .. figure:: payment_images/multibanco.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/napas_card.png
-   :width: 64px
+      Multibanco
 
-   Napas Card
+   .. figure:: payment_images/napas_card.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/bank.png
-   :width: 64px
+      Napas Card
 
-   Online Banking Czech Republic
+   .. figure:: payment_images/bank.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/bank.png
-   :width: 64px
+      Online Banking Czech Republic
 
-   Online Banking India
+   .. figure:: payment_images/bank.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/bank.png
-   :width: 64px
+      Online Banking India
 
-   Online Banking Slovakia
+   .. figure:: payment_images/bank.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/bank.png
-   :width: 64px
+      Online Banking Slovakia
 
-   Online Banking Thailand
+   .. figure:: payment_images/bank.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/bank.png
-   :width: 64px
+      Online Banking Thailand
 
-   Open banking
+   .. figure:: payment_images/bank.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/p24.png
-   :width: 64px
+      Open banking
 
-   P24
+   .. figure:: payment_images/p24.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/paybright.png
-   :width: 64px
+      P24
 
-   PayBright
+   .. figure:: payment_images/paybright.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/paysafecard.png
-   :width: 64px
+      PayBright
 
-   PaySafeCard
+   .. figure:: payment_images/paysafecard.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/paynow.png
-   :width: 64px
+      PaySafeCard
 
-   PayNow
+   .. figure:: payment_images/paynow.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/paypal.png
-   :width: 64px
+      PayNow
 
-   Paypal
+   .. figure:: payment_images/paypal.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/paytm.png
-   :width: 64px
+      Paypal
 
-   Paytm
+   .. figure:: payment_images/paytm.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/paytrail.png
-   :width: 64px
+      Paytm
 
-   Paytrail
+   .. figure:: payment_images/paytrail.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/pix.png
-   :width: 64px
+      Paytrail
 
-   Pix
+   .. figure:: payment_images/pix.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/promptpay.png
-   :width: 64px
+      Pix
 
-   Prompt Pay
+   .. figure:: payment_images/promptpay.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/ratepay.png
-   :width: 64px
+      Prompt Pay
 
-   Ratepay
+   .. figure:: payment_images/ratepay.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/samsung_pay.png
-   :width: 64px
+      Ratepay
 
-   Samsung Pay
+   .. figure:: payment_images/samsung_pay.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/sepa.png
-   :width: 64px
+      Samsung Pay
 
-   SEPA Direct Debit
+   .. figure:: payment_images/sepa.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/swish.png
-   :width: 64px
+      SEPA Direct Debit
 
-   Swish
+   .. figure:: payment_images/swish.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/touch_n_go.png
-   :width: 64px
+      Swish
 
-   Touch'n Go
+   .. figure:: payment_images/touch_n_go.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/trustly.png
-   :width: 64px
+      Touch'n Go
 
-   Trustly
+   .. figure:: payment_images/trustly.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/twint.png
-   :width: 64px
+      Trustly
 
-   Twint
+   .. figure:: payment_images/twint.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/upi.png
-   :width: 64px
+      Twint
 
-   UPI
+   .. figure:: payment_images/upi.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/vipps.png
-   :width: 64px
+      UPI
 
-   Vipps
+   .. figure:: payment_images/vipps.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/wallet.png
-   :width: 64px
+      Vipps
 
-   Wallets India
+   .. figure:: payment_images/wallet.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/walley.png
-   :width: 64px
+      Wallets India
 
-   Walley
+   .. figure:: payment_images/walley.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/wechat_pay.png
-   :width: 64px
+      Walley
 
-   WeChat Pay
+   .. figure:: payment_images/wechat_pay.png
+      :width: 64px
+      :class: o-no-modal
 
-.. figure:: payment_images/zip.png
-   :width: 64px
+      WeChat Pay
 
-   Zip
+   .. figure:: payment_images/zip.png
+      :width: 64px
+      :class: o-no-modal
+
+      Zip
