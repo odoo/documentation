@@ -1,3 +1,5 @@
+:custom-css: payment_methods.css
+
 ======
 Mollie
 ======
@@ -31,3 +33,110 @@ Odoo configuration
 
 .. seealso::
    :doc:`../payment_providers`
+
+Supported payment methods
+=========================
+
+.. container:: payment-methods
+
+   .. figure:: payment_images/bancontact.png
+      :width: 64px
+      :class: o-no-modal
+
+      Bancontact
+
+   .. figure:: payment_images/bank.png
+      :width: 64px
+      :class: o-no-modal
+
+      Bank Transfer
+
+   .. figure:: payment_images/belfius.png
+      :width: 64px
+      :class: o-no-modal
+
+      Belfius
+
+   .. figure:: payment_images/blik.png
+      :width: 64px
+      :class: o-no-modal
+
+      BLIK
+
+   .. figure:: payment_images/card.png
+      :width: 64px
+      :class: o-no-modal
+
+      Card
+
+   .. figure:: payment_images/eps.png
+      :width: 64px
+      :class: o-no-modal
+
+      EPS
+
+   .. figure:: payment_images/ideal_wero.png
+      :width: 64px
+      :class: o-no-modal
+
+      iDEAL
+
+   .. figure:: payment_images/in3.png
+      :width: 64px
+      :class: o-no-modal
+
+      in3
+
+   .. figure:: payment_images/kbc.png
+      :width: 64px
+      :class: o-no-modal
+
+      KBC/CBC
+
+   .. figure:: payment_images/klarna.png
+      :width: 64px
+      :class: o-no-modal
+
+      Klarna
+
+   .. figure:: payment_images/mbway.png
+      :width: 64px
+      :class: o-no-modal
+
+      MB WAY
+
+   .. figure:: payment_images/multibanco.png
+      :width: 64px
+      :class: o-no-modal
+
+      Multibanco
+
+   .. figure:: payment_images/p24.png
+      :width: 64px
+      :class: o-no-modal
+
+      P24
+
+   .. figure:: payment_images/paypal.png
+      :width: 64px
+      :class: o-no-modal
+
+      Paypal
+
+   .. figure:: payment_images/paysafecard.png
+      :width: 64px
+      :class: o-no-modal
+
+      PaySafeCard
+
+   .. figure:: payment_images/swish.png
+      :width: 64px
+      :class: o-no-modal
+
+      Swish
+
+   .. figure:: payment_images/twint.png
+      :width: 64px
+      :class: o-no-modal
+
+      Twint

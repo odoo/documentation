@@ -1,3 +1,5 @@
+:custom-css: payment_methods.css
+
 ======
 Paymob
 ======
@@ -63,3 +65,104 @@ Configuration on Odoo
 
 .. seealso::
    :doc:`../payment_providers`
+
+Supported payment methods
+=========================
+
+.. container:: payment-methods
+
+   .. figure:: payment_images/aman.png
+      :width: 64px
+      :class: o-no-modal
+
+      Aman
+
+   .. figure:: payment_images/card.png
+      :width: 64px
+      :class: o-no-modal
+
+      Card
+
+   .. figure:: payment_images/contact.png
+      :width: 64px
+      :class: o-no-modal
+
+      Contact
+
+   .. figure:: payment_images/forsa.png
+      :width: 64px
+      :class: o-no-modal
+
+      Forsa
+
+   .. figure:: payment_images/halan.png
+      :width: 64px
+      :class: o-no-modal
+
+      Halan
+
+   .. figure:: payment_images/bank.png
+      :width: 64px
+      :class: o-no-modal
+
+      Bank Installments
+
+   .. figure:: payment_images/kiosk.png
+      :width: 64px
+      :class: o-no-modal
+
+      Kiosk
+
+   .. figure:: payment_images/wallet.png
+      :width: 64px
+      :class: o-no-modal
+
+      Mobile Wallets Egypt
+
+   .. figure:: payment_images/omannet.png
+      :width: 64px
+      :class: o-no-modal
+
+      OmanNet
+
+   .. figure:: payment_images/premiumcard.png
+      :width: 64px
+      :class: o-no-modal
+
+      Premium Card
+
+   .. figure:: payment_images/souhoola.png
+      :width: 64px
+      :class: o-no-modal
+
+      Souhoola
+
+   .. figure:: payment_images/stcpay.png
+      :width: 64px
+      :class: o-no-modal
+
+      STCPay
+
+   .. figure:: payment_images/sympl.png
+      :width: 64px
+      :class: o-no-modal
+
+      Sympl
+
+   .. figure:: payment_images/tabby.png
+      :width: 64px
+      :class: o-no-modal
+
+      Tabby
+
+   .. figure:: payment_images/tamara.png
+      :width: 64px
+      :class: o-no-modal
+
+      Tamara
+
+   .. figure:: payment_images/valu.png
+      :width: 64px
+      :class: o-no-modal
+
+      ValU

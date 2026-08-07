@@ -1,3 +1,5 @@
+:custom-css: payment_methods.css
+
 =====
 Nuvei
 =====
@@ -45,43 +47,64 @@ Configuration on Odoo
    You can also test Nuvei using the :ref:`test mode <payment_providers/test-mode>` and your Sandbox
    Dashboard values.
 
-.. _payment_providers/nuvei/services:
-
-Payment methods
-===============
-
-Most Nuvei payment methods are **region specific**. The supported payment methods and brands for
-each country are listed below:
-
-+---------------------------------+----------------------------------+
-| **Argentina**                   | **Uruguay**                      |
-|                                 |                                  |
-| - Boleto                        | - Card (AMEX, Mastercard, Visa)  |
-| - Card (AMEX, Mastercard, Visa) | - Local Payments (Abitab,        |
-|                                 |   RedPagos)                      |
-+---------------------------------+----------------------------------+
-| **Brazil**                      | **Mexico**                       |
-|                                 |                                  |
-| - Boleto                        | - Card (AMEX, Mastercard, Visa)  |
-| - Card (AMEX, Mastercard, Visa) | - SPEI                           |
-| - Pix                           | - Oxxo Pay                       |
-+---------------------------------+----------------------------------+
-| **Canada**                      | **Peru**                         |
-|                                 |                                  |
-| - Card (AMEX, Mastercard, Visa) | - Card (AMEX, Mastercard, Visa)  |
-|                                 | - Boleto                         |
-+---------------------------------+----------------------------------+
-| **Chile**                       | **United States**                |
-|                                 |                                  |
-| - Card (AMEX, Mastercard, Visa) | - Card (AMEX, Mastercard, Visa)  |
-| - WebPay                        |                                  |
-+---------------------------------+----------------------------------+
-| **Colombia**                    |                                  |
-|                                 |                                  |
-| - Card (AMEX, Mastercard, Visa) |                                  |
-| - PSE                           |                                  |
-|                                 |                                  |
-+---------------------------------+----------------------------------+
-
 .. seealso::
    :doc:`../payment_providers`
+
+Supported payment methods
+=========================
+
+.. container:: payment-methods
+
+   .. figure:: payment_images/bank.png
+      :width: 64px
+      :class: o-no-modal
+
+      Astropay TEF
+
+   .. figure:: payment_images/boleto.png
+      :width: 64px
+      :class: o-no-modal
+
+      Boleto
+
+   .. figure:: payment_images/card.png
+      :width: 64px
+      :class: o-no-modal
+
+      Card
+
+   .. figure:: payment_images/bank.png
+      :width: 64px
+      :class: o-no-modal
+
+      Local Payments
+
+   .. figure:: payment_images/oxxopay.png
+      :width: 64px
+      :class: o-no-modal
+
+      Oxxo Pay
+
+   .. figure:: payment_images/pix.png
+      :width: 64px
+      :class: o-no-modal
+
+      Pix
+
+   .. figure:: payment_images/card.png
+      :width: 64px
+      :class: o-no-modal
+
+      PSE
+
+   .. figure:: payment_images/spei.png
+      :width: 64px
+      :class: o-no-modal
+
+      SPEI
+
+   .. figure:: payment_images/webpay.png
+      :width: 64px
+      :class: o-no-modal
+
+      WebPay

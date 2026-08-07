@@ -1,3 +1,5 @@
+:custom-css: payment_methods.css
+
 ========
 Razorpay
 ========
@@ -84,3 +86,56 @@ Odoo configuration
 
 .. seealso::
    :doc:`../payment_providers`
+
+Supported payment methods
+=========================
+
+.. container:: payment-methods
+
+   .. figure:: payment_images/card.png
+      :width: 64px
+      :class: o-no-modal
+
+      Card
+
+   .. figure:: payment_images/card.png
+      :width: 64px
+      :class: o-no-modal
+
+      EMI
+
+   .. figure:: payment_images/fpx.png
+      :width: 64px
+      :class: o-no-modal
+
+      FPX
+
+   .. figure:: payment_images/bank.png
+      :width: 64px
+      :class: o-no-modal
+
+      Netbanking
+
+   .. figure:: payment_images/pay_later.png
+      :width: 64px
+      :class: o-no-modal
+
+      Pay Later
+
+   .. figure:: payment_images/paynow.png
+      :width: 64px
+      :class: o-no-modal
+
+      PayNow
+
+   .. figure:: payment_images/upi.png
+      :width: 64px
+      :class: o-no-modal
+
+      UPI
+
+   .. figure:: payment_images/wallet.png
+      :width: 64px
+      :class: o-no-modal
+
+      Wallets India

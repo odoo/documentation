@@ -1,3 +1,5 @@
+:custom-css: payment_methods.css
+
 ======
 Redsys
 ======
@@ -43,3 +45,20 @@ Configuration in Odoo
 
 .. seealso::
    :doc:`../payment_providers`
+
+Supported payment methods
+=========================
+
+.. container:: payment-methods
+
+   .. figure:: payment_images/bizum.png
+      :width: 64px
+      :class: o-no-modal
+
+      Bizum
+
+   .. figure:: payment_images/card.png
+      :width: 64px
+      :class: o-no-modal
+
+      Card

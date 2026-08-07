@@ -1,3 +1,5 @@
+:custom-css: payment_methods.css
+
 =======================
 Amazon Payment Services
 =======================
@@ -42,3 +44,62 @@ Configuration on Odoo
    :guilabel:`Access Code`, :guilabel:`SHA Request Phrase` and :guilabel:`SHA Response Phrase` with
    the values you saved at the step :ref:`payment_providers/aps/configure-dashboard`.
 #. Configure the rest of the options to your liking.
+
+Supported payment methods
+=========================
+
+.. container:: payment-methods
+
+   .. figure:: payment_images/amex.png
+      :width: 64px
+      :class: o-no-modal
+
+      American Express
+
+   .. figure:: payment_images/benefit.png
+      :width: 64px
+      :class: o-no-modal
+
+      Benefit
+
+   .. figure:: payment_images/knet.png
+      :width: 64px
+      :class: o-no-modal
+
+      KNET
+
+   .. figure:: payment_images/mada.png
+      :width: 64px
+      :class: o-no-modal
+
+      Mada
+
+   .. figure:: payment_images/mastercard.png
+      :width: 64px
+      :class: o-no-modal
+
+      MasterCard
+
+   .. figure:: payment_images/meeza.png
+      :width: 64px
+      :class: o-no-modal
+
+      Meeza
+
+   .. figure:: payment_images/naps.png
+      :width: 64px
+      :class: o-no-modal
+
+      NAPS
+
+   .. figure:: payment_images/omannet.png
+      :width: 64px
+      :class: o-no-modal
+
+      OmanNet
+
+   .. figure:: payment_images/visa.png
+      :width: 64px
+      :class: o-no-modal
+
+      VISA
