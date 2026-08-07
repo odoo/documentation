@@ -290,8 +290,20 @@ Order confirmation
 
 The final step of the checkout process is the order confirmation page, which provides a
 summary of the customer's purchase details. A sales order is automatically created in the backend.
-Enable the :ref:`Automatic Invoice <ecommerce/handling/invoices>` setting to automatically send
-an invoice to the customer.
+
+To automatically send notification emails and documents, navigate to :menuselection:`Website -->
+Configuration --> Settings` and scroll down to the :guilabel:`eCommerce` section. Then configure
+the following settings:
+
+- To send an order confirmation email: Under :guilabel:`Order Confirmation`, select an
+  :guilabel:`Email` :doc:`template </applications/general/companies/email_template>`, or, if the
+  :doc:`WhatsApp app </applications/productivity/whatsapp>` is installed, a :guilabel:`WhatsApp`
+  :ref:`template <productivity/whatsapp/templates>` from the dropdown list. To edit the selected
+  template, click the :icon:`fa-arrow-right` (:guilabel:`Internal link`) arrow.
+- To send a product review request to the customer: Enable the :ref:`Request ratings
+  <ecommerce/handling/rating-request>` setting.
+- To send an invoice to the customer: Enable the :ref:`Automatic Invoice <ecommerce/handling/invoices>`
+  setting.
 
 .. seealso::
    :doc:`Order handling <order_handling>`
