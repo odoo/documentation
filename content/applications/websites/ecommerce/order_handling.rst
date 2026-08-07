@@ -115,6 +115,26 @@ the :guilabel:`Confirmed` filter. Open the :icon:`fa-caret-down` dropdown menu a
    - Abandoned cart reminders are only sent for carts created after the feature is enabled.
      Existing abandoned carts are not affected.
 
+.. _ecommerce/handling/rating-request:
+
+Request product reviews
+-----------------------
+
+Once an order is confirmed, you can automatically send customers a rating request, allowing them to
+leave a review for the products they purchased.
+
+To enable automated rating requests:
+
+
+#. Go to :menuselection:`Website --> Configuration --> Settings`.
+#. In the :guilabel:`eCommerce` section, enable :guilabel:`Request ratings`.
+#. Define how many :guilabel:`days after order confirmation` the request should be sent.
+#. The default :guilabel:`Email` template is selected automatically. If needed, select a different
+   template from the dropdown list. To edit the selected :doc:`email template
+   </applications/general/companies/email_template>`, click the :icon:`fa-arrow-right`
+   (:guilabel:`Internal link`) arrow.
+#. Click :guilabel:`Save`.
+
 .. _ecommerce/handling/delivery:
 
 Delivery
