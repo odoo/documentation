@@ -115,6 +115,8 @@ The different :guilabel:`Program Types` available on the program form are:
 - :guilabel:`Next Order Coupons`: Generate and share single-use coupon codes that grant access to
   rewards on the customer's next order.
 
+.. _sales/loyalty_discount/conditional-rules:
+
 Conditional rules
 -----------------
 
@@ -157,6 +159,8 @@ The following options are available for configuring conditional rules:
 
 Click :guilabel:`Save & Close` to save the rule and close the pop-up window, or click
 :guilabel:`Save & New` to save the rule and immediately create a new one.
+
+.. _sales/loyalty_discount/rewards:
 
 Rewards
 -------
