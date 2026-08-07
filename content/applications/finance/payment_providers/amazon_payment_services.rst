@@ -1,3 +1,5 @@
+:custom-css: payment_methods.css
+
 =======================
 Amazon Payment Services
 =======================
@@ -42,3 +44,80 @@ Configuration on Odoo
    :guilabel:`Access Code`, :guilabel:`SHA Request Phrase` and :guilabel:`SHA Response Phrase` with
    the values you saved at the step :ref:`payment_providers/aps/configure-dashboard`.
 #. Configure the rest of the options to your liking.
+
+Supported payment methods
+=========================
+
+.. container:: payment-methods d-grid gap-3 mx-1 my-0 p-0
+
+   .. figure:: payment_method_images/amex.png
+      :alt: American Express
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      American Express
+
+   .. figure:: payment_method_images/benefit.png
+      :alt: Benefit
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Benefit
+
+   .. figure:: payment_method_images/knet.png
+      :alt: KNET
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      KNET
+
+   .. figure:: payment_method_images/mada.png
+      :alt: Mada
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Mada
+
+   .. figure:: payment_method_images/mastercard.png
+      :alt: MasterCard
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      MasterCard
+
+   .. figure:: payment_method_images/meeza.png
+      :alt: Meeza
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Meeza
+
+   .. figure:: payment_method_images/naps.png
+      :alt: NAPS
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      NAPS
+
+   .. figure:: payment_method_images/omannet.png
+      :alt: OmanNet
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      OmanNet
+
+   .. figure:: payment_method_images/visa.png
+      :alt: VISA
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      VISA
