@@ -1,3 +1,5 @@
+:custom-css: payment_methods.css
+
 ============
 Mercado Pago
 ============
@@ -54,3 +56,32 @@ Odoo configuration
 .. seealso::
    - :doc:`../payment_providers`
    - `Mercado Pago Odoo webinar <https://www.youtube.com/watch?v=CX8vPHMb1ic>`_
+
+Supported payment methods
+=========================
+
+.. container:: payment-methods d-grid gap-3 mx-1 my-0 p-0
+
+   .. figure:: payment_method_images/bank.png
+      :alt: Bank Transfer
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Bank Transfer
+
+   .. figure:: payment_method_images/card.png
+      :alt: Card
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Card
+
+   .. figure:: payment_method_images/mercado_livre.png
+      :alt: Mercado Pago Wallet
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Mercado Pago Wallet

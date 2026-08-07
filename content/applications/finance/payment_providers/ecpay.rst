@@ -1,3 +1,5 @@
+:custom-css: payment_methods.css
+
 =====
 ECPay
 =====
@@ -34,3 +36,56 @@ Configuration on Odoo
 
 .. seealso::
    :doc:`../payment_providers`
+
+Supported payment methods
+=========================
+
+.. container:: payment-methods d-grid gap-3 mx-1 my-0 p-0
+
+   .. figure:: payment_method_images/bank.png
+      :alt: Bank Transfer
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Bank Transfer
+
+   .. figure:: payment_method_images/card.png
+      :alt: Card
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Card
+
+   .. figure:: payment_method_images/cvs.png
+      :alt: CVS
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      CVS
+
+   .. figure:: payment_method_images/wallet.png
+      :alt: Mobile Wallet
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      Mobile Wallet
+
+   .. figure:: payment_method_images/twqr.png
+      :alt: TWQR
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      TWQR
+
+   .. figure:: payment_method_images/wechat_pay.png
+      :alt: WeChat Pay
+      :width: 64px
+      :figclass: text-center
+      :class: o-no-modal border-0 p-0 bg-transparent
+
+      WeChat Pay
