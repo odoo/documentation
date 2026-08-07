@@ -35,6 +35,8 @@ class Card(SphinxDirective):
         'target': directives.unchanged_required,
         'tag': directives.unchanged,
         'large': directives.flag,
+        'image': directives.path,
+        'alt': directives.unchanged,
     }
     has_content = True
 
@@ -65,6 +67,20 @@ class Card(SphinxDirective):
 
         div_card = Div(classes=['card', 'h-100'])
         a_col += div_card
+
+        if 'image' in self.options:
+            image_path = self.options['image']
+            image_file = Path(self.env.srcdir) / Path(current_document).parent / image_path
+            if not image_file.exists():
+                raise self.warning(f"card directive's image '{image_path}' does not exist")
+            img = nodes.image(
+                '',
+                uri=image_path,
+                alt=self.options.get('alt', self.arguments[0]),
+                classes=['card-img-top', 'o-no-modal'],
+            )
+            set_source_info(self, img)
+            div_card += img
 
         div_card_body = Div(classes=['card-body', 'pb-0'])
         div_card += div_card_body
