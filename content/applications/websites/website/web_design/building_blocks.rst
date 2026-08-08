@@ -118,6 +118,127 @@ section of the :guilabel:`Style` tab. For example, you can:
 
 Once you have made the desired changes, click :guilabel:`Save`.
 
+Prefill form fields with URL parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Form fields can be automatically filled using URL query parameters. This is useful for marketing
+campaigns, personalized links, or any scenario where you want to pre-populate a form for the
+visitor.
+
+.. _website/building_blocks/form/shareable:
+
+Enable shareable links
+**********************
+
+URL prefill is **disabled by default** and must be enabled per form with the :guilabel:`Share &
+Pre-fill` option. Forms without it ignore query parameters entirely. Once enabled, the shareable
+link carries a reserved ``usp_pp`` parameter whose value targets that specific form, so prefill
+applies only to it (useful when a page has multiple forms). A link without a ``usp_pp`` parameter
+prefills every sharing-enabled form on the page. To enable prefill and get the shareable link for a
+form:
+
+#. Open the website editor and click the form block.
+#. In the :guilabel:`Style` tab, under the :guilabel:`Form` section, enable the
+   :guilabel:`Share & Pre-fill` toggle.
+#. A :guilabel:`Shareable Link` field appears with the page URL and the form's ``usp_pp`` token
+   (e.g., ``https://example.com/contactus?usp_pp=form-abc123``).
+#. Click the :icon:`fa-clipboard` (:guilabel:`Copy Link`) button to copy the link to your
+   clipboard.
+#. Click :guilabel:`Save`. The link only works once the page is saved with sharing enabled.
+
+.. _website/building_blocks/form/field-name:
+
+Identify field names
+********************
+
+Each form field has a **Field Name** used as the query parameter key in the URL. To find it:
+
+#. Open the website editor and click a field in the form.
+#. In the :guilabel:`Style` tab, under the :guilabel:`Field` section, locate the
+   :guilabel:`Field Name` value.
+#. Use this exact name as the query parameter key when constructing the URL.
+
+.. _website/building_blocks/form/construct-url:
+
+Construct the prefill URL
+*************************
+
+Append field parameters to the shareable link using the format ``&field_name=value`` (the link
+already starts with ``?usp_pp=...``). Separate multiple fields with ``&``.
+
+.. example::
+   For a contact form with the shareable link
+   ``https://example.com/contactus?usp_pp=form-abc123``, prefill the :guilabel:`Name` and
+   :guilabel:`Email` fields:
+
+   .. code-block:: text
+
+      https://example.com/contactus?usp_pp=form-abc123&name=John+Doe&email_from=john@example.com
+
+   When a visitor opens this URL, the form fields are automatically populated with the provided
+   values.
+
+For :guilabel:`Selection`, :guilabel:`Radio`, and :guilabel:`Checkbox` fields, the parameter value
+must match one of the available option values exactly. For a single checkbox, ``true``, ``1``, and
+``on`` check the box, while ``false``, ``0``, and ``off`` uncheck it, even when it is checked by
+default.
+
+For :guilabel:`Date` and :guilabel:`Datetime` fields, use the `ISO 8601
+<https://en.wikipedia.org/wiki/ISO_8601>`_ format, e.g., ``2026-10-22`` or ``2026-10-22T18:00``.
+The value is displayed to each visitor in their own local date format.
+
+In all cases, invalid or unmatched values are ignored and the fields keep their default values. The
+exception is a :guilabel:`Selection` or :guilabel:`Radio` field with :guilabel:`Add Other` enabled:
+an unmatched value selects the :guilabel:`Other` option and fills its input with that value.
+
+For **multiple-checkbox fields**, repeat the field name in the query string for each value:
+
+.. code-block:: text
+
+   https://example.com/contactus?usp_pp=form-abc123&interests=sports&interests=tech
+
+.. note::
+   - Values provided by the backend always take precedence over URL parameters. This includes
+     server-side ``data-for`` values (e.g., on the Contact Us form) and the ``data-fill-with``
+     attribute that prefills name, phone, and email from the logged-in user's contact record.
+   - Spaces in values can be encoded as ``+`` or ``%20``.
+
+.. warning::
+   On a **sharing-enabled** form, avoid naming fields after keys that commonly appear in URLs, such
+   as ``usp_pp`` (reserved by this feature), tracking keys (``utm_source``, ``utm_medium``, etc.),
+   or routing and search keys (``debug``, ``lang``, ``redirect``, ``page``, ``search``, etc.).
+   These keys are frequently appended by analytics tools, ad networks, or Odoo itself, and a field
+   bearing the same name would be silently prefilled. To capture tracking values on purpose (e.g.,
+   for campaign attribution), use a hidden field bearing that name.
+
+.. _website/building_blocks/form/no-prefill:
+
+Disable prefill on specific fields
+**********************************
+
+To prevent a specific field from being prefilled by URL parameters while still allowing prefill on
+other fields in the same form, add the ``data-no-prefill="true"`` attribute to the field's wrapper
+element (the ``<div class="s_website_form_field">`` that contains the label and input).
+
+.. example::
+   In the page's HTML editor:
+
+   .. code-block:: html
+
+      <div class="s_website_form_field" data-no-prefill="true">
+          <label class="s_website_form_label">Verification code</label>
+          <input class="s_website_form_input" type="text" name="code"/>
+      </div>
+
+   Visitors opening ``?usp_pp=form-abc123&code=ABCD`` will not see ``ABCD`` injected into this
+   field, even though other fields on the form continue to prefill normally.
+
+.. note::
+   - Backend ``data-for`` values and the ``data-fill-with`` attribute continue to apply to the
+     field regardless of ``data-no-prefill``; only URL parameter prefill is blocked.
+   - Editing this attribute currently requires the page HTML editor (:menuselection:`Site -->
+     HTML/CSS editor`).
+
 Add an Odoo contact form on a non-Odoo website
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
