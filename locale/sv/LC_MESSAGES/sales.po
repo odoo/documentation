@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-24 17:32+0000\n"
+"POT-Creation-Date: 2026-08-07 17:32+0000\n"
 "PO-Revision-Date: 2026-07-05 00:00+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Swedish <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -89,7 +89,6 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:21
 #: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:13
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:13
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:15
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:12
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:14
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:19
@@ -10499,7 +10498,7 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/pricing.rst:155
 #: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:38
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:144
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:149
 msgid "Go to :menuselection:`Point of Sale --> Configuration --> Settings`."
 msgstr "Gå till :menuselection:`Kassa --> Konfiguration --> Inställningar`."
 
@@ -14230,6 +14229,7 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:95
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:167
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:38
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:45
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:35
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:63
 msgid "Odoo configuration"
@@ -16057,7 +16057,6 @@ msgid "Chain ID"
 msgstr "Kedja-ID"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:41
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:42
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:30
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:36
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:22
@@ -16081,6 +16080,7 @@ msgid ":doc:`Create a new payment method <../../payment_methods>`:"
 msgstr ":doc:`Skapa en ny betalningsmetod <../../payment_methods>`:"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:50
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:55
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mollie.rst:48
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:46
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:58
@@ -16090,6 +16090,7 @@ msgid "Set the :guilabel:`Journal` field to :guilabel:`Bank`."
 msgstr "Ställ in fältet :guilabel:`Journal` till :guilabel:`Bank`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:51
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:57
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mollie.rst:50
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:47
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:60
@@ -16170,101 +16171,109 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:11
 msgid ""
-"Odoo works with the Ingenico Lane/, Desk/, and Move/ payment terminals as "
-"they support the TLV communication protocol through TCP/IP."
+"Odoo works with Ingenico's `Lane/5000 <https://ingenico.com/en/products-"
+"services/payment-terminals/tetra/lane5000-le>`_, `Desk/5000 <https://"
+"ingenico.com/en/products-services/payment-terminals/tetra/desk5000>`_, `Move/"
+"5000 <https://ingenico.com/en/products-services/payment-terminals/tetra/"
+"move5000>`_ payment terminals, as they support the TLV communication "
+"protocol through TCP/IP."
 msgstr ""
-"Odoo fungerar med Ingenico Lane/, Desk/ och Move/ betalterminaler eftersom "
-"de stöder TLV-kommunikationsprotokollet via TCP/IP."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:18
-msgid "Connect an IoT system"
-msgstr "Anslut ett IoT-system"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:20
-msgid ""
-"Connecting an Ingenico payment terminal to Odoo is a feature that requires "
-"an IoT system. For more information on how to connect an IoT system to your "
-"database, please refer to the :doc:`IoT documentation </applications/general/"
-"iot>`."
+msgid "Ingenico terminal configuration"
 msgstr ""
-"Att ansluta en Ingenico-betalterminal till Odoo är en funktion som kräver "
-"ett IoT-system. För mer information om hur du ansluter ett IoT-system till "
-"din databas, se :doc:`IoT-dokumentationen </applications/general/iot>`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:25
-msgid "Configure the Lane/Desk/Move 5000 terminals for Ingenico BENELUX"
-msgstr "Konfigurera Lane/Desk/Move 5000-terminalerna för Ingenico BENELUX"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:27
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:22
 msgid ""
-"Press the function button (:guilabel:`F` on Lane/5000, :guilabel:`⦿` on Desk/"
-"5000 and Move/5000)."
+"To configure the Lane/5000, Desk/5000, or Move/5000, follow these steps:"
 msgstr ""
-"Tryck på funktionsknappen (:guilabel:`F` på Lane/5000, :guilabel:`⦿` på Desk/"
-"5000 och Move/5000)."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:24
+msgid ""
+"Press the function button (:guilabel:`F` on the Lane/5000 "
+"terminal, :guilabel:`⦿` on the Desk/5000 and Move/5000 terminals)."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:26
+msgid ""
+"Go to :menuselection:`Kassa Menu --> Settings Menu`, enter the settings "
+"password (default: `2009`), and press :guilabel:`OK`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:28
+msgid "Select :guilabel:`Protocol` and press :guilabel:`OK`."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:29
-msgid ""
-"Go to :menuselection:`Kassa menu --> Settings Menu` and enter the settings "
-"password (default: `2009`)."
+msgid "Select :guilabel:`CTEP` and press :guilabel:`OK`."
 msgstr ""
-"Gå till :menuselection:`Kassa-meny --> Inställningsmeny` och ange "
-"inställningslösenordet (standard: `2009`)."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:30
+msgid "Select :guilabel:`Change Connection` and press :guilabel:`OK`."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:31
 msgid ""
-"Select :guilabel:`Change Connection` and press :guilabel:`OK` on the next "
-"screen."
+"Select :guilabel:`TCP/IP` and press :guilabel:`OK`. Then, "
+"select :guilabel:`IP-address` and press :guilabel:`OK`."
 msgstr ""
-"Välj :guilabel:`Change Connection` och tryck på :guilabel:`OK` på nästa "
-"skärm."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:32
-msgid "Select :guilabel:`TCP/IP` and :guilabel:`IP-address`."
-msgstr "Välj :guilabel:`TCP/IP` och :guilabel:`IP-adress`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:33
-msgid "On the next screen, enter the IP address of your IoT system."
-msgstr "På nästa skärm anger du IP-adressen för ditt IoT-system."
+msgid "Enter the IoT system's IP address and press :guilabel:`OK`."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:34
 msgid ""
-"Enter `9000` as port number and press :guilabel:`OK` on the next screen."
-msgstr "Ange `9000` som portnummer och tryck på :guilabel:`OK` på nästa skärm."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:36
-msgid ""
-"At this point, the terminal restarts and should be displayed on the IoT "
-"system's form in Odoo."
+"Enter port number `9001` if using an IoT box or `9050` if using the Windows "
+"virtual IoT."
 msgstr ""
-"Nu startar terminalen om och bör visas i IoT-systemets formulär i Odoo."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:44
-msgid ""
-"Enable the payment terminal :ref:`in the application settings <pos/use/"
-"settings>` and :doc:`create the related payment method <../../"
-"payment_methods>`. Set the journal type as :guilabel:`Bank` and "
-"select :guilabel:`Ingenico` in the :guilabel:`Use a Payment Terminal` field. "
-"Then, select your terminal device in the :guilabel:`Payment Terminal Device` "
-"field."
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:35
+msgid "Select :guilabel:`No SSL` and press :guilabel:`OK`."
 msgstr ""
-"Aktivera betalterminalen :ref:`i applikationsinställningarna <pos/use/"
-"settings>` och :doc:`skapa den relaterade betalningsmetoden <../../"
-"payment_methods>`. Ställ in journaltypen som :guilabel:`Bank` och "
-"välj :guilabel:`Ingenico` i fältet :guilabel:`Använd en betalterminal`. Välj "
-"sedan din terminalenhet i fältet :guilabel:`Betalterminalenhet`."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:37
+msgid ""
+"The terminal restarts and should be displayed on the IoT system's form in "
+"Odoo."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:47
+msgid ""
+"The configuration of an Ingenico terminal with Odoo requires to "
+"first :doc:`connect the IoT system to Odoo </applications/general/iot/"
+"connect>`, then to enable the :guilabel:`Worldline` terminal in "
+"the :ref:`POS settings <pos/use/settings>` under the :guilabel:`Payment "
+"Terminals` section."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:51
 msgid ""
-"Once the payment method is created, you can select it in your POS settings. "
-"To do so, go to the :ref:`POS' settings <pos/use/settings>`, "
-"click :guilabel:`Edit`, and add the payment method under "
-"the :guilabel:`Payments` section."
+"To connect the Ingenico terminal with Odoo Point of Sale, follow these steps:"
 msgstr ""
-"När betalningsmetoden har skapats kan du välja den i dina "
-"kassasysteminställningar. För att göra detta, gå till :ref:`kassasystemets "
-"inställningar <pos/use/settings>`, klicka på :guilabel:`Redigera` och lägg "
-"till betalningsmetoden under sektionen :guilabel:`Betalningar`."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:53
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mollie.rst:46
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:44
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:56
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_com.rst:60
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:67
+msgid ""
+"Go to :menuselection:`Point of Sale --> Configuration --> Payment Methods` "
+"and :doc:`create a payment method <../../payment_methods>`."
+msgstr ""
+"Gå till :menuselection:`Kassa --> Konfiguration --> Betalningsmetoder` "
+"och :doc:`skapa en betalningsmetod <../../payment_methods>`."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:56
+msgid "Set the :guilabel:`Point of Sale` field to the desired point of sale."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:58
+msgid ""
+"Select the Worldline terminal number in the :guilabel:`Payment Terminal "
+"Device` field, then save."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:3
 msgid "Mercado Pago"
@@ -16296,13 +16305,15 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:14
 msgid ""
-"Mercado Pago payment terminals do not require an :doc:`IoT Box </"
+"Mercado Pago payment terminals do not require :doc:`an IoT system </"
 "applications/general/iot>` to operate."
 msgstr ""
-"Mercado Pagos betalterminaler kräver ingen :doc:`IoT-box </applications/"
-"general/iot>` för att fungera."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:18
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:16
+msgid "Odoo does not support the :guilabel:`STANDALONE` operation mode."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:19
 msgid ""
 ":doc:`Mercado Pago online payments </applications/finance/payment_providers/"
 "mercado_pago>`"
@@ -16310,7 +16321,7 @@ msgstr ""
 ":doc:`Mercado Pago onlinebetalningar </applications/finance/"
 "payment_providers/mercado_pago>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:19
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:20
 msgid ""
 "`Mercado Pago tutorial video (Spanish only) <https://www.youtube.com/watch?"
 "v=dpbexfTc4VQ>`_"
@@ -16318,11 +16329,11 @@ msgstr ""
 "`Mercado Pago-handledningsvideo (endast spanska) <https://www.youtube.com/"
 "watch?v=dpbexfTc4VQ>`_"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:24
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:25
 msgid "Mercado Pago configuration"
 msgstr "Mercado Pago-konfiguration"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:26
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:27
 msgid ""
 "The Mercado Pago configuration requires creating an account, if needed, "
 "and :ref:`connecting it to your payment terminal and store <pos/mercado-pago/"
@@ -16336,27 +16347,27 @@ msgstr ""
 "point-smart>` för teknisk installation och erhållande av :ref:`uppgifter "
 "<pos/mercado-pago/credentials>` för att slutföra integrationen."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:34
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:35
 msgid "Terminal and store connection"
 msgstr "Terminal- och butiksanslutning"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:36
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:37
 msgid "Create a Mercado Pago account if needed:"
 msgstr "Skapa ett Mercado Pago-konto om det behövs:"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:38
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:39
 msgid "`Mercado Pago for Mexico <https://www.mercadopago.com.mx/>`_"
 msgstr "`Mercado Pago för Mexiko <https://www.mercadopago.com.mx/>`_"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:39
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:40
 msgid "`Mercado Pago for Argentina <https://www.mercadopago.com.ar/>`_"
 msgstr "`Mercado Pago för Argentina <https://www.mercadopago.com.ar/>`_"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:40
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:41
 msgid "`Mercado Pago for Brazil <https://www.mercadopago.com.br/>`_"
 msgstr "`Mercado Pago för Brasilien <https://www.mercadopago.com.br/>`_"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:41
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:42
 msgid ""
 "Turn on the Point Smart terminal. Follow the on-screen instructions until "
 "prompted to link the terminal with your Mercado Pago account."
@@ -16364,17 +16375,17 @@ msgstr ""
 "Slå på Point Smart-terminalen. Följ instruktionerna på skärmen tills du "
 "uppmanas att länka terminalen med ditt Mercado Pago-konto."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:43
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:44
 msgid "Click :guilabel:`Soy responsable del negocio` to get a pairing QR code."
 msgstr ""
 "Klicka på :guilabel:`Soy responsable del negocio` för att få en parkopplings-"
 "QR-kod."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:44
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:45
 msgid "Connect to your Mercado Pago account with a mobile device."
 msgstr "Anslut till ditt Mercado Pago-konto med en mobil enhet."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:45
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:46
 msgid ""
 "Scan the QR code with the mobile device and complete the connection in your "
 "Mercado Pago account."
@@ -16382,11 +16393,11 @@ msgstr ""
 "Skanna QR-koden med den mobila enheten och slutför anslutningen i ditt "
 "Mercado Pago-konto."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:46
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:47
 msgid "Ensure the terminal is correctly linked to your store:"
 msgstr "Säkerställ att terminalen är korrekt länkad till din butik:"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:48
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:49
 msgid ""
 "Type your Mercado Pago account email address or phone number, then "
 "click :guilabel:`Continuar`."
@@ -16394,11 +16405,11 @@ msgstr ""
 "Ange e-postadressen eller telefonnumret för ditt Mercado Pago-konto och "
 "klicka sedan på :guilabel:`Continuar`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:50
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:51
 msgid "In the popover, click :guilabel:`Continuar`."
 msgstr "I popup-fönstret klickar du på :guilabel:`Continuar`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:51
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:52
 msgid ""
 "On the :guilabel:`Configura el lector para tu cuenta [account name]` screen, "
 "click :guilabel:`Empezar configuración`."
@@ -16406,12 +16417,12 @@ msgstr ""
 "På skärmen :guilabel:`Configura el lector para tu cuenta [account name]` "
 "klickar du på :guilabel:`Empezar configuración`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:53
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:54
 msgid "Click :guilabel:`Crear nueva sucursal` to add a new point of sale."
 msgstr ""
 "Klicka på :guilabel:`Crear nueva sucursal` för att lägga till en ny kassa."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:54
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:55
 msgid ""
 "Type the point of sale's name and address. Add more information if needed, "
 "then click :guilabel:`Crear sucursal`."
@@ -16419,14 +16430,14 @@ msgstr ""
 "Ange kassans namn och adress. Lägg till mer information om det behövs och "
 "klicka sedan på :guilabel:`Crear sucursal`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:56
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:57
 msgid ""
 "Type your register's name and click :guilabel:`Confirmar sucursal y caja`."
 msgstr ""
 "Ange namnet på ditt kassaregister och klicka på :guilabel:`Confirmar "
 "sucursal y caja`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:57
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:58
 msgid ""
 "Click :guilabel:`Crear clave` to create a security key and protect the point "
 "of sale."
@@ -16434,11 +16445,11 @@ msgstr ""
 "Klicka på :guilabel:`Crear clave` för att skapa en säkerhetsnyckel och "
 "skydda kassan."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:62
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:63
 msgid "Point Smart application"
 msgstr "Point Smart applikation"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:64
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:65
 msgid ""
 "Log in to the `Mercado Pago Developer <https://www.mercadopago.com/"
 "developers>`_ portal."
@@ -16446,7 +16457,7 @@ msgstr ""
 "Logga in på portalen `Mercado Pago Developer <https://www.mercadopago.com/"
 "developers>`_."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:65
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:66
 msgid ""
 "Click :guilabel:`Tus integraciones`, then click `Crear aplicación <https://"
 "www.mercadopago.com.mx/ayuda/20152>`_."
@@ -16454,7 +16465,7 @@ msgstr ""
 "Klicka på :guilabel:`Tus integraciones` och klicka sedan på `Crear "
 "aplicación <https://www.mercadopago.com.mx/ayuda/20152>`_."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:67
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:68
 msgid ""
 "In the :guilabel:`Configuraciones básicas` section, type the application "
 "name, select :guilabel:`Pagos presencial` "
@@ -16465,11 +16476,11 @@ msgstr ""
 "väljer :guilabel:`Pagos presencial` och :guilabel:`PointdeMercadoPago` och "
 "klickar sedan på :guilabel:`Crear aplicación` för att få ansökningsnumret."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:74
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:75
 msgid "Credentials generation"
 msgstr "Generering av uppgifter"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:76
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:77
 msgid ""
 "There are three credentials to generate and collect from the `Mercado Pago "
 "Developer dashboard <https://www.mercadopago.com/developers>`_: a **webhook "
@@ -16479,11 +16490,11 @@ msgstr ""
 "dashboard <https://www.mercadopago.com/developers>`_: en **webhook-hemlig "
 "nyckel**, en **åtkomst-token** och **terminalens serienummer**."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:80
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:81
 msgid "Generate the webhook secret key:"
 msgstr "Skapa webhook-hemliga nyckeln:"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:82
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:83
 msgid ""
 "Click :guilabel:`Webhooks` under the :guilabel:`Notificaciones` section, "
 "then :guilabel:`Modo productivo`."
@@ -16491,7 +16502,7 @@ msgstr ""
 "Klicka på :guilabel:`Webhooks` under sektionen :guilabel:`Notificaciones`, "
 "sedan :guilabel:`Modo productivo`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:84
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:85
 msgid ""
 "Paste your Odoo database's URL followed by `/pos_mercado_pago/notification`. "
 "For example: `https://mycompany.odoo.com/pos_mercado_pago/notification`."
@@ -16499,7 +16510,7 @@ msgstr ""
 "Klistra in din Odoo-databas URL följt av `/pos_mercado_pago/notification`. "
 "Till exempel: `https://mycompany.odoo.com/pos_mercado_pago/notification`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:86
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:87
 msgid ""
 "Copy the generated webhook secret key and save it for the :ref:`pos/mercado-"
 "pago/payment-method` step."
@@ -16507,11 +16518,11 @@ msgstr ""
 "Kopiera den skapade webhook-hemliga nyckeln och spara den för :ref:`pos/"
 "mercado-pago/payment-method`-steget."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:88
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:89
 msgid "Generate the access token:"
 msgstr "Skapa åtkomst-token:"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:90
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:91
 msgid ""
 "Click :guilabel:`Credenciales de producción` under "
 "the :guilabel:`Producción` section, then :guilabel:`Activar credenciales de "
@@ -16521,7 +16532,7 @@ msgstr ""
 "sektionen :guilabel:`Producción`, sedan :guilabel:`Activar credenciales de "
 "producción`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:92
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:93
 msgid ""
 "Copy the generated access token and save it for the :ref:`pos/mercado-pago/"
 "payment-method` step."
@@ -16529,7 +16540,7 @@ msgstr ""
 "Kopiera den skapade åtkomst-token och spara den för :ref:`pos/mercado-pago/"
 "payment-method`-steget."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:94
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:95
 msgid ""
 "Locate the terminal serial number on the back of the terminal and write it "
 "down for the :ref:`pos/mercado-pago/payment-method` step."
@@ -16537,21 +16548,7 @@ msgstr ""
 "Leta upp terminalens serienummer på baksidan av terminalen och skriv ner det "
 "för :ref:`pos/mercado-pago/payment-method`-steget."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:97
-msgid ""
-"Once the Mercado Pago configuration is complete, log in to your Odoo "
-"database to create a :ref:`payment method <pos/mercado-pago/payment-method>` "
-"using the collected credentials."
-msgstr ""
-"När Mercado Pago-konfigurationen är klar, logga in på din Odoo-databas för "
-"att skapa en :ref:`betalningsmetod <pos/mercado-pago/payment-method>` med "
-"hjälp av de insamlade uppgifterna."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:101
-msgid "Odoo does not support the :guilabel:`Standalone` operation mode."
-msgstr "Odoo stöder inte driftsläget :guilabel:`Standalone`."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:104
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:99
 msgid ""
 "All terminals purchased with your Mercado Pago account are automatically "
 "displayed on the Mercado Pago dashboard."
@@ -16559,12 +16556,19 @@ msgstr ""
 "Alla terminaler som köpts med ditt Mercado Pago-konto visas automatiskt på "
 "Mercado Pago dashboard."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:110
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:105
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mollie.rst:42
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:49
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_com.rst:53
 msgid "Odoo POS configuration"
 msgstr "Konfiguration av Odoo-kassasystem"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:108
+msgid ""
+"For the Mercado Pago terminal to work correctly with Odoo, make sure "
+"to :ref:`enable Mercado Pago as a payment provider <payment_providers/"
+"mercado_pago/odoo-configuration>` and add the associated account credentials."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:112
 msgid ""
@@ -16712,18 +16716,6 @@ msgstr ""
 msgid ""
 "To connect the Mollie terminal with Odoo Point of Sale, follow these steps:"
 msgstr "För att ansluta Mollie-terminalen med Odoo Kassa, följ dessa steg:"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mollie.rst:46
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:44
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:56
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_com.rst:60
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:67
-msgid ""
-"Go to :menuselection:`Point of Sale --> Configuration --> Payment Methods` "
-"and :doc:`create a payment method <../../payment_methods>`."
-msgstr ""
-"Gå till :menuselection:`Kassa --> Konfiguration --> Betalningsmetoder` "
-"och :doc:`skapa en betalningsmetod <../../payment_methods>`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mollie.rst:49
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:59
@@ -22231,9 +22223,9 @@ msgstr ""
 "backend, följ dessa steg:"
 
 #: ../../content/applications/sales/point_of_sale/use.rst:178
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:88
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:101
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:124
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:93
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:106
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:129
 msgid "Go to :menuselection:`Point of Sale --> Orders --> Orders`."
 msgstr "Gå till :menuselection:`Kassa --> Beställningar --> Beställningar`."
 
@@ -22980,6 +22972,13 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:55
 msgid ""
+"Alternatively, on the payment confirmation screen, click :icon:`fa-pencil-"
+"square-o` :guilabel:`Edit`, add a customer in the dedicated field if needed, "
+"click :guilabel:`Invoice`, then :guilabel:`Continue`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:60
+msgid ""
 "If the registered customer's :ref:`contact type <essentials/contacts/type>` "
 "is set to :guilabel:`Company`, the :icon:`fa-file-text-"
 "o` :guilabel:`Invoice` checkbox is automatically enabled."
@@ -22988,15 +22987,15 @@ msgstr ""
 "inställd på :guilabel:`Företag` aktiveras kryssrutan :icon:`fa-file-text-"
 "o` :guilabel:`Faktura` automatiskt."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:60
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:65
 msgid ":doc:`receipts`"
 msgstr ":doc:`receipts`"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:65
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:70
 msgid "After the ordering process"
 msgstr "Efter beställningsprocessen"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:67
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:72
 msgid ""
 "To create and issue an invoice to the customer from the POS register after "
 "an order is processed, follow these steps:"
@@ -23004,15 +23003,15 @@ msgstr ""
 "För att skapa och utfärda en faktura till kunden från kassaregistret efter "
 "att en beställning har behandlats följer du dessa steg:"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:70
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:75
 msgid "Click :guilabel:`Orders` in the POS interface."
 msgstr "Klicka på :guilabel:`Beställningar` i kassasystemgränssnittet."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:71
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:76
 msgid "Set the :guilabel:`Active` dropdown menu to :guilabel:`Paid`."
 msgstr "Ställ in rullgardinsmenyn :guilabel:`Aktiv` till :guilabel:`Betald`."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:72
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:77
 msgid ""
 "Select the relevant order and click :icon:`fa-file-pdf-"
 "o` :guilabel:`Invoice` above the numpad."
@@ -23020,7 +23019,7 @@ msgstr ""
 "Välj relevant beställning och klicka på :icon:`fa-file-pdf-"
 "o` :guilabel:`Faktura` ovanför knappsatsen."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:75
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:80
 msgid ""
 "To reprint the invoice, select the relevant order and click :icon:`fa-file-"
 "pdf-o` :guilabel:`Reprint Invoice` above the numpad."
@@ -23029,33 +23028,33 @@ msgstr ""
 "på :icon:`fa-file-pdf-o` :guilabel:`Skriv ut faktura igen` ovanför "
 "knappsatsen."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:79
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:84
 msgid "From the backend"
 msgstr "Från backend"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:84
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:89
 msgid "Backend invoice creation"
 msgstr "Skapa faktura i backend"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:86
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:91
 msgid "To create and issue an invoice from the backend, follow these steps:"
 msgstr "För att skapa och utfärda en faktura från backend, följ dessa steg:"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:89
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:94
 msgid "Select the relevant order."
 msgstr "Välj relevant beställning."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:90
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:95
 msgid "Add the :guilabel:`Customer` if needed, then click :guilabel:`Invoice`."
 msgstr ""
 "Lägg till :guilabel:`Kund` om det behövs och klicka sedan "
 "på :guilabel:`Faktura`."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:95
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:100
 msgid "Consolidated customer invoice"
 msgstr "Konsoliderad kundfaktura"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:97
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:102
 msgid ""
 "To create a consolidated invoice for all orders linked to the same customer "
 "that are not yet invoiced (i.e., invoices with an :guilabel:`Invoice Status` "
@@ -23066,11 +23065,11 @@ msgstr ""
 "med :guilabel:`Fakturastatus` satt till :guilabel:`Att fakturera`), följ "
 "dessa steg:"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:102
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:107
 msgid "Click the search bar and :guilabel:`Group By` :guilabel:`Customer`."
 msgstr "Klicka på sökfältet och :guilabel:`Gruppera efter` :guilabel:`Kund`."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:103
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:108
 msgid ""
 "Click the :icon:`fa-caret-right` (:guilabel:`caret`) icon next to the "
 "relevant customer and enable :guilabel:`Order Ref` in the column header or "
@@ -23080,7 +23079,7 @@ msgstr ""
 "kund och aktivera :guilabel:`Orderref` i kolumnrubriken eller välj relevanta "
 "beställningar."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:105
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:110
 msgid ""
 "Click :guilabel:`Create Invoices`, keep the :guilabel:`Consolidated Billing` "
 "option enabled, then click :guilabel:`Create`."
@@ -23089,7 +23088,7 @@ msgstr ""
 "alternativet :guilabel:`Konsoliderad fakturering` aktiverat och klicka sedan "
 "på :guilabel:`Skapa`."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:109
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:114
 msgid ""
 "Alternatively, go to :menuselection:`Point of Sale --> Orders --> "
 "Customers`, select the relevant customer, click the :icon:`fa-shopping-"
@@ -23102,7 +23101,7 @@ msgstr ""
 "beställningar, klicka på :guilabel:`Skapa fakturor` och "
 "sedan :guilabel:`Skapa`."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:113
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:118
 msgid ""
 "To create an individual invoice for each sales order, disable "
 "the :guilabel:`Consolidated Billing` option."
@@ -23110,11 +23109,11 @@ msgstr ""
 "För att skapa en individuell faktura för varje försäljningsorder, avaktivera "
 "alternativet :guilabel:`Konsoliderad fakturering`."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:119
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:124
 msgid "Invoice retrieval"
 msgstr "Hämta fakturor"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:121
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:126
 msgid ""
 "Retrieving invoices is useful for customer requests and accounting purposes, "
 "for example. To view, download, reprint, or send past transactions, follow "
@@ -23124,34 +23123,34 @@ msgstr ""
 "bokföringsändamål, till exempel. För att visa, ladda ner, skriva ut på nytt "
 "eller skicka tidigare transaktioner, följ dessa steg:"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:125
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:130
 msgid "Click the relevant order in the list."
 msgstr "Klicka på relevant beställning i listan."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:126
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:131
 msgid "Click the :guilabel:`Invoice` smart button on the order form."
 msgstr "Klicka på smart-knappen :guilabel:`Faktura` på orderformuläret."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:127
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:132
 msgid "Click the following buttons to manage the invoice:"
 msgstr "Klicka på följande knappar för att hantera fakturan:"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:129
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:134
 msgid ":guilabel:`Send`: Send or resend the invoice."
 msgstr ":guilabel:`Skicka`: Skicka eller skicka om fakturan."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:130
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:135
 msgid ""
 ":guilabel:`Print`: Open the browser's print function or download the invoice."
 msgstr ""
 ":guilabel:`Skriv ut`: Öppna webbläsarens utskriftsfunktion eller ladda ner "
 "fakturan."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:131
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:136
 msgid ":guilabel:`Preview`: Preview and download the invoice."
 msgstr ":guilabel:`Förhandsvisa`: Förhandsgranska och ladda ner fakturan."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:132
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:137
 msgid ""
 ":guilabel:`Credit Note`: Issue a :ref:`credit note <accounting/credit_notes/"
 "issue-credit-note>` to the customer."
@@ -23159,18 +23158,18 @@ msgstr ""
 ":guilabel:`Kreditfaktura`: Utfärda en :ref:`kreditfaktura <accounting/"
 "credit_notes/issue-credit-note>` till kunden."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:134
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:139
 msgid ""
 ":guilabel:`Reset to Draft`: Reset the invoice to draft if changes are needed."
 msgstr ""
 ":guilabel:`Återställ till utkast`: Återställ fakturan till utkast om "
 "ändringar behövs."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:139
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:144
 msgid "Invoice generation via QR code and URL"
 msgstr "Fakturagenerering via QR-kod och URL"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:141
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:146
 msgid ""
 "To allow customers to request an invoice by scanning a QR code printed on "
 "their :ref:`receipt <pos/configuration/receipts>`, follow these steps:"
@@ -23179,15 +23178,15 @@ msgstr ""
 "tryckt på deras :ref:`inleverans <pos/configuration/receipts>`, följ dessa "
 "steg:"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:145
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:150
 msgid "Scroll down to the :guilabel:`Bills & Receipts` section."
 msgstr "Scrolla ner till sektionen :guilabel:`Räkningar & inleveranser`."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:146
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:151
 msgid "Enable the :guilabel:`Self-service invoicing` setting."
 msgstr "Aktivera inställningen :guilabel:`Egenskapad fakturering`."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:147
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:152
 msgid ""
 "Set the :guilabel:`Print` field to :guilabel:`QR code`, :guilabel:`URL`, "
 "or :guilabel:`QR code + URL` to determine how customers can access their "
@@ -23198,7 +23197,7 @@ msgstr ""
 "kunder kan komma åt sin faktura (t.ex. genom att skanna QR-koden eller genom "
 "att skriva in URL:en i en webbläsare)."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:151
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:156
 msgid ""
 "Upon scanning the QR code or typing the URL in a browser, customers must "
 "fill in a form with the information on the receipt (i.e., "
@@ -23844,6 +23843,7 @@ msgstr ""
 "för upphämtning eller retur av uthyrning online."
 
 #: ../../content/applications/sales/rental/configure_products/product_type.rst:73
+#: ../../content/applications/sales/rental/configure_products/products.rst:33
 msgid "Click :guilabel:`Save` to apply the changes."
 msgstr "Klicka på :guilabel:`Spara` för att tillämpa ändringarna."
 
@@ -23941,7 +23941,7 @@ msgid ":doc:`../../../services/project`"
 msgstr ":doc:`../../../services/project`"
 
 #: ../../content/applications/sales/rental/configure_products/product_type.rst:102
-#: ../../content/applications/sales/rental/configure_products/products.rst:260
+#: ../../content/applications/sales/rental/configure_products/products.rst:266
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:130
 msgid ":doc:`../../../inventory_and_mrp/inventory`"
 msgstr ":doc:`../../../inventory_and_mrp/inventory`"
@@ -24092,19 +24092,13 @@ msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:19
 msgid ""
-"Navigate to :menuselection:`Rental app --> Configuration --> Settings`, "
+"Navigate to :menuselection:`Rental app --> Configuration --> Settings`, and "
 "configure the :guilabel:`Default Delay Costs` in the *Rental* section for "
 "late fees. Optionally, configure the :guilabel:`Default Padding Time` to "
 "make rentals unavailable for booking. Refer to the :ref:`rental/products/"
 "rental-transfer-feature` section to learn what it does and how to configure "
 "it."
 msgstr ""
-"Gå till :menuselection:`Uthyrning --> Konfiguration --> Inställningar`, "
-"konfigurera :guilabel:`Standardförseningskostnader` i avsnittet *Uthyrning* "
-"för förseningsavgifter. Konfigurera eventuellt :guilabel:`Standardbuffertid` "
-"för att göra uthyrningar otillgängliga för bokning. Se "
-"avsnittet :ref:`rental/products/rental-transfer-feature` för att lära dig "
-"vad det gör och hur du konfigurerar det."
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:25
 msgid ""
@@ -24125,10 +24119,6 @@ msgstr ""
 "fälten :guilabel:`Per timme` och :guilabel:`Per dag` på produktformuläret. "
 "Om standardvärdena gäller för alla produkter, lämna "
 "fältet :guilabel:`Produkt` tomt."
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:33
-msgid "Click **Save** to apply the changes."
-msgstr "Klicka på **Spara** för att tillämpa ändringarna."
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:None
 msgid ""
@@ -24154,38 +24144,33 @@ msgstr ""
 "följande:"
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:47
-msgid "General Information tab"
-msgstr "Fliken Allmän information"
+msgid "Initial product configuration"
+msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:49
 msgid ""
-"In the new product window, the :guilabel:`Rental` checkbox is already ticked "
-"by default. Select the :guilabel:`Product Type` as :guilabel:`Goods`."
+"In the new product window, the :guilabel:`Rental` checkbox is already "
+"selected by default. Select the :guilabel:`Product Type` "
+"as :guilabel:`Goods`."
 msgstr ""
-"I det nya produktfönstret är kryssrutan :guilabel:`Uthyrning` redan ikryssad "
-"som standard. Välj :guilabel:`Produkttyp` som :guilabel:`Varor`."
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:52
 msgid ""
-"Tick the :guilabel:`Track Inventory` checkbox and select :guilabel:`By "
+"Enable the :guilabel:`Track Inventory` checkbox and select :guilabel:`By "
 "Quantity` from the drop-down menu. For the :guilabel:`Category` field, "
 "select :guilabel:`Goods` from the drop-down menu or create a new category by "
 "typing in the name and clicking :guilabel:`Create`."
 msgstr ""
-"Kryssa i kryssrutan :guilabel:`Spåra lager` och välj :guilabel:`Efter "
-"kvantitet` från rullgardinsmenyn. För fältet :guilabel:`Kategori`, "
-"välj :guilabel:`Varor` från rullgardinsmenyn eller skapa en ny kategori "
-"genom att skriva in namnet och klicka på :guilabel:`Skapa`."
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:None
 msgid "The new product view in the Rental app."
 msgstr "Den nya produktvyn i appen Uthyrning."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:60
-msgid "Attributes & Variants tab"
-msgstr "Fliken Attribut & Varianter"
+#: ../../content/applications/sales/rental/configure_products/products.rst:62
+msgid "Optional: specify rental variants"
+msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:63
+#: ../../content/applications/sales/rental/configure_products/products.rst:65
 msgid ""
 "The *Variant* feature in the **Inventory** app must be enabled for this tab "
 "to display."
@@ -24193,24 +24178,21 @@ msgstr ""
 "Funktionen *Variant* i appen **Lager** måste vara aktiverad för att denna "
 "flik ska visas."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:65
+#: ../../content/applications/sales/rental/configure_products/products.rst:67
 msgid ""
-"Click :guilabel:`Add a line`, then select a default option from "
-"the :guilabel:`Attribute` drop-down menu. To create a new one, enter the "
-"name, then click :guilabel:`Create and edit…` to :ref:`configure the "
-"attribute and its values <products/variants/attributes>`."
+"In the :guilabel:`Attributes & Variants` tab, :ref:`add the appropriate "
+"attribute and its values <products/variants/attributes>` by "
+"clicking :guilabel:`Add a line`. Attributes and values are useful for "
+"keeping the product library manageable, tracking and differentiating the "
+"inventory, and providing more detailed reports. Examples of rental variants "
+"for a *Goods* product are size, brand, color, and material."
 msgstr ""
-"Klicka på :guilabel:`Lägg till en rad`, välj sedan ett standardalternativ "
-"från rullgardinsmenyn :guilabel:`Attribut`. För att skapa ett nytt, ange "
-"namnet och klicka sedan på :guilabel:`Skapa och redigera…` för "
-"att :ref:`konfigurera attributet och dess värden <products/variants/"
-"attributes>`."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:72
-msgid "Rental prices tab"
-msgstr "Fliken Uthyrningspriser"
+#: ../../content/applications/sales/rental/configure_products/products.rst:76
+msgid "Set rental periods, prices, and reservations"
+msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:74
+#: ../../content/applications/sales/rental/configure_products/products.rst:78
 msgid ""
 "Click the :guilabel:`Rental prices` tab and in the :guilabel:`Pricing` "
 "section, click :guilabel:`Add a price` to enter a new rental rate. Choose a "
@@ -24224,7 +24206,7 @@ msgstr ""
 "uthyrningen`) i kolumnen :guilabel:`Period`, eller skapa en ny prisperiod "
 "genom att skriva in namnet och klicka på :guilabel:`Create and edit`."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:80
+#: ../../content/applications/sales/rental/configure_products/products.rst:84
 msgid ""
 "Creating a new pricing period opens a pop-up *Create period* window. Fill in "
 "the :guilabel:`Name`, :guilabel:`Duration`, and :guilabel:`Unit`, and "
@@ -24238,7 +24220,7 @@ msgstr ""
 msgid "Sample of a New Period view in the Rental app."
 msgstr "Exempel på en vy för Ny period i appen Uthyrning."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:87
+#: ../../content/applications/sales/rental/configure_products/products.rst:91
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:122
 msgid ""
 "Next, enter the :guilabel:`Price` for that specific :guilabel:`Period`. To "
@@ -24251,7 +24233,7 @@ msgstr ""
 "klicka i kolumnen :guilabel:`Pricelist` och välj önskad lista från "
 "rullgardinsmenyn."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:91
+#: ../../content/applications/sales/rental/configure_products/products.rst:95
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:126
 msgid ""
 "In the :guilabel:`Reservations` section, fill in the :guilabel:`Hourly "
@@ -24266,7 +24248,7 @@ msgstr ""
 "Costs`, förutsatt att de har konfigurerats i :menuselection:`Rental app --> "
 "Configuration --> Settings`."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:96
+#: ../../content/applications/sales/rental/configure_products/products.rst:100
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:131
 msgid ""
 "Click the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon near the "
@@ -24275,7 +24257,7 @@ msgstr ""
 "Klicka på ikonen :icon:`fa-cloud-upload` :guilabel:`Spara manuellt` högst "
 "upp för att spara."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:99
+#: ../../content/applications/sales/rental/configure_products/products.rst:103
 msgid ""
 "A bike rental business rents tandem bikes for two hours at the local park. "
 "The hourly rental rate for their tandem bikes is $20, but since tandem bikes "
@@ -24290,7 +24272,7 @@ msgstr ""
 "för sen återlämning till 20 dollar per timme och 160 dollar per dag (20 "
 "dollar x 8 timmar)."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:104
+#: ../../content/applications/sales/rental/configure_products/products.rst:108
 msgid ""
 "Create a new pricing period by navigating to :menuselection:`Rental app --> "
 "Configuration --> Rental periods`. Click :guilabel:`New`, then configure the "
@@ -24300,7 +24282,7 @@ msgstr ""
 "Konfiguration --> Uthyrningsperioder`. Klicka på :guilabel:`Ny` och "
 "konfigurera sedan perioden för `2` timmar."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:107
+#: ../../content/applications/sales/rental/configure_products/products.rst:111
 msgid ""
 "Navigate to the tandem bike product and in the :guilabel:`Rental prices` tab "
 "add the `2` hour period set at `$35`. Manually save to apply changes."
@@ -24315,61 +24297,53 @@ msgstr ""
 "Exempel på en uthyrningsprodukt med den anpassade uthyrningsperioden "
 "tillämpad."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:116
-msgid "Configure a physical rental product for product tracking"
-msgstr "Konfigurera en fysisk uthyrningsprodukt för produktspårning"
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:119
-msgid ""
-"To configure a physical rental product for product tracking, the "
-"**Inventory** app must be installed, and :doc:`Lots & Serial Numbers must be "
-"enabled <../../../inventory_and_mrp/inventory/product_management/"
-"product_tracking>`."
+#: ../../content/applications/sales/rental/configure_products/products.rst:120
+msgid "Configure product tracking"
 msgstr ""
-"För att konfigurera en fysisk uthyrningsprodukt för produktspårning måste "
-"appen **Lager** vara installerad och :doc:`Partier & Serienummer måste vara "
-"aktiverade <../../../inventory_and_mrp/inventory/product_management/"
-"product_tracking>`."
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:123
 msgid ""
-"Go to the :menuselection:`Rental app --> Products`, then "
-"click :guilabel:`New`. In the new product window, the :guilabel:`Rental` "
-"checkbox is already ticked by default."
+"To configure a physical rental product for product tracking, the "
+"**Inventory** app must be installed, and :guilabel:`Lots & Serial Numbers` "
+"must be enabled."
 msgstr ""
-"Gå till :menuselection:`Uthyrning --> Produkter` och klicka sedan "
-"på :guilabel:`Ny`. I det nya produktfönstret är "
-"kryssrutan :guilabel:`Uthyrning` redan ikryssad som standard."
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:126
 msgid ""
-"Select the :guilabel:`Product Type` as :guilabel:`Goods`. Tick "
-"the :guilabel:`Track Inventory` checkbox and select either :guilabel:`By "
-"Lots` or :guilabel:`By Unique Serial Number` from the drop-down menu."
+"For rental products, only :guilabel:`By Unique Serial Number` tracking can "
+"be used. Selecting :guilabel:`By Lots` instead results in an error message, "
+"since that setting doesn't apply to rentals."
 msgstr ""
-"Välj :guilabel:`Produkttyp` som :guilabel:`Varor`. Kryssa i "
-"kryssrutan :guilabel:`Spåra lager` och välj antingen :guilabel:`Efter "
-"partier` eller :guilabel:`Efter unikt serienummer` från rullgardinsmenyn."
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:130
 msgid ""
+"Go to the :menuselection:`Rental app --> Products`, then "
+"click :guilabel:`New`. In the new product window, the :guilabel:`Rental` "
+"checkbox is already selected by default."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:133
+msgid ""
+"Select the :guilabel:`Product Type` as :guilabel:`Goods`. Enable "
+"the :guilabel:`Track Inventory` checkbox and select :guilabel:`By Unique "
+"Serial Number` from the drop-down menu."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:136
+msgid ""
 "For the :guilabel:`Category` field, select :guilabel:`Goods` from the drop-"
 "down menu or create a new category by typing in the name and "
-"clicking :guilabel:`Create`. Configure rental rates on the :ref:`rental/"
-"products/rental-prices-tab`. Click the :icon:`fa-cloud-"
-"upload` :guilabel:`(Save manually)` icon near the top to save."
+"clicking :guilabel:`Create`. Configure rental rates on the :ref:`Rental "
+"prices <rental/products/rental-periods-prices-reservations>` tab. Click "
+"the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon near the top to "
+"save."
 msgstr ""
-"För fältet :guilabel:`Kategori`, välj :guilabel:`Varor` från "
-"rullgardinsmenyn eller skapa en ny kategori genom att skriva in namnet och "
-"klicka på :guilabel:`Skapa`. Konfigurera uthyrningspriser på :ref:`rental/"
-"products/rental-prices-tab`. Klicka på ikonen :icon:`fa-cloud-"
-"upload` :guilabel:`(Spara manuellt)` högst upp för att spara."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:138
+#: ../../content/applications/sales/rental/configure_products/products.rst:144
 msgid "Rental Transfers feature"
 msgstr "Funktionen Uthyrningstransferingar"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:140
+#: ../../content/applications/sales/rental/configure_products/products.rst:146
 msgid ""
 "The *Rental Transfers* feature automatically creates a delivery receipt when "
 "the rental product is picked up and a return receipt when it is returned to "
@@ -24381,15 +24355,15 @@ msgstr ""
 "lagret. Att dokumentera lagerrörelse skapar ett tydligt pappersspår och har "
 "en mängd användningsområden:"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:144
+#: ../../content/applications/sales/rental/configure_products/products.rst:150
 msgid "Tracking high-value products."
 msgstr "Spåra högvärdiga produkter."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:145
+#: ../../content/applications/sales/rental/configure_products/products.rst:151
 msgid "Tracking stock levels across multiple stores or warehouse locations."
 msgstr "Spåra lagernivåer över flera butiker eller lagerplatser."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:146
+#: ../../content/applications/sales/rental/configure_products/products.rst:152
 msgid ""
 "Tracking products between different store locations that allow pick up and "
 "returns."
@@ -24397,23 +24371,19 @@ msgstr ""
 "Spåra produkter mellan olika butiksplatser som tillåter avhämtning och "
 "returer."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:148
+#: ../../content/applications/sales/rental/configure_products/products.rst:154
 msgid ""
 "To enable the :guilabel:`Rental Transfers` feature, navigate to "
 "the :menuselection:`Rental app --> Configuration --> Settings` and in the "
-"*Rental* section, tick the :guilabel:`Rental Transfers` checkbox."
+"*Rental* section, enable the :guilabel:`Rental Transfers` checkbox."
 msgstr ""
-"För att aktivera funktionen :guilabel:`Uthyrningstransferingar`, navigera "
-"till :menuselection:`Uthyrning --> Konfiguration --> Inställningar` och i "
-"sektionen *Uthyrning*, kryssa i "
-"kryssrutan :guilabel:`Uthyrningstransferingar`."
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:None
 msgid "Sample of the Rental settings with the Rental Transfers enabled."
 msgstr ""
 "Exempel på uthyrningsinställningar med uthyrningsöverföringar aktiverade."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:156
+#: ../../content/applications/sales/rental/configure_products/products.rst:164
 msgid ""
 "The **Inventory** app automatically creates an internal default location "
 "once the *Rental Transfers* feature is enabled. Odoo uses the new default "
@@ -24429,29 +24399,18 @@ msgstr ""
 "Uthyrning` vid uthyrning och tillbaka vid retur). Modifiera inte för att "
 "undvika att lagerspårningen korrupteras."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:165
+#: ../../content/applications/sales/rental/configure_products/products.rst:173
 msgid "Multi-location management and transfers"
 msgstr "Hantering av flera platser och överföringar"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:168
+#: ../../content/applications/sales/rental/configure_products/products.rst:176
 msgid ""
-"The **Inventory** app must be installed to set up this configuration. The "
-"**Inventory** app automatically creates an internal default location once "
-"the *Rental Transfers* feature is enabled. Odoo uses the new default "
-"location, :guilabel:`Customer/Rental`, to track products during the rental "
-"period (moving them from :guilabel:`Stock` to :guilabel:`Customer/Rental` "
-"upon rental, and back upon return). Do **not** modify to avoid corrupting "
-"inventory tracking."
+"Refer to the :ref:`Rental Transfers note <rental/products/rental-transfers-"
+"note>` for information about internal location configuration and inventory "
+"tracking."
 msgstr ""
-"Appen **Lager** måste vara installerad för att kunna genomföra denna "
-"konfiguration. Appen **Lager** skapar automatiskt en intern standardplats "
-"när funktionen *Uthyrningstransferingar* aktiveras. Odoo använder den nya "
-"standardplatsen, :guilabel:`Kund/Uthyrning`, för att spåra produkter under "
-"uthyrningsperioden (flyttar dem från :guilabel:`Lager` till :guilabel:`Kund/"
-"Uthyrning` vid uthyrning och tillbaka vid retur). Modifiera **inte** för att "
-"undvika att lagerspårningen förstörs."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:174
+#: ../../content/applications/sales/rental/configure_products/products.rst:179
 msgid ""
 "Tracking the location of high-value physical products between locations is "
 "essential. The **Rental** app helps with the *Rental Transfers* feature. "
@@ -24466,31 +24425,21 @@ msgstr ""
 "vilket kräver en inleverans och en leveransorder varje gång en fysisk "
 "produkt hyrs ut eller returneras."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:179
+#: ../../content/applications/sales/rental/configure_products/products.rst:184
 msgid ""
 "For multi-location management and rental item transfer tracking, navigate to "
-"the :menuselection:`Rental app --> Configuration --> Settings` and in "
-"the :guilabel:`Rental` section, tick the :guilabel:`Rental Transfers` "
-"checkbox."
+"the :menuselection:`Rental app --> Configuration --> Settings` and in the "
+"*Rental* section, enable the :guilabel:`Rental Transfers` checkbox."
 msgstr ""
-"För hantering av flera platser och spårning av uthyrningsartiklar, navigera "
-"till :menuselection:`Uthyrning --> Konfiguration --> Inställningar` och i "
-"sektionen :guilabel:`Uthyrning`, kryssa i "
-"kryssrutan :guilabel:`Uthyrningstransferingar`."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:183
+#: ../../content/applications/sales/rental/configure_products/products.rst:188
 msgid ""
 "Next, go to the :menuselection:`Inventory app --> Configuration --> "
-"Settings` and in the :guilabel:`Warehouse` section, tick "
-"the :guilabel:`Storage Locations` checkbox. Click :guilabel:`Save` to apply "
-"the changes."
+"Settings` and in the *Warehouse* section, enable the :guilabel:`Storage "
+"Locations` checkbox. Click :guilabel:`Save` to apply the changes."
 msgstr ""
-"Gå sedan till :menuselection:`Lager-app --> Konfiguration --> Inställningar` "
-"och i sektionen :guilabel:`Lager`, kryssa för "
-"kryssrutan :guilabel:`Förvaringsplatser`. Klicka på :guilabel:`Spara` för "
-"att tillämpa ändringarna."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:187
+#: ../../content/applications/sales/rental/configure_products/products.rst:192
 msgid ""
 "To configure new locations, navigate to :menuselection:`Inventory app --> "
 "Configuration --> Locations`. Click :guilabel:`New` to configure a new "
@@ -24500,7 +24449,7 @@ msgstr ""
 "Konfiguration --> Platser`. Klicka på :guilabel:`Skapa` för att konfigurera "
 "en ny intern plats."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:190
+#: ../../content/applications/sales/rental/configure_products/products.rst:195
 msgid ""
 "On the new location page, enter the :guilabel:`Location Name` and ensure "
 "the :guilabel:`Parent Location` field is set to :guilabel:`WH`. Click "
@@ -24512,7 +24461,7 @@ msgstr ""
 "ikonen :icon:`fa-cloud-upload` :guilabel:`Spara manuellt` längst upp för att "
 "spara."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:195
+#: ../../content/applications/sales/rental/configure_products/products.rst:200
 msgid ""
 "A bike rental business has two store locations within the same city. Both "
 "locations allow for pick-up and drop-off of their bikes. The company wants "
@@ -24522,23 +24471,19 @@ msgstr ""
 "platserna tillåter upphämtning och avlämning av sina cyklar. Företaget vill "
 "spåra sina cyklar noggrant på varje plats."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:199
+#: ../../content/applications/sales/rental/configure_products/products.rst:204
 msgid ""
 "Ensure the **Rental** and **Inventory** apps are configured by "
-"enabling :guilabel:`Rental Transfers` in the **Rental app** "
+"enabling :guilabel:`Rental Transfers` in the **Rental** app "
 "and :guilabel:`Storage Locations` in the **Inventory** app."
 msgstr ""
-"Se till att apparna **Uthyrning** och **Lager** är konfigurerade genom att "
-"aktivera :guilabel:`Uthyrningsöverföringar` i **Uthyrningsappen** "
-"och :guilabel:`Förvaringsplatser` i **Lagerappen**."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:202
+#: ../../content/applications/sales/rental/configure_products/products.rst:207
 msgid ""
 "Next, go to the :menuselection:`Inventory app > Configuration > Locations`. "
-"Create a new location for each storefront."
+"Create a new location Next, go to the :menuselection:`Inventory app --> "
+"Configuration --> Locations`. Create a new location for each storefront."
 msgstr ""
-"Gå sedan till :menuselection:`Lager-app > Konfiguration > Platser`. Skapa en "
-"ny plats för varje butik."
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:0
 msgid ""
@@ -24548,12 +24493,12 @@ msgstr ""
 "Exempel på interna lagerplatser som representerar olika "
 "uthyrningsbutiksplatser."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:211
+#: ../../content/applications/sales/rental/configure_products/products.rst:217
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:150
 msgid "Pickup products"
 msgstr "Produkter för upphämtning"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:213
+#: ../../content/applications/sales/rental/configure_products/products.rst:219
 msgid ""
 "When a customer picks up products, navigate to the appropriate rental order, "
 "click :guilabel:`Pickup`. The **Rental** app displays a warehouse delivery "
@@ -24569,18 +24514,18 @@ msgstr ""
 msgid "Sample of a Pickup page in the Rental app."
 msgstr "Exempel på en avhämtningssida i appen Uthyrning."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:220
+#: ../../content/applications/sales/rental/configure_products/products.rst:226
 msgid ""
 "Doing so places a :guilabel:`Pickedup` status banner on the rental order."
 msgstr ""
 "Detta placerar en statusbanner :guilabel:`Pickedup` på uthyrningsordern."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:225
+#: ../../content/applications/sales/rental/configure_products/products.rst:231
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:170
 msgid "Return products"
 msgstr "Returnera produkter"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:227
+#: ../../content/applications/sales/rental/configure_products/products.rst:233
 msgid ""
 "When a customer returns products, navigate to the desired rental order and "
 "click :guilabel:`Return`. The **Rental** app displays a warehouse receipt "
@@ -24590,7 +24535,7 @@ msgstr ""
 "och klicka på :guilabel:`Tillbaka`. Appen **Uthyrning** visar ett "
 "lagerinleveransformulär som listar de utcheckade uthyrningsprodukterna."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:230
+#: ../../content/applications/sales/rental/configure_products/products.rst:236
 msgid ""
 "Enter the same number of products the customer returned in "
 "the :guilabel:`Quantity` column. If any of the products have serial numbers, "
@@ -24604,7 +24549,7 @@ msgstr ""
 msgid "Sample of the Return page in the Rental app."
 msgstr "Exempel på retursidan i appen Uthyrning."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:236
+#: ../../content/applications/sales/rental/configure_products/products.rst:242
 msgid ""
 "Click :guilabel:`Validate` to move the order to the :guilabel:`Done` stage. "
 "A :guilabel:`Returned` status banner appears on the rental order."
@@ -24613,11 +24558,11 @@ msgstr ""
 "etappen :guilabel:`Klar`. En statusbanner :guilabel:`Returned` visas på "
 "uthyrningsordern."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:242
+#: ../../content/applications/sales/rental/configure_products/products.rst:248
 msgid "Print pickup and return receipts"
 msgstr "Skriv ut kvitton för upphämtning och retur"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:244
+#: ../../content/applications/sales/rental/configure_products/products.rst:250
 msgid ""
 "Pickup and return receipts can be printed for customers when they pick up "
 "and return rental products."
@@ -24625,7 +24570,7 @@ msgstr ""
 "Avhämtnings- och returinleveranser kan skrivas ut för kunder när de hämtar "
 "och returnerar uthyrningsprodukter."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:247
+#: ../../content/applications/sales/rental/configure_products/products.rst:253
 msgid ""
 "To print pickup and/or return receipts, navigate to the appropriate rental "
 "order, click the :icon:`fa-cog` :guilabel:`(Actions)` icon to reveal a drop-"
@@ -24642,7 +24587,7 @@ msgstr ""
 "Alternativet för utskrift av upphämtnings- och returkvitton i Odoo Rental-"
 "applikationen."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:253
+#: ../../content/applications/sales/rental/configure_products/products.rst:259
 msgid ""
 "From this drop-down menu, hover over the :guilabel:`Print` option to reveal "
 "a sub-menu. Then select :guilabel:`Pickup and Return Receipt`."
@@ -24650,7 +24595,7 @@ msgstr ""
 "I rullgardinsmenyn håller du muspekaren över alternativet :guilabel:`Print` "
 "för att visa en undermeny. Välj sedan :guilabel:`Pickup and Return Receipt`."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:256
+#: ../../content/applications/sales/rental/configure_products/products.rst:262
 msgid ""
 "Odoo generates and downloads a PDF detailing all information about the "
 "current status of the rented items."
@@ -24658,7 +24603,7 @@ msgstr ""
 "Odoo genererar och laddar ner en PDF som specificerar all information om det "
 "aktuella statusen för de uthyrda artiklarna."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:261
+#: ../../content/applications/sales/rental/configure_products/products.rst:267
 msgid ""
 "`Tutorial: Your First Rental Product <https://youtu.be/CE-SahTUC9A?"
 "si=kWfYEOTd2nT_ASp9>`_"
@@ -44205,6 +44150,282 @@ msgstr ""
 #: ../../content/applications/sales/subscriptions/upselling.rst:80
 msgid ":doc:`../sales/products_prices/prices/discounts`"
 msgstr ":doc:`../sales/products_prices/prices/discounts`"
+
+#~ msgid ""
+#~ "Odoo works with the Ingenico Lane/, Desk/, and Move/ payment terminals as "
+#~ "they support the TLV communication protocol through TCP/IP."
+#~ msgstr ""
+#~ "Odoo fungerar med Ingenico Lane/, Desk/ och Move/ betalterminaler "
+#~ "eftersom de stöder TLV-kommunikationsprotokollet via TCP/IP."
+
+#~ msgid "Connect an IoT system"
+#~ msgstr "Anslut ett IoT-system"
+
+#~ msgid ""
+#~ "Connecting an Ingenico payment terminal to Odoo is a feature that "
+#~ "requires an IoT system. For more information on how to connect an IoT "
+#~ "system to your database, please refer to the :doc:`IoT documentation </"
+#~ "applications/general/iot>`."
+#~ msgstr ""
+#~ "Att ansluta en Ingenico-betalterminal till Odoo är en funktion som kräver "
+#~ "ett IoT-system. För mer information om hur du ansluter ett IoT-system "
+#~ "till din databas, se :doc:`IoT-dokumentationen </applications/general/"
+#~ "iot>`."
+
+#~ msgid "Configure the Lane/Desk/Move 5000 terminals for Ingenico BENELUX"
+#~ msgstr "Konfigurera Lane/Desk/Move 5000-terminalerna för Ingenico BENELUX"
+
+#~ msgid ""
+#~ "Press the function button (:guilabel:`F` on Lane/5000, :guilabel:`⦿` on "
+#~ "Desk/5000 and Move/5000)."
+#~ msgstr ""
+#~ "Tryck på funktionsknappen (:guilabel:`F` på Lane/5000, :guilabel:`⦿` på "
+#~ "Desk/5000 och Move/5000)."
+
+#~ msgid ""
+#~ "Go to :menuselection:`Kassa menu --> Settings Menu` and enter the "
+#~ "settings password (default: `2009`)."
+#~ msgstr ""
+#~ "Gå till :menuselection:`Kassa-meny --> Inställningsmeny` och ange "
+#~ "inställningslösenordet (standard: `2009`)."
+
+#~ msgid ""
+#~ "Select :guilabel:`Change Connection` and press :guilabel:`OK` on the next "
+#~ "screen."
+#~ msgstr ""
+#~ "Välj :guilabel:`Change Connection` och tryck på :guilabel:`OK` på nästa "
+#~ "skärm."
+
+#~ msgid "Select :guilabel:`TCP/IP` and :guilabel:`IP-address`."
+#~ msgstr "Välj :guilabel:`TCP/IP` och :guilabel:`IP-adress`."
+
+#~ msgid "On the next screen, enter the IP address of your IoT system."
+#~ msgstr "På nästa skärm anger du IP-adressen för ditt IoT-system."
+
+#~ msgid ""
+#~ "Enter `9000` as port number and press :guilabel:`OK` on the next screen."
+#~ msgstr ""
+#~ "Ange `9000` som portnummer och tryck på :guilabel:`OK` på nästa skärm."
+
+#~ msgid ""
+#~ "At this point, the terminal restarts and should be displayed on the IoT "
+#~ "system's form in Odoo."
+#~ msgstr ""
+#~ "Nu startar terminalen om och bör visas i IoT-systemets formulär i Odoo."
+
+#~ msgid ""
+#~ "Enable the payment terminal :ref:`in the application settings <pos/use/"
+#~ "settings>` and :doc:`create the related payment method <../../"
+#~ "payment_methods>`. Set the journal type as :guilabel:`Bank` and "
+#~ "select :guilabel:`Ingenico` in the :guilabel:`Use a Payment Terminal` "
+#~ "field. Then, select your terminal device in the :guilabel:`Payment "
+#~ "Terminal Device` field."
+#~ msgstr ""
+#~ "Aktivera betalterminalen :ref:`i applikationsinställningarna <pos/use/"
+#~ "settings>` och :doc:`skapa den relaterade betalningsmetoden <../../"
+#~ "payment_methods>`. Ställ in journaltypen som :guilabel:`Bank` och "
+#~ "välj :guilabel:`Ingenico` i fältet :guilabel:`Använd en betalterminal`. "
+#~ "Välj sedan din terminalenhet i fältet :guilabel:`Betalterminalenhet`."
+
+#~ msgid ""
+#~ "Once the payment method is created, you can select it in your POS "
+#~ "settings. To do so, go to the :ref:`POS' settings <pos/use/settings>`, "
+#~ "click :guilabel:`Edit`, and add the payment method under "
+#~ "the :guilabel:`Payments` section."
+#~ msgstr ""
+#~ "När betalningsmetoden har skapats kan du välja den i dina "
+#~ "kassasysteminställningar. För att göra detta, gå "
+#~ "till :ref:`kassasystemets inställningar <pos/use/settings>`, klicka "
+#~ "på :guilabel:`Redigera` och lägg till betalningsmetoden under "
+#~ "sektionen :guilabel:`Betalningar`."
+
+#~ msgid ""
+#~ "Mercado Pago payment terminals do not require an :doc:`IoT Box </"
+#~ "applications/general/iot>` to operate."
+#~ msgstr ""
+#~ "Mercado Pagos betalterminaler kräver ingen :doc:`IoT-box </applications/"
+#~ "general/iot>` för att fungera."
+
+#~ msgid ""
+#~ "Once the Mercado Pago configuration is complete, log in to your Odoo "
+#~ "database to create a :ref:`payment method <pos/mercado-pago/payment-"
+#~ "method>` using the collected credentials."
+#~ msgstr ""
+#~ "När Mercado Pago-konfigurationen är klar, logga in på din Odoo-databas "
+#~ "för att skapa en :ref:`betalningsmetod <pos/mercado-pago/payment-method>` "
+#~ "med hjälp av de insamlade uppgifterna."
+
+#~ msgid "Odoo does not support the :guilabel:`Standalone` operation mode."
+#~ msgstr "Odoo stöder inte driftsläget :guilabel:`Standalone`."
+
+#~ msgid ""
+#~ "Navigate to :menuselection:`Rental app --> Configuration --> Settings`, "
+#~ "configure the :guilabel:`Default Delay Costs` in the *Rental* section for "
+#~ "late fees. Optionally, configure the :guilabel:`Default Padding Time` to "
+#~ "make rentals unavailable for booking. Refer to the :ref:`rental/products/"
+#~ "rental-transfer-feature` section to learn what it does and how to "
+#~ "configure it."
+#~ msgstr ""
+#~ "Gå till :menuselection:`Uthyrning --> Konfiguration --> Inställningar`, "
+#~ "konfigurera :guilabel:`Standardförseningskostnader` i avsnittet "
+#~ "*Uthyrning* för förseningsavgifter. Konfigurera "
+#~ "eventuellt :guilabel:`Standardbuffertid` för att göra uthyrningar "
+#~ "otillgängliga för bokning. Se avsnittet :ref:`rental/products/rental-"
+#~ "transfer-feature` för att lära dig vad det gör och hur du konfigurerar "
+#~ "det."
+
+#~ msgid "Click **Save** to apply the changes."
+#~ msgstr "Klicka på **Spara** för att tillämpa ändringarna."
+
+#~ msgid "General Information tab"
+#~ msgstr "Fliken Allmän information"
+
+#~ msgid ""
+#~ "In the new product window, the :guilabel:`Rental` checkbox is already "
+#~ "ticked by default. Select the :guilabel:`Product Type` "
+#~ "as :guilabel:`Goods`."
+#~ msgstr ""
+#~ "I det nya produktfönstret är kryssrutan :guilabel:`Uthyrning` redan "
+#~ "ikryssad som standard. Välj :guilabel:`Produkttyp` som :guilabel:`Varor`."
+
+#~ msgid ""
+#~ "Tick the :guilabel:`Track Inventory` checkbox and select :guilabel:`By "
+#~ "Quantity` from the drop-down menu. For the :guilabel:`Category` field, "
+#~ "select :guilabel:`Goods` from the drop-down menu or create a new category "
+#~ "by typing in the name and clicking :guilabel:`Create`."
+#~ msgstr ""
+#~ "Kryssa i kryssrutan :guilabel:`Spåra lager` och välj :guilabel:`Efter "
+#~ "kvantitet` från rullgardinsmenyn. För fältet :guilabel:`Kategori`, "
+#~ "välj :guilabel:`Varor` från rullgardinsmenyn eller skapa en ny kategori "
+#~ "genom att skriva in namnet och klicka på :guilabel:`Skapa`."
+
+#~ msgid "Attributes & Variants tab"
+#~ msgstr "Fliken Attribut & Varianter"
+
+#~ msgid ""
+#~ "Click :guilabel:`Add a line`, then select a default option from "
+#~ "the :guilabel:`Attribute` drop-down menu. To create a new one, enter the "
+#~ "name, then click :guilabel:`Create and edit…` to :ref:`configure the "
+#~ "attribute and its values <products/variants/attributes>`."
+#~ msgstr ""
+#~ "Klicka på :guilabel:`Lägg till en rad`, välj sedan ett standardalternativ "
+#~ "från rullgardinsmenyn :guilabel:`Attribut`. För att skapa ett nytt, ange "
+#~ "namnet och klicka sedan på :guilabel:`Skapa och redigera…` för "
+#~ "att :ref:`konfigurera attributet och dess värden <products/variants/"
+#~ "attributes>`."
+
+#~ msgid "Rental prices tab"
+#~ msgstr "Fliken Uthyrningspriser"
+
+#~ msgid "Configure a physical rental product for product tracking"
+#~ msgstr "Konfigurera en fysisk uthyrningsprodukt för produktspårning"
+
+#~ msgid ""
+#~ "To configure a physical rental product for product tracking, the "
+#~ "**Inventory** app must be installed, and :doc:`Lots & Serial Numbers must "
+#~ "be enabled <../../../inventory_and_mrp/inventory/product_management/"
+#~ "product_tracking>`."
+#~ msgstr ""
+#~ "För att konfigurera en fysisk uthyrningsprodukt för produktspårning måste "
+#~ "appen **Lager** vara installerad och :doc:`Partier & Serienummer måste "
+#~ "vara aktiverade <../../../inventory_and_mrp/inventory/product_management/"
+#~ "product_tracking>`."
+
+#~ msgid ""
+#~ "Go to the :menuselection:`Rental app --> Products`, then "
+#~ "click :guilabel:`New`. In the new product window, the :guilabel:`Rental` "
+#~ "checkbox is already ticked by default."
+#~ msgstr ""
+#~ "Gå till :menuselection:`Uthyrning --> Produkter` och klicka sedan "
+#~ "på :guilabel:`Ny`. I det nya produktfönstret är "
+#~ "kryssrutan :guilabel:`Uthyrning` redan ikryssad som standard."
+
+#~ msgid ""
+#~ "Select the :guilabel:`Product Type` as :guilabel:`Goods`. Tick "
+#~ "the :guilabel:`Track Inventory` checkbox and select either :guilabel:`By "
+#~ "Lots` or :guilabel:`By Unique Serial Number` from the drop-down menu."
+#~ msgstr ""
+#~ "Välj :guilabel:`Produkttyp` som :guilabel:`Varor`. Kryssa i "
+#~ "kryssrutan :guilabel:`Spåra lager` och välj antingen :guilabel:`Efter "
+#~ "partier` eller :guilabel:`Efter unikt serienummer` från rullgardinsmenyn."
+
+#~ msgid ""
+#~ "For the :guilabel:`Category` field, select :guilabel:`Goods` from the "
+#~ "drop-down menu or create a new category by typing in the name and "
+#~ "clicking :guilabel:`Create`. Configure rental rates on the :ref:`rental/"
+#~ "products/rental-prices-tab`. Click the :icon:`fa-cloud-"
+#~ "upload` :guilabel:`(Save manually)` icon near the top to save."
+#~ msgstr ""
+#~ "För fältet :guilabel:`Kategori`, välj :guilabel:`Varor` från "
+#~ "rullgardinsmenyn eller skapa en ny kategori genom att skriva in namnet "
+#~ "och klicka på :guilabel:`Skapa`. Konfigurera uthyrningspriser "
+#~ "på :ref:`rental/products/rental-prices-tab`. Klicka på ikonen :icon:`fa-"
+#~ "cloud-upload` :guilabel:`(Spara manuellt)` högst upp för att spara."
+
+#~ msgid ""
+#~ "To enable the :guilabel:`Rental Transfers` feature, navigate to "
+#~ "the :menuselection:`Rental app --> Configuration --> Settings` and in the "
+#~ "*Rental* section, tick the :guilabel:`Rental Transfers` checkbox."
+#~ msgstr ""
+#~ "För att aktivera funktionen :guilabel:`Uthyrningstransferingar`, navigera "
+#~ "till :menuselection:`Uthyrning --> Konfiguration --> Inställningar` och i "
+#~ "sektionen *Uthyrning*, kryssa i "
+#~ "kryssrutan :guilabel:`Uthyrningstransferingar`."
+
+#~ msgid ""
+#~ "The **Inventory** app must be installed to set up this configuration. The "
+#~ "**Inventory** app automatically creates an internal default location once "
+#~ "the *Rental Transfers* feature is enabled. Odoo uses the new default "
+#~ "location, :guilabel:`Customer/Rental`, to track products during the "
+#~ "rental period (moving them from :guilabel:`Stock` to :guilabel:`Customer/"
+#~ "Rental` upon rental, and back upon return). Do **not** modify to avoid "
+#~ "corrupting inventory tracking."
+#~ msgstr ""
+#~ "Appen **Lager** måste vara installerad för att kunna genomföra denna "
+#~ "konfiguration. Appen **Lager** skapar automatiskt en intern standardplats "
+#~ "när funktionen *Uthyrningstransferingar* aktiveras. Odoo använder den nya "
+#~ "standardplatsen, :guilabel:`Kund/Uthyrning`, för att spåra produkter "
+#~ "under uthyrningsperioden (flyttar dem från :guilabel:`Lager` "
+#~ "till :guilabel:`Kund/Uthyrning` vid uthyrning och tillbaka vid retur). "
+#~ "Modifiera **inte** för att undvika att lagerspårningen förstörs."
+
+#~ msgid ""
+#~ "For multi-location management and rental item transfer tracking, navigate "
+#~ "to the :menuselection:`Rental app --> Configuration --> Settings` and in "
+#~ "the :guilabel:`Rental` section, tick the :guilabel:`Rental Transfers` "
+#~ "checkbox."
+#~ msgstr ""
+#~ "För hantering av flera platser och spårning av uthyrningsartiklar, "
+#~ "navigera till :menuselection:`Uthyrning --> Konfiguration --> "
+#~ "Inställningar` och i sektionen :guilabel:`Uthyrning`, kryssa i "
+#~ "kryssrutan :guilabel:`Uthyrningstransferingar`."
+
+#~ msgid ""
+#~ "Next, go to the :menuselection:`Inventory app --> Configuration --> "
+#~ "Settings` and in the :guilabel:`Warehouse` section, tick "
+#~ "the :guilabel:`Storage Locations` checkbox. Click :guilabel:`Save` to "
+#~ "apply the changes."
+#~ msgstr ""
+#~ "Gå sedan till :menuselection:`Lager-app --> Konfiguration --> "
+#~ "Inställningar` och i sektionen :guilabel:`Lager`, kryssa för "
+#~ "kryssrutan :guilabel:`Förvaringsplatser`. Klicka på :guilabel:`Spara` för "
+#~ "att tillämpa ändringarna."
+
+#~ msgid ""
+#~ "Ensure the **Rental** and **Inventory** apps are configured by "
+#~ "enabling :guilabel:`Rental Transfers` in the **Rental app** "
+#~ "and :guilabel:`Storage Locations` in the **Inventory** app."
+#~ msgstr ""
+#~ "Se till att apparna **Uthyrning** och **Lager** är konfigurerade genom "
+#~ "att aktivera :guilabel:`Uthyrningsöverföringar` i **Uthyrningsappen** "
+#~ "och :guilabel:`Förvaringsplatser` i **Lagerappen**."
+
+#~ msgid ""
+#~ "Next, go to the :menuselection:`Inventory app > Configuration > "
+#~ "Locations`. Create a new location for each storefront."
+#~ msgstr ""
+#~ "Gå sedan till :menuselection:`Lager-app > Konfiguration > Platser`. Skapa "
+#~ "en ny plats för varje butik."
 
 #~ msgid ""
 #~ "Product variants can be managed via their individual product template, or "

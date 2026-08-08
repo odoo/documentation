@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-24 17:32+0000\n"
+"POT-Creation-Date: 2026-08-07 17:32+0000\n"
 "PO-Revision-Date: 2026-07-05 00:14+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -87,7 +87,6 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:21
 #: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:13
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:13
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:15
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:12
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:14
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:19
@@ -10275,7 +10274,7 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/pricing.rst:155
 #: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:38
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:144
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:149
 msgid "Go to :menuselection:`Point of Sale --> Configuration --> Settings`."
 msgstr ":menuselection:`POS --> 設定 --> 設定`\\ に移動します。"
 
@@ -13937,6 +13936,7 @@ msgstr "プロセス中に切断されたデバイスは、必ず再接続して
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:95
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:167
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:38
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:45
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:35
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:63
 msgid "Odoo configuration"
@@ -15713,7 +15713,6 @@ msgid "Chain ID"
 msgstr "チェーンID"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:41
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:42
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:30
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:36
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:22
@@ -15737,6 +15736,7 @@ msgid ":doc:`Create a new payment method <../../payment_methods>`:"
 msgstr ":doc:`新しい決済方法を作成 <../../payment_methods>`："
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:50
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:55
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mollie.rst:48
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:46
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:58
@@ -15747,6 +15747,7 @@ msgstr ""
 "\\ :guilabel:`仕訳帳`\\ フィールドを\\ :guilabel:`銀行`\\ に設定します。"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:51
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:57
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mollie.rst:50
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:47
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:60
@@ -15828,102 +15829,109 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:11
 msgid ""
-"Odoo works with the Ingenico Lane/, Desk/, and Move/ payment terminals as "
-"they support the TLV communication protocol through TCP/IP."
+"Odoo works with Ingenico's `Lane/5000 <https://ingenico.com/en/products-"
+"services/payment-terminals/tetra/lane5000-le>`_, `Desk/5000 <https://"
+"ingenico.com/en/products-services/payment-terminals/tetra/desk5000>`_, `Move/"
+"5000 <https://ingenico.com/en/products-services/payment-terminals/tetra/"
+"move5000>`_ payment terminals, as they support the TLV communication "
+"protocol through TCP/IP."
 msgstr ""
-"Odoo は Ingenico Lane/、Desk/、Move/ 決済端末と連携します。これらは TCP/IP を"
-"介した TLV 連絡プロトコルに対応しているためです。"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:18
-msgid "Connect an IoT system"
-msgstr "IoT システムを接続"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:20
-msgid ""
-"Connecting an Ingenico payment terminal to Odoo is a feature that requires "
-"an IoT system. For more information on how to connect an IoT system to your "
-"database, please refer to the :doc:`IoT documentation </applications/general/"
-"iot>`."
+msgid "Ingenico terminal configuration"
 msgstr ""
-"Ingenico 決済端末を Odoo に接続するには、IoT システムが必要です。IoT システム"
-"をデータベースに接続する方法の詳細については、:doc:`IoT ドキュメント </"
-"applications/general/iot>`を参照してください。"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:25
-msgid "Configure the Lane/Desk/Move 5000 terminals for Ingenico BENELUX"
-msgstr "Ingenico BENELUX 向け Lane/Desk/Move 5000 端末を設定"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:27
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:22
 msgid ""
-"Press the function button (:guilabel:`F` on Lane/5000, :guilabel:`⦿` on Desk/"
-"5000 and Move/5000)."
+"To configure the Lane/5000, Desk/5000, or Move/5000, follow these steps:"
 msgstr ""
-"関数ボタン（Lane/5000 では\\ :guilabel:`F`\\ 、Desk/5000 および Move/5000 で"
-"は\\ :guilabel:`⦿`\\ ）を押します。"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:24
+msgid ""
+"Press the function button (:guilabel:`F` on the Lane/5000 "
+"terminal, :guilabel:`⦿` on the Desk/5000 and Move/5000 terminals)."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:26
+msgid ""
+"Go to :menuselection:`Kassa Menu --> Settings Menu`, enter the settings "
+"password (default: `2009`), and press :guilabel:`OK`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:28
+msgid "Select :guilabel:`Protocol` and press :guilabel:`OK`."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:29
-msgid ""
-"Go to :menuselection:`Kassa menu --> Settings Menu` and enter the settings "
-"password (default: `2009`)."
+msgid "Select :guilabel:`CTEP` and press :guilabel:`OK`."
 msgstr ""
-":menuselection:`Kassa menu --> Settings Menu`\\ に移動し、設定パスワード（デ"
-"フォルト: `2009`）を入力します。"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:30
+msgid "Select :guilabel:`Change Connection` and press :guilabel:`OK`."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:31
 msgid ""
-"Select :guilabel:`Change Connection` and press :guilabel:`OK` on the next "
-"screen."
+"Select :guilabel:`TCP/IP` and press :guilabel:`OK`. Then, "
+"select :guilabel:`IP-address` and press :guilabel:`OK`."
 msgstr ""
-":guilabel:`Change Connection`\\ を選択し、次の画面で\\ :guilabel:`OK`\\ を押"
-"します。"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:32
-msgid "Select :guilabel:`TCP/IP` and :guilabel:`IP-address`."
-msgstr ":guilabel:`TCP/IP`\\ と\\ :guilabel:`IP-address`\\ を選択します。"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:33
-msgid "On the next screen, enter the IP address of your IoT system."
-msgstr "次の画面で、IoT システムの IP アドレスを入力します。"
+msgid "Enter the IoT system's IP address and press :guilabel:`OK`."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:34
 msgid ""
-"Enter `9000` as port number and press :guilabel:`OK` on the next screen."
+"Enter port number `9001` if using an IoT box or `9050` if using the Windows "
+"virtual IoT."
 msgstr ""
-"ポート番号として `9000` を入力し、次の画面で\\ :guilabel:`OK`\\ を押します。"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:36
-msgid ""
-"At this point, the terminal restarts and should be displayed on the IoT "
-"system's form in Odoo."
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:35
+msgid "Select :guilabel:`No SSL` and press :guilabel:`OK`."
 msgstr ""
-"この時点で、端末が再起動し、Odoo の IoT システムフォームに表示されます。"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:44
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:37
 msgid ""
-"Enable the payment terminal :ref:`in the application settings <pos/use/"
-"settings>` and :doc:`create the related payment method <../../"
-"payment_methods>`. Set the journal type as :guilabel:`Bank` and "
-"select :guilabel:`Ingenico` in the :guilabel:`Use a Payment Terminal` field. "
-"Then, select your terminal device in the :guilabel:`Payment Terminal Device` "
-"field."
+"The terminal restarts and should be displayed on the IoT system's form in "
+"Odoo."
 msgstr ""
-":ref:`アプリケーションの管理設定で <pos/use/settings>`\\ 決済端末を有効にし、"
-"\\ :doc:`関連する支払方法を作成 <../../payment_methods>`\\ します。仕訳帳タイ"
-"プを\\ :guilabel:`Bank`\\ に設定し、\\ :guilabel:`Use a Payment Terminal`\\ "
-"フィールドで\\ :guilabel:`Ingenico`\\ を選択します。次に、"
-"\\ :guilabel:`Payment Terminal Device`\\ フィールドで端末デバイスを選択しま"
-"す。"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:47
+msgid ""
+"The configuration of an Ingenico terminal with Odoo requires to "
+"first :doc:`connect the IoT system to Odoo </applications/general/iot/"
+"connect>`, then to enable the :guilabel:`Worldline` terminal in "
+"the :ref:`POS settings <pos/use/settings>` under the :guilabel:`Payment "
+"Terminals` section."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:51
 msgid ""
-"Once the payment method is created, you can select it in your POS settings. "
-"To do so, go to the :ref:`POS' settings <pos/use/settings>`, "
-"click :guilabel:`Edit`, and add the payment method under "
-"the :guilabel:`Payments` section."
+"To connect the Ingenico terminal with Odoo Point of Sale, follow these steps:"
 msgstr ""
-"支払方法を作成したら、POS設定で選択できます。\\ :ref:`POSの管理設定 <pos/use/"
-"settings>`\\ に移動し、\\ :guilabel:`Edit`\\ をクリックして、"
-"\\ :guilabel:`Payments`\\ セクションで支払方法を追加します。"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:53
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mollie.rst:46
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:44
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:56
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_com.rst:60
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:67
+msgid ""
+"Go to :menuselection:`Point of Sale --> Configuration --> Payment Methods` "
+"and :doc:`create a payment method <../../payment_methods>`."
+msgstr ""
+"\\ :menuselection:`POS --> 設定 --> 支払方法`\\ に移動し、\\ :doc:`支払方法を"
+"作成します <../../payment_methods>`\\ 。"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:56
+msgid "Set the :guilabel:`Point of Sale` field to the desired point of sale."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:58
+msgid ""
+"Select the Worldline terminal number in the :guilabel:`Payment Terminal "
+"Device` field, then save."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:3
 msgid "Mercado Pago"
@@ -15955,13 +15963,15 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:14
 msgid ""
-"Mercado Pago payment terminals do not require an :doc:`IoT Box </"
+"Mercado Pago payment terminals do not require :doc:`an IoT system </"
 "applications/general/iot>` to operate."
 msgstr ""
-"Mercado Pago決済端末は、動作に\\ :doc:`IoT Box </applications/general/"
-"iot>`\\ を必要としません。"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:18
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:16
+msgid "Odoo does not support the :guilabel:`STANDALONE` operation mode."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:19
 msgid ""
 ":doc:`Mercado Pago online payments </applications/finance/payment_providers/"
 "mercado_pago>`"
@@ -15969,7 +15979,7 @@ msgstr ""
 ":doc:`Mercado Pagoオンライン決済 </applications/finance/payment_providers/"
 "mercado_pago>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:19
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:20
 msgid ""
 "`Mercado Pago tutorial video (Spanish only) <https://www.youtube.com/watch?"
 "v=dpbexfTc4VQ>`_"
@@ -15977,11 +15987,11 @@ msgstr ""
 "`Mercado Pagoチュートリアル動画（スペイン語のみ）\\ <https://www.youtube.com/"
 "watch?v=dpbexfTc4VQ>`_"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:24
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:25
 msgid "Mercado Pago configuration"
 msgstr "Mercado Pago設定"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:26
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:27
 msgid ""
 "The Mercado Pago configuration requires creating an account, if needed, "
 "and :ref:`connecting it to your payment terminal and store <pos/mercado-pago/"
@@ -15995,27 +16005,27 @@ msgstr ""
 "を作成し、統合を完了するための\\ :ref:`認証情報 <pos/mercado-pago/"
 "credentials>`\\ を取得します。"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:34
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:35
 msgid "Terminal and store connection"
 msgstr "端末とストアの接続"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:36
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:37
 msgid "Create a Mercado Pago account if needed:"
 msgstr "必要に応じてMercado Pagoアカウントを作成します："
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:38
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:39
 msgid "`Mercado Pago for Mexico <https://www.mercadopago.com.mx/>`_"
 msgstr "`Mercado Pago（メキシコ）\\ <https://www.mercadopago.com.mx/>`_"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:39
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:40
 msgid "`Mercado Pago for Argentina <https://www.mercadopago.com.ar/>`_"
 msgstr "`Mercado Pago（アルゼンチン）\\ <https://www.mercadopago.com.ar/>`_"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:40
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:41
 msgid "`Mercado Pago for Brazil <https://www.mercadopago.com.br/>`_"
 msgstr "`Mercado Pago（ブラジル）\\ <https://www.mercadopago.com.br/>`_"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:41
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:42
 msgid ""
 "Turn on the Point Smart terminal. Follow the on-screen instructions until "
 "prompted to link the terminal with your Mercado Pago account."
@@ -16023,17 +16033,17 @@ msgstr ""
 "Point Smart端末の電源を入れます。端末をMercado Pagoアカウントとリンクするよう"
 "促されるまで、画面の指示に従います。"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:43
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:44
 msgid "Click :guilabel:`Soy responsable del negocio` to get a pairing QR code."
 msgstr ""
 ":guilabel:`Soy responsable del negocio`\\ をクリックしてペアリングQRコードを"
 "取得します。"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:44
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:45
 msgid "Connect to your Mercado Pago account with a mobile device."
 msgstr "モバイルデバイスでMercado Pagoアカウントに接続します。"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:45
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:46
 msgid ""
 "Scan the QR code with the mobile device and complete the connection in your "
 "Mercado Pago account."
@@ -16041,11 +16051,11 @@ msgstr ""
 "モバイルデバイスでQRコードをスキャンし、Mercado Pagoアカウントで接続を完了し"
 "ます。"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:46
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:47
 msgid "Ensure the terminal is correctly linked to your store:"
 msgstr "端末がストアに正しくリンクされていることを確認します："
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:48
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:49
 msgid ""
 "Type your Mercado Pago account email address or phone number, then "
 "click :guilabel:`Continuar`."
@@ -16053,11 +16063,11 @@ msgstr ""
 "Mercado Pagoアカウントのメールアドレスまたは電話番号を入力"
 "し、:guilabel:`Continuar`\\ をクリックします。"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:50
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:51
 msgid "In the popover, click :guilabel:`Continuar`."
 msgstr "ポップオーバーで\\ :guilabel:`Continuar`\\ をクリックします。"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:51
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:52
 msgid ""
 "On the :guilabel:`Configura el lector para tu cuenta [account name]` screen, "
 "click :guilabel:`Empezar configuración`."
@@ -16065,12 +16075,12 @@ msgstr ""
 ":guilabel:`Configura el lector para tu cuenta [account name]`\\ 画面で"
 "\\ :guilabel:`Empezar configuración`\\ をクリックします。"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:53
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:54
 msgid "Click :guilabel:`Crear nueva sucursal` to add a new point of sale."
 msgstr ""
 ":guilabel:`Crear nueva sucursal`\\ をクリックして、新しいPOSを追加します。"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:54
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:55
 msgid ""
 "Type the point of sale's name and address. Add more information if needed, "
 "then click :guilabel:`Crear sucursal`."
@@ -16078,14 +16088,14 @@ msgstr ""
 "POSの名前と住所を入力します。必要に応じて追加情報を入力し、:guilabel:`Crear "
 "sucursal`\\ をクリックします。"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:56
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:57
 msgid ""
 "Type your register's name and click :guilabel:`Confirmar sucursal y caja`."
 msgstr ""
 "レジスターの名前を入力し、:guilabel:`Confirmar sucursal y caja`\\ をクリック"
 "します。"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:57
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:58
 msgid ""
 "Click :guilabel:`Crear clave` to create a security key and protect the point "
 "of sale."
@@ -16093,11 +16103,11 @@ msgstr ""
 ":guilabel:`Crear clave`\\ をクリックして、セキュリティキーを作成しPOSを保護し"
 "ます。"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:62
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:63
 msgid "Point Smart application"
 msgstr "Point Smart アプリケーション"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:64
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:65
 msgid ""
 "Log in to the `Mercado Pago Developer <https://www.mercadopago.com/"
 "developers>`_ portal."
@@ -16105,7 +16115,7 @@ msgstr ""
 "`Mercado Pago Developer<https://www.mercadopago.com/developers>`_\\ ポータル"
 "にログインします。"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:65
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:66
 msgid ""
 "Click :guilabel:`Tus integraciones`, then click `Crear aplicación <https://"
 "www.mercadopago.com.mx/ayuda/20152>`_."
@@ -16113,7 +16123,7 @@ msgstr ""
 ":guilabel:`Tus integraciones`\\ をクリックし、`Crear aplicación<https://"
 "www.mercadopago.com.mx/ayuda/20152>`_\\ をクリックします。"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:67
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:68
 msgid ""
 "In the :guilabel:`Configuraciones básicas` section, type the application "
 "name, select :guilabel:`Pagos presencial` "
@@ -16125,11 +16135,11 @@ msgstr ""
 "択してから、:guilabel:`Crear aplicación`\\ をクリックしてアプリケーション番号"
 "を受け取ります。"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:74
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:75
 msgid "Credentials generation"
 msgstr "認証情報の生成"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:76
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:77
 msgid ""
 "There are three credentials to generate and collect from the `Mercado Pago "
 "Developer dashboard <https://www.mercadopago.com/developers>`_: a **webhook "
@@ -16139,11 +16149,11 @@ msgstr ""
 "developers>`_\\ から生成して収集する認証情報は3つあります:**Webhookシークレッ"
 "トキー**、**アクセストークン**、**端末のシリアル番号**です。"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:80
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:81
 msgid "Generate the webhook secret key:"
 msgstr "Webhookシークレットキーを生成します:"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:82
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:83
 msgid ""
 "Click :guilabel:`Webhooks` under the :guilabel:`Notificaciones` section, "
 "then :guilabel:`Modo productivo`."
@@ -16151,7 +16161,7 @@ msgstr ""
 ":guilabel:`Notificaciones`\\ セクションの下にある\\ :guilabel:`Webhooks`\\ を"
 "クリックし、次に\\ :guilabel:`Modo productivo`\\ をクリックします。"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:84
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:85
 msgid ""
 "Paste your Odoo database's URL followed by `/pos_mercado_pago/notification`. "
 "For example: `https://mycompany.odoo.com/pos_mercado_pago/notification`."
@@ -16159,7 +16169,7 @@ msgstr ""
 "Odooデータベースの URLに `/pos_mercado_pago/notification` を続けて貼り付けま"
 "す。例: `https://mycompany.odoo.com/pos_mercado_pago/notification`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:86
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:87
 msgid ""
 "Copy the generated webhook secret key and save it for the :ref:`pos/mercado-"
 "pago/payment-method` step."
@@ -16167,11 +16177,11 @@ msgstr ""
 "生成されたWebhookシークレットキーをコピーし、:ref:`pos/mercado-pago/payment-"
 "method`\\ の手順のために保存します。"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:88
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:89
 msgid "Generate the access token:"
 msgstr "アクセストークンを生成します:"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:90
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:91
 msgid ""
 "Click :guilabel:`Credenciales de producción` under "
 "the :guilabel:`Producción` section, then :guilabel:`Activar credenciales de "
@@ -16181,7 +16191,7 @@ msgstr ""
 "producción`\\ をクリックし、次に\\ :guilabel:`Activar credenciales de "
 "producción`\\ をクリックします。"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:92
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:93
 msgid ""
 "Copy the generated access token and save it for the :ref:`pos/mercado-pago/"
 "payment-method` step."
@@ -16189,7 +16199,7 @@ msgstr ""
 "生成されたアクセストークンをコピーし、:ref:`pos/mercado-pago/payment-"
 "method`\\ の手順のために保存します。"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:94
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:95
 msgid ""
 "Locate the terminal serial number on the back of the terminal and write it "
 "down for the :ref:`pos/mercado-pago/payment-method` step."
@@ -16197,21 +16207,7 @@ msgstr ""
 "端末の背面にある端末のシリアル番号を確認し、:ref:`pos/mercado-pago/payment-"
 "method`\\ の手順のために書き留めます。"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:97
-msgid ""
-"Once the Mercado Pago configuration is complete, log in to your Odoo "
-"database to create a :ref:`payment method <pos/mercado-pago/payment-method>` "
-"using the collected credentials."
-msgstr ""
-"Mercado Pagoの設定が完了したら、Odooデータベースにログインして、収集した認証"
-"情報を使用して\\ :ref:`決済方法 <pos/mercado-pago/payment-method>`\\ を作成し"
-"ます。"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:101
-msgid "Odoo does not support the :guilabel:`Standalone` operation mode."
-msgstr "Odoo は\\ :guilabel:`Standalone`\\ 動作モードに対応していません。"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:104
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:99
 msgid ""
 "All terminals purchased with your Mercado Pago account are automatically "
 "displayed on the Mercado Pago dashboard."
@@ -16219,12 +16215,19 @@ msgstr ""
 "Mercado Pagoアカウントで購入したすべての端末は、Mercado Pagoダッシュボードに"
 "自動的に表示されます。"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:110
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:105
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mollie.rst:42
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:49
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_com.rst:53
 msgid "Odoo POS configuration"
 msgstr "Odoo POS設定"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:108
+msgid ""
+"For the Mercado Pago terminal to work correctly with Odoo, make sure "
+"to :ref:`enable Mercado Pago as a payment provider <payment_providers/"
+"mercado_pago/odoo-configuration>` and add the associated account credentials."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:112
 msgid ""
@@ -16375,18 +16378,6 @@ msgstr ""
 msgid ""
 "To connect the Mollie terminal with Odoo Point of Sale, follow these steps:"
 msgstr "Mollie端末をOdoo POSに接続するには、次の手順に従います："
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mollie.rst:46
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:44
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:56
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_com.rst:60
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:67
-msgid ""
-"Go to :menuselection:`Point of Sale --> Configuration --> Payment Methods` "
-"and :doc:`create a payment method <../../payment_methods>`."
-msgstr ""
-"\\ :menuselection:`POS --> 設定 --> 支払方法`\\ に移動し、\\ :doc:`支払方法を"
-"作成します <../../payment_methods>`\\ 。"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mollie.rst:49
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:59
@@ -21827,9 +21818,9 @@ msgstr ""
 "います:"
 
 #: ../../content/applications/sales/point_of_sale/use.rst:178
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:88
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:101
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:124
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:93
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:106
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:129
 msgid "Go to :menuselection:`Point of Sale --> Orders --> Orders`."
 msgstr "\\ :menuselection:`POS --> 注文 --> 注文`\\ に移動します。"
 
@@ -22574,6 +22565,13 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:55
 msgid ""
+"Alternatively, on the payment confirmation screen, click :icon:`fa-pencil-"
+"square-o` :guilabel:`Edit`, add a customer in the dedicated field if needed, "
+"click :guilabel:`Invoice`, then :guilabel:`Continue`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:60
+msgid ""
 "If the registered customer's :ref:`contact type <essentials/contacts/type>` "
 "is set to :guilabel:`Company`, the :icon:`fa-file-text-"
 "o` :guilabel:`Invoice` checkbox is automatically enabled."
@@ -22582,15 +22580,15 @@ msgstr ""
 "\\ :guilabel:`会社`\\ に設定されている場合、\\ :icon:`fa-file-text-"
 "o`\\ :guilabel:`請求書`\\ チェックボックスが自動的に有効になります。"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:60
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:65
 msgid ":doc:`receipts`"
 msgstr ":doc:`receipts`"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:65
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:70
 msgid "After the ordering process"
 msgstr "注文プロセス後"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:67
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:72
 msgid ""
 "To create and issue an invoice to the customer from the POS register after "
 "an order is processed, follow these steps:"
@@ -22598,17 +22596,17 @@ msgstr ""
 "オーダ処理後にPOSレジから顧客~請求書を作成して発行するには、次の手順に従いま"
 "す:"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:70
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:75
 msgid "Click :guilabel:`Orders` in the POS interface."
 msgstr "POSインターフェースで\\ :guilabel:`オーダ`\\ をクリックします。"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:71
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:76
 msgid "Set the :guilabel:`Active` dropdown menu to :guilabel:`Paid`."
 msgstr ""
 ":guilabel:`稼働中`\\ ドロップダウンメニューを\\ :guilabel:`支払済`\\ に設定し"
 "ます。"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:72
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:77
 msgid ""
 "Select the relevant order and click :icon:`fa-file-pdf-"
 "o` :guilabel:`Invoice` above the numpad."
@@ -22616,7 +22614,7 @@ msgstr ""
 "該当するオーダを選択し、テンキーの上にある\\ :icon:`fa-file-pdf-"
 "o`\\ :guilabel:`請求書`\\ をクリックします。"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:75
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:80
 msgid ""
 "To reprint the invoice, select the relevant order and click :icon:`fa-file-"
 "pdf-o` :guilabel:`Reprint Invoice` above the numpad."
@@ -22624,33 +22622,33 @@ msgstr ""
 "請求書を再印刷するには、該当するオーダを選択し、テンキーの上にある"
 "\\ :icon:`fa-file-pdf-o`\\ :guilabel:`請求書を再印刷`\\ をクリックします。"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:79
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:84
 msgid "From the backend"
 msgstr "バックエンドから"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:84
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:89
 msgid "Backend invoice creation"
 msgstr "バックエンド請求書作成"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:86
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:91
 msgid "To create and issue an invoice from the backend, follow these steps:"
 msgstr "バックエンドから請求書を作成して発行するには、次の手順に従います:"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:89
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:94
 msgid "Select the relevant order."
 msgstr "該当するオーダを選択します。"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:90
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:95
 msgid "Add the :guilabel:`Customer` if needed, then click :guilabel:`Invoice`."
 msgstr ""
 "必要に応じて\\ :guilabel:`顧客`\\ を追加し、\\ :guilabel:`請求書`\\ をクリッ"
 "クします。"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:95
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:100
 msgid "Consolidated customer invoice"
 msgstr "統合顧客請求書"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:97
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:102
 msgid ""
 "To create a consolidated invoice for all orders linked to the same customer "
 "that are not yet invoiced (i.e., invoices with an :guilabel:`Invoice Status` "
@@ -22660,13 +22658,13 @@ msgstr ""
 "\\ :guilabel:`請求書ステータス`\\ が\\ :guilabel:`請求対象`\\ に設定されてい"
 "る請求書)の統合請求書を作成するには、次の手順に従います:"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:102
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:107
 msgid "Click the search bar and :guilabel:`Group By` :guilabel:`Customer`."
 msgstr ""
 "検索バーをクリックし、\\ :guilabel:`グループ化`\\ → \\ :guilabel:`顧客`\\ を"
 "選択します。"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:103
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:108
 msgid ""
 "Click the :icon:`fa-caret-right` (:guilabel:`caret`) icon next to the "
 "relevant customer and enable :guilabel:`Order Ref` in the column header or "
@@ -22676,7 +22674,7 @@ msgstr ""
 "コンをクリックし、列ヘッダーで\\ :guilabel:`注文参照`\\ を有効にするか、該当"
 "するオーダを選択します。"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:105
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:110
 msgid ""
 "Click :guilabel:`Create Invoices`, keep the :guilabel:`Consolidated Billing` "
 "option enabled, then click :guilabel:`Create`."
@@ -22684,7 +22682,7 @@ msgstr ""
 ":guilabel:`請求書を作成`\\ をクリックし、\\ :guilabel:`まとめ請求`\\ オプショ"
 "ンを有効なままにして、\\ :guilabel:`作成`\\ をクリックします。"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:109
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:114
 msgid ""
 "Alternatively, go to :menuselection:`Point of Sale --> Orders --> "
 "Customers`, select the relevant customer, click the :icon:`fa-shopping-"
@@ -22696,7 +22694,7 @@ msgstr ""
 "スマートボタンをクリックし、該当するオーダを選択し、\\ :guilabel:`請求書を作"
 "成`\\ をクリックしてから、\\ :guilabel:`作成`\\ をクリックします。"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:113
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:118
 msgid ""
 "To create an individual invoice for each sales order, disable "
 "the :guilabel:`Consolidated Billing` option."
@@ -22704,11 +22702,11 @@ msgstr ""
 "販売オーダごとに個別の請求書を作成するには、\\ :guilabel:`まとめ請求`\\ オプ"
 "ションを無効にします。"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:119
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:124
 msgid "Invoice retrieval"
 msgstr "請求書の取得"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:121
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:126
 msgid ""
 "Retrieving invoices is useful for customer requests and accounting purposes, "
 "for example. To view, download, reprint, or send past transactions, follow "
@@ -22717,33 +22715,33 @@ msgstr ""
 "請求書の取得は、顧客からの依頼や会計目的などに役立ちます。過去の打刻データを"
 "表示、ダウンロード、再印刷、または送信するには、次の手順に従います。"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:125
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:130
 msgid "Click the relevant order in the list."
 msgstr "リストで該当するオーダをクリックします。"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:126
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:131
 msgid "Click the :guilabel:`Invoice` smart button on the order form."
 msgstr "注文フォームの\\ :guilabel:`請求書`\\ スマートボタンをクリックします。"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:127
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:132
 msgid "Click the following buttons to manage the invoice:"
 msgstr "請求書を管理するには、次のボタンをクリックします。"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:129
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:134
 msgid ":guilabel:`Send`: Send or resend the invoice."
 msgstr ":guilabel:`送信`: 請求書を送信または再送信します。"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:130
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:135
 msgid ""
 ":guilabel:`Print`: Open the browser's print function or download the invoice."
 msgstr ""
 ":guilabel:`印刷`: ブラウザの印刷関数を開くか、請求書をダウンロードします。"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:131
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:136
 msgid ":guilabel:`Preview`: Preview and download the invoice."
 msgstr ":guilabel:`プレビュー`: 請求書をプレビューおよびダウンロードします。"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:132
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:137
 msgid ""
 ":guilabel:`Credit Note`: Issue a :ref:`credit note <accounting/credit_notes/"
 "issue-credit-note>` to the customer."
@@ -22751,18 +22749,18 @@ msgstr ""
 ":guilabel:`クレジットノート`: 顧客に\\ :ref:`クレジットノート <accounting/"
 "credit_notes/issue-credit-note>`\\ を発行します。"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:134
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:139
 msgid ""
 ":guilabel:`Reset to Draft`: Reset the invoice to draft if changes are needed."
 msgstr ""
 ":guilabel:`ドラフトにリセット`: 変更が必要な場合、請求書をドラフトにリセット"
 "します。"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:139
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:144
 msgid "Invoice generation via QR code and URL"
 msgstr "QRコードとURLによる請求書生成"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:141
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:146
 msgid ""
 "To allow customers to request an invoice by scanning a QR code printed on "
 "their :ref:`receipt <pos/configuration/receipts>`, follow these steps:"
@@ -22770,15 +22768,15 @@ msgstr ""
 "顧客が\\ :ref:`レシート <pos/configuration/receipts>`\\ に印刷されたQRコード"
 "をスキャンして請求書を申請できるようにするには、次の手順に従います。"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:145
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:150
 msgid "Scroll down to the :guilabel:`Bills & Receipts` section."
 msgstr ":guilabel:`請求書とレシート`\\ セクションまでスクロールします。"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:146
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:151
 msgid "Enable the :guilabel:`Self-service invoicing` setting."
 msgstr ":guilabel:`セルフサービス請求`\\ 管理設定を有効にします。"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:147
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:152
 msgid ""
 "Set the :guilabel:`Print` field to :guilabel:`QR code`, :guilabel:`URL`, "
 "or :guilabel:`QR code + URL` to determine how customers can access their "
@@ -22788,7 +22786,7 @@ msgstr ""
 "または\\ :guilabel:`QRコード + URL`\\ に設定して、顧客が請求書にアクセスする"
 "方法（QRコードをスキャンするか、ブラウザでURLを入力するなど）を決定します。"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:151
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:156
 msgid ""
 "Upon scanning the QR code or typing the URL in a browser, customers must "
 "fill in a form with the information on the receipt (i.e., "
@@ -23416,6 +23414,7 @@ msgstr ""
 "指定日。"
 
 #: ../../content/applications/sales/rental/configure_products/product_type.rst:73
+#: ../../content/applications/sales/rental/configure_products/products.rst:33
 msgid "Click :guilabel:`Save` to apply the changes."
 msgstr ":guilabel:`保存`をクリックして変更を適用します。"
 
@@ -23511,7 +23510,7 @@ msgid ":doc:`../../../services/project`"
 msgstr ":doc:`../../../services/project`"
 
 #: ../../content/applications/sales/rental/configure_products/product_type.rst:102
-#: ../../content/applications/sales/rental/configure_products/products.rst:260
+#: ../../content/applications/sales/rental/configure_products/products.rst:266
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:130
 msgid ":doc:`../../../inventory_and_mrp/inventory`"
 msgstr ":doc:`../../../inventory_and_mrp/inventory`"
@@ -23663,19 +23662,13 @@ msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:19
 msgid ""
-"Navigate to :menuselection:`Rental app --> Configuration --> Settings`, "
+"Navigate to :menuselection:`Rental app --> Configuration --> Settings`, and "
 "configure the :guilabel:`Default Delay Costs` in the *Rental* section for "
 "late fees. Optionally, configure the :guilabel:`Default Padding Time` to "
 "make rentals unavailable for booking. Refer to the :ref:`rental/products/"
 "rental-transfer-feature` section to learn what it does and how to configure "
 "it."
 msgstr ""
-":menuselection:`レンタルアプリ --> 設定 --> 管理設定`\\ に移動し、*レンタル*"
-"セクションの\\ :guilabel:`デフォルト遅延コスト`\\ で延滞料金を設定します。オ"
-"プションで、\\ :guilabel:`デフォルトパディング時間`\\ を設定して、レンタルの"
-"予約を不可にすることもできます。その機能と設定方法については、"
-"\\ :ref:`rental/products/rental-transfer-feature`\\ セクションを参照してくだ"
-"さい。"
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:25
 msgid ""
@@ -23695,10 +23688,6 @@ msgstr ""
 "び\\ :guilabel:`1日あたり`\\ フィールドで返却遅延のコストを設定します。デフォ"
 "ルトがすべてのプロダクトに適用される場合は、\\ :guilabel:`プロダクト`\\ "
 "フィールドを空白のままにしてください。"
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:33
-msgid "Click **Save** to apply the changes."
-msgstr "**保存**\\ をクリックして変更を適用します。"
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:None
 msgid ""
@@ -23723,39 +23712,33 @@ msgstr ""
 "クトフォームで、各タブを適切に入力します："
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:47
-msgid "General Information tab"
-msgstr "全般情報タブ"
+msgid "Initial product configuration"
+msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:49
 msgid ""
-"In the new product window, the :guilabel:`Rental` checkbox is already ticked "
-"by default. Select the :guilabel:`Product Type` as :guilabel:`Goods`."
+"In the new product window, the :guilabel:`Rental` checkbox is already "
+"selected by default. Select the :guilabel:`Product Type` "
+"as :guilabel:`Goods`."
 msgstr ""
-"新しいプロダクトウィンドウでは、:guilabel:`レンタル`チェックボックスがデフォ"
-"ルトで既にチェックされています。:guilabel:`プロダクトタイプ`を:guilabel:`商品"
-"`として選択します。"
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:52
 msgid ""
-"Tick the :guilabel:`Track Inventory` checkbox and select :guilabel:`By "
+"Enable the :guilabel:`Track Inventory` checkbox and select :guilabel:`By "
 "Quantity` from the drop-down menu. For the :guilabel:`Category` field, "
 "select :guilabel:`Goods` from the drop-down menu or create a new category by "
 "typing in the name and clicking :guilabel:`Create`."
 msgstr ""
-":guilabel:`在庫を追跡`チェックボックスをチェックし、ドロップダウンメニューか"
-"ら:guilabel:`数量で`を選択します。:guilabel:`カテゴリ`フィールドには、ドロッ"
-"プダウンメニューから:guilabel:`商品`を選択するか、名前を入力して:guilabel:`作"
-"成`をクリックして新しいカテゴリを作成します。"
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:None
 msgid "The new product view in the Rental app."
 msgstr "レンタルアプリの新しいプロダクトビュー。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:60
-msgid "Attributes & Variants tab"
-msgstr "属性とバリアントタブ"
+#: ../../content/applications/sales/rental/configure_products/products.rst:62
+msgid "Optional: specify rental variants"
+msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:63
+#: ../../content/applications/sales/rental/configure_products/products.rst:65
 msgid ""
 "The *Variant* feature in the **Inventory** app must be enabled for this tab "
 "to display."
@@ -23763,23 +23746,21 @@ msgstr ""
 "このタブを表示するには、**在庫**アプリの*バリアント*機能を有効にする必要があ"
 "ります。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:65
+#: ../../content/applications/sales/rental/configure_products/products.rst:67
 msgid ""
-"Click :guilabel:`Add a line`, then select a default option from "
-"the :guilabel:`Attribute` drop-down menu. To create a new one, enter the "
-"name, then click :guilabel:`Create and edit…` to :ref:`configure the "
-"attribute and its values <products/variants/attributes>`."
+"In the :guilabel:`Attributes & Variants` tab, :ref:`add the appropriate "
+"attribute and its values <products/variants/attributes>` by "
+"clicking :guilabel:`Add a line`. Attributes and values are useful for "
+"keeping the product library manageable, tracking and differentiating the "
+"inventory, and providing more detailed reports. Examples of rental variants "
+"for a *Goods* product are size, brand, color, and material."
 msgstr ""
-":guilabel:`行を追加`をクリックし、:guilabel:`属性`ドロップダウンメニューから"
-"デフォルトオプションを選択します。新しいものを作成するには、名前を入力してか"
-"ら:guilabel:`作成して編集...`をクリックして:ref:`属性とその値を設定 "
-"<products/variants/attributes>`します。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:72
-msgid "Rental prices tab"
-msgstr "レンタル価格タブ"
+#: ../../content/applications/sales/rental/configure_products/products.rst:76
+msgid "Set rental periods, prices, and reservations"
+msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:74
+#: ../../content/applications/sales/rental/configure_products/products.rst:78
 msgid ""
 "Click the :guilabel:`Rental prices` tab and in the :guilabel:`Pricing` "
 "section, click :guilabel:`Add a price` to enter a new rental rate. Choose a "
@@ -23793,7 +23774,7 @@ msgstr ""
 "を選択するか、名前を入力して\\ :guilabel:`作成して編集`\\ をクリックして新し"
 "い価格設定期間を作成します。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:80
+#: ../../content/applications/sales/rental/configure_products/products.rst:84
 msgid ""
 "Creating a new pricing period opens a pop-up *Create period* window. Fill in "
 "the :guilabel:`Name`, :guilabel:`Duration`, and :guilabel:`Unit`, and "
@@ -23807,7 +23788,7 @@ msgstr ""
 msgid "Sample of a New Period view in the Rental app."
 msgstr "レンタルアプリの新しい期間ビューのサンプル。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:87
+#: ../../content/applications/sales/rental/configure_products/products.rst:91
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:122
 msgid ""
 "Next, enter the :guilabel:`Price` for that specific :guilabel:`Period`. To "
@@ -23819,7 +23800,7 @@ msgstr ""
 "設定したレンタル料金を既存の価格表に適用するには、:guilabel:`価格表`\\ 列をク"
 "リックし、ドロップダウンメニューから目的のリストを選択します。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:91
+#: ../../content/applications/sales/rental/configure_products/products.rst:95
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:126
 msgid ""
 "In the :guilabel:`Reservations` section, fill in the :guilabel:`Hourly "
@@ -23833,7 +23814,7 @@ msgstr ""
 "値は、:menuselection:`レンタルアプリ --> 設定 --> 設定`\\ で設定されている場"
 "合、:guilabel:`デフォルト遅延コスト`\\ セクションから自動的に入力されます。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:96
+#: ../../content/applications/sales/rental/configure_products/products.rst:100
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:131
 msgid ""
 "Click the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon near the "
@@ -23842,7 +23823,7 @@ msgstr ""
 "上部の\\ :icon:`fa-cloud-upload`\\ :guilabel:`(手動で保存)`\\ アイコンをク"
 "リックして保存します。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:99
+#: ../../content/applications/sales/rental/configure_products/products.rst:103
 msgid ""
 "A bike rental business rents tandem bikes for two hours at the local park. "
 "The hourly rental rate for their tandem bikes is $20, but since tandem bikes "
@@ -23856,7 +23837,7 @@ msgstr ""
 "りに返却されるように、遅延返却料金を1時間あたり20ドル、1日あたり160ドル（20ド"
 "ル×8時間）に設定します。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:104
+#: ../../content/applications/sales/rental/configure_products/products.rst:108
 msgid ""
 "Create a new pricing period by navigating to :menuselection:`Rental app --> "
 "Configuration --> Rental periods`. Click :guilabel:`New`, then configure the "
@@ -23865,7 +23846,7 @@ msgstr ""
 ":menuselection:`レンタルアプリ --> 設定 --> レンタル期間`に移動して、新しい価"
 "格期間を作成します。:guilabel:`新規`をクリックし、`2`時間の期間を設定します。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:107
+#: ../../content/applications/sales/rental/configure_products/products.rst:111
 msgid ""
 "Navigate to the tandem bike product and in the :guilabel:`Rental prices` tab "
 "add the `2` hour period set at `$35`. Manually save to apply changes."
@@ -23877,61 +23858,53 @@ msgstr ""
 msgid "Sample of a rental product with the custom rental period applied."
 msgstr "カスタムレンタル期間を適用したレンタルプロダクトのサンプル。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:116
-msgid "Configure a physical rental product for product tracking"
-msgstr "プロダクト追跡用に物理的なレンタルプロダクトを設定する"
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:119
-msgid ""
-"To configure a physical rental product for product tracking, the "
-"**Inventory** app must be installed, and :doc:`Lots & Serial Numbers must be "
-"enabled <../../../inventory_and_mrp/inventory/product_management/"
-"product_tracking>`."
+#: ../../content/applications/sales/rental/configure_products/products.rst:120
+msgid "Configure product tracking"
 msgstr ""
-"物理的なレンタルプロダクトをプロダクト追跡用に設定するには、**在庫**アプリが"
-"インストールされており、:doc:`ロット番号とシリアル番号を有効にする <../../../"
-"inventory_and_mrp/inventory/product_management/product_tracking>`必要がありま"
-"す。"
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:123
 msgid ""
-"Go to the :menuselection:`Rental app --> Products`, then "
-"click :guilabel:`New`. In the new product window, the :guilabel:`Rental` "
-"checkbox is already ticked by default."
+"To configure a physical rental product for product tracking, the "
+"**Inventory** app must be installed, and :guilabel:`Lots & Serial Numbers` "
+"must be enabled."
 msgstr ""
-":menuselection:`レンタルアプリ --> プロダクト`に移動し、:guilabel:`新規`をク"
-"リックします。新しいプロダクトウィンドウでは、:guilabel:`レンタル`チェック"
-"ボックスがデフォルトで既にチェックされています。"
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:126
 msgid ""
-"Select the :guilabel:`Product Type` as :guilabel:`Goods`. Tick "
-"the :guilabel:`Track Inventory` checkbox and select either :guilabel:`By "
-"Lots` or :guilabel:`By Unique Serial Number` from the drop-down menu."
+"For rental products, only :guilabel:`By Unique Serial Number` tracking can "
+"be used. Selecting :guilabel:`By Lots` instead results in an error message, "
+"since that setting doesn't apply to rentals."
 msgstr ""
-":guilabel:`プロダクトタイプ`を:guilabel:`商品`として選択します。:guilabel:`在"
-"庫を追跡`チェックボックスをチェックし、ドロップダウンメニューから:guilabel:`"
-"ロットで`または:guilabel:`一意のシリアル番号で`のいずれかを選択します。"
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:130
 msgid ""
+"Go to the :menuselection:`Rental app --> Products`, then "
+"click :guilabel:`New`. In the new product window, the :guilabel:`Rental` "
+"checkbox is already selected by default."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:133
+msgid ""
+"Select the :guilabel:`Product Type` as :guilabel:`Goods`. Enable "
+"the :guilabel:`Track Inventory` checkbox and select :guilabel:`By Unique "
+"Serial Number` from the drop-down menu."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:136
+msgid ""
 "For the :guilabel:`Category` field, select :guilabel:`Goods` from the drop-"
 "down menu or create a new category by typing in the name and "
-"clicking :guilabel:`Create`. Configure rental rates on the :ref:`rental/"
-"products/rental-prices-tab`. Click the :icon:`fa-cloud-"
-"upload` :guilabel:`(Save manually)` icon near the top to save."
+"clicking :guilabel:`Create`. Configure rental rates on the :ref:`Rental "
+"prices <rental/products/rental-periods-prices-reservations>` tab. Click "
+"the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon near the top to "
+"save."
 msgstr ""
-":guilabel:`カテゴリ`フィールドには、ドロップダウンメニューから:guilabel:`商品"
-"`を選択するか、名前を入力して:guilabel:`作成`をクリックして新しいカテゴリを作"
-"成します。:ref:`rental/products/rental-prices-tab`でレンタル料金を設定しま"
-"す。上部付近の:icon:`fa-cloud-upload` :guilabel:`手動で保存`アイコンをクリッ"
-"クして保存します。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:138
+#: ../../content/applications/sales/rental/configure_products/products.rst:144
 msgid "Rental Transfers feature"
 msgstr "レンタル転送機能"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:140
+#: ../../content/applications/sales/rental/configure_products/products.rst:146
 msgid ""
 "The *Rental Transfers* feature automatically creates a delivery receipt when "
 "the rental product is picked up and a return receipt when it is returned to "
@@ -23942,35 +23915,32 @@ msgstr ""
 "自動的に作成し、在庫に返却されたときに返却受領書を作成します。在庫の移動を文"
 "書化することで、明確な証跡が作成され、さまざまな用途があります："
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:144
+#: ../../content/applications/sales/rental/configure_products/products.rst:150
 msgid "Tracking high-value products."
 msgstr "高額商品の追跡。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:145
+#: ../../content/applications/sales/rental/configure_products/products.rst:151
 msgid "Tracking stock levels across multiple stores or warehouse locations."
 msgstr "複数の店舗または倉庫ロケーション全体での在庫レベルの追跡。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:146
+#: ../../content/applications/sales/rental/configure_products/products.rst:152
 msgid ""
 "Tracking products between different store locations that allow pick up and "
 "returns."
 msgstr "受取と返却が可能な異なる店舗ロケーション間でのプロダクトの追跡。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:148
+#: ../../content/applications/sales/rental/configure_products/products.rst:154
 msgid ""
 "To enable the :guilabel:`Rental Transfers` feature, navigate to "
 "the :menuselection:`Rental app --> Configuration --> Settings` and in the "
-"*Rental* section, tick the :guilabel:`Rental Transfers` checkbox."
+"*Rental* section, enable the :guilabel:`Rental Transfers` checkbox."
 msgstr ""
-":guilabel:`レンタル移動`\\ 機能を有効にするには、\\ :menuselection:`レンタル"
-"アプリ --> 設定 --> 設定`\\ に移動し、\\ *レンタル*\\ セクションで"
-"\\ :guilabel:`レンタル移動`\\ チェックボックスをオンにします。"
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:None
 msgid "Sample of the Rental settings with the Rental Transfers enabled."
 msgstr "レンタル移動が有効になっているレンタル設定のサンプル。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:156
+#: ../../content/applications/sales/rental/configure_products/products.rst:164
 msgid ""
 "The **Inventory** app automatically creates an internal default location "
 "once the *Rental Transfers* feature is enabled. Odoo uses the new default "
@@ -23985,29 +23955,18 @@ msgstr ""
 "す（レンタル時に:guilabel:`在庫`から:guilabel:`顧客/レンタル`に移動し、返却時"
 "に戻します）。在庫追跡の破損を避けるため、変更しないでください。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:165
+#: ../../content/applications/sales/rental/configure_products/products.rst:173
 msgid "Multi-location management and transfers"
 msgstr "複数拠点管理と転送"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:168
+#: ../../content/applications/sales/rental/configure_products/products.rst:176
 msgid ""
-"The **Inventory** app must be installed to set up this configuration. The "
-"**Inventory** app automatically creates an internal default location once "
-"the *Rental Transfers* feature is enabled. Odoo uses the new default "
-"location, :guilabel:`Customer/Rental`, to track products during the rental "
-"period (moving them from :guilabel:`Stock` to :guilabel:`Customer/Rental` "
-"upon rental, and back upon return). Do **not** modify to avoid corrupting "
-"inventory tracking."
+"Refer to the :ref:`Rental Transfers note <rental/products/rental-transfers-"
+"note>` for information about internal location configuration and inventory "
+"tracking."
 msgstr ""
-"**在庫**\\ アプリは、この設定を行うためにインストールする必要があります。**在"
-"庫**\\ アプリは、\\ *レンタル移動*\\ 機能が有効になると、自動的に内部デフォル"
-"トロケーションを作成します。Odooは、レンタル期間中にプロダクトを追跡するため"
-"に新しいデフォルトロケーション\\ :guilabel:`顧客/レンタル`\\ を使用します（レ"
-"ンタル時に\\ :guilabel:`在庫`\\ から\\ :guilabel:`顧客/レンタル`\\ に移動し、"
-"返却時に戻します）。在庫追跡の破損を避けるため、変更\\ **しないでください"
-"**\\ 。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:174
+#: ../../content/applications/sales/rental/configure_products/products.rst:179
 msgid ""
 "Tracking the location of high-value physical products between locations is "
 "essential. The **Rental** app helps with the *Rental Transfers* feature. "
@@ -24020,29 +23979,21 @@ msgstr ""
 "と、システムはレンタルの移動を販売と同様に扱い、物理的なプロダクトがレンタル"
 "または返却されるたびに受領と出荷オーダが必要になります。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:179
+#: ../../content/applications/sales/rental/configure_products/products.rst:184
 msgid ""
 "For multi-location management and rental item transfer tracking, navigate to "
-"the :menuselection:`Rental app --> Configuration --> Settings` and in "
-"the :guilabel:`Rental` section, tick the :guilabel:`Rental Transfers` "
-"checkbox."
+"the :menuselection:`Rental app --> Configuration --> Settings` and in the "
+"*Rental* section, enable the :guilabel:`Rental Transfers` checkbox."
 msgstr ""
-"マルチロケーション管理とレンタル件の移動追跡を行うには、\\ :menuselection:`レ"
-"ンタルアプリ --> 設定 --> 設定`\\ に移動し、\\ :guilabel:`レンタル`\\ セク"
-"ションで\\ :guilabel:`レンタル移動`\\ チェックボックスをオンにします。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:183
+#: ../../content/applications/sales/rental/configure_products/products.rst:188
 msgid ""
 "Next, go to the :menuselection:`Inventory app --> Configuration --> "
-"Settings` and in the :guilabel:`Warehouse` section, tick "
-"the :guilabel:`Storage Locations` checkbox. Click :guilabel:`Save` to apply "
-"the changes."
+"Settings` and in the *Warehouse* section, enable the :guilabel:`Storage "
+"Locations` checkbox. Click :guilabel:`Save` to apply the changes."
 msgstr ""
-"次に、:menuselection:`在庫アプリ --> 設定 --> 設定`に移動し、:guilabel:`倉庫`"
-"セクションで:guilabel:`保管ロケーション`チェックボックスにチェックを入れま"
-"す。:guilabel:`保存`をクリックして変更を適用します。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:187
+#: ../../content/applications/sales/rental/configure_products/products.rst:192
 msgid ""
 "To configure new locations, navigate to :menuselection:`Inventory app --> "
 "Configuration --> Locations`. Click :guilabel:`New` to configure a new "
@@ -24052,7 +24003,7 @@ msgstr ""
 "ケーション`に移動します。:guilabel:`新規`をクリックして新しい内部ロケーション"
 "を設定します。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:190
+#: ../../content/applications/sales/rental/configure_products/products.rst:195
 msgid ""
 "On the new location page, enter the :guilabel:`Location Name` and ensure "
 "the :guilabel:`Parent Location` field is set to :guilabel:`WH`. Click "
@@ -24064,7 +24015,7 @@ msgstr ""
 "にある:icon:`fa-cloud-upload`\\ :guilabel:`手動保存`アイコンをクリックして保"
 "存します。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:195
+#: ../../content/applications/sales/rental/configure_products/products.rst:200
 msgid ""
 "A bike rental business has two store locations within the same city. Both "
 "locations allow for pick-up and drop-off of their bikes. The company wants "
@@ -24074,23 +24025,19 @@ msgstr ""
 "方のロケーションで自転車の受け取りと返却が可能です。会社は各ロケーションで自"
 "転車を正確に追跡したいと考えています。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:199
+#: ../../content/applications/sales/rental/configure_products/products.rst:204
 msgid ""
 "Ensure the **Rental** and **Inventory** apps are configured by "
-"enabling :guilabel:`Rental Transfers` in the **Rental app** "
+"enabling :guilabel:`Rental Transfers` in the **Rental** app "
 "and :guilabel:`Storage Locations` in the **Inventory** app."
 msgstr ""
-"\\ **レンタル**\\ アプリと\\ **在庫**\\ アプリが設定されていることを確認し、"
-"\\ **レンタルアプリ**\\ で:guilabel:`レンタル移動`を、\\ **在庫**\\ アプリ"
-"で:guilabel:`保管ロケーション`を有効化します。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:202
+#: ../../content/applications/sales/rental/configure_products/products.rst:207
 msgid ""
 "Next, go to the :menuselection:`Inventory app > Configuration > Locations`. "
-"Create a new location for each storefront."
+"Create a new location Next, go to the :menuselection:`Inventory app --> "
+"Configuration --> Locations`. Create a new location for each storefront."
 msgstr ""
-"次に、:menuselection:`在庫アプリ > 設定 > ロケーション`に移動します。各店舗用"
-"の新しいロケーションを作成します。"
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:0
 msgid ""
@@ -24098,12 +24045,12 @@ msgid ""
 "locations."
 msgstr "異なるレンタル店舗ロケーションを表す内部在庫ロケーションのサンプル。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:211
+#: ../../content/applications/sales/rental/configure_products/products.rst:217
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:150
 msgid "Pickup products"
 msgstr "プロダクト貸出"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:213
+#: ../../content/applications/sales/rental/configure_products/products.rst:219
 msgid ""
 "When a customer picks up products, navigate to the appropriate rental order, "
 "click :guilabel:`Pickup`. The **Rental** app displays a warehouse delivery "
@@ -24119,19 +24066,19 @@ msgstr ""
 msgid "Sample of a Pickup page in the Rental app."
 msgstr "レンタルアプリの受取ページのサンプル。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:220
+#: ../../content/applications/sales/rental/configure_products/products.rst:226
 msgid ""
 "Doing so places a :guilabel:`Pickedup` status banner on the rental order."
 msgstr ""
 "これにより、レンタルオーダに\\ :guilabel:`集荷済`\\ ステータスバナーが表示さ"
 "れます。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:225
+#: ../../content/applications/sales/rental/configure_products/products.rst:231
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:170
 msgid "Return products"
 msgstr "プロダクト返却"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:227
+#: ../../content/applications/sales/rental/configure_products/products.rst:233
 msgid ""
 "When a customer returns products, navigate to the desired rental order and "
 "click :guilabel:`Return`. The **Rental** app displays a warehouse receipt "
@@ -24141,7 +24088,7 @@ msgstr ""
 "返却`\\ をクリックします。**レンタル**\\ アプリには、チェックアウトされたレン"
 "タルプロダクトをリストした倉庫入庫フォームが表示されます。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:230
+#: ../../content/applications/sales/rental/configure_products/products.rst:236
 msgid ""
 "Enter the same number of products the customer returned in "
 "the :guilabel:`Quantity` column. If any of the products have serial numbers, "
@@ -24156,7 +24103,7 @@ msgid "Sample of the Return page in the Rental app."
 msgstr ""
 "\\ :guilabel:`レンタル`\\ アプリの\\ :guilabel:`返却`\\ ページのサンプル。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:236
+#: ../../content/applications/sales/rental/configure_products/products.rst:242
 msgid ""
 "Click :guilabel:`Validate` to move the order to the :guilabel:`Done` stage. "
 "A :guilabel:`Returned` status banner appears on the rental order."
@@ -24165,11 +24112,11 @@ msgstr ""
 "動します。レンタルオーダに\\ :guilabel:`返却済み`\\ ステータスバナーが表示さ"
 "れます。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:242
+#: ../../content/applications/sales/rental/configure_products/products.rst:248
 msgid "Print pickup and return receipts"
 msgstr "貸出・返却領収書を印刷する"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:244
+#: ../../content/applications/sales/rental/configure_products/products.rst:250
 msgid ""
 "Pickup and return receipts can be printed for customers when they pick up "
 "and return rental products."
@@ -24177,7 +24124,7 @@ msgstr ""
 "顧客がレンタルプロダクトを受取および返却する際に、受取および返却レシートを印"
 "刷できます。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:247
+#: ../../content/applications/sales/rental/configure_products/products.rst:253
 msgid ""
 "To print pickup and/or return receipts, navigate to the appropriate rental "
 "order, click the :icon:`fa-cog` :guilabel:`(Actions)` icon to reveal a drop-"
@@ -24192,7 +24139,7 @@ msgid ""
 "The pickup and return receipt print option in the Odoo Rental application."
 msgstr "Odooレンタルアプリケーションの貸出・返却レシート印刷オプション。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:253
+#: ../../content/applications/sales/rental/configure_products/products.rst:259
 msgid ""
 "From this drop-down menu, hover over the :guilabel:`Print` option to reveal "
 "a sub-menu. Then select :guilabel:`Pickup and Return Receipt`."
@@ -24201,7 +24148,7 @@ msgstr ""
 "るとサブメニューが表示されます。次に :guilabel:`貸出・返却領収書` を選択しま"
 "す。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:256
+#: ../../content/applications/sales/rental/configure_products/products.rst:262
 msgid ""
 "Odoo generates and downloads a PDF detailing all information about the "
 "current status of the rented items."
@@ -24209,7 +24156,7 @@ msgstr ""
 "Odooは、レンタル中の件の現在の状態に関するすべての情報を詳述したPDFを生成して"
 "ダウンロードします。"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:261
+#: ../../content/applications/sales/rental/configure_products/products.rst:267
 msgid ""
 "`Tutorial: Your First Rental Product <https://youtu.be/CE-SahTUC9A?"
 "si=kWfYEOTd2nT_ASp9>`_"
@@ -43201,6 +43148,279 @@ msgstr ""
 #: ../../content/applications/sales/subscriptions/upselling.rst:80
 msgid ":doc:`../sales/products_prices/prices/discounts`"
 msgstr ":doc:`../sales/products_prices/prices/discounts`"
+
+#~ msgid ""
+#~ "Odoo works with the Ingenico Lane/, Desk/, and Move/ payment terminals as "
+#~ "they support the TLV communication protocol through TCP/IP."
+#~ msgstr ""
+#~ "Odoo は Ingenico Lane/、Desk/、Move/ 決済端末と連携します。これらは TCP/"
+#~ "IP を介した TLV 連絡プロトコルに対応しているためです。"
+
+#~ msgid "Connect an IoT system"
+#~ msgstr "IoT システムを接続"
+
+#~ msgid ""
+#~ "Connecting an Ingenico payment terminal to Odoo is a feature that "
+#~ "requires an IoT system. For more information on how to connect an IoT "
+#~ "system to your database, please refer to the :doc:`IoT documentation </"
+#~ "applications/general/iot>`."
+#~ msgstr ""
+#~ "Ingenico 決済端末を Odoo に接続するには、IoT システムが必要です。IoT シス"
+#~ "テムをデータベースに接続する方法の詳細については、:doc:`IoT ドキュメント "
+#~ "</applications/general/iot>`を参照してください。"
+
+#~ msgid "Configure the Lane/Desk/Move 5000 terminals for Ingenico BENELUX"
+#~ msgstr "Ingenico BENELUX 向け Lane/Desk/Move 5000 端末を設定"
+
+#~ msgid ""
+#~ "Press the function button (:guilabel:`F` on Lane/5000, :guilabel:`⦿` on "
+#~ "Desk/5000 and Move/5000)."
+#~ msgstr ""
+#~ "関数ボタン（Lane/5000 では\\ :guilabel:`F`\\ 、Desk/5000 および Move/5000 "
+#~ "では\\ :guilabel:`⦿`\\ ）を押します。"
+
+#~ msgid ""
+#~ "Go to :menuselection:`Kassa menu --> Settings Menu` and enter the "
+#~ "settings password (default: `2009`)."
+#~ msgstr ""
+#~ ":menuselection:`Kassa menu --> Settings Menu`\\ に移動し、設定パスワード"
+#~ "（デフォルト: `2009`）を入力します。"
+
+#~ msgid ""
+#~ "Select :guilabel:`Change Connection` and press :guilabel:`OK` on the next "
+#~ "screen."
+#~ msgstr ""
+#~ ":guilabel:`Change Connection`\\ を選択し、次の画面で\\ :guilabel:`OK`\\ を"
+#~ "押します。"
+
+#~ msgid "Select :guilabel:`TCP/IP` and :guilabel:`IP-address`."
+#~ msgstr ":guilabel:`TCP/IP`\\ と\\ :guilabel:`IP-address`\\ を選択します。"
+
+#~ msgid "On the next screen, enter the IP address of your IoT system."
+#~ msgstr "次の画面で、IoT システムの IP アドレスを入力します。"
+
+#~ msgid ""
+#~ "Enter `9000` as port number and press :guilabel:`OK` on the next screen."
+#~ msgstr ""
+#~ "ポート番号として `9000` を入力し、次の画面で\\ :guilabel:`OK`\\ を押しま"
+#~ "す。"
+
+#~ msgid ""
+#~ "At this point, the terminal restarts and should be displayed on the IoT "
+#~ "system's form in Odoo."
+#~ msgstr ""
+#~ "この時点で、端末が再起動し、Odoo の IoT システムフォームに表示されます。"
+
+#~ msgid ""
+#~ "Enable the payment terminal :ref:`in the application settings <pos/use/"
+#~ "settings>` and :doc:`create the related payment method <../../"
+#~ "payment_methods>`. Set the journal type as :guilabel:`Bank` and "
+#~ "select :guilabel:`Ingenico` in the :guilabel:`Use a Payment Terminal` "
+#~ "field. Then, select your terminal device in the :guilabel:`Payment "
+#~ "Terminal Device` field."
+#~ msgstr ""
+#~ ":ref:`アプリケーションの管理設定で <pos/use/settings>`\\ 決済端末を有効に"
+#~ "し、\\ :doc:`関連する支払方法を作成 <../../payment_methods>`\\ します。仕"
+#~ "訳帳タイプを\\ :guilabel:`Bank`\\ に設定し、\\ :guilabel:`Use a Payment "
+#~ "Terminal`\\ フィールドで\\ :guilabel:`Ingenico`\\ を選択します。次に、"
+#~ "\\ :guilabel:`Payment Terminal Device`\\ フィールドで端末デバイスを選択し"
+#~ "ます。"
+
+#~ msgid ""
+#~ "Once the payment method is created, you can select it in your POS "
+#~ "settings. To do so, go to the :ref:`POS' settings <pos/use/settings>`, "
+#~ "click :guilabel:`Edit`, and add the payment method under "
+#~ "the :guilabel:`Payments` section."
+#~ msgstr ""
+#~ "支払方法を作成したら、POS設定で選択できます。\\ :ref:`POSの管理設定 <pos/"
+#~ "use/settings>`\\ に移動し、\\ :guilabel:`Edit`\\ をクリックして、"
+#~ "\\ :guilabel:`Payments`\\ セクションで支払方法を追加します。"
+
+#~ msgid ""
+#~ "Mercado Pago payment terminals do not require an :doc:`IoT Box </"
+#~ "applications/general/iot>` to operate."
+#~ msgstr ""
+#~ "Mercado Pago決済端末は、動作に\\ :doc:`IoT Box </applications/general/"
+#~ "iot>`\\ を必要としません。"
+
+#~ msgid ""
+#~ "Once the Mercado Pago configuration is complete, log in to your Odoo "
+#~ "database to create a :ref:`payment method <pos/mercado-pago/payment-"
+#~ "method>` using the collected credentials."
+#~ msgstr ""
+#~ "Mercado Pagoの設定が完了したら、Odooデータベースにログインして、収集した認"
+#~ "証情報を使用して\\ :ref:`決済方法 <pos/mercado-pago/payment-method>`\\ を"
+#~ "作成します。"
+
+#~ msgid "Odoo does not support the :guilabel:`Standalone` operation mode."
+#~ msgstr "Odoo は\\ :guilabel:`Standalone`\\ 動作モードに対応していません。"
+
+#~ msgid ""
+#~ "Navigate to :menuselection:`Rental app --> Configuration --> Settings`, "
+#~ "configure the :guilabel:`Default Delay Costs` in the *Rental* section for "
+#~ "late fees. Optionally, configure the :guilabel:`Default Padding Time` to "
+#~ "make rentals unavailable for booking. Refer to the :ref:`rental/products/"
+#~ "rental-transfer-feature` section to learn what it does and how to "
+#~ "configure it."
+#~ msgstr ""
+#~ ":menuselection:`レンタルアプリ --> 設定 --> 管理設定`\\ に移動し、*レンタ"
+#~ "ル*セクションの\\ :guilabel:`デフォルト遅延コスト`\\ で延滞料金を設定しま"
+#~ "す。オプションで、\\ :guilabel:`デフォルトパディング時間`\\ を設定して、レ"
+#~ "ンタルの予約を不可にすることもできます。その機能と設定方法については、"
+#~ "\\ :ref:`rental/products/rental-transfer-feature`\\ セクションを参照してく"
+#~ "ださい。"
+
+#~ msgid "Click **Save** to apply the changes."
+#~ msgstr "**保存**\\ をクリックして変更を適用します。"
+
+#~ msgid "General Information tab"
+#~ msgstr "全般情報タブ"
+
+#~ msgid ""
+#~ "In the new product window, the :guilabel:`Rental` checkbox is already "
+#~ "ticked by default. Select the :guilabel:`Product Type` "
+#~ "as :guilabel:`Goods`."
+#~ msgstr ""
+#~ "新しいプロダクトウィンドウでは、:guilabel:`レンタル`チェックボックスがデ"
+#~ "フォルトで既にチェックされています。:guilabel:`プロダクトタイプ`"
+#~ "を:guilabel:`商品`として選択します。"
+
+#~ msgid ""
+#~ "Tick the :guilabel:`Track Inventory` checkbox and select :guilabel:`By "
+#~ "Quantity` from the drop-down menu. For the :guilabel:`Category` field, "
+#~ "select :guilabel:`Goods` from the drop-down menu or create a new category "
+#~ "by typing in the name and clicking :guilabel:`Create`."
+#~ msgstr ""
+#~ ":guilabel:`在庫を追跡`チェックボックスをチェックし、ドロップダウンメニュー"
+#~ "から:guilabel:`数量で`を選択します。:guilabel:`カテゴリ`フィールドには、ド"
+#~ "ロップダウンメニューから:guilabel:`商品`を選択するか、名前を入力し"
+#~ "て:guilabel:`作成`をクリックして新しいカテゴリを作成します。"
+
+#~ msgid "Attributes & Variants tab"
+#~ msgstr "属性とバリアントタブ"
+
+#~ msgid ""
+#~ "Click :guilabel:`Add a line`, then select a default option from "
+#~ "the :guilabel:`Attribute` drop-down menu. To create a new one, enter the "
+#~ "name, then click :guilabel:`Create and edit…` to :ref:`configure the "
+#~ "attribute and its values <products/variants/attributes>`."
+#~ msgstr ""
+#~ ":guilabel:`行を追加`をクリックし、:guilabel:`属性`ドロップダウンメニューか"
+#~ "らデフォルトオプションを選択します。新しいものを作成するには、名前を入力し"
+#~ "てから:guilabel:`作成して編集...`をクリックして:ref:`属性とその値を設定 "
+#~ "<products/variants/attributes>`します。"
+
+#~ msgid "Rental prices tab"
+#~ msgstr "レンタル価格タブ"
+
+#~ msgid "Configure a physical rental product for product tracking"
+#~ msgstr "プロダクト追跡用に物理的なレンタルプロダクトを設定する"
+
+#~ msgid ""
+#~ "To configure a physical rental product for product tracking, the "
+#~ "**Inventory** app must be installed, and :doc:`Lots & Serial Numbers must "
+#~ "be enabled <../../../inventory_and_mrp/inventory/product_management/"
+#~ "product_tracking>`."
+#~ msgstr ""
+#~ "物理的なレンタルプロダクトをプロダクト追跡用に設定するには、**在庫**アプリ"
+#~ "がインストールされており、:doc:`ロット番号とシリアル番号を有効にする "
+#~ "<../../../inventory_and_mrp/inventory/product_management/"
+#~ "product_tracking>`必要があります。"
+
+#~ msgid ""
+#~ "Go to the :menuselection:`Rental app --> Products`, then "
+#~ "click :guilabel:`New`. In the new product window, the :guilabel:`Rental` "
+#~ "checkbox is already ticked by default."
+#~ msgstr ""
+#~ ":menuselection:`レンタルアプリ --> プロダクト`に移動し、:guilabel:`新規`を"
+#~ "クリックします。新しいプロダクトウィンドウでは、:guilabel:`レンタル`チェッ"
+#~ "クボックスがデフォルトで既にチェックされています。"
+
+#~ msgid ""
+#~ "Select the :guilabel:`Product Type` as :guilabel:`Goods`. Tick "
+#~ "the :guilabel:`Track Inventory` checkbox and select either :guilabel:`By "
+#~ "Lots` or :guilabel:`By Unique Serial Number` from the drop-down menu."
+#~ msgstr ""
+#~ ":guilabel:`プロダクトタイプ`を:guilabel:`商品`として選択しま"
+#~ "す。:guilabel:`在庫を追跡`チェックボックスをチェックし、ドロップダウンメ"
+#~ "ニューから:guilabel:`ロットで`または:guilabel:`一意のシリアル番号で`のいず"
+#~ "れかを選択します。"
+
+#~ msgid ""
+#~ "For the :guilabel:`Category` field, select :guilabel:`Goods` from the "
+#~ "drop-down menu or create a new category by typing in the name and "
+#~ "clicking :guilabel:`Create`. Configure rental rates on the :ref:`rental/"
+#~ "products/rental-prices-tab`. Click the :icon:`fa-cloud-"
+#~ "upload` :guilabel:`(Save manually)` icon near the top to save."
+#~ msgstr ""
+#~ ":guilabel:`カテゴリ`フィールドには、ドロップダウンメニューから:guilabel:`"
+#~ "商品`を選択するか、名前を入力して:guilabel:`作成`をクリックして新しいカテ"
+#~ "ゴリを作成します。:ref:`rental/products/rental-prices-tab`でレンタル料金を"
+#~ "設定します。上部付近の:icon:`fa-cloud-upload` :guilabel:`手動で保存`アイコ"
+#~ "ンをクリックして保存します。"
+
+#~ msgid ""
+#~ "To enable the :guilabel:`Rental Transfers` feature, navigate to "
+#~ "the :menuselection:`Rental app --> Configuration --> Settings` and in the "
+#~ "*Rental* section, tick the :guilabel:`Rental Transfers` checkbox."
+#~ msgstr ""
+#~ ":guilabel:`レンタル移動`\\ 機能を有効にするには、\\ :menuselection:`レンタ"
+#~ "ルアプリ --> 設定 --> 設定`\\ に移動し、\\ *レンタル*\\ セクションで"
+#~ "\\ :guilabel:`レンタル移動`\\ チェックボックスをオンにします。"
+
+#~ msgid ""
+#~ "The **Inventory** app must be installed to set up this configuration. The "
+#~ "**Inventory** app automatically creates an internal default location once "
+#~ "the *Rental Transfers* feature is enabled. Odoo uses the new default "
+#~ "location, :guilabel:`Customer/Rental`, to track products during the "
+#~ "rental period (moving them from :guilabel:`Stock` to :guilabel:`Customer/"
+#~ "Rental` upon rental, and back upon return). Do **not** modify to avoid "
+#~ "corrupting inventory tracking."
+#~ msgstr ""
+#~ "**在庫**\\ アプリは、この設定を行うためにインストールする必要があります。"
+#~ "**在庫**\\ アプリは、\\ *レンタル移動*\\ 機能が有効になると、自動的に内部"
+#~ "デフォルトロケーションを作成します。Odooは、レンタル期間中にプロダクトを追"
+#~ "跡するために新しいデフォルトロケーション\\ :guilabel:`顧客/レンタル`\\ を"
+#~ "使用します（レンタル時に\\ :guilabel:`在庫`\\ から\\ :guilabel:`顧客/レン"
+#~ "タル`\\ に移動し、返却時に戻します）。在庫追跡の破損を避けるため、変更\\ "
+#~ "**しないでください**\\ 。"
+
+#~ msgid ""
+#~ "For multi-location management and rental item transfer tracking, navigate "
+#~ "to the :menuselection:`Rental app --> Configuration --> Settings` and in "
+#~ "the :guilabel:`Rental` section, tick the :guilabel:`Rental Transfers` "
+#~ "checkbox."
+#~ msgstr ""
+#~ "マルチロケーション管理とレンタル件の移動追跡を行うには、"
+#~ "\\ :menuselection:`レンタルアプリ --> 設定 --> 設定`\\ に移動し、"
+#~ "\\ :guilabel:`レンタル`\\ セクションで\\ :guilabel:`レンタル移動`\\ チェッ"
+#~ "クボックスをオンにします。"
+
+#~ msgid ""
+#~ "Next, go to the :menuselection:`Inventory app --> Configuration --> "
+#~ "Settings` and in the :guilabel:`Warehouse` section, tick "
+#~ "the :guilabel:`Storage Locations` checkbox. Click :guilabel:`Save` to "
+#~ "apply the changes."
+#~ msgstr ""
+#~ "次に、:menuselection:`在庫アプリ --> 設定 --> 設定`に移動し、:guilabel:`倉"
+#~ "庫`セクションで:guilabel:`保管ロケーション`チェックボックスにチェックを入"
+#~ "れます。:guilabel:`保存`をクリックして変更を適用します。"
+
+#~ msgid ""
+#~ "Ensure the **Rental** and **Inventory** apps are configured by "
+#~ "enabling :guilabel:`Rental Transfers` in the **Rental app** "
+#~ "and :guilabel:`Storage Locations` in the **Inventory** app."
+#~ msgstr ""
+#~ "\\ **レンタル**\\ アプリと\\ **在庫**\\ アプリが設定されていることを確認"
+#~ "し、\\ **レンタルアプリ**\\ で:guilabel:`レンタル移動`を、\\ **在庫**\\ ア"
+#~ "プリで:guilabel:`保管ロケーション`を有効化します。"
+
+#~ msgid ""
+#~ "Next, go to the :menuselection:`Inventory app > Configuration > "
+#~ "Locations`. Create a new location for each storefront."
+#~ msgstr ""
+#~ "次に、:menuselection:`在庫アプリ > 設定 > ロケーション`に移動します。各店"
+#~ "舗用の新しいロケーションを作成します。"
 
 #~ msgid ""
 #~ "Product variants can be managed via their individual product template, or "

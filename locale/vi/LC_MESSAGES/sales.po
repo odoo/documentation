@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-24 17:32+0000\n"
+"POT-Creation-Date: 2026-08-07 17:32+0000\n"
 "PO-Revision-Date: 2026-07-05 00:16+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Vietnamese <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -90,7 +90,6 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:21
 #: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:13
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:13
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:15
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:12
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:14
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:19
@@ -10544,7 +10543,7 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/pricing.rst:155
 #: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:38
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:144
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:149
 msgid "Go to :menuselection:`Point of Sale --> Configuration --> Settings`."
 msgstr "Vào :menuselection:`POS --> Cấu hình --> Cài đặt`."
 
@@ -14196,6 +14195,7 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:95
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:167
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:38
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:45
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:35
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:63
 msgid "Odoo configuration"
@@ -16012,7 +16012,6 @@ msgid "Chain ID"
 msgstr "ID chuỗi"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:41
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:42
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:30
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:36
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:22
@@ -16037,6 +16036,7 @@ msgid ":doc:`Create a new payment method <../../payment_methods>`:"
 msgstr ":doc:`Tạo phương thức thanh toán mới <../../payment_methods>`:"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:50
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:55
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mollie.rst:48
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:46
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:58
@@ -16046,6 +16046,7 @@ msgid "Set the :guilabel:`Journal` field to :guilabel:`Bank`."
 msgstr "Đặt trường :guilabel:`Sổ nhật ký` thành :guilabel:`Ngân hàng`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:51
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:57
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mollie.rst:50
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:47
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:60
@@ -16126,104 +16127,109 @@ msgstr "Ingenico hiện chỉ có sẵn ở Bỉ, Hà Lan và Luxembourg."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:11
 msgid ""
-"Odoo works with the Ingenico Lane/, Desk/, and Move/ payment terminals as "
-"they support the TLV communication protocol through TCP/IP."
+"Odoo works with Ingenico's `Lane/5000 <https://ingenico.com/en/products-"
+"services/payment-terminals/tetra/lane5000-le>`_, `Desk/5000 <https://"
+"ingenico.com/en/products-services/payment-terminals/tetra/desk5000>`_, `Move/"
+"5000 <https://ingenico.com/en/products-services/payment-terminals/tetra/"
+"move5000>`_ payment terminals, as they support the TLV communication "
+"protocol through TCP/IP."
 msgstr ""
-"Odoo hoạt động với các thiết bị đầu cuối thanh toán Ingenico Lane/, Desk/ và "
-"Move/ vì chúng hỗ trợ giao thức truyền thông TLV thông qua TCP/IP."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:18
-msgid "Connect an IoT system"
-msgstr "Kết nối hệ thống IoT"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:20
-msgid ""
-"Connecting an Ingenico payment terminal to Odoo is a feature that requires "
-"an IoT system. For more information on how to connect an IoT system to your "
-"database, please refer to the :doc:`IoT documentation </applications/general/"
-"iot>`."
+msgid "Ingenico terminal configuration"
 msgstr ""
-"Kết nối thiết bị đầu cuối thanh toán Ingenico với Odoo là một tính năng yêu "
-"cầu hệ thống IoT. Để biết thêm thông tin về cách kết nối hệ thống IoT với cơ "
-"sở dữ liệu của bạn, vui lòng tham khảo :doc:`tài liệu IoT </applications/"
-"general/iot>`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:25
-msgid "Configure the Lane/Desk/Move 5000 terminals for Ingenico BENELUX"
-msgstr "Cấu hình thiết bị đầu cuối Lane/Desk/Move 5000 cho Ingenico BENELUX"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:27
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:22
 msgid ""
-"Press the function button (:guilabel:`F` on Lane/5000, :guilabel:`⦿` on Desk/"
-"5000 and Move/5000)."
+"To configure the Lane/5000, Desk/5000, or Move/5000, follow these steps:"
 msgstr ""
-"Nhấn nút chức năng (:guilabel:`F` trên Lane/5000, :guilabel:`⦿` trên Desk/"
-"5000 và Move/5000)."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:24
+msgid ""
+"Press the function button (:guilabel:`F` on the Lane/5000 "
+"terminal, :guilabel:`⦿` on the Desk/5000 and Move/5000 terminals)."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:26
+msgid ""
+"Go to :menuselection:`Kassa Menu --> Settings Menu`, enter the settings "
+"password (default: `2009`), and press :guilabel:`OK`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:28
+msgid "Select :guilabel:`Protocol` and press :guilabel:`OK`."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:29
-msgid ""
-"Go to :menuselection:`Kassa menu --> Settings Menu` and enter the settings "
-"password (default: `2009`)."
+msgid "Select :guilabel:`CTEP` and press :guilabel:`OK`."
 msgstr ""
-"Vào :menuselection:`Kassa menu --> Settings Menu` và nhập mật khẩu cài đặt "
-"(mặc định: `2009`)."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:30
+msgid "Select :guilabel:`Change Connection` and press :guilabel:`OK`."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:31
 msgid ""
-"Select :guilabel:`Change Connection` and press :guilabel:`OK` on the next "
-"screen."
+"Select :guilabel:`TCP/IP` and press :guilabel:`OK`. Then, "
+"select :guilabel:`IP-address` and press :guilabel:`OK`."
 msgstr ""
-"Chọn :guilabel:`Change Connection` và nhấn :guilabel:`OK` ở màn hình tiếp "
-"theo."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:32
-msgid "Select :guilabel:`TCP/IP` and :guilabel:`IP-address`."
-msgstr "Chọn :guilabel:`TCP/IP` và :guilabel:`IP-address`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:33
-msgid "On the next screen, enter the IP address of your IoT system."
-msgstr "Ở màn hình tiếp theo, nhập địa chỉ IP của hệ thống IoT của bạn."
+msgid "Enter the IoT system's IP address and press :guilabel:`OK`."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:34
 msgid ""
-"Enter `9000` as port number and press :guilabel:`OK` on the next screen."
-msgstr "Nhập `9000` làm số cổng và nhấn :guilabel:`OK` ở màn hình tiếp theo."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:36
-msgid ""
-"At this point, the terminal restarts and should be displayed on the IoT "
-"system's form in Odoo."
+"Enter port number `9001` if using an IoT box or `9050` if using the Windows "
+"virtual IoT."
 msgstr ""
-"Tại thời điểm này, thiết bị đầu cuối khởi động lại và sẽ được hiển thị trên "
-"biểu mẫu của hệ thống IoT trong Odoo."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:44
-msgid ""
-"Enable the payment terminal :ref:`in the application settings <pos/use/"
-"settings>` and :doc:`create the related payment method <../../"
-"payment_methods>`. Set the journal type as :guilabel:`Bank` and "
-"select :guilabel:`Ingenico` in the :guilabel:`Use a Payment Terminal` field. "
-"Then, select your terminal device in the :guilabel:`Payment Terminal Device` "
-"field."
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:35
+msgid "Select :guilabel:`No SSL` and press :guilabel:`OK`."
 msgstr ""
-"Bật thiết bị đầu cuối thanh toán :ref:`trong cài đặt ứng dụng <pos/use/"
-"settings>` và :doc:`tạo phương thức thanh toán liên quan <../../"
-"payment_methods>`. Đặt loại nhật ký là :guilabel:`Ngân hàng` và "
-"chọn :guilabel:`Ingenico` trong trường :guilabel:`Sử dụng thiết bị đầu cuối "
-"thanh toán`. Sau đó, chọn thiết bị đầu cuối của bạn trong "
-"trường :guilabel:`Thiết bị đầu cuối thanh toán`."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:37
+msgid ""
+"The terminal restarts and should be displayed on the IoT system's form in "
+"Odoo."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:47
+msgid ""
+"The configuration of an Ingenico terminal with Odoo requires to "
+"first :doc:`connect the IoT system to Odoo </applications/general/iot/"
+"connect>`, then to enable the :guilabel:`Worldline` terminal in "
+"the :ref:`POS settings <pos/use/settings>` under the :guilabel:`Payment "
+"Terminals` section."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:51
 msgid ""
-"Once the payment method is created, you can select it in your POS settings. "
-"To do so, go to the :ref:`POS' settings <pos/use/settings>`, "
-"click :guilabel:`Edit`, and add the payment method under "
-"the :guilabel:`Payments` section."
+"To connect the Ingenico terminal with Odoo Point of Sale, follow these steps:"
 msgstr ""
-"Sau khi phương thức thanh toán được tạo, bạn có thể chọn nó trong cài đặt "
-"POS của mình. Để thực hiện, vào :ref:`cài đặt POS <pos/use/settings>`, "
-"nhấp :guilabel:`Chỉnh sửa`, và thêm phương thức thanh toán trong "
-"phần :guilabel:`Thanh toán`."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:53
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mollie.rst:46
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:44
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:56
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_com.rst:60
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:67
+msgid ""
+"Go to :menuselection:`Point of Sale --> Configuration --> Payment Methods` "
+"and :doc:`create a payment method <../../payment_methods>`."
+msgstr ""
+"Vào :menuselection:`Point of Sale --> Cấu hình --> Phương thức thanh toán` "
+"và :doc:`tạo phương thức thanh toán <../../payment_methods>`."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:56
+msgid "Set the :guilabel:`Point of Sale` field to the desired point of sale."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:58
+msgid ""
+"Select the Worldline terminal number in the :guilabel:`Payment Terminal "
+"Device` field, then save."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:3
 msgid "Mercado Pago"
@@ -16255,13 +16261,15 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:14
 msgid ""
-"Mercado Pago payment terminals do not require an :doc:`IoT Box </"
+"Mercado Pago payment terminals do not require :doc:`an IoT system </"
 "applications/general/iot>` to operate."
 msgstr ""
-"Thiết bị đầu cuối thanh toán Mercado Pago không yêu cầu :doc:`IoT Box </"
-"applications/general/iot>` để hoạt động."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:18
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:16
+msgid "Odoo does not support the :guilabel:`STANDALONE` operation mode."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:19
 msgid ""
 ":doc:`Mercado Pago online payments </applications/finance/payment_providers/"
 "mercado_pago>`"
@@ -16269,7 +16277,7 @@ msgstr ""
 ":doc:`Thanh toán trực tuyến Mercado Pago </applications/finance/"
 "payment_providers/mercado_pago>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:19
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:20
 msgid ""
 "`Mercado Pago tutorial video (Spanish only) <https://www.youtube.com/watch?"
 "v=dpbexfTc4VQ>`_"
@@ -16277,11 +16285,11 @@ msgstr ""
 "`Video hướng dẫn Mercado Pago (chỉ có tiếng Tây Ban Nha) <https://"
 "www.youtube.com/watch?v=dpbexfTc4VQ>`_"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:24
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:25
 msgid "Mercado Pago configuration"
 msgstr "Cấu hình Mercado Pago"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:26
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:27
 msgid ""
 "The Mercado Pago configuration requires creating an account, if needed, "
 "and :ref:`connecting it to your payment terminal and store <pos/mercado-pago/"
@@ -16295,27 +16303,27 @@ msgstr ""
 "point-smart>` để thiết lập kỹ thuật và lấy :ref:`thông tin xác thực <pos/"
 "mercado-pago/credentials>` để hoàn tất tích hợp."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:34
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:35
 msgid "Terminal and store connection"
 msgstr "Kết nối thiết bị đầu cuối và cửa hàng"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:36
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:37
 msgid "Create a Mercado Pago account if needed:"
 msgstr "Tạo tài khoản Mercado Pago nếu cần:"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:38
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:39
 msgid "`Mercado Pago for Mexico <https://www.mercadopago.com.mx/>`_"
 msgstr "`Mercado Pago cho Mexico <https://www.mercadopago.com.mx/>`_"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:39
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:40
 msgid "`Mercado Pago for Argentina <https://www.mercadopago.com.ar/>`_"
 msgstr "`Mercado Pago cho Argentina <https://www.mercadopago.com.ar/>`_"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:40
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:41
 msgid "`Mercado Pago for Brazil <https://www.mercadopago.com.br/>`_"
 msgstr "`Mercado Pago cho Brazil <https://www.mercadopago.com.br/>`_"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:41
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:42
 msgid ""
 "Turn on the Point Smart terminal. Follow the on-screen instructions until "
 "prompted to link the terminal with your Mercado Pago account."
@@ -16323,16 +16331,16 @@ msgstr ""
 "Bật thiết bị đầu cuối Point Smart. Làm theo hướng dẫn trên màn hình cho đến "
 "khi được nhắc liên kết thiết bị đầu cuối với tài khoản Mercado Pago của bạn."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:43
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:44
 msgid "Click :guilabel:`Soy responsable del negocio` to get a pairing QR code."
 msgstr ""
 "Nhấp vào :guilabel:`Soy responsable del negocio` để nhận mã QR ghép nối."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:44
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:45
 msgid "Connect to your Mercado Pago account with a mobile device."
 msgstr "Kết nối với tài khoản Mercado Pago của bạn bằng thiết bị di động."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:45
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:46
 msgid ""
 "Scan the QR code with the mobile device and complete the connection in your "
 "Mercado Pago account."
@@ -16340,12 +16348,12 @@ msgstr ""
 "Quét mã QR bằng thiết bị di động và hoàn tất kết nối trong tài khoản Mercado "
 "Pago của bạn."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:46
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:47
 msgid "Ensure the terminal is correctly linked to your store:"
 msgstr ""
 "Đảm bảo thiết bị đầu cuối được liên kết chính xác với cửa hàng của bạn:"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:48
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:49
 msgid ""
 "Type your Mercado Pago account email address or phone number, then "
 "click :guilabel:`Continuar`."
@@ -16353,11 +16361,11 @@ msgstr ""
 "Nhập địa chỉ email hoặc số điện thoại tài khoản Mercado Pago của bạn, sau đó "
 "nhấp vào :guilabel:`Continuar`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:50
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:51
 msgid "In the popover, click :guilabel:`Continuar`."
 msgstr "Trong cửa sổ bật lên, nhấp vào :guilabel:`Continuar`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:51
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:52
 msgid ""
 "On the :guilabel:`Configura el lector para tu cuenta [account name]` screen, "
 "click :guilabel:`Empezar configuración`."
@@ -16365,11 +16373,11 @@ msgstr ""
 "Trên màn hình :guilabel:`Configura el lector para tu cuenta [account name]`, "
 "nhấp vào :guilabel:`Empezar configuración`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:53
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:54
 msgid "Click :guilabel:`Crear nueva sucursal` to add a new point of sale."
 msgstr "Nhấp vào :guilabel:`Crear nueva sucursal` để thêm điểm bán hàng mới."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:54
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:55
 msgid ""
 "Type the point of sale's name and address. Add more information if needed, "
 "then click :guilabel:`Crear sucursal`."
@@ -16377,25 +16385,25 @@ msgstr ""
 "Nhập tên và địa chỉ của điểm bán hàng. Thêm thông tin nếu cần, sau đó nhấp "
 "vào :guilabel:`Crear sucursal`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:56
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:57
 msgid ""
 "Type your register's name and click :guilabel:`Confirmar sucursal y caja`."
 msgstr ""
 "Nhập tên quầy thu ngân của bạn và nhấp vào :guilabel:`Confirmar sucursal y "
 "caja`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:57
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:58
 msgid ""
 "Click :guilabel:`Crear clave` to create a security key and protect the point "
 "of sale."
 msgstr ""
 "Nhấp vào :guilabel:`Crear clave` để tạo khóa bảo mật và bảo vệ điểm bán hàng."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:62
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:63
 msgid "Point Smart application"
 msgstr "Ứng dụng Point Smart"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:64
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:65
 msgid ""
 "Log in to the `Mercado Pago Developer <https://www.mercadopago.com/"
 "developers>`_ portal."
@@ -16403,7 +16411,7 @@ msgstr ""
 "Đăng nhập vào cổng thông tin `Mercado Pago Developer <https://"
 "www.mercadopago.com/developers>`_."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:65
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:66
 msgid ""
 "Click :guilabel:`Tus integraciones`, then click `Crear aplicación <https://"
 "www.mercadopago.com.mx/ayuda/20152>`_."
@@ -16411,7 +16419,7 @@ msgstr ""
 "Nhấp vào :guilabel:`Tus integraciones`, sau đó nhấp vào `Crear aplicación "
 "<https://www.mercadopago.com.mx/ayuda/20152>`_."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:67
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:68
 msgid ""
 "In the :guilabel:`Configuraciones básicas` section, type the application "
 "name, select :guilabel:`Pagos presencial` "
@@ -16422,11 +16430,11 @@ msgstr ""
 "chọn :guilabel:`Pagos presencial` và :guilabel:`PointdeMercadoPago`, sau đó "
 "nhấp vào :guilabel:`Crear aplicación` để nhận số ứng dụng."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:74
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:75
 msgid "Credentials generation"
 msgstr "Tạo thông tin xác thực"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:76
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:77
 msgid ""
 "There are three credentials to generate and collect from the `Mercado Pago "
 "Developer dashboard <https://www.mercadopago.com/developers>`_: a **webhook "
@@ -16436,11 +16444,11 @@ msgstr ""
 "Pago Developer <https://www.mercadopago.com/developers>`_: một **khóa bí mật "
 "webhook**, một **mã truy cập** và **số sê-ri thiết bị đầu cuối**."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:80
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:81
 msgid "Generate the webhook secret key:"
 msgstr "Tạo khóa bí mật webhook:"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:82
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:83
 msgid ""
 "Click :guilabel:`Webhooks` under the :guilabel:`Notificaciones` section, "
 "then :guilabel:`Modo productivo`."
@@ -16448,7 +16456,7 @@ msgstr ""
 "Nhấp vào :guilabel:`Webhooks` trong phần :guilabel:`Notificaciones`, sau "
 "đó :guilabel:`Modo productivo`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:84
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:85
 msgid ""
 "Paste your Odoo database's URL followed by `/pos_mercado_pago/notification`. "
 "For example: `https://mycompany.odoo.com/pos_mercado_pago/notification`."
@@ -16457,7 +16465,7 @@ msgstr ""
 "notification`. Ví dụ: `https://mycompany.odoo.com/pos_mercado_pago/"
 "notification`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:86
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:87
 msgid ""
 "Copy the generated webhook secret key and save it for the :ref:`pos/mercado-"
 "pago/payment-method` step."
@@ -16465,11 +16473,11 @@ msgstr ""
 "Sao chép khóa bí mật webhook đã tạo và lưu lại cho bước :ref:`pos/mercado-"
 "pago/payment-method`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:88
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:89
 msgid "Generate the access token:"
 msgstr "Tạo token truy cập:"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:90
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:91
 msgid ""
 "Click :guilabel:`Credenciales de producción` under "
 "the :guilabel:`Producción` section, then :guilabel:`Activar credenciales de "
@@ -16479,7 +16487,7 @@ msgstr ""
 "phần :guilabel:`Producción`, sau đó nhấp :guilabel:`Activar credenciales de "
 "producción`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:92
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:93
 msgid ""
 "Copy the generated access token and save it for the :ref:`pos/mercado-pago/"
 "payment-method` step."
@@ -16487,7 +16495,7 @@ msgstr ""
 "Sao chép token truy cập đã tạo và lưu lại cho bước :ref:`pos/mercado-pago/"
 "payment-method`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:94
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:95
 msgid ""
 "Locate the terminal serial number on the back of the terminal and write it "
 "down for the :ref:`pos/mercado-pago/payment-method` step."
@@ -16495,21 +16503,7 @@ msgstr ""
 "Xác định số serial của thiết bị đầu cuối ở mặt sau và ghi lại cho "
 "bước :ref:`pos/mercado-pago/payment-method`."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:97
-msgid ""
-"Once the Mercado Pago configuration is complete, log in to your Odoo "
-"database to create a :ref:`payment method <pos/mercado-pago/payment-method>` "
-"using the collected credentials."
-msgstr ""
-"Sau khi hoàn tất cấu hình Mercado Pago, đăng nhập vào cơ sở dữ liệu Odoo của "
-"bạn để tạo :ref:`phương thức thanh toán <pos/mercado-pago/payment-method>` "
-"bằng cách sử dụng thông tin xác thực đã thu thập."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:101
-msgid "Odoo does not support the :guilabel:`Standalone` operation mode."
-msgstr "Odoo không hỗ trợ chế độ hoạt động :guilabel:`Standalone`."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:104
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:99
 msgid ""
 "All terminals purchased with your Mercado Pago account are automatically "
 "displayed on the Mercado Pago dashboard."
@@ -16517,12 +16511,19 @@ msgstr ""
 "Tất cả các thiết bị đầu cuối được mua bằng tài khoản Mercado Pago của bạn sẽ "
 "tự động hiển thị trên bảng điều khiển Mercado Pago."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:110
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:105
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mollie.rst:42
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:49
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_com.rst:53
 msgid "Odoo POS configuration"
 msgstr "Cấu hình Odoo POS"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:108
+msgid ""
+"For the Mercado Pago terminal to work correctly with Odoo, make sure "
+"to :ref:`enable Mercado Pago as a payment provider <payment_providers/"
+"mercado_pago/odoo-configuration>` and add the associated account credentials."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:112
 msgid ""
@@ -16671,18 +16672,6 @@ msgid ""
 msgstr ""
 "Chcete-li připojit terminál Mollie k Odoo Point of Sale, postupujte podle "
 "následujících kroků:"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mollie.rst:46
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:44
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:56
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_com.rst:60
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:67
-msgid ""
-"Go to :menuselection:`Point of Sale --> Configuration --> Payment Methods` "
-"and :doc:`create a payment method <../../payment_methods>`."
-msgstr ""
-"Vào :menuselection:`Point of Sale --> Cấu hình --> Phương thức thanh toán` "
-"và :doc:`tạo phương thức thanh toán <../../payment_methods>`."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mollie.rst:49
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:59
@@ -22120,9 +22109,9 @@ msgstr ""
 "Để gửi tin nhắn tiếp thị thủ công từ backend POS, hãy làm theo các bước sau:"
 
 #: ../../content/applications/sales/point_of_sale/use.rst:178
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:88
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:101
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:124
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:93
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:106
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:129
 msgid "Go to :menuselection:`Point of Sale --> Orders --> Orders`."
 msgstr "Truy cập :menuselection:`POS --> Đơn hàng --> Đơn hàng`."
 
@@ -22879,6 +22868,13 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:55
 msgid ""
+"Alternatively, on the payment confirmation screen, click :icon:`fa-pencil-"
+"square-o` :guilabel:`Edit`, add a customer in the dedicated field if needed, "
+"click :guilabel:`Invoice`, then :guilabel:`Continue`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:60
+msgid ""
 "If the registered customer's :ref:`contact type <essentials/contacts/type>` "
 "is set to :guilabel:`Company`, the :icon:`fa-file-text-"
 "o` :guilabel:`Invoice` checkbox is automatically enabled."
@@ -22887,15 +22883,15 @@ msgstr ""
 "được đặt thành :guilabel:`Công ty`, hộp kiểm :icon:`fa-file-text-"
 "o` :guilabel:`Hóa đơn` sẽ tự động được bật."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:60
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:65
 msgid ":doc:`receipts`"
 msgstr ":doc:`receipts`"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:65
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:70
 msgid "After the ordering process"
 msgstr "Sau quy trình đặt hàng"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:67
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:72
 msgid ""
 "To create and issue an invoice to the customer from the POS register after "
 "an order is processed, follow these steps:"
@@ -22903,16 +22899,16 @@ msgstr ""
 "Để tạo và phát hành hóa đơn cho khách hàng từ quầy POS sau khi xử lý đơn "
 "hàng, hãy làm theo các bước sau:"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:70
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:75
 msgid "Click :guilabel:`Orders` in the POS interface."
 msgstr "Nhấp vào :guilabel:`Đơn hàng` trong giao diện POS."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:71
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:76
 msgid "Set the :guilabel:`Active` dropdown menu to :guilabel:`Paid`."
 msgstr ""
 "Đặt menu thả xuống :guilabel:`Hoạt động` thành :guilabel:`Đã thanh toán`."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:72
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:77
 msgid ""
 "Select the relevant order and click :icon:`fa-file-pdf-"
 "o` :guilabel:`Invoice` above the numpad."
@@ -22920,7 +22916,7 @@ msgstr ""
 "Chọn đơn hàng có liên quan và nhấp vào :icon:`fa-file-pdf-o` :guilabel:`Hóa "
 "đơn` phía trên bàn phím số."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:75
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:80
 msgid ""
 "To reprint the invoice, select the relevant order and click :icon:`fa-file-"
 "pdf-o` :guilabel:`Reprint Invoice` above the numpad."
@@ -22928,32 +22924,32 @@ msgstr ""
 "Để in lại hóa đơn, chọn đơn hàng có liên quan và nhấp vào :icon:`fa-file-pdf-"
 "o` :guilabel:`In lại hóa đơn` phía trên bàn phím số."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:79
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:84
 msgid "From the backend"
 msgstr "Từ backend"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:84
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:89
 msgid "Backend invoice creation"
 msgstr "Tạo hóa đơn từ backend"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:86
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:91
 msgid "To create and issue an invoice from the backend, follow these steps:"
 msgstr "Để tạo và phát hành hóa đơn từ backend, hãy làm theo các bước sau:"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:89
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:94
 msgid "Select the relevant order."
 msgstr "Chọn đơn hàng có liên quan."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:90
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:95
 msgid "Add the :guilabel:`Customer` if needed, then click :guilabel:`Invoice`."
 msgstr ""
 "Thêm :guilabel:`Khách hàng` nếu cần, sau đó nhấp vào :guilabel:`Hóa đơn`."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:95
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:100
 msgid "Consolidated customer invoice"
 msgstr "Hóa đơn khách hàng hợp nhất"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:97
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:102
 msgid ""
 "To create a consolidated invoice for all orders linked to the same customer "
 "that are not yet invoiced (i.e., invoices with an :guilabel:`Invoice Status` "
@@ -22964,12 +22960,12 @@ msgstr ""
 "thái hóa đơn` được đặt thành :guilabel:`Cần lập hóa đơn`), hãy làm theo các "
 "bước sau:"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:102
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:107
 msgid "Click the search bar and :guilabel:`Group By` :guilabel:`Customer`."
 msgstr ""
 "Nhấp vào thanh tìm kiếm và :guilabel:`Nhóm theo` :guilabel:`Khách hàng`."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:103
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:108
 msgid ""
 "Click the :icon:`fa-caret-right` (:guilabel:`caret`) icon next to the "
 "relevant customer and enable :guilabel:`Order Ref` in the column header or "
@@ -22979,7 +22975,7 @@ msgstr ""
 "khách hàng có liên quan và bật :guilabel:`Mã đơn hàng` trong tiêu đề cột "
 "hoặc chọn các đơn hàng có liên quan."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:105
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:110
 msgid ""
 "Click :guilabel:`Create Invoices`, keep the :guilabel:`Consolidated Billing` "
 "option enabled, then click :guilabel:`Create`."
@@ -22987,7 +22983,7 @@ msgstr ""
 "Nhấp vào :guilabel:`Tạo hóa đơn`, giữ tùy chọn :guilabel:`Lập hóa đơn hợp "
 "nhất` được bật, sau đó nhấp vào :guilabel:`Tạo`."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:109
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:114
 msgid ""
 "Alternatively, go to :menuselection:`Point of Sale --> Orders --> "
 "Customers`, select the relevant customer, click the :icon:`fa-shopping-"
@@ -23000,7 +22996,7 @@ msgstr ""
 "đơn hàng có liên quan, nhấp vào :guilabel:`Tạo hóa đơn`, sau "
 "đó :guilabel:`Tạo`."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:113
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:118
 msgid ""
 "To create an individual invoice for each sales order, disable "
 "the :guilabel:`Consolidated Billing` option."
@@ -23008,11 +23004,11 @@ msgstr ""
 "Để tạo hóa đơn riêng cho từng đơn bán hàng, hãy tắt tùy chọn :guilabel:`Hợp "
 "nhất hóa đơn`."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:119
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:124
 msgid "Invoice retrieval"
 msgstr "Truy xuất hóa đơn"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:121
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:126
 msgid ""
 "Retrieving invoices is useful for customer requests and accounting purposes, "
 "for example. To view, download, reprint, or send past transactions, follow "
@@ -23022,33 +23018,33 @@ msgstr ""
 "toán, chẳng hạn. Để xem, tải xuống, in lại hoặc gửi các giao dịch trong quá "
 "khứ, hãy làm theo các bước sau:"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:125
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:130
 msgid "Click the relevant order in the list."
 msgstr "Nhấp vào đơn hàng liên quan trong danh sách."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:126
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:131
 msgid "Click the :guilabel:`Invoice` smart button on the order form."
 msgstr "Nhấp vào nút thông minh :guilabel:`Hóa đơn` trên biểu mẫu đơn hàng."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:127
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:132
 msgid "Click the following buttons to manage the invoice:"
 msgstr "Nhấp vào các nút sau để quản lý hóa đơn:"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:129
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:134
 msgid ":guilabel:`Send`: Send or resend the invoice."
 msgstr ":guilabel:`Gửi`: Gửi hoặc gửi lại hóa đơn."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:130
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:135
 msgid ""
 ":guilabel:`Print`: Open the browser's print function or download the invoice."
 msgstr ""
 ":guilabel:`In`: Mở chức năng in của trình duyệt hoặc tải xuống hóa đơn."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:131
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:136
 msgid ":guilabel:`Preview`: Preview and download the invoice."
 msgstr ":guilabel:`Xem trước`: Xem trước và tải xuống hóa đơn."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:132
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:137
 msgid ""
 ":guilabel:`Credit Note`: Issue a :ref:`credit note <accounting/credit_notes/"
 "issue-credit-note>` to the customer."
@@ -23056,18 +23052,18 @@ msgstr ""
 ":guilabel:`Thông báo ghi có`: Phát hành :ref:`thông báo ghi có <accounting/"
 "credit_notes/issue-credit-note>` cho khách hàng."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:134
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:139
 msgid ""
 ":guilabel:`Reset to Draft`: Reset the invoice to draft if changes are needed."
 msgstr ""
 ":guilabel:`Đặt lại về bản nháp`: Đặt lại hóa đơn về bản nháp nếu cần thay "
 "đổi."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:139
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:144
 msgid "Invoice generation via QR code and URL"
 msgstr "Tạo hóa đơn qua mã QR và URL"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:141
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:146
 msgid ""
 "To allow customers to request an invoice by scanning a QR code printed on "
 "their :ref:`receipt <pos/configuration/receipts>`, follow these steps:"
@@ -23076,15 +23072,15 @@ msgstr ""
 "trên :ref:`biên lai <pos/configuration/receipts>` của họ, hãy làm theo các "
 "bước sau:"
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:145
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:150
 msgid "Scroll down to the :guilabel:`Bills & Receipts` section."
 msgstr "Cuộn xuống phần :guilabel:`Hóa đơn & Biên lai`."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:146
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:151
 msgid "Enable the :guilabel:`Self-service invoicing` setting."
 msgstr "Bật cài đặt :guilabel:`Tự phục vụ hóa đơn`."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:147
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:152
 msgid ""
 "Set the :guilabel:`Print` field to :guilabel:`QR code`, :guilabel:`URL`, "
 "or :guilabel:`QR code + URL` to determine how customers can access their "
@@ -23094,7 +23090,7 @@ msgstr ""
 "hoặc :guilabel:`Mã QR + URL` để xác định cách khách hàng có thể truy cập hóa "
 "đơn của họ (ví dụ: bằng cách quét mã QR hoặc nhập URL vào trình duyệt)."
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:151
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:156
 msgid ""
 "Upon scanning the QR code or typing the URL in a browser, customers must "
 "fill in a form with the information on the receipt (i.e., "
@@ -23724,6 +23720,7 @@ msgstr ""
 "việc nhận hoặc trả hàng thuê trực tuyến."
 
 #: ../../content/applications/sales/rental/configure_products/product_type.rst:73
+#: ../../content/applications/sales/rental/configure_products/products.rst:33
 msgid "Click :guilabel:`Save` to apply the changes."
 msgstr "Nhấp vào :guilabel:`Save` để áp dụng các thay đổi."
 
@@ -23820,7 +23817,7 @@ msgid ":doc:`../../../services/project`"
 msgstr ":doc:`../../../services/project`"
 
 #: ../../content/applications/sales/rental/configure_products/product_type.rst:102
-#: ../../content/applications/sales/rental/configure_products/products.rst:260
+#: ../../content/applications/sales/rental/configure_products/products.rst:266
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:130
 msgid ":doc:`../../../inventory_and_mrp/inventory`"
 msgstr ":doc:`../../../inventory_and_mrp/inventory`"
@@ -23968,18 +23965,13 @@ msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:19
 msgid ""
-"Navigate to :menuselection:`Rental app --> Configuration --> Settings`, "
+"Navigate to :menuselection:`Rental app --> Configuration --> Settings`, and "
 "configure the :guilabel:`Default Delay Costs` in the *Rental* section for "
 "late fees. Optionally, configure the :guilabel:`Default Padding Time` to "
 "make rentals unavailable for booking. Refer to the :ref:`rental/products/"
 "rental-transfer-feature` section to learn what it does and how to configure "
 "it."
 msgstr ""
-"Điều hướng đến :menuselection:`Ứng dụng Thuê --> Cấu hình --> Cài đặt`, cấu "
-"hình :guilabel:`Chi phí Trễ hạn Mặc định` trong phần *Thuê* cho phí trả "
-"muộn. Tùy chọn, cấu hình :guilabel:`Thời gian Đệm Mặc định` để làm cho các "
-"lần thuê không khả dụng cho đặt trước. Tham khảo phần :ref:`rental/products/"
-"rental-transfer-feature` để tìm hiểu nó làm gì và cách cấu hình nó."
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:25
 msgid ""
@@ -23999,10 +23991,6 @@ msgstr ""
 "trường :guilabel:`Mỗi giờ` và :guilabel:`Mỗi ngày` trên biểu mẫu sản phẩm. "
 "Nếu các giá trị mặc định áp dụng cho tất cả sản phẩm, hãy để trống "
 "trường :guilabel:`Sản phẩm`."
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:33
-msgid "Click **Save** to apply the changes."
-msgstr "Nhấp vào **Lưu** để áp dụng các thay đổi."
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:None
 msgid ""
@@ -24027,38 +24015,33 @@ msgstr ""
 "cho thuê, điền vào mỗi tab tương ứng:"
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:47
-msgid "General Information tab"
-msgstr "Tab Thông tin Chung"
+msgid "Initial product configuration"
+msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:49
 msgid ""
-"In the new product window, the :guilabel:`Rental` checkbox is already ticked "
-"by default. Select the :guilabel:`Product Type` as :guilabel:`Goods`."
+"In the new product window, the :guilabel:`Rental` checkbox is already "
+"selected by default. Select the :guilabel:`Product Type` "
+"as :guilabel:`Goods`."
 msgstr ""
-"Trong cửa sổ sản phẩm mới, hộp kiểm :guilabel:`Thuê` đã được đánh dấu theo "
-"mặc định. Chọn :guilabel:`Loại Sản phẩm` là :guilabel:`Hàng hóa`."
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:52
 msgid ""
-"Tick the :guilabel:`Track Inventory` checkbox and select :guilabel:`By "
+"Enable the :guilabel:`Track Inventory` checkbox and select :guilabel:`By "
 "Quantity` from the drop-down menu. For the :guilabel:`Category` field, "
 "select :guilabel:`Goods` from the drop-down menu or create a new category by "
 "typing in the name and clicking :guilabel:`Create`."
 msgstr ""
-"Đánh dấu vào hộp kiểm :guilabel:`Theo dõi Tồn kho` và chọn :guilabel:`Theo "
-"Số lượng` từ menu thả xuống. Đối với trường :guilabel:`Danh mục`, "
-"chọn :guilabel:`Hàng hóa` từ menu thả xuống hoặc tạo danh mục mới bằng cách "
-"nhập tên và nhấp vào :guilabel:`Tạo`."
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:None
 msgid "The new product view in the Rental app."
 msgstr "Chế độ xem sản phẩm mới trong ứng dụng Cho thuê."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:60
-msgid "Attributes & Variants tab"
-msgstr "Tab Thuộc tính & Biến thể"
+#: ../../content/applications/sales/rental/configure_products/products.rst:62
+msgid "Optional: specify rental variants"
+msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:63
+#: ../../content/applications/sales/rental/configure_products/products.rst:65
 msgid ""
 "The *Variant* feature in the **Inventory** app must be enabled for this tab "
 "to display."
@@ -24066,23 +24049,21 @@ msgstr ""
 "Tính năng *Biến thể* trong ứng dụng **Tồn kho** phải được bật để tab này "
 "hiển thị."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:65
+#: ../../content/applications/sales/rental/configure_products/products.rst:67
 msgid ""
-"Click :guilabel:`Add a line`, then select a default option from "
-"the :guilabel:`Attribute` drop-down menu. To create a new one, enter the "
-"name, then click :guilabel:`Create and edit…` to :ref:`configure the "
-"attribute and its values <products/variants/attributes>`."
+"In the :guilabel:`Attributes & Variants` tab, :ref:`add the appropriate "
+"attribute and its values <products/variants/attributes>` by "
+"clicking :guilabel:`Add a line`. Attributes and values are useful for "
+"keeping the product library manageable, tracking and differentiating the "
+"inventory, and providing more detailed reports. Examples of rental variants "
+"for a *Goods* product are size, brand, color, and material."
 msgstr ""
-"Nhấp vào :guilabel:`Thêm dòng`, sau đó chọn một tùy chọn mặc định từ menu "
-"thả xuống :guilabel:`Thuộc tính`. Để tạo mới, nhập tên, sau đó nhấp "
-"vào :guilabel:`Tạo và chỉnh sửa...` để :ref:`cấu hình thuộc tính và các giá "
-"trị của nó <products/variants/attributes>`."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:72
-msgid "Rental prices tab"
-msgstr "Tab Giá thuê"
+#: ../../content/applications/sales/rental/configure_products/products.rst:76
+msgid "Set rental periods, prices, and reservations"
+msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:74
+#: ../../content/applications/sales/rental/configure_products/products.rst:78
 msgid ""
 "Click the :guilabel:`Rental prices` tab and in the :guilabel:`Pricing` "
 "section, click :guilabel:`Add a price` to enter a new rental rate. Choose a "
@@ -24096,7 +24077,7 @@ msgstr ""
 "cột :guilabel:`Thời kỳ`, hoặc tạo khoảng thời gian định giá mới bằng cách "
 "nhập tên và nhấp vào :guilabel:`Tạo và chỉnh sửa`."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:80
+#: ../../content/applications/sales/rental/configure_products/products.rst:84
 msgid ""
 "Creating a new pricing period opens a pop-up *Create period* window. Fill in "
 "the :guilabel:`Name`, :guilabel:`Duration`, and :guilabel:`Unit`, and "
@@ -24111,7 +24092,7 @@ msgstr ""
 msgid "Sample of a New Period view in the Rental app."
 msgstr "Mẫu chế độ xem Thời kỳ mới trong ứng dụng Cho thuê."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:87
+#: ../../content/applications/sales/rental/configure_products/products.rst:91
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:122
 msgid ""
 "Next, enter the :guilabel:`Price` for that specific :guilabel:`Period`. To "
@@ -24123,7 +24104,7 @@ msgstr ""
 "Để áp dụng mức giá thuê đã cấu hình vào bảng giá hiện có, nhấp vào "
 "cột :guilabel:`Bảng giá` và chọn danh sách mong muốn từ menu thả xuống."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:91
+#: ../../content/applications/sales/rental/configure_products/products.rst:95
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:126
 msgid ""
 "In the :guilabel:`Reservations` section, fill in the :guilabel:`Hourly "
@@ -24138,7 +24119,7 @@ msgstr ""
 "hạn mặc định`, với điều kiện chúng đã được cấu hình "
 "trong :menuselection:`Ứng dụng Cho thuê --> Cấu hình --> Cài đặt`."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:96
+#: ../../content/applications/sales/rental/configure_products/products.rst:100
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:131
 msgid ""
 "Click the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon near the "
@@ -24147,7 +24128,7 @@ msgstr ""
 "Nhấp vào biểu tượng :icon:`fa-cloud-upload` :guilabel:`(Lưu thủ công)` gần "
 "phía trên để lưu."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:99
+#: ../../content/applications/sales/rental/configure_products/products.rst:103
 msgid ""
 "A bike rental business rents tandem bikes for two hours at the local park. "
 "The hourly rental rate for their tandem bikes is $20, but since tandem bikes "
@@ -24161,7 +24142,7 @@ msgstr ""
 "nghiệp nhận lại xe đạp đúng giờ, họ đặt phí trả muộn là $20 mỗi giờ và $160 "
 "mỗi ngày ($20 x 8 giờ)."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:104
+#: ../../content/applications/sales/rental/configure_products/products.rst:108
 msgid ""
 "Create a new pricing period by navigating to :menuselection:`Rental app --> "
 "Configuration --> Rental periods`. Click :guilabel:`New`, then configure the "
@@ -24171,7 +24152,7 @@ msgstr ""
 "đến :menuselection:`Ứng dụng Thuê --> Cấu hình --> Khoảng thời gian thuê`. "
 "Nhấp vào :guilabel:`Mới`, sau đó cấu hình khoảng thời gian cho `2` giờ."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:107
+#: ../../content/applications/sales/rental/configure_products/products.rst:111
 msgid ""
 "Navigate to the tandem bike product and in the :guilabel:`Rental prices` tab "
 "add the `2` hour period set at `$35`. Manually save to apply changes."
@@ -24184,60 +24165,53 @@ msgid "Sample of a rental product with the custom rental period applied."
 msgstr ""
 "Mẫu sản phẩm cho thuê với khoảng thời gian thuê tùy chỉnh được áp dụng."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:116
-msgid "Configure a physical rental product for product tracking"
-msgstr "Cấu hình sản phẩm cho thuê vật lý để theo dõi sản phẩm"
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:119
-msgid ""
-"To configure a physical rental product for product tracking, the "
-"**Inventory** app must be installed, and :doc:`Lots & Serial Numbers must be "
-"enabled <../../../inventory_and_mrp/inventory/product_management/"
-"product_tracking>`."
+#: ../../content/applications/sales/rental/configure_products/products.rst:120
+msgid "Configure product tracking"
 msgstr ""
-"Để cấu hình sản phẩm cho thuê vật lý để theo dõi sản phẩm, ứng dụng **Tồn "
-"kho** phải được cài đặt và :doc:`Lô & Số Serial phải được bật <../../../"
-"inventory_and_mrp/inventory/product_management/product_tracking>`."
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:123
 msgid ""
-"Go to the :menuselection:`Rental app --> Products`, then "
-"click :guilabel:`New`. In the new product window, the :guilabel:`Rental` "
-"checkbox is already ticked by default."
+"To configure a physical rental product for product tracking, the "
+"**Inventory** app must be installed, and :guilabel:`Lots & Serial Numbers` "
+"must be enabled."
 msgstr ""
-"Đi tới :menuselection:`Ứng dụng Thuê --> Sản phẩm`, sau đó nhấp "
-"vào :guilabel:`Mới`. Trong cửa sổ sản phẩm mới, hộp kiểm :guilabel:`Cho "
-"thuê` đã được đánh dấu theo mặc định."
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:126
 msgid ""
-"Select the :guilabel:`Product Type` as :guilabel:`Goods`. Tick "
-"the :guilabel:`Track Inventory` checkbox and select either :guilabel:`By "
-"Lots` or :guilabel:`By Unique Serial Number` from the drop-down menu."
+"For rental products, only :guilabel:`By Unique Serial Number` tracking can "
+"be used. Selecting :guilabel:`By Lots` instead results in an error message, "
+"since that setting doesn't apply to rentals."
 msgstr ""
-"Chọn :guilabel:`Loại Sản phẩm` là :guilabel:`Hàng hóa`. Đánh dấu vào hộp "
-"kiểm :guilabel:`Theo dõi Tồn kho` và chọn :guilabel:`Theo Lô` "
-"hoặc :guilabel:`Theo Số Serial Duy nhất` từ menu thả xuống."
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:130
 msgid ""
+"Go to the :menuselection:`Rental app --> Products`, then "
+"click :guilabel:`New`. In the new product window, the :guilabel:`Rental` "
+"checkbox is already selected by default."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:133
+msgid ""
+"Select the :guilabel:`Product Type` as :guilabel:`Goods`. Enable "
+"the :guilabel:`Track Inventory` checkbox and select :guilabel:`By Unique "
+"Serial Number` from the drop-down menu."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:136
+msgid ""
 "For the :guilabel:`Category` field, select :guilabel:`Goods` from the drop-"
 "down menu or create a new category by typing in the name and "
-"clicking :guilabel:`Create`. Configure rental rates on the :ref:`rental/"
-"products/rental-prices-tab`. Click the :icon:`fa-cloud-"
-"upload` :guilabel:`(Save manually)` icon near the top to save."
+"clicking :guilabel:`Create`. Configure rental rates on the :ref:`Rental "
+"prices <rental/products/rental-periods-prices-reservations>` tab. Click "
+"the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon near the top to "
+"save."
 msgstr ""
-"Đối với trường :guilabel:`Danh mục`, chọn :guilabel:`Hàng hóa` từ menu thả "
-"xuống hoặc tạo danh mục mới bằng cách nhập tên và nhấp vào :guilabel:`Tạo`. "
-"Cấu hình giá thuê trên :ref:`rental/products/rental-prices-tab`. Nhấp "
-"vào :icon:`fa-cloud-upload` :guilabel:`(Lưu thủ công)` ở gần đầu trang để "
-"lưu."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:138
+#: ../../content/applications/sales/rental/configure_products/products.rst:144
 msgid "Rental Transfers feature"
 msgstr "Tính năng Chuyển kho Cho thuê"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:140
+#: ../../content/applications/sales/rental/configure_products/products.rst:146
 msgid ""
 "The *Rental Transfers* feature automatically creates a delivery receipt when "
 "the rental product is picked up and a return receipt when it is returned to "
@@ -24248,15 +24222,15 @@ msgstr ""
 "thuê được lấy đi và phiếu trả hàng khi sản phẩm được trả lại kho. Việc ghi "
 "chép chuyển động hàng tồn kho tạo ra một hồ sơ rõ ràng và có nhiều công dụng:"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:144
+#: ../../content/applications/sales/rental/configure_products/products.rst:150
 msgid "Tracking high-value products."
 msgstr "Theo dõi sản phẩm có giá trị cao."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:145
+#: ../../content/applications/sales/rental/configure_products/products.rst:151
 msgid "Tracking stock levels across multiple stores or warehouse locations."
 msgstr "Theo dõi mức tồn kho trên nhiều cửa hàng hoặc địa điểm kho."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:146
+#: ../../content/applications/sales/rental/configure_products/products.rst:152
 msgid ""
 "Tracking products between different store locations that allow pick up and "
 "returns."
@@ -24264,21 +24238,18 @@ msgstr ""
 "Theo dõi sản phẩm giữa các địa điểm cửa hàng khác nhau cho phép lấy hàng và "
 "trả hàng."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:148
+#: ../../content/applications/sales/rental/configure_products/products.rst:154
 msgid ""
 "To enable the :guilabel:`Rental Transfers` feature, navigate to "
 "the :menuselection:`Rental app --> Configuration --> Settings` and in the "
-"*Rental* section, tick the :guilabel:`Rental Transfers` checkbox."
+"*Rental* section, enable the :guilabel:`Rental Transfers` checkbox."
 msgstr ""
-"Để bật tính năng :guilabel:`Chuyển kho Cho thuê`, điều hướng "
-"đến :menuselection:`Ứng dụng Thuê --> Cấu hình --> Cài đặt` và trong phần "
-"*Cho thuê*, đánh dấu vào hộp kiểm :guilabel:`Chuyển kho Cho thuê`."
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:None
 msgid "Sample of the Rental settings with the Rental Transfers enabled."
 msgstr "Mẫu cài đặt Rental với Rental Transfers được kích hoạt."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:156
+#: ../../content/applications/sales/rental/configure_products/products.rst:164
 msgid ""
 "The **Inventory** app automatically creates an internal default location "
 "once the *Rental Transfers* feature is enabled. Odoo uses the new default "
@@ -24294,29 +24265,18 @@ msgstr ""
 "khi cho thuê và quay lại khi trả). Không sửa đổi để tránh làm hỏng theo dõi "
 "tồn kho."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:165
+#: ../../content/applications/sales/rental/configure_products/products.rst:173
 msgid "Multi-location management and transfers"
 msgstr "Quản lý và chuyển giao đa địa điểm"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:168
+#: ../../content/applications/sales/rental/configure_products/products.rst:176
 msgid ""
-"The **Inventory** app must be installed to set up this configuration. The "
-"**Inventory** app automatically creates an internal default location once "
-"the *Rental Transfers* feature is enabled. Odoo uses the new default "
-"location, :guilabel:`Customer/Rental`, to track products during the rental "
-"period (moving them from :guilabel:`Stock` to :guilabel:`Customer/Rental` "
-"upon rental, and back upon return). Do **not** modify to avoid corrupting "
-"inventory tracking."
+"Refer to the :ref:`Rental Transfers note <rental/products/rental-transfers-"
+"note>` for information about internal location configuration and inventory "
+"tracking."
 msgstr ""
-"Ứng dụng **Tồn kho** phải được cài đặt để thiết lập cấu hình này. Ứng dụng "
-"**Tồn kho** tự động tạo một vị trí mặc định nội bộ khi tính năng *Chuyển kho "
-"cho thuê* được bật. Odoo sử dụng vị trí mặc định mới, :guilabel:`Khách hàng/"
-"Cho thuê`, để theo dõi sản phẩm trong thời gian cho thuê (chuyển chúng "
-"từ :guilabel:`Kho` sang :guilabel:`Khách hàng/Cho thuê` khi cho thuê và "
-"chuyển ngược lại khi trả). **Không** sửa đổi để tránh làm hỏng việc theo dõi "
-"tồn kho."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:174
+#: ../../content/applications/sales/rental/configure_products/products.rst:179
 msgid ""
 "Tracking the location of high-value physical products between locations is "
 "essential. The **Rental** app helps with the *Rental Transfers* feature. "
@@ -24330,31 +24290,21 @@ msgstr ""
 "thuê tương tự như bán hàng, yêu cầu phiếu nhận và đơn giao hàng mỗi khi một "
 "sản phẩm vật lý được cho thuê hoặc trả lại."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:179
+#: ../../content/applications/sales/rental/configure_products/products.rst:184
 msgid ""
 "For multi-location management and rental item transfer tracking, navigate to "
-"the :menuselection:`Rental app --> Configuration --> Settings` and in "
-"the :guilabel:`Rental` section, tick the :guilabel:`Rental Transfers` "
-"checkbox."
+"the :menuselection:`Rental app --> Configuration --> Settings` and in the "
+"*Rental* section, enable the :guilabel:`Rental Transfers` checkbox."
 msgstr ""
-"Để quản lý nhiều vị trí và theo dõi chuyển kho mặt hàng cho thuê, điều hướng "
-"đến :menuselection:`Ứng dụng Cho thuê --> Cấu hình --> Cài đặt` và trong "
-"phần :guilabel:`Cho thuê`, đánh dấu vào hộp kiểm :guilabel:`Chuyển kho cho "
-"thuê`."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:183
+#: ../../content/applications/sales/rental/configure_products/products.rst:188
 msgid ""
 "Next, go to the :menuselection:`Inventory app --> Configuration --> "
-"Settings` and in the :guilabel:`Warehouse` section, tick "
-"the :guilabel:`Storage Locations` checkbox. Click :guilabel:`Save` to apply "
-"the changes."
+"Settings` and in the *Warehouse* section, enable the :guilabel:`Storage "
+"Locations` checkbox. Click :guilabel:`Save` to apply the changes."
 msgstr ""
-"Tiếp theo, truy cập :menuselection:`Inventory app --> Configuration --> "
-"Settings` và trong phần :guilabel:`Warehouse`, đánh dấu vào hộp "
-"kiểm :guilabel:`Storage Locations`. Nhấp vào :guilabel:`Save` để áp dụng các "
-"thay đổi."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:187
+#: ../../content/applications/sales/rental/configure_products/products.rst:192
 msgid ""
 "To configure new locations, navigate to :menuselection:`Inventory app --> "
 "Configuration --> Locations`. Click :guilabel:`New` to configure a new "
@@ -24364,7 +24314,7 @@ msgstr ""
 "> Configuration --> Locations`. Nhấp vào :guilabel:`New` để cấu hình một địa "
 "điểm nội bộ mới."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:190
+#: ../../content/applications/sales/rental/configure_products/products.rst:195
 msgid ""
 "On the new location page, enter the :guilabel:`Location Name` and ensure "
 "the :guilabel:`Parent Location` field is set to :guilabel:`WH`. Click "
@@ -24376,7 +24326,7 @@ msgstr ""
 "biểu tượng :icon:`fa-cloud-upload` :guilabel:`Save manually` gần phía trên "
 "để lưu."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:195
+#: ../../content/applications/sales/rental/configure_products/products.rst:200
 msgid ""
 "A bike rental business has two store locations within the same city. Both "
 "locations allow for pick-up and drop-off of their bikes. The company wants "
@@ -24386,23 +24336,19 @@ msgstr ""
 "thành phố. Cả hai địa điểm đều cho phép nhận và trả xe đạp. Công ty muốn "
 "theo dõi chính xác xe đạp của mình tại mỗi địa điểm."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:199
+#: ../../content/applications/sales/rental/configure_products/products.rst:204
 msgid ""
 "Ensure the **Rental** and **Inventory** apps are configured by "
-"enabling :guilabel:`Rental Transfers` in the **Rental app** "
+"enabling :guilabel:`Rental Transfers` in the **Rental** app "
 "and :guilabel:`Storage Locations` in the **Inventory** app."
 msgstr ""
-"Đảm bảo các ứng dụng **Cho thuê** và **Tồn kho** được cấu hình bằng cách "
-"bật :guilabel:`Chuyển kho cho thuê` trong **ứng dụng Cho thuê** "
-"và :guilabel:`Vị trí kho` trong **ứng dụng Tồn kho**."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:202
+#: ../../content/applications/sales/rental/configure_products/products.rst:207
 msgid ""
 "Next, go to the :menuselection:`Inventory app > Configuration > Locations`. "
-"Create a new location for each storefront."
+"Create a new location Next, go to the :menuselection:`Inventory app --> "
+"Configuration --> Locations`. Create a new location for each storefront."
 msgstr ""
-"Tiếp theo, vào :menuselection:`ứng dụng Tồn kho > Cấu hình > Vị trí`. Tạo "
-"một vị trí mới cho mỗi cửa hàng."
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:0
 msgid ""
@@ -24412,12 +24358,12 @@ msgstr ""
 "Mẫu các vị trí tồn kho nội bộ đại diện cho các địa điểm cửa hàng cho thuê "
 "khác nhau."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:211
+#: ../../content/applications/sales/rental/configure_products/products.rst:217
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:150
 msgid "Pickup products"
 msgstr "Lấy sản phẩm"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:213
+#: ../../content/applications/sales/rental/configure_products/products.rst:219
 msgid ""
 "When a customer picks up products, navigate to the appropriate rental order, "
 "click :guilabel:`Pickup`. The **Rental** app displays a warehouse delivery "
@@ -24433,19 +24379,19 @@ msgstr ""
 msgid "Sample of a Pickup page in the Rental app."
 msgstr "Mẫu trang Nhận hàng trong ứng dụng Cho thuê."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:220
+#: ../../content/applications/sales/rental/configure_products/products.rst:226
 msgid ""
 "Doing so places a :guilabel:`Pickedup` status banner on the rental order."
 msgstr ""
 "Thực hiện như vậy sẽ đặt biểu ngữ trạng thái :guilabel:`Đã nhận` trên đơn "
 "hàng cho thuê."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:225
+#: ../../content/applications/sales/rental/configure_products/products.rst:231
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:170
 msgid "Return products"
 msgstr "Trả hàng"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:227
+#: ../../content/applications/sales/rental/configure_products/products.rst:233
 msgid ""
 "When a customer returns products, navigate to the desired rental order and "
 "click :guilabel:`Return`. The **Rental** app displays a warehouse receipt "
@@ -24455,7 +24401,7 @@ msgstr ""
 "nhấp :guilabel:`Trả`. Ứng dụng **Cho thuê** hiển thị biểu mẫu phiếu nhập kho "
 "liệt kê các sản phẩm cho thuê đã được lấy ra."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:230
+#: ../../content/applications/sales/rental/configure_products/products.rst:236
 msgid ""
 "Enter the same number of products the customer returned in "
 "the :guilabel:`Quantity` column. If any of the products have serial numbers, "
@@ -24469,7 +24415,7 @@ msgstr ""
 msgid "Sample of the Return page in the Rental app."
 msgstr "Mẫu trang Trả hàng trong ứng dụng Cho thuê."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:236
+#: ../../content/applications/sales/rental/configure_products/products.rst:242
 msgid ""
 "Click :guilabel:`Validate` to move the order to the :guilabel:`Done` stage. "
 "A :guilabel:`Returned` status banner appears on the rental order."
@@ -24478,11 +24424,11 @@ msgstr ""
 "tất`. Biểu ngữ trạng thái :guilabel:`Đã trả` xuất hiện trên đơn hàng cho "
 "thuê."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:242
+#: ../../content/applications/sales/rental/configure_products/products.rst:248
 msgid "Print pickup and return receipts"
 msgstr "In biên nhận lấy và trả hàng"
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:244
+#: ../../content/applications/sales/rental/configure_products/products.rst:250
 msgid ""
 "Pickup and return receipts can be printed for customers when they pick up "
 "and return rental products."
@@ -24490,7 +24436,7 @@ msgstr ""
 "Có thể in phiếu lấy hàng và trả hàng cho khách hàng khi họ lấy và trả sản "
 "phẩm cho thuê."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:247
+#: ../../content/applications/sales/rental/configure_products/products.rst:253
 msgid ""
 "To print pickup and/or return receipts, navigate to the appropriate rental "
 "order, click the :icon:`fa-cog` :guilabel:`(Actions)` icon to reveal a drop-"
@@ -24505,7 +24451,7 @@ msgid ""
 "The pickup and return receipt print option in the Odoo Rental application."
 msgstr "Tùy chọn in biên nhận lấy và trả hàng trong ứng dụng Odoo Rental."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:253
+#: ../../content/applications/sales/rental/configure_products/products.rst:259
 msgid ""
 "From this drop-down menu, hover over the :guilabel:`Print` option to reveal "
 "a sub-menu. Then select :guilabel:`Pickup and Return Receipt`."
@@ -24513,7 +24459,7 @@ msgstr ""
 "Từ menu thả xuống này, di chuột qua tùy chọn :guilabel:`In` để hiển thị menu "
 "phụ. Sau đó chọn :guilabel:`Biên nhận lấy và trả hàng`."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:256
+#: ../../content/applications/sales/rental/configure_products/products.rst:262
 msgid ""
 "Odoo generates and downloads a PDF detailing all information about the "
 "current status of the rented items."
@@ -24521,7 +24467,7 @@ msgstr ""
 "Odoo tạo và tải xuống tệp PDF chi tiết tất cả thông tin về trạng thái hiện "
 "tại của các mặt hàng được cho thuê."
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:261
+#: ../../content/applications/sales/rental/configure_products/products.rst:267
 msgid ""
 "`Tutorial: Your First Rental Product <https://youtu.be/CE-SahTUC9A?"
 "si=kWfYEOTd2nT_ASp9>`_"
@@ -43889,6 +43835,279 @@ msgstr ""
 #: ../../content/applications/sales/subscriptions/upselling.rst:80
 msgid ":doc:`../sales/products_prices/prices/discounts`"
 msgstr ":doc:`../sales/products_prices/prices/discounts`"
+
+#~ msgid ""
+#~ "Odoo works with the Ingenico Lane/, Desk/, and Move/ payment terminals as "
+#~ "they support the TLV communication protocol through TCP/IP."
+#~ msgstr ""
+#~ "Odoo hoạt động với các thiết bị đầu cuối thanh toán Ingenico Lane/, Desk/ "
+#~ "và Move/ vì chúng hỗ trợ giao thức truyền thông TLV thông qua TCP/IP."
+
+#~ msgid "Connect an IoT system"
+#~ msgstr "Kết nối hệ thống IoT"
+
+#~ msgid ""
+#~ "Connecting an Ingenico payment terminal to Odoo is a feature that "
+#~ "requires an IoT system. For more information on how to connect an IoT "
+#~ "system to your database, please refer to the :doc:`IoT documentation </"
+#~ "applications/general/iot>`."
+#~ msgstr ""
+#~ "Kết nối thiết bị đầu cuối thanh toán Ingenico với Odoo là một tính năng "
+#~ "yêu cầu hệ thống IoT. Để biết thêm thông tin về cách kết nối hệ thống IoT "
+#~ "với cơ sở dữ liệu của bạn, vui lòng tham khảo :doc:`tài liệu IoT </"
+#~ "applications/general/iot>`."
+
+#~ msgid "Configure the Lane/Desk/Move 5000 terminals for Ingenico BENELUX"
+#~ msgstr "Cấu hình thiết bị đầu cuối Lane/Desk/Move 5000 cho Ingenico BENELUX"
+
+#~ msgid ""
+#~ "Press the function button (:guilabel:`F` on Lane/5000, :guilabel:`⦿` on "
+#~ "Desk/5000 and Move/5000)."
+#~ msgstr ""
+#~ "Nhấn nút chức năng (:guilabel:`F` trên Lane/5000, :guilabel:`⦿` trên Desk/"
+#~ "5000 và Move/5000)."
+
+#~ msgid ""
+#~ "Go to :menuselection:`Kassa menu --> Settings Menu` and enter the "
+#~ "settings password (default: `2009`)."
+#~ msgstr ""
+#~ "Vào :menuselection:`Kassa menu --> Settings Menu` và nhập mật khẩu cài "
+#~ "đặt (mặc định: `2009`)."
+
+#~ msgid ""
+#~ "Select :guilabel:`Change Connection` and press :guilabel:`OK` on the next "
+#~ "screen."
+#~ msgstr ""
+#~ "Chọn :guilabel:`Change Connection` và nhấn :guilabel:`OK` ở màn hình tiếp "
+#~ "theo."
+
+#~ msgid "Select :guilabel:`TCP/IP` and :guilabel:`IP-address`."
+#~ msgstr "Chọn :guilabel:`TCP/IP` và :guilabel:`IP-address`."
+
+#~ msgid "On the next screen, enter the IP address of your IoT system."
+#~ msgstr "Ở màn hình tiếp theo, nhập địa chỉ IP của hệ thống IoT của bạn."
+
+#~ msgid ""
+#~ "Enter `9000` as port number and press :guilabel:`OK` on the next screen."
+#~ msgstr ""
+#~ "Nhập `9000` làm số cổng và nhấn :guilabel:`OK` ở màn hình tiếp theo."
+
+#~ msgid ""
+#~ "At this point, the terminal restarts and should be displayed on the IoT "
+#~ "system's form in Odoo."
+#~ msgstr ""
+#~ "Tại thời điểm này, thiết bị đầu cuối khởi động lại và sẽ được hiển thị "
+#~ "trên biểu mẫu của hệ thống IoT trong Odoo."
+
+#~ msgid ""
+#~ "Enable the payment terminal :ref:`in the application settings <pos/use/"
+#~ "settings>` and :doc:`create the related payment method <../../"
+#~ "payment_methods>`. Set the journal type as :guilabel:`Bank` and "
+#~ "select :guilabel:`Ingenico` in the :guilabel:`Use a Payment Terminal` "
+#~ "field. Then, select your terminal device in the :guilabel:`Payment "
+#~ "Terminal Device` field."
+#~ msgstr ""
+#~ "Bật thiết bị đầu cuối thanh toán :ref:`trong cài đặt ứng dụng <pos/use/"
+#~ "settings>` và :doc:`tạo phương thức thanh toán liên quan <../../"
+#~ "payment_methods>`. Đặt loại nhật ký là :guilabel:`Ngân hàng` và "
+#~ "chọn :guilabel:`Ingenico` trong trường :guilabel:`Sử dụng thiết bị đầu "
+#~ "cuối thanh toán`. Sau đó, chọn thiết bị đầu cuối của bạn trong "
+#~ "trường :guilabel:`Thiết bị đầu cuối thanh toán`."
+
+#~ msgid ""
+#~ "Once the payment method is created, you can select it in your POS "
+#~ "settings. To do so, go to the :ref:`POS' settings <pos/use/settings>`, "
+#~ "click :guilabel:`Edit`, and add the payment method under "
+#~ "the :guilabel:`Payments` section."
+#~ msgstr ""
+#~ "Sau khi phương thức thanh toán được tạo, bạn có thể chọn nó trong cài đặt "
+#~ "POS của mình. Để thực hiện, vào :ref:`cài đặt POS <pos/use/settings>`, "
+#~ "nhấp :guilabel:`Chỉnh sửa`, và thêm phương thức thanh toán trong "
+#~ "phần :guilabel:`Thanh toán`."
+
+#~ msgid ""
+#~ "Mercado Pago payment terminals do not require an :doc:`IoT Box </"
+#~ "applications/general/iot>` to operate."
+#~ msgstr ""
+#~ "Thiết bị đầu cuối thanh toán Mercado Pago không yêu cầu :doc:`IoT Box </"
+#~ "applications/general/iot>` để hoạt động."
+
+#~ msgid ""
+#~ "Once the Mercado Pago configuration is complete, log in to your Odoo "
+#~ "database to create a :ref:`payment method <pos/mercado-pago/payment-"
+#~ "method>` using the collected credentials."
+#~ msgstr ""
+#~ "Sau khi hoàn tất cấu hình Mercado Pago, đăng nhập vào cơ sở dữ liệu Odoo "
+#~ "của bạn để tạo :ref:`phương thức thanh toán <pos/mercado-pago/payment-"
+#~ "method>` bằng cách sử dụng thông tin xác thực đã thu thập."
+
+#~ msgid "Odoo does not support the :guilabel:`Standalone` operation mode."
+#~ msgstr "Odoo không hỗ trợ chế độ hoạt động :guilabel:`Standalone`."
+
+#~ msgid ""
+#~ "Navigate to :menuselection:`Rental app --> Configuration --> Settings`, "
+#~ "configure the :guilabel:`Default Delay Costs` in the *Rental* section for "
+#~ "late fees. Optionally, configure the :guilabel:`Default Padding Time` to "
+#~ "make rentals unavailable for booking. Refer to the :ref:`rental/products/"
+#~ "rental-transfer-feature` section to learn what it does and how to "
+#~ "configure it."
+#~ msgstr ""
+#~ "Điều hướng đến :menuselection:`Ứng dụng Thuê --> Cấu hình --> Cài đặt`, "
+#~ "cấu hình :guilabel:`Chi phí Trễ hạn Mặc định` trong phần *Thuê* cho phí "
+#~ "trả muộn. Tùy chọn, cấu hình :guilabel:`Thời gian Đệm Mặc định` để làm "
+#~ "cho các lần thuê không khả dụng cho đặt trước. Tham khảo "
+#~ "phần :ref:`rental/products/rental-transfer-feature` để tìm hiểu nó làm gì "
+#~ "và cách cấu hình nó."
+
+#~ msgid "Click **Save** to apply the changes."
+#~ msgstr "Nhấp vào **Lưu** để áp dụng các thay đổi."
+
+#~ msgid "General Information tab"
+#~ msgstr "Tab Thông tin Chung"
+
+#~ msgid ""
+#~ "In the new product window, the :guilabel:`Rental` checkbox is already "
+#~ "ticked by default. Select the :guilabel:`Product Type` "
+#~ "as :guilabel:`Goods`."
+#~ msgstr ""
+#~ "Trong cửa sổ sản phẩm mới, hộp kiểm :guilabel:`Thuê` đã được đánh dấu "
+#~ "theo mặc định. Chọn :guilabel:`Loại Sản phẩm` là :guilabel:`Hàng hóa`."
+
+#~ msgid ""
+#~ "Tick the :guilabel:`Track Inventory` checkbox and select :guilabel:`By "
+#~ "Quantity` from the drop-down menu. For the :guilabel:`Category` field, "
+#~ "select :guilabel:`Goods` from the drop-down menu or create a new category "
+#~ "by typing in the name and clicking :guilabel:`Create`."
+#~ msgstr ""
+#~ "Đánh dấu vào hộp kiểm :guilabel:`Theo dõi Tồn kho` và "
+#~ "chọn :guilabel:`Theo Số lượng` từ menu thả xuống. Đối với "
+#~ "trường :guilabel:`Danh mục`, chọn :guilabel:`Hàng hóa` từ menu thả xuống "
+#~ "hoặc tạo danh mục mới bằng cách nhập tên và nhấp vào :guilabel:`Tạo`."
+
+#~ msgid "Attributes & Variants tab"
+#~ msgstr "Tab Thuộc tính & Biến thể"
+
+#~ msgid ""
+#~ "Click :guilabel:`Add a line`, then select a default option from "
+#~ "the :guilabel:`Attribute` drop-down menu. To create a new one, enter the "
+#~ "name, then click :guilabel:`Create and edit…` to :ref:`configure the "
+#~ "attribute and its values <products/variants/attributes>`."
+#~ msgstr ""
+#~ "Nhấp vào :guilabel:`Thêm dòng`, sau đó chọn một tùy chọn mặc định từ menu "
+#~ "thả xuống :guilabel:`Thuộc tính`. Để tạo mới, nhập tên, sau đó nhấp "
+#~ "vào :guilabel:`Tạo và chỉnh sửa...` để :ref:`cấu hình thuộc tính và các "
+#~ "giá trị của nó <products/variants/attributes>`."
+
+#~ msgid "Rental prices tab"
+#~ msgstr "Tab Giá thuê"
+
+#~ msgid "Configure a physical rental product for product tracking"
+#~ msgstr "Cấu hình sản phẩm cho thuê vật lý để theo dõi sản phẩm"
+
+#~ msgid ""
+#~ "To configure a physical rental product for product tracking, the "
+#~ "**Inventory** app must be installed, and :doc:`Lots & Serial Numbers must "
+#~ "be enabled <../../../inventory_and_mrp/inventory/product_management/"
+#~ "product_tracking>`."
+#~ msgstr ""
+#~ "Để cấu hình sản phẩm cho thuê vật lý để theo dõi sản phẩm, ứng dụng **Tồn "
+#~ "kho** phải được cài đặt và :doc:`Lô & Số Serial phải được bật <../../../"
+#~ "inventory_and_mrp/inventory/product_management/product_tracking>`."
+
+#~ msgid ""
+#~ "Go to the :menuselection:`Rental app --> Products`, then "
+#~ "click :guilabel:`New`. In the new product window, the :guilabel:`Rental` "
+#~ "checkbox is already ticked by default."
+#~ msgstr ""
+#~ "Đi tới :menuselection:`Ứng dụng Thuê --> Sản phẩm`, sau đó nhấp "
+#~ "vào :guilabel:`Mới`. Trong cửa sổ sản phẩm mới, hộp kiểm :guilabel:`Cho "
+#~ "thuê` đã được đánh dấu theo mặc định."
+
+#~ msgid ""
+#~ "Select the :guilabel:`Product Type` as :guilabel:`Goods`. Tick "
+#~ "the :guilabel:`Track Inventory` checkbox and select either :guilabel:`By "
+#~ "Lots` or :guilabel:`By Unique Serial Number` from the drop-down menu."
+#~ msgstr ""
+#~ "Chọn :guilabel:`Loại Sản phẩm` là :guilabel:`Hàng hóa`. Đánh dấu vào hộp "
+#~ "kiểm :guilabel:`Theo dõi Tồn kho` và chọn :guilabel:`Theo Lô` "
+#~ "hoặc :guilabel:`Theo Số Serial Duy nhất` từ menu thả xuống."
+
+#~ msgid ""
+#~ "For the :guilabel:`Category` field, select :guilabel:`Goods` from the "
+#~ "drop-down menu or create a new category by typing in the name and "
+#~ "clicking :guilabel:`Create`. Configure rental rates on the :ref:`rental/"
+#~ "products/rental-prices-tab`. Click the :icon:`fa-cloud-"
+#~ "upload` :guilabel:`(Save manually)` icon near the top to save."
+#~ msgstr ""
+#~ "Đối với trường :guilabel:`Danh mục`, chọn :guilabel:`Hàng hóa` từ menu "
+#~ "thả xuống hoặc tạo danh mục mới bằng cách nhập tên và nhấp "
+#~ "vào :guilabel:`Tạo`. Cấu hình giá thuê trên :ref:`rental/products/rental-"
+#~ "prices-tab`. Nhấp vào :icon:`fa-cloud-upload` :guilabel:`(Lưu thủ công)` "
+#~ "ở gần đầu trang để lưu."
+
+#~ msgid ""
+#~ "To enable the :guilabel:`Rental Transfers` feature, navigate to "
+#~ "the :menuselection:`Rental app --> Configuration --> Settings` and in the "
+#~ "*Rental* section, tick the :guilabel:`Rental Transfers` checkbox."
+#~ msgstr ""
+#~ "Để bật tính năng :guilabel:`Chuyển kho Cho thuê`, điều hướng "
+#~ "đến :menuselection:`Ứng dụng Thuê --> Cấu hình --> Cài đặt` và trong phần "
+#~ "*Cho thuê*, đánh dấu vào hộp kiểm :guilabel:`Chuyển kho Cho thuê`."
+
+#~ msgid ""
+#~ "The **Inventory** app must be installed to set up this configuration. The "
+#~ "**Inventory** app automatically creates an internal default location once "
+#~ "the *Rental Transfers* feature is enabled. Odoo uses the new default "
+#~ "location, :guilabel:`Customer/Rental`, to track products during the "
+#~ "rental period (moving them from :guilabel:`Stock` to :guilabel:`Customer/"
+#~ "Rental` upon rental, and back upon return). Do **not** modify to avoid "
+#~ "corrupting inventory tracking."
+#~ msgstr ""
+#~ "Ứng dụng **Tồn kho** phải được cài đặt để thiết lập cấu hình này. Ứng "
+#~ "dụng **Tồn kho** tự động tạo một vị trí mặc định nội bộ khi tính năng "
+#~ "*Chuyển kho cho thuê* được bật. Odoo sử dụng vị trí mặc định "
+#~ "mới, :guilabel:`Khách hàng/Cho thuê`, để theo dõi sản phẩm trong thời "
+#~ "gian cho thuê (chuyển chúng từ :guilabel:`Kho` sang :guilabel:`Khách hàng/"
+#~ "Cho thuê` khi cho thuê và chuyển ngược lại khi trả). **Không** sửa đổi để "
+#~ "tránh làm hỏng việc theo dõi tồn kho."
+
+#~ msgid ""
+#~ "For multi-location management and rental item transfer tracking, navigate "
+#~ "to the :menuselection:`Rental app --> Configuration --> Settings` and in "
+#~ "the :guilabel:`Rental` section, tick the :guilabel:`Rental Transfers` "
+#~ "checkbox."
+#~ msgstr ""
+#~ "Để quản lý nhiều vị trí và theo dõi chuyển kho mặt hàng cho thuê, điều "
+#~ "hướng đến :menuselection:`Ứng dụng Cho thuê --> Cấu hình --> Cài đặt` và "
+#~ "trong phần :guilabel:`Cho thuê`, đánh dấu vào hộp kiểm :guilabel:`Chuyển "
+#~ "kho cho thuê`."
+
+#~ msgid ""
+#~ "Next, go to the :menuselection:`Inventory app --> Configuration --> "
+#~ "Settings` and in the :guilabel:`Warehouse` section, tick "
+#~ "the :guilabel:`Storage Locations` checkbox. Click :guilabel:`Save` to "
+#~ "apply the changes."
+#~ msgstr ""
+#~ "Tiếp theo, truy cập :menuselection:`Inventory app --> Configuration --> "
+#~ "Settings` và trong phần :guilabel:`Warehouse`, đánh dấu vào hộp "
+#~ "kiểm :guilabel:`Storage Locations`. Nhấp vào :guilabel:`Save` để áp dụng "
+#~ "các thay đổi."
+
+#~ msgid ""
+#~ "Ensure the **Rental** and **Inventory** apps are configured by "
+#~ "enabling :guilabel:`Rental Transfers` in the **Rental app** "
+#~ "and :guilabel:`Storage Locations` in the **Inventory** app."
+#~ msgstr ""
+#~ "Đảm bảo các ứng dụng **Cho thuê** và **Tồn kho** được cấu hình bằng cách "
+#~ "bật :guilabel:`Chuyển kho cho thuê` trong **ứng dụng Cho thuê** "
+#~ "và :guilabel:`Vị trí kho` trong **ứng dụng Tồn kho**."
+
+#~ msgid ""
+#~ "Next, go to the :menuselection:`Inventory app > Configuration > "
+#~ "Locations`. Create a new location for each storefront."
+#~ msgstr ""
+#~ "Tiếp theo, vào :menuselection:`ứng dụng Tồn kho > Cấu hình > Vị trí`. Tạo "
+#~ "một vị trí mới cho mỗi cửa hàng."
 
 #~ msgid ""
 #~ "Product variants can be managed via their individual product template, or "
