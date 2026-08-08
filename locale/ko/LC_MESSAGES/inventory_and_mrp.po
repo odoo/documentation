@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-31 17:31+0000\n"
+"POT-Creation-Date: 2026-08-07 17:32+0000\n"
 "PO-Revision-Date: 2026-07-06 15:16+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -207,6 +207,7 @@ msgstr "지정 수량이 표시되어 있는 바코드 현황판."
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:22
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:17
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/byproducts.rst:21
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:45
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:17
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:26
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:17
@@ -36716,6 +36717,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:49
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:70
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:38
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:318
 msgid "Filters"
 msgstr "필터"
 
@@ -48967,644 +48969,626 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:16
 msgid ""
-"In Odoo's *Manufacturing* app, the *master production schedule* (MPS) is "
-"used to manually plan manufacturing orders (MOs) and purchase orders (POs), "
-"based on forecasted quantities of products and components."
+"In Odoo **Manufacturing**, the Master Production Schedule (MPS) is used to "
+"plan long-term replenishment for products against a manually-adjustable "
+"demand forecast. While Make-to-Order (MTO) strategies or reordering rules "
+"are useful for immediately replenishing stock, products or components with "
+"long lead times or variable seasonal demands may require longer-term "
+"planning against an expected future demand to ensure continued availability "
+"of stock."
 msgstr ""
-"Odoo의 *제조 관리* 앱에서 *마스터 생산 일정*(MPS)은 제조지시서(MO) 및 구매발"
-"주서(PO)를 품목 및 구성품의 예상 수량에 따라 수동으로 계획할 때 사용합니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:20
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:22
 msgid ""
-"By considering the impact of confirmed |MOs| and |POs|, along with manually "
-"adjusted demand forecasts, the |MPS| can be used to manage long-term product "
-"replenishment. This ensures the continued availability of the necessary "
-"products and components."
+"With the |MPS|, users can plan replenishment for specific products over "
+"future time periods, generating suggested replenishment quantities based on "
+"forecasted demand and on user-specified stock targets."
 msgstr ""
-"수동으로 수요 예측을 조정함과 동시에, 확정된 |MO| 및 |PO| 의 영향을 고려하여 "
-"|MPS| 를 통해 장기적으로 품목 보충을 관리할 수 있습니다. 이를 통해 필요한 품"
-"목 및 구성품을 지속적으로 확보할 수 있게 됩니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:24
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:27
 msgid ""
-"Since the |MPS| allows for manual intervention, it is useful for "
-"replenishing products where the demand of existing sales orders (SOs) does "
-"**not** reflect probable future demand."
+"Adding a product to the |MPS| does **not** automatically create a purchase "
+"or manufacturing order for it. The |MPS| only suggests the amount of product "
+"to be replenished, requiring the user to actually create the replenishing |"
+"POs|/|MOs|."
 msgstr ""
-"|MPS| 는 수동 개입을 할 수 있으므로 폼목을 보충할 때 기존 판매주문서(SO)의 수"
-"요에 향후의 예상 수요가 **반영되지 않는** 경우에 유용합니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:28
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:31
+msgid ""
+"Because the |MPS| relies on manual replenishment, reordering rules should "
+"**not** be applied to products added to the |MPS|. Doing so creates "
+"inaccurate forecasts and unnecessary replenishment orders."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:36
 msgid ""
 "A retail store sells artificial *Christmas trees* during the holiday season. "
-"It is currently September, and the store has less than ten Christmas tree |"
-"MOs| confirmed for the month of December."
+"It is currently September and the store has fewer than ten Christmas tree |"
+"MOs| confirmed for the month of December. The procurement manager knows that "
+"the demand for Christmas trees peaks in December. As a result, they manually "
+"enter a greater demand in the |MPS| to properly replenish ahead of this "
+"future customer demand."
 msgstr ""
-"한 소매점에서 연말 시즌에 인조 *크리스마스 트리* 를 판매하고 있습니다. 9월 현"
-"재, 매장에서 12월 한 달에 대한 크리스마스 트리 |MO| 확정 건수는 10건 미만입니"
-"다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:32
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:47
 msgid ""
-"Despite the number of confirmed |MOs|, the procurement manager knows that "
-"the demand for Christmas trees in December is going to be much higher, once "
-"the holiday season starts. As a result, they manually enter a greater demand "
-"in the |MPS|, so they can properly replenish the product in time for the "
-"increase in customer demand."
+"To use the |MPS|, the feature must first be enabled. Navigate "
+"to :menuselection:`Manufacturing app --> Configuration --> Settings` and "
+"select the :guilabel:`Master Production Schedule` checkbox in "
+"the :guilabel:`Planning` section."
 msgstr ""
-"|MO| 숫자와 무관하게, 조달 관리자는 12월 연말 시즌이 시작되면 크리스마스 트리"
-"에 대한 수요가 훨씬 더 높아질 것이라는 것을 인지하고 있습니다. 따라서 고객 수"
-"요가 증가함에 따라 제품을 적절히 보충할 수 있도록 |MPS| 에 수요 수치를 늘려"
-"서 수동으로 입력합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:38
-msgid ""
-"It is essential to remember that the |MPS| is a **MANUAL** tool. Adding a "
-"product to the |MPS| does not cause it to be manufactured or purchased "
-"automatically. The |MPS| simply suggests the amount of the product that "
-"should be replenished, but requires user input to create the |MOs| or |POs| "
-"that are used to replenish it."
-msgstr ""
-"|MPS| 는 **수동** 으로 사용하는 도구라는 점을 기억해야 합니다. |MPS| 에 제품"
-"을 추가한다고 해도 자동으로 제조되거나 구매가 진행되지는 않습니다. |MPS| 는 "
-"보충해야 할 제품의 수량을 제안할 뿐이며, 보충하는 데 사용할 |MO| 또는 |PO| "
-"를 생성하려면 사용자가 입력을 해야 합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:43
-msgid ""
-"For this reason, it is recommended that the |MPS| **NOT** be used alongside "
-"reordering rules for the same product. Because reordering rules are an "
-"automated workflow, they conflict with the manual replenishment method of |"
-"MPS|. Using both, in unison, can lead to inaccurate forecasts and the "
-"creation of unnecessary replenishment orders."
-msgstr ""
-"이러한 이유로 |MPS| 는 동일한 품목을 재주문하는 규칙과는 함께 사용하지 않는 "
-"것이 좋습니다. 재주문 규칙은 자동화된 워크플로우이므로 |MPS| 의 수동 보충 방"
-"법과 충돌합니다. 두 가지 방법을 같이 사용하면 정확하게 예측을 할 수 없게 되"
-"어 불필요하게 보충 주문이 생성될 수 있습니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:49
-msgid "Enable and configure |MPS|"
-msgstr "|MPS| 활성화 및 환경설정"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:51
-msgid ""
-"To use the |MPS| feature, navigate to :menuselection:`Manufacturing app --> "
-"Configuration --> Settings`, and tick the :guilabel:`Master Production "
-"Schedule` checkbox in the :guilabel:`Planning` section. Finally, "
-"click :guilabel:`Save`."
+msgid "After enabling the feature, two new columns appear below:"
 msgstr ""
-"|MPS| 기능을 사용하려면 :menuselection:`제조 관리 앱 --> 환경설정 --> 설정` "
-"으로 이동한 후 :guilabel:`계획` 섹션에서 :guilabel:`마스터 생산 일정` 확인란"
-"에 표시합니다. 마지막으로 :guilabel:`저장` 을 클릭합니다."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:53
+msgid ""
+":guilabel:`Default Time Range`: Select the period of time over which the "
+"planning occurs, either on "
+"a :guilabel:`Yearly`, :guilabel:`Monthly`, :guilabel:`Weekly`, "
+"or :guilabel:`Daily` basis."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:55
 msgid ""
-"After enabling the :guilabel:`Master Production Schedule` feature, two new "
-"fields appear under it on the :guilabel:`Settings` page: :guilabel:`Time "
-"Range` and :guilabel:`Number of Columns`."
+":guilabel:`Number of Periods`: Specify the number of periods to display for "
+"each time range."
 msgstr ""
-":guilabel:`주요 생산 일정`\\ 기능을 활성화하면\\ :guilabel:`설정`\\ 페이지의 "
-"해당 기능 아래에 두 개의 새 필드가 나타납니다: :guilabel:`기간 범위`\\ 및"
-"\\ :guilabel:`열 수`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:58
 msgid ""
-"The :guilabel:`Time Range` field is used to select the period of time over "
-"which planning takes place, and offers three "
-"options: :guilabel:`Monthly`, :guilabel:`Weekly`, and :guilabel:`Daily`. For "
-"example, if :guilabel:`Monthly` is selected, the |MPS| plans the production "
-"requirements of products and components on a monthly basis."
+"If the :guilabel:`Default Time Range` field is set to :guilabel:`Monthly`, "
+"and the :guilabel:`Number of Periods` field is set to `12`, the |MPS| shows "
+"one column for each of the next 12 months, starting with the current month."
 msgstr ""
-":guilabel:`시간 범위` 는 계획을 수행하는 기간을 선택하는 항목이며, 세 가"
-"지 :guilabel:`월별`, :guilabel:`주별`, :guilabel:`매일` 중에서 선택할 수 있습"
-"니다. 예를 들어, :guilabel:`월별` 을 선택한 경우 |MPS| 는 제품 및 구성품의 생"
-"산 요구 사항을 월별로 계획하게 됩니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:63
-msgid ""
-"The :guilabel:`Number of Columns` field is used to specify the quantity of "
-"the selected :guilabel:`Time Range` units shown on the |MPS| page. For "
-"example, if the :guilabel:`Time Range` field is set to :guilabel:`Monthly`, "
-"and `12` is entered in the :guilabel:`Number of Columns` field, the |MPS| "
-"shows one column for the next 12 months, starting with the current month."
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:62
+msgid "Finally, click :guilabel:`Save` to load the changes."
 msgstr ""
-":guilabel:`열 수` 필드는 |MPS| 페이지에 표시되어 있는 선택된 :guilabel:`시간 "
-"범위` 단위의 수량을 지정하는 데 사용됩니다. 예를 들어, :guilabel:`시간 범위` "
-"필드를 :guilabel:`월별` 로 설정하고 :guilabel:`열 수` 필드에 `12`를 입력하면 "
-"|MPS| 는 현재 월부터 시작하여 다음 12개월 동안을 하나의 열에 표시합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:68
-msgid ""
-"If the values of the :guilabel:`Time Range` or :guilabel:`Number of Columns` "
-"fields are altered, click :guilabel:`Save` again to save the changes."
-msgstr ""
-":guilabel:`기간 범위`\\ 또는\\ :guilabel:`열 수`\\ 필드의 값이 변경된 경우 변"
-"경 사항을 저장하려면\\ :guilabel:`저장`\\ 을 다시 클릭합니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:None
 msgid "The MPS setting in the Manufacturing app's settings."
 msgstr "제조 관리 앱 설정 메뉴에 있는 MPS 설정입니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:75
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:70
 msgid "|MPS| dashboard"
 msgstr "|MPS| 현황판"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:77
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:72
 msgid ""
 "To open the |MPS|, navigate to :menuselection:`Manufacturing app --> "
-"Planning --> Master Production Schedule`. The |MPS| view appears as follows:"
+"Planning --> Master Production Schedule`. The |MPS| is arranged as a grid "
+"with the time periods represented as columns and each product :ref:`added to "
+"the MPS <manufacturing/mps/add-product>` as an individual grouping of rows."
 msgstr ""
-"|MPS|\\ 을 열려면\\ :menuselection:`제조 관리 앱 --> 일정 관리 --> 주요 생산 "
-"일정`\\ 으로 이동합니다. |MPS|\\ 보기는 다음과 같이 나타납니다:"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:76
+msgid "By default, the group of rows for each product includes the following:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:78
+msgid ""
+":guilabel:`[Product] by [Unit] - [Company]`: The header row with the name of "
+"the product, its unit of measure, and its company (if applicable). By "
+"default, cells in this row display the product's starting stock quantity at "
+"the beginning of each time period. Clicking the :guilabel:`[Product]` link "
+"opens the product's forecasted report."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:82
+msgid ""
+":guilabel:`- Forecasted Demand`: The user's estimated demand for the product "
+"during each time period. Cells in this row can be entered manually."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:84
+msgid ""
+":guilabel:`- Indirect Demand Forecast`: The forecasted demand for the "
+"component from existing |MOs|. This row **only** appears if the product is a "
+"component of another product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:86
+msgid ""
+":guilabel:`+ Replenishment`: The user-specified quantity of the product to "
+"be replenished through |MOs| or |POs|. Values in these cells are "
+"automatically suggested based on the *Safety Stock Targets* and "
+"replenishment minimums/maximums specified in the product's :ref:`schedule "
+"configurations <manufacturing/mps/add-product>`. However, users can also "
+"manually adjust these values. Clicking the :guilabel:`Order` button "
+"manually :ref:`replenishes <manufacturing/mps/replenish>` the product based "
+"on the quantity suggested or entered."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:92
+msgid ""
+":guilabel:`= Forecasted Stock`: The forecasted quantity of the product stock "
+"at the end of each time period, assuming that suggested replenishment "
+"numbers are fulfilled."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:95
+msgid ""
+":ref:`Additional rows and filters <manufacturing/mps/additional-rows-"
+"filters>` can be selected in their respective sections of "
+"the :guilabel:`Search...` bar drop-down menu at the top."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:99
+msgid ""
+"While the |MPS| can be used with only the default categories, it may be "
+"useful to enable the :guilabel:`Actual Demand` category in "
+"the :guilabel:`Search...` bar."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:102
+msgid ""
+"With the :guilabel:`Actual Demand` option enabled, the :guilabel:`- "
+"Forecasted Demand` category changes to the :guilabel:`- Actual / Forecasted "
+"Demand` category, displaying both the confirmed demand for the product based "
+"on confirmed |SOs| and the forecasted demand."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:None
 msgid "The Master Production Schedule in the Manufacturing app."
 msgstr "제조 관리 앱의 마스터 생산 일정입니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:83
-msgid ""
-"The grey column on the left side of the screen shows a section for every "
-"product added to the |MPS|, with each product section being broken down into "
-"smaller rows. The information shown in the rows depends on the filters "
-"selected in the :guilabel:`Search...` bar drop-down menu at the top of the "
-"page. The default categories that appear in the rows are:"
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:110
+msgid "Relationship between rows"
 msgstr ""
-"화면 왼쪽의 회색 열에는 |MPS| 에 추가된 모든 제품에 대한 섹션을 표시되어 있으"
-"며, 각 제품 섹션은 더욱 세부적인 행으로 나뉩니다. 행에 표시되는 정보는 페이"
-"지 상단의 :guilabel:`검색...` 표시줄 드롭다운 메뉴에서 선택한 필터에 따라 달"
-"라집니다. 행에 표시되는 기본 카테고리는 다음과 같습니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:88
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:112
 msgid ""
-":guilabel:`[Product] by [unit]` :icon:`fa-area-chart`: the forecasted stock "
-"quantity at the beginning of each time period. :guilabel:`[Product]` "
-"and :icon:`fa-area-chart` are selectable buttons which open the product's "
-"page, or the forecast report for the product, respectively."
+"Together, the starting stock, :guilabel:`- Forecasted Demand`, :guilabel:`- "
+"Indirect Demand Forecast` (if applicable), :guilabel:`+ Replenishment`, "
+"and :guilabel:`= Forecasted Stock` values define the following relation:"
 msgstr ""
-":guilabel:`[단위]당 [품목] ` :icon:`fa-area-chart`: 기간별 기초 예상 재고 수"
-"량입니다. :guilabel:`[품목]` 및 :icon:`fa-area-chart` 는 각 해당 품목 페이지 "
-"또는 품목에 대한 예상 보고서를 열도록 선택할 수 있는 버튼입니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:91
-msgid ""
-":guilabel:`- Forecasted Demand`: the demand forecast, which is entered "
-"manually. This represents an estimate of the demand for the product during "
-"each time period."
-msgstr ""
-":guilabel:`예상 수요`: 수동으로 입력되는 수요 예측입니다. 각 기간 동안 제품"
-"에 대한 수요 추정치를 나타냅니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:93
-msgid ""
-":guilabel:`- Indirect Demand Forecast`: while this is a default category, it "
-"**only** appears for products that are components of other products. It "
-"represents the demand for the component from existing MOs."
-msgstr ""
-":guilabel:`- 간접 수요 예측`: 기본 카테고리지만, 제품이 다른 제품에 대한 구성"
-"품인 경우에 **한해서만** 표시됩니다. 기존 MO에 있는 구성품에 대한 수요를 나타"
-"냅니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:96
-msgid ""
-":guilabel:`+ Suggested Replenishment`: the quantity of the product that is "
-"suggested to be replenished through |MOs| or |POs|. To the right of the "
-"category title is a :guilabel:`Replenish` button, which is used to manually "
-"replenish the product, based on the quantity suggested to be replenished."
-msgstr ""
-":guilabel:`+ 보충 제안`: |MO| 또는 |PO| 를 통해 보충하도록 제안되는 제품 수량"
-"입니다. 카테고리 제목 오른쪽에는 :guilabel:`보충` 버튼이 있으며, 이 버튼으로 "
-"보충 제안 수량에 따라 제품을 수동으로 보충할 수 있습니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:0
-msgid "The Replenish button on the \"+ Suggested Replenishment\" row."
-msgstr "\"=+ 보충 제안\" 행에 있는 보충 버튼입니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:104
-msgid "The \"Replenish\" button on the \"+ Suggested Replenishment\" row."
-msgstr "\"=+ 보충 제안\" 행에 있는 \"보충\" 버튼입니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:106
-msgid ""
-":guilabel:`= Forecasted Stock`: the quantity of the product forecasted to be "
-"in stock at the end of each time period, assuming that suggested "
-"replenishment numbers are fulfilled."
-msgstr ""
-":guilabel:`= 예상 재고`: 각 기간 말에 남아있을 예상 재고 수량이며, 제안된 수"
-"량대로 보충된다는 가정 하의 수량입니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:109
-msgid "Altogether, these default categories form an equation:"
-msgstr "이러한 모든 기본 카테고리를 합쳐서 수식을 형성합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:111
-msgid ""
-"\\text{Forecasted Demand} + \\text{Suggested Replenishment} = "
-"\\text{Forecasted Stock}\n"
-"\n"
-msgstr ""
-"\\text{예상 수요} + \\text{보충 제안} = \\text{예상 재고}\n"
-"\n"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:114
-msgid ""
-"In the case of components, the :guilabel:`Indirect Demand Forecast` is taken "
-"into account as well."
-msgstr "구성품의 경우 :guilabel:`간접 수요 예측` 역시 고려할 사항이 됩니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:116
 msgid ""
-"The :guilabel:`- Forecasted Demand` and :guilabel:`+ Suggested "
-"Replenishment` fields can be edited for any of the time periods to the right "
-"of the product column. Doing so changes the equation, and updates the value "
-"displayed in the :guilabel:`Forecasted Stock` field."
+"\\begin{align}\n"
+"\\text{Forecasted Stock} &= \\text{Starting Stock} \\\\\n"
+"&- \\text{Forecasted Demand} \\\\\n"
+"&- \\text{Indirect Demand Forecast} \\\\\n"
+"&+ \\text{Replenishment}\n"
+"\\end{align}"
 msgstr ""
-"제품 열 오른쪽에 있는 기간 전체에 대해서 :guilabel:`- 예측 수요` "
-"및 :guilabel:`+ 보충 제안` 항목을 편집할 수 있습니다. 편집할 경우 수식이 변경"
-"되고 :guilabel:`예측 재고` 에 표시되는 값이 업데이트됩니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:120
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:125
 msgid ""
-"Changing the value in the :guilabel:`+ Suggested Replenishment` field also "
-"makes an :icon:`fa-times` :guilabel:`(reset)` button appear to the left of "
-"the field. Click the :icon:`fa-times` :guilabel:`(reset)` button next to the "
-"field to reset its value back to the one calculated by the |MPS|."
+"The :guilabel:`- Forecasted Demand` and :guilabel:`+ Replenishment` cells "
+"can be manually adjusted for any of the time periods. Doing so updates the "
+"value displayed in the :guilabel:`= Forecasted Stock` cells according to the "
+"equation. Correspondingly, the starting stock quantity of each subsequent "
+"time period is updated with the previous period's :guilabel:`= Forecasted "
+"Stock`."
 msgstr ""
-":guilabel:`+ 보충 제안` 에서 값을 변경하면 왼쪽에 :icon:`fa-"
-"times` :guilabel:`(초기화)` 버튼이 나타납니다. 옆에 있는 :icon:`fa-"
-"times` :guilabel:`(초기화)` 버튼을 클릭하면 해당 값이 |MPS|에서 계산한 값으"
-"로 초기화됩니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:126
-msgid ""
-"While the |MPS| can be used with only the default categories enabled, it is "
-"advisable to also enable the :guilabel:`Actual Demand` category. This is "
-"done by clicking the :icon:`fa-caret-down` :guilabel:`(down arrow)` on the "
-"right side of the :guilabel:`Search...` bar, and enabling "
-"the :guilabel:`Actual Demand` option under the :guilabel:`Rows` header."
-msgstr ""
-"|MPS| 는 기본 카테고리만 활성화된 상태에서 사용할 수 있지만, :guilabel:`실제 "
-"수요` 카테고리도 활성화하는 것이 좋습니다. 적용하려면 :guilabel:`검색...` 표"
-"시줄 오른쪽에 있는 :icon:`fa-caret-down` :guilabel:`(아래쪽 화살표)`를 클릭하"
-"고 :guilabel:`행` 헤더 아래에 있는 :guilabel:`실제 수요` 를 활성화하면 됩니"
-"다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:131
 msgid ""
-"With the :guilabel:`Actual Demand` option enabled, the :guilabel:`- "
-"Forecasted Demand` category changes to the :guilabel:`- Actual / Forecasted "
-"Demand` category. In addition to the manually entered forecasted demand, "
-"this category also displays the confirmed demand for the product, which is "
-"based on confirmed |SOs|."
+"Changing the value in the :guilabel:`+ Replenishment` cell highlights the "
+"value and displays an :icon:`fa-times` :guilabel:`(reset)` button next to "
+"the cell to reset it back to the default value calculated by the |MPS|."
 msgstr ""
-":guilabel:`실제 수요` 옵션을 활성화하면 :guilabel:`- 예측 수요` 카테고리"
-"가 :guilabel:`- 실제/예측 수요` 카테고리로 변경됩니다. 이 카테고리에는 수동으"
-"로 입력한 예측 수요 외에도 제품에 대한 확정 수요를 표시하며, 이는 확인 완료"
-"된 |SO|를 기준으로 합니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:136
-msgid ""
-"Each column to the right of the products column lists one unit of the time "
-"period selected in the *Time Range* field on the *Manufacturing* app "
-"*Settings* page (ex. months). The number of time period columns corresponds "
-"to the value entered in the *Number of Columns* field."
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:138
+msgid "Adding products to |MPS|"
 msgstr ""
-"제품 열의 오른쪽에 있는 각 열에는 *제조 관리* 앱의 *설정* 페이지에 있는 *기"
-"간 범위* 필드에서 선택한 기간의 단위가 표시됩니다 (예: 월). 기간 열의 개수는 "
-"*열 수* 필드에 입력된 값과 같습니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:140
-msgid ""
-"The first time period column represents the current time period. For "
-"example, if the |MPS| is configured to use months, the first column displays "
-"data for the current month. On this first column, the :guilabel:`+ Suggested "
-"Replenishment` field appears in one of five colors:"
-msgstr ""
-"첫 번째 기간 열에는 현재 기간이 표시되어 있습니다. 예를 들어 |MPS| 에서 월을 "
-"사용하도록 설정한 경우 첫 번째 열에는 현재 월의 데이터가 나타납니다. 첫 번째 "
-"열에는 :guilabel:`+ 보충 제안` 필드가 5가지 색상 중 하나로 표시됩니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:144
-msgid ""
-":guilabel:`Green`: a replenishment order must be generated to keep stock at "
-"the :guilabel:`Safety Stock Target`, based on the configured :doc:`lead "
-"times <../../inventory/warehouses_storage/replenishment/lead_times>`."
-msgstr ""
-"\\ :guilabel:`녹색`\\ : 구성된\\ :doc:`리드 타임 <../../inventory/"
-"warehouses_storage/replenishment/lead_times>`\\ 을 기반으로 재고를"
-"\\ :guilabel:`안전 재고 목표`\\ 로 유지하기 위해 보충 주문을 생성해야 합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:147
-msgid ""
-":guilabel:`Gray`: a replenishment order has already been generated to keep "
-"stock at the :guilabel:`Safety Stock Target`."
-msgstr ""
-":guilabel:`회색`: 보충 주문이 이미 생성되었습니다. 재고를 :guilabel:`안전 재"
-"고 목표` 로 유지할 수 있습니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:149
-msgid ""
-":guilabel:`Yellow`: a replenishment order has already been generated, but "
-"the quantity it was created for is not enough to keep stock at "
-"the :guilabel:`Safety Stock Target`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:151
-msgid ""
-":guilabel:`Red`: a replenishment order has already been generated, but the "
-"quantity it was created for puts the amount of stock above "
-"the :guilabel:`Safety Stock Target`."
-msgstr ""
-":guilabel:`빨간색`: 보충 주문이 이미 생성되었지만 생성된 수량으로 인해 재고량"
-"이\\ :guilabel:`안전 재고 목표`\\ 를 초과합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:154
-msgid ""
-"The :guilabel:`+ Suggested Replenishment` field appears white, if no "
-"replenishment order has been generated, and it is not necessary to generate "
-"one at the current moment."
-msgstr ""
-":guilabel:`+ 제안된 보충`\\ 필드는 보충 주문이 생성되지 않았고 현재 시점에 생"
-"성할 필요가 없는 경우 흰색으로 나타납니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:158
-msgid "Add a product"
-msgstr "품목 추가"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:160
 msgid ""
 "To use |MPS| to manage the replenishment of a product, navigate "
 "to :menuselection:`Manufacturing app --> Planning --> Master Production "
 "Schedule`. At the top of the |MPS| page, click :guilabel:`Add a Product` to "
-"open the :guilabel:`Add a Product` pop-up window."
+"open the *Add a Product* pop-up window."
 msgstr ""
-"|MPS| 를 통해 제품에 대한 보충 관리를 하려면 :menuselection:`제조 앱 --> 계"
-"획 --> 마스터 생산 일정` 으로 이동합니다. |MPS| 페이지의 맨 위에"
-"서 :guilabel:`제품 추가` 를 클릭하여 :guilabel:`제품 추가` 팝업 창을 엽니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:165
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:145
 msgid ""
 "Products **must** be properly configured to be replenished through the |MPS|."
 msgstr ""
 "품목이 **반드시** 알맞게 설정되어야 |MPS| 를 통해 보충을 할 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:167
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:147
 msgid ""
-"In the case of manufactured products, the *Manufacture* route must be "
-"selected in the *Routes* section of the *Inventory* tab, on the product's "
-"form."
+"For manufactured products, the *Manufacture* route must be selected in the "
+"*Routes* section of the *Inventory* tab on the product's form."
 msgstr ""
-"제조된 제품의 경우 제품 양식의\\ *재고 관리*\\ 탭에 있는\\ *경로*\\ 섹션에서"
-"\\ *제조*\\ 경로를 선택해야 합니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:170
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:150
 msgid ""
-"In the case of products that are purchased, the *Buy* route must be selected "
-"in the *Routes* section of the *Inventory* tab, on the product's form. "
-"Additionally, a vendor and the price they sell the product for must also be "
-"specified on the *Purchase* tab."
+"For purchased products, the *Buy* route must be selected in the *Routes* "
+"section of the *Inventory* tab on the product's form. Additionally, "
+"a :ref:`vendor pricelist <purchase/manage_deals/vendor-pricelist>` must be "
+"configured on the *Purchase* tab."
 msgstr ""
-"품목 매입의 경우, 품목 양식의 *재고* 탭의 *경로* 섹션에서 *매입* 경로를 선택"
-"해야 합니다. 또한 *매입* 탭에서 공급업체와 품목 판매 가격도 지정해야 합니다."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:155
+msgid "Enter product details"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:157
+msgid ""
+"On the pop-up window, select the product to add in the :guilabel:`Product` "
+"drop-down menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:159
+msgid "Then, specify the following information about the product:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:161
+msgid ""
+":guilabel:`Indirect Demand`: Select this optional checkbox if the product "
+"can be hidden when the :guilabel:`To Forecast` filter is selected in "
+"the :guilabel:`Search...` bar drop-down menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:163
+msgid ""
+":guilabel:`Bill of Materials`: Select the product's |BoM| if the product is "
+"manufactured."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:164
+msgid ""
+":guilabel:`Route`: Select the replenishment route for the product (e.g., "
+"`Buy` for purchased products, `Manufacture` for manufactured products)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:166
+msgid ""
+":guilabel:`Vendor`: Select the vendor for the product. This field **only** "
+"appears if the :guilabel:`Buy` option was selected in the :guilabel:`Route` "
+"field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:168
+msgid ""
+":guilabel:`Batch Size`: Split |MOs| into orders of this quantity. This field "
+"**only** appears if the :guilabel:`Manufacture` option was selected in "
+"the :guilabel:`Route` field. Toggle the :guilabel:`No Batch Size` checkbox "
+"to enter a batch size, or leave it un-toggled if no batch size should be "
+"specified."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:174
 msgid ""
-"On the pop-up window, select the product to add in the :guilabel:`Product` "
-"drop-down menu. If the product is replenished through manufacturing, select "
-"the product's |BoM| in the :guilabel:`Bill of Materials` field."
+"Selecting a BoM when adding a product also adds any components listed on the "
+"BoM to the |MPS|. If it is not necessary to manage the replenishment of "
+"components through the |MPS|, leave the :guilabel:`Bill of Materials` field "
+"blank."
 msgstr ""
-"팝업 창에서 :guilabel:`품목` 드롭다운 메뉴를 통해 추가할 제품을 선택합니다. "
-"제조를 통해 제품이 보충되는 경우 :guilabel:`자재명세서` 항목에서 제품의 |"
-"BoM| 을 선택합니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:179
-msgid ""
-"Selecting a BoM when adding a product to the |MPS| also adds any components "
-"listed on the BoM. If it is not necessary to manage the replenishment of "
-"components through the |MPS|, simply leave the :guilabel:`Bill of Materials` "
-"field blank."
-msgstr ""
-"|MPS| 에 제품을 추가할 때 BoM를 선택하면 BoM에 기재된 모든 구성품도 추가됩니"
-"다. |MPS| 를 통해 구성품의 보충을 관리할 필요가 없는 경우에는 :guilabel:`자재"
-"명세서` 항목을 입력하지 않은 채로 비워두면 됩니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:183
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:178
 msgid ""
 "If the database is configured with multiple warehouses, "
 "a :guilabel:`Production Warehouse` field appears on the :guilabel:`Add a "
-"Product` pop-up window. Use this field to specify which warehouse the "
-"product is replenished to."
+"Product` pop-up window to specify which warehouse the product is replenished "
+"to."
 msgstr ""
-"데이터베이스가 다중 창고로 설정되어 있는 경우 :guilabel:`프로덕션 창고` "
-"가 :guilabel:`품목 추가` 팝업 창에 나타납니다. 이 항목을 통해 품목을 보충할 "
-"창고를 지정합니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:187
-msgid ""
-"In the :guilabel:`Safety Stock Target` field, specify the minimum quantity "
-"of the product that should be kept available for orders at all times. For "
-"example, if there should always be 20 units of the product available for "
-"order fulfillment, enter `20` in the :guilabel:`Safety Stock Target` field."
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:183
+msgid "Enter product replenishment options"
 msgstr ""
-":guilabel:`안전 재고 목표` 에는, 언제든 주문서에 사용할 수 있도록 유지해야 하"
-"는 최소 제품 수량을 지정합니다. 예를 들어, 주문을 처리하려면 항상 20개의 제품"
-"이 사용할 수 있도록 준비해야 할 경우에는:guilabel:`안전 재고 목표` 필드에 "
-"`20`을 입력합니다."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:185
+msgid ""
+"Next, specify the product's replenishment options to configure how the |MPS| "
+"calculates suggested replenishment quantities for each product. Enter the "
+"following information:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:188
+msgid ""
+":guilabel:`Safety Stock Target`: Specify the minimum quantity of the product "
+"to be available across all time periods."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:190
+msgid ""
+":guilabel:`Minimum to Replenish`: Specify the minimum quantity of the "
+"product to replenish for each period."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:192
 msgid ""
-"In the :guilabel:`Minimum to Replenish` field, enter the minimum product "
-"quantity for orders created to replenish the product. For example, if `5` is "
-"entered in this field, replenishment orders for the product include a "
-"minimum of five units."
+":guilabel:`Maximum to Replenish`: Specify the maximum quantity of the "
+"product to replenish for each period. If the demand is higher than this "
+"maximum, the remaining quantity is automatically transferred to the next "
+"period. Toggle the :guilabel:`No Maximum` checkbox to enter a maximum value, "
+"or leave it un-toggled if no maximum should be specified."
 msgstr ""
-":guilabel:`최소 보충량` 에 제품을 보충하기 위해 생성된 주문서의 최소 제품 수"
-"량을 입력합니다. 예를 들어, 여기에 `5` 를 입력하면 제품에 대한 보충 주문서에"
-"는 최소 5개 단위가 기재됩니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:196
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:197
 msgid ""
-"In the :guilabel:`Maximum to Replenish` field, enter the maximum product "
-"quantity for orders created to replenish the product. For example, if `100` "
-"is entered in this field, replenishment orders for the product include a "
-"maximum of 100 units."
+"If no minimum or maximum replenishment limits are set, the |MPS| suggests "
+"the replenishment quantity needed to reach the :guilabel:`Safety Stock "
+"Target` while accounting for the starting stock and forecasted demand. In "
+"other words, the suggested quantity in the replenishment row is calculated "
+"by the following relation:"
 msgstr ""
-":guilabel:`최대 보충량` 에는 제품을 보충하기 위해 생성된 주문에 대한 최대 제"
-"품 수량을 입력합니다. 예를 들어, 이 필드에 `100` 을 입력하면 제품에 대한 보"
-"충 주문에는 최대 100개의 단위가 포함됩니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:200
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:202
 msgid ""
-"Finally, click :guilabel:`Save` to add the product to the |MPS|. The product "
-"now appears on the |MPS| page each time it is opened. If a |BoM| was "
-"selected in the :guilabel:`Bill of Materials` field of the :guilabel:`Add a "
-"Product` pop-up window, any components listed on the |BoM| appear on the "
-"page, as well."
+"\\begin{align}\n"
+"\\text{Replenishment} &= \\text{Safety Stock Target} \\\\\n"
+"&- \\text{Starting Stock} \\\\\n"
+"&- \\text{Forecasted Demand} \\\\\n"
+"&- \\text{Indirect Demand Forecast}\n"
+"\\end{align}"
 msgstr ""
-"마지막으로 :guilabel:`저장` 을 클릭하여 제품을 |MPS| 에 추가합니다. 이제 제품"
-"을 열 때마다 |MPS| 페이지에 제품이 나타나게 됩니다. :guilabel:`제품 추가` 팝"
-"업창의 :guilabel:`자재명세서` 필드에서 |BoM| 을 선택한 경우 |BoM| 에 표시된 "
-"모든 구성품 역시 페이지에 표시됩니다."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:211
+msgid ""
+"If minimum or maximum limits are set, the suggested replenishment quantity "
+"is always bounded by these limits, regardless of the needed quantity to "
+"reach the :guilabel:`Safety Stock Target`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:215
+msgid "Specify replenishment trigger"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:217
+msgid ""
+"Finally, in the :guilabel:`Replenishment Trigger` field, specify how the "
+"product should be replenished:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:220
+msgid ":guilabel:`Manual`: Manually replenish the product from the |MPS|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:221
+msgid ""
+":guilabel:`Automatic`: Automatically schedule a replenishment order for the "
+"product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:222
+msgid ":guilabel:`Never`: Never replenish the product from the |MPS|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:224
+msgid ""
+"Click :guilabel:`Save` to add the product to the |MPS|. The product now "
+"appears on the |MPS| page, along with any components (if applicable)."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:None
 msgid "The Add a Product pop-up window in the MPS."
 msgstr "품목 추가 팝업 창이 MPS에 나타나 있는 모습입니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:209
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:231
 msgid "Edit a product"
 msgstr "품목 수정하기"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:211
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:233
 msgid ""
-"After adding a product to the |MPS|, it may be necessary to change the "
-"replenishment values entered on the :guilabel:`Add a Product` pop-up window. "
-"To do so, click the :guilabel:`# ≤…≤ #` button to the immediate right of "
-"the :guilabel:`Replenish` button, on the :guilabel:`+ Suggested "
-"Replenishment` row, below the product's name."
+"To edit the planning schedule for a product on the |MPS|, click "
+"the :icon:`fa-pencil` :guilabel:`(Forecasted)` button next to the product's "
+"header row."
 msgstr ""
-"|MPS| 에 품목을 추가한 후 :guilabel:`품목 추가` 팝업 창에 입력한 보충 값을 변"
-"경해야 하는 경우가 있습니다. 변경하려면 품목명 아래에 있는 :guilabel:`+ 보충 "
-"제안` 행에서 :guilabel:`보충` 버튼 바로 오른쪽에 있는 :guilabel:`# ≤…≤ #` 버"
-"튼을 클릭합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:217
-msgid ""
-"The first and second number displayed on the :guilabel:`# ≤…≤ #` button "
-"correspond to the values entered in the :guilabel:`Minimum to Replenish` "
-"and :guilabel:`Maximum to Replenish` fields when adding the product to the |"
-"MPS|."
-msgstr ""
-":guilabel:`# ≤…≤ #` 버튼에 표시되어 있는 첫 번째 및 두 번째 숫자는 |MPS| 에 "
-"품목을 추가할 때 :guilabel:`최소 보충` 및 :guilabel:`최대 보충` 에 입력한 값"
-"에 해당합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:221
-msgid ""
-"For example, if `5` was entered in the :guilabel:`Minimum to Replenish` "
-"field, and `100` was entered in the :guilabel:`Maximum to Replenish` field, "
-"the button appears as :guilabel:`5 ≤…≤ 100`."
-msgstr ""
-"예를 들어, :guilabel:`최소 보충 수량` 필드에 `5` 를 입력하고, :guilabel:`최"
-"대 보충 수량` 필드에 `100` 을 입력해 놓으면, 버튼에 :guilabel:`5 ≤…≤ 100` 이 "
-"표시됩니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:225
-msgid ""
-"Clicking the :guilabel:`# ≤…≤ #` button opens the :guilabel:`Edit Production "
-"Schedule` pop-up window. This pop-up window is the same as "
-"the :guilabel:`Add a Product` pop-up window, except that "
-"the :guilabel:`Product` and :guilabel:`Bill of Materials` fields cannot be "
-"edited."
-msgstr ""
-":guilabel:`# ≤…≤ #` 버튼을 클릭하면 :guilabel:`생산 일정 수정` 팝업 창이 열립"
-"니다. 이 팝업 창은 :guilabel:`제품 추가` 팝업 창과 동일하지만 :guilabel:`제품"
-"` 및 :guilabel:`자재 목록` 은 편집할 수 없다는 점에서 차이가 있습니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:229
-msgid ""
-"On the :guilabel:`Edit Production Schedule` pop-up window, enter the desired "
-"values in the :guilabel:`Safety Stock Target`, :guilabel:`Minimum to "
-"Replenish`, and :guilabel:`Maximum to Replenish` fields. Then, "
-"click :guilabel:`Save` to save the changes."
-msgstr ""
-":guilabel:`생산 일정 수정` 팝업 창에서 :guilabel:`안전 재고 목표"
-"`, :guilabel:`최소 보충량`, :guilabel:`최대 보충량` 항목에 값을 입력합니다. "
-"그런 다음 :guilabel:`저장` 을 클릭하여 변경 사항을 저장합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:234
-msgid "Remove a product"
-msgstr "품목 제거하기"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:236
 msgid ""
-"To remove a product from the |MPS|, tick the checkbox to the left of its "
-"name. Then, click the :icon:`fa-cog` :guilabel:`Actions` button at the top "
-"of the screen, and select :guilabel:`Delete` from the resulting drop-down "
-"menu. Finally, click :guilabel:`Ok` on the :guilabel:`Confirmation` pop-up "
-"window."
+"In the :guilabel:`Edit Production Schedule` pop-up window, enter the desired "
+"modifications. Then, click :guilabel:`Save` to save the changes."
 msgstr ""
-"|MPS| 에서 제품을 제거하려면 이름 왼쪽에 있는 확인란에 표시합니다. 그런 다음 "
-"화면 상단에 있는 :icon:`fa-cog` :guilabel:`작업` 버튼을 클릭한 후 드롭다운 메"
-"뉴가 나타나면 :guilabel:`삭제` 를 선택합니다. 마지막으로 :guilabel:`확인` 팝"
-"업 창에서 :guilabel:`확인` 을 클릭합니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:241
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:240
 msgid ""
-"Deleting a product from the |MPS| removes it, along with all of its data. If "
-"the product is re-added, its replenishment values must be reconfigured."
+"The :guilabel:`Product` and :guilabel:`Bill of Materials` fields cannot be "
+"edited."
 msgstr ""
-"|MPS|\\ 에서 제품을 삭제하면 모든 데이터와 함께 제거됩니다. 제품을 다시 추가"
-"하는 경우 보충 값을 다시 구성해야 합니다."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:243
+msgid "Remove a product"
+msgstr "품목 제거하기"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:245
-msgid "|MPS| replenishment"
-msgstr "|MPS| 재보충"
+msgid ""
+"To remove a product from the |MPS|, select the checkbox next to its name. "
+"Then, click the :icon:`fa-cog` :guilabel:`Actions` button at the top of the "
+"screen, and select :guilabel:`Delete` from the drop-down menu. On "
+"the :guilabel:`Confirmation` pop-up window, click :guilabel:`Ok`."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:247
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:252
+msgid "Replenishing products with |MPS|"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:254
 msgid "Products in the |MPS| can be replenished in one of three ways:"
 msgstr "|MPS| 에서 다음 세 가지 방법 중 하나로 품목을 보충할 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:249
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:256
 msgid ""
-"Click the :guilabel:`Replenish` button at the top of the screen to generate "
-"replenishment orders for every product below its :guilabel:`Safety Stock "
-"Target` for the current month."
+"To replenish every product for the current time period, click "
+"the :guilabel:`Order` button at the top."
 msgstr ""
-"화면 상단의\\ :guilabel:`보충`\\ 버튼을 클릭하여 현재 월에\\ :guilabel:`안전 "
-"재고 목표`\\ 미만인 모든 제품에 대한 보충 주문을 생성합니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:251
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:258
 msgid ""
-"Click the :guilabel:`Replenish` button on the right side of the :guilabel:`+ "
-"Suggested Replenishment` row of a specific product, to generate a "
-"replenishment order for that specific product."
+"To replenish a specific product, click the :guilabel:`Order` button next to "
+"the :guilabel:`+ Replenishment` row of the product."
 msgstr ""
-":guilabel:`보충` 버튼은 특정 품목의 :guilabel:`+ 제안된 보충` 행 오른쪽에 있"
-"으며, 해당 품목에 대한 보충 주문서가 생성됩니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:254
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:260
 msgid ""
-"Tick the checkbox to the left of the product name of one or more products. "
-"Then, click the :icon:`fa-cog` :guilabel:`Actions` button at the top of the "
-"screen, and select :guilabel:`Replenish` from the resulting drop-down menu. "
-"Doing so generates a replenishment order for each selected product."
+"To select and replenish multiple products, select the checkbox next to one "
+"or more products' header rows. Then, click the :icon:`fa-"
+"cog` :guilabel:`Actions` button at the top and select :guilabel:`Order` from "
+"the drop-down menu."
 msgstr ""
-"하나 이상의 품목에 대해 품목명 왼쪽에 있는 확인란에 표시합니다. 그런 다음 화"
-"면 상단에 있는 :icon:`fa-cog` :guilabel:`활동` 버튼을 클릭하고 드롭다운 메뉴"
-"가 표시되면 :guilabel:`보충` 을 선택합니다. 그러면 각 선택 품목에 대한 보충 "
-"주문이 생성됩니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:259
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:264
 msgid ""
-"The type of replenishment order generated corresponds to the route selected "
-"on the *Inventory* tab of the product's form:"
+"The type of replenishment order generated is determined by the route "
+"selected on the *Add a Product* pop-up window when :ref:`adding a product "
+"<manufacturing/mps/add-product>` to the |MPS|."
 msgstr ""
-"생성되는 보충 주문 유형은 제품 양식의\\ *재고 관리*\\ 탭에서 선택한 경로에 해"
-"당합니다:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:262
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:267
 msgid ""
-"If the *Buy* route is selected, an |RfQ| is generated to replenish the "
-"product. |RfQs| can be selected by navigating to "
-"the :menuselection:`Purchase` app. Any |RfQ| generated by the |MPS| "
-"lists :guilabel:`MPS` in its :guilabel:`Source Document` field."
+"If the *Buy* route is selected, an |RfQ| is generated to purchase the "
+"product. Generated |RfQs| can be located by navigating "
+"to :menuselection:`Purchase app --> Orders --> Requests for Quotation`."
 msgstr ""
-"*구매* 경로를 선택하면 제품을 보충하기 위해 |RfQ| 가 생성됩니다. |RfQ| "
-"는 :menuselection:`매입` 앱에서 선택할 수 있습니다. |MPS| 에서 생성된 모든 |"
-"RfQ| :guilabel:`출처 문서` 에 :guilabel:`MPS` 가 표기합니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:265
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:270
 msgid ""
-"If the *Manufacture* route is selected, an |MO| is generated to replenish "
-"the product. |MOs| can be selected by navigating "
+"If the *Manufacture* route is selected, an |MO| is generated to manufacture "
+"the product. Generated |MOs| can be located by navigating "
 "to :menuselection:`Manufacturing app --> Operations --> Manufacturing "
-"Orders`. Any |MO| generated by the |MPS| lists :guilabel:`MPS` in "
-"its :guilabel:`Source Document` field."
+"Orders`."
 msgstr ""
-"*제조* 경로를 선택하면 제품을 보충하기 위해 |MO| 가 생성됩니다. |MO| "
-"는 :menuselection:`제조 관리 앱 --> 운영 --> 제조지시서` 로 이동하여 선택할 "
-"수 있습니다. |MPS| 에서 생성된 모든 |MO| 에는 :guilabel:`원본 문서` "
-"에 :guilabel:`MPS` 가 기재되어 있습니다."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:277
+msgid "Replenishment status indicators"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:279
+msgid ""
+"The :guilabel:`+ Replenishment` cells in the |MPS| are displayed using the "
+"following highlights, depending on whether the replenished quantities match "
+"the suggested quantities:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:282
+msgid ":guilabel:`Green`: The quantity is ready to be replenished."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:283
+msgid ""
+":guilabel:`Gray`: A replenishment order has already been generated, and its "
+"ordered quantity matches the suggested quantity for the time period."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:285
+msgid ""
+":guilabel:`Yellow`: A replenishment order has already been generated, but "
+"its ordered quantity is below the suggested quantity for the time period."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:287
+msgid ""
+":guilabel:`Red`: A replenishment order has already been generated, but its "
+"ordered quantity exceeds the suggested quantity for the time period."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:293
+msgid "Additional rows and filters"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:295
+msgid ""
+"With the :guilabel:`Search...` bar drop-down menu, users may further "
+"customize the |MPS| by configuring additional rows for products or by "
+"filtering existing records based on specific criteria."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:300
+msgid "Rows"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:302
+msgid ""
+"The following rows can be added to the |MPS| in addition to the default rows "
+"shown on the :ref:`dashboard <manufacturing/mps/dashboard>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:305
+msgid ""
+":guilabel:`Actual Demand`: Changes the :guilabel:`- Forecasted Demand` row "
+"to :guilabel:`- Actual / Forecasted Demand`, comparing the product's "
+"confirmed demand and its forecasted demand."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:307
+msgid ""
+":guilabel:`Actual Demand Y-1`: Displays the :guilabel:`Actual Demand` one "
+"year before the current time period."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:309
+msgid ""
+":guilabel:`Actual Demand Y-2`: Displays the :guilabel:`Actual Demand` two "
+"years before the current time period."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:311
+msgid ""
+":guilabel:`Actual Replenishment`: Changes the :guilabel:`+ Replenishment` "
+"row to :guilabel:`+ Actual / Replenishment`, comparing the product's "
+"replenished quantity and its suggested quantity."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:313
+msgid ""
+":guilabel:`Available to Promise`: Changes the :guilabel:`= Forecasted Stock` "
+"row to :guilabel:`= ATP / Forecasted Stock`, comparing the product's "
+"available stock (``Starting Stock - Actual Demand + Replenishment``) and its "
+"forecasted stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:320
+msgid ""
+"Users can filter records from the |MPS| based on the following criteria:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:322
+msgid ""
+":guilabel:`To Forecast`: Filter by products that are manually or "
+"automatically replenished."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:323
+msgid ""
+":guilabel:`To Replenish`: Filter by products that are ready to be "
+"replenished (i.e., with at least one :guilabel:`+ Replenishment` cell "
+"highlighted in green)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:325
+msgid ""
+":guilabel:`Indirect Demand`: Filter by products configured with the "
+"*Indirect Demand* option."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:326
+msgid ""
+":guilabel:`Replenishment Too Low`: Filter by products with a replenished "
+"quantity below the suggested replenishment quantity (i.e., with at least "
+"one :guilabel:`+ Replenishment` cell highlighted in yellow)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:329
+msgid ""
+":guilabel:`Replenishment Too High`: Filter by products with a replenished "
+"quantity above the suggested replenishment quantity (i.e., with at least "
+"one :guilabel:`+ Replenishment` cell highlighted in red)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:332
+msgid ""
+":guilabel:`Manually Replenished`: Filter by products with the *Replenishment "
+"Trigger* set to *Manual*."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:334
+msgid ""
+":guilabel:`Automatically Replenished`: Filter by products with the "
+"*Replenishment Trigger* set to *Automatic*."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:336
+msgid ""
+":guilabel:`Not Replenished from MPS`: Filter by products with the "
+"*Replenishment Trigger* set to *Never*."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:3
 msgid "Work center time off"
@@ -59334,6 +59318,564 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "In Odoo's *Manufacturing* app, the *master production schedule* (MPS) is "
+#~ "used to manually plan manufacturing orders (MOs) and purchase orders "
+#~ "(POs), based on forecasted quantities of products and components."
+#~ msgstr ""
+#~ "Odoo의 *제조 관리* 앱에서 *마스터 생산 일정*(MPS)은 제조지시서(MO) 및 구매"
+#~ "발주서(PO)를 품목 및 구성품의 예상 수량에 따라 수동으로 계획할 때 사용합니"
+#~ "다."
+
+#~ msgid ""
+#~ "By considering the impact of confirmed |MOs| and |POs|, along with "
+#~ "manually adjusted demand forecasts, the |MPS| can be used to manage long-"
+#~ "term product replenishment. This ensures the continued availability of "
+#~ "the necessary products and components."
+#~ msgstr ""
+#~ "수동으로 수요 예측을 조정함과 동시에, 확정된 |MO| 및 |PO| 의 영향을 고려하"
+#~ "여 |MPS| 를 통해 장기적으로 품목 보충을 관리할 수 있습니다. 이를 통해 필요"
+#~ "한 품목 및 구성품을 지속적으로 확보할 수 있게 됩니다."
+
+#~ msgid ""
+#~ "Since the |MPS| allows for manual intervention, it is useful for "
+#~ "replenishing products where the demand of existing sales orders (SOs) "
+#~ "does **not** reflect probable future demand."
+#~ msgstr ""
+#~ "|MPS| 는 수동 개입을 할 수 있으므로 폼목을 보충할 때 기존 판매주문서(SO)"
+#~ "의 수요에 향후의 예상 수요가 **반영되지 않는** 경우에 유용합니다."
+
+#~ msgid ""
+#~ "A retail store sells artificial *Christmas trees* during the holiday "
+#~ "season. It is currently September, and the store has less than ten "
+#~ "Christmas tree |MOs| confirmed for the month of December."
+#~ msgstr ""
+#~ "한 소매점에서 연말 시즌에 인조 *크리스마스 트리* 를 판매하고 있습니다. 9"
+#~ "월 현재, 매장에서 12월 한 달에 대한 크리스마스 트리 |MO| 확정 건수는 10건 "
+#~ "미만입니다."
+
+#~ msgid ""
+#~ "Despite the number of confirmed |MOs|, the procurement manager knows that "
+#~ "the demand for Christmas trees in December is going to be much higher, "
+#~ "once the holiday season starts. As a result, they manually enter a "
+#~ "greater demand in the |MPS|, so they can properly replenish the product "
+#~ "in time for the increase in customer demand."
+#~ msgstr ""
+#~ "|MO| 숫자와 무관하게, 조달 관리자는 12월 연말 시즌이 시작되면 크리스마스 "
+#~ "트리에 대한 수요가 훨씬 더 높아질 것이라는 것을 인지하고 있습니다. 따라서 "
+#~ "고객 수요가 증가함에 따라 제품을 적절히 보충할 수 있도록 |MPS| 에 수요 수"
+#~ "치를 늘려서 수동으로 입력합니다."
+
+#~ msgid ""
+#~ "It is essential to remember that the |MPS| is a **MANUAL** tool. Adding a "
+#~ "product to the |MPS| does not cause it to be manufactured or purchased "
+#~ "automatically. The |MPS| simply suggests the amount of the product that "
+#~ "should be replenished, but requires user input to create the |MOs| or |"
+#~ "POs| that are used to replenish it."
+#~ msgstr ""
+#~ "|MPS| 는 **수동** 으로 사용하는 도구라는 점을 기억해야 합니다. |MPS| 에 제"
+#~ "품을 추가한다고 해도 자동으로 제조되거나 구매가 진행되지는 않습니다. |"
+#~ "MPS| 는 보충해야 할 제품의 수량을 제안할 뿐이며, 보충하는 데 사용할 |MO| "
+#~ "또는 |PO| 를 생성하려면 사용자가 입력을 해야 합니다."
+
+#~ msgid ""
+#~ "For this reason, it is recommended that the |MPS| **NOT** be used "
+#~ "alongside reordering rules for the same product. Because reordering rules "
+#~ "are an automated workflow, they conflict with the manual replenishment "
+#~ "method of |MPS|. Using both, in unison, can lead to inaccurate forecasts "
+#~ "and the creation of unnecessary replenishment orders."
+#~ msgstr ""
+#~ "이러한 이유로 |MPS| 는 동일한 품목을 재주문하는 규칙과는 함께 사용하지 않"
+#~ "는 것이 좋습니다. 재주문 규칙은 자동화된 워크플로우이므로 |MPS| 의 수동 보"
+#~ "충 방법과 충돌합니다. 두 가지 방법을 같이 사용하면 정확하게 예측을 할 수 "
+#~ "없게 되어 불필요하게 보충 주문이 생성될 수 있습니다."
+
+#~ msgid "Enable and configure |MPS|"
+#~ msgstr "|MPS| 활성화 및 환경설정"
+
+#~ msgid ""
+#~ "To use the |MPS| feature, navigate to :menuselection:`Manufacturing app --"
+#~ "> Configuration --> Settings`, and tick the :guilabel:`Master Production "
+#~ "Schedule` checkbox in the :guilabel:`Planning` section. Finally, "
+#~ "click :guilabel:`Save`."
+#~ msgstr ""
+#~ "|MPS| 기능을 사용하려면 :menuselection:`제조 관리 앱 --> 환경설정 --> 설정"
+#~ "` 으로 이동한 후 :guilabel:`계획` 섹션에서 :guilabel:`마스터 생산 일정` 확"
+#~ "인란에 표시합니다. 마지막으로 :guilabel:`저장` 을 클릭합니다."
+
+#~ msgid ""
+#~ "After enabling the :guilabel:`Master Production Schedule` feature, two "
+#~ "new fields appear under it on the :guilabel:`Settings` "
+#~ "page: :guilabel:`Time Range` and :guilabel:`Number of Columns`."
+#~ msgstr ""
+#~ ":guilabel:`주요 생산 일정`\\ 기능을 활성화하면\\ :guilabel:`설정`\\ 페이지"
+#~ "의 해당 기능 아래에 두 개의 새 필드가 나타납니다: :guilabel:`기간 범위`\\ "
+#~ "및\\ :guilabel:`열 수`."
+
+#~ msgid ""
+#~ "The :guilabel:`Time Range` field is used to select the period of time "
+#~ "over which planning takes place, and offers three "
+#~ "options: :guilabel:`Monthly`, :guilabel:`Weekly`, and :guilabel:`Daily`. "
+#~ "For example, if :guilabel:`Monthly` is selected, the |MPS| plans the "
+#~ "production requirements of products and components on a monthly basis."
+#~ msgstr ""
+#~ ":guilabel:`시간 범위` 는 계획을 수행하는 기간을 선택하는 항목이며, 세 가"
+#~ "지 :guilabel:`월별`, :guilabel:`주별`, :guilabel:`매일` 중에서 선택할 수 "
+#~ "있습니다. 예를 들어, :guilabel:`월별` 을 선택한 경우 |MPS| 는 제품 및 구성"
+#~ "품의 생산 요구 사항을 월별로 계획하게 됩니다."
+
+#~ msgid ""
+#~ "The :guilabel:`Number of Columns` field is used to specify the quantity "
+#~ "of the selected :guilabel:`Time Range` units shown on the |MPS| page. For "
+#~ "example, if the :guilabel:`Time Range` field is set "
+#~ "to :guilabel:`Monthly`, and `12` is entered in the :guilabel:`Number of "
+#~ "Columns` field, the |MPS| shows one column for the next 12 months, "
+#~ "starting with the current month."
+#~ msgstr ""
+#~ ":guilabel:`열 수` 필드는 |MPS| 페이지에 표시되어 있는 선택된 :guilabel:`시"
+#~ "간 범위` 단위의 수량을 지정하는 데 사용됩니다. 예를 들어, :guilabel:`시간 "
+#~ "범위` 필드를 :guilabel:`월별` 로 설정하고 :guilabel:`열 수` 필드에 `12`를 "
+#~ "입력하면 |MPS| 는 현재 월부터 시작하여 다음 12개월 동안을 하나의 열에 표시"
+#~ "합니다."
+
+#~ msgid ""
+#~ "If the values of the :guilabel:`Time Range` or :guilabel:`Number of "
+#~ "Columns` fields are altered, click :guilabel:`Save` again to save the "
+#~ "changes."
+#~ msgstr ""
+#~ ":guilabel:`기간 범위`\\ 또는\\ :guilabel:`열 수`\\ 필드의 값이 변경된 경"
+#~ "우 변경 사항을 저장하려면\\ :guilabel:`저장`\\ 을 다시 클릭합니다."
+
+#~ msgid ""
+#~ "To open the |MPS|, navigate to :menuselection:`Manufacturing app --> "
+#~ "Planning --> Master Production Schedule`. The |MPS| view appears as "
+#~ "follows:"
+#~ msgstr ""
+#~ "|MPS|\\ 을 열려면\\ :menuselection:`제조 관리 앱 --> 일정 관리 --> 주요 생"
+#~ "산 일정`\\ 으로 이동합니다. |MPS|\\ 보기는 다음과 같이 나타납니다:"
+
+#~ msgid ""
+#~ "The grey column on the left side of the screen shows a section for every "
+#~ "product added to the |MPS|, with each product section being broken down "
+#~ "into smaller rows. The information shown in the rows depends on the "
+#~ "filters selected in the :guilabel:`Search...` bar drop-down menu at the "
+#~ "top of the page. The default categories that appear in the rows are:"
+#~ msgstr ""
+#~ "화면 왼쪽의 회색 열에는 |MPS| 에 추가된 모든 제품에 대한 섹션을 표시되어 "
+#~ "있으며, 각 제품 섹션은 더욱 세부적인 행으로 나뉩니다. 행에 표시되는 정보"
+#~ "는 페이지 상단의 :guilabel:`검색...` 표시줄 드롭다운 메뉴에서 선택한 필터"
+#~ "에 따라 달라집니다. 행에 표시되는 기본 카테고리는 다음과 같습니다."
+
+#~ msgid ""
+#~ ":guilabel:`[Product] by [unit]` :icon:`fa-area-chart`: the forecasted "
+#~ "stock quantity at the beginning of each time "
+#~ "period. :guilabel:`[Product]` and :icon:`fa-area-chart` are selectable "
+#~ "buttons which open the product's page, or the forecast report for the "
+#~ "product, respectively."
+#~ msgstr ""
+#~ ":guilabel:`[단위]당 [품목] ` :icon:`fa-area-chart`: 기간별 기초 예상 재고 "
+#~ "수량입니다. :guilabel:`[품목]` 및 :icon:`fa-area-chart` 는 각 해당 품목 페"
+#~ "이지 또는 품목에 대한 예상 보고서를 열도록 선택할 수 있는 버튼입니다."
+
+#~ msgid ""
+#~ ":guilabel:`- Forecasted Demand`: the demand forecast, which is entered "
+#~ "manually. This represents an estimate of the demand for the product "
+#~ "during each time period."
+#~ msgstr ""
+#~ ":guilabel:`예상 수요`: 수동으로 입력되는 수요 예측입니다. 각 기간 동안 제"
+#~ "품에 대한 수요 추정치를 나타냅니다."
+
+#~ msgid ""
+#~ ":guilabel:`- Indirect Demand Forecast`: while this is a default category, "
+#~ "it **only** appears for products that are components of other products. "
+#~ "It represents the demand for the component from existing MOs."
+#~ msgstr ""
+#~ ":guilabel:`- 간접 수요 예측`: 기본 카테고리지만, 제품이 다른 제품에 대한 "
+#~ "구성품인 경우에 **한해서만** 표시됩니다. 기존 MO에 있는 구성품에 대한 수요"
+#~ "를 나타냅니다."
+
+#~ msgid ""
+#~ ":guilabel:`+ Suggested Replenishment`: the quantity of the product that "
+#~ "is suggested to be replenished through |MOs| or |POs|. To the right of "
+#~ "the category title is a :guilabel:`Replenish` button, which is used to "
+#~ "manually replenish the product, based on the quantity suggested to be "
+#~ "replenished."
+#~ msgstr ""
+#~ ":guilabel:`+ 보충 제안`: |MO| 또는 |PO| 를 통해 보충하도록 제안되는 제품 "
+#~ "수량입니다. 카테고리 제목 오른쪽에는 :guilabel:`보충` 버튼이 있으며, 이 버"
+#~ "튼으로 보충 제안 수량에 따라 제품을 수동으로 보충할 수 있습니다."
+
+#~ msgid "The Replenish button on the \"+ Suggested Replenishment\" row."
+#~ msgstr "\"=+ 보충 제안\" 행에 있는 보충 버튼입니다."
+
+#~ msgid "The \"Replenish\" button on the \"+ Suggested Replenishment\" row."
+#~ msgstr "\"=+ 보충 제안\" 행에 있는 \"보충\" 버튼입니다."
+
+#~ msgid ""
+#~ ":guilabel:`= Forecasted Stock`: the quantity of the product forecasted to "
+#~ "be in stock at the end of each time period, assuming that suggested "
+#~ "replenishment numbers are fulfilled."
+#~ msgstr ""
+#~ ":guilabel:`= 예상 재고`: 각 기간 말에 남아있을 예상 재고 수량이며, 제안된 "
+#~ "수량대로 보충된다는 가정 하의 수량입니다."
+
+#~ msgid "Altogether, these default categories form an equation:"
+#~ msgstr "이러한 모든 기본 카테고리를 합쳐서 수식을 형성합니다."
+
+#~ msgid ""
+#~ "\\text{Forecasted Demand} + \\text{Suggested Replenishment} = "
+#~ "\\text{Forecasted Stock}\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\\text{예상 수요} + \\text{보충 제안} = \\text{예상 재고}\n"
+#~ "\n"
+
+#~ msgid ""
+#~ "In the case of components, the :guilabel:`Indirect Demand Forecast` is "
+#~ "taken into account as well."
+#~ msgstr "구성품의 경우 :guilabel:`간접 수요 예측` 역시 고려할 사항이 됩니다."
+
+#~ msgid ""
+#~ "The :guilabel:`- Forecasted Demand` and :guilabel:`+ Suggested "
+#~ "Replenishment` fields can be edited for any of the time periods to the "
+#~ "right of the product column. Doing so changes the equation, and updates "
+#~ "the value displayed in the :guilabel:`Forecasted Stock` field."
+#~ msgstr ""
+#~ "제품 열 오른쪽에 있는 기간 전체에 대해서 :guilabel:`- 예측 수요` "
+#~ "및 :guilabel:`+ 보충 제안` 항목을 편집할 수 있습니다. 편집할 경우 수식이 "
+#~ "변경되고 :guilabel:`예측 재고` 에 표시되는 값이 업데이트됩니다."
+
+#~ msgid ""
+#~ "Changing the value in the :guilabel:`+ Suggested Replenishment` field "
+#~ "also makes an :icon:`fa-times` :guilabel:`(reset)` button appear to the "
+#~ "left of the field. Click the :icon:`fa-times` :guilabel:`(reset)` button "
+#~ "next to the field to reset its value back to the one calculated by the |"
+#~ "MPS|."
+#~ msgstr ""
+#~ ":guilabel:`+ 보충 제안` 에서 값을 변경하면 왼쪽에 :icon:`fa-"
+#~ "times` :guilabel:`(초기화)` 버튼이 나타납니다. 옆에 있는 :icon:`fa-"
+#~ "times` :guilabel:`(초기화)` 버튼을 클릭하면 해당 값이 |MPS|에서 계산한 값"
+#~ "으로 초기화됩니다."
+
+#~ msgid ""
+#~ "While the |MPS| can be used with only the default categories enabled, it "
+#~ "is advisable to also enable the :guilabel:`Actual Demand` category. This "
+#~ "is done by clicking the :icon:`fa-caret-down` :guilabel:`(down arrow)` on "
+#~ "the right side of the :guilabel:`Search...` bar, and enabling "
+#~ "the :guilabel:`Actual Demand` option under the :guilabel:`Rows` header."
+#~ msgstr ""
+#~ "|MPS| 는 기본 카테고리만 활성화된 상태에서 사용할 수 있지만, :guilabel:`실"
+#~ "제 수요` 카테고리도 활성화하는 것이 좋습니다. 적용하려면 :guilabel:`검"
+#~ "색...` 표시줄 오른쪽에 있는 :icon:`fa-caret-down` :guilabel:`(아래쪽 화살"
+#~ "표)`를 클릭하고 :guilabel:`행` 헤더 아래에 있는 :guilabel:`실제 수요` 를 "
+#~ "활성화하면 됩니다."
+
+#~ msgid ""
+#~ "With the :guilabel:`Actual Demand` option enabled, the :guilabel:`- "
+#~ "Forecasted Demand` category changes to the :guilabel:`- Actual / "
+#~ "Forecasted Demand` category. In addition to the manually entered "
+#~ "forecasted demand, this category also displays the confirmed demand for "
+#~ "the product, which is based on confirmed |SOs|."
+#~ msgstr ""
+#~ ":guilabel:`실제 수요` 옵션을 활성화하면 :guilabel:`- 예측 수요` 카테고리"
+#~ "가 :guilabel:`- 실제/예측 수요` 카테고리로 변경됩니다. 이 카테고리에는 수"
+#~ "동으로 입력한 예측 수요 외에도 제품에 대한 확정 수요를 표시하며, 이는 확"
+#~ "인 완료된 |SO|를 기준으로 합니다."
+
+#~ msgid ""
+#~ "Each column to the right of the products column lists one unit of the "
+#~ "time period selected in the *Time Range* field on the *Manufacturing* app "
+#~ "*Settings* page (ex. months). The number of time period columns "
+#~ "corresponds to the value entered in the *Number of Columns* field."
+#~ msgstr ""
+#~ "제품 열의 오른쪽에 있는 각 열에는 *제조 관리* 앱의 *설정* 페이지에 있는 *"
+#~ "기간 범위* 필드에서 선택한 기간의 단위가 표시됩니다 (예: 월). 기간 열의 개"
+#~ "수는 *열 수* 필드에 입력된 값과 같습니다."
+
+#~ msgid ""
+#~ "The first time period column represents the current time period. For "
+#~ "example, if the |MPS| is configured to use months, the first column "
+#~ "displays data for the current month. On this first column, "
+#~ "the :guilabel:`+ Suggested Replenishment` field appears in one of five "
+#~ "colors:"
+#~ msgstr ""
+#~ "첫 번째 기간 열에는 현재 기간이 표시되어 있습니다. 예를 들어 |MPS| 에서 월"
+#~ "을 사용하도록 설정한 경우 첫 번째 열에는 현재 월의 데이터가 나타납니다. "
+#~ "첫 번째 열에는 :guilabel:`+ 보충 제안` 필드가 5가지 색상 중 하나로 표시됩"
+#~ "니다."
+
+#~ msgid ""
+#~ ":guilabel:`Green`: a replenishment order must be generated to keep stock "
+#~ "at the :guilabel:`Safety Stock Target`, based on the "
+#~ "configured :doc:`lead times <../../inventory/warehouses_storage/"
+#~ "replenishment/lead_times>`."
+#~ msgstr ""
+#~ "\\ :guilabel:`녹색`\\ : 구성된\\ :doc:`리드 타임 <../../inventory/"
+#~ "warehouses_storage/replenishment/lead_times>`\\ 을 기반으로 재고를"
+#~ "\\ :guilabel:`안전 재고 목표`\\ 로 유지하기 위해 보충 주문을 생성해야 합니"
+#~ "다."
+
+#~ msgid ""
+#~ ":guilabel:`Gray`: a replenishment order has already been generated to "
+#~ "keep stock at the :guilabel:`Safety Stock Target`."
+#~ msgstr ""
+#~ ":guilabel:`회색`: 보충 주문이 이미 생성되었습니다. 재고를 :guilabel:`안전 "
+#~ "재고 목표` 로 유지할 수 있습니다."
+
+#~ msgid ""
+#~ ":guilabel:`Red`: a replenishment order has already been generated, but "
+#~ "the quantity it was created for puts the amount of stock above "
+#~ "the :guilabel:`Safety Stock Target`."
+#~ msgstr ""
+#~ ":guilabel:`빨간색`: 보충 주문이 이미 생성되었지만 생성된 수량으로 인해 재"
+#~ "고량이\\ :guilabel:`안전 재고 목표`\\ 를 초과합니다."
+
+#~ msgid ""
+#~ "The :guilabel:`+ Suggested Replenishment` field appears white, if no "
+#~ "replenishment order has been generated, and it is not necessary to "
+#~ "generate one at the current moment."
+#~ msgstr ""
+#~ ":guilabel:`+ 제안된 보충`\\ 필드는 보충 주문이 생성되지 않았고 현재 시점"
+#~ "에 생성할 필요가 없는 경우 흰색으로 나타납니다."
+
+#~ msgid "Add a product"
+#~ msgstr "품목 추가"
+
+#~ msgid ""
+#~ "To use |MPS| to manage the replenishment of a product, navigate "
+#~ "to :menuselection:`Manufacturing app --> Planning --> Master Production "
+#~ "Schedule`. At the top of the |MPS| page, click :guilabel:`Add a Product` "
+#~ "to open the :guilabel:`Add a Product` pop-up window."
+#~ msgstr ""
+#~ "|MPS| 를 통해 제품에 대한 보충 관리를 하려면 :menuselection:`제조 앱 --> "
+#~ "계획 --> 마스터 생산 일정` 으로 이동합니다. |MPS| 페이지의 맨 위에"
+#~ "서 :guilabel:`제품 추가` 를 클릭하여 :guilabel:`제품 추가` 팝업 창을 엽니"
+#~ "다."
+
+#~ msgid ""
+#~ "In the case of manufactured products, the *Manufacture* route must be "
+#~ "selected in the *Routes* section of the *Inventory* tab, on the product's "
+#~ "form."
+#~ msgstr ""
+#~ "제조된 제품의 경우 제품 양식의\\ *재고 관리*\\ 탭에 있는\\ *경로*\\ 섹션에"
+#~ "서\\ *제조*\\ 경로를 선택해야 합니다."
+
+#~ msgid ""
+#~ "In the case of products that are purchased, the *Buy* route must be "
+#~ "selected in the *Routes* section of the *Inventory* tab, on the product's "
+#~ "form. Additionally, a vendor and the price they sell the product for must "
+#~ "also be specified on the *Purchase* tab."
+#~ msgstr ""
+#~ "품목 매입의 경우, 품목 양식의 *재고* 탭의 *경로* 섹션에서 *매입* 경로를 선"
+#~ "택해야 합니다. 또한 *매입* 탭에서 공급업체와 품목 판매 가격도 지정해야 합"
+#~ "니다."
+
+#~ msgid ""
+#~ "On the pop-up window, select the product to add in "
+#~ "the :guilabel:`Product` drop-down menu. If the product is replenished "
+#~ "through manufacturing, select the product's |BoM| in the :guilabel:`Bill "
+#~ "of Materials` field."
+#~ msgstr ""
+#~ "팝업 창에서 :guilabel:`품목` 드롭다운 메뉴를 통해 추가할 제품을 선택합니"
+#~ "다. 제조를 통해 제품이 보충되는 경우 :guilabel:`자재명세서` 항목에서 제품"
+#~ "의 |BoM| 을 선택합니다."
+
+#~ msgid ""
+#~ "Selecting a BoM when adding a product to the |MPS| also adds any "
+#~ "components listed on the BoM. If it is not necessary to manage the "
+#~ "replenishment of components through the |MPS|, simply leave "
+#~ "the :guilabel:`Bill of Materials` field blank."
+#~ msgstr ""
+#~ "|MPS| 에 제품을 추가할 때 BoM를 선택하면 BoM에 기재된 모든 구성품도 추가됩"
+#~ "니다. |MPS| 를 통해 구성품의 보충을 관리할 필요가 없는 경우에"
+#~ "는 :guilabel:`자재명세서` 항목을 입력하지 않은 채로 비워두면 됩니다."
+
+#~ msgid ""
+#~ "If the database is configured with multiple warehouses, "
+#~ "a :guilabel:`Production Warehouse` field appears on the :guilabel:`Add a "
+#~ "Product` pop-up window. Use this field to specify which warehouse the "
+#~ "product is replenished to."
+#~ msgstr ""
+#~ "데이터베이스가 다중 창고로 설정되어 있는 경우 :guilabel:`프로덕션 창고` "
+#~ "가 :guilabel:`품목 추가` 팝업 창에 나타납니다. 이 항목을 통해 품목을 보충"
+#~ "할 창고를 지정합니다."
+
+#~ msgid ""
+#~ "In the :guilabel:`Safety Stock Target` field, specify the minimum "
+#~ "quantity of the product that should be kept available for orders at all "
+#~ "times. For example, if there should always be 20 units of the product "
+#~ "available for order fulfillment, enter `20` in the :guilabel:`Safety "
+#~ "Stock Target` field."
+#~ msgstr ""
+#~ ":guilabel:`안전 재고 목표` 에는, 언제든 주문서에 사용할 수 있도록 유지해"
+#~ "야 하는 최소 제품 수량을 지정합니다. 예를 들어, 주문을 처리하려면 항상 20"
+#~ "개의 제품이 사용할 수 있도록 준비해야 할 경우에는:guilabel:`안전 재고 목표"
+#~ "` 필드에 `20`을 입력합니다."
+
+#~ msgid ""
+#~ "In the :guilabel:`Minimum to Replenish` field, enter the minimum product "
+#~ "quantity for orders created to replenish the product. For example, if `5` "
+#~ "is entered in this field, replenishment orders for the product include a "
+#~ "minimum of five units."
+#~ msgstr ""
+#~ ":guilabel:`최소 보충량` 에 제품을 보충하기 위해 생성된 주문서의 최소 제품 "
+#~ "수량을 입력합니다. 예를 들어, 여기에 `5` 를 입력하면 제품에 대한 보충 주문"
+#~ "서에는 최소 5개 단위가 기재됩니다."
+
+#~ msgid ""
+#~ "In the :guilabel:`Maximum to Replenish` field, enter the maximum product "
+#~ "quantity for orders created to replenish the product. For example, if "
+#~ "`100` is entered in this field, replenishment orders for the product "
+#~ "include a maximum of 100 units."
+#~ msgstr ""
+#~ ":guilabel:`최대 보충량` 에는 제품을 보충하기 위해 생성된 주문에 대한 최대 "
+#~ "제품 수량을 입력합니다. 예를 들어, 이 필드에 `100` 을 입력하면 제품에 대"
+#~ "한 보충 주문에는 최대 100개의 단위가 포함됩니다."
+
+#~ msgid ""
+#~ "Finally, click :guilabel:`Save` to add the product to the |MPS|. The "
+#~ "product now appears on the |MPS| page each time it is opened. If a |BoM| "
+#~ "was selected in the :guilabel:`Bill of Materials` field of "
+#~ "the :guilabel:`Add a Product` pop-up window, any components listed on the "
+#~ "|BoM| appear on the page, as well."
+#~ msgstr ""
+#~ "마지막으로 :guilabel:`저장` 을 클릭하여 제품을 |MPS| 에 추가합니다. 이제 "
+#~ "제품을 열 때마다 |MPS| 페이지에 제품이 나타나게 됩니다. :guilabel:`제품 추"
+#~ "가` 팝업창의 :guilabel:`자재명세서` 필드에서 |BoM| 을 선택한 경우 |BoM| "
+#~ "에 표시된 모든 구성품 역시 페이지에 표시됩니다."
+
+#~ msgid ""
+#~ "After adding a product to the |MPS|, it may be necessary to change the "
+#~ "replenishment values entered on the :guilabel:`Add a Product` pop-up "
+#~ "window. To do so, click the :guilabel:`# ≤…≤ #` button to the immediate "
+#~ "right of the :guilabel:`Replenish` button, on the :guilabel:`+ Suggested "
+#~ "Replenishment` row, below the product's name."
+#~ msgstr ""
+#~ "|MPS| 에 품목을 추가한 후 :guilabel:`품목 추가` 팝업 창에 입력한 보충 값"
+#~ "을 변경해야 하는 경우가 있습니다. 변경하려면 품목명 아래에 있"
+#~ "는 :guilabel:`+ 보충 제안` 행에서 :guilabel:`보충` 버튼 바로 오른쪽에 있"
+#~ "는 :guilabel:`# ≤…≤ #` 버튼을 클릭합니다."
+
+#~ msgid ""
+#~ "The first and second number displayed on the :guilabel:`# ≤…≤ #` button "
+#~ "correspond to the values entered in the :guilabel:`Minimum to Replenish` "
+#~ "and :guilabel:`Maximum to Replenish` fields when adding the product to "
+#~ "the |MPS|."
+#~ msgstr ""
+#~ ":guilabel:`# ≤…≤ #` 버튼에 표시되어 있는 첫 번째 및 두 번째 숫자는 |MPS| "
+#~ "에 품목을 추가할 때 :guilabel:`최소 보충` 및 :guilabel:`최대 보충` 에 입력"
+#~ "한 값에 해당합니다."
+
+#~ msgid ""
+#~ "For example, if `5` was entered in the :guilabel:`Minimum to Replenish` "
+#~ "field, and `100` was entered in the :guilabel:`Maximum to Replenish` "
+#~ "field, the button appears as :guilabel:`5 ≤…≤ 100`."
+#~ msgstr ""
+#~ "예를 들어, :guilabel:`최소 보충 수량` 필드에 `5` 를 입력하고, :guilabel:`"
+#~ "최대 보충 수량` 필드에 `100` 을 입력해 놓으면, 버튼에 :guilabel:`5 ≤…≤ "
+#~ "100` 이 표시됩니다."
+
+#~ msgid ""
+#~ "Clicking the :guilabel:`# ≤…≤ #` button opens the :guilabel:`Edit "
+#~ "Production Schedule` pop-up window. This pop-up window is the same as "
+#~ "the :guilabel:`Add a Product` pop-up window, except that "
+#~ "the :guilabel:`Product` and :guilabel:`Bill of Materials` fields cannot "
+#~ "be edited."
+#~ msgstr ""
+#~ ":guilabel:`# ≤…≤ #` 버튼을 클릭하면 :guilabel:`생산 일정 수정` 팝업 창이 "
+#~ "열립니다. 이 팝업 창은 :guilabel:`제품 추가` 팝업 창과 동일하지"
+#~ "만 :guilabel:`제품` 및 :guilabel:`자재 목록` 은 편집할 수 없다는 점에서 차"
+#~ "이가 있습니다."
+
+#~ msgid ""
+#~ "On the :guilabel:`Edit Production Schedule` pop-up window, enter the "
+#~ "desired values in the :guilabel:`Safety Stock Target`, :guilabel:`Minimum "
+#~ "to Replenish`, and :guilabel:`Maximum to Replenish` fields. Then, "
+#~ "click :guilabel:`Save` to save the changes."
+#~ msgstr ""
+#~ ":guilabel:`생산 일정 수정` 팝업 창에서 :guilabel:`안전 재고 목표"
+#~ "`, :guilabel:`최소 보충량`, :guilabel:`최대 보충량` 항목에 값을 입력합니"
+#~ "다. 그런 다음 :guilabel:`저장` 을 클릭하여 변경 사항을 저장합니다."
+
+#~ msgid ""
+#~ "To remove a product from the |MPS|, tick the checkbox to the left of its "
+#~ "name. Then, click the :icon:`fa-cog` :guilabel:`Actions` button at the "
+#~ "top of the screen, and select :guilabel:`Delete` from the resulting drop-"
+#~ "down menu. Finally, click :guilabel:`Ok` on the :guilabel:`Confirmation` "
+#~ "pop-up window."
+#~ msgstr ""
+#~ "|MPS| 에서 제품을 제거하려면 이름 왼쪽에 있는 확인란에 표시합니다. 그런 다"
+#~ "음 화면 상단에 있는 :icon:`fa-cog` :guilabel:`작업` 버튼을 클릭한 후 드롭"
+#~ "다운 메뉴가 나타나면 :guilabel:`삭제` 를 선택합니다. 마지막으"
+#~ "로 :guilabel:`확인` 팝업 창에서 :guilabel:`확인` 을 클릭합니다."
+
+#~ msgid ""
+#~ "Deleting a product from the |MPS| removes it, along with all of its data. "
+#~ "If the product is re-added, its replenishment values must be reconfigured."
+#~ msgstr ""
+#~ "|MPS|\\ 에서 제품을 삭제하면 모든 데이터와 함께 제거됩니다. 제품을 다시 추"
+#~ "가하는 경우 보충 값을 다시 구성해야 합니다."
+
+#~ msgid "|MPS| replenishment"
+#~ msgstr "|MPS| 재보충"
+
+#~ msgid ""
+#~ "Click the :guilabel:`Replenish` button at the top of the screen to "
+#~ "generate replenishment orders for every product below "
+#~ "its :guilabel:`Safety Stock Target` for the current month."
+#~ msgstr ""
+#~ "화면 상단의\\ :guilabel:`보충`\\ 버튼을 클릭하여 현재 월에\\ :guilabel:`안"
+#~ "전 재고 목표`\\ 미만인 모든 제품에 대한 보충 주문을 생성합니다."
+
+#~ msgid ""
+#~ "Click the :guilabel:`Replenish` button on the right side of "
+#~ "the :guilabel:`+ Suggested Replenishment` row of a specific product, to "
+#~ "generate a replenishment order for that specific product."
+#~ msgstr ""
+#~ ":guilabel:`보충` 버튼은 특정 품목의 :guilabel:`+ 제안된 보충` 행 오른쪽에 "
+#~ "있으며, 해당 품목에 대한 보충 주문서가 생성됩니다."
+
+#~ msgid ""
+#~ "Tick the checkbox to the left of the product name of one or more "
+#~ "products. Then, click the :icon:`fa-cog` :guilabel:`Actions` button at "
+#~ "the top of the screen, and select :guilabel:`Replenish` from the "
+#~ "resulting drop-down menu. Doing so generates a replenishment order for "
+#~ "each selected product."
+#~ msgstr ""
+#~ "하나 이상의 품목에 대해 품목명 왼쪽에 있는 확인란에 표시합니다. 그런 다음 "
+#~ "화면 상단에 있는 :icon:`fa-cog` :guilabel:`활동` 버튼을 클릭하고 드롭다운 "
+#~ "메뉴가 표시되면 :guilabel:`보충` 을 선택합니다. 그러면 각 선택 품목에 대"
+#~ "한 보충 주문이 생성됩니다."
+
+#~ msgid ""
+#~ "The type of replenishment order generated corresponds to the route "
+#~ "selected on the *Inventory* tab of the product's form:"
+#~ msgstr ""
+#~ "생성되는 보충 주문 유형은 제품 양식의\\ *재고 관리*\\ 탭에서 선택한 경로"
+#~ "에 해당합니다:"
+
+#~ msgid ""
+#~ "If the *Buy* route is selected, an |RfQ| is generated to replenish the "
+#~ "product. |RfQs| can be selected by navigating to "
+#~ "the :menuselection:`Purchase` app. Any |RfQ| generated by the |MPS| "
+#~ "lists :guilabel:`MPS` in its :guilabel:`Source Document` field."
+#~ msgstr ""
+#~ "*구매* 경로를 선택하면 제품을 보충하기 위해 |RfQ| 가 생성됩니다. |RfQ| "
+#~ "는 :menuselection:`매입` 앱에서 선택할 수 있습니다. |MPS| 에서 생성된 모"
+#~ "든 |RfQ| :guilabel:`출처 문서` 에 :guilabel:`MPS` 가 표기합니다."
+
+#~ msgid ""
+#~ "If the *Manufacture* route is selected, an |MO| is generated to replenish "
+#~ "the product. |MOs| can be selected by navigating "
+#~ "to :menuselection:`Manufacturing app --> Operations --> Manufacturing "
+#~ "Orders`. Any |MO| generated by the |MPS| lists :guilabel:`MPS` in "
+#~ "its :guilabel:`Source Document` field."
+#~ msgstr ""
+#~ "*제조* 경로를 선택하면 제품을 보충하기 위해 |MO| 가 생성됩니다. |MO| "
+#~ "는 :menuselection:`제조 관리 앱 --> 운영 --> 제조지시서` 로 이동하여 선택"
+#~ "할 수 있습니다. |MPS| 에서 생성된 모든 |MO| 에는 :guilabel:`원본 문서` "
+#~ "에 :guilabel:`MPS` 가 기재되어 있습니다."
 
 #~ msgid ""
 #~ "In some cases, handling products in different units of measure is "

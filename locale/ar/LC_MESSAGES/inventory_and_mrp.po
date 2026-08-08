@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-31 17:31+0000\n"
+"POT-Creation-Date: 2026-08-07 17:32+0000\n"
 "PO-Revision-Date: 2026-07-06 12:18+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Arabic <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -208,6 +208,7 @@ msgstr "لوحة البيانات الخاصة بالباركود مع عملي�
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:22
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:17
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/byproducts.rst:21
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:45
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:17
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:26
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:17
@@ -36644,6 +36645,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:49
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:70
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:38
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:318
 msgid "Filters"
 msgstr "عوامل التصفية "
 
@@ -48988,654 +48990,625 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:16
 msgid ""
-"In Odoo's *Manufacturing* app, the *master production schedule* (MPS) is "
-"used to manually plan manufacturing orders (MOs) and purchase orders (POs), "
-"based on forecasted quantities of products and components."
+"In Odoo **Manufacturing**, the Master Production Schedule (MPS) is used to "
+"plan long-term replenishment for products against a manually-adjustable "
+"demand forecast. While Make-to-Order (MTO) strategies or reordering rules "
+"are useful for immediately replenishing stock, products or components with "
+"long lead times or variable seasonal demands may require longer-term "
+"planning against an expected future demand to ensure continued availability "
+"of stock."
 msgstr ""
-"في تطبيق *التصنيع* من Odoo، يُستخدم *جدول الإنتاج الرئيسي* (MPS) للتخطيط "
-"اليدوي لأوامر التصنيع (MOs) وأوامر الشراء (POs)، بناءً على الكميات المتوقعة "
-"من المنتجات والمكونات."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:20
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:22
 msgid ""
-"By considering the impact of confirmed |MOs| and |POs|, along with manually "
-"adjusted demand forecasts, the |MPS| can be used to manage long-term product "
-"replenishment. This ensures the continued availability of the necessary "
-"products and components."
+"With the |MPS|, users can plan replenishment for specific products over "
+"future time periods, generating suggested replenishment quantities based on "
+"forecasted demand and on user-specified stock targets."
 msgstr ""
-"من خلال النظر في تأثير |MOs| و|POs| المؤكدة، إلى جانب توقعات الطلب المعدلة "
-"يدويًا، يمكن استخدام |MPS| لإدارة إعادة تعبئة المنتجات على المدى الطويل. يضمن "
-"ذلك التوافر المستمر للمنتجات والمكونات اللازمة."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:24
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:27
 msgid ""
-"Since the |MPS| allows for manual intervention, it is useful for "
-"replenishing products where the demand of existing sales orders (SOs) does "
-"**not** reflect probable future demand."
+"Adding a product to the |MPS| does **not** automatically create a purchase "
+"or manufacturing order for it. The |MPS| only suggests the amount of product "
+"to be replenished, requiring the user to actually create the replenishing |"
+"POs|/|MOs|."
 msgstr ""
-"نظرًا لأن |MPS| يسمح بالتدخل اليدوي، فهو مفيد لإعادة تعبئة المنتجات حيث طلب "
-"أوامر المبيعات (SOs) الحالية **لا** يعكس الطلب المحتمل في المستقبل."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:28
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:31
+msgid ""
+"Because the |MPS| relies on manual replenishment, reordering rules should "
+"**not** be applied to products added to the |MPS|. Doing so creates "
+"inaccurate forecasts and unnecessary replenishment orders."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:36
 msgid ""
 "A retail store sells artificial *Christmas trees* during the holiday season. "
-"It is currently September, and the store has less than ten Christmas tree |"
-"MOs| confirmed for the month of December."
+"It is currently September and the store has fewer than ten Christmas tree |"
+"MOs| confirmed for the month of December. The procurement manager knows that "
+"the demand for Christmas trees peaks in December. As a result, they manually "
+"enter a greater demand in the |MPS| to properly replenish ahead of this "
+"future customer demand."
 msgstr ""
-"يبيع متجر تجزئة *أشجار عيد الميلاد* الاصطناعية خلال موسم الأعياد. نحن حاليًا "
-"في سبتمبر، ولدى المتجر أقل من عشرة |MOs| مؤكدة لأشجار عيد الميلاد لشهر "
-"ديسمبر."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:32
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:47
 msgid ""
-"Despite the number of confirmed |MOs|, the procurement manager knows that "
-"the demand for Christmas trees in December is going to be much higher, once "
-"the holiday season starts. As a result, they manually enter a greater demand "
-"in the |MPS|, so they can properly replenish the product in time for the "
-"increase in customer demand."
+"To use the |MPS|, the feature must first be enabled. Navigate "
+"to :menuselection:`Manufacturing app --> Configuration --> Settings` and "
+"select the :guilabel:`Master Production Schedule` checkbox in "
+"the :guilabel:`Planning` section."
 msgstr ""
-"على الرغم من عدد |MOs| المؤكدة، يعلم مدير المشتريات أن الطلب على أشجار عيد "
-"الميلاد في ديسمبر سيكون أعلى بكثير، بمجرد بدء موسم الأعياد. ونتيجة لذلك، "
-"يقوم بإدخال طلب أكبر يدويًا في |MPS|، حتى يتمكن من إعادة تعبئة المنتج بشكل "
-"صحيح في الوقت المناسب لزيادة طلب العملاء."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:38
-msgid ""
-"It is essential to remember that the |MPS| is a **MANUAL** tool. Adding a "
-"product to the |MPS| does not cause it to be manufactured or purchased "
-"automatically. The |MPS| simply suggests the amount of the product that "
-"should be replenished, but requires user input to create the |MOs| or |POs| "
-"that are used to replenish it."
-msgstr ""
-"من الضروري أن نتذكر أن |MPS| هو أداة **يدوية**. إضافة منتج إلى |MPS| لا تؤدي "
-"إلى تصنيعه أو شرائه تلقائيًا. يقترح |MPS| ببساطة كمية المنتج التي يجب إعادة "
-"تعبئتها، لكنه يتطلب إدخال المستخدم لإنشاء |MOs| أو |POs| التي تُستخدم لإعادة "
-"تعبئته."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:43
-msgid ""
-"For this reason, it is recommended that the |MPS| **NOT** be used alongside "
-"reordering rules for the same product. Because reordering rules are an "
-"automated workflow, they conflict with the manual replenishment method of |"
-"MPS|. Using both, in unison, can lead to inaccurate forecasts and the "
-"creation of unnecessary replenishment orders."
-msgstr ""
-"لهذا السبب، يُوصى بعدم استخدام |MPS| جنبًا إلى جنب مع قواعد إعادة الطلب لنفس "
-"المنتج. نظرًا لأن قواعد إعادة الطلب هي سير عمل تلقائي، فإنها تتعارض مع طريقة "
-"إعادة التعبئة اليدوية لـ |MPS|. استخدام كليهما معًا قد يؤدي إلى توقعات غير "
-"دقيقة وإنشاء أوامر إعادة تعبئة غير ضرورية."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:49
-msgid "Enable and configure |MPS|"
-msgstr "تفعيل وتكوين |MPS|"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:51
-msgid ""
-"To use the |MPS| feature, navigate to :menuselection:`Manufacturing app --> "
-"Configuration --> Settings`, and tick the :guilabel:`Master Production "
-"Schedule` checkbox in the :guilabel:`Planning` section. Finally, "
-"click :guilabel:`Save`."
+msgid "After enabling the feature, two new columns appear below:"
 msgstr ""
-"لاستخدام ميزة |MPS|، انتقل إلى :menuselection:`تطبيق التصنيع --> الإعدادات --"
-"> الإعدادات`، وفعّل خانة الاختيار :guilabel:`جدول الإنتاج الرئيسي` في "
-"قسم :guilabel:`التخطيط`. وأخيراً، انقر فوق :guilabel:`حفظ`."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:53
+msgid ""
+":guilabel:`Default Time Range`: Select the period of time over which the "
+"planning occurs, either on "
+"a :guilabel:`Yearly`, :guilabel:`Monthly`, :guilabel:`Weekly`, "
+"or :guilabel:`Daily` basis."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:55
 msgid ""
-"After enabling the :guilabel:`Master Production Schedule` feature, two new "
-"fields appear under it on the :guilabel:`Settings` page: :guilabel:`Time "
-"Range` and :guilabel:`Number of Columns`."
+":guilabel:`Number of Periods`: Specify the number of periods to display for "
+"each time range."
 msgstr ""
-"بعد تفعيل ميزة :guilabel:`جدول الإنتاج الرئيسي`، يظهر حقلان جديدان أسفلها في "
-"صفحة :guilabel:`الإعدادات`: :guilabel:`النطاق الزمني` و:guilabel:`عدد "
-"الأعمدة`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:58
 msgid ""
-"The :guilabel:`Time Range` field is used to select the period of time over "
-"which planning takes place, and offers three "
-"options: :guilabel:`Monthly`, :guilabel:`Weekly`, and :guilabel:`Daily`. For "
-"example, if :guilabel:`Monthly` is selected, the |MPS| plans the production "
-"requirements of products and components on a monthly basis."
+"If the :guilabel:`Default Time Range` field is set to :guilabel:`Monthly`, "
+"and the :guilabel:`Number of Periods` field is set to `12`, the |MPS| shows "
+"one column for each of the next 12 months, starting with the current month."
 msgstr ""
-"يُستخدم حقل :guilabel:`النطاق الزمني` لتحديد الفترة الزمنية التي يتم فيها "
-"التخطيط، ويقدم ثلاثة خيارات: :guilabel:`شهرياً`، :guilabel:`أسبوعياً`، "
-"و:guilabel:`يومياً`. على سبيل المثال، إذا تم اختيار :guilabel:`شهرياً`، فإن |"
-"MPS| يخطط لمتطلبات إنتاج المنتجات والمكونات على أساس شهري."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:63
-msgid ""
-"The :guilabel:`Number of Columns` field is used to specify the quantity of "
-"the selected :guilabel:`Time Range` units shown on the |MPS| page. For "
-"example, if the :guilabel:`Time Range` field is set to :guilabel:`Monthly`, "
-"and `12` is entered in the :guilabel:`Number of Columns` field, the |MPS| "
-"shows one column for the next 12 months, starting with the current month."
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:62
+msgid "Finally, click :guilabel:`Save` to load the changes."
 msgstr ""
-"يُستخدم حقل :guilabel:`عدد الأعمدة` لتحديد كمية وحدات :guilabel:`النطاق "
-"الزمني` المحددة المعروضة في صفحة |MPS|. على سبيل المثال، إذا تم تعيين "
-"حقل :guilabel:`النطاق الزمني` إلى :guilabel:`شهرياً`، وتم إدخال `12` في "
-"حقل :guilabel:`عدد الأعمدة`، فإن |MPS| يعرض عموداً واحداً للأشهر الـ 12 "
-"التالية، بدءاً من الشهر الحالي."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:68
-msgid ""
-"If the values of the :guilabel:`Time Range` or :guilabel:`Number of Columns` "
-"fields are altered, click :guilabel:`Save` again to save the changes."
-msgstr ""
-"في حال تغيير قيم حقول :guilabel:`النطاق الزمني` أو :guilabel:`عدد الأعمدة`، "
-"انقر فوق :guilabel:`حفظ` مرة أخرى لحفظ التغييرات."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:None
 msgid "The MPS setting in the Manufacturing app's settings."
 msgstr "إعداد جدول الإنتاج الرئيسي في إعدادات تطبيق التصنيع."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:75
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:70
 msgid "|MPS| dashboard"
 msgstr "لوحة بيانات |MPS|"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:77
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:72
 msgid ""
 "To open the |MPS|, navigate to :menuselection:`Manufacturing app --> "
-"Planning --> Master Production Schedule`. The |MPS| view appears as follows:"
+"Planning --> Master Production Schedule`. The |MPS| is arranged as a grid "
+"with the time periods represented as columns and each product :ref:`added to "
+"the MPS <manufacturing/mps/add-product>` as an individual grouping of rows."
 msgstr ""
-"لفتح |MPS|، انتقل إلى :menuselection:`تطبيق التصنيع --> التخطيط --> جدول "
-"الإنتاج الرئيسي`. تظهر واجهة |MPS| على النحو التالي:"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:76
+msgid "By default, the group of rows for each product includes the following:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:78
+msgid ""
+":guilabel:`[Product] by [Unit] - [Company]`: The header row with the name of "
+"the product, its unit of measure, and its company (if applicable). By "
+"default, cells in this row display the product's starting stock quantity at "
+"the beginning of each time period. Clicking the :guilabel:`[Product]` link "
+"opens the product's forecasted report."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:82
+msgid ""
+":guilabel:`- Forecasted Demand`: The user's estimated demand for the product "
+"during each time period. Cells in this row can be entered manually."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:84
+msgid ""
+":guilabel:`- Indirect Demand Forecast`: The forecasted demand for the "
+"component from existing |MOs|. This row **only** appears if the product is a "
+"component of another product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:86
+msgid ""
+":guilabel:`+ Replenishment`: The user-specified quantity of the product to "
+"be replenished through |MOs| or |POs|. Values in these cells are "
+"automatically suggested based on the *Safety Stock Targets* and "
+"replenishment minimums/maximums specified in the product's :ref:`schedule "
+"configurations <manufacturing/mps/add-product>`. However, users can also "
+"manually adjust these values. Clicking the :guilabel:`Order` button "
+"manually :ref:`replenishes <manufacturing/mps/replenish>` the product based "
+"on the quantity suggested or entered."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:92
+msgid ""
+":guilabel:`= Forecasted Stock`: The forecasted quantity of the product stock "
+"at the end of each time period, assuming that suggested replenishment "
+"numbers are fulfilled."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:95
+msgid ""
+":ref:`Additional rows and filters <manufacturing/mps/additional-rows-"
+"filters>` can be selected in their respective sections of "
+"the :guilabel:`Search...` bar drop-down menu at the top."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:99
+msgid ""
+"While the |MPS| can be used with only the default categories, it may be "
+"useful to enable the :guilabel:`Actual Demand` category in "
+"the :guilabel:`Search...` bar."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:102
+msgid ""
+"With the :guilabel:`Actual Demand` option enabled, the :guilabel:`- "
+"Forecasted Demand` category changes to the :guilabel:`- Actual / Forecasted "
+"Demand` category, displaying both the confirmed demand for the product based "
+"on confirmed |SOs| and the forecasted demand."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:None
 msgid "The Master Production Schedule in the Manufacturing app."
 msgstr "جدول الإنتاج الرئيسي في تطبيق التصنيع."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:83
-msgid ""
-"The grey column on the left side of the screen shows a section for every "
-"product added to the |MPS|, with each product section being broken down into "
-"smaller rows. The information shown in the rows depends on the filters "
-"selected in the :guilabel:`Search...` bar drop-down menu at the top of the "
-"page. The default categories that appear in the rows are:"
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:110
+msgid "Relationship between rows"
 msgstr ""
-"يعرض العمود الرمادي على الجانب الأيسر من الشاشة قسماً لكل منتج تمت إضافته إلى "
-"|MPS|، مع تقسيم كل قسم منتج إلى صفوف أصغر. تعتمد المعلومات المعروضة في "
-"الصفوف على الفلاتر المحددة في القائمة المنسدلة لشريط :guilabel:`بحث...` في "
-"أعلى الصفحة. الفئات الافتراضية التي تظهر في الصفوف هي:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:88
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:112
 msgid ""
-":guilabel:`[Product] by [unit]` :icon:`fa-area-chart`: the forecasted stock "
-"quantity at the beginning of each time period. :guilabel:`[Product]` "
-"and :icon:`fa-area-chart` are selectable buttons which open the product's "
-"page, or the forecast report for the product, respectively."
+"Together, the starting stock, :guilabel:`- Forecasted Demand`, :guilabel:`- "
+"Indirect Demand Forecast` (if applicable), :guilabel:`+ Replenishment`, "
+"and :guilabel:`= Forecasted Stock` values define the following relation:"
 msgstr ""
-":guilabel:`[المنتج] بـ [الوحدة]` :icon:`fa-area-chart`: كمية المخزون "
-"المتوقعة في بداية كل فترة زمنية. :guilabel:`[المنتج]` و:icon:`fa-area-chart` "
-"عبارة عن أزرار قابلة للنقر تفتح صفحة المنتج، أو تقرير التوقعات للمنتج، على "
-"التوالي."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:91
-msgid ""
-":guilabel:`- Forecasted Demand`: the demand forecast, which is entered "
-"manually. This represents an estimate of the demand for the product during "
-"each time period."
-msgstr ""
-":guilabel:`- الطلب المتوقع`: توقعات الطلب، والتي يتم إدخالها يدوياً. يمثل هذا "
-"تقديراً للطلب على المنتج خلال كل فترة زمنية."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:93
-msgid ""
-":guilabel:`- Indirect Demand Forecast`: while this is a default category, it "
-"**only** appears for products that are components of other products. It "
-"represents the demand for the component from existing MOs."
-msgstr ""
-":guilabel:`- توقعات الطلب غير المباشر`: بينما هذه فئة افتراضية، فإنها تظهر "
-"**فقط** للمنتجات التي تعد مكونات لمنتجات أخرى. إنها تمثل الطلب على المكون من "
-"أوامر التصنيع الحالية."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:96
-msgid ""
-":guilabel:`+ Suggested Replenishment`: the quantity of the product that is "
-"suggested to be replenished through |MOs| or |POs|. To the right of the "
-"category title is a :guilabel:`Replenish` button, which is used to manually "
-"replenish the product, based on the quantity suggested to be replenished."
-msgstr ""
-":guilabel:`+ التجديد المقترح`: كمية المنتج التي يُقترح تجديدها من خلال |MOs| "
-"أو |POs|. على يمين عنوان الفئة يوجد زر :guilabel:`تجديد`، والذي يُستخدم "
-"لتجديد المنتج يدوياً، بناءً على الكمية المقترح تجديدها."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:0
-msgid "The Replenish button on the \"+ Suggested Replenishment\" row."
-msgstr "زر \"تجديد\" في صف \"+ التجديد المقترح\"."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:104
-msgid "The \"Replenish\" button on the \"+ Suggested Replenishment\" row."
-msgstr "زر \"تجديد\" في صف \"+ التجديد المقترح\"."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:106
-msgid ""
-":guilabel:`= Forecasted Stock`: the quantity of the product forecasted to be "
-"in stock at the end of each time period, assuming that suggested "
-"replenishment numbers are fulfilled."
-msgstr ""
-":guilabel:`= المخزون المتوقع`: كمية المنتج المتوقع أن تكون في المخزون في "
-"نهاية كل فترة زمنية، بافتراض تلبية أرقام التجديد المقترحة."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:109
-msgid "Altogether, these default categories form an equation:"
-msgstr "معاً، تشكل هذه الفئات الافتراضية معادلة:"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:111
-msgid ""
-"\\text{Forecasted Demand} + \\text{Suggested Replenishment} = "
-"\\text{Forecasted Stock}\n"
-"\n"
-msgstr ""
-"\\text{Forecasted Demand} + \\text{Suggested Replenishment} = "
-"\\text{Forecasted Stock}\n"
-"\n"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:114
-msgid ""
-"In the case of components, the :guilabel:`Indirect Demand Forecast` is taken "
-"into account as well."
-msgstr ""
-"في حالة المكونات، يتم أخذ :guilabel:`توقعات الطلب غير المباشر` في الاعتبار "
-"أيضاً."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:116
 msgid ""
-"The :guilabel:`- Forecasted Demand` and :guilabel:`+ Suggested "
-"Replenishment` fields can be edited for any of the time periods to the right "
-"of the product column. Doing so changes the equation, and updates the value "
-"displayed in the :guilabel:`Forecasted Stock` field."
+"\\begin{align}\n"
+"\\text{Forecasted Stock} &= \\text{Starting Stock} \\\\\n"
+"&- \\text{Forecasted Demand} \\\\\n"
+"&- \\text{Indirect Demand Forecast} \\\\\n"
+"&+ \\text{Replenishment}\n"
+"\\end{align}"
 msgstr ""
-"يمكن تعديل حقلي :guilabel:`- الطلب المتوقع` و:guilabel:`+ التجديد المقترح` "
-"لأي من الفترات الزمنية على يمين عمود المنتج. يؤدي القيام بذلك إلى تغيير "
-"المعادلة، وتحديث القيمة المعروضة في حقل :guilabel:`المخزون المتوقع`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:120
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:125
 msgid ""
-"Changing the value in the :guilabel:`+ Suggested Replenishment` field also "
-"makes an :icon:`fa-times` :guilabel:`(reset)` button appear to the left of "
-"the field. Click the :icon:`fa-times` :guilabel:`(reset)` button next to the "
-"field to reset its value back to the one calculated by the |MPS|."
+"The :guilabel:`- Forecasted Demand` and :guilabel:`+ Replenishment` cells "
+"can be manually adjusted for any of the time periods. Doing so updates the "
+"value displayed in the :guilabel:`= Forecasted Stock` cells according to the "
+"equation. Correspondingly, the starting stock quantity of each subsequent "
+"time period is updated with the previous period's :guilabel:`= Forecasted "
+"Stock`."
 msgstr ""
-"يؤدي تغيير القيمة في حقل :guilabel:`+ التجديد المقترح` أيضًا إلى ظهور "
-"زر :icon:`fa-times` :guilabel:`(إعادة تعيين)` على يسار الحقل. انقر على "
-"زر :icon:`fa-times` :guilabel:`(إعادة تعيين)` بجوار الحقل لإعادة تعيين قيمته "
-"إلى القيمة المحسوبة بواسطة |MPS|."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:126
-msgid ""
-"While the |MPS| can be used with only the default categories enabled, it is "
-"advisable to also enable the :guilabel:`Actual Demand` category. This is "
-"done by clicking the :icon:`fa-caret-down` :guilabel:`(down arrow)` on the "
-"right side of the :guilabel:`Search...` bar, and enabling "
-"the :guilabel:`Actual Demand` option under the :guilabel:`Rows` header."
-msgstr ""
-"على الرغم من أنه يمكن استخدام |MPS| مع تمكين الفئات الافتراضية فقط، إلا أنه "
-"يُنصح أيضًا بتمكين فئة :guilabel:`الطلب الفعلي`. يتم ذلك بالنقر على :icon:`fa-"
-"caret-down` :guilabel:`(سهم لأسفل)` على الجانب الأيمن من "
-"شريط :guilabel:`البحث...`، وتمكين خيار :guilabel:`الطلب الفعلي` تحت "
-"عنوان :guilabel:`الصفوف`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:131
 msgid ""
-"With the :guilabel:`Actual Demand` option enabled, the :guilabel:`- "
-"Forecasted Demand` category changes to the :guilabel:`- Actual / Forecasted "
-"Demand` category. In addition to the manually entered forecasted demand, "
-"this category also displays the confirmed demand for the product, which is "
-"based on confirmed |SOs|."
+"Changing the value in the :guilabel:`+ Replenishment` cell highlights the "
+"value and displays an :icon:`fa-times` :guilabel:`(reset)` button next to "
+"the cell to reset it back to the default value calculated by the |MPS|."
 msgstr ""
-"مع تمكين خيار :guilabel:`الطلب الفعلي`، تتغير فئة :guilabel:`- الطلب "
-"المتوقع` إلى فئة :guilabel:`- الطلب الفعلي / المتوقع`. بالإضافة إلى الطلب "
-"المتوقع المدخل يدويًا، تعرض هذه الفئة أيضًا الطلب المؤكد للمنتج، والذي يستند "
-"إلى |SOs| المؤكدة."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:136
-msgid ""
-"Each column to the right of the products column lists one unit of the time "
-"period selected in the *Time Range* field on the *Manufacturing* app "
-"*Settings* page (ex. months). The number of time period columns corresponds "
-"to the value entered in the *Number of Columns* field."
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:138
+msgid "Adding products to |MPS|"
 msgstr ""
-"يسرد كل عمود على يمين عمود المنتجات وحدة واحدة من الفترة الزمنية المحددة في "
-"حقل *النطاق الزمني* في صفحة *الإعدادات* لتطبيق *التصنيع* (مثل الأشهر). "
-"يتوافق عدد أعمدة الفترات الزمنية مع القيمة المدخلة في حقل *عدد الأعمدة*."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:140
-msgid ""
-"The first time period column represents the current time period. For "
-"example, if the |MPS| is configured to use months, the first column displays "
-"data for the current month. On this first column, the :guilabel:`+ Suggested "
-"Replenishment` field appears in one of five colors:"
-msgstr ""
-"يمثل عمود الفترة الزمنية الأول الفترة الزمنية الحالية. على سبيل المثال، إذا "
-"تم تكوين |MPS| لاستخدام الأشهر، يعرض العمود الأول بيانات الشهر الحالي. في "
-"هذا العمود الأول، يظهر حقل :guilabel:`+ التجديد المقترح` بأحد خمسة ألوان:"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:144
-msgid ""
-":guilabel:`Green`: a replenishment order must be generated to keep stock at "
-"the :guilabel:`Safety Stock Target`, based on the configured :doc:`lead "
-"times <../../inventory/warehouses_storage/replenishment/lead_times>`."
-msgstr ""
-":guilabel:`أخضر`: يجب إنشاء طلب تجديد للحفاظ على المخزون عند :guilabel:`هدف "
-"المخزون الآمن`، بناءً على :doc:`المهل الزمنية <../../inventory/"
-"warehouses_storage/replenishment/lead_times>` المكونة."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:147
-msgid ""
-":guilabel:`Gray`: a replenishment order has already been generated to keep "
-"stock at the :guilabel:`Safety Stock Target`."
-msgstr ""
-":guilabel:`رمادي`: تم بالفعل إنشاء أمر تجديد للحفاظ على المخزون "
-"عند :guilabel:`هدف مخزون الأمان`."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:149
-msgid ""
-":guilabel:`Yellow`: a replenishment order has already been generated, but "
-"the quantity it was created for is not enough to keep stock at "
-"the :guilabel:`Safety Stock Target`."
-msgstr ""
-":guilabel:`أصفر`: تم بالفعل إنشاء أمر تجديد، ولكن الكمية التي تم إنشاؤه من "
-"أجلها ليست كافية للحفاظ على المخزون عند :guilabel:`هدف مخزون الأمان`."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:151
-msgid ""
-":guilabel:`Red`: a replenishment order has already been generated, but the "
-"quantity it was created for puts the amount of stock above "
-"the :guilabel:`Safety Stock Target`."
-msgstr ""
-":guilabel:`أحمر`: تم بالفعل إنشاء أمر تجديد، لكن الكمية التي تم إنشاؤها من "
-"أجلها تضع كمية المخزون فوق :guilabel:`هدف مخزون الأمان`."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:154
-msgid ""
-"The :guilabel:`+ Suggested Replenishment` field appears white, if no "
-"replenishment order has been generated, and it is not necessary to generate "
-"one at the current moment."
-msgstr ""
-"يظهر حقل :guilabel:`+ التجديد المقترح` باللون الأبيض، إذا لم يتم إنشاء أمر "
-"تجديد، وليس من الضروري إنشاء واحد في الوقت الحالي."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:158
-msgid "Add a product"
-msgstr "إضافة منتج"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:160
 msgid ""
 "To use |MPS| to manage the replenishment of a product, navigate "
 "to :menuselection:`Manufacturing app --> Planning --> Master Production "
 "Schedule`. At the top of the |MPS| page, click :guilabel:`Add a Product` to "
-"open the :guilabel:`Add a Product` pop-up window."
+"open the *Add a Product* pop-up window."
 msgstr ""
-"لاستخدام |MPS| لإدارة تجديد منتج، انتقل إلى :menuselection:`تطبيق التصنيع --"
-"> التخطيط --> جدول الإنتاج الرئيسي`. في أعلى صفحة |MPS|، انقر "
-"على :guilabel:`إضافة منتج` لفتح نافذة منبثقة :guilabel:`إضافة منتج`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:165
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:145
 msgid ""
 "Products **must** be properly configured to be replenished through the |MPS|."
 msgstr "**يجب** تكوين المنتجات بشكل صحيح ليتم تجديدها من خلال |MPS|."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:167
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:147
 msgid ""
-"In the case of manufactured products, the *Manufacture* route must be "
-"selected in the *Routes* section of the *Inventory* tab, on the product's "
-"form."
+"For manufactured products, the *Manufacture* route must be selected in the "
+"*Routes* section of the *Inventory* tab on the product's form."
 msgstr ""
-"في حالة المنتجات المصنعة، يجب تحديد مسار *التصنيع* في قسم *المسارات* في "
-"علامة التبويب *المخزون*، في نموذج المنتج."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:170
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:150
 msgid ""
-"In the case of products that are purchased, the *Buy* route must be selected "
-"in the *Routes* section of the *Inventory* tab, on the product's form. "
-"Additionally, a vendor and the price they sell the product for must also be "
-"specified on the *Purchase* tab."
+"For purchased products, the *Buy* route must be selected in the *Routes* "
+"section of the *Inventory* tab on the product's form. Additionally, "
+"a :ref:`vendor pricelist <purchase/manage_deals/vendor-pricelist>` must be "
+"configured on the *Purchase* tab."
 msgstr ""
-"في حالة المنتجات التي يتم شراؤها، يجب تحديد مسار *الشراء* في قسم *المسارات* "
-"في علامة التبويب *المخزون*، في نموذج المنتج. بالإضافة إلى ذلك، يجب أيضًا "
-"تحديد مورد والسعر الذي يبيع به المنتج في علامة التبويب *الشراء*."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:155
+msgid "Enter product details"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:157
+msgid ""
+"On the pop-up window, select the product to add in the :guilabel:`Product` "
+"drop-down menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:159
+msgid "Then, specify the following information about the product:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:161
+msgid ""
+":guilabel:`Indirect Demand`: Select this optional checkbox if the product "
+"can be hidden when the :guilabel:`To Forecast` filter is selected in "
+"the :guilabel:`Search...` bar drop-down menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:163
+msgid ""
+":guilabel:`Bill of Materials`: Select the product's |BoM| if the product is "
+"manufactured."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:164
+msgid ""
+":guilabel:`Route`: Select the replenishment route for the product (e.g., "
+"`Buy` for purchased products, `Manufacture` for manufactured products)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:166
+msgid ""
+":guilabel:`Vendor`: Select the vendor for the product. This field **only** "
+"appears if the :guilabel:`Buy` option was selected in the :guilabel:`Route` "
+"field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:168
+msgid ""
+":guilabel:`Batch Size`: Split |MOs| into orders of this quantity. This field "
+"**only** appears if the :guilabel:`Manufacture` option was selected in "
+"the :guilabel:`Route` field. Toggle the :guilabel:`No Batch Size` checkbox "
+"to enter a batch size, or leave it un-toggled if no batch size should be "
+"specified."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:174
 msgid ""
-"On the pop-up window, select the product to add in the :guilabel:`Product` "
-"drop-down menu. If the product is replenished through manufacturing, select "
-"the product's |BoM| in the :guilabel:`Bill of Materials` field."
+"Selecting a BoM when adding a product also adds any components listed on the "
+"BoM to the |MPS|. If it is not necessary to manage the replenishment of "
+"components through the |MPS|, leave the :guilabel:`Bill of Materials` field "
+"blank."
 msgstr ""
-"في النافذة المنبثقة، حدد المنتج المراد إضافته في القائمة "
-"المنسدلة :guilabel:`المنتج`. إذا تم تجديد المنتج من خلال التصنيع، حدد |BoM| "
-"الخاصة بالمنتج في حقل :guilabel:`قائمة المواد`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:179
-msgid ""
-"Selecting a BoM when adding a product to the |MPS| also adds any components "
-"listed on the BoM. If it is not necessary to manage the replenishment of "
-"components through the |MPS|, simply leave the :guilabel:`Bill of Materials` "
-"field blank."
-msgstr ""
-"يؤدي تحديد قائمة مواد عند إضافة منتج إلى |MPS| إلى إضافة أي مكونات مدرجة في "
-"قائمة المواد أيضًا. إذا لم يكن من الضروري إدارة تجديد المكونات من خلال |MPS|، "
-"فما عليك سوى ترك حقل :guilabel:`قائمة المواد` فارغًا."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:183
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:178
 msgid ""
 "If the database is configured with multiple warehouses, "
 "a :guilabel:`Production Warehouse` field appears on the :guilabel:`Add a "
-"Product` pop-up window. Use this field to specify which warehouse the "
-"product is replenished to."
+"Product` pop-up window to specify which warehouse the product is replenished "
+"to."
 msgstr ""
-"إذا تم تكوين قاعدة البيانات بمستودعات متعددة، يظهر حقل :guilabel:`مستودع "
-"الإنتاج` في نافذة :guilabel:`إضافة منتج` المنبثقة. استخدم هذا الحقل لتحديد "
-"المستودع الذي يتم تجديد المنتج إليه."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:187
-msgid ""
-"In the :guilabel:`Safety Stock Target` field, specify the minimum quantity "
-"of the product that should be kept available for orders at all times. For "
-"example, if there should always be 20 units of the product available for "
-"order fulfillment, enter `20` in the :guilabel:`Safety Stock Target` field."
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:183
+msgid "Enter product replenishment options"
 msgstr ""
-"في حقل :guilabel:`هدف مخزون الأمان`، حدد الحد الأدنى لكمية المنتج التي يجب "
-"الاحتفاظ بها متاحة للطلبات في جميع الأوقات. على سبيل المثال، إذا كان يجب أن "
-"يكون هناك دائمًا 20 وحدة من المنتج متاحة لتنفيذ الطلبات، أدخل `20` في "
-"حقل :guilabel:`هدف مخزون الأمان`."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:185
+msgid ""
+"Next, specify the product's replenishment options to configure how the |MPS| "
+"calculates suggested replenishment quantities for each product. Enter the "
+"following information:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:188
+msgid ""
+":guilabel:`Safety Stock Target`: Specify the minimum quantity of the product "
+"to be available across all time periods."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:190
+msgid ""
+":guilabel:`Minimum to Replenish`: Specify the minimum quantity of the "
+"product to replenish for each period."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:192
 msgid ""
-"In the :guilabel:`Minimum to Replenish` field, enter the minimum product "
-"quantity for orders created to replenish the product. For example, if `5` is "
-"entered in this field, replenishment orders for the product include a "
-"minimum of five units."
+":guilabel:`Maximum to Replenish`: Specify the maximum quantity of the "
+"product to replenish for each period. If the demand is higher than this "
+"maximum, the remaining quantity is automatically transferred to the next "
+"period. Toggle the :guilabel:`No Maximum` checkbox to enter a maximum value, "
+"or leave it un-toggled if no maximum should be specified."
 msgstr ""
-"في حقل :guilabel:`الحد الأدنى للتجديد`، أدخل الحد الأدنى لكمية المنتج "
-"للطلبات التي تم إنشاؤها لتجديد المنتج. على سبيل المثال، إذا تم إدخال `5` في "
-"هذا الحقل، تتضمن أوامر التجديد للمنتج حدًا أدنى من خمس وحدات."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:196
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:197
 msgid ""
-"In the :guilabel:`Maximum to Replenish` field, enter the maximum product "
-"quantity for orders created to replenish the product. For example, if `100` "
-"is entered in this field, replenishment orders for the product include a "
-"maximum of 100 units."
+"If no minimum or maximum replenishment limits are set, the |MPS| suggests "
+"the replenishment quantity needed to reach the :guilabel:`Safety Stock "
+"Target` while accounting for the starting stock and forecasted demand. In "
+"other words, the suggested quantity in the replenishment row is calculated "
+"by the following relation:"
 msgstr ""
-"في حقل :guilabel:`الحد الأقصى للتجديد`، أدخل الحد الأقصى لكمية المنتج "
-"للطلبات التي تم إنشاؤها لتجديد المنتج. على سبيل المثال، إذا تم إدخال `100` "
-"في هذا الحقل، تتضمن أوامر التجديد للمنتج حدًا أقصى من 100 وحدة."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:200
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:202
 msgid ""
-"Finally, click :guilabel:`Save` to add the product to the |MPS|. The product "
-"now appears on the |MPS| page each time it is opened. If a |BoM| was "
-"selected in the :guilabel:`Bill of Materials` field of the :guilabel:`Add a "
-"Product` pop-up window, any components listed on the |BoM| appear on the "
-"page, as well."
+"\\begin{align}\n"
+"\\text{Replenishment} &= \\text{Safety Stock Target} \\\\\n"
+"&- \\text{Starting Stock} \\\\\n"
+"&- \\text{Forecasted Demand} \\\\\n"
+"&- \\text{Indirect Demand Forecast}\n"
+"\\end{align}"
 msgstr ""
-"أخيرًا، انقر على :guilabel:`حفظ` لإضافة المنتج إلى |MPS|. يظهر المنتج الآن "
-"على صفحة |MPS| في كل مرة يتم فتحها. إذا تم تحديد |BoM| في "
-"حقل :guilabel:`قائمة المواد` في نافذة :guilabel:`إضافة منتج` المنبثقة، تظهر "
-"أيضًا أي مكونات مدرجة في |BoM| على الصفحة."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:211
+msgid ""
+"If minimum or maximum limits are set, the suggested replenishment quantity "
+"is always bounded by these limits, regardless of the needed quantity to "
+"reach the :guilabel:`Safety Stock Target`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:215
+msgid "Specify replenishment trigger"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:217
+msgid ""
+"Finally, in the :guilabel:`Replenishment Trigger` field, specify how the "
+"product should be replenished:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:220
+msgid ":guilabel:`Manual`: Manually replenish the product from the |MPS|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:221
+msgid ""
+":guilabel:`Automatic`: Automatically schedule a replenishment order for the "
+"product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:222
+msgid ":guilabel:`Never`: Never replenish the product from the |MPS|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:224
+msgid ""
+"Click :guilabel:`Save` to add the product to the |MPS|. The product now "
+"appears on the |MPS| page, along with any components (if applicable)."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:None
 msgid "The Add a Product pop-up window in the MPS."
 msgstr "نافذة إضافة منتج المنبثقة في جدول الإنتاج الرئيسي."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:209
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:231
 msgid "Edit a product"
 msgstr "تحرير منتج"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:211
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:233
 msgid ""
-"After adding a product to the |MPS|, it may be necessary to change the "
-"replenishment values entered on the :guilabel:`Add a Product` pop-up window. "
-"To do so, click the :guilabel:`# ≤…≤ #` button to the immediate right of "
-"the :guilabel:`Replenish` button, on the :guilabel:`+ Suggested "
-"Replenishment` row, below the product's name."
+"To edit the planning schedule for a product on the |MPS|, click "
+"the :icon:`fa-pencil` :guilabel:`(Forecasted)` button next to the product's "
+"header row."
 msgstr ""
-"بعد إضافة منتج إلى |MPS|، قد يكون من الضروري تغيير قيم التجديد التي تم "
-"إدخالها في النافذة المنبثقة :guilabel:`إضافة منتج`. للقيام بذلك، انقر فوق "
-"الزر :guilabel:`# ≤…≤ #` الموجود مباشرة على يمين الزر :guilabel:`تجديد`، في "
-"صف :guilabel:`+ التجديد المقترح`، أسفل اسم المنتج."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:217
-msgid ""
-"The first and second number displayed on the :guilabel:`# ≤…≤ #` button "
-"correspond to the values entered in the :guilabel:`Minimum to Replenish` "
-"and :guilabel:`Maximum to Replenish` fields when adding the product to the |"
-"MPS|."
-msgstr ""
-"يتوافق الرقمان الأول والثاني المعروضان على الزر :guilabel:`# ≤…≤ #` مع القيم "
-"المدخلة في حقلي :guilabel:`الحد الأدنى للتجديد` و :guilabel:`الحد الأقصى "
-"للتجديد` عند إضافة المنتج إلى |MPS|."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:221
-msgid ""
-"For example, if `5` was entered in the :guilabel:`Minimum to Replenish` "
-"field, and `100` was entered in the :guilabel:`Maximum to Replenish` field, "
-"the button appears as :guilabel:`5 ≤…≤ 100`."
-msgstr ""
-"على سبيل المثال، إذا تم إدخال `5` في حقل :guilabel:`الحد الأدنى للتجديد`، "
-"وتم إدخال `100` في حقل :guilabel:`الحد الأقصى للتجديد`، يظهر الزر "
-"كـ :guilabel:`5 ≤…≤ 100`."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:225
-msgid ""
-"Clicking the :guilabel:`# ≤…≤ #` button opens the :guilabel:`Edit Production "
-"Schedule` pop-up window. This pop-up window is the same as "
-"the :guilabel:`Add a Product` pop-up window, except that "
-"the :guilabel:`Product` and :guilabel:`Bill of Materials` fields cannot be "
-"edited."
-msgstr ""
-"يؤدي النقر فوق الزر :guilabel:`# ≤…≤ #` إلى فتح النافذة "
-"المنبثقة :guilabel:`تحرير جدول الإنتاج`. هذه النافذة المنبثقة هي نفسها "
-"النافذة المنبثقة :guilabel:`إضافة منتج`، باستثناء أنه لا يمكن تحرير "
-"حقلي :guilabel:`المنتج` و :guilabel:`قائمة المواد`."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:229
-msgid ""
-"On the :guilabel:`Edit Production Schedule` pop-up window, enter the desired "
-"values in the :guilabel:`Safety Stock Target`, :guilabel:`Minimum to "
-"Replenish`, and :guilabel:`Maximum to Replenish` fields. Then, "
-"click :guilabel:`Save` to save the changes."
-msgstr ""
-"في النافذة المنبثقة :guilabel:`تحرير جدول الإنتاج`، أدخل القيم المطلوبة في "
-"حقول :guilabel:`هدف المخزون الاحتياطي` و :guilabel:`الحد الأدنى للتجديد` "
-"و :guilabel:`الحد الأقصى للتجديد`. ثم، انقر فوق :guilabel:`حفظ` لحفظ "
-"التغييرات."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:234
-msgid "Remove a product"
-msgstr "إزالة منتج"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:236
 msgid ""
-"To remove a product from the |MPS|, tick the checkbox to the left of its "
-"name. Then, click the :icon:`fa-cog` :guilabel:`Actions` button at the top "
-"of the screen, and select :guilabel:`Delete` from the resulting drop-down "
-"menu. Finally, click :guilabel:`Ok` on the :guilabel:`Confirmation` pop-up "
-"window."
+"In the :guilabel:`Edit Production Schedule` pop-up window, enter the desired "
+"modifications. Then, click :guilabel:`Save` to save the changes."
 msgstr ""
-"لإزالة منتج من |MPS|، ضع علامة في مربع الاختيار على يسار اسمه. ثم، انقر فوق "
-"الزر :icon:`fa-cog` :guilabel:`إجراءات` في أعلى الشاشة، "
-"واختر :guilabel:`حذف` من القائمة المنسدلة الناتجة. أخيرًا، انقر "
-"فوق :guilabel:`موافق` في النافذة المنبثقة :guilabel:`تأكيد`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:241
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:240
 msgid ""
-"Deleting a product from the |MPS| removes it, along with all of its data. If "
-"the product is re-added, its replenishment values must be reconfigured."
+"The :guilabel:`Product` and :guilabel:`Bill of Materials` fields cannot be "
+"edited."
 msgstr ""
-"يؤدي حذف منتج من |MPS| إلى إزالته مع جميع بياناته. إذا تمت إعادة إضافة "
-"المنتج، يجب إعادة تكوين قيم التجديد الخاصة به."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:243
+msgid "Remove a product"
+msgstr "إزالة منتج"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:245
-msgid "|MPS| replenishment"
-msgstr "تجديد |MPS|"
+msgid ""
+"To remove a product from the |MPS|, select the checkbox next to its name. "
+"Then, click the :icon:`fa-cog` :guilabel:`Actions` button at the top of the "
+"screen, and select :guilabel:`Delete` from the drop-down menu. On "
+"the :guilabel:`Confirmation` pop-up window, click :guilabel:`Ok`."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:247
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:252
+msgid "Replenishing products with |MPS|"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:254
 msgid "Products in the |MPS| can be replenished in one of three ways:"
 msgstr "يمكن تجديد المنتجات في |MPS| بإحدى ثلاث طرق:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:249
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:256
 msgid ""
-"Click the :guilabel:`Replenish` button at the top of the screen to generate "
-"replenishment orders for every product below its :guilabel:`Safety Stock "
-"Target` for the current month."
+"To replenish every product for the current time period, click "
+"the :guilabel:`Order` button at the top."
 msgstr ""
-"انقر فوق الزر :guilabel:`تجديد` في أعلى الشاشة لإنشاء أوامر تجديد لكل منتج "
-"أقل من :guilabel:`هدف المخزون الاحتياطي` للشهر الحالي."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:251
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:258
 msgid ""
-"Click the :guilabel:`Replenish` button on the right side of the :guilabel:`+ "
-"Suggested Replenishment` row of a specific product, to generate a "
-"replenishment order for that specific product."
+"To replenish a specific product, click the :guilabel:`Order` button next to "
+"the :guilabel:`+ Replenishment` row of the product."
 msgstr ""
-"انقر فوق الزر :guilabel:`تجديد` على الجانب الأيمن من صف :guilabel:`+ التجديد "
-"المقترح` لمنتج معين، لإنشاء أمر تجديد لهذا المنتج المحدد."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:254
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:260
 msgid ""
-"Tick the checkbox to the left of the product name of one or more products. "
-"Then, click the :icon:`fa-cog` :guilabel:`Actions` button at the top of the "
-"screen, and select :guilabel:`Replenish` from the resulting drop-down menu. "
-"Doing so generates a replenishment order for each selected product."
+"To select and replenish multiple products, select the checkbox next to one "
+"or more products' header rows. Then, click the :icon:`fa-"
+"cog` :guilabel:`Actions` button at the top and select :guilabel:`Order` from "
+"the drop-down menu."
 msgstr ""
-"ضع علامة في مربع الاختيار على يسار اسم المنتج لمنتج واحد أو أكثر. ثم، انقر "
-"فوق الزر :icon:`fa-cog` :guilabel:`إجراءات` في أعلى الشاشة، "
-"واختر :guilabel:`تجديد` من القائمة المنسدلة الناتجة. يؤدي القيام بذلك إلى "
-"إنشاء أمر تجديد لكل منتج محدد."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:259
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:264
 msgid ""
-"The type of replenishment order generated corresponds to the route selected "
-"on the *Inventory* tab of the product's form:"
+"The type of replenishment order generated is determined by the route "
+"selected on the *Add a Product* pop-up window when :ref:`adding a product "
+"<manufacturing/mps/add-product>` to the |MPS|."
 msgstr ""
-"يتوافق نوع أمر التجديد الذي يتم إنشاؤه مع المسار المحدد في علامة التبويب "
-"*المخزون* في نموذج المنتج:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:262
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:267
 msgid ""
-"If the *Buy* route is selected, an |RfQ| is generated to replenish the "
-"product. |RfQs| can be selected by navigating to "
-"the :menuselection:`Purchase` app. Any |RfQ| generated by the |MPS| "
-"lists :guilabel:`MPS` in its :guilabel:`Source Document` field."
+"If the *Buy* route is selected, an |RfQ| is generated to purchase the "
+"product. Generated |RfQs| can be located by navigating "
+"to :menuselection:`Purchase app --> Orders --> Requests for Quotation`."
 msgstr ""
-"إذا تم تحديد مسار *الشراء*، يتم إنشاء |RfQ| لتجديد المنتج. يمكن تحديد |RfQs| "
-"بالانتقال إلى تطبيق :menuselection:`الشراء`. أي |RfQ| تم إنشاؤه بواسطة |MPS| "
-"يسرد :guilabel:`MPS` في حقل :guilabel:`المستند المصدر`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:265
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:270
 msgid ""
-"If the *Manufacture* route is selected, an |MO| is generated to replenish "
-"the product. |MOs| can be selected by navigating "
+"If the *Manufacture* route is selected, an |MO| is generated to manufacture "
+"the product. Generated |MOs| can be located by navigating "
 "to :menuselection:`Manufacturing app --> Operations --> Manufacturing "
-"Orders`. Any |MO| generated by the |MPS| lists :guilabel:`MPS` in "
-"its :guilabel:`Source Document` field."
+"Orders`."
 msgstr ""
-"إذا تم تحديد مسار *التصنيع*، يتم إنشاء |MO| لتجديد المنتج. يمكن تحديد |MOs| "
-"بالانتقال إلى :menuselection:`تطبيق التصنيع --> العمليات --> أوامر التصنيع`. "
-"أي |MO| تم إنشاؤه بواسطة |MPS| يسرد :guilabel:`MPS` في "
-"حقل :guilabel:`المستند المصدر`."
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:277
+msgid "Replenishment status indicators"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:279
+msgid ""
+"The :guilabel:`+ Replenishment` cells in the |MPS| are displayed using the "
+"following highlights, depending on whether the replenished quantities match "
+"the suggested quantities:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:282
+msgid ":guilabel:`Green`: The quantity is ready to be replenished."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:283
+msgid ""
+":guilabel:`Gray`: A replenishment order has already been generated, and its "
+"ordered quantity matches the suggested quantity for the time period."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:285
+msgid ""
+":guilabel:`Yellow`: A replenishment order has already been generated, but "
+"its ordered quantity is below the suggested quantity for the time period."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:287
+msgid ""
+":guilabel:`Red`: A replenishment order has already been generated, but its "
+"ordered quantity exceeds the suggested quantity for the time period."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:293
+msgid "Additional rows and filters"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:295
+msgid ""
+"With the :guilabel:`Search...` bar drop-down menu, users may further "
+"customize the |MPS| by configuring additional rows for products or by "
+"filtering existing records based on specific criteria."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:300
+msgid "Rows"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:302
+msgid ""
+"The following rows can be added to the |MPS| in addition to the default rows "
+"shown on the :ref:`dashboard <manufacturing/mps/dashboard>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:305
+msgid ""
+":guilabel:`Actual Demand`: Changes the :guilabel:`- Forecasted Demand` row "
+"to :guilabel:`- Actual / Forecasted Demand`, comparing the product's "
+"confirmed demand and its forecasted demand."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:307
+msgid ""
+":guilabel:`Actual Demand Y-1`: Displays the :guilabel:`Actual Demand` one "
+"year before the current time period."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:309
+msgid ""
+":guilabel:`Actual Demand Y-2`: Displays the :guilabel:`Actual Demand` two "
+"years before the current time period."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:311
+msgid ""
+":guilabel:`Actual Replenishment`: Changes the :guilabel:`+ Replenishment` "
+"row to :guilabel:`+ Actual / Replenishment`, comparing the product's "
+"replenished quantity and its suggested quantity."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:313
+msgid ""
+":guilabel:`Available to Promise`: Changes the :guilabel:`= Forecasted Stock` "
+"row to :guilabel:`= ATP / Forecasted Stock`, comparing the product's "
+"available stock (``Starting Stock - Actual Demand + Replenishment``) and its "
+"forecasted stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:320
+msgid ""
+"Users can filter records from the |MPS| based on the following criteria:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:322
+msgid ""
+":guilabel:`To Forecast`: Filter by products that are manually or "
+"automatically replenished."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:323
+msgid ""
+":guilabel:`To Replenish`: Filter by products that are ready to be "
+"replenished (i.e., with at least one :guilabel:`+ Replenishment` cell "
+"highlighted in green)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:325
+msgid ""
+":guilabel:`Indirect Demand`: Filter by products configured with the "
+"*Indirect Demand* option."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:326
+msgid ""
+":guilabel:`Replenishment Too Low`: Filter by products with a replenished "
+"quantity below the suggested replenishment quantity (i.e., with at least "
+"one :guilabel:`+ Replenishment` cell highlighted in yellow)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:329
+msgid ""
+":guilabel:`Replenishment Too High`: Filter by products with a replenished "
+"quantity above the suggested replenishment quantity (i.e., with at least "
+"one :guilabel:`+ Replenishment` cell highlighted in red)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:332
+msgid ""
+":guilabel:`Manually Replenished`: Filter by products with the *Replenishment "
+"Trigger* set to *Manual*."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:334
+msgid ""
+":guilabel:`Automatically Replenished`: Filter by products with the "
+"*Replenishment Trigger* set to *Automatic*."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:336
+msgid ""
+":guilabel:`Not Replenished from MPS`: Filter by products with the "
+"*Replenishment Trigger* set to *Never*."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:3
 msgid "Work center time off"
@@ -59359,6 +59332,577 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "In Odoo's *Manufacturing* app, the *master production schedule* (MPS) is "
+#~ "used to manually plan manufacturing orders (MOs) and purchase orders "
+#~ "(POs), based on forecasted quantities of products and components."
+#~ msgstr ""
+#~ "في تطبيق *التصنيع* من Odoo، يُستخدم *جدول الإنتاج الرئيسي* (MPS) للتخطيط "
+#~ "اليدوي لأوامر التصنيع (MOs) وأوامر الشراء (POs)، بناءً على الكميات "
+#~ "المتوقعة من المنتجات والمكونات."
+
+#~ msgid ""
+#~ "By considering the impact of confirmed |MOs| and |POs|, along with "
+#~ "manually adjusted demand forecasts, the |MPS| can be used to manage long-"
+#~ "term product replenishment. This ensures the continued availability of "
+#~ "the necessary products and components."
+#~ msgstr ""
+#~ "من خلال النظر في تأثير |MOs| و|POs| المؤكدة، إلى جانب توقعات الطلب "
+#~ "المعدلة يدويًا، يمكن استخدام |MPS| لإدارة إعادة تعبئة المنتجات على المدى "
+#~ "الطويل. يضمن ذلك التوافر المستمر للمنتجات والمكونات اللازمة."
+
+#~ msgid ""
+#~ "Since the |MPS| allows for manual intervention, it is useful for "
+#~ "replenishing products where the demand of existing sales orders (SOs) "
+#~ "does **not** reflect probable future demand."
+#~ msgstr ""
+#~ "نظرًا لأن |MPS| يسمح بالتدخل اليدوي، فهو مفيد لإعادة تعبئة المنتجات حيث "
+#~ "طلب أوامر المبيعات (SOs) الحالية **لا** يعكس الطلب المحتمل في المستقبل."
+
+#~ msgid ""
+#~ "A retail store sells artificial *Christmas trees* during the holiday "
+#~ "season. It is currently September, and the store has less than ten "
+#~ "Christmas tree |MOs| confirmed for the month of December."
+#~ msgstr ""
+#~ "يبيع متجر تجزئة *أشجار عيد الميلاد* الاصطناعية خلال موسم الأعياد. نحن "
+#~ "حاليًا في سبتمبر، ولدى المتجر أقل من عشرة |MOs| مؤكدة لأشجار عيد الميلاد "
+#~ "لشهر ديسمبر."
+
+#~ msgid ""
+#~ "Despite the number of confirmed |MOs|, the procurement manager knows that "
+#~ "the demand for Christmas trees in December is going to be much higher, "
+#~ "once the holiday season starts. As a result, they manually enter a "
+#~ "greater demand in the |MPS|, so they can properly replenish the product "
+#~ "in time for the increase in customer demand."
+#~ msgstr ""
+#~ "على الرغم من عدد |MOs| المؤكدة، يعلم مدير المشتريات أن الطلب على أشجار "
+#~ "عيد الميلاد في ديسمبر سيكون أعلى بكثير، بمجرد بدء موسم الأعياد. ونتيجة "
+#~ "لذلك، يقوم بإدخال طلب أكبر يدويًا في |MPS|، حتى يتمكن من إعادة تعبئة "
+#~ "المنتج بشكل صحيح في الوقت المناسب لزيادة طلب العملاء."
+
+#~ msgid ""
+#~ "It is essential to remember that the |MPS| is a **MANUAL** tool. Adding a "
+#~ "product to the |MPS| does not cause it to be manufactured or purchased "
+#~ "automatically. The |MPS| simply suggests the amount of the product that "
+#~ "should be replenished, but requires user input to create the |MOs| or |"
+#~ "POs| that are used to replenish it."
+#~ msgstr ""
+#~ "من الضروري أن نتذكر أن |MPS| هو أداة **يدوية**. إضافة منتج إلى |MPS| لا "
+#~ "تؤدي إلى تصنيعه أو شرائه تلقائيًا. يقترح |MPS| ببساطة كمية المنتج التي يجب "
+#~ "إعادة تعبئتها، لكنه يتطلب إدخال المستخدم لإنشاء |MOs| أو |POs| التي "
+#~ "تُستخدم لإعادة تعبئته."
+
+#~ msgid ""
+#~ "For this reason, it is recommended that the |MPS| **NOT** be used "
+#~ "alongside reordering rules for the same product. Because reordering rules "
+#~ "are an automated workflow, they conflict with the manual replenishment "
+#~ "method of |MPS|. Using both, in unison, can lead to inaccurate forecasts "
+#~ "and the creation of unnecessary replenishment orders."
+#~ msgstr ""
+#~ "لهذا السبب، يُوصى بعدم استخدام |MPS| جنبًا إلى جنب مع قواعد إعادة الطلب "
+#~ "لنفس المنتج. نظرًا لأن قواعد إعادة الطلب هي سير عمل تلقائي، فإنها تتعارض "
+#~ "مع طريقة إعادة التعبئة اليدوية لـ |MPS|. استخدام كليهما معًا قد يؤدي إلى "
+#~ "توقعات غير دقيقة وإنشاء أوامر إعادة تعبئة غير ضرورية."
+
+#~ msgid "Enable and configure |MPS|"
+#~ msgstr "تفعيل وتكوين |MPS|"
+
+#~ msgid ""
+#~ "To use the |MPS| feature, navigate to :menuselection:`Manufacturing app --"
+#~ "> Configuration --> Settings`, and tick the :guilabel:`Master Production "
+#~ "Schedule` checkbox in the :guilabel:`Planning` section. Finally, "
+#~ "click :guilabel:`Save`."
+#~ msgstr ""
+#~ "لاستخدام ميزة |MPS|، انتقل إلى :menuselection:`تطبيق التصنيع --> "
+#~ "الإعدادات --> الإعدادات`، وفعّل خانة الاختيار :guilabel:`جدول الإنتاج "
+#~ "الرئيسي` في قسم :guilabel:`التخطيط`. وأخيراً، انقر فوق :guilabel:`حفظ`."
+
+#~ msgid ""
+#~ "After enabling the :guilabel:`Master Production Schedule` feature, two "
+#~ "new fields appear under it on the :guilabel:`Settings` "
+#~ "page: :guilabel:`Time Range` and :guilabel:`Number of Columns`."
+#~ msgstr ""
+#~ "بعد تفعيل ميزة :guilabel:`جدول الإنتاج الرئيسي`، يظهر حقلان جديدان أسفلها "
+#~ "في صفحة :guilabel:`الإعدادات`: :guilabel:`النطاق الزمني` و:guilabel:`عدد "
+#~ "الأعمدة`."
+
+#~ msgid ""
+#~ "The :guilabel:`Time Range` field is used to select the period of time "
+#~ "over which planning takes place, and offers three "
+#~ "options: :guilabel:`Monthly`, :guilabel:`Weekly`, and :guilabel:`Daily`. "
+#~ "For example, if :guilabel:`Monthly` is selected, the |MPS| plans the "
+#~ "production requirements of products and components on a monthly basis."
+#~ msgstr ""
+#~ "يُستخدم حقل :guilabel:`النطاق الزمني` لتحديد الفترة الزمنية التي يتم فيها "
+#~ "التخطيط، ويقدم ثلاثة خيارات: :guilabel:`شهرياً`، :guilabel:`أسبوعياً`، "
+#~ "و:guilabel:`يومياً`. على سبيل المثال، إذا تم اختيار :guilabel:`شهرياً`، فإن "
+#~ "|MPS| يخطط لمتطلبات إنتاج المنتجات والمكونات على أساس شهري."
+
+#~ msgid ""
+#~ "The :guilabel:`Number of Columns` field is used to specify the quantity "
+#~ "of the selected :guilabel:`Time Range` units shown on the |MPS| page. For "
+#~ "example, if the :guilabel:`Time Range` field is set "
+#~ "to :guilabel:`Monthly`, and `12` is entered in the :guilabel:`Number of "
+#~ "Columns` field, the |MPS| shows one column for the next 12 months, "
+#~ "starting with the current month."
+#~ msgstr ""
+#~ "يُستخدم حقل :guilabel:`عدد الأعمدة` لتحديد كمية وحدات :guilabel:`النطاق "
+#~ "الزمني` المحددة المعروضة في صفحة |MPS|. على سبيل المثال، إذا تم تعيين "
+#~ "حقل :guilabel:`النطاق الزمني` إلى :guilabel:`شهرياً`، وتم إدخال `12` في "
+#~ "حقل :guilabel:`عدد الأعمدة`، فإن |MPS| يعرض عموداً واحداً للأشهر الـ 12 "
+#~ "التالية، بدءاً من الشهر الحالي."
+
+#~ msgid ""
+#~ "If the values of the :guilabel:`Time Range` or :guilabel:`Number of "
+#~ "Columns` fields are altered, click :guilabel:`Save` again to save the "
+#~ "changes."
+#~ msgstr ""
+#~ "في حال تغيير قيم حقول :guilabel:`النطاق الزمني` أو :guilabel:`عدد "
+#~ "الأعمدة`، انقر فوق :guilabel:`حفظ` مرة أخرى لحفظ التغييرات."
+
+#~ msgid ""
+#~ "To open the |MPS|, navigate to :menuselection:`Manufacturing app --> "
+#~ "Planning --> Master Production Schedule`. The |MPS| view appears as "
+#~ "follows:"
+#~ msgstr ""
+#~ "لفتح |MPS|، انتقل إلى :menuselection:`تطبيق التصنيع --> التخطيط --> جدول "
+#~ "الإنتاج الرئيسي`. تظهر واجهة |MPS| على النحو التالي:"
+
+#~ msgid ""
+#~ "The grey column on the left side of the screen shows a section for every "
+#~ "product added to the |MPS|, with each product section being broken down "
+#~ "into smaller rows. The information shown in the rows depends on the "
+#~ "filters selected in the :guilabel:`Search...` bar drop-down menu at the "
+#~ "top of the page. The default categories that appear in the rows are:"
+#~ msgstr ""
+#~ "يعرض العمود الرمادي على الجانب الأيسر من الشاشة قسماً لكل منتج تمت إضافته "
+#~ "إلى |MPS|، مع تقسيم كل قسم منتج إلى صفوف أصغر. تعتمد المعلومات المعروضة "
+#~ "في الصفوف على الفلاتر المحددة في القائمة المنسدلة "
+#~ "لشريط :guilabel:`بحث...` في أعلى الصفحة. الفئات الافتراضية التي تظهر في "
+#~ "الصفوف هي:"
+
+#~ msgid ""
+#~ ":guilabel:`[Product] by [unit]` :icon:`fa-area-chart`: the forecasted "
+#~ "stock quantity at the beginning of each time "
+#~ "period. :guilabel:`[Product]` and :icon:`fa-area-chart` are selectable "
+#~ "buttons which open the product's page, or the forecast report for the "
+#~ "product, respectively."
+#~ msgstr ""
+#~ ":guilabel:`[المنتج] بـ [الوحدة]` :icon:`fa-area-chart`: كمية المخزون "
+#~ "المتوقعة في بداية كل فترة زمنية. :guilabel:`[المنتج]` و:icon:`fa-area-"
+#~ "chart` عبارة عن أزرار قابلة للنقر تفتح صفحة المنتج، أو تقرير التوقعات "
+#~ "للمنتج، على التوالي."
+
+#~ msgid ""
+#~ ":guilabel:`- Forecasted Demand`: the demand forecast, which is entered "
+#~ "manually. This represents an estimate of the demand for the product "
+#~ "during each time period."
+#~ msgstr ""
+#~ ":guilabel:`- الطلب المتوقع`: توقعات الطلب، والتي يتم إدخالها يدوياً. يمثل "
+#~ "هذا تقديراً للطلب على المنتج خلال كل فترة زمنية."
+
+#~ msgid ""
+#~ ":guilabel:`- Indirect Demand Forecast`: while this is a default category, "
+#~ "it **only** appears for products that are components of other products. "
+#~ "It represents the demand for the component from existing MOs."
+#~ msgstr ""
+#~ ":guilabel:`- توقعات الطلب غير المباشر`: بينما هذه فئة افتراضية، فإنها "
+#~ "تظهر **فقط** للمنتجات التي تعد مكونات لمنتجات أخرى. إنها تمثل الطلب على "
+#~ "المكون من أوامر التصنيع الحالية."
+
+#~ msgid ""
+#~ ":guilabel:`+ Suggested Replenishment`: the quantity of the product that "
+#~ "is suggested to be replenished through |MOs| or |POs|. To the right of "
+#~ "the category title is a :guilabel:`Replenish` button, which is used to "
+#~ "manually replenish the product, based on the quantity suggested to be "
+#~ "replenished."
+#~ msgstr ""
+#~ ":guilabel:`+ التجديد المقترح`: كمية المنتج التي يُقترح تجديدها من خلال |"
+#~ "MOs| أو |POs|. على يمين عنوان الفئة يوجد زر :guilabel:`تجديد`، والذي "
+#~ "يُستخدم لتجديد المنتج يدوياً، بناءً على الكمية المقترح تجديدها."
+
+#~ msgid "The Replenish button on the \"+ Suggested Replenishment\" row."
+#~ msgstr "زر \"تجديد\" في صف \"+ التجديد المقترح\"."
+
+#~ msgid "The \"Replenish\" button on the \"+ Suggested Replenishment\" row."
+#~ msgstr "زر \"تجديد\" في صف \"+ التجديد المقترح\"."
+
+#~ msgid ""
+#~ ":guilabel:`= Forecasted Stock`: the quantity of the product forecasted to "
+#~ "be in stock at the end of each time period, assuming that suggested "
+#~ "replenishment numbers are fulfilled."
+#~ msgstr ""
+#~ ":guilabel:`= المخزون المتوقع`: كمية المنتج المتوقع أن تكون في المخزون في "
+#~ "نهاية كل فترة زمنية، بافتراض تلبية أرقام التجديد المقترحة."
+
+#~ msgid "Altogether, these default categories form an equation:"
+#~ msgstr "معاً، تشكل هذه الفئات الافتراضية معادلة:"
+
+#~ msgid ""
+#~ "\\text{Forecasted Demand} + \\text{Suggested Replenishment} = "
+#~ "\\text{Forecasted Stock}\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\\text{Forecasted Demand} + \\text{Suggested Replenishment} = "
+#~ "\\text{Forecasted Stock}\n"
+#~ "\n"
+
+#~ msgid ""
+#~ "In the case of components, the :guilabel:`Indirect Demand Forecast` is "
+#~ "taken into account as well."
+#~ msgstr ""
+#~ "في حالة المكونات، يتم أخذ :guilabel:`توقعات الطلب غير المباشر` في "
+#~ "الاعتبار أيضاً."
+
+#~ msgid ""
+#~ "The :guilabel:`- Forecasted Demand` and :guilabel:`+ Suggested "
+#~ "Replenishment` fields can be edited for any of the time periods to the "
+#~ "right of the product column. Doing so changes the equation, and updates "
+#~ "the value displayed in the :guilabel:`Forecasted Stock` field."
+#~ msgstr ""
+#~ "يمكن تعديل حقلي :guilabel:`- الطلب المتوقع` و:guilabel:`+ التجديد "
+#~ "المقترح` لأي من الفترات الزمنية على يمين عمود المنتج. يؤدي القيام بذلك "
+#~ "إلى تغيير المعادلة، وتحديث القيمة المعروضة في حقل :guilabel:`المخزون "
+#~ "المتوقع`."
+
+#~ msgid ""
+#~ "Changing the value in the :guilabel:`+ Suggested Replenishment` field "
+#~ "also makes an :icon:`fa-times` :guilabel:`(reset)` button appear to the "
+#~ "left of the field. Click the :icon:`fa-times` :guilabel:`(reset)` button "
+#~ "next to the field to reset its value back to the one calculated by the |"
+#~ "MPS|."
+#~ msgstr ""
+#~ "يؤدي تغيير القيمة في حقل :guilabel:`+ التجديد المقترح` أيضًا إلى ظهور "
+#~ "زر :icon:`fa-times` :guilabel:`(إعادة تعيين)` على يسار الحقل. انقر على "
+#~ "زر :icon:`fa-times` :guilabel:`(إعادة تعيين)` بجوار الحقل لإعادة تعيين "
+#~ "قيمته إلى القيمة المحسوبة بواسطة |MPS|."
+
+#~ msgid ""
+#~ "While the |MPS| can be used with only the default categories enabled, it "
+#~ "is advisable to also enable the :guilabel:`Actual Demand` category. This "
+#~ "is done by clicking the :icon:`fa-caret-down` :guilabel:`(down arrow)` on "
+#~ "the right side of the :guilabel:`Search...` bar, and enabling "
+#~ "the :guilabel:`Actual Demand` option under the :guilabel:`Rows` header."
+#~ msgstr ""
+#~ "على الرغم من أنه يمكن استخدام |MPS| مع تمكين الفئات الافتراضية فقط، إلا "
+#~ "أنه يُنصح أيضًا بتمكين فئة :guilabel:`الطلب الفعلي`. يتم ذلك بالنقر "
+#~ "على :icon:`fa-caret-down` :guilabel:`(سهم لأسفل)` على الجانب الأيمن من "
+#~ "شريط :guilabel:`البحث...`، وتمكين خيار :guilabel:`الطلب الفعلي` تحت "
+#~ "عنوان :guilabel:`الصفوف`."
+
+#~ msgid ""
+#~ "With the :guilabel:`Actual Demand` option enabled, the :guilabel:`- "
+#~ "Forecasted Demand` category changes to the :guilabel:`- Actual / "
+#~ "Forecasted Demand` category. In addition to the manually entered "
+#~ "forecasted demand, this category also displays the confirmed demand for "
+#~ "the product, which is based on confirmed |SOs|."
+#~ msgstr ""
+#~ "مع تمكين خيار :guilabel:`الطلب الفعلي`، تتغير فئة :guilabel:`- الطلب "
+#~ "المتوقع` إلى فئة :guilabel:`- الطلب الفعلي / المتوقع`. بالإضافة إلى الطلب "
+#~ "المتوقع المدخل يدويًا، تعرض هذه الفئة أيضًا الطلب المؤكد للمنتج، والذي "
+#~ "يستند إلى |SOs| المؤكدة."
+
+#~ msgid ""
+#~ "Each column to the right of the products column lists one unit of the "
+#~ "time period selected in the *Time Range* field on the *Manufacturing* app "
+#~ "*Settings* page (ex. months). The number of time period columns "
+#~ "corresponds to the value entered in the *Number of Columns* field."
+#~ msgstr ""
+#~ "يسرد كل عمود على يمين عمود المنتجات وحدة واحدة من الفترة الزمنية المحددة "
+#~ "في حقل *النطاق الزمني* في صفحة *الإعدادات* لتطبيق *التصنيع* (مثل الأشهر). "
+#~ "يتوافق عدد أعمدة الفترات الزمنية مع القيمة المدخلة في حقل *عدد الأعمدة*."
+
+#~ msgid ""
+#~ "The first time period column represents the current time period. For "
+#~ "example, if the |MPS| is configured to use months, the first column "
+#~ "displays data for the current month. On this first column, "
+#~ "the :guilabel:`+ Suggested Replenishment` field appears in one of five "
+#~ "colors:"
+#~ msgstr ""
+#~ "يمثل عمود الفترة الزمنية الأول الفترة الزمنية الحالية. على سبيل المثال، "
+#~ "إذا تم تكوين |MPS| لاستخدام الأشهر، يعرض العمود الأول بيانات الشهر "
+#~ "الحالي. في هذا العمود الأول، يظهر حقل :guilabel:`+ التجديد المقترح` بأحد "
+#~ "خمسة ألوان:"
+
+#~ msgid ""
+#~ ":guilabel:`Green`: a replenishment order must be generated to keep stock "
+#~ "at the :guilabel:`Safety Stock Target`, based on the "
+#~ "configured :doc:`lead times <../../inventory/warehouses_storage/"
+#~ "replenishment/lead_times>`."
+#~ msgstr ""
+#~ ":guilabel:`أخضر`: يجب إنشاء طلب تجديد للحفاظ على المخزون "
+#~ "عند :guilabel:`هدف المخزون الآمن`، بناءً على :doc:`المهل الزمنية <../../"
+#~ "inventory/warehouses_storage/replenishment/lead_times>` المكونة."
+
+#~ msgid ""
+#~ ":guilabel:`Gray`: a replenishment order has already been generated to "
+#~ "keep stock at the :guilabel:`Safety Stock Target`."
+#~ msgstr ""
+#~ ":guilabel:`رمادي`: تم بالفعل إنشاء أمر تجديد للحفاظ على المخزون "
+#~ "عند :guilabel:`هدف مخزون الأمان`."
+
+#~ msgid ""
+#~ ":guilabel:`Yellow`: a replenishment order has already been generated, but "
+#~ "the quantity it was created for is not enough to keep stock at "
+#~ "the :guilabel:`Safety Stock Target`."
+#~ msgstr ""
+#~ ":guilabel:`أصفر`: تم بالفعل إنشاء أمر تجديد، ولكن الكمية التي تم إنشاؤه "
+#~ "من أجلها ليست كافية للحفاظ على المخزون عند :guilabel:`هدف مخزون الأمان`."
+
+#~ msgid ""
+#~ ":guilabel:`Red`: a replenishment order has already been generated, but "
+#~ "the quantity it was created for puts the amount of stock above "
+#~ "the :guilabel:`Safety Stock Target`."
+#~ msgstr ""
+#~ ":guilabel:`أحمر`: تم بالفعل إنشاء أمر تجديد، لكن الكمية التي تم إنشاؤها "
+#~ "من أجلها تضع كمية المخزون فوق :guilabel:`هدف مخزون الأمان`."
+
+#~ msgid ""
+#~ "The :guilabel:`+ Suggested Replenishment` field appears white, if no "
+#~ "replenishment order has been generated, and it is not necessary to "
+#~ "generate one at the current moment."
+#~ msgstr ""
+#~ "يظهر حقل :guilabel:`+ التجديد المقترح` باللون الأبيض، إذا لم يتم إنشاء "
+#~ "أمر تجديد، وليس من الضروري إنشاء واحد في الوقت الحالي."
+
+#~ msgid "Add a product"
+#~ msgstr "إضافة منتج"
+
+#~ msgid ""
+#~ "To use |MPS| to manage the replenishment of a product, navigate "
+#~ "to :menuselection:`Manufacturing app --> Planning --> Master Production "
+#~ "Schedule`. At the top of the |MPS| page, click :guilabel:`Add a Product` "
+#~ "to open the :guilabel:`Add a Product` pop-up window."
+#~ msgstr ""
+#~ "لاستخدام |MPS| لإدارة تجديد منتج، انتقل إلى :menuselection:`تطبيق التصنيع "
+#~ "--> التخطيط --> جدول الإنتاج الرئيسي`. في أعلى صفحة |MPS|، انقر "
+#~ "على :guilabel:`إضافة منتج` لفتح نافذة منبثقة :guilabel:`إضافة منتج`."
+
+#~ msgid ""
+#~ "In the case of manufactured products, the *Manufacture* route must be "
+#~ "selected in the *Routes* section of the *Inventory* tab, on the product's "
+#~ "form."
+#~ msgstr ""
+#~ "في حالة المنتجات المصنعة، يجب تحديد مسار *التصنيع* في قسم *المسارات* في "
+#~ "علامة التبويب *المخزون*، في نموذج المنتج."
+
+#~ msgid ""
+#~ "In the case of products that are purchased, the *Buy* route must be "
+#~ "selected in the *Routes* section of the *Inventory* tab, on the product's "
+#~ "form. Additionally, a vendor and the price they sell the product for must "
+#~ "also be specified on the *Purchase* tab."
+#~ msgstr ""
+#~ "في حالة المنتجات التي يتم شراؤها، يجب تحديد مسار *الشراء* في قسم "
+#~ "*المسارات* في علامة التبويب *المخزون*، في نموذج المنتج. بالإضافة إلى ذلك، "
+#~ "يجب أيضًا تحديد مورد والسعر الذي يبيع به المنتج في علامة التبويب *الشراء*."
+
+#~ msgid ""
+#~ "On the pop-up window, select the product to add in "
+#~ "the :guilabel:`Product` drop-down menu. If the product is replenished "
+#~ "through manufacturing, select the product's |BoM| in the :guilabel:`Bill "
+#~ "of Materials` field."
+#~ msgstr ""
+#~ "في النافذة المنبثقة، حدد المنتج المراد إضافته في القائمة "
+#~ "المنسدلة :guilabel:`المنتج`. إذا تم تجديد المنتج من خلال التصنيع، حدد |"
+#~ "BoM| الخاصة بالمنتج في حقل :guilabel:`قائمة المواد`."
+
+#~ msgid ""
+#~ "Selecting a BoM when adding a product to the |MPS| also adds any "
+#~ "components listed on the BoM. If it is not necessary to manage the "
+#~ "replenishment of components through the |MPS|, simply leave "
+#~ "the :guilabel:`Bill of Materials` field blank."
+#~ msgstr ""
+#~ "يؤدي تحديد قائمة مواد عند إضافة منتج إلى |MPS| إلى إضافة أي مكونات مدرجة "
+#~ "في قائمة المواد أيضًا. إذا لم يكن من الضروري إدارة تجديد المكونات من خلال |"
+#~ "MPS|، فما عليك سوى ترك حقل :guilabel:`قائمة المواد` فارغًا."
+
+#~ msgid ""
+#~ "If the database is configured with multiple warehouses, "
+#~ "a :guilabel:`Production Warehouse` field appears on the :guilabel:`Add a "
+#~ "Product` pop-up window. Use this field to specify which warehouse the "
+#~ "product is replenished to."
+#~ msgstr ""
+#~ "إذا تم تكوين قاعدة البيانات بمستودعات متعددة، يظهر حقل :guilabel:`مستودع "
+#~ "الإنتاج` في نافذة :guilabel:`إضافة منتج` المنبثقة. استخدم هذا الحقل "
+#~ "لتحديد المستودع الذي يتم تجديد المنتج إليه."
+
+#~ msgid ""
+#~ "In the :guilabel:`Safety Stock Target` field, specify the minimum "
+#~ "quantity of the product that should be kept available for orders at all "
+#~ "times. For example, if there should always be 20 units of the product "
+#~ "available for order fulfillment, enter `20` in the :guilabel:`Safety "
+#~ "Stock Target` field."
+#~ msgstr ""
+#~ "في حقل :guilabel:`هدف مخزون الأمان`، حدد الحد الأدنى لكمية المنتج التي "
+#~ "يجب الاحتفاظ بها متاحة للطلبات في جميع الأوقات. على سبيل المثال، إذا كان "
+#~ "يجب أن يكون هناك دائمًا 20 وحدة من المنتج متاحة لتنفيذ الطلبات، أدخل `20` "
+#~ "في حقل :guilabel:`هدف مخزون الأمان`."
+
+#~ msgid ""
+#~ "In the :guilabel:`Minimum to Replenish` field, enter the minimum product "
+#~ "quantity for orders created to replenish the product. For example, if `5` "
+#~ "is entered in this field, replenishment orders for the product include a "
+#~ "minimum of five units."
+#~ msgstr ""
+#~ "في حقل :guilabel:`الحد الأدنى للتجديد`، أدخل الحد الأدنى لكمية المنتج "
+#~ "للطلبات التي تم إنشاؤها لتجديد المنتج. على سبيل المثال، إذا تم إدخال `5` "
+#~ "في هذا الحقل، تتضمن أوامر التجديد للمنتج حدًا أدنى من خمس وحدات."
+
+#~ msgid ""
+#~ "In the :guilabel:`Maximum to Replenish` field, enter the maximum product "
+#~ "quantity for orders created to replenish the product. For example, if "
+#~ "`100` is entered in this field, replenishment orders for the product "
+#~ "include a maximum of 100 units."
+#~ msgstr ""
+#~ "في حقل :guilabel:`الحد الأقصى للتجديد`، أدخل الحد الأقصى لكمية المنتج "
+#~ "للطلبات التي تم إنشاؤها لتجديد المنتج. على سبيل المثال، إذا تم إدخال "
+#~ "`100` في هذا الحقل، تتضمن أوامر التجديد للمنتج حدًا أقصى من 100 وحدة."
+
+#~ msgid ""
+#~ "Finally, click :guilabel:`Save` to add the product to the |MPS|. The "
+#~ "product now appears on the |MPS| page each time it is opened. If a |BoM| "
+#~ "was selected in the :guilabel:`Bill of Materials` field of "
+#~ "the :guilabel:`Add a Product` pop-up window, any components listed on the "
+#~ "|BoM| appear on the page, as well."
+#~ msgstr ""
+#~ "أخيرًا، انقر على :guilabel:`حفظ` لإضافة المنتج إلى |MPS|. يظهر المنتج الآن "
+#~ "على صفحة |MPS| في كل مرة يتم فتحها. إذا تم تحديد |BoM| في "
+#~ "حقل :guilabel:`قائمة المواد` في نافذة :guilabel:`إضافة منتج` المنبثقة، "
+#~ "تظهر أيضًا أي مكونات مدرجة في |BoM| على الصفحة."
+
+#~ msgid ""
+#~ "After adding a product to the |MPS|, it may be necessary to change the "
+#~ "replenishment values entered on the :guilabel:`Add a Product` pop-up "
+#~ "window. To do so, click the :guilabel:`# ≤…≤ #` button to the immediate "
+#~ "right of the :guilabel:`Replenish` button, on the :guilabel:`+ Suggested "
+#~ "Replenishment` row, below the product's name."
+#~ msgstr ""
+#~ "بعد إضافة منتج إلى |MPS|، قد يكون من الضروري تغيير قيم التجديد التي تم "
+#~ "إدخالها في النافذة المنبثقة :guilabel:`إضافة منتج`. للقيام بذلك، انقر فوق "
+#~ "الزر :guilabel:`# ≤…≤ #` الموجود مباشرة على يمين الزر :guilabel:`تجديد`، "
+#~ "في صف :guilabel:`+ التجديد المقترح`، أسفل اسم المنتج."
+
+#~ msgid ""
+#~ "The first and second number displayed on the :guilabel:`# ≤…≤ #` button "
+#~ "correspond to the values entered in the :guilabel:`Minimum to Replenish` "
+#~ "and :guilabel:`Maximum to Replenish` fields when adding the product to "
+#~ "the |MPS|."
+#~ msgstr ""
+#~ "يتوافق الرقمان الأول والثاني المعروضان على الزر :guilabel:`# ≤…≤ #` مع "
+#~ "القيم المدخلة في حقلي :guilabel:`الحد الأدنى للتجديد` و :guilabel:`الحد "
+#~ "الأقصى للتجديد` عند إضافة المنتج إلى |MPS|."
+
+#~ msgid ""
+#~ "For example, if `5` was entered in the :guilabel:`Minimum to Replenish` "
+#~ "field, and `100` was entered in the :guilabel:`Maximum to Replenish` "
+#~ "field, the button appears as :guilabel:`5 ≤…≤ 100`."
+#~ msgstr ""
+#~ "على سبيل المثال، إذا تم إدخال `5` في حقل :guilabel:`الحد الأدنى للتجديد`، "
+#~ "وتم إدخال `100` في حقل :guilabel:`الحد الأقصى للتجديد`، يظهر الزر "
+#~ "كـ :guilabel:`5 ≤…≤ 100`."
+
+#~ msgid ""
+#~ "Clicking the :guilabel:`# ≤…≤ #` button opens the :guilabel:`Edit "
+#~ "Production Schedule` pop-up window. This pop-up window is the same as "
+#~ "the :guilabel:`Add a Product` pop-up window, except that "
+#~ "the :guilabel:`Product` and :guilabel:`Bill of Materials` fields cannot "
+#~ "be edited."
+#~ msgstr ""
+#~ "يؤدي النقر فوق الزر :guilabel:`# ≤…≤ #` إلى فتح النافذة "
+#~ "المنبثقة :guilabel:`تحرير جدول الإنتاج`. هذه النافذة المنبثقة هي نفسها "
+#~ "النافذة المنبثقة :guilabel:`إضافة منتج`، باستثناء أنه لا يمكن تحرير "
+#~ "حقلي :guilabel:`المنتج` و :guilabel:`قائمة المواد`."
+
+#~ msgid ""
+#~ "On the :guilabel:`Edit Production Schedule` pop-up window, enter the "
+#~ "desired values in the :guilabel:`Safety Stock Target`, :guilabel:`Minimum "
+#~ "to Replenish`, and :guilabel:`Maximum to Replenish` fields. Then, "
+#~ "click :guilabel:`Save` to save the changes."
+#~ msgstr ""
+#~ "في النافذة المنبثقة :guilabel:`تحرير جدول الإنتاج`، أدخل القيم المطلوبة "
+#~ "في حقول :guilabel:`هدف المخزون الاحتياطي` و :guilabel:`الحد الأدنى "
+#~ "للتجديد` و :guilabel:`الحد الأقصى للتجديد`. ثم، انقر فوق :guilabel:`حفظ` "
+#~ "لحفظ التغييرات."
+
+#~ msgid ""
+#~ "To remove a product from the |MPS|, tick the checkbox to the left of its "
+#~ "name. Then, click the :icon:`fa-cog` :guilabel:`Actions` button at the "
+#~ "top of the screen, and select :guilabel:`Delete` from the resulting drop-"
+#~ "down menu. Finally, click :guilabel:`Ok` on the :guilabel:`Confirmation` "
+#~ "pop-up window."
+#~ msgstr ""
+#~ "لإزالة منتج من |MPS|، ضع علامة في مربع الاختيار على يسار اسمه. ثم، انقر "
+#~ "فوق الزر :icon:`fa-cog` :guilabel:`إجراءات` في أعلى الشاشة، "
+#~ "واختر :guilabel:`حذف` من القائمة المنسدلة الناتجة. أخيرًا، انقر "
+#~ "فوق :guilabel:`موافق` في النافذة المنبثقة :guilabel:`تأكيد`."
+
+#~ msgid ""
+#~ "Deleting a product from the |MPS| removes it, along with all of its data. "
+#~ "If the product is re-added, its replenishment values must be reconfigured."
+#~ msgstr ""
+#~ "يؤدي حذف منتج من |MPS| إلى إزالته مع جميع بياناته. إذا تمت إعادة إضافة "
+#~ "المنتج، يجب إعادة تكوين قيم التجديد الخاصة به."
+
+#~ msgid "|MPS| replenishment"
+#~ msgstr "تجديد |MPS|"
+
+#~ msgid ""
+#~ "Click the :guilabel:`Replenish` button at the top of the screen to "
+#~ "generate replenishment orders for every product below "
+#~ "its :guilabel:`Safety Stock Target` for the current month."
+#~ msgstr ""
+#~ "انقر فوق الزر :guilabel:`تجديد` في أعلى الشاشة لإنشاء أوامر تجديد لكل "
+#~ "منتج أقل من :guilabel:`هدف المخزون الاحتياطي` للشهر الحالي."
+
+#~ msgid ""
+#~ "Click the :guilabel:`Replenish` button on the right side of "
+#~ "the :guilabel:`+ Suggested Replenishment` row of a specific product, to "
+#~ "generate a replenishment order for that specific product."
+#~ msgstr ""
+#~ "انقر فوق الزر :guilabel:`تجديد` على الجانب الأيمن من صف :guilabel:`+ "
+#~ "التجديد المقترح` لمنتج معين، لإنشاء أمر تجديد لهذا المنتج المحدد."
+
+#~ msgid ""
+#~ "Tick the checkbox to the left of the product name of one or more "
+#~ "products. Then, click the :icon:`fa-cog` :guilabel:`Actions` button at "
+#~ "the top of the screen, and select :guilabel:`Replenish` from the "
+#~ "resulting drop-down menu. Doing so generates a replenishment order for "
+#~ "each selected product."
+#~ msgstr ""
+#~ "ضع علامة في مربع الاختيار على يسار اسم المنتج لمنتج واحد أو أكثر. ثم، "
+#~ "انقر فوق الزر :icon:`fa-cog` :guilabel:`إجراءات` في أعلى الشاشة، "
+#~ "واختر :guilabel:`تجديد` من القائمة المنسدلة الناتجة. يؤدي القيام بذلك إلى "
+#~ "إنشاء أمر تجديد لكل منتج محدد."
+
+#~ msgid ""
+#~ "The type of replenishment order generated corresponds to the route "
+#~ "selected on the *Inventory* tab of the product's form:"
+#~ msgstr ""
+#~ "يتوافق نوع أمر التجديد الذي يتم إنشاؤه مع المسار المحدد في علامة التبويب "
+#~ "*المخزون* في نموذج المنتج:"
+
+#~ msgid ""
+#~ "If the *Buy* route is selected, an |RfQ| is generated to replenish the "
+#~ "product. |RfQs| can be selected by navigating to "
+#~ "the :menuselection:`Purchase` app. Any |RfQ| generated by the |MPS| "
+#~ "lists :guilabel:`MPS` in its :guilabel:`Source Document` field."
+#~ msgstr ""
+#~ "إذا تم تحديد مسار *الشراء*، يتم إنشاء |RfQ| لتجديد المنتج. يمكن تحديد |"
+#~ "RfQs| بالانتقال إلى تطبيق :menuselection:`الشراء`. أي |RfQ| تم إنشاؤه "
+#~ "بواسطة |MPS| يسرد :guilabel:`MPS` في حقل :guilabel:`المستند المصدر`."
+
+#~ msgid ""
+#~ "If the *Manufacture* route is selected, an |MO| is generated to replenish "
+#~ "the product. |MOs| can be selected by navigating "
+#~ "to :menuselection:`Manufacturing app --> Operations --> Manufacturing "
+#~ "Orders`. Any |MO| generated by the |MPS| lists :guilabel:`MPS` in "
+#~ "its :guilabel:`Source Document` field."
+#~ msgstr ""
+#~ "إذا تم تحديد مسار *التصنيع*، يتم إنشاء |MO| لتجديد المنتج. يمكن تحديد |"
+#~ "MOs| بالانتقال إلى :menuselection:`تطبيق التصنيع --> العمليات --> أوامر "
+#~ "التصنيع`. أي |MO| تم إنشاؤه بواسطة |MPS| يسرد :guilabel:`MPS` في "
+#~ "حقل :guilabel:`المستند المصدر`."
 
 #~ msgid ""
 #~ "In some cases, handling products in different units of measure is "

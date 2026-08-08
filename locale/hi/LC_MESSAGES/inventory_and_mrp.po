@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-31 17:31+0000\n"
+"POT-Creation-Date: 2026-08-07 17:32+0000\n"
 "PO-Revision-Date: 2026-07-06 14:29+0000\n"
 "Last-Translator: Anthropic <noreply-mt-anthropic@weblate.org>\n"
 "Language-Team: Hindi <https://translate.odoo.com/projects/odoo-18-doc/"
@@ -201,6 +201,7 @@ msgstr "असाइन किए गए काउंट के साथ बा
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:22
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:17
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/byproducts.rst:21
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:45
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:17
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:26
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:17
@@ -36646,6 +36647,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:49
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:70
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:38
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:318
 msgid "Filters"
 msgstr "फ़िल्टर"
 
@@ -49093,669 +49095,627 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:16
 msgid ""
-"In Odoo's *Manufacturing* app, the *master production schedule* (MPS) is "
-"used to manually plan manufacturing orders (MOs) and purchase orders (POs), "
-"based on forecasted quantities of products and components."
+"In Odoo **Manufacturing**, the Master Production Schedule (MPS) is used to "
+"plan long-term replenishment for products against a manually-adjustable "
+"demand forecast. While Make-to-Order (MTO) strategies or reordering rules "
+"are useful for immediately replenishing stock, products or components with "
+"long lead times or variable seasonal demands may require longer-term "
+"planning against an expected future demand to ensure continued availability "
+"of stock."
 msgstr ""
-"Odoo के *Manufacturing* ऐप्लिकेशन में, *मास्टर प्रॉडक्शन शेड्यूल* (एमपीएस) का उपयोग "
-"प्रॉडक्ट और कॉम्पोनेंट की पूर्वानुमानित क्वांटिटी के आधार पर मैन्युफैक्चरिंग ऑर्डर (एमओ) और "
-"परचेज़ ऑर्डर (पीओ) को मैन्युअली प्लान करने के लिए किया जाता है।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:20
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:22
 msgid ""
-"By considering the impact of confirmed |MOs| and |POs|, along with manually "
-"adjusted demand forecasts, the |MPS| can be used to manage long-term product "
-"replenishment. This ensures the continued availability of the necessary "
-"products and components."
+"With the |MPS|, users can plan replenishment for specific products over "
+"future time periods, generating suggested replenishment quantities based on "
+"forecasted demand and on user-specified stock targets."
 msgstr ""
-"कन्फर्म्ड |MOs| और |POs| के प्रभाव के साथ-साथ मैन्युअली एडजस्ट की गई डिमांड फोरकास्ट पर "
-"विचार करके, |MPS| का उपयोग लॉन्ग-टर्म प्रॉडक्ट रिप्लिनिशमेंट को मैनेज करने के लिए किया "
-"जा सकता है। यह जरूरी प्रॉडक्ट और कॉम्पोनेंट की निरंतर उपलब्धता सुनिश्चित करता है।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:24
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:27
 msgid ""
-"Since the |MPS| allows for manual intervention, it is useful for "
-"replenishing products where the demand of existing sales orders (SOs) does "
-"**not** reflect probable future demand."
+"Adding a product to the |MPS| does **not** automatically create a purchase "
+"or manufacturing order for it. The |MPS| only suggests the amount of product "
+"to be replenished, requiring the user to actually create the replenishing |"
+"POs|/|MOs|."
 msgstr ""
-"चूंकि |MPS| मैन्युअल इंटरवेंशन की अनुमति देता है, यह उन प्रॉडक्ट को रिप्लिनिश करने के लिए "
-"उपयोगी है जहां मौजूदा सेल्स ऑर्डर (एसओ) की डिमांड संभावित भविष्य की डिमांड को **नहीं** "
-"दर्शाती है।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:28
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:31
+msgid ""
+"Because the |MPS| relies on manual replenishment, reordering rules should "
+"**not** be applied to products added to the |MPS|. Doing so creates "
+"inaccurate forecasts and unnecessary replenishment orders."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:36
 msgid ""
 "A retail store sells artificial *Christmas trees* during the holiday season. "
-"It is currently September, and the store has less than ten Christmas tree |"
-"MOs| confirmed for the month of December."
+"It is currently September and the store has fewer than ten Christmas tree |"
+"MOs| confirmed for the month of December. The procurement manager knows that "
+"the demand for Christmas trees peaks in December. As a result, they manually "
+"enter a greater demand in the |MPS| to properly replenish ahead of this "
+"future customer demand."
 msgstr ""
-"एक रिटेल स्टोर हॉलिडे सीज़न के दौरान आर्टिफिशियल *क्रिसमस ट्री* बेचता है। यह अभी सितंबर "
-"है, और स्टोर के पास दिसंबर महीने के लिए दस से कम क्रिसमस ट्री |MOs| कन्फर्म हैं।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:32
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:47
 msgid ""
-"Despite the number of confirmed |MOs|, the procurement manager knows that "
-"the demand for Christmas trees in December is going to be much higher, once "
-"the holiday season starts. As a result, they manually enter a greater demand "
-"in the |MPS|, so they can properly replenish the product in time for the "
-"increase in customer demand."
+"To use the |MPS|, the feature must first be enabled. Navigate "
+"to :menuselection:`Manufacturing app --> Configuration --> Settings` and "
+"select the :guilabel:`Master Production Schedule` checkbox in "
+"the :guilabel:`Planning` section."
 msgstr ""
-"कन्फर्म्ड |MOs| की संख्या के बावजूद, प्रोक्युर्मन्ट मैनेजर जानता है कि हॉलिडे सीज़न शुरू होने के "
-"बाद दिसंबर में क्रिसमस ट्री की डिमांड बहुत अधिक होने वाली है। परिणामस्वरूप, वे |MPS| में "
-"मैन्युअली अधिक डिमांड दर्ज करते हैं, ताकि वे ग्राहक डिमांड में वृद्धि के समय के लिए प्रॉडक्ट को "
-"सही तरीके से रिप्लिनिश कर सकें।"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:38
-msgid ""
-"It is essential to remember that the |MPS| is a **MANUAL** tool. Adding a "
-"product to the |MPS| does not cause it to be manufactured or purchased "
-"automatically. The |MPS| simply suggests the amount of the product that "
-"should be replenished, but requires user input to create the |MOs| or |POs| "
-"that are used to replenish it."
-msgstr ""
-"यह याद रखना आवश्यक है कि |MPS| एक **मैन्युअल** टूल है। |MPS| में कोई प्रॉडक्ट जोड़ने से यह "
-"ऑटोमैटिकली मैन्युफैक्चर या परचेज़ नहीं होता है। |MPS| केवल उस प्रॉडक्ट की मात्रा सुझाता है "
-"जिसे रिप्लिनिश किया जाना चाहिए, लेकिन इसे रिप्लिनिश करने के लिए इस्तेमाल किए जाने वाले |"
-"MOs| या |POs| बनाने के लिए उपयोगकर्ता इनपुट की आवश्यकता होती है।"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:43
-msgid ""
-"For this reason, it is recommended that the |MPS| **NOT** be used alongside "
-"reordering rules for the same product. Because reordering rules are an "
-"automated workflow, they conflict with the manual replenishment method of |"
-"MPS|. Using both, in unison, can lead to inaccurate forecasts and the "
-"creation of unnecessary replenishment orders."
-msgstr ""
-"इस वजह से, यह अनुशंसा की जाती है कि |MPS| का उपयोग एक ही प्रॉडक्ट के लिए रीऑर्डरिंग "
-"रूल्स के साथ **नहीं** किया जाए। क्योंकि रीऑर्डरिंग रूल्स एक ऑटोमेटेड वर्कफ़्लो हैं, वे |MPS| के "
-"मैन्युअल रिप्लिनिशमेंट मेथड के साथ कंफ्लिक्ट करते हैं। दोनों का एक साथ उपयोग करने से गलत "
-"फोरकास्ट और अनावश्यक रिप्लिनिशमेंट ऑर्डर बन सकते हैं।"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:49
-msgid "Enable and configure |MPS|"
-msgstr "|MPS| को एनेबल और कॉन्फ़िगर करें"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:51
-msgid ""
-"To use the |MPS| feature, navigate to :menuselection:`Manufacturing app --> "
-"Configuration --> Settings`, and tick the :guilabel:`Master Production "
-"Schedule` checkbox in the :guilabel:`Planning` section. Finally, "
-"click :guilabel:`Save`."
+msgid "After enabling the feature, two new columns appear below:"
 msgstr ""
-"|MPS| फीचर का उपयोग करने के लिए, :menuselection:`Manufacturing app --> "
-"Configuration --> Settings` पर जाएं, और :guilabel:`Planning` सेक्शन "
-"में :guilabel:`Master Production Schedule` चेकबॉक्स को टिक करें। अंत "
-"में, :guilabel:`Save` पर क्लिक करें।"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:53
+msgid ""
+":guilabel:`Default Time Range`: Select the period of time over which the "
+"planning occurs, either on "
+"a :guilabel:`Yearly`, :guilabel:`Monthly`, :guilabel:`Weekly`, "
+"or :guilabel:`Daily` basis."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:55
 msgid ""
-"After enabling the :guilabel:`Master Production Schedule` feature, two new "
-"fields appear under it on the :guilabel:`Settings` page: :guilabel:`Time "
-"Range` and :guilabel:`Number of Columns`."
+":guilabel:`Number of Periods`: Specify the number of periods to display for "
+"each time range."
 msgstr ""
-":guilabel:`Master Production Schedule` फीचर को एनेबल करने के "
-"बाद, :guilabel:`Settings` पेज पर इसके अंतर्गत दो नए फ़ील्ड दिखाई देते "
-"हैं: :guilabel:`Time Range` और :guilabel:`Number of Columns`।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:58
 msgid ""
-"The :guilabel:`Time Range` field is used to select the period of time over "
-"which planning takes place, and offers three "
-"options: :guilabel:`Monthly`, :guilabel:`Weekly`, and :guilabel:`Daily`. For "
-"example, if :guilabel:`Monthly` is selected, the |MPS| plans the production "
-"requirements of products and components on a monthly basis."
+"If the :guilabel:`Default Time Range` field is set to :guilabel:`Monthly`, "
+"and the :guilabel:`Number of Periods` field is set to `12`, the |MPS| shows "
+"one column for each of the next 12 months, starting with the current month."
 msgstr ""
-":guilabel:`Time Range` फ़ील्ड का उपयोग उस समयावधि को चुनने के लिए किया जाता है "
-"जिसके दौरान प्लानिंग होती है, और यह तीन विकल्प प्रदान करता "
-"है: :guilabel:`Monthly`, :guilabel:`Weekly`, और :guilabel:`Daily`। उदाहरण के "
-"लिए, अगर :guilabel:`Monthly` सेलेक्ट किया जाता है, तो |MPS| प्रॉडक्ट और कॉम्पोनेंट की "
-"प्रॉडक्शन आवश्यकताओं को मासिक आधार पर प्लान करता है।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:63
-msgid ""
-"The :guilabel:`Number of Columns` field is used to specify the quantity of "
-"the selected :guilabel:`Time Range` units shown on the |MPS| page. For "
-"example, if the :guilabel:`Time Range` field is set to :guilabel:`Monthly`, "
-"and `12` is entered in the :guilabel:`Number of Columns` field, the |MPS| "
-"shows one column for the next 12 months, starting with the current month."
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:62
+msgid "Finally, click :guilabel:`Save` to load the changes."
 msgstr ""
-":guilabel:`Number of Columns` फ़ील्ड का उपयोग |MPS| पेज पर दिखाए गए "
-"चयनित :guilabel:`Time Range` यूनिट की क्वांटिटी निर्दिष्ट करने के लिए किया जाता है। "
-"उदाहरण के लिए, अगर :guilabel:`Time Range` फ़ील्ड को :guilabel:`Monthly` पर सेट "
-"किया गया है, और :guilabel:`Number of Columns` फ़ील्ड में `12` दर्ज किया गया है, तो |"
-"MPS| वर्तमान महीने से शुरू होने वाले अगले 12 महीनों के लिए एक कॉलम दिखाता है।"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:68
-msgid ""
-"If the values of the :guilabel:`Time Range` or :guilabel:`Number of Columns` "
-"fields are altered, click :guilabel:`Save` again to save the changes."
-msgstr ""
-"अगर :guilabel:`Time Range` या :guilabel:`Number of Columns` फ़ील्ड के मान बदले "
-"जाते हैं, तो परिवर्तनों को सेव करने के लिए फिर से :guilabel:`Save` पर क्लिक करें।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:None
 msgid "The MPS setting in the Manufacturing app's settings."
 msgstr "Manufacturing ऐप्लिकेशन की सेटिंग में एमपीएस सेटिंग।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:75
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:70
 msgid "|MPS| dashboard"
 msgstr "|MPS| डैशबोर्ड"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:77
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:72
 msgid ""
 "To open the |MPS|, navigate to :menuselection:`Manufacturing app --> "
-"Planning --> Master Production Schedule`. The |MPS| view appears as follows:"
+"Planning --> Master Production Schedule`. The |MPS| is arranged as a grid "
+"with the time periods represented as columns and each product :ref:`added to "
+"the MPS <manufacturing/mps/add-product>` as an individual grouping of rows."
 msgstr ""
-"|MPS| खोलने के लिए, :menuselection:`Manufacturing app --> Planning --> Master "
-"Production Schedule` पर जाएं। |MPS| व्यू निम्नानुसार दिखाई देता है:"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:76
+msgid "By default, the group of rows for each product includes the following:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:78
+msgid ""
+":guilabel:`[Product] by [Unit] - [Company]`: The header row with the name of "
+"the product, its unit of measure, and its company (if applicable). By "
+"default, cells in this row display the product's starting stock quantity at "
+"the beginning of each time period. Clicking the :guilabel:`[Product]` link "
+"opens the product's forecasted report."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:82
+msgid ""
+":guilabel:`- Forecasted Demand`: The user's estimated demand for the product "
+"during each time period. Cells in this row can be entered manually."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:84
+msgid ""
+":guilabel:`- Indirect Demand Forecast`: The forecasted demand for the "
+"component from existing |MOs|. This row **only** appears if the product is a "
+"component of another product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:86
+msgid ""
+":guilabel:`+ Replenishment`: The user-specified quantity of the product to "
+"be replenished through |MOs| or |POs|. Values in these cells are "
+"automatically suggested based on the *Safety Stock Targets* and "
+"replenishment minimums/maximums specified in the product's :ref:`schedule "
+"configurations <manufacturing/mps/add-product>`. However, users can also "
+"manually adjust these values. Clicking the :guilabel:`Order` button "
+"manually :ref:`replenishes <manufacturing/mps/replenish>` the product based "
+"on the quantity suggested or entered."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:92
+msgid ""
+":guilabel:`= Forecasted Stock`: The forecasted quantity of the product stock "
+"at the end of each time period, assuming that suggested replenishment "
+"numbers are fulfilled."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:95
+msgid ""
+":ref:`Additional rows and filters <manufacturing/mps/additional-rows-"
+"filters>` can be selected in their respective sections of "
+"the :guilabel:`Search...` bar drop-down menu at the top."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:99
+msgid ""
+"While the |MPS| can be used with only the default categories, it may be "
+"useful to enable the :guilabel:`Actual Demand` category in "
+"the :guilabel:`Search...` bar."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:102
+msgid ""
+"With the :guilabel:`Actual Demand` option enabled, the :guilabel:`- "
+"Forecasted Demand` category changes to the :guilabel:`- Actual / Forecasted "
+"Demand` category, displaying both the confirmed demand for the product based "
+"on confirmed |SOs| and the forecasted demand."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:None
 msgid "The Master Production Schedule in the Manufacturing app."
 msgstr "मैन्युफ़ैक्चरिंग ऐप्लिकेशन में मास्टर प्रॉडक्शन शेड्यूल।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:83
-msgid ""
-"The grey column on the left side of the screen shows a section for every "
-"product added to the |MPS|, with each product section being broken down into "
-"smaller rows. The information shown in the rows depends on the filters "
-"selected in the :guilabel:`Search...` bar drop-down menu at the top of the "
-"page. The default categories that appear in the rows are:"
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:110
+msgid "Relationship between rows"
 msgstr ""
-"स्क्रीन के बाईं ओर का ग्रे कॉलम |MPS| में जोड़े गए हर प्रॉडक्ट के लिए एक सेक्शन दिखाता है, "
-"जिसमें प्रत्येक प्रॉडक्ट सेक्शन छोटी पंक्तियों में बंटा होता है। पंक्तियों में दिखाई जाने वाली "
-"जानकारी पेज के ऊपर :guilabel:`खोजें...` बार ड्रॉप-डाउन मेन्यू में चुने गए फ़िल्टर पर निर्भर "
-"करती है। पंक्तियों में दिखाई देने वाली डिफ़ॉल्ट कैटगरी हैं:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:88
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:112
 msgid ""
-":guilabel:`[Product] by [unit]` :icon:`fa-area-chart`: the forecasted stock "
-"quantity at the beginning of each time period. :guilabel:`[Product]` "
-"and :icon:`fa-area-chart` are selectable buttons which open the product's "
-"page, or the forecast report for the product, respectively."
+"Together, the starting stock, :guilabel:`- Forecasted Demand`, :guilabel:`- "
+"Indirect Demand Forecast` (if applicable), :guilabel:`+ Replenishment`, "
+"and :guilabel:`= Forecasted Stock` values define the following relation:"
 msgstr ""
-":guilabel:`[प्रॉडक्ट] by [यूनिट]` :icon:`fa-area-chart`: प्रत्येक समय अवधि की शुरुआत "
-"में पूर्वानुमानित स्टॉक मात्रा। :guilabel:`[प्रॉडक्ट]` और :icon:`fa-area-chart` चुने जा "
-"सकने वाले बटन हैं जो क्रमशः प्रॉडक्ट का पेज, या प्रॉडक्ट के लिए पूर्वानुमान रिपोर्ट खोलते हैं।"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:91
-msgid ""
-":guilabel:`- Forecasted Demand`: the demand forecast, which is entered "
-"manually. This represents an estimate of the demand for the product during "
-"each time period."
-msgstr ""
-":guilabel:`- पूर्वानुमानित डिमांड`: डिमांड का पूर्वानुमान, जो मैन्युअल रूप से दर्ज किया "
-"जाता है। यह प्रत्येक समय अवधि के दौरान प्रॉडक्ट की डिमांड का अनुमान दर्शाता है।"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:93
-msgid ""
-":guilabel:`- Indirect Demand Forecast`: while this is a default category, it "
-"**only** appears for products that are components of other products. It "
-"represents the demand for the component from existing MOs."
-msgstr ""
-":guilabel:`- इनडायरेक्ट डिमांड पूर्वानुमान`: हालांकि यह एक डिफ़ॉल्ट कैटगरी है, यह "
-"**सिर्फ़** उन प्रॉडक्ट के लिए दिखाई देती है जो अन्य प्रॉडक्ट के कॉम्पोनेंट हैं। यह मौजूदा एमओ "
-"से कॉम्पोनेंट की डिमांड को दर्शाती है।"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:96
-msgid ""
-":guilabel:`+ Suggested Replenishment`: the quantity of the product that is "
-"suggested to be replenished through |MOs| or |POs|. To the right of the "
-"category title is a :guilabel:`Replenish` button, which is used to manually "
-"replenish the product, based on the quantity suggested to be replenished."
-msgstr ""
-":guilabel:`+ सुझाई गई रिप्लिनिशमेंट`: प्रॉडक्ट की वह मात्रा जिसे |MOs| या |POs| के "
-"माध्यम से रिप्लिनिश करने का सुझाव दिया जाता है। कैटगरी शीर्षक के दाईं ओर "
-"एक :guilabel:`रिप्लिनिश करें` बटन है, जिसका उपयोग सुझाई गई रिप्लिनिश की जाने वाली "
-"मात्रा के आधार पर मैन्युअल रूप से प्रॉडक्ट को रिप्लिनिश करने के लिए किया जाता है।"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:0
-msgid "The Replenish button on the \"+ Suggested Replenishment\" row."
-msgstr "\"+ सुझाई गई रिप्लिनिशमेंट\" पंक्ति पर रिप्लिनिश करें बटन।"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:104
-msgid "The \"Replenish\" button on the \"+ Suggested Replenishment\" row."
-msgstr "\"+ सुझाई गई रिप्लिनिशमेंट\" पंक्ति पर \"रिप्लिनिश करें\" बटन।"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:106
-msgid ""
-":guilabel:`= Forecasted Stock`: the quantity of the product forecasted to be "
-"in stock at the end of each time period, assuming that suggested "
-"replenishment numbers are fulfilled."
-msgstr ""
-":guilabel:`= पूर्वानुमानित स्टॉक`: प्रत्येक समय अवधि के अंत में स्टॉक में होने का पूर्वानुमान "
-"लगाई गई प्रॉडक्ट की मात्रा, यह मानते हुए कि सुझाई गई रिप्लिनिशमेंट संख्याएं पूरी हो गई हैं।"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:109
-msgid "Altogether, these default categories form an equation:"
-msgstr "कुल मिलाकर, ये डिफ़ॉल्ट कैटगरी एक समीकरण बनाती हैं:"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:111
-msgid ""
-"\\text{Forecasted Demand} + \\text{Suggested Replenishment} = "
-"\\text{Forecasted Stock}\n"
-"\n"
-msgstr ""
-"\\text{पूर्वानुमानित डिमांड} + \\text{सुझाई गई रिप्लिनिशमेंट} = \\text{पूर्वानुमानित "
-"स्टॉक}\n"
-"\n"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:114
-msgid ""
-"In the case of components, the :guilabel:`Indirect Demand Forecast` is taken "
-"into account as well."
-msgstr ""
-"कॉम्पोनेंट के मामले में, :guilabel:`इनडायरेक्ट डिमांड पूर्वानुमान` को भी ध्यान में रखा जाता "
-"है।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:116
 msgid ""
-"The :guilabel:`- Forecasted Demand` and :guilabel:`+ Suggested "
-"Replenishment` fields can be edited for any of the time periods to the right "
-"of the product column. Doing so changes the equation, and updates the value "
-"displayed in the :guilabel:`Forecasted Stock` field."
+"\\begin{align}\n"
+"\\text{Forecasted Stock} &= \\text{Starting Stock} \\\\\n"
+"&- \\text{Forecasted Demand} \\\\\n"
+"&- \\text{Indirect Demand Forecast} \\\\\n"
+"&+ \\text{Replenishment}\n"
+"\\end{align}"
 msgstr ""
-"प्रॉडक्ट कॉलम के दाईं ओर किसी भी समय अवधि के लिए :guilabel:`- पूर्वानुमानित डिमांड` "
-"और :guilabel:`+ सुझाई गई रिप्लिनिशमेंट` फ़ील्ड को एडिट किया जा सकता है। ऐसा करने से "
-"समीकरण बदल जाता है, और :guilabel:`पूर्वानुमानित स्टॉक` फ़ील्ड में दिखाई गई वैल्यू अपडेट "
-"हो जाती है।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:120
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:125
 msgid ""
-"Changing the value in the :guilabel:`+ Suggested Replenishment` field also "
-"makes an :icon:`fa-times` :guilabel:`(reset)` button appear to the left of "
-"the field. Click the :icon:`fa-times` :guilabel:`(reset)` button next to the "
-"field to reset its value back to the one calculated by the |MPS|."
+"The :guilabel:`- Forecasted Demand` and :guilabel:`+ Replenishment` cells "
+"can be manually adjusted for any of the time periods. Doing so updates the "
+"value displayed in the :guilabel:`= Forecasted Stock` cells according to the "
+"equation. Correspondingly, the starting stock quantity of each subsequent "
+"time period is updated with the previous period's :guilabel:`= Forecasted "
+"Stock`."
 msgstr ""
-":guilabel:`+ सुझाई गई रिप्लिनिशमेंट` फ़ील्ड में वैल्यू बदलने से फ़ील्ड के बाईं ओर "
-"एक :icon:`fa-times` :guilabel:`(रीसेट करें)` बटन भी दिखाई देता है। फ़ील्ड के बगल "
-"में :icon:`fa-times` :guilabel:`(रीसेट करें)` बटन पर क्लिक करें ताकि इसकी वैल्यू को |"
-"MPS| द्वारा गणना की गई वैल्यू पर रीसेट किया जा सके।"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:126
-msgid ""
-"While the |MPS| can be used with only the default categories enabled, it is "
-"advisable to also enable the :guilabel:`Actual Demand` category. This is "
-"done by clicking the :icon:`fa-caret-down` :guilabel:`(down arrow)` on the "
-"right side of the :guilabel:`Search...` bar, and enabling "
-"the :guilabel:`Actual Demand` option under the :guilabel:`Rows` header."
-msgstr ""
-"हालांकि |MPS| का उपयोग केवल डिफ़ॉल्ट कैटगरी सक्षम होने पर किया जा सकता है, "
-"लेकिन :guilabel:`वास्तविक डिमांड` कैटगरी को भी सक्षम करना उचित है। यह :icon:`fa-"
-"caret-down` :guilabel:`(नीचे तीर)` पर :guilabel:`खोजें...` बार के दाईं ओर क्लिक "
-"करके, और :guilabel:`पंक्तियाँ` हेडर के अंतर्गत :guilabel:`वास्तविक डिमांड` विकल्प को "
-"सक्षम करके किया जाता है।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:131
 msgid ""
-"With the :guilabel:`Actual Demand` option enabled, the :guilabel:`- "
-"Forecasted Demand` category changes to the :guilabel:`- Actual / Forecasted "
-"Demand` category. In addition to the manually entered forecasted demand, "
-"this category also displays the confirmed demand for the product, which is "
-"based on confirmed |SOs|."
+"Changing the value in the :guilabel:`+ Replenishment` cell highlights the "
+"value and displays an :icon:`fa-times` :guilabel:`(reset)` button next to "
+"the cell to reset it back to the default value calculated by the |MPS|."
 msgstr ""
-":guilabel:`वास्तविक डिमांड` विकल्प सक्षम होने के साथ, :guilabel:`- पूर्वानुमानित "
-"डिमांड` कैटगरी :guilabel:`- वास्तविक / पूर्वानुमानित डिमांड` कैटगरी में बदल जाती है। "
-"मैन्युअल रूप से दर्ज किए गए पूर्वानुमानित डिमांड के अतिरिक्त, यह कैटगरी प्रॉडक्ट के लिए पुष्टि "
-"की गई डिमांड भी दिखाती है, जो पुष्टि किए गए |SOs| पर आधारित है।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:136
-msgid ""
-"Each column to the right of the products column lists one unit of the time "
-"period selected in the *Time Range* field on the *Manufacturing* app "
-"*Settings* page (ex. months). The number of time period columns corresponds "
-"to the value entered in the *Number of Columns* field."
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:138
+msgid "Adding products to |MPS|"
 msgstr ""
-"प्रॉडक्ट कॉलम के दाईं ओर प्रत्येक कॉलम *मैन्युफ़ैक्चरिंग* ऐप्लिकेशन *सेटिंग* पेज पर *समय सीमा* "
-"फ़ील्ड में चुनी गई समय अवधि की एक यूनिट दर्शाता है (उदाहरण: महीने)। समय अवधि कॉलम की "
-"संख्या *कॉलम की संख्या* फ़ील्ड में दर्ज की गई वैल्यू के अनुरूप होती है।"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:140
-msgid ""
-"The first time period column represents the current time period. For "
-"example, if the |MPS| is configured to use months, the first column displays "
-"data for the current month. On this first column, the :guilabel:`+ Suggested "
-"Replenishment` field appears in one of five colors:"
-msgstr ""
-"पहला समय अवधि कॉलम वर्तमान समय अवधि को दर्शाता है। उदाहरण के लिए, अगर |MPS| "
-"महीनों का उपयोग करने के लिए कॉन्फ़िगर किया गया है, तो पहला कॉलम वर्तमान महीने के लिए "
-"डेटा प्रदर्शित करता है। इस पहले कॉलम पर, :guilabel:`+ सुझाई गई रिप्लिनिशमेंट` फ़ील्ड "
-"पांच रंगों में से एक में दिखाई देती है:"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:144
-msgid ""
-":guilabel:`Green`: a replenishment order must be generated to keep stock at "
-"the :guilabel:`Safety Stock Target`, based on the configured :doc:`lead "
-"times <../../inventory/warehouses_storage/replenishment/lead_times>`."
-msgstr ""
-":guilabel:`ग्रीन`: कॉन्फ़िगर की गई :doc:`लीड टाइम <../../inventory/"
-"warehouses_storage/replenishment/lead_times>` के आधार पर, स्टॉक "
-"को :guilabel:`सेफ़्टी स्टॉक टार्गेट` पर रखने के लिए एक रिप्लिनिशमेंट ऑर्डर जनरेट करना "
-"होगा।"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:147
-msgid ""
-":guilabel:`Gray`: a replenishment order has already been generated to keep "
-"stock at the :guilabel:`Safety Stock Target`."
-msgstr ""
-":guilabel:`ग्रे`: स्टॉक को :guilabel:`सुरक्षा स्टॉक टारगेट` पर रखने के लिए पहले से ही "
-"एक रिप्लिनिशमेंट ऑर्डर तैयार किया जा चुका है।"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:149
-msgid ""
-":guilabel:`Yellow`: a replenishment order has already been generated, but "
-"the quantity it was created for is not enough to keep stock at "
-"the :guilabel:`Safety Stock Target`."
-msgstr ""
-":guilabel:`पीला`: एक रिप्लिनिशमेंट ऑर्डर पहले ही जनरेट हो चुका है, लेकिन जिस मात्रा के "
-"लिए इसे बनाया गया था वह स्टॉक को :guilabel:`सेफ्टी स्टॉक टारगेट` पर रखने के लिए "
-"पर्याप्त नहीं है।"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:151
-msgid ""
-":guilabel:`Red`: a replenishment order has already been generated, but the "
-"quantity it was created for puts the amount of stock above "
-"the :guilabel:`Safety Stock Target`."
-msgstr ""
-":guilabel:`लाल`: पहले से ही एक रिप्लिनिशमेंट ऑर्डर तैयार किया जा चुका है, लेकिन जिस "
-"मात्रा के लिए इसे बनाया गया था, वह स्टॉक की मात्रा को :guilabel:`सुरक्षा स्टॉक "
-"टारगेट` से अधिक कर देती है।"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:154
-msgid ""
-"The :guilabel:`+ Suggested Replenishment` field appears white, if no "
-"replenishment order has been generated, and it is not necessary to generate "
-"one at the current moment."
-msgstr ""
-"अगर कोई रिप्लिनिशमेंट ऑर्डर जनरेट नहीं किया गया है, और वर्तमान समय में एक जनरेट करना "
-"आवश्यक नहीं है, तो :guilabel:`+ Suggested Replenishment` फ़ील्ड सफ़ेद दिखाई देता है।"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:158
-msgid "Add a product"
-msgstr "प्रॉडक्ट जोड़ें"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:160
 msgid ""
 "To use |MPS| to manage the replenishment of a product, navigate "
 "to :menuselection:`Manufacturing app --> Planning --> Master Production "
 "Schedule`. At the top of the |MPS| page, click :guilabel:`Add a Product` to "
-"open the :guilabel:`Add a Product` pop-up window."
+"open the *Add a Product* pop-up window."
 msgstr ""
-"किसी प्रॉडक्ट की रिप्लिनिशमेंट को मैनेज करने के लिए |MPS| का इस्तेमाल करने के "
-"लिए, :menuselection:`Manufacturing ऐप्लिकेशन --> Planning --> Master "
-"Production Schedule` पर जाएं। |MPS| पेज के ऊपर, :guilabel:`Add a Product` पर "
-"क्लिक करें ताकि :guilabel:`Add a Product` पॉप-अप विंडो खुल सके।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:165
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:145
 msgid ""
 "Products **must** be properly configured to be replenished through the |MPS|."
 msgstr ""
 "|MPS| के माध्यम से रिप्लिनिश किए जाने के लिए प्रॉडक्ट को सही तरीके से कॉन्फ़िगर किया "
 "जाना **चाहिए**।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:167
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:147
 msgid ""
-"In the case of manufactured products, the *Manufacture* route must be "
-"selected in the *Routes* section of the *Inventory* tab, on the product's "
-"form."
+"For manufactured products, the *Manufacture* route must be selected in the "
+"*Routes* section of the *Inventory* tab on the product's form."
 msgstr ""
-"मैन्युफ़ैक्चर किए गए प्रॉडक्ट के मामले में, प्रॉडक्ट के फ़ॉर्म पर *Inventory* टैब के *Routes* "
-"सेक्शन में *Manufacture* रूट को सेलेक्ट किया जाना चाहिए।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:170
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:150
 msgid ""
-"In the case of products that are purchased, the *Buy* route must be selected "
-"in the *Routes* section of the *Inventory* tab, on the product's form. "
-"Additionally, a vendor and the price they sell the product for must also be "
-"specified on the *Purchase* tab."
+"For purchased products, the *Buy* route must be selected in the *Routes* "
+"section of the *Inventory* tab on the product's form. Additionally, "
+"a :ref:`vendor pricelist <purchase/manage_deals/vendor-pricelist>` must be "
+"configured on the *Purchase* tab."
 msgstr ""
-"खरीदे गए प्रॉडक्ट के मामले में, प्रॉडक्ट के फ़ॉर्म पर *Inventory* टैब के *Routes* सेक्शन में "
-"*Buy* रूट को सेलेक्ट किया जाना चाहिए। इसके अतिरिक्त, *Purchase* टैब पर एक वेंडर और वह "
-"कीमत भी निर्दिष्ट की जानी चाहिए जिस पर वे प्रॉडक्ट बेचते हैं।"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:155
+msgid "Enter product details"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:157
+msgid ""
+"On the pop-up window, select the product to add in the :guilabel:`Product` "
+"drop-down menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:159
+msgid "Then, specify the following information about the product:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:161
+msgid ""
+":guilabel:`Indirect Demand`: Select this optional checkbox if the product "
+"can be hidden when the :guilabel:`To Forecast` filter is selected in "
+"the :guilabel:`Search...` bar drop-down menu."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:163
+msgid ""
+":guilabel:`Bill of Materials`: Select the product's |BoM| if the product is "
+"manufactured."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:164
+msgid ""
+":guilabel:`Route`: Select the replenishment route for the product (e.g., "
+"`Buy` for purchased products, `Manufacture` for manufactured products)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:166
+msgid ""
+":guilabel:`Vendor`: Select the vendor for the product. This field **only** "
+"appears if the :guilabel:`Buy` option was selected in the :guilabel:`Route` "
+"field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:168
+msgid ""
+":guilabel:`Batch Size`: Split |MOs| into orders of this quantity. This field "
+"**only** appears if the :guilabel:`Manufacture` option was selected in "
+"the :guilabel:`Route` field. Toggle the :guilabel:`No Batch Size` checkbox "
+"to enter a batch size, or leave it un-toggled if no batch size should be "
+"specified."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:174
 msgid ""
-"On the pop-up window, select the product to add in the :guilabel:`Product` "
-"drop-down menu. If the product is replenished through manufacturing, select "
-"the product's |BoM| in the :guilabel:`Bill of Materials` field."
+"Selecting a BoM when adding a product also adds any components listed on the "
+"BoM to the |MPS|. If it is not necessary to manage the replenishment of "
+"components through the |MPS|, leave the :guilabel:`Bill of Materials` field "
+"blank."
 msgstr ""
-"पॉप-अप विंडो पर, :guilabel:`Product` ड्रॉप-डाउन मेनू में जोड़ने के लिए प्रॉडक्ट को सेलेक्ट "
-"करें। अगर प्रॉडक्ट को मैन्युफ़ैक्चरिंग के माध्यम से रिप्लिनिश किया जाता है, "
-"तो :guilabel:`Bill of Materials` फ़ील्ड में प्रॉडक्ट का |BoM| सेलेक्ट करें।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:179
-msgid ""
-"Selecting a BoM when adding a product to the |MPS| also adds any components "
-"listed on the BoM. If it is not necessary to manage the replenishment of "
-"components through the |MPS|, simply leave the :guilabel:`Bill of Materials` "
-"field blank."
-msgstr ""
-"|MPS| में प्रॉडक्ट जोड़ते समय बीओएम सेलेक्ट करने से बीओएम पर सूचीबद्ध कोई भी कॉम्पोनेंट भी "
-"जुड़ जाते हैं। अगर |MPS| के माध्यम से कॉम्पोनेंट की रिप्लिनिशमेंट को मैनेज करना आवश्यक नहीं है, "
-"तो बस :guilabel:`Bill of Materials` फ़ील्ड को खाली छोड़ दें।"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:183
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:178
 msgid ""
 "If the database is configured with multiple warehouses, "
 "a :guilabel:`Production Warehouse` field appears on the :guilabel:`Add a "
-"Product` pop-up window. Use this field to specify which warehouse the "
-"product is replenished to."
+"Product` pop-up window to specify which warehouse the product is replenished "
+"to."
 msgstr ""
-"अगर डेटाबेस को कई वेयरहाउस के साथ कॉन्फ़िगर किया गया है, तो :guilabel:`Add a "
-"Product` पॉप-अप विंडो पर एक :guilabel:`Production Warehouse` फ़ील्ड दिखाई देता "
-"है। इस फ़ील्ड का इस्तेमाल यह निर्दिष्ट करने के लिए करें कि प्रॉडक्ट को किस वेयरहाउस में "
-"रिप्लिनिश किया जाता है।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:187
-msgid ""
-"In the :guilabel:`Safety Stock Target` field, specify the minimum quantity "
-"of the product that should be kept available for orders at all times. For "
-"example, if there should always be 20 units of the product available for "
-"order fulfillment, enter `20` in the :guilabel:`Safety Stock Target` field."
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:183
+msgid "Enter product replenishment options"
 msgstr ""
-":guilabel:`Safety Stock Target` फ़ील्ड में, प्रॉडक्ट की न्यूनतम मात्रा निर्दिष्ट करें जो "
-"हमेशा ऑर्डर के लिए उपलब्ध रखी जानी चाहिए। उदाहरण के लिए, अगर प्रॉडक्ट की 20 यूनिट "
-"हमेशा ऑर्डर फ़ुलफ़िलमेंट के लिए उपलब्ध होनी चाहिए, तो :guilabel:`Safety Stock Target` "
-"फ़ील्ड में `20` दर्ज करें।"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:185
+msgid ""
+"Next, specify the product's replenishment options to configure how the |MPS| "
+"calculates suggested replenishment quantities for each product. Enter the "
+"following information:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:188
+msgid ""
+":guilabel:`Safety Stock Target`: Specify the minimum quantity of the product "
+"to be available across all time periods."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:190
+msgid ""
+":guilabel:`Minimum to Replenish`: Specify the minimum quantity of the "
+"product to replenish for each period."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:192
 msgid ""
-"In the :guilabel:`Minimum to Replenish` field, enter the minimum product "
-"quantity for orders created to replenish the product. For example, if `5` is "
-"entered in this field, replenishment orders for the product include a "
-"minimum of five units."
+":guilabel:`Maximum to Replenish`: Specify the maximum quantity of the "
+"product to replenish for each period. If the demand is higher than this "
+"maximum, the remaining quantity is automatically transferred to the next "
+"period. Toggle the :guilabel:`No Maximum` checkbox to enter a maximum value, "
+"or leave it un-toggled if no maximum should be specified."
 msgstr ""
-":guilabel:`Minimum to Replenish` फ़ील्ड में, प्रॉडक्ट को रिप्लिनिश करने के लिए बनाए "
-"गए ऑर्डर के लिए न्यूनतम प्रॉडक्ट मात्रा दर्ज करें। उदाहरण के लिए, अगर इस फ़ील्ड में `5` दर्ज "
-"किया गया है, तो प्रॉडक्ट के लिए रिप्लिनिशमेंट ऑर्डर में कम से कम पांच यूनिट शामिल होती हैं।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:196
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:197
 msgid ""
-"In the :guilabel:`Maximum to Replenish` field, enter the maximum product "
-"quantity for orders created to replenish the product. For example, if `100` "
-"is entered in this field, replenishment orders for the product include a "
-"maximum of 100 units."
+"If no minimum or maximum replenishment limits are set, the |MPS| suggests "
+"the replenishment quantity needed to reach the :guilabel:`Safety Stock "
+"Target` while accounting for the starting stock and forecasted demand. In "
+"other words, the suggested quantity in the replenishment row is calculated "
+"by the following relation:"
 msgstr ""
-":guilabel:`Maximum to Replenish` फ़ील्ड में, प्रॉडक्ट को रिप्लिनिश करने के लिए बनाए "
-"गए ऑर्डर के लिए अधिकतम प्रॉडक्ट मात्रा दर्ज करें। उदाहरण के लिए, अगर इस फ़ील्ड में `100` "
-"दर्ज किया गया है, तो प्रॉडक्ट के लिए रिप्लिनिशमेंट ऑर्डर में अधिकतम 100 यूनिट शामिल होती "
-"हैं।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:200
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:202
 msgid ""
-"Finally, click :guilabel:`Save` to add the product to the |MPS|. The product "
-"now appears on the |MPS| page each time it is opened. If a |BoM| was "
-"selected in the :guilabel:`Bill of Materials` field of the :guilabel:`Add a "
-"Product` pop-up window, any components listed on the |BoM| appear on the "
-"page, as well."
+"\\begin{align}\n"
+"\\text{Replenishment} &= \\text{Safety Stock Target} \\\\\n"
+"&- \\text{Starting Stock} \\\\\n"
+"&- \\text{Forecasted Demand} \\\\\n"
+"&- \\text{Indirect Demand Forecast}\n"
+"\\end{align}"
 msgstr ""
-"अंत में, |MPS| में प्रॉडक्ट जोड़ने के लिए :guilabel:`Save` पर क्लिक करें। अब प्रॉडक्ट हर "
-"बार खोले जाने पर |MPS| पेज पर दिखाई देता है। अगर :guilabel:`Add a Product` पॉप-अप "
-"विंडो के :guilabel:`Bill of Materials` फ़ील्ड में एक |BoM| सेलेक्ट किया गया था, तो |"
-"BoM| पर सूचीबद्ध कोई भी कॉम्पोनेंट भी पेज पर दिखाई देते हैं।"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:211
+msgid ""
+"If minimum or maximum limits are set, the suggested replenishment quantity "
+"is always bounded by these limits, regardless of the needed quantity to "
+"reach the :guilabel:`Safety Stock Target`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:215
+msgid "Specify replenishment trigger"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:217
+msgid ""
+"Finally, in the :guilabel:`Replenishment Trigger` field, specify how the "
+"product should be replenished:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:220
+msgid ":guilabel:`Manual`: Manually replenish the product from the |MPS|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:221
+msgid ""
+":guilabel:`Automatic`: Automatically schedule a replenishment order for the "
+"product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:222
+msgid ":guilabel:`Never`: Never replenish the product from the |MPS|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:224
+msgid ""
+"Click :guilabel:`Save` to add the product to the |MPS|. The product now "
+"appears on the |MPS| page, along with any components (if applicable)."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:None
 msgid "The Add a Product pop-up window in the MPS."
 msgstr "एमपीएस में Add a Product पॉप-अप विंडो।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:209
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:231
 msgid "Edit a product"
 msgstr "प्रॉडक्ट में बदलाव करें"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:211
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:233
 msgid ""
-"After adding a product to the |MPS|, it may be necessary to change the "
-"replenishment values entered on the :guilabel:`Add a Product` pop-up window. "
-"To do so, click the :guilabel:`# ≤…≤ #` button to the immediate right of "
-"the :guilabel:`Replenish` button, on the :guilabel:`+ Suggested "
-"Replenishment` row, below the product's name."
+"To edit the planning schedule for a product on the |MPS|, click "
+"the :icon:`fa-pencil` :guilabel:`(Forecasted)` button next to the product's "
+"header row."
 msgstr ""
-"|MPS| में प्रॉडक्ट जोड़ने के बाद, :guilabel:`Add a Product` पॉप-अप विंडो पर दर्ज की "
-"गई रिप्लिनिशमेंट वैल्यू को बदलना आवश्यक हो सकता है। ऐसा करने के लिए, प्रॉडक्ट के नाम के "
-"नीचे :guilabel:`+ Suggested Replenishment` रो पर :guilabel:`Replenish` बटन के "
-"ठीक दाईं ओर :guilabel:`# ≤…≤ #` बटन पर क्लिक करें।"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:217
-msgid ""
-"The first and second number displayed on the :guilabel:`# ≤…≤ #` button "
-"correspond to the values entered in the :guilabel:`Minimum to Replenish` "
-"and :guilabel:`Maximum to Replenish` fields when adding the product to the |"
-"MPS|."
-msgstr ""
-":guilabel:`# ≤…≤ #` बटन पर प्रदर्शित पहली और दूसरी संख्या :guilabel:`Minimum to "
-"Replenish` और :guilabel:`Maximum to Replenish` फ़ील्ड में दर्ज की गई वैल्यू से मेल "
-"खाती है जब प्रॉडक्ट को |MPS| में जोड़ा गया था।"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:221
-msgid ""
-"For example, if `5` was entered in the :guilabel:`Minimum to Replenish` "
-"field, and `100` was entered in the :guilabel:`Maximum to Replenish` field, "
-"the button appears as :guilabel:`5 ≤…≤ 100`."
-msgstr ""
-"उदाहरण के लिए, अगर :guilabel:`Minimum to Replenish` फ़ील्ड में `5` दर्ज किया गया "
-"था, और :guilabel:`Maximum to Replenish` फ़ील्ड में `100` दर्ज किया गया था, तो "
-"बटन :guilabel:`5 ≤…≤ 100` के रूप में दिखाई देता है।"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:225
-msgid ""
-"Clicking the :guilabel:`# ≤…≤ #` button opens the :guilabel:`Edit Production "
-"Schedule` pop-up window. This pop-up window is the same as "
-"the :guilabel:`Add a Product` pop-up window, except that "
-"the :guilabel:`Product` and :guilabel:`Bill of Materials` fields cannot be "
-"edited."
-msgstr ""
-":guilabel:`# ≤…≤ #` बटन पर क्लिक करने से :guilabel:`Edit Production Schedule` "
-"पॉप-अप विंडो खुल जाती है। यह पॉप-अप विंडो :guilabel:`Add a Product` पॉप-अप विंडो "
-"के समान है, सिवाय इसके कि :guilabel:`Product` और :guilabel:`Bill of Materials` "
-"फ़ील्ड में बदलाव नहीं किया जा सकता है।"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:229
-msgid ""
-"On the :guilabel:`Edit Production Schedule` pop-up window, enter the desired "
-"values in the :guilabel:`Safety Stock Target`, :guilabel:`Minimum to "
-"Replenish`, and :guilabel:`Maximum to Replenish` fields. Then, "
-"click :guilabel:`Save` to save the changes."
-msgstr ""
-":guilabel:`Edit Production Schedule` पॉप-अप विंडो पर, :guilabel:`Safety Stock "
-"Target`, :guilabel:`Minimum to Replenish`, और :guilabel:`Maximum to "
-"Replenish` फ़ील्ड में वांछित वैल्यू दर्ज करें। फिर, बदलावों को सेव करने के "
-"लिए :guilabel:`Save` पर क्लिक करें।"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:234
-msgid "Remove a product"
-msgstr "प्रॉडक्ट हटाएं"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:236
 msgid ""
-"To remove a product from the |MPS|, tick the checkbox to the left of its "
-"name. Then, click the :icon:`fa-cog` :guilabel:`Actions` button at the top "
-"of the screen, and select :guilabel:`Delete` from the resulting drop-down "
-"menu. Finally, click :guilabel:`Ok` on the :guilabel:`Confirmation` pop-up "
-"window."
+"In the :guilabel:`Edit Production Schedule` pop-up window, enter the desired "
+"modifications. Then, click :guilabel:`Save` to save the changes."
 msgstr ""
-"|MPS| से प्रॉडक्ट हटाने के लिए, उसके नाम के बाईं ओर चेकबॉक्स पर टिक करें। फिर, स्क्रीन के "
-"शीर्ष पर :icon:`fa-cog` :guilabel:`Actions` बटन पर क्लिक करें, और ड्रॉप-डाउन मेन्यू "
-"से :guilabel:`Delete` चुनें। अंत में, :guilabel:`Confirmation` पॉप-अप विंडो "
-"पर :guilabel:`Ok` पर क्लिक करें।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:241
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:240
 msgid ""
-"Deleting a product from the |MPS| removes it, along with all of its data. If "
-"the product is re-added, its replenishment values must be reconfigured."
+"The :guilabel:`Product` and :guilabel:`Bill of Materials` fields cannot be "
+"edited."
 msgstr ""
-"|MPS| से प्रॉडक्ट मिटाने पर वह प्रॉडक्ट और उसका सारा डेटा हट जाता है। अगर प्रॉडक्ट फिर "
-"से जोड़ा जाता है, तो उसकी रिप्लिनिशमेंट वैल्यू को दोबारा कॉन्फ़िगर करना होगा।"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:243
+msgid "Remove a product"
+msgstr "प्रॉडक्ट हटाएं"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:245
-msgid "|MPS| replenishment"
-msgstr "|MPS| रिप्लिनिशमेंट"
+msgid ""
+"To remove a product from the |MPS|, select the checkbox next to its name. "
+"Then, click the :icon:`fa-cog` :guilabel:`Actions` button at the top of the "
+"screen, and select :guilabel:`Delete` from the drop-down menu. On "
+"the :guilabel:`Confirmation` pop-up window, click :guilabel:`Ok`."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:247
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:252
+msgid "Replenishing products with |MPS|"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:254
 msgid "Products in the |MPS| can be replenished in one of three ways:"
 msgstr "|MPS| में प्रॉडक्ट को तीन तरीकों से रिप्लिनिश किया जा सकता है:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:249
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:256
 msgid ""
-"Click the :guilabel:`Replenish` button at the top of the screen to generate "
-"replenishment orders for every product below its :guilabel:`Safety Stock "
-"Target` for the current month."
+"To replenish every product for the current time period, click "
+"the :guilabel:`Order` button at the top."
 msgstr ""
-"मौजूदा महीने के लिए :guilabel:`Safety Stock Target` से नीचे के हर प्रॉडक्ट के लिए "
-"रिप्लिनिशमेंट ऑर्डर जनरेट करने के लिए स्क्रीन के शीर्ष पर :guilabel:`Replenish` बटन पर "
-"क्लिक करें।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:251
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:258
 msgid ""
-"Click the :guilabel:`Replenish` button on the right side of the :guilabel:`+ "
-"Suggested Replenishment` row of a specific product, to generate a "
-"replenishment order for that specific product."
+"To replenish a specific product, click the :guilabel:`Order` button next to "
+"the :guilabel:`+ Replenishment` row of the product."
 msgstr ""
-"किसी खास प्रॉडक्ट की :guilabel:`+ Suggested Replenishment` रो के दाईं "
-"ओर :guilabel:`Replenish` बटन पर क्लिक करें, ताकि उस खास प्रॉडक्ट के लिए रिप्लिनिशमेंट "
-"ऑर्डर जनरेट हो सके।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:254
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:260
 msgid ""
-"Tick the checkbox to the left of the product name of one or more products. "
-"Then, click the :icon:`fa-cog` :guilabel:`Actions` button at the top of the "
-"screen, and select :guilabel:`Replenish` from the resulting drop-down menu. "
-"Doing so generates a replenishment order for each selected product."
+"To select and replenish multiple products, select the checkbox next to one "
+"or more products' header rows. Then, click the :icon:`fa-"
+"cog` :guilabel:`Actions` button at the top and select :guilabel:`Order` from "
+"the drop-down menu."
 msgstr ""
-"एक या ज़्यादा प्रॉडक्ट के प्रॉडक्ट नाम के बाईं ओर चेकबॉक्स पर टिक करें। फिर, स्क्रीन के शीर्ष "
-"पर :icon:`fa-cog` :guilabel:`Actions` बटन पर क्लिक करें, और ड्रॉप-डाउन मेन्यू "
-"से :guilabel:`Replenish` चुनें। ऐसा करने से हर चुने गए प्रॉडक्ट के लिए रिप्लिनिशमेंट ऑर्डर "
-"जनरेट होता है।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:259
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:264
 msgid ""
-"The type of replenishment order generated corresponds to the route selected "
-"on the *Inventory* tab of the product's form:"
+"The type of replenishment order generated is determined by the route "
+"selected on the *Add a Product* pop-up window when :ref:`adding a product "
+"<manufacturing/mps/add-product>` to the |MPS|."
 msgstr ""
-"जनरेट किए गए रिप्लिनिशमेंट ऑर्डर का टाइप प्रॉडक्ट के फ़ॉर्म के *Inventory* टैब पर चुने गए "
-"रूट से मेल खाता है:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:262
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:267
 msgid ""
-"If the *Buy* route is selected, an |RfQ| is generated to replenish the "
-"product. |RfQs| can be selected by navigating to "
-"the :menuselection:`Purchase` app. Any |RfQ| generated by the |MPS| "
-"lists :guilabel:`MPS` in its :guilabel:`Source Document` field."
+"If the *Buy* route is selected, an |RfQ| is generated to purchase the "
+"product. Generated |RfQs| can be located by navigating "
+"to :menuselection:`Purchase app --> Orders --> Requests for Quotation`."
 msgstr ""
-"अगर *Buy* रूट चुना गया है, तो प्रॉडक्ट को रिप्लिनिश करने के लिए |RfQ| जनरेट होता है। |"
-"RfQs| को :menuselection:`Purchase` ऐप्लिकेशन पर जाकर चुना जा सकता है। |MPS| "
-"द्वारा जनरेट किया गया कोई भी |RfQ| अपने :guilabel:`Source Document` फ़ील्ड "
-"में :guilabel:`MPS` लिस्ट करता है।"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:265
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:270
 msgid ""
-"If the *Manufacture* route is selected, an |MO| is generated to replenish "
-"the product. |MOs| can be selected by navigating "
+"If the *Manufacture* route is selected, an |MO| is generated to manufacture "
+"the product. Generated |MOs| can be located by navigating "
 "to :menuselection:`Manufacturing app --> Operations --> Manufacturing "
-"Orders`. Any |MO| generated by the |MPS| lists :guilabel:`MPS` in "
-"its :guilabel:`Source Document` field."
+"Orders`."
 msgstr ""
-"अगर *Manufacture* रूट चुना गया है, तो प्रॉडक्ट को रिप्लिनिश करने के लिए |MO| जनरेट "
-"होता है। |MOs| को :menuselection:`Manufacturing app --> Operations --> "
-"Manufacturing Orders` पर जाकर चुना जा सकता है। |MPS| द्वारा जनरेट किया गया कोई "
-"भी |MO| अपने :guilabel:`Source Document` फ़ील्ड में :guilabel:`MPS` लिस्ट करता है।"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:277
+msgid "Replenishment status indicators"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:279
+msgid ""
+"The :guilabel:`+ Replenishment` cells in the |MPS| are displayed using the "
+"following highlights, depending on whether the replenished quantities match "
+"the suggested quantities:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:282
+msgid ":guilabel:`Green`: The quantity is ready to be replenished."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:283
+msgid ""
+":guilabel:`Gray`: A replenishment order has already been generated, and its "
+"ordered quantity matches the suggested quantity for the time period."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:285
+msgid ""
+":guilabel:`Yellow`: A replenishment order has already been generated, but "
+"its ordered quantity is below the suggested quantity for the time period."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:287
+msgid ""
+":guilabel:`Red`: A replenishment order has already been generated, but its "
+"ordered quantity exceeds the suggested quantity for the time period."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:293
+msgid "Additional rows and filters"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:295
+msgid ""
+"With the :guilabel:`Search...` bar drop-down menu, users may further "
+"customize the |MPS| by configuring additional rows for products or by "
+"filtering existing records based on specific criteria."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:300
+msgid "Rows"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:302
+msgid ""
+"The following rows can be added to the |MPS| in addition to the default rows "
+"shown on the :ref:`dashboard <manufacturing/mps/dashboard>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:305
+msgid ""
+":guilabel:`Actual Demand`: Changes the :guilabel:`- Forecasted Demand` row "
+"to :guilabel:`- Actual / Forecasted Demand`, comparing the product's "
+"confirmed demand and its forecasted demand."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:307
+msgid ""
+":guilabel:`Actual Demand Y-1`: Displays the :guilabel:`Actual Demand` one "
+"year before the current time period."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:309
+msgid ""
+":guilabel:`Actual Demand Y-2`: Displays the :guilabel:`Actual Demand` two "
+"years before the current time period."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:311
+msgid ""
+":guilabel:`Actual Replenishment`: Changes the :guilabel:`+ Replenishment` "
+"row to :guilabel:`+ Actual / Replenishment`, comparing the product's "
+"replenished quantity and its suggested quantity."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:313
+msgid ""
+":guilabel:`Available to Promise`: Changes the :guilabel:`= Forecasted Stock` "
+"row to :guilabel:`= ATP / Forecasted Stock`, comparing the product's "
+"available stock (``Starting Stock - Actual Demand + Replenishment``) and its "
+"forecasted stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:320
+msgid ""
+"Users can filter records from the |MPS| based on the following criteria:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:322
+msgid ""
+":guilabel:`To Forecast`: Filter by products that are manually or "
+"automatically replenished."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:323
+msgid ""
+":guilabel:`To Replenish`: Filter by products that are ready to be "
+"replenished (i.e., with at least one :guilabel:`+ Replenishment` cell "
+"highlighted in green)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:325
+msgid ""
+":guilabel:`Indirect Demand`: Filter by products configured with the "
+"*Indirect Demand* option."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:326
+msgid ""
+":guilabel:`Replenishment Too Low`: Filter by products with a replenished "
+"quantity below the suggested replenishment quantity (i.e., with at least "
+"one :guilabel:`+ Replenishment` cell highlighted in yellow)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:329
+msgid ""
+":guilabel:`Replenishment Too High`: Filter by products with a replenished "
+"quantity above the suggested replenishment quantity (i.e., with at least "
+"one :guilabel:`+ Replenishment` cell highlighted in red)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:332
+msgid ""
+":guilabel:`Manually Replenished`: Filter by products with the *Replenishment "
+"Trigger* set to *Manual*."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:334
+msgid ""
+":guilabel:`Automatically Replenished`: Filter by products with the "
+"*Replenishment Trigger* set to *Automatic*."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:336
+msgid ""
+":guilabel:`Not Replenished from MPS`: Filter by products with the "
+"*Replenishment Trigger* set to *Never*."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:3
 msgid "Work center time off"
@@ -59525,6 +59485,594 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
 msgstr ":doc:`../../sales/sales/products_prices/returns`"
+
+#~ msgid ""
+#~ "In Odoo's *Manufacturing* app, the *master production schedule* (MPS) is "
+#~ "used to manually plan manufacturing orders (MOs) and purchase orders "
+#~ "(POs), based on forecasted quantities of products and components."
+#~ msgstr ""
+#~ "Odoo के *Manufacturing* ऐप्लिकेशन में, *मास्टर प्रॉडक्शन शेड्यूल* (एमपीएस) का उपयोग "
+#~ "प्रॉडक्ट और कॉम्पोनेंट की पूर्वानुमानित क्वांटिटी के आधार पर मैन्युफैक्चरिंग ऑर्डर (एमओ) और "
+#~ "परचेज़ ऑर्डर (पीओ) को मैन्युअली प्लान करने के लिए किया जाता है।"
+
+#~ msgid ""
+#~ "By considering the impact of confirmed |MOs| and |POs|, along with "
+#~ "manually adjusted demand forecasts, the |MPS| can be used to manage long-"
+#~ "term product replenishment. This ensures the continued availability of "
+#~ "the necessary products and components."
+#~ msgstr ""
+#~ "कन्फर्म्ड |MOs| और |POs| के प्रभाव के साथ-साथ मैन्युअली एडजस्ट की गई डिमांड फोरकास्ट "
+#~ "पर विचार करके, |MPS| का उपयोग लॉन्ग-टर्म प्रॉडक्ट रिप्लिनिशमेंट को मैनेज करने के लिए "
+#~ "किया जा सकता है। यह जरूरी प्रॉडक्ट और कॉम्पोनेंट की निरंतर उपलब्धता सुनिश्चित करता है।"
+
+#~ msgid ""
+#~ "Since the |MPS| allows for manual intervention, it is useful for "
+#~ "replenishing products where the demand of existing sales orders (SOs) "
+#~ "does **not** reflect probable future demand."
+#~ msgstr ""
+#~ "चूंकि |MPS| मैन्युअल इंटरवेंशन की अनुमति देता है, यह उन प्रॉडक्ट को रिप्लिनिश करने के लिए "
+#~ "उपयोगी है जहां मौजूदा सेल्स ऑर्डर (एसओ) की डिमांड संभावित भविष्य की डिमांड को "
+#~ "**नहीं** दर्शाती है।"
+
+#~ msgid ""
+#~ "A retail store sells artificial *Christmas trees* during the holiday "
+#~ "season. It is currently September, and the store has less than ten "
+#~ "Christmas tree |MOs| confirmed for the month of December."
+#~ msgstr ""
+#~ "एक रिटेल स्टोर हॉलिडे सीज़न के दौरान आर्टिफिशियल *क्रिसमस ट्री* बेचता है। यह अभी "
+#~ "सितंबर है, और स्टोर के पास दिसंबर महीने के लिए दस से कम क्रिसमस ट्री |MOs| कन्फर्म हैं।"
+
+#~ msgid ""
+#~ "Despite the number of confirmed |MOs|, the procurement manager knows that "
+#~ "the demand for Christmas trees in December is going to be much higher, "
+#~ "once the holiday season starts. As a result, they manually enter a "
+#~ "greater demand in the |MPS|, so they can properly replenish the product "
+#~ "in time for the increase in customer demand."
+#~ msgstr ""
+#~ "कन्फर्म्ड |MOs| की संख्या के बावजूद, प्रोक्युर्मन्ट मैनेजर जानता है कि हॉलिडे सीज़न शुरू होने "
+#~ "के बाद दिसंबर में क्रिसमस ट्री की डिमांड बहुत अधिक होने वाली है। परिणामस्वरूप, वे |"
+#~ "MPS| में मैन्युअली अधिक डिमांड दर्ज करते हैं, ताकि वे ग्राहक डिमांड में वृद्धि के समय के लिए "
+#~ "प्रॉडक्ट को सही तरीके से रिप्लिनिश कर सकें।"
+
+#~ msgid ""
+#~ "It is essential to remember that the |MPS| is a **MANUAL** tool. Adding a "
+#~ "product to the |MPS| does not cause it to be manufactured or purchased "
+#~ "automatically. The |MPS| simply suggests the amount of the product that "
+#~ "should be replenished, but requires user input to create the |MOs| or |"
+#~ "POs| that are used to replenish it."
+#~ msgstr ""
+#~ "यह याद रखना आवश्यक है कि |MPS| एक **मैन्युअल** टूल है। |MPS| में कोई प्रॉडक्ट जोड़ने से "
+#~ "यह ऑटोमैटिकली मैन्युफैक्चर या परचेज़ नहीं होता है। |MPS| केवल उस प्रॉडक्ट की मात्रा "
+#~ "सुझाता है जिसे रिप्लिनिश किया जाना चाहिए, लेकिन इसे रिप्लिनिश करने के लिए इस्तेमाल "
+#~ "किए जाने वाले |MOs| या |POs| बनाने के लिए उपयोगकर्ता इनपुट की आवश्यकता होती है।"
+
+#~ msgid ""
+#~ "For this reason, it is recommended that the |MPS| **NOT** be used "
+#~ "alongside reordering rules for the same product. Because reordering rules "
+#~ "are an automated workflow, they conflict with the manual replenishment "
+#~ "method of |MPS|. Using both, in unison, can lead to inaccurate forecasts "
+#~ "and the creation of unnecessary replenishment orders."
+#~ msgstr ""
+#~ "इस वजह से, यह अनुशंसा की जाती है कि |MPS| का उपयोग एक ही प्रॉडक्ट के लिए "
+#~ "रीऑर्डरिंग रूल्स के साथ **नहीं** किया जाए। क्योंकि रीऑर्डरिंग रूल्स एक ऑटोमेटेड वर्कफ़्लो "
+#~ "हैं, वे |MPS| के मैन्युअल रिप्लिनिशमेंट मेथड के साथ कंफ्लिक्ट करते हैं। दोनों का एक साथ "
+#~ "उपयोग करने से गलत फोरकास्ट और अनावश्यक रिप्लिनिशमेंट ऑर्डर बन सकते हैं।"
+
+#~ msgid "Enable and configure |MPS|"
+#~ msgstr "|MPS| को एनेबल और कॉन्फ़िगर करें"
+
+#~ msgid ""
+#~ "To use the |MPS| feature, navigate to :menuselection:`Manufacturing app --"
+#~ "> Configuration --> Settings`, and tick the :guilabel:`Master Production "
+#~ "Schedule` checkbox in the :guilabel:`Planning` section. Finally, "
+#~ "click :guilabel:`Save`."
+#~ msgstr ""
+#~ "|MPS| फीचर का उपयोग करने के लिए, :menuselection:`Manufacturing app --> "
+#~ "Configuration --> Settings` पर जाएं, और :guilabel:`Planning` सेक्शन "
+#~ "में :guilabel:`Master Production Schedule` चेकबॉक्स को टिक करें। अंत "
+#~ "में, :guilabel:`Save` पर क्लिक करें।"
+
+#~ msgid ""
+#~ "After enabling the :guilabel:`Master Production Schedule` feature, two "
+#~ "new fields appear under it on the :guilabel:`Settings` "
+#~ "page: :guilabel:`Time Range` and :guilabel:`Number of Columns`."
+#~ msgstr ""
+#~ ":guilabel:`Master Production Schedule` फीचर को एनेबल करने के "
+#~ "बाद, :guilabel:`Settings` पेज पर इसके अंतर्गत दो नए फ़ील्ड दिखाई देते "
+#~ "हैं: :guilabel:`Time Range` और :guilabel:`Number of Columns`।"
+
+#~ msgid ""
+#~ "The :guilabel:`Time Range` field is used to select the period of time "
+#~ "over which planning takes place, and offers three "
+#~ "options: :guilabel:`Monthly`, :guilabel:`Weekly`, and :guilabel:`Daily`. "
+#~ "For example, if :guilabel:`Monthly` is selected, the |MPS| plans the "
+#~ "production requirements of products and components on a monthly basis."
+#~ msgstr ""
+#~ ":guilabel:`Time Range` फ़ील्ड का उपयोग उस समयावधि को चुनने के लिए किया जाता है "
+#~ "जिसके दौरान प्लानिंग होती है, और यह तीन विकल्प प्रदान करता "
+#~ "है: :guilabel:`Monthly`, :guilabel:`Weekly`, और :guilabel:`Daily`। उदाहरण "
+#~ "के लिए, अगर :guilabel:`Monthly` सेलेक्ट किया जाता है, तो |MPS| प्रॉडक्ट और "
+#~ "कॉम्पोनेंट की प्रॉडक्शन आवश्यकताओं को मासिक आधार पर प्लान करता है।"
+
+#~ msgid ""
+#~ "The :guilabel:`Number of Columns` field is used to specify the quantity "
+#~ "of the selected :guilabel:`Time Range` units shown on the |MPS| page. For "
+#~ "example, if the :guilabel:`Time Range` field is set "
+#~ "to :guilabel:`Monthly`, and `12` is entered in the :guilabel:`Number of "
+#~ "Columns` field, the |MPS| shows one column for the next 12 months, "
+#~ "starting with the current month."
+#~ msgstr ""
+#~ ":guilabel:`Number of Columns` फ़ील्ड का उपयोग |MPS| पेज पर दिखाए गए "
+#~ "चयनित :guilabel:`Time Range` यूनिट की क्वांटिटी निर्दिष्ट करने के लिए किया जाता "
+#~ "है। उदाहरण के लिए, अगर :guilabel:`Time Range` फ़ील्ड को :guilabel:`Monthly` "
+#~ "पर सेट किया गया है, और :guilabel:`Number of Columns` फ़ील्ड में `12` दर्ज किया "
+#~ "गया है, तो |MPS| वर्तमान महीने से शुरू होने वाले अगले 12 महीनों के लिए एक कॉलम "
+#~ "दिखाता है।"
+
+#~ msgid ""
+#~ "If the values of the :guilabel:`Time Range` or :guilabel:`Number of "
+#~ "Columns` fields are altered, click :guilabel:`Save` again to save the "
+#~ "changes."
+#~ msgstr ""
+#~ "अगर :guilabel:`Time Range` या :guilabel:`Number of Columns` फ़ील्ड के मान "
+#~ "बदले जाते हैं, तो परिवर्तनों को सेव करने के लिए फिर से :guilabel:`Save` पर क्लिक करें।"
+
+#~ msgid ""
+#~ "To open the |MPS|, navigate to :menuselection:`Manufacturing app --> "
+#~ "Planning --> Master Production Schedule`. The |MPS| view appears as "
+#~ "follows:"
+#~ msgstr ""
+#~ "|MPS| खोलने के लिए, :menuselection:`Manufacturing app --> Planning --> "
+#~ "Master Production Schedule` पर जाएं। |MPS| व्यू निम्नानुसार दिखाई देता है:"
+
+#~ msgid ""
+#~ "The grey column on the left side of the screen shows a section for every "
+#~ "product added to the |MPS|, with each product section being broken down "
+#~ "into smaller rows. The information shown in the rows depends on the "
+#~ "filters selected in the :guilabel:`Search...` bar drop-down menu at the "
+#~ "top of the page. The default categories that appear in the rows are:"
+#~ msgstr ""
+#~ "स्क्रीन के बाईं ओर का ग्रे कॉलम |MPS| में जोड़े गए हर प्रॉडक्ट के लिए एक सेक्शन दिखाता "
+#~ "है, जिसमें प्रत्येक प्रॉडक्ट सेक्शन छोटी पंक्तियों में बंटा होता है। पंक्तियों में दिखाई जाने "
+#~ "वाली जानकारी पेज के ऊपर :guilabel:`खोजें...` बार ड्रॉप-डाउन मेन्यू में चुने गए फ़िल्टर "
+#~ "पर निर्भर करती है। पंक्तियों में दिखाई देने वाली डिफ़ॉल्ट कैटगरी हैं:"
+
+#~ msgid ""
+#~ ":guilabel:`[Product] by [unit]` :icon:`fa-area-chart`: the forecasted "
+#~ "stock quantity at the beginning of each time "
+#~ "period. :guilabel:`[Product]` and :icon:`fa-area-chart` are selectable "
+#~ "buttons which open the product's page, or the forecast report for the "
+#~ "product, respectively."
+#~ msgstr ""
+#~ ":guilabel:`[प्रॉडक्ट] by [यूनिट]` :icon:`fa-area-chart`: प्रत्येक समय अवधि की "
+#~ "शुरुआत में पूर्वानुमानित स्टॉक मात्रा। :guilabel:`[प्रॉडक्ट]` और :icon:`fa-area-"
+#~ "chart` चुने जा सकने वाले बटन हैं जो क्रमशः प्रॉडक्ट का पेज, या प्रॉडक्ट के लिए "
+#~ "पूर्वानुमान रिपोर्ट खोलते हैं।"
+
+#~ msgid ""
+#~ ":guilabel:`- Forecasted Demand`: the demand forecast, which is entered "
+#~ "manually. This represents an estimate of the demand for the product "
+#~ "during each time period."
+#~ msgstr ""
+#~ ":guilabel:`- पूर्वानुमानित डिमांड`: डिमांड का पूर्वानुमान, जो मैन्युअल रूप से दर्ज किया "
+#~ "जाता है। यह प्रत्येक समय अवधि के दौरान प्रॉडक्ट की डिमांड का अनुमान दर्शाता है।"
+
+#~ msgid ""
+#~ ":guilabel:`- Indirect Demand Forecast`: while this is a default category, "
+#~ "it **only** appears for products that are components of other products. "
+#~ "It represents the demand for the component from existing MOs."
+#~ msgstr ""
+#~ ":guilabel:`- इनडायरेक्ट डिमांड पूर्वानुमान`: हालांकि यह एक डिफ़ॉल्ट कैटगरी है, यह "
+#~ "**सिर्फ़** उन प्रॉडक्ट के लिए दिखाई देती है जो अन्य प्रॉडक्ट के कॉम्पोनेंट हैं। यह मौजूदा "
+#~ "एमओ से कॉम्पोनेंट की डिमांड को दर्शाती है।"
+
+#~ msgid ""
+#~ ":guilabel:`+ Suggested Replenishment`: the quantity of the product that "
+#~ "is suggested to be replenished through |MOs| or |POs|. To the right of "
+#~ "the category title is a :guilabel:`Replenish` button, which is used to "
+#~ "manually replenish the product, based on the quantity suggested to be "
+#~ "replenished."
+#~ msgstr ""
+#~ ":guilabel:`+ सुझाई गई रिप्लिनिशमेंट`: प्रॉडक्ट की वह मात्रा जिसे |MOs| या |POs| के "
+#~ "माध्यम से रिप्लिनिश करने का सुझाव दिया जाता है। कैटगरी शीर्षक के दाईं ओर "
+#~ "एक :guilabel:`रिप्लिनिश करें` बटन है, जिसका उपयोग सुझाई गई रिप्लिनिश की जाने "
+#~ "वाली मात्रा के आधार पर मैन्युअल रूप से प्रॉडक्ट को रिप्लिनिश करने के लिए किया जाता है।"
+
+#~ msgid "The Replenish button on the \"+ Suggested Replenishment\" row."
+#~ msgstr "\"+ सुझाई गई रिप्लिनिशमेंट\" पंक्ति पर रिप्लिनिश करें बटन।"
+
+#~ msgid "The \"Replenish\" button on the \"+ Suggested Replenishment\" row."
+#~ msgstr "\"+ सुझाई गई रिप्लिनिशमेंट\" पंक्ति पर \"रिप्लिनिश करें\" बटन।"
+
+#~ msgid ""
+#~ ":guilabel:`= Forecasted Stock`: the quantity of the product forecasted to "
+#~ "be in stock at the end of each time period, assuming that suggested "
+#~ "replenishment numbers are fulfilled."
+#~ msgstr ""
+#~ ":guilabel:`= पूर्वानुमानित स्टॉक`: प्रत्येक समय अवधि के अंत में स्टॉक में होने का "
+#~ "पूर्वानुमान लगाई गई प्रॉडक्ट की मात्रा, यह मानते हुए कि सुझाई गई रिप्लिनिशमेंट संख्याएं "
+#~ "पूरी हो गई हैं।"
+
+#~ msgid "Altogether, these default categories form an equation:"
+#~ msgstr "कुल मिलाकर, ये डिफ़ॉल्ट कैटगरी एक समीकरण बनाती हैं:"
+
+#~ msgid ""
+#~ "\\text{Forecasted Demand} + \\text{Suggested Replenishment} = "
+#~ "\\text{Forecasted Stock}\n"
+#~ "\n"
+#~ msgstr ""
+#~ "\\text{पूर्वानुमानित डिमांड} + \\text{सुझाई गई रिप्लिनिशमेंट} = \\text{पूर्वानुमानित "
+#~ "स्टॉक}\n"
+#~ "\n"
+
+#~ msgid ""
+#~ "In the case of components, the :guilabel:`Indirect Demand Forecast` is "
+#~ "taken into account as well."
+#~ msgstr ""
+#~ "कॉम्पोनेंट के मामले में, :guilabel:`इनडायरेक्ट डिमांड पूर्वानुमान` को भी ध्यान में रखा "
+#~ "जाता है।"
+
+#~ msgid ""
+#~ "The :guilabel:`- Forecasted Demand` and :guilabel:`+ Suggested "
+#~ "Replenishment` fields can be edited for any of the time periods to the "
+#~ "right of the product column. Doing so changes the equation, and updates "
+#~ "the value displayed in the :guilabel:`Forecasted Stock` field."
+#~ msgstr ""
+#~ "प्रॉडक्ट कॉलम के दाईं ओर किसी भी समय अवधि के लिए :guilabel:`- पूर्वानुमानित "
+#~ "डिमांड` और :guilabel:`+ सुझाई गई रिप्लिनिशमेंट` फ़ील्ड को एडिट किया जा सकता है। "
+#~ "ऐसा करने से समीकरण बदल जाता है, और :guilabel:`पूर्वानुमानित स्टॉक` फ़ील्ड में दिखाई "
+#~ "गई वैल्यू अपडेट हो जाती है।"
+
+#~ msgid ""
+#~ "Changing the value in the :guilabel:`+ Suggested Replenishment` field "
+#~ "also makes an :icon:`fa-times` :guilabel:`(reset)` button appear to the "
+#~ "left of the field. Click the :icon:`fa-times` :guilabel:`(reset)` button "
+#~ "next to the field to reset its value back to the one calculated by the |"
+#~ "MPS|."
+#~ msgstr ""
+#~ ":guilabel:`+ सुझाई गई रिप्लिनिशमेंट` फ़ील्ड में वैल्यू बदलने से फ़ील्ड के बाईं ओर "
+#~ "एक :icon:`fa-times` :guilabel:`(रीसेट करें)` बटन भी दिखाई देता है। फ़ील्ड के बगल "
+#~ "में :icon:`fa-times` :guilabel:`(रीसेट करें)` बटन पर क्लिक करें ताकि इसकी वैल्यू को |"
+#~ "MPS| द्वारा गणना की गई वैल्यू पर रीसेट किया जा सके।"
+
+#~ msgid ""
+#~ "While the |MPS| can be used with only the default categories enabled, it "
+#~ "is advisable to also enable the :guilabel:`Actual Demand` category. This "
+#~ "is done by clicking the :icon:`fa-caret-down` :guilabel:`(down arrow)` on "
+#~ "the right side of the :guilabel:`Search...` bar, and enabling "
+#~ "the :guilabel:`Actual Demand` option under the :guilabel:`Rows` header."
+#~ msgstr ""
+#~ "हालांकि |MPS| का उपयोग केवल डिफ़ॉल्ट कैटगरी सक्षम होने पर किया जा सकता है, "
+#~ "लेकिन :guilabel:`वास्तविक डिमांड` कैटगरी को भी सक्षम करना उचित है। यह :icon:`fa-"
+#~ "caret-down` :guilabel:`(नीचे तीर)` पर :guilabel:`खोजें...` बार के दाईं ओर क्लिक "
+#~ "करके, और :guilabel:`पंक्तियाँ` हेडर के अंतर्गत :guilabel:`वास्तविक डिमांड` विकल्प को "
+#~ "सक्षम करके किया जाता है।"
+
+#~ msgid ""
+#~ "With the :guilabel:`Actual Demand` option enabled, the :guilabel:`- "
+#~ "Forecasted Demand` category changes to the :guilabel:`- Actual / "
+#~ "Forecasted Demand` category. In addition to the manually entered "
+#~ "forecasted demand, this category also displays the confirmed demand for "
+#~ "the product, which is based on confirmed |SOs|."
+#~ msgstr ""
+#~ ":guilabel:`वास्तविक डिमांड` विकल्प सक्षम होने के साथ, :guilabel:`- पूर्वानुमानित "
+#~ "डिमांड` कैटगरी :guilabel:`- वास्तविक / पूर्वानुमानित डिमांड` कैटगरी में बदल जाती है। "
+#~ "मैन्युअल रूप से दर्ज किए गए पूर्वानुमानित डिमांड के अतिरिक्त, यह कैटगरी प्रॉडक्ट के लिए "
+#~ "पुष्टि की गई डिमांड भी दिखाती है, जो पुष्टि किए गए |SOs| पर आधारित है।"
+
+#~ msgid ""
+#~ "Each column to the right of the products column lists one unit of the "
+#~ "time period selected in the *Time Range* field on the *Manufacturing* app "
+#~ "*Settings* page (ex. months). The number of time period columns "
+#~ "corresponds to the value entered in the *Number of Columns* field."
+#~ msgstr ""
+#~ "प्रॉडक्ट कॉलम के दाईं ओर प्रत्येक कॉलम *मैन्युफ़ैक्चरिंग* ऐप्लिकेशन *सेटिंग* पेज पर *समय "
+#~ "सीमा* फ़ील्ड में चुनी गई समय अवधि की एक यूनिट दर्शाता है (उदाहरण: महीने)। समय अवधि "
+#~ "कॉलम की संख्या *कॉलम की संख्या* फ़ील्ड में दर्ज की गई वैल्यू के अनुरूप होती है।"
+
+#~ msgid ""
+#~ "The first time period column represents the current time period. For "
+#~ "example, if the |MPS| is configured to use months, the first column "
+#~ "displays data for the current month. On this first column, "
+#~ "the :guilabel:`+ Suggested Replenishment` field appears in one of five "
+#~ "colors:"
+#~ msgstr ""
+#~ "पहला समय अवधि कॉलम वर्तमान समय अवधि को दर्शाता है। उदाहरण के लिए, अगर |MPS| "
+#~ "महीनों का उपयोग करने के लिए कॉन्फ़िगर किया गया है, तो पहला कॉलम वर्तमान महीने के "
+#~ "लिए डेटा प्रदर्शित करता है। इस पहले कॉलम पर, :guilabel:`+ सुझाई गई रिप्लिनिशमेंट` "
+#~ "फ़ील्ड पांच रंगों में से एक में दिखाई देती है:"
+
+#~ msgid ""
+#~ ":guilabel:`Green`: a replenishment order must be generated to keep stock "
+#~ "at the :guilabel:`Safety Stock Target`, based on the "
+#~ "configured :doc:`lead times <../../inventory/warehouses_storage/"
+#~ "replenishment/lead_times>`."
+#~ msgstr ""
+#~ ":guilabel:`ग्रीन`: कॉन्फ़िगर की गई :doc:`लीड टाइम <../../inventory/"
+#~ "warehouses_storage/replenishment/lead_times>` के आधार पर, स्टॉक "
+#~ "को :guilabel:`सेफ़्टी स्टॉक टार्गेट` पर रखने के लिए एक रिप्लिनिशमेंट ऑर्डर जनरेट करना "
+#~ "होगा।"
+
+#~ msgid ""
+#~ ":guilabel:`Gray`: a replenishment order has already been generated to "
+#~ "keep stock at the :guilabel:`Safety Stock Target`."
+#~ msgstr ""
+#~ ":guilabel:`ग्रे`: स्टॉक को :guilabel:`सुरक्षा स्टॉक टारगेट` पर रखने के लिए पहले से "
+#~ "ही एक रिप्लिनिशमेंट ऑर्डर तैयार किया जा चुका है।"
+
+#~ msgid ""
+#~ ":guilabel:`Yellow`: a replenishment order has already been generated, but "
+#~ "the quantity it was created for is not enough to keep stock at "
+#~ "the :guilabel:`Safety Stock Target`."
+#~ msgstr ""
+#~ ":guilabel:`पीला`: एक रिप्लिनिशमेंट ऑर्डर पहले ही जनरेट हो चुका है, लेकिन जिस मात्रा "
+#~ "के लिए इसे बनाया गया था वह स्टॉक को :guilabel:`सेफ्टी स्टॉक टारगेट` पर रखने के लिए "
+#~ "पर्याप्त नहीं है।"
+
+#~ msgid ""
+#~ ":guilabel:`Red`: a replenishment order has already been generated, but "
+#~ "the quantity it was created for puts the amount of stock above "
+#~ "the :guilabel:`Safety Stock Target`."
+#~ msgstr ""
+#~ ":guilabel:`लाल`: पहले से ही एक रिप्लिनिशमेंट ऑर्डर तैयार किया जा चुका है, लेकिन जिस "
+#~ "मात्रा के लिए इसे बनाया गया था, वह स्टॉक की मात्रा को :guilabel:`सुरक्षा स्टॉक "
+#~ "टारगेट` से अधिक कर देती है।"
+
+#~ msgid ""
+#~ "The :guilabel:`+ Suggested Replenishment` field appears white, if no "
+#~ "replenishment order has been generated, and it is not necessary to "
+#~ "generate one at the current moment."
+#~ msgstr ""
+#~ "अगर कोई रिप्लिनिशमेंट ऑर्डर जनरेट नहीं किया गया है, और वर्तमान समय में एक जनरेट करना "
+#~ "आवश्यक नहीं है, तो :guilabel:`+ Suggested Replenishment` फ़ील्ड सफ़ेद दिखाई देता "
+#~ "है।"
+
+#~ msgid "Add a product"
+#~ msgstr "प्रॉडक्ट जोड़ें"
+
+#~ msgid ""
+#~ "To use |MPS| to manage the replenishment of a product, navigate "
+#~ "to :menuselection:`Manufacturing app --> Planning --> Master Production "
+#~ "Schedule`. At the top of the |MPS| page, click :guilabel:`Add a Product` "
+#~ "to open the :guilabel:`Add a Product` pop-up window."
+#~ msgstr ""
+#~ "किसी प्रॉडक्ट की रिप्लिनिशमेंट को मैनेज करने के लिए |MPS| का इस्तेमाल करने के "
+#~ "लिए, :menuselection:`Manufacturing ऐप्लिकेशन --> Planning --> Master "
+#~ "Production Schedule` पर जाएं। |MPS| पेज के ऊपर, :guilabel:`Add a Product` पर "
+#~ "क्लिक करें ताकि :guilabel:`Add a Product` पॉप-अप विंडो खुल सके।"
+
+#~ msgid ""
+#~ "In the case of manufactured products, the *Manufacture* route must be "
+#~ "selected in the *Routes* section of the *Inventory* tab, on the product's "
+#~ "form."
+#~ msgstr ""
+#~ "मैन्युफ़ैक्चर किए गए प्रॉडक्ट के मामले में, प्रॉडक्ट के फ़ॉर्म पर *Inventory* टैब के "
+#~ "*Routes* सेक्शन में *Manufacture* रूट को सेलेक्ट किया जाना चाहिए।"
+
+#~ msgid ""
+#~ "In the case of products that are purchased, the *Buy* route must be "
+#~ "selected in the *Routes* section of the *Inventory* tab, on the product's "
+#~ "form. Additionally, a vendor and the price they sell the product for must "
+#~ "also be specified on the *Purchase* tab."
+#~ msgstr ""
+#~ "खरीदे गए प्रॉडक्ट के मामले में, प्रॉडक्ट के फ़ॉर्म पर *Inventory* टैब के *Routes* सेक्शन "
+#~ "में *Buy* रूट को सेलेक्ट किया जाना चाहिए। इसके अतिरिक्त, *Purchase* टैब पर एक वेंडर "
+#~ "और वह कीमत भी निर्दिष्ट की जानी चाहिए जिस पर वे प्रॉडक्ट बेचते हैं।"
+
+#~ msgid ""
+#~ "On the pop-up window, select the product to add in "
+#~ "the :guilabel:`Product` drop-down menu. If the product is replenished "
+#~ "through manufacturing, select the product's |BoM| in the :guilabel:`Bill "
+#~ "of Materials` field."
+#~ msgstr ""
+#~ "पॉप-अप विंडो पर, :guilabel:`Product` ड्रॉप-डाउन मेनू में जोड़ने के लिए प्रॉडक्ट को "
+#~ "सेलेक्ट करें। अगर प्रॉडक्ट को मैन्युफ़ैक्चरिंग के माध्यम से रिप्लिनिश किया जाता है, "
+#~ "तो :guilabel:`Bill of Materials` फ़ील्ड में प्रॉडक्ट का |BoM| सेलेक्ट करें।"
+
+#~ msgid ""
+#~ "Selecting a BoM when adding a product to the |MPS| also adds any "
+#~ "components listed on the BoM. If it is not necessary to manage the "
+#~ "replenishment of components through the |MPS|, simply leave "
+#~ "the :guilabel:`Bill of Materials` field blank."
+#~ msgstr ""
+#~ "|MPS| में प्रॉडक्ट जोड़ते समय बीओएम सेलेक्ट करने से बीओएम पर सूचीबद्ध कोई भी कॉम्पोनेंट "
+#~ "भी जुड़ जाते हैं। अगर |MPS| के माध्यम से कॉम्पोनेंट की रिप्लिनिशमेंट को मैनेज करना आवश्यक "
+#~ "नहीं है, तो बस :guilabel:`Bill of Materials` फ़ील्ड को खाली छोड़ दें।"
+
+#~ msgid ""
+#~ "If the database is configured with multiple warehouses, "
+#~ "a :guilabel:`Production Warehouse` field appears on the :guilabel:`Add a "
+#~ "Product` pop-up window. Use this field to specify which warehouse the "
+#~ "product is replenished to."
+#~ msgstr ""
+#~ "अगर डेटाबेस को कई वेयरहाउस के साथ कॉन्फ़िगर किया गया है, तो :guilabel:`Add a "
+#~ "Product` पॉप-अप विंडो पर एक :guilabel:`Production Warehouse` फ़ील्ड दिखाई "
+#~ "देता है। इस फ़ील्ड का इस्तेमाल यह निर्दिष्ट करने के लिए करें कि प्रॉडक्ट को किस वेयरहाउस "
+#~ "में रिप्लिनिश किया जाता है।"
+
+#~ msgid ""
+#~ "In the :guilabel:`Safety Stock Target` field, specify the minimum "
+#~ "quantity of the product that should be kept available for orders at all "
+#~ "times. For example, if there should always be 20 units of the product "
+#~ "available for order fulfillment, enter `20` in the :guilabel:`Safety "
+#~ "Stock Target` field."
+#~ msgstr ""
+#~ ":guilabel:`Safety Stock Target` फ़ील्ड में, प्रॉडक्ट की न्यूनतम मात्रा निर्दिष्ट करें "
+#~ "जो हमेशा ऑर्डर के लिए उपलब्ध रखी जानी चाहिए। उदाहरण के लिए, अगर प्रॉडक्ट की 20 "
+#~ "यूनिट हमेशा ऑर्डर फ़ुलफ़िलमेंट के लिए उपलब्ध होनी चाहिए, तो :guilabel:`Safety Stock "
+#~ "Target` फ़ील्ड में `20` दर्ज करें।"
+
+#~ msgid ""
+#~ "In the :guilabel:`Minimum to Replenish` field, enter the minimum product "
+#~ "quantity for orders created to replenish the product. For example, if `5` "
+#~ "is entered in this field, replenishment orders for the product include a "
+#~ "minimum of five units."
+#~ msgstr ""
+#~ ":guilabel:`Minimum to Replenish` फ़ील्ड में, प्रॉडक्ट को रिप्लिनिश करने के लिए "
+#~ "बनाए गए ऑर्डर के लिए न्यूनतम प्रॉडक्ट मात्रा दर्ज करें। उदाहरण के लिए, अगर इस फ़ील्ड में "
+#~ "`5` दर्ज किया गया है, तो प्रॉडक्ट के लिए रिप्लिनिशमेंट ऑर्डर में कम से कम पांच यूनिट "
+#~ "शामिल होती हैं।"
+
+#~ msgid ""
+#~ "In the :guilabel:`Maximum to Replenish` field, enter the maximum product "
+#~ "quantity for orders created to replenish the product. For example, if "
+#~ "`100` is entered in this field, replenishment orders for the product "
+#~ "include a maximum of 100 units."
+#~ msgstr ""
+#~ ":guilabel:`Maximum to Replenish` फ़ील्ड में, प्रॉडक्ट को रिप्लिनिश करने के लिए "
+#~ "बनाए गए ऑर्डर के लिए अधिकतम प्रॉडक्ट मात्रा दर्ज करें। उदाहरण के लिए, अगर इस फ़ील्ड "
+#~ "में `100` दर्ज किया गया है, तो प्रॉडक्ट के लिए रिप्लिनिशमेंट ऑर्डर में अधिकतम 100 यूनिट "
+#~ "शामिल होती हैं।"
+
+#~ msgid ""
+#~ "Finally, click :guilabel:`Save` to add the product to the |MPS|. The "
+#~ "product now appears on the |MPS| page each time it is opened. If a |BoM| "
+#~ "was selected in the :guilabel:`Bill of Materials` field of "
+#~ "the :guilabel:`Add a Product` pop-up window, any components listed on the "
+#~ "|BoM| appear on the page, as well."
+#~ msgstr ""
+#~ "अंत में, |MPS| में प्रॉडक्ट जोड़ने के लिए :guilabel:`Save` पर क्लिक करें। अब प्रॉडक्ट हर "
+#~ "बार खोले जाने पर |MPS| पेज पर दिखाई देता है। अगर :guilabel:`Add a Product` पॉप-"
+#~ "अप विंडो के :guilabel:`Bill of Materials` फ़ील्ड में एक |BoM| सेलेक्ट किया गया था, "
+#~ "तो |BoM| पर सूचीबद्ध कोई भी कॉम्पोनेंट भी पेज पर दिखाई देते हैं।"
+
+#~ msgid ""
+#~ "After adding a product to the |MPS|, it may be necessary to change the "
+#~ "replenishment values entered on the :guilabel:`Add a Product` pop-up "
+#~ "window. To do so, click the :guilabel:`# ≤…≤ #` button to the immediate "
+#~ "right of the :guilabel:`Replenish` button, on the :guilabel:`+ Suggested "
+#~ "Replenishment` row, below the product's name."
+#~ msgstr ""
+#~ "|MPS| में प्रॉडक्ट जोड़ने के बाद, :guilabel:`Add a Product` पॉप-अप विंडो पर दर्ज "
+#~ "की गई रिप्लिनिशमेंट वैल्यू को बदलना आवश्यक हो सकता है। ऐसा करने के लिए, प्रॉडक्ट के "
+#~ "नाम के नीचे :guilabel:`+ Suggested Replenishment` रो "
+#~ "पर :guilabel:`Replenish` बटन के ठीक दाईं ओर :guilabel:`# ≤…≤ #` बटन पर क्लिक "
+#~ "करें।"
+
+#~ msgid ""
+#~ "The first and second number displayed on the :guilabel:`# ≤…≤ #` button "
+#~ "correspond to the values entered in the :guilabel:`Minimum to Replenish` "
+#~ "and :guilabel:`Maximum to Replenish` fields when adding the product to "
+#~ "the |MPS|."
+#~ msgstr ""
+#~ ":guilabel:`# ≤…≤ #` बटन पर प्रदर्शित पहली और दूसरी संख्या :guilabel:`Minimum "
+#~ "to Replenish` और :guilabel:`Maximum to Replenish` फ़ील्ड में दर्ज की गई वैल्यू से "
+#~ "मेल खाती है जब प्रॉडक्ट को |MPS| में जोड़ा गया था।"
+
+#~ msgid ""
+#~ "For example, if `5` was entered in the :guilabel:`Minimum to Replenish` "
+#~ "field, and `100` was entered in the :guilabel:`Maximum to Replenish` "
+#~ "field, the button appears as :guilabel:`5 ≤…≤ 100`."
+#~ msgstr ""
+#~ "उदाहरण के लिए, अगर :guilabel:`Minimum to Replenish` फ़ील्ड में `5` दर्ज किया "
+#~ "गया था, और :guilabel:`Maximum to Replenish` फ़ील्ड में `100` दर्ज किया गया था, "
+#~ "तो बटन :guilabel:`5 ≤…≤ 100` के रूप में दिखाई देता है।"
+
+#~ msgid ""
+#~ "Clicking the :guilabel:`# ≤…≤ #` button opens the :guilabel:`Edit "
+#~ "Production Schedule` pop-up window. This pop-up window is the same as "
+#~ "the :guilabel:`Add a Product` pop-up window, except that "
+#~ "the :guilabel:`Product` and :guilabel:`Bill of Materials` fields cannot "
+#~ "be edited."
+#~ msgstr ""
+#~ ":guilabel:`# ≤…≤ #` बटन पर क्लिक करने से :guilabel:`Edit Production "
+#~ "Schedule` पॉप-अप विंडो खुल जाती है। यह पॉप-अप विंडो :guilabel:`Add a Product` "
+#~ "पॉप-अप विंडो के समान है, सिवाय इसके कि :guilabel:`Product` और :guilabel:`Bill "
+#~ "of Materials` फ़ील्ड में बदलाव नहीं किया जा सकता है।"
+
+#~ msgid ""
+#~ "On the :guilabel:`Edit Production Schedule` pop-up window, enter the "
+#~ "desired values in the :guilabel:`Safety Stock Target`, :guilabel:`Minimum "
+#~ "to Replenish`, and :guilabel:`Maximum to Replenish` fields. Then, "
+#~ "click :guilabel:`Save` to save the changes."
+#~ msgstr ""
+#~ ":guilabel:`Edit Production Schedule` पॉप-अप विंडो पर, :guilabel:`Safety "
+#~ "Stock Target`, :guilabel:`Minimum to Replenish`, और :guilabel:`Maximum to "
+#~ "Replenish` फ़ील्ड में वांछित वैल्यू दर्ज करें। फिर, बदलावों को सेव करने के "
+#~ "लिए :guilabel:`Save` पर क्लिक करें।"
+
+#~ msgid ""
+#~ "To remove a product from the |MPS|, tick the checkbox to the left of its "
+#~ "name. Then, click the :icon:`fa-cog` :guilabel:`Actions` button at the "
+#~ "top of the screen, and select :guilabel:`Delete` from the resulting drop-"
+#~ "down menu. Finally, click :guilabel:`Ok` on the :guilabel:`Confirmation` "
+#~ "pop-up window."
+#~ msgstr ""
+#~ "|MPS| से प्रॉडक्ट हटाने के लिए, उसके नाम के बाईं ओर चेकबॉक्स पर टिक करें। फिर, स्क्रीन "
+#~ "के शीर्ष पर :icon:`fa-cog` :guilabel:`Actions` बटन पर क्लिक करें, और ड्रॉप-डाउन "
+#~ "मेन्यू से :guilabel:`Delete` चुनें। अंत में, :guilabel:`Confirmation` पॉप-अप विंडो "
+#~ "पर :guilabel:`Ok` पर क्लिक करें।"
+
+#~ msgid ""
+#~ "Deleting a product from the |MPS| removes it, along with all of its data. "
+#~ "If the product is re-added, its replenishment values must be reconfigured."
+#~ msgstr ""
+#~ "|MPS| से प्रॉडक्ट मिटाने पर वह प्रॉडक्ट और उसका सारा डेटा हट जाता है। अगर प्रॉडक्ट "
+#~ "फिर से जोड़ा जाता है, तो उसकी रिप्लिनिशमेंट वैल्यू को दोबारा कॉन्फ़िगर करना होगा।"
+
+#~ msgid "|MPS| replenishment"
+#~ msgstr "|MPS| रिप्लिनिशमेंट"
+
+#~ msgid ""
+#~ "Click the :guilabel:`Replenish` button at the top of the screen to "
+#~ "generate replenishment orders for every product below "
+#~ "its :guilabel:`Safety Stock Target` for the current month."
+#~ msgstr ""
+#~ "मौजूदा महीने के लिए :guilabel:`Safety Stock Target` से नीचे के हर प्रॉडक्ट के लिए "
+#~ "रिप्लिनिशमेंट ऑर्डर जनरेट करने के लिए स्क्रीन के शीर्ष पर :guilabel:`Replenish` बटन "
+#~ "पर क्लिक करें।"
+
+#~ msgid ""
+#~ "Click the :guilabel:`Replenish` button on the right side of "
+#~ "the :guilabel:`+ Suggested Replenishment` row of a specific product, to "
+#~ "generate a replenishment order for that specific product."
+#~ msgstr ""
+#~ "किसी खास प्रॉडक्ट की :guilabel:`+ Suggested Replenishment` रो के दाईं "
+#~ "ओर :guilabel:`Replenish` बटन पर क्लिक करें, ताकि उस खास प्रॉडक्ट के लिए "
+#~ "रिप्लिनिशमेंट ऑर्डर जनरेट हो सके।"
+
+#~ msgid ""
+#~ "Tick the checkbox to the left of the product name of one or more "
+#~ "products. Then, click the :icon:`fa-cog` :guilabel:`Actions` button at "
+#~ "the top of the screen, and select :guilabel:`Replenish` from the "
+#~ "resulting drop-down menu. Doing so generates a replenishment order for "
+#~ "each selected product."
+#~ msgstr ""
+#~ "एक या ज़्यादा प्रॉडक्ट के प्रॉडक्ट नाम के बाईं ओर चेकबॉक्स पर टिक करें। फिर, स्क्रीन के "
+#~ "शीर्ष पर :icon:`fa-cog` :guilabel:`Actions` बटन पर क्लिक करें, और ड्रॉप-डाउन "
+#~ "मेन्यू से :guilabel:`Replenish` चुनें। ऐसा करने से हर चुने गए प्रॉडक्ट के लिए "
+#~ "रिप्लिनिशमेंट ऑर्डर जनरेट होता है।"
+
+#~ msgid ""
+#~ "The type of replenishment order generated corresponds to the route "
+#~ "selected on the *Inventory* tab of the product's form:"
+#~ msgstr ""
+#~ "जनरेट किए गए रिप्लिनिशमेंट ऑर्डर का टाइप प्रॉडक्ट के फ़ॉर्म के *Inventory* टैब पर चुने "
+#~ "गए रूट से मेल खाता है:"
+
+#~ msgid ""
+#~ "If the *Buy* route is selected, an |RfQ| is generated to replenish the "
+#~ "product. |RfQs| can be selected by navigating to "
+#~ "the :menuselection:`Purchase` app. Any |RfQ| generated by the |MPS| "
+#~ "lists :guilabel:`MPS` in its :guilabel:`Source Document` field."
+#~ msgstr ""
+#~ "अगर *Buy* रूट चुना गया है, तो प्रॉडक्ट को रिप्लिनिश करने के लिए |RfQ| जनरेट होता "
+#~ "है। |RfQs| को :menuselection:`Purchase` ऐप्लिकेशन पर जाकर चुना जा सकता है। |"
+#~ "MPS| द्वारा जनरेट किया गया कोई भी |RfQ| अपने :guilabel:`Source Document` "
+#~ "फ़ील्ड में :guilabel:`MPS` लिस्ट करता है।"
+
+#~ msgid ""
+#~ "If the *Manufacture* route is selected, an |MO| is generated to replenish "
+#~ "the product. |MOs| can be selected by navigating "
+#~ "to :menuselection:`Manufacturing app --> Operations --> Manufacturing "
+#~ "Orders`. Any |MO| generated by the |MPS| lists :guilabel:`MPS` in "
+#~ "its :guilabel:`Source Document` field."
+#~ msgstr ""
+#~ "अगर *Manufacture* रूट चुना गया है, तो प्रॉडक्ट को रिप्लिनिश करने के लिए |MO| जनरेट "
+#~ "होता है। |MOs| को :menuselection:`Manufacturing app --> Operations --> "
+#~ "Manufacturing Orders` पर जाकर चुना जा सकता है। |MPS| द्वारा जनरेट किया गया "
+#~ "कोई भी |MO| अपने :guilabel:`Source Document` फ़ील्ड में :guilabel:`MPS` लिस्ट "
+#~ "करता है।"
 
 #~ msgid ""
 #~ "In some cases, handling products in different units of measure is "
