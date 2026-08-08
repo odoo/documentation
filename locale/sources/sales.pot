@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-24 17:32+0000\n"
+"POT-Creation-Date: 2026-08-07 17:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,7 +67,6 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/glory.rst:21
 #: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:13
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:13
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:15
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:12
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:14
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:19
@@ -5284,7 +5283,7 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/extra/pricing.rst:155
 #: ../../content/applications/sales/point_of_sale/hardware_network/receipt_printers.rst:38
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:144
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:149
 msgid "Go to :menuselection:`Point of Sale --> Configuration --> Settings`."
 msgstr ""
 
@@ -7487,6 +7486,7 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/payment_methods/cash_machines/cashmatic.rst:95
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:167
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:38
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:45
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:35
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:63
 msgid "Odoo configuration"
@@ -8592,7 +8592,6 @@ msgid "Chain ID"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:41
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:42
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:30
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:36
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:22
@@ -8614,6 +8613,7 @@ msgid ":doc:`Create a new payment method <../../payment_methods>`:"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:50
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:55
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mollie.rst:48
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:46
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:58
@@ -8623,6 +8623,7 @@ msgid "Set the :guilabel:`Journal` field to :guilabel:`Bank`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/dpo.rst:51
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:57
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mollie.rst:50
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:47
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:60
@@ -8680,55 +8681,80 @@ msgid "Ingenico is currently only available in Belgium, the Netherlands and Luxe
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:11
-msgid "Odoo works with the Ingenico Lane/, Desk/, and Move/ payment terminals as they support the TLV communication protocol through TCP/IP."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:18
-msgid "Connect an IoT system"
+msgid "Odoo works with Ingenico's `Lane/5000 <https://ingenico.com/en/products-services/payment-terminals/tetra/lane5000-le>`_, `Desk/5000 <https://ingenico.com/en/products-services/payment-terminals/tetra/desk5000>`_, `Move/5000 <https://ingenico.com/en/products-services/payment-terminals/tetra/move5000>`_ payment terminals, as they support the TLV communication protocol through TCP/IP."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:20
-msgid "Connecting an Ingenico payment terminal to Odoo is a feature that requires an IoT system. For more information on how to connect an IoT system to your database, please refer to the :doc:`IoT documentation </applications/general/iot>`."
+msgid "Ingenico terminal configuration"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:25
-msgid "Configure the Lane/Desk/Move 5000 terminals for Ingenico BENELUX"
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:22
+msgid "To configure the Lane/5000, Desk/5000, or Move/5000, follow these steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:27
-msgid "Press the function button (:guilabel:`F` on Lane/5000, :guilabel:`⦿` on Desk/5000 and Move/5000)."
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:24
+msgid "Press the function button (:guilabel:`F` on the Lane/5000 terminal, :guilabel:`⦿` on the Desk/5000 and Move/5000 terminals)."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:26
+msgid "Go to :menuselection:`Kassa Menu --> Settings Menu`, enter the settings password (default: `2009`), and press :guilabel:`OK`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:28
+msgid "Select :guilabel:`Protocol` and press :guilabel:`OK`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:29
-msgid "Go to :menuselection:`Kassa menu --> Settings Menu` and enter the settings password (default: `2009`)."
+msgid "Select :guilabel:`CTEP` and press :guilabel:`OK`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:30
+msgid "Select :guilabel:`Change Connection` and press :guilabel:`OK`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:31
-msgid "Select :guilabel:`Change Connection` and press :guilabel:`OK` on the next screen."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:32
-msgid "Select :guilabel:`TCP/IP` and :guilabel:`IP-address`."
+msgid "Select :guilabel:`TCP/IP` and press :guilabel:`OK`. Then, select :guilabel:`IP-address` and press :guilabel:`OK`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:33
-msgid "On the next screen, enter the IP address of your IoT system."
+msgid "Enter the IoT system's IP address and press :guilabel:`OK`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:34
-msgid "Enter `9000` as port number and press :guilabel:`OK` on the next screen."
+msgid "Enter port number `9001` if using an IoT box or `9050` if using the Windows virtual IoT."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:36
-msgid "At this point, the terminal restarts and should be displayed on the IoT system's form in Odoo."
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:35
+msgid "Select :guilabel:`No SSL` and press :guilabel:`OK`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:44
-msgid "Enable the payment terminal :ref:`in the application settings <pos/use/settings>` and :doc:`create the related payment method <../../payment_methods>`. Set the journal type as :guilabel:`Bank` and select :guilabel:`Ingenico` in the :guilabel:`Use a Payment Terminal` field. Then, select your terminal device in the :guilabel:`Payment Terminal Device` field."
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:37
+msgid "The terminal restarts and should be displayed on the IoT system's form in Odoo."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:47
+msgid "The configuration of an Ingenico terminal with Odoo requires to first :doc:`connect the IoT system to Odoo </applications/general/iot/connect>`, then to enable the :guilabel:`Worldline` terminal in the :ref:`POS settings <pos/use/settings>` under the :guilabel:`Payment Terminals` section."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:51
-msgid "Once the payment method is created, you can select it in your POS settings. To do so, go to the :ref:`POS' settings <pos/use/settings>`, click :guilabel:`Edit`, and add the payment method under the :guilabel:`Payments` section."
+msgid "To connect the Ingenico terminal with Odoo Point of Sale, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:53
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mollie.rst:46
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:44
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:56
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_com.rst:60
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:67
+msgid "Go to :menuselection:`Point of Sale --> Configuration --> Payment Methods` and :doc:`create a payment method <../../payment_methods>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:56
+msgid "Set the :guilabel:`Point of Sale` field to the desired point of sale."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:58
+msgid "Select the Worldline terminal number in the :guilabel:`Payment Terminal Device` field, then save."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:3
@@ -8744,166 +8770,166 @@ msgid "Odoo is compatible with Point Smart 1 or Point Smart 2 payment terminals,
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:14
-msgid "Mercado Pago payment terminals do not require an :doc:`IoT Box </applications/general/iot>` to operate."
+msgid "Mercado Pago payment terminals do not require :doc:`an IoT system </applications/general/iot>` to operate."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:18
-msgid ":doc:`Mercado Pago online payments </applications/finance/payment_providers/mercado_pago>`"
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:16
+msgid "Odoo does not support the :guilabel:`STANDALONE` operation mode."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:19
+msgid ":doc:`Mercado Pago online payments </applications/finance/payment_providers/mercado_pago>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:20
 msgid "`Mercado Pago tutorial video (Spanish only) <https://www.youtube.com/watch?v=dpbexfTc4VQ>`_"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:24
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:25
 msgid "Mercado Pago configuration"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:26
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:27
 msgid "The Mercado Pago configuration requires creating an account, if needed, and :ref:`connecting it to your payment terminal and store <pos/mercado-pago/terminal>`. Then, create a :ref:`Point Smart application <pos/mercado-pago/point-smart>` for technical setup and acquiring :ref:`credentials <pos/mercado-pago/credentials>` to complete the integration."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:34
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:35
 msgid "Terminal and store connection"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:36
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:37
 msgid "Create a Mercado Pago account if needed:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:38
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:39
 msgid "`Mercado Pago for Mexico <https://www.mercadopago.com.mx/>`_"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:39
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:40
 msgid "`Mercado Pago for Argentina <https://www.mercadopago.com.ar/>`_"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:40
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:41
 msgid "`Mercado Pago for Brazil <https://www.mercadopago.com.br/>`_"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:41
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:42
 msgid "Turn on the Point Smart terminal. Follow the on-screen instructions until prompted to link the terminal with your Mercado Pago account."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:43
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:44
 msgid "Click :guilabel:`Soy responsable del negocio` to get a pairing QR code."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:44
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:45
 msgid "Connect to your Mercado Pago account with a mobile device."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:45
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:46
 msgid "Scan the QR code with the mobile device and complete the connection in your Mercado Pago account."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:46
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:47
 msgid "Ensure the terminal is correctly linked to your store:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:48
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:49
 msgid "Type your Mercado Pago account email address or phone number, then click :guilabel:`Continuar`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:50
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:51
 msgid "In the popover, click :guilabel:`Continuar`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:51
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:52
 msgid "On the :guilabel:`Configura el lector para tu cuenta [account name]` screen, click :guilabel:`Empezar configuración`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:53
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:54
 msgid "Click :guilabel:`Crear nueva sucursal` to add a new point of sale."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:54
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:55
 msgid "Type the point of sale's name and address. Add more information if needed, then click :guilabel:`Crear sucursal`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:56
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:57
 msgid "Type your register's name and click :guilabel:`Confirmar sucursal y caja`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:57
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:58
 msgid "Click :guilabel:`Crear clave` to create a security key and protect the point of sale."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:62
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:63
 msgid "Point Smart application"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:64
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:65
 msgid "Log in to the `Mercado Pago Developer <https://www.mercadopago.com/developers>`_ portal."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:65
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:66
 msgid "Click :guilabel:`Tus integraciones`, then click `Crear aplicación <https://www.mercadopago.com.mx/ayuda/20152>`_."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:67
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:68
 msgid "In the :guilabel:`Configuraciones básicas` section, type the application name, select :guilabel:`Pagos presencial` and :guilabel:`PointdeMercadoPago`, then click :guilabel:`Crear aplicación` to receive the application number."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:74
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:75
 msgid "Credentials generation"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:76
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:77
 msgid "There are three credentials to generate and collect from the `Mercado Pago Developer dashboard <https://www.mercadopago.com/developers>`_: a **webhook secret key**, an **access token**, and the **terminal serial number**."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:80
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:81
 msgid "Generate the webhook secret key:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:82
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:83
 msgid "Click :guilabel:`Webhooks` under the :guilabel:`Notificaciones` section, then :guilabel:`Modo productivo`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:84
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:85
 msgid "Paste your Odoo database's URL followed by `/pos_mercado_pago/notification`. For example: `https://mycompany.odoo.com/pos_mercado_pago/notification`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:86
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:87
 msgid "Copy the generated webhook secret key and save it for the :ref:`pos/mercado-pago/payment-method` step."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:88
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:89
 msgid "Generate the access token:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:90
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:91
 msgid "Click :guilabel:`Credenciales de producción` under the :guilabel:`Producción` section, then :guilabel:`Activar credenciales de producción`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:92
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:93
 msgid "Copy the generated access token and save it for the :ref:`pos/mercado-pago/payment-method` step."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:94
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:95
 msgid "Locate the terminal serial number on the back of the terminal and write it down for the :ref:`pos/mercado-pago/payment-method` step."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:97
-msgid "Once the Mercado Pago configuration is complete, log in to your Odoo database to create a :ref:`payment method <pos/mercado-pago/payment-method>` using the collected credentials."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:101
-msgid "Odoo does not support the :guilabel:`Standalone` operation mode."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:104
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:99
 msgid "All terminals purchased with your Mercado Pago account are automatically displayed on the Mercado Pago dashboard."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:110
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:105
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mollie.rst:42
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:49
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_com.rst:53
 msgid "Odoo POS configuration"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:108
+msgid "For the Mercado Pago terminal to work correctly with Odoo, make sure to :ref:`enable Mercado Pago as a payment provider <payment_providers/mercado_pago/odoo-configuration>` and add the associated account credentials."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:112
@@ -8996,14 +9022,6 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mollie.rst:44
 msgid "To connect the Mollie terminal with Odoo Point of Sale, follow these steps:"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mollie.rst:46
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:44
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:56
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_com.rst:60
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:67
-msgid "Go to :menuselection:`Point of Sale --> Configuration --> Payment Methods` and :doc:`create a payment method <../../payment_methods>`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mollie.rst:49
@@ -12144,9 +12162,9 @@ msgid "To send marketing messages manually from the POS backend, follow these st
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/use.rst:178
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:88
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:101
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:124
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:93
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:106
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:129
 msgid "Go to :menuselection:`Point of Sale --> Orders --> Orders`."
 msgstr ""
 
@@ -12558,146 +12576,150 @@ msgid "The invoice is automatically issued and downloaded. To simultaneously sen
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:55
-msgid "If the registered customer's :ref:`contact type <essentials/contacts/type>` is set to :guilabel:`Company`, the :icon:`fa-file-text-o` :guilabel:`Invoice` checkbox is automatically enabled."
+msgid "Alternatively, on the payment confirmation screen, click :icon:`fa-pencil-square-o` :guilabel:`Edit`, add a customer in the dedicated field if needed, click :guilabel:`Invoice`, then :guilabel:`Continue`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:60
-msgid ":doc:`receipts`"
+msgid "If the registered customer's :ref:`contact type <essentials/contacts/type>` is set to :guilabel:`Company`, the :icon:`fa-file-text-o` :guilabel:`Invoice` checkbox is automatically enabled."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:65
-msgid "After the ordering process"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:67
-msgid "To create and issue an invoice to the customer from the POS register after an order is processed, follow these steps:"
+msgid ":doc:`receipts`"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:70
-msgid "Click :guilabel:`Orders` in the POS interface."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:71
-msgid "Set the :guilabel:`Active` dropdown menu to :guilabel:`Paid`."
+msgid "After the ordering process"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:72
-msgid "Select the relevant order and click :icon:`fa-file-pdf-o` :guilabel:`Invoice` above the numpad."
+msgid "To create and issue an invoice to the customer from the POS register after an order is processed, follow these steps:"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:75
+msgid "Click :guilabel:`Orders` in the POS interface."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:76
+msgid "Set the :guilabel:`Active` dropdown menu to :guilabel:`Paid`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:77
+msgid "Select the relevant order and click :icon:`fa-file-pdf-o` :guilabel:`Invoice` above the numpad."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:80
 msgid "To reprint the invoice, select the relevant order and click :icon:`fa-file-pdf-o` :guilabel:`Reprint Invoice` above the numpad."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:79
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:84
 msgid "From the backend"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:84
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:89
 msgid "Backend invoice creation"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:86
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:91
 msgid "To create and issue an invoice from the backend, follow these steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:89
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:94
 msgid "Select the relevant order."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:90
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:95
 msgid "Add the :guilabel:`Customer` if needed, then click :guilabel:`Invoice`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:95
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:100
 msgid "Consolidated customer invoice"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:97
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:102
 msgid "To create a consolidated invoice for all orders linked to the same customer that are not yet invoiced (i.e., invoices with an :guilabel:`Invoice Status` set to :guilabel:`To Invoice`), follow these steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:102
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:107
 msgid "Click the search bar and :guilabel:`Group By` :guilabel:`Customer`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:103
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:108
 msgid "Click the :icon:`fa-caret-right` (:guilabel:`caret`) icon next to the relevant customer and enable :guilabel:`Order Ref` in the column header or select the relevant orders."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:105
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:110
 msgid "Click :guilabel:`Create Invoices`, keep the :guilabel:`Consolidated Billing` option enabled, then click :guilabel:`Create`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:109
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:114
 msgid "Alternatively, go to :menuselection:`Point of Sale --> Orders --> Customers`, select the relevant customer, click the :icon:`fa-shopping-bag` :guilabel:`PoS Orders` smart button on the customer form, select the relevant orders, click :guilabel:`Create Invoices`, then :guilabel:`Create`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:113
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:118
 msgid "To create an individual invoice for each sales order, disable the :guilabel:`Consolidated Billing` option."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:119
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:124
 msgid "Invoice retrieval"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:121
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:126
 msgid "Retrieving invoices is useful for customer requests and accounting purposes, for example. To view, download, reprint, or send past transactions, follow these steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:125
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:130
 msgid "Click the relevant order in the list."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:126
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:131
 msgid "Click the :guilabel:`Invoice` smart button on the order form."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:127
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:132
 msgid "Click the following buttons to manage the invoice:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:129
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:134
 msgid ":guilabel:`Send`: Send or resend the invoice."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:130
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:135
 msgid ":guilabel:`Print`: Open the browser's print function or download the invoice."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:131
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:136
 msgid ":guilabel:`Preview`: Preview and download the invoice."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:132
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:137
 msgid ":guilabel:`Credit Note`: Issue a :ref:`credit note <accounting/credit_notes/issue-credit-note>` to the customer."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:134
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:139
 msgid ":guilabel:`Reset to Draft`: Reset the invoice to draft if changes are needed."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:139
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:144
 msgid "Invoice generation via QR code and URL"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:141
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:146
 msgid "To allow customers to request an invoice by scanning a QR code printed on their :ref:`receipt <pos/configuration/receipts>`, follow these steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:145
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:150
 msgid "Scroll down to the :guilabel:`Bills & Receipts` section."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:146
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:151
 msgid "Enable the :guilabel:`Self-service invoicing` setting."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:147
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:152
 msgid "Set the :guilabel:`Print` field to :guilabel:`QR code`, :guilabel:`URL`, or :guilabel:`QR code + URL` to determine how customers can access their invoice (e.g., by scanning the QR code or by typing the URL in a browser)."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:151
+#: ../../content/applications/sales/point_of_sale/use/pos_invoices.rst:156
 msgid "Upon scanning the QR code or typing the URL in a browser, customers must fill in a form with the information on the receipt (i.e., the :guilabel:`Ticket Number`, :guilabel:`Date`, and :guilabel:`Unique code`) and click :guilabel:`Request Invoice`. Then, they must enter their billing information or sign in and click :guilabel:`Get my invoice`. The invoice is then generated and available for download, and the order status is updated to :guilabel:`Fully Invoiced`."
 msgstr ""
 
@@ -13050,6 +13072,7 @@ msgid ":guilabel:`Unavailability days`: Designated days that are not available f
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/product_type.rst:73
+#: ../../content/applications/sales/rental/configure_products/products.rst:33
 msgid "Click :guilabel:`Save` to apply the changes."
 msgstr ""
 
@@ -13109,7 +13132,7 @@ msgid ":doc:`../../../services/project`"
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/product_type.rst:102
-#: ../../content/applications/sales/rental/configure_products/products.rst:260
+#: ../../content/applications/sales/rental/configure_products/products.rst:266
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:130
 msgid ":doc:`../../../inventory_and_mrp/inventory`"
 msgstr ""
@@ -13187,7 +13210,7 @@ msgid "The **Rental** app offers many app-integration features. Depending on the
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:19
-msgid "Navigate to :menuselection:`Rental app --> Configuration --> Settings`, configure the :guilabel:`Default Delay Costs` in the *Rental* section for late fees. Optionally, configure the :guilabel:`Default Padding Time` to make rentals unavailable for booking. Refer to the :ref:`rental/products/rental-transfer-feature` section to learn what it does and how to configure it."
+msgid "Navigate to :menuselection:`Rental app --> Configuration --> Settings`, and configure the :guilabel:`Default Delay Costs` in the *Rental* section for late fees. Optionally, configure the :guilabel:`Default Padding Time` to make rentals unavailable for booking. Refer to the :ref:`rental/products/rental-transfer-feature` section to learn what it does and how to configure it."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:25
@@ -13196,10 +13219,6 @@ msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:29
 msgid "For more control, configure the costs of late returns in the :guilabel:`Per Hour` and :guilabel:`Per Day` fields on the product form. If the defaults apply to all products, leave the :guilabel:`Product` field blank."
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:33
-msgid "Click **Save** to apply the changes."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:None
@@ -13215,42 +13234,42 @@ msgid "To set up a new physical rental product, go to the :menuselection:`Rental
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:47
-msgid "General Information tab"
+msgid "Initial product configuration"
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:49
-msgid "In the new product window, the :guilabel:`Rental` checkbox is already ticked by default. Select the :guilabel:`Product Type` as :guilabel:`Goods`."
+msgid "In the new product window, the :guilabel:`Rental` checkbox is already selected by default. Select the :guilabel:`Product Type` as :guilabel:`Goods`."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:52
-msgid "Tick the :guilabel:`Track Inventory` checkbox and select :guilabel:`By Quantity` from the drop-down menu. For the :guilabel:`Category` field, select :guilabel:`Goods` from the drop-down menu or create a new category by typing in the name and clicking :guilabel:`Create`."
+msgid "Enable the :guilabel:`Track Inventory` checkbox and select :guilabel:`By Quantity` from the drop-down menu. For the :guilabel:`Category` field, select :guilabel:`Goods` from the drop-down menu or create a new category by typing in the name and clicking :guilabel:`Create`."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:None
 msgid "The new product view in the Rental app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:60
-msgid "Attributes & Variants tab"
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:63
-msgid "The *Variant* feature in the **Inventory** app must be enabled for this tab to display."
+#: ../../content/applications/sales/rental/configure_products/products.rst:62
+msgid "Optional: specify rental variants"
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:65
-msgid "Click :guilabel:`Add a line`, then select a default option from the :guilabel:`Attribute` drop-down menu. To create a new one, enter the name, then click :guilabel:`Create and edit…` to :ref:`configure the attribute and its values <products/variants/attributes>`."
+msgid "The *Variant* feature in the **Inventory** app must be enabled for this tab to display."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:72
-msgid "Rental prices tab"
+#: ../../content/applications/sales/rental/configure_products/products.rst:67
+msgid "In the :guilabel:`Attributes & Variants` tab, :ref:`add the appropriate attribute and its values <products/variants/attributes>` by clicking :guilabel:`Add a line`. Attributes and values are useful for keeping the product library manageable, tracking and differentiating the inventory, and providing more detailed reports. Examples of rental variants for a *Goods* product are size, brand, color, and material."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:74
+#: ../../content/applications/sales/rental/configure_products/products.rst:76
+msgid "Set rental periods, prices, and reservations"
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:78
 msgid "Click the :guilabel:`Rental prices` tab and in the :guilabel:`Pricing` section, click :guilabel:`Add a price` to enter a new rental rate. Choose a *pricing period* (:dfn:`the unit of duration of the rental`) in the :guilabel:`Period` column, or create a new pricing period by typing in the name and clicking :guilabel:`Create and edit`."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:80
+#: ../../content/applications/sales/rental/configure_products/products.rst:84
 msgid "Creating a new pricing period opens a pop-up *Create period* window. Fill in the :guilabel:`Name`, :guilabel:`Duration`, and :guilabel:`Unit`, and click :guilabel:`Save`. The new pricing period automatically applies."
 msgstr ""
 
@@ -13258,30 +13277,30 @@ msgstr ""
 msgid "Sample of a New Period view in the Rental app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:87
+#: ../../content/applications/sales/rental/configure_products/products.rst:91
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:122
 msgid "Next, enter the :guilabel:`Price` for that specific :guilabel:`Period`. To apply the configured rental rate to an existing pricelist, click in the :guilabel:`Pricelist` column and select the desired list from the drop-down menu."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:91
+#: ../../content/applications/sales/rental/configure_products/products.rst:95
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:126
 msgid "In the :guilabel:`Reservations` section, fill in the :guilabel:`Hourly Fine`, :guilabel:`Daily Fine`, and the :guilabel:`Reserve product` time. These values are automatically populated from the :guilabel:`Default Delay Costs` section, provided they have been configured in the :menuselection:`Rental app --> Configuration --> Settings`."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:96
+#: ../../content/applications/sales/rental/configure_products/products.rst:100
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:131
 msgid "Click the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon near the top to save."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:99
+#: ../../content/applications/sales/rental/configure_products/products.rst:103
 msgid "A bike rental business rents tandem bikes for two hours at the local park. The hourly rental rate for their tandem bikes is $20, but since tandem bikes are popular, they want to set a new price of $35. To ensure the business gets their bikes returned on time, they set the late return fee as $20 per hour and $160 per day ($20 x 8 hrs)."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:104
+#: ../../content/applications/sales/rental/configure_products/products.rst:108
 msgid "Create a new pricing period by navigating to :menuselection:`Rental app --> Configuration --> Rental periods`. Click :guilabel:`New`, then configure the period for `2` hours."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:107
+#: ../../content/applications/sales/rental/configure_products/products.rst:111
 msgid "Navigate to the tandem bike product and in the :guilabel:`Rental prices` tab add the `2` hour period set at `$35`. Manually save to apply changes."
 msgstr ""
 
@@ -13289,108 +13308,112 @@ msgstr ""
 msgid "Sample of a rental product with the custom rental period applied."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:116
-msgid "Configure a physical rental product for product tracking"
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:119
-msgid "To configure a physical rental product for product tracking, the **Inventory** app must be installed, and :doc:`Lots & Serial Numbers must be enabled <../../../inventory_and_mrp/inventory/product_management/product_tracking>`."
+#: ../../content/applications/sales/rental/configure_products/products.rst:120
+msgid "Configure product tracking"
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:123
-msgid "Go to the :menuselection:`Rental app --> Products`, then click :guilabel:`New`. In the new product window, the :guilabel:`Rental` checkbox is already ticked by default."
+msgid "To configure a physical rental product for product tracking, the **Inventory** app must be installed, and :guilabel:`Lots & Serial Numbers` must be enabled."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:126
-msgid "Select the :guilabel:`Product Type` as :guilabel:`Goods`. Tick the :guilabel:`Track Inventory` checkbox and select either :guilabel:`By Lots` or :guilabel:`By Unique Serial Number` from the drop-down menu."
+msgid "For rental products, only :guilabel:`By Unique Serial Number` tracking can be used. Selecting :guilabel:`By Lots` instead results in an error message, since that setting doesn't apply to rentals."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:130
-msgid "For the :guilabel:`Category` field, select :guilabel:`Goods` from the drop-down menu or create a new category by typing in the name and clicking :guilabel:`Create`. Configure rental rates on the :ref:`rental/products/rental-prices-tab`. Click the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon near the top to save."
+msgid "Go to the :menuselection:`Rental app --> Products`, then click :guilabel:`New`. In the new product window, the :guilabel:`Rental` checkbox is already selected by default."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:138
-msgid "Rental Transfers feature"
+#: ../../content/applications/sales/rental/configure_products/products.rst:133
+msgid "Select the :guilabel:`Product Type` as :guilabel:`Goods`. Enable the :guilabel:`Track Inventory` checkbox and select :guilabel:`By Unique Serial Number` from the drop-down menu."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:140
-msgid "The *Rental Transfers* feature automatically creates a delivery receipt when the rental product is picked up and a return receipt when it is returned to stock. Documenting stock movement creates a clean paper trail and has a variety of uses:"
+#: ../../content/applications/sales/rental/configure_products/products.rst:136
+msgid "For the :guilabel:`Category` field, select :guilabel:`Goods` from the drop-down menu or create a new category by typing in the name and clicking :guilabel:`Create`. Configure rental rates on the :ref:`Rental prices <rental/products/rental-periods-prices-reservations>` tab. Click the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon near the top to save."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:144
-msgid "Tracking high-value products."
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:145
-msgid "Tracking stock levels across multiple stores or warehouse locations."
+msgid "Rental Transfers feature"
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:146
+msgid "The *Rental Transfers* feature automatically creates a delivery receipt when the rental product is picked up and a return receipt when it is returned to stock. Documenting stock movement creates a clean paper trail and has a variety of uses:"
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:150
+msgid "Tracking high-value products."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:151
+msgid "Tracking stock levels across multiple stores or warehouse locations."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:152
 msgid "Tracking products between different store locations that allow pick up and returns."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:148
-msgid "To enable the :guilabel:`Rental Transfers` feature, navigate to the :menuselection:`Rental app --> Configuration --> Settings` and in the *Rental* section, tick the :guilabel:`Rental Transfers` checkbox."
+#: ../../content/applications/sales/rental/configure_products/products.rst:154
+msgid "To enable the :guilabel:`Rental Transfers` feature, navigate to the :menuselection:`Rental app --> Configuration --> Settings` and in the *Rental* section, enable the :guilabel:`Rental Transfers` checkbox."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:None
 msgid "Sample of the Rental settings with the Rental Transfers enabled."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:156
+#: ../../content/applications/sales/rental/configure_products/products.rst:164
 msgid "The **Inventory** app automatically creates an internal default location once the *Rental Transfers* feature is enabled. Odoo uses the new default location, :guilabel:`Customer/Rental`, to track products during the rental period (moving them from :guilabel:`Stock` to :guilabel:`Customer/Rental` upon rental, and back upon return). Do not modify to avoid corrupting inventory tracking."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:165
+#: ../../content/applications/sales/rental/configure_products/products.rst:173
 msgid "Multi-location management and transfers"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:168
-msgid "The **Inventory** app must be installed to set up this configuration. The **Inventory** app automatically creates an internal default location once the *Rental Transfers* feature is enabled. Odoo uses the new default location, :guilabel:`Customer/Rental`, to track products during the rental period (moving them from :guilabel:`Stock` to :guilabel:`Customer/Rental` upon rental, and back upon return). Do **not** modify to avoid corrupting inventory tracking."
-msgstr ""
-
-#: ../../content/applications/sales/rental/configure_products/products.rst:174
-msgid "Tracking the location of high-value physical products between locations is essential. The **Rental** app helps with the *Rental Transfers* feature. Activating rental transfers means the system treats rental movements similarly to sales, requiring a receipt and a delivery order every time a physical product is rented or returned."
+#: ../../content/applications/sales/rental/configure_products/products.rst:176
+msgid "Refer to the :ref:`Rental Transfers note <rental/products/rental-transfers-note>` for information about internal location configuration and inventory tracking."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:179
-msgid "For multi-location management and rental item transfer tracking, navigate to the :menuselection:`Rental app --> Configuration --> Settings` and in the :guilabel:`Rental` section, tick the :guilabel:`Rental Transfers` checkbox."
+msgid "Tracking the location of high-value physical products between locations is essential. The **Rental** app helps with the *Rental Transfers* feature. Activating rental transfers means the system treats rental movements similarly to sales, requiring a receipt and a delivery order every time a physical product is rented or returned."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:183
-msgid "Next, go to the :menuselection:`Inventory app --> Configuration --> Settings` and in the :guilabel:`Warehouse` section, tick the :guilabel:`Storage Locations` checkbox. Click :guilabel:`Save` to apply the changes."
+#: ../../content/applications/sales/rental/configure_products/products.rst:184
+msgid "For multi-location management and rental item transfer tracking, navigate to the :menuselection:`Rental app --> Configuration --> Settings` and in the *Rental* section, enable the :guilabel:`Rental Transfers` checkbox."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:187
+#: ../../content/applications/sales/rental/configure_products/products.rst:188
+msgid "Next, go to the :menuselection:`Inventory app --> Configuration --> Settings` and in the *Warehouse* section, enable the :guilabel:`Storage Locations` checkbox. Click :guilabel:`Save` to apply the changes."
+msgstr ""
+
+#: ../../content/applications/sales/rental/configure_products/products.rst:192
 msgid "To configure new locations, navigate to :menuselection:`Inventory app --> Configuration --> Locations`. Click :guilabel:`New` to configure a new internal location."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:190
+#: ../../content/applications/sales/rental/configure_products/products.rst:195
 msgid "On the new location page, enter the :guilabel:`Location Name` and ensure the :guilabel:`Parent Location` field is set to :guilabel:`WH`. Click the :icon:`fa-cloud-upload` :guilabel:`Save manually` icon near the top to save."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:195
+#: ../../content/applications/sales/rental/configure_products/products.rst:200
 msgid "A bike rental business has two store locations within the same city. Both locations allow for pick-up and drop-off of their bikes. The company wants to track its bikes accurately at each location."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:199
-msgid "Ensure the **Rental** and **Inventory** apps are configured by enabling :guilabel:`Rental Transfers` in the **Rental app** and :guilabel:`Storage Locations` in the **Inventory** app."
+#: ../../content/applications/sales/rental/configure_products/products.rst:204
+msgid "Ensure the **Rental** and **Inventory** apps are configured by enabling :guilabel:`Rental Transfers` in the **Rental** app and :guilabel:`Storage Locations` in the **Inventory** app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:202
-msgid "Next, go to the :menuselection:`Inventory app > Configuration > Locations`. Create a new location for each storefront."
+#: ../../content/applications/sales/rental/configure_products/products.rst:207
+msgid "Next, go to the :menuselection:`Inventory app > Configuration > Locations`. Create a new location Next, go to the :menuselection:`Inventory app --> Configuration --> Locations`. Create a new location for each storefront."
 msgstr ""
 
 #: ../../content/applications/sales/rental/configure_products/products.rst:0
 msgid "Sample of internal inventory locations that represent different rental store locations."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:211
+#: ../../content/applications/sales/rental/configure_products/products.rst:217
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:150
 msgid "Pickup products"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:213
+#: ../../content/applications/sales/rental/configure_products/products.rst:219
 msgid "When a customer picks up products, navigate to the appropriate rental order, click :guilabel:`Pickup`. The **Rental** app displays a warehouse delivery form listing the reserved rental products. Click :guilabel:`Validate` to move the order to the :guilabel:`Done` stage."
 msgstr ""
 
@@ -13398,20 +13421,20 @@ msgstr ""
 msgid "Sample of a Pickup page in the Rental app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:220
+#: ../../content/applications/sales/rental/configure_products/products.rst:226
 msgid "Doing so places a :guilabel:`Pickedup` status banner on the rental order."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:225
+#: ../../content/applications/sales/rental/configure_products/products.rst:231
 #: ../../content/applications/sales/rental/configure_products/service_products.rst:170
 msgid "Return products"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:227
+#: ../../content/applications/sales/rental/configure_products/products.rst:233
 msgid "When a customer returns products, navigate to the desired rental order and click :guilabel:`Return`. The **Rental** app displays a warehouse receipt form listing the checked-out rental products."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:230
+#: ../../content/applications/sales/rental/configure_products/products.rst:236
 msgid "Enter the same number of products the customer returned in the :guilabel:`Quantity` column. If any of the products have serial numbers, enter them into the :guilabel:`Serial Numbers` column."
 msgstr ""
 
@@ -13419,19 +13442,19 @@ msgstr ""
 msgid "Sample of the Return page in the Rental app."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:236
+#: ../../content/applications/sales/rental/configure_products/products.rst:242
 msgid "Click :guilabel:`Validate` to move the order to the :guilabel:`Done` stage. A :guilabel:`Returned` status banner appears on the rental order."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:242
+#: ../../content/applications/sales/rental/configure_products/products.rst:248
 msgid "Print pickup and return receipts"
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:244
+#: ../../content/applications/sales/rental/configure_products/products.rst:250
 msgid "Pickup and return receipts can be printed for customers when they pick up and return rental products."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:247
+#: ../../content/applications/sales/rental/configure_products/products.rst:253
 msgid "To print pickup and/or return receipts, navigate to the appropriate rental order, click the :icon:`fa-cog` :guilabel:`(Actions)` icon to reveal a drop-down menu."
 msgstr ""
 
@@ -13439,15 +13462,15 @@ msgstr ""
 msgid "The pickup and return receipt print option in the Odoo Rental application."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:253
+#: ../../content/applications/sales/rental/configure_products/products.rst:259
 msgid "From this drop-down menu, hover over the :guilabel:`Print` option to reveal a sub-menu. Then select :guilabel:`Pickup and Return Receipt`."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:256
+#: ../../content/applications/sales/rental/configure_products/products.rst:262
 msgid "Odoo generates and downloads a PDF detailing all information about the current status of the rented items."
 msgstr ""
 
-#: ../../content/applications/sales/rental/configure_products/products.rst:261
+#: ../../content/applications/sales/rental/configure_products/products.rst:267
 msgid "`Tutorial: Your First Rental Product <https://youtu.be/CE-SahTUC9A?si=kWfYEOTd2nT_ASp9>`_"
 msgstr ""
 
