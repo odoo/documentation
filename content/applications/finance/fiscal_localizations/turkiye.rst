@@ -140,16 +140,17 @@ in your company's contact record:
 - :guilabel:`Address`: Complete legal address
 - :guilabel:`Country`: Registered country
 - :guilabel:`Tags`: Enter the Mersis number as a tag and set the :guilabel:`Category` to
-  :guilabel:`MERSISNO`.
+  :guilabel:`MERSISNO`
 - :guilabel:`eInvoice format`: Türkiye (UBL TR 1.2)
-- :guilabel:`Alias`: Alias acquired from Nilvera
+- :guilabel:`eInvoice Alias`: Acquired from Nilvera
+- :guilabel:`eDispatch Alias`: Acquired from Nilvera
 
 .. note::
    - The :guilabel:`eInvoice format` is set automatically based on the contact's country. To edit
      this field, enable :ref:`developer mode <developer-mode>` to display the field and then
      manually adjust it.
-   - The :guilabel:`Alias` field is only visible once the company's :guilabel:`Nilvera Status`
-     is :guilabel:`E-Invoice`.
+   - The :guilabel:`eInvoice Alias` and :guilabel:`eDispatch Alias` fields are only visible once the
+     company's :guilabel:`Nilvera Status` is :guilabel:`E-Invoice`.
 
 For each customer and vendor:
 
@@ -217,13 +218,22 @@ Supported document types
 
 - e-Invoice
 
-  - Basic scenario and public scenario
+  - Basic scenario
 
     - Sales
     - Withholding
     - Registered for export
     - Tax exempt
-  - Export scenario
+    - Return
+    - Withholding Return
+
+  - Public Scenario
+
+    - Sales
+    - Withholding
+    - Tax exempt
+
+  - Export Scenario
 
 - e-Archive invoice
 
@@ -231,7 +241,12 @@ Supported document types
   - Withholding
   - Registered for export
   - Tax exempt
+  - Return
+  - Withholding Return
 - e-Dispatch note
+
+.. note::
+   Return invoices can only be sent via credit notes.
 
 Configuration
 -------------
@@ -369,8 +384,9 @@ ensuring compliant and traceable delivery operations.
 #. Open an existing delivery order or create a new one.
 #. Once a :guilabel:`Delivery Address` is selected, fill in the necessary information in the
    :guilabel:`e-Dispatch` tab that appears.
-#. #. Once the delivery order is validated, click the :guilabel:`Generate GİB e-Dispatch (XML)`
-   button that appears to generate the XML file.
+#. Once the delivery order is validated, click the :guilabel:`Send GİB e-Dispatch (XML)` button that
+   appears to send the XML file. To only generate the file without sending it, click the
+   :icon:`fa-cog` :guilabel:`(gear)` icon, then click :guilabel:`Generate GIB e-Dispatch (XML)`.
 #. Download the generated file attached to the delivery order and upload it to Nilvera for
    processing.
 
@@ -391,46 +407,86 @@ via Nilvera.
 Document numbering structure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- All generated invoices and dispatch documents must follow a specific numbering structure: `three
-  alphanumeric characters` + `document year` + `sequential number`.
+All generated invoices and dispatch documents must follow a specific numbering structure: `three
+alphanumeric characters` + `document year` + `sequential number`.
 
-  .. example::
-     INV/2025/00001
+.. example::
+   INV/2025/00001
 
-- The numbering must be unique, sequential, and continuous. Each document must have a distinct
-  identifier.
-- Once a file has been submitted, even if it returns an error, the same sequence number cannot be
-  used; a new document must be created.
+The numbering must be unique, sequential, and continuous. Each document must have a distinct
+identifier.
+
+Once a file has been submitted, even if it returns an error, the same sequence number cannot be
+used; a new document must be created.
 
 .. seealso::
    - :doc:`../accounting/customer_invoices/sequence`
    - :doc:`../accounting/vendor_bills/sequence`
 
+e-Dispatch numbering structure
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The e-Dispatch numbering structure is accessed by navigating to :menuselection:`Inventory -->
+Configuration --> Operation Types`, and selecting an operation matching the :guilabel:`Delivery
+Orders` type.
+
+You can set an arbitrary alphanumerical :guilabel:`Sequence Prefix` of your choice, but note that
+the system will only pick the **last three** characters of that sequence. The prefix must always
+contain at least three characters. Any prefix shorter than three characters is automatically denied
+by the system.
+
+.. example::
+   In the sequence WH/OUT/948224, the system will only send **224**.
+
+.. tip::
+   You can preview the sequence from the :menuselection:`Inventory --> Configuration --> Operation
+   Types --> Delivery Orders` view. Once the sequencing is configured, the banner at the top shows a
+   preview:
+
+   .. image:: turkiye/banner-preview.png
+      :alt: Banner preview of sequencing of e-Dispatch.
+
 Sequential number gaps
 ~~~~~~~~~~~~~~~~~~~~~~
 
-- If a sequence number is skipped, the previous missing numbers must be issued within 7 days.
+If a sequence number is skipped, the previous missing numbers must be issued within 7 days.
 
-  .. example::
-     If INV/2025/00002 is issued before INV/2025/00001, INV/2025/00001 must be issued within 7
-     days.
+.. example::
+   If INV/2025/00002 is issued before INV/2025/00001, INV/2025/00001 must be issued within 7 days.
 
-- No sequence number can remain unissued beyond this period.
+No sequence number can remain unissued beyond this period.
 
 Discount rules
 ~~~~~~~~~~~~~~
 
-- Global discounts (discounts shown as a separate invoice line) cannot be issued.
-- All discounts must be applied at the product line level within the invoice.
+Global discounts (discounts shown as a separate invoice line) cannot be issued. All discounts must
+be applied at the product line level within the invoice.
 
 e-Ledger compliance
 ~~~~~~~~~~~~~~~~~~~
 
-- The first issued invoice must represent the opening balance for the accounting period.
-- All subsequent invoices must follow the sequential numbering pattern:
+The first issued invoice must represent the opening balance for the accounting period. All
+subsequent invoices must follow the sequential numbering pattern:
 
-  .. example::
-     INV/2025/00001, INV/2025/00002, INV/2025/00003, etc.
+.. example::
+   INV/2025/00001, INV/2025/00002, INV/2025/00003, etc.
 
-- Sequential numbering must be maintained consistently across the e-Ledger to ensure data integrity
-  and compliance.
+Sequential numbering must be maintained consistently across the e-Ledger to ensure data integrity
+and compliance.
+
+Nilvera e-Invoice subscriptions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note::
+   Turkish e-Invoice law only permits one date range per invoice (at the header level), not per
+   individual line item. Because of this restriction, you cannot mix items with different
+   subscription date ranges on the same invoice. However, you can mix an item that has a
+   subscription date range with items that have no date range at all.
+
+If the invoice is generated from the subscription order in the **Subscriptions** app, the system
+re-uses the date from the **Subscriptions** app as the invoice's date (at the header level).
+
+If the invoice is manually generated, then the user has to set the subscription dates directly on
+the invoice lines.
+
+If subscription dates do not match across lines, a warning is displayed.
