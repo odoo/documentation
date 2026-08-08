@@ -23,6 +23,7 @@ form can be sold with the **Sales** app.
    sales/commissions
    sales/amazon_connector
    sales/shopee_connector
+   sales/shopify_connector
    sales/lazada_connector
    sales/tiktok_connector
    sales/gelato
