@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-31 17:32+0000\n"
+"POT-Creation-Date: 2026-08-07 17:32+0000\n"
 "PO-Revision-Date: 2026-07-26 19:11+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
@@ -8649,37 +8649,36 @@ msgstr ""
 msgid ""
 "Odoo generates a separate SSL certificate for each domain :ref:`mapped to a "
 "database <domain-name/db-map>` using `Let's Encrypt's certificate authority "
-"and ACME protocol <https://letsencrypt.org/how-it-works/>`_."
+"and ACME protocol <https://letsencrypt.org/how-it-works/>`_. Any CAA records "
+"configured for the domain must `allow Let's Encrypt <https://letsencrypt.org/"
+"docs/caa/>`_, otherwise certificate generation may fail."
 msgstr ""
-"Odoo 使用 `Let's Encrypt 的证书颁发机构和 ACME 协议 <https://letsencrypt.org/"
-"how-it-works/>`_ 为每个域生成单独的 SSL 证书 :ref:`映射到数据库 <domain-name/"
-"db-map>` 。"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:368
+#: ../../content/applications/websites/website/configuration/domain_names.rst:369
 msgid "Certificate generation may take up to 24 hours."
 msgstr "证书生成最多可能需要 24 小时。"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:369
+#: ../../content/applications/websites/website/configuration/domain_names.rst:370
 msgid ""
 "Several attempts to validate your certificate are made for five days after "
 "you map your domain name to your database."
 msgstr "在您将域名映射到数据库后的五天内，会多次尝试验证您的证书。"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:371
+#: ../../content/applications/websites/website/configuration/domain_names.rst:372
 msgid "If you use another service, you can keep using it or change to Odoo's."
 msgstr "如果您使用其他服务，可以继续使用，也可以改用 Odoo 的服务。"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:374
+#: ../../content/applications/websites/website/configuration/domain_names.rst:375
 msgid ""
 "No SSL certificate is generated for naked domains :dfn:`(domain names "
 "without any subdomains or prefixes)`."
 msgstr "裸域名 :dfn:`（不含任何子域名或前缀的域名）` 不会生成 SSL 证书。"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:380
+#: ../../content/applications/websites/website/configuration/domain_names.rst:381
 msgid "Web base URL of a database"
 msgstr "数据库的 Web 基本 URL"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:383
+#: ../../content/applications/websites/website/configuration/domain_names.rst:384
 msgid ""
 "If the Website app is installed on your database, skip this section and "
 "continue from the :ref:`Map a domain name to a website <domain-name/website-"
@@ -8688,7 +8687,7 @@ msgstr ""
 "如果数据库中已安装网站应用程序，请跳过本章节，继续 :ref:`将域名映射到网站 "
 "<domain-name/website-map>` 部分。"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:386
+#: ../../content/applications/websites/website/configuration/domain_names.rst:387
 msgid ""
 "The *web base URL* or root URL of a database affects your main website "
 "address and all the links sent to your customers (e.g., quotations, portal "
@@ -8697,7 +8696,7 @@ msgstr ""
 "数据库的 *web base URL* 或根 URL 会影响您的主网站地址以及发送给客户的所有链接"
 "（如报价单、门户链接等）。"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:389
+#: ../../content/applications/websites/website/configuration/domain_names.rst:390
 msgid ""
 "To make your custom domain name the *web base URL* of your database, access "
 "your database using your custom domain name and log in as an "
@@ -8707,7 +8706,7 @@ msgstr ""
 "要将自定义域名作为数据库的 *web base URL*，请使用自定义域名访问数据库，并以管"
 "理员 :dfn:`（管理下设置访问权限组中的用户）` 身份登录。"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:394
+#: ../../content/applications/websites/website/configuration/domain_names.rst:395
 msgid ""
 "If you access your database with the original Odoo address (e.g., "
 "`mycompany.odoo.com`), the *web base URL* of your database will be updated "
@@ -8723,7 +8722,7 @@ msgstr ""
 "--> 系统参数 --> 新建`，并输入 `web.base.url.freeze` 作为 :guilabel:`键`，将 "
 "`True` 输入为 :guilabel:`值` 。"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:401
+#: ../../content/applications/websites/website/configuration/domain_names.rst:402
 msgid ""
 "You can also set the web base URL manually. To do so, activate "
 "the :ref:`developer mode <developer-mode>`, go to :menuselection:`Settings --"
@@ -8738,36 +8737,36 @@ msgstr ""
 "`https://www.yourdomain.com`）。URL 必须包括协议 `https://`（或 `http://`），"
 "且*不能*以斜线（`/`）结尾。"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:410
+#: ../../content/applications/websites/website/configuration/domain_names.rst:411
 msgid "Map a domain name to an Odoo website"
 msgstr "将域名映射到 Odoo 网站"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:412
+#: ../../content/applications/websites/website/configuration/domain_names.rst:413
 msgid ""
 "Mapping your domain name to your website is different than mapping it to "
 "your database:"
 msgstr "将域名映射到网站与将域名映射到数据库不同："
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:414
+#: ../../content/applications/websites/website/configuration/domain_names.rst:415
 msgid ""
 "It defines your domain name as the main one for your website, helping search "
 "engines to index your website correctly."
 msgstr "它将您的域名定义为网站的主域名，帮助搜索引擎正确索引您的网站。"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:416
+#: ../../content/applications/websites/website/configuration/domain_names.rst:417
 msgid ""
 "It defines your domain name as the base URL for your database, including "
 "portal links sent by email to your customers."
 msgstr ""
 "它将您的域名定义为数据库的基本 URL，包括通过电子邮件发送给客户的门户链接。"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:418
+#: ../../content/applications/websites/website/configuration/domain_names.rst:419
 msgid ""
 "If you have multiple websites, it maps your domain name to the appropriate "
 "website."
 msgstr "如果您有多个网站，它会将您的域名映射到相应的网站。"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:420
+#: ../../content/applications/websites/website/configuration/domain_names.rst:421
 msgid ""
 "Go to :menuselection:`Website --> Configuration --> Settings`. If you have "
 "multiple websites, select the one you want to configure. In "
@@ -8778,7 +8777,7 @@ msgstr ""
 "网站。在 :guilabel:`域名` 字段中，输入您网站的地址（例如，`https://"
 "www.yourdomain.com`），然后 :guilabel:`保存`。"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:425
+#: ../../content/applications/websites/website/configuration/domain_names.rst:426
 msgid ""
 "Mapping your domain name to your Odoo website prevents Google Search from "
 "indexing your original database address (e.g., `mycompany.odoo.com`)."
@@ -8786,7 +8785,7 @@ msgstr ""
 "将您的域名映射到 Odoo 网站可防止 Google 搜索索引您的原始数据库地址（例如，"
 "`mycompany.odoo.com`）。"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:428
+#: ../../content/applications/websites/website/configuration/domain_names.rst:429
 msgid ""
 "If both addresses are already indexed, it may take some time before the "
 "indexation of the second address is removed from Google Search. You can use "
@@ -8797,7 +8796,7 @@ msgstr ""
 "的索引。您可以使用 `Google搜索控制台 <https://search.google.com/search-"
 "console/welcome>`_来解决这个问题。"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:433
+#: ../../content/applications/websites/website/configuration/domain_names.rst:434
 msgid ""
 "If you have multiple websites and companies on your database, make sure to "
 "select the right :guilabel:`Company` under :menuselection:`Website --> "
@@ -12460,6 +12459,15 @@ msgstr ""
 #: ../../content/applications/websites/website/web_design/themes.rst:0
 msgid "Customize the grays elements of your site"
 msgstr ""
+
+#~ msgid ""
+#~ "Odoo generates a separate SSL certificate for each domain :ref:`mapped to "
+#~ "a database <domain-name/db-map>` using `Let's Encrypt's certificate "
+#~ "authority and ACME protocol <https://letsencrypt.org/how-it-works/>`_."
+#~ msgstr ""
+#~ "Odoo 使用 `Let's Encrypt 的证书颁发机构和 ACME 协议 <https://"
+#~ "letsencrypt.org/how-it-works/>`_ 为每个域生成单独的 SSL 证书 :ref:`映射到"
+#~ "数据库 <domain-name/db-map>` 。"
 
 #~ msgid ""
 #~ "You can create a subdomain (e.g., `subdomain.yourdomain.com`) to use as "
