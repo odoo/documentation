@@ -34,18 +34,122 @@ Prerequisites
 Such transactions must be posted on an **Assets Account** rather than on the default
 expense account.
 
-Configure an Assets Account
----------------------------
+Assets account
+--------------
 
-To configure your account in the **Chart of Accounts**, go to :menuselection:`Accounting -->
-Configuration --> Chart of Accounts`, click on *Create*, and fill out the form.
+To create or configure an **assets** account, open the **Accounting** app and navigate to
+:menuselection:`Configuration --> Chart of Accounts`. Then, either click :guilabel:`New` to create a
+new account, or select an already existing account by clicking on it.
 
-.. image:: assets/assets01.png
-   :align: center
-   :alt: Configuration of an Assets Account in Odoo Accounting
+Fill out the following fields:
 
-.. note::
-   This account's type must be either *Fixed Assets* or *Non-current Assets*.
+:guilabel:`Account Name`: Input a name for the account
+
+:guilabel:`Code`: Enter a unique identifying code
+
+.. tabs::
+
+   .. tab:: Accounting
+
+      - :guilabel:`Type`: Select a type of account. Note that the account must be either of the
+        :guilabel:`Fixed Assets` or :guilabel:`Non-current Assets` type.
+      - :guilabel:`Default Taxes`: Choose a default tax for the account.
+      - :guilabel:`Tags`: Optional tags for custom reporting.
+      - :guilabel:`Variation Account`: Optional, select an account to register the inventory
+        variation of the period into a specific account. This field is only available if the
+        account type is :guilabel:`Current Assets`.
+      - :guilabel:`Currency`: Select a currency to force all journal items in this account to use
+        that currency. Leave it empty for no restriction.
+      - :guilabel:`Allow Reconciliation`: Check the box if the account allows invoices and payments
+        matching of journal items.
+      - :guilabel:`Active`: Activate or deactivate use of the account.
+      - :guilabel:`Companies`: Select the companies in which the account is available.
+
+   .. tab:: Automation
+
+      - :guilabel:`Automate Asset`: test
+
+        - :guilabel:`No`: The draft sheet is manually created by the user when validating a vendor
+          bill.
+        - :guilabel:`Create in draft`: Odoo automatically creates a depreciation board with draft
+          entries. You can verify the draft entries before validating them.
+        - :guilabel:`Create and validate`: The asset is created and posted. You can still reset the
+          posted entry to draft and modify it.
+
+      - :guilabel:`Manage Items`: If checked, the number of quantities on the invoice line
+        determines the number of assets created.
+
+      - :guilabel:`Asset Model`: You can link one model to this account, so the assets booked on
+        this account always follow the same structure.
+
+   .. tab:: Description
+
+      Optional, enter a description of the account.
+
+   .. tab:: Mapping
+
+      View all the companies having access to this account.
+
+Asset
+-----
+
+.. tabs::
+
+   .. tab:: Asset
+
+      :guilabel:`Asset Value`
+
+      - :guilabel:`Original Value`: Enter the value of the asset when purchased.
+      - :guilabel:`Acquisition Date`: Enter the date of purchase.
+      - :guilabel:`Asset Model`: If applicable, you can set an asset template for the asset (change later).
+
+      :guilabel:`Depreciation Method`
+
+        - :guilabel:`Method`: The method of depreciation used for the asset.
+        - :guilabel:`Duration`: Select the asset's lifetime between :guilabel:`Months`, which
+          generates a journal entry every month, and :guilabel:`Year`, which generates a journal
+          entry every year.
+        - :guilabel:`Computation`: How the asset depreciation is calculated:
+
+          - :guilabel:`No Prorata`:
+          - :guilabel:`Constant Periods`:
+          - :guilabel:`Based on days per period`:
+
+      - :guilabel:`Currency`: Select a currency to force all journal items in this account to use
+        that currency. Leave it empty for no restriction.
+      - :guilabel:`Allow Reconciliation`: Check the box if the account allows invoices and payments
+        matching of journal items.
+
+      :guilabel:`Active`: Activate or deactivate use of the account.
+
+      - :guilabel:`Companies`: Select the companies in which the account is available.
+      - :guilabel:`Prorata Date`: Date of pro-rata is applicable.
+
+      :guilabel:`Current Values`
+
+      - :guilabel:`Not Depreciable Value`: If applicable, the part of the asset's value that should
+        not be depreciated.
+      - :guilabel:`Book Value`: Odoo's computation of the remaining value: purchase value -
+        cumulated depreciation amount
+
+      :guilabel:`Accounting`
+
+      - :guilabel:`Company`: (add something later).
+      - :guilabel:`Fixed Asset Account`: The fixed asset account (expand later)
+      - :guilabel:`Depreciation Account`: The cumulated depreciation account (can be the same as the one above)
+      - :guilabel:`Expense Account`: Depreciation expense account
+      - :guilabel:`Journal`: Journal for depreciations
+      - :guilabel:`Analytic Distribution`: Analytic distribution for depreciation entries
+
+     :guilabel:`Value at import`
+
+     - :guilabel:`Depreciated Amount`: if there is an amount already depreciated in a previous software
+       (activate developer mode)
+
+   .. tab:: Bills
+
+      - :guilabel:
+
 
 Post an expense to the right account
 ------------------------------------
@@ -55,10 +159,6 @@ Select the account on a draft bill
 
 On a draft bill, select the right account for all the assets you are buying.
 
-.. image:: assets/assets02.png
-   :align: center
-   :alt: Selection of an Assets Account on a draft bill in Odoo Accounting
-
 .. _product-assets-account:
 
 Choose a different Expense Account for specific products
@@ -66,10 +166,6 @@ Choose a different Expense Account for specific products
 
 Start editing the product, go to the *Accounting* tab, select the right **Expense Account**, and
 save.
-
-.. image:: assets/assets03.png
-   :align: center
-   :alt: Change of the Assets Account for a product in Odoo
 
 .. tip::
    It is possible to :ref:`automate the creation of assets entries <assets-automation>` for these
@@ -83,10 +179,6 @@ Change the account of a posted journal item
 To do so, open your Purchases Journal by going to :menuselection:`Accounting --> Accounting -->
 Purchases`, select the journal item you want to modify, click on the account, and select the right
 one.
-
-.. image:: assets/assets04.png
-   :align: center
-   :alt: Modification of a posted journal item's account in Odoo Accounting
 
 Assets entries
 ==============
@@ -106,17 +198,9 @@ Click on **select related purchases** to link an existing journal item to this n
 fields are then automatically filled out, and the journal item is now listed under the **Related
 Purchase** tab.
 
-.. image:: assets/assets05.png
-   :align: center
-   :alt: Assets entry in Odoo Accounting
-
 Once done, you can click on *Compute Depreciation* (next to the *Confirm* button) to generate all
 the values of the **Depreciation Board**. This board shows you all the entries that Odoo will post
 to depreciate your asset, and at which date.
-
-.. image:: assets/assets06.png
-   :align: center
-   :alt: Depreciation Board in Odoo Accounting
 
 What does "Prorata Temporis" mean?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -157,10 +241,6 @@ in the right account (see: :ref:`journal-assets-account`).
 Then, click on *Action*, select **Create Asset**, and fill out the form the same way you would do to
 :ref:`create a new entry <create-assets-entry>`.
 
-.. image:: assets/assets07.png
-   :align: center
-   :alt: Create Asset Entry from a journal item in Odoo Accounting
-
 Modification of an Asset
 ========================
 
@@ -176,20 +256,12 @@ An **increase in value** requires you to fill out additional fields related to t
 and creates a new Asset entry with the **Value Increase**. The Gross Increase Asset Entry can be
 accessed with a Smart Button.
 
-.. image:: assets/assets08.png
-   :align: center
-   :alt: Gross Increase smart button in Odoo Accounting
-
 Disposal of Fixed Assets
 ========================
 
 To **sell** an asset or **dispose** of it implies that it must be removed from the Balance Sheet.
 
 To do so, open the asset you want to dispose of, click on *Sell or Dispose*, and fill out the form.
-
-.. image:: assets/assets09.png
-   :align: center
-   :alt: Disposal of Assets in Odoo Accounting
 
 Odoo Accounting then generates all the journal entries necessary to dispose of the asset, including
 the gain or loss on sale, which is based on the difference between the asset's book value at the
@@ -224,10 +296,6 @@ account.
 New buttons with all the models linked to that account appear at the top of the form. Clicking on a
 model button fills out the form according to that model.
 
-.. image:: assets/assets10.png
-   :align: center
-   :alt: Assets model button in Odoo Accounting
-
 .. _assets-automation:
 
 Automate the Assets
@@ -245,10 +313,6 @@ You have three choices for the **Automate Assets** field:
    Accounting --> Assets`.
 #. **Create and validate:** you must also select an Asset Model (see: `Assets Models`_). Whenever a
    transaction is posted on the account, an *Assets entry* is created and immediately validated.
-
-.. image:: assets/assets11.png
-   :align: center
-   :alt: Automate Assets on an account in Odoo Accounting
 
 .. tip::
    You can, for example, select this account as the default **Expense Account** of a product to
