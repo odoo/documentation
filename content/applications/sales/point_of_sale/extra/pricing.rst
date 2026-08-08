@@ -67,7 +67,7 @@ are either applied automatically or manually by the cashier.
 Codes
 -----
 
-To apply a gift card, discount code, or coupon, click the :icon:`fa-ellipsis-v` (:guilabel:`vertical
+To apply a discount code, or coupon, click the :icon:`fa-ellipsis-v` (:guilabel:`vertical
 ellipsis`) icon, select :icon:`fa-barcode` :guilabel:`Enter Code`, enter or scan the code, and
 click :guilabel:`Apply`.
 
@@ -96,6 +96,52 @@ displayed at the bottom of the cart and updated in real-time.
 
 To redeem points for a reward, click the :icon:`oi-ellipsis-v` (:guilabel:`vertical ellipsis`) icon,
 select :icon:`fa-star` :guilabel:`Reward`, and choose the desired item from the list.
+
+.. _pos/pricing/giftcards_ewallet:
+
+Gift cards & eWallet
+====================
+
+Gift cards and eWallets let customers pay for orders using a prepaid balance. Customers can buy gift
+cards for themselves or others, while eWallets hold store credits linked to their account.
+
+To activate gift cards and eWallets in Point of Sale, navigate to the :ref:`POS settings
+<pos/use/settings>`, scroll down to the :guilabel:`Pricing` section, and enable the
+:guilabel:`Promotions, Coupons, Gift Card & Loyalty Program`.
+
+Once activated, go to :menuselection:`Point of Sale --> Products -->
+Gift cards & eWallet` and configure the desired :ref:`gift cards <ewallet_gift/gift-cards>` and
+:ref:`eWallets <ewallet_gift/ewallets>`.
+
+.. seealso::
+   :doc:`../../sales/products_prices/ewallets_giftcards`
+
+Gift cards
+----------
+
+To apply a gift card during a transaction, follow these steps:
+
+#. Click the :icon:`fa-ellipsis-v` (:guilabel:`vertical ellipsis`) icon.
+#. Select :icon:`fa-barcode` :guilabel:`Enter Code`.
+#. Enter or scan the code.
+#. Click :guilabel:`Apply`.
+
+.. note::
+   A warning pop-up appears if the gift card was not previously purchased through the POS. To accept
+   the gift card and continue, click :guilabel:`Ok`.
+
+eWallet
+-------
+
+To use an eWallet balance, follow these steps:
+
+#. Click on :guilabel:`Customer`.
+#. Select an existing :ref:`customer <pos/use/customers>` or create a new one.
+#. Click the :icon:`fa-ellipsis-v` (:guilabel:`vertical ellipsis`) icon.
+#. Select :icon:`fa-credit-card` :guilabel:`eWallet Pay` to apply the available balance.
+
+.. note::
+   A customer **must** be assigned to the order.
 
 .. _pos/pricing/pricelists:
 
