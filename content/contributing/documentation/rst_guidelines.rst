@@ -1,4 +1,4 @@
-:custom-css: showcase_tables.css
+:chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.odoo.com/documentation/18.0/_downloads/312a470653db882b08ad72eb30cb4088/sample_quotation.pdf-css: showcase_tables.css
 
 ==============================
 RST guidelines and cheat sheet
