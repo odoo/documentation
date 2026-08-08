@@ -33,6 +33,10 @@ instructions to install a PWA depend on the platform and browser used.
 
       The PWA can also be installed with **Samsung Internet**, **Edge**, and **Opera**.
 
+      In order to receive push notifications even when the PWA or Chrome are not opened, go to the
+      **App info** by long-pressing the PWA icon, allow the **Notifications** permission, disable the
+      **Manage app if unused** toggle, and enable the **App battery usage ‣ Allow background usage** toggle.
+
    .. tab:: iOS
 
       **Safari**: open the **Share** menu by tapping the square with an arrow pointing upwards icon,
