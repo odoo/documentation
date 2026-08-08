@@ -103,9 +103,9 @@ Create |MOs|
 ~~~~~~~~~~~~
 
 If there is no confirmed |MO| with the product as a component, :ref:`create it
-<manufacturing/basic_setup/create-mo>` by opening a new |MO| form. In the component lines, add the
-requested :guilabel:`Product` and the quantity :guilabel:`To Consume`, then confirm the |MO| by
-clicking :guilabel:`Confirm`.
+<manufacturing/manufacturing-orders/create-mo>` by opening a new |MO| form. In the component lines,
+add the requested :guilabel:`Product` and the quantity :guilabel:`To Consume`, then confirm the |MO|
+by clicking :guilabel:`Confirm`.
 
 Repeat this process if there are multiple |MOs| requiring the component.
 
