@@ -73,7 +73,7 @@ Customize the content of blog homepages by opening a blog homepage and clicking 
 
 :guilabel:`Top Banner`: :guilabel:`Name/Latest Post` displays the title of the latest post on the
 top banner, while :guilabel:`Drop Zone for Building Blocks` removes the top banner and lets you use
-any building block instead.
+any :doc:`building block <website/web_design/building_blocks>` instead.
 
 :guilabel:`Layout`: organizes posts as a :guilabel:`Grid` or :guilabel:`List`.
 
