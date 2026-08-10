@@ -55,6 +55,15 @@ To link the printer with the Point of Sale, follow the next steps:
    Once configured, printers can be managed from :menuselection:`Point of Sale --> Configuration
    --> Printers`.
 
+.. tip::
+   To configure additional printer settings, activate :ref:`developer mode <developer-mode>`, and
+   set the following fields:
+
+   - :guilabel:`Paper Size`: Select the paper format supported by the printer.
+   - :guilabel:`Connection Timeout`: Set the maximum delay (in milliseconds) allowed for the printer
+     to respond before the print job is marked as failed. Increase the value if timeouts occur
+     frequently due to a slow network or older printer hardware.
+
 .. seealso::
    - :doc:`pos_lna`
    - :doc:`epos_ssc`
