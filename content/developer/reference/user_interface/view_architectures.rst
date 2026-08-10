@@ -519,7 +519,6 @@ elements or sets of elements in form views.
 Form views accept the following children structural components: :ref:`group
 <reference/view_architectures/form/group>`, :ref:`sheet <reference/view_architectures/form/sheet>`,
 :ref:`notebook <reference/view_architectures/form/notebook>`,
-:ref:`notebook <reference/view_architectures/form/notebook>`,
 :ref:`newline <reference/view_architectures/form/newline>`,
 :ref:`separator <reference/view_architectures/form/separator>`,
 :ref:`header <reference/view_architectures/form/header>`,
