@@ -90,16 +90,30 @@ source_read_replace_vals = {
 extension_dir = Path('extensions')
 sys.path.insert(0, str(extension_dir.absolute()))
 
+
+def is_odoo_dir(d):
+    return d.is_dir() and (d / 'odoo-bin').exists()
+
+
 # Search for the directory of odoo sources to know whether autodoc should be used on the dev doc
 odoo_sources_candidate_dirs = (Path('odoo'), Path('../odoo'))
-odoo_sources_dirs = [
-    d for d in odoo_sources_candidate_dirs if d.is_dir() and (d / 'odoo-bin').exists()
-]
+odoo_sources_dir = os.environ.get('ODOO_DOCUMENTATION_FORCE_SOURCES_DIR')
+if not odoo_sources_dir:
+    odoo_sources_dir = next(
+    (d for d in odoo_sources_candidate_dirs if is_odoo_dir(d)),
+    None,
+)
+if not odoo_sources_dir:
+    odoo_sources_dir = next(
+    (d for d in Path('..').iterdir() if is_odoo_dir(d)),
+    None,
+)
 odoo_dir_in_path = False
 
-if not odoo_sources_dirs:
+if not odoo_sources_dir:
     _logger.warning(
-        "Could not find Odoo sources directory in neither of the following folders:\n"
+        "Could not find Odoo sources directory in neither of the following folders and neither of "
+        "the parent subdirectories:\n"
         "%(dir_list)s\n"
         "The 'Developer' documentation will be built but autodoc directives will be skipped.\n"
         "In order to fully build the 'Developer' documentation, clone the repository with "
@@ -110,8 +124,8 @@ else:
     if (3, 6) < sys.version_info < (3, 7):
         # Running odoo needs python 3.7 min but monkey patch version_info to be compatible with 3.6.
         sys.version_info = (3, 7, 0)
-    odoo_dir = odoo_sources_dirs[0].resolve()
-    source_read_replace_vals['ODOO_RELPATH'] = '/../' + str(odoo_sources_dirs[0])
+    odoo_dir = odoo_sources_dir.resolve()
+    source_read_replace_vals['ODOO_RELPATH'] = '/../' + str(odoo_sources_dir)
     sys.path.insert(0, str(odoo_dir))
     import odoo.addons
     odoo.addons.__path__.append(str(odoo_dir) + '/addons')
