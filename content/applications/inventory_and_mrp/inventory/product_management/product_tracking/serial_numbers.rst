@@ -369,7 +369,7 @@ reporting templates that display the :guilabel:`Lot/Serial Number` field or the 
 serial number. Go to :menuselection:`Inventory app --> Reporting` to access:
 
 - :doc:`../../warehouses_storage/reporting/stock`
-- :doc:`../../warehouses_storage/reporting/locations`
+- :doc:`../../warehouses_storage/reporting/detailed_stock`
 - :doc:`../../warehouses_storage/reporting/moves_history`
 - :guilabel:`Moves Analysis` report
 

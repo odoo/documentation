@@ -10,6 +10,6 @@ Reporting
    reporting/forecast
    reporting/allocation_report
    reporting/stock
-   reporting/locations
+   reporting/detailed_stock
    reporting/moves_history
    reporting/dashboards
