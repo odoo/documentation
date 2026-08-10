@@ -165,10 +165,6 @@ Then, specify the following information about the product:
   products, `Manufacture` for manufactured products).
 - :guilabel:`Vendor`: Select the vendor for the product. This field **only** appears if the
   :guilabel:`Buy` option was selected in the :guilabel:`Route` field.
-- :guilabel:`Batch Size`: Split |MOs| into orders of this quantity. This field **only** appears if
-  the :guilabel:`Manufacture` option was selected in the :guilabel:`Route` field. Toggle the
-  :guilabel:`No Batch Size` checkbox to enter a batch size, or leave it un-toggled if no batch size
-  should be specified.
 
 .. note::
    Selecting a BoM when adding a product also adds any components listed on the BoM to the |MPS|. If
@@ -189,27 +185,26 @@ replenishment quantities for each product. Enter the following information:
   across all time periods.
 - :guilabel:`Minimum to Replenish`: Specify the minimum quantity of the product to replenish for
   each period.
-- :guilabel:`Maximum to Replenish`: Specify the maximum quantity of the product to replenish for
-  each period. If the demand is higher than this maximum, the remaining quantity is automatically
-  transferred to the next period. Toggle the :guilabel:`No Maximum` checkbox to enter a maximum
-  value, or leave it un-toggled if no maximum should be specified.
 
-If no minimum or maximum replenishment limits are set, the |MPS| suggests the replenishment quantity
-needed to reach the :guilabel:`Safety Stock Target` while accounting for the starting stock and
-forecasted demand. In other words, the suggested quantity in the replenishment row is calculated by
-the following relation:
+By default, the |MPS| suggests the replenishment quantity needed to reach the :guilabel:`Safety
+Stock Target` while accounting for the starting stock and forecasted demand. In other words, the
+suggested quantity in the replenishment row is calculated by the following relation:
 
 .. math::
 
    \begin{align}
    \text{Replenishment} &= \text{Safety Stock Target} \\
    &- \text{Starting Stock} \\
-   &- \text{Forecasted Demand} \\
-   &- \text{Indirect Demand Forecast}
+   &+ \text{Forecasted Demand} \\
+   &+ \text{Indirect Demand Forecast}
    \end{align}
 
-If minimum or maximum limits are set, the suggested replenishment quantity is always bounded by
-these limits, regardless of the needed quantity to reach the :guilabel:`Safety Stock Target`.
+If a :guilabel:`Minimum to Replenish` value is set, the |MPS| always suggests this minimum
+replenishment quantity, unless ``Safety Stock Target - Starting Stock + Forecasted Demand ≤ 0``.
+
+.. note::
+   In general, the |MPS| suggests a quantity of `0` if ``Safety Stock Target - Starting Stock +
+   Forecasted Demand ≤ 0``.
 
 Specify replenishment trigger
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -245,6 +240,39 @@ Remove a product
 To remove a product from the |MPS|, select the checkbox next to its name. Then, click the
 :icon:`fa-cog` :guilabel:`Actions` button at the top of the screen, and select :guilabel:`Delete`
 from the drop-down menu. On the :guilabel:`Confirmation` pop-up window, click :guilabel:`Ok`.
+
+.. _manufacturing/use_mps/suggest-forecasted:
+
+Suggest forecasted demand
+=========================
+
+Instead of an arbitrary value, the *Forecasted Demand* for each product and its time periods can be
+automatically suggested based on historical demand. To do so, click the :icon:`fa-pencil`
+:guilabel:`(Suggest Forecasted Demand)` icon next to the :guilabel:`- Forecasted Demand` row header.
+This opens the *Suggest Forecasted Demand* pop-up window.
+
+In the :guilabel:`Period` field, select a time period. To suggest forecasted demand quantities for
+all periods, leave the field blank.
+
+Next to the :guilabel:`Based on` field, select one of the following options from the drop-down menu
+to specify the source of the new estimate:
+
+- :guilabel:`Actual Demand`: Suggest based on previously confirmed or completed outgoing moves for
+  the matching period one year ago.
+- :guilabel:`Previous Year`: Suggest based on completed outgoing moves **only** for matching period
+  one year ago.
+- :guilabel:`Last 30 Days`: Suggest based on the product's average demand over the last 30 days,
+  prorated to the length of one time period.
+- :guilabel:`Last 3 Months`: Suggest based on the product's average demand over the last three
+  months, prorated to the length of one time period.
+- :guilabel:`Last 12 Months`: Suggest based on the product's average demand over the last 12 months,
+  prorated to the length of one time period.
+
+In the second field, enter the scaling factor to account for a :guilabel:`(#) %` increase or
+decrease in projected demand (e.g., `110%` projects a demand growth of 10 percent).
+
+Finally, click :guilabel:`Apply` to apply the suggested demand for the specified time periods, or
+click :guilabel:`Discard` to cancel.
 
 .. _manufacturing/mps/replenish:
 
@@ -308,11 +336,15 @@ The following rows can be added to the |MPS| in addition to the default rows sho
   time period.
 - :guilabel:`Actual Demand Y-2`: Displays the :guilabel:`Actual Demand` two years before the current
   time period.
+- :guilabel:`Indirect Actual Demand`: Changes the :guilabel:`- Indirect Demand Forecast` row to
+  :guilabel:`- Actual / Indirect Demand Forecast`, comparing the component's confirmed demand and
+  its forecasted demand.
 - :guilabel:`Actual Replenishment`: Changes the :guilabel:`+ Replenishment` row to :guilabel:`+
   Actual / Replenishment`, comparing the product's replenished quantity and its suggested quantity.
 - :guilabel:`Available to Promise`: Changes the :guilabel:`= Forecasted Stock` row to :guilabel:`=
   ATP / Forecasted Stock`, comparing the product's available stock (``Starting Stock - Actual Demand
-  + Replenishment``) and its forecasted stock.
+  + Replenishment``) and its forecasted stock. If the product is a component, the available stock is
+  calculated by ``Starting Stock - Actual Demand - Indirect Actual Demand + Replenishment``.
 
 Filters
 -------
@@ -329,6 +361,8 @@ Users can filter records from the |MPS| based on the following criteria:
 - :guilabel:`Replenishment Too High`: Filter by products with a replenished quantity above the
   suggested replenishment quantity (i.e., with at least one :guilabel:`+ Replenishment` cell
   highlighted in red).
+- :guilabel:`Forecast Too Low`: Filter by products with an actual demand greater than the forecasted
+  demand (e.g., :guilabel:`Actual Demand` is greater than :guilabel:`Forecasted Demand`).
 - :guilabel:`Manually Replenished`: Filter by products with the *Replenishment Trigger* set to
   *Manual*.
 - :guilabel:`Automatically Replenished`: Filter by products with the *Replenishment Trigger* set to
