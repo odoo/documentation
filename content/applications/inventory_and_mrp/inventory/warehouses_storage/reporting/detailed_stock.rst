@@ -49,7 +49,7 @@ Click the buttons to the right of each row item to access additional information
      On the :guilabel:`Moves History` page, remove the :icon:`fa-filter` :guilabel:`Done` filter
      from the search bar to reveal filter options, and select the :guilabel:`To Do` filter.
 
-     .. image:: locations/reserved-products.png
+     .. image:: detailed_stock/reserved-products.png
         :alt: Display *Moves History* page of to-do deliveries that reserved the product.
 
 - :icon:`fa-refresh` :guilabel:`Replenishment`: access the :doc:`reordering rules
@@ -72,7 +72,7 @@ To view which locations are currently empty, navigate to :menuselection:`Invento
 Empty locations are designated by the checkbox in the :guilabel:`Is Empty` column. To show only
 empty locations, click into the search bar and select the :guilabel:`Empty Locations` filter.
 
-.. image:: locations/empty-locations.png
+.. image:: detailed_stock/empty-locations.png
    :alt: A list of the empty locations in the Inventory app.
 
 Generate reports
@@ -82,8 +82,7 @@ After learning how to :ref:`navigate the locations report
 <inventory/warehouses_storage/locations-report>`, it can be used to create and share different
 reports.
 
-A few common reports that can be created using the :guilabel:`Locations` report are
-detailed below.
+A few common reports that can be created using the :guilabel:`Locations` report are detailed below.
 
 Dead stock report
 -----------------
@@ -103,7 +102,7 @@ The report now displays a list of expired products.
    <inventory/product_management/expiration-alerts>` page, accessed by going to
    :menuselection:`Inventory app --> Products --> Lots/Serial Numbers`.
 
-.. image:: locations/dead-stock.png
+.. image:: detailed_stock/dead-stock.png
    :alt: Show a list of products whose expiration dates have exceeded today.
 
 .. _inventory/warehouse_storage/stranded:
@@ -124,7 +123,7 @@ To get a list of items that might be sitting idly in storage, follow these steps
 #. Select the :guilabel:`Search Location for:` [location name] option from the resulting drop-down
    menu that appears beneath the search bar.
 
-   .. image:: locations/search-input-location.png
+   .. image:: detailed_stock/search-input-location.png
       :alt: Show search result for the location.
 
 The report now displays a list of products at the transit location.
@@ -136,7 +135,7 @@ The report now displays a list of products at the transit location.
    reception. The stranded inventory report helps identify items that have been idling in
    non-storage locations.
 
-   .. image:: locations/stranded-inventory.png
+   .. image:: detailed_stock/stranded-inventory.png
       :alt: Show items stored at a specific location.
 
 Inventory discrepancy report
@@ -152,11 +151,11 @@ To generate a report of items that have been moved since the last :doc:`inventor
    :guilabel:`Filters` section.
 #. The report now displays items whose quantities have changed since the last cycle count.
 
-   .. image:: locations/discrepancy.png
+   .. image:: detailed_stock/discrepancy.png
       :alt: Show items from the *Conflicts* filter in the report.
 
 #. Click the :icon:`fa-history` :guilabel:`History` button to view inventory transfers, including
    receipts and deliveries, that have occurred since the inventory adjustment.
 
-   .. image:: locations/history.png
+   .. image:: detailed_stock/history.png
       :alt: Show *Moves History*, showing a delivery that occurred after an inventory adjustment.
