@@ -8,7 +8,7 @@ due to damages, human errors, theft, or other factors. As such, inventory adjust
 to reconcile the differences, and ensure that the recorded counts in the database match the actual
 counts in the warehouse.
 
-.. _inventory/inventory-adjustments-page:
+.. _inventory/count_products/inventory-adjustments-page:
 
 Inventory Adjustments page
 ==========================
@@ -19,22 +19,27 @@ To view the *Inventory Adjustments* page, navigate to :menuselection:`Inventory 
 .. image:: count_products/inventory-adjustments-page.png
    :alt: In stock products listed on the Inventory adjustments page.
 
-In the :guilabel:`Inventory Adjustments` table, all products that are currently in stock are listed,
-with each product line containing the following information:
+On the *Inventory Adjustments* page, all products with stock history are listed, even if the
+quantity in stock is less than zero.
 
-- :guilabel:`Location`: the specific location in the warehouse where a product is stored. This field
-  needs to be enabled my going to :menuselection:`Inventory app --> Configuration --> Settings` and
-  ticking the :guilabel:`Storage Locations` checkbox.
-- :guilabel:`Product`: the product whose quantity is listed on the inventory adjustment line.
-- :guilabel:`Lot/Serial Number`: the tracking identifier assigned to the specific product listed. It
+.. tip::
+   Products that do not have a stock history will not appear on the *Inventory Adjustments* page.
+
+Each product line contains the following information:
+
+- :guilabel:`Location`: The specific location in the warehouse where a product is stored. This field
+  needs to be enabled by going to :menuselection:`Inventory app --> Configuration --> Settings` and
+  selecting the :guilabel:`Storage Locations` checkbox.
+- :guilabel:`Product`: The product whose quantity is listed on the inventory adjustment line.
+- :guilabel:`Lot/Serial Number`: The tracking identifier assigned to the specific product listed. It
   can contain letters, numbers, or a combination of both.
-- :guilabel:`UoM`: the *unit of measure* in which the product is measured. Unless otherwise
+- :guilabel:`UoM`: The *unit of measure* in which the product is measured. Unless otherwise
   specified (i.e., in :guilabel:`Pounds` or :guilabel:`Ounces`), the default :abbr:`UoM (Unit of
   Measure)` is :guilabel:`Units`.
-- :guilabel:`Counted Quantity`: the real quantity counted during an inventory count. This field is
+- :guilabel:`Counted Quantity`: The real quantity counted during an inventory count. This field is
   left blank by default but can be changed, depending on if it matches the :guilabel:`On Hand
   Quantity` or not.
-- :guilabel:`Difference`: the difference between the :guilabel:`On Hand Quantity` and
+- :guilabel:`Difference`: The difference between the :guilabel:`On Hand Quantity` and
   :guilabel:`Counted Quantity`, once an inventory adjustment is made. The difference is
   automatically calculated after every inventory adjustment.
 
@@ -44,35 +49,35 @@ with each product line containing the following information:
    product line with its own lot/serial number, under the :guilabel:`Lot/Serial Number` column.
 
 The fields below are optional and can be made visible by clicking the :icon:`oi-settings-adjust`
-:guilabel:`(settings)` icon in the top right of the :guilabel:`Inventory Adjustments` page.
+:guilabel:`(settings)` icon in the top corner of the :guilabel:`Inventory Adjustments` page.
 
-- :guilabel:`Inventory Frequency (Days)`: the frequency, in days, for inventory counts. The default
+- :guilabel:`Inventory Frequency (Days)`: The frequency, in days, for inventory counts. The default
   value of this field is set to `0`.
-- :guilabel:`Favorite`: adds a clickable star icon next to each product. Adding a favorite will
+- :guilabel:`Favorite`: Adds a clickable star icon next to each product. Adding a favorite will
   bring the line item to the top of the dashboard.
-- :guilabel:`Product Category`: the category assigned internally to a specific product. Unless
+- :guilabel:`Product Category`: The category assigned internally to a specific product. Unless
   otherwise specified (i.e., as :guilabel:`Consumable` or :guilabel:`Rental`), the default *Product
   Category* is set to :guilabel:`All`.
-- :guilabel:`Expiration Date`: the date a product will expire, if it is a perishable good. Only
+- :guilabel:`Expiration Date`: The date a product will expire, if it is a perishable good. Only
   products that are tracked using lots and serial numbers can be assigned expiration information.
-- :guilabel:`Last Count Date`: the date on which the last inventory count occurred.
-- :guilabel:`Available Quantity`: the quantity of a specific product that is currently available,
+- :guilabel:`Last Count Date`: The date on which the last inventory count occurred.
+- :guilabel:`Available Quantity`: The quantity of a specific product that is currently available,
   based on any outstanding/uncompleted sales orders, purchase orders, or manufacturing orders that
   might change the available quantity once fulfilled.
-- :guilabel:`On Hand Quantity`: the quantity of the product currently recorded in the database.
-- :guilabel:`Accounting Date`: the date on which the adjustments will be accounted for in the Odoo
+- :guilabel:`On Hand Quantity`: The quantity of the product currently recorded in the database.
+- :guilabel:`Accounting Date`: The date on which the adjustments will be accounted for in the Odoo
   **Accounting** app.
-- :guilabel:`Scheduled Date`: the date at which a count should be made. If not otherwise specified,
+- :guilabel:`Scheduled Date`: The date at which a count should be made. If not otherwise specified,
   this date defaults to the 31st of December of the current year.
-- :guilabel:`User`: the person assigned to the count in the database. This can either be the person
+- :guilabel:`User`: The person assigned to the count in the database. This can either be the person
   physically counting the inventory, or applying the count in the database.
-- :guilabel:`Company`: the company whose database these inventory adjustments are being made on. The
+- :guilabel:`Company`: The company whose database these inventory adjustments are being made on. The
   company is listed in the top-right corner of the database, next to the user currently logged in.
 
 .. tip::
-   Some columns are hidden by default. To reveal these columns, click the
-   :icon:`oi-settings-adjust` :guilabel:`(settings)` icon to the far right of the form's top row,
-   and select any desired column to reveal by clicking the checkbox next to that option.
+   Some columns are hidden by default. To reveal these columns, click the :icon:`oi-settings-adjust`
+   :guilabel:`(settings)` icon to the far right of the form's top row, and select any desired column
+   to reveal by clicking the checkbox next to that option.
 
 .. seealso::
    - :doc:`Product type <../../product_management/configure/type>`
@@ -83,8 +88,8 @@ Create an inventory adjustment
 ------------------------------
 
 To create a new inventory adjustment from the :ref:`Inventory Adjustments
-<inventory/inventory-adjustments-page>` page, click :guilabel:`New`. Doing so creates a new, blank
-inventory adjustment line at the bottom of the page.
+<inventory/count_products/inventory-adjustments-page>` page, click :guilabel:`New`. Doing so creates
+a new, blank inventory adjustment line at the bottom of the page.
 
 On this blank inventory adjustment line, define the :guilabel:`Location` where the product is
 stored. This is necessary to ensure the accuracy of the inventory adjustment, as the same product
@@ -139,9 +144,9 @@ Once ready, click :guilabel:`Apply` to apply the inventory adjustment.
    <../reporting/moves_history>` in the *Moves History* report for traceability.
 
 .. tip::
-   Sometimes products end up in unexpected or incorrect locations. To quickly move a product to a
-   different storage location, check the box next to the product, and click the :guilabel:`Relocate`
-   button at the top of the :ref:`Inventory Adjustments <inventory/inventory-adjustments-page>`
+   Sometimes products end up in unexpected or incorrect locations. To move a product to a different
+   storage location, check the box next to the product, and click the :guilabel:`Relocate` button at
+   the top of the :ref:`Inventory Adjustments <inventory/count_products/inventory-adjustments-page>`
    page.
 
 Count products
@@ -225,10 +230,10 @@ Once all desired products have been selected, click the :guilabel:`Request a Cou
 top of the page. Doing so opens the :guilabel:`Request a Count` pop-up window, where the following
 information can be filled:
 
-- :guilabel:`Inventory Date`: the planned date of the count.
-- :guilabel:`User`: the user responsible for the count.
-- :guilabel:`Accounting Date`: the date at which the inventory adjustment will be accounted.
-- :guilabel:`Count`: to leave the on-hand quantity of each product line blank, select
+- :guilabel:`Inventory Date`: The planned date of the count.
+- :guilabel:`User`: The user responsible for the count.
+- :guilabel:`Accounting Date`: The date at which the inventory adjustment will be accounted.
+- :guilabel:`Count`: To leave the on-hand quantity of each product line blank, select
   :guilabel:`Leave Empty`. To pre-fill the on-hand quantity of each product line with the current
   value recorded in the database, select :guilabel:`Set Current Value`.
 
