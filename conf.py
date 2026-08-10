@@ -92,26 +92,32 @@ sys.path.insert(0, str(extension_dir.absolute()))
 
 # Search for the directory of odoo sources to know whether autodoc should be used on the dev doc
 odoo_sources_candidate_dirs = (Path('odoo'), Path('../odoo'))
-odoo_sources_dirs = [
-    d for d in odoo_sources_candidate_dirs if d.is_dir() and (d / 'odoo-bin').exists()
-]
+odoo_source_dir = os.environ.get('DOCUMENTATION_ODOO_SOURCE_DIR')
+odoo_source_dir = Path(odoo_source_dir) if odoo_source_dir else None
+if not odoo_source_dir:
+    odoo_source_dir = next(
+    (d for d in odoo_sources_candidate_dirs if d.is_dir() and (d / 'odoo-bin').exists()),
+    None,
+)
 odoo_dir_in_path = False
 
-if not odoo_sources_dirs:
+if not odoo_source_dir:
     _logger.warning(
         "Could not find Odoo sources directory in neither of the following folders:\n"
         "%(dir_list)s\n"
         "The 'Developer' documentation will be built but autodoc directives will be skipped.\n"
         "In order to fully build the 'Developer' documentation, clone the repository with "
-        "`git clone https://github.com/odoo/odoo` or create a symbolic link.",
+        "`git clone https://github.com/odoo/odoo` or create a symbolic link.\n"
+        "You can also provide the path to the Odoo sources directory with the environment "
+        "variable DOCUMENTATION_ODOO_SOURCE_DIR",
         {'dir_list': '\n'.join([f'\t- {d.resolve()}' for d in odoo_sources_candidate_dirs])},
     )
 else:
     if (3, 6) < sys.version_info < (3, 7):
         # Running odoo needs python 3.7 min but monkey patch version_info to be compatible with 3.6.
         sys.version_info = (3, 7, 0)
-    odoo_dir = odoo_sources_dirs[0].resolve()
-    source_read_replace_vals['ODOO_RELPATH'] = '/../' + str(odoo_sources_dirs[0])
+    odoo_dir = odoo_source_dir.resolve()
+    source_read_replace_vals['ODOO_RELPATH'] = '/../' + Path(os.path.relpath(odoo_dir, Path().resolve())).as_posix()
     sys.path.insert(0, str(odoo_dir))
     import odoo.addons
     odoo.addons.__path__.append(str(odoo_dir) + '/addons')
@@ -124,7 +130,9 @@ else:
             "with documentation version '%(doc_version)s'.\n"
             "The 'Developer' documentation will be built but autodoc directives will be skipped.\n"
             "In order to fully build the 'Developer' documentation, checkout the matching branch"
-            " with `cd odoo && git checkout %(doc_version)s`.",
+            " with `cd odoo && git checkout %(doc_version)s`.\n"
+            "You can also provide the path to the Odoo sources directory with the environment "
+            "variable DOCUMENTATION_ODOO_SOURCE_DIR",
             {'directory': odoo_dir, 'odoo_version': odoo_version, 'doc_version': version},
         )
     else:
@@ -135,13 +143,19 @@ else:
         odoo_dir_in_path = True
 
 if odoo_dir_in_path:
-    upgrade_util_dir = next(filter(Path.exists, [Path('upgrade-util'), Path('../upgrade-util')]), None)
+
+    upgrade_util_dir = os.environ.get('DOCUMENTATION_UPGRADE_UTIL_SOURCE_DIR')
+    upgrade_util_dir = Path(upgrade_util_dir) if upgrade_util_dir else None
+    if not upgrade_util_dir:
+        upgrade_util_dir = next(filter(Path.exists, [Path('upgrade-util'), Path('../upgrade-util')]), None)
     if not upgrade_util_dir:
         _logger.warning(
             "Could not find Upgrade Utils sources directory in `upgrade_util`.\n"
             "The developer documentation will be built but autodoc directives will be skipped.\n"
             "In order to fully build the 'Developer' documentation, clone the repository with "
-            "`git clone https://github.com/odoo/upgrade-util` or create a symbolic link."
+            "`git clone https://github.com/odoo/upgrade-util` or create a symbolic link.\n"
+            "You can also provide the path to the upgrade-util sources directory with the "
+            "environment variable DOCUMENTATION_UPGRADE_UTIL_SOURCE_DIR",
         )
         odoo_dir_in_path = False
     else:
