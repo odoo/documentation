@@ -336,10 +336,11 @@ Inventory reports
   comprehensive list of all on-hand, unreserved, incoming, and outgoing tracked inventory. This
   includes a detailed record of the monetary value of all tracked inventory. To access the report,
   go to :menuselection:`Inventory app --> Reporting --> Stock`.
-- :doc:`Stock Locations report <../../warehouses_storage/reporting/locations>`: This report shows a
-  breakdown of which tracked products are held at each location. The report is only available with
-  the *Storage Locations* feature activated (:menuselection:`Inventory app --> Configuration -->
-  Settings`). To access it, go to :menuselection:`Inventory app --> Reporting --> Stock Locations`.
+- :doc:`Detailed Stock report <../../warehouses_storage/reporting/detailed_stock>`: This report
+  shows a breakdown of which tracked products are held at each location. The report is only
+  available with the *Storage Locations* feature activated (:menuselection:`Inventory app -->
+  Configuration --> Settings`). To access it, go to :menuselection:`Inventory app --> Reporting
+  --> Detailed Stock`.
 - :doc:`Moves History report <../../warehouses_storage/reporting/moves_history>`: This report
   summarizes where and when goods have moved in or out of stock. To access the report, go to
   :menuselection:`Inventory app --> Reporting --> Moves History`. Alternatively, click the

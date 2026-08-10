@@ -9,6 +9,6 @@ Reporting
 
    reporting/forecast
    reporting/stock
-   reporting/locations
+   reporting/detailed_stock
    reporting/moves_history
    reporting/dashboards
