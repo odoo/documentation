@@ -49,11 +49,18 @@ To link the printer with the Point of Sale, follow the next steps:
    Address` or select the relevant :guilabel:`IoT Device`.
 #. Enable :guilabel:`Use Local Network Access` to allow the printer to be detected through
    :doc:`Local Network Access (LNA) <pos_lna>`.
+#. Select the :guilabel:`Paper Size` supported by the printer.
 #. Click :guilabel:`Save`.
 
 .. note::
    Once configured, printers can be managed from :menuselection:`Point of Sale --> Configuration
    --> Printers`.
+
+.. tip::
+   :guilabel:`Connection Timeout` sets the maximum delay (in milliseconds) allowed for the printer
+   to respond before the print job is marked as failed. Increase the value if timeouts occur
+   frequently due to a slow network or older printer hardware. To view and edit the field when
+   configuring printer settings, activate :ref:`developer mode <developer-mode>`.
 
 .. seealso::
    - :doc:`pos_lna`
