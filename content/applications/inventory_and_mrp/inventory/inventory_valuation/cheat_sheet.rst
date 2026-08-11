@@ -17,8 +17,8 @@ Valuation cheat sheet
 Costing Methods
 ===============
 
-Odoo supports 3 costing methods configured in accounting's settings and, optionally,
-the product's category.
+Odoo supports 3 costing methods configured in accounting's settings and, optionally, the product's
+category.
 
 .. rst-class:: alternatives doc-aside
 
@@ -189,13 +189,14 @@ Inventory vs Accounting
   | Closing Entry    | :good:`✓`  | :meh:`/`  |
   +------------------+------------+-----------+
 
+.. _inventory/cheat_sheet/accounting-methods:
 
 Accounting Methods
 ==================
 
 There are two accounting practices on how to maintain your accounts, defined in
-:menuselection:`Accounting app --> Configuration --> Settings`, under the
-:guilabel:`Inventory Valuation` section:
+:menuselection:`Accounting app --> Configuration --> Settings`, under the :guilabel:`Inventory
+Valuation` section:
 
 **Periodic:** Post vendor bills as expenses by nature, and update stock valuation in the closing
 entry by reducing expenses (stock variation). This is the best practice in Europe.
@@ -220,14 +221,15 @@ like the USA and India.
 * :purple:`Stock Account` on the product's category
 * :yellow:`Stock Variation` on the stock account
 * :blue:`Expense/Cost of Goods Sold` on the product/category
-* :green:`Inventory Adjustment` on the Inventory Loss location
-  (optional, recommended for Anglo-Saxon accounting)
-* :darkblue:`Expense` on the stock account
-  (for perpetual Continental accounting only)
+* :green:`Inventory Adjustment` on the Inventory Loss location (optional, recommended for
+  Anglo-Saxon accounting)
+* :darkblue:`Expense` on the stock account (for perpetual Continental accounting only)
 
 .. seealso::
-   For more detailed instructions on the accounting aspects of configuring inventory valuation, see
-   :doc:`../../../finance/accounting/get_started/inventory_valuation`.
+   - :doc:`../../../finance/accounting/get_started/inventory_valuation`: For more detailed
+     instructions on the accounting aspects of configuring inventory valuation.
+   - :doc:`operations_valuation`: For more information about the impact of stock movements and
+     adjustments on inventory valuation.
 
 .. h:div:: doc-aside
 
@@ -411,13 +413,12 @@ To generate a new accounting entry to review and post, click :guilabel:`Generate
 To view a list of sales and purchase orders for which accrual entries should be encoded, go to
 :menuselection:`Accounting --> Review` and select the relevant menu item (:guilabel:`Bill To
 Receive`, :guilabel:`Invoices To Be Issued`, :guilabel:`Billed Not Received` and :guilabel:`Invoiced
-Not Delivered`). Select the desired lines and click :guilabel:`Create Accrual
-Entries`.
+Not Delivered`). Select the desired lines and click :guilabel:`Create Accrual Entries`.
 
 With Anglo-Saxon perpetual accounting, this will also help to distribute recorded inventory
 variations to accounts such as Bills to Receive/:abbr:`GRNI (goods received not invoiced)` or
-:abbr:`COGS (cost of goods sold)` as shown in the :ref:`Accounting Entries <accounting-entries>`
-and :ref:`Journal Entries Configuration <journal-entries>` sections.
+:abbr:`COGS (cost of goods sold)` as shown in the :ref:`Accounting Entries <accounting-entries>` and
+:ref:`Journal Entries Configuration <journal-entries>` sections.
 
 .. h:div:: doc-aside
 
