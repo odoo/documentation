@@ -2,9 +2,13 @@
 Upsell subscriptions
 ====================
 
+.. meta::
+   :description:  Learn how to upsell an existing subscription by adding new products or applying
+                  discounts to increase order value.
+
 Subscriptions are recurrent, and go on indefinitely. As time passes, customers may want to modify
-them. With that in mind, it's imperative to have the ability to adapt prices, or change quantities,
-to accommodate any need. That's where the opportunity to upsell a subscription can come into play.
+them. With that in mind, it is imperative to have the ability to adapt prices, or change quantities,
+to accommodate any need. That is where the opportunity to upsell a subscription can come into play.
 
 Upselling may prove beneficial to the following customer types:
 
@@ -16,8 +20,8 @@ Upselling may prove beneficial to the following customer types:
    | For brand new customers unfamiliar with the company/brand, a new, attractive tactic must be
      employed to entice them to purchase a more expensive product/service.
 
-     In these instances, discounts can be useful. Typically, subscriptions end after a certain period
-     of time.
+     In these instances, discounts can be useful. Typically, subscriptions end after a certain
+     period of time.
 
      So, if these more expensive products/services are offered to new customers at a discount, it
      can result in a sale, while establishing a strong sense of trust between the customer and the
@@ -35,7 +39,6 @@ Settings`, scroll to the :guilabel:`Pricing` section, and tick the checkbox besi
 :guilabel:`Discounts`. Then, click :guilabel:`Save`.
 
 .. image:: upselling/configuration-to-upsell-a-subscription.png
-   :align: center
    :alt: Activation of the discount option in Odoo Sales.
 
 With that feature activated, the ability to grant discounts on sales order lines.
@@ -43,7 +46,7 @@ With that feature activated, the ability to grant discounts on sales order lines
 Upsell subscriptions
 ====================
 
-Before upselling a subscription, check out our documentation on how to :doc:`Create a quotation
+Before upselling a subscription, check out our documentation on how to :doc:`create a quotation
 <../subscriptions>` using subscription products.
 
 When a quotation with a subscription is confirmed, it officially becomes a sales order, and a new
@@ -57,29 +60,27 @@ the ability to upsell that subscription is available, via the :guilabel:`Upsell`
 of the sales order.
 
 .. image:: upselling/upsell-your-subscription.png
-   :align: center
    :alt: Upsell button for subscription sales orders with Odoo Subscriptions.
 
 When the :guilabel:`Upsell` button is clicked, a new quotation form appears, with an
 :guilabel:`Upsell` status banner in the upper-right corner. The initial subscription product is
-already in the :guilabel:`Order Lines` tab.
+already in the *Order Lines* tab.
 
 There is also a warning reminding the user that the recurring products are discounted, according to
-the prorated period of time, located beneath the initial subscription product in the
-:guilabel:`Order Lines` tab.
+the prorated period of time, located beneath the initial subscription product in the *Order Lines*
+tab.
 
 .. important::
    The prorated amount is **only** applied to *Service* product types. It is **not** applied to
    *Consumable* or *Storable* product types, even if the message appears.
 
-From this new upsell quotation form, add new subscription products in the :guilabel:`Order Lines`
-tab, by clicking :guilabel:`Add a product`, and selecting the desired subscription product.
+From this new upsell quotation form, add new subscription products in the *Order Lines* tab, by
+clicking :guilabel:`Add a product`, and selecting the desired subscription product.
 
 .. image:: upselling/use-of-the-upsell-button-in-odoo-sales.png
-   :align: center
    :alt: Adding products to your subscription via the upsell option in Odoo Subscriptions
 
-Once the desired upsell subscription product(s) have been added, it can be sent to the customer for
+Once the desired upsell subscription products have been added, it can be sent to the customer for
 approval by clicking the :guilabel:`Send by Email` button.
 
 .. important::
@@ -91,16 +92,15 @@ approval by clicking the :guilabel:`Send by Email` button.
    Before sending the new quotation to the customer, the unit price, taxes, and even discount can be
    applied.
 
-Once the customer approves, click the :guilabel:`Confirm` button on the quotation, making it a sales
-order. When that's clicked, a :guilabel:`Sales History` smart button appears, displaying how many
-sales orders are attached to this initial subscription order.
+Once the customer approves, click the :guilabel:`Confirm` button on the quotation to convert it into
+a sales order. A :guilabel:`Sales History` smart button appears, displaying how many sales orders
+are attached to this initial subscription order.
 
 When the :guilabel:`Sales History` smart button is clicked, Odoo reveals a separate page containing
 a list of the related sales orders, clearly showcasing their individual :guilabel:`Subscription
 Status`.
 
 .. image:: upselling/sales-history-smartbutton.png
-   :align: center
    :alt: The related sales order viewable from the Sales History smart button in Odoo Subscriptions.
 
 .. seealso::
