@@ -2,6 +2,10 @@
 Upsell subscriptions
 ====================
 
+.. meta::
+   :description:  Learn how to upsell an existing subscription by adding new products or applying
+                  discounts to increase order value.
+
 When a subscription sales order is opened, either in the **Sales** or **Subscriptions** apps, that
 subscription may then be upsold via the :guilabel:`Upsell` button at the top of the sales order.
 
@@ -27,18 +31,18 @@ new form also includes information linking the upsell order to the original orde
    :alt: Chatter for an upsell order showing information related to the original subscription sales
          order.
 
-Within the new form, the initial subscription product appears in the :guilabel:`Order Lines` tab.
-The :guilabel:`Order Lines` tab also features a reminder that recurring products are prorated based
-on the original subscription's starting date.
+Within the new form, the initial subscription product appears in the *Order Lines* tab. The *Order
+Lines* tab also features a reminder that recurring products are prorated based on the original
+subscription's starting date.
 
 .. important::
    The prorated amount is **only** applied to *Service* product types. It is **not** applied to
    *Goods*, even if the message appears and suggests otherwise.
 
-From this new upsell quotation form, new subscription products can be added in the :guilabel:`Order
-Lines` tab, by clicking :guilabel:`Add a product` and selecting the desired subscription products.
-Once the desired upsell subscription products have been added, the quotation can be sent to the
-customer for approval by clicking the :guilabel:`Send` button.
+From this new upsell quotation form, new subscription products can be added in the *Order Lines*
+tab, by clicking :guilabel:`Add a product` and selecting the desired subscription products. Once the
+desired upsell subscription products have been added, the quotation can be sent to the customer for
+approval by clicking the :guilabel:`Send` button.
 
 Once the quotation is confirmed by the customer, the upsold products are added to the initial
 subscription. The quotation's prices are then prorated based on the current invoicing period's
