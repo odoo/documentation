@@ -96,7 +96,7 @@ payment methods in the :guilabel:`Payment Methods` field.
 Once activated and configured, :ref:`open the POS register <pos/use/open-register>` and add products
 to the cart. The previously selected payment methods are displayed as shortcut buttons next to the
 :guilabel:`Payment` button. Clicking a payment method validates the order immediately and brings
-you to the receipt screen.
+you to the payment confirmation screen.
 
 .. important::
    While cash payments are supported, the one-click payment feature assumes the amount received is
