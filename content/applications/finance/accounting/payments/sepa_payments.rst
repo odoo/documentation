@@ -66,36 +66,40 @@ customer.
 Creating mandates
 ~~~~~~~~~~~~~~~~~
 
-In the **Accounting** app, go to :menuselection:`Customers --> Direct Debit Mandates`, and click
-:guilabel:`New`.
+.. note::
+   :abbr:`SDD (SEPA Direct Debit)` mandates are created automatically as a :guilabel:`Draft` for
+   sales orders paid online using the :ref:`SEPA Direct Debit payment method
+   <payment_providers/bank_payments/sdd>`. The mandate is validated once an initial payment (made
+   via wire transfer) is received and a :doc:`bank transaction <../bank/transactions>` is
+   matched with the payment transaction.
 
-#. Fill out:
+To create an SDD mandate manually, follow these steps:
 
-   - :guilabel:`Customer`: select the customer whose payments are to be managed by this mandate.
-   - :guilabel:`IBAN`: account of the customer to collect payments from.
-   - :guilabel:`SDD Scheme` depends on the type of customer. Select :guilabel:`CORE` for B2C
-     customers and :guilabel:`B2B` for B2B customers.
-   - :guilabel:`End Date`: select a date after which the mandate is closed automatically. If this is
-     left empty, the mandate remains active until it closed or revoked.
+#. Ensure a valid IBAN is defined for the :doc:`bank journal <../bank>` used to receive SDD
+   payments for the mandate.
+#. Go to :menuselection:`Accounting --> Customers --> Direct Debit Mandates` and click
+   :guilabel:`New`.
+#. Select or create the relevant :guilabel:`Customer`.
+#. Enter the customer's :guilabel:`IBAN`, i.e., the account from which payments are collected.
+#. Select the :guilabel:`SDD Scheme`, depending on the type of customer: :guilabel:`CORE` for B2C
+   customers or :guilabel:`B2B` for B2B customers.
 
    .. note::
-      - A valid IBAN must be defined in the :doc:`bank journal <../bank>` used to receive SDD
-        payments for the mandate.
-      - The B2B scheme is an optional scheme, offered exclusively to business payers. Some banks or
-        businesses might not accept B2B SDD.
+      The B2B scheme is an optional scheme, offered exclusively to business payers. Some banks or
+      businesses might not accept B2B SDD.
 
+#. Select the date after which the mandate is closed automatically in the :guilabel:`Validity`
+   field. If left empty, the mandate remains active until it is closed or revoked.
 #. Click :guilabel:`Send & Print` to generate a PDF of the mandate form, then send it to the
    customer for signature.
 #. Click :guilabel:`Validate` to activate the mandate.
 
 .. tip::
-   - To print the mandate form after the mandate has been validated, click the :icon:`fa-cog`
-     (:guilabel:`gear`) icon, then select :icon:`fa-print` :guilabel:`(Mandate form)`.
+   To print the mandate form after the mandate has been validated, click the :icon:`fa-cog`
+   (:guilabel:`Actions`) icon, then select :icon:`fa-print` :guilabel:`Mandate form`.
 
-Once an SDD mandate is active, subsequent SDD payments can be generated via Odoo and :ref:`uploaded
-to your online banking interface <accounting/sepa_payments/XML>`. Customers with an active SDD
-mandate can also use this payment method for :doc:`online purchases
-<../../payment_providers>`.
+Once an SDD mandate is active, subsequent SDD payments can be made via Odoo and collected by
+:ref:`uploading them to your online banking interface <accounting/sepa_payments/XML>`.
 
 .. _accounting/sepa_payments/close-revoke-mandate:
 
