@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-07 17:32+0000\n"
-"PO-Revision-Date: 2026-08-10 15:09+0000\n"
+"PO-Revision-Date: 2026-08-11 14:09+0000\n"
 "Last-Translator: \"Marianna Ciofani (cima)\" <cima@odoo.com>\n"
 "Language-Team: Italian <https://translate.odoo.com/projects/odoo-18-doc/"
 "inventory_and_mrp/it/>\n"
@@ -53540,6 +53540,14 @@ msgid ""
 "planning against an expected future demand to ensure continued availability "
 "of stock."
 msgstr ""
+"In Odoo **Produzione**, il Piano Generale di Produzione viene utilizzato per "
+"pianificare il rifornimento a lungo termine dei prodotti sulla base di una "
+"previsione della domanda regolabile manualmente. Sebbene le strategie Make-"
+"to-Order (MTO) o le regole di riordino siano utili per rifornire "
+"immediatamente le scorte, i prodotti o i componenti con tempi di consegna "
+"lunghi o con una domanda stagionale variabile potrebbero richiedere una "
+"pianificazione a più lungo termine in base alla domanda futura prevista, al "
+"fine di garantire la disponibilità continua delle scorte."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:22
 msgid ""
@@ -53547,6 +53555,10 @@ msgid ""
 "future time periods, generating suggested replenishment quantities based on "
 "forecasted demand and on user-specified stock targets."
 msgstr ""
+"Grazie al Piano Generale di Produzione, gli utenti possono pianificare il "
+"rifornimento di prodotti specifici per periodi futuri così da generare "
+"quantità di rifornimento suggerite in base alla domanda prevista e agli "
+"obiettivi di magazzino specificati dall’utente."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:27
 msgid ""
@@ -53555,6 +53567,10 @@ msgid ""
 "to be replenished, requiring the user to actually create the replenishing |"
 "POs|/|MOs|."
 msgstr ""
+"L'aggiunta di un prodotto al Piano Generale di Produzione **non** crea "
+"automaticamente un ordine di acquisto o di produzione. Il Piano suggerisce "
+"solamente la quantità di prodotto da rifornire richiedendo all'utente di "
+"creare effettivamente gli ordini di acquisto/produzione per il rifornimento."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:31
 msgid ""
@@ -53562,6 +53578,10 @@ msgid ""
 "**not** be applied to products added to the |MPS|. Doing so creates "
 "inaccurate forecasts and unnecessary replenishment orders."
 msgstr ""
+"Poiché il Piano Generale di Produzione si basa sul rifornimento manuale, le "
+"regole di riordino **non** dovrebbero essere applicate ai prodotti aggiunti "
+"al Piano stesso. Ciò comporterebbe previsioni inaccurate e ordini di "
+"rifornimento non necessari."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:36
 msgid ""
@@ -53572,6 +53592,13 @@ msgid ""
 "enter a greater demand in the |MPS| to properly replenish ahead of this "
 "future customer demand."
 msgstr ""
+"Un negozio al dettaglio vende *alberi di Natale* artificiali durante le "
+"festività natalizie. Attualmente siamo a settembre e il negozio ha meno di "
+"dieci ordini di produzione per gli alberi di Natale confermati per il mese "
+"di dicembre. Il responsabile dell’approvvigionamento sa che la domanda di "
+"alberi di Natale raggiunge il picco a dicembre. Di conseguenza, inserisce "
+"manualmente una domanda maggiore nel Piano per rifornire adeguatamente le "
+"scorte in vista di questa futura domanda dei clienti."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:47
 msgid ""
@@ -53580,10 +53607,14 @@ msgid ""
 "select the :guilabel:`Master Production Schedule` checkbox in "
 "the :guilabel:`Planning` section."
 msgstr ""
+"Per utilizzare il Piano, è necessario attivare la funzionalità "
+"corrispondente. Apri l'app :menuselection:`Produzione --> Configurazione --> "
+"Impostazioni` e spunta la casella :guilabel:`Piano Generale di Produzione` "
+"nella sezione :guilabel:`Pianificazione`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:51
 msgid "After enabling the feature, two new columns appear below:"
-msgstr ""
+msgstr "Dopo aver attivato la funzione, sotto compaiono due nuove colonne:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:53
 msgid ""
@@ -53592,12 +53623,17 @@ msgid ""
 "a :guilabel:`Yearly`, :guilabel:`Monthly`, :guilabel:`Weekly`, "
 "or :guilabel:`Daily` basis."
 msgstr ""
+":guilabel:`Intervallo di tempo predefinito`: seleziona il periodo di tempo "
+"su cui si basa la pianificazione, a scelta tra :guilabel:`Annuale`, "
+":guilabel:`Mensile`, :guilabel:`Settimanale` o :guilabel:`Giornaliera`;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:55
 msgid ""
 ":guilabel:`Number of Periods`: Specify the number of periods to display for "
 "each time range."
 msgstr ""
+":guilabel:`Numero di periodi`: specifica il numero di periodi da "
+"visualizzare per ciascun intervallo di tempo."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:58
 msgid ""
@@ -53605,10 +53641,14 @@ msgid ""
 "and the :guilabel:`Number of Periods` field is set to `12`, the |MPS| shows "
 "one column for each of the next 12 months, starting with the current month."
 msgstr ""
+"Se il campo :guilabel:`Intervallo di tempo predefinito` è impostato su "
+":guilabel:`Mensile` e il campo :guilabel:`Numero di periodi` è impostato su "
+"`12`, il Piano mostra una colonna per ciascuno dei prossimi 12 mesi, a "
+"partire dal mese corrente."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:62
 msgid "Finally, click :guilabel:`Save` to load the changes."
-msgstr ""
+msgstr "Infine, fai clic su :guilabel:`Salva` per caricare le modifiche."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:None
 msgid "The MPS setting in the Manufacturing app's settings."
@@ -53625,10 +53665,17 @@ msgid ""
 "with the time periods represented as columns and each product :ref:`added to "
 "the MPS <manufacturing/mps/add-product>` as an individual grouping of rows."
 msgstr ""
+"Per aprire il piano, apri l'app :menuselection:`Produzione --> "
+"Pianificazione --> Piano Generale di Produzione`. Il Piano ha una struttura "
+"a griglia e i periodi di tempo sono rappresentati come colonne e ogni "
+"prodotto :ref:`aggiunto al Piano <manufacturing/mps/add-product>` viene "
+"visualizzato come un raggruppamento indipendente di righe."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:76
 msgid "By default, the group of rows for each product includes the following:"
 msgstr ""
+"Per impostazione predefinita, il gruppo di righe per ciascun prodotto "
+"include quanto segue:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:78
 msgid ""
@@ -53638,12 +53685,21 @@ msgid ""
 "the beginning of each time period. Clicking the :guilabel:`[Product]` link "
 "opens the product's forecasted report."
 msgstr ""
+":guilabel:`[Prodotto] per [Unità] - [Azienda]`: la riga di intestazione con "
+"il nome del prodotto, la sua unità di misura e la sua azienda (se "
+"applicabile). Per impostazione predefinita, le celle di questa riga mostrano "
+"la quantità di scorte iniziale del prodotto all’inizio di ciascun periodo di "
+"tempo. Facendo clic sul link :guilabel:`[Prodotto]` si apre il resoconto "
+"delle previsioni relative al prodotto;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:82
 msgid ""
 ":guilabel:`- Forecasted Demand`: The user's estimated demand for the product "
 "during each time period. Cells in this row can be entered manually."
 msgstr ""
+":guilabel:`- Domanda prevista`: la domanda stimata dell’utente per il "
+"prodotto in ciascun periodo di tempo. Le celle di questa riga possono essere "
+"compilate manualmente;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:84
 msgid ""
@@ -53651,6 +53707,9 @@ msgid ""
 "component from existing |MOs|. This row **only** appears if the product is a "
 "component of another product."
 msgstr ""
+":guilabel:`- Previsione domanda indiretta`: la domanda prevista per il "
+"componente proveniente dall’ordine di produzione esistente. Questa riga "
+"appare **solo** se il prodotto è il componente di un altro prodotto;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:86
 msgid ""
@@ -53663,6 +53722,15 @@ msgid ""
 "manually :ref:`replenishes <manufacturing/mps/replenish>` the product based "
 "on the quantity suggested or entered."
 msgstr ""
+":guilabel:`+ Rifornimento`: la quantità specificata dall’utente del prodotto "
+"da rifornire tramite ordine di produzione o di acquisto. I valori in queste "
+"celle vengono suggeriti automaticamente in base agli *obiettivi di scorta di "
+"sicurezza* e ai minimi/massimi di rifornimento specificati nelle "
+":ref:`impostazioni di programmazione <manufacturing/mps/add-product>` del "
+"prodotto. Tuttavia, gli utenti possono anche modificare manualmente questi "
+"valori. Facendo clic sul pulsante :guilabel:`Ordina` il prodotto viene "
+":ref:`rifornito <manufacturing/mps/replenish>` manualmente in base alla "
+"quantità suggerita o inserita;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:92
 msgid ""
@@ -53670,6 +53738,9 @@ msgid ""
 "at the end of each time period, assuming that suggested replenishment "
 "numbers are fulfilled."
 msgstr ""
+":guilabel:`= Giacenza prevista`: la quantità prevista delle scorte del "
+"prodotto alla fine di ciascun periodo, ipotizzando che i livelli di "
+"rifornimento suggeriti vengano rispettati;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:95
 msgid ""
@@ -53677,6 +53748,9 @@ msgid ""
 "filters>` can be selected in their respective sections of "
 "the :guilabel:`Search...` bar drop-down menu at the top."
 msgstr ""
+"È possibile selezionare :ref:`righe e filtri <manufacturing/mps/additional-"
+"rows-filters>` aggiuntivi nelle sezioni corrispondenti del menu a tendina "
+"della barra :guilabel:`di ricerca` in alto."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:99
 msgid ""
@@ -53684,6 +53758,9 @@ msgid ""
 "useful to enable the :guilabel:`Actual Demand` category in "
 "the :guilabel:`Search...` bar."
 msgstr ""
+"Sebbene il Piano Generale di Produzione possa essere utilizzato solo con le "
+"categorie predefinite, potrebbe essere utile abilitare la categoria "
+":guilabel:`Domanda effettiva` nella barra :guilabel:`di ricerca`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:102
 msgid ""
@@ -53692,6 +53769,10 @@ msgid ""
 "Demand` category, displaying both the confirmed demand for the product based "
 "on confirmed |SOs| and the forecasted demand."
 msgstr ""
+"Dopo aver attivato l'opzione :guilabel:`Domanda effettiva`, la categoria "
+":guilabel:`- Domanda prevista` diventa :guilabel:`Domanda effettiva/"
+"prevista` e mostrerà sia la domanda confermata basata sugli ordini di "
+"vendita confermati che la domanda prevista."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:None
 msgid "The Master Production Schedule in the Manufacturing app."
@@ -53699,7 +53780,7 @@ msgstr "Il programma di produzione principale nell'app Produzione."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:110
 msgid "Relationship between rows"
-msgstr ""
+msgstr "Relazione tra righe"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:112
 msgid ""
@@ -53707,6 +53788,10 @@ msgid ""
 "Indirect Demand Forecast` (if applicable), :guilabel:`+ Replenishment`, "
 "and :guilabel:`= Forecasted Stock` values define the following relation:"
 msgstr ""
+"Insieme, le scorte iniziali, la :guilabel:`- Domanda prevista`, la "
+":guilabel:`- Domanda prevista indiretta` (se applicabile), il :guilabel:`+ "
+"Rifornimento`, e le :guilabel:`= Scorte previste` definiscono la seguente "
+"relazione:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:116
 msgid ""
@@ -53717,6 +53802,12 @@ msgid ""
 "&+ \\text{Replenishment}\n"
 "\\end{align}"
 msgstr ""
+"\\begin{align}\n"
+"\\text{Scorte previste} &= \\text{Scorte iniziali} \\\\\n"
+"&- \\text{Domanda prevista} \\\\\n"
+"&- \\text{Domanda prevista indiretta} \\\\\n"
+"&+ \\text{Rifornimento}\n"
+"\\end{align}"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:125
 msgid ""
@@ -53727,6 +53818,12 @@ msgid ""
 "time period is updated with the previous period's :guilabel:`= Forecasted "
 "Stock`."
 msgstr ""
+"Le celle :guilabel:`- Domanda prevista` e :guilabel:`+ Rifornimento` possono "
+"essere modificate manualmente per qualsiasi periodo di tempo. In questo "
+"modo, il valore visualizzato nelle celle :guilabel:`= Scorte previste` viene "
+"aggiornato in base all’equazione. Di conseguenza, la quantità di scorte "
+"iniziale di ciascun periodo successivo viene aggiornata con il valore del "
+"periodo precedente :guilabel:`= Scorte previste`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:131
 msgid ""
@@ -53734,10 +53831,14 @@ msgid ""
 "value and displays an :icon:`fa-times` :guilabel:`(reset)` button next to "
 "the cell to reset it back to the default value calculated by the |MPS|."
 msgstr ""
+"Modificando il valore nella cella :guilabel:`+ Rifornimento`, il valore "
+"viene evidenziato e accanto alla cella viene visualizzato il pulsante "
+":icon:`fa-times` :guilabel:`(ripristina)` per riportarlo al valore "
+"predefinito calcolato dal Piano Generale di Produzione."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:138
 msgid "Adding products to |MPS|"
-msgstr ""
+msgstr "Aggiungere prodotti al Piano"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:140
 msgid ""
@@ -53746,6 +53847,11 @@ msgid ""
 "Schedule`. At the top of the |MPS| page, click :guilabel:`Add a Product` to "
 "open the *Add a Product* pop-up window."
 msgstr ""
+"Per utilizzare il Piano per gestire il rifornimento di un prodotto, apri "
+"l'app :menuselection:`Produzione --> Pianificazione --> Piano Generale di "
+"Produzione`. Nella parte superiore della pagina, fai clic su "
+":guilabel:`Aggiungi prodotto` per aprire la finestra pop-up "
+":guilabel:`Aggiungi prodotto`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:145
 msgid ""
@@ -53759,6 +53865,8 @@ msgid ""
 "For manufactured products, the *Manufacture* route must be selected in the "
 "*Routes* section of the *Inventory* tab on the product's form."
 msgstr ""
+"Per i prodotti realizzati, è necessario selezionare il percorso *Produzione* "
+"nella sezione *Percorsi* della scheda *Magazzino* del prodotto."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:150
 msgid ""
@@ -53767,20 +53875,26 @@ msgid ""
 "a :ref:`vendor pricelist <purchase/manage_deals/vendor-pricelist>` must be "
 "configured on the *Purchase* tab."
 msgstr ""
+"Per i prodotti acquistati, è necessario selezionare il percorso *Acquisto* "
+"nella sezione *Percorsi* della scheda *Magazzino* nel modulo del prodotto. "
+"Inoltre, è necessario configurare un :ref:`listino prezzi fornitore "
+"<purchase/manage_deals/vendor-pricelist>` nella scheda *Acquisti*."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:155
 msgid "Enter product details"
-msgstr ""
+msgstr "Inserire dettagli prodotto"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:157
 msgid ""
 "On the pop-up window, select the product to add in the :guilabel:`Product` "
 "drop-down menu."
 msgstr ""
+"Nella finestra a comparsa, seleziona il prodotto da aggiungere nel menu a "
+"tendina :guilabel:`Prodotto`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:159
 msgid "Then, specify the following information about the product:"
-msgstr ""
+msgstr "In seguito, specifica le seguenti informazioni sul prodotto:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:161
 msgid ""
@@ -53788,18 +53902,26 @@ msgid ""
 "can be hidden when the :guilabel:`To Forecast` filter is selected in "
 "the :guilabel:`Search...` bar drop-down menu."
 msgstr ""
+":guilabel:`Domanda indiretta`: seleziona questa casella facoltativa se il "
+"prodotto può essere nascosto quando è selezionato il filtro :guilabel:`Da "
+"stimare` nel menu a tendina della barra :guilabel:`di ricerca`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:163
 msgid ""
 ":guilabel:`Bill of Materials`: Select the product's |BoM| if the product is "
 "manufactured."
 msgstr ""
+":guilabel:`Distinta base`: seleziona la |DiBa| del prodotto se il prodotto è "
+"in produzione;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:164
 msgid ""
 ":guilabel:`Route`: Select the replenishment route for the product (e.g., "
 "`Buy` for purchased products, `Manufacture` for manufactured products)."
 msgstr ""
+":guilabel:`Percorso`: seleziona il percorso di rifornimento del prodotto (ad "
+"es., `Acquisto` per i prodotti acquistati, `Produzione` per i prodotti "
+"fabbricati);"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:166
 msgid ""
@@ -53807,6 +53929,9 @@ msgid ""
 "appears if the :guilabel:`Buy` option was selected in the :guilabel:`Route` "
 "field."
 msgstr ""
+":guilabel:`Fornitore`: seleziona il fornitore del prodotto. Questo campo "
+"appare **solo** se l’opzione :guilabel:`Acquisto` è stata selezionata nel "
+"campo :guilabel:`Percorso`;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:168
 msgid ""
@@ -53816,6 +53941,12 @@ msgid ""
 "to enter a batch size, or leave it un-toggled if no batch size should be "
 "specified."
 msgstr ""
+":guilabel:`Dimensione lotto`: dividi gli ordini di produzione in ordini di "
+"questa quantità. Il campo appare **solo** se l'opzione "
+":guilabel:`Produzione` è stata selezionata nel campo :guilabel:`Percorso`. "
+"Spunta la casella :guilabel:`Nessuna dimensione lotto` per aggiungere una "
+"dimensione oppure non spuntare la casella se non hai bisogno di specificare "
+"una dimensione per il lotto."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:174
 msgid ""
@@ -53903,23 +54034,28 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:220
 msgid ":guilabel:`Manual`: Manually replenish the product from the |MPS|."
-msgstr ""
+msgstr ":guilabel:`Manuale`: rifornisci manualmente il prodotto dal Piano;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:221
 msgid ""
 ":guilabel:`Automatic`: Automatically schedule a replenishment order for the "
 "product."
 msgstr ""
+":guilabel:`Automatico`: pianifica automaticamente un ordine di rifornimento "
+"per il prodotto;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:222
 msgid ":guilabel:`Never`: Never replenish the product from the |MPS|."
-msgstr ""
+msgstr ":guilabel:`Mai`: non rifornire mai il prodotto dal Piano."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:224
 msgid ""
 "Click :guilabel:`Save` to add the product to the |MPS|. The product now "
 "appears on the |MPS| page, along with any components (if applicable)."
 msgstr ""
+"Fai clic su :guilabel:`Salva` per aggiungere il prodotto al Piano. Il "
+"prodotto ora appare nella pagina corrispondente, insieme a eventuali "
+"componenti (se applicabile)."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:None
 msgid "The Add a Product pop-up window in the MPS."
@@ -53935,22 +54071,30 @@ msgid ""
 "the :icon:`fa-pencil` :guilabel:`(Forecasted)` button next to the product's "
 "header row."
 msgstr ""
+"Per modificare il programma di pianificazione di un prodotto nel Piano, fai "
+"clic sul pulsante :icon:`fa-pencil` :guilabel:`(Previste)` accanto alla riga "
+"di intestazione del prodotto."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:236
 msgid ""
 "In the :guilabel:`Edit Production Schedule` pop-up window, enter the desired "
 "modifications. Then, click :guilabel:`Save` to save the changes."
 msgstr ""
+"Inserisci le modifiche desiderate nella finestra pop-up :guilabel:`Modifica "
+"pianificazione produzione`. Successivamente, fai clic su :guilabel:`Salva` "
+"per salvare le modifiche."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:240
 msgid ""
 "The :guilabel:`Product` and :guilabel:`Bill of Materials` fields cannot be "
 "edited."
 msgstr ""
+"I campi :guilabel:`Prodotto` e :guilabel:`Distinta base` non possono essere "
+"modificati."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:243
 msgid "Remove a product"
-msgstr "Rimuovi un prodotto"
+msgstr "Rimuovere un prodotto"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:245
 msgid ""
@@ -53959,10 +54103,15 @@ msgid ""
 "screen, and select :guilabel:`Delete` from the drop-down menu. On "
 "the :guilabel:`Confirmation` pop-up window, click :guilabel:`Ok`."
 msgstr ""
+"Per rimuovere un prodotto dal Piano, seleziona la casella accanto al suo "
+"nome. In seguito, fai clic sul pulsante :icon:`fa-cog` :guilabel:`Azioni` "
+"nella parte superiore dello schermo e seleziona :guilabel:`Elimina` dal menu "
+"a discesa. Nella finestra pop-up :guilabel:`Conferma`, fai clic su "
+":guilabel:`Ok`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:252
 msgid "Replenishing products with |MPS|"
-msgstr ""
+msgstr "Rifornire i prodotti tramite MPS"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:254
 msgid "Products in the |MPS| can be replenished in one of three ways:"
@@ -53973,12 +54122,16 @@ msgid ""
 "To replenish every product for the current time period, click "
 "the :guilabel:`Order` button at the top."
 msgstr ""
+"per rifornire tutti i prodotti per il periodo di tempo corrente, clicca sul "
+"pulsante :guilabel:`Ordina` in alto;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:258
 msgid ""
 "To replenish a specific product, click the :guilabel:`Order` button next to "
 "the :guilabel:`+ Replenishment` row of the product."
 msgstr ""
+"per rifornire un prodotto specifico, fai clic sul pulsante "
+":guilabel:`Ordina` accanto alla riga :guilabel:`+ Rifornimento` del prodotto;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:260
 msgid ""
@@ -53987,6 +54140,10 @@ msgid ""
 "cog` :guilabel:`Actions` button at the top and select :guilabel:`Order` from "
 "the drop-down menu."
 msgstr ""
+"per selezionare e rifornire più prodotti, seleziona la casella accanto alle "
+"righe di intestazione di uno o più prodotti. In seguito, fai clic sul "
+"pulsante :icon:`fa-cog`:guilabel:`Azioni` in alto e seleziona "
+":guilabel:`Ordina` dal menu a tendina."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:264
 msgid ""
@@ -53994,6 +54151,9 @@ msgid ""
 "selected on the *Add a Product* pop-up window when :ref:`adding a product "
 "<manufacturing/mps/add-product>` to the |MPS|."
 msgstr ""
+"Il tipo di ordine di rifornimento generato è determinato dal percorso "
+"selezionato nella finestra pop-up *Aggiungi prodotto* quando :ref:`si "
+"aggiunge un prodotto <manufacturing/mps/add-product>` al Piano."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:267
 msgid ""
