@@ -97,8 +97,8 @@ date on which this draft bill should be billed.
 
 Click :guilabel:`Add a line`. Add the landed cost product to the vendor bill.
 
-Click the :icon:`fa-cloud-upload` :guilabel:`(Save)` icon to manually save and update the
-draft bill.
+Click the :icon:`fa-cloud-upload` :guilabel:`(Save)` icon to manually save and update the draft
+bill.
 
 .. image:: landed_costs/integrating-landed-costs-checkboxes.png
    :alt: Landed Costs column checkboxes for product and landed cost.
