@@ -127,7 +127,7 @@ To sell products in the :ref:`POS register <pos/use/open-register>`, follow thes
 Once payment is successful, the :doc:`receipt <use/receipts>` can be printed or sent to the
 customer.
 
-To move on to the next order, click :guilabel:`New Order` on the receipt screen.
+To move on to the next order, click :guilabel:`New Order` on the payment confirmation screen.
 
 .. seealso::
    :doc:`Issue invoices for registered customers <use/pos_invoices>`
