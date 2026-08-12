@@ -43,6 +43,8 @@ grouping set by the *Group By* parameters.
    :align: center
    :alt: Click the button with four horizontal lines on the top right of the Leads Analysis page.
 
+.. _crm/marketing_attribution/add-utm-parameters:
+
 Add UTM parameters
 ==================
 
