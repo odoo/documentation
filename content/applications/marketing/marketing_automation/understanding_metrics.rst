@@ -103,6 +103,8 @@ how many records in the database match the specific criteria.
    .. image:: understanding_metrics/filter-contacts.png
       :alt: A list of contacts that result from the active filter.
 
+.. _marketing_automation/understanding_metrics/link-statistics:
+
 Link statistics
 ===============
 
