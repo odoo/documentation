@@ -16,7 +16,7 @@ Configure the settings
 ======================
 
 To begin using discount and loyalty programs, navigate to :menuselection:`Sales --> Configuration
---> Settings`. Under the :guilabel:`Pricing` heading, activate the :guilabel:`Discounts, Loyalty &
+--> Settings`. Under the :guilabel:`Pricing` heading, activate the :guilabel:`Promotions, Loyalty &
 Gift Card` setting by checking the box next to the feature. Finally, click :guilabel:`Save` to save
 the changes.
 
