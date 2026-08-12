@@ -2,6 +2,11 @@
 Discount and loyalty programs
 =============================
 
+.. meta::
+   :description: This page explains how to configure discount and loyalty programs in the
+                 Sales, eCommerce, and Point of Sale apps, including program types, conditional
+                 rules, and rewards.
+
 The Odoo **Sales**, **eCommerce**, and **Point of Sale** applications allow users to create discount
 and loyalty programs that customers can use for online and in-store shopping. These programs offer
 more varied, public, and time-sensitive pricing options than :doc:`pricelists
@@ -11,7 +16,7 @@ Configure the settings
 ======================
 
 To begin using discount and loyalty programs, navigate to :menuselection:`Sales --> Configuration
---> Settings`. Under the :guilabel:`Pricing` heading, activate the :guilabel:`Discounts, Loyalty &
+--> Settings`. Under the :guilabel:`Pricing` heading, activate the :guilabel:`Promotions, Loyalty &
 Gift Card` setting by checking the box next to the feature. Finally, click :guilabel:`Save` to save
 the changes.
 
