@@ -55,6 +55,8 @@ following metrics:
 
 .. _marketing_automation/understanding_metrics/link-stats:
 
+.. _marketing_automation/understanding_metrics/link-statistics:
+
 Link statistics
 ===============
 
