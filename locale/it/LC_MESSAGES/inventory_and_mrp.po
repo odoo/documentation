@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-07 17:32+0000\n"
-"PO-Revision-Date: 2026-08-11 14:09+0000\n"
+"PO-Revision-Date: 2026-08-12 08:09+0000\n"
 "Last-Translator: \"Marianna Ciofani (cima)\" <cima@odoo.com>\n"
 "Language-Team: Italian <https://translate.odoo.com/projects/odoo-18-doc/"
 "inventory_and_mrp/it/>\n"
@@ -53955,6 +53955,10 @@ msgid ""
 "components through the |MPS|, leave the :guilabel:`Bill of Materials` field "
 "blank."
 msgstr ""
+"La selezione di una distinta base (DiBa) durante l’aggiunta di un prodotto "
+"aggiunge anche tutti i componenti elencati nella DiBa al Piano. Se non è "
+"necessario gestire il rifornimento dei componenti tramite il Piano, lascia "
+"vuoto il campo :guilabel:`Distinta base`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:178
 msgid ""
@@ -53963,10 +53967,13 @@ msgid ""
 "Product` pop-up window to specify which warehouse the product is replenished "
 "to."
 msgstr ""
+"Se il database è configurato con più magazzini, nella finestra pop-up "
+":guilabel:`Aggiungi un prodotto` compare il campo :guilabel:`Magazzino di "
+"produzione` per specificare in quale magazzino va rifornito il prodotto."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:183
 msgid "Enter product replenishment options"
-msgstr ""
+msgstr "Inserire opzioni di rifornimento prodotti"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:185
 msgid ""
@@ -53974,18 +53981,25 @@ msgid ""
 "calculates suggested replenishment quantities for each product. Enter the "
 "following information:"
 msgstr ""
+"Successivamente, specifica le opzioni di rifornimento del prodotto per "
+"configurare il modo in cui il Piano calcola le quantità di rifornimento "
+"suggerite per ciascun prodotto. Inserisci le seguenti informazioni:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:188
 msgid ""
 ":guilabel:`Safety Stock Target`: Specify the minimum quantity of the product "
 "to be available across all time periods."
 msgstr ""
+":guilabel:`Obiettivo per giacenza di sicurezza`: specifica la quantità "
+"minima del prodotto che deve essere disponibile in tutti i periodi di tempo;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:190
 msgid ""
 ":guilabel:`Minimum to Replenish`: Specify the minimum quantity of the "
 "product to replenish for each period."
 msgstr ""
+":guilabel:`Minimo da rifornire`: specifica la quantità minima del prodotto "
+"da rifornire per ciascun periodo;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:192
 msgid ""
@@ -53995,6 +54009,12 @@ msgid ""
 "period. Toggle the :guilabel:`No Maximum` checkbox to enter a maximum value, "
 "or leave it un-toggled if no maximum should be specified."
 msgstr ""
+":guilabel:`Massimo da rifornire`: specifica la quantità massima del prodotto "
+"da rifornire per ciascun periodo. Se la domanda è superiore a tale massimo, "
+"la quantità rimanente viene automaticamente trasferita al periodo "
+"successivo. Seleziona la casella :guilabel:`No massimo` per inserire un "
+"valore massimo oppure non selezionarla se non desideri specificare alcun "
+"massimo."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:197
 msgid ""
@@ -54004,6 +54024,11 @@ msgid ""
 "other words, the suggested quantity in the replenishment row is calculated "
 "by the following relation:"
 msgstr ""
+"Se non sono stati impostati limiti minimi o massimi di rifornimento, il "
+"Piano suggerisce la quantità di rifornimento necessaria per raggiungere "
+":guilabel:`l'obiettivo di scorta di sicurezza` tenendo conto delle scorte "
+"iniziali e della domanda prevista. In altre parole, la quantità suggerita "
+"nella riga di rifornimento viene calcolata in base alla seguente relazione:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:202
 msgid ""
@@ -54014,6 +54039,12 @@ msgid ""
 "&- \\text{Indirect Demand Forecast}\n"
 "\\end{align}"
 msgstr ""
+"\\begin{align}\n"
+"\\text{Rifornimento} &= \\text{Obiettivo giacenza di sicurezza} \\\\\n"
+"&- \\text{Scorte iniziali} \\\\\n"
+"&- \\text{Domanda prevista} \\\\\n"
+"&- \\text{Domanda prevista indiretta}\n"
+"\\end{align}"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:211
 msgid ""
@@ -54021,16 +54052,22 @@ msgid ""
 "is always bounded by these limits, regardless of the needed quantity to "
 "reach the :guilabel:`Safety Stock Target`."
 msgstr ""
+"Se sono stati impostati limiti minimi o massimi, la quantità di rifornimento "
+"suggerita è sempre compresa entro tali limiti, indipendentemente dalla "
+"quantità necessaria per raggiungere :guilabel:`l’obiettivo di scorta di "
+"sicurezza` ."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:215
 msgid "Specify replenishment trigger"
-msgstr ""
+msgstr "Specificare il trigger di rifornimento"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:217
 msgid ""
 "Finally, in the :guilabel:`Replenishment Trigger` field, specify how the "
 "product should be replenished:"
 msgstr ""
+"Infine, nel campo :guilabel:`Attivazione rifornimento`, specifica come il "
+"prodotto deve essere rifornito:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:220
 msgid ":guilabel:`Manual`: Manually replenish the product from the |MPS|."
@@ -54161,6 +54198,10 @@ msgid ""
 "product. Generated |RfQs| can be located by navigating "
 "to :menuselection:`Purchase app --> Orders --> Requests for Quotation`."
 msgstr ""
+"Se selezioni il percorso *Acquisto*, una richiesta di preventivo verrà "
+"generata per acquistare il prodotto. È possibile accedere alle richieste di "
+"preventivo generate seguendo il percorso :menuselection:`app Acquisti --> "
+"Ordini --> Richieste di preventivo`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:270
 msgid ""
@@ -54169,10 +54210,14 @@ msgid ""
 "to :menuselection:`Manufacturing app --> Operations --> Manufacturing "
 "Orders`."
 msgstr ""
+"Se scegli il percorso *Produzione*, viene creato un ordine di produzione per "
+"realizzare il prodotto. È possibile accedere agli ordini di produzione "
+"generati seguendo il percorso :menuselection:`app Magazzino --> "
+"Operazioni --> Ordini di produzione`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:277
 msgid "Replenishment status indicators"
-msgstr ""
+msgstr "Indicatori stato rifornimento"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:279
 msgid ""
@@ -54180,32 +54225,43 @@ msgid ""
 "following highlights, depending on whether the replenished quantities match "
 "the suggested quantities:"
 msgstr ""
+"Le celle :guilabel:`+ Rifornimento` vengono evidenziate nel Piano come "
+"segue, a seconda che le quantità rifornite corrispondano o meno a quelle "
+"suggerite:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:282
 msgid ":guilabel:`Green`: The quantity is ready to be replenished."
-msgstr ""
+msgstr ":guilabel:`verde`: la quantità è pronta per essere rifornita;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:283
 msgid ""
 ":guilabel:`Gray`: A replenishment order has already been generated, and its "
 "ordered quantity matches the suggested quantity for the time period."
 msgstr ""
+":guilabel:`grigio`: è già stato generato un ordine di rifornimento e la "
+"quantità ordinata corrisponde a quella suggerita per il periodo di tempo "
+"indicato;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:285
 msgid ""
 ":guilabel:`Yellow`: A replenishment order has already been generated, but "
 "its ordered quantity is below the suggested quantity for the time period."
 msgstr ""
+":guilabel:`giallo`: è già stato generato un ordine di rifornimento ma la "
+"quantità ordinata è inferiore a quella suggerita per il periodo di tempo in "
+"questione;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:287
 msgid ""
 ":guilabel:`Red`: A replenishment order has already been generated, but its "
 "ordered quantity exceeds the suggested quantity for the time period."
 msgstr ""
+":guilabel:`rosso`: è già stato generato un ordine di rifornimento ma la "
+"quantità ordinata supera quella suggerita per il periodo di tempo indicato."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:293
 msgid "Additional rows and filters"
-msgstr ""
+msgstr "Righe e filtri aggiuntivi"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:295
 msgid ""
@@ -54213,16 +54269,22 @@ msgid ""
 "customize the |MPS| by configuring additional rows for products or by "
 "filtering existing records based on specific criteria."
 msgstr ""
+"Grazie al menu a tendina della barra :guilabel:`di ricerca`, gli utenti "
+"possono personalizzare ulteriormente il Piano tramite la configurazione di "
+"righe aggiuntive per prodotti oppure filtrando i record esistenti in base a "
+"criteri specifici."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:300
 msgid "Rows"
-msgstr ""
+msgstr "Righe"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:302
 msgid ""
 "The following rows can be added to the |MPS| in addition to the default rows "
 "shown on the :ref:`dashboard <manufacturing/mps/dashboard>`."
 msgstr ""
+"È possibile aggiungere al Piano le seguenti righe, oltre alle righe "
+"predefinite mostrate nella :ref:`dashboard <manufacturing/mps/dashboard>`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:305
 msgid ""
@@ -54230,18 +54292,25 @@ msgid ""
 "to :guilabel:`- Actual / Forecasted Demand`, comparing the product's "
 "confirmed demand and its forecasted demand."
 msgstr ""
+":guilabel:`Domanda effettiva`: modifica la riga :guilabel:`- Domanda "
+"prevista` in :guilabel:`Domanda attuale/prevista` così da confrontare la "
+"domanda confermata del prodotto e le quantità previste;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:307
 msgid ""
 ":guilabel:`Actual Demand Y-1`: Displays the :guilabel:`Actual Demand` one "
 "year before the current time period."
 msgstr ""
+":guilabel:`Domanda attuale Y-1`: mostra la :guilabel:`Domanda effettiva` "
+"relativa a un anno prima del periodo di tempo corrente;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:309
 msgid ""
 ":guilabel:`Actual Demand Y-2`: Displays the :guilabel:`Actual Demand` two "
 "years before the current time period."
 msgstr ""
+":guilabel:`Domanda attuale Y-2`: mostra la :guilabel:`Domanda attuale` due "
+"anni prima del periodo attuale;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:311
 msgid ""
@@ -54249,6 +54318,9 @@ msgid ""
 "row to :guilabel:`+ Actual / Replenishment`, comparing the product's "
 "replenished quantity and its suggested quantity."
 msgstr ""
+":guilabel:`Rifornimento effettivo`: modifica la riga :guilabel:`+ "
+"Rifornimento` in :guilabel:`+ Attuale/Rifornimento` confrontando la quantità "
+"rifornita del prodotto con quella suggerita;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:313
 msgid ""
@@ -54257,17 +54329,24 @@ msgid ""
 "available stock (``Starting Stock - Actual Demand + Replenishment``) and its "
 "forecasted stock."
 msgstr ""
+":guilabel:`Disponibilità alla promessa (ATP)`: modifica la riga :guilabel:`= "
+"Scorte previste` in :guilabel:`=ATP/Scorte previste` confrontando le scorte "
+"disponibili del prodotto (``Scorte iniziali - Domanda attuale + "
+"Rifornimento``) e le sue scorte previste."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:320
 msgid ""
 "Users can filter records from the |MPS| based on the following criteria:"
 msgstr ""
+"Gli utenti possono filtrare i record dal Piano in base ai seguenti criteri:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:322
 msgid ""
 ":guilabel:`To Forecast`: Filter by products that are manually or "
 "automatically replenished."
 msgstr ""
+":guilabel:`Da stimare` filtra in base ai prodotti riforniti manualmente o "
+"automaticamente;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:323
 msgid ""
@@ -54275,12 +54354,17 @@ msgid ""
 "replenished (i.e., with at least one :guilabel:`+ Replenishment` cell "
 "highlighted in green)."
 msgstr ""
+":guilabel:`Da rifornire`: filtra in base ai prodotti pronti per essere "
+"riforniti (ovvero, con almeno una cella :guilabel:`+ Rifornimento` "
+"evidenziata in verde);"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:325
 msgid ""
 ":guilabel:`Indirect Demand`: Filter by products configured with the "
 "*Indirect Demand* option."
 msgstr ""
+":guilabel:`Domanda indiretta`: filtra in base ai prodotti configurati con "
+"l'opzione *Domanda indiretta*;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:326
 msgid ""
@@ -54288,6 +54372,9 @@ msgid ""
 "quantity below the suggested replenishment quantity (i.e., with at least "
 "one :guilabel:`+ Replenishment` cell highlighted in yellow)."
 msgstr ""
+":guilabel:`Rifornimento troppo basso`: filtra i prodotti con una quantità "
+"rifornita inferiore alla quantità di rifornimento suggerita (ovvero con "
+"almeno una cella :guilabel:`+ Rifornimento` evidenziata in giallo);"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:329
 msgid ""
@@ -54295,24 +54382,33 @@ msgid ""
 "quantity above the suggested replenishment quantity (i.e., with at least "
 "one :guilabel:`+ Replenishment` cell highlighted in red)."
 msgstr ""
+":guilabel:`Rifornimento troppo alto`: filtra i prodotti con una quantità di "
+"rifornimento superiore a quella suggerita (ovvero con almeno una cella "
+":guilabel:`+ Rifornimento` evidenziata in rosso);"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:332
 msgid ""
 ":guilabel:`Manually Replenished`: Filter by products with the *Replenishment "
 "Trigger* set to *Manual*."
 msgstr ""
+":guilabel:`Rifornito manualmente`: filtra i prodotti con il *trigger di "
+"rifornimento* impostato su *manuale*;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:334
 msgid ""
 ":guilabel:`Automatically Replenished`: Filter by products with the "
 "*Replenishment Trigger* set to *Automatic*."
 msgstr ""
+":guilabel:`Rifornito automaticamente`: filtra i prodotti con il *Trigger "
+"rifornimento* impostato su *automatico*;"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:336
 msgid ""
 ":guilabel:`Not Replenished from MPS`: Filter by products with the "
 "*Replenishment Trigger* set to *Never*."
 msgstr ""
+":guilabel:`Non rifornito da MPS`: filtra i prodotti con il *Trigger di "
+"rifornimento* impostato su *mai*."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:3
 msgid "Work center time off"
