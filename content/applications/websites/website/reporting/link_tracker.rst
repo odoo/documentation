@@ -1,53 +1,114 @@
-============
-Link tracker
-============
+=============
+Link tracking
+=============
 
-The link tracker is used to create tracked links to measure the effectiveness of marketing
-campaigns, making it easier to identify which channels drive the most traffic and make more
-informed decisions.
+**Odoo Link Tracker** allows you to create shortened, trackable URLs to measure the effectiveness of
+:ref:`marketing campaigns <marketing_automation/marketing_automation/campaigns>` or monitor
+individual day-to-day interactions such as sending personal offers. By adding tracking parameters to
+URLs, you can easily identify exactly which channels, platforms, or specific emails drive traffic to
+the website and make more data-driven decisions.
 
-To create and manage tracked links, :ref:`install <general/install>` the :guilabel:`Link Tracker`
-(`website links`) module.
+.. note::
+   To create and manage tracked links, the :guilabel:`Link Tracker` (`website_links`) module must be
+   :ref:`installed <general/install>`. The module is then visible on the main Odoo dashboard when
+   :ref:`developer mode <developer-mode>` is activated.
 
 .. _website/link_tracker/create-urls:
 
-Create traceable URLs
+Create trackable URLs
 =====================
 
-To create and manage tracked links, navigate to :menuselection:`Website --> Site --> Link Tracker`.
-Fill in the following information and click :guilabel:`Generate tracked link` to create a tracking
-URL.
+To create and manage tracked links, navigate to the page you want to track. Then, go to
+:menuselection:`Website --> Site --> Link Tracker`. Under :guilabel:`Create a Link tracker`, fill in
+the following information:
 
-#. :guilabel:`URL`: The URL that is the target of the campaign. It is automatically populated with
-   the URL used to access the menu.
-#. :guilabel:`Campaign`: The specific campaign the link should be associated with. This parameter is
-   used to distinguish the different campaigns.
-#. :guilabel:`Medium`: The medium describes the category or method through which the visitor arrives
-   at your site, such as organic search, paid search, social media ad, email, etc.
-#. :guilabel:`Source`: The source identifies the specific platform or website that referred the
-   visitor, such as a search engine, newsletter, or website.
+#. :guilabel:`Target Link`: The destination URL the website visitor is sent to after clicking a
+   tracked link. This field is automatically populated with the URL of the page from which the
+   :guilabel:`Link Tracker` menu item was accessed.
+#. :guilabel:`Campaign`: The specific campaign the link should be associated with.
+#. :guilabel:`Medium`: The channel or method through which visitors reach the target link, such as
+   organic search, paid search, social media ads, or email.
+#. :guilabel:`Source`: The specific platform, website, or channel that directs visitors to your
+   website, such as a search engine, newsletter, or referral website.
+#. :guilabel:`Name`: A descriptive name for the tracked link, making it easier to identify and
+   manage.
 
-.. image:: link_tracker/create-link-trackers.png
-   :alt: Create a link tracker URL
+.. note::
+   The parameters :guilabel:`Campaign`, :guilabel:`Medium`, and :guilabel:`Source` are optional.
 
 .. tip::
-   The :guilabel:`Campaign`, :guilabel:`Medium`, and :guilabel:`Source` are :abbr:`UTM (Urchin
-   Tracking Module)` parameters incorporated in the tracked URL. These can be used, for example,
-   to customize the :ref:`visibility <website/visibility/conditions>` of website building blocks.
+   - You can create new campaigns, mediums, and sources in two ways:
+
+     - **On the link tracker creation page**: Enter the desired name and click :guilabel:`Create
+       option`.
+     - **From the backend**: Activate :ref:`developer mode <developer-mode>`, navigate to the Link
+       Tracker module, go to :menuselection:`UTMS`, select the relevant menu item, and click
+       :guilabel:`New`. You can also edit existing parameters. In addition, you can assign a
+       :guilabel:`Responsible` person and add :guilabel:`Tags` for :guilabel:`Campaigns`.
+
+   - The :guilabel:`Campaign`, :guilabel:`Medium`, and :guilabel:`Source` are :abbr:`UTM (Urchin
+     Tracking Module)` :ref:`parameters <crm/marketing_attribution/add-utm-parameters>` embedded in
+     the tracked URL. Beyond analytics, Odoo allows you to use these parameters to customize the
+     :ref:`visibility <website/visibility/conditions>` of website building blocks.
+
+Once completed, click :guilabel:`Generate Link Tracker` to create a shortened tracking URL. Then,
+click the :icon:`fa-files-o` :guilabel:`Copy` button to copy the URL and use it in the relevant
+campaign.
+
+.. example::
+   To measure the performance of a link directing visitors to a new blog post from the monthly
+   newsletter, generate a tracked link directly from the blog post page as follows:
+
+   - Create the :guilabel:`Campaign` and name it `Boost traffic` to identify the campaign's primary
+     objective.
+   - Set the :guilabel:`Source` to `Newsletter October` to identify the newsletter as the traffic
+     source.
+   - As the newsletter is distributed by email, set the :guilabel:`Medium` to `Email`.
+   - The :guilabel:`Name` is `Blog Post - October Newsletter Blast` to easily identify the tracked
+     link in a larger campaign.
+
+   Generate the tracked link and include it in the newsletter to monitor its performance.
+
+   .. image:: link_tracker/link-tracker-example.png
+      :alt: Example of a link tracker.
+      :scale: 75%
+
+.. _website/link_tracker/tracked-links-overview:
 
 Tracked links overview
 ======================
 
-To get an overview of your tracked links, go to :menuselection:`Website --> Site --> Link Tracker`
-and scroll down to :guilabel:`Your tracked links` section.
+To view all tracked links, navigate to :menuselection:`Website --> Site --> Link Tracker` and scroll
+down to the :guilabel:`Your tracked links` section.
 
-.. image:: link_tracker/your-tracked-link.png
-   :alt: Get an overview of all the links you track.
+This dashboard provides a quick overview of the tracked links, including their total number of
+:guilabel:`clicks` and the associated campaign, medium, and source parameters.
+
+Additionally, you can perform the following actions:
+
+- :guilabel:`Copy` the link to share it with your audience.
+- Click :guilabel:`Visit Link` :icon:`fa-external-link` to open the destination page associated with
+  the tracked URL.
+
+.. image:: link_tracker/tracked-links-overview.png
+   :alt: Example of the tracked links overview.
+
+.. _website/link_tracker/statistics:
 
 Statistics
 ----------
 
-To measure the performance of tracked links, click the track link and scroll down to the
-:guilabel:`Statistics` section to get an overview of the number of clicks for the tracked link.
-By default, the graph shows the total number of clicks. You can change the period to
-:guilabel:`Last Month` or :guilabel:`Last Week` using the options on the right side of the heading.
+To analyze the performance of a tracked link, click the name of the tracked link and scroll down to
+the :guilabel:`Statistics` section. The following charts become available once the tracked link has
+been clicked at least once:
+
+- A line chart showing the number of clicks over time.
+- A pie chart showing the countries from which visitors clicked the tracked link.
+
+Use the options at the top right of the :guilabel:`Statistics` section to display data for the
+:guilabel:`Last Month`, the :guilabel:`Last Week`, or :guilabel:`All Time`.
+
+.. seealso::
+   - :ref:`Link tracker for Marketing Automation
+     <marketing_automation/understanding_metrics/link-statistics>`
+   - :doc:`Analyze visitors' behavior <analytics>`
