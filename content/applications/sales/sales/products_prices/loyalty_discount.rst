@@ -2,6 +2,11 @@
 Discount and loyalty programs
 =============================
 
+.. meta::
+   :description: This page explains how to configure discount and loyalty programs in the
+                 Sales, eCommerce, and Point of Sale apps, including program types, conditional
+                 rules, and rewards.
+
 The Odoo *Sales*, *eCommerce*, and *Point of Sale* applications allow users to create discount and
 loyalty programs that customers can use for online and in-store shopping. These programs offer more
 varied, public, and time-sensitive pricing options than :doc:`pricelists
@@ -11,7 +16,7 @@ Configure the settings
 ======================
 
 To begin using discount and loyalty programs, navigate to :menuselection:`Sales --> Configuration
---> Settings`. Under the :guilabel:`Pricing` heading, activate the :guilabel:`Discounts, Loyalty &
+--> Settings`. Under the :guilabel:`Pricing` heading, activate the :guilabel:`Promotions, Loyalty &
 Gift Card` setting by checking the box next to the feature. Finally, click :guilabel:`Save` to save
 the changes.
 
@@ -30,7 +35,6 @@ a new program from scratch.
 Or, if there are already existing programs, select an existing program to edit it.
 
 .. image:: loyalty_discount/price-discount-loyalty.png
-   :align: center
    :alt: Discount and loyalty program template cards.
 
 .. note::
@@ -40,7 +44,6 @@ Or, if there are already existing programs, select an existing program to edit i
 Creating or editing a program opens the program form.
 
 .. image:: loyalty_discount/price-programs.png
-   :align: center
    :alt: Program options on the loyalty program form.
 
 The program form contains the following fields:
@@ -81,7 +84,6 @@ All of the existing cards, codes, coupons, etc. that have been generated for the
 accessible through the smart button located at the top of the form.
 
 .. image:: loyalty_discount/price-programs-items.png
-   :align: center
    :alt: Program items smart button on the loyalty program form.
 
 .. note::
@@ -89,7 +91,6 @@ accessible through the smart button located at the top of the form.
    database, a :guilabel:`Loyalty Cards` smart button conditionally appears on the contact form.
 
    .. image:: loyalty_discount/loyalty-cards-smart-button.png
-      :align: center
       :alt: The Loyalty Card smart button as it appears on a contact form in Odoo 17.
 
    This smart button **only** appears if a loyalty card or coupon is associated with the contact.
@@ -125,7 +126,6 @@ to add *conditions* to the program. This reveals a :guilabel:`Create Conditional
 window.
 
 .. image:: loyalty_discount/price-conditional-rewards.png
-   :align: center
    :alt: Rules & Rewards tab of the loyalty program form.
 
 .. note::
@@ -154,7 +154,6 @@ The following options are available for configuring conditional rules:
   and :guilabel:`Buy X Get Y` programs).
 
 .. image:: loyalty_discount/price-conditions.png
-   :align: center
    :alt: Conditional rules configuration window for a discount or loyalty program.
 
 Click :guilabel:`Save & Close` to save the rule and close the pop-up window, or click
@@ -205,5 +204,4 @@ The following options are available for configuring rewards:
   customer upon checkout.
 
 .. image:: loyalty_discount/price-rewards.png
-   :align: center
    :alt: Rewards configuration window for a discount or loyalty program.
