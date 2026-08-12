@@ -4,6 +4,17 @@
 Changelog
 =========
 
+Odoo version 20.0
+=================
+
+- Adding ``BinaryValue.filename`` and updating the RPC format for binary fields.
+  See `#266082 <https://github.com/odoo/odoo/pull/266082>`_.
+- Removing ``Model._table_query`` in
+  `#281202 <https://github.com/odoo/odoo/pull/281202>`_.
+- Simplifying translation manipulation.
+  See `#272177 <https://github.com/odoo/odoo/pull/272177>`_.
+- New ``populate`` script to generate fake data for testing.
+
 Odoo Online version 19.4
 ========================
 
