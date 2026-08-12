@@ -2,20 +2,25 @@
 Discount and loyalty programs
 =============================
 
-The Odoo **Sales**, **eCommerce**, and **Point of Sale** applications allow users to create discount
-and loyalty programs that customers can use for online and in-store shopping. These programs offer
-more varied, public, and time-sensitive pricing options than :doc:`pricelists
+.. meta::
+   :description: Configure discount and loyalty programs in Odoo Sales, Subscriptions, eCommerce,
+                 and Point of Sale, including program types, conditional rules, and rewards, to
+                 offer customers varied and time-sensitive pricing beyond standard pricelists.
+
+The Odoo **Sales**, **Subscriptions**, **eCommerce**, and **Point of Sale** applications allow users
+to create discount and loyalty programs that customers can use for online and in-store shopping.
+These programs offer more varied, public, and time-sensitive pricing options than :doc:`pricelists
 </applications/sales/sales/products_prices/prices/pricing>`.
 
 Configure the settings
 ======================
 
 To begin using discount and loyalty programs, navigate to :menuselection:`Sales --> Configuration
---> Settings`. Under the :guilabel:`Pricing` heading, activate the :guilabel:`Discounts, Loyalty &
+--> Settings`. Under the :guilabel:`Pricing` heading, activate the :guilabel:`Promotions, Loyalty &
 Gift Card` setting by checking the box next to the feature. Finally, click :guilabel:`Save` to save
 the changes.
 
-.. _sales/products/loyalty-programs:
+.. _sales/loyalty_discount/configure-programs:
 
 Configure discount and loyalty programs
 =======================================
@@ -116,9 +121,8 @@ Conditional rules
 Next, configure the :guilabel:`Conditional rules` that determine when the program applies to a
 customer's order.
 
-In the :guilabel:`Rules & Rewards` tab, click :guilabel:`Add` next to :guilabel:`Conditional rules`
-to add *conditions* to the program. This reveals a :guilabel:`Create Conditional rules` pop-up
-window.
+In the *Rules & Rewards* tab, click :guilabel:`Add` next to :guilabel:`Conditional rules` to add
+*conditions* to the program. This reveals a *Create Conditional rules* pop-up window.
 
 .. image:: loyalty_discount/price-conditional-rewards.png
    :alt: Rules & Rewards tab of the loyalty program form.
@@ -157,9 +161,8 @@ Click :guilabel:`Save & Close` to save the rule and close the pop-up window, or 
 Rewards
 -------
 
-In the :guilabel:`Rules & Rewards` tab of the program form, click :guilabel:`Add` next to
-:guilabel:`Rewards` to add *rewards* to the program. This reveals a :guilabel:`Create Rewards`
-pop-up window.
+In the *Rules & Rewards* tab of the program form, click :guilabel:`Add` next to :guilabel:`Rewards`
+to add *rewards* to the program. This reveals a :guilabel:`Create Rewards` pop-up window.
 
 .. note::
    The options for :guilabel:`Rewards` vary depending on the selected :ref:`Program Type
