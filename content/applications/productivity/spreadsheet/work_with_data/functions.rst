@@ -469,11 +469,11 @@ Lookup
    * - OFFSET(reference, rows, cols, [height], [width])
      - `Excel OFFSET article <https://support.microsoft.com/office/offset-function-c8de19ae-dd79-4b9b-a14e-b4d906d11b66>`_
    * - PIVOT(pivot_id, [row_count], [include_total], [include_column_titles], [column_count])
-     - Creates a pivot table (not compatible with Excel)
+     - Re-inserts a dynamic Odoo pivot table (not compatible with Excel)
    * - PIVOT.HEADER(pivot_id, [domain_field_name, ...], [domain_value, ...])
-     - Returns the header of a pivot table (not compatible with Excel)
+     - Returns a header from an inserted pivot table (not compatible with Excel)
    * - PIVOT.VALUE(pivot_id, measure_name, [domain_field_name, ...], [domain_value, ...])
-     - Returns the value from a pivot table (not compatible with Excel)
+     - Returns a value from an inserted pivot table (not compatible with Excel)
    * - ROW([cell_reference])
      - `Excel ROW article <https://support.microsoft.com/office/row-function-3a63b74a-c4d0-4093-b49a-e76eb49a6d8d>`_
    * - ROWS(range)
@@ -965,11 +965,11 @@ Lookup
    * - Name and arguments
      - Description or link
    * - PIVOT(pivot_id, [row_count], [include_total], [include_column_titles], [column_count])
-     - Creates a pivot table (not compatible with Excel)
+     - Re-inserts a dynamic Odoo pivot table (not compatible with Excel)
    * - PIVOT.HEADER(pivot_id, [domain_field_name, ...], [domain_value, ...])
-     - Returns the header of a pivot table (not compatible with Excel)
+     - Returns a header from an inserted pivot table (not compatible with Excel)
    * - PIVOT.VALUE(pivot_id, measure_name, [domain_field_name, ...], [domain_value, ...])
-     - Returns the value from a pivot table (not compatible with Excel)
+     - Returns a value from an inserted pivot table (not compatible with Excel)
 
 Math
 ----
@@ -997,10 +997,12 @@ Misc
      - Description or link
    * - FORMAT.LARGE.NUMBER(value, [unit])
      - Applies a large number format (not compatible with Excel)
-   * - ODOO.LIST(list_id, index, field_name)
-     - Returns the value from a list (not compatible with Excel)
+   * - ODOO.LIST(list_id, [row count])
+     - Re-inserts a dynamic Odoo list (not compatible with Excel)
    * - ODOO.LIST.HEADER(list_id, field_name)
-     - Returns the header of a list (not compatible with Excel)
+     - Returns a header from an inserted Odoo list (not compatible with Excel)
+   * - ODOO.LIST.VALUE(list_id, index, field_name)
+     - Returns a value from an inserted Odoo list (not compatible with Excel)
 
 Operators
 ---------
