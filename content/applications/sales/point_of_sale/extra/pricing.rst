@@ -55,7 +55,7 @@ settings <pos/use/settings>`, scroll down to the :guilabel:`Pricing` section, an
 
 Once the feature has been activated, go to :menuselection:`Point of Sale --> Products -->
 Discount & Loyalty` and :ref:`configure the desired discount and loyalty programs
-<sales/products/loyalty-programs>`. These programs are triggered when an order meets the defined
+<sales/loyalty_discount/configure-programs>`. These programs are triggered when an order meets the defined
 requirements. Depending on the :ref:`program type <sales/pricing_management/program-types>`, rewards
 are either applied automatically or manually by the cashier.
 
