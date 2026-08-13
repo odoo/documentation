@@ -66,7 +66,7 @@ def setup(app):
             return None
 
         # FIXME: make finding project root project-independent
-        if module.startswith('odoo.upgrade.util'):
+        if module.startswith(('odoo.upgrade.util', 'odoo.upgrade.testing')):
             from odoo.upgrade import util
             project = 'upgrade-util'
             project_root = os.path.join(os.path.dirname(util.__file__), '../..')
