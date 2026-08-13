@@ -236,7 +236,7 @@ To enable :doc:`discount programs </applications/sales/sales/products_prices/loy
 your e-commerce, go to :menuselection:`Website --> Configuration --> Settings`, scroll down to the
 :guilabel:`eCommerce` section, and enable the :guilabel:`Discounts, Loyalty & Gift Card` feature.
 
-:ref:`Configure <sales/products/loyalty-programs>` the discount program, make sure the
+:ref:`Configure <sales/loyalty_discount/configure-programs>` the discount program, make sure the
 :guilabel:`Website` option is enabled, and add the relevant :ref:`Pricelist
 <ecommerce/prices/pricelists>` and :guilabel:`Website` on the program form, if needed.
 
