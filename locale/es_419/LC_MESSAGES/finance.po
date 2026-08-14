@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-07 17:32+0000\n"
-"PO-Revision-Date: 2026-08-13 22:09+0000\n"
+"PO-Revision-Date: 2026-08-14 19:08+0000\n"
 "Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-17-doc/finance/es_419/>\n"
@@ -11312,6 +11312,11 @@ msgid ""
 "for generating bank payment files such as :doc:`SEPA <payments/"
 "sepa_payments>` or :ref:`NACHA <l10n_us/nacha>`."
 msgstr ""
+"Los pagos por lotes permiten agrupar pagos de múltiples clientes para "
+"facilitar la :doc:`conciliación <bank/reconciliation>`. También son útiles "
+"al depositar :doc:`cheques <payments/checks>` o pagos en efectivo en el "
+"banco o para generar archivos de pago bancarios como :doc:`SEPA <payments/"
+"sepa_payments>` o :ref:`NACHA <l10n_us/nacha>`."
 
 #: ../../content/applications/finance/accounting/payments.rst:161
 msgid ":doc:`payments/batch`"
@@ -11411,6 +11416,20 @@ msgid ""
 "consult your country's :doc:`fiscal localization <../../"
 "fiscal_localizations>` documentation to verify supported formats."
 msgstr ""
+"Para los pagos de clientes, esta función admite tanto pagos físicos, como "
+":doc:`cheques <checks>` y efectivo, como transferencias electrónicas. Agrupa "
+"los pagos recibidos en efectivo o cheques en lotes para imprimir "
+"comprobantes de depósito bancario y asegurarte de que tus registros internos "
+"coincidan con el depósito global que aparece en tu estado de cuenta "
+"bancario. Del lado de los proveedores, los pagos por lotes agilizan las "
+"transferencias electrónicas masivas. En lugar de procesar las facturas de "
+"proveedores una por una de forma manual, selecciona varias facturas y genera "
+"un solo archivo de pago saliente para subirlo de forma directa al portal de "
+"tu banco. Como estos formatos de archivo dependen de la región (por ejemplo, "
+":doc:`SEPA <sepa_payments>` en Europa, :ref:`NACHA <l10n_us/nacha>` en EE. "
+"UU. o el estándar global :ref:`ISO 20022 <accounting/sepa_payments/iso20022>"
+"`), consulta la documentación sobre la :doc:`localización fiscal <../../"
+"fiscal_localizations>` de tu país para comprobar qué formatos admite."
 
 #: ../../content/applications/finance/accounting/payments/batch.rst:30
 msgid ""
@@ -11453,6 +11472,8 @@ msgstr ":doc:`Pagos SEPA para Nómina <../../../hr/payroll>`"
 msgid ""
 ":doc:`Payment Provider: Sepa Direct Debit <../../payment_providers/sdd>`"
 msgstr ""
+":doc:`Proveedor de pagos: Domiciliación bancaria SEPA <../../"
+"payment_providers/sdd>`"
 
 #: ../../content/applications/finance/accounting/payments/batch.rst:44
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:84
@@ -11506,7 +11527,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/batch.rst:62
 msgid ":guilabel:`Bank`: the bank journal to use for this batch."
-msgstr ""
+msgstr ":guilabel:`Banco`: El diario bancario que se usará para este lote."
 
 #: ../../content/applications/finance/accounting/payments/batch.rst:63
 msgid ""
@@ -12857,6 +12878,10 @@ msgid ""
 "and **SEPA Credit Transfer** modules may be installed by default. If not, "
 "they need to be :ref:`installed <general/install>`."
 msgstr ""
+"Según el paquete de localización instalado, es posible que los módulos "
+"**Domiciliación bancaria SEPA** y **Transferencia de crédito SEPA** también "
+"se instalen de forma predeterminada. Si no es así, debes :ref:`instalarlos "
+"<general/install>`."
 
 #: ../../content/applications/finance/accounting/payments/sepa_payments.rst:28
 msgid ""
@@ -12867,6 +12892,12 @@ msgid ""
 "territory, consult the :ref:`ISO20022 <accounting/sepa_payments/iso20022>` "
 "section."
 msgstr ""
+"Los métodos de pago SDD y SCT son **válidos solo para las transacciones en "
+"EUR**. Si tu empresa se encuentra en la región :abbr:`EFTA (Asociación "
+"Europea de Libre Comercio)`, en un país SEPA :abbr:`no perteneciente al EEE "
+"(Espacio Económico Europeo)` o en un territorio SEPA :abbr:`no perteneciente "
+"al EEE (Espacio Económico Europeo)`, consulta la sección :ref:`ISO 20022 "
+"<accounting/sepa_payments/iso20022>`."
 
 #: ../../content/applications/finance/accounting/payments/sepa_payments.rst:34
 #: ../../content/applications/finance/accounting/payments/sepa_payments.rst:148
@@ -12943,6 +12974,9 @@ msgid ""
 ":guilabel:`Account Number`: a valid IBAN must be defined in the :doc:`bank "
 "journal <../bank>` used to receive SDD payments for the mandate."
 msgstr ""
+":guilabel:`Número de cuenta`: Debes definir un IBAN válido en el "
+":doc:`diario bancario <../bank>` que se usa para recibir pagos SDD del "
+"mandato."
 
 #: ../../content/applications/finance/accounting/payments/sepa_payments.rst:76
 msgid ""
@@ -13228,6 +13262,10 @@ msgid ""
 "Payments`, activate :guilabel:`SEPA Credit Transfer (SCT)`. Next, fill out "
 "your company data:"
 msgstr ""
+"Para pagar a los proveedores con SCT, desde la aplicación **Contabilidad**, "
+"ve a :menuselection:`Configuración --> Ajustes`. En :guilabel:`Pagos a "
+"proveedores`, activa :guilabel:`Transferencia de crédito SEPA (SCT)` y, "
+"después, completa los datos de tu empresa:"
 
 #: ../../content/applications/finance/accounting/payments/sepa_payments.rst:190
 msgid ":guilabel:`Your Company`: The name of the company to use SCT."
@@ -13322,6 +13360,13 @@ msgid ""
 "computers can automatically read. Unlike SEPA, the ISO 20022 standard can be "
 "used with any currency worldwide."
 msgstr ""
+"ISO 20022 es un estándar global para el intercambio de datos de pago entre "
+"bancos. Usa un formato que permite que los detalles de pago y los documentos "
+"relacionados se transfieran juntos como un solo paquete. Esto significa que "
+"la información, como los números de factura, los detalles fiscales y la "
+"persona que envió el pago, se almacena en campos que los sistemas pueden "
+"leer de forma automática. A diferencia de SEPA, el estándar ISO 20022 se "
+"puede usar con cualquier divisa en todo el mundo."
 
 #: ../../content/applications/finance/accounting/payments/sepa_payments.rst:228
 msgid ""
@@ -13329,6 +13374,9 @@ msgid ""
 "20022 transactions (both domestic SEPA payments in euros and non-euro global "
 "transfers are supported by the module)."
 msgstr ""
+"En Odoo, el módulo de pagos SEPA funciona como motor subyacente para todas "
+"las transacciones ISO 20022 (el módulo acepta tanto pagos SEPA nacionales en "
+"euros como transferencias internacionales en otras monedas)."
 
 #: ../../content/applications/finance/accounting/payments/sepa_payments.rst:231
 msgid ""
@@ -13337,6 +13385,10 @@ msgid ""
 "configuration. In these cases, we strongly recommend reading the :ref:`PAIN "
 "version <accounting/sepa_payments/pain>` section of this page."
 msgstr ""
+":doc:`Algunos países y regiones <sepa_payments>` pueden usar una versión "
+"localizada y específica de ISO 20022 que requiere una configuración "
+"adicional. En estos casos, te recomendamos consultar la sección "
+":ref:`Versión PAIN <accounting/sepa_payments/pain>` de esta página."
 
 #: ../../content/applications/finance/accounting/payments/sepa_payments.rst:238
 msgid "PAIN version"
@@ -13347,6 +13399,9 @@ msgid ""
 ":abbr:`PAIN (PAyment INitiation)` is the specific message protocol within "
 "ISO 20022 used to send transfer instructions from Odoo to your bank."
 msgstr ""
+":abbr:`PAIN (PAyment INitiation, inicio de pagos)` es el protocolo de "
+"mensajes específico de ISO 20022 que se usa para enviar instrucciones de "
+"transferencia de Odoo a tu banco."
 
 #: ../../content/applications/finance/accounting/payments/sepa_payments.rst:243
 msgid ""
@@ -13354,6 +13409,9 @@ msgid ""
 "the :doc:`fiscal localization <../../../finance/fiscal_localizations>` for "
 "your country installed in your database."
 msgstr ""
+"Para habilitar una versión de PAIN específica de un país, primero verifica "
+"que la :doc:`localización fiscal <../../../finance/fiscal_localizations>` de "
+"tu país esté instalada en tu base de datos."
 
 #: ../../content/applications/finance/accounting/payments/sepa_payments.rst:248
 msgid ""
@@ -13361,6 +13419,9 @@ msgid ""
 "sure to use the newer **PAIN.001.001.09** version or the one required in "
 "your country."
 msgstr ""
+"ISO 20022 **PAIN.001.001.03** quedará obsoleto en noviembre de 2026. "
+"Asegúrate de usar la versión más reciente, **PAIN.001.001.09**, o la que se "
+"requiera en tu país."
 
 #: ../../content/applications/finance/accounting/payments/sepa_payments.rst:251
 msgid ""
@@ -13369,6 +13430,11 @@ msgid ""
 "your :guilabel:`Bank` journal. Click the :guilabel:`Outgoing Payments` tab, "
 "and select the :guilabel:`SEPA Pain Version` that suits your needs."
 msgstr ""
+"Para seleccionar una versión específica de PAIN, abre la aplicación "
+"**Contabilidad**, ve a :menuselection:`Configuración --> Diarios` y abre tu "
+"diario de :guilabel:`banco`. Haz clic en la pestaña :guilabel:`Pagos "
+"salientes` y selecciona la :guilabel:`versión de PAIN de SEPA` que se adapte "
+"a tus necesidades."
 
 #: ../../content/applications/finance/accounting/payments/sepa_payments.rst:255
 msgid "Reminder"
@@ -13378,6 +13444,8 @@ msgstr "Recordatorio"
 msgid ""
 "The SEPA payments module covers both SEPA payments *and* ISO 20022 payments."
 msgstr ""
+"El módulo de pagos SEPA incluye tanto los pagos SEPA *como* los pagos ISO "
+"20022."
 
 #: ../../content/applications/finance/accounting/payments/sepa_payments.rst:262
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:160
@@ -13392,6 +13460,10 @@ msgid ""
 "XML file is then displayed in the chatter, where it can be downloaded and "
 "submitted to the bank for processing."
 msgstr ""
+"Para generar un archivo XML de pagos diario y subirlo a la interfaz de banca "
+"en línea, :ref:`crea un pago por lotes <accounting/batch/creation>`. El "
+"archivo XML aparece en el chatter, desde donde puedes descargarlo y enviarlo "
+"al banco para su procesamiento."
 
 #: ../../content/applications/finance/accounting/payments/sepa_payments.rst:268
 msgid ""
@@ -13402,6 +13474,13 @@ msgid ""
 "the :guilabel:`Incoming Payments` tab, set the :guilabel:`SEPA Pain version` "
 "field to :guilabel:`Updated 2023 (Pain 008.001.08)`."
 msgstr ""
+"De forma predeterminada, los :ref:`archivos XML compatibles con SEPA "
+"<accounting/sepa_payments/XML>` que genera Odoo usan el formato "
+"**PAIN.008.001.02**. Si tu banco requiere la versión actualizada de 2023, ve "
+"a :menuselection:`Contabilidad --> Configuración --> Diarios`. Abre tu "
+"diario de :guilabel:`banco` y, en la pestaña :guilabel:`Pagos entrantes`, "
+"configura el campo :guilabel:`Versión de PAIN de SEPA` en "
+":guilabel:`Actualizada en 2023 (PAIN 008.001.08)`."
 
 #: ../../content/applications/finance/accounting/payments/sepa_payments.rst:275
 msgid ":doc:`../bank/bank_synchronization`"
@@ -32930,6 +33009,9 @@ msgid ""
 "`YouTube playlist - Localização Brasil - Tutoriais Odoo em Português "
 "<https://www.youtube.com/playlist?list=PLhTWY8W20NercYNrae-L2MacH0dMpQLTi>`_."
 msgstr ""
+"`Lista de reproducción de YouTube - Localización brasileña - Tutoriales de "
+"Odoo en portugués <https://www.youtube.com/playlist?list=PLhTWY8W20NercYNrae-"
+"L2MacH0dMpQLTi>`_."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:18
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:22
@@ -33002,7 +33084,7 @@ msgstr "`l10n_br_sale_subscription`"
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:42
 msgid "Subscriptions modifications for Brazil."
-msgstr ""
+msgstr "Modificaciones de las suscripciones para Brasil."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:43
 msgid ":guilabel:`Brazil - Sale`"
@@ -33014,7 +33096,7 @@ msgstr "`l10n_br_sales`"
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:45
 msgid "Sales modifications for Brazil."
-msgstr ""
+msgstr "Modificaciones de ventas para Brasil."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:46
 msgid ":guilabel:`Brazil - Website Sale`"
@@ -33044,55 +33126,58 @@ msgid ""
 ":guilabel:`Avatax Brazil` & :guilabel:`Avatax Brazil for Services` "
 "& :guilabel:`Test SOs for the Brazilian Avatax`"
 msgstr ""
+":guilabel:`AvaTax Brasil`, :guilabel:`AvaTax Brasil para servicios` y "
+":guilabel:`Órdenes de venta de prueba para AvaTax Brasil`"
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:61
 msgid ""
 "`l10n_br_avatax` & `l10n_br_avatax_services` & `l10n_br_test_avatax_sale`"
 msgstr ""
+"`l10n_br_avatax`, `l10n_br_avatax_services` y `l10n_br_test_avatax_sale`"
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:62
 msgid "Goods and services tax computation through Avalara."
-msgstr ""
+msgstr "Cálculo de impuestos sobre bienes y servicios a través de Avalara."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:63
 msgid ":guilabel:`Avatax Brazil eCommerce Fiscal Reform`"
-msgstr ""
+msgstr ":guilabel:`AvaTax Brasil para comercio electrónico - Reforma fiscal`"
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:64
 msgid "`l10n_br_website_sale_fiscal_reform`"
-msgstr ""
+msgstr "`l10n_br_website_sale_fiscal_reform`"
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:65
 msgid "eCommerce modifications for fiscal reform."
-msgstr ""
+msgstr "Modificaciones de comercio electrónico para la reforma fiscal."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:66
 msgid ":guilabel:`Avatax Brazil Fiscal Reform`"
-msgstr ""
+msgstr ":guilabel:`AvaTax Brasil - Reforma fiscal`"
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:67
 msgid "`l10n_br_edi_fiscal_reform`"
-msgstr ""
+msgstr "`l10n_br_edi_fiscal_reform`"
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:68
 msgid "Avatax modifications for fiscal reform."
-msgstr ""
+msgstr "Modificaciones de AvaTax para la reforma fiscal."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:69
 msgid ":guilabel:`Avatax Brazil Sale Fiscal Reform`"
-msgstr ""
+msgstr ":guilabel:`AvaTax Brasil - Reforma fiscal de ventas`"
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:70
 msgid "`l10n_br_edi_sale_fiscal_reform`"
-msgstr ""
+msgstr "`l10n_br_edi_sale_fiscal_reform`"
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:71
 msgid "Sales Avatax modifications for fiscal reform"
-msgstr ""
+msgstr "Modificaciones de AvaTax para ventas en el marco de la reforma fiscal"
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:74
 msgid "Sales modifications for Brazil for services"
-msgstr ""
+msgstr "Modificaciones de ventas para Brasil para servicios"
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:75
 msgid ""
@@ -33124,7 +33209,7 @@ msgstr "`l10n_br_edi_sale`"
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:80
 msgid "Adds fields to sales orders that will be carried over to the invoice."
-msgstr ""
+msgstr "Agrega campos a las órdenes de venta que pasan a la factura."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:83
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:75
@@ -33264,6 +33349,9 @@ msgid ""
 "calculation and electronic invoice issuance in compliance with Brazilian "
 "regulations and the 2026 Tax Reform."
 msgstr ""
+"La clasificación fiscal precisa de bienes y servicios es esencial para "
+"calcular impuestos y emitir facturas electrónicas de acuerdo con las "
+"regulaciones brasileñas y la Reforma Tributaria de 2026."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:149
 msgid ""
@@ -33271,24 +33359,34 @@ msgid ""
 "the :ref:`company form <localizations/brazil/company-and-contacts>` to "
 "display the required fields for the fiscal reform."
 msgstr ""
+"Debes especificar `Brasil` en el campo :guilabel:`País` del :ref:`formulario "
+"de la empresa <localizations/brazil/company-and-contacts>` para mostrar los "
+"campos obligatorios para la reforma fiscal."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:152
 msgid ""
 "The following information, specific to the fiscal reform, is required on "
 "the :guilabel:`General Information` tab of the products form:"
 msgstr ""
+"La pestaña :guilabel:`Información general` del formulario de productos "
+"requiere la siguiente información específica para la reforma fiscal:"
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:155
 msgid ""
 ":guilabel:`Legal Unit of Measure`: Select the conversion factor between the "
 "commercial unit and the taxable unit for taxes applied by quantity (ad rem)."
 msgstr ""
+":guilabel:`Unidad de medida legal`: Selecciona el factor de conversión entre "
+"la unidad comercial y la unidad tributaria para los impuestos que se aplican "
+"según la cantidad (ad rem)."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:157
 msgid ""
 ":guilabel:`IS taxable`: Enable this option if the product is subject to "
 "Selective Tax (Imposto Seletivo or IS)."
 msgstr ""
+":guilabel:`Sujeto al IS`: Activa esta opción si el producto está sujeto al "
+"Impuesto Selectivo (Imposto Seletivo o IS)."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:159
 msgid ""
@@ -33296,6 +33394,9 @@ msgid ""
 "customs regime if the transaction involving capital goods falls under such a "
 "regime."
 msgstr ""
+":guilabel:`Régimen aduanero especial` (opcional): Selecciona el régimen "
+"aduanero especial aplicable si la transacción que involucra bienes de "
+"capital se rige por dicho régimen."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:161
 msgid ""
@@ -33303,6 +33404,9 @@ msgid ""
 "classification indicating how the good or service is used in the "
 "transaction, as this can affect tax calculation and invoice issuance."
 msgstr ""
+":guilabel:`Uso de la transacción` (opcional): Define la clasificación fiscal "
+"que indica cómo se usa el bien o servicio en la transacción, ya que esto "
+"puede afectar el cálculo de impuestos y la emisión de facturas."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:165
 msgid ""
@@ -33310,6 +33414,9 @@ msgid ""
 "the :guilabel:`NBS Code` (Nomenclatura Brasileira de Serviços) necessary for "
 "tax classification."
 msgstr ""
+"Si seleccionas :guilabel:`Tipo de producto` como :guilabel:`Servicio`, "
+"selecciona el :guilabel:`Código NBS` (Nomenclatura Brasileira de Serviços) "
+"necesario para la clasificación fiscal."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:171
 msgid "Company and contacts"
@@ -33400,12 +33507,16 @@ msgid ""
 "To update your company's complete record, open the Contacts app and access "
 "the relevant record."
 msgstr ""
+"Para actualizar el registro completo de tu empresa, abre la aplicación "
+"Contactos y accede al registro correspondiente."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:195
 msgid ""
 "Configure the :guilabel:`Fiscal Information` within the :guilabel:`Sales & "
 "Purchase` tab:"
 msgstr ""
+"Configura la :guilabel:`información fiscal` dentro de la pestaña "
+":guilabel:`Ventas y compras`:"
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:197
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:228
@@ -33418,13 +33529,15 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:198
 msgid ":guilabel:`Tax Regime`: Federal tax regime."
-msgstr ""
+msgstr ":guilabel:`Régimen fiscal`: Régimen tributario federal."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:199
 msgid ""
 ":guilabel:`ICMS Taxpayer Type`: Select :guilabel:`ICMS "
 "regime`, :guilabel:`Exempt status`, or :guilabel:`Non-Taxpayer`."
 msgstr ""
+":guilabel:`Tipo de contribuyente del ICMS`: Selecciona :guilabel:`Régimen "
+"del ICMS`, :guilabel:`Exento` o :guilabel:`No contribuyente`."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:201
 msgid ":guilabel:`Main Activity Sector`"
@@ -33432,7 +33545,7 @@ msgstr ":guilabel:`Sector de actividad principal`"
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:203
 msgid "2026 tax reform fields:"
-msgstr ""
+msgstr "Campos de la reforma tributaria de 2026:"
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:205
 msgid ""
@@ -33440,6 +33553,9 @@ msgid ""
 "(:guilabel:`Simples Nacional`), set up the additional fields specific to the "
 "fiscal reform:"
 msgstr ""
+":guilabel:`Régimen fiscal`: Para el régimen fiscal :guilabel:`simplificado` "
+"(:guilabel:`Simples Nacional`), configura los campos adicionales específicos "
+"de la reforma fiscal:"
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:208
 msgid ""
@@ -33449,6 +33565,11 @@ msgid ""
 "Nacional` (:guilabel:`Regime Hibrido`) tax regime, configure the following "
 "additional fields:"
 msgstr ""
+":guilabel:`CBS/IBS normal`: Activa la opción para el régimen "
+":guilabel:`Régimen normal` (:guilabel:`Regime Regular`) o desactívala para "
+"el régimen :guilabel:`Simples Nacional híbrido` (:guilabel:`Regime Hibrido`)"
+". Para el régimen fiscal :guilabel:`Simples Nacional híbrido` "
+"(:guilabel:`Regime Hibrido`), configura los siguientes campos adicionales:"
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:213
 msgid ""
@@ -33456,6 +33577,9 @@ msgid ""
 "credit available for entities under the :guilabel:`Hybrid Simples Nacional` "
 "tax model."
 msgstr ""
+":guilabel:`Crédito presunto de CBS (%)`: Especifica el porcentaje de crédito "
+"presunto de CBS disponible para las entidades que usan el modelo fiscal "
+":guilabel:`Simples Nacional híbrido`."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:215
 msgid ""
@@ -33463,16 +33587,21 @@ msgid ""
 "credit available for entities under the :guilabel:`Hybrid Simples Nacional` "
 "tax model."
 msgstr ""
+":guilabel:`Crédito presunto de IBS (%)`: Especifica el porcentaje de crédito "
+"presunto de IBS disponible para las entidades que usan el modelo fiscal "
+":guilabel:`Simples Nacional híbrido`."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:218
 msgid ""
 ":guilabel:`ISS Simplified Rate`: Indicate the specific municipal service tax "
 "rate applicable to the simplified tax regime."
 msgstr ""
+":guilabel:`Tasa simplificada de ISS`: Indica la tasa específica del impuesto "
+"municipal sobre servicios que aplica al régimen fiscal simplificado."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:221
 msgid ":guilabel:`Entity Type`: Select the legal classification."
-msgstr ""
+msgstr ":guilabel:`Tipo de entidad`: Selecciona la clasificación jurídica."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:222
 msgid ""
@@ -33481,6 +33610,10 @@ msgid ""
 "sobre Bens e Serviços)`. Disable it for exempt entities or those operating "
 "under special non-taxable regimes."
 msgstr ""
+":guilabel:`Contribuyente de CBS/IBS`: Activa la opción si la entidad está "
+"sujeta a :abbr:`CBS (Contribuição sobre Bens e Serviços)` o :abbr:`IBS "
+"(Imposto sobre Bens e Serviços)`. Desactívala para entidades exentas o que "
+"operan bajo regímenes especiales no gravables."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:226
 msgid ""
@@ -33496,6 +33629,10 @@ msgid ""
 "exemption scenario and applies the override accordingly. Select the "
 "appropriate option."
 msgstr ""
+":guilabel:`Detalles de COFINS`: Cuando una transacción está exenta de COFINS "
+"aunque todas las partes y los artículos estén sujetos a impuestos, este "
+"atributo identifica el supuesto de exención y aplica la excepción "
+"correspondiente. Selecciona la opción adecuada."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:232
 msgid ""
@@ -33503,12 +33640,18 @@ msgid ""
 "all parties and items are taxable, this attribute identifies the exemption "
 "scenario and applies the override accordingly. Select the appropriate option."
 msgstr ""
+":guilabel:`Detalles de PIS`: Cuando una transacción está exenta de PIS "
+"aunque todas las partes y los artículos estén sujetos a impuestos, este "
+"atributo identifica el supuesto de exención y aplica la excepción "
+"correspondiente. Selecciona la opción adecuada."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:235
 msgid ""
 ":guilabel:`CSLL Taxable`: Enable the option if the company is subject "
 "to :abbr:`CSLL (Contribuição Social sobre o Lucro Líquido)`."
 msgstr ""
+":guilabel:`Sujeto a CSLL`: Activa la opción si la empresa está sujeta a "
+":abbr:`CSLL (Contribuição Social sobre o Lucro Líquido)`."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:239
 msgid ""
@@ -33593,7 +33736,7 @@ msgstr ":ref:`AvaTax configuration<localizations/brazil/avatax-credentials>`."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:273
 msgid ":ref:`Fiscal reform <localizations/brazil/avatax-tax-reform>`"
-msgstr ""
+msgstr ":ref:`Reforma fiscal <localizations/brazil/avatax-tax-reform>`"
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:274
 msgid ":ref:`A1 digital certificate <localizations/brazil/certificate-upload>`"
@@ -33606,7 +33749,7 @@ msgstr ":ref:`Mapeo de impuestos <localizations/brazil/fiscal-positions>`"
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:276
 msgid ":ref:`Products <localizations/brazil/avatax-products>`"
-msgstr ""
+msgstr ":ref:`Productos <localizations/brazil/avatax-products>`"
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:288
 msgid ""
@@ -33615,6 +33758,10 @@ msgid ""
 "the :guilabel:`AvaTax Portal Email` field, then click :icon:`fa-"
 "plug` :guilabel:`Create account`."
 msgstr ""
+":ref:`Conecta AvaTax <avatax/credentials>` en la sección :guilabel:`AvaTax "
+"Brasil`, agrega la dirección de correo electrónico del administrador del "
+"portal de AvaTax en el campo :guilabel:`Correo electrónico del portal de "
+"AvaTax` y haz clic en :icon:`fa-plug` :guilabel:`Crear cuenta`."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:293
 msgid ""
@@ -33623,6 +33770,12 @@ msgid ""
 "address, as it is needed to :ref:`connect to Avalara <avatax/prerequisites>` "
 "and set up the certificates, whether to test or use it on production."
 msgstr ""
+"Cuando **pruebes** o **crees una integración de producción** con el "
+":guilabel:`correo electrónico del portal de AvaTax` en una base de datos de "
+"pruebas o de producción, usa una dirección de correo electrónico real, ya "
+"que la necesitas para :ref:`conectarte a Avalara <avatax/prerequisites>` y "
+"configurar los certificados, tanto para hacer pruebas como para usar la "
+"integración en producción."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:298
 msgid "There are two different Brazilian Avalara Portals:"
@@ -33685,6 +33838,9 @@ msgid ""
 "An email will then be received with a token and a link to create a password. "
 "Click this link and copy-paste the token to set the desired password."
 msgstr ""
+"Recibirás un correo electrónico con un token y un enlace para crear una "
+"contraseña. Haz clic en este enlace y copia y pega el token para establecer "
+"la contraseña que quieras."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:320
 msgid ""
@@ -33712,25 +33868,31 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:332
 msgid "Fiscal reform"
-msgstr ""
+msgstr "Reforma fiscal"
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:334
 msgid ""
 "To enable the sending of the new attributes of the 2026 tax reform, follow "
 "these steps:"
 msgstr ""
+"Sigue estos pasos para habilitar el envío de los nuevos atributos de la "
+"reforma tributaria de 2026:"
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:336
 msgid ""
 "Go to :menuselection:`Accounting --> Configuration --> Settings` and scroll "
 "to the :guilabel:`Taxes` section."
 msgstr ""
+"Ve a :menuselection:`Contabilidad --> Configuración --> Ajustes` y dirígete "
+"a la sección :guilabel:`Impuestos`."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:338
 msgid ""
 "Under :guilabel:`AvaTax Brazil`, enable the :guilabel:`Enable Brazilian "
 "fiscal reform` option."
 msgstr ""
+"En :guilabel:`AvaTax Brasil`, activa la opción :guilabel:`Habilitar la "
+"reforma fiscal brasileña`."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:341
 msgid ""
@@ -33738,6 +33900,9 @@ msgid ""
 "the :guilabel:`Enable Brazilian fiscal reform` option to revert to the "
 "previous communication model."
 msgstr ""
+"Si ocurren inconsistencias al enviar la información de la reforma fiscal, "
+"desactiva la opción :guilabel:`Habilitar la reforma fiscal brasileña` para "
+"volver al modelo de comunicación anterior."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:347
 msgid "A1 certificate upload"
@@ -33793,6 +33958,10 @@ msgid ""
 "the :guilabel:`Detect Automatically` and :guilabel:`Use AvaTax Brazil API` "
 "options."
 msgstr ""
+"Para configurar la :ref:`posición fiscal <avatax/fiscal_positions>` de la "
+":guilabel:`asignación fiscal automática (Avalara Brasil)`, activa las "
+"opciones :guilabel:`Detectar de forma automática` y :guilabel:`Usar la API "
+"de AvaTax Brasil`."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:373
 msgid ":doc:`Fiscal positions <../accounting/taxes/fiscal_positions>`"
@@ -33804,6 +33973,9 @@ msgid ""
 "following information on the product form, based on how the product will be "
 "used."
 msgstr ""
+"Para usar la integración de AvaTax en órdenes de venta y facturas, introduce "
+"la siguiente información en el formulario del producto, según el uso que "
+"tendrá el producto."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:386
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:650
@@ -33942,6 +34114,12 @@ msgid ""
 "The product's applicability to this requirement can be verified on the "
 "`Código CEST website <https://www.codigocest.com.br>`_."
 msgstr ""
+":guilabel:`Código CEST`: Código de clasificación fiscal que identifica los "
+"bienes y productos sujetos a sustitución tributaria según las normas del "
+"ICMS y ayuda a determinar el tratamiento fiscal y los procedimientos "
+"aplicables a artículos específicos. Puedes verificar si el producto está "
+"sujeto a este requisito en el `sitio web del Código CEST <https://"
+"www.codigocest.com.br>`_."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:428
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:485
@@ -33990,7 +34168,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:439
 msgid ":guilabel:`Product Type`: :guilabel:`Service`"
-msgstr ""
+msgstr ":guilabel:`Tipo de producto`: :guilabel:`Servicio`"
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:440
 msgid ""
@@ -34058,7 +34236,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:499
 msgid ":ref:`Tax calculation <avatax/tax-calculation>`"
-msgstr ""
+msgstr ":ref:`Cálculo de impuestos <avatax/tax-calculation>`"
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:504
 msgid "Tax calculations on quotations and sales orders"
@@ -34181,28 +34359,37 @@ msgid ""
 "invoices. To configure the series number on a sales journal, follow these "
 "steps:"
 msgstr ""
+"Un número de *serie* está vinculado a un rango de números de secuencia para "
+"facturas electrónicas. Para configurar el número de serie en un diario de "
+"ventas, sigue estos pasos:"
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:561
 msgid ""
 "Go to :menuselection:`Accounting --> Configuration --> Journals` and open "
 "the sales journal."
 msgstr ""
+"Ve a :menuselection:`Contabilidad --> Configuración --> Diarios` y abre el "
+"diario de ventas."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:562
 msgid ""
 "Enable the :guilabel:`Use Documents?` option to display "
 "the :guilabel:`Series` field."
 msgstr ""
+"Activa la opción :guilabel:`Usar documentos` para mostrar el campo "
+":guilabel:`Serie`."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:563
 msgid "Set the series number in the :guilabel:`Series` field."
-msgstr ""
+msgstr "Establece el número de serie en el campo :guilabel:`Serie`."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:566
 msgid ""
 "If more than one series is needed, a new sales journal must be created, and "
 "a new series number must be assigned for each series."
 msgstr ""
+"Si necesitas más de una serie, debes crear un nuevo diario de ventas y "
+"asignar un nuevo número de serie a cada serie."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:568
 msgid ""
@@ -34211,6 +34398,11 @@ msgid ""
 "unchecked, as in Brazil, sequences between invoices, credit notes, and debit "
 "notes are shared per series number, which means per journal."
 msgstr ""
+"Al crear el nuevo diario de ventas, asegúrate de que el campo "
+":guilabel:`Secuencia de notas de crédito exclusiva` de la sección "
+":guilabel:`Información contable` esté desactivado, ya que en Brasil las "
+"secuencias de las facturas, notas de crédito y notas de débito se comparten "
+"por número de serie, es decir, por diario."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:573
 msgid ""
@@ -34537,12 +34729,16 @@ msgid ""
 ":guilabel:`Freight Model` (NF-e specific): how goods are planned to be "
 "transported - domestic"
 msgstr ""
+":guilabel:`Modelo de flete` (específico de NF-e): Cómo se planea transportar "
+"los bienes: nacional"
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:717
 msgid ""
 ":guilabel:`Transporter Brazil` (NF-e specific): who is doing the "
 "transportation."
 msgstr ""
+":guilabel:`Transportista de Brasil` (específico de NF-e): Quién se encarga "
+"de la transportación."
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:3
 msgid "Canada"
@@ -60323,10 +60519,18 @@ msgid ""
 "**Bank** journal, and in the :guilabel:`Outgoing Payments`, "
 "select :guilabel:`Swiss` from the :guilabel:`SEPA Pain Version` field."
 msgstr ""
+"Suiza usa una versión localizada específica del :ref:`estándar global XML "
+"ISO 20022 <accounting/sepa_payments/pain>`. Para seleccionar la versión "
+"suiza adecuada para tu empresa, abre la aplicación **Contabilidad** y ve a "
+":menuselection:`Configuración --> Diarios`. Después, abre el diario de "
+"**banco** correspondiente y, en :guilabel:`Pagos salientes`, selecciona "
+":guilabel:`Suiza` en el campo :guilabel:`Versión de PAIN de SEPA`."
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:157
 msgid "The **SEPA Module** in Odoo covers both SEPA *and* ISO 20022 payments."
 msgstr ""
+"El **módulo SEPA** de Odoo incluye tanto los pagos SEPA *como* los pagos ISO "
+"20022."
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:166
 msgid ""
@@ -60337,6 +60541,13 @@ msgid ""
 "and in the :guilabel:`Outgoing Payments` tab, set the :guilabel:`SEPA Pain "
 "version` field to :guilabel:`New generic version (09)`."
 msgstr ""
+"De forma predeterminada, los archivos XML de pagos salientes que genera Odoo "
+"usan el formato específico de Suiza **PAIN.001.001.03.ch.02**. Si tu banco "
+"requiere la versión más reciente **PAIN.001.001.09**, abre la aplicación "
+"**Contabilidad** y ve a :menuselection:`Configuración --> Diarios`. Abre el "
+"diario de **Banco** correspondiente y, en la pestaña :guilabel:`Pagos "
+"salientes`, establece el campo :guilabel:`Versión de PAIN de SEPA` en "
+":guilabel:`Nueva versión genérica (09)`."
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:173
 msgid ":doc:`../accounting/bank/bank_synchronization`"
@@ -60344,7 +60555,7 @@ msgstr ":doc:`../accounting/bank/bank_synchronization`"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:174
 msgid ":ref:`ISO 20022 <accounting/sepa_payments/iso20022>`"
-msgstr ""
+msgstr ":ref:`ISO 20022 <accounting/sepa_payments/iso20022>`"
 
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst:3
 msgid "Thailand"
