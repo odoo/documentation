@@ -169,10 +169,10 @@ Inside the job application, the Kanban stages appear, with all the applicants po
 respective columns, indicating what stage they are currently in. In Odoo, six default stages are
 configured:
 
-- :ref:`New <recruitment/new>`
-- :ref:`Initial Qualification <recruitment/initial-qualification>`
-- :ref:`First Interview <recruitment/first-interview>`
-- :ref:`Second Interview <recruitment/second-interview>`
+- :ref:`New <recruitment/recruitment_flow/new>`
+- :ref:`Initial Qualification <recruitment/recruitment_flow/initial-qualification>`
+- :ref:`First Interview <recruitment/recruitment_flow/first-interview>`
+- :ref:`Second Interview <recruitment/recruitment_flow/second-interview>`
 - :doc:`Contract Proposal <recruitment/offer_job_positions>`
 - :ref:`Contract Signed <recruitment/offer_job_positions/contract-signed>`
 
