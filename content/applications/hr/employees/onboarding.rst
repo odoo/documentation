@@ -150,9 +150,9 @@ Launch onboarding plan
 ======================
 
 After an employee has been hired and their employee profile :ref:`is created
-<recruitment/new-employee>`, navigate to the desired employee's profile by clicking on their Kanban
-card on the **Employees** app dashboard, then click the :guilabel:`Launch Plan` button on their
-employee profile, and a blank *Launch Plan* pop-up window loads.
+<recruitment/offer_job_position/new-employee>`, navigate to the desired employee's profile by
+clicking on their Kanban card on the **Employees** app dashboard, then click the :guilabel:`Launch
+Plan` button on their employee profile, and a blank *Launch Plan* pop-up window loads.
 
 The top of the screen displays a button for each available plan, as well as a button for the various
 available activities. Click the desired onboarding plan to select it. Then, using the calendar
