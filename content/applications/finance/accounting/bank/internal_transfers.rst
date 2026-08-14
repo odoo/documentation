@@ -37,21 +37,29 @@ transfers to this internal transfers account, it is recommended to instead use t
 Register an internal transfer from one bank to another
 ======================================================
 
-When money is transferred from one bank or cash account to another, that amount appears as two
-transactions on the corresponding journals, whether the transactions are created manually, via
-import, or via :doc:`bank synchronization <bank_synchronization>`. When :ref:`reconciling the
-transaction <accounting/reconciliation/reconcile>`, select the :guilabel:`Internal Transfers`
-:doc:`reconciliation model <reconciliation_models>` button. This action writes the transaction off
-to the :guilabel:`Internal Transfer` account.
+.. note::
+   For the sake of clarity, this process is explained with the incoming :doc:`transaction
+   <transactions>` being reconciled with the :guilabel:`Internal Transfers` reconciliation model
+   button and the outgoing transaction then being reconciled with the journal item of the incoming
+   transaction. It is possible to switch which transaction is reconciled with the
+   :guilabel:`Internal Transfers` reconciliation model button without any negative implications.
 
-.. important::
-   Remember to reconcile both the outgoing transaction (on the journal that sends the payment) and
-   the incoming transaction (on the journal that receives the payment) with the internal transfers
-   account using the :guilabel:`Internal Transfers` reconciliation model button.
+When money is transferred from one bank or cash account to another, that amount appears as one
+incoming :doc:`transaction <transactions>` and one outgoing transaction in their corresponding
+journals, whether the transactions are created manually, via import, or via :doc:`bank
+synchronization <bank_synchronization>`. :ref:`Reconcile <accounting/reconciliation/reconcile>` the
+two transactions as follows:
 
-Once each bank journal's transaction is reconciled using the :guilabel:`Internal Transfers`
-reconciliation model, the internal transfer account is balanced, and the balances of both bank
-accounts are updated to reflect the transfer.
+#. Reconcile the incoming transaction by selecting the :guilabel:`Internal Transfers`
+   :doc:`reconciliation model <reconciliation_models>` button. This action writes the transaction
+   off to the :guilabel:`Internal Transfers` account.
+#. Reconcile the outgoing transaction with the journal item of the incoming transaction:
+
+   a. Click the :icon:`fa-ellipsis-v` (vertical ellipsis icon).
+   #. Click :guilabel:`Reconcile`.
+   #. In the :guilabel:`Search: Journal Items to Match` popup, click the journal item of the
+      incoming transaction. This action balances the :guilabel:`Internal Transfers` account and
+      links the two transactions.
 
 .. example::
    When transferring $1,000 from Bank Account A to Bank Account B, each of the two bank journals has
