@@ -69,8 +69,8 @@ department card displays the following information, if available:
 - :guilabel:`Allocation Requests`: The number of unapproved allocation requests for employees in the
   department :ref:`awaiting approval <time_off/manage-allocations>`. This **only** appears if there
   are requests to approve.
-- :guilabel:`New Applicants`: The number of :ref:`new applicants <recruitment/new>` for a position
-  within the department. This **only** appears if there are new applicants.
+- :guilabel:`New Applicants`: The number of :ref:`new applicants <recruitment/recruitment_flow/new>`
+  for a position within the department. This **only** appears if there are new applicants.
 - :guilabel:`Expenses`: The number of employees in the department with :doc:`open expenses to
   approve <../../finance/expenses/approve_expenses>`. This **only** appears if there are any
   expenses waiting for approval.
