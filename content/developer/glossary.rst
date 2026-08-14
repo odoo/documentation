@@ -39,5 +39,5 @@ Glossary
         but shorter structures (`ternary operator`_ instead of ``if/else``) in
         order to reduce network traffic
 
-.. _jinja variables: http://jinja.pocoo.org/docs/dev/templates/#variables
+.. _jinja variables: https://jinja.palletsprojects.com/en/3.1.x/templates/#variables
 .. _ternary operator: http://en.wikipedia.org/wiki/%3F:
