@@ -22,18 +22,15 @@ Click the :icon:`oi-voip` :guilabel:`(Hide Softphone)` icon again to close the w
 
 The **Phone** widget contains four tabs:
 
-- :icon:`oi-numpad` :guilabel:`Keypad`: Makes :ref:`outbound calls
-  <phone/phone_widget/outbound-call>`. Use the numeric keypad to dial a number, or type a name or
-  number to search for a contact. Click the :icon:`fa-globe` and/or :guilabel:`(country flag)` icon
-  to fill in a country code.
 - :icon:`fa-history` :guilabel:`Recent`: Lists recent :ref:`inbound calls
   <phone/phone_widget/inbound-call>` and :ref:`outbound calls <phone/phone_widget/outbound-call>` on
   the account, grouped by date. Click a call from the list to see the contact's phone number and
   company name, and click the :icon:`fa-list-ul` :guilabel:`(Open full history)` icon to view the
   full call history in the **Phone** app.
-- :icon:`fa-address-book-o` :guilabel:`Contacts`: Lists :doc:`contacts <../../essentials/contacts>`
-  that have a saved phone number. Click the :icon:`fa-phone` :guilabel:`(Call)` icon next to a
-  contact to call them, or click the contact's name to view their company name and phone number.
+- :icon:`oi-numpad` :guilabel:`Keypad`: Makes :ref:`outbound calls
+  <phone/phone_widget/outbound-call>`. Use the numeric keypad to dial a number, or type a name or
+  number to search for a contact. Click the :icon:`fa-globe` and/or :guilabel:`(country flag)` icon
+  to fill in a country code.
 - :icon:`fa-clock-o` :guilabel:`Activities`: Lists call :doc:`activities
   <../../essentials/activities>` assigned to the user, grouped by due date.
 
@@ -171,8 +168,10 @@ view the following drop-down action menus:
 - :icon:`fa-ellipsis-v` :guilabel:`Go to`: Send an email or SMS, and open records related to the
   contact. Depending on the type of contact, this can include call details, contacts, leads,
   tickets, tasks, sales, and subscriptions.
-- :icon:`fa-history` :guilabel:`Log (Recents tab only)`: Log the call as an activity in a related
-  record.
+- :icon:`fa-history` :guilabel:`History (Recents tab, Keypad tab)`: View the call history for the
+  selected contact.
+- :icon:`fa-clock-o` :guilabel:`Log (Recents tab only)`: Log the call as a completed activity in a
+  related record.
 - :icon:`fa-clock-o` :guilabel:`Activity (Activities tab only)`: Complete, edit, or cancel the
   activity.
 
