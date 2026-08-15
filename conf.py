@@ -192,6 +192,9 @@ extensions = [
 
     # Strange html domain logic used in memento pages
     'html_domain',
+
+    # Sitemap generation
+    'sphinx_sitemap',
 ]
 
 if odoo_dir_in_path:
@@ -219,6 +222,8 @@ intersphinx_mapping = {
 
 github_user = 'odoo'
 github_project = 'documentation'
+
+html_baseurl = 'http://localhost:5503/_build/html/'
 
 locale_dirs = ['../locale/']
 templates_path = ['../extensions']
