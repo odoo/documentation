@@ -1,3 +1,8 @@
+.. meta::
+   :description: This page explains how to apply discounts, discount codes, promotions, and loyalty
+                 programs in Point of Sale, along with configuring pricelists, cash rounding, and
+                 fiscal positions for flexible tax handling.
+
 ================
 Pricing features
 ================
@@ -13,8 +18,8 @@ as a percentage of a product's sale price or the total order amount.
 To activate discounts, navigate to the :ref:`POS settings <pos/use/settings>`, scroll down to the
 :guilabel:`Pricing` section, and enable:
 
-   - :guilabel:`Global Discounts` to allow users to set a discount on the entire order.
-     Modify the default discount percentage in the :guilabel:`Discount %` field if needed.
+   - :guilabel:`Global Discounts` to allow users to set a discount on the entire order. Modify the
+     default discount percentage in the :guilabel:`Discount %` field if needed.
    - :guilabel:`Line Discounts` to allow users to set discounts on specific products in the cart.
 
 .. seealso::
@@ -45,19 +50,19 @@ Discount and loyalty programs
 =============================
 
 Discount and loyalty programs provide flexible, customer-facing pricing strategies. Unlike
-:doc:`pricelists <../../sales/products_prices/prices/pricing>`, which define structured
-pricing rules, discount and loyalty programs are designed for promotional, time-sensitive, and
-public offers, such as seasonal sales, limited-time deals, or customer rewards.
+:doc:`pricelists <../../sales/products_prices/prices/pricing>`, which define structured pricing
+rules, discount and loyalty programs are designed for promotional, time-sensitive, and public
+offers, such as seasonal sales, limited-time deals, or customer rewards.
 
-To activate discount and loyalty programs in Point of Sale, navigate to the :ref:`POS
-settings <pos/use/settings>`, scroll down to the :guilabel:`Pricing` section, and enable
+To activate discount and loyalty programs in Point of Sale, navigate to the :ref:`POS settings
+<pos/use/settings>`, scroll down to the :guilabel:`Pricing` section, and enable
 :guilabel:`Promotions, Coupons, Gift Card & Loyalty Program`.
 
-Once the feature has been activated, go to :menuselection:`Point of Sale --> Products -->
-Discount & Loyalty` and :ref:`configure the desired discount and loyalty programs
-<sales/loyalty_discount/configure-programs>`. These programs are triggered when an order meets the defined
-requirements. Depending on the :ref:`program type <sales/pricing_management/program-types>`, rewards
-are either applied automatically or manually by the cashier.
+Once the feature has been activated, go to :menuselection:`Point of Sale --> Products --> Discount &
+Loyalty` and :ref:`configure the desired discount and loyalty programs
+<sales/loyalty_discount/configure-programs>`. These programs are triggered when an order meets the
+defined requirements. Depending on the :ref:`program type <sales/loyalty_discount/program-types>`,
+rewards are either applied automatically or manually by the cashier.
 
 .. seealso::
    :doc:`../../sales/products_prices/loyalty_discount`
@@ -68,8 +73,8 @@ Codes
 -----
 
 To apply a gift card, discount code, or coupon, click the :icon:`fa-ellipsis-v` (:guilabel:`vertical
-ellipsis`) icon, select :icon:`fa-barcode` :guilabel:`Enter Code`, enter or scan the code, and
-click :guilabel:`Apply`.
+ellipsis`) icon, select :icon:`fa-barcode` :guilabel:`Enter Code`, enter or scan the code, and click
+:guilabel:`Apply`.
 
 .. note::
    Coupon and next-order coupon codes are printed directly on customer receipts.
@@ -90,9 +95,9 @@ When the order qualifies for a **Buy X get Y** deal, the reward must be added ma
 Loyalty cards
 -------------
 
-To track or spend loyalty points, you must first :ref:`select a customer
-<pos/use/customers>` in the POS register. Once selected, their :guilabel:`Loyalty point(s)` are
-displayed at the bottom of the cart and updated in real-time.
+To track or spend loyalty points, you must first :ref:`select a customer <pos/use/customers>` in the
+POS register. Once selected, their :guilabel:`Loyalty point(s)` are displayed at the bottom of the
+cart and updated in real-time.
 
 To redeem points for a reward, click the :icon:`oi-ellipsis-v` (:guilabel:`vertical ellipsis`) icon,
 select :icon:`fa-star` :guilabel:`Reward`, and choose the desired item from the list.
@@ -114,8 +119,8 @@ To enable pricelists in the Point of Sale app:
 #. Navigate to :menuselection:`Point of Sale --> Configuration --> Settings`.
 #. In the :guilabel:`Pricing` section, activate the :guilabel:`Flexible Pricelists` feature and
    :guilabel:`Save`.
-#. Once the page reloads, click :icon:`oi-arrow-right` :guilabel:`Pricelists` to :ref:`configure
-   the pricelists <sales/products/pricelist-configuration>`.
+#. Once the page reloads, click :icon:`oi-arrow-right` :guilabel:`Pricelists` to :ref:`configure the
+   pricelists <sales/products/pricelist-configuration>`.
 #. When configured, return to the :ref:`POS settings <pos/use/settings>` to add all relevant
    pricelists to the :guilabel:`Available` field, and select the one to be used as the
    :guilabel:`Default`.
@@ -142,20 +147,20 @@ icon, followed by the currently selected pricelist's name. Then, click the new p
 Cash rounding
 =============
 
-Cash rounding is used when the smallest physical currency denomination (the smallest
-coin) is higher than the minimum unit of account.
+Cash rounding is used when the smallest physical currency denomination (the smallest coin) is higher
+than the minimum unit of account.
 
 For example, in countries that have phased out one-cent and two-cent coins, businesses must round
-the total amount of a cash transaction to the nearest five cents. In Odoo, each point of sale can
-be individually configured to apply these rounding rules to bills and receipts.
+the total amount of a cash transaction to the nearest five cents. In Odoo, each point of sale can be
+individually configured to apply these rounding rules to bills and receipts.
 
 Configuration
 -------------
 
 #. Go to :menuselection:`Point of Sale --> Configuration --> Settings`.
 #. In the :guilabel:`Payment` section, enable :guilabel:`Cash Rounding`.
-#. Enable :guilabel:`Apply only on cash methods` to deactivate rounding for :doc:`card
-   payments <../payment_methods>`.
+#. Enable :guilabel:`Apply only on cash methods` to deactivate rounding for :doc:`card payments
+   <../payment_methods>`.
 #. In the :guilabel:`Rounding Method` field, select an existing method or click :guilabel:`Create`
    to define a new one.
 
@@ -221,20 +226,20 @@ accounts used for each transaction.
 Configuration
 -------------
 
-To use fiscal positions, go to :menuselection:`Point of Sale --> Configuration -->
-Settings`, scroll down to the :guilabel:`Accounting` section, and enable :guilabel:`Flexible Taxes`.
+To use fiscal positions, go to :menuselection:`Point of Sale --> Configuration --> Settings`, scroll
+down to the :guilabel:`Accounting` section, and enable :guilabel:`Flexible Taxes`.
 
 Then, configure the fiscal position for your POS:
 
-- Set the default fiscal position to be automatically applied to all sales in the selected POS
-  using the :guilabel:`Default` field.
+- Set the default fiscal position to be automatically applied to all sales in the selected POS using
+  the :guilabel:`Default` field.
 - Select additional fiscal positions in the :guilabel:`Allowed` field to make them selectable during
   sales.
 
 Depending on the installed :doc:`fiscal localization package
 </applications/finance/fiscal_localizations>`, several fiscal positions are already preconfigured
-and ready to use in the POS. You can also :ref:`create new ones <fiscal_positions/configuration>`
-if needed.
+and ready to use in the POS. You can also :ref:`create new ones <fiscal_positions/configuration>` if
+needed.
 
 .. note::
    - :ref:`A default fiscal position can also be assigned to a customer
@@ -245,6 +250,6 @@ if needed.
 Apply fiscal positions
 ----------------------
 
-To apply a fiscal position to a POS order in the :ref:`POS register <pos/use/open-register>`,
-click the :icon:`fa-ellipsis-v` (:guilabel:`vertical ellipsis`) icon, click the :icon:`fa-book`
+To apply a fiscal position to a POS order in the :ref:`POS register <pos/use/open-register>`, click
+the :icon:`fa-ellipsis-v` (:guilabel:`vertical ellipsis`) icon, click the :icon:`fa-book`
 :guilabel:`Tax` button, and choose the desired fiscal position from the list.
