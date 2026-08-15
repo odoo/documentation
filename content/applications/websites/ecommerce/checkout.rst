@@ -1,3 +1,8 @@
+.. meta::
+   :description: This page describes how to customize order buttons and add-to-cart behavior in Odoo
+                 eCommerce, and outlines the checkout steps customers go through, including order
+                 summary, address, payment, and order confirmation.
+
 =====================
 Ordering and checkout
 =====================
@@ -27,19 +32,18 @@ Add to cart options
 Default add to cart behavior
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When clicking the :guilabel:`Add to Cart` button, the customer remains on
-the product page by default.
+When clicking the :guilabel:`Add to Cart` button, the customer remains on the product page by
+default.
 
 - On the **e-commerce landing page** (`/shop`): if the selected product is configurable (i.e., it
-  has configurable attributes and/or multiple packagings), a :guilabel:`Configure` pop-up opens to let
-  the customer choose the desired options.
+  has configurable attributes and/or multiple packagings), a :guilabel:`Configure` pop-up opens to
+  let the customer choose the desired options.
 - On a specific **product page**: attributes/packagings configuration is done directly on the page.
 
-If the product has linked :ref:`optional products
-<ecommerce/products/cross_upselling>`, a :guilabel:`Configure` pop-up opens
-on both the shop page and the product page. The customer can then choose
-between :guilabel:`Add to Cart` (to stay on the product page) and
-:guilabel:`Go to Checkout` (to be redirected to the cart).
+If the product has linked :ref:`optional products <ecommerce/products/cross_upselling>`, a
+:guilabel:`Configure` pop-up opens on both the shop page and the product page. The customer can then
+choose between :guilabel:`Add to Cart` (to stay on the product page) and :guilabel:`Go to Checkout`
+(to be redirected to the cart).
 
 .. _ecommerce/checkout/prevent-sale:
 
@@ -205,8 +209,8 @@ addresses are identical), and click :guilabel:`Confirm` to proceed to the next s
    - When the :ref:`Pick up in store <ecommerce/shipping/instore-pickup>` delivery method is
      selected, the customer can :guilabel:`Choose a pick-up point` and, if applicable, filter them
      by country, provided several pick-up points are available.
-   - When the :ref:`Expected Delivery <ecommerce/shipping/custom-method>` option is configured,
-     the customer views the expected delivery date or can select a desired delivery date.
+   - When the :ref:`Expected Delivery <ecommerce/shipping/custom-method>` option is configured, the
+     customer views the expected delivery date or can select a desired delivery date.
 
 .. _ecommerce/checkout/address-validation:
 
@@ -245,8 +249,8 @@ payment details, and click :guilabel:`Pay now`.
 .. note::
    - The :guilabel:`Pay now` button label can be customized using the :doc:`website editor
      <../website/web_design>`.
-   - When the :ref:`Cash on Delivery <payment_providers/inperson_payments/cash_on_delivery>`
-     payment option is enabled, the customer must click the :guilabel:`Confirm` button and pay upon
+   - When the :ref:`Cash on Delivery <payment_providers/inperson_payments/cash_on_delivery>` payment
+     option is enabled, the customer must click the :guilabel:`Confirm` button and pay upon
      delivery.
 
 To make payment methods available to customers, configure and enable one or more :doc:`payment
@@ -288,12 +292,12 @@ eCommerce --> Gift cards & eWallet` and :doc:`create a gift card and/or eWallet 
 Order confirmation
 ------------------
 
-The final step of the checkout process is the order confirmation page, which provides a
-summary of the customer's purchase details. A sales order is automatically created in the backend.
+The final step of the checkout process is the order confirmation page, which provides a summary of
+the customer's purchase details. A sales order is automatically created in the backend.
 
 To automatically send notification emails and documents, navigate to :menuselection:`Website -->
-Configuration --> Settings` and scroll down to the :guilabel:`eCommerce` section. Then configure
-the following settings:
+Configuration --> Settings` and scroll down to the :guilabel:`eCommerce` section. Then configure the
+following settings:
 
 - To send an order confirmation email: Under :guilabel:`Order Confirmation`, select an
   :guilabel:`Email` :doc:`template </applications/general/companies/email_template>`, or, if the
@@ -302,8 +306,8 @@ the following settings:
   template, click the :icon:`fa-arrow-right` (:guilabel:`Internal link`) arrow.
 - To send a product review request to the customer: Enable the :ref:`Request ratings
   <ecommerce/handling/rating-request>` setting.
-- To send an invoice to the customer: Enable the :ref:`Automatic Invoice <ecommerce/handling/invoices>`
-  setting.
+- To send an invoice to the customer: Enable the :ref:`Automatic Invoice
+  <ecommerce/handling/invoices>` setting.
 
 .. seealso::
    :doc:`Order handling <order_handling>`
