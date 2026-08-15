@@ -10,11 +10,11 @@ Phone
    As of Odoo 19.0, the *VoIP* module has been renamed to *Odoo Phone*.
 
 The Odoo **Phone** app enables businesses to handle calls over the internet by integrating directly
-with Odoo apps like **CRM** and **Helpdesk**. The **Phone** app can link calls and messages to
-customer interactions, log communication history, and automate call routing based on predefined
-rules. Features like :ref:`call recording <productivity/phone/recording-transcription>` and
-analytics provide insights into call volume and response times, helping businesses streamline
-external communication and track team performance.
+with Odoo apps like **CRM** and **Helpdesk**. The **Phone** app can :doc:`link calls and messages to
+customer interactions <../essentials/activities>`, log communication history, and automate call
+routing based on predefined rules. Features like :ref:`call recording
+<productivity/phone/recording-transcription>` and analytics provide insights into call volume and
+response times, helping businesses streamline external communication and track team performance.
 
 .. cards::
    .. card:: Phone widget
