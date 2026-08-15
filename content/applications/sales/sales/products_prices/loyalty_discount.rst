@@ -28,31 +28,37 @@ Configure discount and loyalty programs
 To create discount and loyalty programs, go to :menuselection:`Sales --> Products --> Discount &
 Loyalty`.
 
-If no discount or loyalty programs have been created yet, Odoo provides a choice of templates to
-help create the first program. Choose one of the template cards, or click :guilabel:`New` to create
-a new program from scratch.
+By default, three sample discount and loyalty programs are available:
 
-Or, if there are already existing programs, select an existing program to edit it.
+- :guilabel:`Code for 10% on orders`
+- :guilabel:`Buy 3 large cabinets, get one for free`
+- :guilabel:`10% Discount Coupons`
 
-.. image:: loyalty_discount/price-discount-loyalty.png
-   :alt: Discount and loyalty program template cards.
-
-.. note::
-   Templates **only** appear when no programs have been created, and they disappear once the first
-   program is created.
-
-Creating or editing a program opens the program form.
+New programs can be created by clicking the :guilabel:`New` button. Existing programs can be edited
+by selecting them. Creating or editing a program opens the program form.
 
 .. image:: loyalty_discount/price-programs.png
    :alt: Program options on the loyalty program form.
 
-The program form contains the following fields:
+The program form typically contains the following fields. The options available may vary depending
+on the :ref:`Program Type <sales/loyalty_discount/program-types>` selected and the applications
+installed in the database.
 
 - :guilabel:`Program Name`: Enter the name of the program in this field. The program name is **not**
   visible to the customer.
 - :guilabel:`Program Type`: Select the desired :ref:`program type
-  <sales/pricing_management/program-types>` from the drop-down menu.
+  <sales/loyalty_discount/program-types>` from the drop-down menu.
 - :guilabel:`Currency`: Select the currency used for the program.
+- :guilabel:`Start Date`: Select the date on which the program becomes valid. Leave this field blank
+  if the program should always be valid and not expire.
+- :guilabel:`End Date`: Select the date on which the program stops being valid. Leave this field
+  blank if the program should always be valid and not expire.
+- :guilabel:`Limit Usage`: If desired, select this checkbox, and enter a number of :guilabel:`usages`
+  to limit the number of times the program can be used during the validity period.
+- :guilabel:`Available On`: Select the apps on which the program is available.
+
+Other commonly encountered fields include:
+
 - :guilabel:`Pricelist`: If desired, select a pricelist from the drop-down menu to have this loyalty
   program applied to a specific pricelist (and customers attached to the pricelist). More than one
   pricelist can be selected in this field. When a single loyalty program is linked to several
@@ -62,23 +68,12 @@ The program form contains the following fields:
 - :guilabel:`Points Unit`: Enter the name of the points used for the :guilabel:`Loyalty Cards`
   program (e.g. `Loyalty Points`). The points unit name *is* visible to the customer. This field is
   **only** available when the :guilabel:`Program Type` is set to :guilabel:`Loyalty Cards`.
-- :guilabel:`Start Date`: Select the date on which the program becomes valid. Leave this field blank
-  if the program should always be valid and not expire.
-- :guilabel:`End Date`: Select the date on which the program stops being valid. Leave this field
-  blank if the program should always be valid and not expire.
-- :guilabel:`Limit Usage`: If desired, tick this checkbox, and enter a number of :guilabel:`usages`
-  to limit the number of times the program can be used during the validity period.
 - :guilabel:`Company`: If working in a multi-company database, choose the one company for which the
   program is available. If left blank, the program is available to all companies in the database.
-- :guilabel:`Available On`: Select the apps on which the program is available.
 - :guilabel:`Website`: Select a website on which the program is available. Leave this field blank to
   make it available on all websites.
-- :guilabel:`Point of Sale`: Select the point(s) of sale at which the program is available. Leave
-  this field blank to make it available at all :abbr:`PoS (Point of Sale)`.
-
-.. note::
-   The options available on the program form vary depending on the :ref:`Program Type
-   <sales/pricing_management/program-types>` selected.
+- :guilabel:`Point of Sale`: Select the points of sale at which the program is available. Leave this
+  field blank to make it available at all :abbr:`PoS (Point of Sale)` stations.
 
 All of the existing cards, codes, coupons, etc. that have been generated for the program are
 accessible through the smart button located at the top of the form.
@@ -87,15 +82,14 @@ accessible through the smart button located at the top of the form.
    :alt: Program items smart button on the loyalty program form.
 
 .. note::
-   In Odoo 17 (and later), when a loyalty card or coupon is associated with a contact in the
-   database, a :guilabel:`Loyalty Cards` smart button conditionally appears on the contact form.
+   When a loyalty card or coupon is associated with a contact in the database, a :guilabel:`Loyalty
+   Cards` smart button conditionally appears on the contact form. This smart button **only** appears
+   if a loyalty card or coupon is associated with the contact.
 
    .. image:: loyalty_discount/loyalty-cards-smart-button.png
       :alt: The Loyalty Card smart button as it appears on a contact form in Odoo 17.
 
-   This smart button **only** appears if a loyalty card or coupon is associated with the contact.
-
-.. _sales/pricing_management/program-types:
+.. _sales/loyalty_discount/program-types:
 
 Program types
 -------------
@@ -131,7 +125,7 @@ In the *Rules & Rewards* tab, click :guilabel:`Add` next to :guilabel:`Condition
 
 .. note::
    The options for :guilabel:`Conditional rules` vary depending on the selected :ref:`Program Type
-   <sales/pricing_management/program-types>`.
+   <sales/loyalty_discount/program-types>`.
 
 The following options are available for configuring conditional rules:
 
@@ -166,11 +160,11 @@ Rewards
 -------
 
 In the *Rules & Rewards* tab of the program form, click :guilabel:`Add` next to :guilabel:`Rewards`
-to add *rewards* to the program. This reveals a :guilabel:`Create Rewards` pop-up window.
+to add *rewards* to the program. This reveals a *Create Rewards* pop-up window.
 
 .. note::
    The options for :guilabel:`Rewards` vary depending on the selected :ref:`Program Type
-   <sales/pricing_management/program-types>`.
+   <sales/loyalty_discount/program-types>`.
 
 The following options are available for configuring rewards:
 
