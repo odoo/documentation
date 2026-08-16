@@ -302,3 +302,4 @@ item(s).
 
 .. toctree::
    rental/manage_deposits
+   rental/customer_signature
