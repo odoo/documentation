@@ -16,8 +16,8 @@ msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-14 17:32+0000\n"
-"PO-Revision-Date: 2026-08-15 10:12+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-08-17 20:08+0000\n"
+"Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-17-doc/inventory_and_mrp/es_419/>\n"
 "Language: es_419\n"
@@ -44903,7 +44903,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:3
 msgid "Dismantle products into components"
-msgstr ""
+msgstr "Desmontar productos para obtener componentes"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:8
 msgid ""
@@ -44913,6 +44913,11 @@ msgid ""
 "components, selling the functional parts to mechanics, who can make use of "
 "those parts."
 msgstr ""
+"Algunas empresas reciben productos de fuentes externas y conservan sus "
+"componentes para usarlos en el futuro. Por ejemplo, un deshuesadero de "
+"automóviles puede recibir vehículos que ya no funcionan y desmontarlos para "
+"obtener sus componentes, y luego vender las piezas funcionales a mecánicos "
+"que pueden aprovecharlas."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:13
 msgid ""
@@ -44921,26 +44926,34 @@ msgid ""
 "material's (BoM) :doc:`by-products <byproducts>` to split the item into "
 "components and add those parts to inventory."
 msgstr ""
+"Mientras que las :doc:`órdenes de desmontaje <unbuild_orders>` se aplican a "
+"productos fabricados, los productos comprados desmontados dependen de los "
+":doc:`subproductos <byproducts>` de una lista de materiales (LdM) para "
+"dividir el artículo en componentes y agregar esas piezas al inventario."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:17
 msgid ""
 "Creating by-products ensures that the components for each product can be "
 "entered into inventory, complete with serial numbers (if they are used)."
 msgstr ""
+"Crear subproductos garantiza que los componentes de cada producto puedan "
+"registrarse en el inventario, incluidos sus números de serie (si se usan)."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:20
 msgid "Typically, the process is as follows:"
-msgstr ""
+msgstr "Por lo general, el proceso es el siguiente:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:22
 msgid ""
 ":ref:`Create a bill of materials for the product to dismantle <manufacturing/"
 "dismantle_products/create-bom>`."
 msgstr ""
+":ref:`Crea una lista de materiales para el producto a desmontar "
+"<manufacturing/dismantle_products/create-bom>`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:24
 msgid "Create a manufacturing order (MO) for the product."
-msgstr ""
+msgstr "Crea una orden de fabricación para el producto."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:25
 msgid ""
@@ -44948,12 +44961,18 @@ msgid ""
 "dismantle_products/dismantle>` and enter any tracking numbers (like lots or "
 "serial numbers) for the component parts."
 msgstr ""
+":ref:`Desmonta el producto para obtener sus componentes como subproductos "
+"<manufacturing/dismantle_products/dismantle>` y registra los números de "
+"rastreo (como lotes o números de serie) de las piezas."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:28
 msgid ""
 ":ref:`Enter parts into inventory <manufacturing/dismantle_products/"
 "inventory>` by clicking :guilabel:`Produce All` on the manufacturing order."
 msgstr ""
+":ref:`Registra las piezas en el inventario <manufacturing/dismantle_products/"
+"inventory>` al hacer clic en :guilabel:`Producir todo` en la orden de "
+"fabricación."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:34
 msgid "Enable settings"
@@ -44965,18 +44984,24 @@ msgid ""
 "to :menuselection:`Manufacturing app --> Configuration --> Settings`. In the "
 "*Operations* section, select the :guilabel:`By-Products` checkbox."
 msgstr ""
+"Para configurar Odoo para desmontar productos y obtener subproductos, ve a "
+":menuselection:`Manufactura --> Configuración --> Ajustes`. En la sección "
+"*Operaciones*, selecciona la casilla :guilabel:`Subproductos`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:None
 msgid "Enable By-Products in the Manufacturing configuration settings."
 msgstr ""
+"Activar los subproductos en los ajustes de configuración de Manufactura."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:46
 msgid "Create bill of materials"
-msgstr ""
+msgstr "Crear una lista de materiales"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:48
 msgid "First, create a new |BoM| for the product that will be dismantled."
 msgstr ""
+"Primero, crea una nueva lista de materiales para el producto que quieres "
+"desmontar."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:50
 msgid ""
@@ -44984,6 +45009,9 @@ msgid ""
 "name the product in a way that differentiates it from the product being "
 "disassembled."
 msgstr ""
+"Configura una :ref:`nueva lista de materiales <manufacturing/basic_setup/bom-"
+"setup>`. Asegúrate de nombrar el producto de forma que se diferencie del "
+"producto que quieres desmontar."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:53
 msgid ""
@@ -44991,6 +45019,9 @@ msgid ""
 "will ensure that the on-hand quantity of the product being disassembled will "
 "decrease by `1` every time an |MO| is completed."
 msgstr ""
+"Agrega el producto que quieres desmontar a la lista de materiales como "
+"componente. Esto hará que la cantidad disponible del producto que quieres "
+"desmontar disminuya en `1` cada vez que completes una orden de fabricación."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:57
 msgid ""
@@ -44998,46 +45029,57 @@ msgid ""
 "|BoM| that define the components that will be entered into inventory as a "
 "result of an |MO|."
 msgstr ""
+":ref:`Agrega subproductos <manufacturing/bill_configuration/by-products>` a "
+"la lista de materiales para definir los componentes que se registrarán en el "
+"inventario como resultado de una orden de fabricación."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:None
 msgid "A Car bill of materials with parts listed as by-products."
 msgstr ""
+"Una lista de materiales de un automóvil con las piezas indicadas como "
+"subproductos."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:63
 msgid ""
 "If necessary, add work orders and operations to the |BoM| to track "
 "disassembly."
 msgstr ""
+"Si es necesario, agrega órdenes de trabajo y operaciones a la lista de "
+"materiales para llevar un registro del desmontaje."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:65
 msgid "After the |BoM| is created, create an |MO| and confirm it."
 msgstr ""
+"Después de crear la lista de materiales, crea una orden de fabricación y "
+"confírmala."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:68
 msgid ":doc:`../basic_setup/one_step_manufacturing`"
-msgstr ""
+msgstr ":doc:`../basic_setup/one_step_manufacturing`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:69
 msgid ":doc:`../basic_setup/two_step_manufacturing`"
-msgstr ""
+msgstr ":doc:`../basic_setup/two_step_manufacturing`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:70
 msgid ":doc:`../basic_setup/three_step_manufacturing`"
-msgstr ""
+msgstr ":doc:`../basic_setup/three_step_manufacturing`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:75
 msgid "Dismantle product"
-msgstr ""
+msgstr "Desmontar el producto"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:77
 msgid ""
 "After the |MO| is confirmed, the product can be broken down into its "
 "component parts."
 msgstr ""
+"Después de confirmar la orden de fabricación, puedes desmontar el producto "
+"para obtener sus componentes."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:79
 msgid "Retrieve the parts, or by-products, from the product."
-msgstr ""
+msgstr "Retira las piezas o subproductos del producto."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:81
 msgid ""
@@ -45046,20 +45088,27 @@ msgid ""
 "icon to open the *Open: Move Byproduct* window. Enter the :guilabel:`Lot/"
 "Serial Number` for each by-product, then click :guilabel:`Save`."
 msgstr ""
+"Si los subproductos tienen seguimiento por lote o número de serie, abre la "
+"pestaña *Subproductos* de la orden de fabricación. Haz clic en el icono "
+":icon:`fa-list` :guilabel:`(Abrir movimiento)` para abrir la ventana *Abrir: "
+"Mover subproducto*. Introduce el :guilabel:`número de serie o lote` de cada "
+"subproducto y haz clic en :guilabel:`Guardar`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:None
 msgid "Two axle by-products are assigned serial numbers."
-msgstr ""
+msgstr "Dos subproductos reciben números de serie."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:91
 msgid "Enter by-products into inventory"
-msgstr ""
+msgstr "Registrar subproductos en el inventario"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:93
 msgid ""
 "To enter the by-products into inventory, click the :guilabel:`Produce All` "
 "button on the |MO|."
 msgstr ""
+"Para registrar los subproductos en el inventario, haz clic en el botón "
+":guilabel:`Producir todo` en la orden de fabricación."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:95
 msgid ""
@@ -45070,20 +45119,30 @@ msgid ""
 "the :guilabel:`Lot/Serial #` associated with the by-products, where it is "
 "moving :guilabel:`From` and :guilabel:`To`, and the :guilabel:`Quantity`."
 msgstr ""
+"Para confirmar que los productos se registraron en el inventario, haz clic "
+"en el botón inteligente :icon:`oi-arrow-up` :guilabel:`Trazabilidad`. El "
+"sistema abre un *reporte de trazabilidad* que muestra la orden de "
+"fabricación responsable de crear los subproductos en la columna "
+":guilabel:`Referencia`, el :guilabel:`número de serie o lote` asociado a los "
+"subproductos, :guilabel:`desde` y :guilabel:`hacia` dónde se mueven, y la "
+":guilabel:`cantidad`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:None
 msgid "A traceability report for a car and its by-products."
-msgstr ""
+msgstr "Un reporte de trazabilidad de un automóvil y sus subproductos."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:104
 msgid ""
 "Similar information can be found on the :icon:`fa-"
 "exchange` :guilabel:`Product Moves` smart button of the manufacturing order."
 msgstr ""
+"Puedes encontrar información similar en el botón inteligente :icon:`fa-"
+"exchange` :guilabel:`Movimientos de producto` de la orden de fabricación."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/dismantle_products.rst:None
 msgid "An Inventory Moves report for a car and its by-products."
 msgstr ""
+"Un reporte de movimientos de inventario de un automóvil y sus subproductos."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/manufacturing_backorders.rst:3
 msgid "Manufacturing backorders"
