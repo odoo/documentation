@@ -5,14 +5,18 @@ Rental product type
 Odoo allows for two :ref:`product types <inventory/type/good-or-services>` when configuring a rental
 product: Goods or Services.
 
-*Goods*: Includes physical items. Goods are removed from the company’s stock, delivered to the
-customer, and then returned.
-
-*Services*: Includes labor, non-physical, or a physical item that never leaves the company’s stock,
-such as a hotel room, work station, or storage unit.
+- *Goods*: Includes physical items. Goods are removed from the company's stock, delivered to the
+  customer, and then returned.
+- *Services*: Includes labor, non-physical, or a physical item that never leaves the company's
+  stock, such as a hotel room, workstation, or storage unit.
 
 The following sections detail basic settings and app integration configurations for goods and
 services.
+
+.. seealso::
+   - :doc:`products`
+   - :doc:`labor_service_products`
+   - :doc:`service_products`
 
 .. _rental/product_type/configuration:
 
@@ -20,8 +24,11 @@ Configuration
 =============
 
 .. important::
-   For the :guilabel:`Rental Transfers` setting, the **Inventory** app must be installed. For the
-   *Rent Online* section settings, the **eCommerce** module must be installed.
+   The *Configuration* menu changes if the **Inventory** or **Sales** apps are installed.
+
+   - For the *Rental Transfers* setting, the **Inventory** app must be installed.
+   - For the *PDF Quote Builder* and *Quotation templates* settings, the **Sales** app must be
+     installed.
 
 To configure default settings on rental products, navigate to :menuselection:`Rental app -->
 Configuration --> Settings`.
@@ -29,8 +36,8 @@ Configuration --> Settings`.
 .. image:: product_type/rental-settings-with-inventory.png
    :alt: A configured Setting page with the Inventory section displayed for the Rental app.
 
-In the *Pick up & Returns* section, the :guilabel:`Unavailability days` limit what days of the week
-customers can book or return rental products online.
+In the *Pick up & Returns* section, the :guilabel:`Availabilities` setting sets what days and
+business hours of the week customers can book or return rental products online at a company level.
 
 In the *Products* section, users can enable the following features: :doc:`Variants
 <../../sales/products_prices/products/variants>`, :doc:`Pricelists
@@ -42,8 +49,9 @@ In the *Quotations* section, users can enable the
 :doc:`../../sales/sales_quotations/pdf_quote_builder` and
 :doc:`../../sales/sales_quotations/quote_template` features to use when creating a quotation.
 
-If the **Inventory** app is installed, the *Inventory* section is displayed. The :guilabel:`Rental
-Transfers` checkbox enables automatic creation of delivery and return receipts for a rental product.
+If the **Inventory** app is installed, the *Inventory* section is displayed. The :ref:`Rental
+Transfers <rental/products/rental-transfers>` checkbox enables automatic creation of delivery and
+return receipts for a rental product.
 
 .. note::
    The **Inventory** app automatically creates an internal default location once the
@@ -83,7 +91,7 @@ creating a product and rental order:
 Search for rental products
 ==========================
 
-To view all products available for rent in the database, navigate to :menuselection:`Rentals app -->
+To view all products available for rent in the database, navigate to :menuselection:`Rental app -->
 Products`. By default, the :guilabel:`Rental` filter appears in the search bar, and the view is
 Kanban. Click the search bar and from the preset filters, select :guilabel:`Goods`,
 :guilabel:`Services`, or both. All the selected options appear as Kanban cards. For Goods, the card
@@ -93,4 +101,3 @@ number of variants if configured, and the rental price.
 .. seealso::
    - :doc:`Configure a service product <service_products>`
    - :doc:`Configure a physical product <products>`
-
