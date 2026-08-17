@@ -777,6 +777,13 @@ Date & Time (`datetime`)
 
             <field name="datetimefield" widget="datetime" options="{'show_time': false}" />
 
+    - `show_week_numbers`: when set to false, it hides the week number column from the
+      date picker calendar (default: `true`).
+
+        .. code-block:: xml
+
+            <field name="datetimefield" widget="datetime" options="{'show_week_numbers': false}" />
+
     - `show_date`: when set to false, it hides the date part from the datetime field.
       The field will still accept datetime values, but the date part will be hidden in
       the UI (default: `true`).
