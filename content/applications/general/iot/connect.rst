@@ -20,6 +20,8 @@ To connect the IoT system to an Odoo database, the following prerequisites must 
    - :doc:`iot_box`
    - :doc:`windows_iot`
 
+.. _iot/iot-odoo/connection:
+
 Connection
 ==========
 
