@@ -89,8 +89,8 @@ In the **Accounting** app, go to :menuselection:`Customers --> Direct Debit Mand
 #. Click :guilabel:`Validate` to activate the mandate.
 
 .. tip::
-   - To print the mandate form after the mandate has been validated, click the :icon:`fa-cog`
-     (:guilabel:`gear`) icon, then select :icon:`fa-print` :guilabel:`(Mandate form)`.
+   To print the mandate form after the mandate has been validated, click the :icon:`fa-cog`
+   (:guilabel:`gear`) icon, then select :icon:`fa-print` :guilabel:`(Mandate form)`.
 
 Once an SDD mandate is active, subsequent SDD payments can be generated via Odoo and :ref:`uploaded
 to your online banking interface <accounting/sepa_payments/XML>`. Customers with an active SDD

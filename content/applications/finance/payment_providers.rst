@@ -223,12 +223,11 @@ Online payment providers
 Bank payments
 -------------
 
-- | :ref:`Wire Transfer <payment_providers/bank_payments/wire_transfer>`
-  | Odoo displays your payment information with a payment reference. You have to approve the payment
-    manually once it has been received in your bank account.
-- | :ref:`SEPA Direct Debit <payment_providers/bank_payments/sdd>`
-  | Customers can make a bank transfer to register a SEPA Direct Debit mandate and allow their
-    account to be charged directly for future payments.
+- :ref:`Wire Transfer <payment_providers/bank_payments/wire_transfer>`: Customers make a bank
+  transfer using your payment information and a payment reference.
+- :ref:`SEPA Direct Debit <payment_providers/bank_payments/sdd>`: Customers make a bank transfer to
+  register a SEPA Direct Debit mandate, allowing their account to be charged directly for future
+  payments.
 
 In-person payments
 ------------------
