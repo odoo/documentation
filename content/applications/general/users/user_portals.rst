@@ -13,6 +13,7 @@ cases for providing portal access include allowing customers and vendors to:
 
 - Follow, view, and pay orders
 - Follow, download, or pay invoices, including partial payments and down payments
+- Manage :ref:`product returns <ecommerce/handling/returns>`
 - Manage payment methods
 - Manage subscriptions
 - Add, remove, or modify their addresses
