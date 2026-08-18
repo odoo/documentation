@@ -197,13 +197,32 @@ items from becoming unavailable after the order is placed.
 Returns and refunds
 -------------------
 
-Customers can :doc:`return </applications/sales/sales/products_prices/returns>` products
-through the :doc:`customer portal </applications/general/users/user_portals>` by navigating to the
-:guilabel:`Your Orders` section, selecting the relevant order, and clicking the :guilabel:`Return`
-button. A return document is automatically generated.
+To allow customers to initiate :doc:`returns </applications/sales/sales/products_prices/returns>`
+through the :doc:`customer portal </applications/general/users/user_portals>`, go to
+:menuselection:`Inventory --> Configuration --> Settings`, scroll down to the :guilabel:`Operations`
+section, and enable :guilabel:`Allow Spontaneous Returns`. Then, specify how many :guilabel:`days
+after delivery` customers can return products, and click :guilabel:`Save`.
 
-.. image:: order_handling/return-button.png
-   :alt: Return button in the portal.
+Once enabled, click :icon:`fa-arrow-right` :guilabel:`Manage Return Reasons` to view all configured
+:guilabel:`Return Reasons`. To create a new reason, click :guilabel:`New` and enter the reason in
+the :guilabel:`Reason` field.
+
+.. note::
+   At least one return reason must exist to allow customers to complete the return process.
+
+Customers can return a product by following these steps:
+
+#. Navigate to the :guilabel:`Your Orders` section of the portal.
+#. Select the relevant order.
+#. Click the :icon:`fa-reply` :guilabel:`Return` button.
+
+   .. image:: order_handling/portal-return-button.png
+      :alt: Return button in the portal.
+
+#. In the :guilabel:`Request a return` pop-up window, specify the quantity of the product to return
+   and select a :guilabel:`Return reason` from the drop-down menu.
+#. Click :guilabel:`Continue` and :guilabel:`Download Return Label` to view and print the return
+   document.
 
 Once the returned items are received, initiate the :doc:`return and refund process
 </applications/sales/sales/products_prices/returns>` in the backend.

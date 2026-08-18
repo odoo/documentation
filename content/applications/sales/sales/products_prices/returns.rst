@@ -118,4 +118,5 @@ When complete, a blue banner reading: :guilabel:`You have outstanding credits fo
 can allocate them to mark this invoice as paid.` appears at the top of the page.
 
 .. seealso::
-   :doc:`../../../finance/accounting/customer_invoices/credit_notes`
+   - :doc:`../../../finance/accounting/customer_invoices/credit_notes`
+   - :ref:`Handling returns through the customer portal <ecommerce/handling/returns>`
