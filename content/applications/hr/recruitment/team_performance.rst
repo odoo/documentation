@@ -6,7 +6,7 @@ The *Team Performance* report in the **Recruitment** app shows how many applican
 managing.
 
 This information is determined by the individuals populating the :ref:`Recruiter
-<recruitment/applicant-details>` field on each applicant form.
+<recruitment/add_applicants/applicant-details>` field on each applicant form.
 
 Open report
 ===========
