@@ -160,20 +160,6 @@ default Odoo.sh server is used.
    Port **25** is and will remain closed. If connecting to an external SMTP server, use port **465**
    or **587**.
 
-Check scheduled actions
------------------------
-
-Scheduled actions are **disabled by default** after importing your database. This prevents your
-newly imported database from performing potentially disruptive operations such as:
-
-- sending queued emails,
-- triggering mass mailings, or
-- syncing with third-party services (e.g., calendars, cloud storage).
-
-If you intend to use this imported database in production, **re-enable** only the scheduled actions
-you need by enabling :ref:`developer mode <developer-mode>` and going to :menuselection:`Settings
---> Technical --> Automation: Scheduled Actions`.
-
 Register the subscription
 -------------------------
 
