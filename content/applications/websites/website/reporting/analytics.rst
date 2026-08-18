@@ -9,18 +9,15 @@ You can track your Odoo website's traffic using :ref:`analytics/plausible` or
 :ref:`analytics/google-analytics`. We recommend using Plausible.io as it is privacy-friendly,
 lightweight, and easy to use.
 
-The Plausible Analytics dashboard is also integrated into Odoo and can be accessed
-via :menuselection:`Website --> Reporting --> Analytics`.
-
 .. _analytics/plausible:
 
 Plausible.io
 ============
 
 Odoo hosts its own Plausible.io server and provides a free and ready-to-use Plausible.io
-solution for **Odoo Online** databases that use the odoo.com domain. Odoo automatically creates and
-sets up your account. Start using it by going to :menuselection:`Website --> Reporting -->
-Analytics`.
+solution for **Odoo Online** databases. Odoo automatically creates and sets up your account. The
+Plausible Analytics dashboard is also integrated into Odoo and can be accessed via
+:menuselection:`Website --> Reporting --> Analytics`.
 
 .. note::
    - If you use a custom :doc:`domain name <../configuration/domain_names>` (e.g., `example.com`),
