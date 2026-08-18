@@ -6,8 +6,8 @@ While we encourage you to adopt your own writing style, some rules still apply t
 and ensure readers can easily understand the content.
 
 .. important::
-   We strongly recommend to read the :doc:`rst_guidelines` and the main :doc:`../documentation`
-   pages before contributing.
+   Please read the :doc:`rst_guidelines` and the main :doc:`../documentation` page before
+   contributing.
 
 .. _contributing/content/organization:
 
@@ -16,18 +16,25 @@ Documentation organization
 
 When writing documentation about a given topic, keep pages within the same folder organized.
 
-For most topics, a single page should do the job. Place it in the appropriate section of the
-documentation (e.g., content related to the CRM app goes under :menuselection:`User Docs --> Sales
---> CRM`) and follow the :ref:`document structure <contributing/content/structure>` guidelines.
+Depending on the complexity of the topic and the extent to which the documentation already covers
+it, the following options are available:
 
-For more complex topics, several pages may be needed to cover all their aspects. Usually, you will
-find yourself adding documentation to a topic that is already partially covered. In that case,
-either create a new page and place it at the same level as other related pages or add new sections
-to an existing page. When documenting a complex topic from scratch, organize the content across
-several child pages that are referenced on that directory's parent page (the :abbr:`TOC (Table Of
-Contents)` page); whenever possible, write content on the parent page and not only on the child
-pages. Make the parent page accessible from the navigation menu by using the
-:ref:`show-content <contributing/rst/document-metadata>` metadata directive.
+- edit a section of an existing page, when the topic is already covered;
+- add a new section to an existing page, when the topic is already partially covered;
+- add a new page, when a single page is sufficient to cover the topic;
+- create several pages, when the topic is complex and requires multiple pages to cover all its
+  aspects.
+
+When adding a new page, place the new page at the same level as other related pages in the
+appropriate section of the documentation (e.g., content related to the CRM app goes under
+:menuselection:`User Docs --> Sales --> CRM`), and follow the :ref:`document structure
+<contributing/content/structure>` guidelines.
+
+When adding multiple pages, organize the content across several :ref:`child pages
+<contributing/rst/toctree>` referenced on the relevant parent page. Whenever possible, write content
+on the parent page as well, not only on the child pages, and make the parent page available from the
+navigation menu using the :ref:`show-content <contributing/rst/document-metadata>` metadata
+directive.
 
 .. note::
    Avoid duplicating content whenever possible; if a topic is already documented on another page,
@@ -128,6 +135,15 @@ Spelling
 --------
 
 Use American English spelling and grammar throughout the documentation.
+
+.. _contributing/content/versions:
+
+Odoo versions
+-------------
+
+Do not reference Odoo's version or compare it with previous versions in the documentation. Instead,
+document features as they exist in the related version and make necessary changes in forward-ports
+or in a separate PR targeting the relevant version of the documentation.
 
 .. _contributing/content/consistency:
 
