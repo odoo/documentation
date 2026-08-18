@@ -94,6 +94,8 @@ Job section
 - :guilabel:`Job Location`: Select the physical address for the job. If the job position is remote,
   leave this field blank. This is visible on the website.
 
+.. _recruitment/new_job/job-posting:
+
 Job posting section
 *******************
 
