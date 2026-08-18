@@ -19,7 +19,7 @@ New
 
 At the start of the process, all applicants appear in the :guilabel:`New` stage on the
 *Applications* page, whether they submitted through the company website, emailed a resumé to the
-email alias, or were :doc:`manually added by a recruiter <add-new-applicants>`.
+email alias, or were :doc:`manually added by a recruiter <add_applicants>`.
 
 The :guilabel:`Applicant`, :guilabel:`Email`, and :guilabel:`Phone` number on the applicant's card
 are filled as soon as it is created. By default, these details are required for every job position.
