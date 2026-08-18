@@ -10,9 +10,12 @@ electronic signatures in Guatemala.
 Legal framework for electronic signatures in Guatemala
 ======================================================
 
-In Guatemala, electronic signatures are regulated under the `Electronic Communications and Signatures Law <https://www.rpsc.gob.gt/wp-content/uploads/2021/10/LEY-PARA-EL-RECONOCIMIENTO-DE-LAS-COMUNICACIONES-Y-FIRMAS-ELECTRONICAS-19-11-2020.pdf>`_.
-The law establishes the legal basis for acknowledging electronic records, contracts, and digital
-signatures. The key points of the law include:
+In Guatemala, electronic signatures are regulated under the
+`Decreto 47-2008 <https://www.congreso.gob.gt/noticias_congreso_show.php?id=7261>`_.
+
+The law governs electronic records, data messages, and the use of electronic signatures.
+
+The key points of the law include:
 
 - **Legal recognition**: electronic signatures are legally equivalent to handwritten signatures if
   they meet certain criteria.
@@ -69,4 +72,5 @@ not be suitable or legally recognized in Guatemala:
    meet all legal requirements. Compliance with additional industry-specific regulations may also be
    necessary.
 
-*Last updated: June 21, 2024*
+*Last updated: June 4, 2026*
+
