@@ -97,12 +97,6 @@ There are three credentials to generate and collect from the `Mercado Pago Devel
 #. Locate the terminal serial number on the back of the terminal and write it down for the
    :ref:`pos/mercado-pago/payment-method` step.
 
-Once the Mercado Pago configuration is complete, log in to your Odoo database to create a
-:ref:`payment method <pos/mercado-pago/payment-method>` using the collected credentials.
-
-.. warning::
-   Odoo does not support the :guilabel:`Standalone` operation mode.
-
 .. note::
    All terminals purchased with your Mercado Pago account are automatically displayed on the
    Mercado Pago dashboard.
@@ -111,6 +105,11 @@ Once the Mercado Pago configuration is complete, log in to your Odoo database to
 
 Odoo POS configuration
 ======================
+
+.. important::
+   For the Mercado Pago terminal to work correctly with Odoo, make sure to :ref:`enable Mercado Pago
+   as a payment provider <payment_providers/mercado_pago/odoo-configuration>` and add the associated
+   account credentials.
 
 #. Go to :menuselection:`Point of Sale --> Configuration --> Settings`, scroll down to the
    :guilabel:`Payment Terminals` section, enable :guilabel:`Mercado Pago`, and click

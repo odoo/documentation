@@ -2,6 +2,10 @@
 Renew subscriptions
 ===================
 
+.. meta::
+   :description:  Learn how to manually create a renewal quotation for an Odoo subscription, from
+                  confirming the order to invoicing and registering payment.
+
 Subscription renewal is the process customers follow when they willingly choose to continue a
 subscription product or service. Subscribers go through the renewal process at different intervals
 -- weekly, monthly, annually, etc. -- depending on the duration of the agreed-upon contract. Most
@@ -30,8 +34,7 @@ have an :guilabel:`In Progress` tag, and have the :guilabel:`Renew` button in th
 directly above the order form.
 
 .. image:: renewals/renew-button.png
-  :align: center
-  :alt: Renew button on subscription sales order with Odoo Subscriptions.
+   :alt: Renew button on subscription sales order with Odoo Subscriptions.
 
 When the :guilabel:`Renew` button is clicked, Odoo instantly presents a new renewal quotation,
 complete with a :guilabel:`Renewal Quotation` tag. Important reference information like the start
@@ -49,8 +52,7 @@ sales orders attached to this subscription, along with their individual :guilabe
 Status`.
 
 .. image:: renewals/sales-history-page.png
-  :align: center
-  :alt: Renewal quotation in the Odoo Subscriptions application.
+   :alt: Sales history showing Subscription Status.
 
 .. seealso::
    - :doc:`../subscriptions`

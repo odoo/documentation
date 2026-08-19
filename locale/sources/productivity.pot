@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-24 17:32+0000\n"
+"POT-Creation-Date: 2026-08-07 17:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -134,7 +134,7 @@ msgid "AI agents"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:7
-msgid "An |AI| agent is a smart virtual assistant in Odoo that can understand natural language, perform tasks, and assist users by interacting with Odoo tools. Agents are a core component of the |AI| structure in Odoo. Each agent has a defined purpose, :ref:`prompt <ai/agents/prompts-in-odoo>`, and a set of :ref:`topics <ai/topics>` and :ref:`tools <ai/tools>` that guide its behavior."
+msgid "An |AI| agent is a smart virtual assistant in Odoo that can understand natural language, perform tasks, and assist users by interacting with Odoo tools. Agents are a core component of the |AI| structure in Odoo. Each agent has a defined purpose, :ref:`prompt <ai/agents/prompts-in-odoo>`, and a set of :ref:`skills <ai/topics>` and :ref:`tools <ai/tools>` that guide its behavior."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:12
@@ -150,11 +150,11 @@ msgid "An Agent analyzing a user request."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:21
-msgid "Agents are formed of two main components, *Topics* and *Sources*."
+msgid "Agents are formed of two main components, *Skills* and *Sources*."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:23
-msgid "*Topics* are the instructions and roles that inform the agent of what tasks they need to complete. *Tools* are assigned to topics, and are the actual functions the agent can utilize to perform tasks."
+msgid "*Skills* are the instructions and roles that inform the agent of what tasks they need to complete. *Tools* are assigned to skills, and are the actual functions the agent can utilize to perform tasks."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:26
@@ -190,11 +190,11 @@ msgid "the type of output expected from the request"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:47
-msgid "In Odoo, each |AI| agent is assigned a *System Prompt*, which defines the agent's overall role, purpose, and behavior. It acts as the core mission statement of the agent, and drives all interactions. During a conversation, the system prompts and topic instructions are continuously applied. They influence how the agent interprets messages, selects tools, uses sources, and determines whether additional actions are required before responding."
+msgid "In Odoo, each |AI| agent is assigned a *System Prompt*, which defines the agent's overall role, purpose, and behavior. It acts as the core mission statement of the agent, and drives all interactions. During a conversation, the system prompts and skill instructions are continuously applied. They influence how the agent interprets messages, selects tools, uses sources, and determines whether additional actions are required before responding."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:53
-msgid "Each :ref:`Topic <ai/topics>` also includes its own prompt-like component, called *Instructions*. Instructions are topic-specific guidelines that refine how the agent behaves within a certain context or workflow, and how it interacts within the Odoo framework."
+msgid "Each :ref:`Skill <ai/topics>` also includes its own prompt-like component, called *Instructions*. Instructions are skill-specific guidelines that refine how the agent behaves within a certain context or workflow, and how it interacts within the Odoo framework."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:57
@@ -202,11 +202,11 @@ msgid "Instructions often include:"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:59
-msgid "A purpose, or what the topic covers."
+msgid "A purpose, or what the skill covers."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:60
-msgid "Rules or constraints for the agent to follow when assigned this topic."
+msgid "Rules or constraints for the agent to follow when assigned this skill."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:61
@@ -222,23 +222,23 @@ msgid "Agent structure"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:70
-msgid "Topics"
+msgid "Skills"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:72
-msgid "*Topics* are a collection of instructions and :ref:`tools <ai/tools>` that define how an agent behaves within a specific context. Essentially, the topics define what an agent can do within the database. Topics guide conversations, telling the agent what it can do, how it can do it, and when it should do it."
+msgid "*Skills* are a collection of instructions and :ref:`tools <ai/tools>` that define how an agent behaves within a specific context. Essentially, the skills define what an agent can do within the database. Skills guide conversations, telling the agent what it can do, how it can do it, and when it should do it."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:78
-msgid "If an agent is not assigned any Topics, it is **only** able to provide information. It **cannot** complete tasks or make changes to the database."
+msgid "If an agent is not assigned any Skills, it is **only** able to provide information. It **cannot** complete tasks or make changes to the database."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:81
-msgid "Within each topic is a detailed prompt, which provides the agent with more in-depth instructions on how to perform the tasks associated with that topic, define the boundaries of its behavior, and determine how it should interpret user intent. These prompts ensure that the agent follows a consistent reasoning pattern and uses the appropriate tools to generate accurate, context-aware responses."
+msgid "Within each skill is a detailed prompt, which provides the agent with more in-depth instructions on how to perform the tasks associated with that skill, define the boundaries of its behavior, and determine how it should interpret user intent. These prompts ensure that the agent follows a consistent reasoning pattern and uses the appropriate tools to generate accurate, context-aware responses."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:87
-msgid "The following topics are preconfigured in the **AI** app:"
+msgid "The following skills are preconfigured in the **AI** app:"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:89
@@ -258,7 +258,7 @@ msgid ":guilabel:`Create Records`: Tools to create records."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:96
-msgid ":guilabel:`Generate Images`: Collection of tools to support image generation. Load this topic when the user asks to generate/enhance an image."
+msgid ":guilabel:`Generate Images`: A collection of tools to support image generation. Load this skill when the user asks to generate or enhance an image."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:98
@@ -270,11 +270,11 @@ msgid ":guilabel:`Website Builder`: Tools for editing Odoo website pages."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:100
-msgid ":guilabel:`Create Leads`: A collection of tools to support automated lead creation. This topic is **only** available if the **CRM** app is installed."
+msgid ":guilabel:`Create Leads`: A collection of tools to support automated lead creation. This skill is **only** available if the **CRM** app is installed."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:103
-msgid "Within each topic is a set of :guilabel:`Instructions`, which act as a prompt and provide guidance for the structure of the interaction, and one or more :ref:`AI Tools <ai/tools>`, which indicate the functions the agent can perform."
+msgid "Within each skill is a set of :guilabel:`Instructions`, which act as a prompt and provide guidance for the structure of the interaction, and one or more :ref:`AI Tools <ai/tools>`, which indicate the functions the agent can perform."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:110
@@ -282,7 +282,7 @@ msgid "Tools"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:112
-msgid "*Tools* are the functions the agent can perform in Odoo. These include actions like creating a lead or opening a view. Tools extend the purpose of the agent beyond conversations, they enable real actions. The available tools in a database vary based on the applications installed. Multiple :guilabel:`AI Tools` can be assigned to a single topic."
+msgid "*Tools* are the functions the agent can perform in Odoo. These include actions like creating a lead or opening a view. Tools extend the purpose of the agent beyond conversations, they enable real actions. The available tools in a database vary based on the applications installed. Multiple :guilabel:`AI Tools` can be assigned to a single skill."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:120
@@ -326,7 +326,7 @@ msgid "Uploaded files"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:143
-msgid "During a conversation with an |AI| agent, additional context can be provided by uploading files. Files are temporarily treated as sources for the ongoing discussion.  The agent can use their content to answer questions, summarize information, or extract relevant details."
+msgid "During a conversation with an |AI| agent, additional context can be provided by uploading files. Files are temporarily treated as sources for the ongoing discussion. The agent can use their content to answer questions, summarize information, or extract relevant details."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:147
@@ -366,7 +366,7 @@ msgid "First, navigate to the :menuselection:`Documents` app and click a documen
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:177
-msgid "In this case, the agent’s responses are grounded in the file currently being previewed, in combination with any other sources assigned to the agent."
+msgid "In this case, the agent's responses are grounded in the file currently being previewed, in combination with any other sources assigned to the agent."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:183
@@ -378,15 +378,15 @@ msgid "To create a new |AI| agent, navigate to the :menuselection:`AI` app and c
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:189
-msgid "Before creating a new agent, it is recommended to have a clear use case in mind. This helps when writing out the :guilabel:`System Prompt`, and assigning the :guilabel:`Topics` and :guilabel:`AI Tools`."
+msgid "Before creating a new agent, it is recommended to have a clear use case in mind. This helps when writing out the :guilabel:`System Prompt`, and assigning the :guilabel:`Skills` and :guilabel:`AI Tools`."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:193
-msgid "Select an :guilabel:`LLM Model` from the drop-down menu."
+msgid "Use the radio buttons to select a :guilabel:`Provider` for this agent."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:196
-msgid "Odoo supports multiple versions of both ChatGPT and Gemini."
+msgid "Odoo supports both ChatGPT (OpenAI) and Gemini (Google)."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:198
@@ -394,26 +394,30 @@ msgid "Next, select a :guilabel:`Response Style`. This manages the overall tone 
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:201
-msgid ":guilabel:`Analytical`: more mathematical, this option is more likely to give the same answer to the same question. This option is recommended for situations where accuracy is more important than diplomacy."
+msgid ":guilabel:`Standard`: Maintains a balanced, professional tone. Provides clear, direct answers with a moderate level of detail."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:204
-msgid ":guilabel:`Balanced`: a mix of both *Analytical* and *Creative*. This is an excellent option for situations with outside customers who would benefit from **both** accuracy and diplomacy."
+#: ../../content/applications/productivity/ai/agents.rst:203
+msgid ":guilabel:`Nuanced`: Provides sophisticated and deeply contextualized responses. Explores multiple perspectives, acknowledges subtleties, and uses precise, academic language where appropriate."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:206
-msgid ":guilabel:`Creative`: approaches questions in a more human way, changes answers every time to react to the conversation. This option works best for times when the solutions often vary based on the situation."
+msgid ":guilabel:`Snappy & Creative`: Punchy, vibrant, and highly engaging. Prioritizes brevity and wit. Uses expressive language, metaphors, and a dynamic structure to keep the user interested."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:210
+#: ../../content/applications/productivity/ai/agents.rst:208
+msgid ":guilabel:`Slow & Rigorous`: Prioritizes absolute precision and logical soundness above all else. Breaks down complex steps, cites reasoning clearly, and verifies every claim. Adopts a meticulous and formal tone."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/agents.rst:212
 msgid "Click the :guilabel:`Restrict to Sources` checkbox to limit the agent to **only** respond based on the provided resources."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:213
-msgid "Next, select one or more :guilabel:`Topics` for the agent. As explained above, :ref:`Topics <ai/topics>` include both instructions and tools that guide the agent in helping users complete a task."
+#: ../../content/applications/productivity/ai/agents.rst:215
+msgid "Next, select one or more :guilabel:`Skills` for the agent. As explained above, :ref:`Skills <ai/topics>` include both instructions and tools that guide the agent in helping users complete a task."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:217
+#: ../../content/applications/productivity/ai/agents.rst:219
 msgid "Enter a :guilabel:`System Prompt` with detailed instructions for the agent as to their role and responsibilities."
 msgstr ""
 
@@ -421,35 +425,35 @@ msgstr ""
 msgid "A new agent form with the required information."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:224
+#: ../../content/applications/productivity/ai/agents.rst:226
 msgid "The specificity and length of the :guilabel:`System Prompt` can vary, depending on the use case for the agent. Use the preconfigured agents as an example of the possible information."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:227
+#: ../../content/applications/productivity/ai/agents.rst:229
 msgid "If *Sources* are needed for the agent, scroll to the :guilabel:`Sources` tab, then click :guilabel:`Add a source`."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:230
+#: ../../content/applications/productivity/ai/agents.rst:232
 msgid "Select a format:"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:232
-msgid "PDFs: Select the appropriate file from the explorer window, and click :guilabel:`Open`"
+#: ../../content/applications/productivity/ai/agents.rst:234
+msgid ":guilabel:`Upload a File`: Select the appropriate file from the explorer window, and click :guilabel:`Open`."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:233
-msgid "Weblinks: Paste the URL. Multiple links can be added at once, paste one link per line. Click :guilabel:`Save`."
+#: ../../content/applications/productivity/ai/agents.rst:236
+msgid ":guilabel:`Add a Link`: Paste the URL. Multiple links can be added at once, paste one link per line. Click :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:235
-msgid "Documents (uploaded in the **Documents** application): Click the checkbox next to one or more documents, then click :guilabel:`Select`."
-msgstr ""
-
-#: ../../content/applications/productivity/ai/agents.rst:237
-msgid "**Knowledge** app articles: Click the checkbox next to one or more articles, then click :guilabel:`Select`."
+#: ../../content/applications/productivity/ai/agents.rst:238
+msgid ":guilabel:`Add from Documents` (uploaded in the **Documents** application): Click the checkbox next to one or more documents, then click :guilabel:`Select`."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:240
+msgid ":guilabel:`Add from Knowledge`: Click the checkbox next to one or more articles, then click :guilabel:`Select`."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/agents.rst:243
 msgid "Once a source is added, the :guilabel:`Status` field updates to reflect its current status. The source is ready when the status changes from *Processing* to *Indexed*. Slide the :guilabel:`Active` toggle to activate the source."
 msgstr ""
 
@@ -457,27 +461,27 @@ msgstr ""
 msgid "A list of sources for an agent, each denoted with their format."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:248
-msgid "If a source fails to upload, it could be the result of a conflict with the selected LLM model."
-msgstr ""
-
-#: ../../content/applications/productivity/ai/agents.rst:250
-msgid "Click the :guilabel:`Test` button to open a conversation window and test the new agent."
+#: ../../content/applications/productivity/ai/agents.rst:251
+msgid "If a source fails to upload, it could be the result of a conflict with the selected provider."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/agents.rst:253
+msgid "Click the :guilabel:`Test` button to open a conversation window and test the new agent."
+msgstr ""
+
+#: ../../content/applications/productivity/ai/agents.rst:256
 msgid "Manually reprocessing sources"
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:255
+#: ../../content/applications/productivity/ai/agents.rst:258
 msgid "If the content of a source changes after it has been indexed, it may be necessary to reprocess the source so that agents use the most recent information. Reprocessing can be triggered manually and ensures that updated documents, links, or knowledge articles are reflected in future agent responses."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:260
+#: ../../content/applications/productivity/ai/agents.rst:263
 msgid "To reprocess a source, navigate to the :menuselection:`AI` app. Select an |AI| agent, and on the kanban card, click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon, then click :guilabel:`Configuration`."
 msgstr ""
 
-#: ../../content/applications/productivity/ai/agents.rst:264
+#: ../../content/applications/productivity/ai/agents.rst:267
 msgid "On the *Sources* tab, click :guilabel:`Reprocess` :icon:`fa-refresh` next to any source that should be updated."
 msgstr ""
 
@@ -490,11 +494,11 @@ msgid "AI API keys"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/apikeys.rst:8
-msgid "Odoo's **AI** application settings contain options to control which |AI| provider the app utilizes, manage |API| credentials, and define the default prompts. Odoo supports both Gemini and OpenAI (ChatGPT) as providers in the  **AI** application."
+msgid "Odoo's **AI** application settings contain options to control which |AI| provider the app utilizes, manage |API| credentials, and define the default prompts. Odoo supports both Gemini and OpenAI (ChatGPT) as providers in the **AI** application."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/apikeys.rst:12
-msgid "Some |AI| features can be used without the  **AI** app installed. However, to use custom |API| credentials or to alter the |AI| provider used for a specific agent, the app **must** be installed."
+msgid "Some |AI| features can be used without the  *AI** app installed. However, to use custom |API| credentials or to alter the |AI| provider used for a specific agent, the app **must** be installed."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/apikeys.rst:16
@@ -558,7 +562,7 @@ msgid "The popup displaying the newly created OpenAI key."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/apikeys.rst:65
-msgid "Return to Odoo, and navigate to :menuselection:`AI app --> Configuration --> Settings`. Under *Providers*, tick the checkbox for :guilabel:`Use your own ChatGPT account`, and paste the new key in the :guilabel:`Key` field. Click :guilabel:`Save` when finished."
+msgid "Return to Odoo, and navigate to :menuselection:`AI app --> Configuration --> Settings`. Under *AI Providers*, select the checkbox for :guilabel:`OpenAI ChatGPT account`, and paste the new key in the :guilabel:`Key` field. Click :guilabel:`Save` when finished."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/apikeys.rst:72
@@ -586,7 +590,7 @@ msgid "The new Gemini key with the copy button highlighted."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/apikeys.rst:91
-msgid "Return to Odoo, and navigate to :menuselection:`AI app --> Configuration --> Settings`. Under *Providers*, tick the checkbox for :guilabel:`Use your own Google Gemini account`, and paste the new key in the :guilabel:`Key` field. Click :guilabel:`Save` when finished."
+msgid "Return to Odoo, and navigate to :menuselection:`AI app --> Configuration --> Settings`. Under *AI Providers*, select the checkbox for :guilabel:`Google Gemini account`, and paste the new key in the :guilabel:`Key` field. Click :guilabel:`Save` when finished."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/apikeys.rst:96
@@ -1064,7 +1068,7 @@ msgid "The edit properties pop-up on a form view."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/fields.rst:90
-msgid ":ref:`Property fields <property_field/add>` can only be added to form views."
+msgid ":ref:`Property fields <essentials/property-fields/add>` can only be added to form views."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/fields.rst:93
@@ -1100,7 +1104,7 @@ msgid "Generate an image"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/generate_images.rst:17
-msgid "To generate an image, navigate to the :menuselection:`AI app` and click on the :guilabel:`Odoo Image Generation Agent` to open a conversation. Enter a :ref:`prompt <ai/effective-prompts>` describing the desired image, then click enter."
+msgid "To generate an image, navigate to the :menuselection:`AI app` and click on the :guilabel:`Odoo Image Generation Agent` to open a conversation. Enter a :ref:`prompt <ai/effective-prompts>` describing the desired image, then press Enter."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/generate_images.rst:21
@@ -1116,7 +1120,7 @@ msgid "An example conversation with the agent."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/generate_images.rst:33
-msgid "If text, branding, or logos are required in the generated image, these elements must be **explicitly** included in the prompt. Otherwise, generated images exclude visible text by default, according to the rules defined in both the image generation agent and the *Generate Images* topic."
+msgid "If text, branding, or logos are required in the generated image, these elements must be **explicitly** included in the prompt. Otherwise, generated images exclude visible text by default, according to the rules defined in both the image generation agent and the *Generate Images* skill."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/generate_images.rst:39
@@ -1188,7 +1192,7 @@ msgid "AI image generation in Odoo is powered by a dedicated AI agent called the
 msgstr ""
 
 #: ../../content/applications/productivity/ai/generate_images.rst:85
-msgid "The image generation agent works together with a topic called *Generate Images*. The agent prompt defines the high-level behavior of the image generation workflow, while the topic instructions provide more detailed guidance regarding how images should be generated and refined."
+msgid "The image generation agent works together with a skill called *Generate Images*. The agent prompt defines the high-level behavior of the image generation workflow, while the skill instructions provide more detailed guidance regarding how images should be generated and refined."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/generate_images.rst:89
@@ -1196,11 +1200,11 @@ msgid "The agent prompt primarily controls how text and branding are handled in 
 msgstr ""
 
 #: ../../content/applications/productivity/ai/generate_images.rst:94
-msgid "The *Generate Images* topic contains the detailed image-generation instructions used during the creation process. These instructions guide how the AI should preserve the identity of a subject, how new environments should be generated, and how each image variation should remain visually distinct from previous generations."
+msgid "The *Generate Images* skill contains the detailed image-generation instructions used during the creation process. These instructions guide how the AI should preserve the identity of a subject, how new environments should be generated, and how each image variation should remain visually distinct from previous generations."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/generate_images.rst:99
-msgid "Together, the agent and topic ensure that generated images remain both visually coherent and contextually relevant while still allowing for creative variation."
+msgid "Together, the agent and skill ensure that generated images remain both visually coherent and contextually relevant while still allowing for creative variation."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/improve_text.rst:3
@@ -1320,7 +1324,7 @@ msgid "Odoo's **AI** application can be integrated with **Live Chat** to enable 
 msgstr ""
 
 #: ../../content/applications/productivity/ai/live-chat.rst:10
-msgid "AI responses are generated in real-time and follow the rules and instructions defined in the assigned agent and topics."
+msgid "AI responses are generated in real-time and follow the rules and instructions defined in the assigned agent and skills."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/live-chat.rst:14
@@ -1400,7 +1404,7 @@ msgid "How escalation is triggered"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/live-chat.rst:76
-msgid "Escalation to human follow-up is defined explicitly in the agent's prompt and delegated to a dedicated topic."
+msgid "Escalation to human follow-up is defined explicitly in the agent's prompt and delegated to a dedicated skill."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/live-chat.rst:79
@@ -1424,19 +1428,19 @@ msgid "The agent cannot respond with high confidence."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/live-chat.rst:86
-msgid "When one of these conditions is met, the agent activates the *Lead Creation* :ref:`topic <ai/topics>`."
+msgid "When one of these conditions is met, the agent activates the *Lead Creation* :ref:`skill <ai/topics>`."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/live-chat.rst:90
-msgid "Lead creation topic"
+msgid "Lead creation skill"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/live-chat.rst:92
-msgid "The Lead creation topic defines a structured, multi-step workflow that governs how contact information is collected and how a lead is created."
+msgid "The Lead Creation skill defines a structured, multi-step workflow that governs how contact information is collected and how a lead is created."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/live-chat.rst:95
-msgid "This topic specifies:"
+msgid "This skill specifies:"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/live-chat.rst:97
@@ -1476,11 +1480,11 @@ msgid "Calls the lead creation tool exactly once"
 msgstr ""
 
 #: ../../content/applications/productivity/ai/live-chat.rst:109
-msgid "The topic also enforces strict constraints to prevent system-centric language, duplicate lead creation, or premature promises of follow-up."
+msgid "The skill also enforces strict constraints to prevent system-centric language, duplicate lead creation, or premature promises of follow-up."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/live-chat.rst:112
-msgid "To view the detailed instructions for the lead creation topic, navigate to the :menuselection:`AI app --> Agents --> Topics`, and click :guilabel:`Create Leads`."
+msgid "To view the detailed instructions for the lead creation skill, navigate to the :menuselection:`AI app --> Agents --> Skills`, and click :guilabel:`Create Leads`."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/live-chat.rst:116
@@ -1733,7 +1737,7 @@ msgid "This allows the agent to provide responses grounded in internal documenta
 msgstr ""
 
 #: ../../content/applications/productivity/ai/support_operations.rst:40
-msgid "Agents can be restricted to specific sources or granted permissions to perform actions using topics. This ensures that support assistants behave predictably and remain aligned with organizational rules."
+msgid "Agents can be restricted to specific sources or granted permissions to perform actions using skills. This ensures that support assistants behave predictably and remain aligned with organizational rules."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/support_operations.rst:45
@@ -1777,7 +1781,7 @@ msgid "Select :guilabel:`Restrict to Sources` to require the agent to **only** b
 msgstr ""
 
 #: ../../content/applications/productivity/ai/support_operations.rst:87
-msgid "Users may also define *topics*, which grant the agent permission to perform specific actions. :ref:`Topics <ai/topics>` allow advanced scenarios such as record creation or automation triggers."
+msgid "Users may also define *skills*, which grant the agent permission to perform specific actions. :ref:`Skills <ai/topics>` allow advanced scenarios such as record creation or automation triggers."
 msgstr ""
 
 #: ../../content/applications/productivity/ai/support_operations.rst:None

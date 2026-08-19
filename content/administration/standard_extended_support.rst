@@ -32,6 +32,12 @@ The table below shows the support status of every version. Major releases are hi
      - On-premise
      - Release date
      - End of standard support
+   * - Odoo SaaS 19.4
+     - |green|
+     - N/A
+     - N/A
+     - July 2026
+     -
    * - Odoo SaaS 19.3
      - |green|
      - N/A
@@ -45,7 +51,7 @@ The table below shows the support status of every version. Major releases are hi
      - March 2026
      -
    * - Odoo SaaS 19.1
-     - |green|
+     - |red|
      - N/A
      - N/A
      - January 2026

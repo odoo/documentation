@@ -12,8 +12,9 @@ Phone
 The Odoo **Phone** app enables businesses to handle calls over the internet by integrating directly
 with Odoo apps like **CRM** and **Helpdesk**. The **Phone** app can link calls and messages to
 customer interactions, log communication history, and automate call routing based on predefined
-rules. Features like call recording and analytics provide insights into call volume and response
-times, helping businesses streamline external communication and track team performance.
+rules. Features like :ref:`call recording <productivity/phone/recording-transcription>` and
+analytics provide insights into call volume and response times, helping businesses streamline
+external communication and track team performance.
 
 .. cards::
    .. card:: Phone widget
@@ -33,6 +34,8 @@ times, helping businesses streamline external communication and track team perfo
 .. seealso::
    `Odoo Tutorials: Phone <https://www.odoo.com/slides/voip-voice-over-ip-315>`_
 
+.. _productivity/phone/about-voip:
+
 About VoIP
 ==========
 
@@ -46,6 +49,8 @@ The **Phone** app uses the following technologies to make and receive calls in O
   for help if no support agents are available.
 - **Dial plans**: A system to define how |VOIP| calls are routed, based on set rules.
 
+.. _productivity/phone/configure:
+
 Configure the Phone app
 =======================
 
@@ -55,6 +60,8 @@ Once the app is installed, a :icon:`oi-voip` (:guilabel:`Phone`) icon will appea
 screen. When this icon is clicked, a **Phone** pop-up widget appears on the screen. This is where
 users can make and receive calls, send emails, edit user and employee info, and manage activities.
 The widget stays open when navigating other Odoo apps.
+
+.. _productivity/phone/assign-user-permissions:
 
 Assign user permissions
 -----------------------
@@ -81,6 +88,8 @@ The **Phone** app has three access roles:
 
 To modify these roles or add custom roles, see :ref:`Create and modify groups
 <access-rights/groups>`.
+
+.. _productivity/phone/connect-voip-provider:
 
 Connect to a VoIP provider
 --------------------------
@@ -130,6 +139,90 @@ URL). Enter the domain created by the alternate provider in the :guilabel:`OnSIP
 For issues setting up the |VOIP| service provider in Odoo, follow the :ref:`relevant troubleshooting
 steps <phone/phone_widget/troubleshooting>`. For any other issues with the |VOIP| service provider,
 contact their support team directly.
+
+.. _productivity/phone/recording-transcription:
+
+Record and transcribe calls
+===========================
+
+Calls made through the **Phone** app can be recorded, and recordings can be transcribed into text.
+
+.. _productivity/phone/configure-recording:
+
+Configure call recording
+------------------------
+
+To configure call recording and transcription, go to :menuselection:`Phone app --> Configuration -->
+Providers`. For each |VOIP| provider, select the desired setting:
+
+- :guilabel:`Call Recording`: Select :guilabel:`Disabled`, :guilabel:`Let users decide`, or
+  :guilabel:`Force for all users`.
+- :guilabel:`Transcription`: Select :guilabel:`Disable` or :guilabel:`Force for all users`.
+
+.. image:: phone/phone-recording-transcription-settings.png
+   :alt: The Call Recording and Transcription columns on the VoIP Providers settings page.
+
+Recordings are stored using the :doc:`Cloud Storage <../general/integrations/cloud_storage>`
+integration. If it is not configured, a warning is shown on this page, and call recording cannot be
+enabled.
+
+.. _productivity/phone/request-transcription:
+
+Request a transcription
+-----------------------
+
+After a call has been recorded, its recording can be transcribed into text. A
+:guilabel:`Transcription pending...` banner appears at the top of the call's record, with a
+:guilabel:`Request Transcription` button. Transcription is only available when enabled for the
+call's |VOIP| provider (see :ref:`productivity/phone/configure-recording` above).
+
+.. image:: phone/phone-request-transcription-banner.png
+   :alt: The Transcription pending banner with the Request Transcription button.
+
+If the transcription fails, the banner displays an error message instead.
+
+.. _productivity/phone/call-debrief-panel:
+
+Call Debrief panel
+------------------
+
+Once a call has a recording or transcript, a **Call Debrief** panel with a timestamped transcript
+and audio player appears. The transcript and audio player are synced. Click a line in the transcript
+to jump to that moment in the recording, or play the recording to highlight each corresponding line
+as it plays.
+
+.. image:: phone/phone-call-debrief-panel.png
+   :alt: The Call Debrief panel with a synced transcript and audio player.
+
+The audio player has a timeline with a marker for each transcript line and the following controls:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Control
+     - Description
+     - Keyboard shortcut
+   * - :icon:`fa-play` :guilabel:`Play`
+     - Play or pause the recording.
+     - :kbd:`K`
+   * - :icon:`fa-backward` :guilabel:`Skip backward`
+     - Skip backward 5 seconds in the recording.
+     - :kbd:`J`
+   * - :icon:`fa-forward` :guilabel:`Skip forward`
+     - Skip forward 5 seconds in the recording.
+     - :kbd:`L`
+   * - :icon:`fa-volume-up` :guilabel:`Mute`
+     - Hover over the icon to reveal a volume slider.
+     - :kbd:`M`
+   * - :guilabel:`1x`
+     - Change the playback speed. Speeds between 0.25x and 3x are available in increments of 0.25.
+     - :kbd:`Shift + ,` to decrease, :kbd:`Shift + .` to increase
+   * - :icon:`fa-download` :guilabel:`Download`
+     - Download the recording as an MP3 audio file.
+     - N/A
+
+.. _productivity/phone/voip-workflows:
 
 VoIP workflows
 ==============

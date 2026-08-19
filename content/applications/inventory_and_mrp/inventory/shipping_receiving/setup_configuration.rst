@@ -107,6 +107,7 @@ supports.
    setup_configuration/fedex
    setup_configuration/sendcloud_shipping
    setup_configuration/shiprocket
+   setup_configuration/shipstation
    setup_configuration/starshipit_shipping
    setup_configuration/ups_credentials
    setup_configuration/usps

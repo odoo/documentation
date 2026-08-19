@@ -203,8 +203,8 @@ is used in the Project app to plan an itinerary between different tasks.
 - To add information from other fields, select them under :guilabel:`Additional Fields`.
 - To have a route suggested between the different records, select a :guilabel:`Routing` mode
   (:guilabel:`Optimized` or :guilabel:`Ordered`). The view requires a valid :ref:`Mapbox token
-  <services/field_service/planning_itinerary>` and at least two located records, or one located
-  record and the user's current position.
+  <planning/field-service/itinerary>` and at least two located records, or one located record and
+  the user's current position.
 
   - :guilabel:`Optimized`: Computes the route for minimal travel time between records.
   - :guilabel:`Ordered`: Routes strictly follow the default order (:guilabel:`Sort by`) set

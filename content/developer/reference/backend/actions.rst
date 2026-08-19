@@ -471,7 +471,7 @@ Do not reschedule yourself the job.
         records = self.search(domain, limit=limit)
         records.do_something()
         # notify progression
-        remaining = 0 if len(records) == limit else self.search_count(domain)
+        remaining = 0 if len(records) < limit else self.search_count(domain)
         self.env['ir.cron']._commit_progress(len(records), remaining=remaining)
 
 In some cases, you may want to share resources between multiple batches or

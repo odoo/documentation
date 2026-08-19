@@ -8,7 +8,7 @@ chat channel, an AI agent can answer common questions, request additional inform
 when a conversation needs to be escalated to a human operator.
 
 AI responses are generated in real-time and follow the rules and instructions defined in the
-assigned agent and topics.
+assigned agent and skills.
 
 Connecting an agent to live chat
 ================================
@@ -22,9 +22,9 @@ First, confirm that both the **Live Chat** and **AI** applications are installed
     .. image:: live-chat/livechat-agent.png
        :alt: The preconfigured AI Live Chat agent in the AI app.
 
-Navigate to the **Live Chat** application and select a live chat channel. On the channel card,
-click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon, then click
-:guilabel:`Configure Channel`.
+Navigate to the **Live Chat** application and select a live chat channel. On the channel card, click
+the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon, then click :guilabel:`Configure
+Channel`.
 
 On the channel page, click on the :guilabel:`Rules` tab. Click on an existing rule, or click
 :guilabel:`Add a line` to add a new rule. On the *Open: Rules* pop-up, click in the :guilabel:`AI
@@ -74,7 +74,7 @@ How escalation is triggered
 ---------------------------
 
 Escalation to human follow-up is defined explicitly in the agent's prompt and delegated to a
-dedicated topic.
+dedicated skill.
 
 Conversations are escalated when one of the following occurs:
 
@@ -83,16 +83,16 @@ Conversations are escalated when one of the following occurs:
 - The user explicitly asks to be contacted or requests a demo.
 - The agent cannot respond with high confidence.
 
-When one of these conditions is met, the agent activates the *Lead Creation* :ref:`topic
+When one of these conditions is met, the agent activates the *Lead Creation* :ref:`skill
 <ai/topics>`.
 
-Lead creation topic
+Lead creation skill
 ~~~~~~~~~~~~~~~~~~~
 
-The Lead creation topic defines a structured, multi-step workflow that governs how contact
+The Lead Creation skill defines a structured, multi-step workflow that governs how contact
 information is collected and how a lead is created.
 
-This topic specifies:
+This skill specifies:
 
 - when lead creation is appropriate
 - what information must be collected
@@ -106,11 +106,11 @@ Rather than immediately creating a lead, the agent completes the following steps
 #. Confirms known details before proceeding
 #. Calls the lead creation tool exactly once
 
-The topic also enforces strict constraints to prevent system-centric language, duplicate lead
+The skill also enforces strict constraints to prevent system-centric language, duplicate lead
 creation, or premature promises of follow-up.
 
-To view the detailed instructions for the lead creation topic, navigate to the :menuselection:`AI
-app --> Agents --> Topics`, and click :guilabel:`Create Leads`.
+To view the detailed instructions for the lead creation skill, navigate to the :menuselection:`AI
+app --> Agents --> Skills`, and click :guilabel:`Create Leads`.
 
 .. seealso::
    :doc:`AI Agents <agents>`

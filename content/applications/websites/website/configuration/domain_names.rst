@@ -121,11 +121,10 @@ to a mailbox.
 Use a subdomain
 ~~~~~~~~~~~~~~~
 
-After :ref:`creating a subdomain <domain-name/register/subdomains>`, go to the database and open
-the :guilabel:`Settings` app. Under the :guilabel:`Alias Domain` field, enter the subdomain (e.g.,
-`subdomain.yourdomain.com`), click :guilabel:`Create`, and then :guilabel:`Save`.
+Create a dedicated subdomain (for example, ``mail.mydomain.com``) to :ref:`route incoming emails
+directly to your Odoo database via DNS records <dns_record_setup>`.
 
-.. _domain-name/register/mailbox/external:
+.. _domain-name/external-email:
 
 Use an external email provider
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -411,7 +410,8 @@ protocol.
 
 Odoo generates a separate SSL certificate for each domain :ref:`mapped to a database
 <domain-name/existing/db-map>` using `Let's Encrypt's certificate authority and ACME protocol
-<https://letsencrypt.org/how-it-works/>`_.
+<https://letsencrypt.org/how-it-works/>`_. Any CAA records configured for the domain must `allow
+Let's Encrypt <https://letsencrypt.org/docs/caa/>`_, otherwise certificate generation may fail.
 
 .. note::
    - Certificate generation may take up to 24 hours.

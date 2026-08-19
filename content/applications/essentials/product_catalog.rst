@@ -59,6 +59,7 @@ details about the corresponding product:
 - Product title
 - Price or cost of the product, depending on whether it is bought, sold, or used as a component
 - Reference code (e.g. *DESK0005*)
+- Available quantity
 - On-hand quantity
 - Variant attributes (e.g., colors, materials, customizations, etc.)
 - :icon:`fa-shopping-cart` :guilabel:`Add` button (if relevant to the current app)

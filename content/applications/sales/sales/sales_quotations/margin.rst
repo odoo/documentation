@@ -53,6 +53,8 @@ currency as well as the percentage.
 .. image:: margin/sales-order-margin.png
    :alt: Sales order with Margin field on the bottom.
 
+.. _sales/margin/margin-sale-order-line:
+
 Compute margins on sales order lines
 ------------------------------------
 

@@ -21,6 +21,8 @@ section, tick the :guilabel:`Storage Locations` checkbox. Then, click :guilabel:
 .. image:: use_locations/enable-location.png
    :alt: Show Storage Locations feature.
 
+.. _inventory/use_locations/new-location:
+
 Create new location
 ===================
 

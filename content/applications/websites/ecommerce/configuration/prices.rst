@@ -101,7 +101,7 @@ In the :guilabel:`Ecommerce` tab, configure options specific to online sales, su
      pricelist will not be used, unless it is :ref:`selectable
      <ecommerce/prices/selectable-pricelists>`.
    - Pricelists can also be :ref:`assigned to a specific customer
-     <sales/products/customer-pricelist-application>`.
+     <sales/pricing/customer-pricelist-application>`.
 
 .. note::
    - When pricelists are enabled in the Sales app, they are automatically enabled in the eCommerce
@@ -135,7 +135,7 @@ To make a pricelist selectable, enable :guilabel:`Selectable`.
    - If a pricelist does *not* appear in the selector, it may be due to the following situations:
 
       - Only one pricelist is defined as :guilabel:`Selectable`, and the :ref:`contact has a
-        pricelist assigned <sales/products/customer-pricelist-application>`.
+        pricelist assigned <sales/pricing/customer-pricelist-application>`.
       - Multiple selectable pricelists exist, but only those matching the customer's :ref:`country
         group <ecommerce/prices/country-groups>` are shown. It is strongly recommended to disable
         the :guilabel:`Selectable` option when using pricelists with country groups on the
@@ -204,7 +204,7 @@ when no country group is assigned. If :ref:`GeoIP and country groups <ecommerce/
 used, public users see the pricelist of their country group by default.
 
 :ref:`Logged-in users <ecommerce/customer_accounts/shop-access>` with :ref:`assigned pricelists
-<sales/products/customer-pricelist-application>` see the assigned pricelist by default **if it is
+<sales/pricing/customer-pricelist-application>` see the assigned pricelist by default **if it is
 assigned to the website** they are visiting. If not, the website's default pricelist is applied
 (i.e., the first available pricelist assigned to the website and without a country group, following
 the sequence order).
@@ -236,7 +236,7 @@ To enable :doc:`discount programs </applications/sales/sales/products_prices/loy
 your e-commerce, go to :menuselection:`Website --> Configuration --> Settings`, scroll down to the
 :guilabel:`eCommerce` section, and enable the :guilabel:`Discounts, Loyalty & Gift Card` feature.
 
-:ref:`Configure <sales/products/loyalty-programs>` the discount program, make sure the
+:ref:`Configure <sales/loyalty_discount/configure-programs>` the discount program, make sure the
 :guilabel:`Website` option is enabled, and add the relevant :ref:`Pricelist
 <ecommerce/prices/pricelists>` and :guilabel:`Website` on the program form, if needed.
 
@@ -342,7 +342,7 @@ selected shop categories is then replaced by a default :guilabel:`Contact us` bu
      accidentally displaying the zero-priced pricelist.
    - To hide prices from public visitors while keeping them visible to logged-in customers, create a
      zero-priced pricelist for non-logged-in customers and :ref:`assign
-     <sales/products/customer-pricelist-application>` a regular pricelist (with actual prices) to
+     <sales/pricing/customer-pricelist-application>` a regular pricelist (with actual prices) to
      customers with :doc:`portal access <../../../general/users/user_portals/portal_access>`.
 
 .. seealso::
