@@ -4,7 +4,7 @@ Recruitment flow
 
 When a prospective employee applies for a job in Odoo, there is a preconfigured process from the
 :ref:`initial inquiry <recruitment/recruitment_flow/new>` to the :ref:`creation of a new employee
-<recruitment/offer_job_position/new-employee>` once hired. The following outlines the default
+<recruitment/offer_job_positions/new-employee>` once hired. The following outlines the default
 recruitment process for Odoo's **Recruitment** application.
 
 .. important::
