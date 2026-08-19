@@ -2,39 +2,167 @@
 Germany
 =======
 
-Accounting
-==========
+.. _localizations/germany/configuration/modules:
+
+Modules
+=======
+
+The following modules are installed automatically with the German localization:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 25 50
+
+   * - Name
+     - Technical name
+     - Description
+   * - :guilabel:`Germany - Accounting`
+     - `l10n_de`
+     - German :ref:`fiscal localization package <fiscal_localizations/packages>`. By default, the
+       audit trail is enabled to ensure compliance with GoBD.
+   * - :guilabel:`Germany - Accounting Reports`
+     - `l10n_de_reports`
+     - Provides German accounting reports and adds DATEV export options to the general ledger.
+   * - :guilabel:`Germany - Certification for Point of Sale`
+     - `l10n_de_pos_cert`
+     - Includes the implementation of the Technical Security System, using a cloud-based solution
+       from Fiskaly.
+   * - :guilabel:`Germany - Certification for Point of Sale of type restaurant`
+     - `l10n_de_pos_res_cert`
+     - Adds the new regulatory requirements specifically related to the restaurant industry in
+       Germany.
+
+Additionally, the following modules must be manually :ref:`installed <general/install>`:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 25 50
+
+   * - Name
+     - Technical name
+     - Description
+   * - :guilabel:`Germany - Elster Tax Submission`
+     - `l10n_de_reports_elster`
+     - Electronic submission of the German *UStVA* (advance tax return) to the Finanzamt via the
+       Elster system.
+
+.. note::
+   In some cases, such as when upgrading to a version with additional modules, it is possible that
+   modules may not be installed automatically. Any missing modules can be manually :doc:`installed
+   <../../general/apps_modules>`.
+
+.. _localizations/germany/loc-overview:
+
+Localization overview
+=====================
+
+The German localization package ensures compliance with German fiscal and accounting regulations. It
+includes tools for managing taxes, fiscal positions, and reporting, as well as a predefined chart of
+accounts tailored to Germany’s standards.
+
+The German localization package provides the following key features to ensure compliance with local
+fiscal and accounting regulations:
+
+- :ref:`Chart of accounts<localizations/germany/coa>`
+- :doc:`../accounting/taxes/fiscal_positions`: automated tax adjustments based on customer or
+  supplier registration status
+- :doc:`Taxes <../accounting/taxes>`: pre-configured tax rates, including standard VAT,
+  zero-rated, and exempt options
+- :ref:`Reporting <localizations/germany/reporting>`
+
+.. _localizations/germany/coa:
 
 Chart of accounts
 -----------------
 
-Both SKR03 and SKR04 charts of accounts are supported in Odoo. When you create a new Odoo Online
-database, SKR03 is installed by default.
+Both SKR03 and SKR04 :doc:`charts of accounts <../accounting/get_started/chart_of_accounts>` are
+supported in Odoo. When a new Odoo Online database is created, SKR03 is installed by default.
 
-Verify which is installed by going to :menuselection:`Accounting --> Configuration --> Settings`
-and checking the :guilabel:`Package` field under the :guilabel:`Fiscal Localization` section.
+To verify which is installed, go to :menuselection:`Accounting --> Configuration --> Settings` and
+check the :guilabel:`Package` field under the :guilabel:`Fiscal Localization` section.
 
 .. warning::
-   Selecting another package is only possible if you have not created an accounting entry. If one
-   was posted, a new company or database must be set up to select another package. In
-   addition, all journal entries will need to be created again.
+   Selecting another package is only possible if no accounting entries have been created. If one
+   was posted, a new company or database must be set up to select another package. In addition, all
+   journal entries will need to be created again.
+
+.. _localizations/germany/reporting:
 
 Reports
 -------
 
-The following German-specific reports available on Odoo Enterprise:
+The following German-specific reports are available:
 
 - Balance Sheet
 - Profit & Loss
-- Tax Report (Umsatzsteuervoranmeldung)
+- :ref:`Tax return <localizations/germany/tax-return>` (*Umsatzsteuervoranmeldung*) with
+  Elster integration
 - EC Sales List
 - Intrastat
+
+.. _localizations/germany/tax-return:
+
+Tax return with Elster integration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note::
+   - Make sure to :ref:`install <general/install>` the :guilabel:`Germany - Elster Tax Submission`
+     (`l10n_de_reports_elster`) module.
+   - To submit *UStVA* (VAT advance returns) to Elster, the :guilabel:`VAT` ID and tax number
+     (:guilabel:`St.-Nr.`) are required on the :doc:`company record
+     </applications/general/companies>`.
+
+Once the module is installed and the VAT ID and tax number have been entered, data is sent to Elster
+upon :ref:`submission of the tax return <accounting/tax-returns/vat-report>`.
+
+.. admonition:: Test mode
+
+   To set the test mode and use the Elster integration without sending real data, follow these
+   steps:
+
+   #. Enable :ref:`developer mode <developer-mode>`.
+   #. Open the Settings app and go to :menuselection:`Settings --> Technical --> System Parameters`.
+   #. Click :guilabel:`New` to add the `l10n_de_reports_elster.elster_proxy_mode` key and set its
+      value to `test`.
+   #. Click :guilabel:`Save`.
+
+.. tip::
+   Once the submission is complete, the generated CPA005 TXT file is displayed in the tax return's
+   chatter for download and bank import, along with the XML file for manual upload via Elster.de and
+   the tax reports.
+
+.. _localizations/germany/accounting:
+
+Accounting
+==========
+
+.. _localizations/germany/taxable-supply-date:
+
+Taxable supply date
+-------------------
+
+Set the :guilabel:`Taxable Supply Date` on invoices to reflect the actual delivery date for goods or
+services provided before invoice creation (e.g., service delivered in May, invoice created in June).
+Completing this field automatically aligns the invoice's accounting date, ensuring that the journal
+entry and the associated VAT are recognized in the correct period.
+
+.. important::
+   If the previous period is closed and locked (via :ref:`Lock dates
+   <accounting/tax-returns/lock-date>`), postings for that period are not allowed. Consequently, the
+   journal entry will automatically be posted in the current open period.
+
+.. note::
+   The :guilabel:`Taxable Supply Date field` is intended for accounting purposes and is not
+   displayed on printed reports. When using the :guilabel:`DIN 5008` layout, ensure the
+   :guilabel:`Delivery Date` field is filled to display the date on the generated PDF invoice.
+
+.. _localizations/germany/datev-export:
 
 Exporting entries from Odoo to DATEV
 ------------------------------------
 
 Provided that one of the German :ref:`fiscal localization packages
-<fiscal_localizations/packages>` is installed, you can export your accounting entries from Odoo to
+<fiscal_localizations/packages>` is installed, accounting entries from Odoo can be exported to
 DATEV from the general ledger.
 
 Two types of exports are needed: first the DATEV ATCH export, then the DATEV DATA export.
@@ -44,8 +172,35 @@ Two types of exports are needed: first the DATEV ATCH export, then the DATEV DAT
    two interfaces, one for clients (DUO - DATEV Unternehmen Online) and one for tax advisors (DATEV
    Rechnungswesen).
 
-1. DATEV ATCH
-~~~~~~~~~~~~~
+.. _localizations/germany/datev-data:
+
+DATEV DATA
+~~~~~~~~~~
+
+Go to :menuselection:`Accounting --> Reporting --> General Ledger`, click the :icon:`fa-cog`
+(:guilabel:`Actions`) button, and select :guilabel:`Datev DATA (zip)`.
+
+Transfer the downloaded ZIP file to your tax advisor. They should import the ZIP file into DATEV
+Rechnungswesen.
+
+Check with your tax advisor how often they need these files.
+
+.. admonition:: DATEV ATCH ZIP file
+
+   The ZIP file contains three CSV files:
+
+   - the :file:`EXTF_customer_accounts.csv` file containing all information related to your
+     customers,
+   - the :file:`EXTF_vendor_accounts.csv` file containing all information related to your vendors,
+     and
+   - the :file:`EXTF_accounting_entries.csv` containing all journal items for the period defined on
+     the general ledger, as well as the unique IDs (GUID) so that the journal items can be linked to
+     the files inside the DATEV ATCH ZIP file.
+
+.. _localizations/germany/datev-atch:
+
+DATEV ATCH
+~~~~~~~~~~
 
 Go to :menuselection:`Accounting --> Reporting --> General Ledger`, click the :icon:`fa-cog`
 (:guilabel:`Actions`) button, and select :guilabel:`Datev ATCH (zip)`.
@@ -76,30 +231,7 @@ Upload the downloaded ZIP file via the `DATEV Belegtransfer software <https://ww
    These unique IDs are essential as they allow DATEV to automatically link the files to the
    individual journal items, which will be imported with the DATEV DATA file in the next step.
 
-2. DATEV DATA
-~~~~~~~~~~~~~
-
-Go to :menuselection:`Accounting --> Reporting --> General Ledger`, click the :icon:`fa-cog`
-(:guilabel:`Actions`) button, and select :guilabel:`Datev DATA (zip)`.
-
-Transfer the downloaded ZIP file to your tax advisor. They should import the ZIP file into DATEV
-Rechnungswesen.
-
-Check with your tax advisor how often they need these files.
-
-.. admonition:: DATEV ATCH ZIP file
-
-   The ZIP file contains three CSV files:
-
-   - the :file:`EXTF_customer_accounts.csv` file containing all information related to your
-     customers,
-   - the :file:`EXTF_vendor_accounts.csv` file containing all information related to your vendors,
-     and
-   - the :file:`EXTF_accounting_entries.csv` containing all journal items for the period defined on
-     the general ledger, as well as the unique IDs (GUID) so that the journal items can be linked to
-     the files inside the DATEV ATCH ZIP file.
-
-.. _germany/gobd:
+.. _localizations/germany/gobd:
 
 GoBD compliance
 ---------------
@@ -118,6 +250,8 @@ accepted practices linked to computer-based accounting. Several changes have bee
 
 .. important::
    Odoo is certified **GoBD-compliant**.
+
+.. _localizations/germany/gobd-accounting-software:
 
 Understanding GoBD in relation to accounting software
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -142,6 +276,8 @@ verify that the tasks are properly and completely performed (*supervision*). The
 controls must be recorded (*documentation*), and should errors be found during these controls,
 appropriate measures to correct the situation should be put into place (*prevention*).
 
+.. _localizations/germany/data-security:
+
 Data security
 ~~~~~~~~~~~~~
 
@@ -165,6 +301,8 @@ application.
    In some cases, data has to be kept for ten years or more, so always have backups saved. It is
    even more important if you decide to change software provider.
 
+.. _localizations/germany/software-editor-responsibility:
+
 Responsibility of the software editor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -172,6 +310,8 @@ Considering GoBD applies only to the taxpayer, **the software editor can by no m
 responsible for the accurate and compliant documentation of their users' financial transactional
 data**. It can merely provide the necessary tools for the user to respect the software-related
 guidelines described in the GoBD.
+
+.. _localizations/germany/compliance:
 
 Ensuring compliance through Odoo
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -210,6 +350,8 @@ achieve all of these objectives:
    | With the German Odoo localization, Odoo is in standard configured in such a way that the
      inalterability clause can be adhered to without any further customization.
 
+.. _localizations/germany/gobd-export:
+
 GoBD export
 ~~~~~~~~~~~
 
@@ -223,16 +365,20 @@ Odoo supports the CSV and XLS export of financial data out of the box. The GoBD 
 export in a specific XML-based GoBD format (see "Ergänzende Informationen zur
 Datenträgerüberlassung" §3), but it is not binding.
 
+.. _localizations/germany/non-compliance:
+
 Non-compliance
 ~~~~~~~~~~~~~~
 
 In the event of an infringement, you can expect a fine and a court order demanding the
 implementation of specific measures.
 
-.. _germany/pos:
+.. _localizations/germany/pos:
 
-Point of Sale
+Point of sale
 =============
+
+.. _localizations/germany/pos-tech-sec-sys:
 
 Technical security system
 -------------------------
@@ -253,6 +399,8 @@ Odoo offers a service that is compliant with the help of `fiskaly <https://fiska
    `fiskaly DSFinV-K API: VAT Definition
    <https://developer.fiskaly.com/api/dsfinvk/v0/#tag/VAT-Definition>`_.
 
+.. _localizations/germany/pos-certification-configuration:
+
 Configuration
 ~~~~~~~~~~~~~
 
@@ -262,6 +410,8 @@ Configuration
 
 .. tip::
    If these modules are not listed, :ref:`update the app list <general/install>`.
+
+.. _localizations/germany/pos-company-registration:
 
 Company registration at the financial authority
 ***********************************************
@@ -297,6 +447,8 @@ Once the registration has been finalized, new fields appear:
    It is possible to request new credentials if there is any issue with the current ones by clicking
    the :guilabel:`New keys` button.
 
+.. _localizations/germany/pos-link-tech-sec-sys:
+
 Create a technical security system and link it to a POS
 *******************************************************
 
@@ -312,6 +464,8 @@ Once the creation of the TSS is successful, you can find the:
 
 .. image:: germany/fiskaly-tss.png
    :alt: Fiskaly API section
+
+.. _localizations/germany/dsfinvk-export:
 
 DSFinV-K export
 ~~~~~~~~~~~~~~~
