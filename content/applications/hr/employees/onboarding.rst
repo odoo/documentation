@@ -150,7 +150,7 @@ Launch onboarding plan
 ======================
 
 After an employee has been hired and their employee profile :ref:`is created
-<recruitment/offer_job_position/new-employee>`, navigate to the desired employee's profile by
+<recruitment/offer_job_positions/new-employee>`, navigate to the desired employee's profile by
 clicking on their Kanban card on the **Employees** app dashboard, then click the :guilabel:`Launch
 Plan` button on their employee profile, and a blank *Launch Plan* pop-up window loads.
 

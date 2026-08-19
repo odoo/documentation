@@ -161,7 +161,7 @@ both the applicant's card and form.
 .. image:: offer_job_positions/hired.png
    :alt: Hired banner in the top-right corner of applicant card.
 
-.. _recruitment/offer_job_position/new-employee:
+.. _recruitment/offer_job_positions/new-employee:
 
 Create employee
 ===============
