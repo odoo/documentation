@@ -1,0 +1,212 @@
+{% extends 'base.html' %}
+{% block title %}لوحة التحكم - نظام الخزينة{% endblock %}
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h4 class="mb-0"><i class="bi bi-speedometer2 me-2"></i>لوحة التحكم</h4>
+    <span class="text-muted small">{{ now.strftime('%Y/%m/%d') if now else '' }}</span>
+</div>
+
+<!-- Stats Cards -->
+<div class="row g-3 mb-4">
+    <div class="col-xl-3 col-md-6">
+        <div class="card border-0 shadow-sm h-100 bg-primary text-white">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <div class="text-white-50 small">إجمالي أرصدة الخزائن</div>
+                        <div class="fs-4 fw-bold">{{ stats.total_balance | currency }}</div>
+                    </div>
+                    <i class="bi bi-cash-stack fs-1 opacity-50"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="card border-0 shadow-sm h-100 bg-warning text-dark">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <div class="text-dark opacity-75 small">مطالبات بانتظار السداد</div>
+                        <div class="fs-4 fw-bold">{{ stats.pending_claims }}</div>
+                    </div>
+                    <i class="bi bi-file-earmark-text fs-1 opacity-50"></i>
+                </div>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+                <a href="{{ url_for('claims.index', state='approved') }}" class="text-dark small">عرض المطالبات ←</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="card border-0 shadow-sm h-100 bg-info text-white">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <div class="text-white-50 small">عهد مفتوحة</div>
+                        <div class="fs-4 fw-bold">{{ stats.pending_custodies }}</div>
+                    </div>
+                    <i class="bi bi-briefcase fs-1 opacity-50"></i>
+                </div>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+                <a href="{{ url_for('custody.index') }}" class="text-white small">عرض العهد ←</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="card border-0 shadow-sm h-100 bg-success text-white">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <div class="text-white-50 small">خزائن مفتوحة</div>
+                        <div class="fs-4 fw-bold">{{ stats.treasuries_count }}</div>
+                    </div>
+                    <i class="bi bi-bank fs-1 opacity-50"></i>
+                </div>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+                <a href="{{ url_for('treasury.index') }}" class="text-white small">عرض الخزائن ←</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-3">
+    <!-- Treasuries -->
+    <div class="col-lg-5">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-white fw-bold">
+                <i class="bi bi-bank me-2 text-primary"></i>أرصدة الخزائن
+                <a href="{{ url_for('treasury.new') }}" class="btn btn-sm btn-outline-primary float-start">
+                    <i class="bi bi-plus"></i> جديد
+                </a>
+            </div>
+            <div class="card-body p-0">
+                {% if treasuries %}
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>الخزينة</th>
+                                <th>النوع</th>
+                                <th class="text-end">الرصيد</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for t in treasuries %}
+                            <tr>
+                                <td>
+                                    <a href="{{ url_for('treasury.show', id=t.id) }}" class="text-decoration-none fw-semibold">
+                                        {{ t.name }}
+                                    </a>
+                                </td>
+                                <td><span class="badge bg-secondary">{{ t.type_label }}</span></td>
+                                <td class="text-end fw-bold {% if t.balance < 0 %}text-danger{% else %}text-success{% endif %}">
+                                    {{ t.balance | currency(t.currency) }}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% else %}
+                <div class="text-center text-muted py-4">
+                    <i class="bi bi-bank fs-2 d-block mb-2"></i>
+                    لا توجد خزائن مفتوحة
+                    <br>
+                    <a href="{{ url_for('treasury.new') }}" class="btn btn-sm btn-primary mt-2">إنشاء خزينة</a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Payments -->
+    <div class="col-lg-7">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-white fw-bold">
+                <i class="bi bi-receipt me-2 text-success"></i>آخر السندات المنفذة
+                <a href="{{ url_for('payments.new') }}" class="btn btn-sm btn-outline-success float-start">
+                    <i class="bi bi-plus"></i> سند جديد
+                </a>
+            </div>
+            <div class="card-body p-0">
+                {% if recent_payments %}
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0 small">
+                        <thead class="table-light">
+                            <tr>
+                                <th>الرقم</th>
+                                <th>النوع</th>
+                                <th>التاريخ</th>
+                                <th>المستفيد</th>
+                                <th class="text-end">المبلغ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for p in recent_payments %}
+                            <tr>
+                                <td>
+                                    <a href="{{ url_for('payments.show', id=p.id) }}" class="text-decoration-none">
+                                        {{ p.number }}
+                                    </a>
+                                </td>
+                                <td>
+                                    <span class="badge bg-{% if p.payment_type == 'outbound' %}danger{% else %}success{% endif %}">
+                                        {{ p.type_label }}
+                                    </span>
+                                </td>
+                                <td>{{ p.date | ar_date }}</td>
+                                <td class="text-truncate" style="max-width:120px">{{ p.beneficiary or '-' }}</td>
+                                <td class="text-end fw-bold {% if p.payment_type == 'outbound' %}text-danger{% else %}text-success{% endif %}">
+                                    {{ p.amount | currency }}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% else %}
+                <div class="text-center text-muted py-4">
+                    <i class="bi bi-receipt fs-2 d-block mb-2"></i>
+                    لا توجد سندات منفذة بعد
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Quick Actions -->
+<div class="row g-3 mt-1">
+    <div class="col-12">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-white fw-bold"><i class="bi bi-lightning me-2 text-warning"></i>إجراءات سريعة</div>
+            <div class="card-body">
+                <div class="d-flex flex-wrap gap-2">
+                    <a href="{{ url_for('claims.new', type='vendor') }}" class="btn btn-outline-primary">
+                        <i class="bi bi-file-plus me-1"></i> مطالبة مورد جديدة
+                    </a>
+                    <a href="{{ url_for('claims.new', type='expense') }}" class="btn btn-outline-warning">
+                        <i class="bi bi-file-plus me-1"></i> مطالبة مصاريف جديدة
+                    </a>
+                    <a href="{{ url_for('custody.new') }}" class="btn btn-outline-info">
+                        <i class="bi bi-briefcase me-1"></i> عهدة جديدة
+                    </a>
+                    <a href="{{ url_for('payments.new') }}" class="btn btn-outline-success">
+                        <i class="bi bi-receipt me-1"></i> سند صرف جديد
+                    </a>
+                    <a href="{{ url_for('claims.index', state='submitted') }}" class="btn btn-outline-danger">
+                        <i class="bi bi-bell me-1"></i> مطالبات تنتظر اعتمادك
+                        {% if stats.pending_claims > 0 %}
+                        <span class="badge bg-danger">{{ stats.pending_claims }}</span>
+                        {% endif %}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
