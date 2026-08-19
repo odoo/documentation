@@ -92,3 +92,4 @@ Below are some common requests that the *Ask AI* agent can assist with:
    ai/voice
    ai/improve_text
    ai/support_operations
+   ai/mcp_server
