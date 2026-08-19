@@ -305,3 +305,4 @@ tab, under the :guilabel:`SALES` section.
    subscriptions/reports
    subscriptions/automatic_payments
    subscriptions/subscriptions_deliveries
+   subscriptions/subscriptions_loyalty
