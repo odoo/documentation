@@ -12,6 +12,8 @@ to create discount and loyalty programs that customers can use for online and in
 These programs offer more varied, public, and time-sensitive pricing options than :doc:`pricelists
 </applications/sales/sales/products_prices/prices/pricing>`.
 
+.. _sales/loyalty_discount/configure-settings:
+
 Configure the settings
 ======================
 
