@@ -7,9 +7,9 @@ Odoo Point of Sale provides various features to manage a restaurant or a bar:
 - :ref:`Organizing the floors and tables <pos/restaurant/floors>`;
 - :ref:`Taking orders <pos/restaurant/orders>`;
 - :ref:`Communicating with the kitchen or bar through the POS <pos/restaurant/orders-printing>`;
+- :ref:`Setting different taxes for dine-in/takeaway food <pos/restaurant/bills/taxes>`;
 - :ref:`Printing and splitting bills <pos/restaurant/bills>`;
-- :ref:`Collecting tips <pos/restaurant/tips>`;
-- :doc:`Setting different taxes for takeaway food <pricing/fiscal_position>`.
+- :ref:`Collecting tips <pos/restaurant/tips>`.
 
 Three main buttons in the POS register allow for navigating between the :ref:`Floor plan
 <pos/restaurant/floors>` view, tables, and :ref:`orders <pos/restaurant/orders>`:
@@ -219,6 +219,25 @@ The printer is then connected to the point of sale and can print kitchen orders 
 
 Bills and payment
 =================
+
+.. _pos/restaurant/bills/taxes:
+
+Taxes for eat-in/take-out orders
+--------------------------------
+
+Depending on where customers consume their food, e.g., whether customers dine in or take their order
+to go, you may need to adjust the applicable tax rate. To do so, go to the :ref:`POS settings
+<configuration/settings>`, scroll down to the :guilabel:`Restaurant Mode` section, and activate the
+:guilabel:`Eat in / Take out` option. Then,
+
+- Fill in the field with an existing :guilabel:`Alternative Fiscal Position`;
+- Create and set up a new fiscal position by filling in the field and clicking
+  :guilabel:`Create & Edit`; or
+- Create and set up a new fiscal position by clicking :icon:`fa-arrow-right` :guilabel:`Fiscal
+  Positions`.
+
+.. seealso::
+   :doc:`pricing/fiscal_position`
 
 .. _pos/restaurant/bills/splitting:
 
