@@ -29,6 +29,11 @@ planning, and compliance reporting.
 
       Ensure new employees are properly trained and ready to work.
 
+   .. card:: Working hours
+      :target: employees/working_hours
+
+      Create schedules for employees and equipment.
+
    .. card:: Departments
       :target: employees/departments
 
@@ -146,6 +151,7 @@ This field only appears if the **Salary Configurator** module is installed.
 
    employees/new_employee
    employees/onboarding
+   employees/working_hours
    employees/departments
    employees/learning
    employees/certifications
