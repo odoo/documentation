@@ -83,7 +83,8 @@ the Ecuadorian localization:
    :doc:`installed </applications/general/apps_modules>`.
 
 .. seealso::
-   :doc:`/applications/hr/payroll/payroll_localizations` are documented separately.
+   :doc:`Documentation on e-invoicing's legality and compliance in Ecuador
+   <../accounting/customer_invoices/electronic_invoicing/ecuador>`
 
 .. _localizations/ecuador/specifics:
 
