@@ -5,8 +5,7 @@ Hong Kong
 Configuration
 =============
 
-:ref:`Install <general/install>` the following modules to get the latest features of the Hong Kong
-localization:
+The following modules are installed automatically with the Hong Kong localization:
 
 .. list-table::
    :header-rows: 1
@@ -16,18 +15,18 @@ localization:
      - Description
    * - :guilabel:`Hong Kong - Accounting`
      - `l10n_hk`
-     - The base module to manage chart of accounting and localization for Hong Kong.
-   * - :guilabel:`Hong Kong - Payroll`
-     - `l10n_hk_hr_payroll`
-     - Enables :ref:`payroll <payroll/l10n_hk/payroll>` specific localization features for Odoo *Payroll*
-       app. This module also installs :guilabel:`Hong Kong - Payroll with Accounting` and
-       :guilabel:`Documents - Hong Kong Payroll`.
-   * - :guilabel:`Hong Kong - Payroll with Accounting`
-     - `l10n_hk_hr_payroll_account`
-     - Installs the link between Hong Kong payroll and accounting.
-   * - :guilabel:`Documents - Hong Kong Payroll`
-     - `documents_l10n_hk_hr_payroll`
-     - Integrates employee ir56 forms in the Odoo *Documents* app.
+     - The base module to manage the chart of accounts and localization for Hong Kong
+   * - :guilabel:`Hong Kong - Accounting Reports`
+     - `l10n_hk_reports`
+     - Accounting reports specific to the Hong Kong localization
+
+.. note::
+   The localization automatically :ref:`installs <general/install>` core modules. A manual
+   :ref:`update <general/upgrade>` may be required for missing elements or updates.
+
+.. seealso::
+   :doc:`Hong Kong Payroll localization documentation
+   <../../hr/payroll/payroll_localizations/hong_kong>`
 
 FPS QR codes on invoices
 ========================
