@@ -85,38 +85,36 @@ Committing and pushing changes
 
 To commit and push changes to your GitHub repository:
 
-- Open a terminal by going to :menuselection:`File --> New --> Terminal`.
-- Change the directory to `~/src/user`.
+#. Open a terminal by going to :menuselection:`File --> New --> Terminal`.
+#. Change the directory to `~/src/user`.
 
   .. code-block:: bash
 
      cd ~/src/user
 
-- State your identity.
+#. State your identity.
 
   .. code-block:: bash
 
      git config --global user.email "you@example.com" && git config --global user.name "Your Name"
 
-- Stage your changes.
+#. Stage your changes.
 
   .. code-block:: bash
 
      git add
 
-- Commit your changes.
+#. Commit your changes.
 
   .. code-block:: bash
 
      git commit
 
-- Push your changes.
+#. Push your changes.
 
   .. code-block:: bash
 
      git push https HEAD:<branch>
-
-  In this command:
 
   - `https` is the name of your *HTTPS* GitHub remote repository (e.g.,
     `https://github.com/username/repository.git`).
