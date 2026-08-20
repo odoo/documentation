@@ -201,7 +201,8 @@ Fill in the following fields on the form:
   `Building 2 Parking Lot`. This is crucial information for companies with many locations where
   vehicles are stored.
 - :guilabel:`Make Vehicle Available`: Click the checkbox if the vehicle can be selected when an
-  employee fills out the :ref:`salary configurator <recruitment/configure-package>`.
+  employee fills out the :ref:`salary configurator
+  <recruitment/offer_job_position/configure-package>`.
 
 .. image:: new_vehicle/new-vehicle-type.png
    :alt: The new vehicle form, showing the vehicle tax section.
