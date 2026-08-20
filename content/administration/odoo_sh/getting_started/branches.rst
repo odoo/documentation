@@ -490,7 +490,7 @@ platform considers this safe enough. As an extra precaution, you can make a manu
 modifiyng production sources.
 
 The purpose of manual backups is to create a specific snapshot of production or staging databases
-(not available for development). These remain available for seven days. However, there is a limit of
+(not available for development). These remain available for three days. However, there is a limit of
 five daily manual backups.
 
 .. list-table::
