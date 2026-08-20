@@ -1,3 +1,8 @@
+.. meta::
+   :description: Explains the Purchase Analysis report, which provides statistics about products
+                 purchased through the Purchase app, and describes the measures, or datasets, that
+                 can be displayed to examine key metrics about purchase orders.
+
 ========================
 Purchase Analysis report
 ========================
@@ -68,17 +73,15 @@ about which vendors they want to purchase from.
    vendors, and then sell those products on to customers through their storefront.
 
    Recently, Bike Haus has decided to have their purchasing manager, David, look into how long it
-   has taken each of their vendors to deliver the items they've purchased during the current year,
-   2024.
+   has taken each of their vendors to deliver the items they've purchased during the current year.
 
    David starts by navigating to :menuselection:`Purchase app --> Reporting --> Purchase`, and
    selecting the :icon:`fa-bar-chart` (bar chart) graph type at the top of the report.
 
    Next, he clicks the :icon:`fa-caret-down` :guilabel:`(toggle)` button on the right of the search
    bar to open its drop-down menu. In the :guilabel:`Confirmation Date` filter section, he makes
-   sure that **only** the :guilabel:`2024` filter is enabled. Then, he selects the
-   :guilabel:`Vendor` option in the :guilabel:`Group By` section, before clicking away from the
-   drop-down menu to close it.
+   sure that **only** the year filter is enabled. Then, he selects the :guilabel:`Vendor` option in
+   the :guilabel:`Group By` section, before clicking away from the drop-down menu to close it.
 
    Finally, David clicks on the :guilabel:`Measures` :icon:`fa-caret-down` drop-down menu, and
    selects the :guilabel:`Days to Receive` option.
@@ -94,15 +97,14 @@ about which vendors they want to purchase from.
    from Bike Friends.
 
    .. image:: analyze/dtr.png
-      :align: center
       :alt: The Purchase report, showing the average days to receive products from vendors.
 
-Use case: compare vendor POs for two time periods
-=================================================
+Use case: examine vendor POs for a specific time frame
+======================================================
 
-Another use for the :guilabel:`Purchase Analysis` report is to compare key statistics about |POs|
-for two different time periods, for a specific vendor. By doing so, it is easy to understand how
-purchases from the vendor have increased or decreased.
+Another use for the :guilabel:`Purchase Analysis` report is to examine key statistics about |POs|
+for a specific vendor. By doing so, it is easy to understand how many products have been purchased
+from a specific vendor in a given time frame.
 
 .. example::
    Following the :ref:`previous example <purchase/purchase-analysis-example>`, it has been one month
@@ -117,30 +119,19 @@ purchases from the vendor have increased or decreased.
    shows data for purchases from Bike Friends.
 
    Then, David clicks the :icon:`fa-caret-down` :guilabel:`(toggle)` button on the right of the
-   search bar to open its drop-down menu. In the :guilabel:`Confirmation Date` field, he leaves the
-   :guilabel:`June` and :guilabel:`2024` filters enabled. He also selects :guilabel:`Confirmation
-   Date: Previous Period` in the :guilabel:`Comparison` section, before clicking away from the
-   drop-down menu to close it.
+   search bar to open its drop-down menu. In the :guilabel:`Confirmation Date` field, he selects
+   *Year* and *Month*.
 
-   Next, David clicks on the :guilabel:`Measures` :icon:`fa-caret-down` drop-down menu. He leaves
-   the :guilabel:`Total` and :guilabel:`Untaxed Total` datasets enabled, and disables the
-   :guilabel:`Order` and :guilabel:`Count` datasets.
+   Next, David clicks on the :guilabel:`Measures` :icon:`fa-caret-down` drop-down menu and leaves
+   the :guilabel:`Total` and :guilabel:`Untaxed Total` datasets enabled.
 
-   Finally, David clicks the :icon:`fa-minus-square-o` :guilabel:`Total` button above the rows on
-   the pivot table, and selects the :guilabel:`Product` option.
+   Finally, David clicks the unexpanded :icon:`fa-plus-square` :guilabel:`Total` button above the
+   rows on the pivot table, and selects the :guilabel:`Product` option.
 
    With all of these options configured, the :guilabel:`Purchase Analysis` report shows a pivot
-   table comparing purchase data for the current month, June, with the previous month, May.
+   table with purchase data for the current month.
 
-   The pivot table is broken down into two main columns: one for the untaxed total spent, and one
-   for the taxed total spent. These columns are further broken down into three smaller columns: the
-   amount spent in May, the amount spent in June, and the variation between the two months,
-   represented as a percentage.
-
-   On the left side of the pivot table, one row is shown for each product purchased from Bike
-   Friends during June. Using this report, David is able to see that Bike Haus has spent much less
-   money on products purchased from Bike Friends, compared to the previous month.
-
-   .. image:: analyze/comparison.png
-      :align: center
-      :alt: The Purchase report, comparing the amount spent at a vendor.
+   The pivot table features a column for each product that meets the criteria. These columns are
+   further broken down into three smaller columns: the count for each product sold, the untaxed
+   total spent on the product, and the taxed total spent on the product. There are also three
+   columns at the end of the table that show the grand totals for all products.
