@@ -502,10 +502,10 @@ five daily manual backups.
      - Manual backup
    * - Production
      - Yes (up to 3 months)
-     - Yes (3 days)
+     - Yes (7 days)
    * - Staging
      - No
-     - Yes (3 days)
+     - Yes (7 days)
    * - Development
      - No
      - No
