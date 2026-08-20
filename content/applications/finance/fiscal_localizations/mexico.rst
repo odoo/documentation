@@ -80,8 +80,10 @@ if meeting a specific requirement for the business.
        the Mexican electronic invoicing requirements
 
 .. seealso::
-   Payroll module information is available :doc:`here
-   <../../hr/payroll/payroll_localizations/mexico>`.
+   - :doc:`Mexican Payroll localization documentation
+     <../../hr/payroll/payroll_localizations/mexico>`
+   - :doc:`Documentation on e-invoicing's legality and compliance in Mexico
+     <../accounting/customer_invoices/electronic_invoicing/mexico>`
 
 .. _l10n/mx/video-tutorials:
 
