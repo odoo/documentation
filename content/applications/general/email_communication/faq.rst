@@ -250,8 +250,8 @@ create errors.
    :menuselection:`Settings --> Technical --> Automation: Scheduled Actions`.
 
 .. seealso::
-   For more information about crons when using Odoo.sh, check out :doc:`Odoo.sh frequent technical
-   questions <../../../administration/odoo_sh/advanced/frequent_technical_questions>`.
+   For more information about crons when using Odoo.sh, check out the :ref:`Odoo.sh and scheduled
+   actions documentation <odoo-sh/advanced/scheduled>`.
 
 .. _email-issues-outgoing-execution-time-campaigns:
 
