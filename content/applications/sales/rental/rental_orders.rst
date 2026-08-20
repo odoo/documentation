@@ -10,4 +10,4 @@ Rental orders
 
    rental_orders/create_rental_order
    rental_orders/manage_deposits
-
+   rental_orders/pickup_return
