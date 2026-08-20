@@ -111,7 +111,7 @@ spreadsheet but where the data has been deleted, follow these steps:
 #. Click :menuselection:`Data --> Data cleanup --> Remove unused data sources` from the menu bar.
    The :guilabel:`Unused data sources` panel opens to the right of the spreadsheet. Unused pivot
    tables and unused lists are displayed in their respective sections.
-#. Optionally, unselect any data sources that should not be deleted, then click :guilabel:`Delete
+#. Optionally, unselect any data sources that should *not* be deleted, then click :guilabel:`Delete
    selected items`.
 
 .. _spreadsheet/insert/accessing-data:
