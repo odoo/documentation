@@ -142,9 +142,9 @@ Refund deposits upon return
 ===========================
 
 To process a deposit return, the **Accounting** app must be installed. After a customer
-:ref:`returns the rented item <rental/return-products>`, begin the deposit return by preparing a
-:doc:`credit note <../../../finance/accounting/customer_invoices/credit_notes>` against the original
-deposit invoice.
+:ref:`returns the rented item <rental/pickup_return/return>`, begin the deposit return by preparing
+a :doc:`credit note <../../../finance/accounting/customer_invoices/credit_notes>` against the
+original deposit invoice.
 
 First, go to the :menuselection:`Rental app --> Orders --> Orders`, and select the correct rental
 order. Click the :icon:`fa-pencil-square-o` :guilabel:`Invoices` smart button, find the invoice for
