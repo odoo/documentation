@@ -90,8 +90,8 @@ Odoo.sh automatically detects folders containing Odoo modules. You can organize 
 prefer. For example, you can place them directly in the root directory of your repository or group
 them by category (e.g., `accounting`, `project`, etc.).
 
-For publicly available community modules, you may also consider using :doc:`submodules
-<../advanced/submodules>`.
+For publicly available community modules, you may also consider using :ref:`submodules
+<odoo-sh/advanced/submodules>`
 
 Download a backup
 -----------------
