@@ -182,6 +182,24 @@ Lastly, enter the :guilabel:`Price` rate.
    .. image:: products/example-rental-prices-tab.png
       :alt: Sample of a rental product's Price tab.
 
+.. _rental/products/ecommerce:
+
+eCommerce features
+------------------
+
+.. important::
+   This tab is only available if the **Website** app and **eCommerce** module are installed.
+
+The :guilabel:`eCommerce` tab configures the product page on the website. Refer to the :ref:`Product
+visibility <ecommerce/products/publish-products>` and :ref:`Product configuration
+<ecommerce/products/product-configuration>` sections for the **eCommerce** module for configuration
+instructions.
+
+Refer to the *Availabilities* setting in the :ref:`Rental app's settings
+<rental/product_type/configuration>` to set what days and business hours of the week customers can
+book or return rental products online at a company level. If the product isn't published to the
+website then the setting does not go into effect.
+
 .. _rental/products/product-tracking:
 
 Configure product tracking
@@ -200,8 +218,8 @@ new product window, the :guilabel:`Sales` checkbox is already selected by defaul
 :guilabel:`Goods` as the :guilabel:`Product Type`. The :guilabel:`Tracking` field defaults to
 :guilabel:`By Quantity`.
 
-Click into the :guilabel:`Tracking` field and select :guilabel:`By Unique Serial Number`.
-Enter the number of products available to rent in the :guilabel:`Quantity On Hand` field.
+Click into the :guilabel:`Tracking` field and select :guilabel:`By Unique Serial Number`. Enter the
+number of products available to rent in the :guilabel:`Quantity On Hand` field.
 
 For the :guilabel:`Category` field, select :guilabel:`Goods` from the drop-down menu or create a new
 category by typing in the name and clicking :guilabel:`Create`. Configure :ref:`basic rental rate

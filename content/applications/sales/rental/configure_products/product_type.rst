@@ -36,8 +36,10 @@ Configuration --> Settings`.
 .. image:: product_type/rental-settings-with-inventory.png
    :alt: A configured Setting page with the Inventory section displayed for the Rental app.
 
-In the *Pick up & Returns* section, the :guilabel:`Availabilities` setting sets what days and
-business hours of the week customers can book or return rental products online at a company level.
+In the *Pick up & Returns* section, the :guilabel:`Availabilities` setting uses :ref:`work hour
+schedules <employees/working_hours/working_hours_form>` to specify what days and business hours of
+the week customers can book or return rental products online at a company level. To edit the default
+calendar, click the :icon:`fa-arrow-right` :guilabel:`(Internal Link)` icon.
 
 In the *Products* section, users can enable the following features: :doc:`Variants
 <../../sales/products_prices/products/variants>`, :doc:`Pricelists
