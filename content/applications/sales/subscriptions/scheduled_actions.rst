@@ -62,9 +62,6 @@ form in the :guilabel:`Execute Every` field.
    The scheduled action does **not** function correctly if the execution time is less than five
    minutes. This is a general rule for all scheduled actions.
 
-   For more information, read the :doc:`Frequent Technical Questions
-   </administration/odoo_sh/advanced/frequent_technical_questions>` documentation.
-
 Generate recurring invoices and payments
 ========================================
 
