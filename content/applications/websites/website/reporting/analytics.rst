@@ -14,6 +14,7 @@ lightweight, and easy to use.
 Plausible.io
 ============
 
+<<<<<<< 724f2f0aeb3c00fb2aa737729393c60f394c8493
 Odoo hosts its own Plausible.io server. The Plausible Analytics dashboard is integrated into Odoo
 and can be accessed via :menuselection:`Website --> Reporting --> Analytics`.
 
@@ -23,6 +24,17 @@ Plausible account. To enable it, go to :menuselection:`Website --> Configuration
 then, in the :guilabel:`Tracking & SEO` section, enable :guilabel:`Plausible Analytics`. The
 credentials are automatically filled in the :guilabel:`Shared Link Auth` and the :guilabel:`Site`
 fields.
+||||||| 0ccd3c6852e1d95873ac6ee44c200aad261cb526
+Odoo hosts its own Plausible.io server and provides a free and ready-to-use Plausible.io
+solution for **Odoo Online** databases that use the odoo.com domain. Odoo automatically creates and
+sets up your account. Start using it by going to :menuselection:`Website --> Reporting -->
+Analytics`.
+=======
+Odoo hosts its own Plausible.io server and provides a free and ready-to-use Plausible.io
+solution for **Odoo Online** databases. Odoo automatically creates and sets up your account. The
+Plausible Analytics dashboard is also integrated into Odoo and can be accessed via
+:menuselection:`Website --> Reporting --> Analytics`.
+>>>>>>> 37e3411746f91f7f712521a2e3863a66492681cc
 
 .. note::
    **If you already have a Plausible.io account** and you want to connect it to your Odoo Online
