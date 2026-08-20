@@ -7,6 +7,14 @@ from sphinx.util.docutils import SphinxDirective
 from sphinx.util.nodes import set_source_info
 
 
+def _contains_cross_reference(node):
+    if isinstance(node, list):
+        return any(_contains_cross_reference(child) for child in node)
+    if isinstance(node, (nodes.reference, addnodes.pending_xref)):
+        return True
+    return any(_contains_cross_reference(child) for child in node.children)
+
+
 class Cards(SphinxDirective):
     """ Implement a `cards` directive as a Bootstrap `row`. """
     has_content = True
@@ -32,7 +40,7 @@ class Card(SphinxDirective):
     required_arguments = 1
     final_argument_whitespace = True
     option_spec = {
-        'target': directives.unchanged_required,
+        'target': directives.unchanged,
         'tag': directives.unchanged,
         'large': directives.flag,
         'image': directives.path,
@@ -50,23 +58,27 @@ class Card(SphinxDirective):
         self.assert_has_content()
 
         current_document = f'{self.env.docname}.rst'
-        target_document = f'{self.options["target"]}.rst'
-        if target_document.startswith('/'):
-            raise self.warning(f"card directive's target starts with a '/'")
-        target_file = Path(self.env.srcdir) / Path(current_document).parent / target_document
-        if not target_file.exists():
-            raise self.warning(f"card directive targets nonexisting document '{target_document}'")
+        col_classes = (
+            ['col-md-12', 'col-xl-8', 'col-xxl-6'] if 'large' in self.options else ['col']
+        )
+        has_target = 'target' in self.options
 
-        a_col_href = target_document.replace('.rst', '.html')
-        a_col_classes = ['o_toctree_card']
-        if 'large' in self.options:
-            a_col_classes += ['col-md-12', 'col-xl-8', 'col-xxl-6']
+        if has_target:
+            target_document = f'{self.options["target"]}.rst'
+            if target_document.startswith('/'):
+                raise self.warning(f"card directive's target starts with a '/'")
+            target_file = Path(self.env.srcdir) / Path(current_document).parent / target_document
+            if not target_file.exists():
+                raise self.warning(f"card directive targets nonexisting document '{target_document}'")
+            col_wrapper = A(
+                href=target_document.replace('.rst', '.html'),
+                classes=['o_toctree_card', *col_classes],
+            )
         else:
-            a_col_classes += ['col']
-        a_col = A(href=a_col_href, classes=a_col_classes)
+            col_wrapper = Div(classes=col_classes)
 
         div_card = Div(classes=['card', 'h-100'])
-        a_col += div_card
+        col_wrapper += div_card
 
         if 'image' in self.options:
             image_path = self.options['image']
@@ -90,10 +102,25 @@ class Card(SphinxDirective):
         set_source_info(self, h4_title)
         div_card_body += h4_title
 
-        text_nodes, _ = self.state.inline_text('\n'.join(self.content), self.lineno)
-        p_card_text = nodes.paragraph('', *text_nodes, classes=['card-text', 'text-dark', 'fw-normal'])
-        set_source_info(self, p_card_text)
-        div_card_body += p_card_text
+        if has_target:
+            text_nodes, _ = self.state.inline_text('\n'.join(self.content), self.lineno)
+            if _contains_cross_reference(text_nodes):
+                raise self.warning(
+                    "⚠️  card directive with :target: cannot contain :doc: or :ref: links in the "
+                    "body. Omit :target: to use inline links."
+                )
+            p_card_text = nodes.paragraph(
+                '', *text_nodes, classes=['card-text', 'text-dark', 'fw-normal'],
+            )
+            set_source_info(self, p_card_text)
+            div_card_body += p_card_text
+        else:
+            content_wrapper = nodes.container()
+            self.state.nested_parse(self.content, self.content_offset, content_wrapper)
+            for node in content_wrapper.children:
+                if isinstance(node, nodes.paragraph):
+                    node['classes'] = ['card-text', 'text-dark', 'fw-normal', *node.get('classes', [])]
+                div_card_body += node
 
         div_card_footer = Div(classes=['card-footer', 'border-0'])
         div_card += div_card_footer
@@ -104,7 +131,7 @@ class Card(SphinxDirective):
             set_source_info(self, span_badge)
             div_card_footer += span_badge
 
-        return [a_col]
+        return [col_wrapper]
 
 
 class Div(nodes.General, nodes.Element):
