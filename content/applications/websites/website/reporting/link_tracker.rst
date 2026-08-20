@@ -9,6 +9,8 @@ informed decisions.
 To create and manage tracked links, :ref:`install <general/install>` the :guilabel:`Link Tracker`
 (`website links`) module.
 
+.. _website/link_tracker/create-urls:
+
 Create traceable URLs
 =====================
 
