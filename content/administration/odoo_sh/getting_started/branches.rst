@@ -595,7 +595,7 @@ To change the default behavior, untick the :guilabel:`Use Default` option under
 :guilabel:`Module Installation`:
 
 - :guilabel:`Install only my modules (does not include submodules)`: only installs the branch's
-  modules, excluding :doc:`submodules <../advanced/submodules>`. This is the default option.
+  modules, excluding :ref:`submodules <odoo-sh/advanced/submodules>`. This is the default option.
 - :guilabel:`Full installation (no test suite)`: installs the branch's modules, submodules, and all
   standard Odoo modules. When running the full installation, the test suite is disabled.
 - :guilabel:`Install a list of modules`: installs the specified modules. To do so, enter their
@@ -797,7 +797,7 @@ The submodule command is used to add a branch from another repository to your cu
 submodule.
 
 .. seealso::
-   :doc:`Submodules documentation <../advanced/submodules>`
+   :ref:`Submodules documentation <odoo-sh/advanced/submodules>`
 
 .. example::
    .. code-block:: shell
