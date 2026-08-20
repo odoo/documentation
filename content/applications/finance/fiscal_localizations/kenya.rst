@@ -7,8 +7,48 @@ Kenya
 Configuration
 =============
 
-Install the 🇰🇪 **Kenyan** :ref:`fiscal localization package <fiscal_localizations/packages>` to get
-all the features of the Kenyan localization.
+The following modules are installed automatically with the Kenyan localization:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 25 50
+
+   * - Name
+     - Technical name
+     - Description
+   * - :guilabel:`Kenya - Accounting`
+     - `l10n_ke`
+     - The base module to manage the chart of accounts and localization for Kenya
+   * - :guilabel:`Kenya - Accounting Report`
+     - `l10n_ke_reports`
+     - Accounting reports specific to the Kenyan localization
+   * - :guilabel:`Kenya eTIMS EDI Integration`
+     - `l10n_ke_edi_oscu`
+     - Base electronic Tax Invoice Management System (eTIMS) integration
+   * - :guilabel:`Kenya ETIMS EDI Manufacturing Integration`
+     - `l10n_ke_edi_oscu_mrp`
+     - Manufacturing-specific electronic Tax Invoice Management System (eTIMS) integration
+
+The following modules are optional. It's recommended to :ref:`install <general/install>` them *only*
+if meeting a specific requirement for the business.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 25 50
+
+   * - Name
+     - Technical name
+     - Description
+   * - :guilabel:`Kenya - Point of Sale`
+     - `l10n_ke_edi_oscu_pos`
+     - Point of Sale-specific electronic Tax Invoice Management System (eTIMS) integration
+   * - :guilabel:`Kenya Tremol Device EDI Integration`
+     - `l10n_ke_edi_tremol`
+     - G03 Tremol control unit integration to report taxes to the Kenya Revenue Authority (KRA)
+       through the Tax Invoice Management System (TIMS)
+
+.. seealso::
+   :doc:`Kenyan Payroll localization documentation <../../hr/payroll/payroll_localizations/kenya>`
 
 eTIMS
 =====

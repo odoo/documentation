@@ -44,9 +44,14 @@ The following modules are installed automatically with the Belgian localization:
      - Fiscal categories data
 
 .. note::
-   In some cases, such as when upgrading to a version with additional modules, it is possible that
-   modules may not be installed automatically. Any missing modules can be manually :ref:`installed
-   <general/install>`.
+   The localization's core modules are installed automatically with the localization. The rest can
+   be :ref:`installed <general/install>`.
+
+.. seealso::
+   - :doc:`Belgian Payroll localization documentation
+     <../../hr/payroll/payroll_localizations/belgium>`
+   - :doc:`Documentation on e-invoicing's legality and compliance in Belgium
+     <../accounting/customer_invoices/electronic_invoicing/belgium>`
 
 .. _belgium/configuration:
 
