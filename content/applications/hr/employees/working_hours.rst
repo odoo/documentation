@@ -22,6 +22,8 @@ Working hours appear in several apps, including:
 - :menuselection:`Payroll --> Configuration --> Working Schedules`
 - :menuselection:`Manufacturing --> Configuration --> Work Centers`
 
+.. _employees/working_hours/working_hours_form:
+
 Working hours form
 ==================
 

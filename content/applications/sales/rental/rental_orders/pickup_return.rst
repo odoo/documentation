@@ -1,6 +1,6 @@
 .. meta::
    :description: This document explains how to pick up and return rental Goods (physical products)
-    and Services.
+                 and Services.
 
 .. _create-rental-order-tutorial: https://youtu.be/hpQHu6U_IKk?si=rMPUwL2IkE_ItlZz
 
@@ -11,7 +11,7 @@ Pick up and return rental products
 ==================================
 
 This document focuses on the pickup and return of both rental *Goods* (physical products) such as
-clothes, computer equipment, and bicycles, and *Services* (physical and non-physical) such as
+clothes, computer equipment, bicycles, and *Services* (physical and non-physical) such as
 photographer sessions, hotel rooms, and catering. Refer to the
 :doc:`../configure_products/product_type` page for more information on *Goods* and *Services*.
 
@@ -55,10 +55,17 @@ use time-based pricing rates. For non-physical service products, :ref:`configure
 <rental/labor_service_products/configure-employee-roles>` in the **Planning** app before creating
 the product.
 
-If the business wants to sell service rental products on an online shop, the **Website** app and the
-**eCommerce** module must be installed. To configure the pickup and return availability of rental
-products in the eCommerce store, refer to the :ref:`rental/pickup_return/ecommerce-products`
-section.
+.. _rental/pickup_return/ecommerce-products:
+
+Configure pick up and return availability for eCommerce products
+================================================================
+
+The **Rental** app supports eCommerce configuration at :ref:`the company
+<rental/product_type/configuration>` and product level when the **Website** app and the
+**eCommerce** module are installed. Using the *Availabilities* setting restricts the days and times
+the company allows pickups and returns to be scheduled through the online store. To configure the
+rental product page in the online store, refer to the :ref:`Product configuration
+<ecommerce/products/product-configuration>` section for the **eCommerce** module.
 
 .. _rental/pickup_return/pickup:
 
@@ -102,7 +109,7 @@ app --> Orders --> Orders` and select the desired rental order. Click :guilabel:
 columns. Check the rental product's serial number and then click in the :guilabel:`Serial Numbers`
 column and select the product's serial number from the drop-down list.
 
-.. image:: pickup_return/validate-a-pickup-with-serial-numbers.png
+.. image:: pickup_return/validate-pickup-with-serial-numbers.png
    :alt: Example of a Validate a pickup page with product tracking enabled in the Rental app.
 
 To confirm the list, click :guilabel:`Validate`. The action updates the rental order with a
@@ -191,38 +198,10 @@ To create pickup and return receipts, navigate to the desired rental order and c
 .. image:: pickup_return/print-pickup-and-return-receipt-menus.png
    :alt: The pickup and return receipt print option in the Odoo Rental application.
 
-From this drop-down menu, select :icon:`fa-print` :menuselection:`Print --> Pickup and Return
-Receipt`.
+From this drop-down menu, hover over the :icon:`fa-print` :guilabel:`Print` option to reveal a
+sub-menu. Then select :guilabel:`Pickup and Return Receipt`.
 
 Odoo downloads a PDF detailing all information about the current status of the rented items.
-
-.. _rental/pickup_return/ecommerce-products:
-
-Configure pickup and return availability for eCommerce products
-===============================================================
-
-The Rental app supports eCommerce configuration at the app and product level when the **Website**
-app and the **eCommerce** module are installed. Using the *Unavailability days* setting restricts
-the days the rental website allows pickups and returns to be scheduled. To configure the rental
-product page in the online store, refer to the :ref:`Product configuration
-<ecommerce/products/product-configuration>` section for the eCommerce module.
-
-.. _rental/pickup_return/configuration-ecommerce:
-
-Configuration
--------------
-
-To configure default settings for pickup and return availability of rental products in eCommerce
-store, navigate to :menuselection:`Rental app --> Configuration --> Settings`.
-
-In the *Pickup & Returns* section, the :guilabel:`Unavailability days` setting lists checkboxes for
-every day of the week. Selecting a day prevents scheduling rental pickups and returns through the
-online rental product page.
-
-.. image:: pickup_return/unavailability-days-setting.png
-   :alt: Example of the Unavailability days setting on the Setting page of the Rental app.
-
-Once the new work calendar is configured, click :guilabel:`Save`.
 
 .. seealso::
    - :doc:`create_rental_order`
@@ -232,3 +211,4 @@ Once the new work calendar is configured, click :guilabel:`Save`.
    - :doc:`../configure_products/labor_service_products`
    - `Tutorial: Create a rental order <create-rental-order-tutorial_>`_
    - `Tutorial: Hotel booking | Odoo rental <hotel-booking-tutorial_>`_
+

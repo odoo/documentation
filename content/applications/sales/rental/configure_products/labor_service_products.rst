@@ -79,13 +79,13 @@ In the new product window, the :guilabel:`Sales` checkbox is already selected by
 select :guilabel:`Based on Timesheets`. Enable the :guilabel:`Plan Services` checkbox and either
 create a new role or select a pre-existing one.
 
-.. image:: labor_service_products/19-3-rental-service-product-form.png
+.. image:: labor_service_products/rental-service-product-form.png
    :alt: Example of a configured Photography service product form in the Rental app.
 
 Click the :icon:`oi-arrow-right` :guilabel:`(Internal link)` icon to open the product's *Role* page.
 Enable the :guilabel:`Sync Shifts and Rental Orders` checkbox.
 
-.. image:: labor_service_products/19-3-rental-sync-shifts-and-rental-orders.png
+.. image:: labor_service_products/rental-sync-shifts-and-rental-orders.png
    :alt: Example of role page with the Sync Shifts and Rental Orders checkbox enabled.
 
 Set a base rental period and price
@@ -219,20 +219,23 @@ manually)` icon near the top to save.
    .. image:: labor_service_products/example-prices-tab.png
       :alt: Sample of the Prices tab of service product in the Rental app.
 
+.. _rental/labor_service_products/ecommerce:
+
 eCommerce features
 ------------------
 
 .. important::
-   This tab is only available if the :guilabel:`eCommerce` module is installed.
+   This tab is only available if the **Website** app and **eCommerce** module are installed.
 
 The :guilabel:`eCommerce` tab configures the product page on the website. Refer to the :ref:`Product
 visibility <ecommerce/products/publish-products>` and :ref:`Product configuration
 <ecommerce/products/product-configuration>` sections for the **eCommerce** module for configuration
 instructions.
 
-Any selected days in the *Unavailability days* section in the :ref:`Rental app's settings
-<rental/product_type/configuration>` are only applied to online booking. If the product isn't
-published to the website then the setting does not go into effect.
+Refer to the *Availabilities* setting in the :ref:`Rental app's settings
+<rental/product_type/configuration>` to set what days and business hours of the week customers can
+book or return rental products online at a company level. If the product isn’t published on the
+website, the setting does not take effect.
 
 .. seealso::
    - :doc:`service_products`

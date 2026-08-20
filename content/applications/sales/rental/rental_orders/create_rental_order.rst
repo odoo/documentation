@@ -190,3 +190,4 @@ Click the :guilabel:`Payments` smart button that appears at the top of the renta
    - `Odoo Tutorials: Create a Rental Order <https://youtu.be/hpQHu6U_IKk?si=Fy_Z82kzQNPBrD8v>`_
    - `Odoo Tutorials: Configuring a Rental Product
      <https://youtu.be/CE-SahTUC9A?si=ur6ci-SlKJSvQY5Q>`_
+   - :doc:`pickup_return`

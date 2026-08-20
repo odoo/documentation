@@ -19,32 +19,48 @@ invoice customers from a single platform.
 
 .. cards::
 
-   .. card:: Rental products
-      :target: rental/configure_products/products
-      :large:
-
-      Explore how to create and manage rental products.
-
-   .. card:: Service products
-      :target: rental/configure_products/service_products
-      :large:
-
-      Discover how to rent services alongside products.
-
-   .. card:: Manage deposits
-      :target: rental/rental_orders/manage_deposits
-      :large:
-
-      Learn how to create a refundable deposit for rental products.
-
-      Discover how to rent services alongside products.
-
    .. card:: Product types
       :target: rental/configure_products/product_type
       :large:
 
       Learn about the different rental product types, general configuration, and possible app
       integrations.
+
+   .. card:: Physical rental products
+      :target: rental/configure_products/products
+      :large:
+
+      Learn how to create a physical rental product.
+
+   .. card:: Physical service rental products
+      :target: rental/configure_products/service_products
+      :large:
+
+      Learn how to create a physical service rental product.
+
+   .. card:: Labor service rental products
+      :target: rental/configure_products/labor_service_products
+      :large:
+
+      Learn how to create a labor service rental product.
+
+   .. card:: Create a rental order
+      :target: rental/rental_orders/create_rental_order
+      :large:
+
+      Learn how to create a rental order.
+
+   .. card:: Pick up and return rental products
+      :target: rental/rental_orders/pickup_return
+      :large:
+
+      Learn how to pick up and return rental products.
+
+   .. card:: Manage deposits
+      :target: rental/rental_orders/manage_deposits
+      :large:
+
+      Learn how to create a refundable deposit for rental products.
 
 .. _rental/price-computing:
 
