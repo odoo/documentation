@@ -63,6 +63,8 @@ When a rental order is confirmed, the following smart buttons appear at the top 
 .. image:: create_rental_order/rental-order-form.png
    :alt: Sample of a filled out rental order available in the Odoo Rental application.
 
+.. _rental/create_rental_order/customer-signature:
+
 Request a customer signature
 ============================
 
