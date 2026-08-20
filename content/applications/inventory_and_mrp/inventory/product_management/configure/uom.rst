@@ -49,7 +49,7 @@ unit, such as `Box of 6`, then in the :guilabel:`Type` field, select the appropr
 such as :guilabel:`Bigger than the reference Unit of Measure`.
 
 If applicable, enter a :guilabel:`UNSPSC Category`, which is a globally recognized `code managed by
-GS1 <https://www.unspsc.org/>`_, that **must** be purchased in order to use.
+UNDP <https://www.undp.org/unspsc>`_.
 
 In the :guilabel:`Ratio` field, enter how many individual units are in the new |UOM|, such as
 `100.00000` when using the example of the `centimeter` (since a centimeter is 100 times *smaller*
