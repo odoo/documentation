@@ -791,8 +791,6 @@ and go to :menuselection:`Configuration --> Settings --> Import (for full histor
 WinBooks import
 ===============
 
-(intro)
-
 Configuration
 -------------
 
