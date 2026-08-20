@@ -1268,7 +1268,18 @@ Cards
              :image: placeholder-image.png
              :alt: Placeholder card image
 
-             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+             incididunt ut labore et dolore magna aliqua.
+
+          .. card:: Card with inline links
+
+             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Read the
+             :doc:`Content guidelines <content_guidelines>` and
+             :ref:`formatting rules <contributing/rst/formatting>`.
+
+          .. card:: Card with no links
+
+             Cards can also contain text with no outer or inline links.
 
    * - .. code-block:: text
 
@@ -1298,6 +1309,25 @@ Cards
                 :alt: Placeholder card image
 
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+             .. card:: Card with inline links
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Read the
+                :doc:`Content guidelines <content_guidelines>` and
+                :ref:`formatting rules <contributing/rst/formatting>`.
+
+             .. card:: Card with no links
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+.. tip::
+   - Use the ``:target:`` option to make the entire card clickable and link to another page.
+   - Omit ``:target:`` to add ``:doc:`` and ``:ref:`` links in the card body.
+
+.. warning::
+   - Do not combine ``:target:`` with ``:doc:`` and ``:ref:`` links in the card text.
+
+
 
 .. _contributing/rst/toctree:
 
