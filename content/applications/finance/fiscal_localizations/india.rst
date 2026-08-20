@@ -12,6 +12,7 @@ localization:
 
 .. list-table::
    :header-rows: 1
+   :widths: 25 25 50
 
    * - Name
      - Technical name
@@ -32,6 +33,9 @@ localization:
      - `l10n_in_reports`
      - Adds the :ref:`Indian GST Return filing <india/gstr>` and the :ref:`Indian
        Tax reports <india/gstr_reports>`.
+
+.. seealso::
+   :doc:`Indian Payroll localization documentation <../../hr/payroll/payroll_localizations/india>`
 
 .. _india/company:
 
