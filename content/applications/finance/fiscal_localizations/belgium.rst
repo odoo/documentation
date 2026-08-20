@@ -788,4 +788,39 @@ To import your data into Odoo, :doc:`install <../../general/apps_modules>` the m
 and go to :menuselection:`Configuration --> Settings --> Import (for full history)`. Click
 :guilabel:`Import WBK` and upload the `.ZIP` file previously prepared.
 
+WinBooks import
+===============
 
+(intro)
+
+Configuration
+-------------
+
+Before importing your data in Odoo, you must prepare the data to be exported. Open **WinBooks** and
+navigate to :menuselection:`Maintenance --> Backup`. Then, select to export the following data as a
+`.ZIP` file:
+
+- Chart of accounts,
+- Contacts,
+- Taxes,
+- History of journal entries,
+- Documents.
+
+.. note::
+   - Supported Winbooks Desktop versions: 5.50, 6, 7, 8.
+   - File sizes beyond 396 MB may not work during the import.
+
+To import your data into Odoo, :doc:`install <../../general/apps_modules>` the module
+:guilabel:`Account Winbooks Import (account_winbooks_import)`. Then, open the **Accounting app**,
+and go to :menuselection:`Configuration --> Settings --> Import (for full history)`. Click
+:guilabel:`Import WBK` and upload the `.ZIP` file previously prepared.
+
+Check :guilabel:`Import only open years` if you wish to import only open years. Years closed in
+Winbooks are likely to have incomplete data. The counter part of incomplete entries will be set in a
+suspense account.
+
+:guilabel:`Suspense Account Code` corresponds to the account code in which you want to put the
+counterpart of unbalanced moves. This might an account from your Winbooks data, or an account that
+you created in Odoo before the import.
+
+Once configured, click :guilabel:`Import` to import your data into Odoo.
