@@ -187,8 +187,8 @@ of measure.
 
 To create a new unit, click the :guilabel:`New` button. Specify a unit name. If you want to convert
 between units, specify a quantity and a reference unit of measure to convert between. If applicable,
-enter a :guilabel:`UNSPSC Category`, which is a globally recognized `code managed by GS1
-<https://www.unspsc.org/>`_, that **must** be purchased in order to use.
+enter a :guilabel:`UNSPSC Category`, which is a globally recognized `code managed by UNDP
+<https://www.undp.org/unspsc>`_.
 
 .. example::
    You will be purchasing fabric in terms of yards or meters. Specify that one yard is equal to
