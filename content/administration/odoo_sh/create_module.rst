@@ -339,6 +339,8 @@ deploying it.
    Otherwise, you can manually :ref:`update the module <odoo-sh/module/deploy/install>` within the
    apps list.
 
+.. _odoo-sh/module/library:
+
 Use an external Python library
 ==============================
 
