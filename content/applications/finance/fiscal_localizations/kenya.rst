@@ -200,6 +200,12 @@ per branch.
    - Creating an invoice on **branch 2**: INV/2024/00001.
    - Creating an invoice on the **parent company**: INV/2024/00001.
 
+Integration tokens
+------------------
+
+To obtain integration tokens for eTIMS, send a request to the following email address:
+etims@mail.odoo.com.
+
 Insurance
 =========
 
