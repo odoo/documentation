@@ -67,7 +67,7 @@ are either applied automatically or manually by the cashier.
 Codes
 -----
 
-To apply a gift card, discount code, or coupon, click the :icon:`fa-ellipsis-v` (:guilabel:`vertical
+To apply a discount code or a coupon, click the :icon:`fa-ellipsis-v` (:guilabel:`vertical
 ellipsis`) icon, select :icon:`fa-barcode` :guilabel:`Enter Code`, enter or scan the code, and
 click :guilabel:`Apply`.
 
@@ -96,6 +96,138 @@ displayed at the bottom of the cart and updated in real-time.
 
 To redeem points for a reward, click the :icon:`oi-ellipsis-v` (:guilabel:`vertical ellipsis`) icon,
 select :icon:`fa-star` :guilabel:`Reward`, and choose the desired item from the list.
+
+.. _pos/pricing/giftcards_ewallet:
+
+Gift cards and eWallets
+=======================
+
+Gift cards and eWallets are used by customers to pay for orders using a prepaid balance. Gift cards
+can be purchased, while eWallets hold store credit linked to the customer's account.
+
+To activate gift cards and eWallets in Point of Sale, navigate to the :ref:`POS settings
+<pos/use/settings>`, scroll down to the :guilabel:`Pricing` section, enable the
+:guilabel:`Promotions, Coupons, Gift Card & Loyalty Program` setting, and click :guilabel:`Save`.
+Once activated, click :icon:`oi-arrow-right` :guilabel:`Gift cards & eWallet` under the same setting
+to configure the desired :ref:`gift card <ewallet_gift/gift-cards>` and :ref:`eWallet
+<sales/ewallets_giftcards/ewallets>` programs and generate gift cards and eWallets.
+
+.. tip::
+   Alternatively, to configure and edit gift cards and eWallets, go to :menuselection:`Point of Sale
+   --> Products --> Gift cards & eWallet`.
+
+.. seealso::
+   :doc:`../../sales/products_prices/ewallets_giftcards`
+
+Gift cards
+----------
+
+Sell a gift card
+~~~~~~~~~~~~~~~~
+
+After a :ref:`gift card program <ewallet_gift/gift-cards>` has been configured, to sell new gift
+cards from the :ref:`POS register <pos/use/open-register>`, follow these steps:
+
+#. Add the gift card product to the order.
+#. Select the appropriate gift card program in the popover, if multiple programs exist.
+#. Adjust the price and quantity, if necessary.
+#. Click :guilabel:`Payment` and complete the transaction.
+
+   .. tip::
+      After the payment is validated, the gift card is automatically downloaded as a PDF containing
+      the gift card code, based on the template selected in the :guilabel:`Print Report` field of
+      the :ref:`gift card program <ewallet_gift/gift-cards>`.
+
+#. Print the generated gift card for the customer.
+
+.. tip::
+   To email a gift card to a customer, navigate to :menuselection:`Point of Sale --> Products -->
+   Gift cards & eWallet`, select the program, and click the :icon:`fa-tags`
+   :guilabel:`Gift cards` smart button. Then, click :icon:`fa-paper-plane-o` :guilabel:`Send`
+   on the gift card's row.
+
+Sell a physical gift card
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+After a :ref:`gift card program <ewallet_gift/gift-cards>` has been configured and gift cards
+generated, to sell pre-printed physical gift cards from the :ref:`POS register
+<pos/use/open-register>`, follow these steps:
+
+#. Add the gift card product to the order.
+#. Select the appropriate gift card program in the popover, if multiple programs exist.
+#. Click :guilabel:`Sell physical gift card?` under the gift card product in the cart.
+#. Enter or scan the physical gift card code in the popover.
+#. Adjust the amount and expiration date, if necessary.
+#. Click :guilabel:`Add Balance`.
+
+   .. tip::
+      If the gift card code already exists in Odoo, click :guilabel:`Add existing Gift Card` to
+      attach it to the order.
+
+#. Click :guilabel:`Payment` and complete the transaction.
+#. Hand the physical card to the customer.
+
+Print gift cards from the backend
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Gift cards sold through the POS can be accessed and printed from the backend at any time. To print a
+gift card, follow these steps:
+
+#. Go to :menuselection:`Point of Sale --> Products --> Gift cards & eWallet`.
+#. Select a gift card program.
+#. Click the :icon:`fa-tags` :guilabel:`Gift cards` smart button.
+#. Choose a gift card from the list.
+#. Click the :icon:`fa-cog` (:guilabel:`Actions`) icon, then go to :menuselection:`Print -->
+   Gift Card`.
+
+Redeem a gift card
+~~~~~~~~~~~~~~~~~~
+
+After a :ref:`gift card program <ewallet_gift/gift-cards>` has been configured and gift cards
+generated, to redeem gift cards from the :ref:`POS register <pos/use/open-register>`, follow these
+steps:
+
+#. Click the :icon:`fa-ellipsis-v` (:guilabel:`vertical ellipsis`) icon.
+#. Select :icon:`fa-barcode` :guilabel:`Enter Code`.
+#. Enter or scan the code.
+#. Click :guilabel:`Apply`.
+
+.. note::
+   A warning popover appears if the gift card was not previously purchased through the POS. To
+   accept the gift card and continue, click :guilabel:`Ok`.
+
+eWallets
+--------
+
+Credit an eWallet
+~~~~~~~~~~~~~~~~~
+
+After an :ref:`eWallet program <sales/ewallets_giftcards/ewallets>` has been configured, to credit a
+customer's eWallet from the :ref:`POS register <pos/use/open-register>`, follow these steps:
+
+#. Click :guilabel:`Customer`, then select the relevant customer or :ref:`create a new one
+   <pos/use/customers>`.
+#. Add the eWallet top-up product to the order.
+#. Select the appropriate eWallet program in the popover, if multiple programs exist.
+#. Adjust the top-up amount by modifying the product price, if needed.
+#. Click :guilabel:`Payment` and complete the transaction.
+
+Use an eWallet balance
+~~~~~~~~~~~~~~~~~~~~~~
+
+After an :ref:`eWallet program <sales/ewallets_giftcards/ewallets>` has been configured, to use an
+eWallet balance from the :ref:`POS register <pos/use/open-register>`, follow these steps:
+
+#. Click :guilabel:`Customer` and locate the desired customer in the list.
+#. Click the :icon:`fa-ellipsis-v` (:guilabel:`vertical ellipsis`) icon.
+#. Select :icon:`fa-credit-card` :guilabel:`eWallet Pay`.
+#. Select the desired program from the popover if multiple eWallets exist.
+
+.. note::
+   - Each eWallet is linked to a specific customer. A customer **must** be :ref:`assigned to the
+     order <pos/use/customers>` for the :icon:`fa-credit-card` :guilabel:`eWallet Pay` option to be
+     displayed.
+   - If customers have only one eWallet program, the available balance is applied automatically.
 
 .. _pos/pricing/pricelists:
 
