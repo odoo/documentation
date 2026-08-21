@@ -20,21 +20,12 @@ The following modules are installed automatically with the Spanish localization:
      - `l10n_es`
      - Spanish :ref:`fiscal localization package <fiscal_localizations/packages>`, complete with
        the Spanish chart of accounts, taxes, tax report, and fiscal positions.
-   * - :guilabel:`Spain - Accounting (PGCE 2008) Reports`
+   * - :guilabel:`Spain - Accounting Reports`
      - `l10n_es_reports`
      - Accounting reports for Spain.
-   * - :guilabel:`Spain - Accounting Reports (2024 Update)`
-     - `l10n_es_reports_2024`
-     - Adds extra fields regarding Rectificación for Modelo 303.
-   * - :guilabel:`Spain - Accounting Reports (2025 Update)`
-     - `l10n_es_reports_2025`
-     - Adds tax return functionalities.
    * - :guilabel:`Spain - Facturae EDI`
      - `l10n_es_edi_facturae`
      - Creates EDI Facturae files required to send to AGE (Administración General del Estado).
-   * - :guilabel:`Spain - Intrastat Declaration`
-     - `l10n_es_intrastat`
-     - Adds Interstat report.
 
 Additionally, the following modules must be manually :ref:`installed <general/install>`:
 
@@ -45,9 +36,15 @@ Additionally, the following modules must be manually :ref:`installed <general/in
    * - Name
      - Technical name
      - Description
+   * - :guilabel:`Spain - Intrastat Declaration`
+     - `l10n_es_intrastat`
+     - Adds Interstat report.
    * - :guilabel:`Spain - Point of Sale + TicketBAI`
      - `l10n_es_pos_tbai`
      - Sends invoices to the Diputaciones Forales of Araba/Álava, Bizkaia and Gipuzkoa.
+   * - :guilabel:`Spain - Accounting Reports Libro IVA PoS`
+     - `l10n_es_reports_pos`
+     - PoS of support for the Spanish VAT record books.
    * - :guilabel:`Spain - SII EDI Suministro de Libros`
      - `l10n_es_edi_sii`
      - Sends taxes information to SII (Suministro Inmediato de Información).
@@ -61,6 +58,13 @@ Additionally, the following modules must be manually :ref:`installed <general/in
    * - :guilabel:`Spain - Veri*Factu for Point of Sale`
      - `l10n_es_edi_verifactu_pos`
      - Adds Veri*Factu support to Point of Sale.
+   * - :guilabel:`Spain - Real Estates`
+     - `l10n_es_real_estates`
+     - Allows users to add real estate related to data to the Spanish localization and generate a
+       mod 347 report.
+   * - :guilabel:`Spain - Amazon Connector`
+     - `l10n_es_sale_amazon`
+     - Bridging module between the Spanish localization and Amazon integration.
 
 .. note::
    In some cases, such as when upgrading to a version with additional modules, it is possible that
