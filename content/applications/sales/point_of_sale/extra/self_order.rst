@@ -44,8 +44,9 @@ You can choose from:
          To customize QR codes,
 
          #. Scan the relevant QR code to acquire its URL.
-         #. Use a QR code generator (e.g., `QR code monkey <https://www.qrcode-monkey.com>`_ or `QR
-            code generator <https://www.qr-code-generator.com>`_) to create a custom QR code.
+         #. Use a QR code generator (e.g., `QR code monkey <https://www.qrcode-monkey.com>`_, `QR
+            code generator <https://www.qr-code-generator.com>`_, or `JustMakeTheQRCode.com
+            <https://justmaketheqrcode.com/>`_) to create a custom QR code.
 
    .. group-tab:: Kiosk
 
