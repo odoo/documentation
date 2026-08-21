@@ -203,53 +203,6 @@ manually)` icon near the top to save.
    .. image:: service_products/example-prices-tab.png
       :alt: Sample of the Prices tab of service product in the Rental app.
 
-.. _rental/service_products/pickup:
-
-Process a rental order pickup
-=============================
-
-When a product is rented alongside a service, it is advised to pick it up before entering time on
-the associated task.
-
-If time is entered on the :guilabel:`Timesheets` tab of an associated task before the physical
-rental product is picked up, the rental order status automatically changes to :guilabel:`Picked-up`.
-The :guilabel:`Pickup` button is still available on the rental order if time is entered before
-picking up the product.
-
-When a customer picks up the product, navigate to the appropriate rental order and click
-:guilabel:`Pickup`. Verify the list, then click :guilabel:`Validate` in the *Validate a pickup*
-pop-up window that appears.
-
-.. image:: service_products/pickup-popup.png
-   :alt: Sample of a service product pick up pop-up window in the Rental.
-
-Doing so places a :guilabel:`Picked-up` status banner on the rental order.
-
-.. _rental/service_products/return:
-
-Process a rental order return
-=============================
-
-Regardless of whether there is a product rented along with a service, the service or product must be
-returned on the rental order.
-
-When a customer returns the products or when the service has been completed, navigate to the
-appropriate rental order and click :guilabel:`Return`. Validate the return by clicking
-:guilabel:`Validate` in the *Validate a return* pop-up window that appears.
-
-.. image:: service_products/validate-a-return-window.png
-   :alt: Sample of returning a service product in the Rental app.
-
-Doing so places a :guilabel:`Returned` status banner on the rental order.
-
-.. example::
-   The photography studio had a customer who wanted to rent one of their photographers and banner
-   decorations for a home photo shoot. The booking was for two hours.
-
-   On the :guilabel:`Validate a return` form for rental order, the banner line item matches the
-   number of banners picked up, and the photographer line item matches the number of hours submitted
-   on the :guilabel:`Timesheets` tab on the related task.
-
-   .. image:: service_products/return-form-example-product-service.png
-      :alt: Sample of a Validate a return form with a rental product and service listed.
-
+.. seealso::
+   - :doc:`../rental_orders/create_rental_order`
+   - :doc:`../rental_orders/pickup_return`
