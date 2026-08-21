@@ -17,6 +17,9 @@ Odoo includes **generic** and **dynamic** reports available for all countries, r
 -  :ref:`accounting/reporting/tax-report`
 -  :ref:`accounting/reporting/audit-trail`
 
+.. tip::
+   You can also create :doc:`custom reports <reporting/customize>`.
+
 To expand the lines of a report and view its details, click the :icon:`fa-caret-right`
 (:guilabel:`right arrow`) on the left. Then click the :icon:`fa-caret-down` (:guilabel:`down arrow`)
 to the right of the account, journal entry, payment, invoice, etc. to :guilabel:`Annotate` and view
@@ -165,3 +168,43 @@ immutability. Instead of being deleted, these records can only be cancelled or a
 this restrictive mode, navigate to :menuselection:`Accounting --> Settings --> Configuration`,
 scroll down to the :guilabel:`Reporting` section, and tick the checkbox beside
 :guilabel:`Restrictive Audit Trail`.
+
+.. _accounting/reporting/filters:
+
+Report filters and options
+==========================
+
+Reporting filters and options vary on a per-report basis. The following buttons and options are
+common to most reports and are located in the top bar of the report:
+
+- A *date* filter, indicated by the :icon:`fa-calendar` :guilabel:`(calendar)` icon that precedes a
+  date in the local format. Use this filter to select a specific date or date range for the report.
+- A :guilabel:`% Comparison` filter, to compare reporting periods against each other.
+- A *journal* filter, indicated by the :icon:`fa-book` :guilabel:`(book)` icon and a default
+  setting, such as :guilabel:`All Journals`. Use this filter to specify which journals should be
+  included in the report.
+- An *analytic* filter, indicated by the :icon:`oi-group` :guilabel:`(group)` icon. Use this filter
+  to only include analytic accounts and plans in the report.
+- An *entries type* filter, indicated by the :icon:`fa-sliders` :guilabel:`(filter)` icon and a
+  default setting, such as :guilabel:`Posted Entries Only, Accrual Basis`. Use this filter to
+  determine which type of journal entries should be included in the report (e.g. posted or draft),
+  along with the type of accounting method (e.g., accrual or :ref:`cash basis
+  <accounting/cash-basis/report-filter>`).
+
+  This filter also includes display options, such as :guilabel:`Hide lines at 0`, which removes
+  zero-value lines from the report, or :guilabel:`Split Horizontally`, which keeps the report
+  within the screen's fold and eliminates the need to scroll.
+
+- A *decimal* option, which includes figures with cents by default, as indicated by your local
+  currency icon (e.g., :guilabel:`In .$`). Use the other options in the drop-down menu to format
+  figures in the report as whole numbers (e.g., :guilabel:`In $`), thousands (e.g.,
+  :guilabel:`In K$`), or millions (e.g., :guilabel:`In M$`).
+
+.. image:: reporting/report-filters.png
+   :alt: Reporting filters.
+
+.. tip::
+   With :ref:`developer mode <developer-mode>` enabled, a :doc:`report customization
+   <reporting/customize>` option, indicated by the :icon:`fa-cogs` :guilabel:`(cogs)` icon is
+   available in the top bar. It allows, for example, to add the :ref:`Cash Basis Method filter
+   <accounting/cash-basis/report-filter>`.
