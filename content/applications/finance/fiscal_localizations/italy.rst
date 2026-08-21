@@ -374,6 +374,18 @@ from an imported XML file, the Tax Agency might request that you send some tax i
 integration back to the :abbr:`SdI (Sistema di Interscambio)`. It happens when a transaction that
 was tax exempt becomes taxable for any reason.
 
+.. tip::
+   For a vendor bill to be uploaded correctly:
+
+   - The contact in the XML file must have a corresponding :doc:`contact record
+     <../../essentials/contacts>` in Odoo with matching:
+
+     - :guilabel:`VAT` number
+     - :guilabel:`Codice Fiscale`
+
+   The taxes in the XML file must have corresponding :ref:`tax records <localizations/italy/taxes>`
+   in Odoo.
+
 .. example::
    Here is a non-exhaustive list:
 
