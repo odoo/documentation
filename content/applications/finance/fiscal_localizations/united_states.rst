@@ -262,76 +262,27 @@ tax calculations when items are sold, purchased, and invoiced in the database.
 Reports
 =======
 
-A number of :doc:`report selections <../accounting/reporting>` are readily available for the US
-localization, under the :menuselection:`Accounting app --> Reporting` drop-down menu:
+In addition to the :doc:`generic reports <../accounting/reporting>`, the following reports are
+available for the US localization under the :menuselection:`Accounting --> Reporting` menu:
 
-- :ref:`Balance Sheet <accounting/reporting/balance-sheet>`: A "snapshot" of a company's financial
-  position at a specific point in time, which contains an overview of a company's assets,
-  liabilities, and equity.
-- :ref:`Profit and Loss (P&L) <l10n_us/profit-loss-statement>`: Provides a summary of a company's
-  revenues, expenses, and profits/losses over a given period of time. Also known as a *P&L
-  statement* or *income statement*.
-- :ref:`Cash Flow Statement <l10n_us/cash-flow-statement>`: Shows how much cash and cash equivalents
-  a company has received and spent in a given period.
-- :ref:`Executive Summary <accounting/reporting/executive-summary>`: An overview report that covers
-  the key performance indicators of a company's financial position, such as revenue, profit, and
-  debt.
-- :ref:`Tax Report <accounting/reporting/tax-report>`: An official form filed for a tax authority
-  that reports income, expenses, and other pertinent tax information. Tax reports allow taxpayers to
-  calculate their tax liability, schedule tax payments, or request refunds for the overpayment of
-  taxes. In Odoo, the tax report can be made monthly, every two months, quarterly, every 4 months,
-  semi-annually, and annually.
-- :guilabel:`Check Register`: A report that displays cash transactions (regardless of the journal)
-  with their running balance after the transaction. Only visible with the *US - Accounting Reports*
-  (`l10n_us_reports`) module installed.
+- :ref:`Check Register <l10n_us/optional-modules>`: A report displaying cash transactions
+  (regardless of the journal) with their running balance after the transaction.
 - :ref:`1099 Report <l10n_us/1099-report>`: A CSV download of payments made to non-employees in a
-  period to file electronically in a third-party service. Only visible with the *1099 Reporting*
-  (`l10n_us_1099`) module installed.
-
-.. _l10n_us/report-filters:
-
-Depending on the type of report, certain filters are available at the top of the dashboard:
-
-- A *date* filter, indicated by a :icon:`fa-calendar` :guilabel:`(calendar)` icon that precedes a
-  date in *MM/DD/YYYY* format. Use this to select a specific date or date range for the report.
-- A :icon:`fa-bar-chart` :guilabel:`Comparison` filter, to compare reporting periods against each
-  other
-- A *journal* filter, as indicated by a :icon:`fa-book` :guilabel:`(book)` icon and the default
-  setting of :guilabel:`All Journals`. Use this filter to specify which journals should be included
-  in the report.
-- An *entries type* filter, as indicated by a :icon:`fa-filter` :guilabel:`(filter)` icon, with the
-  default setting of :guilabel:`Posted Entries Only, Accrual Basis`. Use this filter to determine
-  which type of journal entries should be included in the report (e.g. posted or draft), along with
-  the type of accounting method (e.g. accrual or cash basis).
-
-  - There are view options in this filter, as well, one that will :guilabel:`Hide lines at 0` for
-    more relevant viewing, along with a :guilabel:`Split Horizontally` option to keep the report
-    above the screen's fold, removing the need to scroll.
-
-    .. image:: united_states/us-l1on-accounting-method-reporting-menu.png
-       :alt: Accounting method filter menu for reports, covering accrual vs. cash basis methods.
-
-- A *decimal* filter, that by default, includes figures with cents, as indicated by the
-  :guilabel:`In .$` setting. Use the other options in the drop-down menu to change figures in the
-  report to whole numbers (:guilabel:`In $`), thousands (:guilabel:`In K$`), or millions
-  (:guilabel:`In M$`) formats.
-- A report *customization* filter, indicated by the :icon:`fa-cogs` :guilabel:`(gears)` icon. Use
-  this filter to customize the current report's sections and line items, or build new reports, as
-  desired.
+  period to file electronically in a third-party service.
 
 .. seealso::
    - :doc:`Accounting reporting <../accounting/reporting>`
    - :doc:`../../essentials/search`
+   - :ref:`Cash basis reporting <accounting/cash-basis/report-filter>`
 
 .. _l10n_us/1099-report:
 
 1099 report
 -----------
 
-The 1099 report, available by :ref:`installing <general/install>` the *1099 Reporting*
-(`l10n_us_1099`) module, includes payments that are made to non-employees across a given reporting
-period. Use the available CSV download from the report in Odoo to file 1099 payments electronically
-via a third-party service.
+The :ref:`1099 report <l10n_us/optional-modules>` includes payments that are made to non-employees
+across a given reporting period. Use the available CSV download from the report in Odoo to file 1099
+payments electronically via a third-party service.
 
 To generate a 1099 report, navigate to :menuselection:`Accounting app --> Reporting --> Management:
 1099 Report` to open a :guilabel:`1099 Report` wizard.
@@ -354,7 +305,7 @@ Cash flow statement
 
 Navigate to the *Cash Flow Statement* (CFS) dashboard by going to :menuselection:`Accounting app -->
 Reporting --> Statement Reports: Cash Flow Statement`. From here, |CFS| reports can be generated
-using the various :ref:`filters <l10n_us/report-filters>` that are available at the top of the
+using the various :ref:`filters <accounting/reporting/filters>` that are available at the top of the
 dashboard.
 
 Odoo uses the *direct* cash flow method to compile cash flow statements, which measures actual cash
