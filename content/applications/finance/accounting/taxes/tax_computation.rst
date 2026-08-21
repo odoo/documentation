@@ -2,6 +2,12 @@
 Tax computation
 ===============
 
+How taxes are computed depends on multiple different fields on the taxes form view. The :ref:`Tax
+Computation <taxes/computation>` field is located at the top of the taxes form view, but the
+:ref:`Included in Price <taxes/included-in-price>`, :ref:`Affect Base of Subsequent Taxes
+<taxes/base-subsequent>`, and :ref:`Base Affected by Preceding Taxes <taxes/base-affected>` fields
+are all located in the :guilabel:`Advanced Options` tab.
+
 .. _taxes/computation:
 
 Tax computation
@@ -200,11 +206,13 @@ defined in the :guilabel:`Formula` field. The Python expression may contain the 
 Included in price
 -----------------
 
+The :guilabel:`Included in Price` field determines if the price on products and invoices already
+includes this tax or if this tax should be applied on top of that value.
+
 .. tip::
    To set a company-wide default for this setting, go to :menuselection:`Accounting -->
    Configuration --> Settings`, find the :guilabel:`Taxes` section, and set the :guilabel:`Prices`
-   setting to :guilabel:`Tax Excluded` or :guilabel:`Tax Included`. This setting cannot be changed
-   once invoices have been created.
+   setting to :guilabel:`Tax Excluded` or :guilabel:`Tax Included`.
 
 :guilabel:`Default` indicates that the tax follows the company-wide default.
 
@@ -215,16 +223,58 @@ computation will therefore compute a tax amount on top of the sales price.
 computation will therefore split the sales price into a tax-excluded base and the tax amount. This
 makes it suitable for B2C sales in most countries, where prices are quoted tax-inclusive.
 
+.. _taxes/toggle:
+
+Tax excluded/included toggle
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The :guilabel:`Tax Excl. / Tax Incl.` toggle on quotations, sales orders, purchase orders, and
+invoices allows users to change a tax's behavior regarding if it is included or excluded in the
+price of products. This toggle allows one tax to meet the needs of multiple situations instead of
+requiring duplicate taxes with otherwise identical configurations.
+
+To use the :guilabel:`Tax Excl. / Tax Incl.` toggle, add the desired products first, then set the
+toggle to the desired option.
+
+If the :guilabel:`Default` option is selected, using the :guilabel:`Tax Excl. / Tax Incl.` toggle on
+a specific quotation, sales order, purchase order, or invoice changes this tax's behavior for that
+record only.
+
+However, if a tax's :guilabel:`Included in Price` field is set to either :guilabel:`Tax Excluded` or
+:guilabel:`Tax Included`, the tax's behavior will not be changed by the :guilabel:`Tax Excl. / Tax
+Incl.` toggle on quotations, sales orders, purchase orders, and invoices.
+
 .. example::
    A product has a sales price of $1000, and we apply a 10% :guilabel:`Percentage of Price` tax
-   with :guilabel:`Included in Price` set to :guilabel:`Tax Included`. We then have:
+   with :guilabel:`Included in Price` set to :guilabel:`Tax Included`. That results in the
+   following:
 
-   +-------------+-------------+----------+----------+
-   | Product     | Price       | Tax      | Total    |
-   | sales price | without tax |          |          |
-   +=============+=============+==========+==========+
-   | 1,000       | 909.09      | 90.91    | 1,000.00 |
-   +-------------+-------------+----------+----------+
+   .. list-table::
+      :header-rows: 1
+
+      * - Product sales price
+        - Price without tax
+        - Tax
+        - Total
+      * - 1,000.00
+        - 909.09
+        - 90.91
+        - 1,000.00
+
+   If the same product instead had its :guilabel:`Included in Price` field set to :guilabel:`Tax
+   Excluded`, the results would be the following:
+
+   .. list-table::
+      :header-rows: 1
+
+      * - Product sales price
+        - Price without tax
+        - Tax
+        - Total
+      * - 1,000.00
+        - 1,000.00
+        - 100.00
+        - 1,100.00
 
 .. note::
    For a guide on configuring tax-excluded and tax-included prices for B2B and B2C customers,
