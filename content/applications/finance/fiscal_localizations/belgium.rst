@@ -897,3 +897,32 @@ confirm the payment using the Bancontact Pay app or a mobile banking app.
      such as canceling the customer's ongoing transaction in their app. The actual payment status
      with Bancontact Pay is not verified when using these buttons; clicking :guilabel:`Force Done`,
      for example, can validate the order in Odoo even if the payment is not completed.
+
+WinBooks import
+===============
+
+Before importing your data in Odoo, you must prepare the data to be exported. Open **WinBooks** and
+navigate to :menuselection:`Maintenance --> Backup`. Then, select to export the following data as a
+`.zip` file:
+
+- Chart of accounts,
+- Contacts,
+- Taxes,
+- History of journal entries,
+- Documents.
+
+.. note::
+   - The following WinBooks Desktop versions are supported: 5.50, 6, 7, and 8.
+   - File sizes beyond 396 MB may not work during the import.
+
+To import your data into Odoo, :doc:`install <../../general/apps_modules>` the module
+:guilabel:`Account Winbooks Import` (`account_winbooks_import`). Then, open the **Accounting app**,
+and go to :menuselection:`Configuration --> Settings`. Under the :guilabel:`Accounting Import`
+section, click :icon:`oi-arrow-right` :guilabel:`Import`. Finally, click :guilabel:`Import WBK` and
+upload the previously prepared `.zip` file.
+
+Check :guilabel:`Import only open years` if you wish to import only open years. Years closed in
+WinBooks are likely to have incomplete data. The counterpart of incomplete entries will be set in a
+suspense account.
+
+Once configured, click :guilabel:`Import` to import your data into Odoo.
