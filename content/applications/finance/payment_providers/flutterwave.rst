@@ -1,3 +1,5 @@
+:custom-css: payment_methods.css
+
 ===========
 Flutterwave
 ===========
@@ -42,3 +44,50 @@ Configuration on Odoo
 
 .. seealso::
    - :doc:`../payment_providers`
+
+Supported payment methods
+=========================
+
+.. container:: payment-methods
+
+   .. figure:: payment_images/bank.png
+      :width: 64px
+      :class: o-no-modal
+
+      Bank Account
+
+   .. figure:: payment_images/bank.png
+      :width: 64px
+      :class: o-no-modal
+
+      Bank Transfer
+
+   .. figure:: payment_images/card.png
+      :width: 64px
+      :class: o-no-modal
+
+      Card
+
+   .. figure:: payment_images/mtn-mobile-money.png
+      :width: 64px
+      :class: o-no-modal
+
+      Mobile money
+
+   .. figure:: payment_images/mpesa.png
+      :width: 64px
+      :class: o-no-modal
+
+      M-Pesa
+
+   .. figure:: payment_images/paypal.png
+      :width: 64px
+      :class: o-no-modal
+
+      Paypal
+
+   .. figure:: payment_images/flutterwave.png
+      :width: 64px
+      :class: o-no-modal
+
+      USSD

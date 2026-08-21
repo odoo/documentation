@@ -1,3 +1,5 @@
+:custom-css: payment_methods.css
+
 =======
 AsiaPay
 =======
@@ -48,3 +50,218 @@ Configuration on Odoo
 
 .. seealso::
    - :doc:`../payment_providers`
+
+Supported payment methods
+=========================
+
+.. container:: payment-methods
+
+   .. figure:: payment_images/alipay.png
+      :width: 64px
+      :class: o-no-modal
+
+      Alipay
+
+   .. figure:: payment_images/alipay_hk.png
+      :width: 64px
+      :class: o-no-modal
+
+      AlipayHK
+
+   .. figure:: payment_images/atome.png
+      :width: 64px
+      :class: o-no-modal
+
+      Atome
+
+   .. figure:: payment_images/bank.png
+      :width: 64px
+      :class: o-no-modal
+
+      Bank of Ayudhya
+
+   .. figure:: payment_images/bank.png
+      :width: 64px
+      :class: o-no-modal
+
+      Bangkok Bank CWF
+
+   .. figure:: payment_images/card.png
+      :width: 64px
+      :class: o-no-modal
+
+      Card
+
+   .. figure:: payment_images/duitnow.png
+      :width: 64px
+      :class: o-no-modal
+
+      DuitNow
+
+   .. figure:: payment_images/enets.png
+      :width: 64px
+      :class: o-no-modal
+
+      eNETS
+
+   .. figure:: payment_images/card.png
+      :width: 64px
+      :class: o-no-modal
+
+      FPS
+
+   .. figure:: payment_images/gcash.png
+      :width: 64px
+      :class: o-no-modal
+
+      GCash
+
+   .. figure:: payment_images/hoolah.png
+      :width: 64px
+      :class: o-no-modal
+
+      Hoolah
+
+   .. figure:: payment_images/humm.png
+      :width: 64px
+      :class: o-no-modal
+
+      Humm
+
+   .. figure:: payment_images/jkopay.png
+      :width: 64px
+      :class: o-no-modal
+
+      JKO Pay
+
+   .. figure:: payment_images/bank.png
+      :width: 64px
+      :class: o-no-modal
+
+      Krung Thai Bank CWF
+
+   .. figure:: payment_images/linepay.png
+      :width: 64px
+      :class: o-no-modal
+
+      LINE Pay
+
+   .. figure:: payment_images/maya.png
+      :width: 64px
+      :class: o-no-modal
+
+      Maya
+
+   .. figure:: payment_images/maybank.png
+      :width: 64px
+      :class: o-no-modal
+
+      Maybank2u
+
+   .. figure:: payment_images/momo.png
+      :width: 64px
+      :class: o-no-modal
+
+      MoMo
+
+   .. figure:: payment_images/octopus.png
+      :width: 64px
+      :class: o-no-modal
+
+      Octopus
+
+   .. figure:: payment_images/pace.png
+      :width: 64px
+      :class: o-no-modal
+
+      Pace
+
+   .. figure:: payment_images/pay_id.png
+      :width: 64px
+      :class: o-no-modal
+
+      PayID
+
+   .. figure:: payment_images/payme.png
+      :width: 64px
+      :class: o-no-modal
+
+      PayMe
+
+   .. figure:: payment_images/paypal.png
+      :width: 64px
+      :class: o-no-modal
+
+      PayPal
+
+   .. figure:: payment_images/poli.png
+      :width: 64px
+      :class: o-no-modal
+
+      POLi
+
+   .. figure:: payment_images/samsung_pay.png
+      :width: 64px
+      :class: o-no-modal
+
+      Samsung Pay
+
+   .. figure:: payment_images/bank.png
+      :width: 64px
+      :class: o-no-modal
+
+      SCB Easy
+
+   .. figure:: payment_images/tendopay.png
+      :width: 64px
+      :class: o-no-modal
+
+      TendoPay
+
+   .. figure:: payment_images/tenpay.png
+      :width: 64px
+      :class: o-no-modal
+
+      Tenpay
+
+   .. figure:: payment_images/tmb.png
+      :width: 64px
+      :class: o-no-modal
+
+      TMB Bank
+
+   .. figure:: payment_images/touch_n_go.png
+      :width: 64px
+      :class: o-no-modal
+
+      Touch'n Go
+
+   .. figure:: payment_images/truemoney.png
+      :width: 64px
+      :class: o-no-modal
+
+      TrueMoney
+
+   .. figure:: payment_images/card.png
+      :width: 64px
+      :class: o-no-modal
+
+      TTB - TMBThanachart Bank
+
+   .. figure:: payment_images/bank.png
+      :width: 64px
+      :class: o-no-modal
+
+      United Overseas Bank
+
+   .. figure:: payment_images/wechat_pay.png
+      :width: 64px
+      :class: o-no-modal
+
+      WeChat Pay
+
+   .. figure:: payment_images/zip.png
+      :width: 64px
+      :class: o-no-modal
+
+      Zip

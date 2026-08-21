@@ -1,3 +1,5 @@
+:custom-css: payment_methods.css
+
 ======
 Stripe
 ======
@@ -112,3 +114,212 @@ the Stripe payment provider <payment_providers/supported_providers>`, then go to
 .. tip::
    Stripe allows to :ref:`manually capture <payment_providers/manual_capture>` and :ref:`refund
    <payment_providers/refunds>` payments either from Odoo or directly from the Stripe dashboard.
+
+Supported payment methods
+=========================
+
+.. container:: payment-methods
+
+   .. figure:: payment_images/ach_direct_debit.png
+      :width: 64px
+      :class: o-no-modal
+
+      ACH Direct Debit
+
+   .. figure:: payment_images/affirm.png
+      :width: 64px
+      :class: o-no-modal
+
+      Affirm
+
+   .. figure:: payment_images/afterpay.png
+      :width: 64px
+      :class: o-no-modal
+
+      Afterpay
+
+   .. figure:: payment_images/alipay.png
+      :width: 64px
+      :class: o-no-modal
+
+      Alipay
+
+   .. figure:: payment_images/alma.png
+      :width: 64px
+      :class: o-no-modal
+
+      Alma
+
+   .. figure:: payment_images/amazon_pay.png
+      :width: 64px
+      :class: o-no-modal
+
+      Amazon Pay
+
+   .. figure:: payment_images/bacs_direct_debit.png
+      :width: 64px
+      :class: o-no-modal
+
+      BACS Direct Debit
+
+   .. figure:: payment_images/bancontact.png
+      :width: 64px
+      :class: o-no-modal
+
+      Bancontact
+
+   .. figure:: payment_images/becs_direct_debit.png
+      :width: 64px
+      :class: o-no-modal
+
+      BECS Direct Debit
+
+   .. figure:: payment_images/boleto.png
+      :width: 64px
+      :class: o-no-modal
+
+      Boleto
+
+   .. figure:: payment_images/card.png
+      :width: 64px
+      :class: o-no-modal
+
+      Card
+
+   .. figure:: payment_images/cash_app_pay.png
+      :width: 64px
+      :class: o-no-modal
+
+      Cash App Pay
+
+   .. figure:: payment_images/clearpay.png
+      :width: 64px
+      :class: o-no-modal
+
+      Clearpay
+
+   .. figure:: payment_images/eps.png
+      :width: 64px
+      :class: o-no-modal
+
+      EPS
+
+   .. figure:: payment_images/fpx.png
+      :width: 64px
+      :class: o-no-modal
+
+      FPX
+
+   .. figure:: payment_images/grabpay.png
+      :width: 64px
+      :class: o-no-modal
+
+      GrabPay
+
+   .. figure:: payment_images/ideal_wero.png
+      :width: 64px
+      :class: o-no-modal
+
+      iDEAL
+
+   .. figure:: payment_images/klarna.png
+      :width: 64px
+      :class: o-no-modal
+
+      Klarna
+
+   .. figure:: payment_images/mobile_pay.png
+      :width: 64px
+      :class: o-no-modal
+
+      MobilePay
+
+   .. figure:: payment_images/multibanco.png
+      :width: 64px
+      :class: o-no-modal
+
+      Multibanco
+
+   .. figure:: payment_images/p24.png
+      :width: 64px
+      :class: o-no-modal
+
+      P24
+
+   .. figure:: payment_images/paynow.png
+      :width: 64px
+      :class: o-no-modal
+
+      PayNow
+
+   .. figure:: payment_images/paypal.png
+      :width: 64px
+      :class: o-no-modal
+
+      Paypal
+
+   .. figure:: payment_images/pix.png
+      :width: 64px
+      :class: o-no-modal
+
+      Pix
+
+   .. figure:: payment_images/promptpay.png
+      :width: 64px
+      :class: o-no-modal
+
+      Prompt Pay
+
+   .. figure:: payment_images/revolut_pay.png
+      :width: 64px
+      :class: o-no-modal
+
+      Revolut Pay
+
+   .. figure:: payment_images/satispay.png
+      :width: 64px
+      :class: o-no-modal
+
+      Satispay
+
+   .. figure:: payment_images/sepa.png
+      :width: 64px
+      :class: o-no-modal
+
+      SEPA Direct Debit
+
+   .. figure:: payment_images/swish.png
+      :width: 64px
+      :class: o-no-modal
+
+      Swish
+
+   .. figure:: payment_images/twint.png
+      :width: 64px
+      :class: o-no-modal
+
+      Twint
+
+   .. figure:: payment_images/upi.png
+      :width: 64px
+      :class: o-no-modal
+
+      UPI
+
+   .. figure:: payment_images/unknown.png
+      :width: 64px
+      :class: o-no-modal
+
+      Express Checkout
+
+   .. figure:: payment_images/wechat_pay.png
+      :width: 64px
+      :class: o-no-modal
+
+      WeChat Pay
+
+   .. figure:: payment_images/zip.png
+      :width: 64px
+      :class: o-no-modal
+
+      Zip

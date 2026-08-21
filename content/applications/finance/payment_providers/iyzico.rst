@@ -1,3 +1,5 @@
+:custom-css: payment_methods.css
+
 ======
 Iyzico
 ======
@@ -32,3 +34,20 @@ Odoo configuration
 
 .. seealso::
    :doc:`../payment_providers`
+
+Supported payment methods
+=========================
+
+.. container:: payment-methods
+
+   .. figure:: payment_images/bank.png
+      :width: 64px
+      :class: o-no-modal
+
+      Bank Transfer
+
+   .. figure:: payment_images/card.png
+      :width: 64px
+      :class: o-no-modal
+
+      Card

@@ -1,3 +1,5 @@
+:custom-css: payment_methods.css
+
 ========
 Buckaroo
 ========
@@ -35,3 +37,128 @@ Configuration on Odoo
 
 .. seealso::
    :doc:`../payment_providers`
+
+Supported payment methods
+=========================
+
+.. container:: payment-methods
+
+   .. figure:: payment_images/afterpay_riverty.png
+      :width: 64px
+      :class: o-no-modal
+
+      AfterPay
+
+   .. figure:: payment_images/alipay.png
+      :width: 64px
+      :class: o-no-modal
+
+      Alipay
+
+   .. figure:: payment_images/bancontact.png
+      :width: 64px
+      :class: o-no-modal
+
+      Bancontact
+
+   .. figure:: payment_images/bank.png
+      :width: 64px
+      :class: o-no-modal
+
+      Bank reference
+
+   .. figure:: payment_images/belfius.png
+      :width: 64px
+      :class: o-no-modal
+
+      Belfius
+
+   .. figure:: payment_images/billink.png
+      :width: 64px
+      :class: o-no-modal
+
+      Billink
+
+   .. figure:: payment_images/card.png
+      :width: 64px
+      :class: o-no-modal
+
+      Card
+
+   .. figure:: payment_images/eps.png
+      :width: 64px
+      :class: o-no-modal
+
+      EPS
+
+   .. figure:: payment_images/ideal_wero.png
+      :width: 64px
+      :class: o-no-modal
+
+      iDEAL
+
+   .. figure:: payment_images/in3.png
+      :width: 64px
+      :class: o-no-modal
+
+      in3
+
+   .. figure:: payment_images/kbc.png
+      :width: 64px
+      :class: o-no-modal
+
+      KBC/CBC
+
+   .. figure:: payment_images/klarna.png
+      :width: 64px
+      :class: o-no-modal
+
+      Klarna
+
+   .. figure:: payment_images/p24.png
+      :width: 64px
+      :class: o-no-modal
+
+      P24
+
+   .. figure:: payment_images/paypal.png
+      :width: 64px
+      :class: o-no-modal
+
+      Paypal
+
+   .. figure:: payment_images/poste_pay.png
+      :width: 64px
+      :class: o-no-modal
+
+      PostePay
+
+   .. figure:: payment_images/sepa.png
+      :width: 64px
+      :class: o-no-modal
+
+      SEPA Direct Debit
+
+   .. figure:: payment_images/tinka.png
+      :width: 64px
+      :class: o-no-modal
+
+      Tinka
+
+   .. figure:: payment_images/trustly.png
+      :width: 64px
+      :class: o-no-modal
+
+      Trustly
+
+   .. figure:: payment_images/wechat_pay.png
+      :width: 64px
+      :class: o-no-modal
+
+      WeChat Pay
+
+   .. figure:: payment_images/wero.png
+      :width: 64px
+      :class: o-no-modal
+
+      Wero
