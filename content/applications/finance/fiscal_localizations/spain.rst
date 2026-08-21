@@ -23,12 +23,6 @@ The following modules are installed automatically with the Spanish localization:
    * - :guilabel:`Spain - Accounting (PGCE 2008) Reports`
      - `l10n_es_reports`
      - Accounting reports for Spain.
-   * - :guilabel:`Spain - Accounting Reports (2024 Update)`
-     - `l10n_es_reports_2024`
-     - Adds extra fields regarding Rectificación for Modelo 303.
-   * - :guilabel:`Spain - Accounting Reports (2025 Update)`
-     - `l10n_es_reports_2025`
-     - Adds tax return functionalities.
    * - :guilabel:`Spain - Facturae EDI`
      - `l10n_es_edi_facturae`
      - Creates EDI Facturae files required to send to AGE (Administración General del Estado).
