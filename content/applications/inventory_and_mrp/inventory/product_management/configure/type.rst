@@ -346,5 +346,6 @@ Inventory reports
   :menuselection:`Inventory app --> Reporting --> Moves History`. Alternatively, click the
   :icon:`fa-exchange` :guilabel:`In / Out` smart button on a product form to filter the report
   on that product's specific move history.
-- :guilabel:`Moves Analysis`: This report provides a pivot table view of inventory transfers by
-  operation type.
+- :doc:`Moves Analysis report <../../warehouses_storage/reporting/moves_analysis>`: This report
+  provides a pivot table view of stock moves, including quantity and value data, by operation type.
+  To access it, go to :menuselection:`Inventory app --> Reporting --> Moves Analysis`.
