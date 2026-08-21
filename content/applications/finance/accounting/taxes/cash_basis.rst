@@ -11,7 +11,7 @@ basis method is mandatory in some countries and under some conditions.
    quarter. Based on the cash basis method, the tax you must pay is for the 2nd quarter.
 
 Configuration
--------------
+=============
 
 Go to :menuselection:`Accounting --> Configuration --> Settings` and under the :guilabel:`Taxes`
 section, enable :guilabel:`Cash Basis`.
@@ -51,7 +51,7 @@ long as the original invoice has not been reconciled.
         reconciliation.
 
 Impact of cash basis taxes on accounting
-----------------------------------------
+========================================
 
 To illustrate the impact of cash basis taxes on accounting transactions, let's take an example with
 the sales of a product that costs 1,000$, with a cash basis tax of 15%.
@@ -114,3 +114,19 @@ Using a default :guilabel:`Base Tax Received Account` is recommended so your bal
 your income account is not polluted by unnecessary accounting movements. To do so, go to
 :menuselection:`Configuration --> Settings --> Taxes`, and select a
 :guilabel:`Base Tax Received Account` under :guilabel:`Cash Basis`.
+
+.. _accounting/cash-basis/report-filter:
+
+Cash basis reporting
+====================
+
+To filter a report by :guilabel:`Cash Basis Method`, follow these steps:
+
+#. Enable the :ref:`developer mode <developer-mode>`.
+#. Go to :guilabel:`Accounting --> Reporting`, then select the relevant report from the menu.
+#. Click the :icon:`fa-cogs` :guilabel:`(cogs)` icon in the top bar.
+#. Go to the :guilabel:`Options` tab and enable :guilabel:`Cash Basis` in the :guilabel:`Advanced`
+   section.
+#. Go back to the report of your choice.
+#. Click the :icon:`oi-settings-adjust` :guilabel:`(sliders)` report options button and select
+   :guilabel:`Cash Basis Method`.
