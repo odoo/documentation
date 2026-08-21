@@ -199,12 +199,37 @@ suggested quantity in the replenishment row is calculated by the following relat
    &+ \text{Indirect Demand Forecast}
    \end{align}
 
+<<<<<<< b4aba73e0c375bc6628a3eb22a7f4b1fd0fd71e3
 If a :guilabel:`Minimum to Replenish` value is set, the |MPS| always suggests this minimum
 replenishment quantity, unless ``Safety Stock Target - Starting Stock + Forecasted Demand ≤ 0``.
 
 .. note::
    In general, the |MPS| suggests a quantity of `0` if ``Safety Stock Target - Starting Stock +
    Forecasted Demand ≤ 0``.
+||||||| 2763c6c0090f8aef5df5469104e71d25bf8b74f5
+If minimum or maximum limits are set, the suggested replenishment quantity is always bounded by
+these limits, regardless of the needed quantity to reach the :guilabel:`Safety Stock Target`.
+=======
+Additionally, the following rules are applied to the suggested `Replenishment` quantity above if
+minimum/maximum limits are set:
+
+#. If ``Replenishment > Maximum to Replenish``, it remains at the maximum.
+#. If ``0 < Replenishment < Minimum to Replenish``, the suggestion is the minimum quantity. If
+   ``Replenishment ≤ 0``, it defaults to `0`. However, if the suggestion already meets or exceeds
+   the minimum, it remains as-is.
+
+.. example::
+   A *Chair* product has a starting stock of `60` units for the current period and a forecasted
+   demand of `75` units. The following replenishment options are set:
+
+   - :guilabel:`Safety Stock Target`: `10` units
+   - :guilabel:`Minimum to Replenish`: `5` units
+   - :guilabel:`Maximum to Replenish`: `20` units
+
+   While the default suggested replenishment quantity (``10 - 60 + 75``) is `25` units of the
+   *Chair*, it exceeds the configured maximum of `20` units. Therefore the final suggested
+   replenishment quantity is `20`.
+>>>>>>> f427ded5eea804f6e834b8ae9c88a57afede9d09
 
 Specify replenishment trigger
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
