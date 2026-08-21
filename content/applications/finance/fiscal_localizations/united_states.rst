@@ -322,6 +322,7 @@ Depending on the type of report, certain filters are available at the top of the
 .. seealso::
    - :doc:`Accounting reporting <../accounting/reporting>`
    - :doc:`../../essentials/search`
+   - :ref:`Enable Cash Basis Method report filter <cash-basis/report-filter>`
 
 .. _l10n_us/1099-report:
 
