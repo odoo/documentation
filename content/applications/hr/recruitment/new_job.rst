@@ -180,7 +180,8 @@ tracking link has been shared. This allows recruiters to determine which sites w
 successful in terms of receiving applications from them.
 
 .. tip::
-   Before creating trackers, first :ref:`publish <post-job/website>` the job on the company website.
+   Before creating trackers, first :ref:`publish <recruitment/post-job/website>` the job on the
+   company website.
 
 To add a tracking link, click on the *Trackers* tab, click :guilabel:`Add a line`, and a blank line
 appears at the top of the list. Configure the following fields for each tracker:
@@ -208,7 +209,7 @@ Job boards tab
 ~~~~~~~~~~~~~~
 
 The *Job Boards* tab is automatically populated as the job position is :ref:`shared on a job board
-<post-job/boards>`. As each listing is created, the information appears in this tab.
+<recruitment/post-job/boards>`. As each listing is created, the information appears in this tab.
 
 .. seealso::
    :doc:`post_job`
