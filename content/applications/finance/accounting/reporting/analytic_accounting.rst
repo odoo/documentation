@@ -123,10 +123,15 @@ Analytic distribution en masse
 ------------------------------
 
 To mass-edit analytic accounts in several entries simultaneously, go to :menuselection:`Accounting
---> Accounting --> Journal items`, and select the ones that need to be updated. Click the
+--> Review --> Journal items`, and select the ones that need to be updated. Click the
 :guilabel:`Analytic Distribution` column and add the required distribution in the
 :guilabel:`Analytic` column, then click the :icon:`oi-close` :guilabel:`(cross)` and
 :guilabel:`Update`. The analytic distribution is then added to the selected journal items.
+
+.. tip::
+   If the :guilabel:`Analytic Distribution` column is not displayed, use the
+   :icon:`oi-settings-adjust` :guilabel:`(settings adjust)` icon, and tick :guilabel:`Analytic
+   Distribution`.
 
 .. _accounting/analytic_distribution_models:
 
