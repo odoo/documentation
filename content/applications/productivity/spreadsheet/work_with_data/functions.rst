@@ -1,10 +1,26 @@
-=========
-Functions
-=========
+======================
+Formulas and functions
+======================
 
-**Odoo Spreadsheet** supports formulas and functions found in most spreadsheet solutions. This page
-presents the available functions by category. Odoo-specific functions are included both in the
-relevant category and in a dedicated :ref:`Odoo <spreadsheet/functions/odoo>` category:
+**Odoo Spreadsheet** supports :ref:`functions <spreadsheet/functions/available-functions>` found in
+most spreadsheet solutions, allowing you to perform calculations, retrieve information, and
+manipulate data using formulas. In addition, using :ref:`Odoo-specific functions
+<spreadsheet/functions/odoo>` allows you to work with live Odoo data from your database.
+
+To help ensure data accuracy, Odoo Spreadsheet offers various ways to :ref:`troubleshoot errors and
+inconsistencies <spreadsheet/functions/troubleshooting>` in formulas and functions.
+
+.. tip::
+   Use `F2` to view the formula behind an active cell, and, if desired, edit it directly in the
+   cell.
+
+.. _spreadsheet/functions/available-functions:
+
+Available functions
+===================
+
+This section presents the available functions by category. Odoo-specific functions are included both
+in the relevant category and in a dedicated :ref:`Odoo <spreadsheet/functions/odoo>` category:
 
 - :ref:`Array <spreadsheet/functions/array>`
 - :ref:`Database <spreadsheet/functions/database>`
@@ -30,7 +46,7 @@ relevant category and in a dedicated :ref:`Odoo <spreadsheet/functions/odoo>` ca
 .. _spreadsheet/functions/array:
 
 Array
-=====
+-----
 
 .. list-table::
    :header-rows: 1
@@ -83,7 +99,7 @@ Array
 .. _spreadsheet/functions/database:
 
 Database
-========
+--------
 
 .. list-table::
    :header-rows: 1
@@ -119,7 +135,7 @@ Database
 .. _spreadsheet/functions/date:
 
 Date
-====
+----
 
 .. list-table::
    :header-rows: 1
@@ -195,7 +211,7 @@ Date
 .. _spreadsheet/functions/engineering:
 
 Engineering
-===========
+-----------
 
 .. list-table::
    :header-rows: 1
@@ -209,7 +225,7 @@ Engineering
 .. _spreadsheet/functions/filter:
 
 Filter
-======
+------
 
 .. list-table::
    :header-rows: 1
@@ -219,6 +235,8 @@ Filter
      - Description or link
    * - FILTER(range, condition1, [condition2, ...])
      - `Excel FILTER article <https://support.microsoft.com/office/filter-function-f4f7cb66-82eb-4767-8f7c-4877ad80c759>`_
+   * - ODOO.FILTER.LABEL(filter_name)
+     - Returns the label of the current value of a spreadsheet filter (not compatible with Excel)
    * - ODOO.FILTER.VALUE(filter_name)
      - Returns the current value of a spreadsheet filter (not compatible with Excel)
    * - SORT(range, [sort_column, ...], [is_ascending, ...])
@@ -229,7 +247,7 @@ Filter
 .. _spreadsheet/functions/financial:
 
 Financial
-=========
+---------
 
 .. list-table::
    :header-rows: 1
@@ -370,7 +388,7 @@ Financial
 .. _spreadsheet/functions/info:
 
 Info
-====
+----
 
 .. list-table::
    :header-rows: 1
@@ -386,6 +404,8 @@ Info
      - `Excel IS article <https://support.microsoft.com/office/is-functions-0f2d7971-6019-40a0-a171-f2d869135665>`_
    * - ISERROR(value)
      - `Excel IS article <https://support.microsoft.com/office/is-functions-0f2d7971-6019-40a0-a171-f2d869135665>`_
+   * - ISFORMULA(cell_reference)
+     - `Excel ISFORMULA article <https://support.microsoft.com/en-us/excel/functions/isformula-function>`_
    * - ISLOGICAL(value)
      - `Excel IS article <https://support.microsoft.com/office/is-functions-0f2d7971-6019-40a0-a171-f2d869135665>`_
    * - ISNA(value)
@@ -402,7 +422,7 @@ Info
 .. _spreadsheet/functions/logical:
 
 Logical
-=======
+-------
 
 .. list-table::
    :header-rows: 1
@@ -436,7 +456,7 @@ Logical
 .. _spreadsheet/functions/lookup:
 
 Lookup
-======
+------
 
 .. list-table::
    :header-rows: 1
@@ -488,7 +508,7 @@ Lookup
 .. _spreadsheet/functions/math:
 
 Math
-====
+----
 
 .. list-table::
    :header-rows: 1
@@ -618,7 +638,7 @@ Math
 .. _spreadsheet/functions/operators:
 
 Operators
-=========
+---------
 
 .. list-table::
    :header-rows: 1
@@ -660,7 +680,7 @@ Operators
 .. _spreadsheet/functions/parser:
 
 Parser
-======
+------
 
 .. list-table::
    :header-rows: 1
@@ -674,7 +694,7 @@ Parser
 .. _spreadsheet/functions/statistical:
 
 Statistical
-===========
+-----------
 
 .. list-table::
    :header-rows: 1
@@ -795,7 +815,7 @@ Statistical
 .. _spreadsheet/functions/text:
 
 Text
-====
+----
 
 .. list-table::
    :header-rows: 1
@@ -831,6 +851,10 @@ Text
      - `Excel REPLACE article <https://support.microsoft.com/office/replace-replaceb-functions-8d799074-2425-4a8a-84bc-82472868878a>`_
    * - REGEXEXTRACT(text, pattern, [return_mode], [case_sensitivity])
      - `Excel REGEXEXTRACT article <https://support.microsoft.com/en-us/office/regexextract-function-4b96c140-9205-4b6e-9fbe-6aa9e783ff57>`_
+   * - REGEXREPLACE(text, pattern, replacement, [occurrence], [case_sensitivity])
+     - `Excel REGEXREPLACE article <https://support.microsoft.com/en-us/excel/functions/regexreplace-function>`_
+   * - REGEXTEST(text, pattern, [case_sensitivity])
+     - `Excel REGEXTEST article <https://support.microsoft.com/en-us/excel/functions/regextest-function>`_
    * - RIGHT(text, [number_of_characters])
      - `Excel RIGHT article <https://support.microsoft.com/office/right-rightb-functions-240267ee-9afa-4639-a02b-f19e1786cf2f>`_
    * - SEARCH(search_for, text_to_search, [starting_at])
@@ -859,7 +883,7 @@ Text
 .. _spreadsheet/functions/web:
 
 Web
-===
+---
 
 .. list-table::
    :header-rows: 1
@@ -873,12 +897,12 @@ Web
 .. _spreadsheet/functions/odoo:
 
 Odoo-specific functions
-=======================
+-----------------------
 
 This section contains functions that interact directly with your Odoo database.
 
 Array
------
+~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -893,7 +917,7 @@ Array
        Excel)
 
 Date
-----
+~~~~
 
 .. list-table::
    :header-rows: 1
@@ -919,7 +943,7 @@ Date
      - Exact number of years between two dates (not compatible with Excel)
 
 Financial
----------
+~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -956,7 +980,7 @@ Financial
        Excel)
 
 Lookup
-------
+~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -972,7 +996,7 @@ Lookup
      - Returns a value from an inserted pivot table (not compatible with Excel)
 
 Math
-----
+~~~~
 
 .. list-table::
    :header-rows: 1
@@ -987,7 +1011,7 @@ Math
        Excel)
 
 Misc
-----
+~~~~
 
 .. list-table::
    :header-rows: 1
@@ -1000,12 +1024,20 @@ Misc
    * - ODOO.LIST(list_id, [row count])
      - Re-inserts a dynamic Odoo list (not compatible with Excel)
    * - ODOO.LIST.HEADER(list_id, field_name)
+<<<<<<< 47f3d083ada49069821ff9bd01cb51c0456c9bbe
      - Returns a header from an inserted Odoo list (not compatible with Excel)
    * - ODOO.LIST.VALUE(list_id, index, field_name)
      - Returns a value from an inserted Odoo list (not compatible with Excel)
+||||||| e0d71d47d32c462599895f3cc69b49041e371402
+     - Returns the header of a list (not compatible with Excel)
+=======
+     - Returns the header of a list (not compatible with Excel)
+   * - ODOO.SURVEY(survey_id)
+     - Returns the results of an Odoo survey (not compatible with Excel)
+>>>>>>> 404ae0f99bf5be2636e496878759e2372fa71480
 
 Operators
----------
+~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -1043,7 +1075,7 @@ Operators
      - A specified number, unchanged (not compatible with Excel)
 
 Statistical
------------
+~~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
@@ -1067,7 +1099,7 @@ Statistical
      - Fits points to linear trend derived via least-squares (not compatible with Excel)
 
 Text
-----
+~~~~
 
 .. list-table::
    :header-rows: 1
@@ -1077,3 +1109,67 @@ Text
      - Description or link
    * - JOIN(delimiter, value_or_array1, [value_or_array2, ...])
      - Concatenates elements of arrays with delimiter (not compatible with Excel)
+
+.. _spreadsheet/functions/troubleshooting:
+
+Troubleshooting
+===============
+
+.. _spreadsheet/functions/troubleshooting-error-messages:
+
+Understand errors
+-----------------
+
+When a formula is unable to return a value, the cell displays an error message that identifies the
+type of error. For example, `#N/A` indicates that a value is not found when using a lookup function,
+`#NAME?` indicates that a function name is misspelled or unrecognised, while `#BAD_EXPR` indicates
+an issue with the arguments of a function.
+
+Hovering over a cell with an error message reveals a card that provides more details about the
+error.
+
+.. tip::
+   - Use the **IFERROR** function to provide an alternative result when an error occurs. For
+     example, to avoid multiple `#N/A` errors when using a **VLOOKUP** function, the following
+     formula returns `Not Found` instead of `#N/A`: `=IFERROR(VLOOKUP(D1, A:B, 1, 0), "Not Found")`.
+   - In a large dataset, use the :ref:`Irregularity map
+     <spreadsheet/functions/troubleshooting-irregularity-map>` to visually highlight cells
+     whose formulas are not consistent with the pattern established by surrounding cells.
+
+.. _spreadsheet/functions/troubleshooting-irregularity-map:
+
+Detect formula inconsistencies
+------------------------------
+
+Issues with formulas, such as accidentally overwriting a formula with a fixed value, breaking a cell
+reference, or not respecting the arguments of a function, can result in incorrect values being
+displayed. In a large dataset, such errors can be particularly difficult to identify manually.
+
+Odoo Spreadsheet's **Irregularity map** analyzes formulas for patterns and highlights anomalies
+visually: cells whose formulas follow the same pattern share the same color, while anomalies are
+shown in a different color.
+
+To use the tool, click :menuselection:`View --> Irregularity map` from the menu bar, then check the
+spreadsheet for inconsistencies. To turn off the irregularity map, click :guilabel:`Irregularity
+map` or :guilabel:`Turn off` on the banner below the toolbar.
+
+.. example::
+   In the example (in which the formulas have been made visible by selecting :menuselection:`View
+   -->` :icon:`fa-eye` :menuselection:`Show --> Formulas` from the menu bar), column :guilabel:`D`
+   contains the amount of commission earned over the first and second quarters. This is calculated
+   by adding the sales of the two quarters, shown in columns :guilabel:`B` and :guilabel:`C`, then
+   multiplying it by the bonus rate in cell :guilabel:`G1`.
+
+   The irregularity map identifies the patterns in the formulas in column :guilabel:`D`. Cells that
+   follow the pattern of the initial formula used in cell :guilabel:`D2` have the same red color,
+   while the following anomalies are highlighted separately:
+
+   - **Cell D4**: This cell features a static value instead of the formula.
+   - **Cell D5**: The formula in this cell does not follow the pattern of the initial formula.
+   - **Cells D8 and D9**: Cell :guilabel:`D8` is missing the absolute reference (`$`) on `G1`; when
+     the formula is dragged to cell :guilabel:`D9`, this creates a referencing error because cell
+     :guilabel:`G2` is empty. As the formulas in the two cells follow the same pattern, they share
+     the same color.
+
+   .. image:: functions/irregularity-map.png
+      :alt: Irregularity map detecting two anomalies
