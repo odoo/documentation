@@ -8,9 +8,9 @@ in the company's warehouse, without having to buy those items up-front. This is 
 *consignment*.
 
 Consignment is a useful method for suppliers to launch new products, and easily deliver to their
-customers. It's also a great way for the company storing the products (the consignee) to earn
+customers. It is also a great way for the company storing the products (the consignee) to earn
 something back for their efforts. Consignees can even charge a fee for the convenience of storing
-products they don't actually own.
+products they do not actually own.
 
 Enable the consignment setting
 ==============================
@@ -21,7 +21,6 @@ do this, go to :menuselection:`Inventory --> Configuration --> Settings`, and un
 :guilabel:`Save` to finish.
 
 .. image:: owned_stock/owned-stock-enable-consignment.png
-   :align: center
    :alt: Enabled Consignment setting in Inventory configuration.
 
 Receive (and store) consignment stock
@@ -49,7 +48,6 @@ the quantities to be received into the warehouse under the :guilabel:`Done` colu
 as well. Once all the consignment stock has been received, :guilabel:`Validate` the receipt.
 
 .. image:: owned_stock/owned-stock-receipt-fields.png
-   :align: center
    :alt: Matching vendor fields in consignment Receipt creation.
 
 Sell and deliver consignment stock
@@ -71,7 +69,6 @@ Add the consignment product under the :guilabel:`Product` column in the order li
 quotation is complete, click :guilabel:`Confirm`.
 
 .. image:: owned_stock/owned-stock-sales-order.png
-   :align: center
    :alt: Sales order of consignment stock.
 
 Once the quotation has been confirmed, it becomes a sales order. From here, the products can be
@@ -89,8 +86,8 @@ view.
 
 .. note::
    Since the consignee does not actually own consignment stock, these products are *not* reflected
-   in the :guilabel:`Stock Valuation` report, and have no impact on the consignee's inventory
-   valuation.
+   in the :guilabel:`Stock Valuation` report or :guilabel:`Aging Report`, and have no impact on the
+   consignee's inventory valuation.
 
 Product moves report
 --------------------
@@ -108,7 +105,6 @@ originate from :guilabel:`Partner Location/Vendors`.
    :guilabel:`Apply` to finish.
 
 .. image:: owned_stock/owned-stock-moves-history.png
-   :align: center
    :alt: Consignment stock moves history.
 
 .. tip::
@@ -121,5 +117,5 @@ Stock on hand report
 View the :guilabel:`Stock On Hand` dashboard by navigating to :menuselection:`Inventory -->
 Reporting --> Inventory Report`. From this report, the :guilabel:`Locations` of all stock on-hand
 are displayed, in addition to the quantities per location. For consignment products, the
-:guilabel:`Owner` column will be populated with the owner of those products, or the original vendor
-who supplied the products in the first place.
+:guilabel:`Owner` column is populated with the owner of those products, or the original vendor who
+supplied the products in the first place.

@@ -12,4 +12,5 @@ Reporting
    reporting/stock
    reporting/detailed_stock
    reporting/moves_history
+   reporting/moves_analysis
    reporting/dashboards

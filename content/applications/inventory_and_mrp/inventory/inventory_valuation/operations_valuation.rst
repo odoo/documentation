@@ -335,9 +335,9 @@ Adjusting the value of a move
 -----------------------------
 
 When a move was valued incorrectly at the time of the operation, the value recorded on the completed
-move can be corrected using the :guilabel:`Adjust Valuation` action in the :guilabel:`Moves
-Analysis` report. The correction takes a new value and a description explaining the reason, and
-applies to that move alone.
+move can be corrected using the :guilabel:`Adjust Valuation` action in the :ref:`Moves Analysis
+<inventory/operations_valuation/moves-analysis>` report. The correction takes a new value and a
+description explaining the reason, and applies to that move alone.
 
 .. _inventory/operations_valuation/reporting:
 
@@ -356,14 +356,11 @@ Stock movements and related valuation impacts can be found in the :ref:`Moves An
 Moves Analysis
 --------------
 
-The Moves Analysis report lists moves with their source location, destination location, quantity,
-:guilabel:`Value`, :guilabel:`Remaining Quantity`, and :guilabel:`Remaining Value`. Dividing a
-move's value by its quantity gives the unit value that was applied to it.
-
-Use this report to investigate the details for a particular operation, e.g., what a delivery was
-valued at, how much of a receipt is still in stock, or what a manufacturing order added. The value
-of an individual move can be corrected through this report, as described in
-:ref:`inventory/operations_valuation/adjust-valuation`.
+The :doc:`../warehouses_storage/reporting/moves_analysis` lists moves with their source location,
+destination location, quantity, and value, along with the :guilabel:`Remaining Quantity` and
+:guilabel:`Remaining Value` still in stock. The value of an individual move can also be corrected
+from this report, as described in :ref:`inventory/operations_valuation/adjust-valuation`. It also
+includes an :guilabel:`Aging Report` favorite for tracking remaining quantity and value by month.
 
 .. _inventory/operations_valuation/stock-report:
 
