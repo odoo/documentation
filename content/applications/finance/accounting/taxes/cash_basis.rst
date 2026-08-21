@@ -114,3 +114,22 @@ Using a default :guilabel:`Base Tax Received Account` is recommended so your bal
 your income account is not polluted by unnecessary accounting movements. To do so, go to
 :menuselection:`Configuration --> Settings --> Taxes`, and select a
 :guilabel:`Base Tax Received Account` under :guilabel:`Cash Basis`.
+
+.. _cash-basis/report-filter:
+
+Cash basis report filter
+========================
+
+By default, you cannot filter reports by **Cash Basis** method. To enable it, first enable the
+:doc:`developer mode <../../../general/developer_mode>`. Then, open the **Accounting** app, go to
+:guilabel:`Reporting`, and select the report of your choice.
+
+Click the :icon:`fa-cogs` :guilabel:`(cogs)` icon, click the :guilabel:`Options` tab, and check the
+:guilabel:`Cash Basis` box in the :guilabel:`Advanced` section.
+
+.. image:: cash_basis/cash-basis-enable-filter.png
+   :alt: test
+
+Go back to the report of your choice, and the :guilabel:`Cash Basis Method` filter is now available
+under the :icon:`oi-settings-adjust` :guilabel:`(sliders)` icon for filters.
+
