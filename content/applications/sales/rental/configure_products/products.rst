@@ -6,6 +6,8 @@ The Odoo **Rental** app allows users to customize scheduling, pricing, and inven
 rental products that require stock movement, otherwise known as *Goods*. Users can set up multiple
 pickup and drop-off locations and track rental products by serial number.
 
+.. _rental/products/settings:
+
 Settings
 ========
 
@@ -155,6 +157,8 @@ manually)` icon near the top to save.
    .. image:: products/example-prices-tab-method.png
       :alt: Sample of a rental product's Price tab.
 
+.. _rental/products/product-tracking:
+
 Configure product tracking
 ==========================
 
@@ -248,57 +252,9 @@ Location` field is set to :guilabel:`WH`.
    .. image:: products/configured-locations.png
       :alt: Sample of internal inventory locations that represent different rental store locations.
 
-Process physical pickups
-========================
-
-When a customer picks up a rental product, navigate to the desired rental order and click
-:guilabel:`Pickup`. The **Rental** app displays a warehouse delivery form listing the reserved
-rental products. Verify the list, then click :guilabel:`Validate` to move the order to the
-:guilabel:`Done` stage.
-
-.. image:: products/pickup-page.png
-   :alt: Sample of a Pickup page in the Rental app.
-
-Doing so places a :guilabel:`Pickedup` status banner on the rental order.
-
-.. _rental/return-products:
-
-Process physical returns
-========================
-
-When a customer returns a product, navigate to the desired rental order and click
-:guilabel:`Return`. The **Rental** app displays a warehouse receipt form listing the checked-out
-rental products.
-
-Enter the same amount of each product being returned by the customer in the :guilabel:`Quantity`
-column. If any of the products have serial numbers, enter them in the :guilabel:`Serial Numbers`
-column.
-
-.. image:: products/return-page.png
-   :alt: Sample of the Return page in the Rental app.
-
-Click :guilabel:`Validate` to move the order to the :guilabel:`Done` stage. A :guilabel:`Returned`
-status banner appears on the rental order.
-
-Print pickup and return receipts
-================================
-
-Pickup and return receipts can be created and downloaded for customers when they pick up and return
-rental products.
-
-To create a pickup or return receipt, navigate to the desired rental order, click the :icon:`fa-cog`
-To create a pickup or return receipt, navigate to the desired rental order, and click the
-:icon:`fa-cog` :guilabel:`(Actions)` icon to reveal a drop-down menu.
-
-.. image:: products/print-pickup-return-receipt.png
-   :alt: The pickup and return receipt print option in the Odoo Rental application.
-
-From this drop-down menu, hover over the :guilabel:`Print` option to reveal a sub-menu. Then select
-:guilabel:`Pickup and Return Receipt`.
-
-Odoo downloads a PDF with the current status of the rented items.
-
 .. seealso::
    - :doc:`../../../inventory_and_mrp/inventory`
+   - :doc:`../rental_orders/create_rental_order`
+   - :doc:`../rental_orders/pickup_return`
    - `Odoo Tutorials: Configuring a rental product
      <https://youtu.be/CE-SahTUC9A?si=APacZmYDIsVnHOnj>`_

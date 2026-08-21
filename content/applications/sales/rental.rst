@@ -43,6 +43,18 @@ invoice customers from a single platform.
       Learn about the different rental product types, general configuration, and possible app
       integrations.
 
+   .. card:: Create a rental order
+      :target: rental/rental_orders/create_rental_order
+      :large:
+
+      Learn how to create a rental order.
+
+   .. card:: Pick up and return rental products
+      :target: rental/rental_orders/pickup_return
+      :large:
+
+      Learn how to pick up and return rental products.
+
 .. _rental/price-computing:
 
 Price computing
