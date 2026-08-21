@@ -363,7 +363,7 @@ appears in the chatter.
 .. seealso::
    - :doc:`recruitment/new_job`
    - :doc:`recruitment/post_job`
-   - :doc:`recruitment/add-new-applicants`
+   - :doc:`recruitment/add-applicants`
    - :doc:`recruitment/schedule_interviews`
    - :doc:`recruitment/offer_job_positions`
    - :doc:`recruitment/refuse_applicant`
@@ -378,7 +378,7 @@ appears in the chatter.
    recruitment/new_job
    recruitment/post_job
    recruitment/recruitment-flow
-   recruitment/add-new-applicants
+   recruitment/add-applicants
    recruitment/schedule_interviews
    recruitment/offer_job_positions
    recruitment/refuse_applicant
