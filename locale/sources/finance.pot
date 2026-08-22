@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-14 17:31+0000\n"
+"POT-Creation-Date: 2026-08-21 17:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1437,79 +1437,97 @@ msgstr ""
 msgid "Register an internal transfer from one bank to another"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:40
-msgid "When money is transferred from one bank or cash account to another, that amount appears as two transactions on the corresponding journals, whether the transactions are created manually, via import, or via :doc:`bank synchronization <bank_synchronization>`. When :ref:`reconciling the transaction <accounting/reconciliation/reconcile>`, select the :guilabel:`Internal Transfers` :doc:`reconciliation model <reconciliation_models>` button. This action writes the transaction off to the :guilabel:`Internal Transfer` account."
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:41
+msgid "For the sake of clarity, this process is explained with the incoming :doc:`transaction <transactions>` being reconciled with the :guilabel:`Internal Transfers` reconciliation model button and the outgoing transaction then being reconciled with the journal item of the incoming transaction. It is possible to switch which transaction is reconciled with the :guilabel:`Internal Transfers` reconciliation model button without any negative implications."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:48
-msgid "Remember to reconcile both the outgoing transaction (on the journal that sends the payment) and the incoming transaction (on the journal that receives the payment) with the internal transfers account using the :guilabel:`Internal Transfers` reconciliation model button."
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:47
+msgid "When money is transferred from one bank or cash account to another, that amount appears as one incoming :doc:`transaction <transactions>` and one outgoing transaction in their corresponding journals, whether the transactions are created manually, via import, or via :doc:`bank synchronization <bank_synchronization>`. :ref:`Reconcile <accounting/reconciliation/reconcile>` the two transactions as follows:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:52
-msgid "Once each bank journal's transaction is reconciled using the :guilabel:`Internal Transfers` reconciliation model, the internal transfer account is balanced, and the balances of both bank accounts are updated to reflect the transfer."
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:53
+msgid "Reconcile the incoming transaction by selecting the :guilabel:`Internal Transfers` :doc:`reconciliation model <reconciliation_models>` button. This action writes the transaction off to the :guilabel:`Internal Transfers` account."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:57
-msgid "When transferring $1,000 from Bank Account A to Bank Account B, each of the two bank journals has one journal entry:"
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:56
+msgid "Reconcile the outgoing transaction with the journal item of the incoming transaction:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:58
+msgid "Click the :icon:`fa-ellipsis-v` (vertical ellipsis icon)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:59
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:276
+#: ../../content/applications/finance/accounting/payments.rst:342
+msgid "Click :guilabel:`Reconcile`."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/internal_transfers.rst:60
+msgid "In the :guilabel:`Search: Journal Items to Match` popup, click the journal item of the incoming transaction. This action balances the :guilabel:`Internal Transfers` account and links the two transactions."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:65
+msgid "When transferring $1,000 from Bank Account A to Bank Account B, each of the two bank journals has one journal entry:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:68
 msgid "The outgoing transaction in the Bank Account A journal:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:66
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:83
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:74
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:91
 msgid "**Account**"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:67
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:84
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:75
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:92
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:68
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:82
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:99
 msgid "**Debit**"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:68
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:85
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:76
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:93
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:68
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:82
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:99
 msgid "**Credit**"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:69
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:77
 msgid "Bank Account A"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:71
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:87
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:79
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:95
 msgid "$1,000"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:72
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:89
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:80
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:97
 msgid "**Internal transfer account**"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:73
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:91
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:81
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:99
 msgid "**$1,000**"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:76
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:84
 msgid "The incoming transaction in the Bank Account B journal:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:86
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:94
 msgid "Bank Account B"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:94
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:102
 msgid ":doc:`reconciliation`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:95
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:103
 msgid ":doc:`reconciliation_models`"
 msgstr ""
 
@@ -1938,11 +1956,6 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:274
 msgid "Select the journal items that debit or credit the account receivable and account payable and represent the debts to be netted."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:276
-#: ../../content/applications/finance/accounting/payments.rst:342
-msgid "Click :guilabel:`Reconcile`."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:277
