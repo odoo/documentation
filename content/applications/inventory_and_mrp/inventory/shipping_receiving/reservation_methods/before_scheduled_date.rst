@@ -58,16 +58,33 @@ added to products that plan to be sold with this method.
 To do that, navigate to :menuselection:`Inventory app --> Products --> Products` and select the
 desired product to configure.
 
+<<<<<<< c1e48aef332970ca85b2043464f10cdbcc83a0b6
 On the product form, open the *Inventory* tab. Under the *Logistics* section, change the value in
 the :guilabel:`Delivery Time` field.
+||||||| c20a296ac4488b6dccbed066f43a9ba38813202e
+On the product form, click the :guilabel:`Inventory` tab, and under the :guilabel:`Logistics`
+section, change the value in the :guilabel:`Customer Lead Time` field.
+=======
+On the product form, click the :guilabel:`Inventory` tab, and under the :guilabel:`Logistics`
+section, change the value in the :guilabel:`Delivery Time` field.
+>>>>>>> 380a396093276320d16397bbe5b1e371a4c48c74
 
 For this example workflow, change it to `5` days.
 
 This sets the scheduled delivery date for this specific product to five days after the creation date
 of the sales order.
 
+<<<<<<< c1e48aef332970ca85b2043464f10cdbcc83a0b6
 .. image:: before_scheduled_date/before-scheduled-date-delivery-time.png
    :alt: Product form with delivery lead time set in Inventory tab.
+||||||| c20a296ac4488b6dccbed066f43a9ba38813202e
+.. image:: before_scheduled_date/before-scheduled-date-customer-lead-time.png
+   :align: center
+   :alt: Product form with customer lead time set in Inventory tab.
+=======
+.. image:: before_scheduled_date/before-scheduled-date-delivery-time.png
+   :alt: Product form with delivery time set in Inventory tab.
+>>>>>>> 380a396093276320d16397bbe5b1e371a4c48c74
 
 Workflow
 ========
@@ -75,9 +92,19 @@ Workflow
 To see the *Before scheduled date* reservation method in action, create a new |SO| by opening the
 :menuselection:`Sales app` and clicking :guilabel:`New`.
 
+<<<<<<< c1e48aef332970ca85b2043464f10cdbcc83a0b6
 Add a customer in the :guilabel:`Customer` field. In the *Order Lines* tab, click :guilabel:`Add
 Line`, then select a product from the drop-down menu that has a configured *delivery time* to add to
 the quotation form.
+||||||| c20a296ac4488b6dccbed066f43a9ba38813202e
+Add a customer in the :guilabel:`Customer` field, then, in the :guilabel:`Order Lines` tab, click
+:guilabel:`Add a product`, and select a product from the drop-down menu that has a configured
+*customer lead time*, to add to the quotation form.
+=======
+Add a customer in the :guilabel:`Customer` field, then, in the :guilabel:`Order Lines` tab, click
+:guilabel:`Add a product`, and select a product from the drop-down menu that has a configured
+*delivery time*, to add to the quotation form.
+>>>>>>> 380a396093276320d16397bbe5b1e371a4c48c74
 
 Finally, in the :guilabel:`Quantity` column, adjust the desired quantity of the product to sell.
 
@@ -119,9 +146,18 @@ Note the :guilabel:`Scheduled Date` field, above the :guilabel:`Product Availabi
 displays the date five days from the order creation date. This indicates that the products are not
 reserved until three days from today's date (two days before the scheduled delivery date).
 
+<<<<<<< c1e48aef332970ca85b2043464f10cdbcc83a0b6
 In the *Operations* tab on the :guilabel:`Product` line, the numbers in the :guilabel:`Demand`
 column and the :guilabel:`Quantity` column do not match (in this case, the :guilabel:`Demand` column
 lists `1.00`, while the :guilabel:`Quantity` column lists `0.00`).
+||||||| c20a296ac4488b6dccbed066f43a9ba38813202e
+.. image:: before_scheduled_date/before-scheduled-date-delivery-order-form.png
+   :align: center
+   :alt: Delivery order form with product availability and reserved quantity.
+=======
+.. image:: before_scheduled_date/before-scheduled-date-delivery-order-form.png
+   :alt: Delivery order form with product availability and reserved quantity.
+>>>>>>> 380a396093276320d16397bbe5b1e371a4c48c74
 
 The :guilabel:`Quantity` column lists `0.00` because the products are not reserved until two days
 *before* their delivery date. Odoo automatically reserves the products once the scheduled date
