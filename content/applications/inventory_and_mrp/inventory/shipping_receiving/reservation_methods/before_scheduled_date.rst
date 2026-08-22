@@ -24,7 +24,6 @@ In the :guilabel:`General` tab, locate the :guilabel:`Reservation Method` field,
 :guilabel:`Before scheduled date`.
 
 .. image:: before_scheduled_date/before-scheduled-date-configuration.png
-   :align: center
    :alt: Reservation method field on delivery order operation type form.
 
 .. note::
@@ -49,7 +48,6 @@ scheduled date that products should be reserved if the transfers are starred (fa
    and three days before the scheduled delivery date for starred (favorited) transfers.
 
    .. image:: before_scheduled_date/before-scheduled-date-days-before.png
-      :align: center
       :alt: Reserve before scheduled date field with set numerical values.
 
    This is the configuration applied for the following workflow found below.
@@ -57,23 +55,22 @@ scheduled date that products should be reserved if the transfers are starred (fa
 Edit product form
 -----------------
 
-Before the *Before scheduled date* reservation method can be used, ensure that a *customer lead
-time* is added to products that plan to be sold with this method.
+Before the *Before scheduled date* reservation method can be used, ensure that a *delivery time* is
+added to products that plan to be sold with this method.
 
 To do that, navigate to :menuselection:`Inventory app --> Products --> Products`, and select the
 desired product to configure.
 
 On the product form, click the :guilabel:`Inventory` tab, and under the :guilabel:`Logistics`
-section, change the value in the :guilabel:`Customer Lead Time` field.
+section, change the value in the :guilabel:`Delivery Time` field.
 
 For this example workflow, change it to `5` days.
 
 This sets the scheduled delivery date for this specific product to five days after the creation date
 of the sales order.
 
-.. image:: before_scheduled_date/before-scheduled-date-customer-lead-time.png
-   :align: center
-   :alt: Product form with customer lead time set in Inventory tab.
+.. image:: before_scheduled_date/before-scheduled-date-delivery-time.png
+   :alt: Product form with delivery time set in Inventory tab.
 
 Workflow
 ========
@@ -83,7 +80,7 @@ To see the *Before scheduled date* reservation method in action, create a new |S
 
 Add a customer in the :guilabel:`Customer` field, then, in the :guilabel:`Order Lines` tab, click
 :guilabel:`Add a product`, and select a product from the drop-down menu that has a configured
-*customer lead time*, to add to the quotation form.
+*delivery time*, to add to the quotation form.
 
 Finally, in the :guilabel:`Quantity` column, adjust the desired quantity of the product to sell.
 
@@ -113,7 +110,6 @@ products until then.
    future availability`, in red text.
 
 .. image:: before_scheduled_date/before-scheduled-date-availability-tooltip.png
-   :align: center
    :alt: Confirmed sales order with product availability tooltip selected.
 
 Click the :guilabel:`Delivery` smart button to see the delivery order form.
@@ -127,7 +123,6 @@ displays the date five days from the order creation date. This indicates that th
 reserved until three days from today's date (two days before the scheduled delivery date).
 
 .. image:: before_scheduled_date/before-scheduled-date-delivery-order-form.png
-   :align: center
    :alt: Delivery order form with product availability and reserved quantity.
 
 In the :guilabel:`Operations` tab on the :guilabel:`Product` line, the numbers in the
