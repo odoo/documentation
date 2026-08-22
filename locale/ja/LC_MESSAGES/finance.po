@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-14 17:31+0000\n"
+"POT-Creation-Date: 2026-08-21 17:32+0000\n"
 "PO-Revision-Date: 2026-08-21 10:15+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -2448,49 +2448,59 @@ msgstr ""
 msgid "Register an internal transfer from one bank to another"
 msgstr "ある銀行から別の銀行への内部振替を登録"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:40
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:41
+msgid ""
+"For the sake of clarity, this process is explained with the "
+"incoming :doc:`transaction <transactions>` being reconciled with "
+"the :guilabel:`Internal Transfers` reconciliation model button and the "
+"outgoing transaction then being reconciled with the journal item of the "
+"incoming transaction. It is possible to switch which transaction is "
+"reconciled with the :guilabel:`Internal Transfers` reconciliation model "
+"button without any negative implications."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:47
 msgid ""
 "When money is transferred from one bank or cash account to another, that "
-"amount appears as two transactions on the corresponding journals, whether "
-"the transactions are created manually, via import, or via :doc:`bank "
-"synchronization <bank_synchronization>`. When :ref:`reconciling the "
-"transaction <accounting/reconciliation/reconcile>`, select "
-"the :guilabel:`Internal Transfers` :doc:`reconciliation model "
-"<reconciliation_models>` button. This action writes the transaction off to "
-"the :guilabel:`Internal Transfer` account."
+"amount appears as one incoming :doc:`transaction <transactions>` and one "
+"outgoing transaction in their corresponding journals, whether the "
+"transactions are created manually, via import, or via :doc:`bank "
+"synchronization <bank_synchronization>`. :ref:`Reconcile <accounting/"
+"reconciliation/reconcile>` the two transactions as follows:"
 msgstr ""
-"ある銀行または現金アカウントから別のアカウントにお金が振り替えられると、その"
-"金額は、打刻データが手動で作成されたか、インポート経由で作成されたか、"
-"\\ :doc:`銀行同期 <bank_synchronization>`\\ 経由で作成されたかに関わらず、対"
-"応する仕訳帳に2つの打刻データとして表示されます。\\ :ref:`打刻データを消込む "
-"<accounting/reconciliation/reconcile>`\\ 際には、\\ :guilabel:`内部振替"
-"`\\ :doc:`消込モデル <reconciliation_models>`\\ ボタンを選択します。このアク"
-"ションにより、打刻データが\\ :guilabel:`内部振替`\\ アカウントに書き込まれま"
-"す。"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:48
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:53
 msgid ""
-"Remember to reconcile both the outgoing transaction (on the journal that "
-"sends the payment) and the incoming transaction (on the journal that "
-"receives the payment) with the internal transfers account using "
-"the :guilabel:`Internal Transfers` reconciliation model button."
+"Reconcile the incoming transaction by selecting the :guilabel:`Internal "
+"Transfers` :doc:`reconciliation model <reconciliation_models>` button. This "
+"action writes the transaction off to the :guilabel:`Internal Transfers` "
+"account."
 msgstr ""
-"支払いを送信する仕訳帳の出金打刻データと、支払いを受信する仕訳帳の入金打刻"
-"データの両方を、\\ :guilabel:`内部振替`\\ 消込モデルボタンを使用して内部振替"
-"アカウントで消込むことを忘れないでください。"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:52
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:56
 msgid ""
-"Once each bank journal's transaction is reconciled using "
-"the :guilabel:`Internal Transfers` reconciliation model, the internal "
-"transfer account is balanced, and the balances of both bank accounts are "
-"updated to reflect the transfer."
+"Reconcile the outgoing transaction with the journal item of the incoming "
+"transaction:"
 msgstr ""
-"各銀行仕訳帳の打刻データが\\ :guilabel:`内部振替`\\ 消込モデルを使用して消込"
-"まれると、内部振替アカウントは残高が一致し、両方の銀行アカウントの残高が振替"
-"を反映するように更新されます。"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:57
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:58
+msgid "Click the :icon:`fa-ellipsis-v` (vertical ellipsis icon)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:59
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:276
+#: ../../content/applications/finance/accounting/payments.rst:342
+msgid "Click :guilabel:`Reconcile`."
+msgstr ":guilabel:`消込` をクリックします。"
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:60
+msgid ""
+"In the :guilabel:`Search: Journal Items to Match` popup, click the journal "
+"item of the incoming transaction. This action balances "
+"the :guilabel:`Internal Transfers` account and links the two transactions."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:65
 msgid ""
 "When transferring $1,000 from Bank Account A to Bank Account B, each of the "
 "two bank journals has one journal entry:"
@@ -2498,63 +2508,63 @@ msgstr ""
 "銀行アカウントA から銀行アカウントB に1,000ドルを振り替える場合、2つの銀行仕"
 "訳帳のそれぞれに1つの仕訳帳項目があります:"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:60
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:68
 msgid "The outgoing transaction in the Bank Account A journal:"
 msgstr "銀行アカウントA 仕訳帳の出金打刻データ:"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:66
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:83
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:74
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:91
 msgid "**Account**"
 msgstr "**勘定科目**"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:67
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:84
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:75
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:92
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:68
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:82
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:99
 msgid "**Debit**"
 msgstr "**借方**"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:68
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:85
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:76
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:93
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:68
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:82
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:99
 msgid "**Credit**"
 msgstr "**貸方**"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:69
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:77
 msgid "Bank Account A"
 msgstr "銀行アカウントA"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:71
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:87
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:79
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:95
 msgid "$1,000"
 msgstr "$1,000"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:72
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:89
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:80
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:97
 msgid "**Internal transfer account**"
 msgstr "**内部振替口座**"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:73
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:91
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:81
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:99
 msgid "**$1,000**"
 msgstr "**$1,000**"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:76
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:84
 msgid "The incoming transaction in the Bank Account B journal:"
 msgstr "銀行アカウントB 仕訳帳の入金打刻データ:"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:86
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:94
 msgid "Bank Account B"
 msgstr "銀行アカウントB"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:94
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:102
 msgid ":doc:`reconciliation`"
 msgstr ":doc:`消込`"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:95
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:103
 msgid ":doc:`reconciliation_models`"
 msgstr ":doc:`reconciliation_models`"
 
@@ -3411,11 +3421,6 @@ msgid ""
 msgstr ""
 "売掛金アカウントと買掛金アカウントをデビットまたはクレジットし、相殺する債務"
 "を表す仕訳帳項目を選択します。"
-
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:276
-#: ../../content/applications/finance/accounting/payments.rst:342
-msgid "Click :guilabel:`Reconcile`."
-msgstr ":guilabel:`消込` をクリックします。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:277
 msgid ""
@@ -88766,6 +88771,45 @@ msgstr ""
 ":guilabel:`シークレットキー` と :guilabel:`Webhookトークン` フィールド"
 "に :ref:`payment_providers/xendit/configure_dashboard` ステップで保存した情報"
 "を入力します。"
+
+#~ msgid ""
+#~ "When money is transferred from one bank or cash account to another, that "
+#~ "amount appears as two transactions on the corresponding journals, whether "
+#~ "the transactions are created manually, via import, or via :doc:`bank "
+#~ "synchronization <bank_synchronization>`. When :ref:`reconciling the "
+#~ "transaction <accounting/reconciliation/reconcile>`, select "
+#~ "the :guilabel:`Internal Transfers` :doc:`reconciliation model "
+#~ "<reconciliation_models>` button. This action writes the transaction off "
+#~ "to the :guilabel:`Internal Transfer` account."
+#~ msgstr ""
+#~ "ある銀行または現金アカウントから別のアカウントにお金が振り替えられると、そ"
+#~ "の金額は、打刻データが手動で作成されたか、インポート経由で作成されたか、"
+#~ "\\ :doc:`銀行同期 <bank_synchronization>`\\ 経由で作成されたかに関わらず、"
+#~ "対応する仕訳帳に2つの打刻データとして表示されます。\\ :ref:`打刻データを消"
+#~ "込む <accounting/reconciliation/reconcile>`\\ 際には、\\ :guilabel:`内部振"
+#~ "替`\\ :doc:`消込モデル <reconciliation_models>`\\ ボタンを選択します。この"
+#~ "アクションにより、打刻データが\\ :guilabel:`内部振替`\\ アカウントに書き込"
+#~ "まれます。"
+
+#~ msgid ""
+#~ "Remember to reconcile both the outgoing transaction (on the journal that "
+#~ "sends the payment) and the incoming transaction (on the journal that "
+#~ "receives the payment) with the internal transfers account using "
+#~ "the :guilabel:`Internal Transfers` reconciliation model button."
+#~ msgstr ""
+#~ "支払いを送信する仕訳帳の出金打刻データと、支払いを受信する仕訳帳の入金打刻"
+#~ "データの両方を、\\ :guilabel:`内部振替`\\ 消込モデルボタンを使用して内部振"
+#~ "替アカウントで消込むことを忘れないでください。"
+
+#~ msgid ""
+#~ "Once each bank journal's transaction is reconciled using "
+#~ "the :guilabel:`Internal Transfers` reconciliation model, the internal "
+#~ "transfer account is balanced, and the balances of both bank accounts are "
+#~ "updated to reflect the transfer."
+#~ msgstr ""
+#~ "各銀行仕訳帳の打刻データが\\ :guilabel:`内部振替`\\ 消込モデルを使用して消"
+#~ "込まれると、内部振替アカウントは残高が一致し、両方の銀行アカウントの残高が"
+#~ "振替を反映するように更新されます。"
 
 #~ msgid "Basic concepts of accounting and initial setup of your accounting"
 #~ msgstr "会計の基本概念と会計の初期設定"

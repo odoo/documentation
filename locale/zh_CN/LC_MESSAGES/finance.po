@@ -57,7 +57,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-14 17:31+0000\n"
+"POT-Creation-Date: 2026-08-21 17:32+0000\n"
 "PO-Revision-Date: 2026-08-20 09:09+0000\n"
 "Last-Translator: \"Chloe Wang (chwa)\" <chwa@odoo.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
@@ -2357,44 +2357,59 @@ msgstr ""
 msgid "Register an internal transfer from one bank to another"
 msgstr "登记银行间内部转账"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:40
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:41
+msgid ""
+"For the sake of clarity, this process is explained with the "
+"incoming :doc:`transaction <transactions>` being reconciled with "
+"the :guilabel:`Internal Transfers` reconciliation model button and the "
+"outgoing transaction then being reconciled with the journal item of the "
+"incoming transaction. It is possible to switch which transaction is "
+"reconciled with the :guilabel:`Internal Transfers` reconciliation model "
+"button without any negative implications."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:47
 msgid ""
 "When money is transferred from one bank or cash account to another, that "
-"amount appears as two transactions on the corresponding journals, whether "
-"the transactions are created manually, via import, or via :doc:`bank "
-"synchronization <bank_synchronization>`. When :ref:`reconciling the "
-"transaction <accounting/reconciliation/reconcile>`, select "
-"the :guilabel:`Internal Transfers` :doc:`reconciliation model "
-"<reconciliation_models>` button. This action writes the transaction off to "
-"the :guilabel:`Internal Transfer` account."
+"amount appears as one incoming :doc:`transaction <transactions>` and one "
+"outgoing transaction in their corresponding journals, whether the "
+"transactions are created manually, via import, or via :doc:`bank "
+"synchronization <bank_synchronization>`. :ref:`Reconcile <accounting/"
+"reconciliation/reconcile>` the two transactions as follows:"
 msgstr ""
-"当资金从一个银行或现金账户转入另一个账户时，无论交易是通过手动创建、导入还是"
-"通过 :doc:`银行同步 <bank_synchronization>` 生成，该金额都会在相应的日记账中"
-"显示为两笔交易。在 :ref:`对账 <accounting/reconciliation/reconcile>` 时，请选"
-"择 :guilabel:`内部转账` :doc:`对账模型 <reconciliation_models>` 按钮。此操作"
-"将交易过账至 :guilabel:`内部转账` 账户。"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:48
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:53
 msgid ""
-"Remember to reconcile both the outgoing transaction (on the journal that "
-"sends the payment) and the incoming transaction (on the journal that "
-"receives the payment) with the internal transfers account using "
-"the :guilabel:`Internal Transfers` reconciliation model button."
+"Reconcile the incoming transaction by selecting the :guilabel:`Internal "
+"Transfers` :doc:`reconciliation model <reconciliation_models>` button. This "
+"action writes the transaction off to the :guilabel:`Internal Transfers` "
+"account."
 msgstr ""
-"请务必使用 :guilabel:`内部转账`对账模型按钮，将付款方日记账中的“付款”交易与收"
-"款方日记账中的“收款”交易，与内部转账账户进行对账。"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:52
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:56
 msgid ""
-"Once each bank journal's transaction is reconciled using "
-"the :guilabel:`Internal Transfers` reconciliation model, the internal "
-"transfer account is balanced, and the balances of both bank accounts are "
-"updated to reflect the transfer."
+"Reconcile the outgoing transaction with the journal item of the incoming "
+"transaction:"
 msgstr ""
-"一旦使用 :guilabel:`内部转账` 对账模型对每个银行日记账的交易进行对账，内部转"
-"账账户即会结清，两个银行账户的余额也会相应更新以反映该笔转账。"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:57
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:58
+msgid "Click the :icon:`fa-ellipsis-v` (vertical ellipsis icon)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:59
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:276
+#: ../../content/applications/finance/accounting/payments.rst:342
+msgid "Click :guilabel:`Reconcile`."
+msgstr "点击 :guilabel:`核销`。"
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:60
+msgid ""
+"In the :guilabel:`Search: Journal Items to Match` popup, click the journal "
+"item of the incoming transaction. This action balances "
+"the :guilabel:`Internal Transfers` account and links the two transactions."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:65
 msgid ""
 "When transferring $1,000 from Bank Account A to Bank Account B, each of the "
 "two bank journals has one journal entry:"
@@ -2402,63 +2417,63 @@ msgstr ""
 "从银行账户 A 向银行账户 B 转账 1000 美元时，两个银行日记账会各自生成一条会计"
 "分录："
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:60
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:68
 msgid "The outgoing transaction in the Bank Account A journal:"
 msgstr "银行账户 A 日记账中的支出交易："
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:66
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:83
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:74
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:91
 msgid "**Account**"
 msgstr "**科目**"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:67
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:84
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:75
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:92
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:68
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:82
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:99
 msgid "**Debit**"
 msgstr "**借项**"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:68
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:85
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:76
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:93
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:68
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:82
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:99
 msgid "**Credit**"
 msgstr "**贷方**"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:69
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:77
 msgid "Bank Account A"
 msgstr "银行 A 账户"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:71
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:87
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:79
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:95
 msgid "$1,000"
 msgstr "$1,000"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:72
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:89
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:80
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:97
 msgid "**Internal transfer account**"
 msgstr "**内部转账账户**"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:73
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:91
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:81
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:99
 msgid "**$1,000**"
 msgstr "**$1,000**"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:76
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:84
 msgid "The incoming transaction in the Bank Account B journal:"
 msgstr "银行账户 B 日记账中的入账交易："
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:86
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:94
 msgid "Bank Account B"
 msgstr "银行账户 B"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:94
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:102
 msgid ":doc:`reconciliation`"
 msgstr ":doc:`reconciliation`"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:95
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:103
 msgid ":doc:`reconciliation_models`"
 msgstr ":doc:`reconciliation_models`"
 
@@ -3270,11 +3285,6 @@ msgid ""
 "Select the journal items that debit or credit the account receivable and "
 "account payable and represent the debts to be netted."
 msgstr "选择那些借记或贷记应收账款和应付账款、且代表待抵消债务的日记账项目。"
-
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:276
-#: ../../content/applications/finance/accounting/payments.rst:342
-msgid "Click :guilabel:`Reconcile`."
-msgstr "点击 :guilabel:`核销`。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:277
 msgid ""
@@ -11648,7 +11658,8 @@ msgstr ""
 msgid ""
 "It is recommended to practice this process in a test database and work in "
 "parallel with your prior accounting workflows in case there are any issues."
-msgstr "建议在测试数据库演练整套流程，同时并行沿用原有会计工作流程，规避故障风险。"
+msgstr ""
+"建议在测试数据库演练整套流程，同时并行沿用原有会计工作流程，规避故障风险。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:74
 msgid "At database/company creation"
@@ -11677,8 +11688,8 @@ msgid ""
 "the :guilabel:`Fiscal Localization` section."
 msgstr ""
 "创建数据库时，系统会根据所选国家自动安装对应的财税本地化包。部分国家针对不同"
-"业务类型提供多个本地化包，请务必确认已安装正确套件。操作路径"
-"：:menuselection:`会计 ‑‑> 配置 ‑‑> 设置`，在 :guilabel:`财税本地化`板块"
+"业务类型提供多个本地化包，请务必确认已安装正确套件。操作路"
+"径：:menuselection:`会计 ‑‑> 配置 ‑‑> 设置`，在 :guilabel:`财税本地化`板块"
 "的:guilabel:`套件`字段核对当前启用的本地化包。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:88
@@ -11702,8 +11713,8 @@ msgid ""
 "records rely on master data, the order in which accounting data is "
 "transferred into Odoo, whether manually or via import, is crucial."
 msgstr ""
-"主数据是其他业务记录所依赖的基础数据。例如开具发票需要客户信息，客户（联系人"
-"）即为主数据。由于其他记录依赖主数据，无论手动录入还是导入，会计数据导入 "
+"主数据是其他业务记录所依赖的基础数据。例如开具发票需要客户信息，客户（联系"
+"人）即为主数据。由于其他记录依赖主数据，无论手动录入还是导入，会计数据导入 "
 "Odoo 的先后顺序至关重要。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:107
@@ -11772,7 +11783,8 @@ msgid ""
 "Account codes must be unique per chart of accounts, so ensure that any newly "
 "created or imported accounts do not share the same code as an existing "
 "account."
-msgstr "同一套科目表内科目编码必须唯一，请确保新建或导入的科目编码不与已有科目重复。"
+msgstr ""
+"同一套科目表内科目编码必须唯一，请确保新建或导入的科目编码不与已有科目重复。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:127
 msgid ""
@@ -11782,9 +11794,9 @@ msgid ""
 "break basic processes** like creating an invoice. Instead of deleting "
 "accounts in Odoo's standard chart of accounts, simply rename and recode them."
 msgstr ""
-"部分标准科目被用作产品、产品分类、联系人以及会计设置中多个字段的默认科目"
-"，**删除或修改其科目类型会导致开发票等基础业务流程异常**。请勿直接删除 Odoo "
-"标准科目，建议修改名称与编码复用。"
+"部分标准科目被用作产品、产品分类、联系人以及会计设置中多个字段的默认科目，**"
+"删除或修改其科目类型会导致开发票等基础业务流程异常**。请勿直接删除 Odoo 标准"
+"科目，建议修改名称与编码复用。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:133
 msgid ""
@@ -11886,9 +11898,9 @@ msgid ""
 "but existing taxes can be adjusted, and new taxes can be created manually."
 msgstr ""
 ":doc:`税种`会作用于会计多个业务环节，包括 :doc:`财务规则 <taxes/"
-"fiscal_positions>`、:ref:`会计科目 <taxes/definition-tab>`以及产品。安装 "
-":doc:`财税本地化包  <../fiscal_localizations>`会自带默认税种，可修改现有税种"
-"，也可手动新增税种。"
+"fiscal_positions>`、:ref:`会计科目 <taxes/definition-tab>`以及产品。安"
+"装 :doc:`财税本地化包  <../fiscal_localizations>`会自带默认税种，可修改现有税"
+"种，也可手动新增税种。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:190
 msgid ""
@@ -11905,7 +11917,8 @@ msgstr ""
 msgid ""
 "As they are both used to dictate when payment is due, payment terms and due "
 "dates are mutually exclusive: a record can only have one or the other."
-msgstr "付款条款与到期日均用于规定付款到期时间，二者互斥，一张单据只能选用其中一种。"
+msgstr ""
+"付款条款与到期日均用于规定付款到期时间，二者互斥，一张单据只能选用其中一种。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:200
 msgid "Additional master data"
@@ -11951,8 +11964,8 @@ msgid ""
 "that use :guilabel:`Perpetual (at invoicing)` for their :guilabel:`Inventory "
 "Valuation`)"
 msgstr ""
-":guilabel:`价格差异科目`（仅当产品分类的 :guilabel:`库存计价方式`设置为 "
-":guilabel:`永续盘存（开票时）`时可用）"
+":guilabel:`价格差异科目`（仅当产品分类的 :guilabel:`库存计价方式`设置"
+"为 :guilabel:`永续盘存（开票时）`时可用）"
 
 #: ../../content/applications/finance/accounting/get_started.rst:219
 msgid ""
@@ -12003,9 +12016,9 @@ msgid ""
 "bank account must be set on their contact record."
 msgstr ""
 "向供应商付款（例如通过 :ref:`SEPA贷记转账 <accounting/sepa_payments/sct>`或"
-"者 :doc:`NACHA <../fiscal_localizations/united_states>`文件），以及通过 "
-":ref:`SEPA直接扣款  <accounting/sepa_payments/sdd>`向客户收款时，必须在联系人"
-"档案中维护客户或供应商的银行账户信息"
+"者 :doc:`NACHA <../fiscal_localizations/united_states>`文件），以及通"
+"过 :ref:`SEPA直接扣款  <accounting/sepa_payments/sdd>`向客户收款时，必须在联"
+"系人档案中维护客户或供应商的银行账户信息"
 
 #: ../../content/applications/finance/accounting/get_started.rst:243
 msgid ""
@@ -12109,8 +12122,8 @@ msgid ""
 "Accounting settings and accessible via :menuselection:`Accounting --> "
 "Configuration --> Settings`."
 msgstr ""
-"以下核心会计配置对会计档案初始化至关重要。大部分配置位于会计设置页面，路径"
-"：:menuselection:`会计 ‑‑> 配置 ‑‑> 设置`。"
+"以下核心会计配置对会计档案初始化至关重要。大部分配置位于会计设置页面，路"
+"径：:menuselection:`会计 ‑‑> 配置 ‑‑> 设置`。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:278
 msgid ""
@@ -12139,8 +12152,8 @@ msgid ""
 "or :guilabel:`Tax Included` by default in the :guilabel:`Taxes` section of "
 "the Accounting settings."
 msgstr ""
-":guilabel:`价格`：在会计设置的 :guilabel:`税种`板块，设置价格默认 "
-":guilabel:`不含税`还是 :guilabel:`含税`。"
+":guilabel:`价格`：在会计设置的 :guilabel:`税种`板块，设置价格默认 :guilabel:`"
+"不含税`还是 :guilabel:`含税`。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:285
 msgid ":doc:`customer_invoices/terms_conditions`"
@@ -12205,7 +12218,8 @@ msgstr ""
 msgid ""
 "A company has a current balance of $1000 in its accounts receivable, "
 "reflecting the $1000 that it is owed for its open invoices."
-msgstr "某企业应收账款当前余额为 1000 美元，对应未结清发票的待收款项 1000 美元。"
+msgstr ""
+"某企业应收账款当前余额为 1000 美元，对应未结清发票的待收款项 1000 美元。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:319
 msgid ""
@@ -12258,8 +12272,8 @@ msgid ""
 "of the entries from the past period or only the balance of each account at "
 "the end of the period."
 msgstr ""
-"报税周期末：此模式下，可以选择过账上一周期全部分录，或仅录入周期末各科目余额"
-"。"
+"报税周期末：此模式下，可以选择过账上一周期全部分录，或仅录入周期末各科目余"
+"额。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:341
 msgid ""
@@ -12317,14 +12331,16 @@ msgstr "在 Odoo 中录入期初分录之前，请核对数据满足以下要求
 msgid ""
 "The sum of the opening trial balances of all receivable accounts must equal "
 "the sum of the open customer invoices minus credit notes."
-msgstr "全部应收科目期初试算余额之和，必须等于未结清客户发票总额减去贷项通知单总额。"
+msgstr ""
+"全部应收科目期初试算余额之和，必须等于未结清客户发票总额减去贷项通知单总额。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:365
 #: ../../content/applications/finance/accounting/get_started.rst:753
 msgid ""
 "The sum of the opening trial balances of all payable accounts must equal the "
 "sum of the open vendor bills minus refunds."
-msgstr "全部应付科目期初试算余额之和，必须等于未结清供应商账单总额减去退款单据总额。"
+msgstr ""
+"全部应付科目期初试算余额之和，必须等于未结清供应商账单总额减去退款单据总额。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:367
 #: ../../content/applications/finance/accounting/get_started.rst:755
@@ -12389,7 +12405,8 @@ msgstr "准备发票与供应商账单数据"
 msgid ""
 "Prepare the open invoices and bills using the import template available in "
 "Odoo. To access the import templates:"
-msgstr "使用 Odoo 提供的导入模板准备未结清发票和账单数据。获取导入模板操作路径："
+msgstr ""
+"使用 Odoo 提供的导入模板准备未结清发票和账单数据。获取导入模板操作路径："
 
 #: ../../content/applications/finance/accounting/get_started.rst:399
 msgid ""
@@ -12399,10 +12416,10 @@ msgid ""
 "Click :icon:`fa-download` :guilabel:`Import Template for Invoices` to "
 "download the template."
 msgstr ""
-"处理发票与贷项通知单：进入:menuselection:`会计 ‑‑> 客户 ‑‑> 发票`，点击 "
-":icon:`fa-cog`（:guilabel:`操作`）图标，再点击 :icon:`fa-download` "
-":guilabel:`导入记录`。点击 :icon:`fa-download` :guilabel:`发票导入模板`下载模"
-"板。"
+"处理发票与贷项通知单：进入:menuselection:`会计 ‑‑> 客户 ‑‑> 发票`，点"
+"击 :icon:`fa-cog`（:guilabel:`操作`）图标，再点击 :icon:`fa-"
+"download` :guilabel:`导入记录`。点击 :icon:`fa-download` :guilabel:`发票导入"
+"模板`下载模板。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:403
 msgid ""
@@ -12412,9 +12429,9 @@ msgid ""
 "download` :guilabel:`Import Template for Bills` to download the template."
 msgstr ""
 "处理供应商账单与退款单据：进入 :menuselection:`会计 ‑‑> 供应商 ‑‑> 账单`，点"
-"击:icon:`fa-cog`（:guilabel:`操作`）图标，再点击 :icon:`fa-download` "
-":guilabel:`导入记录`。点击 :icon:`fa-download` :guilabel:`账单导入模板`下载模"
-"板。"
+"击:icon:`fa-cog`（:guilabel:`操作`）图标，再点击 :icon:`fa-"
+"download` :guilabel:`导入记录`。点击 :icon:`fa-download` :guilabel:`账单导入"
+"模板`下载模板。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:407
 #: ../../content/applications/finance/accounting/get_started.rst:527
@@ -12551,8 +12568,8 @@ msgid ""
 "used with payment installments."
 msgstr ""
 "发票 / 账单的 :doc:`付款条款 <customer_invoices/payment_terms>`。每张单据只能"
-"填写到期日或者付款条款，二者不可同时使用。仅当未结清发票 / 账单涉及分期收款时"
-"，才建议使用付款条款。"
+"填写到期日或者付款条款，二者不可同时使用。仅当未结清发票 / 账单涉及分期收款"
+"时，才建议使用付款条款。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:433
 msgid ""
@@ -12585,8 +12602,8 @@ msgid ""
 "The total amount due on the invoice. If partial payments have been made, "
 "this is for the remaining amount due (i.e., total minus partial payments)."
 msgstr ""
-"发票到期总金额。如已发生部分付款，则填写剩余待付金额（总金额减去已部分付款）"
-"。"
+"发票到期总金额。如已发生部分付款，则填写剩余待付金额（总金额减去已部分付"
+"款）。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:442
 msgid ""
@@ -12636,10 +12653,10 @@ msgid ""
 "the :guilabel:`Number` from `INV/YEAR/NUMBER` to `RINV/YEAR/NUMBER`, and "
 "(optionally) change the :guilabel:`Reference` to `Reversal of: [INV Number]`."
 msgstr ""
-"如果存在负金额发票，该类单据属于贷项通知单，需要在 :menuselection:`会计 ‑‑> "
-"客户 ‑‑> 贷项通知单`菜单下，以正数数值单独导入。将 :guilabel:`单据编号`由 "
-"`INV/YEAR/NUMBER` 修改为`RINV/YEAR/NUMBER`，可（选填）将:guilabel:`参考号`改"
-"为冲销单据：[发票编号]。"
+"如果存在负金额发票，该类单据属于贷项通知单，需要在 :menuselection:`会"
+"计 ‑‑> 客户 ‑‑> 贷项通知单`菜单下，以正数数值单独导入。将 :guilabel:`单据编号"
+"`由 `INV/YEAR/NUMBER` 修改为`RINV/YEAR/NUMBER`，可（选填）将:guilabel:`参考号"
+"`改为冲销单据：[发票编号]。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:463
 msgid ""
@@ -12650,10 +12667,10 @@ msgid ""
 "(optionally) change the :guilabel:`Reference` to `Reversal of: [BILL "
 "Number]`."
 msgstr ""
-"同理，如果存在负金额供应商账单，该类单据属于退款单据，需要在 :guilabel:`会计 "
-"‑‑> 供应商 ‑‑> 退款单据`菜单下，以正数数值单独导入。将 :guilabel:`单据编"
-"号`由 `BILL/YEAR/NUMBER`修改为`RBILL/YEAR/NUMBER`，可（选填）将 :guilabel:`参"
-"考号`改为`冲销单据：[账单编号]`。"
+"同理，如果存在负金额供应商账单，该类单据属于退款单据，需要在 :guilabel:`会"
+"计 ‑‑> 供应商 ‑‑> 退款单据`菜单下，以正数数值单独导入。将 :guilabel:`单据编号"
+"`由 `BILL/YEAR/NUMBER`修改为`RBILL/YEAR/NUMBER`，可（选填）将 :guilabel:`参考"
+"号`改为`冲销单据：[账单编号]`。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:468
 msgid ""
@@ -12663,8 +12680,8 @@ msgid ""
 "in a different currency."
 msgstr ""
 "多币种检查：如果导入不同币种的期初应收 / 应付单据，请为每一笔非本位币的发票或"
-"账单，按其创建日期创建对应的：:ref:`历史汇率 <multi-currency/manual-update>"
-"`。"
+"账单，按其创建日期创建对应的：:ref:`历史汇率 <multi-currency/manual-"
+"update>`。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:475
 msgid "Import invoices and bills"
@@ -12675,8 +12692,8 @@ msgid ""
 ":ref:`Import <essentials/export_import_data/import-data>` the :ref:`prepared "
 "fields <accounting/get_started/prep-bills>` from the appropriate menu:"
 msgstr ""
-"在对应菜单下：:ref:`导入 <essentials/export_import_data/import-data>`已经"
-"：:ref:`准备好的字段 <accounting/get_started/prep-bills>`："
+"在对应菜单下：:ref:`导入 <essentials/export_import_data/import-data>`已"
+"经：:ref:`准备好的字段 <accounting/get_started/prep-bills>`："
 
 #: ../../content/applications/finance/accounting/get_started.rst:480
 msgid ""
@@ -12707,8 +12724,8 @@ msgid ""
 "the imported draft records, click :icon:`fa-cog` :guilabel:`Actions`, and "
 "click :guilabel:`Confirm Entries`."
 msgstr ""
-"所有记录均以草稿状态导入。在生成的列表视图中，选中导入的草稿记录，点击 "
-":icon:`fa-cog` :guilabel:`操作`，再点击 :guilabel:`确认分录`。"
+"所有记录均以草稿状态导入。在生成的列表视图中，选中导入的草稿记录，点"
+"击 :icon:`fa-cog` :guilabel:`操作`，再点击 :guilabel:`确认分录`。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:488
 msgid ""
@@ -12728,8 +12745,8 @@ msgid ""
 "method <accounting/inventory-valuation/configuration>`."
 msgstr ""
 "无论采用何种 :ref:`会计准则 <accounting/inventory-valuation/accounting-"
-"standards>` 与 :ref:`计价方式 <accounting/inventory-valuation/configuration>"
-"`，期初库存盘点及对应库存估值的操作流程保持一致。"
+"standards>` 与 :ref:`计价方式 <accounting/inventory-valuation/"
+"configuration>`，期初库存盘点及对应库存估值的操作流程保持一致。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:501
 msgid "The process of importing an opening inventory is done in three steps:"
@@ -12780,10 +12797,10 @@ msgid ""
 "records`. Click :icon:`fa-download` :guilabel:`Import Template for Inventory "
 "Adjustments` to download the template."
 msgstr ""
-"使用 Odoo 自带导入模板准备期初库存盘点数据。获取模板路径：进入 "
-":menuselection:`库存 --> 作业 --> 实际库存`，点击 :icon:`fa-"
-"cog`（:guilabel:`操作`）图标，点击 :icon:`fa-download` :guilabel:`导入记录`，"
-"再点击 :icon:`fa-download` :guilabel:`库存调整`导入模板下载模板。"
+"使用 Odoo 自带导入模板准备期初库存盘点数据。获取模板路径：进"
+"入 :menuselection:`库存 --> 作业 --> 实际库存`，点击 :icon:`fa-cog`"
+"（:guilabel:`操作`）图标，点击 :icon:`fa-download` :guilabel:`导入记录`，再点"
+"击 :icon:`fa-download` :guilabel:`库存调整`导入模板下载模板。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:535
 #: ../../content/applications/finance/accounting/get_started.rst:565
@@ -12828,7 +12845,8 @@ msgstr "库位"
 msgid ""
 "If the :guilabel:`Locations` feature has been enabled in the settings, it is "
 "required to specify where each line of the opening inventory is located."
-msgstr "若设置中已开启 :guilabel:`库位`功能，则必须填写每一行期初库存对应的存放库位。"
+msgstr ""
+"若设置中已开启 :guilabel:`库位`功能，则必须填写每一行期初库存对应的存放库位。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:546
 msgid "Lot/Serial Number"
@@ -12853,8 +12871,8 @@ msgid ""
 "inventory is calculated by multiplying the product cost by the product "
 "quantity for each line and summing them together."
 msgstr ""
-"核对所有库存科目期初试算平衡余额之和，应当等于库存总价值。库存总价值计算方式"
-"：每行记录的产品成本 × 产品数量，再全部累加。"
+"核对所有库存科目期初试算平衡余额之和，应当等于库存总价值。库存总价值计算方"
+"式：每行记录的产品成本 × 产品数量，再全部累加。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:566
 msgid "Counted quantity"
@@ -12957,7 +12975,8 @@ msgstr ":ref:`导入 <essentials/export_import_data/import-data>`库存数据。
 msgid ""
 "The records are all imported as drafts. From the resulting list view, "
 "click :guilabel:`Apply All`."
-msgstr "导入的记录全部为草稿状态。在生成的列表视图中点击 :guilabel:`全部应用`。"
+msgstr ""
+"导入的记录全部为草稿状态。在生成的列表视图中点击 :guilabel:`全部应用`。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:598
 msgid ""
@@ -13026,10 +13045,10 @@ msgid ""
 "template."
 msgstr ""
 "将旧系统的数据填入 Odoo 提供的会计分录导入模板，完成期初试算平衡表准备。打开"
-"会计分录导入模板：进入菜单 :menuselection:`会计 --> 会计 --> 会计分录`，点击 "
-":icon:`fa-cog`（:guilabel:`操作`）图标，再点击 :icon:`fa-download` "
-":guilabel:`导入记录`。点击 :icon:`fa-download` :guilabel:`其他业务导入模板`下"
-"载模板。"
+"会计分录导入模板：进入菜单 :menuselection:`会计 --> 会计 --> 会计分录`，点"
+"击 :icon:`fa-cog`（:guilabel:`操作`）图标，再点击 :icon:`fa-"
+"download` :guilabel:`导入记录`。点击 :icon:`fa-download` :guilabel:`其他业务"
+"导入模板`下载模板。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:630
 msgid ""
@@ -13256,8 +13275,8 @@ msgid ""
 "The trial balance is imported as a draft. From the resulting list view, open "
 "the draft entry, review it, and click :guilabel:`Post`."
 msgstr ""
-"试算表将作为草稿导入。在生成的列表视图中，打开该草稿条目，进行审核，然后点击 "
-":guilabel:`发布`。"
+"试算表将作为草稿导入。在生成的列表视图中，打开该草稿条目，进行审核，然后点"
+"击 :guilabel:`发布`。"
 
 #: ../../content/applications/finance/accounting/get_started.rst:774
 msgid "Opening bank and credit card transactions"
@@ -13308,8 +13327,8 @@ msgid ""
 "their :guilabel:`Account Type` to :guilabel:`Off-Balance Sheet` after the "
 "import."
 msgstr ""
-"为完成向 Odoo 的过渡，请确认所有抵销账户现已收支平衡，并在导入后将其 "
-":guilabel:`账户类型` 更改为:guilabel:`表外科目（` ），以将其从报表中移除。"
+"为完成向 Odoo 的过渡，请确认所有抵销账户现已收支平衡，并在导入后将"
+"其 :guilabel:`账户类型` 更改为:guilabel:`表外科目（` ），以将其从报表中移除。"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:3
 msgid "Average price on returned goods"
@@ -15988,10 +16007,10 @@ msgid ""
 "require synchronization with inventory stock, unless an automatic update of "
 "accounting inventory value is needed."
 msgstr ""
-"采用 :guilabel:`永续` 计价模式时，一般将 :guilabel:`定期计价` 设置为 "
-":guilabel:`手动` 模式，仅在会计期间结账，或是财务报表需要与库存数据保持一致时"
-"生成结账凭证；除非企业需要系统自动更新账面存货价值，否则无需设置自动生成凭证"
-"。 "
+"采用 :guilabel:`永续` 计价模式时，一般将 :guilabel:`定期计价` 设置"
+"为 :guilabel:`手动` 模式，仅在会计期间结账，或是财务报表需要与库存数据保持一"
+"致时生成结账凭证；除非企业需要系统自动更新账面存货价值，否则无需设置自动生成"
+"凭证。 "
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:90
 msgid ""
@@ -16017,9 +16036,9 @@ msgid ""
 "inventory asset value differently depending on the selected :ref:`valuation "
 "method <accounting/inventory-valuation/valuation-method>`."
 msgstr ""
-":guilabel:`计价科目`用于记录资产负债表中列为流动资产的存货金额。根据所选 "
-":ref:`计价方式 <accounting/inventory-valuation/valuation-method>` 的不同"
-"，:guilabel:`计价科目`核算存货资产价值的规则也有所区别。"
+":guilabel:`计价科目`用于记录资产负债表中列为流动资产的存货金额。根据所"
+"选 :ref:`计价方式 <accounting/inventory-valuation/valuation-method>` 的不"
+"同，:guilabel:`计价科目`核算存货资产价值的规则也有所区别。"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:108
 msgid "Variation account"
@@ -16041,16 +16060,16 @@ msgid ""
 "Continental :guilabel:`Periodic (at closing)`: Expense account (specific for "
 "variation recording)."
 msgstr ""
-"大陆法系 :guilabel:`定期核算（期末结账）`：选用费用科目（专门用于核算存货差异"
-"）。"
+"大陆法系 :guilabel:`定期核算（期末结账）`：选用费用科目（专门用于核算存货差"
+"异）。"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:115
 msgid ""
 "Anglo-Saxon :guilabel:`Perpetual (at invoicing)`: Current asset account "
 "(recommended for interim tracking) or expense account (optional)."
 msgstr ""
-"英美法系 :guilabel:`永续核算（开票时核算）`：流动资产科目（中期核算推荐使用）"
-"，也可选用费用科目（可选配置）。"
+"英美法系 :guilabel:`永续核算（开票时核算）`：流动资产科目（中期核算推荐使"
+"用），也可选用费用科目（可选配置）。"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:119
 msgid ""
@@ -16074,8 +16093,8 @@ msgid ""
 msgstr ""
 "启用 :guilabel:`永续核算（开票时核算）`存货计价方式后，即便出入库业务尚未生成"
 "供应商账单或销售发票，系统仍可将库存价值变动记入财务账务。在生成 :ref:`预提凭"
-"证 <accounting/inventory-valuation/accrual-entries>`之前，:guilabel:`差异科"
-"目` 充当过渡缓冲科目。"
+"证 <accounting/inventory-valuation/accrual-entries>`之前，:guilabel:`差异科目"
+"` 充当过渡缓冲科目。"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:131
 msgid "Other accounts"
@@ -16229,8 +16248,8 @@ msgid ""
 "filled in during configuration."
 msgstr ""
 ":guilabel:`存货损失科目`（仅适用于:guilabel:`定期核算（期末结账模式））：仅在"
-"配置环节填写了 :ref:`损失科目 <accounting/inventory-valuation/inventory-loss>"
-"` 时启用。"
+"配置环节填写了 :ref:`损失科目 <accounting/inventory-valuation/inventory-"
+"loss>` 时启用。"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:202
 msgid ""
@@ -84370,6 +84389,40 @@ msgid ""
 msgstr ""
 "使用在 :ref:`payment_providers/xendit/configure_dashboard` 步骤中保存的信息填"
 "写 :guilabel:`秘钥` 和 :guilabel:`网络钩子令牌` 字段。"
+
+#~ msgid ""
+#~ "When money is transferred from one bank or cash account to another, that "
+#~ "amount appears as two transactions on the corresponding journals, whether "
+#~ "the transactions are created manually, via import, or via :doc:`bank "
+#~ "synchronization <bank_synchronization>`. When :ref:`reconciling the "
+#~ "transaction <accounting/reconciliation/reconcile>`, select "
+#~ "the :guilabel:`Internal Transfers` :doc:`reconciliation model "
+#~ "<reconciliation_models>` button. This action writes the transaction off "
+#~ "to the :guilabel:`Internal Transfer` account."
+#~ msgstr ""
+#~ "当资金从一个银行或现金账户转入另一个账户时，无论交易是通过手动创建、导入还"
+#~ "是通过 :doc:`银行同步 <bank_synchronization>` 生成，该金额都会在相应的日记"
+#~ "账中显示为两笔交易。在 :ref:`对账 <accounting/reconciliation/reconcile>` "
+#~ "时，请选择 :guilabel:`内部转账` :doc:`对账模型 <reconciliation_models>` 按"
+#~ "钮。此操作将交易过账至 :guilabel:`内部转账` 账户。"
+
+#~ msgid ""
+#~ "Remember to reconcile both the outgoing transaction (on the journal that "
+#~ "sends the payment) and the incoming transaction (on the journal that "
+#~ "receives the payment) with the internal transfers account using "
+#~ "the :guilabel:`Internal Transfers` reconciliation model button."
+#~ msgstr ""
+#~ "请务必使用 :guilabel:`内部转账`对账模型按钮，将付款方日记账中的“付款”交易"
+#~ "与收款方日记账中的“收款”交易，与内部转账账户进行对账。"
+
+#~ msgid ""
+#~ "Once each bank journal's transaction is reconciled using "
+#~ "the :guilabel:`Internal Transfers` reconciliation model, the internal "
+#~ "transfer account is balanced, and the balances of both bank accounts are "
+#~ "updated to reflect the transfer."
+#~ msgstr ""
+#~ "一旦使用 :guilabel:`内部转账` 对账模型对每个银行日记账的交易进行对账，内部"
+#~ "转账账户即会结清，两个银行账户的余额也会相应更新以反映该笔转账。"
 
 #~ msgid "Basic concepts of accounting and initial setup of your accounting"
 #~ msgstr "会计的基本概念和会计的初始设置"

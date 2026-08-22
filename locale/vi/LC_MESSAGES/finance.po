@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-14 17:31+0000\n"
+"POT-Creation-Date: 2026-08-21 17:32+0000\n"
 "PO-Revision-Date: 2026-08-11 02:59+0000\n"
 "Last-Translator: Deleted User <noreply+31@weblate.org>\n"
 "Language-Team: Vietnamese <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -2500,49 +2500,59 @@ msgstr ""
 msgid "Register an internal transfer from one bank to another"
 msgstr "Đăng ký chuyển tiền nội bộ từ ngân hàng này sang ngân hàng khác"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:40
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:41
+msgid ""
+"For the sake of clarity, this process is explained with the "
+"incoming :doc:`transaction <transactions>` being reconciled with "
+"the :guilabel:`Internal Transfers` reconciliation model button and the "
+"outgoing transaction then being reconciled with the journal item of the "
+"incoming transaction. It is possible to switch which transaction is "
+"reconciled with the :guilabel:`Internal Transfers` reconciliation model "
+"button without any negative implications."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:47
 msgid ""
 "When money is transferred from one bank or cash account to another, that "
-"amount appears as two transactions on the corresponding journals, whether "
-"the transactions are created manually, via import, or via :doc:`bank "
-"synchronization <bank_synchronization>`. When :ref:`reconciling the "
-"transaction <accounting/reconciliation/reconcile>`, select "
-"the :guilabel:`Internal Transfers` :doc:`reconciliation model "
-"<reconciliation_models>` button. This action writes the transaction off to "
-"the :guilabel:`Internal Transfer` account."
+"amount appears as one incoming :doc:`transaction <transactions>` and one "
+"outgoing transaction in their corresponding journals, whether the "
+"transactions are created manually, via import, or via :doc:`bank "
+"synchronization <bank_synchronization>`. :ref:`Reconcile <accounting/"
+"reconciliation/reconcile>` the two transactions as follows:"
 msgstr ""
-"Khi tiền được chuyển từ tài khoản ngân hàng hoặc tiền mặt này sang tài khoản "
-"khác, số tiền đó xuất hiện dưới dạng hai giao dịch trên các nhật ký tương "
-"ứng, cho dù các giao dịch được tạo thủ công, qua nhập khẩu hay "
-"qua :doc:`đồng bộ hóa ngân hàng <bank_synchronization>`. Khi :ref:`đối soát "
-"giao dịch <accounting/reconciliation/reconcile>`, chọn nút :guilabel:`Chuyển "
-"khoản nội bộ` :doc:`mô hình đối soát <reconciliation_models>`. Hành động này "
-"xóa bỏ giao dịch vào tài khoản :guilabel:`Chuyển khoản nội bộ`."
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:48
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:53
 msgid ""
-"Remember to reconcile both the outgoing transaction (on the journal that "
-"sends the payment) and the incoming transaction (on the journal that "
-"receives the payment) with the internal transfers account using "
-"the :guilabel:`Internal Transfers` reconciliation model button."
+"Reconcile the incoming transaction by selecting the :guilabel:`Internal "
+"Transfers` :doc:`reconciliation model <reconciliation_models>` button. This "
+"action writes the transaction off to the :guilabel:`Internal Transfers` "
+"account."
 msgstr ""
-"Nhớ đối soát cả giao dịch đi (trên nhật ký gửi thanh toán) và giao dịch đến "
-"(trên nhật ký nhận thanh toán) với tài khoản chuyển khoản nội bộ bằng cách "
-"sử dụng nút mô hình đối soát :guilabel:`Chuyển khoản nội bộ`."
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:52
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:56
 msgid ""
-"Once each bank journal's transaction is reconciled using "
-"the :guilabel:`Internal Transfers` reconciliation model, the internal "
-"transfer account is balanced, and the balances of both bank accounts are "
-"updated to reflect the transfer."
+"Reconcile the outgoing transaction with the journal item of the incoming "
+"transaction:"
 msgstr ""
-"Sau khi giao dịch của mỗi nhật ký ngân hàng được đối soát bằng mô hình đối "
-"soát :guilabel:`Chuyển khoản nội bộ`, tài khoản chuyển khoản nội bộ được cân "
-"bằng và số dư của cả hai tài khoản ngân hàng được cập nhật để phản ánh việc "
-"chuyển khoản."
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:57
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:58
+msgid "Click the :icon:`fa-ellipsis-v` (vertical ellipsis icon)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:59
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:276
+#: ../../content/applications/finance/accounting/payments.rst:342
+msgid "Click :guilabel:`Reconcile`."
+msgstr "Nhấp vào :guilabel:`Đối soát`."
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:60
+msgid ""
+"In the :guilabel:`Search: Journal Items to Match` popup, click the journal "
+"item of the incoming transaction. This action balances "
+"the :guilabel:`Internal Transfers` account and links the two transactions."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:65
 msgid ""
 "When transferring $1,000 from Bank Account A to Bank Account B, each of the "
 "two bank journals has one journal entry:"
@@ -2550,63 +2560,63 @@ msgstr ""
 "Khi chuyển $1.000 từ Tài khoản ngân hàng A sang Tài khoản ngân hàng B, mỗi "
 "nhật ký ngân hàng có một bút toán:"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:60
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:68
 msgid "The outgoing transaction in the Bank Account A journal:"
 msgstr "Giao dịch đi trong nhật ký Tài khoản ngân hàng A:"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:66
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:83
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:74
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:91
 msgid "**Account**"
 msgstr "**Tài khoản**"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:67
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:84
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:75
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:92
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:68
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:82
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:99
 msgid "**Debit**"
 msgstr "**Nợ**"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:68
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:85
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:76
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:93
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:68
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:82
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:99
 msgid "**Credit**"
 msgstr "**Có**"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:69
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:77
 msgid "Bank Account A"
 msgstr "Tài khoản ngân hàng A"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:71
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:87
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:79
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:95
 msgid "$1,000"
 msgstr "$1,000"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:72
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:89
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:80
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:97
 msgid "**Internal transfer account**"
 msgstr "**Tài khoản chuyển tiền nội bộ**"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:73
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:91
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:81
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:99
 msgid "**$1,000**"
 msgstr "**$1,000**"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:76
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:84
 msgid "The incoming transaction in the Bank Account B journal:"
 msgstr "Giao dịch đến trong nhật ký Tài khoản Ngân hàng B:"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:86
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:94
 msgid "Bank Account B"
 msgstr "Tài khoản Ngân hàng B"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:94
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:102
 msgid ":doc:`reconciliation`"
 msgstr ":doc:`reconciliation`"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:95
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:103
 msgid ":doc:`reconciliation_models`"
 msgstr ":doc:`reconciliation_models`"
 
@@ -3507,11 +3517,6 @@ msgid ""
 msgstr ""
 "Chọn các bút toán ghi nợ hoặc ghi có vào tài khoản phải thu và tài khoản "
 "phải trả và đại diện cho các khoản nợ cần bù trừ."
-
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:276
-#: ../../content/applications/finance/accounting/payments.rst:342
-msgid "Click :guilabel:`Reconcile`."
-msgstr "Nhấp vào :guilabel:`Đối soát`."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:277
 msgid ""
@@ -90600,6 +90605,46 @@ msgid ""
 msgstr ""
 "Điền vào các trường :guilabel:`Secret Key` và :guilabel:`Webhook Token` với "
 "thông tin đã lưu ở bước :ref:`payment_providers/xendit/configure_dashboard`."
+
+#~ msgid ""
+#~ "When money is transferred from one bank or cash account to another, that "
+#~ "amount appears as two transactions on the corresponding journals, whether "
+#~ "the transactions are created manually, via import, or via :doc:`bank "
+#~ "synchronization <bank_synchronization>`. When :ref:`reconciling the "
+#~ "transaction <accounting/reconciliation/reconcile>`, select "
+#~ "the :guilabel:`Internal Transfers` :doc:`reconciliation model "
+#~ "<reconciliation_models>` button. This action writes the transaction off "
+#~ "to the :guilabel:`Internal Transfer` account."
+#~ msgstr ""
+#~ "Khi tiền được chuyển từ tài khoản ngân hàng hoặc tiền mặt này sang tài "
+#~ "khoản khác, số tiền đó xuất hiện dưới dạng hai giao dịch trên các nhật ký "
+#~ "tương ứng, cho dù các giao dịch được tạo thủ công, qua nhập khẩu hay "
+#~ "qua :doc:`đồng bộ hóa ngân hàng <bank_synchronization>`. Khi :ref:`đối "
+#~ "soát giao dịch <accounting/reconciliation/reconcile>`, chọn "
+#~ "nút :guilabel:`Chuyển khoản nội bộ` :doc:`mô hình đối soát "
+#~ "<reconciliation_models>`. Hành động này xóa bỏ giao dịch vào tài "
+#~ "khoản :guilabel:`Chuyển khoản nội bộ`."
+
+#~ msgid ""
+#~ "Remember to reconcile both the outgoing transaction (on the journal that "
+#~ "sends the payment) and the incoming transaction (on the journal that "
+#~ "receives the payment) with the internal transfers account using "
+#~ "the :guilabel:`Internal Transfers` reconciliation model button."
+#~ msgstr ""
+#~ "Nhớ đối soát cả giao dịch đi (trên nhật ký gửi thanh toán) và giao dịch "
+#~ "đến (trên nhật ký nhận thanh toán) với tài khoản chuyển khoản nội bộ bằng "
+#~ "cách sử dụng nút mô hình đối soát :guilabel:`Chuyển khoản nội bộ`."
+
+#~ msgid ""
+#~ "Once each bank journal's transaction is reconciled using "
+#~ "the :guilabel:`Internal Transfers` reconciliation model, the internal "
+#~ "transfer account is balanced, and the balances of both bank accounts are "
+#~ "updated to reflect the transfer."
+#~ msgstr ""
+#~ "Sau khi giao dịch của mỗi nhật ký ngân hàng được đối soát bằng mô hình "
+#~ "đối soát :guilabel:`Chuyển khoản nội bộ`, tài khoản chuyển khoản nội bộ "
+#~ "được cân bằng và số dư của cả hai tài khoản ngân hàng được cập nhật để "
+#~ "phản ánh việc chuyển khoản."
 
 #~ msgid "Basic concepts of accounting and initial setup of your accounting"
 #~ msgstr ""

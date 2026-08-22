@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-14 17:31+0000\n"
+"POT-Creation-Date: 2026-08-21 17:32+0000\n"
 "PO-Revision-Date: 2026-08-10 23:25+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Swedish <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -2514,51 +2514,59 @@ msgstr ""
 msgid "Register an internal transfer from one bank to another"
 msgstr "Registrera en intern överföring från en bank till en annan"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:40
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:41
+msgid ""
+"For the sake of clarity, this process is explained with the "
+"incoming :doc:`transaction <transactions>` being reconciled with "
+"the :guilabel:`Internal Transfers` reconciliation model button and the "
+"outgoing transaction then being reconciled with the journal item of the "
+"incoming transaction. It is possible to switch which transaction is "
+"reconciled with the :guilabel:`Internal Transfers` reconciliation model "
+"button without any negative implications."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:47
 msgid ""
 "When money is transferred from one bank or cash account to another, that "
-"amount appears as two transactions on the corresponding journals, whether "
-"the transactions are created manually, via import, or via :doc:`bank "
-"synchronization <bank_synchronization>`. When :ref:`reconciling the "
-"transaction <accounting/reconciliation/reconcile>`, select "
-"the :guilabel:`Internal Transfers` :doc:`reconciliation model "
-"<reconciliation_models>` button. This action writes the transaction off to "
-"the :guilabel:`Internal Transfer` account."
+"amount appears as one incoming :doc:`transaction <transactions>` and one "
+"outgoing transaction in their corresponding journals, whether the "
+"transactions are created manually, via import, or via :doc:`bank "
+"synchronization <bank_synchronization>`. :ref:`Reconcile <accounting/"
+"reconciliation/reconcile>` the two transactions as follows:"
 msgstr ""
-"När pengar överförs från ett bank- eller kontantkonto till ett annat, visas "
-"det beloppet som två transaktioner i motsvarande journaler, oavsett om "
-"transaktionerna skapas manuellt, via import eller "
-"via :doc:`banksynkronisering <bank_synchronization>`. När du :ref:`stämmer "
-"av transaktionen <accounting/reconciliation/reconcile>`, välj knappen för "
-"avstämningsmodellen :guilabel:`Interna överföringar` :doc:` "
-"<reconciliation_models>`. Denna åtgärd skriver av transaktionen till "
-"kontot :guilabel:`Intern överföring`."
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:48
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:53
 msgid ""
-"Remember to reconcile both the outgoing transaction (on the journal that "
-"sends the payment) and the incoming transaction (on the journal that "
-"receives the payment) with the internal transfers account using "
-"the :guilabel:`Internal Transfers` reconciliation model button."
+"Reconcile the incoming transaction by selecting the :guilabel:`Internal "
+"Transfers` :doc:`reconciliation model <reconciliation_models>` button. This "
+"action writes the transaction off to the :guilabel:`Internal Transfers` "
+"account."
 msgstr ""
-"Kom ihåg att stämma av både den utgående transaktionen (i journalen som "
-"skickar betalningen) och den inkommande transaktionen (i journalen som tar "
-"emot betalningen) med kontot för interna överföringar genom att använda "
-"knappen för avstämningsmodellen :guilabel:`Interna överföringar`."
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:52
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:56
 msgid ""
-"Once each bank journal's transaction is reconciled using "
-"the :guilabel:`Internal Transfers` reconciliation model, the internal "
-"transfer account is balanced, and the balances of both bank accounts are "
-"updated to reflect the transfer."
+"Reconcile the outgoing transaction with the journal item of the incoming "
+"transaction:"
 msgstr ""
-"När varje bankjournals transaktion är avstämd med hjälp av "
-"avstämningsmodellen :guilabel:`Interna överföringar`, är det interna "
-"överföringskontot balanserat, och saldona för båda bankkontona uppdateras "
-"för att återspegla överföringen."
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:57
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:58
+msgid "Click the :icon:`fa-ellipsis-v` (vertical ellipsis icon)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:59
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:276
+#: ../../content/applications/finance/accounting/payments.rst:342
+msgid "Click :guilabel:`Reconcile`."
+msgstr "Klicka på :guilabel:`Stämma av`."
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:60
+msgid ""
+"In the :guilabel:`Search: Journal Items to Match` popup, click the journal "
+"item of the incoming transaction. This action balances "
+"the :guilabel:`Internal Transfers` account and links the two transactions."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:65
 msgid ""
 "When transferring $1,000 from Bank Account A to Bank Account B, each of the "
 "two bank journals has one journal entry:"
@@ -2566,63 +2574,63 @@ msgstr ""
 "När du överför 1 000 USD från bankkonto A till bankkonto B har var och en av "
 "de två bankjournalerna en verifikation:"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:60
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:68
 msgid "The outgoing transaction in the Bank Account A journal:"
 msgstr "Den utgående transaktionen i bankkonto A-journalen:"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:66
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:83
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:74
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:91
 msgid "**Account**"
 msgstr "**Konto**"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:67
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:84
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:75
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:92
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:68
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:82
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:99
 msgid "**Debit**"
 msgstr "**Debit**"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:68
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:85
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:76
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:93
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:68
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:82
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:99
 msgid "**Credit**"
 msgstr "**Kredit**"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:69
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:77
 msgid "Bank Account A"
 msgstr "Bankkonto A"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:71
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:87
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:79
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:95
 msgid "$1,000"
 msgstr "$1,000"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:72
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:89
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:80
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:97
 msgid "**Internal transfer account**"
 msgstr "**Internt överföringskonto**"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:73
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:91
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:81
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:99
 msgid "**$1,000**"
 msgstr "**$1,000**"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:76
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:84
 msgid "The incoming transaction in the Bank Account B journal:"
 msgstr "Den inkommande transaktionen i bankkonto B-journalen:"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:86
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:94
 msgid "Bank Account B"
 msgstr "Bankkonto B"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:94
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:102
 msgid ":doc:`reconciliation`"
 msgstr ":doc:`avstämning`"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:95
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:103
 msgid ":doc:`reconciliation_models`"
 msgstr ":doc:`reconciliation_models`"
 
@@ -3538,11 +3546,6 @@ msgid ""
 msgstr ""
 "Välj de affärshändelser som debiterar eller krediterar kundfordringskontot "
 "och leverantörsskulden och representerar de skulder som ska nettas."
-
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:276
-#: ../../content/applications/finance/accounting/payments.rst:342
-msgid "Click :guilabel:`Reconcile`."
-msgstr "Klicka på :guilabel:`Stämma av`."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:277
 msgid ""
@@ -91608,6 +91611,47 @@ msgstr ""
 "Fyll i fälten :guilabel:`Hemlig nyckel` och :guilabel:`Webhook poletten` med "
 "informationen som sparats i steget :ref:`payment_providers/xendit/"
 "configure_dashboard`."
+
+#~ msgid ""
+#~ "When money is transferred from one bank or cash account to another, that "
+#~ "amount appears as two transactions on the corresponding journals, whether "
+#~ "the transactions are created manually, via import, or via :doc:`bank "
+#~ "synchronization <bank_synchronization>`. When :ref:`reconciling the "
+#~ "transaction <accounting/reconciliation/reconcile>`, select "
+#~ "the :guilabel:`Internal Transfers` :doc:`reconciliation model "
+#~ "<reconciliation_models>` button. This action writes the transaction off "
+#~ "to the :guilabel:`Internal Transfer` account."
+#~ msgstr ""
+#~ "När pengar överförs från ett bank- eller kontantkonto till ett annat, "
+#~ "visas det beloppet som två transaktioner i motsvarande journaler, oavsett "
+#~ "om transaktionerna skapas manuellt, via import eller "
+#~ "via :doc:`banksynkronisering <bank_synchronization>`. När "
+#~ "du :ref:`stämmer av transaktionen <accounting/reconciliation/reconcile>`, "
+#~ "välj knappen för avstämningsmodellen :guilabel:`Interna "
+#~ "överföringar` :doc:` <reconciliation_models>`. Denna åtgärd skriver av "
+#~ "transaktionen till kontot :guilabel:`Intern överföring`."
+
+#~ msgid ""
+#~ "Remember to reconcile both the outgoing transaction (on the journal that "
+#~ "sends the payment) and the incoming transaction (on the journal that "
+#~ "receives the payment) with the internal transfers account using "
+#~ "the :guilabel:`Internal Transfers` reconciliation model button."
+#~ msgstr ""
+#~ "Kom ihåg att stämma av både den utgående transaktionen (i journalen som "
+#~ "skickar betalningen) och den inkommande transaktionen (i journalen som "
+#~ "tar emot betalningen) med kontot för interna överföringar genom att "
+#~ "använda knappen för avstämningsmodellen :guilabel:`Interna överföringar`."
+
+#~ msgid ""
+#~ "Once each bank journal's transaction is reconciled using "
+#~ "the :guilabel:`Internal Transfers` reconciliation model, the internal "
+#~ "transfer account is balanced, and the balances of both bank accounts are "
+#~ "updated to reflect the transfer."
+#~ msgstr ""
+#~ "När varje bankjournals transaktion är avstämd med hjälp av "
+#~ "avstämningsmodellen :guilabel:`Interna överföringar`, är det interna "
+#~ "överföringskontot balanserat, och saldona för båda bankkontona uppdateras "
+#~ "för att återspegla överföringen."
 
 #~ msgid "Basic concepts of accounting and initial setup of your accounting"
 #~ msgstr ""

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-14 17:31+0000\n"
+"POT-Creation-Date: 2026-08-21 17:32+0000\n"
 "PO-Revision-Date: 2026-08-20 12:10+0000\n"
 "Last-Translator: \"Marianna Ciofani (cima)\" <cima@odoo.com>\n"
 "Language-Team: Italian <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -59,7 +59,8 @@ msgstr "Per iniziare"
 
 #: ../../content/applications/finance/accounting.rst:17
 msgid "Detailed instructions for the initial setup of your accounting"
-msgstr "Istruzioni dettagliate per la configurazione iniziale della contabilità"
+msgstr ""
+"Istruzioni dettagliate per la configurazione iniziale della contabilità"
 
 #: ../../content/applications/finance/accounting.rst:23
 #: ../../content/applications/finance/accounting/get_started.rst:178
@@ -675,8 +676,9 @@ msgid ""
 "inventory_valuation>` :doc:`../inventory_and_mrp/inventory/"
 "inventory_valuation/cheat_sheet`"
 msgstr ""
-":doc:`Valutazione magazzino <accounting/get_started/inventory_valuation>"
-"`:doc:`../inventory_and_mrp/inventory/inventory_valuation/cheat_sheet`"
+":doc:`Valutazione magazzino <accounting/get_started/"
+"inventory_valuation>`:doc:`../inventory_and_mrp/inventory/"
+"inventory_valuation/cheat_sheet`"
 
 #: ../../content/applications/finance/accounting.rst:290
 msgid "Retained earnings"
@@ -2565,52 +2567,59 @@ msgstr ""
 msgid "Register an internal transfer from one bank to another"
 msgstr "Registrare un trasferimento interno da una banca all'altra"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:40
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:41
+msgid ""
+"For the sake of clarity, this process is explained with the "
+"incoming :doc:`transaction <transactions>` being reconciled with "
+"the :guilabel:`Internal Transfers` reconciliation model button and the "
+"outgoing transaction then being reconciled with the journal item of the "
+"incoming transaction. It is possible to switch which transaction is "
+"reconciled with the :guilabel:`Internal Transfers` reconciliation model "
+"button without any negative implications."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:47
 msgid ""
 "When money is transferred from one bank or cash account to another, that "
-"amount appears as two transactions on the corresponding journals, whether "
-"the transactions are created manually, via import, or via :doc:`bank "
-"synchronization <bank_synchronization>`. When :ref:`reconciling the "
-"transaction <accounting/reconciliation/reconcile>`, select "
-"the :guilabel:`Internal Transfers` :doc:`reconciliation model "
-"<reconciliation_models>` button. This action writes the transaction off to "
-"the :guilabel:`Internal Transfer` account."
+"amount appears as one incoming :doc:`transaction <transactions>` and one "
+"outgoing transaction in their corresponding journals, whether the "
+"transactions are created manually, via import, or via :doc:`bank "
+"synchronization <bank_synchronization>`. :ref:`Reconcile <accounting/"
+"reconciliation/reconcile>` the two transactions as follows:"
 msgstr ""
-"Quando il denaro viene trasferito da un conto bancario o di cassa a un "
-"altro, tale importo appare come due transazioni sui registri corrispondenti, "
-"sia che le transazioni vengano create manualmente, tramite importazione o "
-"tramite :doc:`sincronizzazione bancaria <bank_synchronization>`. Quando "
-"si :ref:`riconcilia la transazione <accounting/reconciliation/reconcile>`, "
-"selezionare il pulsante del :doc:`modello di riconciliazione "
-"<reconciliation_models>` :guilabel:`Trasferimenti interni`. Questa azione "
-"storna la transazione sul conto :guilabel:`Trasferimento interno`."
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:48
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:53
 msgid ""
-"Remember to reconcile both the outgoing transaction (on the journal that "
-"sends the payment) and the incoming transaction (on the journal that "
-"receives the payment) with the internal transfers account using "
-"the :guilabel:`Internal Transfers` reconciliation model button."
+"Reconcile the incoming transaction by selecting the :guilabel:`Internal "
+"Transfers` :doc:`reconciliation model <reconciliation_models>` button. This "
+"action writes the transaction off to the :guilabel:`Internal Transfers` "
+"account."
 msgstr ""
-"Ricordarsi di riconciliare sia la transazione in uscita (sul registro che "
-"invia il pagamento) che la transazione in entrata (sul registro che riceve "
-"il pagamento) con il conto trasferimenti interni utilizzando il pulsante del "
-"modello di riconciliazione :guilabel:`Trasferimenti interni`."
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:52
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:56
 msgid ""
-"Once each bank journal's transaction is reconciled using "
-"the :guilabel:`Internal Transfers` reconciliation model, the internal "
-"transfer account is balanced, and the balances of both bank accounts are "
-"updated to reflect the transfer."
+"Reconcile the outgoing transaction with the journal item of the incoming "
+"transaction:"
 msgstr ""
-"Una volta che la transazione di ciascun registro bancario è stata "
-"riconciliata utilizzando il modello di "
-"riconciliazione :guilabel:`Trasferimenti interni`, il conto trasferimenti "
-"interni è bilanciato e i saldi di entrambi i conti bancari vengono "
-"aggiornati per riflettere il trasferimento."
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:57
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:58
+msgid "Click the :icon:`fa-ellipsis-v` (vertical ellipsis icon)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:59
+#: ../../content/applications/finance/accounting/bank/reconciliation.rst:276
+#: ../../content/applications/finance/accounting/payments.rst:342
+msgid "Click :guilabel:`Reconcile`."
+msgstr "Fai clic su :guilabel:`Riconcilia`."
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:60
+msgid ""
+"In the :guilabel:`Search: Journal Items to Match` popup, click the journal "
+"item of the incoming transaction. This action balances "
+"the :guilabel:`Internal Transfers` account and links the two transactions."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:65
 msgid ""
 "When transferring $1,000 from Bank Account A to Bank Account B, each of the "
 "two bank journals has one journal entry:"
@@ -2618,63 +2627,63 @@ msgstr ""
 "Quando si trasferiscono $1.000 dal Conto bancario A al Conto bancario B, "
 "ciascuno dei due registri bancari ha una registrazione contabile:"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:60
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:68
 msgid "The outgoing transaction in the Bank Account A journal:"
 msgstr "La transazione in uscita nel registro del Conto bancario A:"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:66
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:83
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:74
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:91
 msgid "**Account**"
 msgstr "**Conto**"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:67
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:84
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:75
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:92
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:68
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:82
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:99
 msgid "**Debit**"
 msgstr "**Debito**"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:68
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:85
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:76
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:93
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:68
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:82
 #: ../../content/applications/finance/accounting/taxes/cash_basis.rst:99
 msgid "**Credit**"
 msgstr "**Credito**"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:69
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:77
 msgid "Bank Account A"
 msgstr "Conto bancario A"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:71
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:87
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:79
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:95
 msgid "$1,000"
 msgstr "1.000 $"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:72
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:89
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:80
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:97
 msgid "**Internal transfer account**"
 msgstr "**Giroconto interno**"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:73
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:91
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:81
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:99
 msgid "**$1,000**"
 msgstr "**1.000 $**"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:76
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:84
 msgid "The incoming transaction in the Bank Account B journal:"
 msgstr "La transazione in entrata nel registro del Conto bancario B:"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:86
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:94
 msgid "Bank Account B"
 msgstr "Conto bancario B"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:94
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:102
 msgid ":doc:`reconciliation`"
 msgstr ":doc:`reconciliation`"
 
-#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:95
+#: ../../content/applications/finance/accounting/bank/internal_transfers.rst:103
 msgid ":doc:`reconciliation_models`"
 msgstr ":doc:`reconciliation_models`"
 
@@ -3610,11 +3619,6 @@ msgid ""
 msgstr ""
 "Selezionare le voci contabili che addebitano o accreditano il conto clienti "
 "e il conto fornitori e rappresentano i debiti da compensare."
-
-#: ../../content/applications/finance/accounting/bank/reconciliation.rst:276
-#: ../../content/applications/finance/accounting/payments.rst:342
-msgid "Click :guilabel:`Reconcile`."
-msgstr "Fai clic su :guilabel:`Riconcilia`."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:277
 msgid ""
@@ -8822,17 +8826,17 @@ msgid ""
 msgstr ""
 "In Egitto, le imprese devono conformarsi alle normative sulla fatturazione "
 "elettronica stabilite dalla `Autorità fiscale egiziana (ETA) <https://"
-"www.eta.gov.eg/sites/default/files/2023-03/digital-service-guide-english.pdf>"
-"` nell’ambito dell’iniziativa di `digitalizzazione fiscale<https://"
-"invoicing.eta.gov.eg/content>`_ del Paese. Il sistema richiede ai "
-"contribuenti, nelle fasi previste, di emettere e inviare elettronicamente "
-"fatture, note di credito e note di addebito tramite la piattaforma ETA, "
-"utilizzando la struttura JSON prescritta e i requisiti di convalida. I "
-"documenti inviati all’ETA vengono convalidati e a essi viene assegnato un "
-"UUID univoco per garantire la tracciabilità e la conformità. A seconda della "
-"categoria di contribuente e del tipo di transazione, le imprese sono tenute "
-"a utilizzare firme digitali e sistemi di codifica dei prodotti "
-"standardizzati, quali i codici EGS o GS1. L’ambito di applicazione "
+"www.eta.gov.eg/sites/default/files/2023-03/digital-service-guide-"
+"english.pdf>` nell’ambito dell’iniziativa di `digitalizzazione "
+"fiscale<https://invoicing.eta.gov.eg/content>`_ del Paese. Il sistema "
+"richiede ai contribuenti, nelle fasi previste, di emettere e inviare "
+"elettronicamente fatture, note di credito e note di addebito tramite la "
+"piattaforma ETA, utilizzando la struttura JSON prescritta e i requisiti di "
+"convalida. I documenti inviati all’ETA vengono convalidati e a essi viene "
+"assegnato un UUID univoco per garantire la tracciabilità e la conformità. A "
+"seconda della categoria di contribuente e del tipo di transazione, le "
+"imprese sono tenute a utilizzare firme digitali e sistemi di codifica dei "
+"prodotti standardizzati, quali i codici EGS o GS1. L’ambito di applicazione "
 "dell’adozione obbligatoria continua ad ampliarsi man mano che l’Egitto porta "
 "avanti i propri obiettivi di conformità fiscale e trasformazione digitale."
 
@@ -11184,7 +11188,8 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing/turkiye.rst:25
 msgid "Compliance with Türkiye’s e-invoicing regulations"
-msgstr "Conformità alle normative turche in materia di fatturazione elettronica"
+msgstr ""
+"Conformità alle normative turche in materia di fatturazione elettronica"
 
 #: ../../content/applications/finance/accounting/customer_invoices/electronic_invoicing/turkiye.rst:27
 msgid ""
@@ -13052,8 +13057,8 @@ msgid ""
 ":ref:`Import accounting <accounting/get_started/master-data>` "
 "and :ref:`other master data <accounting/get_started/add-master-data>`"
 msgstr ""
-":ref:`importare dati contabili <accounting/get_started/master-data>` e "
-":ref:`altri dati master <accounting/get_started/add-master-data>`;"
+":ref:`importare dati contabili <accounting/get_started/master-data>` "
+"e :ref:`altri dati master <accounting/get_started/add-master-data>`;"
 
 #: ../../content/applications/finance/accounting/get_started.rst:14
 msgid ""
@@ -13481,8 +13486,8 @@ msgstr ""
 "di credito può generare o meno registrazioni contabili, a seconda della "
 "configurazione del registro. Per impostazione predefinita, non vengono "
 "create registrazioni contabili per i pagamenti. Per configurare un registro "
-"in modo che crei registrazioni contabili per i pagamenti, indica i "
-":ref:`conti per i pagamenti in sospeso <accounting/journals/outstanding-"
+"in modo che crei registrazioni contabili per i pagamenti, indica "
+"i :ref:`conti per i pagamenti in sospeso <accounting/journals/outstanding-"
 "accounts>` nei metodi di pagamento del registro."
 
 #: ../../content/applications/finance/accounting/get_started.rst:166
@@ -13507,9 +13512,9 @@ msgstr ""
 "applichino :doc:`imposte <taxes>` differenti a seconda del cliente o "
 "fornitore che effettua l'acquisto o la vendita. Inoltre, possono essere "
 "configurate per l'applicazione automatica in base alla posizione del cliente "
-"o fornitore. Le posizioni di bilancio predefinite sono incluse nel "
-":doc:`pacchetto fiscale <../fiscal_localizations>` installato ma è possibile "
-"rettificare le posizioni di bilancio esistenti e crearne di nuove."
+"o fornitore. Le posizioni di bilancio predefinite sono incluse "
+"nel :doc:`pacchetto fiscale <../fiscal_localizations>` installato ma è "
+"possibile rettificare le posizioni di bilancio esistenti e crearne di nuove."
 
 #: ../../content/applications/finance/accounting/get_started.rst:180
 msgid ""
@@ -13519,10 +13524,10 @@ msgid ""
 "installing a :doc:`fiscal localization package <../fiscal_localizations>`, "
 "but existing taxes can be adjusted, and new taxes can be created manually."
 msgstr ""
-"Le :doc:`taxes` interagiscono con vari aspetti della contabilità tra cui "
-":doc:`posizioni di bilancio <taxes/fiscal_positions>`, :ref:`conti <taxes/"
-"definition-tab>` e prodotti. Odoo include le imposte predefinite nei "
-":doc:`pacchetti di localizzazione fiscale <../fiscal_localizations>` ma "
+"Le :doc:`taxes` interagiscono con vari aspetti della contabilità tra "
+"cui :doc:`posizioni di bilancio <taxes/fiscal_positions>`, :ref:`conti "
+"<taxes/definition-tab>` e prodotti. Odoo include le imposte predefinite "
+"nei :doc:`pacchetti di localizzazione fiscale <../fiscal_localizations>` ma "
 "quelle esistenti possono essere rettificate ed è possibile crearne di nuove."
 
 #: ../../content/applications/finance/accounting/get_started.rst:190
@@ -13573,8 +13578,8 @@ msgstr ":ref:`Metodo di imputazione dei costi <costing-methods>`;"
 msgid ""
 ":ref:`Inventory Valuation <accounting/inventory-valuation/valuation-method>`"
 msgstr ""
-":ref:`Valutazione magazzino <accounting/inventory-valuation/valuation-method>"
-"`;"
+":ref:`Valutazione magazzino <accounting/inventory-valuation/valuation-"
+"method>`;"
 
 #: ../../content/applications/finance/accounting/get_started.rst:213
 msgid ":guilabel:`Income Account`"
@@ -13595,8 +13600,8 @@ msgid ""
 "Valuation`)"
 msgstr ""
 ":guilabel:`Conto differenza di prezzo` (disponibile solo per le categorie "
-"prodotto che utilizzano :guilabel:`Perpetuo (alla fatturazione)` per la "
-":guilabel:`valutazione di magazzino`)."
+"prodotto che utilizzano :guilabel:`Perpetuo (alla fatturazione)` per "
+"la :guilabel:`valutazione di magazzino`)."
 
 #: ../../content/applications/finance/accounting/get_started.rst:219
 msgid ""
@@ -13623,8 +13628,8 @@ msgid ""
 ":guilabel:`Cost` (which is particularly important for importing "
 "the :ref:`opening inventory <accounting/get_started/open-inventory>`)"
 msgstr ""
-":guilabel:`Costo` (importante specialmente per l'importazione del "
-":ref:`magazzino iniziale <accounting/get_started/open-inventory>`);"
+":guilabel:`Costo` (importante specialmente per l'importazione "
+"del :ref:`magazzino iniziale <accounting/get_started/open-inventory>`);"
 
 #: ../../content/applications/finance/accounting/get_started.rst:227
 msgid ":guilabel:`Purchase Taxes`"
@@ -13764,8 +13769,8 @@ msgid ""
 msgstr ""
 "Le seguenti configurazioni contabili sono fondamentali per impostare "
 "correttamente i registri contabili. La maggior parte di esse si trova nelle "
-"impostazioni dell'app Contabilità ed è accessibile seguendo il percorso "
-":menuselection:`Contabilità --> Configurazione --> Impostazioni`."
+"impostazioni dell'app Contabilità ed è accessibile seguendo il "
+"percorso :menuselection:`Contabilità --> Configurazione --> Impostazioni`."
 
 #: ../../content/applications/finance/accounting/get_started.rst:278
 msgid ""
@@ -13786,8 +13791,8 @@ msgid ""
 "settings."
 msgstr ""
 ":guilabel:`Metodo di arrotondamento` per decidere se l’importo totale delle "
-"imposte deve essere arrotondato per riga o per imposta nella sezione "
-":guilabel:`Imposte` delle impostazioni dell'app"
+"imposte deve essere arrotondato per riga o per imposta nella "
+"sezione :guilabel:`Imposte` delle impostazioni dell'app"
 
 #: ../../content/applications/finance/accounting/get_started.rst:283
 msgid ""
@@ -13795,9 +13800,9 @@ msgid ""
 "or :guilabel:`Tax Included` by default in the :guilabel:`Taxes` section of "
 "the Accounting settings."
 msgstr ""
-":guilabel:`Prezzi`: scegli se i prezzi sono :guilabel:`IVA esclusa` o "
-":guilabel:`IVA inclusa` per impostazione predefinita nella sezione "
-":guilabel:`Imposte` delle impostazioni dell'app"
+":guilabel:`Prezzi`: scegli se i prezzi sono :guilabel:`IVA esclusa` "
+"o :guilabel:`IVA inclusa` per impostazione predefinita nella "
+"sezione :guilabel:`Imposte` delle impostazioni dell'app"
 
 #: ../../content/applications/finance/accounting/get_started.rst:285
 msgid ":doc:`customer_invoices/terms_conditions`"
@@ -13829,7 +13834,8 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started.rst:294
 msgid ":ref:`Fiscal year end date <accounting/year-end/fiscal-years>`"
-msgstr ":ref:`Data di chiusura anno fiscale <accounting/year-end/fiscal-years>`"
+msgstr ""
+":ref:`Data di chiusura anno fiscale <accounting/year-end/fiscal-years>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:295
 msgid ":doc:`customer_invoices/sequence`"
@@ -13906,8 +13912,8 @@ msgid ""
 "temporarily hold the value before being balanced (or \"cleared\")."
 msgstr ""
 "Per evitare questo errore, utilizza le *partite di giro* ovvero conti che "
-"trattengono temporaneamente il valore prima che venga compensato (o “saldato"
-"”)."
+"trattengono temporaneamente il valore prima che venga compensato (o "
+"“saldato”)."
 
 #: ../../content/applications/finance/accounting/get_started.rst:333
 msgid "When to transition"
@@ -14109,8 +14115,8 @@ msgid ""
 msgstr ""
 "Per le fatture e le note di credito, vai su :menuselection:`Contabilità --> "
 "Clienti --> Fatture`, clicca sull’icona :icon:`fa-cog` (:guilabel:`Azioni`) "
-"e poi su :icon:`fa-download` :guilabel:`Importa record`. Fai clic su "
-":icon:`fa-download` :guilabel:`Importa modelli fatture` per scaricare il "
+"e poi su :icon:`fa-download` :guilabel:`Importa record`. Fai clic "
+"su :icon:`fa-download` :guilabel:`Importa modelli fatture` per scaricare il "
 "modello."
 
 #: ../../content/applications/finance/accounting/get_started.rst:403
@@ -14120,11 +14126,12 @@ msgid ""
 "click :icon:`fa-download` :guilabel:`Import records`. Click :icon:`fa-"
 "download` :guilabel:`Import Template for Bills` to download the template."
 msgstr ""
-"Per le fatture dei fornitori e i rimborsi, vai su "
-":menuselection:`Contabilità --> Fornitori --> Fatture`, fai clic sull’icona "
-":icon:`fa-cog` (:guilabel:`Azioni`) e poi su :icon:`fa-download` "
-":guilabel:`Importa record`. Fai clic su :icon:`fa-download` "
-":guilabel:`Importa modello fatture` per scaricare il modello stesso."
+"Per le fatture dei fornitori e i rimborsi, vai "
+"su :menuselection:`Contabilità --> Fornitori --> Fatture`, fai clic "
+"sull’icona :icon:`fa-cog` (:guilabel:`Azioni`) e poi su :icon:`fa-"
+"download` :guilabel:`Importa record`. Fai clic su :icon:`fa-"
+"download` :guilabel:`Importa modello fatture` per scaricare il modello "
+"stesso."
 
 #: ../../content/applications/finance/accounting/get_started.rst:407
 #: ../../content/applications/finance/accounting/get_started.rst:527
@@ -14212,8 +14219,8 @@ msgid ""
 "<customer_invoices/sequence>`"
 msgstr ""
 "Numero fattura (ad es., BILL/2026/00001): questo numero **non** deve essere "
-"già presente in questo database. In caso contrario, dovrà essere "
-":doc:`rinumerato <customer_invoices/sequence>`"
+"già presente in questo database. In caso contrario, dovrà "
+"essere :doc:`rinumerato <customer_invoices/sequence>`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:420
 #: ../../content/applications/finance/accounting/get_started.rst:638
@@ -14238,8 +14245,9 @@ msgid ""
 "Date the invoice was created. Ensure the year in the :guilabel:`Number` and "
 "the year in this field are the same to prevent errors."
 msgstr ""
-"Data di emissione della fattura. Assicurati che l’anno indicato nel "
-":guilabel:`Numero` e l’anno in questo campo coincidano per evitare errori."
+"Data di emissione della fattura. Assicurati che l’anno indicato "
+"nel :guilabel:`Numero` e l’anno in questo campo coincidano per evitare "
+"errori."
 
 #: ../../content/applications/finance/accounting/get_started.rst:425
 msgid "Due Date"
@@ -14361,9 +14369,9 @@ msgid ""
 "(optionally) change the :guilabel:`Reference` to `Reversal of: [INV Number]`."
 msgstr ""
 "Se alcune fatture presentano importi negativi, si tratta di note di credito "
-"e devono essere importate separatamente come valore positivo dal menu "
-":menuselection:`Contabilità --> Clienti --> Note di credito`. Modifica il "
-":guilabel:`Numero` da `INV/ANNO/NUMERO` a `RINV/ANNO/NUMERO` e "
+"e devono essere importate separatamente come valore positivo dal "
+"menu :menuselection:`Contabilità --> Clienti --> Note di credito`. Modifica "
+"il :guilabel:`Numero` da `INV/ANNO/NUMERO` a `RINV/ANNO/NUMERO` e "
 "(facoltativamente) modifica il :guilabel:`riferimento` in `Storno di: "
 "[Numero INV]`."
 
@@ -14378,8 +14386,8 @@ msgid ""
 msgstr ""
 "Allo stesso modo, se alcune fatture presentano importi negativi, si tratta "
 "di rimborsi e devono essere importati separatamente come valori positivi dal "
-"menu :guilabel:`Contabilità --> Fornitori --> Rimborsi`. Modifica il "
-":guilabel:`Numero` da `BILL/ANNO/NUMERO` a `RBILL/ANNO/NUMERO` e "
+"menu :guilabel:`Contabilità --> Fornitori --> Rimborsi`. Modifica "
+"il :guilabel:`Numero` da `BILL/ANNO/NUMERO` a `RBILL/ANNO/NUMERO` e "
 "(facoltativamente) modifica il :guilabel:`Riferimento` in `Storno di: "
 "[Numero fattura]`."
 
@@ -14428,8 +14436,8 @@ msgid ""
 "For credit notes, go to :menuselection:`Accounting --> Customers --> Credit "
 "Notes`."
 msgstr ""
-"per le note di credito, apri l'app :menuselection:`Contabilità --> "
-"Clienti --> Note di credito`;"
+"per le note di credito, apri l'app :menuselection:`Contabilità --> Clienti --"
+"> Note di credito`;"
 
 #: ../../content/applications/finance/accounting/get_started.rst:483
 msgid ""
@@ -14446,8 +14454,8 @@ msgid ""
 "click :guilabel:`Confirm Entries`."
 msgstr ""
 "I record vengono tutti importati come bozze. Dalla vista elenco risultante, "
-"seleziona i record di bozza importati, fai clic su :icon:`fa-cog` "
-":guilabel:`Azioni` e fai clic su :guilabel:`Conferma registrazioni`."
+"seleziona i record di bozza importati, fai clic su :icon:`fa-"
+"cog` :guilabel:`Azioni` e fai clic su :guilabel:`Conferma registrazioni`."
 
 #: ../../content/applications/finance/accounting/get_started.rst:488
 msgid ""
@@ -14470,8 +14478,9 @@ msgid ""
 msgstr ""
 "Il processo di creazione del conteggio iniziale del magazzino e della "
 "relativa valutazione è lo stesso indipendentemente dal :ref:`principio di "
-"contabilità <accounting/inventory-valuation/accounting-standards>` o dal "
-":ref:`metodo di valutazione <accounting/inventory-valuation/configuration>`."
+"contabilità <accounting/inventory-valuation/accounting-standards>` o "
+"dal :ref:`metodo di valutazione <accounting/inventory-valuation/"
+"configuration>`."
 
 #: ../../content/applications/finance/accounting/get_started.rst:501
 msgid "The process of importing an opening inventory is done in three steps:"
@@ -14533,8 +14542,8 @@ msgstr ""
 "Prepara il conteggio dell’inventario iniziale utilizzando il modello di "
 "importazione disponibile in Odoo. Per accedere al modello di importazione, "
 "apri l'app :menuselection:`Magazzino --> Operazioni --> Magazzino fisico`, "
-"fai clic sull’icona :icon:`fa-cog` (:guilabel:`Azioni`) e fai clic su "
-":icon:`fa-download` :guilabel:`Importa record`. Fai clic su :icon:`fa-"
+"fai clic sull’icona :icon:`fa-cog` (:guilabel:`Azioni`) e fai clic "
+"su :icon:`fa-download` :guilabel:`Importa record`. Fai clic su :icon:`fa-"
 "download` :guilabel:`Importa modello per rettifiche magazzino` per scaricare "
 "il modello."
 
@@ -14763,15 +14772,15 @@ msgstr ""
 #: ../../content/applications/finance/accounting/get_started.rst:612
 msgid ":ref:`Preparing the trial balance <accounting/get_started/prep-tb>`"
 msgstr ""
-":ref:`preparazione del bilancio di verifica <accounting/get_started/prep-tb>"
-"`;"
+":ref:`preparazione del bilancio di verifica <accounting/get_started/prep-"
+"tb>`;"
 
 #: ../../content/applications/finance/accounting/get_started.rst:613
 msgid ""
 ":ref:`Validating the trial balance <accounting/get_started/validate-tb>`"
 msgstr ""
-":ref:`convalida del bilancio di verifica <accounting/get_started/validate-tb>"
-"`;"
+":ref:`convalida del bilancio di verifica <accounting/get_started/validate-"
+"tb>`;"
 
 #: ../../content/applications/finance/accounting/get_started.rst:614
 msgid ":ref:`Importing the trial balance <accounting/get_started/import-tb>`"
@@ -14808,8 +14817,8 @@ msgstr ""
 "software precedente nel modello di importazione delle registrazioni "
 "contabili disponibile in Odoo. Per accedere al modello di importazione, apri "
 "l'app :menuselection:`Contabilità --> Contabilità --> Registrazioni "
-"contabili`, fai clic sull’icona :icon:`fa-cog` (:guilabel:`Azioni`) e poi su "
-":icon:`fa-download` :guilabel:`Importa record`. Fai clic su :icon:`fa-"
+"contabili`, fai clic sull’icona :icon:`fa-cog` (:guilabel:`Azioni`) e poi "
+"su :icon:`fa-download` :guilabel:`Importa record`. Fai clic su :icon:`fa-"
 "download` :guilabel:`Importa modello per operazioni varie` per scaricare il "
 "modello."
 
@@ -14928,16 +14937,16 @@ msgid ""
 "Accounts Receivable --> AR Clearing (:guilabel:`Type` = :guilabel:`Current "
 "Assets`)"
 msgstr ""
-"Conti di credito --> Compensazione conti di credito (:guilabel:`Tipo` = "
-":guilabel:`Attività correnti`)"
+"Conti di credito --> Compensazione conti di credito (:guilabel:`Tipo` "
+"= :guilabel:`Attività correnti`)"
 
 #: ../../content/applications/finance/accounting/get_started.rst:668
 msgid ""
 "Accounts Payable --> AP Clearing (:guilabel:`Type` = :guilabel:`Current "
 "Assets`)"
 msgstr ""
-"Conti di debito --> Compensazione conti di debito (:guilabel:`Tipo` = "
-":guilabel:`Attività correnti`)"
+"Conti di debito --> Compensazione conti di debito (:guilabel:`Tipo` "
+"= :guilabel:`Attività correnti`)"
 
 #: ../../content/applications/finance/accounting/get_started.rst:672
 msgid ""
@@ -15062,8 +15071,8 @@ msgid ""
 "the draft entry, review it, and click :guilabel:`Post`."
 msgstr ""
 "Il bilancio di verifica viene importato come bozza. Dalla vista elenco "
-"risultante, apri la registrazione in bozza, controllala e clicca su "
-":guilabel:`Registra`."
+"risultante, apri la registrazione in bozza, controllala e clicca "
+"su :guilabel:`Registra`."
 
 #: ../../content/applications/finance/accounting/get_started.rst:774
 msgid "Opening bank and credit card transactions"
@@ -15121,8 +15130,9 @@ msgid ""
 "import."
 msgstr ""
 "Per completare la transizione a Odoo, verifica che tutti i conti di "
-"compensazione siano ora in pareggio e rimuovili dai resoconti modificando il "
-":guilabel:`tipo di conto` in :guilabel:`Fuori bilancio` dopo l’importazione."
+"compensazione siano ora in pareggio e rimuovili dai resoconti modificando "
+"il :guilabel:`tipo di conto` in :guilabel:`Fuori bilancio` dopo "
+"l’importazione."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:3
 msgid "Average price on returned goods"
@@ -18003,8 +18013,8 @@ msgid ""
 "method>`: Set the valuation method as :guilabel:`Perpetual (at invoicing)` "
 "or :guilabel:`Periodic (at closing)`."
 msgstr ""
-":ref:`Valutazione magazzino <accounting/inventory-valuation/valuation-method>"
-"`: imposta il metodo di valutazione su :guilabel:`Perpetuo (alla "
+":ref:`Valutazione magazzino <accounting/inventory-valuation/valuation-"
+"method>`: imposta il metodo di valutazione su :guilabel:`Perpetuo (alla "
 "fatturazione)` oppure :guilabel:`Periodico (alla chiusura)`;"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:41
@@ -18014,10 +18024,10 @@ msgid ""
 "to :guilabel:`Manual`, :guilabel:`Daily`, or :guilabel:`Monthly` to automate "
 "it, if needed."
 msgstr ""
-":guilabel:`Valutazione periodica`: imposta il processo della "
-":ref:`registrazione di chiusura <accounting/inventory-valuation/closing-"
-"entry>` su :guilabel:`Manuale`, :guilabel:`Giornaliero` o "
-":guilabel:`Mensile` per automatizzarlo, se necessario;"
+":guilabel:`Valutazione periodica`: imposta il processo "
+"della :ref:`registrazione di chiusura <accounting/inventory-valuation/"
+"closing-entry>` su :guilabel:`Manuale`, :guilabel:`Giornaliero` "
+"o :guilabel:`Mensile` per automatizzarlo, se necessario;"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:44
 msgid ""
@@ -18025,9 +18035,9 @@ msgid ""
 "Price`, :guilabel:`First in First Out (FIFO)`, or :guilabel:`Average Cost "
 "(AVCO)`."
 msgstr ""
-":ref:`Metodo di costo magazzino <costing-methods>`: scegli tra "
-":guilabel:`Prezzo standard <costing-methods>`,  :guilabel:`First in First "
-"Out (FIFO)` oppure :guilabel:`Costo medio (CMP)`;"
+":ref:`Metodo di costo magazzino <costing-methods>`: scegli "
+"tra :guilabel:`Prezzo standard <costing-methods>`,  :guilabel:`First in "
+"First Out (FIFO)` oppure :guilabel:`Costo medio (CMP)`;"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:46
 msgid ""
@@ -18038,13 +18048,13 @@ msgid ""
 "Valuation` account and update the :ref:`Variation Account <accounting/"
 "inventory-valuation/variation-account>`."
 msgstr ""
-":ref:`Conto di valutazione <accounting/inventory-valuation/valuation-account>"
-"`: configura il conto delle attività utilizzato per registrare il valore "
-"finanziario delle scorte fisiche. Successivamente, fai clic sul :icon:`oi-"
-"arrow-right` :guilabel:`(link interno)` accanto al campo :guilabel:`Conto di "
-"valutazione` per aprire il conto :guilabel:`Valutazione scorte` e aggiornare "
-"il conto :ref:`Conto variazione <accounting/inventory-valuation/variation-"
-"account>`;"
+":ref:`Conto di valutazione <accounting/inventory-valuation/valuation-"
+"account>`: configura il conto delle attività utilizzato per registrare il "
+"valore finanziario delle scorte fisiche. Successivamente, fai clic "
+"sul :icon:`oi-arrow-right` :guilabel:`(link interno)` accanto al "
+"campo :guilabel:`Conto di valutazione` per aprire il "
+"conto :guilabel:`Valutazione scorte` e aggiornare il conto :ref:`Conto "
+"variazione <accounting/inventory-valuation/variation-account>`;"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:51
 msgid ""
@@ -18062,8 +18072,8 @@ msgid ""
 "<accounting/inventory-valuation/cost-of-production>` accounts."
 msgstr ""
 ":guilabel:`È possibile definire altri conti su \"Perdita magazzino\" e "
-"\"Produzione\" per ubicazioni specifiche`: se necessario, fai clic su "
-":guilabel:`Perdita di magazzino` e imposta i conti :ref:`Perdita di "
+"\"Produzione\" per ubicazioni specifiche`: se necessario, fai clic "
+"su :guilabel:`Perdita di magazzino` e imposta i conti :ref:`Perdita di "
 "magazzino <accounting/inventory-valuation/inventory-loss>` o :ref:`Costo di "
 "produzione <accounting/inventory-valuation/cost-of-production>`."
 
@@ -18100,8 +18110,8 @@ msgid ""
 "debited when vendor bills are posted."
 msgstr ""
 ":guilabel:`Periodica (alla chiusura)`: la valutazione del magazzino viene "
-"aggiornata solo quando si generano le registrazioni durante il "
-":ref:`processo di chiusura del magazzino <accounting/inventory-valuation/"
+"aggiornata solo quando si generano le registrazioni durante "
+"il :ref:`processo di chiusura del magazzino <accounting/inventory-valuation/"
 "closing-entry>`. Sebbene i movimenti di magazzino vengano tracciati "
 "fisicamente tramite il resoconto sulle :doc:`scorte del magazzino <../../../"
 "inventory_and_mrp/inventory/warehouses_storage/reporting/stock>`, essi non "
@@ -18123,10 +18133,10 @@ msgstr ""
 "aggiornata quando vengono registrate le fatture clienti o fornitori. Il "
 "conto spese (:abbr:`COGS (Costo delle merci vendute)`) viene addebitato "
 "quando vengono registrate le fatture. In combinazione con il :ref:`processo "
-"di chiusura del magazzino <accounting/inventory-valuation/closing-entry>`, "
-":guilabel:`la valutazione perpetua (alla fatturazione)` viene aggiornata per "
-"le consegne e le ricezioni anche se non sono ancora presenti fatture clienti "
-"o fornitori."
+"di chiusura del magazzino <accounting/inventory-valuation/closing-"
+"entry>`, :guilabel:`la valutazione perpetua (alla fatturazione)` viene "
+"aggiornata per le consegne e le ricezioni anche se non sono ancora presenti "
+"fatture clienti o fornitori."
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:81
 msgid ""
@@ -18148,8 +18158,8 @@ msgid ""
 "require synchronization with inventory stock, unless an automatic update of "
 "accounting inventory value is needed."
 msgstr ""
-"In una valutazione :guilabel:`perpetua` è più comune impostare la "
-":guilabel:`valutazione periodica` su :guilabel:`Manuale` e generare le "
+"In una valutazione :guilabel:`perpetua` è più comune impostare "
+"la :guilabel:`valutazione periodica` su :guilabel:`Manuale` e generare le "
 "registrazioni di chiusura solo alla chiusura di un periodo fiscale o quando "
 "i rendiconti contabili richiedono la sincronizzazione con le giacenze di "
 "magazzino, a meno che non sia necessario un aggiornamento automatico del "
@@ -18184,10 +18194,10 @@ msgid ""
 "method <accounting/inventory-valuation/valuation-method>`."
 msgstr ""
 "Il :guilabel:`Conto di valutazione` registra il valore del magazzino "
-"indicato come attività corrente nello stato patrimoniale. Il "
-":guilabel:`Conto di valutazione` tiene traccia del valore del magazzino in "
-"modo diverso a seconda del :ref:`metodo di valutazione <accounting/inventory-"
-"valuation/valuation-method>` selezionato."
+"indicato come attività corrente nello stato patrimoniale. "
+"Il :guilabel:`Conto di valutazione` tiene traccia del valore del magazzino "
+"in modo diverso a seconda del :ref:`metodo di valutazione <accounting/"
+"inventory-valuation/valuation-method>` selezionato."
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:108
 msgid "Variation account"
@@ -18231,9 +18241,9 @@ msgid ""
 "report>`."
 msgstr ""
 "Le variazioni di magazzino derivanti da ricezioni e consegne di prodotti "
-"vengono mostrate nella sezione :guilabel:`Variazioni magazzino` del "
-":ref:`resoconto di valutazione del magazzino <accounting/inventory-valuation/"
-"inventory-valuation-report>`."
+"vengono mostrate nella sezione :guilabel:`Variazioni magazzino` "
+"del :ref:`resoconto di valutazione del magazzino <accounting/inventory-"
+"valuation/inventory-valuation-report>`."
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:122
 msgid ""
@@ -18268,8 +18278,8 @@ msgid ""
 "Loss` location type) appropriately:"
 msgstr ""
 "Per escludere le :doc:`rettifiche di magazzino <../../../inventory_and_mrp/"
-"inventory/warehouses_storage/inventory_management/count_products>` dal "
-":guilabel:`Conto variazione` alla chiusura, configura un conto per "
+"inventory/warehouses_storage/inventory_management/count_products>` "
+"dal :guilabel:`Conto variazione` alla chiusura, configura un conto per "
 "l'ubicazione :guilabel:`Rettifiche di magazzino` (tipo di ubicazione "
 "\":guilabel:`Perdita di inventario` ) in maniera adeguata:"
 
@@ -18282,9 +18292,9 @@ msgid ""
 "\"Production\" on dedicated locations`."
 msgstr ""
 "nella :ref:`sezione Valutazione magazzino delle impostazioni dell'app "
-"Contabilità <accounting/inventory-valuation/configuration>`, fai clic su "
-":guilabel:`Ubicazioni` in :guilabel:`Altri conti possono essere definiti su “"
-"Perdite di magazzino” e “Produzione” su appositi`;"
+"Contabilità <accounting/inventory-valuation/configuration>`, fai clic "
+"su :guilabel:`Ubicazioni` in :guilabel:`Altri conti possono essere definiti "
+"su “Perdite di magazzino” e “Produzione” su appositi`;"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:147
 msgid ""
@@ -18299,8 +18309,8 @@ msgid ""
 "Set the :guilabel:`Loss Account` in the :guilabel:`Accounting` information "
 "section."
 msgstr ""
-"imposta il :guilabel:`Conto perdite` nella sezione con le informazioni di "
-":guilabel:`contabilità`."
+"imposta il :guilabel:`Conto perdite` nella sezione con le informazioni "
+"di :guilabel:`contabilità`."
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:152
 msgid ""
@@ -18392,8 +18402,8 @@ msgstr ""
 "variazioni generali di magazzino registrate alla chiusura, isolando le "
 "variazioni legate alla produzione da quelle relative a ricezioni e consegne. "
 "Tuttavia, questo conto non viene comunemente utilizzato quando si combina il "
-"principio di contabilità continentale con la valutazione del magazzino "
-":guilabel:`periodica (alla chiusura)`."
+"principio di contabilità continentale con la valutazione del "
+"magazzino :guilabel:`periodica (alla chiusura)`."
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:192
 msgid "Inventory valuation report"
@@ -18406,9 +18416,9 @@ msgid ""
 "Inventory Valuation`. The report includes the following sections:"
 msgstr ""
 "Il resoconto relativo alla :guilabel:`valutazione di magazzino` fornisce una "
-"valutazione accurata dell'inventario. Per accedervi, apri l'app "
-":menuselection:`Contabilità --> Revisione --> Valutazione magazzino`. Il "
-"resoconto include le seguenti sezioni:"
+"valutazione accurata dell'inventario. Per accedervi, apri "
+"l'app :menuselection:`Contabilità --> Revisione --> Valutazione magazzino`. "
+"Il resoconto include le seguenti sezioni:"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:198
 msgid ""
@@ -18426,9 +18436,9 @@ msgid ""
 "the :ref:`Loss Account <accounting/inventory-valuation/inventory-loss>` was "
 "filled in during configuration."
 msgstr ""
-":guilabel:`Perdite di magazzino` (solo :guilabel:`Periodica (alla chiusura)"
-"`: solo se il :ref:`conto perdite <accounting/inventory-valuation/inventory-"
-"loss>` è stato compilato durante la configurazione;"
+":guilabel:`Perdite di magazzino` (solo :guilabel:`Periodica (alla "
+"chiusura)`: solo se il :ref:`conto perdite <accounting/inventory-valuation/"
+"inventory-loss>` è stato compilato durante la configurazione;"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:202
 msgid ""
@@ -18507,8 +18517,9 @@ msgid ""
 "inventory valuation date."
 msgstr ""
 "per impostazione predefinita, la data di chiusura è impostata alla fine del "
-"periodo fiscale. Se necessario, fai clic su :icon:`fa-calendar` "
-":guilabel:`Dal` per scegliere una data di valutazione del magazzino diversa;"
+"periodo fiscale. Se necessario, fai clic su :icon:`fa-"
+"calendar` :guilabel:`Dal` per scegliere una data di valutazione del "
+"magazzino diversa;"
 
 #: ../../content/applications/finance/accounting/get_started/inventory_valuation.rst:229
 msgid "Click :guilabel:`Generate Entry`."
@@ -40069,8 +40080,8 @@ msgid ""
 "`eCommerce - Localización de Argentina <https://www.youtube.com/watch?"
 "v=5gUi2WWfRuI>`_"
 msgstr ""
-"`E-commerce - Localización de Argentina <https://www.youtube.com/"
-"watch?v=5gUi2WWfRuI>`_"
+"`E-commerce - Localización de Argentina <https://www.youtube.com/watch?"
+"v=5gUi2WWfRuI>`_"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:12
 msgid ""
@@ -40481,8 +40492,8 @@ msgstr ""
 msgid ""
 ":guilabel:`B2C transaction`, a document type :guilabel:`B` must be used."
 msgstr ""
-":guilabel:`transazione B2C`, devi utilizzare un documento di tipo "
-":guilabel:`B`;"
+":guilabel:`transazione B2C`, devi utilizzare un documento di "
+"tipo :guilabel:`B`;"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:148
 msgid ""
@@ -40537,8 +40548,8 @@ msgid ""
 msgstr ""
 "Nella localizzazione argentina, il :doc:`registro <../accounting/get_started/"
 "journals>` può avere un approccio diverso a seconda del suo utilizzo e del "
-"tipo interno. Per configurare i registri, apri l'app "
-":menuselection:`Contabilità --> Configurazione --> Registri`."
+"tipo interno. Per configurare i registri, apri "
+"l'app :menuselection:`Contabilità --> Configurazione --> Registri`."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:173
 msgid ""
@@ -40546,10 +40557,10 @@ msgid ""
 "activated, enabling :ref:`Document Types <localizations/argentina/document-"
 "types>` to be linked to invoices and vendor bills."
 msgstr ""
-"Per i registri di vendita e di acquisto, è possibile attivare l’opzione "
-":guilabel:`Usa documenti` che consente di collegare i :ref:`tipi di "
-"documento <localizations/argentina/document-types>` alle fatture clienti e "
-"fornitori."
+"Per i registri di vendita e di acquisto, è possibile attivare "
+"l’opzione :guilabel:`Usa documenti` che consente di collegare i :ref:`tipi "
+"di documento <localizations/argentina/document-types>` alle fatture clienti "
+"e fornitori."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:177
 msgid ""
@@ -40558,10 +40569,10 @@ msgid ""
 "limiting their use case mostly to monitoring account moves related to "
 "internal control processes."
 msgstr ""
-"Se nei registri delle vendite o degli acquisti non è attivata l'opzione "
-":guilabel:`Usa documenti`, non sarà possibile generare fatture fiscali, "
-"limitando il loro utilizzo principalmente al monitoraggio dei movimenti "
-"contabili relativi ai processi di controllo interno."
+"Se nei registri delle vendite o degli acquisti non è attivata "
+"l'opzione :guilabel:`Usa documenti`, non sarà possibile generare fatture "
+"fiscali, limitando il loro utilizzo principalmente al monitoraggio dei "
+"movimenti contabili relativi ai processi di controllo interno."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:184
 msgid "ARCA information (ARCA Point of Sale)"
@@ -40699,9 +40710,9 @@ msgid ""
 "vendor provides the document number."
 msgstr ""
 "Al momento della creazione dei :guilabel:`registri di acquisto`, specifica "
-"se sono correlati ai tipi di documento. Quando è attivata l’opzione "
-":guilabel:`Usa documenti`, non è necessario associare manualmente le "
-"sequenze dei tipi di documento poiché il fornitore fornisce il numero del "
+"se sono correlati ai tipi di documento. Quando è attivata "
+"l’opzione :guilabel:`Usa documenti`, non è necessario associare manualmente "
+"le sequenze dei tipi di documento poiché il fornitore fornisce il numero del "
 "documento."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:243
@@ -73590,8 +73601,8 @@ msgid ""
 "and Intrastat reporting:"
 msgstr ""
 "Inoltre, per utilizzare la reportistica SBR, le funzionalità specifiche per "
-"il libro paga olandese e la reportistica Intrastat, è necessario "
-":ref:`installare <general/install>` manualmente i seguenti moduli:"
+"il libro paga olandese e la reportistica Intrastat, è "
+"necessario :ref:`installare <general/install>` manualmente i seguenti moduli:"
 
 #: ../../content/applications/finance/fiscal_localizations/netherlands.rst:37
 msgid ":guilabel:`Netherlands - Payroll`"
@@ -73771,8 +73782,8 @@ msgid ""
 "`PKIoverheid <https://www.logius.nl/onze-dienstverlening/toegang/"
 "pkioverheid>`_"
 msgstr ""
-"`PKIoverheid <https://www.logius.nl/onze-dienstverlening/toegang/pkioverheid>"
-"`_"
+"`PKIoverheid <https://www.logius.nl/onze-dienstverlening/toegang/"
+"pkioverheid>`_"
 
 #: ../../content/applications/finance/fiscal_localizations/netherlands.rst:119
 msgid ""
@@ -73804,12 +73815,12 @@ msgid ""
 "click :guilabel:`Create and edit...`. In the pop-up window, fill out the "
 "following fields:"
 msgstr ""
-"Per configurare la reportistica SBR, apri l’app **Contabilità**, vai su "
-":menuselection:`Configurazione --> Impostazioni` e scorri verso il basso "
-"fino alla sezione :guilabel:`Localizzazione olandese`. Fai clic sul campo "
-":guilabel:`Certificato Digipoort`, inserisci un nome per il certificato e "
-"fai clic su :guilabel:`Crea e modifica...`. Nella finestra a comparsa, "
-"compila i seguenti campi:"
+"Per configurare la reportistica SBR, apri l’app **Contabilità**, vai "
+"su :menuselection:`Configurazione --> Impostazioni` e scorri verso il basso "
+"fino alla sezione :guilabel:`Localizzazione olandese`. Fai clic sul "
+"campo :guilabel:`Certificato Digipoort`, inserisci un nome per il "
+"certificato e fai clic su :guilabel:`Crea e modifica...`. Nella finestra a "
+"comparsa, compila i seguenti campi:"
 
 #: ../../content/applications/finance/fiscal_localizations/netherlands.rst:130
 msgid ""
@@ -73895,8 +73906,8 @@ msgid ""
 ":guilabel:`Tax Consultant Number`: If you selected :guilabel:`Intermediary "
 "(INT)`, enter the 6-digit tax advisor registration number (*Beconnummer*)."
 msgstr ""
-":guilabel:`Numero consulente fiscale`: se hai selezionato un "
-":guilabel:`Intermediario (INT)`, inserisci il numero di registrazione del "
+":guilabel:`Numero consulente fiscale`: se hai selezionato "
+"un :guilabel:`Intermediario (INT)`, inserisci il numero di registrazione del "
 "consulente fiscale a 6 cifre (*Beconnummer*);"
 
 #: ../../content/applications/finance/fiscal_localizations/netherlands.rst:156
@@ -73954,8 +73965,8 @@ msgid ""
 "the :guilabel:`Issuer`."
 msgstr ""
 "Per abilitare il bonifico SEPA come metodo di pagamento, segui :ref:`questi "
-"passaggi <accounting/sepa_payments/sct>` e inserisci `Belastingdienst` come "
-":guilabel:`emittente`."
+"passaggi <accounting/sepa_payments/sct>` e inserisci `Belastingdienst` "
+"come :guilabel:`emittente`."
 
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:3
 msgid "New Zealand"
@@ -94623,6 +94634,49 @@ msgstr ""
 "Compila i campi :guilabel:`Chiave segreta` e :guilabel:`Token webhook` con "
 "le informazioni salvate al passaggio :ref:`payment_providers/xendit/"
 "configure_dashboard`."
+
+#~ msgid ""
+#~ "When money is transferred from one bank or cash account to another, that "
+#~ "amount appears as two transactions on the corresponding journals, whether "
+#~ "the transactions are created manually, via import, or via :doc:`bank "
+#~ "synchronization <bank_synchronization>`. When :ref:`reconciling the "
+#~ "transaction <accounting/reconciliation/reconcile>`, select "
+#~ "the :guilabel:`Internal Transfers` :doc:`reconciliation model "
+#~ "<reconciliation_models>` button. This action writes the transaction off "
+#~ "to the :guilabel:`Internal Transfer` account."
+#~ msgstr ""
+#~ "Quando il denaro viene trasferito da un conto bancario o di cassa a un "
+#~ "altro, tale importo appare come due transazioni sui registri "
+#~ "corrispondenti, sia che le transazioni vengano create manualmente, "
+#~ "tramite importazione o tramite :doc:`sincronizzazione bancaria "
+#~ "<bank_synchronization>`. Quando si :ref:`riconcilia la transazione "
+#~ "<accounting/reconciliation/reconcile>`, selezionare il pulsante "
+#~ "del :doc:`modello di riconciliazione "
+#~ "<reconciliation_models>` :guilabel:`Trasferimenti interni`. Questa azione "
+#~ "storna la transazione sul conto :guilabel:`Trasferimento interno`."
+
+#~ msgid ""
+#~ "Remember to reconcile both the outgoing transaction (on the journal that "
+#~ "sends the payment) and the incoming transaction (on the journal that "
+#~ "receives the payment) with the internal transfers account using "
+#~ "the :guilabel:`Internal Transfers` reconciliation model button."
+#~ msgstr ""
+#~ "Ricordarsi di riconciliare sia la transazione in uscita (sul registro che "
+#~ "invia il pagamento) che la transazione in entrata (sul registro che "
+#~ "riceve il pagamento) con il conto trasferimenti interni utilizzando il "
+#~ "pulsante del modello di riconciliazione :guilabel:`Trasferimenti interni`."
+
+#~ msgid ""
+#~ "Once each bank journal's transaction is reconciled using "
+#~ "the :guilabel:`Internal Transfers` reconciliation model, the internal "
+#~ "transfer account is balanced, and the balances of both bank accounts are "
+#~ "updated to reflect the transfer."
+#~ msgstr ""
+#~ "Una volta che la transazione di ciascun registro bancario è stata "
+#~ "riconciliata utilizzando il modello di "
+#~ "riconciliazione :guilabel:`Trasferimenti interni`, il conto trasferimenti "
+#~ "interni è bilanciato e i saldi di entrambi i conti bancari vengono "
+#~ "aggiornati per riflettere il trasferimento."
 
 #~ msgid "Basic concepts of accounting and initial setup of your accounting"
 #~ msgstr ""
